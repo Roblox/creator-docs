@@ -306,9 +306,8 @@ properties:
       can_save: false
   - name: Sound.Pitch
     summary: |
-      Sets how high pitched and fast a `Class.Sound` is when it is
-      played. The greater the integer, the higher and faster the `Class.Sound`
-      is.
+      Sets how high pitched and fast a `Class.Sound` is when it is played. The
+      greater the integer, the higher and faster the `Class.Sound` is.
     description: |
       Sets how high pitched and fast a `Class.Sound` is when it is played. The
       greater the integer, the higher and faster the sound is.

@@ -5,7 +5,7 @@ description: The Creator Store is where you can find all assets for public use i
 
 The **Creator Store** is where you can find all assets that are made by Roblox and the Roblox community for the Roblox community to use within their experiences, such as models, images, meshes, audio, fonts, videos, and plugins.
 
-You can create and publish models, images, meshes, and plugins to the Creator Store for others to use as long as you are the original creator, and it adheres to Roblox's [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846). If you have a [seller account](./selling-on-the-creator-store.md), you can also sell your plugins to other creators.
+You can create and distribute models, images, meshes, and plugins to the Creator Store for others to use as long as you are the original creator, and it adheres to Roblox's [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846). If you have a [seller account](./selling-on-the-creator-store.md), you can also sell your plugins to other creators.
 
 <Alert severity="warning">
 To maintain community safety, Roblox may terminate accounts that publish spam or assets with malicious or obfuscated code.
@@ -92,7 +92,7 @@ You can also choose to **sell** plugins on the Creator Store for **United States
 
 ## Verifying Your Account
 
-In addition to being able to publish more of each asset type, verifying your account ensures that your assets are visible to creators, as the default option for discoverability for assets on the Creator Store is reserved for verified accounts. In order to verify your account, you must:
+In addition to being able to distribute more of each asset type, verifying your account ensures that your assets are visible to creators, as the default option for discoverability for assets on the Creator Store is reserved for verified accounts. In order to verify your account, you must:
 
 - Be at least 13 years of age.
 - Have a government-issued photo ID with your picture on it, such as a driver's license, passport, or residency permit.

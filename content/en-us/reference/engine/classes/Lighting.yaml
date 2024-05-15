@@ -635,8 +635,8 @@ properties:
     tags:
       - Deprecated
     deprecation_message: |
-      This item is no longer supported as the outlines feature
-      was removed from the Roblox platform.
+      This item is no longer supported as the outlines feature was removed from
+      the Roblox platform.
     security:
       read: None
       write: None

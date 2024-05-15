@@ -5,8 +5,8 @@ memory_category: Instances
 summary: |
   A class that allows the display of mobile video ads.
 description: |
-  This **AdService** is a service for displaying mobile
-  video ads as a form of monetization.
+  This **AdService** is a service for displaying mobile video ads as a form of
+  monetization.
 code_samples:
 inherits:
   - Instance

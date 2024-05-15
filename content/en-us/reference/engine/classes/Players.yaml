@@ -633,6 +633,23 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: Players:GetBanHistoryAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: BanHistoryPages
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: Players:GetCharacterAppearanceAsync
     summary: |
       Returns a `Class.Model` containing the assets which the player is wearing,

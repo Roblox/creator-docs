@@ -27,10 +27,10 @@ description: |
 
   #### NumberPose Value
 
-  The Roblox animation system applies **NumberPose** values to the
-  corresponding FACS controls. Because those controls only respond to values
-  between 0 and 1, the values calculated by the animation system are always
-  clamped to that range.
+  The Roblox animation system applies **NumberPose** values to the corresponding
+  FACS controls. Because those controls only respond to values between 0 and 1,
+  the values calculated by the animation system are always clamped to that
+  range.
 code_samples:
 inherits:
   - PoseBase

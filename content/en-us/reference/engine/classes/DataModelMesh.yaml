@@ -140,7 +140,8 @@ properties:
       **VertexColor** determines the hue change of the
       `Class.FileMesh.TextureId|Texture` of a `Class.FileMesh`. Note that this
       property is a `Datatype.Vector3` rather than a `Datatype.Color3`; to
-      convert, use the `Datatype.Color3.R`, `Datatype.Color3.G`, and `Datatype.Color3.B` properties.
+      convert, use the `Datatype.Color3.R`, `Datatype.Color3.G`, and
+      `Datatype.Color3.B` properties.
 
       Although this property allows basic modification of a texture, changing a
       texture entirely provides more control. See `Class.MeshPart` for more

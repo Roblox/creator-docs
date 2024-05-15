@@ -19,13 +19,13 @@ description: |
   and will exhibit the following behavior:
 
   - When the spotlight is parented to a `Class.BasePart`, the
-  `Class.SpotLight.Face|Face` property determines the face of the part from
-  which light emanates.
-  
+    `Class.SpotLight.Face|Face` property determines the face of the part from
+    which light emanates.
+
   - Although `Class.Attachment|Attachments` don't have faces, the
-  `Class.SpotLight.Face|Face` property determines the axis of the attachment
-  from which light emanates; **-Z** is front, **+X** is right, **+Y** is top,
-  etc.
+    `Class.SpotLight.Face|Face` property determines the axis of the attachment
+    from which light emanates; **-Z** is front, **+X** is right, **+Y** is top,
+    etc.
 
   See also `Class.SurfaceLight` and `Class.PointLight`.
 code_samples:

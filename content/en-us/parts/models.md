@@ -110,4 +110,4 @@ See [Model Streaming Controls](../workspace/streaming.md#model-streaming-control
 
 ## Publishing Models
 
-You can [publish](../production/publishing/publishing-assets.md) models to the [Creator Store](../production/publishing/creator-store.md) for other creators to use within their own experiences. As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright.
+You can [distribute](../production/publishing/publishing-assets.md) models to the [Creator Store](../production/publishing/creator-store.md) for other creators to use within their own experiences. As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright.

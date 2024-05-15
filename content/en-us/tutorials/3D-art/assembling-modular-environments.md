@@ -3,7 +3,7 @@ title: Assembling Modular Environments
 description: Explains how to configure and assemble reusable assets that seamlessly snap together.
 ---
 
-A **modular environment** is a 3D space made up of reusable assets that seamlessly snap together in numerous configurations to create variations of a larger complex object. For example, Studio's [Modern City template](https://www.roblox.com/games/13165709401/Modern-City) is a modular environment that utilizes reusable walls, windows, and doors from both a [modular building kit](https://create.roblox.com/marketplace/asset/13168370735/Modular-Building-Kit-Modern-City) and [materials pack](https://create.roblox.com/marketplace/asset/13168345645/Modern-City-Materials-Pack) to create building variations that comprise an entire downtown area.
+A **modular environment** is a 3D space made up of reusable assets that seamlessly snap together in numerous configurations to create variations of a larger complex object. For example, Studio's [Modern City template](https://www.roblox.com/games/13165709401/Modern-City) is a modular environment that utilizes reusable walls, windows, and doors from both a [modular building kit](https://create.roblox.com/store/asset/13168370735/Modular-Building-Kit-Modern-City) and [materials pack](https://create.roblox.com/store/asset/13168345645/Modern-City-Materials-Pack) to create building variations that comprise an entire downtown area.
 
 Assembling modular environments is useful because it means you don't need to manually create each individual asset in your experience. Instead, you only need to create a few assets that you can reuse and customize to create variety throughout the scene. Not only does this process significantly speed up how quickly you can build large environments, but it can also help each distinct object feel cohesive within your experience.
 
@@ -67,7 +67,7 @@ For information on how to configure pivot locations for parts and models you cre
 
 ## Configuring Snapping Behavior
 
-Studio's default settings allow you to freely move and rotate objects to any fraction of a stud or degree, respectively. However, because modular building kits rely on assets snapping together at exact increments, you must change these default settings **according to the requirements of each modular building kit**. For example, the Modern City sample [modular building kit](https://create.roblox.com/marketplace/asset/13168370735/Modular-Building-Kit-Modern-City) requires each mesh to rotate in 7.5 stud and 45 degree increments with collisions off. This ensures that as you move and rotate meshes around the 3D environment, they can connect and maintain clear alignment to one another as the building grows.
+Studio's default settings allow you to freely move and rotate objects to any fraction of a stud or degree, respectively. However, because modular building kits rely on assets snapping together at exact increments, you must change these default settings **according to the requirements of each modular building kit**. For example, the Modern City sample [modular building kit](https://create.roblox.com/store/asset/13168370735/Modular-Building-Kit-Modern-City) requires each mesh to rotate in 7.5 stud and 45 degree increments with collisions off. This ensures that as you move and rotate meshes around the 3D environment, they can connect and maintain clear alignment to one another as the building grows.
 
 To configure Studio settings for ideal snapping behavior for the sample modular building kit:
 
@@ -115,7 +115,7 @@ To ensure every object looks and feels unique from one another, it's important t
 
 ### Using Alternative Custom Materials
 
-Every mesh within the sample modular building kit uses a [custom material](../../parts/materials.md#custom-materials) from the sample [materials pack](https://create.roblox.com/marketplace/asset/13168345645/Modern-City-Materials-Pack) that you can use to alter the appearance and physical qualities of your buildings' walls. For example, by default, all walls start with a **PaintedBrick** custom material, but you can change it to various forms of alternative brick, concrete, and plaster, then set a distinct tint color to the material in order to give each building a unique appearance.
+Every mesh within the sample modular building kit uses a [custom material](../../parts/materials.md#custom-materials) from the sample [materials pack](https://create.roblox.com/store/asset/13168345645/Modern-City-Materials-Pack) that you can use to alter the appearance and physical qualities of your buildings' walls. For example, by default, all walls start with a **PaintedBrick** custom material, but you can change it to various forms of alternative brick, concrete, and plaster, then set a distinct tint color to the material in order to give each building a unique appearance.
 
 To use alternative custom materials for wall meshes:
 

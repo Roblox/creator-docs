@@ -14,7 +14,8 @@ description: |
   the playback of an animation, referenced by the `Class.Animation.AnimationId`
   property, can be constructed from a `Class.KeyframeSequence`.
   `Class.KeyframeSequence|KeyframeSequences` are usually created by the Roblox
-  [Animation Editor](../../../animation/editor.md) but can be created through other plugins or even manually.
+  [Animation Editor](../../../animation/editor.md) but can be created through
+  other plugins or even manually.
 code_samples:
   - KeyframeSequenceProvider-RegisterKeyframeSequence
 inherits:

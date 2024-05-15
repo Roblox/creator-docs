@@ -35,6 +35,30 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: MarketplaceService:PromptBulkPurchase
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: lineItems
+        type: Array
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: MarketplaceService:PromptBundlePurchase
     summary: |
       Prompts a user to purchase a bundle with the given `bundleId`.
@@ -213,6 +237,26 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService:SignalPromptBulkPurchaseFinished
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: status
+        type: MarketplaceBulkPurchasePromptStatus
+        default:
+        summary: ''
+      - name: results
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
   - name: MarketplaceService:GetDeveloperProductsAsync
     summary: |
@@ -809,6 +853,27 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: MarketplaceService:PerformBulkPurchase
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: orderRequest
+        type: Dictionary
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: MarketplaceService:PlayerOwnsAsset
     summary: |
       Returns whether the given player has the given asset.
@@ -924,6 +989,60 @@ methods:
     security: None
     thread_safety: Unsafe
 events:
+  - name: MarketplaceService.PromptBulkPurchaseFinished
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+      - name: status
+        type: MarketplaceBulkPurchasePromptStatus
+        default:
+        summary: ''
+      - name: results
+        type: Dictionary
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService.PromptBulkPurchaseRequested
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+      - name: displayData
+        type: Array
+        default:
+        summary: ''
+      - name: orderRequest
+        type: Dictionary
+        default:
+        summary: ''
+      - name: purchaserRobuxBalance
+        type: int64
+        default:
+        summary: ''
+      - name: orderTotalRobux
+        type: int64
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: MarketplaceService.PromptBundlePurchaseFinished
     summary: ''
     description: ''

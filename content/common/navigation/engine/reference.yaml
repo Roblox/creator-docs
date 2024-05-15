@@ -260,6 +260,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/BallSocketConstraint.yaml
         ignoreTranslation: true
+      - title: BanHistoryPages
+        path: /reference/engine/classes/BanHistoryPages
+        type: engineapi
+        source: /reference/engine/classes/BanHistoryPages.yaml
+        ignoreTranslation: true
       - title: BasePart
         path: /reference/engine/classes/BasePart
         type: engineapi
@@ -4972,6 +4977,16 @@ navigation:
         path: /reference/engine/enums/TweenStatus
         type: engineapi
         source: /reference/engine/enums/TweenStatus.yaml
+        ignoreTranslation: true
+      - title: UIDragDetectorDragStyle
+        path: /reference/engine/enums/UIDragDetectorDragStyle
+        type: engineapi
+        source: /reference/engine/enums/UIDragDetectorDragStyle.yaml
+        ignoreTranslation: true
+      - title: UIDragDetectorResponseStyle
+        path: /reference/engine/enums/UIDragDetectorResponseStyle
+        type: engineapi
+        source: /reference/engine/enums/UIDragDetectorResponseStyle.yaml
         ignoreTranslation: true
       - title: UIFlexAlignment
         path: /reference/engine/enums/UIFlexAlignment

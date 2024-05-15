@@ -1,0 +1,28 @@
+name: UIDragDetectorResponseStyle
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Offset
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Scale
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: CustomOffset
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: CustomScale
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

@@ -242,7 +242,7 @@ end
 
 ## Asset Permissions
 
-An asset's privacy status determines who has permission to use the asset within their experiences. By default, all assets are **private** when you or your [group](../../projects/groups.md) members import them into Studio. If you want to grant everyone access to the asset ID, you must publish the asset to the [Creator Store][CreatorMarketplaceURL].
+An asset's privacy status determines who has permission to use the asset within their experiences. By default, all assets are **private** when you or your [group](../../projects/groups.md) members import them into Studio. If you want to grant everyone access to the asset ID, you must distribute the asset to the [Creator Store][CreatorMarketplaceURL].
 
 <Alert severity="warning">
 Special privacy rules and workflows apply to **audio** and **video** assets. See [Asset Privacy](../../projects/assets/privacy.md) for details on sharing these asset types among friends and experiences.
@@ -299,6 +299,6 @@ To further help with organization, you can archive most asset types in the **Dev
 
 After you archive an asset, it disappears from the website and is no longer usable or visible in Roblox experiences, including your own.
 
-[CreatorMarketplaceURL]: https://create.roblox.com/marketplace
+[CreatorMarketplaceURL]: https://create.roblox.com/store
 [MarketplaceURL]: https://www.roblox.com/catalog
 [CreatorDashboardURL]: https://create.roblox.com/dashboard/creations

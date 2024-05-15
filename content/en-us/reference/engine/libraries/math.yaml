@@ -356,9 +356,11 @@ functions:
     code_samples:
   - name: math.modf
     summary: |
-      Returns two numbers: the integral part of `x` and the fractional part of `x`.
+      Returns two numbers: the integral part of `x` and the fractional part of
+      `x`.
     description: |
-      Returns two numbers: the integral part of `x` and the fractional part of `x`.
+      Returns two numbers: the integral part of `x` and the fractional part of
+      `x`.
     parameters:
       - name: x
         type: number
@@ -381,9 +383,9 @@ functions:
       the output.
 
       If you leave arguments out, they will be interpreted as zero, so
-      `Library.math.noise(1.158)` is equivalent to `Library.math.noise(1.158, 0,
-      0)` and `Library.math.noise(1.158, 5.723)` is equivalent to
-      `Library.math.noise(1.158, 5.723, 0)`.
+      `Library.math.noise(1.158)` is equivalent to
+      `Library.math.noise(1.158, 0, 0)` and `Library.math.noise(1.158, 5.723)`
+      is equivalent to `Library.math.noise(1.158, 5.723, 0)`.
 
       Note that this function uses a perlin noise algorithm to assign fixed
       values to coordinates. For example, `Library.math.noise(1.158, 5.723)`
@@ -457,10 +459,10 @@ functions:
 
       When called without arguments, returns a uniform pseudo-random real number
       in the range of 0 to 1 (inclusive of 0 but exclusive of 1).
-      
+
       When called with an integer number `m`, returns a uniform pseudo-random
       integer in the range of 1 to `m`, inclusive.
-      
+
       When called with two integer numbers `m` and `n`, returns a uniform
       pseudo-random integer in the range of `m` to `n`, inclusive.
     parameters:
@@ -503,7 +505,8 @@ functions:
 
       For values like 0.5 that are equidistant to two integers, the value with
       the greater difference between it and zero is chosen. In other words, the
-      function "rounds away from zero" such that 0.5 rounds to 1 and -0.5 rounds to -1.
+      function "rounds away from zero" such that 0.5 rounds to 1 and -0.5 rounds
+      to -1.
     parameters:
       - name: x
         type: number
@@ -517,9 +520,11 @@ functions:
     code_samples:
   - name: math.sign
     summary: |
-      Returns -1 if `x` is less than 0, 0 if `x` equals 0, or 1 if `x` is greater than 0.
+      Returns -1 if `x` is less than 0, 0 if `x` equals 0, or 1 if `x` is
+      greater than 0.
     description: |
-      Returns -1 if `x` is less than 0, 0 if `x` equals 0, or 1 if `x` is greater than 0.
+      Returns -1 if `x` is less than 0, 0 if `x` equals 0, or 1 if `x` is
+      greater than 0.
     parameters:
       - name: x
         type: number

@@ -12,17 +12,25 @@ description: |
 
   The most important camera properties are:
 
-  - `Class.Camera.CFrame` which represents the position and orientation of the camera.
+  - `Class.Camera.CFrame` which represents the position and orientation of the
+    camera.
 
-  - `Class.Camera.CameraType` which is read by the experience's camera scripts and determines how the camera should update each frame.
+  - `Class.Camera.CameraType` which is read by the experience's camera scripts
+    and determines how the camera should update each frame.
 
-  - `Class.Camera.CameraSubject` which is read by the experience's camera scripts and determines what object the camera should follow.
+  - `Class.Camera.CameraSubject` which is read by the experience's camera
+    scripts and determines what object the camera should follow.
 
-  - `Class.Camera.FieldOfView` which represents the visible extent of the observable world.
+  - `Class.Camera.FieldOfView` which represents the visible extent of the
+    observable world.
 
-  - `Class.Camera.Focus` which represents the point the camera is looking at. It's important this property is set, as certain visuals will be more detailed and will update more frequently depending on how close they are to the focus point.
+  - `Class.Camera.Focus` which represents the point the camera is looking at.
+    It's important this property is set, as certain visuals will be more
+    detailed and will update more frequently depending on how close they are to
+    the focus point.
 
-  See [Customizing the Camera](../../../workspace/camera.md) for more information on how to adjust and customize the camera's behavior.
+  See [Customizing the Camera](../../../workspace/camera.md) for more
+  information on how to adjust and customize the camera's behavior.
 code_samples:
 inherits:
   - Instance
@@ -42,20 +50,23 @@ properties:
       `Class.Camera:GetRenderCFrame()|GetRenderCFrame()` to obtain the "true"
       `Datatype.CFrame` of the camera.
 
-      You can move the camera by setting this property. However, the
-      default camera scripts also set it, so you should either:
-      
-      - Set the camera `Class.Camera.CameraType` to `Enum.CameraType.Scriptable`
-      so that the default camera scripts will not update the camera's
-      `Datatype.CFrame`. This method is simplest and recommended in most cases.
+      You can move the camera by setting this property. However, the default
+      camera scripts also set it, so you should either:
 
-      - Completely replace the default camera scripts with alternatives. This approach is only recommended if you do not need any default camera functionality.
+      - Set the camera `Class.Camera.CameraType` to `Enum.CameraType.Scriptable`
+        so that the default camera scripts will not update the camera's
+        `Datatype.CFrame`. This method is simplest and recommended in most
+        cases.
+
+      - Completely replace the default camera scripts with alternatives. This
+        approach is only recommended if you do not need any default camera
+        functionality.
 
       The most intuitive way to position and orient the `Class.Camera` is by
       using the `Datatype.CFrame.lookAt()` constructor. In the following
-      example, the `Class.Camera` is positioned at `Datatype.Vector3.new(0, 10,
-      0)` and is oriented to be looking towards `Datatype.Vector3.new(10, 0,
-      0)`.
+      example, the `Class.Camera` is positioned at
+      `Datatype.Vector3.new(0, 10, 0)` and is oriented to be looking towards
+      `Datatype.Vector3.new(10, 0, 0)`.
 
       ```lua
       local camera = workspace.CurrentCamera
@@ -72,10 +83,10 @@ properties:
       another. For this, you can either:
 
       - Set the camera's position/orientation every frame with
-      `Class.RunService:BindToRenderStep()` and the `Datatype.CFrame:Lerp()`
-      method.
+        `Class.RunService:BindToRenderStep()` and the `Datatype.CFrame:Lerp()`
+        method.
       - Create and play a `Class.Tween` that animates the position/orientation
-      of the camera:
+        of the camera:
 
         ```lua
         local Players = game:GetService("Players")
@@ -119,11 +130,11 @@ properties:
       default camera scripts respond differently to the available settings:
 
       - By default, the camera scripts follow the local character's
-      `Class.Humanoid`, factoring in the humanoid's current state and
-      `Class.Humanoid.CameraOffset`.
+        `Class.Humanoid`, factoring in the humanoid's current state and
+        `Class.Humanoid.CameraOffset`.
 
       - When set to a `Class.BasePart`, the camera scripts follow its position,
-      with a vertical offset in the case of `Class.VehicleSeat|VehicleSeats`.
+        with a vertical offset in the case of `Class.VehicleSeat|VehicleSeats`.
 
       **CameraSubject** cannot be set to `nil`. Attempting to do so will revert
       it to its previous value.
@@ -240,7 +251,7 @@ properties:
       direction the camera can view. This property is clamped between 1 and 120
       degrees and defaults at 70. Very low or very high fields of view are not
       recommended as they can be disorientating to players.
-      
+
       Note that uniform scaling is enforced, meaning the vertical and horizontal
       field of view are always related by the aspect ratio of the screen.
 
@@ -350,8 +361,9 @@ properties:
       reasons:
 
       - Players may experience motion sickness if an equivalent head tracking
-      solution is not added.
-      - The Roblox engine performs latency optimizations when **HeadLocked** is true.
+        solution is not added.
+      - The Roblox engine performs latency optimizations when **HeadLocked** is
+        true.
 
       #### See Also
 
@@ -360,8 +372,8 @@ properties:
       - `Class.VRService:RecenterUserHeadCFrame()` which is used to recenter the
         head to the current position and orientation of the VR device.
       - The `Class.Camera:GetRenderCFrame()` function which returns the
-        `Class.Camera.CFrame` combined with the `Datatype.CFrame`
-        of the user's head.
+        `Class.Camera.CFrame` combined with the `Datatype.CFrame` of the user's
+        head.
     code_samples:
     type: bool
     tags: []
@@ -384,8 +396,7 @@ properties:
       The size of 1 stud in VR is `0.3 meters / HeadScale`, meaning that larger
       **HeadScale** values equate to the world looking smaller from the user's
       perspective when using VR devices. For example, a part that's 1 stud tall
-      appears to be 0.6 meters tall to a VR player with a **HeadScale** of
-      0.5.
+      appears to be 0.6 meters tall to a VR player with a **HeadScale** of 0.5.
 
       This property is automatically controlled by
       `Class.VRService.AutomaticScaling` to align the player's perspective with
@@ -476,7 +487,7 @@ properties:
       between the player's physical space and the virtual space they are
       viewing. Changing the apparent downwards direction can cause players to
       lose balance or experience dizziness.
-      
+
       For these reasons, it is generally advisable to leave this property
       disabled, unless you have extensively tested your experience for these
       effects. Even with tilt and roll enabled, you may want to ensure the
@@ -616,8 +627,8 @@ methods:
   - name: Camera:GetPartsObscuringTarget
     summary: |
       Returns an array of `Class.BasePart|BaseParts` that are obscuring the
-      lines of sight between the camera's `Class.Camera.CFrame` and the
-      cast points.
+      lines of sight between the camera's `Class.Camera.CFrame` and the cast
+      points.
     description: |
       This method returns an array of `Class.BasePart|BaseParts` that are
       obscuring the lines of sight between the camera's `Class.Camera.CFrame`
@@ -658,7 +669,8 @@ methods:
         type: Objects
         default:
         summary: |
-          An array of `Class.Instance|Instances` that should be ignored, along with their descendants.
+          An array of `Class.Instance|Instances` that should be ignored, along
+          with their descendants.
     returns:
       - type: Objects
         summary: |
@@ -679,7 +691,8 @@ methods:
       to use `Class.Camera:GetRenderCFrame()` to obtain the "true"
       `Datatype.CFrame` of a player's view).
 
-      For example, when using VR, the `Class.Camera` is actually rendered at the following `Datatype.CFrame`:
+      For example, when using VR, the `Class.Camera` is actually rendered at the
+      following `Datatype.CFrame`:
 
       ```lua
       local UserInputService = game:GetService("UserInputService")
@@ -1158,7 +1171,8 @@ methods:
       the GUI inset.
     description: |
       This function returns the screen location and depth of a
-      `Datatype.Vector3` `worldPoint` and whether this point is within the bounds of the screen.
+      `Datatype.Vector3` `worldPoint` and whether this point is within the
+      bounds of the screen.
 
       This function takes in account the current GUI inset, such as the space
       occupied by the top bar, meaning that the 2D position returned is in the
@@ -1192,12 +1206,13 @@ methods:
         summary: |
           A tuple containing, in order:
 
-          - A `Datatype.Vector3` whose X and Y components represent the offset of the `worldPoint` from the top left corner of the screen, in pixels.
-          The `Datatype.Vector3` **Z** component represents the depth of the
-          `worldPoint` from the screen (in studs).
+          - A `Datatype.Vector3` whose X and Y components represent the offset
+            of the `worldPoint` from the top left corner of the screen, in
+            pixels. The `Datatype.Vector3` **Z** component represents the depth
+            of the `worldPoint` from the screen (in studs).
 
           - A boolean indicating if the `worldPoint` is within the bounds of the
-          screen.
+            screen.
     tags: []
     deprecation_message: ''
     security: None
@@ -1248,12 +1263,12 @@ methods:
           A tuple containing, in order:
 
           - A `Datatype.Vector3` whose **X** and **Y** components represent the
-          offset of the `worldPoint` from the top left corner of the viewport,
-          in pixels. The `Datatype.Vector3` **Z** component represents the depth
-          of the `worldPoint` from the screen (in studs).
+            offset of the `worldPoint` from the top left corner of the viewport,
+            in pixels. The `Datatype.Vector3` **Z** component represents the
+            depth of the `worldPoint` from the screen (in studs).
 
           - A boolean indicating if the `worldPoint` is within the bounds of the
-          screen.
+            screen.
     tags: []
     deprecation_message: ''
     security: None

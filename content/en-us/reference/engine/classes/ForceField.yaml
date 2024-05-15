@@ -13,7 +13,7 @@ description: |
   `Class.Explosion`. A new **ForceField** is created when a character spawns on
   a `Class.SpawnLocation` and the `Class.SpawnLocation.Duration` property is
   greater than zero.
-  
+
   #### Damage and Joints
 
   A **ForceField** influences the instance it's parented to. When parented to a
@@ -34,11 +34,11 @@ description: |
   A number of rules determine where this effect will be emitted from:
 
   - When parented to a `Class.Model`, if the model includes a `Class.Humanoid`
-  named **Humanoid** with `Class.Humanoid.RigType` set to R15, the effect will
-  be emitted from the part named **UpperTorso**. Otherwise, the effect will be
-  emitted from the part named **Torso**.
+    named **Humanoid** with `Class.Humanoid.RigType` set to R15, the effect will
+    be emitted from the part named **UpperTorso**. Otherwise, the effect will be
+    emitted from the part named **Torso**.
   - When parented to a `Class.BasePart` the effect will be emitted from the
-  part's `Class.BasePart.Position`.
+    part's `Class.BasePart.Position`.
 code_samples:
   - ForceField-Instantiation
 inherits:

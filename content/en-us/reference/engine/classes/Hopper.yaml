@@ -5,9 +5,8 @@ memory_category: Instances
 summary: |
   Hopper is the original name of the StarterPack service.
 description: |
-  If this service is
-  ever instantiated, it moves all of its children into the `Class.StarterPack` and then
-  deletes itself.
+  If this service is ever instantiated, it moves all of its children into the
+  `Class.StarterPack` and then deletes itself.
 code_samples:
 inherits:
   - Instance
@@ -22,4 +21,3 @@ properties: []
 methods: []
 events: []
 callbacks: []
-

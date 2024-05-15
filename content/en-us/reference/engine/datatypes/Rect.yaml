@@ -3,7 +3,8 @@ type: datatype
 summary: |
   A value that represents a two-dimensional rectangle.
 description: |
-  **Rect** describes a rectangle on a 2D plane. It is constructed using two corners, either two `Datatype.Vector2` positions or four numbers:
+  **Rect** describes a rectangle on a 2D plane. It is constructed using two
+  corners, either two `Datatype.Vector2` positions or four numbers:
 
   ```lua
   local rect1 = Rect.new(Vector2.new(10, 10), Vector2.new(80, 80))

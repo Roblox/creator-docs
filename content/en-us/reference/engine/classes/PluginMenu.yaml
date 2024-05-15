@@ -8,21 +8,27 @@ summary: |
 description: |
   A context menu that can be shown in Studio. Displays a list of
   `Class.PluginAction|PluginActions` and supports submenus. **PluginMenu** must
-  be created using the `Class.Plugin:CreatePluginMenu()` method in order to
-  work as expected.
+  be created using the `Class.Plugin:CreatePluginMenu()` method in order to work
+  as expected.
 
   #### See Also
 
-  - `Class.PluginAction`, an object that represents a generic performable action in Roblox Studio, with no directly associated `Toolbar` or `Enum.Button`.
+  - `Class.PluginAction`, an object that represents a generic performable action
+    in Roblox Studio, with no directly associated `Toolbar` or `Enum.Button`.
   - `Class.Plugin:CreatePluginAction()` which creates a `Class.PluginAction`.
-  - `Class.PluginMenu.Title` which is the text to be displayed when used as a submenu.
-  - `Class.PluginMenu.Icon` which is the icon to be displayed when used as a submenu.
+  - `Class.PluginMenu.Title` which is the text to be displayed when used as a
+    submenu.
+  - `Class.PluginMenu.Icon` which is the icon to be displayed when used as a
+    submenu.
   - `Class.PluginMenu:AddAction()` which adds the given action to the menu.
-  - `Class.PluginMenu:AddNewAction()` which creates a temporary action that is hidden from Studio's customize shortcuts window.
+  - `Class.PluginMenu:AddNewAction()` which creates a temporary action that is
+    hidden from Studio's customize shortcuts window.
   - `Class.PluginMenu:AddMenu()` which adds the given menu as a separator.
-  - `Class.PluginMenu:AddSeparator()` which adds a separator between items in the menu
+  - `Class.PluginMenu:AddSeparator()` which adds a separator between items in
+    the menu
   - `Class.PluginMenu:Clear()` which clears the menu.
-  - `Class.PluginMenu:ShowAsync()` which shows the menu at the mouse cursor and yields until either an item is selected or the menu is closed.
+  - `Class.PluginMenu:ShowAsync()` which shows the menu at the mouse cursor and
+    yields until either an item is selected or the menu is closed.
 code_samples:
   - creating-a-pluginaction-and-pluginmenu
 inherits:

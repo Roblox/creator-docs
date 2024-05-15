@@ -1698,9 +1698,9 @@ events:
 
       This event fires with a table of `Datatype.Vector2` that describe the
       relative screen positions of the fingers involved in the gesture. In
-      addition, it fires multiple times:
-      `Enum.UserInputState.Begin` after a brief delay, `Enum.UserInputState.Change` when the player moves a finger during
-      the gesture, and finally with `Enum.UserInputState.End`.
+      addition, it fires multiple times: `Enum.UserInputState.Begin` after a
+      brief delay, `Enum.UserInputState.Change` when the player moves a finger
+      during the gesture, and finally with `Enum.UserInputState.End`.
 
       Since this event requires at least two fingers, it is not possible to be
       simulated in Studio using the emulator and a mouse; you must have a real

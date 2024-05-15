@@ -21,8 +21,10 @@ items:
     deprecation_message: ''
   - name: ChatBlue
     summary: |
-      Causes the frame to appear similar to a `Class.Dialog` with its `Class.Dialog.Tone|Tone` property set to
-      `Enum.DialogTone.Neutral`. Like **ChatGreen** and **ChatRed**, this has a padding of fifteen pixels on all sides.
+      Causes the frame to appear similar to a `Class.Dialog` with its
+      `Class.Dialog.Tone|Tone` property set to `Enum.DialogTone.Neutral`. Like
+      **ChatGreen** and **ChatRed**, this has a padding of fifteen pixels on all
+      sides.
     value: 1
     tags: []
     deprecation_message: ''
@@ -43,8 +45,10 @@ items:
     deprecation_message: ''
   - name: ChatGreen
     summary: |
-      Causes the frame to appear similar to a `Class.Dialog` with its `Class.Dialog.Tone|Tone` property set to
-      `Enum.DialogTone.Friendly`. Like **ChatBlue** and **ChatRed**, this has a padding of fifteen pixels on all sides.
+      Causes the frame to appear similar to a `Class.Dialog` with its
+      `Class.Dialog.Tone|Tone` property set to `Enum.DialogTone.Friendly`. Like
+      **ChatBlue** and **ChatRed**, this has a padding of fifteen pixels on all
+      sides.
     value: 4
     tags: []
     deprecation_message: ''
