@@ -197,6 +197,8 @@ export const getOldFile = async ({
   try {
     return await git.show([`${branch}:${filePath}`]);
   } catch (e) {
-    console.error(`Error getting old file: ${e}`);
+    console.error(
+      `Error getting old file with branch ${branch} and filePath ${filePath}: ${e}`
+    );
   }
 };

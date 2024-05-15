@@ -1,7 +1,7 @@
 name: Enums
 type: datatype
 summary: |
-  A root access point of all `Datatype.Enum`s.
+  A root access point of all `Datatype.Enum|Enums`.
 description: |
   The `Datatype.Enums` data type, more commonly known as `Datatype.Enum` by its
   global variable in Lua), acts as the root access point for all available enums
@@ -17,7 +17,7 @@ properties:
 methods:
   - name: Enum:GetEnums
     summary: |
-      Returns an array of all `Datatype.Enum`s.
+      Returns an array of all `Datatype.Enum|Enums`.
     description: |
       Returns an array containing all available `Datatype.Enum|Enums` on Roblox.
     parameters:

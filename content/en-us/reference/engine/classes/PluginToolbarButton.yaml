@@ -7,14 +7,7 @@ description: |
   A PluginToolbarButton is an object created by the
   `Class.PluginToolbar:CreateButton()` function. It allows the user to initiate
   a single, one-off action in Roblox Studio through the
-  `Class.PluginToolbarButton.Click|Click` event. Pictured below are three
-  PluginToolbarButtons. From left to right: the default, hover and pressed
-  states. The hovered button in the center shows tooltip text, which is the 2nd
-  argument passed to `Class.PluginToolbar:CreateButton()`.
-
-  ![Three PluginToolbarButtons rendered on a PluginToolbar titled "Three Wise Monkeys"](/assets/legacy/PluginToolbarButton-light.png)
-
-  ## Behavior
+  `Class.PluginToolbarButton.Click|Click` event.
 
   When pressed, the `Class.PluginToolbarButton.Click|Click` event fires. A
   button will also remain in the pressed state, which may be set manually using
@@ -30,12 +23,6 @@ description: |
   `Class.PluginToolbarButton.ClickableWhenViewportHidden|ClickableWhenViewportHidden`
   to true, you can allow plugin buttons to remain clickable (such as during
   script editing).
-
-  ## History
-
-  - Prior to an update released in January 2019, this class was simply known as
-    "Button". This was changed to reduce confusion with similarly named in-game
-    UI element classes, such as `Class.TextButton`.
 code_samples:
 inherits:
   - Instance
@@ -50,11 +37,7 @@ properties:
     description: |
       **ClickableWhenViewportHidden** determines whether a PluginToolbarButton
       may be clicked while the game viewport is hidden, such as when a
-      `Class.Script` is being edited in another tab. In the image below, various
-      plugin toolbar buttons are visible. Some are enabled as a result of this
-      property being true, such as the Localization Tools button.
-
-      <img src="../../../assets/legacy/PluginToolbarButton.ClickableWhenViewportHidden.jpg" alt="Various plugin toolbar buttons visible while a Script is being edited, causing the game viewport to be hidden. Some of the buttons are enabled due to this property being true." width="509" height="184" />
+      `Class.Script` is being edited in another tab.
 
       Typically, this property is good to enable if an action triggered by a
       plugin button's `Class.PluginToolbarButton.Click|Click` event doesn't

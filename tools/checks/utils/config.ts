@@ -39,6 +39,7 @@ export interface IConfig {
   baseBranch: string;
   commitHash: string;
   checkHttpLinks: boolean;
+  checkLocalizedContent: boolean;
   checkMarkdownLint: boolean;
   checkProtectedFields: boolean;
   checkRelativeLinks: boolean;
@@ -179,6 +180,11 @@ export const getConfig = async (): Promise<IConfig> => {
       type: 'boolean',
       description: 'Whether to check HTTP links',
       default: getEnvVar('CHECK_HTTP_LINKS', DataType.Boolean),
+    })
+    .option('checkLocalizedContent', {
+      type: 'boolean',
+      description: 'Whether to check translations of English content',
+      default: getEnvVar('CHECK_LOCALIZED_CONTENT', DataType.Boolean),
     })
     .option('checkMarkdownLint', {
       type: 'boolean',

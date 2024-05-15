@@ -1,7 +1,7 @@
 name: ColorSequence
 type: datatype
 summary: |
-  A gradient of color values comprised of `Datatype.ColorSequenceKeypoint`s.
+  A gradient of color values comprised of `Datatype.ColorSequenceKeypoint|ColorSequenceKeypoints`.
 description: |
   The `Datatype.ColorSequence` data type represents a gradient of color values
   from `0` to `1`. The color values are expressed using the

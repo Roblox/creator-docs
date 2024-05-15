@@ -4,7 +4,7 @@ summary: |
   Host operating system of the client.
 description: |
   The Platform Enum is used to determine the operating system of the client.
-  Currently this can only be used in `Class.CoreScript`s.
+  Currently this can only be used in `Class.CoreScript|CoreScripts`.
 code_samples:
 tags: []
 deprecation_message: ''

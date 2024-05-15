@@ -635,8 +635,8 @@ properties:
     tags:
       - Deprecated
     deprecation_message: |
-      This item is deprecated and is no longer supported. The outlines feature
-      was removed from the Roblox platform
+      This item is no longer supported as the outlines feature
+      was removed from the Roblox platform.
     security:
       read: None
       write: None
@@ -852,7 +852,7 @@ methods:
       Returns the moon's current phase.
     description: |
       Returns the moon's current phase. There is no way to change the moon's
-      phase so this will always return 0.75
+      phase so this will always return 0.75.
     code_samples:
     parameters: []
     returns:

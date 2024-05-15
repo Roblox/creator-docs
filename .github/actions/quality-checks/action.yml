@@ -3,16 +3,18 @@ description: Reusable action for running the quality checks
 inputs:
   BASE_BRANCH:
     description: Base branch
+  CHECK_PROTECTED_FIELDS:
+    description: Whether to check protected YAML fields
   COMMIT_HASH:
     description: Commit hash
   EVENT_NAME:
     description: Github event name
   GITHUB_PAT:
     description: Github token
+  POST_PULL_REQUEST_COMMENTS: 
+    description: Whether to post comments on the pull request
   PULL_REQUEST_NUMBER:
     description: Pull request number
-  CHECK_PROTECTED_FIELDS:
-    description: Whether to check protected YAML fields
 
 runs:
   using: 'composite'
@@ -26,7 +28,7 @@ runs:
         echo "Pull request number: ${{ inputs.PULL_REQUEST_NUMBER }}"
 
         if [ "${{ inputs.EVENT_NAME }}" = "pull_request" ] || [ "${{ inputs.EVENT_NAME }}" = "pull_request_target" ]; then
-          npm run check -- --files='changed' --postPullRequestComments=true
+          npm run check -- --files='changed' --postPullRequestComments=${{ inputs.POST_PULL_REQUEST_COMMENTS }}
         elif [ "${{ inputs.EVENT_NAME }}" = "push" ]; then
           npm run check -- --files='last-commit' --postPullRequestComments=false
         elif [ "${{ inputs.EVENT_NAME }}" = "workflow_dispatch" ]; then
@@ -40,4 +42,5 @@ runs:
         BASE_BRANCH: ${{ inputs.BASE_BRANCH }}
         CHECK_PROTECTED_FIELDS: ${{ inputs.CHECK_PROTECTED_FIELDS }}
         COMMIT_HASH: ${{ inputs.COMMIT_HASH }}
+        POST_PULL_REQUEST_COMMENTS: ${{ inputs.POST_PULL_REQUEST_COMMENTS }}
         PULL_REQUEST_NUMBER: ${{ inputs.PULL_REQUEST_NUMBER }}

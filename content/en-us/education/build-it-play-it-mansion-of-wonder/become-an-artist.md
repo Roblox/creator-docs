@@ -19,12 +19,9 @@ width="100%" />
 
 ## Opening the Template
 
-Time to open Roblox Studio! If you need, download [Studio](https://www.roblox.com/create) and come back to this page when you're ready.
+Time to open Roblox Studio! If you need, download [Studio](https://www.roblox.com/create), then click the following button to open the **Mansion of Wonder** template.
 
-1. Open **Roblox Studio** on your desktop.
-   In the **New** tab, click the **Mansion of Wonder** template to open it.
-
-   <img src="../../assets/education/build-it-play-it-mansion-of-wonder/become-an-artist/open-template.jpeg" width="100%" />
+<UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="6936227200" universeId="2653926164" />
 
 ## Closing Extra Windows
 

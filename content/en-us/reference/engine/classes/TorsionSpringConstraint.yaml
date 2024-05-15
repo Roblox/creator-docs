@@ -107,11 +107,8 @@ properties:
       can_load: true
       can_save: true
   - name: TorsionSpringConstraint.LimitEnabled
-    summary: |
-      Deprecated duplicate of `Class.TorsionSpringConstraint.LimitsEnabled`.
-    description: |
-      Deprecated duplicate of `Class.TorsionSpringConstraint.LimitsEnabled`; use
-      that instead.
+    summary: ''
+    description: ''
     code_samples: []
     type: bool
     tags:

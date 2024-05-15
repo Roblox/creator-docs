@@ -9,19 +9,11 @@ description: |
   `Class.PluginToolbarButton|PluginToolbarButtons` using the
   `Class.PluginToolbar:CreateButton()|CreateButton` function. In general, it is
   good practice for a plugin to use **one and only one** uniquely named toolbar
-  for all of its buttons. In Roblox Studio, toolbars are rendered under the
-  Plugins tab.
-
-  ![A screenshot of Roblox Studio's Plugins tab, rendering several PluginToolbars](/assets/legacy/PluginToolbar-light.png)
-
-  Pictured above are three PluginToolbars in Roblox Studio: Animations, Three
-  Wise Monkeys and Localization. The center toolbar is a custom toolbar created
-  by a plugin; the other toolbars are created by built-in Roblox Studio plugins.
-
-  ## Example
+  for all of its buttons. In Studio, toolbars are rendered under the **Plugins**
+  tab.
 
   The following code sample creates a basic toolbar with one button. It should
-  be run as a Roblox Studio plugin, and not run as a `Class.Script`.
+  be run as a Studio plugin, not as a `Class.Script`.
 
   ```
   local toolbar = plugin:CreateToolbar("Three Wise Monkeys")
@@ -37,12 +29,11 @@ properties: []
 methods:
   - name: PluginToolbar:CreateButton
     summary: |
-      Creates ` PluginToolbarButton` that allows the user to initiate a single,
-      one-off action in Roblox Studio through the
-      `Class.PluginToolbarButton.Click|Click` event.
+      Creates a `Class.PluginToolbarButton` that allows the user to initiate a
+      single, one-off action in Studio.
     description: |
-      Creates ` PluginToolbarButton` that allows the user to initiate a single,
-      one-off action in Roblox Studio through the
+      Creates a `Class.PluginToolbarButton` that allows the user to initiate a
+      single, one-off action in Studio through its
       `Class.PluginToolbarButton.Click|Click` event.
     code_samples:
       - adding-a-plugin-toolbar-button

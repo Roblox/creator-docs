@@ -51,7 +51,6 @@ properties:
     type: float
     tags:
       - NotScriptable
-      - NotBrowsable
     deprecation_message: ''
     security:
       read: None

@@ -37,23 +37,9 @@ properties:
       can_save: false
   - name: Plugin.GridSize
     summary: |
-      Returns the grid size the user has set in studio under the Model tab.
+      Returns the grid snapping size the user has set in Studio.
     description: |
-      Returns the grid size the user has set in studio under the Model tab. This
-      can be 1, 0.2 or 0.01, but has rounding errors. The 1/5th option should
-      return 0.2, but could return 0.20000000298023 instead. This code can be
-      used to get the real gridsize:
-
-      ```lua
-      local gridsize = plugin.GridSize
-      if math.abs(gridsize-0.2) &lt; 0.005 then -- Check if the gridsize is between 0.195 and 0.205
-      	gridsize = 0.2
-      elseif math.abs(gridsize-0.01) &lt; 0.005 then -- Between 0.005 and 0.015
-      	gridsize = 0.01
-      else -- Assume it's 1
-      	gridsize = 1
-      end
-      ```
+      Returns the grid snapping size the user has set in Studio under the [Model](../../../studio/model-tab.md) or [Avatar](../../../studio/avatar-tab.md) tabs. Note that this property may have slight rounding errors; for example it may be 0.0099999997764826 for a user setting of 1 or 0.4000000059604645 for a user setting of 0.4.
     code_samples:
     type: float
     tags:
@@ -226,8 +212,6 @@ methods:
     description: |
       The **CreateToolbar** function creates a new `Class.PluginToolbar` with
       the given name. The toolbar can then be used to create plugin buttons.
-
-      <img src="../../../assets/legacy/PluginToolbar-light.png" />
     code_samples:
       - Plugin-CreateToolbar1
     parameters:
@@ -612,7 +596,7 @@ methods:
           </thead>
           <tbody>
             <tr>
-              <td>Sender</td>
+              <td><b>Sender</b></td>
               <td>string</td>
               <td><code>""</code></td>
               <td>
@@ -620,43 +604,43 @@ methods:
               </td>
               </tr>
               <tr>
-              <td>MimeType</td>
+              <td><b>MimeType</b></td>
               <td>string</td>
               <td><code>""</code></td>
               <td>
-                  The [MIME type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) of Data.
+                  The <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME</a> type of <b>Data</b>.
               </td>
               </tr>
               <tr>
-              <td>Data</td>
+              <td><b>Data</b></td>
               <td>string</td>
               <td><code>""</code></td>
               <td>
-                  Information about the drag action (eg. what is being dragged). Should be used by the drop target.
+                  Information about the drag action, for example what is being dragged. Should be used by the drop target.
               </td>
               </tr>
               <tr>
-              <td>MouseIcon</td>
-              <td>Content</td>
+              <td><b>MouseIcon</b></td>
+              <td><code>Datatype.Content</code></td>
               <td><code>""</code></td>
               <td>
                   The icon to use for the mouse cursor during the drag. If empty, uses the default cursor.
               </td>
               </tr>
               <tr>
-              <td>DragIcon</td>
-              <td>Content</td>
+              <td><b>DragIcon</b></td>
+              <td><code>Datatype.Content</code></td>
               <td><code>""</code></td>
               <td>
               	An image to render under the mouse cursor during the drag. This should represent the item being dragged.
               </td>
               </tr>
               <tr>
-              <td>HotSpot</td>
-              <td>Vector2</td>
-              <td><code>Vector2.new(0, 0)</code></td>
+              <td><b>HotSpot</b></td>
+              <td><code>Datatype.Vector2</code></td>
+              <td><code>Datatype.Vector2.new(0, 0)</code></td>
               <td>
-              	The pixel offset from the top-left where the cursor should "hold" the DragIcon.
+              	The pixel offset from the top-left where the cursor should "hold" the <b>DragIcon</b>.
               </td>
               </tr>
           </tbody>

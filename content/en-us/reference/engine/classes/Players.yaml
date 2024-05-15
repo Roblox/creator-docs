@@ -696,7 +696,7 @@ methods:
           <td>Describes the BrickColor values for each limb</td>
         </tr>
         <tr>
-          <td><code>bodyColors3</code></td>
+          <td><code>bodyColor3s</code></td>
           <td>table (see below)</td>
           <td>Describes the Color3 instance for each limb which may not match perfectly with bodyColors</td>
         </tr>
@@ -1028,9 +1028,9 @@ events:
     summary: |
       Fires when a player enters the game.
     description: |
-      The PlayerAdded event fires when a player enters the game. This is used to
-      fire an event when a player joins a game, such as loading the player's
-      saved `Class.GlobalDataStore` data.
+      The **PlayerAdded** event fires when a player enters the game. This is
+      used to fire an event when a player joins a game, such as loading the
+      player's saved `Class.GlobalDataStore` data.
 
       This can be used alongside the `Class.Players.PlayerRemoving` event, which
       fires when a player is about to leave the game. For instance, if you would
@@ -1053,14 +1053,11 @@ events:
       `Class.Player.CharacterAdded` and `Class.Player.CharacterRemoving`
       functions.
 
-      - Up until recently, this event didn't work on the client (in
-        `Localscript`s), but this has been changed
-
-      - This event does not work as expected in _solo mode_, because the player
-        is created before scripts that connect to PlayerAdded run. To handle
-        this case, as well as cases in which the script is added into the game
-        after a player enters, create an OnPlayerAdded function that you can
-        call to handle a player's entrance.
+      Note that this event does not work as expected in **Play Solo** mode
+      because the player is created before scripts run that connect to
+      **PlayerAdded**. To handle this case, as well as cases in which the script
+      is added into the game after a player enters, create an `onPlayerAdded()`
+      function that you can call to handle a player's entrance.
     code_samples:
       - Players-PlayerAdded1
     parameters:

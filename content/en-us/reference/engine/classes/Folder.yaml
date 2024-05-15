@@ -11,13 +11,13 @@ description: |
   system, meaning they can also be parented to each other.
 
   #### Usage in UI Hierarchies
-  
+
   Each `Class.Folder` in your UI hierarchy can define its own `Class.UILayout`
   (`Class.UIListLayout`, `Class.UIGridLayout`, `Class.UIPageLayout`,
   `Class.UITableLayout`), or use a default position-based layout. For example,
-  you can set up a `Class.Frame` with multiple `Class.Folder` children,
-  each with a different `Class.UILayout` type. Additionally, `Class.Folder`
-  contents are exempt from the effects of a `Class.UILayout` sibling.
+  you can set up a `Class.Frame` with multiple `Class.Folder` children, each
+  with a different `Class.UILayout` type. Additionally, `Class.Folder` contents
+  are exempt from the effects of a `Class.UILayout` sibling.
 code_samples:
 inherits:
   - Instance

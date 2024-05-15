@@ -73,7 +73,6 @@ methods:
         default: 0
         summary: |
           **(Optional)** Maximum possible number of items that can be returned.
-          The default is 50.
       - name: cursor
         type: string
         default: ''
@@ -135,7 +134,7 @@ methods:
         type: int
         default: 0
         summary: |
-          Number of items to be returned in each page. By default is 1024.
+          Number of items to be returned in each page.
     returns:
       - type: DataStoreVersionPages
         summary: |

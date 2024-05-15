@@ -5,12 +5,11 @@ memory_category: Instances
 summary: |
   Provides access to a hash map within `Class.MemoryStoreService`.
 description: |
-  Provides access to a hash map within `Class.MemoryStoreService`. A hash 
-  map is a
-  collection of items where string keys are associated with arbitrary values (up
-  to the maximum allowed size -- see
-  [Memory Stores](../../../cloud-services/memory-stores/hash-map.md)).
-  The keys have no ordering guarantees.
+  Provides access to a hash map within `Class.MemoryStoreService`. A hash map is
+  a collection of items where string keys are associated with arbitrary values
+  (up to the maximum allowed size -- see
+  [Memory Stores](../../../cloud-services/memory-stores/hash-map.md)). The keys
+  have no ordering guarantees.
 code_samples: []
 inherits:
   - Instance
@@ -25,7 +24,7 @@ methods:
       Retrieves the value of a key in the hash map.
     description: |
       Retrieves the value of a key in the hash map.
-    code_samples: 
+    code_samples:
       - getting-data-hash-map-memory-store
     parameters:
       - name: key
@@ -44,10 +43,12 @@ methods:
     thread_safety: Unsafe
   - name: MemoryStoreHashMap:ListItemsAsync
     summary: |
-      Returns a `Class.MemoryStoreHashMapPages` object for enumerating through items in the hash map.
+      Returns a `Class.MemoryStoreHashMapPages` object for enumerating through
+      items in the hash map.
     description: |
-      Returns a `Class.MemoryStoreHashMapPages` object for enumerating through items in the hash map.
-    code_samples: 
+      Returns a `Class.MemoryStoreHashMapPages` object for enumerating through
+      items in the hash map.
+    code_samples:
       - listing-data-hash-map-memory-store
     parameters:
       - name: count
@@ -58,8 +59,8 @@ methods:
     returns:
       - type: MemoryStoreHashMapPages
         summary: |
-          A `Class.MemoryStoreHashMapPages` instance that enumerates the items as
-          `Class.MemoryStoreHashMapPages` instances.
+          A `Class.MemoryStoreHashMapPages` instance that enumerates the items
+          as `Class.MemoryStoreHashMapPages` instances.
     tags:
       - Yields
     deprecation_message: ''
@@ -70,7 +71,7 @@ methods:
       Removes an item from the hash map.
     description: |
       Removes an item from the hash map.
-    code_samples: 
+    code_samples:
       - removing-data-hash-map-memory-store
     parameters:
       - name: key
@@ -91,7 +92,7 @@ methods:
       Sets the value of a key in the hash map.
     description: |
       Sets the value of a key in the hash map, overwriting any existing value.
-    code_samples: 
+    code_samples:
       - adding-data-hash-map-memory-store
     parameters:
       - name: key

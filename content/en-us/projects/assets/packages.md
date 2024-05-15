@@ -246,8 +246,6 @@ If desired, you can share packages with friends or grant access to specific user
 
    - For a **user-owned** package, search for a friend through the search field, click their avatar/username, and choose a permission level.
 
-      <img src="../../assets/studio/collaboration/Collaborators-User-Permission-Edit.png" alt="A friend tile with the Edit dropdown menu highlighted." width="700" />
-
      <table>
      <thead>
      	<tr>
