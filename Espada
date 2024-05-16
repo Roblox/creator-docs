@@ -1,0 +1,38 @@
+-- Variables
+local jugador = game.Players.LocalPlayer
+local personaje = jugador.Character or jugador.CharacterAdded:Wait()
+
+-- Función para crear un arma
+local function crearArma(nombre, daño)
+    local arma = Instance.new("Tool")
+    arma.Name = nombre
+    arma.Parent = jugador.Backpack
+    
+    -- Función para manejar el daño al golpear con el arma
+    function arma.Equipped()
+        local mouse = jugador:GetMouse()
+        mouse.Button1Down:Connect(function()
+            local objeto = mouse.Target
+            if objeto and objeto.Parent then
+                local humanoid = objeto.Parent:FindFirstChildOfClass("Humanoid")
+                if humanoid then
+                    humanoid:TakeDamage(daño)
+                end
+            end
+        end)
+    end
+    
+    -- Limpiar el arma cuando se deja de equipar
+    function arma.Unequipped()
+        for _, child in ipairs(arma:GetChildren()) do
+            if child:IsA("Script") or child:IsA("LocalScript") then
+                child:Destroy()
+            end
+        end
+    end
+    
+    return arma
+end
+
+-- Crear un arma de prueba con 100 de daño
+crearArma("Espada", 1000000
