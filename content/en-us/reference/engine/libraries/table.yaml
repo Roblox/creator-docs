@@ -436,7 +436,7 @@ functions:
       returns true when the first element must come before the second in the
       final order.
       
-      The error 'invalid order function for sorting' will be thrown if both
+      The error `invalid order function for sorting` is thrown if both
       `comp(a, b)` and `comp(b, a)` return `true`.
       
       If `comp` is not given, then the standard Lua operator `<` is used
