@@ -35,7 +35,8 @@ import {
   compileMdx,
   getReTextAnalysis,
 } from './utils/retext.js';
-import { Emoji, Locale } from './utils/utils.js';
+import { Locale, checkEnglishVersionExists } from './utils/localization.js';
+import { Emoji } from './utils/utils.js';
 import { deduplicate } from './utils/utils.js';
 import {
   allowedHttpLinksTextFileFullPath,
@@ -58,7 +59,20 @@ let missSpelledWords: string[] = [];
 
 const getFilesToCheck = async () => {
   console.log(`::group::${Emoji.OpenFileFolder} Getting changed files`);
-  if (config.files === FileOption.All) {
+  if (config.checkLocalizedContent === true) {
+    for (const locale of Object.values(Locale)) {
+      filesToCheck.push(
+        ...getAllContentFileNamesWithExtension({
+          locale,
+          fileExtension: FileExtension.MARKDOWN,
+        }),
+        ...getAllContentFileNamesWithExtension({
+          locale,
+          fileExtension: FileExtension.YAML,
+        })
+      );
+    }
+  } else if (config.files === FileOption.All) {
     filesToCheck.push(
       ...getAllContentFileNamesWithExtension({
         locale: Locale.EN_US,
@@ -189,6 +203,9 @@ try {
     const isYamlFile = filePath.endsWith(FileExtension.YAML);
     console.log(`::group::${Emoji.Mag} Checking`, filePathFromRepoRoot);
     const fileContent = readFileSync(filePath);
+    if (config.checkLocalizedContent) {
+      checkEnglishVersionExists(filePathFromRepoRoot);
+    }
     if (config.checkRetextAnalysis) {
       const retextVFile = (await getReTextAnalysis(
         fileContent
@@ -250,13 +267,14 @@ try {
   }
   logSummariesToConsole(config);
 } catch (e) {
-  console.error(`${Emoji.NoEntry} Error running the check`, e);
-  process.exit(1);
-  console.log('Exit code 1'); // This should never output
+  console.error(`${Emoji.NoEntry} Error running the check, exiting 911`, e);
+  process.exit(911);
+  console.log('Exit code 911'); // This should never output
 }
 
 console.timeEnd(timeMessage);
 if (summaryOfRequirements) {
+  console.log("::error::There are required checks that didn't pass. Exiting 1");
   process.exit(1);
   console.log('Exit code 1'); // This should never output
 }

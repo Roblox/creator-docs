@@ -1000,41 +1000,10 @@ methods:
     summary: |
       Returns an array containing all of the descendants of the instance.
     description: |
-      The **GetDescendants** function of an object returns an array that
-      contains all of the descendants of that object. Unlike
-      `Class.Instance:GetChildren()`, which only returns the immediate children
-      of an object, GetDescendants will find every child of the object, every
-      child of those children, and so on.
-
-      The arrays returned by GetDescendants are arranged so that parents come
-      earlier than their children. Refer to the following example of a
-      `Class.Model` in the `Class.Workspace`:
-
-      ![Workspace Descendants](/assets/legacy/GetDescendantsExample.png)
-
-      Inside this model are three parts (C, D, and E) and another model
-      (InnerModel). Inside the inner model are two more parts (A and B). Calling
-      GetDescendants on the first model and printing the contents of the
-      returned array would print the first level of children (InnerModel, C, D,
-      and E) before A and B.
-
-      ```lua
-      local descendants = workspace.Model:GetDescendants()
-
-      -- Loop through all of the descendants of the model and
-      -- print out their name
-      for index, descendant in descendants do
-      	print(descendant.Name)
-      end
-
-      -- Prints:
-      -- C
-      -- D
-      -- E
-      -- InnerModel
-      -- A
-      -- B
-      ```
+      This object method returns an array that contains all of the descendants
+      of that object. Unlike `Class.Instance:GetChildren()`, which only returns
+      the immediate children of an object, this method finds every child of the
+      object, every child of those children, and so on.
     code_samples:
       - Instance-GetDescendants1
     parameters: []

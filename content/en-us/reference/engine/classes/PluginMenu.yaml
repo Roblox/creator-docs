@@ -3,32 +3,32 @@ type: class
 category: Plugins
 memory_category: Instances
 summary: |
-  A context menu that can be shown in Studio. Displays a list of PluginActions
-  and supports submenus.
+  A context menu that can be shown in Studio. Displays a list of
+  `Class.PluginAction|PluginActions` and supports submenus.
 description: |
-  A context menu that can be shown in Studio. It displays a list of
-  PluginActions and supports submenus.
+  A context menu that can be shown in Studio. Displays a list of
+  `Class.PluginAction|PluginActions` and supports submenus. **PluginMenu** must
+  be created using the `Class.Plugin:CreatePluginMenu()` method in order to work
+  as expected.
 
-  PluginMenus must be created using the `Class.Plugin:CreatePluginMenu()`
-  function in order to work as expected.
-
-  See also:
+  #### See Also
 
   - `Class.PluginAction`, an object that represents a generic performable action
     in Roblox Studio, with no directly associated `Toolbar` or `Enum.Button`.
-  - `Class.Plugin:CreatePluginAction()`, creates a PluginAction.
-  - `Class.PluginMenu.Title`, the text to be displayed when used as a sub menu.
-  - `Class.PluginMenu.Icon`, the icon to be displayed when used as a sub menu.
-  - `Class.PluginMenu:AddAction()`, adds the given action to the menu.
-  - `Class.PluginMenu:AddNewAction()`, creates a temporary action that is hidden
-    from Studio's customize shortcuts window.
-  - `Class.PluginMenu:AddMenu()`, adds the given menu as a separator.
-  - `Class.PluginMenu:AddSeparator()`, adds a separator between items in the
-    menu
-  - `Class.PluginMenu:Clear()`, clears the menu.
-  - `Class.PluginMenu:ShowAsync()`, shows the menu at the mouse cursor. Yields
-    until either an item is selected or the menu is closed. The selected action
-    fires its Triggered event.
+  - `Class.Plugin:CreatePluginAction()` which creates a `Class.PluginAction`.
+  - `Class.PluginMenu.Title` which is the text to be displayed when used as a
+    submenu.
+  - `Class.PluginMenu.Icon` which is the icon to be displayed when used as a
+    submenu.
+  - `Class.PluginMenu:AddAction()` which adds the given action to the menu.
+  - `Class.PluginMenu:AddNewAction()` which creates a temporary action that is
+    hidden from Studio's customize shortcuts window.
+  - `Class.PluginMenu:AddMenu()` which adds the given menu as a separator.
+  - `Class.PluginMenu:AddSeparator()` which adds a separator between items in
+    the menu
+  - `Class.PluginMenu:Clear()` which clears the menu.
+  - `Class.PluginMenu:ShowAsync()` which shows the menu at the mouse cursor and
+    yields until either an item is selected or the menu is closed.
 code_samples:
   - creating-a-pluginaction-and-pluginmenu
 inherits:

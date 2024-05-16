@@ -260,6 +260,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/BallSocketConstraint.yaml
         ignoreTranslation: true
+      - title: BanHistoryPages
+        path: /reference/engine/classes/BanHistoryPages
+        type: engineapi
+        source: /reference/engine/classes/BanHistoryPages.yaml
+        ignoreTranslation: true
       - title: BasePart
         path: /reference/engine/classes/BasePart
         type: engineapi
@@ -1674,6 +1679,11 @@ navigation:
         path: /reference/engine/classes/PlayerGui
         type: engineapi
         source: /reference/engine/classes/PlayerGui.yaml
+        ignoreTranslation: true
+      - title: PlayerHydrationService
+        path: /reference/engine/classes/PlayerHydrationService
+        type: engineapi
+        source: /reference/engine/classes/PlayerHydrationService.yaml
         ignoreTranslation: true
       - title: PlayerMouse
         path: /reference/engine/classes/PlayerMouse
@@ -4033,6 +4043,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/IXPLoadingStatus.yaml
         ignoreTranslation: true
+      - title: JoinSource
+        path: /reference/engine/enums/JoinSource
+        type: engineapi
+        source: /reference/engine/enums/JoinSource.yaml
+        ignoreTranslation: true
       - title: JointCreationMode
         path: /reference/engine/enums/JointCreationMode
         type: engineapi
@@ -4102,6 +4117,21 @@ navigation:
         path: /reference/engine/enums/LoadDynamicHeads
         type: engineapi
         source: /reference/engine/enums/LoadDynamicHeads.yaml
+        ignoreTranslation: true
+      - title: MarketplaceBulkPurchasePromptStatus
+        path: /reference/engine/enums/MarketplaceBulkPurchasePromptStatus
+        type: engineapi
+        source: /reference/engine/enums/MarketplaceBulkPurchasePromptStatus.yaml
+        ignoreTranslation: true
+      - title: MarketplaceItemPurchaseStatus
+        path: /reference/engine/enums/MarketplaceItemPurchaseStatus
+        type: engineapi
+        source: /reference/engine/enums/MarketplaceItemPurchaseStatus.yaml
+        ignoreTranslation: true
+      - title: MarketplaceProductType
+        path: /reference/engine/enums/MarketplaceProductType
+        type: engineapi
+        source: /reference/engine/enums/MarketplaceProductType.yaml
         ignoreTranslation: true
       - title: MarkupKind
         path: /reference/engine/enums/MarkupKind
@@ -4947,6 +4977,16 @@ navigation:
         path: /reference/engine/enums/TweenStatus
         type: engineapi
         source: /reference/engine/enums/TweenStatus.yaml
+        ignoreTranslation: true
+      - title: UIDragDetectorDragStyle
+        path: /reference/engine/enums/UIDragDetectorDragStyle
+        type: engineapi
+        source: /reference/engine/enums/UIDragDetectorDragStyle.yaml
+        ignoreTranslation: true
+      - title: UIDragDetectorResponseStyle
+        path: /reference/engine/enums/UIDragDetectorResponseStyle
+        type: engineapi
+        source: /reference/engine/enums/UIDragDetectorResponseStyle.yaml
         ignoreTranslation: true
       - title: UIFlexAlignment
         path: /reference/engine/enums/UIFlexAlignment

@@ -1184,7 +1184,8 @@ methods:
         summary: |
           A dictionary containing PlaceId and UserId values (see table in
           description).
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -1960,7 +1961,7 @@ methods:
         type: int
         default: 200
         summary: |
-          The maximum number of online friends to return. The default is 200.
+          The maximum number of online friends to return.
     returns:
       - type: Array
         summary: |
@@ -2492,26 +2493,25 @@ events:
     thread_safety: Unsafe
   - name: Player.Idled
     summary: |
-      Usually fired two minutes after the game engine classes the player as
-      idle. Time is the amount of seconds since this point.
+      This event fires approximately two minutes after the game engine
+      classifies the `Class.Player|player` as idle. Time is the number of
+      seconds that have elapsed since that point.
     description: |
-      This event is usually fired two minutes after the game engine classifies
-      the `Class.Player|player` as idle. Time is the amount of seconds since
-      this point.
+      This event fires approximately two minutes after the game engine
+      classifies the `Class.Player|player` as idle. Time is the number of
+      seconds that have elapsed since that point. The event continues to fire
+      every 30 seconds for as long as the player remains idle.
 
-      This can be used to track when a player has been idled for approximately
-      two minutes - which can be useful for implementing away from keyboard
-      (AFK) features into a game.
+      This event only fires in client scripts, not server scripts; use a
+      `Class.RemoteEvent` to notify the server of idle players.
 
-      When the game engine classifies a player as idle, this event is called
-      after two minutes. After every check, if the player is still idled, the
-      event will continue to fire until the check reveals the player is no
-      longer idle.
+      Roblox automatically disconnects players that have been idle for at least
+      20 minutes, so this event is useful for warning players that they will be
+      disconnected soon, disconnecting players prior to those 20 minutes, or
+      other away from keyboard (AFK) features.
 
-      This event is used by Roblox to automatically disconnect players that have
-      been idle for at least 20 minutes. If you would like to track when this
-      disconnect occurs, consider using `Class.Players.PlayerRemoving` alongside
-      this event.
+      To track how often automatic disconnects occur, try correlating this event
+      with occurrences of `Class.Players.PlayerRemoving`.
     code_samples:
       - Player-Idled1
     parameters:

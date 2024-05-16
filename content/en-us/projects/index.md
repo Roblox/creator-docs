@@ -39,7 +39,7 @@ In Roblox, assets such as images, meshes, and audio are stored as **cloud-based 
   </tbody>
 </table>
 
-By default, assets are private to your experience and you can use an asset in any place by referencing its ID. You can also publish and share them to the community in the [Creator Store](https://create.roblox.com/marketplace/), so others can use them as well.
+By default, assets are private to your experience and you can use an asset in any place by referencing its ID. You can also distribute them to the community in the [Creator Store](https://create.roblox.com/store/), so others can use them as well.
 
 For more information on how to import and publish assets, see [Assets](../projects/assets/index.md).
 

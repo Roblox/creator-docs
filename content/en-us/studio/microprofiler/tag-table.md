@@ -3,7 +3,7 @@ title: Tag Table
 description: Tag Table is a list of tags for the MicroProfiler.
 ---
 
-The following is a list of tags given by [MicroProfiler](../../studio/microprofiler/index.md), separated by type. Understanding these tags will help in determining the cause and identifying potential solutions for unoptimized code.The tables contain tag label, descriptions and performance advice for improving performance and optimizing your experience.
+The following is a list of tags given by [MicroProfiler](../../studio/microprofiler/index.md), separated by type. Understanding these tags will help in determining the cause and identifying potential solutions for unoptimized code. The tables contain tag label, descriptions and performance advice for improving performance and optimizing your experience.
 
 ## AI/Navigation
 

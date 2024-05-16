@@ -18,7 +18,11 @@ description: |
   interact, the friction and elasticity between them are determined in the same
   way by the following pairwise weighted average function:
 
-  ![(Friction_a * FrictionWeight_a + Friction_b * FrictionWeight_b) / (FrictionWeight_a + FrictionWeight_b)](/assets/legacy/FrictionWeight.png)
+  ```lua
+  local function getActualFriction(partA, partB)
+  	return (partA.Friction * partA.FrictionWeight + partB.Friction * partB.FrictionWeight) / (partA.FrictionWeight + partB.FrictionWeight)
+  end
+  ```
 
   Although the formula above refers to the
   `Datatype.PhysicalProperties.Friction|Friction` and

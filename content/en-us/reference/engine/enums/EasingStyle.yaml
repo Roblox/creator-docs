@@ -4,20 +4,14 @@ summary: |
   Pass to `Datatype.TweenInfo|TweenInfo.new` to control the motion of a
   `Class.Tween`.
 description: |
-  Passed to `Datatype.TweenInfo|TweenInfo.new` to control the motion of a
-  `Class.Tween`. Each easing style is described in a graph below. The X axis is
-  a value passed to `Class.TweenService:GetValue()` and the Y axis is the value
-  returned.
+  Passed to `Datatype.TweenInfo|TweenInfo.new()` to control the motion of a
+  `Class.Tween`. The following graphs reflect easing styles for
+  `Enum.EasingDirection|Enum.EasingDirection.In`. For graphs reflecting
+  `Enum.EasingDirection|Enum.EasingDirection.Out` and
+  `Enum.EasingDirection|Enum.EasingDirection.InOut`, see
+  [UI&nbsp;Animations](../../../ui/animation.md#style).
 
-  This diagram reflects the various styles with
-  `Enum.EasingDirection|Enum.EasingDirection.In`. Note that for
-  `Enum.EasingDirection|Enum.EasingDirection.Out`, the easing style is applied
-  in a reverse direction.
-
-  For a video demonstration of each easing style, see
-  [UI Animations - Style](../../../ui/animation.md#style).
-
-  ![Easing style graphs](/assets/legacy/EasingStyles.jpg)
+  <img src="/assets/engine-api/enums/EasingStyle/Easing-Styles-In.png" width="800" alt="Graphs of EasingStyle variations with an 'In' EasingDirection." />
 code_samples:
 tags: []
 deprecation_message: ''

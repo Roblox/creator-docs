@@ -57,7 +57,22 @@ inherits:
 tags:
   - NotReplicated
 deprecation_message: ''
-properties: []
+properties:
+  - name: EditableMesh.SkinningEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
 methods:
   - name: EditableMesh:AddTriangle
     summary: |

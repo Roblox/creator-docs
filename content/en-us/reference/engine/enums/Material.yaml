@@ -3,7 +3,10 @@ type: enum
 summary: |
   Materials used for parts and/or terrain.
 description: |
-  The following base materials are used for [parts](../../../parts/index.md) and/or [terrain](../../../parts/terrain.md). See the [Materials](../../../parts/materials.md) guide for more details on using and modifying materials.
+  The following base materials are used for [parts](../../../parts/index.md)
+  and/or [terrain](../../../parts/terrain.md). See the
+  [Materials](../../../parts/materials.md) guide for more details on using and
+  modifying materials.
 code_samples:
 tags: []
 deprecation_message: ''
@@ -219,7 +222,7 @@ items:
       have a texture applied to its `Class.MeshPart.TextureID|TextureID`, and
       that texture image must have a wide value range since the material
       displays the range from dark/black to light/white values. Obtain
-      [this model](https://create.roblox.com/marketplace/asset/15507769146/ForceFieldMesh)
+      [this model](https://create.roblox.com/store/asset/15507769146/ForceFieldMesh)
       for a functional example of the **ForceField** material.
     value: 1584
     tags: []

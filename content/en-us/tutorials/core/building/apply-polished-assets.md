@@ -50,7 +50,7 @@ Each of these 3D assets are either a single `Class.MeshPart` object, or a `Class
 
 You can add the library to your inventory within Studio by clicking the **Add to Inventory** link in the following component. Once assets are within your inventory, you can reuse them in any project on the platform.
 
-<BrowseSampleCard href='https://create.roblox.com/marketplace/asset/14238769242' description='Create the completed version of the Core sample experience with these art assets. Includes six 3D assets and two custom materials.' title='Core Curriculum Library' assetId={14238769242}  />
+<BrowseSampleCard href='https://create.roblox.com/store/asset/14238769242' description='Create the completed version of the Core sample experience with these art assets. Includes six 3D assets and two custom materials.' title='Core Curriculum Library' assetId={14238769242}  />
 
 To get the asset library from your inventory into your experience:
 
@@ -1178,5 +1178,5 @@ To playtest your experience:
 Congratulations on completing the Core Curriculum! Now that you have experience creating a simple experience from start to finish, you can extend your project with new gameplay features or additional levels, explore Studio's additional [features](../../../platform.md), or follow additional tutorial curricula, such as the [Environmental Art Curriculum](../../environmental-art/index.md) that teaches you how to create a high-quality laser tag environment. Happy creating!
 
 <Alert severity="info">
-We’re interested in hearing from you about your experience following the Core Curriculum. If you have any questions, concerns, or additional feedback on the process, please comment on our [Core Curriculum Q&A](https://devforum.roblox.com/t/feedback-on-core-curriculum/2592219).
+We're interested in hearing from you about your experience following the Core Curriculum. If you have any questions, concerns, or additional feedback on the process, please comment on our [Core Curriculum Q&A](https://devforum.roblox.com/t/feedback-on-core-curriculum/2592219).
 </Alert>

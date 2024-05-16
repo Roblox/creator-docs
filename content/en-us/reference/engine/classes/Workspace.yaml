@@ -619,7 +619,7 @@ properties:
     code_samples: []
     type: RenderingCacheOptimizationMode
     tags:
-      - Hidden
+      - NotScriptable
     deprecation_message: ''
     security:
       read: None
@@ -627,8 +627,8 @@ properties:
     thread_safety: ReadSafe
     category: Behavior
     serialization:
-      can_load: false
-      can_save: false
+      can_load: true
+      can_save: true
   - name: Workspace.ReplicateInstanceDestroySetting
     summary: ''
     description: ''

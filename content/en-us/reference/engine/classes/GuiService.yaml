@@ -771,8 +771,8 @@ events:
     description: ''
     code_samples: []
     parameters:
-      - name: selectedCurveObject
-        type: Instance
+      - name: selectedCurveObjects
+        type: Objects
         default:
         summary: ''
     tags: []

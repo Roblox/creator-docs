@@ -2,10 +2,10 @@ name: GuiMain
 type: class
 category:
 memory_category: Instances
-summary: ''
+summary: |
+  The original name of the `Class.ScreenGui`.
 description: |
-  The original name of the `Class.ScreenGui`. This class functions identically
-  to the ScreenGui, and should not be used.
+  The original name of the `Class.ScreenGui`.
 code_samples:
 inherits:
   - ScreenGui

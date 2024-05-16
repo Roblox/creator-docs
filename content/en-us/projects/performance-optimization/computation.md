@@ -162,11 +162,11 @@ per frame on both the server and the client.
   frame. Often, experiences will have objects being simulated that do not need
   to be or will have mechanisms that have more constraints and joints than they
   need.
-- **Overly precise collision detection** - Mesh parts have a [collision
-  fidelity](../../workspace/collisions.md) property for detecting collision,
-  which offers a variety of modes with different levels of performance impact.
-  Precise collision detection mode for mesh parts has the most expensive
-  performance cost and takes the engine longer to compute.
+- **Overly precise collision detection** - Mesh parts have a
+  [collision fidelity](../../workspace/collisions.md) property for detecting
+  collision, which offers a variety of modes with different levels of
+  performance impact. Precise collision detection mode for mesh parts has the
+  most expensive performance cost and takes the engine longer to compute.
 
 <h4>How to Mitigate</h4>
 
@@ -441,7 +441,7 @@ sent sending this data and processing received data.
   the data model on the server, it is replicated to connected clients. This
   means creating and destroying large instance hierarchies like maps at runtime
   can be very network intensive.
-  
+
   A common culprit here is the complex animation data saved by Animation Editor
   plugins in rigs. If these aren't removed before the game is published, and
   the animated model is cloned regularly a large amount of data will be

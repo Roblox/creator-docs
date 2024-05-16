@@ -215,8 +215,6 @@ properties:
       `Class.UserInputService.TouchSwipe` can still be used to process other
       forms of user input on mobile devices with an enabled touch screen (see
       the main UserInputService class page for a full list).
-
-      Deprecated in favor of `Class.GuiService.TouchControlsEnabled`.
     code_samples:
       - UserInputService-ModalEnabled
     type: bool
@@ -431,24 +429,15 @@ properties:
     description: |
       This property describes the position of the on-screen keyboard in pixels.
       The keyboard's position is `Datatype.Vector2|Vector2.new(0, 0)` when it is
-      not `Class.UserInputService.OnScreenKeyboardVisible|visible`.
-
-      The code snippet below prints the position of the keyboard.
-
-      ```lua
-      local userInputService = game:GetService("UserInputService")
-      print(userInputService.OnScreenKeyboardPosition)
-      ```
+      not visible.
 
       As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
+      used in a `Class.LocalScript`, or a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
 
-      ![On screen keyboard](/assets/legacy/ClientKeyboard.png)
-
-      See also:
-
-      - `Class.UserInputService.OnScreenKeyboardVisible`
-      - `Class.UserInputService.OnScreenKeyboardSize`
+      See also
+      `Class.UserInputService.OnScreenKeyboardVisible|OnScreenKeyboardVisible`
+      and `Class.UserInputService.OnScreenKeyboardSize|OnScreenKeyboardSize`.
     code_samples:
       - UserInputService-OnScreenKeyboardPosition
     type: Vector2
@@ -470,24 +459,16 @@ properties:
     description: |
       This property describes the size of the on-screen keyboard in pixels. The
       keyboard's size is `Datatype.Vector2|Vector2.new(0, 0)` when it is not
-      `Class.UserInputService.OnScreenKeyboardVisible|visible`.
-
-      The code snippet below prints the size of the keyboard.
-
-      ```lua
-      local userInputService = game:GetService("UserInputService")
-      print(userInputService.OnScreenKeyboardSize)
-      ```
+      visible.
 
       As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
+      used in a `Class.LocalScript`, or a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
 
-      ![On screen keyboard](/assets/legacy/On-Screen-Keyboard.png)
-
-      See also:
-
-      - `Class.UserInputService.OnScreenKeyboardVisible`
-      - `Class.UserInputService.OnScreenKeyboardPosition`
+      See also
+      `Class.UserInputService.OnScreenKeyboardVisible|OnScreenKeyboardVisible`
+      and
+      `Class.UserInputService.OnScreenKeyboardPosition|OnScreenKeyboardPosition`.
     code_samples:
     type: Vector2
     tags:
@@ -510,28 +491,13 @@ properties:
       This property describes whether an on-screen keyboard is currently visible
       on the user's screen.
 
-      The code snippet below prints whether the keyboard is visible.
-
-      ```lua
-      local userInputService = game:GetService("UserInputService")
-
-      local keyboardIsVisible = userInputService.OnScreenKeyboardIsVisible
-      if keyboardIsVisible then
-      	print("On-screen keyboard is visible!")
-      else
-      	print("On-screen keyboard is not visible!")
-      end
-      ```
-
       As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
+      used in a `Class.LocalScript`, or a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
 
-      ![On screen keyboard](/assets/legacy/ClientKeyboard.png)
-
-      See also:
-
-      - `Class.UserInputService.OnScreenKeyboardSize`
-      - `Class.UserInputService.OnScreenKeyboardPosition`
+      See also
+      `Class.UserInputService.OnScreenKeyboardSize|OnScreenKeyboardSize` and
+      `Class.UserInputService.OnScreenKeyboardPosition|OnScreenKeyboardPosition`.
     code_samples:
     type: bool
     tags:
@@ -605,8 +571,6 @@ properties:
     description: |
       The UserHeadCFrame used to describe the orientation and position of a
       user's head, if they are actively using a virtual reality headset.
-
-      Deprecated in favor of `Class.UserInputService:GetUserCFrame()`.
     code_samples:
     type: CFrame
     tags:

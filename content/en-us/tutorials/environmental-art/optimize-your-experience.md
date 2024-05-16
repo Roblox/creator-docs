@@ -88,5 +88,5 @@ For example, consider the following view of a planter in the sample environment.
 When you finish reviewing all of your content to ensure it's optimal across devices, your experience is now ready for publication!
 
 <Alert severity="info">
-We’re interested in hearing from you about your experience following the Environmental Art Curriculum. If you have any questions, concerns, or additional feedback on the process, please comment on our [Environmental Art Curriculum Q&A](https://devforum.roblox.com/t/feedback-on-environmental-art-curriculum/2592218).
+We're interested in hearing from you about your experience following the Environmental Art Curriculum. If you have any questions, concerns, or additional feedback on the process, please comment on our [Environmental Art Curriculum Q&A](https://devforum.roblox.com/t/feedback-on-environmental-art-curriculum/2592218).
 </Alert>

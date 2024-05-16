@@ -138,6 +138,10 @@ root:render(helloFrame)
 
 Like most other software projects, the goal is that contributors can clone a repository, install Foreman, run a few commands, and have the same development environment as the rest of the team.
 
+<Alert severity="success">
+For a detailed walkthrough of using React to create a Roblox UI, see [React + Roblox](https://devforum.roblox.com/t/how-to-react-roblox/2964543).
+</Alert>
+
 ## Version Control
 
 Having a set of plain text files on your computer unlocks a variety of capabilities, but the primary one is _version control_. You can store your scripts and configuration files in a [Git](https://git-scm.com/) or [Mercurial](https://www.mercurial-scm.org/) repository; host remote repositories and review code changes in [GitHub](https://github.com), [GitLab](https://gitlab.com), or [Bitbucket](https://bitbucket.org); and use whichever text editor you like.

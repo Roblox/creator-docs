@@ -176,7 +176,7 @@ local canPrompt = canPromptOptIn()
 if canPrompt then
 	local success, errorMessage = pcall(function()
 		ExperienceNotificationService:PromptOptIn()
-	end
+	end)
 end
 
 -- Listen to opt-in prompt closed event 

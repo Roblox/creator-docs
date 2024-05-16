@@ -1,0 +1,23 @@
+name: MarketplaceBulkPurchasePromptStatus
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Completed
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Aborted
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Error
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

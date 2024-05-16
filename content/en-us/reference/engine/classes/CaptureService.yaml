@@ -15,7 +15,6 @@ inherits:
 tags:
   - NotCreatable
   - Service
-  - NotReplicated
 deprecation_message: ''
 properties: []
 methods:
@@ -43,6 +42,22 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+  - name: CaptureService:OnCaptureShared
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: capturePath
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
   - name: CaptureService:PromptSaveCapturesToGallery
     summary: |
@@ -115,6 +130,23 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: CaptureService:DeleteCapturesAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: pathArr
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: CaptureService:SaveCapturesToExternalStorageAsync
     summary: ''
     description: ''
     code_samples: []

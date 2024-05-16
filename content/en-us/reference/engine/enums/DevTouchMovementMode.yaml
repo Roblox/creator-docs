@@ -15,29 +15,23 @@ items:
     tags: []
     deprecation_message: ''
   - name: Thumbstick
-    summary: |
-      This item is deprecated. Use `DynamicThumbstick` for virtual thumbstick
-      applications.
+    summary: ''
     value: 1
     tags: []
     deprecation_message: |
-      This item is deprecated. Do not use it for new work.
+      Use **DynamicThumbstick** for virtual thumbstick applications.
   - name: DPad
-    summary: |
-      This item is deprecated. Use `DynamicThumbstick` for virtual DPad
-      applications.
+    summary: ''
     value: 2
     tags: []
     deprecation_message: |
-      This item is deprecated. Do not use it for new work.
+      Use **DynamicThumbstick** for virtual DPad applications.
   - name: Thumbpad
-    summary: |
-      This item is deprecated. Use `DynamicThumbstick` for virtual thumbpad
-      applications.
+    summary: ''
     value: 3
     tags: []
     deprecation_message: |
-      This item is deprecated. Do not use it for new work.
+      Use **DynamicThumbstick** for virtual thumbpad applications.
   - name: ClickToMove
     summary: |
       The player's character will attempt to move to a location in the world

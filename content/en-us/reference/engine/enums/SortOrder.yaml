@@ -20,7 +20,7 @@ items:
   - name: Custom
     value: 1
     summary: |
-      Deprecated. Elements are ordered by the function passed to
+      Elements are ordered by the function passed to
       `Class.UIGridStyleLayout:SetCustomSortFunction()`.
     tags:
       - Deprecated

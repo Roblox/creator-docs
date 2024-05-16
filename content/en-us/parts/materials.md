@@ -239,7 +239,7 @@ When you apply a custom material to a part, the part's `Class.Part.MaterialVaria
 
 When you reuse custom materials in models and packages, each `MaterialVariant` instance must be in `Class.MaterialService` for it to work.
 
-- If you publish a model in the Creator Store with a custom material, include the `Class.MaterialVariant` instance in the model. For more information about publishing models to the Creator Store, see [Publishing Assets](../production/publishing/publishing-assets.md).
+- If you distribute a model to the Creator Store with a custom material, include the `Class.MaterialVariant` instance in the model. For more information about distributing models to the Creator Store, see [Distributing Assets](../production/publishing/publishing-assets.md).
 - If you insert a model from the Creator Store, look for any `Class.MaterialVariant` instances and copy them to `Class.MaterialService`. For more information about importing models from the Creator Store, see [Creator Store](../production/publishing/creator-store.md).
 - If you want to use custom materials with packages, put the package in `Class.MaterialService`. For more information on packages, see [Packages](../projects/assets/packages.md).
 

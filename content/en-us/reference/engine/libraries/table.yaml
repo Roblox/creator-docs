@@ -434,7 +434,11 @@ functions:
       Sorts elements of array t in a given order, from `t[1]` to `t[#t]`. If
       `comp` is given, then it must be a function that receives two elements and
       returns true when the first element must come before the second in the
-      final order (so that not `comp(t[i+1],t[i])` will be true after the sort).
+      final order.
+      
+      The error `invalid order function for sorting` is thrown if both
+      `comp(a, b)` and `comp(b, a)` return `true`.
+      
       If `comp` is not given, then the standard Lua operator `<` is used
       instead.
     parameters:
@@ -447,8 +451,8 @@ functions:
         default: nil
         summary: |
           An optional comparison function to be used when comparing elements in
-          the table. This function receives two elements, `a` and `b`, and
-          should return true if `a < b`.
+          the table. This function receives two elements, and should return true if 
+          the first element should be sorted before the second in the final order.
     returns:
       - type: void
         summary: ''

@@ -19,7 +19,6 @@ inherits:
 tags:
   - NotCreatable
   - Service
-  - NotBrowsable
 deprecation_message: ''
 properties:
   - name: VRService.AutomaticScaling
@@ -53,8 +52,7 @@ properties:
       This property must be set on the server.
     code_samples: []
     type: bool
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security:
       read: None

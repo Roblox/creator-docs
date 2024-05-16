@@ -43,8 +43,19 @@ properties:
       can_load: true
       can_save: true
   - name: AudioEmitter.DistanceAttenuation
-    summary: ''
-    description: ''
+    summary: |
+      Represents how the perceived volume of the emitted sound changes as the
+      distance between a `Class.AudioListener` and the `Class.AudioEmitter`
+      increases.
+    description: |
+      Represents a volume-over-distance curve that affects how loudly a
+      `Class.AudioListener` will hear the `Class.AudioEmitter`, based on the
+      distance between them.
+
+      This property is internal and can't be accessed by scripts; it exists to
+      support replication. See
+      `Class.AudioEmitter:SetDistanceAttenuation()|SetDistanceAttenuation()` for
+      usage details.
     code_samples: []
     type: BinaryString
     tags: []
@@ -53,7 +64,7 @@ properties:
       read: RobloxSecurity
       write: RobloxSecurity
     thread_safety: ReadSafe
-    category: Data
+    category: Emission
     serialization:
       can_load: true
       can_save: true
@@ -75,8 +86,14 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AudioEmitter:GetDistanceAttenuation
-    summary: ''
-    description: ''
+    summary: |
+      Gets the distance attenuation curve that the `Class.AudioEmitter` is
+      using, or an empty table if it's using the default curve.
+    description: |
+      Returns a table mapping distance to volume. Keys are numbers greater than
+      or equal to 0, while values are numbers between 0 and 1 (inclusive)
+      describing how volume attenuates over distance. This method returns an
+      empty table if the default distance attenuation curve is being used.
     code_samples: []
     parameters: []
     returns:
@@ -88,9 +105,32 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AudioEmitter:SetDistanceAttenuation
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Sets the distance attenuation curve that the `Class.AudioEmitter` should
+      use, or uses an inverse rolloff curve if none is provided.
+    description: |
+      Sets a volume-over-distance curve that affects how loudly a
+      `Class.AudioListener` will hear the `Class.AudioEmitter`, based on the
+      distance between them.
+
+      The curve is represented by a table mapping distance keys to volume
+      values. Keys are expected to be unique numbers greater than or equal to 0,
+      while values are expected to be numbers between 0 and 1 (inclusive).
+      Tables containing up to 400 key-value pairs are supported.
+
+      The volume of the `Class.AudioEmitter` from the perspective of a
+      `Class.AudioListener` at a distance `d` is determined by linearly
+      interpolating between the volume levels for the points on the curve whose
+      distance values are directly above and below `d`. If there is either no
+      point below `d` or no point above `d`, the volume level of the other point
+      is chosen. Essentially, the curve is a sequence of points connected by
+      straight lines, and beyond its left and right endpoints the curve extends
+      outward infinitely at their respective volume levels.
+
+      If the table is empty or `nil`, the `Class.AudioEmitter` defaults to using
+      a distance attenuation curve determined by the inverse-square law.
+    code_samples:
+      - audio-wiring---custom-distance-attenuation
     parameters:
       - name: curve
         type: Dictionary

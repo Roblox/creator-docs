@@ -96,14 +96,6 @@ properties:
       will display the content of `Class.Dialog.GoodbyeDialog` as the last
       option after other dialog choices. Clicking on the goodbye option will
       exit the dialog.
-
-      #### GoodbyeChoiceActive = true
-
-      ![Active](/assets/legacy/GoodbyeChoiceActive.png)
-
-      #### GoodbyeChoiceActive = false
-
-      ![Inactive](/assets/legacy/GoodbyeChoiceInactive.png)
     code_samples:
     type: bool
     tags: []

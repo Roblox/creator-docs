@@ -5,9 +5,9 @@ memory_category: Instances
 summary: |
   Provides access to a sorted map within `Class.MemoryStoreService`.
 description: |
-  Provides access to a sorted map within `Class.MemoryStoreService`. A sorted map is a
-  collection of items where string keys are associated with arbitrary values (up
-  to the maximum allowed size -- see
+  Provides access to a sorted map within `Class.MemoryStoreService`. A sorted
+  map is a collection of items where string keys are associated with arbitrary
+  values (up to the maximum allowed size -- see
   [Memory Stores](../../../cloud-services/memory-stores/sorted-map.md)). Each
   item can also have an optional sort key, which can be a number or a string. In
   the ordering of items, the sort key, if provided, takes precedence over the
