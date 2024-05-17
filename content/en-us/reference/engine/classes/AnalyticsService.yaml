@@ -5,14 +5,7 @@ memory_category: Instances
 summary: |
   An internal service used by Roblox to collect analytics from `CoreScripts`.
 description: |
-  **Note** This service should only be used by developers who are enrolled in
-  the PlayFab program.
-
-  The AnalyticsService provides developers with out-of-the-box analytics so they
-  can improve their games.
-
-  Developers can report events and see visual analysis results on the PlayFab
-  webpage.
+  AnalyticsService is a collection of methods that allows developers to track how players interact with their experiences, specifically player progression, in-game economy, funnels, and custom events.
 code_samples:
 inherits:
   - Instance
@@ -533,8 +526,10 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogEconomyEvent
-    summary: ''
-    description: ''
+    summary: |
+      Logs an event used to track player actions related in experience.
+
+    description: 'Logs an event used to track player actions related in experience.'
     code_samples: []
     parameters:
       - name: player
@@ -577,8 +572,9 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogFunnelStepEvent
-    summary: ''
-    description: ''
+    summary: |
+      Logs an event used to track player actions stepping through a pre-planned funnel.
+    description: 'Logs an event used to track player actions stepping through a pre-planned funnel.'
     code_samples: []
     parameters:
       - name: player
@@ -613,8 +609,9 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogOnboardingFunnelStepEvent
-    summary: ''
-    description: ''
+    summary: |
+      Logs an event used to track player actions stepping through an onboarding funnel.
+    description: 'Logs an event used to track player actions stepping through an onboarding funnel.'
     code_samples: []
     parameters:
       - name: player
@@ -641,8 +638,9 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogProgressionCompleteEvent
-    summary: ''
-    description: ''
+    summary: |
+      Logs an event for when a user has completed a level attempt.
+    description: 'Logs an event for when a user has completed a level attempt.'
     code_samples: []
     parameters:
       - name: player
@@ -673,8 +671,9 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogProgressionEvent
-    summary: ''
-    description: ''
+    summary: |
+      Logs an event for when a user has started, completed, or failed a level attempt.
+    description: 'Logs an event for when a user has started, completed, or failed a level attempt.'
     code_samples: []
     parameters:
       - name: player
@@ -709,8 +708,9 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogProgressionFailEvent
-    summary: ''
-    description: ''
+    summary: |
+      Logs an event for when a user has failed a level attempt.
+    description: 'Logs an event for when a user has failed a level attempt.'
     code_samples: []
     parameters:
       - name: player
@@ -741,8 +741,9 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogProgressionStartEvent
-    summary: ''
-    description: ''
+    summary: |
+      Logs an event for when a user has started a level attempt.
+    description: 'Logs an event for when a user has started a level attempt.'
     code_samples: []
     parameters:
       - name: player

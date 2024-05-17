@@ -32,7 +32,7 @@
           {
             "name": "readMask",
             "in": "query",
-            "description": "Asset metadata fields to retrieve, including the description, display name, icon, and preview. Example: `description%2CdisplayName`, `previews`.",
+            "description": "Asset metadata fields to retrieve, including the description, display name, icon, and previews. Example: `description%2CdisplayName`, `previews`.",
             "schema": {
               "type": "string"
             }
@@ -166,7 +166,7 @@
         "x-roblox-cloud-api-operation": true,
         "x-roblox-cloud-api-operation-name": "Update Asset",
         "summary": "Updates an asset with provided content and metadata.",
-        "description": "Updates an asset with provided content and metadata, including the description, display name, icon, and preview. Currently can only update the content body for **Models**. Icons must be **Image** assets with square dimensions. Previews must be either **Image** or **YoutubeVideo** assets.",
+        "description": "Updates an asset with provided content and metadata, including the description, display name, icon, and previews. Currently can only update the content body for **Models**. Icons must be **Image** assets with square dimensions. Previews must be either **Image** or **YoutubeVideo** assets.",
         "operationId": "Assets_UpdateAsset",
         "parameters": [
           {
@@ -190,7 +190,7 @@
             "name": "updateMask",
             "in": "query",
             "required": false,
-            "description": "Asset metadata fields to update, including the description, display name, icon, and preview. Example: `description%2CdisplayName`, `preview`.",
+            "description": "Asset metadata fields to update, including the description, display name, icon, and previews. Example: `description%2CdisplayName`, `previews`.",
             "schema": {
                 "type": "string"
             }

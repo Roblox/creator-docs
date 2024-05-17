@@ -27,9 +27,9 @@ Note how the hash map exists on all partitions, and each partition has some subs
 
 Having a per-partition limit allows for higher throughput to all data structures. It also favors hash maps, because they're distributed across all partitions.
 
-For example, consider a hypothetical per-partition limit of 100 requests per minute (RPM):
+For example, consider a per-partition limit of 150,000 requests per minute (RPM):
 
-- In the very best case, a sorted map and a queue are limited to 100 RPM, because each one resides on a single partition.
+- In the very best case, a sorted map and a queue are limited to 150,000 RPM, because each one resides on a single partition.
 - Requests to hash maps are spread across the item keys, which are themselves spread across partitions, so hash maps can have a much higher effective limit before throttling, many times that of the other data structures.
 
 <img src="../../assets/data/memory-store/Per-Partition-Limits-4.png" width="100%" />
