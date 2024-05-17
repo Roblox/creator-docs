@@ -3,7 +3,7 @@ title: Text Filtering
 description: Text Filtering prevents users from seeing inappropriate language, and blocks personally identifiable information.
 ---
 
-Applying proper **text filtering** is one of the most important ways to keep your experiences safe and secure. Roblox has a text filtering feature that not only prevents users from seeing inappropriate languages, but also blocks personally identifiable information.
+Applying proper **text filtering** is one of the most important ways to keep your experiences safe and secure. Roblox has a text filtering feature that not only prevents users from seeing inappropriate language, but also blocks personally identifiable information.
 
 Because filtering is crucial for a safe environment, Roblox actively moderates the content of experiences to make sure they meet [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). If Roblox receives reports or automatically detects that your experience doesn't apply filtering, then the system removes the experience until you add text filtering.
 
