@@ -46,7 +46,7 @@ Advertisers can specify the amount of ad credit they wish to purchase. When conv
 
 This minimum conversation requirement streamlines the conversion process, prevents inaccuracies, and ensures that your ad credit balance is sufficient to support meaningful advertising campaigns.
 
-<img src="../../assets/promotion/ads-manager/ad-credits.png" width="780" />
+<img src="../../assets/promotion/ads-manager/Ad-Credits.png" width="780" />
 
 <Alert severity="warning">
    Converting Robux to ad credit is a permanent and irreversible action. Once you convert Robux to ad credits they can only be spent on campaigns within the Ads Manager.
@@ -73,7 +73,7 @@ Campaigns are defined by their **campaign objective** and **budgeting and schedu
 Campaign objectives are divided into three categories:
 
 - **Awareness:** Campaigns focused on awareness show image or autoplaying video ads to increase awareness of your brand within an experience.
-- **Visits:** Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form of either **Immersive Ads** placed within portal or display ad units in publisher experiences, or as **sponsored experiences** on the Home, Discover, and Search pages.
+- **Visits:** Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form of either **Immersive Ads** placed within portal ad units in publisher experiences, or as **sponsored experiences** on the Home, Discover, and Search pages. Advertisers are not able to promote their 17+ experiences using the **Visits** objective.
 - **Video Views:** Campaigns focused on 15-second click-to-play video views to engage audiences in-experience.
 
 Budgeting and scheduling parameters control campaign spending and duration. There are two different types of budgets:
@@ -119,8 +119,9 @@ To set up an ad campaign:
 
 **Ad placement** refers to where your ads will be discoverable.
 
-- Advertisers with a visits campaign objective can choose between **Immersive Ads** placed within immersive ad units in publisher experiences, or as **Sponsored Experiences** on the Home, Discover, and Search pages.
-- Advertisers with an awareness campaign objective can only choose an **in-experience billboard**.
+- Advertisers with a visits campaign objective can choose between an **in-experience portal** within an experience or a **sponsored experience** on the Home, Discover, and Search pages.
+
+- Advertisers with an awareness campaign objective can only choose an **in-experience video** or **image**.
 
 **Brand Suitability** controls give you the ability to filter what kinds of experiences your ads will be served in. You're able to select among three inventory tiers: Full, Standard, and Limited.
 
@@ -171,7 +172,7 @@ To define an ad set:
    <img src="../../assets/promotion/ads-manager/Ad-Set-Gender-Ages-Devices.png" width="780" />
 
 3. Select where your ad will appear, determined by your campaign objective.
-   <img src="../../assets/promotion/ads-manager/ad-placement.png" width="780" />
+   <img src="../../assets/promotion/ads-manager/Ad-Placement.png" width="780" />
 
 4. For Immersive Ads, determine what kinds of experiences you want your ads to be shown in. Selecting **Standard Inventory** or **Limited Inventory** will exclude experiences with more mature content but may limit your reach.
    <img src="../../assets/promotion/ads-manager/Brand-Suitability.png" width="780" />
@@ -202,9 +203,12 @@ While context exclusions are done as effectively as possible, complete accuracy 
 
 For more information on content exclusions associated with age ratings, see [Experience Guidelines](https://en.help.roblox.com/hc/en-us/articles/8862768451604-Experience-Guidelines-and-Age-Recommendations) and [Age Recommendations](https://en.help.roblox.com/hc/en-us/articles/8862768451604-Experience-Guidelines-and-Age-Recommendations).
 
+<br />
 <h5>Always Excluded Content</h5>
 
-This content is not allowed on the platform in any context.
+To support brand safety, all content on Roblox must continue to abide by the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). The Roblox Community Standards set a high bar for content that is safe and civil for the platform.
+
+For example, this content is not allowed on the platform in any context:
 
 - Extreme violence including real-world depictions of graphic violence, war crimes, or terrorism
 - Depiction of real-world sensitive events
@@ -329,7 +333,7 @@ All eligible ads participate in a **second price auction**. The ad with the high
 3. The ads are then placed into an auction.
 4. The ad with the highest eCPM value wins the auction.
 5. The winning ad is then displayed to the player.
-6. The advertiser is charged its bid amount price.
+6. The advertiser is charged its bid amount of the second highest price, plus one cent ($0.01).
 
 As an example:
 
@@ -341,7 +345,21 @@ The second advertiser wins the auction and is charged $10.01, the price of the s
 
 #### Genre Targeting
 
-You can target particular genres with your ad sets. Note that these are Roblox's genre classifications and may not be the same as the genre categories self-declared by developers. There are nine genres available for targeting:
+Genre targeting helps you target your ads to reach people who are more likely to engage with your experience.
+
+You can target particular genres with your ad sets. Note that these are Roblox's genre classifications and may not be the same as the genre categories self-declared by developers.
+
+<br />
+<h5>Experience Genre</h5>
+
+When buying [Immersive Ads](../../production/monetization/immersive-ads.md), which are ads within experiences, experience genres are based on the genre of the experiences your ads will be served in. For instance, if you select only "Roleplaying," your ads will only appear in experiences classified as "Roleplaying."<br />
+
+<br />
+<h5>Audience Genre</h5>
+
+For **sponsored experiences**, audience genre targeting is based on users' preferences. Ads will only be served to users who like to play experiences in the selected genres.
+
+There are nine genres available for targeting:
 
 - **Action** - Emphasizes physical challenges that require motor skills such as jumping, shooting, and climbing.
 - **Adventure** - Complete tasks by using clues and interacting with people or the environment to progress gameplay.
@@ -353,11 +371,9 @@ You can target particular genres with your ad sets. Note that these are Roblox's
 - **Strategy** - Focuses on skillful thinking and planning to achieve success.
 - **Tycoon** - Players take on the role of a business owner and manage various aspects of the business to achieve success and profitability.
 
-For Immersive Ads, the genres you select apply to the content of the experiences your ads will display in. For instance, if you select only Roleplaying, your ads will not appear in any experiences classified as Action. For sponsored experiences, these classifications apply to your users. Ads will only be served to users who like to play experiences in your selected genres.
-
 <Alert severity="warning">
 
-You cannot use genre targeting on audiences for sponsored experiences in the EU due to data protection regulations.
+Audience Genre targeting isn't available when buying sponsored experiences to reach audiences in the EU.
 
 </Alert>
 
@@ -375,6 +391,8 @@ The **Ad Type** is determined by your [campaign objective](#define-the-campaign)
 Roblox reviews each submitted ad prior to it being run. Ensure your ad is eligible to run by following the [Roblox Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260).
 
 #### Sponsored Experiences
+
+You can create a sponsored experience for All Ages, 9+ and 13+ experiences by choosing "visits" Campaign Objective. Currently, you may not run sponsored experiences for 17+ experiences.
 
 To create a sponsored experience:
 
@@ -448,7 +466,7 @@ To create a video ad:
 With your ad campaign, ad set, and individual ad created, it's time to review your selections. This final screen enables you to revisit any previous setting of your campaign and is required for review before launch. Once submitted, your ad is reviewed by moderators for approval.
 
 <Alert severity="info">
-Roblox tries to complete moderation within 24 hours for each ad submitted. Ads that do not pass moderation show the status of rejected. If you're curious why your ad got rejected, please refer to the [most up‑to‑date standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260).
+Roblox tries to complete moderation within 24 hours for each ad submitted. Ads that do not pass moderation show the status of rejected.
 </Alert>
 
 To review your ad campaign:
@@ -471,7 +489,7 @@ To review your ad campaign:
 
 Once a campaign, ad set, or ad is submitted, an advertiser can make adjustments to certain parameters. To determine which parameters are changeable, consult the following table:
 
-| Changeable                   | Fixed                       |
+| **Changeable**               | **Fixed**                   |
 | ---------------------------- | --------------------------- |
 | Campaign name                | Campaign objective          |
 | Campaign end and start dates | Campaign budget type        |
@@ -501,23 +519,23 @@ You can't transfer ad credits associated with a specific campaign to another cam
 
 The information provided at the [campaign](#define-the-campaign) level includes:
 
-| Reporting Column             | Definition                                                                                                             |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **Name**                     | The name of the ad campaign.                                                                                           |
-| **Off/On**                   | A toggle indicating if the ad campaign is active, paused, or disabled.                                                 |
-| **Status**                   | Displays the status of the ad campaign. For a list of all statuses, see [Ad Campaign Statuses](#ad-campaign-statuses). |
-| **Spent**                    | The total amount of USD or ad credit you have spent on the selected campaign.                                          |
-| **Impressions**              | A count for every time a user sees an ad according to Roblox's internal criteria.                                      |
-| **Cost Per Mille (CPM)**     | The cost of 1,000 impressions of your ad.                                                                              |
-| **Clicks**                   | The number of times users clicked on your ad on the Home, Discover, and Search pages.                                  |
-| **Click-Through Rate (CTR)** | Percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.            |
-| **Cost Per Play (CPP)**      | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.        |
-| **Plays**                    | The number of times users entered your experience.                                                                     |
-| **Play Rate**                | Percentage calculated by dividing the number of plays by the number of impressions.                                    |
-| **Budget**                   | The amount of money allocated for this ad campaign, on a daily or lifetime timeframe.                                  |
-| **Objective**                | Displays the campaign objective between awareness or visits.                                                           |
-| **Schedule**                 | Displays the campaign run time.                                                                                        |
-| **Payment Method**           | The method used to pay for your advertising campaign, categorized as either card or ad credit.                         |
+| Reporting Column             | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Name**                     | The name of the ad campaign.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Off/On**                   | A toggle indicating if the ad campaign is active, paused, or disabled.                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Status**                   | Displays the status of the ad campaign. For a list of all statuses, see [Ad Campaign Statuses](#ad-campaign-statuses).                                                                                                                                                                                                                                                                                                                                                     |
+| **Spent**                    | The total amount of USD or ad credit you have spent on the selected campaign.                                                                                                                                                                                                                                                                                                                                                                                              |
+| **Impressions**              | An **image impression** is when a user looks at the ad for at least 1 second and the ad occupies 1.5% of the viewport, is viewed at an angle of up to 55 degrees, with at least 50% of the image ad pixels visible. <br /> <br />A **video impression** where an impression is when a user looks at the ad for at least 0.5 seconds and the ad occupies 1.5% of the viewport, be viewed at an angle of up to 55 degrees, with at least 50% of the video ad pixels visible. |
+| **Cost Per Mille (CPM)**     | The cost of 1,000 impressions of your ad.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Clicks**                   | The number of times users clicked on your ad on the Home, Discover, and Search pages.                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Click-Through Rate (CTR)** | Percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.                                                                                                                                                                                                                                                                                                                                                                |
+| **Cost Per Play (CPP)**      | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.                                                                                                                                                                                                                                                                                                                                                            |
+| **Plays**                    | The number of times users entered your experience.                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Play Rate**                | Percentage calculated by dividing the number of plays by the number of impressions.                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Budget**                   | The amount of money allocated for this ad campaign, on a daily or lifetime timeframe.                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Objective**                | Displays the campaign objective between awareness or visits.                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Schedule**                 | Displays the campaign run time.                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Payment Method**           | The method used to pay for your advertising campaign, categorized as either card or ad credit.                                                                                                                                                                                                                                                                                                                                                                             |
 
 ### Ad Set Reports
 
@@ -525,22 +543,22 @@ The information provided at the [campaign](#define-the-campaign) level includes:
 
 The information provided at the [ad set](#define-ad-sets) level includes:
 
-| Reporting Column             | Definition                                                                                                             |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **Name**                     | The name of the ad set.                                                                                                |
-| **Off/On**                   | A toggle indicating if the ad campaign is active, paused, or disabled.                                                 |
-| **Status**                   | Displays the status of the ad set. For a list of all statuses, see [Ad Set Statuses](#ad-set-statuses).                |
-| **Campaign**                 | Shows to which campaign an ad set belongs.                                                                             |
-| **Ad Placement**             | Where an ad is displayed, between in-experience, and as sponsored experiences on the Home, Discover, and Search pages. |
-| **Max Bid**                  | The maximum bid amount set for ad auction, shown in either USD or ad credit.                                           |
-| **Spent**                    | The total amount of USD or ad credit you have spent.                                                                   |
-| **Impressions**              | A count for every time a user sees an ad according to Roblox's internal criteria.                                      |
-| **Cost Per Mille (CPM)**     | The cost of 1,000 impressions of your ad.                                                                              |
-| **Clicks**                   | The number of times users clicked on your ad on the Home, Discover, and Search pages.                                  |
-| **Click-Through Rate (CTR)** | Percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.            |
-| **Plays**                    | The number of times users entered your experience.                                                                     |
-| **Play Rate**                | Percentage calculated by dividing the number of plays by the number of impressions.                                    |
-| **Cost Per Play (CPP)**      | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.        |
+| Reporting Column             | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Name**                     | The name of the ad set.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| **Off/On**                   | A toggle indicating if the ad campaign is active, paused, or disabled.                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Status**                   | Displays the status of the ad set. For a list of all statuses, see [Ad Set Statuses](#ad-set-statuses).                                                                                                                                                                                                                                                                                                                                                                    |
+| **Campaign**                 | Shows to which campaign an ad set belongs.                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Max Bid**                  | The maximum bid amount set for ad auction, shown in either USD or ad credit.                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Spent**                    | The total amount of USD or ad credit you have spent.                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Impressions**              | An **image impression** is when a user looks at the ad for at least 1 second and the ad occupies 1.5% of the viewport, is viewed at an angle of up to 55 degrees, with at least 50% of the image ad pixels visible. <br /> <br />A **video impression** where an impression is when a user looks at the ad for at least 0.5 seconds and the ad occupies 1.5% of the viewport, be viewed at an angle of up to 55 degrees, with at least 50% of the video ad pixels visible. |
+| **Cost Per Mille (CPM)**     | The cost of 1,000 impressions of your ad.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Clicks**                   | The number of times users clicked on your ad on the Home, Discover, and Search pages.                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Cost Per Click (CPC)**     | The cost for each click on your ad on the Home, Discover, and Search pages.                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Click-Through Rate (CTR)** | Percentage calculated by dividing the number of clicks by the number of impressions and multiplying by 100.                                                                                                                                                                                                                                                                                                                                                                |
+| **Plays**                    | The number of times users entered your experience.                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Play Rate**                | Percentage calculated by dividing the number of plays by the number of impressions.                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Cost Per Play (CPP)**      | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.                                                                                                                                                                                                                                                                                                                                                            |
 
 ### Ad Reports
 
@@ -548,20 +566,20 @@ The information provided at the [ad set](#define-ad-sets) level includes:
 
 The information provided at the [individual ad](#create-ads) level includes:
 
-| Reporting Column         | Definition                                                                                                      |
-| ------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| **Name**                 | The name of the ad.                                                                                             |
-| **Off/On**               | A toggle indicating if the ad campaign is active, paused, or disabled.                                          |
-| **Status**               | Displays the status of the individual ad. For a list of all statuses, see [Ad Statuses](#ad-statuses).          |
-| **Ad Set**               | Displays the ad set the corresponding individual ad belongs to.                                                 |
-| **Ad Format**            | Displays if the Ad is an Image or Portal Ad.                                                                    |
-| **Spent**                | The total amount of USD or ad credit you have spent.                                                            |
-| **Impressions**          | A count for every time a user sees an ad according to Roblox's internal criteria.                               |
-| **Cost Per Mille (CPM)** | The cost of 1,000 impressions of your ad.                                                                       |
-| **Clicks**               | The number of times users clicked on your ad on the Home, Discover, and Search pages.                           |
-| **Plays**                | The number of times users entered your experience.                                                              |
-| **Play Rate**            | Percentage calculated by dividing the number of plays by the number of impressions.                             |
-| **Cost Per Play (CPP)**  | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays. |
+| Reporting Column         | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Name**                 | The name of the ad.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Off/On**               | A toggle indicating if the ad campaign is active, paused, or disabled.                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **Status**               | Displays the status of the individual ad. For a list of all statuses, see [Ad Statuses](#ad-statuses).                                                                                                                                                                                                                                                                                                                                                                     |
+| **Ad Set**               | Displays the ad set the corresponding individual ad belongs to.                                                                                                                                                                                                                                                                                                                                                                                                            |
+| **Ad Format**            | Displays if the Ad is an Image or Portal Ad.                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Spent**                | The total amount of USD or ad credit you have spent.                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **Impressions**          | An **image impression** is when a user looks at the ad for at least 1 second and the ad occupies 1.5% of the viewport, is viewed at an angle of up to 55 degrees, with at least 50% of the image ad pixels visible. <br /> <br />A **video impression** where an impression is when a user looks at the ad for at least 0.5 seconds and the ad occupies 1.5% of the viewport, be viewed at an angle of up to 55 degrees, with at least 50% of the video ad pixels visible. |
+| **Cost Per Mille (CPM)** | The cost of 1,000 impressions of your ad.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| **Clicks**               | The number of times users clicked on your ad on the Home, Discover, and Search pages.                                                                                                                                                                                                                                                                                                                                                                                      |
+| **Plays**                | The number of times users entered your experience.                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| **Play Rate**            | Percentage calculated by dividing the number of plays by the number of impressions.                                                                                                                                                                                                                                                                                                                                                                                        |
+| **Cost Per Play (CPP)**  | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.                                                                                                                                                                                                                                                                                                                                                            |
 
 ### Delivery Columns
 

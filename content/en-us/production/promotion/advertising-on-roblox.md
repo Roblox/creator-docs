@@ -4,10 +4,6 @@ comment: Changes to this article require additional review
 description: An overview of advertising opportunities on the platform.
 ---
 
-<Alert severity="warning">
-  Sponsored Experiences has moved to Ads Manager and User Ads are being deprecated. You can learn about the future of advertising on Roblox [here](https://devforum.roblox.com/t/upcoming-ads-roadmap-and-changes/2660524).
-</Alert>
-
 **Advertising on Roblox** is an opportunity to engage a global audience and drive traffic to your content. Roblox offers several different types of official advertising products you can use, and you can also independently advertise in your experiences.
 
 In either case, all advertisements on the platform must adhere to Roblox's [Advertising Standards](https://en.help.roblox.com/hc/articles/13722260778260), [Community Standards](https://en.help.roblox.com/hc/articles/203313410), and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
@@ -34,7 +30,7 @@ Which advertising product is right for your content depends on the type of conte
   </tr>
   <tr>
     <td>[Sponsored Experiences](../../production/promotion/ads-manager.md)</td>
-    <td>Experiences</td>
+    <td>All Ages, 9+, 13+ Experiences</td>
     <td>Within the **Sponsored** category on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages, and as **Sponsored** tiles in search results</td>
   </tr>
   <tr>

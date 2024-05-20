@@ -341,18 +341,12 @@ Other relevant functions are available in `Class.MarketplaceService`:
 
 ## Earning with Subscriptions
 
-Subscriptions are priced in local currency, but you earn Robux at a rate of US $0.01 to 1 Robux based on the base web price you selected for the subscription after platform fees. The revenue split for subscriptions varies depending on the platform:
+Subscriptions are priced in local currency, but you earn Robux at a rate of US $0.01 to 1 Robux based on the base web price you selected for the subscription after platform fees. Roblox takes a 30% platform fee for the first month only, meaning that you receive the full subscription earnings from the second month onward. This revenue split is consistent across all platforms.
 
-- **Desktop (web):** You earn **70%** (30% platform fee) for the first three months and then **85%** (15% platform fee) for subsequent renewals.
-- **Apple:** You earn **70%** of the web price (30% platform fee applied to web price).
-- **Google:** You earn **70%** of the web price (30% platform fee applied to web price).
+For example, if a user subscribes at the base price of US $9.99:
 
-For example, if a user subscribes on desktop at the base price of US $9.99:
-
-- **First three months:** The creator of the subscription receives `999 * .7 = 699` Robux per month.
-- **Fourth month onward:** The creator of the subscription receives `999 * .85 = 849` Robux per month.
-
-If a different user subscribes to the same plan, but on mobile, the creator receives 699 Robux per month until the user cancels.
+- **First month:** The creator of the subscription receives `999 * .7 = 699` Robux per month.
+- **Second month onward:** The creator of the subscription receives `999 = 999` Robux per month.
 
 Earnings are subject to 30 day holds and will be added to your Robux balance after the full term of the subscription has been delivered. If a user requests a refund for a subscription through their bank or app store within the month-long hold period, the hold will be canceled and you will not receive the payout for that transaction.
 
