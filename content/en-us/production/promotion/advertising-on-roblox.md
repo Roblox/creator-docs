@@ -25,7 +25,7 @@ Which advertising product is right for your content depends on the type of conte
 <tbody>
   <tr>
     <td>[Immersive Ads](../../production/promotion/ads-manager.md)</td>
-    <td>Experiences, Images </td>
+    <td>Experiences, Videos, Images </td>
     <td>Within the **[Immersive Ad Units](../../production/monetization/immersive-ads.md)** publisher place within their experiences. </td>
   </tr>
   <tr>
