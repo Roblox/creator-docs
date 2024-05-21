@@ -16,6 +16,9 @@ description: |
   `Class.OrderedDataStore`. If you need versioning and metadata support, use a
   `Class.DataStore`.
 
+  Ordered data stores do not support the optional `userIds` parameter for 
+  `Class.OrderedDataStore:SetAsync()|SetAsync()` or `Class.OrderedDataStore:IncrementAsync()|IncrementAsync()`. 
+
   See [Data Stores](../../../cloud-services/datastores.md) for an overview on
   using ordered data stores.
 code_samples:
