@@ -8,15 +8,13 @@ description: |
   InsertService is used to insert assets from the Roblox website, typically the
   `Class.InsertService:LoadAsset()|LoadAsset` function.
 
-  To load an asset, the asset must be accessible by the creator of the game
-  loading it, which can be either a user or group. Due to these restrictions,
-  InsertService is useful for loading sensitive data, typically API or secret
-  keys to be used with `Class.HttpService`. Should a game be uploaded by a
-  different creator, the sensitive data would not be accessible. See the
-  `Class.InsertService:LoadAsset()|LoadAsset` function for more details on this
+  To load an asset, it must be accessible by the creator of the experience
+  loading it, which can be either a user or group. Should an experience be uploaded by a different creator, the asset data would not be accessible. See the
+  `Class.InsertService:LoadAsset()|LoadAsset()` method for more details on this
   security check.
+  Note that you should **not** use this service for loading API keys or other secrets. Use `Class.HttpService:GetSecret()` instead.
 
-  See also:
+  #### See Also
 
   - `Class.AssetService`, which can provide information about assets you might
     want to load using InsertService
