@@ -269,7 +269,7 @@ ContextActionService:SetPosition("Interact", UDim2.new(1, -70, 0, 10))
 
 ## Context-Dependent Inputs
 
-When developing for mobile devices you may often want to change what a single button does based on the context. Since screen space on a mobile device is limited, use contextual buttons that perform different actions based on what the character is able to do.
+When developing for mobile devices you may often want to change what a single button does based on the context. Since screen space on mobile devices is limited, use contextual buttons that perform different actions based on what the character is able to do.
 
 For example, you can display an active "Collect" button when the user is standing near a chest of gold:
 
