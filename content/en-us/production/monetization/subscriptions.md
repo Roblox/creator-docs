@@ -81,7 +81,7 @@ You can edit a subscription's image, description, or state. If you want to edit 
 
 ### Changing Image
 
-To update a subcription's image:
+To update a subscription's image:
 
 1. With the subscription selected, click the **Change** button.
 

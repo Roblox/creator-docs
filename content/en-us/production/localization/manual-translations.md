@@ -17,7 +17,7 @@ Before making any changes to your table, it's important to understand each field
 
 The localization table is the reference for all translations within your experience. It's important to understand each field of the localization table to effectively add or modify entries.
 
-When populated, the table contains all user-facing content within your experience that requires translation along with any available translations for specific languages. You can [add source content](#adding-source-content) and [add translations](#adding-translations-with-file-upload) to the Cloud Localization Table or [download and upload a `.csv` version of your table](#adding-translations-with-file-upload). Only users who have edit permission for an experience can access an experience's localization table.
+When populated, the table contains all user-facing content within your experience that requires translation along with any available translations for specific languages. You can [add source content](#adding-source-content) and [add translations](#with-file-upload) to the Cloud Localization Table or [download and upload a `.csv` version of your table](#with-file-upload). Only users who have edit permission for an experience can access an experience's localization table.
 
 The localization table has the following columns:
 
@@ -200,13 +200,15 @@ To remove source content through a `.csv` upload:
 
 ## Adding Translations
 
-You can add translations to [string](#adding-string-translations), [experience information](#adding-experience-information-translations), or [experience product](#adding-experience-product-translations) entries on your experience's localization table using the localization portal or [with a `.csv` file upload](#adding-translations-with-file-upload).
+You can add translations to source entries on your experience's localization table using the [translator portal](#in-translator-portal) or [with a `.csv` file upload](#with-file-upload).
 
 In some cases, strings may require real-time translation during gameplay, such as a timer, using units of measurement, or when displaying player names. You can add translation parameters to the localization table as placeholders for this type of content. See [Translating Dynamic Content](./translating-dynamic-content.md) for implementation details.
 
-### Adding String Translations
+### In Translator Portal
 
-The [localization](../localization/index.md#localization-settings) page provides a direct way to provide translations for the collected strings. This method of adding translations is the only option available to users added as translators to your experience.
+Your experience's [Translator Portal](../localization/index.md#localization-settings) provides a direct way to provide translations for the collected strings. Users added as translators for your experience can access the Translator Portal.
+
+#### Adding String Translations
 
 To translate text through the localization page:
 
@@ -220,12 +222,12 @@ To translate text through the localization page:
    />
 
 <Alert severity="info">
-You cannot make edits to an existing source's <b>Key</b>, <b>Context</b> or <b>Example</b> fields through the localization settings page. To add or edit a source's <b>Key</b>, <b>Context,</b> or <b>Example</b> fields, you can remove and re-add the entry on the Localization page with these fields included, or make the edits directly through the <InlineCode>.csv</InlineCode> upload process.
+You cannot make edits to an existing source's <b>Key</b>, <b>Context</b> or <b>Example</b> fields through the localization settings page. To add or edit a source's <b>Key</b>, <b>Context,</b> or <b>Example</b> fields, you can remove and re-add the entry on the Localization page with these fields included, or make the edits directly with [file upload](#with-file-upload).
 </Alert>
 
-### Adding Experience Information Translations
+#### Adding Experience Information Translations
 
-On your experience's localization page, you can modify experience information, such as the name, description, icon, and thumbnails, by updating the localization table:
+You can modify experience information, such as the name, description, icon, and thumbnails, by updating the localization table:
 
 1. In the localization settings page, click the **Translate** button on the top right.
 2. In the **Target Languages** menu on the left, select the target language you want to add a translation to.
@@ -241,9 +243,9 @@ On your experience's localization page, you can modify experience information, s
       <img src="../../assets/localization/Portal-Adding-Information-Thumbnail.png" width="100%"
       />
 
-### Adding Experience Product Translations
+#### Adding Experience Product Translations
 
-On your experience's localization page, you can modify experience product details, such as developer [products](../../production/monetization/developer-products.md), [game passes](../../production/monetization/game-passes.md), and [badges](../../production/publishing/badges.md):
+You can modify experience product details, such as developer [products](../../production/monetization/developer-products.md), [game passes](../../production/monetization/game-passes.md), and [badges](../../production/publishing/badges.md):
 
 1. In the localization settings page, click the **Translate** button on the top right.
 2. In the **Target Languages** menu on the left, select the target language you want to add a translation to.
@@ -253,11 +255,84 @@ On your experience's localization page, you can modify experience product detail
    <img src="../../assets/localization/Portal-Adding-Product.png" width="100%"
    />
 
-### Adding Translations With File Upload
+### With File Upload
 
-You can download the localization table from Studio and re-upload the file with additional translations or edits. This is helpful in cases when editing several translations at a time or when collaborating with translators outside of Roblox. You can only edit a source's **Key**, **Context** or **Example** fields through the `.csv` file.
+Using Studio or Creator Hub, you can download, modify, and re-upload your localization table as a `.csv` spreadsheet. This is helpful when editing several translations at a time or when collaborating with translators outside of Roblox.
 
-To translate text through the .csv:
+Using the file upload process, you can only modify in-experience string entries and translations. Unlike editing translations through your [Translator Portal](#in-translator-portal), modifying the `.csv` allows you to edit the additional **Key**, **Context**, and **Example** fields.
+
+When modifying or adding translations with file upload, the following behavior applies to brand new or existing entries:
+
+<table>
+<thead>
+  <tr>
+    <th>**Does the entry already exist in the Cloud Localization Table?**</th>
+    <th>**Changes made to CSV**</th>
+    <th>**Expected Behavior on Upload**</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>No</td>
+    <td>Source string row added with one or more translations</td>
+    <td>Entry is added, any translations present are added as a manual translation entry. Any translations missing for supported languages are eligible for <a href="../../production/localization/automatic-translations.md">automatic translation</a>.</td>
+  </tr>
+  <tr>
+    <td>No</td>
+    <td>Source string row added without translations</td>
+    <td>Entry is added and is eligible for <a href="../../production/localization/automatic-translations.md">automatic translation</a>.</td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>Translation added or modified.</td>
+    <td>If the translation is different than the one in the existing Cloud Localization Table, translation updates to the one in the `.csv` file. <br /><br />If the original translation was automatically generated, the new translation is added and locked as a manual translation. You can regenerate automatic translation for this entry by <a href="../../production/localization/automatic-translations.md#automatic-translation-updates">unlocking the entry in Translator Portal.</a></td>
+  </tr>
+  <tr>
+    <td>Yes</td>
+    <td>Translation entry for a source string removed.</td>
+    <td>Translation is deleted and locked as a manual translation. You can regenerate automatic translation for this entry by <a href="../../production/localization/automatic-translations.md#automatic-translation-updates">unlocking the entry in Translator Portal</a>.</td>
+  </tr>
+
+  <tr>
+    <td>Yes</td>
+    <td>Source string removed</td>
+    <td>No change - entry will not be deleted. <br /><br />To delete an entry through `.csv`, either: <br />
+     — In Creator Hub, use **Delete Table** and then **Upload CSV**.<br />
+     — In Studio, use **Advanced** > **Replace** in the Cloud Localization Table section.</td>
+  </tr>
+</tbody>
+</table>
+
+<Alert severity = 'info'>
+To begin adding a new supported language, you need to manually add the country code as a new column in the spreadsheet. See <a href="./language-codes.md">Language Codes</a> for a list of supported languages and country codes.
+</Alert>
+
+<Alert severity = 'warning'>
+<AlertTitle>Ensure your spreadsheet meets the following requirements to prevent uploading or processing issues:</AlertTitle>
+<br />
+
+<ul>
+<li>Max total entries: **10,000**</li>
+<li>Max <InlineCode>.csv</InlineCode> file size: **2MB**</li>
+<li>Max number of modified or added entries per <InlineCode>.csv</InlineCode> upload: **1,000**</li>
+</ul>
+</Alert>
+
+#### Using Creator Hub
+
+To translate text using the `.csv` in Creator Hub:
+
+1. In the Creator Hub, navigate to your experience settings page.
+2. Navigate to **Localization** and switch to the **Table Management** tab.
+3. Select **Download CSV** to save the `.csv` file locally.
+4. Open the `.csv` in your preferred spreadsheet editor.
+5. Add translations on the same row as the source text, under the column with the specific country code you are localizing to. Save when finished.
+6. Select **Upload CSV** and upload the updated `.csv`.
+7. Click **Confirm** on the prompt to save the new entries to the cloud localization table.
+
+#### Using Studio
+
+To translate text using the `.csv` through Studio:
 
 1. In Studio, navigate to the **Plugins** tab.
 2. In the Localization section, select **Tools**.
@@ -267,42 +342,5 @@ To translate text through the .csv:
 3. In the **Cloud Localization Table** section, select **Download** to save the .csv.
 4. Open the `.csv` in your preferred spreadsheet editor.
 5. Add translations on the same row as the source text, under the column with the specific country code you are localizing to. **Save** when finished.
-6. In the **Cloud Localization Table** section, select **Update** and upload the updated .csv.
+6. In the **Cloud Localization Table** section, select **Update** and upload the updated `.csv`.
 7. Click **Confirm** on the prompt to save the new entries to the cloud localization table.
-
-In a spreadsheet editor, your table may look like this:
-
-<table>
-<thead>
-  <tr>
-    <th>Key</th>
-    <th>Context</th>
-    <th>Example</th>
-    <th>Source</th>
-    <th>es</th>
-    <th>pt</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>Options</td>
-    <td>Opciones</td>
-    <td>Opções</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td>Start</td>
-    <td>Iniciar</td>
-    <td>Iniciar</td>
-  </tr>
-</tbody>
-</table>
-
-<Alert severity="info">
-If this is the first addition of a translation for a language, you need to manually add the country code as a new column in the spreadsheet. See <a href="./language-codes.md">Language Codes</a> for a list of supported languages and country codes.
-</Alert>

@@ -378,3 +378,15 @@ functions:
         summary: ''
     tags:
     code_samples:
+  - name: debug.dumpcodesize
+    summary: |
+      Displays a table of native code size of individual functions and scripts.
+    description: |
+      Displays a table of native code size of individual functions and scripts.
+      This function is only available in the Command Bar in Studio. More details can be found on the [Native Code Generation](../../../luau/native-code-gen.md) page.
+    parameters:
+    returns:
+      - type: void
+        summary: ''
+    tags:
+    code_samples:
