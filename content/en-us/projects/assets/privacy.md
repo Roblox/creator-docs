@@ -12,7 +12,7 @@ After you grant a creator permission to use a private asset, they can use it wit
 
 If a creator or experience doesn't have permission to use an asset, it cannot load in Studio, and an error message displays in the [Output](../../studio/output.md) window.
 
-<img src="../../assets/studio/debugging/Output-Error.png" alt="An example of an error that displays in the Output Window when a creator or experience doesn't have permission to use a private asset." width="100%" />
+<img src="../../assets/studio/general/Output-Window-Error.png" alt="An example of an error that displays in the Output Window when a creator or experience doesn't have permission to use a private asset." width="100%" />
 
 <Alert severity="info">
 The asset privacy system controls which users and experiences can use the asset, but other creators can still see its metadata, such as its name and description.
@@ -23,7 +23,7 @@ The asset privacy system controls which users and experiences can use the asset,
 In order for a creator or experience to use one of your private assets, you must explicitly grant permission. Once a creator or experience has **explicit** permission to use a private asset, they also receive **implicit** permission to use the asset in a variety of additional scenarios. For more information, reference the following subsections.
 
 <Alert severity="warning">
-If a private asset is a child of a public model or package from the [Creator Store](../../production/publishing/creator-store.md), creators and experiences must have explicit permission to use the private asset in order for the private asset to be visible or audible during runtime. For example, if a model includes a `Class.Sound` object with a private assetID, the public model remains visible, but the private audio cannot play.
+If a private asset is a child of a public model or package from the [Creator Store](../../production/creator-store.md), creators and experiences must have explicit permission to use the private asset in order for the private asset to be visible or audible during runtime. For example, if a model includes a `Class.Sound` object with a private assetID, the public model remains visible, but the private audio cannot play.
 </Alert>
 
 ### To Creators
@@ -45,7 +45,7 @@ Once a creator has permission to use a private asset, they can insert the asset 
 
 However, if the creator wants to use the private asset in a script, or if they want to save or publish a template place that they were editing that includes the private asset, they must also grant permission to the [experience](#to-experiences) itself to use the private asset. If they don't complete this step, the asset isn't visible or audible during runtime, and an error message displays in the **Output** window.
 
-<img src="../../assets/studio/debugging/Output-Error.png" alt="An example of an error that displays in the Output Window when a creator or experience doesn't have permission to use a private asset." width="100%" />
+<img src="../../assets/studio/general/Output-Window-Error.png" alt="An example of an error that displays in the Output Window when a creator or experience doesn't have permission to use a private asset." width="100%" />
 
 To grant a creator permission to use a private asset in any of these scenarios:
 
@@ -138,7 +138,7 @@ However, if a publisher tries to cross-publish an unpublished place into an enti
 
 However, if they are not qualified to grant permission to the new experience, they can still publish the place into the experience, but the experience does not gain permission to any private assets, and an error message displays in the **Output** window.
 
-<img src="../../assets/studio/debugging/Output-Error.png" alt="An example of an error that displays in the Output Window when a creator or experience doesn't have permission to use a private asset." width="100%" />
+<img src="../../assets/studio/general/Output-Window-Error.png" alt="An example of an error that displays in the Output Window when a creator or experience doesn't have permission to use a private asset." width="100%" />
 
 ## Viewing Permissions
 

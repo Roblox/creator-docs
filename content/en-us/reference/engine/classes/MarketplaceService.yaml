@@ -175,7 +175,7 @@ methods:
     description: |
       Prompts a user to purchase an item with the given `assetId`. **This does
       not work for
-      [USD Creator Store](../../../production/publishing/selling-on-the-creator-store.md)
+      [USD Creator Store](../../../production/selling-on-creator-store.md)
       purchases**. If prompting a purchase of a
       [Limited](../../../art/marketplace/marketplace-fees-and-commissions.md#limiteds)
       item:

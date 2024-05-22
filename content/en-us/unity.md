@@ -130,6 +130,6 @@ Similar to Unity tools, Roblox Studio supports [plugins](studio/plugins.md), whi
 | Terrain Inspector | Terrain Editor | |
 | Spawn point | `Class.SpawnLocation` | |
 | Console | Output | |
-| Asset Store | [Creator Store](production/publishing/creator-store.md) | |
+| Asset Store | [Creator Store](production/creator-store.md) | |
 | Overlays | Menu bar | |
 | Tool | [Plugin](studio/plugins.md) | |

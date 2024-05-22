@@ -47,7 +47,7 @@ Contribute your Luau scripts for AI training can help enhance Luau-focused AI to
 ## Fast Publishing and Updating
 
 <figure>
-Roblox not only provides the engine and tooling, but gives you access to a large social network of users on a broad array of devices. Just click to [publish](../production/publishing/index.md) and your experiences are automatically available to this network with built-in [discovery](../production/promotion/discovery.md) and [monetization](../production/monetization/index.md) opportunities. Want to iterate on your experience? Make the changes and update them immediately for all users in an instant.
+Roblox not only provides the engine and tooling, but gives you access to a large social network of users on a broad array of devices. Just click to [publish](../production/publishing/publishing-experiences-and-places.md) and your experiences are automatically available to this network with built-in [discovery](../production/promotion/discovery.md) and [monetization](../production/monetization/index.md) opportunities. Want to iterate on your experience? Make the changes and update them immediately for all users in an instant.
 
 <img src="../assets/studio/overview/Multiple-Devices.jpg" alt="" />
 </figure>

@@ -123,4 +123,4 @@ To incorporate neon 3D text from the [open-text](../../assets/tutorials/creating
 1. In the **Explorer** window, right-click **NeonSign**. A contextual menu displays.
 1. Select **Save to Roblox**.
 
-After you save the asset in your [Toolbox](../../projects/assets/toolbox.md), you can use it within any of your experiences. In addition, you can [distribute your asset](../../production/publishing/publishing-assets.md) to the [Creator Store](../../production/publishing/creator-store.md) to make it publicly available to all creators to use within their experiences too.
+After you save the asset in your [Toolbox](../../projects/assets/toolbox.md), you can use it within any of your experiences. In addition, you can [distribute your asset to the Creator Store](../../production/creator-store.md) to make it publicly available to all creators to use within their experiences too.

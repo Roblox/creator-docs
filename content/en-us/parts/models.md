@@ -108,6 +108,23 @@ Because 3D content that exists on the client changes dynamically in a streaming-
 
 See [Model Streaming Controls](../workspace/streaming.md#model-streaming-controls) for more on model-level streaming controls.
 
-## Publishing Models
+## Uploading and Distributing Models
 
-You can [distribute](../production/publishing/publishing-assets.md) models to the [Creator Store](../production/publishing/creator-store.md) for other creators to use within their own experiences. As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright.
+You can [distribute](../production/creator-store.md) models to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences. As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright and Creator Store [asset moderation](production/creator-store.md#asset-moderation) rules.
+
+<Alert severity="info">
+You will soon be able to sell models on the Creator Store for **United States Dollars** (USD). For more information and to start onboarding, see [Selling on the Creator Store](../production/selling-on-creator-store.md).
+</Alert>
+
+### 3D Model Files
+
+You can import `.gltf`, `.fbx` and `.obj` model files into Roblox Studio. See [Using Studio's 3D Importer](../art/accessories/creating-rigid/importing.md). To create content for the Creator Store, we recommend:
+
+- Read about Roblox [texture specifications and limits](../art/modeling/texture-specifications.md).
+- Limit each mesh to a maximum of 20,000 triangles.
+- Read and address any warnings shown during the import process.
+- Scale and orient your model appropriately during import so that it's usable out of the box when inserted from the Creator Store.
+
+### Existing Roblox Instances
+
+You can upload existing `Class.Model` instances created in Studio from the [Explorer](../studio/explorer.md) window as outlined [here](../production/creator-store.md#through-studio).

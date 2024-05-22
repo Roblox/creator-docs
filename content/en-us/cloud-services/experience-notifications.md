@@ -54,7 +54,7 @@ Alternatively, you can use the [Open Cloud API](../cloud/open-cloud/experience-n
 
 ### Including the Package
 
-To implement Experience Notifications, you must obtain the Lua package from the [Creator Store](../production/publishing/creator-store.md).
+To implement Experience Notifications, you must obtain the Lua package from the [Creator Store](../production/creator-store.md).
 
 1. From the [View](../studio/view-tab.md) tab, open the [Toolbox](../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
@@ -109,7 +109,11 @@ end
 
 ### Customizing Notifications Using Parameters
 
-To customize the notification for each recipient, you can include **parameters** in the [notification string](#creating-a-notification-string), then customize the parameters when calling the API. For example, you can define the notification string as "You won **\{numRaces\}** races this week and unlocked the **\{racetrackName\}** track!", then set the `numRaces` and `racetrackName` parameters.
+To customize the notification for each recipient, you can include **parameters** in the [notification string](#creating-a-notification-string), then customize the parameters when calling the API. For example, you can define the notification string as:
+
+- <Typography variant="subtitle2" color="primary">\{userId-friend\} beat your high score by \{points\} points! Time to level up?</Typography>
+
+Then, set the `userId-friend` and `points` parameters in the script:
 
 ```lua title="Customize Notification Using Parameters"
 local ServerScriptService = game:GetService("ServerScriptService")
@@ -117,18 +121,18 @@ local ServerScriptService = game:GetService("ServerScriptService")
 local OCUserNotification = require(ServerScriptService.OpenCloud.V2.UserNotification)
 local recipientPlayerID = 505306092
 
-local numRacesParam = {int64Value = 5}
-local racetrackNameParam = {stringValue = "Galaxy Road"}
+local userIdFriendParam = {int64Value = 3702832553}
+local pointsParam = {stringValue = "5"}
 
 -- In the payload, "messageId" is the value of the notification asset ID
--- In this example, the notification string is "You won {numRaces} races this week and unlocked the {racetrackName} track!"
+-- In this example, the notification string is "{userId-friend} beat your high score by {points} points! Time to level up?"
 local userNotification = {
 	payload = {
 		messageId = "ef0e0790-e2e8-4441-9a32-93f3a5783bf1",
 		type = "MOMENT",
 		parameters = {
-			["numRaces"] = numRacesParam,
-			["racetrackName"] = racetrackNameParam
+			["userId-friend"] = userIdFriendParam,
+			["points"] = pointsParam
 		}
 	}
 }
@@ -244,9 +248,7 @@ end
 
 #### createUserNotification
 
-<figcaption>
-createUserNotification(userId: `number`, userNotification: [UserNotification](#usernotification)): [UserNotificationResult](#usernotificationresult)
-</figcaption>
+<Typography variant="body1" color="primary"><b>createUserNotification (</b>userId : [number](../luau/numbers.md), userNotification : [UserNotification](#usernotification)<b>)</b> : [UserNotificationResult](#usernotificationresult)</Typography><br />
 
 Sends a notification from a server‑side script. Requires the recipient's `Class.Player.UserId` and a [UserNotification](#usernotification). Returns a [UserNotificationResult](#usernotificationresult).
 

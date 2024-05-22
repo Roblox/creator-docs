@@ -4,7 +4,7 @@ summary: |
   BodyPartR15 is an enum with entries for each of the 15 body parts of an R15
   character (plus an entry for the HumanoidRootPart).
 description: |
-  BodyPartR15 is an enum used with both `Class.Humanoid:GetBodyPartR15()` and
+  BodyPartR15 is an Enum used with both `Class.Humanoid:GetBodyPartR15()` and
   `Class.Humanoid:ReplaceBodyPartR15()` to find and replace specific body parts
   of R15 characters.
 code_samples:

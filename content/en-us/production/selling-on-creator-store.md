@@ -5,6 +5,10 @@ description: An explanation of Creator Store seller accounts, their prerequisite
 
 You can sell [plugins](./../../studio/plugins.md) on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted.
 
+<Alert severity="info">
+You will soon be able to sell [models](../../parts/models.md#uploading-and-distributing-models) on the Creator Store for **United States Dollars** (USD). You can create a seller account and start uploading models now.
+</Alert>
+
 In order to set any USD prices and sell your assets, you must have a **seller account**. Roblox administers seller accounts through **Stripe**, a third-party payments provider. If you meet Roblox's eligibility [requirements](#for-sellers), you can fill out Stripe's [application form](#completing-the-application-form) to create a seller account.
 
 Once you have a seller account, **you can set USD prices** for your plugins from their asset configuration pages and sell them on the Creator Store.
@@ -46,11 +50,11 @@ Transactions between any individual customer and seller are **capped** per month
 
 Every asset that you sell on the Creator Store must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and [Digital Millennium Copyright Act](dmca-guidelines.md) (DMCA). If any asset breaks these rules, the asset and your account may be subject to moderation.
 
-In addition, you can only sell plugins that you own from an **individual** user account. Group-owned assets are ineligible. If you want to sell a group-owned asset, consider [republishing them](publishing-assets.md) under individual ownership.
+In addition, you can only sell plugins that you own from an **individual** user account. Group-owned assets are ineligible. If you want to sell a group-owned asset, consider re‑uploading them under individual ownership.
 
 ## Seller Account
 
-All prospective plugin sellers on the Creator Store must complete an application form through Stripe to create their seller account, set USD prices, and receive payouts. This process applies even if you have previously sold plugins for Robux on the Store.
+All prospective sellers on the Creator Store must complete an application form through Stripe to create their seller account, set USD prices, and receive payouts. This process applies even if you have previously sold plugins for Robux on the Store.
 
 ### Completing the Application Form
 
@@ -96,9 +100,9 @@ Once Stripe confirms your information and creates your seller account, you can s
 
 ### Pricing
 
-You can set prices on the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Model). Plugins have a minimum price of $4.99 and maximum price of $249.99. If a plugin may not offer value at the minimum price, you can always offer them for free.
+You can set prices on the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Plugin). Plugins have a minimum price of $4.99 and maximum price of $249.99. If a plugin may not offer value at the minimum price, you can always offer them for free.
 
-You cannot set USD prices in Studio. For more information on how to set prices, see [Publishing Assets](./publishing-assets.md).
+You cannot set USD prices in Studio.
 
 ### Payouts
 

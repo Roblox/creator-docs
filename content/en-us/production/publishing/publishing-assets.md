@@ -3,7 +3,7 @@ title: Distributing Assets
 description: Explains how to distribute assets to the Creator Store.
 ---
 
-**Distributing assets** to the [Creator Store](../../production/publishing/creator-store.md) is the only way to make your assets publicly available to all users to use within their own experiences in Studio. You can distribute any mesh or image that you have imported through the [Asset Manager](../../projects/assets/manager.md), or any [model](../../parts/models.md) or [plugin](../../studio/plugins.md) that you have uploaded to your inventory.
+**Distributing assets** to the [Creator Store](../../production/creator-store.md) is the only way to make your assets publicly available to all users to use within their own experiences in Studio. You can distribute any mesh or image that you have imported through the [Asset Manager](../../projects/assets/manager.md), or any [model](../../parts/models.md) or [plugin](../../studio/plugins.md) that you have uploaded to your inventory.
 
 Every asset that you import must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and respect the [DMCA Guidelines](../../production/publishing/dmca-guidelines.md) regarding copyright. In addition, there are limits on the number of assets you can distribute per 30 days, depending on whether you've [verified your account](../../production/publishing/account-verification.md):
 
@@ -35,11 +35,11 @@ Every asset that you import must adhere to the [Community Rules](https://en.help
 </tbody>
 </table>
 
-You can also choose to **sell** plugins on the Creator Store for **United States Dollars**. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. Note that you can only set USD pricing for plugins through the Creator Dashboard. For more information, see [Selling on the Creator Store](../publishing/selling-on-the-creator-store.md).
+You can also choose to **sell** plugins on the Creator Store for **United States Dollars**. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. Note that you can only set USD pricing for plugins through the Creator Dashboard. For more information, see [Selling on the Creator Store](../selling-on-creator-store.md).
 
 ## Through Creator Dashboard
 
-The [Creator Dashboard](https://create.roblox.com/dashboard/creations) is the best place to manage your distributed assets. It's also the only way to list an asset for sale on the Creator Store and set a [USD price](./selling-on-the-creator-store.md) for a plugin.
+The [Creator Dashboard](https://create.roblox.com/dashboard/creations) is the best place to manage your distributed assets. It's also the only way to list an asset for sale on the Creator Store and set a [USD price](../selling-on-creator-store.md) for a plugin.
 
 To distribute an asset through the dashboard:
 
@@ -51,15 +51,15 @@ To distribute an asset through the dashboard:
 
 1. In the **Settings** section, enable the **Distribute on Creator Store** toggle.
 
-1. **(Optional)** If you have a [seller account](./selling-on-the-creator-store.md) and are distributing a plugin, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset will be free to all creators.
+1. **(Optional)** If you have a [seller account](../selling-on-creator-store.md) and are distributing a plugin, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset will be free to all creators.
 
 1. Click the **Save** button.
 
-The asset is now public and visible to everyone within the [Creator Store](../../production/publishing/creator-store.md).
+The asset is now public and visible to everyone within the [Creator Store](../../production/creator-store.md).
 
 ## Through Studio
 
-You can upload assets directly in Studio from the [Toolbox](../../projects/assets/toolbox.md) or [Explorer](../../studio/explorer.md) window. However, you must use the [Creator Dashboard](#through-creator-dashboard) to list an asset for sale on the Creator Store or set a [USD price](./selling-on-the-creator-store.md) for a plugin.
+You can upload assets directly in Studio from the [Toolbox](../../projects/assets/toolbox.md) or [Explorer](../../studio/explorer.md) window. However, you must use the [Creator Dashboard](#through-creator-dashboard) to list an asset for sale on the Creator Store or set a [USD price](../selling-on-creator-store.md) for a plugin.
 
 ### From the Toolbox
 

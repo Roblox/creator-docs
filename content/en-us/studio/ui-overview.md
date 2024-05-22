@@ -152,7 +152,7 @@ The [Asset Manager](../projects/assets/manager.md) lets you manage places, image
 
 ### Toolbox
 
-The [Toolbox](../projects/assets/toolbox.md) contains a selection of models, images, meshes, audio, plugins, videos, and fonts made by Roblox or Roblox community members. It also includes all of the creations that you've personally [published](../production/publishing/publishing-assets.md) or those which were published by [groups](../projects/groups.md) you belong to.
+The [Toolbox](../projects/assets/toolbox.md) contains a selection of models, images, meshes, audio, plugins, videos, and fonts made by Roblox or Roblox community members. It also includes all of the creations that you've personally [distributed on the Creator Store](../production/creator-store.md) or those which were distributed by [groups](../projects/groups.md) you belong to.
 
 <img src="../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Studio's View tab with the Toolbox button highlighted." />
 

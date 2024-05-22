@@ -126,7 +126,7 @@ As a best practice, first try loading community assets in a blank place, remove 
 
 The **Creator Store** is where you can find many assets created and shared by Roblox and the Roblox community for use in Studio and your experiences. Anyone can contribute their assets to the Creator Store, including models, images, meshes, audio, plugins, and more.
 
-Access the Creator Store through Studio's Toolbox or the [Creator Hub](https://create.roblox.com/store/models). For more information, see [Creator Store](../production/publishing/creator-store.md).
+Access the Creator Store through Studio's Toolbox or the [Creator Hub](https://create.roblox.com/store/models). For more information, see [Creator Store](../production/creator-store.md).
 
 #### Roblox Created Models
 
