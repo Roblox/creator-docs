@@ -214,6 +214,15 @@ functions:
 
       `loadstring()` is disabled by default. For guidance around enabling it,
       see `Class.ServerScriptService`.
+
+      
+      <Alert severity="warning">
+        This method disables certain Luau optimisations on the returned function.
+        Extreme caution should be taken when using `Global.LuaGlobals.loadstring()`. If
+        your intention is to allow users to run code in your experience, make sure to
+        protect the returned function's environment by using `Global.LuaGlobals.getfenv`
+        and `Global.LuaGlobals.setfenv`.
+      </Alert>
     parameters:
       - name: contents
         type: string
