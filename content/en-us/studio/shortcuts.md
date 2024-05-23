@@ -57,7 +57,7 @@ Studio has many default shortcuts and key commands that make development quicker
       <td>**Publish to Roblox As...**</td>
 			<td><kbd>Alt</kbd><kbd>Shift</kbd><kbd>P</kbd></td>
 			<td><kbd>⌥</kbd><kbd>Shift</kbd><kbd>P</kbd></td>
-      <td>Publish the active place to Roblox as new version.</td>
+      <td>Publish the active place to Roblox as a new version.</td>
     </tr>
 	<tr>
       <td>**Close Place**</td>
@@ -111,7 +111,7 @@ Studio has many default shortcuts and key commands that make development quicker
       <td>Zoom the camera in.</td>
     </tr>
     <tr>
-      <td>**Zoom Out**</td>
+      <td>**Zoom&nbsp;Out**</td>
 			<td><p><kbd>Ctrl</kbd><kbd>-</kbd></p><kbd>O</kbd></td>
 			<td><p><kbd>⌘</kbd><kbd>-</kbd></p><kbd>O</kbd></td>
       <td>Zoom the camera out.</td>
@@ -120,25 +120,25 @@ Studio has many default shortcuts and key commands that make development quicker
       <td>**Pan Left**</td>
 			<td><kbd>,</kbd></td>
 			<td><kbd>,</kbd></td>
-      <td>Rotate the camera left. If a part/model is in focus, rotate counterclockwise around it.</td>
+      <td>Rotate the camera left. If a part/model is in focus via the <kbd>F</kbd> shortcut, rotate the camera counterclockwise around the focal object.</td>
     </tr>
     <tr>
       <td>**Pan Right**</td>
 			<td><kbd>.</kbd></td>
 			<td><kbd>.</kbd></td>
-      <td>Rotate the camera right. If a part/model is in focus, rotate clockwise around it.</td>
+      <td>Rotate the camera right. If a part/model is in focus via the <kbd>F</kbd> shortcut, rotate the camera clockwise around the focal object.</td>
     </tr>
     <tr>
       <td>**Tilt Down**</td>
 			<td><kbd>PageUp</kbd></td>
 			<td><kbd>PageUp</kbd></td>
-      <td>Tilt the camera down. If a part/model is in focus, tilt camera down about it.</td>
+      <td>Tilt the camera down. If a part/model is in focus via the <kbd>F</kbd> shortcut, tilt the camera down about the focal object.</td>
     </tr>
     <tr>
       <td>**Tilt Up**</td>
 			<td><kbd>PageDown</kbd></td>
 			<td><kbd>PageDown</kbd></td>
-      <td>Tilt the camera up. If a part/model is in focus, tilt camera up about it.</td>
+      <td>Tilt the camera up. If a part/model is in focus via the <kbd>F</kbd> shortcut, tilt the camera up about the focal object.</td>
     </tr>
   </tbody>
 </table>

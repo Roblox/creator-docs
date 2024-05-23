@@ -3,6 +3,8 @@ title: Materials
 description: Materials determine objects' visual appearance and physical properties.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 Roblox's materials are unlike materials on other platforms, in that their visual appearance **and** their [physical properties](#physical-properties) reflect those of materials in the real world. For example, concrete is heavier than plastic and sinks faster in water. When you set the material of a part or terrain, Roblox simulates its physical material properties to make this behavior just work.
 
 The Roblox engine offers a range of [base materials](#base-materials) suitable to build many experiences, including various categories of metal, rock, and organic materials.
@@ -15,9 +17,7 @@ You can quickly apply materials to [parts](../parts/index.md) through the [Mater
 
 ### Material Widget
 
-<Alert severity="success">
-The **Material** widget is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Material&nbsp;Picker**.
-</Alert>
+<BetaAlert betaName="Material Picker" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 The **Material** widget is accessible from either the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tabs.
 
@@ -257,9 +257,7 @@ Shaders generate the look and feel of materials. The base material shaders work 
 
 <Tabs>
 <TabItem label="Current Base">
-<Alert severity="success">
-Materials marked with <Chip label="beta" size="small" variant="outlined" /> are only available once you enable **New&nbsp;Base&nbsp;Materials** from Studio's beta settings and restart Studio.
-</Alert>
+<BetaAlert betaName="New Base Materials" leadIn="Materials marked as beta are only available once you enable " leadOut="." components={props.components} />
 
 <table size="small">
 <thead>
@@ -1233,9 +1231,7 @@ The base materials were upgraded in 2022 to support custom materials. New places
 
 The following table lists the default RGB values for each base material. For information on how to color parts and terrain, see [Parts](../parts/index.md#coloring-parts) and [Environmental Terrain](../parts/terrain.md#custom-terrain-colors).
 
-<Alert severity="success">
-Materials marked with <Chip label="beta" size="small" variant="outlined" /> are only available once you enable **New&nbsp;Base&nbsp;Materials** from Studio's beta settings and restart Studio.
-</Alert>
+<BetaAlert betaName="New Base Materials" leadIn="Materials marked as beta are only available once you enable " leadOut="." components={props.components} />
 
 <table size="small">
 <thead>
@@ -1468,9 +1464,7 @@ Materials marked with <Chip label="beta" size="small" variant="outlined" /> are 
 
 The following table lists each material's default physical properties as detailed in the `Datatype.PhysicalProperties` reference. For information on customizing physical properties, see [Physical Properties](#physical-properties).
 
-<Alert severity="success">
-Materials marked with <Chip label="beta" size="small" variant="outlined" /> are only available once you enable **New&nbsp;Base&nbsp;Materials** from Studio's beta settings and restart Studio.
-</Alert>
+<BetaAlert betaName="New Base Materials" leadIn="Materials marked as beta are only available once you enable " leadOut="." components={props.components} />
 
 <table size="small">
   <thead>

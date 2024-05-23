@@ -93,7 +93,7 @@ After [setting up](#setting-up-a-topic-for-messaging) a **topic**, you can publi
 You can create [OAuth 2.0 applications](../../cloud/open-cloud/oauth2-overview.md) supporting Messaging Service API to allow your users to publish messages to live servers through your OAuth 2.0 application.
 
 <Alert severity="warning">
-Third-Party app support through OAuth 2.0 is a Beta feature that might be subject to changes for future releases.
+Third-party app support through OAuth 2.0 is a beta feature that might be subject to changes for future releases.
 </Alert>
 
 To use Messaging Service API for your application and request permissions from your users, perform the following settings:

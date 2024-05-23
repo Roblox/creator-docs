@@ -12,7 +12,7 @@ The [Assets API](../../reference/cloud/assets/v1.json) of Open Cloud allows you 
 - Checking existing information of an asset, including metadata, versions, and any in-process updating operations.
 
 <Alert severity="info">
-This API contains Beta endpoints that might be subject to changes for future releases.
+This API contains beta endpoints that might be subject to changes for future releases.
 </Alert>
 
 ## Supported Asset Types and Limits
@@ -161,7 +161,7 @@ To upload a new asset by an HTTP request:
 ## Updating an Existing Asset
 
 <Alert severity="info">
-Asset updating is powered by Beta endpoints that might be subject to changes for future releases.
+Asset updating is powered by beta endpoints that might be subject to changes for future releases.
 </Alert>
 
 To update an existing asset by an HTTP request:

@@ -3,6 +3,8 @@ title: Studio Interface
 description: User interface overview for Roblox Studio, the essential building tool for Roblox experiences.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 ## Toolbar
 
 The **toolbar** resides at the top of Studio. The buttons and tools visible in the bar change when you click on the [Home](../studio/home-tab.md), [Model](../studio/model-tab.md), [Avatar](../studio/avatar-tab.md), [Test](../studio/test-tab.md), [View](../studio/view-tab.md), and [Plugins](../studio/plugins-tab.md) tabs.
@@ -10,28 +12,28 @@ The **toolbar** resides at the top of Studio. The buttons and tools visible in t
 <img src="../assets/studio/general/Toolbar-Tabs-Labeled.png"
    width="800" alt="Studio's toolbar with the Home, Model, Avatar, Test, View, and Plugins tabs highlighted." />
 
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-A.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>The [Home](../studio/home-tab.md) tab contains basic tools for manipulating 3D objects and testing your experience.</p></Grid>
+<Grid container spacing={2}>
+	<Grid item xs={3} sm={2} md={2} lg={2}><center><img src="../assets/misc/Box-Label-A.png" width="40" /></center></Grid>
+	<Grid item xs={9} sm={10} md={10} lg={10}><p>The [Home](../studio/home-tab.md) tab contains basic tools for manipulating 3D objects and testing your experience.</p></Grid>
 </Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-B.png" width="40" /></Grid>
+<Grid container spacing={2}>
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{marginLeft: 'auto'}} /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p>The [Model](../studio/model-tab.md) tab contains tools for manipulating 3D objects in the workspace, creating detailed models, working with physical constraints, and adding advanced objects.</p></Grid>
 </Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-C.png" width="40" /></Grid>
+<Grid container spacing={2}>
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-C.png" width="40" /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p>The [Avatar](../studio/avatar-tab.md) tab contains specialized tools for creating and fitting accessories, importing custom meshes, building default rigs, and creating animations.</p></Grid>
 </Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-D.png" width="40" /></Grid>
+<Grid container spacing={2}>
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-D.png" width="40" /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p>The [Test](../studio/test-tab.md) tab contains tools for testing an experience, simulating multiple clients, and emulating different devices.</p></Grid>
 </Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-E.png" width="40" /></Grid>
+<Grid container spacing={2}>
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-E.png" width="40" /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p>The [View](../studio/view-tab.md) tab lets you toggle the various windows of Studio, as well as several display features.</p></Grid>
 </Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-F.png" width="40" /></Grid>
+<Grid container spacing={2}>
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-F.png" width="40" /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p>The [Plugins](../studio/plugins-tab.md) tab contains tools for managing [plugins](../studio/plugins.md), configuring localization, and creating animations. Any plugins you install can also add buttons to this tab.</p></Grid>
 </Grid>
 
@@ -48,7 +50,7 @@ The 3D viewport represents the `Class.Workspace` of a place. From here, you can 
 
 ### Camera Controls
 
-Inside the viewport, you can move the camera with the following controls:
+Inside the viewport, you can move the camera with the following controls. See also [Studio Shortcuts](../studio/shortcuts.md#camera-controls) for additional key shortcuts.
 
 <table>
 <thead>
@@ -85,6 +87,10 @@ Inside the viewport, you can move the camera with the following controls:
   <tr>
     <td>**Middle Mouse Button**</td>
     <td>When pressed, dragging the mouse pans the camera.</td>
+  </tr>
+	<tr>
+    <td>**Right Mouse Button**&nbsp;& **Mouse Scroll Wheel**</td>
+    <td>Pressing the right mouse button and scrolling the mouse wheel **up** increases the camera scroll speed. Conversely, pressing the right mouse button and scrolling the mouse wheel **down** reduces the camera scroll speed.<br /><br /><BetaAlert betaName="New Studio Camera Controls" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} /></td>
   </tr>
 </tbody>
 </table>

@@ -3,6 +3,8 @@ title: Home Tab
 description: The Home tab contains basic tools for building and testing your experience.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 The **Home** tab contains basic tools for building and testing your experience.
 
 <img src="../assets/studio/general/Toolbar-Home-Tab.png" width="716" alt="Home tab indicated in Studio toolbar" />
@@ -139,9 +141,7 @@ For alternative ways to apply custom colors, see [Coloring Parts](../parts/index
 
 ## Material Widget
 
-<Alert severity="success">
-The **Material** widget is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Material&nbsp;Picker**.
-</Alert>
+<BetaAlert betaName="Material Picker" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 Clicking the small dropdown arrow on the **Material** widget reveals a material picker and, by default, applies the chosen [material](../parts/materials.md) to all selected parts. Once you've selected a material, you can quickly apply it to other parts by selecting those parts and clicking the **Material** button itself.
 

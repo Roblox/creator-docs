@@ -5,6 +5,7 @@ description: Explore the built-in Studio testing modes for experiences.
 
 import PlaytestOptions from '../includes/studio/testing-modes.md'
 import PauseResumePhysics from '../includes/studio/pause-resume-physics.md'
+import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 Because of the underlying [client-server model](../projects/client-server.md) of the Roblox engine, it's important that you test your experience in various modes before [releasing it to the public](../production/publishing/publishing-experiences-and-places.md#releasing-to-the-public). All of the testing options are accessible from the [Test](../studio/test-tab.md) tab.
 
@@ -63,6 +64,8 @@ In the [Output](../studio/output.md) window, messages are labeled **blue** (clie
 <img src="../assets/studio/general/Output-Window-Client-Server-Labels.png" width="800" alt="Output window showing green label for server output and blue label for client output" />
 
 ### Pausing & Resuming Physics
+
+<BetaAlert betaName="Simulation Pause" leadIn="This tool workflow is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 <PauseResumePhysics components={props.components} />
 
@@ -189,4 +192,4 @@ After [configuring your headset](#headset-configuration), you can turn on the St
 2. Select **Rendering**.
 3. Under **General** settings, turn on **VR Mode**.
 
-You can now test your experience using your VR headset using any of the available [playtest options](#playtest-options). During a VR testing session, if your headset cable disconnects, or you close the Roblox Studio Beta app on the headset, you need to restart Studio to re-run testing.
+You can now test your experience using your VR headset using any of the available [playtest options](#playtest-options). During a VR testing session, if your headset cable disconnects or you close the Roblox Studio Beta app on the headset, you'll need to restart Studio to re-run testing.

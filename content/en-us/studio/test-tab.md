@@ -5,6 +5,7 @@ description: The Test tab contains tools for testing, simulating multiple client
 
 import PlaytestOptions from '../includes/studio/testing-modes.md'
 import PauseResumePhysics from '../includes/studio/pause-resume-physics.md'
+import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 The **Test** tab contains tools for testing and debugging an experience, simulating multiple clients, and emulating different devices or users with regional content policies.
 
@@ -15,6 +16,8 @@ The **Test** tab contains tools for testing and debugging an experience, simulat
 <PlaytestOptions components={props.components} />
 
 ## Pausing & Resuming Physics
+
+<BetaAlert betaName="Simulation Pause" leadIn="This tool workflow is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 <PauseResumePhysics components={props.components} />
 

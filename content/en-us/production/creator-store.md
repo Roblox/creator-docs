@@ -5,7 +5,7 @@ description: The Creator Store is where you can find all assets for public use i
 
 The **Creator Store** features assets made by Roblox and the Roblox community for the community to use within their experiences, including models, images, meshes, audio, fonts, videos, and plugins.
 
-You can create and distribute models, images, meshes, and plugins to the Creator Store for others to use as long as you are the original creator, and it adheres to Roblox's [Community Rules][CommunityRulesURL] and [Terms&nbsp;of&nbsp;Use][TermsUseURL]. If you have a [seller account](./selling-on-creator-store.md), you can also sell your plugins to other creators.
+You can create and distribute models, images, meshes, plugins, and audio sound effects under 10 seconds to the Creator Store for others to use as long as you are the original creator, and it adheres to Roblox's [Community Rules][CommunityRulesURL] and [Terms&nbsp;of&nbsp;Use][TermsUseURL]. If you have a [seller account](./selling-on-creator-store.md), you can also sell your plugins to other creators.
 
 <Alert severity="warning">
 To maintain community safety, Roblox may terminate accounts that publish spam or assets with malicious or obfuscated code.
@@ -86,7 +86,7 @@ Some assets include scripts that perform specific actions, such as animating at 
 
 ## Verifying Your Account
 
-In addition to being able to distribute more of each asset type, verifying your account ensures that your assets are visible to creators, as the default option for discoverability for assets on the Creator Store is reserved for verified accounts. In order to verify your account, you must:
+In addition to being able to distribute more of each asset type, verifying your account ensures that you are eligible to distribute audio assets under 10 seconds, and that your assets are visible to creators, as the default option for discoverability for assets on the Creator Store is reserved for verified accounts. In order to verify your account, you must:
 
 - Be at least 13 years of age.
 - Have a government-issued photo ID with your picture on it, such as a driver's license, passport, or residency permit.
@@ -102,7 +102,7 @@ For information on how to verify your account either through a government-issued
 
 ## Distributing and Selling Assets
 
-Distributing to the Creator Store is the only way to make your assets publicly available to all users to use within their own experiences in Studio. You can distribute any mesh or image that you have imported through the [Asset Manager](../projects/assets/manager.md), or any [model](../parts/models.md) or [plugin](../studio/plugins.md) that you have uploaded to your inventory.
+Distributing to the Creator Store is the only way to make your assets publicly available to all users to use within their own experiences in Studio. You can distribute any mesh or image that you have imported through the [Asset Manager](../projects/assets/manager.md), or any [model](../parts/models.md), [plugin](../studio/plugins.md), or [audio asset](../sound/assets.md) sound effect under 10 seconds that you have uploaded to your inventory.
 
 Every asset that you import must adhere to the [Community Rules][CommunityRulesURL] and [Terms&nbsp;of&nbsp;Use][TermsUseURL], and respect the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright. In addition, there are limits on the number of assets you can distribute per 30 days, depending on whether you've [verified your account](../production/publishing/account-verification.md):
 
@@ -113,6 +113,7 @@ Every asset that you import must adhere to the [Community Rules][CommunityRulesU
     <th>Mesh Assets</th>
     <th>Image Assets</th>
 		<th>Model Assets</th>
+		<th>Audio Assets</th>
 		<th>Plugins</th>
   </tr>
 </thead>
@@ -122,6 +123,7 @@ Every asset that you import must adhere to the [Community Rules][CommunityRulesU
     <td>200</td>
     <td>200</td>
 		<td>200</td>
+		<th>100</th>
 		<td>10</td>
   </tr>
   <tr>
@@ -129,6 +131,7 @@ Every asset that you import must adhere to the [Community Rules][CommunityRulesU
     <td>10</td>
     <td>10</td>
 		<td>10</td>
+		<th>10</th>
 		<td>2</td>
   </tr>
 </tbody>
@@ -146,12 +149,13 @@ To distribute an asset through the [Creator Dashboard](https://create.roblox.com
 1. **(Optional)** If you have a [seller account](./selling-on-creator-store.md) and are distributing a plugin, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset will be free to all creators.
 1. **(Optional)** If you are [ID or phone verified](../production/publishing/account-verification.md), add up to 5 supplementary thumbnails for your asset.
 1. Click the **Save** button.
+1. If you are distributing an audio asset for the first time, enable all legal agreements, then click the **Submit** button.
 
 The asset will become public and visible to everyone within the Creator Store, provided it adheres to the [moderation rules](#asset-moderation).
 
 ### Through Studio
 
-You can upload assets directly in Studio from the [Toolbox](../projects/assets/toolbox.md) or [Explorer](../studio/explorer.md) window. However, you must complete the process on the [Creator Dashboard](#through-creator-dashboard) to list an asset for sale on the Creator Store or set a [USD price](./selling-on-creator-store.md) for a plugin.
+You can upload assets directly in Studio from the [Toolbox](../projects/assets/toolbox.md) or [Explorer](../studio/explorer.md) window. However, you must complete the process on the [Creator Dashboard](#through-creator-dashboard) to list an asset for sale on the Creator Store, distribute audio assets under 10 seconds, or set a [USD price](./selling-on-creator-store.md) for a plugin.
 
 <Tabs>
 <TabItem label="Toolbox">

@@ -3,6 +3,8 @@ title: Assistant
 description: How to use the Assistant to help you build, grow, and monetize your creations.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 The **Assistant** is an AI helper that can answer questions about building, growing, and monetizing Roblox creations. It is trained on the official Roblox documentation and is designed to answer these categories of questions:
 
 - **Building** — Answers questions about [creating an experience](../creation.md) in Studio.
@@ -35,9 +37,7 @@ To access Assistant from the official [Documentation](../) site:
 
 ### In Studio
 
-<Alert severity="success">
-The Studio tooling is in beta. To use it, open **Beta Features** from the **File** menu and enable **Assistant Preview**.
-</Alert>
+<BetaAlert betaName="Assistant Preview" leadIn="The Studio tooling is currently in beta through " leadOut="." components={props.components} />
 
 To access Assistant from Studio:
 
@@ -45,7 +45,7 @@ To access Assistant from Studio:
 
    <img src="../assets/studio/general/Toolbar-Assistant.png" width="754" alt="Assistant button indicated in top-right area of toolbar" />
 
-1. Type a request into the field near the bottom of the window, using guidance from [Prompting Tips](#prompting-tips) to generate improved responses. Based on the result, you can then:
+2. Type a request into the field near the bottom of the window, using guidance from [Prompting Tips](#prompting-tips) to generate improved responses. Based on the result, you can then:
 
    - Click thumbs up or thumbs down to rate the result and improve future results.
    - Click the redo icon to process a new result.

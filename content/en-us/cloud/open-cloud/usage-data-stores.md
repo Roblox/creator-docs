@@ -6,7 +6,7 @@ description: Explains how to use Open Cloud Web APIs to access and modify data s
 In addition to accessing [data stores](../../cloud-services/datastores.md) using Lua `Class.DataStoreService` in Studio or live servers, you can use Open Cloud APIs to access and utilize [standard](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json) from external scripts and tools with granular access and security control.
 
 <Alert severity="warning">
-Open Cloud APIs for ordered data stores are Beta APIs that might be subject to changes for future releases.
+Open Cloud APIs for ordered data stores are beta APIs that might be subject to changes for future releases.
 </Alert>
 
 ## Usage

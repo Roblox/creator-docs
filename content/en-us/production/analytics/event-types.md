@@ -4,9 +4,7 @@ description: Overview of using event types to track user sources, sinks and mile
 ---
 
 <Alert severity="info">
-
 Event types is currently being tested in limited beta.
-
 </Alert>
 
 Event types help you identify opportunities to grow and monetize your experience. They allow you to **integrate event tracking in your experience** and visualize your in-experience economy and player usage patterns on the Analytics dashboard

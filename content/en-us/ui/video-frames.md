@@ -3,13 +3,13 @@ title: Video Frames
 description: Video assets used on VideoFrame instances allow for video playback in experiences.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 Video assets used in `Class.VideoFrame` instances allow for video playback in experiences. You can [upload](#importing-videos) videos that you're certain you have permission to use, such as videos you make yourself, and the [asset privacy](../projects/assets/privacy.md) system automatically ensures that the IDs of your uploaded videos can't be accessed by users without the proper permissions.
 
 ## Importing Videos
 
-<Alert severity="success">
-This feature is currently in beta. To upload video assets, go to **File**&nbsp;&rarr; **Beta Features** and enable **Video Uploads**.
-</Alert>
+<BetaAlert betaName="Video Uploads" leadIn="To upload video assets, enable the beta feature through " leadOut="." components={props.components} />
 
 ### Requirements
 
