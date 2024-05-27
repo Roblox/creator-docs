@@ -113,12 +113,6 @@ properties:
       client. For the server, on which `Class.Script` objects run their code,
       this property is `nil`.
 
-      #### Loading GUIs
-
-      When creating loading GUIs using `Class.ReplicatedFirst`, sometimes a
-      `Class.LocalScript` can run before the LocalPlayer is available. In this
-      case, you should yield until it becomes available by using
-      `Class.Instance:GetPropertyChangedSignal()`
     code_samples:
     type: Player
     tags:
