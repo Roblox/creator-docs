@@ -1,6 +1,6 @@
 ---
 title: Roblox Studio
-description: Learn how Roblox Studio is an all-in-one IDE that lets you create experiences that run on the Roblox Engine.
+description: Learn how Roblox Studio is an all-in-one IDE that lets you create experiences that run on the Roblox Engine which can also be done by ipad
 ---
 **Build anything you can imagine with the all-in-one IDE for Roblox.**
 
