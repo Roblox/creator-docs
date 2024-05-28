@@ -3,9 +3,13 @@ import {
   RETEXT_INAPPROPRIATE,
   RETEXT_PROFANITIES,
   compileMdx,
+  getMdxComponents,
+  areEqualComponentDetails,
   getReTextAnalysis,
   replaceProfanityPatterns,
-} from './retext.js';
+  isIComponentDetails,
+  isVFileMessage,
+} from './unified.js';
 import {
   RETEXT_EQUALITY_ALLOW_LIST,
   RETEXT_PASSIVE_ALLOW_LIST,
@@ -573,5 +577,112 @@ When you're comfortable navigating the viewport with the camera, you can begin b
 `;
     const result = await compileMdx(text);
     expect(result).toStrictEqual(undefined);
+  });
+});
+
+describe('areEqualComponentDetails', () => {
+  it('should return true for equal component details', () => {
+    const details1 = {
+      count: 3,
+      components: ['Alert', 'td', 'b'],
+      htmlTags: [],
+    };
+    const details2 = {
+      count: 3,
+      components: ['Alert', 'td', 'b'],
+    };
+    expect(areEqualComponentDetails(details1, details2)).toBe(true);
+  });
+  it('should return false for unequal component details', () => {
+    const details1 = {
+      count: 3,
+      components: ['Alert', 'td', 'b'],
+      htmlTags: [],
+    };
+    const details2 = {
+      count: 2,
+      components: ['td', 'b'],
+    };
+    expect(areEqualComponentDetails(details1, details2)).toBe(false);
+  });
+});
+
+describe('getMdxComponents', () => {
+  it('parses text and extracts mdx components successfully', async () => {
+    const text = 'Hello <Alert>Alert Text</Alert> World';
+    const expected = {
+      components: ['Alert'],
+      count: 1,
+    };
+    const result = await getMdxComponents(text);
+    expect(result).toEqual(expected);
+  });
+  it('parses text and extracts nested mdx components successfully', async () => {
+    const text = 'Hello <Alert>Alert <b>Bold Text</b></Alert> World';
+    const expected = {
+      components: ['Alert', 'b'],
+      count: 2,
+    };
+    const result = await getMdxComponents(text);
+    expect(result).toEqual(expected);
+  });
+  it('parses text and extracts mdx components in different paragraphs successfully', async () => {
+    const text = `Hello <Alert>Alert <b>Bold Text</b></Alert> World
+    
+    
+    Second paragraph with <b>Bold Text</b>`;
+    const expected = {
+      components: ['Alert', 'b', 'b'],
+      count: 3,
+    };
+    const result = await getMdxComponents(text);
+    expect(result).toEqual(expected);
+  });
+
+  it('handles errors gracefully', async () => {
+    const text = 'Hello <Alert>Invalid content World';
+    const result = (await getMdxComponents(text)) as VFileMessage;
+    expect(result.message).toBe(
+      'Expected a closing tag for `<Alert>` (1:7-1:14) before the end of `paragraph`'
+    );
+    expect(result.source).toBe('mdast-util-mdx-jsx');
+  });
+});
+
+describe('isIComponentDetails', () => {
+  it('should return true for IComponentDetails', () => {
+    const details = {
+      count: 4,
+      components: ['kbd', 'img', 'img', 'td'],
+    };
+    expect(isIComponentDetails(details)).toBe(true);
+  });
+  it('should return false for missing count in IComponentDetails', () => {
+    const details = {
+      components: ['kbd', 'img', 'img', 'td'],
+    };
+    expect(isIComponentDetails(details)).toBe(false);
+  });
+  it('should return false for missing components in IComponentDetails', () => {
+    const details = {
+      count: 4,
+    };
+    expect(isIComponentDetails(details)).toBe(false);
+  });
+  it('should return false for strings', () => {
+    const details = 'Hello World';
+    expect(isIComponentDetails(details)).toBe(false);
+  });
+});
+
+describe('isVFileMessage', () => {
+  it('should return true for VFileMessage', async () => {
+    const text = 'Hello <Alert>Invalid content World';
+    const result = (await getMdxComponents(text)) as VFileMessage;
+    expect(isVFileMessage(result)).toBe(true);
+  });
+  it('should return false for strings', () => {
+    const details = 'Hello World';
+    expect(isVFileMessage(details)).toBe(false);
   });
 });

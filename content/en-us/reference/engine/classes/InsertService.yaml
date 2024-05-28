@@ -9,10 +9,11 @@ description: |
   `Class.InsertService:LoadAsset()|LoadAsset` function.
 
   To load an asset, it must be accessible by the creator of the experience
-  loading it, which can be either a user or group. Should an experience be uploaded by a different creator, the asset data would not be accessible. See the
-  `Class.InsertService:LoadAsset()|LoadAsset()` method for more details on this
-  security check.
-  Note that you should **not** use this service for loading API keys or other secrets. Use `Class.HttpService:GetSecret()` instead.
+  loading it, which can be either a user or group. Should an experience be
+  uploaded by a different creator, the asset data would not be accessible. See
+  the `Class.InsertService:LoadAsset()|LoadAsset()` method for more details on
+  this security check. Note that you should **not** use this service for loading
+  API keys or other secrets. Use `Class.HttpService:GetSecret()` instead.
 
   #### See Also
 

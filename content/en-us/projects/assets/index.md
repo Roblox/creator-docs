@@ -282,10 +282,6 @@ Roblox offers several tools to import, store, and publish your assets:
             <td>[3D Importer](../../art/modeling/3d-importer.md)</td>
             <td>Imports `.fbx` or `.obj` 3D models from third-party modeling tools as a custom `Class.Model` instance. </td>
         </tr>
-        <tr>
-            <td>[Avatar Importer](../../studio/plugins-tab.md#avatar-importer)</td>
-            <td>Imports avatar and custom rigs.</td>
-        </tr>
     </tbody>
 </table>
 

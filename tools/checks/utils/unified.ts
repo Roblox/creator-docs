@@ -5,6 +5,7 @@ import remarkFrontMatter from 'remark-frontmatter';
 import remarkMdx from 'remark-mdx';
 import remarkParse from 'remark-parse';
 import remarkRetext from 'remark-retext';
+import remarkStringify from 'remark-stringify';
 import retextContractions from 'retext-contractions';
 import retextEnglish from 'retext-english';
 import retextEquality from 'retext-equality';
@@ -283,7 +284,7 @@ export const compileMdx = async (text: string) => {
     const file = await unified()
       .use(remarkParse)
       .use(remarkMdx)
-      .use(retextStringify)
+      .use(remarkStringify)
       .process(text);
     return;
   } catch (e) {
@@ -292,6 +293,69 @@ export const compileMdx = async (text: string) => {
       return error;
     }
   }
+};
+
+interface IComponentDetails {
+  count: number;
+  components: string[];
+}
+
+export const getMdxComponents = async (text: string) => {
+  try {
+    const processor = unified().use(remarkParse).use(remarkMdx);
+    // Parse the text into a syntax tree, not process it
+    const tree = processor.parse(text);
+    // console.log('Syntax Tree:', JSON.stringify(tree, null, 2));
+
+    let components: string[] = [];
+
+    const visitNodesRecursive = (node: any) => {
+      if (node.type === 'mdxJsxFlowElement' && node.name) {
+        components.push(node.name);
+      }
+      if (node.type === 'mdxJsxTextElement' && node.name) {
+        components.push(node.name);
+      }
+      if (node.children) {
+        visit(node.children, visitNodesRecursive);
+      }
+    };
+    visit(tree, visitNodesRecursive);
+    return {
+      count: components.length,
+      components,
+    } as IComponentDetails;
+  } catch (e) {
+    if (e?.constructor.name === 'VFileMessage') {
+      const error = e as VFileMessage;
+      return error;
+    }
+  }
+};
+
+export const isIComponentDetails = (obj: unknown): obj is IComponentDetails => {
+  return (obj &&
+    typeof obj === 'object' &&
+    'count' in obj &&
+    'components' in obj) as boolean;
+};
+
+export const isVFileMessage = (obj: unknown): obj is VFileMessage => {
+  return (obj && typeof obj === 'object' && 'message' in obj) as boolean;
+};
+
+export const areEqualComponentDetails = (
+  details1: IComponentDetails,
+  details2: IComponentDetails
+): boolean => {
+  const areArraysEqual = (arr1: string[], arr2: string[]): boolean =>
+    arr1.length === arr2.length &&
+    arr1.every((val, index) => val === arr2[index]);
+
+  return (
+    details1.count === details2.count &&
+    areArraysEqual(details1.components, details2.components)
+  );
 };
 
 /**

@@ -5,7 +5,9 @@ memory_category: Instances
 summary: |
   An internal service used by Roblox to collect analytics from `CoreScripts`.
 description: |
-  AnalyticsService is a collection of methods that allows developers to track how players interact with their experiences, specifically player progression, in-game economy, funnels, and custom events.
+  AnalyticsService is a collection of methods that allows developers to track
+  how players interact with their experiences, specifically player progression,
+  in-game economy, funnels, and custom events.
 code_samples:
 inherits:
   - Instance
@@ -528,8 +530,8 @@ methods:
   - name: AnalyticsService:LogEconomyEvent
     summary: |
       Logs an event used to track player actions related in experience.
-
-    description: 'Logs an event used to track player actions related in experience.'
+    description: |
+      Logs an event used to track player actions related in experience.
     code_samples: []
     parameters:
       - name: player
@@ -573,8 +575,11 @@ methods:
     thread_safety: Unsafe
   - name: AnalyticsService:LogFunnelStepEvent
     summary: |
-      Logs an event used to track player actions stepping through a pre-planned funnel.
-    description: 'Logs an event used to track player actions stepping through a pre-planned funnel.'
+      Logs an event used to track player actions stepping through a pre-planned
+      funnel.
+    description: |
+      Logs an event used to track player actions stepping through a pre-planned
+      funnel.
     code_samples: []
     parameters:
       - name: player
@@ -610,8 +615,11 @@ methods:
     thread_safety: Unsafe
   - name: AnalyticsService:LogOnboardingFunnelStepEvent
     summary: |
-      Logs an event used to track player actions stepping through an onboarding funnel.
-    description: 'Logs an event used to track player actions stepping through an onboarding funnel.'
+      Logs an event used to track player actions stepping through an onboarding
+      funnel.
+    description: |
+      Logs an event used to track player actions stepping through an onboarding
+      funnel.
     code_samples: []
     parameters:
       - name: player
@@ -640,7 +648,8 @@ methods:
   - name: AnalyticsService:LogProgressionCompleteEvent
     summary: |
       Logs an event for when a user has completed a level attempt.
-    description: 'Logs an event for when a user has completed a level attempt.'
+    description: |
+      Logs an event for when a user has completed a level attempt.
     code_samples: []
     parameters:
       - name: player
@@ -672,8 +681,11 @@ methods:
     thread_safety: Unsafe
   - name: AnalyticsService:LogProgressionEvent
     summary: |
-      Logs an event for when a user has started, completed, or failed a level attempt.
-    description: 'Logs an event for when a user has started, completed, or failed a level attempt.'
+      Logs an event for when a user has started, completed, or failed a level
+      attempt.
+    description: |
+      Logs an event for when a user has started, completed, or failed a level
+      attempt.
     code_samples: []
     parameters:
       - name: player
@@ -710,7 +722,8 @@ methods:
   - name: AnalyticsService:LogProgressionFailEvent
     summary: |
       Logs an event for when a user has failed a level attempt.
-    description: 'Logs an event for when a user has failed a level attempt.'
+    description: |
+      Logs an event for when a user has failed a level attempt.
     code_samples: []
     parameters:
       - name: player
@@ -743,7 +756,8 @@ methods:
   - name: AnalyticsService:LogProgressionStartEvent
     summary: |
       Logs an event for when a user has started a level attempt.
-    description: 'Logs an event for when a user has started a level attempt.'
+    description: |
+      Logs an event for when a user has started a level attempt.
     code_samples: []
     parameters:
       - name: player

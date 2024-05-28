@@ -8,7 +8,7 @@ next: /resources/beyond-the-dark/layered-clothing
 prev: /resources/beyond-the-dark/building-architecture
 ---
 
-You can import custom meshes to create everything from NPCs to an animated cloth of a sail boat. We used the custom setting of the Avatar Importer to bring in more exotic custom characters, like the mysterious black hole creatures and the friendly, if unaware, service droids.
+You can import custom meshes to create everything from NPCs to an animated cloth of a sail boat. We used the custom setting of the Avatar Importer (now the [3D Importer](../../art/modeling/3d-importer.md)) to bring in more exotic custom characters, like the mysterious black hole creatures and the friendly, if unaware, service droids.
 
 The following sections go over how we used [rigging and skinning](../../art/modeling/rigging.md), [PBR (surface
 appearance)](/art/modeling/surface-appearance), and VFX to build one of our more complicated characters that we named the "Creature." We wanted it to glow, emit some light, have trails of particle smoke, and a fluid motion that involved skinning a rig with enough joints to create the convincing waves of its tentacles.

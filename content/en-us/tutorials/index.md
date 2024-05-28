@@ -62,7 +62,7 @@ While many creators focus on a single area, the following tutorials walk you thr
      <Button variant="contained" color="secondary" size='large'
      style={{marginRight:16, alignSelf: 'flex-start'}}>Accessories</Button>
      </a>
-     <a underline="none" href="../art/characters/creating/index.md">
+     <a underline="none" href="../art/accessories/creating/index.md">
      <Button variant="contained" color="secondary" size='large'
      style={{marginRight:16, alignSelf: 'flex-start'}}>Clothing</Button>
      </a>

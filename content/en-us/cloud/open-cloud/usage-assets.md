@@ -52,7 +52,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
           <li>Up to 7 minutes of duration.</li>
           <li>Up to 100 uploads per month if you're ID-verified.</li>
           <li>Up to 10 total uploads per month if you aren't ID-verified.</li>
-          <li>Not available for the updating.</li>
+          <li>Not available for updating.</li>
         </ul>
       </td>
     </tr>
@@ -93,8 +93,13 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
           <li>`model/fbx`</li>
         </ul>
       </td>
-      <td></td>
+      <td>
+        Depending on your use-case, consider uploading certain models manually using the [3D Importer](../../art/modeling/3d-importer.md).
+
+        The 3D Importer provides a 3D preview, various error-checking, and many customizable import settings.
+      </td>
     </tr>
+
   </tbody>
 </table>
 
@@ -187,7 +192,7 @@ curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/{asset
 --form 'request={
     \"assetType\": \"{assetType}\",
     \"assetId\": \"{assetId}\",
-    \"creationContext\": { 
+    \"creationContext\": {
         \"creator\": {
             \"userId\": {userId}
         },
@@ -223,8 +228,8 @@ curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/v1/ass
     \"assetType\": \"{assetType}\",
     \"assetId\": \"{assetId}\",
     \"displayName\": \"{new display name}\",
-    \"description\": \"{new description}\",    
-    \"creationContext\": { 
+    \"description\": \"{new description}\",
+    \"creationContext\": {
         \"creator\": {
             \"userId\": {userId}
         },

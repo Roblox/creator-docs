@@ -20,12 +20,6 @@ The localization **Tools** window lets you playtest in various languages, downlo
 
 <img src="../assets/studio/general/Plugins-Tab-Localization-Tools.png" width="800" alt="Localization tools button indicated in Plugins tab" />
 
-## Avatar Importer
-
-The **Avatar Importer** plugin lets you import avatar rigs and custom rigs. For more information, see [Rigging](../art/modeling/rigging.md).
-
-<img src="../assets/studio/general/Plugins-Tab-Avatar-Importer.png" width="800" alt="Avatar Importer button indicated in Plugins tab" />
-
 ## View Sounds
 
 The **View Sounds** plugin lets you discover audio used throughout the place and replace audio assets that you do not have permission to use. See [Audio Asset Privacy System](../sound/assets.md#audio-asset-privacy-system) for details.

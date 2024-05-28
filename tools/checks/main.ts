@@ -34,8 +34,13 @@ import {
   RETEXT_SPELL,
   compileMdx,
   getReTextAnalysis,
-} from './utils/retext.js';
-import { Locale, checkEnglishVersionExists } from './utils/localization.js';
+} from './utils/unified.js';
+import {
+  Locale,
+  checkEnglishVersionExists,
+  checkMdxEquality,
+  isLocaleFile,
+} from './utils/localization.js';
 import { Emoji } from './utils/utils.js';
 import { deduplicate } from './utils/utils.js';
 import {
@@ -203,8 +208,12 @@ try {
     const isYamlFile = filePath.endsWith(FileExtension.YAML);
     console.log(`::group::${Emoji.Mag} Checking`, filePathFromRepoRoot);
     const fileContent = readFileSync(filePath);
-    if (config.checkLocalizedContent) {
+    if (
+      config.checkLocalizedContent &&
+      !isLocaleFile(filePathFromRepoRoot, Locale.EN_US) // skip for English
+    ) {
       checkEnglishVersionExists(filePathFromRepoRoot);
+      await checkMdxEquality(filePathFromRepoRoot, fileContent);
     }
     if (config.checkRetextAnalysis) {
       const retextVFile = (await getReTextAnalysis(
