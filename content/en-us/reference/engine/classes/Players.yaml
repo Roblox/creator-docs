@@ -112,7 +112,6 @@ properties:
       `Class.ModuleScript|ModuleScripts` required by them, since they run on the
       client. For the server, on which `Class.Script` objects run their code,
       this property is `nil`.
-
     code_samples:
     type: Player
     tags:
