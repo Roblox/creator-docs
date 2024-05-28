@@ -22,7 +22,7 @@ local raycastResult = workspace:Raycast(rayOrigin, rayDirection)
 ```
 
 <Alert severity="warning">
-When casting a ray, the distance between the origin and directional `Datatype.Vector3` is the **functional length** (magnitude) of the ray. The maximum length is 15,000 studs.
+When casting a ray, the direction parameter should encompass the desired length of the ray. For instance, if the magnitude of the direction is 10, the resulting ray will also be of length 10. The maximum length is 15,000 studs.
 </Alert>
 
 ### Filtering
