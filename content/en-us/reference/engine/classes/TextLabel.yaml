@@ -630,7 +630,7 @@ properties:
       - NotReplicated
       - Deprecated
     deprecation_message: |
-      This property is simply an alias for `Class.TextLabel|TextWrapped`. Used
+      This property is simply an alias for `Class.TextLabel|TextWrapped`. Use
       the past-tense version instead.
     security:
       read: None
