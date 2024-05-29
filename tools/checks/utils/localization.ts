@@ -7,6 +7,7 @@ import {
   isIComponentDetails,
   isVFileMessage,
 } from './unified.js';
+import { getNonEditableFilesList } from './files.js';
 
 export enum Locale {
   DE_DE = 'de-de',
@@ -103,5 +104,15 @@ export const checkMdxEquality = async (
       console.log(errorMessage);
       addToSummaryOfRequirements(errorMessage);
     }
+  }
+};
+
+export const checkFileIsTranslatable = (filePath: string) => {
+  const nonEditableFilesList = getNonEditableFilesList();
+  const englishVersion = getLocaleVersionFilePath(filePath, Locale.EN_US);
+  if (nonEditableFilesList.includes(englishVersion)) {
+    const message = `${Emoji.NoEntry} File should not be translated because its English version is on the "Do not edit" list: ${filePath}`;
+    console.log(message);
+    addToSummaryOfRequirements(message);
   }
 };

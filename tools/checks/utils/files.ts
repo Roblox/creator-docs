@@ -92,9 +92,7 @@ export const writeListToFile = (
   encoding: BufferEncoding = 'utf-8'
 ) => {
   ensureDirExistsSync(path.dirname(outputFileName));
-  if (list.length > 0) {
-    fs.writeFileSync(outputFileName, list.join('\n'), encoding);
-  }
+  fs.writeFileSync(outputFileName, list.join('\n'), encoding);
 };
 
 /**
@@ -121,4 +119,12 @@ export const readListFromFile = (
   } else {
     throw new Error(`File ${inputFileName} does not exist.`);
   }
+};
+
+export const getNonEditableFilesList = () => {
+  const nonEditableFilesList = path.join(
+    __dirname,
+    'non-editable-files-list.txt'
+  );
+  return readListFromFile(nonEditableFilesList);
 };

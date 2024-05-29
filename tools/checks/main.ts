@@ -38,6 +38,7 @@ import {
 import {
   Locale,
   checkEnglishVersionExists,
+  checkFileIsTranslatable,
   checkMdxEquality,
   isLocaleFile,
 } from './utils/localization.js';
@@ -214,6 +215,7 @@ try {
     ) {
       checkEnglishVersionExists(filePathFromRepoRoot);
       await checkMdxEquality(filePathFromRepoRoot, fileContent);
+      checkFileIsTranslatable(filePathFromRepoRoot);
     }
     if (config.checkRetextAnalysis) {
       const retextVFile = (await getReTextAnalysis(
