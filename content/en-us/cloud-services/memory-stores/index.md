@@ -23,6 +23,8 @@ In general, if you need to access data based on a specific key, use a hash map. 
 
 To maintain the scalability and system performance, memory stores have data usage quotas for the memory size, API requests, and the data structure size.
 
+Memory stores have an eviction policy based on expiration time, also known as time to live (TTL). Items are evicted after they expire, and memory quota is freed up for new entries. When you hit the memory limit, all subsequent write requests fail until items expire or you manually delete them.
+
 ### Memory Size Quota
 
 The memory quota limits the total amount of memory that an experience can consume. It's not a fixed value. Instead, it changes over time depending on the number of users in the experience according to the following formula: **64KB + 1KB \* [number of users]**. The quota applies on the experience level instead of the server level.

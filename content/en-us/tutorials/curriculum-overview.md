@@ -5,13 +5,7 @@ hideInPageNavigation: true
 hideBreadcrumbs: true
 ---
 
-**Curriculum paths** provide a comprehensive overview of the various skills you need for different game development areas after you familiarize yourself with Studio's core functionality. Each curriculum path provides:
-
-- Conceptual information about the game development area and how it applies to Studio.
-- Step-by-step implementation instruction to complete each game design process.
-- A working sample for each section of the tutorial so that you can track your progress.
-
-If you prefer to learn Studio features through short lessons, you can explore [use case tutorials](index.md) that focus on recreating common game design components like [score bars](../tutorials/building/ui/creating-a-score-bar.md), [modular cities](../tutorials/3D-art/assembling-modular-environments.md), and [health pickups](../tutorials/scripting/intermediate-scripting/creating-a-health-pickup.md).
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/DKzFkn7q8MQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <br /> <br />
 
