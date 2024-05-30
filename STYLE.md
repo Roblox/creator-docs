@@ -85,7 +85,7 @@ When linking to another page on the Roblox Documentation site, use **relative** 
 
 ### Engine API Reference Page Links
 
-When referencing a Roblox Engine API member, such as a class, method, enum, data type, global function, or library, use our special [API link syntax](#link-syntax) instead.`.
+When referencing a Roblox Engine API member, such as a class, method, enum, data type, global function, or library, use our special [API link syntax](#link-syntax) instead.
 
 #### Usage Guidelines
 
