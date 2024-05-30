@@ -945,6 +945,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: HumanoidDescription.ResetIncludesBodyParts
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
   - name: HumanoidDescription.RightArm
     summary: |
       Determines the asset ID of the RightArm to be applied to the

@@ -214,6 +214,10 @@ events:
         type: Dictionary
         default:
         summary: ''
+      - name: triggerSource
+        type: string
+        default:
+        summary: ''
     tags: []
     deprecation_message: ''
     security: RobloxScriptSecurity

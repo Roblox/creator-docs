@@ -1,22 +1,22 @@
-name: ServerAudioBehavior
+name: AdUIType
 type: enum
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: Enabled
+  - name: None
     summary: ''
     value: 0
     tags: []
     deprecation_message: ''
-  - name: Muted
+  - name: Image
     summary: ''
     value: 1
     tags: []
     deprecation_message: ''
-  - name: OnlineGame
+  - name: Video
     summary: ''
     value: 2
     tags: []
