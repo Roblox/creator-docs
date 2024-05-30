@@ -115,6 +115,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Animator.yaml
         ignoreTranslation: true
+      - title: AnnotationsService
+        path: /reference/engine/classes/AnnotationsService
+        type: engineapi
+        source: /reference/engine/classes/AnnotationsService.yaml
+        ignoreTranslation: true
       - title: ArcHandles
         path: /reference/engine/classes/ArcHandles
         type: engineapi
@@ -3178,6 +3183,16 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AdTeleportMethod.yaml
         ignoreTranslation: true
+      - title: AdUIEventType
+        path: /reference/engine/enums/AdUIEventType
+        type: engineapi
+        source: /reference/engine/enums/AdUIEventType.yaml
+        ignoreTranslation: true
+      - title: AdUIType
+        path: /reference/engine/enums/AdUIType
+        type: engineapi
+        source: /reference/engine/enums/AdUIType.yaml
+        ignoreTranslation: true
       - title: AdUnitStatus
         path: /reference/engine/enums/AdUnitStatus
         type: engineapi
@@ -4642,11 +4657,6 @@ navigation:
         path: /reference/engine/enums/SensorUpdateType
         type: engineapi
         source: /reference/engine/enums/SensorUpdateType.yaml
-        ignoreTranslation: true
-      - title: ServerAudioBehavior
-        path: /reference/engine/enums/ServerAudioBehavior
-        type: engineapi
-        source: /reference/engine/enums/ServerAudioBehavior.yaml
         ignoreTranslation: true
       - title: ServerLiveEditingMode
         path: /reference/engine/enums/ServerLiveEditingMode

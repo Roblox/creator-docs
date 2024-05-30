@@ -74,8 +74,37 @@ properties:
     serialization:
       can_load: false
       can_save: false
-methods: []
-events: []
+methods:
+  - name: AdGui:HandleLuaUIEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: eventType
+        type: AdUIEventType
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+events:
+  - name: AdGui.adGuiStateChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: adUIState
+        type: Variant
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 callbacks:
   - name: AdGui.OnAdEvent
     summary: |

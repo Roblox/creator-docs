@@ -158,7 +158,7 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
   - name: InsertService:GetBaseCategories
     summary: ''
