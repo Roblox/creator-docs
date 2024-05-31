@@ -242,7 +242,7 @@ methods:
       }
       ```
 
-      Yikes! That quite confusing. Unfortunately this method was added in the
+      Yikes! That's quite confusing. Unfortunately this method was added in the
       earlier days of Roblox, where easy to understand return-types weren't a
       priority.
 
