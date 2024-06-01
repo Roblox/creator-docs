@@ -64,6 +64,7 @@ description: |
   - For each Roblox game server, there is a limit of 500 HTTP requests per
     minute. Exceeding this may cause request-sending functions to stall entirely
     for about 30 seconds.
+  - Each Roblox game server can handle only 3 concurrent HTTP requests. Any additional requests will yield until one of the ongoing requests completes.
   - Requests cannot be made to any Roblox website, such as www.roblox.com.
   - Web requests can fail for many reasons, so it is important to "code
     defensively" (use `pcall`) and have a plan for when requests fail.
