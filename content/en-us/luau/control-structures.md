@@ -209,7 +209,7 @@ The `ipairs()` function returns an iterator that iterates through numerical indi
 ```lua
 local array = {"a", "b", "c", "d", "e"}
 for index, value in ipairs(array) do
-		print(index, value)
+	print(index, value)
 end
 
 --[[ Resulting output:
