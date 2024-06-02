@@ -235,7 +235,7 @@ local dictionary = {
 	[false] = "e"
 }
 for key, value in pairs(dictionary) do
-		print(key, value)
+	print(key, value)
 end
 
 --[[ Resulting output:
