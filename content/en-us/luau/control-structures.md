@@ -227,12 +227,12 @@ The `pairs()` function returns an iterator that iterates through all indices (in
 
 ```lua
 local dictionary = {
-	[1] = "a";
-	["Hello"]="b";
-	[5] = "c";
-[true] = "d";
-	["World"] = "f";
-[false] = "e";
+	[1] = "a",
+	["Hello"]="b",
+	[5] = "c",
+[true] = "d",
+	["World"] = "f",
+[false] = "e"
 }
 for key, value in pairs(dictionary) do
     print(key, value)
