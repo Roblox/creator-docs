@@ -62,7 +62,7 @@ Nested loops can seem somewhat abstract, so a visual example can help. For this 
      for partNumber = 1, partsPerBatch do
        createPart()
        print("Inner loop: part " .. partNumber)
-       partsMade = partsMade + 1
+       partsMade += 1
        task.wait(0.5)
      end
 
@@ -349,7 +349,7 @@ for cupcakeBatch = 1, numberOfBatches do
         makeCupcake()
         print("Inner loop: cupcake " .. cupcakeNumber)
         -- Track muffins baked
-        cupcakesBaked = cupcakesBaked + 1
+        cupcakesBaked += 1
         task.wait(0.5)
     end
 

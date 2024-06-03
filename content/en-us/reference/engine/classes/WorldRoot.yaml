@@ -321,7 +321,7 @@ methods:
       will stop. This means some `Class.BasePart|BaseParts` may not be returned
       even if they are within the `Datatype.Region3`
 
-      The optional ignoreDescendentsInstance parameter can be used to specify a
+      The optional `ignoreDescendantsInstance` parameter can be used to specify a
       specific instance for whom itself and all of its descendants should be
       ignored by this function. This can be useful when, for example, looking to
       see if any `Class.BasePart|BaseParts` are inside a `Class.BasePart` other
@@ -687,7 +687,7 @@ methods:
       **IsRegion3Empty** returns a bool indicating whether there are no
       `Class.BasePart|BaseParts` within the given `Datatype.Region3`.
 
-      The optional ignoreDescendentsInstance parameter can be used to specify a
+      The optional `ignoreDescendantsInstance` parameter can be used to specify a
       specific instance for whom itself and all of its descendants should be
       ignored by this function. This can be useful when, for example, looking to
       see if any `Class.BasePart|BaseParts` are inside a `Class.BasePart` other

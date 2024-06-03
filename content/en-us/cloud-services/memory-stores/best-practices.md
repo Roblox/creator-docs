@@ -115,7 +115,7 @@ local function readFromQueue(count, allOrNothing, waitTimeout)
 		-- determine if this queue will read an extra item
         local diff = i - readIndex
         if diff < 0 then
-            diff = diff + 4
+            diff += 4
         end
 
         local queue = queueArr[i]
