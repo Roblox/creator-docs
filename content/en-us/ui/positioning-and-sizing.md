@@ -88,7 +88,7 @@ To edit the **ZIndex** of an object
 
 `Class.ScreenGui` objects have a
 `Enum.ZIndexBehavior` that defines how
-descendent `Class.GuiObject|GuiObjects` sort according
+descendant `Class.GuiObject|GuiObjects` sort according
 to their [`ZIndex`](#zindex) values. There are two possible
 `Enum.ZIndexBehavior` values:
 
