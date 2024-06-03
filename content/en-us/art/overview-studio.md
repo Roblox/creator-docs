@@ -82,12 +82,12 @@ Like all creation tools, keyboard shortcuts allow you to work efficiently and qu
     <td>Anchoring a part locks it in place, even when other objects collide with it. </td>
   </tr>
   <tr>
-    <td>In [Studio Settings](../studio/customization.md)</td>
+    <td>In [Studio Settings](../studio/setting-up-roblox-studio.md#customization)</td>
     <td>Change highlight and selection colors</td>
     <td>Changing highlight and selection colors can help with accessibility.</td>
   </tr>
   <tr>
-    <td>In [Studio Settings](../studio/customization.md)</td>
+    <td>In [Studio Settings](../studio/setting-up-roblox-studio.md#customization)</td>
     <td>Change camera speed</td>
     <td>Modify how fast the camera moves by default. </td>
   </tr>

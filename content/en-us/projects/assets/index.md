@@ -52,38 +52,38 @@ In general, there are two categories of asset types for places that you can eith
 For more information on both types of these assets for places, such as where and how you can use them in Studio, reference the following table.
 
 <table>
-    <thead>
-        <tr>
-            <th>Asset Type</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>**Model**</td>
-            <td>A `Class.Model` is a container object for geometric groupings such as `Class.BasePart|BaseParts`, `Class.MeshPart|MeshParts`, and other `Class.Model` objects. Models can also contain objects such as `Class.Script|Scripts`. Whenever you group objects together in Studio, they automatically become a `Class.Model` object. For more information, see [Models](../../parts/models.md).</td>
-        </tr>
-        <tr>
-            <td>**Mesh**</td>
-            <td>A `Class.MeshPart` is a type of part object that includes a physically-simulated custom mesh. For more information, see [Meshes](../../parts/meshes.md).</td>
-        </tr>
-        <tr>
-            <td>**Audio**</td>
-            <td>A `Class.Sound` object is an object that emits audio when you apply an audio asset ID within its `Class.Sound.SoundId|SoundId` property. Where you place the `Class.Sound` object in the data model changes how and where the sound emits within the experience. For more information, see [Audio Assets](../../sound/assets.md) and [Sound Objects](../../sound/objects.md).</td>
-        </tr>
-        <tr>
-            <td>**Image**</td>
-            <td>Images are used in several ways within a place, including [textures/decals](../../parts/textures-decals.md) on parts, [UI](../../ui/index.md) elements, [mesh textures](../../parts/meshes.md#adding-textures), textures for [custom materials](../../parts/materials.md), textures for [special effects](../../environment/index.md#special-effects), and more.</td>
-        </tr>
-        <tr>
-            <td>**Font**</td>
-            <td>`Class.TextButton`, `Class.TextLabel`, and `Class.TextBox` objects display typography in a specific style when you apply a font asset ID. You cannot import fonts, but the [Creator Store][CreatorMarketplaceURL] offers over 80 different fonts for your use.</td>
-        </tr>
-        <tr>
-            <td>**Video**</td>
-            <td>A `Class.VideoFrame` object displays a video through its `Class.VideoFrame.Video|Video` asset property. See [Video Frames](../../ui/video-frames.md) for more information.</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>Asset&nbsp;Type</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>**Model**</td>
+			<td>A `Class.Model` is a container object for geometric groupings such as `Class.BasePart|BaseParts`, `Class.MeshPart|MeshParts`, and other `Class.Model` objects. Models can also contain objects such as `Class.Script|Scripts`. Whenever you group objects together in Studio, they automatically become a `Class.Model` object. For more information, see [Models](../../parts/models.md).</td>
+		</tr>
+		<tr>
+			<td>**Mesh**</td>
+			<td>A `Class.MeshPart` is a type of part object that includes a physically-simulated custom mesh. For more information, see [Meshes](../../parts/meshes.md).</td>
+		</tr>
+		<tr>
+			<td>**Audio**</td>
+			<td>A `Class.Sound` object is an object that emits audio when you apply an audio asset ID within its `Class.Sound.SoundId|SoundId` property. Where you place the `Class.Sound` object in the data model changes how and where the sound emits within the experience. For more information, see [Audio Assets](../../sound/assets.md) and [Sound Objects](../../sound/objects.md).</td>
+		</tr>
+		<tr>
+			<td>**Image**</td>
+			<td>Images are used in several ways within a place, including [textures/decals](../../parts/textures-decals.md) on parts, [UI](../../ui/index.md) elements, [mesh textures](../../parts/meshes.md#adding-textures), textures for [custom materials](../../parts/materials.md), textures for [special effects](../../environment/index.md#special-effects), and more.</td>
+		</tr>
+		<tr>
+			<td>**Font**</td>
+			<td>`Class.TextButton`, `Class.TextLabel`, and `Class.TextBox` objects display typography in a specific style when you apply a font asset ID. You cannot import fonts, but the [Creator Store][CreatorMarketplaceURL] offers over 80 different fonts for your use.</td>
+		</tr>
+		<tr>
+			<td>**Video**</td>
+			<td>A `Class.VideoFrame` object displays a video through its `Class.VideoFrame.Video|Video` asset property. See [Video Frames](../../ui/video-frames.md) for more information.</td>
+		</tr>
+	</tbody>
 </table>
 
 ### For Avatars
@@ -106,7 +106,7 @@ For more information, see [Packages](../../projects/assets/packages.md).
 
 Assets are reflected through formatted strings, each of which points to an online file or a file saved to the client's device. The basic structure is a **protocol** followed by `://` and a **string** that varies according to the protocol.
 
-<span><Chip label='[Protocol]://[String]' color='primary' /></span>
+<span><Chip label='[Protocol]://[String]' color='primary' size='large' /></span>
 
 ### rbxassetid
 
@@ -114,17 +114,17 @@ Assets are reflected through formatted strings, each of which points to an onlin
 
 <GridContainer numColumns="3">
   <figure>
-    <figcaption><Chip label='rbxassetid://7229442422' color='primary' /></figcaption>
+    <figcaption><Chip label='rbxassetid://7229442422' color='primary' size='large' /></figcaption>
     <br />
     <img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" />
   </figure>
   <figure>
-    <figcaption><Chip label='rbxassetid://3845386987' color='primary' /></figcaption>
+    <figcaption><Chip label='rbxassetid://3845386987' color='primary' size='large' /></figcaption>
     <br />
     <img src="../../assets/lighting-and-effects/particle-emitter/Texture-Indicated.jpg" alt="Three particle emitters emit red, blue, and yellow particles over jar assets that sit on top of a stone tower. The red particles are highlighted." width="90%" />
   </figure>
   <figure>
-    <figcaption><Chip label='rbxassetid://9125402735' color='primary' /></figcaption>
+    <figcaption><Chip label='rbxassetid://9125402735' color='primary' size='large' /></figcaption>
     <br />
     <audio controls>
 <source src="../../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio>
@@ -135,7 +135,7 @@ Assets are reflected through formatted strings, each of which points to an onlin
 
 `rbxasset` points to Roblox's content folder on the user's device, for example:
 
-<span><Chip label='rbxasset://textures/face.png' color='primary' /></span><br />
+<span><Chip label='rbxasset://textures/face.png' color='primary' size='large' /></span><br />
 
 The content folder's location depends on the user's operating system:
 
@@ -150,81 +150,109 @@ The content folder's location depends on the user's operating system:
 
 ### rbxthumb
 
-`rbxthumb` points to a thumbnail image for the provided asset. Its string format takes a thumbnail type, an asset ID, width, height, and an optional circular filter.
+`rbxthumb` points to a thumbnail image for the provided asset. Its string format takes a thumbnail type (`type`), an asset ID (`id`), and width/height (`w`/`h`).
 
-<span><Chip label='rbxthumb://type=Asset&id=24813339&w=150&h=150' color='primary' /></span><br />
+<span><Chip label='rbxthumb://type=Asset&id=24813339&w=150&h=150' color='primary' size='large' /></span><br />
 
-Supported types (`type`) and sizes (`w` and `h`) are as follows:
-
-<table>
-    <thead>
-        <tr>
-            <th>Type</th>
-            <th>Supported Sizes</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Asset</td>
-            <td scope="row">150&times;150, 420&times;420</td>
-        </tr>
-        <tr>
-            <td>Avatar</td>
-            <td scope="row">48&times;48, 60&times;60, 100&times;100, 150&times;150, 180&times;180, 352&times;352, 420&times;420, 720&times;720</td>
-        </tr>
-        <tr>
-            <td>AvatarBust</td>
-            <td scope="row">50&times;50, 60&times;60, 75&times;75, 100&times;100, 150&times;150, 180&times;180, 352&times;352, 420&times;420</td>
-        </tr>
-        <tr>
-            <td>AvatarHeadShot</td>
-            <td scope="row">48&times;48, 60&times;60, 100&times;100, 150&times;150, 180&times;180, 352&times;352, 420&times;420</td>
-        </tr>
-        <tr>
-            <td>BadgeIcon</td>
-            <td scope="row">150&times;150</td>
-        </tr>
-        <tr>
-            <td>BundleThumbnail</td>
-            <td scope="row">150&times;150, 420&times;420</td>
-        </tr>
-        <tr>
-            <td>FontFamily</td>
-            <td scope="row">1200&times;80</td>
-        </tr>
-        <tr>
-            <td>GameIcon</td>
-            <td scope="row">50&times;50, 150&times;150</td>
-        </tr>
-        <tr>
-            <td>GamePass</td>
-            <td scope="row">150&times;150</td>
-        </tr>
-        <tr>
-            <td>GroupIcon</td>
-            <td scope="row">150&times;150, 420&times;420</td>
-        </tr>
-        <tr>
-            <td>Outfit</td>
-            <td scope="row">150&times;150, 420&times;420</td>
-        </tr>
-    </tbody>
+<table size="small">
+	<thead>
+		<tr>
+			<th>Type (`type`)</th>
+			<th>Expected `id` Value</th>
+			<th>Supported Sizes (`w`&times;`h`)</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>`Asset`</td>
+			<td>ID for a 2D or 3D asset</td>
+			<td scope="row">150&times;150, 420&times;420</td>
+		</tr>
+		<tr>
+			<td>`Avatar`</td>
+			<td>ID for a Roblox user (`Class.Player.UserId`)</td>
+			<td scope="row">48&times;48, 60&times;60, 100&times;100, 150&times;150, 180&times;180, 352&times;352, 420&times;420, 720&times;720</td>
+		</tr>
+		<tr>
+			<td>`AvatarBust`</td>
+			<td>ID for a Roblox user (`Class.Player.UserId`)</td>
+			<td scope="row">50&times;50, 60&times;60, 75&times;75, 100&times;100, 150&times;150, 180&times;180, 352&times;352, 420&times;420</td>
+		</tr>
+		<tr>
+			<td>`AvatarHeadShot`</td>
+			<td>ID for a Roblox user (`Class.Player.UserId`)</td>
+			<td scope="row">48&times;48, 60&times;60, 100&times;100, 150&times;150, 180&times;180, 352&times;352, 420&times;420</td>
+		</tr>
+		<tr>
+			<td>`BadgeIcon`</td>
+			<td>ID for a [badge](../../production/publishing/badges.md#locating-badge-ids)</td>
+			<td scope="row">150&times;150</td>
+		</tr>
+		<tr>
+			<td>`BundleThumbnail`</td>
+			<td>ID for a [Marketplace][MarketplaceURL] bundle such as a [character](https://www.roblox.com/catalog?Category=17), [head](https://www.roblox.com/catalog?Category=4&Subcategory=66), or [shoes](https://www.roblox.com/catalog?Category=3&Subcategory=64)</td>
+			<td scope="row">150&times;150, 420&times;420</td>
+		</tr>
+		<tr>
+			<td>`FontFamily`</td>
+			<td>ID for a font in the [Creator Store](../../production/creator-store.md) or [Toolbox](../../projects/assets/toolbox.md) inventory</td>
+			<td scope="row">1200&times;80</td>
+		</tr>
+		<tr>
+			<td>`GameIcon`</td>
+			<td>ID for an experience (`Class.DataModel.GameId`); shows the experience's [icon](../../production/publishing/experience-icons.md)</td>
+			<td scope="row">50&times;50, 150&times;150</td>
+		</tr>
+		<tr>
+			<td>`GamePass`</td>
+			<td>ID for a [pass](../../production/monetization/game-passes.md#locating-pass-ids)</td>
+			<td scope="row">150&times;150</td>
+		</tr>
+		<tr>
+			<td>`GameThumbnail`</td>
+			<td>ID for an experience (`Class.DataModel.GameId`); shows the experience's primary [thumbnail](../../production/promotion/promotional-thumbnails.md)</td>
+			<td scope="row">256&times;144, 384&times;216, 480&times;270, 576&times;324, 768&times;432</td>
+		</tr>
+		<tr>
+			<td>`GroupIcon`</td>
+			<td>ID for a [group](../../projects/groups.md)</td>
+			<td scope="row">150&times;150, 420&times;420</td>
+		</tr>
+		<tr>
+			<td>`Outfit`</td>
+			<td>ID gathered from an `Class.OutfitPages` table</td>
+			<td scope="row">150&times;150, 420&times;420</td>
+		</tr>
+	</tbody>
 </table>
 
-You can also include a `filters=circular` parameter to crop the thumbnail circularly, useful for displaying thumbnails like **AvatarHeadShot** in an on-screen GUI like an `Class.ImageLabel`.
-
-<span><Chip label='rbxthumb://type=AvatarHeadShot&id=505306092&w=150&h=150&filters=circular' color='primary' /></span><br />
-
-```lua title='LocalScript - Get AvatarHeadShot Thumbnail' highlight='3,5-7,9'
+```lua title='Apply Avatar Head Shot Thumbnail'
 local Players = game:GetService("Players")
 
-local userId = Players.LocalPlayer.UserId
+local player = Players.LocalPlayer
+local playerGui = player.PlayerGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = playerGui
+
+local imageLabel = Instance.new("ImageLabel")
+imageLabel.AnchorPoint = Vector2.new(0, 0)
+imageLabel.Size = UDim2.new(0, 150, 0, 150)
+imageLabel.Position = UDim2.new(0, 16, 0, 16)
+imageLabel.BorderSizePixel = 0
+imageLabel.BackgroundColor3 = Color3.new(0, 0, 0)
+imageLabel.BackgroundTransparency = 0.8
+imageLabel.Parent = screenGui
 
 local success, content, isReady = pcall(function()
-	return Players:GetUserThumbnailAsync(userId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size150x150)
+	return Players:GetUserThumbnailAsync(player.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size352x352)
 end)
 if success then
-	print(content)  --> rbxthumb://type=AvatarHeadShot&id=505306092&w=150&h=150&filters=circular
+	-- Apply thumbnail content to image label
+	imageLabel.Image = content
+	-- Crop thumbnail to circle
+	local corner = Instance.new("UICorner")
+	corner.CornerRadius = UDim.new(1, 0)
+	corner.Parent = imageLabel
 end
 ```
 
@@ -232,13 +260,13 @@ end
 
 `rbxhttp` is shorthand for `Class.ContentProvider.BaseUrl`, for example:
 
-<span><Chip label='rbxhttp://Thumbs/Avatar.ashx?x=100&y=100&format=png' color='primary' /></span>
+<span><Chip label='rbxhttp://Thumbs/Avatar.ashx?x=100&y=100&format=png' color='primary' size='large' /></span>
 
 ### https / http
 
 `https` or `http` points to the exact location of something on the internet. It only works on Roblox-approved domains and raises an error if you use it elsewhere.
 
-<span><Chip label='https://www.roblox.com/asset/?id=9723979220' color='primary' /></span>
+<span><Chip label='https://www.roblox.com/asset/?id=9723979220' color='primary' size='large' /></span>
 
 ## Asset Permissions
 
