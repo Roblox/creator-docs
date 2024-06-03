@@ -64,7 +64,7 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    width="320" />
 
    ```lua title='UITweenModule ModuleScript'
-   local tweenService = game:GetService("TweenService")
+   local TweenService = game:GetService("TweenService")
    local UITween = {}
 
    -- for fading images
@@ -79,7 +79,7 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    		delay --Delay time
    	)
 
-   	local tween = tweenService:Create(object, tweenAlpha, {Transparency = amount})
+   	local tween = TweenService:Create(object, tweenAlpha, {Transparency = amount})
    	tween:Play()
    end
 
@@ -94,7 +94,7 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    		delay --Delay time
    	)
 
-   	local tween = tweenService:Create(object, tweenAlpha, {ImageTransparency = amount})
+   	local tween = TweenService:Create(object, tweenAlpha, {ImageTransparency = amount})
    	tween:Play()
    end
 
@@ -110,7 +110,7 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    		delay --Delay time
    	)
 
-   	local tween = tweenService:Create(object, tweenAlpha, {BackgroundTransparency = amount})
+   	local tween = TweenService:Create(object, tweenAlpha, {BackgroundTransparency = amount})
    	tween:Play()
    end
 
@@ -126,7 +126,7 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    		delay --Delay time
    	)
 
-   	local tween1 = tweenService:Create(object, tweenAlpha, {TextTransparency = amount})
+   	local tween1 = TweenService:Create(object, tweenAlpha, {TextTransparency = amount})
    	tween1:Play()
    end
 
@@ -151,7 +151,7 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    		callback
    	)
 
-   	local tween = tweenService:Create(object, tweenSize, {Size = size})
+   	local tween = TweenService:Create(object, tweenSize, {Size = size})
    	tween:Play()
    end
 
@@ -168,7 +168,7 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    		callback
    	)
 
-   	local tween = tweenService:Create(object, tweenSize, {Rotation = rotation})
+   	local tween = TweenService:Create(object, tweenSize, {Rotation = rotation})
    	tween:Play()
    end
 
@@ -176,7 +176,7 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    function UITween.blur(object, amount, time)
 
    	local tweenInfo = TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
-   	local tween = tweenService:Create(object, tweenInfo, {Size = amount})
+   	local tween = TweenService:Create(object, tweenInfo, {Size = amount})
    	tween:Play()
    end
 
@@ -184,7 +184,7 @@ Building the map inside Studio involved using `Class.Part|Parts` and `Class.Surf
    function UITween.turnOn(object, amount, time)
 
    	local tweenInfo = TweenInfo.new(time, Enum.EasingStyle.Linear, Enum.EasingDirection.Out, 0, false, 0)
-   	local tween = tweenService:Create(object, tweenInfo, {Brightness = amount})
+   	local tween = TweenService:Create(object, tweenInfo, {Brightness = amount})
    	tween:Play()
    end
 

@@ -327,8 +327,8 @@ local cupcakesBaked = 0
 
 --Makes a single cupcake
 local function makeCupcake()
-    local serverStorage = game:GetService("ServerStorage")
-    local cupcake = serverStorage.Cupcake:Clone()
+    local ServerStorage = game:GetService("ServerStorage")
+    local cupcake = ServerStorage.Cupcake:Clone()
     local cup = cupcake.Cup
     local frosting = cupcake.Frosting
     cupcake:SetPrimaryPartCFrame(CFrame.new(0, 20, 0) *CFrame.Angles(0, 0, -90))
