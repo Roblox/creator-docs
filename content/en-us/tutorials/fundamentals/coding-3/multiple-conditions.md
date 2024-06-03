@@ -181,7 +181,7 @@ Like an if statement, a while loop can also use a condition to see if it should 
 
    while raceActive == true do
       task.wait(1)
-      timePassed = timePassed + 1
+      timePassed += 1
       print(timePassed)
    end
    ```
@@ -347,7 +347,7 @@ finishLine.Touched:Connect(partTouched)
 -- Keeps track of race time while the race is active. Needs to be at script bottom.
 while raceActive == true do
    task.wait(1)
-   timePassed = timePassed + 1
+   timePassed += 1
    print(timePassed)
 end
 ```

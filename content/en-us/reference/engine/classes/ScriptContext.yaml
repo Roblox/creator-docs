@@ -5,9 +5,7 @@ memory_category: Instances
 summary: ''
 description: |
   This service controls all `Class.BaseScript` objects. Most of the properties
-  and methods of this service are locked for internal use, however you may use
-  the `Class.ScriptContext.ScriptsDisabled` property to disable all scripts from
-  a thread with normal security access.
+  and methods of this service are locked for internal use.
 code_samples:
 inherits:
   - Instance

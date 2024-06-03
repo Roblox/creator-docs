@@ -137,9 +137,9 @@ properties:
       `Class.UserInputService.UserCFrameChanged` event.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
-      local isUsingVR = userInputService.VREnabled
+      local isUsingVR = UserInputService.VREnabled
       if isUsingVR then
           print("User is using a VR headset!")
       else

@@ -124,7 +124,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local hours = minutesNormalised / 60
@@ -141,7 +141,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local seconds = minutesNormalised * 60
@@ -162,7 +162,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 
@@ -732,7 +732,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local seconds = minutesNormalised * 60
@@ -752,7 +752,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local hours = minutesNormalised / 60
@@ -769,7 +769,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 
@@ -916,7 +916,7 @@ methods:
       ```lua
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local seconds = minutesNormalised * 60
@@ -936,7 +936,7 @@ methods:
       ```lua
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local hours = minutesNormalised / 60
@@ -953,7 +953,7 @@ methods:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 
