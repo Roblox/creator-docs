@@ -290,7 +290,7 @@ events:
   - name: GuiBase2d.SelectionChanged
     summary: |
       Fires when the gamepad selection moves to, leaves, or changes within the
-      connected GuiBase2d or any descendent GuiObjects.
+      connected GuiBase2d or any descendant GuiObjects.
     description: |
       This event fires when the selection changes within any descendants of the
       connected GuiBase2d. When the selection highlight moves to a GuiObject,
