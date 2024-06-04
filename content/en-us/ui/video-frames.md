@@ -82,7 +82,7 @@ videoFrame.Looped = true
 videoFrame.Video = "rbxassetid://5608384572"  -- Replace with your video's asset ID
 
 while not videoFrame.IsLoaded do
-	task.wait()
+	videoFrame.Loaded:Wait()
 end
 
 videoFrame:Play()
