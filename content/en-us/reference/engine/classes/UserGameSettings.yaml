@@ -528,18 +528,6 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: UserGameSettings:GetDefaultFramerateCap
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: int
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: UserGameSettings:GetOnboardingCompleted
     summary: |
       Checks if onboarding has been completed.

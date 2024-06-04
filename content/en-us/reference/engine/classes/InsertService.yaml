@@ -242,8 +242,8 @@ methods:
       }
       ```
 
-      An example for iterating over this list has been provided at
-      the bottom of this page.
+      An example for iterating over this list has been provided at the bottom of
+      this page.
 
       Additionally, if you want to insert `Class.Model|Models` instead, you can
       use the `Class.InsertService:GetFreeModels()` function.

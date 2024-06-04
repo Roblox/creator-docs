@@ -124,7 +124,7 @@ export const readListFromFile = (
 export const getNonEditableFilesList = () => {
   const nonEditableFilesList = path.join(
     __dirname,
-    'non-editable-files-list.txt'
+    'do-not-machine-translate.txt'
   );
   return readListFromFile(nonEditableFilesList);
 };

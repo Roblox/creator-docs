@@ -766,17 +766,4 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: GuiService.OpenAttenuationCurveEditor
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: selectedCurveObjects
-        type: Objects
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
 callbacks: []

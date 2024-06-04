@@ -115,11 +115,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Animator.yaml
         ignoreTranslation: true
-      - title: AnnotationsService
-        path: /reference/engine/classes/AnnotationsService
-        type: engineapi
-        source: /reference/engine/classes/AnnotationsService.yaml
-        ignoreTranslation: true
       - title: ArcHandles
         path: /reference/engine/classes/ArcHandles
         type: engineapi
@@ -1684,11 +1679,6 @@ navigation:
         path: /reference/engine/classes/PlayerGui
         type: engineapi
         source: /reference/engine/classes/PlayerGui.yaml
-        ignoreTranslation: true
-      - title: PlayerHydrationService
-        path: /reference/engine/classes/PlayerHydrationService
-        type: engineapi
-        source: /reference/engine/classes/PlayerHydrationService.yaml
         ignoreTranslation: true
       - title: PlayerMouse
         path: /reference/engine/classes/PlayerMouse
