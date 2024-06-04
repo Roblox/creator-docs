@@ -155,11 +155,11 @@ type Car = {
 	Drive: (Car) -> ()
 }
 
-local taxi: Car = {Speed = 30, Drive = drive}
-
-function drive(car)
+local function drive(car)
 	-- Always go the speed limit
 end
+
+local taxi: Car = {Speed = 30, Drive = drive}
 ```
 
 ## Variadics
