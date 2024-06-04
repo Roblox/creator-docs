@@ -307,7 +307,7 @@ local function onTouched(otherPart)
 	-- Increase count of model parts touching
 	numTouchingParts += 1
 
-	print(model.Name, "intersected with ", otherPart.Name, "| Model parts touching:", numTouchingParts)
+	print(model.Name, "intersected with", otherPart.Name, "| Model parts touching:", numTouchingParts)
 end
 
 local function onTouchEnded(otherPart)
