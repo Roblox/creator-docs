@@ -47,7 +47,7 @@ properties:
       local function onActiveScriptChanged(newActiveScript)
       	if newActiveScript ~= activeScript then
       		local deltaTime = os.time() - startTime
-      		print(("You edited %s for %d:%2.d"):format(activeScript.Name, math.floor(deltaTime / 60), deltaTime % 60))
+      		print(("You edited %s for %d:%2.d"):format(activeScript.Name, deltaTime // 60, deltaTime % 60))
       	end
       	startTime = os.time()
       	activeScript = newActiveScript
