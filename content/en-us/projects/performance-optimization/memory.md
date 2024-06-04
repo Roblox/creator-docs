@@ -156,14 +156,12 @@ To clean up all used values for preventing memory leaks:
    ```lua title="Example"
    Players.PlayerAdded:Connect(function(player)
      player.CharacterRemoving:Connect(function(character)
-         task.wait()
-         character:Destroy()
+         task.defer(character.Destroy, character)
      end)
    end)
 
    Players.PlayerRemoving:Connect(function(player)
-	   task.wait()      
-	   player:Destroy()
+	   task.defer(player.Destroy, player)
    end)
    ```
 
