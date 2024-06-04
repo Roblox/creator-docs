@@ -268,7 +268,7 @@ events:
     summary: |
       Fired when the mouse is in the right mouse down state on the GUI object.
     description: |
-      The MouseButton2Down event fires when the user presses their left
+      The MouseButton2Down event fires when the user presses their right
       `Class.Mouse` button down on the GUI object.
 
       This event is similar to `Class.GuiButton.MouseButton1Down`, which behaves
