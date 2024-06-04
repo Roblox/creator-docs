@@ -54,6 +54,22 @@ properties:
     serialization:
       can_load: false
       can_save: false
+  - name: Instance.Capabilities
+    summary: ''
+    description: ''
+    code_samples: []
+    type: SecurityCapabilities
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Permissions
+    serialization:
+      can_load: true
+      can_save: true
   - name: Instance.ClassName
     summary: |
       A read-only string representing the class this `Class.Instance` belongs

@@ -101,26 +101,6 @@ properties:
       can_load: true
       can_save: true
 methods:
-  - name: LayerCollector:GetGuiObjectsAtPosition
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: x
-        type: int
-        default:
-        summary: ''
-      - name: 'y'
-        type: int
-        default:
-        summary: ''
-    returns:
-      - type: Objects
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: LayerCollector:GetLayoutNodeTree
     summary: ''
     description: ''
