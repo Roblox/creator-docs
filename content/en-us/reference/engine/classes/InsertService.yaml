@@ -242,11 +242,7 @@ methods:
       }
       ```
 
-      Yikes! That quite confusing. Unfortunately this method was added in the
-      earlier days of Roblox, where easy to understand return-types weren't a
-      priority.
-
-      Thankfully, an example for iterating over this list has been provided at
+      An example for iterating over this list has been provided at
       the bottom of this page.
 
       Additionally, if you want to insert `Class.Model|Models` instead, you can

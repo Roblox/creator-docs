@@ -55,7 +55,7 @@ properties:
       Determines how aggressive of a force is applied in reaching the goal
       velocity.
     description: |
-      his property is ignored if PGS is enabled via
+      This property is ignored if PGS is enabled via
       Workspace.PGSPhysicsSolverEnabled, which is enabled by default.
 
       The P property determines how much

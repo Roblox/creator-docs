@@ -47,48 +47,6 @@ Based on this data, you could add contextual indicators to better direct users t
 
 <img src="../../assets/analytics/event-types/Plant-Game-Prompts.jpg" alt="In-experience view of Plant experience showing prompts to plant seeds above the flowerpots."/>
 
-### Tracking Progression
-
-Many experience genres involve challenges that users can succeed or fail at, with levels or milestones to progress through. The following sample logs a variety of progression events using different methods for starting, completing and failing the steps.
-
-```lua title="Tracking Progression Steps"
-local AnalyticsService = game:GetService("AnalyticsService")
-local Players = game:GetService("Players")
-local currentPlayer = Players.LocalPlayer
-
--- player starts level 1
-AnalyticsService:LogProgressionStartEvent(
-    currentPlayer,
-    "LevelAttempts", -- progressionPathName to connect these attempt types
-    1, -- level number
-    "World-1-Level-1" -- level name
-)
-
--- player beats level 1
-AnalyticsService:LogProgressionCompleteEvent(
-    currentPlayer,
-    "LevelAttempts", -- progressionPathName to connect these attempt types
-    1, -- level number
-    "World-1-Level-1" -- level name
-)
-
--- player starts level 2
-AnalyticsService:LogProgressionStartEvent(
-    currentPlayer,
-    "LevelAttempts", -- progressionPathName to connect these attempt types
-    2, -- level number
-    "World-1-Level-2" -- level name
-)
-
--- player fails level 2
-AnalyticsService:LogProgressionFailEvent(
-    currentPlayer,
-    "LevelAttempts", -- progressionPathName to connect these attempt types
-    2, -- level number
-    "World-1-Level-2" -- level name
-)
-```
-
 ### Tracking Shopping
 
 If your experience contains a shop, you can use events to track each user's progress through the funnel of purchasing an item and identify sticking points in your user experience. The following sample tracks some basic events for each user beginning the process to buy an item from an "armory" shop. Note the `funnelSessionId` used to distinguish between different sessions of the same user opening the shop.

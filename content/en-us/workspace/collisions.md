@@ -88,7 +88,7 @@ You can easily set up collision groups through Studio's **Collision Groups Edito
 
 <img src="../assets/studio/general/Model-Tab-Collision-Groups.png" width="754" alt="Collision Groups tool indicated in Model tab of Studio" />
 
-The editor functions in either **List&nbsp;View** which favors [docking](../studio/customization.md#window-layout) to the left or right side of Studio, or in a wider **Table&nbsp;View**, which favors docking to the top or bottom.
+The editor functions in either **List&nbsp;View** which favors [docking](../studio/ui-overview.md#repositioning-windows) to the left or right side of Studio, or in a wider **Table&nbsp;View**, which favors docking to the top or bottom.
 
 <Tabs>
   <TabItem label="List View">
@@ -99,7 +99,7 @@ The editor functions in either **List&nbsp;View** which favors [docking](../stud
   </TabItem>
 </Tabs>
 
-#### Creating Groups
+#### Registering Groups
 
 <Tabs>
 <TabItem label="Studio Editor">
@@ -124,7 +124,7 @@ To create a new collision group:
 
 </TabItem>
 <TabItem label="Scripting">
-To create a new collision group through scripting, include the `Class.PhysicsService` service and register the group with `Class.PhysicsService:RegisterCollisionGroup()`. Note that it may be helpful to pre-declare your group names in local variables, as the same strings can be used for [assigning objects](#assigning-objects-to-groups) and [configuring groups](#configuring-group-collisions) within the same script.
+To create a new collision group through scripting, include the `Class.PhysicsService` service and register the group with `Class.PhysicsService:RegisterCollisionGroup()`. It may be helpful to pre-declare your group names in local variables, as the same strings can be used for [assigning objects](#assigning-objects-to-groups) and [configuring groups](#configuring-group-collisions) within the same script.
 
 ```lua title="Collision Group Setup" highlight='1,3,4,7,8'
 local PhysicsService = game:GetService("PhysicsService")
@@ -137,41 +137,9 @@ PhysicsService:RegisterCollisionGroup(cubes)
 PhysicsService:RegisterCollisionGroup(doors)
 ```
 
-</TabItem>
-</Tabs>
-
-#### Assigning Objects to Groups
-
-<Tabs>
-<TabItem label="Studio Editor">
-To assign objects to groups you've [created](#creating-groups) through the Studio editor:
-
-1. Select one or more `Class.BasePart|BaseParts` that qualify as part of a collision group.
-1. Assign them to the group by clicking the **&CirclePlus;** button for its row. Objects can belong to only one collision group at a time, so placing them in a new group removes them from their current group.
-
-   <img src="../assets/studio/collision-groups-editor/Add-To-Group.png" width="500" alt="Plus button indicated in Collision Groups Editor for adding selected parts to a group" />
-
-Once assigned, the new group is reflected under the object's `Class.BasePart.CollisionGroup|CollisionGroup` property.
-
-<img src="../assets/physics/collisions/BasePart-CollisionGroup.png" width="320" alt="Chosen collision group indicated as the part's CollisionGroup property" />
-</TabItem>
-<TabItem label="Scripting">
-To add a `Class.BasePart` to a collision group through scripting, simply assign the group's **string name**, previously registered through `Class.PhysicsService:RegisterCollisionGroup()|RegisterCollisionGroup()`, to the part's `Class.BasePart.CollisionGroup|CollisionGroup` property.
-
-```lua title="Collision Group Setup" highlight='7,8,11,12'
-local PhysicsService = game:GetService("PhysicsService")
-
-local cubes = "Cubes"
-local doors = "Doors"
-
--- Register two collision groups
-PhysicsService:RegisterCollisionGroup(cubes)
-PhysicsService:RegisterCollisionGroup(doors)
-
--- Assign an object to each group
-workspace.Cube1.CollisionGroup = cubes
-workspace.Door1.CollisionGroup = doors
-```
+<Alert severity="warning">
+Since scripts are not guaranteed to execute in any particular order, it's highly recommended that you register collision groups in a single script. Abstracting group registration among multiple scripts may result in a race condition where a group is not yet registered at the time you [configure groups](#configuring-group-collisions) or [assign objects](#assigning-objects-to-groups) to them.
+</Alert>
 
 </TabItem>
 </Tabs>
@@ -206,12 +174,47 @@ local doors = "Doors"
 PhysicsService:RegisterCollisionGroup(cubes)
 PhysicsService:RegisterCollisionGroup(doors)
 
--- Assign an object to each group
-workspace.Cube1.CollisionGroup = cubes
-workspace.Door1.CollisionGroup = doors
+-- Set cubes to be non-collidable with doors
+PhysicsService:CollisionGroupSetCollidable(cubes, doors, false)
+```
+
+</TabItem>
+</Tabs>
+
+#### Assigning Objects to Groups
+
+<Tabs>
+<TabItem label="Studio Editor">
+To assign objects to groups you've [registered](#registering-groups) through the Studio editor:
+
+1. Select one or more `Class.BasePart|BaseParts` that qualify as part of a collision group.
+2. Assign them to the group by clicking the **&CirclePlus;** button for its row. Objects can belong to only one collision group at a time, so placing them in a new group removes them from their current group.
+
+   <img src="../assets/studio/collision-groups-editor/Add-To-Group.png" width="500" alt="Plus button indicated in Collision Groups Editor for adding selected parts to a group" />
+
+Once assigned, the new group is reflected under the object's `Class.BasePart.CollisionGroup|CollisionGroup` property.
+
+<img src="../assets/physics/collisions/BasePart-CollisionGroup.png" width="320" alt="Chosen collision group indicated as the part's CollisionGroup property" />
+</TabItem>
+<TabItem label="Scripting">
+To add a `Class.BasePart` to a collision group through scripting, simply assign the group's **string name**, previously registered through `Class.PhysicsService:RegisterCollisionGroup()|RegisterCollisionGroup()`, to the part's `Class.BasePart.CollisionGroup|CollisionGroup` property.
+
+```lua title="Collision Group Setup" highlight='7,8,11,12'
+local PhysicsService = game:GetService("PhysicsService")
+
+local cubes = "Cubes"
+local doors = "Doors"
+
+-- Register two collision groups
+PhysicsService:RegisterCollisionGroup(cubes)
+PhysicsService:RegisterCollisionGroup(doors)
 
 -- Set cubes to be non-collidable with doors
 PhysicsService:CollisionGroupSetCollidable(cubes, doors, false)
+
+-- Assign an object to each group
+workspace.Cube1.CollisionGroup = cubes
+workspace.Door1.CollisionGroup = doors
 ```
 
 </TabItem>
