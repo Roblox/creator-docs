@@ -94,7 +94,7 @@ For the cube tower script, first code a function that spawns a single cube. The 
 
    ```lua
    local TOWER_SIZE = 4
-   local CUBE_S﻿IZE = 2
+   local CUBE_SIZE = 2
    ```
 
    <Alert severity="info">
