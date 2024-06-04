@@ -5,7 +5,7 @@ description: Meshes are a collection of vertices, edges, and faces that make up 
 
 `Class.MeshPart` objects are descendants of the `Class.BasePart` class. They represent **meshes**, which are collections of vertices, edges, and faces that make up a 3D object. Unlike parts, which you can directly create in Studio, you need to use a third-party modeling application like Blender or Maya to create meshes, then import them into Studio as `Class.MeshPart` objects.
 
-After importing a mesh into Studio, you can customize its rendering properties, such as textures, level of detail, and collision fidelity. In addition to importing your own meshes, you can also browse and select from user-uploaded meshes using the [Creator Store](../production/publishing/creator-store.md).
+After importing a mesh into Studio, you can customize its rendering properties, such as textures, level of detail, and collision fidelity. In addition to importing your own meshes, you can also browse and select from user-uploaded meshes using the [Creator Store](../production/creator-store.md).
 
 Roblox supports many types of meshes, as long as they adhere to the [general mesh specifications](../art/modeling/specifications.md). A basic mesh consists of at least one mesh object and one texture:
 

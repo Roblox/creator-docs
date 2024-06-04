@@ -7,32 +7,44 @@ tags: []
 deprecation_message: ''
 items:
   - name: IAP
-    summary: ''
+    summary: |
+      Represents a source of currency purchased via Robux, for example
+      in-experience "gold" purchased for Robux.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Shop
-    summary: ''
+    summary: |
+      Purchases within a shop, for example in-experience "coins" used to buy an
+      item within the experience.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Gameplay
-    summary: ''
+    summary: |
+      Currency earned or paid through gameplay, for example in-experience "gold"
+      earned from winning a match.
     value: 2
     tags: []
     deprecation_message: ''
   - name: ContextualPurchase
-    summary: ''
+    summary: |
+      Purchase with direct context to a reward, for example in-experience "gold"
+      used to purchase an extra life.
     value: 3
     tags: []
     deprecation_message: ''
   - name: TimedReward
-    summary: ''
+    summary: |
+      Time-based reward, for example in-experience "gold" rewarded for logging
+      in daily.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Onboarding
-    summary: ''
+    summary: |
+      Transaction related to onboarding, for example in-experience "gold"
+      rewarded for completing the tutorial.
     value: 5
     tags: []
     deprecation_message: ''

@@ -47,7 +47,7 @@ methods:
       items in the hash map.
     description: |
       Returns a `Class.MemoryStoreHashMapPages` object for enumerating through
-      items in the hash map.
+      items in the hash map. The valid range is 1 to 200 inclusive.
     code_samples:
       - listing-data-hash-map-memory-store
     parameters:

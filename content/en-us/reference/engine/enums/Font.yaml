@@ -4,10 +4,6 @@ summary: ''
 description: |
   The `Enum.Font` enum is used in `Class.TextBox`, `Class.TextLabel`, and
   `Class.TextButton` to determine how the GUI element will render its text.
-
-  **Note that Gotham and Arial will be removed in the near future. See the
-  [forum announcement](https://devforum.roblox.com/t/introducing-builder-font-deprecating-gotham-and-arial/2868222)
-  for more information.**
 code_samples:
 tags: []
 deprecation_message: ''
@@ -22,15 +18,17 @@ items:
   - name: Arial
     value: 1
     summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Arial.png" />
-      .
+      Arial has been removed from Roblox. Use Arimo instead. See the
+      [forum announcement](https://devforum.roblox.com/t/introducing-builder-font-deprecating-gotham-and-arial/2868222)
+      for more information.
     tags: []
     deprecation_message: ''
   - name: ArialBold
     value: 2
     summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/ArialBold.png" />
-      .
+      Arial has been removed from Roblox. Use Arimo instead. See the
+      [forum announcement](https://devforum.roblox.com/t/introducing-builder-font-deprecating-gotham-and-arial/2868222)
+      for more information.
     tags: []
     deprecation_message: ''
   - name: SourceSans
@@ -134,29 +132,33 @@ items:
   - name: Gotham
     value: 17
     summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/Gotham.png" />
-      .
+      Gotham has been removed from Roblox. Use Montserrat instead. See the
+      [forum announcement](https://devforum.roblox.com/t/introducing-builder-font-deprecating-gotham-and-arial/2868222)
+      for more information.
     tags: []
     deprecation_message: ''
   - name: GothamMedium
     value: 18
     summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/GothamMedium.png" />
-      .
+      Gotham has been removed from Roblox. Use Montserrat instead. See the
+      [forum announcement](https://devforum.roblox.com/t/introducing-builder-font-deprecating-gotham-and-arial/2868222)
+      for more information.
     tags: []
     deprecation_message: ''
   - name: GothamBold
     value: 19
     summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/GothamBold.png" />
-      .
+      Gotham has been removed from Roblox. Use Montserrat instead. See the
+      [forum announcement](https://devforum.roblox.com/t/introducing-builder-font-deprecating-gotham-and-arial/2868222)
+      for more information.
     tags: []
     deprecation_message: ''
   - name: GothamBlack
     value: 20
     summary: |
-      <img width="80%" src="../../../assets/engine-api/enums/Font/GothamBlack.png" />
-      .
+      Gotham has been removed from Roblox. Use Montserrat instead. See the
+      [forum announcement](https://devforum.roblox.com/t/introducing-builder-font-deprecating-gotham-and-arial/2868222)
+      for more information.
     tags: []
     deprecation_message: ''
   - name: AmaticSC

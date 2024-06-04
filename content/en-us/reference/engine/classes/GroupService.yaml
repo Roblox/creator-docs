@@ -17,9 +17,8 @@ description: |
 
   GroupService can also be used to fetch a list of group's a player is a member
   of, using `Class.GroupService:GetGroupsAsync()`. Note, developers wishing to
-  verify if a player is in a group should use the `Class.Player`
-  `Class.Player:IsInGroup()` function rather than
-  `Class.GroupService:GetGroupsAsync()`.
+  verify if a player is in a group should use the `Class.Player:IsInGroup()`
+  function rather than `Class.GroupService:GetGroupsAsync()`.
 
   The service has a number of useful applications, such as detecting if a player
   is an ally or enemy upon joining the game.

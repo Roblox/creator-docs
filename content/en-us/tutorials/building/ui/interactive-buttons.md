@@ -122,7 +122,7 @@ This button needs three custom images — its normal appearance on the screen, a
 
 Setting these appearances can be done through the **Image**, **HoverImage**, and **PressedImage** properties.
 
-1. Locate the button's **Image** property and paste in `rbxassetid://6025368017`, or [use your own asset](../../../production/publishing/publishing-assets.md).
+1. Locate the button's **Image** property and paste in `rbxassetid://6025368017`, or [use your own asset](../../../production/creator-store.md).
 
    <img src="../../../assets/tutorials/interactive-buttons/ImageButton-Image.png" width="60%" />
 

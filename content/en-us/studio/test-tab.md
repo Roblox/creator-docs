@@ -3,71 +3,23 @@ title: Test Tab
 description: The Test tab contains tools for testing, simulating multiple clients, and other emulations.
 ---
 
-The **Test** tab contains tools for testing an experience, simulating multiple clients, and emulating different devices or users with regional content policies.
+import PlaytestOptions from '../includes/studio/testing-modes.md'
+import PauseResumePhysics from '../includes/studio/pause-resume-physics.md'
+import BetaAlert from '../includes/beta-features/beta-alert.md'
 
-<img src="../assets/studio/general/Toolbar-Test-Tab.png" width="800" alt="Test tab indicated in Studio toolbar" />
+The **Test** tab contains tools for testing and debugging an experience, simulating multiple clients, and emulating different devices or users with regional content policies.
+
+<img src="../assets/studio/general/Toolbar-Test-Tab.png" width="800" alt="Test tab indicated in Studio toolbar." />
 
 ## Playtest Options
 
-There are three common options for playtesting an experience. Clicking the small arrow below the main button lets you choose from each option, and sets that option as the default.
+<PlaytestOptions components={props.components} />
 
-<img src="../assets/studio/general/Test-Tab-Playtest-Options.png" width="800" alt="Rapid playtest options in Test tab of Studio" />
+## Pausing & Resuming Physics
 
-<table>
-  <thead>
-    <tr>
-      <th>Action</th>
-	  <th>Shortcut</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>**Play**</td>
-	  <td><kbd>F5</kbd></td>
-      <td>Starts simulating the experience, inserting your avatar at either a `Class.SpawnLocation` or coordinates of around (0,&nbsp;100,&nbsp;0).</td>
-    </tr>
-    <tr>
-      <td>**Play Here**</td>
-	  <td></td>
-      <td>Starts simulating the experience, inserting your avatar in front of the camera's current position.</td>
-    </tr>
-	<tr>
-      <td>**Run**</td>
-	  <td><kbd>F8</kbd></td>
-      <td>Starts simulating the experience but does not insert your avatar. The simulation begins at the current camera position and you can navigate around using the Studio camera controls.</td>
-    </tr>
-  </tbody>
-</table>
+<BetaAlert betaName="Simulation Pause" leadIn="This tool workflow is currently in beta. Enable it through " leadOut="." components={props.components} />
 
-Once a playtest is running, the following options become available:
-
-<table>
-<thead>
-  <tr>
-    <th>Action</th>
-    <th>Shortcut</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>**Client** / **Server**</td>
-    <td></td>
-    <td>During playtesting in a "play solo" mode (**Play** or **Play Here**), toggles between **Client** mode and **Server** mode. See [Studio Testing Modes](../studio/testing-modes.md#clientserver-toggle) for details.</td>
-  </tr>
-  <tr>
-    <td>**Pause** / **Resume**</td>
-    <td><kbd>F5</kbd></td>
-    <td>Pauses or resumes the playtest.</td>
-  </tr>
-  <tr>
-    <td>**Stop**</td>
-    <td><kbd>Shift</kbd><kbd>F5</kbd></td>
-    <td>Stops simulation of the experience and resets all objects and instances to how they were before **Play**, **Play Here**, or **Run** was clicked.</td>
-  </tr>
-</tbody>
-</table>
+<PauseResumePhysics components={props.components} />
 
 ## Clients and Servers
 
@@ -93,6 +45,6 @@ The **Player** emulator lets you test various [localization](../production/local
 
 ## Audio Mute
 
-The **Mute** button allows you to mute in-experience sounds and music.
+The **Mute** button allows you to mute in-experience [sounds and music](../sound/index.md).
 
 <img src="../assets/studio/general/Test-Tab-Mute.png" width="800" alt="Mute button indicated in Test tab" />

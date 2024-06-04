@@ -274,14 +274,11 @@ ${requiredCheckMessage}`;
   }
 };
 
-const closedSourceDirectories = ['content/en-us/reference/cloud/'];
+const closedSourceDirectories = ['content/en-us/release-notes/'];
 
 const closedSourceFiles = [
   'content/en-us/index/index.md',
-  'content/en-us/production/promotion/advertising-on-roblox.md',
-  'content/en-us/production/promotion/complying-with-advertising-standards.md',
-  'content/en-us/production/promotion/discovery.md',
-  'content/en-us/production/promotion/sponsoring-items.md',
+  'content/en-us/resources/scripting-libraries.md',
   'content/en-us/samples/index.md',
 ];
 

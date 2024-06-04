@@ -148,9 +148,7 @@ To insert a video ad:
 To incentivize users to watch a click-to-play video ad for least 15 seconds, you may choose to implement a **reward mechanism** in your experience. A reward can only be given **once per ad rotation**, and ads rotate every 5 minutes. Choose an enticing reward, such as in-game currency or an in-game item, and ensure the reward is visible to users before they watch the ad. This can be through the UI or a sign next to the ad unit.
 
 <Alert severity="info">
-
 Click-to-play video ads are in closed beta with select advertisers and payouts may fluctuate as budgets stabilize. However, publishers that implement rewarded video are likely to earn higher payouts, since advertisers are willing to pay a premium for completed video views.
-
 </Alert>
 
 Implementing a reward for a video ad must be done in a `Class.Script` using `Enum.AdEventType`. The following sample creates a function to reward users who watch an ad to completion:

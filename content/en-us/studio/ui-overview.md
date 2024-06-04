@@ -3,6 +3,8 @@ title: Studio Interface
 description: User interface overview for Roblox Studio, the essential building tool for Roblox experiences.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 ## Toolbar
 
 The **toolbar** resides at the top of Studio. The buttons and tools visible in the bar change when you click on the [Home](../studio/home-tab.md), [Model](../studio/model-tab.md), [Avatar](../studio/avatar-tab.md), [Test](../studio/test-tab.md), [View](../studio/view-tab.md), and [Plugins](../studio/plugins-tab.md) tabs.
@@ -10,29 +12,41 @@ The **toolbar** resides at the top of Studio. The buttons and tools visible in t
 <img src="../assets/studio/general/Toolbar-Tabs-Labeled.png"
    width="800" alt="Studio's toolbar with the Home, Model, Avatar, Test, View, and Plugins tabs highlighted." />
 
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-A.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>The [Home](../studio/home-tab.md) tab contains basic tools for manipulating 3D objects and testing your experience.</p></Grid>
+<Grid container spacing={2}>
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	The [Home](../studio/home-tab.md) tab contains basic tools for manipulating 3D objects and testing your experience.
+	</Grid>
 </Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-B.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>The [Model](../studio/model-tab.md) tab contains tools for manipulating 3D objects in the workspace, creating detailed models, working with physical constraints, and adding advanced objects.</p></Grid>
+<Grid container spacing={2}>
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	The [Model](../studio/model-tab.md) tab contains tools for manipulating 3D objects in the workspace, creating detailed models, working with physical constraints, and adding advanced objects.
+	</Grid>
 </Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-C.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>The [Avatar](../studio/avatar-tab.md) tab contains specialized tools for creating and fitting accessories, importing custom meshes, building default rigs, and creating animations.</p></Grid>
+<Grid container spacing={2}>
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	The [Avatar](../studio/avatar-tab.md) tab contains specialized tools for creating and fitting accessories, importing custom meshes, building default rigs, and creating animations.
+	</Grid>
 </Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-D.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>The [Test](../studio/test-tab.md) tab contains tools for testing an experience, simulating multiple clients, and emulating different devices.</p></Grid>
+<Grid container spacing={2}>
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-D.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	The [Test](../studio/test-tab.md) tab contains tools for testing an experience, simulating multiple clients, and emulating different devices.
+	</Grid>
 </Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-E.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>The [View](../studio/view-tab.md) tab lets you toggle the various windows of Studio, as well as several display features.</p></Grid>
+<Grid container spacing={2}>
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-E.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	The [View](../studio/view-tab.md) tab lets you toggle the various windows of Studio, as well as several display features.
+	</Grid>
 </Grid>
-<Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-F.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>The [Plugins](../studio/plugins-tab.md) tab contains tools for managing [plugins](../studio/plugins.md), configuring localization, and creating animations. Any plugins you install can also add buttons to this tab.</p></Grid>
+<Grid container spacing={2}>
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-F.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	The [Plugins](../studio/plugins-tab.md) tab contains tools for managing [plugins](../studio/plugins.md), configuring localization, and creating animations. Any plugins you install can also add buttons to this tab.
+	</Grid>
 </Grid>
 
 ## 3D Viewport
@@ -48,7 +62,7 @@ The 3D viewport represents the `Class.Workspace` of a place. From here, you can 
 
 ### Camera Controls
 
-Inside the viewport, you can move the camera with the following controls:
+Inside the viewport, you can move the camera with the following controls. See also [Studio Shortcuts](../studio/shortcuts.md#camera-controls) for additional key shortcuts.
 
 <table>
 <thead>
@@ -86,6 +100,10 @@ Inside the viewport, you can move the camera with the following controls:
     <td>**Middle Mouse Button**</td>
     <td>When pressed, dragging the mouse pans the camera.</td>
   </tr>
+	<tr>
+    <td>**Right Mouse Button**&nbsp;& **Mouse Scroll Wheel**</td>
+    <td>Pressing the right mouse button and scrolling the mouse wheel **up** increases the camera scroll speed. Conversely, pressing the right mouse button and scrolling the mouse wheel **down** reduces the camera scroll speed.<br /><br /><BetaAlert betaName="New Studio Camera Controls" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} /></td>
+  </tr>
 </tbody>
 </table>
 
@@ -95,7 +113,7 @@ As you hover over parts and models in the viewport, they are outlined to indicat
 
 <img src="../assets/studio/general/Editor-Window-Object-Selection.jpg" width="800" alt="A warehouse environment with the stairs and multiple pallet box objects with a blue highlight to signify that they are selected in the 3D viewport."/>
 
-#### Selection Cycling
+<h4>Selection Cycling</h4>
 
 In more complex environments or when zoomed in, objects will commonly be hidden from your view by other objects in front. To select hidden objects without moving the camera around, hold <kbd>Alt</kbd> or <kbd>⌥</kbd> and click to perform **selection&nbsp;cycling** to the next further object behind the currently selected object.
 
@@ -104,11 +122,11 @@ In more complex environments or when zoomed in, objects will commonly be hidden 
   <figcaption>Selection cycling</figcaption>
 </figure>
 
-#### Children or Parents
+<h4>Children or Parents</h4>
 
 When one or more objects or [models](../parts/models.md) are selected in the [Explorer](../studio/explorer.md) window, you can select all of their **children** by right-clicking and choosing **Select&nbsp;Children** from the context menu. Similarly, right-clicking and choosing **Select&nbsp;Parent(s)** selects the **direct parents** of those objects.
 
-#### Selection Style
+<h4>Selection Style</h4>
 
 To display **outlines** and/or **bounding boxes** around selected objects, choose an option from the **Selection Style** menu in the [View](../studio/view-tab.md) tab.
 
@@ -116,7 +134,7 @@ To display **outlines** and/or **bounding boxes** around selected objects, choos
 
 <img src="../assets/studio/general/Selected-Object-Bounding-Box.jpg" width="800" alt="A warehouse environment with rope object's selection outline and bounding box highlighted." />
 
-## Common Windows
+## Commonly Used Windows
 
 You can toggle on commonly used windows through the [View](../studio/view-tab.md) tab, including the [Explorer](../studio/explorer.md) window, [Properties](../studio/properties.md) window, [Asset&nbsp;Manager](../projects/assets/manager.md), [Toolbox](../projects/assets/toolbox.md), and many others.
 
@@ -152,7 +170,7 @@ The [Asset Manager](../projects/assets/manager.md) lets you manage places, image
 
 ### Toolbox
 
-The [Toolbox](../projects/assets/toolbox.md) contains a selection of models, images, meshes, audio, plugins, videos, and fonts made by Roblox or Roblox community members. It also includes all of the creations that you've personally [published](../production/publishing/publishing-assets.md) or those which were published by [groups](../projects/groups.md) you belong to.
+The [Toolbox](../projects/assets/toolbox.md) contains a selection of models, images, meshes, audio, plugins, videos, and fonts made by Roblox or Roblox community members. It also includes all of the creations that you've personally [distributed on the Creator Store](../production/creator-store.md) or those which were distributed by [groups](../projects/groups.md) you belong to.
 
 <img src="../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Studio's View tab with the Toolbox button highlighted." />
 
@@ -169,6 +187,56 @@ The **Output** window, accessible from the [View](../studio/view-tab.md) tab, di
 The **Command Bar**, accessible from the [View](../studio/view-tab.md) tab, lets you execute Luau code outside of scripts. Similar to a terminal, pressing <kbd>↑</kbd> or <kbd>↓</kbd> while using the command bar navigates up and down among previously-executed commands. Clicking the small arrow on the right side similarly reveals a list of previously-executed commands.
 
 <img src="../assets/studio/general/View-Tab-Command-Bar.png" width="876" alt="Studio's View tab with the Command Bar button highlighted." />
+
+## Customizing the Layout
+
+Studio's drag-and-drop interface lets you easily customize window layout to best suit your workflows.
+
+### Repositioning Windows
+
+You can reposition any window by click-dragging its **header bar**. As you begin dragging the window, the interface reveals **empty docking area** regions. If you drag the mouse pointer into any empty region, a floating **position selector** appears in that region. Dragging the pointer over the "center" of the floating selector targets the empty region as the dragged window's destination, indicated by the region darkening and becoming outlined.
+
+<figure>
+<img src="../assets/studio/general/Docking-Position-Selector-Empty.jpg" width="880" alt="Mouse pointer hovering over the 'center' icon of the position selector in an empty docking area, showing that region as the dragged window's destination." />
+<figcaption>Mouse pointer hovering over the "center" icon of the position selector in an empty docking area</figcaption>
+</figure>
+
+If you drag the mouse pointer into a **populated** region such as the 3D viewport, a floating position selector appears with multiple options for the window's destination. For example, dragging the pointer over the "left" icon will position the window on the region's left side.
+
+<Tabs>
+  <TabItem label="Viewport Left">
+	<img src="../assets/studio/general/Docking-Position-Selector-Left.jpg" width="880" height="520" alt="Mouse pointer hovering over the 'left half' icon of the position selector in a populated region, showing the left side of the region as the dragged window's destination." />
+  </TabItem>
+  <TabItem label="Viewport Right">
+    <img src="../assets/studio/general/Docking-Position-Selector-Right.jpg" width="880" height="520" alt="Mouse pointer hovering over the 'right half' icon of the position selector in a populated region, showing the right side of the region as the dragged window's destination." />
+  </TabItem>
+</Tabs>
+
+### Grouping Windows
+
+If you drag a window into a **populated** region and choose the "center" icon of the [position selector](#repositioning-windows), the dragged window will group into that region as a tab. This allows you to set up tab groups of commonly used windows.
+
+<figure>
+  <img src="../assets/studio/general/Docking-Grouped-Tabs.png" width="320" alt="An example of an Explorer window if you choose the center icon of the position selection. It includes three tabs at the bottom of the window: the Explorer window, the Properties window, and the Terrain Editor window." />
+  <figcaption>Three windows grouped together as tabs</figcaption>
+</figure>
+
+### Pinning Windows
+
+To maximize screen space for the 3D viewport, you can **pin** windows (or&nbsp;an entire [group](#grouping-windows) of windows) to the edges of the overall Studio window. Once pinned, you can temporarily open any window by clicking its tab&nbsp;&mdash; this does not disturb other windows, and the expanded window will automatically collapse when you click in another window or click its tab again.
+
+<figure>
+  <img src="../assets/studio/general/Docking-Pinned-Tabs.jpg" width="800" alt="An example 3D viewport where the Explorer, Properties, and Terrain Editor windows are pinned to the right of the Studio window." />
+  <figcaption>Three windows pinned to the right side of the Studio window</figcaption>
+</figure>
+
+To pin a window or an entire [group](#grouping-windows) of windows, click the "collapse" button. Alternatively, to un‑pin a pinned window/group, open it by clicking its tab, then click the "expand" button.
+
+<img src="../assets/studio/general/Docking-Expand-Collapse.png" width="320" alt="A close up view of the Explorer window with the Collapse button highlighted." />
+
+### Floating Windows
+
+To float a window freely of other windows, simply drag‑and‑drop it without selecting any icon from the floating [position selector](#repositioning-windows).
 
 ## Saving & Publishing
 

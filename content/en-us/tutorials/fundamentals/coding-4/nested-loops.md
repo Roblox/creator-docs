@@ -62,7 +62,7 @@ Nested loops can seem somewhat abstract, so a visual example can help. For this 
      for partNumber = 1, partsPerBatch do
        createPart()
        print("Inner loop: part " .. partNumber)
-       partsMade = partsMade + 1
+       partsMade += 1
        task.wait(0.5)
      end
 
@@ -94,7 +94,7 @@ For the cube tower script, first code a function that spawns a single cube. The 
 
    ```lua
    local TOWER_SIZE = 4
-   local CUBE_S﻿IZE = 2
+   local CUBE_SIZE = 2
    ```
 
    <Alert severity="info">
@@ -327,8 +327,8 @@ local cupcakesBaked = 0
 
 --Makes a single cupcake
 local function makeCupcake()
-    local serverStorage = game:GetService("ServerStorage")
-    local cupcake = serverStorage.Cupcake:Clone()
+    local ServerStorage = game:GetService("ServerStorage")
+    local cupcake = ServerStorage.Cupcake:Clone()
     local cup = cupcake.Cup
     local frosting = cupcake.Frosting
     cupcake:SetPrimaryPartCFrame(CFrame.new(0, 20, 0) *CFrame.Angles(0, 0, -90))
@@ -349,7 +349,7 @@ for cupcakeBatch = 1, numberOfBatches do
         makeCupcake()
         print("Inner loop: cupcake " .. cupcakeNumber)
         -- Track muffins baked
-        cupcakesBaked = cupcakesBaked + 1
+        cupcakesBaked += 1
         task.wait(0.5)
     end
 

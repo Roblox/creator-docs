@@ -14,3 +14,6 @@ Additionally, the following list outlines some of the special cases which may re
 - Recipient's aggregate daily throttle limit has been reached.
 - Missing or invalid request parameters.
 - Notification string was moderated.
+- For notifications with user mentions, non-delivery occurs if either of these conditions are met:
+  - The receiver and mentioned user are not friends.
+  - The mentioned user has **No** selected for "Update friends about my activity?" under **Privacy**&nbsp;&rarr; **Other&nbsp;Settings** in their Roblox account settings.

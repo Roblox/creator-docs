@@ -186,8 +186,8 @@ The server-side script that runs under that character's `Class.Actor` connects t
 local tool = script.Parent.Parent
 
 local remoteEvent = Instance.new("RemoteEvent")  -- Create new remote event and parent it to the tool
-remoteEvent.Parent = tool
 remoteEvent.Name = "RemoteMouseEvent"  -- Rename it so that the local script can look for it
+remoteEvent.Parent = tool
 local remoteEventConnection  -- Create a reference for the remote event connection
 
 -- Function which listens for a remote event

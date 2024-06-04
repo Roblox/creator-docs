@@ -101,7 +101,7 @@ To help you become familiar with both types of 3D objects, this tutorial provide
   </figure>
 </GridContainer>
 
-You can find this asset pack on the **Creator Store**, a marketplace that features assets from Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. The Creator Store is accessible directly in Studio within the **Toolbox**, as well as on the [Creator Hub](https://create.roblox.com/store/models). For more information about this marketplace, see [Creator Store](../../production/publishing/creator-store.md).
+You can find this asset pack on the **Creator Store**, a marketplace that features assets from Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. The Creator Store is accessible directly in Studio within the **Toolbox**, as well as on the [Creator Hub](https://create.roblox.com/store/models). For more information about this marketplace, see [Creator Store](../../production/creator-store.md).
 
 <img src="../../assets/studio/toolbox/Creator-Store-Tab-Extended.png" width="100%" />
 

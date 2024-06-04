@@ -16,7 +16,7 @@ When ready to export, see [Export Requirements](../../art/accessories/export-set
 <ul>
 <li>When creating a generic mesh, your model must meet [General Mesh Specifications](../modeling/specifications.md).</li> <br />
 <li>When creating a rigid accessory model, see [Accessory Specifications](../../art/accessories/specifications.md).</li> <br />
-<li>when creating avatar characters, see [Avatar Specifications](../../art/characters/specifications.md).</li>
+<li>When creating avatar characters, see [Avatar Specifications](../../art/characters/specifications.md).</li>
 </ul>
 </Alert>
 
@@ -65,9 +65,7 @@ Depending on the type of layerable asset, the size requirements can't exceed the
 
 ### Attachment Points
 
-Attachments are points on the accessory model that connect to another attachment of the same name on a character model. For layered clothing, attachments do not affect the fit or location of the clothing item, but help associate the equipped item to the appropriate body part in cases where a character body is in ragdoll or is dismembered.
-
-The [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) automatically applies the following specifications for attachments on clothing assets:
+`Class.Attachment` objects indicate where an accessory model attaches to a point on a character body. Whether you are creating rigid or [layered](./layered-clothing.md) accessories, Studio's [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) automatically adds and configures the appropriate `Class.Attachment` with the following specifications:
 
 - **One attachment** - Each accessory, including layered clothing, require at least one attachment point to its associated body part.
 - **Naming Convention** - The `Class.Attachment` name must follow a specific naming convention depending on the `Class.Accessory.AccessoryType`. The Accessory Fitting Tool generates an appropriate `Class.Attachment` name automatically.
@@ -126,7 +124,7 @@ If setting attachment names manually in Studio, use the following `Class.Attachm
   </table>
 
   <Alert severity = 'info'>
-  The 3D Importer automatically recognizes objects as attachment points if the objects include the affix `\_Att`. This only applies when importing meshes with caging data, such as clothing or bodies.
+  The 3D Importer automatically recognizes mesh objects as attachment points if the objects include the affix `\_Att`. This only applies when importing meshes with caging data, such as clothing or bodies.
   </Alert>
 
 - **Shoulders and Collars** - Even though they are in similar locations, Shoulder and Collar attachment points interact with character rigs differently for rigid accessories.

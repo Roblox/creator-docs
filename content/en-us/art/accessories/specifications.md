@@ -16,7 +16,7 @@ When ready to export, see [Export Requirements](../../art/accessories/export-set
 <ul>
 <li>When creating a generic mesh, your model must meet [General Mesh Specifications](../modeling/specifications.md).</li> <br />
 <li>When creating a clothing accessory model, see [Clothing Specifications](../../art/accessories/clothing-specifications.md).</li> <br />
-<li>when creating avatar characters, see [Avatar Specifications](../../art/characters/specifications.md).</li>
+<li>When creating avatar characters, see [Avatar Specifications](../../art/characters/specifications.md).</li>
 </ul>
 </Alert>
 
@@ -277,14 +277,12 @@ You can use tools like the [Accessory Fitting Tool](../../art/accessories/access
 
 ### Attachment Points
 
-Attachments are points on the accessory model that connect to another attachment of the same name on a character model.
-
-The [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) automatically applies the following specifications for attachments on clothing assets:
+`Class.Attachment` objects indicate where an accessory model attaches to a point on a character body. Whether you are creating rigid or [layered](./layered-clothing.md) accessories, Studio's [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) automatically adds and configures the appropriate `Class.Attachment` with the following specifications:
 
 - **One attachment** - Each accessory, including layered clothing, require at least one attachment point to its associated body part.
 - **Naming Convention** - The `Class.Attachment` name must follow a specific naming convention depending on the `Class.Accessory.AccessoryType`. The Accessory Fitting Tool generates an appropriate `Class.Attachment` name automatically.
 
-If setting attachment names manually, use the following `Class.Attachment` name for each accessory type:
+If setting or configuring attachments manually in Studio, use the following names for your `Class.Attachment` object depending on the accessory type:
 
   <table>
   <thead>
@@ -328,6 +326,10 @@ If setting attachment names manually, use the following `Class.Attachment` name 
     </tr>
   </tbody>
   </table>
+
+  <Alert severity = 'warning'>
+  Importing attachment objects from a third-party tool is not supported for rigid accessories, but is supported for [character bodies](../characters/specifications.md#attachments).
+  </Alert>
 
 - **Shoulders and Collars** - Even though they are in similar locations, Shoulder and Collar attachment points interact with character rigs differently for rigid accessories.
   - Items using `RightShoulderAttachment` or `LeftShoulderAttachment` move with the character's arm.

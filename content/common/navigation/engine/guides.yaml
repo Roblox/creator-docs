@@ -466,10 +466,7 @@ navigation:
   - title: Discovery
     path: /discovery
   - title: Publishing
-    path: /production/publishing/
     section:
-      - title: Overview
-        path: /production/publishing/
       - title: Experiences
         path: /production/publishing/publishing-experiences-and-places
         section:
@@ -488,14 +485,12 @@ navigation:
       #   - title: Avatar Marketplace Thumbnails
       #     path: /production/publishing/marketplace-thumbnails
       - title: Assets
-        path: /production/publishing/publishing-assets
+        path: /production/creator-store
         section:
-          - title: Overview
-            path: /production/publishing/publishing-assets
           - title: Creator Store
-            path: /production/publishing/creator-store
+            path: /production/creator-store
           - title: Selling on the Creator Store
-            path: /production/publishing/selling-on-the-creator-store
+            path: /production/selling-on-creator-store
       - title: Guidelines
         section:
           - title: Experience Guidelines

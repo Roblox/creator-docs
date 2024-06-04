@@ -13,10 +13,8 @@ The **Script Editor** in Studio is the primary tool for scripting on Roblox. It'
 
 The Script Editor supports all types of [scripts](../scripting/scripts.md) and opens automatically when you create a new script or double-click an existing script in the [Explorer](../studio/explorer.md) window.
 
-<Alert severity="info">
-You can customize the Script Editor to suit your preferences and workflows, including font family/size, formatting behavior, and colors for syntax highlighting. You can also toggle features such as [autocomplete](#autocomplete), [signature help](#signature-help), and [script analysis](#script-analysis).
-
-To browse the settings, open **Studio&nbsp;Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows or <kbd>⌥</kbd><kbd>S</kbd> on Mac) and select the **Script&nbsp;Editor** tab.
+<Alert severity="success">
+You can [customize](#editor-settings) the Script Editor to suit your preferences and workflows, including font family/size, formatting behavior, and colors for syntax highlighting. You can also toggle features such as [autocomplete](#autocomplete), [signature help](#signature-help), and [script analysis](#script-analysis).
 </Alert>
 
 ## Autocomplete
@@ -144,7 +142,7 @@ The Script Editor supports usage of multiple cursors to make edits simultaneousl
 
 The following table summarizes multi-cursor workflows and their shortcuts.
 
-<table size="small">
+<table>
   <thead>
     <tr>
       <th>Command</th>
@@ -217,8 +215,8 @@ To add a cursor at your mouse pointer location:
 
 You can drag the mouse to add a cursor to a selection, split a multi-line selection into lines, or select columns and blocks of code/whitespace.
 
-##### Drag Select
-
+<Tabs>
+<TabItem label="Drag Select">
 To add a cursor to a selection of code through dragging:
 
 1. Hold <kbd>Alt</kbd> on Windows or <kbd>⌥</kbd> on Mac.
@@ -226,17 +224,20 @@ To add a cursor to a selection of code through dragging:
 
    <video controls width="512" src="../assets/studio/script-editor/AddWithDrag.mp4"></video>
 
-##### Split Selection Into Lines
-
+</TabItem>
+<TabItem label="Split Into Lines">
 To split a multi-line selection into lines and add a cursor at the end of each line, press <kbd>Shift</kbd><kbd>Alt</kbd><kbd>I</kbd> on Windows or <kbd>Shift</kbd><kbd>⌥</kbd><kbd>I</kbd> on Mac.
 
 <video controls width="405" src="../assets/studio/script-editor/SplitSelectionsIntoLines.mp4"></video>
 
-##### Column/Block Select
-
+</TabItem>
+<TabItem label="Column/Block Select">
 To select columns and blocks of code or whitespace, drag the mouse while holding <kbd>Shift</kbd><kbd>Alt</kbd> on Windows or <kbd>Shift</kbd><kbd>⌥</kbd> on Mac. As you drag, a cursor will be added on each highlighted line.
 
 <video controls width="405" src="../assets/studio/script-editor/ColumnBlockSelect.mp4"></video>
+
+</TabItem>
+</Tabs>
 
 #### Above and Below Primary Cursor
 
@@ -251,8 +252,8 @@ To add a cursor directly above or below the primary cursor:
 
 You can add cursors to all matches of a selection or to the next/previous match, and optionally toggle whether matches are case-sensitive and/or match the whole word.
 
-##### All Matching
-
+<Tabs>
+<TabItem label="All Matching">
 To add a cursor to all matches of a selected portion:
 
 1. Select the code that you want to search for matches of.
@@ -260,8 +261,8 @@ To add a cursor to all matches of a selected portion:
 
    <video controls width="454" src="../assets/studio/script-editor/AddToAllMatches.mp4"></video>
 
-##### Next/Previous Matching
-
+</TabItem>
+<TabItem label="Next/Previous Match">
 To add a cursor to the **next** matching selection:
 
 1. Select the code that you want to search for matches of.
@@ -272,19 +273,16 @@ To add a cursor to the **next** matching selection:
 
 There is no default shortcut for adding a cursor to the **previous** matching selection, but you can add your own:
 
-1. Open **File** &rarr; **Advanced** &rarr; **Customize&nbsp;Shortcuts**.
+1. Open **File** &rang; **Advanced** &rang; **Customize&nbsp;Shortcuts**.
 2. In the shortcuts window, locate **Select previous occurrence**.
 
-   <img src="../assets/studio/script-editor/Shortcut-Edit-Select-Prev-1.png" width="800" />
+   <img src="../assets/studio/script-editor/Shortcut-Edit-Select-Prev.png" width="800" />
 
 3. Double-click the action's **Shortcut** field and enter your own custom key combination, such as <kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>D</kbd> to pair alongside "next" matching's default of <kbd>Ctrl</kbd><kbd>D</kbd>.
-
-   <img src="../assets/studio/script-editor/Shortcut-Edit-Select-Prev-2.png" width="800" />
-
 4. Confirm your setting by clicking **OK** in the bottom-right corner of the window.
 
-##### Matching Case or Whole Word
-
+</TabItem>
+<TabItem label="Case or Whole Word Match">
 For each of the matching-related workflows above, you can match **case** and/or **whole word** as follows:
 
 1. Open the Find/Replace tool (<kbd>Ctrl</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>F</kbd> on Mac).
@@ -295,6 +293,9 @@ For each of the matching-related workflows above, you can match **case** and/or 
    <video controls width="349" src="../assets/studio/script-editor/MatchCaseWholeWord1.mp4"></video>
 
    <video controls width="485" src="../assets/studio/script-editor/MatchCaseWholeWord2.mp4"></video>
+
+</TabItem>
+</Tabs>
 
 ### Removing Cursors
 
@@ -330,6 +331,45 @@ Pressing enter/return will auto-indent each cursor at the new line relative to
 the previous line. If the previous line starts with an incomplete block, the formatter will try to complete it.
 
 <video controls width="459" src="../assets/studio/script-editor/OnTypeFormatting.mp4"></video>
+
+## Editor Settings
+
+Many customization options are accessible via **File**&nbsp;&rang; **Studio Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac).
+
+<img src="../assets/studio/general/Studio-Settings-Script-Editor.png" width="750" alt="A close up view of the Studio Settings window with the Script Editor tab selected." />
+
+Commonly modified options include:
+
+<table>
+<thead>
+  <tr>
+    <th>Option</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>**Font**</td>
+    <td>Font face and size for code in the editor.</td>
+  </tr>
+  <tr>
+    <td>**Tab Width**</td>
+    <td>Number of spaces representing a <kbd>Tab</kbd> indent.</td>
+  </tr>
+  <tr>
+    <td>**Indent Using Spaces**</td>
+    <td>If enabled, spaces equal to **Tab&nbsp;Width** are inserted with <kbd>Tab</kbd> press.</td>
+  </tr>
+  <tr>
+    <td>**Text Wrapping**</td>
+    <td>If enabled, longer lines of code wrap to the next line.</td>
+  </tr>
+  <tr>
+    <td>**Script Editor Color Preset**</td>
+    <td>Color preset for code elements, selection colors, and more. After choosing a preset, you can set specific colors for options like **Selection Color** and **Comment Color**.</td>
+  </tr>
+</tbody>
+</table>
 
 ## Keyboard Shortcuts
 

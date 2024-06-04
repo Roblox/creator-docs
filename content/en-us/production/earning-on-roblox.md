@@ -227,7 +227,7 @@ After purchasing a Limited, there is up to a 30‑day holding period when the it
 
 ## Creating and Selling Studio Plugins
 
-You can create and sell Studio [plugins](../studio/plugins.md) to the community through the [Creator Store](../production/publishing/creator-store.md). A plugin is an extension that adds additional features or functionality to [Roblox Studio](https://create.roblox.com/landing) and helps improve creator workflows. You can either offer plugins for free or sell them for a minimum of $4.99 USD. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Selling on the Creator Store](./publishing/selling-on-the-creator-store.md).
+You can create and sell Studio [plugins](../studio/plugins.md) to the community through the [Creator Store](../production/creator-store.md). A plugin is an extension that adds additional features or functionality to [Roblox Studio](https://create.roblox.com/landing) and helps improve creator workflows. You can either offer plugins for free or sell them for a minimum of $4.99 USD. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Selling on the Creator Store](./selling-on-creator-store.md).
 
 ## Converting Earned Robux to Cash
 

@@ -20,7 +20,7 @@ and keep them engaged over time. You need to consider:
 
 ## Publishing
 
-When an experience is ready to play, you can [publish](../production/publishing/index.md) your
+When an experience is ready to play, you can [publish](../production/publishing/publishing-experiences-and-places.md) your
 experience on any devices you choose. An experience can be published **privately** (default) in order to test and save to the cloud, or **publicly** so that it can be discovered and played by other users.
 
 ## Monetization

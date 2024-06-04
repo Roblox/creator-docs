@@ -82,12 +82,12 @@ Like all creation tools, keyboard shortcuts allow you to work efficiently and qu
     <td>Anchoring a part locks it in place, even when other objects collide with it. </td>
   </tr>
   <tr>
-    <td>In [Studio Settings](../studio/customization.md)</td>
+    <td>In [Studio Settings](../studio/setting-up-roblox-studio.md#customization)</td>
     <td>Change highlight and selection colors</td>
     <td>Changing highlight and selection colors can help with accessibility.</td>
   </tr>
   <tr>
-    <td>In [Studio Settings](../studio/customization.md)</td>
+    <td>In [Studio Settings](../studio/setting-up-roblox-studio.md#customization)</td>
     <td>Change camera speed</td>
     <td>Modify how fast the camera moves by default. </td>
   </tr>
@@ -126,7 +126,7 @@ As a best practice, first try loading community assets in a blank place, remove 
 
 The **Creator Store** is where you can find many assets created and shared by Roblox and the Roblox community for use in Studio and your experiences. Anyone can contribute their assets to the Creator Store, including models, images, meshes, audio, plugins, and more.
 
-Access the Creator Store through Studio's Toolbox or the [Creator Hub](https://create.roblox.com/store/models). For more information, see [Creator Store](../production/publishing/creator-store.md).
+Access the Creator Store through Studio's Toolbox or the [Creator Hub](https://create.roblox.com/store/models). For more information, see [Creator Store](../production/creator-store.md).
 
 #### Roblox Created Models
 

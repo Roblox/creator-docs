@@ -1680,11 +1680,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/PlayerGui.yaml
         ignoreTranslation: true
-      - title: PlayerHydrationService
-        path: /reference/engine/classes/PlayerHydrationService
-        type: engineapi
-        source: /reference/engine/classes/PlayerHydrationService.yaml
-        ignoreTranslation: true
       - title: PlayerMouse
         path: /reference/engine/classes/PlayerMouse
         type: engineapi
@@ -3178,6 +3173,16 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AdTeleportMethod.yaml
         ignoreTranslation: true
+      - title: AdUIEventType
+        path: /reference/engine/enums/AdUIEventType
+        type: engineapi
+        source: /reference/engine/enums/AdUIEventType.yaml
+        ignoreTranslation: true
+      - title: AdUIType
+        path: /reference/engine/enums/AdUIType
+        type: engineapi
+        source: /reference/engine/enums/AdUIType.yaml
+        ignoreTranslation: true
       - title: AdUnitStatus
         path: /reference/engine/enums/AdUnitStatus
         type: engineapi
@@ -4642,11 +4647,6 @@ navigation:
         path: /reference/engine/enums/SensorUpdateType
         type: engineapi
         source: /reference/engine/enums/SensorUpdateType.yaml
-        ignoreTranslation: true
-      - title: ServerAudioBehavior
-        path: /reference/engine/enums/ServerAudioBehavior
-        type: engineapi
-        source: /reference/engine/enums/ServerAudioBehavior.yaml
         ignoreTranslation: true
       - title: ServerLiveEditingMode
         path: /reference/engine/enums/ServerLiveEditingMode

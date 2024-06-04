@@ -47,7 +47,7 @@ You can create a package from any single object or any single parent and childre
 
 To insert a package which doesn't already exist in the current place, you must **initially** insert it from the [Toolbox](../../projects/assets/toolbox.md) under these guidelines:
 
-- From **Inventory** &rarr; **My Packages** for packages that you've published or obtained from the [Creator Store](../../production/publishing/creator-store.md).
+- From **Inventory** &rarr; **My Packages** for packages that you've published or obtained from the [Creator Store](../../production/creator-store.md).
 - From **Creations** &rarr; **Group Packages** for packages published by members of your [group](../../projects/groups.md) (including yourself).
 
 <GridContainer numColumns="2">

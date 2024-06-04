@@ -28,7 +28,7 @@ Once we had our early draft of the overall layout, we used [terrain](../../parts
   <figcaption>Early concept of how we wanted the player to approach the house. To drive players to want to get a closer look at the house, we used trees to obscure their view while still giving glimpses of the house and the event in the sky.</figcaption>
 </figure>
 
-Using both simple [parts](../../parts/index.md) along with [Creator Store](../../production/publishing/creator-store.md) assets, we were able to quickly add in content that would help us compose the environment, including:
+Using both simple [parts](../../parts/index.md) along with [Creator Store](../../production/creator-store.md) assets, we were able to quickly add in content that would help us compose the environment, including:
 
 - Making the road bend so players couldn't see all the way down the length of it.
 - Adding trees with denser areas where we wanted to make it clear the player couldn't access, along with thinner areas where we wanted to encourage them to explore.

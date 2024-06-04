@@ -28,7 +28,7 @@ The **Learn & Explore** sort highlights experiences that let users learn
 in an engaging way. The Roblox Education team reviews all applications
 in this sort category, and they may highlight accepted nominations on
 the [Education Hub](https://education.roblox.com/en-us/)
-or the [Roblox Education Twitter account](https://twitter.com/RobloxEdu).
+or the [Roblox Education X (Twitter) account](https://x.com/RobloxEdu).
 
 An experience in the **Learn & Explore** sort must:
 

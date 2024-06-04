@@ -46,18 +46,5 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events:
-  - name: CommerceService.InExperienceBrowserRequested
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: url
-        type: string
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxSecurity
-    thread_safety: Unsafe
+events: []
 callbacks: []
