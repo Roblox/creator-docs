@@ -22,8 +22,8 @@ items:
     deprecation_message: ''
   - name: Gameplay
     summary: |
-      Currency earned or paid through gameplay, for example in-experience
-      "gold" earned from winning a match.
+      Currency earned or paid through gameplay, for example in-experience "gold"
+      earned from winning a match.
     value: 2
     tags: []
     deprecation_message: ''

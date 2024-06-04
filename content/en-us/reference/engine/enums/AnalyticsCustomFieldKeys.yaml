@@ -1,9 +1,11 @@
 name: AnalyticsCustomFieldKeys
 type: enum
 summary: |
-  Used to form a dictionary of custom fields to provide breakdowns in Roblox-provided charts.
+  Used to form a dictionary of custom fields to provide breakdowns in
+  Roblox-provided charts.
 description: |
-  Used to form a dictionary of custom fields to provide breakdowns in Roblox-provided charts. For example:
+  Used to form a dictionary of custom fields to provide breakdowns in
+  Roblox-provided charts. For example:
 
   ```lua
   local customFields = {
