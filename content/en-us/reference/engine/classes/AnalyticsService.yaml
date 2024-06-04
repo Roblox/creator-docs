@@ -538,7 +538,8 @@ methods:
       - name: player
         type: Player
         default:
-        summary: The user who triggered the event.
+        summary: |
+          The user who triggered the event.
       - name: flowType
         type: AnalyticsEconomyFlowType
         default:
@@ -562,8 +563,8 @@ methods:
         type: float
         default:
         summary: |
-          The user's balance after the currency has been added or removed.
-          This value should always be greater than or equal to 0.
+          The user's balance after the currency has been added or removed. This
+          value should always be greater than or equal to 0.
       - name: transactionType
         type: string
         default:
@@ -615,7 +616,8 @@ methods:
       - name: player
         type: Player
         default:
-        summary: The user who triggered the event.
+        summary: |
+          The user who triggered the event.
       - name: funnelName
         type: string
         default:
@@ -646,7 +648,8 @@ methods:
         type: string
         default: ''
         summary: |
-          Optional name of the step in the funnel. This field is only used for display purposes in Roblox-provided charts.
+          Optional name of the step in the funnel. This field is only used for
+          display purposes in Roblox-provided charts.
       - name: customFields
         type: Dictionary
         default: nil
@@ -676,7 +679,8 @@ methods:
       - name: player
         type: Player
         default:
-        summary: The user who triggered the event.
+        summary: |
+          The user who triggered the event.
       - name: step
         type: int
         default:
@@ -718,7 +722,8 @@ methods:
       - name: player
         type: Player
         default:
-        summary: The player who triggered the event.
+        summary: |
+          The player who triggered the event.
       - name: progressionPathName
         type: string
         default:
@@ -755,7 +760,8 @@ methods:
       - name: player
         type: Player
         default:
-        summary: The player who triggered the event.
+        summary: |
+          The player who triggered the event.
       - name: progressionPathName
         type: string
         default:
@@ -794,7 +800,8 @@ methods:
       - name: player
         type: Player
         default:
-        summary: The user who triggered the event.
+        summary: |
+          The user who triggered the event.
       - name: progressionPathName
         type: string
         default:
@@ -829,7 +836,8 @@ methods:
       - name: player
         type: Player
         default:
-        summary: The player who triggered the event.
+        summary: |
+          The player who triggered the event.
       - name: progressionPathName
         type: string
         default:
