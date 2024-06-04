@@ -25,9 +25,9 @@ local function onInputEnded(inputObject, processedEvent)
 
 	-- Next, check that the input was a mouse event
 	if inputObject.UserInputType == Enum.UserInputType.MouseButton1 then
-		print("Left Mouse button was pressed: ", inputObject.Position)
+		print("Left Mouse button was pressed:", inputObject.Position)
 	elseif inputObject.UserInputType == Enum.UserInputType.MouseButton2 then
-		print("Right Mouse button was pressed: ", inputObject.Position)
+		print("Right Mouse button was pressed:", inputObject.Position)
 	end
 end
 

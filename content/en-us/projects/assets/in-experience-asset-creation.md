@@ -40,7 +40,7 @@ local function CreateAsset(player, instance)
 
 	if complete then
 		if result == Enum.PromptCreateAssetResult.Success then
-			print("successfully uploaded, AssetId: ", assetId)
+			print("successfully uploaded, AssetId:", assetId)
 		else
 			print("Received result", result)
 		end
