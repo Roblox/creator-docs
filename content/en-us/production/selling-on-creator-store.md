@@ -3,10 +3,10 @@ title: Selling on the Creator Store
 description: An explanation of Creator Store seller accounts, their prerequisites, and how to create one.
 ---
 
-You can sell [plugins](./../../studio/plugins.md) on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted.
+You can sell [plugins](../studio/plugins.md) on the Creator Store for **United States Dollars** (USD). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted.
 
 <Alert severity="info">
-You will soon be able to sell [models](../../parts/models.md#uploading-and-distributing-models) on the Creator Store for **United States Dollars** (USD). You can create a seller account and start uploading models now.
+You will soon be able to sell [models](../parts/models.md#uploading-and-distributing-models) on the Creator Store for **United States Dollars** (USD). You can create a seller account and start uploading models now.
 </Alert>
 
 In order to set any USD prices and sell your assets, you must have a **seller account**. Roblox administers seller accounts through **Stripe**, a third-party payments provider. If you meet Roblox's eligibility [requirements](#for-sellers), you can fill out Stripe's [application form](#completing-the-application-form) to create a seller account.
@@ -36,7 +36,7 @@ If you violate any of these requirements after you create your seller account, y
 
 <Alert severity="warning">
 
-**Phone number verification is no longer sufficient** to sell assets on the Creator Store. Even if your account is verified by phone number, you still need to verify with a [government ID](account-verification.md#verifying-through-government-id).
+**Phone number verification is not sufficient** to sell priced assets on the Creator Store. To sell priced assets, you need to verify with a [government ID](account-verification.md#verifying-through-government-id) and create a seller account.
 
 </Alert>
 
