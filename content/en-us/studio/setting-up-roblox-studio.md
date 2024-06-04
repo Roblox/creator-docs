@@ -1,5 +1,5 @@
 ---
-title: Setting Up Roblox Studio
+title: Roblox Studio Setup
 description: Explains how to install Roblox Studio on your system.
 ---
 
@@ -41,6 +41,16 @@ To install Roblox Studio on your Windows or Mac computer:
 1. After Studio finishes installing, a pop-up confirmation displays. Click the **Launch&nbsp;Studio** button.
 
 1. Sign in to Studio with your Roblox account. If you don't have an account, create one at [roblox.com](https://www.roblox.com/) and follow the tips on [securing your account](https://en.help.roblox.com/hc/en-us/articles/203313380-Account-Security-Theft-Keeping-your-Account-Safe-).
+
+## Customization
+
+Many customization options are accessible via **File**&nbsp;&rang; **Studio Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac). You can quickly locate known settings by typing keywords into the search field at the top of the window. For example, search for "theme" to explicitly set Studio to dark theme or light theme.
+
+<img src="../assets/studio/general/Studio-Settings-Layout.png" width="750" alt="A close up view of the Studio Settings window." />
+
+<Alert severity="success">
+In addition to general settings, you can customize Studio's [window layout](../studio/ui-overview.md#customizing-the-layout) to best suit your workflows.
+</Alert>
 
 ## Updating Studio
 

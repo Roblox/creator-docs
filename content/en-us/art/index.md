@@ -237,7 +237,7 @@ Stay up to date with new articles written by our staff on the [DevForum](https:/
 
 The following is a list of common 3D art resources ordered by subject, as well as other Studio and Avatar documentation. You can also use the side navigation bar, search bar, or assistant to find specific articles and topics.
 
-## Getting Started and Tutorials
+<Typography variant='h5'>Getting Started and Tutorials</Typography>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
@@ -284,7 +284,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 </Grid>
 
-## Specifications and References
+<Typography variant='h5'>Specifications and References</Typography>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
@@ -325,7 +325,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 </Grid>
 
-## Guides and Workflows
+<Typography variant='h5'>Guides and Workflows</Typography>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 

@@ -1038,6 +1038,9 @@ methods:
       is guaranteed to be non-decreasing). The server clock progresses no faster
       than 1.006&times; speed and no slower than 0.994&times; speed.
 
+      Returns a Unix timestamp that can be used with `Library.os|os.date()` or
+      with `Datatype.DateTime.fromUnixTimestamp()`.
+
       This function is useful for creating synchronized experiences, as it has
       three properties necessary for doing so: it's a real-world time clock,
       it's monotonic, and it has decent precision.

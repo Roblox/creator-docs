@@ -6,12 +6,10 @@ navigation:
   - heading: Roblox Studio
   - title: Overview # merge working in studio content into here
     path: /studio/
-  - title: Setting Up Studio
+  - title: Studio Setup
     path: /studio/setting-up-roblox-studio
   - title: Studio Interface
     path: /studio/ui-overview
-  - title: Customization
-    path: /studio/customization
   - heading: Building Tools
   - title: Align Tool
     path: /studio/align-tool

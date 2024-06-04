@@ -7,12 +7,14 @@ tags: []
 deprecation_message: ''
 items:
   - name: Sink
-    summary: ''
+    summary: |
+      Currency is being removed from the player's account.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Source
-    summary: ''
+    summary: |
+      Currency is being added to the player's account.
     value: 1
     tags: []
     deprecation_message: ''
