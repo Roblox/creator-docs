@@ -19,9 +19,9 @@ methods:
     summary: |
       Returns an array of user information including user name and display name.
     description: |
-      This function enables developers to request information about users
-      outside of the current `Class.DataModel` in bulk, which is why both the
-      input and output values are arrays.
+      This function lets you request information about users outside of the
+      current `Class.DataModel` in bulk. The input and output values are both
+      arrays.
 
       - The order of the user info objects in the return value's array may not
         match the order of the `Class.Player.UserId|UserIds` sent in the input
@@ -45,6 +45,10 @@ methods:
         service is experiencing interruptions. Ensure you can handle downtime
         appropriately by wrapping this method with a
         `Global.LuaGlobals.pcall()`.
+      - Results are limited to 250 per minute, so if you receive an HTTP 429
+        error, try again later, ideally after reducing the number of
+        `Class.Player.UserId|UserIds` in your input array, reducing the number
+        of method calls, or both.
 
       The signature of a singular user info object is:
 

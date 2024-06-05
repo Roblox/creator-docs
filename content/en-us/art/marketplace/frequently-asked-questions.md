@@ -64,6 +64,10 @@ description: Marketplace FAQ providing answers and resources for common question
 
   <dd><p />All moderation decisions can be appealed via our [appeals page](https://www.roblox.com/report-appeals#/).<p /></dd><br />
 
+  <dt>**Can I take down my infringing material myself?**</dt>
+
+  <dd><p />You can submit a request to archive your uploaded items. See [Archiving Assets](./moderation.md#archiving-assets) for more details. </dd><br />
+
   <dt>**What's the difference between a DSA request and a DMCA request? What happens after I file that request?**</dt>
 
   <dd><p />We provide several distinct channels to report potentially violating content found in our Marketplace. These channels have different use cases and we ask the person making the report to choose the one that best suits the situation. After you submit your report or request to the correct channel, it will be reviewed and investigated, and appropriate action will be applied should the content prove violative of the laws or guidelines that the channel monitors for.<p /></dd><br />
@@ -75,4 +79,5 @@ description: Marketplace FAQ providing answers and resources for common question
   <dt>**DMCA:**</dt>
 
   <dd><p />If you believe that your own intellectual property rights have been infringed or violated by user-created accessories, clothing, bodies, or heads, you may submit a DMCA request via the [Rights Manager](../../production/publishing/rights-manager.md). Rights Manager handles infringement of any copyrights you either own or are authorized to report on behalf of. If you are not the rights holder or authorized representative, your request will not be processed. <p />For 3D accessories, clothing, bodies, or heads that may violate Roblox's Community Standards, please use the Report Abuse feature available on an item's catalog page or submit a report via [support ticket](www.roblox.com/support).<p /></dd><br />
+
 </dl>
