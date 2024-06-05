@@ -17,7 +17,7 @@ The following system specifications ensure that Studio runs smoothly:
 - **RAM** &ndash; 4 GB of system memory.
 - **Hard Disk** &ndash; At least 10 GB of available hard disk space after installation.
 - **Graphics Card** &ndash; A computer less than 5 years old with a dedicated video card or a laptop less than 3 years old with an integrated video card.
-- **Internet Access** &ndash; At least 4-8 MB/s to keep Studio up-to-date and save projects to your Roblox account.
+- **Internet Access** &ndash; At least 4-8 Mb/s to keep Studio up-to-date and save projects to your Roblox account.
 
 <figcaption>&sup1; When installing [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section) for Windows 10 or earlier, try the **Evergreen Standalone Installer** if the **Evergreen Bootstrapper** installation fails.</figcaption>
 
