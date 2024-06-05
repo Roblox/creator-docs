@@ -304,11 +304,13 @@ navigation:
         path: /projects/teleporting
       - title: Teams
         path: /players/teams
+      - title: In-Experience Tools
+        path: /players/tools
       - title: Leaderboards
         path: /players/leaderboards
-      - title: Tools
-        path: /players/tools
-      - title: UI
+      - title: Loading Screens
+        path: /players/loading-screens
+      - title: Player UI
         section:
           - title: Avatar Editor
             path: /players/avatar-editor
@@ -387,8 +389,6 @@ navigation:
         path: /ui/animation
       - title: Text Filtering
         path: /ui/text-filtering
-      - title: Loading Screens
-        path: /ui/customizing-loading-screens
   - title: Animation
     path: /animation/
     section:
@@ -417,12 +417,10 @@ navigation:
         section:
           - title: Overview
             path: /chat/in-experience-text-chat
-          - title: Customizing In-Experience Text Chat
+          - title: Customization
             path: /chat/customizing-in-experience-text-chat
           - title: Bubble Chat
             path: /chat/bubble-chat
-          - title: Migrating to In-Experience Text Chat
-            path: /chat/migrate-to-in-experience-text-chat
           - title: Legacy Chat System
             path: /chat/legacy/legacy-chat-system
   - title: Cloud Services

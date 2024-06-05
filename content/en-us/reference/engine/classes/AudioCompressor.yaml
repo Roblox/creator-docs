@@ -40,6 +40,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: AudioCompressor.Bypass
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
   - name: AudioCompressor.MakeupGain
     summary: |
       A gain value to be applied after compression.
