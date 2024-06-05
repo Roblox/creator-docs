@@ -453,10 +453,6 @@ functions:
     summary: |
       Returns a random number within the range provided.
     description: |
-      An interface to the simple pseudo-random generator function `rand`
-      provided by ANSI C. No guarantees can be given for its statistical
-      properties.
-
       When called without arguments, returns a uniform pseudo-random real number
       in the range of 0 to 1 (inclusive of 0 but exclusive of 1).
 
@@ -465,6 +461,8 @@ functions:
 
       When called with two integer numbers `m` and `n`, returns a uniform
       pseudo-random integer in the range of `m` to `n`, inclusive.
+
+      Internally, this uses a 32-bit PCG (Permuted Congruential Generator), which achieves excellent statistical performance. However, it is not suitable for cryptographic applications.
     parameters:
       - name: m
         type: number
