@@ -7,12 +7,17 @@ The MicroProfiler is an optimization tool available in Roblox Studio and the Rob
 
 ## Using The MicroProfiler
 
-To open the MicroProfiler interface, press <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>) in Studio or the client. When open, a menu bar is visible at the top of the game view. Under it, there is a moving bar graph which reflects the time used on each frame of the Task Scheduler as they pass – the most recent frames appear on the right, and flow to the left.
+To open the MicroProfiler interface, press <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>) in Studio or the client. When open, a menu bar is visible at the top of the game view. Under it, a moving bar graph shows the time used on each frame of the Task Scheduler. Frames flow to the left, with the most recent frames on the right.
 
 <img src="../../assets/optimization/microprofiler/1MicroProfiler-Frames.jpeg"
    width="50%" />
 
-The orange bars indicate the processing time each frame is taking. They should generally be around the middle of the graph, but while the game is running you may see the bars spike or increase in value. This indicates that more time was taken to perform some Task Scheduler process, usually because of an increased workload. For instance, creating a lot of moving parts puts more work on the physics simulation, and therefore more time is used to process motion and part contacts. The following image shows an example of a spike:
+The bars indicate the processing time for each frame:
+
+- Orange bars indicate "standard" frames where the **Jobs** time exceeds the **Render** time.
+- Blue bars indicate frames where the **Render** time exceeds the **Jobs** time. Hover over one of these frames, and you can see a positive value for **Waiting for Rendering Thread**. A large number of these frames indicates a rendering bottleneck.
+
+Bars should generally be around the middle of the graph, but you might see the bars spike or increase in value. Spikes indicate that more time was taken to perform some Task Scheduler process, usually because of an increased workload. For instance, creating a lot of moving parts puts more work on the physics simulation, and therefore more time is used to process motion and part contacts. The following image shows an example of a spike:
 
 <img src="../../assets/optimization/microprofiler/2MicroProfiler-Frames-Spike.jpeg"
    width="50%" />

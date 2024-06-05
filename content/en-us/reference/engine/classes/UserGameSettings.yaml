@@ -177,6 +177,23 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: UserGameSettings.HapticStrength
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Control
+    serialization:
+      can_load: true
+      can_save: true
   - name: UserGameSettings.HasEverUsedVR
     summary: ''
     description: ''

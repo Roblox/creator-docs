@@ -21,6 +21,21 @@ tags:
   - NotBrowsable
 deprecation_message: ''
 properties:
+  - name: AudioChorus.Bypass
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
   - name: AudioChorus.Depth
     summary: |
       Controls the maximum delay time of the copied streams in the chorus

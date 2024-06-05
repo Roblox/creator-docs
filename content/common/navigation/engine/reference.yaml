@@ -1300,6 +1300,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/LineHandleAdornment.yaml
         ignoreTranslation: true
+      - title: LinkingService
+        path: /reference/engine/classes/LinkingService
+        type: engineapi
+        source: /reference/engine/classes/LinkingService.yaml
+        ignoreTranslation: true
       - title: LocalizationService
         path: /reference/engine/classes/LocalizationService
         type: engineapi
@@ -4212,6 +4217,11 @@ navigation:
         path: /reference/engine/enums/MouseBehavior
         type: engineapi
         source: /reference/engine/enums/MouseBehavior.yaml
+        ignoreTranslation: true
+      - title: MoverConstraintRootBehaviorMode
+        path: /reference/engine/enums/MoverConstraintRootBehaviorMode
+        type: engineapi
+        source: /reference/engine/enums/MoverConstraintRootBehaviorMode.yaml
         ignoreTranslation: true
       - title: MoveState
         path: /reference/engine/enums/MoveState

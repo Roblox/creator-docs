@@ -1,5 +1,5 @@
 ---
-title: Customizing Loading Screens
+title: Loading Screens
 description: Explains the process of customizing the loading screen when users are connecting to your experience.
 ---
 

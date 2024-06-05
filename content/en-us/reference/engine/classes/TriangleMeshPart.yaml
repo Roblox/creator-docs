@@ -83,7 +83,8 @@ properties:
     description: ''
     code_samples: []
     type: Vector3
-    tags: []
+    tags:
+      - Hidden
     deprecation_message: ''
     security:
       read: RobloxSecurity
@@ -98,7 +99,8 @@ properties:
     description: ''
     code_samples: []
     type: Vector3
-    tags: []
+    tags:
+      - Hidden
     deprecation_message: ''
     security:
       read: RobloxSecurity
@@ -113,7 +115,8 @@ properties:
     description: ''
     code_samples: []
     type: Vector3
-    tags: []
+    tags:
+      - Hidden
     deprecation_message: ''
     security:
       read: RobloxSecurity
@@ -128,7 +131,8 @@ properties:
     description: ''
     code_samples: []
     type: float
-    tags: []
+    tags:
+      - Hidden
     deprecation_message: ''
     security:
       read: RobloxSecurity

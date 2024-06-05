@@ -555,6 +555,8 @@ To recreate the mist that moves outward and upward from the base of the main dro
       1. Set **Rotation** to `-20` to orient each particle to a slight degree.
       1. Set **Speed** to `0` to emit each particle 0 studs per second.
       1. Set **Drag** to `1` to have particles lose their speed with exponential decay.
+      1. Set **LightEmission** to `1` to use additive blending to render the particles with the colors behind them. This step also removes the black background from the texture itself.
+      1. Set **LightInfluence** to `0` to prevent the environmental light from affecting the color of particles.
 
       <video controls src="../../../assets/tutorials/creating-waterfalls/Mist-4.mp4" width="90%"></video>
 
