@@ -43,7 +43,7 @@ For this project, you'll create parts that when touched, trigger an animation fo
    local Players = game:GetService("Players")
 
    local player = Players.LocalPlayer
-   local character = player.Character or player.Character:Wait()
+   local character = player.Character or player.CharacterAdded:Wait()
    local humanoid = character:WaitForChild("Humanoid")
    local canTouch = false
 
