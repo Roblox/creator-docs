@@ -43,9 +43,9 @@ local partList = {
 print(partList[redPart])
 ```
 
- <Alert severity="warning">
- Use consistent data types for dictionary keys. Mixing data types, such as using both strings and variables for keys, can lead to inconsistent results when manipulating the array and confuse other coders.
- </Alert>
+<Alert severity="warning">
+Use consistent data types for dictionary keys. Mixing data types, such as using both strings and variables for keys, can lead to inconsistent results when manipulating the array and confuse other coders.
+</Alert>
 
 ## Creating a Dictionary
 
@@ -168,9 +168,9 @@ Dictionaries can interact with pre-existing variables declared in other parts of
 	end
 	```
 
-<Alert severity="warning">
-Since `name` was created as a variable, it can be accessed with the actual variable name. If `name` had been simply a key name, it would need to be accessed the same as other strings, playerPoints["name"]
-</Alert>
+	<Alert severity="warning">
+	Since `name` was created as a variable, it can be accessed with the actual variable name. If `name` had been simply a key name, it would need to be accessed the same as other strings, playerPoints["name"]
+	</Alert>
 
 5. Use `name` to print the name of the player and playerPoints[name] to print the value of the key matching the variable.
 
