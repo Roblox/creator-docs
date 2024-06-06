@@ -111,27 +111,27 @@ local function readFromQueue(count, allOrNothing, waitTimeout)
 	local ids = {}
 
 	-- loop through each queue
-		for i = 1, 4, 1 do
+	for i = 1, 4, 1 do
 		-- determine if this queue will read an extra item
-				local diff = i - readIndex
-				if diff < 0 then
-						diff += 4
-				end
+		local diff = i - readIndex
+		if diff < 0 then
+			diff += 4
+		end
 
-				local queue = queueArr[i]
+		local queue = queueArr[i]
 
 		-- read items from each queue
 		-- +1 items if matches extra read criteria
-				if diff < endIndex then
-						items[i], ids[i] = queue:ReadAsync(countPerQueue + 1, allOrNothing, waitTimeout)
-				else
-						items[i], ids[i] = queue:ReadAsync(countPerQueue, allOrNothing, waitTimeout)
-				end
+		if diff < endIndex then
+			items[i], ids[i] = queue:ReadAsync(countPerQueue + 1, allOrNothing,waitTimeout)
+		else
+			items[i], ids[i] = queue:ReadAsync(countPerQueue, allOrNothing,waitTimeout)
 		end
+	end
 
-		readIndex = rotateIndex(readIndex, count)
+	readIndex = rotateIndex(readIndex, count)
 
-		return items, ids
+	return items, ids
 end
 
 -- Create a local function that removes n items from the queue
