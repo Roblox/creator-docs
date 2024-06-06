@@ -56,7 +56,7 @@ local function getSortedMapBucket(itemKey)
 end
 
 -- Initialize player names with default value of 0
-for i,player in game.Players:GetChildren() do
+for i,player in game.Players:GetPlayers() do
 	local bucket = getSortedMapBucket(player)
 	bucket:SetAsync(player, 0, 600)
 end
@@ -151,7 +151,7 @@ end
 
 -- Write some code!
 
-for i,player in game.Players:GetChildren() do
+for i,player in game.Players:GetPlayers() do
 	addToQueue(player, 600, 0)
 end
 
