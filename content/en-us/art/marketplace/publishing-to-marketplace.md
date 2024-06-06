@@ -257,3 +257,7 @@ When first publishing your asset, select the **Publish Item** button at the end 
 You can disable the sale of a published asset by disabling the **On Sale** at the top of the Manage Item page.
 
 After enabling an item for sale, you can take the item off-sale by disabling the toggle. A publishing fee is not required to re-enable.
+
+<Alert severity = 'warning'>
+To permanently archive your asset, see [Archiving Assets](./moderation.md#archiving-assets).
+</Alert>

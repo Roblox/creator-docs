@@ -4,7 +4,7 @@ description: The R6 to R15 adapter enables R15 avatar characters to join your R6
 ---
 
 <Alert severity = 'warning'>
-This feature is only applicable to developers who manage an active experience that supports **R6** avatar characters.
+This feature is only applicable to developers who manage an active experience with **R6** avatar characters enabled.
 </Alert>
 
 The **R6 to R15 Adapter** allows R15 avatars to join your R6 experience. All avatars in the experience will still use the R6-like scale and movement systems. The adapter allows your experience to take advantage of modern R15 components, such as layered clothing and animatable heads, with minimal performance or gameplay impact to your experience.
@@ -27,7 +27,7 @@ The adapter parts perform the following:
 
 ## Enabling the R6 to R15 Adapter
 
-You can enable the R6 to R15 Adapter by setting the `Class.Workspace.AvatarUnificationMode` property in Workspace. At this time, the **Default** setting disables the `Class.Workspace.AvatarUnificationMode|AvatarUnificationMode`.
+You can enable the R6 to R15 Adapter by setting the `Class.Workspace.AvatarUnificationMode` property in Workspace. You can only access this property if **Avatar Type** is set to `R6` in your **Game Settings**. At this time, the **Default** setting disables the `Class.Workspace.AvatarUnificationMode|AvatarUnificationMode`.
 
 To enable the R6 to R15 Adapter:
 
