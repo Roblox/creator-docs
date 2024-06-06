@@ -34,13 +34,13 @@ Use a helper function to get the correct sorted map from an item key. This way, 
 
 ```lua title='Sharding a Sorted Map'
 -- Initialize the MemoryStore Service
-local memoryStore = game:GetService("MemoryStoreService")
+local MemoryStore = game:GetService("MemoryStoreService")
 
 -- Create your Sorted Map buckets
-local sm_AtoG = memoryStore:GetSortedMap("AtoG")
-local sm_HtoM = memoryStore:GetSortedMap("HtoM")
-local sm_NtoT = memoryStore:GetSortedMap("NtoT")
-local sm_UtoZ = memoryStore:GetSortedMap("UtoZ")
+local sm_AtoG = MemoryStore:GetSortedMap("AtoG")
+local sm_HtoM = MemoryStore:GetSortedMap("HtoM")
+local sm_NtoT = MemoryStore:GetSortedMap("NtoT")
+local sm_UtoZ = MemoryStore:GetSortedMap("UtoZ")
 
 -- Helper function to retrieve the correct bucket from the Item Key
 local function getSortedMapBucket(itemKey)
@@ -83,13 +83,13 @@ One solution is to use a revolving queue, which means creating multiple queues a
 
 ```lua title='Sharding a Queue'
 -- Initialize the MemoryStore Service
-local memoryStore = game:GetService("MemoryStoreService")
+local MemoryStore = game:GetService("MemoryStoreService")
 
 -- Create your Queues
-local q1 = memoryStore:GetQueue("q1")
-local q2 = memoryStore:GetQueue("q2")
-local q3 = memoryStore:GetQueue("q3")
-local q4 = memoryStore:GetQueue("q4")
+local q1 = MemoryStore:GetQueue("q1")
+local q2 = MemoryStore:GetQueue("q2")
+local q3 = MemoryStore:GetQueue("q3")
+local q4 = MemoryStore:GetQueue("q4")
 
 -- Put the Queues in an Array
 local queueArr = { q1, q2, q3, q4 }
