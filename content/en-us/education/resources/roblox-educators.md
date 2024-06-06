@@ -141,6 +141,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://code4kidz.com.br/" title="Code 4 Kidz Escola de Programação">Code 4 Kidz Escola de Programação</a><br/>
 <a href="https://codekingdoms.com/roblox/" title="Code Kingdoms">Code Kingdoms</a><br/>
 <a href="https://www.codeup.pt" title="Code.Up">Code.Up</a><br/>
+<a href="https://www.playtolabs.com/online-coding-classes-for-kids" title="Playto Labs">Playto Labs</a><br/>
 <a href="https://www.codingwithkids.com/#!/camp?desc=RB&amp;s=2019_SUMMER" title="Coding with Kids">Coding with Kids</a><br/>
 <a href="https://computerwisekids.com/" title="Computer Wise Kids">Computer Wise Kids</a><br/>
 <a href="https://www.conmasfuturo.com/" title="ConMasFuturo">ConMasFuturo</a><br/>
