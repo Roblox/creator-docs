@@ -106,7 +106,7 @@ end
 -- Create a local function that reads n items from the queue
 local function readFromQueue(count, allOrNothing, waitTimeout)
 	local endIndex = count % 4
-  local countPerQueue = math.floor(count / 4)
+  local countPerQueue = count // 4
 	local items = {}
 	local ids = {}
 
