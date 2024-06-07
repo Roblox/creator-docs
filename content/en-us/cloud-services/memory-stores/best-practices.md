@@ -34,7 +34,7 @@ Use a helper function to get the correct sorted map from an item key. This way, 
 
 ```lua title='Sharding a Sorted Map'
 -- Initialize the MemoryStore Service
-local MemoryStore = game:GetService("MemoryStoreService")
+local MemoryStoreService = game:GetService("MemoryStoreService")
 
 -- Create your Sorted Map buckets
 local sm_AtoG = MemoryStore:GetSortedMap("AtoG")
