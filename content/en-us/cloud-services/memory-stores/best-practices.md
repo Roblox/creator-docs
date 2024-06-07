@@ -83,7 +83,7 @@ One solution is to use a revolving queue, which means creating multiple queues a
 
 ```lua title='Sharding a Queue'
 -- Initialize the MemoryStore Service
-local MemoryStore = game:GetService("MemoryStoreService")
+local MemoryStoreService = game:GetService("MemoryStoreService")
 
 -- Create your Queues
 local q1 = MemoryStore:GetQueue("q1")
