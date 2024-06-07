@@ -95,7 +95,7 @@ Use a module function to take information from the correct end state, whether th
 
    `FoundWinner`
 
-   - A variable for the winner using p`layerManager.getWinnerName()`.
+   - A variable for the winner using `playerManager.getWinnerName()`.
    - Update `statusToReturn` with a string announcing the winner.
 
    `TimerUp`
