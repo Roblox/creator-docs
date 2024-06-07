@@ -249,7 +249,7 @@ Whenever a player touches the part, the script will need to know the current col
    	local currentColor = pointPart.Color
 
    	local playerStats = player:WaitForChild("leaderstats")
-   	local playerPoints= playerStats:WaitForChild("Points")
+   	local playerPoints = playerStats:WaitForChild("Points")
    end
    ```
 
@@ -264,7 +264,7 @@ Next, you'll use if and elseif to give or subtract points depending on the color
    	local currentColor = pointPart.Color
 
    	local playerStats = player:WaitForChild("leaderstats")
-   	local playerPoints= playerStats:WaitForChild("Points")
+   	local playerPoints = playerStats:WaitForChild("Points")
 
    	if currentColor == blue then
    		playerPoints.Value += smallPoints
