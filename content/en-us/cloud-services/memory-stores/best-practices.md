@@ -86,10 +86,10 @@ One solution is to use a revolving queue, which means creating multiple queues a
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 -- Create your Queues
-local q1 = MemoryStore:GetQueue("q1")
-local q2 = MemoryStore:GetQueue("q2")
-local q3 = MemoryStore:GetQueue("q3")
-local q4 = MemoryStore:GetQueue("q4")
+local q1 = MemoryStoreService:GetQueue("q1")
+local q2 = MemoryStoreService:GetQueue("q2")
+local q3 = MemoryStoreService:GetQueue("q3")
+local q4 = MemoryStoreService:GetQueue("q4")
 
 -- Put the Queues in an Array
 local queueArr = { q1, q2, q3, q4 }
