@@ -37,10 +37,10 @@ Use a helper function to get the correct sorted map from an item key. This way, 
 local MemoryStoreService = game:GetService("MemoryStoreService")
 
 -- Create your Sorted Map buckets
-local sm_AtoG = MemoryStore:GetSortedMap("AtoG")
-local sm_HtoM = MemoryStore:GetSortedMap("HtoM")
-local sm_NtoT = MemoryStore:GetSortedMap("NtoT")
-local sm_UtoZ = MemoryStore:GetSortedMap("UtoZ")
+local sm_AtoG = MemoryStoreService:GetSortedMap("AtoG")
+local sm_HtoM = MemoryStoreService:GetSortedMap("HtoM")
+local sm_NtoT = MemoryStoreService:GetSortedMap("NtoT")
+local sm_UtoZ = MemoryStoreService:GetSortedMap("UtoZ")
 
 -- Helper function to retrieve the correct bucket from the Item Key
 local function getSortedMapBucket(itemKey)
