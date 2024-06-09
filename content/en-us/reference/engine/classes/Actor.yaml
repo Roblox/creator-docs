@@ -24,7 +24,7 @@ methods:
       Binds a Luau callback to a message with the specified topic.
     description: |
       This method is used to bind a Luau callback to a message with the
-      specified topic. When a message is sent (using `Actor/SendMessage`) to the
+      specified topic. When a message is sent (using`Class.Actor:SendMessage()|SendMessage`) to the
       topic specified the provided callback will be called in a _serial_
       execution context.
 
@@ -68,7 +68,7 @@ methods:
       Binds a Luau callback to a message with the specified topic.
     description: |
       This method is used to bind a Luau callback to a message with the
-      specified topic. When a message is sent (using `Actor/SendMessage`) to the
+      specified topic. When a message is sent (using `Class.Actor:SendMessage()|SendMessage`) to the
       topic specified the provided callback will be called in a _parallel_
       execution context.
 
