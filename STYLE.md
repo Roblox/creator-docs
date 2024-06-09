@@ -27,7 +27,7 @@ We follow the [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-gu
   - **WORSE**: The list of players is returned.
   - **BETTER**: The server returns the list of players.
 
-- The terms "we" and "our" implies Roblox and is usually reserved for recommendations.
+- The terms "we" and "our" imply Roblox and are usually reserved for recommendations.
 
   - **BAD**: Now that we're happy with the terrain, we can start placing our models.
   - **BETTER**: When you're satisfied with the terrain, begin placing your models.
