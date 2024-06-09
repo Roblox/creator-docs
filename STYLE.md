@@ -62,7 +62,7 @@ We follow the [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-gu
   - **BAD**: Click and drag to grab the signpost. Then select the **Color** button.
   - **BETTER**: Select the signpost and click the **Color** button.
 
-- Spell out one (1) through nine (9). Start using numerals at 10. If a number needs a unit (GB, pounds, millimeters, kg, celsius, etc.), always use numerals, even if the number if smaller than 10.
+- Spell out one (1) through nine (9). Start using numerals at 10. If a number needs a unit (GB, pounds, millimeters, kg, celsius, etc.), always use numerals, even if the number is smaller than 10.
 
   - **BAD**: 3 people looked for thirteen files on a six GB hard drive.
   - **BETTER**: Three people looked for 13 files on a 6 GB hard drive.
