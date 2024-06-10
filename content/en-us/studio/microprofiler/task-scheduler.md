@@ -21,7 +21,7 @@ A **frame** is a unit of game logic where work is done. Each frame should perfor
 The most direct way to add frame-by-frame game tasks is through the following members of `Class.RunService`:
 
 - `Class.RunService:BindToRenderStep()`
-- `Class.RunServer.PreAnimation`
+- `Class.RunService.PreAnimation`
 - `Class.RunService.PreRender`
 - `Class.RunService.PreSimulation`
 - `Class.RunService.PostSimulation`
