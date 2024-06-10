@@ -469,7 +469,15 @@ To ensure that avatar sizes are visually consistent, you must standardize body p
 
 ## Attachments
 
-Attachments are points on the humanoid model where various accessories can be attached or equipped. In general, attachment points should halfway overlap the character model's mesh part.
+Attachments are points on the humanoid model where rigid accessories attach. Like many [character components](./index.md#components-of-an-avatar), attachment points are set up in third-party modeling software and imported as `Class.Attachment` objects.
+
+The 3D Importer automatically recognizes and converts mesh objects as attachment points if the objects include the affix `\_Att` and follow the naming conventions below. This only applies when importing meshes with caging data, such bodies. Check out examples of this implementation in any of the [downloadable reference models](../../avatar/resources.md#references).
+
+Generally, when placing attachment points, position them so they overlap halfway with the character model's mesh part.
+
+  <Alert severity = 'info'>
+
+  </Alert>
 
   <GridContainer numColumns="2">
     <figure>
@@ -482,7 +490,7 @@ Attachments are points on the humanoid model where various accessories can be at
     </figure>
   </GridContainer>
 
-Each attachments must also follow a specific naming convention and positional consistency:
+Attachments must follow a specific naming convention and positional consistency:
 
 <table>
 <thead>

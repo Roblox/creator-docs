@@ -13,26 +13,5 @@ tags:
 deprecation_message: ''
 properties: []
 methods: []
-events:
-  - name: GenericChallengeService.ChallengeRequiredEvent
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: challengeID
-        type: string
-        default:
-        summary: ''
-      - name: challengeType
-        type: string
-        default:
-        summary: ''
-      - name: challengeMetadata
-        type: string
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+events: []
 callbacks: []

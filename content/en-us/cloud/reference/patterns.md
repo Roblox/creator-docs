@@ -45,6 +45,61 @@ properly. Altering any filter parameter results in a 400 error.
 If your request includes a body, be sure to include the `Content-Length` and
 `Content-Type` headers. Most HTTP clients add these headers automatically.
 
+## Long Running Operations
+
+Some methods return an `Operation` object that represents a long-running request
+that returns an asynchronous response later. The object contains the following
+fields:
+
+- **path** - The endpoint path to call to poll for the request's completion.
+  Append the path to the original base URL of the resource method.
+- **done** - A boolean value that represents whether or not the operation has completed.
+- **response** - The response object. This field is empty until the `done` field has a value of `true`.
+- **metadata** - Custom metadata specific to the request being made.
+
+```json title="Example Operation Object"
+{
+  "path": "v1/assets/12345/operation/xyz",
+  "done": true,
+  "response": {
+    "value1": "myValue",
+    "value2": 1234
+  },
+  "metadata": {
+    "metadata1": "string",
+    "metadata2": 5678
+  }
+}
+```
+
+Use the `Operation` object's path to poll for when the resource is ready. A good strategy is to use exponential backoff. For example, you might poll immediately, then after one second, two seconds, four seconds, etc.
+
+```python
+def PollForResults(operationPath):
+    currentRetries = 0
+    maxRetries = 10
+    retryPollingDelay = 1
+    retryPollingMultiplier = 2
+    while (currentRetries < maxRetries):
+        # No delay on the first check
+        if (currentRetries == 0):
+            results = GetOperation(operationPath)
+        # Retry logic for subsequent checks
+        else:
+            time.sleep(retryPollingDelay)
+            results = GetOperation(operationPath)
+            # Exponential backoff
+            retryPollingDelay *= retryPollingMultiplier
+        # Check for results and return if they exist
+        if (results.status_code != 200 or results.json()[doneJSONKey]):
+            return results
+        # Otherwise, increment the retry count
+        else:
+           currentRetries += 1
+```
+
+For a more complete code sample that uses a fixed retry interval rather than exponential backoff, see [Polling for Results](../open-cloud/instance.md#polling-for-results).
+
 ## Filtering
 
 Some methods let you filter the response by including a `filter` parameter in
@@ -133,32 +188,5 @@ You can't combine type and ID fields in the same filter.
   specified IDs:
 
   `filter=assetIds=1,2,3,4;badgeIds=1,2,3,4;gamePassIds=1,2,3,4;privateServerIds=1,2,3,4`
-
-## Long Running Operations
-
-Some methods return an `Operation` object that represents a long-running request
-that returns an asynchronous response later. The object contains the following
-fields:
-
-- **path** - The endpoint path to call to poll for the request's completion.
-  Append the path to the original base URL of the resource method.
-- **done** - A boolean value that represents whether or not the operation has completed.
-- **response** - The response object. This field is empty until the `done` field has a value of `true`.
-- **metadata** - Custom metadata specific to the request being made.
-
-```json title="Example Operation Object"
-{
-  "path": "v1/assets/12345/operation/xyz",
-  "done": true,
-  "response": {
-    "value1": "myValue",
-    "value2": 1234
-  },
-  "metadata": {
-    "metadata1": "string",
-    "metadata2": 5678
-  }
-}
-```
 
 [1]: /cloud/reference/InventoryItem

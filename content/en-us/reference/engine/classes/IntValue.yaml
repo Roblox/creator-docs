@@ -5,19 +5,29 @@ memory_category: Instances
 summary: |
   A container object for a single integer.
 description: |
-  An IntValue is an object that stores a single signed 64-bit integer. Integers
-  do not include decimal points. The highest value that can be stored is 2^63-1,
-  or around 9.2 quintillion. Attempting to store numbers larger than this may
-  cause [integer overflow][1]. The lowest value that can be stored is -2^63, or
-  about negative 9.2 quintillion. For values outside of this range, use a
-  NumberValue instead. Like all "-Value" objects, this single value is stored in
-  the Value property. The `Class.IntValue.Changed` event for this (and other
-  objects like it) will run with the new value being stored in the object,
-  instead of a string representing the property being changed.
+  An **IntValue** stores a single signed
+  [64-bit integer](../../../luau/numbers.md#int64). The highest allowed value is
+  2^63-1 or around 9.2 quintillion (9.2^18); attempting to store larger numbers
+  will cause [integer overflow](https://en.wikipedia.org/wiki/Integer_overflow).
+  The lowest allowed value is -2^63 or about -9.2 quintillion. Practically,
+  however, working with integers larger than 2^53 (9.0^15) will cause loss of
+  precision since Luau uses double-precision floating-point to store numbers.
 
-  [1]: https://en.wikipedia.org/wiki/Integer_overflow
+  Note that it's possible to store values between 2^53 and 2^63-1 via the
+  [Properties](../../../studio/properties.md) window since it uses strings to
+  pass data to the engine, but manipulating large values via Luau scripts will
+  result in loss of precision and rounding as mentioned above.
+
+  The main advantage of using **IntValue** lies in its rounding of values to the
+  nearest integer, with halfway cases rounded away from 0. For values outside of
+  this range, use a `Class.NumberValue` instead. Like all `Class.ValueBase`
+  objects, this single value is stored in the `Class.ValueBase.Value|Value`
+  property.
+
+  The `Class.IntValue.Changed|Changed` event for this (and other objects like
+  it) will run with the new value being stored in the object, instead of a
+  string representing the property being changed.
 code_samples:
-  - IntValue-Limits-and-Integer-Overflow
 inherits:
   - ValueBase
 tags: []
@@ -44,20 +54,13 @@ methods: []
 events:
   - name: IntValue.Changed
     summary: |
-      Fired whenever the `Class.IntValue.Value` of the IntValue is changed.
+      Fires whenever the `Class.IntValue.Value` is changed.
     description: |
-      The Changed event fires whenever the `Class.IntValue.Value` of the
-      `Class.IntValue` is changed. It will run with the new value being stored
-      in the argument object, instead of a string representing the property
-      being changed.
+      This event fires whenever the `Class.IntValue.Value` is changed. It will
+      run with the new value being stored in the argument object, instead of a
+      string representing the property being changed.
 
-      This event, like other changed events, can be used to track when an
-      IntValue changes and to track the different values that it may change to.
-
-      For instance, this may be useful in games that rely on IntValues to track
-      game states and values, such as item IDs.
-
-      Equivalent changed events exist for similar objects, such as
+      Equivalent change events exist for similar objects such as
       `Class.NumberValue` and `Class.StringValue`, depending on what object type
       best suits the need.
     code_samples:

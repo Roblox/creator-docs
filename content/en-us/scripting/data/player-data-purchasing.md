@@ -42,7 +42,7 @@ This code is provided for reference purposes only and has not proven itself over
 
 Roblox has reference code to assist you with designing and building player data systems. The remainder of this page examines background, implementation details, and general caveats.
 
-<a href="https://create.roblox.com/marketplace/asset/14376223840/Purchase-Handling)">
+<a href="https://create.roblox.com/store/asset/14376223840/Purchase-Handling)">
   <Button variant="contained">Get the Code</Button>
 </a><br />
 

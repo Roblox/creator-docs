@@ -3,6 +3,8 @@ title: Environmental Terrain
 description: Explore how to generate and sculpt realistic terrain environments such as mountains, bodies of water, grass-covered hills, or a flat desert.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 Studio's [Terrain Editor](../studio/terrain-editor.md) lets you generate and sculpt detailed and realistic terrain environments such as mountains, bodies of water, [grass-covered hills](#animated-grass), or a flat desert. Terrain is made up of grids of **voxels** which are 4&times;4&times;4 stud regions in the 3D world with a set [material](#terrain-materials).
 
 <img src="../assets/modeling/terrain/Showcase.jpg" width="100%" alt="Desert terrain with mountains in the distance" />
@@ -179,11 +181,9 @@ To add animated grass to the **Grass** material:
 
 3. Adjust the grass length by entering a value between 0.1 and 1 for the **GrassLength** property.
 
-   <img src="../assets/studio/properties/Terrain-GrassLength.png" width="320" alt="GrassLength property of Terrain object in Properties window of Studio" />
+   <BetaAlert betaName="Grass Length Customization" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
 
-    <Alert severity="success">
-   This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Grass Length Customization**.
-   </Alert>
+   <img src="../assets/studio/properties/Terrain-GrassLength.png" width="320" alt="GrassLength property of Terrain object in Properties window of Studio" />
 
    <Tabs>
    <TabItem label="0.1">
@@ -365,7 +365,7 @@ The following table describes color mapping to a corresponding material. If your
     <td><ColorSwatch value="rgb(127,102,63)" /></td>
   </tr>
   <tr>
-    <td>CrackedLava</td>
+    <td>Cracked Lava</td>
     <td>[232, 156, 74]</td>
 		<td>E89C4A</td>
     <td><ColorSwatch value="rgb(232,156,74)" /></td>
@@ -395,7 +395,7 @@ The following table describes color mapping to a corresponding material. If your
     <td><ColorSwatch value="rgb(129,194,224)" /></td>
   </tr>
   <tr>
-    <td>LeafyGrass</td>
+    <td>Leafy Grass</td>
     <td>[115, 132, 74]</td>
 		<td>73844A</td>
     <td><ColorSwatch value="rgb(115,132,74)" /></td>
@@ -455,7 +455,7 @@ The following table describes color mapping to a corresponding material. If your
     <td><ColorSwatch value="rgb(195,199,218)" /></td>
   </tr>
   <tr>
-    <td>WoodPlanks</td>
+    <td>Wood Planks</td>
     <td>[139, 109, 79]</td>
 		<td>8B6D4F</td>
     <td><ColorSwatch value="rgb(139,109,79)" /></td>

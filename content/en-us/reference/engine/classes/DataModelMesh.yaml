@@ -138,31 +138,15 @@ properties:
       Changes the hue of a mesh's texture, used with `Class.FileMesh.TextureId`.
     description: |
       **VertexColor** determines the hue change of the
-      `Class.FileMesh.TextureId|Texture` of a `Class.FileMesh`.
-
-      The image below shows two versions of the hat
-      ["Ozzy's Formal Top Hat"](https://www.roblox.com/catalog/3690516671/Ozzys-Formal-Top-Hat).
-      The left has a default VertexColor of (1, 1, 1), or white. The right has a
-      VertexColor of (0, 0, 1), or blue. The RGB colors on the texture of the
-      red and white hat are multiplied with that of the VertexColor's XYZ
-      components.
-
-      <img src="../../../assets/legacy/DataModelMesh.VertexColor.jpg" />
-
-      It should be noted that this property is a `Datatype.Vector3` rather than
-      a `Datatype.Color3`. To convert, use the following function:
-
-      ```lua
-      local function color3ToVector3(c3)
-         return Vector3.new(c3.r, c3.g, c3.b)
-      end
-      ```
+      `Class.FileMesh.TextureId|Texture` of a `Class.FileMesh`. Note that this
+      property is a `Datatype.Vector3` rather than a `Datatype.Color3`; to
+      convert, use the `Datatype.Color3.R`, `Datatype.Color3.G`, and
+      `Datatype.Color3.B` properties.
 
       Although this property allows basic modification of a texture, changing a
       texture entirely provides more control. See `Class.MeshPart` for more
       details.
     code_samples:
-      - Mesh-VertexColor
     type: Vector3
     tags: []
     deprecation_message: ''

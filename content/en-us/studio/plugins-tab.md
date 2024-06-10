@@ -9,7 +9,7 @@ The **Plugins** tab contains tools for managing [plugins](../studio/plugins.md),
 
 ## Studio Plugins
 
-The **Manage Plugins** button lets you enable/disable, update, or uninstall plugins you've [installed](../production/publishing/creator-store.md#finding-assets) from the Creator Store, while the
+The **Manage Plugins** button lets you enable/disable, update, or uninstall plugins you've [installed](../production/creator-store.md#finding-assets) from the Creator Store, while the
 **Plugins&nbsp;Folder** button opens the local system folder containing plugins you've [created](../studio/plugins.md) or manually installed.
 
 <img src="../assets/studio/general/Plugins-Tab-Tools.png" width="800" alt="Plugin management buttons indicated in Plugins tab" />
@@ -19,12 +19,6 @@ The **Manage Plugins** button lets you enable/disable, update, or uninstall plug
 The localization **Tools** window lets you playtest in various languages, download CSV localization tables, and upload modified CSV tables. For more information, see [Localization](../production/localization/index.md).
 
 <img src="../assets/studio/general/Plugins-Tab-Localization-Tools.png" width="800" alt="Localization tools button indicated in Plugins tab" />
-
-## Avatar Importer
-
-The **Avatar Importer** plugin lets you import avatar rigs and custom rigs. For more information, see [Rigging](../art/modeling/rigging.md).
-
-<img src="../assets/studio/general/Plugins-Tab-Avatar-Importer.png" width="800" alt="Avatar Importer button indicated in Plugins tab" />
 
 ## View Sounds
 

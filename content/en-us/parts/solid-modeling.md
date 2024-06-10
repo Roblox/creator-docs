@@ -203,8 +203,8 @@ end
 
 -- Destroy original parts which remain intact after operation
 mainPart:Destroy()
-for i = 1, #otherParts do
-	otherParts[i]:Destroy()
+for _, part in otherParts do
+	part:Destroy()
 end
 ```
 
@@ -229,8 +229,8 @@ end
 
 -- Destroy original parts which remain intact after operation
 mainPart:Destroy()
-for i = 1, #otherParts do
-	otherParts[i]:Destroy()
+for _, part in otherParts do
+	part:Destroy()
 end
 ```
 
@@ -255,7 +255,7 @@ end
 
 -- Destroy original parts which remain intact after operation
 mainPart:Destroy()
-for i = 1, #otherParts do
-	otherParts[i]:Destroy()
+for _, part in otherParts do
+	part:Destroy()
 end
 ```

@@ -14,10 +14,10 @@ deprecation_message: ''
 items:
   - name: Overlay
     summary: |
-      Overlays the `Class.SurfaceAppearance.ColorMap` on top of the underlying
-      part color based on the map's alpha channel.
+      Overlays the `Class.SurfaceAppearance.ColorMap|ColorMap` on top of the
+      underlying part color based on the map's alpha channel.
 
-      ![AlphaMode OverLay](/assets/legacy/fern-overlay.png)
+      <img src="/assets/engine-api/enums/AlphaMode/Fern-Overlay.png" width="512" />
     value: 0
     tags: []
     deprecation_message: ''
@@ -26,7 +26,7 @@ items:
       Uses the `Class.SurfaceAppearance.ColorMap|ColorMap` alpha channel to
       control the transparency of the surface.
 
-      ![AlphaMode Transparency](/assets/legacy/fern-cutout.png).
+      <img src="/assets/engine-api/enums/AlphaMode/Fern-Cutout.png" width="512" />
     value: 1
     tags: []
     deprecation_message: ''

@@ -73,7 +73,6 @@ methods:
         default: 0
         summary: |
           **(Optional)** Maximum possible number of items that can be returned.
-          The default is 50.
       - name: cursor
         type: string
         default: ''
@@ -125,17 +124,17 @@ methods:
         type: int64
         default: 0
         summary: |
-          Date after which the versions should be listed.
+          Unix timestamp in milliseconds after which the versions should be listed.
       - name: maxDate
         type: int64
         default: 0
         summary: |
-          Date up to which the versions should be listed.
+          Unix timestamp in milliseconds up to which the versions should be listed.
       - name: pageSize
         type: int
         default: 0
         summary: |
-          Number of items to be returned in each page. By default is 1024.
+          Number of items to be returned in each page.
     returns:
       - type: DataStoreVersionPages
         summary: |

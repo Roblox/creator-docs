@@ -3,7 +3,7 @@ title: Monetization
 description: Monetization is a part of Roblox's overall structure to provide value to creators.
 ---
 
-Monetization is a part of Roblox's overall structure to provide value to creators. There are several different approaches to monetize your content, including utilizing [subscriptions](#subscriptions), charging an [access fee](#paid-access), providing [items or abilities that users can purchase](#developer-products), offering [private servers](#private-servers) for users to play just with friends, and [selling plugins](../publishing/selling-on-the-creator-store.md) to other creators on the Creator Store.
+Monetization is a part of Roblox's overall structure to provide value to creators. There are several different approaches to monetize your content, including utilizing [subscriptions](#subscriptions), charging an [access fee](#paid-access), providing [items or abilities that users can purchase](#developer-products), offering [private servers](#private-servers) for users to play just with friends, and [selling plugins](../selling-on-creator-store.md) to other creators on the Creator Store.
 
 If you choose to offer purchasable content, Roblox doesn't automatically record product or purchase information. To prevent data loss, you must carefully store this data using `Class.DataStoreService` or another data storage service hosted outside of Roblox.
 
@@ -122,7 +122,7 @@ You'll receive a [commission](../../art/marketplace/marketplace-fees-and-commiss
 
 ### Plugins
 
-A [plugin](../../studio/plugins.md) is an extension that adds additional functionality to Studio. You can offer them to other creators on the [Creator Store](../../production/publishing/creator-store.md) for free, or you can sell them for **United States Dollars**, with a minumum price of $4.99. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins, see [Selling on the Creator Store](../publishing/selling-on-the-creator-store.md).
+A [plugin](../../studio/plugins.md) is an extension that adds additional functionality to Studio. You can offer them to other creators on the [Creator Store](../../production/creator-store.md) for free, or you can sell them for **United States Dollars** (the minimum price is $4.99). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins, see [Selling on the Creator Store](../selling-on-creator-store.md).
 
 <Alert severity="warning">
    There is a 30 day escrow hold for each purchase. Roblox holds your share of the sale for 30 days, starting from the date of sale.

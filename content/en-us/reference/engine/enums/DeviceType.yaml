@@ -6,7 +6,7 @@ description: |
   The DeviceType Enum is used to determine the category of devices that a client
   belongs to.
 
-  Currently this can only be used in `Class.CoreScript`s.
+  Currently this can only be used in `Class.CoreScript|CoreScripts`.
 code_samples:
 tags: []
 deprecation_message: ''

@@ -98,7 +98,7 @@ OnTouch is called every time the speed boost is touched. Every step or slightest
 1. After applying the boost, set the part's CanTouch property to false. Playtest and make sure the boost only applies once.
 
    ```lua title="Disables the speed boost"
-   local speedBoost= script.Parent
+   local speedBoost = script.Parent
 
    local function onTouch(otherPart)
      local character = otherPart.Parent
@@ -117,7 +117,7 @@ OnTouch is called every time the speed boost is touched. Every step or slightest
 2. Use `task.wait(1)` to pause the script for one second, then set CanTouch to true. Playtest and make sure the speed boost can be reapplied after one second.
 
    ```lua title="Finished script"
-   local speedBoost= script.Parent
+   local speedBoost = script.Parent
 
    local function onTouch(otherPart)
      local character = otherPart.Parent

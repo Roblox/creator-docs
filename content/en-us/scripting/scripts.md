@@ -176,7 +176,7 @@ local Switch = require(ReplicatedStorage:WaitForChild("Switch"))
 
 Switch.Changed:Connect(function(newState)
 	print("Switch state is now", newState)
-end
+end)
 
 -- Test the flipping a few times
 task.wait(1)
@@ -241,7 +241,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local remoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
 remoteEvent.OnServerEvent:Connect(function(player, id, ...)
 	-- Finding every bindable event that matches the id of the received remote event
-	for _, signal in next, networkSignalList do
+	for _, signal in networkSignalList do
 		if signal.id == id then
 			signal.bindableEvent:Fire(player, ...)
 		end

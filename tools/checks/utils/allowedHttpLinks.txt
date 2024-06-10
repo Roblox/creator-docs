@@ -449,12 +449,19 @@ https://www.youtube-nocookie.com/embed/swQW2VS9ZMA
 https://www.youtube-nocookie.com/embed/zi0hIuPDyWc
 https://www.youtube-nocookie.com/embed/nwShvDmFHWc
 https://www.youtube-nocookie.com/embed/eqQyFL7KnmA
+https://www.youtube-nocookie.com/embed/V-SDTfxcIF8
+https://www.youtube-nocookie.com/embed/4P79zbwU9D8
+https://www.youtube-nocookie.com/embed/JVjkzGIgoak
+https://www.youtube-nocookie.com/embed/DKzFkn7q8MQ
 https://www.youtube.com/c/Disobeyedcrab
 https://www.youtube.com/c/NatalieClabo
 https://www.youtube.com/c/SpooksHD
 https://www.youtube.com/channel/UC4S7REVGs6bt9tfBhV7AKhA
 https://www.youtube.com/channel/UCLkSx-YvsK7QwEsrPIj0trg
 https://www.youtube.com/channel/UCp1R0TBvgM7gj0rwTYULmSA
+https://www.youtube.com/embed/FfvEezx9yZw
+https://www.youtube.com/embed/iub8w55181k
+https://www.youtube.com/embed/Kt5CeFGqdoM
 https://www.youtube.com/watch?list=PLHqz-wcqDQIEMMuXadwy90YxN2Qb4SrXT&time_continue=5&v=TWj78n4ZuMY&feature=emb_logo
 https://www.youtube.com/watch?v=-gIL6VZ-bkE
 https://www.youtube.com/watch?v=0fAhhoXK12o
@@ -507,3 +514,6 @@ https://www.vim.org/
 https://github.com/JohnnyMorganz/StyLua
 https://github.com/NightrainsRbx/RobloxLsp
 https://github.com/JohnnyMorganz/luau-lsp
+https://x.com
+https://x.com/RobloxEdu
+https://x.com/Roblox

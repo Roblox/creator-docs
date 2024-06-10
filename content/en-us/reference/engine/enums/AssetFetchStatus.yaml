@@ -15,7 +15,7 @@ items:
   - name: Failure
     value: 1
     summary: |
-      The asset failed to load successfully. Subsequent attempts are likely the
+      The asset failed to load successfully. Subsequent attempts are likely to
       fail; there may be something wrong with the `Datatype.Content|Content`
       string.
     tags: []

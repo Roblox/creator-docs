@@ -64,6 +64,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: SurfaceAppearance.Color
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Color3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
   - name: SurfaceAppearance.ColorMap
     summary: |
       Determines the color and opacity of the surface.

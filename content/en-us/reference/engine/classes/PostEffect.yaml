@@ -8,7 +8,7 @@ description: |
   PostEffect is an abstract base class for post-processing effects, such as
   `Class.BloomEffect` and `Class.ColorCorrectionEffect`. They change how the
   world looks **after** it has been rendered. They do not affect
-  `Class.GuiObject`s. Objects of this kind should be parented to the
+  `Class.GuiObject|GuiObjects`. Objects of this kind should be parented to the
   `Class.Lighting` or the `Class.Workspace.CurrentCamera` in order to work.
 
   It should also be noted that some post-processing effects will work

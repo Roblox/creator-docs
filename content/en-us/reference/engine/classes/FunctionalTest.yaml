@@ -3,8 +3,7 @@ type: class
 category:
 memory_category: Instances
 summary: ''
-description: |
-  Deprecated. Use TestService instead
+description: ''
 code_samples:
 inherits:
   - Instance

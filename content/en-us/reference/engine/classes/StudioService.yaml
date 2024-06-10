@@ -47,7 +47,7 @@ properties:
       local function onActiveScriptChanged(newActiveScript)
       	if newActiveScript ~= activeScript then
       		local deltaTime = os.time() - startTime
-      		print(("You edited %s for %d:%2.d"):format(activeScript.Name, math.floor(deltaTime / 60), deltaTime % 60))
+      		print(("You edited %s for %d:%2.d"):format(activeScript.Name, deltaTime // 60, deltaTime % 60))
       	end
       	startTime = os.time()
       	activeScript = newActiveScript
@@ -153,6 +153,21 @@ properties:
     serialization:
       can_load: false
       can_save: false
+  - name: StudioService.Secrets
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
   - name: StudioService.ShowConstraintDetails
     summary: ''
     description: ''

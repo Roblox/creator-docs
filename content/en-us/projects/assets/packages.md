@@ -47,7 +47,7 @@ You can create a package from any single object or any single parent and childre
 
 To insert a package which doesn't already exist in the current place, you must **initially** insert it from the [Toolbox](../../projects/assets/toolbox.md) under these guidelines:
 
-- From **Inventory** &rarr; **My Packages** for packages that you've published or obtained from the [Creator Store](../../production/publishing/creator-store.md).
+- From **Inventory** &rarr; **My Packages** for packages that you've published or obtained from the [Creator Store](../../production/creator-store.md).
 - From **Creations** &rarr; **Group Packages** for packages published by members of your [group](../../projects/groups.md) (including yourself).
 
 <GridContainer numColumns="2">
@@ -245,8 +245,6 @@ If desired, you can share packages with friends or grant access to specific user
      </table>
 
    - For a **user-owned** package, search for a friend through the search field, click their avatar/username, and choose a permission level.
-
-      <img src="../../assets/studio/collaboration/Collaborators-User-Permission-Edit.png" alt="A friend tile with the Edit dropdown menu highlighted." width="700" />
 
      <table>
      <thead>

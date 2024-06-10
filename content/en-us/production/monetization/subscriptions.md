@@ -58,7 +58,7 @@ Before you can create a subscription, you must be phone or [ID verified](../publ
 8. Double-check the details and click **Create**.
 
 <Alert severity="warning">
-   After creating your subscription, you can't make changes to anything but the cover image.
+   After creating your subscription, you can't make changes to anything but the cover image and description.
 </Alert>
 
 ### Activating Subscriptions
@@ -81,7 +81,7 @@ You can edit a subscription's image, description, or state. If you want to edit 
 
 ### Changing Image
 
-To update a subcription's image:
+To update a subscription's image:
 
 1. With the subscription selected, click the **Change** button.
 
@@ -102,15 +102,16 @@ To change a subscription's description:
 Subscriptions have two possible states:
 
 - **Active** — Active subscriptions are available for sale, with subscribers able to renew their subscription at the start of the next period.
-- **Inactive** — Inactive subscriptions are unavailable for sale. Switching a subscription from active to inactive prevents future renewals for current subscribers, but allows them to retain their benefits until the current period ends.
+- **Inactive** — Inactive subscriptions are unavailable for sale.
 
 To change a subscription's state:
 
-1. On the Subscriptions page, click **&ctdot;** at the top right corner of the subscription's tile. Either **Activate** or **Deactivate** displays, depending on the current state of the subscription, alongside some other options.
-2. Select either **Activate** or **Deactivate** to flip the state of the subscription.
+1. On the Subscriptions page, click **&ctdot;** at the top right corner of the subscription's tile. Either **Activate** or **Take Off Sale** displays, depending on the current state of the subscription, alongside some other options.
+2. Select either **Activate** or **Take Off Sale** to flip the state of the subscription.
+   1. If you select **Take Off Sale**, you will be given the option to allow existing subscribers to renew, or cancel future renewals for current subscribers. In general, it is advisable to allow existing subscribers to renew unless you are planning to permanently remove the associated subscription benefits from your experience.
 
 <Alert severity="warning">
-Deleting an active subscription results in full refunds for active subscribers and zero Robux for you. In most situations, if you want to delete a subscription, make it inactive first and wait for the current period to conclude. Deleting a subscription requires the last four digits of the subscription ID for confirmation.
+Deleting an active subscription results in full refunds for active subscribers and zero Robux for you. In most situations, if you want to delete a subscription, take it off sale first, select the option to cancel all renewals, and wait for the current period to conclude. Deleting a subscription requires the last four digits of the subscription ID for confirmation.
 </Alert>
 
 ## Integrating Subscriptions into an Experience
@@ -341,18 +342,12 @@ Other relevant functions are available in `Class.MarketplaceService`:
 
 ## Earning with Subscriptions
 
-Subscriptions are priced in local currency, but you earn Robux at a rate of US $0.01 to 1 Robux based on the base web price you selected for the subscription after platform fees. The revenue split for subscriptions varies depending on the platform:
+Subscriptions are priced in local currency, but you earn Robux at a rate of US $0.01 to 1 Robux according to the base platform price you selected for the subscription after platform fees. Roblox takes a 30% platform fee for the first month only, meaning that you receive the full subscription earnings from the second month onward. This revenue split is consistent across all platforms.
 
-- **Desktop (web):** You earn **70%** (30% platform fee) for the first three months and then **85%** (15% platform fee) for subsequent renewals.
-- **Apple:** You earn **70%** of the web price (30% platform fee applied to web price).
-- **Google:** You earn **70%** of the web price (30% platform fee applied to web price).
+For example, if a user subscribes at the base price of US $9.99 (desktop) or $12.99 (mobile):
 
-For example, if a user subscribes on desktop at the base price of US $9.99:
-
-- **First three months:** The creator of the subscription receives `999 * .7 = 699` Robux per month.
-- **Fourth month onward:** The creator of the subscription receives `999 * .85 = 849` Robux per month.
-
-If a different user subscribes to the same plan, but on mobile, the creator receives 699 Robux per month until the user cancels.
+- **First month:** The creator of the subscription receives `999 * .7 = 699` (desktop) or `1299 * .7 = 909` (mobile).
+- **Second month onward:** The creator of the subscription receives `999 = 999` (desktop) or `1299 = 1299` (mobile).
 
 Earnings are subject to 30 day holds and will be added to your Robux balance after the full term of the subscription has been delivered. If a user requests a refund for a subscription through their bank or app store within the month-long hold period, the hold will be canceled and you will not receive the payout for that transaction.
 

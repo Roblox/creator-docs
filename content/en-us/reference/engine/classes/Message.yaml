@@ -4,14 +4,10 @@ category:
 memory_category: Instances
 summary: |
   Fills the entire screen with a semi-transparent grey background, with centered
-  text in the middle of the screen. With the introduction of Roblox's GUI
-  features it has been deprecated and `Class.TextLabel|TextLabels` should be
-  used instead for new work.
+  text in the middle of the screen.
 description: |
   Fills the entire screen with a semi-transparent grey background, with centered
-  text in the middle of the screen. With the introduction of Roblox's GUI
-  features it has been deprecated and `Class.TextLabel|TextLabels` should be
-  used instead for new work.
+  text in the middle of the screen.
 
   Messages will not display if the `Class.Message.Text` field is empty.
 code_samples:

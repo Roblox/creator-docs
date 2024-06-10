@@ -316,7 +316,9 @@ methods:
     description: |
       Returns the angle in radians between the two vectors. Specify `true` for
       the optional `isSigned` boolean if you want a signed angle. By default,
-      the method returns the absolute value.
+      the method returns the absolute value. Signed angles are a negative when
+      going clockwise. Values are in the range `[0, pi]` for absolute angles and
+      `[-pi, pi]` for signed angles.
     parameters:
       - name: other
         type: Vector2
@@ -416,6 +418,30 @@ methods:
         summary: ''
     returns:
       - type: Vector2
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Vector2:FuzzyEq
+    summary: |
+      Returns `true` if the X and Y components of the other `Datatype.Vector2`
+      are within epsilon units of each corresponding component of this
+      `Datatype.Vector2`.
+    description: |
+      Returns `true` if the X and Y components of the other `Datatype.Vector2`
+      are within epsilon units of each corresponding component of this
+      `Datatype.Vector2`.
+    parameters:
+      - name: other
+        type: Vector2
+        default:
+        summary: ''
+      - name: epsilon
+        type: number
+        default: 0.00001 (1e-5)
+        summary: ''
+    returns:
+      - type: bool
         summary: ''
     code_samples: []
     tags: []

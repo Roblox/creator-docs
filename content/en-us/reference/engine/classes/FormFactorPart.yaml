@@ -9,9 +9,6 @@ description: |
   The FormFactorPart class is an abstract class. It inherits from the
   `Class.BasePart` class and adds the `Class.FormFactorPart.FormFactor` property
   to classes that inherit from it.
-
-  The FormFactor property has been deprecated, so this class has been deprecated
-  as well.
 code_samples:
 inherits:
   - BasePart

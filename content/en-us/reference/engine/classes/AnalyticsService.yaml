@@ -5,14 +5,9 @@ memory_category: Instances
 summary: |
   An internal service used by Roblox to collect analytics from `CoreScripts`.
 description: |
-  **Note** This service should only be used by developers who are enrolled in
-  the PlayFab program.
-
-  The AnalyticsService provides developers with out-of-the-box analytics so they
-  can improve their games.
-
-  Developers can report events and see visual analysis results on the PlayFab
-  webpage.
+  **AnalyticsService** is a collection of methods that allows developers to
+  track how users interact with their experiences, specifically player
+  progression, in-experience economy, funnels, and custom events.
 code_samples:
 inherits:
   - Instance
@@ -533,42 +528,73 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogEconomyEvent
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Logs an event used to track player actions related in experience.
+    description: |
+      Logs an event used to track player actions related in experience.
+    code_samples:
+      - AnalyticsService-LogEconomyEvent-IAP
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The user who triggered the event.
       - name: flowType
         type: AnalyticsEconomyFlowType
         default:
-        summary: ''
+        summary: |
+          Should specify the direction that currency is flowing using
+          `Enum.AnalyticsEconomyFlowType`.
       - name: currencyType
         type: string
         default:
-        summary: ''
-      - name: endingBalance
-        type: float
-        default:
-        summary: ''
+        summary: |
+          The name of the currency being added or removed, for example `"gold"`,
+          `"gems"`, or `"energy"`. Limited to 5 unique currency types per
+          experience.
       - name: amount
         type: float
         default:
-        summary: ''
+        summary: |
+          The amount of currency being added or removed. This value should
+          always be positive.
+      - name: endingBalance
+        type: float
+        default:
+        summary: |
+          The user's balance after the currency has been added or removed. This
+          value should always be greater than or equal to 0.
       - name: transactionType
         type: string
         default:
-        summary: ''
+        summary: |
+          The type of transaction that occurred. While you're free to use any
+          transaction type, it's recommended to use the provided types from
+          `Enum.AnalyticsEconomyTransactionType` such as `"IAP"` or
+          `"ContextualPurchase"` to enable future insights from Roblox tools and
+          charts.
+
+          Because this field type is a string, you'll need to pass the `Name`
+          value of the enum. For example
+          `Enum.AnalyticsEconomyTransactionType|Enum.AnalyticsEconomyTransactionType.IAP.Name`.
+
+          Limited to 20 unique types per experience.
       - name: itemSku
         type: string
         default: ''
-        summary: ''
+        summary: |
+          Optional SKU of the item or bundle being purchased. This is a unique
+          identifier for the item being purchased. Limited to 100 unique SKUs
+          per experience.
       - name: customFields
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          Optional dictionary of custom fields that will provide breakdowns in
+          Roblox-provided charts. Only specific keys, provided by
+          `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
+          Limited to 20 unique value per custom field per experience.
     returns:
       - type: void
         summary: ''
@@ -577,34 +603,61 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogFunnelStepEvent
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Logs an event used to track user actions stepping through a pre-planned
+      funnel.
+    description: |
+      Logs an event used to track user actions stepping through a pre-planned
+      funnel. Funnel breakdowns will only consider the user and event values
+      from the first step in a funnel session.
+    code_samples:
+      - AnalyticsService-LogFunnelStepEvent-Shop
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The user who triggered the event.
       - name: funnelName
         type: string
         default:
-        summary: ''
+        summary: |
+          The name of the funnel. This should be the same for all steps in the
+          funnel. Limited to 100 unique funnels per experience.
       - name: funnelSessionId
         type: string
         default: ''
-        summary: ''
+        summary: |
+          Optional unique identifier for the funnel session. This should be the
+          same for all steps in the funnel.
+
+          Note that this field is only necessary for **recurring** funnels, for
+          example a purchase flow funnel or an item upgrade funnel. If you don't
+          have a natural funnel session identifier, it's recommended to use
+          `Class.HttpService:GenerateGUID()`.
       - name: step
         type: int
         default: 0
-        summary: ''
+        summary: |
+          The step number in the funnel. This should be unique for each step in
+          the funnel. All funnels start at step 1. Limited to steps 1-100.
+
+          Note that if any steps are skipped, the intermediate steps will be
+          considered completed.
       - name: stepName
         type: string
         default: ''
-        summary: ''
+        summary: |
+          Optional name of the step in the funnel. This field is only used for
+          display purposes in Roblox-provided charts.
       - name: customFields
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          Optional dictionary of custom fields that will provide breakdowns in
+          Roblox-provided charts. Only specific keys, provided by
+          `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
+          Limited to 20 unique value per custom field per experience.
     returns:
       - type: void
         summary: ''
@@ -613,26 +666,44 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogOnboardingFunnelStepEvent
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Logs an event used to track user actions stepping through an onboarding
+      funnel.
+    description: |
+      Logs an event used to track user actions stepping through an onboarding
+      funnel. Funnel breakdowns will only consider the user and event values
+      from the first step in a funnel session.
+    code_samples:
+      - AnalyticsService-LogOnboardingFunnelStepEvent-TwoSteps
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The user who triggered the event.
       - name: step
         type: int
         default:
-        summary: ''
+        summary: |
+          The step number in the funnel. This should be unique for each step in
+          the funnel. All funnels start at step 1. Limited to steps 1-100.
+
+          Note that if any steps are skipped, the intermediate steps will be
+          considered completed.
       - name: stepName
         type: string
         default: ''
-        summary: ''
+        summary: |
+          Optional name of the step in the funnel. This field is only used for
+          display purposes in Roblox-provided charts.
       - name: customFields
         type: Dictionary
         default: nil
-        summary: ''
+        summary: |
+          Optional dictionary of custom fields that will provide breakdowns in
+          Roblox-provided charts. Only specific keys, provided by
+          `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
+          Limited to 20 unique value per custom field per experience.
     returns:
       - type: void
         summary: ''
@@ -641,14 +712,18 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogProgressionCompleteEvent
-    summary: ''
-    description: ''
+    summary: |
+      Logs an event for when a user has completed a level attempt.
+    description: |
+      Logs an event for when a user has completed a level attempt. This event
+      does not currently display in any Roblox-provided charts.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The player who triggered the event.
       - name: progressionPathName
         type: string
         default:
@@ -673,14 +748,20 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogProgressionEvent
-    summary: ''
-    description: ''
+    summary: |
+      Logs an event for when a user has started, completed, or failed a level
+      attempt.
+    description: |
+      Logs an event for when a user has started, completed, or failed a level
+      attempt. This event does not currently display in any Roblox-provided
+      charts.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The player who triggered the event.
       - name: progressionPathName
         type: string
         default:
@@ -709,14 +790,18 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogProgressionFailEvent
-    summary: ''
-    description: ''
+    summary: |
+      Logs an event for when a user has failed a level attempt.
+    description: |
+      Logs an event for when a user has failed a level attempt. This event does
+      not currently display in any Roblox-provided charts.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The user who triggered the event.
       - name: progressionPathName
         type: string
         default:
@@ -741,14 +826,18 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogProgressionStartEvent
-    summary: ''
-    description: ''
+    summary: |
+      Logs an event for when a user has started a level attempt.
+    description: |
+      Logs an event for when a user has started a level attempt. This event does
+      not currently display in any Roblox-provided charts.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The player who triggered the event.
       - name: progressionPathName
         type: string
         default:

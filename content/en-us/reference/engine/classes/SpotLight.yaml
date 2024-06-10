@@ -6,7 +6,7 @@ summary: |
   A light source that emits light directionally in the shape of a cone with a
   spherical base.
 description: |
-  A spotlight emits light of a specified `Class.Light.Color|Color` and
+  A **Spotlight** emits light of a specified `Class.Light.Color|Color` and
   `Class.Light.Brightness|Brightness` in the shape of a cone with a spherical
   base. This object is ideal for **directional** light sources like flashlights
   and headlights.
@@ -19,18 +19,15 @@ description: |
   and will exhibit the following behavior:
 
   - When the spotlight is parented to a `Class.BasePart`, the
-    `Class.SpotLight.Face` property determines the face of the part from which
-    light emanates.
+    `Class.SpotLight.Face|Face` property determines the face of the part from
+    which light emanates.
+
   - Although `Class.Attachment|Attachments` don't have faces, the
-    `Class.SpotLight.Face` property determines the axis of the attachment from
-    which light emanates; **-Z** is front, **+X** is right, **+Y** is top, etc.
+    `Class.SpotLight.Face|Face` property determines the axis of the attachment
+    from which light emanates; **-Z** is front, **+X** is right, **+Y** is top,
+    etc.
 
-  <img src="../../../assets/legacy/LightingDiagram-SpotLight.jpg" />
-
-  See also:
-
-  - `Class.SurfaceLight`
-  - `Class.PointLight`
+  See also `Class.SurfaceLight` and `Class.PointLight`.
 code_samples:
 inherits:
   - Light

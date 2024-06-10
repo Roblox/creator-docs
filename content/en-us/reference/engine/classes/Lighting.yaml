@@ -124,7 +124,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local hours = minutesNormalised / 60
@@ -141,11 +141,11 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local seconds = minutesNormalised * 60
-      	local hours = string.format("%02.f", math.floor(seconds/3600))
+      	local hours = string.format("%02.f", seconds//3600)
       	local mins = string.format("%02.f", math.floor(seconds/60 - (hours*60)))
       	local secs = string.format("%02.f", math.floor(seconds - hours*3600 - mins *60))
       	local timeString = hours..":"..mins..":"..secs
@@ -162,7 +162,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 
@@ -635,8 +635,8 @@ properties:
     tags:
       - Deprecated
     deprecation_message: |
-      This item is deprecated and is no longer supported. The outlines feature
-      was removed from the Roblox platform
+      This item is no longer supported as the outlines feature was removed from
+      the Roblox platform.
     security:
       read: None
       write: None
@@ -732,11 +732,11 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local seconds = minutesNormalised * 60
-      	local hours = string.format("%02.f", math.floor(seconds/3600))
+      	local hours = string.format("%02.f", seconds//3600)
       	local mins = string.format("%02.f", math.floor(seconds/60 - (hours*60)))
       	local secs = string.format("%02.f", math.floor(seconds - hours*3600 - mins *60))
       	local timeString = hours..":"..mins..":"..secs
@@ -752,7 +752,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local hours = minutesNormalised / 60
@@ -769,7 +769,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 
@@ -852,7 +852,7 @@ methods:
       Returns the moon's current phase.
     description: |
       Returns the moon's current phase. There is no way to change the moon's
-      phase so this will always return 0.75
+      phase so this will always return 0.75.
     code_samples:
     parameters: []
     returns:
@@ -916,11 +916,11 @@ methods:
       ```lua
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local seconds = minutesNormalised * 60
-      	local hours = string.format("%02.f", math.floor(seconds/3600))
+      	local hours = string.format("%02.f", seconds//3600)
       	local mins = string.format("%02.f", math.floor(seconds/60 - (hours*60)))
       	local secs = string.format("%02.f", math.floor(seconds - hours*3600 - mins *60))
       	local timeString = hours..":"..mins..":"..secs
@@ -936,7 +936,7 @@ methods:
       ```lua
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local hours = minutesNormalised / 60
@@ -953,7 +953,7 @@ methods:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 

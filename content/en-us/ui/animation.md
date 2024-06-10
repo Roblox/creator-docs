@@ -396,9 +396,9 @@ Using the easing options of `Datatype.TweenInfo`, you can control the easing **s
 
 ### Style
 
-`Enum.EasingStyle` sets the rate of interpolation from start to end. By default, easing style is set to **Quad**.
+`Enum.EasingStyle` sets the rate of interpolation from start to end. By default, easing style is set to `Enum.EasingStyle.Quad`.
 
-<table>
+<table size="small">
 <thead>
   <tr>
     <th>Style</th>
@@ -453,7 +453,17 @@ Using the easing options of `Datatype.TweenInfo`, you can control the easing **s
 </tbody>
 </table>
 
-<video src="../assets/ui/ui-animation/Easing-Style.mp4" controls width="100%"></video>
+<Tabs>
+<TabItem label="EasingDirection = In">
+<img src="../assets/engine-api/enums/EasingStyle/Easing-Styles-In.png" width="800" alt="Graphs of EasingStyle variations with an 'In' EasingDirection." />
+</TabItem>
+<TabItem label="EasingDirection = Out">
+<img src="../assets/engine-api/enums/EasingStyle/Easing-Styles-Out.png" width="800" alt="Graphs of EasingStyle variations with an 'Out' EasingDirection." />
+</TabItem>
+<TabItem label="EasingDirection = InOut">
+<img src="../assets/engine-api/enums/EasingStyle/Easing-Styles-InOut.png" width="800" alt="Graphs of EasingStyle variations with an 'InOut' EasingDirection." />
+</TabItem>
+</Tabs>
 
 ```lua title='Easing Style - Cubic' highlight='1'
 local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Cubic)
@@ -486,8 +496,6 @@ local tween = TweenService:Create(object, tweenInfo, {Rotation = 45})
   </tr>
 </tbody>
 </table>
-
-<video src="../assets/ui/ui-animation/Easing-Direction.mp4" controls width="100%"></video>
 
 ```lua title='Easing Direction - InOut' highlight='1'
 local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut)

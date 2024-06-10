@@ -84,7 +84,7 @@ After you submit the questionnaire, your experience receives an age recommendati
 </table>
 
 <Alert severity="info">
-   To remain compliant with local laws and regulations, experiences with an age recommendation of 17+ are unplayable for users who created their accounts or are located in certain countries or regions, such as Korea, Saudi Arabia, and Turkey.
+   To remain compliant with local laws and regulations, experiences with an age recommendation of 17+ are unplayable for users who created their accounts or are located in certain countries or regions, such as Korea, Saudi Arabia, and Türkiye (Turkey).
 </Alert>
 
 ### Violence

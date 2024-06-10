@@ -7,7 +7,7 @@ The **sorted map** data structure of [memory stores](../../cloud-services/memory
 
 ## Limits
 
-In addition to the [data structure size limits](../../cloud-services/memory-stores/index.md#data-structure-size-limits), sorted maps have a key size limit of 128 characters, a value size limit of 32KB, and a sort key size limit of 128 characters.
+In addition to the [data structure size limits](../../cloud-services/memory-stores/index.md#data-structure-size-limits), sorted maps have a key size limit of 128 characters, a value size limit of 32 KB, and a sort key size limit of 128 characters.
 
 If you need to store data that surpasses this limit for your experience, you can adopt the sharding technique to split and distribute them through **key prefix** into multiple data structures. Sharding memory stores can also help improve the scalability of your system.
 
@@ -37,11 +37,11 @@ After you get a sorted map, call any of the following functions to read or write
   </tr>
   <tr>
     <td>`Class.MemoryStoreSortedMap:GetAsync()`</td>
-    <td><a href="#adding-or-overwriting-data">Read</a> a particular key.</td>
+    <td>[Read](#getting-data) a particular key.</td>
   </tr>
   <tr>
     <td>`Class.MemoryStoreSortedMap:GetRangeAsync()`</td>
-    <td><a href="#adding-or-overwriting-data">Read</a> all existing keys or a specific range of them.</td>
+    <td>[Read](#getting-data) all existing keys or a specific range of them.</td>
   </tr>
   <tr>
     <td>`Class.MemoryStoreSortedMap:UpdateAsync()`</td>
@@ -116,10 +116,13 @@ if setSuccess then
 	print("Set succeeded.")
 end
 
+local item
 local getSuccess, getError = pcall(function()
-	sortedMap:GetAsync("User_1234")
+	item = sortedMap:GetAsync("User_1234")
 end)
-if not getSuccess then
+if getSuccess then
+	print(item)
+else
 	warn(getError)
 end
 ```
@@ -193,7 +196,7 @@ When contention occurs, the system automatically retries the operation until one
 
 ## Removing Data
 
-You can use `Class.MemoryStoreSortedMap:RemoveAsync()` for both removing one key from the sorted map and deleting all data in a memory store.
+You can use `Class.MemoryStoreSortedMap:RemoveAsync()` for both removing one key from the sorted map and deleting all data in a memory store sorted map.
 
 ### Removing a Key
 

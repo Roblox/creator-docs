@@ -304,11 +304,13 @@ navigation:
         path: /projects/teleporting
       - title: Teams
         path: /players/teams
+      - title: In-Experience Tools
+        path: /players/tools
       - title: Leaderboards
         path: /players/leaderboards
-      - title: Tools
-        path: /players/tools
-      - title: UI
+      - title: Loading Screens
+        path: /players/loading-screens
+      - title: Player UI
         section:
           - title: Avatar Editor
             path: /players/avatar-editor
@@ -387,8 +389,6 @@ navigation:
         path: /ui/animation
       - title: Text Filtering
         path: /ui/text-filtering
-      - title: Loading Screens
-        path: /ui/customizing-loading-screens
   - title: Animation
     path: /animation/
     section:
@@ -417,12 +417,10 @@ navigation:
         section:
           - title: Overview
             path: /chat/in-experience-text-chat
-          - title: Customizing In-Experience Text Chat
+          - title: Customization
             path: /chat/customizing-in-experience-text-chat
           - title: Bubble Chat
             path: /chat/bubble-chat
-          - title: Migrating to In-Experience Text Chat
-            path: /chat/migrate-to-in-experience-text-chat
           - title: Legacy Chat System
             path: /chat/legacy/legacy-chat-system
   - title: Cloud Services
@@ -443,8 +441,14 @@ navigation:
             path: /cloud-services/memory-stores/sorted-map
           - title: Queue
             path: /cloud-services/memory-stores/queue
+          - title: Hash Map
+            path: /cloud-services/memory-stores/hash-map
           - title: Observability
             path: /cloud-services/memory-stores/observability
+          - title: Per-Partition Limits
+            path: /cloud-services/memory-stores/per-partition-limits
+          - title: Best Practices
+            path: /cloud-services/memory-stores/best-practices
       - title: Cross-Server Messaging
         path: /cloud-services/cross-server-messaging
   - title: Roblox for Unity Developers
@@ -460,10 +464,7 @@ navigation:
   - title: Discovery
     path: /discovery
   - title: Publishing
-    path: /production/publishing/
     section:
-      - title: Overview
-        path: /production/publishing/
       - title: Experiences
         path: /production/publishing/publishing-experiences-and-places
         section:
@@ -482,14 +483,12 @@ navigation:
       #   - title: Avatar Marketplace Thumbnails
       #     path: /production/publishing/marketplace-thumbnails
       - title: Assets
-        path: /production/publishing/publishing-assets
+        path: /production/creator-store
         section:
-          - title: Overview
-            path: /production/publishing/publishing-assets
           - title: Creator Store
-            path: /production/publishing/creator-store
+            path: /production/creator-store
           - title: Selling on the Creator Store
-            path: /production/publishing/selling-on-the-creator-store
+            path: /production/selling-on-creator-store
       - title: Guidelines
         section:
           - title: Experience Guidelines
@@ -617,6 +616,15 @@ navigation:
             path: /production/analytics/audience
           - title: Monetization
             path: /production/analytics/monetization
+      - title: Event Types
+        path: /production/analytics/event-types
+        section:
+          - title: Overview
+            path: /production/analytics/event-types
+          - title: Economy Events
+            path: /production/analytics/economy-events
+          - title: Funnel Events
+            path: /production/analytics/funnel-events
   - title: Community
     path: /production/community/
     section:

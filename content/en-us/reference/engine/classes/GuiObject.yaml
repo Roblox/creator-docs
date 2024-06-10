@@ -130,10 +130,7 @@ properties:
     summary: |
       Determines the color of the `Class.GuiObject` background.
     description: |
-      This property determines the color of the `Class.GuiObject` background but
-      is deprecated in favor of
-      `Class.GuiObject.BackgroundColor3|BackgroundColor3`, which should be used
-      in new work instead.
+      Determines the color of the `Class.GuiObject` background.
     code_samples:
     type: BrickColor
     tags:
@@ -214,9 +211,7 @@ properties:
     summary: |
       Determines the color of the `Class.GuiObject` border.
     description: |
-      This property determines the color of a `Class.GuiObject` border but is
-      deprecated in favor of the `Datatype.Color3` property BorderColor3, which
-      should be used in new work instead.
+      Determines the color of the `Class.GuiObject` border.
     code_samples:
     type: BrickColor
     tags:
@@ -1555,14 +1550,14 @@ events:
       Fires when the player starts, continues and stops long-pressing the UI
       element.
     description: |
-      The TouchLongPress event fires after a brief moment when the player holds
-      their finger on the UI element using a touch-enabled device. It fires with
-      a table of `Datatype.Vector2` that describe the relative screen positions
-      of the fingers involved in the gesture. In addition, it fires multiple
-      times with multiple `Enum.UserInputState`s: Begin after a brief delay,
-      Change if the player moves their finger during the gesture and finally
-      with End. The delay is platform dependent; in Studio it is a little longer
-      than one second.
+      The **TouchLongPress** event fires after a brief moment when the player
+      holds their finger on the UI element using a touch-enabled device. It
+      fires with a table of `Datatype.Vector2` that describe the relative screen
+      positions of the fingers involved in the gesture. In addition, it fires
+      multiple times: `Enum.UserInputState.Begin` after a brief delay,
+      `Enum.UserInputState.Change` if the player moves their finger during the
+      gesture, and finally `Enum.UserInputState.End`. The delay is platform
+      dependent; in Studio it is a little longer than one second.
 
       Since this event only requires one finger, this event can be simulated in
       Studio using the emulator and a mouse.
@@ -1594,20 +1589,20 @@ events:
     summary: |
       Fires when the player moves their finger on the UI element.
     description: |
-      This event fires when the player moves their finger on the UI element
-      using a touch-enabled device. It fires shortly before
+      The **TouchPan** event fires when the player moves their finger on the UI
+      element using a touch-enabled device. It fires shortly before
       `Class.GuiObject.TouchSwipe` would, and does not fire with
       `Class.GuiObject.TouchTap`. This event is useful for allowing the player
       to manipulate the position of UI elements on the screen.
 
       This event fires with a table of `Datatype.Vector2` that describe the
       relative screen positions of the fingers involved in the gesture. In
-      addition, it fires several times with multiple `Enum.UserInputState`s:
-      Begin after a brief delay, Change when the player moves their finger
-      during the gesture and finally once more with End.
+      addition, it fires multiple times: `Enum.UserInputState.Begin` after a
+      brief delay, `Enum.UserInputState.Change` when the player moves their
+      finger during the gesture, and finally with `Enum.UserInputState.End`.
 
       This event cannot be simulated in Studio using the emulator and a mouse;
-      you must have a real touch enabled device to fire this event.
+      you must have a real touch-enabled device to fire it.
     code_samples:
       - Panning-UI-Element
     parameters:
@@ -1642,7 +1637,7 @@ events:
       Fires when the player performs a pinch or pull gesture using two fingers
       on the UI element.
     description: |
-      The TouchPinch event fires when the player uses two fingers to make a
+      The **TouchPinch** event fires when the player uses two fingers to make a
       pinch or pull gesture on the UI element using a touch-enabled device. A
       **pinch** happens when two or more fingers move closer together, and a
       **pull** happens when they move apart. This event fires in conjunction
@@ -1652,13 +1647,13 @@ events:
 
       This event fires with a table of `Datatype.Vector2` that describe the
       relative screen positions of the fingers involved in the gesture. In
-      addition, it fires several times with multiple `Enum.UserInputState`s:
-      Begin after a brief delay, Change when the player moves a finger during
-      the gesture and finally once more with End. It should be noted that the
-      scale should be used **multiplicatively**.
+      addition, it fires multiple times: `Enum.UserInputState.Begin` after a
+      brief delay, `Enum.UserInputState.Change` when the player moves a finger
+      during the gesture, and finally with `Enum.UserInputState.End`. It should
+      be noted that the scale should be used **multiplicatively**.
 
-      Since this event requires at least two fingers, it is not possible to be
-      simulated in Studio using the emulator and a mouse; you must have a real
+      Since this event requires at least two fingers, it is not possible to
+      simulate it in Studio using the emulator and a mouse; you must have a real
       touch-enabled device.
     code_samples:
       - Pinch-Pull-Scaling
@@ -1694,7 +1689,7 @@ events:
       Fires when the player performs a rotation gesture using two fingers on the
       UI element.
     description: |
-      The TouchRotate event fires when the player uses two fingers to make a
+      The **TouchRotate** event fires when the player uses two fingers to make a
       pinch or pull gesture on the UI element using a touch-enabled device.
       Rotation occurs when the angle of the line between two fingers changes.
       This event fires in conjunction with `Class.GuiObject.TouchPan`. This
@@ -1703,21 +1698,13 @@ events:
 
       This event fires with a table of `Datatype.Vector2` that describe the
       relative screen positions of the fingers involved in the gesture. In
-      addition, it fires several times with multiple `Enum.UserInputState`s:
-      Begin after a brief delay, Change when the player moves a finger during
-      the gesture and finally once more with End.
+      addition, it fires multiple times: `Enum.UserInputState.Begin` after a
+      brief delay, `Enum.UserInputState.Change` when the player moves a finger
+      during the gesture, and finally with `Enum.UserInputState.End`.
 
       Since this event requires at least two fingers, it is not possible to be
       simulated in Studio using the emulator and a mouse; you must have a real
-      touch-enabled device (and also least two fingers, try asking a friend).
-
-      See also:
-
-      - `Class.GuiObject.TouchPan`
-      - `Class.GuiObject.TouchPinch`
-      - `Class.GuiObject.TouchTap`
-      - `Class.GuiObject.TouchSwipe`
-      - `Class.GuiObject.TouchLongPress`
+      touch-enabled device.
     code_samples:
       - Touch-Rotation
     parameters:

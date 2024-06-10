@@ -90,7 +90,7 @@ To add a RootFaceJoint bone:
 2. Click on any bones to select the armature, then switch to **Edit Mode**.
 3. In the **Outliner**, click on the **Head** bone.
 4. In the **Viewport**, press <kbd>E</kbd> and drag your mouse up to extrude an additional child bone from the **Head** bone.
-5. In the **Outliner**, rename this bone **Face**.
+5. In the **Outliner**, rename this bone **DynamicHead**. You will reference this bone by name later in the [mapping](#mapping) section.
 
     <video controls width="80%" src="../../../assets/avatar/dynamic-heads/creating-dynamic-heads/videos/1_Adding_RootFaceJoint.mp4">
    </video>

@@ -162,7 +162,7 @@ To learn more about tables in Luau, see [Tables](./tables.md).
 
 You can use tables in Luau as dictionaries just like in C#.
 
-```lua title='Dictionary tables in Luau'
+```lua title='Dictionary Tables in Luau'
 local dictionary = {
 	val1 = "this",
 	val2 = "is"
@@ -175,7 +175,7 @@ dictionary.val1 = nil  -- Removes 'val1' from table
 dictionary["val3"] = "a dictionary"  -- Overwrites 'val3' or sets new key-value pair
 ```
 
-```cs title='Dictionary tables in C#'
+```cs title='Dictionary Tables in C#'
 Dictionary dictionary = new Dictionary()
 {
 	{ "val1", "this" },
@@ -193,7 +193,7 @@ dictionary.Add("val3", "a dictionary");  // Creates a new key-value pair
 
 You can use tables in Luau as arrays just like in C#. Indices start at `1` in Luau and `0` in C#.
 
-```lua title='Numerically-indexed tables in Luau'
+```lua title='Numerically-Indexed Tables in Luau'
 local npcAttributes = {"strong", "intelligent"}
 
 print(npcAttributes[1])  -- Outputs 'strong'
@@ -211,7 +211,7 @@ table.insert(npcAttributes, 1, "brave")
 table.remove(npcAttributes, 3)
 ```
 
-```cs title='Numerically-indexed tables in C#'
+```cs title='Numerically-Indexed Tables in C#'
 List npcAttributes = new List{"strong", "intelligent"};
 
 Console.WriteLine(npcAttributes[0]);  // Outputs 'strong'
@@ -428,13 +428,11 @@ else {
 
 ### Conditional Operator
 
-Luau doesn't offer a direct equivalent to the C# conditional operator, `a ? b : c`. However, the Luau idiom `a and b or c` offers a close approximation, provided `b` isn't `false` or `nil`.
-
-```lua title='Approximate of the conditional operator in Luau'
-local max = x > y and x or y
+```lua title='Conditional Operator in Luau'
+local max = if x > y then x else y
 ```
 
-```cs title='Conditional operator in C#'
+```cs title='Conditional Operator in C#'
 int max = (x > y) ? x : y;
 ```
 
@@ -444,7 +442,7 @@ To learn more about loops in Luau, see [Control Structures](./control-structures
 
 ### While and Repeat Loops
 
-```lua title='While and Repeat loops in Luau'
+```lua title='While and Repeat Loops in Luau'
 while boolExpression do
 	doSomething()
 end
@@ -454,7 +452,7 @@ repeat
 until not boolExpression
 ```
 
-```cs title='While and Repeat loops in C#'
+```cs title='While and Repeat Loops in C#'
 while (boolExpression) {
 	doSomething();
 }
@@ -466,7 +464,7 @@ do {
 
 ### For Loops
 
-```lua title='Generic For loops in Luau'
+```lua title='Generic For Loops in Luau'
 -- Forward loop
 for i = 1, 10 do
 	doSomething()
@@ -478,7 +476,7 @@ for i = 10, 1, -1 do
 end
 ```
 
-```cs title='Generic For loops in C#'
+```cs title='Generic For Loops in C#'
 // Forward loop
 for (int i = 1; i <= 10; i++) {
 	doSomething();
@@ -490,7 +488,7 @@ for (int i = 10; i >= 1; i--) {
 }
 ```
 
-```lua title='For loops over tables in Luau'
+```lua title='For Loops Over Tables in Luau'
 local abcList = {"a", "b", "c"}
 
 for i, v in ipairs(abcList) do
@@ -504,7 +502,7 @@ for k, v in pairs(abcDictionary) do
 end
 ```
 
-```cs title='For loops over lists in C#'
+```cs title='For Loops Over Lists in C#'
 List<string> abcList = new List<string>{"a", "b", "c"};
 
 foreach (string v in abcList) {
@@ -528,14 +526,14 @@ To learn more about functions in Luau, see [Functions](./functions.md).
 
 ### Generic Functions
 
-```lua title='Generic functions in Luau'
+```lua title='Generic Functions in Luau'
 -- Generic function
 local function increment(number)
 	return number + 1
 end
 ```
 
-```cs title='Generic functions in C#'
+```cs title='Generic Functions in C#'
 // Generic function
 int increment(int number) {
 	return number + 1;

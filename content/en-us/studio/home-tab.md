@@ -3,6 +3,8 @@ title: Home Tab
 description: The Home tab contains basic tools for building and testing your experience.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 The **Home** tab contains basic tools for building and testing your experience.
 
 <img src="../assets/studio/general/Toolbar-Home-Tab.png" width="716" alt="Home tab indicated in Studio toolbar" />
@@ -139,15 +141,11 @@ For alternative ways to apply custom colors, see [Coloring Parts](../parts/index
 
 ## Material Widget
 
-<Alert severity="success">
-The **Material** widget is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Material&nbsp;Picker**.
-</Alert>
+<BetaAlert betaName="Material Picker" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
-Clicking the small dropdown arrow on the **Material** widget reveals a material picker and, by default, applies the chosen material to all selected parts. Once you've selected a material, you can quickly apply it to other parts by selecting those parts and clicking the **Material** button itself.
+Clicking the small dropdown arrow on the **Material** widget reveals a material picker and, by default, applies the chosen [material](../parts/materials.md) to all selected parts. Once you've selected a material, you can quickly apply it to other parts by selecting those parts and clicking the **Material** button itself.
 
 <img src="../assets/studio/general/Home-Tab-Material-Tools.png" width="776" alt="Studio's Home tab with the Material widget's components highlighted." />
-
-See [Materials](../parts/materials.md) for details on how materials differ in Roblox versus other platforms.
 
 ## Group Tools
 
@@ -236,7 +234,7 @@ Once a playtest is running, the following options become available:
 
 ## Game Settings
 
-The **Game Settings** button, accessible only for a [published](../production/publishing/index.md) experience, lets you update basic information, permissions, security, avatar settings, and more. For more information, see the [Game Settings](../studio/game-settings.md) reference page.
+The **Game Settings** button, accessible only for a [published](../production/publishing/publishing-experiences-and-places.md) experience, lets you update basic information, permissions, security, avatar settings, and more. For more information, see the [Game Settings](../studio/game-settings.md) reference page.
 
 <img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
 

@@ -516,6 +516,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: Workspace.MoverConstraintRootBehavior
+    summary: ''
+    description: ''
+    code_samples: []
+    type: MoverConstraintRootBehaviorMode
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
   - name: Workspace.PhysicsSteppingMethod
     summary: |
       Sets how the solver will advance the physics simulation forward in time.
@@ -610,6 +626,22 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Networking
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.RenderingCacheOptimizations
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RenderingCacheOptimizationMode
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
     serialization:
       can_load: true
       can_save: true
@@ -1021,6 +1053,9 @@ methods:
       precision. The time is adjusted for drift and smoothed monotonically (it
       is guaranteed to be non-decreasing). The server clock progresses no faster
       than 1.006&times; speed and no slower than 0.994&times; speed.
+
+      Returns a Unix timestamp that can be used with `Library.os|os.date()` or
+      with `Datatype.DateTime.fromUnixTimestamp()`.
 
       This function is useful for creating synchronized experiences, as it has
       three properties necessary for doing so: it's a real-world time clock,

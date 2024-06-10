@@ -400,6 +400,23 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: ParticleEmitter.LocalTransparencyModifier
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: false
+      can_save: false
   - name: ParticleEmitter.LockedToPart
     summary: |
       Determines whether the particles rigidly move with the part they're being

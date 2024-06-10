@@ -74,7 +74,7 @@ In our demo, portions of the world are cloned from the `Class.ServerStorage` int
 ```lua
 local function Init()
 	for _,obj in CollectionService:GetTagged("LocalSpaceRotation") do
-		if(obj:IsDescendantOf(workspace)) then
+		if obj:IsDescendantOf(workspace) then
 			SetupObj(obj)
 		end
 	end
@@ -85,9 +85,9 @@ CollectionService:GetInstanceAddedSignal("LocalSpaceRotation"):Connect(function(
 end)
 
 CollectionService:GetInstanceRemovedSignal("LocalSpaceRotation"):Connect(function(obj)
-	if(objInfo[obj]) then
+	if objInfo[obj] then
 		objInfo[obj] = nil
-		if(objInfoQueue[obj]) then
+		if objInfoQueue[obj] then
 			objInfoQueue[obj] = nil
 		end
 	end
@@ -102,8 +102,8 @@ We rotated the instances in the `Update` function connected to heartbeat. We got
 
 ```lua
 local parentTransform
-if(parentObj:IsA("Model")) then
-	if(not parentObj.PrimaryPart) then
+if parentObj:IsA("Model") then
+	if not parentObj.PrimaryPart then
 		-- primary part might might not be streamed in yet
 		continue -- wait for primary part to replicate
 	end
@@ -115,7 +115,7 @@ end
 curObjInfo.curAngle += dT * curObjInfo.timeToAngle
 local rotatedLocalCFrame = curObjInfo.origLocalCFrame * CFrame.Angles( curObjInfo.axisMask.X * curObjInfo.curAngle, curObjInfo.axisMask.Y * curObjInfo.curAngle, curObjInfo.axisMask.Z * curObjInfo.curAngle )
 
-if(obj:IsA("Model")) then
+if obj:IsA("Model") then
 	obj.PrimaryPart.CFrame = parentTransform * rotatedLocalCFrame
 else
 	obj.CFrame = parentTransform * rotatedLocalCFrame
@@ -156,12 +156,12 @@ On the client side (**LightningVFXClient**), we check if this client should run 
 local function LightningFunc(info)
 	…
 	-- no FX when indoors
-	if( inVolumesCheckerFunc:Invoke() ) then
+	if inVolumesCheckerFunc:Invoke() then
 		return
 	end
 
 	-- no FX when not in the "normal" world
-	if( not gameStateInfoFunc:Invoke("IsInNormal") ) then
+	if not gameStateInfoFunc:Invoke("IsInNormal") then
 		return
 	end
 	…
@@ -187,8 +187,8 @@ tweenBottomPos:Play()
 tweenBrightness.Completed:Wait()
 
 -- audio
-if(audioFolder and audioPart) then
-	if(audioFolder.Value and audioPart.Value) then
+if audioFolder and audioPart then
+	if audioFolder.Value and audioPart.Value then
 		audioUtils.PlayOneShot(audioObj, audioFolder.Value, audioPart.Value)
 	end
 end
@@ -473,7 +473,7 @@ local function StartClosing()
 end
 
 local function tweenOpenCompleted(playbackState)
-	if(next(playersNear) == nil) then
+	if next(playersNear) == nil then
 		StartClosing()
 	else
 		doorState = DoorState.Open
@@ -481,7 +481,7 @@ local function tweenOpenCompleted(playbackState)
 end
 
 local function tweenCloseCompleted(playbackState)
-	if(next(playersNear) ~= nil) then
+	if next(playersNear) ~= nil then
 		StartOpening()
 	else
 		doorState = DoorState.Closed
@@ -492,12 +492,12 @@ tweenL.Completed:Connect(tweenOpenCompleted)
 tweenLClose.Completed:Connect(tweenCloseCompleted)
 
 local function touched(otherPart)
-	if(otherPart.Name == "HumanoidRootPart" ) then
+	if otherPart.Name == "HumanoidRootPart" then
 		local player = Players:FindFirstChild(otherPart.Parent.Name)
-		if(player) then
+		if player then
 			--print("touch")
 			playersNear[player] = 1
-			if(doorState == DoorState.Closed) then
+			if doorState == DoorState.Closed then
 				StartOpening()
 			end
 		end

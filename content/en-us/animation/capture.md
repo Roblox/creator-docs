@@ -3,6 +3,8 @@ title: Animation Capture
 description: Animation Capture in the Animation Editor allows you to generate high-quality, realistic animations for faces and bodies.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 You can record or upload video content to the [Animation Editor](../animation/editor.md) to quickly capture movement and expressions as animation keyframes. These tools can create unique and realistic animations within minutes while providing access to the animation keyframes for additional adjustments.
 
 The Animation Capture tools allow you to:
@@ -18,18 +20,7 @@ With the ability to record up to 60-second animations, you can quickly provide b
 
 <video src="../assets/animation/face-recorder/Face-Recorder.mp4" controls width="100%"></video>
 
-### Enabling the Face Capture Beta
-
-To ensure that you are able to utilize your camera to record and create facial animations, you must first enable the **Face Capture** beta feature. If you do not enable the beta feature, the [Animation Editor](../animation/editor.md) only displays its default UI options without face recording functionality.
-
-To enable the Animation Capture - Face beta feature:
-
-1. In the menu bar, click **File**. A contextual menu displays.
-2. Select **Beta Features**. The **Beta Features** window displays.
-3. In the beta features list, enable **Face Capture**.
-
-4. Click the **Save** button.
-5. Restart Studio.
+<BetaAlert betaName="Face Capture" leadIn="To ensure that you are able to utilize your camera to record and create facial animations, you must first enable the beta feature through " leadOut=". If you do not enable the beta, the Animation Editor only displays its default UI options without face recording functionality." components={props.components} />
 
 ### Recording Face Animations
 
@@ -87,20 +78,7 @@ The **Animation Capture - Body** allows you to quickly generate high-quality, re
 
 <video src="../assets/animation/live-animation-creator/Live-Animation-Creator.mp4" controls width="100%"></video>
 
-### Enabling the Body Capture Beta
-
-To ensure that the UI options display that you need in order to import a video for animation creation, you must first enable the **Live Animation Creator** beta feature. If you do not enable the beta feature, the [Animation Editor](../animation/editor.md) only displays its default UI options without live animation creation functionality.
-
-To enable the Live Animation Creator beta feature:
-
-1. In the menu bar, click **File**. A contextual menu displays.
-2. Select **Beta Features**. The **Beta Features** window displays.
-3. In the beta features list, enable **Live Animation Creator**.
-
-   <img src="../assets/animation/live-animation-creator/Live-Animation-Creator-Beta-Feature.jpg" width="550" />
-
-4. Click the **Save** button.
-5. Restart Studio.
+<BetaAlert betaName="Live Animation Creator" leadIn="To import a video for animation creation, you must first enable the beta feature through " leadOut=". If you do not enable the beta, the Animation Editor only displays its default UI options without live animation creation functionality." components={props.components} />
 
 ### Importing Videos for Animation
 

@@ -168,7 +168,7 @@ items:
   - name: EmoteAnimation
     value: 61
     summary: |
-      A emote animation.
+      An emote animation.
     tags: []
     deprecation_message: ''
   - name: TShirtAccessory

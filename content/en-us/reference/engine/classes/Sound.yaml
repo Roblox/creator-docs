@@ -289,8 +289,6 @@ properties:
       The minimum distance at which a 3D `Class.Sound` (direct child of a
       `Class.BasePart` or `Class.Attachment`) will begin to attenuate.
       Effectively, the emitter size.
-
-      Deprecated in favor of Sound.EmitterSize.
     code_samples:
     type: float
     tags:
@@ -308,15 +306,11 @@ properties:
       can_save: false
   - name: Sound.Pitch
     summary: |
-      Deprecated. Sets how high pitched and fast a `Class.Sound` is when it is
-      played. The greater the integer, the higher and faster the `Class.Sound`
-      is.
+      Sets how high pitched and fast a `Class.Sound` is when it is played. The
+      greater the integer, the higher and faster the `Class.Sound` is.
     description: |
       Sets how high pitched and fast a `Class.Sound` is when it is played. The
       greater the integer, the higher and faster the sound is.
-
-      This property has been deprecated in favor of `Class.Sound.PlaybackSpeed`
-      whose name suits the behavior better.
     code_samples:
     type: float
     tags:

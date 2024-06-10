@@ -53,7 +53,7 @@ properties:
       user's device has an accelerometer.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
       local accelerometerEnabled = UserInputService.AccelerometerEnabled
       if accelerometerEnabled then
@@ -215,8 +215,6 @@ properties:
       `Class.UserInputService.TouchSwipe` can still be used to process other
       forms of user input on mobile devices with an enabled touch screen (see
       the main UserInputService class page for a full list).
-
-      Deprecated in favor of `Class.GuiService.TouchControlsEnabled`.
     code_samples:
       - UserInputService-ModalEnabled
     type: bool
@@ -405,9 +403,9 @@ properties:
       For example, the code snippet below hides the mouse's icon.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
-      userInputService.MouseIconEnabled = false
+      UserInputService.MouseIconEnabled = false
       ```
 
       As `Class.UserInputService` is client-side only, this property can only be
@@ -431,24 +429,15 @@ properties:
     description: |
       This property describes the position of the on-screen keyboard in pixels.
       The keyboard's position is `Datatype.Vector2|Vector2.new(0, 0)` when it is
-      not `Class.UserInputService.OnScreenKeyboardVisible|visible`.
-
-      The code snippet below prints the position of the keyboard.
-
-      ```lua
-      local userInputService = game:GetService("UserInputService")
-      print(userInputService.OnScreenKeyboardPosition)
-      ```
+      not visible.
 
       As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
+      used in a `Class.LocalScript`, or a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
 
-      ![On screen keyboard](/assets/legacy/ClientKeyboard.png)
-
-      See also:
-
-      - `Class.UserInputService.OnScreenKeyboardVisible`
-      - `Class.UserInputService.OnScreenKeyboardSize`
+      See also
+      `Class.UserInputService.OnScreenKeyboardVisible|OnScreenKeyboardVisible`
+      and `Class.UserInputService.OnScreenKeyboardSize|OnScreenKeyboardSize`.
     code_samples:
       - UserInputService-OnScreenKeyboardPosition
     type: Vector2
@@ -470,24 +459,16 @@ properties:
     description: |
       This property describes the size of the on-screen keyboard in pixels. The
       keyboard's size is `Datatype.Vector2|Vector2.new(0, 0)` when it is not
-      `Class.UserInputService.OnScreenKeyboardVisible|visible`.
-
-      The code snippet below prints the size of the keyboard.
-
-      ```lua
-      local userInputService = game:GetService("UserInputService")
-      print(userInputService.OnScreenKeyboardSize)
-      ```
+      visible.
 
       As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
+      used in a `Class.LocalScript`, or a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
 
-      ![On screen keyboard](/assets/legacy/On-Screen-Keyboard.png)
-
-      See also:
-
-      - `Class.UserInputService.OnScreenKeyboardVisible`
-      - `Class.UserInputService.OnScreenKeyboardPosition`
+      See also
+      `Class.UserInputService.OnScreenKeyboardVisible|OnScreenKeyboardVisible`
+      and
+      `Class.UserInputService.OnScreenKeyboardPosition|OnScreenKeyboardPosition`.
     code_samples:
     type: Vector2
     tags:
@@ -510,28 +491,13 @@ properties:
       This property describes whether an on-screen keyboard is currently visible
       on the user's screen.
 
-      The code snippet below prints whether the keyboard is visible.
-
-      ```lua
-      local userInputService = game:GetService("UserInputService")
-
-      local keyboardIsVisible = userInputService.OnScreenKeyboardIsVisible
-      if keyboardIsVisible then
-      	print("On-screen keyboard is visible!")
-      else
-      	print("On-screen keyboard is not visible!")
-      end
-      ```
-
       As `Class.UserInputService` is client-side only, this property can only be
-      used in a `Class.LocalScript`.
+      used in a `Class.LocalScript`, or a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
 
-      ![On screen keyboard](/assets/legacy/ClientKeyboard.png)
-
-      See also:
-
-      - `Class.UserInputService.OnScreenKeyboardSize`
-      - `Class.UserInputService.OnScreenKeyboardPosition`
+      See also
+      `Class.UserInputService.OnScreenKeyboardSize|OnScreenKeyboardSize` and
+      `Class.UserInputService.OnScreenKeyboardPosition|OnScreenKeyboardPosition`.
     code_samples:
     type: bool
     tags:
@@ -563,9 +529,9 @@ properties:
       screen.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
-      if userInputService.TouchEnabled then
+      if UserInputService.TouchEnabled then
       	print("The user's device has a touchscreen!")
       else
       	print("The user's device does not have a touchscreen!")
@@ -605,8 +571,6 @@ properties:
     description: |
       The UserHeadCFrame used to describe the orientation and position of a
       user's head, if they are actively using a virtual reality headset.
-
-      Deprecated in favor of `Class.UserInputService:GetUserCFrame()`.
     code_samples:
     type: CFrame
     tags:
@@ -637,9 +601,9 @@ properties:
       `Class.UserInputService.UserCFrameChanged` event.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
-      local isUsingVR = userInputService.VREnabled
+      local isUsingVR = UserInputService.VREnabled
       if isUsingVR then
           print("User is using a VR headset!")
       else
@@ -733,8 +697,8 @@ methods:
       and stores them in a variable named _connectedGamepads_.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
-      local connectedGamepads = userInputService:GetConnectedGamepads()
+      local UserInputService = game:GetService("UserInputService")
+      local connectedGamepads = UserInputService:GetConnectedGamepads()
       ```
 
       To check if a specific gamepad is connected, use
@@ -1626,8 +1590,8 @@ methods:
       headset.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
-      local cframe = userInputService:GetUserCFrame(Enum.UserCFrame.Head)
+      local UserInputService = game:GetService("UserInputService")
+      local cframe = UserInputService:GetUserCFrame(Enum.UserCFrame.Head)
 
       print(cframe)
       ```
@@ -1895,9 +1859,9 @@ methods:
       gamepad:
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
-      if userInputService:IsNavigationGamepad(UserInputType.Gamepad1) then
+      if UserInputService:IsNavigationGamepad(UserInputType.Gamepad1) then
       	print("Gamepad is a navigation gamepad!")
       else
       	print("Gamepad is not a navigation gamepad!")
@@ -2161,13 +2125,13 @@ events:
       gamepad is connected to the client.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
       local function GamepadConnected(gamepad)
       	print("Player has plugged controller: " .. tostring(gamepad))
       end)
 
-      userInputService.GamepadConnected:Connect(GamepadConnected)
+      UserInputService.GamepadConnected:Connect(GamepadConnected)
       ```
 
       If you want to see which devices are connected, you can use the
@@ -2213,13 +2177,13 @@ events:
       gamepad is disconnected from the client.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
       local function GamepadDisconnected(gamepad)
       	print("Player has unplugged controller: " .. tostring(gamepad))
       end)
 
-      userInputService.GamepadDisconnected:Connect(GamepadDisconnected)
+      UserInputService.GamepadDisconnected:Connect(GamepadDisconnected)
       ```
 
       As this event fires locally, it can only be used in a `Class.LocalScript`.
@@ -2653,13 +2617,13 @@ events:
       _Cancel_, and _None_.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
       function TouchLongPress(TouchPositions, state, gameProcessedEvent)
       	print("Long press event fired. State of press: "..tostring(state))
       end
 
-      userInputService.TouchLongPress:Connect(TouchLongPress)
+      UserInputService.TouchLongPress:Connect(TouchLongPress)
       ```
 
       To check if a user's device is TouchEnabled, and that touch events will
@@ -2804,9 +2768,9 @@ events:
       the user's touch when the user drags their finger on the screen.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
-      userInputService.TouchPan:Connect(function(touchPositions, totalTranslation, velocity, state, gameProcessedEvent)
+      UserInputService.TouchPan:Connect(function(touchPositions, totalTranslation, velocity, state, gameProcessedEvent)
       	print("Speed of touch drag: "..tostring(velocity))
       end)
       ```

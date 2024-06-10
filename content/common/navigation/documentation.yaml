@@ -2,7 +2,7 @@ columns:
   - - title: Overview
       path: /
     - title: Engine
-      path: /platform
+      path: /get-started
       items:
         - title: Guides
           navigation: /engine/guides.yaml
@@ -18,7 +18,7 @@ columns:
           path: /samples/
         - title: Art
           navigation: /engine/art.yaml
-          path: /art/modeling/
+          path: /art/
         - title: Design
           navigation: /engine/design.yaml
           path: /production/game-design/

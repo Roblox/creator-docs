@@ -3,6 +3,8 @@ title: Model Tab
 description: The Model tab contains tools for manipulating 3D objects and models, working with physical constraints, and more.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 The **Model** tab contains tools for manipulating 3D objects in the workspace, creating detailed models, working with physical constraints, and adding advanced objects.
 
 <img src="../assets/studio/general/Toolbar-Model-Tab.png" width="830" alt="Model tab indicated in Studio toolbar" />
@@ -94,21 +96,15 @@ For alternative ways to apply custom colors, see [Coloring Parts](../parts/index
 
 ## Material Widget
 
-<Alert severity="success">
-The **Material** widget is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Material&nbsp;Picker**.
-</Alert>
+<BetaAlert betaName="Material Picker" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
-Clicking the small dropdown arrow on the **Material** widget reveals a material picker and, by default, applies the chosen material to all selected parts. Once you've selected a material, you can quickly apply it to other parts by selecting those parts and clicking the **Material** button itself.
+Clicking the small dropdown arrow on the **Material** widget reveals a material picker and, by default, applies the chosen [material](../parts/materials.md) to all selected parts. Once you've selected a material, you can quickly apply it to other parts by selecting those parts and clicking the **Material** button itself.
 
 <img src="../assets/studio/general/Model-Tab-Material-Tools.png" width="704" alt="Studio's Model tab with the Material widget's components highlighted." />
 
-See [Materials](../parts/materials.md) for details on how materials differ in Roblox versus other platforms.
-
 ## Texture Generator
 
-<Alert severity="success">
-This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Texture&nbsp;Generator**.
-</Alert>
+<BetaAlert betaName="Texture Generator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 The [Texture Generator](../studio/texture-generator.md) tool quickly creates custom textures for meshes through text prompts.
 

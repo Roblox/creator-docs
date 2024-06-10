@@ -15,6 +15,11 @@ title: include
 
 The Experience Notification system features the following:
 
-- **Customizable Notifications with Parameters** &mdash; Full flexibility to customize the [notification message](#creating-a-notification-string) with parameters, for example "Your gold goose egg has hatched!" or "You're 2 quests away from reaching Level&nbsp;6!"
+- **Customizable Notifications with Parameters** &mdash; Full flexibility to customize the [notification message](#creating-a-notification-string) with parameters, for example:
+
+  - <Typography variant="subtitle2" color="primary">Your gold goose egg has hatched!</Typography>
+  - <Typography variant="subtitle2" color="primary">Allie @LaterSk8er1 just beat your record on the Tokyo Tour track! Time for revenge?</Typography>
+
 - **Launch Data** &mdash; Include optional [launch data](#including-launch-and-analytics-data) that can be read through `Class.Player:GetJoinData()` when the notification recipient joins. This could involve routing a user to a coordinate location or personalizing their joining experience.
+
 - **Analytics Support** &mdash; Track your reachable audience and the performance of your notifications in the [Creator Dashboard](https://create.roblox.com/dashboard/creations).

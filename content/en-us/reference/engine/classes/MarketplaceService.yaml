@@ -35,6 +35,30 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: MarketplaceService:PromptBulkPurchase
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: lineItems
+        type: Array
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: MarketplaceService:PromptBundlePurchase
     summary: |
       Prompts a user to purchase a bundle with the given `bundleId`.
@@ -151,7 +175,7 @@ methods:
     description: |
       Prompts a user to purchase an item with the given `assetId`. **This does
       not work for
-      [USD Creator Store](../../../production/publishing/selling-on-the-creator-store.md)
+      [USD Creator Store](../../../production/selling-on-creator-store.md)
       purchases**. If prompting a purchase of a
       [Limited](../../../art/marketplace/marketplace-fees-and-commissions.md#limiteds)
       item:
@@ -924,6 +948,27 @@ methods:
     security: None
     thread_safety: Unsafe
 events:
+  - name: MarketplaceService.PromptBulkPurchaseFinished
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Instance
+        default:
+        summary: ''
+      - name: status
+        type: MarketplaceBulkPurchasePromptStatus
+        default:
+        summary: ''
+      - name: results
+        type: Dictionary
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: MarketplaceService.PromptBundlePurchaseFinished
     summary: ''
     description: ''
@@ -1049,8 +1094,9 @@ events:
         type: bool
         default:
         summary: |
-          Whether the item was successfully purchased (false for errors and
-          cancellations).
+          Indicates if the user pressed OK (true), Cancel (false), or errored
+          (false). Do not use this to process purchases, instead use
+          `Class.MarketplaceService.ProcessReceipt`.
     tags: []
     deprecation_message: ''
     security: None
@@ -1092,8 +1138,9 @@ events:
         type: bool
         default:
         summary: |
-          Whether the item was successfully purchased (false for errors and
-          cancellations).
+          Indicates if the user pressed OK (true), Cancel (false), or errored
+          (false). This may not accurately reflect if the purchase itself has
+          successfully processed.
     tags: []
     deprecation_message: ''
     security: None

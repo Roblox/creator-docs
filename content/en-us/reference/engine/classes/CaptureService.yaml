@@ -15,7 +15,6 @@ inherits:
 tags:
   - NotCreatable
   - Service
-  - NotReplicated
 deprecation_message: ''
 properties: []
 methods:
@@ -114,23 +113,6 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: CaptureService:DeleteCapturesAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: pathArr
-        type: Array
-        default:
-        summary: ''
-    returns:
-      - type: int64
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
 events:
   - name: CaptureService.CaptureBegan
     summary: |
@@ -172,19 +154,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-  - name: CaptureService.CaptureSavedInternal
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: captureInfo
-        type: Dictionary
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
   - name: CaptureService.UserCaptureSaved
     summary: |

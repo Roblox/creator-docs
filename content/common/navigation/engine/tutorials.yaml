@@ -1,10 +1,12 @@
 navigation:
   - heading: Get Started
+  - title: Overview
+    path: /tutorials/
   - title: Create Your First Experience
     path: /tutorials/first-experience/
   - heading: Curriculum Paths
   - title: Overview
-    path: /tutorials/
+    path: /tutorials/curriculum-overview
   - title: Core
     path: /tutorials/core/
     navigation: /engine/tutorials-core.yaml
@@ -39,8 +41,6 @@ navigation:
         path: /tutorials/building/ui/interfaces-on-parts
   - title: Environments
     section:
-      - title: Lighting with Props
-        path: /tutorials/building/environments/lighting-with-props
       - title: Playing Background Music
         path: /tutorials/building/environments/playing-background-music
       - title: In-Game Sounds
@@ -49,16 +49,16 @@ navigation:
         path: /tutorials/3D-art/creating-flickering-lights
       - title: Assembling Modular Environments
         path: /tutorials/3D-art/assembling-modular-environments
-      - title: Enhancing Outdoor Environments with Future Lighting
+      - title: Enhancing Outdoor Environments
         path: /tutorials/3D-art/enhancing-outdoor-environments-with-future-lighting
   - title: Effects
     section:
-      - title: Basic Particle Effects
-        path: /tutorials/building/effects/basic-particle-effects
-      - title: Custom Particle Effects
-        path: /tutorials/building/effects/custom-particle-effects
       - title: Creating Laser Beams
         path: /tutorials/building/effects/laser-traps-with-beams
+      - title: Creating Waterfalls
+        path: /tutorials/building/effects/creating-waterfalls
+      - title: Creating Volcanoes
+        path: /tutorials/building/effects/creating-volcanoes
       - title: Using Particles for Explosions
         path: /tutorials/building/effects/using-particles-for-explosions
   - title: Physics

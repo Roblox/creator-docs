@@ -48,7 +48,7 @@ To set up your project and your initial mesh object:
 1. Download the [Clothing_Cage.blend](../../../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend) project. This project includes the inner and outer cage mesh that you will use as temporary mannequins.
 2. Open this file, click **Save As**, and save the project with a new name. This will be your main Blender project for the clothing accessory.
 3. In the Outliner, copy and paste **InnerCage** object to duplicate it.
-4. With the duplicated object highlighted, right-click in the viewport and select **Parent** > **Parent and Clear Transformation**.
+4. With the duplicated object highlighted, right-click in the viewport and select **Parent** > **Parent and Keep Transformation**.
 5. In the Outliner, right-click and delete the extra **Cage.001 data object**.
 6. Rename the duplicated object as "LongSleeve".
 7. Rename the original cages as "LongSleeve_OuterCage" and "LongSleeve_InnerCage", respectively.

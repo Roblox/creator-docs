@@ -234,6 +234,23 @@ properties:
     serialization:
       can_load: false
       can_save: false
+  - name: DraggerService.PartSnapEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
   - name: DraggerService.PivotSnapToGeometry
     summary: ''
     description: ''

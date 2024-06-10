@@ -182,7 +182,7 @@ A variadic function accepts any number of arguments. For example, `print()` is a
 ```lua
 print(2, "+", 2, "=", 2+2) --2 + 2 = 4
 print( string.format("The %s is a %s!", "cake", "lie") ) -- The cake is a lie!
-print( string.byte(115, 101, 99, 114, 101, 116) ) -- secret
+print( string.char(115, 101, 99, 114, 101, 116) ) -- secret
 ```
 
 #### Defining Variadic Functions
@@ -192,9 +192,9 @@ To define a variadic function, you use the `...` token as the last or only param
 ```lua
 local function variadic(named, ...)
     local arguments = {...} -- pack the extra arguments into a table
-    print("Named argument = ", named)
+    print("Named argument =", named)
     for i, value in arguments do
-        print("Input No. ", i, "=", value)
+        print("Input No.", i, "=", value)
     end
 end
 

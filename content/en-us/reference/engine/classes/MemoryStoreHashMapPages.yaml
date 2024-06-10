@@ -2,9 +2,16 @@ name: MemoryStoreHashMapPages
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
-code_samples: []
+summary: |
+  A special type of `Class.Pages` object whose pages contain key-value pairs
+  from a `Class.MemoryStoreHashMap`.
+description: |
+  A special type of `Class.Pages` object whose pages contain key-value pairs
+  from a `Class.MemoryStoreHashMap`. `Class.Pages:GetCurrentPage()` can be used
+  to retrieve an array of tables, each containing a key and value; these reflect
+  the key-value pair data.
+code_samples:
+  - listing-data-hash-map-memory-store
 inherits:
   - Pages
 tags:

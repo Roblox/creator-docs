@@ -4,7 +4,7 @@ const { glob } = globPkg;
 import * as path from 'path';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { Locale } from './utils.js';
+import { Locale } from './localization.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 export const repositoryRoot = path.join(__dirname, '/../../../');
@@ -92,9 +92,7 @@ export const writeListToFile = (
   encoding: BufferEncoding = 'utf-8'
 ) => {
   ensureDirExistsSync(path.dirname(outputFileName));
-  if (list.length > 0) {
-    fs.writeFileSync(outputFileName, list.join('\n'), encoding);
-  }
+  fs.writeFileSync(outputFileName, list.join('\n'), encoding);
 };
 
 /**
@@ -121,4 +119,12 @@ export const readListFromFile = (
   } else {
     throw new Error(`File ${inputFileName} does not exist.`);
   }
+};
+
+export const getNonEditableFilesList = () => {
+  const nonEditableFilesList = path.join(
+    __dirname,
+    'do-not-machine-translate.txt'
+  );
+  return readListFromFile(nonEditableFilesList);
 };

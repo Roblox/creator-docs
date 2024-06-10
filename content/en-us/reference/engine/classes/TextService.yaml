@@ -172,7 +172,7 @@ methods:
       - This method always yields to make a text filtering service call
       - This method may throw if there is a service error that can not be
         resolved. If this function throws an error please do not retry the
-        request; this method implements it's own retry logic internally. If this
+        request; this method implements its own retry logic internally. If this
         method fails do not display the text to any user.
       - This method currently throws if _fromUserId_ is not online on the
         current server. We plan to support users who are offline or on a
@@ -194,8 +194,7 @@ methods:
         type: TextFilterContext
         default: PrivateChat
         summary: |
-          The context that the filtered message will be used in. The default is
-          PrivateChat.
+          The context that the filtered message will be used in.
     returns:
       - type: TextFilterResult
         summary: ''

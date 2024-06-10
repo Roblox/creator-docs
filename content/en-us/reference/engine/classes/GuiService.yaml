@@ -27,10 +27,10 @@ deprecation_message: ''
 properties:
   - name: GuiService.AutoSelectGuiEnabled
     summary: |
-      If activating the `Select` button on a Gamepad or <kbd>Backslash</kbd>
+      If activated, the `Select` button on a Gamepad or <kbd>Backslash</kbd>
       will automatically set a GUI as the selected object.
     description: |
-      If activating the `Select` button on a Gamepad or <kbd>Backslash</kbd>
+      If activated, the `Select` button on a Gamepad or <kbd>Backslash</kbd>
       will automatically set a GUI as the selected object. Turning this off will
       mean that Gui navigation will still work if
       `Class.GuiService.GuiNavigationEnabled` is enabled but you will have to
@@ -765,18 +765,5 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-  - name: GuiService.OpenAttenuationCurveEditor
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: selectedCurveObject
-        type: Instance
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
 callbacks: []

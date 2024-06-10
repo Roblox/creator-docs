@@ -13,6 +13,10 @@ The 3D Importer allows you to import `.fbx`, `.gltf`, or `.obj` 3D models into S
 - Meshes with animation data.
 - Specialized meshes, such as [accessories](../../art/accessories/index.md), or characters with [facial animation data](../../art/characters/facial-animation/index.md).
 
+<Alert severity ='info'>
+To directly import 3D assets using HTTP requests, see [Cloud Usage Guide for Assets](../../cloud/open-cloud/usage-assets.md).
+</Alert>
+
 The 3D Importer is divided into three sections:
 
 <img alt="3D Importer Panels" src="../../assets/modeling/meshes/3d-Importer-Panels.png" width="80%" alt="The 3D Importer interface, showing a preview of the mesh in the top left, a list of 3D objects on the bottom left, and a list of toggle-able properties on the right side."/>

@@ -3,42 +3,17 @@ title: Studio Testing Modes
 description: Explore the built-in Studio testing modes for experiences.
 ---
 
+import PlaytestOptions from '../includes/studio/testing-modes.md'
+import PauseResumePhysics from '../includes/studio/pause-resume-physics.md'
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 Because of the underlying [client-server model](../projects/client-server.md) of the Roblox engine, it's important that you test your experience in various modes before [releasing it to the public](../production/publishing/publishing-experiences-and-places.md#releasing-to-the-public). All of the testing options are accessible from the [Test](../studio/test-tab.md) tab.
 
 <img src="../assets/studio/general/Toolbar-Test-Tab.png" width="800" alt="Test tab indicated in Studio toolbar" />
 
 ## Playtest Options
 
-There are three common options for playtesting an experience. Clicking the small arrow below the main button lets you choose from each option, and sets that option as the default.
-
-<img src="../assets/studio/general/Test-Tab-Playtest-Options.png" width="800" alt="Rapid playtest options in Test tab of Studio" />
-
-<table>
-  <thead>
-    <tr>
-      <th>Action</th>
-	  <th>Shortcut</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>**Play**</td>
-	  <td><kbd>F5</kbd></td>
-      <td>Starts simulating the experience, inserting your avatar at either a `Class.SpawnLocation` or coordinates of around (0,&nbsp;100,&nbsp;0).</td>
-    </tr>
-    <tr>
-      <td>**Play Here**</td>
-	  <td></td>
-      <td>Starts simulating the experience, inserting your avatar in front of the camera's current position.</td>
-    </tr>
-	<tr>
-      <td>**Run**</td>
-	  <td><kbd>F8</kbd></td>
-      <td>Starts simulating the experience but does not insert your avatar. The simulation begins at the current camera position and you can navigate around using the Studio camera controls.</td>
-    </tr>
-  </tbody>
-</table>
+<PlaytestOptions components={props.components} />
 
 ### Client/Server Toggle
 
@@ -46,7 +21,7 @@ When testing in either **Play** or **Play&nbsp;Here** mode, Studio runs two sepa
 
 While playing solo, you can toggle between **Client** and **Server** modes by clicking the **Client/Server** toggle button. When you toggle, the button changes to reflect the current simulation mode.
 
-<img src="../assets/studio/debugging/Client-Server-Toggle.png" width="534" alt="Client/Server toggle button indicated in Test tab" />
+<img src="../assets/studio/debugging/Client-Server-Toggle.png" width="680" alt="Client/Server toggle button indicated in Test tab" />
 
 #### Controls and Camera
 
@@ -82,11 +57,17 @@ Within the [Explorer](../studio/explorer.md) window hierarchy, certain objects o
   </figure>
 </GridContainer>
 
-### Output Window
+#### Output Window
 
 In the [Output](../studio/output.md) window, messages are labeled **blue** (client) or **green** (server), indicating their origin from either the client or server. For messages output from `Class.ModuleScript|ModuleScripts`, the label color is determined by whether the module was called from a client-side `Class.LocalScript` or from a server-side `Class.Script`.
 
 <img src="../assets/studio/general/Output-Window-Client-Server-Labels.png" width="800" alt="Output window showing green label for server output and blue label for client output" />
+
+### Pausing & Resuming Physics
+
+<BetaAlert betaName="Simulation Pause" leadIn="This tool workflow is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+<PauseResumePhysics components={props.components} />
 
 ## Multi-Client Simulation
 
@@ -95,11 +76,11 @@ Using the **Clients and Servers** options, you can launch multiple sessions of S
 1. Make sure **Local Server** is selected in the upper box, then select the number of player sessions to test. Usually 1–2 players is sufficient, although you can simulate up to eight.
 1. Press the **Start** button to begin the client-server simulation.
 
-   <img src="../assets/studio/debugging/Test-Tab-Clients-Servers-Start.png" width="800" alt="Clients and Servers simulation setup indicated in Test tab" />
+   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Start.png" width="800" alt="Clients and Servers simulation setup indicated in Test tab" />
 
 1. When you're finished testing, press the **Cleanup** button from any of the simulation sessions to close all simulated clients and the simulated server.
 
-   <img src="../assets/studio/debugging/Test-Tab-Clients-Servers-Cleanup.png" width="800" alt="Cleanup button indicated in Test tab" />
+   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Cleanup.png" width="800" alt="Cleanup button indicated in Test tab" />
 
 ## Device Emulation
 
@@ -132,11 +113,11 @@ If you're working on an experience with others in [Collaboration](../projects/co
 
 1. In the **Clients and Servers** section, select **Team Test** in the upper box and press the **Start** button to publish the current state of the experience and create a new Studio session with your character inserted.
 
-   <img src="../assets/studio/debugging/Test-Tab-Clients-Servers-Team-Test.png" width="800" alt="Team Test setup indicated in Test tab" />
+   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Team-Test.png" width="800" alt="Team Test setup indicated in Test tab" />
 
 1. Other collaborators can then join by pressing **Join** from the **Test** tab.
 
-   <img src="../assets/studio/debugging/Test-Tab-Clients-Servers-Team-Test-Join.png" width="800" alt="Team Test join button indicated in Test tab" />
+   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Team-Test-Join.png" width="800" alt="Team Test join button indicated in Test tab" />
 
    <Alert severity="info">
    Only one team test session can run at any given time. To close a session and kick out all testers, click the **Shutdown&nbsp;Server** button.
@@ -211,4 +192,4 @@ After [configuring your headset](#headset-configuration), you can turn on the St
 2. Select **Rendering**.
 3. Under **General** settings, turn on **VR Mode**.
 
-You can now test your experience using your VR headset using any of the available [playtest options](#playtest-options). During a VR testing session, if your headset cable disconnects, or you close the Roblox Studio Beta app on the headset, you need to restart Studio to re-run testing.
+You can now test your experience using your VR headset using any of the available [playtest options](#playtest-options). During a VR testing session, if your headset cable disconnects or you close the Roblox Studio Beta app on the headset, you'll need to restart Studio to re-run testing.

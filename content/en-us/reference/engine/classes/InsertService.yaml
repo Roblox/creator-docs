@@ -8,15 +8,14 @@ description: |
   InsertService is used to insert assets from the Roblox website, typically the
   `Class.InsertService:LoadAsset()|LoadAsset` function.
 
-  To load an asset, the asset must be accessible by the creator of the game
-  loading it, which can be either a user or group. Due to these restrictions,
-  InsertService is useful for loading sensitive data, typically API or secret
-  keys to be used with `Class.HttpService`. Should a game be uploaded by a
-  different creator, the sensitive data would not be accessible. See the
-  `Class.InsertService:LoadAsset()|LoadAsset` function for more details on this
-  security check.
+  To load an asset, it must be accessible by the creator of the experience
+  loading it, which can be either a user or group. Should an experience be
+  uploaded by a different creator, the asset data would not be accessible. See
+  the `Class.InsertService:LoadAsset()|LoadAsset()` method for more details on
+  this security check. Note that you should **not** use this service for loading
+  API keys or other secrets. Use `Class.HttpService:GetSecret()` instead.
 
-  See also:
+  #### See Also
 
   - `Class.AssetService`, which can provide information about assets you might
     want to load using InsertService
@@ -58,8 +57,7 @@ properties:
       - NotBrowsable
       - Deprecated
     deprecation_message: |
-      This item is deprecated, as it was never released, likely due to security
-      concerns. Do not use it in new work.
+      This item was never released. Do not use it in new work.
     security:
       read: None
       write: None
@@ -160,7 +158,7 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
   - name: InsertService:GetBaseCategories
     summary: ''
@@ -244,12 +242,8 @@ methods:
       }
       ```
 
-      Yikes! That quite confusing. Unfortunately this method was added in the
-      earlier days of Roblox, where easy to understand return-types weren't a
-      priority.
-
-      Thankfully, an example for iterating over this list has been provided at
-      the bottom of this page.
+      An example for iterating over this list has been provided at the bottom of
+      this page.
 
       Additionally, if you want to insert `Class.Model|Models` instead, you can
       use the `Class.InsertService:GetFreeModels()` function.

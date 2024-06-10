@@ -9,7 +9,8 @@ import {
   readListFromFile,
   repositoryRoot,
 } from './files.js';
-import { Emoji, Locale } from './utils.js';
+import { Locale } from './localization.js';
+import { Emoji } from './utils.js';
 import { addToSummaryOfRequirements } from './console.js';
 import { createNewPullRequestComment, requiredCheckMessage } from './github.js';
 import { IConfig } from './config.js';
@@ -273,14 +274,11 @@ ${requiredCheckMessage}`;
   }
 };
 
-const closedSourceDirectories = ['content/en-us/reference/cloud/'];
+const closedSourceDirectories = ['content/en-us/release-notes/'];
 
 const closedSourceFiles = [
   'content/en-us/index/index.md',
-  'content/en-us/production/promotion/advertising-on-roblox.md',
-  'content/en-us/production/promotion/complying-with-advertising-standards.md',
-  'content/en-us/production/promotion/discovery.md',
-  'content/en-us/production/promotion/sponsoring-items.md',
+  'content/en-us/resources/scripting-libraries.md',
   'content/en-us/samples/index.md',
 ];
 
@@ -363,7 +361,7 @@ export const checkContentLinks = ({
 };
 
 export const checkUnusedAssets = ({ config }: { config: IConfig }) => {
-  console.log(`${Emoji.Mag} Checking for unused assets...`);
+  console.log(`::group::${Emoji.Mag} Checking for unused assets...`);
   // Get all files to check
   const allFiles = [
     ...getAllContentFileNamesWithExtension({
@@ -415,6 +413,7 @@ export const checkUnusedAssets = ({ config }: { config: IConfig }) => {
     }
     return false;
   });
+  console.log('::endgroup::');
   console.log(`${Emoji.Bulb} Total unused assets: ${unusedAssets.length}`);
 
   if (config.deleteUnusedAssets) {

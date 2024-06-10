@@ -15,8 +15,9 @@ items:
     summary: |
       If _functionToBind_ from `Class.ContextActionService:BindAction()` returns
       Enum.ContextActionResult.Sink, the input event will stop at that function
-      and no other bound actions under it will be . This is the default behavior
-      if _functionToBind_ does not return anything or yields in any way.
+      and no other bound actions under it will be processed. This is the default
+      behavior if _functionToBind_ does not return anything or yields in any
+      way.
     value: 0
     tags: []
     deprecation_message: ''

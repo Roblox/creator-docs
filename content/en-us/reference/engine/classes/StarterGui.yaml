@@ -383,7 +383,7 @@ methods:
           <td><code>Font</code></td>
           <td><code>Enum.Font</code></td>
           <td><code>SourceSansBold</code></td>
-          <td>The TextLabel/Font|Font of the message</td>
+          <td>The Font of the message</td>
         </tr>
       	<tr>
           <td><code>TextSize</code></td>

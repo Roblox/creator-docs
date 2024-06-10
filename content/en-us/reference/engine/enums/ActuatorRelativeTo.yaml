@@ -10,13 +10,13 @@ deprecation_message: ''
 items:
   - name: Attachment0
     summary: |
-      The constraint is expressed relative to Attatchment0.
+      The constraint is expressed relative to Attachment0.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Attachment1
     summary: |
-      The constraint is expressed relative to Attatchment1.
+      The constraint is expressed relative to Attachment1.
     value: 1
     tags: []
     deprecation_message: ''

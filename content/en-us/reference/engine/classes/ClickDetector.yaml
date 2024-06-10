@@ -214,8 +214,7 @@ events:
     security: None
     thread_safety: Unsafe
   - name: ClickDetector.mouseClick
-    summary: |
-      Deprecated in favor of `Class.ClickDetector.MouseClick`.
+    summary: ''
     description: ''
     code_samples:
     parameters:
@@ -226,7 +225,7 @@ events:
     tags:
       - Deprecated
     deprecation_message: |
-      This deprecated event is a variant of `Class.ClickDetector.MouseClick`
+      This deprecated event is a variant of `Class.ClickDetector.MouseClick`,
       which should be used instead.
     security: None
     thread_safety: Unsafe

@@ -6,7 +6,6 @@ description: If you're an experienced Unreal developer, use this page to get ori
 import ScriptTypes from './includes/engine-comparisons/script-types.md'
 import CodeSample from './includes/engine-comparisons/fishing-pole-code-sample.md'
 import ScriptLocations from './includes/engine-comparisons/script-locations.md'
-import Collaboration from './includes/engine-comparisons/collaboration.md'
 import Transforms from './includes/engine-comparisons/transforms.md'
 
 This page includes information to help experienced Unreal Engine developers get started with Roblox: basic orientation, a conceptual comparison, and key differences between the two platforms.
@@ -58,6 +57,8 @@ Model
 
 Roblox's physics-by-default philosophy extends to the process of building 3D models. In Roblox, welding multiple parts together into an [assembly](physics/assemblies.md) is an excellent way to quickly build things, because Roblox treats the welded parts as a single rigid body. This approach isn't practical in Unreal.
 
+Rather than using standard metric units for length and mass, Roblox uses notional units called studs and Roblox Mass Units (RMUs). For approximate metric conversions and recommendations around use, see [Units](physics/units.md).
+
 ## Location Matters
 
 <ScriptLocations components={props.components} />
@@ -106,11 +107,15 @@ Roblox also offers an open-source [Blender plugin](art/modeling/roblox-blender-p
 
 In Unreal, you collaborate with version control systems like Perforce or SVN, generally through Unreal's built-in user interface. These version control systems use the centralized "checkout" model that locks files while one person works on them.
 
-<Collaboration package="Unreal Blueprint classes" components={props.components} />
+Roblox files live in the cloud (although you can export copies), so Roblox Studio provides built-in collaboration workflows for simultaneous editing, group management, permissions, script drafting, and more. See [Collaboration](projects/collaboration.md).
+
+<Alert severity="info">
+Cloud syncing provides further benefits with [packages](projects/assets/packages.md), the Roblox equivalent of Unreal Blueprint classes. Converting an asset or asset hierarchy to a package helps with local reusability, but also with collaboration. When you or your collaborators publish a new version of a package, you can quickly update existing instances of that package within an experience or set them to auto-update.
+</Alert>
 
 ## Plugins
 
-Similar to Unreal, Roblox Studio supports [plugins](studio/plugins.md), which can simplify or give you additional control over various aspects of the development process. Plugins are available in the [Creator Store](production/publishing/creator-store.md), just like assets, many for free.
+Similar to Unreal, Roblox Studio supports [plugins](studio/plugins.md), which can simplify or give you additional control over various aspects of the development process. Plugins are available in the [Creator Store](production/creator-store.md), just like assets, many for free.
 
 ## Glossary
 
@@ -127,6 +132,6 @@ Similar to Unreal, Roblox Studio supports [plugins](studio/plugins.md), which ca
 | Landscape Mode | Terrain Editor | |
 | PlayerStart | `Class.SpawnLocation` | |
 | Output Log | Output | |
-| Marketplace | [Creator Store](production/publishing/creator-store.md) | |
+| Marketplace | [Creator Store](production/creator-store.md) | |
 | Menu bar | Menu bar | |
 | Plugin | [Plugin](studio/plugins.md) | |

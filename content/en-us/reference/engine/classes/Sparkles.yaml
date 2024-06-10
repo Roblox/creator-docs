@@ -48,8 +48,6 @@ properties:
       It should be noted that sparkles have a partial
       `Class.ParticleEmitter.LightEmission` effect, so dark colors tend to
       render more transparent and white colors look very bright.
-
-      This property functions identically to `Class.Sparkles.SparkleColor`.
     code_samples:
       - Give-Sparkles
     type: Color3
@@ -102,6 +100,23 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: Sparkles.LocalTransparencyModifier
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
   - name: Sparkles.SparkleColor
     summary: |
       Determines the color of the sparkle particles.
