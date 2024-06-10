@@ -632,8 +632,7 @@ function PlayerManager.sendPlayersToMatch()
 		table.insert(activePlayers,whichPlayer)
 
 		-- Gets a spawn location and then removes it from the table so the next player gets the next spawn
-		local spawnLocation = availableSpawnPoints[1]
-		table.remove(availableSpawnPoints, 1)
+		local spawnLocation = table.remove(availableSpawnPoints, 1)
 		preparePlayer(whichPlayer, spawnLocation)
 	end
 

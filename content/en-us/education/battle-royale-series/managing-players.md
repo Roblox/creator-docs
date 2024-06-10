@@ -241,9 +241,8 @@ When the game runs, it needs to identify which users are playing so they can be 
    ```lua
    for playerKey, whichPlayer in Players:GetPlayers() do
       table.insert(activePlayers,whichPlayer)
-      local spawnLocation = arenaSpawns[1]
+      local spawnLocation = table.remove(arenaSpawns, 1)
       preparePlayer(whichPlayer, spawnLocation)
-      table.remove(arenaSpawns, 1)
    end
    ```
 
@@ -412,9 +411,8 @@ local arenaSpawns = spawnLocations:GetChildren()
 
 	for playerKey, whichPlayer in Players:GetPlayers() do
 		table.insert(activePlayers,whichPlayer)
-		local spawnLocation = arenaSpawns[1]
+		local spawnLocation = table.remove(arenaSpawns, 1)
 		preparePlayer(whichPlayer, spawnLocation)
-		table.remove(arenaSpawns, 1)
 	end
 end
 

@@ -24,7 +24,7 @@ methods:
       Binds a Luau callback to a message with the specified topic.
     description: |
       This method is used to bind a Luau callback to a message with the
-      specified topic. When a message is sent (using `Actor/SendMessage`) to the
+      specified topic. When a message is sent (using `Class.Actor:SendMessage()|SendMessage()`) to the
       topic specified the provided callback will be called in a _serial_
       execution context.
 
@@ -68,7 +68,7 @@ methods:
       Binds a Luau callback to a message with the specified topic.
     description: |
       This method is used to bind a Luau callback to a message with the
-      specified topic. When a message is sent (using `Actor/SendMessage`) to the
+      specified topic. When a message is sent (using `Class.Actor:SendMessage()|SendMessage()`) to the
       topic specified the provided callback will be called in a _parallel_
       execution context.
 
@@ -112,14 +112,14 @@ methods:
       Sends a message to an Actor.
     description: |
       Sends a message to an Actor. Messages are sent asynchronously, so the
-      sender will not block or yield when calling the `Actor/SendMessage`
+      sender will not block or yield when calling the `Class.Actor:SendMessage()|SendMessage()`
       method.
 
       Since a single Actor may receive different kinds of messages, a `topic`
       parameter is used to distinguish between various kinds of messages.
 
-      See `Actor/BindToMessage` for details on receiving a message sent using
-      `Actor/SendMessage`.
+      See `Class.Actor:BindToMessage()|BindToMessage()` for details on receiving a message sent using
+      `Class.Actor:SendMessage()|SendMessage()`.
 
       ```lua
       -- Assume `actor` is a local variable referring to an Actor instance
