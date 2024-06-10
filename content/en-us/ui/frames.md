@@ -125,7 +125,7 @@ If you want a 3D object such as a `Class.BasePart` to rotate on its own within t
 	-- Viewport object initialization
 	local object = viewportFrame:FindFirstChildWhichIsA("BasePart")
 	if object then
-		object.CFrame = CFrame.new(0, 0, 0)*CFrame.Angles(math.rad(objectPitchAngle), 0, 0)
+		object.CFrame = CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(objectPitchAngle), 0, 0)
 
 		-- Update loop
 		local t = 0
