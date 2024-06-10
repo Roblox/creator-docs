@@ -112,7 +112,7 @@ methods:
       Sends a message to an Actor.
     description: |
       Sends a message to an Actor. Messages are sent asynchronously, so the
-      sender will not block or yield when calling the `Class.Actor:SendMessage()|SendMessage`
+      sender will not block or yield when calling the `Class.Actor:SendMessage()|SendMessage()`
       method.
 
       Since a single Actor may receive different kinds of messages, a `topic`
