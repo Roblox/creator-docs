@@ -118,8 +118,8 @@ methods:
       Since a single Actor may receive different kinds of messages, a `topic`
       parameter is used to distinguish between various kinds of messages.
 
-      See `Class.Actor:BindToMessage()|BindToMessage` for details on receiving a message sent using
-      `Class.Actor:SendMessage()|SendMessage`.
+      See `Class.Actor:BindToMessage()|BindToMessage()` for details on receiving a message sent using
+      `Class.Actor:SendMessage()|SendMessage()`.
 
       ```lua
       -- Assume `actor` is a local variable referring to an Actor instance
