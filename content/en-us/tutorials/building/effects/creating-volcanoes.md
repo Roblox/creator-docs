@@ -127,7 +127,7 @@ To recreate the local lighting for the volcano in the sample [Volcano Island - C
 
 ### Global lighting
 
-Global lighting is the luminescence from either the sun or moon in an experience. By adjusting a couple of key default properties in the `Class.Lighting` service and its child post-processing effects objects, you can dramatically change how global light appears to users, as well as how it interacts with any other object you place in the experience, including `Class.ParticleEmitter` and `Class.Beam` textures.
+Global lighting is the luminescence from either the sun or moon in an experience. By adjusting a couple of key default properties in the `Class.Lighting` service and its child post-processing effects objects, you can dramatically change how global light appears to players, as well as how it interacts with any other object you place in the experience, including `Class.ParticleEmitter` and `Class.Beam` textures.
 
 For example, to ensure that the `Class.Beam` textures that produce a flowing lava effect later in the tutorial are able to glow, you must configure `Class.BloomEffect` properties to exaggerate the lighting like a camera viewing a bright light. Similarly, to simulate more realistic colors at night, you must also adjust the effect's properties to desaturate the overall environment.
 

@@ -106,7 +106,7 @@ You cannot set USD prices in Studio.
 
 ### Payouts
 
-When a user buys an asset, the money from the sale enters a **30 day escrow period**. At the end of that period, the money adds to the next payout cycle.
+When a user buys an asset, the money from the sale enters a **30 day escrow period**. At the end of that period, the money adds to the next payout cycle. If your seller account is denominated in a non-USD currency, conversion happens as each sale's proceeds are transferred into your balance. See [Stripe currency conversions](https://docs.stripe.com/currencies/conversions) for more information.
 
 Your earnings automatically pay out once a month to the bank associated with your seller account. This occurs on the **first of every month**, and there is no minimum payout. You cannot access your earnings outside of the payout schedule.
 

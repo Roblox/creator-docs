@@ -51,6 +51,8 @@ navigation:
         path: /tutorials/3D-art/assembling-modular-environments
       - title: Enhancing Outdoor Environments
         path: /tutorials/3D-art/enhancing-outdoor-environments-with-future-lighting
+      - title: Enhancing Indoor Environments
+        path: /tutorials/building/environments/enhancing-indoor-environments
   - title: Effects
     section:
       - title: Creating Laser Beams

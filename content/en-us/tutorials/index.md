@@ -160,7 +160,7 @@ While many creators focus on a single area, the following tutorials walk you thr
    <Typography variant='h4'>Environments</Typography>
    <Typography variant='body1' >
      <ul>
-     <li>Learn how to set <a href="../tutorials/3D-art/enhancing-outdoor-environments-with-future-lighting.md">global lighting properties</a> to enhance outdoor spaces</li>
+     <li>Learn how to set global and local lighting properties to enhance <a href="../tutorials/3D-art/enhancing-outdoor-environments-with-future-lighting.md">outdoor</a> and <a href="../tutorials/building/environments/enhancing-indoor-environments.md">indoor</a> environments</li>
      <li>Learn how to play <a href="../tutorials/building/environments/playing-background-music.md">background</a> and <a href="../tutorials/building/environments/in-game-sounds.md">positional</a> audio for player immersion</li>
      <li>Learn how to <a href="../tutorials/3D-art/assembling-modular-environments.md">assemble modular assets</a> that snap together in numerous configurations</li>
      </ul></Typography>

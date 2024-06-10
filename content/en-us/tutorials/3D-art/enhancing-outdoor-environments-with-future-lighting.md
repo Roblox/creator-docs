@@ -21,7 +21,7 @@ Using the [Forest Evening Lighting Example](../../assets/tutorials/enhancing-out
 
 ## Configure Global Lighting
 
-Global lighting is the luminescence from either the sun or moon in an experience. By adjusting a couple of key default properties in the `Class.Lighting` service, you can dramatically change how that light appears to users, as well as how it interacts with any other object you place in the experience.
+Global lighting is the luminescence from either the sun or moon in an experience. By adjusting a couple of key default properties in the `Class.Lighting` service, you can dramatically change how that light appears to players, as well as how it interacts with any other object you place in the experience.
 
 ### Enable the Future Lighting System
 
@@ -187,7 +187,7 @@ Local lighting is the luminescence from local [light sources](../../effects/ligh
 
 ### Add a PointLight
 
-Unlike `Class.SpotLight` or `Class.SurfaceLight` objects that only project light from one direction, `Class.PointLight` objects allow you to project omnidirectional lighting. This means that when you add a `Class.PointLight` to your campfire mesh, it projects in all directions outward from its source, similar to a real-life campfire, and it illuminates all surrounding objects in shadows and allows users to see the roughness of their surfaces much clearer.
+Unlike `Class.SpotLight` or `Class.SurfaceLight` objects that only project light from one direction, `Class.PointLight` objects allow you to project omnidirectional lighting. This means that when you add a `Class.PointLight` to your campfire mesh, it projects in all directions outward from its source, similar to a real-life campfire, and it illuminates all surrounding objects in shadows and allows players to see the roughness of their surfaces much clearer.
 
 <GridContainer numColumns="2">
   <figure>

@@ -408,7 +408,8 @@ functions:
       Removes from array t the element at position pos, returning the value of
       the removed element. When pos is an integer between `1` and `#t`, it
       shifts down the elements `t[pos+1], t[pos+2], ..., t[#t]` and erases
-      element `t[#t]`. If the pos parameter is not provided, pos defaults to the length of the table removing the last element.
+      element `t[#t]`. If the pos parameter is not provided, pos defaults to the
+      length of the table removing the last element.
     parameters:
       - name: t
         type: Array

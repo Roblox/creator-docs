@@ -19,7 +19,8 @@ deprecation_message: |
   work.
 
   Developers looking to implement custom `Class.Humanoid` statuses should use
-  [Character Physics Controllers](https://devforum.roblox.com/t/releasing-character-physics-controllers/2623426), as they are written in Luau and are easily extendable.
+  [Character Physics Controllers](https://devforum.roblox.com/t/releasing-character-physics-controllers/2623426),
+  as they are written in Luau and are easily extendable.
 properties: []
 methods: []
 events: []

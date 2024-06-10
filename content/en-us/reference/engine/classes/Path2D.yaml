@@ -75,21 +75,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: Path2D.Transparency
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
   - name: Path2D.Visible
     summary: |
       Determines if the `Class.Path2D` path is rendered or not.
