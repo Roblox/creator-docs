@@ -454,7 +454,7 @@ function PlayerManager.sendPlayersToMatch()
 	local arenaSpawns = spawnLocations:GetChildren()
 
 	for playerKey, whichPlayer in Players:GetPlayers() do
-		table.insert(activePlayers,whichPlayer)
+		table.insert(activePlayers, whichPlayer)
 		local spawnLocation = table.remove(arenaSpawns, 1)
 		preparePlayer(whichPlayer, spawnLocation)
 	end
