@@ -16,7 +16,7 @@ MicroProfiler isn't visible by default and is summoned by keystroke. You can sum
    <img src="../../assets/optimization/microprofiler/Tutorial-mpt1.png"
    width="80%" />
 
-2. Summon MicroProfiler by pressing <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>). You can see the render time for each individual frame represented at the top by the individual vertical orange bars. The higher the orange bar, the longer that particular frame takes to render.
+2. Summon MicroProfiler by pressing <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>). You can see the render time for each individual frame represented at the top by the individual vertical bars. The higher the bar, the longer that particular frame takes to render.
 
    <img src="../../assets/optimization/microprofiler/Tutorial-mpt3.png"
    width="80%" />
@@ -28,7 +28,7 @@ MicroProfiler is constantly running, analyzing the render time for every frame. 
 <img src="../../assets/optimization/microprofiler/Tutorial-mpt5.png"
    width="80%" />
 
-Each orange bar represents one frame, with the vertical height proportional to how long it takes that frame to render. You can tell something is wrong by how high the bars are. In the top right you'll see a green section that represents the current screen space. If you hover over the orange bars, you can select an individual frame for closer inspection.
+Each bar represents one frame, with the vertical height proportional to how long it takes that frame to render. You can tell something is wrong by how high the bars are. In the top right you'll see a green section that represents the current screen space. If you hover over the bars, you can select an individual frame for closer inspection.
 
 ## Navigating MicroProfiler
 

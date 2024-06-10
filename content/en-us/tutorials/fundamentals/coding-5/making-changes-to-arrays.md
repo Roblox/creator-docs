@@ -91,7 +91,7 @@ Notice also that all the index values changed or have been pushed. Removing a va
 
 ## Searching for Values in an Array
 
-There's no built-in function to search an array. To find specific values in arrays, like the name of a winning player, you'll need to code your own **search function** using for loops and if statements.
+To find specific values in arrays, like the name of a winning player, use the `Library.table.find()` function. Alternatively, you can code your own search function using `for` loops and `if` statements.
 
 ### Finding and Returning a Single Value
 

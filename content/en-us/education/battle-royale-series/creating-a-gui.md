@@ -320,10 +320,9 @@ Next, add the code for displaying the number of players at the start of a game. 
       local availableSpawnPoints = spawnLocations:GetChildren()
 
       for playerKey, whichPlayer in Players:GetPlayers() do
-         table.insert(activePlayers,whichPlayer)
+         table.insert(activePlayers, whichPlayer)
 
-         local spawnLocation = availableSpawnPoints[1]
-         table.remove(availableSpawnPoints, 1)
+         local spawnLocation = table.remove(availableSpawnPoints, 1)
          preparePlayer(whichPlayer, spawnLocation)
       end
 

@@ -60,8 +60,11 @@ To create the basic water hazard:
    local function onHazardTouched(otherPart)
      local character = otherPart.Parent
      local player = Players:GetPlayerFromCharacter(character)
-     if player and character.Humanoid then
-       character.Humanoid.Health = 0
+     if player then
+        local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+        if humanoid then
+          humanoid.Health = 0
+        end
      end
    end
 
