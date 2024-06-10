@@ -101,7 +101,7 @@ To use the platform, the script needs a function to check if any players touch i
    ```lua
    local Players = game:GetService("Players")
 
-   local function onTouch (partTouched)
+   local function onTouch(partTouched)
      local character = partTouched.Parent
      local player = Players:GetPlayerFromCharacter(character)
      if player then
