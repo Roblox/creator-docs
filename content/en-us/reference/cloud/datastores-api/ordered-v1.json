@@ -449,7 +449,7 @@
     "/v1/universes/{universeId}/orderedDataStores/{orderedDataStore}/scopes/{scope}/entries/{entry}:increment": {
       "post": {
         "tags": ["OrderedDataStores"],
-        "description": "Increments the value of the key by the provided amount and returns the updated entry.",
+        "description": "Increments the value of the key by the provided amount and returns the updated entry.\n\nKnown issue: Entry values can increment past the valid range and this may persist in the backend. Returned values will clamp to the valid range.",
         "operationId": "OrderedDataStores_IncrementEntry",
         "x-roblox-cloud-api-operation-name": "Increment",
         "parameters": [
