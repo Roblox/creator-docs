@@ -2413,10 +2413,10 @@ events:
       end
 
       local function onPlayerAdded(player)
-      	player.CharacterAdded:Connect(function ()
+      	player.CharacterAdded:Connect(function()
       		onCharacterSpawned(player)
       	end)
-      	player.CharacterRemoving:Connect(function ()
+      	player.CharacterRemoving:Connect(function()
       		onCharacterDespawned(player)
       	end)
       end

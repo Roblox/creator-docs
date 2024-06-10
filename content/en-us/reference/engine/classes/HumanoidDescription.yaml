@@ -1833,7 +1833,7 @@ events:
 
       ```lua
       local hd = Instance.new("HumanoidDescription")
-      hd.EquippedEmotesChanged:Connect(function (equippedEmotes)
+      hd.EquippedEmotesChanged:Connect(function(equippedEmotes)
           print(("We have %d emotes equipped"):format(#equippedEmotes))
           for _, t in equippedEmotes do
               print(("In slot %d: emote %s is equipped"):format(t.Slot, t.Name))

@@ -892,7 +892,7 @@ methods:
       local maxAttempts = 10
 
       while (tries < maxAttempts) do
-      	local success,result = pcall(function ()
+      	local success,result = pcall(function()
       		StarterGui:SetCore("CoreGuiChatConnections",ChatConnections)
       	end)
       	if success then
