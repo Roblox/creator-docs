@@ -28,6 +28,7 @@ load by calling the `Global.RobloxGlobals.require()` function. Module scripts mu
 value and run once and only once
 per Lua environment. As a result, subsequent calls to `Global.RobloxGlobals.require()` return a
 cached value.
+You can execute arbitrary code in a `Class.ModuleScript`, but you only need to return what you need in other scripts.
 
 Multiple scripts can require
 the same module script, and one module script can be required by both
@@ -44,8 +45,6 @@ return module
 
 - `local module = {}` creates an empty [table](../luau/tables.md).
 - `return module` returns the table and its members to any script that imports the `Class.ModuleScript`.
-
-`Class.ModuleScript` objects return one value that can be any [data type](/reference/engine/datatypes) except for `nil`. You can execute arbitrary code in a `Class.ModuleScript`, but you only need to return what you need in other scripts.
 
 The following example module script returns a `getPickupBonus` function in the `PickupManager` table:
 
