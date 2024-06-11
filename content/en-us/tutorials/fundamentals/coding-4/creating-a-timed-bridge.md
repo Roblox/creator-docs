@@ -301,7 +301,7 @@ local function startTimer()
 
 end
 
-local function buttonPressed (partTouched)
+local function buttonPressed(partTouched)
 	local character = partTouched.Parent
 	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 	print("part touched")

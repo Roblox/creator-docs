@@ -303,7 +303,7 @@ local function mathProblem(num)
 end
 
 local metatable = {
-   __index = function (object, key)
+   __index = function(object, key)
    	local num = mathProblem(key)
    	object[key] = num
    	return num

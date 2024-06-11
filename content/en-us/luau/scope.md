@@ -11,7 +11,7 @@ Scripts cannot access global and local variables or functions in other scripts. 
 
 ```lua
 local helloWorld = 'Hello World!'
-local function printHelloWorld ()
+local function printHelloWorld()
 	print(helloWorld)
 end
 printHelloWorld() -- Hello World!

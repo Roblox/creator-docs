@@ -233,7 +233,7 @@ functions:
       return a thread to cancel them before they are resumed. For example:
 
       ```lua
-      local thread = task.delay(5, function ()
+      local thread = task.delay(5, function()
         print("Hello world!")
       end)
 

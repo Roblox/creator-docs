@@ -37,11 +37,11 @@ description: |
   	</tr>
   	<tr>
   		<td>RBX_CHECK_THROW(CODE)</td>
-  		<td>pcall(function () CODE end) == false</td>
+  		<td>pcall(function() CODE end) == false</td>
   	</tr>
   	<tr>
   		<td>RBX_CHECK_NO_THROW(CODE)</td>
-  		<td>pcall(function () CODE end) == true</td>
+  		<td>pcall(function() CODE end) == true</td>
   	</tr>
   	<tr>
   		<td>RBX_CHECK_EQUAL(a,b)</td>
@@ -89,11 +89,11 @@ description: |
   	</tr>
   	<tr>
   		<td>RBX_REQUIRE_THROW(CODE)</td>
-  		<td>pcall(function () CODE end) == false</td>
+  		<td>pcall(function() CODE end) == false</td>
   	</tr>
   	<tr>
   		<td>RBX_REQUIRE_NO_THROW(CODE)</td>
-  		<td>pcall(function () CODE end) == true</td>
+  		<td>pcall(function() CODE end) == true</td>
   	</tr>
   	<tr>
   		<td>RBX_REQUIRE_EQUAL(a,b)</td>
@@ -140,11 +140,11 @@ description: |
   	</tr>
   	<tr>
   		<td>RBX_WARN_THROW(CODE)</td>
-  		<td>pcall(function () CODE end) == false</td>
+  		<td>pcall(function() CODE end) == false</td>
   	</tr>
   	<tr>
   		<td>RBX_WARN_NO_THROW(CODE)</td>
-  		<td>pcall(function () CODE end) == true</td>
+  		<td>pcall(function() CODE end) == true</td>
   	</tr>
   	<tr>
   		<td>RBX_WARN_EQUAL(a,b)</td>
