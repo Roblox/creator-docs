@@ -17,13 +17,13 @@ This article will cover using them, and have a practical script example where yo
 
 ```lua
 local myDictionary = {
-  ["Blue Player"] = "Ana",
-  ["Gold Player"] = "Binh",
-  ["Red Player"] = "Cate",
+  ["Blue Player"] = "Ana",
+  ["Gold Player"] = "Binh",
+  ["Red Player"] = "Cate",
 }
 
 for key, value in pairs(myDictionary) do
-  print(key .. " is " .. value)
+  print(key .. " is " .. value)
 end
 ```
 

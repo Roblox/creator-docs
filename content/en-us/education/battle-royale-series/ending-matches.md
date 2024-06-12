@@ -28,7 +28,7 @@ A sample anonymous function is below that shows the syntax.
 
 ```lua
 myPlayer.Died:Connect(function()
-  print(player)
+  print(player)
 end)
 ```
 
