@@ -144,7 +144,7 @@ API responses return in a JSON format. The response provides asset details with 
 
 The following is an example of expected return output for a single item:
 
-```lua
+```json
 {
 	"AssetId": 3374795585,
 	"Name": "Rat",
@@ -425,7 +425,7 @@ API responses return in a JSON format. The response provides asset details in th
 
 The following is an example of expected return output for a single item:
 
-```lua
+```json
 {
 	"keyword": null,
 	"previousPageCursor": null,
