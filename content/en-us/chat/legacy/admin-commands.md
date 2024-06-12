@@ -52,7 +52,7 @@ local AdminCommands = require(1163352238)
 local Utilities = AdminCommands.Utilities
 
 function commandFunction(commandData)
-	// Command code here
+	-- Command code here
 	-- Returns true if successful and false otherwise
 end
 
@@ -129,7 +129,7 @@ function listCommand(commandData)
 
 	return true
 
-end, 1)
+end
 
 AdminCommands:BindCommand({"list"}, listCommand, 0, "Prints a list of commands.")
 ```
