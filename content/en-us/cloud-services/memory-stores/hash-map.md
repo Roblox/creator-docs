@@ -93,7 +93,7 @@ local MemoryStoreService = game:GetService("MemoryStoreService")
 local hashMap = MemoryStoreService:GetHashMap("HashMap1")
 
 local setSuccess, _ = pcall(function()
-	return = hashMap:SetAsync("User_1234", 1000, 30)
+	return hashMap:SetAsync("User_1234", 1000, 30)
 end)
 if setSuccess then
 	print("Set succeeded.")
@@ -235,10 +235,11 @@ if success then
 
 			if not removeSuccess then
 				warn(removeError)
+			end
 		end
 		-- Check if last page has been reached
 		if pages.IsFinished then
-		  print("Finished deleting all data.")
+			print("Finished deleting all data.")
 			break
 		else
 			print("----------")
