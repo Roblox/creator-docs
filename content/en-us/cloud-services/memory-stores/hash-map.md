@@ -235,6 +235,7 @@ if success then
 
 			if not removeSuccess then
 				warn(removeError)
+			end
 		end
 		-- Check if last page has been reached
 		if pages.IsFinished then
