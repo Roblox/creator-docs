@@ -27,8 +27,7 @@ You can also use `Class.LocalScript` objects for client-side scripts, but we rec
 load by calling the `Global.RobloxGlobals.require()` function. Module scripts must return exactly one
 value and run once and only once
 per Lua environment. As a result, subsequent calls to `Global.RobloxGlobals.require()` return a
-cached value.
-You can execute arbitrary code in a `Class.ModuleScript`, but you only need to return what you need in other scripts.
+cached value. You can execute arbitrary code in a `Class.ModuleScript`, but you only need to return what you need in other scripts.
 
 Multiple scripts can require
 the same module script, and one module script can be required by both
