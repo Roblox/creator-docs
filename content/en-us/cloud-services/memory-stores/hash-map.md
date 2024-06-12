@@ -239,7 +239,7 @@ if success then
 		end
 		-- Check if last page has been reached
 		if pages.IsFinished then
-		  print("Finished deleting all data.")
+			print("Finished deleting all data.")
 			break
 		else
 			print("----------")
