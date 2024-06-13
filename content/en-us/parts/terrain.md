@@ -185,14 +185,7 @@ To add animated grass to the **Grass** material:
 
    <img src="../assets/studio/properties/Terrain-GrassLength.png" width="320" alt="GrassLength property of Terrain object in Properties window of Studio" />
 
-   <Tabs>
-   <TabItem label="0.1">
-   <img src="../assets/modeling/terrain/Terrain-GrassLength-Short.jpg" width="780" height="400" alt="GrassLength of 0.1" />
-   </TabItem>
-    <TabItem label="1.0">
-   <img src="../assets/modeling/terrain/Terrain-GrassLength-Long.jpg" width="780" height="400" alt="GrassLength of 1.0" />
-   </TabItem>
-   </Tabs>
+	 <img src="../assets/modeling/terrain/Terrain-GrassLength.jpg" width="720" alt="GrassLength comparison depicted on rolling grassland hills." />
 
 4. If desired, adjust the direction and strength of its animation through [global wind](../environment/global-wind.md).
 

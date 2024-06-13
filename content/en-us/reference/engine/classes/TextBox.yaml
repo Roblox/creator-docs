@@ -280,6 +280,38 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: TextBox.OpenTypeFeatures
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextBox.OpenTypeFeaturesError
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: false
+      can_save: true
   - name: TextBox.PlaceholderColor3
     summary: |
       Sets the text color that gets used when no text has been entered into the

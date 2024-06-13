@@ -20,7 +20,7 @@ Whether you're just getting started with Roblox or need a quick refresher, use t
 
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-    <img src="https://blog.roblox.com/wp-content/uploads/2022/08/blog_evergreen.png" />
+    <img src="../assets/misc/blog_evergreen.png" />
   </div>
     <Typography variant='h4'>3D Art in Roblox Studio</Typography>
     <Typography variant='body1' >Get up to speed with the many powerful tools and functions in Roblox Studio!</Typography>
@@ -141,7 +141,7 @@ Check out the following showcases made by Roblox and the community. Each of thes
     <a href="https://www.roblox.com/games/6519709626/Hotel-Resort"><Typography variant='h6' style={{marginBottom: 12}}>Hotel Resort by @ChooShu_Cho</Typography></a>
     <a href="https://www.roblox.com/games/5415692770/Lab"><Typography variant='h6' style={{marginBottom: 12}}>Lab by @thisfall</Typography></a>
   </Grid>
-  </Grid>  
+  </Grid>
 </Grid>
 
 <h2 style={{marginBottom: 24, marginTop: 96}}>From the Staff</h2>

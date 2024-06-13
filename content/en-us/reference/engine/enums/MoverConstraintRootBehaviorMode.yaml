@@ -1,23 +1,36 @@
 name: MoverConstraintRootBehaviorMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Values for `Class.Workspace.MoverConstraintRootBehavior`. Controls the logic
+  for selecting the assembly root part when using various mover constraints.
+description: |
+  Values for `Class.Workspace.MoverConstraintRootBehavior`. Controls the logic
+  for selecting the assembly root part when using various
+  [mover constraints](../../../physics/mover-constraints.md).
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      The default option for `Class.Workspace.MoverConstraintRootBehavior`.
+      Currently set to **Disabled**.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Disabled
-    summary: ''
+    summary: |
+      The legacy logic will be used for assembly root part selection when a
+      mechanism contains a mover constraint.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      Improved logic will be used for assembly root part selection when a
+      mechanism contains a mover constraint. This improved logic gives more
+      consistent behavior when compared with other constraints or the deprecated
+      `Class.BodyMover` classes.
     value: 2
     tags: []
     deprecation_message: ''

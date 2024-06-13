@@ -41,24 +41,24 @@ local currentPlayer = Players.LocalPlayer
 AnalyticsService:LogEconomyEvent(
     currentPlayer,
     Enum.AnalyticsEconomyFlowType.Source,
-    "Coins", -- currency name
-    50, -- amount earned 
-    50, -- current balance
-    Enum.AnalyticsEconomyTransactionType.Gameplay.Name -- transaction type
+    "Coins", -- Currency name
+    50, -- Amount earned
+    50, -- Current balance
+    Enum.AnalyticsEconomyTransactionType.Gameplay.Name -- Transaction type
 )
 
 -- After level 2 completion
 AnalyticsService:LogEconomyEvent(
     currentPlayer,
     Enum.AnalyticsEconomyFlowType.Source,
-    "Coins", -- currency name
-    50, -- amount earned
-    100, -- balance after transaction
-    Enum.AnalyticsEconomyTransactionType.Gameplay.Name -- transaction type
+    "Coins", -- Currency name
+    50, -- Amount earned
+    100, -- Balance after transaction
+    Enum.AnalyticsEconomyTransactionType.Gameplay.Name -- Transaction type
 )
 ```
 
-The following sample tracks a Robux purchase of a 1000-coin bundle, using the `IAP` (in-app purchase) transaction type. Note the item name provided as an optional parameter when compared to the previous sample.
+The following sample tracks a Robux purchase of a 1000-coin bundle, using the `IAP` (in-app purchase) transaction type. The `itemSKU` field is an optional parameter added here to compare with the previous sample. If you don't specify an `itemSKU`, the Economy dashboards display `N/A` in the sources and sinks table.
 
 ```lua title="Tracking an in-app purchase"
 local AnalyticsService = game:GetService("AnalyticsService")
@@ -70,15 +70,17 @@ AnalyticsService:LogEconomyEvent(
     Enum.AnalyticsEconomyFlowType.Source,
     "Coins",
     1000, -- How many coins are in the bundle
-    1020, -- balance after transaction
+    1020, -- Balance after transaction
     Enum.AnalyticsEconomyTransactionType.IAP.Name,
-    "1000CoinBundle" -- Unique identifier of the coin bundle
+    "1000CoinBundle" -- Unique item SKU identifier of the coin bundle
 )
 ```
 
 ### Tracking Sinks
 
 The following sample logs an event when users spend coins to buy a `DoubleJumpUpgrade`. Note the `Sink` flow type and the `Shop` transaction type when compared to the source tracking samples.
+
+Keep in mind that the amount (cost) should always be a positive number regardless of whether the event is a source or a sink. The economy dashboard charts will automatically show sinks as negative numbers.
 
 ```lua title="Tracking a sink Gameplay event"
 local AnalyticsService = game:GetService("AnalyticsService")
@@ -89,15 +91,17 @@ local currentPlayer = Players.LocalPlayer
 AnalyticsService:LogEconomyEvent(
     currentPlayer,
     Enum.AnalyticsEconomyFlowType.Sink,
-    "Coins", -- currency name
-    80, -- cost
-    20, -- balance after transaction
+    "Coins", -- Currency name
+    80, -- Cost
+    20, -- Balance after transaction
     Enum.AnalyticsEconomyTransactionType.Shop.Name,
-    "DoubleJumpUpgrade" -- item sku
+    "DoubleJumpUpgrade" -- Item SKU
 )
 ```
 
-## Analyzing Data
+For information on `Class.AnalyticsService` limitations, see [event tracking limitations](./event-types.md#event-tracking-limitations).
+
+## Using Economy to Grow Your Experience
 
 The Economy dashboard includes five charts to help you take action to grow your revenue. You can add up to five currencies of resources, and all charts can be filtered by gender, age group, platform, OS, and up to three custom fields specific to your experience.
 

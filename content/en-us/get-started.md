@@ -46,7 +46,7 @@ start creating Roblox experiences.
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-    <img src="https://blog.roblox.com/wp-content/uploads/2022/08/blog_evergreen.png" />
+    <img src="/assets/misc/blog_evergreen.png" />
   </div>
     <Typography variant='h4'>Learn about the Platform</Typography>
     <Typography variant='body1' >Roblox is designed for mega-scale, 3D worlds. Learn about how it works!</Typography>

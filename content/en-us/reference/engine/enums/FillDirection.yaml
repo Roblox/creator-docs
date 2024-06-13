@@ -12,13 +12,13 @@ deprecation_message: ''
 items:
   - name: Horizontal
     summary: |
-      Fill in the left to right direction.
+      Fill in the left-to-right direction.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Vertical
     summary: |
-      Fill in the top to bottom direction.
+      Fill in the top-to-bottom direction.
     value: 1
     tags: []
     deprecation_message: ''

@@ -105,6 +105,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: ColorCorrectionEffect.TonemapperPreset
+    summary: ''
+    description: ''
+    code_samples: []
+    type: TonemapperPreset
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
 methods: []
 events: []
 callbacks: []

@@ -2,8 +2,15 @@ name: UIFlexItem
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Defines flex behavior for a `Class.GuiObject` within a `Class.UIListLayout`.
+description: |
+  The **UIFlexItem** defines flex behavior for its parent `Class.GuiObject`
+  under the control of a `Class.UIListLayout`. The defined flex behavior
+  overrides that of the controlling `Class.UIListLayout`, letting you configure
+  flex behavior on a per‑object basis where necessary.
+
+  <img src="../../../assets/engine-api/classes/UIListLayout/UIFlexItem-Hierarchy.png" width="500" alt="Example hierarchy of a UIFlexItem parented to a GuiObject under control of a UIListLayout." />
 code_samples: []
 inherits:
   - UIComponent
@@ -12,8 +19,45 @@ tags:
 deprecation_message: ''
 properties:
   - name: UIFlexItem.FlexMode
-    summary: ''
-    description: ''
+    summary: |
+      How the parent `Class.GuiObject` grows or shrinks with available space in
+      the flex layout's container.
+    description: |
+      `Enum.UIFlexMode` value which defines how the parent `Class.GuiObject`
+      grows or shrinks with available space in the flex layout's container.
+
+      When the container's size is **larger** than the flex line's combined
+      basis size, a value of `Enum.UIFlexMode.Grow` sets an effective **1:0**
+      grow‑shrink ratio on the parent `Class.GuiObject`. Objects set to
+      `Enum.UIFlexMode.Grow` never shrink below their basis size, so overflow
+      may occur if the container becomes smaller than the line's combined basis
+      size.
+
+      <img src="../../../assets/engine-api/classes/UIListLayout/FlexMode-Grow.png" width="800" alt="Diagram showing two items in a line with FlexMode set to Grow." />
+
+      When the container's size is **smaller** than the flex line's combined
+      basis size and the controlling `Class.UIListLayout` is **not** set to wrap
+      (resulting in overflow), a value of `Enum.UIFlexMode.Shrink` sets an
+      effective **0:1** grow‑shrink ratio on the parent `Class.GuiObject`.
+      Objects set to `Enum.UIFlexMode.Shrink` never grow above their basis size,
+      so underflow may occur if the container becomes larger than the line's
+      combined basis size.
+
+      <img src="../../../assets/engine-api/classes/UIListLayout/FlexMode-Shrink.png" width="800" alt="Diagram showing two items in a line with FlexMode set to Shrink." />
+
+      When the container's size is either larger or smaller than the flex line's
+      combined basis size, a value of `Enum.UIFlexMode.Fill` sets an effective
+      **1:1** grow‑shrink ratio on the parent `Class.GuiObject`. This setting
+      ensures the flex line always fills the container, even if the container
+      size changes.
+
+      <img src="../../../assets/engine-api/classes/UIListLayout/FlexMode-Fill.png" width="800" alt="Diagram showing two items in a line with FlexMode set to Fill." />
+
+      For fine-tuned layouts, a value of `Enum.UIFlexMode.Custom` enables the
+      `Class.UIFlexItem.GrowRatio|GrowRatio` and
+      `Class.UIFlexItem.ShrinkRatio|ShrinkRatio` properties, allowing for
+      relative growth or shrinking of the object in a ratio compared to other
+      flex objects also under control of a `Class.UIFlexItem`.
     code_samples: []
     type: UIFlexMode
     tags: []
@@ -27,8 +71,15 @@ properties:
       can_load: true
       can_save: true
   - name: UIFlexItem.GrowRatio
-    summary: ''
-    description: ''
+    summary: |
+      Determines the amount the parent `Class.GuiObject` grows relative to other
+      items in the line. Applies only if `Class.UIFlexItem.FlexMode|FlexMode` is
+      set to `Enum.UIFlexMode.Custom`.
+    description: |
+      If there is free space in the flex line, this property determines the
+      amount the parent `Class.GuiObject` grows relative to other flex items in
+      the line. Applies only if `Class.UIFlexItem.FlexMode|FlexMode` is set to
+      `Enum.UIFlexMode.Custom`.
     code_samples: []
     type: float
     tags: []
@@ -42,8 +93,12 @@ properties:
       can_load: true
       can_save: true
   - name: UIFlexItem.ItemLineAlignment
-    summary: ''
-    description: ''
+    summary: |
+      Cross-axis alignment of the specific parent `Class.GuiObject` within the
+      flex line.
+    description: |
+      Cross-axis alignment of the specific parent `Class.GuiObject` within the
+      flex line. See `Class.UIListLayout.ItemLineAlignment` for details.
     code_samples: []
     type: ItemLineAlignment
     tags: []
@@ -57,8 +112,15 @@ properties:
       can_load: true
       can_save: true
   - name: UIFlexItem.ShrinkRatio
-    summary: ''
-    description: ''
+    summary: |
+      Determines the amount the parent `Class.GuiObject` shrinks relative to
+      other items in the line. Applies only if
+      `Class.UIFlexItem.FlexMode|FlexMode` is set to `Enum.UIFlexMode.Custom`.
+    description: |
+      If there is overflow in the flex line, this property determines the amount
+      the parent `Class.GuiObject` shrinks relative to other flex items in the
+      line. Applies only if `Class.UIFlexItem.FlexMode|FlexMode` is set to
+      `Enum.UIFlexMode.Custom`.
     code_samples: []
     type: float
     tags: []

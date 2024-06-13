@@ -10,6 +10,8 @@ navigation:
     path: /studio/setting-up-roblox-studio
   - title: Studio Interface
     path: /studio/ui-overview
+  - title: Beta Features
+    path: /studio/beta
   - heading: Building Tools
   - title: Align Tool
     path: /studio/align-tool

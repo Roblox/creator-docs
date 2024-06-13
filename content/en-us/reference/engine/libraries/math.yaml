@@ -462,9 +462,9 @@ functions:
       When called with two integer numbers `m` and `n`, returns a uniform
       pseudo-random integer in the range of `m` to `n`, inclusive.
 
-      Internally, this uses a 32-bit PCG (Permuted Congruential Generator)
-      which achieves excellent statistical performance and makes its output
-      hard to predict.
+      Internally, this uses a 32-bit PCG (Permuted Congruential Generator) which
+      achieves excellent statistical performance and makes its output hard to
+      predict.
     parameters:
       - name: m
         type: number

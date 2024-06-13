@@ -126,10 +126,10 @@ functions:
         current environment of a script, it will return the same table every
         time within the specific thread.
 
-      **WARNING:** This function allows uncontrolled change of the global/function
-      environment and disables script optimizations. Changes to the environment
-      are not tracked by the script analysis tooling and may result in missing
-      or incorrect warnings. As a replacement, consider using
+      **WARNING:** This function allows uncontrolled change of the
+      global/function environment and disables script optimizations. Changes to
+      the environment are not tracked by the script analysis tooling and may
+      result in missing or incorrect warnings. As a replacement, consider using
       `Library.debug.info()` instead.
     parameters:
       - name: stack
@@ -221,11 +221,12 @@ functions:
       `loadstring()` is disabled by default. For guidance around enabling it,
       see `Class.ServerScriptService`.
 
-      **WARNING:**  This method disables certain Luau optimizations on the returned function.
-      Extreme caution should be taken when using `Global.LuaGlobals.loadstring()`; if
-      your intention is to allow users to run code in your experience, make sure to
-      protect the returned function's environment by using `Global.LuaGlobals.getfenv()`
-      and `Global.LuaGlobals.setfenv()`.
+      **WARNING:** This method disables certain Luau optimizations on the
+      returned function. Extreme caution should be taken when using
+      `Global.LuaGlobals.loadstring()`; if your intention is to allow users to
+      run code in your experience, make sure to protect the returned function's
+      environment by using `Global.LuaGlobals.getfenv()` and
+      `Global.LuaGlobals.setfenv()`.
     parameters:
       - name: contents
         type: string
@@ -512,10 +513,10 @@ functions:
       If `f` is `0`, then `setfenv()` changes the environment of the running
       thread and returns no values.
 
-      **WARNING:** This function allows uncontrolled change of the global/function
-      environment and disables script optimizations. Changes to the environment
-      are not tracked by the script analysis tooling and may result in missing
-      or incorrect warnings.
+      **WARNING:** This function allows uncontrolled change of the
+      global/function environment and disables script optimizations. Changes to
+      the environment are not tracked by the script analysis tooling and may
+      result in missing or incorrect warnings.
     parameters:
       - name: f
         type: Variant

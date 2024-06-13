@@ -2655,6 +2655,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/UICorner.yaml
         ignoreTranslation: true
+      - title: UIDragDetector
+        path: /reference/engine/classes/UIDragDetector
+        type: engineapi
+        source: /reference/engine/classes/UIDragDetector.yaml
+        ignoreTranslation: true
       - title: UIFlexItem
         path: /reference/engine/classes/UIFlexItem
         type: engineapi
@@ -3757,11 +3762,6 @@ navigation:
         path: /reference/engine/enums/EasingStyle
         type: engineapi
         source: /reference/engine/enums/EasingStyle.yaml
-        ignoreTranslation: true
-      - title: EditorLiveScripting
-        path: /reference/engine/enums/EditorLiveScripting
-        type: engineapi
-        source: /reference/engine/enums/EditorLiveScripting.yaml
         ignoreTranslation: true
       - title: ElasticBehavior
         path: /reference/engine/enums/ElasticBehavior
@@ -4928,6 +4928,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/TickCountSampleMethod.yaml
         ignoreTranslation: true
+      - title: TonemapperPreset
+        path: /reference/engine/enums/TonemapperPreset
+        type: engineapi
+        source: /reference/engine/enums/TonemapperPreset.yaml
+        ignoreTranslation: true
       - title: TopBottom
         path: /reference/engine/enums/TopBottom
         type: engineapi
@@ -4987,6 +4992,16 @@ navigation:
         path: /reference/engine/enums/TweenStatus
         type: engineapi
         source: /reference/engine/enums/TweenStatus.yaml
+        ignoreTranslation: true
+      - title: UIDragDetectorDragRelativity
+        path: /reference/engine/enums/UIDragDetectorDragRelativity
+        type: engineapi
+        source: /reference/engine/enums/UIDragDetectorDragRelativity.yaml
+        ignoreTranslation: true
+      - title: UIDragDetectorDragSpace
+        path: /reference/engine/enums/UIDragDetectorDragSpace
+        type: engineapi
+        source: /reference/engine/enums/UIDragDetectorDragSpace.yaml
         ignoreTranslation: true
       - title: UIDragDetectorDragStyle
         path: /reference/engine/enums/UIDragDetectorDragStyle

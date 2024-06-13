@@ -1,33 +1,54 @@
 name: UIFlexMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Used with `Class.UIFlexItem.FlexMode` to define how the parent
+  `Class.GuiObject` grows or shrinks.
+description: |
+  Used with `Class.UIFlexItem.FlexMode` to define how the parent
+  `Class.GuiObject` grows or shrinks with available space in the container.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      The parent `Class.GuiObject` is unaffected and neither shrinks nor grows.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Grow
-    summary: ''
+    summary: |
+      Sets an effective **1:0** grow‑shrink ratio on the parent
+      `Class.GuiObject`. Objects set to **Grow** never shrink below their basis
+      size, so overflow may occur if the container becomes smaller than the flex
+      line's combined basis size.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Shrink
-    summary: ''
+    summary: |
+      Sets an effective **0:1** grow‑shrink ratio on the parent
+      `Class.GuiObject`. Objects set to **Shrink** never grow above their basis
+      size, so underflow may occur if the container becomes larger than the flex
+      line's combined basis size.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Fill
-    summary: ''
+    summary: |
+      Sets an effective **1:1** grow‑shrink ratio on the parent
+      `Class.GuiObject`. This setting ensures the flex line always fills the
+      container, even if the container size changes.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Custom
-    summary: ''
+    summary: |
+      Enables the `Class.UIFlexItem.GrowRatio|GrowRatio` and
+      `Class.UIFlexItem.ShrinkRatio|ShrinkRatio` properties for the
+      `Class.UIFlexItem`, allowing for relative growth or shrinking of the
+      parent `Class.GuiObject` in a ratio compared to other flex objects also
+      under control of a `Class.UIFlexItem`.
     value: 4
     tags: []
     deprecation_message: ''

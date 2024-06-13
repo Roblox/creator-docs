@@ -3,19 +3,25 @@ title: Enhancing Outdoor Environments with Future Lighting
 description: Explains how to leverage Future Lighting to enhance outdoor environments.
 ---
 
-**Future lighting** is one of four `Class.Lighting.Technology` systems you can use to render the 3D environment within your experience, and it features the most advanced and powerful lighting technology with high fidelity to produce pixel perfect light emission and detailed shadows. To use Future lighting to its full capacity to create realistic lighting behavior, you must prepare the following light sources with the entire environment in mind:
+**Future lighting** is the most advanced and powerful `Class.Lighting.Technology` system you can use for rendering the 3D environment within your experiences. Unlike the other available lighting systems, Future lighting offers pixel perfect light emission, detailed shadows, and specular highlights that mimic real-world lighting for both indoor and outdoor spaces.
 
-- **Global lighting**, such as the sun or moon, produces lighting for the entire outdoor environment.
-- **Local lighting**, such as pointlights, spotlights, and surface lights, produces lighting around where you place them within your experience.
+Using the [Lighting Outdoors - Start](https://www.roblox.com/games/17835285085/Lighting-Outdoors-Start) `.rbxl` file as a starting place and [Lighting Outdoors - Complete](https://www.roblox.com/games/17835194683/Lighting-Outdoors-Complete) as a reference, this tutorial shows you how to utilize Future lighting with strategic global and local light source configurations to produce realistic, immersive outdoor lighting behavior for an evening campfire scene, including guidance on:
 
-Using the [Forest Evening Lighting Example](../../assets/tutorials/enhancing-outdoor-environments/Forest_EveningLightingExample.rbxl) `.rbxl` file as a starting place, this tutorial shows you how to take advantage of Future lighting and transform the first depiction of the evening campfire to the second by configuring the environment's global and local lighting.
+- Ensuring metallic surfaces produce accurate reflections as light sources continuously shift in the environment, such as dynamic movement from the roaring campfire.
+- Moving the sun to a new position that's realistic for the real world's time of day.
+- Customizing the atmosphere's layered hues, density, and haze.
+- Configuring point source local lighting to impact how it interacts with the overall environment.
+
+If at any point you become stuck in the process, you can use **Lighting Outdoors - Complete** as a reference to compare your progress.
 
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../assets/tutorials/enhancing-outdoor-environments/Intro-Before.png" />
+    <img width="100%" img src="../../assets/tutorials/enhancing-outdoor-environments/Intro-Before.png" alt="The starting outdoor environment you can use to complete this tutorial." />
+    <figcaption>Lighting Outdoors - Start</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../assets/tutorials/enhancing-outdoor-environments/Intro-After.png" />
+    <img width="100%" img src="../../assets/tutorials/enhancing-outdoor-environments/Intro-After.png" alt="The complete outdoor environment with global and local lighting you will create by the end of this tutorial." />
+    <figcaption>Lighting Outdoors - Complete</figcaption>
   </figure>
 </GridContainer>
 
@@ -25,7 +31,7 @@ Global lighting is the luminescence from either the sun or moon in an experience
 
 ### Enable the Future Lighting System
 
-Studio begins every experience with the `Enum.Technology.ShadowMap` lighting system, ensuring that the global lighting has precise shadows and illumination. However, to enhance the environment and equip your local light sources to also produce precise shadows and illumination, such as the light from the campfire, you must enable the `Enum.Technology.Future` lighting system technology directly in Studio. This allows both your global and local lighting to work together and provide more realistic and immersive visuals.
+The `Class.Lighting.Technology` property determines the behavior of both global and local lighting in your experience. Studio begins every experience with the `Enum.Technology.ShadowMap` lighting system, ensuring that the global lighting has precise shadows and illumination. However, to enhance the environment and equip your local light sources to also produce precise shadows and illumination, such as the light from the campfire, you must enable the `Enum.Technology.Future` lighting system technology directly in Studio. This allows both your global and local lighting to work together and provide more realistic and immersive visuals.
 
 To demonstrate this concept, see the following two images of the same campfire with different lighting system technologies. The local lighting from the campfire with the `Enum.Technology.ShadowMap` lighting systems doesn't produce shadows in the same way that the global lighting from the sun does, making this area of the environment unevenly lit with unrealistic shadows. By contrast, the local lighting from the campfire with the `Enum.Technology.Future` lighting system technology interacts with the kindling, rocks, and brush around the environment, producing crisp and realistic shadows for evening time.
 
@@ -236,7 +242,9 @@ While the local lighting is already looking and feeling closer to realistic beha
 To enable shadows from the campfire's local lighting:
 
 1. In the **Explorer** window, select the campfire's **PointLight**.
-1. In the **Properties** window, set **Brightness** to **2** and **Color** to **255, 179, 73**.
+1. In the **Properties** window,
+   1. Set **Brightness** to **2**.
+   1. Set **Color** to **255, 179, 73**.
 
    <img width="60%" img src="../../assets/tutorials/enhancing-outdoor-environments/Adjusting-Brightness-Color.png" />
 
