@@ -107,7 +107,7 @@ For this project, you'll create parts that when touched, trigger an animation fo
 
 ## Playing Animations
 
-Animations must be identifed in a script, loaded, and played.
+Animations must be identified in a script, loaded, and played.
 
 ### Setting the Animation
 
