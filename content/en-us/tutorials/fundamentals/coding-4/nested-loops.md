@@ -331,7 +331,7 @@ local function makeCupcake()
     local cupcake = ServerStorage.Cupcake:Clone()
     local cup = cupcake.Cup
     local frosting = cupcake.Frosting
-    cupcake:SetPrimaryPartCFrame(CFrame.new(0, 20, 0) *CFrame.Angles(0, 0, -90))
+    cupcake:SetPrimaryPartCFrame(CFrame.new(0, 20, 0) * CFrame.Angles(0, 0, -90))
     frosting.Color = frostingColor
     cup.Color = cupColor
     cupcake.Parent = workspace
