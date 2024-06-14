@@ -5,12 +5,16 @@ description: How to use the Assistant to help you build, grow, and monetize your
 
 import BetaAlert from '../includes/beta-features/beta-alert.md'
 
-The **Assistant** is an AI helper that can answer questions about building, growing, and monetizing Roblox creations. It is trained on the official Roblox documentation and is designed to answer these categories of questions:
+**Assistant** is an AI helper that can answer questions about building, growing, and monetizing Roblox creations. It is trained on the official Roblox documentation and is designed to answer these categories of questions:
 
 - **Building** — Answers questions about [creating an experience](../creation.md) in Studio.
 - **Scripting** — Generate simple [scripts](../scripting/index.md) and/or ask for an explanation of Lua code.
 - **Growing** — Answers questions about improving an existing experience by leveraging its [analytics](../production/analytics/index.md).
 - **Monetizing** — Answers questions about how to [monetize](../production/monetization/index.md) your experience.
+
+<Alert severity="info">
+[Built with Meta Llama 3](https://llama.meta.com/llama3/license/)
+</Alert>
 
 ## Using Assistant
 
@@ -22,7 +26,7 @@ To access Assistant from the official [Documentation](../) site:
 
 1. In the upper navigation bar, click the **Assistant** button.
 
-   <img src="../assets/assistant/Documentation-Button.png" width="790" />
+   <img src="../assets/assistant/Documentation-Button.png" width="650" />
 
 1. Select a premade question or type your own. See [Prompting Tips](#prompting-tips) for guidance on generating improved responses.
 

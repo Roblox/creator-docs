@@ -625,6 +625,8 @@ navigation:
             path: /production/analytics/economy-events
           - title: Funnel Events
             path: /production/analytics/funnel-events
+          - title: Custom Fields
+            path: /production/analytics/custom-fields
   - title: Community
     path: /production/community/
     section:
