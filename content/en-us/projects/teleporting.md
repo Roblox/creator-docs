@@ -94,7 +94,7 @@ Don't pass secure data using `Class.TeleportOptions:SetTeleportData()` because i
 
 ```lua
 local teleportData = {
-    randomNumber = RNG:NextInteger(1, 100);
+    randomNumber = RNG:NextInteger(1, 100),
 }
 
 local teleportOptions = Instance.new("TeleportOptions")

@@ -227,8 +227,8 @@ function NetworkManagerServer.GetServerEventSignal(id)
 	local bindableEvent = Instance.new("BindableEvent")
 	-- Linking the new BindableEvent to the id
 	table.insert(networkSignalList, {
-		id = id;
-		bindableEvent = bindableEvent;
+		id = id,
+		bindableEvent = bindableEvent,
 	})
 	return bindableEvent.Event
 end

@@ -169,8 +169,8 @@ function mt.__div(a, b)
 end
 
 function mt.__tostring(t)
-   return t.x .. ", " .. t.y;
-end;
+   return t.x .. ", " .. t.y
+end
 
 function vector2.new(x, y)
    local self = setmetatable({}, mt)
