@@ -19,7 +19,7 @@ The small tiles are 4x4 and the large are 8x8, so changing the **Move** setting 
 
 When designing maps, start with the most important elements such as the starting locations and largest map features.
 
-In Roblox Studio, the player starting locations are set using SpawnLocation objects. There's two of them sitting on the pallette for you to use.
+In Roblox Studio, the player starting locations are set using SpawnLocation objects. There's two of them sitting on the palette for you to use.
 
 <img src="../../assets/education/build-it-play-it-create-and-destroy/showSpawnLocations_800x450.jpg" width="75%" />
 
