@@ -44,7 +44,7 @@ The benefits of paper prototyping are:
 Despite its benefits, prototyping on paper has drawbacks due to the difference in medium. The detriments of paper prototyping are:
 
 - **Not reusable:** None of the prototyping done with paper prototyping can be used literally in the end result. Everything must be recreated virtually.
-- **Simulation limiations:** Simulating unique mechanics and interactions are limited or impossible to create on paper or using physical assets.
+- **Simulation limitations:** Simulating unique mechanics and interactions are limited or impossible to create on paper or using physical assets.
 - **False positives:** Some activities might prove more fun and engaging using paper and physical assets than doing them on a phone, computer, or console.
 
 ## Studio Prototyping
