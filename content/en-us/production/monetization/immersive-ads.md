@@ -112,6 +112,10 @@ Even if your experience is eligible to serve ads, not all users are eligible to 
 
 ## Inserting Ad Units
 
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/dlItlMLMDCE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br /> <br />
+
 When you insert an ad unit into an eligible experience, it's important to check each image ad surface that displays the ad before you publish your experience to confirm whether or not the ad unit is valid and able to serve ads. For example, you can scale ad units to different sizes to match your experience's aesthetics, but they cannot become too small or large, otherwise they become invalid and cannot serve ads.
 
 <GridContainer numColumns="2">
