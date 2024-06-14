@@ -100,7 +100,7 @@ Right now, there's multiple spawn locations, meaning that players spawn at a ran
 
 ### Connecting and Testing
 
-Now the modules can be connectd and tested. With the PlayerManager created, require it so that the code in that module script can then run and send players to the lobby.
+Now the modules can be connected and tested. With the PlayerManager created, require it so that the code in that module script can then run and send players to the lobby.
 
 1. Go back to **MatchManager** and create variables for the following:
 
