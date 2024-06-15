@@ -200,7 +200,7 @@ changeNameEvent.Parent = ReplicatedStorage
 
 local function onRequestNameChange(player, newName)
 	local character = player.Character
-	local humanoid = character:FindFirstChild("Humanoid")
+	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
 	local filterResult
 	local success, errorMessage = pcall(function()

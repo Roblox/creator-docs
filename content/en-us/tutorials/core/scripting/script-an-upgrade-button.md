@@ -155,7 +155,7 @@ To implement the jump upgrade:
 
    	-- Update the players jump power
    	local character = player.Character or player.CharacterAdded:Wait()
-   	local humanoid = character:FindFirstChild("Humanoid")
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
    	if humanoid then
    		humanoid.JumpPower = newJumpPower
 
