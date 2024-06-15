@@ -149,7 +149,7 @@ properties:
 
       local function resetCameraSubject()
       	if workspace.CurrentCamera and localPlayer.Character then
-      		local humanoid = localPlayer.Character:FindFirstChildOfClass("Humanoid")
+      		local humanoid = localPlayer.Character:FindFirstChildWhichIsA("Humanoid")
       		if humanoid then
       			workspace.CurrentCamera.CameraSubject = humanoid
       		end
