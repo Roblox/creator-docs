@@ -52,7 +52,7 @@ In Luau, a variable is created as follows: `local variableName = variableValue`.
 
 The term `local` means that the variable is only going to be used in the block of the script where it's declared. The `=` sign is used to set the value of the variable. Names for variables are typically written in **camel case**. This is lowercase with every word following the first being capitalized, `justLikeThis`.
 
-Copy the following code to create a **variable** for the platform called `platform`. where the value is `script.Parent`.
+Copy the following code to create a **variable** for the platform called `platform`, where the value is `script.Parent`.
 
 ```lua
 local platform = script.Parent
