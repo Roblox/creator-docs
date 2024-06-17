@@ -134,8 +134,10 @@ properties:
       can_load: true
       can_save: true
   - name: AudioDeviceInput.Volume
-    summary: ''
-    description: ''
+    summary: |
+        Volume level which is multiplied onto the output audio stream.
+    description: |
+        Volume level which is multiplied onto the output audio stream. Ranges from 0 to 3.
     code_samples: []
     type: float
     tags: []
