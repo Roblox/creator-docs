@@ -407,7 +407,7 @@ TextChatService.OnBubbleAdded = function(message: TextChatMessage, adornee: Inst
 		local player = Players:GetPlayerByUserId(message.TextSource.UserId)
 
 		-- Find the humanoid in the user's character
-		local humanoid = player.Character:FindFirstChild("Humanoid")
+		local humanoid = player.Character:FindFirstChildWhichIsA("Humanoid")
 
 		if humanoid and humanoid.Health < 25 then
 			-- Create a new BubbleChatMessageProperties instance to customize the chat bubble
