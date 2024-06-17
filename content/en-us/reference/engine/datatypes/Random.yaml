@@ -14,10 +14,11 @@ constructors:
       Returns a new `Datatype.Random` object. If you don't provide the seed
       parameter, `Datatype.Random` uses a seed from an internal entropy source.
 
-      If you provide a seed, `Datatype.Random` rounds it down to the nearest
-      integer, so seeds of 0, 0.99, and `Library.math.random()` all produce
-      identical generators. If you need to generate a seed and store it for
-      later retrieval, use `Library.math.random()|math.random(max)`.
+      If you provide a seed, it should be within the range [-9007199254740991,
+      9007199254740991], and `Datatype.Random` will round it down to the 
+      nearest integer. So seeds of 0, 0.99, and `Library.math.random()` all 
+      produce identical generators. If you need to generate a seed and store it 
+      for later retrieval, use `Library.math.random()|math.random(max)`.
     parameters:
       - name: seed
         type: number
