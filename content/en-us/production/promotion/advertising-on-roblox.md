@@ -38,11 +38,6 @@ Which advertising product is right for your content depends on the type of conte
     <td>3D user-generated content</td>
     <td>Within the **Sponsored** category on any item's main details page on the Roblox website, and the **Recommended Items for You** page of the Marketplace on the Roblox app</td>
   </tr>
-  <tr>
-    <td>[User Advertisements](../../production/promotion/user-advertisements.md)</td>
-    <td>Experiences, 3D user-generated content for avatars, and groups</td>
-    <td>The top, bottom, left, or right side of the Roblox website</td>
-  </tr>
 </tbody>
 </table>
 

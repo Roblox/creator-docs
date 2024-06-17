@@ -81,7 +81,7 @@ Additionally, you can help our systems know more about your experience with the 
 
 Continue reading about metadata best practices [here](./production/publishing/publishing-experiences-and-places.md#metadata-best-practices).
 
-Discovery can also be encouraged by community-building on social media and through the use of other content tools including [updates](./production/promotion/audience-engagement.md), [user advertisements](./production/promotion/user-advertisements.md), and [sponsored experiences](./production/promotion/advertising-on-roblox.md). Marketing an experience, on or off Roblox, drives traffic to build an initial audience which will help inform content discovery and recommendations.
+Discovery can also be encouraged by community-building on social media and through the use of other content tools including [updates](./production/promotion/audience-engagement.md), and [sponsored experiences](./production/promotion/advertising-on-roblox.md). Marketing an experience, on or off Roblox, drives traffic to build an initial audience which will help inform content discovery and recommendations.
 
 In general, experiences which are built with a specific audience in mind result in higher retention, long term engagement, and monetization.
 
