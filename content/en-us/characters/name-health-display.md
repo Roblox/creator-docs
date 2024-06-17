@@ -111,7 +111,7 @@ local Players = game:GetService("Players")
 
 local function onPlayerAdded(player)
 	player.CharacterAdded:Connect(function(character)
-		local humanoid = character:FindFirstChildOfClass("Humanoid")
+		local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 		if humanoid then
 			-- Give each humanoid full control over its name/health display distance
 			humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.Subject
@@ -137,7 +137,7 @@ local Players = game:GetService("Players")
 
 local function onPlayerAdded(player)
 	player.CharacterAdded:Connect(function(character)
-		local humanoid = character:FindFirstChildOfClass("Humanoid")
+		local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 		if humanoid then
 			-- Set the name of all guards to generic "Guard"
 			if player.Team.Name == "Guards" then
@@ -200,7 +200,7 @@ changeNameEvent.Parent = ReplicatedStorage
 
 local function onRequestNameChange(player, newName)
 	local character = player.Character
-	local humanoid = character:FindFirstChild("Humanoid")
+	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
 	local filterResult
 	local success, errorMessage = pcall(function()

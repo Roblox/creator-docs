@@ -40,7 +40,7 @@ local TextService = game:GetService("TextService")
 
 local filteredText = ""
 local success, errorMessage = pcall(function()
-	filteredTextResult = TextService:FilterStringAsync(text, fromPlayerId)
+	filteredText = TextService:FilterStringAsync(text, fromPlayerId)
 end)
 if not success then
 	warn("Error filtering text:", text, ":", errorMessage)

@@ -213,7 +213,7 @@ This way of approaching the problem might seem a bit convoluted. For example, wh
 local function onPlayerTagged(playerBlasted: Player, playerTagged: Player, damageAmount: number)
 	local character = playerTagged.Character
 
-	local humanoid = character and character:FindFirstChild("Humanoid")
+	local humanoid = character and character:FindFirstChildWhichIsA("Humanoid")
 	if humanoid and humanoid.Health > 0 then
 
 		local damage = math.min(damageAmount, humanoid.Health)
