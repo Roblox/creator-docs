@@ -349,7 +349,7 @@ If you have other models in the game that contain humanoids, further checks will
            -- If a humanoid is found in the model then it's likely a player's character
            local characterModel = weaponRaycastResult.Instance:FindFirstAncestorOfClass("Model")
            if characterModel then
-               local humanoid = characterModel:FindFirstChild("Humanoid")
+               local humanoid = characterModel:FindFirstChildWhichIsA("Humanoid")
                if humanoid then
                    print("Player hit")
                end
@@ -608,7 +608,7 @@ Clients can use a `Class.RemoteEvent` to tell the server that a character has be
    ```lua
        local characterModel = weaponRaycastResult.Instance:FindFirstAncestorOfClass("Model")
        if characterModel then
-           local humanoid = characterModel:FindFirstChild("Humanoid")
+           local humanoid = characterModel:FindFirstChildWhichIsA("Humanoid")
            if humanoid then
                eventsFolder.DamageCharacter:FireServer(characterModel)
            end
@@ -639,7 +639,7 @@ The server needs to deal damage to the player who has been hit when the event is
    local LASER_DAMAGE = 10
 
    function damageCharacter(playerFired, characterToDamage)
-       local humanoid = characterToDamage:FindFirstChild("Humanoid")
+       local humanoid = characterToDamage:FindFirstChildWhichIsA("Humanoid")
        if humanoid then
            -- Remove health from character
            humanoid.Health -= LASER_DAMAGE
@@ -835,7 +835,7 @@ The client needs to send the server the position hit by the raycast so it can ch
 
    ```lua
        if characterModel then
-       local humanoid = characterModel:FindFirstChild("Humanoid")
+       local humanoid = characterModel:FindFirstChildWhichIsA("Humanoid")
        if humanoid then
            eventsFolder.DamageCharacter:FireServer(characterModel, hitPosition)
        end
@@ -850,7 +850,7 @@ The client is now sending an extra parameter through the DamageCharacter remote 
 
    ```lua
    function damageCharacter(playerFired, characterToDamage, hitPosition)
-       local humanoid = characterToDamage:FindFirstChild("Humanoid")
+       local humanoid = characterToDamage:FindFirstChildWhichIsA("Humanoid")
        if humanoid then
            -- Remove health from character
            humanoid.Health -= LASER_DAMAGE
@@ -928,7 +928,7 @@ The second check will involve a raycast between the weapon fired and the hit pos
 
    ```lua
    function damageCharacter(playerFired, characterToDamage, hitPosition)
-       local humanoid = characterToDamage:FindFirstChild("Humanoid")
+       local humanoid = characterToDamage:FindFirstChildWhichIsA("Humanoid")
        local validShot = isHitValid(playerFired, characterToDamage, hitPosition)
        if humanoid and validShot then
            -- Remove health from character
@@ -1017,7 +1017,7 @@ local function fireWeapon()
 		-- If a humanoid is found in the model then it's likely a player's character
 		local characterModel = weaponRaycastResult.Instance:FindFirstAncestorOfClass("Model")
 		if characterModel then
-			local humanoid = characterModel:FindFirstChild("Humanoid")
+			local humanoid = characterModel:FindFirstChildWhichIsA("Humanoid")
 			if humanoid then
 				eventsFolder.DamageCharacter:FireServer(characterModel, hitPosition)
 			end
@@ -1136,7 +1136,7 @@ local function playerFiredLaser(playerFired, endPosition)
 end
 
 function damageCharacter(playerFired, characterToDamage, hitPosition)
-	local humanoid = characterToDamage:FindFirstChild("Humanoid")
+	local humanoid = characterToDamage:FindFirstChildWhichIsA("Humanoid")
 	local validShot = isHitValid(playerFired, characterToDamage, hitPosition)
 	if humanoid and validShot then
 		-- Remove health from character
