@@ -36,7 +36,7 @@ local player = Players.LocalPlayer
 -- Make profile-based Inspect Menu inaccessible
 GuiService:SetInspectMenuEnabled(false)
 
-local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
+local humanoid = player.Character and player.Character:FindFirstChildWhichIsA("Humanoid")
 if humanoid then
 	-- Get current HumanoidDescription from a player character
 	local humanoidDescription = humanoid:GetAppliedDescription()
