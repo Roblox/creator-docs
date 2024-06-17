@@ -132,7 +132,7 @@ You can't change or modify the asset or thumbnail after upload. If you discover 
 If a Roblox update breaks an existing asset, [submit a help ticket](https://www.roblox.com/support) with a link to the broken item and an `.rbxm` of the correct version.
 </Alert>
 
-Before publishing your asset, it's important to consider if you want to sell your asset as a Limited or Non-Limited item. Limited
+Before publishing your asset, it's important to consider if you want to sell your asset as a Limited or Non-Limited item.
 
 ### Metadata
 
