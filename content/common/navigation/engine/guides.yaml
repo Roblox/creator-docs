@@ -371,6 +371,8 @@ navigation:
             path: /ui/drag-detectors
           - title: Video Frames
             path: /ui/video-frames
+          - title: 2D Paths
+            path: /ui/2D-paths
       - title: Layout and Design
         section:
           - title: Layout and Appearance
@@ -521,8 +523,6 @@ navigation:
             path: /production/promotion/ads-manager
           - title: Sponsoring Items
             path: /production/promotion/sponsoring-items
-          - title: User Advertisements
-            path: /production/promotion/user-advertisements
           - title: Complying with Advertising Standards
             path: /production/promotion/complying-with-advertising-standards
       - title: Audience Engagement
