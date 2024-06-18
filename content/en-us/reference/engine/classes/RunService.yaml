@@ -110,7 +110,7 @@ methods:
         make a binding right before the default camera update, simply subtract 1
         from the camera priority level.
 
-      When using Enum.RenderPriority, remember to use <InlineCode>.Value</InlineCode> at
+      When using Enum.RenderPriority, remember to use `.Value` at
       the end of the desired enum. BindToRenderStep will not work if just the
       enum on its own is used.
 
