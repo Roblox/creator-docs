@@ -11,10 +11,6 @@ All promotional content on the platform must adhere to Roblox's [Community Stand
 
 The following table details promotional methods for experiences on the platform.
 
-<Alert severity="warning">
-**Sponsored Experiences** has moved to [Ads Manager](../../production/promotion/ads-manager.md) and [User Ads](../../production/promotion/user-advertisements.md) are being deprecated. You can learn about the future of advertising on Roblox [here](https://devforum.roblox.com/t/upcoming-ads-roadmap-and-changes/2660524).
-</Alert>
-
 <table>
 <thead>
   <tr>
