@@ -1646,9 +1646,16 @@ events:
     summary: |
       Fired immediately after a property of the instance changes.
     description: |
-      This event fires immediately after most properties change on the instance.
-      It is possible to find the present value of a changed property by using
-      `object[property]`.
+      This event fires immediately after an instance property is changed
+      and works with most use cases (see Limitations below). The new value
+      of a changed property is *not* passed in as a parameter.
+      Therefore, it must be accessed by using `object[property]`.  For example:
+      
+      ```
+      object.Changed:Connect(function(property)
+      	print("The new property's value is", object[property])
+      end)
+      ```
 
       If you are only interested in listening to the change of one specific
       property, consider using the
