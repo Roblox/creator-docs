@@ -93,8 +93,6 @@ properties:
       This property should only be changed in Studio via the property panel when `StreamingEnabled` is selected, or in `Class.Script|Scripts`, but never
       in `Class.LocalScript|LocalScripts` (doing so can result in undefined
       behavior).
-
-      Note that this property 
     code_samples: []
     type: ModelStreamingMode
     tags: []
