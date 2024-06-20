@@ -90,7 +90,7 @@ properties:
       [streaming](../../../workspace/streaming.md) is enabled. Behavior depends
       on the selected enum. Has no effect when streaming is not enabled.
 
-      This property should only be changed in Studio via the property panel when StreamingEnabled is selected, or in `Class.Script|Scripts`, but never
+      This property should only be changed in Studio via the property panel when `StreamingEnabled` is selected, or in `Class.Script|Scripts`, but never
       in `Class.LocalScript|LocalScripts` (doing so can result in undefined
       behavior).
 
