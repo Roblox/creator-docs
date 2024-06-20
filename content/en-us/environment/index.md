@@ -3,7 +3,7 @@ title: Lighting and Effects
 description: Create more immersive environments through lighting, atmospheres, and special effects.
 ---
 
-The `Class.Lighting` container services let you control and customize an experience's environment such as [ligthing](#global-lighting), [atmosphere](#atmospheric-effects), and [clouds](#clouds-and-skies). You can also apply [post-processing effects](#post-processing-effects) to adjust how the experience appears on the screen.
+The `Class.Lighting` container services let you control and customize an experience's environment such as [lighting](#global-lighting), [atmosphere](#atmospheric-effects), and [clouds](#clouds-and-skies). You can also apply [post-processing effects](#post-processing-effects) to adjust how the experience appears on the screen.
 
 ## Global Lighting
 

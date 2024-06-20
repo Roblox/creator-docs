@@ -168,7 +168,7 @@ When designing a new system, it's necessary to think about how it will be suppor
 
 _Mission design_ is the careful construction of season pass missions to maximize player engagement and retention that accounts for [mission categories](#mission-categories), [mission difficulty](#mission-difficulty), [mission surfacing](#mission-surfacing). Core tenants of effective mission design include:
 
-- New missions unlock daily. This encourages daily engagement from players and prevents highly engaged players from consuming the season's content too quicky.
+- New missions unlock daily. This encourages daily engagement from players and prevents highly engaged players from consuming the season's content too quickly.
 - Missions reset daily. Players either complete them or lose their progress at the end of the day.
 - Missions vary in category. This ensures gameplay variety within each day's set of missions.
 - Missions vary in difficulty. Mission vary from easy, to medium, to hard, in order to give options for both casual and higher-achieving players.
