@@ -71,7 +71,7 @@ function sha256(buffer) {
 // create a random code verifier
 var code_verifier = base64URLEncode(crypto.randomBytes(32));
 // generate a challenge from the code verifier
-var code_challenge = base64URLEncode(sha256(verifier));
+var code_challenge = base64URLEncode(sha256(code_verifier));
 ```
 
 For PKCE, you need both the code verifier and challenge values in later steps.
