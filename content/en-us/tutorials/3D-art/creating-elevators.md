@@ -176,9 +176,8 @@ platform.ProximityPrompt.Triggered:Connect(function(player)
 	print(prismaticConstraint.CurrentPosition)
 	if prismaticConstraint.CurrentPosition <= -9 then
 		prismaticConstraint.TargetPosition = 10
-	else if prismaticConstraint.CurrentPosition >= 9 then
-			prismaticConstraint.TargetPosition = -10
-		end
+	elseif prismaticConstraint.CurrentPosition >= 9 then
+		prismaticConstraint.TargetPosition = -10
 	end
 end)
 ```
