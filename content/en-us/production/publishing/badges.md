@@ -98,7 +98,7 @@ end
 
 ### Checking Earned Badges
 
-The following script checks when any player enters the experience, then verifies if that player owns the badge with the [matching ID](#locating-badge-ids) set in the variable `badgeID`.
+The following script checks when any player enters the experience, then verifies if that player owns the badge with the [matching ID](#locating-badge-ids) set in the variable `BADGE_ID`.
 
 ```lua
 local BadgeService = game:GetService("BadgeService")
@@ -108,7 +108,7 @@ local BADGE_ID = 00000000  -- Change this to your badge ID
 
 local function onPlayerAdded(player)
   -- Check if the player has the badge
-	local success, hasBadge = pcall(BadgeService.UserHasBadgeAsync, BadgeService, player.UserId, badgeID)
+	local success, hasBadge = pcall(BadgeService.UserHasBadgeAsync, BadgeService, player.UserId, BADGE_ID)
 
   -- If there's an error, issue a warning and exit the function
 	if not success then
