@@ -258,10 +258,10 @@ properties:
       can_save: true
   - name: AudioPlayer.Volume
     summary: |
-        Controls how loudly the asset will be played.
+      Controls how loudly the asset will be played.
     description: |
-        Volume level which is multiplied onto the output audio stream, controlling
-        how loudly the asset will be played. Ranges from 0 to 3.
+      Volume level which is multiplied onto the output audio stream, controlling
+      how loudly the asset will be played. Ranges from 0 to 3.
     code_samples: []
     type: float
     tags: []
