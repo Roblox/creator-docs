@@ -115,6 +115,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Animator.yaml
         ignoreTranslation: true
+      - title: AppLifecycleObserverService
+        path: /reference/engine/classes/AppLifecycleObserverService
+        type: engineapi
+        source: /reference/engine/classes/AppLifecycleObserverService.yaml
+        ignoreTranslation: true
       - title: ArcHandles
         path: /reference/engine/classes/ArcHandles
         type: engineapi

@@ -460,7 +460,7 @@ local listSuccess, pages = pcall(function()
 end)
 if listSuccess then
     local items = pages:GetCurrentPage()
-    if table.getn(items) > 0 then
+    if #items > 0 then
         -- Read the closest version
         local closestEntry = items[1]
         local success, value, info = pcall(function()

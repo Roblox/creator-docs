@@ -19,7 +19,7 @@ This page provides information about different ways to earn on Roblox and how to
 <CardContent style={{paddingBottom: '0px;'}}>
 <center><Chip label="Overview: How Robux are Earned" variant="outlined" color="secondary" size="large" style={{width: '80%;'}} /></center>
 <p></p>
-<CardMedia component="img" image="../assets/monetization/earning/Earning-Flowchart.svg" />
+<CardMedia component="img" image="../assets/monetization/earning/Earning-Flowchart.png" />
 <p></p>
 <figcaption><sup>&dagger;&dagger;</sup> 30,000 Robux required to cash out through the Developer Exchange program</figcaption>
 <p></p>
@@ -91,7 +91,7 @@ On average, 74% of all spending in experiences supports or goes to developers. T
 This chart illustrates the estimated utilization of each dollar spent in an experience on Roblox. Note that the chart doesn't reflect our expenses as disclosed in our GAAP financial statements.
 
 <figure>
-<img src="../assets/monetization/earning/Average-Cash-Payouts.svg" width="80%" alt="Pie chart illustrating the estimated utilization of each dollar spent in an experience on Roblox." />
+<img src="../assets/monetization/earning/Average-Cash-Payouts.png" width="80%" alt="Pie chart illustrating the estimated utilization of each dollar spent in an experience on Roblox." />
 </figure>
 
 <figure>
@@ -199,7 +199,7 @@ As follows is an overview of our commission structure. To learn more about fees 
 These commissions also apply to the original sale of [Limiteds](../art/marketplace/marketplace-fees-and-commissions.md#limiteds). When setting assets on sale, you can [configure](../art/marketplace/publishing-to-marketplace.md#marketplace-settings) your creation as a Limited item to set an available quantity for that asset. Limiteds require a [per-unit fee](../art/marketplace/marketplace-fees-and-commissions.md#per-unit-fee) and can be [resold](../art/marketplace/marketplace-fees-and-commissions.md#reselling) by [Roblox Premium](https://www.roblox.com/premium/membership) members. At this time, only Roblox-created Limiteds are tradeable.
 </Grid>
 <Grid item xs={12} lg={5}>
-<img src="../assets/monetization/earning/Percentages-Clothes-Accessories.svg" alt="Pie chart illustrating the commission structure for 3D clothes and accessories" />
+<img src="../assets/monetization/earning/Percentages-Clothes-Accessories.png" alt="Pie chart illustrating the commission structure for 3D clothes and accessories" />
 </Grid>
 </Grid>
 </TabItem>
@@ -216,7 +216,7 @@ While anyone can buy a Limited item, only Roblox [Premium][link_premium_membersh
 After purchasing a Limited, there is up to a 30‑day holding period when the item cannot be resold. Robux acquired from trading or selling items that you didn't create are not considered earned and are ineligible for the [Developer Exchange][link_developer_exchange] program.
 </Grid>
 <Grid item xs={12} lg={5}>
-<img src="../assets/monetization/earning/Percentages-Reselling-Limiteds.svg" alt="Pie chart illustrating the commission structure for community-created Limiteds" />
+<img src="../assets/monetization/earning/Percentages-Reselling-Limiteds.png" alt="Pie chart illustrating the commission structure for community-created Limiteds" />
 </Grid>
 </Grid>
 </TabItem>
