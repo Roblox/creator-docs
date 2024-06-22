@@ -1113,8 +1113,7 @@ methods:
       corner. This does not account for the `Class.GuiObject|GUI` inset.
 
       If the location of the mouse pointer is offscreen or the players device
-      does not have a mouse, the value returned will be undetermined instead of
-      Vector2.
+      does not have a mouse, the value returned will be undetermined.
 
       As `Class.UserInputService` is client-side only, this function can only be
       used in a `Class.LocalScript`.
