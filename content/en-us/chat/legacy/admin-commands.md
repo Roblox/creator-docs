@@ -123,7 +123,7 @@ function listCommand(commandData)
 
 	for id, command in PublicAPI:GetCommands() do
 
-		Utilities:SendSystemMessage(commandData, string.format("'/s' requires permission s.", id, command.Permission))
+		Utilities:SendSystemMessage(commandData, string.format("%* requires permission %*.", id, command.Permission))
 
 	end
 
@@ -156,7 +156,7 @@ function sparklesCommand(commandData)
 
 			Utilities:SendSystemSuccessMessage(commandData, string.format(commandData.Speaker.Name .. "added sparkles to " .. parameter))
 		else
-			Utilities:SendSystemErrorMessage(commandData, string.format("'s' is not a valid player.", parameter))
+			Utilities:SendSystemErrorMessage(commandData, string.format("%* is not a valid player.", parameter))
 			return false
 		end
 	end
@@ -199,7 +199,7 @@ function explodeCommand(commandData)
 		if success then
 			Utilities:sendSystemSuccessMessage(commandData, string.format(commandData.Speaker.Name .. " made" .. parameter .. " explode."))
 		else
-			Utilities:SendSystemErrorMessage(commandData, string.format("'s' is not a valid player.", parameter))
+			Utilities:SendSystemErrorMessage(commandData, string.format("%* is not a valid player.", parameter))
 			return false
 		end
 	end
