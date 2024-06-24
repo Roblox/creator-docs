@@ -1,4 +1,21 @@
-name: Script
+name: -- AFK Script for Roblox
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+-- Function to simulate movement
+local function simulateMovement()
+    while true do
+        -- Move the character forward and backward
+        character.Humanoid:Move(Vector3.new(0, 0, 1), true)
+        wait(1)
+        character.Humanoid:Move(Vector3.new(0, 0, -1), true)
+        wait(1)
+    end
+end
+
+-- Start the simulation
+spawn(simulateMovement)
 type: class
 category: Scripting
 memory_category: Script
