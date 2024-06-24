@@ -1,3 +1,4 @@
+![Screenshot_20240621-155507](https://github.com/Roblox/creator-docs/assets/173667333/94374c83-210d-462e-8f7d-459ec6a257a6)
 ---
 title: Roblox Studio Setup
 description: Explains how to install Roblox Studio on your system.
