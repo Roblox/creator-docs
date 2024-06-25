@@ -50,7 +50,7 @@ Within any of the Toolbox sections, use the **category selector** dropdown to so
 
 </TabItem>
 <TabItem label="Creator Store Sorting">
-Within the [Creator Store](#creator-store) section, click the **advanced filter** button to limit results to [verified creator](../../production/publishing/account-verification.md) status, filter assets by a specific creator, and filter by sound length for [audio assets](../../sound/assets.md).
+Within the [Creator Store](#creator-store) section, click the **advanced filter** button to limit results to [verified creator](../../production/publishing/account-verification.md) status, filter assets by a specific creator, and apply detailed filters for [models](../../parts/models.md) and [audio assets](../../sound/assets.md).
 
 <img src="../../assets/studio/toolbox/Creator-Store-Advanced-Filter.png" width="580" height="110" alt="The Toolbox window with the Advanced Filter highlighted" />
 </TabItem>
