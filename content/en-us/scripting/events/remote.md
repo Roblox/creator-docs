@@ -3,13 +3,20 @@ title: Remote Events and Callbacks
 description: Remote network events and callbacks allow for back-and-forth communication across the client-server boundary.
 ---
 
-All experiences inherently communicate between the [server](../../projects/client-server.md) and the players' [clients](../../projects/client-server.md). For example, as a player maneuvers their character on their **client**, certain `Class.Humanoid` properties, such as states, are communicated to the **server**, which passes this information to the other connected **clients**.
+Roblox experiences are multiplayer by default, so all experiences inherently communicate between the server and the players' connected clients. In the simplest case, as players move their characters, certain `Class.Humanoid` properties, such as states, are communicated to the server, which passes this information to other connected clients.
 
-`Class.RemoteEvent` and `Class.RemoteFunction` objects allow you to create your own events and callback functions to communicate custom behavior across the client-server boundary, with `Class.RemoteEvent|RemoteEvents` facilitating one-way communication and `Class.RemoteFunction|RemoteFunctions` facilitating two-way communication (sending a request across the boundary and yielding until a response is received from the recipient).
+Remote events and callbacks let you communicate **across** the client-server boundary:
 
-<Alert severity="warning">
-Remote events and callback functions are not intended for communication between code on the same side of the [client-server](../../projects/client-server.md) boundary. For such processes, see [Custom Events and Callbacks](../../scripting/events/custom.md).
-</Alert>
+- `Class.RemoteEvent|RemoteEvents` enable one-way communication (sending a request and **not** yielding for a response).
+- `Class.UnreliableRemoteEvent|UnreliableRemoteEvents` enable one-way communication for data that changes continuously or isn't critical to game state. These events trade ordering and reliability for improved network performance.
+- `Class.RemoteFunction|RemoteFunctions` enable two-way communication (sending a request and yielding until a response is received from the recipient).
+
+Unlike [Bindable Events](bindable.md), which have more limited utility, the use cases for remote events and functions are too numerous to list:
+
+- **Gameplay** - Basic gameplay, such as a player reaching the end of a level, can require a remote event. A client script notifies the server, and server scripts reset the player's position.
+- **Server verification** - If a player tries to drink a potion, do they actually _have_ that potion? To ensure fairness, the server has to be the source of truth for an experience. A client script can use a remote event to notify the server that the player is drinking a potion, and then server scripts can decide whether the player actually has that potion and whether to confer any benefits.
+- **User interface updates** - As the game state changes, server scripts can use remote events to notify clients of changes to scores, objectives, etc.
+- **In-experience Marketplace purchases** - For an example implementation that uses remote functions, see [Prompting Subscription Purchases](../../production/monetization/subscriptions.md#prompting-subscription-purchases).
 
 ## Quick Reference
 
@@ -345,15 +352,9 @@ print("The server created the requested part:", newPart)
 
 You can use a `Class.Script` to call a function on the client by calling the `Class.RemoteFunction:InvokeClient()|InvokeClient()` method on a `Class.RemoteFunction`, but it has serious risks as follows:
 
-<Alert severity="error">
-If the client throws an error, the server throws the error too.
-</Alert>
-<Alert severity="error">
-If the client disconnects while it's being invoked, `Class.RemoteFunction:InvokeClient()|InvokeClient()` throws an error.
-</Alert>
-<Alert severity="error">
-If the client doesn't return a value, the server yields forever.
-</Alert>
+- If the client throws an error, the server throws the error too.
+- If the client disconnects while it's being invoked, `Class.RemoteFunction:InvokeClient()|InvokeClient()` throws an error.
+- If the client doesn't return a value, the server yields forever.
 
 For actions that don't require two-way communications, such as updating a GUI, use a `Class.RemoteEvent` and communicate from [server to client](#server-client).
 

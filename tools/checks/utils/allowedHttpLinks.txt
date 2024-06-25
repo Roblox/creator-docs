@@ -199,6 +199,8 @@ https://steameducate.com/
 https://steamiowacity.org/
 https://streetcode.org/
 https://stripe.com/docs/connect/cross-border-payouts
+https://docs.stripe.com/payouts
+https://docs.stripe.com/currencies
 https://docs.stripe.com/currencies/conversions
 https://studio.code.org/s/csp-create-2018/stage/2/puzzle/1?viewAs=Teacher
 https://substance3d.adobe.com/documentation/integrations/roblox-232292566.html

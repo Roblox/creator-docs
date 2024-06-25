@@ -108,7 +108,9 @@ You cannot set USD prices in Studio.
 
 When a user buys an asset, the money from the sale enters a **30 day escrow period**. At the end of that period, the money adds to the next payout cycle. If your seller account is denominated in a non-USD currency, conversion happens as each sale's proceeds are transferred into your balance. See [Stripe currency conversions](https://docs.stripe.com/currencies/conversions) for more information.
 
-Your earnings automatically pay out once a month to the bank associated with your seller account. This occurs on the **first of every month**, and there is no minimum payout. You cannot access your earnings outside of the payout schedule.
+Your earnings automatically pay out once a month to the bank associated with your seller account. This occurs on the **first of every month**. You cannot access your earnings outside of the payout schedule.
+
+For some countries and currencies, there is a non-zero minimum payout amount. These minimums are documented in the [Stripe minimum payouts table](https://docs.stripe.com/payouts#minimum-payout-amounts-table) and [Stripe cross-border minimum payout amounts table](https://docs.stripe.com/payouts#cbp-minimum-payout-amounts)—the effective minimum is the greater number. ISK, HUF, TWD and UGX currencies have [special conditions](https://docs.stripe.com/currencies#special-cases).
 
 <Alert severity="warning">
 
