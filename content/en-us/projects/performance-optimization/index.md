@@ -8,7 +8,7 @@ Performance issues can generally be categorized into the following categories:
 - [Computation](../performance-optimization/computation.md) - Expensive
   computational operations can lead to lower frame rates.
   - On the server, low frame rate (also known as heartbeat), slows down how
-    quick replication and physics. This causes degraded performance and latency
+    quick replication and physics occur. This causes degraded performance and latency
     for users.
   - On the client, low and fluctuating frame rates reduce the smoothness and
     responsiveness of your experience.
@@ -43,7 +43,7 @@ but you need the following diagnostic tools to diagnose server issues.
     <td>[Developer Console](../../studio/developer-console.md)</td>
     <td>A console provides real-time log messages, errors and detailed information on memory, networking, and script performance. It's useful to view memory consumption, key server health stats, script performance stats, and to launch the client or server MicroProfiler.</td>
     <td>Studio</td>
-    <td>Live sessions Studio testing</td>
+    <td>Live sessions and Studio testing</td>
   </tr>
   <tr>
     <td>[MicroProfiler](../../studio/microprofiler/index.md)</td>

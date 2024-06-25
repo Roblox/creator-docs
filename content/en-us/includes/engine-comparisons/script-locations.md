@@ -2,13 +2,14 @@
 title: include
 ---
 
-Roblox experiences are multiplayer by default, so Roblox Studio includes many different storage locations with specific behaviors. For example, a script might run when you put it in `Class.ReplicatedStorage`, but not when you put it into `Class.StarterPlayerScripts`. For more information, see [Client-Server Runtime](projects/client-server) and [Object Organization](projects/data-model#object-organization).
-
 Location | Description
 :--- | :---
-Workspace | Represents the game world and contains all parts, models, and other objects in the game. You can put scripts into the Workspace, but only server scripts and module scripts run when parented to it. This location works well for scripts that control object behavior, since they can attach directly to the object.
-ReplicatedStorage | Contains objects that are replicated to both the client and the server, including scripts. This location is ideal for scripts that share data or functionality between the two, such as game settings, player data, and events.
-ServerScriptService | Contains server scripts, including module scripts. This location is ideal for scripts that need to access server-side functionality or objects, such as game logic, data storage, and AI behaviors.
-ServerStorage | Contains server-side objects and settings. This location is ideal for large objects that don't need to be immediately replicated to clients when they join an experience.
-StarterPlayer | Contains player-related objects and settings. This location is primarily used for setting up player properties and initializations. Client scripts can run from this location, including module scripts. This location is ideal for scripts that set up player-specific features, such as player models, starting inventory, and camera settings. Of particular note, `StarterCharacterScripts` and `StarterPlayerScripts` are different. For more information, see [Client](projects/data-model#client).
-StarterGui | Contains GUI elements that the client displays when it loads the game. Client scripts can run from this location, including module scripts. This location is ideal for scripts that modify the game's user interface, such as adding buttons, menus, and pop-ups.
+Workspace | Represents the game world. Only runs server scripts. This location works well for scripts that attach directly to objects and control their behavior.
+ReplicatedFirst | Contains objects that replicate to the client before anything else. This location is ideal for the absolute minimum set of objects and scripts necessary to display a loading screen.
+ReplicatedStorage | Contains objects that are replicated to both the client and the server. This location is ideal for `Class.ModuleScript\|ModuleScripts` that you want to use on both the server and the client. `Class.LocalScript\|LocalScripts` do not run from this location, but `Class.Script\|Scripts` with a run context of `Client` do.
+ServerScriptService | Contains server-side scripts. This location is ideal for scripts that need to access server-side functionality or objects, such as game logic and cloud storage.
+ServerStorage | Contains server-side objects. This location is ideal for large objects that don't need to be immediately replicated to clients when they join an experience. Scripts do not run from this location, but you can store server-side `Class.ModuleScript\|ModuleScripts` here.
+StarterPlayer.StarterCharacterScripts | Contains `Class.LocalScript\|LocalScripts` that run when the character first spawns. These scripts do **not** run again when the player respawns.
+StarterPlayer.StarterPlayerScripts | Contains general-purpose `Class.LocalScript\|LocalScripts` that run when the player joins the experience.
+StarterGui | Contains GUI elements that the client displays when it loads the game. `Class.LocalScript\|LocalScripts` can run from this location. This location is ideal for scripts that modify the game's user interface, such as adding buttons, menus, and pop-ups.
+StarterPack | Generally only contains `Class.Tool\|Tools`, but can also include `Class.LocalScript\|LocalScripts` for setting up player backpacks.
