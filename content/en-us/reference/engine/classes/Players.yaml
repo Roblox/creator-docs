@@ -407,7 +407,7 @@ methods:
       local Players = game:GetService("Players")
 
       for _, player in Players:GetPlayers() do
-          print(player.Name)
+      	print(player.Name)
       end
       ```
 
