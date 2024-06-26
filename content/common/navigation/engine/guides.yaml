@@ -430,12 +430,14 @@ navigation:
   - title: Cloud Services
     section:
       - title: Data Stores
-        path: /cloud-services/datastores
+        path: /cloud-services/data-stores/
         section:
           - title: Overview
-            path: /cloud-services/datastores
+            path: /cloud-services/data-stores/
+          - title: Observability
+            path: /cloud-services/data-stores/observability
           - title: Implementing Player Data and Purchasing Systems
-            path: /scripting/data/player-data-purchasing
+            path: /cloud-services/data-stores/player-data-purchasing
       - title: Memory Stores
         path: /cloud-services/memory-stores/
         section:
@@ -534,7 +536,7 @@ navigation:
       - title: Player Invite Prompts
         path: /production/promotion/invite-prompts
       - title: Experience Notifications
-        path: /cloud-services/experience-notifications
+        path: /production/promotion/experience-notifications
       - title: Nominating for the Discover Page
         path: /production/promotion/nominating-for-the-discover-page
       - title: Getting Featured on Roblox‑Owned Channels

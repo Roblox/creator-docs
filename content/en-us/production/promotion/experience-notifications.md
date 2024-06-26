@@ -3,18 +3,18 @@ title: Experience Notifications
 description: Experience Notifications are a way for users to keep up with their favorite experiences through timely, personalized notifications.
 ---
 
-import Intro from '../includes/experience-notifications/intro.md'
-import Eligibility from '../includes/experience-notifications/eligibility.md'
-import UserExperienceEnabling from '../includes/experience-notifications/user-experience-enabling.md'
-import UserExperienceReceiving from '../includes/experience-notifications/user-experience-receiving.md'
-import UserExperienceExamples from '../includes/experience-notifications/user-experience-examples.md'
-import UserExperienceBestPractices from '../includes/experience-notifications/user-experience-best-practices.md'
-import ImplementationCreateNotificationString from '../includes/experience-notifications/implementation-create-notification-string.md'
-import DeliverySystem from '../includes/experience-notifications/delivery-system.md'
-import AnalyticsOverview from '../includes/experience-notifications/analytics-overview.md'
-import AnalyticsNotificationsSummary from '../includes/experience-notifications/analytics-notification-summary.md'
-import AnalyticsItemizedStats from '../includes/experience-notifications/analytics-itemized-stats.md'
-import Guidelines from '../includes/experience-notifications/guidelines.md'
+import Intro from '../../includes/experience-notifications/intro.md'
+import Eligibility from '../../includes/experience-notifications/eligibility.md'
+import UserExperienceEnabling from '../../includes/experience-notifications/user-experience-enabling.md'
+import UserExperienceReceiving from '../../includes/experience-notifications/user-experience-receiving.md'
+import UserExperienceExamples from '../../includes/experience-notifications/user-experience-examples.md'
+import UserExperienceBestPractices from '../../includes/experience-notifications/user-experience-best-practices.md'
+import ImplementationCreateNotificationString from '../../includes/experience-notifications/implementation-create-notification-string.md'
+import DeliverySystem from '../../includes/experience-notifications/delivery-system.md'
+import AnalyticsOverview from '../../includes/experience-notifications/analytics-overview.md'
+import AnalyticsNotificationsSummary from '../../includes/experience-notifications/analytics-notification-summary.md'
+import AnalyticsItemizedStats from '../../includes/experience-notifications/analytics-itemized-stats.md'
+import Guidelines from '../../includes/experience-notifications/guidelines.md'
 
 <Intro components={props.components} />
 
@@ -46,7 +46,7 @@ Users of age 13+ are eligible to receive Experience Notifications and can enable
 
 Implementing Experience Notifications begins with [creating a notification string](#creating-a-notification-string) and including the [package](#including-the-package) in your project. Once these are set up, you can [send notifications](#sending-an-experience-notification) with optional [custom parameters](#customizing-notifications-using-parameters).
 
-Alternatively, you can use the [Open Cloud API](../cloud/open-cloud/experience-notifications.md) to trigger notifications through freeform API requests.
+Alternatively, you can use the [Open Cloud API](../../cloud/open-cloud/experience-notifications.md) to trigger notifications through freeform API requests.
 
 ### Creating a Notification String
 
@@ -54,29 +54,29 @@ Alternatively, you can use the [Open Cloud API](../cloud/open-cloud/experience-n
 
 ### Including the Package
 
-To implement Experience Notifications, you must obtain the Lua package from the [Creator Store](../production/creator-store.md).
+To implement Experience Notifications, you must obtain the Lua package from the [Creator Store](../../production/creator-store.md).
 
-1. From the [View](../studio/view-tab.md) tab, open the [Toolbox](../projects/assets/toolbox.md) and select the **Creator Store** tab.
+1. From the [View](../../studio/view-tab.md) tab, open the [Toolbox](../../projects/assets/toolbox.md) and select the **Creator Store** tab.
 
-   <img src="../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
+   <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Toolbox toggle button in Studio" />
 
-   <img src="../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
 1. Make sure the **Models** sorting is selected, then click the **See&nbsp;All** button for **Categories**.
 
-   <img src="../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-See-All.png" width="360" />
 
 1. Locate and click the **Dev Modules** tile.
 
-   <img src="../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
+   <img src="../../assets/studio/toolbox/Creator-Store-Categories-Dev-Modules.png" width="200" />
 
 1. Locate the **Open Cloud** module and click it, or drag‑and‑drop it into the 3D view.
 
-   <img src="../assets/open-cloud/experience-notifications/Toolbox-Package.png" width="143" />
+   <img src="../../assets/open-cloud/experience-notifications/Toolbox-Package.png" width="143" />
 
-1. In the [Explorer](../studio/explorer.md) window, move the entire **OpenCloud** model into **ServerScriptService**.
+1. In the [Explorer](../../studio/explorer.md) window, move the entire **OpenCloud** model into **ServerScriptService**.
 
-   <img src="../assets/open-cloud/experience-notifications/Move-Package.png" width="320" />
+   <img src="../../assets/open-cloud/experience-notifications/Move-Package.png" width="320" />
 
 ### Sending an Experience Notification
 
@@ -150,7 +150,7 @@ end
 
 To encourage users to enable notifications for your experience, you can display an in‑experience permission prompt to users age 13+ using the `Class.ExperienceNotificationService:PromptOptIn()` method.
 
-<img src="../assets/promotion/misc/In-Experience-Enable-Notifications.png" width="768" alt="The in-experience permission prompt encourages users to enable notifications" />
+<img src="../../assets/promotion/misc/In-Experience-Enable-Notifications.png" width="768" alt="The in-experience permission prompt encourages users to enable notifications" />
 
 You can trigger the prompt in any suitable context within your experience that warrants a future notification. The prompt's text is not customizable and is standardized across all experiences.
 
@@ -183,7 +183,7 @@ if canPrompt then
 	end)
 end
 
--- Listen to opt-in prompt closed event 
+-- Listen to opt-in prompt closed event
 ExperienceNotificationService.OptInPromptClosed:Connect(function()
 	print("Opt-in prompt closed")
 end)
@@ -191,7 +191,7 @@ end)
 
 ### Including Launch and Analytics Data
 
-To further improve user experience, you can include **launch data** in the notification, useful for scenarios such as routing users to a coordinate location or personalizing the joining experience. Additionally, you can include [analytics](#analytics) data to segment the performance of different categories of notifications. Please also refer to the [Player Invite Prompts](../production/promotion/invite-prompts.md#including-launch-data) example on how launch data can be set and used.
+To further improve user experience, you can include **launch data** in the notification, useful for scenarios such as routing users to a coordinate location or personalizing the joining experience. Additionally, you can include [analytics](#analytics) data to segment the performance of different categories of notifications. Please also refer to the [Player Invite Prompts](../../production/promotion/invite-prompts.md#including-launch-data) example on how launch data can be set and used.
 
 ```lua title="Include Launch Data and Analytics Data"
 local ServerScriptService = game:GetService("ServerScriptService")
@@ -248,7 +248,7 @@ end
 
 #### createUserNotification
 
-<Typography variant="body1" color="primary"><b>createUserNotification (</b>userId : [number](../luau/numbers.md), userNotification : [UserNotification](#usernotification)<b>)</b> : [UserNotificationResult](#usernotificationresult)</Typography><br />
+<Typography variant="body1" color="primary"><b>createUserNotification (</b>userId : [number](../../luau/numbers.md), userNotification : [UserNotification](#usernotification)<b>)</b> : [UserNotificationResult](#usernotificationresult)</Typography><br />
 
 Sends a notification from a server‑side script. Requires the recipient's `Class.Player.UserId` and a [UserNotification](#usernotification). Returns a [UserNotificationResult](#usernotificationresult).
 
