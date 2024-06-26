@@ -399,9 +399,9 @@ methods:
     description: |
       This method returns a table of all presently connected `Class.Player` 
       objects. It functions the same way `Class.Instance:GetChildren()` would 
-      except that it only returns Player objects found under `Class.Players`. 
-      When used with a for-loop, it is useful for iterating over all players in 
-      a game.
+      except that it only returns `Class.Player` objects found under
+      `Class.Players`. When used with a `for` loop, it is useful for iterating
+      over all players in a game.
 
       ```lua
       local Players = game:GetService("Players")
