@@ -145,7 +145,7 @@ To view memory allocation:
    Among these categories, **PlaceMemory** and **PlaceScriptMemory** are the most important ones for performance optimization, because they help you understand how your building and scripting choices affect memory consumption and potential areas for optimization. For more insights into **PlaceScriptMemory**, you can use the [Luau Heap](#luau-heap) tool to create snapshots and analyze memory allocation by different metrics.
 
 <Alert severity="info">
-For more information on common memory usage problems and best practices, see [Performance Optimization](../../projects/performance-optimization/memory.md).
+For more information on common memory usage problems and best practices, see [Performance Optimization](../../performance-optimization/improving.md#memory-usage).
 </Alert>
 
 ## Luau Heap

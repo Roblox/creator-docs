@@ -120,7 +120,7 @@ If your seller eligibility is suspended, either due to a change of seller inform
 
 ### Reimbursements
 
-Reimbursements for customers **deduct from the seller's account**. This occurs if:
+Reimbursements for customers **deduct from the seller's account**. This may occur if:
 
 - A customer requests a refund or chargeback for an asset.
 - An asset is moderated after customers have already purchased it.
