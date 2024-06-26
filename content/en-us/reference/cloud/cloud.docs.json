@@ -710,6 +710,661 @@
         }
       }
     },
+    "/cloud/v2/universes/{universe}/memory-store/queues/{queue}/items": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates a new queue item.\n\n If `ttl` is set, the item will automatically be removed from the queue\n after the time interval specified.\n\n If a numerical `priority` is set, the item will be inserted into the queue\n based on the priority value. The higher the value, the closer to the front\n of the queue the item will be. If priority values are the same then the\n item will be inserted after existing values with the same priority.",
+        "operationId": "Cloud_CreateMemoryStoreQueueItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queue",
+            "in": "path",
+            "description": "The queue ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryStoreQueueItem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreQueueItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.queue:write"
+            ],
+            "title": "Create Memory Store Queue Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreQueueItem",
+            "name": "MemoryStoreQueueItem"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store/queues/{queue}/items:discard": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Discards read items from the front of the queue.\n\n Takes a `readId` from a previous `Read` operation.",
+        "operationId": "Cloud_DiscardMemoryStoreQueueItems",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queue",
+            "in": "path",
+            "description": "The queue ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DiscardMemoryStoreQueueItemsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.queue:discard"
+            ],
+            "title": "Discard Memory Store Queue Items"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreQueueItem",
+            "name": "MemoryStoreQueueItem"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store/queues/{queue}/items:read": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Returns the specified number of items at the front of the queue.\n\n If `allOrNothing` is true and the requested number of objects is not\n available, returns a 404 error. Otherwise, returns an object with the\n path, ID of the read operation, and a list of the data.",
+        "operationId": "Cloud_ReadMemoryStoreQueueItems",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queue",
+            "in": "path",
+            "description": "The queue ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "The number of items to read from the queue\n If unspecified, 1 item will be returned.\n The maximum value is 200; values above 200 will be coerced to 200.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "allOrNothing",
+            "in": "query",
+            "description": "If `all_or_nothing` is true and the requested number of objects is not\n available, will return a 404 Error.\n\n Otherwise, will return the path and read_id of the read operation and a\n list of the MemoryStoreQueue items.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          },
+          {
+            "name": "invisibilityWindow",
+            "in": "query",
+            "description": "Invisibility window for items read, in seconds.\n\n Items read are invisible in subsequent reads during the invisibility\n window duration.\n\n It must be written in seconds greater than 0 and end with `s`.\n\n Defaults to `30s`.",
+            "schema": {
+              "type": "string",
+              "format": "duration",
+              "x-example-values": {
+                "exampleValues": [
+                  "3.5s"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadMemoryStoreQueueItemsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.queue:dequeue"
+            ],
+            "title": "Read Memory Store Queue Items"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreQueueItem",
+            "name": "MemoryStoreQueueItem"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store/sorted-maps/{sorted-map}/items": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets and returns items in the map with a given order and filter.",
+        "operationId": "Cloud_ListMemoryStoreSortedMapItems",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of memory store sorted map items to return. The service\n might return fewer than this value. If unspecified, at most 1 memory store\n sorted map items are returned. The maximum value is 100 and higher values\n are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                1
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderBy",
+            "in": "query",
+            "description": "If specified, results are ordered according to the specified fields.\n\n Values must be a comma-separated list of fields, with an optional,\n per-field \" desc\" suffix to sort by descending rather than ascending\n values. You can access subfields with a `.` operator.\n\n Example: \"foo, bar.baz desc, qux\"",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n Filtering conforms to Common Expression Language (CEL). Only the `id`\n and 'sortKey' fields are supported. In terms of operators, only `<`, `>`\n and `&&` are allowed'\n\n Example: `id > \"key-001\" && id < \"key-100\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListMemoryStoreSortedMapItemsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:read"
+            ],
+            "title": "List Memory Store Sorted Map Items"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates the specified map item if it doesn't exist.",
+        "operationId": "Cloud_CreateMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The ID to use for the memory store sorted map item, which will become the\n final component of the memory store sorted map item's resource path.\n\n This value should be 1-63 characters, and valid characters are\n /[a-z][0-9]-/. The first character must be a lowercase letter, and the last\n character cannot be a hyphen.",
+            "schema": {
+              "type": "string"
+            },
+            "x-example-values": {
+              "description": "1-63 characters, and valid characters are /[a-z][0-9]-/. The first character must be a lowercase letter, and the last character cannot be a hyphen.",
+              "exampleValues": [
+                "my-memory-store-sorted-map-item"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ],
+            "title": "Create Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store/sorted-maps/{sorted-map}/items/{item}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets and returns the value of the given key in the map.",
+        "operationId": "Cloud_GetMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:read"
+            ],
+            "title": "Get Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Deletes the specified item from the map.",
+        "operationId": "Cloud_DeleteMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ],
+            "title": "Delete Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Updates the specified map item.\n\n If the map item doesn't exist and `allow_missing` is true, a new item is\n created.",
+        "operationId": "Cloud_UpdateMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "allowMissing",
+            "in": "query",
+            "description": "If set to true, and the memory store sorted map item is not found, a memory\n store sorted map item is created.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ],
+            "title": "Update Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store:flush": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Asynchronously flush all data structures in the universe.",
+        "operationId": "Cloud_FlushMemoryStore",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FlushMemoryStoreRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Operation",
+                  "x-long-running-operation-parameters": {
+                    "metadata": {
+                      "$ref": "#/components/schemas/FlushMemoryStoreMetadata"
+                    },
+                    "response": {
+                      "$ref": "#/components/schemas/FlushMemoryStoreResponse"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store:flush"
+            ],
+            "title": "Flush Memory Store"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStore",
+            "name": "MemoryStore"
+          }
+        }
+      }
+    },
     "/cloud/v2/universes/{universe}/places/{place}": {
       "get": {
         "tags": [
@@ -2593,6 +3248,661 @@
           "resource": {
             "$ref": "#/components/schemas/Universe",
             "name": "Universe"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/memory-store/queues/{queue}/items": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates a new queue item.\n\n If `ttl` is set, the item will automatically be removed from the queue\n after the time interval specified.\n\n If a numerical `priority` is set, the item will be inserted into the queue\n based on the priority value. The higher the value, the closer to the front\n of the queue the item will be. If priority values are the same then the\n item will be inserted after existing values with the same priority.",
+        "operationId": "Cloud_CreateMemoryStoreQueueItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queue",
+            "in": "path",
+            "description": "The queue ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryStoreQueueItem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreQueueItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.queue:write"
+            ],
+            "title": "Create Memory Store Queue Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreQueueItem",
+            "name": "MemoryStoreQueueItem"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/memory-store/queues/{queue}/items:discard": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Discards read items from the front of the queue.\n\n Takes a `readId` from a previous `Read` operation.",
+        "operationId": "Cloud_DiscardMemoryStoreQueueItems",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queue",
+            "in": "path",
+            "description": "The queue ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DiscardMemoryStoreQueueItemsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.queue:discard"
+            ],
+            "title": "Discard Memory Store Queue Items"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreQueueItem",
+            "name": "MemoryStoreQueueItem"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/memory-store/queues/{queue}/items:read": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Returns the specified number of items at the front of the queue.\n\n If `allOrNothing` is true and the requested number of objects is not\n available, returns a 404 error. Otherwise, returns an object with the\n path, ID of the read operation, and a list of the data.",
+        "operationId": "Cloud_ReadMemoryStoreQueueItems",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queue",
+            "in": "path",
+            "description": "The queue ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "The number of items to read from the queue\n If unspecified, 1 item will be returned.\n The maximum value is 200; values above 200 will be coerced to 200.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "allOrNothing",
+            "in": "query",
+            "description": "If `all_or_nothing` is true and the requested number of objects is not\n available, will return a 404 Error.\n\n Otherwise, will return the path and read_id of the read operation and a\n list of the MemoryStoreQueue items.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          },
+          {
+            "name": "invisibilityWindow",
+            "in": "query",
+            "description": "Invisibility window for items read, in seconds.\n\n Items read are invisible in subsequent reads during the invisibility\n window duration.\n\n It must be written in seconds greater than 0 and end with `s`.\n\n Defaults to `30s`.",
+            "schema": {
+              "type": "string",
+              "format": "duration",
+              "x-example-values": {
+                "exampleValues": [
+                  "3.5s"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadMemoryStoreQueueItemsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.queue:dequeue"
+            ],
+            "title": "Read Memory Store Queue Items"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreQueueItem",
+            "name": "MemoryStoreQueueItem"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/memory-store/sorted-maps/{sorted-map}/items": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets and returns items in the map with a given order and filter.",
+        "operationId": "Cloud_ListMemoryStoreSortedMapItems",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of memory store sorted map items to return. The service\n might return fewer than this value. If unspecified, at most 1 memory store\n sorted map items are returned. The maximum value is 100 and higher values\n are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                1
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderBy",
+            "in": "query",
+            "description": "If specified, results are ordered according to the specified fields.\n\n Values must be a comma-separated list of fields, with an optional,\n per-field \" desc\" suffix to sort by descending rather than ascending\n values. You can access subfields with a `.` operator.\n\n Example: \"foo, bar.baz desc, qux\"",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n Filtering conforms to Common Expression Language (CEL). Only the `id`\n and 'sortKey' fields are supported. In terms of operators, only `<`, `>`\n and `&&` are allowed'\n\n Example: `id > \"key-001\" && id < \"key-100\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListMemoryStoreSortedMapItemsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:read"
+            ],
+            "title": "List Memory Store Sorted Map Items"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates the specified map item if it doesn't exist.",
+        "operationId": "Cloud_CreateMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The ID to use for the memory store sorted map item, which will become the\n final component of the memory store sorted map item's resource path.\n\n This value should be 1-63 characters, and valid characters are\n /[a-z][0-9]-/. The first character must be a lowercase letter, and the last\n character cannot be a hyphen.",
+            "schema": {
+              "type": "string"
+            },
+            "x-example-values": {
+              "description": "1-63 characters, and valid characters are /[a-z][0-9]-/. The first character must be a lowercase letter, and the last character cannot be a hyphen.",
+              "exampleValues": [
+                "my-memory-store-sorted-map-item"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ],
+            "title": "Create Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/memory-store/sorted-maps/{sorted-map}/items/{item}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets and returns the value of the given key in the map.",
+        "operationId": "Cloud_GetMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:read"
+            ],
+            "title": "Get Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Deletes the specified item from the map.",
+        "operationId": "Cloud_DeleteMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ],
+            "title": "Delete Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Updates the specified map item.\n\n If the map item doesn't exist and `allow_missing` is true, a new item is\n created.",
+        "operationId": "Cloud_UpdateMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "allowMissing",
+            "in": "query",
+            "description": "If set to true, and the memory store sorted map item is not found, a memory\n store sorted map item is created.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ],
+            "title": "Update Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/memory-store:flush": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Asynchronously flush all data structures in the universe.",
+        "operationId": "Cloud_FlushMemoryStore",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FlushMemoryStoreRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Operation",
+                  "x-long-running-operation-parameters": {
+                    "metadata": {
+                      "$ref": "#/components/schemas/FlushMemoryStoreMetadata"
+                    },
+                    "response": {
+                      "$ref": "#/components/schemas/FlushMemoryStoreResponse"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store:flush"
+            ],
+            "title": "Flush Memory Store"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStore",
+            "name": "MemoryStore"
           }
         }
       }
@@ -4943,6 +6253,16 @@
         "description": "Represents a developer product.",
         "x-resource": true
       },
+      "DiscardMemoryStoreQueueItemsRequest": {
+        "type": "object",
+        "properties": {
+          "readId": {
+            "type": "string",
+            "description": "The `readId` of the previous read operation for which to discard read\n items."
+          }
+        },
+        "description": "Discards read items from the front of the queue."
+      },
       "DynamicHead": {
         "required": [
           "dynamicHead",
@@ -4976,6 +6296,21 @@
             "eyelashAccessory"
           ]
         }
+      },
+      "FlushMemoryStoreMetadata": {
+        "type": "object",
+        "properties": {},
+        "description": "Represents metadata about the long-running operation corresponding to a\n FlushMemoryStore request.\n\n This is the type of the `Operation.metadata` field in the response to\n `GetOperation` requests for FlushMemoryStore operations."
+      },
+      "FlushMemoryStoreRequest": {
+        "type": "object",
+        "properties": {},
+        "description": "Asynchronously flush all data structures in the universe."
+      },
+      "FlushMemoryStoreResponse": {
+        "type": "object",
+        "properties": {},
+        "description": "Includes the path to the flush operation and a boolean for whether or not the\n operation completed."
       },
       "GamePass": {
         "type": "object",
@@ -6010,6 +7345,23 @@
         },
         "description": "A list of InventoryItems in the parent collection."
       },
+      "ListMemoryStoreSortedMapItemsResponse": {
+        "type": "object",
+        "properties": {
+          "memoryStoreSortedMapItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+            },
+            "description": "The MemoryStoreSortedMapItems from the specified MemoryStoreSortedMap."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\n page. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of MemoryStoreSortedMapItems in the parent collection."
+      },
       "ListUserRestrictionLogsResponse": {
         "type": "object",
         "properties": {
@@ -6066,18 +7418,30 @@
             "type": "string",
             "description": "The resource path of the MemoryStoreQueueItem.\n Format:\n universes/{universe}/memoryStore/scopes/{memory_store_scope}/queues/{memory_store_queue}/items/{memory_store_queue_item}"
           },
-          "value": {
+          "data": {
             "$ref": "#/components/schemas/GoogleProtobufValue",
-            "description": "The value of the queue item"
+            "description": "The value of the queue item."
           },
           "priority": {
-            "type": "integer",
-            "description": "The priority of the queue item",
-            "format": "int32"
+            "type": "number",
+            "description": "The priority of the queue item.",
+            "format": "double"
+          },
+          "ttl": {
+            "writeOnly": true,
+            "type": "string",
+            "description": "The TTL for the item.",
+            "format": "duration",
+            "x-example-values": {
+              "exampleValues": [
+                "3.5s"
+              ]
+            }
           },
           "expireTime": {
+            "readOnly": true,
             "type": "string",
-            "description": "The expiration time of the item",
+            "description": "The expiration time of the item.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -6085,24 +7449,18 @@
               ]
             }
           },
-          "ttl": {
-            "writeOnly": true,
+          "id": {
+            "readOnly": true,
             "type": "string",
-            "description": "Input only. The TTL for the item.",
-            "format": "duration",
-            "x-example-values": {
-              "exampleValues": [
-                "3.5s"
-              ]
-            }
+            "description": "The name of the item."
           }
         },
         "description": "Represents queue item name.",
         "x-resource": true,
         "x-oneOf": {
           "expiration": [
-            "expireTime",
-            "ttl"
+            "ttl",
+            "expireTime"
           ]
         }
       },
@@ -6138,20 +7496,10 @@
             "type": "string",
             "description": "The server generated tag of an item."
           },
-          "expireTime": {
-            "type": "string",
-            "description": "The expiration time of an item.",
-            "format": "date-time",
-            "x-example-values": {
-              "exampleValues": [
-                "2023-07-05T12:34:56Z"
-              ]
-            }
-          },
           "ttl": {
             "writeOnly": true,
             "type": "string",
-            "description": "Input only. The TTL for the item.",
+            "description": "The TTL for the item.",
             "format": "duration",
             "x-example-values": {
               "exampleValues": [
@@ -6159,8 +7507,18 @@
               ]
             }
           },
-          "id": {
+          "expireTime": {
             "readOnly": true,
+            "type": "string",
+            "description": "The expiration time of the item.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "id": {
             "type": "string",
             "description": "The name of the item."
           },
@@ -6178,8 +7536,8 @@
         "x-resource": true,
         "x-oneOf": {
           "expiration": [
-            "expireTime",
-            "ttl"
+            "ttl",
+            "expireTime"
           ],
           "sortKey": [
             "stringSortKey",
@@ -6368,6 +7726,23 @@
             "serverSize"
           ]
         }
+      },
+      "ReadMemoryStoreQueueItemsResponse": {
+        "type": "object",
+        "properties": {
+          "readId": {
+            "type": "string",
+            "description": "An identifier of the read operation\n\n This can be passed to `:discard` in order to mark the items as processed."
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MemoryStoreQueueItem"
+            },
+            "description": "The items read from the queue"
+          }
+        },
+        "description": "Returns the specified number of items at the front of the queue"
       },
       "RestartUniverseServersRequest": {
         "type": "object",
@@ -7644,7 +9019,7 @@
           },
           "duration": {
             "type": "string",
-            "description": "The duration of the restriction.\n\n If not specified, the restriction is permanent. If specified, the range\n must be from 1 second to 315,576,000,000 seconds, inclusive.",
+            "description": "The duration of the restriction.\n\n If not specified, the restriction is permanent. If specified, the range\n must be from 1 second to 315,576,000,000 seconds, inclusive. Durations\n with sub-second precision are not permitted.",
             "format": "duration",
             "x-example-values": {
               "exampleValues": [
@@ -7654,7 +9029,7 @@
           },
           "privateReason": {
             "type": "string",
-            "description": "The reason the restriction was created.\n\n This field *is not* displayed to the user.",
+            "description": "The reason the restriction was created.\n\n This field *is not* displayed to the user. 1,000 character maximum.",
             "x-example-values": {
               "exampleValues": [
                 "some private reason"
@@ -7663,7 +9038,7 @@
           },
           "displayReason": {
             "type": "string",
-            "description": "The user-facing reason the restriction was created.\n\n This field *is* displayed to the user.",
+            "description": "The user-facing reason the restriction was created.\n\n This field *is* displayed to the user. 400 character maximum.",
             "x-example-values": {
               "exampleValues": [
                 "some display reason"

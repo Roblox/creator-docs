@@ -549,7 +549,7 @@ methods:
     summary: |
       Bans users from your experience, with options to specify duration, reason, whether the ban applies to the entire universe or just the current place, and more.
     description: |
-      The `Class.Players.BanAsync` function allows you to easily ban users who violate your experience's guidelines. You can specify the ban duration, enable the ban to propagate to suspected alternate accounts, and provide a message to the banned user in accordance with the Usage Guidelines outlined in the FAQ. We also expect developers to post their experience rules somewhere accessible to all users, and provide a way for users to appeal.
+      The `Class.Players.BanAsync` function allows you to easily ban users who violate your experience's guidelines. You can specify the ban duration, enable the ban to propagate to suspected alternate accounts, and provide a message to the banned user in accordance with the [Usage Guidelines](../../../players/index.md#banning-users). We also expect developers to post their experience rules somewhere accessible to all users, and provide a way for users to appeal.
 
       <h5>Banning and Messaging</h5>
 

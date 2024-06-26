@@ -360,4 +360,4 @@ The collision fidelity property has the following options, in order of fidelity 
 To visualize collision fidelity in Studio, open **File** > **Studio Settings** > **Studio** > **Visualization**, then enable **Show Decomposition Geometry**.
 </Alert>
 
-For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../projects/performance-optimization/computation.md#physics). For an in‑depth walkthrough on how to choose a collision fidelity option that balances your precision needs and performance requirements, see [here](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
+For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../performance-optimization/improving.md#physics-computation). For an in‑depth walkthrough on how to choose a collision fidelity option that balances your precision needs and performance requirements, see [here](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).

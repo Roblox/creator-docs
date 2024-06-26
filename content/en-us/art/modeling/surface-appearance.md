@@ -218,6 +218,29 @@ The following example demonstrates how a partial and full transparency in this m
 </TabItem>
 </Tabs>
 
+#### Color Tinting
+
+You can apply a tint to your color map by modifying the `Class.SurfaceAppearance.Color` property. Tinting does not affect performance and you can save on memory by reusing a single ColorMap with different tints. Use color tinting to create additional low-cost variation between your `Class.MeshPart` PBR textures or to programmatically modify your PBR surface colors in real-time.
+
+<GridContainer numColumns="3">
+<figure>
+<img src="../../assets/modeling/surface-appearance/Tinting-None.png" alt="A statue with a default yellow tint and reflective jade-like properties."/>
+<figcaption>An statue mesh object from [The Mystery of Duvall Drive](../../resources/the-mystery-of-duvall-drive/index.md) experience with no tinting.</figcaption>
+</figure>
+<figure>
+<img src="../../assets/modeling/surface-appearance/Tinting-Red.png" alt="A statue with a red tint and continues to have a shiny reflective properties from its other texture maps."/>
+<figcaption>Statue mesh with `SurfaceAppearance.Color` set to red.</figcaption>
+</figure>
+<figure>
+<img src="../../assets/modeling/surface-appearance/Tinting-Green.png" alt="A statue with a green tint and continues to have a shiny reflective properties from its other texture maps."/>
+<figcaption>Statue mesh with `SurfaceAppearance.Color` set to green.</figcaption>
+</figure>
+</GridContainer>
+
+`Class.SurfaceAppearance.Color` tinting applies as a multiplier, so the final appearance is a function of `Datatype.Color3` (texel color) times `Class.SurfaceAppearance.Color`. This means that authoring your original `Class.SurfaceAppearance.ColorMap` in near-white grayscale colors creates the strongest tinting effect when this property is applied.
+
+Tinting only applies to the `Class.SurfaceAppearance.ColorMap` and not the `Class.MeshPart.Color`. You can continue to use alpha channels when applying [transparency](#transparency). When `Class.SurfaceAppearance.AlphaMode` is set to `Overlay` and an alpha channel is present, the underlying `Class.MeshPart.Color` is revealed and `Class.SurfaceAppearance.Color` tinting only applies to the visible `Class.SurfaceAppearance` color map.
+
 ### Normal
 
 The **normal**, or **surface**, map adds texture depth to your surface and behaves similarly to a [height map](../../parts/terrain.md#heightmaps). As a result, the effect may fade or intensify depending on the viewing angle and lighting environment. When a normal map is not present, the value is set to 0.0.
