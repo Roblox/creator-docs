@@ -94,4 +94,4 @@ If you identify a performance issue, use the following steps to debug and fix it
 
 3. **Gather user feedback** from your community.
 
-For more information on optimizing performance for different areas of your experience, see [Performance Optimization](../../projects/performance-optimization/index.md).
+For more information on optimizing performance for different areas of your experience, see [Performance Optimization](../../performance-optimization/index.md).

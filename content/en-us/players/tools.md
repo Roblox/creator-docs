@@ -1,6 +1,6 @@
 ---
 title: In-Experience Tools
-description:
+description: Create in-experience tools for your users.
 ---
 
 In-experience `Class.Tool|Tools` are interactive tools that users can equip in sessions, such as swords, rocket launchers, and magic wands. You can create customized in-experience tools, put them in your experience hierarchy, and write scripts to implement them for your users.

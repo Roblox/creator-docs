@@ -105,6 +105,35 @@ game:GetService("Players").PlayerAdded:Connect(function(player)
 end)
 ```
 
+## Banning Users
+
+To ensure civility and fair play in your experiences, you can ban users who violate your experience rules and community guidelines. You can modify ban durations, ban messages, and even extend bans to potential alternate accounts. When using this feature, you must also follow guidelines for [banning](#ban-guidelines) and [messaging](#message-guidelines).
+
+For implementation and usage instructions, see `Class.Players.BanAsync`.
+
+### Ban Guidelines
+
+When implementing bans in your experience, adhere to the following guidelines:
+
+- Experience rules must not contradict Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use).
+  - For example, you can not create an experience rule that excludes someone because of their gender as this violates [Roblox's Discrimination, Slurs, and Hate Speech policy](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards#discrimination-slurs-and-hate-speech).
+- Creators must clearly state their experience rules somewhere accessible to all users.
+- Creators must apply their experience rules fairly and not arbitrarily target certain users.
+- Users can appeal to creators directly if they believe their ban was incorrect.
+  - Roblox will not mediate these appeals, unless the user believes the creator's experience rules or enforcement of their rules violate the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+- Roblox can moderate an experience if there is reason to believe that a creator's experience rules or enforcement of their rules violate the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+
+### Message Guidelines
+
+When a user is banned, they receive an error modal displaying information such as the ban length and reason. In the text-filtered message, you can include additional information such as appeal or contact information as long as you meet Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+
+For example, in your ban messages, you are allowed to reference brand names and platforms:
+
+- "Visit the Discord in my group/experience page"
+- "Message me on Twitter or X"
+
+Mentions of personal information or direct links are not allowed in this message field. This includes posting a specific username or handle, or providing a direct link to a Discord server or X account.
+
 ## Containers
 
 The `Class.Player` object stores several important containers:

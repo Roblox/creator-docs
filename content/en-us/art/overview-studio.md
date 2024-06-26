@@ -226,7 +226,7 @@ Materials also affect physical properties beyond appearance. The following are v
 
 - **Glass** - When a part's material is set to glass and its transparency is greater than `0`, it distorts and slightly blurs the image behind it, and becomes less transparent when viewed from an angle.
 - **Forcefield** - Any texture object placed on a mesh using the `ForceField` material will shimmer and shine at random intervals depending on the R channel of the texture's RGB color.
-- **Neon** - Adds a glowing effect on parts. This is useful for decorating places, especially sci-fi or night city environments. This behavior might change at lower render settings when playing on less performant devices. For more information on performance behavior, see [Performance Optimization](../projects/performance-optimization/computation.md).
+- **Neon** - Adds a glowing effect on parts. This is useful for decorating places, especially sci-fi or night city environments. This behavior might change at lower render settings when playing on less performant devices. For more information on performance behavior, see [Performance Optimization](../performance-optimization/improving.md).
 
 For additional information, see [Materials](../parts/materials.md).
 
@@ -250,7 +250,7 @@ Textures are 2D images that you can apply to the surface of an object to change 
 </GridContainer>
 
 <Alert severity = 'info'>
-Textures are different from [UI Layout objects](../ui/layout-and-appearance.md), which can apply a dynamic UI element (text, image, etc) on a surface of a part, like a billboard or computer screen.  
+Textures are different from [UI Layout objects](../ui/layout-and-appearance.md), which can apply a dynamic UI element (text, image, etc) on a surface of a part, like a billboard or computer screen.
 </Alert>
 
 There are two types of textures in Roblox, single image **basic textures** and **advanced PBR textures** that dynamically react to different lighting and environment scenarios. Whether creating assets directly for the [Creator Store](#creator-store) or [Marketplace](#marketplace) or designing content for an experience, you should incorporate PBR textures whenever you need realistic and impressive surface textures.
@@ -258,7 +258,7 @@ There are two types of textures in Roblox, single image **basic textures** and *
 <Alert severity = 'warning'>
 Loading many unique PBR textures at once can affect performance in your experience. When working with many similar meshes, you can save processing power and memory by using a single set of PBR textures and [modifying alpha channels in combination with your mesh object base colors](https://devforum.roblox.com/t/using-alpha-masks-in-color-maps-to-customizetint-base-colors).
 
-For additional tips on improving performance with your assets, see [Performance Optimization](../projects/performance-optimization/computation.md#rendering).
+For additional tips on improving performance with your assets, see [Performance Optimization](../performance-optimization/improving.md#rendering).
 </Alert>
 
 <GridContainer numColumns="2">
