@@ -839,7 +839,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Returns the specified number of items at the front of the queue.\n\n If `allOrNothing` is true and the requested number of objects is not\n available, returns a 404 error. Otherwise, returns an object with the\n path, ID of the read operation, and a list of the data.",
+        "description": "Returns the specified number of items at the front of the queue.",
         "operationId": "Cloud_ReadMemoryStoreQueueItems",
         "parameters": [
           {
@@ -891,6 +891,7 @@
               "format": "duration",
               "x-example-values": {
                 "exampleValues": [
+                  "3s",
                   "3.5s"
                 ]
               }
@@ -977,7 +978,7 @@
           {
             "name": "orderBy",
             "in": "query",
-            "description": "If specified, results are ordered according to the specified fields.\n\n Values must be a comma-separated list of fields, with an optional,\n per-field \" desc\" suffix to sort by descending rather than ascending\n values. You can access subfields with a `.` operator.\n\n Example: \"foo, bar.baz desc, qux\"",
+            "description": "If specified, results are ordered according to the specified fields.\n\n Values must be a comma-separated list of fields, with an optional,\n per-field \" desc\" suffix to sort by descending rather than ascending\n values. You can access subfields with a `.` operator.\n\n Results may be ordered by the following fields: id.\n\n Example: \"id desc\"",
             "schema": {
               "type": "string"
             }
@@ -985,7 +986,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "This field may be set in order to filter the resources returned.\n\n Filtering conforms to Common Expression Language (CEL). Only the `id`\n and 'sortKey' fields are supported. In terms of operators, only `<`, `>`\n and `&&` are allowed'\n\n Example: `id > \"key-001\" && id < \"key-100\"`",
+            "description": "This field may be set in order to filter the resources returned.\n\n Filtering conforms to Common Expression Language (CEL). Only the `id`\n and `sortKey` fields are supported. In terms of operators, only `<`, `>`\n and `&&` are allowed'\n\n Example: `id > \"key-001\" && id < \"key-100\"`",
             "schema": {
               "type": "string"
             }
@@ -1046,14 +1047,15 @@
           {
             "name": "id",
             "in": "query",
-            "description": "The ID to use for the memory store sorted map item, which will become the\n final component of the memory store sorted map item's resource path.\n\n This value should be 1-63 characters, and valid characters are\n /[a-z][0-9]-/. The first character must be a lowercase letter, and the last\n character cannot be a hyphen.",
+            "description": "The ID to use for the memory store sorted map item, which will become the\n final component of the memory store sorted map item's resource path.\n\n This value should be a 1-127 character string that supports alphanumeric\n and special characters. This id is case sensitive. The id must be url\n encoded if it contains any url breaking special characters.",
             "schema": {
               "type": "string"
             },
             "x-example-values": {
-              "description": "1-63 characters, and valid characters are /[a-z][0-9]-/. The first character must be a lowercase letter, and the last character cannot be a hyphen.",
+              "description": "a 1-127 character string that supports alphanumeric and special characters. This id is case sensitive. The id must be url encoded if it contains any url breaking special characters.",
               "exampleValues": [
-                "my-memory-store-sorted-map-item"
+                "Hello!",
+                "TestValue123"
               ]
             }
           }
@@ -1219,7 +1221,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Updates the specified map item.\n\n If the map item doesn't exist and `allow_missing` is true, a new item is\n created.",
+        "description": "Updates the specified map item.",
         "operationId": "Cloud_UpdateMemoryStoreSortedMapItem",
         "parameters": [
           {
@@ -3381,7 +3383,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Returns the specified number of items at the front of the queue.\n\n If `allOrNothing` is true and the requested number of objects is not\n available, returns a 404 error. Otherwise, returns an object with the\n path, ID of the read operation, and a list of the data.",
+        "description": "Returns the specified number of items at the front of the queue.",
         "operationId": "Cloud_ReadMemoryStoreQueueItems",
         "parameters": [
           {
@@ -3433,6 +3435,7 @@
               "format": "duration",
               "x-example-values": {
                 "exampleValues": [
+                  "3s",
                   "3.5s"
                 ]
               }
@@ -3519,7 +3522,7 @@
           {
             "name": "orderBy",
             "in": "query",
-            "description": "If specified, results are ordered according to the specified fields.\n\n Values must be a comma-separated list of fields, with an optional,\n per-field \" desc\" suffix to sort by descending rather than ascending\n values. You can access subfields with a `.` operator.\n\n Example: \"foo, bar.baz desc, qux\"",
+            "description": "If specified, results are ordered according to the specified fields.\n\n Values must be a comma-separated list of fields, with an optional,\n per-field \" desc\" suffix to sort by descending rather than ascending\n values. You can access subfields with a `.` operator.\n\n Results may be ordered by the following fields: id.\n\n Example: \"id desc\"",
             "schema": {
               "type": "string"
             }
@@ -3527,7 +3530,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "This field may be set in order to filter the resources returned.\n\n Filtering conforms to Common Expression Language (CEL). Only the `id`\n and 'sortKey' fields are supported. In terms of operators, only `<`, `>`\n and `&&` are allowed'\n\n Example: `id > \"key-001\" && id < \"key-100\"`",
+            "description": "This field may be set in order to filter the resources returned.\n\n Filtering conforms to Common Expression Language (CEL). Only the `id`\n and `sortKey` fields are supported. In terms of operators, only `<`, `>`\n and `&&` are allowed'\n\n Example: `id > \"key-001\" && id < \"key-100\"`",
             "schema": {
               "type": "string"
             }
@@ -3588,14 +3591,15 @@
           {
             "name": "id",
             "in": "query",
-            "description": "The ID to use for the memory store sorted map item, which will become the\n final component of the memory store sorted map item's resource path.\n\n This value should be 1-63 characters, and valid characters are\n /[a-z][0-9]-/. The first character must be a lowercase letter, and the last\n character cannot be a hyphen.",
+            "description": "The ID to use for the memory store sorted map item, which will become the\n final component of the memory store sorted map item's resource path.\n\n This value should be a 1-127 character string that supports alphanumeric\n and special characters. This id is case sensitive. The id must be url\n encoded if it contains any url breaking special characters.",
             "schema": {
               "type": "string"
             },
             "x-example-values": {
-              "description": "1-63 characters, and valid characters are /[a-z][0-9]-/. The first character must be a lowercase letter, and the last character cannot be a hyphen.",
+              "description": "a 1-127 character string that supports alphanumeric and special characters. This id is case sensitive. The id must be url encoded if it contains any url breaking special characters.",
               "exampleValues": [
-                "my-memory-store-sorted-map-item"
+                "Hello!",
+                "TestValue123"
               ]
             }
           }
@@ -3761,7 +3765,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Updates the specified map item.\n\n If the map item doesn't exist and `allow_missing` is true, a new item is\n created.",
+        "description": "Updates the specified map item.",
         "operationId": "Cloud_UpdateMemoryStoreSortedMapItem",
         "parameters": [
           {
@@ -7434,6 +7438,7 @@
             "format": "duration",
             "x-example-values": {
               "exampleValues": [
+                "3s",
                 "3.5s"
               ]
             }
@@ -7503,6 +7508,7 @@
             "format": "duration",
             "x-example-values": {
               "exampleValues": [
+                "3s",
                 "3.5s"
               ]
             }
@@ -8906,6 +8912,7 @@
             "format": "duration",
             "x-example-values": {
               "exampleValues": [
+                "3s",
                 "3.5s"
               ]
             }
@@ -9023,6 +9030,7 @@
             "format": "duration",
             "x-example-values": {
               "exampleValues": [
+                "3s",
                 "3.5s"
               ]
             }
