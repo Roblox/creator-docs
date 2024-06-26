@@ -397,17 +397,17 @@ methods:
     summary: |
       Returns a table of all presently connected `Class.Player` objects.
     description: |
-      This method returns a table of all presently connected `Class.Player`. It
-      functions the same way `Class.Instance:GetChildren()` would except that it
-      only returns Player objects. It functions similarly to
-      `Class.Instance:GetChildren()` when called on `Class.Players`. When used
-      in conjunction with a for-loop, it is useful for iterating over all
-      players in a game.
+      This method returns a table of all presently connected `Class.Player` 
+      objects. It functions the same way `Class.Instance:GetChildren()` would 
+      except that it only returns `Class.Player` objects found under
+      `Class.Players`. When used with a `for` loop, it is useful for iterating
+      over all players in a game.
 
       ```lua
-      Players = game:GetService("Players")
-      for i, player in Players:GetPlayers() do
-          print(player.Name)
+      local Players = game:GetService("Players")
+
+      for _, player in Players:GetPlayers() do
+      	print(player.Name)
       end
       ```
 
