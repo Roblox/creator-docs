@@ -21,21 +21,21 @@ When you're creating an image to use for your Developer Product, consider the fo
 
 To create a new Developer Product:
 
-1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
-2. In the **Monetization** menu, select **Developer Products**. All developer products for that experience display.
+1.  Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
+2.  In the **Monetization** menu, select **Developer Products**. All developer products for that experience display.
 
-    <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Developer-Products.png" width="330" />
+     <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Developer-Products.png" width="330" />
 
-3. Click the **Create a Developer Product** button.
-4. Click the **Upload Image** button. A file browser displays.
-5. Select the image you want to display as the icon, then click the **Open** button.
-6. Fill in the following fields:
+3.  Click the **Create a Developer Product** button.
+4.  Click the **Upload Image** button. A file browser displays.
+5.  Select the image you want to display as the icon, then click the **Open** button.
+6.  Fill in the following fields:
 
-   - **Name**: A title for your Developer Product.
-   - **Description**: A description what a user should expect when they purchase the Developer Product.
-   - **Price in Robux**: The amount of Robux you want to charge users for the Developer Product.
+    - **Name**: A title for your Developer Product.
+    - **Description**: A description what a user should expect when they purchase the Developer Product.
+    - **Price in Robux**: The amount of Robux you want to charge users for the Developer Product.
 
-7. Click the **Create Developer Product** button.
+7.  Click the **Create Developer Product** button.
 
 <Alert severity="info">
    If you are creating a randomized Developer Product, review the <a href="./randomized-virtual-items-policy.md">Randomized Virtual Item Policy</a>.
@@ -155,7 +155,7 @@ The functions for handling each product ID **must** return `true` for it to succ
 </Alert>
 
 <Alert severity="warning">
-Roblox itself does **not** record the purchase history of Developer Products by specific users, although you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/datastores.md).
+Roblox itself does **not** record the purchase history of Developer Products by specific users, although you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores).
 </Alert>
 
 ### Getting Information
@@ -200,7 +200,7 @@ end
 
 ## Developer Product Analytics
 
-Developer Product analytics help you gauge the success of individual Developer Products, identify trends, and forecast potential future earnings.  
+Developer Product analytics help you gauge the success of individual Developer Products, identify trends, and forecast potential future earnings.
 
 To access Developer Product analytics:
 

@@ -850,8 +850,8 @@ methods:
       - This method cannot be used to check for
         [developer products](../../../production/monetization/developer-products.md)
         since they can be purchased multiple times but not owned themselves.
-        Instead, use a [data store](../../../cloud-services/datastores.md) to
-        save when a player has bought a developer product.
+        Instead, use a [data store](../../../cloud-services/data-stores) to save
+        when a player has bought a developer product.
     code_samples:
       - MarketplaceService-PlayerOwnsAsset1
     parameters:

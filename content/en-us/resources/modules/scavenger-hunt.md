@@ -8,7 +8,7 @@ The **ScavengerHunt** [developer module](../../resources/modules/index.md) gives
 <video src="../../assets/developer-modules/scavenger-hunt/Showcase.mp4" controls width="100%"></video>
 
 <Alert severity="warning">
-This module utilizes [data stores](../../cloud-services/datastores.md). To test it in Studio, make sure **Enable Studio Access to API Services** is enabled from the **Security** section of the [Game Settings](../../studio/game-settings.md) window.
+This module utilizes [data stores](../../cloud-services/data-stores). To test it in Studio, make sure **Enable Studio Access to API Services** is enabled from the **Security** section of the [Game Settings](../../studio/game-settings.md) window.
 </Alert>
 
 ## Module Usage
@@ -57,19 +57,19 @@ If you don't want to use the bundled mesh tokens, any `Class.Model` or `Class.Ba
 - Object contains a child `Class.StringValue` instance set to the "flavor&nbsp;text" to display when the token is collected.
 
   <Grid container spacing={3}>
-	<Grid item>
-	<figure>
+  <Grid item>
+  <figure>
    <img src="../../assets/developer-modules/scavenger-hunt/Token-Model-Structure.png" width="320" />
    <figcaption>Model</figcaption>
    </figure>
-	</Grid>
-	<Grid item>
-	<figure>
+  </Grid>
+  <Grid item>
+  <figure>
    <img src="../../assets/developer-modules/scavenger-hunt/Token-BasePart-Structure.png" width="320" />
    <figcaption>MeshPart</figcaption>
    </figure>
-	</Grid>
-	</Grid>
+  </Grid>
+  </Grid>
 
 <Alert severity="error">
 Remember that each token must have a unique name as a means of tracking player progress.

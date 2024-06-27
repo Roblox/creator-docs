@@ -139,7 +139,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 While players can purchase Passes directly from your experience's main page, you can also offer **in-experience purchases** to players through a shop or vendor NPC within the experience. Reference the example [server-side](#example-server-side-script) and [client-side](#example-client-side-script) scripts for a basic model to prompt players to purchase Passes.
 
 <Alert severity="warning">
-   Roblox itself does **not** record the purchase history of Passes by specific players, although you can [view overall daily and monthly stats](../../production/analytics/index.md). If you want to track player-specific purchase history, it's your responsibility to [store the data](../../cloud-services/datastores.md).
+   Roblox itself does **not** record the purchase history of Passes by specific players, although you can [view overall daily and monthly stats](../../production/analytics/index.md). If you want to track player-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores).
 </Alert>
 
 ### Example Server-Side Script
@@ -198,7 +198,7 @@ end
 
 ## Passes Analytics
 
-Passes Analytics help you gauge the success of individual Passes, identify trends, and forecast potential future earnings.  
+Passes Analytics help you gauge the success of individual Passes, identify trends, and forecast potential future earnings.
 
 To access Passes analytics:
 
