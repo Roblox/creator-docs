@@ -131,7 +131,7 @@ and using the tabs at the top of the screen to navigate through the different as
 </AccordionSummary>
 <AccordionDetails>
 Please view our [Terms of
-Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) under section&nbsp;5 of the User&nbsp;Terms for information
+Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) under section&nbsp;6 of the User&nbsp;Terms for information
 regarding DMCA.
 </AccordionDetails>
 </BaseAccordion>
