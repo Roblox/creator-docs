@@ -118,13 +118,10 @@ By default, the invite notification that friends receive contains the sender's `
 1. In the center region, click the **Create a Notification String** button.
 1. Fill in an identifier name (only visible to you) and the custom notification text. Note that you must include **\{experienceName\}** as a placeholder to identify the experience's name for invited friends, and you can optionally include the sender's `Class.Player.DisplayName|DisplayName` through the **\{displayName\}** placeholder.
 
-   <Alert severity="success">
-   <AlertTitle>Example Notifications</AlertTitle>
-    <ul>
-    <li>**\{displayName\}** wants you to join their adventure in **\{experienceName\}**!</li>
-    <li>**\{displayName\}** just cleared the sixth stage of **\{experienceName\}**. Can you?</li>
-    </ul>
-    </Alert>
+   Example notification strings:
+
+   - <Typography variant="subtitle2" color="primary">\{displayName\} wants you to join their adventure in \{experienceName\}!</Typography>
+   - <Typography variant="subtitle2" color="primary">\{displayName\} just cleared the sixth stage of \{experienceName\}. Can you?</Typography>
 
 1. When ready, click the **Create Notification String** button.
 1. On the notifications page, click the **&ctdot;** button for the notification and select **Copy Asset ID**.
