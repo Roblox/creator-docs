@@ -120,11 +120,11 @@ By default, the invite notification that friends receive contains the sender's `
 
    <Alert severity="success">
    <AlertTitle>Example Notifications</AlertTitle>
-	 <ul>
-	 <li>**\{displayName\}** wants you to join their adventure in **\{experienceName\}**!</li>
-	 <li>**\{displayName\}** just cleared the sixth stage of **\{experienceName\}**. Can you?</li>
-	 </ul>
-	 </Alert>
+    <ul>
+    <li>**\{displayName\}** wants you to join their adventure in **\{experienceName\}**!</li>
+    <li>**\{displayName\}** just cleared the sixth stage of **\{experienceName\}**. Can you?</li>
+    </ul>
+    </Alert>
 
 1. When ready, click the **Create Notification String** button.
 1. On the notifications page, click the **&ctdot;** button for the notification and select **Copy Asset ID**.
@@ -304,7 +304,7 @@ To further improve in-experience cooperation or to incentivize player invites, y
    local function onPlayerAdded(player)
    	local launchData
 
-   	for i = 1, ATTEMPT_LIMIT do
+   	for _ = 1, ATTEMPT_LIMIT do
    		task.wait(RETRY_DELAY)
    		local joinData = player:GetJoinData()
    		if joinData.LaunchData ~= "" then
