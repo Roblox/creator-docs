@@ -341,15 +341,15 @@ local player = Players.LocalPlayer
 local mainPortal = Workspace:WaitForChild("Main Portal Template")
 
 -- Get the policy info for the user
-	local success, result = pcall(PolicyService.GetPolicyInfoForPlayerAsync, PolicyService, player)
-	if success and result then
-		if not result.AreAdsAllowed then
-			-- Destroy the "Main Portal Template" instance on the user's client if ads are not allowed
-			mainPortal:Destroy()
-		end
-	else
-		print("Failed to get policy for player", player.Name, "| Exception:", result)
+local success, result = pcall(PolicyService.GetPolicyInfoForPlayerAsync, PolicyService, player)
+if success and result then
+	if not result.AreAdsAllowed then
+		-- Destroy the "Main Portal Template" instance on the user's client if ads are not allowed
+		mainPortal:Destroy()
 	end
+else
+	print("Failed to get policy for player", player.Name, "| Exception:", result)
+end
 ```
 
 ## Viewing Immersive Ad Metrics

@@ -67,7 +67,7 @@ Notice in the sample below, the condition is true, meaning this loop will run fo
 
 ```lua
 while true do
-  print("This loop is running")
+	print("This loop is running")
 end
 ```
 
@@ -83,7 +83,6 @@ Next, you'll set up the while loop for the color changing part.
 
    -- Looping Code
    while true do
-
    end
    ```
 
@@ -101,7 +100,7 @@ With the while loop created, instructions can be added to change the part's colo
    local loopingPart = workspace.LoopingPart
 
    while true do
-       loopingPart.Color = Color3.fromRGB()
+   	loopingPart.Color = Color3.fromRGB()
    end
    ```
 
@@ -111,7 +110,7 @@ With the while loop created, instructions can be added to change the part's colo
    local loopingPart = workspace.LoopingPart
 
    while true do
-       loopingPart.Color = Color3.fromRGB(82, 227, 255)
+   	loopingPart.Color = Color3.fromRGB(82, 227, 255)
    end
    ```
 
@@ -129,8 +128,8 @@ If you add a second line of color changing code right now, it would change the b
    local loopingPart = workspace.LoopingPart
 
    while true do
-       loopingPart.Color = Color3.fromRGB(82, 227, 255)
-       task.wait(3)
+   	loopingPart.Color = Color3.fromRGB(82, 227, 255)
+   	task.wait(3)
    end
    ```
 
@@ -138,10 +137,10 @@ If you add a second line of color changing code right now, it would change the b
 
    ```lua
    while true do
-     loopingPart.Color = Color3.fromRGB(82, 227, 255)
-     task.wait(3)
-     loopingPart.Color = Color3.fromRGB(177, 52, 255)
-     task.wait(3)
+   	loopingPart.Color = Color3.fromRGB(82, 227, 255)
+   	task.wait(3)
+   	loopingPart.Color = Color3.fromRGB(177, 52, 255)
+   	task.wait(3)
    end
    ```
 
@@ -174,12 +173,12 @@ local loopingPart = workspace.LoopingPart
 
 -- Looping Code
 while true do
-    -- Changes loopingPart's color
-    loopingPart.Color = Color3.fromRGB(82, 227, 255)
-    -- Wait 3 seconds before next instruction
-    task.wait(3)
-    loopingPart.Color = Color3.fromRGB(177, 52, 255)
-    task.wait(3)
+	-- Changes loopingPart's color
+	loopingPart.Color = Color3.fromRGB(82, 227, 255)
+	-- Wait 3 seconds before next instruction
+	task.wait(3)
+	loopingPart.Color = Color3.fromRGB(177, 52, 255)
+	task.wait(3)
 end
 ```
 
@@ -189,6 +188,6 @@ Loops are a common element in most computer languages. They are used to repeat i
 
 ```lua
 while true do
-    -- Instructions
+	-- Instructions
 end
 ```

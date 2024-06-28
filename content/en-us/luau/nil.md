@@ -16,7 +16,7 @@ print(variableToDelete) -- nil
 local dictionaryTable = {
 	Monday = 1,
 	Tuesday = 2,
-	Wednesday = 3
+	Wednesday = 3,
 }
 -- Output value of 'Tuesday' key
 print(dictionaryTable.Tuesday) -- 2

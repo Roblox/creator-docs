@@ -8,7 +8,7 @@ Metatables allow tables to become more powerful than before. They are attached t
 Consider the following code:
 
 ```lua
-local list = {1, 2}
+local list = { 1, 2 }
 print(list[3])
 ```
 
@@ -150,33 +150,33 @@ In some cases, such as when preserving unordered semantics exactly, you can have
 It should be noted that when writing functions for either arithmetic or relational metamethods the two function parameters are interchangeable between the table that fired the metamethod and the other value. For example, when doing vector operations with scalars division is not commutative. Therefore if you were writing metamethods for your own vector2 class, you'd want to be careful to account for either scenario.
 
 ```lua
-local vector2 = {__type = "vector2"}
-local mt = {__index = vector2}
+local vector2 = { __type = "vector2" }
+local mt = { __index = vector2 }
 
 function mt.__div(a, b)
-    if type(a) == "number" then
-    	-- a is a scalar, b is a vector
-    	local scalar, vector = a, b
-    	return vector2.new(scalar / vector.x, scalar / vector.y)
-    elseif type(b) == "number" then
-    	-- a is a vector, b is a scalar
-   	local vector, scalar = a, b
-   	return vector2.new(vector.x / scalar, vector.y / scalar)
-   elseif (a.__type and a.__type == "vector2" and b.__type and b.__type == "vector2") then
-   	-- both a and b are vectors
-   	return vector2.new(a.x / b.x, a.y / b.y)
-   end
+	if type(a) == "number" then
+		-- a is a scalar, b is a vector
+		local scalar, vector = a, b
+		return vector2.new(scalar / vector.x, scalar / vector.y)
+	elseif type(b) == "number" then
+		-- a is a vector, b is a scalar
+		local vector, scalar = a, b
+		return vector2.new(vector.x / scalar, vector.y / scalar)
+	elseif a.__type and a.__type == "vector2" and b.__type and b.__type == "vector2" then
+		-- both a and b are vectors
+		return vector2.new(a.x / b.x, a.y / b.y)
+	end
 end
 
 function mt.__tostring(t)
-   return t.x .. ", " .. t.y
+	return t.x .. ", " .. t.y
 end
 
 function vector2.new(x, y)
-   local self = setmetatable({}, mt)
-   self.x = x or 0
-   self.y = y or 0
-   return self
+	local self = setmetatable({}, mt)
+	self.x = x or 0
+	self.y = y or 0
+	return self
 end
 
 local a = vector2.new(10, 5)
@@ -194,16 +194,16 @@ There are many ways to use metatables, for example the `__unm` metamethod (to ma
 
 ```lua
 local metatable = {
-    __unm = function(t) -- __unm is for the unary - operator
-    	local negated = {}
-    	for key, value in t do
-    		negated[key] = -value -- negate all of the values in this table
-    	end
-    	return negated -- return the table
-    end
+	__unm = function(t) -- __unm is for the unary - operator
+		local negated = {}
+		for key, value in t do
+			negated[key] = -value -- negate all of the values in this table
+		end
+		return negated -- return the table
+	end,
 }
 
-local table1 = setmetatable({10, 11, 12}, metatable)
+local table1 = setmetatable({ 10, 11, 12 }, metatable)
 print(table.concat(-table1, "; ")) --> -10; -11; -12
 ```
 
@@ -211,7 +211,7 @@ Here's an interesting way to declare things using `__index`:
 
 ```lua
 local metatable = {
-    __index = {x = 1}
+	__index = { x = 1 },
 }
 
 local t = setmetatable({}, metatable)
@@ -224,7 +224,7 @@ Now you can easily do that with a simple function, but there's a lot more where
 that came from. Take this for example:
 
 ```lua
-local t = {10, 20, 30}
+local t = { 10, 20, 30 }
 print(t(5))
 ```
 
@@ -232,27 +232,27 @@ Now, obviously you can't call a table. That's just crazy, but (surprise, surpris
 
 ```lua
 local metatable = {
-    __call = function(t, param)
-    	local sum = {}
-    	for i, value in t do
-    		sum[i] = value + param -- Add the argument (5) to the value, then place it in the new table (t).
-    	end
-    	return unpack(sum) -- Return the individual table values
-    end
+	__call = function(t, param)
+		local sum = {}
+		for i, value in t do
+			sum[i] = value + param -- Add the argument (5) to the value, then place it in the new table (t).
+		end
+		return unpack(sum) -- Return the individual table values
+	end,
 }
 
-local t = setmetatable({10, 20, 30}, metatable)
+local t = setmetatable({ 10, 20, 30 }, metatable)
 print(t(5)) --> 15 25 35
 ```
 
 You can do a lot more as well, such as adding tables!
 
 ```lua
-local table1 = {10, 11, 12}
-local table2 = {13, 14, 15}
+local table1 = { 10, 11, 12 }
+local table2 = { 13, 14, 15 }
 
 for k, v in table1 + table2 do
-    print(k, v)
+	print(k, v)
 end
 ```
 
@@ -260,28 +260,28 @@ This will error saying that you're attempting to perform arithmetic on a table. 
 
 ```lua
 local metatable = {
-    __add = function(t1, t2)
-    	local sum = {}
-    	for key, value in t1 do
-    		sum[key] = value
-    	end
+	__add = function(t1, t2)
+		local sum = {}
+		for key, value in t1 do
+			sum[key] = value
+		end
 
-    	for key, value in t2 do
-    		if sum[key] then
-    			sum[key] += value
-   		else
-   			sum[key] = value
-   		end
-   	end
-   	return sum
-   end
+		for key, value in t2 do
+			if sum[key] then
+				sum[key] += value
+			else
+				sum[key] = value
+			end
+		end
+		return sum
+	end,
 }
 
-local table1 = setmetatable({10, 11, 12}, metatable)
-local table2 = setmetatable({13, 14, 15}, metatable)
+local table1 = setmetatable({ 10, 11, 12 }, metatable)
+local table2 = setmetatable({ 13, 14, 15 }, metatable)
 
 for k, v in table1 + table2 do
-   print(k, v)
+	print(k, v)
 end
 ```
 
@@ -293,21 +293,21 @@ For this one we will be using the `__index` metamethod just to make it simple:
 
 ```lua
 local function mathProblem(num)
-    for i = 1, 20 do
-    	num = math.floor(num * 10 + 65)
-    end
-    for i = 1, 10 do
-    	num += i - 1
-    end
-    return num
+	for i = 1, 20 do
+		num = math.floor(num * 10 + 65)
+	end
+	for i = 1, 10 do
+		num += i - 1
+	end
+	return num
 end
 
 local metatable = {
-   __index = function(object, key)
-   	local num = mathProblem(key)
-   	object[key] = num
-   	return num
-   end
+	__index = function(object, key)
+		local num = mathProblem(key)
+		object[key] = num
+		return num
+	end,
 }
 
 local t = setmetatable({}, metatable)
@@ -323,13 +323,13 @@ When playing with metatables, you may run into some problems. What happens if yo
 
 ```lua
 local t = setmetatable({}, {
-    __index = function(self, i)
-    	self[i] = i * 10 -- just as an example
-    	return self[i]
-    end,
-    __newindex = function(self, i, v)
-    	--don't do anything because we don't want you to set values to the table the normal way
-    end
+	__index = function(self, i)
+		self[i] = i * 10 -- just as an example
+		return self[i]
+	end,
+	__newindex = function(self, i, v)
+		--don't do anything because we don't want you to set values to the table the normal way
+	end,
 })
 print(t[1]) -- Causes a C-Stack overflow
 ```
@@ -340,13 +340,13 @@ The problem is that `__newindex` doesn't let us set the value. Its presence stop
 
 ```lua
 local t = setmetatable({}, {
-    __index = function(self, i)
-    	rawset(self, i, i * 10)
-    	return self[i]
-    end,
-    __newindex = function(self, i, v)
-    	--don't do anything because we don't want you to set values to the table the normal way
-    end
+	__index = function(self, i)
+		rawset(self, i, i * 10)
+		return self[i]
+	end,
+	__newindex = function(self, i, v)
+		--don't do anything because we don't want you to set values to the table the normal way
+	end,
 })
 print(t[1]) -- prints 10
 ```
@@ -404,7 +404,7 @@ end
 A new set can be constructed by calling `Set.new()` with an optional array of items to add.
 
 ```lua
-local fruits = Set.new({"Apple", "Lemon", "Orange", "Cherry", "Lime", "Peach"})
+local fruits = Set.new({ "Apple", "Lemon", "Orange", "Cherry", "Lime", "Peach" })
 ```
 
 Note that by definition, a set has no concept of ordering.
@@ -414,7 +414,7 @@ Note that by definition, a set has no concept of ordering.
 Adding an item to an existing set can be done via the `Set:add()` method.
 
 ```lua
-local fruits = Set.new({"Apple", "Lemon", "Orange", "Cherry", "Lime", "Peach"})
+local fruits = Set.new({ "Apple", "Lemon", "Orange", "Cherry", "Lime", "Peach" })
 fruits:add("Mango")
 ```
 
@@ -423,7 +423,7 @@ fruits:add("Mango")
 To remove an item from a set, call `Set:remove()` with the item name.
 
 ```lua
-local fruits = Set.new({"Apple", "Lemon", "Orange", "Cherry", "Lime", "Peach"})
+local fruits = Set.new({ "Apple", "Lemon", "Orange", "Cherry", "Lime", "Peach" })
 fruits:remove("Orange")
 ```
 
@@ -432,7 +432,7 @@ fruits:remove("Orange")
 To check if a set contains a specific item, use `Set:contains()`.
 
 ```lua
-local fruits = Set.new({"Apple", "Lemon", "Orange", "Cherry", "Lime", "Peach"})
+local fruits = Set.new({ "Apple", "Lemon", "Orange", "Cherry", "Lime", "Peach" })
 
 local result1 = fruits:contains("Cherry")
 print(result1) -- true
@@ -460,8 +460,8 @@ local function getIntersection(set1, set2)
 	return result
 end
 
-local freshFruits = Set.new({"Mango", "Lemon", "Orange", "Cherry", "Lime", "Peach"})
-local frozenFruits = Set.new({"Mango", "Peach", "Pineapple"})
+local freshFruits = Set.new({ "Mango", "Lemon", "Orange", "Cherry", "Lime", "Peach" })
+local frozenFruits = Set.new({ "Mango", "Peach", "Pineapple" })
 
 local commonFruits = getIntersection(freshFruits, frozenFruits)
 commonFruits:output() -- Mango, Peach
@@ -483,12 +483,11 @@ function Set:__add(otherSet)
 	return result
 end
 
-local sweetFruits = Set.new({"Apple", "Mango", "Cherry", "Peach"})
-local sourFruits = Set.new({"Lemon", "Lime"})
+local sweetFruits = Set.new({ "Apple", "Mango", "Cherry", "Peach" })
+local sourFruits = Set.new({ "Lemon", "Lime" })
 
 local allFruits = sweetFruits + sourFruits
 allFruits:output() -- Peach, Lime, Apple, Cherry, Lemon, Mango
-
 ```
 
 #### Subtraction
@@ -507,8 +506,8 @@ function Set:__sub(otherSet)
 	return result
 end
 
-local allFruits = Set.new({"Apple", "Lemon", "Mango", "Cherry", "Lime", "Peach"})
-local sourFruits = Set.new({"Lemon", "Lime"})
+local allFruits = Set.new({ "Apple", "Lemon", "Mango", "Cherry", "Lime", "Peach" })
+local sourFruits = Set.new({ "Lemon", "Lime" })
 
 local sweetFruits = allFruits - sourFruits
 sweetFruits:output() -- Mango, Apple, Cherry, Peach

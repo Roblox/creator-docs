@@ -128,14 +128,14 @@ page3.BackgroundColor3 = Color3.fromRGB(100, 100, 25)
 page3.Parent = screenGui
 
 while true do
-    pageLayout:Next()
-    task.wait(2)
-    pageLayout:Next()
-    task.wait(2)
-    pageLayout:Previous()
-    task.wait(2)
-    pageLayout:Previous()
-    task.wait(2)
+	pageLayout:Next()
+	task.wait(2)
+	pageLayout:Next()
+	task.wait(2)
+	pageLayout:Previous()
+	task.wait(2)
+	pageLayout:Previous()
+	task.wait(2)
 end
 ```
 

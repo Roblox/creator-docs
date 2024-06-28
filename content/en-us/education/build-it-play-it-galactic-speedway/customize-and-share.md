@@ -41,10 +41,10 @@ In the script, you'll see words like `DefaultSpeed` or `BoostSpeed`. These words
 
 local Settings = {}
 
-Settings.DefaultSpeed = 100		-- Speed when not boosted [Studs/second, Range 50-300]
-Settings.BoostSpeed = 200		-- Speed when boosted [Studs/second, Maximum: 400]
-Settings.BoostAmount = 10		-- Duration of boost in seconds
-Settings.Steering = 5			-- How quickly the speeder turns [Range: 1-10]
+Settings.DefaultSpeed = 100 -- Speed when not boosted [Studs/second, Range 50-300]
+Settings.BoostSpeed = 200 -- Speed when boosted [Studs/second, Maximum: 400]
+Settings.BoostAmount = 10 -- Duration of boost in seconds
+Settings.Steering = 5 -- How quickly the speeder turns [Range: 1-10]
 -- ================================================================================
 
 return Settings
@@ -55,10 +55,10 @@ Make your speeder the fastest on the track by increasing the default speed setti
 1. Change the number in the line `Settings.DefaultSpeed = 100` to any number between `50` (slower) and `300` (faster).
 
    ```lua
-   Settings.DefaultSpeed = 100		-- Speed when not boosted [Studs/second, Range 50-300]
-   Settings.BoostSpeed = 200		-- Speed when boosted [Studs/second, Maximum: 400]
-   Settings.BoostAmount = 10		-- Duration of boost in seconds
-   Settings.Steering = 5			-- How quickly the speeder turns [Range: 1-10]
+   Settings.DefaultSpeed = 100 -- Speed when not boosted [Studs/second, Range 50-300]
+   Settings.BoostSpeed = 200 -- Speed when boosted [Studs/second, Maximum: 400]
+   Settings.BoostAmount = 10 -- Duration of boost in seconds
+   Settings.Steering = 5 -- How quickly the speeder turns [Range: 1-10]
    ```
 
 2. Playtest and see how the change feels. Ask yourself if the speed fits the driftspeeder's design and if you'd be excited using it in a race.

@@ -125,12 +125,12 @@ With the emitter complete, the explosion can now be played through a script. The
    local EMIT_AMOUNT = 100
 
    local function killPlayer(otherPart)
-       local character = otherPart.Parent
-       local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
-       if humanoid then
-           humanoid.Health = 0
-       end
+   	if humanoid then
+   		humanoid.Health = 0
+   	end
    end
 
    trapObject.Touched:Connect(killPlayer)
@@ -149,13 +149,13 @@ In scripts, particles are emitted using the `Class.ParticleEmitter:Emit()|Emit()
    local EMIT_AMOUNT = 100
 
    local function killPlayer(otherPart)
-       local character = otherPart.Parent
-       local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
-       if humanoid then
-           humanoid.Health = 0
-           particleEmitter:Emit(EMIT_AMOUNT)
-       end
+   	if humanoid then
+   		humanoid.Health = 0
+   		particleEmitter:Emit(EMIT_AMOUNT)
+   	end
    end
 
    trapObject.Touched:Connect(killPlayer)

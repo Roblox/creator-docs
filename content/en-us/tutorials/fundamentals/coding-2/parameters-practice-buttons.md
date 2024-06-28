@@ -62,14 +62,13 @@ local button = script.Parent
 local bridge = workspace.Bridge
 
 local function buttonPressed()
-    print("button touched")
-    button.Color = Color3.fromRGB(0, 170, 0)
-    bridge.Transparency = 0
-    bridge.CanCollide = true
+	print("button touched")
+	button.Color = Color3.fromRGB(0, 170, 0)
+	bridge.Transparency = 0
+	bridge.CanCollide = true
 end
 
 button.Touched:Connect(buttonPressed)
-
 ```
 
 ### Troubleshooting Your Code
@@ -99,15 +98,14 @@ local button = script.Parent
 local gate = workspace.Gate
 
 local function buttonPressed()
-    print("button touched")
-    -- Changes button to red to give player feedback
-    button.BrickColor = BrickColor.Red() -- CHANGE THIS
-    -- Make the gate invisible
-    gate.Transparency = 1
-    -- Makes it so the player can walk through the gate
-    gate.CanCollide = false
+	print("button touched")
+	-- Changes button to red to give player feedback
+	button.BrickColor = BrickColor.Red() -- CHANGE THIS
+	-- Make the gate invisible
+	gate.Transparency = 1
+	-- Makes it so the player can walk through the gate
+	gate.CanCollide = false
 end
 
 button.Touched:Connect(buttonPressed)
-
 ```

@@ -46,7 +46,7 @@ When no items of interest are hit, the default icon is a small dot. We could set
 Type checks some in a priority order. After the `OnItemIndicator` override, we check if it is grabbable or a drawer for the "hand" icon through either `utils.CanGrabModel(model)` or `utils.GetTaggedObjectUpHierarchy("Drawer2", model)`. After that, we call [`HighlightManager`](#highlights) that determines the highlight status, the types of items, and which icon to use. For example:
 
 ```lua
-highlightItemsFunc:Invoke({"GetType", curInst})
+highlightItemsFunc:Invoke({ "GetType", curInst })
 ```
 
 The Lore and ThoughtBubble tags are checked later by checking tags. For the doors, we have 2 different icons: **DoorCurrentlyClosed** and **DoorAlwaysLocked**. [`DoorManager`](#doormanager) sets a true or false `DoorEnabled` attribute for doors that can be open or closed, and we use presence and value of the attribute. Objects that look like doors but do not open have the **DoorLocked** tag.
@@ -108,7 +108,9 @@ Some grabbable objects are important for gameplay, such as seals, and we didn't 
 In a few missions, we teleport players a short distance within a mission, such as [respawning players](../../resources/the-mystery-of-duvall-drive/main-design-requirements.md#respawning-players) who fall off a spinning platform. To simplify setting up this type of teleportation, which we call "Portals" in script, a helper function `ProcessPortal` in **DemoUtils** is used. For example, if P1 is the part defining the initial trigger, and P2 is the part defining destination player transform, the following code snippet could define such portal functionality:
 
 ```lua
-P1.Touched:Connect(function(otherPart) utils.ProcessPortal(otherPart, P2) end)
+P1.Touched:Connect(function(otherPart)
+	utils.ProcessPortal(otherPart, P2)
+end)
 ```
 
 **ProcessPortal** handles checking that otherPart is a human, teleporting the player through a `Datatype.CFrame` coordinate change, and invoking a small cutscene to hide the transition using a **Teleport_Jump** event in [**EventManager**](../../resources/the-mystery-of-duvall-drive/foundational-gameplay-systems.md#eventmanager).

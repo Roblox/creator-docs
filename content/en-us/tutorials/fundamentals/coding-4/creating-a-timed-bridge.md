@@ -70,7 +70,7 @@ To use the bridge, you'll need to create two functions. One function will make t
    local timerDuration = 5
 
    local function startTimer()
-       print("Countdown started")
+   	print("Countdown started")
    end
    ```
 
@@ -78,16 +78,15 @@ To use the bridge, you'll need to create two functions. One function will make t
 
    ```lua
    local function startTimer()
-      print("Countdown started")
+   	print("Countdown started")
    end
 
    local function buttonPressed(partTouched)
-      local character = partTouched.Parent
-      local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	local character = partTouched.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
-      if humanoid then
-
-      end
+   	if humanoid then
+   	end
    end
    ```
 
@@ -95,11 +94,11 @@ To use the bridge, you'll need to create two functions. One function will make t
 
    ```lua
    local function buttonPressed(otherPart)
-      local character = otherPart.Parent
-      local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-      if humanoid then
-         startTimer()
-      end
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	if humanoid then
+   		startTimer()
+   	end
    end
    ```
 
@@ -107,12 +106,11 @@ To use the bridge, you'll need to create two functions. One function will make t
 
    ```lua
    local function buttonPressed(otherPart)
-      local character = otherPart.Parent
-      local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-      if humanoid then
-         startTimer()
-      end
-
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	if humanoid then
+   		startTimer()
+   	end
    end
 
    button.Touched:Connect(buttonPressed)
@@ -145,9 +143,9 @@ To start, the script will need to make the bridge solid, or collidable and then 
 
    ```lua
    local function startTimer()
-      -- Make the bridge visible and walkable
-      bridge.Transparency = 0
-      bridge.CanCollide = true
+   	-- Make the bridge visible and walkable
+   	bridge.Transparency = 0
+   	bridge.CanCollide = true
    end
    ```
 
@@ -159,14 +157,12 @@ To start, the script will need to make the bridge solid, or collidable and then 
 
    ```lua
    local function startTimer()
-      -- Make the bridge visible and walkable
-      bridge.Transparency = 0
-      bridge.CanCollide = true
+   	-- Make the bridge visible and walkable
+   	bridge.Transparency = 0
+   	bridge.CanCollide = true
 
-      for count = timerDuration, 0, -1 do
-
-      end
-
+   	for count = timerDuration, 0, -1 do
+   	end
    end
    ```
 
@@ -174,7 +170,7 @@ To start, the script will need to make the bridge solid, or collidable and then 
 
    ```lua
    for count = timerDuration, 0, -1 do
-      timerText.Text = count
+   	timerText.Text = count
    end
    ```
 
@@ -182,8 +178,8 @@ To start, the script will need to make the bridge solid, or collidable and then 
 
    ```lua
    for count = timerDuration, 0, -1 do
-      timerText.Text = count
-      task.wait(1)
+   	timerText.Text = count
+   	task.wait(1)
    end
    ```
 
@@ -214,12 +210,11 @@ This is because the for loop is being called each time you touch the button and 
 
    ```lua
    local function buttonPressed(otherPart)
-      local character = otherPart.Parent
-      local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-      if humanoid and timerActive == false then
-         startTimer()
-      end
-
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	if humanoid and timerActive == false then
+   		startTimer()
+   	end
    end
    ```
 
@@ -236,19 +231,19 @@ This is because the for loop is being called each time you touch the button and 
 
    ```lua
    local function startTimer()
-      timerActive = true
-      bridge.Transparency = 0
-      bridge.CanCollide = true
+   	timerActive = true
+   	bridge.Transparency = 0
+   	bridge.CanCollide = true
 
-      -- For loop that counts down from timerDuration
-      for count = timerDuration, 0, -1 do
-         timerText.Text = count
-         task.wait(1)
-      end
+   	-- For loop that counts down from timerDuration
+   	for count = timerDuration, 0, -1 do
+   		timerText.Text = count
+   		task.wait(1)
+   	end
 
-      -- Make the bridge not walkable
-      bridge.Transparency = 0.8
-      bridge.CanCollide = false
+   	-- Make the bridge not walkable
+   	bridge.Transparency = 0.8
+   	bridge.CanCollide = false
    end
    ```
 
@@ -282,7 +277,7 @@ local timerDuration = 5
 local timerActive = false
 
 local function startTimer()
-    print("Countdown started")
+	print("Countdown started")
 	timerActive = true
 	bridge.Transparency = 0
 	bridge.CanCollide = true
@@ -298,7 +293,6 @@ local function startTimer()
 	bridge.CanCollide = false
 	timerText.Text = ""
 	timerActive = false
-
 end
 
 local function buttonPressed(partTouched)

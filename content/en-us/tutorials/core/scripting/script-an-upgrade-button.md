@@ -64,11 +64,11 @@ To update the **PlayerData** module script to store jumping power:
 
    local playerData = {
    	--[[
-   		[userId: string] = {
-   			["Coins"] = coinAmount: number,
-   			["Jump"] = jumpPower: number
-   		}
-   	--]]
+      		[userId: string] = {
+      			["Coins"] = coinAmount: number,
+      			["Jump"] = jumpPower: number
+      		}
+      	--]]
    }
 
    local DEFAULT_PLAYER_DATA = {

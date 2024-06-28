@@ -28,7 +28,7 @@ AvatarEditorService:PromptAllowInventoryReadAccess()
 local result = AvatarEditorService.PromptAllowInventoryReadAccessCompleted:Wait()
 
 if result == Enum.AvatarPromptResult.Success then
-  -- Access granted!
+	-- Access granted!
 end
 ```
 
@@ -52,17 +52,17 @@ AvatarEditorService:PromptAllowInventoryReadAccess()
 local result = AvatarEditorService.PromptAllowInventoryReadAccessCompleted:Wait()
 
 if result == Enum.AvatarPromptResult.Success then
-  -- Access granted!
-  local assetTypes = {
-    Enum.AvatarAssetType.BackAccessory,
-    Enum.AvatarAssetType.ShoulderAccessory,
-    Enum.AvatarAssetType.WaistAccessory
-  }
-  local pagesObject = AvatarEditorService:GetInventory(assetTypes)
-  local currentPage = pagesObject:GetCurrentPage()
-  for i, item in currentPage do
-    print(item)
-  end
+	-- Access granted!
+	local assetTypes = {
+		Enum.AvatarAssetType.BackAccessory,
+		Enum.AvatarAssetType.ShoulderAccessory,
+		Enum.AvatarAssetType.WaistAccessory,
+	}
+	local pagesObject = AvatarEditorService:GetInventory(assetTypes)
+	local currentPage = pagesObject:GetCurrentPage()
+	for i, item in currentPage do
+		print(item)
+	end
 end
 ```
 
@@ -128,17 +128,17 @@ local AvatarEditorService = game:GetService("AvatarEditorService")
 
 local catalogSearchParams = CatalogSearchParams.new()
 local assetTypes = {
-  Enum.AvatarAssetType.BackAccessory,
-  Enum.AvatarAssetType.ShoulderAccessory
+	Enum.AvatarAssetType.BackAccessory,
+	Enum.AvatarAssetType.ShoulderAccessory,
 }
 catalogSearchParams.AssetTypes = assetTypes
 
 local pagesObject =
---This function returns a CatalogPages object containing the results.
-AvatarEditorService:SearchCatalog(catalogSearchParams)
+	--This function returns a CatalogPages object containing the results.
+	AvatarEditorService:SearchCatalog(catalogSearchParams)
 local currentPage = pagesObject:GetCurrentPage()
 for i, item in currentPage do
-  print(item)
+	print(item)
 end
 ```
 
@@ -170,7 +170,7 @@ AvatarEditorService:PromptSaveAvatar(currentDescription, humanoid.RigType)
 
 local result = AvatarEditorService.PromptSaveAvatarCompleted:Wait()
 if result == Enum.AvatarPromptResult.Success then
-  -- Avatar saved!
+	-- Avatar saved!
 end
 ```
 
@@ -195,7 +195,7 @@ AvatarEditorService:PromptCreateOutfit(currentDescription, humanoid.RigType)
 
 local result = AvatarEditorService.PromptCreateOutfitCompleted:Wait()
 if result == Enum.AvatarPromptResult.Success then
-  -- Outfit saved!
+	-- Outfit saved!
 end
 ```
 

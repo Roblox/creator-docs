@@ -11,10 +11,10 @@ To declare a string variable, put quotes around the characters. It's more common
 
 ```lua
 local string1 = "Hello world!"
-print(string1)  --> Hello world!
+print(string1) --> Hello world!
 
 local string2 = 'Hello "world"!'
-print(string2)  --> Hello "world"!
+print(string2) --> Hello "world"!
 ```
 
 To include both single and double quotes in a string, or to create multi-line strings, declare them using double brackets:
@@ -57,9 +57,9 @@ local string1 = hello .. world
 local string2 = helloWithSpace .. world
 local string3 = hello .. " " .. world
 
-print(string1)  --> Helloworld!
-print(string2)  --> Hello world!
-print(string3)  --> Hello world!
+print(string1) --> Helloworld!
+print(string2) --> Hello world!
+print(string3) --> Hello world!
 ```
 
 Note that the `print()` command takes multiple arguments and combines them **with** spaces, so you can use `,` instead of `..` to yield spaces in `print()` outputs.
@@ -69,9 +69,9 @@ local hello = "Hello"
 local world = "world"
 local exclamationMark = "!"
 
-print(hello .. world .. exclamationMark)  --> Helloworld!
-print(hello, world .. exclamationMark)  --> Hello world!
-print(hello, world, exclamationMark)  --> Hello world !
+print(hello .. world .. exclamationMark) --> Helloworld!
+print(hello, world .. exclamationMark) --> Hello world!
+print(hello, world, exclamationMark) --> Hello world !
 ```
 
 ## Converting Strings
@@ -80,10 +80,10 @@ To convert a string to a number, use the `Global.LuaGlobals.tonumber()` function
 
 ```lua
 local numericString = "123"
-print(tonumber(numericString))  --> 123
+print(tonumber(numericString)) --> 123
 
 local alphanumericString = "Hello123"
-print(tonumber(alphanumericString))  --> nil
+print(tonumber(alphanumericString)) --> nil
 ```
 
 ## Escaping Strings
@@ -94,11 +94,11 @@ To escape a double- or single-quote string declaration and embed almost any char
 - To embed a double quote in a double-quote string, use `\"`.
 
 ```lua
-local string1 = 'Hello \'world\'!'
-print(string1)  --> Hello 'world'!
+local string1 = "Hello 'world'!"
+print(string1) --> Hello 'world'!
 
-local string2 = "Hello \"world\"!"
-print(string2)  --> Hello "world"!
+local string2 = 'Hello "world"!'
+print(string2) --> Hello "world"!
 ```
 
 Certain characters following backslashes produce special characters rather than escaped characters:
@@ -113,7 +113,7 @@ print(string1)
 --> world!
 
 local string2 = "Hello\tworld!"
-print(string2)  --> Hello	world!
+print(string2) --> Hello	world!
 ```
 
 ## String Interpolation
@@ -124,7 +124,7 @@ Luau supports **string interpolation**, a feature that lets you insert expressio
 local world = "world"
 
 local string1 = `Hello {world}!`
-print(string1)  --> Hello world!
+print(string1) --> Hello world!
 ```
 
 Although variables are the most common usage, you can use any expression, including math:
@@ -132,22 +132,22 @@ Although variables are the most common usage, you can use any expression, includ
 ```lua
 local world = "world"
 local number = 1
-local letters = {"w", "o", "r", "l", "d"}
+local letters = { "w", "o", "r", "l", "d" }
 
 local string1 = `Hello {world}, {number} time!`
 local string2 = `Hello {world}, {number + 1} times!`
 local string3 = `Hello {table.concat(letters)} a third time!`
 
-print(string1)  --> Hello world, 1 time!
-print(string2)  --> Hello world, 2 times!
-print(string3)  --> Hello world a third time!
+print(string1) --> Hello world, 1 time!
+print(string2) --> Hello world, 2 times!
+print(string3) --> Hello world a third time!
 ```
 
 Standard escape rules apply for backticks, curly brackets, and backslashes:
 
 ```lua
 local string1 = `Hello \`\{world\}\`!`
-print(string1)  --> Hello `{world}`!
+print(string1) --> Hello `{world}`!
 ```
 
 ## Math Conversion
@@ -155,12 +155,12 @@ print(string1)  --> Hello `{world}`!
 If you perform math operations on a string, Luau automatically converts the string to a number. If the string doesn't have a number representation, it throws an error.
 
 ```lua
-print("55" + 10)  --> 65
-print("55" - 10)  --> 45
-print("55" * 10)  --> 550
-print("55" / 10)  --> 5.5
-print("55" % 10)  --> 5
-print("Hello" + 10)	 --> print("Hello" + 10):1: attempt to perform arithmetic (add) on string and number
+print("55" + 10) --> 65
+print("55" - 10) --> 45
+print("55" * 10) --> 550
+print("55" / 10) --> 5.5
+print("55" % 10) --> 5
+print("Hello" + 10) --> print("Hello" + 10):1: attempt to perform arithmetic (add) on string and number
 ```
 
 ## String Pattern Reference
@@ -178,8 +178,8 @@ look for the word **Roblox** within a string:
 ```lua
 local match1 = string.match("Welcome to Roblox!", "Roblox")
 local match2 = string.match("Welcome to my awesome game!", "Roblox")
-print(match1)  --> Roblox
-print(match2)  --> nil
+print(match1) --> Roblox
+print(match2) --> nil
 ```
 
 ### Character Classes
@@ -295,11 +295,11 @@ preceding it with a `%` as in `%.`.
 ```lua
 -- "roblox.com" matches "roblox#com" because the period is interpreted as "any character"
 local match1 = string.match("What is roblox#com?", "roblox.com")
-print(match1)  --> roblox#com
+print(match1) --> roblox#com
 
 -- Escape the period with % so it is interpreted as a literal period character
 local match2 = string.match("I love roblox.com!", "roblox%.com")
-print(match2)  --> roblox.com
+print(match2) --> roblox.com
 ```
 
 ### Anchors
@@ -308,17 +308,17 @@ You can search for a pattern at the beginning or end of a string by using the
 `^` and `$` symbols.
 
 ```lua
-local start1 = string.match("first second third", "^first")  -- Matches because "first" is at the beginning
-print(start1)  --> first
+local start1 = string.match("first second third", "^first") -- Matches because "first" is at the beginning
+print(start1) --> first
 
-local start2 = string.match("third second first", "^first")  -- Doesn't match because "first" isn't at the beginning
-print(start2)  --> nil
+local start2 = string.match("third second first", "^first") -- Doesn't match because "first" isn't at the beginning
+print(start2) --> nil
 
-local end1 = string.match("first second third", "third$")  -- Matches because "third" is at the end
-print(end1)  --> third
+local end1 = string.match("first second third", "third$") -- Matches because "third" is at the end
+print(end1) --> third
 
-local end2 = string.match("third second first", "third$")  -- Doesn't match because "third" isn't at the end
-print(end2)  --> nil
+local end2 = string.match("third second first", "third$") -- Doesn't match because "third" isn't at the end
+print(end2) --> nil
 ```
 
 You can also use both `^` and `$` together to ensure a pattern matches only
@@ -326,14 +326,14 @@ the full string and not just some portion of it.
 
 ```lua
 -- Using both ^ and $ to match across a full string
-local match1 = string.match("Roblox", "^Roblox$")  -- Matches because "Roblox" is the entire string (equality)
-print(match1)  --> Roblox
+local match1 = string.match("Roblox", "^Roblox$") -- Matches because "Roblox" is the entire string (equality)
+print(match1) --> Roblox
 
-local match2 = string.match("I play Roblox", "^Roblox$")  -- Doesn't match because "Roblox" isn't at the beginning AND end
-print(match2)  --> nil
+local match2 = string.match("I play Roblox", "^Roblox$") -- Doesn't match because "Roblox" isn't at the beginning AND end
+print(match2) --> nil
 
-local match3 = string.match("I play Roblox", "Roblox")  -- Matches because "Roblox" is contained within "I play Roblox"
-print(match3)  --> Roblox
+local match3 = string.match("I play Roblox", "Roblox") -- Matches because "Roblox" is contained within "I play Roblox"
+print(match3) --> Roblox
 ```
 
 ### Class Modifiers
@@ -344,7 +344,7 @@ to right, finds the **first** digit (`2`), and stops.
 
 ```lua
 local match = string.match("The Cloud Kingdom has 25 power gems", "%d")
-print(match)  --> 2
+print(match) --> 2
 ```
 
 You can use **modifiers** with any character class to control the result:
@@ -387,10 +387,10 @@ Adding a modifier to the same pattern (`"%d+"` instead of `"%d"`), outputs
 
 ```lua
 local match1 = string.match("The Cloud Kingdom has 25 power gems", "%d")
-print(match1)  --> 2
+print(match1) --> 2
 
 local match2 = string.match("The Cloud Kingdom has 25 power gems", "%d+")
-print(match2)  --> 25
+print(match2) --> 25
 ```
 
 ### Class Sets
@@ -404,11 +404,11 @@ notice the difference between using a set (`"[%l%p]+"`) and **not** using a
 set (`"%l%p+"`).
 
 ```lua
-local match1 = string.match("Hello!!! I am another string.", "[%l%p]+")  -- Set
-print(match1)  --> ello!!!
+local match1 = string.match("Hello!!! I am another string.", "[%l%p]+") -- Set
+print(match1) --> ello!!!
 
-local match2 = string.match("Hello!!! I am another string.", "%l%p+")  -- Non-set
-print(match2)  --> o!!!
+local match2 = string.match("Hello!!! I am another string.", "%l%p+") -- Non-set
+print(match2) --> o!!!
 ```
 
 The first command (set) tells Luau to find both lowercase characters and
@@ -440,13 +440,13 @@ them to variables. For example, the following pattern contains two captures,
 local pattern = "(%a+)%s?=%s?(%d+)"
 
 local key1, val1 = string.match("TwentyOne = 21", pattern)
-print(key1, val1)  --> TwentyOne 21
+print(key1, val1) --> TwentyOne 21
 
 local key2, val2 = string.match("TwoThousand= 2000", pattern)
-print(key2, val2)  --> TwoThousand 2000
+print(key2, val2) --> TwoThousand 2000
 
 local key3, val3 = string.match("OneMillion=1000000", pattern)
-print(key3, val3)  --> OneMillion 1000000
+print(key3, val3) --> OneMillion 1000000
 ```
 
 In the previous pattern, the `?` quantifier that follows both of the `%s`

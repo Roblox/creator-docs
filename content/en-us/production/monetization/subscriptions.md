@@ -131,8 +131,8 @@ end
 
 local function revokeAwardIfGranted(player: Player)
 	-- This method is called for every player who does _not_ have the subscription
-    -- If your code saves subscriptions to Data Stores or provides some benefit that needs to be 'revoked'
-    -- you should use this method to handle the revocation
+	-- If your code saves subscriptions to Data Stores or provides some benefit that needs to be 'revoked'
+	-- you should use this method to handle the revocation
 end
 
 local function checkSubStatus(player)
@@ -188,8 +188,8 @@ end
 
 local function revokeBenefitIfGranted(player: Player)
 	-- This method is called for every player who does _not_ have the subscription
-    -- If your code saves subscriptions to Data Stores or provides some benefit that needs to be 'revoked'
-    -- you should use this method to handle the revocation
+	-- If your code saves subscriptions to Data Stores or provides some benefit that needs to be 'revoked'
+	-- you should use this method to handle the revocation
 end
 
 local function checkSubscriptionStatus(player: Player)
@@ -234,7 +234,6 @@ local function onUserSubscriptionStatusChanged(player: Player, subscriptionId: s
 		checkSubscriptionStatus(player)
 	end
 end
-
 
 local function onPromptGamePassPurchaseFinished(player: Player, purchasedPassID: number, purchaseSuccess: boolean)
 	if purchaseSuccess and purchasedPassID == LEGACY_GAME_PASS_ID then
@@ -288,9 +287,8 @@ local SUBSCRIPTION_ID = "EXP-11111111" -- Replace with your subscription ID
 local getSubscriptionStatusRemote = ReplicatedStorage:WaitForChild("GetSubscriptionStatus")
 local purchaseSubscriptionButton = script.Parent.PromptPurchaseSubscription -- Replace with your button
 
-
 local function playerHasSubscription()
-    -- Note if your subscription is replacing a game pass, you will need to check if the game pass is owned here too
+	-- Note if your subscription is replacing a game pass, you will need to check if the game pass is owned here too
 
 	local success, result = pcall(function()
 		return getSubscriptionStatusRemote:InvokeServer(SUBSCRIPTION_ID)
@@ -301,32 +299,32 @@ local function playerHasSubscription()
 		return
 	end
 
-    return result.IsSubscribed
+	return result.IsSubscribed
 end
 
 -- Hides the button if the player already has the subscription
 local function hideButtonIfPlayerHasSubscription()
-    if playerHasSubscription() then
-        purchaseSubscriptionButton.Visible = false
-    end
+	if playerHasSubscription() then
+		purchaseSubscriptionButton.Visible = false
+	end
 end
 
 local function onPromptSubscriptionPurchaseFinished(player: Player, subscriptionId: string, didTryPurchasing: boolean)
-    if didTryPurchasing then
-        -- It can take a while for the subscription to be registered, so we will check to see if the purchase went through in 10 seconds
-        -- and hide the button if it has
-        task.delay(10, hideButtonIfPlayerHasSubscription)
-    end
+	if didTryPurchasing then
+		-- It can take a while for the subscription to be registered, so we will check to see if the purchase went through in 10 seconds
+		-- and hide the button if it has
+		task.delay(10, hideButtonIfPlayerHasSubscription)
+	end
 end
 
 -- If the player already has the subscription, we don't want to show the button at all
 hideButtonIfPlayerHasSubscription()
 
 purchaseSubscriptionButton.Activated:Connect(function()
-    MarketplaceService:PromptSubscriptionPurchase(Players.LocalPlayer, SUBSCRIPTION_ID)
+	MarketplaceService:PromptSubscriptionPurchase(Players.LocalPlayer, SUBSCRIPTION_ID)
 
-    -- If the player already has the subscription, hide the button
-    hideButtonIfPlayerHasSubscription()
+	-- If the player already has the subscription, hide the button
+	hideButtonIfPlayerHasSubscription()
 end)
 
 MarketplaceService.PromptSubscriptionPurchaseFinished:Connect(onPromptSubscriptionPurchaseFinished)

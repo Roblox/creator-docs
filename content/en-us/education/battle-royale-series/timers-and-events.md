@@ -46,17 +46,17 @@ Events have two built-in functions: `Connect()` and `Wait()`. Instead of using `
 
    ```lua
    while true do
-     repeat
-       task.wait(gameSettings.intermissionDuration)
-       print("Restarting intermission")
-     until #Players:GetPlayers() >= gameSettings.minimumPlayers
+   	repeat
+   		task.wait(gameSettings.intermissionDuration)
+   		print("Restarting intermission")
+   	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
-     print("Intermission over")
-     task.wait(gameSettings.transitionTime)
+   	print("Intermission over")
+   	task.wait(gameSettings.transitionTime)
 
-     matchManager.prepareGame()
-     -- Placeholder wait for the length of the game.
-     matchEnd.Event:Wait()
+   	matchManager.prepareGame()
+   	-- Placeholder wait for the length of the game.
+   	matchEnd.Event:Wait()
    end
    ```
 
@@ -88,57 +88,57 @@ To add a timer into the game, use the premade module script in the steps below. 
    Timer.__index = Timer
 
    function Timer.new()
-     local self = setmetatable({}, Timer)
+   	local self = setmetatable({}, Timer)
 
-     self._finishedEvent = Instance.new("BindableEvent")
-     self.finished = self._finishedEvent.Event
+   	self._finishedEvent = Instance.new("BindableEvent")
+   	self.finished = self._finishedEvent.Event
 
-     self._running = false
-     self._startTime = nil
-     self._duration = nil
+   	self._running = false
+   	self._startTime = nil
+   	self._duration = nil
 
-     return self
+   	return self
    end
 
    function Timer:start(duration)
-     if not self._running then
-       task.spawn(function()
-         self._running = true
-         self._duration = duration
-         self._startTime = tick()
-         while self._running and tick() - self._startTime < duration do
-           task.wait()
-         end
-         local completed = self._running
-         self._running = false
-         self._startTime = nil
-         self._duration = nil
-         self._finishedEvent:Fire(completed)
-       end)
-     else
-       warn("Warning: timer could not start again as it is already running.")
-     end
+   	if not self._running then
+   		task.spawn(function()
+   			self._running = true
+   			self._duration = duration
+   			self._startTime = tick()
+   			while self._running and tick() - self._startTime < duration do
+   				task.wait()
+   			end
+   			local completed = self._running
+   			self._running = false
+   			self._startTime = nil
+   			self._duration = nil
+   			self._finishedEvent:Fire(completed)
+   		end)
+   	else
+   		warn("Warning: timer could not start again as it is already running.")
+   	end
    end
 
    function Timer:getTimeLeft()
-     if self._running then
-       local now = tick()
-       local timeLeft = self._startTime + self._duration - now
-       if timeLeft < 0 then
-         timeLeft = 0
-       end
-       return timeLeft
-     else
-       warn("Warning: could not get remaining time, timer is not running.")
-     end
+   	if self._running then
+   		local now = tick()
+   		local timeLeft = self._startTime + self._duration - now
+   		if timeLeft < 0 then
+   			timeLeft = 0
+   		end
+   		return timeLeft
+   	else
+   		warn("Warning: could not get remaining time, timer is not running.")
+   	end
    end
 
    function Timer:isRunning()
-     return self._running
+   	return self._running
    end
 
    function Timer:stop()
-     self._running = false
+   	self._running = false
    end
 
    return Timer
@@ -187,12 +187,12 @@ Now that a timer is created, use the included functions `start()` and `stop()` d
 
    -- Local Functions
    local function timeUp()
-     print("Time is up!")
+   	print("Time is up!")
    end
 
    -- Module Functions
    function MatchManager.prepareGame()
-     playerManager.sendPlayersToMatch()
+   	playerManager.sendPlayersToMatch()
    end
 
    return MatchManager
@@ -203,11 +203,11 @@ Now that a timer is created, use the included functions `start()` and `stop()` d
    ```lua
    -- Local Functions
    local function timeUp()
-     print("Time is up!")
+   	print("Time is up!")
    end
 
    local function startTimer()
-     print("Timer started")
+   	print("Timer started")
    end
    ```
 
@@ -219,9 +219,9 @@ Now that a timer is created, use the included functions `start()` and `stop()` d
    ```lua
    -- Local Functions
    local function startTimer()
-     print("Timer started")
-     myTimer:start(gameSettings.matchDuration)
-     myTimer.finished:Connect(timeUp)
+   	print("Timer started")
+   	myTimer:start(gameSettings.matchDuration)
+   	myTimer.finished:Connect(timeUp)
    end
    ```
 
@@ -252,7 +252,7 @@ The timer can be triggered at the start of a match using the Match Start event.
    ```lua
    -- Module Functions
    function MatchManager.prepareGame()
-     playerManager.sendPlayersToMatch()
+   	playerManager.sendPlayersToMatch()
    end
 
    matchStart.Event:Connect(startTimer)
@@ -265,8 +265,8 @@ The timer can be triggered at the start of a match using the Match Start event.
    ```lua
    -- Module Functions
    function MatchManager.prepareGame()
-     playerManager.sendPlayersToMatch()
-     matchStart:Fire()
+   	playerManager.sendPlayersToMatch()
+   	matchStart:Fire()
    end
    ```
 
@@ -350,6 +350,5 @@ while true do
 	matchManager.prepareGame()
 	-- Placeholder wait for the length of the game.
 	matchEnd.Event:Wait()
-
 end
 ```

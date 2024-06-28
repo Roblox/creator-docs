@@ -65,9 +65,7 @@ A side-scrolling view keeps the camera at a fixed position relative to the side 
 
    local player = Players.LocalPlayer
 
-   local function updateCamera()
-
-   end
+   local function updateCamera() end
    ```
 
 4. Inside the function, get the user's character model and check if it exists by using an if statement.
@@ -78,10 +76,9 @@ A side-scrolling view keeps the camera at a fixed position relative to the side 
    local player = Players.LocalPlayer
 
    local function updateCamera()
-       local character = player.Character
-       if character then
-
-       end
+   	local character = player.Character
+   	if character then
+   	end
    end
    ```
 
@@ -101,13 +98,12 @@ All character models contain a part named **HumanoidRootPart**, which can be use
    local player = Players.LocalPlayer
 
    local function updateCamera()
-       local character = player.Character
-       if character then
-           local root = character:FindFirstChild("HumanoidRootPart")
-           if root then
-
-           end
-       end
+   	local character = player.Character
+   	if character then
+   		local root = character:FindFirstChild("HumanoidRootPart")
+   		if root then
+   		end
+   	end
    end
    ```
 
@@ -121,13 +117,13 @@ All character models contain a part named **HumanoidRootPart**, which can be use
    local HEIGHT_OFFSET = 2
 
    local function updateCamera()
-       local character = player.Character
-       if character then
-           local root = character:FindFirstChild("HumanoidRootPart")
-           if root then
-               local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
-           end
-       end
+   	local character = player.Character
+   	if character then
+   		local root = character:FindFirstChild("HumanoidRootPart")
+   		if root then
+   			local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
+   		end
+   	end
    end
    ```
 
@@ -147,16 +143,15 @@ local CAMERA_DEPTH = 24
 local HEIGHT_OFFSET = 2
 
 local function updateCamera()
-    local character = player.Character
-    if character then
-        local root = character:FindFirstChild("HumanoidRootPart")
-        if root then
-            local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
-            local cameraPosition = Vector3.new(rootPosition.X, rootPosition.Y, CAMERA_DEPTH)
-        end
-    end
+	local character = player.Character
+	if character then
+		local root = character:FindFirstChild("HumanoidRootPart")
+		if root then
+			local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
+			local cameraPosition = Vector3.new(rootPosition.X, rootPosition.Y, CAMERA_DEPTH)
+		end
+	end
 end
-
 ```
 
 ### Update CurrentCamera
@@ -173,15 +168,15 @@ local CAMERA_DEPTH = 24
 local HEIGHT_OFFSET = 2
 
 local function updateCamera()
-    local character = player.Character
-    if character then
-        local root = character:FindFirstChild("HumanoidRootPart")
-        if root then
-            local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
-            local cameraPosition = Vector3.new(rootPosition.X, rootPosition.Y, CAMERA_DEPTH)
-            camera.CFrame = CFrame.lookAt(cameraPosition, rootPosition)
-        end
-    end
+	local character = player.Character
+	if character then
+		local root = character:FindFirstChild("HumanoidRootPart")
+		if root then
+			local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
+			local cameraPosition = Vector3.new(rootPosition.X, rootPosition.Y, CAMERA_DEPTH)
+			camera.CFrame = CFrame.lookAt(cameraPosition, rootPosition)
+		end
+	end
 end
 ```
 
@@ -208,15 +203,15 @@ The last step is to run this function repeatedly to keep the camera in sync with
    local HEIGHT_OFFSET = 2
 
    local function updateCamera()
-       local character = player.Character
-       if character then
-           local root = character:FindFirstChild("HumanoidRootPart")
-           if root then
-               local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
-               local cameraPosition = Vector3.new(rootPosition.X, rootPosition.Y, CAMERA_DEPTH)
-               camera.CFrame = CFrame.lookAt(cameraPosition, rootPosition)
-           end
-       end
+   	local character = player.Character
+   	if character then
+   		local root = character:FindFirstChild("HumanoidRootPart")
+   		if root then
+   			local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
+   			local cameraPosition = Vector3.new(rootPosition.X, rootPosition.Y, CAMERA_DEPTH)
+   			camera.CFrame = CFrame.lookAt(cameraPosition, rootPosition)
+   		end
+   	end
    end
 
    RunService:BindToRenderStep("SidescrollingCamera", Enum.RenderPriority.Camera.Value + 1, updateCamera)
@@ -238,15 +233,15 @@ The basic structure of getting the user's position and updating the camera's pos
 
    ```lua
    local function updateCamera()
-       local character = player.Character
-       if character then
-           local root = character:FindFirstChild("HumanoidRootPart")
-           if root then
-               local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
-               local cameraPosition = rootPosition + Vector3.new(CAMERA_DEPTH, CAMERA_DEPTH, CAMERA_DEPTH)
-               camera.CFrame = CFrame.lookAt(cameraPosition, rootPosition)
-           end
-       end
+   	local character = player.Character
+   	if character then
+   		local root = character:FindFirstChild("HumanoidRootPart")
+   		if root then
+   			local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
+   			local cameraPosition = rootPosition + Vector3.new(CAMERA_DEPTH, CAMERA_DEPTH, CAMERA_DEPTH)
+   			camera.CFrame = CFrame.lookAt(cameraPosition, rootPosition)
+   		end
+   	end
    end
 
    RunService:BindToRenderStep("IsometricCamera", Enum.RenderPriority.Camera.Value + 1, updateCamera)

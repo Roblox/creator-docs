@@ -110,15 +110,15 @@ print(not 0) -- false
 You can use the `not` operator to trigger a conditional or loop if a variable is `false` or `nil`.
 
 ```lua
-local nilVariable  -- Variable is declared but has no value, so it's nil
-local falseVariable = false  -- Variable is declared with value of false
+local nilVariable -- Variable is declared but has no value, so it's nil
+local falseVariable = false -- Variable is declared with value of false
 
 if not nilVariable then
-	print(nilVariable)  -- Outputs "nil" because nil isn't true
+	print(nilVariable) -- Outputs "nil" because nil isn't true
 end
 
 if not falseVariable then
-	print(falseVariable)  -- Outputs "false" because false isn't true
+	print(falseVariable) -- Outputs "false" because false isn't true
 end
 ```
 

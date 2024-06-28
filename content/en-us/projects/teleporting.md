@@ -25,7 +25,7 @@ local TARGET_PLACE_ID = 1234 -- replace with your own place ID
 
 local playerToTeleport = Players:GetPlayers()[1] -- get the first user in the experience
 
-TeleportService:TeleportAsync(TARGET_PLACE_ID, {playerToTeleport}, teleportOptions)
+TeleportService:TeleportAsync(TARGET_PLACE_ID, { playerToTeleport }, teleportOptions)
 ```
 
 <Alert severity="warning">
@@ -94,7 +94,7 @@ Don't pass secure data using `Class.TeleportOptions:SetTeleportData()` because i
 
 ```lua
 local teleportData = {
-    randomNumber = RNG:NextInteger(1, 100),
+	randomNumber = RNG:NextInteger(1, 100),
 }
 
 local teleportOptions = Instance.new("TeleportOptions")
@@ -107,11 +107,11 @@ To get all data of a user arriving from a teleport on the server, use the `Class
 local Players = game:GetService("Players")
 
 local function onPlayerAdded(player)
-    local joinData = player:GetJoinData()
-    local teleportData = joinData.TeleportData
-    local randomNumber = teleportData.randomNumber
+	local joinData = player:GetJoinData()
+	local teleportData = joinData.TeleportData
+	local randomNumber = teleportData.randomNumber
 
-    print(player.Name .. "joined with the number" .. randomNumber)
+	print(player.Name .. "joined with the number" .. randomNumber)
 end
 
 Players.PlayerAdded:Connect(onPlayerAdded)
@@ -133,37 +133,37 @@ local RETRY_DELAY = 1
 local FLOOD_DELAY = 15
 
 local function SafeTeleport(placeId, players, options)
-    local attemptIndex = 0
-    local success, result -- define pcall results outside of loop so results can be reported later on
+	local attemptIndex = 0
+	local success, result -- define pcall results outside of loop so results can be reported later on
 
-    repeat
-        success, result = pcall(function()
-            return TeleportService:TeleportAsync(placeId, players, options) -- teleport the user in a protected call to prevent erroring
-        end)
-        attemptIndex += 1
-        if not success then
-            task.wait(RETRY_DELAY)
-        end
-    until success or attemptIndex == ATTEMPT_LIMIT -- stop trying to teleport if call was successful, or if retry limit has been reached
+	repeat
+		success, result = pcall(function()
+			return TeleportService:TeleportAsync(placeId, players, options) -- teleport the user in a protected call to prevent erroring
+		end)
+		attemptIndex += 1
+		if not success then
+			task.wait(RETRY_DELAY)
+		end
+	until success or attemptIndex == ATTEMPT_LIMIT -- stop trying to teleport if call was successful, or if retry limit has been reached
 
-    if not success then
-        warn(result) -- print the failure reason to output
-    end
+	if not success then
+		warn(result) -- print the failure reason to output
+	end
 
-    return success, result
+	return success, result
 end
 
 local function handleFailedTeleport(player, teleportResult, errorMessage, targetPlaceId, teleportOptions)
-    if teleportResult == Enum.TeleportResult.Flooded then
-        task.wait(FLOOD_DELAY)
-    elseif teleportResult == Enum.TeleportResult.Failure then
-        task.wait(RETRY_DELAY)
-    else
-        -- if the teleport is invalid, report the error instead of retrying
-        error(("Invalid teleport [%s]: %s"):format(teleportResult.Name, errorMessage))
-    end
+	if teleportResult == Enum.TeleportResult.Flooded then
+		task.wait(FLOOD_DELAY)
+	elseif teleportResult == Enum.TeleportResult.Failure then
+		task.wait(RETRY_DELAY)
+	else
+		-- if the teleport is invalid, report the error instead of retrying
+		error(("Invalid teleport [%s]: %s"):format(teleportResult.Name, errorMessage))
+	end
 
-    SafeTeleport(targetPlaceId, {player}, teleportOptions)
+	SafeTeleport(targetPlaceId, { player }, teleportOptions)
 end
 
 TeleportService.TeleportInitFailed:Connect(handleFailedTeleport)
@@ -183,5 +183,5 @@ local TARGET_PLACE_ID = 1818 -- replace with your own place ID
 
 local playerToTeleport = Players:GetPlayers()[1] -- get the first user in the game
 
-SafeTeleport(TARGET_PLACE_ID, {playerToTeleport}, teleportOptions)
+SafeTeleport(TARGET_PLACE_ID, { playerToTeleport }, teleportOptions)
 ```

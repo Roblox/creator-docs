@@ -109,7 +109,7 @@ local randomGenerator = Random.new()
 
 -- Gets a random map from the available maps table
 function MapManager.pickNewMap()
-	local whichMapKey = randomGenerator:NextInteger(1,#availableMaps)
+	local whichMapKey = randomGenerator:NextInteger(1, #availableMaps)
 	activeMap = availableMaps[whichMapKey]
 	print("New map: " .. activeMap.Name)
 end
@@ -122,5 +122,4 @@ function MapManager.getSpawnLocations()
 end
 
 return MapManager
-
 ```

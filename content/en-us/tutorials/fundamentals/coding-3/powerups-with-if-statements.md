@@ -10,12 +10,12 @@ If statements can have multiple requirements that need to be true before running
 ```lua
 -- will not run
 if 2 + 2 == 6 and 4 ~= 6 then
-   print("Both statements are true")
+	print("Both statements are true")
 end
 
 -- will run
 if 4 + 2 == 6 and 4 ~= 6 then
-   print("Both statements are true")
+	print("Both statements are true")
 end
 ```
 
@@ -42,11 +42,10 @@ Use this code with a simple part or a model, such as a crystal, coin, or glowing
    local speedBoost = script.Parent
 
    local function onTouch(otherPart)
-      print("Something touched speedBoost")
+   	print("Something touched speedBoost")
    end
 
    speedBoost.Touched:Connect(onTouch)
-
    ```
 
 4. The WalkSpeed property is found on Humanoid objects. Use the same pattern used when creating a trap part and create a conditional that checks for Humanoid objects.

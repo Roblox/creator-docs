@@ -10,9 +10,7 @@ Functions can actually have more than one parameter, allowing for multiple argum
 To set up multiple parameters, separate the parameter names with a comma.
 
 ```lua
-local function assignTeam(playerName, whichTeam)
-
-end
+local function assignTeam(playerName, whichTeam) end
 ```
 
 ## Practice with Multiple Parameters
@@ -33,7 +31,7 @@ First set up the function with multiple parameters and then test your work.
 
 ```lua
 local function sortGarbage(trash, recyclable)
-   print("garbage test")
+	print("garbage test")
 end
 
 sortGarbage()
@@ -46,10 +44,9 @@ Inside the function, parameters can be used similar to variables. In this exampl
 1. Delete the print statement, and use Instance.new() to create a new Particle Emitter as shown. This will be used to give recyclables their sparkle.
 
    ```lua
-   local function sortGarbage(trash,recyclable)
-       -- Create a new Particle Emitter
-       local sparkle = Instance.new("ParticleEmitter")
-
+   local function sortGarbage(trash, recyclable)
+   	-- Create a new Particle Emitter
+   	local sparkle = Instance.new("ParticleEmitter")
    end
 
    sortGarbage()
@@ -64,11 +61,11 @@ Inside the function, parameters can be used similar to variables. In this exampl
 2. Destroy whatever is passed in through the trash parameter the same as if trash were any other variable.
 
    ```lua
-   local function sortGarbage(trash,recyclable)
-       local sparkle = Instance.new("ParticleEmitter")
+   local function sortGarbage(trash, recyclable)
+   	local sparkle = Instance.new("ParticleEmitter")
 
-       -- Destroy the trash
-       trash:Destroy()
+   	-- Destroy the trash
+   	trash:Destroy()
    end
 
    sortGarbage()
@@ -77,12 +74,12 @@ Inside the function, parameters can be used similar to variables. In this exampl
 3. Parent the Particle Emitter to the recyclable.
 
    ```lua
-   local function sortGarbage(trash,recyclable)
-       local sparkle = Instance.new("ParticleEmitter")
+   local function sortGarbage(trash, recyclable)
+   	local sparkle = Instance.new("ParticleEmitter")
 
-       -- Destroy the trash and make recyclables shiny
-       trash:Destroy()
-       sparkle.Parent = recyclable
+   	-- Destroy the trash and make recyclables shiny
+   	trash:Destroy()
+   	sparkle.Parent = recyclable
    end
 
    sortGarbage()
@@ -109,16 +106,15 @@ Time to take out the trash! With the parameters set up, the functions are ready 
    local glassBottle = workspace.GlassBottle
 
    --Destroys trash and cleans up recyclables
-   local function sortGarbage(trash,recyclable)
-       local sparkle = Instance.new("ParticleEmitter")
+   local function sortGarbage(trash, recyclable)
+   	local sparkle = Instance.new("ParticleEmitter")
 
-       trash:Destroy()
-       sparkle.Parent = recyclable
+   	trash:Destroy()
+   	sparkle.Parent = recyclable
    end
 
    -- Pass in the arguments
    sortGarbage(cementBlock, glassBottle)
-
    ```
 
 4. Test your code. The object passed in first will be destroyed. The second object will sparkle.
@@ -130,13 +126,12 @@ Typically, arguments are matched to parameters based on the order they're passed
 In our example, there are two parameters. Whatever gets passed in first will always be trash, and the second will always be recyclable.
 
 ```lua
-
 --Destroys trash and cleans up recyclables
-local function sortGarbage(trash,recyclable)
-     local sparkle = Instance.new("ParticleEmitter")
+local function sortGarbage(trash, recyclable)
+	local sparkle = Instance.new("ParticleEmitter")
 
-    trash:Destroy()
-    sparkle.Parent = recyclable
+	trash:Destroy()
+	sparkle.Parent = recyclable
 end
 
 --Goes in order. Cement is destroyed and the glass bottle is recycled

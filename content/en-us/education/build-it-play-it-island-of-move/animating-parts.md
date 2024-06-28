@@ -40,7 +40,7 @@ For this project, a tween will move an object from a starting position to a goal
    local TweenService = game:GetService("TweenService")
    local button = script.Parent
    local clickDetector = button:FindFirstChildWhichIsA("ClickDetector")
-   local buttonState = -1  -- Determines button direction; -1 means it will press in, 1 means it will pop out
+   local buttonState = -1 -- Determines button direction; -1 means it will press in, 1 means it will pop out
    local inTween = false
 
    -- Customizable variables
@@ -49,9 +49,9 @@ For this project, a tween will move an object from a starting position to a goal
 
    -- Tween variables
    local buttonTweenInfo = TweenInfo.new(
-   	TWEEN_TIME,  -- Time
-   	Enum.EasingStyle.Quad,  -- EasingStyle
-   	Enum.EasingDirection.Out  -- EasingDirection
+   	TWEEN_TIME, -- Time
+   	Enum.EasingStyle.Quad, -- EasingStyle
+   	Enum.EasingDirection.Out -- EasingDirection
    )
 
    local function buttonPress()
@@ -65,7 +65,7 @@ For this project, a tween will move an object from a starting position to a goal
    	local newCFrame = button.CFrame:ToWorldSpace(offsetCFrame)
 
    	-- Create a tween and play it
-   	local tweenButton = TweenService:Create(button, buttonTweenInfo, {CFrame = newCFrame})
+   	local tweenButton = TweenService:Create(button, buttonTweenInfo, { CFrame = newCFrame })
    	tweenButton:Play()
    	inTween = true
 
@@ -75,7 +75,6 @@ For this project, a tween will move an object from a starting position to a goal
    		-- Invert the button state
    		buttonState *= -1
    	end)
-
    end
 
    clickDetector.MouseClick:Connect(buttonPress)
@@ -116,7 +115,7 @@ For example, this line will move it relative to its X axis instead.
 
 ```lua
 -- Calculate new CFrame for button position
-local offsetCFrame = CFrame.new( TWEEN_MOVE_DISTANCE * buttonState, 0, 0)
+local offsetCFrame = CFrame.new(TWEEN_MOVE_DISTANCE * buttonState, 0, 0)
 local newCFrame = button.CFrame:ToWorldSpace(offsetCFrame)
 ```
 
@@ -159,11 +158,11 @@ local TWEEN_MOVE_DISTANCE = 3
 
 -- Tween variables
 local tweenInfo = TweenInfo.new(
-	TWEEN_TIME,  -- Time
-	Enum.EasingStyle.Quad,  -- EasingStyle
-	Enum.EasingDirection.Out,  -- EasingDirection
-	1,  -- RepeatCount (when less than zero the tween will loop indefinitely)
-	true  -- Reverses (tween will reverse once reaching its goal)
+	TWEEN_TIME, -- Time
+	Enum.EasingStyle.Quad, -- EasingStyle
+	Enum.EasingDirection.Out, -- EasingDirection
+	1, -- RepeatCount (when less than zero the tween will loop indefinitely)
+	true -- Reverses (tween will reverse once reaching its goal)
 )
 
 local function activateAction()
@@ -179,7 +178,7 @@ local function activateAction()
 	local newCFrame = partToTween.CFrame:ToWorldSpace(offsetCFrame)
 
 	-- Create a tween and play it
-	local tweenObject = TweenService:Create(partToTween, tweenInfo, {CFrame = newCFrame})
+	local tweenObject = TweenService:Create(partToTween, tweenInfo, { CFrame = newCFrame })
 	tweenObject:Play()
 	inTween = true
 
@@ -210,28 +209,28 @@ local TWEEN_SCALE = Vector3.zero
 
 -- Tween variables
 local tweenInfo = TweenInfo.new(
-	TWEEN_TIME,  -- Time
-	Enum.EasingStyle.Exponential,  -- EasingStyle
-	Enum.EasingDirection.Out  -- EasingDirection
+	TWEEN_TIME, -- Time
+	Enum.EasingStyle.Exponential, -- EasingStyle
+	Enum.EasingDirection.Out -- EasingDirection
 )
 
 local function onPartTouch(otherPart)
 	-- If the object is tweening, prevent it from being tweened again
 	if inTween == true then
 		return
-    end
+	end
 
 	local partParent = otherPart.Parent
-    local humanoid = partParent:FindFirstChildWhichIsA("Humanoid")
+	local humanoid = partParent:FindFirstChildWhichIsA("Humanoid")
 
 	if humanoid then
 		-- Prevent further collisions on object since it has been picked up
-        partToScale.CanCollide = false
+		partToScale.CanCollide = false
 
 		-- Create a tween and play it
-		local tweenObject = TweenService:Create(partToScale, tweenInfo, {Size = TWEEN_SCALE})
+		local tweenObject = TweenService:Create(partToScale, tweenInfo, { Size = TWEEN_SCALE })
 		tweenObject:Play()
-        inTween = true
+		inTween = true
 
 		-- On tween completion, destroy object
 		tweenObject.Completed:Connect(function()
@@ -263,11 +262,11 @@ local hitCount = 0
 
 -- Tween variables
 local tweenInfo = TweenInfo.new(
-	TWEEN_TIME,  -- Time
-	Enum.EasingStyle.Exponential,  -- EasingStyle
-	Enum.EasingDirection.InOut,  -- EasingDirection
-	0,  -- RepeatCount (when less than zero the tween will loop indefinitely)
-	true  -- Reverses (tween will reverse once reaching its goal)
+	TWEEN_TIME, -- Time
+	Enum.EasingStyle.Exponential, -- EasingStyle
+	Enum.EasingDirection.InOut, -- EasingDirection
+	0, -- RepeatCount (when less than zero the tween will loop indefinitely)
+	true -- Reverses (tween will reverse once reaching its goal)
 )
 
 local function activateAction()
@@ -277,7 +276,7 @@ local function activateAction()
 	end
 
 	-- Create a tween and play it
-	local tweenObject = TweenService:Create(partToTween, tweenInfo, {Color = COLOR_ON_HIT})
+	local tweenObject = TweenService:Create(partToTween, tweenInfo, { Color = COLOR_ON_HIT })
 	tweenObject:Play()
 	inTween = true
 

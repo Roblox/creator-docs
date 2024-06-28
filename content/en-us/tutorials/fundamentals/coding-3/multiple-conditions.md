@@ -74,8 +74,8 @@ Start by placing the course's starting point and finish line, and then create a 
 2. In FinishLine, insert a script named RaceManager. Then, add one variable to store how many seconds have passed since the race started and a second variable to reference FinishLine.
 
    ```lua
-      local finishLine = script.Parent
-      local timePassed = 0
+   local finishLine = script.Parent
+   local timePassed = 0
    ```
 
 3. Create a function named `finish()`.
@@ -84,9 +84,7 @@ Start by placing the course's starting point and finish line, and then create a 
    local timePassed = 0
    local finishLine = script.Parent
 
-   local function finish()
-
-   end
+   local function finish() end
    ```
 
 4. On your own:
@@ -97,16 +95,15 @@ Start by placing the course's starting point and finish line, and then create a 
 
    ```lua
    local function finish()
-      print("touched the finish line")
+   	print("touched the finish line")
    end
 
    local function partTouched(otherPart)
-      local character = otherPart.Parent
-      local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-      if humanoid then
-         finish()
-      end
-
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	if humanoid then
+   		finish()
+   	end
    end
 
    finishLine.Touched:Connect(partTouched)
@@ -136,12 +133,11 @@ Use a **boolean**, a variable that stores true or false, to ensure that finish()
 
    ```lua
    local function partTouched(otherPart)
-      local character = otherPart.Parent
-      local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-      if humanoid and raceActive == true then
-         finish()
-      end
-
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	if humanoid and raceActive == true then
+   		finish()
+   	end
    end
    ```
 
@@ -149,8 +145,8 @@ Use a **boolean**, a variable that stores true or false, to ensure that finish()
 
    ```lua
    local function finish()
-      print("touched the finish line")
-      raceActive = false
+   	print("touched the finish line")
+   	raceActive = false
    end
    ```
 
@@ -166,7 +162,6 @@ Like an if statement, a while loop can also use a condition to see if it should 
    finishLine.Touched:Connect(partTouched)
 
    while raceActive == true do
-
    end
    ```
 
@@ -180,9 +175,9 @@ Like an if statement, a while loop can also use a condition to see if it should 
    finishLine.Touched:Connect(partTouched)
 
    while raceActive == true do
-      task.wait(1)
-      timePassed += 1
-      print(timePassed)
+   	task.wait(1)
+   	timePassed += 1
+   	print(timePassed)
    end
    ```
 
@@ -196,8 +191,8 @@ To finish, use an if statement with multiple conditions to award players a diffe
 
    ```lua
    local function finish()
-      raceActive = false
-      print("You finished in " .. timePassed)
+   	raceActive = false
+   	print("You finished in " .. timePassed)
    end
    ```
 
@@ -205,12 +200,12 @@ To finish, use an if statement with multiple conditions to award players a diffe
 
    ```lua
    local function finish()
-      raceActive = false
-      print("You finished in " .. timePassed)
+   	raceActive = false
+   	print("You finished in " .. timePassed)
 
-      if timePassed <= 10 then
-         print("You get a gold medal!")
-      end
+   	if timePassed <= 10 then
+   		print("You get a gold medal!")
+   	end
    end
    ```
 
@@ -224,14 +219,14 @@ Now that you've tested for the gold medal, code conditions for the other medals 
 
    ```lua
    local function finish()
-     raceActive = false
-     print("You finished in " .. timePassed)
+   	raceActive = false
+   	print("You finished in " .. timePassed)
 
-     if timePassed <= 10 then
-       print("You get a gold medal!")
-     elseif timePassed > 10 and timePassed <= 20 then
-       print("You get a silver medal!")
-       end
+   	if timePassed <= 10 then
+   		print("You get a gold medal!")
+   	elseif timePassed > 10 and timePassed <= 20 then
+   		print("You get a silver medal!")
+   	end
    end
    ```
 
@@ -239,16 +234,16 @@ Now that you've tested for the gold medal, code conditions for the other medals 
 
    ```lua
    local function finish()
-      raceActive = false
-      print("You finished in " .. timePassed)
+   	raceActive = false
+   	print("You finished in " .. timePassed)
 
-      if timePassed <= 10 then
-         print("You get a gold medal!")
-      elseif timePassed > 10 and timePassed <= 20 then
-         print("You get a silver medal!")
-      elseif  timePassed > 20 and timePassed <= 30 then
-         print("You get a bronze medal!")
-      end
+   	if timePassed <= 10 then
+   		print("You get a gold medal!")
+   	elseif timePassed > 10 and timePassed <= 20 then
+   		print("You get a silver medal!")
+   	elseif timePassed > 20 and timePassed <= 30 then
+   		print("You get a bronze medal!")
+   	end
    end
    ```
 
@@ -274,20 +269,19 @@ It's recommended that every if statement has an else, just in case the code does
 
    ```lua
    local function finish()
-     raceActive = false
-     print("You finished in " .. timePassed)
+   	raceActive = false
+   	print("You finished in " .. timePassed)
 
-     if timePassed <= 10 then
-       print("You get a gold medal!")
-     elseif timePassed > 10 and timePassed <= 20 then
-       print("You get a silver medal!")
-     elseif  timePassed > 20 and timePassed <= 30 then
-       print("You get a bronze medal!")
-     else
-       print("Try again!")
-     end
+   	if timePassed <= 10 then
+   		print("You get a gold medal!")
+   	elseif timePassed > 10 and timePassed <= 20 then
+   		print("You get a silver medal!")
+   	elseif timePassed > 20 and timePassed <= 30 then
+   		print("You get a bronze medal!")
+   	else
+   		print("Try again!")
+   	end
    end
-
    ```
 
    <Alert severity="info">

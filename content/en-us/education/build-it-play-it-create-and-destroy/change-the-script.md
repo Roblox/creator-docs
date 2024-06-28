@@ -33,7 +33,7 @@ GameSettings.minimumPlayers = 1
 GameSettings.transitionStart = 3
 GameSettings.transitionEnd = 3
 GameSettings.pointValues = {
-	 -- Value types must match folder names to award points correctly
+	-- Value types must match folder names to award points correctly
 	LowPoints = 0,
 	MediumPoints = 10,
 	HighPoints = 15,
@@ -48,10 +48,10 @@ Giving players more points can make smashing buildings feel even more rewarding.
 
    ```lua
    GameSettings.pointValues = {
-     -- Value types must match folder names to award points correctly
-     LowPoints = 0,
-     MediumPoints = 10,
-     HighPoints = 150,
+   	-- Value types must match folder names to award points correctly
+   	LowPoints = 0,
+   	MediumPoints = 10,
+   	HighPoints = 150,
    }
    ```
 

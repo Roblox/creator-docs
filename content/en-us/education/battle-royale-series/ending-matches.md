@@ -28,7 +28,7 @@ A sample anonymous function is below that shows the syntax.
 
 ```lua
 myPlayer.Died:Connect(function()
-  print(player)
+	print(player)
 end)
 ```
 
@@ -40,14 +40,14 @@ For this function, whenever a player's character dies, they'll trigger the funct
 
    ```lua
    local function preparePlayer(player, whichSpawn)
-     player.RespawnLocation = whichSpawn
-     player:LoadCharacter()
+   	player.RespawnLocation = whichSpawn
+   	player:LoadCharacter()
 
-     local character = player.Character or player.CharacterAdded:Wait()
-     local sword = playerWeapon:Clone()
-     sword.Parent = character
+   	local character = player.Character or player.CharacterAdded:Wait()
+   	local sword = playerWeapon:Clone()
+   	sword.Parent = character
 
-     local humanoid = character:WaitForChild("Humanoid")
+   	local humanoid = character:WaitForChild("Humanoid")
    end
    ```
 
@@ -56,9 +56,7 @@ For this function, whenever a player's character dies, they'll trigger the funct
    ```lua
    local humanoid = character:WaitForChild("Humanoid")
 
-   humanoid.Died:Connect(function()
-
-   end)
+   humanoid.Died:Connect(function() end)
    ```
 
 3. In the anonymous function, call `respawnPlayerInLobby()`. Pass in `player`, a variable storing the player getting ready to enter a match.
@@ -66,9 +64,9 @@ For this function, whenever a player's character dies, they'll trigger the funct
    ```lua
    local humanoid = character:WaitForChild("Humanoid")
 
-     humanoid.Died:Connect(function()
-       respawnPlayerInLobby(player)
-     end)
+   humanoid.Died:Connect(function()
+   	respawnPlayerInLobby(player)
+   end)
    ```
 
 4. Start a **server** and play a match. Test that when a player dies, they respawn in the lobby. To defeat players, walk up to them and use your weapon until you can confirm they've respawned in the lobby.
@@ -108,8 +106,7 @@ To tell other scripts which condition ended the game, create a table with variab
    GameSettings.transitionTime = 5
 
    -- Possible ways that the game can end.
-   GameSettings.endStates = {
-   }
+   GameSettings.endStates = {}
 
    return GameSettings
    ```
@@ -119,7 +116,7 @@ To tell other scripts which condition ended the game, create a table with variab
 ```lua
 GameSettings.endStates = {
 	TimerUp = "TimerUp",
-	FoundWinner = "FoundWinner"
+	FoundWinner = "FoundWinner",
 }
 ```
 
@@ -131,17 +128,17 @@ When the timer ends, fire the Match End event and send the matching end state va
 
    ```lua
    while true do
-     displayManager.updateStatus("Waiting for Players")
+   	displayManager.updateStatus("Waiting for Players")
 
-     repeat
-       task.wait(gameSettings.intermissionDuration)
-     until #Players:GetPlayers() >= gameSettings.minimumPlayers
+   	repeat
+   		task.wait(gameSettings.intermissionDuration)
+   	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
-     displayManager.updateStatus("Get ready!")
-     task.wait(gameSettings.transitionTime)
+   	displayManager.updateStatus("Get ready!")
+   	task.wait(gameSettings.transitionTime)
 
-     matchManager.prepareGame()
-     local endState = matchEnd.Event:Wait()
+   	matchManager.prepareGame()
+   	local endState = matchEnd.Event:Wait()
    end
    ```
 
@@ -149,18 +146,18 @@ When the timer ends, fire the Match End event and send the matching end state va
 
    ```lua
    while true do
-     displayManager.updateStatus("Waiting for Players")
+   	displayManager.updateStatus("Waiting for Players")
 
-     repeat
-       task.wait(gameSettings.intermissionDuration)
-     until #Players:GetPlayers() >= gameSettings.minimumPlayers
+   	repeat
+   		task.wait(gameSettings.intermissionDuration)
+   	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
-     displayManager.updateStatus("Get ready!")
-     task.wait(gameSettings.transitionTime)
+   	displayManager.updateStatus("Get ready!")
+   	task.wait(gameSettings.transitionTime)
 
-     matchManager.prepareGame()
-     local endState = matchEnd.Event:Wait()
-     print("Game ended with: " .. endState)
+   	matchManager.prepareGame()
+   	local endState = matchEnd.Event:Wait()
+   	print("Game ended with: " .. endState)
    end
    ```
 
@@ -176,7 +173,7 @@ When the timer ends, fire the Match End event and send the matching end state va
 
    -- Local Functions
    local function timeUp()
-     matchEnd:Fire(gameSettings.endStates.TimerUp)
+   	matchEnd:Fire(gameSettings.endStates.TimerUp)
    end
    ```
 
@@ -246,9 +243,9 @@ Matches will end if there's only one player left. To check this, the script need
 
    ```lua
    local function checkPlayerCount()
-     if #activePlayers == 1 then
-       matchEnd:Fire(gameSettings.endStates.FoundWinner)
-     end
+   	if #activePlayers == 1 then
+   		matchEnd:Fire(gameSettings.endStates.FoundWinner)
+   	end
    end
    ```
 
@@ -260,25 +257,22 @@ An accurate count can't be kept unless players are removed. When a player is def
 
    ```lua
    local function checkPlayerCount()
-     if #activePlayers == 1 then
-       matchEnd:Fire(gameSettings.endStates.FoundWinner)
-     end
+   	if #activePlayers == 1 then
+   		matchEnd:Fire(gameSettings.endStates.FoundWinner)
+   	end
    end
 
-   local function removeActivePlayer(player)
-
-   end
+   local function removeActivePlayer(player) end
    ```
 
 2. To find the player in the `activePlayers` table, iterate through it using a `for` loop. Then, add an `if` statement that runs if a player matching the name passed into the function is found.
 
    ```lua
    local function removeActivePlayer(player)
-     for playerKey, whichPlayer in activePlayers do
-       if whichPlayer == player then
-
-       end
-     end
+   	for playerKey, whichPlayer in activePlayers do
+   		if whichPlayer == player then
+   		end
+   	end
    end
    ```
 
@@ -296,13 +290,13 @@ An accurate count can't be kept unless players are removed. When a player is def
 
    ```lua
    local function removeActivePlayer(player)
-     for playerKey, whichPlayer in activePlayers do
-       if whichPlayer == player then
-         table.remove(activePlayers, playerKey)
-         playersLeft.Value = #activePlayers
-         checkPlayerCount()
-       end
-     end
+   	for playerKey, whichPlayer in activePlayers do
+   		if whichPlayer == player then
+   			table.remove(activePlayers, playerKey)
+   			playersLeft.Value = #activePlayers
+   			checkPlayerCount()
+   		end
+   	end
    end
    ```
 
@@ -314,9 +308,9 @@ To use the function just created, call it from within the anonymous function con
 
    ```lua
    humanoid.Died:Connect(function()
-       respawnPlayerInLobby(player)
-       removeActivePlayer(player)
-     end)
+   	respawnPlayerInLobby(player)
+   	removeActivePlayer(player)
+   end)
    ```
 
 2. To see if a winning player is found, start a **test server**. When there is only one player left you should see FoundWinner in the output window.
@@ -341,11 +335,11 @@ Whenever a match ends with a winning player, the timer should stop as well. To h
 
    -- Local Functions
    local function stopTimer()
-     myTimer:stop()
+   	myTimer:stop()
    end
 
    local function timeUp()
-     matchEnd:Fire(gameSettings.endStates.TimerUp)
+   	matchEnd:Fire(gameSettings.endStates.TimerUp)
    end
    ```
 
@@ -354,8 +348,8 @@ Whenever a match ends with a winning player, the timer should stop as well. To h
    ```lua
    -- Module Functions
    function MatchManager.prepareGame()
-     playerManager.sendPlayersToMatch()
-     matchStart:Fire()
+   	playerManager.sendPlayersToMatch()
+   	matchStart:Fire()
    end
 
    matchStart.Event:Connect(startTimer)
@@ -427,7 +421,6 @@ local function respawnPlayerInLobby(player)
 	player:LoadCharacter()
 end
 
-
 local function onPlayerJoin(player)
 	player.RespawnLocation = lobbySpawn
 end
@@ -446,7 +439,6 @@ local function preparePlayer(player, whichSpawn)
 		respawnPlayerInLobby(player)
 		removeActivePlayer(player)
 	end)
-
 end
 
 -- Module Functions
@@ -482,7 +474,7 @@ GameSettings.transitionTime = 5
 -- Possible ways that the game can end.
 GameSettings.endStates = {
 	TimerUp = "TimerUp",
-	FoundWinner = "FoundWinner"
+	FoundWinner = "FoundWinner",
 }
 
 return GameSettings
@@ -568,7 +560,6 @@ local function startTimer()
 		-- By not setting the time for wait, it offers more accurate looping
 		task.wait()
 	end
-
 end
 
 -- Module Functions

@@ -29,9 +29,7 @@ Traps work exceptionally well in experiences with movement-based challenges, lik
 
    local trapPart = script.Parent
 
-   local function onTouch(otherPart)
-
-   end
+   local function onTouch(otherPart) end
    ```
 
 4. Connect the function to the trap part's `Touched` event to run whenever something touches the part.
@@ -39,9 +37,7 @@ Traps work exceptionally well in experiences with movement-based challenges, lik
    ```lua
    local trapPart = script.Parent
 
-   local function onTouch(otherPart)
-
-   end
+   local function onTouch(otherPart) end
 
    trapPart.Touched:Connect(onTouch)
    ```
@@ -66,13 +62,11 @@ The function `FindFirstChildWhichIsA()` can be used to look for specific object 
    local trapPart = script.Parent
 
    local function onTouch(otherPart)
-      -- Finds otherPart's parent object
-     local character = otherPart.Parent
-
+   	-- Finds otherPart's parent object
+   	local character = otherPart.Parent
    end
 
    trapPart.Touched:Connect(onTouch)
-
    ```
 
 2. Check to see if `character` has a `Class.Humanoid` by typing:
@@ -83,8 +77,8 @@ The function `FindFirstChildWhichIsA()` can be used to look for specific object 
    local trapPart = script.Parent
 
    local function onTouch(otherPart)
-     local character = otherPart.Parent
-     local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
    end
    trapPart.Touched:Connect(onTouch)
    ```
@@ -99,13 +93,12 @@ If a Humanoid is found, then set the Humanoid's Health to zero.
    local trapPart = script.Parent
 
    local function onTouch(otherPart)
-      local character = otherPart.Parent
-      local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
-      -- Evaluates if a Humanoid was found
-      if humanoid then
-
-      end
+   	-- Evaluates if a Humanoid was found
+   	if humanoid then
+   	end
    end
 
    trapPart.Touched:Connect(onTouch)
@@ -117,13 +110,13 @@ If a Humanoid is found, then set the Humanoid's Health to zero.
    local trapPart = script.Parent
 
    local function onTouch(otherPart)
-      local character = otherPart.Parent
-      local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
-      -- Evaluates if a Humanoid was found
-      if humanoid then
-         print("Found a Humanoid")
-      end
+   	-- Evaluates if a Humanoid was found
+   	if humanoid then
+   		print("Found a Humanoid")
+   	end
    end
 
    trapPart.Touched:Connect(onTouch)

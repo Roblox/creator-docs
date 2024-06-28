@@ -46,7 +46,9 @@ local UserInputService = game:GetService("UserInputService")
 local function onInputEnded(inputObject, processedEvent)
 	-- First check if the "processedEvent" is true
 	-- This indicates that another script had already processed the input, so this one is ignored.
-	if processedEvent then return end
+	if processedEvent then
+		return
+	end
 
 	-- Next, check that the input was a keyboard event
 	if inputObject.UserInputType == Enum.UserInputType.Keyboard then

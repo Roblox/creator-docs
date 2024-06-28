@@ -69,9 +69,7 @@ Time to make the platform disappear. It's always best to group code for achievin
 ```lua
 local platform = script.Parent
 
-local function disappear()
-
-end
+local function disappear() end
 ```
 
 The first new line **declares** the function — it indicates the start of the function and names it as `disappear`. The code for a function goes between the first line and `end`.
@@ -113,8 +111,8 @@ Just like `script.Parent`, properties are accessed using a **dot**. Values are a
    local platform = script.Parent
 
    local function disappear()
-       platform.CanCollide = false
-       platform.Transparency = 1
+   	platform.CanCollide = false
+   	platform.Transparency = 1
    end
    ```
 
@@ -132,8 +130,8 @@ Once you've declared a function, you can run it by writing its name with parenth
    local platform = script.Parent
 
    local function disappear()
-       platform.CanCollide = false
-       platform.Transparency = 1
+   	platform.CanCollide = false
+   	platform.Transparency = 1
    end
 
    disappear()
@@ -153,13 +151,13 @@ You can easily make the platform reappear by writing a function that does the ex
    local platform = script.Parent
 
    local function disappear()
-       platform.CanCollide = false
-       platform.Transparency = 1
+   	platform.CanCollide = false
+   	platform.Transparency = 1
    end
 
    local function appear()
-       platform.CanCollide = true
-       platform.Transparency = 0
+   	platform.CanCollide = true
+   	platform.Transparency = 0
    end
    ```
 
@@ -173,17 +171,16 @@ A while loop runs the code inside it for as long as the **statement** after `whi
 local platform = script.Parent
 
 local function disappear()
-    platform.CanCollide = false
-    platform.Transparency = 1
+	platform.CanCollide = false
+	platform.Transparency = 1
 end
 
 local function appear()
-    platform.CanCollide = true
-    platform.Transparency = 0
+	platform.CanCollide = true
+	platform.Transparency = 0
 end
 
 while true do
-
 end
 ```
 
@@ -208,10 +205,10 @@ Three seconds is a sensible starting point for the length of time between each p
 
 ```lua
 while true do
-   task.wait(3)
-   disappear()
-   task.wait(3)
-   appear()
+	task.wait(3)
+	disappear()
+	task.wait(3)
+	appear()
 end
 ```
 
@@ -229,19 +226,19 @@ You could duplicate this platform to cover a wider gap, but you need to change t
 local platform = script.Parent
 
 local function disappear()
-    platform.CanCollide = false
-    platform.Transparency = 1
+	platform.CanCollide = false
+	platform.Transparency = 1
 end
 
 local function appear()
-    platform.CanCollide = true
-    platform.Transparency = 0
+	platform.CanCollide = true
+	platform.Transparency = 0
 end
 
 while true do
-   task.wait(3)
-   disappear()
-   task.wait(3)
-   appear()
+	task.wait(3)
+	disappear()
+	task.wait(3)
+	appear()
 end
 ```

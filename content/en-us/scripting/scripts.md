@@ -79,7 +79,7 @@ local PickupManager = require(ReplicatedStorage:WaitForChild("PickupManager"))
 
 -- Call a ModuleScript function
 local bonus = PickupManager.getPickupBonus("legendary")
-print(bonus)  --> 125
+print(bonus) --> 125
 ```
 
 ### Requiring
@@ -100,7 +100,6 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 -- Get the return value for the ModuleScript named "PickupManager"
 local PickupManager = require(ReplicatedStorage:WaitForChild("PickupManager"))
-
 ```
 
 When you call `Global.RobloxGlobals.require()` on a `Class.ModuleScript`, it runs **once** and returns a single item as a **reference**. Calling `Global.RobloxGlobals.require()` again returns the exact same reference, meaning that if you modify a returned [table](../luau/tables.md) or `Class.Instance`, subsequent `Global.RobloxGlobals.require()` calls return that modified reference. The module itself doesn't run multiple times.

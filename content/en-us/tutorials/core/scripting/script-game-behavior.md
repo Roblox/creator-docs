@@ -76,7 +76,7 @@ which tells the engine to run the script on the server, and prevents clients fro
 
    local COOLDOWN = 10
 
-     -- Defining the event handler
+   -- Defining the event handler
    local function onCoinTouched(otherPart, coin)
    	if coin:GetAttribute("Enabled") then
    		local character = otherPart.Parent

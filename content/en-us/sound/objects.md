@@ -218,8 +218,12 @@ emitter.Rate = 5
 emitter.Lifetime = NumberRange.new(1.5, 1.5)
 emitter.Texture = "rbxassetid://1266170131"
 emitter.Speed = NumberRange.new(1, 1)
-emitter.Size = NumberSequence.new{NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(1, 6)}
-emitter.Transparency = NumberSequence.new{NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(0.25, 0), NumberSequenceKeypoint.new(1, 1)}
+emitter.Size = NumberSequence.new({ NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(1, 6) })
+emitter.Transparency = NumberSequence.new({
+	NumberSequenceKeypoint.new(0, 1),
+	NumberSequenceKeypoint.new(0.25, 0),
+	NumberSequenceKeypoint.new(1, 1),
+})
 emitter.Orientation = Enum.ParticleOrientation.VelocityPerpendicular
 emitter.Parent = attachment
 
@@ -266,7 +270,7 @@ Alternatively, if the place will feature multiple tracks, you can play a specifi
 local SoundService = game:GetService("SoundService")
 local musicTrack = SoundService:FindFirstChild("LucidDream")
 if musicTrack then
-   musicTrack:Play()
+	musicTrack:Play()
 end
 ```
 
@@ -285,9 +289,9 @@ local SoundService = game:GetService("SoundService")
 local button = script.Parent
 local sound = SoundService:FindFirstChild("SOUND_NAME")
 local function onButtonActivated()
-   if sound then
-      sound:Play()
-   end
+	if sound then
+		sound:Play()
+	end
 end
 button.Activated:Connect(onButtonActivated)
 ```

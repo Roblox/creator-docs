@@ -149,10 +149,10 @@ To save player data in the data store:
 
    -- Set data store key
    local setSuccess, errorMessage = pcall(function()
-       goldStore:SetAsync(playerUserID, playerGold)
+   	goldStore:SetAsync(playerUserID, playerGold)
    end)
    if not setSuccess then
-       warn(errorMessage)
+   	warn(errorMessage)
    end
    ```
 
@@ -179,18 +179,18 @@ A common mistake may be updating a player's gold data every time they collect a 
 
    ```lua
    local setSuccess, errorMessage = pcall(function()
-       goldStore:SetAsync(playerUserID, playerGold)
+   	goldStore:SetAsync(playerUserID, playerGold)
    end)
    if not setSuccess then
-       warn(errorMessage)
+   	warn(errorMessage)
    end
 
    -- Read data store key
    local getSuccess, currentGold = pcall(function()
-       return goldStore:GetAsync(playerUserID)
+   	return goldStore:GetAsync(playerUserID)
    end)
    if getSuccess then
-       print(currentGold)
+   	print(currentGold)
    end
    ```
 

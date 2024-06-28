@@ -63,7 +63,7 @@ The script will cycle through three different colors for the part. Each color wi
    -- Colors
    local blue = Color3.fromRGB(0, 0, 255)
    local green = Color3.fromRGB(0, 255, 0)
-   local red = Color3.fromRGB(255 ,0, 0)
+   local red = Color3.fromRGB(255, 0, 0)
    ```
 
 4. Add variables for a small amount of points, a larger amount of points, and a third for removing points.
@@ -72,7 +72,7 @@ The script will cycle through three different colors for the part. Each color wi
    -- Colors
    local blue = Color3.fromRGB(0, 0, 255)
    local green = Color3.fromRGB(0, 255, 0)
-   local red = Color3.fromRGB(255 ,0, 0)
+   local red = Color3.fromRGB(255, 0, 0)
 
    -- Points values
    local smallPoints = 10
@@ -124,9 +124,7 @@ PointsScript will need two functions. The first function will give and subtract 
    end
 
    -- Checks if player touched the part
-   local function partTouched(otherPart)
-
-   end
+   local function partTouched(otherPart) end
    ```
 
 3. Inside the function, use the function `GetPlayerFromCharacter()` to check if there's a player in the otherPart variable.
@@ -183,7 +181,6 @@ To loop through colors, the script will use a while =loop that changes the part'
 
    -- Loops through colors
    while true do
-
    end
    ```
 
@@ -196,12 +193,12 @@ To loop through colors, the script will use a while =loop that changes the part'
    ```lua
    -- Loops through 3 colors, waiting between each color
    while true do
-     pointPart.Color = blue
-     task.wait(3)
-     pointPart.Color = green
-     task.wait(2)
-     pointPart.Color = red
-     task.wait(1)
+   	pointPart.Color = blue
+   	task.wait(3)
+   	pointPart.Color = green
+   	task.wait(2)
+   	pointPart.Color = red
+   	task.wait(1)
    end
    ```
 
@@ -389,7 +386,7 @@ local blue = Color3.fromRGB(0, 0, 255)
 -- Gives more points
 local green = Color3.fromRGB(0, 255, 0)
 -- Makes players lose points
-local red = Color3.fromRGB(255 ,0, 0)
+local red = Color3.fromRGB(255, 0, 0)
 
 -- gold given to players
 local smallPoints = 10
@@ -403,7 +400,7 @@ local function givePoints(player)
 
 	local playerStats = player:WaitForChild("leaderstats")
 	local playerPoints = playerStats:WaitForChild("Points")
-	
+
 	-- Gives player gold based on the color of the part
 	if currentColor == blue then
 		playerPoints.Value += smallPoints
@@ -415,7 +412,7 @@ local function givePoints(player)
 
 	-- Destroy the part, wait a second, and then destroy the particle
 	pointPart:Destroy()
-	
+
 	-- Creates a sparkles effect and destroys it
 	local playerCharacter = player.Character
 	local particle = Instance.new("ParticleEmitter")

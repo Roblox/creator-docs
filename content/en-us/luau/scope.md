@@ -10,7 +10,7 @@ Variables and functions have global scope by default, but it's almost always bet
 Scripts cannot access global and local variables or functions in other scripts. If you want to share values and functions between scripts, use `Class.ModuleScript|ModuleScripts`.
 
 ```lua
-local helloWorld = 'Hello World!'
+local helloWorld = "Hello World!"
 local function printHelloWorld()
 	print(helloWorld)
 end
@@ -43,7 +43,7 @@ print(testVar) -- 64
 In the following code, the global variable `x` starts at `0`, increments by `1` with each iteration of the [`for` loop](./control-structures.md#for-loops), and prints again afterward with a final value of 4.
 
 ```lua
-x = 0  -- Global variable "x"
+x = 0 -- Global variable "x"
 
 for i = 1, 4 do
 	x += 1
@@ -74,8 +74,8 @@ Luau can only access a local variable or function in the block of code where you
 In the following code, the `testFunc()` function and `testVar` variable have local scope. Only the code within `testFunc()` can access the `testVar` variable. The `testVar` variable doesn't have a value outside `testFunc()`, so calling `print(testVar)` within `testFunc()` prints the value of `testVar`, but calling `print(testVar)` outside `testFunc()` prints `nil`.
 
 ```lua
-local function testFunc()  -- local scope
-	local testVar = 64  -- local scope
+local function testFunc() -- local scope
+	local testVar = 64 -- local scope
 	print(testVar) -- 64
 end
 
@@ -87,10 +87,10 @@ print(testVar) -- nil
 In the following code, the local variable `x` has value `0` at line 1. As Luau iterates through the [`for` loop](./control-structures.md#for-loops), a different local variable `x` has value `1`. Then, Luau prints the initial variable `x` with an unchanged value `0`.
 
 ```lua
-local x = 0  -- Local variable "x"
+local x = 0 -- Local variable "x"
 
 for i = 1, 4 do
-	local x = 1  -- Different variable "x", local to this "for" loop
+	local x = 1 -- Different variable "x", local to this "for" loop
 	print("Loop 'x' = " .. x)
 end
 
@@ -149,7 +149,7 @@ local fruitName = "Chocolate"
 local fruitTable = {
 	Lemon = "Yellow",
 	Apple = "Red",
-	Orange = "Orange"
+	Orange = "Orange",
 }
 
 local function getFruitByColor(color)

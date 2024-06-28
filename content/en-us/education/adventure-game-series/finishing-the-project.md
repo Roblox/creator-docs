@@ -25,7 +25,7 @@ Before sharing your experience with others, it's important that the variables fe
 2. In SellPart > SellScript, change the value of how much players get for each item. This is the number multiplied by `playerItems.Value`. Try a number between 50 and 200.
 
    ```lua
-     local totalSell = playerItems.Value * 200
+   local totalSell = playerItems.Value * 200
    ```
 
 3. In Shop > BuyButton > BuyScript, change the starting values in the variables for `newMaxItems` (recommended 10-15) and `upgradeCost` (recommended 500-1000).

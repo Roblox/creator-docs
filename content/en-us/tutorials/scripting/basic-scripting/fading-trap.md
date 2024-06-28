@@ -30,9 +30,7 @@ If you followed [Deadly Lava](../../../tutorials/scripting/basic-scripting/deadl
    ```lua
    local platform = script.Parent
 
-   local function fade()
-
-   end
+   local function fade() end
 
    platform.Touched:Connect(fade)
    ```
@@ -85,14 +83,14 @@ After the platform has vanished, users should fall through it. The platform shou
    local platform = script.Parent
 
    local function fade()
-      for count = 1, 10 do
-         platform.Transparency = count / 10
-         task.wait(0.1)
-      end
-      platform.CanCollide = false
-      task.wait(3)
-      platform.CanCollide = true
-      platform.Transparency = 0
+   	for count = 1, 10 do
+   		platform.Transparency = count / 10
+   		task.wait(0.1)
+   	end
+   	platform.CanCollide = false
+   	task.wait(3)
+   	platform.CanCollide = true
+   	platform.Transparency = 0
    end
 
    platform.Touched:Connect(fade)
@@ -137,9 +135,9 @@ local isTouched = false
 local function fade()
 	if not isTouched then
 		for count = 1, 10 do
-            platform.Transparency = count / 10
-            task.wait(0.1)
-	    end
+			platform.Transparency = count / 10
+			task.wait(0.1)
+		end
 		platform.CanCollide = false
 		task.wait(3)
 		platform.CanCollide = true
@@ -154,14 +152,11 @@ The Lua `not` operator reverses the value of whatever follows it. In conditional
 
 ```lua
 if not isTouched then
-
 end
 if isTouched == false then
-
 end
 
 if isTouched == nil then
-
 end
 ```
 
@@ -174,18 +169,18 @@ Currently, the code in the `fade` function will always run because `isTouched` i
 
 ```lua
 local function fade()
-  if not isTouched then
-    isTouched = true
-    for count = 1, 10 do
-      platform.Transparency = count / 10
-      task.wait(0.1)
-    end
-    platform.CanCollide = false
-    task.wait(3)
-    platform.CanCollide = true
-    platform.Transparency = 0
-    isTouched = false
-  end
+	if not isTouched then
+		isTouched = true
+		for count = 1, 10 do
+			platform.Transparency = count / 10
+			task.wait(0.1)
+		end
+		platform.CanCollide = false
+		task.wait(3)
+		platform.CanCollide = true
+		platform.Transparency = 0
+		isTouched = false
+	end
 end
 
 platform.Touched:Connect(fade)
@@ -210,9 +205,9 @@ local function fade()
 	if not isTouched then
 		isTouched = true
 		for count = 1, 10 do
-		    platform.Transparency = count / 10
-		    task.wait(0.1)
-	    end
+			platform.Transparency = count / 10
+			task.wait(0.1)
+		end
 		platform.CanCollide = false
 		task.wait(3)
 		platform.CanCollide = true

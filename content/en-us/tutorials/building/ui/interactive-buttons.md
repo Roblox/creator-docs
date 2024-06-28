@@ -164,9 +164,8 @@ The final task is hooking up basic button functionality.
    local button = script.Parent
 
    local function onButtonActivated()
-       print("Button activated!")
-       -- Perform expected button action(s) here
-
+   	print("Button activated!")
+   	-- Perform expected button action(s) here
    end
 
    button.Activated:Connect(onButtonActivated)

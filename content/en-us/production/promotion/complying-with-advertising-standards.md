@@ -96,18 +96,16 @@ local Workspace = game:GetService("Workspace")
 
 local player = Players.LocalPlayer
 
-
 -- Get the policy info for the user
-	local success, result = pcall(PolicyService.GetPolicyInfoForPlayerAsync, PolicyService, player)
-	if success and result then
-		if not result.AreAdsAllowed then
-
-			-- Remove ineligible user from accessing the experience
-			player:Kick("You are ineligible to access the experience.")
-		end
-	else
-		print("Failed to get policy for player", player.Name, "Exception:", result)
+local success, result = pcall(PolicyService.GetPolicyInfoForPlayerAsync, PolicyService, player)
+if success and result then
+	if not result.AreAdsAllowed then
+		-- Remove ineligible user from accessing the experience
+		player:Kick("You are ineligible to access the experience.")
 	end
+else
+	print("Failed to get policy for player", player.Name, "Exception:", result)
+end
 ```
 
 ## Ad System Integrity Requirements

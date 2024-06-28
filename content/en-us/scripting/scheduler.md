@@ -66,7 +66,7 @@ Since the actual delay time may vary, the following code sample illustrates how 
 
 ```lua
 task.delay(2, function(scheduledTime)
-    print(os.clock() - scheduledTime) --> 2.038702
+	print(os.clock() - scheduledTime) --> 2.038702
 end, os.clock())
 ```
 

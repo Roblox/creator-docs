@@ -85,7 +85,7 @@ To change the text in the label, use a Changed event so whenever the Status stri
    local textLabel = script.Parent
 
    local function updateText()
-      textLabel.Text = status.Value
+   	textLabel.Text = status.Value
    end
    ```
 
@@ -93,7 +93,7 @@ To change the text in the label, use a Changed event so whenever the Status stri
 
    ```lua
    local function updateText()
-      textLabel.Text = status.Value
+   	textLabel.Text = status.Value
    end
 
    status.Changed:Connect(updateText)
@@ -103,7 +103,7 @@ To change the text in the label, use a Changed event so whenever the Status stri
 
    ```lua
    local function updateText()
-      textLabel.Text = status.Value
+   	textLabel.Text = status.Value
    end
 
    status.Changed:Connect(updateText)
@@ -150,7 +150,7 @@ Because DisplayManager needs to communicate with other scripts, it'll be a modul
 
    -- Module Functions
    function DisplayManager.updateStatus(newStatus)
-      status.Value = newStatus
+   	status.Value = newStatus
    end
    ```
 
@@ -181,18 +181,17 @@ With the Display Manager set up, it can be used in other scripts to update the G
    local matchEnd = events:WaitForChild("MatchEnd")
 
    while true do
-      displayManager.updateStatus("Waiting for Players")
+   	displayManager.updateStatus("Waiting for Players")
 
-      repeat
-         print("Starting intermission")
-         task.wait(gameSettings.intermissionDuration)
-      until #Players:GetPlayers() >= gameSettings.minimumPlayers
+   	repeat
+   		print("Starting intermission")
+   		task.wait(gameSettings.intermissionDuration)
+   	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
-      task.wait(gameSettings.transitionTime)
+   	task.wait(gameSettings.transitionTime)
 
-      matchManager.prepareGame()
-      matchEnd.Event:Wait()
-
+   	matchManager.prepareGame()
+   	matchEnd.Event:Wait()
    end
    ```
 
@@ -200,18 +199,17 @@ With the Display Manager set up, it can be used in other scripts to update the G
 
    ```lua
    while true do
-      displayManager.updateStatus("Waiting for Players")
+   	displayManager.updateStatus("Waiting for Players")
 
-      repeat
-         task.wait(gameSettings.intermissionDuration)
-      until #Players:GetPlayers() >= gameSettings.minimumPlayers
+   	repeat
+   		task.wait(gameSettings.intermissionDuration)
+   	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
-      displayManager.updateStatus("Get ready!")
-      task.wait(gameSettings.transitionTime)
+   	displayManager.updateStatus("Get ready!")
+   	task.wait(gameSettings.transitionTime)
 
-      matchManager.prepareGame()
-      matchEnd.Event:Wait()
-
+   	matchManager.prepareGame()
+   	matchEnd.Event:Wait()
    end
    ```
 
@@ -264,7 +262,7 @@ IntValues will be used to store the player count and time left.
 
    -- Local Functions
    local function updateRoundStatus()
-      status.Value = "Players Left: " .. playersLeft.Value .. " / Time Left: " .. timeLeft.Value
+   	status.Value = "Players Left: " .. playersLeft.Value .. " / Time Left: " .. timeLeft.Value
    end
    ```
 
@@ -273,7 +271,7 @@ IntValues will be used to store the player count and time left.
    ```lua
    -- Module Functions
    function DisplayManager.updateStatus(newStatus)
-      status.Value = newStatus
+   	status.Value = newStatus
    end
 
    playersLeft.Changed:Connect(updateRoundStatus)
@@ -308,7 +306,6 @@ Next, add the code for displaying the number of players at the start of a game. 
    -- Values
    local displayValues = ReplicatedStorage:WaitForChild("DisplayValues")
    local playersLeft = displayValues:WaitForChild("PlayersLeft")
-
    ```
 
 2. Show the starting player count by setting the value of `playersLeft` to the size of the active players array.
@@ -317,16 +314,16 @@ Next, add the code for displaying the number of players at the start of a game. 
 
    ```lua
    function PlayerManager.sendPlayersToMatch()
-      local availableSpawnPoints = spawnLocations:GetChildren()
+   	local availableSpawnPoints = spawnLocations:GetChildren()
 
-      for playerKey, whichPlayer in Players:GetPlayers() do
-         table.insert(activePlayers, whichPlayer)
+   	for playerKey, whichPlayer in Players:GetPlayers() do
+   		table.insert(activePlayers, whichPlayer)
 
-         local spawnLocation = table.remove(availableSpawnPoints, 1)
-         preparePlayer(whichPlayer, spawnLocation)
-      end
+   		local spawnLocation = table.remove(availableSpawnPoints, 1)
+   		preparePlayer(whichPlayer, spawnLocation)
+   	end
 
-      playersLeft.Value = #activePlayers
+   	playersLeft.Value = #activePlayers
    end
    ```
 
@@ -364,27 +361,27 @@ Remember that module scripts are used to centralize similar code. Since the time
 
    ```lua
    while myTimer:isRunning() do
-         -- Adding +1 makes sure the timer display ends at 1 instead of 0.
-         timeLeft.Value = (math.floor(myTimer:getTimeLeft() + 1))
-         -- By not setting the time for wait, it offers more accurate looping
-         task.wait()
-      end
+   	-- Adding +1 makes sure the timer display ends at 1 instead of 0.
+   	timeLeft.Value = (math.floor(myTimer:getTimeLeft() + 1))
+   	-- By not setting the time for wait, it offers more accurate looping
+   	task.wait()
+   end
    ```
 
    When added in, the code should look like the sample below.
 
    ```lua
    local function startTimer()
-      print("Timer started")
-      myTimer:start(gameSettings.matchDuration)
-      myTimer.finished:Connect(timeUp)
+   	print("Timer started")
+   	myTimer:start(gameSettings.matchDuration)
+   	myTimer.finished:Connect(timeUp)
 
-      while myTimer:isRunning() do
-         -- Adding +1 makes sure the timer display ends at 1 instead of 0.
-         timeLeft.Value = (math.floor(myTimer:getTimeLeft() + 1))
-         -- By not setting the time for wait, it offers more accurate looping
-         task.wait()
-      end
+   	while myTimer:isRunning() do
+   		-- Adding +1 makes sure the timer display ends at 1 instead of 0.
+   		timeLeft.Value = (math.floor(myTimer:getTimeLeft() + 1))
+   		-- By not setting the time for wait, it offers more accurate looping
+   		task.wait()
+   	end
    end
    ```
 
@@ -422,7 +419,7 @@ while true do
 	repeat
 		task.wait(gameSettings.intermissionDuration)
 	until #Players:GetPlayers() >= gameSettings.minimumPlayers
-  
+
 	displayManager.updateStatus("Get ready!")
 	task.wait(gameSettings.transitionTime)
 
@@ -499,7 +496,6 @@ local function startTimer()
 		-- By not setting the time for wait, it offers more accurate looping
 		task.wait()
 	end
-
 end
 
 -- Module Functions

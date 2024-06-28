@@ -40,7 +40,6 @@ while playing do
 	-- Code story between the dashes
 	-- =============================================
 
-
 	-- =============================================
 
 	-- Add the story variable between the parenthesis below

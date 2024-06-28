@@ -76,7 +76,7 @@ if res then
 	-- Set the image
 	localizedImage.Image = "rbxassetid://" .. localizedImageID
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. translator)
+	print("GetTranslatorForPlayerAsync failed: " .. translator)
 end
 ```
 
@@ -125,7 +125,7 @@ if res then
 	local sourceTranslation = translator:Translate(game, "Screen")
 	print(sourceTranslation) -- Expected Output: "Pantalla"
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. translator)
+	print("GetTranslatorForPlayerAsync failed: " .. translator)
 end
 ```
 
@@ -170,10 +170,10 @@ end)
 
 if res then
 	-- use Translate function, providing object context and string
-	local sourceTranslation = translator:Translate( workspace.WindowScreen.SurfaceGui.TextLabel, "Screen")
+	local sourceTranslation = translator:Translate(workspace.WindowScreen.SurfaceGui.TextLabel, "Screen")
 	print(sourceTranslation) -- Expected Output: Mosquitero
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. translator)
+	print("GetTranslatorForPlayerAsync failed: " .. translator)
 end
 ```
 
@@ -248,14 +248,14 @@ end)
 
 if res then
 	-- Set the parameter value in "Key_Prize_1" to 100
-	local keyTranslation1 = translator:FormatByKey("Key_Prize_1", {100})
+	local keyTranslation1 = translator:FormatByKey("Key_Prize_1", { 100 })
 	print(keyTranslation1) -- Expected Output: 100 joyas
 
 	-- Set multiple parameters to 500 and 100 by name
-	local keyTranslation2 = translator:FormatByKey("Key_Prize_2", {AmountCash=500, NumJewels=100})
+	local keyTranslation2 = translator:FormatByKey("Key_Prize_2", { AmountCash = 500, NumJewels = 100 })
 	print(keyTranslation2) -- Expected Output: $500.00 dinero y 100 joyas
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. translator)
+	print("GetTranslatorForPlayerAsync failed: " .. translator)
 end
 ```
 
@@ -288,7 +288,7 @@ if res1 then
 	local translate1 = translator:Translate(game, "jewels")
 	print(translate1) -- Expected Output in pt: joyas
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. translator)
+	print("GetTranslatorForPlayerAsync failed: " .. translator)
 end
 
 -- Use Translate function with second Translator
@@ -296,7 +296,7 @@ if res2 then
 	local translate2 = fallbackTranslator:Translate(game, "jewels")
 	print(translate2) -- Expected Output in if user is set to 'es': jóias
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. fallbackTranslator)
+	print("GetTranslatorForPlayerAsync failed: " .. fallbackTranslator)
 end
 ```
 
@@ -341,7 +341,7 @@ if res then
 	-- Listen for a change in player's locale ID
 	translator:GetPropertyChangedSignal("LocaleId"):Connect(OnLocaleIdChanged)
 else
-	print('GetTranslatorForPlayerAsync failed: ' .. translator)
+	print("GetTranslatorForPlayerAsync failed: " .. translator)
 end
 ```
 

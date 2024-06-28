@@ -46,31 +46,31 @@ These steps use an array to store different phrases for the NPC to say when play
 2. In ChatManager, where marked in the script, create an **empty array** to store dialogue options.
 
    ```lua
-      -- Cycles through chat dialogue when prompt is used
+   -- Cycles through chat dialogue when prompt is used
 
-      local Chat = game:GetService("Chat")
+   local Chat = game:GetService("Chat")
 
-      local prompt = script.Parent
+   local prompt = script.Parent
 
-      local npc = prompt.Parent
-      local characterParts = npc.CharacterParts
-      local head = characterParts.Head
+   local npc = prompt.Parent
+   local characterParts = npc.CharacterParts
+   local head = characterParts.Head
 
-      -- Add array here
-      local dialogueArray = {}
+   -- Add array here
+   local dialogueArray = {}
 
-      local function speak()
-         local dialogue = "I've got one thing to say!"
-         Chat:Chat(head, dialogue)
-      end
+   local function speak()
+   	local dialogue = "I've got one thing to say!"
+   	Chat:Chat(head, dialogue)
+   end
 
-      prompt.Triggered:Connect(speak)
+   prompt.Triggered:Connect(speak)
    ```
 
 3. Within the brackets `{}` of the array just created, type at least three strings of dialogue, separated by commas.
 
    ```lua
-   local dialogueArray = {"Hi!",  "Do I know you?",  "Goodbye!"}
+   local dialogueArray = { "Hi!", "Do I know you?", "Goodbye!" }
    ```
 
 ## Using Array Indexes
@@ -111,12 +111,12 @@ Use index values to assign specific pieces of dialogue to the NPC. To use a valu
 1. Replace the `dialogue` variable's default string value with index 2.
 
    ```lua
-    local dialogueArray = {"Hi!", "Do I know you?", "Goodbye!"}
+   local dialogueArray = { "Hi!", "Do I know you?", "Goodbye!" }
 
-    local function speak()
-      local dialogue = dialogueArray[2]
-      Chat:Chat(head, dialogue)
-    end
+   local function speak()
+   	local dialogue = dialogueArray[2]
+   	Chat:Chat(head, dialogue)
+   end
    ```
 
    <Alert severity="warning">
@@ -136,28 +136,28 @@ Whenever a player interacts with the NPC, increment the variable value by 1 to d
 1. To keep track of the current index, add a new variable named `dialogueIndex`. Set the variable to 1 to start at the beginning of the array.
 
    ```lua
-    local dialogueArray = {"Hi!", "Do I know you?", "Goodbye!"}
-    local dialogueIndex = 1
+   local dialogueArray = { "Hi!", "Do I know you?", "Goodbye!" }
+   local dialogueIndex = 1
    ```
 
 2. In `speak()`, **replace** the index number in `dialogueArray[2]` with the variable you just created.
 
    ```lua
-    local function speak()
-      local dialogue = dialogueArray[dialogueIndex]
-      Chat:Chat(head, dialogue)
-    end
+   local function speak()
+   	local dialogue = dialogueArray[dialogueIndex]
+   	Chat:Chat(head, dialogue)
+   end
    ```
 
 3. At the bottom of the function, add 1 to `dialogueIndex`. The next time `speak()` is called, the dialogue will display the next string.
 
    ```lua
-    local function speak()
-      local dialogue = dialogueArray[dialogueIndex]
-      Chat:Chat(head, dialogue)
+   local function speak()
+   	local dialogue = dialogueArray[dialogueIndex]
+   	Chat:Chat(head, dialogue)
 
-      dialogueIndex += 1
-    end
+   	dialogueIndex += 1
+   end
    ```
 
 4. Playtest and click the NPC to see each dialogue string from the array.
@@ -183,31 +183,31 @@ Use the array size to check when it's time to cycle back to the first piece of d
 1. Add an if statement and check if `dialogueIndex` equals `#dialogueArray`, the total size of this array. If so, then set `dialogueIndex` to 1.
 
    ```lua
-    local function speak()
-      local dialogue = dialogueArray[dialogueIndex]
-      Chat:Chat(head, dialogue)
+   local function speak()
+   	local dialogue = dialogueArray[dialogueIndex]
+   	Chat:Chat(head, dialogue)
 
-      if dialogueIndex == #dialogueArray then
-        dialogueIndex = 1
-      end
+   	if dialogueIndex == #dialogueArray then
+   		dialogueIndex = 1
+   	end
 
-      dialogueIndex += 1
-    end
+   	dialogueIndex += 1
+   end
    ```
 
 2. If `dialogueIndex` isn't at the end, it should still add 1 to `dialogueIndex`. Move `dialogueIndex += 1` under an else statement.
 
    ```lua
-    local function speak()
-      local dialogue = dialogueArray[dialogueIndex]
-      Chat:Chat(head, dialogue)
+   local function speak()
+   	local dialogue = dialogueArray[dialogueIndex]
+   	Chat:Chat(head, dialogue)
 
-      if dialogueIndex == #dialogueArray then
-        dialogueIndex = 1
-      else
-        dialogueIndex += 1
-      end
-    end
+   	if dialogueIndex == #dialogueArray then
+   		dialogueIndex = 1
+   	else
+   		dialogueIndex += 1
+   	end
+   end
    ```
 
 3. Play and confirm you can cycle through and restart the dialogue.
@@ -265,12 +265,12 @@ Try one of the optional challenges below.
 - Instead of showing dialogue in order, have the NPC show a random line of dialogue each time using `Datatype.Random.new()`. A sample script is included below to reference
 
 ```lua
-   local randomGenerator = Random.new()
+local randomGenerator = Random.new()
 
-   -- Shows a new dialogue whenever the NPC is clicked
-   local function speak()
-      local randomIndex = randomGenerator:NextInteger(1, #dialogueArray)
-      local dialogue = dialogueArray[randomIndex]
-      Chat:Chat(head, dialogue)
-   end
+-- Shows a new dialogue whenever the NPC is clicked
+local function speak()
+	local randomIndex = randomGenerator:NextInteger(1, #dialogueArray)
+	local dialogue = dialogueArray[randomIndex]
+	Chat:Chat(head, dialogue)
+end
 ```

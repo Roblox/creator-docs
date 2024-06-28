@@ -17,7 +17,7 @@ You can add and remove single-line comments in the Script Editor with the keyboa
 -- This condition is really important because the world would blow up if it
 -- were missing.
 if not foo then
-    stopWorldFromBlowingUp()
+	stopWorldFromBlowingUp()
 end
 ```
 
@@ -35,8 +35,7 @@ You can define multiline block comments with double hyphens and double brackets 
     Should only be called within 15 minutes of midnight Mountain Standard
     Time, or the cosmic moon ray may be damaged.
 ]]
-local function stopCosmicMoonRay()
-end
+local function stopCosmicMoonRay() end
 ```
 
 If necessary, you can nest multiple brackets inside a block comment using the same number of equal signs in both the beginning and ending bracket:
@@ -53,8 +52,7 @@ Roblox Studio supports special `TODO` comments. Studio bolds any text following 
 
 ```lua
 -- TODO: Finish the function below so that it actually does what its name implies.
-local function stopWorldFromBlowingUp()
-end
+local function stopWorldFromBlowingUp() end
 ```
 
 Use `TODO` comments to keep track of and communicate issues within your code.

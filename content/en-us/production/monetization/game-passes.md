@@ -108,7 +108,7 @@ The following script checks when any player enters the experience, then verifies
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 
-local passID = 0000000  -- Change this to your Pass ID
+local passID = 0000000 -- Change this to your Pass ID
 
 local function onPlayerAdded(player)
 	local hasPass = false
@@ -149,7 +149,7 @@ Place this code in a `Class.Script` object within `Class.ServerScriptService` so
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
 
-local passID = 0000000  -- Change this to your Pass ID
+local passID = 0000000 -- Change this to your Pass ID
 
 -- Function to handle a completed prompt and purchase
 local function onPromptPurchaseFinished(player, purchasedPassID, purchaseSuccess)
@@ -171,7 +171,7 @@ The following code implements a `promptPurchase()` function which safely checks 
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 
-local passID = 0000000  -- Change this to your Pass ID
+local passID = 0000000 -- Change this to your Pass ID
 
 -- Function to prompt purchase of the Pass
 local function promptPurchase()

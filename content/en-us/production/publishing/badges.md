@@ -79,20 +79,20 @@ The following is an example of a safe function for awarding badges to players.
 local BadgeService = game:GetService("BadgeService")
 
 local function awardBadge(player, badgeId)
-  -- Fetch badge information
-  local success, badgeInfo = pcall(BadgeService.GetBadgeInfoAsync, BadgeService, badgeId)
-  if success then
-    -- Confirm that badge can be awarded
-    if badgeInfo.IsEnabled then
-      -- Award badge
-      local awarded, errorMessage = pcall(BadgeService.AwardBadge, BadgeService, player.UserId, badgeId)
-      if not awarded then
-        warn("Error while awarding badge:", errorMessage)
-      end
-    end
-  else
- 	  warn("Error while fetching badge info!")
-  end
+	-- Fetch badge information
+	local success, badgeInfo = pcall(BadgeService.GetBadgeInfoAsync, BadgeService, badgeId)
+	if success then
+		-- Confirm that badge can be awarded
+		if badgeInfo.IsEnabled then
+			-- Award badge
+			local awarded, errorMessage = pcall(BadgeService.AwardBadge, BadgeService, player.UserId, badgeId)
+			if not awarded then
+				warn("Error while awarding badge:", errorMessage)
+			end
+		end
+	else
+		warn("Error while fetching badge info!")
+	end
 end
 ```
 
@@ -104,13 +104,13 @@ The following script checks when any player enters the experience, then verifies
 local BadgeService = game:GetService("BadgeService")
 local Players = game:GetService("Players")
 
-local BADGE_ID = 00000000  -- Change this to your badge ID
+local BADGE_ID = 00000000 -- Change this to your badge ID
 
 local function onPlayerAdded(player)
-  -- Check if the player has the badge
+	-- Check if the player has the badge
 	local success, hasBadge = pcall(BadgeService.UserHasBadgeAsync, BadgeService, player.UserId, BADGE_ID)
 
-  -- If there's an error, issue a warning and exit the function
+	-- If there's an error, issue a warning and exit the function
 	if not success then
 		warn("Error while checking if player has badge")
 		return
@@ -133,7 +133,7 @@ ID, call the `Class.BadgeService:GetBadgeInfoAsync()` method with a [badge ID](#
 ```lua
 local BadgeService = game:GetService("BadgeService")
 
-local BADGE_ID = 00000000  -- Change this to your badge ID
+local BADGE_ID = 00000000 -- Change this to your badge ID
 
 -- Fetch badge information
 local success, result = pcall(BadgeService.GetBadgeInfoAsync, BadgeService, BADGE_ID)

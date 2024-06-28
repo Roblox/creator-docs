@@ -25,19 +25,19 @@ Variables have names that tell programmers what they store. In this case, you'll
    local playing = true
 
    while playing do
-     storyMaker:Reset()
+   	storyMaker:Reset()
 
-     -- Code story between the dashes
-     -- =============================================
-        local name1
+   	-- Code story between the dashes
+   	-- =============================================
+   	local name1
 
-     -- =============================================
+   	-- =============================================
 
-     -- Add the story variable between the parenthesis below
-     storyMaker:Write()
+   	-- Add the story variable between the parenthesis below
+   	storyMaker:Write()
 
-     -- Play again?
-     playing = storyMaker:PlayAgain()
+   	-- Play again?
+   	playing = storyMaker:PlayAgain()
    end
    ```
 
@@ -49,16 +49,14 @@ Now players need to have a chance to put something inside the placeholder. To ch
 
    ```lua
    while playing do
-     storyMaker:Reset()
+   	storyMaker:Reset()
 
-     -- Code story between the dashes
-     -- =============================================
-        local name1 =
-
-     -- =============================================
-
-     -- Add the story variable between the parenthesis below
-     storyMaker:Write()
+   	-- Code story between the dashes
+   	-- =============================================
+   	local name1 =
+   		-- =============================================
+   		-- Add the story variable between the parenthesis below
+   		storyMaker:Write()
    end
    ```
 
@@ -66,16 +64,16 @@ Now players need to have a chance to put something inside the placeholder. To ch
 
    ```lua
    while playing do
-     storyMaker:Reset()
+   	storyMaker:Reset()
 
-     -- Code story between the dashes
-     -- =============================================
-        local name1 = storyMaker:GetInput()
+   	-- Code story between the dashes
+   	-- =============================================
+   	local name1 = storyMaker:GetInput()
 
-     -- =============================================
+   	-- =============================================
 
-     -- Add the story variable between the parenthesis below
-     storyMaker:Write()
+   	-- Add the story variable between the parenthesis below
+   	storyMaker:Write()
    end
    ```
 
