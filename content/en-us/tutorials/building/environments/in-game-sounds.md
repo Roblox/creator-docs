@@ -103,20 +103,19 @@ The remainder of this tutorial uses a pre-made model. This model includes parts 
    local objectsArray = pickupObjects:GetChildren()
 
    local function partTouched(otherPart, objectPart)
-       local whichCharacter = otherPart.Parent
-       local humanoid = whichCharacter:FindFirstChildWhichIsA("Humanoid")
+   	local whichCharacter = otherPart.Parent
+   	local humanoid = whichCharacter:FindFirstChildWhichIsA("Humanoid")
 
-       if humanoid and objectPart.CanCollide == true then
-
-       end
+   	if humanoid and objectPart.CanCollide == true then
+   	end
    end
 
    -- Binds every object part to the touch function so it works on all parts
    for objectIndex = 1, #objectsArray do
-       local objectPart = objectsArray[objectIndex]
-       objectPart.Touched:Connect(function(otherPart)
-           partTouched(otherPart, objectPart)
-       end)
+   	local objectPart = objectsArray[objectIndex]
+   	objectPart.Touched:Connect(function(otherPart)
+   		partTouched(otherPart, objectPart)
+   	end)
    end
    ```
 
@@ -138,15 +137,14 @@ The remainder of this tutorial uses a pre-made model. This model includes parts 
 
    ```lua
    local function partTouched(otherPart, objectPart)
-       local whichCharacter = otherPart.Parent
-       local humanoid = whichCharacter:FindFirstChildWhichIsA("Humanoid")
+   	local whichCharacter = otherPart.Parent
+   	local humanoid = whichCharacter:FindFirstChildWhichIsA("Humanoid")
 
-       -- Play the sound, once finished, destroy the object
-       if humanoid and objectPart.CanCollide == true then
-           feedbackSound:Play()
-       end
+   	-- Play the sound, once finished, destroy the object
+   	if humanoid and objectPart.CanCollide == true then
+   		feedbackSound:Play()
+   	end
    end
-
    ```
 
 3. Test the game to confirm that when the player touches a collectable, it both disappears and plays a sound.

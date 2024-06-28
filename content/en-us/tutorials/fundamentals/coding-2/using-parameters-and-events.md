@@ -32,7 +32,6 @@ Use what you know about variables and the experience hierarchy to reference the 
    ```lua
    -- Destroys whatever touches the parent
    local trap = script.Parent
-
    ```
 
 ### Create a Function with a Parameter
@@ -40,9 +39,7 @@ Use what you know about variables and the experience hierarchy to reference the 
 The trap will use a function to destroy whatever touched the part. To work, the function needs to know what touched the part. And that means using parameters. Parameters are typed inside the `()` that comes after a function's name. They look like this:
 
 ```lua
-local function functionName(parameterName)
-
-end
+local function functionName(parameterName) end
 ```
 
 The actual information that gets passed through the parameter is called an **argument**. You'll create a new function called `onTouch()` with a parameter called `objectTouched` that will track whatever touches the trap and then destroy the touching part.
@@ -52,9 +49,7 @@ The actual information that gets passed through the parameter is called an **arg
    ```lua
    local trap = script.Parent
 
-   local function onTouch()
-
-   end
+   local function onTouch() end
    ```
 
 2. Inside the `()`, type a name for the parameter. This lesson will use objectTouched.
@@ -62,9 +57,7 @@ The actual information that gets passed through the parameter is called an **arg
    ```lua
    local trap = script.Parent
 
-   local function onTouch(objectTouched)
-
-   end
+   local function onTouch(objectTouched) end
    ```
 
 3. Between `local function onTouch()` and `end`, create a print statement. You'll use this to check if something is touching the part in the next section.
@@ -73,7 +66,7 @@ The actual information that gets passed through the parameter is called an **arg
    local trap = script.Parent
 
    local function onTouch(objectTouched)
-       print("Something touched the trap")
+   	print("Something touched the trap")
    end
    ```
 
@@ -89,7 +82,7 @@ The `Touched` event fires whenever one part touches another part and can be used
    local trap = script.Parent
 
    local function onTouch(objectTouched)
-       print("Something touched the trap")
+   	print("Something touched the trap")
    end
 
    -- Connect the function to the Touched event
@@ -107,9 +100,9 @@ The `Touched` event fires whenever one part touches another part and can be used
    local trap = script.Parent
 
    local function onTouch(objectTouched)
-       print("Something touched the trap")
-       -- Destroy the touching object
-       objectTouched:Destroy()
+   	print("Something touched the trap")
+   	-- Destroy the touching object
+   	objectTouched:Destroy()
    end
 
    trap.Touched:Connect(onTouch)

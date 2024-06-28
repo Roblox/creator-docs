@@ -46,29 +46,29 @@ Nested loops can seem somewhat abstract, so a visual example can help. For this 
 
    -- Makes a single cube
    local function createPart()
-     local part = Instance.new("Part")
-     part.Size = Vector3.new(2, 2, 2)
-     part.CFrame = CFrame.new(20, 0, 20)
-     part.Color = currentColor
-     part.Parent = workspace
+   	local part = Instance.new("Part")
+   	part.Size = Vector3.new(2, 2, 2)
+   	part.CFrame = CFrame.new(20, 0, 20)
+   	part.Color = currentColor
+   	part.Parent = workspace
    end
 
    -- Outer loop
    for partBatch = 1, numberOfBatches do
-     print("Top outer loop: part batch " .. partBatch)
-     currentColor = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
+   	print("Top outer loop: part batch " .. partBatch)
+   	currentColor = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
 
-     -- Inner loop
-     for partNumber = 1, partsPerBatch do
-       createPart()
-       print("Inner loop: part " .. partNumber)
-       partsMade += 1
-       task.wait(0.5)
-     end
+   	-- Inner loop
+   	for partNumber = 1, partsPerBatch do
+   		createPart()
+   		print("Inner loop: part " .. partNumber)
+   		partsMade += 1
+   		task.wait(0.5)
+   	end
 
-     print("Bottom outer loop: " .. partsMade .. " parts made so far.")
+   	print("Bottom outer loop: " .. partsMade .. " parts made so far.")
 
-     task.wait(2)
+   	task.wait(2)
    end
    ```
 
@@ -109,8 +109,8 @@ For the cube tower script, first code a function that spawns a single cube. The 
 
    -- Creates individual cubes
    local function makeCube()
-     local cube = Instance.new("Part")
-     cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
+   	local cube = Instance.new("Part")
+   	cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
    end
    ```
 
@@ -118,9 +118,9 @@ For the cube tower script, first code a function that spawns a single cube. The 
 
    ```lua
    local function makeCube()
-     local cube = Instance.new("Part")
-     cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
-     cube.Color = currentColor
+   	local cube = Instance.new("Part")
+   	cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
+   	cube.Color = currentColor
    end
    ```
 
@@ -128,10 +128,10 @@ For the cube tower script, first code a function that spawns a single cube. The 
 
    ```lua
    local function makeCube()
-       local cube = Instance.new("Part")
-       cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
-       cube.Color = currentColor
-       cube.Parent = workspace
+   	local cube = Instance.new("Part")
+   	cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
+   	cube.Color = currentColor
+   	cube.Parent = workspace
    end
    ```
 
@@ -148,10 +148,10 @@ To create a tower, spawn cubes at specific points by setting the X, Y, Z propert
    ```lua
    -- Creates individual cubes
    local function makeCube(spawnX, spawnY, spawnZ)
-       local cube = Instance.new("Part")
-       cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
-       cube.Color = currentColor
-       cube.Parent = workspace
+   	local cube = Instance.new("Part")
+   	cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
+   	cube.Color = currentColor
+   	cube.Parent = workspace
    end
    ```
 
@@ -159,11 +159,11 @@ To create a tower, spawn cubes at specific points by setting the X, Y, Z propert
 
    ```lua
    local function makeCube(spawnX, spawnY, spawnZ)
-       local cube = Instance.new("Part")
-       cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
-       cube.Color = currentColor
-       cube.CFrame = CFrame.new(spawnX, spawnY, spawnZ)
-       cube.Parent = workspace
+   	local cube = Instance.new("Part")
+   	cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
+   	cube.Color = currentColor
+   	cube.CFrame = CFrame.new(spawnX, spawnY, spawnZ)
+   	cube.Parent = workspace
    end
    ```
 
@@ -184,7 +184,7 @@ The script will have three loops total, one each for the length, width, and heig
    ```lua
    -- Builds tower
    for heightIndex = 1, TOWER_SIZE do
-       local spawnY = (heightIndex - 1) * CUBE_SIZE
+   	local spawnY = (heightIndex - 1) * CUBE_SIZE
    end
    ```
 
@@ -200,11 +200,11 @@ The script will have three loops total, one each for the length, width, and heig
 
    ```lua
    for heightIndex = 1, TOWER_SIZE do
-       local spawnY = (heightIndex - 1) * CUBE_SIZE
+   	local spawnY = (heightIndex - 1) * CUBE_SIZE
 
-       for lengthIndex = 1, TOWER_SIZE do
-           local spawnX = lengthIndex * CUBE_SIZE
-       end
+   	for lengthIndex = 1, TOWER_SIZE do
+   		local spawnX = lengthIndex * CUBE_SIZE
+   	end
    end
    ```
 
@@ -224,17 +224,17 @@ The script will have three loops total, one each for the length, width, and heig
    ```lua
    -- Builds tower
    for heightIndex = 1, TOWER_SIZE do
-       local spawnY = (heightIndex - 1) * CUBE_SIZE
+   	local spawnY = (heightIndex - 1) * CUBE_SIZE
 
-       for lengthIndex = 1, TOWER_SIZE do
-           local spawnX = lengthIndex * CUBE_SIZE
+   	for lengthIndex = 1, TOWER_SIZE do
+   		local spawnX = lengthIndex * CUBE_SIZE
 
-           for widthIndex = 1, TOWER_SIZE do
-               local spawnZ = widthIndex * CUBE_SIZE
-               makeCube(spawnX, spawnY, spawnZ)
-               task.wait(0.25)
-           end
-       end
+   		for widthIndex = 1, TOWER_SIZE do
+   			local spawnZ = widthIndex * CUBE_SIZE
+   			makeCube(spawnX, spawnY, spawnZ)
+   			task.wait(0.25)
+   		end
+   	end
    end
    ```
 
@@ -242,16 +242,16 @@ The script will have three loops total, one each for the length, width, and heig
 
    ```lua
    for heightIndex = 1, TOWER_SIZE do
-       local spawnY = (heightIndex - 1) * CUBE_SIZE
-       currentColor = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
-       for lengthIndex = 1, TOWER_SIZE do
-           local spawnX = lengthIndex * CUBE_SIZE
-           for widthIndex = 1, TOWER_SIZE do
-               local spawnZ = widthIndex * CUBE_SIZE
-               makeCube(spawnX, spawnY, spawnZ)
-               task.wait(0.25)
-           end
-       end
+   	local spawnY = (heightIndex - 1) * CUBE_SIZE
+   	currentColor = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
+   	for lengthIndex = 1, TOWER_SIZE do
+   		local spawnX = lengthIndex * CUBE_SIZE
+   		for widthIndex = 1, TOWER_SIZE do
+   			local spawnZ = widthIndex * CUBE_SIZE
+   			makeCube(spawnX, spawnY, spawnZ)
+   			task.wait(0.25)
+   		end
+   	end
    end
    ```
 
@@ -277,29 +277,29 @@ local CUBE_SIZE = 2
 
 -- Creates individual cubes
 local function makeCube(spawnX, spawnY, spawnZ)
-    local cube = Instance.new("Part")
-    cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
-    cube.Color = currentColor
-    cube.Transparency = cubeTransparency -- Sets transparency
-    cube.CFrame = CFrame.new(spawnX, spawnY, spawnZ)
-    cube.Parent = workspace
+	local cube = Instance.new("Part")
+	cube.Size = Vector3.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
+	cube.Color = currentColor
+	cube.Transparency = cubeTransparency -- Sets transparency
+	cube.CFrame = CFrame.new(spawnX, spawnY, spawnZ)
+	cube.Parent = workspace
 end
 
 -- Builds tower
 for heightIndex = 1, TOWER_SIZE do
-    local spawnY = (heightIndex - 1) * CUBE_SIZE
-    currentColor = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
+	local spawnY = (heightIndex - 1) * CUBE_SIZE
+	currentColor = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
 
-    for lengthIndex = 1, TOWER_SIZE do
-        local spawnX = lengthIndex * CUBE_SIZE
-	cubeTransparency = (lengthIndex - 1) * 0.10 --Updates every loop starting at 0
+	for lengthIndex = 1, TOWER_SIZE do
+		local spawnX = lengthIndex * CUBE_SIZE
+		cubeTransparency = (lengthIndex - 1) * 0.10 --Updates every loop starting at 0
 
-        for widthIndex = 1, TOWER_SIZE do
-            local spawnZ = widthIndex * CUBE_SIZE
-            makeCube(spawnX, spawnY, spawnZ)
-            task.wait(0.05)
-        end
-    end
+		for widthIndex = 1, TOWER_SIZE do
+			local spawnZ = widthIndex * CUBE_SIZE
+			makeCube(spawnX, spawnY, spawnZ)
+			task.wait(0.05)
+		end
+	end
 end
 ```
 
@@ -327,33 +327,32 @@ local cupcakesBaked = 0
 
 --Makes a single cupcake
 local function makeCupcake()
-    local ServerStorage = game:GetService("ServerStorage")
-    local cupcake = ServerStorage.Cupcake:Clone()
-    local cup = cupcake.Cup
-    local frosting = cupcake.Frosting
-    cupcake:SetPrimaryPartCFrame(CFrame.new(0, 20, 0) * CFrame.Angles(0, 0, -90))
-    frosting.Color = frostingColor
-    cup.Color = cupColor
-    cupcake.Parent = workspace
+	local ServerStorage = game:GetService("ServerStorage")
+	local cupcake = ServerStorage.Cupcake:Clone()
+	local cup = cupcake.Cup
+	local frosting = cupcake.Frosting
+	cupcake:SetPrimaryPartCFrame(CFrame.new(0, 20, 0) * CFrame.Angles(0, 0, -90))
+	frosting.Color = frostingColor
+	cup.Color = cupColor
+	cupcake.Parent = workspace
 end
-
 
 -- Outer loop
 for cupcakeBatch = 1, numberOfBatches do
-    print("Top outer loop: cupcake batch " .. cupcakeBatch)
-    frostingColor = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
-    cupColor = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
+	print("Top outer loop: cupcake batch " .. cupcakeBatch)
+	frostingColor = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
+	cupColor = Color3.fromRGB(math.random(0, 255), math.random(0, 255), math.random(0, 255))
 
-    -- Inner loop
-    for cupcakeNumber = 1, cupcakesPerBatch do
-        makeCupcake()
-        print("Inner loop: cupcake " .. cupcakeNumber)
-        -- Track muffins baked
-        cupcakesBaked += 1
-        task.wait(0.5)
-    end
+	-- Inner loop
+	for cupcakeNumber = 1, cupcakesPerBatch do
+		makeCupcake()
+		print("Inner loop: cupcake " .. cupcakeNumber)
+		-- Track muffins baked
+		cupcakesBaked += 1
+		task.wait(0.5)
+	end
 
-    print("Bottom outer loop: " .. cupcakesBaked .. " cupcakes baked so far.")
+	print("Bottom outer loop: " .. cupcakesBaked .. " cupcakes baked so far.")
 end
 ```
 

@@ -69,18 +69,18 @@ Note the `Datatype.DockWidgetPluginGuiInfo.new()` constructor expects its parame
 ```lua
 -- Create new "DockWidgetPluginGuiInfo" object
 local widgetInfo = DockWidgetPluginGuiInfo.new(
-	Enum.InitialDockState.Float,  -- Widget will be initialized in floating panel
-	true,   -- Widget will be initially enabled
-	false,  -- Don't override the previous enabled state
-	200,    -- Default width of the floating window
-	300,    -- Default height of the floating window
-	150,    -- Minimum width of the floating window
-	150     -- Minimum height of the floating window
+	Enum.InitialDockState.Float, -- Widget will be initialized in floating panel
+	true, -- Widget will be initially enabled
+	false, -- Don't override the previous enabled state
+	200, -- Default width of the floating window
+	300, -- Default height of the floating window
+	150, -- Minimum width of the floating window
+	150 -- Minimum height of the floating window
 )
 
 -- Create new widget GUI
 local testWidget = plugin:CreateDockWidgetPluginGui("TestWidget", widgetInfo)
-testWidget.Title = "Test Widget"  -- Optional widget title
+testWidget.Title = "Test Widget" -- Optional widget title
 ```
 
 <Alert severity="warning">
@@ -94,15 +94,15 @@ Once you create a widget, you can customize its user interface with `Class.GuiOb
 ```lua
 -- Create new widget GUI
 local testWidget = plugin:CreateDockWidgetPluginGui("TestWidget", widgetInfo)
-testWidget.Title = "Test Widget"  -- Optional widget title
+testWidget.Title = "Test Widget" -- Optional widget title
 
 local testButton = Instance.new("TextButton")
 testButton.BorderSizePixel = 0
 testButton.TextSize = 20
-testButton.TextColor3 = Color3.new(1,0.2,0.4)
-testButton.AnchorPoint = Vector2.new(0.5,0.5)
-testButton.Size = UDim2.new(1,0,1,0)
-testButton.Position = UDim2.new(0.5,0,0.5,0)
+testButton.TextColor3 = Color3.new(1, 0.2, 0.4)
+testButton.AnchorPoint = Vector2.new(0.5, 0.5)
+testButton.Size = UDim2.new(1, 0, 1, 0)
+testButton.Position = UDim2.new(0.5, 0, 0.5, 0)
 testButton.SizeConstraint = Enum.SizeConstraint.RelativeYY
 testButton.Text = "Click Me"
 testButton.Parent = testWidget
@@ -141,7 +141,7 @@ local function syncGuiColors(objects)
 end
 
 -- Run 'syncGuiColors()' function to sync colors of provided objects
-syncGuiColors({testButton})
+syncGuiColors({ testButton })
 ```
 
 ### Customizing Mouse Cursors
@@ -267,8 +267,8 @@ One workaround for generic input events is to create a transparent `Class.Frame`
 
 ```lua
 local frame = Instance.new("Frame")
-frame.BackgroundTransparency = 1  -- Hide the frame
-frame.Size = UDim2.new(1, 0, 1, 0)  -- Cover the screen
+frame.BackgroundTransparency = 1 -- Hide the frame
+frame.Size = UDim2.new(1, 0, 1, 0) -- Cover the screen
 frame.Position = UDim2.new(0, 0, 0, 0)
 frame.Parent = testWidget
 
@@ -317,12 +317,12 @@ key. See the `Class.Plugin:StartDrag()` page for more details.
 ```lua
 local function onButton1Down()
 	local dragInfo = {
-		Data = "Hello, world",      -- The data being dragged
-		MimeType = "text/plain",    -- Describes the MIME type of the data
-		Sender = "SomeDragSource",  -- Describes from where the data originated
-		MouseIcon = "",             -- Image content to use for the cursor
-		DragIcon = "",              -- Image content to render under the cursor during drag
-		HotSpot = Vector2.zero -- Where on the DragIcon to center the cursor
+		Data = "Hello, world", -- The data being dragged
+		MimeType = "text/plain", -- Describes the MIME type of the data
+		Sender = "SomeDragSource", -- Describes from where the data originated
+		MouseIcon = "", -- Image content to use for the cursor
+		DragIcon = "", -- Image content to render under the cursor during drag
+		HotSpot = Vector2.zero, -- Where on the DragIcon to center the cursor
 	}
 	plugin:StartDrag(dragInfo)
 end

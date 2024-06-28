@@ -94,19 +94,13 @@ A basic framework is as follows:
 local ProximityPromptService = game:GetService("ProximityPromptService")
 
 -- Detect when prompt is triggered
-local function onPromptTriggered(promptObject, player)
-
-end
+local function onPromptTriggered(promptObject, player) end
 
 -- Detect when prompt hold begins
-local function onPromptHoldBegan(promptObject, player)
-
-end
+local function onPromptHoldBegan(promptObject, player) end
 
 -- Detect when prompt hold ends
-local function onPromptHoldEnded(promptObject, player)
-
-end
+local function onPromptHoldEnded(promptObject, player) end
 
 -- Connect prompt events to handling functions
 ProximityPromptService.PromptTriggered:Connect(onPromptTriggered)

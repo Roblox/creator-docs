@@ -131,7 +131,8 @@ If you want a 3D object such as a `Class.BasePart` to rotate on its own within t
 		local t = 0
 		RunService.PostSimulation:Connect(function(delta)
 			t += delta
-			viewportCamera.CFrame = CFrame.Angles(0, math.rad(t * objectRotationSpeed), 0) * CFrame.new(0, 0, cameraDistance)
+			viewportCamera.CFrame = CFrame.Angles(0, math.rad(t * objectRotationSpeed), 0)
+				* CFrame.new(0, 0, cameraDistance)
 		end)
 	else
 		warn("3D object not found as child of viewport frame")

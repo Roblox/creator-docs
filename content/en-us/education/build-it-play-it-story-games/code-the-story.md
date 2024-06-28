@@ -32,12 +32,12 @@ Remember the first sentence you wrote for the story? Time to add that into the c
 5. Have the story variable store the string like below. Make sure to add a space after the last word but before the quotation mark.
 
    ```lua
-     -- Code story between the dashes
-     -- =============================================
-        local name1 = storyMaker:GetInput("What is your favorite name?")
+   -- Code story between the dashes
+   -- =============================================
+   local name1 = storyMaker:GetInput("What is your favorite name?")
 
-        local story = "In a tree on a hill lives the great wizard "
-     -- =============================================
+   local story = "In a tree on a hill lives the great wizard "
+   -- =============================================
    ```
 
 ## Adding the Name
@@ -58,12 +58,12 @@ Next, the first string of the story needs to be combined with the player's answe
 2. Still on the same line, type the name of the variable holding the player's answer.
 
    ```lua
-       -- Code story between the dashes
-       -- =============================================
-           local name1 = storyMaker:GetInput("What is your favorite name?")
+   -- Code story between the dashes
+   -- =============================================
+   local name1 = storyMaker:GetInput("What is your favorite name?")
 
-           local story = "In a tree on a hill lives the great wizard " .. name1
-       -- =============================================
+   local story = "In a tree on a hill lives the great wizard " .. name1
+   -- =============================================
    ```
 
 ## Showing the Story
@@ -73,16 +73,15 @@ Now that the story is typed, it needs to be shown to players. T
 1. Under the second dashed line, find `storyMaker:Write()`. Between the `()`, type the variable `story`. This tells the program to write the story in the game.
 
    ```lua
-     -- Code story between the dashes
-     -- =============================================
-         local name1 = storyMaker:GetInput("What is your favorite name?")
+   -- Code story between the dashes
+   -- =============================================
+   local name1 = storyMaker:GetInput("What is your favorite name?")
 
-         local story = "In a tree on a hill lives the great wizard " .. name1
-     -- =============================================
+   local story = "In a tree on a hill lives the great wizard " .. name1
+   -- =============================================
 
-
-       -- Add the story variable between the parenthesis below
-       storyMaker:Write(story)
+   -- Add the story variable between the parenthesis below
+   storyMaker:Write(story)
    ```
 
 2. Playtest the game. You should see the two strings (show by different colors in the picture below) combined together.

@@ -18,8 +18,7 @@ Start by getting the winning player's name if there was one. Previously, the cod
 1. In PlayerManager, start a new module function named `getWinnerName()`.
 
    ```lua
-   function PlayerManager.getWinnerName()
-   end
+   function PlayerManager.getWinnerName() end
 
    -- Events
    Players.PlayerAdded:Connect(onPlayerJoin)
@@ -29,10 +28,10 @@ Start by getting the winning player's name if there was one. Previously, the cod
 
    ```lua
    function PlayerManager.getWinnerName()
-     local winningPlayer = activePlayers[1]
+   	local winningPlayer = activePlayers[1]
 
-     if winningPlayer then
-     end
+   	if winningPlayer then
+   	end
    end
    ```
 
@@ -43,13 +42,13 @@ Start by getting the winning player's name if there was one. Previously, the cod
 
    ```lua
    function PlayerManager.getWinnerName()
-     local winningPlayer = activePlayers[1]
+   	local winningPlayer = activePlayers[1]
 
-     if winningPlayer then
-       return winningPlayer.Name
-     else
-       return "Error: No winning player found"
-     end
+   	if winningPlayer then
+   		return winningPlayer.Name
+   	else
+   		return "Error: No winning player found"
+   	end
    end
    ```
 
@@ -61,12 +60,12 @@ Use a module function to take information from the correct end state, whether th
 
    ```lua
    function MatchManager.prepareGame()
-     playerManager.sendPlayersToMatch()
-     matchStart:Fire()
+   	playerManager.sendPlayersToMatch()
+   	matchStart:Fire()
    end
 
    function MatchManager.getEndStatus(endState)
-     local statusToReturn
+   	local statusToReturn
    end
 
    matchStart.Event:Connect(startTimer)
@@ -79,15 +78,12 @@ Use a module function to take information from the correct end state, whether th
 
    ```lua
    function MatchManager.getEndStatus(endState)
-     local statusToReturn
+   	local statusToReturn
 
-     if endState == gameSettings.endStates.FoundWinner then
-
-     elseif endState == gameSettings.endStates.TimerUp then
-
-     else
-
-     end
+   	if endState == gameSettings.endStates.FoundWinner then
+   	elseif endState == gameSettings.endStates.TimerUp then
+   	else
+   	end
    end
    ```
 
@@ -108,16 +104,16 @@ Use a module function to take information from the correct end state, whether th
 
    ```lua
    function MatchManager.getEndStatus(endState)
-     local statusToReturn
+   	local statusToReturn
 
-     if endState == gameSettings.endStates.FoundWinner then
-       local winnerName = playerManager.getWinnerName()
-       statusToReturn = "Winner is : " .. winnerName
-     elseif endState == gameSettings.endStates.TimerUp then
-       statusToReturn = "Time ran out!"
-     else
-       statusToReturn = "Error found"
-     end
+   	if endState == gameSettings.endStates.FoundWinner then
+   		local winnerName = playerManager.getWinnerName()
+   		statusToReturn = "Winner is : " .. winnerName
+   	elseif endState == gameSettings.endStates.TimerUp then
+   		statusToReturn = "Time ran out!"
+   	else
+   		statusToReturn = "Error found"
+   	end
    end
    ```
 
@@ -125,18 +121,18 @@ Use a module function to take information from the correct end state, whether th
 
    ```lua
    function MatchManager.getEndStatus(endState)
-     local statusToReturn
+   	local statusToReturn
 
-     if endState == gameSettings.endStates.FoundWinner then
-       local winnerName = playerManager.getWinnerName()
-       statusToReturn = "Winner is : " .. winnerName
-     elseif endState == gameSettings.endStates.TimerUp then
-       statusToReturn = "Time ran out!"
-     else
-       statusToReturn = "Error found"
-     end
+   	if endState == gameSettings.endStates.FoundWinner then
+   		local winnerName = playerManager.getWinnerName()
+   		statusToReturn = "Winner is : " .. winnerName
+   	elseif endState == gameSettings.endStates.TimerUp then
+   		statusToReturn = "Time ran out!"
+   	else
+   		statusToReturn = "Error found"
+   	end
 
-     return statusToReturn
+   	return statusToReturn
    end
    ```
 
@@ -148,28 +144,27 @@ Get the updated announcement in GameManager and display it to the players using 
 
    ```lua
    while true do
-     displayManager.updateStatus("Waiting for Players")
+   	displayManager.updateStatus("Waiting for Players")
 
-     repeat
-       task.wait(gameSettings.intermissionDuration)
-     until #Players:GetPlayers() >= gameSettings.minimumPlayers
+   	repeat
+   		task.wait(gameSettings.intermissionDuration)
+   	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
-     displayManager.updateStatus("Get ready!")
-     task.wait(gameSettings.transitionTime)
+   	displayManager.updateStatus("Get ready!")
+   	task.wait(gameSettings.transitionTime)
 
-     matchManager.prepareGame()
-     local endState = matchEnd.Event:Wait()
+   	matchManager.prepareGame()
+   	local endState = matchEnd.Event:Wait()
 
-     local endStatus = matchManager.getEndStatus(endState)
+   	local endStatus = matchManager.getEndStatus(endState)
    end
-
    ```
 
 2. To display the returned message in the GUI label, call `displayManager.updateStatus()` and pass in `endStatus`.
 
    ```lua
    local endStatus = matchManager.getEndStatus(endState)
-     displayManager.updateStatus(endStatus)
+   displayManager.updateStatus(endStatus)
    ```
 
 3. So the game pauses to let players see the message, add a wait using `transitionTime`.
@@ -215,35 +210,33 @@ When players move into the transition state, remove their weapons.
 
    ```lua
    local function removePlayerWeapon(whichPlayer)
-     -- Check to see if a player exist in case they disconnected or left.
-     if whichPlayer then
-       local character = whichPlayer.Character
+   	-- Check to see if a player exist in case they disconnected or left.
+   	if whichPlayer then
+   		local character = whichPlayer.Character
 
-       -- If the player has it currently on their character
-       local weapon = character:FindFirstChild("Weapon")
+   		-- If the player has it currently on their character
+   		local weapon = character:FindFirstChild("Weapon")
 
-       if weapon then
-         weapon:Destroy()
-       end
+   		if weapon then
+   			weapon:Destroy()
+   		end
 
-       -- If the player has the weapon in their backpack
-       local backpackWeapon = whichPlayer.Backpack:FindFirstChild("Weapon") 
+   		-- If the player has the weapon in their backpack
+   		local backpackWeapon = whichPlayer.Backpack:FindFirstChild("Weapon")
 
-       if backpackWeapon then
-         backpackWeapon:Destroy()
-       end
-     else
-       print("No player to remove weapon")
-     end
+   		if backpackWeapon then
+   			backpackWeapon:Destroy()
+   		end
+   	else
+   		print("No player to remove weapon")
+   	end
    end
    ```
 
 2. Start a new module function named `removeAllWeapons()`.
 
    ```lua
-   function PlayerManager.removeAllWeapons()
-
-   end
+   function PlayerManager.removeAllWeapons() end
 
    -- Events
    Players.PlayerAdded:Connect(onPlayerJoin)
@@ -255,9 +248,9 @@ When players move into the transition state, remove their weapons.
 
    ```lua
    function PlayerManager.removeAllWeapons()
-     for playerKey, whichPlayer in activePlayers do
-       removePlayerWeapon(whichPlayer)
-     end
+   	for playerKey, whichPlayer in activePlayers do
+   		removePlayerWeapon(whichPlayer)
+   	end
    end
    ```
 
@@ -269,37 +262,36 @@ Cleanup will be its own function in MatchManager. For now, cleanup will just use
 
    ```lua
    function MatchManager.cleanupMatch()
-     playerManager.removeAllWeapons()
+   	playerManager.removeAllWeapons()
    end
 
    matchStart.Event:Connect(startTimer)
    matchEnd.Event:Connect(stopTimer)
 
    return MatchManager
-
    ```
 
 2. Next, call the cleanup function. Open **GameManager** and find the while true do loop. So players have weapons removed during the ending intermission, call `matchManager.cleanupMatch()` before the last `Library.task.wait()`.
 
    ```lua
    while true do
-     displayManager.updateStatus("Waiting for Players")
+   	displayManager.updateStatus("Waiting for Players")
 
-     repeat
-       task.wait(gameSettings.intermissionDuration)
-     until #Players:GetPlayers() >= gameSettings.minimumPlayers
-     
-     displayManager.updateStatus("Get ready!")
-     task.wait(gameSettings.transitionTime)
+   	repeat
+   		task.wait(gameSettings.intermissionDuration)
+   	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
-     matchManager.prepareGame()
-     local endState = matchEnd.Event:Wait()
+   	displayManager.updateStatus("Get ready!")
+   	task.wait(gameSettings.transitionTime)
 
-     local endStatus = matchManager.getEndStatus(endState)
-     displayManager.updateStatus(endStatus)
+   	matchManager.prepareGame()
+   	local endState = matchEnd.Event:Wait()
 
-     matchManager.cleanupMatch()
-     task.wait(gameSettings.transitionTime)
+   	local endStatus = matchManager.getEndStatus(endState)
+   	displayManager.updateStatus(endStatus)
+
+   	matchManager.cleanupMatch()
+   	task.wait(gameSettings.transitionTime)
    end
    ```
 
@@ -351,7 +343,6 @@ First, start a function to send players back to the lobby.
 
    	activePlayers = {}
    end
-
    ```
 
 3. Open MatchManager. Code a new module function named `resetMatch()` and call `playerManager.resetPlayers()`.
@@ -377,19 +368,19 @@ First, start a function to send players back to the lobby.
    		task.wait(gameSettings.intermissionDuration)
    	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
-		displayManager.updateStatus("Get ready!")
-		task.wait(gameSettings.transitionTime)
+   	displayManager.updateStatus("Get ready!")
+   	task.wait(gameSettings.transitionTime)
 
-		matchManager.prepareGame()
-		local endState = matchEnd.Event:Wait()
+   	matchManager.prepareGame()
+   	local endState = matchEnd.Event:Wait()
 
-		local endStatus = matchManager.getEndStatus(endState)
-		displayManager.updateStatus(endStatus)
+   	local endStatus = matchManager.getEndStatus(endState)
+   	displayManager.updateStatus(endStatus)
 
-		matchManager.cleanupMatch()
-		task.wait(gameSettings.transitionTime)
+   	matchManager.cleanupMatch()
+   	task.wait(gameSettings.transitionTime)
 
-		matchManager.resetMatch()
+   	matchManager.resetMatch()
    end
    ```
 
@@ -437,7 +428,6 @@ while true do
 
 	matchManager.resetMatch()
 end
-
 ```
 
 ### MatchManager Script
@@ -522,7 +512,6 @@ matchStart.Event:Connect(startTimer)
 matchEnd.Event:Connect(stopTimer)
 
 return MatchManager
-
 ```
 
 ### PlayerManager Script
@@ -614,7 +603,7 @@ local function removePlayerWeapon(whichPlayer)
 		end
 
 		-- If the player has the weapon in their backpack
-		local backpackWeapon = whichPlayer.Backpack:FindFirstChild("Weapon") 
+		local backpackWeapon = whichPlayer.Backpack:FindFirstChild("Weapon")
 
 		if backpackWeapon then
 			backpackWeapon:Destroy()
@@ -624,12 +613,11 @@ local function removePlayerWeapon(whichPlayer)
 	end
 end
 
-
 function PlayerManager.sendPlayersToMatch()
 	local availableSpawnPoints = spawnLocations:GetChildren()
 
 	for playerKey, whichPlayer in Players:GetPlayers() do
-		table.insert(activePlayers,whichPlayer)
+		table.insert(activePlayers, whichPlayer)
 
 		-- Gets a spawn location and then removes it from the table so the next player gets the next spawn
 		local spawnLocation = table.remove(availableSpawnPoints, 1)
@@ -640,7 +628,7 @@ function PlayerManager.sendPlayersToMatch()
 end
 
 function PlayerManager.getWinnerName()
-  local winningPlayer = activePlayers[1]
+	local winningPlayer = activePlayers[1]
 
 	if winningPlayer then
 		return winningPlayer.Name

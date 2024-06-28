@@ -167,7 +167,7 @@ For loops need a function, or iterator, to iterate over different types of colle
 In Luau, you can iterate over a table using the `in` keyword directly on the table, instead of using an iterator function such as `ipairs()`:
 
 ```lua
-for i, v in {1, 2, 3, 4, 5} do
+for i, v in { 1, 2, 3, 4, 5 } do
 	print(i, v)
 end
 ```
@@ -175,7 +175,7 @@ end
 Generalized iteration also lets you use the `__iter` metamethod to create a custom iterator function. This contrived example iterates over an array in reverse order, from its last element to its first:
 
 ```lua
-local myTable = {1, 2, 3, 4, 5}
+local myTable = { 1, 2, 3, 4, 5 }
 
 myMetatable = {
 	__iter = function(self)
@@ -192,7 +192,7 @@ myMetatable = {
 				end
 			end
 		end
-	end
+	end,
 }
 
 setmetatable(myTable, myMetatable)
@@ -207,7 +207,7 @@ end
 The `ipairs()` function returns an iterator that iterates through numerical indices in a table and returns an `index` and `value` for each element. This makes it appropriate for arrays, where all indices are numeric.
 
 ```lua
-local array = {"a", "b", "c", "d", "e"}
+local array = { "a", "b", "c", "d", "e" }
 for index, value in ipairs(array) do
 	print(index, value)
 end
@@ -232,7 +232,7 @@ local dictionary = {
 	[5] = "c",
 	[true] = "d",
 	["World"] = "f",
-	[false] = "e"
+	[false] = "e",
 }
 for key, value in pairs(dictionary) do
 	print(key, value)

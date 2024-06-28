@@ -17,13 +17,13 @@ This article will cover using them, and have a practical script example where yo
 
 ```lua
 local myDictionary = {
-  ["Blue Player"] = "Ana",
-  ["Gold Player"] = "Binh",
-  ["Red Player"] = "Cate",
+	["Blue Player"] = "Ana",
+	["Gold Player"] = "Binh",
+	["Red Player"] = "Cate",
 }
 
 for key, value in pairs(myDictionary) do
-  print(key .. " is " .. value)
+	print(key .. " is " .. value)
 end
 ```
 
@@ -31,15 +31,15 @@ end
 
 ```lua
 local inventory = {
-    ["Gold Bricks"] = 43,
-    Carrots = 3,
-    Torches  = 2,
+	["Gold Bricks"] = 43,
+	Carrots = 3,
+	Torches = 2,
 }
 
 print("You have:")
 
 for itemName, itemValue in pairs(inventory) do
-    print(itemValue, itemName)
+	print(itemValue, itemName)
 end
 ```
 
@@ -57,10 +57,10 @@ You have:
 `ipairs()` is used with **arrays**. The "i" in `ipairs()` stands for "index." Use ipairs() and arrays in combination with a for loop to work with ordered values like leaderboards. An example is below.
 
 ```lua
-local players = {"Ali", "Ben", "Cammy"}
+local players = { "Ali", "Ben", "Cammy" }
 
 for playerRank, playerName in ipairs(players) do
-    print("Winner #" .. playerRank .. " is " .. playerName)
+	print("Winner #" .. playerRank .. " is " .. playerName)
 end
 ```
 
@@ -82,10 +82,10 @@ Use `pairs()` to see what was picked, and then `ipairs()` to print the list of i
 
    ```lua
    local menu = {
-     cabbage = false,
-     beef = false,
-     tomato = false,
-     noodles = false,
+   	cabbage = false,
+   	beef = false,
+   	tomato = false,
+   	noodles = false,
    }
    ```
 
@@ -104,9 +104,9 @@ Use `pairs()` to see what was picked, and then `ipairs()` to print the list of i
 
    -- Adds customer's choices to their soup
    for menuChoice, value in pairs(menu) do
-    if value then
-      table.insert(isInSoup, menuChoice)
-    end
+   	if value then
+   		table.insert(isInSoup, menuChoice)
+   	end
    end
    ```
 
@@ -119,10 +119,10 @@ Use `pairs()` to see what was picked, and then `ipairs()` to print the list of i
    ```lua
    -- Prints soup order from "isInSoup"
    if isInSoup then
-     print("You ordered soup with: ")
-     for index, soupIngredient in ipairs(isInSoup) do
-       print(soupIngredient)
-     end
+   	print("You ordered soup with: ")
+   	for index, soupIngredient in ipairs(isInSoup) do
+   		print(soupIngredient)
+   	end
    end
    ```
 
@@ -130,12 +130,12 @@ Use `pairs()` to see what was picked, and then `ipairs()` to print the list of i
 
    ```lua
    if isInSoup then
-     print("You ordered soup with: ")
-     for index, soupIngredient in ipairs(isInSoup) do
-       print(soupIngredient)
-     end
+   	print("You ordered soup with: ")
+   	for index, soupIngredient in ipairs(isInSoup) do
+   		print(soupIngredient)
+   	end
    else
-     print("Nothing was selected. Are you not hungry?")
+   	print("Nothing was selected. Are you not hungry?")
    end
    ```
 

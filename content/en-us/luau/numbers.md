@@ -10,11 +10,11 @@ The **number** data type, or `double`, represents a [double-precision (64-bit) f
 The sign of the number indicates whether it's positive or negative. For example, `1` is positive and `-1` is negative. In Luau, the number `-0` is equivalent to `0`.
 
 ```lua
-print(0 == -0)  --> true
-print(-0 > 1)  --> false
-print(-0 < 1)  --> true
-print(-0 > -1)  --> true
-print(-0 < -1)  --> false
+print(0 == -0) --> true
+print(-0 > 1) --> false
+print(-0 < 1) --> true
+print(-0 > -1) --> true
+print(-0 < -1) --> false
 ```
 
 ## Number Classifications
@@ -59,13 +59,13 @@ local testInt = 5
 local testDecimal = 9.12761656
 local testString = "Hello"
 
-print(type(testInt))  --> number
-print(type(testDecimal))  --> number
-print(type(testString))  --> string
+print(type(testInt)) --> number
+print(type(testDecimal)) --> number
+print(type(testString)) --> string
 
-print(typeof(testInt))  --> number
-print(typeof(testDecimal))  --> number
-print(typeof(testString))  --> string
+print(typeof(testInt)) --> number
+print(typeof(testDecimal)) --> number
+print(typeof(testString)) --> string
 ```
 
 ## Rounding Functions
@@ -78,10 +78,10 @@ You can round numbers using `Library.math.floor()`, `Library.math.ceil()`, or `L
 - To round a number towards zero, use `Library.math.modf()`. It also returns the fractional difference of the rounded number as a second result.
 
 ```lua
-print(math.floor(3.3))  --> 3
-print(math.floor(-3.3))  --> -4
-print(math.ceil(3.3))  --> 4
-print(math.ceil(-3.3))  --> -3
-print(math.modf(3.3))  --> 3 0.2999999999999998
-print(math.modf(-3.3))  --> -3 -0.2999999999999998
+print(math.floor(3.3)) --> 3
+print(math.floor(-3.3)) --> -4
+print(math.ceil(3.3)) --> 4
+print(math.ceil(-3.3)) --> -3
+print(math.modf(3.3)) --> 3 0.2999999999999998
+print(math.modf(-3.3)) --> -3 -0.2999999999999998
 ```

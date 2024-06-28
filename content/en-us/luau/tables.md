@@ -25,7 +25,7 @@ To create an array using a Luau table, declare the values in sequential order, s
 
 ```lua
 -- Construct an array with three items
-local testArray = {"A string", 3.14159, workspace.Camera}
+local testArray = { "A string", 3.14159, workspace.Camera }
 print(testArray)
 ```
 
@@ -35,7 +35,7 @@ To read from an array, add a pair of square brackets after its reference and spe
 
 ```lua
 -- Construct an array with three items
-local testArray = {"A string", 3.14159, workspace.Camera}
+local testArray = { "A string", 3.14159, workspace.Camera }
 
 print(testArray[1]) -- A string
 print(testArray[2]) -- 3.14159
@@ -51,7 +51,7 @@ Unlike some languages, Luau uses 1-based indexing for arrays, so the first item 
 To define or rewrite the value of an array at an index, declare the index number in square brackets (`[index]`) followed by `=` and the value:
 
 ```lua
-local testArray = {"A string", 3.14159, workspace.Camera}
+local testArray = { "A string", 3.14159, workspace.Camera }
 
 testArray[2] = 12345
 testArray[4] = "New string"
@@ -65,7 +65,7 @@ print(testArray[4]) -- New string
 To iterate over an array, you can use a `for` loop. Because the arrays have numerical indices, you can also use a numeric `for` loop from **1** to the length of the array (`#array`).
 
 ```lua
-local testArray = {"A string", 3.14159, workspace.Camera, "New string"}
+local testArray = { "A string", 3.14159, workspace.Camera, "New string" }
 
 -- Loop using general iteration
 for index, value in testArray do
@@ -97,10 +97,10 @@ There are two built-in ways to insert an item to the **end** of an array:
 - Add the new item to the array using the `array[#array+1]` syntax.
 
 ```lua
-local testArray = {"A string", 3.14159}
+local testArray = { "A string", 3.14159 }
 
 table.insert(testArray, "New string")
-testArray[#testArray+1] = "Another new string"
+testArray[#testArray + 1] = "Another new string"
 
 print(testArray[3]) -- New string
 print(testArray[4]) -- Another new string
@@ -109,7 +109,7 @@ print(testArray[4]) -- Another new string
 To insert an item between the start and end of an array, include a position value as the second argument of `Library.table.insert()`. This inserts the new item and pushes the following items up one index position.
 
 ```lua
-local testArray = {"First item", "Next item"}
+local testArray = { "First item", "Next item" }
 
 table.insert(testArray, 2, "NEW ITEM #2")
 
@@ -123,7 +123,7 @@ print(testArray[3]) -- Next item
 To remove an item from an array, use `Library.table.remove()`. This removes the item at the specified position and moves any following items back one index position.
 
 ```lua
-local testArray = {"First item", "Next item", "Last item"}
+local testArray = { "First item", "Next item", "Last item" }
 
 table.remove(testArray, 2)
 
@@ -143,7 +143,7 @@ To create a dictionary table, define each **key** followed by `=` and the **valu
 local testDictionary = {
 	FruitName = "Lemon",
 	FruitColor = "Yellow",
-	Sour = true
+	Sour = true,
 }
 ```
 
@@ -154,7 +154,7 @@ local part = Instance.new("Part")
 
 local testDictionary = {
 	PartType = "Block",
-	[part] = true
+	[part] = true,
 }
 ```
 
@@ -167,7 +167,7 @@ local part = Instance.new("Part")
 
 local testDictionary = {
 	PartType = "Block",
-	[part] = true
+	[part] = true,
 }
 -- Include quotes for string keys
 print(testDictionary["PartType"]) -- Block
@@ -182,7 +182,7 @@ To define or rewrite the value of a new or existing dictionary key, declare the 
 ```lua
 local testDictionary = {
 	FruitName = "Lemon",
-	Sour = true
+	Sour = true,
 }
 
 -- Change value of existing keys
@@ -205,7 +205,7 @@ To iterate over a dictionary, use the global `pairs()` function in a `for` loop:
 local testDictionary = {
 	FruitName = "Lemon",
 	FruitColor = "Yellow",
-	Sour = true
+	Sour = true,
 }
 
 for key, value in pairs(testDictionary) do
@@ -231,7 +231,7 @@ To remove or erase a key-value pair from a dictionary, set its value for a key t
 local testDictionary = {
 	FruitName = "Lemon",
 	FruitColor = "Yellow",
-	Sour = true
+	Sour = true,
 }
 
 testDictionary["Sour"] = nil
@@ -250,7 +250,7 @@ FruitColor Yellow
 If you store a table in a new variable, Luau doesn't create a copy of that table. Instead, the variable becomes a **reference**, or pointer, to the original table. Any reference to a table reflects any changes to the original table:
 
 ```lua
-local originalArray = {10, 20}
+local originalArray = { 10, 20 }
 
 local arrayReference = originalArray
 
@@ -280,7 +280,7 @@ To copy a table without any nested tables, Luau offers the `Library.table.clone(
 local original = {
 	key = "value",
 	engine = "Roblox",
-	playerID = 505306092
+	playerID = 505306092,
 }
 
 local clone = table.clone(original)
@@ -310,13 +310,13 @@ local original = {
 	key = "value",
 	playerInfo = {
 		playerID = 505306092,
-		playerName = "PlayerName"
+		playerName = "PlayerName",
 	},
 	otherInfo = {
 		{
-			{1, 3, 5, 7, 9}
-		}
-	}
+			{ 1, 3, 5, 7, 9 },
+		},
+	},
 }
 
 local clone = deepCopy(original)

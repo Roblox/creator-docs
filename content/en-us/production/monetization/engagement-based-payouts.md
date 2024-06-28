@@ -97,7 +97,9 @@ end
 -- Detect character parts touching teleporter
 teleporter.Touched:Connect(function(otherPart)
 	local player = Players:GetPlayerFromCharacter(otherPart.Parent)
-	if not player then return end
+	if not player then
+		return
+	end
 
 	if not player:GetAttribute("CharacterPartsTouching") then
 		player:SetAttribute("CharacterPartsTouching", 0)
@@ -109,7 +111,9 @@ teleporter.Touched:Connect(function(otherPart)
 		teleportPlayer(player)
 	else
 		-- Show purchase modal, using debounce to show once every few seconds at most
-		if not showModal then return end
+		if not showModal then
+			return
+		end
 		showModal = false
 		task.delay(5, function()
 			showModal = true

@@ -49,12 +49,10 @@ So the animation swap applies to all players, the script will be stored in Serve
 local Players = game:GetService("Players")
 local runAnimation = "rbxassetid://616163682"
 
-local function onCharacterAdded(character)
-
-end
+local function onCharacterAdded(character) end
 
 local function onPlayerAdded(player)
-    player.CharacterAppearanceLoaded:Connect(onCharacterAdded)
+	player.CharacterAppearanceLoaded:Connect(onCharacterAdded)
 end
 
 Players.PlayerAdded:Connect(onPlayerAdded)
@@ -108,11 +106,11 @@ Default animations are accessed through a player's **Humanoid** object. In this 
    local runAnimation = "rbxassetid://616163682"
 
    local function onCharacterAdded(character)
-       local humanoid = character:WaitForChild("Humanoid")
+   	local humanoid = character:WaitForChild("Humanoid")
    end
 
    local function onPlayerAdded(player)
-       player.CharacterAppearanceLoaded:Connect(onCharacterAdded)
+   	player.CharacterAppearanceLoaded:Connect(onCharacterAdded)
    end
 
    Players.PlayerAdded:Connect(onPlayerAdded)
@@ -125,17 +123,16 @@ Default animations are accessed through a player's **Humanoid** object. In this 
    local runAnimation = "rbxassetid://616163682"
 
    local function onCharacterAdded(character)
-       local humanoid = character:WaitForChild("Humanoid")
+   	local humanoid = character:WaitForChild("Humanoid")
 
-       local animateScript = character:WaitForChild("Animate")
+   	local animateScript = character:WaitForChild("Animate")
    end
 
    local function onPlayerAdded(player)
-       player.CharacterAppearanceLoaded:Connect(onCharacterAdded)
+   	player.CharacterAppearanceLoaded:Connect(onCharacterAdded)
    end
 
    Players.PlayerAdded:Connect(onPlayerAdded)
-
    ```
 
 3. Accessing different animations can be done using the dot operator, such as `animateScript.run`. To change the run, set the animation ID to the one stored in `runAnimation`.
@@ -145,14 +142,14 @@ Default animations are accessed through a player's **Humanoid** object. In this 
    local runAnimation = "rbxassetid://616163682"
 
    local function onCharacterAdded(character)
-       local humanoid = character:WaitForChild("Humanoid")
+   	local humanoid = character:WaitForChild("Humanoid")
 
-       local animateScript = character:WaitForChild("Animate")
-       animateScript.run.RunAnim.AnimationId = runAnimation
+   	local animateScript = character:WaitForChild("Animate")
+   	animateScript.run.RunAnim.AnimationId = runAnimation
    end
 
    local function onPlayerAdded(player)
-       player.CharacterAppearanceLoaded:Connect(onCharacterAdded)
+   	player.CharacterAppearanceLoaded:Connect(onCharacterAdded)
    end
 
    Players.PlayerAdded:Connect(onPlayerAdded)
@@ -228,7 +225,7 @@ local proximityPrompt = shockButton.ProximityPrompt
 local shockParticle = shockButton.ExplosionParticle
 
 local function onShockTrigger(player)
-    shockParticle:Emit(100)
+	shockParticle:Emit(100)
 end
 
 proximityPrompt.Triggered:Connect(onShockTrigger)
@@ -252,9 +249,7 @@ Animations that the player uses are stored on the player's `Class.Animator` obje
    local shockAnimation = Instance.new("Animation")
    shockAnimation.AnimationId = "rbxassetid://3716468774"
 
-   local function onShockTrigger(player)
-
-   end
+   local function onShockTrigger(player) end
    ```
 
 2. Create a new variable named `shockAnimationTrack`. On the player's Animator, call `LoadAnimation`, passing in the previously created animation.
@@ -288,9 +283,9 @@ Whenever someone triggers the ProximityPrompt on the button, it'll play an anima
 
    ```lua
    local function onShockTrigger(player)
-       shockParticle:Emit(100)
+   	shockParticle:Emit(100)
 
-       shockAnimationTrack:Play()
+   	shockAnimationTrack:Play()
    end
    ```
 
@@ -298,10 +293,10 @@ Whenever someone triggers the ProximityPrompt on the button, it'll play an anima
 
    ```lua
    local function onShockTrigger(player)
-       shockParticle:Emit(100)
+   	shockParticle:Emit(100)
 
-       shockAnimationTrack:Play()
-       humanoid.WalkSpeed = 0
+   	shockAnimationTrack:Play()
+   	humanoid.WalkSpeed = 0
    end
    ```
 
@@ -313,11 +308,11 @@ Just how parts have Touched events, animations have events such as `Class.Animat
 
    ```lua
    local function onShockTrigger(player)
-       shockParticle:Emit(100)
+   	shockParticle:Emit(100)
 
-       shockAnimationTrack:Play()
-       humanoid.WalkSpeed = 0
-       shockAnimationTrack.Stopped:Wait()
+   	shockAnimationTrack:Play()
+   	humanoid.WalkSpeed = 0
+   	shockAnimationTrack.Stopped:Wait()
    end
    ```
 
@@ -325,12 +320,12 @@ Just how parts have Touched events, animations have events such as `Class.Animat
 
    ```lua
    local function onShockTrigger(player)
-       shockParticle:Emit(100)
+   	shockParticle:Emit(100)
 
-       shockAnimationTrack:Play()
-       humanoid.WalkSpeed = 0
-       shockAnimationTrack.Stopped:Wait()
-       humanoid.WalkSpeed = 16
+   	shockAnimationTrack:Play()
+   	humanoid.WalkSpeed = 0
+   	shockAnimationTrack.Stopped:Wait()
+   	humanoid.WalkSpeed = 16
    end
    ```
 

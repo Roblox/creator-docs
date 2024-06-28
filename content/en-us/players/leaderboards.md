@@ -20,9 +20,7 @@ To set up the leaderboard and add players when they enter the experience:
    ```lua
    local Players = game:GetService("Players")
 
-   local function leaderboardSetup(player)
-
-   end
+   local function leaderboardSetup(player) end
 
    -- Connect the "leaderboardSetup()" function to the "PlayerAdded" event
    Players.PlayerAdded:Connect(leaderboardSetup)

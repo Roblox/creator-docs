@@ -43,9 +43,7 @@ You can access services with the `Class.ServiceProvider:GetService()|GetService`
    ```lua
    local Players = game:GetService("Players")
 
-   local function onPlayerAdded(player)
-
-   end
+   local function onPlayerAdded(player) end
 
    Players.PlayerAdded:Connect(onPlayerAdded)
    ```
@@ -76,8 +74,8 @@ To make a user's points display in the leaderboard, all you need to do is create
 
    local function onPlayerAdded(player)
    	local leaderstats = Instance.new("Folder")
-      leaderstats.Name = "leaderstats"
-      leaderstats.Parent = player
+   	leaderstats.Name = "leaderstats"
+   	leaderstats.Parent = player
    end
 
    Players.PlayerAdded:Connect(onPlayerAdded)
@@ -104,14 +102,14 @@ To add a stat which will track a player's points, a new `IntValue` object can be
 local Players = game:GetService("Players")
 
 local function onPlayerAdded(player)
-  local leaderstats = Instance.new("Folder")
-  leaderstats.Name = "leaderstats"
-  leaderstats.Parent = player
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
 
-  local points = Instance.new("IntValue")
-  points.Name = "Points"
-  points.Value = 0
-  points.Parent = leaderstats
+	local points = Instance.new("IntValue")
+	points.Name = "Points"
+	points.Value = 0
+	points.Parent = leaderstats
 end
 
 Players.PlayerAdded:Connect(onPlayerAdded)
@@ -130,7 +128,7 @@ Each user should earn a point for each second they are alive. A `while` loop and
 Players.PlayerAdded:Connect(onPlayerAdded)
 
 while true do
-  task.wait(1)
+	task.wait(1)
 end
 ```
 
@@ -145,11 +143,11 @@ An array is a list of items stored in order. Each item can be accessed by its **
 
 ```lua
 while true do
-  task.wait(1)
-  local playerList = Players:GetPlayers()
-  for currentPlayer = 1, #playerList do
-    -- Add your logic here for each player in the playerList
-  end
+	task.wait(1)
+	local playerList = Players:GetPlayers()
+	for currentPlayer = 1, #playerList do
+		-- Add your logic here for each player in the playerList
+	end
 end
 ```
 
@@ -165,13 +163,13 @@ Objects stored in an array are accessed using **square brackets** - for instance
 
 ```lua
 while true do
-  task.wait(1)
-  local playerList = Players:GetPlayers()
-  for currentPlayer = 1, #playerList do
-    local player = playerList[currentPlayer]
-    local points = player.leaderstats.Points
-    points.Value += 1
-  end
+	task.wait(1)
+	local playerList = Players:GetPlayers()
+	for currentPlayer = 1, #playerList do
+		local player = playerList[currentPlayer]
+		local points = player.leaderstats.Points
+		points.Value += 1
+	end
 end
 ```
 
@@ -202,18 +200,18 @@ Although you included user in the `onCharacterAdded` function's parameters, the 
 
 ```lua
 local function onPlayerAdded(player)
-  local leaderstats = Instance.new("Folder")
-  leaderstats.Name = "leaderstats"
-  leaderstats.Parent = player
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
 
-  local points = Instance.new("IntValue")
-  points.Name = "Points"
-  points.Value = 0
-  points.Parent = leaderstats
+	local points = Instance.new("IntValue")
+	points.Name = "Points"
+	points.Value = 0
+	points.Parent = leaderstats
 
-  player.CharacterAdded:Connect(function(character)
-    onCharacterAdded(character, player)
-  end)
+	player.CharacterAdded:Connect(function(character)
+		onCharacterAdded(character, player)
+	end)
 end
 ```
 
@@ -227,7 +225,7 @@ The Humanoid is found inside the Character model, but the contents of that model
 local Players = game:GetService("Players")
 
 local function onCharacterAdded(character, player)
-  local humanoid = character:WaitForChild("Humanoid")
+	local humanoid = character:WaitForChild("Humanoid")
 end
 ```
 
@@ -241,12 +239,12 @@ The function you need to connect to the Died event is very short and will only e
 local Players = game:GetService("Players")
 
 local function onCharacterAdded(character, player)
-  local humanoid = character:WaitForChild("Humanoid")
+	local humanoid = character:WaitForChild("Humanoid")
 
-  humanoid.Died:Connect(function()
-    local points = player.leaderstats.Points
-    points.Value = 0
-  end)
+	humanoid.Died:Connect(function()
+		local points = player.leaderstats.Points
+		points.Value = 0
+	end)
 end
 ```
 
@@ -262,20 +260,20 @@ Attributes allow you to customize objects in Roblox with your own data. An attri
 
 ```lua
 local function onPlayerAdded(player)
-  local leaderstats = Instance.new("Folder")
-  leaderstats.Name = "leaderstats"
-  leaderstats.Parent = player
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
 
-  local points = Instance.new("IntValue")
-  points.Name = "Points"
-  points.Value = 0
-  points.Parent = leaderstats
+	local points = Instance.new("IntValue")
+	points.Name = "Points"
+	points.Value = 0
+	points.Parent = leaderstats
 
-  player:SetAttribute("IsAlive", false)
+	player:SetAttribute("IsAlive", false)
 
-  player.CharacterAdded:Connect(function(character)
-    onCharacterAdded(character, player)
-  end)
+	player.CharacterAdded:Connect(function(character)
+		onCharacterAdded(character, player)
+	end)
 end
 ```
 
@@ -288,15 +286,15 @@ Once the user's character model respawns, the value of `IsAlive` needs to be cha
 local Players = game:GetService("Players")
 
 local function onCharacterAdded(character, player)
-  player:SetAttribute("IsAlive", true)
+	player:SetAttribute("IsAlive", true)
 
-  local humanoid = character:WaitForChild("Humanoid")
+	local humanoid = character:WaitForChild("Humanoid")
 
-  humanoid.Died:Connect(function()
-    local points = player.leaderstats.Points
-    points.Value = 0
-    player:SetAttribute("IsAlive", false)
-  end)
+	humanoid.Died:Connect(function()
+		local points = player.leaderstats.Points
+		points.Value = 0
+		player:SetAttribute("IsAlive", false)
+	end)
 end
 ```
 
@@ -304,17 +302,17 @@ Finally, `IsAlive` should be **checked** before any point is awarded in the `whi
 
 ```lua
 while true do
-  task.wait(1)
-  local playerList = Players:GetPlayers()
+	task.wait(1)
+	local playerList = Players:GetPlayers()
 
-  for currentPlayer = 1, #playerList do
-    local player = playerList[currentPlayer]
+	for currentPlayer = 1, #playerList do
+		local player = playerList[currentPlayer]
 
-    if player:GetAttribute("IsAlive") then
-      local points = player.leaderstats.Points
-      points.Value += 1
-    end
-  end
+		if player:GetAttribute("IsAlive") then
+			local points = player.leaderstats.Points
+			points.Value += 1
+		end
+	end
 end
 ```
 
@@ -332,44 +330,44 @@ This is just the start: you can continue improving your experience for your user
 local Players = game:GetService("Players")
 
 local function onCharacterAdded(character, player)
-  player:SetAttribute("IsAlive", true)
-  local humanoid = character:WaitForChild("Humanoid")
+	player:SetAttribute("IsAlive", true)
+	local humanoid = character:WaitForChild("Humanoid")
 
-  humanoid.Died:Connect(function()
-    local points = player.leaderstats.Points
-    points.Value = 0
-    player:SetAttribute("IsAlive", false)
-  end)
+	humanoid.Died:Connect(function()
+		local points = player.leaderstats.Points
+		points.Value = 0
+		player:SetAttribute("IsAlive", false)
+	end)
 end
 
 local function onPlayerAdded(player)
-  local leaderstats = Instance.new("Folder")
-  leaderstats.Name = "leaderstats"
-  leaderstats.Parent = player
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
 
-  local points = Instance.new("IntValue")
-  points.Name = "Points"
-  points.Value = 0
-  points.Parent = leaderstats
+	local points = Instance.new("IntValue")
+	points.Name = "Points"
+	points.Value = 0
+	points.Parent = leaderstats
 
-  player:SetAttribute("IsAlive", false)
+	player:SetAttribute("IsAlive", false)
 
-  player.CharacterAdded:Connect(function(character)
-    onCharacterAdded(character, player)
-  end)
+	player.CharacterAdded:Connect(function(character)
+		onCharacterAdded(character, player)
+	end)
 end
 
 Players.PlayerAdded:Connect(onPlayerAdded)
 
 while true do
-  task.wait(1)
-  local playerList = Players:GetPlayers()
-  for i = 1, #playerList do
-    local player = playerList[i]
-    if player:GetAttribute("IsAlive") then
-      local points = player.leaderstats.Points
-      points.Value += 1
-    end
-  end
+	task.wait(1)
+	local playerList = Players:GetPlayers()
+	for i = 1, #playerList do
+		local player = playerList[i]
+		if player:GetAttribute("IsAlive") then
+			local points = player.leaderstats.Points
+			points.Value += 1
+		end
+	end
 end
 ```

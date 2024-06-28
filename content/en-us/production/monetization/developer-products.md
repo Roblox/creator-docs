@@ -78,7 +78,7 @@ local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer
 
-local productId = 0000000  -- Change this to your developer product ID
+local productId = 0000000 -- Change this to your developer product ID
 
 -- Function to prompt purchase of the developer product
 local function promptPurchase()
@@ -165,7 +165,7 @@ To get information about a specific Developer Product, such as its price, name, 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
 
-local productId = 000000  -- Change this to your developer product ID
+local productId = 000000 -- Change this to your developer product ID
 
 local productInfo = MarketplaceService:GetProductInfo(productId, Enum.InfoType.Product)
 

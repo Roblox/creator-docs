@@ -36,13 +36,13 @@ Between these two lines of code, implement your own commands and any necessary h
 In order to bind a function to the library, use the `BindCommand` function of `AdminCommands`. When binding a command you will need to specify a table of keywords that, when spoken, will trigger the command, the function that will be triggered, a priority level, and optionally, a description of the command. If you do not specify a privilege level it will default to 0. Priority levels are numerical values used by the `AdminCommands` library to assign a hierarchy of permission amongst users with corresponding levels of granted privilege. When executing a command the speaker must have a privilege level that is greater than or equal to that of the command [Permission Library](#permission-library).
 
 ```lua
-AdminCommands:BindCommand({"keyword1", "keyword2"}, commandName, 1, "Optional description")
+AdminCommands:BindCommand({ "keyword1", "keyword2" }, commandName, 1, "Optional description")
 ```
 
 To unbind you would likewise use `UnbindCommand` and specify a keyword to unbind.
 
 ```lua
-AdminCommands:UnbindCommand({"keyword1"})
+AdminCommands:UnbindCommand({ "keyword1" })
 ```
 
 Altogether, the content of your AdminCommands script should look like the following:
@@ -56,7 +56,7 @@ function commandFunction(commandData)
 	-- Returns true if successful and false otherwise
 end
 
-AdminCommands:BindCommand({"keyword1", "keyword2"}, commandFunction, 1, "Optional description")
+AdminCommands:BindCommand({ "keyword1", "keyword2" }, commandFunction, 1, "Optional description")
 
 return AdminCommands.Run
 ```
@@ -116,22 +116,18 @@ A useful command to have would be one that prints a list of all optional command
 -- Prints a list of all bound commands
 
 function listCommand(commandData)
-
 	Utilities:SendSystemMessage(commandData, "The following commands are available:")
 
 	-- Iterate through the every command and print it out
 
 	for id, command in PublicAPI:GetCommands() do
-
 		Utilities:SendSystemMessage(commandData, string.format("%* requires permission %*.", id, command.Permission))
-
 	end
 
 	return true
-
 end
 
-AdminCommands:BindCommand({"list"}, listCommand, 0, "Prints a list of commands.")
+AdminCommands:BindCommand({ "list" }, listCommand, 0, "Prints a list of commands.")
 ```
 
 Another helpful command allows users to give themselves sparkles. This command requires one parameter when spoken – the targeted user's name. If the user exists, the command will create a Sparkles object in the HumanoidRootPart of that user.
@@ -139,14 +135,16 @@ Another helpful command allows users to give themselves sparkles. This command r
 ```lua
 -- Gives a specified player's character sparkles
 function sparklesCommand(commandData)
-	 -- Error if no parameters are given/spoken
+	-- Error if no parameters are given/spoken
 	if #commandData.Parameters == 0 then
 		return Utilities:NoPlayerSpecified(commandData)
 	end
 	-- Loop through the parameters (execute on every given player's name)
 	for index = 1, #commandData.Parameters do
 		local parameter = commandData.Parameters[index]
-		if (parameter == "me" or parameter == "") then parameter = commandData.Speaker.Name end -- If the parameter is me then the user must be referring to themselves
+		if parameter == "me" or parameter == "" then
+			parameter = commandData.Speaker.Name
+		end -- If the parameter is me then the user must be referring to themselves
 
 		-- Use a helper function to find the player's character and add the sparkles
 		local character = Utilities:GetCharacter(parameter)
@@ -154,17 +152,19 @@ function sparklesCommand(commandData)
 			local sparkles = Instance.new("Sparkles")
 			sparkles.Parent = character:FindFirstChild("HumanoidRootPart")
 
-			Utilities:SendSystemSuccessMessage(commandData, string.format(commandData.Speaker.Name .. "added sparkles to " .. parameter))
+			Utilities:SendSystemSuccessMessage(
+				commandData,
+				string.format(commandData.Speaker.Name .. "added sparkles to " .. parameter)
+			)
 		else
 			Utilities:SendSystemErrorMessage(commandData, string.format("%* is not a valid player.", parameter))
 			return false
 		end
 	end
 	return true
-
 end
 
-AdminCommands:BindCommand({"sparkles"}, sparklesCommand, 1, "Gives the specified player sparkles")
+AdminCommands:BindCommand({ "sparkles" }, sparklesCommand, 1, "Gives the specified player sparkles")
 ```
 
 You can also include an explosion command from the Created an Admin Command tutorial. This command also takes a user's name as a parameter.
@@ -173,23 +173,25 @@ You can also include an explosion command from the Created an Admin Command tuto
 -- Verifies that the given model is a Character and adds an explosion to its HumanoidRootPart
 local function makeExplosion(character)
 	if character and character:FindFirstChild("HumanoidRootPart") then
-			local explosion = Instance.new("Explosion")
-			explosion.Position = character.HumanoidRootPart.Position
-			explosion.Parent = character.HumanoidRootPart
-			return true
+		local explosion = Instance.new("Explosion")
+		explosion.Position = character.HumanoidRootPart.Position
+		explosion.Parent = character.HumanoidRootPart
+		return true
 	end
 	return false
 end
 
 -- Makes a specified player's character explode
 function explodeCommand(commandData)
-	 -- Error if no parameters are given/spoken
+	-- Error if no parameters are given/spoken
 	if #commandData.Parameters == 0 then
 		return Utilities:NoPlayerSpecified(commandData)
 	end
 	for index = 1, #commandData.Parameters do
 		local parameter = tostring(commandData.Parameters[index])
-		if (parameter == "me" or parameter == "") then parameter = commandData.Speaker.Name end -- If the parameter is me then the user must be referring to themselves
+		if parameter == "me" or parameter == "" then
+			parameter = commandData.Speaker.Name
+		end -- If the parameter is me then the user must be referring to themselves
 
 		-- Use a helper function to find the player's character and add the explosion
 		local character = Utilities:GetCharacter(parameter)
@@ -197,7 +199,10 @@ function explodeCommand(commandData)
 		local success = makeExplosion(character)
 
 		if success then
-			Utilities:sendSystemSuccessMessage(commandData, string.format(commandData.Speaker.Name .. " made" .. parameter .. " explode."))
+			Utilities:sendSystemSuccessMessage(
+				commandData,
+				string.format(commandData.Speaker.Name .. " made" .. parameter .. " explode.")
+			)
 		else
 			Utilities:SendSystemErrorMessage(commandData, string.format("%* is not a valid player.", parameter))
 			return false
@@ -206,7 +211,7 @@ function explodeCommand(commandData)
 	return true
 end
 
-AdminCommands:BindCommand({"explode"}, explodeCommand, 1, "Makes the specified player explode.")
+AdminCommands:BindCommand({ "explode" }, explodeCommand, 1, "Makes the specified player explode.")
 ```
 
 ## Permission Library

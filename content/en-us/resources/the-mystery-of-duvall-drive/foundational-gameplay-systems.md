@@ -69,13 +69,13 @@ Interpolation lets object properties and attributes seamlessly change from one v
 ```lua
 interpolants = {
 	objectParam = "TextLabel",
-      property = "TextTransparency",
-      keys = {
-		{value = 1},
-	      {time = .5, value = 0},
-		{time = 2.25, value = 0},
-	      {time = 3, value = 1}
-      }
+	property = "TextTransparency",
+	keys = {
+		{ value = 1 },
+		{ time = 0.5, value = 0 },
+		{ time = 2.25, value = 0 },
+		{ time = 3, value = 1 },
+	},
 }
 ```
 
@@ -135,17 +135,17 @@ Parameters allowed us to refer to objects that do not even exist in the beginnin
 To run an event, we would either use a remote event from clients, or a function from the server. In the following example, we passed a couple of parameters to the `RootObject` and `isEnabled` events. Internally, an instance of the event description was created, params resolved to actual objects, and the function returned an id for the event instance.
 
 ```lua
- local params = {
+local params = {
 	RootObject = workspace.Content.Interior.Foyer["Ritual-DemoVersion"]["SealDropoff_" .. missionName],
-	isEnabled = enabled
+	isEnabled = enabled,
 }
-local eventId = eventManagerFunc:Invoke("Run", {eventName = "Ritual_Init_Dropoff", eventParams = params} )
+local eventId = eventManagerFunc:Invoke("Run", { eventName = "Ritual_Init_Dropoff", eventParams = params })
 ```
 
 We could stop running an event by calling function with "Stop":
 
 ```lua
-eventManagerFunc:Invoke("Stop", {eventInstId = cooldownId} )
+eventManagerFunc:Invoke("Stop", { eventInstId = cooldownId })
 ```
 
 Interpolants or other actions that are "cosmetic" (do not change simulation for all players) could be run on clients, which could result in smoother interpolation. In the event description, we could provide a default value for all actions as onServer = true (without it, default is client). Each action can overwrite it by setting its own onServer.
@@ -164,7 +164,7 @@ We could call `Class.Script|Scripts` at specific keyframes in the **Scripts** se
 
 ```lua
 scripts = {
-	{startTime = 2, scriptName = "EnablePlayerControls", params = {true}, onServer = false }
+	{ startTime = 2, scriptName = "EnablePlayerControls", params = { true }, onServer = false },
 }
 ```
 
@@ -186,7 +186,7 @@ We have limited support for playing [non-positional audio](../../sound/objects.m
 
 ```lua
 sounds = {
-{startTime = 2, name = "VisTech_ethereal_voices-001"},
+	{ startTime = 2, name = "VisTech_ethereal_voices-001" },
 }
 ```
 
@@ -198,7 +198,13 @@ We could define camera shakes in the **cameraShakes** section, like so:
 
 ```lua
 cameraShakes = {
-	{startTime = 15, shake = "small", sustainDuration = 7, targets = emConfig.ShakeTargets.allPlayers, onServer = true},
+	{
+		startTime = 15,
+		shake = "small",
+		sustainDuration = 7,
+		targets = emConfig.ShakeTargets.allPlayers,
+		onServer = true,
+	},
 }
 ```
 

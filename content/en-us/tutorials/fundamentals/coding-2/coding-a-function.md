@@ -22,12 +22,11 @@ While the code version might look like something like this:
 
 ```lua
 local function makeDinner()
-    -- List of instructions
+	-- List of instructions
 end
 
 -- Tell the code to run
 makeDinner()
-
 ```
 
 ## Creating a Function
@@ -46,9 +45,7 @@ Examples: `addPoints()`, `restartGame()`, `rainFlamingLlamas()`
 - Type `local function printFood()`, then press <kbd>Enter</kbd> on your keyboard. It should autocomplete the function to look like:
 
 ```lua
-local function printFood()
-
-end
+local function printFood() end
 ```
 
 <Alert severity="warning">
@@ -61,7 +58,7 @@ All of the code for your function has to be typed between the lines `local funct
 
 ```lua
 local function printFood()
-      -- Code here runs when the function is called
+	-- Code here runs when the function is called
 end
 
 -- Code here will not run
@@ -73,7 +70,7 @@ Information that is inside the function, or can be used by the function, is in *
 
 ```lua
 local function printFood()
-   print("Curry!")
+	print("Curry!")
 end
 ```
 
@@ -89,7 +86,7 @@ There's one more thing we need to do before the function will work, and that's t
 
    ```lua
    local function printFood()
-      print("Curry!")
+   	print("Curry!")
    end
 
    printFood()

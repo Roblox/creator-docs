@@ -275,7 +275,7 @@ local characters = {
 	Janus = 20,
 	Diana = 18,
 	Venus = 25,
-	Neptune = 62
+	Neptune = 62,
 }
 for char, age in characters do
 	local success, errorMessage = pcall(function()
@@ -338,13 +338,13 @@ Metadata is managed by expanding the `Class.GlobalDataStore:SetAsync()|SetAsync(
     local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
 
     local setOptions = Instance.new("DataStoreSetOptions")
-    setOptions:SetMetadata({["ExperienceElement"] = "Fire"})
+    setOptions:SetMetadata({ ["ExperienceElement"] = "Fire" })
 
     local success, errorMessage = pcall(function()
-        experienceStore:SetAsync("User_1234", 50, {1234}, setOptions)
+    	experienceStore:SetAsync("User_1234", 50, { 1234 }, setOptions)
     end)
     if not success then
-        print(errorMessage)
+    	print(errorMessage)
     end
     ```
 
@@ -362,15 +362,15 @@ Metadata is managed by expanding the `Class.GlobalDataStore:SetAsync()|SetAsync(
   local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
 
   local success, currentExperience, keyInfo = pcall(function()
-      return experienceStore:GetAsync("User_1234")
+  	return experienceStore:GetAsync("User_1234")
   end)
   if success then
-      print(currentExperience)
-      print(keyInfo.Version)
-      print(keyInfo.CreatedTime)
-      print(keyInfo.UpdatedTime)
-      print(keyInfo:GetUserIds())
-      print(keyInfo:GetMetadata())
+  	print(currentExperience)
+  	print(keyInfo.Version)
+  	print(keyInfo.CreatedTime)
+  	print(keyInfo.UpdatedTime)
+  	print(keyInfo:GetUserIds())
+  	print(keyInfo:GetMetadata())
   end
   ```
 
@@ -382,22 +382,22 @@ Metadata is managed by expanding the `Class.GlobalDataStore:SetAsync()|SetAsync(
   local nicknameStore = DataStoreService:GetDataStore("Nicknames")
 
   local function makeNameUpper(currentName, keyInfo)
-      local nameUpper = string.upper(currentName)
-      local userIDs = keyInfo:GetUserIds()
-      local metadata = keyInfo:GetMetadata()
-      return nameUpper, userIDs, metadata
+  	local nameUpper = string.upper(currentName)
+  	local userIDs = keyInfo:GetUserIds()
+  	local metadata = keyInfo:GetMetadata()
+  	return nameUpper, userIDs, metadata
   end
 
   local success, updatedName, keyInfo = pcall(function()
-      return nicknameStore:UpdateAsync("User_1234", makeNameUpper)
+  	return nicknameStore:UpdateAsync("User_1234", makeNameUpper)
   end)
   if success then
-      print(updatedName)
-      print(keyInfo.Version)
-      print(keyInfo.CreatedTime)
-      print(keyInfo.UpdatedTime)
-      print(keyInfo:GetUserIds())
-      print(keyInfo:GetMetadata())
+  	print(updatedName)
+  	print(keyInfo.Version)
+  	print(keyInfo.CreatedTime)
+  	print(keyInfo.UpdatedTime)
+  	print(keyInfo:GetUserIds())
+  	print(keyInfo:GetMetadata())
   end
   ```
 
@@ -457,25 +457,30 @@ local maxDate = DateTime.fromUniversalTime(2020, 10, 09, 01, 42)
 
 -- Get the version closest to the given time
 local listSuccess, pages = pcall(function()
-    return experienceStore:ListVersionsAsync(DATA_STORE_KEY, Enum.SortDirection.Descending, nil, maxDate.UnixTimestampMillis)
+	return experienceStore:ListVersionsAsync(
+		DATA_STORE_KEY,
+		Enum.SortDirection.Descending,
+		nil,
+		maxDate.UnixTimestampMillis
+	)
 end)
 if listSuccess then
-    local items = pages:GetCurrentPage()
-    if #items > 0 then
-        -- Read the closest version
-        local closestEntry = items[1]
-        local success, value, info = pcall(function()
-            return experienceStore:GetVersionAsync(DATA_STORE_KEY, closestEntry.Version)
-        end)
-        -- Restore current value by overwriting with the closest version
-        if success then
-            local setOptions = Instance.new("DataStoreSetOptions")
-            setOptions:SetMetadata(info:GetMetadata())
-            experienceStore:SetAsync(DATA_STORE_KEY, value, nil, setOptions)
-        end
-    else
-        -- No entries found
-    end
+	local items = pages:GetCurrentPage()
+	if #items > 0 then
+		-- Read the closest version
+		local closestEntry = items[1]
+		local success, value, info = pcall(function()
+			return experienceStore:GetVersionAsync(DATA_STORE_KEY, closestEntry.Version)
+		end)
+		-- Restore current value by overwriting with the closest version
+		if success then
+			local setOptions = Instance.new("DataStoreSetOptions")
+			setOptions:SetMetadata(info:GetMetadata())
+			experienceStore:SetAsync(DATA_STORE_KEY, value, nil, setOptions)
+		end
+	else
+		-- No entries found
+	end
 end
 ```
 

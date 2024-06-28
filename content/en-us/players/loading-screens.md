@@ -47,10 +47,10 @@ textLabel.Parent = screenGui
 -- Remove the default loading screen
 ReplicatedFirst:RemoveDefaultLoadingScreen()
 
-task.wait(5)  -- Force screen to appear for a minimum number of seconds
+task.wait(5) -- Force screen to appear for a minimum number of seconds
 
 if not game:IsLoaded() then
- game.Loaded:Wait()
+	game.Loaded:Wait()
 end
 
 screenGui:Destroy()
@@ -76,7 +76,7 @@ screenGui.Parent = playerGui
 -- Remove the default loading screen
 ReplicatedFirst:RemoveDefaultLoadingScreen()
 
-task.wait(5)  -- Force screen to appear for a minimum number of seconds
+task.wait(5) -- Force screen to appear for a minimum number of seconds
 
 if not game:IsLoaded() then
 	game.Loaded:Wait()
@@ -125,13 +125,13 @@ loadingRing.Parent = screenGui
 ReplicatedFirst:RemoveDefaultLoadingScreen()
 
 local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
+local tween = TweenService:Create(loadingRing, tweenInfo, { Rotation = 360 })
 tween:Play()
 
-task.wait(5)  -- Force screen to appear for a minimum number of seconds
+task.wait(5) -- Force screen to appear for a minimum number of seconds
 
 if not game:IsLoaded() then
- game.Loaded:Wait()
+	game.Loaded:Wait()
 end
 
 screenGui:Destroy()

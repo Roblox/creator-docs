@@ -43,34 +43,34 @@ To create a module script:
    PlayerData.COIN_KEY_NAME = "Coins"
 
    local playerData = {
-     --[[
-       [userId: string] = {
-         ["Coins"] = coinAmount: number
-       }
-     ]]
+   	--[[
+          [userId: string] = {
+            ["Coins"] = coinAmount: number
+          }
+        ]]
    }
 
    local DEFAULT_PLAYER_DATA = {
-     [PlayerData.COIN_KEY_NAME] = 0
+   	[PlayerData.COIN_KEY_NAME] = 0,
    }
 
    local function getData(player)
-     local data = playerData[tostring(player.UserId)] or DEFAULT_PLAYER_DATA
-     playerData[tostring(player.UserId)] = data
-     return data
+   	local data = playerData[tostring(player.UserId)] or DEFAULT_PLAYER_DATA
+   	playerData[tostring(player.UserId)] = data
+   	return data
    end
 
    function PlayerData.getValue(player, key)
-     return getData(player)[key]
+   	return getData(player)[key]
    end
 
    function PlayerData.updateValue(player, key, updateFunction)
-     local data = getData(player)
-     local oldValue = data[key]
-     local newValue = updateFunction(oldValue)
+   	local data = getData(player)
+   	local oldValue = data[key]
+   	local newValue = updateFunction(oldValue)
 
-     data[key] = newValue
-     return newValue
+   	data[key] = newValue
+   	return newValue
    end
 
    return PlayerData
@@ -128,13 +128,13 @@ To create a module script:
 
    ```lua
    local DEFAULT_PLAYER_DATA = {
-    [PlayerData.COIN_KEY_NAME] = 0
+   	[PlayerData.COIN_KEY_NAME] = 0,
    }
 
    local function getData(player)
-     local data = playerData[tostring(player.UserId)] or DEFAULT_PLAYER_DATA
-     playerData[tostring(player.UserId)] = data
-     return data
+   	local data = playerData[tostring(player.UserId)] or DEFAULT_PLAYER_DATA
+   	playerData[tostring(player.UserId)] = data
+   	return data
    end
    ```
 
@@ -147,16 +147,16 @@ To create a module script:
 
    ```lua
    function PlayerData.getValue(player, key)
-    return getData(player)[key]
+   	return getData(player)[key]
    end
 
    function PlayerData.updateValue(player, key, updateFunction)
-     local data = getData(player)
-     local oldValue = data[key]
-     local newValue = updateFunction(oldValue)
+   	local data = getData(player)
+   	local oldValue = data[key]
+   	local newValue = updateFunction(oldValue)
 
-     data[key] = newValue
-     return newValue
+   	data[key] = newValue
+   	return newValue
    end
    ```
 
@@ -183,35 +183,35 @@ rename the module script to **Leaderboard**.
 
    -- Creating a new leaderboard
    local function setupLeaderboard(player)
-     local leaderstats = Instance.new("Folder")
-     -- 'leaderstats' is a reserved name Roblox recognizes for creating a leaderboard
-     leaderstats.Name = "leaderstats"
-     leaderstats.Parent = player
-     return leaderstats
+   	local leaderstats = Instance.new("Folder")
+   	-- 'leaderstats' is a reserved name Roblox recognizes for creating a leaderboard
+   	leaderstats.Name = "leaderstats"
+   	leaderstats.Parent = player
+   	return leaderstats
    end
 
    -- Creating a new leaderboard stat value
    local function setupStat(leaderstats, statName)
-     local stat = Instance.new("IntValue")
-     stat.Name = statName
-     stat.Value = 0
-     stat.Parent = leaderstats
-     return stat
+   	local stat = Instance.new("IntValue")
+   	stat.Name = statName
+   	stat.Value = 0
+   	stat.Parent = leaderstats
+   	return stat
    end
 
    -- Updating a player's stat value
    function Leaderboard.setStat(player, statName, value)
-     local leaderstats = player:FindFirstChild("leaderstats")
-     if not leaderstats then
-       leaderstats = setupLeaderboard(player)
-     end
+   	local leaderstats = player:FindFirstChild("leaderstats")
+   	if not leaderstats then
+   		leaderstats = setupLeaderboard(player)
+   	end
 
-     local stat = leaderstats:FindFirstChild(statName)
-     if not stat then
-       stat = setupStat(leaderstats, statName)
-     end
+   	local stat = leaderstats:FindFirstChild(statName)
+   	if not stat then
+   		stat = setupStat(leaderstats, statName)
+   	end
 
-     stat.Value = value
+   	stat.Value = value
    end
 
    return Leaderboard
@@ -237,20 +237,20 @@ rename the module script to **Leaderboard**.
    ```lua
    -- Creating a new leaderboard
    local function setupLeaderboard(player)
-     local leaderstats = Instance.new("Folder")
-     -- 'leaderstats' is a reserved name Roblox recognizes for creating a leaderboard
-     leaderstats.Name = "leaderstats"
-     leaderstats.Parent = player
-     return leaderstats
+   	local leaderstats = Instance.new("Folder")
+   	-- 'leaderstats' is a reserved name Roblox recognizes for creating a leaderboard
+   	leaderstats.Name = "leaderstats"
+   	leaderstats.Parent = player
+   	return leaderstats
    end
 
    -- Creating a new leaderboard stat value
    local function setupStat(leaderstats, statName)
-     local stat = Instance.new("IntValue")
-     stat.Name = statName
-     stat.Value = 0
-     stat.Parent = leaderstats
-     return stat
+   	local stat = Instance.new("IntValue")
+   	stat.Name = statName
+   	stat.Value = 0
+   	stat.Parent = leaderstats
+   	return stat
    end
    ```
 
@@ -267,17 +267,17 @@ rename the module script to **Leaderboard**.
    ```lua
    -- Updating a player's stat value
    function Leaderboard.setStat(player, statName, value)
-     local leaderstats = player:FindFirstChild("leaderstats")
-     if not leaderstats then
-       leaderstats = setupLeaderboard(player)
-     end
+   	local leaderstats = player:FindFirstChild("leaderstats")
+   	if not leaderstats then
+   		leaderstats = setupLeaderboard(player)
+   	end
 
-     local stat = leaderstats:FindFirstChild(statName)
-     if not stat then
-       stat = setupStat(leaderstats, statName)
-     end
+   	local stat = leaderstats:FindFirstChild(statName)
+   	if not stat then
+   		stat = setupStat(leaderstats, statName)
+   	end
 
-     stat.Value = value
+   	stat.Value = value
    end
    ```
 
@@ -311,40 +311,40 @@ data. To update **CoinService**:
     local COIN_AMOUNT_TO_ADD = 1
 
     local function updatePlayerCoins(player, updateFunction)
-      -- Update the coin table
-      local newCoinAmount = PlayerData.updateValue(player, COIN_KEY_NAME, updateFunction)
+    	-- Update the coin table
+    	local newCoinAmount = PlayerData.updateValue(player, COIN_KEY_NAME, updateFunction)
 
-      -- Update the coin leaderboard
-      Leaderboard.setStat(player, COIN_KEY_NAME, newCoinAmount)
+    	-- Update the coin leaderboard
+    	Leaderboard.setStat(player, COIN_KEY_NAME, newCoinAmount)
     end
 
     -- Defining the event handler
     local function onCoinTouched(otherPart, coin)
-      if coin:GetAttribute("Enabled") then
-        local character = otherPart.Parent
-        local player = Players:GetPlayerFromCharacter(character)
-        if player then
-          -- Player touched a coin
-          coin.Transparency = 1
-          coin:SetAttribute("Enabled", false)
-          updatePlayerCoins(player, function(oldCoinAmount)
-            oldCoinAmount = oldCoinAmount or 0
-            return oldCoinAmount + COIN_AMOUNT_TO_ADD
-          end)
+    	if coin:GetAttribute("Enabled") then
+    		local character = otherPart.Parent
+    		local player = Players:GetPlayerFromCharacter(character)
+    		if player then
+    			-- Player touched a coin
+    			coin.Transparency = 1
+    			coin:SetAttribute("Enabled", false)
+    			updatePlayerCoins(player, function(oldCoinAmount)
+    				oldCoinAmount = oldCoinAmount or 0
+    				return oldCoinAmount + COIN_AMOUNT_TO_ADD
+    			end)
 
-          task.wait(COOLDOWN)
-          coin.Transparency = 0
-          coin:SetAttribute("Enabled", true)
-        end
-      end
+    			task.wait(COOLDOWN)
+    			coin.Transparency = 0
+    			coin:SetAttribute("Enabled", true)
+    		end
+    	end
     end
 
     -- Setting up event listeners
     for _, coin in coins do
-      coin:SetAttribute("Enabled", true)
-      coin.Touched:Connect(function(otherPart)
-        onCoinTouched(otherPart, coin)
-      end)
+    	coin:SetAttribute("Enabled", true)
+    	coin.Touched:Connect(function(otherPart)
+    		onCoinTouched(otherPart, coin)
+    	end)
     end
     ```
 

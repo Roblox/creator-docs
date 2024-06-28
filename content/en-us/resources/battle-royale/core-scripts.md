@@ -22,9 +22,9 @@ Within `ReplicatedFirst/Configurations/MainConfiguration`, different gameplay mo
 
 ```lua
 local _roleStages = {
-	Lobby = {"Lobby"},
-	Queue = {"Queue"},
-	Gameplay = {"Waiting", "Gameplay", "EndGame"},
+	Lobby = { "Lobby" },
+	Queue = { "Queue" },
+	Gameplay = { "Waiting", "Gameplay", "EndGame" },
 }
 ```
 

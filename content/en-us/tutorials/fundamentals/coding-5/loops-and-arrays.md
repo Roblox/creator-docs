@@ -20,8 +20,7 @@ For the project, find or create a set of three parts to make disappear. The part
 2. In ServerScriptService, insert a new script and create an array to store the parts.
 
    ```lua
-   local pathArray = {
-   }
+   local pathArray = {}
    ```
 
 3. On a single line each, type the name of the parts in the order they should disappear. Using a new line for each value makes it easier to read.
@@ -46,7 +45,7 @@ Use a for loop to go through the array and control how fast the parts should dis
    local pathArray = {
    	workspace.Part1,
    	workspace.Part2,
-   	workspace.Part3
+   	workspace.Part3,
    }
    ```
 
@@ -57,27 +56,26 @@ Use a for loop to go through the array and control how fast the parts should dis
 2. Create a for loop with the following: **Start:** `partIndex = 1`, the index of the first value in the array. **End:** `#pathArray`, the size of that array.
 
    ```lua
-   for partIndex = 1, #pathArray  do
-
+   for partIndex = 1, #pathArray do
    end
    ```
 
 3. So there's a delay before a part disappears, in the loop, add a `Library.task.wait()` using `VANISH_RATE`.
 
    ```lua
-   for partIndex = 1, #pathArray  do
-      task.wait(VANISH_RATE)
+   for partIndex = 1, #pathArray do
+   	task.wait(VANISH_RATE)
    end
    ```
 
 4. To get a part to disappear, create a new variable named `whichPart` and set it equal to `partsArray[partIndex]`. Then, to disappear that part, set it's `CanCollide` property to false and `Transparency` to 1.
 
    ```lua
-   for partIndex = 1, #pathArray  do
-      task.wait(VANISH_RATE)
-      local whichPart = pathArray[partIndex]
-      whichPart.CanCollide = false
-      whichPart.Transparency = 1
+   for partIndex = 1, #pathArray do
+   	task.wait(VANISH_RATE)
+   	local whichPart = pathArray[partIndex]
+   	whichPart.CanCollide = false
+   	whichPart.Transparency = 1
    end
    ```
 
@@ -100,7 +98,7 @@ Right now, the parts disappear forever. To make them reappear, create a second f
 1. After the first loop, add a `Library.task.wait()` to create a short delay before the path reappears.
 
    ```lua
-   for partIndex = 1, #pathArray  do
+   for partIndex = 1, #pathArray do
    	task.wait(VANISH_RATE)
    	local whichPart = pathArray[partIndex]
    	whichPart.CanCollide = false
@@ -115,9 +113,9 @@ Right now, the parts disappear forever. To make them reappear, create a second f
    ```lua
    -- Reset the path by making all parts walkable again
    for partIndex = 1, #pathArray do
-      local whichPart = pathArray[partIndex]
-      whichPart.CanCollide = true
-      whichPart.Transparency = 0
+   	local whichPart = pathArray[partIndex]
+   	whichPart.CanCollide = true
+   	whichPart.Transparency = 0
    end
    ```
 
@@ -137,8 +135,8 @@ The parts disappear and reappear, but only once. To make the code keep repeating
 
    ```lua
    while true do
-      -- Make a part disappear from the array in order
-   	for partIndex = 1, #pathArray  do
+   	-- Make a part disappear from the array in order
+   	for partIndex = 1, #pathArray do
    		task.wait(VANISH_RATE)
    		local whichPart = pathArray[partIndex]
    		whichPart.CanCollide = false
@@ -207,7 +205,7 @@ This will be demonstrated by quickly adding particles to a whole folder of parts
 
    ```lua
    local partsFolder = workspace.PartsFolder
-   
+
    -- Gets an array listing the parts in PartsFolder
    local partsArray = partsFolder:GetChildren()
    ```

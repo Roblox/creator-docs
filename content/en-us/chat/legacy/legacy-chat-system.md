@@ -99,7 +99,7 @@ Channels have several properties that can be used to slightly modify them. For e
 local function Run(ChatService)
 	local myChannel = ChatService:AddChannel("MyChannel")
 
--- Set the message that is shown when a user joins the channel
+	-- Set the message that is shown when a user joins the channel
 	myChannel.WelcomeMessage = "Welcome to my channel!"
 	-- Causes players to automatically join the channel when they enter the game
 	myChannel.AutoJoin = true
@@ -193,13 +193,11 @@ In both types of commands, the module must return a dictionary that says what ty
 ```lua
 local util = require(script.Parent:WaitForChild("Util"))
 
-function ProcessMessage(message, ChatWindow, ChatSettings)
-
-end
+function ProcessMessage(message, ChatWindow, ChatSettings) end
 
 return {
 	[util.KEY_COMMAND_PROCESSOR_TYPE] = util.COMPLETED_MESSAGE_PROCESSOR,
-	[util.KEY_PROCESSOR_FUNCTION] = ProcessMessage
+	[util.KEY_PROCESSOR_FUNCTION] = ProcessMessage,
 }
 ```
 
@@ -227,7 +225,7 @@ end
 
 return {
 	[util.KEY_COMMAND_PROCESSOR_TYPE] = util.COMPLETED_MESSAGE_PROCESSOR,
-	[util.KEY_PROCESSOR_FUNCTION] = ProcessMessage
+	[util.KEY_PROCESSOR_FUNCTION] = ProcessMessage,
 }
 ```
 
@@ -247,7 +245,7 @@ end
 
 return {
 	[util.KEY_COMMAND_PROCESSOR_TYPE] = util.IN_PROGRESS_MESSAGE_PROCESSOR,
-	[util.KEY_PROCESSOR_FUNCTION] = ProcessMessage
+	[util.KEY_PROCESSOR_FUNCTION] = ProcessMessage,
 }
 ```
 
@@ -318,7 +316,7 @@ end
 
 return {
 	[util.KEY_COMMAND_PROCESSOR_TYPE] = util.IN_PROGRESS_MESSAGE_PROCESSOR,
-	[util.KEY_PROCESSOR_FUNCTION] = ProcessMessage
+	[util.KEY_PROCESSOR_FUNCTION] = ProcessMessage,
 }
 ```
 
@@ -376,7 +374,7 @@ end
 
 return {
 	[util.KEY_COMMAND_PROCESSOR_TYPE] = util.IN_PROGRESS_MESSAGE_PROCESSOR,
-	[util.KEY_PROCESSOR_FUNCTION] = ProcessMessage
+	[util.KEY_PROCESSOR_FUNCTION] = ProcessMessage,
 }
 ```
 
@@ -454,20 +452,24 @@ local clientChatModules = messageCreatorModules.Parent
 local ChatSettings = require(clientChatModules:WaitForChild("ChatSettings"))
 local ChatConstants = require(clientChatModules:WaitForChild("ChatConstants"))
 
-
 local function CreateMessageLabel(messageData, channelName)
 	-- Create the GUI objects for the Frame and TextLabel to hold the message
-	local BaseFrame, BaseMessage = util:CreateBaseMessage("", ChatSettings.DefaultFont, ChatSettings.ChatWindowTextSize, ChatSettings.DefaultMessageColor)
+	local BaseFrame, BaseMessage = util:CreateBaseMessage(
+		"",
+		ChatSettings.DefaultFont,
+		ChatSettings.ChatWindowTextSize,
+		ChatSettings.DefaultMessageColor
+	)
 
 	-- Change the background of the Frame to red
-	BaseFrame.BackgroundColor3 = Color3.new(1,0,0)
+	BaseFrame.BackgroundColor3 = Color3.new(1, 0, 0)
 	BaseFrame.BackgroundTransparency = 0
 
 	-- Handle updating placeholder message text
 	local function UpdateTextFunction(messageObject)
-        if messageObject.IsFiltered then
-		   BaseMessage.Text = messageObject.Message
-        end
+		if messageObject.IsFiltered then
+			BaseMessage.Text = messageObject.Message
+		end
 	end
 	UpdateTextFunction(messageData)
 
@@ -479,8 +481,8 @@ local function CreateMessageLabel(messageData, channelName)
 	-- Create fade functions that are called when the chat window fades
 	local FadeParameters = {}
 	FadeParameters[BaseMessage] = {
-		TextTransparency = {FadedIn = 0, FadedOut = 1},
-		TextStrokeTransparency = {FadedIn = 0.75, FadedOut = 1}
+		TextTransparency = { FadedIn = 0, FadedOut = 1 },
+		TextStrokeTransparency = { FadedIn = 0.75, FadedOut = 1 },
 	}
 	local FadeInFunction, FadeOutFunction, UpdateAnimFunction = util:CreateFadeFunctions(FadeParameters)
 
@@ -492,12 +494,12 @@ local function CreateMessageLabel(messageData, channelName)
 		[util.KEY_GET_HEIGHT] = GetHeightFunction,
 		[util.KEY_FADE_IN] = FadeInFunction,
 		[util.KEY_FADE_OUT] = FadeOutFunction,
-		[util.KEY_UPDATE_ANIMATION] = UpdateAnimFunction
+		[util.KEY_UPDATE_ANIMATION] = UpdateAnimFunction,
 	}
 end
 
 return {
 	[util.KEY_MESSAGE_TYPE] = ChatConstants.MessageTypeTime,
-	[util.KEY_CREATOR_FUNCTION] = CreateMessageLabel
+	[util.KEY_CREATOR_FUNCTION] = CreateMessageLabel,
 }
 ```

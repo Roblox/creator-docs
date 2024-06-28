@@ -55,9 +55,7 @@ First, you'll need a function to handle when user input is detected.
 
    local RELOAD_ACTION = "reloadWeapon"
 
-   local function onAction(actionName, inputState, inputObject)
-
-   end
+   local function onAction(actionName, inputState, inputObject) end
 
    local function toolEquipped()
    	tool.Handle.Equip:Play()
@@ -69,7 +67,6 @@ First, you'll need a function to handle when user input is detected.
    ```lua
    local function onAction(actionName, inputState, inputObject)
    	if actionName == RELOAD_ACTION and inputState == Enum.UserInputState.Begin then
-
    	end
    end
    ```
@@ -78,7 +75,7 @@ First, you'll need a function to handle when user input is detected.
 
    ```lua
    local function onAction(actionName, inputState, inputObject)
-   if actionName == RELOAD_ACTION and inputState == Enum.UserInputState.Begin then
+   	if actionName == RELOAD_ACTION and inputState == Enum.UserInputState.Begin then
    		tool.TextureId = "rbxassetid://6593020923"
    		task.wait(2)
    		tool.TextureId = "rbxassetid://92628145"

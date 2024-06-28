@@ -73,7 +73,7 @@ In our demo, portions of the world are cloned from the `Class.ServerStorage` int
 
 ```lua
 local function Init()
-	for _,obj in CollectionService:GetTagged("LocalSpaceRotation") do
+	for _, obj in CollectionService:GetTagged("LocalSpaceRotation") do
 		if obj:IsDescendantOf(workspace) then
 			SetupObj(obj)
 		end
@@ -113,7 +113,12 @@ else
 end
 
 curObjInfo.curAngle += dT * curObjInfo.timeToAngle
-local rotatedLocalCFrame = curObjInfo.origLocalCFrame * CFrame.Angles( curObjInfo.axisMask.X * curObjInfo.curAngle, curObjInfo.axisMask.Y * curObjInfo.curAngle, curObjInfo.axisMask.Z * curObjInfo.curAngle )
+local rotatedLocalCFrame = curObjInfo.origLocalCFrame
+	* CFrame.Angles(
+		curObjInfo.axisMask.X * curObjInfo.curAngle,
+		curObjInfo.axisMask.Y * curObjInfo.curAngle,
+		curObjInfo.axisMask.Z * curObjInfo.curAngle
+	)
 
 if obj:IsA("Model") then
 	obj.PrimaryPart.CFrame = parentTransform * rotatedLocalCFrame
@@ -172,7 +177,7 @@ In addition, we run the sequence to set textures, positions, and brightness, run
 ```lua
 beam.Texture = textures[info.textIdx]
 
-beamPart.Position = Vector3.new( info.center.X + og_center.X, og_center.Y, info.center.Y + og_center.Z )
+beamPart.Position = Vector3.new(info.center.X + og_center.X, og_center.Y, info.center.Y + og_center.Z)
 
 -- Wipe
 beam.Brightness = 10
@@ -196,7 +201,6 @@ end
 task.wait(info.waitTillFlashes)
 
 -- and so on
-
 ```
 
 To check if a player is indoors we use a helper `inVolumesCheckerFunc` function, which goes over pre-placed volumes approximating indoor areas, and checks if player position is inside any of them (PointInABox). We could have used touch-based detection, but we found out that when a player takes a seat inside the volume, they are no longer "touching" the volume. Testing a point in a few boxes is simpler, and we do it only when a player moves far enough from the previously tested position.
@@ -431,7 +435,7 @@ local trigger = model.Trigger
 local left = model.TargetL_Closed
 local right = model.TargetR_Closed
 
-local tweenInfo = TweenInfo.new (
+local tweenInfo = TweenInfo.new(
 	model.Speed.Value, --Time/Speed of Door Tween
 	Enum.EasingStyle.Quart, --Easing Style
 	Enum.EasingDirection.InOut, --EasingDirection
@@ -450,11 +454,11 @@ local DoorState = {
 local doorState = DoorState.Closed
 local playersNear = {}
 
-local tweenL = TweenService:Create(left, tweenInfo, {CFrame = model.TargetL_Open.CFrame})
-local tweenR = TweenService:Create(right, tweenInfo, {CFrame = model.TargetR_Open.CFrame})
+local tweenL = TweenService:Create(left, tweenInfo, { CFrame = model.TargetL_Open.CFrame })
+local tweenR = TweenService:Create(right, tweenInfo, { CFrame = model.TargetR_Open.CFrame })
 
-local tweenLClose = TweenService:Create(left, tweenInfo, {CFrame = model.TargetL_Closed.CFrame})
-local tweenRClose = TweenService:Create(right, tweenInfo, {CFrame = model.TargetR_Closed.CFrame})
+local tweenLClose = TweenService:Create(left, tweenInfo, { CFrame = model.TargetL_Closed.CFrame })
+local tweenRClose = TweenService:Create(right, tweenInfo, { CFrame = model.TargetR_Closed.CFrame })
 
 local function StartOpening()
 	doorState = DoorState.Opening

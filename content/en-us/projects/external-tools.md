@@ -121,17 +121,15 @@ local ReactRoblox = require(ReplicatedStorage.Packages["react-roblox"])
 local handle = Instance.new("ScreenGui", Players.LocalPlayer.PlayerGui)
 local root = ReactRoblox.createRoot(handle)
 
-local helloFrame = React.createElement(
-    "TextLabel", {
-        Text = "Hello World!",
-        Size = UDim2.new(0, 200, 0, 200),
-        Position = UDim2.new(0.5, 0, 0.5, 0),
-        AnchorPoint = Vector2.new(0.5, 0.5),
-        BackgroundColor3 = Color3.fromRGB(248, 217, 109),
-        Font = Enum.Font.LuckiestGuy,
-        TextSize = 24
-    }
-)
+local helloFrame = React.createElement("TextLabel", {
+	Text = "Hello World!",
+	Size = UDim2.new(0, 200, 0, 200),
+	Position = UDim2.new(0.5, 0, 0.5, 0),
+	AnchorPoint = Vector2.new(0.5, 0.5),
+	BackgroundColor3 = Color3.fromRGB(248, 217, 109),
+	Font = Enum.Font.LuckiestGuy,
+	TextSize = 24,
+})
 
 root:render(helloFrame)
 ```

@@ -181,12 +181,12 @@ Each place must be cross-associated so that players can teleport from the lobby 
    ```lua
    -- List of named places in the game
    local _places = {
-    lobby = 0123456789,
-    gameplay_development = 0987654321,
-    queue_default = 0123459876,
-    queue_deathmatch = 0987651234,
-    queue_teamDeathmatch = 0132457689,
-    queue_freePlay = 0678912345
+   	lobby = 0123456789,
+   	gameplay_development = 0987654321,
+   	queue_default = 0123459876,
+   	queue_deathmatch = 0987651234,
+   	queue_teamDeathmatch = 0132457689,
+   	queue_freePlay = 0678912345,
    }
    ```
 
@@ -237,7 +237,7 @@ local _places = {
 	queue_default = 0123459876,
 	queue_deathmatch = 0987651234,
 	queue_teamDeathmatch = 0132457689,
-	queue_freePlay = 0678912345
+	queue_freePlay = 0678912345,
 }
 --------------------------------------
 ```
@@ -266,12 +266,12 @@ local _places = {
    --------------------------------------
    -- List of named places in the game
    local _places = {
-    lobby = 0123456789,
-    gameplay_development = 0987654321,
-    queue_default = 0123459876,
-    queue_deathmatch = 0987651234,
-    queue_teamDeathmatch = 0132457689,
-    queue_freePlay = 0678912345
+   	lobby = 0123456789,
+   	gameplay_development = 0987654321,
+   	queue_default = 0123459876,
+   	queue_deathmatch = 0987651234,
+   	queue_teamDeathmatch = 0132457689,
+   	queue_freePlay = 0678912345,
    }
    --------------------------------------
    ```

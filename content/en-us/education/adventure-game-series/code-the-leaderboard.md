@@ -27,16 +27,14 @@ Whenever a player is added to the experience, they'll need to be added to the le
    ```lua
    -- Creates a leaderboard that shows player variables
 
-   local function onPlayerJoin(player)
-
-   end
+   local function onPlayerJoin(player) end
    ```
 
 3. In `onPlayerJoin`, create a variable named `leaderstats`, and have it create a new **Folder** Instance.
 
    ```lua
    local function onPlayerJoin(player)
-    local leaderstats = Instance.new("Folder")
+   	local leaderstats = Instance.new("Folder")
    end
    ```
 
@@ -44,9 +42,9 @@ Whenever a player is added to the experience, they'll need to be added to the le
 
    ```lua
    local function onPlayerJoin(player)
-      local leaderstats = Instance.new("Folder")
-      leaderstats.Name = "leaderstats"
-      leaderstats.Parent = player
+   	local leaderstats = Instance.new("Folder")
+   	leaderstats.Name = "leaderstats"
+   	leaderstats.Parent = player
    end
    ```
 
@@ -60,9 +58,9 @@ Whenever a player is added to the experience, they'll need to be added to the le
    local Players = game:GetService("Players")
 
    local function onPlayerJoin(player)
-      local leaderstats = Instance.new("Folder")
-      leaderstats.Name = "leaderstats"
-      leaderstats.Parent = player
+   	local leaderstats = Instance.new("Folder")
+   	leaderstats.Name = "leaderstats"
+   	leaderstats.Parent = player
    end
 
    Players.PlayerAdded:Connect(onPlayerJoin)
@@ -89,22 +87,22 @@ Start with coding a stat for gold.
 1. In `OnPlayerJoin`, under `leaderstats.Parent = player`, type `local gold = Instance.new("IntValue")`. This creates a new IntValue and stores it in the variable gold.
 
    ```lua
-    local function onPlayerJoin(player)
-      local leaderstats = Instance.new("Folder")
-      leaderstats.Name = "leaderstats"
-      leaderstats.Parent = player
+   local function onPlayerJoin(player)
+   	local leaderstats = Instance.new("Folder")
+   	leaderstats.Name = "leaderstats"
+   	leaderstats.Parent = player
 
-      local gold = Instance.new("IntValue")
-    end
+   	local gold = Instance.new("IntValue")
+   end
    ```
 
 2. Next, type `gold.Name = "Gold"`. This gives the IntValue a name so you can use it in other scripts. The name will also be shown to players on the leaderboard.
 
    ```lua
-    local function onPlayerJoin(player)
-      local gold = Instance.new("IntValue")
-      gold.Name = "Gold"
-    end
+   local function onPlayerJoin(player)
+   	local gold = Instance.new("IntValue")
+   	gold.Name = "Gold"
+   end
    ```
 
     <Alert severity="warning">
@@ -114,11 +112,11 @@ Start with coding a stat for gold.
 3. On a new line, type `gold.Value = 0`. This sets the starting value for players.
 
    ```lua
-    local function onPlayerJoin(player)
-      local gold = Instance.new("IntValue")
-      gold.Name = "Gold"
-      gold.Value = 0
-    end
+   local function onPlayerJoin(player)
+   	local gold = Instance.new("IntValue")
+   	gold.Name = "Gold"
+   	gold.Value = 0
+   end
    ```
 
     <Alert severity="info">
@@ -128,12 +126,12 @@ Start with coding a stat for gold.
 4. Type `gold.Parent = leaderstats`. This parents the IntValue for gold to leaderstats. If the IntValue is not parented to leaderstats, players won't see it.
 
    ```lua
-    local function onPlayerJoin(player)
-      local gold = Instance.new("IntValue")
-      gold.Name = "Gold"
-      gold.Value = 0
-      gold.Parent = leaderstats
-    end
+   local function onPlayerJoin(player)
+   	local gold = Instance.new("IntValue")
+   	gold.Name = "Gold"
+   	gold.Value = 0
+   	gold.Parent = leaderstats
+   end
    ```
 
 5. Play your project and notice that a leaderboard appears in the top right.
@@ -154,29 +152,29 @@ Remember that the stat names can be anything based off the game design document.
 1. Add a blank line to separate the next stat, then create the item stat by setting up a new IntValue the same way you did for gold.
 
    ```lua
-    local function onPlayerJoin(player)
-      gold.Parent = leaderstats
+   local function onPlayerJoin(player)
+   	gold.Parent = leaderstats
 
-      -- Create the Items stat
-      local items = Instance.new("IntValue")
-      items.Name = "Items"
-      items.Value = 0
-      items.Parent = leaderstats
-    end
+   	-- Create the Items stat
+   	local items = Instance.new("IntValue")
+   	items.Name = "Items"
+   	items.Value = 0
+   	items.Parent = leaderstats
+   end
    ```
 
 2. Create a new stat for the player's bag spaces. Set `spaces.Value` to `2` so players start the experience only being able to hold two items at once, encouraging them buy a new bag as soon as they can.
 
    ```lua
-    local function onPlayerJoin(player)
-      items.Parent = leaderstats
+   local function onPlayerJoin(player)
+   	items.Parent = leaderstats
 
-      -- Create the Spaces stat
-      local spaces = Instance.new("IntValue")
-      spaces.Name = "Spaces"
-      spaces.Value = 2
-      spaces.Parent = leaderstats
-    end
+   	-- Create the Spaces stat
+   	local spaces = Instance.new("IntValue")
+   	spaces.Name = "Spaces"
+   	spaces.Value = 2
+   	spaces.Parent = leaderstats
+   end
    ```
 
 3. Test the project. Players should have a leaderboard showing Gold, Items, and Spaces.
@@ -193,30 +191,30 @@ If the leaderboard doesn't appear, try checking the following below.
 A finished version of the script can be referenced below.
 
 ```lua
- local Players = game:GetService("Players")
+local Players = game:GetService("Players")
 
- -- Creates a leaderboard that shows player variables
- local function onPlayerJoin(player)
-   local leaderstats = Instance.new("Folder")
-   leaderstats.Name = "leaderstats"
-   leaderstats.Parent = player
+-- Creates a leaderboard that shows player variables
+local function onPlayerJoin(player)
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name = "leaderstats"
+	leaderstats.Parent = player
 
-   local gold = Instance.new("IntValue")
-   gold.Name = "Gold"
-   gold.Value = 0
-   gold.Parent = leaderstats
+	local gold = Instance.new("IntValue")
+	gold.Name = "Gold"
+	gold.Value = 0
+	gold.Parent = leaderstats
 
-   local items = Instance.new("IntValue")
-   items.Name = "Items"
-   items.Value = 0
-   items.Parent = leaderstats
+	local items = Instance.new("IntValue")
+	items.Name = "Items"
+	items.Value = 0
+	items.Parent = leaderstats
 
-   local spaces = Instance.new("IntValue")
-   spaces.Name = "Spaces"
-   spaces.Value = 2
-   spaces.Parent = leaderstats
- end
+	local spaces = Instance.new("IntValue")
+	spaces.Name = "Spaces"
+	spaces.Value = 2
+	spaces.Parent = leaderstats
+end
 
- -- Run onPlayerJoin when the PlayerAdded event fires
- Players.PlayerAdded:Connect(onPlayerJoin)
+-- Run onPlayerJoin when the PlayerAdded event fires
+Players.PlayerAdded:Connect(onPlayerJoin)
 ```

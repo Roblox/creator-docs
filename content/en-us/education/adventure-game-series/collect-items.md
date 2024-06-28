@@ -94,16 +94,14 @@ Whenever the tool touches an object, it checks if that object has CanHarvest ins
    local tool = script.Parent
    local toolPart = tool.Handle
 
-   local function onTouch(partTouched)
-
-   end
+   local function onTouch(partTouched) end
    ```
 
 2. In that function, create a local variable named `canHarvest`. Then, use the `FindFirstChild()` function to see if there is CanHarvest boolean in the parent of that part.
 
    ```lua
    local function onTouch(partTouched)
-     local canHarvest = partTouched:FindFirstChild("CanHarvest")
+   	local canHarvest = partTouched:FindFirstChild("CanHarvest")
    end
    ```
 
@@ -111,10 +109,9 @@ Whenever the tool touches an object, it checks if that object has CanHarvest ins
 
    ```lua
    local function onTouch(partTouched)
-     local canHarvest = partTouched:FindFirstChild("CanHarvest")
-     if canHarvest then
-
-     end
+   	local canHarvest = partTouched:FindFirstChild("CanHarvest")
+   	if canHarvest then
+   	end
    end
    ```
 
@@ -122,8 +119,8 @@ Whenever the tool touches an object, it checks if that object has CanHarvest ins
 
    ```lua
    if canHarvest then
-       -- Used for testing if code works
-     print("Found an item")
+   	-- Used for testing if code works
+   	print("Found an item")
    end
    ```
 
@@ -131,10 +128,10 @@ Whenever the tool touches an object, it checks if that object has CanHarvest ins
 
    ```lua
    local function onTouch(partTouched)
-     local canHarvest = partTouched:FindFirstChild("CanHarvest")
-     if canHarvest then
-       print("Found an item")
-     end
+   	local canHarvest = partTouched:FindFirstChild("CanHarvest")
+   	if canHarvest then
+   		print("Found an item")
+   	end
    end
 
    toolPart.Touched:Connect(onTouch)
@@ -200,12 +197,11 @@ Now that the tool script has the playerItems and playerSpaces variables created,
 
    ```lua
    local function onTouch(partTouched)
-     local canHarvest = partTouched.Parent:FindFirstChild("CanHarvest")
-     if canHarvest then
-       if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-
-       end
-     end
+   	local canHarvest = partTouched.Parent:FindFirstChild("CanHarvest")
+   	if canHarvest then
+   		if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
+   		end
+   	end
    end
    ```
 
@@ -217,10 +213,9 @@ Now that the tool script has the playerItems and playerSpaces variables created,
 
    ```lua
    if canHarvest then
-     if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-         playerItems.Value += 1
-
-     end
+   	if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
+   		playerItems.Value += 1
+   	end
    end
    ```
 
@@ -245,10 +240,10 @@ The item will then go back to normal after a short time. This way, players only 
 
    ```lua
    if canHarvest then
-     if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-       playerItems.Value += 1
-       canHarvest.Value = false
-     end
+   	if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
+   		playerItems.Value += 1
+   		canHarvest.Value = false
+   	end
    end
    ```
 
@@ -256,10 +251,10 @@ The item will then go back to normal after a short time. This way, players only 
 
    ```lua
    if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-     playerItems.Value += 1
-     canHarvest.Value = false
-     partTouched.Transparency = 1
-     partTouched.CanCollide = false
+   	playerItems.Value += 1
+   	canHarvest.Value = false
+   	partTouched.Transparency = 1
+   	partTouched.CanCollide = false
    end
    ```
 
@@ -267,11 +262,11 @@ The item will then go back to normal after a short time. This way, players only 
 
    ```lua
    if canHarvest.Value == true and playerItems.Value < playerSpaces.Value then
-     playerItems.Value += 1
-     canHarvest.Value = false
-     partTouched.Transparency = 1
-     partTouched.CanCollide = false
-     task.wait(5)
+   	playerItems.Value += 1
+   	canHarvest.Value = false
+   	partTouched.Transparency = 1
+   	partTouched.CanCollide = false
+   	task.wait(5)
    end
    ```
 

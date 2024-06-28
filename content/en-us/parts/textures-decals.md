@@ -192,9 +192,9 @@ local texture1 = script.Parent.Texture1
 local texture2 = script.Parent.Texture2
 
 local tweenInfo1 = TweenInfo.new(8, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1)
-local tween1 = TweenService:Create(texture1, tweenInfo1, {OffsetStudsV=50})
+local tween1 = TweenService:Create(texture1, tweenInfo1, { OffsetStudsV = 50 })
 local tweenInfo2 = TweenInfo.new(7, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, -1, true)
-local tween2 = TweenService:Create(texture2, tweenInfo2, {OffsetStudsU=50, StudsPerTileU=55, StudsPerTileV=45})
+local tween2 = TweenService:Create(texture2, tweenInfo2, { OffsetStudsU = 50, StudsPerTileU = 55, StudsPerTileV = 45 })
 
 tween1:Play()
 tween2:Play()

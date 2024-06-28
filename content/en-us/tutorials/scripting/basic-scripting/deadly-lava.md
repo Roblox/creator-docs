@@ -48,9 +48,7 @@ Use an **event** to detect when a user touches the lava. Every part has a `Touch
    ```lua
    local lava = script.Parent
 
-   local function kill()
-
-   end
+   local function kill() end
 
    lava.Touched:Connect(kill)
    ```
@@ -66,9 +64,7 @@ Parameters are definitions of what a function expects to receive when it's calle
 ```lua
 local lava = script.Parent
 
-local function kill(otherPart)
-
-end
+local function kill(otherPart) end
 
 lava.Touched:Connect(kill)
 ```
@@ -90,7 +86,7 @@ As previously noted, any body part that touches the lava is part of the Characte
 local lava = script.Parent
 
 local function kill(otherPart)
-  local partParent = otherPart.Parent
+	local partParent = otherPart.Parent
 end
 
 lava.Touched:Connect(kill)
@@ -102,8 +98,8 @@ From the character model, you'll need to get the Humanoid object in order to kil
 local lava = script.Parent
 
 local function kill(otherPart)
-  local partParent = otherPart.Parent
-  local humanoid = partParent:FindFirstChild("Humanoid")
+	local partParent = otherPart.Parent
+	local humanoid = partParent:FindFirstChild("Humanoid")
 end
 
 lava.Touched:Connect(kill)
@@ -119,11 +115,10 @@ There are a variety of [operators](../../../luau/operators.md) that can be used 
 local lava = script.Parent
 
 local function kill(otherPart)
-  local partParent = otherPart.Parent
-  local humanoid = partParent:FindFirstChild("Humanoid")
-  if humanoid then
-
-  end
+	local partParent = otherPart.Parent
+	local humanoid = partParent:FindFirstChild("Humanoid")
+	if humanoid then
+	end
 end
 
 lava.Touched:Connect(kill)
@@ -139,11 +134,11 @@ Now that the `Class.Humanoid` has been checked, its properties can be changed. I
 
 ```lua
 local function kill(otherPart)
-    local partParent = otherPart.Parent
-    local humanoid = partParent:FindFirstChild("Humanoid")
-    if humanoid then
-        humanoid.Health = 0
-    end
+	local partParent = otherPart.Parent
+	local humanoid = partParent:FindFirstChild("Humanoid")
+	if humanoid then
+		humanoid.Health = 0
+	end
 end
 
 lava.Touched:Connect(kill)
@@ -157,11 +152,11 @@ With that, your lava floor is complete! Test your experience and you should find
 local lava = script.Parent
 
 local function kill(otherPart)
-    local partParent = otherPart.Parent
-    local humanoid = partParent:FindFirstChild("Humanoid")
-    if humanoid then
-        humanoid.Health = 0
-    end
+	local partParent = otherPart.Parent
+	local humanoid = partParent:FindFirstChild("Humanoid")
+	if humanoid then
+		humanoid.Health = 0
+	end
 end
 
 lava.Touched:Connect(kill)

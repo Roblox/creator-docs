@@ -306,7 +306,7 @@ To import an animation:
    ```lua
    local animationId = "YOUR_ANIMATION_ID"
    local char = script.Parent
-   local animController = char:FindFirstChildWhichIsA("Humanoid") or   char:FindFirstChildOfClass("AnimationController")
+   local animController = char:FindFirstChildWhichIsA("Humanoid") or char:FindFirstChildOfClass("AnimationController")
 
    local animation = Instance.new("Animation")
    animation.AnimationId = "rbxassetid://" .. tostring(animationId)
