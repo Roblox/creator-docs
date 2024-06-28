@@ -577,7 +577,7 @@ methods:
       If `actionName` key contains a bound action, then `image` is set as the
       image of the touch button.
     description: |
-      SetPosition will set the text shown on a touch button created by
+      SetImage will set the image shown on a touch button created by
       `Class.ContextActionService:BindAction()|BindAction`. Specifically, this
       sets the `Class.ImageLabel.Image` property of the `Class.ImageLabel`
       within the `Class.ImageButton` that would be returned by
@@ -614,7 +614,7 @@ methods:
       Given the name of a bound action with a touch button, sets the position of
       the button within the ContextButtonFrame.
     description: |
-      SetPosition sets the position of a touch button created by
+      SetPosition will set the position of a touch button created by
       `Class.ContextActionService:BindAction()|BindAction`. Specifically, this
       sets the `Class.GuiObject.Position` property of the `Class.ImageButton`
       that would be returned by
