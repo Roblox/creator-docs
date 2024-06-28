@@ -12,20 +12,20 @@ deprecation_message: ''
 items:
   - name: Left
     summary: |
-      The object is on the left side of it's parent (x-axis).
+      The object is on the left side of its parent (x-axis).
     value: 0
     tags: []
     deprecation_message: ''
   - name: Center
     summary: |
-      The object is centered on the center of it's parent (x-axis), expanding
+      The object is centered on the center of its parent (x-axis), expanding
       equally to the left and right of the parent's center.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Right
     summary: |
-      The object is on the right side of it's parent (x-axis).
+      The object is on the right side of its parent (x-axis).
     value: 2
     tags: []
     deprecation_message: ''
