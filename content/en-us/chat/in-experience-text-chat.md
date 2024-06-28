@@ -197,9 +197,9 @@ Though both systems share the same basic chat functionalities, the in-experience
     </tr>
     <tr>
       <td>Display a System Message</td>
-      <td>Custom admin command library</td>
+      <td>`Class.StarterGui:SetCore("ChatMakeSystemMessage", configTable)`</td>
       <td>`Class.TextChannel:DisplaySystemMessage()`</td>
-      <td></td>
+      <td>The `Class.TextChannel.OnIncomingMessage` callback can return a `Class.TextChatMessageProperties` instance to customize the message appearance.</td>
     </tr>
     <tr>
       <td>Disable Chat</td>
