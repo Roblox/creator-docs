@@ -35,3 +35,4 @@ To add clothing details:
 8. Using the **Elastic Deform**, **Inflate**, and **Cloth** tools, make the final adjustments to your mesh so that it sits on top of the mannequin with the final desired shape.
 
    <video controls src="../../../assets/art/accessories/creating/Modeling_07.mp4" width="100%"></video>
+![картинка](https://github.com/Roblox/creator-docs/assets/174310659/f1bc0a81-7ca8-4346-a620-4e06ac35efec)
