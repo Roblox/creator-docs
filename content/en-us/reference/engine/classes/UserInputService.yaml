@@ -1112,8 +1112,8 @@ methods:
       location of the player's `Class.Mouse` in pixels relative to the top left
       corner. This does not account for the `Class.GuiObject|GUI` inset.
 
-      If the location of the mouse pointer is offscreen or the players device
-      does not have a mouse, the value returned will be undetermined.
+      If the location of the mouse pointer is offscreen or the player's device
+      does not have a mouse, the returned value will be undetermined.
 
       As `Class.UserInputService` is client-side only, this function can only be
       used in a `Class.LocalScript`.
