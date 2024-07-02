@@ -1647,9 +1647,9 @@ events:
       Fired immediately after a property of the instance changes.
     description: |
       This event fires immediately after an instance property is changed
-      and works with most use cases (see Limitations below). The new value
-      of a changed property is *not* passed in as a parameter.
-      Therefore, it must be accessed by using `object[property]`.  For example:
+      and it works with most use cases (see limitations below). The new value
+      of a changed property is **not** passed in as a parameter, so it must
+      be accessed by using `object[property]`. For example:
       
       ```
       object.Changed:Connect(function(property)
