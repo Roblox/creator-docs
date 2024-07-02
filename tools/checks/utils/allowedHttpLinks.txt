@@ -199,6 +199,8 @@ https://steameducate.com/
 https://steamiowacity.org/
 https://streetcode.org/
 https://stripe.com/docs/connect/cross-border-payouts
+https://docs.stripe.com/payouts
+https://docs.stripe.com/currencies
 https://docs.stripe.com/currencies/conversions
 https://studio.code.org/s/csp-create-2018/stage/2/puzzle/1?viewAs=Teacher
 https://substance3d.adobe.com/documentation/integrations/roblox-232292566.html
@@ -479,6 +481,7 @@ https://www.youtube.com/watch?v=iHJ49zbGOW8&
 https://www.youtube.com/watch?v=j918PoWWaB0
 https://youtu.be/OEmFocfE0Xs
 https://en.wikipedia.org/wiki/Exponential_backoff
+https://en.wikipedia.org/wiki/Moment_of_inertia
 https://en.wikipedia.org/wiki/Shard_(database_architecture)
 https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch
 https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF
