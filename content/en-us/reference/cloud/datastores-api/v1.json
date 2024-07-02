@@ -152,7 +152,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/data-stores/index.md#scopes).",
             "schema": {
               "type": "string",
               "nullable": true
@@ -299,7 +299,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/data-stores/index.md#scopes).",
             "schema": {
               "type": "string",
               "default": "global",
@@ -475,7 +475,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/data-stores/index.md#scopes).",
             "schema": {
               "type": "string",
               "default": "global",
@@ -604,7 +604,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/data-stores/index.md#scopes).",
             "schema": {
               "type": "string",
               "default": "global",
@@ -688,7 +688,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/data-stores/index.md#scopes).",
             "schema": {
               "type": "string",
               "default": "global",
@@ -877,7 +877,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/data-stores/index.md#scopes).",
             "schema": {
               "type": "string",
               "default": "global",
@@ -1027,7 +1027,7 @@
           {
             "name": "scope",
             "in": "query",
-            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/datastores.md#scopes).",
+            "description": "The value is `global` by default. See [Scopes](../../../cloud-services/data-stores/index.md#scopes).",
             "schema": {
               "type": "string",
               "default": "global",

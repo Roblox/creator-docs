@@ -633,7 +633,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-docs": {
           "category": "Cloud",
           "methodProperties": {
@@ -694,7 +694,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-docs": {
           "category": "Cloud",
           "methodProperties": {
@@ -706,6 +706,663 @@
           "resource": {
             "$ref": "#/components/schemas/Universe",
             "name": "Universe"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store/queues/{queue}/items": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates a new queue item.\n\n If `ttl` is set, the item will automatically be removed from the queue\n after the time interval specified.\n\n If a numerical `priority` is set, the item will be inserted into the queue\n based on the priority value. The higher the value, the closer to the front\n of the queue the item will be. If priority values are the same then the\n item will be inserted after existing values with the same priority.",
+        "operationId": "Cloud_CreateMemoryStoreQueueItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queue",
+            "in": "path",
+            "description": "The queue ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryStoreQueueItem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreQueueItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.queue:write"
+            ],
+            "title": "Create Memory Store Queue Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreQueueItem",
+            "name": "MemoryStoreQueueItem"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store/queues/{queue}/items:discard": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Discards read items from the front of the queue.\n\n Takes a `readId` from a previous `Read` operation.",
+        "operationId": "Cloud_DiscardMemoryStoreQueueItems",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queue",
+            "in": "path",
+            "description": "The queue ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DiscardMemoryStoreQueueItemsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.queue:discard"
+            ],
+            "title": "Discard Memory Store Queue Items"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreQueueItem",
+            "name": "MemoryStoreQueueItem"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store/queues/{queue}/items:read": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Returns the specified number of items at the front of the queue.",
+        "operationId": "Cloud_ReadMemoryStoreQueueItems",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queue",
+            "in": "path",
+            "description": "The queue ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "The number of items to read from the queue\n If unspecified, 1 item will be returned.\n The maximum value is 200; values above 200 will be coerced to 200.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "allOrNothing",
+            "in": "query",
+            "description": "If `all_or_nothing` is true and the requested number of objects is not\n available, will return a 404 Error.\n\n Otherwise, will return the path and read_id of the read operation and a\n list of the MemoryStoreQueue items.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          },
+          {
+            "name": "invisibilityWindow",
+            "in": "query",
+            "description": "Invisibility window for items read, in seconds.\n\n Items read are invisible in subsequent reads during the invisibility\n window duration.\n\n It must be written in seconds greater than 0 and end with `s`.\n\n Defaults to `30s`.",
+            "schema": {
+              "type": "string",
+              "format": "duration",
+              "x-example-values": {
+                "exampleValues": [
+                  "3s",
+                  "3.5s"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadMemoryStoreQueueItemsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.queue:dequeue"
+            ],
+            "title": "Read Memory Store Queue Items"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreQueueItem",
+            "name": "MemoryStoreQueueItem"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store/sorted-maps/{sorted-map}/items": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets and returns items in the map with a given order and filter.",
+        "operationId": "Cloud_ListMemoryStoreSortedMapItems",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of memory store sorted map items to return. The service\n might return fewer than this value. If unspecified, at most 1 memory store\n sorted map items are returned. The maximum value is 100 and higher values\n are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                1
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderBy",
+            "in": "query",
+            "description": "If specified, results are ordered according to the specified fields.\n\n Values must be a comma-separated list of fields, with an optional,\n per-field \" desc\" suffix to sort by descending rather than ascending\n values. You can access subfields with a `.` operator.\n\n Results may be ordered by the following fields: id.\n\n Example: \"id desc\"",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n Filtering conforms to Common Expression Language (CEL). Only the `id`\n and `sortKey` fields are supported. In terms of operators, only `<`, `>`\n and `&&` are allowed'\n\n Example: `id > \"key-001\" && id < \"key-100\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListMemoryStoreSortedMapItemsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:read"
+            ],
+            "title": "List Memory Store Sorted Map Items"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates the specified map item if it doesn't exist.",
+        "operationId": "Cloud_CreateMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The ID to use for the memory store sorted map item, which will become the\n final component of the memory store sorted map item's resource path.\n\n This value should be a 1-127 character string that supports alphanumeric\n and special characters. This id is case sensitive. The id must be url\n encoded if it contains any url breaking special characters.",
+            "schema": {
+              "type": "string"
+            },
+            "x-example-values": {
+              "description": "a 1-127 character string that supports alphanumeric and special characters. This id is case sensitive. The id must be url encoded if it contains any url breaking special characters.",
+              "exampleValues": [
+                "Hello!",
+                "TestValue123"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ],
+            "title": "Create Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store/sorted-maps/{sorted-map}/items/{item}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets and returns the value of the given key in the map.",
+        "operationId": "Cloud_GetMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:read"
+            ],
+            "title": "Get Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Deletes the specified item from the map.",
+        "operationId": "Cloud_DeleteMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ],
+            "title": "Delete Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Updates the specified map item.",
+        "operationId": "Cloud_UpdateMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "allowMissing",
+            "in": "query",
+            "description": "If set to true, and the memory store sorted map item is not found, a memory\n store sorted map item is created.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ],
+            "title": "Update Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/memory-store:flush": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Asynchronously flush all data structures in the universe.",
+        "operationId": "Cloud_FlushMemoryStore",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FlushMemoryStoreRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Operation",
+                  "x-long-running-operation-parameters": {
+                    "metadata": {
+                      "$ref": "#/components/schemas/FlushMemoryStoreMetadata"
+                    },
+                    "response": {
+                      "$ref": "#/components/schemas/FlushMemoryStoreResponse"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store:flush"
+            ],
+            "title": "Flush Memory Store"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStore",
+            "name": "MemoryStore"
           }
         }
       }
@@ -749,7 +1406,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-docs": {
           "category": "Cloud",
           "methodProperties": {
@@ -819,7 +1476,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-docs": {
           "category": "Cloud",
           "methodProperties": {
@@ -1091,6 +1748,173 @@
         }
       }
     },
+    "/cloud/v2/universes/{universe}/places/{place}/user-restrictions/{user-restriction}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Get the user restriction.",
+        "operationId": "Cloud_GetUserRestriction",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user-restriction",
+            "in": "path",
+            "description": "The user-restriction ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRestriction"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:read"
+            ],
+            "title": "Get User Restriction"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Update the user restriction.",
+        "operationId": "Cloud_UpdateUserRestriction",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user-restriction",
+            "in": "path",
+            "description": "The user-restriction ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "updateMask",
+            "in": "query",
+            "description": "The list of fields to update.",
+            "schema": {
+              "type": "string",
+              "format": "field-mask"
+            }
+          },
+          {
+            "name": "idempotencyKey.key",
+            "in": "query",
+            "description": "The unique key to use for idempotency.\n string key = 1;",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idempotencyKey.firstSent",
+            "in": "query",
+            "description": "The timestamp at which the first request was sent.\n\n If this is further in the past than the lifetime of the idempotency key\n (which *may* exceed the annotated minimum lifetime), the server *must*\n return an error.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "x-example-values": {
+                "exampleValues": [
+                  "2023-07-05T12:34:56Z"
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRestriction"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRestriction"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:write"
+            ],
+            "title": "Update User Restriction"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
+          }
+        }
+      }
+    },
     "/cloud/v2/universes/{universe}/subscription-products/{subscription-product}/subscriptions/{subscription}": {
       "get": {
         "tags": [
@@ -1175,12 +1999,238 @@
         }
       }
     },
+    "/cloud/v2/universes/{universe}/user-restrictions/{user-restriction}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Get the user restriction.",
+        "operationId": "Cloud_GetUserRestriction",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user-restriction",
+            "in": "path",
+            "description": "The user-restriction ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRestriction"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:read"
+            ],
+            "title": "Get User Restriction"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Update the user restriction.",
+        "operationId": "Cloud_UpdateUserRestriction",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user-restriction",
+            "in": "path",
+            "description": "The user-restriction ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "updateMask",
+            "in": "query",
+            "description": "The list of fields to update.",
+            "schema": {
+              "type": "string",
+              "format": "field-mask"
+            }
+          },
+          {
+            "name": "idempotencyKey.key",
+            "in": "query",
+            "description": "The unique key to use for idempotency.\n string key = 1;",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idempotencyKey.firstSent",
+            "in": "query",
+            "description": "The timestamp at which the first request was sent.\n\n If this is further in the past than the lifetime of the idempotency key\n (which *may* exceed the annotated minimum lifetime), the server *must*\n return an error.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "x-example-values": {
+                "exampleValues": [
+                  "2023-07-05T12:34:56Z"
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRestriction"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRestriction"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:write"
+            ],
+            "title": "Update User Restriction"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/user-restrictions:listLogs": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "List changes to UserRestriction resources within a given universe.\n This includes both universe-level and place-level restrictions.\n\n For universe-level restriction logs, the `place` field will be empty.",
+        "operationId": "Cloud_ListUserRestrictionLogs",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of UserRestrictionLogs to return. The service may return\n fewer than this value. If unspecified, at most 10 UserRestrictionLogs are\n returned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set to filter the logs returned.\n\n The `filter` field supports a very small number of CEL:\n\n * `user`\n * `place`\n * The `==` comparison operator is available.\n * The `&&` logical operator is also supported.\n\n As an example, filtering for a user and a place takes the form\n `filter=\"user == 'users/123'\" && \"place == 'places/456'\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListUserRestrictionLogsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:read"
+            ],
+            "title": "List User Restriction Logs"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
+          }
+        }
+      }
+    },
     "/cloud/v2/universes/{universe}:restartServers": {
       "post": {
         "tags": [
           "Cloud"
         ],
-        "description": "Restarts all currently running servers for a given universe. Used for\n releasing experience updates.",
+        "description": "Restarts all active servers for a specific universe if and only if a new\n version of the experience has been published. Used for releasing experience\n updates.",
         "operationId": "Cloud_RestartUniverseServers",
         "parameters": [
           {
@@ -1215,7 +2265,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-docs": {
           "category": "Cloud",
           "methodProperties": {
@@ -1236,7 +2286,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Get a user's basic and advanced information.\n\n To access a user's public information, no additional scopes are required.\n\n To access a user's premium or verification status, you need the following\n scopes:\n * user.advanced.read\n\n To access a user's social account information, you need the following\n scopes:\n * user.social.read",
+        "description": "Gets a user's basic and advanced information.\n\n To access a user's public information, no additional scopes are required.\n\n To access a user's premium or verification status, you need the following\n scopes:\n * user.advanced.read\n\n To access a user's social account information, you need the following\n scopes:\n * user.social.read",
         "operationId": "Cloud_GetUser",
         "parameters": [
           {
@@ -1280,7 +2330,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "List inventory items in a user's inventory.\n\n The inventory items returned depend on the target user’s choice under\n **Settings > Privacy > Who can see my inventory?**:\n * If the user granted inventory visibility to \"Everyone,\" then any API key\n or OAuth2 token can be used to view the target’s inventory, no matter what\n scopes it has or who created it.\n * If the user has not granted inventory visibility to \"Everyone\":\n   * Their inventory can still be viewed with an API key created by the\n   target user with **Inventory: Read** permission.\n   * Their inventory can still be viewed with an OAuth2 token if the target\n   user authorizes an app requesting permissions for the\n   `user.inventory-item:read` scope.",
+        "description": "List the inventory items in a user's inventory.\n\n The inventory items returned depend on the target user’s choice under\n **Settings > Privacy > Who can see my inventory?**:\n * If the user granted inventory visibility to \"Everyone,\" then any API key\n or OAuth2 token can be used to view the target’s inventory, no matter what\n scopes it has or who created it.\n * If the user has not granted inventory visibility to \"Everyone\":\n   * Their inventory can still be viewed with an API key created by the\n   target user with **Inventory: Read** permission.\n   * Their inventory can still be viewed with an OAuth2 token if the target\n   user authorizes an app requesting permissions for the\n   `user.inventory-item:read` scope.",
         "operationId": "Cloud_ListInventoryItems",
         "parameters": [
           {
@@ -2127,7 +3177,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-docs": {
           "category": "Cloud",
           "methodProperties": {
@@ -2188,7 +3238,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-docs": {
           "category": "Cloud",
           "methodProperties": {
@@ -2200,6 +3250,663 @@
           "resource": {
             "$ref": "#/components/schemas/Universe",
             "name": "Universe"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/memory-store/queues/{queue}/items": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates a new queue item.\n\n If `ttl` is set, the item will automatically be removed from the queue\n after the time interval specified.\n\n If a numerical `priority` is set, the item will be inserted into the queue\n based on the priority value. The higher the value, the closer to the front\n of the queue the item will be. If priority values are the same then the\n item will be inserted after existing values with the same priority.",
+        "operationId": "Cloud_CreateMemoryStoreQueueItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queue",
+            "in": "path",
+            "description": "The queue ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryStoreQueueItem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreQueueItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.queue:write"
+            ],
+            "title": "Create Memory Store Queue Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreQueueItem",
+            "name": "MemoryStoreQueueItem"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/memory-store/queues/{queue}/items:discard": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Discards read items from the front of the queue.\n\n Takes a `readId` from a previous `Read` operation.",
+        "operationId": "Cloud_DiscardMemoryStoreQueueItems",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queue",
+            "in": "path",
+            "description": "The queue ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DiscardMemoryStoreQueueItemsRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.queue:discard"
+            ],
+            "title": "Discard Memory Store Queue Items"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreQueueItem",
+            "name": "MemoryStoreQueueItem"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/memory-store/queues/{queue}/items:read": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Returns the specified number of items at the front of the queue.",
+        "operationId": "Cloud_ReadMemoryStoreQueueItems",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "queue",
+            "in": "path",
+            "description": "The queue ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": "The number of items to read from the queue\n If unspecified, 1 item will be returned.\n The maximum value is 200; values above 200 will be coerced to 200.",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "allOrNothing",
+            "in": "query",
+            "description": "If `all_or_nothing` is true and the requested number of objects is not\n available, will return a 404 Error.\n\n Otherwise, will return the path and read_id of the read operation and a\n list of the MemoryStoreQueue items.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          },
+          {
+            "name": "invisibilityWindow",
+            "in": "query",
+            "description": "Invisibility window for items read, in seconds.\n\n Items read are invisible in subsequent reads during the invisibility\n window duration.\n\n It must be written in seconds greater than 0 and end with `s`.\n\n Defaults to `30s`.",
+            "schema": {
+              "type": "string",
+              "format": "duration",
+              "x-example-values": {
+                "exampleValues": [
+                  "3s",
+                  "3.5s"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadMemoryStoreQueueItemsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.queue:dequeue"
+            ],
+            "title": "Read Memory Store Queue Items"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreQueueItem",
+            "name": "MemoryStoreQueueItem"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/memory-store/sorted-maps/{sorted-map}/items": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets and returns items in the map with a given order and filter.",
+        "operationId": "Cloud_ListMemoryStoreSortedMapItems",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of memory store sorted map items to return. The service\n might return fewer than this value. If unspecified, at most 1 memory store\n sorted map items are returned. The maximum value is 100 and higher values\n are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                1
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderBy",
+            "in": "query",
+            "description": "If specified, results are ordered according to the specified fields.\n\n Values must be a comma-separated list of fields, with an optional,\n per-field \" desc\" suffix to sort by descending rather than ascending\n values. You can access subfields with a `.` operator.\n\n Results may be ordered by the following fields: id.\n\n Example: \"id desc\"",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n Filtering conforms to Common Expression Language (CEL). Only the `id`\n and `sortKey` fields are supported. In terms of operators, only `<`, `>`\n and `&&` are allowed'\n\n Example: `id > \"key-001\" && id < \"key-100\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListMemoryStoreSortedMapItemsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:read"
+            ],
+            "title": "List Memory Store Sorted Map Items"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates the specified map item if it doesn't exist.",
+        "operationId": "Cloud_CreateMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The ID to use for the memory store sorted map item, which will become the\n final component of the memory store sorted map item's resource path.\n\n This value should be a 1-127 character string that supports alphanumeric\n and special characters. This id is case sensitive. The id must be url\n encoded if it contains any url breaking special characters.",
+            "schema": {
+              "type": "string"
+            },
+            "x-example-values": {
+              "description": "a 1-127 character string that supports alphanumeric and special characters. This id is case sensitive. The id must be url encoded if it contains any url breaking special characters.",
+              "exampleValues": [
+                "Hello!",
+                "TestValue123"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ],
+            "title": "Create Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/memory-store/sorted-maps/{sorted-map}/items/{item}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets and returns the value of the given key in the map.",
+        "operationId": "Cloud_GetMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:read"
+            ],
+            "title": "Get Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Deletes the specified item from the map.",
+        "operationId": "Cloud_DeleteMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ],
+            "title": "Delete Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Updates the specified map item.",
+        "operationId": "Cloud_UpdateMemoryStoreSortedMapItem",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sorted-map",
+            "in": "path",
+            "description": "The sorted-map ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "item",
+            "in": "path",
+            "description": "The item ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "allowMissing",
+            "in": "query",
+            "description": "If set to true, and the memory store sorted map item is not found, a memory\n store sorted map item is created.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store.sorted-map:write"
+            ],
+            "title": "Update Memory Store Sorted Map Item"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStoreSortedMapItem",
+            "name": "MemoryStoreSortedMapItem"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/memory-store:flush": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Asynchronously flush all data structures in the universe.",
+        "operationId": "Cloud_FlushMemoryStore",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FlushMemoryStoreRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Operation",
+                  "x-long-running-operation-parameters": {
+                    "metadata": {
+                      "$ref": "#/components/schemas/FlushMemoryStoreMetadata"
+                    },
+                    "response": {
+                      "$ref": "#/components/schemas/FlushMemoryStoreResponse"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.memory-store:flush"
+            ],
+            "title": "Flush Memory Store"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/MemoryStore",
+            "name": "MemoryStore"
           }
         }
       }
@@ -2243,7 +3950,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-docs": {
           "category": "Cloud",
           "methodProperties": {
@@ -2313,7 +4020,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-docs": {
           "category": "Cloud",
           "methodProperties": {
@@ -2585,6 +4292,173 @@
         }
       }
     },
+    "/v2/universes/{universe}/places/{place}/user-restrictions/{user-restriction}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Get the user restriction.",
+        "operationId": "Cloud_GetUserRestriction",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user-restriction",
+            "in": "path",
+            "description": "The user-restriction ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRestriction"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:read"
+            ],
+            "title": "Get User Restriction"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Update the user restriction.",
+        "operationId": "Cloud_UpdateUserRestriction",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user-restriction",
+            "in": "path",
+            "description": "The user-restriction ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "updateMask",
+            "in": "query",
+            "description": "The list of fields to update.",
+            "schema": {
+              "type": "string",
+              "format": "field-mask"
+            }
+          },
+          {
+            "name": "idempotencyKey.key",
+            "in": "query",
+            "description": "The unique key to use for idempotency.\n string key = 1;",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idempotencyKey.firstSent",
+            "in": "query",
+            "description": "The timestamp at which the first request was sent.\n\n If this is further in the past than the lifetime of the idempotency key\n (which *may* exceed the annotated minimum lifetime), the server *must*\n return an error.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "x-example-values": {
+                "exampleValues": [
+                  "2023-07-05T12:34:56Z"
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRestriction"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRestriction"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:write"
+            ],
+            "title": "Update User Restriction"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
+          }
+        }
+      }
+    },
     "/v2/universes/{universe}/subscription-products/{subscription-product}/subscriptions/{subscription}": {
       "get": {
         "tags": [
@@ -2669,12 +4543,238 @@
         }
       }
     },
+    "/v2/universes/{universe}/user-restrictions/{user-restriction}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Get the user restriction.",
+        "operationId": "Cloud_GetUserRestriction",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user-restriction",
+            "in": "path",
+            "description": "The user-restriction ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRestriction"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:read"
+            ],
+            "title": "Get User Restriction"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Update the user restriction.",
+        "operationId": "Cloud_UpdateUserRestriction",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "user-restriction",
+            "in": "path",
+            "description": "The user-restriction ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "updateMask",
+            "in": "query",
+            "description": "The list of fields to update.",
+            "schema": {
+              "type": "string",
+              "format": "field-mask"
+            }
+          },
+          {
+            "name": "idempotencyKey.key",
+            "in": "query",
+            "description": "The unique key to use for idempotency.\n string key = 1;",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "idempotencyKey.firstSent",
+            "in": "query",
+            "description": "The timestamp at which the first request was sent.\n\n If this is further in the past than the lifetime of the idempotency key\n (which *may* exceed the annotated minimum lifetime), the server *must*\n return an error.",
+            "schema": {
+              "type": "string",
+              "format": "date-time",
+              "x-example-values": {
+                "exampleValues": [
+                  "2023-07-05T12:34:56Z"
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRestriction"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserRestriction"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:write"
+            ],
+            "title": "Update User Restriction"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/user-restrictions:listLogs": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "List changes to UserRestriction resources within a given universe.\n This includes both universe-level and place-level restrictions.\n\n For universe-level restriction logs, the `place` field will be empty.",
+        "operationId": "Cloud_ListUserRestrictionLogs",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of UserRestrictionLogs to return. The service may return\n fewer than this value. If unspecified, at most 10 UserRestrictionLogs are\n returned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set to filter the logs returned.\n\n The `filter` field supports a very small number of CEL:\n\n * `user`\n * `place`\n * The `==` comparison operator is available.\n * The `&&` logical operator is also supported.\n\n As an example, filtering for a user and a place takes the form\n `filter=\"user == 'users/123'\" && \"place == 'places/456'\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListUserRestrictionLogsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:read"
+            ],
+            "title": "List User Restriction Logs"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
+          }
+        }
+      }
+    },
     "/v2/universes/{universe}:restartServers": {
       "post": {
         "tags": [
           "Cloud"
         ],
-        "description": "Restarts all currently running servers for a given universe. Used for\n releasing experience updates.",
+        "description": "Restarts all active servers for a specific universe if and only if a new\n version of the experience has been published. Used for releasing experience\n updates.",
         "operationId": "Cloud_RestartUniverseServers",
         "parameters": [
           {
@@ -2709,7 +4809,7 @@
             }
           }
         },
-        "x-visibility": "BETA",
+        "x-visibility": "STABLE",
         "x-roblox-docs": {
           "category": "Cloud",
           "methodProperties": {
@@ -2730,7 +4830,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Get a user's basic and advanced information.\n\n To access a user's public information, no additional scopes are required.\n\n To access a user's premium or verification status, you need the following\n scopes:\n * user.advanced.read\n\n To access a user's social account information, you need the following\n scopes:\n * user.social.read",
+        "description": "Gets a user's basic and advanced information.\n\n To access a user's public information, no additional scopes are required.\n\n To access a user's premium or verification status, you need the following\n scopes:\n * user.advanced.read\n\n To access a user's social account information, you need the following\n scopes:\n * user.social.read",
         "operationId": "Cloud_GetUser",
         "parameters": [
           {
@@ -2774,7 +4874,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "List inventory items in a user's inventory.\n\n The inventory items returned depend on the target user’s choice under\n **Settings > Privacy > Who can see my inventory?**:\n * If the user granted inventory visibility to \"Everyone,\" then any API key\n or OAuth2 token can be used to view the target’s inventory, no matter what\n scopes it has or who created it.\n * If the user has not granted inventory visibility to \"Everyone\":\n   * Their inventory can still be viewed with an API key created by the\n   target user with **Inventory: Read** permission.\n   * Their inventory can still be viewed with an OAuth2 token if the target\n   user authorizes an app requesting permissions for the\n   `user.inventory-item:read` scope.",
+        "description": "List the inventory items in a user's inventory.\n\n The inventory items returned depend on the target user’s choice under\n **Settings > Privacy > Who can see my inventory?**:\n * If the user granted inventory visibility to \"Everyone,\" then any API key\n or OAuth2 token can be used to view the target’s inventory, no matter what\n scopes it has or who created it.\n * If the user has not granted inventory visibility to \"Everyone\":\n   * Their inventory can still be viewed with an API key created by the\n   target user with **Inventory: Read** permission.\n   * Their inventory can still be viewed with an OAuth2 token if the target\n   user authorizes an app requesting permissions for the\n   `user.inventory-item:read` scope.",
         "operationId": "Cloud_ListInventoryItems",
         "parameters": [
           {
@@ -3003,21 +5103,8 @@
   "components": {
     "schemas": {
       "AcceptGroupJoinRequestRequest": {
-        "required": [
-          "path"
-        ],
         "type": "object",
-        "properties": {
-          "path": {
-            "type": "string",
-            "description": "The name of the group join request.\n\n Format: groups/{group}/join-requests/{group_join_request}",
-            "x-example-values": {
-              "exampleValues": [
-                "groups/123/join-requests/some-group-join-request-id"
-              ]
-            }
-          }
-        },
+        "properties": {},
         "description": "A join request id."
       },
       "AvatarAsset": {
@@ -3225,6 +5312,221 @@
             "bodyAssets"
           ]
         }
+      },
+      "AvatarCreation": {
+        "required": [
+          "displayName",
+          "description"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the avatar creation.\n Format: avatar-creations/{avatar_creation}",
+            "x-example-values": {
+              "exampleValues": [
+                "avatar-creations/123e4567-e89b-12d3-a456-426655440000"
+              ]
+            }
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The name of the avatar being created. This will be the final name for the\n avatar. Must be non-empty. Has a maximum limit of 50 characters.",
+            "x-example-values": {
+              "exampleValues": [
+                "My Avatar"
+              ]
+            }
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the avatar being created. This will be the final\n description for the avatar. Has a maximum limit of 1000 characters.",
+            "x-example-values": {
+              "exampleValues": [
+                "Awesome Avatar!"
+              ]
+            }
+          },
+          "creationState": {
+            "readOnly": true,
+            "enum": [
+              "CREATION_STATE_UNSPECIFIED",
+              "CREATION_STATE_INITIALIZED",
+              "CREATION_STATE_PENDING",
+              "CREATION_STATE_SUCCEEDED",
+              "CREATION_STATE_FAILED"
+            ],
+            "type": "string",
+            "description": "The creation state of the avatar creation.\n Creation is a two steps process where you create and finalized\n the creation by adding the assets later through AddItems call.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | CREATION_STATE_UNSPECIFIED | Default value. |\n  | CREATION_STATE_INITIALIZED | Creation is initialized. |\n  | CREATION_STATE_PENDING | Creation is in progress. |\n  | CREATION_STATE_SUCCEEDED | Creation is succeeded. |\n  | CREATION_STATE_FAILED | Creation is failed. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "CREATION_STATE_UNSPECIFIED"
+              ]
+            }
+          },
+          "moderationState": {
+            "readOnly": true,
+            "enum": [
+              "MODERATION_STATE_UNSPECIFIED",
+              "MODERATION_STATE_PENDING",
+              "MODERATION_STATE_APPROVED",
+              "MODERATION_STATE_REJECTED"
+            ],
+            "type": "string",
+            "description": "The moderation state of the Avatar Body.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | MODERATION_STATE_UNSPECIFIED | Default value. |\n  | MODERATION_STATE_PENDING | Moderation is in progress. |\n  | MODERATION_STATE_APPROVED | Moderation is approved. |\n  | MODERATION_STATE_REJECTED | Moderation is rejected. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "MODERATION_STATE_UNSPECIFIED"
+              ]
+            }
+          },
+          "creationFailureReason": {
+            "readOnly": true,
+            "enum": [
+              "CREATION_FAILURE_REASON_UNSPECIFIED",
+              "CREATION_FAILURE_REASON_VALIDATION_FAILED"
+            ],
+            "type": "string",
+            "description": "The reason of creation failure.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | CREATION_FAILURE_REASON_UNSPECIFIED | Default value. |\n  | CREATION_FAILURE_REASON_VALIDATION_FAILED | Avatar content validation is failing. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "CREATION_FAILURE_REASON_UNSPECIFIED"
+              ]
+            }
+          },
+          "body": {
+            "$ref": "#/components/schemas/AvatarCreation_Body",
+            "description": "Full body including head, torso, arms and legs."
+          },
+          "head": {
+            "$ref": "#/components/schemas/AvatarCreation_Head",
+            "description": "Head including eyelash, eyebrow."
+          }
+        },
+        "description": "Represents the process of creating a new avatar in the system. The resource\n manages the lifecycle of avatar creation, from initial submission to\n finalization, including the addition of necessary items.",
+        "x-resource": true,
+        "x-oneOf": {
+          "type": [
+            "body",
+            "head"
+          ]
+        }
+      },
+      "AvatarCreation_AvatarAsset": {
+        "type": "object",
+        "properties": {
+          "asset": {
+            "type": "string",
+            "description": "Asset ID.\n\n Format: \"assets/123\"\n\n Note: This resource path refers to apis.roblox.com/assets.  That is,\n the full URI of the asset might look like\n \"apis.roblox.com/assets/v1/assets/123\"."
+          }
+        },
+        "description": "AvatarAsset represents an asset that belongs to an avatar."
+      },
+      "AvatarCreation_Body": {
+        "type": "object",
+        "properties": {
+          "assets": {
+            "$ref": "#/components/schemas/AvatarCreation_BodyAssets",
+            "description": "Assets for body avatars"
+          },
+          "outfitId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Unique identifier of an outfit."
+          },
+          "bundleId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Unique identifier of a bundle."
+          }
+        },
+        "description": "Represents the body of avatars which includes assets for the head, arms,\n legs, and torso."
+      },
+      "AvatarCreation_BodyAssets": {
+        "required": [
+          "head",
+          "torso",
+          "rightArm",
+          "leftArm",
+          "rightLeg",
+          "leftLeg"
+        ],
+        "type": "object",
+        "properties": {
+          "head": {
+            "$ref": "#/components/schemas/AvatarCreation_HeadAssets",
+            "description": "Head consisting of multiple assets."
+          },
+          "torso": {
+            "$ref": "#/components/schemas/AvatarCreation_AvatarAsset",
+            "description": "Torso."
+          },
+          "rightArm": {
+            "$ref": "#/components/schemas/AvatarCreation_AvatarAsset",
+            "description": "Right Arm."
+          },
+          "leftArm": {
+            "$ref": "#/components/schemas/AvatarCreation_AvatarAsset",
+            "description": "Left Arm."
+          },
+          "rightLeg": {
+            "$ref": "#/components/schemas/AvatarCreation_AvatarAsset",
+            "description": "Right Leg."
+          },
+          "leftLeg": {
+            "$ref": "#/components/schemas/AvatarCreation_AvatarAsset",
+            "description": "Left Leg."
+          },
+          "hairAccessory": {
+            "$ref": "#/components/schemas/AvatarCreation_AvatarAsset",
+            "description": "Hair accessory."
+          }
+        },
+        "description": "Assets that are part of a body."
+      },
+      "AvatarCreation_Head": {
+        "type": "object",
+        "properties": {
+          "assets": {
+            "$ref": "#/components/schemas/AvatarCreation_HeadAssets",
+            "description": "Assets for head avatars"
+          },
+          "outfitId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Unique identifier of an outfit."
+          },
+          "bundleId": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Unique identifier of a bundle."
+          }
+        },
+        "description": "Represents the head of avatars which includes assets for the head, eyebrow,\n and eyelash."
+      },
+      "AvatarCreation_HeadAssets": {
+        "required": [
+          "dynamicHead"
+        ],
+        "type": "object",
+        "properties": {
+          "dynamicHead": {
+            "$ref": "#/components/schemas/AvatarCreation_AvatarAsset",
+            "description": "Dynamic head asset."
+          },
+          "eyebrowAccessory": {
+            "$ref": "#/components/schemas/AvatarCreation_AvatarAsset",
+            "description": "Eyebrow accessory of head."
+          },
+          "eyelashAccessory": {
+            "$ref": "#/components/schemas/AvatarCreation_AvatarAsset",
+            "description": "Eyelash accessory of head."
+          }
+        },
+        "description": "Assets that are part of a head."
       },
       "AvatarMarketplaceOrder": {
         "type": "object",
@@ -3666,14 +5968,6 @@
               ]
             }
           },
-          "displayName": {
-            "type": "string",
-            "description": "The display name of the product."
-          },
-          "description": {
-            "type": "string",
-            "description": "The description of the product."
-          },
           "basePrice": {
             "$ref": "#/components/schemas/Money",
             "description": "The base price of the product. For more information, see\n [Money](../../cloud/reference/types.md#money). Each product type (such as\n `pluginAssetId`) supports a set of specific prices. Currently, only USD is\n supported.\n\n The actual purchase price is based on this base price, but often differs\n slightly due to locale-specific considerations.\n\n Set this to zero to make the product free."
@@ -3725,7 +6019,7 @@
           "userSeller": {
             "readOnly": true,
             "type": "string",
-            "description": "The Roblox user selling the product. For now, this value is always a\n Roblox user, but code should assume this field may expand to other types\n of sellers, such as groups, in the future."
+            "description": "The Roblox user selling the product."
           },
           "groupSeller": {
             "readOnly": true,
@@ -3926,22 +6220,52 @@
         "description": "Represents a decimal number in a form similar to scientific notation.\n\n Examples:\n  - 17            === `{significand: 17   exponent: 0} (or just {significand:\n    17})`\n  - -0.005        === `{significand: -5   exponent: -3}`\n  - 33.5 million  === `{significand: 335  exponent: 5}`\n  - 11/8 (1.375)  === `{significand: 1375 exponent: -3}`\n\n Note that the range of a Decimal exceeds that of a JSON `number` (double), as\n well as that of a `decimal64`."
       },
       "DeclineGroupJoinRequestRequest": {
-        "required": [
-          "path"
-        ],
+        "type": "object",
+        "properties": {},
+        "description": "A join request id."
+      },
+      "DeveloperProduct": {
         "type": "object",
         "properties": {
           "path": {
             "type": "string",
-            "description": "The name of the group join request.\n\n Format: groups/{group}/join-requests/{group_join_request}",
+            "description": "The resource path of the developer product.\n Format: universes/{universe}/developer-products/{developer_product}",
             "x-example-values": {
               "exampleValues": [
-                "groups/123/join-requests/some-group-join-request-id"
+                "universes/123/developer-products/123"
               ]
             }
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The name of the developer product."
+          },
+          "description": {
+            "type": "string",
+            "description": "A description of the developer product."
+          },
+          "iconAssetId": {
+            "type": "string",
+            "description": "The asset ID of the developer product's icon."
+          },
+          "priceRobux": {
+            "type": "integer",
+            "description": "The price of the developer product in Robux.",
+            "format": "int64"
           }
         },
-        "description": "A join request id."
+        "description": "Represents a developer product.",
+        "x-resource": true
+      },
+      "DiscardMemoryStoreQueueItemsRequest": {
+        "type": "object",
+        "properties": {
+          "readId": {
+            "type": "string",
+            "description": "The `readId` of the previous read operation for which to discard read\n items."
+          }
+        },
+        "description": "Discards read items from the front of the queue."
       },
       "DynamicHead": {
         "required": [
@@ -3976,6 +6300,88 @@
             "eyelashAccessory"
           ]
         }
+      },
+      "FlushMemoryStoreMetadata": {
+        "type": "object",
+        "properties": {},
+        "description": "Represents metadata about the long-running operation corresponding to a\n FlushMemoryStore request.\n\n This is the type of the `Operation.metadata` field in the response to\n `GetOperation` requests for FlushMemoryStore operations."
+      },
+      "FlushMemoryStoreRequest": {
+        "type": "object",
+        "properties": {},
+        "description": "Asynchronously flush all data structures in the universe."
+      },
+      "FlushMemoryStoreResponse": {
+        "type": "object",
+        "properties": {},
+        "description": "Includes the path to the flush operation and a boolean for whether or not the\n operation completed."
+      },
+      "GamePass": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the game pass.\n Format: universes/{universe}/game-passes/{game_pass}",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/game-passes/83167572"
+              ]
+            }
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The displayed name of the game pass."
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the game pass."
+          },
+          "iconAssetId": {
+            "type": "string",
+            "description": "The asset ID of the game pass' icon.\n\n Must be an image asset."
+          },
+          "priceRobux": {
+            "type": "integer",
+            "description": "The price of the game pass, in Robux.",
+            "format": "int32"
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Whether the game pass is available for sale.\n\n When this is true, users can purchase the game pass.",
+            "x-example-values": {
+              "exampleValues": [
+                true
+              ]
+            }
+          },
+          "salesStats": {
+            "$ref": "#/components/schemas/GamePass_SalesStats",
+            "description": "Sales statistics for the game pass."
+          }
+        },
+        "description": "TODO",
+        "x-resource": true
+      },
+      "GamePass_SalesStats": {
+        "type": "object",
+        "properties": {
+          "totalSales": {
+            "type": "integer",
+            "description": "The total number of sales of a game pass.",
+            "format": "int32"
+          },
+          "recentSales": {
+            "type": "integer",
+            "description": "The number of sales of a game pass in the past seven days.",
+            "format": "int32"
+          },
+          "totalEarningsRobux": {
+            "type": "integer",
+            "description": "The total Robux earnings from the game pass, less fees.",
+            "format": "int64"
+          }
+        },
+        "description": "Information about the sales statistics of a game pass."
       },
       "GenerateUserThumbnailMetadata": {
         "type": "object",
@@ -4581,6 +6987,32 @@
         "description": "Represents a data model instance.",
         "x-resource": true
       },
+      "Interval": {
+        "type": "object",
+        "properties": {
+          "startTime": {
+            "type": "string",
+            "description": "Optional. Inclusive start of the interval.\n\n If specified, a Timestamp matching this interval will have to be the same\n or after the start.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "endTime": {
+            "type": "string",
+            "description": "Optional. Exclusive end of the interval.\n\n If specified, a Timestamp matching this interval will have to be before the\n end.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          }
+        },
+        "description": "Represents a time interval, encoded as a Timestamp start (inclusive) and a\n Timestamp end (exclusive).\n\n The start must be less than or equal to the end.\n When the start equals the end, the interval is empty (matches no time).\n When both start and end are unspecified, the interval matches any time."
+      },
       "InventoryItem": {
         "type": "object",
         "properties": {
@@ -4917,6 +7349,40 @@
         },
         "description": "A list of InventoryItems in the parent collection."
       },
+      "ListMemoryStoreSortedMapItemsResponse": {
+        "type": "object",
+        "properties": {
+          "memoryStoreSortedMapItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MemoryStoreSortedMapItem"
+            },
+            "description": "The MemoryStoreSortedMapItems from the specified MemoryStoreSortedMap."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\n page. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of MemoryStoreSortedMapItems in the parent collection."
+      },
+      "ListUserRestrictionLogsResponse": {
+        "type": "object",
+        "properties": {
+          "logs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserRestrictionLog"
+            },
+            "description": "The UserRestrictionLogs from the specified Universe."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\n page. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "Returns a list of change logs applied to UserRestriction resources."
+      },
       "MemoryStore": {
         "type": "object",
         "properties": {
@@ -4956,18 +7422,31 @@
             "type": "string",
             "description": "The resource path of the MemoryStoreQueueItem.\n Format:\n universes/{universe}/memoryStore/scopes/{memory_store_scope}/queues/{memory_store_queue}/items/{memory_store_queue_item}"
           },
-          "value": {
+          "data": {
             "$ref": "#/components/schemas/GoogleProtobufValue",
-            "description": "The value of the queue item"
+            "description": "The value of the queue item."
           },
           "priority": {
-            "type": "integer",
-            "description": "The priority of the queue item",
-            "format": "int32"
+            "type": "number",
+            "description": "The priority of the queue item.",
+            "format": "double"
+          },
+          "ttl": {
+            "writeOnly": true,
+            "type": "string",
+            "description": "The TTL for the item.",
+            "format": "duration",
+            "x-example-values": {
+              "exampleValues": [
+                "3s",
+                "3.5s"
+              ]
+            }
           },
           "expireTime": {
+            "readOnly": true,
             "type": "string",
-            "description": "The expiration time of the item",
+            "description": "The expiration time of the item.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -4975,24 +7454,18 @@
               ]
             }
           },
-          "ttl": {
-            "writeOnly": true,
+          "id": {
+            "readOnly": true,
             "type": "string",
-            "description": "Input only. The TTL for the item.",
-            "format": "duration",
-            "x-example-values": {
-              "exampleValues": [
-                "3.5s"
-              ]
-            }
+            "description": "The name of the item."
           }
         },
         "description": "Represents queue item name.",
         "x-resource": true,
         "x-oneOf": {
           "expiration": [
-            "expireTime",
-            "ttl"
+            "ttl",
+            "expireTime"
           ]
         }
       },
@@ -5028,9 +7501,22 @@
             "type": "string",
             "description": "The server generated tag of an item."
           },
-          "expireTime": {
+          "ttl": {
+            "writeOnly": true,
             "type": "string",
-            "description": "The expiration time of an item.",
+            "description": "The TTL for the item.",
+            "format": "duration",
+            "x-example-values": {
+              "exampleValues": [
+                "3s",
+                "3.5s"
+              ]
+            }
+          },
+          "expireTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The expiration time of the item.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -5038,19 +7524,7 @@
               ]
             }
           },
-          "ttl": {
-            "writeOnly": true,
-            "type": "string",
-            "description": "Input only. The TTL for the item.",
-            "format": "duration",
-            "x-example-values": {
-              "exampleValues": [
-                "3.5s"
-              ]
-            }
-          },
           "id": {
-            "readOnly": true,
             "type": "string",
             "description": "The name of the item."
           },
@@ -5068,8 +7542,8 @@
         "x-resource": true,
         "x-oneOf": {
           "expiration": [
-            "expireTime",
-            "ttl"
+            "ttl",
+            "expireTime"
           ],
           "sortKey": [
             "stringSortKey",
@@ -5164,7 +7638,12 @@
           }
         },
         "description": "A key-value entry in an ordered data store.",
-        "x-resource": true
+        "x-resource": true,
+        "x-oneOf": {
+          "Value": [
+            "value"
+          ]
+        }
       },
       "OrderedDataStoreScope": {
         "type": "object",
@@ -5254,22 +7733,26 @@
           ]
         }
       },
-      "RestartUniverseServersRequest": {
-        "required": [
-          "path"
-        ],
+      "ReadMemoryStoreQueueItemsResponse": {
         "type": "object",
         "properties": {
-          "path": {
+          "readId": {
             "type": "string",
-            "description": "The name of the universe.\n\n Format: universes/{universe}",
-            "x-example-values": {
-              "exampleValues": [
-                "universes/123"
-              ]
-            }
+            "description": "An identifier of the read operation\n\n This can be passed to `:discard` in order to mark the items as processed."
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MemoryStoreQueueItem"
+            },
+            "description": "The items read from the queue"
           }
         },
+        "description": "Returns the specified number of items at the front of the queue"
+      },
+      "RestartUniverseServersRequest": {
+        "type": "object",
+        "properties": {},
         "description": "Restarts all of the universe's servers."
       },
       "RestartUniverseServersResponse": {
@@ -5814,6 +8297,239 @@
           ]
         }
       },
+      "UniverseBadge": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the universe badge.\n Format: universes/{universe}/universe-badges/{universe_badge}",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/universe-badges/123"
+              ]
+            }
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the universe badge was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the universe badge was last updated.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The display name of the badge."
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the badge."
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Whether the badge is enabled.",
+            "x-example-values": {
+              "exampleValues": [
+                true
+              ]
+            }
+          },
+          "iconAssetId": {
+            "type": "string",
+            "description": "The asset ID of the badge's icon."
+          },
+          "statistics": {
+            "$ref": "#/components/schemas/UniverseBadge_Statistics",
+            "description": "Statistics about the badge."
+          },
+          "creationCost": {
+            "$ref": "#/components/schemas/UniverseBadge_CreationCost",
+            "description": "When free badge quota is exhausted (see the checkQuota method), this must\n be specified in order to create a badge, and the `expected_cost_robux`\n field must match the cost of creating a badge."
+          }
+        },
+        "description": "Represents a badge, which is a special award gifted to players when they meet\n a goal within an experience.",
+        "x-resource": true
+      },
+      "UniverseBadge_CreationCost": {
+        "type": "object",
+        "properties": {
+          "expectedCostRobux": {
+            "type": "integer",
+            "description": "The expected cost of creating a badge.\n\n If this does not match the amount the server would charge, badge\n creation will fail.",
+            "format": "int32"
+          },
+          "user": {
+            "type": "string",
+            "description": "Badge creation will be paid for by the user making the request, or\n the user on whose behalf the request is made."
+          },
+          "group": {
+            "type": "string",
+            "description": "Badge creation will be paid for by the group that owns the parent\n experience."
+          }
+        },
+        "description": "Payment information related to creating a badge.",
+        "x-oneOf": {
+          "fundingSource": [
+            "user",
+            "group"
+          ]
+        }
+      },
+      "UniverseBadge_Statistics": {
+        "type": "object",
+        "properties": {
+          "awardCount": {
+            "type": "integer",
+            "description": "The total number of times the badge has been awarded.",
+            "format": "int32"
+          },
+          "pastDayAwardCount": {
+            "type": "integer",
+            "description": "The number of times the badge has been awarded in the past 24 whole\n hours.",
+            "format": "int32"
+          },
+          "awardRate": {
+            "type": "number",
+            "description": "The fraction of users of the experience who have been awarded the badge,\n on a scale from 0.0 to 1.0.",
+            "format": "double"
+          }
+        },
+        "description": "Statistics about a badge."
+      },
+      "UniverseEvent": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the universe event.\n Format: universes/{universe}/events/{universe_event}",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/events/123"
+              ]
+            }
+          },
+          "title": {
+            "type": "string",
+            "description": "The title of the event.",
+            "x-example-values": {
+              "exampleValues": [
+                "My Event"
+              ]
+            }
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the event.",
+            "x-example-values": {
+              "exampleValues": [
+                "This is my event."
+              ]
+            }
+          },
+          "interval": {
+            "$ref": "#/components/schemas/Interval",
+            "description": "The start and/or end times of the event."
+          },
+          "published": {
+            "type": "boolean",
+            "description": "Whether the event is published.\n\n When events are not published, they are only visible to users with the\n appropriate permissions.",
+            "x-example-values": {
+              "exampleValues": [
+                true
+              ]
+            }
+          },
+          "state": {
+            "enum": [
+              "STATE_UNSPECIFIED",
+              "SCHEDULED",
+              "ACTIVE",
+              "FINISHED"
+            ],
+            "type": "string",
+            "description": "The state of the event.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | STATE_UNSPECIFIED | The state of the event is unknown. |\n  | SCHEDULED | The event is scheduled. |\n  | ACTIVE | The event is currently active. |\n  | FINISHED | The event is finished. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "STATE_UNSPECIFIED"
+              ]
+            }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UniverseEvent_Category"
+            },
+            "description": "The categories of the event.\n\n Categories should be ordered by importance/relevance; the first category is\n considered the primary category.\n\n Currently, an event may have at most two categories, though this may change\n in the future."
+          }
+        },
+        "description": "Represents a universe-specific event.",
+        "x-resource": true
+      },
+      "UniverseEvent_Category": {
+        "type": "object",
+        "properties": {
+          "contentUpdate": {
+            "$ref": "#/components/schemas/UniverseEvent_Category_ContentUpdate",
+            "description": "Information about an event related to updated content within then\n experience."
+          },
+          "locationUpdate": {
+            "$ref": "#/components/schemas/UniverseEvent_Category_LocationUpdate",
+            "description": "Information about an update related to a location within the\n experience."
+          },
+          "systemUpdate": {
+            "$ref": "#/components/schemas/UniverseEvent_Category_SystemUpdate",
+            "description": "Information about an update to systems and mechanics within the\n experience."
+          },
+          "activity": {
+            "$ref": "#/components/schemas/UniverseEvent_Category_Activity",
+            "description": "Information about an event related to a specific in-experience\n activity."
+          }
+        },
+        "description": "Information about the specific category of an event.",
+        "x-oneOf": {
+          "details": [
+            "contentUpdate",
+            "locationUpdate",
+            "systemUpdate",
+            "activity"
+          ]
+        }
+      },
+      "UniverseEvent_Category_Activity": {
+        "type": "object",
+        "properties": {},
+        "description": "Information about an event related to a specific in-experience activity."
+      },
+      "UniverseEvent_Category_ContentUpdate": {
+        "type": "object",
+        "properties": {},
+        "description": "Information about an event related to updated content within an\n experience."
+      },
+      "UniverseEvent_Category_LocationUpdate": {
+        "type": "object",
+        "properties": {},
+        "description": "Information about an update related to a location within an experience."
+      },
+      "UniverseEvent_Category_SystemUpdate": {
+        "type": "object",
+        "properties": {},
+        "description": "Information about an update to systems and mechanics within an\n experience."
+      },
       "Universe_SocialLink": {
         "type": "object",
         "properties": {
@@ -6136,6 +8852,155 @@
         "description": "Represents a restriction on a user.",
         "x-resource": true
       },
+      "UserRestrictionLog": {
+        "type": "object",
+        "properties": {
+          "user": {
+            "type": "string",
+            "description": "The user to which this restriction update is applied.",
+            "x-example-values": {
+              "exampleValues": [
+                "users/156"
+              ]
+            }
+          },
+          "place": {
+            "type": "string",
+            "description": "The place in which a user restriction was explicitly updated.\n This field is empty if the log captures a state change applied on the\n universe level.",
+            "x-example-values": {
+              "exampleValues": [
+                "places/456"
+              ]
+            }
+          },
+          "moderator": {
+            "$ref": "#/components/schemas/UserRestrictionLog_Moderator",
+            "description": "The moderator who issued the state change."
+          },
+          "createTime": {
+            "type": "string",
+            "description": "When the change happened.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "active": {
+            "type": "boolean",
+            "description": "Whether the restriction was active after the action\n represented by this log.",
+            "x-example-values": {
+              "exampleValues": [
+                true
+              ]
+            }
+          },
+          "startTime": {
+            "type": "string",
+            "description": "The start time of the restriction.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "duration": {
+            "type": "string",
+            "description": "The duration of the restriction.\n\n If not specified, the restriction is permanent.",
+            "format": "duration",
+            "x-example-values": {
+              "exampleValues": [
+                "3s",
+                "3.5s"
+              ]
+            }
+          },
+          "privateReason": {
+            "type": "string",
+            "description": "The reason the restriction was created.\n\n This field *is not* displayed to the user.",
+            "x-example-values": {
+              "exampleValues": [
+                "some private reason"
+              ]
+            }
+          },
+          "displayReason": {
+            "type": "string",
+            "description": "The user-facing reason the restriction was created.\n\n This field *is* displayed to the user.",
+            "x-example-values": {
+              "exampleValues": [
+                "some display reason"
+              ]
+            }
+          },
+          "restrictionType": {
+            "$ref": "#/components/schemas/UserRestrictionLog_RestrictionType",
+            "description": "The type of restriction for this log."
+          },
+          "excludeAltAccounts": {
+            "type": "boolean",
+            "description": "When true, the restriction will not be be propagated to alt accounts.\n\n Defaults to false.",
+            "x-example-values": {
+              "exampleValues": [
+                true
+              ]
+            }
+          }
+        },
+        "description": "An entity capturing a state change on a type of restriction."
+      },
+      "UserRestrictionLog_Moderator": {
+        "type": "object",
+        "properties": {
+          "robloxUser": {
+            "type": "string",
+            "description": "A moderator identified by the User resource.",
+            "x-example-values": {
+              "exampleValues": [
+                "users/156"
+              ]
+            }
+          },
+          "gameServerScript": {
+            "$ref": "#/components/schemas/UserRestrictionLog_Moderator_GameServerScript",
+            "description": "A moderator identified as a Lua script on game server."
+          }
+        },
+        "description": "An entity capturing the author of a state change.",
+        "x-oneOf": {
+          "kind": [
+            "robloxUser",
+            "gameServerScript"
+          ]
+        }
+      },
+      "UserRestrictionLog_Moderator_GameServerScript": {
+        "type": "object",
+        "properties": {},
+        "description": "Represents a user-written Lua script executed on game server."
+      },
+      "UserRestrictionLog_RestrictionType": {
+        "type": "object",
+        "properties": {
+          "gameJoinRestriction": {
+            "$ref": "#/components/schemas/UserRestrictionLog_RestrictionType_GameJoinRestriction",
+            "description": "Represents game join restriction as one of the restriction type."
+          }
+        },
+        "description": "The type of restriction.",
+        "x-oneOf": {
+          "kind": [
+            "gameJoinRestriction"
+          ]
+        }
+      },
+      "UserRestrictionLog_RestrictionType_GameJoinRestriction": {
+        "type": "object",
+        "properties": {},
+        "description": "Represents game join restriction."
+      },
       "UserRestriction_GameJoinRestriction": {
         "type": "object",
         "properties": {
@@ -6161,17 +9026,18 @@
           },
           "duration": {
             "type": "string",
-            "description": "The duration of the restriction.\n\n If not specified, the restriction is permanent.",
+            "description": "The duration of the restriction.\n\n If not specified, the restriction is permanent. If specified, the range\n must be from 1 second to 315,576,000,000 seconds, inclusive. Durations\n with sub-second precision are not permitted.",
             "format": "duration",
             "x-example-values": {
               "exampleValues": [
+                "3s",
                 "3.5s"
               ]
             }
           },
           "privateReason": {
             "type": "string",
-            "description": "The reason the restriction was created.\n\n This field *is not* displayed to the user.",
+            "description": "The reason the restriction was created.\n\n This field *is not* displayed to the user. 1,000 character maximum.",
             "x-example-values": {
               "exampleValues": [
                 "some private reason"
@@ -6180,7 +9046,7 @@
           },
           "displayReason": {
             "type": "string",
-            "description": "The user-facing reason the restriction was created.\n\n This field *is* displayed to the user.",
+            "description": "The user-facing reason the restriction was created.\n\n This field *is* displayed to the user. 400 character maximum.",
             "x-example-values": {
               "exampleValues": [
                 "some display reason"

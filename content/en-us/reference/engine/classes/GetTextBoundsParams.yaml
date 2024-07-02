@@ -36,6 +36,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: GetTextBoundsParams.RichText
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
   - name: GetTextBoundsParams.Size
     summary: |
       The size of the text being measured.

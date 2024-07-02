@@ -25,7 +25,7 @@ You must filter any displayed text that you don't have explicit control over to 
 
 - **External Sources** - Some experiences connect to external web servers that fetch content to display information in experience. Sometimes you don't have the full control of the content of the external site, and a third party can edit the information.
 
-- **Stored Text** - If your experience stores text such as a chat log or a user's pet name using [data stores](../cloud-services/datastores.md), and the stored text might include inappropriate words, you should filter the text strings when retrieving them. This ensures that you use the most up-to-date version of the text filter.
+- **Stored Text** - If your experience stores text such as a chat log or a user's pet name using [data stores](../cloud-services/data-stores), and the stored text might include inappropriate words, you should filter the text strings when retrieving them. This ensures that you use the most up-to-date version of the text filter.
 
 <Alert severity="warning">
 Do not filter text in real-time when users type on the client, such as entering text into a `Class.TextBox`, as it delays the message preview that is only visible to the user typing it. Instead, filter the entered text after the user submits it.

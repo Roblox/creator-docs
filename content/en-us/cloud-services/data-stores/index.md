@@ -1,17 +1,18 @@
 ---
 title: Data Stores
 description: Explains how to implement data stores to store persistent data.
+comments: The Creator Hub links to some of the anchors on this page, so if you move any of the headers, the team might need to update the links.
 ---
 
 `Class.DataStoreService` lets you store **data that needs to persist between sessions**, such as items in a player's inventory or skill points. Data stores are consistent **per experience**, so any place in an experience can access and change the same data, including places on different servers.
 
-If you want to add granular permission control to your data stores and access them outside of Studio or Roblox servers, you can use [Open Cloud APIs for data stores](../reference/cloud/datastores-api/v1.json).
+If you want to add granular permission control to your data stores and access them outside of Studio or Roblox servers, you can use [Open Cloud APIs for data stores](../../reference/cloud/datastores-api/v1.json).
 
 ## Enabling Studio Access
 
 By default, experiences tested in Studio cannot access data stores, so you must first enable them. Accessing data stores in Studio can be dangerous for live experiences because Studio accesses the same data stores as the client application. To avoid overwriting production data, you should not enable this setting for live experiences — instead, enable it for a separate test version of the experience.
 
-To enable Studio access in a [published](../production/publishing/publishing-experiences-and-places.md) experience:
+To enable Studio access in a [published](../../production/publishing/publishing-experiences-and-places.md) experience:
 
 1. In the **Home** tab of the menu bar, navigate to the **Settings** section and click **Game Settings**. The **Game Settings** menu displays.
 2. In the left-hand navigation of the **Game Settings** menu, click **Security**.
@@ -612,6 +613,12 @@ Requests to data stores may occasionally fail due to poor connectivity or other 
     <td>The maximum page size for an `Class.OrderedDataStore` is 100.</td>
   </tr>
   <tr>
+    <td>107</td>
+    <td>MinMaxOrderInvalid</td>
+    <td>MaxValue must be greater than or equal to MinValue.</td>
+    <td>The maximum value must be greater than or equal to minimum value for `Class.OrderedDataStore:GetSortedAsync()|GetSortedAsync()`.</td>
+  </tr>
+  <tr>
     <td>301</td>
     <td>GetAsyncThrottle</td>
     <td>GetAsync request dropped. Request was throttled, but throttled request queue was full.</td>
@@ -687,7 +694,7 @@ Requests to data stores may occasionally fail due to poor connectivity or other 
     <td>502</td>
     <td>RequestRejected</td>
     <td>API Services rejected request with error: <b>X</b>.</td>
-    <td>Error <b>X</b> occurred when processing on Roblox servers. Depending on the response, you may want to retry the request at a later time.</td>
+    <td>Error <b>X</b> occurred when processing on Roblox servers. Depending on the response, you may want to retry the request at a later time. For more details, see the table below for Roblox server-side error codes.</td>
   </tr>
   <tr>
     <td>503</td>
@@ -706,6 +713,12 @@ Requests to data stores may occasionally fail due to poor connectivity or other 
     <td>InternalError</td>
     <td>OrderedDataStore request successful, but response not formatted correctly.</td>
     <td>The server was unable to parse the response to your `Class.OrderedDataStore` request. This may be a sign of data corruption, so you may want to retry the request at a later time.</td>
+  </tr>
+  <tr>
+    <td>509</td>
+    <td>OperationNotAllowed</td>
+    <td>Data Store operations blocked while running on a Personal RCC to prevent possible data corruption.</td>
+    <td>Data Store writes are blocked on private RCC channels.</td>
   </tr>
   <tr>
     <td>511</td>
@@ -730,6 +743,96 @@ Requests to data stores may occasionally fail due to poor connectivity or other 
     <td>AttributeFormatError</td>
     <td>Attribute metadata format is invalid.</td>
     <td>The metadata is not a table.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>GetVersionAsyncThrottle</td>
+    <td>GetVersionAsync request dropped. Request was throttled.</td>
+    <td>`Class.DataStore:GetVersionAsync()|GetVersionAsync()` request has exceeded the maximum queue size and Roblox is unable to process the requests at the current throughput.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>ListDataStoresAsyncThrottle</td>
+    <td>ListDataStoresAsync request dropped. Request was throttled.</td>
+    <td>`Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()` request has exceeded the maximum queue size and Roblox is unable to process the requests at the current throughput.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>ListKeysAsyncThrottle</td>
+    <td>ListKeysAsync request dropped. Request was throttled.</td>
+    <td>`Class.DataStore:ListKeysAsync()|ListKeysAsync()` request has exceeded the maximum queue size and Roblox is unable to process the requests at the current throughput.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>ListVersionsAsyncThrottle</td>
+    <td>ListVersionsAsync request dropped. Request was throttled.</td>
+    <td>`Class.DataStore:ListVersionsAsync()|ListVersionsAsync()` request has exceeded the maximum queue size and Roblox is unable to process the requests at the current throughput.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>RemoveVersionAsyncThrottle</td>
+    <td>RemoveVersionAsync request dropped. Request was throttled.</td>
+    <td>`Class.DataStore:RemoveVersionAsync()|RemoveVersionAsync()` request has exceeded the maximum queue size and Roblox is unable to process the requests at the current throughput.</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
+Here is a list of error codes from Roblox servers.
+
+<table>
+<thead>
+  <tr>
+    <th>Error Name</th>
+    <th>Error Message</th>
+    <th>Notes</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>DatastoreThrottled</td>
+    <td>The request rate exceeds the allowed maximum for the datastore.</td>
+    <td>Too many requests sent to a single Data Store. </td>
+  </tr>
+  <tr>
+    <td>InternalServerError</td>
+    <td>An internal server error occurred.</td>
+    <td>Occasional error on Roblox servers. Retry the request (ideally with exponential backoff).</td>
+  </tr>
+  <tr>
+    <td>InvalidPlace</td>
+    <td>The provided place is invalid.</td>
+    <td>No matching Universe ID for the place. Please retry your requests later.</td>
+  </tr>
+  <tr>
+    <td>InvalidTarget</td>
+    <td>The provided target is invalid.</td>
+    <td>Ordered Data Store key (used to be called target) name exceeds the 50 character limit</td>
+  </tr>
+  <tr>
+    <td>InvalidUniverse</td>
+    <td>The provided universe is invalid.</td>
+    <td>Failed to get matching Universe ID from the Place ID.</td>
+  </tr>
+  <tr>
+    <td>InvalidUserIds</td>
+    <td>The provided user ids have invalid format.</td>
+    <td>Failed to parse User IDs.</td>
+  </tr>
+  <tr>
+    <td>KeyThrottled</td>
+    <td>The request rate exceeds the allowed maximum for the key.</td>
+    <td>The request rate exceeds the maximum allowed request rate for a single key.</td>
+  </tr>
+  <tr>
+    <td>KeyNotFound</td>
+    <td>The requested key does not exist.</td>
+    <td>The key doesn't exist.</td>
+  </tr>
+  <tr>
+    <td>N/A</td>
+    <td>No pages to advance to.</td>
+    <td>This error occurs when calling `Class.Pages:AdvanceToNextPageAsync()` on the last page.</td>
   </tr>
 </tbody>
 </table>

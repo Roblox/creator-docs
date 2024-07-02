@@ -36,17 +36,6 @@ navigation:
             path: /projects/collaboration
           - title: Groups
             path: /projects/groups
-      - title: Performance Optimization
-        path: /projects/performance-optimization/
-        section:
-          - title: Overview
-            path: /projects/performance-optimization/
-          - title: Computation
-            path: /projects/performance-optimization/computation
-          - title: Memory
-            path: /projects/performance-optimization/memory
-          - title: Load Times
-            path: /projects/performance-optimization/load-times
       - title: External Tools
         path: /projects/external-tools
   - title: Assets
@@ -426,15 +415,29 @@ navigation:
             path: /chat/bubble-chat
           - title: Legacy Chat System
             path: /chat/legacy/legacy-chat-system
+  - title: Performance Optimization
+    section:
+      - title: Overview
+        path: /performance-optimization/
+      - title: Designing for Performance
+        path: /performance-optimization/designing
+      - title: Identifying Issues
+        path: /performance-optimization/identifying
+      - title: Improving Performance
+        path: /performance-optimization/improving
+      - title: Monitoring Performance
+        path: /performance-optimization/monitoring
   - title: Cloud Services
     section:
       - title: Data Stores
-        path: /cloud-services/datastores
+        path: /cloud-services/data-stores/
         section:
           - title: Overview
-            path: /cloud-services/datastores
+            path: /cloud-services/data-stores/
+          - title: Observability
+            path: /cloud-services/data-stores/observability
           - title: Implementing Player Data and Purchasing Systems
-            path: /scripting/data/player-data-purchasing
+            path: /cloud-services/data-stores/player-data-purchasing
       - title: Memory Stores
         path: /cloud-services/memory-stores/
         section:
@@ -533,7 +536,7 @@ navigation:
       - title: Player Invite Prompts
         path: /production/promotion/invite-prompts
       - title: Experience Notifications
-        path: /cloud-services/experience-notifications
+        path: /production/promotion/experience-notifications
       - title: Nominating for the Discover Page
         path: /production/promotion/nominating-for-the-discover-page
       - title: Getting Featured on Roblox‑Owned Channels

@@ -10,7 +10,7 @@ description: |
 
   See also:
 
-  - [Data Stores](../../../cloud-services/datastores.md), an in-depth guide on
+  - [Data Stores](../../../cloud-services/data-stores), an in-depth guide on
     data structure, management, error handling, etc.
 code_samples:
 inherits:

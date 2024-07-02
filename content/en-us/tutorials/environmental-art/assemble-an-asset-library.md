@@ -122,7 +122,7 @@ To import your modular assets and props into the experience:
 
 1. In the **Home** or **Avatar** tab, click the **Import 3D** button. A file browser displays.
 
-   <img alt="3D Importer Panels" src="../../assets/studio/general/Avatar-Tab-Import-3D.png" alt="Studio's Avatar tab with the 3D Importer highlighted." width="100%" />
+   <img src="../../assets/studio/general/Avatar-Tab-Import-3D.png" alt="Studio's Avatar tab with the 3D Importer highlighted." width="100%" />
 
 2. Select a `.fbx` file for either a modular asset or prop.
 3. Verify the object preview and check that the import settings are correct for your object.

@@ -119,9 +119,9 @@ methods:
     summary: |
       Returns the bounding size for the `Class.Path2D`.
     description: |
-      Returns the `Datatype.Rect` bounding size for the `Class.Path2D`. This is computed
-      based on the control points and is not modifiable outside of changing the control
-      point data.
+      Returns the `Datatype.Rect` bounding size for the `Class.Path2D`. This is
+      computed based on the control points and is not modifiable outside of
+      changing the control point data.
     code_samples: []
     parameters: []
     returns:
@@ -316,8 +316,8 @@ methods:
       points with new ones.
     description: |
       Sets all the control points to the specified array, replacing all existing
-      points with new ones. Throws a warning if there are more than 50 points
-      in the `controlPoints` array.
+      points with new ones. Throws a warning if there are more than 50 points in
+      the `controlPoints` array.
     code_samples: []
     parameters:
       - name: controlPoints
