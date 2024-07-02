@@ -365,6 +365,7 @@ methods:
       - A string
       - A number
       - A bool
+      - A buffer
 
       As the _teleportData_ is transmitted by the client it is not secure. For
       this reason it should only be used for local settings and not sensitive
