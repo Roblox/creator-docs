@@ -207,7 +207,7 @@ In experiences using `Class.DataStoreService` to save player data, exploiters ma
 Ensure that any actions performed through a `Class.RemoteEvent` or `Class.RemoteFunction` that affect player data with client input is sanitized based on the following:
 
 - `Class.Instance` values cannot be serialized into a `Class.DataStore` and will fail. Utilize [type validation](#remote-runtime-type-validation) to prevent this.
-- `Class.DataStore|DataStores` have [data limits](../../cloud-services/datastores.md#data-limits). Strings of arbitrary length should be checked and/or capped to avoid this, alongside ensuring limitless arbitrary keys cannot be added to tables by the client.
+- `Class.DataStore|DataStores` have [data limits](../../cloud-services/data-stores/index.md#data-limits). Strings of arbitrary length should be checked and/or capped to avoid this, alongside ensuring limitless arbitrary keys cannot be added to tables by the client.
 - Table indices cannot be `NaN` or `nil`. Iterate over all tables passed by the client and verify all indices are valid.
 - `Class.DataStore|DataStores` can only accept valid UTF-8 characters, so you should sanitize all strings provided by the client via `Library.utf8|utf8.len()` to ensure they are valid. `Library.utf8|utf8.len()` will return the length of a string, treating unicode characters as a single character; if an invalid UTF-8 character is encountered it will return `nil` and the position of the invalid character. Note that invalid UTF-8 strings can also be present in tables as keys and values.
 

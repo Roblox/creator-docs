@@ -79,7 +79,7 @@ These lines accomplish the following:
 
    <img alt="Leaderboards Name Column" src="../assets/players/leaderboard/Leaderboards-Name-Column.png" width="80%" />
 
-3. The stat's initial `Class.IntValue.Value|Value` is set to `0`. This can be set to any value you wish, including a value stored in a [data store](../cloud-services/datastores.md) if you're implementing persistent leaderboards.
+3. The stat's initial `Class.IntValue.Value|Value` is set to `0`. This can be set to any value you wish, including a value stored in a [data store](../cloud-services/data-stores) if you're implementing persistent leaderboards.
 
    <Alert severity="info">
    Note that the value of objects such as `Class.IntValue`, `Class.NumberValue`, and `Class.StringValue` must be set through their `Value` property, as in `gold.Value` on line 10.

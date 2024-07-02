@@ -91,9 +91,9 @@ properties:
       on the selected enum. Has no effect when streaming is not enabled.
 
       This property should only be changed in Studio via the
-      [Properties](../../../studio/properties.md) window when streaming
-      is enabled, or in `Class.Script|Scripts`, but never
-      in `Class.LocalScript|LocalScripts` (doing so can result in undefined
+      [Properties](../../../studio/properties.md) window when streaming is
+      enabled, or in `Class.Script|Scripts`, but never in
+      `Class.LocalScript|LocalScripts` (doing so can result in undefined
       behavior).
     code_samples: []
     type: ModelStreamingMode

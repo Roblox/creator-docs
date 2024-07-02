@@ -56,8 +56,7 @@ Plugins start from scripts. To create a plugin, create a `Class.Script` and save
 5. The plugin should appear in `Class.PluginDebugService` and start running.
 
 <Alert severity="warning">
-Make sure to delete the original script in `Class.ServerStorage` and work from the
-plugin inside `Class.PluginDebugService`, otherwise you may end up applying changes to the wrong script.
+Make sure to delete the original script in `Class.ServerStorage` and work from the plugin inside `Class.PluginDebugService`, otherwise you may end up applying changes to the wrong script.
 </Alert>
 
 ### Reloading and Saving Changes
@@ -69,7 +68,7 @@ alternatively select **Reload Plugin**.
 
 To add a button for your plugin to the **Plugins** tab of the Studio toolbar, use the `Class.Plugin:CreateToolbar()` and `Class.PluginToolbar:CreateButton()` methods. In the code for **EmptyScriptAdder**, line 5 creates a new section in the toolbar named **Custom Script Tools** and line 8 creates a button named **Create Empty Script**.
 
-   <img src="../assets/studio/plugins/Plugin-Toolbar-Button.png" width="800" alt="New plugin button added to toolbar in Studio" />
+<img src="../assets/studio/plugins/Plugin-Toolbar-Button.png" width="800" alt="New plugin button added to toolbar in Studio" />
 
 ### Executing Code on Click
 
@@ -127,7 +126,6 @@ button.Click:Connect(function()
     -- Finish the recording, committing the changes to the history
     ChangeHistoryService:FinishRecording(recording, Enum.FinishRecordingOperation.Commit)
 end)
-
 ```
 
 ## Uploading, Distributing and Monetizing Plugins
@@ -135,9 +133,7 @@ end)
 As with [models](../parts/models.md), [meshes](../parts/meshes.md), [images](../parts/textures-decals.md), and [animations](../animation/editor.md#creating-an-animation), you can distribute plugins to Roblox to make them easy to reuse from the [Toolbox](../projects/assets/toolbox.md). You can choose to make them publicly available to all other creators on the [Creator Store](../production/creator-store.md), or to distribute them privately for your own use. If you choose to distribute your plugin publicly, you can set a price at which to sell it to other creators.
 
 <Alert severity="info">
-
 The only way to distribute and set a price for a plugin is through the Creator Dashboard. You can always upload a plugin using this process and monetize it later from the dashboard. For instructions on this process, see [Distributing Assets](../production/creator-store.md#through-creator-dashboard).
-
 </Alert>
 
 To distribute a plugin:
@@ -153,7 +149,5 @@ To distribute a plugin:
 1. Click the link to Creator Dashboard to [configure distribution](../production/creator-store.md#through-creator-dashboard).
 
 <Alert severity="info">
-
-To publicly distribute or monetize a plugin you have previously uploaded,use the [Creations section of the Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Model). For more information, see [Distributing Assets](../production/creator-store.md).
-
+To publicly distribute or monetize a plugin you have previously uploaded, use the [Creations section of the Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Model). For more information, see [Distributing Assets](../production/creator-store.md).
 </Alert>
