@@ -197,7 +197,7 @@ Though both systems share the same basic chat functionalities, the in-experience
     </tr>
     <tr>
       <td>Display a System Message</td>
-      <td>`Class.StarterGui:SetCore("ChatMakeSystemMessage", configTable)`</td>
+      <td>`Class.StarterGui:SetCore()` using `"ChatMakeSystemMessage"`</td>
       <td>`Class.TextChannel:DisplaySystemMessage()`</td>
       <td>The `Class.TextChannel.OnIncomingMessage` callback can return a `Class.TextChatMessageProperties` instance to customize the message appearance.</td>
     </tr>
