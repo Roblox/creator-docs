@@ -1644,7 +1644,7 @@ events:
     thread_safety: Unsafe
   - name: Instance.Changed
     summary: |
-      Fired immediately after a property of the instance changes.
+      Fired immediately after a property of the instance changes, with some limitations.
     description: |
       This event fires immediately after an instance property is changed
       and it works with most use cases (see limitations below). The new value
