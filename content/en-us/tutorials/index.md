@@ -215,7 +215,7 @@ While many creators focus on a single area, the following tutorials walk you thr
    <Typography variant='h4'>Physics</Typography>
    <Typography variant='body1' >
      <ul>
-     <li>Learn how to <a href="../tutorials/3D-art/creating-spinning-objects.md">spin objects</a> in a way that emulates real-world physical behavior</li>
+     <li>Learn how to <a href="../tutorials/building/physics/creating-moving-objects.md">move</a> and <a href="../tutorials/3D-art/creating-spinning-objects.md">spin</a> objects in a way that emulates real-world physical behavior</li>
      <li>Learn how to <a href="../tutorials/3D-art/creating-elevators.md">move objects</a> to transport players linearly from point A to B</li>
      <li>Learn how to use <a href="../tutorials/building/physics/building-a-hinged-door.md">constraints</a> for mechanical connections, such as door hinges, rope, and welds</li>
      </ul></Typography>

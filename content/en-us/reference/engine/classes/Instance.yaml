@@ -1618,7 +1618,7 @@ events:
       attribute is passed to the connected function.
 
       For example, the following code snippet connects the `attributeChanged()`
-      function to fire whenever one of instance's attributes changes:
+      function to fire whenever one of the part's attributes changes:
 
       ```lua
       local part = workspace.Part

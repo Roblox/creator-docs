@@ -65,7 +65,7 @@ For this project, you'll create parts that when touched, trigger an animation fo
    local touchPartFolder = workspace:WaitForChild("TouchPartFolder")
    local touchParts = touchPartFolder:GetChildren()
 
-   for i, touchPart in touchParts do
+   for _, touchPart in touchParts do
      touchPart.Touched:Connect(onPartTouch)
    end
    ```
