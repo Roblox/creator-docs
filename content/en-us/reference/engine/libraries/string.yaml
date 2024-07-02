@@ -46,11 +46,11 @@ functions:
   - name: string.char
     summary: |
       Receives zero or more integers and returns a string with length equal to
-      the number of arguments that has each character has the internal numerical
+      the number of arguments, in which each character has the internal numerical
       code equal to its corresponding argument.
     description: |
       Receives zero or more integers and returns a string with length equal to
-      the number of arguments that has each character has the internal numerical
+      the number of arguments, in which each character has the internal numerical
       code equal to its corresponding argument.
     parameters:
       - name: ...

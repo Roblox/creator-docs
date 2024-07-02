@@ -26,14 +26,14 @@ A `Class.Part` is Roblox's primary building block that you can move, resize, rot
 To create the backboard and border:
 
 1. In the menu bar, select the **Model** tab.
-1. In the **Parts** section, click the dropdown arrow and select **Block**. A block part displays in the workspace that's about to become the backboard of your neon sign.
+1. In the **Parts** section, click the **Part Type Picker** and select **Block**. A block part displays in the workspace that's about to become the backboard of your neon sign.
 
-   <img width="50%" img src="../../assets/tutorials/creating-neon-signs/Add-Block.jpg" />
+   <img src="../../assets/studio/general/Model-Tab-Part-Tools.png" width="660" alt="Studio's Model tab with the Insert Part tool and its Part Type Picker highlighted." />
 
 1. In the **Explorer** window, select the block, then in the **Properties** window,
 
    1. Set **BrickColor** to **Black**.
-   1. Set **Size** to **[8,4,1]**.
+   1. Set **Size** to `8,4,1`.
    1. Set **Name** to **Backboard**.
    1. Enable the **Anchored** property.
 
@@ -41,10 +41,13 @@ To create the backboard and border:
 
 1. In the **Explorer** window, select **Backboard**, then press <kbd>Ctrl</kbd><kbd>D</kbd> (<kbd>⌘</kbd><kbd>D</kbd>) to duplicate the part.
 1. In the menu bar, select the **Move** tool and use one of the axis arrows to pull the duplicate backboard part away from the original position so you can see each object.
+
+   <img src="../../assets/studio/general/Home-Tab-Move.png" alt="Studio's Home tab with the Move tool highlighted." width="716" />
+
 1. In the **Explorer** window, select the duplicate backboard part that's about to become the border of your neon sign, then in the **Properties** window,
 
    1. Set **BrickColor** to **Lime Green**.
-   2. Set **Size** to **[7.75, 3.75, 0.25]**.
+   2. Set **Size** to `7.75, 3.75, 0.25`.
    3. Set **Name** to **Border**.
 
       <img width="50%" img src="../../assets/tutorials/creating-neon-signs/Border.jpg" />
@@ -59,21 +62,19 @@ Using [solid modeling](../../parts/solid-modeling.md), you can join and separate
 
 To create the neon border shape:
 
-1. In the **Explorer** window, select the duplicate border part, then in the **Properties** window, set the **Size** to **[7.5, 3.5, 1.0]**.
+1. In the **Explorer** window, select the duplicate border part, then in the **Properties** window, set the **Size** to `7.5, 3.5, 1.0`.
 
    <img width="50%" img src="../../assets/tutorials/creating-neon-signs/Duplicate-Border.jpg" />
 
 1. With the duplicate border part still selected, in the menu bar, navigate to the **Solid Modeling** section and select **Negate**. The border part turns translucent and its **Name** property automatically changes to **NegativePart**.
 
-   <img width="50%" img src="../../assets/tutorials/creating-neon-signs/Negate-Tool.jpg" />
+   <img src="../../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Studio's Model tab with the Solid Modeling tools highlighted." width="732" />
 
 1. With **NegativePart** still selected, hold <kbd>Ctrl</kbd>/<kbd>⌘</kbd> and click on the original border part to select both parts at the same time.
 
    <img width="50%" img src="../../assets/tutorials/creating-neon-signs/NegativePart.jpg" />
 
 1. In the menu bar, select **Union** to fuse both parts together. A border-shaped part displays, and the **Name** property automatically changes to **Union**.
-
-   <img width="50%" img src="../../assets/tutorials/creating-neon-signs/Union-Tool.jpg" />
 
 1. In the **Explorer** window, select the union, then in the **Properties** window,
 
@@ -110,7 +111,7 @@ To incorporate neon 3D text from the [open-text](../../assets/tutorials/creating
 
 1. In the **Properties** window,
 
-   1. Set **Color** to **[170,0,0]**.
+   1. Set **Color** to `170,0,0`.
    1. Set **Material** to **Neon**.
 
 1. In the **Explorer** window, select the text models, **Border**, and **Backboard**, then press <kbd>Ctrl</kbd><kbd>G</kbd> (<kbd>⌘</kbd><kbd>G</kbd>) to group them into a single `Class.Model` object.

@@ -53,7 +53,7 @@ tags:
   - Deprecated
 deprecation_message: |
   This class is deprecated, and `Class.CylinderMesh|CylinderMeshes` are no
-  longer supported. Do no use it for new work.
+  longer supported. Do not use it for new work.
 properties: []
 methods: []
 events: []
