@@ -60,7 +60,7 @@ if result == Enum.AvatarPromptResult.Success then
   }
   local pagesObject = AvatarEditorService:GetInventory(assetTypes)
   local currentPage = pagesObject:GetCurrentPage()
-  for i, item in currentPage do
+  for _, item in currentPage do
     print(item)
   end
 end
@@ -137,7 +137,7 @@ local pagesObject =
 --This function returns a CatalogPages object containing the results.
 AvatarEditorService:SearchCatalog(catalogSearchParams)
 local currentPage = pagesObject:GetCurrentPage()
-for i, item in currentPage do
+for _, item in currentPage do
   print(item)
 end
 ```
