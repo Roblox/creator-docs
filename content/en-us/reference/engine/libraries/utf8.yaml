@@ -21,7 +21,7 @@ properties:
     type: string
     summary: |
       The pattern `"[%z\x01-\x7F\xC2-\xF4][\x80-\xBF]*"`, which matches exactly
-      zero or more UTF-8 byte sequence, assuming that the subject is a valid
+      zero or more UTF-8 byte sequences, assuming that the subject is a valid
       UTF-8 string.
     description: |
       The pattern `"[%z\x01-\x7F\xC2-\xF4][\x80-\xBF]*"`, which matches exactly

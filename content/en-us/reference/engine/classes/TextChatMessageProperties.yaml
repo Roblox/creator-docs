@@ -14,7 +14,8 @@ description: |
   `Class.TextChatMessageProperties` overrides the matching properties of the
   corresponding `Class.TextChatMessage`.
 
-  This can be used to add rich text tags to a message.
+  This can be used to customize the appearance of a message with rich text tags.
+  See [Rich Text Markup](../../../ui/rich-text.md) for more.
 
   To learn more about using TextChatMessageProperties, see
   [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
