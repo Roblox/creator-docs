@@ -4,7 +4,7 @@ description: Classic clothing are decals you can apply to a classic character mo
 ---
 
 <Alert severity="warning">
-Current user-generated avatars do not support 2D classic clothing. For information on creating modern 3D cosmetics, including rigid accessories and clothing items, see [Getting Started](../../avatar/index.md).
+Current user-generated avatars on the Marketplace do not support 2D classic clothing. For information on creating modern 3D cosmetics, including rigid accessories and clothing items, see [Getting Started](../../avatar/index.md).
 </Alert>
 
 Classic clothing are a type of 2D cosmetic item that you can apply to the surface of a classic avatar character. You can [create](#creating) your own classic clothing items and sell them on the [Marketplace](https://www.roblox.com/catalog).

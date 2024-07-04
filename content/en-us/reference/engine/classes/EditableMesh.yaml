@@ -54,8 +54,7 @@ description: |
 code_samples: []
 inherits:
   - DataModelMesh
-tags:
-  - NotReplicated
+tags: []
 deprecation_message: ''
 properties:
   - name: EditableMesh.SkinningEnabled

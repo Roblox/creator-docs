@@ -2,8 +2,55 @@ name: BanHistoryPages
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Returned by `Class.Players:GetBanHistoryAsync` to view the entire ban and
+  unban history of any UserId.
+description: |
+  `Class.BanHistoryPages` is returned by `Class.Players:GetBanHistoryAsync()`.
+  This instance allows an experience to view the entire ban and unban history of
+  any player within the experience's universe.
+
+  The items within `Class.BanHistoryPages` are tables with the following fields:
+
+  <table><thead>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td><code>DisplayReason</code></td>
+      <td>string</td>
+      <td>The <code>DisplayReason</code> that was shown to the user</td>
+    </tr>
+    <tr>
+      <td><code>PrivateReason</code></td>
+      <td>string</td>
+      <td>The <code>PrivateReason</code> that was sent with this ban.</td>
+    </tr>
+    <tr>
+      <td><code>StartTime</code></td>
+      <td>string</td>
+      <td>The time that this ban was applied in ISO 8601 format.</td>
+    </tr>
+    <tr>
+      <td><code>Duration</code></td>
+      <td>number</td>
+      <td>The length of the ban in seconds. If it is a permanent ban, it will be <code>-1</code>.</td>
+    </tr>
+    <tr>
+      <td><code>Ban</code></td>
+      <td>boolean</td>
+      <td>If the action was a ban, it will be <code>true</code>. If the action was an unban, it will be <code>false</code>.</td>
+    </tr>
+    <tr>
+      <td><code>PlaceId</code></td>
+      <td>number</td>
+      <td>The place in which a ban or unban was explicitly updated. This field is <code>-1</code> if the action was applied on the universe level.</td>
+    </tr>
+  </tbody>
+  </table>
 code_samples: []
 inherits:
   - Pages

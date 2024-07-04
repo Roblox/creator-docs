@@ -493,7 +493,7 @@ tweenLClose.Completed:Connect(tweenCloseCompleted)
 
 local function touched(otherPart)
 	if otherPart.Name == "HumanoidRootPart" then
-		local player = Players:FindFirstChild(otherPart.Parent.Name)
+		local player = Players:GetPlayerFromCharacter(otherPart.Parent)
 		if player then
 			--print("touch")
 			playersNear[player] = 1

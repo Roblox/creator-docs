@@ -850,8 +850,8 @@ methods:
       - This method cannot be used to check for
         [developer products](../../../production/monetization/developer-products.md)
         since they can be purchased multiple times but not owned themselves.
-        Instead, use a [data store](../../../cloud-services/datastores.md) to
-        save when a player has bought a developer product.
+        Instead, use a [data store](../../../cloud-services/data-stores) to save
+        when a player has bought a developer product.
     code_samples:
       - MarketplaceService-PlayerOwnsAsset1
     parameters:
@@ -999,7 +999,8 @@ events:
       fires as the dialog closes, when the player presses "Cancel" at the prompt
       or "OK" at the success/error message.
 
-      For repeatable purchases use [developer products](../../../production/monetization/developer-products.md).
+      For repeatable purchases use
+      [developer products](../../../production/monetization/developer-products.md).
 
       #### See Also
 
@@ -1007,7 +1008,9 @@ events:
         `Class.MarketplaceService.PromptProductPurchaseFinished|PromptProductPurchaseFinished`.
       - For **affiliate gear sales** or other assets, use
         `Class.MarketplaceService.PromptPurchaseFinished|PromptPurchaseFinished`.
-      - For guidance on saving and replicating player data, such as purchases and progress, see [Implementing Player Data and Purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
+      - For guidance on saving and replicating player data, such as purchases
+        and progress, see
+        [Implementing Player Data and Purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
     code_samples:
       - handling-gamepass
     parameters:
@@ -1028,7 +1031,8 @@ events:
         summary: |
           Indicates if the user pressed OK (true), Cancel (false), or errored
           (false). This may not accurately reflect if the purchase itself has
-          successfully processed. Use `MarketplaceService.UserOwnsGamePassAsync` as ownership confirmation.
+          successfully processed. Use `MarketplaceService.UserOwnsGamePassAsync`
+          as ownership confirmation.
     tags: []
     deprecation_message: ''
     security: None
@@ -1074,7 +1078,9 @@ events:
         `Class.MarketplaceService.PromptGamePassPurchaseFinished`.
       - For **affiliate gear sales** or other assets, use
         `Class.MarketplaceService.PromptPurchaseFinished`.
-      - For guidance on saving and replicating player data, such as purchases and progress, see [Implementing Player Data and Purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
+      - For guidance on saving and replicating player data, such as purchases
+        and progress, see
+        [Implementing Player Data and Purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
     code_samples:
     parameters:
       - name: userId
@@ -1116,8 +1122,13 @@ events:
 
       - For [pass](../../../production/monetization/game-passes.md) prompts, use
         `Class.MarketplaceService.PromptGamePassPurchaseFinished`.
-      - For [developer product](../../../production/monetization/developer-products.md) prompts, connect to `Class.MarketplaceService.PromptProductPurchaseFinished`.
-      - For guidance on saving and replicating player data, such as purchases and progress, see [Implementing Player Data and Purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
+      - For
+        [developer product](../../../production/monetization/developer-products.md)
+        prompts, connect to
+        `Class.MarketplaceService.PromptProductPurchaseFinished`.
+      - For guidance on saving and replicating player data, such as purchases
+        and progress, see
+        [Implementing Player Data and Purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
     code_samples:
       - MarketplaceService-PromptPurchaseFinished1
     parameters:

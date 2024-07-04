@@ -422,4 +422,17 @@ events:
     deprecation_message: ''
     security: RobloxScriptSecurity
     thread_safety: Unsafe
+  - name: SoundService.OpenAudioEqualizerEditorSignal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: selectedEqualizerObjects
+        type: Objects
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 callbacks: []

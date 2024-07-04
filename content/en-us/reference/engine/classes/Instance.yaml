@@ -934,7 +934,8 @@ methods:
           A dictionary of string → variant pairs for each attribute where the
           string is the name of the attribute and the variant is a non-nil
           value.
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Safe
@@ -1617,7 +1618,7 @@ events:
       attribute is passed to the connected function.
 
       For example, the following code snippet connects the `attributeChanged()`
-      function to fire whenever one of instance's attributes changes:
+      function to fire whenever one of the part's attributes changes:
 
       ```lua
       local part = workspace.Part
@@ -1644,11 +1645,18 @@ events:
     thread_safety: Unsafe
   - name: Instance.Changed
     summary: |
-      Fired immediately after a property of the instance changes.
+      Fired immediately after a property of the instance changes, with some limitations.
     description: |
-      This event fires immediately after most properties change on the instance.
-      It is possible to find the present value of a changed property by using
-      `object[property]`.
+      This event fires immediately after an instance property is changed
+      and it works with most use cases (see limitations below). The new value
+      of a changed property is **not** passed in as a parameter, so it must
+      be accessed by using `object[property]`. For example:
+      
+      ```
+      object.Changed:Connect(function(property)
+      	print("The new property's value is", object[property])
+      end)
+      ```
 
       If you are only interested in listening to the change of one specific
       property, consider using the

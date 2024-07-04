@@ -33,18 +33,11 @@ To enable surface appearance for a `Class.MeshPart`:
 1. In the [Explorer](../../studio/explorer.md) window, hover over the `Class.MeshPart` and click the &CirclePlus; button.
 2. Insert a **SurfaceAppearance** from the contextual menu.
 
-   <img
-   alt="Insert SurfaceAppearance"
-   src="../../assets/modeling/surface-appearance/Insert-SurfaceAppearance.png"
-   width="320" alt="A SurfaceAppearance object parented within a MeshPart in Studio's Explorer window."
-   />
+   <img src="../../assets/modeling/surface-appearance/Insert-SurfaceAppearance.png" width="320" alt="A SurfaceAppearance object parented within a MeshPart in Studio's Explorer window." />
 
    When you are ready to add texture maps to your `Class.SurfaceAppearance` object, you can click each map property to browse and set the appropriate asset ID for each image:
 
-   <img
-   alt="Insert SurfaceAppearance"
-   src="../../assets/modeling/surface-appearance/Applying-Texture-Maps.png"
-   width="320" alt="A close-up of the Properties window where the user selected the ColorMap property. A popup displays all available image textures to select." />
+   <img src="../../assets/modeling/surface-appearance/Applying-Texture-Maps.png" width="320" alt="A close-up of the Properties window where the user selected the ColorMap property. A popup displays all available image textures to select." />
 
 ## Texture Maps
 

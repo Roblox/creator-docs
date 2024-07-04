@@ -23,7 +23,7 @@ If you followed [Deadly Lava](../../../tutorials/scripting/basic-scripting/deadl
 
 4. Insert a **Script** into the part, rename it to **FadeOnTouch**, and remove the default code.
 
-   <img src="../../../assets/tutorials/fading-trap/scriptInPlace.jpg" width="60%" />
+   <img src="../../../assets/tutorials/fading-trap/scriptInPlace.png" width="60%" />
 
 5. Create a variable for the platform and an empty function connected to the platform's `Touched` event.
 

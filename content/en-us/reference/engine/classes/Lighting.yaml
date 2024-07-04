@@ -701,12 +701,11 @@ properties:
       detailed descriptions and visual effects of each option.
     code_samples:
     type: Technology
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Appearance
     serialization:

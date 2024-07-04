@@ -149,7 +149,7 @@ You should only enable the following settings if you trust all assets from other
   </tr>
   <tr>
     <td>**Enable&nbsp;Studio&nbsp;Access to API Services**</td>
-    <td>Lets Studio access API services. This setting is useful for testing the implementation of services like [data stores](../cloud-services/datastores.md).</td>
+    <td>Lets Studio access API services. This setting is useful for testing the implementation of services like [data stores](../cloud-services/data-stores).</td>
   </tr>
   <tr>
     <td>**Allow Third Party Sales**</td>
