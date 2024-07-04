@@ -36,7 +36,7 @@ From a business perspective, performant games often have higher user engagement,
 
 - **Memory usage** is the amount of RAM or swap that your experience uses. Even if an experience has low starting memory usage, memory leaks can cause that amount to increase over time.
 
-  On the server, excessive memory usage can cause crashes, which disconnect all players from the experience. Each Roblox server has approximately 6.9 GB of available memory.
+  On the server, excessive memory usage can cause crashes, which disconnect all players from the experience.
 
   Excessive memory usage causes client crashes, too, but it also prevents users on lower-end devices from playing your experience in the first place. Reducing memory usage can greatly expand your addressable audience, especially on mobile.
 
