@@ -43,10 +43,10 @@ properties:
   - name: SoundGroup.Volume
     summary: |
       The volume multiplier applied to `Class.Sound|Sounds` that are in the
-      `Class.SoundGroup`. This value ranges from 0 to 10.
+      `Class.SoundGroup`. This value ranges from 0 to 100.
     description: |
       The volume multiplier applied to `Class.Sound|Sounds` that are in the
-      `Class.SoundGroup`. This value ranges from 0 to 10.
+      `Class.SoundGroup`. This value ranges from 0 to 100.
 
       This property acts as a multiplier, and thus sounds in a
       `Class.SoundGroup` will retain their relative volumes when it is set. This
