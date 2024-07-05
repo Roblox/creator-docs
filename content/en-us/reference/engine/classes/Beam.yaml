@@ -99,7 +99,7 @@ properties:
     description: |
       Scales the light emitted from the beam when
       `Class.Beam.LightInfluence|LightInfluence` is less than 1. This property
-      is 1 by default and can set to any number within the range of 0 to 10000.
+      is 1 by default and can set to any number within the range of 0 to 100.
       Increasing the value of `Class.Beam.LightInfluence|LightInfluence`
       decreases the effect of this property's value.
     code_samples:
