@@ -36,6 +36,12 @@ description: |
   attempting to `require` another ModuleScript that in turn tries to `require`
   it, the **thread will hang and never halt (cyclic `require` calls do not
   generate errors).** Be mindful of your module dependencies in large projects!
+
+  If a ModuleScript is uploaded to Roblox, and the root module has the name set
+  to `MainModule`, it can be uploaded as a model, and required using 
+  `Global.RobloxGLobals.require()` with the model's asset ID, it can be loaded
+  into your experience. This logic only works on the server, and will error on
+  the client.
 code_samples:
   - Simple-ModuleScript-Example
   - Simple-ModuleScript-Usage
