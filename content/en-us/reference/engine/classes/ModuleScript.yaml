@@ -41,7 +41,7 @@ description: |
   to `MainModule`, it can be uploaded as a model, and required using 
   `Global.RobloxGLobals.require()` with the model's asset ID, it can be loaded
   into your experience. This logic only works on the server, and will error on
-  the client.
+  the client. If other users want to use the module, **it must be public**.
 code_samples:
   - Simple-ModuleScript-Example
   - Simple-ModuleScript-Usage
