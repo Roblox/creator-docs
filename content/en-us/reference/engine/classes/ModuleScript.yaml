@@ -36,11 +36,6 @@ description: |
   attempting to `require` another ModuleScript that in turn tries to `require`
   it, the **thread will hang and never halt (cyclic `require` calls do not
   generate errors).** Be mindful of your module dependencies in large projects!
-
-  If a ModuleScript object has its Name property set to 'MainModule' and is
-  uploaded to Roblox as a model to your account, Scripts can use `require` with
-  the uploaded model's AssetId instead. This allows you to create private
-  modules on your Roblox account!
 code_samples:
   - Simple-ModuleScript-Example
   - Simple-ModuleScript-Usage
