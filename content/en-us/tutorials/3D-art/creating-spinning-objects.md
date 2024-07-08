@@ -231,11 +231,11 @@ To configure a hinge constraint:
 1. Insert a `Class.HingeConstraint` object into **Head**.
    1. In the **Explorer** window, hover over **Head**, then click the ⊕ icon. A contextual menu displays.
    1. From the contextual menu, insert a **HingeConstraint**.
-1. Assign the propeller's attachments to the new constraint.
+1. Assign the propeller's attachments to the new constraint so that the propeller spins in **relation to** the anchored base.
    1. In the **Explorer** window, select the constraint.
    1. In the **Properties** window,
-      1. Set **Attachment0** to **HeadAttachment**.
-      1. Set **Attachment1** to **BaseAttachment**. The hinge displays in the viewport.
+      1. Set **Attachment0** to **BaseAttachment**.
+      1. Set **Attachment1** to **HeadAttachment**. The hinge displays in the viewport.
 
    <img src="../../assets/tutorials/creating-spinning-objects/HC-Hinge-2.jpg" width="80%" />
 
