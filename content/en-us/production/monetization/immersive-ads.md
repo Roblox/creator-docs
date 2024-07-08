@@ -96,7 +96,7 @@ Experiences must meet the following criteria to be eligible to be an ad publishe
 - Your experience must be **Public**. If a publisher makes the experience Private, the experience will lose eligibility.
 - You must complete the **Experience Guidelines Questionnaire** for your experience.
 - Your experience must maintain **2,000 unique visitors per month**.
-  - This is calculated on the 2nd of every month, based on visitors in the most recent 28 calendar days.
+  - This is calculated and updated monthly, based on visitor data.
   - Bots cannot be included in visitor counts.
 - You must comply with the [Roblox Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and the [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).
 
