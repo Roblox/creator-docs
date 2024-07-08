@@ -231,6 +231,8 @@ methods:
       with the parameters specified in this method. Can display bubbles for
       non-player characters (NPCs) if you specify a part within the character,
       such as its head.
+
+      **Note:** This method is only available for use in **LocalScripts**, or Scripts with the **RunContext** set to Client.
     code_samples: []
     parameters:
       - name: partOrCharacter
