@@ -14,7 +14,7 @@ The first step in performance optimization is to [Design for Performance](design
 1. [Monitoring Performance](monitoring.md) - Use analytics tools to monitor the impact of your changes and watch for indicators of any performance issues.
 </figure>
 <figure>
-  <img alt="A diagram showing the flow from designing, identifying, improving, and monitoring performance." src="../assets/optimization/Perf-Flow.svg" width="60%" />
+  <img alt="A diagram showing the flow from designing, identifying, improving, and monitoring performance." src="../assets/optimization/Perf-Flow.png" width="70%" />
 </figure>
 </GridContainer>
 
