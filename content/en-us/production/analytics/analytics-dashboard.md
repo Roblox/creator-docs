@@ -56,6 +56,76 @@ There are also functionalities on each dashboard to help you further analyze you
 
 You can apply a date filter to view the chart for a date range by separately selecting any specific time frame between the first date that the data was available and the present day as the start and the end date.
 
+### Filtering by Metrics
+
+You can apply various filters to better understand your cohorts by clicking the **Filter By** button. Filters apply to all charts across all analytics pages until they are turned off.
+
+Some filters might not be available for all metrics. If a filter is not available, you will see that it is grayed out:
+
+   <img src="../../assets/publishing/groups/Metrics-Unavailable.png" alt="Example of some filters displaying at partial opacity when unavailable." width="70%" />
+
+You can filter by the following metrics:
+
+<table><thead>
+  <tr>
+    <th>**Filter Type**</th>
+    <th>**Subcategories**</th>
+    <th>**Usage**</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>Age Group</td>
+    <td>&lt;9, 9-12, 13-17, 18+</td>
+    <td>Analyze latest trends across different age groups.</td>
+  </tr>
+  <tr>
+    <td>Platform</td>
+    <td>Computer, Phone, Tablet, VR and Console. Users might be double counted if they use more than one device.</td>
+    <td>Analyze latest trends across different platforms.</td>
+  </tr>
+  <tr>
+    <td>OS (Operating System)</td>
+    <td>Android, iOS, Xbox One, OSX, Playstation and Windows.</td>
+    <td>Analyze latest trends across different OS types. Users might be double counted if they use more than one device.</td>
+  </tr>
+  <tr>
+    <td>Country </td>
+    <td>All countries</td>
+    <td>Analyze latest trends across different countries</td>
+  </tr>
+  <tr>
+    <td>Language </td>
+    <td>All languages</td>
+    <td>Analyze which languages are popular across your users to help prioritize localization efforts. You can also see the impacts of adding translation for different languages.</td>
+  </tr>
+  <tr>
+    <td>New vs. returning</td>
+    <td>New, returning</td>
+    <td>Analyze how new and returning users are engaging with your experiences. </td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td>Female, male, unknown</td>
+    <td>Analyze how female, male, and unknown gender demographics are engaging with your experiences. </td>
+  </tr>
+  <tr>
+    <td>Memory group (only applicable to some performance metrics)</td>
+    <td>&lt;2GB, 2GB-4GB, 4GB-8GB, 8GB+</td>
+    <td>Analyze how your experience is performing across different devices. You can identify under-performing devices and focus on improving performance.</td>
+  </tr>
+  <tr>
+    <td>Acquisition Source (only applicable to acquisition metrics)</td>
+    <td>Home recommendations, home other, search, friends, teleport, sponsored ads</td>
+    <td>Analyze how users from different acquisition sources engage with your experience.</td>
+  </tr>
+</tbody></table>
+
+### Explore Mode
+
+Use the **Explore** button on the top-right corner of the chart to switch to a single chart view. In this view, you can apply different filters and breakdowns to explore under-performing segments and areas of opportunity.
+
+   <img src="../../assets/publishing/groups/Explore-Mode.png" alt="Analytics chart with top-right corner annotated to indicate explore mode button" />
+
 ### Exporting a Chart
 
 To export a chart to use with other data analytics tools, click the **Export Button** and save the metrics in a `.csv` file. The file includes timestamps and values of each datapoint per KPI.
@@ -68,18 +138,28 @@ You can't export the chart data for the given KPI chart if you don't have any da
 
 Benchmarking is the process of measuring your experience's KPIs and comparing them to other experiences on Roblox. With benchmarks displayed on your dashboard, you can monitor the performance of your experience's analytics KPIs among experiences on Roblox to adjust your content strategy and set appropriate goals for improvement.
 
-For KPIs relevant to specific aspects of your user behavior, Analytics Dashboard provides **similar experience benchmarks**. These benchmarks help you compare your experience with similar experiences with at least 100 Daily Active Users, such as those under the same genre as yours on the **Home** and **Discovery** pages. Available KPIs for similar experience benchmarks include:
+For KPIs relevant to specific aspects of your user behavior, Analytics Dashboard provides **similar experience benchmarks**. Depending on the availability, you might see:
+
+- **Similar experiences** benchmarks if the model finds enough similar games, such as those on the recommended experiences section on your Experience Details Page.
+- **Genre** benchmarks if the model cannot find enough similar experiences but your game has an internal genre.
+- **All experiences** benchmarks if your game hasn't been labeled with a genre yet.
+
+Your experience may transition from one benchmark set to another as we gather more data to help you compare your experience with the most relevant experiences with at least 100 daily active users. Benchmarks for similar experiences update daily to reflect the most relevant experiences for your user base.
+
+When your benchmark sets update, such as **Genre** updating to **Similar Experience**, the dashboard adds annotations in the charts to identify when your experience transitions from one benchmark set to another.
+
+<img src="../../assets/analytics/analytics-dashboard/benchmark-transition.png" width= "100%" alt="An example graph showing icon indicating transition from Genre benchmarks to Similar Experiences benchmarks." />
+
+Available KPIs for similar experience benchmarks include:
 
 - **Retention** - All KPIs
-
 - **Engagement**- Average Session Time
-
 - **Monetization** - Average Revenue per Paying Users (ARPPU), Average Revenue per DAU (ARPDAU), Conversion Rate (CVR)
+- **Acquisition** - Qualified Play Through Rate
 
 Each of these KPIs shows its similar experience benchmark in the 50th - 90th percentile range. For example, if you see your Day 1 Retention benchmark's 50th - 90th percentile is 12.4% - 24.1%, it means that:
 
 - 50% of similar experiences have a Day 1 Retention of 12.4% or lower.
-
 - 10% of similar experiences have a Day 1 Retention of 24.1% or higher.
 
 <img src="../../assets/analytics/analytics-dashboard/benchmark-similar-exp.png" width= "100%" alt="An example shows the D7 retention chart with similar experience benchmarking." />
