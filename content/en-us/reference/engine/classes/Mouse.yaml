@@ -99,9 +99,9 @@ properties:
       Note, the roll of the `Class.Workspace.CurrentCamera` is not used when
       calculating the orientation of the Hit `Datatype.CFrame`.
 
-      The mouse's internal ray extends for 10000 studs. If the mouse is not
+      The mouse's internal ray extends for 10,000 studs. If the mouse is not
       pointing at an object in 3D space (for example when pointing at the sky),
-      this property will be 10000 studs away from the
+      this property will be 10,000 studs away from the
       `Class.Workspace.CurrentCamera`.
     code_samples:
       - Mouse-Hit-Laser-Beam
