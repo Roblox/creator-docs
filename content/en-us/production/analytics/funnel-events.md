@@ -23,19 +23,17 @@ A common example is an **onboarding funnel** which is critical to understand how
 
 ```lua title="Tracking Onboarding Steps in Plant"
 local AnalyticsService = game:GetService("AnalyticsService")
-local Players = game:GetService("Players")
-local currentPlayer = Players.LocalPlayer
 
 -- Log the first step of the FTUE
 AnalyticsService:LogOnboardingFunnelStepEvent(
-    currentPlayer,
+    player,
     1, -- Step number
     "In Farm" -- Step name
 )
 
 -- Log the second step
 AnalyticsService:LogOnboardingFunnelStepEvent(
-    currentPlayer,
+    player,
     2, -- Step number
     "Plant Seed" -- Step name
 )
@@ -52,14 +50,12 @@ Use `funnelSessionId` to distinguish between different sessions of the same user
 ```lua title="Tracking Shop Steps"
 local AnalyticsService = game:GetService("AnalyticsService")
 local HttpService = game:GetService("HttpService")
-local Players = game:GetService("Players")
-local currentPlayer = Players.LocalPlayer
 
 funnelSessionId = HttpService:GenerateGUID()
 
 -- Log when the user opens the store
 AnalyticsService:LogFunnelStepEvent(
-    currentPlayer,
+    player,
     "ArmoryCheckout", -- Funnel name used to group steps together
     funnelSessionId, -- Funnel session id for this unique checkout session
     1, -- Step number
@@ -68,7 +64,7 @@ AnalyticsService:LogFunnelStepEvent(
 
 -- Log when the user views an item
 AnalyticsService:LogFunnelStepEvent(
-    currentPlayer,
+    player,
     "ArmoryCheckout", -- Funnel name used to group steps together
     funnelSessionId, -- Funnel session id for this unique checkout session
     2, -- Step number
@@ -77,7 +73,7 @@ AnalyticsService:LogFunnelStepEvent(
 
 -- Log when the user views adds to cart
 AnalyticsService:LogFunnelStepEvent(
-    currentPlayer,
+    player,
     "ArmoryCheckout", -- Funnel name used to group steps together
     funnelSessionId, -- Funnel session id for this unique checkout session
     3, -- Step number
@@ -85,13 +81,96 @@ AnalyticsService:LogFunnelStepEvent(
 )
 ```
 
+### Implementing funnelSessionId
+
+When implementing funnels, a `funnelSessionId` can help you track your events but may not be required in every instance. Use the following guidelines:
+
+- **One-Time Funnels** - You don't need to use `funnelSessionId` for one-time funnels because they only occur once per user.
+- **Store Funnels** - Use `funnelSessionId` to distinguish between different sessions of the same user in a recurring funnel, such as opening the shop multiple times in a single session in the [earlier example](#tracking-recurring-funnels). In cases like this, where the player may open the shop multiple times in a single session, it is recommended to use a GUID as the `funnelSessionId`.
+- **Item Upgrades** - Use `funnelSessionId` to distinguish between different item upgrade paths, generally over a longer time period than a single play session. Rather than use a GUID as in the store funnel case, you can often build a unique key based on the item being upgraded, for example: `<playerId>-<itemId>`.
+
+## Initial Step
+
+Funnels start when the first step is logged. If you want to start a funnel immediately on player join, you'll need to log the first step on the `PlayerAdded` event.
+
+```lua title="Logging the first step in the PlayerAdded event"
+local AnalyticsService = game:GetService("AnalyticsService")
+local Players = game:GetService("Players")
+
+Players.PlayerAdded:Connect(function(player)
+    AnalyticsService:LogOnboardingFunnelStepEvent(
+        player,
+        1, -- Step number
+        "Player Joined" -- Step name
+    )
+end)
+```
+
+## Repeated Steps
+
+If a user repeats a step in a funnel, the funnel only considers the first instance of the step. For example, if a user logs step 2 of a funnel twice, the funnel only counts the first instance of step 2.
+
+## Skipping Steps
+
+If for some reason you skip a step in funnel, the earlier steps automatically complete.
+
+For example, if you have a funnel with steps 1, 2, and 3. If you log step 3 without logging steps 1 or 2, the funnel will consider steps 1 and 2 as completed.
+
+## Using Funnel Filters
+
+Roblox provides filters to help you analyze your funnel data. These include player data, device data, and you can send custom data as well. In some cases, a player's status may change during the funnel, such as when the player switches devices from mobile to desktop.
+
+To avoid double-counting funnels, filters always **only apply to the first step** of the funnel. This means that if a player switches devices during the funnel, the funnel will only be attributed to their device at the time they enter the funnel.
+
+Similarly, funnels display by cohort, meaning that if a player enters the funnel on 6/19, the funnel will be attributed to the 6/19 cohort even if they complete the funnel on 6/20.
+
 ## Modifying Funnels
 
-After you make an update to your funnel steps, it's important to set the correct date range to see the latest funnel. If the current date is 6/14 and you updated step 2 of your onboarding funnel on 6/7, you should set the date range to 6/7 – 6/14 to view the latest funnel.
+After you make an update to your funnel steps, it's important to set the correct date range to see the latest funnel. If the current date is 6/21 and you updated step 2 of your onboarding funnel on 6/14, you should set the date range to 6/14 – 6/21 to view the latest funnel.
 
 If you select a date range that includes a funnel step update, a warning displays on the relevant step:
 
 <img src="../../assets/analytics/event-types/Plant-Game-Warning.png" alt="A warning displays on the funnel dashboard indicating a name change within the selected date range."/>
+
+## Protecting your Funnels From Exploiters
+
+In order to keep your data clean, it is important to add some level of data validation in your server code to prevent exploiters from sending invalid data to your analytics service.
+
+For example, if you have an Onboarding funnel with 3 steps, you can use a `RemoteEvent` for the client to notify the server when the player has completed each step and add a server check to ensure that the step number is valid before logging the event:
+
+```lua title="Client-side event code"
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local onboardingEvent = ReplicatedStorage:WaitForChild("OnboardingEvent")
+
+local function fireOnboardingEvent(step: number)
+	onboardingEvent:FireServer({ step = step })
+end
+
+fireOnboardingEvent(1)
+fireOnboardingEvent(2)
+fireOnboardingEvent(10) -- invalid step
+```
+
+```lua title="Server-side event code"
+local AnalyticsService = game:GetService("AnalyticsService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local onboardingEvent = ReplicatedStorage:WaitForChild("OnboardingEvent")
+
+local maxStep = 3
+
+local function onPlayerEventFired(player: Player, args: { step: number })
+	local step = args.step
+	if(step > maxStep) then
+		warn(`Invalid tutorial step {step} received from client.`)
+		return
+	end
+
+	print(`{player.Name} completed step: {step}`)
+	AnalyticsService:LogOnboardingFunnelStepEvent(player, step)
+end
+
+onboardingEvent.OnServerEvent:Connect(onPlayerEventFired)
+```
 
 ## Using Funnels to Grow Your Experience
 

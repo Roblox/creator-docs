@@ -133,10 +133,11 @@ local assetTypes = {
 }
 catalogSearchParams.AssetTypes = assetTypes
 
-local pagesObject =
-	--This function returns a CatalogPages object containing the results.
-	AvatarEditorService:SearchCatalog(catalogSearchParams)
+-- This function returns a CatalogPages object containing the results
+local pagesObject = AvatarEditorService:SearchCatalog(catalogSearchParams)
+
 local currentPage = pagesObject:GetCurrentPage()
+
 for i, item in currentPage do
 	print(item)
 end

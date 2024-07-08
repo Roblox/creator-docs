@@ -15,11 +15,9 @@ Using a fantasy-related experience as an example, you can track an economy event
 
 ```lua title="Tracking Custom Fields"
 local AnalyticsService = game:GetService("AnalyticsService")
-local Players = game:GetService("Players")
-local currentPlayer = Players.LocalPlayer
 
 AnalyticsService:LogEconomyEvent(
-    currentPlayer,
+    player,
     Enum.AnalyticsEconomyFlowType.Sink,
     "Coins", -- Currency name
     80, -- Cost
