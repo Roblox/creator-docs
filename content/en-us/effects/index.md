@@ -71,20 +71,19 @@ width="100%"></video>
 
 ## Highlighting
 
-`Class.Highlight` is a visual effect you can use to call attention to a specific
-object within your experience.
+`Class.Highlight` is a visual effect which you can use to call attention to a specific object within an experience, such as to provide visual feedback that the object is important and/or interactable. See [Highlighting Objects](../effects/highlighting.md) for details.
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/ui/highlighting-objects/OutlineTransparency-1.jpg" width="95%" />
-    <figcaption>Original Object</figcaption>
+    <img src="../assets/ui/highlighting-objects/OutlineTransparency-1.jpg" />
+    <figcaption>Base object</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/Overview-Yellow-Outline.jpg" width="96%" />
-    <figcaption>Object with a yellow outline and black interior</figcaption>
+    <img src="../assets/ui/highlighting-objects/Adding-Highlight.jpg" />
+    <figcaption>White outline, 50% red interior</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/Overview-Yellow-Interior.jpg" width="91%" />
-    <figcaption>Object with a black outline and yellow interior</figcaption>
+    <img src="../assets/ui/highlighting-objects/Overview-Yellow-Outline.jpg" />
+    <figcaption>Yellow outline, black interior</figcaption>
   </figure>
 </GridContainer>
