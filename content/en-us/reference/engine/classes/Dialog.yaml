@@ -71,10 +71,10 @@ properties:
       can_save: true
   - name: Dialog.ConversationDistance
     summary: |
-      The furthest distance that I player can be from the Dialog's parent to
+      The furthest distance that a player can be from the Dialog's parent to
       start a conversation.
     description: |
-      The furthest distance that I player can be from the Dialog's parent to
+      The furthest distance that a player can be from the Dialog's parent to
       start a conversation.
     code_samples:
     type: float
