@@ -180,9 +180,9 @@ You can reuse functions across multiple scripts by storing them in `Class.Module
 A variadic function accepts any number of arguments. For example, `print()` is a variadic function.
 
 ```lua
-print(2, "+", 2, "=", 2+2) --2 + 2 = 4
-print( string.format("The %s is a %s!", "cake", "lie") ) -- The cake is a lie!
-print( string.char(115, 101, 99, 114, 101, 116) ) -- secret
+print(2, "+", 2, "=", 2 + 2) --2 + 2 = 4
+print(string.format("The %s is a %s!", "cake", "lie")) -- The cake is a lie!
+print(string.char(115, 101, 99, 114, 101, 116)) -- secret
 ```
 
 #### Defining Variadic Functions
@@ -191,11 +191,11 @@ To define a variadic function, you use the `...` token as the last or only param
 
 ```lua
 local function variadic(named, ...)
-    local arguments = {...} -- pack the extra arguments into a table
-    print("Named argument =", named)
-    for i, value in arguments do
-        print("Input No.", i, "=", value)
-    end
+	local arguments = {...} -- pack the extra arguments into a table
+	print("Named argument =", named)
+	for i, value in arguments do
+		print("Input No.", i, "=", value)
+	end
 end
 
 variadic(10, "Hi", 20, "Variadic Function")
@@ -213,14 +213,14 @@ You can define variadic functions as wrappers around other functions to pass, or
 
 ```lua
 local function printAround(functionToPrintAround, ...)
-    print("Before")
-    functionToPrintAround(...)
-    print("After")
+	print("Before")
+	functionToPrintAround(...)
+	print("After")
 end
 
 local function addNumbers(x, y, z)
-    print("x =", x)
-    print("y + z =", y + z)
+	print("x =", x)
+	print("y + z =", y + z)
 end
 
 printAround(addNumbers, 1, 2, 3)
@@ -238,6 +238,6 @@ If you want to pass a table array of values to a global variadic function, such 
 
 ```lua
 local squares = {1, 4, 9, 16, 25}
-print( "The first 5 square numbers are:", unpack(squares) )
+print("The first 5 square numbers are:", unpack(squares))
 -- The first 5 square numbers are 1 4 9 16 25
 ```
