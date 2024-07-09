@@ -1,0 +1,19 @@
+name: CoreScript
+type: class
+category: Scripting
+memory_category: Script
+summary: |
+  An object that contains and runs Roblox-authored Lua code on the server.
+description: |
+  A `Class.CoreScript` is a Lua code container that acts like a `Class.Script` but may also access internal Roblox properties and methods. It is used internally in the core functionality implementation (such as the backspace and in-game menu).
+code_samples:
+inherits:
+  - BaseScript
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []
