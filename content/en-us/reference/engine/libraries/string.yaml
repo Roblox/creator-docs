@@ -67,12 +67,12 @@ functions:
       Looks for the first match of pattern in the string `s` and returns the
       indices of `s` where the occurrence starts and ends.
     description: |
-      The `string.find` function searches for the first occurrence of a pattern in a string and returns the start and end indices of the match. 
-      If no match is found, it returns `nil.`
-      You can specify where to start the search using the optional `init` parameter, which defaults to 1 and can be negative. 
-      An optional `plain` parameter turns off pattern matching, so the function performs a plain substring search; Note that if you use `plain`, you must also provide `init.`
+      Searches for the first occurrence of a pattern in a string and returns the start and end indices of the
+      match. If no match is found, it returns `nil.` You can specify where to start the search using the
+      optional `init` parameter which defaults to 1 and can be negative. An optional `plain` parameter turns
+      off pattern matching, so the function performs a plain substring search; note that if you use `plain`,
+      you must also provide `init.`
 
-      ### Various Examples
       ```lua
       -- Example 1: Basic usage
       local s = "Hello, world!"
