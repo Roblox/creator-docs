@@ -107,6 +107,7 @@ The remainder of this tutorial uses a pre-made model. This model includes parts 
    	local humanoid = whichCharacter:FindFirstChildWhichIsA("Humanoid")
 
    	if humanoid and objectPart.CanCollide == true then
+
    	end
    end
 
