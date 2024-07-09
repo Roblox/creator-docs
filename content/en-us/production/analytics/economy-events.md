@@ -34,12 +34,10 @@ The following sample uses `Class.AnalyticsService.LogEconomyEvent` to log two di
 
 ```lua title="Tracking a source Gameplay event"
 local AnalyticsService = game:GetService("AnalyticsService")
-local Players = game:GetService("Players")
-local currentPlayer = Players.LocalPlayer
 
 -- After level 1 completion
 AnalyticsService:LogEconomyEvent(
-    currentPlayer,
+    player,
     Enum.AnalyticsEconomyFlowType.Source,
     "Coins", -- Currency name
     50, -- Amount earned
@@ -49,7 +47,7 @@ AnalyticsService:LogEconomyEvent(
 
 -- After level 2 completion
 AnalyticsService:LogEconomyEvent(
-    currentPlayer,
+    player,
     Enum.AnalyticsEconomyFlowType.Source,
     "Coins", -- Currency name
     50, -- Amount earned
@@ -62,11 +60,9 @@ The following sample tracks a Robux purchase of a 1000-coin bundle, using the `I
 
 ```lua title="Tracking an in-app purchase"
 local AnalyticsService = game:GetService("AnalyticsService")
-local Players = game:GetService("Players")
-local currentPlayer = Players.LocalPlayer
 
 AnalyticsService:LogEconomyEvent(
-    currentPlayer,
+    player,
     Enum.AnalyticsEconomyFlowType.Source,
     "Coins",
     1000, -- How many coins are in the bundle
@@ -84,12 +80,10 @@ Keep in mind that the amount (cost) should always be a positive number regardles
 
 ```lua title="Tracking a sink Gameplay event"
 local AnalyticsService = game:GetService("AnalyticsService")
-local Players = game:GetService("Players")
-local currentPlayer = Players.LocalPlayer
 
 -- After level 2 completion
 AnalyticsService:LogEconomyEvent(
-    currentPlayer,
+    player,
     Enum.AnalyticsEconomyFlowType.Sink,
     "Coins", -- Currency name
     80, -- Cost
