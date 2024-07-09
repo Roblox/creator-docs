@@ -54,7 +54,9 @@ One everyday use of dictionaries is organizing player or character information. 
 1. In a new script, create a dictionary named `enemy`.
 
    ```lua
-   local enemy = {}
+   local enemy = {
+
+   }
    ```
 
 2. The first key in the dictionary will track the enemy's name with a variable called `name`.
