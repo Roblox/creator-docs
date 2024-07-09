@@ -1,0 +1,45 @@
+using UnityEngine;
+
+public class CharacterController : MonoBehaviour
+{
+    public string characterName;
+    public float moveSpeed = 5f;
+
+    void Update()
+    {
+        Move();
+        PerformAbility();
+    }
+
+    void Move()
+    {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Vector3 moveDirection = new Vector3(horizontalInput, 0, verticalInput).normalized;
+        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+    }
+
+    void PerformAbility()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (characterName == "Zoro")
+            {
+                // Implement Zoro's sword attack ability
+            }
+            else if (characterName == "Luffy")
+            {
+                // Implement Luffy's stretching ability
+            }
+            else if (characterName == "Sanji")
+            {
+                // Implement Sanji's kick ability
+            }
+            else if (characterName == "Jinbei")
+            {
+                // Implement Jinbei's underwater fighting style
+            }
+        }
+    }
+}
