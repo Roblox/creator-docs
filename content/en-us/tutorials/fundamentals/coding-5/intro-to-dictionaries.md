@@ -128,7 +128,7 @@ Dictionaries can interact with pre-existing variables declared in other parts of
 1. In **ServerScriptService**, create a new script named PlayerPoints. In the script, get the Players Service and create an empty dictionary named `playerPoints`.
 
    ```lua
-   Players = game:GetService("Players")
+   local Players = game:GetService("Players")
 
    local playerPoints = {
 
@@ -143,6 +143,7 @@ Dictionaries can interact with pre-existing variables declared in other parts of
    }
 
    local function setPoints(newPlayer)
+
    end
 
    Players.PlayerAdded:Connect(setPoints)
@@ -185,7 +186,7 @@ Dictionaries can interact with pre-existing variables declared in other parts of
 6. Run the project and look into the output editor.
 
 ```lua title="Finished script"
-Players = game:GetService("Players")
+local Players = game:GetService("Players")
 
 local playerPoints = {
 
@@ -195,7 +196,7 @@ local function setPoints(newPlayer)
    local name = newPlayer.Name
    print("hello " .. name)
    playerPoints[name] = 0
-   print( name .. " has " ..playerPoints[name] .. " points.")
+   print(name .. " has " .. playerPoints[name] .. " points.")
 end
 
 Players.PlayerAdded:Connect(setPoints)
