@@ -59,11 +59,11 @@ One everyday use of dictionaries is organizing player or character information. 
    }
    ```
 
-2. The first key in the dictionary will track the enemy's name with a variable called `name`.
+2. The first key in the dictionary will track the enemy's name with a variable called `Name`.
 
    ```lua
    local enemy = {
-   	Name,
+   	Name
    }
    ```
 
@@ -71,7 +71,7 @@ One everyday use of dictionaries is organizing player or character information. 
 
    ```lua
    local enemy = {
-   	name = "Spike",
+   	Name = "Spike",
    }
    ```
 
