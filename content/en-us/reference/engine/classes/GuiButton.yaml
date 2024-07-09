@@ -123,7 +123,10 @@ events:
     summary: |
       Fires when the button is activated.
     description: |
-      Fires when the button is activated.
+      Fires when the button is activated. As this event doesn't fire on the
+      server, it should only be used in a `Class.LocalScript`, or in a
+      `Class.Script` with `Class.Script.RunContext|RunContext` of
+      `Enum.RunContext.Client`.
     code_samples:
     parameters:
       - name: inputObject

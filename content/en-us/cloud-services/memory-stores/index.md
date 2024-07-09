@@ -78,7 +78,7 @@ To keep your memory usage pattern optimal and avoid hitting the [limits](#limits
 
 - Split giant data structures into multiple smaller ones by [sharding](<https://en.wikipedia.org/wiki/Shard_(database_architecture)>).
 
-  It's often easier to manage data in smaller structures rather than storing everything in one large data structure. This approach can also help avoid usage and rate limits. For example, if you have a sorted map that uses prefixes for its keys, consider separating each prefix into its own sorted map. For an especially popular experience, you might even separate users into multiple maps based on the first digits of their user IDs.
+  It's often easier to manage data in smaller structures rather than storing everything in one large data structure. This approach can also help avoid usage and rate limits. For example, if you have a sorted map that uses prefixes for its keys, consider separating each prefix into its own sorted map. For an especially popular experience, you might even separate users into multiple maps based on the last digits of their user IDs.
 
 - Compress stored values.
 

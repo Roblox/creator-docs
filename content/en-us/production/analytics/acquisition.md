@@ -5,9 +5,7 @@ description: Explains how to interpret and improve acquisition metrics for your 
 
 **Acquisition** measures where new and returning users are coming from and how well they convert.
 
-<Alert severity="info">
-Make sure you have an experience with good [Retention](../../production/analytics/retention.md) and [Engagement](../../production/analytics/engagement.md) before driving too many new users to it.
-</Alert>
+When acquiring users to your experience, such as announcing an in-game event or creating ad campaigns, make sure your experience has good [retention](./retention.md) and [engagement](./engagement.md) to ensure a healthy user population and game experience.
 
 ## Viewing Acquisition Metrics
 
@@ -26,7 +24,7 @@ On the acquisition dashboard, you'll see the following charts and tables:
 - New users with impressions per source
 - Returning users with plays per source
 - Returning users with impressions per source
-- Home recommendations conversion rate
+- Qualified play through rate
 - Cumulative new users funnel
 
 Here's a list of all the available acquisition sources:
@@ -66,7 +64,7 @@ Here's a list of all the available acquisition sources:
   </tr>
 </table>
 
-<img src="../../assets/analytics/acquisition/home-recommendations.png" width= "78%" alt="Home Recommendations chart with icons."/>
+<img src="../../assets/analytics/acquisition/qualified-playthrough-rate.png" width= "78%" alt="Chart indicating qualified playthrough rate through home recommendations."/>
 
 ## Acquisition Attribution
 
@@ -82,8 +80,12 @@ The dashboard categorizes results for each acquisition source as follows:
     <td>Unique new users with plays on the experience.</td>
   </tr>
   <tr>
-    <td>Conversion Rate</td>
-    <td>Percent of new users who played after viewing your experience at source (ad impression, search result, recommendation).</td>
+    <td>Users with Qualified Plays</td>
+    <td>Unique new users who engaged with your experience.</td>
+  </tr>
+  <tr>
+    <td>Qualified Play Through Rate</td>
+    <td>Percent of new users who engaged with your experience after viewing an impression.</td>
   </tr>
   <tr>
     <td>D7 Retention</td>
@@ -125,7 +127,7 @@ You can adopt the following strategies to improve the number of users visiting y
 
 2. **Grow your engagement**. Average session time measures how much time users spend in your experience and signals how much users enjoy your content. Experiences with high average session time are more likely to be featured in **Recommended Experiences**.
 
-For more information on Roblox sources and best practices on improving the discovery of your experience, see [Discovery](../../production/promotion/discovery.md).
+For more information on Roblox sources and best practices on improving the discovery of your experience, see [Discovery](../../discovery.md).
 
 ### Improving Conversion Rate from Roblox Sources
 

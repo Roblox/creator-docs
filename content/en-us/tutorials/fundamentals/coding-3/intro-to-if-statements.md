@@ -52,19 +52,17 @@ One particular operator to be aware of is `==`; it stands for "is equal to." So 
 2. After the keyword `if`, type a true statement such as `3 + 3 == 6`.
 
    ```lua
-     if 3 + 3 == 6 then
-     -- empty code
+   if 3 + 3 == 6 then
+   	-- empty code
    end
-
    ```
 
 3. Within the conditional, reference the part you named LieDetector and change the part's `Color` property to green.
 
    ```lua
-    if 3 + 3 == 6 then
-      workspace.LieDetector.Color = Color3.fromRGB(0, 255, 0)
+   if 3 + 3 == 6 then
+   	workspace.LieDetector.Color = Color3.fromRGB(0, 255, 0)
    end
-
    ```
 
     <Alert severity="info">
@@ -81,9 +79,8 @@ Now, purposely change the statement to see what happens when the math equation i
 
    ```lua
    if 3 + 3 >= 10 then
-      workspace.LieDetector.Color = Color3.fromRGB(0, 255, 0)
+   	workspace.LieDetector.Color = Color3.fromRGB(0, 255, 0)
    end
-
    ```
 
 2. Test your code now. The part shouldn't turn green for a false statement.
@@ -135,11 +132,10 @@ Conditional statements are also used to evaluate the status of properties and va
    ```lua
    local mysteryPart = workspace.MysteryPart
 
-    -- Evaluates as true if MysteryPart was successfully assigned
+   -- Evaluates as true if MysteryPart was successfully assigned
    if mysteryPart then
-     workspace.LieDetector.Color = Color3.fromRGB(0, 255, 0)
+   	workspace.LieDetector.Color = Color3.fromRGB(0, 255, 0)
    end
-
    ```
 
 2. Insert a new part into the workspace named MysteryPart. Test again, and LieDetector should turn green.
@@ -151,10 +147,9 @@ Conditional statements are also used to evaluate the status of properties and va
 
    -- Evaluates as true if MysteryPart is fully opaque
    if mysteryPart.Transparency == 0 then
-     workspace.LieDetector.Color = Color3.fromRGB(0, 255, 0)
-     mysteryPart.Transparency = .2
+   	workspace.LieDetector.Color = Color3.fromRGB(0, 255, 0)
+   	mysteryPart.Transparency = .2
    end
-
    ```
 
 4. Test the code, and if MysteryPart has the default transparency of 0, it will become ghostly while LieDetector turns green.
