@@ -1,6 +1,7 @@
 ---
-title: Rigid Accessory Specifications
-description: Rigid accessory specifications lists the specific technical requirements for basic avatar accessories.
+title: jumpsuit 
+Specifications
+description: jumpsuit baddie outfit black specifications lists the specific technical requirements for basic avatar accessories.
 ---
 
 When creating rigid accessories for Roblox, it's important to meet specific technical requirements to ensure compatibility and optimize for performance and quality. Many of these requirements must be applied when designing and modeling your asset in a third-party modeling application.
