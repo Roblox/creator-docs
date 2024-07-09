@@ -130,15 +130,20 @@ Dictionaries can interact with pre-existing variables declared in other parts of
    ```lua
    Players = game:GetService("Players")
 
-   local playerPoints = {}
+   local playerPoints = {
+
+   }
    ```
 
 2. Code a local function for setting player points with a parameter for a new player variable. Connect the function to the `Class.Players.PlayerAdded` event.
 
    ```lua
-   local playerPoints = {}
+   local playerPoints = {
 
-   local function setPoints(newPlayer) end
+   }
+
+   local function setPoints(newPlayer)
+   end
 
    Players.PlayerAdded:Connect(setPoints)
    ```
