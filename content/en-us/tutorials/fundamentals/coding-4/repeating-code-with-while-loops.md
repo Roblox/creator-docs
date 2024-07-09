@@ -83,6 +83,7 @@ Next, you'll set up the while loop for the color changing part.
 
    -- Looping Code
    while true do
+
    end
    ```
 
