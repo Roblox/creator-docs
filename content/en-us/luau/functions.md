@@ -140,7 +140,7 @@ print(bindableFunction:Invoke(42)) -- 84
 
 ### Event Handlers
 
-You can assign a function, known as an **event handler**, to execute when an event fires. For example, you can create a function called `onPlayerAdded()` to the `Class.Players.PlayerAdded` event to print the name of whatever player joins. For more information, see [Built-In Events](../scripting/events/built-in.md).
+You can assign a function, known as an **event handler**, to execute when an event fires. For example, you can create a function called `onPlayerAdded()` to the `Class.Players.PlayerAdded` event to print the name of whatever player joins. For more information, see [Events](../scripting/events/index.md).
 
 ```lua
 local Players = game:GetService("Players")
