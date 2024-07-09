@@ -141,16 +141,16 @@ Though you might not need all four conditions when designing a tool, you can use
 ```lua
 local tool = script.Parent
 local function onEquip()
-  print("The tool is now equipped.")
+	print("The tool is now equipped.")
 end
 local function onUnequip()
-  print("The tool is now unequipped.")
+	print("The tool is now unequipped.")
 end
 local function onActivate()
-  print("The tool is now activated.")
+	print("The tool is now activated.")
 end
 local function onDeactivate()
-  print("The tool is now deactivated.")
+	print("The tool is now deactivated.")
 end
 tool.Equipped:Connect(onEquip)
 tool.Unequipped:Connect(onUnequip)
@@ -173,11 +173,11 @@ The following example shows steps for adding a `Class.Script` on the server that
 
    local tool = script.Parent
    local function onActivate()
-    if Lighting.ClockTime >= 8 and Lighting.ClockTime < 16 then
-      Lighting.ClockTime = 20
-    else
-      Lighting.ClockTime = 8
-    end
+   	if Lighting.ClockTime >= 8 and Lighting.ClockTime < 16 then
+   		Lighting.ClockTime = 20
+   	else
+   		Lighting.ClockTime = 8
+   	end
    end
    tool.Activated:Connect(onActivate)
    ```

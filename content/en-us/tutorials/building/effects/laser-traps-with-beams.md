@@ -149,12 +149,12 @@ To script the behavior that damages the player:
    local collisionBox = laserTrap.CollisionBox
 
    local function onTouch(otherPart)
-	   local character = otherPart.Parent
-	   local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 
-	   if humanoid then
-		   humanoid.Health = 0
-	   end
+   	if humanoid then
+   		humanoid.Health = 0
+   	end
    end
 
    collisionBox.Touched:Connect(onTouch)
