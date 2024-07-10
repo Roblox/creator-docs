@@ -23,7 +23,7 @@ The following system specifications ensure that Studio runs smoothly:
 
 ## Installing Studio
 
-To install Roblox Studio on your Windows or Mac computer:
+To install Roblox Studio on your chrombook:
 
 1. Click the following **Download Studio** button. A pop-up dialog displays.
 
