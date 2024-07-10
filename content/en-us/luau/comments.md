@@ -17,7 +17,7 @@ You can add and remove single-line comments in the Script Editor with the keyboa
 -- This condition is really important because the world would blow up if it
 -- were missing.
 if not foo then
-    stopWorldFromBlowingUp()
+	stopWorldFromBlowingUp()
 end
 ```
 
