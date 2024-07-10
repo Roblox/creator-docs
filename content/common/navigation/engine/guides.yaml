@@ -513,6 +513,8 @@ navigation:
         path: /production/publishing/account-verification
       - title: Rights Manager
         path: /production/publishing/rights-manager
+      - title: AI Data Sharing
+        path: /ai-data-sharing
   - title: Promotion
     path: /production/promotion/
     section:
