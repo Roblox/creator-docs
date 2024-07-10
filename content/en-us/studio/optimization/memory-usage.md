@@ -59,7 +59,7 @@ To view memory allocation:
      </tr>
      <tr>
        <td>**LuaHeap**</td>
-       <td>Heap memory for both core scripts (scripts that ship with the Roblox client) and custom scripts.</td>
+       <td>Heap memory for both Core Scripts (scripts that ship with the Roblox client) and custom scripts.</td>
      </tr>
      <tr>
        <td>**Script**</td>

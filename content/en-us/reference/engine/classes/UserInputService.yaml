@@ -2860,10 +2860,10 @@ events:
       As this event only fires locally, it can only be used in a
       `Class.LocalScript`.
 
-      `Class.CoreScript|Core scripts` use similar logic to zoom the user's
+      Roblox's Core Scripts use similar logic to zoom the user's
       camera when a user pinches their fingers on a mobile device. Best practice
       for this event is to use it when creating a mobile camera system to
-      override the default core script.
+      override the default Core Script behaviour.
 
       See also:
 
@@ -2943,10 +2943,10 @@ events:
       As this event only fires locally, it can only be used in a
       `Class.LocalScript`.
 
-      The core scripts that control the user's camera on a mobile device use
+      Roblox's Core Scripts that control the user's camera on a mobile device use
       code that functions similarly to this event. Best practice for this event
       is to use it when creating a mobile camera system to override the default
-      core scripts.
+      Core Script behaviour.
 
       See also:
 

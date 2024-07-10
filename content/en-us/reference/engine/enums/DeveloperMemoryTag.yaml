@@ -37,7 +37,7 @@ items:
   - name: LuaHeap
     value: 4
     summary: |
-      All of the data in Lua. this includes everything happening in CoreScripts,
+      All of the data in Lua. this includes everything happening in Roblox's Core Scripts,
       the built-in data types, etc.
     tags: []
     deprecation_message: ''

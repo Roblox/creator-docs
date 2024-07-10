@@ -29,8 +29,7 @@ properties:
       scripts and GUI.
     description: |
       This property shows the locale id used for the localization of core and
-      internal features such as `Class.CoreGui` and
-      `Class.CoreScript|CoreScripts`.
+      internal features such as `Class.CoreGui` and Core Scripts.
 
       This will return a string with the two letter code (for example, "en-us")
       for the locale.
@@ -75,10 +74,10 @@ methods:
   - name: LocalizationService:GetCorescriptLocalizations
     summary: |
       Returns a list of `Class.LocalizationTable` objects used for localizing
-      CoreScripts.
+      Roblox's Core Scripts.
     description: |
       Returns a list of `Class.LocalizationTable` objects used for localizing
-      CoreScripts.
+      Roblox's Core Scripts.
     code_samples:
     parameters: []
     returns:

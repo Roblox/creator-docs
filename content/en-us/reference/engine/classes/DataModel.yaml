@@ -879,7 +879,7 @@ events:
       GraphicsQualityChangeRequest does not provide the current graphics quality
       level or cover all updates to the graphics quality. For example, changes
       made in the core GUI escape menu are not registered. This event is
-      intended to be used by Roblox `Class.CoreScript|Core Scripts` to update
+      intended to be used internally in Roblox's Core Scripts to update
       the graphics quality and display notifications.
 
       You can retrieve a user's `Enum.SavedQualitySetting` using

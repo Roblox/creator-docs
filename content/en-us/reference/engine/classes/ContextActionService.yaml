@@ -65,7 +65,7 @@ description: |
 
   To see a list of actions and their bound inputs, you can inspect the "Action
   Bindings" tab in the Developer Console (F9 while in game). This shows all
-  bindings - including those bound by Roblox CoreScripts and default
+  bindings - including those bound by Roblox's Core Scripts and default
   camera/control scripts too. This is useful for debugging: check if your
   actions are being bound/unbound at the correct times, or if some other action
   is stealing input from your actions. For example, if you are attempting to

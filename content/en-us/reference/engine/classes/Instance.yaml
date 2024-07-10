@@ -1350,7 +1350,7 @@ methods:
       - No spaces or unique symbols are allowed.
       - Strings must be 100 characters or less.
       - Names are not allowed to start with **RBX** unless the caller is a
-        Roblox core script (reserved for Roblox).
+        Roblox's Core Script (reserved for Roblox).
 
       When attempting to set an attribute to an unsupported type, an error will
       be thrown.

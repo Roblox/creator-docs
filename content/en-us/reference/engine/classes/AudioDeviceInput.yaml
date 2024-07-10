@@ -53,7 +53,7 @@ properties:
       Controls whether the physical device is actively recording.
     description: |
       Controls whether the physical device is actively recording. This property
-      is only set by Roblox core scripts, but it may be read by user scripts.
+      is only set by Roblox's Core Scripts, but it may be read by user scripts.
       Generally, an `Class.AudioDeviceInput` may only be producing sound if
       `Class.AudioDeviceInput.Active|Active` is true **and**
       `Class.AudioDeviceInput.Muted|Muted` is false.
