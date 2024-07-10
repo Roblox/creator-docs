@@ -302,7 +302,6 @@ Use the following code sample to set the existing button label to "Talk" and bin
 ContextActionService:BindAction("Interact", talkToNPC, true, Enum.KeyCode.T, Enum.KeyCode.ButtonR1)
 -- Set image to yellow "Talk" button
 ContextActionService:SetImage("Interact", "rbxassetid://0011223344")
-
 ```
 
 ## Detecting Other Devices
