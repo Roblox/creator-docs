@@ -57,7 +57,7 @@ You have:
 `ipairs()` is used with **arrays**. The "i" in `ipairs()` stands for "index." Use ipairs() and arrays in combination with a for loop to work with ordered values like leaderboards. An example is below.
 
 ```lua
-local players = { "Ali", "Ben", "Cammy" }
+local players = {"Ali", "Ben", "Cammy"}
 
 for playerRank, playerName in ipairs(players) do
 	print("Winner #" .. playerRank .. " is " .. playerName)
