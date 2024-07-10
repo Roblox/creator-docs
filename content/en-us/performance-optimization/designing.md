@@ -31,9 +31,7 @@ Roblox does not have access to all of a device's memory. Some amount is required
 
 - When you add meshes and textures, use and reuse them rather than importing duplicate copies. For more information, see [Remove Duplicate Textures](../tutorials/environmental-art/optimize-your-experience.md#remove-duplicate-textures).
 
-## Physics and Transparency
-
-- Anchor non-interactive items, and turn off `Class.Part.CanTouch` and `Class.Part.CanCollide` to avoid unnecessary physics calculations.
+## Transparency
 
 - Avoid transparency values other than 0 (visible) and 1 (invisible). When you use partial transparency, be especially careful to avoid [high transparency overdraw](../tutorials/environmental-art/optimize-your-experience.md#delete-layered-transparencies).
 

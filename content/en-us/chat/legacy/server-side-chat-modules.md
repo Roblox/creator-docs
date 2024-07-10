@@ -105,7 +105,6 @@ local function runChatModule(ChatService)
 end
 
 return runChatModule
-
 ```
 
 #### UnregisterFilterMessageFunction

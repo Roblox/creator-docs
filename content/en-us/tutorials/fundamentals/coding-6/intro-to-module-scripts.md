@@ -59,7 +59,7 @@ TestModule.myVariable = 100
 
 -- Adds a function to 'TestModule' table
 function TestModule.doTask(player)
- -- Placeholder code
+	-- Placeholder code
 end
 
 return TestModule
@@ -85,15 +85,15 @@ local rewardCoins = 50
 
 -- Usable only in the module script
 local difficultyModifier = {
- easy = 0.5,
- normal = 1,
- hard = 2
+	easy = 0.5,
+	normal = 1,
+	hard = 2
 }
 
 -- Usable in other scripts
 function RewardManager.getCoinReward(difficulty)
- local coins = difficultyModifier[difficulty] * rewardCoins
- return coins
+	local coins = difficultyModifier[difficulty] * rewardCoins
+	return coins
 end
 
 return RewardManager

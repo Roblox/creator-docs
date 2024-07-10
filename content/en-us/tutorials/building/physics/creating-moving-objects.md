@@ -230,7 +230,7 @@ To configure a prismatic constraint:
 1. Insert a `Class.PrismaticConstraint` object into the **Log** mesh.
    1. In the **Explorer** window, hover over the mesh, then click the ⊕ icon. A contextual menu displays.
    1. From the contextual menu, insert a **PrismaticConstraint**.
-1. Assign the log's attachments to the new constraint.
+1. Assign the log's attachments to the new constraint so that the log moves in **relation to** the anchored block part.
    1. In the **Explorer** window, select the constraint.
    1. In the **Properties** window,
       1. Set **Attachment0** to **AnchorAttachment**.
