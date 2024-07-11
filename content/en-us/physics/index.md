@@ -55,3 +55,7 @@ In order to support complex physical mechanisms while also aiming for a smooth a
 ## Adaptive Timestepping
 
 The engine emphasizes best performance by automatically assigning assemblies to one of three simulation rates. For scenarios featuring complex mechanisms like tanks, you can improve stability by setting a fixed timestep. See [Adaptive Timestepping](../physics/adaptive-timestepping.md) for more information.
+
+## Sleep System
+
+When an assembly is not moving or accelerating, the Roblox physics engine improves performance by automatically stops simulating the assembly. See [Sleep System](../physics/sleep.md) for a detailed description of the sleep system.
