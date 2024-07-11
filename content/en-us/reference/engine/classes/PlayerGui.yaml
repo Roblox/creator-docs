@@ -23,7 +23,7 @@ description: |
 
   ```lua
   -- Accessing PlayerGui from a LocalScript:
-  game:GetService('Players').LocalPlayer:WaitForChild('PlayerGui')
+  game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
   ```
 code_samples:
 inherits:
