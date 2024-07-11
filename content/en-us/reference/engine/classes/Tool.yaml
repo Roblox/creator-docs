@@ -295,19 +295,19 @@ properties:
       ToolTip to:
 
       ```lua
-      	tool.ToolTip = "Shovel"
+      tool.ToolTip = "Shovel"
       ```
 
       or
 
       ```lua
-      	tool.ToolTip = "Use to dig"
+      tool.ToolTip = "Use to dig"
       ```
 
       or
 
       ```lua
-      	tool.ToolTip = "Shovel - Use to dig"
+      tool.ToolTip = "Shovel - Use to dig"
       ```
     code_samples:
     type: string

@@ -3,7 +3,7 @@ type: class
 category: Data
 memory_category: Instances
 summary: |
-  An internal service used by Roblox to collect analytics from `CoreScripts`.
+  Collection of methods that allows developers to track how users interact with their experiences.
 description: |
   **AnalyticsService** is a collection of methods that allows developers to
   track how users interact with their experiences, specifically player

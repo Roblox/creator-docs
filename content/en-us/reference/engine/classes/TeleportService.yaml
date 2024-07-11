@@ -135,7 +135,7 @@ methods:
       ```lua
       local TeleportService = game:GetService("TeleportService")
 
-      local isCrouching =  TeleportService:GetTeleportSetting("isCrouching")
+      local isCrouching = TeleportService:GetTeleportSetting("isCrouching")
       ```
 
       If no teleport setting exists under the given key, this function will
@@ -1199,14 +1199,14 @@ events:
       local ReplicatedFirst = game:GetService("ReplicatedFirst")
 
       TeleportService.LocalPlayerArrivedFromTeleport:Connect(function(customLoadingScreen, teleportData)
-          local playerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
-          ReplicatedFirst:RemoveDefaultLoadingScreen()
+      	local playerGui = Players.LocalPlayer:WaitForChild("PlayerGui")
+      	ReplicatedFirst:RemoveDefaultLoadingScreen()
 
-          customLoadingScreen.Parent = playerGui
-          -- animate screen here
-          wait(5)
-          -- destroy screen
-          customLoadingScreen:Destroy()
+      	customLoadingScreen.Parent = playerGui
+      	-- animate screen here
+      	wait(5)
+      	-- destroy screen
+      	customLoadingScreen:Destroy()
       end)
       ```
 
