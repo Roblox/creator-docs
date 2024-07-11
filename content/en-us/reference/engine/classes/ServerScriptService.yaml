@@ -27,36 +27,30 @@ description: |
   useful to both the server and clients should go in `Class.ReplicatedStorage`
   instead. Finally, you can further organize objects within this service through
   the use of `Class.Folder|Folders` without affecting the way it behaves.
-code_samples:
-inherits:
-  - Instance
-tags:
-  - NotCreatable
-  - Service
-  - NotReplicated
-deprecation_message: ''
-properties:
-  - name: ServerScriptService.LoadStringEnabled
-    summary: |
-      Toggles whether or not the `loadstring` function can be used by server
-      scripts. Defaults to false.
-    description: |
-      Toggles whether or not the `loadstring` function can be used by server
-      scripts. Defaults to false.
-    code_samples:
-    type: bool
-    tags:
-      - NotReplicated
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-methods: []
-events: []
-callbacks: []
+local MarketplaceService = game:GetService("MarketplaceService")
+local Players = game:GetService("Players")
+
+local passID = 0000000  -- Change this to your Pass ID
+
+local function onPlayerAdded(player)
+	local hasPass = false
+
+	-- Check if the player already owns the Pass
+	local success, message = pcall(function()
+		hasPass = MarketplaceService:UserOwnsGamePassAsync(player.UserId, passID)
+	end)
+
+	-- If there's an error, issue a warning and exit the function
+	if not success then
+		warn("Error while checking if player has pass: " .. tostring(message))
+		return
+	end
+
+	if hasPass then
+		print(player.Name .. " owns the Pass with ID " .. passID)
+		-- Assign this player the ability or bonus related to the Pass
+	end
+end
+
+-- Connect "PlayerAdded" events to the function
+Players.PlayerAdded:Connect(onPlayerAdded)
