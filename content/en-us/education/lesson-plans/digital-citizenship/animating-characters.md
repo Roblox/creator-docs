@@ -126,7 +126,7 @@ prev: /education/lesson-plans/digital-citizenship/coding-fundamentals
 ### Feedback and Redesign
 
 1. Provide students the Handout: Animation Feedback.
-   - Remind students about practicing civility in earlier sessions. Recap some guidelines if needed, or best practices in providing and recieving feedback.
+   - Remind students about practicing civility in earlier sessions. Recap some guidelines if needed, or best practices in providing and receiving feedback.
 2. Have students show an animation to another peer (either by switching seats or screen-sharing if remote). Peers will fill out the hand out to offer feedback and a recommendation.
 3. When students have finished offering feedback, take a moment to discuss the value of feedback. Note they may not agree with feedback, but it's a valuable opportunity for them to grow.
 4. Give students time to implement an idea they had after receiving feedback.

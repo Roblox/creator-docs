@@ -3,7 +3,7 @@ title: Memory Stores
 description: Explains how to implement memory store data structures to store frequent in-memory data.
 ---
 
-`Class.MemoryStoreService` is a high throughput and low latency data service that provides fast in-memory data storage accessible from all servers in a live session. **Memory Stores** are suitable for frequent and ephemeral data that change rapidly and don't need to be durable, because they are faster to access and vanish when reaching the maximum lifetime. For data that needs to persist across sessions, use [Data Stores](../../cloud-services/datastores.md).
+`Class.MemoryStoreService` is a high throughput and low latency data service that provides fast in-memory data storage accessible from all servers in a live session. **Memory Stores** are suitable for frequent and ephemeral data that change rapidly and don't need to be durable, because they are faster to access and vanish when reaching the maximum lifetime. For data that needs to persist across sessions, use [Data Stores](../../cloud-services/data-stores).
 
 ## Data Structures
 
@@ -22,6 +22,8 @@ In general, if you need to access data based on a specific key, use a hash map. 
 ## Limits and Quotas
 
 To maintain the scalability and system performance, memory stores have data usage quotas for the memory size, API requests, and the data structure size.
+
+Memory stores have an eviction policy based on expiration time, also known as time to live (TTL). Items are evicted after they expire, and memory quota is freed up for new entries. When you hit the memory limit, all subsequent write requests fail until items expire or you manually delete them.
 
 ### Memory Size Quota
 
@@ -74,9 +76,9 @@ To keep your memory usage pattern optimal and avoid hitting the [limits](#limits
 
   For example, if you receive a `DataUpdateConflict`, you might retry after two seconds, then four, eight, etc. rather than constantly sending requests to `Class.MemoryStoreService` to get the correct response.
 
-- Split giant data structures into multiple smaller ones by [sharding](https://en.wikipedia.org/wiki/Shard_(database_architecture)).
+- Split giant data structures into multiple smaller ones by [sharding](<https://en.wikipedia.org/wiki/Shard_(database_architecture)>).
 
-  It's often easier to manage data in smaller structures rather than storing everything in one large data structure. This approach can also help avoid usage and rate limits. For example, if you have a sorted map that uses prefixes for its keys, consider separating each prefix into its own sorted map. For an especially popular experience, you might even separate users into multiple maps based on the first digits of their user IDs.
+  It's often easier to manage data in smaller structures rather than storing everything in one large data structure. This approach can also help avoid usage and rate limits. For example, if you have a sorted map that uses prefixes for its keys, consider separating each prefix into its own sorted map. For an especially popular experience, you might even separate users into multiple maps based on the last digits of their user IDs.
 
 - Compress stored values.
 

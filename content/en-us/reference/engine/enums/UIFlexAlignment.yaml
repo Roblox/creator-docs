@@ -1,33 +1,49 @@
 name: UIFlexAlignment
 type: enum
-summary: ''
-description: ''
+summary: |
+  In a `Class.UIListLayout` flex layout, specifies how to distribute extra space
+  in the parent container.
+description: |
+  In a `Class.UIListLayout` flex layout, specifies how to distribute extra
+  horizontal space in a `Class.UIListLayout.HorizontalFlex|HorizontalFlex`
+  layout or vertical space in a `Class.UIListLayout.VerticalFlex|VerticalFlex`
+  layout.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      No flex behavior; siblings maintain their defined width or height.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Fill
-    summary: ''
+    summary: |
+      Siblings resize to fill the entire parent container, overriding their
+      defined width or height.
     value: 1
     tags: []
     deprecation_message: ''
   - name: SpaceAround
-    summary: ''
+    summary: |
+      Siblings maintain their defined width or height. Equal spacing is added
+      **between** siblings, and half that spacing is added **around** siblings.
     value: 2
     tags: []
     deprecation_message: ''
   - name: SpaceBetween
-    summary: ''
+    summary: |
+      Siblings maintain their defined width or height. Equal spacing is added
+      **between** siblings, but no additional space is added **around**
+      siblings.
     value: 3
     tags: []
     deprecation_message: ''
   - name: SpaceEvenly
-    summary: ''
+    summary: |
+      Siblings maintain their defined width or height. Equal spacing is added
+      both **between** and **around** siblings.
     value: 4
     tags: []
     deprecation_message: ''

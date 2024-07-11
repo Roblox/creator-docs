@@ -24,7 +24,7 @@ Take caution when inserting models that you didn't create into your experiences,
 
 ### Inventory
 
-The **Inventory** section contains models, images, meshes, audio, packages, videos, plugins, animations, and fonts that you've personally published, those which were published by [groups](../../projects/groups.md) you belong to, or those taken from the [Creator Store](../../production/publishing/creator-store.md).
+The **Inventory** section contains models, images, meshes, audio, packages, videos, plugins, animations, and fonts that you've personally published, those which were published by [groups](../../projects/groups.md) you belong to, or those taken from the [Creator Store](../../production/creator-store.md).
 
 <img src="../../assets/studio/toolbox/Inventory-Tab.png" width="360" alt="A close up view of the Toolbox with the Inventory tab highlighted." />
 
@@ -50,7 +50,14 @@ Within any of the Toolbox sections, use the **category selector** dropdown to so
 
 </TabItem>
 <TabItem label="Creator Store Sorting">
-Within the [Creator Store](#creator-store) section, click the **advanced filter** button to limit results to [verified creator](../../production/publishing/account-verification.md) status, filter assets by a specific creator, and filter by sound length for [audio assets](../../sound/assets.md).
+
+Within the [Creator Store](#creator-store) section, click the **advanced filter** button to limit results to [verified creator](../../production/publishing/account-verification.md) status, filter assets by a specific creator, triangle count, visual style, included objects, physically based rendering, holiday theme, and filter by sound length for [audio assets](../../sound/assets.md).
+
+- Triangle count: The sum of the triangle count of all 3D objects in a model, bucketed from ultra high to ultra low. Higher triangle counts aren't necessarily good or bad; they can indicate high fidelity or poor optimization.
+- Contains: Use this filter to find models that include at least one of the selected objects.
+- Visual style: This filter helps you find models with specific styles, such as anime or realistic, based on their appearances.
+- Physically-based rendering: Search for models that feature [physically-based rendering](../../art/modeling/surface-appearance.md).
+- Holidays: Similar to the visual style filter, this option helps you find models with holiday themes.
 
 <img src="../../assets/studio/toolbox/Creator-Store-Advanced-Filter.png" width="580" height="110" alt="The Toolbox window with the Advanced Filter highlighted" />
 </TabItem>

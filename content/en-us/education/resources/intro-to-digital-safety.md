@@ -134,7 +134,7 @@ _If you buy a game pass in this game's shop for 200 Robux, we'll give you a free
 
 ### Protecting Accounts
 
-One way of protecting your account is to use 2 Factor Authentication (or sometimes called 2FA). This feature makes sure nobody else can log into your account, even if they know your password. Whenever you log in, you'll recieve a unique code from Roblox in your email, giving you an extra layer of protection. Learn more in Add [2-Step Verification](https://en.help.roblox.com/hc/en-us/articles/212459863-Add-2-Step-Verification-to-Your-Account) to Your Account.
+One way of protecting your account is to use 2 Factor Authentication (or sometimes called 2FA). This feature makes sure nobody else can log into your account, even if they know your password. Whenever you log in, you'll receive a unique code from Roblox in your email, giving you an extra layer of protection. Learn more in Add [2-Step Verification](https://en.help.roblox.com/hc/en-us/articles/212459863-Add-2-Step-Verification-to-Your-Account) to Your Account.
 
 ### Scavenger Hunt Game
 

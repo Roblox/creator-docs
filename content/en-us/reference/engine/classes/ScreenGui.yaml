@@ -200,8 +200,7 @@ properties:
       width="840" alt="Mobile device showing the location of top bar safe area responding dynamically to expanded Roblox UI controls" />
     code_samples: []
     type: ScreenInsets
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security:
       read: None

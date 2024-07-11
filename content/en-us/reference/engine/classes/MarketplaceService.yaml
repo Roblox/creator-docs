@@ -36,22 +36,54 @@ deprecation_message: ''
 properties: []
 methods:
   - name: MarketplaceService:PromptBulkPurchase
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Prompts a user to purchase multiple avatar items with the given assetId or
+      bundleIds.
+    description: |
+      Prompts a user to purchase multiple avatar items with the given
+      assetId/bundleIds. This does not work with non-Avatar items.
+
+      `Class.MarketplaceService.PromptBulkPurchase()` only allows prompting from
+      server scripts.
+
+      For limited items, original copies are prompted until they run out,
+      regardless of the price. Once original copies are out, resale copies are
+      prompted.
+
+      A maximum of 20 items can be added to a single bulk purchase prompt.
+    code_samples:
+      - Prompt-Bulk-Purchase-Local
+      - Prompt-Bulk-Purchase-Server
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The player to prompt to purchase items.
       - name: lineItems
         type: Array
         default:
-        summary: ''
+        summary: |
+          An array of avatar items to be included in the bulk purchase.
+
+          Each line item contains the following structure:
+
+          ```lua
+          {
+            Type: MarketplaceProductType,
+            Id: string
+          }
+          ```
+
+          Each line item contains the following pairs:
+
+          - `Type`: The corresponding `Enum.MarketplaceProductType` (Enum).
+          - `Id`: The ID of the asset or bundle.
       - name: options
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          Not available at this time.
     returns:
       - type: void
         summary: ''
@@ -175,7 +207,7 @@ methods:
     description: |
       Prompts a user to purchase an item with the given `assetId`. **This does
       not work for
-      [USD Creator Store](../../../production/publishing/selling-on-the-creator-store.md)
+      [USD Creator Store](../../../production/selling-on-creator-store.md)
       purchases**. If prompting a purchase of a
       [Limited](../../../art/marketplace/marketplace-fees-and-commissions.md#limiteds)
       item:
@@ -237,26 +269,6 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-  - name: MarketplaceService:SignalPromptBulkPurchaseFinished
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: status
-        type: MarketplaceBulkPurchasePromptStatus
-        default:
-        summary: ''
-      - name: results
-        type: Dictionary
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
   - name: MarketplaceService:GetDeveloperProductsAsync
     summary: |
@@ -853,27 +865,6 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: MarketplaceService:PerformBulkPurchase
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: orderRequest
-        type: Dictionary
-        default:
-        summary: ''
-      - name: options
-        type: Dictionary
-        default:
-        summary: ''
-    returns:
-      - type: Dictionary
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: MarketplaceService:PlayerOwnsAsset
     summary: |
       Returns whether the given player has the given asset.
@@ -891,8 +882,8 @@ methods:
       - This method cannot be used to check for
         [developer products](../../../production/monetization/developer-products.md)
         since they can be purchased multiple times but not owned themselves.
-        Instead, use a [data store](../../../cloud-services/datastores.md) to
-        save when a player has bought a developer product.
+        Instead, use a [data store](../../../cloud-services/data-stores) to save
+        when a player has bought a developer product.
     code_samples:
       - MarketplaceService-PlayerOwnsAsset1
     parameters:
@@ -990,58 +981,59 @@ methods:
     thread_safety: Unsafe
 events:
   - name: MarketplaceService.PromptBulkPurchaseFinished
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Returns when a bulk purchase prompt for avatar items is closed.
+    description: |
+      Returns when a bulk purchase prompt for avatar items is closed. This fires
+      right as the dialog closes, when the player presses "Cancel" at the prompt
+      or "OK" at the success/error message.
+
+      Note: This is not a trusted event from the client. To check if the user
+      owns the items purchased, `Class.MarketplaceService.PlayerOwnsAsset` or
+      `Class.MarketplaceService.PlayerOwnsBundle` can be used.
+    code_samples:
+      - Bulk-Purchase-Finished
     parameters:
       - name: player
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The player that was prompted.
       - name: status
         type: MarketplaceBulkPurchasePromptStatus
         default:
-        summary: ''
+        summary: |
+          The status of the bulk purchase.
       - name: results
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          The table type containing the line items and their status in the
+          following format:
+
+          ```lua
+          {
+            RobuxSpent: number
+            Items: {
+              {
+                Type: MarketplaceProductType,
+                Id: string,
+                Status: MarketplaceItemPurchaseStatus
+              },
+              ...
+            }
+          }
+          ```
+
+          Each line item contains the following pairs:
+
+          - `Type`: The corresponding `Enum.MarketplaceProductType` (Enum).
+          - `Id`: The ID of the asset or bundle (string).
+          - `Status`: The `Enum.MarketplaceItemPurchaseStatus` of the purchase
+            (Enum)
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-  - name: MarketplaceService.PromptBulkPurchaseRequested
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: player
-        type: Instance
-        default:
-        summary: ''
-      - name: displayData
-        type: Array
-        default:
-        summary: ''
-      - name: orderRequest
-        type: Dictionary
-        default:
-        summary: ''
-      - name: purchaserRobuxBalance
-        type: int64
-        default:
-        summary: ''
-      - name: orderTotalRobux
-        type: int64
-        default:
-        summary: ''
-      - name: options
-        type: Dictionary
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
   - name: MarketplaceService.PromptBundlePurchaseFinished
     summary: ''
@@ -1073,10 +1065,7 @@ events:
       fires as the dialog closes, when the player presses "Cancel" at the prompt
       or "OK" at the success/error message.
 
-      To avoid duplicate item grants, store the purchase in a
-      [data store.](../../../cloud-services/datastores.md) If multiple attempts
-      are made, check if the item has been already granted. For repeatable
-      purchases use
+      For repeatable purchases use
       [developer products](../../../production/monetization/developer-products.md).
 
       #### See Also
@@ -1085,6 +1074,9 @@ events:
         `Class.MarketplaceService.PromptProductPurchaseFinished|PromptProductPurchaseFinished`.
       - For **affiliate gear sales** or other assets, use
         `Class.MarketplaceService.PromptPurchaseFinished|PromptPurchaseFinished`.
+      - For guidance on saving and replicating player data, such as purchases
+        and progress, see
+        [Implementing Player Data and Purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
     code_samples:
       - handling-gamepass
     parameters:
@@ -1103,8 +1095,10 @@ events:
         type: bool
         default:
         summary: |
-          Whether the item was successfully purchased (false for errors and
-          cancellations).
+          Indicates if the user pressed OK (true), Cancel (false), or errored
+          (false). This may not accurately reflect if the purchase itself has
+          successfully processed. Use `MarketplaceService.UserOwnsGamePassAsync`
+          as ownership confirmation.
     tags: []
     deprecation_message: ''
     security: None
@@ -1150,6 +1144,9 @@ events:
         `Class.MarketplaceService.PromptGamePassPurchaseFinished`.
       - For **affiliate gear sales** or other assets, use
         `Class.MarketplaceService.PromptPurchaseFinished`.
+      - For guidance on saving and replicating player data, such as purchases
+        and progress, see
+        [Implementing Player Data and Purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
     code_samples:
     parameters:
       - name: userId
@@ -1195,6 +1192,9 @@ events:
         [developer product](../../../production/monetization/developer-products.md)
         prompts, connect to
         `Class.MarketplaceService.PromptProductPurchaseFinished`.
+      - For guidance on saving and replicating player data, such as purchases
+        and progress, see
+        [Implementing Player Data and Purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
     code_samples:
       - MarketplaceService-PromptPurchaseFinished1
     parameters:

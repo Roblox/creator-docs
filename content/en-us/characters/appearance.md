@@ -152,7 +152,7 @@ In most cases, you should use an existing `Class.HumanoidDescription` instead of
 Use the following code sample to create a new `Class.HumanoidDescription` based on the player character's current properties:
 
 ```lua
-local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
+local humanoid = player.Character and player.Character:FindFirstChildWhichIsA("Humanoid")
 
 local humanoidDescription = Instance.new("HumanoidDescription")
 
@@ -236,7 +236,7 @@ Changing the assets on a character while also changing `Class.HumanoidDescriptio
 `Class.Humanoid:ApplyDescription()|ApplyDescription()` can target any `Class.Humanoid`. Use the following code to add a new pair of sunglasses and a new torso to the player character:
 
 ```lua
-local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
+local humanoid = player.Character and player.Character:FindFirstChildWhichIsA("Humanoid")
 if humanoid then
   local descriptionClone = humanoid:GetAppliedDescription()
   descriptionClone.Torso = 86500008
@@ -255,7 +255,7 @@ Use the following sample code to apply a `Class.HumanoidDescription` to all curr
 local Players = game:GetService("Players")
 
 for _, player in Players:GetPlayers() do
-  local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
+  local humanoid = player.Character and player.Character:FindFirstChildWhichIsA("Humanoid")
   if humanoid then
     -- Create a HumanoidDescription
     local humanoidDescription = Instance.new("HumanoidDescription")

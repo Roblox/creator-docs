@@ -5,6 +5,8 @@ description: Luau Native Code Generation allows Luau code to be translated direc
 
 With Luau support for native code generation, server-side scripts in your experience can be compiled directly into the machine code instructions that CPUs execute, rather than regular bytecode that the Luau VM operates on. This feature can be used to improve execution speed for some scripts on the server, in particular those that have a lot of numerical computation without using too many heavy Luau library or Roblox API calls.
 
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/llR_pNlJDQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Enabling Native
 
 To enable native code generation for a `Class.Script`, add the <Typography noWrap>`--!native`</Typography> comment at the top:&sup1;
@@ -15,7 +17,16 @@ To enable native code generation for a `Class.Script`, add the <Typography noWra
 print("Hello from native code!")
 ```
 
-No additional changes are required; behavior of the natively executing scripts is exactly the same as before and only the performance is different. All features of the Luau language and all Roblox APIs remain supported.
+This enables native code generation for all functions in the script, and the top-level scope, if deemed profitable. No additional changes are required; behavior of the natively executing scripts is exactly the same as before and only the performance is different. All features of the Luau language and all Roblox APIs remain supported.
+
+Alternatively, you can enable native code generation for an individual function by adding the `@native` attribute:
+
+```lua highlight="1"
+@native
+local function f(x)
+  return (x + 1)
+end
+```
 
 <figcaption><sup>1</sup> In the future, some scripts might automatically start running natively if it is determined to be profitable, but manually placed `--!native` comments are currently required.</figcaption>
 
@@ -27,13 +38,15 @@ The following tips will help you benefit most from native code generation:
 
 - Only the script's [functions](../luau/functions.md) are compiled natively. The code in the top outer [scope](../luau/scope.md) is often executed only once and doesn't benefit as much as functions that are called many times, especially those that are called every frame.
 
-- It's recommended that you measure the time a script or an operation takes with and without the <Typography noWrap>`--!native`</Typography> comment to judge when it's best to use it. The [Script Profiler](#script-profiler) tool can measure the performance of scripts in order to make informed decisions.
+- It's recommended that you measure the time a script or a function takes with and without native compilation to judge when it's best to use it. The [Script Profiler](#script-profiler) tool can measure the performance of functions in order to make informed decisions.
 
 - It may be tempting to place the `--!native` comment in **every** script just in case some of them will execute faster, but native code generation has some drawbacks:
 
   - Code compilation time is required which can increase the startup time of servers.
   - Extra memory is occupied to store natively compiled code.
   - There's a limit on the total allowed amount of natively compiled code in an experience.
+
+These problems can be addressed by a judicious use of the `@native` attribute.
 
 ## Code to Avoid
 
@@ -43,7 +56,7 @@ While all features will behave the same with or without native code generation e
 - Use of various Luau built‑in functions like `Library.math.asin()` with non‑numeric arguments.
 - Passing improperly typed parameters to typed functions, for example calling `foo(true)` when `foo` is declared as `function foo(arg: string)`. Remember to always use correct [type annotations](#using-type-annotations).
 
-When using the [Script Profiler](#script-profiler), you can compare time taken by a regular version of the function versus the one compiled natively. If a function marked with <Typography noWrap>`--!native`</Typography> doesn't appear to be natively executing, one or more factors from the list above may be triggering de‑optimization.
+When using the [Script Profiler](#script-profiler), you can compare time taken by a regular version of the function versus the one compiled natively. If a function inside a <Typography noWrap>`--!native`</Typography> script or marked with `@native` doesn't appear to be natively executing, one or more factors from the list above may be triggering de‑optimization.
 
 ## Using Type Annotations
 
@@ -69,13 +82,13 @@ end
 
 ## Studio Tooling
 
-The following Studio tooling is supported for scripts with `--!native`.
+The following Studio tooling is supported for <Typography noWrap>`--!native`</Typography> scripts and `@native` functions.
 
 ### Debugging
 
 General [debugging](../studio/debugging.md) of scripts is supported, but the views for locals/upvalues may be incomplete and missing variables from [call stack](../studio/debugging.md#call-stack-window) frames that are executing natively.
 
-Also note that when debugging a script with `--!native`, placing [breakpoints](../studio/debugging.md#inserting-breakpoints) will disable native execution for those functions.
+Also note that when debugging code selected for native compilation, placing [breakpoints](../studio/debugging.md#inserting-breakpoints) will disable native execution for those functions.
 
 ### Script Profiler
 
@@ -83,7 +96,7 @@ In the [Script Profiler](../studio/optimization/scriptprofiler.md), functions ex
 
 <img src="../assets/studio/console/ScriptProfiler-Native-Annotation.png" width="800" alt="Example of native functions flagged in the Script Profiler" />
 
-If the script is using `--!native` but a function doesn't show the `<native>` annotation, that function may not be executing natively due to [breakpoint](../studio/debugging.md#inserting-breakpoints) placement, use of [discouraged code](#code-to-avoid), or mismatched [type annotations](#using-type-annotations).
+If a function marked `@native` or inside a <Typography noWrap>`--!native`</Typography> script doesn't show the `<native>` annotation, that function may not be executing natively due to [breakpoint](../studio/debugging.md#inserting-breakpoints) placement, use of [discouraged code](#code-to-avoid), or mismatched [type annotations](#using-type-annotations).
 
 ### Luau Heap
 
@@ -125,7 +138,7 @@ This error means that a single function contains more than 32K internal blocks o
 <blockquote>
 _Function 'f' at line 200 exceeded total module instruction limit_
 
-This error means that, in total, the function has reached a limit of 1 million instructions for the entire script. In some cases, the reported function itself may have a lot of instructions, or the limit may have been reached by functions earlier in the script. To avoid this issue, it's recommended to move particularly large functions into a separate non‑native script. You can also try marking that separate script with <Typography noWrap>`--!native`</Typography>, but 1 million instructions takes up a lot of memory and you may exceed the memory limit.
+This error means that, in total, the function has reached a limit of 1 million instructions for the entire script. In some cases, the reported function itself may have a lot of instructions, or the limit may have been reached by functions earlier in the script. To avoid this issue, it's recommended to either move particularly large functions into a separate non‑native script or use `@native` on the other functions. You can also try marking that separate script with <Typography noWrap>`--!native`</Typography>, but 1 million instructions takes up a lot of memory and you may exceed the memory limit.
 </blockquote>
 
 <blockquote>

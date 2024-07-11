@@ -11,7 +11,7 @@ Scripts cannot access global and local variables or functions in other scripts. 
 
 ```lua
 local helloWorld = 'Hello World!'
-local function printHelloWorld ()
+local function printHelloWorld()
 	print(helloWorld)
 end
 printHelloWorld() -- Hello World!
@@ -124,7 +124,7 @@ print(x) -- 5
 
 ### Shadowing
 
-After you declare and assign a local variable, you can read it in its scope level and descendent scope levels. If you redeclare and reassign the variable in a descendent scope level, then you create a new local variable with the same name but different value from the most previous assignment. The new local variable doesn't affect the local variable from the previous assignment. This technique, known as **shadowing**, helps you reuse the name of a variable without reusing its value.
+After you declare and assign a local variable, you can read it in its scope level and descendant scope levels. If you redeclare and reassign the variable in a descendant scope level, then you create a new local variable with the same name but different value from the most previous assignment. The new local variable doesn't affect the local variable from the previous assignment. This technique, known as **shadowing**, helps you reuse the name of a variable without reusing its value.
 
 In the following code, Luau shadows the variable `x`. The variable `x` in `f()` is a **shadow** variable.
 

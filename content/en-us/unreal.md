@@ -61,6 +61,8 @@ Rather than using standard metric units for length and mass, Roblox uses notiona
 
 ## Location Matters
 
+Roblox experiences are multiplayer by default, so Roblox Studio includes many different storage locations with specific behaviors. For example, a script might run when you put it in `Class.ReplicatedStorage`, but not when you put it into `Class.StarterPlayerScripts`. For more information, see [Client-Server Runtime](projects/client-server) and [Object Organization](projects/data-model#object-organization).
+
 <ScriptLocations components={props.components} />
 
 ## Scripting
@@ -115,7 +117,7 @@ Cloud syncing provides further benefits with [packages](projects/assets/packages
 
 ## Plugins
 
-Similar to Unreal, Roblox Studio supports [plugins](studio/plugins.md), which can simplify or give you additional control over various aspects of the development process. Plugins are available in the [Creator Store](production/publishing/creator-store.md), just like assets, many for free.
+Similar to Unreal, Roblox Studio supports [plugins](studio/plugins.md), which can simplify or give you additional control over various aspects of the development process. Plugins are available in the [Creator Store](production/creator-store.md), just like assets, many for free.
 
 ## Glossary
 
@@ -132,6 +134,6 @@ Similar to Unreal, Roblox Studio supports [plugins](studio/plugins.md), which ca
 | Landscape Mode | Terrain Editor | |
 | PlayerStart | `Class.SpawnLocation` | |
 | Output Log | Output | |
-| Marketplace | [Creator Store](production/publishing/creator-store.md) | |
+| Marketplace | [Creator Store](production/creator-store.md) | |
 | Menu bar | Menu bar | |
 | Plugin | [Plugin](studio/plugins.md) | |

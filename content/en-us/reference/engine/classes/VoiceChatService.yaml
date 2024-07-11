@@ -53,6 +53,18 @@ properties:
       can_load: true
       can_save: true
 methods:
+  - name: VoiceChatService:joinVoice
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: VoiceChatService:IsVoiceEnabledForUserIdAsync
     summary: |
       Returns whether or not the given user has voice enabled.
@@ -73,12 +85,11 @@ methods:
 
       local localPlayer = Players.LocalPlayer
       local success, enabled = pcall(function()
-          return VoiceChatService:IsVoiceEnabledForUserIdAsync(localPlayer.UserId)
+      	return VoiceChatService:IsVoiceEnabledForUserIdAsync(localPlayer.UserId)
       end)
       if success and enabled then
-          localPlayer.PlayerGui.MyVoiceGui.Enabled = true
+      	localPlayer.PlayerGui.MyVoiceGui.Enabled = true
       end
-
       ```
     code_samples:
     parameters:

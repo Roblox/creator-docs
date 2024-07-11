@@ -92,6 +92,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: AccessoryDescription.Position
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
   - name: AccessoryDescription.Puffiness
     summary: ''
     description: ''
@@ -107,6 +122,48 @@ properties:
     serialization:
       can_load: true
       can_save: true
-methods: []
+  - name: AccessoryDescription.Rotation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AccessoryDescription.Scale
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: AccessoryDescription:GetAppliedInstance
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Instance
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
 events: []
 callbacks: []

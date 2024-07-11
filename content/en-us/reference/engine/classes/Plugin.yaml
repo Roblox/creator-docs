@@ -287,23 +287,6 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
-  - name: Plugin:GetPluginComponent
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: name
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: Dictionary
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: Plugin:GetSelectedRibbonTool
     summary: |
       Returns the currently selected `Enum.RibbonTool`.
@@ -329,6 +312,17 @@ methods:
     description: |
       Retrieves a previously stored value with the given key, or nil if the
       given key doesn't exist.
+
+      Because multiple instances of the same plugin can run simultaneously (for
+      example, if multiple Studio windows are open), you shouldn't depend on
+      this value staying the same over time. The other plugin instances can
+      update the setting at any time.
+
+      This call can silently fail and return `nil` if multiple instances of the
+      same plugin are actively reading and writing data. If your plugin expects
+      to write to settings frequently, you should double-check the returned
+      value from this call after a short while to distinguish between a setting
+      being temporarily unavailable and a setting not existing.
     code_samples:
       - Plugin-GetSetting1
     parameters:
@@ -359,18 +353,6 @@ methods:
       - Deprecated
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
-  - name: Plugin:GetUri
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Dictionary
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
   - name: Plugin:Intersect
     summary: ''
@@ -561,9 +543,23 @@ methods:
       persist even after studio is closed.
     description: |
       Stores a given value for later use under the given key. The value will
-      persist even after studio is closed. Note: Currently dots (`.`) are not
-      allowed in settings keys and are replaced with underscores (`_`). As a
-      workaround, avoid using dots in settings keys.
+      persist even after Roblox Studio is closed. These settings are saved in
+      JSON format as a map with string keys. Arrays are automatically converted
+      to maps by converting the numeric keys to strings first.
+
+      Note that the JSON format imposes additional restrictions, including the
+      following characters which can corrupt the settings file:
+
+      - Backslashes (`\`) in keys or values, in particular escaped quotes
+        (`\"`).
+      - Newlines (`\n`) in keys.
+      - Quotes (`"`) in keys.
+      - Periods (`.`) in keys.
+
+      This call can silently fail if multiple instances of the same plugin are
+      actively reading and writing data. If your plugin expects to write to
+      settings frequently, you may check that the data has been properly written
+      by calling `Class.Plugin:GetSetting()`.
     code_samples:
       - Plugin-SetSetting1
     parameters:

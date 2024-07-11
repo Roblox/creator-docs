@@ -23,7 +23,8 @@ Uses RFC 3339, where generated output will always be Z-normalized and uses 0, 3,
 Generated output always contains 0, 3, 6, or 9 fractional digits, depending on
 required precision, followed by the suffix "s". Accepted are any fractional
 digits (also none) as long as they fit into nano-seconds precision and the
-suffix "s" is required.
+suffix "s" is required. The range must be from -315,576,000,000 to
+315,576,000,000 seconds, inclusive.
 
 ```json title='Example Durations'
 {

@@ -5,7 +5,7 @@ description: Engagement-based payouts allow you to earn Robux based on the share
 
 Automatic **engagement-based payouts** let you earn Robux based on the share of time that [Premium](https://www.roblox.com/premium/membership) members engage in an experience, regardless of the experience's size. These payouts are in addition to earnings from other [monetization](../../production/monetization/index.md) methods such as [Passes](../../production/monetization/game-passes.md).
 
-To encourage Premium subscriber growth and increase your potential to earn engagement-based payouts, you can add the [Premium Purchase Modal](#premium-purchase-modal) directly into an experience.
+To encourage Premium subscriber growth and increase your potential to earn engagement-based payouts, you can add the [Premium Purchase Modal](#premium-purchase-modal) directly into an experience. Keep in mind, users from some countries may not have access to Premium subscriptions.
 
 <Alert severity="warning">
 [Paid Access](../../production/monetization/paid-access.md) experiences are not eligible for engagement-based payouts.
@@ -28,7 +28,7 @@ The **Engagement-Based Payouts** charts track payout data based on the following
 
 - **Premium Playtime Robux Earned:** The amount you can expect to earn for Premium subscriber engagement. This is not based on the daily time Premium subscribers spend engaging with the experience; instead, this metric aggregates each user's behavior over the past 28 days. As such, even though they have similar trends, this metric has no direct mathematical relationship with the Premium Playtime Score.
 
--  **Premium Playtime Score:** The amount of time Premium subscribers engage with the experience per day. This metric can provide immediate feedback on the impact of new features you release.
+- **Premium Playtime Score:** The amount of time Premium subscribers engage with the experience per day. This metric can provide immediate feedback on the impact of new features you release.
 
 - **Premium Visits:** How many visits are from Premium members.
 

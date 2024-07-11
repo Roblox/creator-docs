@@ -34,13 +34,13 @@ Use a helper function to get the correct sorted map from an item key. This way, 
 
 ```lua title='Sharding a Sorted Map'
 -- Initialize the MemoryStore Service
-local memoryStore = game:GetService("MemoryStoreService")
+local MemoryStoreService = game:GetService("MemoryStoreService")
 
 -- Create your Sorted Map buckets
-local sm_AtoG = memoryStore:GetSortedMap("AtoG")
-local sm_HtoM = memoryStore:GetSortedMap("HtoM")
-local sm_NtoT = memoryStore:GetSortedMap("NtoT")
-local sm_UtoZ = memoryStore:GetSortedMap("UtoZ")
+local sm_AtoG = MemoryStoreService:GetSortedMap("AtoG")
+local sm_HtoM = MemoryStoreService:GetSortedMap("HtoM")
+local sm_NtoT = MemoryStoreService:GetSortedMap("NtoT")
+local sm_UtoZ = MemoryStoreService:GetSortedMap("UtoZ")
 
 -- Helper function to retrieve the correct bucket from the Item Key
 local function getSortedMapBucket(itemKey)
@@ -56,7 +56,7 @@ local function getSortedMapBucket(itemKey)
 end
 
 -- Initialize player names with default value of 0
-for i,player in pairs(game.Players:GetChildren()) do
+for _, player in game:GetService("Players"):GetPlayers() do
 	local bucket = getSortedMapBucket(player)
 	bucket:SetAsync(player, 0, 600)
 end
@@ -83,13 +83,13 @@ One solution is to use a revolving queue, which means creating multiple queues a
 
 ```lua title='Sharding a Queue'
 -- Initialize the MemoryStore Service
-local memoryStore = game:GetService("MemoryStoreService")
+local MemoryStoreService = game:GetService("MemoryStoreService")
 
 -- Create your Queues
-local q1 = memoryStore:GetQueue("q1")
-local q2 = memoryStore:GetQueue("q2")
-local q3 = memoryStore:GetQueue("q3")
-local q4 = memoryStore:GetQueue("q4")
+local q1 = MemoryStoreService:GetQueue("q1")
+local q2 = MemoryStoreService:GetQueue("q2")
+local q3 = MemoryStoreService:GetQueue("q3")
+local q4 = MemoryStoreService:GetQueue("q4")
 
 -- Put the Queues in an Array
 local queueArr = { q1, q2, q3, q4 }
@@ -106,32 +106,32 @@ end
 -- Create a local function that reads n items from the queue
 local function readFromQueue(count, allOrNothing, waitTimeout)
 	local endIndex = count % 4
-  local countPerQueue = math.floor(count / 4)
+	local countPerQueue = count // 4
 	local items = {}
 	local ids = {}
 
 	-- loop through each queue
-    for i = 1, 4, 1 do
+	for i = 1, 4, 1 do
 		-- determine if this queue will read an extra item
-        local diff = i - readIndex
-        if diff < 0 then
-            diff = diff + 4
-        end
+		local diff = i - readIndex
+		if diff < 0 then
+			diff += 4
+		end
 
-        local queue = queueArr[i]
+		local queue = queueArr[i]
 
 		-- read items from each queue
 		-- +1 items if matches extra read criteria
-        if diff < endIndex then
-            items[i], ids[i] = queue:ReadAsync(countPerQueue + 1, allOrNothing, waitTimeout)
-        else
-            items[i], ids[i] = queue:ReadAsync(countPerQueue, allOrNothing, waitTimeout)
-        end
-    end
+		if diff < endIndex then
+			items[i], ids[i] = queue:ReadAsync(countPerQueue + 1, allOrNothing,waitTimeout)
+		else
+			items[i], ids[i] = queue:ReadAsync(countPerQueue, allOrNothing,waitTimeout)
+		end
+	end
 
-    readIndex = rotateIndex(readIndex, count)
+	readIndex = rotateIndex(readIndex, count)
 
-    return items, ids
+	return items, ids
 end
 
 -- Create a local function that removes n items from the queue
@@ -151,7 +151,7 @@ end
 
 -- Write some code!
 
-for i,player in pairs(game.Players:GetChildren()) do
+for _, player in game:GetService("Players"):GetPlayers() do
 	addToQueue(player, 600, 0)
 end
 

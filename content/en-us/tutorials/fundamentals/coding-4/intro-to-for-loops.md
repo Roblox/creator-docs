@@ -79,10 +79,10 @@ To see how a for loop works, use these steps to code a for loop that starts at 1
 
    ```lua
    for count = 10, 0, -1 do
-       -- Prints the current number the for loop is on
-       print(count)
-       -- Wait 1 second
-       task.wait(1)
+   	-- Prints the current number the for loop is on
+   	print(count)
+   	-- Wait 1 second
+   	task.wait(1)
    end
    ```
 
@@ -105,8 +105,8 @@ Changing the three values of a for loop will change how the loop functions. Belo
 
 ```lua
 for count = 0, 5, 1 do
-    print(count)
-    task.wait(1)
+	print(count)
+	task.wait(1)
 end
 ```
 
@@ -114,8 +114,8 @@ end
 
 ```lua
 for count = 0, 10, 2 do
-    print(count)
-    task.wait(1)
+	print(count)
+	task.wait(1)
 end
 ```
 
@@ -125,8 +125,8 @@ If the control variable starts out **beyond** the end value, like in the example
 
 ```lua
 for count = 10, 0, 1 do
-    print(count)
-    task.wait(1)
+	print(count)
+	task.wait(1)
 end
 ```
 
@@ -138,7 +138,7 @@ A for loop is a common type of loop that's used when a set of instructions shoul
 
 ```lua
 for count = 0, 10, 1 do
-    print(count)
+	print(count)
 end
 ```
 

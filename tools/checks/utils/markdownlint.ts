@@ -18,8 +18,8 @@ export const getMarkdownLintErrors = ({
     handleRuleFailures: true,
   };
 
-  const {fileContent: fileErrors } = markdownlint.sync(options);
-  return fileErrors
+  const { fileContent: fileErrors } = markdownlint.sync(options);
+  return fileErrors;
 };
 
 export const processMarkdownLintError = ({

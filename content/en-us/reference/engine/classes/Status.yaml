@@ -19,8 +19,8 @@ deprecation_message: |
   work.
 
   Developers looking to implement custom `Class.Humanoid` statuses should use
-  `Class.CollectionService` which provides a more flexible and robust system for
-  tagging objects.
+  [Character Physics Controllers](https://devforum.roblox.com/t/releasing-character-physics-controllers/2623426),
+  as they are written in Luau and are easily extendable.
 properties: []
 methods: []
 events: []

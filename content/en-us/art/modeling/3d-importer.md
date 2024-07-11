@@ -13,9 +13,13 @@ The 3D Importer allows you to import `.fbx`, `.gltf`, or `.obj` 3D models into S
 - Meshes with animation data.
 - Specialized meshes, such as [accessories](../../art/accessories/index.md), or characters with [facial animation data](../../art/characters/facial-animation/index.md).
 
+<Alert severity ='info'>
+To directly import 3D assets using HTTP requests, see [Cloud Usage Guide for Assets](../../cloud/open-cloud/usage-assets.md).
+</Alert>
+
 The 3D Importer is divided into three sections:
 
-<img alt="3D Importer Panels" src="../../assets/modeling/meshes/3d-Importer-Panels.png" width="80%" alt="The 3D Importer interface, showing a preview of the mesh in the top left, a list of 3D objects on the bottom left, and a list of toggle-able properties on the right side."/>
+<img src="../../assets/modeling/meshes/3d-Importer-Panels.png" width="80%" alt="The 3D Importer interface, showing a preview of the mesh in the top left, a list of 3D objects on the bottom left, and a list of toggle-able properties on the right side."/>
 
 A. The **preview panel**, located in the top left, allows you to rotate and examine 3D objects before importing into your workspace or Toolbox.
 
@@ -37,7 +41,7 @@ To import a 3D object:
 
 1. In the Home or Avatar tab, click **Import 3D**. A file browser displays.
 
-   <img src="../../assets/studio/general/Avatar-Tab-Import-3D.png" width="760" alt="Import 3D button indicated in Avatar tab" alt="Top ribbon of the Avatar tab in Studio highlighting the Import 3D button."  />
+   <img src="../../assets/studio/general/Avatar-Tab-Import-3D.png" width="760" alt="Top ribbon of the Avatar tab in Studio highlighting the Import 3D button."  />
 
 2. Select the `.fbx`, `.gltf` or `.obj` you intend to import. The importer window displays.
 3. Verify the object preview and check that the [import settings](#import-settings) are correct for your object.

@@ -13,6 +13,26 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: AvatarCreationService:SendAnalyticsEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: eventName
+        type: string
+        default:
+        summary: ''
+      - name: params
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: AvatarCreationService:GetAvatarGenerationConfig
     summary: ''
     description: ''
@@ -44,6 +64,77 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AvatarCreationService:PromptCreateAvatarAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: humanoidDescription
+        type: HumanoidDescription
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarCreationService:ValidateUGCAccessoryAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: accessory
+        type: Instance
+        default:
+        summary: ''
+      - name: accessoryType
+        type: AccessoryType
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarCreationService:ValidateUGCBodyPartAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: instance
+        type: Instance
+        default:
+        summary: ''
+      - name: bodyPart
+        type: BodyPart
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarCreationService:ValidateUGCFullBodyAsync
     summary: ''
     description: ''
     code_samples: []

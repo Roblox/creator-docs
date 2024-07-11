@@ -213,6 +213,38 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: TextButton.OpenTypeFeatures
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextButton.OpenTypeFeaturesError
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: false
+      can_save: true
   - name: TextButton.RichText
     summary: |
       Determines whether the TextButton renders the `Class.TextButton.Text`

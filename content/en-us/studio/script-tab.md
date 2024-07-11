@@ -5,11 +5,7 @@ description: The Script tab contains tools for writing, testing, and debugging s
 
 The **Script** tab contains tools for writing and testing scripts. You can only access this tab when you're viewing or editing a script.
 
-<img src="../assets/studio/general/Toolbar-Script-Tab.png" width="888" alt="Script tab indicated in Studio toolbar" />
-
-## Clipboard
-
-The first section from left contains tools to copy, cut, and paste instances or lines of code.
+<img src="../assets/studio/general/Toolbar-Script-Tab.png" width="780" alt="Script tab indicated in Studio toolbar" />
 
 ## Navigate
 
@@ -41,7 +37,7 @@ The **Navigate** section lets you quickly jump between any open script.
 
 The **Edit** section lets you search and edit any part of the script, as well as select instances within the [Explorer](../studio/explorer.md) window for bulk actions. See [Studio Shortcuts](../studio/shortcuts.md#script-editor) for default shortcuts tied to these actions.
 
-<img src="../assets/studio/general/Script-Tab-Edit-Tools.png" width="888" alt="Edit tools indicated in Script tab" />
+<img src="../assets/studio/general/Script-Tab-Edit-Tools.png" width="780" alt="Edit tools indicated in Script tab" />
 
 <table>
 <thead>
@@ -88,7 +84,7 @@ The **Edit** section lets you search and edit any part of the script, as well as
 
 The **Format** section lets you format sections or the entirety of the script for readability. The dropdown lets you select either **Format Selection** or **Format Document**.
 
-<img src="../assets/studio/general/Script-Tab-Format-Options.png" width="888" alt="Format options indicated in Script tab" />
+<img src="../assets/studio/general/Script-Tab-Format-Options.png" width="780" alt="Format options indicated in Script tab" />
 
 <table>
 <thead>
@@ -112,73 +108,17 @@ The **Format** section lets you format sections or the entirety of the script fo
 </tbody>
 </table>
 
-## Playtest Options
+## Pausing & Resuming Scripts
 
-There are three common options for playtesting an experience. Click the button to start a playtest of that type, or click the small arrow below the button to choose another option.
+While playtesting, the **Pause Scripts** and **Resume Scripts** buttons are useful for pausing both scripts and rendering, without [pausing physics](../studio/test-tab.md#pausing--resuming-physics).
 
-<img alt="Script tab playtest options" src="../assets/studio/general/Script-Tab-Playtest-Options.png" width="772" alt="Playtest options in Script tab" />
-
-<table>
-  <thead>
-    <tr>
-      <th>Action</th>
-	  <th>Shortcut</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>**Play**</td>
-	  <td><kbd>F5</kbd></td>
-      <td>Starts simulating the experience, inserting your avatar at either a `Class.SpawnLocation` or coordinates of around (0, 100, 0).</td>
-    </tr>
-    <tr>
-      <td>**Play Here**</td>
-	  <td></td>
-      <td>Starts simulating the experience, inserting your avatar in front of the camera's current position.</td>
-    </tr>
-	<tr>
-      <td>**Run**</td>
-	  <td><kbd>F8</kbd></td>
-      <td>Starts simulating the experience but does not insert your avatar. The simulation begins at the current camera position and you can navigate around using the Studio camera controls.</td>
-    </tr>
-  </tbody>
-</table>
-
-Once a playtest is running, the following options become available:
-
-<table>
-<thead>
-  <tr>
-    <th>Action</th>
-    <th>Shortcut</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>**Client** / **Server**</td>
-    <td></td>
-    <td>During playtesting in a "play solo" mode (**Play** or **Play Here**), toggles between **client mode** and **server mode**.</td>
-  </tr>
-  <tr>
-    <td>**Pause** / **Resume**</td>
-    <td><kbd>F5</kbd></td>
-    <td>Pauses or resumes the playtest.</td>
-  </tr>
-  <tr>
-    <td>**Stop**</td>
-    <td><kbd>Shift</kbd><kbd>F5</kbd></td>
-    <td>Stops simulation of the experience and resets all objects and instances to how they were before **Play**, **Play Here**, or **Run** was clicked.</td>
-  </tr>
-</tbody>
-</table>
+<img src="../assets/studio/general/Script-Tab-Pause-Resume-Scripts.png" width="723" alt="Pause Scripts and Resume Scripts buttons available during playtesting in Studio." />
 
 ## Debugging Tools
 
 The **Debugger** section lets you control the [debugger](../studio/debugging.md).
 
-<img src="../assets/studio/general/Script-Tab-Debugging-Tools.png" width="888" alt="Debugging tools indicated in Script tab"/>
+<img src="../assets/studio/general/Script-Tab-Debugging-Tools.png" width="663" alt="Debugging tools indicated in Script tab"/>
 
 <table>
 <thead>

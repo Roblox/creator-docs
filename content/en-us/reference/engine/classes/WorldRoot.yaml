@@ -321,8 +321,8 @@ methods:
       will stop. This means some `Class.BasePart|BaseParts` may not be returned
       even if they are within the `Datatype.Region3`
 
-      The optional ignoreDescendentsInstance parameter can be used to specify a
-      specific instance for whom itself and all of its descendants should be
+      The optional `ignoreDescendantsInstance` parameter can be used to specify
+      a specific instance for whom itself and all of its descendants should be
       ignored by this function. This can be useful when, for example, looking to
       see if any `Class.BasePart|BaseParts` are inside a `Class.BasePart` other
       than the `Class.BasePart` itself.
@@ -687,8 +687,8 @@ methods:
       **IsRegion3Empty** returns a bool indicating whether there are no
       `Class.BasePart|BaseParts` within the given `Datatype.Region3`.
 
-      The optional ignoreDescendentsInstance parameter can be used to specify a
-      specific instance for whom itself and all of its descendants should be
+      The optional `ignoreDescendantsInstance` parameter can be used to specify
+      a specific instance for whom itself and all of its descendants should be
       ignored by this function. This can be useful when, for example, looking to
       see if any `Class.BasePart|BaseParts` are inside a `Class.BasePart` other
       than the `Class.BasePart` itself.
@@ -934,18 +934,41 @@ methods:
     security: None
     thread_safety: Safe
   - name: WorldRoot:StepPhysics
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Advances the simulation for parts in the world forward based on a
+      specified time increment and an optional set of
+      `Class.BasePart|BaseParts`.
+    description: |
+      Advances the simulation for parts in the world forward based on a
+      specified time increment and an optional set of `Class.BasePart`. When a
+      set of parts is specified, only these parts will be simulated and all
+      other parts in the world will be treated as anchored. When this argument
+      is left out, all parts in the world will be included in the simulation.
+      The specified time increment can be any positive number, with larger
+      values increasing the runtime of the function. Depending on the value of
+      the time increment, the physics system may subdivide it into multiple
+      individual steps to maintain the accuracy and stability of the simulation.
+      Even if the function performs multiple substeps, the results of the
+      simulation will only be seen once the function completes. To visualize the
+      individual steps of a simulation, the function can be called once per
+      RenderStep via the `Class.RunService.RenderStepped` event.
+    code_samples:
+      - worldroot---stepphysics
     parameters:
       - name: dt
         type: float
         default:
-        summary: ''
+        summary: |
+          The amount of time that will be simulated. This argument must be a
+          positive number. Larger values will increase the runtime of this
+          function.
       - name: parts
         type: Objects
         default: '{}'
-        summary: ''
+        summary: |
+          Optional array of parts that will be simulated. This set must contain
+          instances that are of type `Class.BasePart`; any other types will be
+          ignored.
     returns:
       - type: void
         summary: ''

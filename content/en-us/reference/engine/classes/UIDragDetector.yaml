@@ -1,0 +1,355 @@
+name: UIDragDetector
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - UIComponent
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: UIDragDetector.ActivatedCursorIcon
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.BoundingUI
+    summary: ''
+    description: ''
+    code_samples: []
+    type: GuiBase2d
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.CursorIcon
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.DragAxis
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Directions
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.DragRelativity
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UIDragDetectorDragRelativity
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.DragRotation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Dragged Amount
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.DragSpace
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UIDragDetectorDragSpace
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.DragStyle
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UIDragDetectorDragStyle
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.DragUDim2
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Dragged Amount
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.Enabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.MaxDragAngle
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.MaxDragTranslation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.MinDragAngle
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.MinDragTranslation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Drag Limits
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.ReferenceUIInstance
+    summary: ''
+    description: ''
+    code_samples: []
+    type: GuiObject
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.ResponseStyle
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UIDragDetectorResponseStyle
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: UIDragDetector:AddConstraintFunction
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: priority
+        type: int
+        default:
+        summary: ''
+      - name: function
+        type: Function
+        default:
+        summary: ''
+    returns:
+      - type: RBXScriptConnection
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UIDragDetector:GetReferencePosition
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: UDim2
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UIDragDetector:GetReferenceRotation
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UIDragDetector:SetDragStyleFunction
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: function
+        type: Function
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events:
+  - name: UIDragDetector.DragContinue
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: inputPosition
+        type: Vector2
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UIDragDetector.DragEnd
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: inputPosition
+        type: Vector2
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: UIDragDetector.DragStart
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: inputPosition
+        type: Vector2
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+callbacks: []

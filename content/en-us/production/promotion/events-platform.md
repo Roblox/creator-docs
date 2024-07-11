@@ -30,12 +30,19 @@ To create an event, you must be the **group owner** of any [group-owned](../../p
    </Grid>
    </Grid>
 
-4. Enter the event name, description, a starting date/time at least 15 minutes in the future, and an ending date/time. Your description should follow general [best practices](../../production/publishing/publishing-experiences-and-places.md#metadata-best-practices) and accurately portray the event, including:
+4. Enter the event name, a starting date/time at least 15 minutes in the future, and an ending date/time.
+5. Select one or two event types from the dropdowns that accurately describe your event:
+   - **Content Update**, for example an update that adds new items or pets.
+   - **Location Update**, for instance an update that adds a new map.
+   - **System Update**, for instance an update that adds new features like trading.
+   - **Activity**, for example an in-experience festival.
 
+6. Add a description for your event. Your description should follow general [best practices](../../production/publishing/publishing-experiences-and-places.md#metadata-best-practices) and accurately portray the event, including:
    - A summary of the event and how it relates to the overall experience. If you're using the event to promote a major experience update, summarize the key updates.
    - Incentives for players to join the event, such as exclusive event-specific [merch](../../resources/modules/merch-booth.md), "boss&nbsp;fight" challenges, [badges](../../production/publishing/badges.md) that may be earned during the event, and more.
 
-5. When ready, click **Publish Event** to immediately publish the [event details page](#event-discovery) and make your event discoverable on the experience's detail page. If you're not ready to publish the event, click **Save** to keep an editable draft for [future publication](#publishing-draft-events).
+7. Add one or more thumbnails to promote your event. The first thumbnail in the list will be the main thumbnail used to represent your event, so think carefully about what image you want to choose. If you don't add any thumbnails for the event, the [experience thumbnail](../../production/promotion/promotional-thumbnails.md) will be used instead.
+8. When ready, click **Publish Event** to immediately publish the [event details page](#event-discovery) and make your event discoverable on the experience's detail page. If you're not ready to publish the event, click **Save** to keep an editable draft for [future publication](#publishing-draft-events).
 
    <img src="../../assets/creator-dashboard/Creations-Events-Example.png" width="368" alt="Example events on the Creator Dashboard" />
 

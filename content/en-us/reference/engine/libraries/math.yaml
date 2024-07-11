@@ -14,7 +14,8 @@ properties:
       2<sup>1024</sup>).
     description: |
       Returns a value larger than or equal to any other numerical value (about
-      2<sup>1024</sup>).
+      2<sup>1024</sup>). Dividing a positive number by zero yields this same
+      value.
     tags:
     code_samples:
   - name: math.pi
@@ -375,9 +376,9 @@ functions:
     code_samples:
   - name: math.noise
     summary: |
-      Returns a perlin noise value.
+      Returns a Perlin noise value.
     description: |
-      Returns a perlin noise value. The returned value is most often between the
+      Returns a Perlin noise value. The returned value is most often between the
       range of -1 to 1 (inclusive) but sometimes may be outside that range; if
       the interval is critical to you, use `Library.math.clamp(noise, -1, 1)` on
       the output.
@@ -387,7 +388,7 @@ functions:
       `Library.math.noise(1.158, 0, 0)` and `Library.math.noise(1.158, 5.723)`
       is equivalent to `Library.math.noise(1.158, 5.723, 0)`.
 
-      Note that this function uses a perlin noise algorithm to assign fixed
+      Note that this function uses a Perlin noise algorithm to assign fixed
       values to coordinates. For example, `Library.math.noise(1.158, 5.723)`
       will always return `0.48397532105446` and `Library.math.noise(1.158, 6)`
       will always return `0.15315161645412`.
@@ -453,10 +454,6 @@ functions:
     summary: |
       Returns a random number within the range provided.
     description: |
-      An interface to the simple pseudo-random generator function `rand`
-      provided by ANSI C. No guarantees can be given for its statistical
-      properties.
-
       When called without arguments, returns a uniform pseudo-random real number
       in the range of 0 to 1 (inclusive of 0 but exclusive of 1).
 
@@ -465,6 +462,10 @@ functions:
 
       When called with two integer numbers `m` and `n`, returns a uniform
       pseudo-random integer in the range of `m` to `n`, inclusive.
+
+      Internally, this uses a 32-bit PCG (Permuted Congruential Generator) which
+      achieves excellent statistical performance and makes its output hard to
+      predict.
     parameters:
       - name: m
         type: number

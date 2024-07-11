@@ -9,7 +9,7 @@ In most workflows, you create custom assets in [third-party software](#examples-
 
 ## Examples of Third-Party Software
 
-The following are examples of third-party softwares that creators commonly use:
+The following are examples of third-party software that creators commonly use:
 
 - **3D Modeling Software**
 

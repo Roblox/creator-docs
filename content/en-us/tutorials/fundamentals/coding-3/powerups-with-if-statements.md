@@ -10,12 +10,12 @@ If statements can have multiple requirements that need to be true before running
 ```lua
 -- will not run
 if 2 + 2 == 6 and 4 ~= 6 then
-   print("Both statements are true")
+	print("Both statements are true")
 end
 
 -- will run
 if 4 + 2 == 6 and 4 ~= 6 then
-   print("Both statements are true")
+	print("Both statements are true")
 end
 ```
 
@@ -42,11 +42,10 @@ Use this code with a simple part or a model, such as a crystal, coin, or glowing
    local speedBoost = script.Parent
 
    local function onTouch(otherPart)
-      print("Something touched speedBoost")
+   	print("Something touched speedBoost")
    end
 
    speedBoost.Touched:Connect(onTouch)
-
    ```
 
 4. The WalkSpeed property is found on Humanoid objects. Use the same pattern used when creating a trap part and create a conditional that checks for Humanoid objects.
@@ -98,7 +97,7 @@ OnTouch is called every time the speed boost is touched. Every step or slightest
 1. After applying the boost, set the part's CanTouch property to false. Playtest and make sure the boost only applies once.
 
    ```lua title="Disables the speed boost"
-   local speedBoost= script.Parent
+   local speedBoost = script.Parent
 
    local function onTouch(otherPart)
      local character = otherPart.Parent
@@ -117,7 +116,7 @@ OnTouch is called every time the speed boost is touched. Every step or slightest
 2. Use `task.wait(1)` to pause the script for one second, then set CanTouch to true. Playtest and make sure the speed boost can be reapplied after one second.
 
    ```lua title="Finished script"
-   local speedBoost= script.Parent
+   local speedBoost = script.Parent
 
    local function onTouch(otherPart)
      local character = otherPart.Parent

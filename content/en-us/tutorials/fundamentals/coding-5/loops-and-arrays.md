@@ -110,7 +110,7 @@ Right now, the parts disappear forever. To make them reappear, create a second f
    task.wait(1)
    ```
 
-2. **On your own**, try coding a second for loop that makes the path useable again by changing each part's CanCollide property to true and Transparency to 0. When finished, check your work against the code below.
+2. **On your own**, try coding a second for loop that makes the path usable again by changing each part's CanCollide property to true and Transparency to 0. When finished, check your work against the code below.
 
    ```lua
    -- Reset the path by making all parts walkable again

@@ -361,7 +361,7 @@ properties:
       local Humanoid = route.to.humanoid
 
       Humanoid:GetPropertyChangedSignal("FloorMaterial"):Connect(function()
-          print("New value for FloorMaterial: " .. tostring(Humanoid.FloorMaterial))
+      	print("New value for FloorMaterial: " .. tostring(Humanoid.FloorMaterial))
       end)
       ```
 
@@ -1354,7 +1354,7 @@ methods:
 
       local player = Players:FindFirstChildOfClass("Player")
       if player and player.Character then
-      	local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+      	local humanoid = player.Character:FindFirstChildWhichIsA("Humanoid")
       	if humanoid then
       		local tool = workspace:FindFirstChild("Tool")
       		if tool then
@@ -2250,6 +2250,19 @@ events:
           The `Class.AnimationTrack` that has begun playing.
     tags:
       - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.ApplyDescriptionFinished
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: description
+        type: HumanoidDescription
+        default:
+        summary: ''
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

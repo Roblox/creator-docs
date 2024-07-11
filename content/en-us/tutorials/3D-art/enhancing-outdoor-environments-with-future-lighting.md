@@ -3,29 +3,35 @@ title: Enhancing Outdoor Environments with Future Lighting
 description: Explains how to leverage Future Lighting to enhance outdoor environments.
 ---
 
-**Future lighting** is one of four `Class.Lighting.Technology` systems you can use to render the 3D environment within your experience, and it features the most advanced and powerful lighting technology with high fidelity to produce pixel perfect light emission and detailed shadows. To use Future lighting to its full capacity to create realistic lighting behavior, you must prepare the following light sources with the entire environment in mind:
+**Future lighting** is the most advanced and powerful `Class.Lighting.Technology` system you can use for rendering the 3D environment within your experiences. Unlike the other available lighting systems, Future lighting offers pixel perfect light emission, detailed shadows, and specular highlights that mimic real-world lighting for both indoor and outdoor spaces.
 
-- **Global lighting**, such as the sun or moon, produces lighting for the entire outdoor environment.
-- **Local lighting**, such as pointlights, spotlights, and surface lights, produces lighting around where you place them within your experience.
+Using the [Lighting Outdoors - Start](https://www.roblox.com/games/17835285085/Lighting-Outdoors-Start) `.rbxl` file as a starting place and [Lighting Outdoors - Complete](https://www.roblox.com/games/17835194683/Lighting-Outdoors-Complete) as a reference, this tutorial shows you how to utilize Future lighting with strategic global and local light source configurations to produce realistic, immersive outdoor lighting behavior for an evening campfire scene, including guidance on:
 
-Using the [Forest Evening Lighting Example](../../assets/tutorials/enhancing-outdoor-environments/Forest_EveningLightingExample.rbxl) `.rbxl` file as a starting place, this tutorial shows you how to take advantage of Future lighting and transform the first depiction of the evening campfire to the second by configuring the environment's global and local lighting.
+- Ensuring metallic surfaces produce accurate reflections as light sources continuously shift in the environment, such as dynamic movement from the roaring campfire.
+- Moving the sun to a new position that's realistic for the real world's time of day.
+- Customizing the atmosphere's layered hues, density, and haze.
+- Configuring point source local lighting to impact how it interacts with the overall environment.
+
+If at any point you become stuck in the process, you can use **Lighting Outdoors - Complete** as a reference to compare your progress.
 
 <GridContainer numColumns="2">
   <figure>
-    <img width="100%" img src="../../assets/tutorials/enhancing-outdoor-environments/Intro-Before.png" />
+    <img width="100%" img src="../../assets/tutorials/enhancing-outdoor-environments/Intro-Before.png" alt="The starting outdoor environment you can use to complete this tutorial." />
+    <figcaption>Lighting Outdoors - Start</figcaption>
   </figure>
   <figure>
-    <img width="100%" img src="../../assets/tutorials/enhancing-outdoor-environments/Intro-After.png" />
+    <img width="100%" img src="../../assets/tutorials/enhancing-outdoor-environments/Intro-After.png" alt="The complete outdoor environment with global and local lighting you will create by the end of this tutorial." />
+    <figcaption>Lighting Outdoors - Complete</figcaption>
   </figure>
 </GridContainer>
 
-## Configuring Global Lighting
+## Configure Global Lighting
 
-Global lighting is the luminescence from either the sun or moon in an experience. By adjusting a couple of key default properties in the `Class.Lighting` service, you can dramatically change how that light appears to users, as well as how it interacts with any other object you place in the experience.
+Global lighting is the luminescence from either the sun or moon in an experience. By adjusting a couple of key default properties in the `Class.Lighting` service, you can dramatically change how that light appears to players, as well as how it interacts with any other object you place in the experience.
 
-### Enabling the Future Lighting System
+### Enable the Future Lighting System
 
-Studio begins every experience with the `Enum.Technology.ShadowMap` lighting system, ensuring that the global lighting has precise shadows and illumination. However, to enhance the environment and equip your local light sources to also produce precise shadows and illumination, such as the light from the campfire, you must enable the `Enum.Technology.Future` lighting system technology directly in Studio. This allows both your global and local lighting to work together and provide more realistic and immersive visuals.
+The `Class.Lighting.Technology` property determines the behavior of both global and local lighting in your experience. Studio begins every experience with the `Enum.Technology.ShadowMap` lighting system, ensuring that the global lighting has precise shadows and illumination. However, to enhance the environment and equip your local light sources to also produce precise shadows and illumination, such as the light from the campfire, you must enable the `Enum.Technology.Future` lighting system technology directly in Studio. This allows both your global and local lighting to work together and provide more realistic and immersive visuals.
 
 To demonstrate this concept, see the following two images of the same campfire with different lighting system technologies. The local lighting from the campfire with the `Enum.Technology.ShadowMap` lighting systems doesn't produce shadows in the same way that the global lighting from the sun does, making this area of the environment unevenly lit with unrealistic shadows. By contrast, the local lighting from the campfire with the `Enum.Technology.Future` lighting system technology interacts with the kindling, rocks, and brush around the environment, producing crisp and realistic shadows for evening time.
 
@@ -47,7 +53,7 @@ To enable the `Enum.Technology.Future` lighting system:
 
    <img width="40%" img src="../../assets/tutorials/enhancing-outdoor-environments/Technology-Property.jpg" />
 
-### Elevating Metal Reflections
+### Elevate Metal Reflections
 
 By default, all materials use Physically-Based Rendering (PBR) textures that allow you to display realistic surfaces in various lighting scenarios by using multiple image files on a single object. This means that when you use Studio's built-in materials, the metalness and roughness of a particular surface is already defined for you, and the objects with those materials naturally react more accurately to the lighting in your environment with realistic reflections. You can enhance this effect by setting the `Class.Lighting.EnvironmentDiffuseScale` and `Class.Lighting.EnvironmentSpecularScale` properties to `1` to truly take advantage of metal reflections from the `Enum.Technology.Future` lighting system.
 
@@ -69,7 +75,7 @@ To elevate metal reflections:
 1. In the **Explorer** window, select **Lighting**.
 1. In the **Properties** window, set **EnvironmentalDiffuseScale** and **EnvironmentSpecularScale** to **1**. The metal in the experience becomes more reflective.
 
-### Changing the Time of Day
+### Change the Time of Day
 
 Now that your experience is using the `Enum.Technology.Future` lighting system and materials are reacting realistically to the light sources in your experience, it's time to move the sun to a different position according to where it would be in the real world for the time of day. The sun's default position is high in the sky, emulating around midday in the real world, so it's best to move it nearer to the skyline, right above the mountains. This step also allows the light to move down the path onto the campfire and achieve a nice golden sun.
 
@@ -89,7 +95,7 @@ To change the time of day:
 1. In the **Explorer** window, select **Lighting**.
 1. In the **Properties** window, set **ClockTime** to **17**. The sun moves to the approximate position it would be in at 5pm.
 
-### Adjusting the Color of Ambient Light
+### Adjust the Color of Ambient Light
 
 There are two `Class.Lighting` properties that control the color of ambient lighting:
 
@@ -114,7 +120,7 @@ To adjust the color of ambient lighting:
 1. In the **Explorer** window, select **Lighting**.
 1. In the **Properties** window, set **Outdoor Ambient** and **Ambient** to **156, 136, 176**. The ambient lighting changes to a light purple hue.
 
-### Choosing a Skybox
+### Choose a Skybox
 
 A skybox is a cube made up of six individual images that create an experience's sky, including what's above and below the horizon. Skyboxes can have a major impact on the look and feel of what's in your environment, so it's important to carefully consider how you can choose a skybox that enhances your experience's visual quality. For example:
 
@@ -137,7 +143,7 @@ To illustrate these concepts, examine the following two images to see how the sa
 
 The `Class.Lighting` service has a child `Class.Atmosphere` object with properties that allow you to simulate realistic environments by scattering sunlight in unique ways. These properties can be very useful in creating a thickness in the experience's air, giving the environment a tangible sense of depth. The `Class.Atmosphere` object pulls most of its colors from the skybox directly, which is why the previous decisions about your skybox were so important.
 
-#### Increasing Air Particle Density
+#### Increase Air Particle Density
 
 The `Class.Atmosphere.Density` property controls how many particles exist in the air of your experience. When you increase this property, the additional amount of particles obstruct the player's view of objects in the background. For example, when `Class.Atmosphere.Density` is `0`, the background trees, sun, and skybox are clearly visible, but when you increase this property to `0.391`, the particles start to scatter the light and conceal the trees.
 
@@ -159,7 +165,7 @@ To increase density of the air particles in the atmosphere:
 
    <img width="60%" img src="../../assets/tutorials/enhancing-outdoor-environments/Density-0.272.png" />
 
-#### Adding a Haze
+#### Add a Haze
 
 The `Class.Atmosphere.Haze` property controls the overall haziness of the atmosphere to create a visible effect both above the horizon and far into the distance from the camera. When you increase this property, it not only affects the overall environment, but it also affects objects that have a particularly powerful fresnel effect, such as metal objects that reflect the environment around them.
 
@@ -170,7 +176,7 @@ To add haze to the atmosphere:
 
    <img width="60%" img src="../../assets/tutorials/enhancing-outdoor-environments/Haze-1.png" />
 
-#### Adjusting the Color of the Atmosphere
+#### Adjust the Color of the Atmosphere
 
 The `Class.Atmosphere.Color` property sets the hue of the atmosphere for subtle environmental moods and themes, and it can really enhance the haze within your experience. You can set this to any color you want to suit your experience, but it's recommended to set it to a color value that is close to the average of the objects in the environment.
 
@@ -181,13 +187,13 @@ To adjust the color of the atmosphere:
 
    <img width="60%" img src="../../assets/tutorials/enhancing-outdoor-environments/Color-85-78-54.png" />
 
-## Configuring Local Lighting
+## Configure Local Lighting
 
 Local lighting is the luminescence from local [light sources](../../effects/light-sources.md) in your experience, such as `Class.SpotLight`, `Class.SurfaceLight`, and `Class.PointLight` objects. The key local light source you can create for this experience is the campfire's glow, and by adjusting a couple of its default properties, you can significantly alter how this local lighting interacts with the overall environment and compliment your global lighting configuration.
 
-### Adding a PointLight
+### Add a PointLight
 
-Unlike `Class.SpotLight` or `Class.SurfaceLight` objects that only project light from one direction, `Class.PointLight` objects allow you to project omnidirectional lighting. This means that when you add a `Class.PointLight` to your campfire mesh, it projects in all directions outward from its source, similar to a real-life campfire, and it illuminates all surrounding objects in shadows and allows users to see the roughness of their surfaces much clearer.
+Unlike `Class.SpotLight` or `Class.SurfaceLight` objects that only project light from one direction, `Class.PointLight` objects allow you to project omnidirectional lighting. This means that when you add a `Class.PointLight` to your campfire mesh, it projects in all directions outward from its source, similar to a real-life campfire, and it illuminates all surrounding objects in shadows and allows players to see the roughness of their surfaces much clearer.
 
 <GridContainer numColumns="2">
   <figure>
@@ -207,7 +213,7 @@ To add a `Class.PointLight` to the campfire:
 
    <img width="60%" img src="../../assets/tutorials/enhancing-outdoor-environments/New-PointLight-Values.png" />
 
-### Increasing the Range of the PointLight
+### Increase the Range of the PointLight
 
 The default properties of the `Class.PointLight` aren't enough to fully brighten the objects surrounding the campfire, so you need to increase the range that the light can reach. Because the fire is large and bright, the light needs to cast far enough to illuminate the nearby trees, rocks, and brush. This also helps to make the space feel warm and cozy, as though the heat of the fire is naturally expanding outward.
 
@@ -218,7 +224,7 @@ To increase the range of the `Class.PointLight`:
 
    <img width="60%" img src="../../assets/tutorials/enhancing-outdoor-environments/Increasing-Range.png" />
 
-### Enabling Shadows
+### Enable Shadows
 
 While the lighting's range is realistic to its size, it's unrealistic that the surrounding trees and rocks don't cast shadows from the campfire's light. Sometimes this is useful if you need to add in a couple of point lights to brighten dark spaces within your experience, but when you're aiming to emulate the real world, you can enable local lighting's ability to cast shadows. It's important to note that additional shadows can impact your experience's performance on low-end devices, so only enable shadows when they significantly add to the scene.
 
@@ -229,14 +235,16 @@ To enable shadows from the campfire's local lighting:
 
    <img width="60%" img src="../../assets/tutorials/enhancing-outdoor-environments/Enabling-Shadows.png" />
 
-### Adjusting the Lighting's Brightness and Color
+### Adjust the Lighting's Brightness and Color
 
 While the local lighting is already looking and feeling closer to realistic behavior, it's still weak in strength and too white for a warm glow. When you increase the campfire's brightness and add a warmer hue, it really brings life to the fire and adds to the coziness of the scene.
 
 To enable shadows from the campfire's local lighting:
 
 1. In the **Explorer** window, select the campfire's **PointLight**.
-1. In the **Properties** window, set **Brightness** to **2** and **Color** to **255, 179, 73**.
+1. In the **Properties** window,
+   1. Set **Brightness** to **2**.
+   1. Set **Color** to **255, 179, 73**.
 
    <img width="60%" img src="../../assets/tutorials/enhancing-outdoor-environments/Adjusting-Brightness-Color.png" />
 

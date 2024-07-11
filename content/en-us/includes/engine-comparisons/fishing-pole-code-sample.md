@@ -18,18 +18,18 @@ local ACTION_CAST = "Cast"
 
 -- Check that the key is down, then call another function
 local function castLine(_actionName, inputState, _inputObject)
-    if inputState == Enum.UserInputState.Begin then
-        performSomeAction()
-    end
+	if inputState == Enum.UserInputState.Begin then
+		performSomeAction()
+	end
 end
 
 -- Only enable the action when the player equips the fishing pole
 fishingPole.Equipped:Connect(function()
-    ContextActionService:BindAction(ACTION_CAST, castLine, true, Enum.KeyCode.E)
+	ContextActionService:BindAction(ACTION_CAST, castLine, true, Enum.KeyCode.E)
 end)
 
 -- Disable the action when the player unequips the fishing pole
 fishingPole.Unequipped:Connect(function()
-    ContextActionService:UnbindAction(ACTION_CAST)
+	ContextActionService:UnbindAction(ACTION_CAST)
 end)
 ```

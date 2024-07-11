@@ -169,8 +169,8 @@ function mt.__div(a, b)
 end
 
 function mt.__tostring(t)
-   return t.x .. ", " .. t.y;
-end;
+   return t.x .. ", " .. t.y
+end
 
 function vector2.new(x, y)
    local self = setmetatable({}, mt)
@@ -303,7 +303,7 @@ local function mathProblem(num)
 end
 
 local metatable = {
-   __index = function (object, key)
+   __index = function(object, key)
    	local num = mathProblem(key)
    	object[key] = num
    	return num

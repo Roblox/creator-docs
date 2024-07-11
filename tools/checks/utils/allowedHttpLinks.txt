@@ -142,6 +142,7 @@ https://kodingakademi.id/
 https://kodingnext.com/
 https://krita.org/
 https://krubots.com/
+https://llama.meta.com/llama3/license/
 https://learn.microsoft.com/en-us/style-guide/welcome/
 https://learning.ccsso.org/common-core-state-standards-initiative
 https://learnwithcat.catblountstories.com/
@@ -198,6 +199,9 @@ https://steameducate.com/
 https://steamiowacity.org/
 https://streetcode.org/
 https://stripe.com/docs/connect/cross-border-payouts
+https://docs.stripe.com/payouts
+https://docs.stripe.com/currencies
+https://docs.stripe.com/currencies/conversions
 https://studio.code.org/s/csp-create-2018/stage/2/puzzle/1?viewAs=Teacher
 https://substance3d.adobe.com/documentation/integrations/roblox-232292566.html
 https://substance3d.adobe.com/documentation/sddoc/transformation-2d-172825332.html
@@ -387,6 +391,7 @@ https://www.wizkidlearning.com/
 https://www.wowschool.pl/
 https://www.youthtechinc.com/
 https://www.youtube.com/@RobloxLevelUp
+https://www.youtube-nocookie.com/embed/V1uFFUUCLpo
 https://www.youtube-nocookie.com/embed/2My8jE47clI
 https://www.youtube-nocookie.com/embed/0fAhhoXK12o
 https://www.youtube-nocookie.com/embed/0shiHaGe87s?si=xILCuyVy8dIviZ2U
@@ -452,12 +457,16 @@ https://www.youtube-nocookie.com/embed/eqQyFL7KnmA
 https://www.youtube-nocookie.com/embed/V-SDTfxcIF8
 https://www.youtube-nocookie.com/embed/4P79zbwU9D8
 https://www.youtube-nocookie.com/embed/JVjkzGIgoak
+https://www.youtube-nocookie.com/embed/DKzFkn7q8MQ
 https://www.youtube.com/c/Disobeyedcrab
 https://www.youtube.com/c/NatalieClabo
 https://www.youtube.com/c/SpooksHD
 https://www.youtube.com/channel/UC4S7REVGs6bt9tfBhV7AKhA
 https://www.youtube.com/channel/UCLkSx-YvsK7QwEsrPIj0trg
 https://www.youtube.com/channel/UCp1R0TBvgM7gj0rwTYULmSA
+https://www.youtube.com/embed/FfvEezx9yZw
+https://www.youtube.com/embed/iub8w55181k
+https://www.youtube.com/embed/Kt5CeFGqdoM
 https://www.youtube.com/watch?list=PLHqz-wcqDQIEMMuXadwy90YxN2Qb4SrXT&time_continue=5&v=TWj78n4ZuMY&feature=emb_logo
 https://www.youtube.com/watch?v=-gIL6VZ-bkE
 https://www.youtube.com/watch?v=0fAhhoXK12o
@@ -471,8 +480,10 @@ https://www.youtube.com/watch?v=f2pTkW-1JkE
 https://www.youtube.com/watch?v=fx33sPEAZEk
 https://www.youtube.com/watch?v=iHJ49zbGOW8&
 https://www.youtube.com/watch?v=j918PoWWaB0
+https://www.youtube-nocookie.com/embed/llR_pNlJDQw
 https://youtu.be/OEmFocfE0Xs
 https://en.wikipedia.org/wiki/Exponential_backoff
+https://en.wikipedia.org/wiki/Moment_of_inertia
 https://en.wikipedia.org/wiki/Shard_(database_architecture)
 https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch
 https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF
@@ -490,6 +501,7 @@ https://youtu.be/OEmFocfE0Xs
 https://www.youtube.com/watch?v=syQcaeRqqc4
 https://www.youtube-nocookie.com/embed/eqQyFL7KnmA?si=yVlqGzUvTnblj_c4
 https://www.youtube-nocookie.com/embed/dXqZC4x2Vn8?si=CdkQvEY085pWO3iS
+https://www.youtube-nocookie.com/embed/dlItlMLMDCE
 https://github.com/Roblox/foreman
 https://github.com/nvm-sh/nvm
 https://github.com/Roblox/foreman?tab=readme-ov-file
@@ -510,3 +522,6 @@ https://www.vim.org/
 https://github.com/JohnnyMorganz/StyLua
 https://github.com/NightrainsRbx/RobloxLsp
 https://github.com/JohnnyMorganz/luau-lsp
+https://x.com
+https://x.com/RobloxEdu
+https://x.com/Roblox

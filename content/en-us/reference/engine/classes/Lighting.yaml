@@ -124,7 +124,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local hours = minutesNormalised / 60
@@ -141,11 +141,11 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local seconds = minutesNormalised * 60
-      	local hours = string.format("%02.f", math.floor(seconds/3600))
+      	local hours = string.format("%02.f", seconds//3600)
       	local mins = string.format("%02.f", math.floor(seconds/60 - (hours*60)))
       	local secs = string.format("%02.f", math.floor(seconds - hours*3600 - mins *60))
       	local timeString = hours..":"..mins..":"..secs
@@ -162,7 +162,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 
@@ -701,12 +701,11 @@ properties:
       detailed descriptions and visual effects of each option.
     code_samples:
     type: Technology
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
-      read: None
-      write: None
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Appearance
     serialization:
@@ -732,11 +731,11 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local seconds = minutesNormalised * 60
-      	local hours = string.format("%02.f", math.floor(seconds/3600))
+      	local hours = string.format("%02.f", seconds//3600)
       	local mins = string.format("%02.f", math.floor(seconds/60 - (hours*60)))
       	local secs = string.format("%02.f", math.floor(seconds - hours*3600 - mins *60))
       	local timeString = hours..":"..mins..":"..secs
@@ -752,7 +751,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local hours = minutesNormalised / 60
@@ -769,7 +768,7 @@ properties:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 
@@ -916,14 +915,14 @@ methods:
       ```lua
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local seconds = minutesNormalised * 60
-      	local hours = string.format("%02.f", math.floor(seconds/3600))
-      	local mins = string.format("%02.f", math.floor(seconds/60 - (hours*60)))
-      	local secs = string.format("%02.f", math.floor(seconds - hours*3600 - mins *60))
-      	local timeString = hours..":"..mins..":"..secs
+      	local hours = string.format("%02.f", seconds // 3600)
+      	local mins = string.format("%02.f", math.floor(seconds / 60 - (hours * 60)))
+      	local secs = string.format("%02.f", math.floor(seconds - hours * 3600 - mins * 60))
+      	local timeString = hours .. ":" .. mins .. ":" .. secs
 
       	Lighting.TimeOfDay = timeString
 
@@ -936,7 +935,7 @@ methods:
       ```lua
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local hours = minutesNormalised / 60
@@ -953,7 +952,7 @@ methods:
       ```
       minutesAfterMidnight = 0
       while true do
-      	minutesAfterMidnight = minutesAfterMidnight + 1
+      	minutesAfterMidnight += 1
 
       	Lighting:SetMinutesAfterMidnight(minutesAfterMidnight)
 

@@ -27,7 +27,7 @@ We follow the [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-gu
   - **WORSE**: The list of players is returned.
   - **BETTER**: The server returns the list of players.
 
-- The terms "we" and "our" implies Roblox and is usually reserved for recommendations.
+- The terms "we" and "our" imply Roblox and are usually reserved for recommendations.
 
   - **BAD**: Now that we're happy with the terrain, we can start placing our models.
   - **BETTER**: When you're satisfied with the terrain, begin placing your models.
@@ -62,7 +62,7 @@ We follow the [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-gu
   - **BAD**: Click and drag to grab the signpost. Then select the **Color** button.
   - **BETTER**: Select the signpost and click the **Color** button.
 
-- Spell out one (1) through nine (9). Start using numerals at 10. If a number needs a unit (GB, pounds, millimeters, kg, celsius, etc.), always use numerals, even if the number if smaller than 10.
+- Spell out one (1) through nine (9). Start using numerals at 10. If a number needs a unit (GB, pounds, millimeters, kg, celsius, etc.), always use numerals, even if the number is smaller than 10.
 
   - **BAD**: 3 people looked for thirteen files on a six GB hard drive.
   - **BETTER**: Three people looked for 13 files on a 6 GB hard drive.
@@ -85,7 +85,7 @@ When linking to another page on the Roblox Documentation site, use **relative** 
 
 ### Engine API Reference Page Links
 
-When referencing a Roblox Engine API member, such as a class, method, enum, data type, global function, or library, use our special [API link syntax](#link-syntax) instead.`.
+When referencing a Roblox Engine API member, such as a class, method, enum, data type, global function, or library, use our special [API link syntax](#link-syntax) instead.
 
 #### Usage Guidelines
 

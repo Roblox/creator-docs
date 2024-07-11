@@ -96,7 +96,7 @@ Experiences must meet the following criteria to be eligible to be an ad publishe
 - Your experience must be **Public**. If a publisher makes the experience Private, the experience will lose eligibility.
 - You must complete the **Experience Guidelines Questionnaire** for your experience.
 - Your experience must maintain **2,000 unique visitors per month**.
-  - This is calculated based on visitors in the most recent 30 calendar days for which Roblox has complete data.
+  - This is calculated and updated monthly, based on visitor data.
   - Bots cannot be included in visitor counts.
 - You must comply with the [Roblox Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and the [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards#publisher-integrity).
 
@@ -111,6 +111,10 @@ Publishers who do not comply with these requirements may lose their eligibility 
 Even if your experience is eligible to serve ads, not all users are eligible to see ads, such as those under the age of 13 or users outside of a campaign's audience selection. If a user is ineligible to see ads, ad units display a fallback image of the Roblox logo to those ineligible users, but you can remove the ad units altogether as described in [Removing Ad Units for Ineligible Users](#removing-ad-units-for-ineligible-users).
 
 ## Inserting Ad Units
+
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/dlItlMLMDCE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<br /> <br />
 
 When you insert an ad unit into an eligible experience, it's important to check each image ad surface that displays the ad before you publish your experience to confirm whether or not the ad unit is valid and able to serve ads. For example, you can scale ad units to different sizes to match your experience's aesthetics, but they cannot become too small or large, otherwise they become invalid and cannot serve ads.
 
@@ -148,9 +152,7 @@ To insert a video ad:
 To incentivize users to watch a click-to-play video ad for least 15 seconds, you may choose to implement a **reward mechanism** in your experience. A reward can only be given **once per ad rotation**, and ads rotate every 5 minutes. Choose an enticing reward, such as in-game currency or an in-game item, and ensure the reward is visible to users before they watch the ad. This can be through the UI or a sign next to the ad unit.
 
 <Alert severity="info">
-
 Click-to-play video ads are in closed beta with select advertisers and payouts may fluctuate as budgets stabilize. However, publishers that implement rewarded video are likely to earn higher payouts, since advertisers are willing to pay a premium for completed video views.
-
 </Alert>
 
 Implementing a reward for a video ad must be done in a `Class.Script` using `Enum.AdEventType`. The following sample creates a function to reward users who watch an ad to completion:

@@ -36,17 +36,6 @@ navigation:
             path: /projects/collaboration
           - title: Groups
             path: /projects/groups
-      - title: Performance Optimization
-        path: /projects/performance-optimization/
-        section:
-          - title: Overview
-            path: /projects/performance-optimization/
-          - title: Computation
-            path: /projects/performance-optimization/computation
-          - title: Memory
-            path: /projects/performance-optimization/memory
-          - title: Load Times
-            path: /projects/performance-optimization/load-times
       - title: External Tools
         path: /projects/external-tools
   - title: Assets
@@ -99,8 +88,7 @@ navigation:
             path: /physics/assemblies
           - title: Network Ownership
             path: /physics/network-ownership
-          - title: Character Controllers
-            path: /physics/character-controllers
+          
           #- title: Joints
           #  path: /physics/joints
           - title: Mechanical Constraints
@@ -153,8 +141,12 @@ navigation:
                 path: /physics/constraints/torque
               - title: LineForce
                 path: /physics/constraints/line-force
+          - title: Sleep System
+            path: /physics/sleep-system
           - title: Adaptive Timestepping
             path: /physics/adaptive-timestepping
+          - title: Character Controllers
+            path: /physics/character-controllers
           - title: Roblox Units
             path: /physics/units
       - title: Effects
@@ -191,32 +183,35 @@ navigation:
     section:
       - title: Overview
         path: /scripting/
-        # there's lots of files in scripting/... that need reconcilation
-      - title: Scripts
-        path: /scripting/scripts
+      - title: Types and Locations
+        path: /scripting/locations
+      - title: Reusing Code
+        path: /scripting/module
       - title: Services
         path: /scripting/services
       - title: Events
         section:
-          - title: Built-In
-            path: /scripting/events/built-in
-          - title: Custom
-            path: /scripting/events/custom
+          - title: Overview
+            path: /scripting/events/
+          - title: Bindable
+            path: /scripting/events/bindable
           - title: Remote
             path: /scripting/events/remote
-      - title: Scheduler
-        path: /scripting/scheduler
-      - title: Multi-Threading
-        path: /scripting/multithreading
-      - title: Security Tactics and Cheat Mitigation
-        path: /scripting/security/security-tactics
-      - title: Luau
+      - title: Advanced
+        section:
+          - title: Scheduler
+            path: /scripting/scheduler
+          - title: Multi-Threading
+            path: /scripting/multithreading
+          - title: Native Code Generation
+            path: /luau/native-code-gen
+          - title: Security Tactics and Cheat Mitigation
+            path: /scripting/security/security-tactics
+      - title: Luau Reference
         path: /luau/
         section:
           - title: Overview
             path: /luau/
-          - title: Comparison to C#
-            path: /luau/luau-csharp-comparison
           - title: Types
             section:
               - title: Nil
@@ -261,8 +256,6 @@ navigation:
                 path: /luau/type-coercion
               - title: Type Checking
                 path: /luau/type-checking
-          - title: Native Code Generation
-            path: /luau/native-code-gen
   - title: Environment
     path: /environment/
     section:
@@ -304,11 +297,13 @@ navigation:
         path: /projects/teleporting
       - title: Teams
         path: /players/teams
+      - title: In-Experience Tools
+        path: /players/tools
       - title: Leaderboards
         path: /players/leaderboards
-      - title: Tools
-        path: /players/tools
-      - title: UI
+      - title: Loading Screens
+        path: /players/loading-screens
+      - title: Player UI
         section:
           - title: Avatar Editor
             path: /players/avatar-editor
@@ -369,6 +364,8 @@ navigation:
             path: /ui/drag-detectors
           - title: Video Frames
             path: /ui/video-frames
+          - title: 2D Paths
+            path: /ui/2D-paths
       - title: Layout and Design
         section:
           - title: Layout and Appearance
@@ -387,8 +384,6 @@ navigation:
         path: /ui/animation
       - title: Text Filtering
         path: /ui/text-filtering
-      - title: Loading Screens
-        path: /ui/customizing-loading-screens
   - title: Animation
     path: /animation/
     section:
@@ -417,23 +412,35 @@ navigation:
         section:
           - title: Overview
             path: /chat/in-experience-text-chat
-          - title: Customizing In-Experience Text Chat
+          - title: Customization
             path: /chat/customizing-in-experience-text-chat
           - title: Bubble Chat
             path: /chat/bubble-chat
-          - title: Migrating to In-Experience Text Chat
-            path: /chat/migrate-to-in-experience-text-chat
           - title: Legacy Chat System
             path: /chat/legacy/legacy-chat-system
+  - title: Performance Optimization
+    section:
+      - title: Overview
+        path: /performance-optimization/
+      - title: Designing for Performance
+        path: /performance-optimization/designing
+      - title: Identifying Issues
+        path: /performance-optimization/identifying
+      - title: Improving Performance
+        path: /performance-optimization/improving
+      - title: Monitoring Performance
+        path: /performance-optimization/monitoring
   - title: Cloud Services
     section:
       - title: Data Stores
-        path: /cloud-services/datastores
+        path: /cloud-services/data-stores/
         section:
           - title: Overview
-            path: /cloud-services/datastores
+            path: /cloud-services/data-stores/
+          - title: Observability
+            path: /cloud-services/data-stores/observability
           - title: Implementing Player Data and Purchasing Systems
-            path: /scripting/data/player-data-purchasing
+            path: /cloud-services/data-stores/player-data-purchasing
       - title: Memory Stores
         path: /cloud-services/memory-stores/
         section:
@@ -466,10 +473,7 @@ navigation:
   - title: Discovery
     path: /discovery
   - title: Publishing
-    path: /production/publishing/
     section:
-      - title: Overview
-        path: /production/publishing/
       - title: Experiences
         path: /production/publishing/publishing-experiences-and-places
         section:
@@ -488,14 +492,12 @@ navigation:
       #   - title: Avatar Marketplace Thumbnails
       #     path: /production/publishing/marketplace-thumbnails
       - title: Assets
-        path: /production/publishing/publishing-assets
+        path: /production/creator-store
         section:
-          - title: Overview
-            path: /production/publishing/publishing-assets
           - title: Creator Store
-            path: /production/publishing/creator-store
+            path: /production/creator-store
           - title: Selling on the Creator Store
-            path: /production/publishing/selling-on-the-creator-store
+            path: /production/selling-on-creator-store
       - title: Guidelines
         section:
           - title: Experience Guidelines
@@ -514,6 +516,8 @@ navigation:
         path: /production/publishing/account-verification
       - title: Rights Manager
         path: /production/publishing/rights-manager
+      - title: AI Data Sharing
+        path: /ai-data-sharing
   - title: Promotion
     path: /production/promotion/
     section:
@@ -528,8 +532,6 @@ navigation:
             path: /production/promotion/ads-manager
           - title: Sponsoring Items
             path: /production/promotion/sponsoring-items
-          - title: User Advertisements
-            path: /production/promotion/user-advertisements
           - title: Complying with Advertising Standards
             path: /production/promotion/complying-with-advertising-standards
       - title: Audience Engagement
@@ -539,7 +541,7 @@ navigation:
       - title: Player Invite Prompts
         path: /production/promotion/invite-prompts
       - title: Experience Notifications
-        path: /cloud-services/experience-notifications
+        path: /production/promotion/experience-notifications
       - title: Nominating for the Discover Page
         path: /production/promotion/nominating-for-the-discover-page
       - title: Getting Featured on Roblox‑Owned Channels
@@ -632,6 +634,8 @@ navigation:
             path: /production/analytics/economy-events
           - title: Funnel Events
             path: /production/analytics/funnel-events
+          - title: Custom Fields
+            path: /production/analytics/custom-fields
   - title: Community
     path: /production/community/
     section:

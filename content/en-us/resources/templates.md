@@ -13,6 +13,26 @@ The **Racing** template includes a working race car and modular winding track ob
 
 <UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="16078915506" universeId="5557500170" />
 
+## Laser Tag
+
+The **Laser Tag** template includes:
+
+- A blaster system with attributes you can customize for your own first-person shooter (FPS) experiences, such as damage, ammo capacity, recoil, and spread.
+- A simple round system you can extend with custom modes and/or scoring systems.
+- A high-quality first-person shooter arena with custom physically-based rendering (PBR) materials.
+
+<img src="../assets/resources/templates/Laser-Tag-Template.png" width="50%" alt="" />
+
+<UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="17823019220" universeId="6106389365" />
+
+## FPS System
+
+The **FPS System** template includes the FPS blaster system from the Laser Tag template, as well as targets you can use to practice firing the two blasters.
+
+<img src="../assets/resources/templates/FPS-System-Template.png" width="50%" alt="" />
+
+<UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="17823017290" universeId="6106388692" />
+
 ## Baseplate
 
 The **Baseplate** template includes only two default objects:

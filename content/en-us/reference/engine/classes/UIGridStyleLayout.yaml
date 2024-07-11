@@ -18,17 +18,17 @@ properties:
     summary: |
       The absolute size of space being taken up by the grid layout.
     description: |
-      The AbsoluteContentSize property of a `Class.UIGridStyleLayout` shows how
-      much space the elements of the grid are taking up, including any padding
-      created by the grid. This property is particularly useful to size
-      containers of grids such as `Class.Frame|Frames` to make sure they aren't
-      any larger than the grid itself.
+      The **AbsoluteContentSize** property of a `Class.UIGridStyleLayout`
+      reveals how much space the elements of the grid are taking up, including
+      any padding created by the grid. This property is particularly useful to
+      size containers of grids such as `Class.Frame|Frames` to make sure they
+      aren't any larger than the grid itself.
 
-      It updates as soon as it's read. It won't fire a changed event immediately
-      after the UI has changed, but if the value is read it will be up to date.
-      A `Class.Instance.Changed` event should fire on the next render step.
+      This property updates as soon as it's read. It will not fire a
+      `Class.Instance.Changed` event immediately after the UI has changed, but
+      if the value is read, it will become current and a
+      `Class.Instance.Changed` event will fire on the next render step.
     code_samples:
-      - UIGridStyleLayout-AbsoluteContentSize
     type: Vector2
     tags:
       - ReadOnly
@@ -44,17 +44,17 @@ properties:
       can_save: false
   - name: UIGridStyleLayout.FillDirection
     summary: |
-      Determines the axis in which UI elements are laid out.
+      Determines the axis in which UI objects are laid out.
     description: |
-      The FillDirection property determines the axis in which UI elements are
-      laid out. Horizontal will arrange elements from left to right, while
-      Vertical will arrange from top to bottom. To reverse elements (for
-      instance, arrange right to left) you will need to reverse the sorting.
-      This can be done by negating the child UI elements'
+      The **FillDirection** property determines the axis in which UI elements
+      are laid out. `Enum.FillDirection.Horizontal` arranges objects from left
+      to right, while `Enum.FillDirection.Vertical` arranges objects from top to
+      bottom. To reverse elements, such as to arrange right to left, you'll need
+      to reverse the sorting; for example by negating the child UI objects'
       `Class.GuiObject.LayoutOrder` values when
-      `Class.UIGridStyleLayout.SortOrder` is set to LayoutOrder.
+      `Class.UIGridStyleLayout.SortOrder` is set to
+      `Enum.SortOrder.LayoutOrder`.
     code_samples:
-      - UIGridLayout-Fill-Directions-and-Alignments
     type: FillDirection
     tags: []
     deprecation_message: ''
@@ -71,11 +71,10 @@ properties:
       Determines the horizontal alignment of UI elements within the parent
       element.
     description: |
-      The HorizontalAlignment property determines the X-axis alignment of the
-      laid-out grid of UI elements, much like `Class.TextLabel.TextXAlignment`
+      The **HorizontalAlignment** property determines the **X** axis alignment
+      of the grid of UI elements, much like `Class.TextLabel.TextXAlignment`
       does with `Class.TextLabel.Text`.
     code_samples:
-      - UIGridLayout-Fill-Directions-and-Alignments
     type: HorizontalAlignment
     tags: []
     deprecation_message: ''
@@ -89,18 +88,19 @@ properties:
       can_save: true
   - name: UIGridStyleLayout.SortOrder
     summary: |
-      Determines the manner in which the next UI element is chosen when being
-      laid out.
+      Determines the order in which child UI objects are placed in a layout.
     description: |
-      The SortOrder property determines the next UI element to be placed in a
-      layout. For Name, a simple alphabetic sort is used on the Name property of
-      the child UI elements. For LayoutOrder, a low-to-high sort is used on the
-      `Class.GuiObject.LayoutOrder` property of child UI elements. If two share
-      the same `Class.GuiObject.LayoutOrder`, whichever was added sooner to the
-      parent object takes precedence. An easy way to reverse the sorting order
-      is to negate LayoutOrder.
+      The **SortOrder** property determines the order in which child UI objects
+      are placed in a layout.
+
+      For `Enum.SortOrder.Name`, a simple alphabetic sort is used on the
+      `Class.Instance.Name` of the child UI objects.
+
+      For `Enum.SortOrder.LayoutOrder`, an ascending sort is used on the
+      `Class.GuiObject.LayoutOrder|LayoutOrder` property of child UI objects. If
+      two children share the same `Class.GuiObject.LayoutOrder|LayoutOrder`,
+      whichever was added sooner to the parent object takes precedence.
     code_samples:
-      - UI-Sort-Order
     type: SortOrder
     tags: []
     deprecation_message: ''
@@ -117,11 +117,10 @@ properties:
       Determines the vertical alignment of UI elements within the parent
       element.
     description: |
-      The VerticalAlignment property determines the Y-axis alignment of the
-      laid-out grid of UI elements, much like `Class.TextLabel.TextYAlignment`
-      does with `Class.TextLabel.Text`.
+      The **VerticalAlignment** property determines the **Y** axis alignment of
+      the grid of UI elements, much like `Class.TextLabel.TextYAlignment` does
+      with `Class.TextLabel.Text`.
     code_samples:
-      - UIGridLayout-Fill-Directions-and-Alignments
     type: VerticalAlignment
     tags: []
     deprecation_message: ''

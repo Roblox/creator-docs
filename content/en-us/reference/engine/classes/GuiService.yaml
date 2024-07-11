@@ -3,19 +3,13 @@ type: class
 category: Input
 memory_category: Instances
 summary: |
-  The GuiService is a service which currently allows developers to control what
-  `Class.GuiObject` is currently being selected by the gamepad navigator. It
-  also allows clients to check if Roblox's main menu is currently open.
-
-  This service has a lot of hidden members, which are mainly used internally by
-  Roblox's `Class.CoreScript|CoreScripts`.
+  Allows developers to control what `Class.GuiObject` is currently being
+  selected by the gamepad navigator, as well as check if Roblox's main menu is
+  currently open.
 description: |
-  The GuiService is a service which currently allows developers to control what
-  `Class.GuiObject` is currently being selected by the gamepad navigator. It
-  also allows clients to check if Roblox's main menu is currently open.
-
-  This service has a lot of hidden members, which are mainly used internally by
-  Roblox's `Class.CoreScript|CoreScripts`.
+  **GuiService** allows developers to control what `Class.GuiObject` is
+  currently being selected by the gamepad navigator, as well as check if
+  Roblox's main menu is currently open.
 code_samples:
 inherits:
   - Instance
@@ -27,10 +21,10 @@ deprecation_message: ''
 properties:
   - name: GuiService.AutoSelectGuiEnabled
     summary: |
-      If activating the `Select` button on a Gamepad or <kbd>Backslash</kbd>
+      If activated, the `Select` button on a Gamepad or <kbd>Backslash</kbd>
       will automatically set a GUI as the selected object.
     description: |
-      If activating the `Select` button on a Gamepad or <kbd>Backslash</kbd>
+      If activated, the `Select` button on a Gamepad or <kbd>Backslash</kbd>
       will automatically set a GUI as the selected object. Turning this off will
       mean that Gui navigation will still work if
       `Class.GuiService.GuiNavigationEnabled` is enabled but you will have to
@@ -765,18 +759,5 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-  - name: GuiService.OpenAttenuationCurveEditor
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: selectedCurveObjects
-        type: Objects
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
 callbacks: []

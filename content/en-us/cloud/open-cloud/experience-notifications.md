@@ -91,7 +91,11 @@ Example response which returns the notification ID in the `id` field:
 
 ### Customizing Notifications Using Parameters
 
-To customize the notification for each recipient, you can include **parameters** in the [notification string](#creating-a-notification-string), then customize the parameters when calling the API. For example, you can define the notification string as "You won **\{numRaces\}** races this week and unlocked the **\{racetrackName\}** track!", then set the `numRaces` and `racetrackName` parameters.
+To customize the notification for each recipient, you can include **parameters** in the [notification string](#creating-a-notification-string), then customize the parameters when calling the API. For example, you can define the notification string as:
+
+- <Typography variant="subtitle2" color="primary">\{userId-friend\} beat your high score by \{points\} points! Time to level up?</Typography>
+
+Then, set the `userId-friend` and `points` parameters in the script:
 
 ```bash title="Customize Notification Using Parameters"
 curl --location 'https://apis.roblox.com/cloud/v2/users/${UserId}/notifications' \
@@ -105,8 +109,8 @@ curl --location 'https://apis.roblox.com/cloud/v2/users/${UserId}/notifications'
 		"message_id": "${AssetID}",
 		"type": "MOMENT",
 		"parameters": {
-			"numRaces": {"int64_value": 5},
-			"racetrackName": {"string_value": "Galaxy Road"}
+			"userId-friend": {"int64_value": 3702832553},
+			"points": {"string_value": "5"}
 		}
 	}
 }'

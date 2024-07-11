@@ -4,7 +4,7 @@ description: The Ads Manager is where advertisers can manage ad campaigns, ads r
 ---
 
 <Alert severity="warning">
-   This feature is in beta.
+This feature is in beta.
 </Alert>
 
 **Ads Manager** offers advertisers valuable control over their ad campaigns, empowering them to create, optimize, and measure ads effectively while reaching their campaign objectives. Advertisers can use this tool to manage their ad campaigns, ads reporting, and ads billings in one place. Ads Manager allows you to create campaigns for **Immersive Ads** for ad units within experiences ([image](#image-ads) ads, [video](#video-ads) ads, [portal](#portal-ads) ads), and for [**sponsored experiences**](#sponsored-experiences), which appear on the Home, Search, and Discover pages.

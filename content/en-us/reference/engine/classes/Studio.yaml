@@ -2114,25 +2114,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: Studio.Server Audio Behavior
-    summary: |
-      An unused Roblox Studio setting that does not appear to have any
-      functionality.
-    description: |
-      An unused Roblox Studio setting that does not appear to have any
-      functionality.
-    code_samples:
-    type: ServerAudioBehavior
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Audio
-    serialization:
-      can_load: true
-      can_save: true
   - name: Studio.Set Pivot of Imported Parts
     summary: ''
     description: ''

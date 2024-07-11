@@ -67,7 +67,7 @@ Because the player manager includes functions used by other scripts, it'll be a 
 
    -- Module Functions
    function PlayerManager.sendPlayersToMatch()
-     print("Sending players to match")
+   	print("Sending players to match")
    end
 
    return PlayerManager
@@ -82,7 +82,7 @@ Right now, there's multiple spawn locations, meaning that players spawn at a ran
    ```lua
    -- Local Functions
    local function onPlayerJoin(player)
-     player.RespawnLocation = lobbySpawn
+   	player.RespawnLocation = lobbySpawn
    end
    ```
 
@@ -91,7 +91,7 @@ Right now, there's multiple spawn locations, meaning that players spawn at a ran
    ```lua
    -- Module Functions
    function PlayerManager.sendPlayersToMatch()
-     print("Sending players to match")
+   	print("Sending players to match")
    end
 
    -- Events
@@ -100,7 +100,7 @@ Right now, there's multiple spawn locations, meaning that players spawn at a ran
 
 ### Connecting and Testing
 
-Now the modules can be connectd and tested. With the PlayerManager created, require it so that the code in that module script can then run and send players to the lobby.
+Now the modules can be connected and tested. With the PlayerManager created, require it so that the code in that module script can then run and send players to the lobby.
 
 1. Go back to **MatchManager** and create variables for the following:
 
@@ -119,7 +119,7 @@ Now the modules can be connectd and tested. With the PlayerManager created, requ
    local playerManager = require(moduleScripts:WaitForChild("PlayerManager"))
 
    function MatchManager.prepareGame()
-     playerManager.sendPlayersToMatch()
+   	playerManager.sendPlayersToMatch()
    end
 
    return MatchManager
@@ -152,7 +152,7 @@ Now that players spawn in the lobby, teleport them into a match once the intermi
 
    -- Local Functions
    local function onPlayerJoin(player)
-      player.RespawnLocation = lobbySpawn
+   	player.RespawnLocation = lobbySpawn
    end
 
    local function preparePlayer(player, whichSpawn)
@@ -161,7 +161,7 @@ Now that players spawn in the lobby, teleport them into a match once the intermi
 
    -- Module Functions
    function PlayerManager.sendPlayersToMatch()
-      print("Sending players to match")
+   	print("Sending players to match")
    end
    ```
 
@@ -169,7 +169,7 @@ Now that players spawn in the lobby, teleport them into a match once the intermi
 
    ```lua
    local function preparePlayer(player, whichSpawn)
-      player.RespawnLocation = whichSpawn
+   	player.RespawnLocation = whichSpawn
    end
    ```
 
@@ -177,8 +177,8 @@ Now that players spawn in the lobby, teleport them into a match once the intermi
 
    ```lua
    local function preparePlayer(player, whichSpawn)
-      player.RespawnLocation = whichSpawn
-      player:LoadCharacter()
+   	player.RespawnLocation = whichSpawn
+   	player:LoadCharacter()
    end
    ```
 
@@ -195,7 +195,7 @@ Make sure each player gets teleported to a different spawn location in the arena
    ```lua
    --Module Functions
    function PlayerManager.sendPlayersToMatch()
-      local arenaSpawns = spawnLocations:GetChildren()
+   	local arenaSpawns = spawnLocations:GetChildren()
    end
    ```
 
@@ -203,11 +203,11 @@ Make sure each player gets teleported to a different spawn location in the arena
 
    ```lua
    function PlayerManager.sendPlayersToMatch()
-      local arenaSpawns = spawnLocations:GetChildren()
+   	local arenaSpawns = spawnLocations:GetChildren()
 
-      for playerKey, whichPlayer in Players:GetPlayers() do
+   	for playerKey, whichPlayer in Players:GetPlayers() do
 
-      end
+   	end
    end
    ```
 
@@ -219,11 +219,11 @@ When the game runs, it needs to identify which users are playing so they can be 
 
    ```lua
    function PlayerManager.sendPlayersToMatch()
-      local arenaSpawns = spawnLocations:GetChildren()
+   	local arenaSpawns = spawnLocations:GetChildren()
 
-      for playerKey, whichPlayer in Players:GetPlayers() do
-         table.insert(activePlayers,whichPlayer)
-      end
+   	for playerKey, whichPlayer in Players:GetPlayers() do
+   		table.insert(activePlayers, whichPlayer)
+   	end
    end
    ```
 
@@ -231,8 +231,8 @@ When the game runs, it needs to identify which users are playing so they can be 
 
    ```lua
    for playerKey, whichPlayer in Players:GetPlayers() do
-      table.insert(activePlayers,whichPlayer)
-      local spawnLocation = arenaSpawns[1]
+   	table.insert(activePlayers, whichPlayer)
+   	local spawnLocation = arenaSpawns[1]
    end
    ```
 
@@ -240,10 +240,9 @@ When the game runs, it needs to identify which users are playing so they can be 
 
    ```lua
    for playerKey, whichPlayer in Players:GetPlayers() do
-      table.insert(activePlayers,whichPlayer)
-      local spawnLocation = arenaSpawns[1]
-      preparePlayer(whichPlayer, spawnLocation)
-      table.remove(arenaSpawns, 1)
+   	table.insert(activePlayers, whichPlayer)
+   	local spawnLocation = table.remove(arenaSpawns, 1)
+   	preparePlayer(whichPlayer, spawnLocation)
    end
    ```
 
@@ -297,10 +296,10 @@ Now that the tool is in storage, work on a script to go through the active playe
 
    ```lua
    local function preparePlayer(player, whichSpawn)
-      player.RespawnLocation = whichSpawn
-      player:LoadCharacter()
+   	player.RespawnLocation = whichSpawn
+   	player:LoadCharacter()
 
-      local character = player.Character or player.CharacterAdded:Wait()
+   	local character = player.Character or player.CharacterAdded:Wait()
    end
    ```
 
@@ -312,12 +311,12 @@ Now that the tool is in storage, work on a script to go through the active playe
 
    ```lua
    local function preparePlayer(player, whichSpawn)
-      player.RespawnLocation = whichSpawn
-      player:LoadCharacter()
+   	player.RespawnLocation = whichSpawn
+   	player:LoadCharacter()
 
-      local character = player.Character or player.CharacterAdded:Wait()
-      local sword = playerWeapon:Clone()
-      sword.Parent = character
+   	local character = player.Character or player.CharacterAdded:Wait()
+   	local sword = playerWeapon:Clone()
+   	sword.Parent = character
    end
    ```
 
@@ -393,7 +392,6 @@ local playerWeapon = ServerStorage.Weapon
 -- Local Functions
 local function onPlayerJoin(player)
 	player.RespawnLocation = lobbySpawn
-
 end
 
 local function preparePlayer(player, whichSpawn)
@@ -408,13 +406,12 @@ end
 function PlayerManager.sendPlayersToMatch()
 	print("Sending players to match")
 
-local arenaSpawns = spawnLocations:GetChildren()
+	local arenaSpawns = spawnLocations:GetChildren()
 
 	for playerKey, whichPlayer in Players:GetPlayers() do
-		table.insert(activePlayers,whichPlayer)
-		local spawnLocation = arenaSpawns[1]
+		table.insert(activePlayers, whichPlayer)
+		local spawnLocation = table.remove(arenaSpawns, 1)
 		preparePlayer(whichPlayer, spawnLocation)
-		table.remove(arenaSpawns, 1)
 	end
 end
 

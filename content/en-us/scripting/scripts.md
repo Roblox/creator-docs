@@ -27,7 +27,7 @@ You can also use `Class.LocalScript` objects for client-side scripts, but we rec
 load by calling the `Global.RobloxGlobals.require()` function. Module scripts must return exactly one
 value and run once and only once
 per Lua environment. As a result, subsequent calls to `Global.RobloxGlobals.require()` return a
-cached value.
+cached value. You can execute arbitrary code in a `Class.ModuleScript`, but you only need to return what you need in other scripts.
 
 Multiple scripts can require
 the same module script, and one module script can be required by both
@@ -44,8 +44,6 @@ return module
 
 - `local module = {}` creates an empty [table](../luau/tables.md).
 - `return module` returns the table and its members to any script that imports the `Class.ModuleScript`.
-
-`Class.ModuleScript` objects return one value that can be any [data type](/reference/engine/datatypes) except for `nil`. You can execute arbitrary code in a `Class.ModuleScript`, but you only need to return what you need in other scripts.
 
 The following example module script returns a `getPickupBonus` function in the `PickupManager` table:
 
@@ -176,7 +174,7 @@ local Switch = require(ReplicatedStorage:WaitForChild("Switch"))
 
 Switch.Changed:Connect(function(newState)
 	print("Switch state is now", newState)
-end
+end)
 
 -- Test the flipping a few times
 task.wait(1)
@@ -229,8 +227,8 @@ function NetworkManagerServer.GetServerEventSignal(id)
 	local bindableEvent = Instance.new("BindableEvent")
 	-- Linking the new BindableEvent to the id
 	table.insert(networkSignalList, {
-		id = id;
-		bindableEvent = bindableEvent;
+		id = id,
+		bindableEvent = bindableEvent,
 	})
 	return bindableEvent.Event
 end
@@ -241,7 +239,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local remoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
 remoteEvent.OnServerEvent:Connect(function(player, id, ...)
 	-- Finding every bindable event that matches the id of the received remote event
-	for _, signal in next, networkSignalList do
+	for _, signal in networkSignalList do
 		if signal.id == id then
 			signal.bindableEvent:Fire(player, ...)
 		end

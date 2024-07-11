@@ -53,7 +53,7 @@ properties:
       user's device has an accelerometer.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
       local accelerometerEnabled = UserInputService.AccelerometerEnabled
       if accelerometerEnabled then
@@ -142,9 +142,9 @@ properties:
 
       local gyroIsEnabled = UserInputService.GyroscopeEnabled
       if gyroIsEnabled then
-          print("Gyroscope is enabled!")
+      	print("Gyroscope is enabled!")
       else
-          print("Gyroscope is not enabled!")
+      	print("Gyroscope is not enabled!")
       end
       ```
 
@@ -333,9 +333,9 @@ properties:
       local UserInputService = game:GetService("UserInputService")
 
       if UserInputService.MouseEnabled then
-          print("The user's device has an available mouse!")
+      	print("The user's device has an available mouse!")
       else
-          print("The user's device does not have an available mouse!")
+      	print("The user's device does not have an available mouse!")
       end
       ```
 
@@ -403,9 +403,9 @@ properties:
       For example, the code snippet below hides the mouse's icon.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
-      userInputService.MouseIconEnabled = false
+      UserInputService.MouseIconEnabled = false
       ```
 
       As `Class.UserInputService` is client-side only, this property can only be
@@ -529,9 +529,9 @@ properties:
       screen.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
-      if userInputService.TouchEnabled then
+      if UserInputService.TouchEnabled then
       	print("The user's device has a touchscreen!")
       else
       	print("The user's device does not have a touchscreen!")
@@ -601,13 +601,13 @@ properties:
       `Class.UserInputService.UserCFrameChanged` event.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
-      local isUsingVR = userInputService.VREnabled
+      local isUsingVR = UserInputService.VREnabled
       if isUsingVR then
-          print("User is using a VR headset!")
+      	print("User is using a VR headset!")
       else
-          print("User is not using a VR headset!")
+      	print("User is not using a VR headset!")
       end
       ```
 
@@ -697,8 +697,8 @@ methods:
       and stores them in a variable named _connectedGamepads_.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
-      local connectedGamepads = userInputService:GetConnectedGamepads()
+      local UserInputService = game:GetService("UserInputService")
+      local connectedGamepads = UserInputService:GetConnectedGamepads()
       ```
 
       To check if a specific gamepad is connected, use
@@ -1112,9 +1112,8 @@ methods:
       location of the player's `Class.Mouse` in pixels relative to the top left
       corner. This does not account for the `Class.GuiObject|GUI` inset.
 
-      If the location of the mouse pointer is offscreen or the players device
-      does not have a mouse, the value returned will be undetermined instead of
-      Vector2.
+      If the location of the mouse pointer is offscreen or the player's device
+      does not have a mouse, the returned value will be undetermined.
 
       As `Class.UserInputService` is client-side only, this function can only be
       used in a `Class.LocalScript`.
@@ -1590,8 +1589,8 @@ methods:
       headset.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
-      local cframe = userInputService:GetUserCFrame(Enum.UserCFrame.Head)
+      local UserInputService = game:GetService("UserInputService")
+      local cframe = UserInputService:GetUserCFrame(Enum.UserCFrame.Head)
 
       print(cframe)
       ```
@@ -1859,9 +1858,9 @@ methods:
       gamepad:
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
-      if userInputService:IsNavigationGamepad(UserInputType.Gamepad1) then
+      if UserInputService:IsNavigationGamepad(UserInputType.Gamepad1) then
       	print("Gamepad is a navigation gamepad!")
       else
       	print("Gamepad is not a navigation gamepad!")
@@ -2125,13 +2124,13 @@ events:
       gamepad is connected to the client.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
       local function GamepadConnected(gamepad)
       	print("Player has plugged controller: " .. tostring(gamepad))
       end)
 
-      userInputService.GamepadConnected:Connect(GamepadConnected)
+      UserInputService.GamepadConnected:Connect(GamepadConnected)
       ```
 
       If you want to see which devices are connected, you can use the
@@ -2177,13 +2176,13 @@ events:
       gamepad is disconnected from the client.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
       local function GamepadDisconnected(gamepad)
       	print("Player has unplugged controller: " .. tostring(gamepad))
       end)
 
-      userInputService.GamepadDisconnected:Connect(GamepadDisconnected)
+      UserInputService.GamepadDisconnected:Connect(GamepadDisconnected)
       ```
 
       As this event fires locally, it can only be used in a `Class.LocalScript`.
@@ -2360,7 +2359,7 @@ events:
       local UserInputService = game:GetService("UserInputService")
 
       function onJumpRequest()
-          print("Jump!")
+      	print("Jump!")
       end
 
       UserInputService.JumpRequest:Connect(onJumpRequest)
@@ -2547,7 +2546,7 @@ events:
       local UserInputService = game:GetService("UserInputService")
 
       function TouchEnded(touch, gameProcessedEvent)
-      	print("Touch ended at "..tostring(touch.Position))
+      	print("Touch ended at " .. tostring(touch.Position))
       end
 
       UserInputService.TouchEnded:Connect(TouchEnded)
@@ -2617,13 +2616,13 @@ events:
       _Cancel_, and _None_.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
       function TouchLongPress(TouchPositions, state, gameProcessedEvent)
-      	print("Long press event fired. State of press: "..tostring(state))
+      	print("Long press event fired. State of press: " .. tostring(state))
       end
 
-      userInputService.TouchLongPress:Connect(TouchLongPress)
+      UserInputService.TouchLongPress:Connect(TouchLongPress)
       ```
 
       To check if a user's device is TouchEnabled, and that touch events will
@@ -2768,10 +2767,10 @@ events:
       the user's touch when the user drags their finger on the screen.
 
       ```lua
-      local userInputService = game:GetService("UserInputService")
+      local UserInputService = game:GetService("UserInputService")
 
-      userInputService.TouchPan:Connect(function(touchPositions, totalTranslation, velocity, state, gameProcessedEvent)
-      	print("Speed of touch drag: "..tostring(velocity))
+      UserInputService.TouchPan:Connect(function(touchPositions, totalTranslation, velocity, state, gameProcessedEvent)
+      	print("Speed of touch drag: " .. tostring(velocity))
       end)
       ```
 
@@ -2842,13 +2841,13 @@ events:
       `Class.UserInputService.TouchEnabled|TouchEnabled` device.
 
       For instance, the snippet below prints how much the camera zoom scale has
-      changed since the beginning of the touch pinch,
+      changed since the beginning of the touch pinch.
 
       ```lua
       local UserInputService = game:GetService("UserInputService")
 
       UserInputService.TouchPinch:Connect(function(touchPositions, scale, velocity, state, gameProcessedEvent)
-      	print("Scale difference since beginning of pinch: "..tostring(scale))
+      	print("Scale difference since beginning of pinch: " .. tostring(scale))
       end)
       ```
 
@@ -2856,15 +2855,8 @@ events:
       fire, see `Class.UserInputService.TouchEnabled`.
 
       This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-
-      `Class.CoreScript|Core scripts` use similar logic to zoom the user's
-      camera when a user pinches their fingers on a mobile device. Best practice
-      for this event is to use it when creating a mobile camera system to
-      override the default core script.
+      example, inputs will not be captured when the window is minimized. As this
+      event only fires locally, it can only be used in a `Class.LocalScript`.
 
       See also:
 
@@ -2931,7 +2923,7 @@ events:
       local UserInputService = game:GetService("UserInputService")
 
       UserInputService.TouchRotate:Connect(function(touchPositions, rotation, velocity, state, gameProcessedEvent)
-      	print("Camera has rotated "..tostring(rotation).." degrees!")
+      	print("Camera has rotated " .. tostring(rotation) .. " degrees!")
       end)
       ```
 

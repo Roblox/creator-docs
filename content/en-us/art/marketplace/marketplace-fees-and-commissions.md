@@ -267,6 +267,10 @@ As a hypothetical case where limited hat items are 100 Robux per-unit, if 200 li
 
 If reselling is enabled by the original creator, [Premium](https://www.roblox.com/premium/membership) members can resell purchased Limited items. Every time a creator's item is resold, the creator benefits from a 10% original creator commission. After purchasing a Limited, there is up to a 30 day holding period when the item cannot be resold.
 
+<Alert severity = 'info'>
+Reselling community-created Limiteds is not available for accounts based in Japan.
+</Alert>
+
 **Selling Limiteds**: As a reminder, when selling anything on Roblox, the item creator, the seller, and Roblox receive a split of every transaction as follows:
 
 - 30% to creator

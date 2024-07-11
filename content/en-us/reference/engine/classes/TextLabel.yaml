@@ -228,6 +228,38 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: TextLabel.OpenTypeFeatures
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: true
+      can_save: true
+  - name: TextLabel.OpenTypeFeaturesError
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Text
+    serialization:
+      can_load: false
+      can_save: true
   - name: TextLabel.RichText
     summary: |
       Determines whether the TextLabel renders the `Class.TextLabel.Text` string
@@ -630,7 +662,7 @@ properties:
       - NotReplicated
       - Deprecated
     deprecation_message: |
-      This property is simply an alias for `Class.TextLabel|TextWrapped`. Used
+      This property is simply an alias for `Class.TextLabel|TextWrapped`. Use
       the past-tense version instead.
     security:
       read: None

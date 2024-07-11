@@ -86,7 +86,7 @@ while true do
 	local readSuccess, items, id = pcall(function()
 		return queue:ReadAsync(1, false, 30)
 	end)
-	if not readSuccess
+	if not readSuccess then
 		task.wait(1)
 	elseif #items > 0 then
 		print(items, id)

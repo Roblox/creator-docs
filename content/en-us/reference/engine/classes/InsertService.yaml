@@ -9,10 +9,11 @@ description: |
   `Class.InsertService:LoadAsset()|LoadAsset` function.
 
   To load an asset, it must be accessible by the creator of the experience
-  loading it, which can be either a user or group. Should an experience be uploaded by a different creator, the asset data would not be accessible. See the
-  `Class.InsertService:LoadAsset()|LoadAsset()` method for more details on this
-  security check.
-  Note that you should **not** use this service for loading API keys or other secrets. Use `Class.HttpService:GetSecret()` instead.
+  loading it, which can be either a user or group. Should an experience be
+  uploaded by a different creator, the asset data would not be accessible. See
+  the `Class.InsertService:LoadAsset()|LoadAsset()` method for more details on
+  this security check. Note that you should **not** use this service for loading
+  API keys or other secrets. Use `Class.HttpService:GetSecret()` instead.
 
   #### See Also
 
@@ -157,7 +158,7 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
   - name: InsertService:GetBaseCategories
     summary: ''
@@ -241,12 +242,8 @@ methods:
       }
       ```
 
-      Yikes! That quite confusing. Unfortunately this method was added in the
-      earlier days of Roblox, where easy to understand return-types weren't a
-      priority.
-
-      Thankfully, an example for iterating over this list has been provided at
-      the bottom of this page.
+      An example for iterating over this list has been provided at the bottom of
+      this page.
 
       Additionally, if you want to insert `Class.Model|Models` instead, you can
       use the `Class.InsertService:GetFreeModels()` function.
@@ -470,10 +467,10 @@ methods:
       local InsertService = game:GetService("InsertService")
       local success, model = pcall(InsertService.LoadAsset, InsertService, assetId)
       if success and model then
-         print("Model loaded successfully")
-         model.Parent = workspace
+      	print("Model loaded successfully")
+      	model.Parent = workspace
       else
-         print("Model failed to load!")
+      	print("Model failed to load!")
       end
       ```
 

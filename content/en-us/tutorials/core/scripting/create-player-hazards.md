@@ -58,15 +58,18 @@ To create the basic water hazard:
    local hazards = hazardsFolder:GetChildren()
 
    local function onHazardTouched(otherPart)
-     local character = otherPart.Parent
-     local player = Players:GetPlayerFromCharacter(character)
-     if player and character.Humanoid then
-       character.Humanoid.Health = 0
-     end
+   	local character = otherPart.Parent
+   	local player = Players:GetPlayerFromCharacter(character)
+   	if player then
+   		local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   		if humanoid then
+   			humanoid.Health = 0
+   		end
+   	end
    end
 
    for _, hazard in hazards do
-     hazard.Touched:Connect(onHazardTouched)
+   	hazard.Touched:Connect(onHazardTouched)
    end
    ```
 
@@ -95,34 +98,34 @@ bottom of the script:
 
 ```lua
 local function onPlayerAdded(player)
-  -- Reset player coins to 0
-  updatePlayerCoins(player, function(_)
-    return 0
-  end)
+	-- Reset player coins to 0
+	updatePlayerCoins(player, function(_)
+		return 0
+	end)
 
-  player.CharacterAdded:Connect(function(character)
-    -- WaitForChild would stop the player loop, so below should be done in a separate thread
-    task.spawn(function()
-      -- When a player dies
-      character:WaitForChild("Humanoid").Died:Connect(function()
-        -- Reset player coins to 0
-        updatePlayerCoins(player, function(_)
-          return 0
-        end)
-      end)
-    end)
-  end)
+	player.CharacterAdded:Connect(function(character)
+		-- WaitForChild would stop the player loop, so below should be done in a separate thread
+		task.spawn(function()
+			-- When a player dies
+			character:WaitForChild("Humanoid").Died:Connect(function()
+				-- Reset player coins to 0
+				updatePlayerCoins(player, function(_)
+					return 0
+				end)
+			end)
+		end)
+	end)
 end
 
 -- Initialize any players added before connecting to PlayerAdded event
 for _, player in Players:GetPlayers() do
-  onPlayerAdded(player)
+	onPlayerAdded(player)
 end
 
 local function onPlayerRemoved(player)
-  updatePlayerCoins(player, function(_)
-    return nil
-  end)
+	updatePlayerCoins(player, function(_)
+		return nil
+	end)
 end
 
 Players.PlayerAdded:Connect(onPlayerAdded)

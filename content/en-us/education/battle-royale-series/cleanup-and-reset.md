@@ -95,7 +95,7 @@ Use a module function to take information from the correct end state, whether th
 
    `FoundWinner`
 
-   - A variable for the winner using p`layerManager.getWinnerName()`.
+   - A variable for the winner using `playerManager.getWinnerName()`.
    - Update `statusToReturn` with a string announcing the winner.
 
    `TimerUp`
@@ -632,8 +632,7 @@ function PlayerManager.sendPlayersToMatch()
 		table.insert(activePlayers,whichPlayer)
 
 		-- Gets a spawn location and then removes it from the table so the next player gets the next spawn
-		local spawnLocation = availableSpawnPoints[1]
-		table.remove(availableSpawnPoints, 1)
+		local spawnLocation = table.remove(availableSpawnPoints, 1)
 		preparePlayer(whichPlayer, spawnLocation)
 	end
 

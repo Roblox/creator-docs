@@ -19,7 +19,7 @@ If you notice a problem in your experience or want to verify that it works as yo
 1. [Insert breakpoints](#inserting-breakpoints) on the lines of codes that you want to examine.
 2. In the [Script](../studio/script-tab.md) tab, click **Play** or **Run** in the test tab to start a playtest session, also known as a debugging session.
 
-   <img alt="Script tab playtest options" src="../assets/studio/general/Script-Tab-Playtest-Options.png" width="772" alt="Playtest options in Script tab" />
+   <img alt="Playtest options in Script tab." src="../assets/studio/general/Script-Tab-Playtest-Options.png" width="780" />
 
 3. When a script hits a breakpoint, the playtest session pauses. Step through the code. Inspect the **Watch**, **Call Stack**, and **Output** windows to help you diagnose and understand the problem.
 4. Insert additional breakpoints on lines of code that haven't executed yet to inspect additional data. [Disable](#disabling-breakpoints) or [delete](#deleting-breakpoints) breakpoints that you don't need anymore.
@@ -43,7 +43,7 @@ If you insert a breakpoint at a line in a script, the script pauses before it ex
 
 When the script pauses, execute the following code one line at a time by stepping through them with the buttons in the [Script](../studio/script-tab.md) tab. The buttons also appear in the top-left corner of the [Call Stack](#call-stack-window) window. As you step through the code, monitor how your experience changes as the current line executes.
 
-<img src="../assets/studio/general/Script-Tab-Debugging-Tools.png" width="888" alt="Debugging tools indicated in Script tab"/>
+<img src="../assets/studio/general/Script-Tab-Debugging-Tools.png" width="663" alt="Debugging tools indicated in Script tab"/>
 
 The following table summarizes the three ways to step through code. To continue executing your code after you hit a breakpoint, click **Resume** in the **Script** tab.
 

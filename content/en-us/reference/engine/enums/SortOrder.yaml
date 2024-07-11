@@ -13,8 +13,7 @@ items:
   - name: Name
     value: 0
     summary: |
-      Elements will be ordered by their `Class.Instance.Name` in alphabetical
-      order (e.g. Apple will be placed before Banana).
+      Elements are ordered by their `Class.Instance.Name` in alphabetical order.
     tags: []
     deprecation_message: ''
   - name: Custom
@@ -28,7 +27,7 @@ items:
   - name: LayoutOrder
     value: 2
     summary: |
-      Elements will be ordered by `Class.GuiObject.LayoutOrder` in ascending
-      order (e.g. 0 will be placed before 1).
+      Elements are ordered by `Class.GuiObject.LayoutOrder` in ascending order;
+      for example `0` will be placed before `1`.
     tags: []
     deprecation_message: ''

@@ -3,9 +3,9 @@ title: Texture Generator
 description: The Texture Generator tool quickly creates custom textures for meshes through text prompts.
 ---
 
-<Alert severity="success">
-This feature is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **AI‑Powered&nbsp;Texture&nbsp;Generator**.
-</Alert>
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
+<BetaAlert betaName="Texture Generator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 The **Texture Generator** tool is designed to quickly create custom textures for your meshes through text prompts. You can select a mesh or `Class.Model` made up of several meshes&sup1;, type in any prompt to preview results within a few seconds, then generate full textures.
 

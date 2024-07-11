@@ -7,8 +7,7 @@ description: ''
 code_samples: []
 inherits:
   - GuiBase
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: Path2D.Color3
@@ -75,21 +74,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: Path2D.Transparency
-    summary: ''
-    description: ''
-    code_samples: []
-    type: float
-    tags: []
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: true
-      can_save: true
   - name: Path2D.Visible
     summary: |
       Determines if the `Class.Path2D` path is rendered or not.
@@ -132,8 +116,12 @@ properties:
       can_save: true
 methods:
   - name: Path2D:GetBoundingRect
-    summary: ''
-    description: ''
+    summary: |
+      Returns the bounding size for the `Class.Path2D`.
+    description: |
+      Returns the `Datatype.Rect` bounding size for the `Class.Path2D`. This is
+      computed based on the control points and is not modifiable outside of
+      changing the control point data.
     code_samples: []
     parameters: []
     returns:
@@ -282,7 +270,7 @@ methods:
     description: |
       Inserts a new `Datatype.Path2DControlPoint` at a given index. Throws a
       warning if the index is out of bounds or if you're trying to add control
-      points past the limit of 250.
+      points past the limit of 50.
     code_samples: []
     parameters:
       - name: index
@@ -328,8 +316,8 @@ methods:
       points with new ones.
     description: |
       Sets all the control points to the specified array, replacing all existing
-      points with new ones. Throws a warning if there are more than 250 points
-      in the `controlPoints` array.
+      points with new ones. Throws a warning if there are more than 50 points in
+      the `controlPoints` array.
     code_samples: []
     parameters:
       - name: controlPoints

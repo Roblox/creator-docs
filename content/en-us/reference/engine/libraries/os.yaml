@@ -20,6 +20,19 @@ functions:
       to that returned by `Library.os.date()`, it will return the number of
       seconds since that time instead.
 
+      Returns the time using the device's local clock. Most operating systems
+      automatically sync their local time against online time servers, so this
+      should be within a few hundred milliseconds. However, users can easily
+      disable sync behavior and set the system time to anything they want; for
+      synchronized time between client and server, use
+      `Class.Workspace:GetServerTimeNow()` instead.
+
+      This function should be avoided in new work. Instead, use the
+      `Datatype.DateTime` API, which supports localized formatting.
+
+      When you need to precisely measure the time elapsed between two points in
+      time, like when testing performance, use `Library.os.clock()` instead.
+
       ```lua
       print(os.time())  --> 1586982482 (ran at approx. April 15th, 2020 at 1:28 PM PST)
       print(os.time{
@@ -69,6 +82,10 @@ functions:
     description: |
       Formats the given `formatString` with date/time information based on the
       given time, or if not provided, the value returned by `Library.os.time()`.
+
+      This function should be avoided in new work. Instead, use the
+      `Datatype.DateTime` API, which supports localized formatting.
+
       The following specifiers (based on the C function strftime) are supported:
 
       <table>
@@ -294,7 +311,7 @@ functions:
       local startTime = os.clock()
       -- Do something you want to measure the performance of:
       local a, b = 0, 1
-      for i = 1, 5000000 do
+      for _ = 1, 5000000 do
           a, b = b, a
       end
       -- Measure amount of time this took:

@@ -4,7 +4,7 @@ category:
 memory_category: Instances
 summary: ''
 description: |
-  See [Data Stores](../../../cloud-services/datastores.md).
+  See [Data Stores](../../../cloud-services/data-stores).
 code_samples:
 inherits:
   - GlobalDataStore
@@ -124,12 +124,14 @@ methods:
         type: int64
         default: 0
         summary: |
-          Date after which the versions should be listed.
+          Unix timestamp in milliseconds after which the versions should be
+          listed.
       - name: maxDate
         type: int64
         default: 0
         summary: |
-          Date up to which the versions should be listed.
+          Unix timestamp in milliseconds up to which the versions should be
+          listed.
       - name: pageSize
         type: int
         default: 0

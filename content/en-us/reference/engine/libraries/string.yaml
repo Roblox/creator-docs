@@ -46,12 +46,12 @@ functions:
   - name: string.char
     summary: |
       Receives zero or more integers and returns a string with length equal to
-      the number of arguments that has each character has the internal numerical
-      code equal to its corresponding argument.
+      the number of arguments, in which each character has the internal
+      numerical code equal to its corresponding argument.
     description: |
       Receives zero or more integers and returns a string with length equal to
-      the number of arguments that has each character has the internal numerical
-      code equal to its corresponding argument.
+      the number of arguments, in which each character has the internal
+      numerical code equal to its corresponding argument.
     parameters:
       - name: ...
         type: int
@@ -67,36 +67,72 @@ functions:
       Looks for the first match of pattern in the string `s` and returns the
       indices of `s` where the occurrence starts and ends.
     description: |
-      Looks for the first match of pattern in the string `s`. If it finds a
-      match, then it returns the indices of `s` where the occurrence starts and
-      ends; otherwise, it returns nil. A third, optional numerical argument init
-      specifies where to start the search; its default value is 1 and can be
-      negative. A value of true as a fourth, optional argument plain turns off
-      the pattern matching facilities, so the function does a plain "find
-      substring" operation, with no characters in the pattern being considered
-      "magic". Note that if _plain_ is given, then _init_ must be given as well.
+      Searches for the first occurrence of a pattern in a string and returns the
+      start and end indices of the match. If no match is found, it returns
+      `nil.` You can specify where to start the search using the optional `init`
+      parameter which defaults to 1 and can be negative. An optional `plain`
+      parameter turns off pattern matching, so the function performs a plain
+      substring search; note that if you use `plain`, you must also provide
+      `init.`
+
+      ```lua
+      -- Example 1: Basic usage
+      local s = "Hello, world!"
+      local pattern = "world"
+      local start_index, end_index = string.find(s, pattern)
+      print(start_index, end_index)  -- Output: 8 12
+      ```
+
+      ```lua
+      -- Example 2: Using init parameter
+      local s = "Hello, world! Hello, Roblox!"
+      local pattern = "Hello"
+      local start_index, end_index = string.find(s, pattern, 10)
+      print(start_index, end_index)  -- Output: 15 19
+      ```
+
+      ```lua
+      -- Example 3: Using plain parameter
+      local s = "Hello, world! (Hello)"
+      local pattern = "(Hello)"
+      local start_index, end_index = string.find(s, pattern, 1, true)
+      print(start_index, end_index)  -- Output: 14 20
+      ```
+
+      ```lua
+      -- Example 4: No Pattern found
+      local s = "Hello, world!"
+      local pattern = "Roblox"
+      local start_index, end_index = string.find(s, pattern)
+      print(start_index, end_index)  -- Output: nil
+      ```
     parameters:
       - name: s
         type: string
         default:
-        summary: ''
+        summary: |
+          The string to search within.
       - name: pattern
         type: string
         default:
-        summary: ''
+        summary: |
+          The pattern to search for in given string.
       - name: init
         type: number
         default: 1
-        summary: ''
+        summary: |
+          The starting index for the search.
       - name: plain
         type: bool
         default: false
         summary: ''
     returns:
       - type: number
-        summary: ''
+        summary: |
+          The starting index of the match.
       - type: number
-        summary: ''
+        summary: |
+          The ending index of the match.
     tags:
     code_samples:
   - name: string.format
@@ -392,7 +428,7 @@ functions:
       -- Replacement table
       string.gsub("I play Roblox.", "%w+", {I="Je", play="joue à"}) --> Je joue à Roblox. 3
       -- Replacement function
-      string.gsub("I have 2 cats.", "%d+", function (n) return tonumber(n) * 12 end) --> I have 24 cats. 1
+      string.gsub("I have 2 cats.", "%d+", function(n) return tonumber(n) * 12 end) --> I have 24 cats. 1
       -- Replace only twice
       string.gsub("aaa", "a", "b", 2) --> "bba", 2
       ```

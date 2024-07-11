@@ -50,6 +50,22 @@ properties:
     serialization:
       can_load: false
       can_save: false
+  - name: RunService.RunState
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RunState
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
 methods:
   - name: RunService:BindToRenderStep
     summary: |
@@ -94,9 +110,9 @@ methods:
         make a binding right before the default camera update, simply subtract 1
         from the camera priority level.
 
-      When using Enum.RenderPriority, remember to use **_InlineCode.Value_** at
-      the end of the desired enum. BindToRenderStep will not work if just the
-      enum on its own is used.
+      When using `Enum.RenderPriority`, remember to use `.Value` at the end of
+      the desired enum. `Class.RunService:BindToRenderStep()` will not work if
+      just the enum is used on its own.
 
       ```lua
       local RunService = game:GetService("RunService")

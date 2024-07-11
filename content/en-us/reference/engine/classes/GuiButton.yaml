@@ -123,7 +123,10 @@ events:
     summary: |
       Fires when the button is activated.
     description: |
-      Fires when the button is activated.
+      Fires when the button is activated. As this event doesn't fire on the
+      server, it should only be used in a `Class.LocalScript`, or in a
+      `Class.Script` with `Class.Script.RunContext|RunContext` of
+      `Enum.RunContext.Client`.
     code_samples:
     parameters:
       - name: inputObject
@@ -268,7 +271,7 @@ events:
     summary: |
       Fired when the mouse is in the right mouse down state on the GUI object.
     description: |
-      The MouseButton2Down event fires when the user presses their left
+      The MouseButton2Down event fires when the user presses their right
       `Class.Mouse` button down on the GUI object.
 
       This event is similar to `Class.GuiButton.MouseButton1Down`, which behaves

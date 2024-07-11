@@ -15,116 +15,174 @@ Once your experience begins tracking Funnel events, you'll unlock the Funnel pag
 
 To track funnel events, first identify the most important funnels in your experience and segment them into steps. Your onboarding flow is a great place to start, as this is where you may be losing most of your users.
 
-### Tracking Onboarding
+### Tracking One-Time Funnels
 
-The following sample takes an existing reference project as its context. [Plant](../../resources/plant-reference-project.md) is a tycoon experience where users purchase seeds, grow plants, and sell their produce. When users join the experience, they spawn in their farm. They must then plant a seed, then water the seed, then harvest the resulting plant. This sample uses `Class.AnalyticsService` to track some of these initial steps in order, starting from 1 and increasing by 1 each step:
+A one-time funnel monitors conversion events that only occur once per user.
+
+A common example is an **onboarding funnel** which is critical to understand how to improve your experience's new user retention and session time. The following example is an onboarding funnel for [Plant](https://create.roblox.com/docs/resources/plant-reference-project), a tycoon experience where new users enter a farm, plant seed, water plant, and more in sequential order:
 
 ```lua title="Tracking Onboarding Steps in Plant"
 local AnalyticsService = game:GetService("AnalyticsService")
-local Players = game:GetService("Players")
-local currentPlayer = Players.LocalPlayer
 
--- log the first step of the FTUE
+-- Log the first step of the FTUE
 AnalyticsService:LogOnboardingFunnelStepEvent(
-    currentPlayer,
-    1, -- step number
-    "In Farm" -- step name
+    player,
+    1, -- Step number
+    "In Farm" -- Step name
 )
 
--- log the second step
+-- Log the second step
 AnalyticsService:LogOnboardingFunnelStepEvent(
-    currentPlayer,
-    2, -- step number
-    "Plant Seed" -- step name
+    player,
+    2, -- Step number
+    "Plant Seed" -- Step name
 )
 ```
 
-The following image shows the kind of funnel that would result from this tracking. The largest drop-off in the onboarding funnel is "Plant Seed".
+### Tracking Recurring Funnels
 
-<img src="../../assets/analytics/event-types/Plant-Game-Funnel.png" alt="Funnels chart for Plant experience showing a 70% drop-off between In Farm, step 1, and Plant Seed, step 2."/>
+A recurring funnel monitors conversion events that occur multiple times per user.
 
-Based on this data, you could add contextual indicators to better direct users to plant seeds when they're getting started.
+A common example is a **shop funnel** which is critical to understand how to improve your experience's payer conversion, ARPPU, and revenue. The following example is a shop funnel where users open store, view item, add item to cart, and more.
 
-<img src="../../assets/analytics/event-types/Plant-Game-Prompts.jpg" alt="In-experience view of Plant experience showing prompts to plant seeds above the flowerpots."/>
-
-### Tracking Progression
-
-Many experience genres involve challenges that users can succeed or fail at, with levels or milestones to progress through. The following sample logs a variety of progression events using different methods for starting, completing and failing the steps.
-
-```lua title="Tracking Progression Steps"
-local AnalyticsService = game:GetService("AnalyticsService")
-local Players = game:GetService("Players")
-local currentPlayer = Players.LocalPlayer
-
--- player starts level 1
-AnalyticsService:LogProgressionStartEvent(
-    currentPlayer,
-    "LevelAttempts", -- progressionPathName to connect these attempt types
-    1, -- level number
-    "World-1-Level-1" -- level name
-)
-
--- player beats level 1
-AnalyticsService:LogProgressionCompleteEvent(
-    currentPlayer,
-    "LevelAttempts", -- progressionPathName to connect these attempt types
-    1, -- level number
-    "World-1-Level-1" -- level name
-)
-
--- player starts level 2
-AnalyticsService:LogProgressionStartEvent(
-    currentPlayer,
-    "LevelAttempts", -- progressionPathName to connect these attempt types
-    2, -- level number
-    "World-1-Level-2" -- level name
-)
-
--- player fails level 2
-AnalyticsService:LogProgressionFailEvent(
-    currentPlayer,
-    "LevelAttempts", -- progressionPathName to connect these attempt types
-    2, -- level number
-    "World-1-Level-2" -- level name
-)
-```
-
-### Tracking Shopping
-
-If your experience contains a shop, you can use events to track each user's progress through the funnel of purchasing an item and identify sticking points in your user experience. The following sample tracks some basic events for each user beginning the process to buy an item from an "armory" shop. Note the `funnelSessionId` used to distinguish between different sessions of the same user opening the shop.
+Use `funnelSessionId` to distinguish between different sessions of the same user in a recurring funnel, such as opening the shop multiple times in a single session.
 
 ```lua title="Tracking Shop Steps"
 local AnalyticsService = game:GetService("AnalyticsService")
 local HttpService = game:GetService("HttpService")
-local Players = game:GetService("Players")
-local currentPlayer = Players.LocalPlayer
 
 funnelSessionId = HttpService:GenerateGUID()
 
--- log when the user opens the store
+-- Log when the user opens the store
 AnalyticsService:LogFunnelStepEvent(
-    currentPlayer,
-    "ArmoryCheckout", -- funnel name used to group steps together
-    funnelSessionId, -- funnel session id for this unique checkout session
-    1, -- step number
-    "Opened Store" -- step name
+    player,
+    "ArmoryCheckout", -- Funnel name used to group steps together
+    funnelSessionId, -- Funnel session id for this unique checkout session
+    1, -- Step number
+    "Opened Store" -- Step name
 )
 
--- log when the user views an item
+-- Log when the user views an item
 AnalyticsService:LogFunnelStepEvent(
-    currentPlayer,
-    "ArmoryCheckout", -- funnel name used to group steps together
-    funnelSessionId, -- funnel session id for this unique checkout session
-    2, -- step number
-    "Viewed Item" -- step name
+    player,
+    "ArmoryCheckout", -- Funnel name used to group steps together
+    funnelSessionId, -- Funnel session id for this unique checkout session
+    2, -- Step number
+    "Viewed Item" -- Step name
 )
 
--- log when the user views adds to cart
+-- Log when the user views adds to cart
 AnalyticsService:LogFunnelStepEvent(
-    currentPlayer,
-    "ArmoryCheckout", -- funnel name used to group steps together
-    funnelSessionId, -- funnel session id for this unique checkout session
-    3, -- step number
-    "Added to Cart" -- step name
+    player,
+    "ArmoryCheckout", -- Funnel name used to group steps together
+    funnelSessionId, -- Funnel session id for this unique checkout session
+    3, -- Step number
+    "Added to Cart" -- Step name
 )
 ```
+
+### Implementing funnelSessionId
+
+When implementing funnels, a `funnelSessionId` can help you track your events but may not be required in every instance. Use the following guidelines:
+
+- **One-Time Funnels** - You don't need to use `funnelSessionId` for one-time funnels because they only occur once per user.
+- **Store Funnels** - Use `funnelSessionId` to distinguish between different sessions of the same user in a recurring funnel, such as opening the shop multiple times in a single session in the [earlier example](#tracking-recurring-funnels). In cases like this, where the player may open the shop multiple times in a single session, it is recommended to use a GUID as the `funnelSessionId`.
+- **Item Upgrades** - Use `funnelSessionId` to distinguish between different item upgrade paths, generally over a longer time period than a single play session. Rather than use a GUID as in the store funnel case, you can often build a unique key based on the item being upgraded, for example: `<playerId>-<itemId>`.
+
+## Initial Step
+
+Funnels start when the first step is logged. If you want to start a funnel immediately on player join, you'll need to log the first step on the `PlayerAdded` event.
+
+```lua title="Logging the first step in the PlayerAdded event"
+local AnalyticsService = game:GetService("AnalyticsService")
+local Players = game:GetService("Players")
+
+Players.PlayerAdded:Connect(function(player)
+    AnalyticsService:LogOnboardingFunnelStepEvent(
+        player,
+        1, -- Step number
+        "Player Joined" -- Step name
+    )
+end)
+```
+
+## Repeated Steps
+
+If a user repeats a step in a funnel, the funnel only considers the first instance of the step. For example, if a user logs step 2 of a funnel twice, the funnel only counts the first instance of step 2.
+
+## Skipping Steps
+
+If for some reason you skip a step in funnel, the earlier steps automatically complete.
+
+For example, if you have a funnel with steps 1, 2, and 3. If you log step 3 without logging steps 1 or 2, the funnel will consider steps 1 and 2 as completed.
+
+## Using Funnel Filters
+
+Roblox provides filters to help you analyze your funnel data. These include player data, device data, and you can send custom data as well. In some cases, a player's status may change during the funnel, such as when the player switches devices from mobile to desktop.
+
+To avoid double-counting funnels, filters always **only apply to the first step** of the funnel. This means that if a player switches devices during the funnel, the funnel will only be attributed to their device at the time they enter the funnel.
+
+Similarly, funnels display by cohort, meaning that if a player enters the funnel on 6/19, the funnel will be attributed to the 6/19 cohort even if they complete the funnel on 6/20.
+
+## Modifying Funnels
+
+After you make an update to your funnel steps, it's important to set the correct date range to see the latest funnel. If the current date is 6/21 and you updated step 2 of your onboarding funnel on 6/14, you should set the date range to 6/14 – 6/21 to view the latest funnel.
+
+If you select a date range that includes a funnel step update, a warning displays on the relevant step:
+
+<img src="../../assets/analytics/event-types/Plant-Game-Warning.png" alt="A warning displays on the funnel dashboard indicating a name change within the selected date range."/>
+
+## Protecting your Funnels From Exploiters
+
+In order to keep your data clean, it is important to add some level of data validation in your server code to prevent exploiters from sending invalid data to your analytics service.
+
+For example, if you have an Onboarding funnel with 3 steps, you can use a `RemoteEvent` for the client to notify the server when the player has completed each step and add a server check to ensure that the step number is valid before logging the event:
+
+```lua title="Client-side event code"
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local onboardingEvent = ReplicatedStorage:WaitForChild("OnboardingEvent")
+
+local function fireOnboardingEvent(step: number)
+	onboardingEvent:FireServer({ step = step })
+end
+
+fireOnboardingEvent(1)
+fireOnboardingEvent(2)
+fireOnboardingEvent(10) -- invalid step
+```
+
+```lua title="Server-side event code"
+local AnalyticsService = game:GetService("AnalyticsService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local onboardingEvent = ReplicatedStorage:WaitForChild("OnboardingEvent")
+
+local maxStep = 3
+
+local function onPlayerEventFired(player: Player, args: { step: number })
+	local step = args.step
+	if(step > maxStep) then
+		warn(`Invalid tutorial step {step} received from client.`)
+		return
+	end
+
+	print(`{player.Name} completed step: {step}`)
+	AnalyticsService:LogOnboardingFunnelStepEvent(player, step)
+end
+
+onboardingEvent.OnServerEvent:Connect(onPlayerEventFired)
+```
+
+## Using Funnels to Grow Your Experience
+
+One of the most important funnels to track is onboarding because many experiences struggle with new user retention and engagement.
+
+In the onboarding funnel for [Plant](https://create.roblox.com/docs/resources/plant-reference-project) below, the largest drop-off is step 2 ("Plant Seed").
+
+<img src="../../assets/analytics/event-types/Plant-Game-Funnel.png" alt="Funnels chart for Plant experience showing a 70% drop-off between In Farm, step 1, and Plant Seed, step 2."/>
+
+Based on this data, you could:
+
+- Add contextual indicators to better direct users to plant seeds when they're getting started.
+- Design a new user experience that requires users to plant seed and grow a successful plant before exploring the rest of the experience. You can improve this event creating [positive feedback elements](../../production/game-design/onboarding-techniques.md#facilitate-feedback) or other game design techniques.
+
+<img src="../../assets/analytics/event-types/Plant-Game-Prompts.png" alt="In-experience view of Plant experience showing prompts to plant seeds above the flowerpots."/>

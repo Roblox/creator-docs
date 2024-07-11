@@ -36,7 +36,7 @@ See the following resources to learn the basics and intermediate steps required 
 
 ## Rigs and Bones
 
-The **rig**, or bone structure, within a rigged mesh creates additional posable points for the 3D model in Studio. By rotating or moving the bones of a mesh, the parts of the mesh assigned to those bones can move independently from the rest of the mesh. The assignment of influence between meshes and bones, such as a **LowerLeftArm** bone driving the movement of the **LowerLeftArm** geometry, is set in a third-party application like Blender or Maya. When imported into Studio, Roblox saves this influence assignment data to the `Class.MeshPart` asset data.
+The **rig**, or bone structure, within a rigged mesh creates additional poseable points for the 3D model in Studio. By rotating or moving the bones of a mesh, the parts of the mesh assigned to those bones can move independently from the rest of the mesh. The assignment of influence between meshes and bones, such as a **LowerLeftArm** bone driving the movement of the **LowerLeftArm** geometry, is set in a third-party application like Blender or Maya. When imported into Studio, Roblox saves this influence assignment data to the `Class.MeshPart` asset data.
 
 Once you successfully [import](../../parts/meshes.md#importing-meshes) a rigged mesh model into Studio, Studio represents this rig structure with `Class.Bone` instances that you can then pose and animate. You can view bones in Studio by toggling **Constraint Details** in the Model tab, or when you are using the [Animation Editor](../../animation/editor.md).
 

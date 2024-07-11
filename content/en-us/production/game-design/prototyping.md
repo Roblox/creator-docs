@@ -34,7 +34,7 @@ description: Prototyping
 The benefits of paper prototyping are:
 
 - **Iteration speed:** It takes minutes to begin paper prototyping, opposed to days or weeks to create a virtual environment. As a result iteration speed is greatly increased, allowing you to rapidly explore potential solutions and ideas by simply drawing, erasing, or printing more paper.
-- **Broader system context:** The abstraction of paper protoyping enables you to interact with more systems in your experience without getting weighed down by practical implementation. This freedom to explore system interaction ideas allows you to think of solutions from a design perspective, that you can then test once the prototyping stage is over. Even if it proves to be out of scope or difficult to implement, the initial idea gleamed from the broader system context provided by paper prototyping enables you to discover new creative solutions you might not otherwise have considered.
+- **Broader system context:** The abstraction of paper prototyping enables you to interact with more systems in your experience without getting weighed down by practical implementation. This freedom to explore system interaction ideas allows you to think of solutions from a design perspective, that you can then test once the prototyping stage is over. Even if it proves to be out of scope or difficult to implement, the initial idea gleamed from the broader system context provided by paper prototyping enables you to discover new creative solutions you might not otherwise have considered.
 - **UI/UX Design:** The ease of drawing on paper makes paper prototyping one of the best mediums for exploring optimal UI and UX designs for your experience.
     <figure>
       <img src="../../assets/game-design/prototyping/prototyping-2.png" alt="A lightskinned hand holds a small paper cutout of a piece of pepperoni over a piece of paper with a UI prototype of a pizza building system. The piece of paper is on a dark brown table." width="70%"/>
@@ -44,7 +44,7 @@ The benefits of paper prototyping are:
 Despite its benefits, prototyping on paper has drawbacks due to the difference in medium. The detriments of paper prototyping are:
 
 - **Not reusable:** None of the prototyping done with paper prototyping can be used literally in the end result. Everything must be recreated virtually.
-- **Simulation limiations:** Simulating unique mechanics and interactions are limited or impossible to create on paper or using physical assets.
+- **Simulation limitations:** Simulating unique mechanics and interactions are limited or impossible to create on paper or using physical assets.
 - **False positives:** Some activities might prove more fun and engaging using paper and physical assets than doing them on a phone, computer, or console.
 
 ## Studio Prototyping

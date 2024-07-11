@@ -209,7 +209,7 @@ The `ipairs()` function returns an iterator that iterates through numerical indi
 ```lua
 local array = {"a", "b", "c", "d", "e"}
 for index, value in ipairs(array) do
-    print(index, value)
+	print(index, value)
 end
 
 --[[ Resulting output:
@@ -227,15 +227,15 @@ The `pairs()` function returns an iterator that iterates through all indices (in
 
 ```lua
 local dictionary = {
-	[1] = "a";
-	["Hello"]="b";
-	[5] = "c";
-[true] = "d";
-	["World"] = "f";
-[false] = "e";
+	[1] = "a",
+	["Hello"] = "b",
+	[5] = "c",
+	[true] = "d",
+	["World"] = "f",
+	[false] = "e"
 }
 for key, value in pairs(dictionary) do
-    print(key, value)
+	print(key, value)
 end
 
 --[[ Resulting output:

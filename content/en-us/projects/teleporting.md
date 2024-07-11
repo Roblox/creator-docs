@@ -84,7 +84,7 @@ teleportOptions.ShouldReserveServer = true
 
 Teleporting a user between places discards any local data associated with that user. You can use the following approaches to handle data persistence between places.
 
-- If your experience utilizes **secure** user data like in-experience currency or inventory, implement [data stores](../cloud-services/datastores.md) or [memory stores](../cloud-services/memory-stores/index.md) to maintain data from place to place.
+- If your experience utilizes **secure** user data like in-experience currency or inventory, implement [data stores](../cloud-services/data-stores) or [memory stores](../cloud-services/memory-stores/index.md) to maintain data from place to place.
 
 - To send basic **non-secure** data from place to place, call `Class.TeleportOptions:SetTeleportData()` before passing it to `Class.TeleportService:TeleportAsync()|TeleportAsync()`.
 
@@ -94,7 +94,7 @@ Don't pass secure data using `Class.TeleportOptions:SetTeleportData()` because i
 
 ```lua
 local teleportData = {
-    randomNumber = RNG:NextInteger(1, 100);
+    randomNumber = RNG:NextInteger(1, 100),
 }
 
 local teleportOptions = Instance.new("TeleportOptions")

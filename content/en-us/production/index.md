@@ -20,7 +20,7 @@ and keep them engaged over time. You need to consider:
 
 ## Publishing
 
-When an experience is ready to play, you can [publish](../production/publishing/index.md) your
+When an experience is ready to play, you can [publish](../production/publishing/publishing-experiences-and-places.md) your
 experience on any devices you choose. An experience can be published **privately** (default) in order to test and save to the cloud, or **publicly** so that it can be discovered and played by other users.
 
 ## Monetization
@@ -49,17 +49,11 @@ for translation in the experience's **Localization** page, where all localizatio
 
 ## Promotion
 
-There are two common ways to [promote](../production/promotion/index.md) a Roblox experience
-within the Roblox ecosystem.
+You can promote your experience within the Roblox Ecosystem in multiple ways:
 
-- The [Advertising System](../production/promotion/user-advertisements.md) lets you spend
-  Robux to create different types of adverts which will be displayed on the
-  Roblox website for players to click on.
-
-- The [Ads Manager](../production/promotion/ads-manager.md#sponsored-experiences) displays your
-  experience on the Roblox experience page in dedicated sponsor slots alongside
-  some of the most popular experiences on the platform. The more Robux spent on
-  adverts and sponsors, the more impressions and clicks they will receive.
+- Use the [Ads Manager](../production/promotion/ads-manager.md#sponsored-experiences) to create ad campaigns using image, video, or portal ads within existing experiences.
+- Roblox's [Events Platform](./promotion/events-platform.md) allows you to set up time-based events for your experience that users can join and discover through an events detail page.
+- You can use [Audience Engagement](./promotion/audience-engagement.md) tools and additional features, such as [experience notifications](../cloud-services/experience-notifications.md), to promote your content to a wider audience and keep in touch with your existing user-base.
 
 ## Analytics
 

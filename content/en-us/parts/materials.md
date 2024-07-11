@@ -3,6 +3,8 @@ title: Materials
 description: Materials determine objects' visual appearance and physical properties.
 ---
 
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 Roblox's materials are unlike materials on other platforms, in that their visual appearance **and** their [physical properties](#physical-properties) reflect those of materials in the real world. For example, concrete is heavier than plastic and sinks faster in water. When you set the material of a part or terrain, Roblox simulates its physical material properties to make this behavior just work.
 
 The Roblox engine offers a range of [base materials](#base-materials) suitable to build many experiences, including various categories of metal, rock, and organic materials.
@@ -15,9 +17,7 @@ You can quickly apply materials to [parts](../parts/index.md) through the [Mater
 
 ### Material Widget
 
-<Alert severity="success">
-The **Material** widget is currently in beta. To use it, go to **File**&nbsp;&rarr; **Beta&nbsp;Features** and enable **Material&nbsp;Picker**.
-</Alert>
+<BetaAlert betaName="Material Picker" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 The **Material** widget is accessible from either the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tabs.
 
@@ -239,11 +239,11 @@ When you apply a custom material to a part, the part's `Class.Part.MaterialVaria
 
 When you reuse custom materials in models and packages, each `MaterialVariant` instance must be in `Class.MaterialService` for it to work.
 
-- If you distribute a model to the Creator Store with a custom material, include the `Class.MaterialVariant` instance in the model. For more information about distributing models to the Creator Store, see [Distributing Assets](../production/publishing/publishing-assets.md).
-- If you insert a model from the Creator Store, look for any `Class.MaterialVariant` instances and copy them to `Class.MaterialService`. For more information about importing models from the Creator Store, see [Creator Store](../production/publishing/creator-store.md).
+- If you distribute a model to the Creator Store with a custom material, include the `Class.MaterialVariant` instance in the model. For more information about distributing models to the Creator Store, see [Distributing Assets](../production/creator-store.md).
+- If you insert a model from the Creator Store, look for any `Class.MaterialVariant` instances and copy them to `Class.MaterialService`. For more information about importing models from the Creator Store, see [Creator Store](../production/creator-store.md).
 - If you want to use custom materials with packages, put the package in `Class.MaterialService`. For more information on packages, see [Packages](../projects/assets/packages.md).
 
-The [Creator Store](../production/publishing/creator-store.md) has a category called Materials for "material packs", models that contain only `Class.MaterialVariant`, `Class.TerrainDetail`, `Class.Folder`, and `Class.Model` instances. The Materials category is a way to promote and discover custom materials by other creators.
+The [Creator Store](../production/creator-store.md) has a category called Materials for "material packs", models that contain only `Class.MaterialVariant`, `Class.TerrainDetail`, `Class.Folder`, and `Class.Model` instances. The Materials category is a way to promote and discover custom materials by other creators.
 
 <Alert severity="success">
 To make the most of adaptive materials, use a consistent naming convention for your `Class.MaterialVariant` instances. For example, you can use `PascalCase` with the base material of the custom material as the first word, as in `GrassWet`, `GrassDry`, and `GrassBurned`.
@@ -257,9 +257,7 @@ Shaders generate the look and feel of materials. The base material shaders work 
 
 <Tabs>
 <TabItem label="Current Base">
-<Alert severity="success">
-Materials marked with <Chip label="beta" size="small" variant="outlined" /> are only available once you enable **New&nbsp;Base&nbsp;Materials** from Studio's beta settings and restart Studio.
-</Alert>
+<BetaAlert betaName="New Base Materials" leadIn="Materials marked as beta are only available once you enable " leadOut="." components={props.components} />
 
 <table size="small">
 <thead>
@@ -1233,9 +1231,7 @@ The base materials were upgraded in 2022 to support custom materials. New places
 
 The following table lists the default RGB values for each base material. For information on how to color parts and terrain, see [Parts](../parts/index.md#coloring-parts) and [Environmental Terrain](../parts/terrain.md#custom-terrain-colors).
 
-<Alert severity="success">
-Materials marked with <Chip label="beta" size="small" variant="outlined" /> are only available once you enable **New&nbsp;Base&nbsp;Materials** from Studio's beta settings and restart Studio.
-</Alert>
+<BetaAlert betaName="New Base Materials" leadIn="Materials marked as beta are only available once you enable " leadOut="." components={props.components} />
 
 <table size="small">
 <thead>
@@ -1468,9 +1464,7 @@ Materials marked with <Chip label="beta" size="small" variant="outlined" /> are 
 
 The following table lists each material's default physical properties as detailed in the `Datatype.PhysicalProperties` reference. For information on customizing physical properties, see [Physical Properties](#physical-properties).
 
-<Alert severity="success">
-Materials marked with <Chip label="beta" size="small" variant="outlined" /> are only available once you enable **New&nbsp;Base&nbsp;Materials** from Studio's beta settings and restart Studio.
-</Alert>
+<BetaAlert betaName="New Base Materials" leadIn="Materials marked as beta are only available once you enable " leadOut="." components={props.components} />
 
 <table size="small">
   <thead>

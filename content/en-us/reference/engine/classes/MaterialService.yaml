@@ -848,6 +848,18 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: MaterialService:GetIsMaterialActionAsToolEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: MaterialService:GetMaterialVariant
     summary: |
       Get the effective MaterialVariant reference given a name and Material.
@@ -899,19 +911,11 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: MaterialService:SetCurrentMaterial
+  - name: MaterialService:ToggleMaterialFillToolEnabled
     summary: ''
     description: ''
     code_samples: []
-    parameters:
-      - name: baseMaterial
-        type: Material
-        default:
-        summary: ''
-      - name: materialVariant
-        type: string
-        default:
-        summary: ''
+    parameters: []
     returns:
       - type: void
         summary: ''
@@ -919,5 +923,18 @@ methods:
     deprecation_message: ''
     security: RobloxScriptSecurity
     thread_safety: Unsafe
-events: []
+events:
+  - name: MaterialService.MaterialFillToolEnabledChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: shouldEnable
+        type: bool
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 callbacks: []

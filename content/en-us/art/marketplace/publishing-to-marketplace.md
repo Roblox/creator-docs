@@ -132,7 +132,7 @@ You can't change or modify the asset or thumbnail after upload. If you discover 
 If a Roblox update breaks an existing asset, [submit a help ticket](https://www.roblox.com/support) with a link to the broken item and an `.rbxm` of the correct version.
 </Alert>
 
-Before publishing your asset, it's important to consider if you want to sell your asset as a Limited or Non-Limited item. Limited
+Before publishing your asset, it's important to consider if you want to sell your asset as a Limited or Non-Limited item.
 
 ### Metadata
 
@@ -172,7 +172,9 @@ In **Item Attributes** you can set the **Availability** of your asset as a **Non
 </tbody>
 </table>
 
-Before selecting either option, familiarize yourself with the various [fee and commission structures](../../art/marketplace/marketplace-fees-and-commissions.md) involved with different types of items.
+<Alert severity ='warning'>
+Before selecting either option, familiarize yourself with the various [fee and commission structures](../../art/marketplace/marketplace-fees-and-commissions.md) involved with different types of items and any applicable country policy limitations.
+</Alert>
 
 <img src="../../assets/publishing/marketplace/Item-Attributes.png" alt="Item Attribute settings." width="80%" />
 
@@ -184,6 +186,7 @@ The following item attributes only apply if you set your asset as a Limited item
   - After publishing, you can only increase, but not decrease, this value.
 - **Free Item** - Sets the selling price of this item to zero. Free Limiteds utilize a [per-unit fee structure](../../art/marketplace/marketplace-fees-and-commissions.md#per-unit-fee).
 - **Resellable** - If enabled, users can resell your limited item. If resold, you are eligible for [resell commissions](../../art/marketplace/marketplace-fees-and-commissions.md#reselling). You can change the **Resellable status** on a published item. If enabled on an item, it can not be disabled in the future.
+  - The resellable attribute is not available for accounts based in Japan.
 
 ### Pricing
 
@@ -257,3 +260,7 @@ When first publishing your asset, select the **Publish Item** button at the end 
 You can disable the sale of a published asset by disabling the **On Sale** at the top of the Manage Item page.
 
 After enabling an item for sale, you can take the item off-sale by disabling the toggle. A publishing fee is not required to re-enable.
+
+<Alert severity = 'warning'>
+To permanently archive your asset, see [Archiving Assets](./moderation.md#archiving-assets).
+</Alert>

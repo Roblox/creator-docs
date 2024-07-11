@@ -58,6 +58,8 @@ Rather than using standard metric units for length and mass, Roblox uses notiona
 
 ## Location Matters
 
+Roblox experiences are multiplayer by default, so Roblox Studio includes many different storage locations with specific behaviors. For example, a script might run when you put it in `Class.ReplicatedStorage`, but not when you put it into `Class.StarterPlayerScripts`. For more information, see [Client-Server Runtime](projects/client-server) and [Object Organization](projects/data-model#object-organization).
+
 <ScriptLocations components={props.components} />
 
 ## Scripting
@@ -130,6 +132,6 @@ Similar to Unity tools, Roblox Studio supports [plugins](studio/plugins.md), whi
 | Terrain Inspector | Terrain Editor | |
 | Spawn point | `Class.SpawnLocation` | |
 | Console | Output | |
-| Asset Store | [Creator Store](production/publishing/creator-store.md) | |
+| Asset Store | [Creator Store](production/creator-store.md) | |
 | Overlays | Menu bar | |
 | Tool | [Plugin](studio/plugins.md) | |

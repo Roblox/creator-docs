@@ -284,22 +284,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: Workspace.EditorLiveScripting
-    summary: ''
-    description: ''
-    code_samples: []
-    type: EditorLiveScripting
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Scripting
-    serialization:
-      can_load: true
-      can_save: true
   - name: Workspace.FallenPartsDestroyHeight
     summary: |
       Determines the height at which falling `Class.BasePart|BaseParts` and
@@ -513,6 +497,46 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Streaming
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Workspace.MoverConstraintRootBehavior
+    summary: |
+      Controls the logic used to select the assembly root part when using any of
+      the mover constraints.
+    description: |
+      Controls the logic used to select the assembly root part for mechanisms
+      that use any of the following constraints:
+
+      - `Class.AlignOrientation`
+      - `Class.AlignPosition`
+      - `Class.AngularVelocity`
+      - `Class.LinearVelocity`
+
+      When this property is set to
+      `Enum.MoverConstraintRootBehaviorMode.Enabled`, these constraints will be
+      ignored when selecting the assembly root part if the constraint does not
+      transmit forces between two parts (some examples being
+      `Class.AngularVelocity.ReactionTorqueEnabled` set to `false`,
+      `Class.AlignPosition.ReactionForceEnabled` set to `false`, or
+      `Class.AlignOrientation.Mode` set to
+      `Enum.OrientationAlignmentMode.OneAttachment`).
+
+      When this property is set to
+      `Enum.MoverConstraintRootBehaviorMode.Disabled`, these constraints may be
+      erroneously considered when selecting the assembly root part, leading to
+      inconsistent network ownership and delays when adding these constraints to
+      a mechanism.
+    code_samples: []
+    type: MoverConstraintRootBehaviorMode
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
     serialization:
       can_load: true
       can_save: true
@@ -1037,6 +1061,9 @@ methods:
       precision. The time is adjusted for drift and smoothed monotonically (it
       is guaranteed to be non-decreasing). The server clock progresses no faster
       than 1.006&times; speed and no slower than 0.994&times; speed.
+
+      Returns a Unix timestamp that can be used with `Library.os|os.date()` or
+      with `Datatype.DateTime.fromUnixTimestamp()`.
 
       This function is useful for creating synchronized experiences, as it has
       three properties necessary for doing so: it's a real-world time clock,

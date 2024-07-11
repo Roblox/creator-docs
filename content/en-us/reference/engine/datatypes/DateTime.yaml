@@ -409,7 +409,17 @@ deprecation_message: ''
 constructors:
   - name: DateTime.now
     summary: Returns a `Datatype.DateTime` representing the current moment in time.
-    description: Returns a new `Datatype.DateTime` representing the current moment in time.
+    description: |
+      Returns a new `Datatype.DateTime` representing the current moment in
+      time, using the device's local clock. Most operating systems automatically
+      sync their local time against online time servers, so this should be
+      within a few hundred milliseconds. However, users can easily disable
+      sync behavior and set the system time to anything they want; for
+      synchronized time between client and server, use
+      `Class.Workspace:GetServerTimeNow()` instead.
+
+      When you need to precisely measure the time elapsed between two points in
+      time, like when testing performance, use `Library.os.clock()` instead.
     parameters:
     code_samples: []
     tags: []
@@ -419,6 +429,9 @@ constructors:
     description: |-
       Returns a new `Datatype.DateTime` object from the given Unix timestamp, or
       the number of **seconds** since January 1st, 1970 at 00:00 (UTC).
+
+      This function only has granularity to 1 second. To reprsent sub-second
+      timestamps, use `Datatype.DateTime.fromUnixTimestampMillis()` instead.
     parameters:
       - name: unixTimestamp
         type: number

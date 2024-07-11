@@ -24,7 +24,7 @@ You can create your own textures in third-party texture creation tools and follo
 
 To create credible waterfalls, it's important to reference real-world natural features in the design process because it allows you to break down the subject matter into individual components with distinct visual and behavioral characteristics. For example, the sample [Waterfall Island](https://www.roblox.com/games/16454663889/Use-Case-Tutorials-Volcano-Island) experience references Snoqualmie Falls in Washington state to inform all texture and VFX design decisions relating to the waterfall and its surrounding terrain.
 
-<img src="../../../assets/tutorials/creating-waterfalls/Falls-NoComponents.png" alt="A far out view of Snoqualmie Falls."  width="100%" />
+<img src="../../../assets/tutorials/creating-waterfalls/Falls-NoComponents.png" alt="A far out view of Snoqualmie Falls."  width="80%" />
 
 While a waterfall is a continuous and connected stream of water that involves multiple states of matter with dynamic fluid and air motion, it's useful to break down this complex system into individual components so that you can plan how to utilize different VFX objects to mimic their real-world counterparts. To demonstrate, this tutorial breaks the sample waterfall down into five unique components:
 
@@ -109,7 +109,7 @@ To recreate the cascades for the main drop in the sample [Waterfall Island](http
          1. Set **Color** to a color sequence that alternates in color from dark and light blues to white.
             1. Click the **Color** property, then click the ⋯ button. A color sequence pop-up displays.
 
-               <img src="../../../assets/tutorials/creating-waterfalls/Cascades-1G1.png" alt="A close up view of Studio's Properties window with the Color property's ellipsis button highlighted." width="80%" />
+               <img src="../../../assets/tutorials/creating-waterfalls/Cascades-1G1.png" alt="A close up view of Studio's Properties window with the Color property's ellipsis button highlighted." width="60%" />
 
                Each triangle on the bottom axis of the color sequence is a **keypoint** that determines the color value of the property at that point of the particle's lifetime.
 
@@ -122,12 +122,12 @@ To recreate the cascades for the main drop in the sample [Waterfall Island](http
                - **Time** = `0.757`, **RGB Value** = `166, 213, 248`
                - **Time** = `1`, **RGB Value** = `255, 255, 255`
 
-               <img src="../../../assets/tutorials/creating-waterfalls/Cascades-1G2.png" alt="" width="100%" />
+               <img src="../../../assets/tutorials/creating-waterfalls/Cascades-1G2.png" alt="" width="80%" />
 
          1. Set **Transparency** to a number sequence that makes the water become more vibrant as it approaches the cliff's edge.
             1. Click the **Transparency** property, then click the ⋯ button. A number sequence pop-up displays. By default, the graph is a straight line and the image remains the same transparency from left to right.
 
-               <img src="../../../assets/tutorials/creating-waterfalls/Cascades-1H1.png" alt="A close up view of the Transparency number sequence graph." width="100%" />
+               <img src="../../../assets/tutorials/creating-waterfalls/Cascades-1H1.png" alt="A close up view of the Transparency number sequence graph." width="80%" />
 
                Each square at the start and end of the number sequence is a **keypoint** that determines the transparency value of the property at that point of the texture from left to right.
 
@@ -139,7 +139,7 @@ To recreate the cascades for the main drop in the sample [Waterfall Island](http
                - **Time** = `0.92`, **Value** = `1`
                - **Time** = `1`, **Value** = `1`
 
-               <img src="../../../assets/tutorials/creating-waterfalls/Cascades-1H2.png" alt="" width="100%" />
+               <img src="../../../assets/tutorials/creating-waterfalls/Cascades-1H2.png" alt="" width="80%" />
 
          1. Scale each part to ensure the texture covers the width of the outflow pool. The outflow now appears to be flowing toward the edge of the cliff from all angles.
 
@@ -178,29 +178,23 @@ To recreate the cascades for the main drop in the sample [Waterfall Island](http
          1. Set **TextureSpeed** to `1.3` to make the texture flow quickly.
          1. Set **TextureLength** to `2` to slightly stretch the texture's length.
          1. Set **Color** to a color sequence that alternates in color from dark and light blues to white.
-            1. Click the **Color** property, then click the ⋯ button. A color sequence pop-up displays.
-            1. Set the following time and value properties throughout the color sequence:
+         - **Time** = `0`, **RGB Value** = `208, 247, 255`
+         - **Time** = `0.135`, **RGB Value** = `210, 246, 255`
+         - **Time** = `0.25`, **RGB Value** = `255, 255, 255`
+         - **Time** = `0.384`, **RGB Value** = `163, 187, 202`
+         - **Time** = `0.757`, **RGB Value** = `214, 229, 248`
+         - **Time** = `1`, **RGB Value** = `255, 255, 255`
 
-               - **Time** = `0`, RGB Value = `208, 247, 255`
-               - **Time** = `0.135`, RGB Value = `210, 246, 255`
-               - **Time** = `0.25`, RGB Value = `255, 255, 255`
-               - **Time** = `0.384`, RGB Value = `163, 187, 202`
-               - **Time** = `0.757`, RGB Value = `214, 229, 248`
-               - **Time** = `1`, RGB Value = `255, 255, 255`
-
-               <img src="../../../assets/tutorials/creating-waterfalls/Cascades-2G8.png" alt="" width="100%" />
+         <img src="../../../assets/tutorials/creating-waterfalls/Cascades-2G8.png" alt="" width="80%" />
 
          1. Set **Transparency** to a number sequence that allows the cascading water to be more vibrant between the attachment points.
-            1. Click the **Transparency** property, then click the ⋯ button.
-            1. Set the following time and value properties throughout the number sequence:
+         - **Time** = `0`, **Value** = `1`
+         - **Time** = `0.115`, **Value** = `0`
+         - **Time** = `0.835`, **Value** = `0`
+         - **Time** = `0.881`, **Value** = `.994`
+         - **Time** = `1`, **Value** = `1`
 
-               - **Time** = `0`, **Value** = `1`
-               - **Time** = `0.115`, **Value** = `0`
-               - **Time** = `0.835`, **Value** = `0`
-               - **Time** = `0.881`, **Value** = `.994`
-               - **Time** = `1`, **Value** = `1`
-
-               <img src="../../../assets/tutorials/creating-waterfalls/Cascades-2G9.png" alt="" width="100%" />
+         <img src="../../../assets/tutorials/creating-waterfalls/Cascades-2G9.png" alt="" width="80%" />
 
          1. Set **ZOffset** to `2` to offset the texture to be slightly away from the cliff.
          1. Enable **FaceCamera** to ensure the cascading water is visible no matter the angle of the player from the water.
@@ -233,12 +227,12 @@ When you configure these particle emitters to emit both of these particles at th
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../../assets/tutorials/creating-waterfalls/Splashes-Dense.png" alt="The 2D texture that represents heavily aerosolized water before it breaks apart." width="80%"/>
+    <img src="../../../assets/tutorials/creating-waterfalls/Splashes-Dense.png" alt="The 2D texture that represents heavily aerosolized water before it breaks apart." width="60%"/>
     <figcaption>Dense Texture = rbxassetid://16829556885</figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/tutorials/creating-waterfalls/Splashes-Droplets.png" alt="The 2D texture that represents heavily aerosolized water as it breaks apart." width="80%"/>
-    <figcaption>Droplets Texture = 17082061238</figcaption>
+    <img src="../../../assets/tutorials/creating-waterfalls/Splashes-Droplets.png" alt="The 2D texture that represents heavily aerosolized water as it breaks apart." width="60%"/>
+    <figcaption>Droplets Texture = rbxassetid://17082061238</figcaption>
   </figure>
 </GridContainer>
 
@@ -255,32 +249,23 @@ To recreate the splashes at the base of the main drop in the sample [Waterfall I
    1. Select **SplashDense**, then in the **Properties** window,
       1. Set **Texture** to `rbxassetid://16829556885` to render particles that look like dense splashes.
       1. Set **Color** to a color sequence that starts blue then turns white.
-         1. Click the **Color** property, then click the ⋯ button. A color sequence pop-up displays.
-         1. Set the following time and value properties throughout the color sequence:
+      - **Time** = `0`, **RGB Value** = `189, 246, 255`
+      - **Time** = `1`, **RGB Value** = `255, 255, 255`
 
-            - **Time** = `0`, **RGB Value** = `189, 246, 255`
-            - **Time** = `1`, **RGB Value** = `255, 255, 255`
-
-            <img src="../../../assets/tutorials/creating-waterfalls/Splashes-4B2.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/Splashes-4B2.png" alt="" width="80%" />
 
       1. Set **Size** to a number sequence that steadily increases in size with a window of variation.
-         1. Click the **Size** property, then click the ⋯ button.
-         1. Set the following time and value properties throughout the number sequence:
+      - **Time** = `0`, **Value** = `1.81`, **Envelope** = `0.562`
+      - **Time** = `1`, **Value** = `5.75`, **Envelope** = `1.31`
 
-            - **Time** = `0`, **Value** = `1.81`, **Envelope** = `0.562`
-            - **Time** = `1`, **Value** = `5.75`, **Envelope** = `1.31`
-
-            <img src="../../../assets/tutorials/creating-waterfalls/Splashes-4B3.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/Splashes-4B3.png" alt="" width="80%" />
 
       1. Set **Transparency** to a number sequence in which particles start as transparent, turn opaque, then become transparent again across their lifetime with a large window of variation.
-         1. Click the **Transparency** property, then click the ⋯ button.
-         1. Set the following time and value properties throughout the number sequence:
+      - **Time** = `0`, **Value** = `1`, **Envelope** = `0`
+      - **Time** = `0.5`, **Value** = `0.181`, **Envelope** = `0.181`
+      - **Time** = `1`, **Value** = `1`, **Envelope** = `0`
 
-            - **Time** = `0`, **Value** = `1`, **Envelope** = `0`
-            - **Time** = `0.5`, **Value** = `0.181`, **Envelope** = `0.181`
-            - **Time** = `1`, **Value** = `1`, **Envelope** = `0`
-
-            <img src="../../../assets/tutorials/creating-waterfalls/Splashes-4B4.png" alt=""  width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/Splashes-4B4.png" alt=""  width="80%" />
 
       1. Set **Lifetime** to `0.25, 0.35` to randomly set each particle's lifetime between 250 and 350 milliseconds.
       1. Set **Rate** to `30` to emit 30 particles per second.
@@ -299,24 +284,18 @@ To recreate the splashes at the base of the main drop in the sample [Waterfall I
    1. Select **SplashDroplets**, then in the **Properties** window,
       1. Set **Texture** to `rbxassetid://17082061238` to render particles that look like droplets.
       1. Set **Size** to a number sequence that rapidly increases in size with a window of variation.
-         1. Click the **Size** property, then click the ⋯ button.
-         1. Set the following time and value properties throughout the number sequence:
+      - **Time** = `0`, **Value** = `1.81`, **Envelope** = `0.562`
+      - **Time** = `1`, **Value** = `8.69`, **Envelope** = `1.31`
 
-            - **Time** = `0`, **Value** = `1.81`, **Envelope** = `0.562`
-            - **Time** = `1`, **Value** = `8.69`, **Envelope** = `1.31`
-
-            <img src="../../../assets/tutorials/creating-waterfalls/Splashes-5B2.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/Splashes-5B2.png" alt="" width="80%" />
 
       1. Set **Transparency** to a number sequence in which particles start as transparent, rapidly turn opaque, then slowly start to become transparent again near the middle of their lifetime.
-         1. Click the **Transparency** property, then click the ⋯ button.
-         1. Set the following time and value properties throughout the number sequence:
+      - **Time** = `0`, **Value** = `1`, **Envelope** = `0`
+      - **Time** = `0.104`, **Value** = `0.0625`, **Envelope** = `0.0625`
+      - **Time** = `0.429`, **Value** = `0.0562`, **Envelope** = `0.0562`
+      - **Time** = `1`, **Value** = `1`, **Envelope** = `0`
 
-            - **Time** = `0`, **Value** = `1`, **Envelope** = `0`
-            - **Time** = `0.104`, **Value** = `0.0625`, **Envelope** = `0.0625`
-            - **Time** = `0.429`, **Value** = `0.0562`, **Envelope** = `0.0562`
-            - **Time** = `1`, **Value** = `1`, **Envelope** = `0`
-
-            <img src="../../../assets/tutorials/creating-waterfalls/Splashes-5B3.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/Splashes-5B3.png" alt="" width="80%" />
 
       1. Set **Lifetime** to `0.15, 0.6` to randomly set each particle's lifetime between 150 and 600 milliseconds.
       1. Set **Rate** to `20` to emit 20 particles per second.
@@ -335,8 +314,8 @@ To mimic this process, the sample uses two `Class.ParticleEmitter` objects that 
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../../assets/tutorials/creating-waterfalls/Splashes-WhiteWater.png" alt="The 2D texture that represents heavily aerosolized water as it crashes into boulders." width="80%"/>
-    <figcaption>White Water Texture = 16808075391</figcaption>
+    <img src="../../../assets/tutorials/creating-waterfalls/Splashes-WhiteWater.png" alt="The 2D texture that represents heavily aerosolized water as it crashes into boulders." width="60%"/>
+    <figcaption>White Water Texture = rbxassetid://16808075391</figcaption>
   </figure>
   <figure>
   </figure>
@@ -356,34 +335,25 @@ To recreate the white water where the outflow collides with the cliff's boulders
    1. Select **GentleWW**, then in the **Properties** window,
       1. Set **Texture** to `rbxassetid://16808075391` to render particles that look like webby splashes.
       1. Set **Color** to a color sequence that starts blue then turns white.
-         1. Click the **Color** property, then click the ⋯ button. A color sequence pop-up displays.
-         1. Set the following time and value properties throughout the color sequence:
+      - **Time** = `0`, **RGB Value** = `189, 246, 255`
+      - **Time** = `1`, **RGB Value** = `255, 255, 255`
 
-            - **Time** = `0`, **RGB Value** = `189, 246, 255`
-            - **Time** = `1`, **RGB Value** = `255, 255, 255`
-
-            <img src="../../../assets/tutorials/creating-waterfalls/Splashes-4B2.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/Splashes-4B2.png" alt="" width="80%" />
 
       1. Set **Size** to a number sequence that steadily increases in size with a window of variation.
-         1. Click the **Size** property, then click the ⋯ button.
-         1. Set the following time and value properties throughout the number sequence:
+      - **Time** = `0`, **Value** = `1.13`, **Envelope** = `0.562`
+      - **Time** = `1`, **Value** = `5.56`, **Envelope** = `0.563`
 
-            - **Time** = `0`, **Value** = `1.13`, **Envelope** = `0.562`
-            - **Time** = `1`, **Value** = `5.56`, **Envelope** = `0.563`
-
-            <img src="../../../assets/tutorials/creating-waterfalls/WW-4A3.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/WW-4A3.png" alt="" width="80%" />
 
       1. Set **Transparency** to a number sequence in which particles start as transparent, turn about halfway opaque, then have slight peaks to become transparent again across their lifetime.
-         1. Click the **Transparency** property, then click the ⋯ button.
-         1. Set the following time and value properties throughout the number sequence:
+      - **Time** = `0`, **Value** = `1`, **Envelope** = `0`
+      - **Time** = `0.143`, **Value** = `0.462`, **Envelope** = `0.0625`
+      - **Time** = `0.336`, **Value** = `0.462`, **Envelope** = `0.0562`
+      - **Time** = `0.622`, **Value** = `0.788`, **Envelope** = `0.0538`
+      - **Time** = `1`, **Value** = `1`, **Envelope** = `0`
 
-            - **Time** = `0`, **Value** = `1`, **Envelope** = `0`
-            - **Time** = `0.143`, **Value** = `0.462`, **Envelope** = `0.0625`
-            - **Time** = `0.336`, **Value** = `0.462`, **Envelope** = `0.0562`
-            - **Time** = `0.622`, **Value** = `0.788`, **Envelope** = `0.0538`
-            - **Time** = `1`, **Value** = `1`, **Envelope** = `0`
-
-            <img src="../../../assets/tutorials/creating-waterfalls/WW-4A4.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/WW-4A4.png" alt="" width="80%" />
 
       1. Set **ZOffset** to `2` to offset the texture to be slightly away from the cliff.
       1. Set **Lifetime** to `1.25, 1.5` to randomly set each particle's lifetime between 1250 and 1500 milliseconds.
@@ -403,24 +373,18 @@ To recreate the white water where the outflow collides with the cliff's boulders
    1. Duplicate **GentleWW**, then rename it **TurbulentWW**.
    1. Select **TurbulentWW**, then in the **Properties** window,
       1. Set **Size** to a number sequence that subtly increases in size with a window of variation.
-         1. Click the **Size** property, then click the ⋯ button.
-         1. Set the following time and value properties throughout the number sequence:
+      - **Time** = `0`, **Value** = `1.6`, **Envelope** = `0.562`
+      - **Time** = `1`, **Value** = `2.63`, **Envelope** = `0.563`
 
-            - **Time** = `0`, **Value** = `1.6`, **Envelope** = `0.562`
-            - **Time** = `1`, **Value** = `2.63`, **Envelope** = `0.563`
-
-            <img src="../../../assets/tutorials/creating-waterfalls/WW-5B1.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/WW-5B1.png" alt="" width="80%" />
 
       1. Set **Transparency** to a number sequence in which particles start as transparent, turn opaque, then become transparent again near the middle of their lifetime.
-         1. Click the **Transparency** property, then click the ⋯ button.
-         1. Set the following time and value properties throughout the number sequence:
+      - **Time** = `0`, **Value** = `1`, **Envelope** = `0`
+      - **Time** = `0.156`, **Value** = `0.0437`, **Envelope** = `0.0437`
+      - **Time** = `0.55`, **Value** = `0.075`, **Envelope** = `0.0252`
+      - **Time** = `1`, **Value** = `1`, **Envelope** = `0`
 
-            - **Time** = `0`, **Value** = `1`, **Envelope** = `0`
-            - **Time** = `0.156`, **Value** = `0.0437`, **Envelope** = `0.0437`
-            - **Time** = `0.55`, **Value** = `0.075`, **Envelope** = `0.0252`
-            - **Time** = `1`, **Value** = `1`, **Envelope** = `0`
-
-            <img src="../../../assets/tutorials/creating-waterfalls/WW-5B2.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/WW-5B2.png" alt="" width="80%" />
 
       1. Set **Lifetime** to `0.25, 0.5` to randomly set each particle's lifetime between 250 and 500 milliseconds.
       1. Set **Rate** to `20` to emit 20 particles per second.
@@ -441,7 +405,7 @@ To mimic this effect, the sample uses a `Class.ParticleEmitter` object to emit p
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../../assets/tutorials/creating-waterfalls/Foam-Texture.png" alt="The 2D texture that represents the aerosolized water that ripples away from where the cascades impacts the plunge pool." width="80%"/>
+    <img src="../../../assets/tutorials/creating-waterfalls/Foam-Texture.png" alt="The 2D texture that represents the aerosolized water that ripples away from where the cascades impacts the plunge pool." width="60%"/>
     <figcaption>Foam Ripples Texture = rbxassetid://16811365086</figcaption>
   </figure>
   <figure>
@@ -461,15 +425,12 @@ To recreate the foam at the base of the main drop in the sample [Waterfall Islan
    1. Set **Texture** to `rbxassetid://16811365086` to render particles that look like foam ripples.
    1. Set **Orientation** to **VelocityPerpendicular** to emit particles perpendicular to the direction of their movement.
    1. Set **Transparency** to a number sequence in which particles start as transparent, rapidly become opaque, then quickly become transparent toward the end of their lifetime.
-      1. Click the **Transparency** property, then click the ⋯ button.
-      1. Set the following time and value properties throughout the number sequence:
+      - **Time** = `0`, **Value** = `1`, **Envelope** = `0`
+      - **Time** = `0.143`, **Value** = `0.119`, **Envelope** = `0.1`
+      - **Time** = `0.664`, **Value** = `0.125`, **Envelope** = `0.112`
+      - **Time** = `1`, **Value** = `1`, **Envelope** = `0`
 
-         - **Time** = `0`, **Value** = `1`, **Envelope** = `0`
-         - **Time** = `0.143`, **Value** = `0.119`, **Envelope** = `0.1`
-         - **Time** = `0.664`, **Value** = `0.125`, **Envelope** = `0.112`
-         - **Time** = `1`, **Value** = `1`, **Envelope** = `0`
-
-         <img src="../../../assets/tutorials/creating-waterfalls/Foam-2D4.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/Foam-2D4.png" alt="" width="80%" />
 
    1. Set **Lifetime** to `0.5, 0.7` to randomly set each particle's lifetime between 500 and 700 milliseconds.
    1. Set **Rate** to `5` to emit 5 particles per second.
@@ -501,11 +462,11 @@ Similar to the real-world, the mist evaporation process allows a rainbow to form
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../../../assets/tutorials/creating-waterfalls/Mist-Texture.png" alt="The 2D texture that represents the mist." width="80%"/>
+    <img src="../../../assets/tutorials/creating-waterfalls/Mist-Texture.png" alt="The 2D texture that represents the mist." width="60%"/>
     <figcaption>Mist Texture = rbxassetid://16830667309</figcaption>
   </figure>
   <figure>
-    <img src="../../../assets/tutorials/creating-waterfalls/Rainbow-Texture.png" alt="The 2D texture that represents the rainbow." width="80%"/>
+    <img src="../../../assets/tutorials/creating-waterfalls/Rainbow-Texture.png" alt="The 2D texture that represents the rainbow." width="60%"/>
     <figcaption>Rainbow Texture = rbxassetid://16828911033</figcaption>
   </figure>
 </GridContainer>
@@ -523,33 +484,24 @@ To recreate the mist that moves outward and upward from the base of the main dro
    1. Select **Mist**, then in the **Properties** window,
       1. Set **Texture** to `rbxassetid://16830667309` to render particles that look like thick mist.
       1. Set **Color** to a color sequence that starts blue then turns white.
-         1. Click the **Color** property, then click the ⋯ button. A color sequence pop-up displays.
-         1. Set the following time and value properties throughout the color sequence:
+      - **Time** = `0`, **RGB Value** = `171, 244, 255`
+      - **Time** = `0.339`, **RGB Value** = `251, 254, 255`
+      - **Time** = `1`, **RGB Value** = `255, 255, 255`
 
-           - **Time** = `0`, **RGB Value** = `171, 244, 255`
-           - **Time** = `0.339`, **RGB Value** = `251, 254, 255`
-           - **Time** = `1`, **RGB Value** = `255, 255, 255`
-
-           <img src="../../../assets/tutorials/creating-waterfalls/Mist-2D2.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/Mist-2D2.png" alt="" width="80%" />
 
       1. Set **Size** to a number sequence that steadily increases in size.
-         1. Click the **Size** property, then click the ⋯ button.
-         1. Set the following time and value properties throughout the number sequence:
+      - **Time** = `0`, **Value** = `8`, **Envelope** = `0`
+      - **Time** = `1`, **Value** = `10`, **Envelope** = `0`
 
-           - **Time** = `0`, **Value** = `8`, **Envelope** = `0`
-           - **Time** = `1`, **Value** = `10`, **Envelope** = `0`
-
-           <img src="../../../assets/tutorials/creating-waterfalls/Mist-2D3.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/Mist-2D3.png" alt="" width="80%" />
 
       1. Set **Transparency** to a number sequence in which particles start as transparent, quickly turn slightly opaque, then rapidly become transparent again across their lifetime.
-         1. Click the **Transparency** property, then click the ⋯ button.
-         1. Set the following time and value properties throughout the number sequence:
+      - **Time** = `0`, **Value** = `1`, **Envelope** = `0`
+      - **Time** = `0.0971`, **Value** = `0.8`, **Envelope** = `0.0625`
+      - **Time** = `1`, **Value** = `1`, **Envelope** = `0`
 
-           - **Time** = `0`, **Value** = `1`, **Envelope** = `0`
-           - **Time** = `0.0971`, **Value** = `0.8`, **Envelope** = `0.0625`
-           - **Time** = `1`, **Value** = `1`, **Envelope** = `0`
-
-           <img src="../../../assets/tutorials/creating-waterfalls/Mist-2D4.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/Mist-2D4.png" alt="" width="80%" />
 
       1. Set **ZOffset** to `2` to offset the texture to be slightly away from the plunge pool.
       1. Set **Lifetime** to `0.5, 1` to randomly set each particle's lifetime between 500 and 100 milliseconds.
@@ -585,27 +537,26 @@ To recreate the mist that moves outward and upward from the base of the main dro
    1. Insert a **block** part into **Mist**, then rename it **RainbowPart**.
    1. Position **RainbowPart** slightly above the other block parts.
 
-      <img src="../../../assets/tutorials/creating-waterfalls/Rainbow-4B.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/Rainbow-4B.png" alt="" width="80%" />
 
    1. Insert a **ParticleEmitter** into **Rainbow**, then rename the emitter **Rainbow**.
    1. Select **Rainbow**, then in the **Properties** window,
       1. Set **Texture** to `rbxassetid://16828911033` to render particles that look like a faint rainbow.
       1. Set **Size** to `25` to render large particles.
       1. Set **Transparency** to a number sequence in which particles start as transparent, turn slightly opaque, then become transparent again across their lifetime.
-         1. Click the **Transparency** property, then click the ⋯ button.
-         1. Set the following time and value properties throughout the number sequence:
+      - Time = `0`, Value = `1`, Envelope = `0`
+      - Time = `0.497`, Value = `0.363`, Envelope = `0.05`
+      - Time = `1`, Value = `1`, Envelope = `0`
 
-            - Time = `0`, Value = `1`, Envelope = `0`
-            - Time = `0.497`, Value = `0.363`, Envelope = `0.05`
-            - Time = `1`, Value = `1`, Envelope = `0`
-
-            <img src="../../../assets/tutorials/creating-waterfalls/Rainbow-4D.png" alt="" width="100%" />
+      <img src="../../../assets/tutorials/creating-waterfalls/Rainbow-4D.png" alt="" width="80%" />
 
       1. Set **Lifetime** to `2, 4` to randomly set each particle's lifetime between 200 and 400 milliseconds.
       1. Set **Rate** to `0.25` to emit a particle every 4 seconds.
       1. Set **Rotation** to `-20` to orient each particle to a slight degree.
       1. Set **Speed** to `0` to emit each particle 0 studs per second.
       1. Set **Drag** to `1` to have particles lose their speed with exponential decay.
+      1. Set **LightEmission** to `1` to use additive blending to render the particles with the colors behind them. This step also removes the black background from the texture itself.
+      1. Set **LightInfluence** to `0` to prevent the environmental light from affecting the color of particles.
 
       <video controls src="../../../assets/tutorials/creating-waterfalls/Mist-4.mp4" width="90%"></video>
 

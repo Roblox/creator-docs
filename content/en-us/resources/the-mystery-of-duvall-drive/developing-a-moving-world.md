@@ -73,8 +73,8 @@ In our demo, portions of the world are cloned from the `Class.ServerStorage` int
 
 ```lua
 local function Init()
-	for _,obj in CollectionService:GetTagged("LocalSpaceRotation") do
-		if(obj:IsDescendantOf(workspace)) then
+	for _, obj in CollectionService:GetTagged("LocalSpaceRotation") do
+		if obj:IsDescendantOf(workspace) then
 			SetupObj(obj)
 		end
 	end
@@ -85,9 +85,9 @@ CollectionService:GetInstanceAddedSignal("LocalSpaceRotation"):Connect(function(
 end)
 
 CollectionService:GetInstanceRemovedSignal("LocalSpaceRotation"):Connect(function(obj)
-	if(objInfo[obj]) then
+	if objInfo[obj] then
 		objInfo[obj] = nil
-		if(objInfoQueue[obj]) then
+		if objInfoQueue[obj] then
 			objInfoQueue[obj] = nil
 		end
 	end
@@ -102,8 +102,8 @@ We rotated the instances in the `Update` function connected to heartbeat. We got
 
 ```lua
 local parentTransform
-if(parentObj:IsA("Model")) then
-	if(not parentObj.PrimaryPart) then
+if parentObj:IsA("Model") then
+	if not parentObj.PrimaryPart then
 		-- primary part might might not be streamed in yet
 		continue -- wait for primary part to replicate
 	end
@@ -115,7 +115,7 @@ end
 curObjInfo.curAngle += dT * curObjInfo.timeToAngle
 local rotatedLocalCFrame = curObjInfo.origLocalCFrame * CFrame.Angles( curObjInfo.axisMask.X * curObjInfo.curAngle, curObjInfo.axisMask.Y * curObjInfo.curAngle, curObjInfo.axisMask.Z * curObjInfo.curAngle )
 
-if(obj:IsA("Model")) then
+if obj:IsA("Model") then
 	obj.PrimaryPart.CFrame = parentTransform * rotatedLocalCFrame
 else
 	obj.CFrame = parentTransform * rotatedLocalCFrame
@@ -156,12 +156,12 @@ On the client side (**LightningVFXClient**), we check if this client should run 
 local function LightningFunc(info)
 	…
 	-- no FX when indoors
-	if( inVolumesCheckerFunc:Invoke() ) then
+	if inVolumesCheckerFunc:Invoke() then
 		return
 	end
 
 	-- no FX when not in the "normal" world
-	if( not gameStateInfoFunc:Invoke("IsInNormal") ) then
+	if not gameStateInfoFunc:Invoke("IsInNormal") then
 		return
 	end
 	…
@@ -172,7 +172,7 @@ In addition, we run the sequence to set textures, positions, and brightness, run
 ```lua
 beam.Texture = textures[info.textIdx]
 
-beamPart.Position = Vector3.new( info.center.X + og_center.X, og_center.Y, info.center.Y + og_center.Z )
+beamPart.Position = Vector3.new(info.center.X + og_center.X, og_center.Y, info.center.Y + og_center.Z)
 
 -- Wipe
 beam.Brightness = 10
@@ -187,8 +187,8 @@ tweenBottomPos:Play()
 tweenBrightness.Completed:Wait()
 
 -- audio
-if(audioFolder and audioPart) then
-	if(audioFolder.Value and audioPart.Value) then
+if audioFolder and audioPart then
+	if audioFolder.Value and audioPart.Value then
 		audioUtils.PlayOneShot(audioObj, audioFolder.Value, audioPart.Value)
 	end
 end
@@ -196,7 +196,6 @@ end
 task.wait(info.waitTillFlashes)
 
 -- and so on
-
 ```
 
 To check if a player is indoors we use a helper `inVolumesCheckerFunc` function, which goes over pre-placed volumes approximating indoor areas, and checks if player position is inside any of them (PointInABox). We could have used touch-based detection, but we found out that when a player takes a seat inside the volume, they are no longer "touching" the volume. Testing a point in a few boxes is simpler, and we do it only when a player moves far enough from the previously tested position.
@@ -431,7 +430,7 @@ local trigger = model.Trigger
 local left = model.TargetL_Closed
 local right = model.TargetR_Closed
 
-local tweenInfo = TweenInfo.new (
+local tweenInfo = TweenInfo.new(
 	model.Speed.Value, --Time/Speed of Door Tween
 	Enum.EasingStyle.Quart, --Easing Style
 	Enum.EasingDirection.InOut, --EasingDirection
@@ -473,7 +472,7 @@ local function StartClosing()
 end
 
 local function tweenOpenCompleted(playbackState)
-	if(next(playersNear) == nil) then
+	if next(playersNear) == nil then
 		StartClosing()
 	else
 		doorState = DoorState.Open
@@ -481,7 +480,7 @@ local function tweenOpenCompleted(playbackState)
 end
 
 local function tweenCloseCompleted(playbackState)
-	if(next(playersNear) ~= nil) then
+	if next(playersNear) ~= nil then
 		StartOpening()
 	else
 		doorState = DoorState.Closed
@@ -492,12 +491,12 @@ tweenL.Completed:Connect(tweenOpenCompleted)
 tweenLClose.Completed:Connect(tweenCloseCompleted)
 
 local function touched(otherPart)
-	if(otherPart.Name == "HumanoidRootPart" ) then
-		local player = Players:FindFirstChild(otherPart.Parent.Name)
-		if(player) then
+	if otherPart.Name == "HumanoidRootPart" then
+		local player = Players:GetPlayerFromCharacter(otherPart.Parent)
+		if player then
 			--print("touch")
 			playersNear[player] = 1
-			if(doorState == DoorState.Closed) then
+			if doorState == DoorState.Closed then
 				StartOpening()
 			end
 		end

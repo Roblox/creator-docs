@@ -1,33 +1,66 @@
 name: ItemLineAlignment
 type: enum
-summary: ''
-description: ''
+summary: |
+  Used for `Class.UIListLayout.ItemLineAlignment` and
+  `Class.UIFlexItem.ItemLineAlignment` in a flex layout to define the
+  cross-directional alignment of siblings or the parent within a line.
+description: |
+  In a flex layout, this enum is used for the
+  `Class.UIListLayout.ItemLineAlignment|ItemLineAlignment` property of the
+  `Class.UIListLayout` to define the **cross-directional** alignment of siblings
+  within a line. It is also used for the
+  `Class.UIFlexItem.ItemLineAlignment|ItemLineAlignment` property of a specific
+  `Class.UIFlexItem` to define the cross-directional alignment of the parent
+  `Class.GuiObject` within the line.
+
+  <img src="../../../assets/engine-api/classes/UIListLayout/Cross-Direction.png" width="720" alt="Diagram showing cross-direction in a horizontal fill direction." />
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Automatic
-    summary: ''
+    summary: |
+      Aligns the siblings of the `Class.UIListLayout` or the specific
+      `Class.UIFlexItem` parent to the layout's
+      `Class.UIListLayout.HorizontalAlignment|HorizontalAlignment` or
+      `Class.UIListLayout.VerticalAlignment|VerticalAlignment`, depending on its
+      `Class.UIListLayout.FillDirection|FillDirection`. If
+      `Class.UIListLayout.HorizontalFlex|HorizontalFlex` or
+      `Class.UIListLayout.VerticalFlex|VerticalFlex` is enabled for the
+      `Class.UIListLayout` cross‑direction, **Stretch** will be used for that
+      direction.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Start
-    summary: ''
+    summary: |
+      Aligns the siblings of the `Class.UIListLayout` or the specific
+      `Class.UIFlexItem` parent to the line's **top** in a horizontal fill or
+      the line's **left** in a vertical fill.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Center
-    summary: ''
+    summary: |
+      Aligns the siblings of the `Class.UIListLayout` or the specific
+      `Class.UIFlexItem` parent to the line's **center** in either a horizontal
+      or vertical fill.
     value: 2
     tags: []
     deprecation_message: ''
   - name: End
-    summary: ''
+    summary: |
+      Aligns the siblings of the `Class.UIListLayout` or the specific
+      `Class.UIFlexItem` parent to the line's **bottom** in a horizontal fill or
+      the line's **right** in a vertical fill.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Stretch
-    summary: ''
+    summary: |
+      Stretches the siblings of the `Class.UIListLayout` or the specific
+      `Class.UIFlexItem` parent to fill the entire cross-direction of the line
+      in either a horizontal or vertical fill.
     value: 4
     tags: []
     deprecation_message: ''

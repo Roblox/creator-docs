@@ -133,6 +133,24 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: AudioDeviceInput.Volume
+    summary: |
+      Volume level which is multiplied onto the output audio stream.
+    description: |
+      Volume level which is multiplied onto the output audio stream. Ranges from
+      0 to 3.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
 methods:
   - name: AudioDeviceInput:GetConnectedWires
     summary: ''

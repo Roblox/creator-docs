@@ -7,7 +7,7 @@ With the **in-experience text chat** system on Roblox, you can allow users to co
 
 This guide covers the chat workflow and the usage of APIs for extending the functionalities of the in-experience text chat system. For more information on customizing the chat User Interface (UI), see [Customizing In-Experience Text Chat](../chat/customizing-in-experience-text-chat.md).
 
-## Text Chat APIs and Workflow
+## Chat APIs and Workflow
 
 The in-experience text chat system consists of both mutable APIs that you can extend for customized chat delivery behaviors and immutable data objects representing certain chat elements returned by mutable APIs.
 
@@ -51,7 +51,7 @@ As the flowchart shows, the in-experience text chat system processes a chat mess
 
 There are several areas of the chat system workflow that you can extend and customize the behavior, but the steps of how the system operates remain the same.
 
-## Customizing Message Delivering Behaviors
+## Customizing Message Delivery Behaviors
 
 In addition to sticking with the default chat message delivery behavior, you can use `Class.TextChannel.ShouldDeliverCallback` to add permissions and specific behaviors to determine whether users can receive a message for customized engagement, such as:
 
@@ -137,7 +137,7 @@ The following example shows how to create a chat command that allows users to in
    	if player then
    		local character = player.Character
    		if character then
-   			local humanoid = character:FindFirstChildOfClass("Humanoid")
+   			local humanoid = character:FindFirstChildWhichIsA("Humanoid")
    			if humanoid then
    				for _, child in humanoid:GetChildren() do
    					if child:IsA("NumberValue") then
@@ -151,3 +151,127 @@ The following example shows how to create a chat command that allows users to in
    ```
 
    <video controls src="../assets/players/in-experience-text-chat/Text-Custom-Command.mp4" width="90%"></video>
+
+## Migrating From Legacy Chat
+
+This section assists you in migrating from the [legacy chat system](../chat/legacy/legacy-chat-system.md) by providing alternative methods for implementing common chat functionalities and behaviors using the in-experience text chat system.
+
+To switch the chat system of an existing experience from the legacy chat system to the in-experience text chat system:
+
+1. In the [Explorer](../studio/explorer.md) window, select **TextChatService**.
+2. In the [Properties](../studio/properties.md) window, find the **ChatVersion** dropdown and select **TextChatService**.
+
+   <img src="../assets/studio/properties/TextChatService-ChatVersion-TextChatService.png" width="320" />
+
+### Basic Chat Functionalities
+
+Though both systems share the same basic chat functionalities, the in-experience text chat system implementations are in general more sustainable and easier to iterate on.
+
+<table>
+  <thead>
+    <tr>
+      <th>Functionality</th>
+      <th>Legacy Chat</th>
+      <th>In-Experience Text Chat</th>
+      <th>Differences</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Send a Chat Message</td>
+      <td>`Class.Players:Chat()`</td>
+      <td>`Class.TextChannel:SendAsync()`</td>
+      <td>The `Class.TextChatService:SendAsync()` method supports more advanced chat features such as rich text formatting and message priority. It also includes built-in filtering to help prevent inappropriate messages from being sent.</td>
+    </tr>
+    <tr>
+      <td>Implement Messaging Callbacks</td>
+      <td>`Class.Chat:InvokeChatCallback()`<br />`Class.Chat:RegisterChatCallback()`</td>
+      <td>`Class.TextChatService.SendingMessage`<br />`Class.TextChatService.OnIncomingMessage`</td>
+      <td>The legacy chat system binds a function to chat system events for delivering messages. The two methods of the in-experience text chat system have more flexibilities and customization options.</td>
+    </tr>
+    <tr>
+      <td>Add Custom Chat Commands</td>
+      <td>`ChatService/ChatCommand` module</td>
+      <td>`Class.TextChatCommand`</td>
+      <td>The in-experience text chat system has a dedicated class representing a text command for customization rather than using a legacy chat module.</td>
+    </tr>
+    <tr>
+      <td>Display a System Message</td>
+      <td>`Class.StarterGui:SetCore()` using `"ChatMakeSystemMessage"`</td>
+      <td>`Class.TextChannel:DisplaySystemMessage()`</td>
+      <td>The `Class.TextChannel.OnIncomingMessage` callback can return a `Class.TextChatMessageProperties` instance to customize the message appearance.</td>
+    </tr>
+    <tr>
+      <td>Disable Chat</td>
+      <td>[Game Settings](../studio/game-settings.md) in Studio and `ChatWindow/ChatSettings` module for hiding the chat window</td>
+      <td>`Class.ChatWindowConfiguration.Enabled`</td>
+    </tr>
+  </tbody>
+</table>
+
+### Chat Message Filtering
+
+The in-experience text chat system automatically filters chat messages based on each user's account information, so you don't need to manually implement text filtering for all kinds of chat messages.
+
+<table>
+  <thead>
+    <tr>
+      <th>Functionality</th>
+      <th>Legacy Chat</th>
+      <th>In-Experience Text Chat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Filter Message for Individual User</td>
+      <td>`Class.Chat:FilterStringAsync()`</td>
+      <td>n/a</td>
+    </tr>
+    <tr>
+      <td>Filter Broadcasting Messages</td>
+      <td>`Class.Chat:FilterStringForBroadcast()`</td>
+			<td>n/a</td>
+    </tr>
+  </tbody>
+</table>
+
+### Chat Window and Bubble Chat
+
+Both the chat window and [bubble chat](../chat/bubble-chat.md) behavior and [customization](../chat/customizing-in-experience-text-chat.md) options of the in-experience text chat system are identical to those of the legacy chat system. As the legacy chat system only allows customization using chat modules or the `Class.Players` container, the in-experience text chat system provides dedicated classes, `Class.ChatWindowConfiguration` and `Class.BubbleChatConfiguration`, to manage all chat window and bubble chat properties respectively. Additionally, you can easily adjust and preview your bubble chat appearance and behavior properties using Studio settings instead of having to script them all.
+
+<table>
+  <thead>
+    <tr>
+      <th>Functionality</th>
+      <th>Legacy Chat</th>
+      <th>In-Experience Text Chat</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Enable Chat Window</td>
+      <td>`Class.Chat.LoadDefaultChat`<br />`Class.Players.ClassicChat`</td>
+      <td>`Class.ChatWindowConfiguration.Enabled`</td>
+    </tr>
+    <tr>
+      <td>Enable Bubble Chat</td>
+      <td>`Class.Chat.BubbleChatEnabled`<br />`Class.Players.BubbleChat`</td>
+      <td>`Class.BubbleChatConfiguration.Enabled`</td>
+    </tr>
+    <tr>
+      <td>Set Chat Window Properties</td>
+      <td>`Class.Players:SetChatStyle()`</td>
+      <td>`Class.ChatWindowConfiguration`</td>
+    </tr>
+    <tr>
+      <td>Set Bubble Chat Properties</td>
+      <td>`Class.Chat:SetBubbleChatSettings()`<br />`Class.Chat.BubbleChatSettingsChanged()`<br />`Class.Players.BubbleChat`<br />`Class.Players:SetChatStyle()`</td>
+      <td>`Class.BubbleChatConfiguration`</td>
+    </tr>
+    <tr>
+      <td>Enable NPC Bubbles</td>
+      <td>`Class.Chat:Chat()`</td>
+      <td>`Class.TextChatService:DisplayBubble()`</td>
+    </tr>
+  </tbody>
+</table>

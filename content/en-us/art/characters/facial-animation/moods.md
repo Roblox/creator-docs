@@ -104,7 +104,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 You can also use the `Class.HumanoidDescription` system to find user characters and edit their `Class.Animation.AnimationID|AnimationIDs` for any default animation. For example, the following `Class.Script` edits any previously set mood to an animation that gives the character a [half-smile](https://www.roblox.com/catalog/10725833199/Chiseled-Good-Looks-Mood) on the left-side of their face whenever their character is idling:
 
 ```lua
-local humanoid = player.Character and player.Character:FindFirstChild("Humanoid")
+local humanoid = player.Character and player.Character:FindFirstChildWhichIsA("Humanoid")
 if humanoid then
     local descriptionClone = humanoid:GetAppliedDescription()
     descriptionClone.IdleAnimation = 10725833199

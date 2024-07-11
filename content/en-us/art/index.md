@@ -20,7 +20,7 @@ Whether you're just getting started with Roblox or need a quick refresher, use t
 
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-    <img src="https://blog.roblox.com/wp-content/uploads/2022/08/blog_evergreen.png" />
+    <img src="../assets/misc/blog_evergreen.png" />
   </div>
     <Typography variant='h4'>3D Art in Roblox Studio</Typography>
     <Typography variant='body1' >Get up to speed with the many powerful tools and functions in Roblox Studio!</Typography>
@@ -141,7 +141,7 @@ Check out the following showcases made by Roblox and the community. Each of thes
     <a href="https://www.roblox.com/games/6519709626/Hotel-Resort"><Typography variant='h6' style={{marginBottom: 12}}>Hotel Resort by @ChooShu_Cho</Typography></a>
     <a href="https://www.roblox.com/games/5415692770/Lab"><Typography variant='h6' style={{marginBottom: 12}}>Lab by @thisfall</Typography></a>
   </Grid>
-  </Grid>  
+  </Grid>
 </Grid>
 
 <h2 style={{marginBottom: 24, marginTop: 96}}>From the Staff</h2>
@@ -237,7 +237,7 @@ Stay up to date with new articles written by our staff on the [DevForum](https:/
 
 The following is a list of common 3D art resources ordered by subject, as well as other Studio and Avatar documentation. You can also use the side navigation bar, search bar, or assistant to find specific articles and topics.
 
-## Getting Started and Tutorials
+<Typography variant='h5'>Getting Started and Tutorials</Typography>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
@@ -248,7 +248,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <a href="./overview-dcc.md"><Typography variant='body1' style={{marginBottom: 12}}>Getting Started with Third-Party Software</Typography></a>
 <a href="../avatar/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Getting Started with Avatar Items</Typography></a>
 <a href="../tutorials/first-experience/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Creating Your First Experience</Typography></a>
-<a href="../production/publishing/creator-store.md"><Typography variant='body1' style={{marginBottom: 12}}>Creator Store Overview</Typography></a>
+<a href="../production/creator-store.md"><Typography variant='body1' style={{marginBottom: 12}}>Creator Store Overview</Typography></a>
 <a href="./marketplace/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Overview</Typography></a>
 </Grid>
 </Grid>
@@ -284,7 +284,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 </Grid>
 
-## Specifications and References
+<Typography variant='h5'>Specifications and References</Typography>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
@@ -325,7 +325,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 </Grid>
 
-## Guides and Workflows
+<Typography variant='h5'>Guides and Workflows</Typography>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
@@ -433,8 +433,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 <Typography variant='h5'>Publishing to Creator Store and Marketplace</Typography>
 
-<a href="../production/publishing/creator-store.md"><Typography variant='body1' style={{marginBottom: 12}}>Creator Store Overview</Typography></a>
-<a href="../production/publishing/publishing-assets.md"><Typography variant='body1' style={{marginBottom: 12}}>Publishing Creator Assets</Typography></a>
+<a href="../production/creator-store.md"><Typography variant='body1' style={{marginBottom: 12}}>Creator Store Overview</Typography></a>
 <a href="./marketplace/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Overview</Typography></a>
 <a href="./marketplace/marketplace-policy.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Policy</Typography></a>
 <a href="./marketplace/publishing-to-marketplace.md"><Typography variant='body1' style={{marginBottom: 12}}>Publishing Avatar Items to Marketplace</Typography></a>

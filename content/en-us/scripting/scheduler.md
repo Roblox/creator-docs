@@ -21,8 +21,8 @@ The following table lists the relevant legacy global methods and their preferred
 | `wait(n)`                               | `Library.task.wait()\|task.wait(n)`                |                                                    |
 | `spawn(f)`                              | `Library.task.defer()\|task.defer(f)`              | `Library.task.delay()\|task.delay(0, f)`           |
 | `delay(n, f)`                           | `Library.task.delay()\|task.delay(n, f)`           |                                                    |
-| `spawn(function () f(uv1, ...) end)`    | `Library.task.defer()\|task.defer(f, uv1, ...)`    | `Library.task.delay()\|task.delay(0, f, uv1, ...)` |
-| `delay(n, function () f(uv1, ...) end)` | `Library.task.delay()\|task.delay(n, f, uv1, ...)` |                                                    |
+| `spawn(function() f(uv1, ...) end)`    | `Library.task.defer()\|task.defer(f, uv1, ...)`    | `Library.task.delay()\|task.delay(0, f, uv1, ...)` |
+| `delay(n, function() f(uv1, ...) end)` | `Library.task.delay()\|task.delay(n, f, uv1, ...)` |                                                    |
 
 #### task.spawn
 
@@ -65,8 +65,8 @@ print("B")
 Since the actual delay time may vary, the following code sample illustrates how you can calculate it by passing the current time as an argument:
 
 ```lua
-task.delay(2, function (scheduledTime)
-    print(os.clock() - scheduledTime) --> 2.038702
+task.delay(2, function(scheduledTime)
+	print(os.clock() - scheduledTime) --> 2.038702
 end, os.clock())
 ```
 

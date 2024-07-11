@@ -3,9 +3,10 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  A base class for UI constraint and layout classes, inherits from `UiBase`.
+  A base class for UI constraint and layout classes.
 description: |
-  A base class for UI constraint and layout classes, inherits from `UiBase`.
+  A base class for UI constraint and layout classes; inherits from
+  `Class.UIBase`.
 code_samples:
 inherits:
   - UIBase

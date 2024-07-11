@@ -91,4 +91,4 @@ With this new character `Class.Model`, you can perform any of the following:
 
   - Playtest as the character by renaming the `Class.Model` to `StarterCharacter` and moving the `Class.Model` to the StarterPlayer folder in your Explorer before play testing.
 
-- Save the model to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/publishing/creator-store.md) to share or use within any of your experiences.
+- Save the model to your [Toolbox](../../projects/assets/toolbox.md) or make it public on the [Creator Store](../../production/creator-store.md) to share or use within any of your experiences.
