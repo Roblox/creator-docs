@@ -141,9 +141,9 @@ properties:
 
       local isUsingVR = UserInputService.VREnabled
       if isUsingVR then
-          print("User is using a VR headset!")
+      	print("User is using a VR headset!")
       else
-          print("User is not using a VR headset!")
+      	print("User is not using a VR headset!")
       end
       ```
 
