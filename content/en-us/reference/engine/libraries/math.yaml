@@ -11,7 +11,8 @@ properties:
     type: number
     summary: |
       Returns a value larger than or equal to any other numerical value (about
-      2<sup>1024</sup>).
+      2<sup>1024</sup>). 
+      Note that in Lua, you can also denote this value by performing a division by zero, such as `1 / 0`, which results in positive (+) infinity (+inf).
     description: |
       Returns a value larger than or equal to any other numerical value (about
       2<sup>1024</sup>).
