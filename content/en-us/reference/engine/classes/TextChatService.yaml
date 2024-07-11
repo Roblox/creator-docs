@@ -232,8 +232,8 @@ methods:
       non-player characters (NPCs) if you specify a part within the character,
       such as its head.
 
-      Note that this method is only available for use in `Class.LocalScript`, or in a
-      `Class.Script` with `Class.Script.RunContext|RunContext` of
+      Note that this method is only available for use in `Class.LocalScript`, or
+      in a `Class.Script` with `Class.Script.RunContext|RunContext` of
       `Enum.RunContext.Client`.
     code_samples: []
     parameters:

@@ -750,8 +750,8 @@ methods:
       universe. This method returns a `Class.BanHistoryPages` instance that
       inherits from `Class.Pages`.
 
-      This function call will only succeed on production game servers and not
-      on client devices or in Studio.
+      This function call will only succeed on production game servers and not on
+      client devices or in Studio.
 
       This API uses the
       [User Restrictions Open Cloud API](/cloud/reference/UserRestriction). You

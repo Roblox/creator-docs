@@ -871,8 +871,10 @@ events:
 
       This event fires under the following conditions:
 
-      - If the user presses <kbd>F10</kbd>, this event fires with a `betterQuality` argument of `true`.
-      - If the user presses <kbd>Shift</kbd><kbd>F10</kbd>, this event fires with a `betterQuality` argument of `false`.
+      - If the user presses <kbd>F10</kbd>, this event fires with a
+        `betterQuality` argument of `true`.
+      - If the user presses <kbd>Shift</kbd><kbd>F10</kbd>, this event fires
+        with a `betterQuality` argument of `false`.
 
       This event does not provide the current graphics quality level or cover
       all updates to the graphics quality. For example, changes made in the core

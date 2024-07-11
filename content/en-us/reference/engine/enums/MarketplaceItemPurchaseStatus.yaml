@@ -1,73 +1,94 @@
 name: MarketplaceItemPurchaseStatus
 type: enum
-summary: 'The status of the item purchase through MarketplaceService.'
-description: 'The status of the item purchase through MarketplaceService.'
+summary: |
+  The status of the item purchase through MarketplaceService.
+description: |
+  The status of the item purchase through MarketplaceService.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Success
-    summary: 'The item is purchased successfully.'
+    summary: |
+      The item is purchased successfully.
     value: 1
     tags: []
     deprecation_message: ''
   - name: SystemError
-    summary: 'Unable to purchase item due to Roblox system error.'
+    summary: |
+      Unable to purchase item due to Roblox system error.
     value: 2
     tags: []
     deprecation_message: ''
   - name: AlreadyOwned
-    summary: 'Unable to purchase item because user already owns the item. Users can only own one copy of non-limited item.'
+    summary: |
+      Unable to purchase item because user already owns the item. Users can only
+      own one copy of non-limited item.
     value: 3
     tags: []
     deprecation_message: ''
   - name: InsufficientRobux
-    summary: 'Unable to purchase item because of insufficient Robux.'
+    summary: |
+      Unable to purchase item because of insufficient Robux.
     value: 4
     tags: []
     deprecation_message: ''
   - name: QuantityLimitExceeded
-    summary: 'User has reached the max quantity allowed per user set by the creator for limited items.'
+    summary: |
+      User has reached the max quantity allowed per user set by the creator for
+      limited items.
     value: 5
     tags: []
     deprecation_message: ''
   - name: QuotaExceeded
-    summary: 'The user has exceeded our [purchase request limit](../../../art/marketplace/marketplace-fees-and-commissions.md#rate-limits).'
+    summary: |
+      The user has exceeded our
+      [purchase request limit](../../../art/marketplace/marketplace-fees-and-commissions.md#rate-limits).
     value: 6
     tags: []
     deprecation_message: ''
   - name: NotForSale
-    summary: 'Item is not for sale.'
+    summary: |
+      Item is not for sale.
     value: 7
     tags: []
     deprecation_message: ''
   - name: NotAvailableForPurchaser
-    summary: 'This item is restricted to a group of users and the purchaser is not in this group.'
+    summary: |
+      This item is restricted to a group of users and the purchaser is not in
+      this group.
     value: 8
     tags: []
     deprecation_message: ''
   - name: PriceMismatch
-    summary: 'The provided price does not match the item price. Most likely the price changed since displayed to the user. '
+    summary: |
+      The provided price does not match the item price. Most likely the price
+      changed since displayed to the user.
     value: 9
     tags: []
     deprecation_message: ''
   - name: SoldOut
-    summary: 'The item is sold out.'
+    summary: |
+      The item is sold out.
     value: 10
     tags: []
     deprecation_message: ''
   - name: PurchaserIsSeller
-    summary: 'The purchaser is the same user as the seller, for a resale purchase.'
+    summary: |
+      The purchaser is the same user as the seller, for a resale purchase.
     value: 11
     tags: []
     deprecation_message: ''
   - name: InsufficientMembership
-    summary: 'The user does not have sufficient premium membership to purchase this item.'
+    summary: |
+      The user does not have sufficient premium membership to purchase this
+      item.
     value: 12
     tags: []
     deprecation_message: ''
   - name: PlaceInvalid
-    summary: 'The item is not allowed to be sold in the place.'
+    summary: |
+      The item is not allowed to be sold in the place.
     value: 13
     tags: []
     deprecation_message: ''

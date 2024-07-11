@@ -217,7 +217,7 @@ methods:
       variety of functionality defined by Roblox's core scripts, such as sending
       notifications, toggling notifications for badges/points, defining a
       callback for the reset button, or toggling the topbar.
-      
+
       The first parameter is a string that selects the functionality with which
       the call will interact. It may be necessary to call this method multiple
       times using `Global.LuaGlobals.pcall()` in case the respective core script

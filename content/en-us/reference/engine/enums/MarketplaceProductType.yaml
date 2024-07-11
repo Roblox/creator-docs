@@ -1,18 +1,24 @@
 name: MarketplaceProductType
 type: enum
-summary: 'Indicates if an avatar item is an asset or bundle. Used with MarketplaceService and similar services.'
-description: 'Indicates if an avatar item is an asset or bundle. Used with `Class.MarketplaceService` and similar services.'
+summary: |
+  Indicates if an avatar item is an asset or bundle. Used with
+  MarketplaceService and similar services.
+description: |
+  Indicates if an avatar item is an asset or bundle. Used with
+  `Class.MarketplaceService` and similar services.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: AvatarAsset
-    summary: 'Avatar asset'
+    summary: |
+      Avatar asset
     value: 1
     tags: []
     deprecation_message: ''
   - name: AvatarBundle
-    summary: 'Avatar bundle'
+    summary: |
+      Avatar bundle
     value: 2
     tags: []
     deprecation_message: ''

@@ -2253,6 +2253,19 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: Humanoid.ApplyDescriptionFinished
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: description
+        type: HumanoidDescription
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: Humanoid.Climbing
     summary: |
       Fires when the speed at which a `Class.Humanoid` is climbing changes.

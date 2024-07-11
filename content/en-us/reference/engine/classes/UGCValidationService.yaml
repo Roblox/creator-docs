@@ -14,6 +14,26 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: UGCValidationService:CalculateEditableMeshTotalSurfaceArea
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: editableMesh
+        type: EditableMesh
+        default:
+        summary: ''
+      - name: meshScale
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: UGCValidationService:ReportUGCValidationTelemetry
     summary: ''
     description: ''
@@ -31,6 +51,27 @@ methods:
       - type: void
         summary: ''
     tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: UGCValidationService:CalculateTotalSurfaceArea
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: meshId
+        type: string
+        default:
+        summary: ''
+      - name: meshScale
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: float
+        summary: ''
+    tags:
+      - Yields
     deprecation_message: ''
     security: RobloxScriptSecurity
     thread_safety: Unsafe
