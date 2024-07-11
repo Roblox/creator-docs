@@ -25,15 +25,11 @@ deprecation_message: ''
 properties:
   - name: LocalizationService.RobloxLocaleId
     summary: |
-      The locale id used for localizing core and internal features such as core
-      scripts and GUI.
+      The locale ID used for localizing core and internal features.
     description: |
-      This property shows the locale id used for the localization of core and
-      internal features such as `Class.CoreGui` and
-      `Class.CoreScript|CoreScripts`.
-
-      This will return a string with the two letter code (for example, "en-us")
-      for the locale.
+      This property shows the locale ID used for the localization of core and
+      internal features such as `Class.CoreGui`. Returns a string with the two
+      letter code (for example, `en-us`) for the locale.
     code_samples:
     type: string
     tags:
@@ -75,10 +71,10 @@ methods:
   - name: LocalizationService:GetCorescriptLocalizations
     summary: |
       Returns a list of `Class.LocalizationTable` objects used for localizing
-      CoreScripts.
+      core scripts.
     description: |
       Returns a list of `Class.LocalizationTable` objects used for localizing
-      CoreScripts.
+      core scripts.
     code_samples:
     parameters: []
     returns:

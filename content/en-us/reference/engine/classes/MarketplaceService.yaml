@@ -60,12 +60,12 @@ methods:
         summary: |
           An array of avatar items to be included in the bulk purchase.
 
-          Each line item has structure of following:
+          Each line item contains the following structure:
 
           ```lua
           {
-          Type: MarketplaceProductType,
-          Id: string
+            Type: MarketplaceProductType,
+            Id: string
           }
           ```
 

@@ -2841,7 +2841,7 @@ events:
       `Class.UserInputService.TouchEnabled|TouchEnabled` device.
 
       For instance, the snippet below prints how much the camera zoom scale has
-      changed since the beginning of the touch pinch,
+      changed since the beginning of the touch pinch.
 
       ```lua
       local UserInputService = game:GetService("UserInputService")
@@ -2855,15 +2855,8 @@ events:
       fire, see `Class.UserInputService.TouchEnabled`.
 
       This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-
-      `Class.CoreScript|Core scripts` use similar logic to zoom the user's
-      camera when a user pinches their fingers on a mobile device. Best practice
-      for this event is to use it when creating a mobile camera system to
-      override the default core script.
+      example, inputs will not be captured when the window is minimized. As this
+      event only fires locally, it can only be used in a `Class.LocalScript`.
 
       See also:
 
