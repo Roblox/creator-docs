@@ -78,7 +78,7 @@ First, you'll need a function to handle when user input is detected.
 
    ```lua
    local function onAction(actionName, inputState, inputObject)
-   if actionName == RELOAD_ACTION and inputState == Enum.UserInputState.Begin then
+   	if actionName == RELOAD_ACTION and inputState == Enum.UserInputState.Begin then
    		tool.TextureId = "rbxassetid://6593020923"
    		task.wait(2)
    		tool.TextureId = "rbxassetid://92628145"

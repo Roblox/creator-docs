@@ -89,7 +89,7 @@ local Players = game:GetService("Players")
 local function onCharacterAdded(character)
 	local humanoid = character:WaitForChild("Humanoid")
 	local animateScript = character:WaitForChild("Animate")
-	animateScript.mood.Animation1.AnimationId = "rbxassetid://7715145252"    -- Mood
+	animateScript.mood.Animation1.AnimationId = "rbxassetid://7715145252" -- Mood
 end
 
 local function onPlayerAdded(player)
@@ -106,10 +106,10 @@ You can also use the `Class.HumanoidDescription` system to find user characters 
 ```lua
 local humanoid = player.Character and player.Character:FindFirstChildWhichIsA("Humanoid")
 if humanoid then
-    local descriptionClone = humanoid:GetAppliedDescription()
-    descriptionClone.IdleAnimation = 10725833199
-    -- Apply modified "descriptionClone" to humanoid
-    humanoid:ApplyDescription(descriptionClone)
+	local descriptionClone = humanoid:GetAppliedDescription()
+	descriptionClone.IdleAnimation = 10725833199
+	-- Apply modified "descriptionClone" to humanoid
+	humanoid:ApplyDescription(descriptionClone)
 end
 ```
 
