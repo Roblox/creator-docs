@@ -58,4 +58,4 @@ The engine emphasizes best performance by automatically assigning assemblies to 
 
 ## Sleep System
 
-When an assembly is not moving or accelerating, the Roblox physics engine improves performance by automatically stops simulating the assembly. See [Sleep System](../physics/sleep.md) for a detailed description of the sleep system.
+When an assembly is not moving or accelerating, the Roblox physics engine improves performance by automatically stops simulating the assembly. See [Sleep System](../physics/sleep-system.md) for a detailed description of the sleep system.
