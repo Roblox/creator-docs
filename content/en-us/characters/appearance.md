@@ -211,13 +211,13 @@ local accessoryTable = {
 	{
 		Order = 1,
 		AssetId = 6984769289,
-		AccessoryType = Enum.AccessoryType.Sweater,
+		AccessoryType = Enum.AccessoryType.Sweater
 	},
 	{
 		Order = 2,
 		AssetId = 6984767443,
-		AccessoryType = Enum.AccessoryType.Jacket,
-	},
+		AccessoryType = Enum.AccessoryType.Jacket
+	}
 }
 
 humanoidDescription:SetAccessories(accessoryTable, false)
