@@ -47,7 +47,7 @@ During testing, it may be useful to visualize frequencies for simulated parts. T
    src="../assets/physics/adaptive-timestepping/Settings-Are-Timesteps-Shown.png"
    width="500" />
 
-Once enabled, simulated parts will be outlined by their current simulation rate. If a part stops being simulated, either via the [sleep system](https://blog.roblox.com/2020/07/roblox-physics-building-better-sleep-system/) or a network ownership change, the part will no longer be outlined.
+Once enabled, simulated parts will be outlined by their current simulation rate. If a part stops being simulated, either via the [sleep system](../physics/sleep.md) or a network ownership change, the part will no longer be outlined.
 
 <img src="../assets/physics/adaptive-timestepping/Diagram-Labels.png" width="100%" />
 
