@@ -149,10 +149,10 @@ To save player data in the data store:
 
    -- Set data store key
    local setSuccess, errorMessage = pcall(function()
-       goldStore:SetAsync(playerUserID, playerGold)
+   	goldStore:SetAsync(playerUserID, playerGold)
    end)
    if not setSuccess then
-       warn(errorMessage)
+   	warn(errorMessage)
    end
    ```
 
@@ -167,7 +167,7 @@ In the sample above, the status (`setSuccess`) is tested on line 12 and, if `Cla
 
 <Alert severity="warning">
 
-Be careful to not send requests to data stores too often. Requests on a data store key are placed in a queue and, if the queue fills up, additional requests will be [dropped](../../../cloud-services/datastores.md#error-codes).
+Be careful to not send requests to data stores too often. Requests on a data store key are placed in a queue and, if the queue fills up, additional requests will be [dropped](../../../cloud-services/data-stores/index.md#error-codes).
 
 A common mistake may be updating a player's gold data every time they collect a gold piece. Instead, store the player's gold in a variable and only update the data store occasionally, such as with a periodic auto-save and/or when the player leaves the game.
 
@@ -179,18 +179,18 @@ A common mistake may be updating a player's gold data every time they collect a 
 
    ```lua
    local setSuccess, errorMessage = pcall(function()
-       goldStore:SetAsync(playerUserID, playerGold)
+   	goldStore:SetAsync(playerUserID, playerGold)
    end)
    if not setSuccess then
-       warn(errorMessage)
+   	warn(errorMessage)
    end
 
    -- Read data store key
    local getSuccess, currentGold = pcall(function()
-       return goldStore:GetAsync(playerUserID)
+   	return goldStore:GetAsync(playerUserID)
    end)
    if getSuccess then
-       print(currentGold)
+   	print(currentGold)
    end
    ```
 

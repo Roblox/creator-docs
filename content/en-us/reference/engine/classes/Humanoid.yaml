@@ -361,7 +361,7 @@ properties:
       local Humanoid = route.to.humanoid
 
       Humanoid:GetPropertyChangedSignal("FloorMaterial"):Connect(function()
-          print("New value for FloorMaterial: " .. tostring(Humanoid.FloorMaterial))
+      	print("New value for FloorMaterial: " .. tostring(Humanoid.FloorMaterial))
       end)
       ```
 
@@ -2250,6 +2250,19 @@ events:
           The `Class.AnimationTrack` that has begun playing.
     tags:
       - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Humanoid.ApplyDescriptionFinished
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: description
+        type: HumanoidDescription
+        default:
+        summary: ''
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

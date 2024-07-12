@@ -175,11 +175,11 @@ The example code below plays the **Equip** sound when the tool is equipped and t
    local tool = script.Parent
 
    local function toolEquipped()
-       tool.Handle.Equip:Play()
+   	tool.Handle.Equip:Play()
    end
 
    local function toolActivated()
-       tool.Handle.Activate:Play()
+   	tool.Handle.Activate:Play()
    end
 
    tool.Equipped:Connect(toolEquipped)

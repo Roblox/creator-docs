@@ -7,9 +7,25 @@ description: ''
 code_samples: []
 inherits:
   - UIComponent
-tags: []
+tags:
+  - NotBrowsable
 deprecation_message: ''
 properties:
+  - name: UIDragDetector.ActivatedCursorIcon
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: true
+      can_save: true
   - name: UIDragDetector.BoundingUI
     summary: ''
     description: ''
@@ -22,6 +38,21 @@ properties:
       write: None
     thread_safety: ReadSafe
     category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.CursorIcon
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
     serialization:
       can_load: true
       can_save: true

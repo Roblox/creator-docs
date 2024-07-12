@@ -153,7 +153,7 @@ To visualize collision fidelity in Studio, open **File** > **Studio Settings** >
   </TabItem>
 </Tabs>
 
-For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../projects/performance-optimization/computation.md#physics). For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
+For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../performance-optimization/improving.md#physics-computation). For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
 
 ## Rigging and Skinning Meshes
 

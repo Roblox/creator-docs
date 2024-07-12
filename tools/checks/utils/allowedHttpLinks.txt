@@ -199,6 +199,8 @@ https://steameducate.com/
 https://steamiowacity.org/
 https://streetcode.org/
 https://stripe.com/docs/connect/cross-border-payouts
+https://docs.stripe.com/payouts
+https://docs.stripe.com/currencies
 https://docs.stripe.com/currencies/conversions
 https://studio.code.org/s/csp-create-2018/stage/2/puzzle/1?viewAs=Teacher
 https://substance3d.adobe.com/documentation/integrations/roblox-232292566.html
@@ -389,6 +391,7 @@ https://www.wizkidlearning.com/
 https://www.wowschool.pl/
 https://www.youthtechinc.com/
 https://www.youtube.com/@RobloxLevelUp
+https://www.youtube-nocookie.com/embed/V1uFFUUCLpo
 https://www.youtube-nocookie.com/embed/2My8jE47clI
 https://www.youtube-nocookie.com/embed/0fAhhoXK12o
 https://www.youtube-nocookie.com/embed/0shiHaGe87s?si=xILCuyVy8dIviZ2U
@@ -477,8 +480,10 @@ https://www.youtube.com/watch?v=f2pTkW-1JkE
 https://www.youtube.com/watch?v=fx33sPEAZEk
 https://www.youtube.com/watch?v=iHJ49zbGOW8&
 https://www.youtube.com/watch?v=j918PoWWaB0
+https://www.youtube-nocookie.com/embed/llR_pNlJDQw
 https://youtu.be/OEmFocfE0Xs
 https://en.wikipedia.org/wiki/Exponential_backoff
+https://en.wikipedia.org/wiki/Moment_of_inertia
 https://en.wikipedia.org/wiki/Shard_(database_architecture)
 https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch
 https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF

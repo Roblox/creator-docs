@@ -3,13 +3,11 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  The base class for all objects which contain Lua code. `Class.Script`,
-  `Class.LocalScript`, `Class.ModuleScript` and `Class.CoreScript` all inherit
-  from LuaSourceContainer.
+  The base class for all objects which contain Lua code.
 description: |
   The base class for all objects which contain Lua code. `Class.Script`,
-  `Class.LocalScript`, `Class.ModuleScript` and `Class.CoreScript` all inherit
-  from LuaSourceContainer.
+  `Class.LocalScript`, and `Class.ModuleScript` all inherit from
+  **LuaSourceContainer**.
 code_samples:
 inherits:
   - Instance

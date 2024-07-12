@@ -210,25 +210,22 @@ methods:
     thread_safety: Unsafe
   - name: StarterGui:SetCore
     summary: |
-      Allows you to perform certain interactions with Roblox's
-      `Class.CoreScript|CoreScripts`.
+      Allows you to perform certain interactions with Roblox's core scripts.
     description: |
-      SetCore (not to be confused with
-      `Class.StarterGui:SetCoreGuiEnabled()|SetCoreGuiEnabled`) exposes a
-      variety of functionality defined by Roblox's
-      `Class.CoreScript|CoreScripts`, such as sending notifications, toggling
-      notifications for badges/points, defining a callback for the reset button
-      or toggling the topbar. The first parameter to SetCore is a string that
-      selects the functionality with which the call will interact: a CoreScript
-      must have registered such a string already (if one hasn't, an error is
-      raised). It may be necessary to make multiple calls to SetCore using
-      `pcall` in case the respective CoreScript has yet to load (or if it has
-      been disabled entirely).
+      This method (not to be confused with
+      `Class.StarterGui:SetCoreGuiEnabled()|SetCoreGuiEnabled()`) exposes a
+      variety of functionality defined by Roblox's core scripts, such as sending
+      notifications, toggling notifications for badges/points, defining a
+      callback for the reset button, or toggling the topbar.
+
+      The first parameter is a string that selects the functionality with which
+      the call will interact. It may be necessary to call this method multiple
+      times using `Global.LuaGlobals.pcall()` in case the respective core script
+      has not yet loaded (or if it has been disabled entirely).
 
       The following table describes the strings that may be accepted as the
-      first parameter in a call to SetCore. The parameters that should follow
-      are dependent on the functionality that will be used and are described in
-      sub-tables.
+      first parameter. The parameters that should follow are dependent on the
+      functionality that will be used and are described in sub-tables.
 
       #### ChatActive
 
@@ -392,75 +389,6 @@ methods:
           <td>The TextSize of the message</td>
         </tr>
         </tbody>
-      </table>
-
-      #### ChatWindowSize
-
-      Determines the `Class.GuiObject.Size|size` of the chat window.
-
-      <table>
-      	<thead>
-      		<tr>
-      			<th>Name</th>
-      			<th>Type</th>
-      			<th>Default</th>
-      			<th>Description</th>
-          </tr>
-      </thead>
-      <tbody>
-      	<tr>
-          <td><code>windowSize</code></td>
-          <td>UDim2</td>
-          <td>Required</td>
-          <td>Determines the size of the chat window</td>
-        </tr>
-        </tbody>
-      </table>
-
-      #### ChatWindowPosition
-
-      Determines the `Class.GuiObject.Position|position` of the chat window.
-
-      <table>
-      	<thead>
-      		<tr>
-      			<th>Name</th>
-      			<th>Type</th>
-      			<th>Default</th>
-      			<th>Description</th>
-          </tr>
-      </thead>
-      <tbody>
-      	<tr>
-          <td><code>windowPosition</code></td>
-          <td>UDim2</td>
-          <td>Required</td>
-          <td>Determines the position of the chat window</td>
-        </tr>
-      </tbody>
-      </table>
-
-      #### ChatBarDisabled
-
-      Determines whether the player is able to type a message into the chat.
-
-      <table>
-      	<thead>
-      		<tr>
-      			<th>Name</th>
-      			<th>Type</th>
-      			<th>Default</th>
-      			<th>Description</th>
-          </tr>
-      </thead>
-      <tbody>
-      	<tr>
-          <td><code>disabled</code></td>
-          <td>bool</td>
-          <td>Required</td>
-          <td>Determines whether the chat's TextBox input is visible.</td>
-        </tr>
-      </tbody>
       </table>
 
       #### SendNotification
@@ -923,9 +851,7 @@ methods:
         type: string
         default:
         summary: |
-          Selects the functionality with which the call will interact: a
-          CoreScript must have registered such a string already (if one hasn't,
-          an error is raised).
+          Selects the functionality with which the call will interact.
       - name: value
         type: Variant
         default:
@@ -973,16 +899,15 @@ methods:
     thread_safety: Unsafe
   - name: StarterGui:GetCore
     summary: |
-      Returns a variable that has been specified by a Roblox `Class.CoreScript`.
+      Returns a variable that has been specified by a Roblox core script.
     description: |
-      GetCore returns data set or made available by Roblox's
-      `Class.CoreScript|CoreScripts`. The first and only parameter is a string
-      that selects the information to be fetched. The following sections
-      describe the strings and the data they return by this function.
+      This method returns data set or made available by Roblox's core scripts.
+      The first and only parameter is a string that selects the information to
+      be fetched. The following sections describe the strings and the data they
+      return by this function.
 
-      Each of these is registered by a CoreScript and calling this function may
-      yield. Many of these also register an equivalent
-      `Class.StarterGui:SetCore()|SetCore` function (these are marked with an
+      Calling this method may yield. Many of these also register an equivalent
+      `Class.StarterGui:SetCore()|SetCore()` function (these are marked with an
       asterisk).
 
       #### PointsNotificationsActive\*

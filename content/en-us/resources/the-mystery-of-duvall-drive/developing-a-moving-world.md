@@ -73,7 +73,7 @@ In our demo, portions of the world are cloned from the `Class.ServerStorage` int
 
 ```lua
 local function Init()
-	for _,obj in CollectionService:GetTagged("LocalSpaceRotation") do
+	for _, obj in CollectionService:GetTagged("LocalSpaceRotation") do
 		if obj:IsDescendantOf(workspace) then
 			SetupObj(obj)
 		end
@@ -172,7 +172,7 @@ In addition, we run the sequence to set textures, positions, and brightness, run
 ```lua
 beam.Texture = textures[info.textIdx]
 
-beamPart.Position = Vector3.new( info.center.X + og_center.X, og_center.Y, info.center.Y + og_center.Z )
+beamPart.Position = Vector3.new(info.center.X + og_center.X, og_center.Y, info.center.Y + og_center.Z)
 
 -- Wipe
 beam.Brightness = 10
@@ -196,7 +196,6 @@ end
 task.wait(info.waitTillFlashes)
 
 -- and so on
-
 ```
 
 To check if a player is indoors we use a helper `inVolumesCheckerFunc` function, which goes over pre-placed volumes approximating indoor areas, and checks if player position is inside any of them (PointInABox). We could have used touch-based detection, but we found out that when a player takes a seat inside the volume, they are no longer "touching" the volume. Testing a point in a few boxes is simpler, and we do it only when a player moves far enough from the previously tested position.
@@ -431,7 +430,7 @@ local trigger = model.Trigger
 local left = model.TargetL_Closed
 local right = model.TargetR_Closed
 
-local tweenInfo = TweenInfo.new (
+local tweenInfo = TweenInfo.new(
 	model.Speed.Value, --Time/Speed of Door Tween
 	Enum.EasingStyle.Quart, --Easing Style
 	Enum.EasingDirection.InOut, --EasingDirection
@@ -493,7 +492,7 @@ tweenLClose.Completed:Connect(tweenCloseCompleted)
 
 local function touched(otherPart)
 	if otherPart.Name == "HumanoidRootPart" then
-		local player = Players:FindFirstChild(otherPart.Parent.Name)
+		local player = Players:GetPlayerFromCharacter(otherPart.Parent)
 		if player then
 			--print("touch")
 			playersNear[player] = 1
