@@ -25,7 +25,7 @@ Rather than Roblox's cloud-first approach, Rojo allows for a "file system-first"
 
 You can manually download and run a Rojo binary, but that approach runs the risk of different developers on your team using different Rojo versions. A better solution is to use a tool manager like [Foreman](https://github.com/Roblox/foreman), which uses a configuration file—a list of repositories and versions—to make the installation and upgrade process consistent across machines.
 
-Because it manages your baseline development environment rather the packages within your project, Foreman is more akin to [nvm](https://github.com/nvm-sh/nvm) than [npm](https://www.npmjs.com/), but the comparison isn't perfect. A simple `foreman.toml` file looks like this:
+Because it manages your baseline development environment rather than the packages within your project, Foreman is more akin to [nvm](https://github.com/nvm-sh/nvm) than [npm](https://www.npmjs.com/), but the comparison isn't perfect. A simple `foreman.toml` file looks like this:
 
 ```toml
 [tools]
