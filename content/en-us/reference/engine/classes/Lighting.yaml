@@ -919,10 +919,10 @@ methods:
 
       	local minutesNormalised = minutesAfterMidnight % (60 * 24)
       	local seconds = minutesNormalised * 60
-      	local hours = string.format("%02.f", seconds//3600)
-      	local mins = string.format("%02.f", math.floor(seconds/60 - (hours*60)))
-      	local secs = string.format("%02.f", math.floor(seconds - hours*3600 - mins *60))
-      	local timeString = hours..":"..mins..":"..secs
+      	local hours = string.format("%02.f", seconds // 3600)
+      	local mins = string.format("%02.f", math.floor(seconds / 60 - (hours * 60)))
+      	local secs = string.format("%02.f", math.floor(seconds - hours * 3600 - mins * 60))
+      	local timeString = hours .. ":" .. mins .. ":" .. secs
 
       	Lighting.TimeOfDay = timeString
 

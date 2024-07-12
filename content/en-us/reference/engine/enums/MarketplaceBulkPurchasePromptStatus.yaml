@@ -1,23 +1,29 @@
 name: MarketplaceBulkPurchasePromptStatus
 type: enum
-summary: 'The status of the BulkPurchasePrompt after player interaction.'
-description: 'The status of the BulkPurchasePrompt after player interaction.'
+summary: |
+  The status of the BulkPurchasePrompt after player interaction.
+description: |
+  The status of the BulkPurchasePrompt after player interaction.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Completed
-    summary: 'User confirmed the purchase and the transaction has been processed.'
+    summary: |
+      User confirmed the purchase and the transaction has been processed.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Aborted
-    summary: 'User closed the prompt.'
+    summary: |
+      User closed the prompt.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Error
-    summary: 'User confirmed the purchase, but the transaction cannot be sent to the backend for processing.'
+    summary: |
+      User confirmed the purchase, but the transaction cannot be sent to the
+      backend for processing.
     value: 3
     tags: []
     deprecation_message: ''

@@ -142,9 +142,9 @@ properties:
 
       local gyroIsEnabled = UserInputService.GyroscopeEnabled
       if gyroIsEnabled then
-          print("Gyroscope is enabled!")
+      	print("Gyroscope is enabled!")
       else
-          print("Gyroscope is not enabled!")
+      	print("Gyroscope is not enabled!")
       end
       ```
 
@@ -333,9 +333,9 @@ properties:
       local UserInputService = game:GetService("UserInputService")
 
       if UserInputService.MouseEnabled then
-          print("The user's device has an available mouse!")
+      	print("The user's device has an available mouse!")
       else
-          print("The user's device does not have an available mouse!")
+      	print("The user's device does not have an available mouse!")
       end
       ```
 
@@ -605,9 +605,9 @@ properties:
 
       local isUsingVR = UserInputService.VREnabled
       if isUsingVR then
-          print("User is using a VR headset!")
+      	print("User is using a VR headset!")
       else
-          print("User is not using a VR headset!")
+      	print("User is not using a VR headset!")
       end
       ```
 
@@ -2359,7 +2359,7 @@ events:
       local UserInputService = game:GetService("UserInputService")
 
       function onJumpRequest()
-          print("Jump!")
+      	print("Jump!")
       end
 
       UserInputService.JumpRequest:Connect(onJumpRequest)
@@ -2546,7 +2546,7 @@ events:
       local UserInputService = game:GetService("UserInputService")
 
       function TouchEnded(touch, gameProcessedEvent)
-      	print("Touch ended at "..tostring(touch.Position))
+      	print("Touch ended at " .. tostring(touch.Position))
       end
 
       UserInputService.TouchEnded:Connect(TouchEnded)
@@ -2619,7 +2619,7 @@ events:
       local UserInputService = game:GetService("UserInputService")
 
       function TouchLongPress(TouchPositions, state, gameProcessedEvent)
-      	print("Long press event fired. State of press: "..tostring(state))
+      	print("Long press event fired. State of press: " .. tostring(state))
       end
 
       UserInputService.TouchLongPress:Connect(TouchLongPress)
@@ -2770,7 +2770,7 @@ events:
       local UserInputService = game:GetService("UserInputService")
 
       UserInputService.TouchPan:Connect(function(touchPositions, totalTranslation, velocity, state, gameProcessedEvent)
-      	print("Speed of touch drag: "..tostring(velocity))
+      	print("Speed of touch drag: " .. tostring(velocity))
       end)
       ```
 
@@ -2841,13 +2841,13 @@ events:
       `Class.UserInputService.TouchEnabled|TouchEnabled` device.
 
       For instance, the snippet below prints how much the camera zoom scale has
-      changed since the beginning of the touch pinch,
+      changed since the beginning of the touch pinch.
 
       ```lua
       local UserInputService = game:GetService("UserInputService")
 
       UserInputService.TouchPinch:Connect(function(touchPositions, scale, velocity, state, gameProcessedEvent)
-      	print("Scale difference since beginning of pinch: "..tostring(scale))
+      	print("Scale difference since beginning of pinch: " .. tostring(scale))
       end)
       ```
 
@@ -2855,15 +2855,8 @@ events:
       fire, see `Class.UserInputService.TouchEnabled`.
 
       This event only fires when the Roblox client window is in focus. For
-      example, inputs will not be captured when the window is minimized.
-
-      As this event only fires locally, it can only be used in a
-      `Class.LocalScript`.
-
-      `Class.CoreScript|Core scripts` use similar logic to zoom the user's
-      camera when a user pinches their fingers on a mobile device. Best practice
-      for this event is to use it when creating a mobile camera system to
-      override the default core script.
+      example, inputs will not be captured when the window is minimized. As this
+      event only fires locally, it can only be used in a `Class.LocalScript`.
 
       See also:
 
@@ -2930,7 +2923,7 @@ events:
       local UserInputService = game:GetService("UserInputService")
 
       UserInputService.TouchRotate:Connect(function(touchPositions, rotation, velocity, state, gameProcessedEvent)
-      	print("Camera has rotated "..tostring(rotation).." degrees!")
+      	print("Camera has rotated " .. tostring(rotation) .. " degrees!")
       end)
       ```
 

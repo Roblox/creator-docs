@@ -36,16 +36,21 @@ deprecation_message: ''
 properties: []
 methods:
   - name: MarketplaceService:PromptBulkPurchase
-    summary: 'Prompts a user to purchase multiple avatar items with the given assetId or bundleIds.'
+    summary: |
+      Prompts a user to purchase multiple avatar items with the given assetId or
+      bundleIds.
     description: |
-      Prompts a user to purchase multiple avatar items with the given assetId/bundleIds. This does not work with non-Avatar items.
+      Prompts a user to purchase multiple avatar items with the given
+      assetId/bundleIds. This does not work with non-Avatar items.
 
-      `Class.MarketplaceService.PromptBulkPurchase()` only allows prompting from server scripts.
+      `Class.MarketplaceService.PromptBulkPurchase()` only allows prompting from
+      server scripts.
 
-      For limited items, original copies are prompted until they run out, regardless of the price. Once original copies are out, resale copies are prompted.
+      For limited items, original copies are prompted until they run out,
+      regardless of the price. Once original copies are out, resale copies are
+      prompted.
 
       A maximum of 20 items can be added to a single bulk purchase prompt.
-
     code_samples:
       - Prompt-Bulk-Purchase-Local
       - Prompt-Bulk-Purchase-Server
@@ -53,30 +58,32 @@ methods:
       - name: player
         type: Player
         default:
-        summary: 'The player to prompt to purchase items.'
+        summary: |
+          The player to prompt to purchase items.
       - name: lineItems
         type: Array
         default:
         summary: |
           An array of avatar items to be included in the bulk purchase.
 
-          Each line item has structure of following:
+          Each line item contains the following structure:
 
           ```lua
           {
-          Type: MarketplaceProductType,
-          Id: string
+            Type: MarketplaceProductType,
+            Id: string
           }
           ```
 
           Each line item contains the following pairs:
+
           - `Type`: The corresponding `Enum.MarketplaceProductType` (Enum).
           - `Id`: The ID of the asset or bundle.
-
       - name: options
         type: Dictionary
         default:
-        summary: 'Not available at this time.'
+        summary: |
+          Not available at this time.
     returns:
       - type: void
         summary: ''
@@ -974,28 +981,35 @@ methods:
     thread_safety: Unsafe
 events:
   - name: MarketplaceService.PromptBulkPurchaseFinished
-    summary: 'Returns when a bulk purchase prompt for avatar items is closed.'
+    summary: |
+      Returns when a bulk purchase prompt for avatar items is closed.
     description: |
-      Returns when a bulk purchase prompt for avatar items is closed. This fires right as the dialog closes, when the player presses "Cancel" at the prompt or "OK" at the success/error message.
+      Returns when a bulk purchase prompt for avatar items is closed. This fires
+      right as the dialog closes, when the player presses "Cancel" at the prompt
+      or "OK" at the success/error message.
 
-      Note: This is not a trusted event from the client. To check if the user owns the items purchased, `Class.MarketplaceService.PlayerOwnsAsset` or `Class.MarketplaceService.PlayerOwnsBundle` can be used.
-
+      Note: This is not a trusted event from the client. To check if the user
+      owns the items purchased, `Class.MarketplaceService.PlayerOwnsAsset` or
+      `Class.MarketplaceService.PlayerOwnsBundle` can be used.
     code_samples:
       - Bulk-Purchase-Finished
     parameters:
       - name: player
         type: Instance
         default:
-        summary: 'The player that was prompted.'
+        summary: |
+          The player that was prompted.
       - name: status
         type: MarketplaceBulkPurchasePromptStatus
         default:
-        summary: 'The status of the bulk purchase.'
+        summary: |
+          The status of the bulk purchase.
       - name: results
         type: Dictionary
         default:
         summary: |
-          The table type containing the line items and their status in the following format:
+          The table type containing the line items and their status in the
+          following format:
 
           ```lua
           {
@@ -1012,9 +1026,11 @@ events:
           ```
 
           Each line item contains the following pairs:
+
           - `Type`: The corresponding `Enum.MarketplaceProductType` (Enum).
           - `Id`: The ID of the asset or bundle (string).
-          - `Status`: The `Enum.MarketplaceItemPurchaseStatus` of the purchase (Enum)
+          - `Status`: The `Enum.MarketplaceItemPurchaseStatus` of the purchase
+            (Enum)
     tags: []
     deprecation_message: ''
     security: None

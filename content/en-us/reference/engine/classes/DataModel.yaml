@@ -871,27 +871,26 @@ events:
 
       This event fires under the following conditions:
 
-      - If the user presses F10, this event fires with a _betterQuality_
-        argument of _true_
-      - If the user presses Shift + F10, this event fires with a _betterQuality_
-        argument of _false_
+      - If the user presses <kbd>F10</kbd>, this event fires with a
+        `betterQuality` argument of `true`.
+      - If the user presses <kbd>Shift</kbd><kbd>F10</kbd>, this event fires
+        with a `betterQuality` argument of `false`.
 
-      GraphicsQualityChangeRequest does not provide the current graphics quality
-      level or cover all updates to the graphics quality. For example, changes
-      made in the core GUI escape menu are not registered. This event is
-      intended to be used by Roblox `Class.CoreScript|Core Scripts` to update
-      the graphics quality and display notifications.
+      This event does not provide the current graphics quality level or cover
+      all updates to the graphics quality. For example, changes made in the core
+      GUI escape menu are not registered.
 
       You can retrieve a user's `Enum.SavedQualitySetting` using
       `Class.UserGameSettings` with the following snippet:
 
-      ```
+      ```lua
       UserSettings():GetService("UserGameSettings").SavedQualityLevel
       ```
 
       If the user's graphics settings are set to automatic then the
-      `Enum.SavedQualitySetting` will be _'Automatic'_. There is currently no
-      way for developers to reliably get the current graphics quality level of a
+      `Enum.SavedQualitySetting` will be
+      `Enum.SavedQualitySetting.Automatic|Automatic`. There is currently no way
+      for developers to reliably get the current graphics quality level of a
       user's machine.
     code_samples:
       - DataModel-GraphicsQualityChangeRequest1

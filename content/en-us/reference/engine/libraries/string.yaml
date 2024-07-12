@@ -46,12 +46,12 @@ functions:
   - name: string.char
     summary: |
       Receives zero or more integers and returns a string with length equal to
-      the number of arguments, in which each character has the internal numerical
-      code equal to its corresponding argument.
+      the number of arguments, in which each character has the internal
+      numerical code equal to its corresponding argument.
     description: |
       Receives zero or more integers and returns a string with length equal to
-      the number of arguments, in which each character has the internal numerical
-      code equal to its corresponding argument.
+      the number of arguments, in which each character has the internal
+      numerical code equal to its corresponding argument.
     parameters:
       - name: ...
         type: int
@@ -67,11 +67,13 @@ functions:
       Looks for the first match of pattern in the string `s` and returns the
       indices of `s` where the occurrence starts and ends.
     description: |
-      Searches for the first occurrence of a pattern in a string and returns the start and end indices of the
-      match. If no match is found, it returns `nil.` You can specify where to start the search using the
-      optional `init` parameter which defaults to 1 and can be negative. An optional `plain` parameter turns
-      off pattern matching, so the function performs a plain substring search; note that if you use `plain`,
-      you must also provide `init.`
+      Searches for the first occurrence of a pattern in a string and returns the
+      start and end indices of the match. If no match is found, it returns
+      `nil.` You can specify where to start the search using the optional `init`
+      parameter which defaults to 1 and can be negative. An optional `plain`
+      parameter turns off pattern matching, so the function performs a plain
+      substring search; note that if you use `plain`, you must also provide
+      `init.`
 
       ```lua
       -- Example 1: Basic usage

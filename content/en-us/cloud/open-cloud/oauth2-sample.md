@@ -17,7 +17,7 @@ After downloading the `.zip` file, extract it to its own folder.
 
 The first step to setting up the app is to [register it on the Roblox website](oauth2-registration.md) and copy the client ID and secret somewhere safe. Then follow the standard registration steps with these settings:
 
-1. Under **Permissions**, add the `openid` and `profile` scopes.
+1. Under **Permissions**, add the `openid`, `profile`, and `universe-messaging-service:publish` scopes.
 1. Under **Redirect URLs**, add the `http://localhost:3000/oauth/callback` redirect. If you want to use a non-default port for your app, specify it here.
 
 ## Setting Environment Variables

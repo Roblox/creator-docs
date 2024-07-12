@@ -328,7 +328,7 @@ methods:
       RemoveKey is the same as making the following call to RemoveEntry:
 
       ```lua
-      LocalizationTable:RemoveEntry(key,"","")
+      LocalizationTable:RemoveEntry(key, "", "")
       ```
     code_samples:
     parameters:

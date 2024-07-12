@@ -14,7 +14,8 @@ properties:
       2<sup>1024</sup>).
     description: |
       Returns a value larger than or equal to any other numerical value (about
-      2<sup>1024</sup>).
+      2<sup>1024</sup>). Dividing a positive number by zero yields this same
+      value.
     tags:
     code_samples:
   - name: math.pi

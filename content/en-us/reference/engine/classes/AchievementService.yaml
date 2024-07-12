@@ -1,0 +1,64 @@
+name: AchievementService
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: AchievementService:IsAvailable
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: AchievementService:GrantAchievement
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: achievementName
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: AchievementService:HasAchieved
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: achievementName
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+events: []
+callbacks: []

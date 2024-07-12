@@ -750,8 +750,8 @@ methods:
       universe. This method returns a `Class.BanHistoryPages` instance that
       inherits from `Class.Pages`.
 
-      This function call will only succeed on production game servers and not
-      on client devices or in Studio.
+      This function call will only succeed on production game servers and not on
+      client devices or in Studio.
 
       This API uses the
       [User Restrictions Open Cloud API](/cloud/reference/UserRestriction). You
@@ -1355,11 +1355,11 @@ events:
       local Players = game:GetService("Players")
 
       Players.PlayerAdded:Connect(function(player)
-        print(player.Name .. " joined the game!")
+      	print(player.Name .. " joined the game!")
       end)
 
       Players.PlayerRemoving:Connect(function(player)
-        print(player.Name .. " left the game!")
+      	print(player.Name .. " left the game!")
       end)
       ```
 

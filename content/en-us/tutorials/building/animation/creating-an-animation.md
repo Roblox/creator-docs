@@ -4,7 +4,7 @@ description: The process for using the Animation Editor to create custom animati
 next: /tutorials/building/animation/scripting-avatar-animations
 ---
 
-Roblox Studio features a built-in Animation Editor to design custom animations for in-game characters. To learn how to use the editor, you'll create an animation of a character doing a victory leap. Once finished, that animation can be played for any Roblox avatar.
+Roblox Studio features a built-in Animation Editor to design custom animations for in-game characters. To learn how to use the Animation Editor, you'll create an animation of a character doing a victory leap. Once finished, that animation can be played for any Roblox avatar.
 
 <video controls muted>
     <source src="../../../assets/tutorials/creating-an-animation/intro-to-animations-victoryPoseFinal.mp4" />
@@ -14,9 +14,9 @@ Roblox Studio features a built-in Animation Editor to design custom animations f
 
 Before animating, you'll create a poseable character rig and name a new animation file in the editor.
 
-1. To create player animations, a character **rig** is needed. In the **Avatar** tab, click on **Rig Builder**.
+1. To create character animations, you need a character **rig**. In the **Avatar** tab, click on **Rig Builder**.
 
-   ![alt](../../../assets/tutorials/creating-an-animation/interface-image-buildRig.png)
+   <img src="../../../assets/studio/general/Avatar-Tab-Rig-Builder.png" width="760" />
 
 2. In the popup, make sure **R15** is selected and then click **Rthro Normal**.
 
@@ -29,7 +29,7 @@ Before animating, you'll create a poseable character rig and name a new animatio
 
    ![alt](../../../assets/tutorials/creating-an-animation/interface-image-openAnimationEditor.png)
 
-4. Select the **rig**. Inside the Animation window, type in a name and click **Create**.
+4. Select the **rig**. Inside the Animation Editor window, type in a name and click **Create**.
 
    ![alt](../../../assets/tutorials/creating-an-animation/creating-an-animation-nameAnimation.png)
 
@@ -75,7 +75,7 @@ The first pose will be the **neutral** pose with the character standing at rest.
    ![alt](../../../assets/tutorials/creating-an-animation/creating-an-animation-clickMenuButton.png)
 
    <Alert severity="warning">
-   Until an animation is exported, that animation is stored locally to the game place. Saving through the animation editor does not save the game itself.
+   Until an animation is published, that animation is stored locally to the game place. Saving through the animation editor does not save the game itself.
    </Alert>
 
 ### Second Pose (Crouch)
@@ -157,21 +157,19 @@ To save time and transition between animation loops, the last pose will be a cop
     <source src="../../../assets/tutorials/creating-an-animation/showFinalVictoryPose_simple.mp4" />
    </video>
 
-## Export the Animation
+## Publish the Animation
 
-A finished animation has to be exported to play it in games.
+A finished animation has to be published to play it in games.
 
-1. Click the **..** button in the upper-left section of the animation editor window.
+1. Click the **ellipsis** button in the upper-left section of the Animation Editor window.
 
    ![alt](../../../assets/tutorials/creating-an-animation/creating-an-animation-clickMenuButton.png)
 
-2. Select **Export**. Follow the dialog boxes and click **Submit**.
+1. From the contextual menu, select **Publish to Roblox**. The **Asset Configuration** window displays.
 
-   <video controls loop muted>
-    <source src="../../../assets/tutorials/creating-an-animation/creating-an-animation-exportAnim.mp4" />
-   </video>
+1. Fill out all applicable fields, then click the **Save** button.
 
-3. Once the animation is exported, copy the ID by clicking the **Copy** icon. You should see a green "ID Copied!" text.
+1. Copy the ID by clicking the **Copy** icon. You should see a green "ID Copied!" text.
 
    ![alt](../../../assets/tutorials/creating-an-animation/creating-an-animation-exportCopy.png)
 
@@ -179,7 +177,7 @@ A finished animation has to be exported to play it in games.
    If you need to find an animation ID, follow the process below.
 
    1. Open the [Animations](https://www.roblox.com/develop?View=24) section of the Create page.
-   2. Locate and click an exported animation.
+   2. Locate and click a published animation.
    3. Copy its ID from the URL in your browser.
 
    ![alt](../../../assets/tutorials/creating-an-animation/ccs2020_t2_exportedAnimationWeb_alt.png)

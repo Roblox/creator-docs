@@ -82,8 +82,9 @@ properties:
     description: |
       The time period to use to aggregate the sort results by, represented by a
       `Enum.CatalogCategoryFilter`. This only applies when the sort type is
-      `Enum.CatalogSortType.MostFavorited` or `Enum.CatalogSortType.BestSelling`.
-      It does not apply for other sort types.
+      `Enum.CatalogSortType.MostFavorited` or
+      `Enum.CatalogSortType.BestSelling`. It does not apply for other sort
+      types.
     code_samples: []
     tags: []
     deprecation_message: ''

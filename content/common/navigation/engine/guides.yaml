@@ -88,8 +88,7 @@ navigation:
             path: /physics/assemblies
           - title: Network Ownership
             path: /physics/network-ownership
-          - title: Character Controllers
-            path: /physics/character-controllers
+          
           #- title: Joints
           #  path: /physics/joints
           - title: Mechanical Constraints
@@ -142,8 +141,12 @@ navigation:
                 path: /physics/constraints/torque
               - title: LineForce
                 path: /physics/constraints/line-force
+          - title: Sleep System
+            path: /physics/sleep-system
           - title: Adaptive Timestepping
             path: /physics/adaptive-timestepping
+          - title: Character Controllers
+            path: /physics/character-controllers
           - title: Roblox Units
             path: /physics/units
       - title: Effects

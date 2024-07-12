@@ -55,17 +55,19 @@ properties:
       `Class.Instance.Changed` event or when user input changes via events such
       as `Class.UserInputService.InputChanged` and
       `Class.GuiObject.InputChanged`.
-      
-      Note that an `Class.InputObject` corresponding to `Enum.UserInputType.MouseButton1`
-      (left click) and `Enum.UserInputType.MouseButton2` (right click) supplied from an
+
+      Note that an `Class.InputObject` corresponding to
+      `Enum.UserInputType.MouseButton1` (left click) and
+      `Enum.UserInputType.MouseButton2` (right click) supplied from an
       `Class.UserInputService.InputBegan|InputBegan` callback will not have its
-      `Class.InputObject.Delta|Delta` or Class.InputObject.Position|Position` updated once
-      created, except for when the mouse input ends. In order to get updated deltas for
-      mouse inputs, you must instead reference an `Class.InputObject` from an
+      `Class.InputObject.Delta|Delta` or `Class.InputObject.Position|Position`
+      updated once created, except for when the mouse input ends. In order to
+      get updated deltas for mouse inputs, you must instead reference an
+      `Class.InputObject` from an
       `Class.UserInputService.InputChanged|InputChanged` callback, or call
-      `Class.UserInputService:GetMouseDelta()|GetMouseDelta()`.
-      However, any `Class.InputObject|InputObjects` corresponding to touch inputs will
-      have their delta and position updated every frame throughout their lifetime.
+      `Class.UserInputService:GetMouseDelta()|GetMouseDelta()`. However, any
+      `Class.InputObject|InputObjects` corresponding to touch inputs will have
+      their delta and position updated every frame throughout their lifetime.
 
       See also:
 
@@ -1919,19 +1921,21 @@ properties:
 
       For `Enum.KeyCode` input, this indicates the position of the player's
       `Class.Mouse`.
-      
-      Note that an `Class.InputObject` corresponding to `Enum.UserInputType.MouseButton1`
-      (left click) and `Enum.UserInputType.MouseButton2` (right click) supplied from an
+
+      Note that an `Class.InputObject` corresponding to
+      `Enum.UserInputType.MouseButton1` (left click) and
+      `Enum.UserInputType.MouseButton2` (right click) supplied from an
       `Class.UserInputService.InputBegan|InputBegan` callback will not have its
-      `Class.InputObject.Delta|Delta` or Class.InputObject.Position|Position` updated once
-      created, except for when the mouse input ends. In order to get updated positions for
-      mouse inputs, you must instead reference an `Class.InputObject` from an
+      `Class.InputObject.Delta|Delta` or `Class.InputObject.Position|Position`
+      updated once created, except for when the mouse input ends. In order to
+      get updated positions for mouse inputs, you must instead reference an
+      `Class.InputObject` from an
       `Class.UserInputService.InputChanged|InputChanged` callback, or call
-      `Class.UserInputService:GetMouseLocation()|GetMouseLocation()`.
-      However, any `Class.InputObject|InputObjects` corresponding to touch inputs will
-      have their delta and position updated every frame throughout their lifetime.
-      
-      
+      `Class.UserInputService:GetMouseLocation()|GetMouseLocation()`. However,
+      any `Class.InputObject|InputObjects` corresponding to touch inputs will
+      have their delta and position updated every frame throughout their
+      lifetime.
+
       See also
 
       - `Class.InputObject.Delta`

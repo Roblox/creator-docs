@@ -86,15 +86,16 @@ properties:
       options:
 
       - `Enum.HighlightDepthMode.AlwaysOnTop|AlwaysOnTop` — Allows the highlight
-      to display regardless if there are objects between the camera and the
-      highlighted object. This means the viewer is always able to see the
-      highlight regardless of what is between the highlighted object and the
-      camera.
+        to display regardless if there are objects between the camera and the
+        highlighted object. This means the viewer is always able to see the
+        highlight regardless of what is between the highlighted object and the
+        camera.
 
       - `Enum.HighlightDepthMode.Occluded|Occluded` — Hides the highlight if
-      there are objects between the camera and the highlighted object. This
-      means the viewer is only able to see the object if there are no
-      obstructing objects between the highlighted object and the camera's view.
+        there are objects between the camera and the highlighted object. This
+        means the viewer is only able to see the object if there are no
+        obstructing objects between the highlighted object and the camera's
+        view.
 
       <table size="small">
       <tbody>
@@ -192,7 +193,10 @@ properties:
     summary: |
       Sets the transparency of the highlight's interior.
     description: |
-      Sets the visibility of the highlight's interior to any value between the default value of **0** (opaque) and **1** (invisible). You can use this property to determine how much of the object's existing color you want viewers to see.
+      Sets the visibility of the highlight's interior to any value between the
+      default value of **0** (opaque) and **1** (invisible). You can use this
+      property to determine how much of the object's existing color you want
+      viewers to see.
 
       <table size="small">
       <tbody>

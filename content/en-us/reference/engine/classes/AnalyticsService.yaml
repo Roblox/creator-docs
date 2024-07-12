@@ -3,7 +3,8 @@ type: class
 category: Data
 memory_category: Instances
 summary: |
-  An internal service used by Roblox to collect analytics from `CoreScripts`.
+  Collection of methods that allows developers to track how users interact with
+  their experiences.
 description: |
   **AnalyticsService** is a collection of methods that allows developers to
   track how users interact with their experiences, specifically player
@@ -637,12 +638,13 @@ methods:
           `Class.HttpService:GenerateGUID()`.
       - name: step
         type: int
-        default: 0
+        default: 1
         summary: |
           The step number in the funnel. This should be unique for each step in
           the funnel. All funnels start at step 1. Limited to steps 1-100.
 
-          Repeated steps by the same user in the same funnel session, or when `funnelSessionId` is `nil` will be ignored.
+          Repeated steps by the same user in the same funnel session, or when
+          `funnelSessionId` is `nil` will be ignored.
 
           Note that if any steps are skipped, the intermediate steps will be
           considered completed.

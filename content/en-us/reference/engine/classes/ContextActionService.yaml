@@ -17,7 +17,7 @@ description: |
   before that takes control again. Since this service deals with user input, you
   can only use it in client-side `Class.LocalScript|LocalScripts`.
 
-  ## What is a context?
+  #### Context and Action
 
   A **context** is simply a condition during which a player may perform some
   action. Some examples include holding a `Class.Tool`, being
@@ -26,8 +26,6 @@ description: |
   `Class.ContextActionService:BindAction()|BindAction` when the context is
   entered and `Class.ContextActionService:UnbindAction()|UnbindAction` when the
   context is left.
-
-  ## What is an action?
 
   An **action** is simply some input that can be performed by the player while
   in that context. Such an action could open/close some menu, trigger a
@@ -41,7 +39,7 @@ description: |
   instead. It is best to define your actions as a constant at the top of your
   script since you will use it in at least three different places in your code.
 
-  ## Why bind actions contextually?
+  #### Binding Actions Contextually
 
   It's better to use ContextActionService's
   `Class.ContextActionService:BindAction()|BindAction` than
@@ -61,19 +59,20 @@ description: |
   action. If something else (like chat) takes control, you won't have to worry
   about checking that.
 
-  ## Inspecting Bound Actions
+  #### Inspecting Bound Actions
 
   To see a list of actions and their bound inputs, you can inspect the "Action
   Bindings" tab in the Developer Console (F9 while in game). This shows all
-  bindings - including those bound by Roblox CoreScripts and default
-  camera/control scripts too. This is useful for debugging: check if your
-  actions are being bound/unbound at the correct times, or if some other action
-  is stealing input from your actions. For example, if you are attempting to
-  bind WASD, it may be the case that default character movement scripts are
-  binding over those same keys. Similarly, the camera control script can steal
-  right-click input if the script runs after yours.
+  bindings, including those bound by Roblox core scripts and default
+  camera/control scripts too. This is useful for debugging if your actions are
+  being bound/unbound at the correct times, or if some other action is stealing
+  input from your actions. For example, if you are attempting to bind
+  <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>, it may be the case that
+  default character movement scripts are binding over those same keys.
+  Similarly, the camera control script can steal right-click input if the script
+  runs after yours.
 
-  ## Keyboardless Input
+  #### Keyboardless Input
 
   This service is especially useful for supporting gamepad and touch input. For
   gamepad input, you might choose to bind the B button to an action that returns

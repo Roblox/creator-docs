@@ -12,13 +12,13 @@ deprecation_message: ''
 items:
   - name: Default
     summary: |
-      Default mode used by Roblox Core Scripts.
+      Default mode used by Roblox core scripts.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Classic
     summary: |
-      Default mode used by Roblox Core Scripts.
+      Default mode used by Roblox core scripts.
     value: 1
     tags: []
     deprecation_message: ''
