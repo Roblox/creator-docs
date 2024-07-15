@@ -126,11 +126,11 @@ You can connect to proximity prompt events either on the `Class.ProximityPrompt`
 </thead>
 <tbody>
   <tr>
-    <td>`Class.ProximityPromptService.Triggered|Triggered`</td>
+    <td>`Class.ProximityPromptService.PromptTriggered|PromptTriggered`</td>
     <td>Fires when a player interacts with a proximity prompt (after the duration for a prompt with non-zero `Class.ProximityPrompt.HoldDuration|HoldDuration`).</td>
   </tr>
   <tr>
-    <td>`Class.ProximityPromptService.TriggerEnded|TriggeredEnded`</td>
+    <td>`Class.ProximityPromptService.PromptTriggerEnded|PromptTriggerEnded`</td>
     <td>Triggers when the player stops interacting with a proximity prompt.</td>
   </tr>
   <tr>
@@ -156,17 +156,24 @@ The following code sample includes a basic framework for using `Class.ProximityP
 
 ```lua
 local ProximityPromptService = game:GetService("ProximityPromptService")
+
 -- Detect when prompt is triggered
 local function onPromptTriggered(promptObject, player)
+
 end
+
 -- Detect when prompt hold begins
 local function onPromptHoldBegan(promptObject, player)
+
 end
+
 -- Detect when prompt hold ends
 local function onPromptHoldEnded(promptObject, player)
+
 end
+
 -- Connect prompt events to handling functions
-ProximityPromptService.Triggered:Connect(onPromptTriggered)
+ProximityPromptService.PromptTriggered:Connect(onPromptTriggered)
 ProximityPromptService.PromptButtonHoldBegan:Connect(onPromptHoldBegan)
 ProximityPromptService.PromptButtonHoldEnded:Connect(onPromptHoldEnded)
 ```
