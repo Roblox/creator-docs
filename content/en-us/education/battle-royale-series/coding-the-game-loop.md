@@ -83,7 +83,7 @@ Within MatchManager is a function named `prepareGame()` starts the game by trans
    local MatchManager = {}
 
    function MatchManager.prepareGame()
-     print("Game starting!")
+   	print("Game starting!")
    end
 
    return MatchManager
@@ -159,9 +159,9 @@ With a **repeat loop**, the code in the loop will run at least once. Unlike a wh
 
    ```lua
    while true do
-      repeat
+   	repeat
 
-      until #Players:GetPlayers() >= gameSettings.minimumPlayers
+   	until #Players:GetPlayers() >= gameSettings.minimumPlayers
    end
    ```
 
@@ -169,10 +169,10 @@ With a **repeat loop**, the code in the loop will run at least once. Unlike a wh
 
    ```lua
    while true do
-      repeat
-         print("Starting intermission")
-         task.wait(gameSettings.intermissionDuration)
-      until #Players:GetPlayers() >= gameSettings.minimumPlayers
+   	repeat
+   		print("Starting intermission")
+   		task.wait(gameSettings.intermissionDuration)
+   	until #Players:GetPlayers() >= gameSettings.minimumPlayers
    end
    ```
 
@@ -193,12 +193,12 @@ Once there are enough players, have them wait a short transition time. Then, sen
 
    ```lua
    while true do
-      repeat
-         print("Starting intermission")
-         task.wait(gameSettings.intermissionDuration)
-      until #Players:GetPlayers() >= gameSettings.minimumPlayers
-      print("Intermission over")
-      task.wait(gameSettings.transitionTime)
+   	repeat
+   		print("Starting intermission")
+   		task.wait(gameSettings.intermissionDuration)
+   	until #Players:GetPlayers() >= gameSettings.minimumPlayers
+   	print("Intermission over")
+   	task.wait(gameSettings.transitionTime)
    end
    ```
 
@@ -210,14 +210,14 @@ Once there are enough players, have them wait a short transition time. Then, sen
 
    ```lua
    while true do
-      repeat
-         print("Starting intermission")
-         task.wait(gameSettings.intermissionDuration)
-      until #Players:GetPlayers() >= gameSettings.minimumPlayers
+   	repeat
+   		print("Starting intermission")
+   		task.wait(gameSettings.intermissionDuration)
+   	until #Players:GetPlayers() >= gameSettings.minimumPlayers
 
-      print("Intermission over")
-      task.wait(gameSettings.transitionTime)
-      matchManager.prepareGame()
+   	print("Intermission over")
+   	task.wait(gameSettings.transitionTime)
+   	matchManager.prepareGame()
    end
    ```
 
