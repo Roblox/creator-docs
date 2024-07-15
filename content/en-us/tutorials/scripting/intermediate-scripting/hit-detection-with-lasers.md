@@ -52,11 +52,11 @@ Before a laser can be shot, you must first know where the player is aiming. This
    end
 
    local function toolEquipped()
-       tool.Handle.Equip:Play()
+   	tool.Handle.Equip:Play()
    end
 
    local function toolActivated()
-       tool.Handle.Activate:Play()
+   	tool.Handle.Activate:Play()
    end
 
    -- Connect events to appropriate functions
@@ -74,7 +74,7 @@ Before a laser can be shot, you must first know where the player is aiming. This
    local MAX_MOUSE_DISTANCE = 1000
 
    local function getWorldMousePosition()
-       local mouseLocation = UserInputService:GetMouseLocation()
+   	local mouseLocation = UserInputService:GetMouseLocation()
    end
    ```
 
@@ -84,10 +84,10 @@ Now the 2D mouse location is known, its **X** and **Y** properties can be used a
 
    ```lua
    local function getWorldMousePosition()
-       local mouseLocation = UserInputService:GetMouseLocation()
+   	local mouseLocation = UserInputService:GetMouseLocation()
 
-       -- Create a ray from the 2D mouse location
-       local screenToWorldRay = workspace.CurrentCamera:ViewportPointToRay(mouseLocation.X, mouseLocation.Y)
+   	-- Create a ray from the 2D mouse location
+   	local screenToWorldRay = workspace.CurrentCamera:ViewportPointToRay(mouseLocation.X, mouseLocation.Y)
    end
    ```
 
@@ -165,24 +165,24 @@ The **Position** property will be the position of the object that the mouse is h
 
 ```lua
 local function getWorldMousePosition()
-    local mouseLocation = UserInputService:GetMouseLocation()
+	local mouseLocation = UserInputService:GetMouseLocation()
 
-    -- Create a ray from the 2D mouseLocation
-    local screenToWorldRay = workspace.CurrentCamera:ViewportPointToRay(mouseLocation.X, mouseLocation.Y)
+	-- Create a ray from the 2D mouseLocation
+	local screenToWorldRay = workspace.CurrentCamera:ViewportPointToRay(mouseLocation.X, mouseLocation.Y)
 
-    -- The unit direction vector of the ray multiplied by a maximum distance
-    local directionVector = screenToWorldRay.Direction * MAX_MOUSE_DISTANCE
+	-- The unit direction vector of the ray multiplied by a maximum distance
+	local directionVector = screenToWorldRay.Direction * MAX_MOUSE_DISTANCE
 
-    -- Raycast from the ray's origin towards its direction
-    local raycastResult = workspace:Raycast(screenToWorldRay.Origin, directionVector)
+	-- Raycast from the ray's origin towards its direction
+	local raycastResult = workspace:Raycast(screenToWorldRay.Origin, directionVector)
 
-    if raycastResult then
-        -- Return the 3D point of intersection
-        return raycastResult.Position
-    else
-        -- No object was hit so calculate the position at the end of the ray
-        return screenToWorldRay.Origin + directionVector
-    end
+	if raycastResult then
+		-- Return the 3D point of intersection
+		return raycastResult.Position
+	else
+		-- No object was hit so calculate the position at the end of the ray
+		return screenToWorldRay.Origin + directionVector
+	end
 end
 ```
 
@@ -228,10 +228,10 @@ This time, the direction vector for the raycast function will represent the dire
 
    ```lua
    local function fireWeapon()
-       local mouseLocation = getWorldMousePosition()
+   	local mouseLocation = getWorldMousePosition()
 
-       -- Calculate a normalised direction vector and multiply by laser distance
-       local targetDirection = (mouseLocation - tool.Handle.Position).Unit
+   	-- Calculate a normalised direction vector and multiply by laser distance
+   	local targetDirection = (mouseLocation - tool.Handle.Position).Unit
    end
    ```
 
@@ -267,18 +267,18 @@ local function getWorldMousePosition()
 
 ```lua
 local function fireWeapon()
-    local mouseLocation = getWorldMousePosition()
+	local mouseLocation = getWorldMousePosition()
 
-    -- Calculate a normalised direction vector and multiply by laser distance
-    local targetDirection = (mouseLocation - tool.Handle.Position).Unit
+	-- Calculate a normalised direction vector and multiply by laser distance
+	local targetDirection = (mouseLocation - tool.Handle.Position).Unit
 
-    -- The direction to fire the weapon multiplied by a maximum distance
-    local directionVector = targetDirection * MAX_LASER_DISTANCE
+	-- The direction to fire the weapon multiplied by a maximum distance
+	local directionVector = targetDirection * MAX_LASER_DISTANCE
 
-    -- Ignore the player's character to prevent them from damaging themselves
-    local weaponRaycastParams = RaycastParams.new()
-    weaponRaycastParams.FilterDescendantsInstances = {Players.LocalPlayer.Character}
-    local weaponRaycastResult = workspace:Raycast(tool.Handle.Position, directionVector, weaponRaycastParams)
+	-- Ignore the player's character to prevent them from damaging themselves
+	local weaponRaycastParams = RaycastParams.new()
+	weaponRaycastParams.FilterDescendantsInstances = {Players.LocalPlayer.Character}
+	local weaponRaycastResult = workspace:Raycast(tool.Handle.Position, directionVector, weaponRaycastParams)
 end
 ```
 
@@ -289,13 +289,13 @@ Finally, you'll need to check that the raycast operation returned a value. If a 
 2. Use an **if** statement to check whether `weaponRaycastResult` has a value. If an object was hit, assign `weaponRaycastResult.Position` to `hitPosition`.
 
    ```lua
-       local weaponRaycastResult = workspace:Raycast(tool.Handle.Position, directionVector, weaponRaycastParams)
+   local weaponRaycastResult = workspace:Raycast(tool.Handle.Position, directionVector, weaponRaycastParams)
 
-       -- Check if any objects were hit between the start and end position
-       local hitPosition
-       if weaponRaycastResult then
-           hitPosition = weaponRaycastResult.Position
-       end
+   -- Check if any objects were hit between the start and end position
+   local hitPosition
+   if weaponRaycastResult then
+   	hitPosition = weaponRaycastResult.Position
+   end
    ```
 
 3. If `weaponRaycastResult` has no value, calculate the end position of the raycast by adding together the **position** of the tool handle with the `directionVector`. Assign this to **hitPosition**.
@@ -318,8 +318,8 @@ Finally, you'll need to check that the raycast operation returned a value. If a 
 
    ```lua
    local function toolActivated()
-       tool.Handle.Activate:Play()
-       fireWeapon()
+   	tool.Handle.Activate:Play()
+   	fireWeapon()
    end
    ```
 
@@ -340,24 +340,24 @@ If you have other models in the game that contain humanoids, further checks will
 1. Add the highlighted code below to the `weaponRaycastResult` **if** statement to check if a character was hit.
 
    ```lua
-       -- Check if any objects were hit between the start and end position
-       local hitPosition
-       if weaponRaycastResult then
-           hitPosition = weaponRaycastResult.Position
+   -- Check if any objects were hit between the start and end position
+   local hitPosition
+   if weaponRaycastResult then
+   	hitPosition = weaponRaycastResult.Position
 
-           -- The instance hit will be a child of a character model
-           -- If a humanoid is found in the model then it's likely a player's character
-           local characterModel = weaponRaycastResult.Instance:FindFirstAncestorOfClass("Model")
-           if characterModel then
-               local humanoid = characterModel:FindFirstChildWhichIsA("Humanoid")
-               if humanoid then
-                   print("Player hit")
-               end
-           end
-       else
-           -- Calculate the end position based on maximum laser distance
-           hitPosition = tool.Handle.Position + directionVector
-       end
+   	-- The instance hit will be a child of a character model
+   	-- If a humanoid is found in the model then it's likely a player's character
+   	local characterModel = weaponRaycastResult.Instance:FindFirstAncestorOfClass("Model")
+   	if characterModel then
+   		local humanoid = characterModel:FindFirstChildWhichIsA("Humanoid")
+   		if humanoid then
+   			print("Player hit")
+   		end
+   	end
+   else
+   	-- Calculate the end position based on maximum laser distance
+   	hitPosition = tool.Handle.Position + directionVector
+   end
    ```
 
 Now the laser blaster should print `Player hit` to the output window every time the raycast operation hits another player.
@@ -415,9 +415,9 @@ The blaster should fire a red beam of light at its target. The function for this
 
    ```lua
    function LaserRenderer.createLaser(toolHandle, endPosition)
-       local startPosition = toolHandle.Position
+   	local startPosition = toolHandle.Position
 
-       local laserDistance = (startPosition - endPosition).Magnitude
+   	local laserDistance = (startPosition - endPosition).Magnitude
    end
    ```
 
@@ -427,10 +427,10 @@ The blaster should fire a red beam of light at its target. The function for this
 
    ```lua
    function LaserRenderer.createLaser(toolHandle, endPosition)
-       local startPosition = toolHandle.Position
+   	local startPosition = toolHandle.Position
 
-       local laserDistance = (startPosition - endPosition).Magnitude
-       local laserCFrame = CFrame.lookAt(startPosition, endPosition) * CFrame.new(0, 0, -laserDistance / 2)
+   	local laserDistance = (startPosition - endPosition).Magnitude
+   	local laserCFrame = CFrame.lookAt(startPosition, endPosition) * CFrame.new(0, 0, -laserDistance / 2)
    end
    ```
 
@@ -455,22 +455,22 @@ Now that you know where to create a laser beam, you need to add the beam itself.
 
    ```lua
    function LaserRenderer.createLaser(toolHandle, endPosition)
-       local startPosition = toolHandle.Position
+   	local startPosition = toolHandle.Position
 
-       local laserDistance = (startPosition - endPosition).Magnitude
-       local laserCFrame = CFrame.lookAt(startPosition, endPosition) * CFrame.new(0, 0, -laserDistance / 2)
+   	local laserDistance = (startPosition - endPosition).Magnitude
+   	local laserCFrame = CFrame.lookAt(startPosition, endPosition) * CFrame.new(0, 0, -laserDistance / 2)
 
-       local laserPart = Instance.new("Part")
-       laserPart.Size = Vector3.new(0.2, 0.2, laserDistance)
-       laserPart.CFrame = laserCFrame
-       laserPart.Anchored = true
-       laserPart.CanCollide = false
-       laserPart.Color = Color3.fromRGB(225, 0, 0)
-       laserPart.Material = Enum.Material.Neon
-       laserPart.Parent = workspace
+   	local laserPart = Instance.new("Part")
+   	laserPart.Size = Vector3.new(0.2, 0.2, laserDistance)
+   	laserPart.CFrame = laserCFrame
+   	laserPart.Anchored = true
+   	laserPart.CanCollide = false
+   	laserPart.Color = Color3.fromRGB(225, 0, 0)
+   	laserPart.Material = Enum.Material.Neon
+   	laserPart.Parent = workspace
 
-       -- Add laser beam to the Debris service to be removed & cleaned up
-       Debris:AddItem(laserPart, SHOT_DURATION)
+   	-- Add laser beam to the Debris service to be removed & cleaned up
+   	Debris:AddItem(laserPart, SHOT_DURATION)
    end
    ```
 
@@ -540,11 +540,11 @@ Weapons need a delay between each shot to stop players from dealing too much dam
    ```lua
    -- Check if enough time has passed since previous shot was fired
    local function canShootWeapon()
-       local currentTime = tick()
-       if currentTime - timeOfPreviousShot < FIRE_RATE then
-           return false
-       end
-       return true
+   	local currentTime = tick()
+   	if currentTime - timeOfPreviousShot < FIRE_RATE then
+   		return false
+   	end
+   	return true
    end
    ```
 
@@ -564,10 +564,10 @@ Weapons need a delay between each shot to stop players from dealing too much dam
 
    ```lua
    local function toolActivated()
-       if canShootWeapon() then
-           tool.Handle.Activate:Play()
-           fireWeapon()
-       end
+   	if canShootWeapon() then
+   		tool.Handle.Activate:Play()
+   		fireWeapon()
+   	end
    end
    ```
 
@@ -639,11 +639,11 @@ The server needs to deal damage to the player who has been hit when the event is
    local LASER_DAMAGE = 10
 
    function damageCharacter(playerFired, characterToDamage)
-       local humanoid = characterToDamage:FindFirstChildWhichIsA("Humanoid")
-       if humanoid then
-           -- Remove health from character
-           humanoid.Health -= LASER_DAMAGE
-       end
+   	local humanoid = characterToDamage:FindFirstChildWhichIsA("Humanoid")
+   	if humanoid then
+   		-- Remove health from character
+   		humanoid.Health -= LASER_DAMAGE
+   	end
    end
 
    -- Connect events to appropriate functions
@@ -732,10 +732,10 @@ The server can now call **FireAllClients** on the **LaserFired** remote event to
    ```lua
    -- Notify all clients that a laser has been fired so they can display the laser
    local function playerFiredLaser(playerFired, endPosition)
-       local toolHandle = getPlayerToolHandle(playerFired)
-       if toolHandle then
-           eventsFolder.LaserFired:FireAllClients(playerFired, toolHandle, endPosition)
-       end
+   	local toolHandle = getPlayerToolHandle(playerFired)
+   	if toolHandle then
+   		eventsFolder.LaserFired:FireAllClients(playerFired, toolHandle, endPosition)
+   	end
    end
    ```
 
@@ -767,9 +767,9 @@ Now **FireAllClients** has been called, each client will receive an event from t
 
    -- Display another player's laser
    local function createPlayerLaser(playerWhoShot, toolHandle, endPosition)
-       if playerWhoShot ~= Players.LocalPlayer then
-           LaserRenderer.createLaser(toolHandle, endPosition)
-       end
+   	if playerWhoShot ~= Players.LocalPlayer then
+   		LaserRenderer.createLaser(toolHandle, endPosition)
+   	end
    end
 
    eventsFolder.LaserFired.OnClientEvent:Connect(createPlayerLaser)
@@ -788,12 +788,11 @@ The shooting sound effect currently only plays on the client that's shooting the
 1. In the **ToolController** script, navigate to the **toolActivated** function and remove the line which plays the Activate sound.
 
    ```lua
-    local function toolActivated()
-        if canShootWeapon() then
-
-            fireWeapon()
-        end
-    end
+   local function toolActivated()
+   	if canShootWeapon() then
+   		fireWeapon()
+   	end
+   end
    ```
 
 2. At the bottom of the `createLaser` function in **LaserRenderer**, declare a variable named **shootingSound** and use the `Class.Instance:FindFirstChild()|FindFirstChild()` method of `toolHandle` to check for the **Activate** sound.
@@ -834,11 +833,11 @@ The client needs to send the server the position hit by the raycast so it can ch
 2. Add `hitPosition` as an argument.
 
    ```lua
-       if characterModel then
-       local humanoid = characterModel:FindFirstChildWhichIsA("Humanoid")
-       if humanoid then
-           eventsFolder.DamageCharacter:FireServer(characterModel, hitPosition)
-       end
+   if characterModel then
+   	local humanoid = characterModel:FindFirstChildWhichIsA("Humanoid")
+   	if humanoid then
+   		eventsFolder.DamageCharacter:FireServer(characterModel, hitPosition)
+   	end
    end
    ```
 
@@ -850,11 +849,11 @@ The client is now sending an extra parameter through the DamageCharacter remote 
 
    ```lua
    function damageCharacter(playerFired, characterToDamage, hitPosition)
-       local humanoid = characterToDamage:FindFirstChildWhichIsA("Humanoid")
-       if humanoid then
-           -- Remove health from character
-           humanoid.Health -= LASER_DAMAGE
-       end
+   	local humanoid = characterToDamage:FindFirstChildWhichIsA("Humanoid")
+   	if humanoid then
+   		-- Remove health from character
+   		humanoid.Health -= LASER_DAMAGE
+   	end
    end
    ```
 
@@ -883,11 +882,11 @@ The first check will be the distance between the hit position and the character 
 
    ```lua
    local function isHitValid(playerFired, characterToDamage, hitPosition)
-       -- Validate distance between the character hit and the hit position
-       local characterHitProximity = (characterToDamage.HumanoidRootPart.Position - hitPosition).Magnitude
-       if characterHitProximity > MAX_HIT_PROXIMITY then
-           return false
-       end
+   	-- Validate distance between the character hit and the hit position
+   	local characterHitProximity = (characterToDamage.HumanoidRootPart.Position - hitPosition).Magnitude
+   	if characterHitProximity > MAX_HIT_PROXIMITY then
+   		return false
+   	end
    end
    ```
 
@@ -897,28 +896,28 @@ The second check will involve a raycast between the weapon fired and the hit pos
 
    ```lua
    local function isHitValid(playerFired, characterToDamage, hitPosition)
-       -- Validate distance between the character hit and the hit position
-       local characterHitProximity = (characterToDamage.HumanoidRootPart.Position - hitPosition).Magnitude
-       if characterHitProximity > 10 then
-           return false
-       end
+   	-- Validate distance between the character hit and the hit position
+   	local characterHitProximity = (characterToDamage.HumanoidRootPart.Position - hitPosition).Magnitude
+   	if characterHitProximity > 10 then
+   		return false
+   	end
 
-       -- Check if shooting through walls
-       local toolHandle = getPlayerToolHandle(playerFired)
-       if toolHandle then
-           local rayLength = (hitPosition - toolHandle.Position).Magnitude
-           local rayDirection = (hitPosition - toolHandle.Position).Unit
-           local raycastParams = RaycastParams.new()
-           raycastParams.FilterDescendantsInstances = {playerFired.Character}
-           local rayResult = workspace:Raycast(toolHandle.Position, rayDirection * rayLength, raycastParams)
+   	-- Check if shooting through walls
+   	local toolHandle = getPlayerToolHandle(playerFired)
+   	if toolHandle then
+   		local rayLength = (hitPosition - toolHandle.Position).Magnitude
+   		local rayDirection = (hitPosition - toolHandle.Position).Unit
+   		local raycastParams = RaycastParams.new()
+   		raycastParams.FilterDescendantsInstances = {playerFired.Character}
+   		local rayResult = workspace:Raycast(toolHandle.Position, rayDirection * rayLength, raycastParams)
 
-           -- If an instance was hit that was not the character then ignore the shot
-           if rayResult and not rayResult.Instance:IsDescendantOf(characterToDamage) then
-               return false
-           end
-       end
+   		-- If an instance was hit that was not the character then ignore the shot
+   		if rayResult and not rayResult.Instance:IsDescendantOf(characterToDamage) then
+   			return false
+   		end
+   	end
 
-       return true
+   	return true
    end
    ```
 
@@ -928,12 +927,12 @@ The second check will involve a raycast between the weapon fired and the hit pos
 
    ```lua
    function damageCharacter(playerFired, characterToDamage, hitPosition)
-       local humanoid = characterToDamage:FindFirstChildWhichIsA("Humanoid")
-       local validShot = isHitValid(playerFired, characterToDamage, hitPosition)
-       if humanoid and validShot then
-           -- Remove health from character
-           humanoid.Health -= LASER_DAMAGE
-       end
+   	local humanoid = characterToDamage:FindFirstChildWhichIsA("Humanoid")
+   	local validShot = isHitValid(playerFired, characterToDamage, hitPosition)
+   	if humanoid and validShot then
+   		-- Remove health from character
+   		humanoid.Health -= LASER_DAMAGE
+   	end
    end
    ```
 
@@ -961,7 +960,7 @@ local eventsFolder = ReplicatedStorage.Events
 
 local MAX_MOUSE_DISTANCE = 1000
 local MAX_LASER_DISTANCE = 500
-local FIRE_RATE  = 0.3
+local FIRE_RATE = 0.3
 local timeOfPreviousShot = 0
 
 -- Check if enough time has passed since previous shot was fired
@@ -1065,7 +1064,7 @@ function LaserRenderer.createLaser(toolHandle, endPosition)
 
 	local laserPart = Instance.new("Part")
 	laserPart.Size = Vector3.new(0.2, 0.2, laserDistance)
-	laserPart.CFrame  = laserCFrame
+	laserPart.CFrame = laserCFrame
 	laserPart.Anchored = true
 	laserPart.CanCollide = false
 	laserPart.Color = Color3.fromRGB(255, 0, 0)
@@ -1083,7 +1082,6 @@ function LaserRenderer.createLaser(toolHandle, endPosition)
 end
 
 return LaserRenderer
-
 ```
 
 ### ServerLaserManager
