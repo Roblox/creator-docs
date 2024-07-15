@@ -8,6 +8,8 @@ id: packages
 This page documents new package workflows and icons, which might not be available to you in Studio; the changes are rolling out gradually over the next two weeks. All Studio users can expect to see them by late July 2024.
 </Alert>
 
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AzKZy2BqIh8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br />
+
 To keep assets organized and reusable across your team or across multiple projects, group your instances and convert them into reusable **packages**. Packages make the overall process of building worlds faster and more ergonomic, but they also help with consistency, deduplication, collaboration, and versioning:
 
 - Easily [update all copies](#mass-updates) of a package to the latest version (or only [update specific copies](#updating-outdated-copies)).
