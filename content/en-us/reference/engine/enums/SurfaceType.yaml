@@ -29,7 +29,7 @@ description: |
 code_samples:
 tags: []
 deprecation_message: |
-  SurfaceType based joining is deprecated, leaving only visual changes to the effected 'Class.Part'. This should not be used for future work.
+  **SurfaceType** joining is deprecated, leaving only visual changes on the affected `Class.Part`. It should not be used for future work.
 items:
   - name: Smooth
     summary: |
@@ -39,13 +39,13 @@ items:
     deprecation_message: ''
   - name: Glue
     summary: |
-      Adds an X pattern across the surface.
+      Adds an "X" pattern across the surface.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Weld
     summary: |
-      Adds an X pattern across the surface.
+      Adds an "X" pattern across the surface.
     value: 2
     tags: []
     deprecation_message: ''
@@ -63,13 +63,13 @@ items:
     deprecation_message: ''
   - name: Universal
     summary: |
-      Adds a checker pattern to the surface using Studs and Intlets.
+      Adds a checker pattern to the surface using studs and inlets.
     value: 5
     tags: []
     deprecation_message: ''
   - name: Hinge
     summary: |
-      Adds a yellow hinge to the surface. Parts touching it would stick to the surface allowing for rotations using physics. This should not be used for future work, and should be replaced with a `Class.HingeConstraint` instead.
+      Adds a yellow hinge to the surface. Parts touching it stick to the surface, allowing for rotations using physics. This should not be used for future work and existing instances should be replaced with a `Class.HingeConstraint`.
     value: 6
     tags: []
     deprecation_message: ''
@@ -82,7 +82,7 @@ items:
   - name: SteppingMotor
     summary: |
       Functioned identically to a motor. It may have functioned differently in
-      the past, but that functionality is non-existant.
+      the past, but that functionality is non-existent.
     value: 8
     tags: []
     deprecation_message: ''
