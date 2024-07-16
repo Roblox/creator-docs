@@ -29,7 +29,7 @@ description: |
 code_samples:
 tags: []
 deprecation_message: |
-  SurfaceType based joining is deprecated, leaving only visual changes to the appearence of the effected 'Class.Part'. This should not be used for future work.
+  SurfaceType based joining is deprecated, leaving only visual changes to the effected 'Class.Part'. This should not be used for future work.
 items:
   - name: Smooth
     summary: |
