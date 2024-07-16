@@ -27,26 +27,25 @@ description: |
     specified joint creation mode
   - `Enum.JointCreationMode`, the way joints are created between two surfaces
 code_samples:
-tags:
- - Deprecated
+tags: []
 deprecation_message: |
   SurfaceType based joining is deprecated, leaving only visual changes to the appearence of the effected 'Class.Part'. This should not be used for future work.
 items:
   - name: Smooth
     summary: |
-     Adds no details on the surface.
+      Adds no details on the surface.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Glue
     summary: |
-     Adds an X pattern across the surface.
+      Adds an X pattern across the surface.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Weld
     summary: |
-     Adds an X pattern across the surface.
+      Adds an X pattern across the surface.
     value: 2
     tags: []
     deprecation_message: ''
@@ -58,13 +57,13 @@ items:
     deprecation_message: ''
   - name: Inlet
     summary: |
-     Adds square holes across the surface where studs would be.
+      Adds square holes across the surface where studs would be.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Universal
     summary: |
-     Adds a checker pattern to the surface using Studs and Intlets.
+      Adds a checker pattern to the surface using Studs and Intlets.
     value: 5
     tags: []
     deprecation_message: ''
@@ -72,29 +71,25 @@ items:
     summary: |
       Adds a yellow hinge to the surface. Parts touching it would stick to the surface allowing for rotations using physics. This should not be used for future work, and should be replaced with a `Class.HingeConstraint` instead.
     value: 6
-    tags:
-     - Deprecated
+    tags: []
     deprecation_message: ''
   - name: Motor
     summary: |
       Functioned identically to a hinge with the addition of a grey ring.
     value: 7
-    tags:
-     - Deprecated
+    tags: []
     deprecation_message: ''
   - name: SteppingMotor
     summary: |
       Functioned identically to a motor. It may have functioned differently in
       the past, but that functionality is non-existant.
     value: 8
-    tags:
-     - Deprecated
+    tags: []
     deprecation_message: ''
   - name: SmoothNoOutlines
     summary: |
       Same as Smooth, but removed the _outlines_ of the surface. This no longer
       functions as outlines have been removed.
     value: 10
-    tags:
-     - Deprecated
+    tags: []
     deprecation_message: ''
