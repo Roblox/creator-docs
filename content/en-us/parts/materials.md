@@ -314,10 +314,10 @@ Shaders generate the look and feel of materials. The base material shaders work 
     </tr>
 		<tr>
         <td>**Clay Roof Tiles** <Chip label="beta" size="small" variant="outlined" /></td>
-        <td>17429547163</td>
-        <td>17429547944</td>
+        <td>18147681935</td>
+        <td>18147683410</td>
         <td></td>
-        <td>17429548240</td>
+        <td>18147684855</td>
     </tr>
     <tr>
         <td>**Cobblestone**</td>
