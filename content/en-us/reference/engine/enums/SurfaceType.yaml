@@ -9,9 +9,7 @@ description: |
 
   ## Surface behavior
 
-  When surface joining is on, all planar touching flat sides of parts will weld
-  together, regardless of SurfaceType. This does not affect Hinge, Motor,
-  SteppingMotor.
+  When surface joining is on, all planar touching surfaces of a `Class.Part` will weld together, regardless of SurfaceType. This does not affect Hinge, Motor, or SteppingMotor.
 
   - Glue, Studs, Inlets, Universal, Weld, and Smooth surfaces will all create
     Weld instances
@@ -20,8 +18,7 @@ description: |
 
   ## Surface appearance
 
-  Stud, Inlet, Universal, Weld, and Glue Surface textures only appear on plastic
-  material parts, both in-game and in Studio.
+  Stud, Inlet, Universal, Weld, and Glue Surface textures only appear on plastic material parts, both in-game and in Studio.
 
   See also:
 
@@ -30,71 +27,77 @@ description: |
     specified joint creation mode
   - `Enum.JointCreationMode`, the way joints are created between two surfaces
 code_samples:
-tags: []
-deprecation_message: ''
+tags:
+ - Deprecated
+deprecation_message: |
+  SurfaceType based joining is deprecated, leaving only visual changes to the appearence of the effected 'Class.Part'.
+  
+  This should not be used for future work.
 items:
   - name: Smooth
     summary: |
-      Makes the side appear without any surface detail (except for _outlines_).
+     Adds no details on the surface.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Glue
     summary: |
-      Makes the side appear with thick diagonal "X"s.
+     Adds an X pattern across the surface.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Weld
     summary: |
-      Makes the side appear with thick diagonal "X"s.
+     Adds an X pattern across the surface.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Studs
     summary: |
-      Makes the side appear with square studs.
+      Adds square studs across the surface.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Inlet
     summary: |
-      Makes the side appear with holes where studs would be.
+     Adds square holes across the surface where studs would be.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Universal
     summary: |
-      Makes the side appear with both Studs and Inlets in a checker pattern.
+     Adds a checker pattern to the surface using Studs and Intlets.
     value: 5
     tags: []
     deprecation_message: ''
   - name: Hinge
     summary: |
-      Makes the side appear with a yellow hinge. Any part connected to this
-      hinge will stick to the side and rotate using physics, however, using
-      `Class.HingeConstraint` to join parts is preferred.
+      Adds a yellow hinge to the surface. Parts touching it would stick to the surface allowing for rotations using physics.
+      This should not be used for future work, and should be replaced with a `Class.HingeConstraint` instead.
     value: 6
-    tags: []
+    tags:
+     - Deprecated
     deprecation_message: ''
   - name: Motor
     summary: |
-      Acts the same as a Hinge, but has a grey ring around it and automatically
-      rotates any part connected to it, however, using `Class.HingeConstraint`
-      to join parts is preferred.
+      Functioned identically to a hinge with the addition of a grey ring.
     value: 7
-    tags: []
+    tags:
+     - Deprecated
     deprecation_message: ''
   - name: SteppingMotor
     summary: |
-      Functions identically to a motor. It may have functioned differently in
-      the past, but that functionality no longer seems to exist.
+      Functioned identically to a motor. It may have functioned differently in
+      the past, but that functionality is non-existant.
     value: 8
-    tags: []
+    tags:
+     - Deprecated
     deprecation_message: ''
   - name: SmoothNoOutlines
     summary: |
-      Same as Smooth, but removes the _outlines_ of the surface.
+      Same as Smooth, but removed the _outlines_ of the surface. This no longer
+      functions as outlines have been removed.
     value: 10
-    tags: []
+    tags:
+     - Deprecated
     deprecation_message: ''
