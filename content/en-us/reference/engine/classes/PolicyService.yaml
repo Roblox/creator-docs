@@ -49,7 +49,7 @@ methods:
       <td>ArePaidRandomItemsRestricted</td>
       <td>Boolean</td>
       <td>Any experience that has paid random items</td>
-      <td>When true, the player cannot interact with paid (via in-experience currency or Robux) random item generators.</td>
+      <td>When true, the player cannot interact with paid (via in-experience currency bought with Robux, or Robux directly) random item generators.</td>
       </tr>
       <tr>
       <td>AllowedExternalLinkReferences</td>
