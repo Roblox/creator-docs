@@ -30,9 +30,7 @@ code_samples:
 tags:
  - Deprecated
 deprecation_message: |
-  SurfaceType based joining is deprecated, leaving only visual changes to the appearence of the effected 'Class.Part'.
-  
-  This should not be used for future work.
+  SurfaceType based joining is deprecated, leaving only visual changes to the appearence of the effected 'Class.Part'. This should not be used for future work.
 items:
   - name: Smooth
     summary: |
@@ -72,8 +70,7 @@ items:
     deprecation_message: ''
   - name: Hinge
     summary: |
-      Adds a yellow hinge to the surface. Parts touching it would stick to the surface allowing for rotations using physics.
-      This should not be used for future work, and should be replaced with a `Class.HingeConstraint` instead.
+      Adds a yellow hinge to the surface. Parts touching it would stick to the surface allowing for rotations using physics. This should not be used for future work, and should be replaced with a `Class.HingeConstraint` instead.
     value: 6
     tags:
      - Deprecated
