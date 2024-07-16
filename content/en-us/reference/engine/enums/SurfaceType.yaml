@@ -88,8 +88,8 @@ items:
     deprecation_message: ''
   - name: SmoothNoOutlines
     summary: |
-      Same as Smooth, but removed the _outlines_ of the surface. This no longer
-      functions as outlines have been removed.
+      Previously similar to **Smooth** with outlines but no longer relevant 
+      since outlines have been removed.
     value: 10
     tags: []
     deprecation_message: ''
