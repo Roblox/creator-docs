@@ -102,7 +102,7 @@ functions:
     tags:
       - Deprecated
     deprecation_message: |
-      This method has been superceded by `Library.task.delay()` and should not
+      This method has been superseded by `Library.task.delay()` and should not
       be used for future work.
     code_samples:
   - name: DebuggerManager
@@ -272,7 +272,7 @@ functions:
     tags:
       - Deprecated
     deprecation_message: |
-      This method has been superceded by `Library.task.spawn()` and should not
+      This method has been superseded by `Library.task.spawn()` and should not
       be used for future work.
     code_samples:
   - name: stats
@@ -398,7 +398,7 @@ functions:
     tags:
       - Deprecated
     deprecation_message: |
-      This method has been superceded by `Library.task.wait()` and should not
+      This method has been superseded by `Library.task.wait()` and should not
       be used for future work.
     code_samples:
   - name: warn
