@@ -425,11 +425,10 @@ functions:
     code_samples:
   - name: ypcall
     summary: |
-      Similar to `pcall()` expect it can yield.
+      Legacy function to work around an old task scheduling limitation of `Global.LuaGlobals.pcall()`.
     description: |
-      This function is similar to `pcall()`. However, the function passed as an argument can yield without causing error (that is, the "attempt to yield across metamethod/C-call boundary" error).
-      
-      This allows functions such as `wait()` to be used. In addition, should the function passed error, the error is printed into the output although the code that called `ypcall()` remains unaffected.
+     Legacy function to work around an old task scheduling limitation of `Global.LuaGlobals.pcall()`;
+     should not be used for new work (use `Global.LuaGlobals.pcall()` instead).
     parameters:
       - name: f
         type: function
@@ -447,6 +446,4 @@ functions:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
-      This function is now completely identical to `pcall()` which should be used instead.
     code_samples:
