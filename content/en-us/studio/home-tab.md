@@ -147,8 +147,6 @@ For alternative ways to apply custom colors, see [Coloring Parts](../parts/index
 
 ## Material Widget
 
-<BetaAlert betaName="Material Picker" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
-
 Clicking the small dropdown arrow on the **Material** widget reveals a [material](../parts/materials.md) picker.
 
 <img src="../assets/studio/general/Home-Tab-Material-Picker.png" width="776" alt="Studio's Home tab with the Material widget's picker." />

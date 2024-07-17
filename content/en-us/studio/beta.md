@@ -108,18 +108,6 @@ The following beta features are currently available to all users through Studio'
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent style={{paddingBottom: '0px'}}>
-<Button href="../studio/model-tab.md#material-widget" size="large" color="primaryBrand" variant="outlined" fullWidth>Material Picker</Button>
-<p></p>
-<CardMedia component="img" image="../assets/studio/beta/Material-Picker.png" />
-<p></p>
-<figcaption>Adds a new **Material** button to the toolbar to quickly change part materials.</figcaption>
-<p></p>
-<BetaAlert betaName="Material Picker" leadIn="" leadOut="" components={props.components} />
-</CardContent>
-</Card>
-
-<Card variant="outlined" style={{height: '100%'}}>
-<CardContent style={{paddingBottom: '0px'}}>
 <Button href="../art/accessories/layered-clothing.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Multilayer Wrap Fix</Button>
 <p></p>
 <CardMedia component="img" image="../assets/studio/beta/Multilayer-Wrap-Fix.jpg" />
@@ -168,13 +156,13 @@ The following beta features are currently available to all users through Studio'
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent style={{paddingBottom: '0px'}}>
-<Button href="../studio/test-tab.md#pausing--resuming-physics" size="large" color="primaryBrand" variant="outlined" fullWidth>Simulation Pause</Button>
+<Button href="../studio/test-tab.md#pausing--resuming-physics" size="large" color="primaryBrand" variant="outlined" fullWidth>Simulation Pause and Step</Button>
 <p></p>
 <CardMedia component="img" image="../assets/studio/beta/Simulation-Pause.jpg" />
 <p></p>
 <figcaption>Enables visual pausing and simulation debugging at Studio runtime.</figcaption>
 <p></p>
-<BetaAlert betaName="Simulation Pause" leadIn="" leadOut="" components={props.components} />
+<BetaAlert betaName="Simulation Pause and Step" leadIn="" leadOut="" components={props.components} />
 </CardContent>
 </Card>
 
