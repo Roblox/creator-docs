@@ -22,6 +22,8 @@ On Home, our **Recommended for You** algorithm decides what experiences to show 
 
 Roblox's recommendation system uses **explore and expand** phases to understand the signals above. For example, you might see a spike in new users from recommendations (explore) after a content update. If that new user cohort has good engagement and monetization, Roblox is more likely to continue to recommend your experience to those user cohorts (expand).
 
+When ranking experiences for recommendations, Roblox only considers engagement, monetization, and ecosystem health signals from **users who join through recommendations**. Users who join from other sources, such as [sponsored ads](./production/promotion/ads-manager.md#sponsored-experiences), can help the system start exploring your experience but don't impact recommendation rankings.
+
 <img src="/assets/analytics/discovery/Explore-And-Expand-Graph.png" alt="An analytic Plays Per Source graph indicating new and returning users." />
 
 For a detailed overview, please see our [discovery vision post](https://devforum.roblox.com/t/discovery-on-roblox-past-present-and-future-vision/2859111) and [RDC talk](https://www.youtube-nocookie.com/embed/V1uFFUUCLpo).

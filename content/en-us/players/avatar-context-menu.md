@@ -96,8 +96,8 @@ local player = Players.LocalPlayer
 -- Connect a function to a "BindableEvent"
 local bindableEvent = Instance.new("BindableEvent")
 local function onCustomACMAction(targetPlayer)
-  -- At this point, you could call InvokeServer() on a RemoteFunction to alert the server of the selection
-  print("ACM event selected by " .. player.Name .. " on " .. targetPlayer.Name)
+	-- At this point, you could call InvokeServer() on a RemoteFunction to alert the server of the selection
+	print("ACM event selected by " .. player.Name .. " on " .. targetPlayer.Name)
 end
 bindableEvent.Event:Connect(onCustomACMAction)
 
@@ -334,15 +334,15 @@ The following code sample customizes the ACM theme using some basic parameters:
 local StarterGui = game:GetService("StarterGui")
 
 StarterGui:SetCore("AvatarContextMenuTheme", {
-  BackgroundImage = "",
-  BackgroundTransparency = 0.5,
-  BackgroundColor = Color3.fromRGB(111, 145, 242),
-  NameTagColor = Color3.fromRGB(0, 0, 200),
-  NameUnderlineColor = Color3.fromRGB(213, 233, 255),
-  ButtonFrameColor = Color3.fromRGB(15, 24, 65),
-  ButtonFrameTransparency = 0.2,
-  ButtonUnderlineColor = Color3.fromRGB(213, 233, 255),
-  Font = Enum.Font.SciFi
+	BackgroundImage = "",
+	BackgroundTransparency = 0.5,
+	BackgroundColor = Color3.fromRGB(111, 145, 242),
+	NameTagColor = Color3.fromRGB(0, 0, 200),
+	NameUnderlineColor = Color3.fromRGB(213, 233, 255),
+	ButtonFrameColor = Color3.fromRGB(15, 24, 65),
+	ButtonFrameTransparency = 0.2,
+	ButtonUnderlineColor = Color3.fromRGB(213, 233, 255),
+	Font = Enum.Font.SciFi
 })
 ```
 

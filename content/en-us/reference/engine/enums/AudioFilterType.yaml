@@ -1,63 +1,90 @@
 name: AudioFilterType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Filter types used for `Class.AudioFilter` instances.
+description: |
+  Families of curves that `Class.AudioFilter` can use to process incoming audio.
+  Each filter type is applied at a specified
+  `Class.AudioFilter.Frequency|Frequency` and may be shaped by additional
+  `Class.AudioFilter.Gain|Gain` or `Class.AudioFilter.Q|Q` parameters.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Peak
-    summary: ''
+    summary: |
+      Filter that boosts or reduces sound near a specified
+      `Class.AudioFilter.Frequency|Frequency`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: LowShelf
-    summary: ''
+    summary: |
+      Filter that boosts or reduces sound below a specified
+      `Class.AudioFilter.Frequency|Frequency`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: HighShelf
-    summary: ''
+    summary: |
+      Filter that boosts or reduces sound above a specified
+      `Class.AudioFilter.Frequency|Frequency`.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Lowpass12dB
-    summary: ''
+    summary: |
+      Filter that cuts sound above a specified
+      `Class.AudioFilter.Frequency|Frequency`, at a slope of -12dB/octave.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Lowpass24dB
-    summary: ''
+    summary: |
+      Filter that cuts sound above a specified
+      `Class.AudioFilter.Frequency|Frequency`, at a slope of -24dB/octave.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Lowpass48dB
-    summary: ''
+    summary: |
+      Filter that cuts sound above a specified 
+      `Class.AudioFilter.Frequency|Frequency`, at a slope of -48dB/octave.
     value: 5
     tags: []
     deprecation_message: ''
   - name: Highpass12dB
-    summary: ''
+    summary: |
+      Filter that cuts sound below a specified
+      `Class.AudioFilter.Frequency|Frequency`, at a slope of -12dB/octave.
     value: 6
     tags: []
     deprecation_message: ''
   - name: Highpass24dB
-    summary: ''
+    summary: |
+      Filter that cuts sound below a specified
+      `Class.AudioFilter.Frequency|Frequency`, at a slope of -24dB/octave.
     value: 7
     tags: []
     deprecation_message: ''
   - name: Highpass48dB
-    summary: ''
+    summary: |
+      Filter that cuts sound below a specified
+      `Class.AudioFilter.Frequency|Frequency`, at a slope of -48dB/octave.
     value: 8
     tags: []
     deprecation_message: ''
   - name: Bandpass
-    summary: ''
+    summary: |
+      Filter that only allows sound near a specified
+      `Class.AudioFilter.Frequency|Frequency` to be heard.
     value: 9
     tags: []
     deprecation_message: ''
   - name: Notch
-    summary: ''
+    summary: |
+      Filter that cuts sound near a specified
+      `Class.AudioFilter.Frequency|Frequency`.
     value: 10
     tags: []
     deprecation_message: ''
