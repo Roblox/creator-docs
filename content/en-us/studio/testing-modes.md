@@ -65,7 +65,7 @@ In the [Output](../studio/output.md) window, messages are labeled **blue** (clie
 
 ### Pausing & Resuming Physics
 
-<BetaAlert betaName="Simulation Pause" leadIn="This tool workflow is currently in beta. Enable it through " leadOut="." components={props.components} />
+<BetaAlert betaName="Simulation Pause and Step" leadIn="This tool workflow is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 <PauseResumePhysics components={props.components} />
 
