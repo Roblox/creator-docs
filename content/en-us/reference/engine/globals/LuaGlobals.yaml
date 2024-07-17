@@ -60,13 +60,11 @@ functions:
     summary: |
       Performs the specified operation of the garbage collector.
     description: |
-      Performs an operation on the Lua garbage collector based on the specified
-      option.
-
-      Roblox's Lua sandbox only allows the "count" option to be used, so none of
-      the other standard options are available.
-
-      The "count" option returns the total memory in use by Lua in kilobytes.
+      Performs the specified operation of the garbage collector. Note that Roblox's
+      Lua sandbox only allows the `count` option to be used (the total memory in use
+      by Lua, in kilobytes), as other options can interfere with existing processes.
+      Effectively, this makes `Global.RobloxGlobals.gcinfo()` a superior alternative
+      that should be used instead.
     parameters:
       - name: operation
         type: string
@@ -79,8 +77,6 @@ functions:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: |
-      Roblox's Lua sandbox only allows the `count` option to be used as other options can interfere with existing processes. This effectively made it an inferior version to `gcinfo()` which should be used instead.
     code_samples:
   - name: error
     summary: |
