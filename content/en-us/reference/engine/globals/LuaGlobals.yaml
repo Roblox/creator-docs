@@ -691,7 +691,7 @@ functions:
     summary: |
       Similar to `pcall()` except it uses a custom error handler.
     description: |
-      This function is similar to `pcall()`, except that you can set a new error
+      This function is similar to `Global.LuaGlobals.pcall()`, except that you can set a new error
       handler.
 
       `xpcall()` calls function `f` in protected mode, using `err` as the error
