@@ -112,7 +112,17 @@ You can filter by the following metrics:
 
 Use the **Explore** button on the top-right corner of the chart to switch to a single chart view. In this view, you can apply different filters and breakdowns to explore under-performing segments and areas of opportunity.
 
+<figure>
    <img src="../../assets/analytics/analytics-dashboard/Explore-Mode.png" alt="Analytics chart with top-right corner annotated to indicate explore mode button" />
+<figcaption><center>To access Explore mode, click the Explore icon on the top right of the chart.</center></figcaption>
+</figure>
+
+<br />
+
+<figure>
+   <img src="../../assets/analytics/analytics-dashboard/Explore-Mode-Preview.png" alt="Analytics chart with additional dropdowns and filters." />
+<figcaption><center>Explore mode provides additional filters and breakdowns to further analyze and compare data points.</center></figcaption>
+</figure>
 
 ### Exporting a Chart
 
