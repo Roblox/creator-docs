@@ -3,7 +3,7 @@ title: Analytics Dashboard
 description: Analytics Dashboard helps you measure and gain insight into your experience's performance.
 ---
 
-Analytics Dashboard helps you measure and gain insight into your experience's performance to adjust content strategies. It visualizes standard key performance indicators (KPIs) of your experience to help you optimize your experience's full lifecycle, including:
+The **Analytics Dashboard** helps you measure and gain insight into your experience's performance to adjust content strategies. It visualizes standard key performance indicators (KPIs) of your experience to help you optimize your experience's full lifecycle, including:
 
 - [Retention](../../production/analytics/retention.md) KPIs that measure how many users return to your experience again after their first visit.
 - [Engagement](../../production/analytics/engagement.md) KPIs that reflect how users actively use your experience and represent your core user base.
@@ -16,7 +16,7 @@ The dashboard also provides [Sales Data](#sales-data) that you can download and 
 
 ## Setting Up Analytics Dashboard
 
-If you are an experience owner or a group owner, and your experience meets the enrollment requirements, you can enroll in Analytics Dashboard at any point with the following steps:
+If you are an experience owner or a group owner, and your experience meets the enrollment requirements, you can enroll in the analytics dashboard at any point with the following steps:
 
 1. Make sure that you have a verified email address and a 2-Step Verification method on your Roblox account.
 
@@ -30,20 +30,8 @@ Now you have access to the main dashboard on the **Overview** and dashboards of 
 If you don't want to activate the dashboard immediately, or you accidentally decline the **Terms of Use**, you can still use the **Activate Analytics** button on the experience overview page to read the **Terms of Use** and agree to them any time. Refresh the page if you don't see the button.
 </Alert>
 
-### Granting Group Permission
-
-By default in a [group experience](../../projects/groups.md), only the group **owner** can view the analytics dashboard, as some KPIs such as revenue are sensitive information. The owner can grant permission for group members to access the analytics dashboard as follows:
-
-1. Select the group you want to grant permission on the [Groups](https://www.roblox.com/groups) page.
-2. Click the **&ctdot;** button and select **Configure Group** in the dropdown menu.
-
-   <img src="../../assets/publishing/groups/Configure-Group.png" alt="A group's landing page with the ellipis button and Configure Group menu item highlighted." width="780" />
-
-3. Navigate to the **Roles** tab. Select an existing role that you want to grant access to the analytics dashboard, or create a new role.
-4. In the **Assets** section, toggle on **View group experience analytics**.
-
-<Alert severity="info">
-The **View group experience analytics** and **Create and edit group experiences** permissions are independent. Turning on one of them doesn't affect the other, so you can let group members view the analytics dashboard for group experiences even if they can't edit those experiences.
+<Alert severity="warning">
+For [group](../../projects/groups.md) experiences, only the group owner and members with sufficient permissions can view the analytics dashboard, as some KPIs such as revenue are sensitive information. See [here](../../projects/groups.md#roles-and-permissions) for details on how to create a group role with access to view the dashboard.
 </Alert>
 
 ## Dashboard Functionalities
@@ -62,7 +50,7 @@ You can apply various filters to better understand your cohorts by clicking the 
 
 Some filters might not be available for all metrics. If a filter is not available, you will see that it is grayed out:
 
-   <img src="../../assets/publishing/groups/Metrics-Unavailable.png" alt="Example of some filters displaying at partial opacity when unavailable." width="70%" />
+   <img src="../../assets/analytics/analytics-dashboard/Metrics-Unavailable.png" alt="Example of some filters displaying at partial opacity when unavailable." width="70%" />
 
 You can filter by the following metrics:
 
@@ -124,7 +112,7 @@ You can filter by the following metrics:
 
 Use the **Explore** button on the top-right corner of the chart to switch to a single chart view. In this view, you can apply different filters and breakdowns to explore under-performing segments and areas of opportunity.
 
-   <img src="../../assets/publishing/groups/Explore-Mode.png" alt="Analytics chart with top-right corner annotated to indicate explore mode button" />
+   <img src="../../assets/analytics/analytics-dashboard/Explore-Mode.png" alt="Analytics chart with top-right corner annotated to indicate explore mode button" />
 
 ### Exporting a Chart
 
@@ -138,7 +126,7 @@ You can't export the chart data for the given KPI chart if you don't have any da
 
 Benchmarking is the process of measuring your experience's KPIs and comparing them to other experiences on Roblox. With benchmarks displayed on your dashboard, you can monitor the performance of your experience's analytics KPIs among experiences on Roblox to adjust your content strategy and set appropriate goals for improvement.
 
-For KPIs relevant to specific aspects of your user behavior, Analytics Dashboard provides **similar experience benchmarks**. Depending on the availability, you might see:
+For KPIs relevant to specific aspects of your user behavior, the analytics dashboard provides **similar experience benchmarks**. Depending on the availability, you might see:
 
 - **Similar experiences** benchmarks if the model finds enough similar games, such as those on the recommended experiences section on your Experience Details Page.
 - **Genre** benchmarks if the model cannot find enough similar experiences but your game has an internal genre.
@@ -164,7 +152,7 @@ Each of these KPIs shows its similar experience benchmark in the 50th - 90th per
 
 <img src="../../assets/analytics/analytics-dashboard/benchmark-similar-exp.png" width= "100%" alt="An example shows the D7 retention chart with similar experience benchmarking." />
 
-For KPIs on your experience's overall success, Analytics Dashboard uses the top 1000 experiences with the highest total playtime on rolling 30 days as the benchmarking pool, excluding experiences that are less than 30 days old. Each of these KPIs has **Top 200**, **Top 500**, and **Top 1000** as benchmarking tiers. The dashboard displays the appropriate tier for your experience based on your experience's engagement metrics and updates them on a daily basis,
+For KPIs on your experience's overall success, the analytics dashboard uses the top 1000 experiences with the highest total playtime on rolling 30 days as the benchmarking pool, excluding experiences that are less than 30 days old. Each of these KPIs has **Top 200**, **Top 500**, and **Top 1000** as benchmarking tiers. The dashboard displays the appropriate tier for your experience based on your experience's engagement metrics and updates them on a daily basis,
 
 ### Viewing KPI Breakdowns
 

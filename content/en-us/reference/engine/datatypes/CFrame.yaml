@@ -299,6 +299,27 @@ constructors:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: CFrame.fromRotationBetweenVectors
+    summary: |-
+      Returns a `Datatype.CFrame` representing the orientation needed to rotate
+      from the first `Datatype.Vector3` to the second, with the position set to zero.
+    description: |-
+      Returns a `Datatype.CFrame` representing the orientation needed to rotate
+      from the first `Datatype.Vector3` to the second, with the position set to zero.
+    parameters:
+      - name: from
+        type: Vector3
+        default:
+        summary: |
+          Vector representing the "from" direction.
+      - name: to
+        type: Vector3
+        default:
+        summary: |
+          Vector representing the "to" direction.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
   - name: CFrame.fromEulerAngles
     summary: |-
       Returns a rotated `Datatype.CFrame` from angles `rx`, `ry`, and `rz` in

@@ -27,6 +27,7 @@ description: |
   - `Class.AudioEmitter`
   - `Class.AudioEqualizer`
   - `Class.AudioFader`
+  - `Class.AudioFilter`
   - `Class.AudioFlanger`
   - `Class.AudioListener`
   - `Class.AudioPitchShifter`

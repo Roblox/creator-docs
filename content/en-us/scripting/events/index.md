@@ -30,7 +30,7 @@ end
 part.Touched:Connect(onPartTouched)
 ```
 
-You can also connect [anonymous functions](../../luau/functions.md#anonymous-functions) to events when you want to use variables in the parent scope and don't need to use the function elsewhere. For example, this code sample avoids the awkward intermediary function from the similar sample in [Services](services.md):
+You can also connect [anonymous functions](../../luau/functions.md#anonymous-functions) to events when you want to use variables in the parent scope and don't need to use the function elsewhere. For example, this code sample avoids the awkward intermediary function from the similar sample in [Services](../services.md):
 
 ```lua
 local Players = game:GetService("Players")

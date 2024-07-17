@@ -95,15 +95,15 @@ Examples of attribute usage include:
 
 - Weapons with attributes such as damage, fire rate, shot sound, and reload time.
 
-	<img src="../assets/studio/properties/Attributes-Example-A.png" width="320" />
+  <img src="../assets/studio/properties/Attributes-Example-A.png" width="320" />
 
 - Vehicle tuning like acceleration and top speed, body color, and engine sound.
 
-	<img src="../assets/studio/properties/Attributes-Example-B.png" width="320" />
+  <img src="../assets/studio/properties/Attributes-Example-B.png" width="320" />
 
 - Additional [package](../projects/assets/packages.md) or asset metadata such as description, version, and author.
 
-	<img src="../assets/studio/properties/Attributes-Example-C.png" width="320" />
+  <img src="../assets/studio/properties/Attributes-Example-C.png" width="320" />
 
 ### Supported Types
 
@@ -163,78 +163,4 @@ New attributes can be created and modified in Studio as follows:
 
 ### Scripting
 
-Attributes can also be created and controlled through scripts.
-
-#### Creating/Modifying Attributes
-
-To create an attribute or modify an existing attribute's value, call `Class.Instance:SetAttribute()` with a **name** and **value**.
-
-```lua title='Create or Modify Attribute' highlight='4'
-local weapon = script.Parent
-
--- Create an attribute
-weapon:SetAttribute("ReloadTime", 3)
-```
-
-#### Getting Attribute Values
-
-To get the value of one existing attribute, call `Class.Instance:GetAttribute()` on the instance.
-
-```lua title='Get Attribute Value' highlight='4, 7'
-local weapon = script.Parent
-
--- Create an attribute
-weapon:SetAttribute("ReloadTime", 3)
-
--- Get current attribute value
-local reloadTimeValue = weapon:GetAttribute("ReloadTime")
-print(reloadTimeValue)
-```
-
-Similarly, you can get **all** attributes of an instance by calling `Class.Instance:GetAttributes()`. This returns a dictionary of string/variant pairs representing each attribute.
-
-```lua title='Get All Attributes' highlight='4-5, 8'
-local weapon = script.Parent
-
--- Create attributes
-weapon:SetAttribute("ReloadTime", 3)
-weapon:SetAttribute("FireSound", "rbxassetid://3821795742")
-
--- Get all instance attributes
-local weaponAttributes = weapon:GetAttributes()
-for name, value in weaponAttributes do
-	print(name, value)
-end
-```
-
-#### Deleting Attributes
-
-To delete an attribute, call `Class.Instance:SetAttribute()` with a value of `nil`.
-
-```lua title='Delete Attribute' highlight='4'
-local weapon = script.Parent
-
--- Delete an existing attribute
-weapon:SetAttribute("ReloadTime", nil)
-```
-
-#### Detecting Attribute Changes
-
-To listen for value changes on one or more attributes:
-
-- Connect `Class.Instance:GetAttributeChangedSignal()` for one specific named attribute.
-- Connect `Class.Instance.AttributeChanged` for any attribute on the instance.
-
-```lua title='Listen for Change on Attribute(s)' highlight='4-6, 9-11'
-local weapon = script.Parent
-
---- Listen for one specific attribute change
-weapon:GetAttributeChangedSignal("ReloadTime"):Connect(function()
-	print(weapon:GetAttribute("ReloadTime"))
-end)
-
--- Listen for any attribute change on the instance
-weapon.AttributeChanged:Connect(function(attributeName)
-	print(attributeName, weapon:GetAttribute(attributeName))
-end)
-```
+Part of the appeal of custom attributes is that you can use scripts to manipulate them. See [Properties and Attributes](../scripting/attributes.md).

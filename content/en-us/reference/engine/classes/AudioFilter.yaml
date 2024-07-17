@@ -2,9 +2,17 @@ name: AudioFilter
 type: class
 category:
 memory_category: Internal
-summary: ''
-description: ''
-code_samples: []
+summary: |
+  Adjusts the frequency content of audio streams.
+description: |
+  `Class.AudioFilter` adjusts the frequency content of audio streams. It
+  provides one **Input** pin and one **Output** pin which can be connected
+  to/from by `Class.Wire|Wires`. `Class.AudioFilter` uses its
+  `Class.AudioFilter.FilterType|FilterType`, `Class.AudioFilter.Gain|Gain`, and
+  `Class.AudioFilter.Q|Q` properties to determine what to do around a particular
+  cutoff `Class.AudioFilter.Frequency|Frequency`.
+code_samples:
+  - audio-wiring---emitter-filtering
 inherits:
   - Instance
 tags:
@@ -27,8 +35,12 @@ properties:
       can_load: true
       can_save: true
   - name: AudioFilter.FilterType
-    summary: ''
-    description: ''
+    summary: |
+      The curve type of the band represented by the filter.
+    description: |
+      The type of frequency response curve that will be used to filter the audio
+      signal. Each type of curve affects the frequency content of the audio in
+      different ways.
     code_samples: []
     type: AudioFilterType
     tags: []
@@ -42,8 +54,12 @@ properties:
       can_load: true
       can_save: true
   - name: AudioFilter.Frequency
-    summary: ''
-    description: ''
+    summary: |
+      The central frequency that the filter acts around.
+    description: |
+      The central frequency in hertz of the curve represented by the filter.
+      Generally, adjusting this value up or down corresponds to a horizontal
+      shift in the overall frequency curve. Ranges from 20 to 22000.
     code_samples: []
     type: float
     tags: []
@@ -57,8 +73,13 @@ properties:
       can_load: true
       can_save: true
   - name: AudioFilter.Gain
-    summary: ''
-    description: ''
+    summary: |
+      For peaking and shelving filters, controls volume increase or reduction.
+    description: |
+      The gain value in decibels used to determine the volume level of the curve
+      represented by the filter. Only applies when the
+      `Class.AudioFilter|FilterType` is `Peak`, `LowShelf`, or `HighShelf`.
+      Ranges from -30 to 30.
     code_samples: []
     type: float
     tags: []
@@ -72,8 +93,20 @@ properties:
       can_load: true
       can_save: true
   - name: AudioFilter.Q
-    summary: ''
-    description: ''
+    summary: |
+      For peaking, lowpass, highpass, bandpass, and notch filters, controls the
+      selectiveness or resonance.
+    description: |
+      The quality value used to determine the slope or resonance of the curve
+      represented by the filter. Only applies when the
+      `Class.AudioFilter|FilterType` is `Peak`, `Lowpass[x]dB`, `Highpass[x]dB`,
+      `Bandpass`, or `Notch`. Ranges from 0.1 to 10.
+      
+      For `Class.AudioFilter|FilterType` values of
+      `Enum.AudioFilterType.Lowpass12dB|Lowpass12dB` and
+      `Enum.AudioFilterType.Highpass12dB|Highpass12dB`, a **Q** value of
+      `sqrt(2)`, or `0.707`, corresponds to a flat filter at a 12dB/octave
+      slope.
     code_samples: []
     type: float
     tags: []
@@ -104,17 +137,23 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AudioFilter:GetGainAt
-    summary: ''
-    description: ''
+    summary: |
+      Returns the magnitude response of the filter at the given frequency.
+    description: |
+      Returns the gain value, in decibels, of the frequency response curve
+      represented by the filter at the given frequency, in hertz. This can be
+      used to sample the exact shape of the filter in key places or as a whole.
     code_samples: []
     parameters:
       - name: frequency
         type: float
         default:
-        summary: ''
+        summary: |
+          The frequency, in hertz, to sample.
     returns:
       - type: float
-        summary: ''
+        summary: |
+          The gain value, in decibels, at the given frequency.
     tags: []
     deprecation_message: ''
     security: None

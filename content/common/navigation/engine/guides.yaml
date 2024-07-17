@@ -189,6 +189,8 @@ navigation:
         path: /scripting/module
       - title: Services
         path: /scripting/services
+      - title: Properties and Attributes
+        path: /scripting/attributes
       - title: Events
         section:
           - title: Overview

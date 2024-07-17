@@ -227,7 +227,7 @@ Here are some example tools and their behaviors managed by either a local script
   </tbody>
 </table>
 
-For more information on the different script types, see [Scripts](../scripting/scripts.md).
+For more information on the different script types, see [Scripts](../scripting/index.md).
 
 #### Troubleshooting Tips
 
