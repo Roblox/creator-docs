@@ -44,26 +44,19 @@ There are some small differences when managing collaborators in [group‑owned e
 
 ### Group-Owned Experiences
 
-For [group](../projects/groups.md) experiences, only the group **owner** can manage permissions through the group's [roles](../projects/groups.md#roles-and-permissions), either across **all group experiences** or on a **per‑experience** basis. Group owners can also add individual collaborators to group-owned experiences in the same workflow as [user-owned](#user-owned-experiences) experiences, but only for **Play** access.
+For [group](../projects/groups.md) experiences, only the group owner or members with sufficient permissions can manage the group's roles, either across **all group experiences** or on a **per‑experience** basis. Such users can also add individual collaborators to group‑owned experiences in the same workflow as [user‑owned](#user-owned-experiences) experiences, but only for **Play** access.
 
 <Tabs>
 <TabItem label="All Group Experiences">
-If you're the group's owner, you can set permissions across **all** group experiences, for example to grant **Edit** permission to an "Audio&nbsp;Artist" group role so they can fine-tune audio playback across all of your experiences.
+If you're the group owner or a member with sufficient permissions, you can configure collaboration across **all** group experiences, for example grant **Edit** permission to an "Audio&nbsp;Artist" group role so they can fine-tune audio playback across multiple group experiences.
 
-1. Navigate to the [Groups](https://www.roblox.com/groups) page and select the group.
-1. Click the **&ctdot;** button in the upper-right corner and select **Configure&nbsp;Group**.
+1. From the [Creator Dashboard](https://create.roblox.com/dashboard/creations), select the group from the **View&nbsp;As** dropdown menu and navigate to **Collaboration**&nbsp;&rang; **Roles**.
 
-   <img src="../assets/publishing/groups/Configure-Group.png" alt="A group's landing page with the ellipis button and Configure Group menu item highlighted." width="780" />
+   <img src="../assets/creator-dashboard/Nav-Collaboration-Roles.png" width="280" alt="Roles option indicated in the Collaboration section on the Creator Dashboard." />
 
-1. In the left column of the group configuration page, select the **Roles** tab.
+1. Enable [Edit all group experiences](../projects/groups.md#roles-and-permissions) for roles that should have editing permission. Remember to click **Save&nbsp;Changes** for each role that you change.
 
-   <img src="../assets/publishing/groups/Group-Admin-Roles.png" alt="A close up view of the left column with the Roles navigation item highlighted." width="160" />
-
-1. Select each group role that you want to give editing permission to and enable **Create and edit group experiences**.
-
-   <img src="../assets/publishing/groups/Create-Edit-Group-Experiences.png" alt="A close up view of an group role settings. The Create and edit group experiences setting is enabled." width="780" />
-
-   In Studio's **Manage Collaborators** window for any group-owned experience, these roles display **Edit** permission but are muted to indicate that you can't change the permission level from Studio.
+In Studio's **Manage Collaborators** window for any group-owned experience, eligible roles display **Edit** permission but are muted to indicate that you can't change the permission level from Studio.
 
    <img src="../assets/studio/general/Toolbar-Collaborate-Button-From-Off.png" width="754" alt="Studio's menu bar with the Collaborate button highlighted." />
 
