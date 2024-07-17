@@ -730,7 +730,7 @@ functions:
     code_samples:
   - name: ypcall
     summary: |
-      Similar to `pcall()` expect it yields.
+      Similar to `pcall()` expect it can yield.
     description: |
       This function is similar to `pcall()`. However, the function passed as an argument can yield without causing error (that is, the "attempt to yield across metamethod/C-call boundary" error).
       
