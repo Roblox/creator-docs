@@ -689,7 +689,7 @@ functions:
     code_samples:
   - name: xpcall
     summary: |
-      Similar to `pcall()` except it uses a custom error handler.
+      Similar to `Global.LuaGlobals.pcall()` except it uses a custom error handler.
     description: |
       This function is similar to `Global.LuaGlobals.pcall()`, except that you can set a new error
       handler.
