@@ -19,13 +19,13 @@ You can quickly apply materials to [parts](../parts/index.md) through the [Mater
 
 <BetaAlert betaName="Material Picker" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
-The **Material** widget is accessible from either the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tabs.
+The **Material** widget is accessible from either the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tabs. Clicking the small dropdown arrow reveals a material picker.
 
-<img src="../assets/studio/general/Model-Tab-Material.png" width="704" alt="Studio's Model tab with the Material button highlighted." />
+<img src="../assets/studio/general/Model-Tab-Material-Picker.png" width="704" alt="Studio's Model tab with the Material widget's picker." />
 
-Clicking the small dropdown arrow reveals a material picker and, by default, applies the chosen material to all selected parts. Once you've selected a material, you can quickly apply it to other parts by selecting those parts and clicking the **Material** button itself.
+By default, clicking the overall **Material** button applies the chosen material to any **selected** parts. If you prefer a fill/paint workflow instead, toggle on **Material&nbsp;Action&nbsp;as&nbsp;Tool** and then click parts in the 3D viewport to apply the chosen material.
 
-<img src="../assets/studio/general/Model-Tab-Material-Tools.png" width="704" alt="Studio's Model tab with the Material button's components highlighted." />
+<img src="../assets/studio/general/Model-Tab-Material-Action-As-Tool.png" width="704" alt="Studio's Model tab with the Material Action as Tool selector indicated." />
 
 ### Material Manager
 
