@@ -66,7 +66,7 @@ functions:
       Roblox's Lua sandbox only allows the "count" option to be used, so none of
       the other standard options are available.
 
-      The "count" option returns the total memory in use by Lua (in kilobytes).
+      The "count" option returns the total memory in use by Lua in kilobytes.
     parameters:
       - name: operation
         type: string
@@ -78,6 +78,9 @@ functions:
       - type: Variant
         summary: ''
     tags:
+      - Deprecated
+    deprecation_message: |
+      Roblox's Lua sandbox only allows the `count` option to be used as other options can interfere with existing processes. This effectively made it an inferior version to `gcinfo()` which should be used instead.
     code_samples:
   - name: error
     summary: |
@@ -692,7 +695,7 @@ functions:
     summary: |
       Similar to `pcall()` except it uses a custom error handler.
     description: |
-      This function is similar to pcall, except that you can set a new error
+      This function is similar to `pcall()`, except that you can set a new error
       handler.
 
       `xpcall()` calls function `f` in protected mode, using `err` as the error
@@ -724,4 +727,29 @@ functions:
       - type: Variant
         summary: ''
     tags:
+    code_samples:
+  - name: ypcall
+    summary: |
+      Similar to `pcall()` expect it yields.
+    description: |
+      This function is similar to `pcall()`, except that you can yield function `f` to be called in protected mode.
+    parameters:
+      - name: f
+        type: function
+        default:
+        summary: |
+          The function to be called in protected mode.
+      - name: args
+        type: Tuple
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+      - type: Variant
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This function is now completely identical to `pcall()` which should be used instead.
     code_samples:
