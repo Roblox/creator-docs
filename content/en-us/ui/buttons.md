@@ -1,29 +1,17 @@
 ---
-title: Buttons
+title: Text & Image Buttons
 description: Buttons allow users to prompt an action.
 ---
 
-When designing buttons, `Class.TextButton` and
-`Class.ImageButton` objects allow a user to perform an action.
-You can customize these objects to provide context and prompts for what you
-want a user to do. For example, you can provide users visual feedback by
-changing the appearance of an ImageButton when a user clicks it.
+**Buttons** are `Class.GuiObject|GuiObjects` that allow users to perform an action. You can customize buttons to provide context and feedback, such as changing the visual appearance or [scripting](#scripting-buttons) audible feedback when a user clicks a button.
 
-Because these objects are `Class.GuiObject|GuiObjects`, you can customize properties such as `Class.GuiObject.BackgroundColor3|BackgroundColor3`, `Class.GuiObject.BorderMode|BorderMode`, `Class.GuiObject.Transparency|Transparency`, and `Class.GuiObject.Rotation|Rotation` to fit the aesthetics of your experience.
+There are two types of buttons which you can place [on‑screen](../ui/on-screen-containers.md) or [in‑experience](../ui/in-experience-containers.md):
 
-There are two types of buttons you can use on a screen or surface of a part:
+- A `Class.TextButton` is a rectangle with text that triggers the `Class.GuiButton.Activated|Activated` event on click/tap.
 
-- **TextButton** - A `Class.TextButton`
-  is a rectangle with text that performs a set action when clicked.
-  This action determines the `Class.GuiButton.Activated` property with [scripting](#scripting-buttons).
+- An `Class.ImageButton` is a rectangle with an image that triggers the `Class.GuiButton.Activated|Activated` event on click/tap. It features additional states for swapping the image on user hover or press.
 
-- **ImageButton** - An `Class.ImageButton`
-  is a rectangle with an image that performs a set action when clicked. This
-  object is useful for a character selection screen or intuitive quick-action
-  buttons, such as a button with a cart icon that opens a marketplace.
-
-  <img src="../assets/ui/button-text-input/ImageButton-Examples.jpg"
-   width="800" />
+<img src="../assets/ui/button-text-input/ImageButton-Examples.jpg" width="800" />
 
 ## Creating Buttons on the Screen
 

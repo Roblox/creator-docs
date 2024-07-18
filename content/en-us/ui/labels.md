@@ -1,18 +1,17 @@
 ---
-title: Labels
-description: Labels are GuiObjects that let you display customizable text and images.
+title: Text & Image Labels
+description: Explore how labels display customizable text and images in user interfaces.
 ---
 
-Labels are `Class.GuiObject|GuiObjects` that
-allow you to display customizable text and images within a
-`Class.ScreenGui` or
-`Class.SurfaceGui`. There are two types of labels:
+import TextFiltering from '../includes/text-filtering/text-filtering.md'
 
-- A `Class.TextLabel` is a rectangle with text that you can style through customizable properties. This is the main way to display text in an experience.
+**Labels** are `Class.GuiObject|GuiObjects` that let you display customizable text and images [on‑screen](../ui/on-screen-containers.md) or [in‑experience](../ui/in-experience-containers.md). There are two types of labels:
 
-- An `Class.ImageLabel` is a rectangle with an image that you can style through customizable properties. This is the main way to display images in an experience.
+- A `Class.TextLabel` is a rectangle with text that you can style through customizable properties. This is the primary way to display text in an experience.
 
-<img src="../assets/ui/labels/Labels-Example.jpg" width="80%" />
+- An `Class.ImageLabel` is a rectangle with an image [asset](../projects/assets/index.md) that you can style through customizable properties. Alongside [textures and decals](../parts/textures-decals.md), this lets you display images in an experience.
+
+<img src="../assets/ui/labels/Labels-Example.jpg" width="800" />
 
 ## Creating Labels on the Screen
 
@@ -74,3 +73,7 @@ properties:
 - `Class.GuiObject.BackgroundTransparency|BackgroundTransparency`
 
 For example, to display only the image and hide the rectangle, set the `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` property to `1`.
+
+## Text Filtering
+
+<TextFiltering components={props.components} context="characters/strings that are displayed on text labels" />

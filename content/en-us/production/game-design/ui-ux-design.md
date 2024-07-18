@@ -8,8 +8,6 @@ description: UI and UX design in Roblox
 <br />
 The _user interface_ (UI) combines artistic visual design with communication-centric information design to produce menus, shop layouts, heads-up displays (HUDs) and other interfaces that players interact with. The _user experience_ (UX) relates to how players interact with the game, how they make their choices known to the game, and how they move from one choice to the next. While UI and UX often work collaboratively, UX carries a more significant focus on interactivity and the player's experience rather than the visual and informational design of the UI.
 
-To learn how to implement UI elements into your experience, see [UI](../../ui/index.md).
-
 ## UI
 
 The UI shares vital information like hit points, quest objectives, and prices that allow players to make decisions and navigate the game. Because it is often the primary way in which games communicate with the player, UI is critical to players' experience. Poorly designed UI can leave players confused and frustrated and lead to poor retention, while expertly designed UI can contribute to engagement and monetization. Effective designed UI employs the following principles:

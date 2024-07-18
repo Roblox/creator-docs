@@ -17,7 +17,7 @@ Create almost anything you can imagine by combining [parts](../parts/index.md) a
 </figure>
 
 <figure>
-Overlay or integrate [user interface](../ui/index.md) components like text labels and buttons, billboards, and inventory screens to provide more ways for users to interact with your experiences.
+Overlay or integrate UI components like [labels](../ui/labels.md), [buttons](../ui/buttons.md), and [text inputs](../ui/text-input.md) to provide more ways for users to interact with your experiences.
 
 <img src="../assets/ui/button-text-input/TextBox-Example.jpg" alt="Example pop-up UI that requires players to type in their characters name. The background is a brightly lit dungeon." />
 </figure>
@@ -47,7 +47,7 @@ Contribute your Luau scripts for AI training can help enhance Luau-focused AI to
 ## Fast Publishing and Updating
 
 <figure>
-Roblox not only provides the engine and tooling, but gives you access to a large social network of users on a broad array of devices. Just click to [publish](../production/publishing/publishing-experiences-and-places.md) and your experiences are automatically available to this network with built-in [discovery](../production/promotion/discovery.md) and [monetization](../production/monetization/index.md) opportunities. Want to iterate on your experience? Make the changes and update them immediately for all users in an instant.
+Roblox not only provides the engine and tooling, but gives you access to a large social network of users on a broad array of devices. Just click to [publish](../production/publishing/publishing-experiences-and-places.md) and your experiences are automatically available to this network with built-in [discovery](../discovery.md) and [monetization](../production/monetization/index.md) opportunities. Want to iterate on your experience? Make the changes and update them immediately for all users in an instant.
 
 <img src="../assets/studio/overview/Multiple-Devices.jpg" alt="" />
 </figure>

@@ -1,137 +1,101 @@
 ---
 title: Text Filtering
-description: Text Filtering prevents users from seeing inappropriate language, and blocks personally identifiable information.
+description: Text filtering prevents users from seeing inappropriate language and blocks personally identifiable information.
 ---
 
-Applying proper **text filtering** is one of the most important ways to keep your experiences safe and secure. Roblox has a text filtering feature that not only prevents users from seeing inappropriate language, but also blocks personally identifiable information.
+Applied to various sources and inputs, **text filtering** prevents users from seeing inappropriate language and personally identifiable information such as phone numbers. Roblox automatically filters common text outputs such as messages that have passed through [in-experience text chat](../chat/in-experience-text-chat.md), but **you are responsible for filtering any displayed text that you don't have explicit control over**.
 
-Because filtering is crucial for a safe environment, Roblox actively moderates the content of experiences to make sure they meet [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). If Roblox receives reports or automatically detects that your experience doesn't apply filtering, then the system removes the experience until you add text filtering.
-
-<Alert severity="info">
-If you use `Class.TextChatService` to support [in-experience text chat](../chat/customizing-in-experience-text-chat.md), you don't need to filter chat messages manually because `Class.TextChannel:SendAsync()` automatically filters all inappropriate chat messages.
+<Alert severity="error">
+Because filtering is crucial for a safe environment, Roblox actively moderates the content of experiences to make sure they meet [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). If Roblox receives reports or automatically detects that your experience doesn't apply text filtering, then the system removes the experience until you add filtering.
 </Alert>
 
-## Types of Text to Filter
+## Filter Scenarios
 
-You must filter any displayed text that you don't have explicit control over to make sure your experiences are compliant. Examples include:
+Text can be gathered and/or displayed to users in a variety of scenarios, including:
 
-- **User Input** - Users can display text to others by:
+- An experience that gathers users' [text input](../ui/text-input.md) through `Class.TextBox` entries, a custom GUI with buttons such as a keyboard/keypad interface, or an interactive keyboard model in the 3D space.
 
-  - **Text Input** - `Class.TextBox` input, custom GUI with character buttons, and interactive keyboard models in the 3D space.
+- An experience that generates words from random characters and displays them to users, as there's a chance it will create inappropriate words.
 
-  - **Implicit Input** - Spelling out words with 3D `Class.Part|Parts` and `Class.Model|Models`.
+- An experience that connects to an external web server to fetch content that is displayed in-experience. Often you will not have control over the content of the external site and a third party can edit the information.
 
-- **Random Words** - If your experience generates words from random characters and displays them to users, there is a chance that it creates inappropriate words.
+- An experience that stores text such as users' pet names using [data stores](../cloud-services/data-stores), where the stored text might include inappropriate words that should be filtered when retrieving them.
 
-- **External Sources** - Some experiences connect to external web servers that fetch content to display information in experience. Sometimes you don't have the full control of the content of the external site, and a third party can edit the information.
+## Filtering Process
 
-- **Stored Text** - If your experience stores text such as a chat log or a user's pet name using [data stores](../cloud-services/data-stores), and the stored text might include inappropriate words, you should filter the text strings when retrieving them. This ensures that you use the most up-to-date version of the text filter.
+`Class.TextService:FilterStringAsync()` filters in-experience text by taking a string of text and the `Class.Player.UserId|UserId` of the user who created the text as input. It returns a `Class.TextFilterResult` object which has two additional methods that you can call in different scenarios:
+
+- `Class.TextFilterResult:GetNonChatStringForBroadcastAsync()` for filtering text visible to all users in an experience, such as for a dialog that lets a user write a message on a sign that's visible to all users on the server.
+- `Class.TextFilterResult:GetNonChatStringForUserAsync()` to display filtered text for one specific user, based on age and other details.
+
+In the context of `Class.TextBox` input, the following example gathers input on the `Class.TextBox.FocusLost|FocusLost` event and sends it to the server through a `Class.RemoteEvent`. On the server, it is filtered first through `Class.TextService:FilterStringAsync()|FilterStringAsync()` and then `Class.TextFilterResult:GetNonChatStringForBroadcastAsync()|GetNonChatStringForBroadcastAsync()` with the intention that the text will be displayed to all users on a server‑side object such as a `Class.SurfaceGui` in the 3D world.
 
 <Alert severity="warning">
-Do not filter text in real-time when users type on the client, such as entering text into a `Class.TextBox`, as it delays the message preview that is only visible to the user typing it. Instead, filter the entered text after the user submits it.
+Do not filter text in real-time "per character entered" into a `Class.TextBox`, as doing so yields for text that's only visible to the user typing it. Instead, filter the entered text **after** the user submits it.
 </Alert>
 
-## Filtering Text
-
-`Class.TextService:FilterStringAsync()` filters in-experience text by taking a string of text and the `Class.Player.UserId|UserId` of the user who created the text as input. It returns a `Class.TextFilterResult` object that can differ for each user since `Class.TextService` determines different filtering levels based on age and other details.
-
-```lua
-local TextService = game:GetService("TextService")
-
-local filteredText = ""
-local success, errorMessage = pcall(function()
-	filteredText = TextService:FilterStringAsync(text, fromPlayerId)
-end)
-if not success then
-	warn("Error filtering text:", text, ":", errorMessage)
-	-- Put code here to handle filter failure
-end
-```
-
-<Alert severity="warning">
-Note that you should always wrap `Class.TextService:FilterStringAsync()` in `Global.LuaGlobals.pcall()` since it's an asynchronous network call that may occasionally fail. If the `Global.LuaGlobals.pcall()` fails, you should **not** display the text because it's safer to display empty text than unfiltered text.
-</Alert>
-
-The `Class.TextFilterResult` object returned by `Class.TextService:FilterStringAsync()` has two methods that you can call in different cases:
-
-- `Class.TextFilterResult:GetNonChatStringForBroadcastAsync()` for filtering text visible to all users in an experience.
-- `Class.TextFilterResult:GetNonChatStringForUserAsync()` to display filtered text for one specific user, such as the name of a pet.
-
-The following example sets up a dialog that lets a user write a message on a sign. Since everyone in the server can read the sign, including users who join the experience after the author has left, it's filtered with `Class.TextFilterResult:GetNonChatStringForBroadcastAsync()`.
-
-```lua title='LocalScript'
-local Players = game:GetService("Players")
+```lua title="Filtering Text Input - Client Script"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local player = Players.LocalPlayer
-local playerGui = player:WaitForChild("PlayerGui")
-local screen = playerGui:WaitForChild("MessageScreen")
+local textBox = script.Parent
+textBox.ClearTextOnFocus = false
+textBox.PlaceholderText = "..."
+textBox.TextXAlignment = Enum.TextXAlignment.Left 
+textBox.TextScaled = true
 
--- GUI elements for dialog
-local frame = screen.Frame
-local messageInput = frame.Message
-local sendButton = frame.Send
+-- RemoteEvent to send text input to server for filtering
+local inputRemoteEvent = ReplicatedStorage:FindFirstChild("InputRemoteEvent")
 
--- RemoteEvent to send text to server for filtering and display
-local setSignText = ReplicatedStorage.SetSignText
-
--- Called when button is clicked
-local function onClick()
-	local message = messageInput.Text
-	if message ~= "" then
-		frame.Visible = false
-		setSignText:FireServer(message)
+-- Event handler for focus lost and enter being pressed
+local function onFocusLost(enterPressed, inputObject)
+	if enterPressed then
+		print("SUBMITTED:", textBox.Text)
+		if inputRemoteEvent then
+			inputRemoteEvent:FireServer(textBox.Text)
+		end
 	end
 end
 
-sendButton.Activated:Connect(onClick)
+textBox.FocusLost:Connect(onFocusLost)
 ```
 
-```lua title='Script'
+```lua title="Filtering Text Input - Server Script"
 local TextService = game:GetService("TextService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local sign = workspace.Sign
-local signTop = sign.Top
-local signSurfaceGui = signTop.SurfaceGui
-local signLabel = signSurfaceGui.SignLabel
+-- RemoteEvent to receive text input from client for filtering
+local inputRemoteEvent = ReplicatedStorage:FindFirstChild("InputRemoteEvent")
 
-local setSignText = ReplicatedStorage.SetSignText
-
-local function getTextObject(message, fromPlayerId)
-	local textObject
+local function getFilterResult(text, fromUserId)
+	local filterResult
 	local success, errorMessage = pcall(function()
-		textObject = TextService:FilterStringAsync(message, fromPlayerId)
+		filterResult = TextService:FilterStringAsync(text, fromUserId)
 	end)
+
 	if success then
-		return textObject
+		return filterResult
+	else
+		warn("Error generating TextFilterResult:", errorMessage)
 	end
-	print("Error generating TextFilterResult:", errorMessage)
-	return false
 end
 
-local function getFilteredMessage(textObject)
-	local filteredMessage
-	local success, errorMessage = pcall(function()
-		filteredMessage = textObject:GetNonChatStringForBroadcastAsync()
-	end)
-	if success then
-		return filteredMessage
-	end
-	print("Error filtering message:", errorMessage)
-	return false
-end
-
--- Fired when client sends a request to write on the sign
-local function onSetSignText(player, text)
+-- Fired when client submits input from the TextBox
+local function onInputReceived(player, text)
 	if text ~= "" then
-		-- Filter the incoming message and send the filtered message
-		local messageObject = getTextObject(text, player.UserId)
-		local filteredText = ""
-		filteredText = getFilteredMessage(messageObject)
-		signLabel.Text = filteredText
+		local filterResult = getFilterResult(text, player.UserId)
+		if filterResult then
+			local success, filteredText = pcall(function()
+				return filterResult:GetNonChatStringForBroadcastAsync()
+			end)
+
+			if success then
+				print("FILTERED:", filteredText)
+			else
+				warn("Error filtering text!")
+			end
+		end
 	end
 end
 
-setSignText.OnServerEvent:Connect(onSetSignText)
+inputRemoteEvent.OnServerEvent:Connect(onInputReceived)
 ```

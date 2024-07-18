@@ -8,8 +8,8 @@ In-experience UI container objects such as `Class.SurfaceGui|SurfaceGuis` and
 
 The following example shows two different types of UI Containers:
 
-- A `Class.SurfaceGui` container holding an [`Class.ImageLabel`](./labels.md#imagelabels) that is anchored in the 3D world.
-- A `Class.BillboardGui` holding a [`Class.TextLabel`](./labels.md#textlabels) which is visible from every angle.
+- A `Class.SurfaceGui` container holding an `Class.ImageLabel` that is anchored in the 3D world.
+- A `Class.BillboardGui` holding a `Class.TextLabel` which is visible from every angle.
 
 <video src="../assets/ui/in-experience/Showcase.mp4" controls width="80%"></video>
 
