@@ -105,7 +105,7 @@ Font weight can be a case-insensitive string name including `Thin`, `ExtraLight`
 </blockquote>
 
 <Alert severity="info">
-See [UIStroke](../ui/layout-and-appearance.md#uistroke) for details on `<stroke>` tag parameters such as `joins` and `thickness`.
+See [Appearance Modifiers](../ui/appearance-modifiers.md) for details on `<stroke>` tag parameters such as `joins` and `thickness`.
 </Alert>
 
 ### Transparency

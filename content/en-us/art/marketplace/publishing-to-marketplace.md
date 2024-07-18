@@ -245,10 +245,6 @@ The following location options are available for all items:
 </tbody>
 </table>
 
-<Alert severity = 'error'>
-    After publishing a Limited, you can only change the Location Setting from **Experience By Place ID** to **Marketplace and All Experiences**. This change can't be reverted after saving.
-    </Alert>
-
 ### Publish Item
 
 When first publishing your asset, select the **Publish Item** button at the end of the form to pay the [publishing fee](../../art/marketplace/marketplace-fees-and-commissions.md#publishing-advance) and list your item on sale.

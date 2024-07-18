@@ -55,7 +55,7 @@ Labels allow you to display customizable [text](../ui/labels.md) and [images](..
 
 ## Layout and Design
 
-Beyond basic properties for [adjusting position and size](../ui/positioning-and-sizing.md), Roblox also provides [layouts](../ui/layout-and-appearance.md#layouts), [constraints](../ui/layout-and-appearance.md#constraints), and [appearance objects](../ui/layout-and-appearance.md#appearance-objects) for further refining your UI. You can also [animate](../ui/animation.md) UI through smoothly transitioning between property values.
+Beyond basic properties for [adjusting position and size](../ui/positioning-and-sizing.md), Roblox also provides [layouts](../ui/layout-and-appearance.md#layouts), [constraints](../ui/layout-and-appearance.md#constraints), and [appearance modifiers](../ui/appearance-modifiers.md) for further refining your UI. You can also [animate](../ui/animation.md) UI through smoothly transitioning between property values.
 
 ### 9-Slice Design
 
