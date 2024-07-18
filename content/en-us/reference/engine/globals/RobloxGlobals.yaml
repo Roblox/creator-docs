@@ -423,3 +423,27 @@ functions:
         summary: ''
     tags:
     code_samples:
+  - name: ypcall
+    summary: |
+      Legacy function to work around an old task scheduling limitation of `Global.LuaGlobals.pcall()`.
+    description: |
+     Legacy function to work around an old task scheduling limitation of `Global.LuaGlobals.pcall()`;
+     should not be used for new work (use `Global.LuaGlobals.pcall()` instead).
+    parameters:
+      - name: f
+        type: function
+        default:
+        summary: |
+          The function to be called in protected mode.
+      - name: args
+        type: Tuple
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+      - type: Variant
+        summary: ''
+    tags:
+      - Deprecated
+    code_samples:
