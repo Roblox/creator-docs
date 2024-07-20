@@ -1,5 +1,5 @@
 name: Quality Checks
-description: Reusable action for running the quality checks
+description: Reusable action for walking the quality checks
 inputs:
   BASE_BRANCH:
     description: Base branch
