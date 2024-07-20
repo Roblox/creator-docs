@@ -430,7 +430,7 @@ constructors:
       Returns a new `Datatype.DateTime` object from the given Unix timestamp, or
       the number of **seconds** since January 1st, 1970 at 00:00 (UTC).
 
-      This function only has granularity to 1 second. To reprsent sub-second
+      This function only has granularity to 1 second. To represent sub-second
       timestamps, use `Datatype.DateTime.fromUnixTimestampMillis()` instead.
     parameters:
       - name: unixTimestamp
