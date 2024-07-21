@@ -149,19 +149,19 @@ properties:
       played over one another.
 
       The Priority property for `Class.AnimationTrack` defaults to how it was
-      set and published from Studio's Animation Editor. It uses the
-      AnimationPriority Enum, which has 7 priority levels.
+      set and published from Studio's [Animation Editor](../../../animation/editor.md). It uses
+      `Enum.AnimationPriority` which has 7 priority levels:
 
-      1. Core (lowest priority)
-      2. Idle
-      3. Movement
+      1. Action4 (highest priority)
+      2. Action3
+      3. Action2
       4. Action
-      5. Action2
-      6. Action3
-      7. Action4 (highest priority)
+      5. Movement
+      6. Idle
+      7. Core (lowest priority)
 
-      Correctly set animation priorities, either through the editor or through
-      this property allow multiple animations to be played without them
+      Properly set animation priorities, either through the editor or through
+      this property, allow multiple animations to be played without them
       clashing. Where two playing animations direct the target to move the same
       limb in different ways, the `Class.AnimationTrack` with the highest
       priority will show. If both animations have the same priority, the weights

@@ -85,12 +85,11 @@ methods:
 
       local localPlayer = Players.LocalPlayer
       local success, enabled = pcall(function()
-          return VoiceChatService:IsVoiceEnabledForUserIdAsync(localPlayer.UserId)
+      	return VoiceChatService:IsVoiceEnabledForUserIdAsync(localPlayer.UserId)
       end)
       if success and enabled then
-          localPlayer.PlayerGui.MyVoiceGui.Enabled = true
+      	localPlayer.PlayerGui.MyVoiceGui.Enabled = true
       end
-
       ```
     code_samples:
     parameters:

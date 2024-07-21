@@ -51,7 +51,7 @@ To use the **EventSequencer** framework in an experience:
 
 #### Replace Mode
 
-The default framework mode is **replace mode** in which you design unique [scenes](#creating-scenes) by placing [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and [user interface](../../ui/index.md) objects into that scene's **Environment** folder. When a scene loads, those objects and properties get distributed into `Class.Workspace`, `Class.Terrain`, and `Class.Lighting`, **replacing** existing objects/properties to form a cloned space.
+The default framework mode is **replace mode** in which you design unique [scenes](#creating-scenes) by placing [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and user interface objects into that scene's **Environment** folder. When a scene loads, those objects and properties get distributed into `Class.Workspace`, `Class.Terrain`, and `Class.Lighting`, **replacing** existing objects/properties to form a cloned space.
 
 <Alert severity="success">
 This mode is best for **new** event experiences consisting of multiple sequential scenes, such as a pre-show venue to the main concert to a post-show party.
@@ -59,7 +59,7 @@ This mode is best for **new** event experiences consisting of multiple sequentia
 
 #### Inline Mode
 
-An alternate framework mode is **inline mode** in which you similarly design unique [scenes](#creating-scenes) with scripting logic for their flow/events, but the framework will **not** destroy existing [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and [user interface](../../ui/index.md) objects in order to clone assets/properties from a scene's **Environment** folder upon loading.
+An alternate framework mode is **inline mode** in which you similarly design unique [scenes](#creating-scenes) with scripting logic for their flow/events, but the framework will **not** destroy existing [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and user interface objects in order to clone assets/properties from a scene's **Environment** folder upon loading.
 
 <Alert severity="success">
 This mode is best for existing experiences, as it preserves the design and layout of your place while letting you orchestrate events such as cutscenes.
@@ -77,7 +77,7 @@ To enable inline mode:
 
 ### Creating Scenes
 
-A **scene** is essentially part of an overall event or a cutscene wrapped up in a series of folders. Each scene contains scripting logic that defines its flow/events, and a scene can store its own [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and [user interface](../../ui/index.md) objects.
+A **scene** is essentially part of an overall event or a cutscene wrapped up in a series of folders. Each scene contains scripting logic that defines its flow/events, and a scene can store its own [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and user interface objects.
 
 To get started quickly, you can find an empty scene inside the module's main folder:
 
@@ -108,7 +108,7 @@ Each scene should have a **time length**, in seconds, defining its duration &mda
 
 #### Environment
 
-A scene's **Environment** folder contains everything that users see and hear, including [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md) and [environmental effects](../../environment/index.md#environment), and [user interface](../../ui/index.md) objects. When a scene loads, those objects and properties get distributed into `Class.Workspace`, `Class.Terrain`, and `Class.Lighting`, replacing existing objects/properties to form a cloned space.
+A scene's **Environment** folder contains everything that users see and hear, including [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md) and [environmental effects](../../environment/index.md#environment), and user interface objects. When a scene loads, those objects and properties get distributed into `Class.Workspace`, `Class.Terrain`, and `Class.Lighting`, replacing existing objects/properties to form a cloned space.
 
 <Alert severity="warning">
 This folder is not intended for usage with [Inline Mode](#inline-mode), as that mode expects you to use existing assets and global property settings for the place, not load in scene-specific assets/properties.
@@ -126,7 +126,7 @@ The **Environment** folder contains the following containers:
 <tbody>
 	<tr>
 		<td>**Client**</td>
-		<td>Contains all assets to load when any user (client) joins the event, such as [user interface](../../ui/index.md) objects or an animation rig.</td>
+		<td>Contains all assets to load when any user (client) joins the event, such as user interface objects or an animation rig.</td>
 	</tr>
 	<tr>
 		<td>**PlayerSpawns**</td>

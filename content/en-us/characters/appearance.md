@@ -157,7 +157,7 @@ local humanoid = player.Character and player.Character:FindFirstChildWhichIsA("H
 local humanoidDescription = Instance.new("HumanoidDescription")
 
 if humanoid then
-  humanoidDescription = humanoid:GetAppliedDescription()
+	humanoidDescription = humanoid:GetAppliedDescription()
 end
 ```
 
@@ -208,16 +208,16 @@ For layered or bulk accessory changes, you can use `Class.HumanoidDescription:Se
 ```lua
 local humanoidDescription = Instance.new("HumanoidDescription")
 local accessoryTable = {
-  {
-    Order = 1,
-    AssetId = 6984769289,
-    AccessoryType = Enum.AccessoryType.Sweater
-  },
-  {
-    Order = 2,
-    AssetId = 6984767443,
-    AccessoryType = Enum.AccessoryType.Jacket
-  }
+	{
+		Order = 1,
+		AssetId = 6984769289,
+		AccessoryType = Enum.AccessoryType.Sweater
+	},
+	{
+		Order = 2,
+		AssetId = 6984767443,
+		AccessoryType = Enum.AccessoryType.Jacket
+	}
 }
 
 humanoidDescription:SetAccessories(accessoryTable, false)
@@ -238,12 +238,12 @@ Changing the assets on a character while also changing `Class.HumanoidDescriptio
 ```lua
 local humanoid = player.Character and player.Character:FindFirstChildWhichIsA("Humanoid")
 if humanoid then
-  local descriptionClone = humanoid:GetAppliedDescription()
-  descriptionClone.Torso = 86500008
-  -- Multiple face accessory assets are allowed in a comma-separated string
-  descriptionClone.FaceAccessory = descriptionClone.FaceAccessory .. ",2535420239"
-  -- Apply modified "descriptionClone" to humanoid
-  humanoid:ApplyDescription(descriptionClone)
+	local descriptionClone = humanoid:GetAppliedDescription()
+	descriptionClone.Torso = 86500008
+	-- Multiple face accessory assets are allowed in a comma-separated string
+	descriptionClone.FaceAccessory = descriptionClone.FaceAccessory .. ",2535420239"
+	-- Apply modified "descriptionClone" to humanoid
+	humanoid:ApplyDescription(descriptionClone)
 end
 ```
 
@@ -255,18 +255,18 @@ Use the following sample code to apply a `Class.HumanoidDescription` to all curr
 local Players = game:GetService("Players")
 
 for _, player in Players:GetPlayers() do
-  local humanoid = player.Character and player.Character:FindFirstChildWhichIsA("Humanoid")
-  if humanoid then
-    -- Create a HumanoidDescription
-    local humanoidDescription = Instance.new("HumanoidDescription")
-    humanoidDescription.HatAccessory = "2551510151,2535600138"
-    humanoidDescription.BodyTypeScale = 0.1
-    humanoidDescription.ClimbAnimation = 619521311
-    humanoidDescription.Face = 86487700
-    humanoidDescription.GraphicTShirt = 1711661
-    humanoidDescription.HeadColor = Color3.new(0, 1, 0)
-    humanoid:ApplyDescription(humanoidDescription)
-  end
+	local humanoid = player.Character and player.Character:FindFirstChildWhichIsA("Humanoid")
+	if humanoid then
+		-- Create a HumanoidDescription
+		local humanoidDescription = Instance.new("HumanoidDescription")
+		humanoidDescription.HatAccessory = "2551510151,2535600138"
+		humanoidDescription.BodyTypeScale = 0.1
+		humanoidDescription.ClimbAnimation = 619521311
+		humanoidDescription.Face = 86487700
+		humanoidDescription.GraphicTShirt = 1711661
+		humanoidDescription.HeadColor = Color3.new(0, 1, 0)
+		humanoid:ApplyDescription(humanoidDescription)
+	end
 end
 ```
 
@@ -281,17 +281,17 @@ local Players = game:GetService("Players")
 Players.CharacterAutoLoads = false
 
 local function onPlayerAdded(player)
-  -- Create a HumanoidDescription
-  local humanoidDescription = Instance.new("HumanoidDescription")
-  humanoidDescription.HatAccessory = "2551510151,2535600138"
-  humanoidDescription.BodyTypeScale = 0.1
-  humanoidDescription.ClimbAnimation = 619521311
-  humanoidDescription.Face = 86487700
-  humanoidDescription.GraphicTShirt = 1711661
-  humanoidDescription.HeadColor = Color3.new(0, 1, 0)
+	-- Create a HumanoidDescription
+	local humanoidDescription = Instance.new("HumanoidDescription")
+	humanoidDescription.HatAccessory = "2551510151,2535600138"
+	humanoidDescription.BodyTypeScale = 0.1
+	humanoidDescription.ClimbAnimation = 619521311
+	humanoidDescription.Face = 86487700
+	humanoidDescription.GraphicTShirt = 1711661
+	humanoidDescription.HeadColor = Color3.new(0, 1, 0)
 
-  -- Spawn character with the HumanoidDescription
-  player:LoadCharacterWithHumanoidDescription(humanoidDescription)
+	-- Spawn character with the HumanoidDescription
+	player:LoadCharacterWithHumanoidDescription(humanoidDescription)
 end
 
 -- Connect "PlayerAdded" event to "onPlayerAdded()" function
@@ -307,8 +307,8 @@ local Players = game:GetService("Players")
 Players.CharacterAutoLoads = false
 
 local function onPlayerAdded(player)
-  -- Spawn character with "workspace.StudioHumanoidDescription"
-  player:LoadCharacterWithHumanoidDescription(workspace.StudioHumanoidDescription)
+	-- Spawn character with "workspace.StudioHumanoidDescription"
+	player:LoadCharacterWithHumanoidDescription(workspace.StudioHumanoidDescription)
 end
 
 -- Connect "PlayerAdded" event to "onPlayerAdded()" function

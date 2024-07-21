@@ -28,13 +28,13 @@ To practice, you'll create a script that stores player items in a table, then ad
 2. Add inventory items to the array by typing `Library.table.insert()`. In the parenthesis, type `playerItems`, the table to add to, followed by a string for each item. Insert at least three values.
 
    ```lua
-    playerItems = {}
+   playerItems = {}
 
-    table.insert(playerItems, "Potion")
-    table.insert(playerItems, "Bread")
-    table.insert(playerItems, "Sleeping Bag")
+   table.insert(playerItems, "Potion")
+   table.insert(playerItems, "Bread")
+   table.insert(playerItems, "Sleeping Bag")
 
-    print(playerItems)
+   print(playerItems)
    ```
 
 3. Run the project. In Output, expand the three dots `...` to see the printed table.
@@ -50,15 +50,15 @@ Sometimes a script needs to remove a specific item. For instance, removing the f
 1. Use the array of items from the previous example. Then, to remove the last value from the table, in this case `"Sleeping Bag"`, type `Library.table.remove(playerItems)`
 
    ```lua
-    playerItems = {}
+   playerItems = {}
 
-    table.insert(playerItems, "Potion")
-    table.insert(playerItems, "Bread")
-    table.insert(playerItems, "Sleeping bag")
+   table.insert(playerItems, "Potion")
+   table.insert(playerItems, "Bread")
+   table.insert(playerItems, "Sleeping bag")
 
-    table.remove(playerItems)
+   table.remove(playerItems)
 
-    print(playerItems )
+   print(playerItems)
    ```
 
 2. Run the project. In the Output window, the last value, `"Sleeping Bag"`, shouldn't print.
@@ -70,13 +70,13 @@ To remove a value at a specific point in the array, input in the second paramete
 1. Using the same table, type `Library.table.remove()`. In the parameters, input the name of the table and `1`, the value to remove.
 
    ```lua
-    playerItems = {}
+   playerItems = {}
 
-    table.insert(playerItems, "Potion")
-    table.insert(playerItems, "Bread")
-    table.insert(playerItems, "Sleeping bag")
+   table.insert(playerItems, "Potion")
+   table.insert(playerItems, "Bread")
+   table.insert(playerItems, "Sleeping bag")
 
-    table.remove(playerItems, 1)
+   table.remove(playerItems, 1)
    ```
 
    <Alert severity="warning">
@@ -102,12 +102,12 @@ Once it finds the value, the function will use the `return` keyword to return th
 1. Copy the array named `playerItems` below.
 
    ```lua
-    local playerItems = {
-       "Potion",
-       "Bread",
-       "Bread",
-       "Sleeping Bag"
-    }
+   local playerItems = {
+   	"Potion",
+   	"Bread",
+   	"Bread",
+   	"Sleeping Bag"
+   }
    ```
 
 2. Code a new function named findValue() with two parameters:
@@ -125,29 +125,29 @@ Once it finds the value, the function will use the `return` keyword to return th
 
    ```lua
    local function findValue(whichArray, itemName)
-      for currentIndex = 1, #whichArray do
-      if whichArray[currentIndex] == itemName then
-         return currentIndex
-      end
-      end
+   	for currentIndex = 1, #whichArray do
+   		if whichArray[currentIndex] == itemName then
+   			return currentIndex
+   		end
+   	end
    end
    ```
 
 4. Test the search function by creating a variable named `valueFound` and calling `findValue()`. Pass in the array to search, and what value it should search for. **Run** the code to confirm that the expected output is index 2.
 
    ```lua
-    local function findValue(whichArray, itemName)
-      for currentIndex = 1, #whichArray do
-          if whichArray[currentIndex] == itemName then
-             --Sends the value of currentIndex back
-             return currentIndex
-          end
-       end
-    end
+   local function findValue(whichArray, itemName)
+   	for currentIndex = 1, #whichArray do
+   		if whichArray[currentIndex] == itemName then
+   			--Sends the value of currentIndex back
+   			return currentIndex
+   		end
+   	end
+   end
 
-    local valueFound = findValue(playerItems, "Bread")
+   local valueFound = findValue(playerItems, "Bread")
 
-    print("The value is at index " .. valueFound)
+   print("The value is at index " .. valueFound)
    ```
 
 ### Removing a Value
@@ -157,17 +157,17 @@ If a value was found using the find function, it can be removed. Check if a valu
 1. Check if a value is inside `valueFound`; if so, remove the value using `Library.table.remove()`.
 
    ```lua
-    if valueFound then
-        table.remove(playerItems, valueFound)
-    end
+   if valueFound then
+   	table.remove(playerItems, valueFound)
+   end
    ```
 
 2. Print out the array using the code below.
 
    ```lua
    for index = 1, #playerItems do
-      local itemString = playerItems[index]
-      print("Index " .. index .. ": " .. itemString)
+   	local itemString = playerItems[index]
+   	print("Index " .. index .. ": " .. itemString)
    end
    ```
 
@@ -182,12 +182,12 @@ While the previous code could only remove the first instance of a value found, t
 1. Use an array named `playerItems` with at least four values and a set of **duplicates**.
 
    ```lua
-    local playerItems = {
-    "Potion",
-    "Bread",
-    "Bread",
-    "Sleeping Bag"
-    }
+   local playerItems = {
+   	"Potion",
+   	"Bread",
+   	"Bread",
+   	"Sleeping Bag"
+   }
    ```
 
 2. To go through the array, create a for loop that goes **backward** through `playerItems`, starting at `#playerItems`, ending at 1, and incrementing by -1.
@@ -206,9 +206,9 @@ While the previous code could only remove the first instance of a value found, t
 
    ```lua
    for index = #playerItems, 1, -1 do
-      if playerItems[index] == "Bread" then
-         table.remove(playerItems, index)
-      end
+   	if playerItems[index] == "Bread" then
+   		table.remove(playerItems, index)
+   	end
    end
    ```
 
@@ -216,8 +216,8 @@ While the previous code could only remove the first instance of a value found, t
 
    ```lua
    for index = 1, #playerItems do
-     local itemString = playerItems[index]
-     print("Index " .. index .. ": " .. itemString)
+   	local itemString = playerItems[index]
+   	print("Index " .. index .. ": " .. itemString)
    end
    ```
 

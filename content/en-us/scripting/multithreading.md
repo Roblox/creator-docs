@@ -23,7 +23,7 @@ To run your experience's scripts in multiple threads concurrently, you need to s
 
 ### Placing Actor Instances
 
-You can put actors in proper containers or use them to replace the top-level instance types of your 3D entities such as NPCs and raycasters, then add corresponding [scripts](../scripting/scripts.md).
+You can put actors in proper containers or use them to replace the top-level instance types of your 3D entities such as NPCs and raycasters, then add corresponding [scripts](../scripting/index.md).
 
 <img
   alt="An example of a Script under an Actor"
@@ -246,18 +246,18 @@ if actor == nil then
 		script:Clone().Parent = actor
 		table.insert(workers, actor)
 	end
-	
+
 	-- Parent all actors under self
 	for _, actor in workers do
 		actor.Parent = script
 	end
-	
+
 	-- Instruct the actors to generate terrain by sending messages
 	-- In this example, actors are chosen randomly
 	task.defer(function()
 		local rand = Random.new()
 		local seed = rand:NextNumber()
-		
+
 		local sz = 10
 		for x = -sz, sz do
 			for y = -sz, sz do
@@ -267,7 +267,7 @@ if actor == nil then
 			end
 		end
 	end)
-	
+
 	-- Exit from the original script; the rest of the code runs in each actor
 	return
 end
@@ -287,9 +287,9 @@ function generateVoxelsWithSeed(xd, yd, zd, seed)
 	local matEnums = {Enum.Material.CrackedLava, Enum.Material.Basalt, Enum.Material.Asphalt}
 	local materials = makeNdArray(3, 4, Enum.Material.CrackedLava)
 	local occupancy = makeNdArray(3, 4, 1)
-	
+
 	local rand = Random.new()
-	
+
 	for x = 0, 3 do
 		for y = 0, 3 do
 			for z = 0, 3 do
@@ -298,7 +298,7 @@ function generateVoxelsWithSeed(xd, yd, zd, seed)
 			end
 		end
 	end
-	
+
 	return {materials = materials, occupancy = occupancy}
 end
 
@@ -306,7 +306,7 @@ end
 actor:BindToMessageParallel("GenerateChunk", function(x, y, z, seed)
 	local voxels = generateVoxelsWithSeed(x, y, z, seed)
 	local corner = Vector3.new(x * 16, y * 16, z * 16)
-	
+
 	-- Currently, WriteVoxels() must be called in the serial phase
 	task.synchronize()
 	workspace.Terrain:WriteVoxels(

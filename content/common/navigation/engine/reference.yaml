@@ -25,6 +25,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Accoutrement.yaml
         ignoreTranslation: true
+      - title: AchievementService
+        path: /reference/engine/classes/AchievementService
+        type: engineapi
+        source: /reference/engine/classes/AchievementService.yaml
+        ignoreTranslation: true
       - title: Actor
         path: /reference/engine/classes/Actor
         type: engineapi
@@ -145,6 +150,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Atmosphere.yaml
         ignoreTranslation: true
+      - title: AtmosphereSensor
+        path: /reference/engine/classes/AtmosphereSensor
+        type: engineapi
+        source: /reference/engine/classes/AtmosphereSensor.yaml
+        ignoreTranslation: true
       - title: Attachment
         path: /reference/engine/classes/Attachment
         type: engineapi
@@ -199,6 +209,11 @@ navigation:
         path: /reference/engine/classes/AudioFader
         type: engineapi
         source: /reference/engine/classes/AudioFader.yaml
+        ignoreTranslation: true
+      - title: AudioFilter
+        path: /reference/engine/classes/AudioFilter
+        type: engineapi
+        source: /reference/engine/classes/AudioFilter.yaml
         ignoreTranslation: true
       - title: AudioFlanger
         path: /reference/engine/classes/AudioFlanger
@@ -2000,6 +2015,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/RotationCurve.yaml
         ignoreTranslation: true
+      - title: RTAnimationTracker
+        path: /reference/engine/classes/RTAnimationTracker
+        type: engineapi
+        source: /reference/engine/classes/RTAnimationTracker.yaml
+        ignoreTranslation: true
       - title: RunningAverageItemDouble
         path: /reference/engine/classes/RunningAverageItemDouble
         type: engineapi
@@ -3318,6 +3338,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AudioApiRollout.yaml
         ignoreTranslation: true
+      - title: AudioFilterType
+        path: /reference/engine/enums/AudioFilterType
+        type: engineapi
+        source: /reference/engine/enums/AudioFilterType.yaml
+        ignoreTranslation: true
       - title: AudioSubType
         path: /reference/engine/enums/AudioSubType
         type: engineapi
@@ -4408,6 +4433,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PositionAlignmentMode.yaml
         ignoreTranslation: true
+      - title: PreferredTextSize
+        path: /reference/engine/enums/PreferredTextSize
+        type: engineapi
+        source: /reference/engine/enums/PreferredTextSize.yaml
+        ignoreTranslation: true
       - title: PrimalPhysicsSolver
         path: /reference/engine/enums/PrimalPhysicsSolver
         type: engineapi
@@ -4987,6 +5017,11 @@ navigation:
         path: /reference/engine/enums/TrackerPromptEvent
         type: engineapi
         source: /reference/engine/enums/TrackerPromptEvent.yaml
+        ignoreTranslation: true
+      - title: TrackerType
+        path: /reference/engine/enums/TrackerType
+        type: engineapi
+        source: /reference/engine/enums/TrackerType.yaml
         ignoreTranslation: true
       - title: TriStateBoolean
         path: /reference/engine/enums/TriStateBoolean

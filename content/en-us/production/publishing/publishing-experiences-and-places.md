@@ -271,7 +271,7 @@ Roblox automatically retains saved versions of each place for version control an
 
 ## Metadata Best Practices
 
-Your experience's name and description create an important first impression and contribute to how easily users find your experience through Roblox's dynamic [discovery](../../production/promotion/discovery.md) systems.
+Your experience's name and description create an important first impression and contribute to how easily users find your experience through Roblox's dynamic [discovery](../../discovery.md) systems.
 
 ### Experience Name
 

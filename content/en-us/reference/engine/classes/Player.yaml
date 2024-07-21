@@ -771,14 +771,9 @@ properties:
     summary: |
       Describes the account's membership type.
     description: |
-      The MembershipType `Class.Player` property can be used to determine the
-      membership type of the player. It holds a `Enum.MembershipType` enum of
-      the account's membership type.
-
       This property can only be read from to determine membership (it cannot be
-      set to another membership type). The property can only be changed via
-      `Class.CoreScript|CoreScripts` using `Class.Player:SetMembershipType()` -
-      which are not accessible.
+      set to another membership type). It holds a `Enum.MembershipType` enum of
+      the account's membership type.
     code_samples:
       - check-membership-status
     type: MembershipType

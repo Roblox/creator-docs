@@ -17,7 +17,7 @@ local waitingShips = {"Battle Sun", "Void Racer", "The Big Slow"}
 
 -- Get place in line
 local function getPlaceInLine(shipName)
-	for placeInLine,ship in ipairs(waitingShips) do
+	for placeInLine, ship in ipairs(waitingShips) do
 		if ship == shipName then
 			return placeInLine
 		end
@@ -37,10 +37,10 @@ Have you ever searched for a lost pet in house going room by room? On your own c
 
    ```lua
    local house = {
-       kitchen = "pile of Junk",
-       livingRoom = "kitten",
-       bedroom1 = "nobody there",
-       bedroom2 = "puppy",
+   	kitchen = "pile of Junk",
+   	livingRoom = "kitten",
+   	bedroom1 = "nobody there",
+   	bedroom2 = "puppy",
    }
    ```
 
@@ -49,9 +49,9 @@ Have you ever searched for a lost pet in house going room by room? On your own c
 
    ```lua
    local function findPet(whereToSearch, searchFor)
-     for place, value in pairs(whereToSearch) do
+   	for place, value in pairs(whereToSearch) do
 
-     end
+   	end
    end
    ```
 
@@ -59,10 +59,10 @@ Have you ever searched for a lost pet in house going room by room? On your own c
 
    ```lua
    local function findPet(whereToSearch, searchFor)
-     for place, value in pairs(whereToSearch) do
-       if value == searchFor then
-         return place
-       end
-     end
+   	for place, value in pairs(whereToSearch) do
+   		if value == searchFor then
+   			return place
+   		end
+   	end
    end
    ```

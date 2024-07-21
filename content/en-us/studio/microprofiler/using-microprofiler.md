@@ -74,20 +74,20 @@ Now that MicroProfiler has provided a starting point, it's time to troubleshoot 
 
    ```lua
    local function onStepped()
-      debug.profilebegin("RaycastSpam")
+   	debug.profilebegin("RaycastSpam")
 
-      for _ = 1, RAYS_PER_SECOND do
-         local startPosition = getRandomPosition()
-         local endPosition = getRandomPosition()
-         local direction = endPosition - startPosition
+   	for _ = 1, RAYS_PER_SECOND do
+   		local startPosition = getRandomPosition()
+   		local endPosition = getRandomPosition()
+   		local direction = endPosition - startPosition
 
-         Workspace:Raycast(
+   		Workspace:Raycast(
             startPosition,
             endPosition
          )
-      end
+   	end
 
-      debug.profileend()
+   	debug.profileend()
    end
    ```
 

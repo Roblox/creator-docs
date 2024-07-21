@@ -78,7 +78,7 @@ To add an asset to your experience from the [Toolbox](../projects/assets/toolbox
 
 - If the asset is a model, mesh, image, video, or audio file, it displays in the [Explorer](../studio/explorer.md) window. Assets with 3D content also display in the 3D viewport.
 - If the asset is a plugin, it displays in the [Plugins](../studio/plugins-tab.md) tab of the menu bar.
-- If the asset is a font, it displays in your font library within user interface elements, such as [labels](../ui/labels.md) or [buttons](../ui/buttons.md), as well as your [inventory](../projects/assets/toolbox.md#inventory).
+- If the asset is a font, it displays in your font library within user interface elements such as [text labels](../ui/labels.md) or [buttons](../ui/buttons.md), as well as your [inventory](../projects/assets/toolbox.md#inventory).
 
 <Alert severity="info">
 Some assets include scripts that perform specific actions, such as animating at runtime or triggering a sound. If you want to use an asset without allowing any of its scripts to run, right-click the object in the [Explorer](../studio/explorer.md) window and select **Disable&nbsp;Scripts** from the context menu.

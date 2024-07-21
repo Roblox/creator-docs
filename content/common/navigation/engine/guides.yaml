@@ -88,8 +88,7 @@ navigation:
             path: /physics/assemblies
           - title: Network Ownership
             path: /physics/network-ownership
-          - title: Character Controllers
-            path: /physics/character-controllers
+          
           #- title: Joints
           #  path: /physics/joints
           - title: Mechanical Constraints
@@ -142,8 +141,12 @@ navigation:
                 path: /physics/constraints/torque
               - title: LineForce
                 path: /physics/constraints/line-force
+          - title: Sleep System
+            path: /physics/sleep-system
           - title: Adaptive Timestepping
             path: /physics/adaptive-timestepping
+          - title: Character Controllers
+            path: /physics/character-controllers
           - title: Roblox Units
             path: /physics/units
       - title: Effects
@@ -186,6 +189,8 @@ navigation:
         path: /scripting/module
       - title: Services
         path: /scripting/services
+      - title: Properties and Attributes
+        path: /scripting/attributes
       - title: Events
         section:
           - title: Overview
@@ -339,46 +344,46 @@ navigation:
     section:
       - title: Overview
         path: /ui/
-      - title: Containers
+      - title: On-Screen UI
+        path: /ui/on-screen-containers
+      - title: In-Experience UI
+        path: /ui/in-experience-containers
+      - title: UI Objects
         section:
-          - title: On-Screen UI Containers
-            path: /ui/on-screen-containers
-          - title: In-Experience UI Containers
-            path: /ui/in-experience-containers
-      - title: Objects
-        section:
-          - title: Frames
-            path: /ui/frames
           - title: Labels
             path: /ui/labels
           - title: Buttons
             path: /ui/buttons
-          - title: Text Input
+          - title: Frames
+            path: /ui/frames
+          - title: Text Input Fields
             path: /ui/text-input
-          - title: Proximity Prompts
-            path: /ui/proximity-prompts
-          - title: Drag Detectors
-            path: /ui/drag-detectors
           - title: Video Frames
             path: /ui/video-frames
           - title: 2D Paths
             path: /ui/2D-paths
+      - title: Positioning and Sizing
+        path: /ui/positioning-and-sizing
       - title: Layout and Design
         section:
-          - title: Layout and Appearance
+          - title: Layouts and Constraints
             path: /ui/layout-and-appearance
-          - title: Positioning and Sizing
-            path: /ui/positioning-and-sizing
-          - title: Rich Text Markup
-            path: /ui/rich-text
           - title: Automatic Sizing
             path: /ui/automatic-sizing
           - title: 9-Slice
             path: /ui/9-slice
           - title: Cross-Platform Design
             path: /ui/cross-platform-design
-      - title: UI Animation
+      - title: Appearance Modifiers
+        path: /ui/appearance-modifiers
+      - title: UI Animation/Tweens
         path: /ui/animation
+      - title: Rich Text Markup
+        path: /ui/rich-text
+      - title: Proximity Prompts
+        path: /ui/proximity-prompts
+      - title: 3D Drag Detectors
+        path: /ui/drag-detectors
       - title: Text Filtering
         path: /ui/text-filtering
   - title: Animation
@@ -513,6 +518,8 @@ navigation:
         path: /production/publishing/account-verification
       - title: Rights Manager
         path: /production/publishing/rights-manager
+      - title: AI Data Sharing
+        path: /ai-data-sharing
   - title: Promotion
     path: /production/promotion/
     section:

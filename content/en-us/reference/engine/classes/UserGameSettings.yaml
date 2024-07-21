@@ -276,6 +276,23 @@ properties:
     serialization:
       can_load: false
       can_save: false
+  - name: UserGameSettings.PreferredTextSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: PreferredTextSize
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
   - name: UserGameSettings.RCCProfilerRecordFrameRate
     summary: ''
     description: ''

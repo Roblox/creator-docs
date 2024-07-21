@@ -3,7 +3,7 @@ title: Randomized Virtual Items Policy
 description: Explains Roblox's policy for selling randomized virtual items.
 ---
 
-Under Roblox's [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), if you offer randomized virtual items that users can purchase with Robux or other in-experience currency, you must indicate the **actual numerical odds** of what they may receive. For example, if a user has the opportunity to purchase a magic charm that has the random chance to either have a rare, epic, or legendary status, you must disclose the odds of their potential award **before they spend Robux**:
+Under Roblox's [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use), if you offer randomized virtual items that users can purchase with Robux or other in-experience currency, you must indicate all the **actual numerical odds** of what they may receive. For example, if a user has the opportunity to purchase a magic charm that has the random chance to either have a rare, epic, or legendary status, you must disclose the odds of their potential award **before they spend Robux**:
 
 <img src="../../assets/monetization/randomized-virtual-items-policy/Virtual-Items-Odds.jpg" width="70%" />
 

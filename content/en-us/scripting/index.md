@@ -35,7 +35,7 @@ Luau has global and local [scopes](../luau/scope.md), but it's almost always bet
 ```lua
 local logMessage = "User has more than 10 items!"
 local function printMessage()
-    print(logMessage)
+	print(logMessage)
 end
 printMessage() --> User has more than 10 items!
 ```
@@ -47,7 +47,7 @@ local messageToUser
 print(messageToUser) --> nil
 print(type(message)) --> nil
 if messageToUser then
-    -- statement evaluates to false
+	-- statement evaluates to false
 end
 ```
 
@@ -61,7 +61,7 @@ As you might have noticed, `--` starts a one-line comment. `--[[]]` creates a bl
     Time to avoid damage to the cosmic moon ray.
 ]]
 local function stopCosmicMoonRay()
-    -- add this later, it might prove important
+	-- add this later, it might prove important
 end
 ```
 
@@ -70,9 +70,9 @@ end
 ```lua
 local myArray = {"chips", "sparkling water", "salsa"}
 local myDictionary = {
-    snack = "chips",
-    drink = "sparkling water",
-    dip = "salsa"
+	snack = "chips",
+	drink = "sparkling water",
+	dip = "salsa"
 }
 print(myArray[1]) --> chips
 print(myDictionary.dip) --> salsa
@@ -82,13 +82,13 @@ You can iterate over tables using `for` loops with the `Global.LuaGlobals.ipairs
 
 ```lua
 for index, value in ipairs(myArray) do -- standard Lua
-   print(index, value)
+	print(index, value)
 end
 for key, value in pairs(myDictionary) do -- standard Lua
-   print(key, value)
+	print(key, value)
 end
 for key, value in myDictionary do -- Luau generalized iteration
-   print(key, value)
+	print(key, value)
 end
 ```
 
@@ -101,11 +101,11 @@ end
 1. Add the following code to the file:
 
    ```lua
-   local helloArray = {'h', 'e', 'l', 'l', 'o'}
-   local worldArray = {'w', 'o', 'r', 'l', 'd'}
+   local helloArray = {"h", "e", "l", "l", "o"}
+   local worldArray = {"w", "o", "r", "l", "d"}
 
    for index, value in helloArray do
-       print(value)
+   	print(value)
    end
 
    print(table.concat(worldArray))

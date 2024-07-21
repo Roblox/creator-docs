@@ -83,7 +83,7 @@ To test how functions work in module scripts, create a new function named `getKe
 
    ```lua
    function TreasureManager.getKey(keyPart, whichCharacter)
-      keyPart:Destroy()
+   	keyPart:Destroy()
    end
    ```
 
@@ -126,14 +126,14 @@ Now, the module function `getKey()` can be used in other scripts. To test that f
    local keysArray = keysFolder:GetChildren()
 
    local function partTouched(otherPart, keyPart)
-      local whichCharacter = otherPart.Parent
-      local humanoid = whichCharacter:FindFirstChildWhichIsA("Humanoid")
-      if humanoid then
-         -- Give the player a key and destroy the key part
-         -- =============================================
-         treasureManager.getKey(keyPart, whichCharacter)
-         -- =============================================
-      end
+   	local whichCharacter = otherPart.Parent
+   	local humanoid = whichCharacter:FindFirstChildWhichIsA("Humanoid")
+   	if humanoid then
+   		-- Give the player a key and destroy the key part
+   		-- =============================================
+   		treasureManager.getKey(keyPart, whichCharacter)
+   		-- =============================================
+   	end
    end
    ```
 
@@ -178,7 +178,7 @@ Right now, a leaderboard keeps track of a player's keys and treasure. To change 
 
    ------------------ Module Functions
    function TreasureManager.getKey(keyPart, whichCharacter)
-      keyPart:Destroy()
+   	keyPart:Destroy()
    end
 
    return TreasureManager
@@ -193,14 +193,14 @@ Right now, a leaderboard keeps track of a player's keys and treasure. To change 
    ```lua
    ------------------ Local Functions
    local function getPlayerKeys(whichCharacter)
-      local player = Players:GetPlayerFromCharacter(whichCharacter)
-      local leaderstats = player:FindFirstChild("leaderstats")
-      return leaderstats:WaitForChild("Lockpicks")
+   	local player = Players:GetPlayerFromCharacter(whichCharacter)
+   	local leaderstats = player:FindFirstChild("leaderstats")
+   	return leaderstats:WaitForChild("Lockpicks")
    end
    local function getPlayerTreasure(whichCharacter)
-      local player = Players:GetPlayerFromCharacter(whichCharacter)
-      local leaderstats = player:FindFirstChild("leaderstats")
-      return leaderstats:WaitForChild("Treasure")
+   	local player = Players:GetPlayerFromCharacter(whichCharacter)
+   	local leaderstats = player:FindFirstChild("leaderstats")
+   	return leaderstats:WaitForChild("Treasure")
    end
    ------------------ Module Functions
    ```
@@ -214,9 +214,9 @@ Right now, a leaderboard keeps track of a player's keys and treasure. To change 
    ```lua
    ------------------ Module Functions
    function TreasureManager.getKey(keyPart, whichCharacter)
-      local playerKeys = getPlayerKeys(whichCharacter)
-      playerKeys.Value = playerKeys.Value + keyDrop
-      keyPart:Destroy()
+   	local playerKeys = getPlayerKeys(whichCharacter)
+   	playerKeys.Value = playerKeys.Value + keyDrop
+   	keyPart:Destroy()
    end
    ```
 
@@ -272,9 +272,9 @@ The _TreasureManager_ module script will be used when players touch a treasure c
 
    ------------------ Local Functions
    local function getPlayerKeys(whichCharacter)
-      local player = Players:GetPlayerFromCharacter(whichCharacter)
-      local leaderstats = player:FindFirstChild("leaderstats")
-      return leaderstats:WaitForChild("Lockpicks")
+   	local player = Players:GetPlayerFromCharacter(whichCharacter)
+   	local leaderstats = player:FindFirstChild("leaderstats")
+   	return leaderstats:WaitForChild("Lockpicks")
    end
    ```
 
@@ -287,9 +287,9 @@ The _TreasureManager_ module script will be used when players touch a treasure c
    end
 
    function TreasureManager.getKey(keyPart, whichCharacter)
-      local playerKeys = getPlayerKeys(whichCharacter)
-      playerKeys.Value = playerKeys.Value + keyDrop
-      keyPart:Destroy()
+   	local playerKeys = getPlayerKeys(whichCharacter)
+   	playerKeys.Value = playerKeys.Value + keyDrop
+   	keyPart:Destroy()
    end
    ```
 
@@ -297,12 +297,12 @@ The _TreasureManager_ module script will be used when players touch a treasure c
 
    ```lua
    function TreasureManager.canOpenChest(whichCharacter)
-      local playerKeys = getPlayerKeys(whichCharacter)
-      if playerKeys.Value >= chestPickCost then
-         return true
-      else
-         return false
-      end
+   	local playerKeys = getPlayerKeys(whichCharacter)
+   	if playerKeys.Value >= chestPickCost then
+   		return true
+   	else
+   		return false
+   	end
    end
    ```
 
@@ -327,11 +327,11 @@ So the player can open a chest, create a function in _TreasureManager_ that awar
 
    ```lua
    function TreasureManager.openChest(chestPart, whichCharacter)
-      local playerKeys = getPlayerKeys(whichCharacter)
-      local playerTreasure = getPlayerTreasure(whichCharacter)
-      playerKeys.Value = playerKeys.Value - chestPickCost
-      playerTreasure.Value = playerTreasure.Value + chestReward
-      chestPart:Destroy()
+   	local playerKeys = getPlayerKeys(whichCharacter)
+   	local playerTreasure = getPlayerTreasure(whichCharacter)
+   	playerKeys.Value = playerKeys.Value - chestPickCost
+   	playerTreasure.Value = playerTreasure.Value + chestReward
+   	chestPart:Destroy()
    end
    ```
 
@@ -359,14 +359,14 @@ Now that the two module functions, `canOpenChest()` and `openChest()`, have been
 
    ```lua
    local function partTouched(otherPart, chestPart)
-     local whichCharacter = otherPart.Parent
-     local humanoid = whichCharacter:FindFirstChildWhichIsA("Humanoid")
-     if humanoid then
-       -- Check if the player can open a chest, then let them get treasure
-       -- =============================================
-       local canOpen = treasureManager.canOpenChest(whichCharacter)
-       -- =============================================
-     end
+   	local whichCharacter = otherPart.Parent
+   	local humanoid = whichCharacter:FindFirstChildWhichIsA("Humanoid")
+   	if humanoid then
+   		-- Check if the player can open a chest, then let them get treasure
+   		-- =============================================
+   		local canOpen = treasureManager.canOpenChest(whichCharacter)
+   		-- =============================================
+   	end
    end
    ```
 
@@ -378,17 +378,17 @@ Now that the two module functions, `canOpenChest()` and `openChest()`, have been
 
    ```lua
    local function partTouched(otherPart, chestPart)
-      local whichCharacter = otherPart.Parent
-      local humanoid = whichCharacter:FindFirstChildWhichIsA("Humanoid")
-      if humanoid then
-         -- Check if the player can open a chest, then let them get treasure
-         -- =============================================
-         local canOpen = treasureManager.canOpenChest(whichCharacter)
-         if canOpen == true then
-            treasureManager.openChest(chestPart, whichCharacter)
-         end
-         -- =============================================
-      end
+   	local whichCharacter = otherPart.Parent
+   	local humanoid = whichCharacter:FindFirstChildWhichIsA("Humanoid")
+   	if humanoid then
+   		-- Check if the player can open a chest, then let them get treasure
+   		-- =============================================
+   		local canOpen = treasureManager.canOpenChest(whichCharacter)
+   		if canOpen == true then
+   			treasureManager.openChest(chestPart, whichCharacter)
+   		end
+   		-- =============================================
+   	end
    end
    ```
 

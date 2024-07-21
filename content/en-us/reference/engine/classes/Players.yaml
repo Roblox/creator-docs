@@ -598,8 +598,8 @@ methods:
       `Class.Players.GetBanHistoryAsync`. For example, you may want to consider
       the number of bans, the duration of previous bans, or build logic off of
       the notes you save under `PrivateReason`, which can be up to 1000
-      characters. `PrivateReason` notes are never shared with the client and can
-      be considered safe from attackers.
+      characters and are not text filtered. `PrivateReason` notes are never
+      shared with the client and can be considered safe from attackers.
 
       <h5>Errors and Throttling</h5>
 
@@ -749,6 +749,14 @@ methods:
       Retrieves the ban and unban history of any user within the experience's
       universe. This method returns a `Class.BanHistoryPages` instance that
       inherits from `Class.Pages`.
+
+      This function call will only succeed on production game servers and not on
+      client devices or in Studio.
+
+      This API uses the
+      [User Restrictions Open Cloud API](/cloud/reference/UserRestriction). You
+      will be able to utilize these APIs to manage your bans in third party
+      applications.
     code_samples: []
     parameters:
       - name: userId
@@ -1347,11 +1355,11 @@ events:
       local Players = game:GetService("Players")
 
       Players.PlayerAdded:Connect(function(player)
-        print(player.Name .. " joined the game!")
+      	print(player.Name .. " joined the game!")
       end)
 
       Players.PlayerRemoving:Connect(function(player)
-        print(player.Name .. " left the game!")
+      	print(player.Name .. " left the game!")
       end)
       ```
 

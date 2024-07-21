@@ -59,7 +59,7 @@ TestModule.myVariable = 100
 
 -- Adds a function to 'TestModule' table
 function TestModule.doTask(player)
- -- Placeholder code
+	-- Placeholder code
 end
 
 return TestModule
@@ -85,15 +85,15 @@ local rewardCoins = 50
 
 -- Usable only in the module script
 local difficultyModifier = {
- easy = 0.5,
- normal = 1,
- hard = 2
+	easy = 0.5,
+	normal = 1,
+	hard = 2
 }
 
 -- Usable in other scripts
 function RewardManager.getCoinReward(difficulty)
- local coins = difficultyModifier[difficulty] * rewardCoins
- return coins
+	local coins = difficultyModifier[difficulty] * rewardCoins
+	return coins
 end
 
 return RewardManager
@@ -158,7 +158,7 @@ If you're in another script, make sure that the module script function or variab
 
 ## General Troubleshooting
 
-Some of the tips here address common issues when working with module scripts. Keep in mind that module scripts can be a complicated topic with more nuance. For more details, see this more technical guide on [Module Scripts](../../../scripting/scripts.md).
+Some of the tips here address common issues when working with module scripts. Keep in mind that module scripts can be a complicated topic with more nuance. For more details, see this more technical guide on [Module Scripts](../../../scripting/module.md).
 
 **Issue:** Get an error message including: `"Infinite yield possible"` or `"not a valid member"`.
 

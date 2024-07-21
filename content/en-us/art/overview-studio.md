@@ -249,8 +249,8 @@ Textures are 2D images that you can apply to the surface of an object to change 
   </figure>
 </GridContainer>
 
-<Alert severity = 'info'>
-Textures are different from [UI Layout objects](../ui/layout-and-appearance.md), which can apply a dynamic UI element (text, image, etc) on a surface of a part, like a billboard or computer screen.
+<Alert severity="info">
+Textures are different from user interface objects which can apply customizable text or an image to the [surface](../ui/in-experience-containers.md) of a part, like a billboard or computer screen.
 </Alert>
 
 There are two types of textures in Roblox, single image **basic textures** and **advanced PBR textures** that dynamically react to different lighting and environment scenarios. Whether creating assets directly for the [Creator Store](#creator-store) or [Marketplace](#marketplace) or designing content for an experience, you should incorporate PBR textures whenever you need realistic and impressive surface textures.

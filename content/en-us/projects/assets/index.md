@@ -73,7 +73,7 @@ For more information on both types of these assets for places, such as where and
 		</tr>
 		<tr>
 			<td>**Image**</td>
-			<td>Images are used in several ways within a place, including [textures/decals](../../parts/textures-decals.md) on parts, [UI](../../ui/index.md) elements, [mesh textures](../../parts/meshes.md#adding-textures), textures for [custom materials](../../parts/materials.md), textures for [special effects](../../environment/index.md#special-effects), and more.</td>
+			<td>Images are used in several ways within a place, including [textures/decals](../../parts/textures-decals.md) on parts, [image labels](../../ui/labels.md), [mesh textures](../../parts/meshes.md#adding-textures), textures for [custom materials](../../parts/materials.md), textures for [special effects](../../environment/index.md#special-effects), and more.</td>
 		</tr>
 		<tr>
 			<td>**Font**</td>

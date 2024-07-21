@@ -3,7 +3,7 @@ title: OAuth 2.0 Sample App
 description: Provides a working OAuth 2.0 sample application.
 ---
 
-Roblox provides a Node.js sample app that shows how to use OAuth 2.0 to let users log in to their Roblox accounts. This app uses the [authorization code flow _without_ PKCE](oauth2-overview.md#grant-types) and is thus only suitable for confidential clients, such as private servers.
+Roblox provides a Node.js sample app that shows how to use OAuth 2.0 to let users log in to their Roblox accounts and broadcast messages across their experiences. This app uses the [authorization code flow _without_ PKCE](oauth2-overview.md#grant-types) and is thus only suitable for confidential clients, such as private servers.
 
 <a href="../../assets/open-cloud/open-cloud-nodejs-sample-oauth2-main.zip">
   <Button variant="contained">Get the Code</Button>
@@ -17,7 +17,7 @@ After downloading the `.zip` file, extract it to its own folder.
 
 The first step to setting up the app is to [register it on the Roblox website](oauth2-registration.md) and copy the client ID and secret somewhere safe. Then follow the standard registration steps with these settings:
 
-1. Under **Permissions**, add the `openid` and `profile` scopes.
+1. Under **Permissions**, add the `openid`, `profile`, and `universe-messaging-service:publish` scopes.
 1. Under **Redirect URLs**, add the `http://localhost:3000/oauth/callback` redirect. If you want to use a non-default port for your app, specify it here.
 
 ## Setting Environment Variables
@@ -66,7 +66,7 @@ Then navigate to `http://localhost:3000` (or your non-default port) in a web bro
 
 The app immediately redirects you to the Roblox login screen, at which point you can log in, verify the permissions that the app is requesting, and click **Confirm and Give Access**.
 
-Roblox then redirects you back to `localhost`, where you can see that the app now displays some minimal user information and a link back to your profile on Roblox.
+Roblox then redirects you back to `localhost`, where you can see that the app now displays some minimal user information, a link back to your profile on Roblox, and fields that you can use to broadcast messages across your experiences.
 
 ### About the App
 

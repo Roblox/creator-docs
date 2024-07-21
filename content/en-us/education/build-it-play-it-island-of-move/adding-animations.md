@@ -52,11 +52,11 @@ For this project, you'll create parts that when touched, trigger an animation fo
 
    -- Function called when a part is touched
    local function onPartTouch(otherPart)
-     if humanoid and canTouch == false then
-       canTouch = true
-       PlayerAnimationFeedback:PlayAnimation()
-       canTouch = false
-     end
+   	if humanoid and canTouch == false then
+   		canTouch = true
+   		PlayerAnimationFeedback:PlayAnimation()
+   		canTouch = false
+   	end
    end
 
    -- On startup, call animation module load function
@@ -65,8 +65,8 @@ For this project, you'll create parts that when touched, trigger an animation fo
    local touchPartFolder = workspace:WaitForChild("TouchPartFolder")
    local touchParts = touchPartFolder:GetChildren()
 
-   for i, touchPart in touchParts do
-     touchPart.Touched:Connect(onPartTouch)
+   for _, touchPart in touchParts do
+   	touchPart.Touched:Connect(onPartTouch)
    end
    ```
 
@@ -88,21 +88,20 @@ For this project, you'll create parts that when touched, trigger an animation fo
 
    -- Function to load animation onto player's character
    function PlayerAnimationFeedback:LoadAnimation(humanoid)
-     local feedbackAnimation = Instance.new("Animation")
-     feedbackAnimation.AnimationId = ANIMATION_ID
-     feedbackAnimationTrack = humanoid.Animator:LoadAnimation(feedbackAnimation)
-     feedbackAnimationTrack.Priority = Enum.AnimationPriority.Action
-     feedbackAnimationTrack.Looped = false
+   	local feedbackAnimation = Instance.new("Animation")
+   	feedbackAnimation.AnimationId = ANIMATION_ID
+   	feedbackAnimationTrack = humanoid.Animator:LoadAnimation(feedbackAnimation)
+   	feedbackAnimationTrack.Priority = Enum.AnimationPriority.Action
+   	feedbackAnimationTrack.Looped = false
    end
 
    -- Function to play the animation
    function PlayerAnimationFeedback:PlayAnimation()
-     feedbackAnimationTrack:Play(ANIMATION_FADE)
-     task.wait(feedbackAnimationTrack.Length)
+   	feedbackAnimationTrack:Play(ANIMATION_FADE)
+   	task.wait(feedbackAnimationTrack.Length)
    end
 
    return PlayerAnimationFeedback
-
    ```
 
 ## Playing Animations

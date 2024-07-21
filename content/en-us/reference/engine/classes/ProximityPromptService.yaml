@@ -34,7 +34,7 @@ properties:
       local ProximityPromptService = game:GetService("ProximityPromptService")
       local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-      local enablePrompts = ReplicatedStorage:FindFirstChild("EnablePrompts")  -- BindableEvent
+      local enablePrompts = ReplicatedStorage:FindFirstChild("EnablePrompts") -- BindableEvent
 
       -- Connect to the BindableEvent and fire from another script controlling experience logic
       enablePrompts.OnServerEvent:Connect(function(enabled)

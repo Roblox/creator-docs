@@ -62,7 +62,7 @@ The following limitations apply when tracking your events with `Class.AnalyticsS
   </tr>
   <tr>
     <td>Unique values per custom field</td>
-    <td>20<sup>&dagger;</sup></td>
+    <td>Unlimited — After 20, values will be grouped as "Other"</td>
     <td>Warrior, Mage, Archer</td>
   </tr>
   <tr>
@@ -73,12 +73,12 @@ The following limitations apply when tracking your events with `Class.AnalyticsS
   </tr>
   <tr>
     <td>transactionTypes</td>
-    <td>20<sup>&dagger;</sup></td>
+    <td>Unlimited — After 20, values will be grouped as "Other"</td>
     <td>IAP, Gameplay</td>
   </tr>
   <tr>
     <td>itemSkus</td>
-    <td>100<sup>&dagger;</sup></td>
+    <td>Unlimited — After 100, values will be grouped as "Other"</td>
     <td></td>
   </tr>
   <tr>
@@ -94,5 +94,4 @@ The following limitations apply when tracking your events with `Class.AnalyticsS
   </tr>
 </tbody>
 </table>
-<figcaption><sup>&dagger;</sup>*Extra values will be grouped as "Other".*</figcaption>
 </figure>

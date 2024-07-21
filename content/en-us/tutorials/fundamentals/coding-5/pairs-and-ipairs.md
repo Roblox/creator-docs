@@ -17,13 +17,13 @@ This article will cover using them, and have a practical script example where yo
 
 ```lua
 local myDictionary = {
-  ["Blue Player"] = "Ana",
-  ["Gold Player"] = "Binh",
-  ["Red Player"] = "Cate",
+	["Blue Player"] = "Ana",
+	["Gold Player"] = "Binh",
+	["Red Player"] = "Cate",
 }
 
 for key, value in pairs(myDictionary) do
-  print(key .. " is " .. value)
+	print(key .. " is " .. value)
 end
 ```
 
@@ -31,15 +31,15 @@ end
 
 ```lua
 local inventory = {
-    ["Gold Bricks"] = 43,
-    Carrots = 3,
-    Torches  = 2,
+	["Gold Bricks"] = 43,
+	Carrots = 3,
+	Torches = 2,
 }
 
 print("You have:")
 
 for itemName, itemValue in pairs(inventory) do
-    print(itemValue, itemName)
+	print(itemValue, itemName)
 end
 ```
 
@@ -60,7 +60,7 @@ You have:
 local players = {"Ali", "Ben", "Cammy"}
 
 for playerRank, playerName in ipairs(players) do
-    print("Winner #" .. playerRank .. " is " .. playerName)
+	print("Winner #" .. playerRank .. " is " .. playerName)
 end
 ```
 
@@ -82,10 +82,10 @@ Use `pairs()` to see what was picked, and then `ipairs()` to print the list of i
 
    ```lua
    local menu = {
-     cabbage = false,
-     beef = false,
-     tomato = false,
-     noodles = false,
+   	cabbage = false,
+   	beef = false,
+   	tomato = false,
+   	noodles = false,
    }
    ```
 
@@ -93,49 +93,49 @@ Use `pairs()` to see what was picked, and then `ipairs()` to print the list of i
 
    ```lua
    -- Customer's soup
-   local isInSoup = {}
+   local selectedIngredients = {}
    ```
 
 3. Use `pairs()` to check if each ingredient in the dictionary is marked true or false. If true, add the ingredient to soup.
 
    ```lua
    -- Customer's soup
-   local isInSoup = {}
+   local selectedIngredients = {}
 
    -- Adds customer's choices to their soup
    for menuChoice, value in pairs(menu) do
-    if value then
-      table.insert(isInSoup, menuChoice)
-    end
+   	if value then
+   		table.insert(selectedIngredients, menuChoice)
+   	end
    end
    ```
 
 4. Repeat the order back to the customer. In the script, code the following below.
 
-   - Check if there is a menu item in `isInSoup`. If so, print `"You ordered soup with: "`.
-   - Use `ipairs()` to go through the `isInSoup` array and print each ingredient.
+   - Check if there is a menu item in `selectedIngredients`. If so, print `"You ordered soup with: "`.
+   - Use `ipairs()` to go through the `selectedIngredients` array and print each ingredient.
    - Test by changing at least one menu item to true.
 
    ```lua
-   -- Prints soup order from "isInSoup"
-   if isInSoup then
-     print("You ordered soup with: ")
-     for index, soupIngredient in ipairs(isInSoup) do
-       print(soupIngredient)
-     end
+   -- Prints soup order from "selectedIngredients"
+   if #selectedIngredients > 0 then
+   	print("You ordered soup with: ")
+   	for index, soupIngredient in ipairs(selectedIngredients) do
+   		print(soupIngredient)
+   	end
    end
    ```
 
 5. In the if statement that checks if there is a menu item, add an else condition which tells customers if no ingredients were selected.
 
    ```lua
-   if isInSoup then
-     print("You ordered soup with: ")
-     for index, soupIngredient in ipairs(isInSoup) do
-       print(soupIngredient)
-     end
+   if #selectedIngredients > 0 then
+   	print("You ordered soup with: ")
+   	for index, soupIngredient in ipairs(selectedIngredients) do
+   		print(soupIngredient)
+   	end
    else
-     print("Nothing was selected. Are you not hungry?")
+   	print("Nothing was selected. Are you not hungry?")
    end
    ```
 

@@ -162,9 +162,13 @@ While a part is gray by default, you can change it to any color through the foll
 
 ### Hexagon Map
 
-Clicking the small dropdown arrow on the **Color** widget reveals a hexagonal color picker and, by default, applies the chosen color to all selected parts. Once you've selected a color, you can quickly apply it to other parts by selecting those parts and clicking the **Color** button itself.
+Clicking the small dropdown arrow on the **Color** widget reveals a hexagonal color picker.
 
-<img src="../assets/studio/general/Model-Tab-Color-Tools.png" width="772" alt="Studio's Model tab with the Color button's components highlighted." />
+<img src="../assets/studio/general/Model-Tab-Color-Picker.png" width="704" alt="Studio's Model tab with the Color widget's hexagonal picker." />
+
+By default, clicking the overall **Color** button applies the chosen color to any **selected** parts. If you prefer a fill/paint workflow instead, toggle on **Color&nbsp;Action&nbsp;as&nbsp;Tool** and then click parts in the 3D viewport to apply the chosen color.
+
+<img src="../assets/studio/general/Model-Tab-Color-Action-As-Tool.png" width="704" alt="Studio's Model tab with the Color Action as Tool selector indicated." />
 
 ### Colors Popup
 

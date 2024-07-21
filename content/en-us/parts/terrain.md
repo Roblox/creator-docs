@@ -181,8 +181,6 @@ To add animated grass to the **Grass** material:
 
 3. Adjust the grass length by entering a value between 0.1 and 1 for the **GrassLength** property.
 
-   <BetaAlert betaName="Grass Length Customization" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} />
-
    <img src="../assets/studio/properties/Terrain-GrassLength.png" width="320" alt="GrassLength property of Terrain object in Properties window of Studio" />
 
 	 <img src="../assets/modeling/terrain/Terrain-GrassLength.jpg" width="720" alt="GrassLength comparison depicted on rolling grassland hills." />
@@ -211,11 +209,11 @@ To customize any material color other than water:
 
    <img src="../assets/studio/explorer/Workspace-Terrain.png" width="320" alt="Terrain object shown in Explorer window of Studio" />
 
-1. Expand **MaterialColors** in the [Properties](../studio/properties.md) window. All materials display with their RGB code.
+2. Expand **MaterialColors** in the [Properties](../studio/properties.md) window. All materials display with their RGB code.
 
    <img src="../assets/studio/properties/Terrain-MaterialColors-Expand.png" width="320" alt="MaterialColors property shown in Properties window of Studio" />
 
-1. For any given material, either input a new RGB code or click the color box to open the [colors popup](../parts/index.md#colors-popup).
+3. For any given material, either input a new RGB code or click the color box to open the [colors popup](../parts/index.md#colors-popup).
 
 ## Generating Terrain
 
@@ -230,35 +228,36 @@ The [Generate](../studio/terrain-editor.md#generate) tool allows you to procedur
 
    <img src="../assets/studio/terrain-editor/Create-Tab-Generate.png" width="360" alt="Generate tool indicated in Create tab of Terrain Editor" />
 
-1. In the tool's **Material Settings** section, choose the following biomes to include in the new terrain:
+2. In the 3D viewport, move/resize the **selection region** in which to generate terrain. Alternatively, expand the tool's **Selection&nbsp;Settings** and enter values into the **X**/**Y**/**Z** inputs to set a specific size and position.
+
+3. In the tool's **Biome Settings** section, choose the following biomes to include in the new terrain:
 
    <Grid container spacing={1}>
    <Grid item>
    <ul>
-   <li>Water</li>
-   <li>Plains</li>
+   <li>Arctic</li>
    <li>Dunes</li>
+   <li>Canyons</li>
    </ul>
    </Grid>
    <Grid item>
    <ul>
+   <li>Lavascape</li>
+   <li>Water</li>
    <li>Mountains</li>
-   <li>Arctic</li>
-   <li>Marsh</li>
    </ul>
    </Grid>
    <Grid item>
    <ul>
    <li>Hills</li>
-   <li>Canyons</li>
-   <li>Lavascape</li>
+   <li>Plains</li>
+   <li>Marsh</li>
    </ul>
    </Grid>
    </Grid>
 
-1. Adjust any other desired settings as documented [here](../studio/terrain-editor.md#generate).
-1. In the 3D viewport, move/resize the **selection region** in which to generate terrain. Alternatively, enter values into the [Select](../studio/terrain-editor.md#select) tool's **X**/**Y**/**Z** inputs to set a specific position and size.
-1. Click the **Generate** button.
+4. Adjust any other desired settings as documented [here](../studio/terrain-editor.md#generate).
+5. Click the **Generate** button.
 
    <video src="../assets/studio/terrain-editor/Generate-Tool.mp4" controls width="800" alt="Video of terrain generating procedurally via the Generate tool"></video>
 
@@ -266,7 +265,7 @@ The [Generate](../studio/terrain-editor.md#generate) tool allows you to procedur
 
 A **heightmap** is a 2D representation of a 3D terrain map, as viewed directly from above. Brighter areas of a heightmap result in higher terrain, like mountains, while darker areas result in lower regions, like valleys.
 
-An optional **colormap**, along with a heightmap, converts colors to terrain materials using a [color key](#color-key).
+An optional **colormap**, along with a heightmap, converts colors to terrain materials using a **color key**.
 
 <GridContainer numColumns="3">
   <figure>
@@ -291,176 +290,181 @@ To import a heightmap and optional colormap:
 
    <img src="../assets/studio/terrain-editor/Create-Tab-Import.png" width="360" alt="Import tool indicated in Create tab of Terrain Editor" />
 
-1. In the tool's **Map Settings** section, click the import button and choose the image you want to import as a heightmap.
-1. In the tool's **Material Settings** section, select a terrain material or, alternatively, upload a colormap.
+2. In the tool's **Map Settings** section, click the import button and choose the image you want to import as a heightmap.
+3. In the tool's **Material Settings** section, select a terrain material or, alternatively, upload a colormap.
 
-   - To apply one consistent material across all of the generated terrain, select the **Material** tab and pick a terrain material.
-   - To apply a colormap, click the **Colormap** tab, click its import button, and choose the file to import. Colors on the image should match the [color key](#color-key) values and use hard edges, since anti-aliasing or edge smoothing may create pixel colors outside the expected value ranges.
+   <Tabs>
+   <TabItem label="Material">
+   To apply one consistent material across all of the generated terrain, select the **Material** tab and pick a terrain material.
+   </TabItem>
+   <TabItem label="Colormap">
+	 To apply a colormap, click the **Colormap** tab, click its import button, and choose the file to import. Colors on the image should match the following RGB/hex values and use hard edges, since anti‑aliasing or edge smoothing may create pixel colors outside the expected value ranges.
 
-1. In the 3D viewport, move/resize the **selection region** in which to generate terrain. Alternatively, enter values into the [Select](../studio/terrain-editor.md#select) tool fields to set a more specific position and size.
+	 The following table describes color mapping to a corresponding material. If your colormap contains a color that's not in the table, Studio chooses the closest matching material; for this reason, it is best to download the <a href="../assets/modeling/terrain/RobloxColorMapIndex.png" target="_blank" rel="noopener">`RobloxColorMapIndex.png`</a> file and directly sample its colors, or type the exact RGB/hex values into the color picker of your image editing application.
+
+   <table size="small">
+   <thead>
+     <tr>
+       <th>Material</th>
+       <th>RGB Value</th>
+       <th>Hex Value</th>
+       <th>Color</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>Air</td>
+       <td>[255, 255, 255]</td>
+       <td>FFFFFF</td>
+       <td><ColorSwatch value="rgb(255,255,255)" /></td>
+     </tr>
+     <tr>
+       <td>Asphalt</td>
+       <td>[115, 123, 107]</td>
+       <td>737B6B</td>
+       <td><ColorSwatch value="rgb(115,123,107)" /></td>
+     </tr>
+     <tr>
+       <td>Basalt</td>
+       <td>[30, 30, 37]</td>
+       <td>1E1E25</td>
+       <td><ColorSwatch value="rgb(30,30,37)" /></td>
+     </tr>
+     <tr>
+       <td>Brick</td>
+       <td>[138, 86, 62]</td>
+       <td>8A563E</td>
+       <td><ColorSwatch value="rgb(138,86,62)" /></td>
+     </tr>
+     <tr>
+       <td>Cobblestone</td>
+       <td>[132, 123, 90]</td>
+       <td>847B5A 847b5A</td>
+       <td><ColorSwatch value="rgb(132,123,90)" /></td>
+     </tr>
+     <tr>
+       <td>Concrete</td>
+       <td>[127, 102, 63]</td>
+       <td>7F663F</td>
+       <td><ColorSwatch value="rgb(127,102,63)" /></td>
+     </tr>
+     <tr>
+       <td>Cracked Lava</td>
+       <td>[232, 156, 74]</td>
+       <td>E89C4A</td>
+       <td><ColorSwatch value="rgb(232,156,74)" /></td>
+     </tr>
+     <tr>
+       <td>Glacier</td>
+       <td>[101, 176, 234]</td>
+       <td>65B0EA</td>
+       <td><ColorSwatch value="rgb(101,176,234)" /></td>
+     </tr>
+     <tr>
+       <td>Grass</td>
+       <td>[106, 127, 63]</td>
+       <td>6A7F3F</td>
+       <td><ColorSwatch value="rgb(106,127,63)" /></td>
+     </tr>
+     <tr>
+       <td>Ground</td>
+       <td>[102, 92, 59]</td>
+       <td>665C3B</td>
+       <td><ColorSwatch value="rgb(102,92,59)" /></td>
+     </tr>
+     <tr>
+       <td>Ice</td>
+       <td>[129, 194, 224]</td>
+       <td>81C2E0</td>
+       <td><ColorSwatch value="rgb(129,194,224)" /></td>
+     </tr>
+     <tr>
+       <td>Leafy Grass</td>
+       <td>[115, 132, 74]</td>
+       <td>73844A</td>
+       <td><ColorSwatch value="rgb(115,132,74)" /></td>
+     </tr>
+     <tr>
+       <td>Limestone</td>
+       <td>[206, 173, 148]</td>
+       <td>CEAD94</td>
+       <td><ColorSwatch value="rgb(206,173,148)" /></td>
+     </tr>
+     <tr>
+       <td>Mud</td>
+       <td>[58, 46, 36]</td>
+       <td>3A2E24</td>
+       <td><ColorSwatch value="rgb(58,46,36)" /></td>
+     </tr>
+     <tr>
+       <td>Pavement</td>
+       <td>[148, 148, 140]</td>
+       <td>94948C</td>
+       <td><ColorSwatch value="rgb(148,148,140)" /></td>
+     </tr>
+     <tr>
+       <td>Rock</td>
+       <td>[102, 108, 111]</td>
+       <td>666C6F</td>
+       <td><ColorSwatch value="rgb(102,108,111)" /></td>
+     </tr>
+     <tr>
+       <td>Salt</td>
+       <td>[198, 189, 181]</td>
+       <td>C6BDB5</td>
+       <td><ColorSwatch value="rgb(198,189,181)" /></td>
+     </tr>
+     <tr>
+       <td>Sand</td>
+       <td>[143, 126, 95]</td>
+       <td>8F7E5F</td>
+       <td><ColorSwatch value="rgb(143,126,95)" /></td>
+     </tr>
+     <tr>
+       <td>Sandstone</td>
+       <td>[137, 90, 71]</td>
+       <td>895A47</td>
+       <td><ColorSwatch value="rgb(137,90,71)" /></td>
+     </tr>
+     <tr>
+       <td>Slate</td>
+       <td>[63, 127, 107]</td>
+       <td>3F7F6B</td>
+       <td><ColorSwatch value="rgb(63,127,107)" /></td>
+     </tr>
+     <tr>
+       <td>Snow</td>
+       <td>[195, 199, 218]</td>
+       <td>C3C7DA</td>
+       <td><ColorSwatch value="rgb(195,199,218)" /></td>
+     </tr>
+     <tr>
+       <td>Wood Planks</td>
+       <td>[139, 109, 79]</td>
+       <td>8B6D4F</td>
+       <td><ColorSwatch value="rgb(139,109,79)" /></td>
+     </tr>
+     <tr>
+       <td>Water</td>
+       <td>[12, 84, 92]</td>
+       <td>0C545C</td>
+       <td><ColorSwatch value="rgb(12,84,92)" /></td>
+     </tr>
+   </tbody>
+   </table>
+
+   </TabItem>
+   </Tabs>
+
+4. In the 3D viewport, move/resize the **selection region** in which to generate terrain. Alternatively, enter values into the [Select](../studio/terrain-editor.md#select) tool fields to set a more specific position and size.
 
    <Alert severity="info">
    	Minimum and maximum terrain heights depend on the darkest and lightest areas of the heightmap image in relation to the **Y** size (height) of the selection region. For instance, if you choose a height of 128, pure black areas are 64 studs below the center position and pure white areas are 64 studs above the center position.
    </Alert>
 
-1. Click the **Generate** button.
+5. Click the **Generate** button.
 
    <video src="../assets/studio/terrain-editor/Import-Tool.mp4" controls width="800" alt="Video of terrain generating automatically via the Import tool"></video>
-
-#### Color Key
-
-The following table describes color mapping to a corresponding material. If your colormap contains a color that's not in the table, Studio chooses the closest matching material; for this reason, it is best to download the <a href="../assets/modeling/terrain/RobloxColorMapIndex.png" target="_blank" rel="noopener">RobloxColorMapIndex</a> file and directly sample its colors, or type the exact RGB/hex values into the color picker of your image editing application.
-
-<table size="small">
-<thead>
-  <tr>
-    <th>Material</th>
-    <th>RGB Value</th>
-		<th>Hex Value</th>
-    <th>Color</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Air</td>
-    <td>[255, 255, 255]</td>
-		<td>FFFFFF</td>
-    <td><ColorSwatch value="rgb(255,255,255)" /></td>
-  </tr>
-  <tr>
-    <td>Asphalt</td>
-    <td>[115, 123, 107]</td>
-		<td>737B6B</td>
-    <td><ColorSwatch value="rgb(115,123,107)" /></td>
-  </tr>
-  <tr>
-    <td>Basalt</td>
-    <td>[30, 30, 37]</td>
-		<td>1E1E25</td>
-    <td><ColorSwatch value="rgb(30,30,37)" /></td>
-  </tr>
-  <tr>
-    <td>Brick</td>
-    <td>[138, 86, 62]</td>
-		<td>8A563E</td>
-    <td><ColorSwatch value="rgb(138,86,62)" /></td>
-  </tr>
-  <tr>
-    <td>Cobblestone</td>
-    <td>[132, 123, 90]</td>
-		<td>847B5A 847b5A</td>
-    <td><ColorSwatch value="rgb(132,123,90)" /></td>
-  </tr>
-  <tr>
-    <td>Concrete</td>
-    <td>[127, 102, 63]</td>
-		<td>7F663F</td>
-    <td><ColorSwatch value="rgb(127,102,63)" /></td>
-  </tr>
-  <tr>
-    <td>Cracked Lava</td>
-    <td>[232, 156, 74]</td>
-		<td>E89C4A</td>
-    <td><ColorSwatch value="rgb(232,156,74)" /></td>
-  </tr>
-  <tr>
-    <td>Glacier</td>
-    <td>[101, 176, 234]</td>
-		<td>65B0EA</td>
-    <td><ColorSwatch value="rgb(101,176,234)" /></td>
-  </tr>
-  <tr>
-    <td>Grass</td>
-    <td>[106, 127, 63]</td>
-		<td>6A7F3F</td>
-    <td><ColorSwatch value="rgb(106,127,63)" /></td>
-  </tr>
-  <tr>
-    <td>Ground</td>
-    <td>[102, 92, 59]</td>
-		<td>665C3B</td>
-    <td><ColorSwatch value="rgb(102,92,59)" /></td>
-  </tr>
-  <tr>
-    <td>Ice</td>
-    <td>[129, 194, 224]</td>
-		<td>81C2E0</td>
-    <td><ColorSwatch value="rgb(129,194,224)" /></td>
-  </tr>
-  <tr>
-    <td>Leafy Grass</td>
-    <td>[115, 132, 74]</td>
-		<td>73844A</td>
-    <td><ColorSwatch value="rgb(115,132,74)" /></td>
-  </tr>
-  <tr>
-    <td>Limestone</td>
-    <td>[206, 173, 148]</td>
-		<td>CEAD94</td>
-    <td><ColorSwatch value="rgb(206,173,148)" /></td>
-  </tr>
-  <tr>
-    <td>Mud</td>
-    <td>[58, 46, 36]</td>
-		<td>3A2E24</td>
-    <td><ColorSwatch value="rgb(58,46,36)" /></td>
-  </tr>
-  <tr>
-    <td>Pavement</td>
-    <td>[148, 148, 140]</td>
-		<td>94948C</td>
-    <td><ColorSwatch value="rgb(148,148,140)" /></td>
-  </tr>
-  <tr>
-    <td>Rock</td>
-    <td>[102, 108, 111]</td>
-		<td>666C6F</td>
-    <td><ColorSwatch value="rgb(102,108,111)" /></td>
-  </tr>
-  <tr>
-    <td>Salt</td>
-    <td>[198, 189, 181]</td>
-		<td>C6BDB5</td>
-    <td><ColorSwatch value="rgb(198,189,181)" /></td>
-  </tr>
-  <tr>
-    <td>Sand</td>
-    <td>[143, 126, 95]</td>
-		<td>8F7E5F</td>
-    <td><ColorSwatch value="rgb(143,126,95)" /></td>
-  </tr>
-  <tr>
-    <td>Sandstone</td>
-    <td>[137, 90, 71]</td>
-		<td>895A47</td>
-    <td><ColorSwatch value="rgb(137,90,71)" /></td>
-  </tr>
-  <tr>
-    <td>Slate</td>
-    <td>[63, 127, 107]</td>
-		<td>3F7F6B</td>
-    <td><ColorSwatch value="rgb(63,127,107)" /></td>
-  </tr>
-  <tr>
-    <td>Snow</td>
-    <td>[195, 199, 218]</td>
-		<td>C3C7DA</td>
-    <td><ColorSwatch value="rgb(195,199,218)" /></td>
-  </tr>
-  <tr>
-    <td>Wood Planks</td>
-    <td>[139, 109, 79]</td>
-		<td>8B6D4F</td>
-    <td><ColorSwatch value="rgb(139,109,79)" /></td>
-  </tr>
-  <tr>
-    <td>Water</td>
-    <td>[12, 84, 92]</td>
-		<td>0C545C</td>
-    <td><ColorSwatch value="rgb(12,84,92)" /></td>
-  </tr>
-</tbody>
-</table>
 
 ### Scripting
 

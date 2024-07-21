@@ -1,9 +1,9 @@
 ---
-title: UI Animations
+title: UI Animation/Tweens
 description: Explains how to animate GuiObjects using the process of tweening.
 ---
 
-In animation, **tweening** is the process of generating intermediate frames between two key points in a sequence. When designing a [user interface](../ui/index.md), you can use tweening to transition a `Class.GuiObject` smoothly from one state to another, such as:
+In animation, **tweening** is the process of generating intermediate frames between two key points in a sequence. When designing a user interface, you can use tweening to transition a `Class.GuiObject` smoothly from one state to another, such as:
 
 - Smoothly increasing the size of a button when a user selects it.
 - Sliding UI menus in and out from the screen edges.
@@ -276,7 +276,7 @@ Multiple properties control UI borders, depending on the object type.
     </tbody>
 </table>
 
-Alternatively, you can apply a [UIStroke](../ui/layout-and-appearance.md#uistroke) child and tween its thickness, color, and/or transparency.
+Alternatively, you can apply a `Class.UIStroke` child and tween its thickness, color, and/or transparency.
 
 <table>
     <thead>

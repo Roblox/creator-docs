@@ -109,7 +109,7 @@ A visual grid or wireframe view can be toggled through the buttons in the **Sett
 
 ### UI Visibility
 
-Toggles the visibility of on-screen [user interface](../ui/index.md) elements in the 3D viewport.
+Toggles the visibility of on-screen user interface elements in the 3D viewport.
 
 <img src="../assets/studio/general/View-Tab-UI-Visibility.png" width="782" alt="UI Visibility toggle indicated in View tab of Studio" />
 
