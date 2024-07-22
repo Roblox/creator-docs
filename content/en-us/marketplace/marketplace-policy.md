@@ -5,7 +5,7 @@ description: Marketplace Requirements lists the specific requirements for Market
 
 3D accessories and clothing assets you sell on the [Marketplace](https://www.roblox.com/catalog), such as clothing accessories, must follow specific requirements. Some requirements may require additional configuration on a third-party modeling software, such as Blender or Maya.
 
-If you are ready to sell an item and the item meets the requirements below, see [Publishing Marketplace Items](../../art/marketplace/publishing-to-marketplace.md) for details on publishing the asset.
+If you are ready to sell an item and the item meets the requirements below, see [Publishing Marketplace Items](../../marketplace/publishing-to-marketplace.md) for details on publishing the asset.
 
 ## Creator Requirements
 
@@ -52,7 +52,7 @@ See the following breakdown of the user and group requirements:
 
 ## General Creation Guidelines
 
-When designing and creating your assets, follow these guidelines to ensure that your item passes moderation and allows Roblox users to express themselves with safety and civility. Failure to follow these guidelines may result in [moderation](../../art/marketplace/moderation.md) and item removal.
+When designing and creating your assets, follow these guidelines to ensure that your item passes moderation and allows Roblox users to express themselves with safety and civility. Failure to follow these guidelines may result in [moderation](../../marketplace/moderation.md) and item removal.
 
 Whether or not you are the original creator of the asset, you must ensure that you have the right to upload the asset and that your item adheres to the following program guidelines:
 

@@ -324,7 +324,7 @@ To further help with organization, you can archive most asset types in the **Dev
 After you archive an asset, it disappears from the website and is no longer usable or visible in Roblox experiences, including your own.
 
 <Alert severity = 'warning'>
-You can archive avatar item assets by [submitting an archiving request](../../art/marketplace/moderation.md#archiving-assets).
+You can archive avatar item assets by [submitting an archiving request](../../marketplace/moderation.md#archiving-assets).
 </Alert>
 
 [CreatorMarketplaceURL]: https://create.roblox.com/store

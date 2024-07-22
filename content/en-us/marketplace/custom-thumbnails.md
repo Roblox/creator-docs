@@ -3,7 +3,7 @@ title: Custom Thumbnails
 description: Explains how to create your own custom thumbnail for marketplace items.
 ---
 
-Thumbnail images provide a preview of the 3D asset in the [Marketplace](https://www.roblox.com/catalog), user inventories, and avatar editors. Before [uploading an asset to the Marketplace](../../art/marketplace/publishing-to-marketplace.md), you can create your own thumbnails to customize the exact look and feel of your item preview thumbnails. This step is optional, but can help ensure that the thumbnail accurately portrays your item.
+Thumbnail images provide a preview of the 3D asset in the [Marketplace](https://www.roblox.com/catalog), user inventories, and avatar editors. Before [uploading an asset to the Marketplace](../../marketplace/publishing-to-marketplace.md), you can create your own thumbnails to customize the exact look and feel of your item preview thumbnails. This step is optional, but can help ensure that the thumbnail accurately portrays your item.
 
 <GridContainer numColumns="3">
   <figure>
@@ -22,7 +22,7 @@ Thumbnail images provide a preview of the 3D asset in the [Marketplace](https://
 
 ### Creating Thumbnails
 
-You must create thumbnails before [publishing your asset on the Marketplace](../../art/marketplace/publishing-to-marketplace.md). You can quickly create these thumbnail configuration instances with the [Custom Thumbnail Tool](https://www.roblox.com/library/11628621048/UGC-Custom-Thumbnail-Tool). Roblox stores custom thumbnail information in a child `ThumbnailConfiguration` object that parents a `CameraTarget` and `CameraValue`.
+You must create thumbnails before [publishing your asset on the Marketplace](../../marketplace/publishing-to-marketplace.md). You can quickly create these thumbnail configuration instances with the [Custom Thumbnail Tool](https://www.roblox.com/library/11628621048/UGC-Custom-Thumbnail-Tool). Roblox stores custom thumbnail information in a child `ThumbnailConfiguration` object that parents a `CameraTarget` and `CameraValue`.
 
    <img src="../../assets/publishing/marketplace/Thumbnail-Configuration-Example.png" width="300" />
 

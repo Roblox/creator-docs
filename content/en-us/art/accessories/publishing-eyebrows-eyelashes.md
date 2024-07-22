@@ -23,7 +23,7 @@ Eyelashes and eyebrows are cosmetics that can help emphasize facial features and
 When publishing eyelashes and eyebrows, you must parent these `Class.Accessory` objects under the avatar character's `Class.Model` prior to uploading the character `Model` to the Marketplace. These `Accessory` face objects must adhere to Roblox's accessory requirements and include layered components such as caging, rigging, and skinning components. For an overview on creating your own eyelashes and eyebrows, see [Creating Face Accessories](../../art/characters/facial-animation/creating-face-accessories.md).
 
 <Alert severity = 'warning'>
-At this time, you can only bundle **eyelashes**, **eyebrows**, and **hair** with your body on Marketplace upload. Other facial accessories, such as horns, makeup, glitter, or other cosmetics are not acceptable. See [Marketplace Policy](../../art/marketplace/marketplace-policy.md) for specific information on allowable cosmetics and other policy regulations and guidelines.
+At this time, you can only bundle **eyelashes**, **eyebrows**, and **hair** with your body on Marketplace upload. Other facial accessories, such as horns, makeup, glitter, or other cosmetics are not acceptable. See [Marketplace Policy](../../marketplace/marketplace-policy.md) for specific information on allowable cosmetics and other policy regulations and guidelines.
 </Alert>
 
 ## Configuring Eyelash and Eyebrow Accessories
@@ -58,4 +58,4 @@ You can download reference `.fbx` models of [eyelashes](../../assets/art/referen
 
 8. If required, rename the accessory objects to `EyelashAccessory` or `EyebrowAccessory` accordingly.
 
-9. Once you are ready to upload the avatar model with your face accessories, follow [Uploading an Asset](../../art/marketplace/publishing-to-marketplace.md#uploading-an-asset) for instructions on uploading and publishing your avatar body with eyelashes and eyebrows to the Marketplace.
+9. Once you are ready to upload the avatar model with your face accessories, follow [Uploading an Asset](../../marketplace/publishing-to-marketplace.md#uploading-an-asset) for instructions on uploading and publishing your avatar body with eyelashes and eyebrows to the Marketplace.

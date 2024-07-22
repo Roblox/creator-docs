@@ -38,15 +38,15 @@ We are building one of the world's largest immersive platforms with 77.7M global
 
 - <Typography variant='h5' color='primary'>We are one of the biggest virtual economies&sup1;</Typography>
 
-	<figure>In 2023 alone, we had more than 3.7 billion virtual transactions, and over 1 billion during the fourth quarter of 2023. In fact, Roblox's GDP&sup2; has grown to become as large as that of some countries. During the month ended December&nbsp;2023, over 5.0M asset creators and developers who create experiences earned Robux. Our success is directly tied to the success of our creators. Roblox earns money by selling Robux which users spend in-experience and on items and assets in our marketplaces, all created by you.</figure>
+<figure>In 2023 alone, we had more than 3.7 billion virtual transactions, and over 1 billion during the fourth quarter of 2023. In fact, Roblox's GDP&sup2; has grown to become as large as that of some countries. During the month ended December&nbsp;2023, over 5.0M asset creators and developers who create experiences earned Robux. Our success is directly tied to the success of our creators. Roblox earns money by selling Robux which users spend in-experience and on items and assets in our marketplaces, all created by you.</figure>
 
 - <Typography variant='h5' color='primary'>We exist to serve our community</Typography>
 
-	<figure>We're always searching for new ways to increase creators' earnings. In 2022 and 2023, our creator community earned $624 million and $741 million, respectively. This combined figure of ~$1.4 billion is up 57% over the previous two years.</figure>
+<figure>We're always searching for new ways to increase creators' earnings. In 2022 and 2023, our creator community earned $624 million and $741 million, respectively. This combined figure of ~$1.4 billion is up 57% over the previous two years.</figure>
 
 - <Typography variant='h5' color='primary'>As a result, creators can focus on creating</Typography>
 
-	<figure>We are seeing healthy growth across creators and studios of varying sizes. Since 2019, the average annual earnings of the top 10 and top 1000 creators have increased ~4.5&times; and ~5.75&times;, respectively. As of December&nbsp;2023, 35% of our top 1000 experiences were created in 2023.&sup3;</figure>
+<figure>We are seeing healthy growth across creators and studios of varying sizes. Since 2019, the average annual earnings of the top 10 and top 1000 creators have increased ~4.5&times; and ~5.75&times;, respectively. As of December&nbsp;2023, 35% of our top 1000 experiences were created in 2023.&sup3;</figure>
 
 <figure>
 <img src="../assets/monetization/earning/Monetization-Growth-CAGR.png" width="800" />
@@ -64,19 +64,19 @@ Building successful content takes time and effort, but there is low risk and no 
 
 - <Typography variant='h5' color='primary'>Instant publishing to reach a global audience</Typography>
 
-	<figure>Unlike other platforms where you wait days or weeks for approvals, you can modify your Roblox experiences and publish immediately in multiple languages and on all popular platforms&nbsp;&mdash; iOS, Android, Mac, Windows, and Xbox.</figure>
+<figure>Unlike other platforms where you wait days or weeks for approvals, you can modify your Roblox experiences and publish immediately in multiple languages and on all popular platforms&nbsp;&mdash; iOS, Android, Mac, Windows, and Xbox.</figure>
 
 - <Typography variant='h5' color='primary'>Platform-driven discovery and rapid viral growth</Typography>
 
-	<figure>Our platform, with 77.7 million daily active users (DAUs) as of Q1&nbsp;2024 now able to see and join experiences with no additional downloads required, provides opportunity for rapid growth. Creators can take advantage of our organic channels, our rich social graph and network effect, seamless exploration between experiences and our cost effective [Roblox&nbsp;ads](../production/promotion/advertising-on-roblox.md).</figure>
+<figure>Our platform, with 77.7 million daily active users (DAUs) as of Q1&nbsp;2024 now able to see and join experiences with no additional downloads required, provides opportunity for rapid growth. Creators can take advantage of our organic channels, our rich social graph and network effect, seamless exploration between experiences and our cost effective [Roblox&nbsp;ads](../production/promotion/advertising-on-roblox.md).</figure>
 
 - <Typography variant='h5' color='primary'>Rapid iteration and scaling with no upfront costs</Typography>
 
-	<figure>With your content live and in front of lots of users, we provide a rapid and rich feedback loop on how users are engaging with your work. This feedback loop is facilitated both by our integrated [analytics](../production/analytics/index.md) system and by our monetization mechanisms. On the cost side, we handle infrastructure hosting, storage, customer support, localization, payment processing, moderation, and platform costs. You do not have to worry about standing up multiplayer servers or scaling them as your experience goes viral. Off Roblox, you often have to take care of these expenses and manage these operations yourself.</figure>
+<figure>With your content live and in front of lots of users, we provide a rapid and rich feedback loop on how users are engaging with your work. This feedback loop is facilitated both by our integrated [analytics](../production/analytics/index.md) system and by our monetization mechanisms. On the cost side, we handle infrastructure hosting, storage, customer support, localization, payment processing, moderation, and platform costs. You do not have to worry about standing up multiplayer servers or scaling them as your experience goes viral. Off Roblox, you often have to take care of these expenses and manage these operations yourself.</figure>
 
 - <Typography variant='h5' color='primary'>Pay after you earn on Roblox</Typography>
 
-	<figure>On other platforms, you can incur expenses such as storage, hosting, and infrastructure before you earn any money or even start building. On Roblox, developing an experience has minimal risk as you are charged for these expenses after you monetize.</figure>
+<figure>On other platforms, you can incur expenses such as storage, hosting, and infrastructure before you earn any money or even start building. On Roblox, developing an experience has minimal risk as you are charged for these expenses after you monetize.</figure>
 
 ### Average Cash Payouts
 
@@ -172,13 +172,13 @@ Developers earn extra Robux for simply building an engaging experience. Roblox c
 
 Millions of users already visit the [Marketplace][link_marketplace] every day. In December&nbsp;2023, nearly 71 percent of them spent time editing their avatar, and people have purchased billions of items there, including nearly 1.6 billion digital fashion items during the first nine months of 2023.
 
-[Eligible](../art/marketplace/marketplace-policy.md#creator-requirements) creators can [create](../art/marketplace/publishing-to-marketplace.md) and sell [accessories](../art/accessories/index.md), [clothing](../art/accessories/index.md), and [avatar bodies and heads](../art//characters/index.md) in the Marketplace or in their own or other developers' experiences. We have a breadth of ways users can discover and buy your creations, whether through searching the Marketplace or enabling developers to promote and sell your items. Users can purchase your item within an experience using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md) or modules such as [Merch Booth](../resources/modules/merch-booth.md). You can also increase the discoverability of your 3D user-generated content within the Marketplace through [Sponsored Item](../production/promotion/sponsoring-items.md) ads.
+[Eligible](../marketplace/marketplace-policy.md#creator-requirements) creators can [create](../marketplace/publishing-to-marketplace.md) and sell [accessories](../art/accessories/index.md), [clothing](../art/accessories/index.md), and [avatar bodies and heads](../art//characters/index.md) in the Marketplace or in their own or other developers' experiences. We have a breadth of ways users can discover and buy your creations, whether through searching the Marketplace or enabling developers to promote and sell your items. Users can purchase your item within an experience using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md) or modules such as [Merch Booth](../resources/modules/merch-booth.md). You can also increase the discoverability of your 3D user-generated content within the Marketplace through [Sponsored Item](../production/promotion/sponsoring-items.md) ads.
 
 After you pay any applicable upload and publishing fees and submit a new asset for approval, the moderation team reviews your asset and, if approved, you'll be able to publish your asset to the Marketplace.
 
 You receive a commission every time a user purchases your item. When community items are sold in the marketplace, a portion of the sales is split between the item creator and Roblox. If the item is sold within an experience, the revenue share will additionally be split with the owner of the experience who we refer to as an "affiliate." An affiliate earns commission for marketing another user's creations.
 
-As follows is an overview of our commission structure. To learn more about fees and commissions for the Marketplace, see [Marketplace Fees and Commissions](../art/marketplace/marketplace-fees-and-commissions.md).
+As follows is an overview of our commission structure. To learn more about fees and commissions for the Marketplace, see [Marketplace Fees and Commissions](../marketplace/marketplace-fees-and-commissions.md).
 
 <Tabs>
 <TabItem label="3D Avatar Assets">
@@ -196,7 +196,7 @@ As follows is an overview of our commission structure. To learn more about fees 
 - Affiliate (Roblox) receives **40%**
 - Platform receives **30%**
 
-These commissions also apply to the original sale of [Limiteds](../art/marketplace/marketplace-fees-and-commissions.md#limiteds). When setting assets on sale, you can [configure](../art/marketplace/publishing-to-marketplace.md#marketplace-settings) your creation as a Limited item to set an available quantity for that asset. Limiteds require a [per-unit fee](../art/marketplace/marketplace-fees-and-commissions.md#per-unit-fee) and can be [resold](../art/marketplace/marketplace-fees-and-commissions.md#reselling) by [Roblox Premium](https://www.roblox.com/premium/membership) members. At this time, only Roblox-created Limiteds are tradeable.
+These commissions also apply to the original sale of [Limiteds](../marketplace/marketplace-fees-and-commissions.md#limiteds). When setting assets on sale, you can [configure](../marketplace/publishing-to-marketplace.md#marketplace-settings) your creation as a Limited item to set an available quantity for that asset. Limiteds require a [per-unit fee](../marketplace/marketplace-fees-and-commissions.md#per-unit-fee) and can be [resold](../marketplace/marketplace-fees-and-commissions.md#reselling) by [Roblox Premium](https://www.roblox.com/premium/membership) members. At this time, only Roblox-created Limiteds are tradeable.
 </Grid>
 <Grid item xs={12} lg={5}>
 <img src="../assets/monetization/earning/Percentages-Clothes-Accessories.png" alt="Pie chart illustrating the commission structure for 3D clothes and accessories" />
@@ -246,7 +246,7 @@ Every platform reports their creator share a bit differently. When you compare c
 - **Other platform benefits** &mdash; Creator shares can be high but consider other benefits that the platform provides such as costs that they are paying on your behalf, the scale and diversity of their audience, the devices/platforms they are available on, the types of creators that are earning, and more.
 - **The total size of the payout pool** &mdash; Understand the total size of the platform's payout pool. Other platforms may invest less in growing their user base and more on making their products accessible in new markets across the globe. This may allow them to pay developers a higher share, but at the expense of slower growth and less total earnings being put in creators' pockets.
 </AccordionDetails>
-</BaseAccordion>
+  </BaseAccordion>
 
 <BaseAccordion>
 <AccordionSummary>

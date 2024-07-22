@@ -458,6 +458,8 @@ https://www.youtube-nocookie.com/embed/V-SDTfxcIF8
 https://www.youtube-nocookie.com/embed/4P79zbwU9D8
 https://www.youtube-nocookie.com/embed/JVjkzGIgoak
 https://www.youtube-nocookie.com/embed/DKzFkn7q8MQ
+https://www.youtube-nocookie.com/embed/SgPU84AqpkY
+https://www.youtube-nocookie.com/embed/9mXvhYSv7fc
 https://www.youtube.com/c/Disobeyedcrab
 https://www.youtube.com/c/NatalieClabo
 https://www.youtube.com/c/SpooksHD
@@ -482,6 +484,8 @@ https://www.youtube.com/watch?v=iHJ49zbGOW8&
 https://www.youtube.com/watch?v=j918PoWWaB0
 https://www.youtube-nocookie.com/embed/llR_pNlJDQw
 https://youtu.be/OEmFocfE0Xs
+https://www.youtube.com/watch?v=SgPU84AqpkY&t=74s
+https://www.youtube.com/watch?v=9mXvhYSv7fc&t=96s
 https://en.wikipedia.org/wiki/Exponential_backoff
 https://en.wikipedia.org/wiki/Moment_of_inertia
 https://en.wikipedia.org/wiki/Shard_(database_architecture)

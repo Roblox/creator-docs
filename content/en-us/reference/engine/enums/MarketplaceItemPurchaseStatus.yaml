@@ -43,7 +43,7 @@ items:
   - name: QuotaExceeded
     summary: |
       The user has exceeded our
-      [purchase request limit](../../../art/marketplace/marketplace-fees-and-commissions.md#rate-limits).
+      [purchase request limit](../../../marketplace/marketplace-fees-and-commissions.md#rate-limits).
     value: 6
     tags: []
     deprecation_message: ''

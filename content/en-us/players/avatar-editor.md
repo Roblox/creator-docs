@@ -206,5 +206,5 @@ When saving either an avatar or an outfit that uses catalog items, the user does
 If you don't wish to implement item purchases, you can instead allow users to favorite non-owned items with `Class.AvatarEditorService:PromptSetFavorite()`.
 
 <Alert severity="info">
- Be aware that you can't earn Robux <a href="../art/marketplace/marketplace-fees-and-commissions.md#commissions">commissions</a> if the user decides to purchase those items outside of your experience.
+ Be aware that you can't earn Robux <a href="../marketplace/marketplace-fees-and-commissions.md#commissions">commissions</a> if the user decides to purchase those items outside of your experience.
 </Alert>

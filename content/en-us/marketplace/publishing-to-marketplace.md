@@ -48,13 +48,13 @@ There are limits on the number of assets you can upload to Roblox and enable for
 
 ## Uploading an Asset
 
-When uploading your asset, Studio checks your asset for technical issues, such as an incorrect hierarchy or accessory structure. You can also add a [custom thumbnail](../../art/marketplace/custom-thumbnails.md) to your asset before uploading to customize how the item displays on the Marketplace.
+When uploading your asset, Studio checks your asset for technical issues, such as an incorrect hierarchy or accessory structure. You can also add a [custom thumbnail](../../marketplace/custom-thumbnails.md) to your asset before uploading to customize how the item displays on the Marketplace.
 
-- After uploading your asset, the item is placed in the moderation queue before you can enable it on sale. See [Moderation](../../art/marketplace/moderation.md) for additional information on this process.
-- For details on upfront payments and fees when publishing assets to the marketplace, see [Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md).
+- After uploading your asset, the item is placed in the moderation queue before you can enable it on sale. See [Moderation](../../marketplace/moderation.md) for additional information on this process.
+- For details on upfront payments and fees when publishing assets to the marketplace, see [Fees and Commissions](../../marketplace/marketplace-fees-and-commissions.md).
 
 <Alert severity = 'warning'>
-You can't update or edit assets and thumbnails after uploading. You must test all of your assets thoroughly before uploading them to ensure they adhere to Roblox's [Marketplace Policy](../../art/marketplace/marketplace-policy.md).
+You can't update or edit assets and thumbnails after uploading. You must test all of your assets thoroughly before uploading them to ensure they adhere to Roblox's [Marketplace Policy](../../marketplace/marketplace-policy.md).
 </Alert>
 
 To upload your asset:
@@ -173,7 +173,7 @@ In **Item Attributes** you can set the **Availability** of your asset as a **Non
 </table>
 
 <Alert severity ='warning'>
-Before selecting either option, familiarize yourself with the various [fee and commission structures](../../art/marketplace/marketplace-fees-and-commissions.md) involved with different types of items and any applicable country policy limitations.
+Before selecting either option, familiarize yourself with the various [fee and commission structures](../../marketplace/marketplace-fees-and-commissions.md) involved with different types of items and any applicable country policy limitations.
 </Alert>
 
 <img src="../../assets/publishing/marketplace/Item-Attributes.png" alt="Item Attribute settings." width="80%" />
@@ -184,13 +184,13 @@ The following item attributes only apply if you set your asset as a Limited item
 - **Limit copies per user** - (Optional) Sets the number of times a user can purchase this asset.
   - Copy limits are based on ownership. If a user owns the maximum limit of copies in their inventory, they can no longer purchase the asset from the original listing. If the user no longer owns the maximum number of copies, they can purchase the copies from the original listing.
   - After publishing, you can only increase, but not decrease, this value.
-- **Free Item** - Sets the selling price of this item to zero. Free Limiteds utilize a [per-unit fee structure](../../art/marketplace/marketplace-fees-and-commissions.md#per-unit-fee).
-- **Resellable** - If enabled, users can resell your limited item. If resold, you are eligible for [resell commissions](../../art/marketplace/marketplace-fees-and-commissions.md#reselling). You can change the **Resellable status** on a published item. If enabled on an item, it can not be disabled in the future.
+- **Free Item** - Sets the selling price of this item to zero. Free Limiteds utilize a [per-unit fee structure](../../marketplace/marketplace-fees-and-commissions.md#per-unit-fee).
+- **Resellable** - If enabled, users can resell your limited item. If resold, you are eligible for [resell commissions](../../marketplace/marketplace-fees-and-commissions.md#reselling). You can change the **Resellable status** on a published item. If enabled on an item, it can not be disabled in the future.
   - The resellable attribute is not available for accounts based in Japan.
 
 ### Pricing
 
-In the pricing section, you can set various price settings. When listing your Marketplace item, you must set your price within the appropriate [dynamic price range](../../art/marketplace/marketplace-fees-and-commissions.md#price-ranges) for that asset type.
+In the pricing section, you can set various price settings. When listing your Marketplace item, you must set your price within the appropriate [dynamic price range](../../marketplace/marketplace-fees-and-commissions.md#price-ranges) for that asset type.
 
 <img src="../../assets/publishing/marketplace/Pricing-Settings.png" alt="Price settings fields." width="80%" />
 
@@ -208,7 +208,7 @@ If you have Marketplace listing before the implementation of the dynamic price r
 
 </Alert>
 
-When setting a price, you can see the percentage breakdown of commissions in the dialog box. A similar breakdown on fees, when applicable, is provided at the bottom of the prompt. See [Marketplace Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md) for more information on the fees and commissions for Marketplace items.
+When setting a price, you can see the percentage breakdown of commissions in the dialog box. A similar breakdown on fees, when applicable, is provided at the bottom of the prompt. See [Marketplace Fees and Commissions](../../marketplace/marketplace-fees-and-commissions.md) for more information on the fees and commissions for Marketplace items.
 
 #### Limit Copies Per User
 
@@ -222,7 +222,7 @@ The **Sale Location** option sets where you can sell your asset beyond the Marke
 
 <img src="../../assets/publishing/marketplace/Sale-Location.png" alt="Sale location fields." width="80%" />
 
-Experiences that sell Marketplace items receive an additional [commission](../../art/marketplace/marketplace-fees-and-commissions.md) including transactions made through the [Inspect Menu](../../players/avatar-inspect-menu.md) or [through the API](../../players/avatar-editor.md) within an experience.
+Experiences that sell Marketplace items receive an additional [commission](../../marketplace/marketplace-fees-and-commissions.md) including transactions made through the [Inspect Menu](../../players/avatar-inspect-menu.md) or [through the API](../../players/avatar-editor.md) within an experience.
 
 The following location options are available for all items:
 
@@ -247,7 +247,7 @@ The following location options are available for all items:
 
 ### Publish Item
 
-When first publishing your asset, select the **Publish Item** button at the end of the form to pay the [publishing fee](../../art/marketplace/marketplace-fees-and-commissions.md#publishing-advance) and list your item on sale.
+When first publishing your asset, select the **Publish Item** button at the end of the form to pay the [publishing fee](../../marketplace/marketplace-fees-and-commissions.md#publishing-advance) and list your item on sale.
 
 ### On Sale Toggle
 

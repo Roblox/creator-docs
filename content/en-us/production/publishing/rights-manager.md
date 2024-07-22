@@ -6,7 +6,7 @@ description: Explains how to request the removal of copyright infringing experie
 The **Rights Manager** is an Intellectual Property (IP) management tool that lets rights holders or their authorized representative report unauthorized use of copyright content on Roblox. All rights holders, including those that don't have a presence on Roblox, can use this tool to request the removal of unauthorized experiences, avatar items, and assets hosted on the platform.
 
 <Alert severity="info">
-For more information on IP and the Digital Millennium Copyright Act (DMCA), see [Intellectual Property](../../art/marketplace/intellectual-property.md) and [DMCA Guidelines](./dmca-guidelines.md).
+For more information on IP and the Digital Millennium Copyright Act (DMCA), see [Intellectual Property](../../marketplace/intellectual-property.md) and [DMCA Guidelines](./dmca-guidelines.md).
 </Alert>
 
 ## Registering Ownership
@@ -69,16 +69,19 @@ To file an IP removal request:
    <img src="../../assets/publishing/rights-manager/First-Reported-Creation.png" width="100%" />
 
 1. **(Optional)** Add more creations for removal to the same IP removal request.
+
    1. Add a new creation for removal.
       1. Click the **Add Creation** button. New fields display above the table.
       1. Fill out the fields using the same process in step 2, then click the **Add Creation** button. The new reported creation displays in the table.
    1. Duplicate a creation for removal.
+
       1. In the table of all reported creations, navigate to the reported creation you want to duplicate, then in the **Actions** column, click the ellipsis button. A contextual menu displays.
       1. In the contextual menu, select **Duplicate**. A duplicate copy of the reported creation displays above the table.
 
          <img src="../../assets/publishing/rights-manager/Contextual-Menu.png" width="60%" />
 
       1. Edit any field, then click the **Add Creation** button. The new reported creation displays in the table.
+
 1. At the bottom of the page, click the **Next** button. The page updates with new fields.
 
    <img src="../../assets/publishing/rights-manager/Add-Details-Page.png" width="100%" />

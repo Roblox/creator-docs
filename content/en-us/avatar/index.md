@@ -23,7 +23,7 @@ Whether you're creating and selling a basic accessory, clothes, or an avatar cha
 
 3.  **Publishing and Selling** &mdash; Manage your asset on your [Creator Dashboard](https://create.roblox.com/dashboard/creations) where you can set your item price and other Marketplace configurations before you enable the item for sale.
 
-    - See [Marketplace](../art/marketplace/index.md) for an overview of this process.
+    - See [Marketplace](../marketplace/index.md) for an overview of this process.
 
 ## Creating
 
@@ -100,7 +100,7 @@ After creating your items, you can begin the process of selling your assets on t
     Learn about the user requirements for selling, as well as the technical and community-related specifications required for the Marketplace.
   </CardContent>
   <CardActions>
-  <Button href="../art/marketplace/marketplace-policy.md" size='large' color='primary' variant='text'>Learn More</Button>
+  <Button href="../marketplace/marketplace-policy.md" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
 
@@ -111,7 +111,7 @@ After creating your items, you can begin the process of selling your assets on t
 Understand how IP works on the Roblox ecosystem to protect yourself and the community.
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-<Button href="../art/marketplace/intellectual-property.md" size='large' color='primary' variant='text'>Learn More</Button>
+<Button href="../marketplace/intellectual-property.md" size='large' color='primary' variant='text'>Learn More</Button>
 </CardActions>
 </Card>
 </GridContainer> <br />
@@ -124,7 +124,7 @@ Understand how IP works on the Roblox ecosystem to protect yourself and the comm
     Upload your catalog-ready asset to the Marketplace and set the item on sale using various creator controls.
   </CardContent>
   <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-  <Button href="../art/marketplace/publishing-to-marketplace.md" size='large' color='primary' variant='text'>Learn More</Button>
+  <Button href="../marketplace/publishing-to-marketplace.md" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
 <Card>
@@ -135,7 +135,7 @@ Understand how IP works on the Roblox ecosystem to protect yourself and the comm
     Understand how fees, payments, commissions, and other monetary and purchasing details work for your various asset types.
   </CardContent>
   <CardActions>
-  <Button href="../art/marketplace/marketplace-fees-and-commissions.md" size='large' color='primary' variant='text'>Learn More</Button>
+  <Button href="../marketplace/marketplace-fees-and-commissions.md" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
 </GridContainer>

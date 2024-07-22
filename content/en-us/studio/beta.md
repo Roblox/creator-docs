@@ -156,6 +156,18 @@ The following beta features are currently available to all users through Studio'
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent style={{paddingBottom: '0px'}}>
+<Button href="https://devforum.roblox.com/t/next-gen-studio-ui-preview-is-here-beta/3075390" size="large" color="primaryBrand" variant="outlined" fullWidth>Next Gen Studio Preview</Button>
+<p></p>
+<CardMedia component="img" image="../assets/studio/beta/Next-Gen-Ribbon.png" />
+<p></p>
+<figcaption>Enable preview of the next gen Studio core.</figcaption>
+<p></p>
+<BetaAlert betaName="Next Gen Studio Preview" leadIn="" leadOut="" components={props.components} />
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent style={{paddingBottom: '0px'}}>
 <Button href="../studio/test-tab.md#pausing--resuming-physics" size="large" color="primaryBrand" variant="outlined" fullWidth>Simulation Pause and Step</Button>
 <p></p>
 <CardMedia component="img" image="../assets/studio/beta/Simulation-Pause.jpg" />

@@ -16,7 +16,7 @@ After uploading your asset for moderation, you can check your asset's current mo
    </Tabs>
 
 1. After your accessory clears moderation, enable the **On Sale** toggle and configure your Marketplace settings.
-   1. For more information on each Marketplace setting, see [Updating a Marketplace Asset](../../../art/marketplace/publishing-to-marketplace.md#publishing-an-asset).
+   1. For more information on each Marketplace setting, see [Updating a Marketplace Asset](../../../marketplace/publishing-to-marketplace.md#publishing-an-asset).
 2. Select **Publish** to set your item on sale.
 3. To get a link to your Marketplace listing, navigate to your Creations page and select **Copy URL** from your item.
 
@@ -29,9 +29,9 @@ You now have your accessory added to the Marketplace catalog! Use the item's Mar
 <Alert severity = 'info'>
 See the following resources for additional Marketplace policy and related information:
 
-- [Marketplace policy](../../../art/marketplace/marketplace-policy.md)
-- [Fees and Commissions](../../../art/marketplace/marketplace-fees-and-commissions.md)
-- [Intellectual Property](../../../art/marketplace/intellectual-property.md)
-- [Moderation](../../../art/marketplace/moderation.md)
+- [Marketplace policy](../../../marketplace/marketplace-policy.md)
+- [Fees and Commissions](../../../marketplace/marketplace-fees-and-commissions.md)
+- [Intellectual Property](../../../marketplace/intellectual-property.md)
+- [Moderation](../../../marketplace/moderation.md)
 
 </Alert>

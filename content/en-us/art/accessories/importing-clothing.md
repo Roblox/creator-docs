@@ -88,7 +88,7 @@ To generate the accessory object:
 
 After successful fitting and converting, your 3D model should populate in your project as an `Class.Accessory`. With this `Class.Accessory` you can perform any of the following:
 
-- Begin the process of [uploading and publishing](../../art/marketplace/publishing-to-marketplace.md#uploading-an-asset) the clothing accessory to the Marketplace.
+- Begin the process of [uploading and publishing](../../marketplace/publishing-to-marketplace.md#uploading-an-asset) the clothing accessory to the Marketplace.
 
 - Use the accessory in your current experience by equipping it to character models with [HumanoidDescription](../../characters/appearance.md#humanoiddescription), or by dragging and dropping the accessory under the appropriate character `Class.Model` object.
 

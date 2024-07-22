@@ -20,7 +20,7 @@ The AFT automatically handles the conversion of the custom `Class.Model` or `Cla
 </GridContainer>
 
 <Alert severity = 'warning'>
-If you are intending to sell your accessory on the Marketplace, make sure your accessory model design adheres to the [Marketplace Requirements](../../art/marketplace/marketplace-policy.md).
+If you are intending to sell your accessory on the Marketplace, make sure your accessory model design adheres to the [Marketplace Requirements](../../marketplace/marketplace-policy.md).
 </Alert>
 
 ## Setting up Accessories
@@ -277,11 +277,11 @@ When you are ready to generate your accessory:
 </GridContainer>
 
 <Alert severity = 'warning'>
-Rigid accessories that you intend to sell on the Marketplace require a `Class.SpecialMesh` and don't support [SurfaceAppearance](../../art/modeling/surface-appearance.md). See [Marketplace requirements](../../art/marketplace/marketplace-policy.md) for additional information.
+Rigid accessories that you intend to sell on the Marketplace require a `Class.SpecialMesh` and don't support [SurfaceAppearance](../../art/modeling/surface-appearance.md). See [Marketplace requirements](../../marketplace/marketplace-policy.md) for additional information.
 </Alert>
 
 With an accessory successfully created, you can now try the following:
 
 - Equip the accessory on an avatar-ready character by drag and dropping the accessory on an existing model, or using [HumanoidDescription](../../characters/appearance.md#humanoiddescription).
 - Save the accessory as an [avatar asset](../../projects/assets/index.md#for-avatars) for use in an experience later.
-- If you meet certain account requirements, you can [upload your asset](../marketplace/publishing-to-marketplace.md) for moderation and start selling it on the Marketplace.
+- If you meet certain account requirements, you can [upload your asset](../../marketplace/publishing-to-marketplace.md) for moderation and start selling it on the Marketplace.
