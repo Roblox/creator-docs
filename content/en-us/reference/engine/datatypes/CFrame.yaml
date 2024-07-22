@@ -743,7 +743,7 @@ methods:
     deprecation_message: ''
   - name: CFrame:ToWorldSpace
     summary: |
-      Recives one or more `Datatype.CFrame` objects and returns them transformed from object to world space.
+      Receives one or more `Datatype.CFrame` objects and returns them transformed from object to world space.
     description: |
       Receives one or more `Datatype.CFrame` objects and returns them transformed from object to world space. Equivalent to:
 
