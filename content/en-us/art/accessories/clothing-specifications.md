@@ -7,7 +7,7 @@ When creating clothing for Roblox, it's important to meet specific technical req
 
 Although [rigid accessories](../../art/accessories/specifications.md) and layerable accessories share many technical requirements, layerable clothing accessories must include additional components to ensure the accessories deform and stretch appropriately on different body scales.
 
-If you are intending to publish and sell these assets on the Marketplace, there are additional [Marketplace Policy](../../art/marketplace/marketplace-policy.md) standards that you must follow for any accessory or clothing item.
+If you are intending to publish and sell these assets on the Marketplace, there are additional [Marketplace Policy](../../marketplace/marketplace-policy.md) standards that you must follow for any accessory or clothing item.
 
 When ready to export, see [Export Requirements](../../art/accessories/export-settings.md) for mesh export settings for Blender and Maya.
 
@@ -199,7 +199,7 @@ You can complete the UV texturing of the actual accessory mesh layer (not the \_
 
 Your items must meet the following requirements before you upload them to the Marketplace to sell:
 
-- Ensure that your items adhere to the [Marketplace Program Guidelines](../../art/marketplace/marketplace-policy.md).
+- Ensure that your items adhere to the [Marketplace Program Guidelines](../../marketplace/marketplace-policy.md).
 - Whenever applicable, ensure that your items adhere to Roblox's [custom mesh specifications](../../art/modeling/specifications.md) and [rigid accessory specifications](../../art/accessories/specifications.md).
 - Object `Class.MeshPart.Material|Material` is set to `Plastic`.
 - Object `Class.MeshPart.Transparency|Transparency` is set to 0.

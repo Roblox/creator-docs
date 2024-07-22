@@ -18,7 +18,7 @@ Each template comes with a color texture map, which you can alter and modify usi
 For the purpose of demonstrating the basic texturing process, this tutorial goes over basic texture painting setup, applies a completely opaque texture over parts of the character eyes, and partially opaque details over the face. You can apply these same techniques to other parts of your character geometry.
 
 <Alert severity = 'warning'>
-When texturing parts of your character model's body, ensure that your character model includes a modesty layer over sensitive regions. See [Community Standards](../../../art/marketplace/marketplace-policy.md) for more information on Roblox's policies.
+When texturing parts of your character model's body, ensure that your character model includes a modesty layer over sensitive regions. See [Community Standards](../../../marketplace/marketplace-policy.md) for more information on Roblox's policies.
 </Alert>
 
 ## Setting Texture Resolution

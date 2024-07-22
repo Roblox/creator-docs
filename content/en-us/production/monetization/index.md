@@ -118,7 +118,7 @@ A [private server](../../production/monetization/private-servers.md) is a subscr
 
 You can create and sell accessories and clothes on the Marketplace. After you pay the upload fee and submit a new asset for approval, the moderation team reviews your asset and, if approved, adds your asset to the catalog.
 
-You'll receive a [commission](../../art/marketplace/marketplace-fees-and-commissions.md) every time users purchase your catalog item. If users purchase your catalog item within an experience using the [Avatar Inspect Menu](../../players/avatar-inspect-menu.md) or the [Avatar Editor Service](../../players/avatar-editor.md), the experience owner also receives a commission.
+You'll receive a [commission](../../marketplace/marketplace-fees-and-commissions.md) every time users purchase your catalog item. If users purchase your catalog item within an experience using the [Avatar Inspect Menu](../../players/avatar-inspect-menu.md) or the [Avatar Editor Service](../../players/avatar-editor.md), the experience owner also receives a commission.
 
 ### Plugins
 

@@ -56,21 +56,21 @@ navigation:
 
   - heading: Publishing and Selling
   - title: Marketplace Overview
-    path: /art/marketplace/
+    path: /marketplace/
   - title: Policies and Guidelines
     section:
       - title: Marketplace Policy
-        path: /art/marketplace/marketplace-policy
+        path: /marketplace/marketplace-policy
       - title: Intellectual Property
-        path: /art/marketplace/intellectual-property
+        path: /marketplace/intellectual-property
       - title: Moderation
-        path: /art/marketplace/moderation
+        path: /marketplace/moderation
   - title: Uploading and Publishing
-    path: /art/marketplace/publishing-to-marketplace
+    path: /marketplace/publishing-to-marketplace
   - title: Marketplace Fees and Commissions
-    path: /art/marketplace/marketplace-fees-and-commissions
+    path: /marketplace/marketplace-fees-and-commissions
   - title: Frequently Asked Questions
-    path: /art/marketplace/frequently-asked-questions
+    path: /marketplace/frequently-asked-questions
 
   - heading: Studio Tools
   - title: 3D Importer
@@ -82,7 +82,7 @@ navigation:
   - title: Automatic Skinning
     path: /art/accessories/automatic-skinning-transfer
   - title: Custom Thumbnails
-    path: /art/marketplace/custom-thumbnails
+    path: /marketplace/custom-thumbnails
 
   - heading: Third Party Add-ons
   - title: Roblox Blender Plugin

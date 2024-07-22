@@ -162,7 +162,7 @@ To make sure your clothing looks as good as possible on as many avatars as possi
 
 ## Uploading
 
-After finalizing and testing your design, you can upload the clothing item to the [Marketplace](https://www.roblox.com/catalog) for a [fee](../../art/marketplace/marketplace-fees-and-commissions.md#classic-clothing). After Roblox reviews and uploads the item to the Marketplace, you will receive a [commission](../../art/marketplace/marketplace-fees-and-commissions.md#commissions) for all sales of your items.
+After finalizing and testing your design, you can upload the clothing item to the [Marketplace](https://www.roblox.com/catalog) for a [fee](../../marketplace/marketplace-fees-and-commissions.md#classic-clothing). After Roblox reviews and uploads the item to the Marketplace, you will receive a [commission](../../marketplace/marketplace-fees-and-commissions.md#commissions) for all sales of your items.
 
 To upload a custom clothing item:
 

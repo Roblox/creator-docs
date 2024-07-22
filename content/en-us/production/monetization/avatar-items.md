@@ -5,7 +5,7 @@ description: Sell community created Avatar items exclusively through your experi
 
 **Avatar items** are 3D assets, such as accessories and clothing, that Roblox avatars can equip and wear. While many avatar items are sold on the Roblox's Marketplace, you can work with item creators to sell avatar items exclusively in your experience.
 
-By selling unique avatar items in your experience, you can create experience-specific cosmetics while still taking advantage of Roblox's [commission payouts](../../art/marketplace/marketplace-fees-and-commissions.md#commissions) for avatar assets sold within an experience.
+By selling unique avatar items in your experience, you can create experience-specific cosmetics while still taking advantage of Roblox's [commission payouts](../../marketplace/marketplace-fees-and-commissions.md#commissions) for avatar assets sold within an experience.
 
 <img src="../../assets/monetization/avatar-items/Linked-Avatar-Items-Example.png" width="90%" />
 
@@ -28,7 +28,7 @@ Before enabling an avatar item sale in your experience, the creator of the item 
 1. Open the [Creations](https://create.roblox.com/creations) page on **Creator Dashboard**.
 2. Click the **&ctdot;** in the corner of the experience's thumbnail and select **Copy Start Place ID**.
 
-3. As the item creator, [update your item's marketplace settings](../../art/marketplace/publishing-to-marketplace.md#marketplace-settings) and add the Place ID to the item's Sale Location field.
+3. As the item creator, [update your item's marketplace settings](../../marketplace/publishing-to-marketplace.md#marketplace-settings) and add the Place ID to the item's Sale Location field.
 
 ### Adding Items to Experience
 
@@ -49,7 +49,7 @@ To search and enable an asset for sale:
 
 ## Avatar Items Analytics
 
-Avatar Items analytics help you gauge the success of individual Avatar Items, identify trends, and forecast potential future earnings.  
+Avatar Items analytics help you gauge the success of individual Avatar Items, identify trends, and forecast potential future earnings.
 
 To access Avatar Items analytics:
 

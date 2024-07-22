@@ -33,4 +33,4 @@ If you intend to sell the asset on the Marketplace, use the following steps to b
 4. After you select the **Asset Category**, Studio begins validating the asset to ensure that it matches Roblox's accessory technical requirements.
    1. If set up correctly, the window displays a green Validation Successful confirmation.
    2. If errors appear, see the error messages for specific details. Some errors may require going back to the modeling software and adjusting the asset.
-5. If the validation is successful, you can submit the asset to the upload and moderation queue for a fee. See [Fees and Commissions](../../../art/marketplace/marketplace-fees-and-commissions.md) for current fee information.
+5. If the validation is successful, you can submit the asset to the upload and moderation queue for a fee. See [Fees and Commissions](../../../marketplace/marketplace-fees-and-commissions.md) for current fee information.

@@ -209,7 +209,7 @@ methods:
       not work for
       [USD Creator Store](../../../production/selling-on-creator-store.md)
       purchases**. If prompting a purchase of a
-      [Limited](../../../art/marketplace/marketplace-fees-and-commissions.md#limiteds)
+      [Limited](../../../marketplace/marketplace-fees-and-commissions.md#limiteds)
       item:
 
       - Server requests (recommended) prompt original copies until they run out,

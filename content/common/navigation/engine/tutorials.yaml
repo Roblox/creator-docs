@@ -17,43 +17,37 @@ navigation:
     path: /tutorials/gameplay-scripting/
     navigation: /engine/tutorials-gs.yaml
   - heading: Use Cases
+  - title: Overview
+    path: /tutorials/use-case-tutorial-overview
   - title: Modeling
     section:
       - title: Creating Neon Signs
         path: /tutorials/3D-art/creating-neon-signs
-      - title: Rigging a Simple Mesh (Blender)
-        path: /art/modeling/rigging-a-simple-mesh
-      - title: Skinning a Simple Mesh (Blender)
-        path: /art/modeling/skinning-a-simple-mesh
-      - title: Rigging a Humanoid Model (Blender)
-        path: /art/modeling/rigging-a-humanoid-model.md
-      - title: Skinning a Humanoid Model (Blender)
-        path: /art/modeling/skinning-a-humanoid-model.md
+      - title: Assembling Modular Environments
+        path: /tutorials/3D-art/assembling-modular-environments
   - title: User Interfaces
     section:
       - title: Creating Score Bars
         path: /tutorials/building/ui/creating-a-score-bar
-      - title: Interactive Buttons
+      - title: Creating Interactive Buttons
         path: /tutorials/building/ui/interactive-buttons
-      - title: Proximity Prompts
+      - title: Creating Proximity Prompts
         path: /tutorials/building/ui/proximity-prompts
-      - title: Interfaces on Parts
+      - title: Creating Part Interfaces
         path: /tutorials/building/ui/interfaces-on-parts
-  - title: Environments
+  - title: Audio
     section:
       - title: Playing Background Music
         path: /tutorials/building/environments/playing-background-music
-      - title: In-Game Sounds
+      - title: Playing Positional Sounds
         path: /tutorials/building/environments/in-game-sounds
-      - title: Creating Flickering Lights
-        path: /tutorials/3D-art/creating-flickering-lights
-      - title: Assembling Modular Environments
-        path: /tutorials/3D-art/assembling-modular-environments
-      - title: Enhancing Outdoor Environments
-        path: /tutorials/3D-art/enhancing-outdoor-environments-with-future-lighting
+  - title: Lighting
+    section:
       - title: Enhancing Indoor Environments
         path: /tutorials/building/environments/enhancing-indoor-environments
-  - title: Effects
+      - title: Enhancing Outdoor Environments
+        path: /tutorials/3D-art/enhancing-outdoor-environments-with-future-lighting
+  - title: VFX
     section:
       - title: Creating Laser Beams
         path: /tutorials/building/effects/laser-traps-with-beams
@@ -61,26 +55,38 @@ navigation:
         path: /tutorials/building/effects/creating-waterfalls
       - title: Creating Volcanoes
         path: /tutorials/building/effects/creating-volcanoes
-      - title: Using Particles for Explosions
+      - title: Creating Explosions
         path: /tutorials/building/effects/using-particles-for-explosions
   - title: Physics
     section:
-      - title: Building a Hinged Door
-        path: /tutorials/building/physics/building-a-hinged-door
-      - title: Building a Ferris Wheel
-        path: /tutorials/building/physics/building-a-ferris-wheel
       - title: Creating Moving Objects
         path: /tutorials/building/physics/creating-moving-objects
       - title: Creating Spinning Objects
         path: /tutorials/3D-art/creating-spinning-objects
       - title: Creating Elevators
         path: /tutorials/3D-art/creating-elevators
+      - title: Building Hinged Doors
+        path: /tutorials/building/physics/building-a-hinged-door
+      - title: Building Ferris Wheels
+        path: /tutorials/building/physics/building-a-ferris-wheel
   - title: Animation
     section:
-      - title: Creating an Animation
-        path: /tutorials/building/animation/creating-an-animation
-      - title: Scripting Avatar Animations
-        path: /tutorials/building/animation/scripting-avatar-animations
+      - title: In Studio
+        section:
+          - title: Creating Character Animations
+            path: /tutorials/building/animation/creating-an-animation
+          - title: Scripting Avatar Animations
+            path: /tutorials/building/animation/scripting-avatar-animations
+      - title: In Blender
+        section:
+          - title: Rigging Simple Meshes
+            path: /art/modeling/rigging-a-simple-mesh
+          - title: Skinning Simple Meshes
+            path: /art/modeling/skinning-a-simple-mesh
+          - title: Rigging Humanoid Models
+            path: /art/modeling/rigging-a-humanoid-model.md
+          - title: Skinning Humanoid Models
+            path: /art/modeling/skinning-a-humanoid-model.md
   - title: Scripting
     section:
       - title: Basic Gameplay
@@ -95,7 +101,7 @@ navigation:
             path: /tutorials/scripting/basic-scripting/scoring-points
       - title: Intermediate Gameplay
         section:
-          - title: Creating a Health Pickup
+          - title: Creating Health Pickups
             path: /tutorials/scripting/intermediate-scripting/creating-a-health-pickup
           - title: Saving Data
             path: /tutorials/scripting/intermediate-scripting/saving-data
