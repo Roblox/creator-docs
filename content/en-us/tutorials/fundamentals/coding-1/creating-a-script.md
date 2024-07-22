@@ -175,6 +175,6 @@ Play around with printing different combinations of strings.
 
 New scripts can be created by clicking the + button next to the name of an object. ServerScriptService is a common place to create new scripts. New scripts include the default code `print("Hello world!")`. This code will display `Hello world!` in the Output window, where you can see the results of your code and if any errors have occurred.
 
-"Hello world!"' is an example of a string data type. Strings can include any combination of characters that you might type on your keyboard. Concatenation is when multiple strings are combined.
+"Hello world!" is an example of a string data type. Strings can include any combination of characters that you might type on your keyboard. Concatenation is when multiple strings are combined.
 
 Variables are containers that can be assigned to hold different data types, such as strings and numbers.
