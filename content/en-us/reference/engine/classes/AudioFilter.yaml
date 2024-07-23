@@ -105,7 +105,7 @@ properties:
       For `Class.AudioFilter|FilterType` values of
       `Enum.AudioFilterType.Lowpass12dB|Lowpass12dB` and
       `Enum.AudioFilterType.Highpass12dB|Highpass12dB`, a **Q** value of
-      `sqrt(2)`, or `0.707`, corresponds to a flat filter at a 12dB/octave
+      `sqrt(2) / 2`, or `0.707`, corresponds to a flat filter at a 12dB/octave
       slope.
     code_samples: []
     type: float
