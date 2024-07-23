@@ -39,11 +39,13 @@ To create an API key:
    you need to add multiple APIs to the key.
 1. Select the experience that you want to access with the API key.
 1. From the **Experience Operations** dropdown, select the operations that you
-   want to enable for the API key. For example, if you want to write a script to
-   create new data stores entries, select the **Create Entry** operation. <Alert
-   severity="warning"> For security reasons, configure the least amount of API
-   and operation permissions as required, so bad actors wouldn't be able to
-   access any other of your resources in case your API key is leaked. </Alert>
+   want to enable for the API key.
+
+   Many operations in the [API reference](../reference/index.md) include the required permission scopes. For example, the [flush memory store](/cloud/reference/MemoryStore#Flush-Memory-Store) operation requires the `universe.memory-store:flush` permission.
+
+   <Alert severity="warning">
+   For security reasons, give each API key the minimum number of required permissions. If an API key leaks, this principle of least privilege ensures that only a subset of your resources are compromised.
+   </Alert>
 
 1. In the **Security** section, explicitly set IP access to the key using [CIDR
    notation](#cidr-format), otherwise you can't use the API key. You can find

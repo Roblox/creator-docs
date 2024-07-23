@@ -398,8 +398,8 @@ functions:
     tags:
       - Deprecated
     deprecation_message: |
-      This method has been superseded by `Library.task.wait()` and should not
-      be used for future work.
+      This method has been superseded by `Library.task.wait()` and should not be
+      used for future work.
     code_samples:
   - name: warn
     summary: |

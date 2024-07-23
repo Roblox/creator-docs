@@ -34,8 +34,8 @@ methods:
       the user. Cases for error include:
 
       - The two users are not allowed to chat, for example if
-      `Class.Chat:CanUserChatAsync()` would return `false` for the given sender
-      and receiver.
+        `Class.Chat:CanUserChatAsync()` would return `false` for the given
+        sender and receiver.
       - The user with the ID `toUserId` is not online on the current server.
 
       This function will return immediately in most cases, although it will

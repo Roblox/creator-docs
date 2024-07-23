@@ -286,9 +286,9 @@ Note that it can be important to have a hitbox that precisely conforms to the sh
 
 ### RenderFidelity
 
-The `Class.MeshPart.RenderFidelity` property determines the mesh's level of detail that displays to the user. When you set this property to **Performance**, the Roblox engine reduces the mesh's fidelity the further the user is from the mesh, and when you set this property to **Precise**, every vertex of your mesh renders exactly as you intend no matter the distance between them.
+The `Class.MeshPart.RenderFidelity` property determines the mesh's level of detail that displays to the user. When you set this property to `Enum.RenderFidelity.Automatic`, the Roblox engine reduces the mesh's fidelity the further the user is from the mesh, and when you set this property to `Enum.RenderFidelity.Precise`, every vertex of your mesh renders exactly as you intend no matter the distance between them.
 
-The more objects the engine must render precisely to the user from any distance, especially if they have a high vertex count, the higher the performance cost. To alleviate some of this impact on performance, set this property to **Performance** for objects with geometric complexity, such as foliage in the sample asset library, because they don't need to display in their entirety from a distance for any gameplay requirement. This reduces your experience's polygon count without yielding overall visual quality.
+The more objects the engine must render precisely to the user from any distance, especially if they have a high vertex count, the higher the performance cost. To alleviate some of this impact on performance, set this property to `Enum.RenderFidelity.Performance` for objects with geometric complexity, such as foliage in the sample asset library, because they don't need to display in their entirety from a distance for any gameplay requirement. This reduces your experience's polygon count without yielding overall visual quality.
 
 ## Convert Assets into Packages
 

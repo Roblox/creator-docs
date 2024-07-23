@@ -21,10 +21,9 @@ properties:
       will be shown in. It can be set to the possible values of the
       `Enum.RenderFidelity` enum.
 
-      By default, solid modeled parts will always be shown in **precise
-      fidelity**, no matter how far they are from the camera. This improves
-      their appearance when viewed from any distance, but if a place has a large
-      number of detailed solid modeled parts, it may reduce overall performance.
+      The default value is `Enum.RenderFidelity.Automatic|Automatic`, meaning
+      the part's detail is based on its distance from the camera as outlined in
+      the following table.
 
       <table>
           <thead>

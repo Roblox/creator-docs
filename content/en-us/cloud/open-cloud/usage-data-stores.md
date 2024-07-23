@@ -59,7 +59,7 @@ From a high level, you can build your Python app by adding API key permissions a
 
 When [creating an API Key](./api-keys.md) for this example, make sure you perform the following settings:
 
-1. From the **Select API System** menu in the **Access Permissions** section, select **Data Stores**.
+1. From the **Select API System** menu in the **Access Permissions** section, select **universe-datastores**.
 
 1. **(Optional)** In the **Data Stores** section, select API operations for specific data stores.
 

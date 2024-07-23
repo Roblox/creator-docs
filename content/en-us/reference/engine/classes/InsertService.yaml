@@ -128,33 +128,35 @@ methods:
     thread_safety: Unsafe
   - name: InsertService:CreateMeshPartAsync
     summary: |
-      Create a new MeshPart with specified meshId and fidelity values.
+      Creates a new `Class.MeshPart` with specified fidelity values.
     description: |
-      CreateMeshPartAsync can create a MeshPart with specified CollisionFidelity
-      and RenderFidelity. Because MeshPart.MeshId is read only, this is the way
-      of creating MeshPart with any MeshId through scripts, without having to
-      clone an existing MeshPart. It throws errors if creation fails.
+      Creates a new `Class.MeshPart` with specified
+      `Class.MeshPart.CollisionFidelity|CollisionFidelity` and
+      `Class.MeshPart.RenderFidelity|RenderFidelity`. Because
+      `Class.MeshPart.MeshId` is read only, this is the way to create a
+      `Class.MeshPart` through scripts without having to clone an existing one.
+      It throws errors if creation fails.
     code_samples:
     parameters:
       - name: meshId
         type: Content
         default:
         summary: |
-          Mesh asset id.
+          Mesh asset ID.
       - name: collisionFidelity
         type: CollisionFidelity
         default:
         summary: |
-          Set MeshPart.CollisionFidelity.
+          Set `Class.MeshPart.CollisionFidelity`.
       - name: renderFidelity
         type: RenderFidelity
         default:
         summary: |
-          Set MeshPart.RenderFidelity.
+          Set `Class.MeshPart.RenderFidelity`.
     returns:
       - type: MeshPart
         summary: |
-          New MeshPart instance.
+          New `Class.MeshPart` instance.
     tags:
       - Yields
     deprecation_message: ''

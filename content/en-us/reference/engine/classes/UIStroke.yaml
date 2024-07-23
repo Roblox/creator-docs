@@ -8,14 +8,18 @@ description: |
   An instance that applies an outline to text or a UI border. Key features
   include:
 
-  - Adjust the `Class.UIStroke.Color|Color` and `Class.UIStroke.Thickness|Thickness` of the stroke outline.
-  - Change the stroke `Class.UIStroke.Transparency|Transparency` independently from the text or UI object.
-  - Choose the `Class.UIStroke.LineJoinMode|LineJoinMode` of the stroke (round, bevel, or miter).
+  - Adjust the `Class.UIStroke.Color|Color` and
+    `Class.UIStroke.Thickness|Thickness` of the stroke outline.
+  - Change the stroke `Class.UIStroke.Transparency|Transparency` independently
+    from the text or UI object.
+  - Choose the `Class.UIStroke.LineJoinMode|LineJoinMode` of the stroke (round,
+    bevel, or miter).
   - Add a gradient to the stroke via the `Class.UIGradient` instance.
-  - Use [rich text]((../../../ui/rich-text.md) tags to add stroke to inline text segments.
+  - Use [rich text]((../../../ui/rich-text.md) tags to add stroke to inline text
+    segments.
 
-  For more details on the `Class.UIStroke` object, see [Appearance
-  Modifiers](../../../ui/appearance-modifiers.md).
+  For more details on the `Class.UIStroke` object, see
+  [Appearance Modifiers](../../../ui/appearance-modifiers.md).
 code_samples:
 inherits:
   - UIComponent
@@ -56,8 +60,7 @@ properties:
       Determines the stroke color.
     description: |
       Determines the `Class.UIStroke` stroke color. You can also insert a
-      `Class.UIGradient` instance as a child to create gradient
-      strokes.
+      `Class.UIGradient` instance as a child to create gradient strokes.
 
       <figure>
       <img src="../../../assets/ui/layout-appearance/UIStroke-Color-Solid.png" width="70%" />
@@ -101,8 +104,10 @@ properties:
     summary: |
       Determines how corners are interpreted.
     description: |
-      This property determines how corners are interpreted. It accepts an `Enum.LineJoinMode` value
-      of either `Enum.LineJoinMode.Round|Round` (default), `Enum.LineJoinMode.Bevel|Bevel`, or `Enum.LineJoinMode.Miter|Miter`.
+      This property determines how corners are interpreted. It accepts an
+      `Enum.LineJoinMode` value of either `Enum.LineJoinMode.Round|Round`
+      (default), `Enum.LineJoinMode.Bevel|Bevel`, or
+      `Enum.LineJoinMode.Miter|Miter`.
 
       <figure>
       <img src="../../../assets/ui/layout-appearance/UIStroke-LineJoinMode-Round.png" width="60%" />

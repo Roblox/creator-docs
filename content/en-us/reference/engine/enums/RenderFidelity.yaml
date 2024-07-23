@@ -4,13 +4,11 @@ summary: |
   Determines the level of detail that solid modeled and mesh parts will be shown
   in.
 description: |
-  This enum determines the level of detail that solid modeled and mesh parts
-  will be shown in.
-
-  By default, solid modeled and mesh parts will always be shown in precise
-  fidelity, no matter how far they are from the game camera. This improves their
-  appearance when viewed from any distance, but if a place has a large number of
-  detailed solid modeled or mesh parts, it may reduce overall game performance.
+  This enum determines the level of detail that
+  [meshes](../../../parts/meshes.md) and [solid
+  modeled](../../../parts/solid-modeling.md) parts will be shown in. The default
+  is **Automatic**, meaning the object's detail is based on its distance from
+  the camera as outlined in the following table.
 
   <table>
       <thead>
@@ -40,15 +38,15 @@ deprecation_message: ''
 items:
   - name: Automatic
     summary: |
-      Dynamically control a solid modeled and mesh part's level of detail
-      depending on its distance from the camera (see table above).
+      Object's level of detail is dynamically controlled by its distance from
+      the camera (see table above).
     value: 0
     tags: []
     deprecation_message: ''
   - name: Precise
     summary: |
-      Specifically set a solid modeled and mesh part's level of detail
-      regardless of its distance from the camera (lowest, medium, or highest).
+      Object is rendered in the highest fidelity regardless of its distance
+      from the camera.
     value: 1
     tags: []
     deprecation_message: ''

@@ -1,0 +1,61 @@
+name: WrapDeformer
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - BaseWrap
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: WrapDeformer.Amount
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Tuning
+    serialization:
+      can_load: true
+      can_save: true
+  - name: WrapDeformer.Enabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: WrapDeformer.RenderMeshID
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

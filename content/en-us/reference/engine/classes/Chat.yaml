@@ -5,8 +5,8 @@ memory_category: Instances
 summary: |
   Houses the Lua code responsible for running the legacy chat system.
 description: |
-  The **Chat** service houses the Lua code responsible for running the [legacy
-  chat system](../../../chat/legacy/legacy-chat-system.md). Similar to
+  The **Chat** service houses the Lua code responsible for running the
+  [legacy chat system](../../../chat/legacy/legacy-chat-system.md). Similar to
   `Class.StarterPlayerScripts`, default objects like `Class.Script|Scripts` and
   `Class.ModuleScript|ModuleScripts` are inserted into the service.
 code_samples:

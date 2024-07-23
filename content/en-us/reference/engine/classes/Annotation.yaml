@@ -1,16 +1,13 @@
-name: UGCValidationService
+name: Annotation
 type: class
 category:
 memory_category: Instances
 summary: ''
 description: ''
-code_samples:
+code_samples: []
 inherits:
   - Instance
-tags:
-  - NotCreatable
-  - Service
-  - NotReplicated
+tags: []
 deprecation_message: ''
 properties: []
 methods: []

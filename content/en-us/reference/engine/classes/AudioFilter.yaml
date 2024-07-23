@@ -101,7 +101,7 @@ properties:
       represented by the filter. Only applies when the
       `Class.AudioFilter|FilterType` is `Peak`, `Lowpass[x]dB`, `Highpass[x]dB`,
       `Bandpass`, or `Notch`. Ranges from 0.1 to 10.
-      
+
       For `Class.AudioFilter|FilterType` values of
       `Enum.AudioFilterType.Lowpass12dB|Lowpass12dB` and
       `Enum.AudioFilterType.Highpass12dB|Highpass12dB`, a **Q** value of

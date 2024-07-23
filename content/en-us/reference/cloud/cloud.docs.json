@@ -3594,7 +3594,7 @@
           {
             "name": "updateMask",
             "in": "query",
-            "description": "The list of fields to update.",
+            "description": "The list of fields to update.\n\n The `game_join_restriction` field must be updated atomically; field masks\n that index into `game_join_restriction` (such as\n `\"game_join_restriction.active\"`) are not supported.",
             "schema": {
               "type": "string",
               "format": "field-mask"
@@ -3827,7 +3827,7 @@
           {
             "name": "updateMask",
             "in": "query",
-            "description": "The list of fields to update.",
+            "description": "The list of fields to update.\n\n The `game_join_restriction` field must be updated atomically; field masks\n that index into `game_join_restriction` (such as\n `\"game_join_restriction.active\"`) are not supported.",
             "schema": {
               "type": "string",
               "format": "field-mask"
@@ -7884,7 +7884,7 @@
           {
             "name": "updateMask",
             "in": "query",
-            "description": "The list of fields to update.",
+            "description": "The list of fields to update.\n\n The `game_join_restriction` field must be updated atomically; field masks\n that index into `game_join_restriction` (such as\n `\"game_join_restriction.active\"`) are not supported.",
             "schema": {
               "type": "string",
               "format": "field-mask"
@@ -8117,7 +8117,7 @@
           {
             "name": "updateMask",
             "in": "query",
-            "description": "The list of fields to update.",
+            "description": "The list of fields to update.\n\n The `game_join_restriction` field must be updated atomically; field masks\n that index into `game_join_restriction` (such as\n `\"game_join_restriction.active\"`) are not supported.",
             "schema": {
               "type": "string",
               "format": "field-mask"

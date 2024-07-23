@@ -143,7 +143,7 @@ To create an API key for a group or create a group asset, you must have the corr
 
 Regardless of whether you are creating the API key for yourself or your group, make sure to add the following permissions:
 
-1. Add **Assets API** to **Access Permissions**.
+1. Add **assets** to **Access Permissions**.
 1. Add **Read** and **Write** operation permissions to your selected experience, depending on the required scopes of the endpoints you plan to call.
 
 Once you have the API key, copy it to the `x-api-key` request header. All endpoints require the `x-api-key` request header.

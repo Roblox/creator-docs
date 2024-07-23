@@ -32,26 +32,26 @@ description: |
   In order to efficiently use a `Class.UIGradient`, follow these principles:
 
   - Avoid using more than 6 color stops on the `Class.UIGradient.Color|Color`
-  sequence.
+    sequence.
 
   - Avoid using a `Class.UIGradient` on any object that applies a text stroke
-  (`Class.TextLabel.TextStrokeColor3|TextStrokeColor3`), as the gradient will
-  try to blend with strokes and borders, and may cause performance issues.
+    (`Class.TextLabel.TextStrokeColor3|TextStrokeColor3`), as the gradient will
+    try to blend with strokes and borders, and may cause performance issues.
 
   - Avoid setting `Class.UIGradient.Color|Color` and
-  `Class.UIGradient.Transparency|Transparency` frequently: this causes the
-  sequence of colors to rebuild often, which is expensive. If possible, set
-  these properties only once and try to animate the
-  `Class.UIGradient.Offset|Offset` or `Class.UIGradient.Rotation|Rotation`
-  properties to achieve a similar effect. Alternatively, you can change the
-  color of the parent `Class.GuiObject` using such properties as
-  `Class.GuiObject.BackgroundColor3|BackgroundColor3`,
-  `Class.ImageLabel.ImageColor3|ImageColor3`, or
-  `Class.TextLabel.TextColor3|TextColor3`.
+    `Class.UIGradient.Transparency|Transparency` frequently: this causes the
+    sequence of colors to rebuild often, which is expensive. If possible, set
+    these properties only once and try to animate the
+    `Class.UIGradient.Offset|Offset` or `Class.UIGradient.Rotation|Rotation`
+    properties to achieve a similar effect. Alternatively, you can change the
+    color of the parent `Class.GuiObject` using such properties as
+    `Class.GuiObject.BackgroundColor3|BackgroundColor3`,
+    `Class.ImageLabel.ImageColor3|ImageColor3`, or
+    `Class.TextLabel.TextColor3|TextColor3`.
 
   - When applying an unchanging gradient on a UI element whose state changes a
-  lot, there is a tradeoff between using a `Class.UIGradient` (processing time)
-  and a static gradient image (memory). 
+    lot, there is a tradeoff between using a `Class.UIGradient` (processing
+    time) and a static gradient image (memory).
 code_samples:
 inherits:
   - UIComponent

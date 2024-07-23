@@ -183,17 +183,18 @@ properties:
       can_save: true
   - name: RenderSettings.MeshPartDetailLevel
     summary: |
-      Studio only. Used to visually verify the quality of MeshParts at lower
-      level of detail at close range.
+      Studio only. Used to visually verify the quality of
+      `Class.MeshPart|MeshParts` at lower level of detail at close range.
     description: |
       Determines the mode for the selection of detail levels for mesh parts. For
-      a good balance between performance and fidelity this should be set to
-      `MeshPartDetail.DistanceBased` (default), which is what the client uses.
+      a good balance between performance and fidelity, this should be set to
+      `Enum.MeshPartDetailLevel.DistanceBased` (default), which is what the
+      client uses.
 
       Note that the `Class.MeshPart.RenderFidelity` needs to be set to
       `Enum.RenderFidelity.Automatic` for this to work. If you set it to
-      `Enum.RenderFidelity.Precise` you will always see the higher resolution
-      version and the `Enum.MeshPartDetailLevel` will be ignored for that
+      `Enum.RenderFidelity.Precise`, you will always see the higher resolution
+      version and the `Enum.MeshPartDetailLevel` value will be ignored for that
       `Class.MeshPart`.
     code_samples:
     type: MeshPartDetailLevel

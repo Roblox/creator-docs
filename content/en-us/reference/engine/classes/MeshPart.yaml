@@ -119,30 +119,33 @@ properties:
       will be shown in. It can be set to the possible values of the
       `Enum.RenderFidelity` enum.
 
-      By default, `Class.MeshPart|MeshParts` will always be shown in **precise
-      fidelity**, no matter how far they are from the camera. This improves
-      their appearance when viewed from any distance, but if a place has a large
-      number of detailed mesh parts, it may reduce overall performance.
+      The default value is `Enum.RenderFidelity.Automatic|Automatic`, meaning
+      the mesh's detail is based on its distance from the camera as outlined in
+      the following table.
 
       <table>
           <thead>
               <tr>
                   <th>Distance From Camera</th>
                   <th>Render Fidelity</th>
+                  <th>Example</th>
               </tr>
           </thead>
           <tbody>
               <tr>
                   <td>Less than 250 studs</td>
                   <td>Highest</td>
+                  <td><img src="../../../assets/modeling/meshes/Render-Fidelity-High.jpg" width="200" /></td>
               </tr>
               <tr>
                   <td>250-500 studs</td>
                   <td>Medium</td>
+                  <td><img src="../../../assets/modeling/meshes/Render-Fidelity-Medium.jpg" width="200" /></td>
               </tr>
               <tr>
                   <td>500 or more studs</td>
                   <td>Lowest</td>
+                  <td><img src="../../../assets/modeling/meshes/Render-Fidelity-Low.jpg" width="200" /></td>
               </tr>
           </tbody>
       </table>

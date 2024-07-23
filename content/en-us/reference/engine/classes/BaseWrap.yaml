@@ -166,22 +166,6 @@ properties:
     serialization:
       can_load: false
       can_save: false
-methods:
-  - name: BaseWrap:GetUVs
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: cageType
-        type: CageType
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+methods: []
 events: []
 callbacks: []

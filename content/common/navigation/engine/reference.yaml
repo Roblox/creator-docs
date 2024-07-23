@@ -25,11 +25,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Accoutrement.yaml
         ignoreTranslation: true
-      - title: AchievementService
-        path: /reference/engine/classes/AchievementService
-        type: engineapi
-        source: /reference/engine/classes/AchievementService.yaml
-        ignoreTranslation: true
       - title: Actor
         path: /reference/engine/classes/Actor
         type: engineapi
@@ -120,10 +115,10 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Animator.yaml
         ignoreTranslation: true
-      - title: AppLifecycleObserverService
-        path: /reference/engine/classes/AppLifecycleObserverService
+      - title: Annotation
+        path: /reference/engine/classes/Annotation
         type: engineapi
-        source: /reference/engine/classes/AppLifecycleObserverService.yaml
+        source: /reference/engine/classes/Annotation.yaml
         ignoreTranslation: true
       - title: ArcHandles
         path: /reference/engine/classes/ArcHandles
@@ -549,6 +544,11 @@ navigation:
         path: /reference/engine/classes/ColorCorrectionEffect
         type: engineapi
         source: /reference/engine/classes/ColorCorrectionEffect.yaml
+        ignoreTranslation: true
+      - title: ColorGradingEffect
+        path: /reference/engine/classes/ColorGradingEffect
+        type: engineapi
+        source: /reference/engine/classes/ColorGradingEffect.yaml
         ignoreTranslation: true
       - title: CommandService
         path: /reference/engine/classes/CommandService
@@ -1320,11 +1320,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/LineHandleAdornment.yaml
         ignoreTranslation: true
-      - title: LinkingService
-        path: /reference/engine/classes/LinkingService
-        type: engineapi
-        source: /reference/engine/classes/LinkingService.yaml
-        ignoreTranslation: true
       - title: LocalizationService
         path: /reference/engine/classes/LocalizationService
         type: engineapi
@@ -2015,11 +2010,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/RotationCurve.yaml
         ignoreTranslation: true
-      - title: RTAnimationTracker
-        path: /reference/engine/classes/RTAnimationTracker
-        type: engineapi
-        source: /reference/engine/classes/RTAnimationTracker.yaml
-        ignoreTranslation: true
       - title: RunningAverageItemDouble
         path: /reference/engine/classes/RunningAverageItemDouble
         type: engineapi
@@ -2685,11 +2675,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/UIDragDetector.yaml
         ignoreTranslation: true
-      - title: UIDragDetectorService
-        path: /reference/engine/classes/UIDragDetectorService
-        type: engineapi
-        source: /reference/engine/classes/UIDragDetectorService.yaml
-        ignoreTranslation: true
       - title: UIFlexItem
         path: /reference/engine/classes/UIFlexItem
         type: engineapi
@@ -2925,6 +2910,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Workspace.yaml
         ignoreTranslation: true
+      - title: WorkspaceAnnotation
+        path: /reference/engine/classes/WorkspaceAnnotation
+        type: engineapi
+        source: /reference/engine/classes/WorkspaceAnnotation.yaml
+        ignoreTranslation: true
       - title: WorldModel
         path: /reference/engine/classes/WorldModel
         type: engineapi
@@ -2934,6 +2924,11 @@ navigation:
         path: /reference/engine/classes/WorldRoot
         type: engineapi
         source: /reference/engine/classes/WorldRoot.yaml
+        ignoreTranslation: true
+      - title: WrapDeformer
+        path: /reference/engine/classes/WrapDeformer
+        type: engineapi
+        source: /reference/engine/classes/WrapDeformer.yaml
         ignoreTranslation: true
       - title: WrapLayer
         path: /reference/engine/classes/WrapLayer
@@ -4967,6 +4962,11 @@ navigation:
         path: /reference/engine/enums/TickCountSampleMethod
         type: engineapi
         source: /reference/engine/enums/TickCountSampleMethod.yaml
+        ignoreTranslation: true
+      - title: TonemapperPreset
+        path: /reference/engine/enums/TonemapperPreset
+        type: engineapi
+        source: /reference/engine/enums/TonemapperPreset.yaml
         ignoreTranslation: true
       - title: TopBottom
         path: /reference/engine/enums/TopBottom

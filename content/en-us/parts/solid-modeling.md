@@ -126,9 +126,7 @@ To separate a union or intersection back into individual parts:
 
 ## Render Fidelity
 
-By default, solid modeled parts will always be shown in **precise fidelity**, no matter how far they are from the camera. This improves their appearance when viewed from any distance, but if a place has a large number of detailed solid modeled parts, it may reduce overall performance.
-
-You can dynamically control a solid modeled part's level of detail through its `Class.PartOperation.RenderFidelity|RenderFidelity` property. When set to **Automatic**, the part will render at a different level of detail depending on its distance from the camera.
+By default, new solid modeled operations will always be shown in `Enum.RenderFidelity.Automatic|Automatic` render fidelity, meaning the part's detail is based on its distance from the camera as outlined in the following table.
 
 <table>
     <thead>

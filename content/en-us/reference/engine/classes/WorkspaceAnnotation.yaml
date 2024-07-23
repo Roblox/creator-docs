@@ -1,4 +1,4 @@
-name: UIDragDetectorService
+name: WorkspaceAnnotation
 type: class
 category:
 memory_category: Instances
@@ -6,11 +6,8 @@ summary: ''
 description: ''
 code_samples: []
 inherits:
-  - Instance
-tags:
-  - NotCreatable
-  - Service
-  - NotReplicated
+  - Annotation
+tags: []
 deprecation_message: ''
 properties: []
 methods: []

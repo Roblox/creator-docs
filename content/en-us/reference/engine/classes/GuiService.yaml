@@ -142,6 +142,23 @@ properties:
     serialization:
       can_load: false
       can_save: true
+  - name: GuiService.PreferredTextSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: PreferredTextSize
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
   - name: GuiService.PreferredTransparency
     summary: |
       Gets the user's preferred transparency as a number between 0 and 1, which

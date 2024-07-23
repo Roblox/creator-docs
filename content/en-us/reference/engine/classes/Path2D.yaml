@@ -10,6 +10,21 @@ inherits:
 tags: []
 deprecation_message: ''
 properties:
+  - name: Path2D.Closed
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
   - name: Path2D.Color3
     summary: ''
     description: ''
@@ -164,6 +179,30 @@ methods:
       - type: Array
         summary: |
           Table of all the `Datatype.Path2DControlPoint|Path2DControlPoints`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Path2D:GetLength
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: Path2D:GetMaxControlPoints
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
@@ -356,5 +395,14 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events: []
+events:
+  - name: Path2D.ControlPointChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
 callbacks: []

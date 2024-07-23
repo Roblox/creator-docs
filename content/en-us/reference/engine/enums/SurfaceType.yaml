@@ -1,11 +1,11 @@
 name: SurfaceType
 type: enum
 summary: |
-  Used to determine how a surface should be displayed on a part and how automatic
-  surface joints should behave.
+  Used to determine how a surface should be displayed on a part and how
+  automatic surface joints should behave.
 description: |
-  Used to determine how a surface should be displayed on a part and how automatic
-  surface joints should behave.
+  Used to determine how a surface should be displayed on a part and how
+  automatic surface joints should behave.
 code_samples:
 tags: []
 deprecation_message: |
@@ -50,9 +50,9 @@ items:
     deprecation_message: ''
   - name: Hinge
     summary: |
-      Adds a yellow hinge to the surface. Parts touching it stick to the surface,
-      allowing for rotations using physics. This should not be used for future
-      work and existing instances should be replaced with a
+      Adds a yellow hinge to the surface. Parts touching it stick to the
+      surface, allowing for rotations using physics. This should not be used for
+      future work and existing instances should be replaced with a
       `Class.HingeConstraint`.
     value: 6
     tags: []
@@ -72,7 +72,7 @@ items:
     deprecation_message: ''
   - name: SmoothNoOutlines
     summary: |
-      Previously similar to **Smooth** with outlines but no longer relevant 
+      Previously similar to **Smooth** with outlines but no longer relevant
       since outlines have been removed.
     value: 10
     tags: []
