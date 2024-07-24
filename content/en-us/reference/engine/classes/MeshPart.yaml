@@ -88,17 +88,16 @@ properties:
       can_save: true
   - name: MeshPart.MeshId
     summary: |
-      The **MeshId** is the content ID of the mesh that is to be displayed on
-      the `Class.MeshPart`.
+      Content ID of the mesh that is displayed on the `Class.MeshPart`.
     description: |
-      The **MeshId** is the content ID of the mesh that is to be displayed on
-      the `Class.MeshPart`.
+      Content ID of the mesh that is displayed on the `Class.MeshPart`.
 
       Note that this property currently cannot be changed by scripts as the
-      collision model of the mesh cannot be recomputed during runtime.
-      Developers should not rely on this behavior as it may change in the
-      future. Those looking for a custom mesh object that can be updated during
-      runtime should use `Class.SpecialMesh`.
+      collision model of the mesh cannot be recomputed during runtime. See
+      `Class.InsertService:CreateMeshPartAsync()` as a method to create a
+      new `Class.MeshPart` from a given `Class.MeshPart.MeshId|MeshId` and
+      with a specified `Class.MeshPart.CollisionFidelity|CollisionFidelity`
+      and `Class.MeshPart.RenderFidelity|RenderFidelity`.
     code_samples:
     type: Content
     tags: []
