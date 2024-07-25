@@ -105,7 +105,7 @@ properties:
       this property must be changed from a server `Class.Script` (not from a
       `Class.LocalScript` or a `Class.Script` with `Class.BaseScript.RunContext|RunContext`
       set to `Enum.RunContext.Client`). If the part is owned by a client through
-      **automatic** ownership, this property can be changed from a either a client
+      **automatic** ownership, this property can be changed from either a client
       script **or** a server script; changing it from a client script for a
       server-owned part will have no effect.
     code_samples:
@@ -169,7 +169,7 @@ properties:
       this property must be changed from a server `Class.Script` (not from a
       `Class.LocalScript` or a `Class.Script` with `Class.BaseScript.RunContext|RunContext`
       set to `Enum.RunContext.Client`). If the part is owned by a client through
-      **automatic** ownership, this property can be changed from a either a client
+      **automatic** ownership, this property can be changed from either a client
       script **or** a server script; changing it from a client script for a
       server-owned part will have no effect.
     code_samples:
@@ -2179,7 +2179,7 @@ methods:
       this function must be called from a server `Class.Script` (not from a
       `Class.LocalScript` or a `Class.Script` with `Class.BaseScript.RunContext|RunContext`
       set to `Enum.RunContext.Client`). If the part is owned by a client through
-      **automatic** ownership, this function can be called from a either a client
+      **automatic** ownership, this function can be called from either a client
       script **or** a server script; calling it from a client script for a
       server-owned part will have no effect.
     code_samples:
@@ -2216,7 +2216,7 @@ methods:
       this function must be called from a server `Class.Script` (not from a
       `Class.LocalScript` or a `Class.Script` with `Class.BaseScript.RunContext|RunContext`
       set to `Enum.RunContext.Client`). If the part is owned by a client through
-      **automatic** ownership, this function can be called from a either a client
+      **automatic** ownership, this function can be called from either a client
       script **or** a server script; calling it from a client script for a
       server-owned part will have no effect.
     code_samples:
@@ -2254,7 +2254,7 @@ methods:
       this function must be called from a server `Class.Script` (not from a
       `Class.LocalScript` or a `Class.Script` with `Class.BaseScript.RunContext|RunContext`
       set to `Enum.RunContext.Client`). If the part is owned by a client through
-      **automatic** ownership, this function can be called from a either a client
+      **automatic** ownership, this function can be called from either a client
       script **or** a server script; calling it from a client script for a
       server-owned part will have no effect.
     code_samples:
