@@ -67,36 +67,16 @@ knowledge. Give them a try and add on to them when you're ready!
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-    <img src="/assets/landing/get-started/racing-template.png" />
+    <img src="/assets/landing/get-started/Platformer-Template.png" />
     </div>
-    <Typography variant='h4'>Racing</Typography>
-    <Typography variant='body1' >Play this high-octane racing experience with realistic
-    driving mechanics with your friends!</Typography>
+    <Typography variant='h4'>Platformer</Typography>
+    <Typography variant='body1' >Build your own **3D platformer** with customizable platforms, coin pickups, and double-jump, dashing, rolling, and long jump character mechanics!</Typography>
     <div style={{marginTop:16}}>
-      <a underline="none" href="roblox://placeId=16078915506">
+      <a underline="none" href="roblox://placeId=18636963376">
       <Button variant="contained" color="secondary" size='large'
       style={{marginRight:16, alignSelf: 'flex-start'}}>Play</Button>
       </a>
-      <UseStudioButton variant="link" buttonTextTranslationKey="Action.EditInStudio" placeId="16078915506" universeId="5557500170" />
-    </div>
-  </Grid>
-  </Grid>
-
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
-  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
-    <div class="container"
-    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-    <img src="/assets/landing/get-started/modern-city-template.png" />
-    </div>
-    <Typography variant='h4'>Modern City</Typography>
-    <Typography variant='body1' >An immersive city that you can explore and add on
-    to. Check out the links to documentation inside the experience for more information.</Typography>
-    <div style={{marginTop:16}}>
-      <a underline="none" href="roblox://placeId=13165709401">
-      <Button variant="contained" color="secondary" size='large'
-      style={{marginRight:16, alignSelf: 'flex-start'}}>Play</Button>
-      </a>
-      <UseStudioButton variant="link" buttonTextTranslationKey="Action.EditInStudio" placeId="13165709401" universeId="4594822820" />
+      <UseStudioButton variant="link" buttonTextTranslationKey="Action.EditInStudio" placeId="18636963376" universeId="6314775459" />
     </div>
   </Grid>
   </Grid>
@@ -105,12 +85,34 @@ knowledge. Give them a try and add on to them when you're ready!
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-  <img src="/assets/landing/get-started/baseplate-template.png" />
+  <img src="/assets/landing/get-started/Laser-Tag-Template.png" />
   </div>
-    <Typography variant='h4'>Baseplate</Typography>
-    <Typography variant='body1' >An empty canvas to start with. You'll likely use this template the most after you get acclimated with Roblox.</Typography>
+    <Typography variant='h4'>Laser Tag</Typography>
+    <Typography variant='body1' >Build your own **first-person shooter** with customizable blasters, round systems, and modular building assets to reconfigure a high-quality arena!</Typography>
     <div style={{marginTop:16}}>
-      <UseStudioButton variant="link" buttonTextTranslationKey="Action.EditInStudio" placeId="95206881" universeId="28220420" />
+      <a underline="none" href="roblox://placeId=17823019220">
+      <Button variant="contained" color="secondary" size='large'
+      style={{marginRight:16, alignSelf: 'flex-start'}}>Play</Button>
+      </a>
+      <UseStudioButton variant="link" buttonTextTranslationKey="Action.EditInStudio" placeId="17823019220" universeId="6106389365" />
+    </div>
+  </Grid>
+  </Grid>
+
+  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
+    <div class="container"
+    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+    <img src="/assets/landing/get-started/racing-template.png" />
+    </div>
+    <Typography variant='h4'>Racing</Typography>
+    <Typography variant='body1' >Build your own **kart racer** with a customizable driving mechanics, checkpoints, and modular winding track pieces that you can restructure for countless courses!</Typography>
+    <div style={{marginTop:16}}>
+      <a underline="none" href="roblox://placeId=16078915506">
+      <Button variant="contained" color="secondary" size='large'
+      style={{marginRight:16, alignSelf: 'flex-start'}}>Play</Button>
+      </a>
+      <UseStudioButton variant="link" buttonTextTranslationKey="Action.EditInStudio" placeId="16078915506" universeId="5557500170" />
     </div>
   </Grid>
   </Grid>
@@ -129,7 +131,7 @@ that teaches you the skills you need to create and monetize your experiences.
   <iframe src="https://www.youtube-nocookie.com/embed/zi0hIuPDyWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
   </div>
     <Typography variant='h4'>Core</Typography>
-    <Typography variant='body1' >The Core Curriculum walks you through building a simple 3D platformer where players collect coins to trade for jump power.</Typography>
+    <Typography variant='body1' >Core teaches you how to build a simple 3D platformer where players collect coins to trade for jump power.</Typography>
       <div style={{marginTop:16}}>
         <a underline="none" href="./tutorials/core/">
         <Button variant="contained" color="secondary" size='large'
@@ -147,7 +149,7 @@ that teaches you the skills you need to create and monetize your experiences.
   <iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
   </div>
     <Typography variant='h4'>Environmental Art</Typography>
-    <Typography variant='body1' >Environmental Art teaches you how to recreate a high-quality environment for a first-person laser tag experience.</Typography>
+    <Typography variant='body1' >Environmental Art teaches you how to create a high-quality environment for a laser tag experience.</Typography>
       <div style={{marginTop:16}}>
         <a underline="none" href="./tutorials/environmental-art">
         <Button variant="contained" color="secondary" size='large'
@@ -165,12 +167,13 @@ that teaches you the skills you need to create and monetize your experiences.
   <iframe src="https://www.youtube-nocookie.com/embed/eqQyFL7KnmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
   </div>
     <Typography variant='h4'>Gameplay Scripting</Typography>
-    <Typography variant='body1' >Gameplay Scripting teaches you how to build logic for a first-person laser tag experience.</Typography>
+    <Typography variant='body1' >Gameplay Scripting teaches you how to organize and implement the scripting logic for large, complex project.</Typography>
       <div style={{marginTop:16}}>
         <a underline="none" href="./tutorials/gameplay-scripting/">
         <Button variant="contained" color="secondary" size='large'
         style={{marginRight:8, alignSelf: 'flex-start'}}>Create</Button>
         </a>
+        <UseStudioButton variant="link" buttonTextTranslationKey="Action.EditInStudio" placeId="14817965191" universeId="5106332772" />
       </div>
   </Grid>
   </Grid>

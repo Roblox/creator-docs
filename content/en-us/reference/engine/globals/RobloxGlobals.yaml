@@ -425,10 +425,12 @@ functions:
     code_samples:
   - name: ypcall
     summary: |
-      Legacy function to work around an old task scheduling limitation of `Global.LuaGlobals.pcall()`.
+      Legacy function to work around an old task scheduling limitation of
+      `Global.LuaGlobals.pcall()`.
     description: |
-     Legacy function to work around an old task scheduling limitation of `Global.LuaGlobals.pcall()`;
-     should not be used for new work (use `Global.LuaGlobals.pcall()` instead).
+      Legacy function to work around an old task scheduling limitation of
+      `Global.LuaGlobals.pcall()`; should not be used for new work (use
+      `Global.LuaGlobals.pcall()` instead).
     parameters:
       - name: f
         type: function

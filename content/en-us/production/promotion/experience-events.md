@@ -1,11 +1,11 @@
 ---
-title: Events Platform
-description: Events Platform lets you create time-based events for your experience.
+title: Experience Events
+description: Explore how to create and promote time-based events for your experience.
 ---
 
-As part of your [promotion](../../production/promotion/index.md) initiatives, the integrated **Events&nbsp;Platform** lets you create time-based events for your experience. Users can discover your events on the experience's detail page and through an [event details page](#event-details-page). Users can also opt into [notifications](#streampush-notifications) that they'll receive when your event begins.
+As part of your [promotional](../../production/promotion/index.md) initiatives, the integrated **Events** system lets you create time-based events for your experience. Users can discover your events on the experience's detail page and through an [event details page](#event-details-page). Users can also opt into [notifications](#streampush-notifications) that they'll receive when your event begins.
 
-<img src="../../assets/promotion/events-platform/Dedicated-Event-Page-Live.jpg" alt="Example event page on the Roblox website" />
+<img src="../../assets/promotion/experience-events/Dedicated-Event-Page-Live.jpg" alt="Example event page on the Roblox website" />
 
 ## Managing Events
 
@@ -15,7 +15,7 @@ You can manage events through the [Creator Dashboard][creatordashboard], under t
 
 ### Creating Events
 
-To create an event, you must be the **group owner** of any [group-owned](../../projects/groups.md) experience, or be the sole owner of a user-owned experience. Currently, you can publish a maximum of 10 ongoing or upcoming events.
+To create an event, you must have the [Edit all group experiences](../../projects/groups.md#roles-and-permissions) permission in a [group‑owned](../../projects/groups.md) experience, or be the sole owner of a user‑owned experience. Currently, you can publish a maximum of 10 ongoing or upcoming events.
 
 1. Navigate to the [Creator Dashboard][creatordashboard].
 2. With the [Events][eventsupcoming] tab selected, click the **Create Event** button.
@@ -89,7 +89,7 @@ All published events feature an event details page which you can share with play
 <Tabs>
 <TabItem label="Event Details Page">
 From the event details page, click/tap the **share** button below the event title to open your device's native sharing UI, or to copy the link to your clipboard.
-<img src="../../assets/promotion/events-platform/Dedicated-Event-Page-Copy-URL.png" width="800" height="320" alt="Share button indicated on event details page" />
+<img src="../../assets/promotion/experience-events/Dedicated-Event-Page-Copy-URL.png" width="800" height="320" alt="Share button indicated on event details page" />
 </TabItem>
 <TabItem label="Upcoming Events">
 From the [Upcoming][eventsupcoming] events page, hover over the event thumbnail, click the **&ctdot;** button, and select **Copy&nbsp;Event&nbsp;Details&nbsp;URL**.
@@ -105,7 +105,7 @@ Event pages persist even after an event ends, but players will no longer be able
 
 All published events also appear in a dedicated **Events** section on the experience's detail page. Players can join active events directly through the **Join Now** button, or click **Notify Me** for upcoming events to receive stream notifications in their Roblox inbox and the ability to opt into [push notifications](#streampush-notifications).
 
-<img src="../../assets/promotion/events-platform/Experience-Page-Promotion.png" width="850" alt="Event promoted on experience's detail page" />
+<img src="../../assets/promotion/experience-events/Experience-Page-Promotion.png" width="850" alt="Event promoted on experience's detail page" />
 
 ### Stream/Push Notifications
 
@@ -113,11 +113,11 @@ Users who click **Notify Me** for an upcoming event will receive stream notifica
 
 <GridContainer numColumns="2">
 	<figure>
-		<img src="../../assets/promotion/events-platform/Notification-Lock-Screen.jpg" width="375" alt="Event notification on phone lock screen" />
+		<img src="../../assets/promotion/experience-events/Notification-Lock-Screen.jpg" width="375" alt="Event notification on phone lock screen" />
 		<figcaption>Notification on phone lock screen</figcaption>
 	</figure>
 	<figure>
-		<img src="../../assets/promotion/events-platform/Notification-Roblox-App.png" width="375" alt="Event notification in Roblox app" />
+		<img src="../../assets/promotion/experience-eventsNotification-Roblox-App.png" width="375" alt="Event notification in Roblox app" />
 		<figcaption>Notification in Roblox app</figcaption>
 	</figure>
 </GridContainer>

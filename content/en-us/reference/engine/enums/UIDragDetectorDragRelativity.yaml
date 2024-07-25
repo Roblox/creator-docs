@@ -1,18 +1,30 @@
 name: UIDragDetectorDragRelativity
 type: enum
-summary: ''
-description: ''
+summary: |
+  Used with `Class.DragDetector` to set the paradigm which defines the
+  relativity of inputs/outputs from a custom drag function.
+description: |
+  Used with `Class.DragDetector` to set the paradigm which defines the
+  relativity of inputs/outputs from a custom drag function registered through
+  `Class.UIDragDetector:SetDragStyleFunction()|SetDragStyleFunction()` or
+  `Class.UIDragDetector:AddConstraintFunction()|AddConstraintFunction()`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Absolute
-    summary: ''
+    summary: |
+      Designates the input and return values as the absolute target
+      position/rotation in the space defined by
+      `Class.UIDragDetector.DragSpace|DragSpace`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Relative
-    summary: ''
+    summary: |
+      Designates the input and return values as the change from the current
+      position/rotation in the space defined by
+      `Class.UIDragDetector.DragSpace|DragSpace`.
     value: 1
     tags: []
     deprecation_message: ''

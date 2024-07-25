@@ -33,6 +33,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: AudioEqualizer.Editor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: State Editing
+    serialization:
+      can_load: true
+      can_save: false
   - name: AudioEqualizer.HighGain
     summary: |
       Gain value to be applied to the frequency content of the highest band in

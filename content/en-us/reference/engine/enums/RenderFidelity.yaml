@@ -5,10 +5,10 @@ summary: |
   in.
 description: |
   This enum determines the level of detail that
-  [meshes](../../../parts/meshes.md) and [solid
-  modeled](../../../parts/solid-modeling.md) parts will be shown in. The default
-  is **Automatic**, meaning the object's detail is based on its distance from
-  the camera as outlined in the following table.
+  [meshes](../../../parts/meshes.md) and
+  [solid modeled](../../../parts/solid-modeling.md) parts will be shown in. The
+  default is **Automatic**, meaning the object's detail is based on its distance
+  from the camera as outlined in the following table.
 
   <table>
       <thead>
@@ -45,8 +45,8 @@ items:
     deprecation_message: ''
   - name: Precise
     summary: |
-      Object is rendered in the highest fidelity regardless of its distance
-      from the camera.
+      Object is rendered in the highest fidelity regardless of its distance from
+      the camera.
     value: 1
     tags: []
     deprecation_message: ''

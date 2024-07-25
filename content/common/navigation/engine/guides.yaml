@@ -26,8 +26,6 @@ navigation:
             path: /projects/client-server
           - title: Instance Streaming
             path: /workspace/streaming
-      - title: Managing
-        path: /projects/managing
       - title: Working in Teams
         section:
           - title: Setting Up a Team
@@ -88,7 +86,6 @@ navigation:
             path: /physics/assemblies
           - title: Network Ownership
             path: /physics/network-ownership
-          
           #- title: Joints
           #  path: /physics/joints
           - title: Mechanical Constraints
@@ -382,8 +379,10 @@ navigation:
         path: /ui/rich-text
       - title: Proximity Prompts
         path: /ui/proximity-prompts
+      - title: UI Drag Detectors
+        path: /ui/ui-drag-detectors
       - title: 3D Drag Detectors
-        path: /ui/drag-detectors
+        path: /ui/3D-drag-detectors
       - title: Text Filtering
         path: /ui/text-filtering
   - title: Animation
@@ -538,8 +537,8 @@ navigation:
             path: /production/promotion/complying-with-advertising-standards
       - title: Audience Engagement
         path: /production/promotion/audience-engagement
-      - title: Events Platform
-        path: /production/promotion/events-platform
+      - title: Experience Events
+        path: /production/promotion/experience-events
       - title: Player Invite Prompts
         path: /production/promotion/invite-prompts
       - title: Experience Notifications

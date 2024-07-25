@@ -34,6 +34,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: AudioFilter.Editor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: State Editing
+    serialization:
+      can_load: true
+      can_save: false
   - name: AudioFilter.FilterType
     summary: |
       The curve type of the band represented by the filter.

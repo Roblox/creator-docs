@@ -38,7 +38,7 @@ You can use the following chart to track your conversion rates from Roblox **Hom
     <figcaption>Comparing conversion rates.</figcaption>
   </figure>
 
-Roblox experiences are inherently social, and users love trying them out with their friends. Consider using features like [events](../../production/promotion/events-platform.md) and [player invite prompts](../../production/promotion/invite-prompts.md) to invite users to bring their friends to your experience.
+Roblox experiences are inherently social, and users love trying them out with their friends. Consider using features like [experience events](../../production/promotion/experience-events.md) and [player invite prompts](../../production/promotion/invite-prompts.md) to invite users to bring their friends to your experience.
 
 <h4>Step 3: Monitor metrics after each experience update</h4>
 

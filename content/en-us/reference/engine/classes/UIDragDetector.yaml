@@ -2,8 +2,23 @@ name: UIDragDetector
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Instance which facilitates and encourages interaction with UI elements in an
+  experience.
+description: |
+  The `Class.UIDragDetector` instance facilitates and encourages interaction
+  with 2D user interface elements in an experience, such as sliders and
+  spinners. Key features include:
+
+  - Place a `Class.UIDragDetector` under any `Class.GuiObject` instance to make it draggable via all inputs without a single line of code.
+
+  - Choose from several `Class.UIDragDetector.DragStyle|DragStyle` options, define how the object responds to motion via `Class.UIDragDetector.ResponseStyle|ResponseStyle`, and optionally apply axis, movement limits, or drag boundaries.
+
+  - Scripts can respond to manipulation of dragged objects to drive logic responses, such as adjusting settings.
+
+  - `Class.UIDragDetector|UIDragDetectors` work in Studio as long as you're **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, nor certain plugins or Studio's **UI** editor tools.
+
+  See the [UI Drag Detectors](../../../ui/ui-drag-detectors.md) guide for details and usage examples.
 code_samples: []
 inherits:
   - UIComponent
@@ -12,8 +27,16 @@ tags:
 deprecation_message: ''
 properties:
   - name: UIDragDetector.ActivatedCursorIcon
-    summary: ''
-    description: ''
+    summary: |
+      Sets the cursor icon to display when the mouse is activated over the
+      parent of this `Class.UIDragDetector`.
+    description: |
+      Sets the cursor icon to display when the mouse is activated over the
+      parent of this `Class.UIDragDetector`. If this property is left blank, the
+      detector will use the default icon.
+
+      To change the activated cursor icon, set this property to the asset ID of
+      the image you'd like to use.
     code_samples: []
     type: Content
     tags: []
@@ -26,9 +49,41 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: UIDragDetector.BoundingBehavior
+    summary: |
+      Determines bounding behavior of the dragged UI object when the detector's
+      `Class.UIDragDetector.BoundingUI|BoundingUI` is set.
+    description: |
+      Determines bounding behavior of the dragged UI object when the detector's
+      `Class.UIDragDetector.BoundingUI|BoundingUI` is set. See
+      `Enum.UIDragDetectorBoundingBehavior` for details on each setting's
+      behavior.
+    code_samples: []
+    type: UIDragDetectorBoundingBehavior
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
   - name: UIDragDetector.BoundingUI
-    summary: ''
-    description: ''
+    summary: |
+      Instance whose bounding area defines the drag boundaries for the parent
+      `Class.GuiObject`.
+    description: |
+      When set, the `Class.UIDragDetector` instance will not allow the bounds of
+      the parent `Class.GuiObject` to be dragged outside the bounds of the
+      **BoundingUI** instance.
+
+      Note that if a portion of the parent `Class.GuiObject` is outside the
+      **BoundingUI** bounds, the initial input position at drag start and its
+      relative position during drag will be used for bounding detection until
+      the entirety of the dragged object is within the bounds, after which the
+      object will be constrained inside the bounds.
     code_samples: []
     type: GuiBase2d
     tags: []
@@ -42,8 +97,16 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.CursorIcon
-    summary: ''
-    description: ''
+    summary: |
+      Sets the cursor icon to display when the mouse is hovered over the parent
+      of this `Class.UIDragDetector`.
+    description: |
+      Sets the cursor icon to display when the mouse is hovered over the parent
+      of this `Class.UIDragDetector`. If this property is left blank, the
+      detector will use the default icon.
+
+      To change the cursor icon, set this property to the asset ID of the image
+      you'd like to use.
     code_samples: []
     type: Content
     tags: []
@@ -57,8 +120,17 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.DragAxis
-    summary: ''
-    description: ''
+    summary: |
+      The drag axis for the `Class.UIDragDetector` instance when
+      `Class.UIDragDetector.DragStyle|DragStyle` is set to
+      `Enum.UIDragDetectorDragStyle.TranslateLine`.
+    description: |
+      `Datatype.Vector2` value that defines the axis of movement for the dragged
+      object when `Class.UIDragDetector.DragStyle|DragStyle` is set to
+      `Enum.UIDragDetectorDragStyle.TranslateLine`. The axis is defined in the
+      local space of the `Class.UIDragDetector` unless
+      `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is defined,
+      in which case the axis is defined in that instance's local space.
     code_samples: []
     type: Vector2
     tags: []
@@ -72,8 +144,25 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.DragRelativity
-    summary: ''
-    description: ''
+    summary: |
+      Sets the paradigm which defines the relativity of inputs/outputs from a
+      custom drag function.
+    description: |
+      Only applies if a custom drag function is registered through
+      `Class.UIDragDetector:SetDragStyleFunction()|SetDragStyleFunction()` or
+      `Class.UIDragDetector:AddConstraintFunction()|AddConstraintFunction()`.
+      Sets the paradigm which defines the relativity of the registered
+      function's inputs/outputs.
+
+      For example, returning a `Datatype.UDim2.fromOffset(1, 0)` from a
+      registered function with this property set to
+      `Enum.UIDragDetectorDragRelativity.Absolute` will move the detector's
+      parent **to** `(1, 0)` in the designated
+      `Class.UIDragDetector.DragSpace|DragSpace`, while returning the same
+      `Datatype.UDim2` with this property set to
+      `Enum.UIDragDetectorDragRelativity.Relative` will move the detector's
+      parent **by** `(1, 0)` in the designated
+      `Class.UIDragDetector.DragSpace|DragSpace`.
     code_samples: []
     type: UIDragDetectorDragRelativity
     tags: []
@@ -87,8 +176,17 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.DragRotation
-    summary: ''
-    description: ''
+    summary: |
+      The rotation performed by the current drag.
+    description: |
+      The rotation performed by the current drag. This value is defined in
+      degrees relative to the local space of the `Class.UIDragDetector` unless
+      `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is defined,
+      in which case the rotation is defined in the local space of that instance
+      and from its positive **X** axis.
+
+      This property can be changed while there is no active drag to rotate the
+      dragged object.
     code_samples: []
     type: float
     tags: []
@@ -102,8 +200,28 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.DragSpace
-    summary: ''
-    description: ''
+    summary: |
+      Sets the paradigm which defines the space of inputs/outputs from a custom
+      drag function.
+    description: |
+      Only applies if a custom drag function is registered through
+      `Class.UIDragDetector:SetDragStyleFunction()|SetDragStyleFunction()` or
+      `Class.UIDragDetector:AddConstraintFunction()|AddConstraintFunction()`.
+      Sets the paradigm which defines the space of the registered function's
+      inputs/outputs.
+
+      For example, if the detector's parent `Class.GuiObject` is a child of a
+      parent `Class.GuiObject` that's rotated:
+      
+      - Returning a `Datatype.UDim2.fromOffset(1, 0)` from a registered function
+      with this property set to `Enum.UIDragDetectorDragSpace.Parent` will move
+      the detector's parent `Class.GuiObject` to the right by 1 pixel in the
+      local space affected by its parent's rotation.
+
+      - Returning a `Datatype.UDim2.fromOffset(1, 0)` from a registered function
+      with this property set to `Enum.UIDragDetectorDragSpace.LayerCollector`
+      will move the detector's parent `Class.GuiObject` to the right by 1 pixel
+      in the space of the `Class.LayerCollector`.
     code_samples: []
     type: UIDragDetectorDragSpace
     tags: []
@@ -117,8 +235,11 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.DragStyle
-    summary: ''
-    description: ''
+    summary: |
+      The paradigm used to generate proposed motion.
+    description: |
+      The paradigm used to generate proposed motion, given a stream of input
+      position vectors. See `Enum.UIDragDetectorDragStyle` for options.
     code_samples: []
     type: UIDragDetectorDragStyle
     tags: []
@@ -132,8 +253,18 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.DragUDim2
-    summary: ''
-    description: ''
+    summary: |
+      The translation performed by the current drag expressed in a `Datatype.UDim2` value.
+    description: |
+      The translation performed by the current drag expressed in a
+      `Datatype.UDim2` value. Translation is done through
+      `Datatype.UDim.Offset|Offset` or `Datatype.UDim.Scale|Scale` value changes
+      depending on the `Class.UIDragDetector.DragRelativity|DragRelativity`
+      value, and it is relative to the detector's local space unless a
+      `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is defined.
+
+      This property can be changed while there is no active drag to move the
+      dragged object.
     code_samples: []
     type: UDim2
     tags: []
@@ -147,8 +278,11 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.Enabled
-    summary: ''
-    description: ''
+    summary: |
+      Whether the `Class.UIDragDetector` responds to user input.
+    description: |
+      If `true`, the `Class.UIDragDetector` responds to user input; if `false`,
+      it does not.
     code_samples: []
     type: bool
     tags: []
@@ -162,8 +296,23 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.MaxDragAngle
-    summary: ''
-    description: ''
+    summary: |
+      Along with `Class.UIDragDetector.MinDragAngle|MinDragAngle`, impedes the
+      detector's attempts to generate rotational motion.
+    description: |
+      If this property is greater than
+      `Class.UIDragDetector.MinDragAngle|MinDragAngle`, rotation will be clamped
+      within the range of `Class.UIDragDetector.MinDragAngle|MinDragAngle` and
+      `Class.UIDragDetector.MaxDragAngle|MaxDragAngle`. Positive values impede
+      clockwise rotation while negative values impede counterclockwise rotation.
+      
+      This is not a constraint; it merely impedes the detector's attempts to
+      generate motion in order to remain within limits. See
+      `Class.UIDragDetector:AddConstraintFunction()|AddConstraintFunction()` to
+      add custom constraint to a drag.
+
+      Only relevant if `Class.UIDragDetector.DragStyle|DragStyle` is
+      `Enum.UIDragDetectorDragStyle.Rotate`.
     code_samples: []
     type: float
     tags: []
@@ -177,8 +326,25 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.MaxDragTranslation
-    summary: ''
-    description: ''
+    summary: |
+      Along with `Class.UIDragDetector.MinDragTranslation|MinDragTranslation`,
+      impedes the detector's attempts to generate linear/planar motion.
+    description: |
+      If the corresponding `Datatype.UDim.Offset|Offset` and/or
+      `Datatype.UDim.Scale|Scale` values are greater than those of
+      `Class.UIDragDetector.MinDragTranslation|MinDragTranslation` in all
+      dimensions, linear/planar translation will be clamped within the range of
+      `Class.UIDragDetector.MinDragTranslation|MinDragTranslation` and
+      `Class.UIDragDetector.MaxDragTranslation|MaxDragTranslation`.
+
+      This is not a constraint; it merely impedes the detector's attempts to
+      generate motion in order to remain within limits. See
+      `Class.UIDragDetector:AddConstraintFunction()|AddConstraintFunction()` to
+      add custom constraint to a drag.
+      
+      Only relevant if `Class.UIDragDetector.DragStyle|DragStyle` is
+      `Enum.UIDragDetectorDragStyle.TranslateLine` or
+      `Enum.UIDragDetectorDragStyle.TranslatePlane`.
     code_samples: []
     type: UDim2
     tags: []
@@ -192,8 +358,23 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.MinDragAngle
-    summary: ''
-    description: ''
+    summary: |
+      Along with `Class.UIDragDetector.MaxDragAngle|MaxDragAngle`, impedes the
+      detector's attempts to generate rotational motion.
+    description: |
+      If this property is less than
+      `Class.UIDragDetector.MaxDragAngle|MaxDragAngle`, rotation will be clamped
+      within the range of `Class.UIDragDetector.MinDragAngle|MinDragAngle` and
+      `Class.UIDragDetector.MaxDragAngle|MaxDragAngle`. Positive values impede
+      clockwise rotation while negative values impede counterclockwise rotation.
+      
+      This is not a constraint; it merely impedes the detector's attempts to
+      generate motion in order to remain within limits. See
+      `Class.UIDragDetector:AddConstraintFunction()|AddConstraintFunction()` to
+      add custom constraint to a drag.
+      
+      Only relevant if `Class.UIDragDetector.DragStyle|DragStyle` is
+      `Enum.UIDragDetectorDragStyle.Rotate`.
     code_samples: []
     type: float
     tags: []
@@ -207,8 +388,25 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.MinDragTranslation
-    summary: ''
-    description: ''
+    summary: |
+      Along with `Class.UIDragDetector.MaxDragTranslation|MaxDragTranslation`,
+      impedes the detector's attempts to generate linear/planar motion.
+    description: |
+      If the corresponding `Datatype.UDim.Offset|Offset` and/or
+      `Datatype.UDim.Scale|Scale` values are less than those of
+      `Class.UIDragDetector.MaxDragTranslation|MaxDragTranslation` in all
+      dimensions, linear/planar translation will be clamped within the range of
+      `Class.UIDragDetector.MinDragTranslation|MinDragTranslation` and
+      `Class.UIDragDetector.MaxDragTranslation|MaxDragTranslation`.
+
+      This is not a constraint; it merely impedes the detector's attempts to
+      generate motion in order to remain within limits. See
+      `Class.UIDragDetector:AddConstraintFunction()|AddConstraintFunction()` to
+      add custom constraint to a drag.
+      
+      Only relevant if `Class.UIDragDetector.DragStyle|DragStyle` is
+      `Enum.UIDragDetectorDragStyle.TranslateLine` or
+      `Enum.UIDragDetectorDragStyle.TranslatePlane`.
     code_samples: []
     type: UDim2
     tags: []
@@ -222,8 +420,15 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.ReferenceUIInstance
-    summary: ''
-    description: ''
+    summary: |
+      A `Class.GuiObject` instance whose local space and absolute center position is the reference space and origin for the detector.
+    description: |
+      A `Class.GuiObject` instance whose local space and absolute center
+      position is the reference space and origin for the detector. Setting this
+      reference affects properties such as
+      `Class.UIDragDetector.DragUDim2|DragUDim2`,
+      `Class.UIDragDetector.DragRotation|DragRotation`, and the behavior of
+      `Class.UIDragDetector.DragAxis|DragAxis`.
     code_samples: []
     type: GuiObject
     tags: []
@@ -237,8 +442,13 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.ResponseStyle
-    summary: ''
-    description: ''
+    summary: |
+      The paradigm used to define the response to proposed motion.
+    description: |
+      Once the proposed motion has been computed and potentially constrained,
+      this paradigm is used to deterimine how to move (or not move) the
+      `Class.GuiObject` affected by the `Class.UIDragDetector`. See
+      `Enum.UIDragDetectorResponseStyle` for options.
     code_samples: []
     type: UIDragDetectorResponseStyle
     tags: []
@@ -253,58 +463,125 @@ properties:
       can_save: true
 methods:
   - name: UIDragDetector:AddConstraintFunction
-    summary: ''
-    description: ''
+    summary: |
+      Adds a function to modify or constrain proposed motion.
+    description: |
+      Adds a function to modify or constrain proposed motion. The function takes
+      an input `Datatype.UDim2` (position) and float (rotation) of **proposed**
+      motion and returns a `Datatype.UDim2` and float of **modified** or
+      unmodified motion. You can add multiple functions which will be called in
+      order by `priority`, passing the results along in a chain.
+
+      The input is expressed in the space defined by the
+      `Class.UIDragDetector.DragSpace|DragSpace` property, either as a delta or
+      the final desired position/rotation based on the
+      `Class.UIDragDetector.DragRelativity|DragRelativity` property. The output
+      should be expressed in the same space and relativity, unless overridden by
+      returning a specified `Enum.UIDragDetectorDragRelativity` and
+      `Enum.UIDragDetectorDragSpace` as the third and fourth return values.
+
+      To remove an added constraint function, call
+      `Datatype.RBXScriptConnection:Disconnect()|Disconnect()` on the returned
+      connection object.
     code_samples: []
     parameters:
       - name: priority
         type: int
         default:
-        summary: ''
+        summary: |
+          The order of priority for functions added via this method. Higher
+          values take precedence over lower values.
       - name: function
         type: Function
         default:
-        summary: ''
+        summary: |
+          Function for modifying or constraining proposed motion. This function
+          takes in input `Datatype.UDim2` and float of **proposed** motion and
+          returns a `Datatype.UDim2` and float of **modified** or unmodified
+          motion. It can optionally return an
+          `Enum.UIDragDetectorDragRelativity` and `Enum.UIDragDetectorDragSpace`
+          as the third and fourth return values as output overrides.
     returns:
       - type: RBXScriptConnection
-        summary: ''
+        summary: |
+          Use this connection object to remove the constraint function.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: UIDragDetector:GetReferencePosition
-    summary: ''
-    description: ''
+    summary: |
+      Returns the reference `Datatype.UDim2` position of the current drag's
+      reference origin.
+    description: |
+      When no `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is
+      set, this function returns the `Datatype.UDim2` position of the dragged
+      object's immediate parent `Class.GuiObject` (if one exists), or else the
+      `Datatype.UDim2` position of the dragged object.
+
+      When a `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is
+      set, this function returns the `Datatype.UDim2` position of that reference
+      instance.
     code_samples: []
     parameters: []
     returns:
       - type: UDim2
-        summary: ''
+        summary: |
+          `Datatype.UDim2` position of the current drag's reference element.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: UIDragDetector:GetReferenceRotation
-    summary: ''
-    description: ''
+    summary: |
+      Returns the reference rotation of the current drag's reference element.
+    description: |
+      When no `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is
+      set, this function returns the rotation of the dragged object's immediate
+      parent `Class.GuiObject` (if one exists), or else the rotation of the
+      dragged object.
+
+      When a `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is
+      set, this function returns the rotation of that reference instance.
     code_samples: []
     parameters: []
     returns:
       - type: float
-        summary: ''
+        summary: |
+          Rotation of the current drag's reference element.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: UIDragDetector:SetDragStyleFunction
-    summary: ''
-    description: ''
+    summary: |
+      Passes a function to be used if and only if
+      `Class.UIDragDetector.DragStyle|DragStyle` is set to
+      `Enum.UIDragDetectorDragStyle.Scriptable`.
+    description: |
+      Passes a function to be used if and only if
+      `Class.UIDragDetector.DragStyle|DragStyle` is set to
+      `Enum.UIDragDetectorDragStyle.Scriptable`. The given function receives the
+      signal's screen space input position with type `Datatype.Vector2`, and it
+      returns a `Datatype.UDim2` (position) and float (rotation) containing the
+      desired motion of the drag. The space of the return values and the
+      relativity of the motion are determined by the
+      `Class.UIDragDetector.DragSpace|DragSpace` and
+      `Class.UIDragDetector.DragRelativity|DragRelativity` properties, unless
+      overriden by returning a specified `Enum.UIDragDetectorDragRelativity` and
+      `Enum.UIDragDetectorDragSpace` as the third and fourth return values.
+
+      If the function returns `nil`, the object will not be moved. This is
+      useful if the script has not yet collected all the information it needs to
+      give the correct answer, or in temporary cases where you want the object
+      to stay where it is.
     code_samples: []
     parameters:
       - name: function
         type: Function
         default:
-        summary: ''
+        summary: |
+          Function for monitoring `Class.UIDragDetector.DragContinue|DragContinue` signals. This function receives the singal's screen space input position and returns a `Datatype.UDim2` and float containing the desired motion of the drag in the desired space and relativity. If this function returns `nil`, the object will not be moved.
     returns:
       - type: void
         summary: ''
@@ -314,40 +591,51 @@ methods:
     thread_safety: Unsafe
 events:
   - name: UIDragDetector.DragContinue
-    summary: ''
-    description: ''
+    summary: |
+      Fires when a user continues dragging the UI element after
+      `Class.UIDragDetector.DragStart|DragStart` has been initiated.
+    description: |
+      Fires when a user continues dragging the UI element after
+      `Class.UIDragDetector.DragStart|DragStart` has been initiated.
     code_samples: []
     parameters:
       - name: inputPosition
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          `Datatype.Vector2` representing the current input position.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: UIDragDetector.DragEnd
-    summary: ''
-    description: ''
+    summary: |
+      Fires when a user stops dragging the UI element.
+    description: |
+      Fires when a user stops dragging the UI element.
     code_samples: []
     parameters:
       - name: inputPosition
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          `Datatype.Vector2` representing the current input position.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: UIDragDetector.DragStart
-    summary: ''
-    description: ''
+    summary: |
+      Fires when a user starts dragging the UI element.
+    description: |
+      Fires when a user starts dragging the UI element.
     code_samples: []
     parameters:
       - name: inputPosition
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          `Datatype.Vector2` representing the current input position.
     tags: []
     deprecation_message: ''
     security: None
