@@ -26,8 +26,6 @@ navigation:
             path: /projects/client-server
           - title: Instance Streaming
             path: /workspace/streaming
-      - title: Managing
-        path: /projects/managing
       - title: Working in Teams
         section:
           - title: Setting Up a Team
