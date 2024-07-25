@@ -2194,7 +2194,7 @@ methods:
 
       If the part is owned by the server, this function must be called on a
       server `Class.Script`. If the part is owned by a client, this function can
-      be called on a `Class.LocalScript` or server `Class.Script`.
+      be called on a `Class.LocalScript` or server `Class.Script`. Alternatively, you can use `Class.BasePart:SetNetworkOwner()|:SetNetworkOwner()`
     code_samples:
     parameters:
       - name: impulse
