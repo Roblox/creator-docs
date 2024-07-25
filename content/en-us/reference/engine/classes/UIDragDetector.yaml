@@ -17,8 +17,6 @@ description: |
   - Scripts can respond to manipulation of dragged objects to drive logic responses, such as adjusting settings.
 
   - `Class.UIDragDetector|UIDragDetectors` work in Studio as long as you're **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, nor certain plugins or Studio's **UI** editor tools.
-
-  See the [UI Drag Detectors](../../../ui/ui-drag-detectors.md) guide for details and usage examples.
 code_samples: []
 inherits:
   - UIComponent

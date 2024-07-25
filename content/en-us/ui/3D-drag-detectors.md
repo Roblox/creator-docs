@@ -7,7 +7,7 @@ The `Class.DragDetector` instance facilitates and encourages interaction with 3D
 
 - Place a `Class.DragDetector` under any `Class.BasePart` or `Class.Model` to [make it draggable](#making-objects-draggable) via all inputs (mouse, touch, gamepad, and VR), all without a single line of code.
 
-- Choose from several [drag styles](#drag-style), define how the object [responds to motion](#object-response-to-motion), and optionally apply [axis or movement limits](#axismovement-limits).
+- Choose from several [drag styles](#drag-style), define how the object [responds to motion](#response-to-motion), and optionally apply [axis or movement limits](#axis--movement-limits).
 
 - Scripts can [respond to manipulation of dragged objects](#scripting-responses-to-clicking-and-dragging) to drive UI or make logical decisions, such as adjusting the light level in a room based on a sliding wall switch dimmer.
 
@@ -16,10 +16,6 @@ The `Class.DragDetector` instance facilitates and encourages interaction with 3D
 - `Class.DragDetector|DragDetectors` work in Studio as long as you're **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, making it easier to test and adjust draggable objects while editing.
 
 <video src="../assets/ui/3D-drag-detectors/Showcase.mp4" controls width="100%" alt="Drag detectors used in a variety of implementations in the 3D world"></video>
-
-<Alert severity="info">
-For drag detectors that work with 2D user interface elements like sliders and spinners, see [UI Drag Detectors](../ui/ui-drag-detectors.md).
-</Alert>
 
 ## Making Objects Draggable
 
@@ -30,7 +26,7 @@ To make any part or model draggable, simply add a `Class.DragDetector` as a dire
 
    <img src="../assets/studio/explorer/Model-DragDetector.png" width="320" />
 
-1. By default, the object will now be draggable in the ground plane, but you can customize its `Class.DragDetector.DragStyle|DragStyle`, define how it [responds to motion](#object-response-to-motion), and optionally apply [axis or movement limits](#axismovement-limits).
+1. By default, the object will now be draggable in the ground plane, but you can customize its `Class.DragDetector.DragStyle|DragStyle`, define how it [responds to motion](#response-to-motion), and optionally apply [axis or movement limits](#axis--movement-limits).
 
 <Alert severity="warning">
 Remember that `Class.DragDetector|DragDetectors` only work in Studio if you're **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools.
@@ -231,7 +227,7 @@ end)
 
 ### Physics Response
 
-Assuming a dragger's [response style](#object-response-to-motion) is set to **Physical** and it is applied to an unanchored object, that object will be moved by constraint forces that attempt to bring it to the position/orientation given by the proposed motion. You can further customize the physical response through the following properties:
+Assuming a dragger's [response style](#response-to-motion) is set to **Physical** and it is applied to an unanchored object, that object will be moved by constraint forces that attempt to bring it to the position/orientation given by the proposed motion. You can further customize the physical response through the following properties:
 
 <table>
 <thead>
