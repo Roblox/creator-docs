@@ -743,9 +743,11 @@ methods:
     deprecation_message: ''
   - name: CFrame:ToWorldSpace
     summary: |
-      Receives one or more `Datatype.CFrame` objects and returns them transformed from object to world space.
+      Receives one or more `Datatype.CFrame` objects and returns them
+      transformed from object to world space.
     description: |
-      Receives one or more `Datatype.CFrame` objects and returns them transformed from object to world space. Equivalent to:
+      Receives one or more `Datatype.CFrame` objects and returns them
+      transformed from object to world space. Equivalent to:
 
       `CFrame * cf`
     parameters:
@@ -761,9 +763,11 @@ methods:
     deprecation_message: ''
   - name: CFrame:ToObjectSpace
     summary: |
-      Receives one or more `Datatype.CFrame` objects and returns them transformed from world to object space.
+      Receives one or more `Datatype.CFrame` objects and returns them
+      transformed from world to object space.
     description: |
-      Receives one or more `Datatype.CFrame` objects and returns them transformed from world to object space. Equivalent to:
+      Receives one or more `Datatype.CFrame` objects and returns them
+      transformed from world to object space. Equivalent to:
 
       `CFrame:Inverse() * cf`
     parameters:
@@ -779,9 +783,11 @@ methods:
     deprecation_message: ''
   - name: CFrame:PointToWorldSpace
     summary: |
-      Receives one or more `Datatype.Vector3` objects and returns them transformed from object to world space.
+      Receives one or more `Datatype.Vector3` objects and returns them
+      transformed from object to world space.
     description: |
-      Receives one or more `Datatype.Vector3` objects and returns them transformed from object to world space. Equivalent to:
+      Receives one or more `Datatype.Vector3` objects and returns them
+      transformed from object to world space. Equivalent to:
 
       `CFrame * v3`
     parameters:
@@ -797,9 +803,11 @@ methods:
     deprecation_message: ''
   - name: CFrame:PointToObjectSpace
     summary: |
-      Receives one or more `Datatype.Vector3` objects and returns them transformed from world to object space.
+      Receives one or more `Datatype.Vector3` objects and returns them
+      transformed from world to object space.
     description: |
-      Receives one or more `Datatype.Vector3` objects and returns them transformed from world to object space. Equivalent to:
+      Receives one or more `Datatype.Vector3` objects and returns them
+      transformed from world to object space. Equivalent to:
 
       `CFrame:Inverse() * v3`
     parameters:
@@ -815,9 +823,11 @@ methods:
     deprecation_message: ''
   - name: CFrame:VectorToWorldSpace
     summary: |
-      Receives one or more `Datatype.Vector3` objects and returns them rotated from object to world space.
+      Receives one or more `Datatype.Vector3` objects and returns them rotated
+      from object to world space.
     description: |
-      Receives one or more `Datatype.Vector3` objects and returns them rotated from object to world space. Equivalent to:
+      Receives one or more `Datatype.Vector3` objects and returns them rotated
+      from object to world space. Equivalent to:
 
       `(CFrame - CFrame.Position) * v3`
     parameters:
@@ -833,9 +843,11 @@ methods:
     deprecation_message: ''
   - name: CFrame:VectorToObjectSpace
     summary: |
-      Receives one or more `Datatype.Vector3` objects and returns them rotated from world to object space.
+      Receives one or more `Datatype.Vector3` objects and returns them rotated
+      from world to object space.
     description: |
-      Receives one or more `Datatype.Vector3` objects and returns them rotated from world to object space. Equivalent to:
+      Receives one or more `Datatype.Vector3` objects and returns them rotated
+      from world to object space. Equivalent to:
 
       `(CFrame:Inverse() - CFrame:Inverse().Position) * v3`
     parameters:

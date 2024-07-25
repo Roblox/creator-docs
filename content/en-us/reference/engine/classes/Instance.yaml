@@ -59,12 +59,11 @@ properties:
     description: ''
     code_samples: []
     type: SecurityCapabilities
-    tags:
-      - NotScriptable
+    tags: []
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Permissions
     serialization:
@@ -274,11 +273,10 @@ properties:
     type: bool
     tags:
       - NotReplicated
-      - NotScriptable
     deprecation_message: ''
     security:
-      read: RobloxSecurity
-      write: RobloxSecurity
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Permissions
     serialization:

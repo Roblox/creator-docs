@@ -90,7 +90,7 @@ The Experience Details Page also provides additional recommendation opportunitie
 
 #### Experience Events
 
-**Experience events** are key to keeping a community engaged. These moments are where all your users can come together and engage for unique events and scenarios. [Experience events](./production/promotion/events-platform.md) are a way for you to tell your users about upcoming events within your experience, and for them to opt in and be notified when that event starts. We are continuing to build on that foundation offering deeper event details customization. You can add up to 5 thumbnails to promote your event with users and include a primary event type. This additional metadata will also give you a chance to be featured in **Today's Picks**.
+**Experience events** are key to keeping a community engaged. These moments are where all your users can come together and engage for unique events and scenarios. [Experience events](./production/promotion/experience-events.md) are a way for you to tell your users about upcoming events within your experience, and for them to opt in and be notified when that event starts. We are continuing to build on that foundation offering deeper event details customization. You can add up to 5 thumbnails to promote your event with users and include a primary event type. This additional metadata will also give you a chance to be featured in **Today's Picks**.
 
 ### Search
 

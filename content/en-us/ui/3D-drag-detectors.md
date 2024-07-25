@@ -1,20 +1,25 @@
 ---
-title: Drag Detectors
-description: Drag detectors instances encourage physical interaction with objects in an experience, such as opening doors and drawers, sliding a part around, and much more.
+title: 3D Drag Detectors
+description: 3D drag detectors facilitate and encourage interaction with 3D objects in an experience, such as opening doors and drawers, sliding a part around, and much more.
 ---
 
-`Class.DragDetector` instances encourage physical interaction with objects in an experience, such as opening doors and drawers, sliding a part around, grabbing and tossing a bowling ball, pulling back and firing a slingshot, and much more. Key features include:
+The `Class.DragDetector` instance facilitates and encourages interaction with 3D objects in an experience, such as opening doors and drawers, sliding a part around, grabbing and tossing a bowling ball, pulling back and firing a slingshot, and much more. Key features include:
 
-- Place a `Class.DragDetector` under any part or model to [make it draggable](#making-objects-draggable) via all inputs (mouse, touch, gamepad, and VR), all without a single line of code.
-- Choose from many [drag styles](#drag-style), define how the object [responds to motion](#object-response-to-motion), and optionally apply [axis or movement limits](#axismovement-limits).
+- Place a `Class.DragDetector` under any `Class.BasePart` or `Class.Model` to [make it draggable](#making-objects-draggable) via all inputs (mouse, touch, gamepad, and VR), all without a single line of code.
+
+- Choose from several [drag styles](#drag-style), define how the object [responds to motion](#object-response-to-motion), and optionally apply [axis or movement limits](#axismovement-limits).
+
 - Scripts can [respond to manipulation of dragged objects](#scripting-responses-to-clicking-and-dragging) to drive UI or make logical decisions, such as adjusting the light level in a room based on a sliding wall switch dimmer.
+
 - Players can manipulate anchored parts or models and they'll stay exactly where you put them upon release.
+
 - `Class.DragDetector|DragDetectors` work in Studio as long as you're **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, making it easier to test and adjust draggable objects while editing.
 
-<figure>
-<video src="../assets/ui/drag-detectors/Showcase.mp4" controls width="100%" alt="Drag detectors used in a variety of implementations in the 3D world"></video>
-<figcaption>Drag detectors used in a variety of implementations in the 3D world</figcaption>
-</figure>
+<video src="../assets/ui/3D-drag-detectors/Showcase.mp4" controls width="100%" alt="Drag detectors used in a variety of implementations in the 3D world"></video>
+
+<Alert severity="info">
+For drag detectors that work with 2D user interface elements like sliders and spinners, see [UI Drag Detectors](../ui/ui-drag-detectors.md).
+</Alert>
 
 ## Making Objects Draggable
 
@@ -23,9 +28,13 @@ To make any part or model draggable, simply add a `Class.DragDetector` as a dire
 1. In the [Explorer](../studio/explorer.md) window, hover over the `Class.Part`, `Class.MeshPart`, or `Class.Model` and click the &CirclePlus; button. A contextual menu displays.
 1. From the menu, insert a **DragDetector**.
 
-   <img src="../assets/ui/drag-detectors/DragDetector-New.png" width="320" />
+   <img src="../assets/studio/explorer/Model-DragDetector.png" width="320" />
 
 1. By default, the object will now be draggable in the ground plane, but you can customize its `Class.DragDetector.DragStyle|DragStyle`, define how it [responds to motion](#object-response-to-motion), and optionally apply [axis or movement limits](#axismovement-limits).
+
+<Alert severity="warning">
+Remember that `Class.DragDetector|DragDetectors` only work in Studio if you're **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools.
+</Alert>
 
 ## Customizing Drag Detectors
 
@@ -111,7 +120,7 @@ By default, 3D motion and the associated `Class.DragDetector.DragStyle|DragStyle
 </tbody>
 </table>
 
-### Object Response to Motion
+### Response to Motion
 
 The `Class.DragDetector.ResponseStyle|ResponseStyle` property specifies how an object responds to the proposed motion, depending on whether the object is `Class.BasePart.Anchored|Anchored` or not.
 
@@ -146,7 +155,7 @@ The `Class.DragDetector.ResponseStyle|ResponseStyle` property specifies how an o
 Remember that `Class.DragDetector|DragDetectors` only work in Studio if you're **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools.
 </Alert>
 
-### Axis/Movement Limits
+### Axis & Movement Limits
 
 By default, there are no limits to 3D motion beyond the inherent restrictions of the `Class.DragDetector.DragStyle|DragStyle`. If necessary, you can apply minimum and maximum limits to both translation and rotation. Note, however, that these are **not** constraints; they merely impede the drag detector's attempts to generate motion in order to remain within limits.
 
@@ -160,18 +169,14 @@ By default, there are no limits to 3D motion beyond the inherent restrictions of
 </thead>
 <tbody>
   <tr>
-    <td>
-		<p>`Class.DragDetector.MinDragTranslation|MinDragTranslation`</p>
-		<p>`Class.DragDetector.MaxDragTranslation|MaxDragTranslation`</p>
-    </td>
+    <td>`Class.DragDetector.MinDragTranslation|MinDragTranslation`<br />
+		`Class.DragDetector.MaxDragTranslation|MaxDragTranslation`</td>
     <td>Limits to drag translation in each dimension. If MaxDragTranslation is greater than MinDragTranslation, translation will be clamped within that range.</td>
 		<td>(0,&nbsp;0,&nbsp;0)</td>
   </tr>
   <tr>
-    <td>
-		<p>`Class.DragDetector.MinDragAngle|MinDragAngle`</p>
-		<p>`Class.DragDetector.MaxDragAngle|MaxDragAngle`</p>
-    </td>
+    <td>`Class.DragDetector.MinDragAngle|MinDragAngle`<br />
+		`Class.DragDetector.MaxDragAngle|MaxDragAngle`</td>
     <td>Only relevant if `Class.DragDetector.DragStyle|DragStyle` is set to **RotateAxis**. If `Class.DragDetector.MaxDragAngle|MaxDragAngle` is greater than `Class.DragDetector.MinDragAngle|MinDragAngle`, rotation will be clamped within that range.</td>
 		<td>0</td>
   </tr>
@@ -272,7 +277,7 @@ When the `Class.DragDetector.RunLocally|RunLocally` property is true, no events 
 
 ## Scripting Responses to Clicking and Dragging
 
-Through event signals, property changes, scripted `Class.DragDetector.DragStyle|DragStyle`, and custom functions, scripts can respond to the manipulation of dragged objects to drive UI or make logical decisions, such as adjusting the light level in a room based on a sliding wall switch dimmer.
+Through [event signals](#event-signals), property changes, `Enum.DragDetectorDragStyle.Scriptable|Scriptable` drag style, and custom functions, scripts can respond to the manipulation of dragged objects to drive UI or make logical decisions, such as adjusting the light level in a room based on a sliding wall switch dimmer.
 
 ### Event Signals
 
@@ -321,7 +326,7 @@ dragDetector.DragEnd:Connect(function()
 end)
 ```
 
-### DragFrame Changes
+### Drag Frame Changes
 
 In addition to [event signals](#event-signals), you can monitor changes to the detector's `Class.DragDetector.DragFrame|DragFrame` directly.
 
@@ -334,7 +339,7 @@ dragDetector:GetPropertyChangedSignal("DragFrame"):Connect(function()
 end)
 ```
 
-### Scripted DragStyle
+### Scripted Drag Style
 
 If you set a detector's `Class.DragDetector.DragStyle|DragStyle` to **Scriptable**, you can provide your own function that takes in a `Datatype.Ray` and returns a world space `Datatype.CFrame`. The detector will move the motion so that the dragged object goes to that custom location/orientation.
 
@@ -419,13 +424,13 @@ local connection = dragDetector:AddConstraintFunction(2, snapToWorldGrid)
 
 A basic implementation of drag detectors is a tower balance game where players must carefully remove pieces and attempt to keep the tower upright. In the following tower structure, each piece has a child `Class.DragDetector` with a default `Class.DragDetector.DragStyle|DragStyle` of **TranslatePlane** so that players can pull the pieces outward but not upward or downward.
 
-<video src="../assets/ui/drag-detectors/Balance-Tower.mp4" controls width="800" alt="Drag detectors placed on each piece of a tower balance game"></video>
+<video src="../assets/ui/3D-drag-detectors/Balance-Tower.mp4" controls width="800" alt="Drag detectors placed on each piece of a tower balance game"></video>
 
 ### Anchored Models With Adjustable Parts
 
 You can easily create and share models which are primarily anchored, but which have one or more child parts/models that players can drag. For example, the following desk has two drawers which players can open to inspect what's inside.
 
-<video src="../assets/ui/drag-detectors/Desk-Drawers.mp4" controls width="800" alt="Drag detectors placed on the drawers of a desk to allow for opening/sliding"></video>
+<video src="../assets/ui/3D-drag-detectors/Desk-Drawers.mp4" controls width="800" alt="Drag detectors placed on the drawers of a desk to allow for opening/sliding"></video>
 
 <Alert severity="warning">
 When making children of models draggable, you should set the drag detector's `Class.DragDetector.ReferenceInstance|ReferenceInstance` to an object within the model that can serve as a dedicated reference frame, for example the desk's top surface. This establishes a consistent reference `Datatype.CFrame` for the style/direction of dragging, even if the model is rotated.
@@ -435,13 +440,13 @@ When making children of models draggable, you should set the drag detector's `Cl
 
 You can combine drag detectors with `Class.Constraint|Constraints`, for example a marionette puppet. In the following setup, the control handles are anchored, the body parts are unanchored, and constraints hold the marionette together. Moving the handles with the **TranslateViewPlane** `Class.DragDetector.DragStyle|DragStyle` makes the marionette dance, and the individual body parts may also be moved with drag detectors, all while the model retains its integrity.
 
-<video src="../assets/ui/drag-detectors/Marionette.mp4" controls width="800" alt="Drag detectors placed on the handles of a marionette puppet"></video>
+<video src="../assets/ui/3D-drag-detectors/Marionette.mp4" controls width="800" alt="Drag detectors placed on the handles of a marionette puppet"></video>
 
 ### 3D User Interfaces
 
 3D user interfaces are easily achievable through drag detectors, such as adjusting the brightness of a `Class.SpotLight` based on a sliding switch dimmer. You can also detect the **X** and **Z** axes individually to control two different aspects of a 3D user interface, such as the `Class.ParticleEmitter.Size|Size`, `Class.ParticleEmitter.Speed|Speed`, and `Class.ParticleEmitter.Color|Color` of a `Class.ParticleEmitter`.
 
-<video src="../assets/ui/drag-detectors/Color-Slider.mp4" controls width="800" alt="Drag detectors used in 3D user interface to control a particle emitter"></video>
+<video src="../assets/ui/3D-drag-detectors/Color-Slider.mp4" controls width="800" alt="Drag detectors used in 3D user interface to control a particle emitter"></video>
 
 ```lua title='DragDetector - 3D User Interface'
 local model = script.Parent

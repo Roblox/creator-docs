@@ -47,11 +47,11 @@ Labels allow you to display customizable [text](../ui/labels.md) and [images](..
 
 <video src="../assets/ui/proximity-prompt/Showcase.mp4" controls width="80%" alt="Proximity prompts used in a variety of implementations in the 3D world"></video>
 
-### Drag Detectors
+### 3D Drag Detectors
 
-[Drag Detectors](../ui/drag-detectors.md) encourage physical interaction with objects in an experience, such as opening doors and drawers, sliding a part around, grabbing and tossing a bowling ball, pulling back and firing a slingshot, and much more.
+[3D Drag Detectors](../ui/3D-drag-detectors.md) encourage physical interaction with 3D objects in an experience, such as opening doors and drawers, sliding a part around, grabbing and tossing a bowling ball, pulling back and firing a slingshot, and much more.
 
-<video src="../assets/ui/drag-detectors/Showcase.mp4" controls width="80%" alt="Drag detectors used in a variety of implementations in the 3D world"></video>
+<video src="../assets/ui/3D-drag-detectors/Showcase.mp4" controls width="80%" alt="Drag detectors used in a variety of implementations in the 3D world"></video>
 
 ## Layout and Design
 
