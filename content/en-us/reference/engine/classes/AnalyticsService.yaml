@@ -624,7 +624,7 @@ methods:
         default:
         summary: |
           The name of the funnel. This should be the same for all steps in the
-          funnel. Limited to 100 unique funnels per experience.
+          funnel. Limited to 10 unique funnels per experience.
       - name: funnelSessionId
         type: string
         default: ''

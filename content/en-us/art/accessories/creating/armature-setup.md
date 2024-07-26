@@ -30,7 +30,7 @@ Roblox provides an R15 base armature that you can import into your own project. 
 
 To import the R15 character armature into your file:
 
-1. Download Roblox's [Rig_and_Attachments_Template.blend](../../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.blend). Do not open this project.
+1. Download Roblox's [Rig_and_Attachments_Template.blend](../../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip). Do not open this project.
 2. In your current clothing project, return to **Object Mode**.
 3. Navigate to **File** > **Append**, and select the saved **Rig_And_Attachment.blend** file. An additional folder structure appears.
 

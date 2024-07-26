@@ -42,7 +42,6 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 <figure>
 Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
 </figure>
-
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../assets/art/reference-files/SquareMale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Male</Button>
@@ -222,11 +221,7 @@ Standard armature rig template for various software. Use this template for riggi
 
 </CardContent>
 <CardActions style={{bottom: 0, width: '100%'}}>
-  <Button href="../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.blend" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.blend</Button>
-
-<Button href="../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.ma" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.ma</Button>
-
-<Button href="../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.fbx</Button>
+  <Button href="../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download (.blend, .ma, .fbx)</Button>
 </CardActions>
 </Card>
 </Grid>
@@ -245,11 +240,7 @@ Project files for creation, includes a full-body inner and outer cage mesh for c
 
 </CardContent>
 <CardActions style={{bottom: 0, width: '100%'}}>
-  <Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.blend</Button>
-
-<Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Template.ma" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.ma</Button>
-
-<Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Template.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.fbx</Button>
+  <Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download (.blend, .ma, .fbx)</Button>
 </CardActions>
 </Card>
 </Grid>
@@ -268,11 +259,7 @@ Project files for creation, includes the 15 individual body part cages required 
 
 </CardContent>
 <CardActions style={{bottom: 0, width: '100%'}}>
-  <Button href="../assets/modeling/meshes/reference-files/Body_Cage_Template.blend" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.blend</Button>
-
-<Button href="../assets/modeling/meshes/reference-files/Body_Cage_Template.ma" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.ma</Button>
-
-<Button href="../assets/modeling/meshes/reference-files/Body_Cage_Template.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.fbx</Button>
+  <Button href="../assets/modeling/meshes/reference-files/Body_Cage_Templates.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download (.blend, .ma, .fbx)</Button>
 </CardActions>
 </Card>
 </Grid>
@@ -291,11 +278,7 @@ Template file containing all content from previous templates, includes rig skele
 
 </CardContent>
 <CardActions style={{bottom: 0, width: '100%'}}>
-  <Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.blend</Button>
-
-<Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Template.ma" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.ma</Button>
-
-<Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Template.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>.fbx</Button>
+  <Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download (.blend, .ma, .fbx)</Button>
 </CardActions>
 </Card>
 </Grid>
@@ -583,7 +566,7 @@ Open-source Blender Studio add-on that allows you to upload assets directly from
 Blender add-on for verifying avatar technical compatibility before importing into Studio.
 </figure>
 </CardContent>
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../art/accessories/validation-tool.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"0px;"}}>Link to Instructions</Button>
 </CardActions>
 </Card>

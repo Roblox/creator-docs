@@ -30,7 +30,7 @@ This modeling tutorial covers the following processes:
 
 ## Setting Up Mesh
 
-To get your project started, download and open Roblox's [Clothing_Cage.blend](../../../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend) project and begin setting up your basic project objects.
+To get your project started, download and open Roblox's [Clothing_Cage.blend](../../../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip) project and begin setting up your basic project objects.
 
 <GridContainer numColumns="2">
   <figure>
@@ -45,7 +45,7 @@ To get your project started, download and open Roblox's [Clothing_Cage.blend](..
 
 To set up your project and your initial mesh object:
 
-1. Download the [Clothing_Cage.blend](../../../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend) project. This project includes the inner and outer cage mesh that you will use as temporary mannequins.
+1. Download the [Clothing_Cage.blend](../../../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip) project. This project includes the inner and outer cage mesh that you will use as temporary mannequins.
 2. Open this file, click **Save As**, and save the project with a new name. This will be your main Blender project for the clothing accessory.
 3. In the Outliner, copy and paste **InnerCage** object to duplicate it.
 4. With the duplicated object highlighted, right-click in the viewport and select **Parent** > **Parent and Keep Transformation**.

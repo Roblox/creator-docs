@@ -21,11 +21,11 @@ settings.
 
 ## Importing
 
-Set up the project by opening the [rig template project](../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.blend) and importing the [sample accessory model](../../assets/accessories/reference-files/Tshirt-model.fbx).
+Set up the project by opening the [rig template project](../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip) and importing the [sample accessory model](../../assets/accessories/reference-files/Tshirt-model.fbx).
 
 To import and parent the accessory model:
 
-1. In Blender, open the [rig template project](../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.blend). This file contains the default armature required for layered clothing.
+1. In Blender, open the [rig template project](../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip). This file contains the default armature required for layered clothing.
 
    <img
    alt="Blender Mannequin Template Project"
@@ -72,7 +72,7 @@ After parenting and weighting your clothing item, you can start adding the cage 
 
 When setting up the cages, the accessory model needs to fit on top of the inner cage and then the outer cage must be adjusted to fit tightly over the model object.
 
-You can quickly add these two full-body meshes from the [Clothing_Cage_Template.blend](../../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend) into your existing project.
+You can quickly add these two full-body meshes from the [Clothing_Cage_Template.blend](../../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip) into your existing project.
 
 <Alert severity="error">
 Don't delete vertices or alter the UVs on the Inner or Outer Cages as this can cause errors when importing in Studio or when equipping onto a character.
@@ -80,7 +80,7 @@ Don't delete vertices or alter the UVs on the Inner or Outer Cages as this can c
 
 To quickly add clothing cages to your project:
 
-1. Download the [Clothing_Cage_Template.blend](../../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend) project.
+1. Download the [Clothing_Cage_Template.blend](../../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip) project.
 2. In your current Blender project, switch to Object Mode and navigate to **File** > **Append**. A file browser displays.
 
    <img src="../../assets/accessories/lc-blender-append.png" width = "40%"/>
