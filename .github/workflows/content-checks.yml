@@ -1,5 +1,7 @@
 name: Content Checks
 on:
+  # Combining pull_request_target workflow trigger with an explicit checkout of an untrusted PR is a dangerous practice that may lead to repository compromise.
+  # https://securitylab.github.com/research/github-actions-preventing-pwn-requests/
   pull_request_target:
     types:
       - opened
