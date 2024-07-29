@@ -6,7 +6,7 @@ comments: Updates to this page require careful internal review. We generally don
 
 You can create and sell bodies, heads, accessories, and clothes on the [Marketplace](https://www.roblox.com/catalog). After you pay any applicable upload fees, you can upload your new asset for marketplace approval. Once the moderation team reviews and approves your asset, you can set your item for sell on the Marketplace.
 
-You receive a commission every time users purchase your item. If users purchase your item within an experience using the [Avatar Inspect Menu](../../players/avatar-inspect-menu.md) or the [Avatar Editor Service](../../players/avatar-editor.md), the experience owner also receives a commission. For information on viewing your sales data, see [Sales Data analytics](../../production/analytics/analytics-dashboard.md#sales-data).
+You receive a commission every time users purchase your item. If users purchase your item within an experience using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md) or the [Avatar Editor Service](../players/avatar-editor.md), the experience owner also receives a commission. For information on viewing your sales data, see [Sales Data analytics](../production/analytics/analytics-dashboard.md#sales-data).
 
 ## Upload Fees
 
@@ -228,7 +228,7 @@ Rebate credits are reimbursed once per day. See the following guidelines:
   - The 30 day escrow does not apply for rebates.
 - You can access this data on the Creator Dashboard's [My Transactions](https://create.roblox.com/dashboard/transactions) report, by filtering **Type of Transaction** to **Publishing Advance Rebates**.
 
-  <img src="../../assets/publishing/marketplace/Transaction-Report.png" alt="Transaction report filtered by Publishing Advance Rebates." width="100%" />
+  <img src="../assets/publishing/marketplace/Transaction-Report.png" alt="Transaction report filtered by Publishing Advance Rebates." width="100%" />
 
 - If a sale occurs after Roblox processes rebates, you may need to wait until the next day's processing to receive the rebate credit and see the rebate in the transaction report.
 
@@ -253,7 +253,7 @@ Limited items that are sold for free follow a different per-unit payout structur
 
 ## Limiteds
 
-When setting assets on sale, you can [configure your creation](../../marketplace/publishing-to-marketplace.md#marketplace-settings) as a **Limited** item to set an available quantity for that asset.
+When setting assets on sale, you can [configure your creation](../marketplace/publishing-to-marketplace.md#marketplace-settings) as a **Limited** item to set an available quantity for that asset.
 
 At this time, only Roblox-created Limiteds are tradeable, and bodies and heads are not eligible as Limiteds.
 
@@ -308,6 +308,6 @@ Depending on the 3D asset type, you must set the price of the item within the ma
 
 ## Classic Clothing
 
-You can upload and sell [classic clothing](../../art/accessories/classic-clothing.md) through the Roblox website. It costs **10 Robux** to upload these assets.
+You can upload and sell [classic clothing](../art/accessories/classic-clothing.md) through the Roblox website. It costs **10 Robux** to upload these assets.
 
 Classic t-shirts do not require a fee when uploading, but they do require a **10 Robux** fee when going on sale for the first time. If the seller takes the item off sale, it does not require an additional fee when they place it on sale again.

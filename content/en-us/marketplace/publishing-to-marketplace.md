@@ -12,7 +12,7 @@ In order to publish and sell assets on the Marketplace, your account or group mu
 2. [Publish the asset](#publishing-an-asset) to the Marketplace after configuring metadata and Marketplace settings.
 
 <Alert severity = 'info'>
-The following publishing instructions apply to 3D accessories and clothing assets. See [Classic Clothing](../../art/accessories/classic-clothing.md) for information on uploading and selling classic 2D clothing.
+The following publishing instructions apply to 3D accessories and clothing assets. See [Classic Clothing](../art/accessories/classic-clothing.md) for information on uploading and selling classic 2D clothing.
 </Alert>
 
 ## Uploading and Publishing Limits
@@ -48,21 +48,21 @@ There are limits on the number of assets you can upload to Roblox and enable for
 
 ## Uploading an Asset
 
-When uploading your asset, Studio checks your asset for technical issues, such as an incorrect hierarchy or accessory structure. You can also add a [custom thumbnail](../../marketplace/custom-thumbnails.md) to your asset before uploading to customize how the item displays on the Marketplace.
+When uploading your asset, Studio checks your asset for technical issues, such as an incorrect hierarchy or accessory structure. You can also add a [custom thumbnail](../marketplace/custom-thumbnails.md) to your asset before uploading to customize how the item displays on the Marketplace.
 
-- After uploading your asset, the item is placed in the moderation queue before you can enable it on sale. See [Moderation](../../marketplace/moderation.md) for additional information on this process.
-- For details on upfront payments and fees when publishing assets to the marketplace, see [Fees and Commissions](../../marketplace/marketplace-fees-and-commissions.md).
+- After uploading your asset, the item is placed in the moderation queue before you can enable it on sale. See [Moderation](../marketplace/moderation.md) for additional information on this process.
+- For details on upfront payments and fees when publishing assets to the marketplace, see [Fees and Commissions](../marketplace/marketplace-fees-and-commissions.md).
 
 <Alert severity = 'warning'>
-You can't update or edit assets and thumbnails after uploading. You must test all of your assets thoroughly before uploading them to ensure they adhere to Roblox's [Marketplace Policy](../../marketplace/marketplace-policy.md).
+You can't update or edit assets and thumbnails after uploading. You must test all of your assets thoroughly before uploading them to ensure they adhere to Roblox's [Marketplace Policy](../marketplace/marketplace-policy.md).
 </Alert>
 
 To upload your asset:
 
 1. In Studio, add the marketplace item to your workspace.
-   - For accessories and clothing, the item must be an `Class.Accessory` object. For information on the required specifications, see [Accessory Specifications](../../art/accessories/specifications.md)
-     - Upload clothing and accessories as an `Class.Accessory`. For information on converting your `Class.Model` into an `Class.Accessory`, see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md).
-   - For bodies and heads, the item must be a `Class.Model`. For information on the required specifications, see [Avatar Character Specifications](../../art/characters/specifications.md).
+   - For accessories and clothing, the item must be an `Class.Accessory` object. For information on the required specifications, see [Accessory Specifications](../art/accessories/specifications.md)
+     - Upload clothing and accessories as an `Class.Accessory`. For information on converting your `Class.Model` into an `Class.Accessory`, see [Accessory Fitting Tool](../art/accessories/accessory-fitting-tool.md).
+   - For bodies and heads, the item must be a `Class.Model`. For information on the required specifications, see [Avatar Character Specifications](../art/characters/specifications.md).
 2. In the **Explorer** window, right click the object and select **Save to Roblox**.
 3. In **Submit As**, select **Avatar Asset**.
 4. In the **Asset type** dropdown menu, select the appropriate marketplace asset type. Validation begins upon selection.
@@ -72,16 +72,16 @@ To upload your asset:
 
    <GridContainer numColumns='2'>
    <figure>
-       <img src="../../assets/publishing/marketplace/Publishing-Clothes.png" />
+       <img src="../assets/publishing/marketplace/Publishing-Clothes.png" />
        <figcaption>Uploading a clothing accessory asset</figcaption>
    </figure>
    <figure>
-       <img src="../../assets/publishing/marketplace/Publishing-Body.png"  />
+       <img src="../assets/publishing/marketplace/Publishing-Body.png"  />
        <figcaption>Uploading a body asset bundle</figcaption>
    </figure>
    </GridContainer>
 
-5. Once validation completes successfully, an item description dialog displays. Fill out the following fields and follow [metadata best practices](../../production/publishing/publishing-experiences-and-places.md#metadata-best-practices) when possible.
+5. Once validation completes successfully, an item description dialog displays. Fill out the following fields and follow [metadata best practices](../production/publishing/publishing-experiences-and-places.md#metadata-best-practices) when possible.
 
    - **Title** - The name of your asset in the Marketplace.
    - **Description** - This description of your asset in the Marketplace.
@@ -90,9 +90,9 @@ To upload your asset:
 
 6. Click **Submit** to pay any applicable upload fee and submit your asset for moderation approval.
 
-After uploading the asset, you can find it in the **Creations** tab of the [Toolbox](../../projects/assets/toolbox.md) in a pre-published state where you can view the current moderation status or edit the title and description.
+After uploading the asset, you can find it in the **Creations** tab of the [Toolbox](../projects/assets/toolbox.md) in a pre-published state where you can view the current moderation status or edit the title and description.
 
-<img src="../../assets/publishing/marketplace/Creation-Page.png" alt="List of Hat assets on the Creator Hub with current status listed below each entry." width="80%" />
+<img src="../assets/publishing/marketplace/Creation-Page.png" alt="List of Hat assets on the Creator Hub with current status listed below each entry." width="80%" />
 
 ### Troubleshooting
 
@@ -102,13 +102,13 @@ During the upload process, you may encounter issues that prevent an item from up
 <figure>
 For technical issues during the validation step, hover over the error to see the specific failure output. Most issues may require adjusting your model in your third-party modeling application and re-importing into Studio.
 
-See the modeling specifications for [accessories](../../art/accessories/specifications.md) and [avatars](../../art/characters/specifications.md) for technical requirements.
+See the modeling specifications for [accessories](../art/accessories/specifications.md) and [avatars](../art/characters/specifications.md) for technical requirements.
 
 </figure>
 
 <figure>
 <img
-src="../../assets/publishing/marketplace/Error-Example.png"
+src="../assets/publishing/marketplace/Error-Example.png"
 width="400" alt="An example error indicating a missing FaceControls object from an Avatar Head."/>
 <figcaption>An error that displays when a FaceControls object is not detected for head animation</figcaption>
 </figure>
@@ -124,7 +124,7 @@ For other validation issues, keep in mind the following common uploading conflic
 
 ## Publishing an Asset
 
-You can access uploaded assets in your [Creator Dashboard](https://create.roblox.com/creations). Each item has a **Manage Item** page where you can modify metadata, configure sale-related settings, and publish your asset to the Marketplace.
+You can access uploaded assets in your [Creator Dashboard](https://create.roblox.com/dashboard/creations). Each item has a **Manage Item** page where you can modify metadata, configure sale-related settings, and publish your asset to the Marketplace.
 
 <Alert severity = 'warning'>
 You can't change or modify the asset or thumbnail after upload. If you discover that your item is broken or doesn't work as expected, you may need to remove the item and re-upload a corrected asset.
@@ -136,9 +136,9 @@ Before publishing your asset, it's important to consider if you want to sell you
 
 ### Metadata
 
-You can adjust the metadata for any of your creations at any time. Keep in mind that the metadata, such as the title and description, should follow [general best practices](../../production/publishing/publishing-experiences-and-places.md#metadata-best-practices) to avoid moderation and improve discoverability.
+You can adjust the metadata for any of your creations at any time. Keep in mind that the metadata, such as the title and description, should follow [general best practices](../production/publishing/publishing-experiences-and-places.md#metadata-best-practices) to avoid moderation and improve discoverability.
 
-<img src="../../assets/publishing/marketplace/Manage-Item-Page.png" alt="Manage Item page with example asset." width="80%" />
+<img src="../assets/publishing/marketplace/Manage-Item-Page.png" alt="Manage Item page with example asset." width="80%" />
 
 On the Manage Item page, you can update the following fields:
 
@@ -173,10 +173,10 @@ In **Item Attributes** you can set the **Availability** of your asset as a **Non
 </table>
 
 <Alert severity ='warning'>
-Before selecting either option, familiarize yourself with the various [fee and commission structures](../../marketplace/marketplace-fees-and-commissions.md) involved with different types of items and any applicable country policy limitations.
+Before selecting either option, familiarize yourself with the various [fee and commission structures](../marketplace/marketplace-fees-and-commissions.md) involved with different types of items and any applicable country policy limitations.
 </Alert>
 
-<img src="../../assets/publishing/marketplace/Item-Attributes.png" alt="Item Attribute settings." width="80%" />
+<img src="../assets/publishing/marketplace/Item-Attributes.png" alt="Item Attribute settings." width="80%" />
 
 The following item attributes only apply if you set your asset as a Limited item:
 
@@ -184,15 +184,15 @@ The following item attributes only apply if you set your asset as a Limited item
 - **Limit copies per user** - (Optional) Sets the number of times a user can purchase this asset.
   - Copy limits are based on ownership. If a user owns the maximum limit of copies in their inventory, they can no longer purchase the asset from the original listing. If the user no longer owns the maximum number of copies, they can purchase the copies from the original listing.
   - After publishing, you can only increase, but not decrease, this value.
-- **Free Item** - Sets the selling price of this item to zero. Free Limiteds utilize a [per-unit fee structure](../../marketplace/marketplace-fees-and-commissions.md#per-unit-fee).
-- **Resellable** - If enabled, users can resell your limited item. If resold, you are eligible for [resell commissions](../../marketplace/marketplace-fees-and-commissions.md#reselling). You can change the **Resellable status** on a published item. If enabled on an item, it can not be disabled in the future.
+- **Free Item** - Sets the selling price of this item to zero. Free Limiteds utilize a [per-unit fee structure](../marketplace/marketplace-fees-and-commissions.md#per-unit-fee).
+- **Resellable** - If enabled, users can resell your limited item. If resold, you are eligible for [resell commissions](../marketplace/marketplace-fees-and-commissions.md#reselling). You can change the **Resellable status** on a published item. If enabled on an item, it can not be disabled in the future.
   - The resellable attribute is not available for accounts based in Japan.
 
 ### Pricing
 
-In the pricing section, you can set various price settings. When listing your Marketplace item, you must set your price within the appropriate [dynamic price range](../../marketplace/marketplace-fees-and-commissions.md#price-ranges) for that asset type.
+In the pricing section, you can set various price settings. When listing your Marketplace item, you must set your price within the appropriate [dynamic price range](../marketplace/marketplace-fees-and-commissions.md#price-ranges) for that asset type.
 
-<img src="../../assets/publishing/marketplace/Pricing-Settings.png" alt="Price settings fields." width="80%" />
+<img src="../assets/publishing/marketplace/Pricing-Settings.png" alt="Price settings fields." width="80%" />
 
 You can set two types of price controls based on the price floor:
 
@@ -208,7 +208,7 @@ If you have Marketplace listing before the implementation of the dynamic price r
 
 </Alert>
 
-When setting a price, you can see the percentage breakdown of commissions in the dialog box. A similar breakdown on fees, when applicable, is provided at the bottom of the prompt. See [Marketplace Fees and Commissions](../../marketplace/marketplace-fees-and-commissions.md) for more information on the fees and commissions for Marketplace items.
+When setting a price, you can see the percentage breakdown of commissions in the dialog box. A similar breakdown on fees, when applicable, is provided at the bottom of the prompt. See [Marketplace Fees and Commissions](../marketplace/marketplace-fees-and-commissions.md) for more information on the fees and commissions for Marketplace items.
 
 #### Limit Copies Per User
 
@@ -220,9 +220,9 @@ Copy limits are based on ownership. If a user owns the maximum limit of copies i
 
 The **Sale Location** option sets where you can sell your asset beyond the Marketplace. In some cases, you may want to limit the availability of your asset to certain experiences, or only the Marketplace.
 
-<img src="../../assets/publishing/marketplace/Sale-Location.png" alt="Sale location fields." width="80%" />
+<img src="../assets/publishing/marketplace/Sale-Location.png" alt="Sale location fields." width="80%" />
 
-Experiences that sell Marketplace items receive an additional [commission](../../marketplace/marketplace-fees-and-commissions.md) including transactions made through the [Inspect Menu](../../players/avatar-inspect-menu.md) or [through the API](../../players/avatar-editor.md) within an experience.
+Experiences that sell Marketplace items receive an additional [commission](../marketplace/marketplace-fees-and-commissions.md) including transactions made through the [Inspect Menu](../players/avatar-inspect-menu.md) or [through the API](../players/avatar-editor.md) within an experience.
 
 The following location options are available for all items:
 
@@ -240,18 +240,18 @@ The following location options are available for all items:
   </tr>
   <tr>
     <td>Experience By Place ID (API Only)</td>
-    <td>Users can only purchase the original stock of this item in the experiences associated with the provided Place ID. Only one Place ID per experience is required and creators can update and change Place IDs at any time. <br /> <br />After saving a new Place ID, the experience owner needs to manually [enable the avatar item](../../production/monetization/avatar-items.md) for their experience.</td>
+    <td>Users can only purchase the original stock of this item in the experiences associated with the provided Place ID. Only one Place ID per experience is required and creators can update and change Place IDs at any time. <br /> <br />After saving a new Place ID, the experience owner needs to manually [enable the avatar item](../production/monetization/avatar-items.md) for their experience.</td>
   </tr>
 </tbody>
 </table>
 
 ### Publish Item
 
-When first publishing your asset, select the **Publish Item** button at the end of the form to pay the [publishing fee](../../marketplace/marketplace-fees-and-commissions.md#publishing-advance) and list your item on sale.
+When first publishing your asset, select the **Publish Item** button at the end of the form to pay the [publishing fee](../marketplace/marketplace-fees-and-commissions.md#publishing-advance) and list your item on sale.
 
 ### On Sale Toggle
 
-<img src="../../assets/publishing/marketplace/Sale-Toggle.png" alt="On-sale toggle at top-right of page." width="80%" />
+<img src="../assets/publishing/marketplace/Sale-Toggle.png" alt="On-sale toggle at top-right of page." width="80%" />
 
 You can disable the sale of a published asset by disabling the **On Sale** at the top of the Manage Item page.
 

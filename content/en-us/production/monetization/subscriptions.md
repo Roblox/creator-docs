@@ -9,7 +9,7 @@ description: Subscriptions within experiences let you offer users recurring bene
 - **Robux Payout:** You receive subscription revenue in Robux. For more details, see [Earning with Subscriptions](#earning-with-subscriptions).
 - **Single-Tiered:** All subscriptions within an experience can be owned by users simultaneously. Mutually exclusive subscriptions are not supported.
 
-Users can purchase subscriptions on the desktop app or website using a credit or debit card, and through payment methods on the Apple and Google stores in qualifying regions. Users can view and manage their subscription purchases in the Subscriptions tab in their Roblox account settings.
+Users can purchase subscriptions on the desktop app or website using Roblox gift card credit or a credit or debit card, and through payment methods on the Apple and Google stores in qualifying regions. Users can view and manage their subscription purchases in the Subscriptions tab in their Roblox account settings.
 
 Subscriptions will be rolled out to more regions in the future.
 

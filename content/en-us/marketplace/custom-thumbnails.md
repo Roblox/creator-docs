@@ -3,17 +3,17 @@ title: Custom Thumbnails
 description: Explains how to create your own custom thumbnail for marketplace items.
 ---
 
-Thumbnail images provide a preview of the 3D asset in the [Marketplace](https://www.roblox.com/catalog), user inventories, and avatar editors. Before [uploading an asset to the Marketplace](../../marketplace/publishing-to-marketplace.md), you can create your own thumbnails to customize the exact look and feel of your item preview thumbnails. This step is optional, but can help ensure that the thumbnail accurately portrays your item.
+Thumbnail images provide a preview of the 3D asset in the [Marketplace](https://www.roblox.com/catalog), user inventories, and avatar editors. Before [uploading an asset to the Marketplace](../marketplace/publishing-to-marketplace.md), you can create your own thumbnails to customize the exact look and feel of your item preview thumbnails. This step is optional, but can help ensure that the thumbnail accurately portrays your item.
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../../assets/publishing/marketplace/Thumbnail-Example-A.png" width="100%" />
+    <img src="../assets/publishing/marketplace/Thumbnail-Example-A.png" width="100%" />
     <figcaption>
       <Alert severity="error">The default thumbnail may not correctly represent your item.</Alert>
     </figcaption>
   </figure>
   <figure>
-    <img src="../../assets/publishing/marketplace/Thumbnail-Example-B.png" width="100%" />
+    <img src="../assets/publishing/marketplace/Thumbnail-Example-B.png" width="100%" />
     <figcaption>
       <Alert severity="success">A custom thumbnail can create a more accurate preview.</Alert>
     </figcaption>
@@ -22,9 +22,9 @@ Thumbnail images provide a preview of the 3D asset in the [Marketplace](https://
 
 ### Creating Thumbnails
 
-You must create thumbnails before [publishing your asset on the Marketplace](../../marketplace/publishing-to-marketplace.md). You can quickly create these thumbnail configuration instances with the [Custom Thumbnail Tool](https://www.roblox.com/library/11628621048/UGC-Custom-Thumbnail-Tool). Roblox stores custom thumbnail information in a child `ThumbnailConfiguration` object that parents a `CameraTarget` and `CameraValue`.
+You must create thumbnails before [publishing your asset on the Marketplace](../marketplace/publishing-to-marketplace.md). You can quickly create these thumbnail configuration instances with the [Custom Thumbnail Tool](https://www.roblox.com/library/11628621048/UGC-Custom-Thumbnail-Tool). Roblox stores custom thumbnail information in a child `ThumbnailConfiguration` object that parents a `CameraTarget` and `CameraValue`.
 
-   <img src="../../assets/publishing/marketplace/Thumbnail-Configuration-Example.png" width="300" />
+   <img src="../assets/publishing/marketplace/Thumbnail-Configuration-Example.png" width="300" />
 
 To use the Custom Thumbnail Tool:
 
@@ -41,7 +41,7 @@ To use the Custom Thumbnail Tool:
 5. When complete, click **Accept** to generate the thumbnail configuration objects.
 6. You can preview the thumbnail by right-clicking the accessory in the Explorer window and selecting **Save To Roblox…**. The Asset Configuration dialog appears and displays the current thumbnail.
    <img
-   src="../../assets/publishing/marketplace/Asset-Configure-Dropdown.png"
+   src="../assets/publishing/marketplace/Asset-Configure-Dropdown.png"
    width="600" />
 
 If your thumbnail does not look correct, **repeat steps 2-5** to overwrite the existing thumbnail data.

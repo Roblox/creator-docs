@@ -19,10 +19,10 @@ Typically when you create an original work, the things that are unique about it 
 For example, users that create virtual baseball caps on Roblox will not be able to request the removal of other completely different baseball caps, as shown below:
 
 <GridContainer numColumns="4">
-<figure><img src="../../assets/art/Cap-A.png" width = "100%"/></figure>
-<figure><img src="../../assets/art/Cap-B.png" width = "100%"/></figure>
-<figure><img src="../../assets/art/Cap-C.png" width = "100%"/></figure>
-<figure><img src="../../assets/art/Cap-D.png" width = "100%"/></figure>
+<figure><img src="../assets/art/Cap-A.png" width = "100%"/></figure>
+<figure><img src="../assets/art/Cap-B.png" width = "100%"/></figure>
+<figure><img src="../assets/art/Cap-C.png" width = "100%"/></figure>
+<figure><img src="../assets/art/Cap-D.png" width = "100%"/></figure>
 </GridContainer>
 
 <p />
@@ -38,7 +38,7 @@ In order to protect your IP, it's important that your creations are unique. For 
 
 <center>
 <figure>
-<img src="../../assets/art/Helmet-A.png" width = "250px" />
+<img src="../assets/art/Helmet-A.png" width = "250px" />
 <figcaption>Trojan helmet with design detail elements that may be copyright-protected due to their unique nature. </figcaption>
 </figure>
 </center>
@@ -48,13 +48,13 @@ When the creator sees others using those specific original design elements in th
 <figure>
 <Grid container numColumns="2" spacing={3} justifyContent={"center"}>
 <Grid item>
-<img src="../../assets/art/Helmet-B.png" width = "250px" />
+<img src="../assets/art/Helmet-B.png" width = "250px" />
 </Grid>
 <Grid item>
-<img src="../../assets/art/Helmet-C.png" width = "250px" />
+<img src="../assets/art/Helmet-C.png" width = "250px" />
 </Grid>
 <Grid item>
-<img src="../../assets/art/Helmet-D.png" width = "250px" />
+<img src="../assets/art/Helmet-D.png" width = "250px" />
 </Grid>
 <figcaption>Potentially infringing Trojan helmets using unique design elements of the original.</figcaption>
 </Grid>
@@ -65,10 +65,10 @@ But just because the original creator can request the removal of those three Tro
 <figure>
 <Grid container numColumns="2" spacing={3} justifyContent={"center"}>
 <Grid item>
-<img src="../../assets/art/Helmet-A.png" width = "250px" />
+<img src="../assets/art/Helmet-A.png" width = "250px" />
 </Grid>
 <Grid item>
-<img src="../../assets/art/Helmet-E.png" width = "250px" />
+<img src="../assets/art/Helmet-E.png" width = "250px" />
 </Grid>
 <center><figcaption>Substantially differentiated Trojan helmet sharing none of the unique design elements of the original, reducing the likelihood that it would be removed for IP infringement.</figcaption> </center>
 </Grid>
@@ -91,7 +91,7 @@ Roblox complies with the [Digital Millennium Copyright Act (DMCA)](https://www.c
 
 Only the IP rights holder knows what rights they have and who they have given permission to use their creations. Because of that, **we rely on rights holders to let us know what they believe infringes their rights by filing a takedown report**.
 
-If you find content on Roblox that you believe infringes your IP rights, please see our [DMCA Guidelines](../../production/publishing/dmca-guidelines.md#what-is-the-dmca) for additional information on how to submit an intellectual property takedown notice to us.
+If you find content on Roblox that you believe infringes your IP rights, please see our [DMCA Guidelines](../production/publishing/dmca-guidelines.md#what-is-the-dmca) for additional information on how to submit an intellectual property takedown notice to us.
 
 - Submitting an IP takedown notice to us is a legal process.
 - Only the rights holder or their authorized representative can report content that infringes on their intellectual property rights.
@@ -105,7 +105,7 @@ For example, Roblox may publish a virtual item that's a replica of an ordinary, 
 
 <center>
 <figure>
-<img src="../../assets/art/Traffic-Cone.png" width = "250px" />
+<img src="../assets/art/Traffic-Cone.png" width = "250px" />
 <figcaption>Roblox-created traffic cone. Just because other creators make traffic cones, Roblox will not request the removal of other completely different traffic cones made by other creators.</figcaption>
 </figure>
 </center>
