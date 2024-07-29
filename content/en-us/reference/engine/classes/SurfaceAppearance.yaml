@@ -65,12 +65,8 @@ properties:
       can_load: true
       can_save: true
   - name: SurfaceAppearance.Color
-    summary: |
-      Feature not live - Applies a tint to your existing colormap. Set directly
-      with color picker or programmatically with `Datatype.Color3`.
-    description: |
-      Feature not live - Applies a tint to your existing colormap. Set directly
-      with color picker or programmatically with `Datatype.Color3`.
+    summary: 'Applies a tint to your existing colormap. Set directly with color picker or programmatically with `Datatype.Color3`.'
+    description: 'Applies a tint to your existing colormap. Set directly with color picker or programmatically with `Datatype.Color3`.'
     code_samples: []
     type: Color3
     tags: []
