@@ -221,6 +221,11 @@ Use the following parameters to query the Marketplace:
     <td>`0` = Featured<br />`1` = All<br />`2` = Collectibles<br />`3` = Clothing<br />`4` = BodyParts<br />`5` = Gear<br />`11` = Accessories<br />`12` = AvatarAnimations<br />`13` = CommunityCreations</td>
   </tr>
   <tr>
+    <td>CreatorType</td>
+    <td>byte</td>
+    <td>`1` = User or `2` = Group.</td>
+  </tr>
+  <tr>
     <td>CreatorName</td>
     <td>string</td>
     <td>Search by creator name. If `Enum.CreatorType` is not provided, search is for users only.</td>
@@ -229,11 +234,6 @@ Use the following parameters to query the Marketplace:
     <td>CreatorTargetId</td>
     <td>long</td>
     <td>The user or group ID depending on the CreatorType provided.</td>
-  </tr>
-  <tr>
-    <td>CreatorType</td>
-    <td>byte</td>
-    <td>`1` = User or `2` = Group.</td>
   </tr>
   <tr>
     <td>Cursor</td>
