@@ -58,7 +58,7 @@ description: Marketplace FAQ providing answers and resources for common question
 
   <dt>**How can I protect my [intellectual property (IP)](./intellectual-property.md)?**</dt>
 
-  <dd><p />IP owners are the ones best positioned to tell us what they believe infringes on their rights. Use the [Rights Manager](../../production/publishing/rights-manager.md) for managing IP infringement removal requests. You can use Rights Manager to report experiences, avatar items, and assets such as models, audio, and images that infringe on your IP. <p /> Roblox investigates each report and takes appropriate action, which may include removing or disabling the infringing content, and, in appropriate circumstances, permanently terminating the accounts of users who have repeatedly infringed on the IP of others.<p /></dd><br />
+  <dd><p />IP owners are the ones best positioned to tell us what they believe infringes on their rights. Use the [Rights Manager](../production/publishing/rights-manager.md) for managing IP infringement removal requests. You can use Rights Manager to report experiences, avatar items, and assets such as models, audio, and images that infringe on your IP. <p /> Roblox investigates each report and takes appropriate action, which may include removing or disabling the infringing content, and, in appropriate circumstances, permanently terminating the accounts of users who have repeatedly infringed on the IP of others.<p /></dd><br />
 
   <dt>**One of my items was taken down. How do I appeal?**</dt>
 
@@ -78,6 +78,6 @@ description: Marketplace FAQ providing answers and resources for common question
 
   <dt>**DMCA:**</dt>
 
-  <dd><p />If you believe that your own intellectual property rights have been infringed or violated by user-created accessories, clothing, bodies, or heads, you may submit a DMCA request via the [Rights Manager](../../production/publishing/rights-manager.md). Rights Manager handles infringement of any copyrights you either own or are authorized to report on behalf of. If you are not the rights holder or authorized representative, your request will not be processed. <p />For 3D accessories, clothing, bodies, or heads that may violate Roblox's Community Standards, please use the Report Abuse feature available on an item's catalog page or submit a report via [support ticket](www.roblox.com/support).<p /></dd><br />
+  <dd><p />If you believe that your own intellectual property rights have been infringed or violated by user-created accessories, clothing, bodies, or heads, you may submit a DMCA request via the [Rights Manager](../production/publishing/rights-manager.md). Rights Manager handles infringement of any copyrights you either own or are authorized to report on behalf of. If you are not the rights holder or authorized representative, your request will not be processed. <p />For 3D accessories, clothing, bodies, or heads that may violate Roblox's Community Standards, please use the Report Abuse feature available on an item's catalog page or submit a report via [support ticket](www.roblox.com/support).<p /></dd><br />
 
 </dl>

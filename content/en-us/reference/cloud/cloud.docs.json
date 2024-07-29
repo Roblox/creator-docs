@@ -1952,6 +1952,62 @@
         }
       }
     },
+    "/cloud/v2/universes/{universe}/data-stores:snapshot": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data Stores]\n (https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
+        "operationId": "Cloud_SnapshotDataStores",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnapshotDataStoresRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SnapshotDataStoresResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.control:snapshot"
+            ],
+            "title": "Snapshot Data Stores"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStore",
+            "name": "DataStore"
+          }
+        }
+      }
+    },
     "/cloud/v2/universes/{universe}/memory-store/queues/{queue}/items": {
       "post": {
         "tags": [
@@ -6238,6 +6294,62 @@
           "resource": {
             "$ref": "#/components/schemas/DataStoreEntry",
             "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/data-stores:snapshot": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data Stores]\n (https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
+        "operationId": "Cloud_SnapshotDataStores",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnapshotDataStoresRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SnapshotDataStoresResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.control:snapshot"
+            ],
+            "title": "Snapshot Data Stores"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStore",
+            "name": "DataStore"
           }
         }
       }
@@ -11416,6 +11528,41 @@
         },
         "description": "A secret represented as a byte array.\n\n Secrets are software-level credentials that allow a program\n to access another program without the need for providing a username and\n a password.",
         "x-resource": true
+      },
+      "SnapshotDataStoresRequest": {
+        "type": "object",
+        "properties": {},
+        "description": "Takes a new snapshot for the given experience."
+      },
+      "SnapshotDataStoresResponse": {
+        "type": "object",
+        "properties": {
+          "newSnapshotTaken": {
+            "type": "boolean",
+            "description": "Whether a new snapshot was taken by this operation.\n (Only one snapshot can be taken per experience per UTC day.)",
+            "x-example-values": {
+              "exampleValues": [
+                true
+              ]
+            }
+          },
+          "latestSnapshotTime": {
+            "type": "string",
+            "description": "The time of the latest snapshot after the operation (regardless of\n whether a new snapshot was created). This time is always returned in UTC.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          }
+        },
+        "description": "Returns whether a new snapshot was taken and the time of the latest\n snapshot after the operation (regardless of whether a new snapshot was\n taken).",
+        "x-oneOf": {
+          "NewSnapshotTaken": [
+            "newSnapshotTaken"
+          ]
+        }
       },
       "Status": {
         "type": "object",

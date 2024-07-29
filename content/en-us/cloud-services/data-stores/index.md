@@ -413,7 +413,9 @@ User-defined metadata has the following limits:
 
 ## Versioning
 
-With versioning, `Class.GlobalDataStore:SetAsync()|SetAsync()` and `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` create new versions instead of overwriting existing data, and `Class.GlobalDataStore:GetAsync()|GetAsync()` reads the latest version. `Class.DataStoreService` periodically checks the timestamps of each version and removes versions older than 30 days, but retains the latest version indefinitely.
+`Class.GlobalDataStore:SetAsync()|SetAsync()`, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`, and `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()` periodically create versioned backups ("versions") of your data. Specifically, the first write to each key in each UTC hour creates a versioned backup of the previous data. All successive writes to a key within the same UTC hour permanently overwrite the previous data.
+
+Versioned backups expire 30 days after they are made non-current by a new write. The latest version is special and is retained indefinitely.
 
 There are three new APIs for versioning operations:
 
@@ -478,6 +480,14 @@ if listSuccess then
     end
 end
 ```
+
+### Snapshots
+
+Through the [Snapshot Data Stores Open Cloud API](/cloud/reference/DataStore#Snapshot-Data-Stores), you can take a snapshot of all the data stores in an experience once per UTC day, per experience. After a snapshot, the next write to every key in the experience creates a versioned backup of the previous data, regardless of the time of the last write. In effect, all data current at the time of the snapshot is guaranteed to be available as a versioned backup for at least 30 days.
+
+Use this endpoint before publishing any experience update that changes your data storage logic. Taking a snapshot guarantees that you have the most recent data available from the previous version of your experience.
+
+For example, without a snapshot, if an update published at 3:30 UTC causes data corruption, corrupted writes will overwrite any data written between 3:00-3:30 UTC. With a snapshot taken at 3:29 UTC, the corrupted data will not overwrite anything written before 3:29 UTC, preserving the latest data for all keys written between 3:00-3:29 UTC.
 
 ## Listing and Prefixes
 
