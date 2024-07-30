@@ -2033,7 +2033,7 @@ methods:
     returns:
       - type: string
         summary: |
-          The player's role in the specified group, or _Guest_ of the player is
+          The player's role in the specified group, or _Guest_ if the player is
           not a member.
     tags:
       - Yields

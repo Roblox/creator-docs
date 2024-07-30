@@ -1,9 +1,11 @@
 name: UIDragDetectorDragStyle
 type: enum
 summary: |
-  Used with `Class.UIDragDetector` as the paradigm to generate proposed motion, given a stream of input position vectors.
+  Used with `Class.UIDragDetector` as the paradigm to generate proposed motion,
+  given a stream of input position vectors.
 description: |
-  Used with `Class.UIDragDetector` as the paradigm to generate proposed motion, given a stream of input position vectors.
+  Used with `Class.UIDragDetector` as the paradigm to generate proposed motion,
+  given a stream of input position vectors.
 code_samples: []
 tags: []
 deprecation_message: ''

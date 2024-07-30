@@ -1,9 +1,11 @@
 name: UIDragDetectorResponseStyle
 type: enum
 summary: |
-  Describes how the clicked `Class.GuiObject` will be treated once the desired motion has been calculated.
+  Describes how the clicked `Class.GuiObject` will be treated once the desired
+  motion has been calculated.
 description: |
-  Describes how the clicked `Class.GuiObject` will be treated once the desired motion has been calculated.
+  Describes how the clicked `Class.GuiObject` will be treated once the desired
+  motion has been calculated.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -17,8 +19,8 @@ items:
     deprecation_message: ''
   - name: Scale
     summary: |
-      Move by the `Datatype.UDim.Scale|Scale` values of the detector's
-      parent's `Class.GuiObject.Position` value.
+      Move by the `Datatype.UDim.Scale|Scale` values of the detector's parent's
+      `Class.GuiObject.Position` value.
     value: 1
     tags: []
     deprecation_message: ''
