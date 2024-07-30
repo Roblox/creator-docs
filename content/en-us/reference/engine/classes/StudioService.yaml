@@ -44,8 +44,10 @@ properties:
       ```lua
       local startTime = os.time()
       local activeScript
-      local function onActiveScriptChanged(newActiveScript)
-      	if newActiveScript ~= activeScript then
+      local function onActiveScriptChanged()
+        local newActiveScript = game:GetService("StudioService").ActiveScript
+      
+      	if newActiveScript ~= activeScript and activeScript then
       		local deltaTime = os.time() - startTime
       		print(("You edited %s for %d:%2.d"):format(activeScript.Name, deltaTime // 60, deltaTime % 60))
       	end
