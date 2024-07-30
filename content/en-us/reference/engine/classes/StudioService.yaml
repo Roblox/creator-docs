@@ -42,10 +42,12 @@ properties:
       measure for how long a script was active.
 
       ```lua
+      local StudioService = game:GetService("StudioService")
+      
       local startTime = os.time()
       local activeScript
       local function onActiveScriptChanged()
-        local newActiveScript = game:GetService("StudioService").ActiveScript
+        local newActiveScript = StudioService.ActiveScript
       
       	if newActiveScript ~= activeScript and activeScript then
       		local deltaTime = os.time() - startTime
@@ -54,7 +56,8 @@ properties:
       	startTime = os.time()
       	activeScript = newActiveScript
       end
-      game:GetService("StudioService"):GetPropertyChangedSignal("ActiveScript"):Connect(onActiveScriptChanged)
+      
+      StudioService:GetPropertyChangedSignal("ActiveScript"):Connect(onActiveScriptChanged)
       ```
     code_samples:
     type: Instance
