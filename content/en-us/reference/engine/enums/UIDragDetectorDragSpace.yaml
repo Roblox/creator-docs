@@ -21,15 +21,22 @@ items:
     deprecation_message: ''
   - name: LayerCollector
     summary: |
-      Designates the input and return values' space as that of the `Class.LayerCollector`.
+      Designates the input and return values' space as that of the
+      `Class.LayerCollector`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Reference
     summary: |
-      Designates the input and return values' space as that of the `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance`. For `Class.UIDragDetector.DragRelativity|DragRelativity` and `Class.UIDragDetector.DragUDim2|DragUDim2` purposes, the `(0, 0)` origin is the absolute center position of the `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance`.
+      Designates the input and return values' space as that of the
+      `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance`. For
+      `Class.UIDragDetector.DragRelativity|DragRelativity` and
+      `Class.UIDragDetector.DragUDim2|DragUDim2` purposes, the `(0, 0)` origin
+      is the absolute center position of the
+      `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance`.
 
-      If `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is not `nil`, this will behave the same as **Parent**.
+      If `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is not
+      `nil`, this will behave the same as **Parent**.
     value: 2
     tags: []
     deprecation_message: ''

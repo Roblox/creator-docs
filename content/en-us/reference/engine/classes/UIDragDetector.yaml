@@ -10,13 +10,20 @@ description: |
   with 2D user interface elements in an experience, such as sliders and
   spinners. Key features include:
 
-  - Place a `Class.UIDragDetector` under any `Class.GuiObject` instance to make it draggable via all inputs without a single line of code.
+  - Place a `Class.UIDragDetector` under any `Class.GuiObject` instance to make
+    it draggable via all inputs without a single line of code.
 
-  - Choose from several `Class.UIDragDetector.DragStyle|DragStyle` options, define how the object responds to motion via `Class.UIDragDetector.ResponseStyle|ResponseStyle`, and optionally apply axis, movement limits, or drag boundaries.
+  - Choose from several `Class.UIDragDetector.DragStyle|DragStyle` options,
+    define how the object responds to motion via
+    `Class.UIDragDetector.ResponseStyle|ResponseStyle`, and optionally apply
+    axis, movement limits, or drag boundaries.
 
-  - Scripts can respond to manipulation of dragged objects to drive logic responses, such as adjusting settings.
+  - Scripts can respond to manipulation of dragged objects to drive logic
+    responses, such as adjusting settings.
 
-  - `Class.UIDragDetector|UIDragDetectors` work in Studio as long as you're **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, nor certain plugins or Studio's **UI** editor tools.
+  - `Class.UIDragDetector|UIDragDetectors` work in Studio as long as you're
+    **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, nor
+    certain plugins or Studio's **UI** editor tools.
 code_samples: []
 inherits:
   - UIComponent
@@ -210,16 +217,16 @@ properties:
 
       For example, if the detector's parent `Class.GuiObject` is a child of a
       parent `Class.GuiObject` that's rotated:
-      
-      - Returning a `Datatype.UDim2.fromOffset(1, 0)` from a registered function
-      with this property set to `Enum.UIDragDetectorDragSpace.Parent` will move
-      the detector's parent `Class.GuiObject` to the right by 1 pixel in the
-      local space affected by its parent's rotation.
 
       - Returning a `Datatype.UDim2.fromOffset(1, 0)` from a registered function
-      with this property set to `Enum.UIDragDetectorDragSpace.LayerCollector`
-      will move the detector's parent `Class.GuiObject` to the right by 1 pixel
-      in the space of the `Class.LayerCollector`.
+        with this property set to `Enum.UIDragDetectorDragSpace.Parent` will
+        move the detector's parent `Class.GuiObject` to the right by 1 pixel in
+        the local space affected by its parent's rotation.
+
+      - Returning a `Datatype.UDim2.fromOffset(1, 0)` from a registered function
+        with this property set to `Enum.UIDragDetectorDragSpace.LayerCollector`
+        will move the detector's parent `Class.GuiObject` to the right by 1
+        pixel in the space of the `Class.LayerCollector`.
     code_samples: []
     type: UIDragDetectorDragSpace
     tags: []
@@ -252,7 +259,8 @@ properties:
       can_save: true
   - name: UIDragDetector.DragUDim2
     summary: |
-      The translation performed by the current drag expressed in a `Datatype.UDim2` value.
+      The translation performed by the current drag expressed in a
+      `Datatype.UDim2` value.
     description: |
       The translation performed by the current drag expressed in a
       `Datatype.UDim2` value. Translation is done through
@@ -303,7 +311,7 @@ properties:
       within the range of `Class.UIDragDetector.MinDragAngle|MinDragAngle` and
       `Class.UIDragDetector.MaxDragAngle|MaxDragAngle`. Positive values impede
       clockwise rotation while negative values impede counterclockwise rotation.
-      
+
       This is not a constraint; it merely impedes the detector's attempts to
       generate motion in order to remain within limits. See
       `Class.UIDragDetector:AddConstraintFunction()|AddConstraintFunction()` to
@@ -339,7 +347,7 @@ properties:
       generate motion in order to remain within limits. See
       `Class.UIDragDetector:AddConstraintFunction()|AddConstraintFunction()` to
       add custom constraint to a drag.
-      
+
       Only relevant if `Class.UIDragDetector.DragStyle|DragStyle` is
       `Enum.UIDragDetectorDragStyle.TranslateLine` or
       `Enum.UIDragDetectorDragStyle.TranslatePlane`.
@@ -365,12 +373,12 @@ properties:
       within the range of `Class.UIDragDetector.MinDragAngle|MinDragAngle` and
       `Class.UIDragDetector.MaxDragAngle|MaxDragAngle`. Positive values impede
       clockwise rotation while negative values impede counterclockwise rotation.
-      
+
       This is not a constraint; it merely impedes the detector's attempts to
       generate motion in order to remain within limits. See
       `Class.UIDragDetector:AddConstraintFunction()|AddConstraintFunction()` to
       add custom constraint to a drag.
-      
+
       Only relevant if `Class.UIDragDetector.DragStyle|DragStyle` is
       `Enum.UIDragDetectorDragStyle.Rotate`.
     code_samples: []
@@ -401,7 +409,7 @@ properties:
       generate motion in order to remain within limits. See
       `Class.UIDragDetector:AddConstraintFunction()|AddConstraintFunction()` to
       add custom constraint to a drag.
-      
+
       Only relevant if `Class.UIDragDetector.DragStyle|DragStyle` is
       `Enum.UIDragDetectorDragStyle.TranslateLine` or
       `Enum.UIDragDetectorDragStyle.TranslatePlane`.
@@ -419,7 +427,8 @@ properties:
       can_save: true
   - name: UIDragDetector.ReferenceUIInstance
     summary: |
-      A `Class.GuiObject` instance whose local space and absolute center position is the reference space and origin for the detector.
+      A `Class.GuiObject` instance whose local space and absolute center
+      position is the reference space and origin for the detector.
     description: |
       A `Class.GuiObject` instance whose local space and absolute center
       position is the reference space and origin for the detector. Setting this
@@ -579,7 +588,12 @@ methods:
         type: Function
         default:
         summary: |
-          Function for monitoring `Class.UIDragDetector.DragContinue|DragContinue` signals. This function receives the singal's screen space input position and returns a `Datatype.UDim2` and float containing the desired motion of the drag in the desired space and relativity. If this function returns `nil`, the object will not be moved.
+          Function for monitoring
+          `Class.UIDragDetector.DragContinue|DragContinue` signals. This
+          function receives the singal's screen space input position and returns
+          a `Datatype.UDim2` and float containing the desired motion of the drag
+          in the desired space and relativity. If this function returns `nil`,
+          the object will not be moved.
     returns:
       - type: void
         summary: ''

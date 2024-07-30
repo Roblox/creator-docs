@@ -11,24 +11,24 @@ description: |
   around, and much more. Key features include:
 
   - Place a `Class.DragDetector` under any `Class.BasePart` or `Class.Model` to
-  make it draggable via all inputs (mouse, touch, gamepad, and VR), all without
-  a single line of code.
+    make it draggable via all inputs (mouse, touch, gamepad, and VR), all
+    without a single line of code.
 
   - Choose from several `Class.DragDetector.DragStyle|DragStyle` options, define
-  how the object responds to motion via
-  `Class.DragDetector.ResponseStyle|ResponseStyle`, and optionally apply axis or
-  movement limits.
+    how the object responds to motion via
+    `Class.DragDetector.ResponseStyle|ResponseStyle`, and optionally apply axis
+    or movement limits.
 
   - Scripts can respond to manipulation of dragged objects to drive UI or make
-  logical decisions, such as adjusting the light level in a room based on a
-  sliding wall switch dimmer.
+    logical decisions, such as adjusting the light level in a room based on a
+    sliding wall switch dimmer.
 
   - Players can manipulate anchored parts or models and they'll stay exactly
-  where you put them upon release.
+    where you put them upon release.
 
   - `Class.DragDetector|DragDetectors` work in Studio as long as you're **not**
-  using the **Select**, **Move**, **Scale**, or **Rotate** tools, making it
-  easier to test and adjust draggable objects while editing.
+    using the **Select**, **Move**, **Scale**, or **Rotate** tools, making it
+    easier to test and adjust draggable objects while editing.
 
   See the [3D Drag Detectors](../../../ui/3D-drag-detectors.md) guide for
   details and usage examples.
@@ -212,12 +212,12 @@ properties:
     description: |
       If this is greater than `Class.DragDetector.MinDragAngle|MinDragAngle`,
       translation will be clamped within that range.
-      
+
       This is not a constraint; it merely impedes the drag detector's attempts
       to generate motion in order to remain within limits. See
       `Class.DragDetector:AddConstraintFunction()|AddConstraintFunction()` to
       add custom constraint to a drag.
-      
+
       Only relevant if `Class.DragDetector.DragStyle|DragStyle` is
       `Enum.DragDetectorDragStyle.RotateAxis`.
     code_samples: []
@@ -240,7 +240,7 @@ properties:
       In any dimension, if this is greater than
       `Class.DragDetector.MinDragTranslation|MinDragTranslation`, translation
       will be clamped within that range.
-      
+
       This is not a constraint; it merely impedes the drag detector's attempts
       to generate motion in order to remain within limits. See
       `Class.DragDetector:AddConstraintFunction()|AddConstraintFunction()` to
@@ -304,12 +304,12 @@ properties:
     description: |
       If this is less than `Class.DragDetector.MaxDragAngle|MaxDragAngle`,
       translation will be clamped within that range.
-      
+
       This is not a constraint; it merely impedes the drag detector's attempts
       to generate motion in order to remain within limits. See
       `Class.DragDetector:AddConstraintFunction()|AddConstraintFunction()` to
       add custom constraint to a drag.
-      
+
       Only relevant if `Class.DragDetector.DragStyle|DragStyle` is
       `Enum.DragDetectorDragStyle.RotateAxis`.
     code_samples: []
@@ -332,7 +332,7 @@ properties:
       In any dimension, if this is less than
       `Class.DragDetector.MaxDragTranslation|MaxDragTranslation`, translation
       will be clamped within that range.
-      
+
       This is not a constraint; it merely impedes the drag detector's attempts
       to generate motion in order to remain within limits. See
       `Class.DragDetector:AddConstraintFunction()|AddConstraintFunction()` to

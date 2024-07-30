@@ -94,10 +94,10 @@ properties:
 
       Note that this property currently cannot be changed by scripts as the
       collision model of the mesh cannot be recomputed during runtime. See
-      `Class.InsertService:CreateMeshPartAsync()` as a method to create a
-      new `Class.MeshPart` from a given `Class.MeshPart.MeshId|MeshId` and
-      with a specified `Class.MeshPart.CollisionFidelity|CollisionFidelity`
-      and `Class.MeshPart.RenderFidelity|RenderFidelity`.
+      `Class.InsertService:CreateMeshPartAsync()` as a method to create a new
+      `Class.MeshPart` from a given `Class.MeshPart.MeshId|MeshId` and with a
+      specified `Class.MeshPart.CollisionFidelity|CollisionFidelity` and
+      `Class.MeshPart.RenderFidelity|RenderFidelity`.
     code_samples:
     type: Content
     tags: []
