@@ -49,7 +49,7 @@ properties:
       local function onActiveScriptChanged()
         local newActiveScript = StudioService.ActiveScript
       
-      	if newActiveScript ~= activeScript and activeScript then
+      	if activeScript and newActiveScript ~= activeScript then
       		local deltaTime = os.time() - startTime
       		print(("You edited %s for %d:%2.d"):format(activeScript.Name, deltaTime // 60, deltaTime % 60))
       	end
