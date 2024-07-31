@@ -1016,9 +1016,9 @@ events:
             RobuxSpent: number
             Items: {
               {
-                Type: MarketplaceProductType,
-                Id: string,
-                Status: MarketplaceItemPurchaseStatus
+                type: MarketplaceProductType,
+                id: string,
+                status: MarketplaceItemPurchaseStatus
               },
               ...
             }
@@ -1027,9 +1027,9 @@ events:
 
           Each line item contains the following pairs:
 
-          - `Type`: The corresponding `Enum.MarketplaceProductType` (Enum).
-          - `Id`: The ID of the asset or bundle (string).
-          - `Status`: The `Enum.MarketplaceItemPurchaseStatus` of the purchase
+          - `type`: The corresponding `Enum.MarketplaceProductType` (Enum).
+          - `id`: The ID of the asset or bundle (string).
+          - `status`: The `Enum.MarketplaceItemPurchaseStatus` of the purchase
             (Enum)
     tags: []
     deprecation_message: ''
