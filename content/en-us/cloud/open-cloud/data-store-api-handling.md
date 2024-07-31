@@ -112,7 +112,7 @@ Unlike the Lua API, these limits currently do not scale based on user counts. Ex
 Before sending your request, make sure to validate endpoint parameters on formatting requirements and constraints based on the following table. Individual endpoints can have additional requirements beyond these. If a parameter doesn't satisfy the following restrictions, the endpoint returns a `400 Bad Request`.
 
 <Alert severity="info">
-Ordered Data Stores endpoints use [Perfect-Encoding](https://www.rfc-editor.org/rfc/rfc3986#section-2.1) for all query and body parameters. Unless you have special characters in your parameter values that break URLs, you don't need to handle encoding yourself.
+Ordered Data Stores endpoints use [Percent-Encoding](https://www.rfc-editor.org/rfc/rfc3986#section-2.1) for all query and body parameters. Unless you have special characters in your parameter values that break URLs, you don't need to handle encoding yourself.
 </Alert>
 
 <table>
