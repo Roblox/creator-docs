@@ -66,3 +66,28 @@ items:
     value: 11
     tags: []
     deprecation_message: ''
+  - name: UI
+    summary: ''
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: CSG
+    summary: ''
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: Chat
+    summary: ''
+    value: 14
+    tags: []
+    deprecation_message: ''
+  - name: Animation
+    summary: ''
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: Avatar
+    summary: ''
+    value: 16
+    tags: []
+    deprecation_message: ''

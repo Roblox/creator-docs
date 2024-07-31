@@ -1525,8 +1525,7 @@ methods:
     returns:
       - type: Vector3
         summary: ''
-    tags:
-      - NotBrowsable
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
