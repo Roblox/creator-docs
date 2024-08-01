@@ -343,6 +343,8 @@ Accessories, such as clothing items, which stretch and fit around any character 
 
 Your items must meet the following requirements before you upload them to the Marketplace to sell:
 
+- Rigid accessories that you intend to sell on the Marketplace require a `Class.SpecialMesh` and don't support [SurfaceAppearance](../../art/modeling/surface-appearance.md).
+  - Use the [Generate Legacy Accessory](./accessory-fitting-tool.md#generate-legacy-accessory) option when creating your accessory.
 - Ensure that your items adhere to the [Marketplace Program Guidelines](../../marketplace/marketplace-policy.md).
 - Whenever applicable, ensure that your items adhere to Roblox's [custom mesh specifications](../../art/modeling/specifications.md).
 - Object `Class.MeshPart.Material|Material` is set to `Plastic`.

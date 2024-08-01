@@ -36,7 +36,12 @@ To fit and generate your accessory:
 
       <video controls src="../../../assets/art/accessories/creating-rigid/Fitting-Mask.mp4" width="100%"></video>
 
-6. After previewing and fitting your asset, select **Generate MeshPart Accessory** to create the Accessory and add it to your explorer.
+6. After previewing and fitting your asset, select the **dropdown** next to **Generate** button to select **Generate Legacy Accessory** to create the Accessory and add it to your explorer.
+
+   - For rigid accessories that you intend to sell on the Marketplace you must use the [Generate Legacy Accessory](../accessory-fitting-tool.md#generate-legacy-accessory) option when creating your Marketplace accessories.
+   - PBR textures automatically convert to basic textures for these legacy accessories.
+
+   <img src="../../../assets/accessories/accessory-fitting-tool/Generate-Legacy-Accessory.png" alt="A dropdown appears above the GenerateMeshPartAccessory when expanded, displaying a Generate Legacy Accessory option."/>
 
 <Alert severity = 'success'>
 After successful fitting and converting, your 3D model should populate in your project as a `Class.Accessory`. With this `Class.Accessory` you can perform any of the following:

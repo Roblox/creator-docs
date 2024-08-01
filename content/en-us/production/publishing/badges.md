@@ -41,12 +41,13 @@ To create a badge:
      </figure>
      </GridContainer>
 
-1. Fill in the following fields:
+1. Complete the following fields:
 
    - **Name** — A title for the badge.
    - **Description** — A description of what the player can do to earn the badge.
+   - **Badge is Enabled** — Whether or not the badge will be enabled when it is created. Disabled badges are not shown under the **Badges** section of the experience's main page and cannot be earned by players.
 
-1. Click the **Create Badge** button. The new badge displays within the **Engagement**&nbsp;&rarr; **Badges** section on the [Creator Dashboard](https://create.roblox.com/dashboard/creations), as well as the **Badges** section of the experience's main page.
+1. Click the **Create Badge** button. The new badge displays within the **Engagement**&nbsp;&rarr; **Badges** section on the [Creator Dashboard](https://create.roblox.com/dashboard/creations). If the new badge is enabled, it will also be shown under the **Badges** section of the experience's main page.
 
    <figure>
 	 <img src="../../assets/publishing/badges/Badge-Experience-Page.png" width="780" />
@@ -71,7 +72,7 @@ A badge's ID is its unique identifier. You'll need this ID when implementing wor
 
 ### Awarding Badges
 
-You can award badges to players throughout your experience by calling the `Class.BadgeService:AwardBadge()` method in a server-side `Class.Script`. `Class.BadgeService:GetBadgeInfoAsync()` returns properties of the badge, including `IsEnabled` which confirms whether or not the badge can be awarded to a player.
+You can award badges to players throughout your experience by calling the `Class.BadgeService:AwardBadge()` method in a server-side `Class.Script`. `Class.BadgeService:GetBadgeInfoAsync()` returns properties of the badge, including `IsEnabled` which confirms whether or not the badge can be awarded to a player. You can enable or disable a badge from the **Configure Badge** form on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
 The following is an example of a safe function for awarding badges to players.
 
