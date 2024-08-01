@@ -1115,6 +1115,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Hat.yaml
         ignoreTranslation: true
+      - title: HeatmapService
+        path: /reference/engine/classes/HeatmapService
+        type: engineapi
+        source: /reference/engine/classes/HeatmapService.yaml
+        ignoreTranslation: true
       - title: HeightmapImporterService
         path: /reference/engine/classes/HeightmapImporterService
         type: engineapi
@@ -3558,6 +3563,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ClientAnimatorThrottlingMode.yaml
         ignoreTranslation: true
+      - title: CloseReason
+        path: /reference/engine/enums/CloseReason
+        type: engineapi
+        source: /reference/engine/enums/CloseReason.yaml
+        ignoreTranslation: true
       - title: CollaboratorStatus
         path: /reference/engine/enums/CollaboratorStatus
         type: engineapi
@@ -4162,6 +4172,11 @@ navigation:
         path: /reference/engine/enums/LoadDynamicHeads
         type: engineapi
         source: /reference/engine/enums/LoadDynamicHeads.yaml
+        ignoreTranslation: true
+      - title: LocationType
+        path: /reference/engine/enums/LocationType
+        type: engineapi
+        source: /reference/engine/enums/LocationType.yaml
         ignoreTranslation: true
       - title: MarketplaceBulkPurchasePromptStatus
         path: /reference/engine/enums/MarketplaceBulkPurchasePromptStatus

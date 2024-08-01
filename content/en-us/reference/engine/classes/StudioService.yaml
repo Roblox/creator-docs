@@ -43,12 +43,12 @@ properties:
 
       ```lua
       local StudioService = game:GetService("StudioService")
-      
+
       local startTime = os.time()
       local activeScript
       local function onActiveScriptChanged()
         local newActiveScript = StudioService.ActiveScript
-      
+
       	if activeScript and newActiveScript ~= activeScript then
       		local deltaTime = os.time() - startTime
       		print(("You edited %s for %d:%2.d"):format(activeScript.Name, deltaTime // 60, deltaTime % 60))
@@ -56,7 +56,7 @@ properties:
       	startTime = os.time()
       	activeScript = newActiveScript
       end
-      
+
       StudioService:GetPropertyChangedSignal("ActiveScript"):Connect(onActiveScriptChanged)
       ```
     code_samples:
