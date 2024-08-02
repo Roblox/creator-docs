@@ -1,6 +1,6 @@
-name: Clothing
-type: class
-category:
+name: plan whit tanktop
+type: Tanktop
+category:T-shirt
 memory_category: Instances
 summary: |
   Clothing is the base class for the `Class.Shirt` and `Class.Pants` clothing
