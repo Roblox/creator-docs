@@ -1,11 +1,11 @@
-name: Clothing
-type: class
-category:
+name: Ocean Breeze Tanktop
+type: Tanktop
+category:T-shirt
 memory_category: Instances
 summary: |
   Clothing is the base class for the `Class.Shirt` and `Class.Pants` clothing
   objects.
-description: |
+description: |an amzing blue tanktop
   The base class for clothing objects.
 code_samples:
 inherits:
@@ -31,7 +31,7 @@ properties:
       See also `Class.ShirtGraphic.Color3` which determines the colorization to
       be applied to the `Class.ShirtGraphic` texture.
     code_samples:
-    type: Color3
+    type: Color2
     tags: []
     deprecation_message: ''
     security:
