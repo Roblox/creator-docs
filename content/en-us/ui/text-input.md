@@ -1,7 +1,9 @@
 ---
-title: Text Input
-description: Text input objects allow users to input text like fields on a form.
+title: Text Input Fields
+description: Text input fields allow users to input text from their physical or on-screen keyboard.
 ---
+
+import TextFiltering from '../includes/text-filtering/text-filtering.md'
 
 A `Class.TextBox` is a rectangle that allows a user to provide text input while it's in focus. When you [script](#scripting-text-inputs) a `Class.TextBox`, you can use it as a search bar or an input field on a form. To help users know what type of text they should input, you can also provide a prompt through the `Class.TextBox.PlaceholderText|PlaceholderText` property, such as "**Search...**" or "**Enter Name...**".
 
@@ -60,24 +62,32 @@ To add a `Class.TextBox` to the face of a part:
 
 ## Scripting Text Inputs
 
-Like buttons, you can script any action for a `Class.TextBox` object to perform when a user interacts with it. For example, the following script connects to the `Class.TextBox.FocusLost|FocusLost` event, which fires when the user presses the Enter button or clicks outside the `Class.TextBox`. The script prints the contents of the box to the Output window when the event fires:
+Like [buttons](../ui/buttons.md), you can script any action for a `Class.TextBox` object when a user interacts with it. For example, the following script connects the `Class.TextBox.FocusLost|FocusLost` event which fires when the user presses the <kbd>Enter</kbd> button or clicks outside the box. If `enterPressed` is `true`, meaning the user submitted the input instead of merely clicking outside the box, the script prints the contents of the entry to the [Output](../studio/output.md) window.
 
-```lua
+```lua title="Basic Text Input Handling"
 local textBox = script.Parent
+
 local function onFocusLost(enterPressed, inputObject)
 	if enterPressed then
 		print(textBox.Text)
 	end
 end
+
 textBox.FocusLost:Connect(onFocusLost)
 ```
 
-As another example, you might want to only allow numbers in a `Class.TextBox`. The following code uses the `Class.TextBox.GetPropertyChangedSignal` event to detect when the `Class.TextBox.Text` changes, such as when a user starts typing. Then it uses the `Library.string.gsub()` function to disallow non-numbers:
+As another example, you might want to allow only numbers in a `Class.TextBox`. The following code uses the `Class.TextBox.GetPropertyChangedSignal` event to detect when the `Class.TextBox.Text` changes, such as when a user starts typing, then it uses the `Library.string.gsub()` function to disallow non‑numbers.
 
-```lua
+```lua title="Restricting Text Input to Numbers"
 local textBox = script.Parent
-local function onlyAllowNumbers()
+
+local function allowOnlyNumbers()
 	textBox.Text = string.gsub(textBox.Text, "%D", "")
 end
-textBox:GetPropertyChangedSignal("Text"):Connect(onlyAllowNumbers)
+
+textBox:GetPropertyChangedSignal("Text"):Connect(allowOnlyNumbers)
 ```
+
+## Text Filtering
+
+<TextFiltering components={props.components} context="characters/strings that users input through text inputs" />

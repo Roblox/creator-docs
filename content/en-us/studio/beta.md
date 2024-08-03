@@ -84,18 +84,6 @@ The following beta features are currently available to all users through Studio'
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent style={{paddingBottom: '0px'}}>
-<Button href="../parts/terrain.md#animated-grass" size="large" color="primaryBrand" variant="outlined" fullWidth>Grass Length Customization</Button>
-<p></p>
-<CardMedia component="img" image="../assets/modeling/terrain/Terrain-GrassLength.jpg" />
-<p></p>
-<figcaption>Enables customization of `Class.Terrain` grass length.</figcaption>
-<p></p>
-<BetaAlert betaName="Grass Length Customization" leadIn="" leadOut="" components={props.components} />
-</CardContent>
-</Card>
-
-<Card variant="outlined" style={{height: '100%'}}>
-<CardContent style={{paddingBottom: '0px'}}>
 <Button href="../animation/capture.md#body" size="large" color="primaryBrand" variant="outlined" fullWidth>Live Animation Creator</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/studio/beta/Live-Animation-Creator.mp4" />
@@ -115,18 +103,6 @@ The following beta features are currently available to all users through Studio'
 <figcaption>Enables the [Material Generator](../studio/material-generator.md) which allows you to generate PBR materials using text input.</figcaption>
 <p></p>
 <BetaAlert betaName="Material Generator" leadIn="" leadOut="" components={props.components} />
-</CardContent>
-</Card>
-
-<Card variant="outlined" style={{height: '100%'}}>
-<CardContent style={{paddingBottom: '0px'}}>
-<Button href="../studio/model-tab.md#material-widget" size="large" color="primaryBrand" variant="outlined" fullWidth>Material Picker</Button>
-<p></p>
-<CardMedia component="img" image="../assets/studio/beta/Material-Picker.png" />
-<p></p>
-<figcaption>Adds a new **Material** button to the toolbar to quickly change part materials.</figcaption>
-<p></p>
-<BetaAlert betaName="Material Picker" leadIn="" leadOut="" components={props.components} />
 </CardContent>
 </Card>
 
@@ -180,49 +156,25 @@ The following beta features are currently available to all users through Studio'
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent style={{paddingBottom: '0px'}}>
-<Button href="https://devforum.roblox.com/t/notched-screen-support-full-release/2074324" size="large" color="primaryBrand" variant="outlined" fullWidth>Notched Screen Support</Button>
+<Button href="https://devforum.roblox.com/t/next-gen-studio-ui-preview-is-here-beta/3075390" size="large" color="primaryBrand" variant="outlined" fullWidth>Next Gen Studio Preview</Button>
 <p></p>
-<CardMedia component="img" image="../assets/studio/beta/Notched-Screen-Support.png" />
+<CardMedia component="img" image="../assets/studio/beta/Next-Gen-Ribbon.png" />
 <p></p>
-<figcaption>Adds new [emulation](../studio/test-tab.md#device-emulation) devices with non-rectangular "notched" screens.</figcaption>
+<figcaption>Enable preview of the next gen Studio core.</figcaption>
 <p></p>
-<BetaAlert betaName="Notched Screen Support" leadIn="" leadOut="" components={props.components} />
+<BetaAlert betaName="Next Gen Studio Preview" leadIn="" leadOut="" components={props.components} />
 </CardContent>
 </Card>
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent style={{paddingBottom: '0px'}}>
-<Button href="https://devforum.roblox.com/t/path2d-studio-beta/2868432" size="large" color="primaryBrand" variant="outlined" fullWidth>Path2D</Button>
-<p></p>
-<CardMedia component="img" image="../assets/studio/beta/Path2D.jpg" />
-<p></p>
-<figcaption>Enables the new `Class.Path2D` instance and in-viewport editor for 2D splines.</figcaption>
-<p></p>
-<BetaAlert betaName="Path2D Instance" leadIn="" leadOut="" components={props.components} />
-</CardContent>
-</Card>
-
-<Card variant="outlined" style={{height: '100%'}}>
-<CardContent style={{paddingBottom: '0px'}}>
-<Button href="../studio/test-tab.md#pausing--resuming-physics" size="large" color="primaryBrand" variant="outlined" fullWidth>Simulation Pause</Button>
+<Button href="../studio/test-tab.md#pausing--resuming-physics" size="large" color="primaryBrand" variant="outlined" fullWidth>Simulation Pause and Step</Button>
 <p></p>
 <CardMedia component="img" image="../assets/studio/beta/Simulation-Pause.jpg" />
 <p></p>
 <figcaption>Enables visual pausing and simulation debugging at Studio runtime.</figcaption>
 <p></p>
-<BetaAlert betaName="Simulation Pause" leadIn="" leadOut="" components={props.components} />
-</CardContent>
-</Card>
-
-<Card variant="outlined" style={{height: '100%'}}>
-<CardContent style={{paddingBottom: '0px'}}>
-<Button href="../studio/terrain-editor.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Terrain Editor UI</Button>
-<p></p>
-<CardMedia component="img" image="../assets/studio/beta/Terrain-Editor.png" />
-<p></p>
-<figcaption>Updates the [Terrain Editor](../studio/terrain-editor.md) with a new and improved UI.</figcaption>
-<p></p>
-<BetaAlert betaName="Terrain Editor" leadIn="" leadOut="" components={props.components} />
+<BetaAlert betaName="Simulation Pause and Step" leadIn="" leadOut="" components={props.components} />
 </CardContent>
 </Card>
 

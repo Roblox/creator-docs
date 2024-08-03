@@ -1,28 +1,40 @@
 name: UIDragDetectorDragStyle
 type: enum
-summary: ''
-description: ''
+summary: |
+  Used with `Class.UIDragDetector` as the paradigm to generate proposed motion,
+  given a stream of input position vectors.
+description: |
+  Used with `Class.UIDragDetector` as the paradigm to generate proposed motion,
+  given a stream of input position vectors.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: TranslatePlane
-    summary: ''
+    summary: |
+      2D motion in the plane of the `Class.LayerCollector`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: TranslateLine
-    summary: ''
+    summary: |
+      1D motion along the detector's `Class.UIDragDetector.DragAxis|DragAxis`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Rotate
-    summary: ''
+    summary: |
+      By default, rotation about the absolute center position of the detector's
+      parent `Class.GuiObject`. If
+      `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is set,
+      rotation happens about that instance's absolute center position.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Scriptable
-    summary: ''
+    summary: |
+      Calculates desired motion via a custom function provided through
+      `Class.UIDragDetector:SetDragStyleFunction()|SetDragStyleFunction()`.
     value: 3
     tags: []
     deprecation_message: ''

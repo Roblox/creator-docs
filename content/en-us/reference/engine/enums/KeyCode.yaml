@@ -1549,3 +1549,38 @@ items:
     value: 1017
     tags: []
     deprecation_message: ''
+  - name: MouseLeftButton
+    summary: ''
+    value: 1018
+    tags: []
+    deprecation_message: ''
+  - name: MouseRightButton
+    summary: ''
+    value: 1019
+    tags: []
+    deprecation_message: ''
+  - name: MouseMiddleButton
+    summary: ''
+    value: 1020
+    tags: []
+    deprecation_message: ''
+  - name: MouseBackButton
+    summary: ''
+    value: 1021
+    tags: []
+    deprecation_message: ''
+  - name: MouseNoButton
+    summary: ''
+    value: 1022
+    tags: []
+    deprecation_message: ''
+  - name: MouseX
+    summary: ''
+    value: 1023
+    tags: []
+    deprecation_message: ''
+  - name: MouseY
+    summary: ''
+    value: 1024
+    tags: []
+    deprecation_message: ''

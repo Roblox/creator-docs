@@ -7,52 +7,17 @@ The **Terrain Editor**, accessible from the [Home](../studio/home-tab.md) or [Vi
 
 <img src="../assets/studio/general/Home-Tab-Terrain-Editor.png" width="716" alt="Terrain Editor indicated in Home tab" />
 
-<Alert severity="info">
+<Alert severity="success">
 For detailed instructions on working with terrain, see the [Terrain](../parts/terrain.md) guide.
 </Alert>
 
 ## Create Tab
 
-The **Create** tab includes the [Generate](#generate), [Import](#import), and [Clear](#clear) tools.
-
-### Generate
-
-The **Generate** tool procedurally generates terrain within a region selected by the [Select](#select) tool. This is useful if you want to create a large map and then fine-tune terrain details using the [Edit](#edit-tab) tab tools.
-
-<img src="../assets/studio/terrain-editor/Create-Tab-Generate.png" width="360" alt="Generate tool indicated in Create tab of Terrain Editor" />
-
-<video src="../assets/studio/terrain-editor/Generate-Tool.mp4" controls width="90%" alt="Video of terrain generating procedurally via the Generate tool"></video>
-
-<table size="small">
-<thead>
-	<tr>
-    <th>Option</th>
-		<th>Description</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>**Biomes**</td>
-		<td>Includes the selected biomes in the generated terrain.</td>
-	</tr>
-	<tr>
-		<td>**Biome&nbsp;Size**</td>
-		<td>Sets the size of the biomes within the overall terrain size.</td>
-	</tr>
-	<tr>
-		<td>**Caves**</td>
-		<td>Includes caves in the generated terrain.</td>
-	</tr>
-	<tr>
-		<td>**Seed**</td>
-		<td>A number that Studio generates to determine the shape of the terrain. When you change this number, Studio generates a new terrain with the same settings.</td>
-	</tr>
-</tbody>
-</table>
+The **Create** tab includes the [Import](#import), [Generate](#generate), and [Clear](#clear) tools.
 
 ### Import
 
-The **Import** tool imports a [heightmap](../parts/terrain.md#heightmaps-and-colormaps) and optional [colormap](../parts/terrain.md#heightmaps-and-colormaps) and applies them to a region selected by the [Select](#select) tool.
+The **Import** tool imports a [heightmap](../parts/terrain.md#heightmaps-and-colormaps) and optional [colormap](../parts/terrain.md#heightmaps-and-colormaps) and applies them to a selected region.
 
 <img src="../assets/studio/terrain-editor/Create-Tab-Import.png" width="360" alt="Import tool indicated in Create tab of Terrain Editor" />
 
@@ -76,8 +41,17 @@ The **Import** tool imports a [heightmap](../parts/terrain.md#heightmaps-and-col
 <table size="small">
 <thead>
 	<tr>
-    <th>Option</th>
-		<th>Description</th>
+    <th colspan="2">Selection Settings</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td colspan="2">Size, position, and snapping options as outlined for the [Select](#select) tool.</td>
+	</tr>
+</tbody>
+<thead>
+	<tr>
+    <th colspan="2">Heightmap Settings</th>
 	</tr>
 </thead>
 <tbody>
@@ -86,47 +60,94 @@ The **Import** tool imports a [heightmap](../parts/terrain.md#heightmaps-and-col
 		<td>Imports a heightmap from a local image file.</td>
 	</tr>
 	<tr>
-		<td>**Material**</td>
-		<td>Specifies one consistent material to apply across all of the generated terrain. This is overridden by materials based on the colormap, if imported.</td>
-	</tr>
-	<tr>
 		<td>**Colormap**</td>
 		<td>Imports a colormap from a local image file to use alongside a heightmap.</td>
+	</tr>
+	<tr>
+		<td>**Default Material**</td>
+		<td>Specifies one consistent material to apply across all of the generated terrain. This is overridden by materials based on the colormap, if imported.</td>
+	</tr>
+</tbody>
+</table>
+
+### Generate
+
+The **Generate** tool procedurally generates terrain within a selected region. This is useful if you want to create a large map and then fine-tune terrain details using the [Edit](#edit-tab) tab tools.
+
+<img src="../assets/studio/terrain-editor/Create-Tab-Generate.png" width="360" alt="Generate tool indicated in Create tab of Terrain Editor" />
+
+<video src="../assets/studio/terrain-editor/Generate-Tool.mp4" controls width="90%" alt="Video of terrain generating procedurally via the Generate tool"></video>
+
+<table size="small">
+<thead>
+	<tr>
+    <th colspan="2">Selection Settings</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td colspan="2">Size, position, and snapping options as outlined for the [Select](#select) tool.</td>
+	</tr>
+</tbody>
+<thead>
+	<tr>
+    <th colspan="2">Biome Settings</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>**Biomes**</td>
+		<td>Includes the selected biomes in the generated terrain.</td>
+	</tr>
+	<tr>
+		<td>**Blending**</td>
+		<td>Adjusts how the biomes blend into one another, with higher values a bit smoother.</td>
+	</tr>
+	<tr>
+		<td>**Caves**</td>
+		<td>Includes caves in the generated terrain.</td>
+	</tr>
+	<tr>
+		<td>**Biome Size**</td>
+		<td>Sets the size of the biomes within the overall terrain size.</td>
+	</tr>
+	<tr>
+		<td>**Seed**</td>
+		<td>A number that Studio generates to determine the shape of the terrain. When you change this number, Studio generates a new terrain with the same settings.</td>
 	</tr>
 </tbody>
 </table>
 
 ### Clear
 
-The **Clear** tool opens a confirmation prompt to clear all terrain within the entire place.
+The **Clear** tool reveals a button that clears all terrain within the entire place.
 
 <img src="../assets/studio/terrain-editor/Create-Tab-Clear.png" width="360" alt="Clear tool indicated in Create tab of Terrain Editor" />
 
 ## Edit Tab
 
-The **Edit** tab includes the [Select](#select), [Transform](#transform), [Fill](#fill), [Draw](#draw), [Sculpt](#sculpt), [Smooth](#smooth), [Flatten](#flatten), [Paint](#paint), and [Sea&nbsp;Level](#sea-level) tools.
+The **Edit** tab includes the [Select](#select), [Transform](#transform), [Fill](#fill), [Sea&nbsp;Level](#sea-level), [Draw](#draw), [Sculpt](#sculpt), [Smooth](#smooth), [Paint](#paint), and [Flatten](#flatten) tools.
 
 ### Select
 
-The **Select** tool is the universal tool for selecting rectangular regions of terrain. With the tool enabled, select a region by clicking and dragging in the 3D viewport, reposition it with the **move** draggers, and edit its size with the **scale** handles. Alternatively, enter values into the tool's **X**/**Y**/**Z** inputs to set a specific position and size.
+The **Select** tool is a universal tool for selecting rectangular regions of terrain. With the tool enabled, select a region by clicking and dragging in the 3D viewport, reposition it with the **move** draggers, and edit its size with the **scale** handles. Alternatively, enter values into the tool's **X**/**Y**/**Z** inputs to set a specific position and size.
 
 <img src="../assets/studio/terrain-editor/Edit-Tab-Select.png" width="360" alt="Select tool indicated in Edit tab of Terrain Editor" />
 
 <table size="small">
 <thead>
 	<tr>
-    <th>Option</th>
-		<th>Description</th>
+    <th colspan="2">Selection Settings</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
-		<td>**Position**</td>
-		<td>Sets specific **X**/**Y**/**Z** values for the selection's position.</td>
-	</tr>
-	<tr>
 		<td>**Size**</td>
 		<td>Sets specific **X**/**Y**/**Z** values for the selection's size, in studs.</td>
+	</tr>
+	<tr>
+		<td>**Position**</td>
+		<td>Sets specific **X**/**Y**/**Z** values for the selection's position.</td>
 	</tr>
 	<tr>
 		<td>**Snap to Voxels**</td>
@@ -198,30 +219,33 @@ The **Transform** tool manipulates entire [selected](#select) regions to a new p
 <table size="small">
 <thead>
 	<tr>
-    <th>Option</th>
-		<th>Description</th>
+    <th colspan="2">Transform Settings</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
-		<td>**Position**</td>
-		<td>Sets specific **X**/**Y**/**Z** values for the selection's position.</td>
-	</tr>
-	<tr>
 		<td>**Size**</td>
 		<td>Sets specific **X**/**Y**/**Z** values for the selection's size in studs.</td>
+	</tr>
+	<tr>
+		<td>**Position**</td>
+		<td>Sets specific **X**/**Y**/**Z** values for the selection's position.</td>
 	</tr>
 	<tr>
 		<td>**Rotation**</td>
 		<td>Sets specific **X**/**Y**/**Z** values for the selection's rotation in degrees.</td>
 	</tr>
 	<tr>
-		<td>**Merge&nbsp;Empty**</td>
+		<td>**Merge Empty**</td>
 		<td>When enabled, air voxels in the selection will overwrite existing voxels at the destination.</td>
 	</tr>
 	<tr>
-		<td>**Live&nbsp;Edit**</td>
+		<td>**Live Edit**</td>
 		<td>When enabled, terrain is constantly updated while being transformed. To view only a wireframe preview of the transformation, disable live edit mode and then, while transforming, press <kbd>Enter</kbd>/<kbd>Return</kbd> or click the **Apply** button to apply the changes.</td>
+	</tr>
+	<tr>
+		<td>**Snap to Voxels**</td>
+		<td>Snaps the selection bounds to the nearest voxel.</td>
 	</tr>
 </tbody>
 </table>
@@ -248,14 +272,31 @@ The **Fill** tool fills an entire [selected](#select) region with a specific mat
 <table size="small">
 <thead>
 	<tr>
-    <th>Option</th>
-		<th>Description</th>
+    <th colspan="2">Selection Settings</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
-		<td>**Material&nbsp;Mode**</td>
-		<td>Toggles the tool between **Fill** and **Replace** mode. In **Fill** mode, choose the desired fill material from the tool's picker tiles. In **Replace** mode, choose both the **source** material to replace and the **target** material to replace it with.</td>
+		<td colspan="2">Size, position, and snapping options as outlined for the [Select](#select) tool.</td>
+	</tr>
+</tbody>
+<thead>
+	<tr>
+    <th colspan="2">Material Settings</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>**Fill Mode**</td>
+		<td>Toggles the tool between **Fill** and **Replace** mode.</td>
+	</tr>
+	<tr>
+		<td>**Source Material**</td>
+		<td>In **Fill** mode, the desired fill material. In **Replace** mode, the material to replace.</td>
+	</tr>
+	<tr>
+		<td>**Target Material**</td>
+		<td>In **Replace** mode, the material to replace the source material with.</td>
 	</tr>
 </tbody>
 </table>
@@ -264,6 +305,36 @@ The **Fill** tool fills an entire [selected](#select) region with a specific mat
 <img src="../assets/studio/terrain-editor/Fill-Region.jpg" width="780" alt="Region filled with Salt material" />
 <figcaption>Selected region filled with Salt material</figcaption>
 </figure>
+
+### Sea Level
+
+The **Sea Level** tool lets you create a consistent water level or remove all water within a region.
+
+<img src="../assets/studio/terrain-editor/Edit-Tab-Sea-Level.png" width="360" alt="Sea Level tool indicated in Edit tab of Terrain Editor" />
+
+<video src="../assets/studio/terrain-editor/Sea-Level-Tool.mp4" controls width="90%" alt="Video of sea level being created and modified using the Sea Level tool"></video>
+
+<table size="small">
+<thead>
+	<tr>
+    <th colspan="2">Sea Level Settings</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>**Size**</td>
+		<td>Sets specific **X**/**Y**/**Z** values for the selection's size in studs.</td>
+	</tr>
+	<tr>
+		<td>**Position**</td>
+		<td>Sets specific **X**/**Y**/**Z** values for the selection's position.</td>
+	</tr>
+	<tr>
+		<td>**Snap to Voxels**</td>
+		<td>Snaps the selection bounds to the nearest voxel.</td>
+	</tr>
+</tbody>
+</table>
 
 ### Draw
 
@@ -276,34 +347,33 @@ The **Draw** tool **adds** or **subtracts** terrain using the brush. This tool f
 <table size="small">
 <thead>
 	<tr>
-    <th>Option</th>
-		<th>Description</th>
+    <th colspan="2">Brush Settings</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
-		<td>**Brush&nbsp;Mode**</td>
+		<td>**Brush Mode**</td>
 		<td>Toggles the tool between **Add** and **Subtract** mode. Also toggled by holding down <kbd>Ctrl</kbd> or <kbd>⌘</kbd>.</td>
 	</tr>
 	<tr>
-		<td>**Shape**</td>
+		<td>**Brush Shape**</td>
 		<td>Sets the brush shape to either a **sphere**, **box**, or **cylinder**.<br /><img src="../assets/studio/terrain-editor/Brush-Shape-Icons.png" width="124" alt="Brush shape icons in the Terrain Editor" /></td>
 	</tr>
 	<tr>
-		<td>**Base Size**</td>
+		<td>**Brush Size**</td>
 		<td>Sets the brush size from 1 to 64. If you choose a brush shape of **box** or **cylinder**, a **Height** slider/input also appears to adjust the brush height proportionally or independently of the base size.</td>
 	</tr>
 	<tr>
-		<td>**Pivot&nbsp;Position**</td>
+		<td>**Pivot Position**</td>
 		<td>Sets the vertical pivot point of the brush to either the bottom, center, or top of where the brush connects with existing terrain.</td>
+	</tr>
+	<tr>
+		<td>**Snapping**</td>
+		<td>Whether snapping is off or to the nearest voxel.</td>
 	</tr>
 	<tr>
 		<td>**Plane Lock**</td>
 		<td>Toggles whether to enable a visual plane which the brush locks to. In **Auto** mode, the plane tilts and rotates with the camera. In **Manual** mode, the **Edit&nbsp;Plane** option appears, letting you set a specific position/orientation through the visual draggers or **X**/**Y**/**Z** inputs.</td>
-	</tr>
-	<tr>
-		<td>**Snap to Voxels**</td>
-		<td>Snaps the brush to the nearest voxel.</td>
 	</tr>
 	<tr>
 		<td>**Ignore Water**</td>
@@ -313,12 +383,19 @@ The **Draw** tool **adds** or **subtracts** terrain using the brush. This tool f
 		<td>**Ignore Parts**</td>
 		<td>Ignores [parts](../parts/index.md) in regards to brush placement while moving the mouse pointer across part surfaces.</td>
 	</tr>
+</tbody>
+<thead>
+	<tr>
+    <th colspan="2">Material Settings</th>
+	</tr>
+</thead>
+<tbody>
 	<tr>
 		<td>**Auto Material**</td>
 		<td>Uses the same terrain material in the brush's vicinity when adding new terrain.</td>
 	</tr>
 	<tr>
-		<td>**Material**</td>
+		<td>**Source Material**</td>
 		<td>Sets the [material](../parts/terrain.md#terrain-materials) for **Add** mode.</td>
 	</tr>
 </tbody>
@@ -341,15 +418,15 @@ The **Sculpt** tool **adds** or **subtracts** terrain using the brush. Unlike th
 </thead>
 <tbody>
 	<tr>
-		<td>**Brush&nbsp;Mode**</td>
+		<td>**Brush Mode**</td>
 		<td>Toggles the tool between **Add** and **Subtract** mode. Also toggled by holding down <kbd>Ctrl</kbd> or <kbd>⌘</kbd>.</td>
 	</tr>
 	<tr>
-		<td>**Shape**</td>
+		<td>**Brush Shape**</td>
 		<td>Sets the brush shape to either a **sphere**, **box**, or **cylinder**.<br /><img src="../assets/studio/terrain-editor/Brush-Shape-Icons.png" width="124" alt="Brush shape icons in the Terrain Editor" /></td>
 	</tr>
 	<tr>
-		<td>**Base Size**</td>
+		<td>**Brush Size**</td>
 		<td>Sets the brush size from 1 to 64. If you choose a brush shape of **box** or **cylinder**, a **Height** slider/input also appears to adjust the brush height proportionally or independently of the base size.</td>
 	</tr>
   <tr>
@@ -357,16 +434,8 @@ The **Sculpt** tool **adds** or **subtracts** terrain using the brush. Unlike th
     <td>Sets the brush strength from 0.1 to 1.</td>
   </tr>
 	<tr>
-		<td>**Pivot&nbsp;Position**</td>
-		<td>Sets the vertical pivot point of the brush to either the bottom, center, or top of where the brush connects with existing terrain.</td>
-	</tr>
-	<tr>
 		<td>**Plane Lock**</td>
 		<td>Toggles whether to enable a visual plane which the brush locks to. In **Auto** mode, the plane tilts and rotates with the camera. In **Manual** mode, the **Edit&nbsp;Plane** option appears, letting you set a specific position/orientation through the visual draggers or **X**/**Y**/**Z** inputs.</td>
-	</tr>
-	<tr>
-		<td>**Snap to Voxels**</td>
-		<td>Snaps the brush to the nearest voxel.</td>
 	</tr>
 	<tr>
 		<td>**Ignore Water**</td>
@@ -381,7 +450,7 @@ The **Sculpt** tool **adds** or **subtracts** terrain using the brush. Unlike th
 		<td>Uses the same terrain material in the brush's vicinity when adding new terrain.</td>
 	</tr>
 	<tr>
-		<td>**Material**</td>
+		<td>**Source Material**</td>
 		<td>Sets the [material](../parts/terrain.md#terrain-materials) for **Add** mode.</td>
 	</tr>
 </tbody>
@@ -404,11 +473,11 @@ The **Smooth** tool smoothes out abrupt edges in terrain using the brush. This t
 </thead>
 <tbody>
 	<tr>
-		<td>**Shape**</td>
+		<td>**Brush Shape**</td>
 		<td>Sets the brush shape to either a **sphere**, **box**, or **cylinder**.<br /><img src="../assets/studio/terrain-editor/Brush-Shape-Icons.png" width="124" alt="Brush shape icons in the Terrain Editor" /></td>
 	</tr>
 	<tr>
-		<td>**Base Size**</td>
+		<td>**Brush Size**</td>
 		<td>Sets the brush size from 1 to 64. If you choose a brush shape of **box** or **cylinder**, a **Height** slider/input also appears to adjust the brush height proportionally or independently of the base size.</td>
 	</tr>
   <tr>
@@ -416,75 +485,20 @@ The **Smooth** tool smoothes out abrupt edges in terrain using the brush. This t
     <td>Sets the brush strength from 0.1 to 1.</td>
   </tr>
 	<tr>
-		<td>**Pivot&nbsp;Position**</td>
+		<td>**Pivot Position**</td>
 		<td>Sets the vertical pivot point of the brush to either the bottom, center, or top of where the brush connects with existing terrain.</td>
+	</tr>
+	<tr>
+		<td>**Snapping**</td>
+		<td>Whether snapping is off or to the nearest voxel.</td>
 	</tr>
 	<tr>
 		<td>**Plane Lock**</td>
 		<td>Toggles whether to enable a visual plane which the brush locks to. In **Auto** mode, the plane tilts and rotates with the camera. In **Manual** mode, the **Edit&nbsp;Plane** option appears, letting you set a specific position/orientation through the visual draggers or **X**/**Y**/**Z** inputs.</td>
 	</tr>
 	<tr>
-		<td>**Snap to Voxels**</td>
-		<td>Snaps the brush to the nearest voxel.</td>
-	</tr>
-	<tr>
 		<td>**Ignore Water**</td>
 		<td>Ignores water when smoothing terrain.</td>
-	</tr>
-	<tr>
-		<td>**Ignore Parts**</td>
-		<td>Ignores [parts](../parts/index.md) in regards to brush placement while moving the mouse pointer across part surfaces.</td>
-	</tr>
-</tbody>
-</table>
-
-### Flatten
-
-The **Flatten** tool flattens terrain to a consistent level across a visualized plane. By default, the tool lowers terrain above the plane **and** raises terrain below to the plane, but you can opt to selectively lower **or** raise through the tool's **Flatten&nbsp;Mode** option.
-
-<img src="../assets/studio/terrain-editor/Edit-Tab-Flatten.png" width="360" alt="Flatten tool indicated in Edit tab of Terrain Editor" />
-
-<video src="../assets/studio/terrain-editor/Flatten-Tool.mp4" controls width="90%" alt="Video of terrain being flattened to a plane using the Flatten tool"></video>
-
-<table size="small">
-<thead>
-	<tr>
-    <th>Option</th>
-		<th>Description</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>**Shape**</td>
-		<td>Sets the brush shape to either a **sphere**, **box**, or **cylinder**.<br /><img src="../assets/studio/terrain-editor/Brush-Shape-Icons.png" width="124" alt="Brush shape icons in the Terrain Editor" /></td>
-	</tr>
-	<tr>
-		<td>**Base Size**</td>
-		<td>Sets the brush size from 1 to 64. If you choose a brush shape of **box** or **cylinder**, a **Height** slider/input also appears to adjust the brush height proportionally or independently of the base size.</td>
-	</tr>
-  <tr>
-    <td>**Strength**</td>
-    <td>Sets the brush strength from 0.1 to 1.</td>
-  </tr>
-  <tr>
-    <td>**Flatten Mode**</td>
-    <td>**Erode to Flat&sup1;** flattens terrain above the plane. **Grow&nbsp;to&nbsp;Flat&sup2;** fills in terrain below the plane. **Flatten&nbsp;All&sup3;** removes terrain above the plane and fills in terrain below the plane.<br /><img src="../assets/studio/terrain-editor/Flatten-Mode-Icons.png" width="124" alt="Flatten Mode icons in the Terrain Editor" /></td>
-  </tr>
-	<tr>
-		<td>**Pivot&nbsp;Position**</td>
-		<td>Sets the vertical pivot point of the brush to either the bottom, center, or top of where the brush connects with existing terrain.</td>
-	</tr>
-	<tr>
-		<td>**Fixed Plane**</td>
-		<td>Toggles a fixed visual plane in **Y** world space upon which to flatten terrain.</td>
-	</tr>
-	<tr>
-		<td>**Snap to Voxels**</td>
-		<td>Snaps the brush to the nearest voxel.</td>
-	</tr>
-	<tr>
-		<td>**Ignore Water**</td>
-		<td>Ignores water when flattening terrain.</td>
 	</tr>
 	<tr>
 		<td>**Ignore Parts**</td>
@@ -510,24 +524,24 @@ The **Paint** tool, using the brush, **paints** a terrain [material](../parts/te
 </thead>
 <tbody>
 	<tr>
-		<td>**Shape**</td>
+		<td>**Brush Shape**</td>
 		<td>Sets the brush shape to either a **sphere**, **box**, or **cylinder**.<br /><img src="../assets/studio/terrain-editor/Brush-Shape-Icons.png" width="124" alt="Brush shape icons in the Terrain Editor" /></td>
 	</tr>
 	<tr>
-		<td>**Base Size**</td>
+		<td>**Brush Size**</td>
 		<td>Sets the brush size from 1 to 64. If you choose a brush shape of **box** or **cylinder**, a **Height** slider/input also appears to adjust the brush height proportionally or independently of the base size.</td>
 	</tr>
 	<tr>
-		<td>**Pivot&nbsp;Position**</td>
+		<td>**Pivot Position**</td>
 		<td>Sets the vertical pivot point of the brush to either the bottom, center, or top of where the brush connects with existing terrain.</td>
+	</tr>
+	<tr>
+		<td>**Snapping**</td>
+		<td>Whether snapping is off or to the nearest voxel.</td>
 	</tr>
 	<tr>
 		<td>**Plane Lock**</td>
 		<td>Toggles whether to enable a visual plane which the brush locks to. In **Auto** mode, the plane tilts and rotates with the camera. In **Manual** mode, the **Edit&nbsp;Plane** option appears, letting you set a specific position/orientation through the visual draggers or **X**/**Y**/**Z** inputs.</td>
-	</tr>
-	<tr>
-		<td>**Snap to Voxels**</td>
-		<td>Snaps the brush to the nearest voxel.</td>
 	</tr>
 	<tr>
 		<td>**Ignore Water**</td>
@@ -538,19 +552,19 @@ The **Paint** tool, using the brush, **paints** a terrain [material](../parts/te
 		<td>Ignores [parts](../parts/index.md) in regards to brush placement while moving the mouse pointer across part surfaces.</td>
 	</tr>
   <tr>
-		<td>**Material&nbsp;Mode**</td>
+		<td>**Material Mode**</td>
 		<td>Toggles the tool between **Paint** and **Replace** mode. In **Paint** mode, choose the desired painting material from the tool's picker tiles. In **Replace** mode, choose both the **source** material to replace and the **target** material to replace it with.</td>
 	</tr>
 </tbody>
 </table>
 
-### Sea Level
+### Flatten
 
-The **Sea Level** tool lets you create a consistent water level or remove all water within a region.
+The **Flatten** tool flattens terrain to a consistent level across a visualized plane. By default, the tool lowers terrain above the plane **and** raises terrain below to the plane, but you can opt to selectively lower **or** raise through the tool's **Flatten&nbsp;Mode** option.
 
-<img src="../assets/studio/terrain-editor/Edit-Tab-Sea-Level.png" width="360" alt="Sea Level tool indicated in Edit tab of Terrain Editor" />
+<img src="../assets/studio/terrain-editor/Edit-Tab-Flatten.png" width="360" alt="Flatten tool indicated in Edit tab of Terrain Editor" />
 
-<video src="../assets/studio/terrain-editor/Sea-Level-Tool.mp4" controls width="90%" alt="Video of sea level being created and modified using the Sea Level tool"></video>
+<video src="../assets/studio/terrain-editor/Flatten-Tool.mp4" controls width="90%" alt="Video of terrain being flattened to a plane using the Flatten tool"></video>
 
 <table size="small">
 <thead>
@@ -561,16 +575,40 @@ The **Sea Level** tool lets you create a consistent water level or remove all wa
 </thead>
 <tbody>
 	<tr>
-		<td>**Position**</td>
-		<td>Sets specific **X**/**Y**/**Z** values for the selection's position.</td>
+		<td>**Brush Shape**</td>
+		<td>Sets the brush shape to either a **sphere**, **box**, or **cylinder**.<br /><img src="../assets/studio/terrain-editor/Brush-Shape-Icons.png" width="124" alt="Brush shape icons in the Terrain Editor" /></td>
 	</tr>
 	<tr>
-		<td>**Size**</td>
-		<td>Sets specific **X**/**Y**/**Z** values for the selection's size in studs.</td>
+    <td>**Flatten Mode**</td>
+    <td>**Erode to Flat**&sup1; flattens terrain above the plane. **Grow&nbsp;to&nbsp;Flat**&sup2; fills in terrain below the plane. **Flatten&nbsp;All**&sup3; removes terrain above the plane and fills in terrain below the plane.<br /><img src="../assets/studio/terrain-editor/Flatten-Mode-Icons.png" width="124" alt="Flatten Mode icons in the Terrain Editor" /></td>
+  </tr>
+	<tr>
+		<td>**Brush Size**</td>
+		<td>Sets the brush size from 1 to 64. If you choose a brush shape of **box** or **cylinder**, a **Height** slider/input also appears to adjust the brush height proportionally or independently of the base size.</td>
+	</tr>
+  <tr>
+    <td>**Strength**</td>
+    <td>Sets the brush strength from 0.1 to 1.</td>
+  </tr>
+	<tr>
+		<td>**Pivot Position**</td>
+		<td>Sets the vertical pivot point of the brush to either the bottom, center, or top of where the brush connects with existing terrain.</td>
 	</tr>
 	<tr>
-		<td>**Snap to Voxels**</td>
-		<td>Snaps the selection bounds to the nearest voxel.</td>
+		<td>**Snapping**</td>
+		<td>Whether snapping is off or to the nearest voxel.</td>
+	</tr>
+	<tr>
+		<td>**Flatten Plane**</td>
+		<td>If set to **Fixed**, flattens terrain to a fixed visual plane in **Y** world space.</td>
+	</tr>
+	<tr>
+		<td>**Ignore Water**</td>
+		<td>Ignores water when flattening terrain.</td>
+	</tr>
+	<tr>
+		<td>**Ignore Parts**</td>
+		<td>Ignores [parts](../parts/index.md) in regards to brush placement while moving the mouse pointer across part surfaces.</td>
 	</tr>
 </tbody>
 </table>

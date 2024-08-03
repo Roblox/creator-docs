@@ -111,11 +111,11 @@ If you are interested in specific avatar creation topics, use the following tabl
   <tr>
     <td>Technical Specs</td>
     <td>[.FBX Export Settings](../../art/modeling/export-requirements.md)<br /><br />[General Mesh Specifications](../../art/modeling/specifications.md)<br /><br />
-    [Avatar Specifications](../../art/characters/specifications.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Policy](../../art/marketplace/marketplace-policy.md)</td>
+    [Avatar Specifications](../../art/characters/specifications.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Policy](../../marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
     <td>Bodies and Clothing Creation</td>
-    <td>[Accessories Overview](../../art/accessories/index.md)<br /><br />[Bodies Overview](../../art/characters/index.md)<br /><br />[Creating Face Accessories](../../art/characters/facial-animation/creating-face-accessories.md)<br /><br />[Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Requirements](../../art/marketplace/marketplace-policy.md)</td>
+    <td>[Accessories Overview](../../art/accessories/index.md)<br /><br />[Bodies Overview](../../art/characters/index.md)<br /><br />[Creating Face Accessories](../../art/characters/facial-animation/creating-face-accessories.md)<br /><br />[Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Requirements](../../marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
     <td>Texturing</td>
@@ -136,7 +136,7 @@ If you are interested in specific avatar creation topics, use the following tabl
   </tr>
   <tr>
     <td>Publishing and Marketplace</td>
-    <td>[Uploading to Marketplace](../../art/marketplace/publishing-to-marketplace.md)<br /><br />[Marketplace Policy](../../art/marketplace/marketplace-policy.md)<br /><br />[Fees and Commissions](../../art/marketplace/marketplace-fees-and-commissions.md)</td>
+    <td>[Uploading to Marketplace](../../marketplace/publishing-to-marketplace.md)<br /><br />[Marketplace Policy](../../marketplace/marketplace-policy.md)<br /><br />[Fees and Commissions](../../marketplace/marketplace-fees-and-commissions.md)</td>
   </tr>
 </tbody>
 </table>

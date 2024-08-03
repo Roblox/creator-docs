@@ -1,28 +1,44 @@
 name: UIDragDetectorResponseStyle
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes how the clicked `Class.GuiObject` will be treated once the desired
+  motion has been calculated.
+description: |
+  Describes how the clicked `Class.GuiObject` will be treated once the desired
+  motion has been calculated.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Offset
-    summary: ''
+    summary: |
+      Move by the `Datatype.UDim.Offset|Offset` values of the detector's
+      parent's `Class.GuiObject.Position` value.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Scale
-    summary: ''
+    summary: |
+      Move by the `Datatype.UDim.Scale|Scale` values of the detector's parent's
+      `Class.GuiObject.Position` value.
     value: 1
     tags: []
     deprecation_message: ''
   - name: CustomOffset
-    summary: ''
+    summary: |
+      The UI element will not move at all, but the `Datatype.UDim.Offset|Offset`
+      values of the detector's `Class.UIDragDetector.DragUDim2|DragUDim2` will
+      still be updated and the detector's events will still fire, allowing you
+      to respond to drag manipulation however you'd like.
     value: 2
     tags: []
     deprecation_message: ''
   - name: CustomScale
-    summary: ''
+    summary: |
+      The UI element will not move at all, but the `Datatype.UDim.Scale|Scale`
+      values of the detector's `Class.UIDragDetector.DragUDim2|DragUDim2` will
+      still be updated and the detector's events will still fire, allowing you
+      to respond to drag manipulation however you'd like.
     value: 3
     tags: []
     deprecation_message: ''

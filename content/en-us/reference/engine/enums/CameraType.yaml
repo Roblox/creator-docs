@@ -47,7 +47,7 @@ items:
     deprecation_message: ''
   - name: Custom
     summary: |
-      Default mode used by Roblox Core Scripts.
+      Default mode used by Roblox core scripts.
     value: 5
     tags: []
     deprecation_message: ''

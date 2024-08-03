@@ -299,6 +299,27 @@ constructors:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: CFrame.fromRotationBetweenVectors
+    summary: |-
+      Returns a `Datatype.CFrame` representing the orientation needed to rotate
+      from the first `Datatype.Vector3` to the second, with the position set to zero.
+    description: |-
+      Returns a `Datatype.CFrame` representing the orientation needed to rotate
+      from the first `Datatype.Vector3` to the second, with the position set to zero.
+    parameters:
+      - name: from
+        type: Vector3
+        default:
+        summary: |
+          Vector representing the "from" direction.
+      - name: to
+        type: Vector3
+        default:
+        summary: |
+          Vector representing the "to" direction.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
   - name: CFrame.fromEulerAngles
     summary: |-
       Returns a rotated `Datatype.CFrame` from angles `rx`, `ry`, and `rz` in
@@ -722,120 +743,120 @@ methods:
     deprecation_message: ''
   - name: CFrame:ToWorldSpace
     summary: |
-      Returns one or more `Datatype.CFrame` objects transformed from object to
-      world space.
+      Receives one or more `Datatype.CFrame` objects and returns them
+      transformed from object to world space.
     description: |
-      Returns one or more `Datatype.CFrame` objects transformed from object to
-      world space. Equivalent to:
+      Receives one or more `Datatype.CFrame` objects and returns them
+      transformed from object to world space. Equivalent to:
 
       `CFrame * cf`
     parameters:
-      - name: cf
-        type: CFrame
+      - name: ...
+        type: Tuple<CFrame>
         default:
         summary: ''
     returns:
-      - type: CFrame
+      - type: Tuple<CFrame>
         summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame:ToObjectSpace
     summary: |
-      Returns one or more `Datatype.CFrame` objects transformed from world to
-      object space.
+      Receives one or more `Datatype.CFrame` objects and returns them
+      transformed from world to object space.
     description: |
-      Returns one or more `Datatype.CFrame` objects transformed from world to
-      object space. Equivalent to:
+      Receives one or more `Datatype.CFrame` objects and returns them
+      transformed from world to object space. Equivalent to:
 
       `CFrame:Inverse() * cf`
     parameters:
-      - name: cf
-        type: CFrame
+      - name: ...
+        type: Tuple<CFrame>
         default:
         summary: ''
     returns:
-      - type: CFrame
+      - type: Tuple<CFrame>
         summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame:PointToWorldSpace
     summary: |
-      Returns one or more `Datatype.Vector3` objects transformed from object to
-      world space.
+      Receives one or more `Datatype.Vector3` objects and returns them
+      transformed from object to world space.
     description: |
-      Returns one or more `Datatype.Vector3` objects transformed from object to
-      world space. Equivalent to:
+      Receives one or more `Datatype.Vector3` objects and returns them
+      transformed from object to world space. Equivalent to:
 
       `CFrame * v3`
     parameters:
-      - name: v3
-        type: Vector3
+      - name: ...
+        type: Tuple<Vector3>
         default:
         summary: ''
     returns:
-      - type: Vector3
+      - type: Tuple<Vector3>
         summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame:PointToObjectSpace
     summary: |
-      Returns one or more `Datatype.Vector3` objects transformed from world to
-      object space.
+      Receives one or more `Datatype.Vector3` objects and returns them
+      transformed from world to object space.
     description: |
-      Returns one or more `Datatype.Vector3` objects transformed from world to
-      object space. Equivalent to:
+      Receives one or more `Datatype.Vector3` objects and returns them
+      transformed from world to object space. Equivalent to:
 
       `CFrame:Inverse() * v3`
     parameters:
-      - name: v3
-        type: Vector3
+      - name: ...
+        type: Tuple<Vector3>
         default:
         summary: ''
     returns:
-      - type: Vector3
+      - type: Tuple<Vector3>
         summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame:VectorToWorldSpace
     summary: |
-      Returns one or more `Datatype.Vector3` objects rotated from object to
-      world space.
+      Receives one or more `Datatype.Vector3` objects and returns them rotated
+      from object to world space.
     description: |
-      Returns one or more `Datatype.Vector3` objects rotated from object to
-      world space. Equivalent to:
+      Receives one or more `Datatype.Vector3` objects and returns them rotated
+      from object to world space. Equivalent to:
 
       `(CFrame - CFrame.Position) * v3`
     parameters:
-      - name: v3
-        type: Vector3
+      - name: ...
+        type: Tuple<Vector3>
         default:
         summary: ''
     returns:
-      - type: Vector3
+      - type: Tuple<Vector3>
         summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: CFrame:VectorToObjectSpace
     summary: |
-      Returns one or more `Datatype.Vector3` objects rotated from world to
-      object space.
+      Receives one or more `Datatype.Vector3` objects and returns them rotated
+      from world to object space.
     description: |
-      Returns one or more `Datatype.Vector3` objects rotated from world to
-      object space. Equivalent to:
+      Receives one or more `Datatype.Vector3` objects and returns them rotated
+      from world to object space. Equivalent to:
 
       `(CFrame:Inverse() - CFrame:Inverse().Position) * v3`
     parameters:
-      - name: v3
-        type: Vector3
+      - name: ...
+        type: Tuple<Vector3>
         default:
         summary: ''
     returns:
-      - type: Vector3
+      - type: Tuple<Vector3>
         summary: ''
     code_samples: []
     tags: []

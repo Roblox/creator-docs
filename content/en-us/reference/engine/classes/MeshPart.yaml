@@ -88,17 +88,16 @@ properties:
       can_save: true
   - name: MeshPart.MeshId
     summary: |
-      The **MeshId** is the content ID of the mesh that is to be displayed on
-      the `Class.MeshPart`.
+      Content ID of the mesh that is displayed on the `Class.MeshPart`.
     description: |
-      The **MeshId** is the content ID of the mesh that is to be displayed on
-      the `Class.MeshPart`.
+      Content ID of the mesh that is displayed on the `Class.MeshPart`.
 
       Note that this property currently cannot be changed by scripts as the
-      collision model of the mesh cannot be recomputed during runtime.
-      Developers should not rely on this behavior as it may change in the
-      future. Those looking for a custom mesh object that can be updated during
-      runtime should use `Class.SpecialMesh`.
+      collision model of the mesh cannot be recomputed during runtime. See
+      `Class.InsertService:CreateMeshPartAsync()` as a method to create a new
+      `Class.MeshPart` from a given `Class.MeshPart.MeshId|MeshId` and with a
+      specified `Class.MeshPart.CollisionFidelity|CollisionFidelity` and
+      `Class.MeshPart.RenderFidelity|RenderFidelity`.
     code_samples:
     type: Content
     tags: []
@@ -119,30 +118,33 @@ properties:
       will be shown in. It can be set to the possible values of the
       `Enum.RenderFidelity` enum.
 
-      By default, `Class.MeshPart|MeshParts` will always be shown in **precise
-      fidelity**, no matter how far they are from the camera. This improves
-      their appearance when viewed from any distance, but if a place has a large
-      number of detailed mesh parts, it may reduce overall performance.
+      The default value is `Enum.RenderFidelity.Automatic|Automatic`, meaning
+      the mesh's detail is based on its distance from the camera as outlined in
+      the following table.
 
       <table>
           <thead>
               <tr>
                   <th>Distance From Camera</th>
                   <th>Render Fidelity</th>
+                  <th>Example</th>
               </tr>
           </thead>
           <tbody>
               <tr>
                   <td>Less than 250 studs</td>
                   <td>Highest</td>
+                  <td><img src="../../../assets/modeling/meshes/Render-Fidelity-High.jpg" width="200" /></td>
               </tr>
               <tr>
                   <td>250-500 studs</td>
                   <td>Medium</td>
+                  <td><img src="../../../assets/modeling/meshes/Render-Fidelity-Medium.jpg" width="200" /></td>
               </tr>
               <tr>
                   <td>500 or more studs</td>
                   <td>Lowest</td>
+                  <td><img src="../../../assets/modeling/meshes/Render-Fidelity-Low.jpg" width="200" /></td>
               </tr>
           </tbody>
       </table>

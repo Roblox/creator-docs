@@ -350,7 +350,7 @@ same `MeshId` are handled in a single draw call when:
   draw calls, the number of triangles in a scene does influence how long a frame
   takes to render. Scenes with a very large number of very complex meshes are a
   common problem, as are scenes with the `MeshPart.RenderFidelity` property set
-  to `Precise` on too many meshes.
+  to `Enum.RenderFidelity.Precise` on too many meshes.
 - **Excessive shadow casting** - Handling shadows is an expensive process, and
   maps that contain a high number and density of light objects that cast shadows
   (or a high number and density of small parts influenced by shadows) are likely to

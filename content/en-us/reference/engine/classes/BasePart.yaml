@@ -100,6 +100,15 @@ properties:
       `Class.Torque` or `Class.AngularVelocity` constraint is preferred, or use
       `Class.BasePart:ApplyAngularImpulse()` if you want instantaneous change in
       velocity.
+
+      If the part is [owned](../../../physics/network-ownership.md) by the
+      server, this property must be changed from a server `Class.Script` (not
+      from a `Class.LocalScript` or a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`).
+      If the part is owned by a client through **automatic** ownership, this
+      property can be changed from either a client script **or** a server
+      script; changing it from a client script for a server-owned part will have
+      no effect.
     code_samples:
     type: Vector3
     tags:
@@ -156,6 +165,15 @@ properties:
       `Class.VectorForce` constraint is preferred, or use
       `Class.BasePart:ApplyImpulse()` if you want instantaneous change in
       velocity.
+
+      If the part is [owned](../../../physics/network-ownership.md) by the
+      server, this property must be changed from a server `Class.Script` (not
+      from a `Class.LocalScript` or a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`).
+      If the part is owned by a client through **automatic** ownership, this
+      property can be changed from either a client script **or** a server
+      script; changing it from a client script for a server-owned part will have
+      no effect.
     code_samples:
     type: Vector3
     tags:
@@ -2159,9 +2177,14 @@ methods:
       move more massive assemblies. Impulses are useful for cases where you want
       a force applied instantly, such as an explosion or collision.
 
-      If the part is owned by the server, this function must be called on a
-      server `Class.Script`. If the part is owned by a client, this function can
-      be called on a `Class.LocalScript` or server `Class.Script`.
+      If the part is [owned](../../../physics/network-ownership.md) by the
+      server, this function must be called from a server `Class.Script` (not
+      from a `Class.LocalScript` or a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`).
+      If the part is owned by a client through **automatic** ownership, this
+      function can be called from either a client script **or** a server script;
+      calling it from a client script for a server-owned part will have no
+      effect.
     code_samples:
     parameters:
       - name: impulse
@@ -2192,9 +2215,14 @@ methods:
       move more massive assemblies. Impulses are useful for cases where you want
       a force applied instantly, such as an explosion or collision.
 
-      If the part is owned by the server, this function must be called on a
-      server `Class.Script`. If the part is owned by a client, this function can
-      be called on a `Class.LocalScript` or server `Class.Script`.
+      If the part is [owned](../../../physics/network-ownership.md) by the
+      server, this function must be called from a server `Class.Script` (not
+      from a `Class.LocalScript` or a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`).
+      If the part is owned by a client through **automatic** ownership, this
+      function can be called from either a client script **or** a server script;
+      calling it from a client script for a server-owned part will have no
+      effect.
     code_samples:
     parameters:
       - name: impulse
@@ -2226,9 +2254,14 @@ methods:
       developers want a force applied instantly, such as an explosion or
       collision.
 
-      If the part is owned by the server, this function must be called on a
-      server `Class.Script`. If the part is owned by a client, this function can
-      be called on a `Class.LocalScript` or server `Class.Script`.
+      If the part is [owned](../../../physics/network-ownership.md) by the
+      server, this function must be called from a server `Class.Script` (not
+      from a `Class.LocalScript` or a `Class.Script` with
+      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`).
+      If the part is owned by a client through **automatic** ownership, this
+      function can be called from either a client script **or** a server script;
+      calling it from a client script for a server-owned part will have no
+      effect.
     code_samples:
     parameters:
       - name: impulse

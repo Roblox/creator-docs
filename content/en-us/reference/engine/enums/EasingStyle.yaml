@@ -24,7 +24,7 @@ items:
     deprecation_message: ''
   - name: Sine
     summary: |
-      Speed is determined by a sine wave.
+      Speed is determined by a sine wave for a gentle easing motion.
     value: 1
     tags: []
     deprecation_message: ''
@@ -36,20 +36,21 @@ items:
     deprecation_message: ''
   - name: Quad
     summary: |
-      Speed is determined by quadratic interpolation.
+      Similar to **Sine** but with a slightly sharper curve based on quadratic
+      interpolation.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Quart
     summary: |
-      Similar to **Quad**, but starts at a higher speed determined by quartic
+      Similar to **Cubic** but with an even sharper curve based on quartic
       interpolation.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Quint
     summary: |
-      Similar to **Quart**, but starts at a higher speed determined by quintic
+      Similar to **Quart** but with an even sharper curve based on quintic
       interpolation.
     value: 5
     tags: []
@@ -70,19 +71,21 @@ items:
     deprecation_message: ''
   - name: Exponential
     summary: |
-      Speed reduces very quickly as tween approaches the target.
+      The sharpest curve based on exponential interpolation.
     value: 8
     tags: []
     deprecation_message: ''
   - name: Circular
     summary: |
-      Follows a circular arc, slowing down as tween approaches the target.
+      Follows a circular arc, such that acceleration is more sudden and
+      deceleration more gradual versus **Quint** or **Exponential**.
     value: 9
     tags: []
     deprecation_message: ''
   - name: Cubic
     summary: |
-      Similar to **Quad**, but starts at a lower speed.
+      Similar to **Quad** but with a slightly sharper curve based on cubic
+      interpolation.
     value: 10
     tags: []
     deprecation_message: ''

@@ -59,7 +59,7 @@ After [setting up](#setting-up-a-topic-for-messaging) a **topic**, you can publi
 
 1. [Create an API key](./api-keys.md#creating-an-API-key) on [Creator Dashboard](https://create.roblox.com/credentials). Make sure you perform the following settings:
 
-   1. Add **Messaging Service API** to **Access Permissions**.
+   1. Add **messaging-service** to **Access Permissions**.
    2. Add **Publish** operation to your selected experience.
 
 2. Get the **Universe ID**, the identifier of the experience in which you want to send your messages to.

@@ -3,8 +3,7 @@ title: Engine Instance
 description: Explains how to use Open Cloud APIs to access the Roblox Engine Instances.
 ---
 
-The Engine Open Cloud APIs let you manage `Class.Instance` objects in your
-Roblox experiences from the web.
+The Engine Open Cloud APIs let you manage `Class.Instance` objects in your Roblox experiences from the web.
 
 ## Beta Restrictions
 
@@ -18,20 +17,20 @@ These APIs are currently in beta and have the following restrictions:
 - You can't update scripts that are part of a [package](../../projects/assets/packages.md).
 
 - You can only use API key authentication. Create an
-  [API key](../open-cloud/api-keys.md) with **Engine (Beta)** added as an API
-  system.
+  [API key](../open-cloud/api-keys.md) with **universe-place-instances** added as an API system.
 
-  You must specify the experiences you want the key to have access to as
-  well as the desired read and write permission scopes.
+  You must specify the experiences you want the key to have access to as well as the desired read and write permission scopes.
 
-  ![The Creator Hub API key screen](../../assets/open-cloud/instance-api-beta.png)
+  ![The Creator Hub API key screen](../../assets/open-cloud/instance-api.png)
 
 - You must have a [collaborative](../../projects/collaboration.md) session enabled for the experience that you want to access.
+
+- Request bodies, such as to [Update Instance](/cloud/reference/Instance#Update-Instance), are limited to 200 KB.
 
 ## Listing Children
 
 List all children of a specific instance by specifying an instance ID and
-calling the [List Instance Children](../../cloud/reference/Instance#List-Instance-Children)
+calling the [List Instance Children](/cloud/reference/Instance#List-Instance-Children)
 method.
 
 <Alert severity="info">
@@ -184,7 +183,7 @@ Scripts contain some additional information in the `Details` object, such as the
 
 ## Getting an Instance
 
-This method returns a single [Instance](../../cloud/reference/Instance).
+This method returns a single [Instance](/cloud/reference/Instance).
 
 <Tabs>
   <TabItem key = "1" label="Python">
@@ -304,7 +303,7 @@ If you receive a `TypeError` when attempting to update a script, verify that the
 
 ## Polling for Results
 
-All current [Instance](../../cloud/reference/Instance) methods return an
+All current [Instance](/cloud/reference/Instance) methods return an
 `Operation` object instead of the resource you requested. This object lets you
 asynchronously perform the original operation. Use the `Operation` object's
 path (included in the initial response) to poll for when the resource is ready.
@@ -411,14 +410,10 @@ from the web. The demo consists of the following:
 
 ### Creating an API Key
 
-   1. Go to the [Creator Hub Open Cloud API
-      Keys](https://create.roblox.com/dashboard/credentials?activeTab=ApiKeysTab)
-      page and click **Create API Key**.
+   1. Go to the [Creator Hub Open Cloud API Keys](https://create.roblox.com/dashboard/credentials?activeTab=ApiKeysTab) page and click **Create API Key**.
    1. Fill out the form with the following information.
       - **Name**: PotionShop
-      - **API System**: Add Engine (Beta) as an API System. Add your Potion Shop
-        experience to the system. For Experience Operations, add read and write
-        access.
+      - **API System**: Add the **universe-place-instances** API system. Add your Potion Shop experience to the system. For **Experience Operations**, add read and write access.
       - **Accepted IP Addresses**: Add 0.0.0.0/0 as an IP Address
       - **Expiration**: No Expiration
       - Click **Save & Generate Key** and then **Copy Key to Clipboard**.
@@ -428,8 +423,7 @@ from the web. The demo consists of the following:
 
 ### Obtaining the Universe and Place ID
 
-1. Go to the [Creator Hub
-   Creations](https://create.roblox.com/dashboard/creations) page, hover over
+1. Go to the [Creator Hub Creations](https://create.roblox.com/dashboard/creations) page, hover over
    the Potion Shop's experience tile, and click the overflow menu.
 1. Select **Copy Universe ID** and paste it into the **Universe ID** cell
    (E2) on the Intro tab of your Google Sheet.

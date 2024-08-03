@@ -196,8 +196,8 @@ local function onIncomingChatMessage(textChatMessage: TextChatMessage)
 	local properties = Instance.new("TextChatMessageProperties")
 
 	properties.Text = string.format(FORMAT_STRING, textChatMessage.Text)
-
-	if textChatMessage.Translation then
+	
+	if textChatMessage.Translation ~= nil and textChatMessage.Translation ~= "" then
 		properties.Translation = string.format(FORMAT_STRING, textChatMessage.Translation)
 	end
 

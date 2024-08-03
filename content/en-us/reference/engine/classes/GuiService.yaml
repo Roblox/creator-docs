@@ -3,19 +3,13 @@ type: class
 category: Input
 memory_category: Instances
 summary: |
-  The GuiService is a service which currently allows developers to control what
-  `Class.GuiObject` is currently being selected by the gamepad navigator. It
-  also allows clients to check if Roblox's main menu is currently open.
-
-  This service has a lot of hidden members, which are mainly used internally by
-  Roblox's `Class.CoreScript|CoreScripts`.
+  Allows developers to control what `Class.GuiObject` is currently being
+  selected by the gamepad navigator, as well as check if Roblox's main menu is
+  currently open.
 description: |
-  The GuiService is a service which currently allows developers to control what
-  `Class.GuiObject` is currently being selected by the gamepad navigator. It
-  also allows clients to check if Roblox's main menu is currently open.
-
-  This service has a lot of hidden members, which are mainly used internally by
-  Roblox's `Class.CoreScript|CoreScripts`.
+  **GuiService** allows developers to control what `Class.GuiObject` is
+  currently being selected by the gamepad navigator, as well as check if
+  Roblox's main menu is currently open.
 code_samples:
 inherits:
   - Instance
@@ -148,6 +142,23 @@ properties:
     serialization:
       can_load: false
       can_save: true
+  - name: GuiService.PreferredTextSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: PreferredTextSize
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
   - name: GuiService.PreferredTransparency
     summary: |
       Gets the user's preferred transparency as a number between 0 and 1, which

@@ -3,7 +3,7 @@ title: Usage Guide for Data Stores
 description: Explains how to use Open Cloud Web APIs to access and modify data stores by HTTP calls.
 ---
 
-In addition to accessing [data stores](../../cloud-services/datastores.md) using Lua `Class.DataStoreService` in Studio or live servers, you can use Open Cloud APIs to access and utilize [standard](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json) from external scripts and tools with granular access and security control.
+In addition to accessing [data stores](../../cloud-services/data-stores) using Lua `Class.DataStoreService` in Studio or live servers, you can use Open Cloud APIs to access and utilize [standard](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json) from external scripts and tools with granular access and security control.
 
 <Alert severity="warning">
 Open Cloud APIs for ordered data stores are beta APIs that might be subject to changes for future releases.
@@ -59,7 +59,7 @@ From a high level, you can build your Python app by adding API key permissions a
 
 When [creating an API Key](./api-keys.md) for this example, make sure you perform the following settings:
 
-1. From the **Select API System** menu in the **Access Permissions** section, select **Data Stores**.
+1. From the **Select API System** menu in the **Access Permissions** section, select **universe-datastores**.
 
 1. **(Optional)** In the **Data Stores** section, select API operations for specific data stores.
 

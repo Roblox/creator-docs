@@ -17,15 +17,13 @@ You can quickly apply materials to [parts](../parts/index.md) through the [Mater
 
 ### Material Widget
 
-<BetaAlert betaName="Material Picker" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
+The **Material** widget is accessible from either the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tabs. Clicking the small dropdown arrow reveals a material picker.
 
-The **Material** widget is accessible from either the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tabs.
+<img src="../assets/studio/general/Model-Tab-Material-Picker.png" width="704" alt="Studio's Model tab with the Material widget's picker." />
 
-<img src="../assets/studio/general/Model-Tab-Material.png" width="704" alt="Studio's Model tab with the Material button highlighted." />
+By default, clicking the overall **Material** button applies the chosen material to any **selected** parts. If you prefer a fill/paint workflow instead, toggle on **Material&nbsp;Action&nbsp;as&nbsp;Tool** and then click parts in the 3D viewport to apply the chosen material.
 
-Clicking the small dropdown arrow reveals a material picker and, by default, applies the chosen material to all selected parts. Once you've selected a material, you can quickly apply it to other parts by selecting those parts and clicking the **Material** button itself.
-
-<img src="../assets/studio/general/Model-Tab-Material-Tools.png" width="704" alt="Studio's Model tab with the Material button's components highlighted." />
+<img src="../assets/studio/general/Model-Tab-Material-Action-As-Tool.png" width="704" alt="Studio's Model tab with the Material Action as Tool selector indicated." />
 
 ### Material Manager
 
@@ -314,10 +312,10 @@ Shaders generate the look and feel of materials. The base material shaders work 
     </tr>
 		<tr>
         <td>**Clay Roof Tiles** <Chip label="beta" size="small" variant="outlined" /></td>
-        <td>17429547163</td>
-        <td>17429547944</td>
+        <td>18147681935</td>
+        <td>18147683410</td>
         <td></td>
-        <td>17429548240</td>
+        <td>18147684855</td>
     </tr>
     <tr>
         <td>**Cobblestone**</td>

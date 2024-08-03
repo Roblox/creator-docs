@@ -68,7 +68,7 @@ connect a function to the `Class.AnimationTrack:GetMarkerReachedSignal()|GetMark
 local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait() 
+local character = player.Character or player.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
 local animator = humanoid:WaitForChild("Animator")
 

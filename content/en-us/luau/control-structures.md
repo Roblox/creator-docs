@@ -3,7 +3,7 @@ title: Control Structures
 description: Control structures are statements that manage the flow of Luau code execution.
 ---
 
-Control structures are statements that manage the flow of Luau code execution. There are four main types of control structures:
+**Control structures** are statements that manage the flow of Luau code execution. There are four main types of control structures:
 
 - An [if then else](#if-statements) statement executes code only if a specified condition is `true`. The code execution doesn't repeat.
 - A [while loop](#while-loops) executes code only if a specified condition is `true`, and repeats execution while the condition remains `true`.

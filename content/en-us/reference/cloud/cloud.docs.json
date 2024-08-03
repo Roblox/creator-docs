@@ -710,6 +710,1304 @@
         }
       }
     },
+    "/cloud/v2/universes/{universe}/data-stores": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Returns a list of data stores.",
+        "operationId": "Cloud_ListDataStores",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of data stores to return. The service might return fewer\n than this value. If unspecified, at most 10 data stores are returned. The\n maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n The `filter` field supports a very small subset of CEL:\n\n * Only the `id` field is supported.\n * Only the `startsWith` function is available; no other operators nor\n   built-ins are supported.\n\n Example filter: `id.startsWith(\"foo\")`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListDataStoresResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.control:list"
+            ],
+            "title": "List Data Stores"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStore",
+            "name": "DataStore"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/data-stores/{data-store}/entries": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Returns a list of entries from a data store.\n\n Only the `path` and `id` fields are populated; use `GetDataStoreEntry`\n to retrieve other fields.\n\n Specify the wildcard scope (`-`) to list entries from all scopes.",
+        "operationId": "Cloud_ListDataStoreEntries",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of data store entries to return. The service might\n return fewer than this value. If unspecified, at most 10 data store entries\n are returned. The maximum value is 256 and higher values are set to 256.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 256, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n The `filter` field supports a very small subset of CEL:\n\n * Only the `id` field is supported.\n * Only the `startsWith` function is available; no other operators nor\n   built-ins are supported.\n\n Example filter: `id.startsWith(\"foo\")`",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "showDeleted",
+            "in": "query",
+            "description": "If true, resources marked for pending deletion will be included in the\n results.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListDataStoreEntriesResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:list"
+            ],
+            "title": "List Data Store Entries"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates an entry with the provided ID and value.\n\n Returns a 400 Bad Request if the entry exists.",
+        "operationId": "Cloud_CreateDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The ID to use for the data store entry, which will become the final\n component of the data store entry's resource path.\n\n This value should be a 1-50 character string. We strongly recommend using\n only lowercase letters, numeric digits, and hyphens.",
+            "schema": {
+              "type": "string"
+            },
+            "x-example-values": {
+              "description": "a 1-50 character string. We strongly recommend using only lowercase letters, numeric digits, and hyphens.",
+              "exampleValues": [
+                "my-entry"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataStoreEntry"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:create"
+            ],
+            "title": "Create Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/data-stores/{data-store}/entries/{entry}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets the specified entry.\n\n To get the entry at a specific revision, add `@<revisionId>` to the end of\n the path.\n\n For example, to get `my-entry` at the revision ID\n `08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\n If your entry ID contains one or more `@` characters, and you want to get\n the latest version rather than at any specific revision, append the special\n revision ID `@latest` to the end of the path. Otherwise, the segment of the\n entry ID after the last `@` will be interpreted as a revision ID.\n\n For example, to get the latest revision of `my-entry`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.",
+        "operationId": "Cloud_GetDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:read"
+            ],
+            "title": "Get Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Marks the specified entry for deletion.\n\n Entries are not be deleted immediately; instead, the `state` field will\n be set to `DELETED`. Permanent deletion occurs after 30 days.\n\n On success, returns 200 OK. If the entry doesn't exist, returns\n 404 Not Found.",
+        "operationId": "Cloud_DeleteDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:delete"
+            ],
+            "title": "Delete Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Updates the value, attributes, and users of an entry.\n\n Updating specific revisions of the entry is **unsupported**. If you specify\n a revision ID in the path and `allow_missing` is `true`, the update request\n will instead create a new entry with the `@<revisionId>` suffix as part of\n the key.\n\n Partial update is **unsupported**. If attributes or users are not\n provided when updating the value, they will be cleared. Value must always\n be provided when updating an entry.",
+        "operationId": "Cloud_UpdateDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "allowMissing",
+            "in": "query",
+            "description": "If set to true, and the data store entry is not found, a data store entry\n is created.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataStoreEntry"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:update"
+            ],
+            "title": "Update Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/data-stores/{data-store}/entries/{entry}:increment": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Increments the value of the specified entry. Both the existing value and\n the increment amount must be integers.\n\n If the entry doesn't exist, creates an entry with the specified value.\n\n Incrementing specific revisions of the entry is **unsupported**. If you\n specify a revision ID in the path, the increment request will create a new\n entry with the `@<revisionId>` suffix as part of the key.\n\n Known issue: the value may be incremented past the valid range of  values.\n When this happens, the returned value will be clamped to the valid range,\n but the backend may persist the original value. This behavior is maintained\n for backwards compatibility reasons, but may change in a future version of\n this API.",
+        "operationId": "Cloud_IncrementDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncrementDataStoreEntryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:create",
+              "universe-datastores.objects:update"
+            ],
+            "title": "Increment Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/data-stores/{data-store}/entries/{entry}:listRevisions": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "List revisions of the data store entry.\n\n This method returns partial data store entries.\n\n In particular, only the `path`, `id`, `createTime`, `revisionCreateTime`,\n `revisionId`, `etag`, and `state` fields are populated. Both the `path` and\n `id` fields will have an `@<version>` suffix.\n\n In order to get the full entry at a revision, you can use the provided\n `path` field with the `GetDataStoreEntry` method, i.e. `GET\n /v1/universes/1234/data-stores/5678/entries/my-entry@<version>`.",
+        "operationId": "Cloud_ListDataStoreEntryRevisions",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of revisions to return per page.\n\n The service might return fewer than the maximum number of revisions.\n If unspecified, at most 10 revisions are returned.\n The maximum value is 100 values and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call\n must match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Supports the following subset of CEL:\n\n * Only the `&&`, `<=`, and `>=` operators are supported.\n * Only the `revision_create_time` field is supported.\n\n For example:\n\n   `\"revision_create_time >= 2000-01-01T00:00:00Z && revision_create_time <=\n   2001-01-01T00:00:00Z\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListDataStoreEntryRevisionsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.versions:list"
+            ],
+            "title": "List Data Store Entry Revisions"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/data-stores/{data-store}/scopes/{scope}/entries": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Returns a list of entries from a data store.\n\n Only the `path` and `id` fields are populated; use `GetDataStoreEntry`\n to retrieve other fields.\n\n Specify the wildcard scope (`-`) to list entries from all scopes.",
+        "operationId": "Cloud_ListDataStoreEntries",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of data store entries to return. The service might\n return fewer than this value. If unspecified, at most 10 data store entries\n are returned. The maximum value is 256 and higher values are set to 256.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 256, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n The `filter` field supports a very small subset of CEL:\n\n * Only the `id` field is supported.\n * Only the `startsWith` function is available; no other operators nor\n   built-ins are supported.\n\n Example filter: `id.startsWith(\"foo\")`",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "showDeleted",
+            "in": "query",
+            "description": "If true, resources marked for pending deletion will be included in the\n results.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListDataStoreEntriesResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:list"
+            ],
+            "title": "List Data Store Entries"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates an entry with the provided ID and value.\n\n Returns a 400 Bad Request if the entry exists.",
+        "operationId": "Cloud_CreateDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The ID to use for the data store entry, which will become the final\n component of the data store entry's resource path.\n\n This value should be a 1-50 character string. We strongly recommend using\n only lowercase letters, numeric digits, and hyphens.",
+            "schema": {
+              "type": "string"
+            },
+            "x-example-values": {
+              "description": "a 1-50 character string. We strongly recommend using only lowercase letters, numeric digits, and hyphens.",
+              "exampleValues": [
+                "my-entry"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataStoreEntry"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:create"
+            ],
+            "title": "Create Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/data-stores/{data-store}/scopes/{scope}/entries/{entry}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets the specified entry.\n\n To get the entry at a specific revision, add `@<revisionId>` to the end of\n the path.\n\n For example, to get `my-entry` at the revision ID\n `08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\n If your entry ID contains one or more `@` characters, and you want to get\n the latest version rather than at any specific revision, append the special\n revision ID `@latest` to the end of the path. Otherwise, the segment of the\n entry ID after the last `@` will be interpreted as a revision ID.\n\n For example, to get the latest revision of `my-entry`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.",
+        "operationId": "Cloud_GetDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:read"
+            ],
+            "title": "Get Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Marks the specified entry for deletion.\n\n Entries are not be deleted immediately; instead, the `state` field will\n be set to `DELETED`. Permanent deletion occurs after 30 days.\n\n On success, returns 200 OK. If the entry doesn't exist, returns\n 404 Not Found.",
+        "operationId": "Cloud_DeleteDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:delete"
+            ],
+            "title": "Delete Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Updates the value, attributes, and users of an entry.\n\n Updating specific revisions of the entry is **unsupported**. If you specify\n a revision ID in the path and `allow_missing` is `true`, the update request\n will instead create a new entry with the `@<revisionId>` suffix as part of\n the key.\n\n Partial update is **unsupported**. If attributes or users are not\n provided when updating the value, they will be cleared. Value must always\n be provided when updating an entry.",
+        "operationId": "Cloud_UpdateDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "allowMissing",
+            "in": "query",
+            "description": "If set to true, and the data store entry is not found, a data store entry\n is created.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataStoreEntry"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:update"
+            ],
+            "title": "Update Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/data-stores/{data-store}/scopes/{scope}/entries/{entry}:increment": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Increments the value of the specified entry. Both the existing value and\n the increment amount must be integers.\n\n If the entry doesn't exist, creates an entry with the specified value.\n\n Incrementing specific revisions of the entry is **unsupported**. If you\n specify a revision ID in the path, the increment request will create a new\n entry with the `@<revisionId>` suffix as part of the key.\n\n Known issue: the value may be incremented past the valid range of  values.\n When this happens, the returned value will be clamped to the valid range,\n but the backend may persist the original value. This behavior is maintained\n for backwards compatibility reasons, but may change in a future version of\n this API.",
+        "operationId": "Cloud_IncrementDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncrementDataStoreEntryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:create",
+              "universe-datastores.objects:update"
+            ],
+            "title": "Increment Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/data-stores/{data-store}/scopes/{scope}/entries/{entry}:listRevisions": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "List revisions of the data store entry.\n\n This method returns partial data store entries.\n\n In particular, only the `path`, `id`, `createTime`, `revisionCreateTime`,\n `revisionId`, `etag`, and `state` fields are populated. Both the `path` and\n `id` fields will have an `@<version>` suffix.\n\n In order to get the full entry at a revision, you can use the provided\n `path` field with the `GetDataStoreEntry` method, i.e. `GET\n /v1/universes/1234/data-stores/5678/entries/my-entry@<version>`.",
+        "operationId": "Cloud_ListDataStoreEntryRevisions",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of revisions to return per page.\n\n The service might return fewer than the maximum number of revisions.\n If unspecified, at most 10 revisions are returned.\n The maximum value is 100 values and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call\n must match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Supports the following subset of CEL:\n\n * Only the `&&`, `<=`, and `>=` operators are supported.\n * Only the `revision_create_time` field is supported.\n\n For example:\n\n   `\"revision_create_time >= 2000-01-01T00:00:00Z && revision_create_time <=\n   2001-01-01T00:00:00Z\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListDataStoreEntryRevisionsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.versions:list"
+            ],
+            "title": "List Data Store Entry Revisions"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/data-stores:snapshot": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data Stores]\n (https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
+        "operationId": "Cloud_SnapshotDataStores",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnapshotDataStoresRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SnapshotDataStoresResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.control:snapshot"
+            ],
+            "title": "Snapshot Data Stores"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStore",
+            "name": "DataStore"
+          }
+        }
+      }
+    },
     "/cloud/v2/universes/{universe}/memory-store/queues/{queue}/items": {
       "post": {
         "tags": [
@@ -1367,6 +2665,510 @@
         }
       }
     },
+    "/cloud/v2/universes/{universe}/ordered-data-stores/{ordered-data-store}/scopes/{scope}/entries": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Returns a list of entries from an ordered data store.",
+        "operationId": "Cloud_ListOrderedDataStoreEntries",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordered-data-store",
+            "in": "path",
+            "description": "The ordered-data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of ordered data store entries to return. The service\n might return fewer than this value. If unspecified, at most 10 ordered data\n store entries are returned. The maximum value is 100 and higher values are\n set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderBy",
+            "in": "query",
+            "description": "If specified, results are ordered according to the specified fields.\n\n Values must be a comma-separated list of fields, with an optional,\n per-field \" desc\" suffix to sort by descending rather than ascending\n values. You can access subfields with a `.` operator.\n\n Results may be ordered by the following fields: value.\n\n Example: \"value desc\"",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n We support two comparison operators for this operation: `<=` and `>=`.These\n comparison operators act as a minValue and maxValue for the values\n returned. If filtering is needed for a value between a minValue and\n maxValue the user can use the logical operator `&&`. All tokens in the\n filter expression must be separated by a single space.\n\n Example filters: `entry <= 10`; `entry >= 10 && entry <= 30`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListOrderedDataStoreEntriesResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:read"
+            ],
+            "title": "List Ordered Data Store Entries"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/OrderedDataStoreEntry",
+            "name": "OrderedDataStoreEntry"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates an entry with the provided ID and value.\n\n Returns a 400 Bad Request if the entry exists.",
+        "operationId": "Cloud_CreateOrderedDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordered-data-store",
+            "in": "path",
+            "description": "The ordered-data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The ID to use for the ordered data store entry, which will become the final\n component of the ordered data store entry's resource path.\n\n This value should be A 1-63 character string. We strongly recommend using\n only lowercase letters, numeric digits, and hyphens.",
+            "schema": {
+              "type": "string"
+            },
+            "x-example-values": {
+              "description": "A 1-63 character string. We strongly recommend using only lowercase letters, numeric digits, and hyphens.",
+              "exampleValues": [
+                "my-entry"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderedDataStoreEntry"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderedDataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:write"
+            ],
+            "title": "Create Ordered Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/OrderedDataStoreEntry",
+            "name": "OrderedDataStoreEntry"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/ordered-data-stores/{ordered-data-store}/scopes/{scope}/entries/{entry}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets the specified entry.",
+        "operationId": "Cloud_GetOrderedDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordered-data-store",
+            "in": "path",
+            "description": "The ordered-data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderedDataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:read"
+            ],
+            "title": "Get Ordered Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/OrderedDataStoreEntry",
+            "name": "OrderedDataStoreEntry"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Deletes the specified entry.\n\n On success, returns 200 OK. If the entry doesn't exist, returns\n 404 Not Found.",
+        "operationId": "Cloud_DeleteOrderedDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordered-data-store",
+            "in": "path",
+            "description": "The ordered-data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:write"
+            ],
+            "title": "Delete Ordered Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/OrderedDataStoreEntry",
+            "name": "OrderedDataStoreEntry"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Updates the value of an entry.",
+        "operationId": "Cloud_UpdateOrderedDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordered-data-store",
+            "in": "path",
+            "description": "The ordered-data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "allowMissing",
+            "in": "query",
+            "description": "If set to true, and the ordered data store entry is not found, a ordered\n data store entry is created.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderedDataStoreEntry"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderedDataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:write"
+            ],
+            "title": "Update Ordered Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/OrderedDataStoreEntry",
+            "name": "OrderedDataStoreEntry"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/ordered-data-stores/{ordered-data-store}/scopes/{scope}/entries/{entry}:increment": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Increments the value of the specified entry. Both the existing value and\n the increment amount must be integers.\n\n If the entry doesn't exist, creates an entry with the specified value.\n\n Known issue: the value may be incremented past the valid range of  values.\n When this happens, the returned value will be clamped to the valid range,\n but the backend may persist the original value. This behavior is maintained\n for backwards compatibility reasons, but may change in a future version of\n this API.",
+        "operationId": "Cloud_IncrementOrderedDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordered-data-store",
+            "in": "path",
+            "description": "The ordered-data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncrementOrderedDataStoreEntryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderedDataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:write"
+            ],
+            "title": "Increment Ordered Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/OrderedDataStoreEntry",
+            "name": "OrderedDataStoreEntry"
+          }
+        }
+      }
+    },
     "/cloud/v2/universes/{universe}/places/{place}": {
       "get": {
         "tags": [
@@ -1848,7 +3650,7 @@
           {
             "name": "updateMask",
             "in": "query",
-            "description": "The list of fields to update.",
+            "description": "The list of fields to update.\n\n The `game_join_restriction` field must be updated atomically; field masks\n that index into `game_join_restriction` (such as\n `\"game_join_restriction.active\"`) are not supported.",
             "schema": {
               "type": "string",
               "format": "field-mask"
@@ -2081,7 +3883,7 @@
           {
             "name": "updateMask",
             "in": "query",
-            "description": "The list of fields to update.",
+            "description": "The list of fields to update.\n\n The `game_join_restriction` field must be updated atomically; field masks\n that index into `game_join_restriction` (such as\n `\"game_join_restriction.active\"`) are not supported.",
             "schema": {
               "type": "string",
               "format": "field-mask"
@@ -3254,6 +5056,1304 @@
         }
       }
     },
+    "/v2/universes/{universe}/data-stores": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Returns a list of data stores.",
+        "operationId": "Cloud_ListDataStores",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of data stores to return. The service might return fewer\n than this value. If unspecified, at most 10 data stores are returned. The\n maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n The `filter` field supports a very small subset of CEL:\n\n * Only the `id` field is supported.\n * Only the `startsWith` function is available; no other operators nor\n   built-ins are supported.\n\n Example filter: `id.startsWith(\"foo\")`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListDataStoresResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.control:list"
+            ],
+            "title": "List Data Stores"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStore",
+            "name": "DataStore"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/data-stores/{data-store}/entries": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Returns a list of entries from a data store.\n\n Only the `path` and `id` fields are populated; use `GetDataStoreEntry`\n to retrieve other fields.\n\n Specify the wildcard scope (`-`) to list entries from all scopes.",
+        "operationId": "Cloud_ListDataStoreEntries",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of data store entries to return. The service might\n return fewer than this value. If unspecified, at most 10 data store entries\n are returned. The maximum value is 256 and higher values are set to 256.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 256, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n The `filter` field supports a very small subset of CEL:\n\n * Only the `id` field is supported.\n * Only the `startsWith` function is available; no other operators nor\n   built-ins are supported.\n\n Example filter: `id.startsWith(\"foo\")`",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "showDeleted",
+            "in": "query",
+            "description": "If true, resources marked for pending deletion will be included in the\n results.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListDataStoreEntriesResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:list"
+            ],
+            "title": "List Data Store Entries"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates an entry with the provided ID and value.\n\n Returns a 400 Bad Request if the entry exists.",
+        "operationId": "Cloud_CreateDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The ID to use for the data store entry, which will become the final\n component of the data store entry's resource path.\n\n This value should be a 1-50 character string. We strongly recommend using\n only lowercase letters, numeric digits, and hyphens.",
+            "schema": {
+              "type": "string"
+            },
+            "x-example-values": {
+              "description": "a 1-50 character string. We strongly recommend using only lowercase letters, numeric digits, and hyphens.",
+              "exampleValues": [
+                "my-entry"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataStoreEntry"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:create"
+            ],
+            "title": "Create Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/data-stores/{data-store}/entries/{entry}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets the specified entry.\n\n To get the entry at a specific revision, add `@<revisionId>` to the end of\n the path.\n\n For example, to get `my-entry` at the revision ID\n `08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\n If your entry ID contains one or more `@` characters, and you want to get\n the latest version rather than at any specific revision, append the special\n revision ID `@latest` to the end of the path. Otherwise, the segment of the\n entry ID after the last `@` will be interpreted as a revision ID.\n\n For example, to get the latest revision of `my-entry`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.",
+        "operationId": "Cloud_GetDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:read"
+            ],
+            "title": "Get Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Marks the specified entry for deletion.\n\n Entries are not be deleted immediately; instead, the `state` field will\n be set to `DELETED`. Permanent deletion occurs after 30 days.\n\n On success, returns 200 OK. If the entry doesn't exist, returns\n 404 Not Found.",
+        "operationId": "Cloud_DeleteDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:delete"
+            ],
+            "title": "Delete Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Updates the value, attributes, and users of an entry.\n\n Updating specific revisions of the entry is **unsupported**. If you specify\n a revision ID in the path and `allow_missing` is `true`, the update request\n will instead create a new entry with the `@<revisionId>` suffix as part of\n the key.\n\n Partial update is **unsupported**. If attributes or users are not\n provided when updating the value, they will be cleared. Value must always\n be provided when updating an entry.",
+        "operationId": "Cloud_UpdateDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "allowMissing",
+            "in": "query",
+            "description": "If set to true, and the data store entry is not found, a data store entry\n is created.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataStoreEntry"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:update"
+            ],
+            "title": "Update Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/data-stores/{data-store}/entries/{entry}:increment": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Increments the value of the specified entry. Both the existing value and\n the increment amount must be integers.\n\n If the entry doesn't exist, creates an entry with the specified value.\n\n Incrementing specific revisions of the entry is **unsupported**. If you\n specify a revision ID in the path, the increment request will create a new\n entry with the `@<revisionId>` suffix as part of the key.\n\n Known issue: the value may be incremented past the valid range of  values.\n When this happens, the returned value will be clamped to the valid range,\n but the backend may persist the original value. This behavior is maintained\n for backwards compatibility reasons, but may change in a future version of\n this API.",
+        "operationId": "Cloud_IncrementDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncrementDataStoreEntryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:create",
+              "universe-datastores.objects:update"
+            ],
+            "title": "Increment Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/data-stores/{data-store}/entries/{entry}:listRevisions": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "List revisions of the data store entry.\n\n This method returns partial data store entries.\n\n In particular, only the `path`, `id`, `createTime`, `revisionCreateTime`,\n `revisionId`, `etag`, and `state` fields are populated. Both the `path` and\n `id` fields will have an `@<version>` suffix.\n\n In order to get the full entry at a revision, you can use the provided\n `path` field with the `GetDataStoreEntry` method, i.e. `GET\n /v1/universes/1234/data-stores/5678/entries/my-entry@<version>`.",
+        "operationId": "Cloud_ListDataStoreEntryRevisions",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of revisions to return per page.\n\n The service might return fewer than the maximum number of revisions.\n If unspecified, at most 10 revisions are returned.\n The maximum value is 100 values and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call\n must match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Supports the following subset of CEL:\n\n * Only the `&&`, `<=`, and `>=` operators are supported.\n * Only the `revision_create_time` field is supported.\n\n For example:\n\n   `\"revision_create_time >= 2000-01-01T00:00:00Z && revision_create_time <=\n   2001-01-01T00:00:00Z\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListDataStoreEntryRevisionsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.versions:list"
+            ],
+            "title": "List Data Store Entry Revisions"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/data-stores/{data-store}/scopes/{scope}/entries": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Returns a list of entries from a data store.\n\n Only the `path` and `id` fields are populated; use `GetDataStoreEntry`\n to retrieve other fields.\n\n Specify the wildcard scope (`-`) to list entries from all scopes.",
+        "operationId": "Cloud_ListDataStoreEntries",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of data store entries to return. The service might\n return fewer than this value. If unspecified, at most 10 data store entries\n are returned. The maximum value is 256 and higher values are set to 256.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 256, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n The `filter` field supports a very small subset of CEL:\n\n * Only the `id` field is supported.\n * Only the `startsWith` function is available; no other operators nor\n   built-ins are supported.\n\n Example filter: `id.startsWith(\"foo\")`",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "showDeleted",
+            "in": "query",
+            "description": "If true, resources marked for pending deletion will be included in the\n results.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListDataStoreEntriesResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:list"
+            ],
+            "title": "List Data Store Entries"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates an entry with the provided ID and value.\n\n Returns a 400 Bad Request if the entry exists.",
+        "operationId": "Cloud_CreateDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The ID to use for the data store entry, which will become the final\n component of the data store entry's resource path.\n\n This value should be a 1-50 character string. We strongly recommend using\n only lowercase letters, numeric digits, and hyphens.",
+            "schema": {
+              "type": "string"
+            },
+            "x-example-values": {
+              "description": "a 1-50 character string. We strongly recommend using only lowercase letters, numeric digits, and hyphens.",
+              "exampleValues": [
+                "my-entry"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataStoreEntry"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:create"
+            ],
+            "title": "Create Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/data-stores/{data-store}/scopes/{scope}/entries/{entry}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets the specified entry.\n\n To get the entry at a specific revision, add `@<revisionId>` to the end of\n the path.\n\n For example, to get `my-entry` at the revision ID\n `08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\n If your entry ID contains one or more `@` characters, and you want to get\n the latest version rather than at any specific revision, append the special\n revision ID `@latest` to the end of the path. Otherwise, the segment of the\n entry ID after the last `@` will be interpreted as a revision ID.\n\n For example, to get the latest revision of `my-entry`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.",
+        "operationId": "Cloud_GetDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:read"
+            ],
+            "title": "Get Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Marks the specified entry for deletion.\n\n Entries are not be deleted immediately; instead, the `state` field will\n be set to `DELETED`. Permanent deletion occurs after 30 days.\n\n On success, returns 200 OK. If the entry doesn't exist, returns\n 404 Not Found.",
+        "operationId": "Cloud_DeleteDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:delete"
+            ],
+            "title": "Delete Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Updates the value, attributes, and users of an entry.\n\n Updating specific revisions of the entry is **unsupported**. If you specify\n a revision ID in the path and `allow_missing` is `true`, the update request\n will instead create a new entry with the `@<revisionId>` suffix as part of\n the key.\n\n Partial update is **unsupported**. If attributes or users are not\n provided when updating the value, they will be cleared. Value must always\n be provided when updating an entry.",
+        "operationId": "Cloud_UpdateDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "allowMissing",
+            "in": "query",
+            "description": "If set to true, and the data store entry is not found, a data store entry\n is created.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DataStoreEntry"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:update"
+            ],
+            "title": "Update Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/data-stores/{data-store}/scopes/{scope}/entries/{entry}:increment": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Increments the value of the specified entry. Both the existing value and\n the increment amount must be integers.\n\n If the entry doesn't exist, creates an entry with the specified value.\n\n Incrementing specific revisions of the entry is **unsupported**. If you\n specify a revision ID in the path, the increment request will create a new\n entry with the `@<revisionId>` suffix as part of the key.\n\n Known issue: the value may be incremented past the valid range of  values.\n When this happens, the returned value will be clamped to the valid range,\n but the backend may persist the original value. This behavior is maintained\n for backwards compatibility reasons, but may change in a future version of\n this API.",
+        "operationId": "Cloud_IncrementDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncrementDataStoreEntryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.objects:create",
+              "universe-datastores.objects:update"
+            ],
+            "title": "Increment Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/data-stores/{data-store}/scopes/{scope}/entries/{entry}:listRevisions": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "List revisions of the data store entry.\n\n This method returns partial data store entries.\n\n In particular, only the `path`, `id`, `createTime`, `revisionCreateTime`,\n `revisionId`, `etag`, and `state` fields are populated. Both the `path` and\n `id` fields will have an `@<version>` suffix.\n\n In order to get the full entry at a revision, you can use the provided\n `path` field with the `GetDataStoreEntry` method, i.e. `GET\n /v1/universes/1234/data-stores/5678/entries/my-entry@<version>`.",
+        "operationId": "Cloud_ListDataStoreEntryRevisions",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "data-store",
+            "in": "path",
+            "description": "The data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of revisions to return per page.\n\n The service might return fewer than the maximum number of revisions.\n If unspecified, at most 10 revisions are returned.\n The maximum value is 100 values and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call\n must match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "Supports the following subset of CEL:\n\n * Only the `&&`, `<=`, and `>=` operators are supported.\n * Only the `revision_create_time` field is supported.\n\n For example:\n\n   `\"revision_create_time >= 2000-01-01T00:00:00Z && revision_create_time <=\n   2001-01-01T00:00:00Z\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListDataStoreEntryRevisionsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.versions:list"
+            ],
+            "title": "List Data Store Entry Revisions"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStoreEntry",
+            "name": "DataStoreEntry"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/data-stores:snapshot": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data Stores]\n (https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
+        "operationId": "Cloud_SnapshotDataStores",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SnapshotDataStoresRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SnapshotDataStoresResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe-datastores.control:snapshot"
+            ],
+            "title": "Snapshot Data Stores"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/DataStore",
+            "name": "DataStore"
+          }
+        }
+      }
+    },
     "/v2/universes/{universe}/memory-store/queues/{queue}/items": {
       "post": {
         "tags": [
@@ -3911,6 +7011,510 @@
         }
       }
     },
+    "/v2/universes/{universe}/ordered-data-stores/{ordered-data-store}/scopes/{scope}/entries": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Returns a list of entries from an ordered data store.",
+        "operationId": "Cloud_ListOrderedDataStoreEntries",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordered-data-store",
+            "in": "path",
+            "description": "The ordered-data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of ordered data store entries to return. The service\n might return fewer than this value. If unspecified, at most 10 ordered data\n store entries are returned. The maximum value is 100 and higher values are\n set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "orderBy",
+            "in": "query",
+            "description": "If specified, results are ordered according to the specified fields.\n\n Values must be a comma-separated list of fields, with an optional,\n per-field \" desc\" suffix to sort by descending rather than ascending\n values. You can access subfields with a `.` operator.\n\n Results may be ordered by the following fields: value.\n\n Example: \"value desc\"",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n We support two comparison operators for this operation: `<=` and `>=`.These\n comparison operators act as a minValue and maxValue for the values\n returned. If filtering is needed for a value between a minValue and\n maxValue the user can use the logical operator `&&`. All tokens in the\n filter expression must be separated by a single space.\n\n Example filters: `entry <= 10`; `entry >= 10 && entry <= 30`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListOrderedDataStoreEntriesResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:read"
+            ],
+            "title": "List Ordered Data Store Entries"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/OrderedDataStoreEntry",
+            "name": "OrderedDataStoreEntry"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates an entry with the provided ID and value.\n\n Returns a 400 Bad Request if the entry exists.",
+        "operationId": "Cloud_CreateOrderedDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordered-data-store",
+            "in": "path",
+            "description": "The ordered-data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "description": "The ID to use for the ordered data store entry, which will become the final\n component of the ordered data store entry's resource path.\n\n This value should be A 1-63 character string. We strongly recommend using\n only lowercase letters, numeric digits, and hyphens.",
+            "schema": {
+              "type": "string"
+            },
+            "x-example-values": {
+              "description": "A 1-63 character string. We strongly recommend using only lowercase letters, numeric digits, and hyphens.",
+              "exampleValues": [
+                "my-entry"
+              ]
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderedDataStoreEntry"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderedDataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:write"
+            ],
+            "title": "Create Ordered Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/OrderedDataStoreEntry",
+            "name": "OrderedDataStoreEntry"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/ordered-data-stores/{ordered-data-store}/scopes/{scope}/entries/{entry}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets the specified entry.",
+        "operationId": "Cloud_GetOrderedDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordered-data-store",
+            "in": "path",
+            "description": "The ordered-data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderedDataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:read"
+            ],
+            "title": "Get Ordered Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/OrderedDataStoreEntry",
+            "name": "OrderedDataStoreEntry"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Deletes the specified entry.\n\n On success, returns 200 OK. If the entry doesn't exist, returns\n 404 Not Found.",
+        "operationId": "Cloud_DeleteOrderedDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordered-data-store",
+            "in": "path",
+            "description": "The ordered-data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:write"
+            ],
+            "title": "Delete Ordered Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/OrderedDataStoreEntry",
+            "name": "OrderedDataStoreEntry"
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Updates the value of an entry.",
+        "operationId": "Cloud_UpdateOrderedDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordered-data-store",
+            "in": "path",
+            "description": "The ordered-data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "allowMissing",
+            "in": "query",
+            "description": "If set to true, and the ordered data store entry is not found, a ordered\n data store entry is created.",
+            "schema": {
+              "type": "boolean",
+              "x-example-values": {
+                "exampleValues": [
+                  true
+                ]
+              }
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/OrderedDataStoreEntry"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderedDataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:write"
+            ],
+            "title": "Update Ordered Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/OrderedDataStoreEntry",
+            "name": "OrderedDataStoreEntry"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/ordered-data-stores/{ordered-data-store}/scopes/{scope}/entries/{entry}:increment": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Increments the value of the specified entry. Both the existing value and\n the increment amount must be integers.\n\n If the entry doesn't exist, creates an entry with the specified value.\n\n Known issue: the value may be incremented past the valid range of  values.\n When this happens, the returned value will be clamped to the valid range,\n but the backend may persist the original value. This behavior is maintained\n for backwards compatibility reasons, but may change in a future version of\n this API.",
+        "operationId": "Cloud_IncrementOrderedDataStoreEntry",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "ordered-data-store",
+            "in": "path",
+            "description": "The ordered-data-store ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "scope",
+            "in": "path",
+            "description": "The scope ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entry",
+            "in": "path",
+            "description": "The entry ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IncrementOrderedDataStoreEntryRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OrderedDataStoreEntry"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.ordered-data-store.scope.entry:write"
+            ],
+            "title": "Increment Ordered Data Store Entry"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/OrderedDataStoreEntry",
+            "name": "OrderedDataStoreEntry"
+          }
+        }
+      }
+    },
     "/v2/universes/{universe}/places/{place}": {
       "get": {
         "tags": [
@@ -4392,7 +7996,7 @@
           {
             "name": "updateMask",
             "in": "query",
-            "description": "The list of fields to update.",
+            "description": "The list of fields to update.\n\n The `game_join_restriction` field must be updated atomically; field masks\n that index into `game_join_restriction` (such as\n `\"game_join_restriction.active\"`) are not supported.",
             "schema": {
               "type": "string",
               "format": "field-mask"
@@ -4625,7 +8229,7 @@
           {
             "name": "updateMask",
             "in": "query",
-            "description": "The list of fields to update.",
+            "description": "The list of fields to update.\n\n The `game_join_restriction` field must be updated atomically; field masks\n that index into `game_join_restriction` (such as\n `\"game_join_restriction.active\"`) are not supported.",
             "schema": {
               "type": "string",
               "format": "field-mask"
@@ -6962,6 +10566,56 @@
           ]
         }
       },
+      "IncrementDataStoreEntryRequest": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number",
+            "description": "The amount by which to increment the entry value. Both the existing value\n and the increment amount must be integers.",
+            "format": "double"
+          },
+          "users": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Users associated with the entry.\n\n If this is not provided, existing user IDs are cleared."
+          },
+          "attributes": {
+            "type": "object",
+            "description": "An arbitrary set of attributes associated with the entry.\n\n If this is not provided, existing attributes are cleared."
+          }
+        },
+        "description": "Increments entry value.\n\n If the value is not numeric, this request fails.",
+        "x-oneOf": {
+          "Amount": [
+            "amount"
+          ]
+        }
+      },
+      "IncrementOrderedDataStoreEntryRequest": {
+        "required": [
+          "path"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The name of the ordered data store entry.\n\n Format:\n universes/{universe}/ordered-data-stores/{ordered_data_store}/scopes/{ordered_data_store_scope}/entries/{ordered_data_store_entry}"
+          },
+          "amount": {
+            "type": "number",
+            "description": "The amount by which to increment the entry value. Both the existing value\n and the increment amount must be integers.",
+            "format": "double"
+          }
+        },
+        "description": "Increments the entry value.",
+        "x-oneOf": {
+          "Amount": [
+            "amount"
+          ]
+        }
+      },
       "Instance": {
         "type": "object",
         "properties": {
@@ -7259,6 +10913,57 @@
         },
         "description": "Specific fields that are applicable to a private server."
       },
+      "ListDataStoreEntriesResponse": {
+        "type": "object",
+        "properties": {
+          "dataStoreEntries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataStoreEntry"
+            },
+            "description": "The DataStoreEntries from the specified DataStore or DataStoreScope."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\n page. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of DataStoreEntries in the parent collection."
+      },
+      "ListDataStoreEntryRevisionsResponse": {
+        "type": "object",
+        "properties": {
+          "dataStoreEntries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataStoreEntry"
+            },
+            "description": "The revisions of the data_store_entry."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you send as a `pageToken` parameter to retrieve the next page.\n If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of revisions of a data store entry."
+      },
+      "ListDataStoresResponse": {
+        "type": "object",
+        "properties": {
+          "dataStores": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DataStore"
+            },
+            "description": "The DataStores from the specified Universe."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\n page. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of DataStores in the parent collection."
+      },
       "ListGroupJoinRequestsResponse": {
         "type": "object",
         "properties": {
@@ -7365,6 +11070,23 @@
           }
         },
         "description": "A list of MemoryStoreSortedMapItems in the parent collection."
+      },
+      "ListOrderedDataStoreEntriesResponse": {
+        "type": "object",
+        "properties": {
+          "orderedDataStoreEntries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrderedDataStoreEntry"
+            },
+            "description": "The OrderedDataStoreEntries from the specified OrderedDataStoreScope."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\n page. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of OrderedDataStoreEntries in the parent collection."
       },
       "ListUserRestrictionLogsResponse": {
         "type": "object",
@@ -7806,6 +11528,41 @@
         },
         "description": "A secret represented as a byte array.\n\n Secrets are software-level credentials that allow a program\n to access another program without the need for providing a username and\n a password.",
         "x-resource": true
+      },
+      "SnapshotDataStoresRequest": {
+        "type": "object",
+        "properties": {},
+        "description": "Takes a new snapshot for the given experience."
+      },
+      "SnapshotDataStoresResponse": {
+        "type": "object",
+        "properties": {
+          "newSnapshotTaken": {
+            "type": "boolean",
+            "description": "Whether a new snapshot was taken by this operation.\n (Only one snapshot can be taken per experience per UTC day.)",
+            "x-example-values": {
+              "exampleValues": [
+                true
+              ]
+            }
+          },
+          "latestSnapshotTime": {
+            "type": "string",
+            "description": "The time of the latest snapshot after the operation (regardless of\n whether a new snapshot was created). This time is always returned in UTC.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          }
+        },
+        "description": "Returns whether a new snapshot was taken and the time of the latest\n snapshot after the operation (regardless of whether a new snapshot was\n taken).",
+        "x-oneOf": {
+          "NewSnapshotTaken": [
+            "newSnapshotTaken"
+          ]
+        }
       },
       "Status": {
         "type": "object",
@@ -8402,9 +12159,9 @@
             "description": "The number of times the badge has been awarded in the past 24 whole\n hours.",
             "format": "int32"
           },
-          "awardRate": {
+          "rarity": {
             "type": "number",
-            "description": "The fraction of users of the experience who have been awarded the badge,\n on a scale from 0.0 to 1.0.",
+            "description": "The fraction of users of the experience who have *not* been awarded the\n badge, on a scale from 0.0 to 1.0.\n\n Lower values are rarer.",
             "format": "double"
           }
         },

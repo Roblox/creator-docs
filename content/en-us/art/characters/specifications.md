@@ -733,7 +733,7 @@ For general use, see the following requirements for adding inner and outer cage 
 
 Along with the other technical requirements listed, your items must meet the following additional specifications before uploading them to the Marketplace to sell:
 
-- Ensure that your items adhere to the [Marketplace Program Guidelines](../../art/marketplace/marketplace-policy.md).
+- Ensure that your items adhere to the [Marketplace Program Guidelines](../../marketplace/marketplace-policy.md).
 - Whenever possible, ensure that your items adhere to the following modeling requirements:
   - [Custom Mesh Specifications](../../art/modeling/specifications.md)
   - Any applicable [avatar specifications](../../art/characters/specifications.md)

@@ -152,6 +152,18 @@ properties:
     serialization:
       can_load: true
       can_save: true
-methods: []
+methods:
+  - name: AccessoryDescription:GetAppliedInstance
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Instance
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
 events: []
 callbacks: []

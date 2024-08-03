@@ -3,9 +3,12 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  Returned by `Class.Players:GetBanHistoryAsync` to view the entire ban and unban history of any UserId.
+  Returned by `Class.Players:GetBanHistoryAsync` to view the entire ban and
+  unban history of any UserId.
 description: |
-  `Class.BanHistoryPages` is returned by `Class.Players:GetBanHistoryAsync`. This instance allows an experience to view the entire ban and unban history of any player within the experience's universe. 
+  `Class.BanHistoryPages` is returned by `Class.Players:GetBanHistoryAsync()`.
+  This instance allows an experience to view the entire ban and unban history of
+  any player within the experience's universe.
 
   The items within `Class.BanHistoryPages` are tables with the following fields:
 
@@ -48,7 +51,6 @@ description: |
     </tr>
   </tbody>
   </table>
-
 code_samples: []
 inherits:
   - Pages

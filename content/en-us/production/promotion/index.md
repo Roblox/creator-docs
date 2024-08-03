@@ -29,7 +29,7 @@ The following table details promotional methods for experiences on the platform.
 	</tr>
 	<tr>
 		<td>**Time-Based Events**</td>
-		<td>Invite users back into your experiences with engaging time-based events that display on your experience's main details page. You can schedule up to 10 events at a time through the Events Platform, and users have the ability to opt-in to notifications for each event.<br /><br />For more information, see [Events Platform](../../production/promotion/events-platform.md).</td>
+		<td>Invite users back into your experiences with engaging time-based events that display on your experience's main details page. For more information, see [Experience Events](../../production/promotion/experience-events.md).</td>
 	</tr>
 	<tr>
 		<td>**Player Invite Prompts**</td>

@@ -1,0 +1,35 @@
+name: UIDragDetectorBoundingBehavior
+type: enum
+summary: |
+  Used with `Class.UIDragDetector` to determine bounding behavior of the dragged
+  UI object when `Class.UIDragDetector.BoundingUI` is set.
+description: |
+  Used with `Class.UIDragDetector` to determine bounding behavior of the dragged
+  UI object when `Class.UIDragDetector.BoundingUI` is set.
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Automatic
+    summary: |
+      Mimics **EntireObject** behavior for a UI object that's entirely contained
+      by the `Class.UIDragDetector.BoundingUI|BoundingUI`, or else **HitPoint**
+      for a UI object that's partially outside the
+      `Class.UIDragDetector.BoundingUI|BoundingUI`.
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: EntireObject
+    summary: |
+      Bounds the entire dragged UI object within the
+      `Class.UIDragDetector.BoundingUI|BoundingUI`.
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: HitPoint
+    summary: |
+      Bounds the dragged UI only by the exact hit/grab point and its respective
+      position after translation/rotation.
+    value: 2
+    tags: []
+    deprecation_message: ''

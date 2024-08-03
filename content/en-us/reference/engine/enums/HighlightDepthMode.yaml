@@ -1,18 +1,34 @@
 name: HighlightDepthMode
 type: enum
-summary: ''
-description: ''
+summary: |
+  Controls how the `Class.Highlight` effect displays with respect to other
+  objects in the world.
+description: |
+  Controls how the `Class.Highlight` effect displays with respect to other
+  objects in the world.
 code_samples:
 tags: []
 deprecation_message: ''
 items:
   - name: AlwaysOnTop
-    summary: ''
+    summary: |
+      Allows the `Class.Highlight` to display regardless if there are objects
+      between the camera and the highlighted object. This means the viewer is
+      always able to see the highlight regardless of what is between the
+      highlighted object and the camera.
+
+      <img src="/assets/ui/highlighting-objects/DepthMode-AlwaysOnTop.jpg" />
     value: 0
     tags: []
     deprecation_message: ''
   - name: Occluded
-    summary: ''
+    summary: |
+      Hides the `Class.Highlight` if there are objects between the camera and
+      the highlighted object. This means the viewer is only able to see the
+      object if there are no obstructing objects between the highlighted object
+      and the camera's view.
+
+      <img src="/assets/ui/highlighting-objects/DepthMode-Occluded.jpg" />
     value: 1
     tags: []
     deprecation_message: ''

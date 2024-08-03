@@ -311,7 +311,7 @@ functions:
       local startTime = os.clock()
       -- Do something you want to measure the performance of:
       local a, b = 0, 1
-      for i = 1, 5000000 do
+      for _ = 1, 5000000 do
           a, b = b, a
       end
       -- Measure amount of time this took:

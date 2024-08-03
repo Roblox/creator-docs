@@ -105,7 +105,9 @@ properties:
       Determines whether the experience name in the overlay is enabled.
     code_samples: []
     type: bool
-    tags: []
+    tags:
+      - Hidden
+      - Deprecated
     deprecation_message: ''
     security:
       read: None
@@ -152,7 +154,9 @@ properties:
       The `Datatype.Font` used for the experience name in the overlay.
     code_samples: []
     type: Font
-    tags: []
+    tags:
+      - Hidden
+      - Deprecated
     deprecation_message: ''
     security:
       read: None
@@ -169,7 +173,9 @@ properties:
       Currently disabled with no effect.
     code_samples: []
     type: bool
-    tags: []
+    tags:
+      - Hidden
+      - Deprecated
     deprecation_message: ''
     security:
       read: None

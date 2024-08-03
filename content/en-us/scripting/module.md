@@ -40,16 +40,16 @@ local PickupManager = {}
 
 local defaultMultiplier = 1.25
 local rarityMultipliers = {
-  common = 10,
-  uncommon = 20,
-  rare = 50,
-  legendary = 100
+	common = 10,
+	uncommon = 20,
+	rare = 50,
+	legendary = 100
 }
 
 -- Add the getPickupBonus function to the PickupManager table
 PickupManager.getPickupBonus = function(rarity)
-  local bonus = rarityMultipliers[rarity] * defaultMultiplier
-  return bonus
+	local bonus = rarityMultipliers[rarity] * defaultMultiplier
+	return bonus
 end
 
 return PickupManager
@@ -207,13 +207,13 @@ local NetworkManagerServer = {}
 
 local networkSignalList = {}
 function NetworkManagerServer.GetServerEventSignal(id)
-  local bindableEvent = Instance.new("BindableEvent")
-  -- Linking the new BindableEvent to the id
-  table.insert(networkSignalList, {
-    id = id;
-    bindableEvent = bindableEvent;
-  })
-  return bindableEvent.Event
+	local bindableEvent = Instance.new("BindableEvent")
+	-- Linking the new BindableEvent to the id
+	table.insert(networkSignalList, {
+		id = id,
+		bindableEvent = bindableEvent,
+	})
+	return bindableEvent.Event
 end
 
 -- Connecting to
@@ -221,12 +221,12 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local remoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
 remoteEvent.OnServerEvent:Connect(function(player, id, ...)
-  -- Finding every bindable event that matches the id of the received remote event
-  for _, signal in next, networkSignalList do
-    if signal.id == id then
-      signal.bindableEvent:Fire(player, ...)
-    end
-  end
+	-- Finding every bindable event that matches the id of the received remote event
+	for _, signal in networkSignalList do
+		if signal.id == id then
+			signal.bindableEvent:Fire(player, ...)
+		end
+	end
 end)
 
 return NetworkManagerServer
@@ -250,6 +250,6 @@ local ServerScriptService = game:GetService("ServerScriptService")
 
 local NetworkManagerServer = require(ServerScriptService:WaitForChild("NetworkManagerServer"))
 NetworkManagerServer.GetServerEventSignal("RequestA"):Connect(function(player, ...)
-  print("Received RequestA from", player, ...)
+	print("Received RequestA from", player, ...)
 end)
 ```

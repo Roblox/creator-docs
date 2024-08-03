@@ -408,31 +408,5 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events:
-  - name: SoundService.OpenAttenuationCurveEditorSignal
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: selectedCurveObjects
-        type: Objects
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-  - name: SoundService.OpenAudioEqualizerEditorSignal
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: selectedEqualizerObjects
-        type: Objects
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+events: []
 callbacks: []

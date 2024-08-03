@@ -1,0 +1,93 @@
+name: SecurityCapability
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: RunClientScript
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: RunServerScript
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: AccessOutsideWrite
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: AssetRequire
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: LoadString
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: ScriptGlobals
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: CreateInstances
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: Basic
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: Audio
+    summary: ''
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: DataStore
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: Network
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: Physics
+    summary: ''
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: UI
+    summary: ''
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: CSG
+    summary: ''
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: Chat
+    summary: ''
+    value: 14
+    tags: []
+    deprecation_message: ''
+  - name: Animation
+    summary: ''
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: Avatar
+    summary: ''
+    value: 16
+    tags: []
+    deprecation_message: ''

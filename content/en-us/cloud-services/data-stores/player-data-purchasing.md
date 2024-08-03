@@ -68,15 +68,15 @@ A common "gotcha" can occur if you attempt to handle data store failures like th
 
 ```lua
 local function retrySetAsync(dataStore, key, value)
-   for i = 1, MAX_ATTEMPTS do
-       local success, result = pcall(dataStore.SetAsync, dataStore, key, value)
+	for _ = 1, MAX_ATTEMPTS do
+		local success, result = pcall(dataStore.SetAsync, dataStore, key, value)
 
-       if success then
-           break
-       end
+		if success then
+			break
+		end
 
-       task.wait(TIME_BETWEEN_ATTEMPTS)
-   end
+		task.wait(TIME_BETWEEN_ATTEMPTS)
+	end
 end
 ```
 

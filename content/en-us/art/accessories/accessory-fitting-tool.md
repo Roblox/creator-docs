@@ -20,7 +20,7 @@ The AFT automatically handles the conversion of the custom `Class.Model` or `Cla
 </GridContainer>
 
 <Alert severity = 'warning'>
-If you are intending to sell your accessory on the Marketplace, make sure your accessory model design adheres to the [Marketplace Requirements](../../art/marketplace/marketplace-policy.md).
+If you are intending to sell your accessory on the Marketplace, make sure your accessory model design adheres to the [Marketplace Requirements](../../marketplace/marketplace-policy.md).
 </Alert>
 
 ## Setting up Accessories
@@ -243,7 +243,7 @@ To make changes to the vertices of the currently selected cage:
 
 ### Rigid Accessories
 
-When fitting rigid accessories, a bounding box appears around the mannequin indicating the possible placement of that specific type of accessory. You can position, rotate, and scale objects within this bounding box to ensure your accessory fits on different character models.
+When fitting rigid accessories, a bounding box appears around the mannequin indicating the possible placement of that specific type of accessory. You can **position**, **rotate**, and **scale** objects within this bounding box to ensure your accessory fits on different character models.
 
 <GridContainer numColumns="2">
   <figure>
@@ -255,6 +255,12 @@ When fitting rigid accessories, a bounding box appears around the mannequin indi
     <figcaption>If the accessory is outside the appropriate space, the bounding box turns red.</figcaption>
   </figure>
 </GridContainer>
+
+#### Generate Legacy Accessory
+
+At this time, if you intend to sell your rigid accessory on the Marketplace, you must select **Generate Legacy Accessory** instead of **Generate MeshPart Accessory**. PBR textures are not yet supported for legacy accessories and the tool automatically applies your colormap to your mesh's textureID.
+
+<img src="../../assets/accessories/accessory-fitting-tool/Generate-Legacy-Accessory.png" alt="A dropdown appears above the GenerateMeshPartAccessory when expanded, displaying a Generate Legacy Accessory option."/>
 
 ## Creating Accessory
 
@@ -277,11 +283,11 @@ When you are ready to generate your accessory:
 </GridContainer>
 
 <Alert severity = 'warning'>
-Rigid accessories that you intend to sell on the Marketplace require a `Class.SpecialMesh` and don't support [SurfaceAppearance](../../art/modeling/surface-appearance.md). See [Marketplace requirements](../../art/marketplace/marketplace-policy.md) for additional information.
+Rigid accessories that you intend to sell on the Marketplace require a `Class.SpecialMesh` and don't support [SurfaceAppearance](../../art/modeling/surface-appearance.md). Use the [Generate Legacy Accessory](#generate-legacy-accessory) option when creating your accessory.
 </Alert>
 
 With an accessory successfully created, you can now try the following:
 
 - Equip the accessory on an avatar-ready character by drag and dropping the accessory on an existing model, or using [HumanoidDescription](../../characters/appearance.md#humanoiddescription).
 - Save the accessory as an [avatar asset](../../projects/assets/index.md#for-avatars) for use in an experience later.
-- If you meet certain account requirements, you can [upload your asset](../marketplace/publishing-to-marketplace.md) for moderation and start selling it on the Marketplace.
+- If you meet certain account requirements, you can [upload your asset](../../marketplace/publishing-to-marketplace.md) for moderation and start selling it on the Marketplace.

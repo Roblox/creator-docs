@@ -26,7 +26,7 @@ printHelloWorld() -- Hello World!
 
 ## Global Scope
 
-After you declare a global variable or function, any block of code in the same [script](../scripting/scripts.md) can access it. Variables and functions have global scope unless you declare them with the `local` keyword.
+After you declare a global variable or function, any block of code in the same [script](../scripting/index.md) can access it. Variables and functions have global scope unless you declare them with the `local` keyword.
 
 In the following code, `testVar` has global scope within the local `testFunc()` function. When Luau calls the `testFunc()`, it assigns `testVar` the value `64`. The `testVar` has global scope, so the `print()` function outside `testFunc()` can access it and print `64`.
 

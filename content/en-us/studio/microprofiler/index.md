@@ -68,7 +68,7 @@ local function onPreSimulation()
 	debug.profilebegin("Hard work") -- Start profiling here with this label
 	-- Example hard work: swap two variables 200,000 times
 	local a, b = 0, 1
-	for i = 1, 200000 do
+	for _ = 1, 200000 do
 		a, b = b, a
 	end
 	debug.profileend() -- Stop profiling here

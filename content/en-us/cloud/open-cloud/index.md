@@ -1,20 +1,13 @@
 ---
-title: Cloud
+title: Open Cloud
 description: In addition to using Engine and Studio tools to create experiences on Roblox, you can automate your internal workflows, improve your efficiency creating content, and support your experience operation needs from the web.
 ---
 
-**Manage Roblox resources from the web.**
+With Open Cloud, you can access Roblox resources through standard REST APIs, which lets you build everything from command line automation tools to complex web apps. The Open Cloud APIs support HTTPS and let you update experiences, restart servers, work with your data stores and memory stores, manage user restrictions, list inventory items, and much, much more.
 
-With Open Cloud, you can build tools and apps to access Roblox resources through
-standard web APIs. These APIs allow you to automate internal workflows, improve
-efficiency with content creation and management, and support experience
-operations from the web. Open Cloud is RESTful and supports HTTPS requests.
+## Getting Started with Open Cloud
 
-To begin using the Open Cloud APIs:
-
-1. See the authentication documentation on
-   how to use [OAuth 2.0](oauth2-overview.md) or
-   [API Keys](api-keys.md) to authenticate calls to
-   resource methods.
-2. See the Open Cloud [reference documentation](../reference/index.md) to learn
-   how to use the APIs.
+1. See the authentication documentation for how to use [API keys](api-keys.md) or [OAuth 2.0](oauth2-overview.md).
+1. Use a tool like [Postman](https://www.postman.com) or the [OAuth 2.0 sample app](oauth2-sample.md) to test API calls.
+1. Review the [resource guides](experience-notifications.md) for end-to-end walkthroughs of using certain APIs.
+1. See the Open Cloud [reference documentation](../reference/index.md) for the full list of resources, [common API patterns](../reference/patterns.md), and [types](../reference/types.md).

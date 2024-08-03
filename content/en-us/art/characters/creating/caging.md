@@ -20,7 +20,7 @@ Do not delete any vertices or faces of the provided cages. Destructive modificat
 </GridContainer>
 
 <Alert severity = 'info'>
-If your character body shape incorporates many changes with different body parts, it may be more efficient to use the [Blender Cage Template](../../../assets/modeling/meshes/reference-files/Body_Cage_Template.blend). This Blender project file includes a helper full-body `std_cage_deformable` mesh to automatically apply vertex changes to the individual body-part cages at the same time.
+If your character body shape incorporates many changes with different body parts, it may be more efficient to use the [Blender Cage Template](../../../assets/modeling/meshes/reference-files/Body_Cage_Templates.zip). This Blender project file includes a helper full-body `std_cage_deformable` mesh to automatically apply vertex changes to the individual body-part cages at the same time.
 </Alert>
 
 To begin caging your character:

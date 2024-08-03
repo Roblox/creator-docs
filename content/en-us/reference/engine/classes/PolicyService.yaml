@@ -49,13 +49,13 @@ methods:
       <td>ArePaidRandomItemsRestricted</td>
       <td>Boolean</td>
       <td>Any experience that has paid random items</td>
-      <td>When true, the player cannot interact with paid (via in-experience currency or Robux) random item generators.</td>
+      <td>When true, the player cannot interact with paid (via in-experience currency bought with Robux, or Robux directly) random item generators.</td>
       </tr>
       <tr>
       <td>AllowedExternalLinkReferences</td>
       <td>Array of strings</td>
       <td>Any experience that references external links</td>
-      <td>A list of external link references (for example, social media links, handles, or iconography) a player is permitted to see. Possible values include: "Discord", "Facebook", "Twitch", "Twitter", "YouTube", and "X".</td>
+      <td>A list of external link references (for example, social media links, handles, or iconography) a player is permitted to see. Possible values include: "Discord", "Facebook", "Twitch", "Twitter", "YouTube", "X", "GitHub", and "Guilded".</td>
       </tr>
       <tr>
       <td>IsEligibleToPurchaseSubscription</td>

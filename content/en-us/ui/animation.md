@@ -1,9 +1,9 @@
 ---
-title: UI Animations
+title: UI Animation/Tweens
 description: Explains how to animate GuiObjects using the process of tweening.
 ---
 
-In animation, **tweening** is the process of generating intermediate frames between two key points in a sequence. When designing a [user interface](../ui/index.md), you can use tweening to transition a `Class.GuiObject` smoothly from one state to another, such as:
+In animation, **tweening** is the process of generating intermediate frames between two key points in a sequence. When designing a user interface, you can use tweening to transition a `Class.GuiObject` smoothly from one state to another, such as:
 
 - Smoothly increasing the size of a button when a user selects it.
 - Sliding UI menus in and out from the screen edges.
@@ -276,7 +276,7 @@ Multiple properties control UI borders, depending on the object type.
     </tbody>
 </table>
 
-Alternatively, you can apply a [UIStroke](../ui/layout-and-appearance.md#uistroke) child and tween its thickness, color, and/or transparency.
+Alternatively, you can apply a `Class.UIStroke` child and tween its thickness, color, and/or transparency.
 
 <table>
     <thead>
@@ -407,47 +407,47 @@ Using the easing options of `Datatype.TweenInfo`, you can control the easing **s
 </thead>
 <tbody>
   <tr>
-    <td><b>Linear</b></td>
+    <td>**Linear**</td>
     <td>Moves at a constant speed.</td>
   </tr>
   <tr>
-    <td><b>Sine</b></td>
-    <td>Speed is determined by a sine wave.</td>
+    <td>**Sine**</td>
+    <td>Speed is determined by a sine wave for a gentle easing motion.</td>
   </tr>
   <tr>
-    <td><b>Quad</b></td>
-    <td>Speed is determined by quadratic interpolation.</td>
+    <td>**Quad**</td>
+    <td>Similar to **Sine** but with a slightly sharper curve based on quadratic interpolation.</td>
   </tr>
   <tr>
-    <td><b>Cubic</b></td>
-    <td>Similar to **Quad**, but starts at a lower speed.</td>
+    <td>**Cubic**</td>
+    <td>Similar to **Quad** but with a slightly sharper curve based on cubic interpolation.</td>
   </tr>
   <tr>
-    <td><b>Quart</b></td>
-    <td>Similar to **Quad**, but starts at a higher speed.</td>
+    <td>**Quart**</td>
+    <td>Similar to **Cubic** but with an even sharper curve based on quartic interpolation.</td>
   </tr>
   <tr>
-    <td><b>Quint</b></td>
-    <td>Similar to **Quart**, but starts at a higher speed.</td>
+    <td>**Quint**</td>
+    <td>Similar to **Quart** but with an even sharper curve based on quintic interpolation.</td>
   </tr>
   <tr>
-    <td><b>Exponential</b></td>
-    <td>Speed reduces very quickly as tween approaches the target.</td>
+    <td>**Exponential**</td>
+    <td>The sharpest curve based on exponential interpolation.</td>
   </tr>
   <tr>
-    <td><b>Circular</b></td>
-    <td>Follows a circular arc, slowing down as tween approaches the target.</td>
+    <td>**Circular**</td>
+    <td>Follows a circular arc, such that acceleration is more sudden and deceleration more gradual versus **Quint** or **Exponential**.</td>
   </tr>
   <tr>
-    <td><b>Back</b></td>
+    <td>**Back**</td>
     <td>Slightly overshoots the target, then backs into place.</td>
   </tr>
   <tr>
-    <td><b>Bounce</b></td>
+    <td>**Bounce**</td>
     <td>Bounces backwards multiple times after reaching the target, before eventually settling.</td>
   </tr>
   <tr>
-    <td><b>Elastic</b></td>
+    <td>**Elastic**</td>
     <td>Moves as if attached to a rubber band, overshooting the target several times.</td>
   </tr>
 </tbody>
@@ -483,15 +483,15 @@ local tween = TweenService:Create(object, tweenInfo, {Rotation = 45})
 </thead>
 <tbody>
   <tr>
-    <td><b>In</b></td>
+    <td>**In**</td>
     <td>The easing style applies in a forward direction.</td>
   </tr>
   <tr>
-    <td><b>Out</b></td>
+    <td>**Out**</td>
     <td>The easing style applies in a reverse direction.</td>
   </tr>
   <tr>
-    <td><b>InOut</b></td>
+    <td>**InOut**</td>
     <td>The easing style applies forward for the first half and in reverse for the second half.</td>
   </tr>
 </tbody>

@@ -234,7 +234,7 @@ functions:
 
       ```lua
       local thread = task.delay(5, function()
-        print("Hello world!")
+      	print("Hello world!")
       end)
 
       task.cancel(thread)

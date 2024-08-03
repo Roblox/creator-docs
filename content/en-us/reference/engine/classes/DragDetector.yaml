@@ -3,31 +3,35 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  `Class.DragDetector` instances encourage physical interaction with objects in
-  an experience.
+  Instance which facilitates and encourages interaction with 3D objects in an
+  experience.
 description: |
-  `Class.DragDetector` instances encourage physical interaction with objects in
-  an experience, such as opening doors and drawers, sliding a part around, and
-  much more. Key features include:
+  The `Class.DragDetector` instance facilitates and encourages interaction with
+  3D objects in an experience, such as opening doors and drawers, sliding a part
+  around, and much more. Key features include:
 
-  - Place a `Class.DragDetector` under any part or model to make it draggable
-    via all inputs (mouse, touch, gamepad, and VR), all without a single line of
-    code.
-  - Choose from many `Class.DragDetector.DragStyle|DragStyle` options, define
+  - Place a `Class.DragDetector` under any `Class.BasePart` or `Class.Model` to
+    make it draggable via all inputs (mouse, touch, gamepad, and VR), all
+    without a single line of code.
+
+  - Choose from several `Class.DragDetector.DragStyle|DragStyle` options, define
     how the object responds to motion via
     `Class.DragDetector.ResponseStyle|ResponseStyle`, and optionally apply axis
     or movement limits.
+
   - Scripts can respond to manipulation of dragged objects to drive UI or make
     logical decisions, such as adjusting the light level in a room based on a
     sliding wall switch dimmer.
+
   - Players can manipulate anchored parts or models and they'll stay exactly
     where you put them upon release.
+
   - `Class.DragDetector|DragDetectors` work in Studio as long as you're **not**
     using the **Select**, **Move**, **Scale**, or **Rotate** tools, making it
     easier to test and adjust draggable objects while editing.
 
-  See the [Drag Detectors](../../../ui/drag-detectors.md) article for details
-  and usage examples.
+  See the [3D Drag Detectors](../../../ui/3D-drag-detectors.md) guide for
+  details and usage examples.
 code_samples: []
 inherits:
   - ClickDetector
@@ -64,7 +68,7 @@ properties:
       When false (default), constraint force is applied at the point the user
       clicks on. When true, force is applied at the object's center of mass.
       Only relevant if `Class.DragDetector.ResponseStyle|ResponseStyle` is
-      `Enum.DragDetectorResponseStyle|Physical` and the parent object is
+      `Enum.DragDetectorResponseStyle.Physical` and the parent object is
       unanchored.
     code_samples: []
     type: bool
@@ -84,9 +88,9 @@ properties:
     description: |
       The primary axis of motion, expressed relative to the reference frame. For
       a `Class.DragDetector.DragStyle|DragStyle` of
-      `Enum.DragDetectorDragStyle|TranslateLine`, the direction of translation;
-      for `Enum.DragDetectorDragStyle|TranslatePlane`, the normal to the plane
-      of motion; for `Enum.DragDetectorDragStyle|RotateAxis`, the axis of 1D
+      `Enum.DragDetectorDragStyle.TranslateLine`, the direction of translation;
+      for `Enum.DragDetectorDragStyle.TranslatePlane`, the normal to the plane
+      of motion; for `Enum.DragDetectorDragStyle.RotateAxis`, the axis of 1D
       rotation. Changing this value automatically updates
       `Class.DragDetector.Orientation|Orientation` and vice versa.
     code_samples: []
@@ -207,11 +211,15 @@ properties:
       drag detector's attempts to generate motion.
     description: |
       If this is greater than `Class.DragDetector.MinDragAngle|MinDragAngle`,
-      translation will be clamped within that range. This is not a constraint;
-      it merely impedes the drag detector's attempts to generate motion in order
-      to remain within limits. Only relevant if
-      `Class.DragDetector.DragStyle|DragStyle` is
-      `Enum.DragDetectorDragStyle|RotateAxis`.
+      translation will be clamped within that range.
+
+      This is not a constraint; it merely impedes the drag detector's attempts
+      to generate motion in order to remain within limits. See
+      `Class.DragDetector:AddConstraintFunction()|AddConstraintFunction()` to
+      add custom constraint to a drag.
+
+      Only relevant if `Class.DragDetector.DragStyle|DragStyle` is
+      `Enum.DragDetectorDragStyle.RotateAxis`.
     code_samples: []
     type: float
     tags: []
@@ -231,9 +239,12 @@ properties:
     description: |
       In any dimension, if this is greater than
       `Class.DragDetector.MinDragTranslation|MinDragTranslation`, translation
-      will be clamped within that range. This is not a constraint; it merely
-      impedes the drag detector's attempts to generate motion in order to remain
-      within limits.
+      will be clamped within that range.
+
+      This is not a constraint; it merely impedes the drag detector's attempts
+      to generate motion in order to remain within limits. See
+      `Class.DragDetector:AddConstraintFunction()|AddConstraintFunction()` to
+      add custom constraint to a drag.
     code_samples: []
     type: Vector3
     tags: []
@@ -252,7 +263,7 @@ properties:
     description: |
       Maximum force applied for the object to reach its goal. Only relevant if
       `Class.DragDetector.ResponseStyle|ResponseStyle` is
-      `Enum.DragDetectorResponseStyle|Physical` and the parent object is
+      `Enum.DragDetectorResponseStyle.Physical` and the parent object is
       unanchored.
     code_samples: []
     type: float
@@ -272,7 +283,7 @@ properties:
     description: |
       Maximum torque applied for the object to reach its goal. Only relevant if
       `Class.DragDetector.ResponseStyle|ResponseStyle` is
-      `Enum.DragDetectorResponseStyle|Physical` and the parent object is
+      `Enum.DragDetectorResponseStyle.Physical` and the parent object is
       unanchored.
     code_samples: []
     type: float
@@ -292,11 +303,15 @@ properties:
       drag detector's attempts to generate motion.
     description: |
       If this is less than `Class.DragDetector.MaxDragAngle|MaxDragAngle`,
-      translation will be clamped within that range. This is not a constraint;
-      it merely impedes the drag detector's attempts to generate motion in order
-      to remain within limits. Only relevant if
-      `Class.DragDetector.DragStyle|DragStyle` is
-      `Enum.DragDetectorDragStyle|RotateAxis`.
+      translation will be clamped within that range.
+
+      This is not a constraint; it merely impedes the drag detector's attempts
+      to generate motion in order to remain within limits. See
+      `Class.DragDetector:AddConstraintFunction()|AddConstraintFunction()` to
+      add custom constraint to a drag.
+
+      Only relevant if `Class.DragDetector.DragStyle|DragStyle` is
+      `Enum.DragDetectorDragStyle.RotateAxis`.
     code_samples: []
     type: float
     tags: []
@@ -316,9 +331,12 @@ properties:
     description: |
       In any dimension, if this is less than
       `Class.DragDetector.MaxDragTranslation|MaxDragTranslation`, translation
-      will be clamped within that range. This is not a constraint; it merely
-      impedes the drag detector's attempts to generate motion in order to remain
-      within limits.
+      will be clamped within that range.
+
+      This is not a constraint; it merely impedes the drag detector's attempts
+      to generate motion in order to remain within limits. See
+      `Class.DragDetector:AddConstraintFunction()|AddConstraintFunction()` to
+      add custom constraint to a drag.
     code_samples: []
     type: Vector3
     tags: []
@@ -426,7 +444,7 @@ properties:
     description: |
       Higher values cause the object to reach its goal more rapidly. Only
       relevant if `Class.DragDetector.ResponseStyle|ResponseStyle` is
-      `Enum.DragDetectorResponseStyle|Physical` and the parent object is
+      `Enum.DragDetectorResponseStyle.Physical` and the parent object is
       unanchored.
     code_samples: []
     type: float
@@ -490,7 +508,7 @@ properties:
   - name: DragDetector.TrackballRadialPullFactor
     summary: |
       If `Class.DragDetector.DragStyle|DragStyle` is
-      `Enum.DragDetectorDragStyle|RotateTrackball`, multiplier for adding a
+      `Enum.DragDetectorDragStyle.RotateTrackball`, multiplier for adding a
       radial pull rotation as a contribution to the total.
     description: |
       When the cursor is outside the trackball, the `Class.DragDetector` can
@@ -498,7 +516,7 @@ properties:
       roll out toward the cursor. This property is a 0 to 1 multiplier for
       adding that rotation as a contribution to the total. Only relevant if
       `Class.DragDetector.DragStyle|DragStyle` is
-      `Enum.DragDetectorDragStyle|RotateTrackball`.
+      `Enum.DragDetectorDragStyle.RotateTrackball`.
     code_samples: []
     type: float
     tags: []
@@ -514,7 +532,7 @@ properties:
   - name: DragDetector.TrackballRollFactor
     summary: |
       If `Class.DragDetector.DragStyle|DragStyle` is
-      `Enum.DragDetectorDragStyle|RotateTrackball`, multiplier for adding roll
+      `Enum.DragDetectorDragStyle.RotateTrackball`, multiplier for adding roll
       rotation to the total.
     description: |
       When the cursor is outside the trackball, the `Class.DragDetector` can
@@ -522,7 +540,7 @@ properties:
       record facing the viewer. This property is a 0 to 1 multiplier for adding
       that roll rotation to the total. Only relevant if
       `Class.DragDetector.DragStyle|DragStyle` is
-      `Enum.DragDetectorDragStyle|RotateTrackball`.
+      `Enum.DragDetectorDragStyle.RotateTrackball`.
     code_samples: []
     type: float
     tags: []
@@ -608,7 +626,7 @@ methods:
       functions which will be called in order by `priority`, passing the results
       along in a chain.
 
-      To remove the added constraint function, call
+      To remove an added constraint function, call
       `Datatype.RBXScriptConnection:Disconnect()|Disconnect()` on the returned
       connection object.
     code_samples: []
@@ -673,11 +691,11 @@ methods:
     summary: |
       Passes a function to be used if and only if
       `Class.DragDetector.DragStyle|DragStyle` is set to
-      `Enum.DragDetectorDragStyle|Scriptable`.
+      `Enum.DragDetectorDragStyle.Scriptable`.
     description: |
       Passes a function to be used if and only if
       `Class.DragDetector.DragStyle|DragStyle` is set to
-      `Enum.DragDetectorDragStyle|Scriptable`. The given function is called when
+      `Enum.DragDetectorDragStyle.Scriptable`. The given function is called when
       responding to a `Class.DragDetector.DragContinue|DragContinue` signal, it
       receives the signal's world space cursor ray with type `Datatype.Ray`, and
       it returns a `Datatype.CFrame` containing the desired location and
@@ -696,7 +714,7 @@ methods:
           Function for monitoring `Class.DragDetector.DragContinue|DragContinue`
           signals. This function receives the signal's world space cursor ray
           and it returns a `Datatype.CFrame` containing the desired location and
-          orientation of the pivot in world space. If the function returns
+          orientation of the pivot in world space. If this function returns
           `nil`, the object will not be moved.
     returns:
       - type: void
@@ -777,12 +795,12 @@ events:
         type: Ray
         default:
         summary: |
-          A `Datatype.Ray` emanating from the cursor, aimed into the scene.
+          `Datatype.Ray` emanating from the cursor, aimed into the scene.
       - name: viewFrame
         type: CFrame
         default:
         summary: |
-          The `Datatype.CFrame` of the user's `Class.Camera`.
+          `Datatype.CFrame` of the user's `Class.Camera`.
       - name: vrInputFrame
         type: OptionalCoordinateFrame
         default:
@@ -832,17 +850,17 @@ events:
         type: Player
         default:
         summary: |
-          The `Class.Player` who initiated the drag.
+          `Class.Player` who initiated the drag.
       - name: cursorRay
         type: Ray
         default:
         summary: |
-          A `Datatype.Ray` emanating from the cursor, aimed into the scene.
+          `Datatype.Ray` emanating from the cursor, aimed into the scene.
       - name: viewFrame
         type: CFrame
         default:
         summary: |
-          The `Datatype.CFrame` of the user's `Class.Camera`.
+          `Datatype.CFrame` of the user's `Class.Camera`.
       - name: hitFrame
         type: CFrame
         default:

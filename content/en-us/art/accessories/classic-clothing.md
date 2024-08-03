@@ -4,7 +4,7 @@ description: Classic clothing are decals you can apply to a classic character mo
 ---
 
 <Alert severity="warning">
-Current user-generated avatars do not support 2D classic clothing. For information on creating modern 3D cosmetics, including rigid accessories and clothing items, see [Getting Started](../../avatar/index.md).
+Current user-generated avatars on the Marketplace do not support 2D classic clothing. For information on creating modern 3D cosmetics, including rigid accessories and clothing items, see [Getting Started](../../avatar/index.md).
 </Alert>
 
 Classic clothing are a type of 2D cosmetic item that you can apply to the surface of a classic avatar character. You can [create](#creating) your own classic clothing items and sell them on the [Marketplace](https://www.roblox.com/catalog).
@@ -162,7 +162,7 @@ To make sure your clothing looks as good as possible on as many avatars as possi
 
 ## Uploading
 
-After finalizing and testing your design, you can upload the clothing item to the [Marketplace](https://www.roblox.com/catalog) for a [fee](../../art/marketplace/marketplace-fees-and-commissions.md#classic-clothing). After Roblox reviews and uploads the item to the Marketplace, you will receive a [commission](../../art/marketplace/marketplace-fees-and-commissions.md#commissions) for all sales of your items.
+After finalizing and testing your design, you can upload the clothing item to the [Marketplace](https://www.roblox.com/catalog) for a [fee](../../marketplace/marketplace-fees-and-commissions.md#classic-clothing). After Roblox reviews and uploads the item to the Marketplace, you will receive a [commission](../../marketplace/marketplace-fees-and-commissions.md#commissions) for all sales of your items.
 
 To upload a custom clothing item:
 

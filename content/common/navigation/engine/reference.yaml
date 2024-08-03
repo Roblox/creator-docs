@@ -115,10 +115,10 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Animator.yaml
         ignoreTranslation: true
-      - title: AppLifecycleObserverService
-        path: /reference/engine/classes/AppLifecycleObserverService
+      - title: Annotation
+        path: /reference/engine/classes/Annotation
         type: engineapi
-        source: /reference/engine/classes/AppLifecycleObserverService.yaml
+        source: /reference/engine/classes/Annotation.yaml
         ignoreTranslation: true
       - title: ArcHandles
         path: /reference/engine/classes/ArcHandles
@@ -144,6 +144,11 @@ navigation:
         path: /reference/engine/classes/Atmosphere
         type: engineapi
         source: /reference/engine/classes/Atmosphere.yaml
+        ignoreTranslation: true
+      - title: AtmosphereSensor
+        path: /reference/engine/classes/AtmosphereSensor
+        type: engineapi
+        source: /reference/engine/classes/AtmosphereSensor.yaml
         ignoreTranslation: true
       - title: Attachment
         path: /reference/engine/classes/Attachment
@@ -199,6 +204,11 @@ navigation:
         path: /reference/engine/classes/AudioFader
         type: engineapi
         source: /reference/engine/classes/AudioFader.yaml
+        ignoreTranslation: true
+      - title: AudioFilter
+        path: /reference/engine/classes/AudioFilter
+        type: engineapi
+        source: /reference/engine/classes/AudioFilter.yaml
         ignoreTranslation: true
       - title: AudioFlanger
         path: /reference/engine/classes/AudioFlanger
@@ -460,6 +470,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/ChangeHistoryService.yaml
         ignoreTranslation: true
+      - title: ChannelTabsConfiguration
+        path: /reference/engine/classes/ChannelTabsConfiguration
+        type: engineapi
+        source: /reference/engine/classes/ChannelTabsConfiguration.yaml
+        ignoreTranslation: true
       - title: CharacterAppearance
         path: /reference/engine/classes/CharacterAppearance
         type: engineapi
@@ -534,6 +549,11 @@ navigation:
         path: /reference/engine/classes/ColorCorrectionEffect
         type: engineapi
         source: /reference/engine/classes/ColorCorrectionEffect.yaml
+        ignoreTranslation: true
+      - title: ColorGradingEffect
+        path: /reference/engine/classes/ColorGradingEffect
+        type: engineapi
+        source: /reference/engine/classes/ColorGradingEffect.yaml
         ignoreTranslation: true
       - title: CommandService
         path: /reference/engine/classes/CommandService
@@ -1095,6 +1115,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Hat.yaml
         ignoreTranslation: true
+      - title: HeatmapService
+        path: /reference/engine/classes/HeatmapService
+        type: engineapi
+        source: /reference/engine/classes/HeatmapService.yaml
+        ignoreTranslation: true
       - title: HeightmapImporterService
         path: /reference/engine/classes/HeightmapImporterService
         type: engineapi
@@ -1304,11 +1329,6 @@ navigation:
         path: /reference/engine/classes/LineHandleAdornment
         type: engineapi
         source: /reference/engine/classes/LineHandleAdornment.yaml
-        ignoreTranslation: true
-      - title: LinkingService
-        path: /reference/engine/classes/LinkingService
-        type: engineapi
-        source: /reference/engine/classes/LinkingService.yaml
         ignoreTranslation: true
       - title: LocalizationService
         path: /reference/engine/classes/LocalizationService
@@ -2900,6 +2920,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Workspace.yaml
         ignoreTranslation: true
+      - title: WorkspaceAnnotation
+        path: /reference/engine/classes/WorkspaceAnnotation
+        type: engineapi
+        source: /reference/engine/classes/WorkspaceAnnotation.yaml
+        ignoreTranslation: true
       - title: WorldModel
         path: /reference/engine/classes/WorldModel
         type: engineapi
@@ -2909,6 +2934,11 @@ navigation:
         path: /reference/engine/classes/WorldRoot
         type: engineapi
         source: /reference/engine/classes/WorldRoot.yaml
+        ignoreTranslation: true
+      - title: WrapDeformer
+        path: /reference/engine/classes/WrapDeformer
+        type: engineapi
+        source: /reference/engine/classes/WrapDeformer.yaml
         ignoreTranslation: true
       - title: WrapLayer
         path: /reference/engine/classes/WrapLayer
@@ -3313,6 +3343,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AudioApiRollout.yaml
         ignoreTranslation: true
+      - title: AudioFilterType
+        path: /reference/engine/enums/AudioFilterType
+        type: engineapi
+        source: /reference/engine/enums/AudioFilterType.yaml
+        ignoreTranslation: true
       - title: AudioSubType
         path: /reference/engine/enums/AudioSubType
         type: engineapi
@@ -3527,6 +3562,11 @@ navigation:
         path: /reference/engine/enums/ClientAnimatorThrottlingMode
         type: engineapi
         source: /reference/engine/enums/ClientAnimatorThrottlingMode.yaml
+        ignoreTranslation: true
+      - title: CloseReason
+        path: /reference/engine/enums/CloseReason
+        type: engineapi
+        source: /reference/engine/enums/CloseReason.yaml
         ignoreTranslation: true
       - title: CollaboratorStatus
         path: /reference/engine/enums/CollaboratorStatus
@@ -4133,6 +4173,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/LoadDynamicHeads.yaml
         ignoreTranslation: true
+      - title: LocationType
+        path: /reference/engine/enums/LocationType
+        type: engineapi
+        source: /reference/engine/enums/LocationType.yaml
+        ignoreTranslation: true
       - title: MarketplaceBulkPurchasePromptStatus
         path: /reference/engine/enums/MarketplaceBulkPurchasePromptStatus
         type: engineapi
@@ -4403,6 +4448,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PositionAlignmentMode.yaml
         ignoreTranslation: true
+      - title: PreferredTextSize
+        path: /reference/engine/enums/PreferredTextSize
+        type: engineapi
+        source: /reference/engine/enums/PreferredTextSize.yaml
+        ignoreTranslation: true
       - title: PrimalPhysicsSolver
         path: /reference/engine/enums/PrimalPhysicsSolver
         type: engineapi
@@ -4637,6 +4687,11 @@ navigation:
         path: /reference/engine/enums/ScrollingDirection
         type: engineapi
         source: /reference/engine/enums/ScrollingDirection.yaml
+        ignoreTranslation: true
+      - title: SecurityCapability
+        path: /reference/engine/enums/SecurityCapability
+        type: engineapi
+        source: /reference/engine/enums/SecurityCapability.yaml
         ignoreTranslation: true
       - title: SelectionBehavior
         path: /reference/engine/enums/SelectionBehavior
@@ -4988,6 +5043,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/TrackerPromptEvent.yaml
         ignoreTranslation: true
+      - title: TrackerType
+        path: /reference/engine/enums/TrackerType
+        type: engineapi
+        source: /reference/engine/enums/TrackerType.yaml
+        ignoreTranslation: true
       - title: TriStateBoolean
         path: /reference/engine/enums/TriStateBoolean
         type: engineapi
@@ -4997,6 +5057,11 @@ navigation:
         path: /reference/engine/enums/TweenStatus
         type: engineapi
         source: /reference/engine/enums/TweenStatus.yaml
+        ignoreTranslation: true
+      - title: UIDragDetectorBoundingBehavior
+        path: /reference/engine/enums/UIDragDetectorBoundingBehavior
+        type: engineapi
+        source: /reference/engine/enums/UIDragDetectorBoundingBehavior.yaml
         ignoreTranslation: true
       - title: UIDragDetectorDragRelativity
         path: /reference/engine/enums/UIDragDetectorDragRelativity

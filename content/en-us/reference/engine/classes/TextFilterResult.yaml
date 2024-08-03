@@ -20,43 +20,34 @@ methods:
       Returns the text in a properly filtered manner for the specified
       `Class.Player.UserId`.
     description: |
-      The GetChatForUserAsync function returns the text in a properly filtered
-      manner for the specified `Class.Player.UserId`. This should be used in the
-      context of chats between players, although there are some other cases
-      where text filtering is required.
+      This method returns the text in a properly filtered manner for the
+      specified `Class.Player.UserId` using the least restrictive filtering
+      appropriate for that user, with `Class.Chat` privacy settings of both
+      users enforced. This should be used in the context of chats between
+      players, although there are some other cases where text filtering is
+      required.
 
-      This function returns the string appropriate for sending and displaying to
-      a target user (specified by _toUserId_) from the original sender using the
-      least restrictive filtering appropriate for the target user, with
-      `Class.Chat` privacy settings of both users enforced. This string should
-      only be shown to the target user, as it might not be appropriate for all
-      users.
+      The returned string should only be shown to the target user, as it might
+      not be appropriate for all users.
 
-      This method throws an error if the two users are not allowed to chat (that
-      is, if `Class.Chat:CanUserChatAsync()` would return false for the given
-      sender and receiver). If this method throws the string should not be
-      displayed to the user. In addition, this function will throw an error if
-      CanUserChatAsync would return false, so CanUserChatAsync should be called
-      first to check.
+      If this method throws an error, the string should **not** be displayed to
+      the user. Cases for error include:
 
-      This function currently throws an error if the user with the id _toUserId_
-      is not online on the current server.
+      - The two users are not allowed to chat, for example if
+        `Class.Chat:CanUserChatAsync()` would return `false` for the given
+        sender and receiver.
+      - The user with the ID `toUserId` is not online on the current server.
 
-      If text can be used for real-time or near real-time communication it
-      should use this method.
-
-      This function will return immediately in most cases. The only time it will
-      yield is if the target user is offline or has just joined the server and
-      their filtering info is not yet loaded.
+      This function will return immediately in most cases, although it will
+      yield if the target user has just joined the server and their filtering
+      info is not yet loaded.
     code_samples:
-      - TextFilterResult-GetChatForUserAsync-script
-      - TextFilterResult-GetChatForUserAsync-localscript
     parameters:
       - name: toUserId
         type: int64
         default:
         summary: |
-          ID of the user being chatted.
+          `Class.Player.UserId` of the user being chatted.
     returns:
       - type: string
         summary: |
@@ -70,12 +61,16 @@ methods:
     summary: |
       Returns the text in a properly filtered manner for all users.
     description: |
-      Returns the text in a properly filtered manner for all users.
+      Returns the text in a properly filtered manner for all users. This should
+      be used in the context of non-chat text that every user can see, such as
+      for a dialog that lets a user write a message on a sign, visible to all
+      users on the server even after the author has left.
     code_samples:
     parameters: []
     returns:
       - type: string
-        summary: ''
+        summary: |
+          Filtered text string.
     tags:
       - Yields
     deprecation_message: ''
@@ -84,21 +79,23 @@ methods:
   - name: TextFilterResult:GetNonChatStringForUserAsync
     summary: |
       Returns the text in a properly filtered manner for the specified
-      `Class.Player.UserId`. This should be used in the context of non-chat text
-      that another user can see, such as the name of a pet.
+      `Class.Player.UserId` based on age and other details.
     description: |
       Returns the text in a properly filtered manner for the specified
-      `Class.Player.UserId`. This should be used in the context of non-chat text
-      that another user can see, such as the name of a pet.
+      `Class.Player.UserId` based on age and other details. This should be used
+      in the context of non-chat text that one specific user can see, such as
+      the name of a pet.
     code_samples:
     parameters:
       - name: toUserId
         type: int64
         default:
-        summary: ''
+        summary: |
+          `Class.Player.UserId` of the user intended to see/receive the text.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          Filtered text string.
     tags:
       - Yields
     deprecation_message: ''

@@ -48,11 +48,11 @@ To begin with, the script needs to restore a player's health. This pattern shoul
    local MAX_HEALTH = 100
 
    local function onTouchHealthPickup(otherPart, healthPickup)
-       local character = otherPart.Parent
-       local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-       if humanoid then
-       	humanoid.Health = MAX_HEALTH
-       end
+   	local character = otherPart.Parent
+   	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   	if humanoid then
+   		humanoid.Health = MAX_HEALTH
+   	end
    end
    ```
 
@@ -78,7 +78,7 @@ When called on a folder, the `GetChildren` function will return an array of the 
    local healthPickups = healthPickupsFolder:GetChildren()
 
    local function onTouchHealthPickup(otherPart, healthPickup)
-	local character = otherPart.Parent
+   	local character = otherPart.Parent
    	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
    	if humanoid then
    		humanoid.Health = MAX_HEALTH
@@ -102,11 +102,11 @@ In the following code, you don't need the index for anything, so it can be left 
 
 ```lua
 local function onTouchHealthPickup(otherPart, healthPickup)
-    local character = otherPart.Parent
-    local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-    if humanoid then
-        humanoid.Health = MAX_HEALTH
-    end
+	local character = otherPart.Parent
+	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+	if humanoid then
+		humanoid.Health = MAX_HEALTH
+	end
 end
 
 for _, healthPickup in ipairs(healthPickups) do
@@ -121,9 +121,9 @@ A wrapper function will be needed to pass the health pickup to the `onTouchHealt
 
    ```lua
    for _, healthPickup in ipairs(healthPickups) do
-       healthPickup.Touched:Connect(function(otherPart)
-       	onTouchHealthPickup(otherPart, healthPickup)
-       end)
+   	healthPickup.Touched:Connect(function(otherPart)
+   		onTouchHealthPickup(otherPart, healthPickup)
+   	end)
    end
    ```
 
@@ -149,19 +149,19 @@ First, you need to record whether or not the pickup is in the cooldown period. T
    ```lua
    local function onTouchHealthPickup(otherPart, healthPickup)
    	if healthPickup:GetAttribute("Enabled") then
-           local character = otherPart.Parent
-           local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-           if humanoid then
-               humanoid.Health = MAX_HEALTH
-           end
+   		local character = otherPart.Parent
+   		local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+   		if humanoid then
+   			humanoid.Health = MAX_HEALTH
+   		end
    	end
    end
 
    for _, healthPickup in ipairs(healthPickups) do
-       healthPickup:SetAttribute("Enabled", true)
-       healthPickup.Touched:Connect(function(otherPart)
-           onTouchHealthPickup(otherPart, healthPickup)
-       end)
+   	healthPickup:SetAttribute("Enabled", true)
+   	healthPickup.Touched:Connect(function(otherPart)
+   		onTouchHealthPickup(otherPart, healthPickup)
+   	end)
    end
    ```
 

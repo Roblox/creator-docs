@@ -5,7 +5,7 @@ description: Explains how to automate Right to Erasure requests with webhooks an
 
 The **General Data Protection Regulation (GDPR)** is a European regulation on data protection and privacy. It grants individuals the right to request the deletion of their personal data, known as the [right to erasure](https://gdpr-info.eu/art-17-gdpr/). If you store any **Personally Identifiable Information (PII)** of your users, such as their User IDs, you must comply with GDPR requirements by deleting this information upon receiving a user's request.
 
-Instead of handling requests manually, you can [set up a webhook](../../cloud/webhooks/webhook-notifications.md) and use a bot within a third-party messaging application to automate the process. As [data stores](../../cloud-services/datastores.md) being the most common way for storing PII data, this tutorial provides an example on how to create a bot within Guilded or Discord that uses the [Open Cloud API for data stores](../../cloud/open-cloud/usage-data-stores.md) to delete PII data as an automation solution.
+Instead of handling requests manually, you can [set up a webhook](../../cloud/webhooks/webhook-notifications.md) and use a bot within a third-party messaging application to automate the process. As [data stores](../../cloud-services/data-stores) being the most common way for storing PII data, this tutorial provides an example on how to create a bot within Guilded or Discord that uses the [Open Cloud API for data stores](../../cloud/open-cloud/usage-data-stores.md) to delete PII data as an automation solution.
 
 ## Workflow
 

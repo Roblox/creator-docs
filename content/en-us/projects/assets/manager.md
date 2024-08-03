@@ -29,7 +29,7 @@ The **bulk import** tool is ideal for importing up to 50 files in one batch. Imp
 <tbody>
   <tr>
     <td>**Image**</td>
-    <td>You can import images in `.png`, `.jpg`, `.tga`, or `.bmp` format for use as [textures/decals](../../parts/textures-decals.md) on parts, [UI](../../ui/index.md) elements, [mesh textures](../../parts/meshes.md#adding-textures), textures for [custom materials](../../parts/materials.md), textures for [special effects](../../environment/index.md#special-effects), and more.</td>
+    <td>You can import images in `.png`, `.jpg`, `.tga`, or `.bmp` format for use as [textures/decals](../../parts/textures-decals.md) on parts, [image labels](../../ui/labels.md), [mesh textures](../../parts/meshes.md#adding-textures), textures for [custom materials](../../parts/materials.md), textures for [special effects](../../environment/index.md#special-effects), and more.</td>
   </tr>
   <tr>
     <td>**Mesh**</td>

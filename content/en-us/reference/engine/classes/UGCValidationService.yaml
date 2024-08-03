@@ -14,48 +14,7 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: UGCValidationService:ReportUGCValidationTelemetry
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: assetType
-        type: string
-        default:
-        summary: ''
-      - name: data
-        type: Dictionary
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-  - name: UGCValidationService:ValidateImageTransparencyThresholdByteString_V2
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: image
-        type: string
-        default:
-        summary: ''
-      - name: threshold
-        type: float
-        default:
-        summary: ''
-    returns:
-      - type: bool
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-  - name: UGCValidationService:ValidateImageTransparencyThresholdTextureID_V2
+  - name: UGCValidationService:GetImageTransparencyWithByteString
     summary: ''
     description: ''
     code_samples: []
@@ -64,12 +23,24 @@ methods:
         type: string
         default:
         summary: ''
-      - name: threshold
-        type: float
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: UGCValidationService:GetImageTransparencyWithTextureID
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: textureId
+        type: string
         default:
         summary: ''
     returns:
-      - type: bool
+      - type: float
         summary: ''
     tags:
       - Yields

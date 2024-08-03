@@ -93,9 +93,7 @@ If the mesh you import to Studio doesn't come with texture data, or you want to 
 
 ### Level of Detail
 
-**Level of detail** settings determine the rendering fidelity of meshes. By default, meshes always display in the most precise fidelity, no matter how far they are from the camera, but you can dynamically control a mesh's level of detail using its `Enum.RenderFidelity` property.
-
-If you have many detailed meshes, setting less necessary ones to a lower fidelity can improve your experience's performance. Or, you can set the property to **Automatic** for all meshes to render their levels of detail based on their distances from the camera:
+You can dynamically control a mesh's level of detail using its `Enum.RenderFidelity` property. The default value is `Enum.RenderFidelity.Automatic|Automatic`, meaning the mesh's detail is based on its distance from the camera as outlined in the following table.
 
 <table>
 <thead>

@@ -264,30 +264,38 @@ Alternatively, if the place will feature multiple tracks, you can play a specifi
 
 ```lua
 local SoundService = game:GetService("SoundService")
+
 local musicTrack = SoundService:FindFirstChild("LucidDream")
-if musicTrack then
-   musicTrack:Play()
+if musicTrack not musicTrack.IsPlaying then
+	musicTrack:Play()
 end
 ```
 
 ### Playing Interface Audio
 
-You can play interface audio for `Class.GuiObject|GuiObjects`, such as [buttons](../ui/buttons.md) and [labels](../ui/labels.md), by hooking up a `Class.Sound` object to the `Activated` event listener of the `Class.GuiObject`. This lets you provide auditory feedback to users, such as when they hover over a `Class.GuiObject` or select it.
+You can play interface audio for `Class.GuiObject|GuiObjects` such as [buttons](../ui/buttons.md) by hooking up a `Class.Sound` object to the `Class.GuiButton.Activated|Activated` event listener. This lets you provide auditory feedback to users, such as when they hover over or press it.
 
-To play a `Class.Sound` object's audio when a user activates a `Class.GuiObject`:
+To play a `Class.Sound` object's audio when a user activates a `Class.TextButton` or `Class.ImageButton`:
 
-1. In the **Explorer** window, hover over a **GuiObject**, then click the ⊕ button. A contextual menu displays.
-2. From the menu, insert a **LocalScript**.
-3. Paste the following code into the script, then replace `SOUND_NAME` with the name of your sound object.
+1. In the [Explorer](../studio/explorer.md) window, hover over the `Class.TextButton` or `Class.ImageButton`, then click the ⊕ button. A contextual menu displays.
+2. From the menu, insert either a `Class.LocalScript` or a `Class.Script` with `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
+3. Paste the following code into the script, then replace `SOUND_NAME` with the name of a `Class.Sound` object located inside the `Class.SoundService` container.
 
 ```lua
 local SoundService = game:GetService("SoundService")
+
 local button = script.Parent
 local sound = SoundService:FindFirstChild("SOUND_NAME")
-local function onButtonActivated()
-   if sound then
-      sound:Play()
-   end
+
+if not sound.isLoaded then
+	sound.Loaded:Wait()
 end
+
+local function onButtonActivated()
+	if sound and not sound.IsPlaying then
+		sound:Play()
+	end
+end
+
 button.Activated:Connect(onButtonActivated)
 ```

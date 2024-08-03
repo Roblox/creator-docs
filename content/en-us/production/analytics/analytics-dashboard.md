@@ -3,7 +3,7 @@ title: Analytics Dashboard
 description: Analytics Dashboard helps you measure and gain insight into your experience's performance.
 ---
 
-Analytics Dashboard helps you measure and gain insight into your experience's performance to adjust content strategies. It visualizes standard key performance indicators (KPIs) of your experience to help you optimize your experience's full lifecycle, including:
+The **Analytics Dashboard** helps you measure and gain insight into your experience's performance to adjust content strategies. It visualizes standard key performance indicators (KPIs) of your experience to help you optimize your experience's full lifecycle, including:
 
 - [Retention](../../production/analytics/retention.md) KPIs that measure how many users return to your experience again after their first visit.
 - [Engagement](../../production/analytics/engagement.md) KPIs that reflect how users actively use your experience and represent your core user base.
@@ -16,7 +16,7 @@ The dashboard also provides [Sales Data](#sales-data) that you can download and 
 
 ## Setting Up Analytics Dashboard
 
-If you are an experience owner or a group owner, and your experience meets the enrollment requirements, you can enroll in Analytics Dashboard at any point with the following steps:
+If you are an experience owner or a group owner, and your experience meets the enrollment requirements, you can enroll in the analytics dashboard at any point with the following steps:
 
 1. Make sure that you have a verified email address and a 2-Step Verification method on your Roblox account.
 
@@ -30,20 +30,8 @@ Now you have access to the main dashboard on the **Overview** and dashboards of 
 If you don't want to activate the dashboard immediately, or you accidentally decline the **Terms of Use**, you can still use the **Activate Analytics** button on the experience overview page to read the **Terms of Use** and agree to them any time. Refresh the page if you don't see the button.
 </Alert>
 
-### Granting Group Permission
-
-By default in a [group experience](../../projects/groups.md), only the group **owner** can view the analytics dashboard, as some KPIs such as revenue are sensitive information. The owner can grant permission for group members to access the analytics dashboard as follows:
-
-1. Select the group you want to grant permission on the [Groups](https://www.roblox.com/groups) page.
-2. Click the **&ctdot;** button and select **Configure Group** in the dropdown menu.
-
-   <img src="../../assets/publishing/groups/Configure-Group.png" alt="A group's landing page with the ellipis button and Configure Group menu item highlighted." width="780" />
-
-3. Navigate to the **Roles** tab. Select an existing role that you want to grant access to the analytics dashboard, or create a new role.
-4. In the **Assets** section, toggle on **View group experience analytics**.
-
-<Alert severity="info">
-The **View group experience analytics** and **Create and edit group experiences** permissions are independent. Turning on one of them doesn't affect the other, so you can let group members view the analytics dashboard for group experiences even if they can't edit those experiences.
+<Alert severity="warning">
+For [group](../../projects/groups.md) experiences, only the group owner and members with sufficient permissions can view the analytics dashboard, as some KPIs such as revenue are sensitive information. See [here](../../projects/groups.md#roles-and-permissions) for details on how to create a group role with access to view the dashboard.
 </Alert>
 
 ## Dashboard Functionalities
@@ -55,6 +43,86 @@ There are also functionalities on each dashboard to help you further analyze you
 ### Filtering by Date
 
 You can apply a date filter to view the chart for a date range by separately selecting any specific time frame between the first date that the data was available and the present day as the start and the end date.
+
+### Filtering by Metrics
+
+You can apply various filters to better understand your cohorts by clicking the **Filter By** button. Filters apply to all charts across all analytics pages until they are turned off.
+
+Some filters might not be available for all metrics. If a filter is not available, you will see that it is grayed out:
+
+   <img src="../../assets/analytics/analytics-dashboard/Metrics-Unavailable.png" alt="Example of some filters displaying at partial opacity when unavailable." width="70%" />
+
+You can filter by the following metrics:
+
+<table><thead>
+  <tr>
+    <th>**Filter Type**</th>
+    <th>**Subcategories**</th>
+    <th>**Usage**</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>Age Group</td>
+    <td>&lt;9, 9-12, 13-17, 18+</td>
+    <td>Analyze latest trends across different age groups.</td>
+  </tr>
+  <tr>
+    <td>Platform</td>
+    <td>Computer, Phone, Tablet, VR and Console. Users might be double counted if they use more than one device.</td>
+    <td>Analyze latest trends across different platforms.</td>
+  </tr>
+  <tr>
+    <td>OS (Operating System)</td>
+    <td>Android, iOS, Xbox One, OSX, Playstation and Windows.</td>
+    <td>Analyze latest trends across different OS types. Users might be double counted if they use more than one device.</td>
+  </tr>
+  <tr>
+    <td>Country </td>
+    <td>All countries</td>
+    <td>Analyze latest trends across different countries</td>
+  </tr>
+  <tr>
+    <td>Language </td>
+    <td>All languages</td>
+    <td>Analyze which languages are popular across your users to help prioritize localization efforts. You can also see the impacts of adding translation for different languages.</td>
+  </tr>
+  <tr>
+    <td>New vs. returning</td>
+    <td>New, returning</td>
+    <td>Analyze how new and returning users are engaging with your experiences. </td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td>Female, male, unknown</td>
+    <td>Analyze how female, male, and unknown gender demographics are engaging with your experiences. </td>
+  </tr>
+  <tr>
+    <td>Memory group (only applicable to some performance metrics)</td>
+    <td>&lt;2GB, 2GB-4GB, 4GB-8GB, 8GB+</td>
+    <td>Analyze how your experience is performing across different devices. You can identify under-performing devices and focus on improving performance.</td>
+  </tr>
+  <tr>
+    <td>Acquisition Source (only applicable to acquisition metrics)</td>
+    <td>Home recommendations, home other, search, friends, teleport, sponsored ads</td>
+    <td>Analyze how users from different acquisition sources engage with your experience.</td>
+  </tr>
+</tbody></table>
+
+### Explore Mode
+
+Use the **Explore** button on the top-right corner of the chart to switch to a single chart view. In this view, you can apply different filters and breakdowns to explore under-performing segments and areas of opportunity.
+
+<figure>
+   <img src="../../assets/analytics/analytics-dashboard/Explore-Mode.png" alt="Analytics chart with top-right corner annotated to indicate explore mode button" />
+<figcaption><center>To access Explore mode, click the Explore icon on the top right of the chart.</center></figcaption>
+</figure>
+
+<br />
+
+<figure>
+   <img src="../../assets/analytics/analytics-dashboard/Explore-Mode-Preview.png" alt="Analytics chart with additional dropdowns and filters." />
+<figcaption><center>Explore mode provides additional filters and breakdowns to further analyze and compare data points.</center></figcaption>
+</figure>
 
 ### Exporting a Chart
 
@@ -68,23 +136,33 @@ You can't export the chart data for the given KPI chart if you don't have any da
 
 Benchmarking is the process of measuring your experience's KPIs and comparing them to other experiences on Roblox. With benchmarks displayed on your dashboard, you can monitor the performance of your experience's analytics KPIs among experiences on Roblox to adjust your content strategy and set appropriate goals for improvement.
 
-For KPIs relevant to specific aspects of your user behavior, Analytics Dashboard provides **similar experience benchmarks**. These benchmarks help you compare your experience with similar experiences with at least 100 Daily Active Users, such as those under the same genre as yours on the **Home** and **Discovery** pages. Available KPIs for similar experience benchmarks include:
+For KPIs relevant to specific aspects of your user behavior, the analytics dashboard provides **similar experience benchmarks**. Depending on the availability, you might see:
+
+- **Similar experiences** benchmarks if the model finds enough similar games, such as those on the recommended experiences section on your Experience Details Page.
+- **Genre** benchmarks if the model cannot find enough similar experiences but your game has an internal genre.
+- **All experiences** benchmarks if your game hasn't been labeled with a genre yet.
+
+Your experience may transition from one benchmark set to another as we gather more data to help you compare your experience with the most relevant experiences with at least 100 daily active users. Benchmarks for similar experiences update daily to reflect the most relevant experiences for your user base.
+
+When your benchmark sets update, such as **Genre** updating to **Similar Experience**, the dashboard adds annotations in the charts to identify when your experience transitions from one benchmark set to another.
+
+<img src="../../assets/analytics/analytics-dashboard/benchmark-transition.png" width= "100%" alt="An example graph showing icon indicating transition from Genre benchmarks to Similar Experiences benchmarks." />
+
+Available KPIs for similar experience benchmarks include:
 
 - **Retention** - All KPIs
-
 - **Engagement**- Average Session Time
-
 - **Monetization** - Average Revenue per Paying Users (ARPPU), Average Revenue per DAU (ARPDAU), Conversion Rate (CVR)
+- **Acquisition** - Qualified Play Through Rate
 
 Each of these KPIs shows its similar experience benchmark in the 50th - 90th percentile range. For example, if you see your Day 1 Retention benchmark's 50th - 90th percentile is 12.4% - 24.1%, it means that:
 
 - 50% of similar experiences have a Day 1 Retention of 12.4% or lower.
-
 - 10% of similar experiences have a Day 1 Retention of 24.1% or higher.
 
 <img src="../../assets/analytics/analytics-dashboard/benchmark-similar-exp.png" width= "100%" alt="An example shows the D7 retention chart with similar experience benchmarking." />
 
-For KPIs on your experience's overall success, Analytics Dashboard uses the top 1000 experiences with the highest total playtime on rolling 30 days as the benchmarking pool, excluding experiences that are less than 30 days old. Each of these KPIs has **Top 200**, **Top 500**, and **Top 1000** as benchmarking tiers. The dashboard displays the appropriate tier for your experience based on your experience's engagement metrics and updates them on a daily basis,
+For KPIs on your experience's overall success, the analytics dashboard uses the top 1000 experiences with the highest total playtime on rolling 30 days as the benchmarking pool, excluding experiences that are less than 30 days old. Each of these KPIs has **Top 200**, **Top 500**, and **Top 1000** as benchmarking tiers. The dashboard displays the appropriate tier for your experience based on your experience's engagement metrics and updates them on a daily basis,
 
 ### Viewing KPI Breakdowns
 
@@ -161,16 +239,16 @@ Roblox automatically generates a `.csv` (comma-separated values) file for your s
 
 On the `.csv` sales data sheet, each sold item has the following attributes and metrics:
 
-| Attribute          | Description                                                                                                                                                                                                                 | Example                               |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| Buyer User ID      | User ID of the user who purchased the item.                                                                                                                                                                                 | `123456789`                           |
-| Sale Date and Time | Date and time of the transaction in UTC.                                                                                                                                                                                    | `2022-07-15T19:04:30.397Z`            |
-| Sale Location      | The location in which the user bought the item, such as an experience and the Marketplace.                                                                                                                                  | `WebSite`, `Marketplace`, `Game`      |
-| Universe ID        | The unique identifier of the experience that the purchased item belongs to. Only applicable for items that belong to an experience, like a game pass.                                                                       | `987654321`                           |
-| Universe           | The name of the experience that the purchased item belongs to. Only applicable for items that belong to an experience, like a game pass.                                                                                    | `My Awesome Experience`               |
-| Asset ID           | The unique identifier of the item.                                                                                                                                                                                          | `234565432`                           |
-| Asset Name         | The name of the item.                                                                                                                                                                                                       | `My Avatar Shirt`, `My Server`        |
-| Asset Type         | The type of the item, which can be a [Roblox asset type](../../projects/assets/index.md#asset-types) or a [Developer Product](../../production/monetization/developer-products.md) type.                                    | `Game Pass`, `Private Server`, `Mesh` |
-| Hold Status        | The status of whether Robux from this sale have been released to you or are still in a hold.                                                                                                                                | `Released`, `Held`, `Cancelled`       |
-| Revenue            | The amount of Robux you receive for the purchase, which is the item listing price excluding any [Marketplace Fees](../../art/marketplace/marketplace-fees-and-commissions.md), Affiliate Fees, and Recurring Group Payouts. | `50`                                  |
-| Price              | The item listing price, which is the amount of Robux that the buyer paid for the purchase.                                                                                                                                  | `10`                                  |
+| Attribute          | Description                                                                                                                                                                                                             | Example                               |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| Buyer User ID      | User ID of the user who purchased the item.                                                                                                                                                                             | `123456789`                           |
+| Sale Date and Time | Date and time of the transaction in UTC.                                                                                                                                                                                | `2022-07-15T19:04:30.397Z`            |
+| Sale Location      | The location in which the user bought the item, such as an experience and the Marketplace.                                                                                                                              | `WebSite`, `Marketplace`, `Game`      |
+| Universe ID        | The unique identifier of the experience that the purchased item belongs to. Only applicable for items that belong to an experience, like a game pass.                                                                   | `987654321`                           |
+| Universe           | The name of the experience that the purchased item belongs to. Only applicable for items that belong to an experience, like a game pass.                                                                                | `My Awesome Experience`               |
+| Asset ID           | The unique identifier of the item.                                                                                                                                                                                      | `234565432`                           |
+| Asset Name         | The name of the item.                                                                                                                                                                                                   | `My Avatar Shirt`, `My Server`        |
+| Asset Type         | The type of the item, which can be a [Roblox asset type](../../projects/assets/index.md#asset-types) or a [Developer Product](../../production/monetization/developer-products.md) type.                                | `Game Pass`, `Private Server`, `Mesh` |
+| Hold Status        | The status of whether Robux from this sale have been released to you or are still in a hold.                                                                                                                            | `Released`, `Held`, `Cancelled`       |
+| Revenue            | The amount of Robux you receive for the purchase, which is the item listing price excluding any [Marketplace Fees](../../marketplace/marketplace-fees-and-commissions.md), Affiliate Fees, and Recurring Group Payouts. | `50`                                  |
+| Price              | The item listing price, which is the amount of Robux that the buyer paid for the purchase.                                                                                                                              | `10`                                  |

@@ -64,15 +64,15 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
   </thead>
   <tbody>
   <tr>
-    <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.blend" download>Rig_and_Attachments_Template.blend</a></td>
+    <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.blend</a></td>
     <td>Starting armature rig template for Blender. Contains an armature with correct R15 naming conventions and attachment points. Use this template for rigging bodies and clothing items.</td>
   </tr>
   <tr>
-    <td><a href="../../assets/modeling/meshes/reference-files/Clothing_Cage_Template.blend" download>Clothing_Cage_Template.blend</a></td>
+    <td><a href="../../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip" download>Clothing_Cage_Template.blend</a></td>
     <td>Starting template for Blender that includes a full-body inner and outer cage mesh for creation of layered clothing. Use this template for caging your clothing accessories.</td>
   </tr>
   <tr>
-    <td><a href="../../assets/modeling/meshes/reference-files/Combined-Template.blend" download>Combined-Template.blend</a></td>
+    <td><a href="../../assets/modeling/meshes/reference-files/Combined_Templates.zip" download>Combined-Template.blend</a></td>
     <td>Template file containing all content from previous templates, includes rig skeleton, body cages, attachment points. Use this template to rig and cage bodies and accessories.</td>
   </tr>
 </tbody>
@@ -89,15 +89,15 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
 </thead>
 <tbody>
   <tr>
-    <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.ma" download>Rig_and_Attachments_Template.ma</a></td>
+    <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.ma</a></td>
     <td>Starting armature rig template for Maya. Contains an armature with correct R15 naming conventions and attachment points. Use this template for creating bodies and clothing items.</td>
   </tr>
   <tr>
-    <td><a href="../../assets/modeling/meshes/reference-files/Clothing_Cage_Template.ma" download>Clothing_Cage_Template.ma</a></td>
+    <td><a href="../../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip" download>Clothing_Cage_Template.ma</a></td>
     <td>Starting template for Maya, includes a full-body inner and outer cage mesh for creation of layered clothing. Use this template for caging your clothing accessories.</td>
   </tr>
   <tr>
-    <td><a href="../../assets/modeling/meshes/reference-files/Combined-Template.ma" download>Combined-Template.ma</a></td>
+    <td><a href="../../assets/modeling/meshes/reference-files/Combined_Templates.zip" download>Combined-Template.ma</a></td>
     <td>Template file containing all content from previous templates, includes rig skeleton, body cages, attachment points. Use this template to rig and cage bodies and accessories.</td>
   </tr>
 
@@ -118,11 +118,11 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
 </thead>
 <tbody>
   <tr>
-    <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.fbx" download>Rig_and_Attachments_Template.fbx</a></td>
+    <td><a href="../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" download>Rig_and_Attachments_Template.fbx</a></td>
     <td>Starting armature rig template for general modeling software. Contains an armature with correct R15 naming conventions and attachment points. Use this template for creating bodies and clothing items.</td>
   </tr>
   <tr>
-    <td><a href="../../assets/modeling/meshes/reference-files/Clothing_Cage_Template.fbx" download>Clothing_Cage_Template.fbx</a></td>
+    <td><a href="../../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip" download>Clothing_Cage_Template.fbx</a></td>
     <td>Starting template for general modeling software, includes a full-body inner and outer cage mesh for creation of layered clothing. Use this template for caging your clothing accessories.</td>
   </tr>
 

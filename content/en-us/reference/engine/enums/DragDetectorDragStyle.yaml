@@ -1,7 +1,11 @@
 name: DragDetectorDragStyle
 type: enum
-summary: ''
-description: ''
+summary: |
+  Used with `Class.DragDetector` as the paradigm to generate proposed motion,
+  given a stream of cursor rays.
+description: |
+  Used with `Class.DragDetector` as the paradigm to generate proposed motion,
+  given a stream of cursor rays.
 code_samples: []
 tags: []
 deprecation_message: ''

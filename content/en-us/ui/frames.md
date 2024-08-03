@@ -5,7 +5,7 @@ description: Frames are containers for GuiObjects.
 
 Frames are `Class.GuiObject|GuiObjects` that act as containers for other `Class.GuiObject|GuiObjects`. You can use them for UI that either displays on a user's [screen](../ui/on-screen-containers.md) or on a [surface](../ui/in-experience-containers.md) within the experience.
 
-When you manipulate frames, you also manipulate the `Class.GuiObject|GuiObjects` they contain. For example, if you change the position of a `Class.Frame` object with a child [TextLabel](./labels.md#textlabel), you also change the position of the [TextLabel](./labels.md#textlabel). In addition, all frames are also `Class.GuiObject|GuiObjects`, so you can customize their properties, such as `Class.GuiObject.BackgroundColor3|BackgroundColor3`, `Class.GuiObject.BorderMode|BorderMode`, `Class.GuiObject.Transparency|Transparency`, and `Class.GuiObject.Rotation|Rotation`, to fit the aesthetics of your experience.
+When you manipulate frames, you also manipulate the `Class.GuiObject|GuiObjects` they contain. For example, if you change the position of a `Class.Frame` object with a child `Class.TextLabel`, you also change the position of that label. In addition, all frames are also `Class.GuiObject|GuiObjects`, so you can customize their properties, such as `Class.GuiObject.BackgroundColor3|BackgroundColor3`, `Class.GuiObject.BorderMode|BorderMode`, `Class.GuiObject.Transparency|Transparency`, and `Class.GuiObject.Rotation|Rotation`, to fit the aesthetics of your experience.
 
 <img src="../assets/ui/container-frames/Frame-Example.jpg" width="800" />
 

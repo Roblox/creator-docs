@@ -151,7 +151,8 @@ events:
         type: Dictionary
         default:
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

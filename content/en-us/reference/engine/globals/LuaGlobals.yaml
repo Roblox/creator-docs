@@ -60,13 +60,12 @@ functions:
     summary: |
       Performs the specified operation of the garbage collector.
     description: |
-      Performs an operation on the Lua garbage collector based on the specified
-      option.
-
-      Roblox's Lua sandbox only allows the "count" option to be used, so none of
-      the other standard options are available.
-
-      The "count" option returns the total memory in use by Lua (in kilobytes).
+      Performs the specified operation of the garbage collector. Note that
+      Roblox's Lua sandbox only allows the `count` option to be used (the total
+      memory in use by Lua, in kilobytes), as other options can interfere with
+      existing processes. Effectively, this makes
+      `Global.RobloxGlobals.gcinfo()` a superior alternative that should be used
+      instead.
     parameters:
       - name: operation
         type: string
@@ -78,6 +77,7 @@ functions:
       - type: Variant
         summary: ''
     tags:
+      - Deprecated
     code_samples:
   - name: error
     summary: |
@@ -690,10 +690,11 @@ functions:
     code_samples:
   - name: xpcall
     summary: |
-      Similar to `pcall()` except it uses a custom error handler.
-    description: |
-      This function is similar to pcall, except that you can set a new error
+      Similar to `Global.LuaGlobals.pcall()` except it uses a custom error
       handler.
+    description: |
+      This function is similar to `Global.LuaGlobals.pcall()`, except that you
+      can set a new error handler.
 
       `xpcall()` calls function `f` in protected mode, using `err` as the error
       handler, and passes a list of arguments. Any error inside `f` is not

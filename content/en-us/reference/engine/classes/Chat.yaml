@@ -3,22 +3,12 @@ type: class
 category: Social
 memory_category: Instances
 summary: |
-  This class is being deprecated. Use `Class.TextChatService` instead.
+  Houses the Lua code responsible for running the legacy chat system.
 description: |
-  **This class is being deprecated. Use `Class.TextChatService` instead.**
-
-  The **Chat** service houses the Lua code responsible for running the Lua Chat
-  System. Similar to `Class.StarterPlayerScripts`, default objects like
-  `Class.Script|Scripts` and `Class.ModuleScript|ModuleScripts` are inserted
-  into the service.
-
-  In addition to housing the Lua Chat System, this service also exposes
-  functions used to filter text:
-  `Class.Chat:FilterStringAsync()|FilterStringAsync()` and
-  `Class.Chat:FilterStringForBroadcast()|FilterStringForBroadcast()`. Note that
-  games which implement custom chat systems must use these functions to filter
-  chat properly. See [Text and Chat Filtering](../../../ui/text-filtering.md)
-  for more information.
+  The **Chat** service houses the Lua code responsible for running the
+  [legacy chat system](../../../chat/legacy/legacy-chat-system.md). Similar to
+  `Class.StarterPlayerScripts`, default objects like `Class.Script|Scripts` and
+  `Class.ModuleScript|ModuleScripts` are inserted into the service.
 code_samples:
 inherits:
   - Instance
@@ -26,7 +16,8 @@ tags:
   - NotCreatable
   - Service
   - NotReplicated
-deprecation_message: ''
+deprecation_message: |
+  This class is deprecated. Use `Class.TextChatService` instead.
 properties:
   - name: Chat.BubbleChatEnabled
     summary: |

@@ -119,7 +119,7 @@ The **Part** button inserts a new part into the workspace. Clicking the small dr
 
 ## UI Designer
 
-The **UI** button opens a tab which lets you quickly insert, resize, and reposition common on-screen UI objects, such as [labels](../ui/labels.md), [frames](../ui/frames.md) and [buttons](../ui/buttons.md). For detailed information on the objects available in the UI tab, see [UI](../ui/index.md).
+The **UI** button opens a tab which lets you quickly insert, resize, and reposition common on-screen UI objects, such as [labels](../ui/labels.md), [frames](../ui/frames.md), and [buttons](../ui/buttons.md).
 
 <img src="../assets/studio/general/Home-Tab-UI.png" width="780" alt="UI button indicated in Home tab" />
 
@@ -133,19 +133,27 @@ The **Import 3D** tool allows you to import nearly any type of `.fbx` or `.obj` 
 
 ## Color Widget
 
-Clicking the small dropdown arrow on the **Color** widget reveals a hexagonal color picker and, by default, applies the chosen color to all selected parts. Once you've selected a color, you can quickly apply it to other parts by selecting those parts and clicking the **Color** button itself.
+Clicking the small dropdown arrow on the **Color** widget reveals a hexagonal color picker.
 
-<img src="../assets/studio/general/Home-Tab-Color-Tools.png" width="776" alt="Studio's Home tab with the Color widget's components highlighted." />
+<img src="../assets/studio/general/Home-Tab-Color-Picker.png" width="776" alt="Studio's Home tab with the Color widget's hexagonal picker." />
 
-For alternative ways to apply custom colors, see [Coloring Parts](../parts/index.md#coloring-parts).
+By default, clicking the overall **Color** button applies the chosen color to any **selected** parts. If you prefer a fill/paint workflow instead, toggle on **Color&nbsp;Action&nbsp;as&nbsp;Tool** and then click parts in the 3D viewport to apply the chosen color.
+
+<img src="../assets/studio/general/Home-Tab-Color-Action-As-Tool.png" width="776" alt="Studio's Home tab with the Color Action as Tool selector indicated." />
+
+<Alert severity="success">
+For alternative ways to apply custom colors, see [Coloring Parts](../parts/index.md#colors-popup).
+</Alert>
 
 ## Material Widget
 
-<BetaAlert betaName="Material Picker" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
+Clicking the small dropdown arrow on the **Material** widget reveals a [material](../parts/materials.md) picker.
 
-Clicking the small dropdown arrow on the **Material** widget reveals a material picker and, by default, applies the chosen [material](../parts/materials.md) to all selected parts. Once you've selected a material, you can quickly apply it to other parts by selecting those parts and clicking the **Material** button itself.
+<img src="../assets/studio/general/Home-Tab-Material-Picker.png" width="776" alt="Studio's Home tab with the Material widget's picker." />
 
-<img src="../assets/studio/general/Home-Tab-Material-Tools.png" width="776" alt="Studio's Home tab with the Material widget's components highlighted." />
+By default, clicking the overall **Material** button applies the chosen material to any **selected** parts. If you prefer a fill/paint workflow instead, toggle on **Material&nbsp;Action&nbsp;as&nbsp;Tool** and then click parts in the 3D viewport to apply the chosen material.
+
+<img src="../assets/studio/general/Home-Tab-Material-Action-As-Tool.png" width="776" alt="Studio's Home tab with the Material Action as Tool selector indicated." />
 
 ## Group Tools
 

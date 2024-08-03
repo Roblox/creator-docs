@@ -5,13 +5,17 @@ description: Templates provide a set of default objects you can use as the found
 
 **Templates** are uncopylocked experiences that provide a set of default objects in the starting place's data model that you can use to start your projects. You can find most templates on Studio's landing page, or click any of the buttons below to start editing a template.
 
-## Racing
+## Platformer
 
-The **Racing** template includes a working race car and modular winding track objects that you can restructure for countless race track configurations.
+The **Platformer** template includes:
 
-<img src="../assets/resources/templates/Racing-Template.png" width="50%" alt="" />
+- Common 3D platformer character mechanics, such as double jump, dashing, rolling, and long jumping.
+- Common 3D platformer gameplay mechanics, such as moving platforms, one-way platforms, and coin pickups.
+- An example platformer tower course you can use to get comfortable with all of the mechanics.
 
-<UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="16078915506" universeId="5557500170" />
+<img src="../assets/resources/templates/Platformer-Template.png" width="50%" alt="" />
+
+<UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="18636963376" universeId="6314775459" />
 
 ## Laser Tag
 
@@ -32,6 +36,14 @@ The **FPS System** template includes the FPS blaster system from the Laser Tag t
 <img src="../assets/resources/templates/FPS-System-Template.png" width="50%" alt="" />
 
 <UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="17823017290" universeId="6106388692" />
+
+## Racing
+
+The **Racing** template includes a working race car and modular winding track objects that you can restructure for countless race track configurations.
+
+<img src="../assets/resources/templates/Racing-Template.png" width="50%" alt="" />
+
+<UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="16078915506" universeId="5557500170" />
 
 ## Baseplate
 

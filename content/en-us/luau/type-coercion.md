@@ -22,8 +22,8 @@ print("hello" + 234) -- error: attempt to perform arithmetic (add) string and nu
 In concatenation, Luau coerces numbers to strings. To convert a number to a string without using coercion, use the `Library.string.format()` function.
 
 ```lua
-print("Pi is " .. math.pi) -- 3.1415926535898
-print("Pi is " .. 3.1415927) -- 3.1415927
+print("Pi is " .. math.pi) --> Pi is 3.1415926535898
+print("Pi is " .. 3.1415927) --> Pi is 3.1415927
 
 -- Rounds to three decimal places
 print("Pi is " .. string.format("%.3f", 3.1415927)) -- Pi is 3.142

@@ -99,6 +99,30 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
         The 3D Importer provides a 3D preview, various error-checking, and many customizable import settings.
       </td>
     </tr>
+    <tr>
+      <td><a href="../../ui/video-frames.md">Video</a></td>
+      <td>
+        <ul>
+          <li>`.mp4`</li>
+          <li>`.mov`</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>`video/mp4`</li>
+          <li>`video/mov`</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Up to 30 seconds of duration.</li>
+          <li>Up to 4096x2160 resolution.</li>
+          <li>Up to 375 MB.</li>
+          <li>Currently, only English audio and text is allowed.</li>
+          <li>Up to 3 uploads per month if you're 13+ and ID-verified.</li>
+        </ul>
+      </td>
+    </tr>
 
   </tbody>
 </table>
@@ -119,7 +143,7 @@ To create an API key for a group or create a group asset, you must have the corr
 
 Regardless of whether you are creating the API key for yourself or your group, make sure to add the following permissions:
 
-1. Add **Assets API** to **Access Permissions**.
+1. Add **assets** to **Access Permissions**.
 1. Add **Read** and **Write** operation permissions to your selected experience, depending on the required scopes of the endpoints you plan to call.
 
 Once you have the API key, copy it to the `x-api-key` request header. All endpoints require the `x-api-key` request header.

@@ -1,0 +1,31 @@
+name: ColorGradingEffect
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - PostEffect
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: ColorGradingEffect.TonemapperPreset
+    summary: ''
+    description: ''
+    code_samples: []
+    type: TonemapperPreset
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods: []
+events: []
+callbacks: []

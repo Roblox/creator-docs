@@ -85,7 +85,7 @@ Character creation is a complex process that requires lots of testing and iterat
 
 With this new character `Class.Model`, you can perform any of the following:
 
-- Begin the process of [uploading and publishing](../../art/marketplace/publishing-to-marketplace.md#uploading-an-asset) the character model to the Marketplace. This involves some additional validation and moderation steps.
+- Begin the process of [uploading and publishing](../../marketplace/publishing-to-marketplace.md#uploading-an-asset) the character model to the Marketplace. This involves some additional validation and moderation steps.
 
 - Use the model in your current experience and modify the model's appearance with [HumanoidDescription](../../characters/appearance.md#humanoiddescription).
 

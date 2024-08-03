@@ -29,5 +29,5 @@ As a developer, here are some ways to honor a player's rights under GDPR and CCP
 
 - You may receive a message from Roblox regarding a **personal information deletion request**. Roblox takes special care to verify these requests to ensure that they're legitimate, so you should **only comply to requests from Roblox**. If a player contacts you first, please ask them to make the request at [https://www.roblox.com/support](https://www.roblox.com/support).
 - Aside from user ID and username, do **not** store other forms of personal information such as birth dates or personal photos.
-- If you're **asked by Roblox** to delete personal information about an individual who has exercised their right under GDPR or CCPA, you may need to delete specific data from your experience's [data stores](../../cloud-services/datastores.md).
+- If you're **asked by Roblox** to delete personal information about an individual who has exercised their right under GDPR or CCPA, you may need to delete specific data from your experience's [data stores](../../cloud-services/data-stores).
 - If you have already stored other personal information beyond what Roblox provides access to, remove it and update your experience so that it doesn't store that data in the future.

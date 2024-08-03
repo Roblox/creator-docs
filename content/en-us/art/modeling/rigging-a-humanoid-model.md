@@ -15,7 +15,7 @@ To rig a humanoid model in Blender:
 - [Assign full influence](#assigning-meshes-to-bones) to each mesh object and bone by assigning influences.
 
 <Alert severity="info">
-This guide uses a downloadable [Rig and Attachment Template Blender Project](../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Template.blend), a reference [Lola Character model](../../assets/modeling/meshes/reference-files/lola-base-model.fbx), and [Blender version 3.0](https://www.blender.org/download/releases/3-0/). If you are
+This guide uses a downloadable [Rig and Attachment Template Blender Project](../../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip), a reference [Lola Character model](../../assets/modeling/meshes/reference-files/lola-base-model.fbx), and [Blender version 3.0](https://www.blender.org/download/releases/3-0/). If you are
 using another version of Blender, there may be minor differences in UI and
 settings.
 </Alert>

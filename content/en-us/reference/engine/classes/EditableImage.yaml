@@ -179,6 +179,10 @@ methods:
         summary: |
           Transparency of the circle with 0 being fully opaque and 1 being fully
           transparent.
+      - name: combineType
+        type: ImageCombineType
+        default:
+        summary: ''
     returns:
       - type: void
         summary: ''
@@ -248,6 +252,10 @@ methods:
         default:
         summary: |
           Transparency of the line.
+      - name: combineType
+        type: ImageCombineType
+        default:
+        summary: ''
     returns:
       - type: void
         summary: ''
@@ -309,6 +317,10 @@ methods:
         default:
         summary: |
           Transparency of the rectangle.
+      - name: combineType
+        type: ImageCombineType
+        default:
+        summary: ''
     returns:
       - type: void
         summary: ''
