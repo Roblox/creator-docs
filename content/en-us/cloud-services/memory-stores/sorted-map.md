@@ -237,8 +237,8 @@ local exclusiveLowerBound = nil
 while true do
 	-- Get up to a hundred items starting from current lower bound
 	local getRangeSuccess, items = pcall(function()
-		return sortedMap:GetRangeAsync(SortDirection.Ascending, 100, exclusiveLowerBound)
-	end
+		return sortedMap:GetRangeAsync(Enum.SortDirection.Ascending, 100, exclusiveLowerBound)
+	end)
 	if getRangeSuccess then
 		local removeSuccess = true
 		local removeError = nil
