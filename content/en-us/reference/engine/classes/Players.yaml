@@ -551,26 +551,25 @@ methods:
       whether the ban applies to the entire universe or just the current place,
       and more.
     description: |
-      The `Class.Players.BanAsync` function allows you to easily ban users who
+      The `Class.Players:BanAsync()` method allows you to easily ban users who
       violate your experience's guidelines. You can specify the ban duration,
       enable the ban to propagate to suspected alternate accounts, and provide a
       message to the banned user in accordance with the
-      [Usage Guidelines](../../../players/index.md#banning-users). We also
-      expect developers to post their experience rules somewhere accessible to
-      all users, and provide a way for users to appeal.
+      [Usage Guidelines](../../../players/index.md#banning-users). You should
+      also post your experience rules somewhere accessible to all users and
+      provide a way for them to appeal.
 
-      <h5>Banning and Messaging</h5>
+      #### Banning and Messaging
 
       Banned users will be immediately evicted and prevented from rejoining your
       experiences. They will be presented with an error modal displaying the
       time left on their ban and your `DisplayReason`. Roblox's backend systems
       will evict players across all servers from the place(s) that you specify.
       `DisplayReason` can have a maximum length of 400 characters and is subject
-      to a text filter. If the message is text filtered, the request will fail
-      and the ban will not be applied. For more information on acceptable modal
+      to a text filter. For more information on acceptable modal
       text, see [ban messaging](../../../players/index.md#message-guidelines).
 
-      <h5>Places and Universe</h5>
+      #### Places and Universe
 
       By default, bans extend to any place within that universe. To limit the
       ban to only the place from which this API is called, configure
@@ -579,48 +578,51 @@ methods:
       from the entirety of the universe, irrespective of whether a universal ban
       is in place or not.
 
-      <h5>Alternative Accounts</h5>
+      #### Alternative Accounts
 
       Users often play under multiple different accounts, known as alternate
       accounts or alt accounts, which are sometimes used to circumvent account
       bans. To help you keep banned users out, the default behavior of this API
       will propagate all bans from the source account you banned to any of their
       suspected alt accounts. You can turn off ban propagations to alt accounts
-      by configuring `ExcludeAltAccounts` to true.
+      by configuring `ExcludeAltAccounts` to `true`.
 
-      <h5>Ban Duration</h5>
+      #### Ban Duration
 
       Not all transgressions are the same, so not all bans should be the same
       length. This API lets you configure the duration of the ban, in seconds,
       with the `Duration` field. To specify a permanent ban, set the field to
       `-1`. You may also want to dynamically configure the ban duration based on
       the user's ban history, which you can query for using
-      `Class.Players.GetBanHistoryAsync`. For example, you may want to consider
+      `Class.Players:GetBanHistoryAsync()`. For example, you may want to consider
       the number of bans, the duration of previous bans, or build logic off of
-      the notes you save under `PrivateReason`, which can be up to 1000
+      the notes you save under `PrivateReason` which can be up to 1000
       characters and are not text filtered. `PrivateReason` notes are never
       shared with the client and can be considered safe from attackers.
 
-      <h5>Errors and Throttling</h5>
+      #### Errors and Throttling
 
-      This method invokes an HTTP call to our backend services, which are
-      subject to throttling and may fail. If you are calling this API with more
-      than one `UserId`, this method will attempt to make this HTTP call for
-      each `UserId`. It will then aggregate any error messages and join them as
-      a comma separated list. For example, if this method is invoked for five
-      `UserIds`: `{1, 2, 3, 4, 5}` and requests for users 2 and 4 fail then the
-      following error message appears:
-      `HTTP failure for UserId 2: Timedout, HTTP 504 (Service unavailable) failure for UserId 4: Service exception`.
+      This method invokes an HTTP call to backend services which are subject to
+      throttling and may fail. If you're calling this API with more than one
+      `Class.Player.UserId|UserId`, this method will attempt to make the HTTP
+      call for each ID. It will then aggregate any error messages and join them
+      as a comma separated list. For example, if this method is invoked for five
+      users and requests for those with `Class.Player.UserId|UserIds` 2 and 4
+      fail, the following error message appears:
+      
+      `HTTP failure for UserId 2: Timedout, HTTP 504 (Service unavailable) failure for UserId 4: Service exception`
+      
       The message will always include `failure for UserId {}` if it is an HTTP
       error.
 
-      <h5>Client Side Requirement</h5>
+      #### Client Side Requirement
 
       Because of the risks associated with banning users, this method may only
-      be called on the backend game server. Client side calls will result in an
-      error. You may test this API in Studio, Team Create, and Team Test, but
-      the bans will not apply to production. This function call will only
-      attempt ban requests on production game servers and not in Studio testing.
+      be called on the backend experience server (client-side calls will result
+      in an error). You may test this API in Studio, during
+      [collaborative](../../../projects/collaboration.md) creation, or in a
+      [team test](../../../studio/testing-modes.md#collaborative-testing), but
+      the bans will not apply to production.
 
       This API uses the
       [User Restrictions Open Cloud API](/cloud/reference/UserRestriction). You
@@ -633,44 +635,26 @@ methods:
         type: Dictionary
         default:
         summary: |
-          <table><thead>
-          <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Description</th>
-          </tr></thead>
-          <tbody>
-            <tr>
-              <td><code>UserIds</code></td>
-              <td>array</td>
-              <td>(Required) UserID of the players to be banned. <br /><br />Max size is <code>50</code>.</td>
-            </tr>
-            <tr>
-              <td><code>ApplyToUniverse</code></td>
-              <td>boolean</td>
-              <td>(Optional, default is <code>true</code>) Propagates the ban to all places within this universe.</td>
-            </tr>
-            <tr>
-              <td><code>Duration</code></td>
-              <td>int</td>
-              <td>(Required) Duration of the ban in seconds. Permanent bans should have a value of <code>-1</code>. <br /><br />Zero and all other negative values are invalid.</td>
-            </tr>
-            <tr>
-              <td><code>DisplayReason</code></td>
-              <td>string</td>
-              <td>(Required) The message that will be displayed to users when they attempt to and fail to join an experience. Max size is 400.</td>
-            </tr>
-            <tr>
-              <td><code>PrivateReason</code></td>
-              <td>string</td>
-              <td>(Required) Any internal messaging that will be returned when querying the user's ban history. Max size is 1000.</td>
-            </tr>
-            <tr>
-              <td><code>ExcludeAltAccounts</code></td>
-              <td>boolean</td>
-              <td>(Optional, default is <code>false</code>) When <code>true</code>, Roblox does not attempt to ban alt accounts.</td>
-            </tr>
-          </tbody></table>
+          - `UserIds` (required; array) — Array of `Class.Player.UserId|UserIds`
+          of players to be banned. Max size is `50`.
+
+          - `ApplyToUniverse` (optional; boolean) — Whether ban propagates to
+          all places within the experience universe. Default is `true`.
+
+          - `Duration` (required; integer) — Duration of the ban, in seconds.
+          Permanent bans should have a value of `-1`. `0` and all other
+          negative values are invalid.
+
+          - `DisplayReason` (required; string) — The message that will be
+          displayed to users when they attempt to and fail to join an
+          experience. Maximum string length is `400`.
+
+          - `PrivateReason` (required; string) — Internal messaging that will
+          be returned when querying the user's ban history. Maximum string
+          length is `1000`.
+
+          - `ExcludeAltAccounts` (optional; boolean) — When `true`, Roblox
+          does not attempt to ban alt accounts. Default is `false`.
     returns:
       - type: void
         summary: ''
@@ -766,48 +750,7 @@ methods:
     returns:
       - type: BanHistoryPages
         summary: |
-          The items within `BanHistoryPages` are tables with the following
-          fields.
-
-          <table><thead>
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Description</th>
-            </tr></thead>
-          <tbody>
-            <tr>
-              <td><code>DisplayReason</code></td>
-              <td>string</td>
-              <td>The <code>DisplayReason</code> that was shown to the user</td>
-            </tr>
-            <tr>
-              <td><code>PrivateReason</code></td>
-              <td>string</td>
-              <td>The <code>PrivateReason</code> that was sent with this ban.</td>
-            </tr>
-            <tr>
-              <td><code>StartTime</code></td>
-              <td>string</td>
-              <td>The time that this ban was applied in ISO 8601 format.</td>
-            </tr>
-            <tr>
-              <td><code>Duration</code></td>
-              <td>number</td>
-              <td>The length of the ban in seconds. If it is a permanent ban, it will be <code>-1</code>.</td>
-            </tr>
-            <tr>
-              <td><code>Ban</code></td>
-              <td>boolean</td>
-              <td>If the action was a ban, it will be <code>true</code>. If the action was an unban, it will be <code>false</code>.</td>
-            </tr>
-            <tr>
-              <td><code>PlaceId</code></td>
-              <td>number</td>
-              <td>The place in which a ban or unban was explicitly updated. This field is <code>-1</code> if the action was applied on the universe level.</td>
-            </tr>
-          </tbody>
-          </table>
+          See `Class.BanHistoryPages` for return reference.
     tags:
       - Yields
     deprecation_message: ''
@@ -1186,15 +1129,21 @@ methods:
     thread_safety: Unsafe
   - name: Players:UnbanAsync
     summary: |
-      Unbans players banned from `Class.Players.BanAsync` or the User
+      Unbans players banned from `Class.Players:BanAsync()` or the User
       Restrictions Open Cloud API.
     description: |
-      Unbans players banned from `Class.Players.BanAsync` or the
+      Unbans players banned from `Class.Players:BanAsync()` or the
       [User Restrictions Open Cloud API](/cloud/reference/UserRestriction).
 
-      Similar to `Class.Players.BanAsync`, this method takes in a `config`
+      Like `Class.Players:BanAsync()`, this method takes in a `config`
       dictionary that will let you bulk unban users. This configures the users
       that are unbanned and the scope from which they are unbanned from.
+
+      Unbans will only take effect on bans with the same `ApplyToUniverse` 
+      scope. For example, an unban with `ApplyToUniverse` set to `true` will 
+      not invalidate a previous ban with `ApplyToUniverse` set to `false`. In 
+      other words, a universe level unban will not invalidate a place level 
+      ban. The opposite also holds true.
 
       This method invokes a HTTP call to backend services, which are throttled
       and may fail. If you are calling this API with multiple UserIds, this
