@@ -199,7 +199,7 @@ It's important to be mindful of where scripts run, otherwise your objects might 
 
 To organize folders into their correct container services for the catapult to work properly:
 
-1. In the **Explorer** window, expand the **ReplicatedStorage** and **ServerScriptStorage** folders.
+1. In the **Explorer** window, expand the **ReplicatedStorage** and **ServerScriptService** folders.
 
    <img width="45%" img src="../../assets/getting-started/Scripts-1.png" />
 
@@ -211,11 +211,11 @@ To organize folders into their correct container services for the catapult to wo
    The **UIHandler** `Class.Script` object has a `Class.Script.RunContext|RunContext` property set to **Client**, so it runs client-side only.
    </Alert>
 
-1. Select all children within the **ServerScriptStorage** folder, then drag them into the **ServerScriptStorage** service.
+1. Select all children within the **ServerScriptService** folder, then drag them into the **ServerScriptService** service.
 
    <img width="45%" img src="../../assets/getting-started/Scripts-3.png" />
 
-1. Delete the **ReplicatedStorage** and **ServerScriptStorage** folders.
+1. Delete the **ReplicatedStorage** and **ServerScriptService** folders.
    1. Select both folders.
    1. Press `Delete`.
 
