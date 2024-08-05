@@ -55,14 +55,19 @@ The following limitations apply when tracking your events with `Class.AnalyticsS
   </tr></thead>
 <tbody>
   <tr>
-    <td rowspan="2">Economy and Funnel events</td>
+    <td rowspan="3">Economy and Funnel events</td>
     <td>`Class.AnalyticsService` requests per minute</td>
     <td>120 + (20 * CCU)</td>
     <td></td>
   </tr>
   <tr>
-    <td>Unique values per custom field</td>
-    <td>Unlimited — After 20, values will be grouped as "Other"</td>
+    <td>Number of [custom fields](./custom-fields.md)</td>
+    <td>3</td>
+    <td>Class, Level, Weapon</td>
+  </tr>
+  <tr>
+    <td>Unique values per [custom field](./custom-fields.md)</td>
+    <td>Unlimited — After 8,000 combined values across all custom fields, values will be grouped as "Other"</td>
     <td>Warrior, Mage, Archer</td>
   </tr>
   <tr>
