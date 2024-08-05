@@ -1,5 +1,5 @@
 ---
-title: Creating Lasers Beams
+title: Creating Laser Beams
 description: A tutorial on creating a laser beam that sets an avatar's health to 0 on impact.
 ---
 
