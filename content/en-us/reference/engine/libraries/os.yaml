@@ -300,11 +300,11 @@ functions:
     code_samples:
   - name: os.clock
     summary: |
-      Returns a high-precision amount of CPU time used by Lua in seconds,
+      Returns elapsed CPU time in seconds with high precision,
       intended for use in benchmarking.
     description: |
-      Returns the amount of CPU time used by Lua in seconds. This value has high
-      precision, about 1 microsecond, and is intended for use in benchmarking.
+      Returns elapsed CPU time in seconds. This value has high
+      precision (about 1 microsecond) and is intended for use in benchmarking.
 
       ```lua
       -- Record the initial time:
