@@ -161,6 +161,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://soygenius.com/" title="Genius Academia">Genius Academia</a><br/>
 <a href="https://www.giganciprogramowania.edu.pl" title="Giganci Programowania">Giganci Programowania</a><br/>
 <a href="https://www.icancodeasia.com" title="ICanCode Asia">ICanCode Asia</a><br/>
+<a href="https://impactacademiesro.com/" title="impact Academies and Camps">impact Academies and Camps</a>
 <a href="https://kiddycodersclub.com/" title="Kiddy Coders">Kiddy Coders</a><br/>
 <a href="https://www.kidsinnovative.com" title="Kids Innovative">Kids Innovative</a><br/>
 <a href="https://www.kidztopros.com/" title="KidzToPros">KidzToPros</a>
@@ -520,6 +521,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 
 <a href="https://coddyschool.com/courses/sozdanie_igr_v_roblox_studio/" title="CODDY">CODDY</a>
 <a href="https://small.academy/cursuri/programare-roblox/" title="Small Academy">Small Academy</a>
+<a href="https://impactacademiesro.com/" title="impact Academies and Camps">impact Academies and Camps</a>
 
 #### Mozambique
 
