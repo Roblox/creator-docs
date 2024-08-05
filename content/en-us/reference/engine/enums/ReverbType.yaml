@@ -152,7 +152,7 @@ items:
     deprecation_message: ''
   - name: UnderWater
     summary: |
-      Sound reverb is changed to sound like the player is under water.
+      Sound reverb is changed to sound like the player is underwater.
     value: 23
     tags: []
     deprecation_message: ''
