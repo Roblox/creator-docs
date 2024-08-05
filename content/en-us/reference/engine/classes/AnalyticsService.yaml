@@ -595,7 +595,7 @@ methods:
           Optional dictionary of custom fields that will provide breakdowns in
           Roblox-provided charts. Only specific keys, provided by
           `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
-          Limited to 20 unique value per custom field per experience.
+          Limited to 8,000 unique combinations of values across the three custom fields per experience.
     returns:
       - type: void
         summary: ''
@@ -661,7 +661,7 @@ methods:
           Optional dictionary of custom fields that will provide breakdowns in
           Roblox-provided charts. Only specific keys, provided by
           `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
-          Limited to 20 unique value per custom field per experience.
+          Limited to 8,000 unique combinations of values across the three custom fields per experience.
     returns:
       - type: void
         summary: ''
@@ -707,7 +707,7 @@ methods:
           Optional dictionary of custom fields that will provide breakdowns in
           Roblox-provided charts. Only specific keys, provided by
           `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
-          Limited to 20 unique value per custom field per experience.
+          Limited to 8,000 unique combinations of values across the three custom fields per experience.
     returns:
       - type: void
         summary: ''
