@@ -304,7 +304,7 @@ functions:
       intended for use in benchmarking.
     description: |
       Returns elapsed CPU time in seconds. This value has high
-      precision, about 1 microsecond, and is intended for use in benchmarking.
+      precision (about 1 microsecond) and is intended for use in benchmarking.
 
       ```lua
       -- Record the initial time:
