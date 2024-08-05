@@ -3550,6 +3550,92 @@
         }
       }
     },
+    "/cloud/v2/universes/{universe}/places/{place}/user-restrictions": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "List user restrictions for users that have ever been banned in either a\n universe or a specific place.",
+        "operationId": "Cloud_ListUserRestrictions",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of user restrictions to return. The service might return\n fewer than this value. If unspecified, at most 10 user restrictions are\n returned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n The `filter` field supports a very small subset of CEL:\n\n * Only the `game_join_restriction.active` field is supported.\n * Only the `==` operator is available; no other operators nor\n   built-ins are supported.\n\n Example filter: `game_join_restriction.active == \"true\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListUserRestrictionsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:read"
+            ],
+            "title": "List User Restrictions"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
+          }
+        }
+      }
+    },
     "/cloud/v2/universes/{universe}/places/{place}/user-restrictions/{user-restriction}": {
       "get": {
         "tags": [
@@ -3797,6 +3883,83 @@
           "resource": {
             "$ref": "#/components/schemas/Subscription",
             "name": "Subscription"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/user-restrictions": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "List user restrictions for users that have ever been banned in either a\n universe or a specific place.",
+        "operationId": "Cloud_ListUserRestrictions",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of user restrictions to return. The service might return\n fewer than this value. If unspecified, at most 10 user restrictions are\n returned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n The `filter` field supports a very small subset of CEL:\n\n * Only the `game_join_restriction.active` field is supported.\n * Only the `==` operator is available; no other operators nor\n   built-ins are supported.\n\n Example filter: `game_join_restriction.active == \"true\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListUserRestrictionsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:read"
+            ],
+            "title": "List User Restrictions"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
           }
         }
       }
@@ -7896,6 +8059,92 @@
         }
       }
     },
+    "/v2/universes/{universe}/places/{place}/user-restrictions": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "List user restrictions for users that have ever been banned in either a\n universe or a specific place.",
+        "operationId": "Cloud_ListUserRestrictions",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of user restrictions to return. The service might return\n fewer than this value. If unspecified, at most 10 user restrictions are\n returned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n The `filter` field supports a very small subset of CEL:\n\n * Only the `game_join_restriction.active` field is supported.\n * Only the `==` operator is available; no other operators nor\n   built-ins are supported.\n\n Example filter: `game_join_restriction.active == \"true\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListUserRestrictionsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:read"
+            ],
+            "title": "List User Restrictions"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
+          }
+        }
+      }
+    },
     "/v2/universes/{universe}/places/{place}/user-restrictions/{user-restriction}": {
       "get": {
         "tags": [
@@ -8143,6 +8392,83 @@
           "resource": {
             "$ref": "#/components/schemas/Subscription",
             "name": "Subscription"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/user-restrictions": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "List user restrictions for users that have ever been banned in either a\n universe or a specific place.",
+        "operationId": "Cloud_ListUserRestrictions",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of user restrictions to return. The service might return\n fewer than this value. If unspecified, at most 10 user restrictions are\n returned. The maximum value is 100 and higher values are set to 100.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 100, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filter",
+            "in": "query",
+            "description": "This field may be set in order to filter the resources returned.\n\n The `filter` field supports a very small subset of CEL:\n\n * Only the `game_join_restriction.active` field is supported.\n * Only the `==` operator is available; no other operators nor\n   built-ins are supported.\n\n Example filter: `game_join_restriction.active == \"true\"`",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListUserRestrictionsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Cloud",
+          "methodProperties": {
+            "scopes": [
+              "universe.user-restriction:read"
+            ],
+            "title": "List User Restrictions"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/UserRestriction",
+            "name": "UserRestriction"
           }
         }
       }
@@ -11105,6 +11431,23 @@
         },
         "description": "Returns a list of change logs applied to UserRestriction resources."
       },
+      "ListUserRestrictionsResponse": {
+        "type": "object",
+        "properties": {
+          "userRestrictions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserRestriction"
+            },
+            "description": "The UserRestrictions from the specified Universe or Place."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\n page. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of UserRestrictions in the parent collection."
+      },
       "MemoryStore": {
         "type": "object",
         "properties": {
@@ -11454,6 +11797,162 @@
             "serverSize"
           ]
         }
+      },
+      "PlaceComputeSession": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the place compute session.\n\n Formats:\n * `universes/{universe}/places/{place}/compute-sessions/{place_compute_session}`\n * `universes/{universe}/places/{place}/versions/{place_version}/compute-sessions/{place_compute_session}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/places/123/compute-sessions/123e4567-e89b-12d3-a456-426655440000"
+              ]
+            }
+          }
+        },
+        "description": "Represents a compute session.",
+        "x-resource": true
+      },
+      "PlaceComputeSessionTask": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the place compute session task.\n\n Formats:\n * `universes/{universe}/places/{place}/compute-session-tasks/{place_compute_session_task}`\n * `universes/{universe}/places/{place}/versions/{place_version}/compute-session-tasks/{place_compute_session_task}`\n * `universes/{universe}/places/{place}/compute-sessions/{place_compute_session}/tasks/{place_compute_session_task}`\n * `universes/{universe}/places/{place}/versions/{place_version}/compute-sessions/{place_compute_session}/tasks/{place_compute_session_task}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/places/123/compute-session-tasks/123e4567-e89b-12d3-a456-426655440000"
+              ]
+            }
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Time when this task was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Time when this task's state last changed.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "user": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The user that created this task."
+          },
+          "group": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The group that created this task."
+          },
+          "state": {
+            "readOnly": true,
+            "enum": [
+              "STATE_UNSPECIFIED",
+              "QUEUED",
+              "PROCESSING",
+              "CANCELLED",
+              "COMPLETE",
+              "TIMED_OUT"
+            ],
+            "type": "string",
+            "description": "The task's state. See the State enum for information about each possible value.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | STATE_UNSPECIFIED | UNSPECIFIED |\n  | QUEUED | The Task is waiting to be processed. |\n  | PROCESSING | The Task has been picked up for processing. |\n  | CANCELLED | The Task has been stopped by the user. |\n  | COMPLETE | The Task has finished processing. The result field contains the output of the execution. |\n  | TIMED_OUT | The Task was aborted because it exceeded the maximum allowed execution time. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "STATE_UNSPECIFIED"
+              ]
+            }
+          },
+          "script": {
+            "immutable": true,
+            "type": "string",
+            "description": "The script to be run as part of this task.\n\n For example:\n\n ```luau\n local x = 3\n local y = 4\n return x + y\n ```"
+          },
+          "result": {
+            "$ref": "#/components/schemas/PlaceComputeSessionTask_Result",
+            "description": "The output of the task execution."
+          }
+        },
+        "description": "Represents a compute session task.",
+        "x-resource": true,
+        "x-oneOf": {
+          "initiator": [
+            "user",
+            "group"
+          ]
+        }
+      },
+      "PlaceComputeSessionTaskLog": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the place compute session task log.\n\n Formats:\n * `universes/{universe}/places/{place}/compute-session-tasks/{place_compute_session_task}/logs/{place_compute_session_task_log}`\n * `universes/{universe}/places/{place}/versions/{place_version}/compute-session-tasks/{place_compute_session_task}/logs/{place_compute_session_task_log}`\n * `universes/{universe}/places/{place}/compute-sessions/{place_compute_session}/tasks/{place_compute_session_task}/logs/{place_compute_session_task_log}`\n * `universes/{universe}/places/{place}/versions/{place_version}/compute-sessions/{place_compute_session}/tasks/{place_compute_session_task}/logs/{place_compute_session_task_log}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/places/123/compute-session-tasks/123e4567-e89b-12d3-a456-426655440000/logs/some-place-compute-session-task-log-id"
+              ]
+            }
+          },
+          "messages": {
+            "readOnly": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of log messages generated by the task execution.\n Each call to the Luau `print()` function from the task's script's code\n results in a single list item here, even if the message itself contains\n newlines."
+          }
+        },
+        "description": "Represents log messages generated by a PlaceComputeSessionTask.",
+        "x-resource": true
+      },
+      "PlaceComputeSessionTask_Result": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "$ref": "#/components/schemas/Status",
+            "description": "Information on the outcome of the task's execution. In the case of an execution failure, this field will contain the error details."
+          },
+          "results": {
+            "readOnly": true,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GoogleProtobufValue"
+            },
+            "description": "Return values from the script that was run. Return values that are not\n JSON serializable (such as Data Model Instances) will be returned as\n nulls."
+          }
+        },
+        "description": "Contains the output of a task's execution."
+      },
+      "PlaceVersion": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the place version.\n\n Format: `universes/{universe}/places/{place}/versions/{place_version}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/places/123/versions/123"
+              ]
+            }
+          }
+        },
+        "description": "Represents a Roblox place version.",
+        "x-resource": true
       },
       "ReadMemoryStoreQueueItemsResponse": {
         "type": "object",

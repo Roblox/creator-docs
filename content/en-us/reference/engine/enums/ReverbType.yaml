@@ -98,7 +98,7 @@ items:
     deprecation_message: ''
   - name: StoneCorridor
     summary: |
-      Sound reverb is changed to sound like the player is a stone corridor.
+      Sound reverb is changed to sound like the player is in a stone corridor.
     value: 14
     tags: []
     deprecation_message: ''
@@ -116,7 +116,7 @@ items:
     deprecation_message: ''
   - name: City
     summary: |
-      Sound reverb is changed to sound like the player is in city.
+      Sound reverb is changed to sound like the player is in a city.
     value: 17
     tags: []
     deprecation_message: ''
@@ -152,7 +152,7 @@ items:
     deprecation_message: ''
   - name: UnderWater
     summary: |
-      Sound reverb makes it sound like the player is under water.
+      Sound reverb is changed to sound like the player is underwater.
     value: 23
     tags: []
     deprecation_message: ''

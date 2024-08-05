@@ -120,7 +120,21 @@ Roblox moderates avatars that do not follow the body part requirements under the
 
 ### Modesty Layers
 
-A _modesty layer_ is a layer of clothing that covers an avatar's upper torso and lower torso. All avatars with a smooth and flat skin-like surface texture require a modesty layer. Avatars with feathers, scales, rocks, or metal over the groin and chest area do not require a modesty layer.
+A _modesty layer_ is a layer of clothing that covers an avatar's upper torso and lower torso. In general, modesty layers are required if your character resembles a human. See the following for specific policies for when modesty layers are required:
+
+<br />
+
+Modesty layers are **required** if your avatar character:
+
+- Has smooth and flat skin-like surface texture in the groin and chest area.
+
+<br />Modesty layers are **optional** if your avatar character:
+
+- Is not standing on two legs, such as a quadrupedal.
+- Resembles an **animal**.
+  - **Animal**: Living creature that exists in the real world, doesn't resemble humans, and doesn't normally wear clothes. Examples include: dogs, sharks, insects, bears.
+- Resembles an **inanimate object**.
+  - **Inanimate object**: Object in the real world that is not alive and doesn't resembles a human or animal. Examples include: food items, rocks, books, houses.
 
 <table>
 <thead>
@@ -175,8 +189,8 @@ A _modesty layer_ is a layer of clothing that covers an avatar's upper torso and
   </tr>
   <tr>
     <td>
-      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-D-Tela.png" /></center>
-      <figcaption><center>[Telamons Business Casual](https://www.roblox.com/bundles/210/Telamons-Business-Casual)</center></figcaption>
+      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-F-Scarlett.png" /></center>
+      <figcaption><center>[Scarlett](https://www.roblox.com/bundles/3968/Scarlett)</center></figcaption>
       </figure>
     </td>
     <td>
@@ -187,8 +201,8 @@ A _modesty layer_ is a layer of clothing that covers an avatar's upper torso and
   </tr>
   <tr>
     <td>
-      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-E-Polar.png" /></center>
-      <figcaption><center>[Polar Bear](https://www.roblox.com/bundles/195/Polar-Bear)</center></figcaption>
+      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-Claire.png" /></center>
+      <figcaption><center>[Claire](https://www.roblox.com/bundles/128/Claire)</center></figcaption>
       </figure>
     </td>
     <td>
@@ -199,8 +213,8 @@ A _modesty layer_ is a layer of clothing that covers an avatar's upper torso and
   </tr>
   <tr>
     <td>
-      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-F-Scarlett.png" /></center>
-      <figcaption><center>[Scarlett](https://www.roblox.com/bundles/3968/Scarlett)</center></figcaption>
+      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-Ivory.png" /></center>
+      <figcaption><center>[Octavia The Ivory Spider Girl](https://www.roblox.com/bundles/473/Octavia-The-Ivory-Spider-Girl)</center></figcaption>
       </figure>
     </td>
     <td>
@@ -211,9 +225,6 @@ A _modesty layer_ is a layer of clothing that covers an avatar's upper torso and
   </tr>
   <tr>
     <td>
-      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-G-Teddy.png" /></center>
-      <figcaption><center>[Teddy Bear](https://www.roblox.com/bundles/2094/Teddy-Bear)</center></figcaption>
-      </figure>
     </td>
     <td>
       <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-G-Dragon.png" /></center>
@@ -223,9 +234,6 @@ A _modesty layer_ is a layer of clothing that covers an avatar's upper torso and
   </tr>
   <tr>
     <td>
-      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-H-Bungling.png" /></center>
-      <figcaption><center>[Bungling](https://www.roblox.com/bundles/115561/Bungling)</center></figcaption>
-      </figure>
     </td>
     <td>
       <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-H-Pumpkin.png" /></center>
@@ -233,7 +241,78 @@ A _modesty layer_ is a layer of clothing that covers an avatar's upper torso and
       </figure>
     </td>
   </tr>
-
+  <tr>
+    <td>
+    </td>
+    <td>
+      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-D-Tela.png" /></center>
+      <figcaption><center>[Telamons Business Casual](https://www.roblox.com/bundles/210/Telamons-Business-Casual)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-E-Polar.png" /></center>
+      <figcaption><center>[Polar Bear](https://www.roblox.com/bundles/195/Polar-Bear)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-G-Teddy.png" /></center>
+      <figcaption><center>[Teddy Bear](https://www.roblox.com/bundles/2094/Teddy-Bear)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-H-Bungling.png" /></center>
+      <figcaption><center>[Bungling](https://www.roblox.com/bundles/115561/Bungling)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-Gang-O-Fries.png" /></center>
+      <figcaption><center>[Gang O' Fries](https://www.roblox.com/bundles/671/Gang-O-Fries)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-Mr-Toilet.png" /></center>
+      <figcaption><center>[Mr. Toilet](https://www.roblox.com/bundles/295/Skeleton)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-Skeleton.png" /></center>
+      <figcaption><center>[Skeleton](https://www.roblox.com/bundles/115561/Bungling)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+      <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-Clawed-Companion.png" /></center>
+      <figcaption><center>[Clawed Companion](https://www.roblox.com/bundles/593/Clawed-Companion)</center></figcaption>
+      </figure>
+    </td>
+  </tr>
 </tbody>
 </table>
 
