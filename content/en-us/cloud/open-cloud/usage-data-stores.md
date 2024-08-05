@@ -27,7 +27,7 @@ Although Open Cloud APIs are similar to the Lua `Class.DataStoreService`, there 
 
 - **Universe ID and data store name**: Unlike the Lua API, Open Cloud APIs are stateless and can come from anywhere, so you need to always provide the **Universe ID**, the unique identifier of your experience, and the data store **name** when sending the requests. For more information on how to get a Universe ID, see [Universe ID](../../cloud/open-cloud/data-store-api-handling.md#universe-id).
 
-- **Separate permissions for creating and updating**: The Lua API creates new entries if they don't exist when you call `Class.GlobalDataStore:SetAsync()`, but Open Cloud methods for creating and updating entries are separate. Separate permissions can be safer and more flexible in certain situations. For example, you can create a customer support tool that can edit an existing user's profile but can't create a new user's profile.
+- **Separate permissions for creating and updating**: The Lua API creates new entries if they don't exist when you call `Class.DataStore:SetAsync()`, but Open Cloud methods for creating and updating entries are separate. Separate permissions can be safer and more flexible in certain situations. For example, you can create a customer support tool that can edit an existing user's profile but can't create a new user's profile.
 
 - **Data serialization**: All Open Cloud endpoints require you to serialize all data before network transportation. Serialization means to convert an object into that string, and deserialization is its inverse operation (convert a string to an object). The Lua API serializes and deserializes entry content automatically, but for Open Cloud you need to generate or parse your entry data with JSON on your own.
 
