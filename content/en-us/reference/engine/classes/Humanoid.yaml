@@ -1023,9 +1023,6 @@ properties:
       When a character spawns, this property is set according to the value of
       `Class.StarterPlayer.CharacterUseJumpPower` which defaults to true.
 
-      When a character spawns, this property is set according to the value of
-      `Class.StarterPlayer.CharacterUseJumpPower` which defaults to true.
-
       When jumping, with this set to true, the `Class.Humanoid.JumpHeight` value
       is used to ensure the humanoid jumps to that height. With this set to
       false, the `Class.Humanoid.JumpPower` value is used to apply an upward
