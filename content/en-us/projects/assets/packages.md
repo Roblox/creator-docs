@@ -36,11 +36,11 @@ You can create a package from any single object or any single parent and childre
 1. Click **Submit**.
 1. After the conversion completes, the object receives a "chain link" symbol in the Explorer window to identify it as a package. Additionally, you can see a new **PackageLink** object parented to the object.
 
-   ![A maple tree model in the Explorer window with the package icon next to it.](../../assets/studio/packages/PackageLink-Explorer.png)
+   <img src="../../assets/studio/packages/PackageLink-Explorer.png" alt="A maple tree model in the Explorer window with the package icon next to it." width="215" />
 
 1. (Optional) Select the **PackageLink** object and enable `AutoUpdate` in the **Properties** window. Note how the icon changes to indicate that the package is set to automatically update.
 
-   ![A maple tree model in the Explorer window with the auto-update package icon next to it.](../../assets/studio/packages/PackageLink-Explorer-Auto.png)
+   <img src="../../assets/studio/packages/PackageLink-Explorer-Auto.png" alt="A maple tree model in the Explorer window with the auto-update package icon next to it." width="215" />
 
 <Alert severity="error">
 Don't delete or move the **PackageLink** instance! Doing so for any package copy converts the copy back into a normal object and loses package capabilities such as ability to update when there’s a new version.
@@ -87,7 +87,7 @@ To publish changes to a package:
 
 1. If a package copy has [auto-update](#automatic-updates) turned on, it immediately pulls in the updated version when you open the place that contains them. Other copies get a white dot on the package icon that indicates an update is available. You can [individually update](#updating-outdated-copies) or [mass-update](#mass-updates) them as needed.
 
-   ![Two packages in the Explorer set to auto-update, and one with an update available.](../../assets/studio/packages/Package-Update-Available.png)
+   <img src="../../assets/studio/packages/Package-Update-Available.png" alt="Two packages in the Explorer set to auto-update, and one with an update available." width="215" />
 
 1. (Optional) Add a description of your changes:
 
@@ -104,7 +104,7 @@ To update one or more package copies to the latest version:
 
 1. In the [Explorer](../../studio/explorer.md) window, locate outdated copies by the white dot on the package icon. You can also select the outdated copy in the 3D viewport, but it might be harder to find this way.
 
-   ![Two packages in the Explorer set to auto-update, and one with an update available.](../../assets/studio/packages/Package-Update-Available.png)
+   <img src="../../assets/studio/packages/Package-Update-Available.png" alt="Two packages in the Explorer set to auto-update, and one with an update available." width="215" />
 
 1. Right-click the outdated copy and select **Get Latest Package**. You can also select multiple packages, right-click, and **Get Latest For Selected Packages**.
 
@@ -116,7 +116,7 @@ Extensive use of packages may result in many package copies across multiple plac
 1. In the Explorer window or 3D viewport, right-click the desired package and select **Update All**.
 1. Choose all places in the experience or some subset of places and click **Update**.
 
-   <img src="../../assets/studio/packages/Mass-Update.png" alt="A view of the mass update window, showing two places." width="60%" />
+   <img src="../../assets/studio/packages/Mass-Update.png" alt="A view of the mass update window, showing two places." width="500" />
 
    To prevent unintended overwrites, mass updating does not affect [modified](#modifying-packages) versions of a package. After the mass update completes, Studio displays a warning with the number of packages that it did **not** update, if any.
 
@@ -130,7 +130,7 @@ To make syncing easier, you can set a package copy to update automatically whene
 
 1. In the [Explorer](../../studio/explorer.md) window, expand the package's hierarchy tree and select its **PackageLink** object.
 
-   <img src="../../assets/studio/packages/PackageLink-Explorer.png" alt="A close up view of a packaged chandelier model in the Explorer window. The PackageLink object is highlighted." width="320" />
+   <img src="../../assets/studio/packages/PackageLink-Explorer.png" alt="A close up view of a packaged chandelier model in the Explorer window. The PackageLink object is highlighted." width="215" />
 
 1. In the [Properties](../../studio/properties.md) window, enable the **AutoUpdate** property. If you have [nested packages](#nested-packages), this property only applies to the highest-level parent package, meaning automatic updates only occur when the **parent** package is updated.
 
@@ -193,7 +193,7 @@ If desired, you can share packages with friends or grant access to specific user
 
 You can edit packages and their children just like other objects. Modifying packages disables auto-update until you publish or revert the changes.
 
-<img src="../../assets/studio/packages/Modify-Notification.png" alt="The pop-up notice that you cannot update a modified package until you publish or revert your changes." width="470" />
+<img src="../../assets/studio/packages/Modify-Notification.png" alt="The pop-up notice that you cannot update a modified package until you publish or revert your changes." width="500" />
 
 Most edits flag the package as modified, although the following changes are **not** considered package modifications:
 
@@ -204,7 +204,7 @@ Most edits flag the package as modified, although the following changes are **no
 
 Once modified, packages with unpublished changes get a modified icon in the [Explorer](../../studio/explorer.md) window:
 
-![The Explorer window with an icon that identifies unpublished package changes.](../../assets/studio/packages/Package-Modified.png)
+<img src="../../assets/studio/packages/Modify-Notification.png" alt="The Explorer window with an icon that identifies unpublished package changes." width="500" />
 
 ### Adding or Updating Configurations
 
@@ -226,7 +226,7 @@ If you simply want to update the default **values** for configurations, you can 
 
 You can nest packages inside of other packages to maintain and collaborate on complex hierarchies, such as a series of vehicle mechanics which can be modified independently of the vehicle's parent package. This example shows a car package that contains four copies of the same wheel package:
 
-<img src="../../assets/studio/packages/Nested-Packages.png" alt="An expanded hierarchy in the Explorer window showing how packages can contain packages." width="40%" />
+<img src="../../assets/studio/packages/Nested-Packages.png" alt="An expanded hierarchy in the Explorer window showing how packages can contain packages." width="414" />
 
 <Alert severity="warning">
 If you modify a nested package, both the nested package **and** the parent package are considered as modified. You must [publish changes](#publishing-package-changes) to any **nested** package before you're allowed to publish changes to its **parent** package, since publishing the parent would mark it as current/unmodified and conflict with the nested package's modifications.
@@ -300,7 +300,7 @@ To compare package versions:
 1. In the Explorer window or 3D viewport, right-click the target package and select **Compare Package Versions**.
 1. By default, the window compares changes between your local copy and the latest version. Use the two dropdown menus to compare different versions.
 
-   <img src="../../assets/studio/packages/version-selector.png" alt="A close up view of an example diff viewer. The compare settings are highlighted." width="80%" />
+   <img src="../../assets/studio/packages/version-selector.png" alt="A close up view of an example diff viewer. The compare settings are highlighted." width="850" />
 
    <Alert severity="warning">
    Some older versions might be incompatible with the package diff tool.

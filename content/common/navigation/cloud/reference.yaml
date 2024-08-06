@@ -10,7 +10,7 @@ navigation:
     path: /cloud/reference/types
   - title: Errors
     path: /cloud/reference/errors
-  - heading: v2 Resources (Beta)
+  - heading: v2 Resources
   - title: All Cloud API
     path: /cloud/reference
     type: cloudapi2
