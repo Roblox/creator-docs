@@ -291,7 +291,7 @@ Modesty layers are **required** if your avatar character:
     </td>
     <td>
       <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-Mr-Toilet.png" /></center>
-      <figcaption><center>[Mr. Toilet](https://www.roblox.com/bundles/295/Skeleton)</center></figcaption>
+      <figcaption><center>[Mr. Toilet](https://www.roblox.com/bundles/591/Mr-Toilet)</center></figcaption>
       </figure>
     </td>
   </tr>
@@ -300,7 +300,7 @@ Modesty layers are **required** if your avatar character:
     </td>
     <td>
       <figure><center><img src="../assets/art/avatar/Modesty-Layer-Example-Skeleton.png" /></center>
-      <figcaption><center>[Skeleton](https://www.roblox.com/bundles/115561/Bungling)</center></figcaption>
+      <figcaption><center>[Skeleton](https://www.roblox.com/bundles/295/Skeleton)</center></figcaption>
       </figure>
     </td>
   </tr>
