@@ -18,8 +18,10 @@ tags:
 deprecation_message: ''
 properties:
   - name: AccessoryDescription.AccessoryType
-    summary: ''
-    description: ''
+    summary: |
+      The `Enum.AccessoryType` of the `Class.Accessory` referred to by this description.
+    description: |
+      The `Enum.AccessoryType` of the `Class.Accessory` referred to by this description.
     code_samples: []
     type: AccessoryType
     tags: []
@@ -33,8 +35,10 @@ properties:
       can_load: true
       can_save: true
   - name: AccessoryDescription.AssetId
-    summary: ''
-    description: ''
+    summary: |
+      The asset ID that should be applied when applying this `Class.AccessoryDescription`.
+    description: |
+      The asset ID that should be applied when applying this `Class.AccessoryDescription`.
     code_samples: []
     type: int64
     tags: []
@@ -48,8 +52,12 @@ properties:
       can_load: true
       can_save: true
   - name: AccessoryDescription.Instance
-    summary: ''
-    description: ''
+    summary: |
+      A reference to the `Class.Instance` that should be applied when applying this `Class.AccessoryDescription`.
+    description: |
+      A reference to the `Class.Instance` that should be applied when applying this `Class.AccessoryDescription`.
+      This property can be used instead of `Class.AccessoryDescription.AssetId|AssetId` to apply accessories
+      without uploading them to the platform.
     code_samples: []
     type: Instance
     tags: []
@@ -63,8 +71,12 @@ properties:
       can_load: true
       can_save: true
   - name: AccessoryDescription.IsLayered
-    summary: ''
-    description: ''
+    summary: |
+      Whether the `Class.Accessory` is layered or rigid.
+    description: |
+      Whether the `Class.Accessory` is layered or rigid. This will be updated after calling
+      `Class.Humanoid:ApplyDescription()` if this property doesn't match the actual
+      `Class.Accessory` contents.
     code_samples: []
     type: bool
     tags: []
@@ -78,8 +90,10 @@ properties:
       can_load: true
       can_save: true
   - name: AccessoryDescription.Order
-    summary: ''
-    description: ''
+    summary: |
+      The layered clothing sort order, if the `Class.Accessory` is layered.
+    description: |
+      The `Class.WrapLayer.Order` value when applying the `Class.Accessory`, if it is layered.
     code_samples: []
     type: int
     tags: []
@@ -93,8 +107,10 @@ properties:
       can_load: true
       can_save: true
   - name: AccessoryDescription.Position
-    summary: ''
-    description: ''
+    summary: |
+      The accessory adjustment position offset, if the `Class.Accessory` is rigid.
+    description: |
+      The accessory adjustment position offset. Only applies if the `Class.Accessory` is rigid.
     code_samples: []
     type: Vector3
     tags: []
@@ -108,8 +124,10 @@ properties:
       can_load: true
       can_save: true
   - name: AccessoryDescription.Puffiness
-    summary: ''
-    description: ''
+    summary: |
+      The layered clothing puffiness, if the `Class.Accessory` is layered.
+    description: |
+      The `Class.WrapLayer.Puffiness` value when applying the `Class.Accessory`, if it is layered.
     code_samples: []
     type: float
     tags: []
@@ -123,8 +141,10 @@ properties:
       can_load: true
       can_save: true
   - name: AccessoryDescription.Rotation
-    summary: ''
-    description: ''
+    summary: |
+      The accessory adjustment rotation offset, if the `Class.Accessory` is rigid.
+    description: |
+      The accessory adjustment rotation offset. Only applies if the `Class.Accessory` is rigid.
     code_samples: []
     type: Vector3
     tags: []
@@ -138,8 +158,10 @@ properties:
       can_load: true
       can_save: true
   - name: AccessoryDescription.Scale
-    summary: ''
-    description: ''
+    summary: |
+      The accessory adjustment scale, if the `Class.Accessory` is rigid.
+    description: |
+      The accessory adjustment scale. Only applies if the `Class.Accessory` is rigid.
     code_samples: []
     type: Vector3
     tags: []
@@ -154,8 +176,11 @@ properties:
       can_save: true
 methods:
   - name: AccessoryDescription:GetAppliedInstance
-    summary: ''
-    description: ''
+    summary: |
+      Returns the applied `Class.Accessory`.
+    description: |
+      Returns the applied `Class.Accessory` if this `Class.AccessoryDescription` is the child of an applied
+      `Class.HumanoidDescription` parented to a `Class.Humanoid`.
     code_samples: []
     parameters: []
     returns:

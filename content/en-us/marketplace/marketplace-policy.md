@@ -130,7 +130,6 @@ Modesty layers are **required** if your avatar character:
 
 <br />Modesty layers are **optional** if your avatar character:
 
-- Is not standing on two legs, such as a quadrupedal.
 - Resembles an **animal**.
   - **Animal**: Living creature that exists in the real world, doesn't resemble humans, and doesn't normally wear clothes. Examples include: dogs, sharks, insects, bears.
 - Resembles an **inanimate object**.
