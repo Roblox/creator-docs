@@ -10,6 +10,10 @@ By default, pausing and resuming physics acts upon both the client **and** serve
 
 <img src="../assets/studio/general/Test-Tab-Pause-Resume-Physics-All-Current.png" width="800" alt="Selection arrows for Pause Physics and Resume Physics to toggle between All or Current pause/resume action between client and server physics." />
 
+When physics is paused, you can **step forward** 1/60th of a second (60&nbsp;Hz) by clicking the **Step&nbsp;Forward&nbsp;Physics** button. Like the neighboring buttons to its left, clicking the small arrow lets you toggle client and/or server steps between **All** or **Current**.
+
+<img src="../assets/studio/general/Test-Tab-Step-Forward-Physics.png" width="800" alt="Step Forward Physics button available during playtesting in Studio, only active while physics is paused." />
+
 Note the following technical details in relation to physics pause/resume:
 
 - Although `Class.Animation|Animations` are not based on physics, these toolbar buttons also pause/resume animations.

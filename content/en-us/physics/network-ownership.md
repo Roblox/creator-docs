@@ -11,10 +11,37 @@ Clients experience **more responsive** physics interactions with parts that they
 
 To assist with network ownership debugging, Studio can render colored outlines around objects when playtesting.
 
-<figure>
-  <video src="../assets/physics/network-ownership/Visualization-Demo.mp4" controls width="90%" alt="Video showing part ownership indicated through colored outlines"></video>
-  <figcaption>Part ownership indicated through colored outlines</figcaption>
-</figure>
+<video src="../assets/physics/network-ownership/Visualization-Demo.mp4" controls width="90%" alt="Video showing part ownership indicated through colored outlines"></video>
+
+<table>
+<thead>
+	<tr>
+		<th colspan="2">Outline Color</th>
+		<th>Description</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td><ColorSwatch value="rgb(30,100,50)" /></td>
+		<td>(green)</td>
+		<td>Your client owns the part and is simulating it.</td>
+	</tr>
+	<tr>
+		<td><ColorSwatch value="rgb(160,0,0)" /></td>
+		<td>(red)</td>
+		<td>The part is within a "buffer zone" where your client is simulating it but it's still owned by something else. Your client might get ownership after this, or it may reject.</td>
+	</tr>
+	<tr>
+		<td><ColorSwatch value="rgb(220,220,220)" /><br /><ColorSwatch value="rgb(140,140,140)" /></td>
+		<td>(white/grey)</td>
+		<td>Server or another client owns the part through either automatic network ownership or from explicit assignment through `Class.BasePart:SetNetworkOwner()|part:SetNetworkOwner()`.</td>
+	</tr>
+</tbody>
+</table>
+
+<Alert severity="info">
+Note that in a [multi-client simulation](../studio/testing-modes.md#multi-client-simulation), each client is assigned a unique color to indicate their ownership; this is mirrored in the [Server](../studio/testing-modes.md#clientserver-toggle) view, helping you determine which client owns which part(s) at any given time.
+</Alert>
 
 To enable ownership visualization:
 
