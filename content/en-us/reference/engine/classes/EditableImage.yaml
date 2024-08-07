@@ -58,22 +58,6 @@ description: |
   image will be published as an image and the overridden property will be set to
   the new asset ID.
 
-    #### Usage Guidelines 
-
-  To set creators up for success, the following outlines expectations and best practices for experiences that enable in-experience creation of user generated content. 
-
-  All creators must adhere to the following: 
-
-  - Any content created in an experience must adhere to Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and [Roblox Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use). Creators may be held responsible for abusive user behavior committed by their users and enabled by creation tools within the experience, including the creation of violative texts, meshes, or images.
-
-  - Roblox can moderate experiences in which a significant portion of users are egregiously violating the [Roblox Terms](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) or [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) if the creator does not take reasonable actions, such as making changes to game mechanics, incentive design, and core features, to limit the violative behavior.
-
-  These additional guidelines apply to any experiences that enable use of EditableMesh and EditableImage APIs from Game Settings:
-
-  - Tools that enable users to create arbitrary images or meshes are only allowed if the creations are not visible to other users until they have gone through Roblox's moderation system.
-  - User inputs like sliders and other control values used for procedural generation may only be replicated if they cannot result in content that violates Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) or [Roblox Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use).
-  - Do not load asset-like content, including meshes or images, from any off-platform site or any unmoderated sources, such as [data stores](../../../cloud-services/data-stores/index.md), source code, or `Class.StringValue` objects.
-
 code_samples: []
 inherits:
   - Instance
