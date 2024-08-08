@@ -19,9 +19,11 @@ deprecation_message: ''
 properties:
   - name: BodyPartDescription.AssetId
     summary: |
-      The asset ID that should be applied when applying this `Class.BodyPartDescription`.
+      The asset ID that should be applied when applying this
+      `Class.BodyPartDescription`.
     description: |
-      The asset ID that should be applied when applying this `Class.BodyPartDescription`.
+      The asset ID that should be applied when applying this
+      `Class.BodyPartDescription`.
     code_samples: []
     type: int64
     tags: []
@@ -35,8 +37,10 @@ properties:
       can_load: true
       can_save: true
   - name: BodyPartDescription.BodyPart
-    summary: 'The type of the BodyPart'
-    description: 'The type of the BodyPart'
+    summary: |
+      The type of the BodyPart
+    description: |
+      The type of the BodyPart
     code_samples: []
     type: BodyPart
     tags: []
@@ -50,8 +54,10 @@ properties:
       can_load: true
       can_save: true
   - name: BodyPartDescription.Color
-    summary: 'The BodyColor for this BodyPart'
-    description: 'The BodyColor for this BodyPart'
+    summary: |
+      The BodyColor for this BodyPart
+    description: |
+      The BodyColor for this BodyPart
     code_samples: []
     type: Color3
     tags: []
@@ -65,9 +71,15 @@ properties:
       can_load: true
       can_save: true
   - name: BodyPartDescription.Instance
-    summary: 'A reference to the Instance that should be applied when applying this BodyPartDescription'
+    summary: |
+      A reference to the Instance that should be applied when applying this
+      BodyPartDescription
     description: |
-      A reference to the BodyPart that should be applied when applying this BodyPartDescription. This property can be used instead of AssetId to apply accessories without uploading them to the platform. This can reference either a BodyPart with R15, R15ArtistIntent and R6 folders or only reference a single sub-folder.
+      A reference to the BodyPart that should be applied when applying this
+      BodyPartDescription. This property can be used instead of AssetId to apply
+      accessories without uploading them to the platform. This can reference
+      either a BodyPart with R15, R15ArtistIntent and R6 folders or only
+      reference a single sub-folder.
     code_samples: []
     type: Instance
     tags: []

@@ -58,6 +58,21 @@ properties:
     serialization:
       can_load: false
       can_save: true
+  - name: AudioAnalyzer.SpectrumEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Metering
+    serialization:
+      can_load: true
+      can_save: true
 methods:
   - name: AudioAnalyzer:GetConnectedWires
     summary: ''
@@ -69,7 +84,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Array
+      - type: Objects
         summary: ''
     tags: []
     deprecation_message: ''

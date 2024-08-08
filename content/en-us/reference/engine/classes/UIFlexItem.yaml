@@ -14,8 +14,7 @@ description: |
 code_samples: []
 inherits:
   - UIComponent
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: UIFlexItem.FlexMode

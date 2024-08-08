@@ -1,14 +1,15 @@
 ---
-title: Creating Layered Models In Blender
+title: Rigging and Caging Models (Blender)
 description: Convert a 3D model into a layered 3D model in Blender before importing and converting the model into Studio as an Accessory.
 ---
 
-You can use a third party modeling tool, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), to create the layered 3D model that you can [import and convert](../../art/accessories/accessory-fitting-tool.md) into Studio as an `Class.Accessory`. To create a layered model, you must **parent** (Blender) or **bind** (Maya) a 3D model to a mannequin armature and then modify two additional meshes to fit around the inner and outer surface of the accessory model.
+You can use a third party modeling tool, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), to modify an existing 3D object into a layerable 3D model that you can [import and convert](../../art/accessories/accessory-fitting-tool.md) into Studio as an `Class.Accessory`. To create a layered model, you must **parent** (Blender) or **bind** (Maya) a 3D model to a mannequin armature and then modify two additional meshes to fit around the inner and outer surface of the accessory model.
 
 This guide covers the basic workflow for converting a 3D model into a layerable model in Blender using the following steps:
 
 1. [**Importing**](#importing) a 3D asset into a template Blender project file.
-2. [**Parenting**](#parenting-and-weighting) the imported mesh object to the project file's armature rig with Blender's Automatic Weights feature. You can skip this step if you're using Roblox's [automatic skinning transfer](../../art/accessories/automatic-skinning-transfer.md).
+2. [**Parenting**](#parenting-and-weighting) the imported mesh object to the project file's armature rig with Blender's Automatic Weights feature.
+   1. Manual skinning is not covered, see [Skinning a Simple Mesh](../modeling/skinning-a-simple-mesh.md) for an overview of manual skinning.
 3. [**Editing**](#editing-inner-and-outer-cage-meshes) the Inner and Outer Cage meshes to represent the inner and outer surface of the model.
 
 A full list of asset requirements for a layered model can be found in [Layered Model Specifications](../../art/accessories/specifications.md).
@@ -44,10 +45,10 @@ To import and parent the accessory model:
 
 ## Parenting and Weighting
 
-For this basic accessory, parent the imported mesh to the template mannequin armature using Blender's [Automatic Weights](https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html#with-automatic-weights) feature. Parenting the accessory model mesh to the armature enables the 3D model to move and deform with the character in Studio. This step is optional if you're using [automatic skinning transfer](../../art/accessories/automatic-skinning-transfer.md).
+For this basic accessory, parent the imported mesh to the template mannequin armature using Blender's [Automatic Weights](https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html#with-automatic-weights) feature. Parenting the accessory model mesh to the armature in this way enables the 3D model to move and deform naturally with the character in Studio.
 
 <Alert severity="warning">
-Complex clothing and accessory items with moving parts may require more precise skinning with Blender's <a href="https://docs.blender.org/manual/en/3.5/grease_pencil/modes/weight_paint/introduction.html#weight-paint">Weight Painting</a> or other skinning tools.
+Complex clothing and accessory items with moving parts may require more precise skinning with Blender's <a href="https://docs.blender.org/manual/en/3.5/grease_pencil/modes/weight_paint/introduction.html#weight-paint">Weight Painting</a> or other skinning tools. See [Skinning a Simple Mesh](../modeling/skinning-a-simple-mesh.md) for an example of manual skinning.
 </Alert>
 
 To parent the mesh object with the mannequin armature:
@@ -121,7 +122,7 @@ A finished outer cage should completely cover the accessory with minimal extra s
 
 When finished with the caging and modeling of your asset, see [Exporting Requirements](../../art/modeling/export-requirements.md#blender) for details on exporting the model from Blender.
 
-After exporting, see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) for instructions on importing and converting the model into a usable accessory.
+After exporting, see [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) and [Converting Clothing Accessories tutorial](../accessories/creating/converting.md) for instructions on importing and converting the model into a usable accessory.
 
 ## Tips for Editing Cages
 

@@ -1,5 +1,5 @@
 ---
-title: Inventory
+title: User Inventories
 description: Covers core use cases for the Inventory API, such as verifying that a user owns a particular item and filtering return values for categories of items.
 ---
 

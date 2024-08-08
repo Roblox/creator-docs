@@ -1,5 +1,5 @@
 ---
-title: Engine Instance
+title: Engine Instances
 description: Explains how to use Open Cloud APIs to access the Roblox Engine Instances.
 ---
 

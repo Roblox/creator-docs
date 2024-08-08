@@ -13,56 +13,6 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: AvatarCreationService:SendAnalyticsEvent
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: eventName
-        type: string
-        default:
-        summary: ''
-      - name: params
-        type: Dictionary
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-  - name: AvatarCreationService:GetAvatarGenerationConfig
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Dictionary
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-  - name: AvatarCreationService:LoadAvatarModelAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: id
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: Instance
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
   - name: AvatarCreationService:PromptCreateAvatarAsync
     summary: ''
     description: ''

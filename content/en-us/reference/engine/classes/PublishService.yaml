@@ -13,6 +13,27 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: PublishService:CreateAssetOrAssetVersionAndPollAssetWithTelemetryAsyncWithAddParam
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: serializedInstance
+        type: string
+        default:
+        summary: ''
+      - name: publishInfo
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 events: []
 callbacks: []

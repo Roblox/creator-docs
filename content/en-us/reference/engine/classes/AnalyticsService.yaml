@@ -528,6 +528,34 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: AnalyticsService:LogCustomEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: eventName
+        type: string
+        default:
+        summary: ''
+      - name: value
+        type: double
+        default: 1
+        summary: ''
+      - name: customFields
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: AnalyticsService:LogEconomyEvent
     summary: |
       Logs an event used to track player actions related in experience.
@@ -595,7 +623,8 @@ methods:
           Optional dictionary of custom fields that will provide breakdowns in
           Roblox-provided charts. Only specific keys, provided by
           `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
-          Limited to 8,000 unique combinations of values across the three custom fields per experience.
+          Limited to 8,000 unique combinations of values across the three custom
+          fields per experience.
     returns:
       - type: void
         summary: ''
@@ -661,7 +690,8 @@ methods:
           Optional dictionary of custom fields that will provide breakdowns in
           Roblox-provided charts. Only specific keys, provided by
           `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
-          Limited to 8,000 unique combinations of values across the three custom fields per experience.
+          Limited to 8,000 unique combinations of values across the three custom
+          fields per experience.
     returns:
       - type: void
         summary: ''
@@ -707,7 +737,8 @@ methods:
           Optional dictionary of custom fields that will provide breakdowns in
           Roblox-provided charts. Only specific keys, provided by
           `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
-          Limited to 8,000 unique combinations of values across the three custom fields per experience.
+          Limited to 8,000 unique combinations of values across the three custom
+          fields per experience.
     returns:
       - type: void
         summary: ''

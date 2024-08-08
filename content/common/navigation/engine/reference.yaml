@@ -525,6 +525,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Clothing.yaml
         ignoreTranslation: true
+      - title: CloudCRUDService
+        path: /reference/engine/classes/CloudCRUDService
+        type: engineapi
+        source: /reference/engine/classes/CloudCRUDService.yaml
+        ignoreTranslation: true
       - title: Clouds
         path: /reference/engine/classes/Clouds
         type: engineapi
@@ -3292,6 +3297,11 @@ navigation:
         path: /reference/engine/enums/AnimatorRetargetingMode
         type: engineapi
         source: /reference/engine/enums/AnimatorRetargetingMode.yaml
+        ignoreTranslation: true
+      - title: AppLifecycleManagerState
+        path: /reference/engine/enums/AppLifecycleManagerState
+        type: engineapi
+        source: /reference/engine/enums/AppLifecycleManagerState.yaml
         ignoreTranslation: true
       - title: ApplyStrokeMode
         path: /reference/engine/enums/ApplyStrokeMode

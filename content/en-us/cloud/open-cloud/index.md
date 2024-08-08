@@ -5,6 +5,12 @@ description: In addition to using Engine and Studio tools to create experiences 
 
 With Open Cloud, you can access Roblox resources through standard REST APIs, which lets you build everything from command line automation tools to complex web apps. The Open Cloud APIs support HTTPS and let you update experiences, restart servers, work with your data stores and memory stores, manage user restrictions, list inventory items, and much, much more.
 
+For the full list of available operations, see the Open Cloud API reference.
+
+<a href="../reference/index.md">
+  <Button variant="contained">Open Cloud API Reference</Button>
+</a>
+
 ## Getting Started with Open Cloud
 
 1. See the authentication documentation for how to use [API keys](api-keys.md) or [OAuth 2.0](oauth2-overview.md).
