@@ -29,9 +29,9 @@ Before driving too many new users to your experience, grow the following metrics
 After you have optimized your retention, engagement, and monetization, use your [Acquisition](../../production/analytics/acquisition.md) page to understand:
 
 1. Where new users are coming from by source.
-2. How well each source is converting.
+2. How well home recommendations are converting.
 
-You can use the following chart to track your conversion rates from Roblox **Home** and **Search**. Test different experience icons, titles, and descriptions to see how they impact your conversion rate.
+You can use the following chart to track the percent of users who have a qualified play in your experience after viewing it in recommendations. A "qualified play" refers to a user's intentional engagement with your experience, as opposed to accidental clicks or joining an experience and then bouncing quickly. Test different experience icons, titles, and descriptions to see how they impact your qualified play through rate.
 
 <figure>
     <img src="../../assets/analytics/overview/step2.png" width="80%"/>
@@ -44,10 +44,26 @@ Roblox experiences are inherently social, and users love trying them out with th
 
 After you update your experience, visit analytics to understand how the update impacted the following metrics:
 
-1. [Retention](../../production/analytics/retention.md): D1, D7, and D30 retention.
+1. [Retention](../../production/analytics/retention.md): D1 and D7 retention.
 2. [Engagement](../../production/analytics/engagement.md): Average session time.
 3. [Monetization](../../production/analytics/monetization.md): Payer conversion, ARPPU, and revenue.
-4. [Acquisition](../../production/analytics/acquisition.md): New users and conversion rates by source.
+4. [Acquisition](../../production/analytics/acquisition.md): New users and qualified play through rate.
+
+You can monitor major weekly changes and benchmark movement on your experience overview page. [Insights](#analytics-insights) highlights large movements in key metrics such as DAU, new users, and revenue.
+
+<figure>
+    <img src="../../assets/analytics/overview/step3.png" width="80%"/>
+  </figure>
+
+If you have 100+ DAU, you can compare how your experience is performing against similar experiences using the benchmark scorecards. Your benchmark scorecards help you focus on the right metrics to improve compared to similar experiences
+
+For example, in the scorecard below, engagement (average session time and D1 retention) looks to be the problem. As a result, you may consider using [funnel analytics](../analytics/funnel-events.md) to improve your onboarding funnel.
+
+Your similar experience benchmarks are updated daily. Roblox does not use these benchmarks as a direct signal in the discovery algorithm. Instead, these benchmarks give you a point of comparison as you work on improving your engagement, monetization, and acquisition. For more information on how users find new experiences, see [Discovery](../../discovery.md).
+
+<figure>
+    <img src="../../assets/analytics/overview/Benchmarks-Similar.png" width="80%"/>
+  </figure>
 
 ## Analytics Home
 
@@ -77,7 +93,7 @@ If you add an experience to your watchlist that you don't have analytics permiss
 Watchlists are applied on the account level, are private, and persist when toggling between groups. To add an experience to your watchlist, paste the **Experience URL** or add it from your **Experience Table**, which is a list view of all the experiences owned by your account or selected group.
 
 <figure>
-    <img src="../../assets/analytics/overview/watchlist.png" width="720%"/>
+    <img src="../../assets/analytics/overview/watchlist.png" width="80%"/>
     <figcaption>Experience watchlist on Analytics Home.</figcaption>
 </figure>
 
@@ -92,21 +108,26 @@ Avatar items you've sold automatically appear within the **Avatar Items** tab. H
 - **Monitor your catalog**: Examine a table with up to 200 items, filterable by item category and sales types, and sortable by sales and total revenue.
 
 <figure>
-    <img src="../../assets/analytics/overview/avatar-sales-and-revenue.png" width="720%"/>
+    <img src="../../assets/analytics/overview/avatar-sales-and-revenue.png" width="90%"/>
     <figcaption>Avatar Items on Analytics Home.</figcaption>
 </figure>
 
 ## Analytics Insights
 
-In each experience's overview page there are three key analytics insights to help you take action:
+In each experience's overview page, there are insights that highlight major weekly changes in key metrics and areas of improvement.
 
-- **Your metric is lower than 50% of similar experiences:** This insight means that a metric is lower than 50% of similar experience benchmarks. Focus on improving this metric to grow your experience faster.
-- **Your metric has increased or decreased week over week:** This insight points to a large percent change in a metric. Visit the chart for the articulated metric and filter through parameters to identify what might have led to the change.
-- **Your metric is at a six month high:** This insight is meant to help you celebrate progress when a metric has reached a six month high. Note that if a metric is at a six month high but below benchmark comparisons, you should still continue to improve it.
+For example, the insight below shows that your revenue declined 21%, but similar experiences' revenue increased by 15%. This is a sign that you'll want to take action and look deeper into your monetization to diagnose potential issues. You can click "Explore this metric" to slice and dice your revenue by platform, country, and more. These insights are updated daily and are available for experiences with 100+ DAU.
 
 <figure>
-    <img src="../../assets/analytics/overview/Roblox_Analytics_Insights.png" width= "100%" />
-    <figcaption>Analytics insights for *Beyond the Dark*.</figcaption>
-  </figure>
+    <img src="../../assets/analytics/overview/Insights.png" width="80%"/>
+</figure>
 
-For more information on how analytics works, see [Analytics Dashboard](../../production/analytics/analytics-dashboard.md). For more information how to use analytics to optimize your experience's design, see [Analytics Essentials](../../production/game-design/analytics-essentials.md).
+### Achievement Panel
+
+Your achievement panel highlights key metric milestones that you've reached over the past 6 months. This insight is meant to help you celebrate progress when a metric has reached a six month high. Note that if a metric is at a six month high but below benchmark comparisons, you should still continue to improve it.
+
+<figure>
+    <img src="../../assets/analytics/overview/Achievements.png" width="50%"/>
+</figure>
+
+For more information on how analytics works, see [Analytics Dashboard](../../production/analytics/analytics-dashboard.md). For more information on how to use analytics to optimize your experience's design, see [Analytics Essentials](../../production/game-design/analytics-essentials.md).

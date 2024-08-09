@@ -566,8 +566,8 @@ methods:
       time left on their ban and your `DisplayReason`. Roblox's backend systems
       will evict players across all servers from the place(s) that you specify.
       `DisplayReason` can have a maximum length of 400 characters and is subject
-      to a text filter. For more information on acceptable modal
-      text, see [ban messaging](../../../players/index.md#message-guidelines).
+      to a text filter. For more information on acceptable modal text, see
+      [ban messaging](../../../players/index.md#message-guidelines).
 
       #### Places and Universe
 
@@ -594,9 +594,9 @@ methods:
       with the `Duration` field. To specify a permanent ban, set the field to
       `-1`. You may also want to dynamically configure the ban duration based on
       the user's ban history, which you can query for using
-      `Class.Players:GetBanHistoryAsync()`. For example, you may want to consider
-      the number of bans, the duration of previous bans, or build logic off of
-      the notes you save under `PrivateReason` which can be up to 1000
+      `Class.Players:GetBanHistoryAsync()`. For example, you may want to
+      consider the number of bans, the duration of previous bans, or build logic
+      off of the notes you save under `PrivateReason` which can be up to 1000
       characters and are not text filtered. `PrivateReason` notes are never
       shared with the client and can be considered safe from attackers.
 
@@ -609,9 +609,9 @@ methods:
       as a comma separated list. For example, if this method is invoked for five
       users and requests for those with `Class.Player.UserId|UserIds` 2 and 4
       fail, the following error message appears:
-      
+
       `HTTP failure for UserId 2: Timedout, HTTP 504 (Service unavailable) failure for UserId 4: Service exception`
-      
+
       The message will always include `failure for UserId {}` if it is an HTTP
       error.
 
@@ -636,25 +636,25 @@ methods:
         default:
         summary: |
           - `UserIds` (required; array) — Array of `Class.Player.UserId|UserIds`
-          of players to be banned. Max size is `50`.
+            of players to be banned. Max size is `50`.
 
           - `ApplyToUniverse` (optional; boolean) — Whether ban propagates to
-          all places within the experience universe. Default is `true`.
+            all places within the experience universe. Default is `true`.
 
           - `Duration` (required; integer) — Duration of the ban, in seconds.
-          Permanent bans should have a value of `-1`. `0` and all other
-          negative values are invalid.
+            Permanent bans should have a value of `-1`. `0` and all other
+            negative values are invalid.
 
           - `DisplayReason` (required; string) — The message that will be
-          displayed to users when they attempt to and fail to join an
-          experience. Maximum string length is `400`.
+            displayed to users when they attempt to and fail to join an
+            experience. Maximum string length is `400`.
 
-          - `PrivateReason` (required; string) — Internal messaging that will
-          be returned when querying the user's ban history. Maximum string
-          length is `1000`.
+          - `PrivateReason` (required; string) — Internal messaging that will be
+            returned when querying the user's ban history. Maximum string length
+            is `1000`.
 
-          - `ExcludeAltAccounts` (optional; boolean) — When `true`, Roblox
-          does not attempt to ban alt accounts. Default is `false`.
+          - `ExcludeAltAccounts` (optional; boolean) — When `true`, Roblox does
+            not attempt to ban alt accounts. Default is `false`.
     returns:
       - type: void
         summary: ''
@@ -1139,11 +1139,11 @@ methods:
       dictionary that will let you bulk unban users. This configures the users
       that are unbanned and the scope from which they are unbanned from.
 
-      Unbans will only take effect on bans with the same `ApplyToUniverse` 
-      scope. For example, an unban with `ApplyToUniverse` set to `true` will 
-      not invalidate a previous ban with `ApplyToUniverse` set to `false`. In 
-      other words, a universe level unban will not invalidate a place level 
-      ban. The opposite also holds true.
+      Unbans will only take effect on bans with the same `ApplyToUniverse`
+      scope. For example, an unban with `ApplyToUniverse` set to `true` will not
+      invalidate a previous ban with `ApplyToUniverse` set to `false`. In other
+      words, a universe level unban will not invalidate a place level ban. The
+      opposite also holds true.
 
       This method invokes a HTTP call to backend services, which are throttled
       and may fail. If you are calling this API with multiple UserIds, this

@@ -270,21 +270,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: Studio.Auto-Recovery Path
-    summary: ''
-    description: ''
-    code_samples:
-    type: QDir
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Auto-Recovery
-    serialization:
-      can_load: true
-      can_save: true
   - name: Studio.Automatically trigger AI Code Completion
     summary: ''
     description: ''

@@ -15,14 +15,14 @@ navigation:
         path: /cloud/open-cloud/oauth2-sample
   - title: API Keys
     path: /cloud/open-cloud/api-keys
-  - heading: V2 Resources (Beta)
-  - title: Inventory
+  - heading: V2 Resource Guides
+  - title: User Inventories
     path: /cloud/open-cloud/inventory
-  - title: Instance
+  - title: Engine Instances
     path: /cloud/open-cloud/instance
   - title: Experience Notifications
     path: /cloud/open-cloud/experience-notifications
-  - heading: V1 Resources
+  - heading: V1 Resource Guides
   - title: Assets
     path: /cloud/open-cloud/usage-assets
   - title: Data Stores

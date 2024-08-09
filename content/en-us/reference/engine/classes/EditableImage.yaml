@@ -57,7 +57,6 @@ description: |
   that has a property overridden by a child `Class.EditableImage`, the editable
   image will be published as an image and the overridden property will be set to
   the new asset ID.
-
 code_samples: []
 inherits:
   - Instance

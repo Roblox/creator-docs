@@ -231,6 +231,34 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: Animator:LoadStreamAnimationV2
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: animation
+        type: TrackerStreamAnimation
+        default:
+        summary: ''
+      - name: player
+        type: Player
+        default: nil
+        summary: ''
+      - name: shouldLookupPlayer
+        type: bool
+        default: true
+        summary: ''
+      - name: shouldReplicate
+        type: bool
+        default: true
+        summary: ''
+    returns:
+      - type: AnimationStreamTrack
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: Animator:RegisterEvaluationParallelCallback
     summary: ''
     description: ''

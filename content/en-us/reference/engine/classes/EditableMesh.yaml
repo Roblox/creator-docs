@@ -51,7 +51,6 @@ description: |
   `Class.EditableMesh` currently has a limit of 60,000 vertices and 20,000
   triangles. Attempting to add too many vertices or triangles will cause an
   error.
-
 code_samples: []
 inherits:
   - DataModelMesh

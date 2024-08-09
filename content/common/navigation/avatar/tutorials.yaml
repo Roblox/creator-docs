@@ -12,10 +12,8 @@ navigation:
     path: /art/characters/creating
     navigation: /avatar/tutorials-bodies.yaml
   - heading: Use Cases
-  - title: Rigging a Humanoid Model
-    path: /art/modeling/rigging-a-humanoid-model
-  - title: Skinning a Humanoid Model
-    path: /art/modeling/skinning-a-humanoid-model
+  - title: Rigging and Caging an Existing Model
+    path: /art/accessories/rigging-and-caging-existing-models
   - title: Creating Basic Heads
     path: /art/characters/facial-animation/creating-basic-heads
   - title: Creating Face Accessories

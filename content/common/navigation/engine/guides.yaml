@@ -379,6 +379,8 @@ navigation:
         path: /ui/rich-text
       - title: Proximity Prompts
         path: /ui/proximity-prompts
+      - title: UI Drag Detectors
+        path: /ui/ui-drag-detectors
       - title: 3D Drag Detectors
         path: /ui/3D-drag-detectors
       - title: Text Filtering

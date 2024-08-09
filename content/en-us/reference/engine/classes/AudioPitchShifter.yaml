@@ -61,7 +61,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Array
+      - type: Objects
         summary: ''
     tags: []
     deprecation_message: ''

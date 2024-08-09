@@ -71,7 +71,8 @@ methods:
     returns:
       - type: void
         summary: ''
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -249,7 +250,8 @@ methods:
       - type: Array
         summary: |
           An array of strings which are the tags applied to the given object.
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Safe
@@ -284,7 +286,8 @@ methods:
       - type: bool
         summary: |
           Whether the instance has the tag.
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Safe
@@ -317,7 +320,8 @@ methods:
     returns:
       - type: void
         summary: ''
-    tags: []
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

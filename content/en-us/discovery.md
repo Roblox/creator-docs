@@ -39,6 +39,9 @@ The best way to get discovered via recommendations is to continue to invest in e
 On your experience overview page, use the **Daily Benchmarks** section to compare your experience metrics with similar games that your users also play:
 
 <img src="/assets/analytics/discovery/Daily-Benchmark-Graphs.png" alt="A series of graphs helping compare benchmarks with other experiences." />
+
+Your similar experience benchmarks are updated daily. Roblox does not use these benchmarks as a direct signal in the discovery algorithm. These benchmarks are designed to give you a point of comparison as you work on improving your engagement, monetization, and acquisition.
+
 <br />
 <h5>Frequently Asked Questions</h5>
 <br />
