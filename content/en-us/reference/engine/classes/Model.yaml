@@ -306,7 +306,7 @@ methods:
     returns:
       - type: CFrame
         summary: |
-          Orientation of the volume that contains all `Class.BasePart` children.
+          Center of the volume that contains all `Class.BasePart` children.
       - type: Vector3
         summary: |
           Size of the volume that contains all `Class.BasePart` children.
