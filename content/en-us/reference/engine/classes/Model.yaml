@@ -306,10 +306,10 @@ methods:
     returns:
       - type: CFrame
         summary: |
-          Center of the volume that contains all `Class.BasePart` children.
+          Center of the volume.
       - type: Vector3
         summary: |
-          Size of the volume that contains all `Class.BasePart` children.
+          Size of the volume.
     tags: []
     deprecation_message: ''
     security: None
