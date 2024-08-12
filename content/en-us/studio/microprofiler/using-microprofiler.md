@@ -1,80 +1,60 @@
 ---
-title: Using MicroProfiler
+title: MicroProfiler Walkthrough
 description: Explains how using the MicroProfiler can help you optimize portions of your experience.
 ---
 
-The [MicroProfiler](../../studio/microprofiler/index.md) is an optimization tool available in Roblox Studio that helps developers improve performance by visually representing unoptimized portions of their experience. This tutorial will showcase how to use the MicroProfiler to identify problematic segments of your experience and use it to find the cause of the poor performance.
+This walkthrough shows how to use the MicroProfiler to find a problematic aspect of an experience and identify the root cause. Download the experience, **Open from File** in Studio, and follow along.
 
-For a more hands-on look at this process, you can download the [tutorial project file](../../assets/optimization/microprofiler/RaycastSpam.rbxl) and follow along.
+<a href="../../assets/optimization/microprofiler/RaycastSpam.rbxl">
+  <Button variant="contained">Download the Experience</Button>
+</a>
 
-## Starting MicroProfiler
+<br />
 
-MicroProfiler isn't visible by default and is summoned by keystroke. You can summon it any time, but it's most useful when an experience is running.
+## Identifying the Issue
 
-1. Start by play testing your experience by pressing **Play** in the Home Menu.
+1. After you open the experience in Studio, start testing it with <kbd>F5</kbd> or the **Play** button.
 
-   <img src="../../assets/optimization/microprofiler/Tutorial-mpt1.png"
-   width="80%" />
+1. The frame rate feels decent, but not as smooth as it should be for an experience of this size and scope. Navigate to the **View** tab and click **Summary** under [Stats](../../studio/view-tab.md#diagnostic-stats).
 
-2. Summon MicroProfiler by pressing <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>). You can see the render time for each individual frame represented at the top by the individual vertical bars. The higher the bar, the longer that particular frame takes to render.
+   <img alt="Debug stats summary showing 45 FPS." src="../../assets/optimization/microprofiler/micro-tut-framerate.png" width="500px" />
 
-   <img src="../../assets/optimization/microprofiler/Tutorial-mpt3.png"
-   width="80%" />
+   Note that the frame rate is below 60 frames per second (FPS).
 
-## Pausing MicroProfiler
+1. Open the MicroProfiler by pressing <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>).
 
-MicroProfiler is constantly running, analyzing the render time for every frame. To see useful data, you need to pause MicroProfiler and analyze render information on a frame-by-frame basis. Press <kbd>Ctrl</kbd><kbd>P</kbd> to pause the MicroProfiler.
+   <img alt="The MicroProfiler after opening it." src="../../assets/optimization/microprofiler/micro-tut-bar-graph.png" width="500px" />
 
-<img src="../../assets/optimization/microprofiler/Tutorial-mpt5.png"
-   width="80%" />
+   Note that the frame times are **consistent**—the bars are roughly the same height—so whatever is causing the low frame rate is running every single frame as opposed to running occasionally and causing frame time spikes.
 
-Each bar represents one frame, with the vertical height proportional to how long it takes that frame to render. You can tell something is wrong by how high the bars are. In the top right you'll see a green section that represents the current screen space. If you hover over the bars, you can select an individual frame for closer inspection.
+1. Pause the MicroProfiler by pressing <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>). Pausing with the keyboard shortcut opens [detailed mode](./modes.md#detailed-mode).
 
-## Navigating MicroProfiler
+1. Click and drag to pan the graph. Note how one particular process in the worker threads seems to be using a lot of processing time compared to the main thread. Hover over `Class.RunService.Stepped` and note how long it's taking to render.
 
-On the left side of MicroProfiler, you'll see individual performance thread names. **Click** and **drag** down to find the largest horizontal category in that frame.
+   <img alt="Detailed mode with long labels for processes." src="../../assets/optimization/microprofiler/micro-tut-stepped.png" width="600px" />
 
-<img src="../../assets/optimization/microprofiler/Tutorial-mpt6.png"
-   width="80%" />
+1. Stacked bars in the timeline indicate a hierarchy of code, so keep hovering on lower and lower layers to try and identify the issue.
 
-The horizontal length signifies the time duration this frame takes to render. A shorter horizontal length typically indicates well-optimized code. The vertical height is a hierarchy that signifies layers of code.
+   <img alt="On-hover details for various processes, with LocalScript highlighted." src="../../assets/optimization/microprofiler/micro-tut-localscript.png" width="600px" />
 
-<img src="../../assets/optimization/microprofiler/Tutorial-mpt7.png"
-   width="80%" />
+   <img alt="On-hover details for various processes, with Raycast highlighted." src="../../assets/optimization/microprofiler/micro-tut-raycast-label.png" width="600px" />
 
-## Identifying the Problem
-
-Hovering your mouse over each section reveals information pertaining to that portion of code.
-
-1. Hover over `Class.RunService.Stepped` and notice it takes about 26 milliseconds to render.
-
-   <img src="../../assets/optimization/microprofiler/Tutorial-mpt8.png"
-   width="80%" />
-
-2. Hover over `Class.LocalScript` and notice that something is being called thousands of times.
-
-   <img src="../../assets/optimization/microprofiler/Tutorial-mpt9.png"
-   width="80%" />
-
-   Continue down the list and notice the `Raycast` label. This indicates that the problem might be related to raycasting.
-
-   <img src="../../assets/optimization/microprofiler/Tutorial-mpt13.png"
-   width="80%" />
+   Note the `LocalScript` label, which indicates the name of the script, and the `Raycast` label, which indicates that the problem might be related to raycasting.
 
 ## Creating Troubleshoot Labels
 
-Now that MicroProfiler has provided a starting point, it's time to troubleshoot and review the code.
+Now that the MicroProfiler has provided a starting point, you can troubleshoot the problematic code.
 
-1. Stop the play test and look at the `Class.LocalScript` file to search for the problem.
+1. Stop the play test and filter the Explorer window for `localscript` to find the file.
 
-   <img src="../../assets/optimization/microprofiler/Tutorial-mpt10.png"
-      width="80%" />
+   <img alt="A view of filtering in the Explorer window." src="../../assets/optimization/microprofiler/micro-tut-explorer-filter.png" width="400px" />
 
-   This portion of code appears to be the culprit for the experience's poor performance:
+   A search for `raycast` indicates that this portion of code is probably the culprit for the experience's poor performance:
 
    ```lua
+   local RAYS_PER_SECOND = 1500
+
    local function onStepped()
-   	debug.profilebegin("RaycastSpam")
 
    	for _ = 1, RAYS_PER_SECOND do
    		local startPosition = getRandomPosition()
@@ -87,25 +67,50 @@ Now that MicroProfiler has provided a starting point, it's time to troubleshoot 
          )
    	end
 
-   	debug.profileend()
+   end
+
+   RunService.Stepped:Connect(onStepped)
+   ```
+
+   Specifically, you can see that the code is casting 1,500 rays per second in random directions.
+
+1. To verify that this portion of code is causing the rendering delay, wrap the contents of the function with `Library.debug.profilebegin()` and `Library.debug.profileend()`:
+
+   ```lua
+   local function onStepped()
+
+      debug.profilebegin("Raycast Spam")
+
+      for _ = 1, RAYS_PER_SECOND do
+         local startPosition = getRandomPosition()
+         local endPosition = getRandomPosition()
+         local direction = endPosition - startPosition
+
+         Workspace:Raycast(
+            startPosition,
+            endPosition
+         )
+      end
+
+      debug.profileend()
+
    end
    ```
 
-   Looking in our `Class.LocalScript` in the `RenderStepped` event we see that there are rays being casted 1500 times per second. To make sure that this portion of code is indeed what's causing the rendering delay, give it a label that will highlight this portion of code when MicroProfiler is run.
+## Confirming and Fixing the Issue
 
-2. Create a label using the `Library.debug.profilebegin()` tag and call it `Raycast Spam`.
-3. Close the tag by using `Library.debug.profileend()`.
+1. Start testing the experience, and open the MicroProfiler again.
 
-   <img src="../../assets/optimization/microprofiler/Tutorial-mpt11.png"
-   width="80%" />
+1. Note how the MicroProfiler now shows the custom label, indicating that this function was indeed the root cause.
 
-## Confirming the Problem
+   <img alt="MicroProfiler detailed view with 'Raycast Spam' visible." src="../../assets/optimization/microprofiler/micro-tut-spam.png" width="500px" />
 
-If the large horizontal bars in MicroProfiler are wrapped in this tag you will know that you were successful in identifying the unoptimized code.
+1. Stop the play test.
 
-1. Playtest your experience.
-2. Pause MicroProfiler using <kbd>Ctrl</kbd><kbd>P</kbd>.
-3. **Click** and **drag** down to find the largest horizontal category in that frame.
-4. Look for the newly created `Raycast Spam` tag.
+1. Delete or comment out the `onStepped()` function and the `RunService.Stepped:Connect(onStepped)` connection.
 
-   <img src="../../assets/optimization/microprofiler/Tutorial-mpt12.png" width="80%" />
+1. Start testing the experience again, and check the debug stats summary again.
+
+   <img alt="Debug stats summary showing 60 FPS." src="../../assets/optimization/microprofiler/micro-tut-framerate2.png" width="500px" />
+
+   Note the huge improvement to frame rate and corresponding drop in frame times on the MicroProfiler graph.

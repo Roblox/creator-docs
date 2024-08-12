@@ -1,9 +1,9 @@
 ---
-title: Tag Table
-description: Tag Table is a list of tags for the MicroProfiler.
+title: Tag Reference
+description: A list of tags for the MicroProfiler.
 ---
 
-The following is a list of tags given by [MicroProfiler](../../studio/microprofiler/index.md), separated by type. Understanding these tags will help in determining the cause and identifying potential solutions for unoptimized code. The tables contain tag label, descriptions and performance advice for improving performance and optimizing your experience.
+The following is a list of common tags in the MicroProfiler, grouped by category. Understanding these tags can help you identify problematic code in your experience. The tables contain tag label, descriptions and performance advice for improving performance and optimizing your experience.
 
 ## AI/Navigation
 
@@ -89,7 +89,7 @@ The following is a list of tags given by [MicroProfiler](../../studio/microprofi
   <tr>
     <td>DeveloperTag_Sounds</td>
     <td>In-Memory Sounds: generally short sounds that are small enough to go in memory. Usually brief one-shot fx, not long-form music. </td>
-    <td>Use fewer short sounds</td>
+    <td>Use fewer short sounds.</td>
   </tr>
   <tr>
     <td>DeveloperTag_StreamingSounds</td>
@@ -215,15 +215,22 @@ The following is a list of tags given by [MicroProfiler](../../studio/microprofi
     <td>If there is a high cost that means there are a lot of elements. Perhaps use some larger meshes where a single mesh has more details as opposed to many small individual pieces.</td>
   </tr>
   <tr>
-    <td>Perform/Scene/ComputeLightingPerform</td>
+    <td>Perform/Scene/computeLightingPerform</td>
     <td>Computation of lighting near the camera.</td>
     <td>Manipulate the number of light sources or move the camera less to reduce the time it takes to recalculate lighting.</td>
   </tr>
   <tr>
-    <td>Perform/ Scene/ ComputeLightingPerform/UpdateLightGrid</td>
+    <td>Perform/Scene/computeLightingPerform/LightGridCPU</td>
     <td>Updates the voxel lighting. Lights are only rendered in Voxel Lighting mode, but occupancy and sky light are computed in all lighting modes.</td>
     <td>If updating chunk occupancy takes too long, consider using lower resolution geometry, or reducing the number of parts. If the other sub-markers take too long, consider reducing the number of lights. Consider using non-shadow casting geometry for objects that move and invalidate the occupancy.</td>
   </tr>
+{/*
+  <tr>
+    <td>Perform/Scene/computeLightingPerform/ShadowMapSystem</td>
+    <td>-- TODO</td>
+    <td>-- TODO</td>
+  </tr>
+*/}
   <tr>
   </tr>
   <tr>
@@ -235,6 +242,21 @@ The following is a list of tags given by [MicroProfiler](../../studio/microprofi
     <td>Perform/Scene/UI</td>
     <td>UI rendering. In Id_Screen, there is a label with the number of batches, materials and triangles used.</td>
     <td>Reduce the number of visible UI elements. Using `CanvasGroups` may help at the expense of increased memory use.</td>
+  </tr>
+  <tr>
+    <td>Id_Opaque</td>
+    <td>Parts in the scene with a transparency value of 0.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Id_Transparent</td>
+    <td>Parts in the scene with a transparency value other than 0.</td>
+    <td>Reduce the use of partial transparency (values other than 0 and 1).</td>
+  </tr>
+  <tr>
+    <td>Id_Decal</td>
+    <td>Decals in the scene.</td>
+    <td></td>
   </tr>
   <tr>
     <td>Perform/Present</td>
