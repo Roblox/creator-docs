@@ -304,10 +304,12 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: CFrame
         summary: |
-          A `Datatype.CFrame` representing the orientation of the volume
-          followed by a `Datatype.Vector3` representing the size of the volume.
+          Orientation of the volume that contains all `Class.BasePart` children.
+      - type: Vector3
+        summary: |
+          Size of the volume that contains all `Class.BasePart` children.
     tags: []
     deprecation_message: ''
     security: None
