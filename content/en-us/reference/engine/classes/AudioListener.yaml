@@ -58,5 +58,17 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: AudioListener:GetInteractingEmitters
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Objects
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
 events: []
 callbacks: []

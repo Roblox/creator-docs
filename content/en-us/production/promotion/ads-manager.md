@@ -634,6 +634,10 @@ You can use the following status tables to understand what each status means.
 
 ### Credit and Debit Cards
 
+<Alert severity = 'warning'>
+For first-time credit card users, 5.00 USD will be charged upon campaign submission and used toward your first bill. Any unused balance will be refunded.
+</Alert>
+
 There are two points at which an advertiser gets charged on Roblox when using a credit or debit card. The first is whenever an advertiser reaches their payment threshold, and the second is at the first of the month if the payment threshold is not reached. Ad spend using debit and credit cards has a daily limit of $300 USD.
 
 Roblox advertisers have a payment threshold of $100 USD. Whenever an advertiser account accrues a balance of $100 through advertising on Roblox, their payment method on file is charged. If the payment threshold is not reached by the end of the month, the remaining outstanding balance is paid instead.

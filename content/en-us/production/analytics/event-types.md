@@ -3,6 +3,8 @@ title: Event Types
 description: Overview of using event types to track user sources, sinks and milestones in your experience.
 ---
 
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/NFLP-FVv834" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> <br />
+
 Event types help you identify opportunities to grow and monetize your experience. They allow you to **integrate event tracking in your experience** and visualize your in-experience economy and player usage patterns on the Analytics dashboard
 
 Once you begin tracking these events from your experience using the `Class.AnalyticsService`, you'll unlock new [Economy](./economy-events.md) and [Funnel](./funnel-events.md) dashboards under Analytics on the Creator Dashboard. You can use these dashboards to identify growth opportunities and segment users by age, gender, platform, OS and custom fields. All of these features are **free to use**.
