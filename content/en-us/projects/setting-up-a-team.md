@@ -61,7 +61,7 @@ Every team is different, and every project has different targets for complexity,
 
 Roblox provides multiple ways of hiring talent from the developer community. You can find team members, such as programmers and artists, as well as specialized roles such as community managers on the [Talent Hub](https://talent.roblox.com/). On this hiring board, you can post jobs and users can search for others looking for work. You can recruit team members for contract work or full time positions. Some developers will also network on the [DevForum](https://devforum.roblox.com/), but this is more informal and less specific to hiring.
 
-Studios new to working on Roblox will benefit from hiring individuals with **platform experience**. Their knowledge in both development and Roblox culture can provide guidance at every stage. Some community members may request payment in Robux using [group payouts](../projects/groups.md#managing-payouts) through [Developer Exchange](https://create.roblox.com/devex).
+Studios new to working on Roblox will benefit from hiring individuals with **platform experience**. Their knowledge in both development and Roblox culture can provide guidance at every stage. Some community members may request payment in Robux using [group payouts](../projects/groups.md#managing-payouts) through [Developer Exchange](https://create.roblox.com/dashboard/devex).
 
 ## Example Job Postings
 

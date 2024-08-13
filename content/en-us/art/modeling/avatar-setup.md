@@ -102,7 +102,7 @@ The full requirements for the input body model are as follows:
      </GridContainer>
 
 3. **\_Geo affix** - The asset name must end with a "\_Geo".
-4. **Within triangle budget** - The total body mesh resolution must be within 20k triangles. Use the following guidance to ensure each part doesn't exceed expected polycounts:
+4. **Within triangle budget** - The total body mesh resolution must be within 10,742 triangles. Use the following guidance to ensure each part doesn't exceed expected polycounts:
 
    <table>
     <thead>
@@ -140,6 +140,7 @@ The full requirements for the input body model are as follows:
       </tr>
     </tbody>
     </table>
+   - The setup tool segments and adds [caps](../characters/specifications.md#body-parts) to the character limbs which may add to your total polycount. If your character model is close to the polycount limit, the additional geometry may cause validation failures.
 
 5. **Humanoid shape** - The body must follow a general humanoid shape, with two arms, two legs, a torso, and a head.
 6. **A-pose** - The body should form an upright A-pose.
@@ -152,7 +153,7 @@ The full requirements for the input body model are as follows:
 10. **No accessories** - Do not include accessories, including face accessories, like hair, eyebrows, beards, and eyelashes.
 11. **Distinct neck area** - Keep the neck distinct and not merged with the shoulders or upper torso.
 12. **Includes texture** - The input model should include a base textureID or SurfaceAppearance object ([PBR textures](../modeling/surface-appearance.md)).
-13. **Follows Marketplace and Community Policy** - The model must conform to Roblox's [Marketplace Policy](../marketplace/marketplace-policy.md) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+13. **Follows Marketplace and Community Policy** - The model must conform to Roblox's [Marketplace Policy](../../marketplace/marketplace-policy.md) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
 #### Examples of Non-Supported Models
 
@@ -307,6 +308,6 @@ The upload option opens the following prompt which goes through additional valid
 
 For additional resources on the publishing process and Marketplace, see the following:
 
-- [Publishing to the Marketplace](../marketplace/publishing-to-marketplace.md)
-- [Marketplace Fees and Commissions](../marketplace/marketplace-fees-and-commissions.md)
-- [Marketplace Policy](../marketplace/marketplace-policy.md)
+- [Publishing to the Marketplace](../../marketplace/publishing-to-marketplace.md)
+- [Marketplace Fees and Commissions](../../marketplace/marketplace-fees-and-commissions.md)
+- [Marketplace Policy](../../marketplace/marketplace-policy.md)

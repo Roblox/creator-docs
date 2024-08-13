@@ -56,7 +56,7 @@ in the `Class.Lighting` service or
 - Simulate a camera viewing a bright light and exaggerate its glow ([bloom](../environment/post-processing-effects.md#bloom)).
 - Apply a Gaussian [blur](../environment/post-processing-effects.md#blur) to the entirety of your experience or add a blur to parts of your experience that aren't in focus ([depth‑of‑field](../environment/post-processing-effects.md#depth-of-field)).
 - Enhance an environment's appearance to create a specific mood through hue ([color correction](../environment/post-processing-effects.md#color-correction)).
-- Render a halo of light that moves with the sun ([sun rays](/environment/post-processing-effects.md#sun-rays)).
+- Render a halo of light that moves with the sun ([sun rays](../environment/post-processing-effects.md#sun-rays)).
 
 <figure>
 <img src="../assets/lighting-and-effects/post-processing/DepthOfFieldEffect-With.jpg" width="800" alt="Landscape with depth-of-field effect applied, simulating distance blur" />

@@ -22,7 +22,7 @@ Once verification is complete, Roblox discards any personal data from your docum
 
 To register as a rights owner or their authorized representative:
 
-1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard).
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 1. In the left-hand navigation, select **Rights Manager**. The Rights Manager landing page displays.
 
    <img src="../../assets/creator-dashboard/Rights-Manager-Navigation.png" width="30%" />

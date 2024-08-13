@@ -45,7 +45,7 @@ Some key details include:
 - You retrieve services with the global variable `Class.DataModel|game`, a reference to the root of the data model.
 - Roblox doesn't make guarantees around loading order (and [instance streaming](../workspace/streaming.md) further complicates what is and isn't loaded at any given time), so the use of `Class.Instance:WaitForChild()` is an important safety measure.
 
-Rather than comparing [standard libraries](../reference/engine/libraries), [global functions and variables](../reference/engine/globals), or third-party libraries, a big part of Roblox development is identifying which of the many, many services can help you add the desired functionality to your experiences. In the example above, instead of using a standard I/O library to write to disk, you use [cloud services](#cloud-services) to store data.
+Rather than comparing [standard libraries](/reference/engine/libraries), [global functions and variables](/reference/engine/globals), or third-party libraries, a big part of Roblox development is identifying which of the many, many services can help you add the desired functionality to your experiences. In the example above, instead of using a standard I/O library to write to disk, you use [cloud services](#cloud-services) to store data.
 
 ## Container Services
 

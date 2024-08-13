@@ -42,7 +42,7 @@ end)
 ```
 
 <Alert severity = 'info'>
-The `Class.Instance.Name` of the `Class.Player` object is the name of the user. If you need a unique reference to a user, such as to save information about them in a [data store](../cloud-services/data-stores), use their `Class.Player.UserId` instead of their `Class.Player.Name` because users can't change their `UserId` even though they can change their Username and Display Name.
+The `Class.Instance.Name` of the `Class.Player` object is the name of the user. If you need a unique reference to a user, such as to save information about them in a [data store](../cloud-services/data-stores/index.md), use their `Class.Player.UserId` instead of their `Class.Player.Name` because users can't change their `UserId` even though they can change their Username and Display Name.
 </Alert>
 
 ### User Leaving

@@ -217,7 +217,7 @@ The **Restart Servers for Updates** option is the best choice for most updates. 
 - Stops matchmaking to servers running the old version of the experience. Servers running the latest version are unaffected.
 - Starts replacement servers.
 - Shuts down old servers as their replacements become ready.
-- Prompts players to rejoin the new version of the experience. If they choose to rejoin, all players on an existing server connect to the same replacement server.
+- Automatically teleports players to rejoin the new version of the experience. All players on an existing server connect to the same replacement server.
 
 Depending on the number of servers to replace, this process can take up to six minutes, although most experiences update in less than one minute.
 
@@ -233,10 +233,10 @@ To restart all servers for updates:
 </TabItem>
 <TabItem label="Shut Down All Servers">
 
-The **Shut Down All Servers** option immediately shuts down all servers and removes players from the experience. This option is highly disruptive and, if kicked players rejoin the experience, matchmaking does not keep them together. As such, this option should be reserved for after you've fixed a breaking bug or in situations where you don't want players on the older version for even a short duration.
+The **Shut Down All Servers** option performs the same process as **Restart Servers for Updates**, except that it will apply to **all** servers rather than those running old versions of the experience. This option is only recommended if you have a process for updating your experiences that does not involve publishing new place versions.
 
 <Alert severity="info">
-A comparable option is to make your experience private, which shuts down its servers just as quickly. This option has the added benefit of preventing players from rejoining the experience while you fix an issue.
+Please note that users will automatically reconnect after the servers have shut down. If you would like to completely shut down an experience and not allow players to reconnect (for example, to fix a critical bug causing data loss), you'll need to make the experience private.
 </Alert>
 
 To shut down all servers:

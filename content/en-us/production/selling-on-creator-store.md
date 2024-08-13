@@ -48,7 +48,7 @@ Transactions between any individual customer and seller are **capped** per month
 
 ### For Assets
 
-Every asset that you sell on the Creator Store must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and [Digital Millennium Copyright Act](dmca-guidelines.md) (DMCA). If any asset breaks these rules, the asset and your account may be subject to moderation.
+Every asset that you sell on the Creator Store must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and [Digital Millennium Copyright Act](./publishing/dmca-guidelines.md) (DMCA). If any asset breaks these rules, the asset and your account may be subject to moderation.
 
 In addition, you can only sell plugins that you own from an **individual** user account. Group-owned assets are ineligible. If you want to sell a group-owned asset, consider re‑uploading them under individual ownership.
 
