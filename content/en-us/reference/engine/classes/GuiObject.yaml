@@ -338,9 +338,8 @@ properties:
     tags:
       - Deprecated
     deprecation_message: |
-      This property is deprecated as it does not work with any input types
-      other than a mouse. Use `Class.UIDragDetector` instead, as it supports
-      more input types and can be better customized.
+      This property is deprecated. Use `Class.UIDragDetector` instead, as it
+      supports more input types and can be better customized.
     security:
       read: None
       write: None
@@ -1137,9 +1136,8 @@ events:
     tags:
       - Deprecated
     deprecation_message: |
-      This event is deprecated as it does not work with any input types
-      other than a mouse. Use `Class.UIDragDetector` instead, as it supports
-      more input types and can be better customized.
+      This property is deprecated. Use `Class.UIDragDetector` instead, as it
+      supports more input types and can be better customized.
     security: None
     thread_safety: Unsafe
   - name: GuiObject.DragStopped
@@ -1169,9 +1167,8 @@ events:
     tags:
       - Deprecated
     deprecation_message: |
-      This event is deprecated as it does not work with any input types
-      other than a mouse. Use `Class.UIDragDetector` instead, as it supports
-      more input types and can be better customized.
+      This property is deprecated. Use `Class.UIDragDetector` instead, as it
+      supports more input types and can be better customized.
     security: None
     thread_safety: Unsafe
   - name: GuiObject.InputBegan
