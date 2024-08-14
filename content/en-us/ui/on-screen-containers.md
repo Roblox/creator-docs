@@ -11,18 +11,22 @@ are stored and changed on the client.
 <img src="../assets/ui/container-frames/Frame-Example.jpg" width="800" />
 
 <Alert severity="info">
-    For UI container objects that hold `Class.GuiObject|GuiObjects` that you want to display within an experience, such as on the face of a part, see <a href="../ui/in-experience-containers.md">In-Experience UI Containers</a>.
+For UI container objects that hold `Class.GuiObject|GuiObjects` that you want to display within an experience, such as on the face of a part, see <a href="../ui/in-experience-containers.md">In-Experience UI Containers</a>.
 </Alert>
 
 ## StarterGui
 
-The `Class.StarterGui` service is a container object that holds `Class.GuiObject|GuiObjects`, such as a [`Class.ScreenGui`](#screengui) and its children `Class.GuiObject|GuiObjects`. This service initializes on-screen UI for new users joining an experience.
+The `Class.StarterGui` service is a container object that holds `Class.GuiObject|GuiObjects`, such as a `Class.ScreenGui` and its children `Class.GuiObject|GuiObjects`. This service initializes on-screen UI for new users joining an experience.
 You do not need to create a `Class.StarterGui` object as it is always present in the **Explorer** window.
 
 <img src="../assets/studio/explorer/StarterGui.png" width="320" />
 
+<Alert severity="success">
+By default, `Class.GuiObject|GuiObjects` inside a `Class.ScreenGui` within `Class.StarterGui` appear as an overlay of the [3D&nbsp;viewport](../studio/ui-overview.md#3d-viewport), simulating their appearance and position in a running experience. To hide all such screen overlays, toggle off **GUI&nbsp;overlay** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport, or toggle off [UI&nbsp;Visibility](../studio/view-tab.md#ui-visibility) from the [View](../studio/view-tab.md) tab.
+</Alert>
+
 <Alert severity="info">
-    If `Class.Players.CharacterAutoLoads` is disabled, the `Class.GuiObject|GuiObjects` held in `Class.StarterGui` will not be initialized until `Class.Player:LoadCharacter()` is called.
+If `Class.Players.CharacterAutoLoads` is disabled, the `Class.GuiObject|GuiObjects` held in `Class.StarterGui` will not be initialized until `Class.Player:LoadCharacter()` is called.
 </Alert>
 
 ## PlayerGui

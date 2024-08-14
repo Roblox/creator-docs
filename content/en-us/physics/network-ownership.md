@@ -7,49 +7,6 @@ In order to support complex physical mechanisms while also aiming for a smooth a
 
 Clients experience **more responsive** physics interactions with parts that they own, since there's no latency from communication with the server. Network ownership also improves server performance because physics computations can be split up among individual clients, allowing the server to prioritize other tasks.
 
-## Visualizing Ownership
-
-To assist with network ownership debugging, Studio can render colored outlines around objects when playtesting.
-
-<video src="../assets/physics/network-ownership/Visualization-Demo.mp4" controls width="90%" alt="Video showing part ownership indicated through colored outlines"></video>
-
-<table>
-<thead>
-	<tr>
-		<th colspan="2">Outline Color</th>
-		<th>Description</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td><ColorSwatch value="rgb(30,100,50)" /></td>
-		<td>(green)</td>
-		<td>Your client owns the part and is simulating it.</td>
-	</tr>
-	<tr>
-		<td><ColorSwatch value="rgb(160,0,0)" /></td>
-		<td>(red)</td>
-		<td>The part is within a "buffer zone" where your client is simulating it but it's still owned by something else. Your client might get ownership after this, or it may reject.</td>
-	</tr>
-	<tr>
-		<td><ColorSwatch value="rgb(220,220,220)" /><br /><ColorSwatch value="rgb(140,140,140)" /></td>
-		<td>(white/grey)</td>
-		<td>Server or another client owns the part through either automatic network ownership or from explicit assignment through `Class.BasePart:SetNetworkOwner()|part:SetNetworkOwner()`.</td>
-	</tr>
-</tbody>
-</table>
-
-<Alert severity="info">
-Note that in a [multi-client simulation](../studio/testing-modes.md#multi-client-simulation), each client is assigned a unique color to indicate their ownership; this is mirrored in the [Server](../studio/testing-modes.md#clientserver-toggle) view, helping you determine which client owns which part(s) at any given time.
-</Alert>
-
-To enable ownership visualization:
-
-1. Open **File** &rarr; **Studio Settings**.
-2. In the **Physics** tab, enable **Are&nbsp;Owners&nbsp;Shown**.
-
-   <img src="../assets/physics/network-ownership/Settings-Are-Owners-Shown.png" width="600" alt="Studio Settings window showing Are Owners Shown option" />
-
 ## BasePart Ownership
 
 By default, the server retains ownership of any `Class.BasePart`. Additionally, the server **always** owns anchored `Class.BasePart|BaseParts` and you cannot manually change their ownership.
@@ -102,6 +59,50 @@ end)
 <Alert severity="warning">
 For smooth performance and responsive behavior, ensure you also assign ownership of any loose `Class.BasePart|BaseParts` on top of a vehicle to the same client that controls the vehicle.
 </Alert>
+
+## Visualizing Ownership
+
+To assist with network ownership debugging, Studio can render colored outlines around objects when playtesting.
+
+<video src="../assets/physics/network-ownership/Visualization-Demo.mp4" controls width="90%" alt="Video showing part ownership indicated through colored outlines"></video>
+
+<table>
+<thead>
+	<tr>
+		<th colspan="2">Outline Color</th>
+		<th>Description</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td><ColorSwatch value="rgb(30,100,50)" /></td>
+		<td>(green)</td>
+		<td>Your client owns the part and is simulating it.</td>
+	</tr>
+	<tr>
+		<td><ColorSwatch value="rgb(160,0,0)" /></td>
+		<td>(red)</td>
+		<td>The part is within a "buffer zone" where your client is simulating it but it's still owned by something else. Your client might get ownership after this, or it may reject.</td>
+	</tr>
+	<tr>
+		<td><ColorSwatch value="rgb(220,220,220)" /><br /><ColorSwatch value="rgb(140,140,140)" /></td>
+		<td>(white/grey)</td>
+		<td>Server or another client owns the part through either automatic network ownership or from explicit assignment through `Class.BasePart:SetNetworkOwner()|part:SetNetworkOwner()`.</td>
+	</tr>
+</tbody>
+</table>
+
+<Alert severity="info">
+Note that in a [multi-client simulation](../studio/testing-modes.md#multi-client-simulation), each client is assigned a unique color to indicate their ownership; this is mirrored in the [Server](../studio/testing-modes.md#clientserver-toggle) view, helping you determine which client owns which part(s) at any given time.
+</Alert>
+
+To enable network ownership visualization:
+
+1. Click on the **visualization options** button in the upper-right corner of the 3D viewport.
+
+   <img src="../assets/studio/general/Visualization-Options.png" width="780" alt="A close up view of the 3D viewport with the Visualization Options button indicated in the upper-right corner." />
+
+2. In the dropdown menu, toggle on **Network owners**.
 
 ## Security Concerns
 

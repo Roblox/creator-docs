@@ -71,22 +71,14 @@ Each part has a variety of properties that you can customize through the [Proper
 
 The following are commonly utilized properties:
 
-- `Class.BasePart|Anchored` controls if
-  physics affects the position of the part. When this property is set to true, the part
-  never changes position due to gravity or any other force.
-  You should anchor most parts in your experience, otherwise gravity and physics
-  affect your parts as soon as the experience begins, and this might lead to
-  unwanted changes to your scenery and props.
-- `Class.BasePart|CanCollide` controls
-  whether or not a part can collide with other parts. When this property is
-  set to true, the part is impenetrable and the physics engine accounts for it within your
-  experience.
-  Conversely, when this property is set to false, the part can pass through anything,
-  and the physics engine does **not** account for it.
-- `Class.BasePart|Transparency` sets
-  a part's visibility to any value between the default value of 0 (fully visible) and 1 (fully transparent).
-  If you have many partially transparent parts, they can slow down performance. To
-  alleviate this, merge them using <a href="../parts/solid-modeling.md">solid modeling</a>.
+- `Class.BasePart|Anchored` controls if physics affects the position of the part. When this property is set to true, the part never changes position due to gravity or any other force. You should anchor most parts in your experience or gravity and physics will affect your parts as soon as the experience runs.
+
+  <Alert severity="success">
+  To view lighted outlines around the base of anchored parts in order to visualize which parts cannot move under gravity or physics, toggle on **Anchored&nbsp;parts** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+  </Alert>
+
+- `Class.BasePart|CanCollide` controls whether or not a part can collide with other parts. When this property is set to true, the part is impenetrable and the physics engine accounts for it within your experience. Conversely, when this property is set to false, the part can pass through anything, and the physics engine does **not** account for it.
+- `Class.BasePart|Transparency` sets a part's visibility to any value between the default value of 0 (fully visible) and 1 (fully transparent). If you have many partially transparent parts, they can slow down performance. To alleviate this, merge them using [solid modeling](../parts/solid-modeling.md).
 
 ## Inserting Parts
 

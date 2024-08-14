@@ -303,10 +303,7 @@ What you learn on the Creator Dashboard can give you important insights into how
 To publish your experience for the first time:
 
 1. Upload your experience to the cloud.
-   1. In the menu bar, click **File**, then select **Publish to Roblox**. The **Publish Game** window displays.
-
-      <img src="../../assets/studio/general/File-Menu-Publish-to-Roblox.png" alt="Studio's File menu with the Publish to Roblox menu item highlighted." width="45%" />
-
+   1. In the menu bar, click **File**, then select **Publish to Roblox**.
    1. In the **Publish Game** window, fill out all applicable fields.
       1. In the **Name** field, provide a name for your experience.
       1. In the **Description** field, provide a summary of what a player can expect from the experience.
