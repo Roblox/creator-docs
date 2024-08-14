@@ -9,20 +9,17 @@ description: Pathfinding is the process of moving a character along a logical pa
 
 ## Navigation Visualization
 
-To assist with pathfinding layout and debugging, Studio can render a **navigation mesh**. Colored areas show where a character might walk or swim, while non-colored areas are blocked. The small arrows indicate areas that a character will attempt to reach by jumping.
+To assist with pathfinding layout and debugging, Studio can render a navigation mesh and [modifier](#pathfinding-modifiers) labels. To enable them, toggle on **Navigation&nbsp;mesh** and **Pathfinding&nbsp;modifiers** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 
-<img src="../assets/avatar/pathfinding/Navigation-Mesh.jpg"
-    width="800" alt="Navigation mesh showing in Studio" />
+<img src="../assets/studio/general/Visualization-Options.png" width="780" alt="A close up view of the 3D viewport with the Visualization Options button indicated in the upper-right corner." />
 
-In addition, Studio can render **navigation labels** that indicate specific materials and region labels that are taken into consideration when using [pathfinding modifiers](#pathfinding-modifiers), as well as link point labels assigned to [pathfinding links](#pathfinding-links).
+With **Navigation mesh** enabled, colored areas show where a character might walk or swim, while non-colored areas are blocked. The small arrows indicate areas that a character will attempt to reach by jumping, assuming you set `AgentCanJump` to `true` when [creating the path](#creating-paths).
 
-<img src="../assets/avatar/pathfinding/Navigation-Labels.jpg"
-    width="800" alt="Navigation labels showing on navigation mesh" />
+<img src="../assets/avatar/pathfinding/Navigation-Mesh.jpg" width="800" alt="Navigation mesh showing in Studio" />
 
-To enable navigation visualization:
+With **Pathfinding modifiers** enabled, text labels indicate specific materials and regions that are taken into consideration when using [pathfinding modifiers](#pathfinding-modifiers).
 
-1. Open **File** &rarr; **Studio Settings**.
-1. In the **Studio** tab, within the **Visualization** section, enable **Show&nbsp;Navigation&nbsp;Mesh** and, optionally, **Show&nbsp;Navigation&nbsp;Labels**.
+<img src="../assets/avatar/pathfinding/Navigation-Labels.jpg" width="800" alt="Navigation labels showing on navigation mesh" />
 
 ## Creating Paths
 
@@ -47,37 +44,37 @@ local path = PathfindingService:CreatePath()
 </thead>
 <tbody>
    <tr>
-     <td>**AgentRadius**</td>
+     <td>`AgentRadius`</td>
      <td>Agent radius, in studs. Useful for determining the minimum separation from obstacles.</td>
      <td>integer</td>
      <td>`2`</td>
    </tr>
    <tr>
-     <td>**AgentHeight**</td>
+     <td>`AgentHeight`</td>
      <td>Agent height, in studs. Empty space smaller than this value, like the space under stairs, will be marked as non-traversable.</td>
      <td>integer</td>
      <td>`5`</td>
    </tr>
    <tr>
-     <td>**AgentCanJump**</td>
+     <td>`AgentCanJump`</td>
      <td>Determines whether jumping during pathfinding is allowed.</td>
      <td>boolean</td>
      <td>`true`</td>
    </tr>
 	 <tr>
-     <td>**AgentCanClimb**</td>
+     <td>`AgentCanClimb`</td>
      <td>Determines whether climbing `Class.TrussPart|TrussParts` during pathfinding is allowed.</td>
      <td>boolean</td>
      <td>`false`</td>
    </tr>
    <tr>
-     <td>**WaypointSpacing**</td>
+     <td>`WaypointSpacing`</td>
      <td>Spacing between intermediate waypoints in path. If set to `Library.math.huge`, there will be no intermediate waypoints.</td>
      <td>number</td>
      <td>`4`</td>
    </tr>
    <tr>
-     <td>**Costs**</td>
+     <td>`Costs`</td>
      <td>Table of materials or defined `Class.PathfindingModifier|PathfindingModifiers` and their cost for traversal. Useful for making the agent prefer certain materials/regions over others. See [modifiers](#pathfinding-modifiers) for details.</td>
      <td>table</td>
      <td>`nil`</td>
@@ -464,6 +461,7 @@ Using the island example from above, you can make the agent use a boat instead o
 
 To create a `Class.PathfindingLink` using this example:
 
+1. <Chip label="optional" size="small" variant="outlined" color="primary" /> To assist with visualization and debugging, toggle on **Pathfinding&nbsp;links** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 1. Create two `Class.Attachment|Attachments`, one on the boat's seat and one near the boat's landing point.
 
    <img src="../assets/avatar/pathfinding/PathfindingLink-Attachments.jpg" width="750" alt="Attachments created for pathfinding link's start and end" />

@@ -118,16 +118,9 @@ In addition to situations outlined in [sleep‑checking](#sleep-checking) and [s
 
 ## Debugging Visualization
 
-During playtesting, you can visualize assembly sleep states. To enable this option:
+During playtesting, you can visualize assembly sleep states by toggling on **Awake&nbsp;parts** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 
-1. Open the settings window through **File** &rang; **Studio Settings**.
-2. From the **Physics** tab, enable **Allow Sleep**.
-
-   <img src="../assets/studio/general/Studio-Settings-Physics-Allow-Sleep.png" width="760" alt="Studio Settings window showing the Physics tab selected and the Allow Sleep option toggled on." />
-
-3. Also from the **Physics** tab, enable **Are Awake Parts Highlighted**.
-
-   <img src="../assets/studio/general/Studio-Settings-Physics-Are-Awake-Parts-Highlighted.png" width="760" alt="Studio Settings window showing the Physics tab selected and the Are Awake Parts Highlighted option toggled on." />
+<img src="../assets/studio/general/Visualization-Options.png" width="780" alt="A close up view of the 3D viewport with the Visualization Options button indicated in the upper-right corner." />
 
 Once enabled, simulated parts will be outlined by their current sleep state, with [awake](#awake) parts outlined in red, [sleep‑checking](#sleep-checking) parts outlined in orange, and [sleeping](#sleeping) parts un‑outlined.
 

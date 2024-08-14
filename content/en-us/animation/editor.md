@@ -455,69 +455,63 @@ the **Looping** button.
 
 ## Setting a Priority
 
-An animation's **priority** dictates when it will play in an
+An animation's **priority** (`Enum.AnimationPriority`) dictates when it will play in an
 experience. For example, if you play an animation with a higher priority
 than another animation that's already playing, the new animation will
 override the old. For example, a "jump" animation should take priority over an "idle" animation so that a character doesn't perform both at the same time.
 
 Roblox uses seven levels of priority, ordered here from highest to lowest:
 
+<Grid container spacing={2} alignItems="center">
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Highest.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11}>
+	**Action4**
+	</Grid>
+</Grid>
+<Grid container spacing={2} alignItems="center">
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Higher.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11}>
+	**Action3**
+	</Grid>
+</Grid>
+<Grid container spacing={2} alignItems="center">
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-High.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11}>
+	**Action2**
+	</Grid>
+</Grid>
+<Grid container spacing={2} alignItems="center">
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Neutral.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11}>
+	**Action**
+	</Grid>
+</Grid>
+<Grid container spacing={2} alignItems="center">
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Low.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11}>
+	**Movement**
+	</Grid>
+</Grid>
+<Grid container spacing={2} alignItems="center">
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Lower.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11}>
+	**Idle**
+	</Grid>
+</Grid>
+<Grid container spacing={2} alignItems="center">
+	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Lowest.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item xs={10} sm={11} md={11} lg={11}>
+	**Core**
+	</Grid>
+</Grid>
 <br />
-<Grid container spacing={0} alignItems="center">
-	<Grid item xs={1}>
-		<center><img src="../assets/misc/Arrow-Highest.png" width="40" /></center>
-	</Grid>
-	<Grid item xs={11}>
-		<p>**Action4**</p>
-	</Grid>
-	<Grid item xs={1}>
-		<center><img src="../assets/misc/Arrow-Higher.png" width="40" /></center>
-	</Grid>
-	<Grid item xs={11}>
-		<p>**Action3**</p>
-	</Grid>
-	<Grid item xs={1}>
-		<center><img src="../assets/misc/Arrow-High.png" width="40" /></center>
-	</Grid>
-	<Grid item xs={11}>
-		<p>**Action2**</p>
-	</Grid>
-	<Grid item xs={1}>
-		<center><img src="../assets/misc/Arrow-Neutral.png" width="40" /></center>
-	</Grid>
-	<Grid item xs={11}>
-		<p>**Action**</p>
-	</Grid>
-	<Grid item xs={1}>
-		<center><img src="../assets/misc/Arrow-Low.png" width="40" /></center>
-	</Grid>
-	<Grid item xs={11}>
-		<p>**Movement**</p>
-	</Grid>
-	<Grid item xs={1}>
-		<center><img src="../assets/misc/Arrow-Lower.png" width="40" /></center>
-	</Grid>
-	<Grid item xs={11}>
-		<p>**Idle**</p>
-	</Grid>
-	<Grid item xs={1}>
-		<center><img src="../assets/misc/Arrow-Lowest.png" width="40" /></center>
-	</Grid>
-	<Grid item xs={11}>
-		<p>**Core**</p>
-	</Grid>
-</Grid><br />
 
 To set an animation to a different priority:
 
 1. Navigate to the [Media and Playback Controls](#media-and-playback-controls)
    and click the **&ctdot;** button. A
    contextual menu displays.
-
-   <img src="../assets/animation/animation-editor/Controls-File-Menu.png"
-   width="330" />
-
-2. Hover over **Set Animation Priority**, then choose your desired
+1. Hover over **Set Animation Priority**, then choose your desired
    priority setting.
 
 ## Saving an Animation

@@ -329,9 +329,9 @@ end
 
 ## Mesh and Solid Model Collisions
 
-`Class.MeshPart` and `Class.PartOperation` (parts joined by solid modeling) are subclasses of `Class.BasePart`, so meshes and solid modeled parts inherit the same [collision events](#collision-events) and [collision filtering](#collision-filtering) options as regular parts. However, since meshes and solid modeled parts usually have more complex geometries, they have a distinctive `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` property which determines how precisely the physical bounds align with the visual representation for collision handling.
+`Class.MeshPart` and `Class.PartOperation` (parts joined by [solid modeling](../parts/solid-modeling.md)) are subclasses of `Class.BasePart`, so meshes and solid modeled parts inherit the same [collision events](#collision-events) and [collision filtering](#collision-filtering) options as regular parts. However, since meshes and solid modeled parts usually have more complex geometries, they have a distinctive `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` property which determines how precisely the physical bounds align with the visual representation for collision handling.
 
-The collision fidelity property has the following options, in order of fidelity and performance impact from lowest to highest:
+The `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` property has the following options, in order of fidelity and performance impact from lowest to highest:
 
 - **Box** — Creates a bounding collision box, ideal for small or non‑interactive objects.
 - **Hull** — Generates a convex hull, suitable for objects with less pronounced indentations or cavities.
@@ -356,8 +356,8 @@ The collision fidelity property has the following options, in order of fidelity 
   </TabItem>
 </Tabs>
 
-<Alert severity="info">
-To visualize collision fidelity in Studio, open **File** > **Studio Settings** > **Studio** > **Visualization**, then enable **Show Decomposition Geometry**.
+<Alert severity="success">
+To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
 For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../performance-optimization/improving.md#physics-computation). For an in‑depth walkthrough on how to choose a collision fidelity option that balances your precision needs and performance requirements, see [here](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).

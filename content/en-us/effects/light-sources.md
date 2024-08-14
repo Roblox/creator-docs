@@ -9,18 +9,19 @@ light sources instead of just general global lighting through the `Class.Lightin
 service, you can create immersive environments such as cyberpunk cities,
 traditional light festivals, and moody detective scenes.
 
-<img src="../assets/lighting-and-effects/light-sources/Showcase.jpg" width="80%" />
-
-Light sources share various properties from the `Class.Light` class, including `Color`, `Brightness`, and `Shadows`.
+<img src="../assets/lighting-and-effects/light-sources/Showcase.jpg" width="800" />
 
 <Alert severity="info">
-The `Enum.Technology` property — modifiable only in the <b>Properties</b> window of the global <b>Lighting</b> object — sets your experience's lighting technology, which affects the visual appearance of light
-sources. For more information, see <a href="../environment/lighting.md">Lighting Properties</a>.
+The `Class.Lighting.Technology|Technology` property, modifiable only in the [Properties](../studio/properties.md) window for the global `Class.Lighting` object, sets your experience's lighting technology and affects the visual appearance of light sources. For more information, see [Technology](../environment/lighting.md#technology).
 </Alert>
 
-## Types
+<Alert severity="success">
+To view **light guides** that indicate the color and field of effect from light sources, such as the angle of light emission from the cone's apex of a `Class.SpotLight`, open **File**&nbsp;&rang; **Studio&nbsp;Settings** and toggle on **Show&nbsp;Light&nbsp;Guides**.
+</Alert>
 
-There are three types of light sources: point lights, spotlights, and surface lights.
+## Light Types
+
+Light types include [Point Light](#point-light), [Spotlight](#spotlight), and [Surface Light](#surface-light). Each shares various properties from the `Class.Light` class, including `Class.Light.Color|Color`, `Class.Light.Brightness|Brightness`, and `Class.Light.Shadows|Shadows`.
 
 ### Point Light
 
@@ -38,6 +39,12 @@ A point light's `Class.PointLight.Range|Range` property defines the radial dista
     <figcaption>Range = 12</figcaption>
   </figure>
 </GridContainer>
+
+To create a `Class.PointLight` in Studio:
+
+1. In the [Explorer](../studio/explorer.md) window, hover over an `Class.Attachment` or a `Class.BasePart` and click the &CirclePlus; button (`Class.Attachment` is recommended for point‑specific light emission).
+1. From the menu, insert a `Class.PointLight`.
+1. Adjust the light's `Class.PointLight.Range|Range` as well as [shared properties](#shared-properties) like `Class.PointLight.Brightness|Brightness` and `Class.PointLight.Color|Color`.
 
 ### Spotlight
 
@@ -57,9 +64,7 @@ as shown from the following streetlamp's glowing light part:
   </figure>
 </GridContainer>
 
-A spotlight's `Class.SpotLight.Angle|Angle` property defines the angle of light emission from the cone's
-apex. The maximum value is **180** which illuminates a full half sphere from the
-apex.
+A spotlight's `Class.SpotLight.Angle|Angle` property defines the angle of light emission from the cone's apex. The maximum value is **180** which illuminates a full half sphere from the apex.
 
 <GridContainer numColumns="2">
   <figure>
@@ -71,6 +76,13 @@ apex.
     <figcaption>Angle = 75</figcaption>
   </figure>
 </GridContainer>
+
+To create a `Class.SpotLight` in Studio:
+
+1. In the [Explorer](../studio/explorer.md) window, hover over an `Class.Attachment` or a `Class.BasePart` and click the &CirclePlus; button.
+1. From the menu, insert a `Class.SpotLight`.
+1. Set the light's `Class.SpotLight.Face|Face` property to specify which direction light emits from.
+1. Adjust the light's `Class.SpotLight.Angle|Angle` and `Class.SpotLight.Range|Range`, as well as [shared properties](#shared-properties) like `Class.SpotLight.Brightness|Brightness` and `Class.SpotLight.Color|Color`.
 
 ### Surface Light
 
@@ -102,11 +114,16 @@ A surface light's `Class.SurfaceLight.Angle|Angle` property defines the angle of
   </figure>
 </GridContainer>
 
-A surface light's `Class.SurfaceLight.Range|Range` determines the distance of illumination from the surface. The maximum value is **60**, measured in studs.
+To create a `Class.SurfaceLight` in Studio:
+
+1. In the [Explorer](../studio/explorer.md) window, hover over a `Class.BasePart` and click the &CirclePlus; button.
+1. From the menu, insert a `Class.SurfaceLight`.
+1. Set the light's `Class.SurfaceLight.Face|Face` property to specify which surface light emits from.
+1. Adjust the light's `Class.SurfaceLight.Angle|Angle` and `Class.SurfaceLight.Range|Range`, as well as [shared properties](#shared-properties) like `Class.SurfaceLight.Brightness|Brightness` and `Class.SurfaceLight.Color|Color`.
 
 ## Shared Properties
 
-All light sources share various properties from the `Class.Light` class, including color, brightness, and shadows.
+All light sources share various properties from the `Class.Light` class, including [color](#color), [brightness](#brightness), and [shadows](#shadows).
 
 ### Color
 
@@ -150,7 +167,7 @@ The `Class.Light.Brightness|Brightness` property sets the light's brightness wit
 
 The `Class.Light.Shadows|Shadows` property projects shadows where light is blocked by an obstacle.
 
-<GridContainer numColumns="3">
+<GridContainer numColumns="2">
   <figure>
     <img src="../assets/lighting-and-effects/light-sources/Light-Shadows-True.jpg" />
     <figcaption>Shadows = Enabled</figcaption>
@@ -160,12 +177,3 @@ The `Class.Light.Shadows|Shadows` property projects shadows where light is block
     <figcaption>Shadows = Disabled</figcaption>
   </figure>
 </GridContainer>
-
-## Creating a Light Source
-
-After you decide which type of light source you need for your experience, you can create one and adjust its properties.
-
-To create a light source on a given part:
-
-1. In the **Explorer** window, hover over the part and click the &CirclePlus; button. A contextual menu displays.
-2. From the menu, insert a **PointLight**, **SpotLight**, or **SurfaceLight**.
