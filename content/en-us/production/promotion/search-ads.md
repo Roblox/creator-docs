@@ -3,9 +3,9 @@ title: Search Ads
 description: Search ads promote experiences in the search results of Roblox's experience catalog.
 ---
 
-**Search ads** enables creators and brands to promote their experiences to users searching for specific keywords on Roblox. This form of advertising allows developers to target their ads to users using search, increasing the likelihood of engagement. To better align with your engagement, you can also upload a custom thumbnail for your search ad results.
+**Search ads** enables creators and brands to promote their experiences to users searching for specific keywords on Roblox. This form of advertising allows developers to target their ads to users using search, increasing the likelihood of engagement.
 
-When creating a search ad, advertisers select up to 10 keywords relevant to their experiences. Once a successful search ad is applied and launched, your experience displays as a search result if a user submits a search with an exact keyword match.
+When creating a search ad, advertisers select up to 10 keywords within an Ad Set relevant to their experiences. Once a successful search ad is applied and launched, your experience displays as a search result if a user submits a search with an exact keyword match.
 
 Search results populate in the following ways:
 
@@ -13,7 +13,7 @@ Search results populate in the following ways:
 <figure>
 <center><img src="../../assets/promotion/search-ads/Search-Example-1.png" width="60%" alt=""/></center>
 <figcaption>
-<center>For keyword matches, search ads display as the first result and continue to interweave between results.</center>
+<center>Search ads display at the top of search results.</center>
 </figcaption>
 </figure>
 
@@ -30,14 +30,14 @@ Search results populate in the following ways:
 <figure>
 <center><img src="../../assets/promotion/search-ads/Search-Example-3.png" width="65%" alt=""/></center>
 <figcaption>
-<center>For larger screens and desktop, search ads still populate the first or second position, and continue to interweave between results.</center>
+<center>Search ads on desktop.</center>
 </figcaption>
 </figure>
 
 <br />
 
 <Alert severity ='warning'>
-All Roblox advertisers of experiences must abide by our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). Currently, [Sponsored Experiences](./ads-manager.md#sponsored-experiences), [paid access experiences](../monetization/paid-access.md), and [17+ experiences](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Roblox-17-Policy-Standards) are not eligible to advertise using search ads.
+All Roblox advertisers of experiences must abide by our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). Currently, [paid access experiences](../monetization/paid-access.md) and [17+ experiences](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Roblox-17-Policy-Standards) are not eligible to advertise using search ads. Roblox prevents surfacing experiences identified as clickbait or spam.
 </Alert>
 
 ## Creating Search Ads
@@ -75,9 +75,8 @@ To create search ads:
 6. In the next screen, modify your Ad Creative and Ad Name details:
 
    1. Set your **Destination Experience**. This is the experience that users are directed to after clicking on the search ad.
-   2. Upload your own Ad Creative image, which customizes the search ad thumbnail displayed to users that are served this ad unit.
-   3. Input a name for this specific ad set.
-   4. Click **SAVE**.
+   2. Input a name for this specific ad set.
+   3. Click **SAVE**.
 
 7. In **Keyword Bidding**, set your bid on a cost-per-play basis for each keyword. See [Bidding and Auction](#bidding-and-auction) for more details.
    <img src="../../assets/promotion/search-ads/Keyword-Bidding.png" width="70%" alt=""/>
@@ -88,7 +87,7 @@ To create search ads:
 
 Ads on Roblox work in a bidding system, where advertisers bid to have their ads shown to users through the available ad units placed in an experience. Search ads differ from other ads in that they also calculate the relevance of the experience to the user's query. **This means that experiences that are more relevant to a search query have a greater chance of displaying as ads**.
 
-To maximize user experience and make the most of your ad spend, **you should bid on keywords that are most relevant to your experience**. For instance, if you have a horror experience and you bid on the keyword "obby", you could get some initial traffic from this ad, but the ad system will ultimately optimize for ads that are most relevant for your experience. Additionally, Roblox prevents surfacing experiences identified as clickbait or spam.
+To maximize user experience and make the most of your ad spend, **you should bid on keywords that are most relevant to your experience**. For instance, if you have a horror experience and you bid on the keyword "obby", you could get some initial traffic from this ad, but the ad system will ultimately optimize for ads that are most relevant for your experience.
 
 The following is the [same bidding and auction information](./ads-manager.md#bidding-and-auction) provided for other advertising formats with the specific differences for search ads bolded:
 
