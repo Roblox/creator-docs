@@ -15,7 +15,7 @@ description: |
 
   Higher priority animation will override lower priority ones per joint. The
   priority order is:
-  
+
   1. **Action4**
   2. **Action3**
   3. **Action2**
@@ -25,7 +25,8 @@ description: |
   7. **Core**
 
   Roblox's default character animations, including catalog animation bundles,
-  play at **Core** priority. **Idle** through **Action4** priority are for developer use.
+  play at **Core** priority. **Idle** through **Action4** priority are for
+  developer use.
 code_samples:
 tags: []
 deprecation_message: ''

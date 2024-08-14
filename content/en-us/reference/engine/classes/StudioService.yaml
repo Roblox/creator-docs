@@ -350,7 +350,7 @@ methods:
         default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
         summary: ''
     returns:
-      - type: RaycastResult
+      - type: RaycastResult?
         summary: ''
     tags: []
     deprecation_message: ''

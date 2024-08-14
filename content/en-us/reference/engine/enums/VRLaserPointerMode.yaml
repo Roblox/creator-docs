@@ -1,0 +1,23 @@
+name: VRLaserPointerMode
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Disabled
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Pointer
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: DualPointer
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

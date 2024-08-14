@@ -62,6 +62,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: VRService.ControllerModels
+    summary: ''
+    description: ''
+    code_samples: []
+    type: VRControllerModelMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
   - name: VRService.FadeOutViewOnCollision
     summary: |
       When true, a VR player's view will fade to black when their head collides
@@ -107,6 +122,21 @@ properties:
     serialization:
       can_load: false
       can_save: false
+  - name: VRService.LaserPointer
+    summary: ''
+    description: ''
+    code_samples: []
+    type: VRLaserPointerMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
   - name: VRService.ThirdPersonFollowCamEnabled
     summary: ''
     description: ''

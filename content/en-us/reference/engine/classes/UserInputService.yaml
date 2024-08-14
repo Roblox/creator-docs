@@ -798,6 +798,18 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: UserInputService:GetDeviceLevel
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: DeviceLevel
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: UserInputService:GetDeviceRotation
     summary: |
       Returns an `Class.InputObject` and a `Datatype.CFrame`,describing the
