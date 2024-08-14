@@ -1,45 +1,81 @@
 ---
-title: UI
-description: User interfaces are graphical elements in your experience that users interact with.
+title: User Interface
+description: Explore the wide variety of user interface elements that players can interact with.
 ---
 
-You can quickly create high-quality graphical user interfaces with minimal scripting requirements using built-in UI [objects](#objects). Depending on where you create it, UI renders either [on-screen](#on-screen-ui) or within an [experience's 3D world](#in-experience-ui).
+You can quickly create high-quality graphical user interfaces with minimal scripting requirements using built-in [UI objects](#ui-objects). Depending on where you create it, UI renders either [on-screen](#on-screen-ui) or [within an experience's 3D world](#in-experience-ui).
 
 ## On-Screen UI
 
-[On-screen containers](../ui/on-screen-containers.md) hold UI [objects](#objects) that you want to display on a user's screen. All on-screen UI objects and code are stored and changed on the client.
+[On-screen containers](../ui/on-screen-containers.md) hold UI objects that you want to display on a user's screen. All on-screen UI objects and code are stored and changed on the client.
 
 <img src="../assets/ui/button-text-input/ImageButton-Examples.jpg" width="800" />
 
 ## In-Experience UI
 
-[In-experience containers](../ui/in-experience-containers.md) such as `Class.SurfaceGui|SurfaceGuis` and `Class.BillboardGui|BillboardGuis` hold UI [objects](#objects) that you want to display within your experience's 3D world.
+[In-experience containers](../ui/in-experience-containers.md) such as `Class.SurfaceGui|SurfaceGuis` and `Class.BillboardGui|BillboardGuis` hold UI objects that you want to display within your experience's 3D world.
 
 <img src="../assets/ui/in-experience/SurfaceGui-Diagram.jpg" width="800" />
 
-## Objects
+## UI Objects
 
-Most UI elements are `Class.GuiObject|GuiObjects`, 2D graphical user interface objects that you can parent to containers. The four most common are [frames](#frames), [labels](#labels), [buttons](#buttons-and-text-input), and [text input](#buttons-and-text-input) objects.
+Most UI elements are `Class.GuiObject|GuiObjects`, 2D graphical user interface objects that you can parent to containers. The four most common are [frames](../ui/frames.md), [labels](../ui/labels.md), [buttons](../ui/buttons.md), and [text input](../ui/text-input.md) objects.
+
+<table>
+<thead>
+  <tr>
+    <th>Object</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>[Frame](../ui/frames.md)</td>
+    <td>`Class.Frame|Frames` act as containers for other UI objects. When you manipulate frames, you also manipulate the objects they contain.</td>
+  </tr>
+	<tr>
+    <td>[Label](../ui/labels.md)</td>
+    <td>`Class.TextLabel` and `Class.ImageLabel` objects allow you to display customizable text and images.</td>
+  </tr>
+	<tr>
+    <td>[Button](../ui/buttons.md)</td>
+    <td>`Class.TextButton` and `Class.ImageButton` objects allow users to prompt an action.</td>
+  </tr>
+	<tr>
+    <td>[Text&nbsp;Input](../ui/text-input.md)</td>
+    <td>`Class.TextBox` objects allow users to input text.</td>
+  </tr>
+</tbody>
+</table>
 
 Using the `Class.GuiObject.Position|Position`, `Class.GuiObject.Size|Size`, `Class.GuiObject.AnchorPoint|AnchorPoint`, and `Class.GuiObject.ZIndex|ZIndex` properties, you have complete control on how to [position](../ui/positioning-and-sizing.md#position), [size](../ui/positioning-and-sizing.md#size), and [layer](../ui/positioning-and-sizing.md#zindex) `Class.GuiObject|GuiObjects`. You can also use [tweening](../ui/animation.md) to transition a `Class.GuiObject` smoothly from one state to another and provide dynamic visual feedback.
 
-### Frames
+## Layout and Design
 
-[Frames](../ui/frames.md) act as containers for other `Class.GuiObject|GuiObjects` such as [Labels](../ui/labels.md) or [Buttons](../ui/buttons.md). When you manipulate frames, you also manipulate the objects they contain.
+Beyond basic properties for adjusting position and size, Roblox also provides layout structures like [list/flex](../ui/list-flex-layouts.md) and [grid](../ui/grid-table-layouts.md), as well as [size modifiers](../ui/size-modifiers.md) and [appearance modifiers](../ui/appearance-modifiers.md).
 
-<img src="../assets/ui/container-frames/Frame-Example.jpg" width="800" />
+<GridContainer numColumns="2">
+	<figure>
+  	<img src="../assets/ui/ui-objects/UIListLayout-Example.jpg" />
+		<figcaption>`Class.UIListLayout`</figcaption>
+	</figure>
+	<figure>
+  	<img src="../assets/ui/ui-objects/UIGridLayout-Example.jpg" />
+		<figcaption>`Class.UIGridLayout`</figcaption>
+	</figure>
+  <figure>
+    <img src="../assets/ui/layout-appearance/UIStroke-Color-Solid.png" />
+    <figcaption>`Class.UIStroke` on `Class.TextLabel`</figcaption>
+  </figure>
+  <figure>
+    <img src="../assets/ui/layout-appearance/UIStroke-Color-Gradient.png" />
+    <figcaption>`Class.UIStroke` with `Class.UIGradient`</figcaption>
+  </figure>
+</GridContainer>
 
-### Labels
+## Interactive Frameworks
 
-Labels allow you to display customizable [text](../ui/labels.md) and [images](../ui/labels.md).
-
-<img src="../assets/ui/labels/Labels-Example.jpg" width="800" />
-
-### Buttons and Text Input
-
-[Button](../ui/buttons.md) objects allow users to prompt an action while [Text Input](../ui/text-input.md) objects allow users to input text. You can customize these objects to provide context and prompts for what you want a user to do.
-
-<img src="../assets/ui/button-text-input/TextBox-Example.jpg" width="80%" />
+In addition to the core [user interface objects](#ui-objects), the following frameworks provide built‑in and customizable interactivity for your experiences.
 
 ### Proximity Prompts
 
@@ -47,32 +83,14 @@ Labels allow you to display customizable [text](../ui/labels.md) and [images](..
 
 <video src="../assets/ui/proximity-prompt/Showcase.mp4" controls width="80%" alt="Proximity prompts used in a variety of implementations in the 3D world"></video>
 
+### UI Drag Detectors
+
+[UI Drag Detectors](../ui/ui-drag-detectors.md) facilitate and encourage interaction with 2D user interface elements such as sliders, spinners, and more.
+
+<video src="../assets/ui/ui-drag-detectors/Showcase.mp4" controls width="80%" alt="How to add UI Drag Detectors and Drag in Edit Mode"></video>
+
 ### 3D Drag Detectors
 
 [3D Drag Detectors](../ui/3D-drag-detectors.md) encourage physical interaction with 3D objects in an experience, such as opening doors and drawers, sliding a part around, grabbing and tossing a bowling ball, pulling back and firing a slingshot, and much more.
 
 <video src="../assets/ui/3D-drag-detectors/Showcase.mp4" controls width="80%" alt="Drag detectors used in a variety of implementations in the 3D world"></video>
-
-## Layout and Design
-
-Beyond basic properties for [adjusting position and size](../ui/positioning-and-sizing.md), Roblox also provides [layouts](../ui/layout-and-appearance.md#layouts), [constraints](../ui/layout-and-appearance.md#constraints), and [appearance modifiers](../ui/appearance-modifiers.md) for further refining your UI. You can also [animate](../ui/animation.md) UI through smoothly transitioning between property values.
-
-### 9-Slice Design
-
-Under the [9-slice design](../ui/9-slice.md) approach, you can divide a single Roblox image asset into nine sub-images, each with different scaling rules. This allows you to create UI elements of varying sizes without distorting the borders or corners.
-
-<figure>
-  <img src="../assets/ui/9-slice/9-Slice-Intro-Examples.png" width="70%" />
-  <figcaption>Same border design used on UI elements of different sizes</figcaption>
-</figure>
-
-### Rich Text Markup
-
-UI [rich text](../ui/rich-text.md) utilizes simple markup tags to style sections of a string in bold, italics, underline, fill color, stroke variations, and more. You can apply styling tags to `Class.TextLabel`, `Class.TextButton`, and `Class.TextBox` objects.
-
-<GridContainer numColumns="2">
-  <img src="../assets/ui/rich-text/Example-Color.png" />
-  <img src="../assets/ui/rich-text/Example-Stroke.png" />
-  <img src="../assets/ui/rich-text/Example-Small-Caps.png" />
-  <img src="../assets/ui/rich-text/Example-Underline.png" />
-</GridContainer>

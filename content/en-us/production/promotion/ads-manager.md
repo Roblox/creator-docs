@@ -7,7 +7,7 @@ description: The Ads Manager is where advertisers can manage ad campaigns, ads r
 This feature is in beta.
 </Alert>
 
-**Ads Manager** offers advertisers valuable control over their ad campaigns, empowering them to create, optimize, and measure ads effectively while reaching their campaign objectives. Advertisers can use this tool to manage their ad campaigns, ads reporting, and ads billings in one place. Ads Manager allows you to create campaigns for **Immersive Ads** for ad units within experiences ([image](#image-ads) ads, [video](#video-ads) ads, [portal](#portal-ads) ads), and for [**sponsored experiences**](#sponsored-experiences), which appear on the Home, Search, and Discover pages.
+**Ads Manager** offers advertisers valuable control over their ad campaigns, empowering them to create, optimize, and measure ads effectively while reaching their campaign objectives. Advertisers can use this tool to manage their ad campaigns, ads reporting, and ads billings in one place. Ads Manager allows you to create campaigns for **Immersive Ads** for ad units within experiences ([image](#image-ads) ads, [video](#video-ads) ads, [portal](#portal-ads) ads), [**sponsored experiences**](#sponsored-experiences), which appear on the Home, Search, and Discover pages, and [search ads](./search-ads.md) that appear on Search results.
 
 ## Creating an Ad Account
 
@@ -385,6 +385,7 @@ You can create three different types of ads using the Ads Manager:
 - [Portal Ads](#portal-ads) are static, non-clickable images within the 3D space of an experience, with a door that teleports a player into an advertiser's experience.
 - [Image Ads](#image-ads) are static, non-clickable images within the 3D space of an experience.
 - [Video Ads](#video-ads) are either auto-playing (non-rewarded) or click-to-play (can be rewarded) videos within the 3D space of an experience.
+- [Search ads](#search-ads) allow you to promote your experience to users ages 13+ who are actively searching for experiences or genres of experiences using specific keywords.
 
 The **Ad Type** is determined by your [campaign objective](#define-the-campaign). Campaign objectives valuing **awareness** are displayed as image ads, while campaign objectives valuing **visits** are displayed as tile and portal ads.
 
@@ -460,6 +461,10 @@ To create a video ad:
 2. Navigate to and confirm the video file you'd like to use.
 3. With your ad video selected, preview it by clicking the **Expanding Arrows** over the video thumbnail.
 4. Name your video ad in the **Ad Name** field and click the **NEXT** button. The [Review](#review-the-campaign) window displays.
+
+#### Search Ads
+
+Search ads have unique audience targeting, and a specific bidding and auction process for keywords. For more information, see the [Search Ads documentation](./search-ads.md).
 
 ### Review the Campaign
 

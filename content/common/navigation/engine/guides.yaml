@@ -361,20 +361,22 @@ navigation:
             path: /ui/2D-paths
       - title: Positioning and Sizing
         path: /ui/positioning-and-sizing
-      - title: Layout and Design
+      - title: Layout Structures
         section:
-          - title: Layouts and Constraints
-            path: /ui/layout-and-appearance
-          - title: Automatic Sizing
-            path: /ui/automatic-sizing
-          - title: 9-Slice
-            path: /ui/9-slice
-          - title: Cross-Platform Design
-            path: /ui/cross-platform-design
+          - title: List Layouts
+            path: /ui/list-flex-layouts
+          - title: Grids and Tables
+            path: /ui/grid-table-layouts
+          - title: Page Layouts
+            path: /ui/page-layouts
       - title: Appearance Modifiers
         path: /ui/appearance-modifiers
+      - title: Size Modifiers and Constraints
+        path: /ui/size-modifiers
       - title: UI Animation/Tweens
         path: /ui/animation
+      - title: 9-Slice Design
+        path: /ui/9-slice
       - title: Rich Text Markup
         path: /ui/rich-text
       - title: Proximity Prompts
@@ -531,6 +533,8 @@ navigation:
             path: /production/promotion/advertising-on-roblox
           - title: Ads Manager
             path: /production/promotion/ads-manager
+          - title: Search Ads
+            path: /production/promotion/search-ads
           - title: Sponsoring Items
             path: /production/promotion/sponsoring-items
           - title: Complying with Advertising Standards

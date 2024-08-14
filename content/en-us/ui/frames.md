@@ -27,7 +27,7 @@ A `Class.ScrollingFrame` is a frame made up of two elements: a customizable **ca
 
 You can set the position and size of a `Class.ScrollingFrame` through its respective `Class.GuiObject.Position|Position` and `Class.GuiObject.Size|Size` properties. Note that the scrollbar takes up a portion of the `Class.ScrollingFrame` size.
 
-#### Canvas
+<h4>Canvas</h4>
 
 The **canvas** is the area inside of a `Class.ScrollingFrame` that is able to contain other `Class.GuiObject|GuiObjects`. If one of the dimensions of the canvas is wider than the overall size of the `Class.ScrollingFrame`, the scroll bar is visible, otherwise it is hidden.
 
@@ -35,7 +35,7 @@ The `Class.ScrollingFrame.CanvasSize|CanvasSize` property determines how large o
 
 The `Class.ScrollingFrame.CanvasPosition|CanvasPosition` property determines your default position within the canvas in pixels, and it sets the scroll bar position accordingly. Note that this property doesn't do anything when the scroll bar isn't visible.
 
-#### Scroll Bar
+<h4>Scroll Bar</h4>
 
 The **scroll bar** displays your position within the content of the `Class.ScrollingFrame` that isn't visible. There are two types of scroll bars: a vertical scroll bar and a horizontal scroll bar. A vertical scroll bar allows you to scroll up and down, while a horizontal scroll bar allows you to scroll left and right.
 

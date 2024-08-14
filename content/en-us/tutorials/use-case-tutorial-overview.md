@@ -204,11 +204,13 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </AccordionSummary>
 <AccordionDetails>
 
-- [Frames](../ui/frames.md)
+- [On-Screen UI](../ui/on-screen-containers.md)
+- [In-Experience UI](../ui/in-experience-containers.md)
 - [Labels](../ui/labels.md)
 - [Buttons](../ui/buttons.md)
+- [Frames](../ui/frames.md)
+- [UI Appearance Modifiers](../ui/appearance-modifiers.md)
 - [Proximity Prompts](../ui/proximity-prompts.md)
-- [UI Layout and Appearance](../ui/layout-and-appearance.md)
 - [Positioning and Sizing UI Objects](../ui/positioning-and-sizing.md)
 
 </AccordionDetails>

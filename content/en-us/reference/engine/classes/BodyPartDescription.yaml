@@ -38,9 +38,9 @@ properties:
       can_save: true
   - name: BodyPartDescription.BodyPart
     summary: |
-      The type of the BodyPart
+      The type of body part.
     description: |
-      The type of the BodyPart
+      The type of body part.
     code_samples: []
     type: BodyPart
     tags: []
@@ -55,9 +55,9 @@ properties:
       can_save: true
   - name: BodyPartDescription.Color
     summary: |
-      The BodyColor for this BodyPart
+      The `Datatype.Color3` for this body part.
     description: |
-      The BodyColor for this BodyPart
+      The `Datatype.Color3` for this body part.
     code_samples: []
     type: Color3
     tags: []
@@ -72,14 +72,15 @@ properties:
       can_save: true
   - name: BodyPartDescription.Instance
     summary: |
-      A reference to the Instance that should be applied when applying this
-      BodyPartDescription
+      A reference to the `Class.Instance` that should be applied when applying
+      this `Class.BodyPartDescription`.
     description: |
-      A reference to the BodyPart that should be applied when applying this
-      BodyPartDescription. This property can be used instead of AssetId to apply
-      accessories without uploading them to the platform. This can reference
-      either a BodyPart with R15, R15ArtistIntent and R6 folders or only
-      reference a single sub-folder.
+      A reference to the `Class.Instance` that should be applied when applying
+      this `Class.BodyPartDescription`. This property can be used instead of
+      `Class.BodyPartDescription.AssetId|AssetId` to apply accessories without
+      uploading them to the platform. This can reference either a body part with
+      R15, **R15ArtistIntent** and **R6** folders, or only reference a single
+      subfolder.
     code_samples: []
     type: Instance
     tags: []

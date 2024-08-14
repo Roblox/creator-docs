@@ -112,7 +112,7 @@ properties:
       its child content.
 
       For more information on how to use this property and how it works, please
-      see [here](../../../ui/automatic-sizing.md).
+      see [here](../../../ui/size-modifiers.md#automatic-sizing).
     code_samples:
       - automaticsize-uilistlayout
     type: AutomaticSize

@@ -180,13 +180,13 @@ The [Toolbox](../projects/assets/toolbox.md) contains a selection of models, ima
 
 The **Output** window, accessible from the [View](../studio/view-tab.md) tab, displays errors captured from running scripts, messages from Roblox engine, messages from calls to `print()`, and errors from calls to `warn()`. See [Output Window](../studio/output.md) for further details.
 
-<img src="../assets/studio/general/View-Tab-Output.png" width="876" alt="Studio's View tab with the Output button highlighted." />
+<img src="../assets/studio/general/View-Tab-Output.png" width="768" alt="Studio's View tab with the Output button highlighted." />
 
 ### Command Bar
 
 The **Command Bar**, accessible from the [View](../studio/view-tab.md) tab, lets you execute Luau code outside of scripts. Similar to a terminal, pressing <kbd>↑</kbd> or <kbd>↓</kbd> while using the command bar navigates up and down among previously-executed commands. Clicking the small arrow on the right side similarly reveals a list of previously-executed commands.
 
-<img src="../assets/studio/general/View-Tab-Command-Bar.png" width="876" alt="Studio's View tab with the Command Bar button highlighted." />
+<img src="../assets/studio/general/View-Tab-Command-Bar.png" width="768" alt="Studio's View tab with the Command Bar button highlighted." />
 
 ## Customizing the Layout
 
