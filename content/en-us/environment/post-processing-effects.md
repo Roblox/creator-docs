@@ -118,6 +118,6 @@ The `Class.ColorGradingEffect` effect modifies how color values calculated by th
 This effect's primary property is `Class.ColorGradingEffect.TonemapperPreset|TonemapperPreset`. The following values are available:
 
 - `Enum.TonemapperPreset.Default` &mdash; Sets the tone mapper to use the post‑2019 Roblox appearance which provides vivid colors and high contrasts.
-- `Enum.TonemapperPreset.Retro` &mdash; Sets the tone mapper to immitate the pre‑2019 Roblox appearance. Colors look less saturated and there's less contrast between them.
+- `Enum.TonemapperPreset.Retro` &mdash; Sets the tone mapper to imitate the pre‑2019 Roblox appearance. Colors look less saturated and there's less contrast between them.
 
 If you wish to recreate a full pre‑2019 Roblox look for your experience, experiment with `Enum.TonemapperPreset.Retro` and set the brightness of all lights to a maximum of `1.0`.
