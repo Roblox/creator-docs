@@ -8,8 +8,10 @@ summary: |
 description: |
   The **ColorGradingEffect** effect modifies how color values calculated by the
   renderer should be converted to the screen's color range, impacting the mood
-  and appearance of your place. It is expected to be parented to `Class.Lighting`
-  and will be ignored if parented elsewhere.
+  and appearance of your place. 
+  
+  It is expected to be parented to `Class.Lighting`
+  and will be ignored if parented elsewhere. **ColorGradingEffect** instances cannot be combined. When multiple **ColorGradingEffect** instances are parented to `Class.Lighting`, only the most recently parented instance will be applied and the other instances will be ignored. 
 
   For more details on this effect and others, see
   [Post-Processing Effects](../../../environment/post-processing-effects.md).
