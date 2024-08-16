@@ -5,7 +5,6 @@ description: Cross-server messaging enables you to communicate with other server
 
 Normally, the code within an experience can only affect the server or clients that it's running on, but there may be situations where you want different servers to communicate with each other, including:
 
-- **Cross-Server Chat** &mdash; Enable users to chat with each other even if they're not in the same server, assuming a maximum of about 20 players.
 - **Global Announcements** &mdash; Send announcements such as "A user found a special item!" to all the experience's servers.
 - **Real-Time Server Browser** &mdash; Compile a list of all the experience's servers and who is in them (updated every minute) and display the list on a maximum of 20 servers.
 

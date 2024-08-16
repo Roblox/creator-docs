@@ -26,7 +26,7 @@ The following table details promotional methods for experiences on the platform.
   </tr>
   <tr>
 		<td>**Sponsored Experiences**</td>
-		<td>Advertise your experiences within the **Sponsored** category on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages, and as **Sponsored** tiles in search results. Each sponsored experience ad campaign lets you choose your audience, schedule the duration of your ad campaign, and specify your budget per day.<br /><br />For more information, see [Ads Manager](../../production/promotion/ads-manager.md).</td>
+		<td>Advertise your experiences within the **Sponsored** category on the [Home](https://www.roblox.com/home), and as **Sponsored** tiles in search results. Each sponsored experience ad campaign lets you choose your audience, schedule the duration of your ad campaign, and specify your budget per day.<br /><br />For more information, see [Ads Manager](../../production/promotion/ads-manager.md).</td>
   </tr>
 	<tr>
 		<td>**Immersive Portal Ad Campaigns**</td>
