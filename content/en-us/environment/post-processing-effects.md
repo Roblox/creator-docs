@@ -34,6 +34,7 @@ To add post-processing effects to either the `Class.Lighting` service or `Class.
    - [**ColorCorrectionEffect**](#color-correction)
    - [**DepthOfFieldEffect**](#depth-of-field)
    - [**SunRaysEffect**](#sun-rays)
+   - [**ColorGradingEffect**](#color-grading)
 
 1. Depending on your Studio settings, some effects may not appear. To increase
    your rendering quality level:
@@ -109,3 +110,15 @@ The `Class.SunRaysEffect` effect creates a halo of light with rays around the su
 or `Class.Lighting.TimeOfDay|TimeOfDay` property. Objects between the player's camera and the sun shape this effect, allowing for realistic visuals of light and shadow.
 
 <video src="../assets/lighting-and-effects/post-processing/Sun-Rays-Effect.mp4" controls width="800" alt="Video showing sun rays as the sun moves across the sky" ></video>
+
+## Color Grading
+The `Class.ColorGradingEffect` effect modifies the way colors are rendered to a screen. You can use this effect to specify how the color values calculated by the renderer should be converted to the screen's color range which can impact the mood and appearance of your place. 
+
+ColorGradingEffect's primary property is the `Class.ColorGradingEffect.ToneMapperPreset`. The following list describe the values available:
+
+- `Class.ColorGradingEffect.ToneMapperPreset|Default` — Sets the Roblox tone mapper to use the post 2019 Roblox appearance which provides vivid colors and high contrasts. 
+- `Class.ColorGradingEffect.ToneMapperPreset|Retro` — Sets Roblox tone mapper to immitate the pre-2019 Roblox appearance. Colors look more desaturated and there's less contrast between them. 
+
+If you wish to recreate a full pre-2019 Roblox look for your experience, we recommend using the property value `Class.ColorGradingEffect.ToneMapperPreset|Retro` along with setting the brightness of all lights at a maximum value of 1.0. 
+
+
