@@ -3,15 +3,16 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  A class allowing to customize the Color Grading used by the renderer
-description: | 
-  The **ColorGradingEffect** instance is a **PostEffect** expected to live under the **Lighting** instance. It allows the customization of Color Grading techniques used in an experience. Color grading defines how color values should be converted to a screen's color range through the tone mapper, which allows to create different moods and visual styles. 
+  Modifies how color values calculated by the renderer should be converted to the
+  screen's color range.
+description: |
+  The **ColorGradingEffect** effect modifies how color values calculated by the
+  renderer should be converted to the screen's color range, impacting the mood
+  and appearance of your place. It is expected to be parented to `Class.Lighting`
+  and will be ignored if parented elsewhere.
 
-  If there exists multiple **ColorGradingEffect** instances under the Lighting instance, only the instance that was most recently parented under Lighting and that is enabled will be applied. The other enabled **ColorGradingEffect** instances will be ignored. Any **ColorGradingEffect** not parented to the **Lighting** instance are ignored. 
-
-  The main ColorGradingEffect property is:
-
-  - `Class.ColorGradingEffect.ToneMapperPreset` which allows to select which tone mapper to use for the place. 
+  For more details on this effect and others, see
+  [Post-Processing Effects](../../../environment/post-processing-effects.md).
 code_samples: []
 inherits:
   - PostEffect
@@ -20,9 +21,11 @@ tags:
 deprecation_message: ''
 properties:
   - name: ColorGradingEffect.TonemapperPreset
-    summary: 'A property allowing the selecting of the tone mapper to be used'
+    summary: |
+      Specifies which tone mapper preset to use.
     description: | 
-      Provides the option to choose between the `Default` tone mapper or the `Retro` tone mapper. The `Retro` tone mapper is meant to immitate the look of the old lighting system Roblox used pre-2019.
+      Specifies which `Enum.TonemapperPreset` to use. `Enum.TonemapperPreset.Retro`
+      is meant to immitate the look of the pre‑2019 Roblox lighting system.
     code_samples: []
     type: TonemapperPreset
     tags: []
