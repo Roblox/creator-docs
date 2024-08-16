@@ -113,11 +113,11 @@ or `Class.Lighting.TimeOfDay|TimeOfDay` property. Objects between the player's c
 
 ## Color Grading
 
-The `Class.ColorGradingEffect` effect modifies the way colors are rendered to a screen. You can use this effect to specify how the color values calculated by the renderer should be converted to the screen's color range which can impact the mood and appearance of your place.
+The `Class.ColorGradingEffect` effect modifies how color values calculated by the renderer should be converted to the screen's color range, impacting the mood and appearance of your place.
 
-ColorGradingEffect's primary property is the `Class.ColorGradingEffect.ToneMapperPreset`. The following list describe the values available:
+This effect's primary property is `Class.ColorGradingEffect.TonemapperPreset|TonemapperPreset`. The following values are available:
 
-- `Class.ColorGradingEffect.ToneMapperPreset|Default` — Sets the Roblox tone mapper to use the post 2019 Roblox appearance which provides vivid colors and high contrasts.
-- `Class.ColorGradingEffect.ToneMapperPreset|Retro` — Sets Roblox tone mapper to immitate the pre-2019 Roblox appearance. Colors look more desaturated and there's less contrast between them.
+- `Enum.TonemapperPreset.Default` &mdash; Sets the tone mapper to use the post‑2019 Roblox appearance which provides vivid colors and high contrasts.
+- `Enum.TonemapperPreset.Retro` &mdash; Sets the tone mapper to immitate the pre‑2019 Roblox appearance. Colors look less saturated and there's less contrast between them.
 
-If you wish to recreate a full pre-2019 Roblox look for your experience, we recommend using the property value `Class.ColorGradingEffect.ToneMapperPreset|Retro` along with setting the brightness of all lights at a maximum value of 1.0.
+If you wish to recreate a full pre‑2019 Roblox look for your experience, experiment with `Enum.TonemapperPreset.Retro` and set the brightness of all lights to a maximum of `1.0`.
