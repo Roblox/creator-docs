@@ -290,7 +290,7 @@ The original greybox design for spawn zones was to create an area at opposite en
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section1/ThreeLaneLayout-SpawnZones.jpg" width="100%"/>
 
-The final sample laser tag environment keeps the intent of this design while also adding a color theme: **pastel blue-green** for the team that assembles on the left side of the map, and **carnation pink** for the team that assembles on the right side of the map. You will continue to use this same color scheme throughout this section of the tutorial to differentiate areas of the map near each team's respective spawn zone.
+The final sample laser tag environment keeps the intent of this design while also adding a color theme: **mint** for the team that assembles on the left side of the map, and **carnation pink** for the team that assembles on the right side of the map. You will continue to use this same color scheme throughout this section of the tutorial to differentiate areas of the map near each team's respective spawn zone.
 
 <Tabs>
   <TabItem key = "1" label="Create Your Own">
@@ -1994,7 +1994,7 @@ To exactly recreate the towers within the sample [Environment Art - Constructing
 
 #### Columns
 
-The second exterior assets you can convert for the outdoor space are the two columns that hold up the overhang pieces you will make later in this tutorial. Similar to the towers, the technique in this section not only creates objects that are aesthetically pleasing to the eye, but it also provides further visual cues to users about where they are in the overall environment. For example, each column has either pastel blue-green or carnation pink detailing to inform users if they are closest to either their own or their enemy's spawn zone.
+The second exterior assets you can convert for the outdoor space are the two columns that hold up the overhang pieces you will make later in this tutorial. Similar to the towers, the technique in this section not only creates objects that are aesthetically pleasing to the eye, but it also provides further visual cues to users about where they are in the overall environment. For example, each column has either mint or carnation pink detailing to inform users if they are closest to either their own or their enemy's spawn zone.
 
 <Tabs>
   <TabItem key = "1" label="Create Your Own">
@@ -2117,7 +2117,7 @@ To exactly recreate the columns within the sample [Environment Art - Constructin
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Columns-4.jpg" width="100%"/>
 
-5. Select the pastel blue-green **block** part, then in the **Properties** window, set the **Color** property to **255, 170, 255** to match the color theme of the team on the right of the map.
+5. Select the mint **block** part, then in the **Properties** window, set the **Color** property to **255, 170, 255** to match the color theme of the team on the right of the map.
 
    <img src="../../assets/tutorials/environmental-art-curriculum/Section4/Columns-5.jpg" width="100%"/>
 

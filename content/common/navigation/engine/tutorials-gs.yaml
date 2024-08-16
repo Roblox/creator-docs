@@ -5,8 +5,12 @@ navigation:
   - heading: Gameplay Scripting Curriculum
   - title: Overview
     path: /tutorials/gameplay-scripting/
+  - title: Creating Teams
+    path: /tutorials/gameplay-scripting/creating-teams
   - title: Spawning and Respawning
     path: /tutorials/gameplay-scripting/spawn-respawn
+  - title: Adding Rounds
+    path: /tutorials/gameplay-scripting/adding-rounds
   - title: Implementing Blaster Behavior
     path: /tutorials/gameplay-scripting/implementing-blasters
   - title: Detecting Hits
