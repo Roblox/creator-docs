@@ -2,8 +2,16 @@ name: ColorGradingEffect
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A class allowing to customize the Color Grading used by the renderer
+description: | 
+  The **ColorGradingEffect** instance is a **PostEffect** expected to live under the **Lighting** instance. It allows the customization of Color Grading techniques used in an experience. Color grading defines how color values should be converted to a screen's color range through the tone mapper, which allows to create different moods and visual styles. 
+
+  If there exists multiple **ColorGradingEffect** instances under the Lighting instance, only the instance that was most recently parented under Lighting and that is enabled will be applied. The other enabled **ColorGradingEffect** instances will be ignored. Any **ColorGradingEffect** not parented to the **Lighting** instance are ignored. 
+
+  The main ColorGradingEffect property is:
+
+  - `Class.ColorGradingEffect.ToneMapperPreset` which allows to select which tone mapper to use for the place. 
 code_samples: []
 inherits:
   - PostEffect
@@ -12,8 +20,9 @@ tags:
 deprecation_message: ''
 properties:
   - name: ColorGradingEffect.TonemapperPreset
-    summary: ''
-    description: ''
+    summary: 'A property allowing the selecting of the tone mapper to be used'
+    description: | 
+      Provides the option to choose between the `Default` tone mapper or the `Retro` tone mapper. The `Retro` tone mapper is meant to immitate the look of the old lighting system Roblox used pre-2019.
     code_samples: []
     type: TonemapperPreset
     tags: []
