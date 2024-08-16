@@ -192,11 +192,23 @@ The following beta features are currently available to all users through Studio'
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent style={{paddingBottom: '0px'}}>
+<Button href="https://create.roblox.com/docs/ui/ui-drag-detectors" size="large" color="primaryBrand" variant="outlined" fullWidth>UIDragDetectors</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/ui/ui-drag-detectors/Showcase.mp4" />
+<p></p>
+<figcaption>Enables click-drag-release interactions for UI elements.</figcaption>
+<p></p>
+<BetaAlert betaName="UIDragDetectors" leadIn="" leadOut="" components={props.components} />
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent style={{paddingBottom: '0px'}}>
 <Button href="https://devforum.roblox.com/t/studio-beta-for-experience-controls-available-now/2567355" size="large" color="primaryBrand" variant="outlined" fullWidth>Updated Roblox Controls</Button>
 <p></p>
 <CardMedia component="img" image="../assets/studio/beta/Roblox-Controls.jpg" />
 <p></p>
-<figcaption>Enables a modernized Roblox menu and related APIs for seamless UI placement of key system controls.</figcaption>
+<figcaption>Enables a modernized Roblox menu and related APIs.</figcaption>
 <p></p>
 <BetaAlert betaName="Updated Roblox Controls" leadIn="" leadOut="" components={props.components} />
 </CardContent>
@@ -208,7 +220,7 @@ The following beta features are currently available to all users through Studio'
 <p></p>
 <CardMedia component="img" image="../assets/studio/beta/Video-Uploads.png" />
 <p></p>
-<figcaption>Enables video uploads through the [Asset Manager](../projects/assets/manager.md) for eligible users.</figcaption>
+<figcaption>Enables video uploads through the [Asset Manager](../projects/assets/manager.md).</figcaption>
 <p></p>
 <BetaAlert betaName="Video Uploads" leadIn="" leadOut="" components={props.components} />
 </CardContent>
