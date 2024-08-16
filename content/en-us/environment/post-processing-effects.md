@@ -121,3 +121,12 @@ This effect's primary property is `Class.ColorGradingEffect.TonemapperPreset|Ton
 - `Enum.TonemapperPreset.Retro` &mdash; Sets the tone mapper to imitate the pre‑2019 Roblox appearance. Colors look less saturated and there's less contrast between them.
 
 If you wish to recreate a full pre‑2019 Roblox look for your experience, experiment with `Enum.TonemapperPreset.Retro` and set the brightness of all lights to a maximum of `1.0`.
+
+<Tabs>
+<TabItem label="Default">
+<img src="../assets/lighting-and-effects/post-processing/ColorGrading-Default.jpg" width="800" height="450" alt="Experience without any effects applied" />
+</TabItem>
+<TabItem label="Retro">
+<img src="../assets/lighting-and-effects/post-processing/ColorGrading-Retro.jpg" width="800" height="450" alt="Experience with retro ColorGrading applied" />
+</TabItem>
+</Tabs>
