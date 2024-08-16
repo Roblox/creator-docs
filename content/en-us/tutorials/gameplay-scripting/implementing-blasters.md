@@ -2,7 +2,7 @@
 title: Implementing Blaster Behavior
 description: Explains end-to-end how a blast mechanic works in a laser tag experience.
 next: /tutorials/gameplay-scripting/detecting-hits
-prev: /tutorials/gameplay-scripting/spawn-respawn
+prev: /tutorials/gameplay-scripting/adding-rounds
 ---
 
 **Implementing blaster behavior** is the process of programming a blast mechanic in first-person shooter experiences. While players can blast with a single click or press of a button, creating a satisfying and accurate blast behavior is important because it enhances players' enjoyment of the overall gameplay.
@@ -21,7 +21,7 @@ After you complete this section, you will learn about the scripts that allow the
 
 The first step to implementing blaster behavior is to listen for when a player presses the blast button. The input type that players use to press the blast button depends on which device they're using to access the experience. For example, the sample laser tag experience supports mouse and keyboard controls, gamepads, and touch controls. You can see each of these input types in **ReplicatedStorage** > **UserInputHandler**.
 
-This client script uses `Class.ContextActionService` to bind `MouseButton1` and `ButtonR2` to the blasting action. This means that every time a player either presses a left mouse button or a gamepad's R2 button, it triggers a laser beam to blast out of the blaster. Note that the HUDGui contains a button for blasting on mobile devices, which it connects to later in the script.
+This client script uses `Class.ContextActionService` to bind `MouseButton1` and `ButtonR2` to the blasting action. This means that every time a player either presses a left mouse button or a gamepad's R2 button, it triggers a laser beam to blast out of the blaster. Note that the **HUDGui** contains a button for blasting on mobile devices, which it connects to later in the script.
 
 ```lua title="UserInputHandler"
 ContextActionService:BindAction("_", onBlasterActivated, false,
@@ -29,8 +29,6 @@ ContextActionService:BindAction("_", onBlasterActivated, false,
   Enum.KeyCode.ButtonR2
 )
 ```
-
-<br></br>
 
 Another important note is the use of `Enum.UserInputState.Begin` in the `onBlasterActivated()` definition. Many user interface interactions, such as choosing a blaster in this example, don't occur until after the mouse button comes up (`Enum.UserInputState.End`), which gives users a last-second chance to avoid the interaction. However, a blasting mechanic doesn't feel responsive unless it occurs the instant the button goes down.
 
@@ -55,11 +53,9 @@ local function canLocalPlayerBlast(): boolean
 end
 ```
 
-<br></br>
-
 If you examine **ReplicatedStorage** > **Blaster** > **BlasterState**, you can see that the experience has three blaster states: `Ready`, `Blasting`, and `Disabled`. To see the effect of each of these states, you can playtest the experience, select your player under the **Players** service, then observe the **blasterStateClient** attribute in the **Properties** window. Notice how it displays `Disabled` while you choose your blaster, `Ready` most of the time, and `Blasting` for less than a second after you press the button.
 
-<video controls src="../../assets/tutorials/gameplay-scripting/Blast-State-Video-State.mp4" width="100%"></video>
+<video controls src="../../assets/tutorials/gameplay-scripting/Blaster-Behavior/Normal-BlastState.mp4" width="100%"></video>
 
 This slight pause prevents you from being able to blast as quickly as you can click. For example, if you change the function to always return true, you can rapidly blast your blaster without any delay, which is unrealistic for laser tag gameplay.
 
@@ -69,9 +65,7 @@ local function canLocalPlayerBlast(): boolean
 end
 ```
 
-<br></br>
-
-<video controls src="../../assets/tutorials/gameplay-scripting/Blast-State-Video-True.mp4" width="100%"></video>
+<video controls src="../../assets/tutorials/gameplay-scripting/Blaster-Behavior/Custom-BlastState.mp4" width="100%"></video>
 
 ## Generate Blast Data
 
@@ -107,11 +101,9 @@ local function generateBlastData(): BlastData.Type
 end
 ```
 
-<br></br>
-
 This function starts by using `getBlasterConfig` to retrieve the player's blaster type. The sample provides two types of blasters: one that produces several beams with a wide, horizontal spread, and another that produces a single beam. You can find their configurations in **ReplicatedStorage** > **Instances** > **LaserBlastersFolder**.
 
-The function then uses `currentCamera.CFrame` as the point of origin for the blast, passing it to `getDirectionsForBlast`. At this point, the code is no longer about the blaster, it's about the laser beam, which you will learn more about laser beams in the [Detecting Hits](detecting-hits.md) section of the tutorial. Finally, after creating the `rayResults` table, `generateBlastData` has all the information it needs to return the blast data to `blastClient`.
+The function then uses `currentCamera.CFrame` as the point of origin for the blast, passing it to `getDirectionsForBlast`. At this point, the code is no longer about the blaster, it's about the laser beam, which you will learn more about in the [Detecting Hits](detecting-hits.md) section of the tutorial. Finally, after creating the `rayResults` table, `generateBlastData` has all the information it needs to return the blast data to `blastClient`.
 
 ## Notify the Server
 
@@ -124,8 +116,6 @@ local laserBlastedEvent = ReplicatedStorage.Instances.LaserBlastedEvent
 laserBlastedBindableEvent:Fire(blastData)
 laserBlastedEvent:FireServer(blastData)
 ```
-
-<br></br>
 
 The `Class.BindableEvent` notifies other client scripts of the blast. For example, **ReplicatedStorage** > **FirstPersonBlasterVisuals** uses this event to know when to display visual effects, such as the blast animation and cooldown bar. Similarly, the `Class.RemoteEvent` notifies server scripts of the blast, which begins processing the blast in **ServerScriptService** > **LaserBlastHandler**.
 
@@ -153,8 +143,6 @@ local function onLaserBlastedEvent(playerBlasted: Player, blastData: BlastData.T
 end
 ```
 
-<br></br>
-
 To help prevent cheating, the server must verify all data that each client sends. These checks include:
 
 1. Is `BlastData` a table? Does it contain a `Class.CFrame` and another table named `rayResults`?
@@ -173,8 +161,6 @@ if distanceFromCharacterToOrigin.Magnitude > ToleranceValues.DISTANCE_SANITY_CHE
 end
 ```
 
-<br></br>
-
 As you move and blast, note the output. It might look something like this:
 
 ```text
@@ -191,9 +177,9 @@ If you increase the movement speed for players in **ReplicatedStorage** > **Play
 local ENABLED_WALK_SPEED = 60 -- updated line, be sure to change back
 ```
 
-<br></br>
-
-For this reason, if you decide to increase movement speed, consider adjusting `DISTANCE_SANITY_CHECK_TOLERANCE_STUDS` in **ServerStorage** > **ToleranceValues**. For more information on how to approach this problem, see [Movement Validation](../../scripting/security/security-tactics.md#movement-validation).
+<Alert severity="info">
+    For this reason, if you decide to increase movement speed, consider adjusting `DISTANCE_SANITY_CHECK_TOLERANCE_STUDS` in **ServerStorage** > **ToleranceValues**. For more information on how to approach this problem, see [Movement Validation](../../scripting/security/security-tactics.md#movement-validation).
+</Alert>
 
 The server then does the following:
 
@@ -220,8 +206,6 @@ task.delay(secondsBetweenBlasts, function()
     end
 end)
 ```
-
-<br></br>
 
 The `secondsBetweenBlasts` attribute is part of the blaster configuration in **ReplicatedStorage** > **Instances** > **LaserBlastersFolder**. After the `secondsBetweenBlasts` delay passes, the player can blast again, and the entire process repeats. To help the player understand when they can blast again, the experience includes a cooldown bar.
 

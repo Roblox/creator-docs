@@ -1,7 +1,7 @@
 ---
 title: Gameplay Scripting Curriculum
 description: //
-next: /tutorials/gameplay-scripting/spawn-respawn
+next: /tutorials/gameplay-scripting/creating-teams
 hideInPageNavigation: true
 hideBreadcrumbs: true
 ---
@@ -12,7 +12,7 @@ hideBreadcrumbs: true
 <Grid item md={7} xs={12} direction="column"  >
 
 <div class="container" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/eqQyFL7KnmA?si=yVlqGzUvTnblj_c4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style={{position: "absolute", top: 0, left: 0, width: "95%", height: "95%"}}></iframe>
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style={{position: "absolute", top: 0, left: 0, width: "95%", height: "95%"}}></iframe>
 </div>
 
 </Grid>
@@ -39,10 +39,10 @@ data model, and the client-server relationship. If you need help learning how to
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="h4">Chapter 1 - Spawning and Respawning</Typography>
+<Typography variant="h4">Chapter 1 - Creating Teams</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Learn how to [trigger unique actions](spawn-respawn.md) when players spawn and respawn back into a match.
+Learn how to [sort players into teams](creating-teams.md) when a round is active.
 </AccordionDetails>
 </BaseAccordion>
 
@@ -50,7 +50,29 @@ Learn how to [trigger unique actions](spawn-respawn.md) when players spawn and r
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="h4">Chapter 2 - Implementing Blasters</Typography>
+<Typography variant="h4">Chapter 2 - Spawning and Respawning</Typography>
+</AccordionSummary>
+<AccordionDetails>
+Learn how to [trigger unique actions](spawn-respawn.md) when players spawn and respawn back into a round.
+</AccordionDetails>
+</BaseAccordion>
+
+<br />
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="h4">Chapter 3 - Adding Rounds</Typography>
+</AccordionSummary>
+<AccordionDetails>
+Learn how to [implement rounds](adding-rounds.md) that track points, display final results, and reset teams.
+</AccordionDetails>
+</BaseAccordion>
+
+<br />
+
+<BaseAccordion>
+<AccordionSummary>
+<Typography variant="h4">Chapter 4 - Implementing Blasters</Typography>
 </AccordionSummary>
 <AccordionDetails>
 Learn how to [script blast behavior](implementing-blasters.md) for two different blaster types.
@@ -61,7 +83,7 @@ Learn how to [script blast behavior](implementing-blasters.md) for two different
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="h4">Chapter 3 - Detecting Hits</Typography>
+<Typography variant="h4">Chapter 5 - Detecting Hits</Typography>
 </AccordionSummary>
 <AccordionDetails>
 Learn how to [perform hit detection](detecting-hits.md) from blast data, and allocate damage to reduce player health.

@@ -179,7 +179,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 
 <CardContent>
 
-<h2 style={{marginBottom: 12}}>Gameplay Scripting - Part 1</h2>
+<h2 style={{marginBottom: 12}}>Gameplay Scripting</h2>
 
 <Typography variant="body2" color="textSecondary" component="p">
 Learn the programming skills you need to introduce gameplay to the laser tag environment.

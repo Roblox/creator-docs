@@ -282,7 +282,7 @@ To recreate the surface ripples on top of the caldera in the sample [Volcano Isl
       1. Set **Rotation** to `-360, 360` to randomly orient each particle in a circle.
       1. Set **Speed** to `0.01` to emit each particle one tenth of a stud per second.
       1. Set **LightEmission** to `1` to significantly brighten the particles.
-      1. Set **LightInfluence** to `0` to significantly reduce how much the environmental light affects the color of particles.
+      1. Set **LightInfluence** to `0` to prevent the environmental light from affecting the color of the particles.
       1. Set **Brightness** to `15` to scale the light emitted from the emitter.
 
    <video controls src="../../../assets/tutorials/creating-volcanoes/With-SurfaceRipples.mp4" alt="A top-down view of the caldera with surface ripples." width="90%"></video>
@@ -347,7 +347,7 @@ To recreate the glowing embers from the surface of the caldera in the sample [Vo
    1. Set **Acceleration** to `0, 10, 0` to simulate upward force and pull particles to the sky.
    1. Set **Drag** to `0.8` to have particles lose their speed with exponential decay.
    1. Set **LightEmission** to `1` to significantly brighten the particles.
-   1. Set **LightInfluence** to `0` to significantly reduce how much the environmental light affects the color of particles.
+   1. Set **LightInfluence** to `0` to prevent the environmental light from affecting the color of the particles.
    1. Set **Brightness** to `20` to scale the light emitted from the emitter.
 
    <video controls src="../../../assets/tutorials/creating-volcanoes/Embers-5.mp4" alt="A close front view of the caldera that's rippling and emitting embers." width="90%"></video>
@@ -471,7 +471,7 @@ To recreate the splashing lava from the surface of the caldera in the sample [Vo
       1. Set **Acceleration** to `0, -25, 0` to simulate gravity and pull particles back down.
       1. Set **Drag** to `1` to have particles lose their speed with exponential decay.
       1. Set **LightEmission** to `1` to significantly brighten the particles.
-      1. Set **LightInfluence** to `0` to significantly reduce how much the environmental light affects the color of particles.
+      1. Set **LightInfluence** to `0` to prevent the environmental light from affecting the color of the particles.
       1. Set **Brightness** to `8` to scale the light emitted from the emitter.
 
    <video controls src="../../../assets/tutorials/creating-volcanoes/Splashes-7.mp4" alt="A close front view of the caldera that's rippling, emitting embers, and a wide variation of splashes." width="90%"></video>
