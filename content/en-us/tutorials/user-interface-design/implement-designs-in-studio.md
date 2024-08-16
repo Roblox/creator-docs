@@ -36,20 +36,28 @@ Asset libraries are collections of assets you can add into your inventory for ea
     <figcaption><b>SingleBlaster Icon</b><br></br>rbxassetid://14309094641</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/user-interface-design/Section3/Trapezoid.jpg" width="100%" />
-    <figcaption><b>Trapezoid</b><br></br>rbxassetid://14304828203</figcaption>
-  </figure>
-  <figure>
     <img src="../../assets/tutorials/user-interface-design/Section3/PinkTeamIcon.jpg" width="70%" />
     <figcaption><b>Pink Team Icon</b><br></br>rbxassetid://14309678581</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/user-interface-design/Section3/GreenTeamIcon.jpg" width="70%" />
-    <figcaption><b>Green Team Icon</b><br></br>rbxassetid://14309678701</figcaption>
+    <img src="../../assets/tutorials/user-interface-design/Section3/Trapezoid.jpg" width="100%" />
+    <figcaption><b>Trapezoid</b><br></br>rbxassetid://14304828203</figcaption>
   </figure>
   <figure>
     <img src="../../assets/tutorials/user-interface-design/Section3/Trapezoid-Reverse.jpg" />
     <figcaption><b>Upside Down Trapezoid</b><br></br>rbxassetid://14304827304</figcaption>
+  </figure>
+    <figure>
+    <img src="../../assets/tutorials/user-interface-design/Section3/GreenTeamIcon.jpg" width="70%" />
+    <figcaption><b>Green Team Icon</b><br></br>rbxassetid://14309678701</figcaption>
+  </figure>
+  <figure>
+    <img src="../../assets/tutorials/user-interface-design/Section3/Fade.jpg" />
+    <figcaption><b>Fade</b><br></br>rbxassetid://14304826876</figcaption>
+  </figure>
+  <figure>
+    <img src="../../assets/tutorials/user-interface-design/Section3/Multi-Directional-Fade.jpg" width="88%"/>
+    <figcaption><b>Multi-directional Fade</b><br></br>rbxassetid://14304827147</figcaption>
   </figure>
   <figure>
     <img src="../../assets/tutorials/user-interface-design/Section3/BlastButtonIcon-Default.jpg" width="70%" />
@@ -60,20 +68,12 @@ Asset libraries are collections of assets you can add into your inventory for ea
     <figcaption><b>Blast Button Icon - Pressed</b><br></br>rbxassetid://18308372597</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/user-interface-design/Section3/Fade.jpg" />
-    <figcaption><b>Fade</b><br></br>rbxassetid://14304826876</figcaption>
-  </figure>
-  <figure>
     <img src="../../assets/tutorials/user-interface-design/Section3/CrosshairIcon.jpg" width="70%" />
     <figcaption><b>Crosshair Icon</b><br></br>rbxassetid://14400935532</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/user-interface-design/Section3/HitMarker-Icon.jpg" width="67%" />
+    <img src="../../assets/tutorials/user-interface-design/Section3/HitMarker-Icon.jpg" width="70%" />
     <figcaption><b>Hit Marker Icon</b><br></br>rbxassetid://14401148777</figcaption>
-  </figure>
-  <figure>
-    <img src="../../assets/tutorials/user-interface-design/Section3/Multi-Directional-Fade.jpg" />
-    <figcaption><b>Multi-directional Fade</b><br></br>rbxassetid://14304827147</figcaption>
   </figure>
   <figure>
     <img src="../../assets/tutorials/user-interface-design/Section3/Hexagon.jpg" width="70%" />
@@ -84,7 +84,7 @@ Asset libraries are collections of assets you can add into your inventory for ea
     <figcaption><b>Selection Arrow Icon</b><br></br>rbxassetid://14309187282</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/user-interface-design/Section3/Border-Fade.jpg" width="75%" />
+    <img src="../../assets/tutorials/user-interface-design/Section3/Border-Fade.jpg" width="71%" />
     <figcaption><b>Border Fade</b><br></br>rbxassetid://14309518632</figcaption>
   </figure>
 
@@ -132,9 +132,9 @@ To emulate your screen to the smallest screen size:
 
    <img src="../../assets/tutorials/user-interface-design/Section3/ResolutionDropdown.jpg" width="80%" />
 
-1. In the device dropdown, select the device with the smallest screen size that players can use to access your experience. While the best option varies according to the devices your experience supports, the sample laser tag experience test with an iPhone X to verify how the UI looks with limited screen space.
+1. In the device dropdown, select the device with the smallest screen size that players can use to access your experience. While the best option varies according to the devices your experience supports, the sample laser tag experience tests with an iPhone 4S to verify how the UI looks with limited screen space.
 
-   <img src="../../assets/tutorials/user-interface-design/Section3/DeviceDropdown.jpg" />
+   <img src="../../assets/tutorials/user-interface-design/Section3/DeviceDropdown.jpg" width="80%" />
 
 ## Create ScreenGui Objects
 
@@ -156,12 +156,12 @@ To create a `Class.ScreenGui` object:
 
 1. Insert a **ScreenGui**.
 
-   <img src="../../assets/studio/explorer/StarterGui-ScreenGui.png" width="320" />
+   <img src="../../assets/studio/explorer/StarterGui-ScreenGui.png" width="50%" />
 
 1. Rename the **ScreenGui** according to the context of its child UI elements.
 1. Repeat this process for each grouping of UI elements you need to display on every player's screen.
 
-   <img src="../../assets/tutorials/user-interface-design/Section3/ScreenGuiContainers.png" width="320" />
+   <img src="../../assets/tutorials/user-interface-design/Section3/ScreenGuiContainers.png" width="50%" />
 
 ### Objective UI
 
