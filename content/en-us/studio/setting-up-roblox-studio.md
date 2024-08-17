@@ -1,3 +1,4 @@
+![Uploading IMG_2252.png…]()
 ---
 title: Roblox Studio Setup
 description: Explains how to install Roblox Studio on your system.
