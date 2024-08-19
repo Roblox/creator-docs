@@ -483,7 +483,7 @@ functions:
         default:
         summary: |
           The index of the argument to return all arguments after in `args`. If
-          it's set to "#", the number of arguments that were passed after it is
+          it's set to `"#"`, the number of arguments that were passed after it is
           returned.
       - name: args
         type: Tuple
