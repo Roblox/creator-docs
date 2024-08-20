@@ -61,6 +61,10 @@ description: |
         <td><code>Datatype.Vector3</code>&nbsp;<code>/</code>&nbsp;<code>number</code></td>
         <td>Produces a <code>Datatype.Vector3</code> with each component divided by the number.</td>
       </tr>
+      <tr>
+        <td><code>Datatype.Vector3</code>&nbsp;<code>//</code>&nbsp;<code>number</code></td>
+        <td>Produces a <code>Datatype.Vector3</code> with each component floor divided by the number.</td>
+      </tr>
     </tbody>
   </table>
 code_samples:
@@ -599,6 +603,17 @@ math_operations:
       Produces a `Datatype.Vector3` with each component divided by the number.
     description: |
       Produces a `Datatype.Vector3` with each component divided by the number.
+    type_a: Vector3
+    type_b: number
+    return_type: Vector3
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: //
+    summary: |
+      Produces a `Datatype.Vector3` with each component floor divided by the number.
+    description: |
+      Produces a `Datatype.Vector3` with each component floor divided by the number.
     type_a: Vector3
     type_b: number
     return_type: Vector3
