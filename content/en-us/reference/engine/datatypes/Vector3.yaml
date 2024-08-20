@@ -54,6 +54,10 @@ description: |
         <td>Produces a <code>Datatype.Vector3</code> with each component of the first divided by the corresponding component of the second.</td>
       </tr>
       <tr>
+        <td><code>Datatype.Vector3</code>&nbsp;<code>//</code>&nbsp;<code>Datatype.Vector3</code></td>
+        <td>Produces a <code>Datatype.Vector3</code> with each component of the first floor divided by the corresponding component of the second.</td>
+      </tr>
+      <tr>
         <td><code>Datatype.Vector3</code>&nbsp;<code>*</code>&nbsp;<code>number</code></td>
         <td>Produces a <code>Datatype.Vector3</code> with each component multiplied by the number.</td>
       </tr>
@@ -578,6 +582,19 @@ math_operations:
       the corresponding component of the second.
     description: |
       Produces a `Datatype.Vector3` with each component of the first divided by
+      the corresponding component of the second.
+    type_a: Vector3
+    type_b: Vector3
+    return_type: Vector3
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: //
+    summary: |
+      Produces a `Datatype.Vector3` with each component of the first floor divided by
+      the corresponding component of the second.
+    description: |
+      Produces a `Datatype.Vector3` with each component of the first floor divided by
       the corresponding component of the second.
     type_a: Vector3
     type_b: Vector3
