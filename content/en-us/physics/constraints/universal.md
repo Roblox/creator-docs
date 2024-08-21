@@ -1,5 +1,5 @@
 ---
-title: UniversalConstraint
+title: Universal
 description: UniversalConstraint ensures two axes on two assemblies remain perpendicular, useful for applications such as vehicle power transmission to rear drive shafts, robotics, and more.
 ---
 

@@ -9,7 +9,7 @@ You can open **Developer Console** during a testing or live experience session u
 - Use the in-experience menu:
   1. Open the in-experience **Roblox Menu**.
 
-     <img src="../../assets/ui/general/Roblox-Menu-Button.png" width="680" />
+     <img src="../../assets/ui/misc/Roblox-Menu-Button.png" width="680" />
 
   2. Select the **Settings** tab.
   3. Scroll down to **Developer Console** and click **Open**.

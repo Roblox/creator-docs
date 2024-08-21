@@ -1,5 +1,5 @@
 ---
-title: RodConstraint
+title: Rod
 description: RodConstraint keeps two attachments separated by a defined length, with optional limits on rotational tilt.
 ---
 

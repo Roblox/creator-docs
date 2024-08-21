@@ -471,8 +471,8 @@ functions:
       print(select(-1, "A", "B", "C")) --> C
       ```
 
-      If the `index` argument is set to `"#"`, the number of arguments that
-      were passed after it is returned.
+      If the `index` argument is set to `"#"`, the number of arguments that were
+      passed after it is returned.
 
       ```lua
       print(select("#", "A", "B", "C")) --> 3
@@ -483,8 +483,8 @@ functions:
         default:
         summary: |
           The index of the argument to return all arguments after in `args`. If
-          it's set to `"#"`, the number of arguments that were passed after it is
-          returned.
+          it's set to `"#"`, the number of arguments that were passed after it
+          is returned.
       - name: args
         type: Tuple
         default:

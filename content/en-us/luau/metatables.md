@@ -234,7 +234,7 @@ Now, obviously you can't call a table. That's just crazy, but (surprise, surpris
 local metatable = {
     __call = function(t, param)
     	local sum = {}
-    	for i, value in t do
+    	for i, value in ipairs(t) do
     		sum[i] = value + param -- Add the argument (5) to the value, then place it in the new table (t).
     	end
     	return unpack(sum) -- Return the individual table values

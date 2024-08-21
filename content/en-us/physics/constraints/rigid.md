@@ -1,5 +1,5 @@
 ---
-title: RigidConstraint
+title: Rigid
 description: RigidConstraint connects two attachments with zero offset.
 ---
 

@@ -5,9 +5,9 @@ description: Text input fields allow users to input text from their physical or 
 
 import TextFiltering from '../includes/text-filtering/text-filtering.md'
 
-A `Class.TextBox` is a rectangle that allows a user to provide text input while it's in focus. When you [script](#scripting-text-inputs) a `Class.TextBox`, you can use it as a search bar or an input field on a form. To help users know what type of text they should input, you can also provide a prompt through the `Class.TextBox.PlaceholderText|PlaceholderText` property, such as "**Search...**" or "**Enter Name...**".
+A `Class.TextBox` is a rectangle that allows a user to provide text input while it's in focus. When you [script](#scripting-text-inputs) a `Class.TextBox`, you can use it as a search bar or an input field on a form. To help users know what type of text they should input, you can also provide a prompt through the `Class.TextBox.PlaceholderText|PlaceholderText` property.
 
-<img src="../assets/ui/button-text-input/TextBox-Example.jpg" width="800" />
+<img src="../assets/ui/ui-objects/TextBox-Example.jpg" width="840" />
 
 Because these objects are `Class.GuiObject|GuiObjects`, you can customize
 properties such as `Class.GuiObject.BackgroundColor3|BackgroundColor3`,

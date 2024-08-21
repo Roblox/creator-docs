@@ -1,5 +1,5 @@
 ---
-title: LineForce
+title: Line Force
 description: The LineForce constraint applies force along the theoretical line connecting its two attachments.
 ---
 
