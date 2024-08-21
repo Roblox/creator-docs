@@ -93,7 +93,7 @@ navigation:
             section:
               - title: Overview
                 path: /physics/mechanical-constraints
-              - title: BallSocket
+              - title: Ball Socket
                 path: /physics/constraints/ball-socket
               - title: Hinge
                 path: /physics/constraints/hinge
@@ -103,7 +103,7 @@ navigation:
                 path: /physics/constraints/cylindrical
               - title: Spring
                 path: /physics/constraints/spring
-              - title: TorsionSpring
+              - title: Torsion Spring
                 path: /physics/constraints/torsion-spring
               - title: Universal
                 path: /physics/constraints/universal
@@ -117,26 +117,26 @@ navigation:
                 path: /physics/constraints/weld
               - title: Rigid
                 path: /physics/constraints/rigid
-              - title: NoCollision
+              - title: No Collision
                 path: /physics/constraints/no-collision
           - title: Mover Constraints
             path: /physics/mover-constraints
             section:
               - title: Overview
                 path: /physics/mover-constraints
-              - title: LinearVelocity
+              - title: Linear Velocity
                 path: /physics/constraints/linear-velocity
-              - title: AngularVelocity
+              - title: Angular Velocity
                 path: /physics/constraints/angular-velocity
-              - title: AlignPosition
+              - title: Align Position
                 path: /physics/constraints/align-position
-              - title: AlignOrientation
+              - title: Align Orientation
                 path: /physics/constraints/align-orientation
-              - title: VectorForce
+              - title: Vector Force
                 path: /physics/constraints/vector-force
               - title: Torque
                 path: /physics/constraints/torque
-              - title: LineForce
+              - title: Line Force
                 path: /physics/constraints/line-force
           - title: Sleep System
             path: /physics/sleep-system
@@ -310,7 +310,7 @@ navigation:
             path: /players/avatar-inspect-menu
           - title: Avatar Context Menu
             path: /players/avatar-context-menu
-          - title: Disabling Default UI Elements
+          - title: Disabling Default UI
             path: /players/disabling-ui
   - title: Input
     path: /input/

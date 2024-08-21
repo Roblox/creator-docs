@@ -8,7 +8,12 @@ description: |
   The main storage object for 2D `Class.GuiObject|GuiObjects` displayed on the
   user's screen. A `Class.ScreenGui` only shows if parented to a player's
   `Class.PlayerGui`; parenting a `Class.ScreenGui` to `Class.StarterGui` ensures
-  it clones into each player's `Class.PlayerGui` when they join the experience.
+  it clones into each player's `Class.PlayerGui` when they join the experience
+  and their character first spawns. See
+  [On‑Screen UI Containers](../../../ui/on-screen-containers.md) for further
+  details.
+
+  <img src="../../../assets/ui/ui-objects/ScreenGui-Example.jpg" width="840" alt="Example ScreenGui with various GuiObject children, including a Frame, TextLabel, TextBox, and ImageButton." />
 
   For performance improvements, the appearance of a `Class.ScreenGui` is cached
   until one of the following events occurs:
@@ -36,27 +41,19 @@ properties:
       compatibility of UI that is intentionally hidden offscreen, such as
       objects that slide into view from a screen edge when they're needed.
 
-      <figure>
       <img
       src="../../../assets/engine-api/classes/ScreenGui/ClipToDeviceSafeArea-True.png"
       width="840" alt="Mobile device showing UI button clipped by device safe
       area" />
-      <figcaption>When set to <code>true</code>, UI objects are clipped
-      by the device's safe area</figcaption>
-      </figure>
 
       If this property is `false`, `Class.GuiObject` descendants will **not** be
       clipped to the device's safe area and may be obscured by the camera notch
       or other screen cutouts.
 
-      <figure>
       <img
       src="../../../assets/engine-api/classes/ScreenGui/ClipToDeviceSafeArea-False.png"
       width="840" alt="Mobile device showing UI button overflowing device safe
       area, obscured by screen camera notch" />
-      <figcaption>When set to <code>false</code>, UI objects may overflow the
-      safe area and become obscured</figcaption>
-      </figure>
 
       Note that this property will be ignored if you set
       `Class.ScreenGui.ScreenInsets` to `Enum.ScreenInsets|None`, as doing so
@@ -167,37 +164,24 @@ properties:
       `Class.ScreenGui`.
     description: |
       This property controls the safe area insets that are applied to the
-      contents of this `Class.ScreenGui`. The default of
-      `Enum.ScreenInsets|CoreUISafeInsets` keeps all descendant
+      contents of this `Class.ScreenGui`.
+
+      The default of `Enum.ScreenInsets|CoreUISafeInsets` keeps all descendant
       `Class.GuiObject|GuiObjects` inside the core UI safe area, clear of the
       Roblox top bar buttons and other screen cutouts like the device's camera
-      notch. This setting is recommended for any `Class.ScreenGui` containing
-      interactive and/or important UI elements such as buttons and status
-      messages.
+      notch.
 
-      <img
-      src="../../../assets/engine-api/classes/ScreenGui/Core-UI-Safe-Area.png"
-      width="840" alt="Mobile device showing UI buttons inside core UI safe area" />
+      <img src="../../../assets/engine-api/enums/ScreenInsets/CoreUISafeInsets.png" width="840" alt="Mobile device showing UI buttons inside core UI safe area" />
 
       If you set this property to `Enum.ScreenInsets|None`, UI objects may be
       obscured behind core UI objects or device cutouts like the camera notch.
-      As such, you should only use `Enum.ScreenInsets|None` for a
+      As a result, you should only use `Enum.ScreenInsets|None` for a
       `Class.ScreenGui` that contains noninteractive content like background
       images.
 
-      If you set this property to `Enum.ScreenInsets|TopbarSafeInsets`, all
-      descendant `Class.GuiObject|GuiObjects` will be kept between the Roblox
-      left-most controls and the edge of the device safe area. This
-      `Class.ScreenGui` will then automatically adjust its size and position
-      based on control visibility/size to avoid UI collisions.
-
-      <img
-      src="../../../assets/engine-api/classes/ScreenGui/Top-Bar-Safe-Area-Collapsed.png"
-      width="840" alt="Mobile device showing the location of top bar safe area with minimal Roblox UI controls" />
-
-      <img
-      src="../../../assets/engine-api/classes/ScreenGui/Top-Bar-Safe-Area-Expanded.png"
-      width="840" alt="Mobile device showing the location of top bar safe area responding dynamically to expanded Roblox UI controls" />
+      See
+      [On-Screen UI Containers](../../../ui/on-screen-containers.md#screen-insets)
+      for alternative examples.
     code_samples: []
     type: ScreenInsets
     tags: []

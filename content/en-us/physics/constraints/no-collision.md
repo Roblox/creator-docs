@@ -1,5 +1,5 @@
 ---
-title: NoCollisionConstraint
+title: No Collision
 description: NoCollisionConstraint prevents collisions between two specific parts, but those parts may still register collisions with the rest of the world.
 ---
 

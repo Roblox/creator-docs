@@ -18,9 +18,6 @@ To display a custom loading screen, you can either design a `Class.ScreenGui` in
 To design and display a custom loading screen:
 
 1. In **ReplicatedFirst**, create a `Class.LocalScript`.
-
-   <img src="../assets/ui/loading-screens/ReplicatedFirst-LocalScript.png" width="320" />
-
 2. Use the following code sample to create and customize a `Class.ScreenGui` object. You can modify the following code with your own values to create your design:
 
 ```lua
@@ -89,7 +86,7 @@ screenGui:Destroy()
 
 In addition to static custom loading screens, you can add animations to enhance the loading screen and indicate loading progress. The easiest way to do this is to create a UI element, such as a `Class.TextLabel` or `Class.ImageLabel`, then to animate it using `Class.TweenService`. For example, the following code sample creates a new `Class.ScreenGui` with a child `Class.ImageLabel`, removes the default loading screen, then `Class.TweenService` rotates the `Class.ImageLabel` continuously until the experience loads:
 
-<video controls width="70%" src="../assets/ui/loading-screens/Loading-Animation.mp4">
+<video controls width="70%" src="../assets/ui/misc/Loading-Animation.mp4">
 </video>
 
 ```lua

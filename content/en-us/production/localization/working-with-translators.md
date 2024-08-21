@@ -17,7 +17,7 @@ Before working with any translators, make sure you set your <a href="../localiza
 
 You can add Roblox users or groups as translators in your experience's [localization page](../localization/index.md#localization-settings). Adding Roblox users as translators allows you to leverage all the benefits of Roblox's translation tools such as managing group-level permissions and viewing translation analytics.
 
-Any Roblox user or group with edit permissions for your experience can manage, edit, and review translations and translators. Translators can see your string entries and edit translations for any of your supported languages. Translators can not configure any localization settings, add or delete any localization table entries, or grant translator permissions to any users or groups.
+Experiences owners and translators can manage, edit, and review translations and translators. Translators can see your string entries and edit translations for any of your supported languages. Translators can not configure any localization settings, add or delete any localization table entries, or grant translator permissions to any users or groups.
 
 To add a Roblox user or group as a translator:
 

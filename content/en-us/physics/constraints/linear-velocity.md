@@ -1,5 +1,5 @@
 ---
-title: LinearVelocity
+title: Linear Velocity
 description: The LinearVelocity constraint applies force on an assembly to maintain a constant velocity along a 3D vector, line, or 2D plane.
 ---
 

@@ -21,6 +21,8 @@ You can quickly create high-quality graphical user interfaces with minimal scrip
 
 Most UI elements are `Class.GuiObject|GuiObjects`, 2D graphical user interface objects that you can parent to containers. The four most common are [frames](../ui/frames.md), [labels](../ui/labels.md), [buttons](../ui/buttons.md), and [text input](../ui/text-input.md) objects.
 
+<img src="../assets/ui/ui-objects/ScreenGui-Example.jpg" width="840" />
+
 <table>
 <thead>
   <tr>

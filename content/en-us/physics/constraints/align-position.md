@@ -1,5 +1,5 @@
 ---
-title: AlignPosition
+title: Align Position
 description: The AlignPosition constraint applies force to move two attachments together, or to move one attachment to a goal position.
 ---
 

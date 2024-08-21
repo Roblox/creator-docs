@@ -1,5 +1,5 @@
 ---
-title: AngularVelocity
+title: Angular Velocity
 description: The AngularVelocity constraint applies torque on an assembly to maintain a constant angular velocity.
 ---
 
