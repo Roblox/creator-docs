@@ -2451,7 +2451,3 @@ Now, whenever a player's health reaches zero, the tagged out indicator displays 
 </Alert>
 
 Congratulations on completing the User Interface Design Curriculum! Now that you have experience creating an art style, wireframing your layouts, and implementing your designs in Studio from start to finish, you can extend your project with new UI and functionality, or follow additional tutorial curricula, such as the [Gameplay Scripting Curriculum](../gameplay-scripting/index.md) that teaches you about the general organization and key implementation details of the sample laser tag experience. Happy creating!
-
-<Alert severity = 'info'>
-We’re interested in hearing from you about your experience following the User Interfaces Curriculum. If you have any questions, concerns, or additional feedback on the process, please comment on our User Interfaces Curriculum Q&A.
-</Alert>
