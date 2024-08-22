@@ -3,16 +3,16 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  Modifies how color values calculated by the renderer should be converted to the
-  screen's color range.
+  Modifies how color values calculated by the renderer should be converted to
+  the screen's color range.
 description: |
   The **ColorGradingEffect** effect modifies how color values calculated by the
   renderer should be converted to the screen's color range, impacting the mood
-  and appearance of your place. 
-  
-  **ColorGradingEffect** is expected to be parented to `Class.Lighting` and will be ignored if parented
-  elsewhere. Multiple instances cannot be combined and only the most recently parented instance to
-  `Class.Lighting` will be applied.
+  and appearance of your place.
+
+  **ColorGradingEffect** is expected to be parented to `Class.Lighting` and will
+  be ignored if parented elsewhere. Multiple instances cannot be combined and
+  only the most recently parented instance to `Class.Lighting` will be applied.
 
   For more details on this effect and others, see
   [Post-Processing Effects](../../../environment/post-processing-effects.md).
@@ -26,9 +26,10 @@ properties:
   - name: ColorGradingEffect.TonemapperPreset
     summary: |
       Specifies which tone mapper preset to use.
-    description: | 
-      Specifies which `Enum.TonemapperPreset` to use. `Enum.TonemapperPreset.Retro`
-      is meant to immitate the look of the pre‑2019 Roblox lighting system.
+    description: |
+      Specifies which `Enum.TonemapperPreset` to use.
+      `Enum.TonemapperPreset.Retro` is meant to immitate the look of the
+      pre‑2019 Roblox lighting system.
     code_samples: []
     type: TonemapperPreset
     tags: []

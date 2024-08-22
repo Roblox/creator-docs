@@ -188,7 +188,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: void
+      - type: Tuple
         summary: ''
     tags: []
     deprecation_message: ''

@@ -45,7 +45,7 @@ export const logSummariesToConsole = (config: IConfig) => {
     consoleLogSummaryString(summaryOfSuggestions);
   }
   if (summaryOfRequirements) {
-    console.log(`${Emoji.NoEntry} The checks found some requirements:`);
+    console.log(`${Emoji.NoEntry} The checks found some unmet requirements:`);
     consoleLogSummaryString(summaryOfRequirements);
     console.log(
       `${Emoji.NoEntry} Please fix the requirements before merging your pull request.`

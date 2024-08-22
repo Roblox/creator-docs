@@ -9,13 +9,21 @@ Designing for performance means following a handful of best practices **as you b
 
 Lower-end devices, particularly mobile devices, have severe memory limitations and are succeptible to crashes due to out of memory (OOM) errors:
 
-- If you want to support lower-end devices, choose a baseline set of devices with certain performance characteristics, test your experience on them throughout the development process, and pay close attention to frame rate and memory usage.
+- If you want to support lower-end devices, choose a baseline set of devices with certain performance characteristics, test your experience on them throughout the development process, and pay close attention to frame rate and memory usage. As you find problem areas in your experience, use those areas to identify the limits of your devices.
+
+  For example, you might test an experience with the **Render** (<kbd>Shift</kbd><kbd>F2</kbd>) and **Summary** (<kbd>Shift</kbd><kbd>F2</kbd>) debug stats enabled. If the frame rate starts to drop in a particularly cluttered area, you could examine the **Draw (scene)** numbers and determine that you need to stay below 600 draw calls and 650,000 triangles. Or you could examine the **Developer Console** (<kbd>F9</kbd>) and note that memory usage is a bit high unless you enable [streaming](../workspace/streaming.md). Having a clear understanding of device limits can help you stay under them as you continue to build your experience.
+
+  ![A Roblox experience with three overlays active.](../assets/optimization/perf-hud.png)
 
 - The device emulator in Roblox Studio is useful for checking aspect ratio and controls, but isn't accurate for memory usage; when you test an experience in Studio, it runs the server and the client, so memory usage is significantly higher.
 
 <Alert severity="info">
 Roblox does not have access to all of a device's memory. Some amount is required for the operating system and other applications.
 </Alert>
+
+For a much more detailed example of how you might think about optimizing your experience for low-end mobile devices, see [Real World Building and Scripting Optimization](https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146).
+
+[![Header image for Real World Building and Scripting Optimization.](../assets/optimization/chicken-rocket.jpg)](https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146)
 
 ## Streaming and Teleportation
 
@@ -29,7 +37,7 @@ Roblox does not have access to all of a device's memory. Some amount is required
 
 - As you create assets, convert them into [packages](../projects/assets/packages.md). Making packages part of your workflow helps avoid the common issue of duplicate assets with different IDs, which can hurt performance.
 
-- When you add meshes and textures, use and reuse them rather than importing duplicate copies. For more information, see [Remove Duplicate Textures](../tutorials/environmental-art/optimize-your-experience.md#remove-duplicate-textures).
+- When you add meshes and textures, use and reuse them rather than importing duplicate copies. By resizing, rotating, and overlapping, you can create rich, varied environments that require very few [draw calls](improving.md#draw-calls). For more information, see [Remove Duplicate Textures](../tutorials/environmental-art/optimize-your-experience.md#remove-duplicate-textures).
 
 ## Transparency
 

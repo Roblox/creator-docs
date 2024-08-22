@@ -5,18 +5,30 @@ memory_category: Instances
 summary: |
   Service that is used to load content, or assets, into a game.
 description: |
-  Service that is used to load content, or assets, into a game.
+  Service that loads content (assets) into a game.
 
-  The service's main use is to preload assets into a game. When a new asset such
-  as a `Class.Decal` or `Class.Sound` is used in a game, Roblox will load the
-  content associated with it from Roblox servers. In some cases, this can be
-  undesirable for developers as it can lead to a delay before the content loads
-  into the game.
+  Roblox servers stream all assets to the client at runtime: objects in the
+  Workspace, mesh assets, texture assets, etc. Assets such as mesh visual data,
+  textures, decals, and sounds are streamed in as required, regardless of
+  whether [Streaming](../../../workspace/streaming.md) is enabled.
 
-  With ContentProvider, developers can preload assets using the
-  `Class.ContentProvider:PreloadAsync()` function. Another useful property is
-  `Class.ContentProvider.RequestQueueSize`, which can be used to measure what
-  proportion of assets in the request queue have been downloaded.
+  In some cases, this behavior is undesirable, as it can lead to a delay before
+  the content loads into the experience.
+
+  `ContentProvider` lets you preload assets into an experience using the
+  `Class.ContentProvider:PreloadAsync()` method. You might want to display a
+  loading screen, preload critical assets, and only then allow the player into
+  the experience.
+
+  #### Best Practices for Preloading
+
+  - Only preload essential assets, **not** the entire Workspace. You might get
+    occasional pop-in, but it decreases load times and generally doesn't disrupt
+    the player experience. Assets that are good candidates for preloading
+    include those required for the loading screen, the UI, or the starting area.
+  - Let players skip the loading screen, or automatically skip it after a
+    certain amount of time.
+
 code_samples:
   - ContentProvider1
 inherits:

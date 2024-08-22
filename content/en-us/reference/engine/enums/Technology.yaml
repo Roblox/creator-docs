@@ -12,6 +12,12 @@ code_samples:
 tags: []
 deprecation_message: ''
 items:
+  - name: Legacy
+    summary: ''
+    value: 0
+    tags:
+      - Deprecated
+    deprecation_message: ''
   - name: Voxel
     summary: |
       Uses a 4&times;4&times;4 voxel map for light and shadow calculation.
