@@ -28,7 +28,6 @@ description: |
     include those required for the loading screen, the UI, or the starting area.
   - Let players skip the loading screen, or automatically skip it after a
     certain amount of time.
-
 code_samples:
   - ContentProvider1
 inherits:

@@ -5208,6 +5208,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/VRControllerModelMode.yaml
         ignoreTranslation: true
+      - title: VRDeviceType
+        path: /reference/engine/enums/VRDeviceType
+        type: engineapi
+        source: /reference/engine/enums/VRDeviceType.yaml
+        ignoreTranslation: true
       - title: VRLaserPointerMode
         path: /reference/engine/enums/VRLaserPointerMode
         type: engineapi
