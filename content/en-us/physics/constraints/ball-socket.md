@@ -1,5 +1,5 @@
 ---
-title: BallSocketConstraint
+title: Ball Socket
 description: BallSocketConstraint forces its two attachments into the same position and allows them to freely rotate about all three axes, with optional limits to restrict both tilt and twist.
 ---
 

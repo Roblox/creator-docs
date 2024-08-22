@@ -9,7 +9,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/linear-velocity.md" size="large" color="primaryBrand" variant="outlined" fullWidth>LinearVelocity</Button>
+<Button href="../physics/constraints/linear-velocity.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Linear Velocity</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/LinearVelocity-Demo.mp4" />
 <p></p>
@@ -19,7 +19,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/angular-velocity.md" size="large" color="primaryBrand" variant="outlined" fullWidth>AngularVelocity</Button>
+<Button href="../physics/constraints/angular-velocity.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Angular Velocity</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/AngularVelocity-Demo.mp4" />
 <p></p>
@@ -29,7 +29,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/align-position.md" size="large" color="primaryBrand" variant="outlined" fullWidth>AlignPosition</Button>
+<Button href="../physics/constraints/align-position.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Align Position</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/AlignPosition-Demo.mp4" />
 <p></p>
@@ -39,7 +39,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/align-orientation.md" size="large" color="primaryBrand" variant="outlined" fullWidth>AlignOrientation</Button>
+<Button href="../physics/constraints/align-orientation.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Align Orientation</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/AlignOrientation-Demo.mp4" />
 <p></p>
@@ -49,7 +49,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/vector-force.md" size="large" color="primaryBrand" variant="outlined" fullWidth>VectorForce</Button>
+<Button href="../physics/constraints/vector-force.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Vector Force</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/VectorForce-Demo.mp4" />
 <p></p>
@@ -69,7 +69,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/line-force.md" size="large" color="primaryBrand" variant="outlined" fullWidth>LineForce</Button>
+<Button href="../physics/constraints/line-force.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Line Force</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/LineForce-Demo.mp4" />
 <p></p>

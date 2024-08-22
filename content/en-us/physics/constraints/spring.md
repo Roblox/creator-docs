@@ -1,5 +1,5 @@
 ---
-title: SpringConstraint
+title: Spring
 description: SpringConstraint applies a force on its attachments based on spring and damper behavior, with an optional minimum/maximum length.
 ---
 

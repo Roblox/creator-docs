@@ -70,18 +70,17 @@ To create search ads:
       <img src="../../assets/promotion/search-ads/Select-Keywords.png" width="70%" alt=""/>
 
    2. Click **NEXT**.
-      <img src="../../assets/promotion/search-ads/Edit-Ad-Creative.png" width="70%" alt=""/>
 
 6. In the next screen, modify your Ad Creative and Ad Name details:
+   <img src="../../assets/promotion/search-ads/Edit-Ad-Creative.png" width="70%" alt=""/>
 
    1. Set your **Destination Experience**. This is the experience that users are directed to after clicking on the search ad.
-   2. Input a name for this specific ad set.
-   3. Click **SAVE**.
+   2. Input a name for this specific ad.
+   3. Click **NEXT**.
 
-7. In **Keyword Bidding**, set your bid on a cost-per-play basis for each keyword. See [Bidding and Auction](#bidding-and-auction) for more details.
-   <img src="../../assets/promotion/search-ads/Keyword-Bidding.png" width="70%" alt=""/>
+7. In the Review Campaign page, review the final details of your advertisement. Click **SUBMIT** to launch your campaign.
 
-8. Launch your campaign and monitor performance with [Ads Reporting](#reporting) and [Billing](./ads-manager.md#ads-billing).
+8. Monitor performance with [Ads Reporting](#reporting) and [Billing](./ads-manager.md#ads-billing).
 
 ## Bidding and Auction
 

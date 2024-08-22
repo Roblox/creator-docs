@@ -87,7 +87,6 @@ methods:
       `Class.Player.UserId|UserId` can be used in a `Class.Script`, but in a
       `Class.LocalScript`, only the `Class.Player.UserId|UserId` of the local
       user whose client is running the script can be used.
-
     code_samples:
       - badges---checking-earned-badges-batch
     parameters:
@@ -101,7 +100,8 @@ methods:
         type: Array
         default:
         summary: |
-          The list of IDs of the badges to check ownership of. Maximum length of 10.
+          The list of IDs of the badges to check ownership of. Maximum length
+          of 10.
     returns:
       - type: Array
         summary: |

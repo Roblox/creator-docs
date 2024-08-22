@@ -19,7 +19,7 @@ navigation:
   - title: User Interface Design
     path: /tutorials/user-interface-design/
     navigation: /engine/tutorials-ui.yaml
-  - heading: Use Cases
+  - heading: Use Case Tutorials
   - title: Overview
     path: /tutorials/use-case-tutorial-overview
   - title: Modeling

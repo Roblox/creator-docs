@@ -1,5 +1,5 @@
 ---
-title: RopeConstraint
+title: Rope
 description: RopeConstraint prevents two attachments from separating further than a defined length, with optional behavior as an extending or contracting winch.
 ---
 

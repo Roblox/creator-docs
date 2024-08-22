@@ -1,5 +1,5 @@
 ---
-title: HingeConstraint
+title: Hinge
 description: HingeConstraint allows its two attachments to rotate about one axis, with optional assigned power for motor or servo behavior.
 ---
 

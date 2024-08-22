@@ -176,11 +176,11 @@ You can set the `Class.Humanoid.DisplayName|DisplayName` property of any `Class.
 
 ### Setting Through User Input
 
-In some genres like roleplaying or fighting, you may want to provide a method for users to input their own character name, pet character name, etc. which is specific to the experience and isn't tied to their account display name.
+In some genres like roleplaying or fighting, you may want to provide a method for users to input their own character name, pet character name, etc. that's specific to the experience and isn't tied to their account display name. You can gather this input on the client side through a `Class.TextBox` name entry.
 
-<img src="../assets/ui/button-text-input/TextBox-Example.jpg" width="80%" />
+<img src="../assets/ui/ui-objects/TextBox-Example.jpg" width="840" />
 
-You can gather this input on the client side through a `Class.TextBox` name entry or whatever suits the experience's interface, then pass it to the server with a [remote event](../scripting/events/remote.md). On the server side, you can listen for the remote event and assign the [filtered](../ui/text-filtering.md) name to the user character's `Class.Humanoid`.
+Once the input is submitted, you can pass it to the server through a [remote event](../scripting/events/remote.md) and then, on the server side, listen for the remote event and assign the [filtered](../ui/text-filtering.md) name to the user character's `Class.Humanoid`.
 
 ```lua title='LocalScript - Fire Remote Event' highlight='3,4'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")

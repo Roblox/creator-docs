@@ -1,36 +1,35 @@
 name: Technology
 type: enum
 summary: |
-  The Technology enum represents the different lighting systems available for
-  rendering the 3D world. It is used by the `Class.Lighting.Technology`
-  property.
+  Represents the different lighting systems available for rendering the 3D
+  world. It is used by the `Class.Lighting.Technology` property.
 description: |
-  The Technology enum represents the different lighting systems available for
-  rendering the 3D world. It is used by the `Class.Lighting.Technology`
-  property. See
-  [Lighting Technology](../../../environment/lighting.md#technology) for
-  detailed descriptions and visual effects of each option.
+  The **Technology** enum represents the different lighting systems available
+  for rendering the 3D world. It is used by the `Class.Lighting.Technology`
+  property. See [here](../../../environment/lighting.md#technology) for detailed
+  descriptions and visual effects of each option.
 code_samples:
 tags: []
 deprecation_message: ''
 items:
   - name: Legacy
-    summary: |
-      Legacy lighting technology that is no longer available. Don't use.
+    summary: ''
     value: 0
     tags:
       - Deprecated
     deprecation_message: ''
   - name: Voxel
     summary: |
-      Uses a 4x4x4 voxel map for light and shadow calculation.
+      Uses a 4&times;4&times;4 voxel map for light and shadow calculation.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Compatibility
     summary: |
-      Simulates the deprecated legacy technology using the Voxel system. Not
-      recommended.
+      Simulates the removed legacy technology and is not recommended. To achieve
+      a similar look, experiment with another technology setting and add a
+      `Class.ColorGradingEffect` post‑processing effect set to the
+      `Enum.TonemapperPreset|Retro` preset.
     value: 2
     tags: []
     deprecation_message: ''

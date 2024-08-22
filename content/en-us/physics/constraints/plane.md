@@ -1,5 +1,5 @@
 ---
-title: PlaneConstraint
+title: Plane
 description: PlaneConstraint moves two attachments into a position/orientation along a plane, and both attachments remain free to translate and rotate unless otherwise constrained.
 ---
 
