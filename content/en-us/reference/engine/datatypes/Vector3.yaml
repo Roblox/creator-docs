@@ -54,12 +54,20 @@ description: |
         <td>Produces a <code>Datatype.Vector3</code> with each component of the first divided by the corresponding component of the second.</td>
       </tr>
       <tr>
+        <td><code>Datatype.Vector3</code>&nbsp;<code>//</code>&nbsp;<code>Datatype.Vector3</code></td>
+        <td>Produces a <code>Datatype.Vector3</code> with each component of the first floor divided by the corresponding component of the second.</td>
+      </tr>
+      <tr>
         <td><code>Datatype.Vector3</code>&nbsp;<code>*</code>&nbsp;<code>number</code></td>
         <td>Produces a <code>Datatype.Vector3</code> with each component multiplied by the number.</td>
       </tr>
       <tr>
         <td><code>Datatype.Vector3</code>&nbsp;<code>/</code>&nbsp;<code>number</code></td>
         <td>Produces a <code>Datatype.Vector3</code> with each component divided by the number.</td>
+      </tr>
+      <tr>
+        <td><code>Datatype.Vector3</code>&nbsp;<code>//</code>&nbsp;<code>number</code></td>
+        <td>Produces a <code>Datatype.Vector3</code> with each component floor divided by the number.</td>
       </tr>
     </tbody>
   </table>
@@ -581,6 +589,19 @@ math_operations:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - operation: //
+    summary: |
+      Produces a `Datatype.Vector3` with each component of the first floor divided by
+      the corresponding component of the second.
+    description: |
+      Produces a `Datatype.Vector3` with each component of the first floor divided by
+      the corresponding component of the second.
+    type_a: Vector3
+    type_b: Vector3
+    return_type: Vector3
+    code_samples: []
+    tags: []
+    deprecation_message: ''
   - operation: '*'
     summary: |
       Produces a `Datatype.Vector3` with each component multiplied by the
@@ -599,6 +620,17 @@ math_operations:
       Produces a `Datatype.Vector3` with each component divided by the number.
     description: |
       Produces a `Datatype.Vector3` with each component divided by the number.
+    type_a: Vector3
+    type_b: number
+    return_type: Vector3
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: //
+    summary: |
+      Produces a `Datatype.Vector3` with each component floor divided by the number.
+    description: |
+      Produces a `Datatype.Vector3` with each component floor divided by the number.
     type_a: Vector3
     type_b: number
     return_type: Vector3
