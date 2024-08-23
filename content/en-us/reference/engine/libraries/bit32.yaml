@@ -240,9 +240,9 @@ functions:
     code_samples:
   - name: bit32.byteswap
     summary: |
-      Returns the given number with swapped endianness.
+      Returns the given number with the order of the bytes swapped.
     description: |
-      Returns the given number with swapped endianness.
+      Returns the given number with the order of the bytes swapped.
     parameters:
       - name: x
         type: number
