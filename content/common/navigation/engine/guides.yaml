@@ -19,6 +19,7 @@ navigation:
       - title: Overview
         path: /projects/
       - title: Architecture
+        path: /projects/data-model
         section:
           - title: Data Model
             path: /projects/data-model
@@ -27,6 +28,7 @@ navigation:
           - title: Instance Streaming
             path: /workspace/streaming
       - title: Working in Teams
+        path: /projects/setting-up-a-team
         section:
           - title: Setting Up a Team
             path: /projects/setting-up-a-team
@@ -42,6 +44,7 @@ navigation:
       - title: Overview
         path: /projects/assets/
       - title: Managing
+        path: /projects/assets/manager
         section:
           - title: Asset Manager
             path: /projects/assets/manager
@@ -189,6 +192,7 @@ navigation:
       - title: Properties and Attributes
         path: /scripting/attributes
       - title: Events
+        path: /scripting/events/
         section:
           - title: Overview
             path: /scripting/events/
@@ -422,6 +426,7 @@ navigation:
           - title: Legacy Chat System
             path: /chat/legacy/legacy-chat-system
   - title: Performance Optimization
+    path: /performance-optimization/
     section:
       - title: Overview
         path: /performance-optimization/
@@ -502,6 +507,7 @@ navigation:
           - title: Selling on the Creator Store
             path: /production/selling-on-creator-store
       - title: Guidelines
+        path: /production/promotion/experience-guidelines
         section:
           - title: Experience Guidelines
             path: /production/promotion/experience-guidelines
@@ -615,7 +621,7 @@ navigation:
             path: /production/analytics/performance
           - title: Error Report
             path: /production/analytics/error-report
-      - title: Analytics Dashboard
+      - title: Dashboards
         path: /production/analytics/analytics-dashboard
         section:
           - title: Overview
@@ -639,6 +645,8 @@ navigation:
             path: /production/analytics/economy-events
           - title: Funnel Events
             path: /production/analytics/funnel-events
+          - title: Custom Events
+            path: /production/analytics/custom-events
           - title: Custom Fields
             path: /production/analytics/custom-fields
   - title: Community

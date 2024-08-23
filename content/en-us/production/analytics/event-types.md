@@ -7,34 +7,41 @@ description: Overview of using event types to track user sources, sinks and mile
 
 Event types help you identify opportunities to grow and monetize your experience. They allow you to **integrate event tracking in your experience** and visualize your in-experience economy and player usage patterns on the Analytics dashboard
 
-Once you begin tracking these events from your experience using the `Class.AnalyticsService`, you'll unlock new [Economy](./economy-events.md) and [Funnel](./funnel-events.md) dashboards under Analytics on the Creator Dashboard. You can use these dashboards to identify growth opportunities and segment users by age, gender, platform, OS and custom fields. All of these features are **free to use**.
+Once you begin tracking these events from your experience using the `Class.AnalyticsService`, you'll unlock new [Economy](./economy-events.md), [Funnel](./funnel-events.md), and [Custom](./custom-events.md) dashboards under Analytics on the Creator Dashboard. You can use these dashboards to identify growth opportunities and segment users by age, gender, platform, OS and custom fields. All of these features are **free to use**.
 
 <img src="../../assets/analytics/event-types/Overview-Economy-Funnels.png" alt="Economy and Funnels dashboard pages populated with data."/>
 
 ## Event Types
 
-There are two event types with two corresponding dashboards: **Economy** and **Funnel**.
-<br />
+Roblox provides three sets of analytic dashboards you can use to track different aspects of your experience:
 
-**Economy events** let you track your in-experience economy, such as:
+1. **Economy events** let you track your in-experience economy, such as:
 
-- **Top sinks** — What do users spend in-experience resources on?
-- **Top sources** — Where do users earn resources?
-- **Average wallet balance** — How much resources are users holding?
+   - **Top sinks** — What do users spend in-experience resources on?
+   - **Top sources** — Where do users earn resources?
+   - **Average wallet balance** — How much resources are users holding?
 
-**Funnel events** let you track your user's progress through key stages of your experience, such as:
+<p />
+2. **Funnel events** let you track your user's progress through key stages of your experience, such as:
 
-- **Onboarding** — Where do users drop off when getting started with your experience?
-- **Progression** — Where do users stop advancing through your experience?
-- **Shop** — Where do users abandon purchases?
+      - **Onboarding** — Where do users drop off when getting started with your experience?
+      - **Progression** — Where do users stop advancing through your experience?
+      - **Shop** — Where do users abandon purchases?
 
-For more information on setting up these dashboards, see [Economy Events](./economy-events.md) and [Funnel Events](./funnel-events.md).
+<p />
+3. **Custom events (limited beta)**  let you track metrics specific to your experience, such as:
+
+      - **Adoption** — How many users click on a specific UI component?
+      - **User Behavior** — What is the most frequently used ability on each map?
+      - **Core Loop** — How do kill/death ratios compare across different weapons?
+
+For more information on setting up these dashboards, see [Economy Events](./economy-events.md), [Funnel Events](./funnel-events.md) and [Custom Events](./custom-events.md).
 
 ## Validating Your Event Tracking
 
-Once you add [Economy](./economy-events.md) and [Funnel](./funnel-events.md) events to your experience, charts on the respective pages typically take 24 hours to appear. In the meantime, you can check if events are set up correctly using the **View Events** tool:
+Once you add [Economy](./economy-events.md), [Funnel](./funnel-events.md), or [Custom](./custom-events.md) events to your experience, charts on the respective pages typically take 24 hours to appear. In the meantime, you can check if events are set up correctly using the **View Events** tool:
 
-1. Navigate to the **Economy** or **Funnel** pages of your Analytics dashboard for your experience.
+1. Navigate to the **Economy**, **Funnel**, or **Custom** pages of your Analytics dashboard for your experience.
 2. Click the **View Events** button at the top of each page. A near real-time list of the most recent events displays.
 3. Refresh the page to update the list.
 
@@ -57,7 +64,7 @@ The following limitations apply when tracking your events with `Class.AnalyticsS
   </tr></thead>
 <tbody>
   <tr>
-    <td rowspan="3">Economy and Funnel events</td>
+    <td rowspan="3">Economy, Funnel, and Custom events</td>
     <td>`Class.AnalyticsService` requests per minute</td>
     <td>120 + (20 * CCU)</td>
     <td></td>
@@ -98,6 +105,12 @@ The following limitations apply when tracking your events with `Class.AnalyticsS
     <td>Steps per funnel</td>
     <td>100</td>
     <td>Step 1, Step 2, Step 3</td>
+  </tr>
+  <tr>
+    <td rowspan="3">Custom only</td>
+    <td>eventNames</td>
+    <td>100</td>
+    <td>MonsterDefeated, KillDeathRatio, PetAdoption</td>
   </tr>
 </tbody>
 </table>
