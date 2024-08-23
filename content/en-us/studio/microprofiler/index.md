@@ -1,96 +1,132 @@
 ---
 title: MicroProfiler
-description: MicroProfiler is a tool for optimizing your experience in Roblox Studio and Client.
+description: The MicroProfiler is a Studio and client tool for optimizing your experience.
 ---
 
-The MicroProfiler is an optimization tool available in Roblox Studio and the Roblox Client that provides detailed timing information for [Task Scheduler](../../studio/microprofiler/task-scheduler.md) processes called Tags. For a full list of these process Tags, refer to the [Tag Table](../../studio/microprofiler/tag-table.md). For a walkthrough on how to effectively use MicroProfiler to optimize your experience, refer to the [MicroProfiler Tutorial](../../studio/microprofiler/using-microprofiler.md).
+The **MicroProfiler** is an optimization tool available in Roblox Studio and the Roblox client that provides detailed timing information for [Task Scheduler](../../studio/microprofiler/task-scheduler.md) processes called **tags**.
 
-## Using The MicroProfiler
+- For a list of common processes, refer to the [Tag Reference](../../studio/microprofiler/tag-table.md).
+- For a step-by-step example of using the MicroProfiler to identify a performance issue, see the [MicroProfiler Walkthrough](../../studio/microprofiler/using-microprofiler.md).
 
-To open the MicroProfiler interface, press <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>) in Studio or the client. When open, a menu bar is visible at the top of the game view. Under it, a moving bar graph shows the time used on each frame of the Task Scheduler. Frames flow to the left, with the most recent frames on the right.
+## MicroProfiler Basics
 
-<img src="../../assets/optimization/microprofiler/1MicroProfiler-Frames.jpeg"
-   width="50%" />
+To open the MicroProfiler, press <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>) in Studio or the client. You can also use the settings menu in the client.
 
-The bars indicate the processing time for each frame:
+When open, a menu bar is visible at the top of the 3D viewport. In the default mode, a moving bar graph shows the time used on each frame of the Task Scheduler.
 
-- Orange bars indicate "standard" frames where the **Jobs** time exceeds the **Render** time.
-- Blue bars indicate frames where the **Render** time exceeds the **Jobs** time. Hover over one of these frames, and you can see a positive value for **Waiting for Rendering Thread**. A large number of these frames indicates a rendering bottleneck.
+<img alt="The Microprofiler frame graph, showing blue frames and detailed frame information." src="../../assets/optimization/microprofiler/micro-frame.png" width="440px" />
 
-Bars should generally be around the middle of the graph, but you might see the bars spike or increase in value. Spikes indicate that more time was taken to perform some Task Scheduler process, usually because of an increased workload. For instance, creating a lot of moving parts puts more work on the physics simulation, and therefore more time is used to process motion and part contacts. The following image shows an example of a spike:
+Bars should generally be around the middle of the graph, but you might see sudden spikes (rapid increases in value). Spikes indicate that more time was taken to perform some process, usually because of an increased workload. For instance, creating a lot of moving parts requires more work from the physics simulation, which then needs more time to process motion and part contacts. The following image shows an example of a spike:
 
-<img src="../../assets/optimization/microprofiler/2MicroProfiler-Frames-Spike.jpeg"
-   width="50%" />
+<img alt="The Microprofiler with several bars higher than others." src="../../assets/optimization/microprofiler/micro-spike.png" width="300px" />
 
-To pause the recording of frames, press <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>) or click **Pause** along the top bar. While paused, a timeline appears over the game view, and you can navigate through frames by clicking or dragging on the graph. Scrolling zooms on the timeline. Colorful labels describe different tasks being performed; labels that appear directly underneath another label indicate that a task is performed during another task.
+To pause the recording of frames, press <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>) or click **Pause** in the menu bar. While paused, a timeline appears, and you can navigate through frames by clicking or dragging on the graph.
 
-<img src="../../assets/optimization/microprofiler/3MicroProfiler-Timeline.jpeg"
-   width="50%" />
-
-Right-click a label to zoom the timeline to exactly the duration of the label. Left-click it to add the label to a line graph at the bottom right of the game view. The graph will show the time the task is taking each frame. Using this graph, you can test the performance of only certain labels in your game. Multiple labels can be added, and you can hide the graph by right-clicking it.
-
-<img src="../../assets/optimization/microprofiler/4MicroProfiler-Graph.jpeg"
-   width="50%" />
+For a full summary of the various views and how to navigate the MicroProfiler interface, see [MicroProfiler Modes](modes.md).
 
 ## Threads
 
-Like many programs, Roblox uses multiple threads to perform several sequences of tasks at the same time. In the MicroProfiler timeline, you can see labels for these on the left. There are three types of threads:
+Like many programs, Roblox uses multiple threads to perform several sequences of tasks at the same time. In the MicroProfiler [detailed mode](modes.md#detailed-mode), you can see labels for these on the left.
 
-- **Main**: Processes input, Humanoids, animations/tweening, physics ownership, sound, waiting script resumes, updates Studio interfaces (/studio/explorer, Properties), and coordinates the other threads.
+<img alt="The lefthand side of the Microprofiler detailed view, with rows for threads." src="../../assets/optimization/microprofiler/micro-panning.png" width="440px" />
 
-- **Worker** ("TSMk2 worker"): Helps main thread with networking, physics and pathfinding.Multiple are used depending on the number of processor cores.
+There are three types of threads:
 
-- **Render** ("GPU"): Follows a prepare, perform, present logic. Communicates with the graphics processing unit (GPU) of the device.
+- **Main/Render**: Processes input, `Class.Humanoid|Humanoids`, animations/tweening, physics ownership, sound, and waiting script resumes. Also updates Studio interfaces and coordinates the other threads.
+
+- **Worker** ("TSMk2 worker"): Helps the main thread with networking, physics, and pathfinding. Due to the number of CPU cores in modern computers, you likely have many worker threads.
+
+- **Render** ("GPU"): Follows a "prepare, perform, present" logic. Communicates with the graphics processing unit (GPU) of the device.
+
   - Prepare: Information from the main thread is used to update rendering models.
   - Perform: Issue rendering commands, including 2D interfaces.
   - Present: Synchronizes with the GPU.
 
 ## Custom Profiling
 
-If your scripts are doing complicated tasks, then you'll want to profile critical points to ensure a reasonable amount of time is being used. You can do this by calling debug.profilebegin followed by debug.profileend, which times everything done between these two function calls. This creates a label on the MicroProfiler timeline.
+If your scripts are running complicated tasks, you can profile critical portions of the code to ensure that they're not taking too long. Wrap code in `Library.debug.profilebegin()` and `Library.debug.profileend()` to time everything done between those function calls and create a label on the MicroProfiler timeline.
 
-```lua
+```lua title="HardWorkScript"
 debug.profilebegin("Hard Work")
 -- Here is where the code to be profiled should be
 debug.profileend()
 ```
 
-Be aware that there is a limited amount of memory available to MicroProfiler labels, so sometimes custom profiler labels may not appear as a meaningful name if this memory runs out. Using less labels will avoid this. If you no longer need to profile a section of your code, you should comment out or remove calls to these functions as they provide no other benefit except during debugging.
+<img alt="A custom label on the detailed view of the MicroProfiler." src="../../assets/optimization/microprofiler/micro-profiled.png" width="300px" />
+
+There is a limited amount of memory available to MicroProfiler labels. If this memory runs out, custom profiler labels might not appear as a meaningful name in the timeline. Use fewer labels to avoid this issue. If you no longer need to profile a section of your code, comment out or remove calls to these functions.
 
 ### Example
 
-The code sample below connects a dummy function to the `Class.RunService.PreSimulation` event, which runs every frame. Anything done this often should run as efficiently as possible, so calls to debug.profilebegin and debug.profileend have been added around the code to be profiled.
+The code sample below connects a dummy function to the `Class.RunService.PreSimulation` event, which runs every frame. Anything done this often should run as efficiently as possible, so this function is a good candidate for profiling.
 
 ```lua
 local RunService = game:GetService("RunService")
 
 local function onPreSimulation()
-	debug.profilebegin("Hard work") -- Start profiling here with this label
+	debug.profilebegin("Hard Work")
 	-- Example hard work: swap two variables 200,000 times
 	local a, b = 0, 1
 	for _ = 1, 200000 do
 		a, b = b, a
 	end
-	debug.profileend() -- Stop profiling here
+	debug.profileend()
 end
 RunService.PreSimulation:Connect(onPreSimulation)
 ```
 
-Running the game and pausing the profiler (<kbd>Ctrl</kbd><kbd>P</kbd>; <kbd>⌘</kbd><kbd>P</kbd>), the custom profiler label is visible under the Stepped label:
+When you run the experience and pause the MicroProfiler (<kbd>Ctrl</kbd><kbd>P</kbd> or <kbd>⌘</kbd><kbd>P</kbd>), the custom label is visible under the **gameStepped** label.
 
-<img src="../../assets/optimization/microprofiler/5MicroProfiler-Custom.png"
-   width="50%" />
+<img alt="Many labels on the MicroProfiler, with a custom label taking up the majority of the processing time." src="../../assets/optimization/microprofiler/micro-contrived.png" width="700px" />
 
-It's clear that this function is using a lot of performance needlessly: if this were real code, looking here for optimization opportunities would be a good start. However, this is a contrived example that does meaningless work to emphasize the label.
+From its duration on the timeline, you can tell that the function is using a lot of processing time compared to other operations.
+
+## Saving Frame Data
+
+If you want to save a set of frame data for later review (or to share with someone else), use the **Dump** menu. The engine saves the frame data to a file named `microprofile-<date>-<time>.html` in the Roblox logs directory.
+
+- On Windows, check `%LOCALAPPDATA%\Roblox\logs`.
+- On macOS, check `~/Library/Logs/Roblox`.
+
+These HTML files use the same [web-based UI](#using-the-web-ui) as the [live connection for mobile devices](#profiling-on-mobile-devices) and [server dumps](#profiling-the-server).
 
 ## Profiling on Mobile Devices
 
-You can enable the MicroProfiler via the Settings menu. Using a mobile device connected to the same network as your development machine, you can access a browser-based MicroProfiler. Once enabled, the network IP address of the device is displayed along with a port number.
+To access the MicroProfiler from the mobile client, your mobile device must be connected to the **same network** as your development machine.
 
-<img src="../../assets/optimization/microprofiler/6MicroProfiler-Mobile-Enable.jpeg"
-   width="50%" />
+Enable the MicroProfiler in the **Settings** menu of the mobile device. After you enable it, the menu shows an IP address and a port number.
 
-For example, in the screenshot above, the address is `192.168.1.166` and the port is `1338`. In the web browser of a computer connected to the **same network**, you would navigate to `http://192.168.1.166:1338`. A similar interface as the one seen on non-mobile devices is shown:
+<img alt="A picture of the Settings menu on mobile, showing how to enable the MicroProfiler." src="../../assets/optimization/microprofiler/6MicroProfiler-Mobile-Enable.jpeg" width="600px" />
 
-<img src="../../assets/optimization/microprofiler/7MicroProfiler-Browser.jpeg"
-   width="50%" />
+For example, in the screenshot above, the address is `192.168.1.166` and the port is `1338`. From a computer on the same network, navigate to `http://192.168.1.166:1338` for a [web-based version](#using-the-web-ui) of the MicroProfiler user interface.
+
+<img alt="The MicroProfiler web view." src="../../assets/optimization/microprofiler/7MicroProfiler-Browser.jpeg" width="600px" />
+
+## Profiling the Server
+
+In addition to the standard client MicroProfiler, you can take brief dumps of server activity using the server MicroProfiler.
+
+1. In an experience that you have edit permissions for, open the Developer Console with <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F9</kbd>.
+1. In the dropdown menu, select **MicroProfiler**.
+1. In the **ServerProfiler** section, specify the number of frames per second (maximum 60) and the number of seconds to profile (maximum 4).
+1. Click **Start Recording**.
+
+   <img alt="The Developer Console MicroProfiler screen." src="../../assets/optimization/microprofiler/micro-server.png" width="800px" />
+
+   After a few seconds, the Developer Console provides the path to the file, which is the same path as a [standard dump](#saving-frame-data).
+
+## Using the Web UI
+
+In general, the MicroProfiler web UI works similarly to [detailed mode](./modes.md#detailed-mode), but it has a few additional features:
+
+- In addition to filtering by group, you can filter by thread.
+- Use the **X-Ray** menu to enable or disable color coding for memory allocation.
+
+  <img alt="The MicroProfiler web view with x-ray enabled." src="../../assets/optimization/microprofiler/micro-xray.png" width="600px" />
+
+  - Lighter frames within the main bar graph indicate higher memory allocation.
+  - Lighter portions of the preview bar and lighter labels on the timeline indicate portions of the frame with higher memory allocation.
+
+- Use the **Export** menu to export a CPU or memory flame graph, a specialized visualization that summarizes all of the call stacks included in the dump.
+
+  <img alt="The MicroProfiler flame graph." src="../../assets/optimization/microprofiler/micro-flame.png" />

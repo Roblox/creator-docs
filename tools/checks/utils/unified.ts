@@ -29,10 +29,9 @@ import {
   RETEXT_EQUALITY_ALLOW_LIST,
   RETEXT_PASSIVE_ALLOW_LIST,
   ALLOWED_PROFANE_WORDS_LIST,
-  RETEXT_SIMPLIFY_ALLOW_LIST,
   canIgnoreWordInSpellCheck,
 } from './words.js';
-import { VFile } from 'vfile';
+import { areArraysEqual } from './array.js';
 
 export const MDAST_UTIL_MDX_JSX = 'mdast-util-mdx-jsx';
 export const MICROMARK_EXTENSION_MDX_JSX = 'micromark-extension-mdx-jsx';
@@ -348,10 +347,6 @@ export const areEqualComponentDetails = (
   details1: IComponentDetails,
   details2: IComponentDetails
 ): boolean => {
-  const areArraysEqual = (arr1: string[], arr2: string[]): boolean =>
-    arr1.length === arr2.length &&
-    arr1.every((val, index) => val === arr2[index]);
-
   return (
     details1.count === details2.count &&
     areArraysEqual(details1.components, details2.components)

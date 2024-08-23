@@ -40,11 +40,13 @@ navigation:
     section:
       - title: Overview
         path: /studio/microprofiler/
+      - title: Modes
+        path: /studio/microprofiler/modes
       - title: Task Scheduler
         path: /studio/microprofiler/task-scheduler
-      - title: Tag Table
+      - title: Tag Reference
         path: /studio/microprofiler/tag-table
-      - title: Using MicroProfiler
+      - title: Walkthrough
         path: /studio/microprofiler/using-microprofiler
   - title: Developer Console
     path: /studio/developer-console

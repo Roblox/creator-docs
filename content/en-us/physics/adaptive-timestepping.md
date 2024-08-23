@@ -40,12 +40,10 @@ Hovering your cursor above **LDLPGSSolver::solve** will reveal the status of how
 
 During testing, it may be useful to visualize frequencies for simulated parts. To enable this option:
 
-1. Open the Studio settings window (**File** &rarr; **Studio Settings**).
+1. Open the Studio settings window (**File** &rang; **Studio Settings**).
 2. From the **Physics** tab, enable **Are&nbsp;Timesteps&nbsp;Shown**.
 
-   <img
-   src="../assets/physics/adaptive-timestepping/Settings-Are-Timesteps-Shown.png"
-   width="500" />
+   <img src="../assets/physics/adaptive-timestepping/Settings-Are-Timesteps-Shown.png" width="500" />
 
 Once enabled, simulated parts will be outlined by their current simulation rate. If a part stops being simulated, either via the [sleep system](../physics/sleep-system.md) or a network ownership change, the part will no longer be outlined.
 

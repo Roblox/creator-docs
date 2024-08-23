@@ -13,6 +13,7 @@ description: |
 code_samples:
   - badges---awarding-a-badge
   - badges---checking-earned-badges
+  - badges---checking-earned-badges-batch
   - getbadgeinfoasync
 inherits:
   - Instance
@@ -63,6 +64,50 @@ methods:
       - type: bool
         summary: |
           Boolean of `true` if the badge was awarded successfully.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: BadgeService:CheckUserBadgesAsync
+    summary: |
+      Checks a list of badge IDs against a `Class.Player.UserId|UserId` and
+      returns a list of badge IDs that the player owns.
+    description: |
+      Checks a list of badge IDs against a `Class.Player.UserId|UserId` and
+      returns a list of badge IDs that the player owns.
+
+      This method supports batches of up to 10 badges. Use
+      `Class.BadgeService:UserHasBadgeAsync()` for single badge lookups.
+
+      Rate limit: **10 + 5 \* [number of players] per minute** in each server.
+
+      Any set of badges for any experience can be queried, no matter who created
+      the badges or which experiences they are for. Any
+      `Class.Player.UserId|UserId` can be used in a `Class.Script`, but in a
+      `Class.LocalScript`, only the `Class.Player.UserId|UserId` of the local
+      user whose client is running the script can be used.
+    code_samples:
+      - badges---checking-earned-badges-batch
+    parameters:
+      - name: userId
+        type: int64
+        default:
+        summary: |
+          The `Class.Player.UserId|UserId` of the player to check for ownership
+          of the specified badges.
+      - name: badgeIds
+        type: Array
+        default:
+        summary: |
+          The list of IDs of the badges to check ownership of. Maximum length
+          of 10.
+    returns:
+      - type: Array
+        summary: |
+          The list of badge IDs the given user owns out of the provided badge
+          IDs. Empty if none of the provided badges are owned by the given user.
+          Not guaranteed to be in the same order as the input list.
     tags:
       - Yields
     deprecation_message: ''
@@ -270,6 +315,7 @@ methods:
 
       See also:
 
+      - `Class.BadgeService:CheckUserBadgesAsync()`
       - `Class.BadgeService:GetBadgeInfoAsync()`
       - `Class.BadgeService:AwardBadge()`
     code_samples:

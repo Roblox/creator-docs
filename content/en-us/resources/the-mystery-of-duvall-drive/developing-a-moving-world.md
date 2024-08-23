@@ -566,16 +566,18 @@ We used `Class.Texture` objects on top of `Class.SurfaceAppearance` objects to a
 
 Once we'd tested a few platforms and rotating walls, we made several variations and played with their placement to make sure the obstacle course was challenging, mind-bending, and also clear where the player needed to go! It took some tuning to both their values and positions to get them to run well. We had several points where the platforms and walls were hitting each other or the surroundings, but with some moving around and frequent testing, we were able to land on the settings we have in the demo!
 
-If you find you're not sure what your physics objects are hitting, you can always enable **Show Decomposition Geometry** in your Studio Settings to see just the collision geometry of your object! Depending on your [collision fidelity](../../workspace/collisions.md#collision-fidelity) settings, you'll see your object represented differently.
+If you're not sure what your physical objects are hitting, you can toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+
+<img src="../../assets/studio/general/Visualization-Options.png" width="780" alt="A close up view of the 3D viewport with the Visualization Options button indicated in the upper-right corner." />
 
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/show-decomposition-geometry-disabled.png" />
-    <figcaption>When Show Decomposition Geometry is disabled, you can see the normal geometry representation that displays in-game.</figcaption>
+    <figcaption>When collision visualization is disabled, you can see the normal geometry representation that displays in-game.</figcaption>
   </figure>
   <figure>
     <img src="../../assets/resources/mystery-of-duvall-drive/developing-a-moving-world/show-decomposition-geometry-enabled.png" />
-    <figcaption>When Show Decomposition Geometry is enabled, you can see the tree leaves don't have collisions, so they won't interfere with the spinning platforms or walls.</figcaption>
+    <figcaption>When collision visualization is enabled, you can see the tree leaves don't have collisions, so they won't interfere with the spinning platforms or walls.</figcaption>
   </figure>
 </GridContainer>
 

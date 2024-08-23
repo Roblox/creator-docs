@@ -96,7 +96,7 @@ For information on how to verify your account either through a government-issued
 
 <Alert severity="warning">
 
-**Phone number verification is not sufficient** to sell priced assets on the Creator Store. To sell priced assets, you need to verify with a [government ID](account-verification.md#verifying-through-government-id) and create a seller account. For more information, see [Selling on the Creator Store](./selling-on-creator-store.md).
+**Phone number verification is not sufficient** to sell priced assets on the Creator Store. To sell priced assets, you need to verify with a [government ID](./publishing/account-verification.md#verifying-through-government-id) and create a seller account. For more information, see [Selling on the Creator Store](./selling-on-creator-store.md).
 
 </Alert>
 

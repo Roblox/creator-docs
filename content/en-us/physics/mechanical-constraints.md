@@ -6,70 +6,132 @@ description: Mechanical constraints behave as conceptual mechanical connections 
 The physics engine includes the following `Class.Constraint|Constraints` that behave as conceptual mechanical connections, including hinges, springs, ropes, and more. In addition, various [mover constraints](../physics/mover-constraints.md) are available to exert directional or rotational force upon [assemblies](../physics/assemblies.md).
 
 <GridContainer numColumns="2">
-  <figure>
-		<video controls src="../assets/physics/constraints/BallInSocket-Demo.mp4" width="100%" alt="Demo video of BallSocketConstraint"></video>
-    <figcaption>[BallSocketConstraint](../physics/constraints/ball-socket.md) forces its two attachments into the same position and allows them to freely rotate about all three axes, with optional limits to restrict both tilt and twist</figcaption>
-  </figure>
-  <figure>
-		<video controls src="../assets/physics/constraints/Hinge-Demo.mp4" width="100%" alt="Demo video of HingeConstraint"></video>
-    <figcaption>[HingeConstraint](../physics/constraints/hinge.md) allows its two attachments to rotate about one axis, with optional assigned power for motor or servo behavior</figcaption>
-  </figure>
-  <figure>
-		<video controls src="../assets/physics/constraints/Prismatic-Demo.mp4" width="100%" alt="Demo video of PrismaticConstraint"></video>
-    <figcaption>[PrismaticConstraint](../physics/constraints/prismatic.md) allows two attachments to slide along one axis but not rotate, with optional assigned power for mechanisms like sliding doors and elevator platforms</figcaption>
-  </figure>
-  <figure>
-		<video controls src="../assets/physics/constraints/Cylindrical-Demo.mp4" width="100%" alt="Demo video of CylindricalConstraint"></video>
-    <figcaption>[CylindricalConstraint](../physics/constraints/cylindrical.md) allows its attachments to slide along one axis and rotate about another axis, with optional assigned angular and/or linear power</figcaption>
-  </figure>
-  <figure>
-		<video controls src="../assets/physics/constraints/Spring-Demo.mp4" width="100%" alt="Demo video of SpringConstraint"></video>
-    <figcaption>[SpringConstraint](../physics/constraints/spring.md) applies a force on its attachments based on spring and damper behavior, with an optional minimum/maximum length</figcaption>
-  </figure>
-  <figure>
-		<video controls src="../assets/physics/constraints/TorsionSpring-Demo.mp4" width="100%" alt="Demo video of TorsionSpringConstraint"></video>
-    <figcaption>[TorsionSpringConstraint](../physics/constraints/torsion-spring.md) applies torque based on a relative angle and relative angular velocity, in an attempt to bring two axes from two parts together</figcaption>
-  </figure>
-  <figure>
-		<video controls src="../assets/physics/constraints/Universal-Demo.mp4" width="100%" alt="Demo video of UniversalConstraint"></video>
-    <figcaption>[UniversalConstraint](../physics/constraints/universal.md) ensures two axes on two assemblies remain perpendicular, useful for applications such as vehicle power transmission to rear drive shafts, robotics, and more</figcaption>
-  </figure>
-  <figure>
-		<video controls src="../assets/physics/constraints/Rope-Demo.mp4" width="100%" alt="Demo video of RopeConstraint"></video>
-    <figcaption>[RopeConstraint](../physics/constraints/rope.md) prevents two attachments from separating further than a defined length, with optional behavior as an extending or contracting winch</figcaption>
-  </figure>
-  <figure>
-		<video controls src="../assets/physics/constraints/Rod-Demo.mp4" width="100%" alt="Demo video of RodConstraint"></video>
-    <figcaption>[RodConstraint](../physics/constraints/rod.md) keeps two attachments separated by a defined length, with optional limits on rotational tilt</figcaption>
-  </figure>
-  <figure>
-		<video controls src="../assets/physics/constraints/Plane-Demo.mp4" width="100%" alt="Demo video of PlaneConstraint"></video>
-    <figcaption>[PlaneConstraint](../physics/constraints/plane.md) moves two attachments into a position/orientation along a plane, and both attachments remain free to translate and rotate unless otherwise constrained</figcaption>
-  </figure>
-</GridContainer>
 
-<table>
-<thead>
-<tr>
-<td>Constraint</td>
-<td>Description</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>[WeldConstraint](../physics/constraints/weld.md)</td>
-<td>Connects two `Class.BasePart|BaseParts` and ensures they stay in the same relative position and orientation to each other. Even if the two parts are not touching, you can weld them together.</td>
-</tr>
-<tr>
-<td>[RigidConstraint](../physics/constraints/rigid.md)</td>
-<td>Connects two `Class.Attachment|Attachments` or `Class.Bone|Bones` and ensures they stay in the same relative position/orientation to each other. This flexibility gives it additional functionality beyond [WeldConstraint](../physics/constraints/weld.md), such as attaching accessories to `Class.Attachment|Attachments` on a character rig.</td>
-</tr>
-<tr>
-<td>[NoCollisionConstraint](../physics/constraints/no-collision.md)</td>
-<td>Prevents collisions between two specific parts, but those parts may still register collisions with the rest of the world. Compared to [collision groups](../workspace/collisions.md#collision-groups), provides a direct way to disable specific collisions, such as the wheel of a car scraping against the car's body.</td>
-</tr>
-</tbody>
-</table>
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/ball-socket.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Ball Socket</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/BallInSocket-Demo.mp4" />
+<p></p>
+<figcaption>[BallSocketConstraint](../physics/constraints/ball-socket.md) forces its two attachments into the same position and allows them to freely rotate about all three axes, with optional limits to restrict both tilt and twist</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/hinge.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Hinge</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/Hinge-Demo.mp4" />
+<p></p>
+<figcaption>[HingeConstraint](../physics/constraints/hinge.md) allows its two attachments to rotate about one axis, with optional assigned power for motor or servo behavior</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/prismatic.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Prismatic</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/Prismatic-Demo.mp4" />
+<p></p>
+<figcaption>[PrismaticConstraint](../physics/constraints/prismatic.md) allows two attachments to slide along one axis but not rotate, with optional assigned power for mechanisms like sliding doors and elevator platforms</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/cylindrical.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Cylindrical</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/Cylindrical-Demo.mp4" />
+<p></p>
+<figcaption>[CylindricalConstraint](../physics/constraints/cylindrical.md) allows its attachments to slide along one axis and rotate about another axis, with optional assigned angular and/or linear power</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/spring.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Spring</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/Spring-Demo.mp4" />
+<p></p>
+<figcaption>[SpringConstraint](../physics/constraints/spring.md) applies a force on its attachments based on spring and damper behavior, with an optional minimum/maximum length</figcaption>
+</CardContent>
+</Card>
+  
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/torsion-spring.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Torsion Spring</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/TorsionSpring-Demo.mp4" />
+<p></p>
+<figcaption>[TorsionSpringConstraint](../physics/constraints/torsion-spring.md) applies torque based on a relative angle and relative angular velocity, in an attempt to bring two axes from two parts together</figcaption>
+</CardContent>
+</Card>
+  
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/universal.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Universal</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/Universal-Demo.mp4" />
+<p></p>
+<figcaption>[UniversalConstraint](../physics/constraints/universal.md) ensures two axes on two assemblies remain perpendicular, useful for applications such as vehicle power transmission to rear drive shafts, robotics, and more</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/rope.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Rope</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/Rope-Demo.mp4" />
+<p></p>
+<figcaption>[RopeConstraint](../physics/constraints/rope.md) prevents two attachments from separating further than a defined length, with optional behavior as an extending or contracting winch</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/rod.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Rod</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/Rod-Demo.mp4" />
+<p></p>
+<figcaption>[RodConstraint](../physics/constraints/rod.md) keeps two attachments separated by a defined length, with optional limits on rotational tilt</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/plane.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Plane</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/Plane-Demo.mp4" />
+<p></p>
+<figcaption>[PlaneConstraint](../physics/constraints/plane.md) moves two attachments into a position/orientation along a plane, and both attachments remain free to translate and rotate unless otherwise constrained</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/weld.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Weld</Button>
+<p></p>
+<figcaption>[WeldConstraint](../physics/constraints/weld.md) connects two `Class.BasePart|BaseParts` and ensures they stay in the same relative position and orientation to each other, even if they are not touching</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/rigid.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Rigid</Button>
+<p></p>
+<figcaption>[RigidConstraint](../physics/constraints/rigid.md) connects two `Class.Attachment|Attachments` or `Class.Bone|Bones` and ensures they stay in the same relative position/orientation to each other, even if they are not touching</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/no-collision.md" size="large" color="primaryBrand" variant="outlined" fullWidth>No Collision</Button>
+<p></p>
+<figcaption>[NoCollisionConstraint](../physics/constraints/no-collision.md) prevents collisions between two specific parts, but those parts may still register collisions with the rest of the world</figcaption>
+</CardContent>
+</Card>
+
+</GridContainer>
 
 ## Constraint Visualization
 
@@ -90,6 +152,10 @@ To accurately visualize constraints in Studio, you can use the following options
 	<Grid item xs={10} sm={11} md={11} lg={11}><p>**Scale** &mdash; Relative scale of visualizations.</p></Grid>
 </Grid>
 
+<Alert severity="success">
+In addition to the above visualization, you can view colored outlines around mechanisms (groups of parts that share simulation step and [network ownership](../physics/network-ownership.md)) by toggling on **Mechanisms** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+</Alert>
+
 ## Creating Constraints
 
 All mechanical constraints must connect one or two `Class.Attachment|Attachments` or `Class.Bone|Bones`, except for [WeldConstraint](../physics/constraints/weld.md) and [NoCollisionConstraint](../physics/constraints/no-collision.md). When connected to `Class.Bone|Bones`, the constraint will use their animated position and orientation.
@@ -103,9 +169,9 @@ To create a mechanical constraint, you can use either the **Create** tool or the
 
    <img src="../assets/studio/general/Model-Tab-Constraints-Create-Menu.png" width="754" alt="Constraint picker indicated in Studio toolbar" />
 
-1. In the 3D viewport, hover over any `Class.Part` or `Class.MeshPart` and click to add a new `Class.Attachment` to the part at the visualized point. Alternatively, hover over and click an existing `Class.Attachment` or `Class.Bone` to use it for the constraint.
+2. In the 3D viewport, hover over any `Class.Part` or `Class.MeshPart` and click to add a new `Class.Attachment` to the part at the visualized point. Alternatively, hover over and click an existing `Class.Attachment` or `Class.Bone` to use it for the constraint.
 
-1. Most mechanical constraints require a **secondary** attachment in their functionality, so the tool will typically prompt you to repeat the previous step on another `Class.Part`, `Class.MeshPart`, `Class.Attachment`, or `Class.Bone`.
+3. Most mechanical constraints require a **secondary** attachment in their functionality, so the tool will typically prompt you to repeat the previous step on another `Class.Part`, `Class.MeshPart`, `Class.Attachment`, or `Class.Bone`.
 
    <figure>
    <img src="../assets/physics/constraints/Creation-Diagram.jpg" width="600" alt="SpringConstraint connecting two attachments" />

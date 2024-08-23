@@ -304,7 +304,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: void
+      - type: Tuple
         summary: |
           A `Datatype.CFrame` representing the orientation of the volume
           followed by a `Datatype.Vector3` representing the size of the volume.

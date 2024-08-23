@@ -150,7 +150,7 @@ Given their widespread use, players are typically familiar with such conventions
   </figure>
   <figure>
    <img src="../../assets/game-design/ui-ux-design/ui-ux-design-15.png" width="90%"/>
-    <figcaption>Green "Health" stat consistency in *Winds of Fortune*</figcaption>
+    <figcaption>Green "Health" stat consistency in *Arcane Odyssey*</figcaption>
   </figure>
 </GridContainer>
 

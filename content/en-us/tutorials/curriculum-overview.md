@@ -179,7 +179,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 
 <CardContent>
 
-<h2 style={{marginBottom: 12}}>Gameplay Scripting - Part 1</h2>
+<h2 style={{marginBottom: 12}}>Gameplay Scripting</h2>
 
 <Typography variant="body2" color="textSecondary" component="p">
 Learn the programming skills you need to introduce gameplay to the laser tag environment.
@@ -196,7 +196,7 @@ Learn the programming skills you need to introduce gameplay to the laser tag env
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-<iframe src="https://www.youtube-nocookie.com/embed/eqQyFL7KnmA?si=yVlqGzUvTnblj_c4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "90%", height: "90%"}}></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "90%", height: "90%"}}></iframe>
 </div>
 
 </Grid>
@@ -235,6 +235,78 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 </>
 
 <a href="gameplay-scripting/index.md">
+  <Button
+    variant="contained"
+    size="large">
+  Start Creating
+  </Button>
+</a>
+</CardContent>
+
+</Card>
+
+<br /> <br />
+
+<Card>
+
+<CardContent>
+
+<h2 style={{marginBottom: 12}}>User Interface Design</h2>
+
+<Typography variant="body2" color="textSecondary" component="p">
+Learn the design skills you need to implement UI that informs players of the laser tag gameplay.
+</Typography>
+
+<>
+<Grid
+    alignItems="stretch"
+    container
+    direction="row">
+
+<Grid item md={6} xs={12}
+    direction="column"  >
+
+<div class="container"
+style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
+<iframe src="https://www.youtube-nocookie.com/embed/eqW9SINYeWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "90%", height: "90%"}}></iframe>
+</div>
+
+</Grid>
+
+<Grid item md={6} xs={12} direction='column'>
+
+<>
+<Stepper activeStep={3} orientation="vertical">
+
+<Step style={{marginTop: -36}}>
+<StepLabel optional="Plan an art style that drives all design decisions for your UI elements.">
+
+<h5 style={{marginTop: 36}}>Plan</h5>
+</StepLabel>
+
+</Step>
+
+<Step style={{marginTop: -36}}>
+<StepLabel optional="Wireframe the structure and flow of the information you want to communicate to your players.">
+
+<h5 style={{marginTop: 36}}>Wireframe</h5>
+</StepLabel>
+</Step>
+<Step style={{marginTop: -36}}>
+<StepLabel optional="Implement your UI layouts in Studio using both built-in and custom UI elements." >
+
+<h5 style={{marginTop: 36}}>Implement</h5>
+</StepLabel>
+</Step>
+</Stepper>
+</>
+
+</Grid>
+
+</Grid>
+</>
+
+<a href="user-interface-design/index.md">
   <Button
     variant="contained"
     size="large">

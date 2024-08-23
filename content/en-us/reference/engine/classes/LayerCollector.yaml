@@ -6,20 +6,15 @@ summary: |
   The base class of 2D UI containers which render `Class.GuiObject|GuiObjects`
   in layers.
 description: |
-  LayerCollector is the base class of 2D UI containers which render
+  **LayerCollector** is the base class of 2D UI containers which render
   `Class.GuiObject` descendants, such as `Class.ScreenGui`.
 
-  ## Caching static UI for performance improvements
+  For performance improvements, the appearance of a `Class.LayerCollector` is
+  cached until one of the following events occurs:
 
-  A Gui's appearance is cached until one of the following events occurs:
-
-  - A descendant is added to the Gui.
-  - A descendant is removed from the Gui.
-  - A property of a descendant of the Gui changes.
-  - A property of the Gui changes.
-
-  If any of these events occur, the Gui's appearance will be recomputed the next
-  frame it gets rendered.
+  - A descendant is added to or removed from it.
+  - A property of a descendant changes.
+  - A property of the `Class.LayerCollector` itself changes.
 code_samples:
 inherits:
   - GuiBase2d
@@ -30,10 +25,11 @@ deprecation_message: ''
 properties:
   - name: LayerCollector.Enabled
     summary: |
-      Toggles the visibility of the LayerCollector.
+      Toggles the visibility of this `Class.LayerCollector`.
     description: |
-      Toggles the visibility of the LayerCollector. When false, the UI contents
-      will not render, process user input, or update in response to changes.
+      Toggles the visibility of this `Class.LayerCollector`. When `false`, the
+      UI contents will not render, process user input, or update in response to
+      changes.
     code_samples:
     type: bool
     tags: []
@@ -48,18 +44,19 @@ properties:
       can_save: true
   - name: LayerCollector.ResetOnSpawn
     summary: |
-      Controls how this `Class.LayerCollector` behaves when its associated
-      `Class.Player` respawns.
+      Determines if the `Class.LayerCollector` resets (deletes itself and
+      re-clones into the player's `Class.PlayerGui`) every time the player's
+      character respawns.
     description: |
-      When set to false and this `Class.LayerCollector` is a direct child of
-      `Class.StarterGui`, this `Class.LayerCollector` will only be cloned into
-      each player's `Class.PlayerGui` once, and the `Class.LayerCollector` will
-      not be deleted when the player respawns.
+      When set to `false` and this `Class.LayerCollector` is a direct child of
+      `Class.StarterGui`, it will only be cloned into each player's
+      `Class.PlayerGui` once and it will not be deleted when the player's
+      character respawns.
 
-      When set to true, or if this `Class.LayerCollector` is an indirect
-      descendant of `Class.StarterGui`, this `Class.LayerCollector` will be
-      cloned into each player's `Class.PlayerGui` when they respawn, and it will
-      delete itself when the player respawns again.
+      When set to `true` (default), or if this `Class.LayerCollector` is an
+      **indirect** descendant of `Class.StarterGui`, it will be cloned into each
+      player's `Class.PlayerGui` when their character respawns, and it will
+      delete itself when the player's character respawns again.
     code_samples:
     type: bool
     tags: []
@@ -74,20 +71,22 @@ properties:
       can_save: true
   - name: LayerCollector.ZIndexBehavior
     summary: |
-      Controls how `Class.GuiObject.ZIndex` behaves on all descendants of the
-      LayerCollector.
+      Controls how `Class.GuiObject.ZIndex` behaves on all descendants of this
+      `Class.LayerCollector`.
     description: |
-      Controls how `Class.GuiObject.ZIndex` behaves on all descendants of the
-      LayerCollector.
+      Controls how `Class.GuiObject.ZIndex` behaves on all descendants of this
+      `Class.LayerCollector`.
+
+      With `Enum.ZIndexBehavior.Sibling` (default), children always render above
+      their parents, and the `Class.GuiObject.ZIndex|ZIndex` is used to decide
+      the order in which children of a single UI object will render over each
+      other.
 
       `Enum.ZIndexBehavior.Global` sorts all descendants according to the
-      ZIndex, then breaks ties using the hierarchy order. As a result,
-      descendants of a `Class.GuiObject` need to have a ZIndex value that's at
-      least as high as the parent, or they will render underneath their parent.
-
-      With `Enum.ZIndexBehavior.Sibling`, children always render above their
-      parents, and the ZIndex is used to decide the order in which children of a
-      single UI object will render over each other.
+      `Class.GuiObject.ZIndex|ZIndex`, then breaks ties using the hierarchy
+      order. As a result, descendants of a `Class.GuiObject` need to have a
+      `Class.GuiObject.ZIndex|ZIndex` value that's at least as high as the
+      parent, or they will render underneath their parent.
     code_samples:
     type: ZIndexBehavior
     tags: []

@@ -73,7 +73,7 @@ After the player clicked on the object with the lore, we needed a way to display
 
 <img src="../../assets/resources/mystery-of-duvall-drive/immersive-narrative/jacob-photo-album.png" width="60%" />
 
-`Class.TextLabel|TextLabels` and `Class.ImageLabel|ImageLabels` affect visual elements of their respective text and images, including their color, transparency, size, and arrangement. For `Class.TextLabel|TextLabels` specifically, you can adjust their `Class.TextLabel.TextScaled` and `Class.TextLabel.RichText` properties to control the layout and visual styling of text. `Class.TextLabel.TextScaled` allows you to scale text to fill the entire parent UI element's space, and `Class.TextLabel.RichText` allows you to use simple markup tags to style sections of text in bold, italics, color, or even different fonts! For more information, see [Automatic Sizing](../../ui/automatic-sizing.md#textscaled) and [Rich Text Markup](../../ui/rich-text.md).
+`Class.TextLabel|TextLabels` and `Class.ImageLabel|ImageLabels` affect visual elements of their respective text and images, including their color, transparency, size, and arrangement. For `Class.TextLabel|TextLabels` specifically, you can adjust their `Class.TextLabel.TextScaled` and `Class.TextLabel.RichText` properties to control the layout and visual styling of text. `Class.TextLabel.TextScaled` allows you to scale text to fill the entire parent UI element's space, and `Class.TextLabel.RichText` allows you to use simple markup tags to style sections of text in bold, italics, color, or even different fonts.
 
 <img src="../../assets/resources/mystery-of-duvall-drive/immersive-narrative/lore-template.png" width="100%" />
 

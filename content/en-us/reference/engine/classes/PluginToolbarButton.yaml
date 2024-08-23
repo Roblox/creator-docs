@@ -67,6 +67,13 @@ properties:
       `Class.PluginToolbarButton.Click|Click` event. Buttons are enabled by
       default.
 
+      When re-enabling this property, the plugin button's state won't be
+      remembered from the previous state in which the user left the button in.
+      Instead, it will default to the last state set by
+      `Class.PluginToolbarButton:SetActive()|SetActive()` or to the inactive
+      state if `Class.PluginToolbarButton:SetActive()|SetActive()` was never
+      used.
+
       Plugins should disable their buttons when the button action isn't relevant
       in the current context. For example, a plugin button that assigns random
       colors to selected should not be enabled when the selection contains no
@@ -119,6 +126,10 @@ methods:
     description: |
       This method can be used to manually set the active state of the plugin
       button.
+
+      When the `Class.PluginToolbarButton.Enabled|Enabled` property is toggled
+      back on, the button will either revert to the last state set by this
+      method or default to inactive if this method hasn't been used previously.
     code_samples:
     parameters:
       - name: active

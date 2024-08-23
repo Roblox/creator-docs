@@ -4,6 +4,7 @@ navigation:
     path: /cloud/open-cloud/
   - heading: Authentication
   - title: OAuth 2.0
+    path: /cloud/open-cloud/oauth2-overview
     section:
       - title: Overview
         path: /cloud/open-cloud/oauth2-overview
@@ -26,6 +27,7 @@ navigation:
   - title: Assets
     path: /cloud/open-cloud/usage-assets
   - title: Data Stores
+    path: /cloud/open-cloud/usage-data-stores
     section:
       - title: Overview
         path: /cloud/open-cloud/usage-data-stores

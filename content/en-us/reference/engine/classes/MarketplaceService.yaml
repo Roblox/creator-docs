@@ -290,6 +290,22 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: MarketplaceService:SignalUserSubscriptionStatusChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: subscriptionId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: MarketplaceService:GetDeveloperProductsAsync
     summary: |
       Returns a `Class.Pages` object which contains information for all of the
@@ -688,23 +704,6 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: MarketplaceService:GetUserSubscriptionDetailsInternalAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: subscriptionId
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: Dictionary
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: MarketplaceService:GetUserSubscriptionPaymentHistoryAsync
     summary: |
       Returns an `Library.table|Array` that contains up to one year of the
@@ -902,6 +901,23 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: MarketplaceService:PerformCancelSubscription
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: subscriptionId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: MarketplaceService:PlayerOwnsAsset
     summary: |
       Returns whether the given player has the given asset.
@@ -1092,19 +1108,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-  - name: MarketplaceService.PromptCancelSubscriptionRequested
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: subscriptionId
-        type: string
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
   - name: MarketplaceService.PromptGamePassPurchaseFinished
     summary: |
@@ -1304,6 +1307,19 @@ events:
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+  - name: MarketplaceService.UserSubscriptionStatusChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: subscriptionId
+        type: string
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
 callbacks:
   - name: MarketplaceService.ProcessReceipt

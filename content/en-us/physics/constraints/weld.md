@@ -1,5 +1,5 @@
 ---
-title: WeldConstraint
+title: Weld
 description: WeldConstraint attaches two BaseParts together and ensures they stay in the same relative position and orientation to each other.
 ---
 

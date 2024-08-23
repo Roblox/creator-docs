@@ -14,7 +14,8 @@ description: |
   `Class.ScrollingFrame.AutomaticCanvasSize` to determine whether and how
   resizing occurs based on child content.
 
-  For more information, see [Automatic Sizing](../../../ui/automatic-sizing.md).
+  For more information, see
+  [Automatic Sizing](../../../ui/size-modifiers.md#automatic-sizing).
 code_samples:
 tags: []
 deprecation_message: ''

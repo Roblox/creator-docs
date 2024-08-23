@@ -4,7 +4,7 @@ description: An overview of creation use case tutorials covering topics like mod
 hideInPageNavigation: true
 ---
 
-**Use case tutorials** focus on a specific task that you can complete in order to learn about various aspects of developing in Studio. In addition to teaching you how to use collections of related features to recreate common components for experiences, this short-form type of structured learning highlights techniques you can use to achieve effects for a variety of design requirements.
+<iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/x_RPLaXYhdQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Modeling</Typography>
 
@@ -204,11 +204,13 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </AccordionSummary>
 <AccordionDetails>
 
-- [Frames](../ui/frames.md)
+- [On-Screen UI](../ui/on-screen-containers.md)
+- [In-Experience UI](../ui/in-experience-containers.md)
 - [Labels](../ui/labels.md)
 - [Buttons](../ui/buttons.md)
+- [Frames](../ui/frames.md)
+- [UI Appearance Modifiers](../ui/appearance-modifiers.md)
 - [Proximity Prompts](../ui/proximity-prompts.md)
-- [UI Layout and Appearance](../ui/layout-and-appearance.md)
 - [Positioning and Sizing UI Objects](../ui/positioning-and-sizing.md)
 
 </AccordionDetails>

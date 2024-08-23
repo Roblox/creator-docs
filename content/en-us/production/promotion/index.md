@@ -20,8 +20,13 @@ The following table details promotional methods for experiences on the platform.
 </thead>
 <tbody>
   <tr>
+		<td>**Search Ads**</td>
+		<td>Promote your experiences in search results by creating search ads.  This form of advertising allows developers to target their ads to users using search, increasing the likelihood of engagement based off of specific keywords.
+		<br /><br />For more information, see [Search Ads](../../production/promotion/search-ads.md).</td>
+  </tr>
+  <tr>
 		<td>**Sponsored Experiences**</td>
-		<td>Advertise your experiences within the **Sponsored** category on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages, and as **Sponsored** tiles in search results. Each sponsored experience ad campaign lets you choose your audience, schedule the duration of your ad campaign, and specify your budget per day.<br /><br />For more information, see [Ads Manager](../../production/promotion/ads-manager.md).</td>
+		<td>Advertise your experiences within the **Sponsored** category on the [Home](https://www.roblox.com/home), and as **Sponsored** tiles in search results. Each sponsored experience ad campaign lets you choose your audience, schedule the duration of your ad campaign, and specify your budget per day.<br /><br />For more information, see [Ads Manager](../../production/promotion/ads-manager.md).</td>
   </tr>
 	<tr>
 		<td>**Immersive Portal Ad Campaigns**</td>
@@ -37,7 +42,7 @@ The following table details promotional methods for experiences on the platform.
 	</tr>
 	<tr>
 		<td>**Experience Notifications**</td>
-		<td>[Experience Notifications](../../cloud-services/experience-notifications.md) are a way for 13+ users to keep up with their favorite experiences through timely, personalized notifications. As the developer, you can determine what kinds of in‑experience activities are most important to notify your users about, as well as define the notification content.</td>
+		<td>[Experience Notifications](../../cloud/open-cloud/experience-notifications.md) are a way for 13+ users to keep up with their favorite experiences through timely, personalized notifications. As the developer, you can determine what kinds of in‑experience activities are most important to notify your users about, as well as define the notification content.</td>
 	</tr>
   <tr>
 		<td>**Special Sort Categories or Roblox Channels**</td>

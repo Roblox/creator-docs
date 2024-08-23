@@ -75,13 +75,13 @@ properties:
       can_load: false
       can_save: false
 methods:
-  - name: AdGui:forwardStateToLuaUI
+  - name: AdGui:GetSingleReportAdInfo
     summary: ''
     description: ''
     code_samples: []
     parameters: []
     returns:
-      - type: void
+      - type: Map
         summary: ''
     tags: []
     deprecation_message: ''

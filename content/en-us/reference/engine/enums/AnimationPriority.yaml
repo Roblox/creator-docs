@@ -4,21 +4,29 @@ summary: |
   The AnimationPriority Enum determines how concurrently-playing AnimationTracks
   contribute to the final animation.
 description: |
-  When multiple AnimationTracks are played concurrently by the same Animator and
-  affect the same animated joints, the tracks are evaluated in order from high
-  to low priority, per joint, while the total track weight sum remains less than
-  1.0. When the track weight sum reaches or exceeds 1.0 for a joint, evaluation
-  stops and no lower-priority tracks will be evaluated for that joint.
-  AnimationTracks with the same priority that are playing concurrently will
-  blend proportional to their track weights (normalized if the sum exceeds 1).
+  When multiple `Class.AnimationTrack|AnimationTracks` are played concurrently
+  by the same `Class.Animator` and affect the same animated joints, the tracks
+  are evaluated in order from high to low priority, per joint, while the total
+  track weight sum remains less than 1.0. When the track weight sum reaches or
+  exceeds 1.0 for a joint, evaluation stops and no lower-priority tracks will be
+  evaluated for that joint. `Class.AnimationTrack|AnimationTracks` with the same
+  priority that are playing concurrently will blend proportional to their track
+  weights (normalized if the sum exceeds 1).
 
   Higher priority animation will override lower priority ones per joint. The
-  priority order is: <br /> 1. Action4 (Highest Priority) <br /> 2. Action3
-  <br /> 3. Action2 <br /> 4. Action <br /> 5. Movement <br /> 6. Idle <br /> 7.
-  Core (Lowest Priority)
+  priority order is:
+
+  1. **Action4**
+  2. **Action3**
+  3. **Action2**
+  4. **Action**
+  5. **Movement**
+  6. **Idle**
+  7. **Core**
 
   Roblox's default character animations, including catalog animation bundles,
-  play at Core priority. Idle through Action4 priority are for developer use.
+  play at **Core** priority. **Idle** through **Action4** priority are for
+  developer use.
 code_samples:
 tags: []
 deprecation_message: ''

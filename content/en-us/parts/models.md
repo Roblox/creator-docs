@@ -110,7 +110,7 @@ See [Model Streaming Controls](../workspace/streaming.md#model-streaming-control
 
 ## Uploading and Distributing Models
 
-You can [distribute](../production/creator-store.md) models to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences. As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright and Creator Store [asset moderation](production/creator-store.md#asset-moderation) rules.
+You can [distribute](../production/creator-store.md) models to the [Creator Store](../production/creator-store.md) for other creators to use within their own experiences. As with any asset, all models must adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), the [DMCA Guidelines](../production/publishing/dmca-guidelines.md) regarding copyright and Creator Store [asset moderation](../production/creator-store.md#asset-moderation) rules.
 
 <Alert severity="info">
 You will soon be able to sell models on the Creator Store for **United States Dollars** (USD). For more information and to start onboarding, see [Selling on the Creator Store](../production/selling-on-creator-store.md).

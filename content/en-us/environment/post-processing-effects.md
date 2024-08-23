@@ -34,6 +34,7 @@ To add post-processing effects to either the `Class.Lighting` service or `Class.
    - [**ColorCorrectionEffect**](#color-correction)
    - [**DepthOfFieldEffect**](#depth-of-field)
    - [**SunRaysEffect**](#sun-rays)
+   - [**ColorGradingEffect**](#color-grading)
 
 1. Depending on your Studio settings, some effects may not appear. To increase
    your rendering quality level:
@@ -109,3 +110,23 @@ The `Class.SunRaysEffect` effect creates a halo of light with rays around the su
 or `Class.Lighting.TimeOfDay|TimeOfDay` property. Objects between the player's camera and the sun shape this effect, allowing for realistic visuals of light and shadow.
 
 <video src="../assets/lighting-and-effects/post-processing/Sun-Rays-Effect.mp4" controls width="800" alt="Video showing sun rays as the sun moves across the sky" ></video>
+
+## Color Grading
+
+The `Class.ColorGradingEffect` effect modifies how color values calculated by the renderer should be converted to the screen's color range, impacting the mood and appearance of your place.
+
+This effect's primary property is `Class.ColorGradingEffect.TonemapperPreset|TonemapperPreset`. The following values are available:
+
+- `Enum.TonemapperPreset.Default` &mdash; Sets the tone mapper to use the post‑2019 Roblox appearance which provides vivid colors and high contrasts.
+- `Enum.TonemapperPreset.Retro` &mdash; Sets the tone mapper to imitate the pre‑2019 Roblox appearance. Colors look less saturated and there's less contrast between them.
+
+If you wish to recreate a full pre‑2019 Roblox look for your experience, experiment with `Enum.TonemapperPreset.Retro` and set the brightness of all lights to a maximum of `1.0`.
+
+<Tabs>
+<TabItem label="Default">
+<img src="../assets/lighting-and-effects/post-processing/ColorGrading-Default.jpg" width="800" height="450" alt="Experience without any effects applied" />
+</TabItem>
+<TabItem label="Retro">
+<img src="../assets/lighting-and-effects/post-processing/ColorGrading-Retro.jpg" width="800" height="450" alt="Experience with retro ColorGrading applied" />
+</TabItem>
+</Tabs>

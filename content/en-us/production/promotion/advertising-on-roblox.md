@@ -26,12 +26,17 @@ Which advertising product is right for your content depends on the type of conte
   <tr>
     <td>[Immersive Ads](../../production/promotion/ads-manager.md)</td>
     <td>Experiences, Videos, Images </td>
-    <td>Within the **[Immersive Ad Units](../../production/monetization/immersive-ads.md)** publisher place within their experiences. </td>
+    <td>Within the **[Immersive Ad Units](../../production/monetization/immersive-ads.md)** publisher place within their experiences</td>
+  </tr>
+  <tr>
+		<td>[Search Ads](../../production/promotion/search-ads.md)</td>
+		<td>Sponsored experience tiles based off of keywords and relevance</td>
+    <td>Search results for experiences</td>
   </tr>
   <tr>
     <td>[Sponsored Experiences](../../production/promotion/ads-manager.md)</td>
     <td>All Ages, 9+, 13+ Experiences</td>
-    <td>Within the **Sponsored** category on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages, and as **Sponsored** tiles in search results</td>
+    <td>Within the **Sponsored** category on the [Home](https://www.roblox.com/home) page, and as **Sponsored** tiles in search results</td>
   </tr>
   <tr>
     <td>[Sponsored Items](../../production/promotion/sponsoring-items.md)</td>

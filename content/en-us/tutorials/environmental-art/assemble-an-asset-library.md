@@ -280,8 +280,8 @@ Note that it can be important to have a hitbox that precisely conforms to the sh
 
 <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-Doorway.png" alt="A doorway model with optimized hitbox meshes." width="50%"/>
 
-<Alert severity="info">
-    To visualize collision fidelity in Studio, open **Studio Settings** from the **File** menu, then enable **Show Decomposition Geometry**.
+<Alert severity="success">
+To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
 ### RenderFidelity

@@ -104,6 +104,18 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: AudioEmitter:GetInteractingListeners
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Objects
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: AudioEmitter:SetDistanceAttenuation
     summary: |
       Sets the distance attenuation curve that the `Class.AudioEmitter` should

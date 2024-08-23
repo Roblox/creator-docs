@@ -102,8 +102,8 @@ Inside the viewport, you can move the camera with the following controls. See al
   </tr>
 	<tr>
     <td>**Right Mouse Button**&nbsp;& **Mouse Scroll Wheel**</td>
-    <td>Pressing the right mouse button and scrolling the mouse wheel **up** increases the camera scroll speed. Conversely, pressing the right mouse button and scrolling the mouse wheel **down** reduces the camera scroll speed.<br /><br /><BetaAlert betaName="New Studio Camera Controls" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} /></td>
-  </tr>
+		<td>Pressing the right mouse button and scrolling the mouse wheel **up** increases the camera scroll speed. Conversely, pressing the right mouse button and scrolling the mouse wheel **down** reduces the camera scroll speed.<BetaAlert betaName="New Studio Camera Controls" leadIn="This feature is currently in beta. Enable it through " leadOut="." components={props.components} /><Alert severity="success">Camera scroll speed is also adjustable from the [Visualization Options](#visualization-options) menu in the upper‑right corner of the 3D viewport.</Alert></td>
+	</tr>
 </tbody>
 </table>
 
@@ -118,7 +118,7 @@ As you hover over parts and models in the viewport, they are outlined to indicat
 In more complex environments or when zoomed in, objects will commonly be hidden from your view by other objects in front. To select hidden objects without moving the camera around, hold <kbd>Alt</kbd> or <kbd>⌥</kbd> and click to perform **selection&nbsp;cycling** to the next further object behind the currently selected object.
 
 <figure>
-  <video src="../assets/studio/general/Selection-Cycling.mp4" controls width="80%" alt="Video showing selection cycling through a model"></video>
+  <video src="../assets/studio/general/Selection-Cycling.mp4" controls width="800" alt="Video showing selection cycling through a model"></video>
   <figcaption>Selection cycling</figcaption>
 </figure>
 
@@ -133,6 +133,12 @@ To display **outlines** and/or **bounding boxes** around selected objects, choos
 <img src="../assets/studio/general/View-Tab-Selection-Style.png" width="670" alt="Studio's View tab with the Selection Style tool highlighted." />
 
 <img src="../assets/studio/general/Selected-Object-Bounding-Box.jpg" width="800" alt="A warehouse environment with rope object's selection outline and bounding box highlighted." />
+
+### Visualization Options
+
+In the upper-right corner of the 3D viewport, you can quickly toggle or set common visualization options related to [on‑screen&nbsp;UI](../ui/on-screen-containers.md) overlays, [light sources](../effects/light-sources.md), physics simulation, character [pathfinding](../characters/pathfinding.md), and more. The menu also contains a control for viewing/setting the camera scroll speed.
+
+<img src="../assets/studio/general/Visualization-Options.png" width="780" alt="A close up view of the 3D viewport with the Visualization Options button indicated in the upper-right corner." />
 
 ## Commonly Used Windows
 
@@ -180,13 +186,13 @@ The [Toolbox](../projects/assets/toolbox.md) contains a selection of models, ima
 
 The **Output** window, accessible from the [View](../studio/view-tab.md) tab, displays errors captured from running scripts, messages from Roblox engine, messages from calls to `print()`, and errors from calls to `warn()`. See [Output Window](../studio/output.md) for further details.
 
-<img src="../assets/studio/general/View-Tab-Output.png" width="876" alt="Studio's View tab with the Output button highlighted." />
+<img src="../assets/studio/general/View-Tab-Output.png" width="768" alt="Studio's View tab with the Output button highlighted." />
 
 ### Command Bar
 
 The **Command Bar**, accessible from the [View](../studio/view-tab.md) tab, lets you execute Luau code outside of scripts. Similar to a terminal, pressing <kbd>↑</kbd> or <kbd>↓</kbd> while using the command bar navigates up and down among previously-executed commands. Clicking the small arrow on the right side similarly reveals a list of previously-executed commands.
 
-<img src="../assets/studio/general/View-Tab-Command-Bar.png" width="876" alt="Studio's View tab with the Command Bar button highlighted." />
+<img src="../assets/studio/general/View-Tab-Command-Bar.png" width="768" alt="Studio's View tab with the Command Bar button highlighted." />
 
 ## Customizing the Layout
 

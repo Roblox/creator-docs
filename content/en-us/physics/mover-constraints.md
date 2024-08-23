@@ -6,34 +6,77 @@ description: Mover constraints apply force or torque to move one or more assembl
 The physics engine includes the following `Class.Constraint|Constraints` that apply force or torque to move one or more assemblies. In addition, various [mechanical constraints](../physics/mechanical-constraints.md) are available which behave as conceptual mechanical connections, including hinges, springs, ropes, and more.
 
 <GridContainer numColumns="2">
-  <figure>
-		<video controls src="../assets/physics/constraints/LinearVelocity-Demo.mp4" width="100%" alt="Demo video of LinearVelocity constraint"></video>
-    <figcaption>[LinearVelocity](../physics/constraints/linear-velocity.md) applies force on an assembly to maintain a constant velocity along a 3D vector, line, or 2D plane</figcaption>
-  </figure>
-  <figure>
-		<video controls src="../assets/physics/constraints/AngularVelocity-Demo.mp4" width="100%" alt="Demo video of AngularVelocity constraint"></video>
-    <figcaption>[AngularVelocity](../physics/constraints/angular-velocity.md) applies torque on an assembly to maintain a constant angular velocity</figcaption>
-  </figure>
-	<figure>
-		<video controls src="../assets/physics/constraints/AlignPosition-Demo.mp4" width="100%" alt="Demo video of AlignPosition constraint"></video>
-    <figcaption>[AlignPosition](../physics/constraints/align-position.md) applies force to move two attachments together, or to move one attachment to a goal position</figcaption>
-  </figure>
-	<figure>
-		<video controls src="../assets/physics/constraints/AlignOrientation-Demo.mp4" width="100%" alt="Demo video of AlignOrientation constraint"></video>
-    <figcaption>[AlignOrientation](../physics/constraints/align-orientation.md) applies torque to align two attachments, or to align one attachment with a goal orientation</figcaption>
-  </figure>
-	<figure>
-		<video controls src="../assets/physics/constraints/VectorForce-Demo.mp4" width="100%" alt="Demo video of VectorForce constraint"></video>
-    <figcaption>[VectorForce](../physics/constraints/vector-force.md) applies constant linear force on an assembly</figcaption>
-  </figure>
-	<figure>
-		<video controls src="../assets/physics/constraints/Torque-Demo.mp4" width="100%" alt="Demo video of Torque constraint"></video>
-    <figcaption>[Torque](../physics/constraints/torque.md) applies constant torque on an assembly from its center of mass</figcaption>
-  </figure>
-	<figure>
-		<video controls src="../assets/physics/constraints/LineForce-Demo.mp4" width="100%" alt="Demo video of LineForce constraint"></video>
-    <figcaption>[LineForce](../physics/constraints/line-force.md) applies force along the theoretical line connecting its two attachments</figcaption>
-  </figure>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/linear-velocity.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Linear Velocity</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/LinearVelocity-Demo.mp4" />
+<p></p>
+<figcaption>[LinearVelocity](../physics/constraints/linear-velocity.md) applies force on an assembly to maintain a constant velocity along a 3D vector, line, or 2D plane</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/angular-velocity.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Angular Velocity</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/AngularVelocity-Demo.mp4" />
+<p></p>
+<figcaption>[AngularVelocity](../physics/constraints/angular-velocity.md) applies torque on an assembly to maintain a constant angular velocity</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/align-position.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Align Position</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/AlignPosition-Demo.mp4" />
+<p></p>
+<figcaption>[AlignPosition](../physics/constraints/align-position.md) applies force to move two attachments together, or to move one attachment to a goal position</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/align-orientation.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Align Orientation</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/AlignOrientation-Demo.mp4" />
+<p></p>
+<figcaption>[AlignOrientation](../physics/constraints/align-orientation.md) applies torque to align two attachments, or to align one attachment with a goal orientation</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/vector-force.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Vector Force</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/VectorForce-Demo.mp4" />
+<p></p>
+<figcaption>[VectorForce](../physics/constraints/vector-force.md) applies constant linear force on an assembly</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/torque.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Torque</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/Torque-Demo.mp4" />
+<p></p>
+<figcaption>[Torque](../physics/constraints/torque.md) applies constant torque on an assembly from its center of mass</figcaption>
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent>
+<Button href="../physics/constraints/line-force.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Line Force</Button>
+<p></p>
+<CardMedia component="video" controls src="../assets/physics/constraints/LineForce-Demo.mp4" />
+<p></p>
+<figcaption>[LineForce](../physics/constraints/line-force.md) applies force along the theoretical line connecting its two attachments</figcaption>
+</CardContent>
+</Card>
+
 </GridContainer>
 
 ## Constraint Visualization
@@ -54,6 +97,10 @@ To accurately visualize constraints in Studio, you can use the following options
 	<Grid item><img src="../assets/misc/Box-Label-C.png" width="40" /></Grid>
 	<Grid item xs={10} sm={11} md={11} lg={11}><p>**Scale** &mdash; Relative scale of visualizations.</p></Grid>
 </Grid>
+
+<Alert severity="success">
+In addition to the above visualization, you can view colored outlines around mechanisms (groups of parts that share simulation step and [network ownership](../physics/network-ownership.md)) by toggling on **Mechanisms** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+</Alert>
 
 ## Creating Constraints
 

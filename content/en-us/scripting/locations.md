@@ -43,7 +43,7 @@ To change a script run context, select it in the Explorer and change the value i
 
 This image shows which Explorer window locations can contain client scripts. Remember, `ReplicatedFirst` and `ReplicatedStorage` can contain scripts with a run context of `Client`, whereas the `Starter` containers should use local scripts.
 
-<img width="50%" alt="Diagram showing which script locations run on clients." src="../assets/scripting/client-model.png" />
+<img width="500px" alt="Diagram showing which script locations run on clients." src="../assets/scripting/client-model.png" />
 
 ## Example Project Structure
 

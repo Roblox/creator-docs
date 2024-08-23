@@ -178,21 +178,17 @@ Generalized iteration also lets you use the `__iter` metamethod to create a cust
 local myTable = {1, 2, 3, 4, 5}
 
 myMetatable = {
-	__iter = function(self)
-		local i = #self
-		local firstRun = true
+	__iter = function(t)
+		local i = #t + 1
+
 		return function()
-			if firstRun then
-				firstRun = false
-				return i, self[i]
-			else
-				i -= 1
-				if i > 0 then
-					return i, self[i]
-				end
+			i -= 1
+
+			if i > 0 then
+				return i, t[i]
 			end
 		end
-	end
+	end,
 }
 
 setmetatable(myTable, myMetatable)
@@ -200,6 +196,14 @@ setmetatable(myTable, myMetatable)
 for i, v in myTable do
 	print(i, v)
 end
+
+--[[ Resulting output:
+5 5
+4 4
+3 3
+2 2
+1 1
+]]
 ```
 
 #### Arrays

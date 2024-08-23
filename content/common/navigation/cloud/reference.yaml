@@ -43,3 +43,6 @@ navigation:
     versions:
       - name: v1
         path: /reference/cloud/universes-api/v1
+  - heading: Legacy
+  - title: Legacy Resources
+    path: /cloud/open-cloud/legacy

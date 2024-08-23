@@ -19,6 +19,7 @@ navigation:
       - title: Overview
         path: /projects/
       - title: Architecture
+        path: /projects/data-model
         section:
           - title: Data Model
             path: /projects/data-model
@@ -27,6 +28,7 @@ navigation:
           - title: Instance Streaming
             path: /workspace/streaming
       - title: Working in Teams
+        path: /projects/setting-up-a-team
         section:
           - title: Setting Up a Team
             path: /projects/setting-up-a-team
@@ -42,6 +44,7 @@ navigation:
       - title: Overview
         path: /projects/assets/
       - title: Managing
+        path: /projects/assets/manager
         section:
           - title: Asset Manager
             path: /projects/assets/manager
@@ -93,7 +96,7 @@ navigation:
             section:
               - title: Overview
                 path: /physics/mechanical-constraints
-              - title: BallSocket
+              - title: Ball Socket
                 path: /physics/constraints/ball-socket
               - title: Hinge
                 path: /physics/constraints/hinge
@@ -103,7 +106,7 @@ navigation:
                 path: /physics/constraints/cylindrical
               - title: Spring
                 path: /physics/constraints/spring
-              - title: TorsionSpring
+              - title: Torsion Spring
                 path: /physics/constraints/torsion-spring
               - title: Universal
                 path: /physics/constraints/universal
@@ -117,26 +120,26 @@ navigation:
                 path: /physics/constraints/weld
               - title: Rigid
                 path: /physics/constraints/rigid
-              - title: NoCollision
+              - title: No Collision
                 path: /physics/constraints/no-collision
           - title: Mover Constraints
             path: /physics/mover-constraints
             section:
               - title: Overview
                 path: /physics/mover-constraints
-              - title: LinearVelocity
+              - title: Linear Velocity
                 path: /physics/constraints/linear-velocity
-              - title: AngularVelocity
+              - title: Angular Velocity
                 path: /physics/constraints/angular-velocity
-              - title: AlignPosition
+              - title: Align Position
                 path: /physics/constraints/align-position
-              - title: AlignOrientation
+              - title: Align Orientation
                 path: /physics/constraints/align-orientation
-              - title: VectorForce
+              - title: Vector Force
                 path: /physics/constraints/vector-force
               - title: Torque
                 path: /physics/constraints/torque
-              - title: LineForce
+              - title: Line Force
                 path: /physics/constraints/line-force
           - title: Sleep System
             path: /physics/sleep-system
@@ -189,6 +192,7 @@ navigation:
       - title: Properties and Attributes
         path: /scripting/attributes
       - title: Events
+        path: /scripting/events/
         section:
           - title: Overview
             path: /scripting/events/
@@ -310,7 +314,7 @@ navigation:
             path: /players/avatar-inspect-menu
           - title: Avatar Context Menu
             path: /players/avatar-context-menu
-          - title: Disabling Default UI Elements
+          - title: Disabling Default UI
             path: /players/disabling-ui
   - title: Input
     path: /input/
@@ -361,20 +365,22 @@ navigation:
             path: /ui/2D-paths
       - title: Positioning and Sizing
         path: /ui/positioning-and-sizing
-      - title: Layout and Design
+      - title: Layout Structures
         section:
-          - title: Layouts and Constraints
-            path: /ui/layout-and-appearance
-          - title: Automatic Sizing
-            path: /ui/automatic-sizing
-          - title: 9-Slice
-            path: /ui/9-slice
-          - title: Cross-Platform Design
-            path: /ui/cross-platform-design
+          - title: List Layouts
+            path: /ui/list-flex-layouts
+          - title: Grids and Tables
+            path: /ui/grid-table-layouts
+          - title: Page Layouts
+            path: /ui/page-layouts
       - title: Appearance Modifiers
         path: /ui/appearance-modifiers
+      - title: Size Modifiers and Constraints
+        path: /ui/size-modifiers
       - title: UI Animation/Tweens
         path: /ui/animation
+      - title: 9-Slice Design
+        path: /ui/9-slice
       - title: Rich Text Markup
         path: /ui/rich-text
       - title: Proximity Prompts
@@ -420,6 +426,7 @@ navigation:
           - title: Legacy Chat System
             path: /chat/legacy/legacy-chat-system
   - title: Performance Optimization
+    path: /performance-optimization/
     section:
       - title: Overview
         path: /performance-optimization/
@@ -500,6 +507,7 @@ navigation:
           - title: Selling on the Creator Store
             path: /production/selling-on-creator-store
       - title: Guidelines
+        path: /production/promotion/experience-guidelines
         section:
           - title: Experience Guidelines
             path: /production/promotion/experience-guidelines
@@ -531,6 +539,8 @@ navigation:
             path: /production/promotion/advertising-on-roblox
           - title: Ads Manager
             path: /production/promotion/ads-manager
+          - title: Search Ads
+            path: /production/promotion/search-ads
           - title: Sponsoring Items
             path: /production/promotion/sponsoring-items
           - title: Complying with Advertising Standards
@@ -611,7 +621,7 @@ navigation:
             path: /production/analytics/performance
           - title: Error Report
             path: /production/analytics/error-report
-      - title: Analytics Dashboard
+      - title: Dashboards
         path: /production/analytics/analytics-dashboard
         section:
           - title: Overview
@@ -635,6 +645,8 @@ navigation:
             path: /production/analytics/economy-events
           - title: Funnel Events
             path: /production/analytics/funnel-events
+          - title: Custom Events
+            path: /production/analytics/custom-events
           - title: Custom Fields
             path: /production/analytics/custom-fields
   - title: Community

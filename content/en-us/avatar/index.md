@@ -105,14 +105,14 @@ After creating your items, you can begin the process of selling your assets on t
 </Card>
 
 <Card style={{height: '100%'}}>
-  <CardContent>
-    <Typography variant="h5" component="div">Intellectual Property</Typography>
-    <br />
-    Understand how IP works on the Roblox ecosystem to protect yourself and the community.
-  </CardContent>
-  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-    <Button href="../marketplace/intellectual-property.md" size='large' color='primary' variant='text'>Learn More</Button>
-  </CardActions>
+<CardContent>
+<Typography variant="h5" component="div">Intellectual Property</Typography>
+<br />
+Understand how IP works on the Roblox ecosystem to protect yourself and the community.
+</CardContent>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../marketplace/intellectual-property.md" size='large' color='primary' variant='text'>Learn More</Button>
+</CardActions>
 </Card>
 </GridContainer> <br />
 
@@ -177,4 +177,5 @@ Roblox provides additional resources and tools to enable creation. Check out the
     <Button href="../avatar/resources.md#add-ons-and-tools" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
+<Card />
 </GridContainer>

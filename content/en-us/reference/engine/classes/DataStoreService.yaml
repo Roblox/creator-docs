@@ -83,7 +83,7 @@ methods:
           **(Optional)** A `Class.DataStoreOptions` instance to enable
           experimental features and v2 API features.
     returns:
-      - type: GlobalDataStore
+      - type: DataStore
         summary: |
           A `Class.DataStore` instance with provided name and optional scope.
     tags: []
@@ -101,7 +101,7 @@ methods:
       - get-a-globaldatastore-instance
     parameters: []
     returns:
-      - type: GlobalDataStore
+      - type: DataStore
         summary: ''
     tags: []
     deprecation_message: ''

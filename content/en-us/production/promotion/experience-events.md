@@ -117,7 +117,7 @@ Users who click **Notify Me** for an upcoming event will receive stream notifica
 		<figcaption>Notification on phone lock screen</figcaption>
 	</figure>
 	<figure>
-		<img src="../../assets/promotion/experience-eventsNotification-Roblox-App.png" width="375" alt="Event notification in Roblox app" />
+		<img src="../../assets/promotion/experience-events/Notification-Roblox-App.png" width="375" alt="Event notification in Roblox app" />
 		<figcaption>Notification in Roblox app</figcaption>
 	</figure>
 </GridContainer>

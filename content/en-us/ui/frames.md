@@ -5,9 +5,9 @@ description: Frames are containers for GuiObjects.
 
 Frames are `Class.GuiObject|GuiObjects` that act as containers for other `Class.GuiObject|GuiObjects`. You can use them for UI that either displays on a user's [screen](../ui/on-screen-containers.md) or on a [surface](../ui/in-experience-containers.md) within the experience.
 
-When you manipulate frames, you also manipulate the `Class.GuiObject|GuiObjects` they contain. For example, if you change the position of a `Class.Frame` object with a child `Class.TextLabel`, you also change the position of that label. In addition, all frames are also `Class.GuiObject|GuiObjects`, so you can customize their properties, such as `Class.GuiObject.BackgroundColor3|BackgroundColor3`, `Class.GuiObject.BorderMode|BorderMode`, `Class.GuiObject.Transparency|Transparency`, and `Class.GuiObject.Rotation|Rotation`, to fit the aesthetics of your experience.
+<img src="../assets/ui/ui-objects/Frame-Example.jpg" width="840" />
 
-<img src="../assets/ui/container-frames/Frame-Example.jpg" width="800" />
+When you manipulate frames, you also manipulate the `Class.GuiObject|GuiObjects` they contain. For example, if you change the position of a `Class.Frame` object with a child `Class.TextLabel`, you also change the position of that label. In addition, all frames are also `Class.GuiObject|GuiObjects`, so you can customize their properties, such as `Class.GuiObject.BackgroundColor3|BackgroundColor3`, `Class.GuiObject.BorderMode|BorderMode`, `Class.GuiObject.Transparency|Transparency`, and `Class.GuiObject.Rotation|Rotation`, to fit the aesthetics of your experience.
 
 ## Frame Types
 
@@ -17,17 +17,17 @@ There are three primary frame types, each serving a specific purpose in UI desig
 
 A `Class.Frame` is a plain, empty rectangle. If you parent `Class.GuiObject|GuiObjects` to the `Class.Frame`, they display within the rectangle. Aside from its common use as a container, you can also use a `Class.Frame` for background design on a screen. For example, to visually separate other UI elements, you can scale a `Class.Frame` to be thin and long until it becomes a line, or create multiple Frames with different `Class.GuiObject.BackgroundColor3|BackgroundColor3` properties.
 
-<img src="../assets/ui/container-frames/Frame-Screen-Empty.jpg" width="800" />
+<img src="../assets/ui/ui-objects/Frame-Empty.jpg" width="800" />
 
 ### ScrollingFrame
 
 A `Class.ScrollingFrame` is a frame made up of two elements: a customizable **canvas** and **scroll bar**. This type of frame lets you display a lot of information in a confined space, and it's useful for menus and lists.
 
-<img src="../assets/ui/container-frames/ScrollingFrame-Example.jpg" width="800" />
+<img src="../assets/ui/ui-objects/ScrollingFrame-Example.jpg" width="840" />
 
 You can set the position and size of a `Class.ScrollingFrame` through its respective `Class.GuiObject.Position|Position` and `Class.GuiObject.Size|Size` properties. Note that the scrollbar takes up a portion of the `Class.ScrollingFrame` size.
 
-#### Canvas
+<h4>Canvas</h4>
 
 The **canvas** is the area inside of a `Class.ScrollingFrame` that is able to contain other `Class.GuiObject|GuiObjects`. If one of the dimensions of the canvas is wider than the overall size of the `Class.ScrollingFrame`, the scroll bar is visible, otherwise it is hidden.
 
@@ -35,7 +35,7 @@ The `Class.ScrollingFrame.CanvasSize|CanvasSize` property determines how large o
 
 The `Class.ScrollingFrame.CanvasPosition|CanvasPosition` property determines your default position within the canvas in pixels, and it sets the scroll bar position accordingly. Note that this property doesn't do anything when the scroll bar isn't visible.
 
-#### Scroll Bar
+<h4>Scroll Bar</h4>
 
 The **scroll bar** displays your position within the content of the `Class.ScrollingFrame` that isn't visible. There are two types of scroll bars: a vertical scroll bar and a horizontal scroll bar. A vertical scroll bar allows you to scroll up and down, while a horizontal scroll bar allows you to scroll left and right.
 

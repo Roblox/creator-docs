@@ -157,8 +157,8 @@ per frame on both the server and the client.
   to be or will have mechanisms that have more constraints and joints than they
   need.
 - **Overly precise collision detection** - Mesh parts have a
-  [collision fidelity](../workspace/collisions.md) property for detecting
-  collision, which offers a variety of modes with different levels of
+  `Class.MeshPart.CollisionFidelity|CollisionFidelity` property for detecting
+  collision which offers a variety of modes with different levels of
   performance impact. Precise collision detection mode for mesh parts has the
   most expensive performance cost and takes the engine longer to compute.
 
@@ -185,9 +185,10 @@ per frame on both the server and the client.
     invisible parts when possible.
   - For objects that don't require collisions, disable collisions and use box or
     hull fidelity, since the collision geometry is still stored in memory.
-  - You can render collision geometry for debug purposes in Studio using **File** > **Studio Settings** > **Studio** > **Visualization** > **Show Decomposition Geometry**.
+  - You can render collision geometry for debug purposes in Studio by toggling
+  	on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 
-    Alternatively, apply the `CollisionFidelity=Precise` filter to the Explorer, which shows a count of all mesh parts with the precise fidelity and allows you to easily select them.
+    Alternatively, you can apply the `CollisionFidelity = Precise` filter to the [Explorer](../studio/explorer.md#property-filters) which shows a count of all mesh parts with the precise fidelity and allows you to easily select them.
 
   - For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
 
@@ -210,26 +211,22 @@ per frame on both the server and the client.
 
 ## Physics Memory Usage
 
-Physics movement and collision detection consumes memory. Mesh parts have a [collision fidelity](../workspace/collisions.md) property that determines the approach that's used to evaluate the collision bounds of the mesh.
+Physics movement and collision detection consumes memory. Mesh parts have a `Class.MeshPart.CollisionFidelity|CollisionFidelity` property that determines the approach that's used to evaluate the collision bounds of the mesh.
 
 ### Common Problem
 
 The default and precise collision detection modes consumes significantly more memory than the two other modes with lower fidelity collision shapes.
 
-If you see high levels of memory consumption under **PhysicsParts**, you might need to explore reducing the collision fidelity of parts in your experience.
+If you see high levels of memory consumption under **PhysicsParts**, you might need to explore reducing the [collision fidelity](../workspace/collisions.md#mesh-and-solid-model-collisions) of objects in your experience.
 
 ### How to Mitigate
 
 To reduce memory used for collision fidelity:
 
-- Reduce the number of unique meshes.
-- For parts that do not need collisions, disable their collisions using by setting `CanCollide`, `CanTouch` and `CanQuery` to false.
-- Reduce fidelity of collisions, using the `Class.MeshPart.CollisionFidelity` setting. `Box` has the lowest memory overhead, and `Default` and `Precise` are generally more expensive.
-  - It's generally safe to set any small anchored part's collision fidelity to `Box`.
+- For parts that do not need collisions, disable their collisions by setting `Class.BasePart.CanCollide`, `Class.BasePart.CanTouch` and `Class.BasePart.CanQuery` to `false`.
+- Reduce fidelity of collisions using the `Class.MeshPart.CollisionFidelity|CollisionFidelity` setting. `Enum.CollisionFidelity.Box|Box` has the lowest memory overhead, and `Enum.CollisionFidelity.Default|Default` and `Enum.CollisionFidelity.Precise|Precise` are generally more expensive.
+  - It's generally safe to set any small anchored part's collision fidelity to `Enum.CollisionFidelity.Box|Box`.
   - For very complex large meshes, you may want to build your own collision mesh out of smaller objects with box collision fidelity.
-
-You can visualize the collision mesh in your environment by rendered collision
-meshes using **Show Decomposition Geometry** in Studio settings.
 
 ## Humanoids
 

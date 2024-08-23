@@ -107,7 +107,7 @@ The **Editor** button opens a window with tools for creating and shaping static 
 
 ## Toolbox
 
-The [Toolbox]/projects/assets/toolbox) includes all of the models, images, meshes, audio, and more that you've published, or those published by groups you belong to. It also includes a selection of assets made by Roblox or Roblox community members.
+The [Toolbox](../projects/assets/toolbox.md) includes all of the models, images, meshes, audio, and more that you've published, or those published by groups you belong to. It also includes a selection of assets made by Roblox or Roblox community members.
 
 <img src="../assets/studio/general/Home-Tab-Toolbox.png" width="716" alt="Toolbox indicated in Home tab" />
 

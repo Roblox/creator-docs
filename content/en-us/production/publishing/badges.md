@@ -99,7 +99,7 @@ end
 
 ### Checking Earned Badges
 
-The following script checks when any player enters the experience, then verifies if that player owns the badge with the [matching ID](#locating-badge-ids) set in the variable `BADGE_ID`.
+The following script checks when any player enters the experience, then uses the `Class.BadgeService:UserHasBadgeAsync()` method to verify if that player owns the badge with the [matching ID](#locating-badge-ids) set in the variable `BADGE_ID`. You can also verify badge ownership in batches using the `Class.BadgeService:CheckUserBadgesAsync()` method.
 
 ```lua
 local BadgeService = game:GetService("BadgeService")

@@ -1,11 +1,11 @@
 name: CoreGuiType
 type: enum
 summary: |
-  The CoreGuiType Enum represents all `Class.CoreGui` "types" which are
-  available, such as the `Class.Backpack` and Leaderboard.
+  Represents all `Class.CoreGui` "types" which are available, such as the
+  `Class.Backpack` and text chat window.
 description: |
-  The CoreGuiType Enum represents all `Class.CoreGui` "types" which are
-  available, such as the `Class.Backpack` and Leaderboard.
+  The **CoreGuiType** enum represents all `Class.CoreGui` "types" which are
+  available, such as the `Class.Backpack` and text chat window.
 code_samples:
 tags: []
 deprecation_message: ''
@@ -13,50 +13,50 @@ items:
   - name: PlayerList
     value: 0
     summary: |
-      The CoreGui displaying the list of in-game players.
+      Dynamically updated `Class.Players` list, commonly used as a
+      [leaderboard](../../../players/leaderboards.md).
     tags: []
     deprecation_message: ''
   - name: Health
     value: 1
     summary: |
-      The CoreGui displaying a player's health.
+      The character's `Class.Humanoid.Health|Health` bar.
     tags: []
     deprecation_message: ''
   - name: Backpack
     value: 2
     summary: |
-      The CoreGui displaying a player's backpack (containing a player's tools,
-      gear, etc.).
+      The character's `Class.Backpack` which contains
+      [in‑experience tools](../../../players/tools.md).
     tags: []
     deprecation_message: ''
   - name: Chat
     value: 3
     summary: |
-      The CoreGui used to display and send in-game chat message with other
-      players.
+      The [text chat](../../../chat/in-experience-text-chat.md) window.
     tags: []
     deprecation_message: ''
   - name: All
     value: 4
     summary: |
-      Refers to all available CoreGuis.
+      Refers to all available core UI.
     tags: []
     deprecation_message: ''
   - name: EmotesMenu
     value: 5
     summary: |
-      Allows the Emotes Menu to be disabled using the existing
-      `Class.StarterGui:SetCoreGuiEnabled()` API. Disabling all CoreGui types
-      using `Enum.CoreGuiType.All` would also disable the Emotes Menu.
+      Popup menu of character [emotes](../../../characters/emotes.md).
     tags: []
     deprecation_message: ''
   - name: SelfView
     value: 6
     summary: ''
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This option is deprecated and has no effect.
   - name: Captures
-    summary: ''
+    summary: |
+      A "capture" button along the right side of the screen.
     value: 7
     tags: []
     deprecation_message: ''

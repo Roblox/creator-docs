@@ -7,12 +7,16 @@ tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      Sets the tone mapper to use the post‑2019 Roblox appearance which provides
+      vivid colors and high contrasts.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Retro
-    summary: ''
+    summary: |
+      Sets the tone mapper to imitate the pre‑2019 Roblox appearance. Colors
+      look less saturated and there is less contrast between them.
     value: 1
     tags: []
     deprecation_message: ''

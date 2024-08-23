@@ -25,44 +25,6 @@ description: |
   use a `Datatype.Vector3` within their parameters, such as
   `Datatype.CFrame:PointToObjectSpace()`.
 
-  #### Math Operations
-
-  The following math operations are valid for the `Datatype.Vector3` data type:
-
-  <table>
-    <thead>
-      <tr>
-        <td>Operation</td>
-        <td>Description</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>Datatype.Vector3</code>&nbsp;<code>+</code>&nbsp;<code>Datatype.Vector3</code></td>
-        <td>Produces a <code>Datatype.Vector3</code> with each component of the second added to the corresponding component of the first.</td>
-      </tr>
-      <tr>
-        <td><code>Datatype.Vector3</code>&nbsp;<code>-</code>&nbsp;<code>Datatype.Vector3</code></td>
-        <td>Produces a <code>Datatype.Vector3</code> with each component of the second subtracted from the corresponding component of the first.</td>
-      </tr>
-      <tr>
-        <td><code>Datatype.Vector3</code>&nbsp;<code>*</code>&nbsp;<code>Datatype.Vector3</code></td>
-        <td>Produces a <code>Datatype.Vector3</code> with each component of the second multiplied by the corresponding component of the first.</td>
-      </tr>
-      <tr>
-        <td><code>Datatype.Vector3</code>&nbsp;<code>/</code>&nbsp;<code>Datatype.Vector3</code></td>
-        <td>Produces a <code>Datatype.Vector3</code> with each component of the first divided by the corresponding component of the second.</td>
-      </tr>
-      <tr>
-        <td><code>Datatype.Vector3</code>&nbsp;<code>*</code>&nbsp;<code>number</code></td>
-        <td>Produces a <code>Datatype.Vector3</code> with each component multiplied by the number.</td>
-      </tr>
-      <tr>
-        <td><code>Datatype.Vector3</code>&nbsp;<code>/</code>&nbsp;<code>number</code></td>
-        <td>Produces a <code>Datatype.Vector3</code> with each component divided by the number.</td>
-      </tr>
-    </tbody>
-  </table>
 code_samples:
 tags: []
 deprecation_message: ''
@@ -531,11 +493,11 @@ functions:
 math_operations:
   - operation: +
     summary: |
-      Produces a `Datatype.Vector3` with each component of the second added to
-      the corresponding component of the first.
+      Produces a `Datatype.Vector3` by adding each component of the first vector
+      to the corresponding component of the second.
     description: |
-      Produces a `Datatype.Vector3` with each component of the second added to
-      the corresponding component of the first.
+      Produces a `Datatype.Vector3` by adding each component of the first vector
+      to the corresponding component of the second.
     type_a: Vector3
     type_b: Vector3
     return_type: Vector3
@@ -544,11 +506,11 @@ math_operations:
     deprecation_message: ''
   - operation: '-'
     summary: |
-      Produces a `Datatype.Vector3` with each component of the second subtracted
-      from the corresponding component of the first.
+      Produces a `Datatype.Vector3` by subtracting each component of the second
+      vector from the corresponding component of the first.
     description: |
-      Produces a `Datatype.Vector3` with each component of the second subtracted
-      from the corresponding component of the first.
+      Produces a `Datatype.Vector3` by subtracting each component of the second
+      vector from the corresponding component of the first.
     type_a: Vector3
     type_b: Vector3
     return_type: Vector3
@@ -557,11 +519,11 @@ math_operations:
     deprecation_message: ''
   - operation: '*'
     summary: |
-      Produces a `Datatype.Vector3` with each component of the second multiplied
-      by the corresponding component of the first.
+      Produces a `Datatype.Vector3` by multiplying each component of the first
+      vector by the corresponding component of the second.
     description: |
-      Produces a `Datatype.Vector3` with each component of the second multiplied
-      by the corresponding component of the first.
+      Produces a `Datatype.Vector3` by multiplying each component of the first
+      vector by the corresponding component of the second.
     type_a: Vector3
     type_b: Vector3
     return_type: Vector3
@@ -570,11 +532,24 @@ math_operations:
     deprecation_message: ''
   - operation: /
     summary: |
-      Produces a `Datatype.Vector3` with each component of the first divided by
-      the corresponding component of the second.
+      Produces a `Datatype.Vector3` by dividing each component of the first
+      vector by the corresponding component of the second.
     description: |
-      Produces a `Datatype.Vector3` with each component of the first divided by
-      the corresponding component of the second.
+      Produces a `Datatype.Vector3` by dividing each component of the first
+      vector by the corresponding component of the second.
+    type_a: Vector3
+    type_b: Vector3
+    return_type: Vector3
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: //
+    summary: |
+      Produces a `Datatype.Vector3` by **floor dividing** each component of the
+      first vector by the corresponding component of the second.
+    description: |
+      Produces a `Datatype.Vector3` by **floor dividing** each component of the
+      first vector by the corresponding component of the second.
     type_a: Vector3
     type_b: Vector3
     return_type: Vector3
@@ -583,11 +558,11 @@ math_operations:
     deprecation_message: ''
   - operation: '*'
     summary: |
-      Produces a `Datatype.Vector3` with each component multiplied by the
-      number.
+      Produces a `Datatype.Vector3` by multiplying each component of the
+      provided vector by the number.
     description: |
-      Produces a `Datatype.Vector3` with each component multiplied by the
-      number.
+      Produces a `Datatype.Vector3` by multiplying each component of the
+      provided vector by the number.
     type_a: Vector3
     type_b: number
     return_type: Vector3
@@ -596,9 +571,24 @@ math_operations:
     deprecation_message: ''
   - operation: /
     summary: |
-      Produces a `Datatype.Vector3` with each component divided by the number.
+      Produces a `Datatype.Vector3` by dividing each component of the provided
+      vector by the number.
     description: |
-      Produces a `Datatype.Vector3` with each component divided by the number.
+      Produces a `Datatype.Vector3` by dividing each component of the provided
+      vector by the number.
+    type_a: Vector3
+    type_b: number
+    return_type: Vector3
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - operation: //
+    summary: |
+      Produces a `Datatype.Vector3` by **floor dividing** each component of the
+      provided vector by the number.
+    description: |
+      Produces a `Datatype.Vector3` by **floor dividing** each component of the
+      provided vector by the number.
     type_a: Vector3
     type_b: number
     return_type: Vector3

@@ -36,10 +36,10 @@ You can import meshes into Studio using the [3D Importer](../art/modeling/3d-imp
 
 If the mesh file you are importing contains objects using specific naming conventions or contains facial animation data, the 3D Importer automatically detects and converts them into the following objects instead of `Class.MeshPart`:
 
-- `Class.Attachment`: Objects with `_Att` at the end of their names.
-- `Class.WrapTarget`: Objects with `_OuterCage` at the end of their names.
-- `Class.WrapLayer`: Objects with both `_InnerCage` `_OuterCage` at the end of their names.
-- `Class.FaceControls`: Objects containing avatar character heads and the appropriate facial animation data.
+- `Class.Attachment` — Objects with `_Att` at the end of their names.
+- `Class.WrapTarget` — Objects with `_OuterCage` at the end of their names.
+- `Class.WrapLayer` — Objects with both `_InnerCage` `_OuterCage` at the end of their names.
+- `Class.FaceControls` — Objects containing avatar character heads and the appropriate facial animation data.
 
 If you want to bulk-import meshes along with non-3D assets, such as images and audio, you can use the [Asset Manager](../projects/assets/manager.md). However, the Asset Manager doesn't support importing meshes with rigging, skinning, and animation data, accessories, or characters with facial animations.
 
@@ -62,13 +62,12 @@ Studio supports four PBR texture maps, each corresponding to a visual characteri
 
 You can apply PBR textures using one of the following objects:
 
-- `Class.SurfaceAppearance`: Applies PBR textures to the mesh surface and doesn't affect its geometry.
-- `Class.MaterialVariant`: Represents a custom material that not only applies PBR textures to the mesh surface but also adds physical properties.
+- `Class.SurfaceAppearance` — Applies PBR textures to the mesh surface and doesn't affect its geometry.
+- `Class.MaterialVariant` — Represents a custom material that not only applies PBR textures to the mesh surface but also adds physical properties.
 
 To add PBR textures to a mesh:
 
 1. In the **Explorer** window, hover over the MeshPart object. Click the **⊕** button and select **SurfaceAppearance** or **MaterialVariant**.
-
 2. In the **Properties** window, edit the properties corresponding to the PBR texture maps.
 
 <Alert severity="info">
@@ -85,7 +84,7 @@ If the mesh you import to Studio doesn't come with texture data, or you want to 
 4. In the **Properties** window, select the **TextureID** field and paste the asset ID of the texture.
 
 <Alert severity="warning">
-    If your mesh has existing PBR textures, setting a Texture ID can't override the PBR textures.
+If your mesh has existing PBR textures, setting a Texture ID can't override the PBR textures.
 </Alert>
 
 </TabItem>
@@ -126,12 +125,10 @@ You can dynamically control a mesh's level of detail using its `Enum.RenderFidel
 
 **Collision fidelity** determines how closely the visual representation of a mesh matches its physical bounds. The `Class.MeshPart.CollisionFidelity` property has the following options, in order of fidelity and performance impact from lowest to highest:
 
-- **Box**: Creates a bounding collision box, ideal for small or non-interactive objects.
-- **Hull**: Generates a convex hull, suitable for objects with less pronounced indentations or cavities.
-- **Default**: Produces an approximate collision shape that supports concavity, suitable for complex objects with semi-detailed interaction needs.
-- **PreciseConvexDecomposition**: Offers the most precise fidelity but still not a 1:1 representation of the visual. This option has the most expensive performance cost and takes longer for the engine to compute.
-
-To visualize collision fidelity in Studio, open **File** > **Studio Settings** > **Studio** > **Visualization**, then enable **Show Decomposition Geometry**.
+- **Box** — Creates a bounding collision box, ideal for small or non‑interactive objects.
+- **Hull** — Generates a convex hull, suitable for objects with less pronounced indentations or cavities.
+- **Default** — Produces an approximate collision shape that supports concavity, suitable for complex objects with semi-detailed interaction needs.
+- **PreciseConvexDecomposition** — Offers the most precise fidelity but still not a 1:1 representation of the visual. This option has the most expensive performance cost and takes longer for the engine to compute.
 
 <Tabs>
   <TabItem label="Original Mesh">
@@ -150,6 +147,10 @@ To visualize collision fidelity in Studio, open **File** > **Studio Settings** >
     <img src="../assets/physics/collisions/Collision-Fidelity-Precise.jpg" width="600" height="500" alt="Collision fidelity of PreciseConvexDecomposition shown for mesh" />
   </TabItem>
 </Tabs>
+
+<Alert severity="success">
+To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
+</Alert>
 
 For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../performance-optimization/improving.md#physics-computation). For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
 
