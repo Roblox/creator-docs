@@ -238,6 +238,21 @@ functions:
         summary: ''
     tags:
     code_samples:
+  - name: bit32.byteswap
+    summary: |
+      Returns the given number with the order of the bytes swapped.
+    description: |
+      Returns the given number with the order of the bytes swapped.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
   - name: bit32.countlz
     summary: |
       Returns the number of consecutive zero bits in the 32-bit representation
