@@ -300,11 +300,11 @@ functions:
     code_samples:
   - name: os.clock
     summary: |
-      Returns elapsed CPU time in seconds with high precision, intended for use
-      in benchmarking.
+      Returns elapsed time in seconds since an arbitrary baseline with sub-microsecond precision.
     description: |
-      Returns elapsed CPU time in seconds. This value has high precision (about
-      1 microsecond) and is intended for use in benchmarking.
+      Returns elapsed time in seconds since an arbitrary baseline with sub-microsecond precision. This function is useful for comparing durations between two events that occur on the same computer, and is the best option for benchmarking.
+
+      Unlike with functions such as `Library.os.time()` or `Library.DateTime.now()`, adjustments to the system clock (such as by the user or [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol)) do not cause time to jump forwards or backwards.
 
       ```lua
       -- Record the initial time:
