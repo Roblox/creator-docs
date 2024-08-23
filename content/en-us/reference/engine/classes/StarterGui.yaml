@@ -182,16 +182,12 @@ methods:
       disabled using `Class.StarterGui:SetCoreGuiEnabled()`.
     description: |
       This function returns whether the given `Enum.CoreGuiType` is enabled or
-      if it has been disabled using `Class.StarterGui:SetCoreGuiEnabled()`.
+      if it has been disabled using `Class.StarterGui:SetCoreGuiEnabled()`. This
+      function should be called on the client.
 
-      This function should be called on the client and is used by the core
-      scripts to help determine which core GUI elements to show.
-
-      GetCoreGuiEnabled only returns _false_ if the given `Enum.CoreGuiType` has
-      been disabled using `Class.StarterGui:SetCoreGuiEnabled()`. Setting
-      _TopbarEnabled_ to _false_ using `Class.StarterGui:SetCore()` hides all
-      `Enum.CoreGuiType|CoreGuiTypes` and does not affect the result of
-      function.
+      Note that setting `"TopbarEnabled"` to `false` using
+      `Class.StarterGui:SetCore()` hides all `Enum.CoreGuiType|CoreGuiTypes` but
+      does not affect the result of this function.
     code_samples:
       - StarterGui-GetCoreGuiEnabled1
     parameters:
@@ -873,10 +869,8 @@ methods:
       This function sets whether the `Class.CoreGui` element associated with the
       given `Enum.CoreGuiType` is enabled or disabled.
 
-      The top bar can not be disabled using this function. To disable the top
-      bar, set _TopbarEnabled_ to _false_ using `Class.StarterGui:SetCore()`.
-      This will also disable the element associated with all
-      `Enum.CoreGuiType|CoreGuiTypes`.
+      The top bar cannot be disabled using this function. To disable it, set
+      `"TopbarEnabled"` to `false` using `Class.StarterGui:SetCore()`.
     code_samples:
       - StarterGui-SetCoreGuiEnabled1
     parameters:

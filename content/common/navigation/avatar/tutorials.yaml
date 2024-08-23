@@ -21,6 +21,7 @@ navigation:
   - title: Publishing Eyebrows and Eyelashes
     path: /art/accessories/publishing-eyebrows-eyelashes
   - title: Testing Characters
+    path: /art/characters/testing/
     section:
       - title: Overview
         path: /art/characters/testing/

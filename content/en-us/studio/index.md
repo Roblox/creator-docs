@@ -19,7 +19,7 @@ Create almost anything you can imagine by combining [parts](../parts/index.md) a
 <figure>
 Overlay or integrate UI components like [labels](../ui/labels.md), [buttons](../ui/buttons.md), and [text inputs](../ui/text-input.md) to provide more ways for users to interact with your experiences.
 
-<img src="../assets/ui/button-text-input/TextBox-Example.jpg" alt="Example pop-up UI that requires players to type in their characters name. The background is a brightly lit dungeon." />
+<img src="../assets/ui/ui-objects/ScreenGui-Example.jpg" width="840" alt="Example ScreenGui with various GuiObject children, including a Frame, TextLabel, TextBox, and ImageButton." />
 </figure>
 
 <figure>

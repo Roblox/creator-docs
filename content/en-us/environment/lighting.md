@@ -216,7 +216,7 @@ the environment and metal appears more realistic.
 
 The `Class.Lighting.Technology|Technology`
 property determines the lighting system for rendering the 3D
-environment. There are four available lighting systems, in order of fidelity and performance impact from highest to lowest:
+environment. There are three lighting systems, in order of fidelity and performance impact from highest to lowest:
 
 - **Future** &mdash; Features the most advanced technology for high-fidelity lighting and shadows.
   - Extends detailed shadow support to all types of lights, with complex shadow technology for sun shadows and a more realistic lighting and shadow technology for point lights.
@@ -229,8 +229,6 @@ environment. There are four available lighting systems, in order of fidelity and
   - Provides less precise lighting and softer shadows compared to more advanced shadow mapping techniques like **ShadowMap**.
   - Only recommended for low-end devices.
 
-- **Compatibility** (not recommended) &mdash; Simulates the deprecated legacy technology using the **Voxel** system.
-
 <Tabs>
 <TabItem label="Future">
 <img src="../assets/lighting-and-effects/lighting-properties/Technology-Future.jpg" width="800" height="450" alt="Lighting with Technology setting of Future" />
@@ -240,8 +238,5 @@ environment. There are four available lighting systems, in order of fidelity and
 </TabItem>
 <TabItem label="Voxel">
 <img src="../assets/lighting-and-effects/lighting-properties/Technology-Voxel.jpg" width="800" height="450" alt="Lighting with Technology setting of Voxel" />
-</TabItem>
-<TabItem label="Compatibility">
-<img src="../assets/lighting-and-effects/lighting-properties/Technology-Compatibility.jpg" width="800" height="450" alt="Lighting with Technology setting of Compatibility" />
 </TabItem>
 </Tabs>
