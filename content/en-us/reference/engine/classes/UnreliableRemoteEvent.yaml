@@ -32,10 +32,15 @@ description: |
   others can be passed as a parameter when a `Class.UnreliableRemoteEvent` is
   fired, as well as Luau types such as numbers, strings, and booleans, although
   you should carefully explore the
-  [limitations](../../../scripting/events/remote.md#argument-limitations). There
-  is also a 900 byte limit to the payload of an `Class.UnreliableRemoteEvent`.
-  Larger payloads will be dropped. See the corresponding method description for
-  more details.
+  [limitations](../../../scripting/events/remote.md#argument-limitations).
+
+  There is a 900 byte limit to the payload of an `Class.UnreliableRemoteEvent`.
+  Larger payloads are dropped. Like all events, the
+  `Class.UnreliableRemoteEvent` methods encode and compress certain object
+  types, such as buffers, which shrinks the payload size and can make it
+  difficult to verify whether you are under the limit prior to firing the event.
+  If you frequently reach this limit, consider whether a standard
+  `Class.RemoteEvent` is the better fit for your use case.
 code_samples: []
 inherits:
   - BaseRemoteEvent

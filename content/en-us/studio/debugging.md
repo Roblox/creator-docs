@@ -322,7 +322,59 @@ The **Developer Console** provides a wide array of details including client and 
 
 ### Log Files
 
-When a script prints or errors in Studio or the Player app, the app records the message in a log file in the local file system. These files are located in different places depending on the operating system:
+When a script prints or errors in Studio or the Player app, the app records the message in a log file in the local file system. These files are located in different places depending on the operating system.
 
-- On Windows, logs are in the directory `%LOCALAPPDATA%\Roblox\logs`. Sort the folder by date modified. The names of log files start with the format `log_XXXXX`. Logs with the same `XXXXX` value are from the same Studio session.
-- On Mac, logs are in the directory `~/Library/Logs/Roblox`. In the Finder, click the **Go** menu, select **Go to Folder**, type in that directory, and confirm.
+#### Windows
+
+To access log files on Windows:
+
+1. Open **File Explorer**.
+2. Navigate to the `%LOCALAPPDATA%\Roblox\logs` directory.
+3. Double-click a log to open it. Logs with the same `XXXXX` value are from the same Studio session.
+
+#### Mac
+
+To access log files on Mac:
+
+1. Open **Finder**.
+2. In the menu bar, select **Go** &rang; **Go to Folder...**.
+3. In the dialog, enter `~/Library/Logs/Roblox`.
+4. Double-click the result to navigate to the Roblox logs directory.
+5. Inside the directory, double-click a log to open it.
+
+#### iOS
+
+You can collect iOS logs using a Mac or using an iOS device.
+
+<Tabs>
+  <TabItem key = "1" label="Mac">
+
+To access iOS log files on a Mac:
+
+1. Connect the iOS device to a Mac.
+2. Open **Finder**.
+3. Navigate to **Utilities** and open the **Console** application.
+4. To populate real-time logs in the Console application, select the iOS device from the sidebar, click the **Start** button, and reproduce the issue on the iOS device.
+5. To populate archived logs in the Console application, run `sudo log collect --device-name "[iOS Device Name]"` in the **Terminal**. Make sure there are no apostrophes in the device's name or you might get an error when running the command.
+
+  </TabItem>
+  <TabItem key = "2" label="iOS device">
+
+To access iOS log files on an iOS device:
+
+1. Press and hold both volume buttons and the top or side button on the iOS device for 1 to 1.5 seconds to start the **sysdiagnose** program. This process might take up to 10 minutes to finish.
+2. Navigate to **Settings** &rang; **Privacy & Security** &rang; **Analytics & Improvements** &rang; **Analytics Data** to access the log files.
+3. Tap on the a log file to open it.
+
+  </TabItem>
+</Tabs>
+
+#### Android
+
+To access log files on Android:
+
+1. Navigate to **Settings** &rang; **System** &rang; **Developer options**.
+2. Toggle **Developer options** on.
+3. On a computer, download and install [Android Studio](https://developer.android.com/studio).
+4. In Android Studio, click **Logcat**.
+5. Connect the Android device to the computer to automatically populate Logcat with logs.
