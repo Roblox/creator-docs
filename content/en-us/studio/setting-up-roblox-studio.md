@@ -1,6 +1,6 @@
 ---
 title: Roblox Studio Setup
-description: Explains how to install Roblox Studio on your system.
+description: Explains how to install  k9kokolRoblox Studio on your system.
 ---
 
 Create immersive 3D experiences on Roblox with **Roblox Studio**, a free application available on Windows and Mac.
