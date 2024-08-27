@@ -32,7 +32,7 @@
           {
             "name": "readMask",
             "in": "query",
-            "description": "Asset metadata fields to retrieve, including the description, display name, icon, and previews. Example: `description%2CdisplayName`, `previews`.",
+            "description": "Asset metadata fields to retrieve, including the description, display name, icon, social links, and previews. Examples: `description%2CdisplayName`, `previews%2CtwitchSocialLink`.",
             "schema": {
               "type": "string"
             }
@@ -82,13 +82,13 @@
             "maxInPeriod": 60
           }
         }
-      } ,
+      },
       "post": {
         "tags": ["Assets"],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-cloud-api-operation-name": "Create Asset",
         "summary": "Creates an asset with provided content and metadata.",
-        "description": "Creates an asset with provided content and metadata.",
+        "description": "Creates an asset with provided content and metadata.\n\nYou can't add [SocialLink](#SocialLink) objects when you create an asset. Instead, use [Update Asset](#PATCH-v1-assets-_assetId_).",
         "operationId": "Assets_CreateAsset",
         "parameters": [
           {
@@ -166,7 +166,7 @@
         "x-roblox-cloud-api-operation": true,
         "x-roblox-cloud-api-operation-name": "Update Asset",
         "summary": "Updates an asset with provided content and metadata.",
-        "description": "Updates an asset with provided content and metadata, including the description, display name, icon, and previews. Currently can only update the content body for **Models**. Icons must be **Image** assets with square dimensions. Previews must be either **Image** or **YoutubeVideo** assets.",
+        "description": "Updates an asset with provided content and metadata, including the description, display name, icon, social links, and previews. Currently can only update the content body for **Models**. Icons and Previews must be **Image** assets. Icons must have square dimensions.",
         "operationId": "Assets_UpdateAsset",
         "parameters": [
           {
@@ -190,11 +190,11 @@
             "name": "updateMask",
             "in": "query",
             "required": false,
-            "description": "Asset metadata fields to update, including the description, display name, icon, and previews. Example: `description%2CdisplayName`, `previews`.",
+            "description": "Asset metadata fields to update, including the description, display name, icon, and previews. Examples: `description%2CdisplayName`, `previews%2CtwitchSocialLink`.",
             "schema": {
-                "type": "string"
+              "type": "string"
             }
-        }
+          }
         ],
         "requestBody": {
           "content": {
@@ -254,7 +254,11 @@
           },
           {
             "language": "Update a List of Previews",
-            "script": "curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/{assetId}?updateMask=previews' \\\n--header 'x-api-key: {apiKey}' \\\n--form 'request=\"{\\\"assetId\\\": {assetId}, \\\"previews\\\": [{\\\"asset\\\": \\\"assets/123\\\", \\\"altText\\\": \\\"Your alt text.\\\"}]}\"'"
+            "script": "curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/{assetId}?updateMask=previews' \\\n--header 'x-api-key: {apiKey}' \\\n--form 'request=\"{\\\"assetId\\\": \\\"{assetId}\\\", \\\"previews\\\": [{\\\"asset\\\": \\\"assets/123\\\", \\\"altText\\\": \\\"Your alt text.\\\"}]}\"'"
+          },
+          {
+            "language": "Update Social Links",
+            "script": "curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/{assetId}?updateMask=twitchSocialLink%2CgithubSocialLink' \\\n--header 'x-api-key: {apiKey}' \\\n--form 'request=\"{\\\"assetId\\\": \\\"{assetId}\\\", \\\"twitchSocialLink\\\": {\\\"title\\\": \\\"Optional title\\\", \\\"uri\\\": \\\"https://twitch.tv/your-channel\\\"}, \\\"githubSocialLink\\\": {\\\"title\\\": \\\"Optional title\\\", \\\"uri\\\": \\\"https://github.com/your-repo\\\"}}\"'"
           }
         ],
         "x-roblox-throttling-limit": {
@@ -274,25 +278,27 @@
         "description": "Retrieve a specific asset version by the asset ID and the version number.",
         "operationId": "Assets_GetAssetVersion",
         "parameters": [
-            {
-                "name": "assetId",
-                "in": "path",
-                "description": "The unique identifier of the asset.",
-                "required": true,
-                "schema": {"type": "string"}
-            },
-            {
-                "name": "versionNumber",
-                "in": "path",
-                "description": "The version number.",
-                "required": true,
-                "schema": {"type": "string"}
-            }
+          {
+            "name": "assetId",
+            "in": "path",
+            "description": "The unique identifier of the asset.",
+            "required": true,
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "versionNumber",
+            "in": "path",
+            "description": "The version number.",
+            "required": true,
+            "schema": { "type": "string" }
+          }
         ],
         "responses": {
-            "200": {"description": "Asset version retrieved successfully."},
-            "403": {"description": "Forbidden - API key without Read scope or user doesn't have access."},
-            "404": {"description": "Asset or Asset Version not found."}
+          "200": { "description": "Asset version retrieved successfully." },
+          "403": {
+            "description": "Forbidden - API key without Read scope or user doesn't have access."
+          },
+          "404": { "description": "Asset or Asset Version not found." }
         },
         "security": [
           {
@@ -314,10 +320,10 @@
             "maxInPeriod": 60
           }
         }
-    }
-},
-"/assets/v1/assets/{assetId}/versions": {
-    "get": {
+      }
+    },
+    "/assets/v1/assets/{assetId}/versions": {
+      "get": {
         "tags": ["Assets"],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-cloud-api-operation-name": "List Asset Versions",
@@ -325,31 +331,33 @@
         "description": "List all versions of a specific asset, with optional pagination.",
         "operationId": "listAssetVersions",
         "parameters": [
-            {
-                "name": "assetId",
-                "in": "path",
-                "description": "The unique identifier of the asset.",
-                "required": true,
-                "schema": {"type": "string"}
-            },
-            {
-                "name": "maxPageSize",
-                "in": "query",
-                "description": "Specifies the number of asset versions to include in the response. Valid values range from 1 to 50 (inclusive). Defaults to 8 when not provided.",
-                "schema": {"type": "integer"}
-            },
-            {
-                "name": "pageToken",
-                "in": "query",
-                "description": "A token for pagination. The value is obtained from a previous request and allows for retrieving the next page of asset versions.",
-                "schema": {"type": "string"}
-            }
+          {
+            "name": "assetId",
+            "in": "path",
+            "description": "The unique identifier of the asset.",
+            "required": true,
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "Specifies the number of asset versions to include in the response. Valid values range from 1 to 50 (inclusive). Defaults to 8 when not provided.",
+            "schema": { "type": "integer" }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A token for pagination. The value is obtained from a previous request and allows for retrieving the next page of asset versions.",
+            "schema": { "type": "string" }
+          }
         ],
         "responses": {
-            "200": {"description": "Asset versions listed successfully."},
-            "400": {"description": "Bad request - invalid parameters."},
-            "403": {"description": "Forbidden - API key without Read scope or user doesn't have access."},
-            "404": {"description": "Asset not found."}
+          "200": { "description": "Asset versions listed successfully." },
+          "400": { "description": "Bad request - invalid parameters." },
+          "403": {
+            "description": "Forbidden - API key without Read scope or user doesn't have access."
+          },
+          "404": { "description": "Asset not found." }
         },
         "security": [
           {
@@ -371,10 +379,10 @@
             "maxInPeriod": 60
           }
         }
-    }
-},
-"/assets/v1/assets/{assetId}/versions:rollback": {
-    "post": {
+      }
+    },
+    "/assets/v1/assets/{assetId}/versions:rollback": {
+      "post": {
         "tags": ["Assets"],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-cloud-api-operation-name": "Rollback Asset Version",
@@ -382,39 +390,41 @@
         "description": "Rollback an asset to a specific previous version.",
         "operationId": "Assets_RollbackAssetVersion",
         "parameters": [
-            {
-                "name": "assetId",
-                "in": "path",
-                "description": "The unique identifier of the asset.",
-                "required": true,
-                "schema": {"type": "string"}
-            },
-            {
-              "name": "assetVersion",
-              "in": "formData",
-              "description": "The asset version path in the format of `assets/{assetId}/versions/{versionNumber}`.",
-              "required": true,
-              "schema": {"type": "string"}
+          {
+            "name": "assetId",
+            "in": "path",
+            "description": "The unique identifier of the asset.",
+            "required": true,
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "assetVersion",
+            "in": "formData",
+            "description": "The asset version path in the format of `assets/{assetId}/versions/{versionNumber}`.",
+            "required": true,
+            "schema": { "type": "string" }
           }
         ],
         "requestBody": {
-            "required": true,
-            "content": {
-                "application/json": {
-                    "schema": {
-                        "type": "object",
-                        "properties": {
-                            "assetVersion": {"type": "string"}
-                        }
-                    }
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "assetVersion": { "type": "string" }
                 }
+              }
             }
+          }
         },
         "responses": {
-            "200": {"description": "Asset rolled back successfully."},
-            "400": {"description": "Bad request - invalid request body."},
-            "403": {"description": "Forbidden - API key without Write scope or user doesn't have access."},
-            "404": {"description": "Asset or Asset Version not found."}
+          "200": { "description": "Asset rolled back successfully." },
+          "400": { "description": "Bad request - invalid request body." },
+          "403": {
+            "description": "Forbidden - API key without Write scope or user doesn't have access."
+          },
+          "404": { "description": "Asset or Asset Version not found." }
         },
         "security": [
           {
@@ -436,8 +446,8 @@
             "maxInPeriod": 60
           }
         }
-    }
-},
+      }
+    },
     "/v1/operations/{operationId}": {
       "get": {
         "tags": ["Assets"],
@@ -560,7 +570,10 @@
             "items": {
               "$ref": "#/components/schemas/Preview"
             },
-            "description": "A list of previews, each with an asset path and alt text. Previews must be either **Image** or **YoutubeVideo** assets."
+            "description": "A list of previews, each with an asset path and alt text. Previews must be **Image** assets."
+          },
+          "socialLink": {
+            "$ref": "#/components/schemas/SocialLink"
           }
         },
         "description": "Represents an asset."
@@ -643,6 +656,20 @@
           }
         },
         "description": "An asset preview."
+      },
+      "SocialLink": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "An optional title for the social media link. Not used on the Creator Hub."
+          },
+          "uri": {
+            "type": "string",
+            "description": "The URI for the social media link. Must match the expected format for the type of link. For example, the title for a `twitchSocialLink` object must be of the format `https://twitch.tv/your-channel`."
+          }
+        },
+        "description": "A social media link for the asset. Maximum of three per asset. Object name can be any of: <ul><li>`facebookSocialLink`</li><li>`twitterSocialLink`</li><li>`youtubeSocialLink`</li><li>`twitchSocialLink`</li><li>`discordSocialLink`</li><li>`githubSocialLink`</li><li>`robloxSocialLink`</li><li>`guildedSocialLink`</li><li>`devForumSocialLink`</li></ul>For syntax, see the sample request under [Update Asset](#PATCH-v1-assets-_assetId_)."
       },
       "Status": {
         "type": "object",

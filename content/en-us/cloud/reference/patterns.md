@@ -3,8 +3,30 @@ title: Patterns
 description: Explains considerations and guidelines for making proper requests to Open Cloud endpoints and interpreting responses.
 ---
 
-Some Open Cloud endpoints utilize special patterns when making requests and
-receiving responses.
+This page covers common patterns with the Open Cloud APIs, particularly around making requests and handling responses.
+
+## Paths
+
+To make a request to the Open Cloud APIs, you must first form a URL. This URL is a combination of the base URL (`https://apis.roblox.com/cloud/v2`), the Open Cloud API path (for example, `/universes/{universe-id}/places/{place-id}/user-restrictions`), and any query parameters (for example, `?maxPageSize=25`). A full request URL might look like this:
+
+```json
+https://apis.roblox.com/cloud/v2/users/4687549151/inventory-items?maxPageSize=100
+```
+
+Many paths, including the example above, have **path parameters**, designated by curly brackets in the API reference. Path parameters are just variables that you insert before making the request and are almost always IDs: user IDs, group IDs, place IDs, etc. IDs are often numeric, but not necessarily; for example, data store and memory store IDs support a wider character set.
+
+Some resources have multiple path patterns, visible under the **Resource Paths** header in the API reference. For example, the URL for [List User Restrictions](/cloud/reference/UserRestriction#List-User-Restrictions) can be either of the following:
+
+- `https://apis.roblox.com/cloud/cloud/v2/universes/{universe-id}/user-restrictions`
+- `https://apis.roblox.com/cloud/cloud/v2/universes/{universe-id}/places/{place-id}/user-restrictions`
+
+You can probably infer the difference between the two: some user restrictions apply to an entire universe (experience), whereas others apply to specific places within a universe. Aside from the small addition to the path and extra path parameter, the calls are identical.
+
+Many APIs return a path as part of their response, which you can use to make further requests. If an API needs more than a few seconds to fulfill a request, it often returns an [operation](#long-running-operations) rather than the resource or response itself.
+
+## Content Length and Type
+
+Many API calls, particularly those that create or update resources, require a JSON request body. If your request has a body, be sure to include the `Content-Length` and `Content-Type` headers. Most HTTP clients add these headers automatically.
 
 ## Pagination
 
@@ -39,11 +61,6 @@ GET /cloud/v2/users/{userId}/inventory-items?maxPageSize=25&pageToken=aaaBBB
 
 Aside from the `pageToken`, you must use the same query for pagination to work
 properly. Altering any filter parameter results in a 400 error.
-
-## Content Length and Type
-
-If your request includes a body, be sure to include the `Content-Length` and
-`Content-Type` headers. Most HTTP clients add these headers automatically.
 
 ## Long Running Operations
 

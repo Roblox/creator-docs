@@ -1,5 +1,5 @@
 ---
-title: PrismaticConstraint
+title: Prismatic
 description: PrismaticConstraint allows two attachments to slide along one axis but not rotate, with optional assigned power for mechanisms like sliding doors and elevator platforms.
 ---
 

@@ -127,9 +127,14 @@ items:
     value: 19
     tags: []
     deprecation_message: ''
+  - name: MetaOS
+    summary: ''
+    value: 20
+    tags: []
+    deprecation_message: ''
   - name: None
     summary: |
       The client's operating system is unknown.
-    value: 20
+    value: 21
     tags: []
     deprecation_message: ''

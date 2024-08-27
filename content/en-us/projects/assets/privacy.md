@@ -71,7 +71,7 @@ To grant a creator permission to use a private asset in any of these scenarios:
 Once an experience has permission to use a private asset, you cannot revoke access to the private asset.
 </Alert>
 
-To grant an experience permission to use one of your private assets, the experience must be editable to either you or a group that you belong to in which you have the [Edit all group experiences](../../projects/groups.md#roles-and-permissions) permmission. After you or a creator that you gave permission to use a private asset explicitly grants an experience further permission to use that private asset, anyone who has edit access to that experience gains implicit permission to:
+To grant an experience permission to use one of your private assets, the experience must be editable to either you or a group that you belong to in which you have the [Edit all group experiences](../../projects/groups.md#roles-and-permissions) permission. After you or a creator that you gave permission to use a private asset explicitly grants an experience further permission to use that private asset, anyone who has edit access to that experience gains implicit permission to:
 
 - Copy and paste the asset into another place file within that experience.
 - Use its asset ID in the **Properties** window or in scripts within any place file within the experience.

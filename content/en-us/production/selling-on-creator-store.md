@@ -123,9 +123,9 @@ If your seller eligibility is suspended, either due to a change of seller inform
 Reimbursements for customers **deduct from the seller's account**. This may occur if:
 
 - A customer requests a refund or chargeback for an asset.
-- An asset is moderated after customers have already purchased it.
+- An asset is moderated after customers have already purchased it, and the moderation decision is not successfully appealed within 5 days. Uploading a new version of the moderated asset will not prevent reimbursements.
 
-When a refund occurs, Roblox removes the asset from the customer's inventory. If a very high proportion of sales for an asset come from accounts with an exceptional history of chargebacks, the asset is taken off sale and your payouts are frozen. If you have grounds to appeal this action, you can file a request with [Roblox support](https://en.help.roblox.com/hc/en-us/articles/360000272703).
+When a refund occurs, Roblox removes the asset from the customer's inventory. If a very high proportion of sales for an asset come from accounts with an exceptional history of chargebacks, the asset is taken off sale and your payouts are frozen. If you have grounds to appeal this action, you can file a request with [Roblox support](https://en.help.roblox.com/hc/en-us/articles/360000245263-Appeal-Your-Content-or-Account-Moderation).
 
 ## Transactions and Upcoming Payouts
 

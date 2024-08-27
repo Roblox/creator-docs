@@ -471,26 +471,20 @@ functions:
       print(select(-1, "A", "B", "C")) --> C
       ```
 
-      Returns the total number of arguments that were passed after the `cmd`
-      argument, which must be `"#"` to use `select` in this fashion.
+      If the `index` argument is set to `"#"`, the number of arguments that were
+      passed after it is returned.
 
       ```lua
       print(select("#", "A", "B", "C")) --> 3
-      ```
-
-      If `cmd` is a number, the function will return all values after that
-      index.
-
-      ```lua
-      print(select(2, "A", "B", "C")) --> B C
       ```
     parameters:
       - name: index
         type: Variant
         default:
         summary: |
-          The index of the argument to return all arguments after in `args`. or
-          must be "#".
+          The index of the argument to return all arguments after in `args`. If
+          it's set to `"#"`, the number of arguments that were passed after it
+          is returned.
       - name: args
         type: Tuple
         default:

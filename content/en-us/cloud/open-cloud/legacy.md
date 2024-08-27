@@ -17,55 +17,19 @@ This page summarizes the available operations, but you might find the Swagger do
 - Base URL: `https://apis.roblox.com/legacy-badges`
 - Authentication types: OAuth 2.0 and API key
 
-### UpdateBadge
-
-```json
-PATCH v1/badges/{badgeId}
-```
-
-Scope: `legacy-universe.badge:write`
+**API** | **Path** | **Scope**
+:--- | :--- | :---
+UpdateBadge | `PATCH v1/badges/{badgeId}` | `legacy-universe.badge:write`
 
 ## Followings API
 
 - Base URL: `https://apis.roblox.com/legacy-followings`
 - Authentication types: OAuth 2.0 and API key
 
-### Follow
-
-```json
-POST v1/users/{userId}/universes/{universeId}
-```
-
-Scope: `legacy-universe.following:write`
-
-### Unfollow
-
-```json
-DELETE v1/users/{userId}/universes/{universeId}
-```
-
-Scope: `legacy-universe.following:write`
-
-### GetFollowingStatus
-
-```json
-GET v1/users/{userId}/universes/{universeId}/status
-```
-
-Scope: `legacy-universe.following:read`
-
-### GetFollowings
-
-```json
-GET v1/users/{userId}/universes
-```
-
-Scope: `legacy-universe.following:read`
-
-### GetFollowingsV2
-
-```json
-GET v2/users/{userId}/universes
-```
-
-Scope: `legacy-universe.following:read`
+**API** | **Path** | **Scope**
+:--- | :--- | :---
+Follow | `POST v1/users/{userId}/universes/{universeId}` | `legacy-universe.following:write`
+Unfollow | `DELETE v1/users/{userId}/universes/{universeId}` | `legacy-universe.following:write`
+GetFollowingStatus | `GET v1/users/{userId}/universes/{universeId}/status` | `legacy-universe.following:read`
+GetFollowings | `GET v1/users/{userId}/universes` | `legacy-universe.following:read`
+GetFollowingsV2 | `GET v2/users/{userId}/universes` | `legacy-universe.following:read`

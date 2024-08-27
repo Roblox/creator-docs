@@ -1,5 +1,5 @@
 ---
-title: CylindricalConstraint
+title: Cylindrical
 description: CylindricalConstraint allows its attachments to slide along one axis and rotate about another axis, with optional assigned angular and/or linear power.
 ---
 

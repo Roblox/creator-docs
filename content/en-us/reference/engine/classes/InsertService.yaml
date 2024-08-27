@@ -214,7 +214,9 @@ methods:
         summary: ''
     tags:
       - Yields
-    deprecation_message: ''
+    deprecation_message: |
+      [Sets have been removed](https://devforum.roblox.com/t/sunsetting-sets/189402)
+      from Roblox.
     security: None
     thread_safety: Unsafe
   - name: InsertService:GetFreeDecals

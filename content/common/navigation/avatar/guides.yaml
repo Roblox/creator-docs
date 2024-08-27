@@ -42,6 +42,7 @@ navigation:
   - title: Importing into Studio
     path: /art/characters/importing
   - title: Heads
+    path: /art/characters/facial-animation/
     section:
       - title: Overview
         path: /art/characters/facial-animation/
@@ -58,6 +59,7 @@ navigation:
   - title: Marketplace Overview
     path: /marketplace/
   - title: Policies and Guidelines
+    path: /marketplace/marketplace-policy
     section:
       - title: Marketplace Policy
         path: /marketplace/marketplace-policy

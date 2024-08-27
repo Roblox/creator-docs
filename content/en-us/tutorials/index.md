@@ -114,7 +114,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <iframe src="https://www.youtube-nocookie.com/embed/eqQyFL7KnmA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
+ <iframe src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
  </div>
    <Typography variant='h4'>Gameplay Scripting</Typography>
    <Typography variant='body1' >Learn how to organize and implement the gameplay logic for a large, complex project.</Typography>

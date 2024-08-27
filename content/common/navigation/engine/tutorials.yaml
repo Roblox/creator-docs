@@ -16,7 +16,10 @@ navigation:
   - title: Gameplay Scripting
     path: /tutorials/gameplay-scripting/
     navigation: /engine/tutorials-gs.yaml
-  - heading: Use Cases
+  - title: User Interface Design
+    path: /tutorials/user-interface-design/
+    navigation: /engine/tutorials-ui.yaml
+  - heading: Use Case Tutorials
   - title: Overview
     path: /tutorials/use-case-tutorial-overview
   - title: Modeling

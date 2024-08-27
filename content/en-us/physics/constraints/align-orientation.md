@@ -1,5 +1,5 @@
 ---
-title: AlignOrientation
+title: Align Orientation
 description: The AlignOrientation constraint applies torque to align two attachments, or to align one attachment with a goal orientation.
 ---
 

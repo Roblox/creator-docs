@@ -22,14 +22,12 @@ After you complete this section, you can explore additional development topics t
 
 ## Get Blast Direction
 
-After a player blasts their blaster, **ReplicatedStorage** > **attemptBlastClient** > **blastClient** > **generateBlastData** calls two functions to start the hit detection process: `rayDirections()` and `rayResults()`.
+After a player blasts their blaster, **ReplicatedStorage** > **Blaster** > **attemptBlastClient** > **blastClient** > **generateBlastData** calls two functions to start the hit detection process: `rayDirections()` and `rayResults()`.
 
 ```lua title="generateBlastData"
 local rayDirections = getDirectionsForBlast(currentCamera.CFrame, blasterConfig)
 local rayResults = castLaserRay(localPlayer, currentCamera.CFrame.Position, rayDirections)
 ```
-
-<br></br>
 
 The inputs for `rayDirections` are straightforward: the current camera position and rotation values, and the player's blaster type. If the sample laser tag experience only gave players blasters that produce a single laser beam, **ReplicatedStorage** > **LaserRay** > **getDirectionsForBlast** would be unnecessary because you could use `currentCamera.CFrame.LookVector` to calculate the direction for the blast.
 
@@ -53,9 +51,7 @@ elseif numLasers > 1 then
 end
 ```
 
-<br></br>
-
-To demonstrate this concept further, if you were to include a third blaster type with a wide, **vertical** spread, you could create a new blaster attribute, such as `spreadDirection`, then adjust the `Datatype.CFrame` calculation to use a different axis. For example, note the difference in the `direction` calculations in the following script below for this third blaster type.
+To demonstrate this concept further, if you were to include a third blaster type with a wide, **vertical** spread, you could create a new blaster attribute, such as `spreadDirection`, then adjust the `Datatype.CFrame` calculation to use a different axis. For example, note the difference in the `direction` calculations in the following script below for this hypothetical third blaster type.
 
 ```lua
 if numLasers == 1 then
@@ -77,8 +73,6 @@ end
 return directions
 ```
 
-<br></br>
-
 Ultimately, the `rayDirections()` function returns a table of `Datatype.Vector3|Vectors` that represent the direction of each laser beam. If it's helpful, you can add some logging to get a sense of what this data looks like.
 
 ```lua title="generateBlastData"
@@ -91,12 +85,12 @@ local rayResults = castLaserRay(localPlayer, currentCamera.CFrame.Position, rayD
 
 ## Cast Rays
 
-`castLaserRay()`, the second function in **ReplicatedStorage** > **attemptBlastClient** > **blastClient** > **generateBlastData**, performs the more complex operations within the script. It begins by specifying parameters so that it can make `Class.Workspace:Raycast()` calls for raycasting purposes. Raycasting is the process of sending out an invisible ray from a `Datatype.Vector3` point in a specific direction with a defined length, then checking its path to see where it intersects with other objects.
+`castLaserRay()`, the second function in **ReplicatedStorage** > **Blaster** > **attemptBlastClient** > **blastClient** > **generateBlastData**, performs the more complex operations within the script. It begins by specifying parameters so that it can make `Class.Workspace:Raycast()` calls for raycasting purposes. Raycasting is the process of sending out an invisible ray from a `Datatype.Vector3` point in a specific direction with a defined length, then checking its path to see where it intersects with other objects.
 
 This information is particularly useful for first-person shooter experiences because it allows you to see when and where blasts intersect with players or the environment. For example, the following image demonstrates two rays that are casting parallel to each other. According to their point of origin and direction, Ray A misses the wall and continues until it meets its maximum distance, while Ray B collides with the wall. For more information on this process, see [Raycasting](../../workspace/raycasting.md).
 
 <figure>
-  <img src="../../assets/tutorials/gameplay-scripting/tutorial-gs-ray.png" width="60%" alt="A diagram where Ray A continues through the wall, and Ray B collides with the wall." />
+  <img src="../../assets/tutorials/gameplay-scripting/Detecting-Hits/Two-Rays.png" width="60%" alt="A diagram where Ray A continues through the wall, and Ray B collides with the wall." />
 </figure>
 
 The `castLaserRay()` parameters specify that `Raycast()` calls must consider every part in the workspace **except** the character who blasted. The script then casts a ray for each direction in the `directions` table. If a ray hits something, it generates a `Datatype.RaycastResult`, which has five properties:
@@ -129,8 +123,6 @@ else
 end
 ```
 
-<br></br>
-
 <Alert severity="info">
 `Datatype.RaycastResult.Distance|Distance` isn't particularly interesting in this section's scripts, but you could utilize it in unique ways if you want blasters to inflict more damage at a close range. Similarly, this section's scripts don't consider `Datatype.RaycastResult.Material|Material`, but you could use material types to distinguish between an armored body and a set of weak points during damage calculations.
 </Alert>
@@ -152,8 +144,6 @@ To prevent cheating, the previous chapter [Implementing Blasters](implementing-b
    return directionErrorDegrees <= ToleranceValues.BLAST_ANGLE_SANITY_CHECK_TOLERANCE_DEGREES
    ```
 
-   <br></br>
-
    Roblox abstracts away the most involved bits of math, so the result is a short, highly reusable helper function with applicability across a range of experiences:
 
    ```lua title="getAngleBetweenDirections"
@@ -165,8 +155,6 @@ To prevent cheating, the previous chapter [Implementing Blasters](implementing-b
    end
    ```
 
-   <br></br>
-
 1. The next check is the most intuitive. Whereas `getValidatedBlastData` uses `DISTANCE_SANITY_CHECK_TOLERANCE_STUDS` to verify that the player who blasted was near the beam's point of origin, `isPlayerNearPosition` uses identical logic to check if the tagged player was near the beam's destination:
 
    ```lua title="isPlayerNearPosition"
@@ -176,8 +164,6 @@ To prevent cheating, the previous chapter [Implementing Blasters](implementing-b
    end
    ```
 
-<br></br>
-
 1. The final check `isRayPathObstructed` uses a variation of the ray cast operation to check if the ray's destination is behind a wall or other obstruction from the client's position. For example, if a malicious player were to systematically remove all walls from the experience to tag other players, the server would check and confirm that the rays are invalid because it knows every object position within the environment.
 
    ```lua title="isRayPathObstructed"
@@ -185,24 +171,22 @@ To prevent cheating, the previous chapter [Implementing Blasters](implementing-b
    scaledDirection *= (scaledDirection.Magnitude - 1) / scaledDirection.Magnitude
    ```
 
-<br></br>
-
 No anti-exploit strategy is comprehensive, but it's important to consider how malicious players may approach your experience so that you can put checks in place that the server can run to flag suspicious behavior.
 
 ## Reduce Player Health
 
-After verifying that a player tagged another player, the final steps in completing the main gameplay loop in the sample laser tag experience are to reduce the tagged player's health, increment the leaderboard, and respawn the player back into the match.
+After verifying that a player tagged another player, the final steps in completing the main gameplay loop in the sample laser tag experience are to reduce the tagged player's health, increment the leaderboard, and respawn the player back into the round.
 
-Starting with reducing the tagged player's health, [Spawning and Respawning](spawn-respawn.md) covers the distinction between `Class.Player` and `Class.Player.Character`, specifically that a character is a `Class.Humanoid` model. `Class.Humanoid` models have a `Class.Humanoid.Health|Health` property with a default value of 100. Rather than implementing its own system, the sample laser tag experience uses this built-in property to keep track of how much damage a player needs before they are tagged out of the match.
+Starting with reducing the tagged player's health, [Spawning and Respawning](spawn-respawn.md) covers the distinction between `Class.Player` and `Class.Player.Character`, specifically that a character is a `Class.Humanoid` model. `Class.Humanoid` models have a `Class.Humanoid.Health|Health` property with a default value of 100. Rather than implementing its own system, the sample laser tag experience uses this built-in property to keep track of how much damage a player needs before they are tagged out of the round.
 
-The experience stores damage values in the `damagePerHit` attribute of each blaster. For example, the blaster that blasts a single laser beam inflicts 15 points of damage, so it takes seven blasts with this blaster to tag out another player. To start the process of tagging a player out, `LaserBlastHandler` calls **ServerScriptService** > **LaserBlastHandler** > **processTaggedPlayers**, which checks the now-validated `rayResults` table for players and passes `damagePerHit` to `onPlayerTagged`.
+The experience stores damage values in the `damagePerHit` attribute of each blaster. For example, the blaster that blasts a single laser beam inflicts 10 points of damage, so it takes ten blasts with this blaster to tag out another player. To start the process of tagging a player out, `LaserBlastHandler` calls **ServerScriptService** > **LaserBlastHandler** > **processTaggedPlayers**, which checks the now-validated `rayResults` table for players and passes `damagePerHit` to `onPlayerTagged`.
 
 <Alert severity="info">
 Note that this process occurs for each **ray**, not each player. A blast can have multiple laser beams, so a player can receive damage several times from a single blast.
 </Alert>
 
 <figure>
-  <img src="../../assets/tutorials/gameplay-scripting/tutorial-gs-health.png" alt="" width="80%" />
+  <img src="../../assets/tutorials/gameplay-scripting/Detecting-Hits/Reduce-Player-Health.png" alt="" width="80%" />
 </figure>
 
 `Class.Humanoid.Health|Health` doesn't accept negative values, so `onPlayerTagged` has some logic to keep player health at or above zero. After verifying that player health is above zero, it compares health to `damagePerHit` and uses the smaller of the two values. For example, if a player has 10 health and is hit by a 15 damage laser beam, the laser only inflicts 10 points of damage.
@@ -212,30 +196,37 @@ This way of approaching the problem might seem a bit convoluted. For example, wh
 ```lua title="onPlayerTagged"
 local function onPlayerTagged(playerBlasted: Player, playerTagged: Player, damageAmount: number)
 	local character = playerTagged.Character
+	local isFriendly = playerBlasted.Team == playerTagged.Team
 
-	local humanoid = character and character:FindFirstChildWhichIsA("Humanoid")
+	-- Disallow friendly fire
+	if isFriendly then
+		return
+	end
+
+	local humanoid = character and character:FindFirstChild("Humanoid")
 	if humanoid and humanoid.Health > 0 then
-
+		-- Avoid negative health
 		local damage = math.min(damageAmount, humanoid.Health)
 
+		-- TakeDamage ensures health is not lowered if ForceField is active
 		humanoid:TakeDamage(damage)
 		if humanoid.Health <= 0 then
-			playerBlasted.leaderstats.Points.Value += 1
+			-- Award playerBlasted a point for tagging playerTagged
+			Scoring.incrementScore(playerBlasted, 1)
 		end
 	end
 end
 ```
 
-<br></br>
+The next step is to increment the leaderboard. It might have seemed unnecessary for `LaserBlastHandler` to include the player who blasted alongside the blast data, but without that information, the experience can't credit the player with tagging someone out. Finally, the tagged out player respawns back into the round, which you can review in [Spawning and Respawning](spawn-respawn.md).
 
-The next step is to increment the leaderboard. It might have seemed unnecessary for `LaserBlastHandler` to include the player who blasted alongside the blast data, but without that information, the experience can't credit the player with tagging someone out. Finally, the tagged out player respawns back into the match, which you can review in [Spawning and Respawning](spawn-respawn.md)
-
-The three chapters in this curriculum cover the experience's core gameplay loop, but there are still plenty of areas to explore, such as:
+The five chapters in this curriculum cover the experience's core gameplay loop, but there are still plenty of areas to explore, such as:
 
 - **Blaster visuals**: See **ReplicatedStorage** > **FirstPersonBlasterVisuals** and **ServerScriptService** > **ThirdPersonBlasterVisuals**.
 - **Audio**: See **ReplicatedStorage** > **SoundHandler**.
-- **Teams**: How could you modify this experience to support teams? How would spawn locations and the leaderboard need to change?
-- **Victory**: What conditions would make sense to declare one player or one team the winner? Most tag-outs after some amount of time? First player to reach some number of tag-outs? In a team-based experience, could you use player performance from the previous round to balance the teams at the start of a new round?
+- **Custom Modes**: How could you modify this experience to introduce new types of objectives, such as scoring the most points before the time runs out?
+
+For extended gameplay logic for the laser tag experience, as well as reusable, high-quality environmental assets, review the [Laser Tag](../../resources/templates.md#laser-tag) template.
 
 <Alert severity="info">
 We're interested in hearing from you about your experience following the Gameplay Scripting Curriculum. If you have any questions, concerns, or additional feedback on the process, please comment on our [Gameplay Scripting Curriculum Q&A](https://devforum.roblox.com/t/gameplay-scripting-curriculum-qa/2731896).

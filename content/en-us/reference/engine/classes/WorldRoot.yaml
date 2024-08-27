@@ -99,7 +99,7 @@ methods:
         default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
         summary: ''
     returns:
-      - type: RaycastResult
+      - type: RaycastResult?
         summary: |
           Contains the result of the shapecast operation, or `nil` if no
           eligible `Class.BasePart` or `Class.Terrain` cell was hit.
@@ -845,7 +845,7 @@ methods:
           not provided, default values are used where all parts are considered
           and `Class.Terrain` water is not ignored.
     returns:
-      - type: RaycastResult
+      - type: RaycastResult?
         summary: |
           Contains the results of a raycast operation, or `nil` if no eligible
           `Class.BasePart` or `Class.Terrain` cell was hit.
@@ -871,7 +871,7 @@ methods:
         default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
         summary: ''
     returns:
-      - type: RaycastResult
+      - type: RaycastResult?
         summary: ''
     tags: []
     deprecation_message: ''
@@ -925,7 +925,7 @@ methods:
         default: RaycastParams{IgnoreWater=false, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
         summary: ''
     returns:
-      - type: RaycastResult
+      - type: RaycastResult?
         summary: |
           Contains the result of the shapecast operation, or `nil` if no
           eligible `Class.BasePart` or `Class.Terrain` cell was hit.

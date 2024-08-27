@@ -1,5 +1,5 @@
 ---
-title: VectorForce
+title: Vector Force
 description: The VectorForce constraint applies constant linear force on an assembly.
 ---
 

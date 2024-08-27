@@ -81,6 +81,15 @@ When you run the experience and pause the MicroProfiler (<kbd>Ctrl</kbd><kbd>P</
 
 From its duration on the timeline, you can tell that the function is using a lot of processing time compared to other operations.
 
+## Saving Frame Data
+
+If you want to save a set of frame data for later review (or to share with someone else), use the **Dump** menu. The engine saves the frame data to a file named `microprofile-<date>-<time>.html` in the Roblox logs directory.
+
+- On Windows, check `%LOCALAPPDATA%\Roblox\logs`.
+- On macOS, check `~/Library/Logs/Roblox`.
+
+These HTML files use the same [web-based UI](#using-the-web-ui) as the [live connection for mobile devices](#profiling-on-mobile-devices) and [server dumps](#profiling-the-server).
+
 ## Profiling on Mobile Devices
 
 To access the MicroProfiler from the mobile client, your mobile device must be connected to the **same network** as your development machine.
@@ -93,14 +102,18 @@ For example, in the screenshot above, the address is `192.168.1.166` and the por
 
 <img alt="The MicroProfiler web view." src="../../assets/optimization/microprofiler/7MicroProfiler-Browser.jpeg" width="600px" />
 
-## Saving Frame Data
+## Profiling the Server
 
-If you want to save a set of frame data for later review (or to share with someone else), use the **Dump** menu. The engine saves the frame data to a file named `microprofile-<date>-<time>.html` in the Roblox logs directory.
+In addition to the standard client MicroProfiler, you can take brief dumps of server activity using the server MicroProfiler.
 
-- On Windows, check `%LOCALAPPDATA%\Roblox\logs`.
-- On macOS, check `~/Library/Logs/Roblox`.
+1. In an experience that you have edit permissions for, open the Developer Console with <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F9</kbd>.
+1. In the dropdown menu, select **MicroProfiler**.
+1. In the **ServerProfiler** section, specify the number of frames per second (maximum 60) and the number of seconds to profile (maximum 4).
+1. Click **Start Recording**.
 
-These HTML files use the same [web-based UI](#using-the-web-ui) as the live connection from [Profiling on Mobile Devices](#profiling-on-mobile-devices).
+   <img alt="The Developer Console MicroProfiler screen." src="../../assets/optimization/microprofiler/micro-server.png" width="800px" />
+
+   After a few seconds, the Developer Console provides the path to the file, which is the same path as a [standard dump](#saving-frame-data).
 
 ## Using the Web UI
 

@@ -11,7 +11,7 @@ import TextFiltering from '../includes/text-filtering/text-filtering.md'
 
 - An `Class.ImageLabel` is a rectangle with an image [asset](../projects/assets/index.md) that you can style through customizable properties. Alongside [textures and decals](../parts/textures-decals.md), this lets you display images in an experience.
 
-<img src="../assets/ui/labels/Labels-Example.jpg" width="800" />
+<img src="../assets/ui/ui-objects/Labels-Example.jpg" width="800" />
 
 ## Creating Labels on the Screen
 

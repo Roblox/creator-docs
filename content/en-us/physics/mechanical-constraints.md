@@ -9,7 +9,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/ball-socket.md" size="large" color="primaryBrand" variant="outlined" fullWidth>BallSocketConstraint</Button>
+<Button href="../physics/constraints/ball-socket.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Ball Socket</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/BallInSocket-Demo.mp4" />
 <p></p>
@@ -19,7 +19,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/hinge.md" size="large" color="primaryBrand" variant="outlined" fullWidth>HingeConstraint</Button>
+<Button href="../physics/constraints/hinge.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Hinge</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Hinge-Demo.mp4" />
 <p></p>
@@ -29,7 +29,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/prismatic.md" size="large" color="primaryBrand" variant="outlined" fullWidth>PrismaticConstraint</Button>
+<Button href="../physics/constraints/prismatic.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Prismatic</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Prismatic-Demo.mp4" />
 <p></p>
@@ -39,7 +39,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/cylindrical.md" size="large" color="primaryBrand" variant="outlined" fullWidth>CylindricalConstraint</Button>
+<Button href="../physics/constraints/cylindrical.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Cylindrical</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Cylindrical-Demo.mp4" />
 <p></p>
@@ -49,7 +49,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/spring.md" size="large" color="primaryBrand" variant="outlined" fullWidth>SpringConstraint</Button>
+<Button href="../physics/constraints/spring.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Spring</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Spring-Demo.mp4" />
 <p></p>
@@ -59,7 +59,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
   
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/torsion-spring.md" size="large" color="primaryBrand" variant="outlined" fullWidth>TorsionSpringConstraint</Button>
+<Button href="../physics/constraints/torsion-spring.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Torsion Spring</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/TorsionSpring-Demo.mp4" />
 <p></p>
@@ -69,7 +69,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
   
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/universal.md" size="large" color="primaryBrand" variant="outlined" fullWidth>UniversalConstraint</Button>
+<Button href="../physics/constraints/universal.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Universal</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Universal-Demo.mp4" />
 <p></p>
@@ -79,7 +79,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/rope.md" size="large" color="primaryBrand" variant="outlined" fullWidth>RopeConstraint</Button>
+<Button href="../physics/constraints/rope.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Rope</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Rope-Demo.mp4" />
 <p></p>
@@ -89,7 +89,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/rod.md" size="large" color="primaryBrand" variant="outlined" fullWidth>RodConstraint</Button>
+<Button href="../physics/constraints/rod.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Rod</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Rod-Demo.mp4" />
 <p></p>
@@ -99,7 +99,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/plane.md" size="large" color="primaryBrand" variant="outlined" fullWidth>PlaneConstraint</Button>
+<Button href="../physics/constraints/plane.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Plane</Button>
 <p></p>
 <CardMedia component="video" controls src="../assets/physics/constraints/Plane-Demo.mp4" />
 <p></p>
@@ -109,7 +109,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/weld.md" size="large" color="primaryBrand" variant="outlined" fullWidth>WeldConstraint</Button>
+<Button href="../physics/constraints/weld.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Weld</Button>
 <p></p>
 <figcaption>[WeldConstraint](../physics/constraints/weld.md) connects two `Class.BasePart|BaseParts` and ensures they stay in the same relative position and orientation to each other, even if they are not touching</figcaption>
 </CardContent>
@@ -117,7 +117,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/rigid.md" size="large" color="primaryBrand" variant="outlined" fullWidth>RigidConstraint</Button>
+<Button href="../physics/constraints/rigid.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Rigid</Button>
 <p></p>
 <figcaption>[RigidConstraint](../physics/constraints/rigid.md) connects two `Class.Attachment|Attachments` or `Class.Bone|Bones` and ensures they stay in the same relative position/orientation to each other, even if they are not touching</figcaption>
 </CardContent>
@@ -125,7 +125,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent>
-<Button href="../physics/constraints/no-collision.md" size="large" color="primaryBrand" variant="outlined" fullWidth>NoCollisionConstraint</Button>
+<Button href="../physics/constraints/no-collision.md" size="large" color="primaryBrand" variant="outlined" fullWidth>No Collision</Button>
 <p></p>
 <figcaption>[NoCollisionConstraint](../physics/constraints/no-collision.md) prevents collisions between two specific parts, but those parts may still register collisions with the rest of the world</figcaption>
 </CardContent>

@@ -1105,6 +1105,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/HandlesBase.yaml
         ignoreTranslation: true
+      - title: HapticEffect
+        path: /reference/engine/classes/HapticEffect
+        type: engineapi
+        source: /reference/engine/classes/HapticEffect.yaml
+        ignoreTranslation: true
       - title: HapticService
         path: /reference/engine/classes/HapticService
         type: engineapi
@@ -3733,6 +3738,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/DeviceFeatureType.yaml
         ignoreTranslation: true
+      - title: DeviceLevel
+        path: /reference/engine/enums/DeviceLevel
+        type: engineapi
+        source: /reference/engine/enums/DeviceLevel.yaml
+        ignoreTranslation: true
       - title: DeviceType
         path: /reference/engine/enums/DeviceType
         type: engineapi
@@ -3967,6 +3977,11 @@ navigation:
         path: /reference/engine/enums/HandlesStyle
         type: engineapi
         source: /reference/engine/enums/HandlesStyle.yaml
+        ignoreTranslation: true
+      - title: HapticEffectType
+        path: /reference/engine/enums/HapticEffectType
+        type: engineapi
+        source: /reference/engine/enums/HapticEffectType.yaml
         ignoreTranslation: true
       - title: HighlightDepthMode
         path: /reference/engine/enums/HighlightDepthMode
@@ -5187,6 +5202,21 @@ navigation:
         path: /reference/engine/enums/VRComfortSetting
         type: engineapi
         source: /reference/engine/enums/VRComfortSetting.yaml
+        ignoreTranslation: true
+      - title: VRControllerModelMode
+        path: /reference/engine/enums/VRControllerModelMode
+        type: engineapi
+        source: /reference/engine/enums/VRControllerModelMode.yaml
+        ignoreTranslation: true
+      - title: VRDeviceType
+        path: /reference/engine/enums/VRDeviceType
+        type: engineapi
+        source: /reference/engine/enums/VRDeviceType.yaml
+        ignoreTranslation: true
+      - title: VRLaserPointerMode
+        path: /reference/engine/enums/VRLaserPointerMode
+        type: engineapi
+        source: /reference/engine/enums/VRLaserPointerMode.yaml
         ignoreTranslation: true
       - title: VRSafetyBubbleMode
         path: /reference/engine/enums/VRSafetyBubbleMode
