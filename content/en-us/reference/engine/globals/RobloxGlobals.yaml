@@ -35,13 +35,13 @@ properties:
     description: |
       A reference to the `Class.Plugin` object that represents the plugin being run
       from this `Class.Script`. This reference exists only in the context where
-      a script is executed as a plugin and is not passed to `Class.ModuleScript`s
-      within the plugin. To use this reference in a `Class.ModuleScript`, you must
-      explicitly pass it.
+      a script is executed as a plugin and is not passed to
+      `Class.ModuleScript|ModuleScripts` within the plugin. To use this reference
+      in a `Class.ModuleScript`, you must explicitly pass it.
       
-      ```lua title='Check if the script is run as a plugin.'
-      assert(plugin, "This script must be run as a plugin.")
-      -- Code beyond this point will execute only if the script is run as a plugin.
+      ```lua
+      assert(plugin, "This script must be run as a plugin!")
+      -- Code beyond this point will execute only if the script is run as a plugin
       ```
     tags:
     code_samples:
