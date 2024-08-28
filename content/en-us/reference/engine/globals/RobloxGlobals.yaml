@@ -33,9 +33,16 @@ properties:
       Refers to a Plugin singleton when the code is run in the context of a
       Studio plugin.
     description: |
-      A reference to the `Class.Plugin` object that represents the plugin being
-      ran from this `Class.Script`. This reference only exists in the context
-      where a script is executed as a plugin.
+      A reference to the `Class.Plugin` object that represents the plugin being run
+      from this `Class.Script`. This reference exists only in the context where
+      a script is executed as a plugin and is not passed to
+      `Class.ModuleScript|ModuleScripts` within the plugin. To use this reference
+      in a `Class.ModuleScript`, you must explicitly pass it.
+      
+      ```lua
+      assert(plugin, "This script must be run as a plugin!")
+      -- Code beyond this point will execute only if the script is run as a plugin
+      ```
     tags:
     code_samples:
   - name: shared
