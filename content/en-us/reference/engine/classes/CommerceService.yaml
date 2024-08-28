@@ -13,6 +13,26 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: CommerceService:PromptCommerceProductPurchase
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: user
+        type: Player
+        default:
+        summary: ''
+      - name: commerceProductId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: CommerceService:PromptRealWorldCommerceBrowser
     summary: ''
     description: ''
@@ -46,5 +66,22 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events: []
+events:
+  - name: CommerceService.PromptCommerceProductPurchaseFinished
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: user
+        type: Player
+        default:
+        summary: ''
+      - name: productId
+        type: int64
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
 callbacks: []

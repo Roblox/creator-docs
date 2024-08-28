@@ -24,7 +24,6 @@ description: |
   data types such as `Datatype.CFrame`. Many of these data types' methods will
   use a `Datatype.Vector3` within their parameters, such as
   `Datatype.CFrame:PointToObjectSpace()`.
-
 code_samples:
 tags: []
 deprecation_message: ''

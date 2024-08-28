@@ -2325,6 +2325,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/StarterPlayerScripts.yaml
         ignoreTranslation: true
+      - title: StartPageService
+        path: /reference/engine/classes/StartPageService
+        type: engineapi
+        source: /reference/engine/classes/StartPageService.yaml
+        ignoreTranslation: true
       - title: StartupMessageService
         path: /reference/engine/classes/StartupMessageService
         type: engineapi
@@ -3963,6 +3968,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/GraphicsMode.yaml
         ignoreTranslation: true
+      - title: GraphicsOptimizationMode
+        path: /reference/engine/enums/GraphicsOptimizationMode
+        type: engineapi
+        source: /reference/engine/enums/GraphicsOptimizationMode.yaml
+        ignoreTranslation: true
       - title: GuiState
         path: /reference/engine/enums/GuiState
         type: engineapi
@@ -4323,6 +4333,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/NormalId.yaml
         ignoreTranslation: true
+      - title: NotificationButtonType
+        path: /reference/engine/enums/NotificationButtonType
+        type: engineapi
+        source: /reference/engine/enums/NotificationButtonType.yaml
+        ignoreTranslation: true
       - title: OperationType
         path: /reference/engine/enums/OperationType
         type: engineapi
@@ -4397,6 +4412,11 @@ navigation:
         path: /reference/engine/enums/PartType
         type: engineapi
         source: /reference/engine/enums/PartType.yaml
+        ignoreTranslation: true
+      - title: PathfindingUseImprovedSearch
+        path: /reference/engine/enums/PathfindingUseImprovedSearch
+        type: engineapi
+        source: /reference/engine/enums/PathfindingUseImprovedSearch.yaml
         ignoreTranslation: true
       - title: PathStatus
         path: /reference/engine/enums/PathStatus

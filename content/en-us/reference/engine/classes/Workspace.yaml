@@ -540,6 +540,23 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: Workspace.PathfindingUseImprovedSearch
+    summary: ''
+    description: ''
+    code_samples: []
+    type: PathfindingUseImprovedSearch
+    tags:
+      - NotScriptable
+      - NotBrowsable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
   - name: Workspace.PhysicsSteppingMethod
     summary: |
       Sets how the solver will advance the physics simulation forward in time.

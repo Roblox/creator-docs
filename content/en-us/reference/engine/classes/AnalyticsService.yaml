@@ -529,26 +529,39 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: AnalyticsService:LogCustomEvent
-    summary: 'Logs an event used to track custom metrics of a user in experience.'
-    description: 'Logs an event used to track custom metrics of a user in experience. For additional information, see [Custom Events](../../../production/analytics/custom-events.md).'
-    code_samples: [Log-Custom-Event]
+    summary: |
+      Logs an event used to track custom metrics of a user in experience.
+    description: |
+      Logs an event used to track custom metrics of a user in experience. For
+      additional information, see
+      [Custom Events](../../../production/analytics/custom-events.md).
+    code_samples:
+      - Log-Custom-Event
     parameters:
       - name: player
         type: Player
-        default: 'The user who triggered the event.'
-        summary: 'The user who triggered the event.'
+        default:
+        summary: |
+          The user who triggered the event.
       - name: eventName
         type: string
         default:
-        summary: 'The name of the custom event.'
+        summary: |
+          The name of the custom event.
       - name: value
         type: double
         default: 1
-        summary: 'The value of the event that will be used in aggregation.'
+        summary: |
+          The value of the event that will be used in aggregation.
       - name: customFields
         type: Dictionary
         default: nil
-        summary: 'Optional dictionary of custom fields that will provide breakdowns in Roblox-provided charts. Only specific keys, provided by `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns. Limited to 8,000 unique combinations of values across the three custom fields per experience.'
+        summary: |
+          Optional dictionary of custom fields that will provide breakdowns in
+          Roblox-provided charts. Only specific keys, provided by
+          `Enum.AnalyticsCustomFieldKeys`, will be used for these breakdowns.
+          Limited to 8,000 unique combinations of values across the three custom
+          fields per experience.
     returns:
       - type: void
         summary: ''

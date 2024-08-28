@@ -11,8 +11,8 @@ description: |
   servers, so you can only use `Class.DataStoreService` within a `Class.Script`
   or a `Class.ModuleScript` that is used by a `Class.Script`.
 
-  See [Data Stores](../../../cloud-services/data-stores/index.md) for an in-depth guide
-  on data structure, management, error handling, etc.
+  See [Data Stores](../../../cloud-services/data-stores/index.md) for an
+  in-depth guide on data structure, management, error handling, etc.
 code_samples:
   - DataStore-Budget
 inherits:

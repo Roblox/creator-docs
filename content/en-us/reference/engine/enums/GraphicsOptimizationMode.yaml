@@ -1,4 +1,4 @@
-name: CSGAsyncDynamicCollision
+name: GraphicsOptimizationMode
 type: enum
 summary: ''
 description: ''
@@ -6,17 +6,17 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: Default
+  - name: Performance
     summary: ''
     value: 0
     tags: []
     deprecation_message: ''
-  - name: Disabled
+  - name: Balanced
     summary: ''
     value: 1
     tags: []
     deprecation_message: ''
-  - name: Enabled
+  - name: Quality
     summary: ''
     value: 2
     tags: []

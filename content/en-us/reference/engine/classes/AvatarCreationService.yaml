@@ -13,6 +13,19 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: AvatarCreationService:GetValidationRules
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: AvatarCreationService:PromptCreateAvatarAsync
     summary: ''
     description: ''

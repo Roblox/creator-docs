@@ -1,0 +1,281 @@
+name: StartPageService
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: StartPageService:generateTempUrlInContentProvider
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: url
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:getDaysSinceFirstUserLogin
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:getStartPageVersionForUser
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: int
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:getTempUrlInContentProvider
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: url
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:isTutorialBannerClosed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:isTutorialPopupClosed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:openLink
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: link
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:openLocalFile
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: filePath
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:openPlace
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: placeId
+        type: int64
+        default:
+        summary: ''
+      - name: launchTutorial
+        type: bool
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:refreshRegistryDataInStartPage
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:removeAPIGameFromRegistry
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: gameId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:removeLocalFileFromRegistry
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: fileName
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:setTutorialBannerClosed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: closed
+        type: bool
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:setTutorialPopupClosed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: closed
+        type: bool
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:startTutorial
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+events:
+  - name: StartPageService.ImageImportedSignal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: urlImported
+        type: string
+        default:
+        summary: ''
+      - name: temporaryId
+        type: string
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService.LocalGamesFromRegistryUpdatedSignal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: localGames
+        type: Array
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService.RecentApiGamesFromRegistryUpdatedSignal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: recentGames
+        type: Array
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+callbacks: []
