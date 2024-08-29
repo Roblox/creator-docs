@@ -1,4 +1,4 @@
-name: CSGAsyncDynamicCollision
+name: PathfindingUseImprovedSearch
 type: enum
 summary: ''
 description: ''

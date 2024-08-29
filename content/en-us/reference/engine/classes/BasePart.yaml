@@ -2573,12 +2573,13 @@ methods:
   - name: BasePart:IsGrounded
     summary: |
       Returns true if the object is connected to a part that will hold it in
-      place (eg an `Class.BasePart.Anchored` part), otherwise returns false.
+      place (eg an `Class.BasePart.Anchored|Anchored` part), otherwise returns
+      false.
     description: |
       Returns true if the object is connected to a part that will hold it in
-      place (eg an `Class.BasePart.Anchored` part), otherwise returns false. In
-      an assembly that has an `Class.BasePart.Anchored` part, every other part
-      is grounded.
+      place (eg an `Class.BasePart.Anchored|Anchored` part), otherwise returns
+      false. In an assembly that has an `Class.BasePart.Anchored|Anchored` part,
+      every other part is grounded.
     code_samples:
     parameters: []
     returns:

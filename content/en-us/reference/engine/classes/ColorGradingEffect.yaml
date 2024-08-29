@@ -19,8 +19,7 @@ description: |
 code_samples: []
 inherits:
   - PostEffect
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: ColorGradingEffect.TonemapperPreset

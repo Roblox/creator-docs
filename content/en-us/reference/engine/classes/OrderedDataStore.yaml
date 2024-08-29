@@ -20,8 +20,8 @@ description: |
   `Class.OrderedDataStore:SetAsync()|SetAsync()` or
   `Class.OrderedDataStore:IncrementAsync()|IncrementAsync()`.
 
-  See [Data Stores](../../../cloud-services/data-stores) for an overview on
-  using ordered data stores.
+  See [Data Stores](../../../cloud-services/data-stores/index.md) for an
+  overview on using ordered data stores.
 code_samples:
   - OrderedDataStore-Basics
 inherits:

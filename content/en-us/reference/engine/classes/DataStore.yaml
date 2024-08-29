@@ -4,7 +4,7 @@ category:
 memory_category: Instances
 summary: ''
 description: |
-  See [Data Stores](../../../cloud-services/data-stores).
+  See [Data Stores](../../../cloud-services/data-stores/index.md).
 code_samples:
 inherits:
   - GlobalDataStore

@@ -10,6 +10,21 @@ inherits:
 tags: []
 deprecation_message: ''
 properties:
+  - name: StyleRule.Priority
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
   - name: StyleRule.Selector
     summary: ''
     description: ''

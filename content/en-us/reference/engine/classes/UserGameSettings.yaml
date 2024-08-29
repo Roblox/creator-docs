@@ -162,6 +162,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: UserGameSettings.GraphicsOptimizationMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: GraphicsOptimizationMode
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
   - name: UserGameSettings.GraphicsQualityLevel
     summary: ''
     description: ''
@@ -222,6 +237,21 @@ properties:
       write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UserGameSettings.MaxQualityEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Appearance
     serialization:
       can_load: true
       can_save: true

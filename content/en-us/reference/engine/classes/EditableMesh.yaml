@@ -73,6 +73,42 @@ properties:
       can_load: true
       can_save: true
 methods:
+  - name: EditableMesh:AddColor
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: color
+        type: Color3
+        default:
+        summary: ''
+      - name: alpha
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:AddNormal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: normal
+        type: Vector3?
+        default:
+        summary: ''
+    returns:
+      - type: int64
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: EditableMesh:AddTriangle
     summary: |
       Adds a new triangle to the mesh and returns a stable triangle ID.
@@ -95,6 +131,22 @@ methods:
         default:
         summary: |
           ID of the third vertex of the triangle.
+    returns:
+      - type: int64
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:AddUV
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: uv
+        type: Vector2
+        default:
+        summary: ''
     returns:
       - type: int64
         summary: ''
@@ -194,6 +246,22 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: EditableMesh:GetAdjacentFaces
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: EditableMesh:GetAdjacentTriangles
     summary: |
       Returns a list of triangles adjacent to a given triangle.
@@ -212,7 +280,8 @@ methods:
       - type: Array
         summary: |
           List of adjacent triangles around the given triangle ID.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -234,6 +303,170 @@ methods:
       - type: Array
         summary: |
           List of IDs of adjacent vertices around the given vertex ID.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetColor
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: colorId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Color3?
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetColorAlpha
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: colorId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: float?
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetColors
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetFaceColors
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetFaceNormals
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetFaceUVs
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetFaceVertices
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetFaces
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetFacesWithAttribute
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: id
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetNormal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: normalId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Vector3?
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetNormals
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
@@ -274,7 +507,8 @@ methods:
       - type: Tuple
         summary: |
           The specified triangle's three vertex IDs.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -289,7 +523,8 @@ methods:
       - type: Array
         summary: |
           List of stable triangle IDs.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -300,15 +535,26 @@ methods:
       Returns UV coordinates at the given vertex.
     code_samples: []
     parameters:
-      - name: vertexId
+      - name: uvId
         type: int64
         default:
-        summary: |
-          Vertex for which to get UV coordinates.
+        summary: ''
     returns:
-      - type: Vector2
+      - type: Vector2?
         summary: |
           UV coordinates at the requested vertex.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetUVs
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
@@ -329,7 +575,8 @@ methods:
       - type: Color3
         summary: |
           Color at the requested vertex.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -349,7 +596,8 @@ methods:
       - type: float
         summary: |
           Color alpha at the requested vertex.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -369,7 +617,8 @@ methods:
       - type: Vector3
         summary: |
           Normal at the requested vertex.
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -384,6 +633,54 @@ methods:
       - type: Array
         summary: |
           List of stable vertex IDs.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:GetVerticesWithAttribute
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: id
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:IdDebugString
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: id
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:MergeVertices
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: mergeTolerance
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: Map
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
@@ -421,6 +718,22 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: EditableMesh:RemoveFace
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: EditableMesh:RemoveTriangle
     summary: |
       Removes a triangle using its stable triangle ID.
@@ -435,6 +748,19 @@ methods:
           ID of the triangle to remove.
     returns:
       - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:RemoveUnused
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
         summary: ''
     tags: []
     deprecation_message: ''
@@ -452,6 +778,163 @@ methods:
         default:
         summary: |
           ID of the vertex to remove.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:ResetNormal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: normalId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetColor
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: colorId
+        type: int64
+        default:
+        summary: ''
+      - name: color
+        type: Color3
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetColorAlpha
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: colorId
+        type: int64
+        default:
+        summary: ''
+      - name: alpha
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetFaceColors
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+      - name: ids
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetFaceNormals
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+      - name: ids
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetFaceUVs
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+      - name: ids
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetFaceVertices
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: faceId
+        type: int64
+        default:
+        summary: ''
+      - name: ids
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:SetNormal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: normalId
+        type: int64
+        default:
+        summary: ''
+      - name: normal
+        type: Vector3
+        default:
+        summary: ''
     returns:
       - type: void
         summary: ''
@@ -490,11 +973,10 @@ methods:
       Sets UV coordinates for a vertex.
     code_samples: []
     parameters:
-      - name: vertexId
+      - name: uvId
         type: int64
         default:
-        summary: |
-          Stable ID of the vertex for which to set UV coordinates.
+        summary: ''
       - name: uv
         type: Vector2
         default:
@@ -527,7 +1009,8 @@ methods:
     returns:
       - type: void
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -551,7 +1034,8 @@ methods:
     returns:
       - type: void
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -572,6 +1056,19 @@ methods:
         default:
         summary: |
           Normal to set.
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Deprecated
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: EditableMesh:Triangulate
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
     returns:
       - type: void
         summary: ''

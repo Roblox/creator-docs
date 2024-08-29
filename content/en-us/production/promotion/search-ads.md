@@ -3,7 +3,7 @@ title: Search Ads
 description: Search ads promote experiences in the search results of Roblox's experience catalog.
 ---
 
-**Search ads** enables creators and brands to promote their experiences to users searching for specific keywords on Roblox. This form of advertising allows developers to target their ads to users using search, increasing the likelihood of engagement.
+**Search ads** enable creators and brands to promote their experiences to users searching for specific keywords on Roblox. This form of advertising allows developers to target their ads to users using search, increasing the likelihood of engagement.
 
 When creating a search ad, advertisers select up to 10 keywords within an Ad Set relevant to their experiences. Once a successful search ad is applied and launched, your experience displays as a search result if a user submits a search with an exact keyword match.
 
@@ -45,42 +45,39 @@ All Roblox advertisers of experiences must abide by our [Community Standards](ht
 Search ads are managed in the [Ads Manager](./ads-manager.md) as a Visits campaign objective. Search ads also use a [modified bidding and auction](#bidding-and-auction) process to determine pricing and availability of individual keywords.
 
 <Alert severity = 'warning'>
-Unlike other ad types, you can not modify brand suitability and audience targeting for search ads. Search ads reach audiences in all regions, all genders, ages 13 and over, and all eligible devices.
+Unlike other ad types, you can't modify brand suitability and audience targeting for search ads. Search ads reach audiences in all regions, all genders, ages 13 and over, and all eligible devices.
 </Alert>
 
 To create search ads:
 
-1. Access the [Ads Manager](https://advertise.roblox.com/landing).
-   1. If it's your first time creating an ad campaign, you must first [create an account](./ads-manager.md#creating-an-ad-account) and [add a payment method](./ads-manager.md#adding-a-payment-method).
-2. In Manage Ads, select the **CREATE** button to define your campaign.
+1. Navigate to the [Ads Manager](https://advertise.roblox.com/landing). If it's your first time creating an ad campaign, you must first [create an account](./ads-manager.md#creating-an-ad-account) and [add a payment method](./ads-manager.md#adding-a-payment-method).
+2. In **Manage Ads**, click **CREATE**.
+
    <img src="../../assets/promotion/ads-manager/Campaign-Create.png" width="80%" alt=""/>
 
+3. In the Campaign page:
    1. Select your **Payment Method**.
    2. Set **Campaign Objective** to **Visits**.
    3. Set the **budget type**, **date range**, and **campaign name**.
-   4. Click **NEXT** to continue to Ad Set configuration.
+   4. Click **NEXT**.
+4. In the Ad Set page:
+   1. Select **Search Experience**. The audience estimation shows the approximate number of Roblox user accounts your search ad might reach over a month. This number is based on the keywords you choose and the budget and bids you set when creating your ad.
 
-3. In the Ad Set page, modify the following details of your search ad:
-   <img src="../../assets/promotion/search-ads/Ad-Set-Search.png" width="80%" alt=""/>
+      <img src="../../assets/promotion/search-ads/Ad-Set-Search.png" width="80%" alt=""/>
 
-4. Select **Search Experience**. Additional ad set fields display below.
-5. In **Keyword(s)**, choose up to 10 keywords for each Ad Set.
-
-   1. Keywords populate after typing in the text field. You should group relevant keywords together within each Ad Set for clearer reporting on campaign performance.
+   2. In **Keyword(s)**, choose up to 10 keywords for each Ad Set. Keywords populate after typing in the text field. You should group relevant keywords together within each Ad Set for clearer reporting on campaign performance.  
       <img src="../../assets/promotion/search-ads/Select-Keywords.png" width="70%" alt=""/>
+   3.  Click **NEXT**.
+5.  In the Ad page:
+    1.  Set your **Destination Experience**. This is the experience that users are directed to after clicking on the search ad.
 
-   2. Click **NEXT**.
+         <img src="../../assets/promotion/search-ads/Edit-Ad-Creative.png" width="70%" alt=""/>
 
-6. In the next screen, modify your Ad Creative and Ad Name details:
-   <img src="../../assets/promotion/search-ads/Edit-Ad-Creative.png" width="70%" alt=""/>
+    2.  Enter a name for this specific ad.
+    3.  Click **NEXT**.
+6.  In the Review Campaign page, review the final details of your advertisement and click **SUBMIT** to launch your campaign.
 
-   1. Set your **Destination Experience**. This is the experience that users are directed to after clicking on the search ad.
-   2. Input a name for this specific ad.
-   3. Click **NEXT**.
-
-7. In the Review Campaign page, review the final details of your advertisement. Click **SUBMIT** to launch your campaign.
-
-8. Monitor performance with [Ads Reporting](#reporting) and [Billing](./ads-manager.md#ads-billing).
+After launching your campaign, you can monitor the campaign's performance with [Ads Reporting](#reporting) and [Billing](./ads-manager.md#ads-billing).
 
 ## Bidding and Auction
 

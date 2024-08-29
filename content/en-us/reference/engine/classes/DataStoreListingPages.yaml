@@ -12,8 +12,8 @@ description: |
 
   See also:
 
-  - [Data Stores](../../../cloud-services/data-stores), an in-depth guide on
-    data structure, management, error handling, etc.
+  - [Data Stores](../../../cloud-services/data-stores/index.md), an in-depth
+    guide on data structure, management, error handling, etc.
 code_samples:
 inherits:
   - Pages

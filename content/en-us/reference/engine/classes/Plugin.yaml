@@ -4,10 +4,14 @@ category: Plugins
 memory_category: Instances
 summary: ''
 description: |
-  Plugin is the main object responsible for creating basic studio widgets. It is
-  a custom add-on to Studio which adds new behavior and features that are not
-  normally included.
+  **Plugin** is the main object responsible for creating basic Studio widgets,
+  plugin toolbars, plugin buttons, and more. It is a custom add-on to Studio
+  which adds new behavior and features that are not normally included. The
+  **Plugin** object can be accessed through the `Global.RobloxGlobals.plugin`
+  global reference in a `Class.Script` that is executed as a plugin.
 code_samples:
+  - Plugin-Global-Pass
+  - Plugin-Global-Receive
 inherits:
   - Instance
 tags:

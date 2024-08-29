@@ -291,9 +291,7 @@ properties:
       the test is being ran.
     code_samples:
     type: bool
-    tags:
-      - Hidden
-      - NotReplicated
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -302,7 +300,7 @@ properties:
     category: Physics
     serialization:
       can_load: true
-      can_save: false
+      can_save: true
   - name: TestService.IsPhysicsEnvironmentalThrottled
     summary: |
       Sets whether or not the physics environment should be throttled while
@@ -312,9 +310,7 @@ properties:
       running this test.
     code_samples:
     type: bool
-    tags:
-      - Hidden
-      - NotReplicated
+    tags: []
     deprecation_message: ''
     security:
       read: None
@@ -323,7 +319,7 @@ properties:
     category: Physics
     serialization:
       can_load: true
-      can_save: false
+      can_save: true
   - name: TestService.IsSleepAllowed
     summary: |
       Sets whether or not physics objects will be allowed to fall asleep while
