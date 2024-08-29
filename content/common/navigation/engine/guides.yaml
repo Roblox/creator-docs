@@ -34,6 +34,8 @@ navigation:
             path: /projects/setting-up-a-team
           - title: Collaboration
             path: /projects/collaboration
+          - title: Activity History
+            path: /projects/activity-history
           - title: Groups
             path: /projects/groups
       - title: External Tools
