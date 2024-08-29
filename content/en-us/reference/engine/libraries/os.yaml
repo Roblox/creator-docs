@@ -10,75 +10,44 @@ description: |
 code_samples:
 properties:
 functions:
-  - name: os.time
+  - name: os.clock
     summary: |
-      Returns how many seconds have passed since the Unix epoch (1 January 1970,
-      00:00:00) under current UTC time.
+      Returns elapsed time in seconds since an arbitrary baseline with
+      sub-microsecond precision.
     description: |
-      Returns how many seconds have passed since the Unix epoch (1 January 1970,
-      00:00:00), under current UTC time. If provided a table formatted similarly
-      to that returned by `Library.os.date()`, it will return the number of
-      seconds since that time instead.
+      Returns elapsed time in seconds since an arbitrary baseline with
+      sub-microsecond precision. This function is useful for comparing durations
+      between two events that occur on the same computer, and is the best option
+      for benchmarking.
 
-      Returns the time using the device's local clock. Most operating systems
-      automatically sync their local time against online time servers, so this
-      should be within a few hundred milliseconds. However, users can easily
-      disable sync behavior and set the system time to anything they want; for
-      synchronized time between client and server, use
-      `Class.Workspace:GetServerTimeNow()` instead.
-
-      This function should be avoided in new work. Instead, use the
-      `Datatype.DateTime` API, which supports localized formatting.
-
-      When you need to precisely measure the time elapsed between two points in
-      time, like when testing performance, use `Library.os.clock()` instead.
+      Unlike with functions such as `Library.os.time()` or
+      `Datatype.DateTime.now()`, adjustments to the system clock (such as by the
+      user or [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol)) do not
+      cause time to jump forwards or backwards.
 
       ```lua
-      print(os.time())  --> 1586982482 (ran at approx. April 15th, 2020 at 1:28 PM PST)
-      print(os.time{
-          year=2020, month=4, day=15,  -- Date components
-          hour=16, min=28, sec=0  -- Time components
-      })  --> 1586968080
+      -- Record the initial time:
+      local startTime = os.clock()
+      -- Do something you want to measure the performance of:
+      local a, b = 0, 1
+      for _ = 1, 5000000 do
+          a, b = b, a
+      end
+      -- Measure amount of time this took:
+      local deltaTime = os.clock() - startTime
+      print("Elapsed time: " .. deltaTime)
+      -->  Elapsed time: 0.044425600033719 (actual number may vary)
       ```
     parameters:
-      - name: time
-        type: table
-        default: UTC time
-        summary: |
-          A dictionary table describing a specific time, similar to that
-          returned by `Library.os.date()`. If not provided, uses the current UTC
-          time.
     returns:
-      - type: int
-        summary: ''
-    tags:
-    code_samples:
-  - name: os.difftime
-    summary: |
-      Returns the number of seconds from t1 to t2, assuming the arguments are
-      correctly casted to the time_t format.
-    description: |
-      Returns the number of seconds from t1 to t2. The difference is computed
-      assuming that t1 and t2 are correctly casted to the
-      [time_t](http://en.cppreference.com/w/cpp/chrono/c/time_t) format.
-    parameters:
-      - name: t2
-        type: int
-        default:
-        summary: ''
-      - name: t1
-        type: int
-        default:
-        summary: ''
-    returns:
-      - type: int
+      - type: double
         summary: ''
     tags:
     code_samples:
   - name: os.date
     summary: |
       Formats the given string with date/time information based on the given
-      time (or if not provided, the value returned by os.time).
+      time.
     description: |
       Formats the given `formatString` with date/time information based on the
       given time, or if not provided, the value returned by `Library.os.time()`.
@@ -298,30 +267,59 @@ functions:
         summary: ''
     tags:
     code_samples:
-  - name: os.clock
+  - name: os.difftime
     summary: |
-      Returns elapsed CPU time in seconds with high precision, intended for use
-      in benchmarking.
+      Returns the number of seconds from one time to another.
     description: |
-      Returns elapsed CPU time in seconds. This value has high precision (about
-      1 microsecond) and is intended for use in benchmarking.
-
-      ```lua
-      -- Record the initial time:
-      local startTime = os.clock()
-      -- Do something you want to measure the performance of:
-      local a, b = 0, 1
-      for _ = 1, 5000000 do
-          a, b = b, a
-      end
-      -- Measure amount of time this took:
-      local deltaTime = os.clock() - startTime
-      print("Elapsed time: " .. deltaTime)
-      -->  Elapsed time: 0.044425600033719 (actual number may vary)
-      ```
+      Returns the number of seconds from `t1` to `t2`. The difference is
+      computed assuming that `t1` and `t2` are correctly casted to the
+      [time_t](http://en.cppreference.com/w/cpp/chrono/c/time_t) format.
     parameters:
+      - name: t2
+        type: int
+        default:
+        summary: ''
+      - name: t1
+        type: int
+        default:
+        summary: ''
     returns:
-      - type: double
+      - type: int
+        summary: ''
+    tags:
+    code_samples:
+  - name: os.time
+    summary: |
+      Returns how many seconds have passed since the Unix epoch (1 January 1970,
+      00:00:00) under current UTC time.
+    description: |
+      Returns how many seconds have passed since the Unix epoch (1 January 1970,
+      00:00:00), under current UTC time. If provided a table formatted similarly
+      to that returned by `Library.os.date()`, it will return the number of
+      seconds since that time instead.
+
+      Note that the returned time uses the device's local clock. Most operating
+      systems automatically sync their local time against online time servers,
+      so this should be within a few hundred milliseconds. However, users can
+      easily disable sync behavior and set the system time to anything they
+      want; for synchronized time between client and server, use
+      `Class.Workspace:GetServerTimeNow()` instead.
+
+      This function should be avoided in new work. Instead, use the
+      `Datatype.DateTime` API, which supports localized formatting.
+
+      When you need to precisely measure the time elapsed between two points in
+      time, like when testing performance, use `Library.os.clock()` instead.
+    parameters:
+      - name: time
+        type: table
+        default: UTC time
+        summary: |
+          A dictionary table describing a specific time, similar to that
+          returned by `Library.os.date()`. If not provided, uses the current UTC
+          time.
+    returns:
+      - type: int
         summary: ''
     tags:
     code_samples:
