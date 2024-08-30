@@ -1,0 +1,10 @@
+sudo xbps-install github-cliecho "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
+apk add github-cli@communityhttp://dl-cdn.alpinelinux.org/alpine/edge/communityapk add github-cli# To install
+flox install gh
+
+# To upgrade
+flox upgrade toplevelsudo zypper in gh{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+  }
+}
