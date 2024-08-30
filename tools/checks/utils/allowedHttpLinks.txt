@@ -93,6 +93,7 @@ https://en.wikipedia.org/wiki/Inverse_kinematics
 https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch
 https://en.wikipedia.org/wiki/Linear_search
 https://en.wikipedia.org/wiki/Matrix_multiplication
+https://en.wikipedia.org/wiki/Network_Time_Protocol
 https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion
 https://en.wikipedia.org/wiki/Percent-encoding
 https://en.wikipedia.org/wiki/Photogrammetry
