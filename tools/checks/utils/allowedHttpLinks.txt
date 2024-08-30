@@ -1,4 +1,4 @@
-http://cgtrader.com/pbr-3d-models?polygons=lt_5k
+tools/checks/utils/allowed HttpLinks.txt http://cgtrader.com/pbr-3d-models?polygons=lt_5k
 http://en.cppreference.com/w/cpp/chrono/c/time_t
 https://academy.zenva.com/product/roblox-game-development-mini-degree/?zva_src=robloxedu
 https://adoptme.fandom.com/wiki/Scams
