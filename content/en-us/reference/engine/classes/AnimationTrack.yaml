@@ -3,13 +3,13 @@ type: class
 category: Animations
 memory_category: Animation
 summary: |
-  Controls the playback of an animation on a `Class.Humanoid` or
+  Controls the playback of an animation on a `Class.Animator`, `Class.Humanoid` or
   `Class.AnimationController`. This object cannot be created, instead it is
-  returned by the `Class.Humanoid:LoadAnimation()` method.
+  returned by the `Class.Animator:LoadAnimation()` method.
 description: |
-  Controls the playback of an animation on a `Class.Humanoid` or
+  Controls the playback of an animation on a `Class.Animator`, `Class.Humanoid` or
   `Class.AnimationController`. This object cannot be created, instead it is
-  returned by the `Class.Humanoid:LoadAnimation()` method.
+  returned by the `Class.Animator:LoadAnimation()` method.
 code_samples:
   - Animation-Creation
 inherits:
