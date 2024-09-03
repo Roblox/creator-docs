@@ -1031,12 +1031,12 @@ methods:
         default: nil
         summary: |
           An optional `Class.TeleportOptions` object containing additional
-          arguments to the TeleportAsync call.
+          arguments to the TeleportAsync call. If this is not passed, no result will be returned.
     returns:
       - type: Instance
         summary: |
           A `Class.TeleportAsyncResult` object that provides information about
-          the final teleport destination.
+          the final teleport destination. If no `Class.TeleportOptions` parameter is passed, no result will be returned.
     tags:
       - Yields
     deprecation_message: ''
