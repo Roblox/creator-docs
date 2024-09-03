@@ -165,7 +165,7 @@ methods:
         type: Vector3?
         default:
         summary: |
-        The normal vector. If the normal value isn't specified, the normal will be automatically calculated.
+        	The normal vector. If the normal value isn't specified, the normal will be automatically calculated.
     returns:
       - type: int64
         summary: |
