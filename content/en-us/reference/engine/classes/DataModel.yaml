@@ -499,25 +499,32 @@ methods:
     summary: |
       Binds a function to be called before the server shuts down.
     description: |
-      Binds a function to be called before the server shuts down.
-      If the bound function accepts a parameter, it passes `Enum.CloseReason` specifying the reason for the server shutdown.
+      Binds a function to be called before the server shuts down. If the bound
+      function accepts a parameter, it passes `Enum.CloseReason` specifying the
+      reason for the server shutdown.
 
-      You can bind multiple functions by calling `Class.DataModel:BindToClose()|BindToClose()` repeatedly.
-      Bound functions are called in parallel and run at the same time.
-      
-      The experience server waits 30 seconds for all bound functions to stop running before it shuts down.
-      After 30 seconds, the server shuts down even if functions are still running.
+      You can bind multiple functions by calling
+      `Class.DataModel:BindToClose()|BindToClose()` repeatedly. Bound functions
+      are called in parallel and run at the same time.
 
-      To verify that the current session is not in Roblox Studio, use `Class.RunService:IsStudio()`.
-      This prevents bound functions from completing their run in offline testing sessions.
+      The experience server waits 30 seconds for all bound functions to stop
+      running before it shuts down. After 30 seconds, the server shuts down even
+      if functions are still running.
 
-      When you use `Class.DataStoreService`, you should also use `BindToClose` to bind a function saving all unsaved data to `Class.GlobalDataStore|DataStores`.
-      This prevents data loss if the server shuts down unexpectedly.
+      To verify that the current session is not in Roblox Studio, use
+      `Class.RunService:IsStudio()`. This prevents bound functions from
+      completing their run in offline testing sessions.
+
+      When you use `Class.DataStoreService`, you should also use `BindToClose`
+      to bind a function saving all unsaved data to
+      `Class.GlobalDataStore|DataStores`. This prevents data loss if the server
+      shuts down unexpectedly.
 
       See also:
 
       - `Enum.CloseReason` for reasons for the experience server shutdown.
-      - `Class.PluginGui:BindToClose()`, which binds a function to a `Class.PluginGui` close button.
+      - `Class.PluginGui:BindToClose()`, which binds a function to a
+        `Class.PluginGui` close button.
     code_samples:
       - saving-player-data-before-shutting-down
       - DataModel-BindToClose1
@@ -526,8 +533,9 @@ methods:
         type: Function
         default:
         summary: |
-          A function called before the experience server shuts down. 
-          If the bound function accepts a parameter, it passes `Enum.CloseReason` specifying the reason for the server shutdown.
+          A function called before the experience server shuts down. If the
+          bound function accepts a parameter, it passes `Enum.CloseReason`
+          specifying the reason for the server shutdown.
     returns:
       - type: void
         summary: ''
