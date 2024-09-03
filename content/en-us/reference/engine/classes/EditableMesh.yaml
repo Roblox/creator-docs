@@ -343,7 +343,7 @@ methods:
       <img src="../../../assets/engine-api/classes/EditableMesh/GetAdjacentTriangles.png" alt="Adjacent triangles indicated around requested triangle" width="120" />
     code_samples: []
     parameters:
-      - name: faceId
+      - name: triangleId
         type: int64
         default:
         summary: |
@@ -606,7 +606,7 @@ methods:
       Returns a triangle's three vertex IDs.
     code_samples: []
     parameters:
-      - name: faceId
+      - name: triangleId
         type: int64
         default:
         summary: |
@@ -867,7 +867,7 @@ methods:
       Removes a triangle using its stable face ID.
     code_samples: []
     parameters:
-      - name: faceId
+      - name: triangleId
         type: int64
         default:
         summary: |
