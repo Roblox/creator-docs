@@ -1,48 +1,52 @@
 name: CloseReason
 type: enum
-summary: | 
-      Specifies the reason for the experience server shutdown.
-description: | 
-      Specifies the reason for the experience server shutdown. This enum value is the first parameter passed to functions bound by `Class.DataModel:BindToClose()|BindToClose()`.
-      
-      The **DeveloperShutdown** value must always be passed to functions bound by `Class.DataModel:BindToClose()|BindToClose()` when they're called in Studio.              
+summary: |
+  Specifies the reason for the experience server shutdown.
+description: |
+  Specifies the reason for the experience server shutdown. This enum value is
+  the first parameter passed to functions bound by
+  `Class.DataModel:BindToClose()|BindToClose()`.
+
+  The **DeveloperShutdown** value must always be passed to functions bound by
+  `Class.DataModel:BindToClose()|BindToClose()` when they're called in Studio.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Unknown
-    summary: | 
+    summary: |
       The server shut down for an unknown reason.
     value: 0
     tags: []
     deprecation_message: ''
   - name: RobloxMaintenance
-    summary: | 
+    summary: |
       The server shut down for maintenance.
     value: 1
     tags: []
     deprecation_message: ''
   - name: DeveloperShutdown
-    summary: | 
+    summary: |
       The experience developer has shut down the server, or functions bound by
-      `Class.DataModel:BindToClose()|BindToClose()` have been called inside Studio.
+      `Class.DataModel:BindToClose()|BindToClose()` have been called inside
+      Studio.
     value: 2
     tags: []
     deprecation_message: ''
   - name: DeveloperUpdate
-    summary: | 
+    summary: |
       The experience developer has migrated the server to a new place version.
     value: 3
     tags: []
     deprecation_message: ''
   - name: ServerEmpty
-    summary: | 
+    summary: |
       The last player has left and the experience is empty.
     value: 4
     tags: []
     deprecation_message: ''
   - name: OutOfMemory
-    summary: | 
+    summary: |
       The experience has hit the memory limit for the game server.
     value: 5
     tags: []
