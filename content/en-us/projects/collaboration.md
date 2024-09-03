@@ -278,6 +278,8 @@ The owner of an experience can revert changes made by other editors. See [here](
 Be careful when reverting changes. If anyone is currently editing the experience in a collaborative session, their changes may still auto‑save and overwrite the revert action. To ensure that nobody else is editing the place when you revert, [disable collaboration](#disabling-collaboration).
 </Alert>
 
+You might also want to check [Activity History](activity-history.md). This view provides a chronological event log that improves team visibility into key experience settings.
+
 ## Disabling Collaboration
 
 **Team Create** is the core Studio feature that enables collaboration. Workflows that involve the [Manage Collaborators](#managing-collaborators) dialog will automatically enable the feature, but you can manually disable it if necessary.

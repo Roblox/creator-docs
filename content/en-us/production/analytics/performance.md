@@ -1,97 +1,149 @@
 ---
-title: Performance
+title: Performance Dashboard
 description: Explains how to improve performance analytics metrics for your experience.
 ---
 
-**Performance** allows you to view up-to-the-minute user, server, and client metrics for your experience. Monitor this page before and after updating your experience to identify performance issues early.
+The **Performance** dashboard provides up-to-the-minute client and server metrics for your experience. Monitor this page before and after updating your experience to identify performance issues early.
 
-## Viewing Performance Metrics
+![An overview of the performance dashboard.](../../assets/analytics/performance/perf-dash-overview.png)
 
-To view your experience's performance monitoring page:
+## Accessing the Dashboard
 
-1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
-2. Select **Performance**.
+To access the Performance page, you must either be the experience owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#granting-group-permission).
 
-You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md#granting-group-permission).
+1. Navigate to the [Creations](https://create.roblox.com/dashboard/creations) page on the **Creator Hub**.
+2. Under the **Creator Hub** dropdown, select your account or the group that owns the experience.
+3. Select the experience.
+4. In the **Monitoring** dropdown, select **Performance**.
 
-## Monitoring Performance
+## Using the Dashboard
 
-The dashboard includes the following metrics, with version update annotations in each chart:
+The dashboard begins with the current number of users, the number of servers they are spread across, and a device breakdown. For the dashboard to show client and server **charts** like the ones below, your experience must have at least 100 daily active users (DAU).
+
+The dashboard contains two tabs, **Client** and **Server**, along with menus to adjust date range and time interval. You can also use the **Place** menu to examine individual places rather than the entire experience.
+
+![A marked up view of the performance dashboard UI.](../../assets/analytics/performance/perf-dash-ui.png)
+
+The **Filter By** menu lets you swap between averages or percentile values.
+
+<img src="../../assets/analytics/performance/perf-dash-filter.png" alt="A view of the filters menu." width="300px" />
+
+When reviewing charts or filtering:
+
+- P90 refers to the number of values that fall within the 90th percentile. If P90 server heartbeat is 59, then 90% of servers are running at or below 59 FPS.
+- Similarly, P10 refers to the 10th percentile. If P10 server heartbeat is 40, then 10% of servers are running at or below 40 FPS.
+- P50 is the median. Half of all values fall above it, half below.
+
+<Alert severity="info">
+Percentile values are calculated smallest to largest, so for metrics where lower numbers are better (e.g. server CPU time), P10 represents the "best case" and P90 the "worst case" rather than the other way around.
+</Alert>
+
+## Client Charts
+
+The **Client** tab includes the following charts, all of which are broken down by platform or operating system:
 
 <table>
     <thead>
         <tr>
-            <th>Metric</th>
+            <th>Chart</th>
             <th>Description</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>Concurrent users</td>
-            <td>Number of users in your experience at any given time.</td>
+            <td>Line graph showing the number of users in your experience.</td>
         </tr>
         <tr>
             <td>Session time</td>
-            <td>Length of time users spend in your experience per session.</td>
-        </tr>
-        <tr>
-            <td>Server frame rate</td>
-            <td>Frames per second processed by the server.</td>
-        </tr>
-        <tr>
-            <td>Server memory usage</td>
-            <td>Memory consumed by the server.</td>
+            <td>Duration that users spend in your experience.</td>
         </tr>
         <tr>
             <td>Client frame rate</td>
-            <td>Frames per second processed by each client. Large drops may signal issues.</td>
+            <td>Line graph showing client frames per second. Persistent low frame rates or large drops may signal issues. For information on investigating client frame rate, see [Client Compute](../../performance-optimization/identifying.md#client-compute).</td>
         </tr>
         <tr>
             <td>Client crash rate</td>
-            <td>Sessions that crash as a percent of overall sessions. Large spikes may signal issues.</td>
+            <td>Line graph showing client crash rate by device type. Spikes in crash rate, particularly following an update to the experience, often indicate an issue.</td>
         </tr>
         <tr>
             <td>Client memory usage</td>
-            <td>Memory consumed by each client. Large spikes may signal issues.</td>
+            <td>Line graph showing client memory usage by device type. Continual increases can indicate a memory leak. See [Memory](../../performance-optimization/identifying.md#memory).</td>
         </tr>
         <tr>
-            <td>Compute efficiency</td>
-            <td>Efficiency of server resource utilization. Above 100% is more efficient.</td>
+            <td>Client memory usage percentage</td>
+            <td>Line graph showing percentage of available device memory the client is using. For example, if the Android line approaches 100%, the majority of Android devices running your experience are at risk of running out of memory and crashing.</td>
         </tr>
     </tbody>
 </table>
 
-Data in these charts can be difficult to parse for experiences with low user counts, so your experience needs around 100 daily active users or 10 concurrent users to see server and client charts clearly. Consider troubleshooting for performance issues when seeing the following chart behaviors over a short period of time:
+## Server Charts
 
-1. Drop of concurrent users or session time.
-2. Decrease of server frame rate.
-3. Spike of server memory usage.
+The **Server** tab includes the following charts:
 
-<img src="../../assets/analytics/performance/server-stats.png" width= "120%" alt="An example of server stats with potential performance issue." />
+<table>
+    <thead>
+        <tr>
+            <th>Chart</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Server CPU time</td>
+            <td>Stacked area chart showing milliseconds (ms) of processing time per frame. Values over 16.67 ms can cause visible drops on the **Server frame rate** chart.</td>
+        </tr>
+        <tr>
+            <td>Server memory usage</td>
+            <td>Stacked area chart showing server memory usage in MB. If this number stays above 3 GB or continually increases over time, investigate ways to [improve memory usage](../../performance-optimization/improving.md#script-memory-usage).</td>
+        </tr>
+        <tr>
+            <td>Server frame rate</td>
+            <td>Line graph showing server frame rate in FPS. Server frame rate is capped at 60, and drops below 60 can reduce client frame rate and increase latency. See [Script Computation](../../performance-optimization/improving.md#script-computation).</td>
+        </tr>
+        {/*
+        <tr>
+            <td>Server memory by age</td>
+            <td>Stacked area chart showing time that memory remains allocated before the engine garbage collects it. If one process group ages more than the other process groups over time, investigate a possible memory leak.</td>
+        </tr>
+        */}
+        <tr>
+            <td>Cores used per server</td>
+            <td>Line graph showing server CPU core count usage. Low core count usage combined with high server CPU time is an indicator that you should investigate [Multithreading](../../scripting/multithreading.md).</td>
+        </tr>
+        <tr>
+            <td>Compute efficiency</td>
+            <td>Line graph showing the efficiency of your experience compared to the Roblox average. Values above 100% indicate higher efficiency than the baseline. Contributing factors include maximum number of players per server (higher is more efficient) and server CPU time per frame (lower is more efficient).</td>
+        </tr>
+    </tbody>
+</table>
 
-## Identifying Potential Performance Issues
+The server CPU and memory charts default to the **Overall** view, but have dropdown menus for individual process groups, such as physics, rendering, and scripts. The sum of these categories is **not** comprehensive; the server performs a small—typically insignificant—amount of additional work per frame that isn't included in any category. As such, the overall millisecond and MB values are slightly lower than reality, but close enough to give you a clear understanding of server performance.
 
-You can use the following filters at the top of the page to help you identify potential performance issues:
+If a category is higher than usual or appears to be taking up a disproportionate amount of time, use the dropdown menu to drill down on the group and identify processes that could be causing issues.
 
-| Filter     | Description                                                                                                                                                                                                |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Date       | View metrics for last hour, last day, last 7 days, or last 30 days. If you select **last hour**, the charts auto-update every minute. Otherwise, you can get up to the minute data by refreshing the page. |
-| Place      | View metrics for a specific place.                                                                                                                                                                         |
-| Percentile | View metrics at 10% to 99% percentile.                                                                                                                                                                     |
+<img src="../../assets/analytics/performance/perf-dash-drilldown.png" alt="The server CPU time chart showing the physics dropdown." width="600px" />
 
-<img src="../../assets/analytics/performance/client-performance.png" width= "150%" alt="An example of filtered user stats." />
+<Alert severity="success">
+To exclude a group or process from a chart, click its label in the legend.
+</Alert>
 
-## Resolving Performance Issues
+The categories in the dropdown menu map to the ones in the [MicroProfiler](../../studio/microprofiler/index.md), so you can open the MicroProfiler, select **Detailed** or **Timers** modes, and then use the **Groups** menu to filter by the problematic process group.
 
-If you identify a performance issue, use the following steps to debug and fix it:
+For example, if you spot a potential problem with the **assemble** process under the **Physics** group, you can find it under the same name in the MicroProfiler:
 
-1. **Check your recent updates** and consider rolling it back if the metrics impact is severe.
-2. **Use built-in testing tools** to troubleshoot performance:
+<img src="../../assets/analytics/performance/perf-dash-micro.png" alt="The MicroProfiler showing the assemble process within the Physics group." width="500px" />
+
+## Troubleshooting
+
+If you spot a potential problem, use the following steps to remediate and fix it:
+
+1. Check your recent updates and consider rolling them back if the impact to metrics is severe.
+2. See the [Identifying Performance Issues](../../performance-optimization/identifying.md) and [Improving Performance](../../performance-optimization/improving.md) for information on troubleshooting problems with server compute, client compute, and memory usage.
+3. Use built-in testing tools to further drill down on problems:
 
    - [Developer Console](../../studio/developer-console.md) for viewing error and log messages and detailed information on memory and networking.
    - [Script Profiler](../../studio/optimization/scriptprofiler.md) for identifying scripts that take up the most resources.
-   - [MicroProfiler](../../studio/microprofiler/using-microprofiler.md) for viewing unoptimized portions of your experience visually.
+   - The [MicroProfiler](../../studio/microprofiler/using-microprofiler.md) for viewing unoptimized portions of your experience visually.
 
-3. **Gather user feedback** from your community.
-
-For more information on optimizing performance for different areas of your experience, see [Performance Optimization](../../performance-optimization/index.md).
+4. Gather user feedback from your community.
