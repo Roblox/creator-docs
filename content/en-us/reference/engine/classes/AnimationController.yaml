@@ -107,7 +107,6 @@ events:
       See `Class.Humanoid.AnimationPlayed` for the `Class.Humanoid` variant of
       this function.
     code_samples:
-      - AnimationTrack-KeyframeReached-2
     parameters:
       - name: animationTrack
         type: AnimationTrack

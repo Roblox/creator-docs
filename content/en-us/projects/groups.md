@@ -59,7 +59,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
      </tr>
      <tr>
        <td>**Configure group profile**</td>
-       <td>Member can update the group’s name, description, and other metadata. Does not include transferring ownership.</td>
+       <td>Member can update the group's name, description, and other metadata. Does not include transferring ownership.</td>
      </tr>
    </tbody>
    <thead>
@@ -70,7 +70,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    <tbody>
      <tr>
       <td>**Play all group experiences**</td>
-      <td>Member can play all experiences owned by the group, whether they’re private or public.</td>
+      <td>Member can play all experiences owned by the group, whether they're private or public.</td>
      </tr>
      <tr>
        <td>**Edit all group experiences**</td>
@@ -78,7 +78,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
      </tr>
      <tr>
        <td>**View all analytics for group experiences**</td>
-       <td>Member can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don’t have edit access.</td>
+       <td>Member can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don't have edit access.</td>
      </tr>
    </tbody>
    </table>

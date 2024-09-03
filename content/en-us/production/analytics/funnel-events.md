@@ -3,7 +3,7 @@ title: Funnel Events
 description: Use funnel events to visualize user progression through key milestones in your experience.
 ---
 
-Funnel events let you track your user's progress through key stages of your experience. This includes:
+**Funnel events** let you track your user's progress through key stages of your experience. This includes:
 
 - **Onboarding** - Where do users drop off when getting started with your experience?
 - **Progression** - Where do users stop advancing through your experience?

@@ -5,34 +5,25 @@ memory_category: Gui
 summary: |
   An abstract class for all 2D user interface objects.
 description: |
-  GuiObject is an abstract class (much like `Class.BasePart`) for a 2D user
+  **GuiObject** is an abstract class (much like `Class.BasePart`) for a 2D user
   interface object. It defines all the properties relating to the display of a
-  graphical user interface (GUI) object such as `Class.GuiObject.Size` and
-  `Class.GuiObject.Position`. It also has some useful read-only properties like
-  `Class.GuiObject.AbsolutePosition`, `Class.GuiObject.AbsoluteSize`, and
-  `Class.GuiObject.AbsoluteRotation`. It should be noted that `Class.GuiObject`
-  can have negative sizes and render normally, though
-  `Class.GuiObject.AnchorPoint` ought to be used to better control rendering.
+  graphical user interface (GUI) object such as `Class.GuiObject.Size|Size` and
+  `Class.GuiObject.Position|Position`. It also has some useful read‑only
+  properties like `Class.GuiObject.AbsolutePosition|AbsolutePosition`,
+  `Class.GuiObject.AbsoluteSize|AbsoluteSize`, and
+  `Class.GuiObject.AbsoluteRotation|AbsoluteRotation`.
 
-  To manipulate the layout of a GuiObject in special ways, you can use a
-  `Class.UIComponent` class such as `Class.UIListLayout`, `Class.UIPadding` or
-  `Class.UIScale`.
+  To manipulate the layout of GUI objects in special ways, you can use a layout
+  structure such as [list/flex](../../../ui/list-flex-layouts.md) or
+  [grid](../../../ui/grid-table-layouts.md), and you can style them beyond their
+  core properties through [appearance
+  modifiers](../../../ui/appearance-modifiers.md).
 
-  This class defines very simple animation methods:
-  `Class.GuiObject:TweenPosition()`, `Class.GuiObject:TweenSize()` and
-  `Class.GuiObject:TweenSizeAndPosition()` are good alternatives to
-  `Class.TweenService` for beginners.
-
-  GuiObject also defines events for user input like
-  `Class.GuiObject.MouseEnter`, `Class.GuiObject.TouchTap`,
-  `Class.GuiObject.InputBegan`, `Class.GuiObject.InputChanged` and
-  `Class.GuiObject.InputEnded`. The last three of these mimic the events of
-  `UserInputService` of the same name. Although it is possible to detect mouse
-  button events on any GuiObject using `Class.GuiObject.InputBegan`, only
-  `Class.ImageButton` and `Class.TextButton` have dedicated events for these
-  (e.g. `Class.TextButton.MouseButton1Down`). This event ought not be used for
-  general button activation since not all platforms use a mouse; see
-  `Class.TextButton.Activated`.
+  Although it's possible to detect mouse button events on any GUI object using
+  `Class.GuiObject.InputBegan|InputBegan` and
+  `Class.GuiObject.InputEnded|InputEnded`, only `Class.ImageButton` and
+  `Class.TextButton` have convenient dedicated events such as
+  `Class.TextButton.Activated|Activated` to detect click/press.
 code_samples:
 inherits:
   - GuiBase2d
@@ -43,19 +34,19 @@ deprecation_message: ''
 properties:
   - name: GuiObject.Active
     summary: |
-      Determines whether a UI element sinks input.
+      Determines whether this UI element sinks input.
     description: |
-      This property determines whether a `Class.GuiObject` will sink input to 3D
-      space, such as underlying models with a `Class.ClickDetector`. In other
-      words, if the player attempts to click a ClickDetector with the mouse
-      hovering over an Active UI element, the UI will block the input from
-      reaching the ClickDetector.
+      This property determines whether this `Class.GuiObject` will sink input to
+      3D space, such as underlying models with a `Class.ClickDetector` class
+      such as `Class.DragDetector`. In other words, if the player attempts to
+      click the detector with the mouse hovering over an active UI element, the
+      UI will block the input from reaching the detector.
 
       For `Class.GuiButton` objects (`Class.ImageButton` and
       `Class.TextButton`), this property determines whether
-      `Class.GuiButton.Activated` fires (`Class.GuiButton.AutoButtonColor` will
-      still work for those as well). The events
-      `Class.GuiObject.InputBegan|InputBegan`,
+      `Class.GuiButton.Activated|Activated` fires
+      (`Class.GuiButton.AutoButtonColor|AutoButtonColor` will still work for
+      those as well). The events `Class.GuiObject.InputBegan|InputBegan`,
       `Class.GuiObject.InputChanged|InputChanged`, and
       `Class.GuiObject.InputEnded|InputEnded` work as normal no matter the value
       of this property.
@@ -103,13 +94,13 @@ properties:
       Determines whether resizing occurs based on child content.
     description: |
       This property is used to automatically size parent UI objects based on the
-      size of its descendants. Developers can use this property to dynamically
-      add text and other content to a UI object at edit or run time, and the
-      size will adjust to fit that content.
+      size of its descendants. You can use this property to dynamically add text
+      and other content to a UI object at edit or run time, and the size will
+      adjust to fit that content.
 
-      When AutomaticSize is set to an `Enum.AutomaticSize|Enum.AutomaticSize`
-      value to anything other than None, this UI object may resize depending on
-      its child content.
+      When **AutomaticSize** is set to an `Enum.AutomaticSize` value to anything
+      other than `Enum.AutomaticSize|None`, this UI object may resize depending
+      on its child content.
 
       For more information on how to use this property and how it works, please
       see [here](../../../ui/size-modifiers.md#automatic-sizing).
@@ -154,18 +145,15 @@ properties:
       Determines the `Class.GuiObject` background color.
     description: |
       This property determines the color of a `Class.GuiObject` background (the
-      fill color).
-
-      Another property that determines the visual properties of the background
-      is `Class.GuiObject.BackgroundTransparency`. If an element's
-      BackgroundTransparency is set to 1, neither the background nor the border
-      will render and the element will be transparent.
-
-      If your element contains text, such as a `Class.TextBox`,
+      fill color). If your element contains text, such as a `Class.TextBox`,
       `Class.TextButton`, or `Class.TextLabel`, make sure the color of your
       background contrasts the text's color.
 
-      See also `Class.GuiObject.BorderColor3`.
+      Another property that determines the visual properties of the background
+      is `Class.GuiObject.BackgroundTransparency`; if this is set to `1`,
+      neither the background nor the border will render.
+
+      See also `Class.GuiObject.BorderColor3|BorderColor3`.
     code_samples:
       - Rainbow-Frame
     type: Color3
@@ -185,16 +173,14 @@ properties:
       border.
     description: |
       This property determines the transparency of the `Class.GuiObject`
-      background and border.
-
-      It does not, however, determine the transparency of text if the GUI is a
-      `Textbox`, `Class.TextButton`, or `Class.TextLabel`. Text transparency is
-      determined `Class.TextBox.TextTransparency`,
-      `Class.TextButton.TextTransparency`, and
+      background and border. It does not, however, determine the transparency of
+      text if the GUI is a `Class.TextBox`, `Class.TextButton`, or
+      `Class.TextLabel`; text transparency is determined
+      `Class.TextBox.TextTransparency`, `Class.TextButton.TextTransparency`, and
       `Class.TextLabel.TextTransparency` respectively.
 
-      If the property is set to 1, neither the background nor the border will
-      render and the GUI will be completely transparent.
+      If this property is set to `1`, neither the background nor the border will
+      render and the GUI background will be completely transparent.
     code_samples:
     type: float
     tags: []
@@ -233,16 +219,15 @@ properties:
     summary: |
       Determines the color of the `Class.GuiObject` border.
     description: |
-      Determines the color of a `Class.GuiObject` rectangular border (also known
-      as the stroke color). This is separate from the object's
-      `Class.GuiObject.BackgroundColor3`. Note that you will not be able to see
-      the object's border if its `Class.GuiObject.BorderSizePixel` property is
-      set to 0.
+      Determines the color of the `Class.GuiObject` rectangular border (also
+      known as the stroke color). This is separate from the object's
+      `Class.GuiObject.BackgroundColor3`. You will not be able to see the
+      object's border if its `Class.GuiObject.BorderSizePixel` property is set
+      to `0`.
 
       Note that the `Class.UIStroke` component allows for more advanced border
       effects.
     code_samples:
-      - Rainbow-Frame
       - Button-Highlight
     type: Color3
     tags: []
@@ -260,8 +245,8 @@ properties:
       Determines in what manner the `Class.GuiObject` border is laid out
       relative to its dimensions.
     description: |
-      This property determines in what manner a `Class.GuiObject` border is laid
-      out relative to its dimensions using the enum of the same name,
+      This property determines in what manner the `Class.GuiObject` border is
+      laid out relative to its dimensions using the enum of the same name,
       `Enum.BorderMode`.
 
       Note that `Class.UIStroke` can override this property and allow for more
@@ -280,9 +265,9 @@ properties:
       can_save: true
   - name: GuiObject.BorderSizePixel
     summary: |
-      Determines the pixel width of a `Class.GuiObject` border.
+      Determines the pixel width of the `Class.GuiObject` border.
     description: |
-      This property determines how wide a `Class.GuiObject` border renders, in
+      This property determines how wide the `Class.GuiObject` border renders, in
       pixels. Setting this to 0 disables the border altogether.
 
       Note that `Class.UIStroke` can override this property and allow for more
@@ -302,16 +287,15 @@ properties:
       can_save: true
   - name: GuiObject.ClipsDescendants
     summary: |
-      Determines if descendant `Class.GuiObject|GUIs` outside of the bounds of a
-      parent GUI element should render.
+      Determines if descendant `Class.GuiObject|GuiObjects` outside of the
+      bounds of a parent GUI element should render.
     description: |
       This property determines if the `Class.GuiObject` will clip (make
       invisible) any portion of descendant GUI elements that would otherwise
-      render outside the bounds of the rectangle. The behavior is similar to a
-      `Class.ScrollingFrame`.
+      render outside the bounds of the rectangle.
 
       Note that `Class.GuiObject.Rotation` isn't supported by this property. If
-      this or any ancestor GUI has a **non-zero** `Class.GuiObject.Rotation`,
+      this or any ancestor GUI has a **non‑zero** `Class.GuiObject.Rotation`,
       this property is **ignored** and descendant GUI elements will be rendered
       regardless of this property's value.
     code_samples:
@@ -382,34 +366,27 @@ properties:
       can_save: true
   - name: GuiObject.LayoutOrder
     summary: |
-      Controls the sort order of a `Class.GuiObject|GUI` when used with a
+      Controls the sort order of the `Class.GuiObject` when used with a
       `Class.UIGridStyleLayout`.
     description: |
-      This property controls the sorting order of a `Class.GuiObject|GUI` when
+      This property controls the sorting order of the `Class.GuiObject` when
       using a `Class.UIGridStyleLayout` (such as `Class.UIListLayout` or
-      `Class.UIPageLayout`) with `Class.UIGridStyleLayout.SortOrder` set to
-      `Enum.SortOrder|Enum.SortOrder.LayoutOrder`. It has no functionality if
-      the GUI does not have a sibling UI Layout.
+      `Class.UIPageLayout`) with `Class.UIGridStyleLayout.SortOrder|SortOrder`
+      set to `Enum.SortOrder.LayoutOrder`. It has no functionality if the object
+      does not have a sibling UI layout structure.
 
-      It is a signed 32-bit int, so it can be set to any value from
-      -2,147,483,648 to 2,147,483,647 (inclusive). GUIs are placed in ascending
-      order where lower values take more priority over, and are ordered before,
-      higher values. Values that are equal will fall back to the order they were
-      added in.
+      `Class.GuiObject|GuiObjects` are sorted in ascending order where lower
+      values take priority over higher values. Objects with equal values fall
+      back to the order they were added in.
 
-      If you are unsure if you will need to add an element between two
-      already-existing elements in the future, it can be a good idea to use
-      multiples of 100, i.e. 0, 100, 200. This ensures a large gap of
-      LayoutOrder values you can use for elements ordered in-between other
-      elements.
+      If you are unsure if you'll need to add an element between two existing
+      elements in the future, it's a good practice to use multiples of `100`
+      (`0`, `100`, `200`, etc.). This ensures a large gap of layout order values
+      which you can use for elements ordered in-between other elements.
 
-      See also:
-
-      - `Class.GuiObject.ZIndex`, which determines the GUI render order instead
-        of placement order.
-    code_samples:
-      - UI-Sort-Order
-      - GuiObject-LayoutOrder1
+      See also `Class.GuiObject.ZIndex|ZIndex` which determines the object's
+      **rendering** order instead of sorting order.
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
@@ -423,28 +400,24 @@ properties:
       can_save: true
   - name: GuiObject.NextSelectionDown
     summary: |
-      Sets the GuiObject which will be selected when the Gamepad selector is
-      moved in this direction.
+      Sets the `Class.GuiObject` which will be selected when the gamepad
+      selector is moved downward.
     description: |
-      This property sets the `Class.GuiObject|GUI` selected when the user moves
-      the Gamepad selector downward. If this property is left blank, the moving
-      the Gamepad downward will not change which selected GUI.
+      This property sets the `Class.GuiObject` selected when the user moves the
+      [gamepad](../../../input/gamepad.md) selector downward. If this property
+      is empty, moving the gamepad downward will not change the selected
+      GUI.
 
-      Moving the Gamepad selector downward sets the
+      Moving the gamepad selector downward sets the
       `Class.GuiService.SelectedObject` to this object unless the GUI is not
-      `Class.GuiObject.Selectable|Selectable`. If the specified GUI is not
-      selectable, it will not be selected when the gamepad selected moves
-      upward.
+      `Class.GuiObject.Selectable|Selectable`. Note that this property can be
+      set to a GUI element even if it is not
+      `Class.GuiObject.Selectable|Selectable`, so you should ensure that the
+      value of a GUI's selectable property matches your expected behavior.
 
-      Note that since this property can be set to a GUI element even if it is
-      not Selectable, you should ensure that the value of a GUI's selectable
-      property matching your expected behavior.
-
-      See also:
-
-      - `Class.GuiObject.NextSelectionUp`
-      - `Class.GuiObject.NextSelectionLeft`
-      - `Class.GuiObject.NextSelectionRight`
+      See also `Class.GuiObject.NextSelectionUp|NextSelectionUp`,
+      `Class.GuiObject.NextSelectionLeft|NextSelectionLeft`, and
+      `Class.GuiObject.NextSelectionRight|NextSelectionRight`.
     code_samples:
       - creating-a-gamepad-selection-grid
     type: GuiObject
@@ -460,28 +433,24 @@ properties:
       can_save: true
   - name: GuiObject.NextSelectionLeft
     summary: |
-      Sets the GuiObject which will be selected when the Gamepad selector is
-      moved in this direction.
+      Sets the `Class.GuiObject` which will be selected when the gamepad
+      selector is moved to the left.
     description: |
-      This property sets the `Class.GuiObject|GUI` selected when the user moves
-      the Gamepad selector to the left. If this property is left blank, the
-      moving the Gamepad left will not change which selected GUI.
+      This property sets the `Class.GuiObject` selected when the user moves the
+      [gamepad](../../../input/gamepad.md) selector to the left. If this
+      property is empty, moving the gamepad to the left will not change the
+      selected GUI.
 
-      Moving the Gamepad selector left sets the
+      Moving the gamepad selector to the left sets the
       `Class.GuiService.SelectedObject` to this object unless the GUI is not
-      `Class.GuiObject.Selectable|Selectable`. If the specified GUI is not
-      selectable, it will not be selected when the gamepad selected moves
-      upward.
+      `Class.GuiObject.Selectable|Selectable`. Note that this property can be
+      set to a GUI element even if it is not
+      `Class.GuiObject.Selectable|Selectable`, so you should ensure that the
+      value of a GUI's selectable property matches your expected behavior.
 
-      Note that since this property can be set to a GUI element even if it is
-      not Selectable, you should ensure that the value of a GUI's selectable
-      property matching your expected behavior.
-
-      See also:
-
-      - `Class.GuiObject.NextSelectionUp`
-      - `Class.GuiObject.NextSelectionDown`
-      - `Class.GuiObject.NextSelectionRight`
+      See also `Class.GuiObject.NextSelectionUp|NextSelectionUp`,
+      `Class.GuiObject.NextSelectionDown|NextSelectionDown`, and
+      `Class.GuiObject.NextSelectionRight|NextSelectionRight`.
     code_samples:
       - creating-a-gamepad-selection-grid
     type: GuiObject
@@ -497,27 +466,24 @@ properties:
       can_save: true
   - name: GuiObject.NextSelectionRight
     summary: |
-      Sets the `Class.GuiObject|GUI` which will be selected when the
-      `Enum.Gamepad` selector is moved in this direction.
+      Sets the `Class.GuiObject` which will be selected when the gamepad
+      selector is moved to the right.
     description: |
-      This property sets the `Class.GuiObject|GUI` selected when the user moves
-      the Gamepad selector to the right. If this property is left blank, the
-      moving the Gamepad right will not change which selected GUI.
+      This property sets the `Class.GuiObject` selected when the user moves the
+      [gamepad](../../../input/gamepad.md) selector to the right. If this
+      property is empty, moving the gamepad to the right will not change the
+      selected GUI.
 
-      Moving the Gamepad selector right sets the
+      Moving the gamepad selector to the right sets the
       `Class.GuiService.SelectedObject` to this object unless the GUI is not
-      `Class.GuiObject.Selectable|Selectable`. If the GUI is not selectable, it
-      will not be selected when the gamepad selected moves right.
+      `Class.GuiObject.Selectable|Selectable`. Note that this property can be
+      set to a GUI element even if it is not
+      `Class.GuiObject.Selectable|Selectable`, so you should ensure that the
+      value of a GUI's selectable property matches your expected behavior.
 
-      Note that since this property can be set to a GUI element even if it is
-      not Selectable, you should ensure that the value of a GUI's selectable
-      property matching your expected behavior.
-
-      See also:
-
-      - `Class.GuiObject.NextSelectionUp`
-      - `Class.GuiObject.NextSelectionDown`
-      - `Class.GuiObject.NextSelectionLeft`
+      See also `Class.GuiObject.NextSelectionUp|NextSelectionUp`,
+      `Class.GuiObject.NextSelectionDown|NextSelectionDown`, and
+      `Class.GuiObject.NextSelectionLeft|NextSelectionLeft`.
     code_samples:
       - creating-a-gamepad-selection-grid
     type: GuiObject
@@ -533,28 +499,23 @@ properties:
       can_save: true
   - name: GuiObject.NextSelectionUp
     summary: |
-      Sets the GuiObject which will be selected when the Gamepad selector is
-      moved in this direction.
+      Sets the `Class.GuiObject` which will be selected when the gamepad
+      selector is moved upward.
     description: |
-      This property sets the `Class.GuiObject|GUI` selected when the user moves
-      the Gamepad selector upward. If this property is left blank, the moving
-      the Gamepad upward will not change the selected GUI.
+      This property sets the `Class.GuiObject` selected when the user moves the
+      [gamepad](../../../input/gamepad.md) selector upward. If this property is
+      empty, moving the gamepad upward will not change the selected GUI.
 
-      Moving the Gamepad selector upward sets the
+      Moving the gamepad selector upward sets the
       `Class.GuiService.SelectedObject` to this object unless the GUI is not
-      `Class.GuiObject.Selectable|Selectable`. If the specified GUI is not
-      selectable, it will not be selected when the gamepad selected moves
-      upward.
+      `Class.GuiObject.Selectable|Selectable`. Note that this property can be
+      set to a GUI element even if it is not
+      `Class.GuiObject.Selectable|Selectable`, so you should ensure that the
+      value of a GUI's selectable property matches your expected behavior.
 
-      Note that since this property can be set to a GUI element even if it is
-      not Selectable, you should ensure that the value of a GUI's selectable
-      property matching your expected behavior.
-
-      See also:
-
-      - `Class.GuiObject.NextSelectionDown`
-      - `Class.GuiObject.NextSelectionLeft`
-      - `Class.GuiObject.NextSelectionRight`
+      See also `Class.GuiObject.NextSelectionDown|NextSelectionDown`,
+      `Class.GuiObject.NextSelectionLeft|NextSelectionLeft`,
+      `Class.GuiObject.NextSelectionRight|NextSelectionRight`.
     code_samples:
       - creating-a-gamepad-selection-grid
     type: GuiObject
@@ -572,28 +533,18 @@ properties:
     summary: |
       Determines the pixel and scalar position of the `Class.GuiObject`.
     description: |
-      This property determines the `Class.GuiObject` pixel and scalar size using
-      a `Datatype.UDim2`. Position is centered around the object's
+      This property determines the `Class.GuiObject` pixel and scalar position
+      using a `Datatype.UDim2`. Position is centered around the object's
       `Class.GuiObject.AnchorPoint`.
 
-      The scalar position is relative to the size of the parent GUI element. For
-      example, if `Class.GuiObject.AnchorPoint|AnchorPoint` is set to `0, 0` and
-      Position is set to `{0, 0}, {0, 0}`, the element's top left corner renders
-      at the top left corner of the parent element. Similarly, if AnchorPoint is
-      set to `0, 0` and Position is set to `{0.5, 0}, {0.5, 0}`, the element's
-      top left corner will render at the direct center of the parent element.
+      The scalar position is relative to the size of the parent GUI element, if
+      any.
 
       The pixel portions of the `Datatype.UDim2` value are the same regardless
       of the parent GUI's size. The values represent the position of the object
-      in pixels. For example, if set to `{0, 100}, {0, 150}` the element's
-      AnchorPoint will render with on the screen 100 pixels from the left and
-      150 pixels from the top.
-
-      An object's actual pixel position can be read from the
+      in pixels. An object's actual pixel position can be read from the
       `Class.GuiBase2d.AbsolutePosition` property.
-    code_samples:
-      - AnchorPoint-Demo
-      - RunService-BindToRenderStep
+    code_samples: []
     type: UDim2
     tags: []
     deprecation_message: ''
@@ -607,23 +558,15 @@ properties:
       can_save: true
   - name: GuiObject.Rotation
     summary: |
-      Determines the number of degrees by which a UI element is rotated.
+      Determines the number of degrees by which the `Class.GuiObject` is
+      rotated.
     description: |
-      This property determines the number of degrees by which a
-      `Class.GuiObject|GUI` is rotated. Rotation is relative to the **center**
-      of its parent GUI.
-
-      A GUI's `Class.GuiObject.AnchorPoint` does not influence it's rotation.
-      This means that you cannot change the center of rotation since it will
-      always be in the center of the object.
-
-      Additionally, this property is **not compatible** with
-      `Class.GuiObject.ClipsDescendants`. If an ancestor (parent) object has
-      ClipsDescendants enabled and this property is nonzero, then descendant GUI
-      elements will not be clipped.
-    code_samples:
-      - Copycat-Frame
-      - Spin-GuiObject
+      This property determines the number of degrees by which the
+      `Class.GuiObject` is rotated. Rotation is relative to the **center** of
+      the object, **not** the `Class.GuiObject.AnchorPoint|AnchorPoint`, meaning
+      you cannot change the point of rotation. Additionally, this property is
+      not compatible with `Class.GuiObject.ClipsDescendants|ClipsDescendants`.
+    code_samples: []
     type: float
     tags: []
     deprecation_message: ''
@@ -711,7 +654,8 @@ properties:
       can_save: true
   - name: GuiObject.SelectionOrder
     summary: |
-      The order of GuiObjects selected by the gamepad UI selection.
+      The order of `Class.GuiObject|GuiObjects` selected by the gamepad UI
+      selection.
     description: |
       GuiObjects with a lower SelectionOrder are selected earlier than
       GuiObjects with a higher SelectionOrder when starting the gamepad
@@ -731,36 +675,21 @@ properties:
       can_save: true
   - name: GuiObject.Size
     summary: |
-      Determine the pixel and scalar size of a `Class.GuiObject|GUI`.
+      Determines the pixel and scalar size of the `Class.GuiObject`.
     description: |
       This property determines the `Class.GuiObject` scalar and pixel size using
-      a `Datatype.UDim2`. Its value can be expressed as
-      `UDim2.new(ScalarX, PixelX, ScalarY, PixelY)` or
-      `({ScalarX, PixelX}, {ScalarY, PixelY})`.
+      a `Datatype.UDim2`.
 
-      The scalar size is relative to the scalar size of parent GUI elements, if
-      any. For example, if the GUI's scalar size is `UDim2.new(0.5, 0, 0.5, 0)`
-      and it is not the descendant of a GUI, then it will occupy half of the
-      screen horizontally and vertically. However, if the GUI is the child of a
-      GUI with a scalar size of `UDim2.new(0.5, 0, 0.5, 0)`, then the GUI's
-      scalar size will render to be half the scalar size of its parent both
-      horizontally and vertically and will occupy a quarter of the screen in
-      both dimensions.
+      The scalar size is relative to the size of the parent GUI element, if any.
 
       The pixel portions of the `Datatype.UDim2` value are the same regardless
       of the parent GUI's size. The values represent the size of the object in
-      pixels. For example, if Position is set to `{0, 100}, {0, 150}` the
-      element will render with a width of 100 pixels and height of 150 pixels.
-
-      If the GUI has a parent, its size of each axis is also influenced by the
-      parent's `Class.GuiObject.SizeConstraint|SizeConstraint`.
-
-      Using negative sizes may result in undefined behavior in some cases, such
-      as with `Class.UIConstraint`. It is preferable to change
-      `Class.GuiObject.AnchorPoint|AnchorPoint` instead of using negative sizes.
-
-      An object's actual pixel size can be read from the
+      pixels. An object's actual pixel size can be read from the
       `Class.GuiBase2d.AbsoluteSize` property.
+
+      If the `Class.GuiObject` has a parent, its size along each axis is also
+      influenced by the parent's
+      `Class.GuiObject.SizeConstraint|SizeConstraint`.
     code_samples:
       - Health-Bar
     type: UDim2
@@ -776,23 +705,16 @@ properties:
       can_save: true
   - name: GuiObject.SizeConstraint
     summary: |
-      Selects the `Class.GuiObject.Size` axes that a `Class.GuiObject|GUI` will
-      be based relative to the size of its parent.
+      Sets the `Class.GuiObject.Size|Size` axes that the `Class.GuiObject` will
+      be based on, relative to the size of its parent.
     description: |
-      This property works in conjunction with the `Class.GuiObject.Size|Size`
-      property to determine the screen size of a GUI element.
+      This property sets the `Class.GuiObject.Size|Size` axes that the
+      `Class.GuiObject` will be based on, relative to the size of its parent.
 
-      The `Enum.SizeConstraint` enum will determine the axes that influence the
-      scalar size of an object.
-
-      This property is useful for creating onscreen controls that are meant to
-      scale with either the width or height of a parent object, but not both.
-      This preserves the aspect ratio of the GUI element in question. For
-      example, setting to RelativeYY with a Size of `{1, 0}, {1, 0}` will make
-      the UI element square, with both the X and Y sizes equal to the parent
-      element's Y size.
-    code_samples:
-      - SizeConstraint
+      This property is useful for creating GUI objects that are meant to scale
+      with either the width **or** height of a parent object, but not both,
+      effectively preserving the aspect ratio of the object.
+    code_samples: []
     type: SizeConstraint
     tags: []
     deprecation_message: ''
@@ -806,25 +728,22 @@ properties:
       can_save: true
   - name: GuiObject.Transparency
     summary: |
-      A mixed property of BackgroundTransparency and TextTransparency.
+      A mixed property of
+      `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` and
+      `Class.TextLabel.TextTransparency|TextTransparency`.
     description: |
-      This property is deprecated, and a mix of
-      `Class.GuiObject.BackgroundTransparency` and
-      `Class.TextLabel.TextTransparency`.
-
-      When indexing, this will return the BackgroundTransparency.
-
-      When setting, this will change the BackgroundTransparency **and**
-      TextTransparency of a `Class.GuiObject|GUI` element.
+      A mixed property of
+      `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` and
+      `Class.TextLabel.TextTransparency|TextTransparency`.
     code_samples:
     type: float
     tags:
+      - Deprecated
       - Hidden
       - NotReplicated
     deprecation_message: |
-      This property is deprecated, and a mix of
-      `Class.GuiObject.BackgroundTransparency` and
-      `Class.TextLabel.TextTransparency`.
+      This property is deprecated and indexing it will return
+      `Class.GuiObject.BackgroundTransparency|BackgroundTransparency`.
     security:
       read: None
       write: None
@@ -835,26 +754,23 @@ properties:
       can_save: false
   - name: GuiObject.Visible
     summary: |
-      Determines whether a `Class.GuiObject.GUI` and its descendants will be
+      Determines whether the `Class.GuiObject` and its descendants will be
       rendered.
     description: |
-      This property determines whether a `Class.GuiObject|GUI` will render
-      shapes, images and/or text on screen. If set to false, the GUI and all of
-      its descendants (children) will not render.
+      This property whether the `Class.GuiObject` and its descendants will be
+      rendered.
 
-      The rendering of individual components of a GUI can be controlled
-      individually through transparency properties such as
+      The rendering of individual components of a `Class.GuiObject` can be
+      controlled individually through transparency properties such as
       `Class.GuiObject.BackgroundTransparency`,
       `Class.TextLabel.TextTransparency` and
       `Class.ImageLabel.ImageTransparency`.
 
-      When this property is true, the GUI will be ignored by
-      `Class.UIGridStyleLayout` objects (such as `Class.UIGridLayout`,
-      `Class.UIListLayout` and `Class.UITableLayout`). In other words, the space
-      that the element would otherwise occupy in the layout is used by other
-      elements instead.
+      When this property is `false`, the `Class.GuiObject` will be ignored by
+      layout structures such as `Class.UIListLayout`, `Class.UIGridLayout`, and
+      `Class.UITableLayout`. In other words, the space that the element would
+      otherwise occupy in the layout is used by other elements instead.
     code_samples:
-      - Blink-UI-Element
       - UI-Window
     type: bool
     tags: []
@@ -869,29 +785,27 @@ properties:
       can_save: true
   - name: GuiObject.ZIndex
     summary: |
-      Determines the order in which a `Class.GuiObject|GUI` renders relative to
-      other GUIs.
+      Determines the order in which a `Class.GuiObject` renders relative to
+      others.
     description: |
-      This property determines the order in which a `Class.GuiObject|GUI`
-      renders to the screen relative to other GUIs.
+      This property determines the order in which a `Class.GuiObject` renders
+      relative to others.
 
-      By default, GUIs render in ascending priority order where lower values are
-      rendered first. As a result, GUIs with lower ZIndex values appear under
-      higher values. You can change the render order by changing the value of
-      `Class.ScreenGui.ZIndexBehavior`.
+      By default, `Class.GuiObject|GuiObjects` render in ascending priority
+      order where those with lower **ZIndex** values are rendered under those
+      with higher values. You can change the render order within a
+      `Class.ScreenGui`, `Class.SurfaceGui`, or `Class.BillboardGui` by changing
+      the value of its `Class.LayerCollector.ZIndexBehavior|ZIndexBehavior`.
 
-      The range of valid values is -MAX_INT to MAX_INT, inclusive (2,147,483,647
-      or (2^31 - 1)). If you are unsure if you will need to layer an element
-      between two already-existing elements in the future, it can be a good idea
-      to use multiples of 100, i.e. 0, 100, 200. This ensures a large gap of
-      ZIndex values you can use for elements rendered in-between other elements.
+      If you are unsure if you'll need to add an element between two existing
+      elements in the future, it's a good practice to use multiples of `100`
+      (`0`, `100`, `200`, etc.). This ensures a large gap of render order values
+      which you can use for elements layered in-between other elements.
 
-      See also:
-
-      - `Class.GuiObject.LayoutOrder`, which controls the sort order of a GUI
-        when used with a `Class.UIGridStyleLayout` instead of render order.
-    code_samples:
-      - ZIndex-Alternate
+      See also `Class.GuiObject.LayoutOrder|LayoutOrder` which controls the
+      **sorting** order of a `Class.GuiObject` when used with a layout structure
+      such as `Class.UIListLayout` or `Class.UIGridLayout`.
+    code_samples: []
     type: int
     tags: []
     deprecation_message: ''
