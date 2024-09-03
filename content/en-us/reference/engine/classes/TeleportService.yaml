@@ -649,7 +649,7 @@ methods:
 
       #### Studio Limitation
 
-      This service does not work during playtesting in Roblox Studio &mdash; To
+      This service does not work during playtesting in Roblox Studio; to
       test aspects of your game using it, you must publish the game and play it
       in the Roblox application.
 
