@@ -355,21 +355,29 @@ navigation:
         section:
           - title: Labels
             path: /ui/labels
-          - title: Buttons
-            path: /ui/buttons
           - title: Frames
             path: /ui/frames
-          - title: Text Input Fields
-            path: /ui/text-input
           - title: Video Frames
             path: /ui/video-frames
           - title: 2D Paths
             path: /ui/2D-paths
+          - title: Interactive
+            section:
+              - title: Buttons
+                path: /ui/buttons
+              - title: Text Input Fields
+                path: /ui/text-input
+              - title: Proximity Prompts
+                path: /ui/proximity-prompts
+              - title: UI Drag Detectors
+                path: /ui/ui-drag-detectors
+              - title: 3D Drag Detectors
+                path: /ui/3D-drag-detectors
       - title: Positioning and Sizing
         path: /ui/positioning-and-sizing
       - title: Layout Structures
         section:
-          - title: List Layouts
+          - title: List and Flex Layouts
             path: /ui/list-flex-layouts
           - title: Grids and Tables
             path: /ui/grid-table-layouts
@@ -385,12 +393,6 @@ navigation:
         path: /ui/9-slice
       - title: Rich Text Markup
         path: /ui/rich-text
-      - title: Proximity Prompts
-        path: /ui/proximity-prompts
-      - title: UI Drag Detectors
-        path: /ui/ui-drag-detectors
-      - title: 3D Drag Detectors
-        path: /ui/3D-drag-detectors
       - title: Text Filtering
         path: /ui/text-filtering
   - title: Animation
@@ -651,17 +653,6 @@ navigation:
             path: /production/analytics/custom-events
           - title: Custom Fields
             path: /production/analytics/custom-fields
-  - title: Community
-    path: /production/community/
-    section:
-      - title: Overview
-        path: /production/community/
-      - title: Event Organizers
-        path: /production/community/event-organizers
-      - title: Creator Fund
-        path: /creator-fund
-      - title: Talent Hub Developer Safety
-        path: /production/community/talent-hub-developer-safety
   - heading: For Educators
   - title: Go to Educator Onboarding
     path: /education/educator-onboarding/landing

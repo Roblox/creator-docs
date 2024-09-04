@@ -6,6 +6,8 @@ summary: |
 description: |
   Used by `Class.UIGridStyleLayout.SortOrder` to order the elements in the
   layout.
+
+  <img src="../../../assets/engine-api/classes/UIListLayout/SortOrder.png" width="720" />
 code_samples:
 tags: []
 deprecation_message: ''
@@ -13,7 +15,7 @@ items:
   - name: Name
     value: 0
     summary: |
-      Elements are ordered by their `Class.Instance.Name` in alphabetical order.
+      Elements are ordered by their `Class.Instance.Name` in alphanumeric order.
     tags: []
     deprecation_message: ''
   - name: Custom

@@ -1,11 +1,19 @@
 ---
-title: Event Organizers
+title: Creator Events
 description: Explains how to be an event organizer through the Roblox Creator Events program to host virtual events.
 ---
 
-As a Roblox creator, you can host virtual events through the Roblox Creator Events program. If you're interested in participating, [apply](https://survey.roblox.com/jfe/form/SV_cSnxeXTXIbKFz0i) to become a voluntary Event Organizer for the Creator Events Program.
+As a Roblox creator, you can host virtual events through the Roblox Creator Events program. If you're interested in participating, [apply](https://survey.roblox.com/jfe/form/SV_cSnxeXTXIbKFz0i) to become a voluntary event organizer for the Creator Events Program.
 
 To preview events hosted by our community creators, visit our [past events](https://events.roblox.com/home/content) page which contains a video library of our past events. Alternatively, RSVP to an upcoming event [here](https://events.roblox.com/home/events).
+
+<figure>
+<Chip
+    color="success"
+    label="Status: Open"
+    size="medium"
+    variant="filled" />
+</figure>
 
 ## Requirements
 
@@ -13,7 +21,7 @@ To preview events hosted by our community creators, visit our [past events](http
 
 - You are comfortable with public speaking.
 
-## Nice to have (Not required)
+### Nice to Have (Not Required)
 
 - Previous experience in hosting events, either in-person or virtual.
 
@@ -27,7 +35,9 @@ To preview events hosted by our community creators, visit our [past events](http
 
 ## Application Process
 
-Fill out the [application](https://survey.roblox.com/jfe/form/SV_cSnxeXTXIbKFz0i) carefully to start the process. After we receive your application, you should hear from us within 2–3 weeks. Large volumes of applications might cause delays.
+Fill out the application carefully to start the process. After we receive your application, you should hear from us within 2–3 weeks. Large volumes of applications might cause delays.
+
+<Button href="https://survey.roblox.com/jfe/form/SV_cSnxeXTXIbKFz0i" size='large' variant='contained' style={{width:200}}>Apply</Button>
 
 ### After Initial Acceptance
 
@@ -40,6 +50,7 @@ You need to prepare the following materials if your application passes the initi
    - Tell us where you plan to host your events.
 
 2. A **video interview** with the program staff.
+
    - We might ask for more details following up your video submission.
    - This is your opportunity to ask us questions as well.
 

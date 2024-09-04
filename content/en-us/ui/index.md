@@ -56,15 +56,12 @@ Using the `Class.GuiObject.Position|Position`, `Class.GuiObject.Size|Size`, `Cla
 
 Beyond basic properties for adjusting position and size, Roblox also provides layout structures like [list/flex](../ui/list-flex-layouts.md) and [grid](../ui/grid-table-layouts.md), as well as [size modifiers](../ui/size-modifiers.md) and [appearance modifiers](../ui/appearance-modifiers.md).
 
+<figure>
+	<img src="../assets/ui/ui-objects/UIListLayout-Example.png" width="840" />
+	<figcaption>`Class.UIListLayout` for horizontal or vertical item sequences</figcaption>
+</figure>
+
 <GridContainer numColumns="2">
-	<figure>
-  	<img src="../assets/ui/ui-objects/UIListLayout-Example.jpg" />
-		<figcaption>`Class.UIListLayout`</figcaption>
-	</figure>
-	<figure>
-  	<img src="../assets/ui/ui-objects/UIGridLayout-Example.jpg" />
-		<figcaption>`Class.UIGridLayout`</figcaption>
-	</figure>
   <figure>
     <img src="../assets/ui/layout-appearance/UIStroke-Color-Solid.png" />
     <figcaption>`Class.UIStroke` on `Class.TextLabel`</figcaption>
