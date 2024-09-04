@@ -1,8 +1,7 @@
 ---
 title: Creator Programs
-description: Creator Fund is a partnership program between creators and Roblox to bring funding and support to content development.
+description: Roblox offers various programs for creators on the platform to provide additional support and exposure. This page includes programs that are available publicly for creators. Check them out and see what you qualify for.
 hideInPageNavigation: true
-
 ---
 
 Roblox offers various programs for creators on the platform to provide additional support and exposure. Below, we share programs that are available publicly for creators. Check them out and see what you qualify for.
