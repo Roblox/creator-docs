@@ -80,7 +80,7 @@ Roblox offers various programs for creators on the platform to provide additiona
         <figure>
     <Chip
         color="success"
-        label="Status: Closed"
+        label="Status: Open"
         size="medium"
         variant="filled"/>
     </figure>
