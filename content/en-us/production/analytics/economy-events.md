@@ -3,7 +3,7 @@ title: Economy Events
 description: Use economy events to visualize your experience's economy and track user sources, sinks and wallets.
 ---
 
-Economy events let you track your in-experience economy, such as:
+**Economy events** let you track your in-experience economy, such as:
 
 - **Top sinks** — What do users spend in-experience resources on?
 - **Top sources** — Where do users earn resources?

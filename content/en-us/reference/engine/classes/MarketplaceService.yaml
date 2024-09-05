@@ -114,8 +114,12 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: MarketplaceService:PromptCancelSubscription
-    summary: ''
-    description: ''
+    summary: |
+      Prompts a user to cancel a subscription for the given `subscriptionId`.
+    description: |
+      Prompts a user to cancel a subscription for the given `subscriptionId`.
+      Once the user successfully cancels the subscription, the
+      `Class.Players.UserSubscriptionStatusChanged` event fires.
     code_samples: []
     parameters:
       - name: user

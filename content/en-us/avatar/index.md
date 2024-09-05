@@ -27,6 +27,9 @@ Whether you're creating and selling a basic accessory, clothes, or an avatar cha
 
 ## Creating
 
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/Eed29gV0hLA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br /><br />
+
 Create avatar items for Roblox, ranging from clothing, accessories, bodies, and heads. Learn about the various components that power the feature-rich technology unique to Roblox avatars and cosmetics.
 
 <GridContainer numColumns='2'>
@@ -90,6 +93,9 @@ If you're looking to integrate avatars, accessories, and clothes into experience
 
 ## Selling
 
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/swQW2VS9ZMA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br /><br />
 After creating your items, you can begin the process of selling your assets on the Marketplace. Learn more about the policies, processes, and payment structures that enable you to manage and sell your creations safely and efficiently.
 
 <GridContainer numColumns='2'>

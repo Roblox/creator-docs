@@ -43,7 +43,7 @@ You can create a package from any single object or any single parent and childre
    <img src="../../assets/studio/packages/PackageLink-Explorer-Auto.png" alt="A maple tree model in the Explorer window with the auto-update package icon next to it." width="215" />
 
 <Alert severity="error">
-Don't delete or move the **PackageLink** instance! Doing so for any package copy converts the copy back into a normal object and loses package capabilities such as ability to update when there’s a new version.
+Don't delete or move the **PackageLink** instance! Doing so for any package copy converts the copy back into a normal object and loses package capabilities such as ability to update when there's a new version.
 </Alert>
 
 ## Inserting Packages

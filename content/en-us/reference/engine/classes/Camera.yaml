@@ -934,6 +934,12 @@ methods:
       local unitRay = camera:ScreenPointToRay(100, 100)
       local extendedRay = Ray.new(unitRay.Origin, unitRay.Direction * length)
       ```
+
+      This function only works for the current Workspace camera. Other cameras,
+      such as those you create for a `Class.ViewportFrame`, have an initial
+      viewport size of `(1, 1)` and are only updated after you set them to
+      `Class.Workspace.CurrentCamera`. The mismatch in viewport size causes the
+      camera to return a ray with an incorrect `Datatype.Ray.Direction`.
     code_samples:
     parameters:
       - name: x
@@ -1131,6 +1137,12 @@ methods:
       local unitRay = camera:ScreenPointToRay(100, 100)
       local extendedRay = Ray.new(unitRay.Origin, unitRay.Direction * length)
       ```
+
+      This function only works for the current Workspace camera. Other cameras,
+      such as those you create for a `Class.ViewportFrame`, have an initial
+      viewport size of `(1, 1)` and are only updated after you set them to
+      `Class.Workspace.CurrentCamera`. The mismatch in viewport size causes the
+      camera to return a ray with an incorrect `Datatype.Ray.Direction`.
     code_samples:
     parameters:
       - name: x

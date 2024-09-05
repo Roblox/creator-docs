@@ -404,6 +404,22 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: GuiService:DismissNotification
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: notificationId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: GuiService:GetEmotesMenuOpen
     summary: |
       Checks if the player Emotes menu is open.
@@ -611,6 +627,38 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: GuiService:NotificationDismissed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: notificationId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: GuiService:NotificationDisplayed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: notificationId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: GuiService:RemoveSelectionGroup
     summary: |
       Removes a group that was created with
@@ -653,6 +701,22 @@ methods:
           The parent of selection whose descendants are searched.
     returns:
       - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: GuiService:SendNotification
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: notificationInfo
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: string
         summary: ''
     tags: []
     deprecation_message: ''
@@ -753,6 +817,26 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+  - name: GuiService:UserInteractedWithNotification
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: notificationId
+        type: string
+        default:
+        summary: ''
+      - name: buttonIndex
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
 events:
   - name: GuiService.MenuClosed

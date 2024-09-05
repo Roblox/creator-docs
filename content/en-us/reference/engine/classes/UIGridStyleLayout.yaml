@@ -54,6 +54,8 @@ properties:
       `Class.GuiObject.LayoutOrder` values when
       `Class.UIGridStyleLayout.SortOrder` is set to
       `Enum.SortOrder.LayoutOrder`.
+
+      <img src="../../../assets/engine-api/classes/UIListLayout/FillDirection.png" width="720" />
     code_samples:
     type: FillDirection
     tags: []
@@ -93,13 +95,15 @@ properties:
       The **SortOrder** property determines the order in which child UI objects
       are placed in a layout.
 
-      For `Enum.SortOrder.Name`, a simple alphabetic sort is used on the
-      `Class.Instance.Name` of the child UI objects.
-
       For `Enum.SortOrder.LayoutOrder`, an ascending sort is used on the
       `Class.GuiObject.LayoutOrder|LayoutOrder` property of child UI objects. If
       two children share the same `Class.GuiObject.LayoutOrder|LayoutOrder`,
       whichever was added sooner to the parent object takes precedence.
+
+      For `Enum.SortOrder.Name`, an alphanumeric sort is used on the
+      `Class.Instance.Name` of the child UI objects.
+
+      <img src="../../../assets/engine-api/classes/UIListLayout/SortOrder.png" width="720" />
     code_samples:
     type: SortOrder
     tags: []

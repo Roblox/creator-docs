@@ -214,6 +214,7 @@ methods:
         summary: ''
     tags:
       - Yields
+      - Deprecated
     deprecation_message: |
       [Sets have been removed](https://devforum.roblox.com/t/sunsetting-sets/189402)
       from Roblox.
@@ -441,6 +442,7 @@ methods:
         summary: ''
     tags:
       - Yields
+      - Deprecated
     deprecation_message: |
       [Sets have been removed](https://devforum.roblox.com/t/sunsetting-sets/189402)
       from Roblox.

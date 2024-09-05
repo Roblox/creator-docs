@@ -60,3 +60,36 @@ navigation:
     path: /resources/weapons-kit
   - title: NPC Kit
     path: /resources/npc-kit
+  - heading: Creator Programs
+  - title: Overview
+    path: /creator-programs/
+  - title: All Programs
+    section:
+    - title: Brand Developer Directory
+      path: /creator-programs/brand-developer-directory
+    - title: Community Feedback Program
+      path: /creator-programs/feedback
+    - title: Creator Events
+      path: /creator-programs/creator-events
+    - title: Creator Fund
+      path: /creator-fund
+    - title: Creator Spotlights
+      path: /creator-programs/spotlights
+    - title: Developer Awards
+      path: /creator-programs/developer-awards
+    - title: Inspire
+      path: /creator-programs/inspire
+    - title: Learn & Explore Sort
+      path: /creator-programs/learn-explore-sort
+    - title: Managed Brand Integrations
+      path: /creator-programs/managed-brand-integrations
+    - title: Roblox Developers Conference (RDC)
+      path: /creator-programs/rdc
+    - title: Roblox Innovation Awards
+      path: /creator-programs/innovation-awards
+    - title: Roblox Research Panel
+      path: /creator-programs/research-panel
+    - title: Today's Picks on Home
+      path: /creator-programs/todays-picks-home
+    - title: Today's Picks on Marketplace
+      path: /creator-programs/todays-picks-marketplace

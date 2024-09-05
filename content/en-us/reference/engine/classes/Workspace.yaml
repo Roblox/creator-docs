@@ -190,33 +190,19 @@ properties:
 
       #### How to use CurrentCamera
 
-      This property can be set. When it is set, all other `Class.Camera` objects
-      in the `Class.Workspace` are destroyed, including the previous
-      CurrentCamera. If this property is set to nil, or the CurrentCamera is
-      otherwise destroyed, a new `Class.Camera` will be created and assigned.
-      Developers should avoid setting this property to nil or destroying the
-      CurrentCamera however as it can have unintended consequences.
+      When looking for a client's `Class.Camera` object, use this property
+      rather than looking for a child of `Class.Workspace` named "Camera".
 
-      When looking for a client's `Class.Camera` object, developers should use
-      this property rather than looking for a child of `Class.Workspace` named
-      'Camera'.
+      When you set this property, all other `Camera` objects in the
+      `Workspace` are destroyed, including the previous `CurrentCamera`.
+      If you set this property to nil or to a camera that is not
+      a child of the Workspace (or the `CurrentCamera` is otherwise destroyed),
+      a new `Camera` will be created and assigned. Avoid these scenarios, as
+      destroying the camera can have unintended consequences.
 
-      #### What can be done with CurrentCamera
+      For more information, see
+      [Scripting the Camera](../../../workspace/camera.md#scripting-the-camera).
 
-      Accessing a client's current `Class.Camera` object brings a range of uses.
-
-      - Manipulating the viewport using the `Class.Camera` functions
-      - Objects parented to the `Class.Camera` will not replicate to the server,
-        regardless of what `Class.Workspace.FilteringEnabled` is set to. Prior
-        to `Class.Workspace.FilteringEnabled`, this was the main way to render
-        `Class.BasePart|BaseParts` on one client only.
-
-      Below is an example of how this property can be used to access the
-      `Class.Camera` object and increase its `Class.Camera.FieldOfView`.
-
-      ```
-      workspace.CurrentCamera.FieldOfView = 100
-      ```
     code_samples:
     type: Camera
     tags:

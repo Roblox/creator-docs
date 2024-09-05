@@ -4103,6 +4103,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/InputType.yaml
         ignoreTranslation: true
+      - title: Intent
+        path: /reference/engine/enums/Intent
+        type: engineapi
+        source: /reference/engine/enums/Intent.yaml
+        ignoreTranslation: true
       - title: InterpolationThrottlingMode
         path: /reference/engine/enums/InterpolationThrottlingMode
         type: engineapi
@@ -4547,6 +4552,11 @@ navigation:
         path: /reference/engine/enums/ProximityPromptStyle
         type: engineapi
         source: /reference/engine/enums/ProximityPromptStyle.yaml
+        ignoreTranslation: true
+      - title: Quality
+        path: /reference/engine/enums/Quality
+        type: engineapi
+        source: /reference/engine/enums/Quality.yaml
         ignoreTranslation: true
       - title: QualityLevel
         path: /reference/engine/enums/QualityLevel

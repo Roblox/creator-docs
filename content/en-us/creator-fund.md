@@ -7,6 +7,14 @@ The **Creator Fund** program is for creators and developers who want to build th
 
 With the launch of the Creator Fund, we want new and existing developers to have the resources necessary to build something special and bring people together through play. This program is designed to support developers who are eager to push the boundaries of what Roblox experiences can deliver.
 
+<figure>
+<Chip
+    color="success"
+    label="Status: Open"
+    size="medium"
+    variant="filled"/>
+</figure>
+
 ## Eligible Projects
 
 We are looking for ambitious, innovative projects that enable creative ideas that are unlike anything else on the platform.

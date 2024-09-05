@@ -31,7 +31,7 @@ local AnalyticsService = game:GetService("AnalyticsService")
 
 AnalyticsService:LogCustomEvent(
     player,
-    “MissionStarted” -- Event name
+    "MissionStarted" -- Event name
 )
 
 ```
@@ -46,7 +46,7 @@ local AnalyticsService = game:GetService("AnalyticsService")
 
 AnalyticsService:LogCustomEvent(
     player,
-    “MissionCompletedDuration”, -- Event name
+    "MissionCompletedDuration", -- Event name
     120 —- Event value
 )
 ```
@@ -77,7 +77,7 @@ You can breakdown by custom fields by using the breakdown selector.
 
 For more information, see [Custom Fields](./custom-fields.md).
 
-## Growing Your Experience
+## Using Custom Events to Grow Your Experience
 
 Custom events enable you to track metrics that matter most to your game, providing insights into how players interact with specific features and content. Use these events to uncover patterns in player behavior and optimize your core game loop.
 

@@ -26,6 +26,69 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: AvatarCreationService:GenerateAvatarAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: sessionId
+        type: string
+        default:
+        summary: ''
+      - name: previewId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarCreationService:GenerateAvatarPreviewAsync2
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: sessionId
+        type: string
+        default:
+        summary: ''
+      - name: fileId
+        type: string
+        default:
+        summary: ''
+      - name: textPrompt
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: string
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarCreationService:LoadAvatarHumanoidDescriptionAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: id
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: HumanoidDescription
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: AvatarCreationService:PromptCreateAvatarAsync
     summary: ''
     description: ''
@@ -37,6 +100,27 @@ methods:
         summary: ''
       - name: humanoidDescription
         type: HumanoidDescription
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+  - name: AvatarCreationService:RequestAvatarGenerationSessionAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: callback
+        type: Function
         default:
         summary: ''
     returns:

@@ -3,15 +3,12 @@ type: class
 category: Animations
 memory_category: Animation
 summary: |
-  Controls the playback of an animation on a `Class.Humanoid` or
-  `Class.AnimationController`. This object cannot be created, instead it is
-  returned by the `Class.Humanoid:LoadAnimation()` method.
+  Controls the playback of an animation on an `Class.AnimationController`.
 description: |
-  Controls the playback of an animation on a `Class.Humanoid` or
-  `Class.AnimationController`. This object cannot be created, instead it is
-  returned by the `Class.Humanoid:LoadAnimation()` method.
+  Controls the playback of an animation on an `Class.AnimationController`. This
+  object cannot be created, instead it is returned by the
+  `Class.Animator:LoadAnimation()` method.
 code_samples:
-  - Animation-Creation
 inherits:
   - Instance
 tags:
@@ -24,13 +21,9 @@ properties:
       `Class.AnimationTrack`.
     description: |
       The `Class.Animation` object that was used to create this
-      `Class.AnimationTrack`. To create an `Class.AnimationTrack` the developer
-      must load an `Class.Animation` object onto a `Class.Humanoid` or
-      `Class.AnimationController` using the `Class.Humanoid:LoadAnimation()`
-      method.
-
-      The Animation property is used to identify the underlying
-      `Class.Animation` of an `Class.AnimationTrack`.
+      `Class.AnimationTrack`. To create an `Class.AnimationTrack`, you must load
+      an `Class.Animation` object onto an `Class.AnimationController` using the
+      `Class.Animator:LoadAnimation()` method.
     code_samples:
       - AnimationPlayed
     type: Animation
@@ -666,8 +659,6 @@ events:
       creating or editing an animation. They cannot however be set by a
       `Class.Script` on an existing animation prior to playing it.
     code_samples:
-      - AnimationTrack-KeyframeReached
-      - AnimationTrack-KeyframeReached-2
     parameters:
       - name: keyframeName
         type: string

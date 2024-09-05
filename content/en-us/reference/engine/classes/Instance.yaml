@@ -1115,6 +1115,22 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: Instance:GetStyled
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: Instance:GetTags
     summary: |
       Gets an array of all tags applied to the instance.

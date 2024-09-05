@@ -96,18 +96,6 @@ The following beta features are currently available to all users through Studio'
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent style={{paddingBottom: '0px'}}>
-<Button href="../studio/material-generator.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Material Generator</Button>
-<p></p>
-<CardMedia component="img" image="../assets/studio/beta/Material-Generator.png" />
-<p></p>
-<figcaption>Enables the [Material Generator](../studio/material-generator.md) which allows you to generate PBR materials using text input.</figcaption>
-<p></p>
-<BetaAlert betaName="Material Generator" leadIn="" leadOut="" components={props.components} />
-</CardContent>
-</Card>
-
-<Card variant="outlined" style={{height: '100%'}}>
-<CardContent style={{paddingBottom: '0px'}}>
 <Button href="../art/accessories/layered-clothing.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Multilayer Wrap Fix</Button>
 <p></p>
 <CardMedia component="img" image="../assets/studio/beta/Multilayer-Wrap-Fix.jpg" />

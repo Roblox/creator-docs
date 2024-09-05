@@ -19,6 +19,9 @@ To create a custom Roblox accessory for your own experience or to sell on the Ma
   - [Clothing creation tutorial](../../art/accessories/creating/index.md) - a step-by-step process of creating your own avatar-ready clothing from scratch in Blender.
 - [Additional tools, resources, and guides](#resources) provided by Roblox to standardize and expedite the creation process.
 
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/Eed29gV0hLA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br /><br />
+
 ## Components of a Rigid Accessory
 
 All accessory models are made up of the same base components of a [mesh object](#mesh-part), [textures](#textures), and [attachment](#attachments).

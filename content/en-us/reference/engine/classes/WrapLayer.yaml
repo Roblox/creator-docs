@@ -148,11 +148,12 @@ properties:
       Controls how much underlying clothing items inflate the current clothing
       item.
 
-      Valid range is 0 to 1. A value of 0 makes the clothing item always fit the
-      body regardless of how many clothing layers are under it (all underlying
-      clothing layers will be compressed). A value of 1 (default) never
-      compresses anything and infinitely inflates over underlying clothing
-      items.
+      Valid range is -1 to 1. A value of -1 compresses the clothing, body, and
+      all underlying layers such that the clothing itself takes the shape of the
+      body. A value of 0 makes the clothing item fit as if it was the only piece
+      of clothing being worn, compressing all underlying layers. A value of 1
+      (default) never compresses anything and infinitely inflates over
+      underlying clothing items.
     code_samples:
     type: float
     tags: []

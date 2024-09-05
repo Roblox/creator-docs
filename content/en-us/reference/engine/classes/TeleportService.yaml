@@ -5,15 +5,8 @@ memory_category: Instances
 summary: |
   Enables transporting `Class.Player|Players` between places and servers.
 description: |
-  TeleportService is responsible for transporting `Class.Player|Players` between
-  different places and servers.
-
-  All teleporting functionality is consolidated into a single
-  `Class.TeleportService:TeleportAsync()` function, which is used to:
-
-  - Teleport players to a different place
-  - Teleport players to a specific server
-  - Teleport players to a reserved server
+  **TeleportService** is responsible for transporting `Class.Player|Players`
+  between different places and servers.
 
   For more information on how to teleport players between servers, see
   [Teleporting Between Places](../../../projects/teleporting.md).
@@ -27,7 +20,7 @@ deprecation_message: ''
 properties:
   - name: TeleportService.CustomizedTeleportUI
     summary: |
-      _No longer does anything_.
+      No longer functional.
     description: |
       This property used to control whether or not a `Class.Message` would be
       shown by default. The default message has been removed, so this no longer
@@ -331,83 +324,12 @@ methods:
   - name: TeleportService:Teleport
     summary: |
       Teleports a `Class.Player` to the place associated with the given
-      _placeId_.
+      `placeId`.
     description: |
-      The numerous teleport functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync`, which should be
-      used instead and may be used to:
-
-      - Teleport any number of players to a Public Server
-      - Follow a Friend to a Different Place
-      - Teleport any number of Players to a Reserved Server
-
-      This function teleports a `Class.Player` to the place associated with the
-      given _placeId_.
-
-      Teleport can be called both from the client and the server (see examples
-      below).
-
-      When teleporting from the client, as only the `Class.Players.LocalPlayer`
-      can be teleported, no _player_ argument is required.
-
-      You may only teleport players to places within the same game or active
-      start places for other games.
-
-      #### Teleport data
-
-      A _teleportData_ parameter can be specified. This is data the client will
-      transmit to the destination place and can be retrieved using
-      `Class.TeleportService:GetLocalPlayerTeleportData()`.
-
-      The _teleportData_ can take any of the following forms:
-
-      - A table without mixed keys (all keys are strings or integers)
-      - A string
-      - A number
-      - A bool
-      - A buffer
-
-      As the _teleportData_ is transmitted by the client it is not secure. For
-      this reason it should only be used for local settings and not sensitive
-      items (such as the users' score or in-game currency).
-
-      If you need teleport data to persist across multiple teleports, you can
-      use `Class.TeleportService:SetTeleportSetting()` and
-      `Class.TeleportService:GetTeleportSetting()`.
-
-      #### Loading screen
-
-      A _customLoadingScreen_ argument can be specified. This is a
-      `Class.ScreenGui` that is copied (without scripts) into the
-      `Class.CoreGui` of the destination place.
-
-      Note, `Class.TeleportService:SetTeleportGui()` is the preferred
-      alternative to the _customLoadingScreen_ argument as it can be called
-      prior to the teleport.
-
-      The loading `Class.ScreenGui` can be obtained in the destination place
-      using `Class.TeleportService:GetArrivingTeleportGui()`, where developers
-      can parent it to the `Class.PlayerGui`. It will not be used if the
-      destination place is in a different game.
-
-      #### Teleport failure
-
-      In some circumstances a teleport may fail. This can be due to the
-      developer configuring the teleport incorrectly or issues with Roblox's
-      servers.
-
-      - If a teleportation request is rejected the
-        `Class.TeleportService.TeleportInitFailed` event will fire the error
-        message and a `Enum.TeleportResult` enumerator describing the issue
-      - Teleports can fail 'in transit', after the user has left the server, due
-        to issues with Roblox's servers. In this case the user will be shown an
-        error message and be required to rejoin the game
-
-      #### Studio limitation
-
-      This service does not work during playtesting in Roblox Studio &mdash; To
-      test aspects of your game using it, you must publish the game and play it
-      in the Roblox application.
+      This method should not be used for new work; the numerous teleport
+      functions have been combined into a single method,
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
+      used instead.
     code_samples:
       - teleporting-the-local-player
       - teleporting-from-the-server
@@ -448,88 +370,10 @@ methods:
       Teleports a `Class.Player` to the server instance associated with the
       given _placeId_ and _instanceId_.
     description: |
-      The numerous teleport functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync`, which should be
-      used instead and may be used to:
-
-      - Teleport any number of players to a Public Server
-      - Follow a Friend to a Different Place
-      - Teleport any number of Players to a Reserved Server
-
-      This function teleports a `Class.Player` to the place instance associated
-      with the given _placeId_ and _instanceId_. It can only be used to teleport
-      to places in the same game.
-
-      The _placeId_ is the `Class.DataModel.PlaceId` of the server and the
-      _instanceId_ is the `Class.DataModel.JobId|JobId`.
-
-      This function can not be used to teleport `Class.Player|Players` to
-      servers created using `Class.TeleportService:ReserveServer()` (reserved
-      servers). For this, see `Class.TeleportService:TeleportToPrivateServer()`.
-
-      #### Spawn name
-
-      An optional _spawnName_ parameter can be provided, which will cause the
-      `Class.Player` to initially spawn at the `Class.SpawnLocation` of that
-      name in the destination place. The `Class.SpawnLocation` must be valid for
-      the `Class.Player` to spawn on. For example, it must be
-      `Class.SpawnLocation.Neutral|neutral` or set to the same
-      `Class.SpawnLocation.TeamColor|TeamColor` as the `Class.Team` the
-      `Class.Player` will be assigned to upon joining the game.
-
-      #### Teleport data
-
-      A _teleportData_ parameter can be specified. This is data the client will
-      transmit to the destination place and can be retrieved using
-      `Class.TeleportService:GetLocalPlayerTeleportData()`.
-
-      The _teleportData_ can take any of the following forms:
-
-      - A table without mixed keys (all keys are strings or integers)
-      - A string
-      - A number
-      - A bool
-
-      As the _teleportData_ is transmitted by the client it is not secure. For
-      this reason it should only be used for local settings and not sensitive
-      items (such as the users' score or in-game currency).
-
-      If you need teleport data to persist across multiple teleports, you can
-      use `Class.TeleportService:SetTeleportSetting()` and
-      `Class.TeleportService:GetTeleportSetting()`.
-
-      #### Loading screen
-
-      A _customLoadingScreen_ argument can be specified. This is a
-      `Class.ScreenGui` that is copied (without scripts) into the
-      `Class.CoreGui` of the destination place.
-
-      Note, `Class.TeleportService:SetTeleportGui()` is the preferred
-      alternative to the _customLoadingScreen_ argument as it can be called
-      prior to the teleport.
-
-      The loading `Class.ScreenGui` can be obtained in the destination place
-      using `Class.TeleportService:GetArrivingTeleportGui()`, where developers
-      can parent it to the `Class.PlayerGui`.
-
-      #### Teleport failure
-
-      In some circumstances a teleport may fail. This can be due to the
-      developer configuring the teleport incorrectly or issues with Roblox's
-      servers.
-
-      - If a teleportation request is rejected the
-        `Class.TeleportService.TeleportInitFailed` event will fire the error
-        message and a `Enum.TeleportResult` enumerator describing the issue
-      - Teleports can fail 'in transit', after the user has left the server, due
-        to issues with Roblox's servers. In this case the user will be shown an
-        error message and be required to rejoin the game
-
-      #### Studio limitation
-
-      This service does not work during playtesting in Roblox Studio &mdash; To
-      test aspects of your game using it, you must publish the game and play it
-      in the Roblox application.
+      This method should not be used for new work; the numerous teleport
+      functions have been combined into a single method,
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
+      used instead.
     code_samples:
       - following-a-player-in-a-universe
     parameters:
@@ -579,88 +423,10 @@ methods:
       Teleport a group of `Class.Player|Players` to a reserved server created
       using `Class.TeleportService:ReserveServer()`.
     description: |
-      The numerous teleport functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync`, which should be
-      used instead and may be used to:
-
-      - Teleport any number of players to a Public Server
-      - Follow a Friend to a Different Place
-      - Teleport any number of Players to a Reserved Server
-
-      This function teleports one or more `Class.Player|Players` to a reserved
-      server created using `Class.TeleportService:ReserveServer()`.
-
-      The _reservedServerAccessCode_ parameter is the access code returned by
-      `Class.TeleportService:ReserveServer()|ReserveServer`.
-
-      TeleportToPrivateServer can only be called on the server.
-
-      #### Spawn Name
-
-      An optional _spawnName_ parameter can be provided, which will cause the
-      `Class.Player|Players` to initially spawn at the `Class.SpawnLocation` of
-      that name in the destination place. The `Class.SpawnLocation` must be
-      valid for the `Class.Player|Players` to spawn on. For example, it must be
-      `Class.SpawnLocation.Neutral|neutral` or set to the same
-      `Class.SpawnLocation.TeamColor|TeamColor` as the `Class.Team` the
-      `Class.Player|Players` will be assigned to upon joining the game.
-
-      #### Teleport Data
-
-      A _teleportData_ parameter can be specified. This is data the clients will
-      transmit to the destination place and can be retrieved using
-      `Class.TeleportService:GetLocalPlayerTeleportData()`.
-
-      The _teleportData_ can take any of the following forms:
-
-      - A table without mixed keys (all keys are strings or integers)
-      - A string
-      - A number
-      - A bool
-
-      As the _teleportData_ is transmitted by the client it is not secure. For
-      this reason it should only be used for local settings and not sensitive
-      items (such as the users' score or in-game currency).
-
-      If you need teleport data to persist across multiple teleports, you can
-      use `Class.TeleportService:SetTeleportSetting()` and
-      `Class.TeleportService:GetTeleportSetting()`.
-
-      #### Loading Screen
-
-      A _customLoadingScreen_ argument can be specified. This is a
-      `Class.ScreenGui` that is copied (without scripts) into the
-      `Class.CoreGui` of the destination place.
-
-      You are advised to instead set the loading screen on the client using
-      `Class.TeleportService:SetTeleportGui()`. The loading `Class.ScreenGui`
-      should also be parented to the local player's `Class.PlayerGui` a few
-      seconds before the teleport to ensure a smooth transition using a
-      `Class.RemoteEvent`. For an example of this see
-      `Class.TeleportService:SetTeleportGui()|SetTeleportGui`
-
-      The loading `Class.ScreenGui` can be obtained in the destination place
-      using `Class.TeleportService:GetArrivingTeleportGui()`, where developers
-      can parent it to the `Class.PlayerGui`.
-
-      #### Teleport Failure
-
-      In some circumstances a teleport may fail. This can be due to the
-      developer configuring the teleport incorrectly or issues with Roblox's
-      servers.
-
-      - If a teleportation request is rejected the
-        `Class.TeleportService.TeleportInitFailed` event will fire the error
-        message and a `Enum.TeleportResult` enumerator describing the issue
-      - Teleports can fail 'in transit', after the user has left the server, due
-        to issues with Roblox's servers. In this case the user will be shown an
-        error message and be required to rejoin the game
-
-      #### Studio Limitation
-
-      This service does not work during playtesting in Roblox Studio &mdash; To
-      test aspects of your game using it, you must publish the game and play it
-      in the Roblox application.
+      This method should not be used for new work; the numerous teleport
+      functions have been combined into a single method,
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
+      used instead.
     code_samples:
       - teleportservice-teleport-to-a-reserved-server-via-chat
       - TeleportService-ReserveServer1
@@ -712,39 +478,10 @@ methods:
       `Class.Player` to spawn at a `Class.SpawnLocation` of the given name at
       the destination place.
     description: |
-      The numerous teleport functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync`, which should be
-      used instead and may be used to:
-
-      - Teleport any number of players to a Public Server
-      - Follow a Friend to a Different Place
-      - Teleport any number of Players to a Reserved Server
-
-      This function behaves the same as `Class.TeleportService:Teleport()` with
-      the exception that it includes a _spawnName_ parameter, causing the
-      `Class.Player` to spawn at the `Class.SpawnLocation` of that name at the
-      destination place.
-
-      The `Class.SpawnLocation` must be valid for the `Class.Player` to spawn
-      on. For example, it must be `Class.SpawnLocation.Neutral|neutral` or set
-      to the same `Class.SpawnLocation.TeamColor|TeamColor` as the `Class.Team`
-      the `Class.Player` will be assigned to upon joining the game.
-
-      The `Class.Player` will still spawn at the correct `Class.SpawnLocation`
-      even the teleport is to a place in a different universe. The spawn will
-      also be correct if `Class.Players.CharacterAutoLoads` is false in the
-      destination place and the `Class.Player.Character|Character` is loaded
-      manually using `Class.Player:LoadCharacter()|LoadCharacter`.
-
-      The teleportation will only affect the `Class.SpawnLocation` used
-      initially. If the `Class.Player` respawns again subsequently it will not
-      necessarily be at this `Class.SpawnLocation`.
-
-      #### Studio limitation
-
-      This service does not work during playtesting in Roblox Studio &mdash; To
-      test aspects of your game using it, you must publish the game and play it
-      in the Roblox application.
+      This method should not be used for new work; the numerous teleport
+      functions have been combined into a single method,
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
+      used instead.
     code_samples:
       - TeleportService-TeleportToSpawnByName1
     parameters:
@@ -883,10 +620,8 @@ methods:
       server, along with the `Class.DataModel.PrivateServerId` for it.
     description: |
       This function returns an access code that can be used to teleport players
-      to a reserved server, along with the `Class.DataModel.PrivateServerId` for
-      it.
-
-      ReserveServer can only be called on the server.
+      to a reserved server, along with the server's
+      `Class.DataModel.PrivateServerId`. It can only be called on the server.
 
       #### Reserved Servers
 
@@ -912,11 +647,11 @@ methods:
       instances associated with the server access code, the
       `Class.DataModel.JobId` is not.
 
-      #### Studio limitation
+      #### Studio Limitation
 
-      This service does not work during playtesting in Roblox Studio &mdash; To
-      test aspects of your game using it, you must publish the game and play it
-      in the Roblox application.
+      This service does not work during playtesting in Roblox Studio; to test
+      aspects of your game using it, you must publish the game and play it in
+      the Roblox application.
 
       #### Cross-Platform Play
 
@@ -946,20 +681,17 @@ methods:
     thread_safety: Unsafe
   - name: TeleportService:TeleportAsync
     summary: |
-      The all encompassing method to teleport a player or group of players from
+      The all-encompassing method to teleport a player or group of players from
       one server to another.
     description: |
       This function serves as the all-encompassing method to teleport a player
-      or group of players from one server to another.
+      or group of players from one server to another. It can be used to:
 
-      All forms of player teleportation are consolidated into this single
-      function, which is used to:
+      - Teleport players to a different place.
+      - Teleport players to a specific server.
+      - Teleport players to a reserved server.
 
-      - Teleport players to a different place
-      - Teleport players to a specific server
-      - Teleport players to a reserved server
-
-      **Group Teleport Limitations**
+      #### Group Teleport Limitations
 
       - Groups of players can only be teleported within a single experience.
       - No more than 50 players can be teleported with a single
@@ -980,7 +712,7 @@ methods:
           <tbody>
               <tr>
                   <td>Invalid placeId</td>
-                  <td>The provided placeId is below 0.</td>
+                  <td>The provided place ID is below 0.</td>
               </tr>
               <tr>
                   <td>Players empty</td>
@@ -1031,12 +763,14 @@ methods:
         default: nil
         summary: |
           An optional `Class.TeleportOptions` object containing additional
-          arguments to the TeleportAsync call.
+          arguments to the `Class.TeleportService:TeleportAsync()` call. If this
+          is not passed, no result will be returned.
     returns:
       - type: Instance
         summary: |
-          A `Class.TeleportAsyncResult` object that provides information about
-          the final teleport destination.
+          If a `Class.TeleportOptions` parameter is passed, this will be a
+          `Class.TeleportAsyncResult` object that provides information about the
+          final teleport destination.
     tags:
       - Yields
     deprecation_message: ''
@@ -1049,82 +783,10 @@ methods:
       `Class.DataModel.JobId|JobId` of the server instance they were teleported
       to.
     description: |
-      The numerous teleport functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync`, which should be
-      used instead and may be used to:
-
-      - Teleport any number of players to a Public Server
-      - Follow a Friend to a Different Place
-      - Teleport any number of Players to a Reserved Server
-
-      This function teleports a group of `Class.Player|Players` to the same
-      server instance in the given place. It returns the `Class.DataModel.JobId`
-      of the server instance the players were teleported to.
-
-      This function can only be called from the server.
-
-      You may only use this function to teleport to a place in the same game.
-      This function can not teleport more than 50 `Class.Player|Players` in a
-      single party.
-
-      Currently this function may not work reliably when teleporting
-      `Class.Player|Players` to the same place they are currently in.
-
-      #### Teleport data
-
-      A _teleportData_ parameter can be specified. This is data the clients will
-      transmit to the destination place and can be retrieved using
-      `Class.TeleportService:GetLocalPlayerTeleportData()`.
-
-      The _teleportData_ can take any of the following forms:
-
-      - A table without mixed keys (all keys are strings or integers)
-      - A string
-      - A number
-      - A bool
-
-      As the _teleportData_ is transmitted by the client it is not secure. For
-      this reason it should only be used for local settings and not sensitive
-      items (such as the users' score or in-game currency).
-
-      #### Loading screen
-
-      A _customLoadingScreen_ argument can be specified. This is a
-      `Class.ScreenGui` that is copied (without scripts) into the
-      `Class.CoreGui` of the destination place. It can be retrieved at the
-      destination place using `Class.TeleportService:GetArrivingTeleportGui()`
-      and will not be used if the destination place is in a different game.
-
-      You are advised to instead set the loading screen on the client using
-      `Class.TeleportService:SetTeleportGui()`. The loading `Class.ScreenGui`
-      should also be parented to the `Class.Player|Players'`
-      `Class.PlayerGui|PlayerGuis` a few seconds before the teleport to ensure a
-      smooth transition using a `Class.RemoteEvent`. For an example of this see
-      `Class.TeleportService:SetTeleportGui()|SetTeleportGui`.
-
-      #### Teleport failure
-
-      In some circumstances a teleport may fail. This can be due to the
-      developer configuring the teleport incorrectly or issues with Roblox's
-      servers.
-
-      - If a teleportation request is rejected the
-        `Class.TeleportService.TeleportInitFailed` event will fire the error
-        message and a `Enum.TeleportResult` enumerator describing the issue
-      - Teleports can fail 'in transit', after the user has left the server, due
-        to issues with Roblox's servers. In this case the user will be shown an
-        error message and be required to rejoin the game
-
-      #### Studio limitation
-
-      This service does not work during playtesting in Roblox Studio &mdash; To
-      test aspects of your game using it, you must publish the game and play it
-      in the Roblox application.
-
-      See also:
-
-      - `Class.Player:GetJoinData()` to get the `Class.Player.UserId|UserIds` of
-        `Class.Player|Players` teleported together
+      This method should not be used for new work; the numerous teleport
+      functions have been combined into a single method,
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
+      used instead.
     code_samples:
       - teleport-all-players-in-the-server
     parameters:

@@ -10,7 +10,9 @@ description: |
   overrides that of the controlling `Class.UIListLayout`, letting you configure
   flex behavior on a per‑object basis where necessary.
 
-  <img src="../../../assets/engine-api/classes/UIListLayout/UIFlexItem-Hierarchy.png" width="500" alt="Example hierarchy of a UIFlexItem parented to a GuiObject under control of a UIListLayout." />
+  <img src="../../../assets/ui/ui-objects/UIFlexItem-Example.png" width="720" alt="Example of UIFlexItem applied to a specific GuiObject under control of a UIListLayout." />
+
+  <img src="../../../assets/ui/ui-objects/UIFlexItem-Hierarchy.png" width="500" alt="Example hierarchy of a UIFlexItem parented to a GuiObject under control of a UIListLayout." />
 code_samples: []
 inherits:
   - UIComponent
@@ -20,10 +22,11 @@ properties:
   - name: UIFlexItem.FlexMode
     summary: |
       How the parent `Class.GuiObject` grows or shrinks with available space in
-      the flex layout's container.
+      the flex layout container.
     description: |
       `Enum.UIFlexMode` value which defines how the parent `Class.GuiObject`
-      grows or shrinks with available space in the flex layout's container.
+      grows or shrinks with available space in the
+      [flex layout](../../../ui/list-flex-layouts.md#flex-layouts) container.
 
       When the container's size is **larger** than the flex line's combined
       basis size, a value of `Enum.UIFlexMode.Grow` sets an effective **1:0**
