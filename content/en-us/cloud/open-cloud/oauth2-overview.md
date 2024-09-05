@@ -29,7 +29,7 @@ roles interact with each other, and the authorization flows that you need to
 follow to develop secure and compatible apps.
 <Alert severity="info">
   You must be [ID verified](../../production/publishing/account-verification.md#verifying-through-government-id)
-  to register and publish an OAuth 2.0 app.
+  to register and publish OAuth 2.0 apps.
 </Alert>
 </dd>
 

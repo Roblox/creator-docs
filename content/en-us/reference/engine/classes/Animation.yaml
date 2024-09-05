@@ -17,12 +17,12 @@ description: |
   server:
 
   - If an `Class.Animator` is a descendant of a `Class.Humanoid` or
-  `Class.AnimationController` in a player's `Class.Player.Character`, animations
-  started on that player's client will be replicated to the server and other
-  clients.
+    `Class.AnimationController` in a player's `Class.Player.Character`,
+    animations started on that player's client will be replicated to the server
+    and other clients.
 
   - If the `Class.Animator` is **not** a descendant of a player character, its
-  animations must be loaded and started on the server to replicate.
+    animations must be loaded and started on the server to replicate.
 
   The `Class.Animator` object must be initially created on the server and
   replicated to clients for animation replication to work at all. If an
@@ -30,8 +30,9 @@ description: |
   `Class.AnimationTrack|AnimationTracks` loaded with that `Class.Animator` will
   not replicate.
 
-  See also [Animation Editor](../../../animation/editor.md) and [Using Animations](../../../animation/using.md) to learn
-  how to create and add pre-built or custom animations to your game.
+  See also [Animation Editor](../../../animation/editor.md) and
+  [Using Animations](../../../animation/using.md) to learn how to create and add
+  pre-built or custom animations to your game.
 code_samples:
 inherits:
   - Instance
@@ -42,7 +43,10 @@ properties:
     summary: |
       Asset ID of the animation an `Class.Animation` object is referencing.
     description: |
-      This property is the asset ID of the animation an `Class.Animation` object is referencing. Once an animation has been created and uploaded to Roblox, the ID can be copied from the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Animation).
+      This property is the asset ID of the animation an `Class.Animation` object
+      is referencing. Once an animation has been created and uploaded to Roblox,
+      the ID can be copied from the
+      [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Animation).
 
       Note that the animation will need to be loaded onto an
       `Class.AnimationTrack` in order to play it.

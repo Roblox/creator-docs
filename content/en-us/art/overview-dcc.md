@@ -3,7 +3,7 @@ title: Working With Third-Party Software
 description: An overview of how to incorporate content created from other software into Studio.
 ---
 
-Creators on Roblox often leverage third-party creation tools to make custom assets and content. These external tools typically specialize in areas like **3D modeling**, **texture creation**, or **audio editing**, and offer additional features and flexibility that complement the Roblox engine.
+Creators on Roblox often leverage third-party creation tools to make custom assets and content. These external tools typically specialize in areas like **3D modeling**, **texture creation**, or **audio editing**, and offer additional features and flexibility that complement the Roblox engine. Check out [Roblox Staff 3D art articles](https://devforum.roblox.com/tags/c/resources/roblox-staff/278/art) for guides, tips, and tutorials on using various third-party software.
 
 In most workflows, you create custom assets in [third-party software](#examples-of-third-party-software), export them as a common file type, and then [import the file into Studio](#importing-to-studio).
 

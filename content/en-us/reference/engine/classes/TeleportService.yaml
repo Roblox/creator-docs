@@ -328,8 +328,8 @@ methods:
     description: |
       This method should not be used for new work; the numerous teleport
       functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which
-      should be used instead.
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
+      used instead.
     code_samples:
       - teleporting-the-local-player
       - teleporting-from-the-server
@@ -372,8 +372,8 @@ methods:
     description: |
       This method should not be used for new work; the numerous teleport
       functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which
-      should be used instead.
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
+      used instead.
     code_samples:
       - following-a-player-in-a-universe
     parameters:
@@ -425,8 +425,8 @@ methods:
     description: |
       This method should not be used for new work; the numerous teleport
       functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which
-      should be used instead.
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
+      used instead.
     code_samples:
       - teleportservice-teleport-to-a-reserved-server-via-chat
       - TeleportService-ReserveServer1
@@ -480,8 +480,8 @@ methods:
     description: |
       This method should not be used for new work; the numerous teleport
       functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which
-      should be used instead.
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
+      used instead.
     code_samples:
       - TeleportService-TeleportToSpawnByName1
     parameters:
@@ -620,8 +620,8 @@ methods:
       server, along with the `Class.DataModel.PrivateServerId` for it.
     description: |
       This function returns an access code that can be used to teleport players
-      to a reserved server, along with the server's `Class.DataModel.PrivateServerId`.
-      It can only be called on the server.
+      to a reserved server, along with the server's
+      `Class.DataModel.PrivateServerId`. It can only be called on the server.
 
       #### Reserved Servers
 
@@ -649,9 +649,9 @@ methods:
 
       #### Studio Limitation
 
-      This service does not work during playtesting in Roblox Studio; to
-      test aspects of your game using it, you must publish the game and play it
-      in the Roblox application.
+      This service does not work during playtesting in Roblox Studio; to test
+      aspects of your game using it, you must publish the game and play it in
+      the Roblox application.
 
       #### Cross-Platform Play
 
@@ -763,14 +763,14 @@ methods:
         default: nil
         summary: |
           An optional `Class.TeleportOptions` object containing additional
-          arguments to the `Class.TeleportService:TeleportAsync()` call.
-          If this is not passed, no result will be returned.
+          arguments to the `Class.TeleportService:TeleportAsync()` call. If this
+          is not passed, no result will be returned.
     returns:
       - type: Instance
         summary: |
           If a `Class.TeleportOptions` parameter is passed, this will be a
-          `Class.TeleportAsyncResult` object that provides information about
-          the final teleport destination.
+          `Class.TeleportAsyncResult` object that provides information about the
+          final teleport destination.
     tags:
       - Yields
     deprecation_message: ''
@@ -785,8 +785,8 @@ methods:
     description: |
       This method should not be used for new work; the numerous teleport
       functions have been combined into a single method,
-      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which
-      should be used instead.
+      `Class.TeleportService:TeleportAsync()|TeleportAsync()`, which should be
+      used instead.
     code_samples:
       - teleport-all-players-in-the-server
     parameters:

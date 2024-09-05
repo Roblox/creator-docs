@@ -581,6 +581,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: Lighting.Intent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Intent
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
   - name: Lighting.OutdoorAmbient
     summary: |
       The lighting hue applied to outdoor areas.
@@ -637,6 +653,22 @@ properties:
     deprecation_message: |
       This item is no longer supported as the outlines feature was removed from
       the Roblox platform.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Lighting.Quality
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Quality
+    tags:
+      - NotScriptable
+    deprecation_message: ''
     security:
       read: None
       write: None

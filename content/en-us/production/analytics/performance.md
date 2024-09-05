@@ -91,15 +91,15 @@ The **Server** tab includes the following charts:
     <tbody>
         <tr>
             <td>Server CPU time</td>
-            <td>Stacked area chart showing milliseconds (ms) of processing time per frame. Values over 16.67 ms can cause visible drops on the **Server frame rate** chart.</td>
+            <td>Stacked area chart showing milliseconds (ms) of processing time per frame. Values over 16.67 ms are highly undesirable; they can cause server frame rates to drop below 60.</td>
         </tr>
         <tr>
             <td>Server memory usage</td>
-            <td>Stacked area chart showing server memory usage in MB. If this number stays above 3 GB or continually increases over time, investigate ways to [improve memory usage](../../performance-optimization/improving.md#script-memory-usage).</td>
+            <td>Stacked area chart showing server memory usage in MB. Try to keep this value below 3 GB. If this number stays above 3 GB or continually increases over time, investigate ways to [improve memory usage](../../performance-optimization/improving.md#script-memory-usage).</td>
         </tr>
         <tr>
             <td>Server frame rate</td>
-            <td>Line graph showing server frame rate in FPS. Server frame rate is capped at 60, and drops below 60 can reduce client frame rate and increase latency. See [Script Computation](../../performance-optimization/improving.md#script-computation).</td>
+            <td>Line graph showing server frame rate in FPS. Ideally, this value is always 60. Server frame rate is capped at 60, and drops can reduce client frame rate and increase latency. See [Script Computation](../../performance-optimization/improving.md#script-computation).</td>
         </tr>
         {/*
         <tr>
@@ -113,7 +113,7 @@ The **Server** tab includes the following charts:
         </tr>
         <tr>
             <td>Compute efficiency</td>
-            <td>Line graph showing the efficiency of your experience compared to the Roblox average. Values above 100% indicate higher efficiency than the baseline. Contributing factors include maximum number of players per server (higher is more efficient) and server CPU time per frame (lower is more efficient).</td>
+            <td>Line graph showing the efficiency of your experience compared to the Roblox average. Values above 100% indicate higher efficiency than the baseline. Contributing factors include maximum number of players per server (higher is more efficient) and server CPU time per frame (lower is more efficient). Higher compute efficiency means lower environmental impact, but this metric is not indicative of a good or bad player experience.</td>
         </tr>
     </tbody>
 </table>

@@ -16,8 +16,8 @@ description: |
   To manipulate the layout of GUI objects in special ways, you can use a layout
   structure such as [list/flex](../../../ui/list-flex-layouts.md) or
   [grid](../../../ui/grid-table-layouts.md), and you can style them beyond their
-  core properties through [appearance
-  modifiers](../../../ui/appearance-modifiers.md).
+  core properties through
+  [appearance modifiers](../../../ui/appearance-modifiers.md).
 
   Although it's possible to detect mouse button events on any GUI object using
   `Class.GuiObject.InputBegan|InputBegan` and
@@ -405,8 +405,7 @@ properties:
     description: |
       This property sets the `Class.GuiObject` selected when the user moves the
       [gamepad](../../../input/gamepad.md) selector downward. If this property
-      is empty, moving the gamepad downward will not change the selected
-      GUI.
+      is empty, moving the gamepad downward will not change the selected GUI.
 
       Moving the gamepad selector downward sets the
       `Class.GuiService.SelectedObject` to this object unless the GUI is not
@@ -738,7 +737,6 @@ properties:
     code_samples:
     type: float
     tags:
-      - Deprecated
       - Hidden
       - NotReplicated
     deprecation_message: |

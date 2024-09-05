@@ -37,8 +37,8 @@ description: |
   Alignment of siblings within the parent container is controlled through
   `Class.UIListLayout.HorizontalAlignment|HorizontalAlignment` and
   `Class.UIListLayout.VerticalAlignment|VerticalAlignment` unless the layout is
-  configured to utilize a [flex
-  layout](../../../ui/list-flex-layouts.md#flex-layouts).
+  configured to utilize a
+  [flex layout](../../../ui/list-flex-layouts.md#flex-layouts).
 
   Note that there are performance implications of using a
   [flex‑enabled](../../../ui/list-flex-layouts.md#flex-layouts) list layout,

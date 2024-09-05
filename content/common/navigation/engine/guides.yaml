@@ -9,6 +9,11 @@ navigation:
     path: /creation
   - title: Assistant
     path: /assistant/guide
+    section:
+    - title: Overview
+      path: /assistant/guide
+    - title: Prompt Engineering
+      path: /assistant/prompt-engineering
   - heading: Create
   - title: Roblox Studio
     path: /studio/

@@ -25,7 +25,8 @@ properties:
       the flex layout container.
     description: |
       `Enum.UIFlexMode` value which defines how the parent `Class.GuiObject`
-      grows or shrinks with available space in the [flex layout](../../../ui/list-flex-layouts.md#flex-layouts) container.
+      grows or shrinks with available space in the
+      [flex layout](../../../ui/list-flex-layouts.md#flex-layouts) container.
 
       When the container's size is **larger** than the flex line's combined
       basis size, a value of `Enum.UIFlexMode.Grow` sets an effective **1:0**

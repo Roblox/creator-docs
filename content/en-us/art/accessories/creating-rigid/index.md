@@ -4,6 +4,9 @@ description: This tutorial covers the basic steps required to publish a custom a
 next: /art/accessories/creating-rigid/modeling-setup
 ---
 
+<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/Eed29gV0hLA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br /><br />
+
 Rigid accessories are 3D objects that users can equip to their avatar characters in an experience or through Roblox's [Marketplace](https://www.roblox.com/catalog) and [Avatar Editor](https://www.roblox.com/my/avatar). Unlike [clothing accessories](../../../art/accessories/creating/index.md) or [bodies](../../../art/characters/creating/index.md) that require caging, rigging, and skinning in a third-party modeling application, rigid accessories attach directly to an avatar character and do not bend or deform to the character's body. Since they do not require additional configuration in a third-party application beyond modeling and texturing, rigid accessories are usually the most basic type of 3D avatar item to create.
 
 Using a provided 3D reference file, this tutorial covers each step in the workflow to properly configure and export a 3D model from Blender and generate your own rigid accessory in Studio. After you create the accessory, you can upload it to the Marketplace, save it to your toolbox, and use it in your own experiences.

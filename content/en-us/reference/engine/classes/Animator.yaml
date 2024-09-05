@@ -10,8 +10,8 @@ description: |
   `Class.AnimationTrack|AnimationTracks` is handled through the `Class.Animator`
   instance.
 
-  See also [Animation Editor](../../../animation/editor.md) and [Using
-  Animations](../../../animation/using.md) to learn how to create and add
+  See also [Animation Editor](../../../animation/editor.md) and
+  [Using Animations](../../../animation/using.md) to learn how to create and add
   pre-built or custom animations to your game.
 code_samples:
 inherits:
@@ -165,12 +165,12 @@ methods:
       or on the server:
 
       - If an `Class.Animator` is a descendant of a `Class.Humanoid` or
-      `Class.AnimationController` in a player's `Class.Player.Character`,
-      animations started on that player's client will be replicated to the
-      server and other clients.
+        `Class.AnimationController` in a player's `Class.Player.Character`,
+        animations started on that player's client will be replicated to the
+        server and other clients.
 
       - If the `Class.Animator` is **not** a descendant of a player character,
-      its animations must be loaded and started on the server to replicate.
+        its animations must be loaded and started on the server to replicate.
 
       The `Class.Animator` object must be initially created on the server and
       replicated to clients for animation replication to work at all. If an
