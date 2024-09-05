@@ -35,62 +35,59 @@ description: |
   through the table returned by `Class.EditableMesh:GetVertices()|GetVertices()`
   or `Class.EditableMesh:GetFaces()|GetFaces()`.
 
-  #### Split vertex attributes
+  #### Split Vertex Attributes
 
-  A vertex is a corner of a face, and topologically connects faces together. 
-  Vertices can have several attributes - position, normal, UV coordinate, color, 
+  A **vertex** is a corner of a face, and topologically connects faces together. 
+  Vertices can have several attributes: position, normal, UV coordinate, color, 
   and transparency.
 
-  Sometimes it is useful for all faces that touch a vertex to use the same 
-  attribute values, but sometimes you want different faces to use different 
-  attribute values on the same vertex. 
+  Sometimes it's useful for all faces that touch a vertex to use the same 
+  attribute values, but sometimes you'll want different faces to use different 
+  attribute values on the same vertex. For example, on a smooth sphere, each
+  vertex will only have a single normal. In contrast, at the corner of a cube, the
+  vertex will have 3 different normals (one for each adjacent face). You can
+  also have seams in the UV coordinates or sharp changes in the vertex colors.
 
-  For example, on a smooth sphere, each vertex will only have a single normal. 
-  But at the corner of a cube, the vertex will have 3 different normals, a 
-  different normal for each face. You can also have seams in the UV coordinates, 
-  or sharp changes in the vertex colors.
+  When creating faces, every vertex will by default have one of each attribute:
+  one normal, one UV coordinate, and one color/transparency. If you want to
+  create a seam, you should create new attributes and set them on the face.
+  For example, this code will create a sharp cube:
 
-  When creating faces, by default, every vertex will have one of each attribute
-  - one normal, one UV coordinate, and one color / transparency. If you want to
-  create a seam, you should create new attributes and set them on the face. For
-  example, this code will create a sharp cube:
-
-  ```
-  -- Given 4 vertex ids, adds a new normal and 2 triangles, making a sharp quad
-  local function addSharpQuad(emesh, vid0, vid1, vid2, vid3)
-    local nid = emesh:AddNormal() -- this creates a normal id which is automatically computed
+  ```lua
+  -- Given 4 vertex IDs, adds a new normal and 2 triangles, making a sharp quad
+  local function addSharpQuad(eMesh, vid0, vid1, vid2, vid3)
+  	local nid = eMesh:AddNormal()  -- This creates a normal ID which is automatically computed
   
-    local fid1 = emesh:AddTriangle(vid0, vid1, vid2)
-    emesh:SetFaceNormals(fid1, {nid, nid, nid})
+  	local fid1 = eMesh:AddTriangle(vid0, vid1, vid2)
+  	eMesh:SetFaceNormals(fid1, {nid, nid, nid})
     
-    local fid2 = emesh:AddTriangle(vid0, vid2, vid3)
-    emesh:SetFaceNormals(fid2, {nid, nid, nid})
+  	local fid2 = eMesh:AddTriangle(vid0, vid2, vid3)
+  	eMesh:SetFaceNormals(fid2, {nid, nid, nid})
   end
   
   -- Makes a cube with creased edges between the 6 sides
   local function makeSharpCube()
-    local emesh = Instance.new("EditableMesh")
+  	local eMesh = Instance.new("EditableMesh")
   
-    local v1 = emesh:AddVertex(Vector3.new(0, 0, 0))
-    local v2 = emesh:AddVertex(Vector3.new(1, 0, 0))
-    local v3 = emesh:AddVertex(Vector3.new(0, 1, 0))
-    local v4 = emesh:AddVertex(Vector3.new(1, 1, 0))
-    local v5 = emesh:AddVertex(Vector3.new(0, 0, 1))
-    local v6 = emesh:AddVertex(Vector3.new(1, 0, 1))
-    local v7 = emesh:AddVertex(Vector3.new(0, 1, 1))
-    local v8 = emesh:AddVertex(Vector3.new(1, 1, 1))
+  	local v1 = eMesh:AddVertex(Vector3.new(0, 0, 0))
+  	local v2 = eMesh:AddVertex(Vector3.new(1, 0, 0))
+  	local v3 = eMesh:AddVertex(Vector3.new(0, 1, 0))
+  	local v4 = eMesh:AddVertex(Vector3.new(1, 1, 0))
+  	local v5 = eMesh:AddVertex(Vector3.new(0, 0, 1))
+  	local v6 = eMesh:AddVertex(Vector3.new(1, 0, 1))
+  	local v7 = eMesh:AddVertex(Vector3.new(0, 1, 1))
+  	local v8 = eMesh:AddVertex(Vector3.new(1, 1, 1))
   
-    addSharpQuad(emesh, v5, v6, v8, v7) -- front
-    addSharpQuad(emesh, v1, v3, v4, v2) -- back
-    addSharpQuad(emesh, v1, v5, v7, v3) -- left
-    addSharpQuad(emesh, v2, v4, v8, v6) -- right
-    addSharpQuad(emesh, v1, v2, v6, v5) -- bottom
-    addSharpQuad(emesh, v3, v7, v8, v4) -- top
+  	addSharpQuad(eMesh, v5, v6, v8, v7)  -- Front
+  	addSharpQuad(eMesh, v1, v3, v4, v2)  -- Back
+  	addSharpQuad(eMesh, v1, v5, v7, v3)  -- Left
+  	addSharpQuad(eMesh, v2, v4, v8, v6)  -- Right
+  	addSharpQuad(eMesh, v1, v2, v6, v5)  -- Bottom
+  	addSharpQuad(eMesh, v3, v7, v8, v4)  -- Top
   
-    emesh:RemoveUnused()
-    return emesh
+  	eMesh:RemoveUnused()
+  	return eMesh
   end
-  ```
 
   #### Winding
 
