@@ -1234,7 +1234,9 @@ methods:
     summary: |
       Splits all faces on the mesh to be triangles.
     description: |
-      Splits all faces on the mesh to be triangles. Currently this does nothing since only triangles can be created, but if your code relies on triangles it is good to call this method after calling `AssetService:CreateEditableMeshAsync`.
+      Splits all faces on the mesh to be triangles. Currently this does nothing since only triangles can be
+      created, but if your code relies on triangles, it's recommended that you call this method after calling
+      `Class.AssetService:CreateEditableMeshAsync()`.
     code_samples: []
     parameters: []
     returns:
