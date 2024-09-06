@@ -55,7 +55,7 @@ We are seeing healthy growth across creators and studios of varying sizes. Since
 
 <figcaption><sup>1</sup> Based on readily available public data for daily or monthly active users of virtual worlds.</figcaption>
 <figcaption><sup>2</sup> Defined as Roblox annual bookings, which measures total economic activity on our platform.</figcaption>
-<figcaption><sup>3</sup> ~20K creators of the 27 million creators monetizing on Roblox made over $650 on Roblox in the twelve months ended June&nbsp;30,&nbsp;2024. Growth compares LTM data against FY&nbsp;2019 data.</figcaption>
+<figcaption><sup>3</sup> Of the millions of creators monetizing on Roblox, around 20,000 are part of our Devex program with the median creator receiving $1,645 USD during the twelve months ended June&nbsp;30,&nbsp;2024.</figcaption>
 
 ## Developing an Experience
 
