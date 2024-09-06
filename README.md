@@ -69,37 +69,27 @@ For more detailed steps, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Document Types
 
-The Roblox documentation has three main document types:
+The Roblox documentation includes three main types:
 
-- Conceptual and task-based guides in `.md` files in [content/en-us/](./content/en-us/)
+- **Conceptual and Task-Based Guides** (`.md` files in [content/en-us/](./content/en-us/)): These guides introduce features and workflows with practical use cases and diagrams.
+- **API Reference Docs** (`.yaml` files in [content/en-us/reference](./content/en-us/reference)): Functional descriptions of APIs with terse, direct content.
+- **Tutorials** (`.md` files in [content/en-us/tutorials](./content/en-us/tutorials)): Step-by-step instructions to create something specific, covering multiple features and concepts.
 
-  Guides teach you about a feature or workflow without being overly prescriptive about the end result. They introduce concepts and features and cover the tasks you can accomplish using various tools or other approaches.
-
-  Guides benefit massively from practical, real-world use cases, images, code snippets, and diagrams. Most task-based content should include a numbered list.
-
-- API reference docs in `.yaml` files in [content/en-us/reference](./content/en-us/reference)
-
-  APIs are entirely reference content and should use functional descriptions, linking to guides where appropriate. More than other content types, reference content should be terse and direct; summaries for properties, methods, events, and callbacks don't need to be full sentences.
-
-- Tutorials in `.md` files in [content/en-us/tutorials](./content/en-us/tutorials)
-
-  Compared to task-based guides, tutorials are more self-contained and take you from _nothing_ to _something_. This focus on creating something specific means they're typically much more prescriptive than guides. Tutorials often touch multiple features and concepts at the same time, demonstrating the connections between tools and strategies.
-
-If your contribution doesn't fit within these categories or covers a particularly narrow subject, it might not be a good fit for the documentation. Consider posting it to the [Roblox developer forum](https://devforum.roblox.com/c/resources/71).
+If your contribution doesn't fit these categories, consider the [Roblox developer forum](https://devforum.roblox.com/c/resources/71).
 
 ## Contribution Basics
 
-Try to limit your edits to one class or feature so that the pull request is easier to review. Bug fixes and smaller improvements have a higher likelihood of fast approval. Large guides often require significant back-and-forth before publication.
+Limit edits to one class or feature to ease review. Bug fixes and smaller improvements are more likely to be approved quickly. Large guides often require extensive review.
 
-To avoid formatting issues, we recommend text editors like github.dev that let you preview Markdown as you write it. For prose, try to follow the guidelines in [STYLE.md](STYLE.md). For code samples, use the [Lua Style Guide](https://roblox.github.io/lua-style-guide/).
+Use editors like github.dev to preview Markdown and follow the guidelines in [STYLE.md](STYLE.md). For code samples, adhere to the [Lua Style Guide](https://roblox.github.io/lua-style-guide/).
 
-To view a page fully formatted per what we see on the `main` branch, replace the entire URL from `content/` and before. Files with the basename `index` should have that name removed. For example, the page for "https://github.com/Roblox/creator-docs/blob/main/content/en-us/avatar/index.md" is rendered at "https://create.roblox.com/docs/en-us/avatar".
+For a fully formatted page, replace the portion of the URL before `content/`. Files named `index` should have that name removed. For example, the page for "https://github.com/Roblox/creator-docs/blob/main/content/en-us/avatar/index.md" is rendered at "https://create.roblox.com/docs/en-us/avatar".
 
 ## Licenses
 
-- For prose, this project uses the Creative Commons Attribution 4.0 International Public License. For full license text, see [LICENSE](LICENSE).
-- Code samples are available under the MIT License. For full license text, see [LICENSE-CODE](LICENSE-CODE).
+- Prose is licensed under the Creative Commons Attribution 4.0 International Public License. See [LICENSE](LICENSE) for full text.
+- Code samples are licensed under the MIT License. See [LICENSE-CODE](LICENSE-CODE) for full text.
 
 ## Code of Conduct
 
-To maintain an open, welcoming, diverse, inclusive, and healthy community, this project enforces an adapted version of the Contributor Covenant. For more information, see [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+To maintain a welcoming and inclusive community, this project enforces an adapted version of the Contributor Covenant. See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for more information.
