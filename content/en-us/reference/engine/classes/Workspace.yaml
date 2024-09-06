@@ -196,7 +196,7 @@ properties:
       When you set this property, all other `Camera` objects in the
       `Workspace` are destroyed, including the previous `CurrentCamera`.
       If you set this property to nil or to a camera that is not
-      a child of the Workspace (or the `CurrentCamera` is otherwise destroyed),
+      a descendant of the Workspace (or the `CurrentCamera` is otherwise destroyed),
       a new `Camera` will be created and assigned. Avoid these scenarios, as
       destroying the camera can have unintended consequences.
 
