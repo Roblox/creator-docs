@@ -108,8 +108,8 @@ properties:
     thread_safety: ReadSafe
     category: Data
     serialization:
-      can_load: false
-      can_save: false
+      can_load: 
+  name: options   :
   - name: Instance.Name
     summary: |
       A non-unique identifier of the `Class.Instance`.
