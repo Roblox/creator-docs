@@ -1,0 +1,190 @@
+nstances
+summary: |
+  Instance is the base class for all classes in the Roblox class hierarchy.
+description: |
+  Instance is the base class for all classes in the Roblox class hierarchy.
+  Every other class that the Roblox engine defines inherits all of the members
+  of Instance. It is not possible to directly create Instance objects.
+
+  Instance has a special function called `Datatype.Instance.new()` which is used
+  to create objects via code. This function takes the name of the class as a
+  parameter and returns the created object. Abstract classes and services cannot
+  be created with the Instance.new function.
+code_samples:
+inherits: []
+tags:
+  - NotCreatable
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: Instance.Archivable
+    summary: |
+      Determines if an `Class.Instance` and its descendants can be cloned using
+      `Class.Instance:Clone()`, and can be saved/published.
+    description: |
+      This property determines whether the instance should be included when the
+      experience is published or saved, or when `Class.Instance:Clone()|Clone()`
+      is called on one of the instance's ancestors. Calling
+      `Class.Instance:Clone()|Clone()` directly on an instance will return `nil`
+      if that instance is **not** `Class.Instance.Archivable|Archivable`.
+
+      Copying an object in Studio using the **Duplicate** or **Copy**/**Paste**
+      options will ignore its own `Class.Instance.Archivable|Archivable`
+      property and set `Class.Instance.Archivable|Archivable` to `true` for the
+      copy.content/en-us/reference/engine/classes/Instanc
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Instance.Capabilities
+    summary: ''
+    description: ''
+    code_samples: []
+    type: SecurityCapabilities
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Permissions
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Instance.ClassName
+    summary: |
+      A read-only string representing the class this `Class.Instance` belongs
+      to.
+    description: |
+      A read-only string representing the class this `Class.Instance` belongs
+      to.
+
+      This property can be used with various other functions of Instance that
+      are used to identify objects by type, such as `Class.Instance:IsA()` or
+      `Class.Instance:FindFirstChildOfClass()`.
+
+      Note this property is read only and cannot be altered by scripts.
+      Developers wishing to change an instance's class will instead have to
+      create a new `Class.Instance`.
+
+      Unlike `Class.Instance:IsA()`, ClassName can be used to check if an object
+      belongs to a specific class ignoring class inheritance. For example:
+
+      ```
+      for _, child in workspace:GetChildren() do
+          if child.ClassName == "Part" then
+              print("Found a Part")
+              -- will find Parts in model, but NOT TrussParts, WedgeParts, etc
+          end
+      end
+      ```
+    code_samples:
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+  - name: Instance.Name
+    summary: |
+      A non-unique identifier of the `Class.Instance`.
+    description: |
+      A non-unique identifier of the `Class.Instance`.
+
+      This property is an identifier that describes an object. Names are not
+      necessarily unique identifiers however; multiple children of an object may
+      share the same name. Names are used to keep the object hierarchy
+      organized, along with allowing scripts to access specific objects. The
+      name of an instance cannot exceed 100 characters in size.
+
+      The name of an object is often used to access the object through the data
+      model hierarchy using the following methods:
+
+      ```
+      local baseplate = workspace.Baseplate
+      local baseplate = workspace["Baseplate"]
+      local baseplate = workspace:FindFirstChild("BasePlate")
+      ```
+
+      In order to make an object accessible using the dot operator, an object's
+      Name must follow a certain syntax. The objects name must start with an
+      underscore or letter. The rest of the name can only contain letters,
+      numbers, or underscores (no other special characters). If an objects name
+      does not follow this syntax it will not be accessible using the dot
+      operator and Lua will not interpret its name as an identifier.
+
+      If more than one object with the same name are siblings then any attempt
+      to index an object by that name will return the only one of the objects
+      found similar to `Class.Instance:FindFirstChild()`, but not always the
+      desired object. If a specific object needs to be accessed through code, it
+      is recommended to give it a unique name, or guarantee that none of its
+      siblings share the same name as it.
+
+      Note, a full name showing the instance's hierarchy can be obtained using
+      `Class.Instance:GetFullName()`.
+    code_samples:
+    type: string
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+  - name: Instance.Parent
+    summary: |
+      Determines the hierarchical parent of the `Class.Instance`.
+    description: |
+      The Parent property determines the hierarchical parent of the
+      `Class.Instance`. The following terminology is commonly used when talking
+      about how this property is set:
+
+      - An object is a **child** (**parented to**) another object when its
+        Parent is set to that object.
+      - The **descendants** of an `Class.Instance` are the children of that
+        object, plus the descendants of the children as well.
+      - The **ancestors** of an `Class.Instance` are all the objects that the
+        Instance is a descendant of.
+
+      It is from this property that many other API members get their name, such
+      as `Class.Instance:GetChildren()|GetChildren` and
+      `Class.Instance:FindFirstChild()|FindFirstChild`.
+
+      The `Class.Instance:Remove()|Remove` function sets this property to nil.
+      Calling `Class.Instance:Destroy()|Destroy` will set the Parent of an
+      `Class.Instance` and all of its descendants to `nil`, and also **lock**
+      the Parent property. An error is raised when setting the Parent of a
+      destroyed object.
+
+      This property is also used to manage whether an object exists in the game
+      or needs removed. As long as an objects parent is in the
+      `Class.DataModel`, is stored in a variable, or is referenced by another
+      objects property, then the object remains in the game. Otherwise, the
+      object will automatically be removed. The top level `Class.DataModel`
+      object (the one referred to as the `game` by scripts) has no parent, but
+      always has a reference held to it by the game engine, and exists for the
+      duration of a session.
+
+      Newly created objects using `Datatype.Instance.new()` will not have a
+      parent, and usually will not be visible or function until one is set. The
+      most elementary creation of an object has two steps: creating the object,
+      then setting its parent.
+
+      ```
+      -- Create a part and parent it to the workspace
+      local part = Instance.new("Part")
+      part.Parent = workspace
+      -- Instance new can also take Parent as a second parameter
+      Instance.new("NumberValue", workspace)
+      `e.yaml
