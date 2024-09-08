@@ -109,7 +109,7 @@ methods:
         type: Content
         default:
         summary: ''
-      - name: options
+       option is absent or the `options` table is `nil`
         type: Dictionary
         default: nil
         summary: |
