@@ -11,7 +11,7 @@ items:
   - name: Inactive
     value: 0
     summary: |
-      The ad unit isn't currently serving an ad. It may be configured incorrectly. An `Class.AdGui` with this status will display its fallback image.
+      The ad unit isn't currently serving an ad and it may be configured incorrectly. An `Class.AdGui` with this status will display its fallback image.
     tags: []
     deprecation_message: ''
   - name: Active
