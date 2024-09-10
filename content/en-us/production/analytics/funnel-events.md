@@ -172,6 +172,14 @@ end
 onboardingEvent.OnServerEvent:Connect(onPlayerEventFired)
 ```
 
+## Using Custom Fields
+
+Funnel events also allow breaking down on custom fields to support easier comparison between segments. For example, you can track which starter car gives players the best progression, or attach different maps to see if a certain map has a better game loop than others.
+
+<img src="../../assets/analytics/event-types/Custom-Event-Breakdown.png" width = "40%" alt="A dropdown indicating the three custom fields you can compare across, along with standard breakdowns like age, gender, operating system and more."/>
+
+For more information, see [custom fields](./custom-fields.md).
+
 ## Using Funnels to Grow Your Experience
 
 One of the most important funnels to track is onboarding because many experiences struggle with new user retention and engagement.

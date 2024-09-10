@@ -334,6 +334,10 @@ same `MeshId` are handled in a single draw call when:
   draw calls. If you are finding your frame rate drops when looking at a certain
   part of the map, this can be a good signal that object density in this area is
   too high.
+
+  Objects like decals, textures, and particles don't batch well and introduce
+  additional draw calls. Pay extra attention to these object types in a scene.
+
 - **Missed Instancing Opportunities** - Often, a scene will include the same mesh
   duplicated a number of times, but each copy of the mesh has different mesh or
   texture asset IDs. This prevents instancing and can lead to unnecessary draw
@@ -348,10 +352,17 @@ same `MeshId` are handled in a single draw call when:
   takes to render. Scenes with a very large number of very complex meshes are a
   common problem, as are scenes with the `MeshPart.RenderFidelity` property set
   to `Enum.RenderFidelity.Precise` on too many meshes.
+
 - **Excessive shadow casting** - Handling shadows is an expensive process, and
   maps that contain a high number and density of light objects that cast shadows
   (or a high number and density of small parts influenced by shadows) are likely to
   have performance issues.
+
+- **High transparency overdraw** - Placing objects with partial transparency
+  near each other forces the engine to render the overlapping pixels multiple
+  times, which can hurt performance. For more information on identifying and
+  fixing this issue, see
+  [Delete Layered Transparencies](../tutorials/environmental-art/optimize-your-experience.md#delete-layered-transparencies).
 
 ### Mitigation
 
@@ -518,8 +529,9 @@ For more information on streaming options and their benefits, see [Streaming Pro
 
 ### Other Common Problems
 
-- **Asset Duplication** - A common mistake is to upload the same asset multiple times resulting in different asset IDs. This can lead to the same content being loaded into memory multiple times.
+- **Asset duplication** - A common mistake is to upload the same asset multiple times resulting in different asset IDs. This can lead to the same content being loaded into memory multiple times.
 - **Excessive asset volume** - Even when assets are not identical, there are cases when opportunities to reuse the same asset and save memory are missed.
+- **Audio files** - Audio files can be a surprising contributor to memory usage, particularly if you load all of them into the client at once rather than only loading what you need for a portion of the experience. For strategies, see [Load Times](#load-times).
 - **High resolution textures** - Graphics memory consumption for a texture is unrelated to the size of the texture on the disk, but rather the number of pixels in the texture.
   - For example, a 1024x1024 pixel texture consumes four times the graphics memory of a 512x512 texture.
   - Images uploaded to Roblox are transcoded to a fixed format, so there is no memory benefit to uploading images in a color model associated with fewer bytes per pixel. Though the engine automatically downscales texture resolution on some devices, the extent of the downscale depends on the device characteristics, and excessive texture resolution can still cause problems.
@@ -531,6 +543,7 @@ For more information on streaming options and their benefits, see [Streaming Pro
 - **Find and fix duplicate assets** - Look for identical mesh parts and textures that are uploaded multiple times with different IDs.
   - Though there is no API to detect similarity of assets automatically, you can collect all the image asset IDs in your place (either manually or with a script), download them, and compare them using external comparison tools.
   - For mesh parts, the best strategy is to take unique mesh IDs and organize them by size to manually identify duplicates.
+  - Instead of using separate textures for different colors, upload a single texture and use the `Class.SurfaceAppearance.Color` property to apply various tints to it.
 - **Importing assets in map separately** - Instead of importing an entire map at once, import and reconstruct assets in the map individually and reconstruct them. The 3D importer doesn't do any de-duplication of meshes, so if you were to import a large map with a lot of separate floor tiles, each of those tiles would be imported as a separate asset (even if they are duplicates). This can lead to performance and memory issues down the line, as each mesh is treated as individually and takes up memory and draw calls.
 - **Limit the pixels of images** to no more than the necessary amount. Unless an image is occupying a large amount of physical space on the screen, it usually needs at most 512x512 pixels. Most minor images should be smaller than 256x256 pixels.
 - **Use Trim Sheets** to ensure maximum texture reuse in 3D maps. For steps and examples on how to create trim sheets, see [Creating Trim Sheets](../resources/beyond-the-dark/building-architecture.md#creating-trim-sheets).

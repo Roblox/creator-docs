@@ -12,7 +12,7 @@ navigation:
     section:
     - title: Overview
       path: /assistant/guide
-    - title: Prompt Engineering
+    - title: Prompt Guide and Examples
       path: /assistant/prompt-engineering
   - heading: Create
   - title: Roblox Studio

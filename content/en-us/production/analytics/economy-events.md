@@ -95,6 +95,16 @@ AnalyticsService:LogEconomyEvent(
 
 For information on `Class.AnalyticsService` limitations, see [event tracking limitations](./event-types.md#event-tracking-limitations).
 
+## Using Custom Fields
+
+Economy events also allow breaking down on custom fields to support easier comparison between segments. For example, you can provide quest names to each event to see which ones users are making the most money from, or attach store locations to see if users prefer one location over another.
+
+You can breakdown by custom fields by using the breakdown selector.
+
+<img src="../../assets/analytics/event-types/Custom-Event-Breakdown.png" width = "40%" alt="A dropdown indicating the three custom fields you can compare across, along with standard breakdowns like age, gender, operating system and more."/>
+
+For more information, see [custom fields](./custom-fields.md).
+
 ## Using Economy to Grow Your Experience
 
 The Economy dashboard includes five charts to help you take action to grow your revenue. You can add up to five currencies of resources, and all charts can be filtered by gender, age group, platform, OS, and up to three custom fields specific to your experience.

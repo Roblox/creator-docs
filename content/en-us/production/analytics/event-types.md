@@ -53,6 +53,12 @@ You can also visit your experience's [error report](./error-report.md) to see if
 
 The following limitations apply when tracking your events with `Class.AnalyticsService`:
 
+<Alert severity = 'warning'>
+You can leverage [custom fields](./custom-fields.md) to additionally filter your analytic events.
+
+For example, instead of tracking `WarriorXP`, `MageXP`, `PaladinXP` as separate economy currencies, set `XP` as one currency and set `Warrior`, `Mage`, `Paladin`, `...`, as Custom Field 1. This allows you to break down these values on your dashboards and not use up your currency cardinality.
+</Alert>
+
 <figure>
 <br />
 <table><thead>

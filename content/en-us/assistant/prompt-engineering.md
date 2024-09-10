@@ -1,5 +1,5 @@
 ---
-title: Prompt Engineering in Assistant
+title: Assistant Prompt Guide and Examples
 description: Get tips and tricks on how best to prompt Roblox's AI Assistant to get the best results.
 ---
 
