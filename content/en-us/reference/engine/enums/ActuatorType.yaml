@@ -1,23 +1,28 @@
 name: ActuatorType
 type: enum
-summary: ''
-description: ''
+summary: |
+  The active physics component of the constraint.
+description: |
+  The active physics component of the constraint.
 code_samples:
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      The motor and servo components are both disabled.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Motor
-    summary: ''
+    summary: |
+      The motor component is enabled. Motor properties are active and the actuator will apply continuous force.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Servo
-    summary: ''
+    summary: |
+      The servo component is enabled. Servo properties are active and the actuator will apply force to approach the servo's target.
     value: 2
     tags: []
     deprecation_message: ''
