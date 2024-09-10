@@ -193,16 +193,15 @@ properties:
       When looking for a client's `Class.Camera` object, use this property
       rather than looking for a child of `Class.Workspace` named "Camera".
 
-      When you set this property, all other `Camera` objects in the
-      `Workspace` are destroyed, including the previous `CurrentCamera`.
-      If you set this property to nil or to a camera that is not
-      a descendant of the Workspace (or the `CurrentCamera` is otherwise destroyed),
-      a new `Camera` will be created and assigned. Avoid these scenarios, as
-      destroying the camera can have unintended consequences.
+      When you set this property, all other `Camera` objects in the `Workspace`
+      are destroyed, including the previous `CurrentCamera`. If you set this
+      property to nil or to a camera that is not a descendant of the Workspace
+      (or the `CurrentCamera` is otherwise destroyed), a new `Camera` will be
+      created and assigned. Avoid these scenarios, as destroying the camera can
+      have unintended consequences.
 
       For more information, see
       [Scripting the Camera](../../../workspace/camera.md#scripting-the-camera).
-
     code_samples:
     type: Camera
     tags:

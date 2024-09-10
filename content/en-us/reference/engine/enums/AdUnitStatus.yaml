@@ -1,18 +1,22 @@
 name: AdUnitStatus
 type: enum
-summary: ''
-description: ''
+summary: |
+  Exposes the status of an immersive ad.
+description: |
+  Exposes the status of an immersive ad.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Inactive
     value: 0
-    summary: ''
+    summary: |
+      The ad unit isn't currently serving an ad and it may be configured incorrectly. An `Class.AdGui` with this status will display its fallback image.
     tags: []
     deprecation_message: ''
   - name: Active
     value: 1
-    summary: ''
+    summary: |
+      The ad unit is currently serving an ad. Players will observe sponsored content in an `Class.AdGui` and an `Class.AdPortal` will teleport users that walk through.
     tags: []
     deprecation_message: ''

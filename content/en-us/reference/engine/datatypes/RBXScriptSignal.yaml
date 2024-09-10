@@ -21,7 +21,7 @@ methods:
       Connects the given function to the event and returns an
       `Datatype.RBXScriptConnection` that represents it.
     description: |
-      Establishes a function to be called when the event fires. Returns a
+      Establishes a function to be called when the event fires. Returns an
       `Datatype.RBXScriptConnection` object associated with the connection.
     parameters:
       - name: func
@@ -39,7 +39,7 @@ methods:
       Connects the given function to the event and returns an
       `Datatype.RBXScriptConnection` that represents it.
     description: |
-      Establishes a function to be called when the event fires. Returns a
+      Establishes a function to be called when the event fires. Returns an
       `Datatype.RBXScriptConnection` object associated with the connection. When
       the event fires, the signal callback is executed in a desynchronized
       state. Using `ConnectParallel` is similar to, but more efficient than,
@@ -63,7 +63,7 @@ methods:
       Connects the given function to the event (for a single invocation) and
       returns an `Datatype.RBXScriptConnection` that represents it.
     description: |
-      Establishes a function to be called when the event fires. Returns a
+      Establishes a function to be called when the event fires. Returns an
       `Datatype.RBXScriptConnection` object associated with the connection. The
       behavior of `Once` is similar to `Connect`. However, instead of allowing
       multiple events to be received by the specified function, only the first

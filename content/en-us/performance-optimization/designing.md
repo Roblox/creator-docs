@@ -23,7 +23,7 @@ Roblox does not have access to all of a device's memory. Some amount is required
 
 For a much more detailed example of how you might think about optimizing your experience for low-end mobile devices, see [Real World Building and Scripting Optimization](https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146).
 
-[![Header image for Real World Building and Scripting Optimization.](../assets/optimization/chicken-rocket.jpg)](https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146)
+<a target="_blank" href="https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146"><img src="../assets/optimization/chicken-rocket.jpg" width="400" alt="Header image for Real World Building and Scripting Optimization." /></a>
 
 ## Streaming and Teleportation
 

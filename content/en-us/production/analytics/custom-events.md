@@ -75,7 +75,7 @@ You can breakdown by custom fields by using the breakdown selector.
 
 <img src="../../assets/analytics/event-types/Custom-Event-Breakdown.png" width = "40%" alt="A dropdown indicating the three custom fields you can compare across, along with standard breakdowns like age, gender, operating system and more."/>
 
-For more information, see [Custom Fields](./custom-fields.md).
+For more information, see [custom fields](./custom-fields.md).
 
 ## Using Custom Events to Grow Your Experience
 
