@@ -114,13 +114,13 @@ functions:
     code_samples:
   - name: DebuggerManager
     summary: |
-      Refers to the legacy DebuggerManager, which acts as an interface for
+      Refers to the legacy `DebuggerManager` class which acts as an interface for
       the Luau debugger feature.
     description: |
-      Returns the legacy `DebuggerManager` class, which acts as an interface
+      Returns the legacy `DebuggerManager` class which acts as an interface
       for Roblox's Luau debugger feature.
 
-      This function is not recognised by Luau's analysis tool and will raise
+      This function is not recognized by Luau's analysis tool and will raise
       an undefined global warning.
     parameters:
     returns:
@@ -129,7 +129,7 @@ functions:
     tags:
       - Deprecated
     deprecation_message: |
-      The `DebuggerManager` is obsolete and serves little to no usecase to
+      The `DebuggerManager` is obsolete and serves little to no use case for
       developers.
     code_samples:
   - name: elapsedTime
