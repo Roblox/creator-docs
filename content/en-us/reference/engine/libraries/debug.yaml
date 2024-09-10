@@ -5,8 +5,7 @@ summary: |
 description: |
   Provides a few basic functions for debugging code in Roblox. Unlike the
   `Library.debug` library found in Lua natively, this version has been heavily
-  sandboxed. Roblox does, however, have debugging functionality similar to Lua's
-  native debugging functionality (see the `Class.DebuggerManager` class).
+  sandboxed.
 code_samples:
 properties:
 functions:
