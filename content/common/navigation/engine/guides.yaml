@@ -421,7 +421,7 @@ navigation:
         path: /animation/using
   - title: Chat
     section:
-      - title: Chat with Voice
+      - title: Voice Chat
         path: /chat/voice-chat
       - title: Text Chat
         path: /chat/in-experience-text-chat

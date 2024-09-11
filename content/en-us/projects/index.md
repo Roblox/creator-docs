@@ -56,7 +56,7 @@ For more information on how to import and publish assets, see [Assets](../projec
 Experience settings are managed from the [Creator Dashboard](https://create.roblox.com/dashboard/creations) or within Studio, including:
 
 - **Basic Info** &mdash; Basic information about the experience, such as its name, description, and genre. Much of the information here is used in your experience's listing.
-- **Communication** &mdash; Settings which enable eligible users to use [chat with voice](../chat/voice-chat.md) or animate their avatar via their camera within your experience.
+- **Communication** &mdash; Settings which enable eligible users to use [voice chat](../chat/voice-chat.md) or animate their avatar via their camera within your experience.
 - **Permissions** &mdash; Configures who can access your experience. New experiences begin as **private** and can only be edited and joined by you and members of your [group](../projects/groups.md) with the correct permissions. When appropriate, you can [release](../production/publishing/publishing-experiences-and-places.md#releasing-to-the-public) the experience to the public.
 - **Monetization** &mdash; Options for earning revenue from your experience, as outlined in [Monetization](../production/monetization/index.md).
 - **Localization** &mdash; Configuration for different [languages and regions](../production/localization/index.md).

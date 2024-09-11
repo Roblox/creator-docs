@@ -142,7 +142,7 @@ To insert a video ad:
 
    <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="716" alt="Part menu indicated in Home tab" />
 
-1. Scale the part to at least 8 studs wide and 5 studs tall, but no more than 32 studs wide and 18 studs tall.
+1. Scale the part to at least 8 studs wide and 4.5 studs tall, but no more than 32 studs wide and 18 studs tall.
 1. In the [Explorer](../../studio/explorer.md) window, add an **AdGui** object to the part.
    1. Hover over the part and click the **&CirclePlus;** button. A contextual menu displays.
    1. From the menu, insert an **AdGui**.
@@ -213,7 +213,7 @@ To insert an image ad:
    <img src="../../assets/studio/general/Home-Tab-Part-Tools.png" width="716" alt="Part menu indicated in Home tab" />
 
 1. In the [Properties](../../studio/properties.md) window, navigate to the **Face** property and choose a face, or keep the default face.
-1. Scale the part to at least 8 studs wide and 5 studs tall, but no more than 32 studs wide and 18 studs tall.
+1. Scale the part to at least 8 studs wide and 4.5 studs tall, but no more than 32 studs wide and 18 studs tall.
 1. In the [Explorer](../../studio/explorer.md) window, add an **AdGui** object to the part.
    1. Hover over the part and click the **⊕** button. A contextual menu displays.
    1. From the menu, insert an **AdGui**.

@@ -68,7 +68,7 @@ The **Basic Info** tab contains general settings for an experience, such as its 
 <tbody>
   <tr>
     <td>**Enable Microphone**</td>
-    <td>Enables voice-eligible users to use voice chat within your experience. See [Chat with Voice](../chat/voice-chat.md) for more information.</td>
+    <td>Enables voice-eligible users to use voice chat within your experience. See [Voice Chat](../chat/voice-chat.md) for more information.</td>
   </tr>
   <tr>
     <td>**Enable Camera**</td>
