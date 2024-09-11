@@ -18,7 +18,7 @@ Paid access limits the number of users who will access your experience because s
 </Alert>
 
 <Alert severity="info">
-Some developers temporarily enable paid access to create a closed beta so that their most engaged users can have early access to an experience to help with testing and feedback. If you choose to do this, make sure to let users know that they’re purchasing a beta version of your experience.
+Some developers temporarily enable paid access to create a closed beta so that their most engaged users can have early access to an experience to help with testing and feedback. If you choose to do this, make sure to let users know that they're purchasing a beta version of your experience.
 </Alert>
 
 <Alert severity="warning">

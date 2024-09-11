@@ -27,7 +27,7 @@ You can enable automatic string capture with the following steps:
 2. Enable **Capture text from experience UI while users play**.
 
    <img src="../../assets/localization/Portal-Enable-ATC.png"
-   width="800" />
+   width="800" alt="The Localization Settings section highlighting the toggle for Capture text from Experience UI while users play."/>
 
 ATC adds text strings to the localization table within 1-2 minutes of encountering the text in the experience. If you do not want ATC to collect a certain text string, such as a name or unique text entry, disable the `Class.GuiBase2d.AutoLocalize|AutoLocalize` property of the text object.
 
@@ -48,7 +48,7 @@ ATC also checks your experience on a daily basis for new strings and strings tha
 
 If you do not want ATC to perform daily updates, navigate to your localization settings and disable the second ATC toggle:
 
-<img src="../../assets/localization/Portal-Enable-ATC-Auto.png" width="100%" />
+<img src="../../assets/localization/Portal-Enable-ATC-Auto.png" width="100%" alt="The Localization Settings section highlighting the toggle for enabling Roblox to remove stale entries." />
 
 ## Enabling Translations
 
@@ -58,7 +58,7 @@ Once strings are captured to your localization table, follow these steps to enab
 2. Enable **Use Translated Content**.
 
    <img src="../../assets/localization/Portal-Use-Translated-Content.png"
-   width="800" />
+   width="800" alt="The Localization Settings section highlighting the toggle for enabling Roblox to use translated content in the experience." />
 
 3. Navigate to the **Languages** tab.
 4. Enable any supported languages for automatic translations.
@@ -67,13 +67,20 @@ Once strings are captured to your localization table, follow these steps to enab
    - **Experience Strings & Products** refers to the text that appears within your experience.
 
    <img src="../../assets/localization/Portal-Automatic-Translation.png"
-     width="800" />
+     width="800" alt="The Localization Languages section highlighting the per-language toggles for automatic translation." />
 
-<Alert severity="info">
-Roblox has initial and monthly quotas for automatic translation. The quotas determine how many string entries you can translate per language. The initial quota determines to how many string entries you can translate via automatic translations when you localize your experience for the first time. After you use up the initial quota, any subsequent translations come from your monthly quota, which resets every month.
-</Alert>
+### Automatic Translation Quotas
 
-## Automatic Translation Updates
+Roblox has initial and monthly quotas for automatic translation. The initial quota determines how many string entries you can translate when you localize your experience for the first time. After you use up the initial quota, any subsequent translations come from your monthly quota, which resets every month.
+
+You can track your automatic translation quota usage on your experience's localization page:
+
+<img src="../../assets/localization/Automatic-Translation-Quotas.png"
+     width="800" alt="The Localization Languages section depicting the Automatic Translation Quotas at the top of the page, including the date of the monthly quota renewal." />
+
+Quotas are calculated on a **per-character** and **per-language basis**. For example, translating the source string "hello" into all 15 automatic translation-supported languages will count as 5 x 15 = 75 characters towards your quota.
+
+### Automatic Translation Updates
 
 As the automatic translation tool improves, more accurate translations may become available for existing strings. When these updates become available, Roblox refreshes any automatic translations. Automatic translation updates will appear in your translation history.
 
