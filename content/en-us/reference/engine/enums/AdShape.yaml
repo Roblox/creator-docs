@@ -11,6 +11,6 @@ items:
   - name: HorizontalRectangle
     value: 1
     summary: |
-      The ad has an aspect ratio of 16:9 and a minimum size of 8 by 4 studs.
+      The ad has an aspect ratio of 16:9 and a minimum size of 8 by 4.5 studs.
     tags: []
     deprecation_message: ''
