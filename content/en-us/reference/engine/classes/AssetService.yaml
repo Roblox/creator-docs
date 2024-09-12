@@ -461,7 +461,7 @@ methods:
             <td><code>Class.AssetService:SearchAudio()</code> has been called too many times.</td>
           </tr>
           <tr>
-            <td>Unexpected type for data, expected array got void</td>
+            <td>Unexpected type for data, expected array got null</td>
             <td>The keyword argument was filtered.</td>
           </tr>
         </tbody>
