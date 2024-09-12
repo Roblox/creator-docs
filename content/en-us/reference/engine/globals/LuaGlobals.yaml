@@ -64,7 +64,7 @@ functions:
       Roblox's Lua sandbox only allows the `count` option to be used (the total
       memory in use by Lua, in kilobytes), as other options can interfere with
       existing processes. Effectively, this makes
-      `Global.RobloxGlobals.gcinfo()` a superior alternative that should be used
+      `Global.LuaGlobals.gcinfo()` a superior alternative that should be used
       instead.
     parameters:
       - name: operation
@@ -78,6 +78,19 @@ functions:
         summary: ''
     tags:
       - Deprecated
+    code_samples:
+  - name: gcinfo
+    summary: |
+      Returns the total memory heap size in kilobytes.
+    description: |
+      Returns the total memory heap size in kilobytes. The number reflects the
+      current heap consumption from the operating system perspective, which
+      fluctuates over time as garbage collector frees objects.
+    parameters:
+    returns:
+      - type: number
+        summary: ''
+    tags:
     code_samples:
   - name: error
     summary: |

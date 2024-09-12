@@ -146,19 +146,6 @@ functions:
         summary: ''
     tags:
     code_samples:
-  - name: gcinfo
-    summary: |
-      Returns the total memory heap size in kilobytes.
-    description: |
-      Returns the total memory heap size in kilobytes. The number reflects the
-      current heap consumption from the operating system perspective, which
-      fluctuates over time as garbage collector frees objects.
-    parameters:
-    returns:
-      - type: number
-        summary: ''
-    tags:
-    code_samples:
   - name: PluginManager
     summary: |
       Refers to the PluginManager, a deprecated singleton that was previously
