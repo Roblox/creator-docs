@@ -69,6 +69,8 @@ navigation:
       path: /creator-programs/brand-developer-directory
     - title: Community Feedback Program
       path: /creator-programs/feedback
+    - title: Creator Affiliate Program
+      path: /creator-programs/creator-affiliate
     - title: Creator Events
       path: /creator-programs/creator-events
     - title: Creator Fund
@@ -83,6 +85,8 @@ navigation:
       path: /creator-programs/learn-explore-sort
     - title: Managed Brand Integrations
       path: /creator-programs/managed-brand-integrations
+    - title: Notable Translators Program
+      path: /creator-programs/notable-translators
     - title: Roblox Developers Conference (RDC)
       path: /creator-programs/rdc
     - title: Roblox Innovation Awards
