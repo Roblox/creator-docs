@@ -1,13 +1,16 @@
 name: AdShape
 type: enum
-summary: ''
-description: ''
+summary: |
+  Describes the form factor of an ad in an `Class.AdGui`. There is currently only one available size.
+description: |
+  Describes the form factor of an ad in an `Class.AdGui`. There is currently only one available size.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: HorizontalRectangle
     value: 1
-    summary: ''
+    summary: |
+      The ad has an aspect ratio of 16:9 and a minimum size of 8 by 4.5 studs.
     tags: []
     deprecation_message: ''
