@@ -128,7 +128,7 @@ methods:
           (the humanoid that will move along the path). See above for valid
           keys, types, and descriptions.
     returns:
-      - type: Instance
+      - type: Path
         summary: |
           A `Class.Path` object.
     tags: []
@@ -159,7 +159,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Instance
+      - type: Path
         summary: |
           A `Class.Path` object.
     tags:
@@ -195,7 +195,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Instance
+      - type: Path
         summary: ''
     tags:
       - Yields
@@ -235,7 +235,7 @@ methods:
         summary: |
           Path finish coordinates.
     returns:
-      - type: Instance
+      - type: Path
         summary: |
           A `Class.Path` object.
     tags:

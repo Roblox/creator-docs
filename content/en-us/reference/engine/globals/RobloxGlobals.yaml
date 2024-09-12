@@ -114,14 +114,14 @@ functions:
     code_samples:
   - name: DebuggerManager
     summary: |
-      Refers to the legacy `DebuggerManager` class which acts as an interface for
-      the Luau debugger feature.
+      Refers to the legacy `DebuggerManager` class which acts as an interface
+      for the Luau debugger feature.
     description: |
-      Returns the legacy `DebuggerManager` class which acts as an interface
-      for Roblox's Luau debugger feature.
+      Returns the legacy `DebuggerManager` class which acts as an interface for
+      Roblox's Luau debugger feature.
 
-      This function is not recognized by Luau's analysis tool and will raise
-      an undefined global warning.
+      This function is not recognized by Luau's analysis tool and will raise an
+      undefined global warning.
     parameters:
     returns:
       - type: DebuggerManager

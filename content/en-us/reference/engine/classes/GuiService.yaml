@@ -329,7 +329,8 @@ methods:
     returns:
       - type: void
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -370,7 +371,8 @@ methods:
     returns:
       - type: void
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -677,7 +679,8 @@ methods:
     returns:
       - type: void
         summary: ''
-    tags: []
+    tags:
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

@@ -2538,6 +2538,27 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: UserInputService.TouchDrag
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: dragDirection
+        type: SwipeDirection
+        default:
+        summary: ''
+      - name: numberOfTouches
+        type: int
+        default:
+        summary: ''
+      - name: gameProcessedEvent
+        type: bool
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: UserInputService.TouchEnded
     summary: |
       Fired when a user releases their finger from the screen on a TouchEnabled

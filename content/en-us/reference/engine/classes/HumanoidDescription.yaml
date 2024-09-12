@@ -51,6 +51,7 @@ properties:
     code_samples:
     type: string
     tags:
+      - NotReplicated
       - NotScriptable
     deprecation_message: ''
     security:
@@ -60,7 +61,7 @@ properties:
     category: Accessories
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.BackAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -90,7 +91,8 @@ properties:
         similar properties that apply accessories like this one
     code_samples:
     type: string
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -99,7 +101,7 @@ properties:
     category: Accessories
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.BodyTypeScale
     summary: |
       Determines the factor by which the shape of a `Class.Humanoid` is
@@ -273,7 +275,8 @@ properties:
         Face texture is used on the head
     code_samples:
     type: string
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -282,7 +285,7 @@ properties:
     category: Accessories
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.FallAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescription()|applied` to a
@@ -348,7 +351,8 @@ properties:
         similar properties that apply accessories like this one
     code_samples:
     type: string
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -357,7 +361,7 @@ properties:
     category: Accessories
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.GraphicTShirt
     summary: |
       Determines the `Class.ShirtGraphic.Graphic|Graphic` used by a
@@ -418,7 +422,8 @@ properties:
         similar properties that apply accessories like this one
     code_samples:
     type: string
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -427,7 +432,7 @@ properties:
     category: Accessories
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.HatAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -457,7 +462,8 @@ properties:
         similar properties that apply accessories like this one
     code_samples:
     type: string
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -466,7 +472,7 @@ properties:
     category: Accessories
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.Head
     summary: |
       Determines the asset ID of the Head to be applied to the `Class.Humanoid`.
@@ -492,7 +498,8 @@ properties:
         apply `Class.Accessory` objects which are joined to the head
     code_samples:
     type: int64
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -501,7 +508,7 @@ properties:
     category: Body Parts
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.HeadColor
     summary: |
       Determines the `Class.BodyColors.HeadColor3` and
@@ -528,7 +535,8 @@ properties:
         front of the head
     code_samples:
     type: Color3
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -537,7 +545,7 @@ properties:
     category: Body Colors
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.HeadScale
     summary: |
       Determines by what factor the **Head** object of a `Class.Humanoid` is
@@ -701,7 +709,8 @@ properties:
         the color of this limb
     code_samples:
     type: int64
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -710,7 +719,7 @@ properties:
     category: Body Parts
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.LeftArmColor
     summary: |
       Determines the `Class.BodyColors.LeftArmColor3` and
@@ -738,7 +747,8 @@ properties:
         this limb
     code_samples:
     type: Color3
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -747,7 +757,7 @@ properties:
     category: Body Colors
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.LeftLeg
     summary: |
       Determines the asset ID of the LeftLeg to be applied to the
@@ -770,7 +780,8 @@ properties:
         the color of this limb
     code_samples:
     type: int64
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -779,7 +790,7 @@ properties:
     category: Body Parts
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.LeftLegColor
     summary: |
       Determines the `Class.BodyColors.LeftLegColor3` and
@@ -807,7 +818,8 @@ properties:
         this limb
     code_samples:
     type: Color3
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -816,7 +828,7 @@ properties:
     category: Body Colors
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.MoodAnimation
     summary: ''
     description: ''
@@ -865,7 +877,8 @@ properties:
         similar properties that apply accessories like this one
     code_samples:
     type: string
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -874,7 +887,7 @@ properties:
     category: Accessories
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.Pants
     summary: |
       Determines the `Class.Pants.PantsTemplate|PantsTemplate` used by a
@@ -967,7 +980,8 @@ properties:
         the color of this limb
     code_samples:
     type: int64
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -976,7 +990,7 @@ properties:
     category: Body Parts
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.RightArmColor
     summary: |
       Determines the `Class.BodyColors.RightArmColor3` and
@@ -1004,7 +1018,8 @@ properties:
         this limb
     code_samples:
     type: Color3
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -1013,7 +1028,7 @@ properties:
     category: Body Colors
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.RightLeg
     summary: |
       Determines the asset ID of the RightLeg to be applied to the
@@ -1036,7 +1051,8 @@ properties:
         the color of this limb
     code_samples:
     type: int64
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -1045,7 +1061,7 @@ properties:
     category: Body Parts
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.RightLegColor
     summary: |
       Determines the `Class.BodyColors.RightLegColor3` and
@@ -1073,7 +1089,8 @@ properties:
         this limb
     code_samples:
     type: Color3
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -1082,7 +1099,7 @@ properties:
     category: Body Colors
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.RunAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescription()|applied` to a
@@ -1183,7 +1200,8 @@ properties:
         similar properties that apply accessories like this one
     code_samples:
     type: string
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -1192,7 +1210,7 @@ properties:
     category: Accessories
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.SwimAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescription()|applied` to a
@@ -1250,7 +1268,8 @@ properties:
         color of this limb
     code_samples:
     type: int64
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -1259,7 +1278,7 @@ properties:
     category: Body Parts
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.TorsoColor
     summary: |
       Determines the `Class.BodyColors.TorsoColor3` and
@@ -1288,7 +1307,8 @@ properties:
         this body part
     code_samples:
     type: Color3
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -1297,7 +1317,7 @@ properties:
     category: Body Colors
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.WaistAccessory
     summary: |
       A comma-separated list of asset IDs that will be added as
@@ -1327,7 +1347,8 @@ properties:
         are similar properties that apply accessories like this one
     code_samples:
     type: string
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -1336,7 +1357,7 @@ properties:
     category: Accessories
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
   - name: HumanoidDescription.WalkAnimation
     summary: |
       When this description is `Class.Humanoid:ApplyDescription()|applied` to a

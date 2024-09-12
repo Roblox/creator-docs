@@ -11,6 +11,7 @@ Roblox's goal is to enable the creation of anything, anywhere, by anyone, and we
   - [Immersive Ads](#immersive-ads)
 - [Creating, Selling, and Reselling Avatar Items](#creating-selling-and-reselling-avatar-items)
 - [Creating and Selling Studio Plugins](#creating-and-selling-studio-plugins)
+- [Joining the Creator Affiliate Program](#joining-the-creator-affiliate-program)
 
 This page provides information about different ways to earn on Roblox and how to [convert earned Robux to cash](#converting-earned-robux-to-cash) through the [Developer Exchange][link_developer_exchange] program.
 
@@ -256,6 +257,23 @@ After purchasing a Limited, there is up to a 30‑day holding period when the it
 
 You can create and sell Studio [plugins](../studio/plugins.md) to the creator community through the [Creator Store](../production/creator-store.md). A plugin is an extension that adds additional features or functionality to [Roblox Studio](../studio/index.md) and helps improve creator workflows. You can either offer plugins for free or sell them for a minimum of $4.99 USD. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information, see [Selling on the Creator Store](../production/selling-on-creator-store.md).
 
+## Joining the Creator Affiliate Program
+
+<Alert severity="info">
+To join the Creator Affiliate Program, you must be 13+ and reside in a country supported by the [Developer Exchange][link_developer_exchange] program.
+</Alert>
+
+The [Creator Affiliate Program](https://create.roblox.com/affiliate) is a pilot program that lets you earn Robux using affiliate links. With it, you can:
+
+- Generate affiliate share links for any Roblox experience, including other developers' experiences, through the Creator Hub.
+- Promote your affiliate links off-platform on social media channels.
+- Earn revenue in Robux whenever new users create a Roblox account and purchase Robux using your affiliate link. A new user is someone who doesn't already have an alternative Roblox account.
+- Exchange your Robux earnings for real-world money using the Developer Exchange program.
+
+When a user creates a Roblox account using your affiliate link and then buys Robux, you can receive up to 50% of the value of their Robux purchases during their first six months on the platform, for a maximum revenue of $100 USD per new user. For example, if a new user joins Roblox and purchases $100 USD of Robux, you can earn up to $50 USD, minus certain fees like taxes and VAT.
+
+You receive your revenue in Robux, which you can exchange for real-world money through Developer Exchange.
+
 ## Converting Earned Robux to Cash
 
 Once you earn Robux, you can continue to use it in our platform to buy developer assets, plugins, [advertising](../production/promotion/advertising-on-roblox.md), in-experience items, or virtual items. In addition, when you have at least 30,000 earned Robux in your account, you may be eligible to exchange your earned Robux for real currency using the [Developer Exchange][link_developer_exchange] program.
@@ -276,7 +294,7 @@ Every platform reports their creator share a bit differently. When you compare c
 - **Other platform benefits** &mdash; Creator shares can be high but consider other benefits that the platform provides such as costs that they are paying on your behalf, the scale and diversity of their audience, the devices/platforms they are available on, the types of creators that are earning, and more.
 - **The total size of the payout pool** &mdash; Understand the total size of the platform's payout pool. Other platforms may invest less in growing their user base and more on making their products accessible in new markets across the globe. This may allow them to pay developers a higher share, but at the expense of slower growth and less total earnings being put in creators' pockets.
 </AccordionDetails>
-  </BaseAccordion>
+</BaseAccordion>
 
 <BaseAccordion>
 <AccordionSummary>

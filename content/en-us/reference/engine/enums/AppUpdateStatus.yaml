@@ -31,3 +31,8 @@ items:
     value: 4
     tags: []
     deprecation_message: ''
+  - name: AvailableBoundChannel
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''

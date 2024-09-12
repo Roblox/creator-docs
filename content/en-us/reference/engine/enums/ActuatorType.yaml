@@ -16,13 +16,15 @@ items:
     deprecation_message: ''
   - name: Motor
     summary: |
-      The motor component is enabled. Motor properties are active and the actuator will apply continuous force.
+      The motor component is enabled. Motor properties are active and the
+      actuator will apply continuous force.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Servo
     summary: |
-      The servo component is enabled. Servo properties are active and the actuator will apply force to approach the servo's target.
+      The servo component is enabled. Servo properties are active and the
+      actuator will apply force to approach the servo's target.
     value: 2
     tags: []
     deprecation_message: ''

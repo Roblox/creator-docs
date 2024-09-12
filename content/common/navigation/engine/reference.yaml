@@ -850,6 +850,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/EditableMesh.yaml
         ignoreTranslation: true
+      - title: EditableService
+        path: /reference/engine/classes/EditableService
+        type: engineapi
+        source: /reference/engine/classes/EditableService.yaml
+        ignoreTranslation: true
       - title: EmotesPages
         path: /reference/engine/classes/EmotesPages
         type: engineapi
@@ -3822,6 +3827,11 @@ navigation:
         path: /reference/engine/enums/EasingStyle
         type: engineapi
         source: /reference/engine/enums/EasingStyle.yaml
+        ignoreTranslation: true
+      - title: EditableStatus
+        path: /reference/engine/enums/EditableStatus
+        type: engineapi
+        source: /reference/engine/enums/EditableStatus.yaml
         ignoreTranslation: true
       - title: ElasticBehavior
         path: /reference/engine/enums/ElasticBehavior
