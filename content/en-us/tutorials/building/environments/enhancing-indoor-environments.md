@@ -67,7 +67,7 @@ To enable **Future** lighting technology:
 1. In the **Explorer** window, select **Lighting**.
 1. In the **Properties** window, click the **Technology** dropdown, then select **Future**.
 
-   <img width="50%" img src="../../../assets/tutorials/enhancing-outdoor-environments/Technology-Property.jpg" alt="A close up view of the Properties window with the Future technology property highlighted." />
+   <img width="320" img src="../../../assets/studio/properties/Lighting-Technology-Future.png" alt="A close up view of the Properties window with the Future technology property highlighted." />
 
    <img width="80%" img src="../../../assets/tutorials/enhancing-indoor-environments/Future-1.jpg" alt="A full view of the starting cabin with Future lighting." />
 

@@ -42,13 +42,29 @@ ATC can not capture some experience objects. These objects may require special h
 </ul>
 </Alert>
 
-### Daily Updates
+### Automatic Cleanup
 
-ATC also checks your experience on a daily basis for new strings and strings that no longer exist, such as usernames or strings related to a past event. The tool updates the localization table and adds or removes entries accordingly. The ATC only removes auto-scraped strings with automatic translations and ignores strings that were manually added or that have manual translations.
+ATC also checks your experience for strings that no longer exist, such as usernames or strings related to a past event. By default, the tool will remove these stale entries when it identifies them. Only auto-scraped strings with automatic translations will be removed; strings that were manually added or that have manual translations will not be impacted.
 
-If you do not want ATC to perform daily updates, navigate to your localization settings and disable the second ATC toggle:
+If you do not want ATC to clean up your localization table, navigate to your localization settings and disable the second ATC toggle:
 
 <img src="../../assets/localization/Portal-Enable-ATC-Auto.png" width="100%" alt="The Localization Settings section highlighting the toggle for enabling Roblox to remove stale entries." />
+
+### Text Capture in Studio
+
+There may be situations in which you need captured strings to be added to your translation table immediately. You can use the text capture tool in Studio to capture strings while playtesting. These strings will be added to the localization table within 1-2 minutes of encountering them.
+
+You can start text capture in Studio with the following steps:
+
+1. In Studio, open **Plugins** > **Localization** > **Tools**.
+
+   <img src="../../assets/studio/general/Plugins-Tab-Localization-Tools.png" width="60%" alt="The Studio ribbon plugins tab with localization tools button highlighted." />
+
+2. Enable **Automatic Text Capture**.
+
+   <img src="../../assets/localization/ATC-Studio-Enabled.png" width="45%" alt="The in-Studio localization tool showing ATC toggle enabled." />
+
+Studio text capture stays on if you start and stop playtesting within the same Studio session, but must be enabled again when you start a new Studio session.
 
 ## Enabling Translations
 

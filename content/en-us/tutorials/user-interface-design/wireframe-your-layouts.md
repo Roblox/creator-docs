@@ -100,9 +100,7 @@ You can [disable](../../players/disabling-ui.md) any of these elements that don'
 
 In addition to Roblox's core UI, you must also consider the necessary screen space for Roblox's default touch controls. For example, when players access your experience using a mobile device, a virtual thumbstick displays in the bottom-left corner of the screen, and a jump button displays in the bottom-right corner of the screen. This ensures that players are always able to navigate your experience, even when they don't have access to a keyboard or controller.
 
-<figure>
-    <img src="../../assets/ui/cross-platform-design/Reserved-Zones.jpg" width="80%" />
-</figure>
+<img src="../../assets/ui/misc/Touch-Reserved-Zones.png" width="840" />
 
 By taking into account both Roblox's core UI elements that are necessary for the gameplay of your experience, and the possibility of touch controls, you can block in your custom UI elements in **one design** that's adaptive across devices. This is important because it means you don't need to maintain separate versions of your UI as you update your experience.
 
