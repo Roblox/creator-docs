@@ -93,6 +93,10 @@ secondPart:Destroy()
 print(secondPart.Parent) -- nil
 ```
 
+<Alert severity = 'info'>
+The statement `table:Method()` is functionally identical to `table.Method(table)`, and when defining a method, `function table:Method()` is identical to `function table.Method(self)`. This behavior extends to `Class.Instance` methods, since they are also derived from tables.
+</Alert>
+
 ### Defining Methods
 
 To create a method in a table, use the name of the method as the key and the method function as the value. In the definition of the method, the `self` parameter refers to the method's parent table. When you call a method using colon notation, you pass the table itself as the first argument. You can define parameters for a method, but you need to list them after the `self` parameter.
@@ -115,14 +119,27 @@ testButton:changeEnabled(false) -- false
 
 ## Callbacks
 
-Callbacks are functions that execute in response to another function or process. Some `Global.RobloxGlobals` functions, such as `delay()` and `spawn()`, take callbacks as parameters. In the Roblox Studio API, callbacks are write-only members of some classes. Unlike [event handlers](#event-handlers), callbacks yield until they return. Widely used callbacks include:
+Callbacks are functions that execute in response to another function or process.
+
+### Basic Callbacks
+
+Functions can be passed into other functions, for example, an [anonymous](#anonymous-functions) function can be used to implement a callback that `Library.table.sort()` then uses to sort a list of `Class.Player|Players` from `Class.Players.GetPlayers()`.
+
+```lua
+local Players = game:GetService("Players")
+local sortedPlayers = Players:GetPlayers()
+
+table.sort(sortedPlayers, function(a, b)
+	-- Use an anonymous callback to sort players by name
+	return a.Name < b.Name
+end)
+
+In the Roblox API, callbacks refer to a write-only function member, callbacks yield until they return. Widely used callbacks include:
 
 - `Class.MarketplaceService.ProcessReceipt`, which handles developer products purchases.
 - `Class.BindableFunction.OnInvoke`, which calls the function when a script calls `BindableFunction:Invoke(...)`.
 - `Class.RemoteFunction.OnClientInvoke`, which calls the function when the server calls `RemoteFunction:FireClient(player, ...)` or `RemoteFunction:FireAllClients(...)`.
 - `Class.RemoteFunction.OnServerInvoke`, which calls the function when a client calls `RemoteFunction:InvokeServer(...)`.
-
-### Setting Callbacks
 
 To set a callback, assign a function to it. For example, `Class.BindableFunction.OnInvoke` is a callback of `Class.BindableFunction`. You can set a named or [anonymous](#anonymous-functions) function to it, and you can call (**invoke**) that function by calling the `:Invoke()` method on the callback. The arguments you pass to `:Invoke()` forward to the callback, and the return value from the callback function returns to the caller of `:Invoke()`.
 
@@ -177,7 +194,7 @@ You can reuse functions across multiple scripts by storing them in `Class.Module
 
 ### Variadic Functions
 
-A variadic function accepts any number of arguments. For example, `print()` is a variadic function.
+A variadic function accepts any number of arguments. For example, `Globals.LuaGlobals.print()` is a variadic function.
 
 ```lua
 print(2, "+", 2, "=", 2 + 2) --2 + 2 = 4
@@ -188,6 +205,12 @@ print(string.char(115, 101, 99, 114, 101, 116)) -- secret
 #### Defining Variadic Functions
 
 To define a variadic function, you use the `...` token as the last or only parameter (not to be confused with `..`, the concatenation [operator](./operators.md)). You can put the `...` values in a table for ease of use.
+
+<Alert severity = 'warning'>
+The variadic token `...` can only be used within functions defined as variadic; functions or callbacks defined within a variadic function **cannot** use the same `...`, even if they are variadic themselves.
+
+`...` does not behave like a regular variable, and can only be passed into other functions, returned, or put into a table.
+</Alert>
 
 ```lua
 local function variadic(named, ...)
