@@ -165,7 +165,7 @@ print("Hello" + 10)	 --> print("Hello" + 10):1: attempt to perform arithmetic (a
 
 ## Comparisons
 
-Strings can be compared using the `<`, `<=`, `>` and `>=` operators. These compare using lexicographical order, which compares based on the ASCII codes of each character in a string.
+Strings can be compared using the `<`, `<=`, `>` and `>=` operators which compare using lexicographical order based on the ASCII codes of each character in a string.
 This will result in numbers in strings not being compared correctly, for example, `"100"` will be less than `"20"`, since the bytes `"0"` and `"1"` have lower ASCII codes than byte `"2"`.
 
 ```lua
