@@ -123,19 +123,16 @@ Callbacks are functions that execute in response to another function or process.
 
 ### Basic Callbacks
 
-Functions can be passed into other functions, for example, an [anonymous](#anonymous-functions) function can be used to implement a callback that `Library.table.sort()` then uses to sort a list of `Class.Player`|players from `Class.Players.GetPlayers()`.
+Functions can be passed into other functions, for example, an [anonymous](#anonymous-functions) function can be used to implement a callback that `Library.table.sort()` then uses to sort a list of `Class.Player|Players` from `Class.Players.GetPlayers()`.
 
 ```lua
 local Players = game:GetService("Players")
 local sortedPlayers = Players:GetPlayers()
 
 table.sort(sortedPlayers, function(a, b)
-	-- use an anonymous callback to sort players by name
+	-- Use an anonymous callback to sort players by name
 	return a.Name < b.Name
 end)
-```
-
-### Roblox Callbacks
 
 In the Roblox API, callbacks refer to a write-only function member, callbacks yield until they return. Widely used callbacks include:
 
