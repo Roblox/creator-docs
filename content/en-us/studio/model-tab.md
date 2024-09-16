@@ -18,18 +18,20 @@ The primary transform tools include **Select**, **Move**, **Scale**, **Rotate**,
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/modeling/parts/Manipulate-Move.png" alt="Move draggers shown on part in 3D viewport" />
+    <img src="../assets/modeling/parts/Transform-Move-SM.png" alt="Move draggers shown on part in 3D viewport" />
     <figcaption>Move</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/parts/Manipulate-Scale.png" alt="Scale draggers shown on part in 3D viewport" />
+    <img src="../assets/modeling/parts/Transform-Scale-SM.png" alt="Scale draggers shown on part in 3D viewport" />
     <figcaption>Scale</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/parts/Manipulate-Rotate.png" alt="Rotate draggers shown on part in 3D viewport" />
+    <img src="../assets/modeling/parts/Transform-Rotate-SM.png" alt="Rotate draggers shown on part in 3D viewport" />
     <figcaption>Rotate</figcaption>
   </figure>
 </GridContainer>
+
+Tool transform **snapping increments** are based on **studs** for moving/scaling or **degrees** for rotating, each adjustable in the [Model](../studio/model-tab.md#transform-snapping) tab. While transforming, you can temporarily toggle snapping by holding the <kbd>Shift</kbd> key.
 
 <Alert severity="info">
 If the selected object and its visual draggers are not currently in view within the 3D viewport, you can press the <kbd>Tab</kbd> key to "summon" the draggers to your mouse pointer position, allowing you to transform the selected object from your current viewpoint.
@@ -50,10 +52,12 @@ The **Collisions** checkbox toggles the collisions state when you're transformin
 
 ### Transform Snapping
 
-Snap increments for tool transforms are based on **studs** for moving/scaling or **degrees** for rotating. You can enable or disable snapping through the checkbox next to **Rotate** or **Move**, and adjust the rotation/transform increments via the input fields.
+Snap increments for tool transforms are based on **studs** for moving/scaling or **degrees** for rotating. To enable or disable snapping:
 
-<img src="../assets/studio/general/Model-Tab-Transform-Snapping.png"
-   width="830" alt="Transform snapping tools indicated in Model tab" />
+- Temporarily toggle snapping either on or off by holding <kbd>Shift</kbd> while transforming.
+- Toggle the checkbox next to **Rotate** or **Move**, and adjust the rotation/transform increments via the input fields.
+
+  <img src="../assets/studio/general/Model-Tab-Transform-Snapping.png" width="768" alt="Transform snapping tools indicated in Model tab" />
 
 ### Transform Coordinates
 
@@ -61,10 +65,10 @@ Snap increments for tool transforms are based on **studs** for moving/scaling or
 
 <Tabs>
   <TabItem label="World">
-    <img src="../assets/modeling/parts/Manipulate-World-Orientation.png" width="480" alt="Part draggers in World orientation mode" />
+    <img src="../assets/modeling/parts/Move-World-Orientation.png" width="720" height="405" alt="Part draggers in World orientation mode" />
   </TabItem>
   <TabItem label="Local">
-    <img src="../assets/modeling/parts/Manipulate-Local-Orientation.png" width="480" alt="Part draggers in Local orientation mode" />
+    <img src="../assets/modeling/parts/Move-Local-Orientation.png" width="720" height="405" alt="Part draggers in Local orientation mode" />
   </TabItem>
 </Tabs>
 

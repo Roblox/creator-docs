@@ -120,18 +120,6 @@ The following beta features are currently available to all users through Studio'
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent style={{paddingBottom: '0px'}}>
-<Button href="../parts/materials.md#base-materials" size="large" color="primaryBrand" variant="outlined" fullWidth>New Base Materials</Button>
-<p></p>
-<CardMedia component="img" image="../assets/studio/beta/New-Base-Materials.png" />
-<p></p>
-<figcaption>Adds 8 new [base materials](../parts/materials.md#base-materials) to the engine, including carpet, clay roof tiles, leather, plaster, and more.</figcaption>
-<p></p>
-<BetaAlert betaName="New Base Materials" leadIn="" leadOut="" components={props.components} />
-</CardContent>
-</Card>
-
-<Card variant="outlined" style={{height: '100%'}}>
-<CardContent style={{paddingBottom: '0px'}}>
 <Button href="../studio/ui-overview.md#camera-controls" size="large" color="primaryBrand" variant="outlined" fullWidth>Improved Camera Controls</Button>
 <p></p>
 <CardMedia component="img" image="../assets/studio/beta/Improved-Camera-Controls.png" />
@@ -151,18 +139,6 @@ The following beta features are currently available to all users through Studio'
 <figcaption>Enable preview of the next gen Studio core.</figcaption>
 <p></p>
 <BetaAlert betaName="Next Gen Studio Preview" leadIn="" leadOut="" components={props.components} />
-</CardContent>
-</Card>
-
-<Card variant="outlined" style={{height: '100%'}}>
-<CardContent style={{paddingBottom: '0px'}}>
-<Button href="../studio/test-tab.md#pausing--resuming-physics" size="large" color="primaryBrand" variant="outlined" fullWidth>Simulation Pause and Step</Button>
-<p></p>
-<CardMedia component="img" image="../assets/studio/beta/Simulation-Pause.jpg" />
-<p></p>
-<figcaption>Enables visual pausing and simulation debugging at Studio runtime.</figcaption>
-<p></p>
-<BetaAlert betaName="Simulation Pause and Step" leadIn="" leadOut="" components={props.components} />
 </CardContent>
 </Card>
 

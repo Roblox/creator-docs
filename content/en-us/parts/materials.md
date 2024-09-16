@@ -252,7 +252,6 @@ Shaders generate the look and feel of materials. The base material shaders work 
 
 <Tabs>
 <TabItem label="Current Base">
-<BetaAlert betaName="New Base Materials" leadIn="Materials marked as beta are only available once you enable " leadOut="." components={props.components} />
 
 <table size="small">
 <thead>
@@ -287,28 +286,28 @@ Shaders generate the look and feel of materials. The base material shaders work 
         <td>9438453413</td>
     </tr>
 		<tr>
-        <td>**Cardboard** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Cardboard**</td>
         <td>14108651729</td>
         <td>14108654002</td>
         <td></td>
         <td>14108654299</td>
     </tr>
 		<tr>
-        <td>**Carpet** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Carpet**</td>
         <td>14108662587</td>
         <td>14108663154</td>
         <td></td>
         <td>14108663726</td>
     </tr>
 		<tr>
-        <td>**Ceramic Tiles** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Ceramic Tiles**</td>
         <td>17429425079</td>
         <td>17429425915</td>
         <td>17429426100</td>
         <td>17429426861</td>
     </tr>
 		<tr>
-        <td>**Clay Roof Tiles** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Clay Roof Tiles**</td>
         <td>18147681935</td>
         <td>18147683410</td>
         <td></td>
@@ -420,7 +419,7 @@ Shaders generate the look and feel of materials. The base material shaders work 
         <td>9439080950</td>
     </tr>
 		<tr>
-        <td>**Leather** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Leather**</td>
         <td>14108670073</td>
         <td>14108670486</td>
         <td></td>
@@ -476,7 +475,7 @@ Shaders generate the look and feel of materials. The base material shaders work 
         <td>9439537267</td>
     </tr>
 		<tr>
-        <td>**Plaster** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Plaster**</td>
         <td>14108671255</td>
         <td>14108671870</td>
         <td></td>
@@ -497,14 +496,14 @@ Shaders generate the look and feel of materials. The base material shaders work 
         <td>9439545859</td>
     </tr>
 		<tr>
-        <td>**Roof Shingles** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Roof Shingles**</td>
         <td>119722544879522</td>
         <td>77534750680073</td>
         <td></td>
         <td>129397260312247</td>
     </tr>
 		<tr>
-        <td>**Rubber** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Rubber**</td>
         <td>14108673018</td>
         <td>14108674698</td>
         <td>14108674894</td>
@@ -1226,8 +1225,6 @@ The base materials were upgraded in 2022 to support custom materials. New places
 
 The following table lists the default RGB values for each base material. For information on how to color parts and terrain, see [Parts](../parts/index.md#coloring-parts) and [Environmental Terrain](../parts/terrain.md#custom-terrain-colors).
 
-<BetaAlert betaName="New Base Materials" leadIn="Materials marked as beta are only available once you enable " leadOut="." components={props.components} />
-
 <table size="small">
 <thead>
     <tr>
@@ -1253,22 +1250,22 @@ The following table lists the default RGB values for each base material. For inf
         <td><ColorSwatch value="rgb(138,97,73)" /></td>
     </tr>
 		<tr>
-        <td>**Cardboard** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Cardboard**</td>
         <td>[255, 206, 152]</td>
         <td><ColorSwatch value="rgb(255,206,152)" /></td>
     </tr>
 		<tr>
-        <td>**Carpet** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Carpet**</td>
         <td>[163, 162, 165]</td>
         <td><ColorSwatch value="rgb(163,162,165)" /></td>
     </tr>
 		<tr>
-        <td>**Ceramic Tiles** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Ceramic Tiles**</td>
         <td>[181, 173, 156]</td>
         <td><ColorSwatch value="rgb(181,173,156)" /></td>
     </tr>
 		<tr>
-        <td>**Clay Roof Tiles** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Clay Roof Tiles**</td>
         <td>[255, 142, 87]</td>
         <td><ColorSwatch value="rgb(255,142,87)" /></td>
     </tr>
@@ -1348,7 +1345,7 @@ The following table lists the default RGB values for each base material. For inf
         <td><ColorSwatch value="rgb(106,134,64)" /></td>
     </tr>
 		<tr>
-        <td>**Leather** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Leather**</td>
         <td>[110, 73, 53]</td>
         <td><ColorSwatch value="rgb(110,73,53)" /></td>
     </tr>
@@ -1388,7 +1385,7 @@ The following table lists the default RGB values for each base material. For inf
         <td><ColorSwatch value="rgb(122,122,118)" /></td>
     </tr>
 		<tr>
-        <td>**Plaster** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Plaster**</td>
         <td>[204, 142, 105]</td>
         <td><ColorSwatch value="rgb(204,142,105)" /></td>
     </tr>
@@ -1403,12 +1400,12 @@ The following table lists the default RGB values for each base material. For inf
         <td><ColorSwatch value="rgb(99,100,102)" /></td>
     </tr>
 		<tr>
-        <td>**Roof Shingles** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Roof Shingles**</td>
         <td>[66, 66, 66]</td>
         <td><ColorSwatch value="rgb(66,66,66)" /></td>
     </tr>
 		<tr>
-        <td>**Rubber** <Chip label="beta" size="small" variant="outlined" /></td>
+        <td>**Rubber**</td>
         <td>[32, 32, 32]</td>
         <td><ColorSwatch value="rgb(32,32,32)" /></td>
     </tr>
@@ -1459,8 +1456,6 @@ The following table lists the default RGB values for each base material. For inf
 
 The following table lists each material's default physical properties as detailed in the `Datatype.PhysicalProperties` reference. For information on customizing physical properties, see [Physical Properties](#physical-properties).
 
-<BetaAlert betaName="New Base Materials" leadIn="Materials marked as beta are only available once you enable " leadOut="." components={props.components} />
-
 <table size="small">
   <thead>
     <tr>
@@ -1498,7 +1493,7 @@ The following table lists each material's default physical properties as detaile
       <td>0.3</td>
     </tr>
 		<tr>
-      <td>**Cardboard** <Chip label="beta" size="small" variant="outlined" /></td>
+      <td>**Cardboard**</td>
       <td>0.7</td>
       <td>0.05</td>
       <td>2</td>
@@ -1506,7 +1501,7 @@ The following table lists each material's default physical properties as detaile
       <td>1</td>
     </tr>
 		<tr>
-      <td>**Carpet** <Chip label="beta" size="small" variant="outlined" /></td>
+      <td>**Carpet**</td>
       <td>1.1</td>
       <td>0.25</td>
       <td>2</td>
@@ -1514,7 +1509,7 @@ The following table lists each material's default physical properties as detaile
       <td>1</td>
     </tr>
 		<tr>
-      <td>**Ceramic Tiles** <Chip label="beta" size="small" variant="outlined" /></td>
+      <td>**Ceramic Tiles**</td>
       <td>2.4</td>
       <td>0.2</td>
       <td>1</td>
@@ -1522,7 +1517,7 @@ The following table lists each material's default physical properties as detaile
       <td>1</td>
     </tr>
 		<tr>
-      <td>**Clay Roof Tiles** <Chip label="beta" size="small" variant="outlined" /></td>
+      <td>**Clay Roof Tiles**</td>
       <td>2</td>
       <td>0.2</td>
       <td>1</td>
@@ -1650,7 +1645,7 @@ The following table lists each material's default physical properties as detaile
       <td>2</td>
     </tr>
 		<tr>
-      <td>**Leather** <Chip label="beta" size="small" variant="outlined" /></td>
+      <td>**Leather**</td>
       <td>0.86</td>
       <td>0.25</td>
       <td>1</td>
@@ -1714,7 +1709,7 @@ The following table lists each material's default physical properties as detaile
       <td>1</td>
     </tr>
 		<tr>
-      <td>**Plaster** <Chip label="beta" size="small" variant="outlined" /></td>
+      <td>**Plaster**</td>
       <td>0.75</td>
       <td>0.2</td>
       <td>1</td>
@@ -1738,7 +1733,7 @@ The following table lists each material's default physical properties as detaile
       <td>1</td>
     </tr>
 		<tr>
-      <td>**Roof Shingles** <Chip label="beta" size="small" variant="outlined" /></td>
+      <td>**Roof Shingles**</td>
       <td>2.36</td>
       <td>0.2</td>
       <td>1</td>
@@ -1746,7 +1741,7 @@ The following table lists each material's default physical properties as detaile
       <td>0.3</td>
     </tr>
 		<tr>
-      <td>**Rubber** <Chip label="beta" size="small" variant="outlined" /></td>
+      <td>**Rubber**</td>
       <td>1.3</td>
       <td>0.95</td>
       <td>2</td>

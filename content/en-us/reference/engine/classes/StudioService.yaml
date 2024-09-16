@@ -118,7 +118,7 @@ properties:
       [Model](../../../studio/model-tab.md) tab under the
       **Snap&nbsp;to&nbsp;Grid** section.
 
-      <img src="/assets/studio/general/Model-Tab-Transform-Snapping.png" width="830" alt="Transform snapping tools indicated in Model tab" />
+      <img src="/assets/studio/general/Model-Tab-Transform-Snapping.png" width="768" alt="Transform snapping tools indicated in Model tab" />
     code_samples:
     type: float
     tags:
@@ -143,7 +143,7 @@ properties:
       user's [Model](../../../studio/model-tab.md) tab under the
       **Snap&nbsp;to&nbsp;Grid** section.
 
-      <img src="/assets/studio/general/Model-Tab-Transform-Snapping.png" width="830" alt="Transform snapping tools indicated in Model tab" />
+      <img src="/assets/studio/general/Model-Tab-Transform-Snapping.png" width="768" alt="Transform snapping tools indicated in Model tab" />
     code_samples:
     type: float
     tags:
@@ -253,26 +253,6 @@ properties:
       space of an object or global space. By default, this setting is toggled
       with <kbd>Ctrl</kbd><kbd>L</kbd> or <kbd>⌘</kbd><kbd>L</kbd>. Plugins can
       read from this property if they implement their own object movement tools.
-
-      The images below show how movement/rotation tools change when working with
-      parts. When **UseLocalSpace** is `false`, the movement tools align with
-      the global axes, and when `true` the movement tools align with the part's
-      local axes.
-
-      <table>
-      <thead>
-      <tr>
-      <th>false</th>
-      <th>true</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td><img src="/assets/modeling/parts/Manipulate-World-Orientation.png" width="360" alt="Part draggers in World orientation mode" /></td>
-      <td><img src="/assets/modeling/parts/Manipulate-Local-Orientation.png" width="360" alt="Part draggers in Local orientation mode" /></td>
-      </tr>
-      </tbody>
-      </table>
     code_samples:
     type: bool
     tags:

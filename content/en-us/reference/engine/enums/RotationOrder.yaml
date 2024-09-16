@@ -8,7 +8,7 @@ description: |
   which the engine performs these rotations.
 
   To help visualize the many rotation orders, you can test them manually in
-  Studio with the [Rotate](../../../parts#rotating-parts) tool or by inserting
+  Studio with the [Rotate](../../../parts#rotating) tool or by inserting
   `Library.task.wait()` statements between individual rotations of a cube with a
   unique face:
 

@@ -550,13 +550,14 @@ To transform a region:
 
    <img src="../assets/studio/terrain-editor/Edit-Tab-Transform.png" width="360" alt="Transform tool indicated in Edit tab of Terrain Editor" />
 
-1. Check the [rotation snapping](../studio/model-tab.md#transform-snapping) settings in Studio's [Model](../studio/model-tab.md) tab, as this affects terrain rotation. Disable rotation snapping entirely for free-form rotation.
 1. In the 3D viewport, transform the region with the **move** draggers, **rotate** rings, and **scale** handles. Alternatively, enter values into the tool's **X**/**Y**/**Z** inputs to set a specific position, size, and rotation.
 
    <img src="../assets/studio/terrain-editor/Transform-Region-Labeled.jpg" width="780" alt="Move draggers, scale handles, and rotate rings on the Y axis of a selected region" />
 
    <Alert severity="info">
-   Similar to [selecting](#selecting-regions) a region, holding <kbd>Shift</kbd> while dragging any **scale** handle scales the region proportionally across all other axes, and holding <kbd>Ctrl</kbd> or <kbd>⌘</kbd> while dragging scales the region equally in both the positive and negative direction along that axis.
+   Holding <kbd>Shift</kbd> while dragging any **scale** handle scales the region proportionally across all other axes, and holding <kbd>Ctrl</kbd> or <kbd>⌘</kbd> while dragging scales the region equally in both the positive and negative direction along that axis.
+	 
+	 Holding <kbd>Shift</kbd> while dragging any **rotate** ring toggles between rotation snapping or free‑form rotation.
    </Alert>
 
    <Alert severity="success">

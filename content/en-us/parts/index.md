@@ -42,26 +42,38 @@ the group as a single assembly in the [Explorer](../studio/explorer.md). See
 
 `Class.Part` objects can take the shape of blocks, spheres, cylinders, wedges, or corner wedges. In addition, `Class.TrussPart` acts as a truss beam that characters can climb like a ladder.
 
-<table>
-<thead>
-<tr>
-<th><center>Block</center></th>
-<th><center>Sphere</center></th>
-<th><center>Cylinder</center></th>
-<th><center>Wedge</center></th>
-<th><center>Corner Wedge</center></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src="../assets/modeling/parts/Basic-Part-Block.png" alt="A single gray block part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Sphere.png" alt="A single gray sphere part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Cylinder.png" alt="A single gray cylinder part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Wedge.png" alt="A single gray wedge part" /></td>
-<td><img src="../assets/modeling/parts/Basic-Part-Corner-Wedge.png" alt="A single gray corner wedge part" /></td>
-</tr>
-</tbody>
-</table>
+<Grid container spacing={1}>
+<Grid item xs={4} lg={2}>
+	<figure>
+	<img src="../assets/modeling/parts/Basic-Part-Block.png" alt="A single Block part." />
+	<figcaption><center>Block</center></figcaption>
+	</figure>
+</Grid>
+<Grid item xs={4} lg={2}>
+	<figure>
+	<img src="../assets/modeling/parts/Basic-Part-Sphere.png" alt="A single Sphere part." />
+	<figcaption><center>Sphere</center></figcaption>
+	</figure>
+</Grid>
+<Grid item xs={4} lg={2}>
+	<figure>
+	<img src="../assets/modeling/parts/Basic-Part-Cylinder.png" alt="A single Cylinder part." />
+	<figcaption><center>Cylinder</center></figcaption>
+	</figure>
+</Grid>
+<Grid item xs={4} lg={2}>
+	<figure>
+	<img src="../assets/modeling/parts/Basic-Part-Wedge.png" alt="A single Wedge part." />
+	<figcaption><center>Wedge</center></figcaption>
+	</figure>
+</Grid>
+<Grid item xs={4} lg={2}>
+	<figure>
+	<img src="../assets/modeling/parts/Basic-Part-Corner-Wedge.png" alt="A single Corner Wedge part." />
+	<figcaption><center>Corner Wedge</center></figcaption>
+	</figure>
+</Grid>
+</Grid>
 
 ## Part Properties
 
@@ -92,61 +104,81 @@ To insert a `Class.TrussPart` (not available on the insertion menu), use the [Ex
 
 ## Selecting Parts
 
-As you hover over parts in the viewport, they are outlined to indicate their potential selection. You can select an outlined part by clicking it, or you can select multiple parts by holding <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>⌘</kbd> as you hover over and click them.
+As you hover over parts in the viewport, they are outlined to indicate their potential selection. You can select an outlined part by clicking it, or you can select multiple parts by holding <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>⌘</kbd> as you hover over and click them. See [here](../studio/ui-overview.md#selecting-objects) for advanced methods of selecting parts in the 3D viewport.
 
-See [here](../studio/ui-overview.md#selecting-objects) for advanced methods of selecting parts in the 3D viewport.
+<img src="../assets/studio/general/Editor-Window-Object-Selection.jpg" width="800" alt="Multiple models selected in 3D viewport"/>
 
-## Manipulating Parts
+## Transforming Parts
 
 You can move, scale, and rotate selected parts either through modeling tools or by setting a new position, size, or orientation in the [Properties](#part-properties) window.
 
 When using the tools, you can move, scale, or rotate parts in either **world** orientation or **local** orientation by pressing <kbd>Ctrl</kbd><kbd>L</kbd> on Windows or <kbd>⌘</kbd><kbd>L</kbd> on Mac. When you enable local orientation,
-the arrow axis indicators change to a part's local orientation, and an **L** indicator displays. For more information, see [Object and World Space](../workspace/index.md).
+the arrow axis indicators change to a part's local orientation, and an **L** indicator displays.
 
 <Tabs>
   <TabItem label="World">
-    <img src="../assets/modeling/parts/Manipulate-World-Orientation.png" width="480" alt="An angled gray block part with draggers in World orientation mode." />
+    <img src="../assets/modeling/parts/Move-World-Orientation.png" width="720" height="405" alt="An angled block part with draggers in World orientation mode." />
   </TabItem>
   <TabItem label="Local">
-    <img src="../assets/modeling/parts/Manipulate-Local-Orientation.png" width="480" alt="An angled gray block part with draggers in Local orientation mode. The L to signify that the object is in Local orientation mode is highlighted." />
+    <img src="../assets/modeling/parts/Move-Local-Orientation.png" width="720" height="405" alt="An angled block part with draggers in Local orientation mode." />
   </TabItem>
 </Tabs>
 
-### Moving Parts
+### Moving
 
-Parts move on the **X** (red), **Y** (green), and **Z** (blue) axes. You can move a part to a new position using the **Move** tool.
+You can move a selected part to a new position using the **Move** tool (default shortcut <kbd>2</kbd>) or by **cursor&nbsp;dragging**. While moving a part, you can temporarily toggle [snapping](../studio/model-tab.md#transform-snapping) by holding <kbd>Shift</kbd>.
 
-1. In the **Tools** section, select the **Move** tool, then select the part you want to move.
+<Tabs>
+<TabItem label="Move Tool">
+<figure>
+<img src="../assets/studio/general/Model-Tab-Move.png" width="830" alt="Studio's Model tab with the Move tool highlighted." />
+</figure>
 
-   <img src="../assets/studio/general/Model-Tab-Move.png" width="830" alt="Studio's Model tab with the Move tool highlighted." />
+To move a part by an axis dragger along the **X**, **Y**, or **Z** axis, click/drag an arrow pointing along the desired axis of movement.
 
-2. Click and drag the arrow that is pointing in the direction you want to move the part.
+<img src="../assets/modeling/parts/Transform-Move.png" width="720" alt="A block part with the Move tool's visual aids." />
 
-   <img src="../assets/modeling/parts/Manipulate-Move.png" alt="An angled gray block part with the Move tool's visual aids." width="600" />
+After releasing the drag, the numerical **distance indicator** remains visible. If desired, fine‑tune the distance that was moved by clicking inside the indicator and entering any number.
 
-### Scaling Parts
+<img src="../assets/modeling/parts/Transform-Move-Indicator.png" width="720" alt="A moved part showing the distance moved in an indicator/input field" />
 
-Parts scale on the **X** (red), **Y** (green), and **Z** (blue) axes. You can make a part larger or smaller by using the **Scale** tool.
+If you drag a part by its [pivot](../studio/pivot-tools.md) point while the **Move** tool is selected, the pivot will "soft&nbsp;snap" to surfaces and edges of nearby parts.
 
-1. In the **Tools** section, select the **Scale** tool, then select the part you want to scale.
+<img src="../assets/modeling/parts/Transform-Move-Pivot-Snap.png" width="720" alt="A block part with an offset pivot soft-snapping to the surface of a nearby part." />
 
-   <img src="../assets/studio/general/Model-Tab-Scale.png" width="830" alt="Studio's Model tab with the Scale tool highlighted." />
+</TabItem>
+<TabItem label="Cursor Drag">
+<figure>
+To move a part by cursor dragging, click anywhere on the part to grab it. If [transform snapping](../studio/model-tab.md#transform-snapping) is **enabled**, a ruler will appear as you hover, showing what point you'll grab the part by. As you drag the part around, another ruler will appear on the surface/edge of nearby parts, indicating alignment of the grab point.
 
-2. Click and drag a ball to scale the part in that direction.
+<img src="../assets/modeling/parts/Transform-Move-Ruler-Snap.png" width="720" alt="A block part showing the grab point and snapping ruler on a neighboring part." />
 
-   <img src="../assets/modeling/parts/Manipulate-Scale.png" alt="An angled gray block part with the Scale tool's visual aids." width="600" />
+If [transform snapping](../studio/model-tab.md#transform-snapping) is **disabled**, the part will "soft&nbsp;snap" to surfaces and edges of nearby parts.
 
-### Rotating Parts
+<img src="../assets/modeling/parts/Transform-Move-Cursor-Drag-Snap.png" width="720" alt="A block part soft-snapping to the corner edges of a neighboring part." />
 
-Parts rotate on the **X** (red), **Y** (green), and **Z** (blue) axes. You can rotate a part to a new angle using the **Rotate** tool.
+While cursor dragging, <kbd>T</kbd> and <kbd>R</kbd> can be used to quickly rotate the part in 90&deg; increments around the point you picked it up by. <kbd>T</kbd> tilts the part 90&deg; towards the camera, while <kbd>R</kbd> rotates the part 90&deg; around the normal of the hovered surface.
 
-1. In the **Tools** section, select the **Rotate** tool, then select the part you want to rotate.
+<img src="../assets/modeling/parts/Transform-Move-Cursor-Drag-T-R.png" width="720" alt="Diagram showing how parts can be tilted and rotated with the T and R keys respectively." />
+</figure>
+</TabItem>
+</Tabs>
 
-   <img src="../assets/studio/general/Model-Tab-Rotate.png" width="830" alt="Studio's Model tab with the Rotate tool highlighted." />
+### Scaling
 
-2. Click and drag a circle to rotate the part in that direction.
+To scale (resize) a selected part along the **X**, **Y**, or **Z** axis, use the **Scale** tool (default shortcut <kbd>3</kbd>) and click/drag a handle. While dragging, you can temporarily toggle [snapping](../studio/model-tab.md#transform-snapping) by holding <kbd>Shift</kbd>.
 
-   <img src="../assets/modeling/parts/Manipulate-Rotate.png" alt="An angled gray block part with the Rotate tool's visual aids." width="600" />
+<img src="../assets/studio/general/Model-Tab-Scale.png" width="830" alt="Studio's Model tab with the Scale tool highlighted." />
+
+<img src="../assets/modeling/parts/Transform-Scale.png" width="720" alt="A block part with the Scale tool's visual aids." />
+
+### Rotating
+
+To rotate a selected part around the **X**, **Y**, or **Z** axis, use the **Rotate** tool (default shortcut <kbd>4</kbd>) and click/drag a rotation ring. While dragging, you can temporarily toggle [snapping](../studio/model-tab.md#transform-snapping) by holding <kbd>Shift</kbd>.
+
+<img src="../assets/studio/general/Model-Tab-Rotate.png" width="830" alt="Studio's Model tab with the Rotate tool highlighted." />
+
+<img src="../assets/modeling/parts/Transform-Rotate.png" width="720" alt="A block part with the Rotate tool's visual aids." />
 
 ## Coloring Parts
 
@@ -189,7 +221,7 @@ Similar to [color](#coloring-parts), you can customize a part's **material** to 
       <figcaption>SmoothPlastic</figcaption>
     </figure>
     <figure>
-      <img src="../assets/modeling/parts/Material-Neon.jpg" alt="An angled red block part with a glowing neon material."/>
+      <img src="../assets/modeling/parts/Material-Neon.png" alt="An angled red block part with a glowing neon material."/>
       <figcaption>Neon</figcaption>
     </figure>
   </GridContainer>

@@ -43,7 +43,7 @@ To create a trail on a part:
    3. Back in the **Properties** window, select the **Attachment1** property. Your cursor changes.
    4. In the **Explorer** window, select the second attachment you created.
 
-3. Using the [Move](../parts/index.md#moving-parts) tool, position both attachments within the part according to how wide you want the trail to be.
+3. Using the [Move](../parts/index.md#moving) tool, position both attachments within the part according to how wide you want the trail to be.
 4. To see the trail, move the part in any direction and the trail follows.
 
 <Alert severity="warning">
