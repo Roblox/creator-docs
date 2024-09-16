@@ -94,7 +94,7 @@ print(secondPart.Parent) -- nil
 ```
 
 <Alert severity = 'info'>
-The statement <code>table:Method()</code> is functionally identical to <code>table.Method(table)</code>, and when defining a method, <code>function table:Method()</code> is identical to <code>function table.Method(self)</code>. This behavior extends to Instance methods, since they are also derived from tables.
+The statement `table:Method()` is functionally identical to `table.Method(table)`, and when defining a method, `function table:Method()` is identical to `function table.Method(self)`. This behavior extends to `Class.Instance` methods, since they are also derived from tables.
 </Alert>
 
 ### Defining Methods
