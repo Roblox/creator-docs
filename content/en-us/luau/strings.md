@@ -163,6 +163,17 @@ print("55" % 10)  --> 5
 print("Hello" + 10)	 --> print("Hello" + 10):1: attempt to perform arithmetic (add) on string and number
 ```
 
+## Comparisons
+
+Strings can be compared using the `<`, `<=`, `>` and `>=` operators which compare using lexicographical order based on the ASCII codes of each character in a string.
+This will result in numbers in strings not being compared correctly, for example, `"100"` will be less than `"20"`, since the bytes `"0"` and `"1"` have lower ASCII codes than byte `"2"`.
+
+```lua
+print("Apple" < "apple") --> true
+print("Banana" < "apple") --> true (B is before a in ASCII)
+print("number100" < "number20") --> true
+```
+
 ## String Pattern Reference
 
 A **string pattern** is a combination of characters that you can use with
