@@ -86,7 +86,7 @@ properties:
           </tr>
           <tr>
             <td><code>Enum.UIFlexAlignment.SpaceAround|SpaceAround</code></td>
-            <td>Siblings maintain their defined width. Equal spacing is added <b>between</b> siblings, and half that spacing is added <b>around</b> siblings.</td>
+            <td>Siblings maintain their defined width. Equal spacing is added on both sides of each sibling.</td>
           </tr>
           <tr>
             <td><code>Enum.UIFlexAlignment.SpaceBetween|SpaceBetween</code></td>
@@ -235,7 +235,7 @@ properties:
           </tr>
           <tr>
             <td><code>Enum.UIFlexAlignment.SpaceAround|SpaceAround</code></td>
-            <td>Siblings maintain their defined height. Equal spacing is added <b>between</b> siblings, and half that spacing is added <b>around</b> siblings.</td>
+            <td>Siblings maintain their defined height. Equal spacing is added on both sides of each sibling.</td>
           </tr>
           <tr>
             <td><code>Enum.UIFlexAlignment.SpaceBetween|SpaceBetween</code></td>

@@ -53,7 +53,7 @@ Roblox offers various programs for creators on the platform to provide additiona
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
-    <h4>Creator Affiliate Program Pilot</h4>
+    <h4>Creator Affiliate Pilot Program</h4>
         <figure>
     <Chip
         color="success"

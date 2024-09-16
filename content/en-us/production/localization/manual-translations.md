@@ -75,7 +75,7 @@ See [Localizing Images and Sounds](./localizing-with-scripting.md#localizing-ima
 
 ### Automatic Text Capture
 
-The **Automatic Text Capture (ATC)** tool collects text strings that users encounter in your experience through GUI objects, such as `Class.TextLabel|TextLabels` or `Class.BillboardGui` and is usually the fastest way to collect translatable text from your experience. In many cases, the Automatic Text Capture tool is already enabled for [automatic translations](../localization/automatic-translations.md).
+The **Automatic Text Capture (ATC)** tool collects text strings that users encounter in your experience through GUI objects, such as `Class.TextLabel|TextLabels` or `Class.BillboardGui` and is usually the fastest way to collect translatable text from your experience. In many cases, the Automatic Text Capture tool is already enabled for [automatic translations](../localization/automatic-translations.md#enable-automatic-text-capture).
 
 ### Manually Adding Source Content
 

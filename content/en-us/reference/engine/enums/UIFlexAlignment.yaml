@@ -27,8 +27,8 @@ items:
     deprecation_message: ''
   - name: SpaceAround
     summary: |
-      Siblings maintain their defined width or height. Equal spacing is added
-      **between** siblings, and half that spacing is added **around** siblings.
+      Siblings maintain their defined width or height. Equal spacing is added on
+      both sides of each sibling.
     value: 2
     tags: []
     deprecation_message: ''

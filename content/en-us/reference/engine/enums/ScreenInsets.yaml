@@ -20,7 +20,7 @@ items:
       No insets are added to the fullscreen area. This mode may result in UI
       that is obscured or completely hidden by device notches and cutouts, so
       you should only use it for a `Class.ScreenGui` that contains
-      noninteractive content like background images.
+      non‑interactive content like background images.
     tags: []
     deprecation_message: ''
   - name: DeviceSafeInsets

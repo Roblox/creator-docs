@@ -9,6 +9,43 @@ Making experiences interactive often means manipulating object properties and at
 
 - Attributes are essentially custom properties that you define. For example, the [Plant](../resources/plant-reference-project.md) reference project uses attributes to set the purchase price for seeds and the maximum plant size that a pot can hold.
 
+## Replication Order
+
+Before you begin retrieving and manipulating objects, you must have an understanding of replication order.
+
+The Roblox engine doesn't guarantee the order in which objects are replicated from the server to the client, which makes the `Class.Instance:WaitForChild()` method essential for accessing objects in client scripts, particularly objects in the `Class.Workspace`. Still, some aspects of the process are predictable:
+
+1. The client loads the contents of `Class.ReplicatedFirst`, such as a loading screen, assets, and scripts.
+1. `Class.LocalScript|LocalScripts` (and `Class.Script|Scripts` with a `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client|Client`) in `ReplicatedFirst` run. These scripts can safely get objects from `ReplicatedFirst` without using `WaitForChild()`:
+
+   ```lua
+   -- Safe
+   local ReplicatedFirst = game:GetService("ReplicatedFirst")
+   local LoadingScreen = require(ReplicatedFirst.LoadingScreen)
+   ```
+
+   These scripts **can't** safely get objects from other [services](services.md), because they might not have loaded yet:
+
+   ```lua
+   -- Not safe
+   local ReplicatedStorage = game:GetService("ReplicatedStorage")
+   local PickupManager = require(ReplicatedStorage.PickupManager)
+   ```
+
+   You **can** use `WaitForChild()` in these scripts to get objects from other services, but doing so largely negates the benefits of using `ReplicatedFirst`.
+
+1. The client continues loading the rest of the experience.
+
+1. When it finishes, the `Class.DataModel.Loaded|game.Loaded` event fires and `Class.DataModel:IsLoaded()|game:IsLoaded()` returns true.
+
+1. `LocalScripts` in `StarterPlayerScripts` run, as well as client `Scripts` in `Class.ReplicatedStorage`. These scripts can safely get objects from `StarterPlayerScripts` and `ReplicatedStorage` without using `WaitForChild()`.
+
+1. The player's `Class.Player.Character|Character` model spawns in the experience.
+
+1. `LocalScripts` in `StarterCharacterScripts` run.
+
+If your experience uses [instance streaming](../workspace/streaming.md) (`Class.Workspace.StreamingEnabled`), some or most objects might not have loaded into the workspace, so using `WaitForChild()` to access workspace objects becomes an even more important safety measure. In particular, see [Streaming In](../workspace/streaming.md#streaming-in) and [Per-Model Streaming Controls](../workspace/streaming.md#per-model-streaming-controls) for additional information on loading and tuning streaming behavior.
+
 ## Getting Objects
 
 The first step to modifying object properties and attributes is to get a reference to the object. The simplest solution is to make the script a child of the object in the Explorer and use `script.Parent` to reference the object.

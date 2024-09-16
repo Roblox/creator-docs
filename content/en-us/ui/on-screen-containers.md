@@ -50,7 +50,7 @@ Modern phones take advantage of the entire screen but typically include notches,
 
 <img src="../assets/engine-api/enums/ScreenInsets/Top-Bar-Cutout.png" width="840" alt="Mobile device showing Roblox top bar buttons and device cutout." />
 
-To ensure players can access all UI easily and without obstruction, Roblox provides the `Class.ScreenGui.ScreenInsets|ScreenInsets` property which controls the **safe area** insets for the contents of a `Class.ScreenGui`.
+To ensure players can see and access all UI easily and without obstruction, Roblox provides the `Class.ScreenGui.ScreenInsets|ScreenInsets` property which controls the **safe area** insets for the contents of a `Class.ScreenGui`.
 
 <Tabs>
 <TabItem label="CoreUISafeInsets">
@@ -68,11 +68,12 @@ A setting of `Enum.ScreenInsets|TopbarSafeInsets` keeps all descendant `Class.Gu
 
 <img src="../assets/engine-api/enums/ScreenInsets/TopbarSafeInsets.png" width="840" height="403" alt="Mobile device showing the top bar safe area within the Roblox controls." />
 </TabItem>
-</Tabs>
+<TabItem label="None">
+No insets are added to the fullscreen area. This mode may result in UI that is obscured or completely hidden by device notches and cutouts, so you should only use it for a `Class.ScreenGui` that contains non‑interactive content like background images.
 
-<Alert severity="warning">
-If you set this property to `Enum.ScreenInsets|None`, UI objects may be obscured behind core UI objects or device cutouts like the camera notch. As a result, you should only use `Enum.ScreenInsets|None` for a `Class.ScreenGui` that contains non‑interactive content like background images.
-</Alert>
+<img src="../assets/engine-api/enums/ScreenInsets/None.png" width="840" height="403" alt="Mobile device showing the entire screen region with no account for safe areas." />
+</TabItem>
+</Tabs>
 
 ### Display Order
 
@@ -115,13 +116,13 @@ If you need to control a player's UI container during playtime, for example to s
 local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer
-local PlayerGui = player.PlayerGui
+local playerGui = player.PlayerGui
 
-local TitleScreen = PlayerGui:WaitForChild("TitleScreen")
-local SettingsMenu = PlayerGui:WaitForChild("SettingsMenu")
+local titleScreen = playerGui:WaitForChild("TitleScreen")
+local settingsMenu = playerGui:WaitForChild("SettingsMenu")
 
-TitleScreen.Enabled = false  -- Hide title screen
-SettingsMenu.Enabled = true  -- Show settings menu
+titleScreen.Enabled = false  -- Hide title screen
+settingsMenu.Enabled = true  -- Show settings menu
 ```
 
 ## Disabling Default UI
