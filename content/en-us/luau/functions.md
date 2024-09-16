@@ -207,7 +207,7 @@ print(string.char(115, 101, 99, 114, 101, 116)) -- secret
 To define a variadic function, you use the `...` token as the last or only parameter (not to be confused with `..`, the concatenation [operator](./operators.md)). You can put the `...` values in a table for ease of use.
 
 <Alert severity = 'warning'>
-The variadic token `...` can only be used within functions defined as variadic, functions or callbacks defined within a variadic function **cannot** use the same `...`, even if they are varadic themselves.
+The variadic token `...` can only be used within functions defined as variadic; functions or callbacks defined within a variadic function **cannot** use the same `...`, even if they are variadic themselves.
 
 `...` does not behave like a regular variable, and can only be passed into other functions, returned, or put into a table.
 </Alert>
