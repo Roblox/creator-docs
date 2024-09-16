@@ -51,7 +51,7 @@ To enable the `Enum.Technology.Future` lighting system:
 1. In the **Explorer** window, select **Lighting**.
 1. In the **Properties** window, click the **Technology** dropdown, then select **Future**.
 
-   <img width="40%" img src="../../assets/tutorials/enhancing-outdoor-environments/Technology-Property.jpg" />
+   <img width="320" img src="../../assets/studio/properties/Lighting-Technology-Future.png" alt="A close up view of the Properties window with the Future technology property highlighted." />
 
 ### Elevate Metal Reflections
 
