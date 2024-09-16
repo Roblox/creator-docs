@@ -36,7 +36,7 @@ Learn how to create assets with structured tutorials that walks through each cre
 <h2 style={{marginBottom: 12}}>Rigid Accessories</h2>
 
 <Typography variant="body2" color="textSecondary" component="p">
-Using a provided reference asset, this tutorial covers each process in the workflow to successfully convert a mesh object in Blender to a publishable accessory item in Studio.
+This tutorial covers the basic steps to successfully create and sell an accessory. Model and texture an object in Blender, upload the publishable accessory item to Studio, and sell the item on the Marketplace.
 </Typography>
 
 <>
@@ -50,7 +50,7 @@ Using a provided reference asset, this tutorial covers each process in the workf
 
 <div class="container"
 style={{position: "relative"}}>
-<img src="../assets/art/accessories/creating-rigid/Studio-Mask-Preview.png" width = "90%"/>
+<img src="../assets/art/accessories/creating-rigid/Chest-Studio.png" width = "90%"/>
 </div>
 
 </Grid>
@@ -61,7 +61,7 @@ style={{position: "relative"}}>
 <Stepper activeStep={6} orientation="vertical">
 
 <Step style={{marginTop: -36}}>
-<a href="../art/accessories/creating-rigid/index.md"><StepLabel optional="Set up your custom asset in Blender.">
+<a href="../art/accessories/creating-rigid/index.md"><StepLabel optional="Create your custom asset in Blender.">
 
 <h5 style={{marginTop: 36}}>Model</h5>
 </StepLabel></a>
@@ -71,15 +71,9 @@ style={{position: "relative"}}>
 <Step style={{marginTop: -36}}>
 <a href="../art/accessories/creating-rigid/texturing.md">
 <StepLabel
- optional="Connect your asset with PBR textures.">
+ optional="Add a surface appearance to your 3D object.">
 
 <h5 style={{marginTop: 36}}>Texture</h5>
-</StepLabel></a>
-</Step>
-<Step style={{marginTop: -36}}>
-<a href="../art/accessories/creating-rigid/clean-up.md">
-<StepLabel optional="Clean up and export your model." >
-<h5 style={{marginTop: 36}}>Export from Blender</h5>
 </StepLabel></a>
 </Step>
 
@@ -102,8 +96,8 @@ style={{position: "relative"}}>
 </Step>
 
 <Step style={{marginTop: -36}}>
-<a href="../art/accessories/creating-rigid/validation.md">
-<StepLabel optional="Upload and publish your accessory to the Marketplace">
+<a href="../art/accessories/creating-rigid/publishing.md">
+<StepLabel optional="Upload and publish your accessory to the Marketplace.">
 
 <h5 style={{marginTop: 36}}>Publish</h5>
 </StepLabel></a>

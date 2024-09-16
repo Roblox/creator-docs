@@ -1,78 +1,81 @@
 ---
-title: Importing PBR Textures
+title: Texture Painting
 description: Covers the process of associating PBR textures to rigid accessories in Blender.
 prev: /art/accessories/creating-rigid/modeling-setup
-next: /art/accessories/creating-rigid/clean-up
+next: /art/accessories/creating-rigid/exporting
 ---
 
-**Texturing** is the process of applying a surface appearance to a 3D object. Blender provides various tools and features to create and connect your own texture maps to your asset, allowing you to preview your model's final appearance and link the texture images to your exported file.
+<img src="../../../assets/art/accessories/creating-rigid/Texturing-Complete.png" alt="A screenshot of blender showing the final 3d shape and color of a treasure chest in the viewport"/>
 
-The mask example asset uses [Physically-Based Rendering (PBR) textures](../../../art/modeling/surface-appearance.md), which are advanced textures that create realistic surfaces under different lighting environments. PBR textures use multiple image files, or **maps**, to represent the various surface properties of your 3D object.
+**Texturing** is the process of applying a surface appearance to a 3D object. **Texture painting** is a technique that allows you to digitally brush your surface colors onto your 3D object, or onto the 2D image that represents the surface of your object.
 
-<GridContainer numColumns="4">
-<figure>
-   <img src="../../../assets/art/accessories/creating-rigid/TXT_Rigid_Mask_ALB.png" />
-<figcaption>
-Color (Albedo) Map
-</figcaption>
-</figure>
-<figure>
-   <img src="../../../assets/art/accessories/creating-rigid/TXT_Rigid_Mask_NOR.png" />
-<figcaption>
-Normal Map
-</figcaption>
-</figure>
-<figure>
-   <img src="../../../assets/art/accessories/creating-rigid/TXT_Rigid_Mask_RGH.png" />
-<figcaption>
-Roughness Map
-</figcaption>
-</figure>
-<figure>
-   <img src="../../../assets/art/accessories/creating-rigid/TXT_Rigid_Mask_MET.png" />
-<figcaption>
-Metalness Map
-</figcaption>
-</figure>
-</GridContainer>
-
-This tutorial doesn't cover the PBR texture creation process, which typically involves using third-party software such as ZBrush or Substance 3D Painter. Instead, this section goes over the process of bringing premade PBR image files into Blender and properly associating them to your asset on export.
+This tutorial covers basic texture painting in Blender. Common workflows in the industry utilize additional third-party tools to create textures, especially high-definition PBR textures that mimic realistic lighting and texture properties.
 
 <Alert severity = 'warning'>
-While PBR textures are not required for accessories, adding PBR textures can add extra visual flair and realism to elevate your creations. For an example on using Blender to create a basic, non-PBR texture, see [Texturing Basic Clothing](../../../art/accessories/creating/unwrapping.md).
+While PBR textures are not required for accessories and is not covered in this tutorial, adding PBR textures can add extra visual flair and realism to elevate your creations. This typically requires additional software. <br /> <br /> For more information, see [PBR textures](../../modeling/surface-appearance.md).
 </Alert>
 
-To configure and link your PBR textures to your model:
+## UV Projecting
 
-1. Download [Rigid_Mask_Textures.zip](../../../assets/art/accessories/creating-rigid/Rigid_Mask_Textures.zip) and unzip the textures images locally in the same directory as your Blender project.
-2. In Blender, navigate to the **Shading** tab. Ensure that your object is selected.
+<video controls src="../../../assets/art/accessories/creating-rigid/UV-Projecting.mp4" width="100%"></video>
 
-   1. If you don't see the **PrincipledBSDF node**, select the **+New** button to create a new material.
+Use Blender's automatic UV Project feature to "unwrap" your 3D object onto a 2D plane. This allows you to associate a 2D image to the 3D surface of your object.
 
-      <img src="../../../assets/art/accessories/creating-rigid/Blender-New-Material.png" />
+1. In Edit mode, press <kbd>A</kbd> to select your object.
+2. In the top UV menu, select **Smart UV Project**.
+3. Set Island Margin to `.02`.
 
-      <img src="../../../assets/art/accessories/creating-rigid/Blender-Empty-Node.png" />
+## Adding New Material
 
-3. From your file browser, drag and drop your texture `.png` files into the node section. A new image node appears with each file.
-4. In the newly created node, click and drag the following image nodes to their appropriate connection on the Principled BSDF main node:
+<video controls src="../../../assets/art/accessories/creating-rigid/Adding-New-Material.mp4" width="100%"></video>
 
-   1. **\_ALB texture**: Connect the **Color** node to **Principled BSDF** > **Base Color**.
-      <img src="../../../assets/art/accessories/creating-rigid/Albedo-Node.png" />
-   2. **\_MTL texture**: Connect the **Color** node to **Principled BSDF** > **Metallic**.
-      <img src="../../../assets/art/accessories/creating-rigid/Metal-Node.png"/>
-   3. **\_RGH texture**: Connect the **Color** node to **Principled BSDF** > **Roughness**.
-      <img src="../../../assets/art/accessories/creating-rigid/Rough-Node.png"/>
-   4. **\_NOR texture**:
-      1. Click **Add** > **Vector** > **Normal Map** to generate a NormalMap node. This node is required to convert Normal PBR image maps.
-      2. Connect the \_NOR node's **Color** to the NormalMap node's **Color** connection.
-      3. Connect the NormalMap's **Normal** to the **Principled BSDF** > **Normal**.
-         <img src="../../../assets/art/accessories/creating-rigid/Normal-Node.png" />
+Add a new material for Blender to associate this new texture, and assign it to a new blank 2D image.
 
-5. Test your textures by changing the viewport viewing mode to **Viewport Shading > Material Preview Mode**.
-   <video controls src="../../../assets/art/accessories/creating-rigid/Adding-PBR.mp4" width="100%"></video>
+1. In the bottom right panel, select the red **Materials** tab.
+2. Select the **+ New** button. Additional material options display below.
+3. In **Base Color**, select the dot. A dropdown appears.
+   1. Select **Image Texture**.
+4. Under Base Color, select the **+ New** button.
+   1. Name the texture image file. Using an affix like "\_TXT" can help organize your files later.
+   2. Select the color and pick a color. This tutorial recommends using a metallic color for your metal borders to save time.
+
+## Texture Painting
+
+Texture painting allows you to paint directly on the 3D object or the 2D mapping of the surface.
+
+Since Blender automatically mapped the 2D atlas of the texture, it's not easy to tell what parts of the 2D image maps to the 3D object. First mark the sections of the 3D object you want to paint solid before completing your texture by painting the 2D map.
+
+<Alert severity = 'info'>
+There are many ways to texture within Blender. To keep this process simple, the tutorial used Blender's [Smart UV Project](https://docs.blender.org/manual/en/2.79/editors/uv_image/uv/editing/unwrapping/mapping_types.html), but there are many ways to manually create your 2D texture islands and organize your mesh and texture.
+</Alert>
+
+### Marking 3D Object
+
+<video controls src="../../../assets/art/accessories/creating-rigid/Marking-3d-Object.mp4" width="100%"></video>
+
+Switch to Texture Paint mode and use the paintbrush to track the "wood" parts of the treasure chest.
+
+1. In Edit mode, select your object.
+2. Switch to **Texture Paint** mode. A side-by-side panel displays with your 2D atlas on the left and the 3D object on the right.
+3. Expand the Tool submenu in the top-right of either window.
+4. Select your brush settings and mark the wooden areas of your chest.
+   1. Use <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>Z</kbd> to undo any accidental brushes on the metal border.
+   2. Hold <kbd>F</kbd> and drag the mouse to adjust brush size.
+
+### Painting 2D Map
+
+<video controls src="../../../assets/art/accessories/creating-rigid/Painting-2d-Map.mp4" width="100%"></video>
+
+With all of the wooden areas of your chest marked, you can now quickly texture your 2D atlas. First adjust your brush settings to have a hard edge and then begin painting the 2D image.
+
+1. On the left window, access to **Tool** menu in the top right of the window.
+   1. Set the **Falloff** shape to the flattest icon to ensure the edges are sharp.
+   2. Set the color or any other brush settings here.
+2. In the left window, begin coloring in each island of your texture. You can quickly preview the changes on your 3D object on the right side.
+   1. Use <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>Z</kbd> to undo any accidental brushes on the metal border.
+   2. Hold <kbd>F</kbd> and drag the mouse to adjust brush size.
+3. After completion, navigate to **Image** > **Save** to save your image file.
 
 <Alert severity = 'success'>
-You've completed the texturing section of this tutorial. If desired, download a [reference sample](../../../assets/art/accessories/creating-rigid/Rigid_Mask_Texturing-Completed.blend) of this stage of the project for comparison.
-
-If you are creating your own PBR textures, check out [Material References](../../../art/modeling/material-reference.md) for various PBR material examples you can apply to your next accessory.
+You've completed the texturing section of this tutorial. If desired, download a [reference version](../../../assets/art/accessories/creating-rigid/Chest-Texturing-Complete.blend) of this stage of the project for comparison.
 </Alert>

@@ -29,7 +29,7 @@ Roblox provides three sets of analytic dashboards you can use to track different
       - **Shop** — Where do users abandon purchases?
 
 <p />
-3. **Custom events (limited beta)**  let you track metrics specific to your experience, such as:
+3. **Custom events**  let you track metrics specific to your experience, such as:
 
       - **Adoption** — How many users click on a specific UI component?
       - **User Behavior** — What is the most frequently used ability on each map?
@@ -70,12 +70,19 @@ For example, instead of tracking `WarriorXP`, `MageXP`, `PaladinXP` as separate 
   </tr></thead>
 <tbody>
   <tr>
-    <td rowspan="3">Economy, Funnel, and Custom events</td>
-    <td>`Class.AnalyticsService` requests per minute</td>
+    <td rowspan="1">Global Rate Limit</td>
+    <td>Total `Class.AnalyticsService` requests per minute</td>
     <td>120 + (20 * CCU)</td>
     <td></td>
   </tr>
   <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  </tr>
+  <tr>
+    <td rowspan="2">Economy, Funnel, and Custom events</td>
     <td>Number of [custom fields](./custom-fields.md)</td>
     <td>3</td>
     <td>Class, Level, Weapon</td>

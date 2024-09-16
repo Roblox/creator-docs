@@ -34,7 +34,7 @@ To import your asset:
 If textures didn't load correctly, add them manually. You may need to save and publish your experience in order to access the [Asset Manager](../../projects/assets/manager.md).
 
 1. Open the Asset Manager. You may need to save and publish your experience before accessing your assets.
-2. In the Asset Manager, and select the **Bulk Import** button.
+2. In the Asset Manager, select the **Bulk Import** button.
 
    <img src="../../assets/studio/asset-manager/Import-Button.png" width = "60%"/>
 
@@ -88,7 +88,7 @@ To fit and generate your accessory:
 
 5. Using both the AFT preview window and the workspace, adjust the position, scale, and rotation of the accessory.
 
-   1. Use the **AFT preview window** and your mannequin as an accurate preview of how your asset fits on the character. The clothing mannequin in the workspace does not accurately portray how rigid accessories attach.
+   1. Use the AFT preview window and your mannequin as an accurate preview of how your asset fits on the character. The clothing mannequin in the workspace does not accurately portray how rigid accessories attach.
    2. In the workspace, use the **Move**, **Scale**, and **Rotate** tools in the workspace to adjust the positioning of your rigid accessory.
    3. If you accidentally select something else, click back into the AFT panel to reselect the accessory and resume your adjustments using the transformation tools.
 

@@ -3,10 +3,6 @@ title: Custom Events
 description: Custom Events let you track and aggregate unique metrics to your experience.
 ---
 
-<Alert severity = 'success'>
-Custom events are currently being tested in limited beta.
-</Alert>
-
 **Custom events** let you track metrics specific to your experience that other events do not fully capture. This includes:
 
 - **Adoption** — How many users click on a specific UI component?

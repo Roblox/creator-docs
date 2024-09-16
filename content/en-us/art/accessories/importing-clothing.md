@@ -31,7 +31,7 @@ To import your asset:
  If textures didn't load correctly, add them manually. You may need to save and publish your experience in order to access the [Asset Manager](../../projects/assets/manager.md).
 
 1.  Open the Asset Manager. You may need to save and publish your experience before accessing your assets.
-2.  In the Asset Manager, and select the **Bulk Import** button.
+2.  In the Asset Manager, select the **Bulk Import** button.
 
     <img src="../../assets/studio/asset-manager/Import-Button.png" width = "60%"/>
 

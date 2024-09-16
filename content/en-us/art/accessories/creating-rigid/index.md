@@ -7,33 +7,30 @@ next: /art/accessories/creating-rigid/modeling-setup
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/Eed29gV0hLA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br /><br />
 
-Rigid accessories are 3D objects that users can equip to their avatar characters in an experience or through Roblox's [Marketplace](https://www.roblox.com/catalog) and [Avatar Editor](https://www.roblox.com/my/avatar). Unlike [clothing accessories](../../../art/accessories/creating/index.md) or [bodies](../../../art/characters/creating/index.md) that require caging, rigging, and skinning in a third-party modeling application, rigid accessories attach directly to an avatar character and do not bend or deform to the character's body. Since they do not require additional configuration in a third-party application beyond modeling and texturing, rigid accessories are usually the most basic type of 3D avatar item to create.
+Rigid accessories are 3D objects that users can equip to their avatar characters in an experience or through Roblox's [Marketplace](https://www.roblox.com/catalog) and [Avatar Editor](https://www.roblox.com/my/avatar).
 
-Using a provided 3D reference file, this tutorial covers each step in the workflow to properly configure and export a 3D model from Blender and generate your own rigid accessory in Studio. After you create the accessory, you can upload it to the Marketplace, save it to your toolbox, and use it in your own experiences.
+Unlike clothing or bodies, rigid accessories do not require additional configuration in a third-party application beyond modeling and texturing, rigid accessories are typically the most basic type of 3D avatar item to create.
+
+This tutorial covers the basics of each step in the workflow to create your own simple 3D model in Blender and import it into Studio. From there, you can upload the accessory to the Marketplace to sell, save the asset to your toolbox, or use the asset in your experiences.
+
+<Alert severity = 'warning'>
+Creating, building, and sharing on Roblox is free. However, the last step of listing your item to sell requires a Premium Roblox account, an upload fee, and a publishing advance. For more information, see [Marketplace Policy](../../../marketplace/marketplace-policy.md#creator-requirements).
+</Alert>
 
 <GridContainer numColumns="2">
 <figure>
-    <img src="../../../assets/art/accessories/creating-rigid/Blender-Mask-Preview.png" />
+    <img src="../../../assets/art/accessories/creating-rigid/Chest-Blender.png" />
 <figcaption>
-  Mask asset as an untextured mesh object in Blender
+  3D mesh object created in Blender
 </figcaption>
 </figure>
 <figure>
-    <img src="../../../assets/art/accessories/creating-rigid/Studio-Mask-Preview.png" />
+    <img src="../../../assets/art/accessories/creating-rigid/Chest-Studio.png" />
 <figcaption>
-  Mask asset equipped as an `Class.Accessory` in Studio
+  Mesh object equipped as an `Class.Accessory` in Studio
 </figcaption>
 </figure>
 </GridContainer>
-
-Using a provided reference 3D asset, this tutorial covers the following rigid accessory workflow:
-
-1. Modeling overview and requirements in Blender.
-2. Texturing setup using PBR textures in Blender.
-3. Exporting your asset as a `.fbx` from Blender.
-4. Importing the asset into Studio.
-5. Fitting and converting the imported model to an `Class.Accessory` object.
-6. Publishing and validating the accessory for Marketplace upload.
 
 <Alert severity = 'info'>
 While this content covers the Blender workflow with a provided reference example, you can apply the same concepts to other third-party modeling applications and custom assets.

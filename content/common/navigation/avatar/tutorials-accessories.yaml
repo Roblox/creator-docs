@@ -5,24 +5,19 @@ navigation:
   - title: Overview
     path: /art/accessories/creating-rigid/
   - heading: Modeling
-  - title: Blender Setup
+  - title: Box Modeling
     path: /art/accessories/creating-rigid/modeling-setup
   - heading: Texturing
-  - title: Importing PBR Textures
+  - title: Texture Painting
     path: /art/accessories/creating-rigid/texturing
   - heading: Exporting
-  - title: Project Cleanup
-    path: /art/accessories/creating-rigid/clean-up
-  - title: Exporting FBX from Blender
+  - title: Exporting from Blender
     path: /art/accessories/creating-rigid/exporting
-  - heading: Importing
+  - heading: Importing into Studio
   - title: Using Studio's 3D Importer
     path: /art/accessories/creating-rigid/importing
-  - heading: Converting Accessory
-  - title: Using the Accessory Fitting Tool
+  - title: Converting to Accessory
     path: /art/accessories/creating-rigid/converting
   - heading: Publishing to Marketplace
-  - title: Uploading your Asset
-    path: /art/accessories/creating-rigid/validation
-  - title: Selling your Accessory
+  - title: Upload and Publishing
     path: /art/accessories/creating-rigid/publishing
