@@ -133,6 +133,7 @@ table.sort(sortedPlayers, function(a, b)
 	-- Use an anonymous callback to sort players by name
 	return a.Name < b.Name
 end)
+```
 
 In the Roblox API, callbacks refer to a write-only function member, callbacks yield until they return. Widely used callbacks include:
 
