@@ -127,56 +127,84 @@ local path = PathfindingService:CreatePath()
 
 local player = Players.LocalPlayer
 local character = player.Character
+local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
 local humanoid = character:WaitForChild("Humanoid")
 
 local TEST_DESTINATION = Vector3.new(100, 0, 100)
+local ZERO_VECTOR3 = Vector3.new(0, 0, 0)
 
 local waypoints
 local nextWaypointIndex
+local reached
+
 local reachedConnection
 local blockedConnection
 
+local currentWaypointPlaneNormal = ZERO_VECTOR3
+local currentWaypointPlaneDistance = 0
+
 local function followPath(destination)
-	-- Compute the path
-	local success, errorMessage = pcall(function()
-		path:ComputeAsync(character.PrimaryPart.Position, destination)
-	end)
+    -- Compute the path
+    local success, errorMessage = pcall(function()
+        path:ComputeAsync(character.PrimaryPart.Position, destination)
+    end)
 
-	if success and path.Status == Enum.PathStatus.Success then
-		-- Get the path waypoints
-		waypoints = path:GetWaypoints()
+    if success and path.Status == Enum.PathStatus.Success then
+        -- Get the path waypoints
+        waypoints = path:GetWaypoints()
 
-		-- Detect if path becomes blocked
-		blockedConnection = path.Blocked:Connect(function(blockedWaypointIndex)
-			-- Check if the obstacle is further down the path
-			if blockedWaypointIndex >= nextWaypointIndex then
-				-- Stop detecting path blockage until path is re-computed
-				blockedConnection:Disconnect()
-				-- Call function to re-compute new path
-				followPath(destination)
-			end
-		end)
+        -- Detect if path becomes blocked
+        blockedConnection = path.Blocked:Connect(function(blockedWaypointIndex)
+            -- Check if the obstacle is further down the path
+            if blockedWaypointIndex >= nextWaypointIndex then
+                -- Stop detecting path blockage until path is re-computed
+                blockedConnection:Disconnect()
+                -- Call function to re-compute new path
+                followPath(destination)
+            end
+        end)
 
-		-- Detect when movement to next waypoint is complete
-		if not reachedConnection then
-			reachedConnection = humanoid.MoveToFinished:Connect(function(reached)
-				if reached and nextWaypointIndex < #waypoints then
-					-- Increase waypoint index and move to next waypoint
-					nextWaypointIndex += 1
-					humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-				else
-					reachedConnection:Disconnect()
-					blockedConnection:Disconnect()
-				end
-			end)
-		end
+        -- Detect when movement to next waypoint is complete
+        if not reachedConnection then
+            reachedConnection = RunService.RenderStepped:Connect(function()
+                local currentHumanoidPosition = humanoidRootPart.Position
+                local currentHumanoidVelocity = humanoidRootPart.Velocity
 
-		-- Initially move to second waypoint (first waypoint is path start; skip it)
-		nextWaypointIndex = 2
-		humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-	else
-		warn("Path not computed!", errorMessage)
-	end
+                -- Check we do have a plane, if not, we consider the waypoint reached
+                if currentWaypointPlaneNormal ~= ZERO_VECTOR3 then
+                    -- Compute distance of Humanoid from destination plane
+                    local dist = currentWaypointPlaneNormal:Dot(currentHumanoidPosition) - currentWaypointPlaneDistance
+                    -- Compute the component of the Humanoid velocity that is towards the plane
+                    local velocity = -currentWaypointPlaneNormal:Dot(currentHumanoidVelocity)
+                    -- Compute the threshold from the destination plane based on Humanoid velocity
+                    local threshold = math.max(1.0, 0.0625 * velocity)
+                    -- If we are less then threshold in front of the plane (between 0 and threshold) or if we are behing the plane (less then 0), we consider we reached it
+                    reached = dist < threshold
+                else
+                    reached = true
+                    currentWaypointPlaneNormal = ZERO_VECTOR3
+                    currentWaypointPlaneDistance = 0
+                end
+
+                if reached and nextWaypointIndex < #waypoints then
+                    currentWaypointPlaneNormal = (waypoints[nextWaypointIndex].Position - waypoints[nextWaypointIndex + 1].Position).Unit
+                    currentWaypointPlaneDistance = currentWaypointPlaneNormal:Dot(waypoints[nextWaypointIndex + 1].Position)
+                    -- Increase waypoint index and move to next waypoint
+                    nextWaypointIndex += 1
+                    humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
+                else
+                    reachedConnection:Disconnect()
+                    blockedConnection:Disconnect()
+                end
+            end)
+        end
+
+        -- Initially move to second waypoint (first waypoint is path start; skip it)
+        nextWaypointIndex = 2
+        humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
+    else
+        warn("Path not computed!", errorMessage)
+    end
 end
 
 followPath(TEST_DESTINATION)
@@ -268,79 +296,84 @@ local path = PathfindingService:CreatePath()
 
 local player = Players.LocalPlayer
 local character = player.Character
+local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
 local humanoid = character:WaitForChild("Humanoid")
 
 local TEST_DESTINATION = Vector3.new(100, 0, 100)
+local ZERO_VECTOR3 = Vector3.new(0, 0, 0)
 
 local waypoints
 local nextWaypointIndex
+local reached
+
 local reachedConnection
 local blockedConnection
 
+local currentWaypointPlaneNormal = ZERO_VECTOR3
+local currentWaypointPlaneDistance = 0
+
 local function followPath(destination)
-	-- Compute the path
-	local success, errorMessage = pcall(function()
-		path:ComputeAsync(character.PrimaryPart.Position, destination)
-	end)
+    -- Compute the path
+    local success, errorMessage = pcall(function()
+        path:ComputeAsync(character.PrimaryPart.Position, destination)
+    end)
 
-	if success and path.Status == Enum.PathStatus.Success then
-		-- Get the path waypoints
-		waypoints = path:GetWaypoints()
+    if success and path.Status == Enum.PathStatus.Success then
+        -- Get the path waypoints
+        waypoints = path:GetWaypoints()
 
-		-- Detect if path becomes blocked
-		blockedConnection = path.Blocked:Connect(function(blockedWaypointIndex)
-			-- Check if the obstacle is further down the path
-			if blockedWaypointIndex >= nextWaypointIndex then
-				-- Stop detecting path blockage until path is re-computed
-				blockedConnection:Disconnect()
-				-- Call function to re-compute new path
-				followPath(destination)
-			end
-		end)
+        -- Detect if path becomes blocked
+        blockedConnection = path.Blocked:Connect(function(blockedWaypointIndex)
+            -- Check if the obstacle is further down the path
+            if blockedWaypointIndex >= nextWaypointIndex then
+                -- Stop detecting path blockage until path is re-computed
+                blockedConnection:Disconnect()
+                -- Call function to re-compute new path
+                followPath(destination)
+            end
+        end)
 
-		-- Detect when movement to next waypoint is complete
-		if not reachedConnection then
-			reachedConnection = RunService.RenderStepped:Connect(function()
-				if reached and nextWaypointIndex < #waypoints then
-			local reached = false
-			local currentHumanoidPosition = humanoidRootPart.Position
-			local currentHumanoidVelocity = humanoidRootPart.Velocity
+        -- Detect when movement to next waypoint is complete
+        if not reachedConnection then
+            reachedConnection = RunService.RenderStepped:Connect(function()
+                local currentHumanoidPosition = humanoidRootPart.Position
+                local currentHumanoidVelocity = humanoidRootPart.Velocity
 
-			-- Check we do have a plane, if not, we consider the waypoint reached
-			if currentWaypointPlaneNormal ~= ZERO_VECTOR3 then
-				-- Compute distance of Humanoid from destination plane
-				local dist = currentWaypointPlaneNormal:Dot(currentHumanoidPosition) - currentWaypointPlaneDistance
-				-- Compute the component of the Humanoid velocity that is towards the plane
-				local velocity = -currentWaypointPlaneNormal:Dot(currentHumanoidVelocity)
-				-- Compute the threshold from the destination plane based on Humanoid velocity
-				local threshold = math.max(1.0, 0.0625 * velocity)
-				-- If we are less then threshold in front of the plane (between 0 and threshold) or if we are behing the plane (less then 0), we consider we reached it
-				reached = dist < threshold
-			else
-				reached = true
-				currentWaypointPlaneNormal	= ZERO_VECTOR3
-				currentWaypointPlaneDistance = 0
-			end
+                -- Check we do have a plane, if not, we consider the waypoint reached
+                if currentWaypointPlaneNormal ~= ZERO_VECTOR3 then
+                    -- Compute distance of Humanoid from destination plane
+                    local dist = currentWaypointPlaneNormal:Dot(currentHumanoidPosition) - currentWaypointPlaneDistance
+                    -- Compute the component of the Humanoid velocity that is towards the plane
+                    local velocity = -currentWaypointPlaneNormal:Dot(currentHumanoidVelocity)
+                    -- Compute the threshold from the destination plane based on Humanoid velocity
+                    local threshold = math.max(1.0, 0.0625 * velocity)
+                    -- If we are less then threshold in front of the plane (between 0 and threshold) or if we are behing the plane (less then 0), we consider we reached it
+                    reached = dist < threshold
+                else
+                    reached = true
+                    currentWaypointPlaneNormal = ZERO_VECTOR3
+                    currentWaypointPlaneDistance = 0
+                end
 
-			if reached and nextWaypointIndex < #waypoints then
-				currentWaypointPlaneNormal = (waypoints[nextWaypointIndex].Position - waypoints[nextWaypointIndex + 1].Position).Unit
-				currentWaypointPlaneDistance = currentWaypointPlaneNormal:Dot(waypoints[nextWaypointIndex + 1].Position)
-				-- Increase waypoint index and move to next waypoint
-				nextWaypointIndex += 1
-				humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-			else
-					reachedConnection:Disconnect()
-					blockedConnection:Disconnect()
-				end
-			end)
-		end
+                if reached and nextWaypointIndex < #waypoints then
+                    currentWaypointPlaneNormal = (waypoints[nextWaypointIndex].Position - waypoints[nextWaypointIndex + 1].Position).Unit
+                    currentWaypointPlaneDistance = currentWaypointPlaneNormal:Dot(waypoints[nextWaypointIndex + 1].Position)
+                    -- Increase waypoint index and move to next waypoint
+                    nextWaypointIndex += 1
+                    humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
+                else
+                    reachedConnection:Disconnect()
+                    blockedConnection:Disconnect()
+                end
+            end)
 
-		-- Initially move to second waypoint (first waypoint is path start; skip it)
-		nextWaypointIndex = 2
-		humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-	else
-		warn("Path not computed!", errorMessage)
-	end
+            -- Initially move to second waypoint (first waypoint is path start; skip it)
+            nextWaypointIndex = 2
+            humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
+        else
+            warn("Path not computed!", errorMessage)
+        end
+    end
 end
 ```
 
@@ -517,103 +550,130 @@ To create a `Class.PathfindingLink` using this example:
 1. In the event which fires when a waypoint is reached, add a custom check for the `Class.PathfindingLink.Label|Label` modifier name and take a different action than `Class.Humanoid:MoveTo()`&nbsp;&mdash; in this case, calling a function to seat the agent in the boat, move the boat across the water, and continue the agent's path upon arrival at the destination island.
 
    ```lua title='LocalScript - Character Pathfinding' highlight='52-56, 72'
-   local PathfindingService = game:GetService("PathfindingService")
-   local Players = game:GetService("Players")
-   local RunService = game:GetService("RunService")
+		local PathfindingService = game:GetService("PathfindingService")
+		local Players = game:GetService("Players")
+		local RunService = game:GetService("RunService")
 
-   local path = PathfindingService:CreatePath({
-   	Costs = {
-   		Water = 20,
-   		UseBoat = 1
-   	}
-   })
+		local path = PathfindingService:CreatePath({
+				Costs = {
+						Water = 20,
+						UseBoat = 1,
+				},
+		})
 
-   local player = Players.LocalPlayer
-   local character = player.Character
-   local humanoid = character:WaitForChild("Humanoid")
+		local player = Players.LocalPlayer
+		local character = player.Character
+		local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
+		local humanoid = character:WaitForChild("Humanoid")
 
-   local TEST_DESTINATION = Vector3.new(228.9, 17.8, 292.5)
+		local TEST_DESTINATION = Vector3.new(228.9, 17.8, 292.5)
+		local ZERO_VECTOR3 = Vector3.new(0, 0, 0)
 
-   local waypoints
-   local nextWaypointIndex
-   local reachedConnection
-   local blockedConnection
+		local waypoints
+		local nextWaypointIndex
+		local reached
 
-   local function followPath(destination)
-   	-- Compute the path
-   	local success, errorMessage = pcall(function()
-   		path:ComputeAsync(character.PrimaryPart.Position, destination)
-   	end)
+		local reachedConnection
+		local blockedConnection
 
-   	if success and path.Status == Enum.PathStatus.Success then
-   		-- Get the path waypoints
-   		waypoints = path:GetWaypoints()
+		local currentWaypointPlaneNormal = ZERO_VECTOR3
+		local currentWaypointPlaneDistance = 0
 
-   		-- Detect if path becomes blocked
-   		blockedConnection = path.Blocked:Connect(function(blockedWaypointIndex)
-   			-- Check if the obstacle is further down the path
-   			if blockedWaypointIndex >= nextWaypointIndex then
-   				-- Stop detecting path blockage until path is re-computed
-   				blockedConnection:Disconnect()
-   				-- Call function to re-compute new path
-   				followPath(destination)
-   			end
-   		end)
+		local function followPath(destination)
+				-- Compute the path
+				local success, errorMessage = pcall(function()
+						path:ComputeAsync(character.PrimaryPart.Position, destination)
+				end)
 
-   		-- Detect when movement to next waypoint is complete
-   		if not reachedConnection then
-   			reachedConnection = humanoid.MoveToFinished:Connect(function(reached)
-   				if reached and nextWaypointIndex < #waypoints then
-   					-- Increase waypoint index and move to next waypoint
-   					nextWaypointIndex += 1
+				if success and path.Status == Enum.PathStatus.Success then
+						-- Get the path waypoints
+						waypoints = path:GetWaypoints()
 
-   					-- Use boat if waypoint label is "UseBoat"; otherwise move to next waypoint
-   					if waypoints[nextWaypointIndex].Label == "UseBoat" then
-   						useBoat()
-   					else
-   						humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-   					end
-   				else
-   					reachedConnection:Disconnect()
-   					blockedConnection:Disconnect()
-   				end
-   			end)
-   		end
+						-- Detect if path becomes blocked
+						blockedConnection = path.Blocked:Connect(function(blockedWaypointIndex)
+								-- Check if the obstacle is further down the path
+								if blockedWaypointIndex >= nextWaypointIndex then
+										-- Stop detecting path blockage until path is re-computed
+										blockedConnection:Disconnect()
+										-- Call function to re-compute new path
+										followPath(destination)
+								end
+						end)
 
-   		-- Initially move to second waypoint (first waypoint is path start; skip it)
-   		nextWaypointIndex = 2
-   		humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-   	else
-   		warn("Path not computed!", errorMessage)
-   	end
-   end
+						-- Detect when movement to next waypoint is complete
+						if not reachedConnection then
+								reachedConnection = RunService.RenderStepped:Connect(function()
+										local currentHumanoidPosition = humanoidRootPart.Position
+										local currentHumanoidVelocity = humanoidRootPart.Velocity
 
-   function useBoat()
-   	local boat = workspace.BoatModel
+										-- Check we do have a plane, if not, we consider the waypoint reached
+										if currentWaypointPlaneNormal ~= ZERO_VECTOR3 then
+												-- Compute distance of Humanoid from destination plane
+												local dist = currentWaypointPlaneNormal:Dot(currentHumanoidPosition) - currentWaypointPlaneDistance
+												-- Compute the component of the Humanoid velocity that is towards the plane
+												local velocity = -currentWaypointPlaneNormal:Dot(currentHumanoidVelocity)
+												-- Compute the threshold from the destination plane based on Humanoid velocity
+												local threshold = math.max(1.0, 0.0625 * velocity)
+												-- If we are less then threshold in front of the plane (between 0 and threshold) or if we are behing the plane (less then 0), we consider we reached it
+												reached = dist < threshold
+										else
+												reached = true
+												currentWaypointPlaneNormal = ZERO_VECTOR3
+												currentWaypointPlaneDistance = 0
+										end
 
-   	humanoid.Seated:Connect(function()
-   		-- Start boat moving if agent is seated
-   		if humanoid.Sit then
-   			task.wait(1)
-   			boat.CylindricalConstraint.Velocity = 5
-   		end
-   		-- Detect constraint position in relation to island
-   		local boatPositionConnection
-   		boatPositionConnection = RunService.PostSimulation:Connect(function()
-   			-- Stop boat when next to island
-   			if boat.CylindricalConstraint.CurrentPosition >= 94 then
-   				boatPositionConnection:Disconnect()
-   				boat.CylindricalConstraint.Velocity = 0
-   				task.wait(1)
-   				-- Unseat agent and continue to destination
-   				humanoid.Sit = false
-   				humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-   			end
-   		end)
-   	end)
-   end
+										if reached and nextWaypointIndex < #waypoints then
+												currentWaypointPlaneNormal = (waypoints[nextWaypointIndex].Position - waypoints[nextWaypointIndex + 1].Position).Unit
+												currentWaypointPlaneDistance = currentWaypointPlaneNormal:Dot(waypoints[nextWaypointIndex + 1].Position)
+												-- Increase waypoint index and move to next waypoint
+												nextWaypointIndex += 1
+												-- Use boat if waypoint label is "UseBoat"; otherwise move to next waypoint
+												if waypoints[nextWaypointIndex].Label == "UseBoat" then
+														useBoat()
+												else
+														humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
+												end
+										else
+												reachedConnection:Disconnect()
+												blockedConnection:Disconnect()
+										end
+								end)
+						end
 
-   followPath(TEST_DESTINATION)
+						-- Initially move to second waypoint (first waypoint is path start; skip it)
+						nextWaypointIndex = 2
+						humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
+				else
+						warn("Path not computed!", errorMessage)
+				end
+		end
+
+		function useBoat()
+				local boat = workspace.BoatModel
+
+				humanoid.Seated:Connect(function()
+						-- Start boat moving if agent is seated
+						if humanoid.Sit then
+								task.wait(1)
+								boat.CylindricalConstraint.Velocity = 5
+						end
+						-- Detect constraint position in relation to island
+						local boatPositionConnection
+						boatPositionConnection = RunService.PostSimulation:Connect(function()
+								-- Stop boat when next to island
+								if boat.CylindricalConstraint.CurrentPosition >= 94 then
+										boatPositionConnection:Disconnect()
+										boat.CylindricalConstraint.Velocity = 0
+										task.wait(1)
+										-- Unseat agent and continue to destination
+										humanoid.Sit = false
+										humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
+								end
+						end)
+				end)
+		end
+
+		followPath(TEST_DESTINATION)
    ```
 
    <video controls src="../assets/avatar/pathfinding/Boat-Path.mp4" width="800" alt="Video showing character using the PathfindingLink to traverse the water using the boat" ></video>
