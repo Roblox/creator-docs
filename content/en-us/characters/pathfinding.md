@@ -257,7 +257,7 @@ end
 
 ### Path Movement
 
-Each waypoint consists of both a **position** (`Datatype.Vector3`) and **action** (`Enum.PathWaypointAction|PathWaypointAction`). To move a character containing a `Class.Humanoid`, like a typical Roblox character, the easiest way is to call `Class.Humanoid:MoveTo()` from waypoint to waypoint, using the `Class.Humanoid.MoveToFinished|MoveToFinished` event to detect when the character reaches each waypoint.
+Each waypoint consists of both a **position** (`Datatype.Vector3`) and **action** (`Enum.PathWaypointAction|PathWaypointAction`). To move a character containing a `Class.Humanoid`, like a typical Roblox character, the easiest way is to call `Class.Humanoid:MoveTo()` from waypoint to waypoint, using the `Class.RunService.RenderStepped|RenderStepped` event to detect when the character reaches each waypoint.
 
 ```lua title='LocalScript - Character Pathfinding' highlight='40-51, 54-55'
 local PathfindingService = game:GetService("PathfindingService")
@@ -300,12 +300,35 @@ local function followPath(destination)
 
 		-- Detect when movement to next waypoint is complete
 		if not reachedConnection then
-			reachedConnection = humanoid.MoveToFinished:Connect(function(reached)
+			reachedConnection = RunService.RenderStepped:Connect(function()
 				if reached and nextWaypointIndex < #waypoints then
-					-- Increase waypoint index and move to next waypoint
-					nextWaypointIndex += 1
-					humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
-				else
+			local reached = false
+			local currentHumanoidPosition = humanoidRootPart.Position
+			local currentHumanoidVelocity = humanoidRootPart.Velocity
+
+			-- Check we do have a plane, if not, we consider the waypoint reached
+			if currentWaypointPlaneNormal ~= ZERO_VECTOR3 then
+				-- Compute distance of Humanoid from destination plane
+				local dist = currentWaypointPlaneNormal:Dot(currentHumanoidPosition) - currentWaypointPlaneDistance
+				-- Compute the component of the Humanoid velocity that is towards the plane
+				local velocity = -currentWaypointPlaneNormal:Dot(currentHumanoidVelocity)
+				-- Compute the threshold from the destination plane based on Humanoid velocity
+				local threshold = math.max(1.0, 0.0625 * velocity)
+				-- If we are less then threshold in front of the plane (between 0 and threshold) or if we are behing the plane (less then 0), we consider we reached it
+				reached = dist < threshold
+			else
+				reached = true
+				currentWaypointPlaneNormal	= ZERO_VECTOR3
+				currentWaypointPlaneDistance = 0
+			end
+
+			if reached and nextWaypointIndex < #waypoints then
+				currentWaypointPlaneNormal = (waypoints[nextWaypointIndex].Position - waypoints[nextWaypointIndex + 1].Position).Unit
+				currentWaypointPlaneDistance = currentWaypointPlaneNormal:Dot(waypoints[nextWaypointIndex + 1].Position)
+				-- Increase waypoint index and move to next waypoint
+				nextWaypointIndex += 1
+				humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
+			else
 					reachedConnection:Disconnect()
 					blockedConnection:Disconnect()
 				end
