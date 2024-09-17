@@ -37,9 +37,25 @@ With the [observability](../../cloud-services/memory-stores/observability.md) da
 
 ### API Request Limits
 
-For API request limits, there's a **Request Unit** quota applies for all `Class.MemoryStoreService` API calls, which is **1000 + 100 \* [number of concurrent users]** request units per minute. Additionally, the rate of requests to any single queue, sorted map, or hash map is limited to **100,000** request units per minute.
+For API request limits, there's a **request unit** quota that applies for all `Class.MemoryStoreService` API calls. The quota is **1000 + 100 \* [number of concurrent users]** request units per minute.
 
-Most API calls only consume one request unit, with the exceptions of `Class.MemoryStoreSortedMap:GetRangeAsync()` for sorted maps, `Class.MemoryStoreQueue:ReadAsync()` for queues, and `Class.MemoryStoreHashMap:UpdateAsync()` for hash maps. These first two methods consume units based on the number of returned items with at least one request unit, while the third consumes a minimum of 2 units. For example, if `Class.MemoryStoreSortedMap:GetRangeAsync()` returns 10 items, the total quota counts based on 10 request units. If it returns an empty response without items, the quota counts based on a single request unit. In addition, `Class.MemoryStoreQueue:ReadAsync()` consumes an additional unit every two seconds while reading. The maximum read time is specified using the `waitTimeout` parameter.
+Most API calls only consume one request unit, with a few exceptions:
+
+- `Class.MemoryStoreSortedMap:GetRangeAsync()`
+
+  Consumes units based on the number of returned items. For example, if this method returns 10 items, the call counts as 10 request units. If it returns an empty response, it counts as one request unit.
+
+- `Class.MemoryStoreQueue:ReadAsync()`
+
+  Consumes units based on the number of returned items, just like `MemoryStoreSortedMap:GetRangeAsync()`, but consumes an additional unit every two seconds while reading. Specify the maximum read time with the `waitTimeout` parameter.
+
+- `Class.MemoryStoreHashMap:UpdateAsync()`
+
+  Consumes a minimum of two units.
+
+- `Class.MemoryStoreHashMap:ListItemsAsync()`
+
+  Consumes **[number of partitions scanned] + [items returned]** units.
 
 The requests quota is also applied on the experience level instead of the server level. This provides flexibility to allocate the requests among servers as long as the total request rate does not exceed the quota. If you exceed the quota, you receive an error response when the service throttles your requests.
 
