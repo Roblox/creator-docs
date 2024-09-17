@@ -74,8 +74,6 @@ Paid access in fiat currency will be available in late 2024. We'll share more cl
 
 Paid access in fiat currency lets you charge real-world money for your paid access experience. Users can purchase the experience on desktop in their local currency, or in USD if their local currency isn't available.
 
-<img src="../../assets/monetization/paid-access/Paid-Access-Fiat-Example.png" width="80%" />
-
 When you charge for paid access in fiat currency on desktop, you earn a percentage of the price you set, called a **developer revenue share**. For example, if you set the price to $49.99 USD, you receive 70% of the proceeds, minus certain fees like taxes and VAT.
 
 The revenue share is expected to follow three tiers:
