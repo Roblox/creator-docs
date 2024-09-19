@@ -187,8 +187,8 @@ local function followPath(destination)
                 end
 
                 if reached and nextWaypointIndex < #waypoints then
-                    currentWaypointPlaneNormal = (waypoints[nextWaypointIndex].Position - waypoints[nextWaypointIndex + 1].Position).Unit
-                    currentWaypointPlaneDistance = currentWaypointPlaneNormal:Dot(waypoints[nextWaypointIndex + 1].Position)
+                    currentWaypointPlaneNormal = ZERO_VECTOR3
+                    currentWaypointPlaneDistance = 0
                     -- Increase waypoint index and move to next waypoint
                     nextWaypointIndex += 1
                     humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
@@ -356,8 +356,8 @@ local function followPath(destination)
                 end
 
                 if reached and nextWaypointIndex < #waypoints then
-                    currentWaypointPlaneNormal = (waypoints[nextWaypointIndex].Position - waypoints[nextWaypointIndex + 1].Position).Unit
-                    currentWaypointPlaneDistance = currentWaypointPlaneNormal:Dot(waypoints[nextWaypointIndex + 1].Position)
+                    currentWaypointPlaneNormal = ZERO_VECTOR3
+                    currentWaypointPlaneDistance = 0
                     -- Increase waypoint index and move to next waypoint
                     nextWaypointIndex += 1
                     humanoid:MoveTo(waypoints[nextWaypointIndex].Position)
@@ -623,8 +623,8 @@ To create a `Class.PathfindingLink` using this example:
 										end
 
 										if reached and nextWaypointIndex < #waypoints then
-												currentWaypointPlaneNormal = (waypoints[nextWaypointIndex].Position - waypoints[nextWaypointIndex + 1].Position).Unit
-												currentWaypointPlaneDistance = currentWaypointPlaneNormal:Dot(waypoints[nextWaypointIndex + 1].Position)
+												currentWaypointPlaneNormal = ZERO_VECTOR3
+                                                currentWaypointPlaneDistance = 0
 												-- Increase waypoint index and move to next waypoint
 												nextWaypointIndex += 1
 												-- Use boat if waypoint label is "UseBoat"; otherwise move to next waypoint
