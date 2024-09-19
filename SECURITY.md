@@ -1,4 +1,4 @@
-# Security Policy
+SECURITY.md# Security Policy
 HiddenCedarsInvestmentGroup:patch-2
 ## Supported Versions
 
