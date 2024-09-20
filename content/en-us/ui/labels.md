@@ -45,7 +45,7 @@ To add a label to the face of a part:
 
    1. Hover over StarterGui and click the &CirclePlus; button. A contextual menu displays.
 
-   1. From the menu, insert a **ScreenGui**.
+   1. From the menu, insert a **SurfaceGui**.
 
 2. Select the new **SurfaceGui** and add a label.
 
