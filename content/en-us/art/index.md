@@ -132,11 +132,11 @@ Check out the following showcases made by Roblox and the community. Each of thes
 
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-  <img src="../assets/art/Thumbnail-Shrine.png" />
+  <img src="../assets/art/Thumbnail-Shrine.png" />amazing showcase experiences created members of the community!</Typography>
+    <a href="https://www.roblox.com/games/3158922185/Toyokawa-Inari-Shrine-Showcase
   </div>
     <Typography variant='h4'>Community Creations</Typography>
-        <Typography variant='body1' >Check out these amazing showcase experiences created members of the community!</Typography>
-    <a href="https://www.roblox.com/games/3158922185/Toyokawa-Inari-Shrine-Showcase"><Typography variant='h6' style={{marginBottom: 12}}>Toyokawa Inaru Shrine by @nezko</Typography></a>
+        <Typography variant='body1' >Check out these "><Typography variant='h6' style={{marginBottom: 12}}>Toyokawa Inaru Shrine by @nezko</Typography></a>
     <a href="https://www.roblox.com/games/911145856/Totoro-SHOWCASE"><Typography variant='h6' style={{marginBottom: 12}}>Totoro by @SetDefaultt</Typography></a>
     <a href="https://www.roblox.com/games/6519709626/Hotel-Resort"><Typography variant='h6' style={{marginBottom: 12}}>Hotel Resort by @ChooShu_Cho</Typography></a>
     <a href="https://www.roblox.com/games/5415692770/Lab"><Typography variant='h6' style={{marginBottom: 12}}>Lab by @thisfall</Typography></a>
