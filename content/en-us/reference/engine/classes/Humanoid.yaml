@@ -1934,6 +1934,8 @@ methods:
       `Class.Humanoid` can never enter that state. This is true regardless if
       the attempt to change state is made using `Class.Humanoid:ChangeState()`
       or Roblox internal `Class.Humanoid` code.
+
+      Note that using `Humanoid:SetStateEnabled()` on the server does not replicate the change to the client, and vice versa.
     code_samples:
       - jump-cooldown
     parameters:
