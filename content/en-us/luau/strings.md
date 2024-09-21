@@ -580,7 +580,7 @@ end
 --> Forest 42
 ```
 
-The returned values are unusual in that they are **numbers** rather thing strings:
+The returned values are unusual in that they are **numbers** rather than strings:
 
 ```lua
 local match = "This is an example"
