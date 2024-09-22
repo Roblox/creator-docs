@@ -2,8 +2,7 @@ name: ForceLimitMode
 type: enum
 summary: |
   The **ForceLimitMode** enum determines how the maximum force for a constraint
-  is specified and how that limit is enforced by the constraint.  
-  .
+  is specified and how that limit is enforced by the constraint.
 description: |
   This enum is used to determine how the maximum force for a constraint is
   specified and how that limit will be enforced by the constraint.
