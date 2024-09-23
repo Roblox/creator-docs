@@ -15,13 +15,11 @@ Automatic translation only provides automated translations for blank entries on 
 
 ## Enable Automatic Text Capture
 
-Automatic Text Capture (ATC) captures text strings from UI elements in your experience and adds them to your translation table. Once added, you can enable translations per language and Roblox's automatic translation will generate translated text on those captured strings.
+Automatic Text Capture (ATC) captures text strings from UI elements in your experience and adds them to your translation table. When enabled, the ATC tool adds text from UI elements encountered by users within your experience or during Studio testing.
 
-<Alert severity="warning">
-In Studio, ATC will only work in **Team Test** mode and not in **Play Solo** mode.
-</Alert>
+ATC evaluates over time which strings should be added to your translation table, so it may take up to a few days for new strings to appear in Translator Portal after users encounter them.
 
-You can enable automatic string capture with the following steps:
+To enable Automatic Text Capture:
 
 1. In localization settings, navigate to **Settings**.
 2. Enable **Capture text from experience UI while users play**.
@@ -49,22 +47,6 @@ ATC also checks your experience for strings that no longer exist, such as userna
 If you do not want ATC to clean up your localization table, navigate to your localization settings and disable the second ATC toggle:
 
 <img src="../../assets/localization/Portal-Enable-ATC-Auto.png" width="100%" alt="The Localization Settings section highlighting the toggle for enabling Roblox to remove stale entries." />
-
-### Text Capture in Studio
-
-There may be situations in which you need captured strings to be added to your translation table immediately. You can use the text capture tool in Studio to capture strings while playtesting. These strings will be added to the localization table within 1-2 minutes of encountering them.
-
-You can start text capture in Studio with the following steps:
-
-1. In Studio, open **Plugins** > **Localization** > **Tools**.
-
-   <img src="../../assets/studio/general/Plugins-Tab-Localization-Tools.png" width="60%" alt="The Studio ribbon plugins tab with localization tools button highlighted." />
-
-2. Enable **Automatic Text Capture**.
-
-   <img src="../../assets/localization/ATC-Studio-Enabled.png" width="45%" alt="The in-Studio localization tool showing ATC toggle enabled." />
-
-Studio text capture stays on if you start and stop playtesting within the same Studio session, but must be enabled again when you start a new Studio session.
 
 ## Enabling Translations
 

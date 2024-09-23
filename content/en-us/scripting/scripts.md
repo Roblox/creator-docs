@@ -24,9 +24,9 @@ You can also use `Class.LocalScript` objects for client-side scripts, but we rec
 ## Module Scripts
 
 `Class.ModuleScript` objects are reusable modules that script objects
-load by calling the `Global.RobloxGlobals.require()` function. Module scripts must return exactly one
+load by calling the `Global.LuaGlobals.require()` function. Module scripts must return exactly one
 value and run once and only once
-per Lua environment. As a result, subsequent calls to `Global.RobloxGlobals.require()` return a
+per Lua environment. As a result, subsequent calls to `Global.LuaGlobals.require()` return a
 cached value. You can execute arbitrary code in a `Class.ModuleScript`, but you only need to return what you need in other scripts.
 
 Multiple scripts can require
@@ -84,14 +84,14 @@ print(bonus)  --> 125
 
 ### Requiring
 
-A `Class.ModuleScript` runs only when another script imports it using the `Global.RobloxGlobals.require()` function. If a `Class.ModuleScript` requires another `Class.ModuleScript`, a `Class.Script` or `Class.LocalScript` must require the first `Class.ModuleScript` in the chain for any of them to run.
+A `Class.ModuleScript` runs only when another script imports it using the `Global.LuaGlobals.require()` function. If a `Class.ModuleScript` requires another `Class.ModuleScript`, a `Class.Script` or `Class.LocalScript` must require the first `Class.ModuleScript` in the chain for any of them to run.
 
 <Alert severity="warning">
 Don't require `Class.ModuleScript|ModuleScripts` in a recursive or circular manner,
 otherwise Studio throws an error: <InlineCode>Requested module was required recursively</InlineCode>.
 </Alert>
 
-To access a `Class.ModuleScript` from another script using the `Global.RobloxGlobals.require()`
+To access a `Class.ModuleScript` from another script using the `Global.LuaGlobals.require()`
 function:
 
 ```lua
@@ -103,9 +103,9 @@ local PickupManager = require(ReplicatedStorage:WaitForChild("PickupManager"))
 
 ```
 
-When you call `Global.RobloxGlobals.require()` on a `Class.ModuleScript`, it runs **once** and returns a single item as a **reference**. Calling `Global.RobloxGlobals.require()` again returns the exact same reference, meaning that if you modify a returned [table](../luau/tables.md) or `Class.Instance`, subsequent `Global.RobloxGlobals.require()` calls return that modified reference. The module itself doesn't run multiple times.
+When you call `Global.LuaGlobals.require()` on a `Class.ModuleScript`, it runs **once** and returns a single item as a **reference**. Calling `Global.LuaGlobals.require()` again returns the exact same reference, meaning that if you modify a returned [table](../luau/tables.md) or `Class.Instance`, subsequent `Global.LuaGlobals.require()` calls return that modified reference. The module itself doesn't run multiple times.
 
-If you `Global.RobloxGlobals.require()` a `Class.ModuleScript` from both sides of the client-server boundary, then the `Class.ModuleScript` returns a unique reference for each side.
+If you `Global.LuaGlobals.require()` a `Class.ModuleScript` from both sides of the client-server boundary, then the `Class.ModuleScript` returns a unique reference for each side.
 
 ### Patterns
 

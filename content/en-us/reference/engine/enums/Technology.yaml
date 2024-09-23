@@ -17,7 +17,8 @@ items:
     value: 0
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This option is deprecated and cannot be selected in Studio.
   - name: Voxel
     summary: |
       Uses a 4&times;4&times;4 voxel map for light and shadow calculation.
@@ -52,4 +53,5 @@ items:
     value: 5
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This option is deprecated and cannot be selected in Studio.

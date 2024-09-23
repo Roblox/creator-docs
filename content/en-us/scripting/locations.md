@@ -20,11 +20,11 @@ Roblox has three types of scripts:
 When you create a `Class.Script`, its default run context is `Legacy`, meaning that it a) is a server-side script and b) only runs if it is in a server container, such as `Class.Workspace` or `Class.ServerScriptService`.
 
 - If you change the script's run context to `Server`, it can now also run in `Class.ReplicatedStorage`, but that's not recommended. The contents of that location are replicated to clients, so it's a poor location for server-side scripts.
-- If you change the script's run context to `Client`, it can run in `ReplicatedStorage`, but it can also run in `Class.StarterCharacterScripts` and `Class.StarterPlayerScripts`. These starter containers are copied to clients, though, so the original script _and_ the copy run, which isn't desirable.
+- If you change the script's run context to `Client`, it can run in `ReplicatedStorage`, but it can also run in `Class.StarterCharacterScripts` and `Class.StarterPlayerScripts`. These starter containers are copied to clients, though, so the original script **and** the copy run, which isn't desirable.
 
-To change a script run context, select it in the Explorer and change the value in the Properties window.
+To change a script run context, select it in the [Explorer](../studio/explorer.md) and change the value in the [Properties](../studio/properties.md) window.
 
-<img width="50%" src="../assets/scripting/run-context.png" alt="Explorer window with a script selected and the RunContext menu open." />
+<img src="../assets/studio/properties/Script-RunContext.png" alt="RunContext property indicated for a Script." width="320 "/>
 
 ### Recommendations
 
@@ -41,9 +41,9 @@ To change a script run context, select it in the Explorer and change the value i
 
 <ScriptLocations components={props.components} />
 
-This image shows which Explorer window locations can contain client scripts. Remember, `ReplicatedFirst` and `ReplicatedStorage` can contain scripts with a run context of `Client`, whereas the `Starter` containers should use local scripts.
+This image shows which Explorer window locations can contain client scripts. Remember, `ReplicatedFirst` and `ReplicatedStorage` can contain `Class.Script|Scripts` with a `Class.BaseScript.RunContext|RunContext` of `Enum.RunContext|Client`, whereas the `Starter[]` containers should use `Class.LocalScript|LocalScripts`.
 
-<img width="500px" alt="Diagram showing which script locations run on clients." src="../assets/scripting/client-model.png" />
+<img alt="Diagram showing which script locations run on clients." src="../assets/scripting/client-server/Client-Script-Containers.png" width="520" />
 
 ## Example Project Structure
 

@@ -36,7 +36,7 @@ Through the chat message sending and delivering process, methods, callbacks, and
 
 <img
   alt="A flowchart of the in-experience text chat workflow"
-  src="../assets/scripting/chat-workflow.png"
+  src="../assets/players/in-experience-text-chat/Chat-Workflow.png"
   width="100%" />
 
 As the flowchart shows, the in-experience text chat system processes a chat message through the following steps:

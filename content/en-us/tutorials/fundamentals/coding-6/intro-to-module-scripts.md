@@ -101,7 +101,7 @@ return RewardManager
 
 ## Using Modules In Others Scripts
 
-By itself, a module script can't run code — it needs to be loaded in another script using the keyword `Global.RobloxGlobals.require()`. The function `Global.RobloxGlobals.require()` accepts one argument, the location of the module script in the Explorer.
+By itself, a module script can't run code — it needs to be loaded in another script using the keyword `Global.LuaGlobals.require()`. The function `Global.LuaGlobals.require()` accepts one argument, the location of the module script in the Explorer.
 
 To use a module, in a separate script, set a variable equal to `require(moduleScript)`.
 
@@ -162,11 +162,11 @@ Some of the tips here address common issues when working with module scripts. Ke
 
 **Issue:** Get an error message including: `"Infinite yield possible"` or `"not a valid member"`.
 
-- Check the spelling of the module script where it's loaded. `Global.RobloxGlobals.require()` must include the exact path and spelling of the module script, which may be named differently than the module table.
+- Check the spelling of the module script where it's loaded. `Global.LuaGlobals.require()` must include the exact path and spelling of the module script, which may be named differently than the module table.
 
 **Issue:** Get an error message including: `"attempt to index global"`.
 
-- In any scripts using a module script, make sure it's loaded using the function `Global.RobloxGlobals.require()`. If not, that script cannot use functions and variables from the module script.
+- In any scripts using a module script, make sure it's loaded using the function `Global.LuaGlobals.require()`. If not, that script cannot use functions and variables from the module script.
 
 ## Summary
 

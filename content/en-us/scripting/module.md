@@ -59,7 +59,7 @@ Adding the function to a table isn't strictly necessary—you could just return 
 
 ## Requiring Module Scripts
 
-To load a module script, you call the `Global.RobloxGlobals.require()` function. In `ReplicatedStorage`, add a new script, and change its `RunContext` to `Client`. Then add the following code to call the `PickupManager.getPickupBonus` function:
+To load a module script, you call the `Global.LuaGlobals.require()` function. In `ReplicatedStorage`, add a new script, and change its `RunContext` to `Client`. Then add the following code to call the `PickupManager.getPickupBonus` function:
 
 ```lua title="Client script in ReplicatedStorage"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -85,7 +85,7 @@ local PickupManager = require(ReplicatedStorage:WaitForChild("PickupManager"))
 The `Class.Instance:WaitForChild()` pattern is an important safety measure due to the time it can take for an experience to load and the lack of guarantees that Roblox makes around loading order. If you had assurances that everything had loaded, you could call `require(ReplicatedStorage.PickupManager)`, but `WaitForChild()` is safer.
 </Alert>
 
-When you call `Global.RobloxGlobals.require()` on a `Class.ModuleScript`, it runs once and returns a single item as a reference. Calling `Global.RobloxGlobals.require()` again returns the exact same reference, meaning that if you modify a returned [table](../luau/tables.md) or `Class.Instance`, subsequent `Global.RobloxGlobals.require()` calls return that modified reference. The module itself doesn't run multiple times.
+When you call `Global.LuaGlobals.require()` on a `Class.ModuleScript`, it runs once and returns a single item as a reference. Calling `Global.LuaGlobals.require()` again returns the exact same reference, meaning that if you modify a returned [table](../luau/tables.md) or `Class.Instance`, subsequent `Global.LuaGlobals.require()` calls return that modified reference. The module itself doesn't run multiple times.
 
 If you require a `Class.ModuleScript` from both sides of the client-server boundary, the `Class.ModuleScript` returns a unique reference for each side.
 

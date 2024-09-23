@@ -64,7 +64,7 @@ functions:
       Roblox's Lua sandbox only allows the `count` option to be used (the total
       memory in use by Lua, in kilobytes), as other options can interfere with
       existing processes. Effectively, this makes
-      `Global.RobloxGlobals.gcinfo()` a superior alternative that should be used
+      `Global.LuaGlobals.gcinfo()` a superior alternative that should be used
       instead.
     parameters:
       - name: operation
@@ -107,6 +107,19 @@ functions:
           The level of information that should be printed. Defaults to 1.
     returns:
       - type: void
+        summary: ''
+    tags:
+    code_samples:
+  - name: gcinfo
+    summary: |
+      Returns the total memory heap size in kilobytes.
+    description: |
+      Returns the total memory heap size in kilobytes. The number reflects the
+      current heap consumption from the operating system perspective, which
+      fluctuates over time as garbage collector frees objects.
+    parameters:
+    returns:
+      - type: number
         summary: ''
     tags:
     code_samples:
@@ -457,6 +470,52 @@ functions:
     returns:
       - type: table
         summary: ''
+    tags:
+    code_samples:
+  - name: require
+    summary: |
+      Returns the value that was returned by the given ModuleScript, running it
+      if it has not been run yet.
+    description: |
+      Runs the supplied `Class.ModuleScript` and returns what the
+      `Class.ModuleScript` returned (usually a table or a function). Once the
+      return object is created by an **initial**
+      `Global.LuaGlobals.require()` call of a `Class.ModuleScript`, future
+      `Global.LuaGlobals.require()` calls for the same `Class.ModuleScript`
+      (on the same side of the client-server boundary) will not run the code
+      again. Instead, a reference to the **same** return object created by the
+      initial `Global.LuaGlobals.require()` call will be supplied. This
+      behavior allows for the sharing of values across different scripts, as
+      multiple `Global.LuaGlobals.require()` calls from different scripts
+      will reference the same returned object. If the returned object is a
+      table, any values stored within the table are shared and accessible by any
+      script requiring that `Class.ModuleScript`.
+
+      As noted above, the "object sharing" behavior does not cross the
+      client-server boundary. This means that if a `Class.ModuleScript` is
+      accessible to both the client **and** server (such as by being placed in
+      `Class.ReplicatedStorage`) and `Global.LuaGlobals.require()` is called
+      from both a `Class.LocalScript` as well as a `Class.Script`, the code in
+      the `Class.ModuleScript` will be run twice, and the `Class.LocalScript`
+      will receive a distinct return object from the one received by the
+      `Class.Script`.
+
+      Also note that if the `Class.ModuleScript` the user wants to run has been
+      uploaded to Roblox (with the instance's name being `MainModule`), it can
+      be loaded by using the `Global.LuaGlobals.require()` function on the
+      asset ID of the `Class.ModuleScript`, though only on the server.
+    parameters:
+      - name: module
+        type: ModuleScript
+        default:
+        summary: |
+          The `Class.ModuleScript` that will be executed to retrieve the return
+          value it provides.
+    returns:
+      - type: Variant
+        summary: |
+          What the `Class.ModuleScript` returned (usually a table or a
+          function).
     tags:
     code_samples:
   - name: select

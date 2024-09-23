@@ -169,7 +169,8 @@ functions:
       iteration over to the provided function.
     description: |
       Iterates over the provided table, passing the key and value of each
-      iteration over to the provided function.
+      iteration over to the provided function. This function has been deprecated
+      and is not recommended for use in new code; use a `for` loop instead.
     parameters:
       - name: t
         type: table
@@ -187,14 +188,16 @@ functions:
       - type: void
         summary: ''
     tags:
+      - Deprecated
     code_samples:
   - name: table.foreachi
     summary: |
-      Similar to table.foreach() except index-value pairs are passed instead of
-      key-value pairs.
+      Similar to `Library.table.foreach()` except index-value pairs are passed
+      instead of key-value pairs.
     description: |
-      This is similar to table.foreach() except that index-value pairs are
-      passed, not key-value pairs.
+      This is similar to `Library.table.foreach()` except that index-value pairs
+      are passed, not key-value pairs. This function has been deprecated and is
+      not recommended for use in new code; use a `for` loop instead.
     parameters:
       - name: t
         type: Array
@@ -212,6 +215,7 @@ functions:
       - type: void
         summary: ''
     tags:
+      - Deprecated
     code_samples:
   - name: table.freeze
     summary: |
@@ -239,7 +243,8 @@ functions:
     summary: |
       Returns the number of elements in the table passed.
     description: |
-      Returns the number of elements in the table passed.
+      Returns the number of elements in the table passed. This function has been
+      deprecated and is not recommended for use in new code; use `#t` instead.
     parameters:
       - name: t
         type: Array
@@ -250,6 +255,7 @@ functions:
       - type: number
         summary: ''
     tags:
+      - Deprecated
     code_samples:
   - name: table.insert
     summary: |

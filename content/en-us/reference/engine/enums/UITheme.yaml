@@ -3,18 +3,22 @@ type: enum
 summary: ''
 description: ''
 code_samples:
-tags: []
-deprecation_message: ''
+tags:
+  - Deprecated
+deprecation_message: |
+  This enum refers to a deprecated setting and should not be used for new work.
 items:
   - name: Light
     value: 0
     summary: ''
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This option is deprecated.
   - name: Dark
     value: 1
     summary: ''
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This option is deprecated.
