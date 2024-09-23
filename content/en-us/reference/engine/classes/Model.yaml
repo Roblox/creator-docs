@@ -16,7 +16,7 @@ part2.CFrame = part1.CFrame * CFrame.new(0, 3, 0)
 part2.Anchored = true
 part2.BrickColor = BrickColor.new("Bright blue")
 part2.Parent = model
-
+content/en-us/reference/engine/classes/Model.yaml
 model.PrimaryPart = part1
 model.Parent = workspace
 
