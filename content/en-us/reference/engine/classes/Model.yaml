@@ -22,7 +22,7 @@ model.Parent = workspace
 
 local obstruction = Instance.new("Part")
 obstruction.Name = "Obstruction"
-obstruction.Size = Vector3.new(10, 10, 10)
+obstruction.Size = Vector3.new(10, 10, 10)content/en-us/reference/engine/classes/Model.yaml
 obstruction.Position = Vector3.new(0, 10, 0)
 obstruction.Transparency = 0.5
 obstruction.Anchored = true
