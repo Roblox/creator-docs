@@ -184,7 +184,7 @@ end
 
 ### Customizing Translated Messages
 
-By default, Roblox [automatically translates](../production/localization/automatic-translations.md) text chat messages based on users' language settings. To apply message customizations to translated messages, use the `Class.TextChatMessage.Translation` property. The following example, a `Class.Script` in `Class.ReplicatedStorage` with its `Enum.RunContext` property as `Client`, sets the font color of translated messages to the same color as untranslated messages.
+By default, Roblox [automatically translates](../production/localization/automatic-translations.md) text chat messages based on users' language settings. To apply message customizations to translated messages, use the `Class.TextChatMessage.Translation` property. The following example, a `Class.Script` in `Class.ReplicatedStorage` with its `Enum.RunContext` property as `Enum.RunContext|Client`, sets the font color of translated messages to the same color as untranslated messages.
 
 ```lua title='Script'
 local TextChatService = game:GetService("TextChatService")

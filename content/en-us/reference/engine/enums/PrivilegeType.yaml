@@ -5,7 +5,8 @@ description: ''
 code_samples:
 tags:
   - Deprecated
-deprecation_message: ''
+deprecation_message: |
+  This enum should not be used for new work.
 items:
   - name: Banned
     summary: ''

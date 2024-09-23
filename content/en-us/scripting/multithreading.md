@@ -5,7 +5,7 @@ description: Parallel Luau runs code on multiple threads simultaneously.
 
 With the **Parallel Luau** programming model, you can run code on multiple threads simultaneously, which can improve the performance of your experience. As you expand your experience with more content, you can adopt this model to help maintain the performance and safety of your Luau scripts.
 
-<video controls width="100%" src="../assets/scripting/parallel-luau.mp4"></video>
+<video controls width="100%" src="../assets/scripting/scripts/Parallel-Luau.mp4"></video>
 
 ## Parallel Programming Model
 
@@ -25,16 +25,11 @@ To run your experience's scripts in multiple threads concurrently, you need to s
 
 You can put actors in proper containers or use them to replace the top-level instance types of your 3D entities such as NPCs and raycasters, then add corresponding [scripts](../scripting/index.md).
 
-<img
-  alt="An example of a Script under an Actor"
-  src="../assets/scripting/scripts/actor-example.png"
-  width="320" />
+<img alt="An example of a Script under an Actor" src="../assets/studio/explorer/ServerScriptService-Actor.png" width="320" />
 
 For most situations, you shouldn't put an actor as a child of another actor in the data model. However, if you decide to place a script nested within multiple actors for your specific use case, the script is owned by its closest ancestor actor.
-<img
-  alt="A tree of actors and scripts that shows how a script is owned by its closest actor"
-  src="../assets/scripting/scripts/ActorScreenshot.png"
-  width="320" />
+
+<img alt="A tree of actors and scripts that shows how a script is owned by its closest actor" src="../assets/scripting/scripts/Actor-Tree.png" width="320" />
 
 ### Desynchronizing Threads
 

@@ -50,7 +50,7 @@ If your experience uses [instance streaming](../workspace/streaming.md) (`Class.
 
 The first step to modifying object properties and attributes is to get a reference to the object. The simplest solution is to make the script a child of the object in the Explorer and use `script.Parent` to reference the object.
 
-<img width="40%" alt="A script parented to a model in the Explorer." src="../assets/scripting/script-parent.png" />
+<img alt="A script parented to a model in the Explorer." src="../assets/studio/explorer/Script-Parent-Model.png" width="320" />
 
 ```lua
 local sign = script.Parent
@@ -58,7 +58,7 @@ local sign = script.Parent
 
 The more universal solution is to get the object from a [service](services.md) using methods like `Class.Instance:FindFirstChild()` or `Class.Instance:WaitForChild()`.
 
-<img width="40%" alt="A script within a folder in ReplicatedStorage." src="../assets/scripting/script-parent-rep.png" />
+<img alt="A Model within a Folder in ReplicatedStorage." src="../assets/studio/explorer/Script-Parent-ReplicatedStorage.png" width="320" />
 
 ```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -69,9 +69,9 @@ local sign = signsFolder:WaitForChild("InteractiveSign")
 
 ## Modifying Properties
 
-Properties are straightforward to access—just use a `.` after the object reference—although if you're working with a model, you might need to choose an individual part rather than the model itself.
+Properties are straightforward to access — just use a `.` after the object reference&nbsp;— although if you're working with a model, you might need to choose an individual part rather than the model itself.
 
-<img width="40%" alt="A script within a folder in ReplicatedStorage." src="../assets/scripting/script-part.png" />
+<img alt="A Model within ReplicatedStorage." src="../assets/studio/explorer/ReplicatedStorage-Model.png" width="320" />
 
 ```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -84,7 +84,7 @@ chair.LeftArmRest.Size = Vector3.new(10, 1, 10)
 
 Although you can create attributes programmatically, the more common solution is to create them with default values in the Studio user interface. Then you can use scripts to modify their values in response to player actions.
 
-<img width="50%" alt="A script within a folder in ReplicatedStorage." src="../assets/scripting/script-attributes.png" />
+<img alt="A script within a folder in ReplicatedStorage." src="../assets/studio/properties/Attributes-Example-B.png" width="320" />
 
 For information on creating attributes in Studio, see [Instance Attributes](../studio/properties.md#instance-attributes).
 

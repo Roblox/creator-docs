@@ -7,7 +7,7 @@ description: The Ads Manager is where advertisers can manage ad campaigns, ads r
 This feature is in beta.
 </Alert>
 
-**Ads Manager** offers advertisers valuable control over their ad campaigns, empowering them to create, optimize, and measure ads effectively while reaching their campaign objectives. Advertisers can use this tool to manage their ad campaigns, ads reporting, and ads billings in one place. Ads Manager allows you to create campaigns for **Immersive Ads** for ad units within experiences ([image](#image-ads) ads, [video](#video-ads) ads, [portal](#portal-ads) ads), [**sponsored experiences**](#sponsored-experiences), which appear on the Home and Search pages, and [search ads](./search-ads.md) that appear on Search results.
+**Ads Manager** offers advertisers valuable control over their ad campaigns, empowering them to create, optimize, and measure ads effectively while reaching their campaign objectives. Advertisers can use this tool to manage their ad campaigns, ads reporting, and ads billings in one place. Ads Manager allows you to create campaigns for **Immersive Ads** for ad units within experiences ([image](#image-ads) ads, [video](#video-ads) ads, [portal](#portal-ads) ads), [**sponsored experiences**](#sponsored-experiences), which appear on the Home page, and [search ads](./search-ads.md) that appear on Search results.
 
 ## Creating an Ad Account
 
@@ -73,7 +73,7 @@ Campaigns are defined by their **campaign objective** and **budgeting and schedu
 Campaign objectives are divided into three categories:
 
 - **Awareness:** Campaigns focused on awareness show image or autoplaying video ads to increase awareness of your brand within an experience.
-- **Visits:** Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form of either **Immersive Ads** placed within portal ad units in publisher experiences, or as **sponsored experiences** on the Home and Search pages. Advertisers are not able to promote their 17+ experiences using the **Visits** objective.
+- **Visits:** Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form of either **Immersive Ads** placed within portal ad units in publisher experiences, or as **sponsored experiences** on the Home page. Advertisers are not able to promote their 17+ experiences using the **Visits** objective.
 - **Video Views:** Campaigns focused on 15-second click-to-play video views to engage audiences in-experience.
 
 Budgeting and scheduling parameters control campaign spending and duration. There are two different types of budgets:
@@ -119,7 +119,7 @@ To set up an ad campaign:
 
 **Ad placement** refers to where your ads will be discoverable.
 
-- Advertisers with a visits campaign objective can choose between an **in-experience portal** within an experience or a **sponsored experience** on the Home and Search pages.
+- Advertisers with a visits campaign objective can choose between an **in-experience portal** within an experience or a **sponsored experience** on the Home page.
 
 - Advertisers with an awareness campaign objective can only choose an **in-experience video** or **image**.
 
@@ -381,7 +381,7 @@ Audience Genre targeting isn't available when buying sponsored experiences to re
 
 You can create three different types of ads using the Ads Manager:
 
-- [Sponsored Experiences](#sponsored-experiences) appear as sponsored experience tiles on the Home and Search pages.
+- [Sponsored Experiences](#sponsored-experiences) appear as sponsored experience tiles on the Home page.
 - [Portal Ads](#portal-ads) are static, non-clickable images within the 3D space of an experience, with a door that teleports a player into an advertiser's experience.
 - [Image Ads](#image-ads) are static, non-clickable images within the 3D space of an experience.
 - [Video Ads](#video-ads) are either auto-playing (non-rewarded) or click-to-play (can be rewarded) videos within the 3D space of an experience.
