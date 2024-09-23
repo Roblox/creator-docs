@@ -1,4 +1,4 @@
-Players.LocalPlayercharacter.ParentEnum.UserInputState.Begin10local START_POSITION = Vector3.new(-20, 10, 0)
+content/en-us/reference/engine/classes/Model.yamlgh pr checkout 840 Players.LocalPlayercharacter.ParentEnum.UserInputState.Begin10local START_POSITION = Vector3.new(-20, 10, 0)
 local END_POSITION = Vector3.new(0, 10, 0)
 
 local model = Instance.new("Model")
