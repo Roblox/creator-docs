@@ -65,7 +65,7 @@ To disable voice chat for a specific place within an experience:
 
 ## Checking Voice Chat Status
 
-You can check if a user has enabled voice chat by calling `Class.VoiceChatService:IsVoiceEnabledForUserIdAsync()|IsVoiceEnabledForUserIdAsync()` in a `Class.LocalScript`, or in a `Class.Script` with `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`. For example, if you want to enable a UI layer for voice‑enabled users, reference the following script:
+You can check if a user has enabled voice chat by calling `Class.VoiceChatService:IsVoiceEnabledForUserIdAsync()|IsVoiceEnabledForUserIdAsync()` in a `Class.LocalScript`, or in a `Class.Script` with `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
 
 ```lua title="Client Script - Check Voice Chat Status"
 local Players = game:GetService("Players")
@@ -77,6 +77,6 @@ local success, enabled = pcall(function()
 	return VoiceChatService:IsVoiceEnabledForUserIdAsync(localPlayer.UserId)
 end)
 if success and enabled then
-	localPlayer.PlayerGui.MyVoiceGui.Enabled = true
+	print("Voice chat enabled!")
 end
 ```

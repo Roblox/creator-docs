@@ -159,9 +159,7 @@ events:
     thread_safety: Unsafe
   - name: CaptureService.CaptureSaved
     summary: ''
-    description: |
-      This event has been superseded by the
-      `Class.CaptureService.UserCaptureSaved|UserCaptureSaved` event.
+    description: ''
     code_samples: []
     parameters:
       - name: captureInfo
@@ -170,7 +168,9 @@ events:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This event has been superseded by the
+      `Class.CaptureService.UserCaptureSaved|UserCaptureSaved` event.
     security: None
     thread_safety: Unsafe
   - name: CaptureService.UserCaptureSaved

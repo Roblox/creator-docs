@@ -52,7 +52,7 @@ Here's a list of all the available acquisition sources:
   </tr>
   <tr>
     <td>Sponsored Ads</td>
-    <td>Combined acquisition from [Sponsored Experiences](../promotion/ads-manager.md#sponsored-experiences) on **Home** and **Discover** and [Search Ads](../promotion/search-ads.md).</td>
+    <td>Combined acquisition from [Sponsored Experiences](../promotion/ads-manager.md#sponsored-experiences) on **Home** and [Search Ads](../promotion/search-ads.md).</td>
   </tr>
   <tr>
     <td>Teleport</td>

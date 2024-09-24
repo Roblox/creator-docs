@@ -438,7 +438,8 @@ properties:
       - Hidden
       - NotReplicated
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This property should not be used for new work.
     security:
       read: None
       write: PluginSecurity

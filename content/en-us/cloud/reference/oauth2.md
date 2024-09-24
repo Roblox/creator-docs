@@ -96,7 +96,7 @@ endpoint.
   the refresh token to obtain a new set of tokens, which includes an access token,
   a refresh token, and an ID token. A refresh token:
 
-  - Is valid for 6 months.
+  - Is valid for 90 days.
   - Can only be used once before it expires to refresh tokens.
   - Can be invalidated before it expires if an app user revokes the authorization.
 

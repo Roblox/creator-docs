@@ -1,30 +1,28 @@
 name: Status
 type: enum
 summary: |
-  It has been used with the unfinished RbxStatus library.
+  This enum was used with the unfinished `Class.Status` library.
 description: |
-  It has been used with the unfinished RbxStatus library which would have
+  This enum was used with the unfinished `Class.Status` library which would have
   allowed you to add conditions to a `Class.Humanoid`.
-
-  See `Class.Status` for more information.
 code_samples:
 tags:
   - Deprecated
 deprecation_message: |
-  This enum is deprecated as it is used by the following deprecated methods &
-  events: `Class.Humanoid.AddStatus`, `Class.Humanoid.HasStatus`,
-  `Class.Humanoid.RemoveStatus`, `Class.Humanoid.StatusAdded`,
-  `Class.Humanoid.StatusRemoved`. It should not be used in new work.
+  This enum is deprecated as it was only used by deprecated methods and events.
+  It should not be used in new work.
 items:
   - name: Poison
     value: 0
     summary: ''
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This option is deprecated.
   - name: Confusion
     value: 1
     summary: ''
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This option is deprecated.

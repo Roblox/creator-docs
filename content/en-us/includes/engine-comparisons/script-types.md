@@ -6,7 +6,7 @@ Roblox experiences support three different types of Luau scripts:
 
 - Client scripts
 
-  These scripts run on the client, and the server has no visibility into their behavior. For legacy reasons, these scripts can take the form of `LocalScripts` or `Scripts` with a `Class.BaseScript.RunContext|RunContext` value of `Client`. Client scripts typically live in `Class.ReplicatedStorage`, `Class.StarterPlayerScripts`, or `Class.StarterCharacterScripts`.
+  These scripts run on the client, and the server has no visibility into their behavior. For legacy reasons, these scripts can take the form of `Class.LocalScript|LocalScripts` or `Class.Script|Scripts` with a `Class.BaseScript.RunContext|RunContext` value of `Enum.RunContext|Client`. Client scripts typically live in `Class.ReplicatedStorage`, `Class.StarterPlayerScripts`, or `Class.StarterCharacterScripts`.
 
 - Server scripts
 

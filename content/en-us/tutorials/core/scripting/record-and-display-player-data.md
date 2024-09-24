@@ -356,7 +356,7 @@ data. To update **CoinService**:
       The changes to the original **CoinService** script include:
 
     - Importing the **PlayerData** and **Leaderboard** modules with the
-      `Global.RobloxGlobals.require()` function.
+      `Global.LuaGlobals.require()` function.
     - Declaring `COIN_AMOUNT_TO_ADD` as the number of
       coins to add when a player collects a coin, and `COIN_KEY_NAME` as the key
       name defined in **PlayerData**.

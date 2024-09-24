@@ -39,7 +39,7 @@ description: |
 
   If a `Class.ModuleScript` is uploaded to Roblox and the root module has the
   name set to `MainModule`, it can be uploaded as a model and required using
-  `Global.RobloxGLobals.require()` with the model's asset ID. Then it can be
+  `Global.LuaGlobals.require()` with the model's asset ID. Then it can be
   loaded into your experience, although this logic only works on the server and
   will error on the client. If other users want to use the module, **it must be
   public**.

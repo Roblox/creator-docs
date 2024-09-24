@@ -64,9 +64,6 @@ methods:
 
       This function can throw an error if the HTTP call fails.
 
-      The following code sample enables a UI layer only for voice enabled
-      players.
-
       ```lua
       local Players = game:GetService("Players")
       local VoiceChatService = game:GetService("VoiceChatService")
@@ -76,7 +73,7 @@ methods:
       	return VoiceChatService:IsVoiceEnabledForUserIdAsync(localPlayer.UserId)
       end)
       if success and enabled then
-      	localPlayer.PlayerGui.MyVoiceGui.Enabled = true
+      	print("Voice chat enabled!")
       end
       ```
     code_samples:
