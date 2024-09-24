@@ -1,6 +1,6 @@
 # Roblox Creator Documentation
 
-This repository holds source code for the creator documentation at [create.roblox.com/docs](https://create.roblox.com/docs).
+g
 
 **Note**: Currently, the repository has guides, tutorials, educational content, and the Engine API reference. Code samples are coming soon.
 
