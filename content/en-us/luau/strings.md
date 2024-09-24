@@ -549,3 +549,41 @@ the following:
 		</tr>
 	</tbody>
 </table>
+
+In addition to all of the above, there is a special case with an **empty capture** (`()`). If a capture is empty, then the position in the string will be captured:
+
+```lua
+local match1 = "Where does the capture happen? Who knows!"
+local match2 = "This string is longer than the first one. Where does the capture happen? Who knows?!"
+
+local pattern = "()Where does the capture happen%? Who knows!()"
+
+local start1, finish1 = string.match(match1, pattern)
+print(start1, finish1)  --> 1 42
+
+local start2, finish2 = string.match(match2, pattern)
+print(start2, finish2)  --> 43 84
+```
+
+These special captures may be nested like normal ones:
+
+```lua
+local places = "The Cloud Kingdom is heavenly, The Forest Kingdom is peaceful."
+local pattern = "The (%a+()) Kingdom is %a+"
+
+for kingdom, position in string.gmatch(places, pattern) do
+	print(kingdom, position)
+end
+--> Cloud 10
+--> Forest 42
+```
+
+The returned values are unusual in that they are **numbers** rather than strings:
+
+```lua
+local match = "This is an example"
+local pattern = "This is an ()example"
+
+local position = string.match(match, pattern)
+print(typeof(position))  --> number
+```
