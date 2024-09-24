@@ -1925,15 +1925,13 @@ methods:
       `Class.Humanoid`.
     description: |
       This function sets whether a given `Enum.HumanoidStateType` is enabled for
-      the `Class.Humanoid`.
+      the `Class.Humanoid`. When a particular `Enum.HumanoidStateType` is
+      disabled, the `Class.Humanoid` can never enter that state. This is true
+      regardless if the attempt to change state is made using
+      `Class.Humanoid:ChangeState()` or Roblox internal `Class.Humanoid` code.
 
-      The humanoid state describes the activity the `Class.Humanoid` is
-      currently doing.
-
-      When a particular `Enum.HumanoidStateType` is disabled, the
-      `Class.Humanoid` can never enter that state. This is true regardless if
-      the attempt to change state is made using `Class.Humanoid:ChangeState()`
-      or Roblox internal `Class.Humanoid` code.
+      Note that using `SetStateEnabled()` on the server does not replicate the
+      change to the client, nor vice-versa.
     code_samples:
       - jump-cooldown
     parameters:
@@ -1946,7 +1944,7 @@ methods:
         type: bool
         default:
         summary: |
-          _True_ if this state is to be enabled, _false_ if it is to be
+          `true` if `state` is to be enabled, `false` if `state` is to be
           disabled.
     returns:
       - type: void
