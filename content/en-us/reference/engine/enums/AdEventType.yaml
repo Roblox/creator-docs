@@ -11,19 +11,22 @@ items:
     value: 0
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This option should not be used for new work.
   - name: VideoRemoved
     summary: ''
     value: 1
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This option should not be used for new work.
   - name: UserCompletedVideo
     summary: ''
     value: 2
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This option should not be used for new work.
   - name: RewardedAdLoaded
     summary: |
       The event is fired when a click-to-play video ads is being served. This

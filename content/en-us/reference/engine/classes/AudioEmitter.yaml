@@ -139,6 +139,10 @@ methods:
       straight lines, and beyond its left and right endpoints the curve extends
       outward infinitely at their respective volume levels.
 
+      This volume will be multiplied with the volume from the
+      `Class.AudioListener.DistanceAttenuation` curve of the `Class.AudioListener`
+      to obtain the final audibility.
+
       If the table is empty or `nil`, the `Class.AudioEmitter` defaults to using
       a distance attenuation curve determined by the inverse-square law.
     code_samples:

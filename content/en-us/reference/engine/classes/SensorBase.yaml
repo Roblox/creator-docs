@@ -52,7 +52,8 @@ methods:
         summary: ''
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This method should not be used in new work.
     security: None
     thread_safety: Unsafe
 events:

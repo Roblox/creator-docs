@@ -1,9 +1,9 @@
 ---
 title: Passes
-description: Passes allow you to charge a one-time Robux fee in order for users to access special privileges in your experience.
+description: Passes let you charge users a one-time Robux fee to access privileges inside your experience.
 ---
 
-**Passes** allow you to charge a **one-time Robux fee** in order for players to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
+**Passes** let you charge users a one-time Robux fee to access special privileges inside your experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
 
 <Alert severity="info">
    For items that a player might purchase multiple times, such as potions, temporary power-ups, or in-experience currency, see [Developer Products](../../production/monetization/developer-products.md).
@@ -12,14 +12,17 @@ description: Passes allow you to charge a one-time Robux fee in order for users 
 ## Creating Passes
 
 <Alert severity="warning">
-   Before you can create a Pass, you must first [publish your experience](../../production/publishing/publishing-experiences-and-places.md) so it's accessible on the Roblox site.
+   Before creating a pass, make sure your experience has been [published](../../production/publishing/publishing-experiences-and-places.md) and is accessible on Roblox.
 </Alert>
 
-When you're creating an image to use for your Pass, consider the following requirements:
+To create a pass:
 
-- Use a template of **512×512 pixels**.
-- Save the image in either `.jpg`, `.png`, or `.bmp` format.
-- Don't include important details outside of the circular boundaries because the upload process trims and crops the final badge into a circular image.
+1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
+2. Go to **Monetization** &rang; **Passes**.
+3. Click **Create a Pass**.
+4. Upload an image to display as the pass icon. Make sure the image doesn't exceed 512x512 pixels, doesn't include important details outside of its circular boundaries, and is in `.jpg`, `.png`, or `.bmp` format.
+5. Enter a name and a description for the pass.
+6. Click **Create Pass**.
 
 <GridContainer numColumns="2">
   <figure>
@@ -36,144 +39,77 @@ When you're creating an image to use for your Pass, consider the following requi
   </figure>
 </GridContainer>
 
-To create a new Pass:
-
-1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
-2. In the **Monetization** menu, select **Passes**. All passes for that experience display.
-
-   <img src="../../assets/creator-dashboard/Experience-Nav-Monetization-Passes.png" width="330" />
-
-3. Click the **Create a Pass** button.
-4. Uploading an image for your pass is optional. If desired, press the **Change** button to change the default image and upload your own.
-5. Fill in the following fields:
-
-   - **Name**: A title for your Pass.
-   - **Description**: A description what a player should expect when they purchase the Pass.
-
-6. Click the **Create Pass** button. The Pass displays within the **Passes** section of the **Creations** page.
-
 <Alert severity="info">
-   If the pass will be used as a "randomized" reward, remember to review the <a href="./randomized-virtual-items-policy.md">Randomized Virtual Item Policy</a>.
+   If you want to use the pass as a randomized reward, review the [Randomized Virtual Item Policy](./randomized-virtual-items-policy.md).
 </Alert>
 
-### Locating Pass IDs
+## Getting Pass IDs
 
-A Pass ID is the unique identifier of a Pass. You need this ID to [assign the Pass a special privilege](#assigning-pass-privileges).
+To use scripting, you need a pass ID. To get the pass ID:
 
-To locate a Pass ID:
-
-1. Navigate to the **Passes** section of an experience's **Monetization** menu.
-
-1. Hover over a Pass thumbnail and click the **&ctdot;** button. A contextual menu displays.
-
-1. Select **Copy Asset ID**. The Pass ID copies to your clipboard.
+1. Go to **Monetization** &rang; **Passes**.
+2. Hover over the pass and click the **&ctdot;** menu.
+3. Click **Copy Asset ID** to copy the ID to your clipboard.
 
    <img src="../../assets/creator-dashboard/Pass-Copy-Asset-ID.png" width="400" />
 
-## Monetizing Passes
+## Selling Passes
 
-After you [create a Pass](#creating-passes), you can configure its settings to monetize it.
+You can sell passes outside or inside an experience.
 
-To monetize a Pass:
+### Outside an Experience
 
-1. Navigate to the **Passes** section of an experience's **Monetization** menu.
+To sell a pass in an experience's **Store** page:
 
-1. Hover over a Pass thumbnail and click the **&ctdot;** button. A contextual menu displays.
+1. Go to **Monetization** &rang; **Passes**.
+2. Hover over the pass and click the **&ctdot;** menu.
+3. Select the pass you want to sell.
+4. Select **Sales**.
+5. Enable to **Item for Sale** toggle.
+6. In the **Price in Robux** field, enter the amount of Robux you want to charge users for the pass. The price you enter affects how much Robux you earn per sale.
+7. Click **Save Changes**. The pass populates in the experience's **Store** page.
 
-1. Select **Open in New Tab**. The **Configure Pass** page displays.
+### Inside an Experience
 
-   <img src="../../assets/monetization/game-passes/Open-In-New-Tab.png" width="50%" />
+To implement and sell a pass inside an experience, call `Class.MarketplaceService|MarketplaceService` functions.
 
-1. In the left-hand navigation, select **Sales**.
+Use `Class.MarketplaceService:GetProductInfo()|GetProductInfo()` to retrieve information about a pass, like name and price, and then to display that pass to users. You can sell the pass inside your experience's marketplace, for example. For passes, the second parameter must be `Enum.InfoType.GamePass`.
 
-   <img src="../../assets/monetization/game-passes/Configure-Sales-Button.png" width="50%" />
+```lua
+local MarketplaceService = game:GetService("MarketplaceService")
 
-1. Enable the **Item for Sale** toggle.
+-- Replace the placeholder ID with your pass ID
+local productId = 000000
 
-   <img src="../../assets/monetization/game-passes/Configure-For-Sale-Toggle.png" width="50%" />
+local success, productInfo = pcall(function()
+	return MarketplaceService:GetProductInfo(productId, Enum.InfoType.GamePass)
+end)
 
-1. In the **Price** field, enter the amount of Robux you want to charge players for the Pass. The price you enter affects the amount of Robux you earn per sale.
 
-   <img src="../../assets/monetization/game-passes/Configure-Set-Price.png" width="60%" />
+if success and productInfo then
+	-- Check if product is for sale
+	if productInfo.IsForSale then
+	-- Display product information
+	-- Replace the print statements with UI code to display the pass
+  	print("Pass Name: " .. productInfo.Name)
+  	print("Price in Robux: " .. productInfo.PriceInRobux)
+  	print("Description: " .. productInfo.Description)
+	else
+		print("This product isn't for sale")
+	end
+end
+```
 
-1. Click the **Save Changes** button.
-
-## Assigning Pass Privileges
-
-Once a player purchases a Pass, they'll expect to receive the associated special privilege when they play your experience. This does **not** happen automatically, so you must check which players own the Pass and assign the special privilege to them.
-
-The following script checks when any player enters the experience, then verifies if that player owns the Pass with the matching ID set in the variable `passID`. Place this code in a `Class.Script` within `Class.ServerScriptService` so the server can handle the special privilege given to the player.
+Use `Class.MarketplaceService:PromptPurchase()|PromptPurchase()` to prompt a pass purchase if the user doesn't already have the pass in their inventory. You can call this function when a user performs actions like pressing a button or talking to a vendor NPC.
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
 local Players = game:GetService("Players")
 
-local passID = 0000000  -- Change this to your Pass ID
+-- Replace the placeholder ID with your pass ID
+local passID = 0000000
 
-local function onPlayerAdded(player)
-	local hasPass = false
-
-	-- Check if the player already owns the Pass
-	local success, message = pcall(function()
-		hasPass = MarketplaceService:UserOwnsGamePassAsync(player.UserId, passID)
-	end)
-
-	-- If there's an error, issue a warning and exit the function
-	if not success then
-		warn("Error while checking if player has pass: " .. tostring(message))
-		return
-	end
-
-	if hasPass then
-		print(player.Name .. " owns the Pass with ID " .. passID)
-		-- Assign this player the ability or bonus related to the Pass
-	end
-end
-
--- Connect "PlayerAdded" events to the function
-Players.PlayerAdded:Connect(onPlayerAdded)
-```
-
-## Prompting In-Experience Purchases
-
-While players can purchase Passes directly from your experience's main page, you can also offer **in-experience purchases** to players through a shop or vendor NPC within the experience. Reference the example [server-side](#example-server-side-script) and [client-side](#example-client-side-script) scripts for a basic model to prompt players to purchase Passes.
-
-<Alert severity="warning">
-   Roblox itself does **not** record the purchase history of Passes by specific players, although you can [view overall daily and monthly stats](../../production/analytics/index.md). If you want to track player-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores).
-</Alert>
-
-### Example Server-Side Script
-
-Place this code in a `Class.Script` object within `Class.ServerScriptService` so the server can handle the special privilege given to the player.
-
-```lua
-local MarketplaceService = game:GetService("MarketplaceService")
-
-local passID = 0000000  -- Change this to your Pass ID
-
--- Function to handle a completed prompt and purchase
-local function onPromptPurchaseFinished(player, purchasedPassID, purchaseSuccess)
-	if purchaseSuccess and purchasedPassID == passID then
-		print(player.Name .. " purchased the Pass with ID " .. passID)
-		-- Assign this player the ability or bonus related to the Pass
-	end
-end
-
--- Connect "PromptGamePassPurchaseFinished" events to the function
-MarketplaceService.PromptGamePassPurchaseFinished:Connect(onPromptPurchaseFinished)
-```
-
-### Example Client-Side Script
-
-The following code implements a `promptPurchase()` function which safely checks if a player has a Pass and prompts them to purchase it if they don't already have it. Place this code in a `Class.LocalScript` and call `promptPurchase()` in situations such as when the player clicks a [button](../../ui/buttons.md) or when their character touches a part.
-
-```lua
-local MarketplaceService = game:GetService("MarketplaceService")
-local Players = game:GetService("Players")
-
-local passID = 0000000  -- Change this to your Pass ID
-
--- Function to prompt purchase of the Pass
+-- Prompt pass purchase
 local function promptPurchase()
 	local player = Players.LocalPlayer
 	local hasPass = false
@@ -188,30 +124,91 @@ local function promptPurchase()
 	end
 
 	if hasPass then
-		-- Player already owns the Pass; tell them somehow
+		-- Show a message telling user they already own the pass
 	else
-		-- Player does NOT own the Pass; prompt them to purchase
+		-- Prompt pass purchase
 		MarketplaceService:PromptGamePassPurchase(player, passID)
 	end
 end
 ```
 
-## Passes Analytics
+Use `Class.MarketplaceService:PromptGamePassPurchaseFinished()|PromptGamePassPurchaseFinished()` to handle a completed pass prompt and purchase and assign the user the privileges associated with the pass.
 
-Passes Analytics help you gauge the success of individual Passes, identify trends, and forecast potential future earnings.
+Place the script inside the `Class.ServerScriptService` so that the server handles the user's pass privileges.
 
-To access Passes analytics:
+```lua
+local MarketplaceService = game:GetService("MarketplaceService")
 
-1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
+-- Replace the placeholder ID with your pass ID
+local passID = 0000000  -- Change this to your Pass ID
 
-2. Navigate to **Monetization > Passes** and select the **Analytics** tab.
+-- Handle a completed prompt and purchase
+local function onPromptPurchaseFinished(player, purchasedPassID, purchaseSuccess)
+	if purchaseSuccess and purchasedPassID == passID then
+		print(player.Name .. " purchased the Pass with ID " .. passID)
+		-- Assign the user the ability or bonus related to the pass
+	end
+end
 
-<img src="../../assets/monetization/game-passes/passes-analytics.png" width="100%" />
+-- Connect PromptGamePassPurchaseFinished events to the function
+MarketplaceService.PromptGamePassPurchaseFinished:Connect(onPromptPurchaseFinished)
+```
 
-The analytics tab enables you to:
+<Alert severity="warning">
+Although Roblox itself does **not** record the purchase history of developer products by specific users, you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores).
+</Alert>
 
-- **View top performing items:** See your top selling and top grossing Passes over a selected time period.
-- **Analyze overall sales and net revenue:** Showcase up to eight top items on a time-series graph.
-- **Monitor your catalog:** Examine a table with up to 400 items, sortable by sales and net revenue.
+## Assigning Pass Privileges
+
+You must manually assign pass privileges to users that purchase your passes. To do this, use `Class.Players.PlayerAdded|PlayerAdded` when a user joins your experience to check if they already own the pass and to assign them the pass privileges.
+
+Place the script inside the `Class.ServerScriptService` so that the server handles the user's pass privileges.
+
+```lua
+local MarketplaceService = game:GetService("MarketplaceService")
+local Players = game:GetService("Players")
+
+-- Replace the placeholder ID with your pass ID
+local passID = 0000000
+
+local function onPlayerAdded(player)
+	local hasPass = false
+
+	-- Check if user already owns the pass
+	local success, message = pcall(function()
+		hasPass = MarketplaceService:UserOwnsGamePassAsync(player.UserId, passID)
+	end)
+
+	if not success then
+		-- Issue a warning and exit the function
+		warn("Error while checking if player has pass: " .. tostring(message))
+		return
+	end
+
+	if hasPass then
+		-- Assign user the ability or bonus related to the pass
+		print(player.Name .. " owns the Pass with ID " .. passID)
+	end
+end
+
+-- Connect PlayerAdded events to the function
+Players.PlayerAdded:Connect(onPlayerAdded)
+```
+
+## Pass Analytics
+
+Use pass analytics to analyze the success of individual passes, identify trends, and forecast potential future earnings.
+
+With analytics, you can:
+
+- View your top passes over a selected time period.
+- Showcase up to eight top-selling items on a time-series graph to analyze overall sales and net revenue.
+- Monitor your catalog and sort items by sales and net revenue.
+
+To access pass analytics:
+
+1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
+2. Go to **Monetization** &rang; **Passes**.
+3. Select the **Analytics** tab.
 
 <img src="../../assets/monetization/game-passes/passes-analytics-2.png" width="100%" />

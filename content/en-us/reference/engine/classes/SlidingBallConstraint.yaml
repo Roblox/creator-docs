@@ -291,7 +291,8 @@ properties:
     type: bool
     tags:
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: |
+      This property should not be used in new work.
     security:
       read: None
       write: None
