@@ -109,16 +109,22 @@ properties:
       can_save: true
   - name: Model.PrimaryPart
     summary: |
-      Points to the primary part of the `Class.Model`.
+      The primary part of the `Class.Model`, or `nil` if
+      not explicitly set.
     description: |
       Points to the primary part of the `Class.Model`. The primary part is the
       `Class.BasePart` that acts as the physical reference for the pivot of the
       model. That is, when parts within the model are moved due to physical
       simulation or other means, the pivot will move in sync with the primary
-      part. If the primary part is **not** set, the pivot will remain at the
-      same location in world space even if parts within the model are moved.
+      part. 
+      
+      Note that `Class.Model|Models` do not have `PrimaryPart` set by
+      default. If you are creating a model that needs to be acted upon by
+      physics, you should manually set this property in Studio or within a
+      script. If the primary part is **not** set, the pivot will remain at the
+      same location in world space, even if parts within the model are moved.
 
-      Note that when setting this property, it must be a `Class.BasePart` that
+      Also note that when setting this property, it must be a `Class.BasePart` that
       is a descendant of the model. If you try to set `Class.Model.PrimaryPart`
       to a `Class.BasePart` that is **not** a descendant of the model, it will
       be set to that part but reset to `nil` during the next simulation step
