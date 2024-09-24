@@ -586,3 +586,4 @@ local pattern = "This is an ()example"
 
 local position = string.match(match, pattern)
 print(typeof(position))  --> number
+```
