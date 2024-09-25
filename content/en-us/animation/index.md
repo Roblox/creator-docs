@@ -3,7 +3,7 @@ title: Animation in Roblox
 description: An overview of all animation tools in Roblox Studio.
 ---
 
-**Animation** is the process of applying movement and motion to your characters, objects, and environments to create an engaging and dynamic experience. While there are many ways to make objects move and interact, animation in Roblox typically refers to customizing an expressive movement of a specific character, or group of parts, using the **Animation Editor** or **animation-related APIs**.
+**Animation** is the process of applying motion to your characters, objects, and environments to create an engaging and dynamic experience. While there are many ways to make objects move and interact, animation in Roblox typically refers to customizing an expressive movement of a specific character, or group of parts, using the **Animation Editor** or **animation-related APIs**.
 
 Animation can apply to any Roblox part or group of parts. Different types of objects can utilize various animation features. The following are the general categories of animatable objects:
 
