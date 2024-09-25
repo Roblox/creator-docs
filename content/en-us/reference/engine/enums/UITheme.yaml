@@ -3,8 +3,7 @@ type: enum
 summary: ''
 description: ''
 code_samples:
-tags:
-  - Deprecated
+tags: []
 deprecation_message: |
   This enum refers to a deprecated setting and should not be used for new work.
 items:

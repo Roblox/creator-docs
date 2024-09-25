@@ -18,27 +18,27 @@ items:
     deprecation_message: ''
   - name: Grow
     summary: |
-      Sets an effective **1:0** grow‑shrink ratio on the parent
-      `Class.GuiObject`. Objects set to **Grow** never shrink below their basis
-      size, so overflow may occur if the container becomes smaller than the flex
-      line's combined basis size.
+      Sets an effective `1:0` grow‑shrink ratio on the parent `Class.GuiObject`.
+      Objects set to `Grow` never shrink below their basis size, so overflow may
+      occur if the container becomes smaller than the flex line's combined basis
+      size.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Shrink
     summary: |
-      Sets an effective **0:1** grow‑shrink ratio on the parent
-      `Class.GuiObject`. Objects set to **Shrink** never grow above their basis
-      size, so underflow may occur if the container becomes larger than the flex
-      line's combined basis size.
+      Sets an effective `0:1` grow‑shrink ratio on the parent `Class.GuiObject`.
+      Objects set to `Shrink` never grow above their basis size, so underflow
+      may occur if the container becomes larger than the flex line's combined
+      basis size.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Fill
     summary: |
-      Sets an effective **1:1** grow‑shrink ratio on the parent
-      `Class.GuiObject`. This setting ensures the flex line always fills the
-      container, even if the container size changes.
+      Sets an effective `1:1` grow‑shrink ratio on the parent `Class.GuiObject`.
+      This setting ensures the flex line always fills the container, even if the
+      container size changes.
     value: 3
     tags: []
     deprecation_message: ''

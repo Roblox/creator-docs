@@ -1,9 +1,11 @@
 name: AdShape
 type: enum
 summary: |
-  Describes the form factor of an ad in an `Class.AdGui`. There is currently only one available size.
+  Describes the form factor of an ad in an `Class.AdGui`. There is currently
+  only one available size.
 description: |
-  Describes the form factor of an ad in an `Class.AdGui`. There is currently only one available size.
+  Describes the form factor of an ad in an `Class.AdGui`. There is currently
+  only one available size.
 code_samples: []
 tags: []
 deprecation_message: ''

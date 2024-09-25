@@ -30,7 +30,7 @@ items:
       `Class.UIListLayout.FillDirection|FillDirection`. If
       `Class.UIListLayout.HorizontalFlex|HorizontalFlex` or
       `Class.UIListLayout.VerticalFlex|VerticalFlex` is enabled for the
-      `Class.UIListLayout` cross‑direction, **Stretch** will be used for that
+      `Class.UIListLayout` cross‑direction, `Stretch` will be used for that
       direction.
     value: 0
     tags: []

@@ -17,27 +17,34 @@ constructors:
       - name: time
         type: number
         default: 1
-        summary: ''
+        summary: |
+          Duration for the tween, in seconds.
       - name: easingStyle
         type: EasingStyle
         default: Enum.EasingStyle.Quad
-        summary: ''
+        summary: |
+          Easing style for the tween.
       - name: easingDirection
         type: EasingDirection
         default: Enum.EasingDirection.Out
-        summary: ''
+        summary: |
+          The direction in which the tween executes.
       - name: repeatCount
         type: number
         default: 0
-        summary: ''
+        summary: |
+          Number of times the tween should repeat. `-1` repeats indefinitely.
       - name: reverses
         type: bool
         default: false
-        summary: ''
+        summary: |
+          Whether the tween should reverse to the starting values once it
+          reaches its targets.
       - name: delayTime
         type: number
         default: 0
-        summary: ''
+        summary: |
+          Time of delay until the tween begins, in seconds.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -46,36 +53,36 @@ properties:
   - name: TweenInfo.EasingDirection
     type: EasingDirection
     summary: |
-      The direction in which the EasingStyle executes.
+      The direction in which the tween executes.
     description: |
-      The direction in which the EasingStyle executes.
+      The direction in which the tween executes.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: TweenInfo.Time
     type: number
     summary: |
-      The amount of time the tween takes in seconds.
+      Duration of the tween, in seconds.
     description: |
-      The amount of time the tween takes in seconds.
+      Duration of the tween, in seconds.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: TweenInfo.DelayTime
     type: number
     summary: |
-      The amount of time that elapses before tween starts in seconds.
+      Time of delay until the tween begins, in seconds.
     description: |
-      The amount of time that elapses before tween starts in seconds.
+      Time of delay until the tween begins, in seconds.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: TweenInfo.RepeatCount
     type: number
     summary: |
-      The number of times the tween repeats after tweening once.
+      Number of times the tween repeats.
     description: |
-      The number of times the tween repeats after tweening once.
+      Number of times the tween repeats. `-1` indicates indefinite repetition.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -91,11 +98,11 @@ properties:
   - name: TweenInfo.Reverses
     type: bool
     summary: |
-      Whether or not the tween does the reverse tween once the initial tween
-      completes.
+      Whether or not the tween interpolates in reverse tween once the initial
+      tween completes.
     description: |
-      Whether or not the tween does the reverse tween once the initial tween
-      completes.
+      Whether or not the tween interpolates in reverse tween once the initial
+      tween completes.
     code_samples: []
     tags: []
     deprecation_message: ''

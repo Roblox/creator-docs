@@ -3,16 +3,25 @@ type: class
 category: GUI
 memory_category: Gui
 summary: |
-  A GuiObject that renders as a plain rectangle, generally used as a container.
+  A `Class.GuiObject` that renders as a plain rectangle, generally used as a
+  container.
 description: |
-  Frame is a `Class.GuiObject` that renders as a plain rectangle with no other
-  content. They are the simplest concrete example of a `Class.GuiObject`, as
-  they provide very little additional functionality (`Class.Frame.FrameStyle`).
-  Despite this, Frames are useful as containers for other
-  `Class.GuiObject|GuiObjects`, such as `Class.TextLabel`, `Class.ImageLabel`.
-  The key benefit to using a Frame over a `Class.Folder` as a container object
-  is the ability to further manipulate the `Class.GuiObject.Size` and
-  `Class.GuiObject.Position` of any descendant `Class.GuiObject`.
+  `Frame` is a `Class.GuiObject` that acts as a container for other
+  `Class.GuiObject|GuiObjects`. You can use it for UI that either displays on a
+  user's [screen](../../../ui/on-screen-containers.md) or on a
+  [surface](../../../ui/in-experience-containers.md) within the experience.
+
+  <img src="/assets/ui/ui-objects/Frame-Example.jpg" width="840" />
+
+  When you manipulate frames, you also manipulate the
+  `Class.GuiObject|GuiObjects` they contain. For example, if you change the
+  position of a `Class.Frame` object with a child `Class.TextLabel`, you also
+  change the position of that label. In addition, all frames are also
+  `Class.GuiObject|GuiObjects`, so you can customize their properties, such as
+  `Class.GuiObject.BackgroundColor3|BackgroundColor3`,
+  `Class.GuiObject.BorderMode|BorderMode`,
+  `Class.GuiObject.Transparency|Transparency`, and
+  `Class.GuiObject.Rotation|Rotation`, to fit the aesthetics of your experience.
 code_samples:
 inherits:
   - GuiObject

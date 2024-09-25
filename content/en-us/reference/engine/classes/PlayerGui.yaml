@@ -3,27 +3,33 @@ type: class
 category: GUI
 memory_category: Instances
 summary: |
-  A container for a Player's currently rendered ScreenGuis.
+  A container for a player's currently rendered `Class.ScreenGui|ScreenGuis`.
 description: |
-  The PlayerGui object is a container that holds a player's user GUI. If a
-  `Class.ScreenGui` is a descendant of a PlayerGui, then any `Class.GuiObject`
-  inside of the ScreenGui will be drawn to the player's screen. Any
-  `Class.LocalScript` will run as soon as it is inserted into a PlayerGui.
+  `PlayerGui` is a container that holds a player's UI. If a `Class.ScreenGui` is
+  a descendant, then any `Class.GuiObject` inside of the `Class.ScreenGui` will
+  be drawn to the player's screen. Any `Class.LocalScript` will also run if it
+  is inserted into a `PlayerGui`.
 
-  When a player first joins a game, their PlayerGui is automatically inserted
-  into their `Class.Player` object. When the player's `Class.Player.Character`
-  spawns for the first time all of the contents of `Class.StarterGui` are
-  automatically copied into the player's PlayerGui. Note that if
-  `Class.Players.CharacterAutoLoads` is set to false the character will not
-  spawn and StarterGui contents will not be copied until
-  `Class.Player:LoadCharacter()` is called. If
-  `Class.StarterGui.ResetPlayerGuiOnSpawn` is set to true then every time the
-  player's character respawns all of the contents of that player's PlayerGui is
-  cleared and replaced with the contents of StarterGui.
+  When a player first joins the experience, their `PlayerGui` is automatically
+  inserted into their `Class.Player` object. When the player's
+  `Class.Player.Character` spawns for the first time, all of the contents of
+  `Class.StarterGui` are automatically copied into the player's `PlayerGui`.
+  Note that if `Class.Players.CharacterAutoLoads` is set to `false`, the
+  character will not spawn and `Class.StarterGui` contents will not be copied
+  until `Class.Player:LoadCharacter()` is called. If
+  `Class.StarterGui.ResetPlayerGuiOnSpawn` is set to `true`, then every time the
+  player's character respawns, all of the contents of that player's `PlayerGui`
+  are cleared and replaced with the contents of `Class.StarterGui`.
+
+  If you need to control a player's UI container during playtime, for example to
+  show/hide a specific `Class.ScreenGui` or any of its children, access it as
+  follows from a `Class.LocalScript`:
 
   ```lua
-  -- Accessing PlayerGui from a LocalScript:
-  game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
+  local Players = game:GetService("Players")
+
+  local player = Players.LocalPlayer
+  local playerGui = player.PlayerGui
   ```
 code_samples:
 inherits:
@@ -35,9 +41,9 @@ deprecation_message: ''
 properties:
   - name: PlayerGui.CurrentScreenOrientation
     summary: |
-      Describes the user's current screen orientation.
+      Describes the player's current screen orientation.
     description: |
-      Describes the user's current screen orientation.
+      Describes the player's current screen orientation.
     code_samples:
     type: ScreenOrientation
     tags:
@@ -54,11 +60,11 @@ properties:
       can_save: false
   - name: PlayerGui.ScreenOrientation
     summary: |
-      Sets the preferred screen orientation mode for this user, if the user is
-      on a mobile device.
+      Sets the preferred screen orientation mode for this player, if on a mobile
+      device.
     description: |
-      Sets the preferred screen orientation mode for this user, if the user is
-      on a mobile device.
+      Sets the preferred screen orientation mode for this player, if on a mobile
+      device.
     code_samples:
     type: ScreenOrientation
     tags: []
@@ -73,11 +79,10 @@ properties:
       can_save: true
   - name: PlayerGui.SelectionImageObject
     summary: |
-      Overrides the default selection adornment (used for gamepads). For best
-      results, this should point to a GuiObject.
+      Overrides the default selection adornment used for gamepads.
     description: |
-      Overrides the default selection adornment (used for gamepads). For best
-      results, this should point to a GuiObject.
+      Overrides the default selection adornment used for gamepads. For best
+      results, this should point to a `Class.GuiObject`.
     code_samples:
     type: GuiObject
     tags: []
@@ -109,34 +114,17 @@ methods:
     thread_safety: Unsafe
   - name: PlayerGui:SetTopbarTransparency
     summary: |
-      Sets the transparency of the Topbar CoreGui.
+      Sets the transparency of the top bar.
     description: |
-      SetTopbarTransparency sets the transparency of the Topbar CoreGui. A value
-      of 0 is completely opaque, and a value of 1 is completely transparent.
-      Values outside of the range [0, 1] are clamped. The default transparency
-      of the topbar is 0.5. The current transparency can be retrieved using the
-      similarly-named
-      `Class.PlayerGui:GetTopbarTransparency()|GetTopbarTransparency` function.
+      `SetTopbarTransparency()` sets the transparency of the top bar
+      `Class.CoreGui`. A value of `0` is completely opaque and a value of `1` is
+      completely transparent. Values outside of the range `[0, 1]` are clamped.
+      The default transparency of the topbar is `0.5`.
 
-      #### Comparison of Values
-
-      The screenshots below show the topbar at 1.0, 0.5 and 0.0 transparency.
-      <img src="../../../assets/legacy/Topbar_Transparency_1.0.png" alt="The TopBar with a transparency of 1.0 (completely hidden)]"  />
-      <img src="../../../assets/legacy/Topbar_Transparency_0.5.png" alt="The TopBar with a transparency of 0.5 (50% transparency)]"  />
-      <img src="../../../assets/legacy/Topbar_Transparency_0.png" alt="The TopBar with a transparency of 0.0 (completely opaque)"  />
-
-      #### Usage
-
-      This method is often used when re-styling the topbar to match the visual
-      aesthetic of a game. By hiding the topbar, you can create your own custom
-      topbar. See the code samples for an example.
-
-      #### Alternative
-
-      Using the `Class.StarterGui:SetCore()` method with the `TopbarEnabled`
+      Using the `Class.StarterGui:SetCore()` method with the `"TopbarEnabled"`
       option allows you to enable/disable the entire topbar and all of its
       features (player list, health, etc). By contrast, this method only affects
-      how the topbar is displayed.
+      how the top bar is displayed.
     code_samples:
       - PlayerGui-SetTopbarTransparency1
       - custom-topbar-style

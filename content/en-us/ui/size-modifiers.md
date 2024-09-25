@@ -81,7 +81,7 @@ There are three types of **constraints** you can use for a user interface object
 
 The `Class.UISizeConstraint` specifies a minimum and maximum size for a `Class.GuiObject`. This constraint ensures that the `Class.GuiObject` doesn't become too small or large on different screen sizes.
 
-For example, if you set the `Class.UISizeConstraint.MinSize|MinSize` property to `Datatype.Vector2.new()|(200, 200)` and the `Class.UISizeConstraint.MaxSize|MaxSize` property to `Datatype.Vector2.new()|(400, 400)`, the `Class.GuiObject` cannot scale smaller than 200&times;200 pixels or larger than 400&times;400 pixels.
+For example, if you set the `Class.UISizeConstraint.MinSize|MinSize` property to <Typography noWrap>`(200, 200)`</Typography> and the `Class.UISizeConstraint.MaxSize|MaxSize` property to <Typography noWrap>`(400, 400)`</Typography>, the `Class.GuiObject` cannot scale smaller than 200&times;200 pixels or larger than 400&times;400 pixels.
 
 <Alert severity="warning">
 When a UI object is under control of both a layout structure such as `Class.UIListLayout` and a `Class.UISizeConstraint`, the constraint will **override** the layout and control the object's size.
@@ -95,7 +95,7 @@ If you enable the `Class.TextLabel.TextScaled|TextScaled` property of the parent
 
 For example, the following `Class.TextLabel` object has a `Class.UITextSizeConstraint` with a `Class.UITextSizeConstraint.MinTextSize|MinTextSize` value of `50` and a MaxTextSize value of `80`. Even when the `Class.TextLabel` becomes smaller, the font never becomes smaller than 50 pixels, and when the object becomes large, the font next exceeds 80 pixels.
 
-<video src="../assets/ui/layout-appearance/UITextSizeConstraint.mp4" controls width="80%" ></video>
+<video src="../assets/ui/ui-objects/UITextSizeConstraint.mp4" controls width="80%" ></video>
 
 <Alert severity="error">
 Do not use `Class.UITextSizeConstraint.MinTextSize|MinTextSize` property values lower than `9` or the text will be difficult to read for many viewers.

@@ -6,23 +6,22 @@ summary: |
   Adjusts color-related properties of the rendered world like saturation, tint,
   brightness, and contrast.
 description: |
-  The **ColorCorrectionEffect** can be used to adjust several color-related
-  properties at once: `Class.ColorCorrectionEffect.Saturation|Saturation`,
+  `ColorCorrectionEffect` can be used to adjust several color-related properties
+  at once, including `Class.ColorCorrectionEffect.Saturation|Saturation`,
   `Class.ColorCorrectionEffect.TintColor|TintColor`,
   `Class.ColorCorrectionEffect.Brightness|Brightness` and
   `Class.ColorCorrectionEffect.Contrast|Contrast`. It's useful for fine-tuning
   the visual aesthetic of a world or communicating status effects to the player.
-  Multiple **ColorCorrectionEffect** objects can be applied at once and they
-  will compose their effects together.
+  Multiple `ColorCorrectionEffect` objects can be applied at the same time and
+  they will compose their effects together.
 
-  Like other post-processing effects, **ColorCorrectionEffect** will only work
-  while `Class.PostEffect.Enabled|Enabled` and when parented to `Class.Lighting`
-  or `Class.Workspace.CurrentCamera`. Also, it may render differently depending
-  on your Studio settings (see the **Quality Level** settings in **Rendering**
-  &rarr; **Performance**).
-
-  For more details on this effect and others, see
-  [Post-Processing Effects](../../../environment/post-processing-effects.md).
+  Like other
+  [post-processing effects](../../../environment/post-processing-effects.md),
+  `ColorCorrectionEffect` will only work while
+  `Class.PostEffect.Enabled|Enabled` and when parented to `Class.Lighting` or
+  `Class.Workspace.CurrentCamera`. Also, it may render differently depending on
+  your Studio settings (see **Editor&nbsp;Quality&nbsp;Level** in
+  **Rendering**).
 code_samples:
 inherits:
   - PostEffect
@@ -33,9 +32,9 @@ properties:
     summary: |
       Determines by how much the brightness of pixel colors will be shifted.
     description: |
-      Brightness determines by how much the colors of pixels will be shifted. A
-      value of -1 will cause all pixels to be completely black while a value of
-      1 will cause them to be white.
+      `Brightness` determines by how much the colors of pixels will be shifted.
+      A value of `-1` will cause all pixels to be completely black while a value
+      of `1` will cause them to be white.
     code_samples:
     type: float
     tags: []
@@ -52,9 +51,9 @@ properties:
     summary: |
       Determines the change in separation between the dark and light colors.
     description: |
-      Contrast determines the separation between the dark and light colors.
-      Values less than 0 have reduced contrast while values greater than 0 have
-      increased contrast.
+      `Contrast` determines the separation between the dark and light colors.
+      Values less than `0` have reduced contrast while values greater than `0`
+      have increased contrast.
     code_samples:
     type: float
     tags: []
@@ -71,9 +70,9 @@ properties:
     summary: |
       Determines the change in intensity of colors.
     description: |
-      Saturation determines the change in intensity of pixel colors. Values
-      above 1 will cause colors to be more vivid while values below 0 will make
-      colors more dull, eventually reaching full desaturation at -1.
+      `Saturation` determines the change in intensity of pixel colors. Values
+      above `1` will cause colors to be more vivid while values below `0` will
+      make colors more dull, eventually reaching full desaturation at `-1`.
     code_samples:
     type: float
     tags: []
@@ -90,9 +89,10 @@ properties:
     summary: |
       Determines by how much the RGB channels of pixels are scaled.
     description: |
-      Determines by what factors the RGB channels of pixel colors are scaled.
-      The effect is multiplicative, so changing this to `[255, 0, 0]` (red)
-      would cause the green and blue channels to be multiplied by 0.
+      `TintColor` determines by what factors the RGB channels of pixel colors
+      are scaled. The effect is multiplicative, so changing this to <Typography
+      noWrap>`[255, 0, 0]`</Typography> (red) would cause the green and blue
+      channels to be multiplied by `0`.
     code_samples:
     type: Color3
     tags: []

@@ -14,8 +14,7 @@ code_samples:
   - audio-wiring---listener-equalization
 inherits:
   - Instance
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: AudioEqualizer.Bypass

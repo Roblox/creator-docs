@@ -3,16 +3,16 @@ type: class
 category: Scripting
 memory_category: Instances
 summary: |
-  Stores Instances to be parented to a player's character when it spawns.
+  Stores instances to be parented to a player's character when it spawns.
 description: |
-  The StarterCharacterScripts class stores scripts to be parented in a player's
-  `Class.Player.Character`, when they spawn. Unlike scripts stored in the
-  `Class.PlayerScripts` folder, these scripts will not persist when the player
-  respawns.
+  The `StarterCharacterScripts` container stores scripts to be parented to a
+  player's `Class.Player.Character` when it spawns. Unlike scripts stored in the
+  `Class.StarterPlayerScripts` folder, these scripts will not persist when the
+  character respawns.
 
-  If a script named **Animate**, **Sound** or **Health** is placed in this
-  folder, they will replace the default scripts that are added to each
-  `Class.Player.Character` that is created.
+  If a `Class.LocalScript` named `Animate`, `Sound`, or `Health` is placed in
+  this container, it will replace the default script that manages character
+  animations, character sounds, and character health regeneration respectively.
 code_samples:
 inherits:
   - StarterPlayerScripts

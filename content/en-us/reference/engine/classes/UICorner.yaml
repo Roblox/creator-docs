@@ -3,71 +3,31 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  A UIComponent that will apply deformation to shapes of corners of its parent
+  UI modifier which applies deformation to corners of its parent
   `Class.GuiObject`.
 description: |
-  A UIComponent that will apply deformation to shapes of corners of its parent
+  `UICorner` is a modifier which applies deformation to corners of its parent
   `Class.GuiObject`. Input, but not descendants, will be clipped to the round
-  corner area.
+  corner area. See [here](../../../ui/appearance-modifiers.md#corners) for
+  examples.
 
-  ![ImageLabel with rounded corners | Image Credit: 0Techy](/assets/legacy/RoundedImage.jpg)
+  In order to keep the circular shape of round corners with the
+  `Class.UICorner.CornerRadius|CornerRadius` value (`Datatype.UDim`), the radius
+  is internally calculated as follows:
 
-  ## Using the component
+  - The radius of the **X** axis is always the same as the radius of **Y** axis.
+  - `Datatype.UDim.Scale|Scale` rounding will always apply to the **minimum**
+    width or height.
+  - Rounded rectangles will always be in a "pill" shape if
+    `Class.UICorner.CornerRadius|CornerRadius` is set to a value that leads to a
+    calculated result greater than half of the rectangle's minimum width or
+    height.
 
-  To use the UICorner UIComponent:
+  Alternatively, rounded corners can be accomplished using **slices** which are
+  suitable for decorative borders that are not simply rounded. See
+  [9‑Slice Design](../../../ui/9-slice.md) for details.
 
-  1. Create a `Class.Frame` / `Class.ImageLabel` / `Class.ImageButton` /
-     `Class.TextLabel` / `Class.TextButton` / `Class.ViewportFrame`
-  2. Insert a UICorner component as its child
-  3. Adjust the round corner radius by changing the
-     `Class.UICorner.CornerRadius|CornerRadius` property
-
-  **Note:** UICorner cannot be applied to a `Class.ScrollingFrame`.
-
-  ## UICorner vs 9-slices
-
-  Alternatively, rounded backgrounds can be accomplished using 9-slices. As a
-  result, it is helpful to understand the pros and cons of UICorner and
-  9-slices:
-
-  ### UICorner
-
-  - Pros
-  - Can be used to round `Class.ViewportFrame|ViewportFrames` and image assets
-  - Allows for a scriptable and dynamic corner radius
-  - Cons
-  - There is a performance overhead (Screen Space specifically) as it needs
-    extra processing on each pixel, while 9-slice only involves simple sampling
-
-  ### 9-slices
-
-  - Pros
-  - Suitable for highly decorative borders that are not just rounded
-  - If you have a lot of rounded rectangles with solid colors and you pay
-    special attention to low-end devices, using 9-slice may be more performance
-    efficient
-  - Cons
-  - Hard to apply to existing image assets
-  - Different corner sizes require different assets
-
-  ## How the corner radius is calculated internally
-
-  In order to keep the circular shape of round corners with the UDim
-  CornerRadius value, the round corner radius internally will be calculated as
-  follows:
-
-  `radius = min(min(rectWidth, rectHeight) / 2, CornerRadius.scale * min(rectWidth, rectHeight) + CornerRadius.offset)`
-
-  This means that:
-
-  1. The radius of the x-axis is always the same as the radius of y axis.
-  2. The scale will always apply to the minimum edge.
-  3. Rounded rectangles will always be in a pill shape if CornerRadius is set to
-     a value that leads to a calculated result greater than half of the
-     rectangles' minimum edge.
-
-  It is suggested to always use either scale or offset to define CornerRadius
-  instead of mixing them up.
+  Note that `UICorner` can not be applied to a `Class.ScrollingFrame`.
 code_samples:
 inherits:
   - UIComponent
@@ -76,23 +36,18 @@ deprecation_message: ''
 properties:
   - name: UICorner.CornerRadius
     summary: |
-      Determines the radius, in pixels, of the `Class.UICorner` UIComponent.
+      Determines the radius of the component.
     description: |
-      A `Datatype.UDim` property that determines the radius, in pixels, of the
-      `Class.UICorner` UIComponent, according to the following formula:
+      A `Datatype.UDim` property that determines the radius of the `UICorner`
+      component, internally calculated as follows:
 
-      `radius = min(min(rectWidth, rectHeight) / 2, CornerRadius.scale * min(rectWidth, rectHeight) + CornerRadius.offset)`
-
-      This means that:
-
-      1. The radius of the x-axis is always the same as the radius of y axis.
-      2. The scale will always apply to the minimum edge.
-      3. Rounded rectangles will always be in a pill shape if CornerRadius is
-         set to a value that leads to a calculated result greater than half of
-         the rectangles' minimum edge.
-
-      It is suggested to always use either scale or offset to define
-      CornerRadius instead of mixing them up.
+      - The radius of the **X** axis is always the same as the radius of **Y**
+        axis.
+      - `Datatype.UDim.Scale|Scale` rounding will always apply to the
+        **minimum** width or height.
+      - Rounded rectangles will always be in a "pill" shape if `CornerRadius` is
+        set to a value that leads to a calculated result greater than half of
+        the rectangle's minimum width or height.
     code_samples:
     type: UDim
     tags: []

@@ -1,26 +1,24 @@
 name: AspectType
 type: enum
 summary: |
-  Used by `Class.UIAspectRatioConstraint.AspectType` to control the sizing
-  behavior.
+  Used by `Class.UIAspectRatioConstraint.AspectType` to control sizing behavior.
 description: |
-  Used by `Class.UIAspectRatioConstraint.AspectType` to control the sizing
-  behavior.
+  Used by `Class.UIAspectRatioConstraint.AspectType` to control sizing behavior.
 code_samples:
 tags: []
 deprecation_message: ''
 items:
   - name: FitWithinMaxSize
     summary: |
-      Makes the element the maximum size it can be within the current possible
-      AbsoluteSize of the element while maintaining the aspect ratio.
+      The object will be the maximum size possible within its own
+      `Class.GuiBase2d.AbsoluteSize|AbsoluteSize`.
     value: 0
     tags: []
     deprecation_message: ''
   - name: ScaleWithParentSize
     summary: |
-      Scales the element to the largest size it can fit inside the parent
-      element's maximum size whilse maintaining the aspect ratio.
+      The object's maximum size will be the size of the parent while still
+      maintaining the aspect ratio.
     value: 1
     tags: []
     deprecation_message: ''

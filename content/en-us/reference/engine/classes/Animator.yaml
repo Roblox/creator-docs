@@ -127,9 +127,11 @@ methods:
     thread_safety: Unsafe
   - name: Animator:GetPlayingAnimationTracks
     summary: |
-      Returns the list of currently playing `Class.AnimationTrack|AnimationTracks`.
+      Returns the list of currently playing
+      `Class.AnimationTrack|AnimationTracks`.
     description: |
-      Returns the list of currently playing `Class.AnimationTrack|AnimationTracks`.
+      Returns the list of currently playing
+      `Class.AnimationTrack|AnimationTracks`.
     code_samples:
     parameters: []
     returns:

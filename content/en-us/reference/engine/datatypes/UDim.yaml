@@ -4,38 +4,15 @@ summary: |
   Represents a one-dimensional value with two components, a relative scale and
   an absolute offset.
 description: |
-  The `Datatype.UDim` data type represents a one-dimensional value with two
-  components, a relative scale and an absolute offset.
-
-  #### Math Operations
-
-  The following math operations are valid for the `Datatype.UDim` data type:
-
-  <table>
-    <thead>
-      <tr>
-        <td>Operation</td>
-        <td>Description</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>Datatype.UDim</code>&nbsp;<code>+</code>&nbsp;<code>Datatype.UDim</code></td>
-        <td>Produces a <code>Datatype.UDim</code> representing the sum of the two <code>Datatype.UDim</code> values.</td>
-      </tr>
-      <tr>
-        <td><code>Datatype.UDim</code>&nbsp;<code>-</code>&nbsp;<code>Datatype.UDim</code></td>
-        <td>Produces a <code>Datatype.UDim</code> representing the difference between the two <code>Datatype.UDim</code> values.</td>
-      </tr>
-    </tbody>
-  </table>
+  The `UDim` data type represents a one-dimensional value with two components, a
+  relative scale and an absolute offset in pixels.
 code_samples:
 tags: []
 deprecation_message: ''
 constructors:
   - name: UDim.new
-    summary: Returns a `Datatype.UDim` from the given components.
-    description: Returns a `Datatype.UDim` from the given components.
+    summary: Returns a `UDim` from the given components.
+    description: Returns a `UDim` from the given components.
     parameters:
       - name: Scale
         type: number
@@ -53,20 +30,18 @@ properties:
   - name: UDim.Scale
     type: number
     summary: |
-      The relative scale component of the `Datatype.UDim`.
+      The relative scale component of the `UDim`.
     description: |
-      The scale component of the `Datatype.UDim`. The value this represents is
-      scaled relative to the axis that this `Datatype.UDim` is representing in a
-      `Datatype.UDim2`.
+      The relative scale component of the `UDim`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim.Offset
     type: number
     summary: |
-      The absolute offset component of the `Datatype.UDim`.
+      The absolute offset component of the `UDim`.
     description: |
-      The pixel unit component of the `Datatype.UDim`.
+      The absolute offset component of the `UDim` in pixels.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -75,11 +50,9 @@ functions:
 math_operations:
   - operation: +
     summary: |
-      Produces a `Datatype.UDim` representing the sum of the two `Datatype.UDim`
-      values.
+      Produces a `UDim` representing the sum of the two `UDim` values.
     description: |
-      Produces a `Datatype.UDim` representing the sum of the two `Datatype.UDim`
-      values.
+      Produces a `UDim` representing the sum of the two `UDim` values.
     type_a: UDim
     type_b: UDim
     return_type: UDim
@@ -88,11 +61,11 @@ math_operations:
     deprecation_message: ''
   - operation: '-'
     summary: |
-      Produces a `Datatype.UDim` representing the difference between the two
-      `Datatype.UDim` values.
+      Produces a `UDim` representing the difference between the two `UDim`
+      values.
     description: |
-      Produces a `Datatype.UDim` representing the difference between the two
-      `Datatype.UDim` values.
+      Produces a `UDim` representing the difference between the two `UDim`
+      values.
     type_a: UDim
     type_b: UDim
     return_type: UDim

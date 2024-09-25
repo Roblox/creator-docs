@@ -2,9 +2,12 @@ name: UIPadding
 type: class
 category: GUI
 memory_category: Instances
-summary: ''
+summary: |
+  Applies padding to the borders of the parent `Class.GuiObject`.
 description: |
-  Applies padding to the borders of the GuiObject that this is parented to.
+  Applies padding to the borders of the parent `Class.GuiObject`, either as a
+  pixel amount (`Datatype.UDim.Offset|Offset`) or percentage of the parent's
+  size (`Datatype.UDim.Scale|Scale`).
 code_samples:
 inherits:
   - UIComponent
@@ -13,11 +16,9 @@ deprecation_message: ''
 properties:
   - name: UIPadding.PaddingBottom
     summary: |
-      The padding to apply on the bottom side relative to the parent's normal
-      size.
+      Padding to apply on the bottom side, relative to the parent's normal size.
     description: |
-      The padding to apply on the bottom side relative to the parent's normal
-      size.
+      Padding to apply on the bottom side, relative to the parent's normal size.
     code_samples:
     type: UDim
     tags: []
@@ -32,11 +33,9 @@ properties:
       can_save: true
   - name: UIPadding.PaddingLeft
     summary: |
-      The padding to apply on the left side relative to the parent's normal
-      size.
+      Padding to apply on the left side, relative to the parent's normal size.
     description: |
-      The padding to apply on the left side relative to the parent's normal
-      size.
+      Padding to apply on the left side, relative to the parent's normal size.
     code_samples:
     type: UDim
     tags: []
@@ -51,11 +50,9 @@ properties:
       can_save: true
   - name: UIPadding.PaddingRight
     summary: |
-      The padding to apply on the right side relative to the parent's normal
-      size.
+      Padding to apply on the right side, relative to the parent's normal size.
     description: |
-      The padding to apply on the right side relative to the parent's normal
-      size.
+      Padding to apply on the right side, relative to the parent's normal size.
     code_samples:
     type: UDim
     tags: []
@@ -70,9 +67,9 @@ properties:
       can_save: true
   - name: UIPadding.PaddingTop
     summary: |
-      The padding to apply on the top side relative to the parent's normal size.
+      Padding to apply on the top side, relative to the parent's normal size.
     description: |
-      The padding to apply on the top side relative to the parent's normal size.
+      Padding to apply on the top side, relative to the parent's normal size.
     code_samples:
     type: UDim
     tags: []

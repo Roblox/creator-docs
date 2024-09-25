@@ -15,8 +15,7 @@ code_samples:
   - audio-wiring---emitter-filtering
 inherits:
   - Instance
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: AudioFilter.Bypass

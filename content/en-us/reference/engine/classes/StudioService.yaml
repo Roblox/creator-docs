@@ -100,7 +100,8 @@ properties:
       - NotReplicated
       - Deprecated
     deprecation_message: |
-      This property is deprecated; constraints can no longer be drawn "on top" of other objects.
+      This property is deprecated; constraints can no longer be drawn "on top"
+      of other objects.
     security:
       read: None
       write: None

@@ -110,9 +110,9 @@ The `Class.ScreenGui.ResetOnSpawn|ResetOnSpawn` boolean property determines if t
 
 As noted, [parenting](#creating-and-parenting) a `Class.ScreenGui` to `Class.StarterGui` clones it and its child `Class.GuiObject|GuiObjects` into a player's `Class.PlayerGui` container when they join the experience and their character first spawns.
 
-If you need to control a player's UI container during playtime, for example to show/hide a specific `Class.ScreenGui` or any of its children, access it as follows from a client‑side script:
+If you need to control a player's UI container during playtime, for example to show/hide a specific `Class.ScreenGui` or any of its children, access it as follows from a `Class.LocalScript`:
 
-```lua title="Client Script - Accessing a Player's UI"
+```lua title="LocalScript - Accessing a Player's UI"
 local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer

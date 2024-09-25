@@ -13,6 +13,47 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: UGCValidationService:GetEditableMeshVerticesSimilarityRate
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: editableMesh
+        type: EditableMesh
+        default:
+        summary: ''
+      - name: meshScale
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: UGCValidationService:GetMeshVerticesSimilarityRate
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: meshId
+        type: string
+        default:
+        summary: ''
+      - name: meshScale
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: float
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 events: []
 callbacks: []

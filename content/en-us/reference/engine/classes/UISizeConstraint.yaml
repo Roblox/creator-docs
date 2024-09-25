@@ -3,26 +3,23 @@ type: class
 category: GUI
 memory_category: Instances
 summary: |
-  Ensures a GuiObject does not become larger or smaller than the constraint's
-  max size or min size.
+  Ensures a `Class.GuiObject` does not become larger or smaller than the
+  constraint's maximum size or minimum size.
 description: |
-  The UISizeConstraint ensures a `Class.GuiObject` does not become larger or
-  smaller than the `Class.UISizeConstraint.MaxSize` and
-  `Class.UISizeConstraint.MinSize`.
+  The `UISizeConstraint` ensures a `Class.GuiObject` does not become larger or
+  smaller than the `Class.UISizeConstraint.MaxSize|MaxSize` and
+  `Class.UISizeConstraint.MinSize|MinSize`. For example, if
+  `Class.UISizeConstraint.MaxSize|MaxSize` is set to
+  <Typography noWrap>`(200, 200)`</Typography> and
+  `Class.UISizeConstraint.MinSize|MinSize` to <Typography
+  noWrap>`(100, 100)`</Typography>, the constrained object cannot scale to be
+  larger than 200&times;200 pixels or smaller than 100&times;100 pixels.
 
-  For example, if the MaxSize is set to `{200, 200}` and the MinSize is set to
-  `{100, 100}`, then the constrained GuiObject cannot scale to be larger than
-  200 pixels wide and 200 pixels tall or smaller than 100 pixels wide and 100
-  pixels tall.
-
-  If the object with this constraint is also under the control of a
-  `Class.UILayout` such as `Class.UIGridLayout`, then the constraint determines
-  the objects size and overwrites any size the layout would apply.
-
-  A UISizeConstraint can be applied to a GuiObject by parenting it to that
-  object.
-code_samples:
-  - uisizeconstraint
+  Note that if the object with this constraint is also under the control of a
+  `Class.UILayout` such as `Class.UIGridLayout`, the **constraint** determines
+  the object's minimum/maximum size and overwrites any size the layout would
+  apply.
+code_samples: []
 inherits:
   - UIConstraint
 tags: []
@@ -30,11 +27,11 @@ deprecation_message: ''
 properties:
   - name: UISizeConstraint.MaxSize
     summary: |
-      The largest size in pixels the object is allowed to be.
+      The largest size, in pixels, the parent object is allowed to be.
     description: |
-      The largest size in pixels the object is allowed to be. The X and Y of
-      this value must be greater than or equal to the corresponding components
-      of `Class.UISizeConstraint.MinSize`.
+      The largest size, in pixels, the parent object is allowed to be. The **X**
+      and **Y** of this value must be greater than or equal to the corresponding
+      components of `Class.UISizeConstraint.MinSize|MinSize`.
     code_samples:
     type: Vector2
     tags: []
@@ -49,11 +46,11 @@ properties:
       can_save: true
   - name: UISizeConstraint.MinSize
     summary: |
-      The smallest size in pixels the object is allowed to be.
+      The smallest size, in pixels, the object is allowed to be.
     description: |
-      The smallest size in pixels the object is allowed to be. The X and Y of
-      this value must be less than or equal to the corresponding components of
-      `Class.UISizeConstraint.MaxSize`.
+      The smallest size, in pixels, the object is allowed to be. The **X** and
+      **Y** of this value must be less than or equal to the corresponding
+      components of `Class.UISizeConstraint.MaxSize|MaxSize`.
     code_samples:
     type: Vector2
     tags: []

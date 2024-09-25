@@ -236,6 +236,11 @@ items:
     value: 301
     tags: []
     deprecation_message: ''
+  - name: ServerEmpty
+    summary: ''
+    value: 302
+    tags: []
+    deprecation_message: ''
   - name: PlacelaunchErrors
     summary: ''
     value: 512

@@ -1,0 +1,92 @@
+name: FluidForceSensor
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - SensorBase
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: FluidForceSensor.CenterOfPressure
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Output
+    serialization:
+      can_load: false
+      can_save: true
+  - name: FluidForceSensor.Force
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Output
+    serialization:
+      can_load: false
+      can_save: true
+  - name: FluidForceSensor.Torque
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Output
+    serialization:
+      can_load: false
+      can_save: true
+methods:
+  - name: FluidForceSensor:EvaluateAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: linearVelocity
+        type: Vector3
+        default:
+        summary: ''
+      - name: angularVelocity
+        type: Vector3
+        default:
+        summary: ''
+      - name: cframe
+        type: CFrame
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

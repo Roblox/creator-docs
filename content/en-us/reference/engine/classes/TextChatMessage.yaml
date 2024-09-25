@@ -31,6 +31,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: TextChatMessage.ChatWindowMessageProperties
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ChatWindowMessageProperties
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
   - name: TextChatMessage.MessageId
     summary: |
       A unique identifier for the `Class.TextChatMessage`.

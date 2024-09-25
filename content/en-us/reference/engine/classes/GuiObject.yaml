@@ -5,7 +5,7 @@ memory_category: Gui
 summary: |
   An abstract class for all 2D user interface objects.
 description: |
-  **GuiObject** is an abstract class (much like `Class.BasePart`) for a 2D user
+  `GuiObject` is an abstract class (much like `Class.BasePart`) for a 2D user
   interface object. It defines all the properties relating to the display of a
   graphical user interface (GUI) object such as `Class.GuiObject.Size|Size` and
   `Class.GuiObject.Position|Position`. It also has some useful read‑only
@@ -68,7 +68,7 @@ properties:
       Determines the origin point of a `Class.GuiObject`, relative to its
       absolute size.
     description: |
-      The **AnchorPoint** property determines the origin point of a
+      The `AnchorPoint` property determines the origin point of a
       `Class.GuiObject`, relative to its absolute size. The origin point
       determines from where the element is positioned (through
       `Class.GuiObject.Position`) and from which the rendered
@@ -98,7 +98,7 @@ properties:
       and other content to a UI object at edit or run time, and the size will
       adjust to fit that content.
 
-      When **AutomaticSize** is set to an `Enum.AutomaticSize` value to anything
+      When `AutomaticSize` is set to an `Enum.AutomaticSize` value to anything
       other than `Enum.AutomaticSize|None`, this UI object may resize depending
       on its child content.
 
@@ -622,13 +622,13 @@ properties:
     description: |
       This property overrides the default selection adornment used for gamepads.
 
-      Note that the chosen **SelectionImageObject** overlays the selected
+      Note that the chosen `SelectionImageObject` overlays the selected
       `Class.GuiObject` with the `Class.GuiObject.Size|Size` of the image. For
-      best results, you should size the custom **SelectionImageObject** via the
+      best results, you should size the custom `SelectionImageObject` via the
       scale `Datatype.UDim2` values to help ensure that the object scales
       properly over the selected element.
 
-      Changing the **SelectionImageObject** for a `Class.GuiObject` element only
+      Changing the `SelectionImageObject` for a `Class.GuiObject` element only
       affects that element. To affect all of a user's GUI elements, set the
       `Class.PlayerGui.SelectionImageObject` property.
 
@@ -790,10 +790,10 @@ properties:
       relative to others.
 
       By default, `Class.GuiObject|GuiObjects` render in ascending priority
-      order where those with lower **ZIndex** values are rendered under those
-      with higher values. You can change the render order within a
-      `Class.ScreenGui`, `Class.SurfaceGui`, or `Class.BillboardGui` by changing
-      the value of its `Class.LayerCollector.ZIndexBehavior|ZIndexBehavior`.
+      order where those with lower `ZIndex` values are rendered under those with
+      higher values. You can change the render order within a `Class.ScreenGui`,
+      `Class.SurfaceGui`, or `Class.BillboardGui` by changing the value of its
+      `Class.LayerCollector.ZIndexBehavior|ZIndexBehavior`.
 
       If you are unsure if you'll need to add an element between two existing
       elements in the future, it's a good practice to use multiples of `100`
@@ -1459,7 +1459,7 @@ events:
       Fires when the player starts, continues and stops long-pressing the UI
       element.
     description: |
-      The **TouchLongPress** event fires after a brief moment when the player
+      The `TouchLongPress` event fires after a brief moment when the player
       holds their finger on the UI element using a touch-enabled device. It
       fires with a table of `Datatype.Vector2` that describe the relative screen
       positions of the fingers involved in the gesture. In addition, it fires
@@ -1498,7 +1498,7 @@ events:
     summary: |
       Fires when the player moves their finger on the UI element.
     description: |
-      The **TouchPan** event fires when the player moves their finger on the UI
+      The `TouchPan` event fires when the player moves their finger on the UI
       element using a touch-enabled device. It fires shortly before
       `Class.GuiObject.TouchSwipe` would, and does not fire with
       `Class.GuiObject.TouchTap`. This event is useful for allowing the player
@@ -1546,7 +1546,7 @@ events:
       Fires when the player performs a pinch or pull gesture using two fingers
       on the UI element.
     description: |
-      The **TouchPinch** event fires when the player uses two fingers to make a
+      The `TouchPinch` event fires when the player uses two fingers to make a
       pinch or pull gesture on the UI element using a touch-enabled device. A
       **pinch** happens when two or more fingers move closer together, and a
       **pull** happens when they move apart. This event fires in conjunction
@@ -1598,7 +1598,7 @@ events:
       Fires when the player performs a rotation gesture using two fingers on the
       UI element.
     description: |
-      The **TouchRotate** event fires when the player uses two fingers to make a
+      The `TouchRotate` event fires when the player uses two fingers to make a
       pinch or pull gesture on the UI element using a touch-enabled device.
       Rotation occurs when the angle of the line between two fingers changes.
       This event fires in conjunction with `Class.GuiObject.TouchPan`. This

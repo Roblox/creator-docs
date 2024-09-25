@@ -63,11 +63,11 @@ Beyond basic properties for adjusting position and size, Roblox also provides la
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-Color-Solid.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-Color-Solid.png" />
     <figcaption>`Class.UIStroke` on `Class.TextLabel`</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-Color-Gradient.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-Color-Gradient.png" />
     <figcaption>`Class.UIStroke` with `Class.UIGradient`</figcaption>
   </figure>
 </GridContainer>

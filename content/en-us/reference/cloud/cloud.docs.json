@@ -42,7 +42,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Monetization",
           "methodProperties": {
             "scopes": [
               "creator-store-product:write"
@@ -88,7 +88,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Monetization",
           "methodProperties": {
             "scopes": [
               "creator-store-product:read"
@@ -164,7 +164,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Monetization",
           "methodProperties": {
             "scopes": [
               "creator-store-product:write"
@@ -210,7 +210,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "Get Group"
@@ -285,7 +285,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "group:read"
@@ -344,7 +344,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "group:write"
@@ -403,7 +403,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "group:write"
@@ -480,7 +480,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "List Group Memberships"
@@ -547,7 +547,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "List Group Roles"
@@ -591,7 +591,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "Get Group Shout"
@@ -635,7 +635,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [],
             "title": "Get Universe"
@@ -696,7 +696,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [
               "universe:write"
@@ -773,7 +773,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.control:list"
@@ -872,7 +872,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:list"
@@ -949,7 +949,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:create"
@@ -1013,7 +1013,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:read"
@@ -1069,7 +1069,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:delete"
@@ -1154,7 +1154,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:update"
@@ -1228,7 +1228,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:create",
@@ -1324,7 +1324,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.versions:list"
@@ -1432,7 +1432,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:list"
@@ -1518,7 +1518,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:create"
@@ -1591,7 +1591,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:read"
@@ -1656,7 +1656,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:delete"
@@ -1750,7 +1750,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:update"
@@ -1833,7 +1833,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:create",
@@ -1938,7 +1938,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.versions:list"
@@ -1957,7 +1957,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data Stores]\n (https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
+        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data\n Stores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
         "operationId": "Cloud_SnapshotDataStores",
         "parameters": [
           {
@@ -1994,7 +1994,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.control:snapshot"
@@ -2059,7 +2059,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.queue:write"
@@ -2118,7 +2118,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.queue:discard"
@@ -2210,7 +2210,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.queue:dequeue"
@@ -2304,7 +2304,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:read"
@@ -2382,7 +2382,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:write"
@@ -2446,7 +2446,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:read"
@@ -2502,7 +2502,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:write"
@@ -2587,7 +2587,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:write"
@@ -2651,7 +2651,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store:flush"
@@ -2754,7 +2754,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:read"
@@ -2840,7 +2840,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:write"
@@ -2913,7 +2913,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:read"
@@ -2978,7 +2978,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:write"
@@ -3072,7 +3072,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:write"
@@ -3155,7 +3155,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:write"
@@ -3210,7 +3210,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [],
             "title": "Get Place"
@@ -3280,7 +3280,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [
               "universe.place:write"
@@ -3352,7 +3352,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [
               "universe.place.instance:read"
@@ -3441,7 +3441,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [
               "universe.place.instance:write"
@@ -3536,7 +3536,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [
               "universe.place.instance:read"
@@ -3546,6 +3546,507 @@
           "resource": {
             "$ref": "#/components/schemas/Instance",
             "name": "Instance"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/places/{place}/luau-execution-session-tasks": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
+        "operationId": "Cloud_CreateLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LuauExecutionSessionTask"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Create Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/places/{place}/luau-execution-session-tasks/{luau-execution-session-task}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_GetLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session-task",
+            "in": "path",
+            "description": "The luau-execution-session-task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
+            "schema": {
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "BASIC",
+                "FULL"
+              ],
+              "type": "string",
+              "format": "enum",
+              "x-example-values": {
+                "exampleValues": [
+                  "VIEW_UNSPECIFIED"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Get Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/places/{place}/luau-execution-session-tasks/{luau-execution-session-task}/logs": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_ListLuauExecutionSessionTaskLogs",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session-task",
+            "in": "path",
+            "description": "The luau-execution-session-task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of luau execution session task logs to return. The\n service might return fewer than this value. If unspecified, at most 10000\n luau execution session task logs are returned. The maximum value is 10000\n and higher values are set to 10000.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 10000, inclusive",
+              "exampleValues": [
+                10000
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListLuauExecutionSessionTaskLogsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "List Luau Execution Session Task Logs"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
+            "name": "LuauExecutionSessionTaskLog"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/places/{place}/luau-execution-sessions/{luau-execution-session}/tasks": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
+        "operationId": "Cloud_CreateLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session",
+            "in": "path",
+            "description": "The luau-execution-session ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LuauExecutionSessionTask"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Create Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/places/{place}/luau-execution-sessions/{luau-execution-session}/tasks/{task}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_GetLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session",
+            "in": "path",
+            "description": "The luau-execution-session ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "task",
+            "in": "path",
+            "description": "The task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
+            "schema": {
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "BASIC",
+                "FULL"
+              ],
+              "type": "string",
+              "format": "enum",
+              "x-example-values": {
+                "exampleValues": [
+                  "VIEW_UNSPECIFIED"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Get Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/places/{place}/luau-execution-sessions/{luau-execution-session}/tasks/{task}/logs": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_ListLuauExecutionSessionTaskLogs",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session",
+            "in": "path",
+            "description": "The luau-execution-session ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "task",
+            "in": "path",
+            "description": "The task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of luau execution session task logs to return. The\n service might return fewer than this value. If unspecified, at most 10000\n luau execution session task logs are returned. The maximum value is 10000\n and higher values are set to 10000.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 10000, inclusive",
+              "exampleValues": [
+                10000
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListLuauExecutionSessionTaskLogsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "List Luau Execution Session Task Logs"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
+            "name": "LuauExecutionSessionTaskLog"
           }
         }
       }
@@ -3622,7 +4123,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -3686,7 +4187,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -3745,7 +4246,7 @@
           {
             "name": "idempotencyKey.key",
             "in": "query",
-            "description": "The unique key to use for idempotency.\n string key = 1;",
+            "description": "The unique key to use for idempotency.",
             "schema": {
               "type": "string"
             }
@@ -3789,7 +4290,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:write"
@@ -3799,6 +4300,561 @@
           "resource": {
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-session-tasks": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
+        "operationId": "Cloud_CreateLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LuauExecutionSessionTask"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Create Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-session-tasks/{luau-execution-session-task}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_GetLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session-task",
+            "in": "path",
+            "description": "The luau-execution-session-task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
+            "schema": {
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "BASIC",
+                "FULL"
+              ],
+              "type": "string",
+              "format": "enum",
+              "x-example-values": {
+                "exampleValues": [
+                  "VIEW_UNSPECIFIED"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Get Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-session-tasks/{luau-execution-session-task}/logs": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_ListLuauExecutionSessionTaskLogs",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session-task",
+            "in": "path",
+            "description": "The luau-execution-session-task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of luau execution session task logs to return. The\n service might return fewer than this value. If unspecified, at most 10000\n luau execution session task logs are returned. The maximum value is 10000\n and higher values are set to 10000.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 10000, inclusive",
+              "exampleValues": [
+                10000
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListLuauExecutionSessionTaskLogsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "List Luau Execution Session Task Logs"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
+            "name": "LuauExecutionSessionTaskLog"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-sessions/{luau-execution-session}/tasks": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
+        "operationId": "Cloud_CreateLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session",
+            "in": "path",
+            "description": "The luau-execution-session ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LuauExecutionSessionTask"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Create Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-sessions/{luau-execution-session}/tasks/{task}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_GetLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session",
+            "in": "path",
+            "description": "The luau-execution-session ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "task",
+            "in": "path",
+            "description": "The task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
+            "schema": {
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "BASIC",
+                "FULL"
+              ],
+              "type": "string",
+              "format": "enum",
+              "x-example-values": {
+                "exampleValues": [
+                  "VIEW_UNSPECIFIED"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Get Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/cloud/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-sessions/{luau-execution-session}/tasks/{task}/logs": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_ListLuauExecutionSessionTaskLogs",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session",
+            "in": "path",
+            "description": "The luau-execution-session ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "task",
+            "in": "path",
+            "description": "The task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of luau execution session task logs to return. The\n service might return fewer than this value. If unspecified, at most 10000\n luau execution session task logs are returned. The maximum value is 10000\n and higher values are set to 10000.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 10000, inclusive",
+              "exampleValues": [
+                10000
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListLuauExecutionSessionTaskLogsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "List Luau Execution Session Task Logs"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
+            "name": "LuauExecutionSessionTaskLog"
           }
         }
       }
@@ -3872,7 +4928,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Monetization",
           "methodProperties": {
             "scopes": [
               "universe:write",
@@ -3950,7 +5006,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -4005,7 +5061,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -4055,7 +5111,7 @@
           {
             "name": "idempotencyKey.key",
             "in": "query",
-            "description": "The unique key to use for idempotency.\n string key = 1;",
+            "description": "The unique key to use for idempotency.",
             "schema": {
               "type": "string"
             }
@@ -4099,7 +5155,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:write"
@@ -4176,7 +5232,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -4232,7 +5288,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [
               "universe:write"
@@ -4278,7 +5334,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "Get User"
@@ -4353,7 +5409,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "List Inventory Items"
@@ -4407,7 +5463,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "user.user-notification:write"
@@ -4508,7 +5564,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "Generate User Thumbnail"
@@ -4551,7 +5607,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Monetization",
           "methodProperties": {
             "scopes": [
               "creator-store-product:write"
@@ -4597,7 +5653,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Monetization",
           "methodProperties": {
             "scopes": [
               "creator-store-product:read"
@@ -4673,7 +5729,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Monetization",
           "methodProperties": {
             "scopes": [
               "creator-store-product:write"
@@ -4719,7 +5775,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "Get Group"
@@ -4794,7 +5850,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "group:read"
@@ -4853,7 +5909,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "group:write"
@@ -4912,7 +5968,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "group:write"
@@ -4989,7 +6045,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "List Group Memberships"
@@ -5056,7 +6112,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "List Group Roles"
@@ -5100,7 +6156,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "Get Group Shout"
@@ -5144,7 +6200,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [],
             "title": "Get Universe"
@@ -5205,7 +6261,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [
               "universe:write"
@@ -5282,7 +6338,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.control:list"
@@ -5381,7 +6437,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:list"
@@ -5458,7 +6514,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:create"
@@ -5522,7 +6578,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:read"
@@ -5578,7 +6634,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:delete"
@@ -5663,7 +6719,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:update"
@@ -5737,7 +6793,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:create",
@@ -5833,7 +6889,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.versions:list"
@@ -5941,7 +6997,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:list"
@@ -6027,7 +7083,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:create"
@@ -6100,7 +7156,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:read"
@@ -6165,7 +7221,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:delete"
@@ -6259,7 +7315,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:update"
@@ -6342,7 +7398,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:create",
@@ -6447,7 +7503,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.versions:list"
@@ -6466,7 +7522,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data Stores]\n (https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
+        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data\n Stores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
         "operationId": "Cloud_SnapshotDataStores",
         "parameters": [
           {
@@ -6503,7 +7559,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.control:snapshot"
@@ -6568,7 +7624,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.queue:write"
@@ -6627,7 +7683,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.queue:discard"
@@ -6719,7 +7775,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.queue:dequeue"
@@ -6813,7 +7869,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:read"
@@ -6891,7 +7947,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:write"
@@ -6955,7 +8011,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:read"
@@ -7011,7 +8067,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:write"
@@ -7096,7 +8152,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:write"
@@ -7160,7 +8216,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store:flush"
@@ -7263,7 +8319,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:read"
@@ -7349,7 +8405,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:write"
@@ -7422,7 +8478,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:read"
@@ -7487,7 +8543,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:write"
@@ -7581,7 +8637,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:write"
@@ -7664,7 +8720,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Data and Memory Stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:write"
@@ -7719,7 +8775,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [],
             "title": "Get Place"
@@ -7789,7 +8845,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [
               "universe.place:write"
@@ -7861,7 +8917,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [
               "universe.place.instance:read"
@@ -7950,7 +9006,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [
               "universe.place.instance:write"
@@ -8045,7 +9101,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [
               "universe.place.instance:read"
@@ -8055,6 +9111,507 @@
           "resource": {
             "$ref": "#/components/schemas/Instance",
             "name": "Instance"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/luau-execution-session-tasks": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
+        "operationId": "Cloud_CreateLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LuauExecutionSessionTask"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Create Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/luau-execution-session-tasks/{luau-execution-session-task}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_GetLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session-task",
+            "in": "path",
+            "description": "The luau-execution-session-task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
+            "schema": {
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "BASIC",
+                "FULL"
+              ],
+              "type": "string",
+              "format": "enum",
+              "x-example-values": {
+                "exampleValues": [
+                  "VIEW_UNSPECIFIED"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Get Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/luau-execution-session-tasks/{luau-execution-session-task}/logs": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_ListLuauExecutionSessionTaskLogs",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session-task",
+            "in": "path",
+            "description": "The luau-execution-session-task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of luau execution session task logs to return. The\n service might return fewer than this value. If unspecified, at most 10000\n luau execution session task logs are returned. The maximum value is 10000\n and higher values are set to 10000.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 10000, inclusive",
+              "exampleValues": [
+                10000
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListLuauExecutionSessionTaskLogsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "List Luau Execution Session Task Logs"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
+            "name": "LuauExecutionSessionTaskLog"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/luau-execution-sessions/{luau-execution-session}/tasks": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
+        "operationId": "Cloud_CreateLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session",
+            "in": "path",
+            "description": "The luau-execution-session ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LuauExecutionSessionTask"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Create Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/luau-execution-sessions/{luau-execution-session}/tasks/{task}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_GetLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session",
+            "in": "path",
+            "description": "The luau-execution-session ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "task",
+            "in": "path",
+            "description": "The task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
+            "schema": {
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "BASIC",
+                "FULL"
+              ],
+              "type": "string",
+              "format": "enum",
+              "x-example-values": {
+                "exampleValues": [
+                  "VIEW_UNSPECIFIED"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Get Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/luau-execution-sessions/{luau-execution-session}/tasks/{task}/logs": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_ListLuauExecutionSessionTaskLogs",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session",
+            "in": "path",
+            "description": "The luau-execution-session ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "task",
+            "in": "path",
+            "description": "The task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of luau execution session task logs to return. The\n service might return fewer than this value. If unspecified, at most 10000\n luau execution session task logs are returned. The maximum value is 10000\n and higher values are set to 10000.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 10000, inclusive",
+              "exampleValues": [
+                10000
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListLuauExecutionSessionTaskLogsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "List Luau Execution Session Task Logs"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
+            "name": "LuauExecutionSessionTaskLog"
           }
         }
       }
@@ -8131,7 +9688,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -8195,7 +9752,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -8254,7 +9811,7 @@
           {
             "name": "idempotencyKey.key",
             "in": "query",
-            "description": "The unique key to use for idempotency.\n string key = 1;",
+            "description": "The unique key to use for idempotency.",
             "schema": {
               "type": "string"
             }
@@ -8298,7 +9855,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:write"
@@ -8308,6 +9865,561 @@
           "resource": {
             "$ref": "#/components/schemas/UserRestriction",
             "name": "UserRestriction"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-session-tasks": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
+        "operationId": "Cloud_CreateLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LuauExecutionSessionTask"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Create Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-session-tasks/{luau-execution-session-task}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_GetLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session-task",
+            "in": "path",
+            "description": "The luau-execution-session-task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
+            "schema": {
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "BASIC",
+                "FULL"
+              ],
+              "type": "string",
+              "format": "enum",
+              "x-example-values": {
+                "exampleValues": [
+                  "VIEW_UNSPECIFIED"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Get Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-session-tasks/{luau-execution-session-task}/logs": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_ListLuauExecutionSessionTaskLogs",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session-task",
+            "in": "path",
+            "description": "The luau-execution-session-task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of luau execution session task logs to return. The\n service might return fewer than this value. If unspecified, at most 10000\n luau execution session task logs are returned. The maximum value is 10000\n and higher values are set to 10000.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 10000, inclusive",
+              "exampleValues": [
+                10000
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListLuauExecutionSessionTaskLogsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "List Luau Execution Session Task Logs"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
+            "name": "LuauExecutionSessionTaskLog"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-sessions/{luau-execution-session}/tasks": {
+      "post": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
+        "operationId": "Cloud_CreateLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session",
+            "in": "path",
+            "description": "The luau-execution-session ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LuauExecutionSessionTask"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Create Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-sessions/{luau-execution-session}/tasks/{task}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_GetLuauExecutionSessionTask",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session",
+            "in": "path",
+            "description": "The luau-execution-session ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "task",
+            "in": "path",
+            "description": "The task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "view",
+            "in": "query",
+            "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
+            "schema": {
+              "enum": [
+                "VIEW_UNSPECIFIED",
+                "BASIC",
+                "FULL"
+              ],
+              "type": "string",
+              "format": "enum",
+              "x-example-values": {
+                "exampleValues": [
+                  "VIEW_UNSPECIFIED"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "Get Luau Execution Session Task"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask",
+            "name": "LuauExecutionSessionTask"
+          }
+        }
+      }
+    },
+    "/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-sessions/{luau-execution-session}/tasks/{task}/logs": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
+        "operationId": "Cloud_ListLuauExecutionSessionTaskLogs",
+        "parameters": [
+          {
+            "name": "universe",
+            "in": "path",
+            "description": "The universe ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "place",
+            "in": "path",
+            "description": "The place ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "version",
+            "in": "path",
+            "description": "The version ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "luau-execution-session",
+            "in": "path",
+            "description": "The luau-execution-session ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "task",
+            "in": "path",
+            "description": "The task ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxPageSize",
+            "in": "query",
+            "description": "The maximum number of luau execution session task logs to return. The\n service might return fewer than this value. If unspecified, at most 10000\n luau execution session task logs are returned. The maximum value is 10000\n and higher values are set to 10000.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-example-values": {
+              "description": "An integer between 1 and 10000, inclusive",
+              "exampleValues": [
+                10000
+              ]
+            }
+          },
+          {
+            "name": "pageToken",
+            "in": "query",
+            "description": "A page token, received from a previous call, to retrieve a subsequent page.\n\n When paginating, all other parameters provided to the subsequent call must\n match the call that provided the page token.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListLuauExecutionSessionTaskLogsResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Luau Execution",
+          "methodProperties": {
+            "scopes": [
+              "universe.place.luau-execution-session:read",
+              "universe.place.luau-execution-session:write"
+            ],
+            "title": "List Luau Execution Session Task Logs"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
+            "name": "LuauExecutionSessionTaskLog"
           }
         }
       }
@@ -8381,7 +10493,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Monetization",
           "methodProperties": {
             "scopes": [
               "universe:write",
@@ -8459,7 +10571,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -8514,7 +10626,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -8564,7 +10676,7 @@
           {
             "name": "idempotencyKey.key",
             "in": "query",
-            "description": "The unique key to use for idempotency.\n string key = 1;",
+            "description": "The unique key to use for idempotency.",
             "schema": {
               "type": "string"
             }
@@ -8608,7 +10720,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:write"
@@ -8685,7 +10797,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -8741,7 +10853,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Universes and Places",
           "methodProperties": {
             "scopes": [
               "universe:write"
@@ -8787,7 +10899,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "Get User"
@@ -8862,7 +10974,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "List Inventory Items"
@@ -8916,7 +11028,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [
               "user.user-notification:write"
@@ -9017,7 +11129,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Cloud",
+          "category": "Users and Groups",
           "methodProperties": {
             "scopes": [],
             "title": "Generate User Thumbnail"
@@ -9036,6 +11148,150 @@
         "type": "object",
         "properties": {},
         "description": "A join request id."
+      },
+      "AssetQuota": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the asset quota.\n\n Format: `users/{user_id}/asset-quotas/{asset_quota_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "users/123/asset-quotas/some-asset-quota"
+              ]
+            }
+          },
+          "quotaType": {
+            "enum": [
+              "QUOTA_TYPE_UNSPECIFIED",
+              "RATE_LIMIT_UPLOAD",
+              "RATE_LIMIT_CREATOR_STORE_DISTRIBUTE"
+            ],
+            "type": "string",
+            "description": "Type of quota.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | QUOTA_TYPE_UNSPECIFIED | The default quota type. |\n  | RATE_LIMIT_UPLOAD | Rate limit on how often one can upload an asset. |\n  | RATE_LIMIT_CREATOR_STORE_DISTRIBUTE | Rate limit on how often one can distribute an asset on the creator store. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "QUOTA_TYPE_UNSPECIFIED"
+              ]
+            }
+          },
+          "assetType": {
+            "enum": [
+              "ASSET_TYPE_UNSPECIFIED",
+              "ASSET_TYPE_IMAGE",
+              "ASSET_TYPE_TSHIRT",
+              "ASSET_TYPE_AUDIO",
+              "ASSET_TYPE_MESH",
+              "ASSET_TYPE_LUA",
+              "ASSET_TYPE_HAT",
+              "ASSET_TYPE_PLACE",
+              "ASSET_TYPE_MODEL",
+              "ASSET_TYPE_SHIRT",
+              "ASSET_TYPE_PANTS",
+              "ASSET_TYPE_DECAL",
+              "ASSET_TYPE_HEAD",
+              "ASSET_TYPE_FACE",
+              "ASSET_TYPE_GEAR",
+              "ASSET_TYPE_ANIMATION",
+              "ASSET_TYPE_TORSO",
+              "ASSET_TYPE_RIGHT_ARM",
+              "ASSET_TYPE_LEFT_ARM",
+              "ASSET_TYPE_LEFT_LEG",
+              "ASSET_TYPE_RIGHT_LEG",
+              "ASSET_TYPE_YOUTUBE_VIDEO",
+              "ASSET_TYPE_APP",
+              "ASSET_TYPE_CODE",
+              "ASSET_TYPE_PLUGIN",
+              "ASSET_TYPE_SOLID_MODEL",
+              "ASSET_TYPE_MESH_PART",
+              "ASSET_TYPE_HAIR_ACCESSORY",
+              "ASSET_TYPE_FACE_ACCESSORY",
+              "ASSET_TYPE_NECK_ACCESSORY",
+              "ASSET_TYPE_SHOULDER_ACCESSORY",
+              "ASSET_TYPE_FRONT_ACCESSORY",
+              "ASSET_TYPE_BACK_ACCESSORY",
+              "ASSET_TYPE_WAIST_ACCESSORY",
+              "ASSET_TYPE_CLIMB_ANIMATION",
+              "ASSET_TYPE_DEATH_ANIMATION",
+              "ASSET_TYPE_FALL_ANIMATION",
+              "ASSET_TYPE_IDLE_ANIMATION",
+              "ASSET_TYPE_JUMP_ANIMATION",
+              "ASSET_TYPE_RUN_ANIMATION",
+              "ASSET_TYPE_SWIM_ANIMATION",
+              "ASSET_TYPE_WALK_ANIMATION",
+              "ASSET_TYPE_POSE_ANIMATION",
+              "ASSET_TYPE_LOCALIZATION_TABLE_MANIFEST",
+              "ASSET_TYPE_LOCALIZATION_TABLE_TRANSLATION",
+              "ASSET_TYPE_EMOTE_ANIMATION",
+              "ASSET_TYPE_VIDEO",
+              "ASSET_TYPE_TEXTURE_PACK",
+              "ASSET_TYPE_TSHIRT_ACCESSORY",
+              "ASSET_TYPE_SHIRT_ACCESSORY",
+              "ASSET_TYPE_PANTS_ACCESSORY",
+              "ASSET_TYPE_JACKET_ACCESSORY",
+              "ASSET_TYPE_SWEATER_ACCESSORY",
+              "ASSET_TYPE_SHORTS_ACCESSORY",
+              "ASSET_TYPE_LEFT_SHOE_ACCESSORY",
+              "ASSET_TYPE_RIGHT_SHOE_ACCESSORY",
+              "ASSET_TYPE_DRESS_SKIRT_ACCESSORY",
+              "ASSET_TYPE_FONT_FAMILY",
+              "ASSET_TYPE_FONT_FACE",
+              "ASSET_TYPE_MESH_HIDDEN_SURFACE_REMOVAL",
+              "ASSET_TYPE_EYEBROW_ACCESSORY",
+              "ASSET_TYPE_EYELASH_ACCESSORY",
+              "ASSET_TYPE_MOOD_ANIMATION",
+              "ASSET_TYPE_DYNAMIC_HEAD",
+              "ASSET_TYPE_CODE_SNIPPET",
+              "ASSET_TYPE_ADS_VIDEO"
+            ],
+            "type": "string",
+            "description": "The asset type the quota is for.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | ASSET_TYPE_UNSPECIFIED | Default AssetType. |\n  | ASSET_TYPE_IMAGE | Image |\n  | ASSET_TYPE_TSHIRT | Tshirt |\n  | ASSET_TYPE_AUDIO | Audio |\n  | ASSET_TYPE_MESH | Mesh |\n  | ASSET_TYPE_LUA | Lua |\n  | ASSET_TYPE_HAT | Hat |\n  | ASSET_TYPE_PLACE | Place |\n  | ASSET_TYPE_MODEL | Model |\n  | ASSET_TYPE_SHIRT | Classic Shirt |\n  | ASSET_TYPE_PANTS | Classic Pants |\n  | ASSET_TYPE_DECAL | Decal |\n  | ASSET_TYPE_HEAD | Head |\n  | ASSET_TYPE_FACE | Face |\n  | ASSET_TYPE_GEAR | Gear |\n  | ASSET_TYPE_ANIMATION | Animation |\n  | ASSET_TYPE_TORSO | Torso |\n  | ASSET_TYPE_RIGHT_ARM | Right Arm |\n  | ASSET_TYPE_LEFT_ARM | Left Arm |\n  | ASSET_TYPE_LEFT_LEG | Left Leg |\n  | ASSET_TYPE_RIGHT_LEG | Right Leg |\n  | ASSET_TYPE_YOUTUBE_VIDEO | YouTube Video |\n  | ASSET_TYPE_APP | App |\n  | ASSET_TYPE_CODE | Code |\n  | ASSET_TYPE_PLUGIN | Plugin |\n  | ASSET_TYPE_SOLID_MODEL | Solid Model |\n  | ASSET_TYPE_MESH_PART | Mesh Part |\n  | ASSET_TYPE_HAIR_ACCESSORY | Hair Accessory |\n  | ASSET_TYPE_FACE_ACCESSORY | Face Accessory |\n  | ASSET_TYPE_NECK_ACCESSORY | Neck Accessory |\n  | ASSET_TYPE_SHOULDER_ACCESSORY | Shoulder Accessory |\n  | ASSET_TYPE_FRONT_ACCESSORY | Front Accessory |\n  | ASSET_TYPE_BACK_ACCESSORY | Back Accessory |\n  | ASSET_TYPE_WAIST_ACCESSORY | Waist Accessory |\n  | ASSET_TYPE_CLIMB_ANIMATION | Climb Animation |\n  | ASSET_TYPE_DEATH_ANIMATION | Death Animation |\n  | ASSET_TYPE_FALL_ANIMATION | Fall Animation |\n  | ASSET_TYPE_IDLE_ANIMATION | Idle Animation |\n  | ASSET_TYPE_JUMP_ANIMATION | Jump Animation |\n  | ASSET_TYPE_RUN_ANIMATION | Run Animation |\n  | ASSET_TYPE_SWIM_ANIMATION | Swim Animation |\n  | ASSET_TYPE_WALK_ANIMATION | Walk Animation |\n  | ASSET_TYPE_POSE_ANIMATION | Pose Animation |\n  | ASSET_TYPE_LOCALIZATION_TABLE_MANIFEST | Localization Table Manifest |\n  | ASSET_TYPE_LOCALIZATION_TABLE_TRANSLATION | Localization Table Translation |\n  | ASSET_TYPE_EMOTE_ANIMATION | Emote Animation |\n  | ASSET_TYPE_VIDEO | Video |\n  | ASSET_TYPE_TEXTURE_PACK | Texture Pack |\n  | ASSET_TYPE_TSHIRT_ACCESSORY | Tshirt Accessory |\n  | ASSET_TYPE_SHIRT_ACCESSORY | Shirt Accessory |\n  | ASSET_TYPE_PANTS_ACCESSORY | Pants Accessory |\n  | ASSET_TYPE_JACKET_ACCESSORY | Jacket Accessory |\n  | ASSET_TYPE_SWEATER_ACCESSORY | Sweater Accessory |\n  | ASSET_TYPE_SHORTS_ACCESSORY | Shorts Accessory |\n  | ASSET_TYPE_LEFT_SHOE_ACCESSORY | Left Shoe Accessory |\n  | ASSET_TYPE_RIGHT_SHOE_ACCESSORY | Right Shoe Accessory |\n  | ASSET_TYPE_DRESS_SKIRT_ACCESSORY | Dress Skirt Accessory |\n  | ASSET_TYPE_FONT_FAMILY | Font Family |\n  | ASSET_TYPE_FONT_FACE | Font Face |\n  | ASSET_TYPE_MESH_HIDDEN_SURFACE_REMOVAL | Mesh Hidden Surface Removal |\n  | ASSET_TYPE_EYEBROW_ACCESSORY | Eyebrow Accessory |\n  | ASSET_TYPE_EYELASH_ACCESSORY | Eyelash Accessory |\n  | ASSET_TYPE_MOOD_ANIMATION | Mood Animation |\n  | ASSET_TYPE_DYNAMIC_HEAD | Dynamic Head |\n  | ASSET_TYPE_CODE_SNIPPET | Code Snippet |\n  | ASSET_TYPE_ADS_VIDEO | Ads Video |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "ASSET_TYPE_UNSPECIFIED"
+              ]
+            }
+          },
+          "usage": {
+            "type": "integer",
+            "description": "The current usage of the quota.",
+            "format": "int64"
+          },
+          "capacity": {
+            "type": "integer",
+            "description": "The capacity of the quota.",
+            "format": "int64"
+          },
+          "period": {
+            "enum": [
+              "PERIOD_UNSPECIFIED",
+              "MONTH",
+              "DAY"
+            ],
+            "type": "string",
+            "description": "The period of time the quota is for.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | PERIOD_UNSPECIFIED | The default period. |\n  | MONTH | Month. |\n  | DAY | Day. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "PERIOD_UNSPECIFIED"
+              ]
+            }
+          },
+          "usageResetTime": {
+            "type": "string",
+            "description": "The time the usage will reset for this quota.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          }
+        },
+        "description": "Represents a quota for an asset-related action.\n For example, a user can have 10 usage out of 100 capacity for a 1 month\n period.",
+        "x-resource": true
       },
       "AvatarAsset": {
         "type": "object",
@@ -9185,7 +11441,12 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the AvatarBody.\n Format: avatar-bodies/{avatar_body}"
+            "description": "The resource path of the avatar body.\n\n Format: `avatar-bodies/{avatar_body_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "avatar-bodies/123"
+              ]
+            }
           },
           "name": {
             "type": "string",
@@ -9235,7 +11496,7 @@
             "description": "Operation Id\n go/aip/not-precedent: This is a short-term solution to meet Expedition time\n constraints that will only be exposed to Engine-side internal code. Methods\n using this resource will never be exposed through API Gateway while this\n field exists."
           }
         },
-        "description": "Represents an avatar body -- outfit that consists of multiple bodypart\n assets. The body is created in experience\n Fields available for update: colors, body_assets, other_assets, scale",
+        "description": "Represents an avatar body -- outfit that consists of multiple bodypart\n assets. The body is created in experience",
         "x-resource": true,
         "x-oneOf": {
           "BodyAssets": [
@@ -9252,7 +11513,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the avatar creation.\n Format: avatar-creations/{avatar_creation}",
+            "description": "The resource path of the avatar creation.\n\n Format: `avatar-creations/{avatar_creation_id}`",
             "x-example-values": {
               "exampleValues": [
                 "avatar-creations/123e4567-e89b-12d3-a456-426655440000"
@@ -9334,6 +11595,10 @@
           "head": {
             "$ref": "#/components/schemas/AvatarCreation_Head",
             "description": "Head including eyelash, eyebrow."
+          },
+          "experienceCreationContext": {
+            "$ref": "#/components/schemas/AvatarCreation_ExperienceCreationContext",
+            "description": "The creation context when the avatar is created in an experience."
           }
         },
         "description": "Represents the process of creating a new avatar in the system. The resource\n manages the lifecycle of avatar creation, from initial submission to\n finalization, including the addition of necessary items.",
@@ -9342,6 +11607,213 @@
           "type": [
             "body",
             "head"
+          ]
+        }
+      },
+      "AvatarCreationToken": {
+        "required": [
+          "displayName",
+          "description"
+        ],
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the avatar creation token.\n\n Format:\n `universes/{universe_id}/avatar-creation-tokens/{avatar_creation_token_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/avatar-creation-tokens/123e4567-e89b-12d3-a456-426655440000"
+              ]
+            }
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The name of the AvatarCreationToken.\n\n Must be non-empty. Has a maximum limit of 50 characters.",
+            "x-example-values": {
+              "exampleValues": [
+                "Body Creation Authorization Token"
+              ]
+            }
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the AvatarCreationToken.\n\n Must be non-empty. Has a maximum limit of 1000 characters.",
+            "x-example-values": {
+              "exampleValues": [
+                "Awesome Body Token!"
+              ]
+            }
+          },
+          "user": {
+            "immutable": true,
+            "type": "string",
+            "description": "The AvatarCreationToken is user-created."
+          },
+          "group": {
+            "immutable": true,
+            "type": "string",
+            "description": "The AvatarCreationToken is group-created."
+          },
+          "itemType": {
+            "$ref": "#/components/schemas/AvatarCreationToken_ItemType",
+            "description": "The item type of the AvatarCreationToken."
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The UTC timestamp at which the  was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "dynamicPrice": {
+            "$ref": "#/components/schemas/AvatarCreationToken_DynamicPrice",
+            "description": "The dynamic price configuration of the AvatarCreationToken."
+          },
+          "saleMode": {
+            "readOnly": true,
+            "enum": [
+              "SALE_MODE_UNSPECIFIED",
+              "ON_SALE",
+              "OFF_SALE"
+            ],
+            "type": "string",
+            "description": "The sale mode of the AvatarCreationToken.\n\n It'll always be on sale by default unless the user\n or group owner is missing the requirements.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | SALE_MODE_UNSPECIFIED | Unspecified sale mode. |\n  | ON_SALE | The AvatarCreationToken is on sale. |\n  | OFF_SALE | The AvatarCreationToken is off sale. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "SALE_MODE_UNSPECIFIED"
+              ]
+            }
+          },
+          "offSaleReasons": {
+            "readOnly": true,
+            "type": "array",
+            "items": {
+              "enum": [
+                "OFF_SALE_REASON_UNSPECIFIED",
+                "MISSING_ID_VERIFICATION",
+                "CREATION_ACCESS_BLOCKED",
+                "MISSING_PREMIUM_SUBSCRIPTION_TIER",
+                "GROUP_OWNER_MISSING_PREMIUM_SUBSCRIPTION_TIER"
+              ],
+              "type": "string",
+              "format": "enum",
+              "x-example-values": {
+                "exampleValues": [
+                  "OFF_SALE_REASON_UNSPECIFIED"
+                ]
+              }
+            },
+            "description": "The off sale reasons of the AvatarCreationToken.\n\n The list will be empty if the AvatarCreationToken is on sale.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | OFF_SALE_REASON_UNSPECIFIED | Unspecified off sale reason. |\n  | MISSING_ID_VERIFICATION | The creator is missing id verification. |\n  | CREATION_ACCESS_BLOCKED | The creator's creation access is blocked. |\n  | MISSING_PREMIUM_SUBSCRIPTION_TIER | The creator is missing premium subscription tier. |\n  | GROUP_OWNER_MISSING_PREMIUM_SUBSCRIPTION_TIER | The group owner is missing premium subscription tier. |"
+          },
+          "expectedCreationCosts": {
+            "$ref": "#/components/schemas/AvatarCreationToken_CreationCosts",
+            "description": "When the actual price is different with the expected price, the operation\n will fail."
+          }
+        },
+        "description": "Represents the token that allows creators to expose functionality to users\n for creating avatar items within an experience.",
+        "x-resource": true,
+        "x-oneOf": {
+          "creator": [
+            "user",
+            "group"
+          ]
+        }
+      },
+      "AvatarCreationToken_CreationCosts": {
+        "type": "object",
+        "properties": {
+          "creationFeeRobux": {
+            "type": "integer",
+            "description": "Creation fee in Robux when creating an AvatarCreationToken.\n\n Creation fees are not refunded.",
+            "format": "int64"
+          },
+          "creationAdvanceRobux": {
+            "type": "integer",
+            "description": "Creation advance in Robux to be paid upfront at the time of creation.\n\n Roblox will rebate this advance back to the creator as user\n purchase creations authorized by this AvatarCreationToken.",
+            "format": "int64"
+          }
+        },
+        "description": "The costs to create an AvatarCreationToken"
+      },
+      "AvatarCreationToken_DynamicPrice": {
+        "type": "object",
+        "properties": {
+          "minimumPriceRobux": {
+            "type": "integer",
+            "description": "The AvatarCreationToken will never be priced below this amount.",
+            "format": "int64"
+          },
+          "priceOffsetRobux": {
+            "type": "integer",
+            "description": "The price relative to the price floor.\n\n For example, inputting '5' will price your item 5 Robux above the price\n floor, unless you have specified a minimum price.",
+            "format": "int64"
+          },
+          "currentPriceRobux": {
+            "readOnly": true,
+            "type": "integer",
+            "description": "Current price of the item in Robux based on the dynamic price floor,\n minimum price, and price offset calculation.",
+            "format": "int64"
+          }
+        },
+        "description": "The dynamic price configuration to set an amount above the price floor\n or set the lowest price you're willing to sell."
+      },
+      "AvatarCreationToken_ItemType": {
+        "type": "object",
+        "properties": {
+          "assetType": {
+            "enum": [
+              "ASSET_TYPE_UNSPECIFIED",
+              "HAT",
+              "HAIR_ACCESSORY",
+              "FACE_ACCESSORY",
+              "NECK_ACCESSORY",
+              "SHOULDER_ACCESSORY",
+              "FRONT_ACCESSORY",
+              "BACK_ACCESSORY",
+              "WAIST_ACCESSORY",
+              "TSHIRT_ACCESSORY",
+              "SHIRT_ACCESSORY",
+              "PANTS_ACCESSORY",
+              "JACKET_ACCESSORY",
+              "SWEATER_ACCESSORY",
+              "SHORTS_ACCESSORY",
+              "DRESS_SKIRT_ACCESSORY"
+            ],
+            "type": "string",
+            "description": "Represents an asset.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | ASSET_TYPE_UNSPECIFIED | Unspecified AssetType. |\n  | HAT | Hat. |\n  | HAIR_ACCESSORY | Hair Accessory. |\n  | FACE_ACCESSORY | Face Accessory. |\n  | NECK_ACCESSORY | Neck Accessory. |\n  | SHOULDER_ACCESSORY | Shoulder Accessory. |\n  | FRONT_ACCESSORY | Front Accessory. |\n  | BACK_ACCESSORY | Back Accessory. |\n  | WAIST_ACCESSORY | Waist Accessory. |\n  | TSHIRT_ACCESSORY | Tshirt Accessory. |\n  | SHIRT_ACCESSORY | Shirt Accessory. |\n  | PANTS_ACCESSORY | Pants Accessory. |\n  | JACKET_ACCESSORY | Jacket Accessory. |\n  | SWEATER_ACCESSORY | Sweater Accessory. |\n  | SHORTS_ACCESSORY | Shorts Accessory. |\n  | DRESS_SKIRT_ACCESSORY | Dress Skirt Accessory. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "ASSET_TYPE_UNSPECIFIED"
+              ]
+            }
+          },
+          "bundleType": {
+            "enum": [
+              "BUNDLE_TYPE_UNSPECIFIED",
+              "BODY",
+              "DYNAMIC_HEAD"
+            ],
+            "type": "string",
+            "description": "Represents a bundle.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | BUNDLE_TYPE_UNSPECIFIED | Unspecified BundleType. |\n  | BODY | Body. |\n  | DYNAMIC_HEAD | Dynamic Head. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "BUNDLE_TYPE_UNSPECIFIED"
+              ]
+            }
+          }
+        },
+        "description": "The type of the item.",
+        "x-oneOf": {
+          "itemType": [
+            "assetType",
+            "bundleType"
           ]
         }
       },
@@ -9371,6 +11843,10 @@
             "readOnly": true,
             "type": "string",
             "description": "Unique identifier of a bundle."
+          },
+          "scale": {
+            "$ref": "#/components/schemas/AvatarCreation_BodyScale",
+            "description": "Body scale for the bundle."
           }
         },
         "description": "Represents the body of avatars which includes assets for the head, arms,\n legs, and torso."
@@ -9416,6 +11892,79 @@
           }
         },
         "description": "Assets that are part of a body."
+      },
+      "AvatarCreation_BodyScale": {
+        "required": [
+          "heightScale",
+          "widthScale"
+        ],
+        "type": "object",
+        "properties": {
+          "heightScale": {
+            "type": "number",
+            "description": "Determines by what factor the height (top-to-bottom distance) is scaled.\n Range 0.9-1.05.",
+            "format": "double",
+            "x-example-values": {
+              "exampleValues": [
+                1
+              ]
+            }
+          },
+          "widthScale": {
+            "type": "number",
+            "description": "Determines by what factor the width (left-to-right distance) is\n scaled. Range: 0.7-1.0",
+            "format": "double",
+            "x-example-values": {
+              "exampleValues": [
+                1
+              ]
+            }
+          },
+          "headScale": {
+            "type": "number",
+            "description": "Determines by what factor the Head is scaled. Range 0.95-1.0",
+            "format": "double"
+          },
+          "proportion": {
+            "type": "number",
+            "description": "Determines how wide (0) or narrow (1) a Humanoid rig. Range 0.0-1.0",
+            "format": "double"
+          },
+          "bodyType": {
+            "type": "number",
+            "description": "Determines by which the shape of a Humanoid rig is interpolated. Range\n 0.0-1.0",
+            "format": "double"
+          }
+        },
+        "description": "Represent scale factors of different aspects of an avatar body.",
+        "x-oneOf": {
+          "BodyType": [
+            "bodyType"
+          ],
+          "HeadScale": [
+            "headScale"
+          ],
+          "Proportion": [
+            "proportion"
+          ]
+        }
+      },
+      "AvatarCreation_ExperienceCreationContext": {
+        "type": "object",
+        "properties": {
+          "avatarCreationToken": {
+            "immutable": true,
+            "type": "string",
+            "description": "The path of the AvatarCreationToken.\n\n Format:\n \"universes/{universe_id}/avatar-creation-tokens/{avatar_creation_token_id}\""
+          },
+          "expectedPriceRobux": {
+            "writeOnly": true,
+            "type": "integer",
+            "description": "The expected price of AvatarCreationToken in Robux.\n\n When the actual price of AvatarCreationToken is different with the\n expected price, the operation will fail.",
+            "format": "int64"
+          }
+        },
+        "description": "The creation context required for creating an avatar within an experience.\n\n This holds information such as the AvatarCreationToken and\n the expected price of the AvatarCreationToken."
       },
       "AvatarCreation_Head": {
         "type": "object",
@@ -9463,7 +12012,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the avatar marketplace order.\n Format: avatar-marketplace-orders/{avatar_marketplace_order}",
+            "description": "The resource path of the avatar marketplace order.\n\n Format: `avatar-marketplace-orders/{avatar_marketplace_order_id}`",
             "x-example-values": {
               "exampleValues": [
                 "avatar-marketplace-orders/123e4567-e89b-12d3-a456-426655440000"
@@ -9886,12 +12435,175 @@
           ]
         }
       },
+      "CommerceItem": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the commerce item.\n\n Format: `users/{user_id}/commerce-items/{commerce_item_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "users/123/commerce-items/123"
+              ]
+            }
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the commerce item was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the commerce item was last updated.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "displayName": {
+            "type": "string",
+            "description": "The name of the commerce item.\n\n This cannot be updated directly, but if the listing is updated with\n the merchant platform, this resource will be asynchronously updated\n and can take up to 30 minutes to fully sync."
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the commerce item.\n\n This cannot be updated directly, but if the listing is updated with\n the merchant platform, this resource will be asynchronously updated\n and can take up to 30 minutes to fully sync."
+          },
+          "merchantPlatform": {
+            "immutable": true,
+            "enum": [
+              "MERCHANT_PLATFORM_UNSPECIFIED",
+              "SHOPIFY",
+              "AMAZON"
+            ],
+            "type": "string",
+            "description": "The merchant that will be used to fulfill orders for this item.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | MERCHANT_PLATFORM_UNSPECIFIED | Unspecified merchant type. |\n  | SHOPIFY | The item is sold through Shopify. |\n  | AMAZON | The item is sold through Amazon. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "MERCHANT_PLATFORM_UNSPECIFIED"
+              ]
+            }
+          },
+          "merchantId": {
+            "immutable": true,
+            "type": "string",
+            "description": "An identifier that is able to uniquely identify the merchant on the\n merchant platform.",
+            "x-example-values": {
+              "exampleValues": [
+                "shop.myshopify.com"
+              ]
+            }
+          },
+          "merchantItemId": {
+            "immutable": true,
+            "type": "string",
+            "description": "The merchant-specific item ID\n\n | Merchant | Expected ID  | Example       |\n |----------|--------------|---------------|\n | Amazon   | Product ASIN | B08Z5NYG12    |\n | Shopify  | Product ID   | 9561801589040 |",
+            "x-example-values": {
+              "exampleValues": [
+                "9561801589040"
+              ]
+            }
+          },
+          "moderationState": {
+            "immutable": true,
+            "enum": [
+              "MODERATION_STATE_UNSPECIFIED",
+              "APPROVED",
+              "PENDING",
+              "REJECTED"
+            ],
+            "type": "string",
+            "description": "The moderation state of the commerce item.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | MODERATION_STATE_UNSPECIFIED | Unspecified moderation status. |\n  | APPROVED | The commerce item is approved. |\n  | PENDING | The commerce item is pending approval. |\n  | REJECTED | The commerce item is rejected. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "MODERATION_STATE_UNSPECIFIED"
+              ]
+            }
+          }
+        },
+        "description": "A commerce item represents a physical item sold by a merchant that was synced\n to Roblox either via a Sales Channel or manually through Creator Hub.\n\n No Update and Delete operations are provided as those operations need to be\n handled on the merchant platform rather than by Roblox. Roblox stores\n read-only copies of items synced to our platform.",
+        "x-resource": true
+      },
+      "CommerceMerchantConnection": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the commerce merchant connection.\n\n Format:\n `users/{user_id}/commerce-merchant-connections/{commerce_merchant_connection_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "users/123/commerce-merchant-connections/some-commerce-merchant-connection-id"
+              ]
+            }
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the commerce merchant connection was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The timestamp when the commerce merchant connection was last updated.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "merchantPlatform": {
+            "immutable": true,
+            "enum": [
+              "MERCHANT_PLATFORM_UNSPECIFIED",
+              "SHOPIFY",
+              "AMAZON"
+            ],
+            "type": "string",
+            "description": "The merchant platform that the connection corresponds to.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | MERCHANT_PLATFORM_UNSPECIFIED | Unspecified merchant type. |\n  | SHOPIFY | The item is sold through Shopify. |\n  | AMAZON | The item is sold through Amazon. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "MERCHANT_PLATFORM_UNSPECIFIED"
+              ]
+            }
+          },
+          "merchantId": {
+            "immutable": true,
+            "type": "string",
+            "description": "An identifier that is able to uniquely identify the merchant on the\n merchant platform.",
+            "x-example-values": {
+              "exampleValues": [
+                "shop.myshopify.com"
+              ]
+            }
+          }
+        },
+        "description": "Represents a user's connection to a specific merchant provider.\n\n For example, a Roblox user's connection to a unique Shopify domain\n shop.myshopify.com. A single user can have multiple connections with the same\n merchant platform.",
+        "x-resource": true
+      },
       "CreatorStoreProduct": {
         "type": "object",
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the Creator Store product.\n\n Format: creator-store-products/{creator_store_product}",
+            "description": "The resource path of the creator store product.\n\n Format: `creator-store-products/{creator_store_product_id}`",
             "x-example-values": {
               "exampleValues": [
                 "creator-store-products/ProductNamespace-ProductType-123"
@@ -9992,7 +12704,7 @@
             "description": "The Creator Store product is a font family with this asset ID."
           }
         },
-        "description": "Represents a product in the Creator Store.",
+        "description": "Represents a product in the Creator Store. Throttles at 60 requests per\n minute.",
         "x-resource": true,
         "x-oneOf": {
           "productType": [
@@ -10015,7 +12727,12 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the data store.\n Format: universes/{universe}/data-stores/{data_store}"
+            "description": "The resource path of the data store.\n\n Format: `universes/{universe_id}/data-stores/{data_store_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/data-stores/some-data-store"
+              ]
+            }
           },
           "createTime": {
             "readOnly": true,
@@ -10042,7 +12759,12 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the data store entry.\n Format:\n universes/{universe}/data-stores/{data_store}/entries/{data_store_entry}\n Format:\n universes/{universe}/data-stores/{data_store}/scopes/{data_store_scope}/entries/{data_store_entry}"
+            "description": "The resource path of the data store entry.\n\n Formats:\n * `universes/{universe_id}/data-stores/{data_store_id}/entries/{data_store_entry_id}`\n * `universes/{universe_id}/data-stores/{data_store_id}/scopes/{data_store_scope_id}/entries/{data_store_entry_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/data-stores/some-data-store/entries/some-data-store-entry"
+              ]
+            }
           },
           "createTime": {
             "readOnly": true,
@@ -10059,7 +12781,7 @@
             "readOnly": true,
             "immutable": true,
             "type": "string",
-            "description": "The revision ID of the data store entry.\n\n A new revision is committed whenever the entry is changed in any way.\n\n The format is an arbitrary string.\n Example: \"foo\""
+            "description": "The revision ID of the data store entry.\n\n A new revision is committed whenever the data store entry is changed in any\n way.\n\n The format is an arbitrary string.\n Example: \"foo\""
           },
           "revisionCreateTime": {
             "readOnly": true,
@@ -10089,7 +12811,6 @@
             }
           },
           "etag": {
-            "readOnly": true,
             "type": "string",
             "description": "This checksum is computed by the server based on the value of other\n fields, and may be sent on update and delete requests (and potentially\n on certain custom methods) to ensure the client has an up-to-date\n value before proceeding."
           },
@@ -10122,7 +12843,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the data store scope.\n Format:\n universes/{universe}/data-stores/{data_store}/scopes/{data_store_scope}",
+            "description": "The resource path of the data store scope.\n\n Format:\n `universes/{universe_id}/data-stores/{data_store_id}/scopes/{data_store_scope_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/data-stores/some-data-store/scopes/some-data-store-scope"
@@ -10155,11 +12876,15 @@
         "description": "A join request id."
       },
       "DeveloperProduct": {
+        "required": [
+          "displayName",
+          "description"
+        ],
         "type": "object",
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the developer product.\n Format: universes/{universe}/developer-products/{developer_product}",
+            "description": "The resource path of the developer product.\n\n Format: `universes/{universe_id}/developer-products/{developer_product_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/developer-products/123"
@@ -10168,24 +12893,50 @@
           },
           "displayName": {
             "type": "string",
-            "description": "The name of the developer product."
+            "description": "The name of the developer product.",
+            "x-example-values": {
+              "exampleValues": [
+                "Mana Refill"
+              ]
+            }
           },
           "description": {
             "type": "string",
-            "description": "A description of the developer product."
+            "description": "A description of the developer product.",
+            "x-example-values": {
+              "exampleValues": [
+                "Restore your mana to full."
+              ]
+            }
           },
           "iconAssetId": {
             "type": "string",
-            "description": "The asset ID of the developer product's icon."
+            "description": "The asset ID of the developer product's icon.",
+            "x-example-values": {
+              "exampleValues": [
+                "12928981934"
+              ]
+            }
           },
           "priceRobux": {
             "type": "integer",
-            "description": "The price of the developer product in Robux.",
-            "format": "int64"
+            "description": "The price of the developer product in Robux.\n\n If this field is not set, the developer product is off-sale.",
+            "format": "int64",
+            "x-example-values": {
+              "description": "An integer between 1 and 1000000000, inclusive",
+              "exampleValues": [
+                10
+              ]
+            }
           }
         },
         "description": "Represents a developer product.",
-        "x-resource": true
+        "x-resource": true,
+        "x-oneOf": {
+          "PriceRobux": [
+            "priceRobux"
+          ]
+        }
       },
       "DiscardMemoryStoreQueueItemsRequest": {
         "type": "object",
@@ -10251,7 +13002,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the game pass.\n Format: universes/{universe}/game-passes/{game_pass}",
+            "description": "The resource path of the game pass.\n\n Format: `universes/{universe_id}/game-passes/{game_pass_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/game-passes/83167572"
@@ -10289,7 +13040,7 @@
             "description": "Sales statistics for the game pass."
           }
         },
-        "description": "TODO",
+        "description": "Represents a Game Pass.",
         "x-resource": true
       },
       "GamePass_SalesStats": {
@@ -10352,10 +13103,10 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the group.\n\n Format: groups/{group}",
+            "description": "The resource path of the group.\n\n Format: `groups/{group_id}`",
             "x-example-values": {
               "exampleValues": [
-                "groups/7"
+                "groups/123"
               ]
             }
           },
@@ -10473,17 +13224,17 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the group_join_request.\n Format: groups/{group}/join-requests/{group_join_request}",
+            "description": "The resource path of the group join request.\n\n Format: `groups/{group_id}/join-requests/{group_join_request_id}`",
             "x-example-values": {
               "exampleValues": [
-                "groups/7/join-requests/156"
+                "groups/123/join-requests/123"
               ]
             }
           },
           "createTime": {
             "readOnly": true,
             "type": "string",
-            "description": "The timestamp when the group_join_request was created.",
+            "description": "The timestamp when the group join request was created.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -10502,7 +13253,7 @@
             }
           }
         },
-        "description": "A join request for a group.\n\n Will only be accessible to requesters with the `Accept Join Requests`\n permission.",
+        "description": "A request to join a group.\n\n The `acceptRequests` permission is required.",
         "x-resource": true
       },
       "GroupMembership": {
@@ -10510,17 +13261,17 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the group membership.\n\n Format: groups/{group}/memberships/{group_membership}",
+            "description": "The resource path of the group membership.\n\n Format: `groups/{group_id}/memberships/{group_membership_id}`",
             "x-example-values": {
               "exampleValues": [
-                "groups/7/memberships/MjE1NTc"
+                "groups/123/memberships/123"
               ]
             }
           },
           "createTime": {
             "readOnly": true,
             "type": "string",
-            "description": "The timestamp of when the group membership was created.",
+            "description": "The timestamp when the group membership was created.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -10531,7 +13282,7 @@
           "updateTime": {
             "readOnly": true,
             "type": "string",
-            "description": "The timestamp of when the group membership was last updated.",
+            "description": "The timestamp when the group membership was last updated.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -10567,17 +13318,17 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the group role.\n\n Format: groups/{group}/roles/{group_role}",
+            "description": "The resource path of the group role.\n\n Format: `groups/{group_id}/roles/{group_role_id}`",
             "x-example-values": {
               "exampleValues": [
-                "groups/7/roles/200"
+                "groups/123/roles/123"
               ]
             }
           },
           "createTime": {
             "readOnly": true,
             "type": "string",
-            "description": "The timestamp at which the GroupRole was created.\n\n Visible only to owners of the group.",
+            "description": "The timestamp when the group role was last updated.\n\n Visible only to owners of the group.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -10588,7 +13339,7 @@
           "updateTime": {
             "readOnly": true,
             "type": "string",
-            "description": "The timestamp at which the GroupRole was last updated.\n\n Visible only to owners of the group.",
+            "description": "The timestamp when the group role was last updated.\n\n Visible only to owners of the group.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -10835,17 +13586,17 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the group shout.\n\n Format: groups/{group}/shout",
+            "description": "The resource path of the group shout.\n\n Format: `groups/{group_id}/shout`",
             "x-example-values": {
               "exampleValues": [
-                "groups/7/shout"
+                "groups/123/shout"
               ]
             }
           },
           "createTime": {
             "readOnly": true,
             "type": "string",
-            "description": "The timestamp of when the group shout was created.",
+            "description": "The timestamp when the group shout was created.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -10856,7 +13607,7 @@
           "updateTime": {
             "readOnly": true,
             "type": "string",
-            "description": "The timestamp of when the group shout was last updated.",
+            "description": "The timestamp when the group shout was last updated.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -10884,7 +13635,7 @@
             }
           }
         },
-        "description": "A single post on a group that can hold important group updates or other\n information.",
+        "description": "A single status post on a group that can hold important group updates or\n other information.",
         "x-resource": true,
         "x-oneOf": {
           "Poster": [
@@ -10947,7 +13698,12 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the instance.\n Format: universes/{universe}/places/{place}/instances/{instance}"
+            "description": "The resource path of the instance.\n\n Format: `universes/{universe_id}/places/{place_id}/instances/{instance_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/places/123/instances/0123456789abcdef0123456789abcdef"
+              ]
+            }
           },
           "hasChildren": {
             "readOnly": true,
@@ -10998,10 +13754,10 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the inventory item.\n\n Format: users/{user}/inventory-items/{inventory_item}",
+            "description": "The resource path of the inventory item.\n\n Format: `users/{user_id}/inventory-items/{inventory_item_id}`",
             "x-example-values": {
               "exampleValues": [
-                "users/3725356332/inventory-items/VVNFUl9BU1NFVF9JRD0xNzM0MTM3ODE3MjA"
+                "users/123/inventory-items/some-inventory-item-id"
               ]
             }
           },
@@ -11380,6 +14136,23 @@
         },
         "description": "A list of InventoryItems in the parent collection."
       },
+      "ListLuauExecutionSessionTaskLogsResponse": {
+        "type": "object",
+        "properties": {
+          "luauExecutionSessionTaskLogs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LuauExecutionSessionTaskLog"
+            },
+            "description": "The LuauExecutionSessionTaskLogs from the specified\n LuauExecutionSessionTask."
+          },
+          "nextPageToken": {
+            "type": "string",
+            "description": "A token that you can send as a `pageToken` parameter to retrieve the next\n page. If this field is omitted, there are no subsequent pages."
+          }
+        },
+        "description": "A list of LuauExecutionSessionTaskLogs in the parent collection."
+      },
       "ListMemoryStoreSortedMapItemsResponse": {
         "type": "object",
         "properties": {
@@ -11448,12 +14221,176 @@
         },
         "description": "A list of UserRestrictions in the parent collection."
       },
+      "LuauExecutionSession": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the luau execution session.\n\n Formats:\n * `universes/{universe_id}/places/{place_id}/luau-execution-sessions/{luau_execution_session_id}`\n * `universes/{universe_id}/places/{place_id}/versions/{place_version_id}/luau-execution-sessions/{luau_execution_session_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/places/123/luau-execution-sessions/123e4567-e89b-12d3-a456-426655440000"
+              ]
+            }
+          }
+        },
+        "description": "A `LuauExecutionSession` (\"session\" for short) is a container for\n `LuauExecutionSessionTask`s (\"tasks\" for short).\n\n A session is associated with a specific version of a place, and all tasks\n within a session run in the context of that place version.\n\n Currently, sessions cannot be directly created or destroyed, and each session\n can run only one task. A session is implicitly created when a task is\n created, and the session ends when the task ends.",
+        "x-resource": true
+      },
+      "LuauExecutionSessionTask": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the luau execution session task.\n\n Formats:\n * `universes/{universe_id}/places/{place_id}/luau-execution-session-tasks/{luau_execution_session_task_id}`\n * `universes/{universe_id}/places/{place_id}/versions/{place_version_id}/luau-execution-session-tasks/{luau_execution_session_task_id}`\n * `universes/{universe_id}/places/{place_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{luau_execution_session_task_id}`\n * `universes/{universe_id}/places/{place_id}/versions/{place_version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{luau_execution_session_task_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/places/123/luau-execution-session-tasks/123e4567-e89b-12d3-a456-426655440000"
+              ]
+            }
+          },
+          "createTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Time when this task was created.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "updateTime": {
+            "readOnly": true,
+            "type": "string",
+            "description": "Time when this task's state last changed.",
+            "format": "date-time",
+            "x-example-values": {
+              "exampleValues": [
+                "2023-07-05T12:34:56Z"
+              ]
+            }
+          },
+          "user": {
+            "readOnly": true,
+            "type": "string",
+            "description": "The user that created the API key that was used to create this task."
+          },
+          "state": {
+            "readOnly": true,
+            "enum": [
+              "STATE_UNSPECIFIED",
+              "QUEUED",
+              "PROCESSING",
+              "CANCELLED",
+              "COMPLETE",
+              "FAILED"
+            ],
+            "type": "string",
+            "description": "The task's state. See the State enum for information about each possible\n value.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | STATE_UNSPECIFIED | UNSPECIFIED |\n  | QUEUED | The Task is waiting to be processed. |\n  | PROCESSING | The Task has been picked up for processing. |\n  | CANCELLED | The Task has been stopped by the user. |\n  | COMPLETE | The Task has finished processing. The output field contains the output. |\n  | FAILED | The Task failed. The error field contains details about the error. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "STATE_UNSPECIFIED"
+              ]
+            }
+          },
+          "script": {
+            "immutable": true,
+            "type": "string",
+            "description": "The script to be run as part of this task.\n\n For example:\n\n ```luau\n local x = 3\n local y = 4\n return x + y\n ```"
+          },
+          "error": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask_Error",
+            "description": "Present when the task execution fails. Contains details about the error\n that caused the failure."
+          },
+          "output": {
+            "$ref": "#/components/schemas/LuauExecutionSessionTask_Output",
+            "description": "Present when the task execution succeeds. Contains the output of the\n execution."
+          }
+        },
+        "description": "A `LuauExecutionSessionTask` (\"task\" for short) executes a given Luau script\n in the context of a specific version of a place.\n\n In a task, physics simulation does not run. Server and local scripts within\n the place also do not automatically run.\n\n The script may access and update the data model of the place, including\n invoking any module scripts. However, data model changes are local to the\n task and cannot be persisted.\n\n The following Engine APIs are disallowed in order to prevent accidental\n modification of production data:\n\n * `Class.AssetService:CreatePlaceAsync()`\n * `Class.AssetService:SavePlaceAsync()`\n * `Class.DataStoreService:GetDataStore()`\n * `Class.DataStoreService:GetGlobalDataStore()`\n * `Class.DataStoreService:GetOrderedDataStore()`\n * `Class.MemoryStoreService:GetHashMap()`\n * `Class.MemoryStoreService:GetQueue()`\n * `Class.MemoryStoreService:GetSortedMap()`\n * `Class.Players:BanAsync()`\n * `Class.Players:UnbanAsync()`\n * `Class.Players:GetBanHistoryAsync()`\n * `Class.HttpService:GetAsync()`\n * `Class.HttpService:PostAsync()`\n * `Class.HttpService:RequestAsync()`\n * `Class.MessagingService:PublishAsync()`\n * `Class.MessagingService:SubscribeAsync()`\n * `Class.DataModel:SavePlace()`\n\n Scripts can be up to 4 MB in size and run for up to 30 seconds. Scripts that\n run for longer than 30 seconds terminate with an error.\n\n Scripts are executed as-is and do not need to be wrapped in a function.\n\n Scripts can return values (using the Luau `return` keyword). Return values\n are serialized to JSON and can be retrieved with the `Get\n LuauExecutionSessionTask` API after the task completes. The total size of the\n return values after JSON serialization must not exceed 4 MB. If the limit is\n exceeded, the task terminates with an error.\n\n If the script raises an unhandled error, the task terminates. The error\n information can be retrieved with the `GetLuauExecutionSessionTask` API.\n\n Standard output (generated by the Luau `print` function) can be retrieved\n with the `ListLuauExecutionSessionTaskLogs` method after the task completes.\n A maximum of 450 KB of logs are retained. If the amount of logs exceeds the\n limit, older logs are discarded.\n\n Information about a task is retained for 24 hours after task completion.\n\n At most two incomplete tasks are allowed per place. Attempting to create a\n third task while the first two are incomplete results in a HTTP 429 response.",
+        "x-resource": true,
+        "x-oneOf": {
+          "result": [
+            "error",
+            "output"
+          ]
+        }
+      },
+      "LuauExecutionSessionTaskLog": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "The resource path of the luau execution session task log.\n\n Formats:\n * `universes/{universe_id}/places/{place_id}/luau-execution-session-tasks/{luau_execution_session_task_id}/logs/{luau_execution_session_task_log_id}`\n * `universes/{universe_id}/places/{place_id}/versions/{place_version_id}/luau-execution-session-tasks/{luau_execution_session_task_id}/logs/{luau_execution_session_task_log_id}`\n * `universes/{universe_id}/places/{place_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{luau_execution_session_task_id}/logs/{luau_execution_session_task_log_id}`\n * `universes/{universe_id}/places/{place_id}/versions/{place_version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{luau_execution_session_task_id}/logs/{luau_execution_session_task_log_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/places/123/luau-execution-session-tasks/123e4567-e89b-12d3-a456-426655440000/logs/123"
+              ]
+            }
+          },
+          "messages": {
+            "readOnly": true,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of log messages generated by the task execution.\n Each call to the Luau `print()` function from the task's script's code\n results in a single list item here, even if the message itself contains\n newlines."
+          }
+        },
+        "description": "Represents a chunk of log messages generated by a\n `LuauExecutionSessionTask`.\n\n The amount of logs that is retained is limited. See the documentation of the\n `LuauExecutionSessionTask` resource for more details.\n\n Logs have the same retention time as the parent task.",
+        "x-resource": true
+      },
+      "LuauExecutionSessionTask_Error": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "readOnly": true,
+            "enum": [
+              "ERROR_CODE_UNSPECIFIED",
+              "SCRIPT_ERROR",
+              "DEADLINE_EXCEEDED",
+              "OUTPUT_SIZE_LIMIT_EXCEEDED",
+              "INTERNAL_ERROR"
+            ],
+            "type": "string",
+            "description": "An error code indicating the category of the error.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | ERROR_CODE_UNSPECIFIED | UNSPECIFIED |\n  | SCRIPT_ERROR | The task's script raised an unhandled error. |\n  | DEADLINE_EXCEEDED | The task exceeded the maximum allowed execution duration. |\n  | OUTPUT_SIZE_LIMIT_EXCEEDED | The task's outputs were too large. |\n  | INTERNAL_ERROR | The Task failed due to an internal system error. |",
+            "format": "enum",
+            "x-example-values": {
+              "exampleValues": [
+                "ERROR_CODE_UNSPECIFIED"
+              ]
+            }
+          },
+          "message": {
+            "readOnly": true,
+            "type": "string",
+            "description": "An error message containing more details about the error."
+          }
+        },
+        "description": "Contains error details in case of failed execution."
+      },
+      "LuauExecutionSessionTask_Output": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "readOnly": true,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GoogleProtobufValue"
+            },
+            "description": "Return values from the script that was run. Return values that are not\n JSON serializable (such as Data Model Instances) will be returned as\n nulls."
+          }
+        },
+        "description": "Contains the output of a task's execution."
+      },
       "MemoryStore": {
         "type": "object",
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the memory store.\n Format: universes/{universe}/memory-store",
+            "description": "The resource path of the memory store.\n\n Format: `universes/{universe_id}/memory-store`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/memory-store"
@@ -11469,7 +14406,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the memory store queue.\n Format: universes/{universe}/memory-store/queues/{memory_store_queue}",
+            "description": "The resource path of the memory store queue.\n\n Format:\n `universes/{universe_id}/memory-store/queues/{memory_store_queue_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/memory-store/queues/some-memory-store-queue-id"
@@ -11477,7 +14414,7 @@
             }
           }
         },
-        "description": "A queue is a linear data structure with a collection of items that either\n follows the first-in-first-out (FIFO) principle or prioritizes elements based\n on predefined criteria.",
+        "description": "A queue is a linear data structure with a collection of items that either\n follows the first-in-first-out (FIFO) principle or prioritizes elements\n based on predefined criteria.",
         "x-resource": true
       },
       "MemoryStoreQueueItem": {
@@ -11485,7 +14422,12 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the MemoryStoreQueueItem.\n Format:\n universes/{universe}/memoryStore/scopes/{memory_store_scope}/queues/{memory_store_queue}/items/{memory_store_queue_item}"
+            "description": "The resource path of the memory store queue item.\n\n Format:\n `universes/{universe_id}/memory-store/queues/{memory_store_queue_id}/items/{memory_store_queue_item_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/memory-store/queues/some-memory-store-queue-id/items/some-memory-store-queue-item-id"
+              ]
+            }
           },
           "data": {
             "$ref": "#/components/schemas/GoogleProtobufValue",
@@ -11525,7 +14467,7 @@
             "description": "The name of the item."
           }
         },
-        "description": "Represents queue item name.",
+        "description": "Represents an item within a queue structure.",
         "x-resource": true,
         "x-oneOf": {
           "expiration": [
@@ -11539,7 +14481,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the memory store sorted map.\n Format:\n universes/{universe}/memory-store/sorted-maps/{memory_store_sorted_map}",
+            "description": "The resource path of the memory store sorted map.\n\n Format:\n `universes/{universe_id}/memory-store/sorted-maps/{memory_store_sorted_map_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/memory-store/sorted-maps/some-memory-store-sorted-map-id"
@@ -11547,7 +14489,7 @@
             }
           }
         },
-        "description": "The sorted map data structure of [memory\n stores](https://create.roblox.com/docs/cloud-services/memory-stores) allows\n you to store frequent in-memory data as key-value pairs and maintain a\n specific order based on the keys. Unlike queues, the order of keys entering a\n map doesn't determine the order of processing, making sorted maps useful for\n key-based data organization for implementing in-experience entities for\n engagement such as leaderboards and cross-server auctioning.",
+        "description": "The sorted map data structure of [memory\n stores](https://create.roblox.com/docs/cloud-services/memory-stores)\n allows you to store frequent in-memory data as key-value pairs and\n maintain a specific order based on the keys. Unlike queues, the order of\n keys entering a map doesn't determine the order of processing, making\n sorted maps useful for key-based data organization for features like\n leaderboards and cross-server auctioning.",
         "x-resource": true
       },
       "MemoryStoreSortedMapItem": {
@@ -11555,7 +14497,12 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the memory store sorted map item.\n Format:\n universes/{universe}/memory-store/sorted-maps/{memory_store_sorted_map}/items/{memory_store_sorted_map_item}"
+            "description": "The resource path of the memory store sorted map item.\n\n Format:\n `universes/{universe_id}/memory-store/sorted-maps/{memory_store_sorted_map_id}/items/{memory_store_sorted_map_item_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/memory-store/sorted-maps/some-memory-store-sorted-map-id/items/some-memory-store-sorted-map-item-id"
+              ]
+            }
           },
           "value": {
             "$ref": "#/components/schemas/GoogleProtobufValue",
@@ -11603,7 +14550,7 @@
             "format": "double"
           }
         },
-        "description": "Represents a sorted map item name.",
+        "description": "Represents an item within a sorted map structure.",
         "x-resource": true,
         "x-oneOf": {
           "expiration": [
@@ -11673,7 +14620,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the ordered data store.\n Format: universes/{universe}/ordered-data-stores/{ordered_data_store}",
+            "description": "The resource path of the ordered data store.\n\n Format:\n `universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/ordered-data-stores/some-ordered-data-store-id"
@@ -11689,7 +14636,12 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the ordered data store entry.\n\n Format:\n universes/{universe}/ordered-data-stores/{ordered_data_store}/scopes/{ordered_data_store_scope}/entries/{ordered_data_store_entry}"
+            "description": "The resource path of the ordered data store entry.\n\n Format:\n `universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{ordered_data_store_scope_id}/entries/{ordered_data_store_entry_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/ordered-data-stores/some-ordered-data-store-id/scopes/some-ordered-data-store-scope-id/entries/some-ordered-data-store-entry-id"
+              ]
+            }
           },
           "value": {
             "type": "number",
@@ -11715,7 +14667,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the ordered data store scope.\n Format:\n universes/{universe}/ordered-data-stores/{ordered_data_store}/scopes/{ordered_data_store_scope}",
+            "description": "The resource path of the ordered data store scope.\n\n Format:\n `universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{ordered_data_store_scope_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/ordered-data-stores/some-ordered-data-store-id/scopes/some-ordered-data-store-scope-id"
@@ -11731,7 +14683,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the place.\n Format: universes/{universe}/places/{place}",
+            "description": "The resource path of the place.\n\n Format: `universes/{universe_id}/places/{place_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/places/123"
@@ -11798,152 +14750,12 @@
           ]
         }
       },
-      "PlaceComputeSession": {
-        "type": "object",
-        "properties": {
-          "path": {
-            "type": "string",
-            "description": "The resource path of the place compute session.\n\n Formats:\n * `universes/{universe}/places/{place}/compute-sessions/{place_compute_session}`\n * `universes/{universe}/places/{place}/versions/{place_version}/compute-sessions/{place_compute_session}`",
-            "x-example-values": {
-              "exampleValues": [
-                "universes/123/places/123/compute-sessions/123e4567-e89b-12d3-a456-426655440000"
-              ]
-            }
-          }
-        },
-        "description": "Represents a compute session.",
-        "x-resource": true
-      },
-      "PlaceComputeSessionTask": {
-        "type": "object",
-        "properties": {
-          "path": {
-            "type": "string",
-            "description": "The resource path of the place compute session task.\n\n Formats:\n * `universes/{universe}/places/{place}/compute-session-tasks/{place_compute_session_task}`\n * `universes/{universe}/places/{place}/versions/{place_version}/compute-session-tasks/{place_compute_session_task}`\n * `universes/{universe}/places/{place}/compute-sessions/{place_compute_session}/tasks/{place_compute_session_task}`\n * `universes/{universe}/places/{place}/versions/{place_version}/compute-sessions/{place_compute_session}/tasks/{place_compute_session_task}`",
-            "x-example-values": {
-              "exampleValues": [
-                "universes/123/places/123/compute-session-tasks/123e4567-e89b-12d3-a456-426655440000"
-              ]
-            }
-          },
-          "createTime": {
-            "readOnly": true,
-            "type": "string",
-            "description": "Time when this task was created.",
-            "format": "date-time",
-            "x-example-values": {
-              "exampleValues": [
-                "2023-07-05T12:34:56Z"
-              ]
-            }
-          },
-          "updateTime": {
-            "readOnly": true,
-            "type": "string",
-            "description": "Time when this task's state last changed.",
-            "format": "date-time",
-            "x-example-values": {
-              "exampleValues": [
-                "2023-07-05T12:34:56Z"
-              ]
-            }
-          },
-          "user": {
-            "readOnly": true,
-            "type": "string",
-            "description": "The user that created this task."
-          },
-          "group": {
-            "readOnly": true,
-            "type": "string",
-            "description": "The group that created this task."
-          },
-          "state": {
-            "readOnly": true,
-            "enum": [
-              "STATE_UNSPECIFIED",
-              "QUEUED",
-              "PROCESSING",
-              "CANCELLED",
-              "COMPLETE",
-              "TIMED_OUT"
-            ],
-            "type": "string",
-            "description": "The task's state. See the State enum for information about each possible value.\n\nPossible values:\n\n  | Value | Description |\n  | --- | --- |\n  | STATE_UNSPECIFIED | UNSPECIFIED |\n  | QUEUED | The Task is waiting to be processed. |\n  | PROCESSING | The Task has been picked up for processing. |\n  | CANCELLED | The Task has been stopped by the user. |\n  | COMPLETE | The Task has finished processing. The result field contains the output of the execution. |\n  | TIMED_OUT | The Task was aborted because it exceeded the maximum allowed execution time. |",
-            "format": "enum",
-            "x-example-values": {
-              "exampleValues": [
-                "STATE_UNSPECIFIED"
-              ]
-            }
-          },
-          "script": {
-            "immutable": true,
-            "type": "string",
-            "description": "The script to be run as part of this task.\n\n For example:\n\n ```luau\n local x = 3\n local y = 4\n return x + y\n ```"
-          },
-          "result": {
-            "$ref": "#/components/schemas/PlaceComputeSessionTask_Result",
-            "description": "The output of the task execution."
-          }
-        },
-        "description": "Represents a compute session task.",
-        "x-resource": true,
-        "x-oneOf": {
-          "initiator": [
-            "user",
-            "group"
-          ]
-        }
-      },
-      "PlaceComputeSessionTaskLog": {
-        "type": "object",
-        "properties": {
-          "path": {
-            "type": "string",
-            "description": "The resource path of the place compute session task log.\n\n Formats:\n * `universes/{universe}/places/{place}/compute-session-tasks/{place_compute_session_task}/logs/{place_compute_session_task_log}`\n * `universes/{universe}/places/{place}/versions/{place_version}/compute-session-tasks/{place_compute_session_task}/logs/{place_compute_session_task_log}`\n * `universes/{universe}/places/{place}/compute-sessions/{place_compute_session}/tasks/{place_compute_session_task}/logs/{place_compute_session_task_log}`\n * `universes/{universe}/places/{place}/versions/{place_version}/compute-sessions/{place_compute_session}/tasks/{place_compute_session_task}/logs/{place_compute_session_task_log}`",
-            "x-example-values": {
-              "exampleValues": [
-                "universes/123/places/123/compute-session-tasks/123e4567-e89b-12d3-a456-426655440000/logs/some-place-compute-session-task-log-id"
-              ]
-            }
-          },
-          "messages": {
-            "readOnly": true,
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "A list of log messages generated by the task execution.\n Each call to the Luau `print()` function from the task's script's code\n results in a single list item here, even if the message itself contains\n newlines."
-          }
-        },
-        "description": "Represents log messages generated by a PlaceComputeSessionTask.",
-        "x-resource": true
-      },
-      "PlaceComputeSessionTask_Result": {
-        "type": "object",
-        "properties": {
-          "status": {
-            "$ref": "#/components/schemas/Status",
-            "description": "Information on the outcome of the task's execution. In the case of an execution failure, this field will contain the error details."
-          },
-          "results": {
-            "readOnly": true,
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/GoogleProtobufValue"
-            },
-            "description": "Return values from the script that was run. Return values that are not\n JSON serializable (such as Data Model Instances) will be returned as\n nulls."
-          }
-        },
-        "description": "Contains the output of a task's execution."
-      },
       "PlaceVersion": {
         "type": "object",
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the place version.\n\n Format: `universes/{universe}/places/{place}/versions/{place_version}`",
+            "description": "The resource path of the place version.\n\n Format:\n `universes/{universe_id}/places/{place_id}/versions/{place_version_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/places/123/versions/123"
@@ -11951,7 +14763,7 @@
             }
           }
         },
-        "description": "Represents a Roblox place version.",
+        "description": "Represents a specific version of a place.",
         "x-resource": true
       },
       "ReadMemoryStoreQueueItemsResponse": {
@@ -11986,12 +14798,17 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the secret.\n\n Format:  universes/{universe}/secrets/{secret}"
+            "description": "The resource path of the secret.\n\n Format: `universes/{universe_id}/secrets/{secret_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "universes/123/secrets/some-secret-id"
+              ]
+            }
           },
           "createTime": {
             "readOnly": true,
             "type": "string",
-            "description": "Secret creation timestamp.",
+            "description": "The timestamp when the secret was created.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -12002,7 +14819,7 @@
           "updateTime": {
             "readOnly": true,
             "type": "string",
-            "description": "Timestamp when the secret was last updated.",
+            "description": "The timestamp when the secret was last updated.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -12025,7 +14842,7 @@
             "description": "Secret designation: domain name, or a wildcard."
           }
         },
-        "description": "A secret represented as a byte array.\n\n Secrets are software-level credentials that allow a program\n to access another program without the need for providing a username and\n a password.",
+        "description": "A secret represented as a byte array.\n\n Secrets are software-level credentials that allow a program to access\n another program without providing a username and a password.",
         "x-resource": true
       },
       "SnapshotDataStoresRequest": {
@@ -12090,7 +14907,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the subscription.\n\n The subscription ID is the same as the user ID of the user who subscribed.\n Format:\n universes/{universe}/subscription-products/{subscription_product}/subscriptions/{subscription}",
+            "description": "The resource path of the subscription.\n\n Format:\n `universes/{universe_id}/subscription-products/{subscription_product_id}/subscriptions/{subscription_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/subscription-products/some-subscription-product-id/subscriptions/some-subscription-id"
@@ -12239,7 +15056,7 @@
             }
           }
         },
-        "description": "Represents a user's subscription to a subscription product.",
+        "description": "Represents a user's subscription to a subscription product. The\n subscription ID is the same as the user ID of the user who subscribed.",
         "x-resource": true,
         "x-oneOf": {
           "subscriber": [
@@ -12252,7 +15069,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the subscription product.\n Format: universes/{universe}/subscription-products/{subscription_product}",
+            "description": "The resource path of the subscription product.\n\n Format:\n `universes/{universe_id}/subscription-products/{subscription_product_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/subscription-products/some-subscription-product-id"
@@ -12342,17 +15159,17 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the universe.\n\n Format: universes/{universe}",
+            "description": "The resource path of the universe.\n\n Format: `universes/{universe_id}`",
             "x-example-values": {
               "exampleValues": [
-                "universes/20514875"
+                "universes/123"
               ]
             }
           },
           "createTime": {
             "readOnly": true,
             "type": "string",
-            "description": "The timestamp at which the universe was created.",
+            "description": "The timestamp when the universe was created.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -12363,7 +15180,7 @@
           "updateTime": {
             "readOnly": true,
             "type": "string",
-            "description": "The timestamp at which the universe was updated.",
+            "description": "The timestamp when the universe was last updated.",
             "format": "date-time",
             "x-example-values": {
               "exampleValues": [
@@ -12523,7 +15340,7 @@
             }
           }
         },
-        "description": "A universe represents a Roblox experience.",
+        "description": "Represents a Roblox experience.",
         "x-resource": true,
         "x-oneOf": {
           "ConsoleEnabled": [
@@ -12558,7 +15375,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the universe badge.\n Format: universes/{universe}/universe-badges/{universe_badge}",
+            "description": "The resource path of the universe badge.\n\n Format: `universes/{universe_id}/universe-badges/{universe_badge_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/universe-badges/123"
@@ -12671,7 +15488,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the universe event.\n Format: universes/{universe}/events/{universe_event}",
+            "description": "The resource path of the universe event.\n\n Format: `universes/{universe_id}/events/{universe_event_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/events/123"
@@ -12810,7 +15627,12 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the user.\n\n Format: users/{user}"
+            "description": "The resource path of the user.\n\n Format: `users/{user_id}`",
+            "x-example-values": {
+              "exampleValues": [
+                "users/123"
+              ]
+            }
           },
           "createTime": {
             "readOnly": true,
@@ -12902,10 +15724,10 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the user notification.\n\n Format: users/{user}/notifications/{user_notification}",
+            "description": "The resource path of the user notification.\n\n Format: `users/{user_id}/notifications/{user_notification_id}`",
             "x-example-values": {
               "exampleValues": [
-                "users/1/notifications/a6746f2e-2cc6-11ee-be56-0242ac120002"
+                "users/123/notifications/01234567-ABCD-1234-ABCD-0123456789AB"
               ]
             }
           },
@@ -12928,7 +15750,7 @@
             "description": "The notification payload."
           }
         },
-        "description": "A notification sent to a user.",
+        "description": "Represents a notification sent to a user.",
         "x-resource": true
       },
       "UserNotification_Payload": {
@@ -13072,7 +15894,7 @@
         "properties": {
           "path": {
             "type": "string",
-            "description": "The resource path of the user restriction.\n Format: universes/{universe}/user-restrictions/{user_restriction}\n Format:\n universes/{universe}/places/{place}/user-restrictions/{user_restriction}",
+            "description": "The resource path of the user restriction.\n\n Formats:\n * `universes/{universe_id}/user-restrictions/{user_restriction_id}`\n * `universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}`",
             "x-example-values": {
               "exampleValues": [
                 "universes/123/user-restrictions/123"
@@ -13555,6 +16377,10 @@
     }
   ],
   "x-categories": [
-    "Cloud"
+    "Data and Memory Stores",
+    "Luau Execution",
+    "Monetization",
+    "Universes and Places",
+    "Users and Groups"
   ]
 }

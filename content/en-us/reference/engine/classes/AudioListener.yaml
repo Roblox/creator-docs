@@ -17,8 +17,7 @@ code_samples:
   - audio-wiring---camera-listener
 inherits:
   - Instance
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: AudioListener.AudioInteractionGroup
@@ -44,17 +43,17 @@ properties:
   - name: AudioListener.DistanceAttenuation
     summary: |
       Represents how the perceived volume of emitted sounds change as the
-      distance between `Class.AudioEmitter|AudioEmitters` and the `Class.AudioListener`
-      increases.
+      distance between `Class.AudioEmitter|AudioEmitters` and the
+      `Class.AudioListener` increases.
     description: |
       Represents a volume-over-distance curve that affects how loudly the
-      `Class.AudioListener` hears any `Class.AudioEmitter|AudioEmitters`, based on the
-      distance between them.
+      `Class.AudioListener` hears any `Class.AudioEmitter|AudioEmitters`, based
+      on the distance between them.
 
       This property is internal and can't be accessed by scripts; it exists to
       support replication. See
-      `Class.AudioListener:SetDistanceAttenuation()|SetDistanceAttenuation()` for
-      usage details.
+      `Class.AudioListener:SetDistanceAttenuation()|SetDistanceAttenuation()`
+      for usage details.
     code_samples: []
     type: BinaryString
     tags: []
@@ -121,8 +120,8 @@ methods:
       use, or uses an inverse rolloff curve if none is provided.
     description: |
       Sets a volume-over-distance curve that affects how loudly the
-      `Class.AudioListener` will hear any `Class.AudioEmitter|AudioEmitters`, based on the
-      distance between them.
+      `Class.AudioListener` will hear any `Class.AudioEmitter|AudioEmitters`,
+      based on the distance between them.
 
       The curve is represented by a table mapping distance keys to volume
       values. Keys are expected to be unique numbers greater than or equal to 0,
@@ -142,8 +141,8 @@ methods:
       `Class.AudioEmitter.DistanceAttenuation` curve of the `Class.AudioEmitter`
       to obtain the final audibility.
 
-      If the table is empty or `nil`, the `Class.AudioListener` defaults to applying
-      a constant volume of 1 everywhere.
+      If the table is empty or `nil`, the `Class.AudioListener` defaults to
+      applying a constant volume of 1 everywhere.
     code_samples: []
     parameters:
       - name: curve

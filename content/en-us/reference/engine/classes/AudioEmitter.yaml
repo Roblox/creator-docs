@@ -19,8 +19,7 @@ code_samples:
   - audio-wiring---multi-emission
 inherits:
   - Instance
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: AudioEmitter.AudioInteractionGroup
@@ -140,8 +139,8 @@ methods:
       outward infinitely at their respective volume levels.
 
       This volume will be multiplied with the volume from the
-      `Class.AudioListener.DistanceAttenuation` curve of the `Class.AudioListener`
-      to obtain the final audibility.
+      `Class.AudioListener.DistanceAttenuation` curve of the
+      `Class.AudioListener` to obtain the final audibility.
 
       If the table is empty or `nil`, the `Class.AudioEmitter` defaults to using
       a distance attenuation curve determined by the inverse-square law.

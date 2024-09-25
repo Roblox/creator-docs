@@ -14,10 +14,14 @@ By utilizing **appearance modifiers**, you can further customize the appearance 
 
 The `Class.UIGradient` object applies a color and transparency gradient to its parent `Class.GuiObject`.
 
-<GridContainer numColumns="2">
-  <img src="../assets/ui/layout-appearance/UIGradient.jpg" />
-  <img src="../assets/ui/layout-appearance/Explorer-UIGradient.png" />
-</GridContainer>
+<Grid container spacing={2}>
+  <Grid item>
+		<img src="../assets/ui/ui-objects/UIGradient.jpg" width="500" />
+	</Grid>
+	<Grid item>
+		<img src="../assets/studio/explorer/UIGradient.png" width="320" />
+	</Grid>
+</Grid>
 
 You can configure the gradient by:
 
@@ -33,7 +37,7 @@ To set a gradient's color sequence:
 1. In the **Explorer** window, select the `Class.UIGradient`.
 1. In the **Properties** window, click inside the **Color** property field, then click the **&hellip;** button to the right of the input box. A color sequence pop-up displays.
 
-   <img src="../assets/ui/layout-appearance/UIGradient-Open-ColorSequence-Window.png"
+   <img src="../assets/ui/ui-objects/UIGradient-Open-ColorSequence-Window.png"
    width="320" />
 
    Each triangle on the bottom axis of the color sequence is a **keypoint** that determines the color value at that point.
@@ -59,7 +63,7 @@ To adjust a gradient's transparency across its range:
 1. In the **Explorer** window, select the `Class.UIGradient`.
 1. In the **Properties** window, click inside the **Transparency** property field, then click the **&hellip;** button to the right of the input box. A number sequence pop-up displays.
 
-   <img src="../assets/ui/layout-appearance/UIGradient-Open-NumberSequence-Window.png"
+   <img src="../assets/ui/ui-objects/UIGradient-Open-NumberSequence-Window.png"
    width="320" />
 
    Each square across the number sequence graph is a
@@ -83,15 +87,15 @@ The `Class.UIGradient.Offset|Offset` and `Class.UIGradient.Rotation|Rotation` pr
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/ui/layout-appearance/UIGradient-Offset-X-0.png" />
+    <img src="../assets/ui/ui-objects/UIGradient-Offset-X-0.png" />
     <figcaption>Offset (X) = 0</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/layout-appearance/UIGradient-Offset-X-Pos-0.25.png" />
+    <img src="../assets/ui/ui-objects/UIGradient-Offset-X-Pos-0.25.png" />
     <figcaption>Offset (X) = 0.25</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/layout-appearance/UIGradient-Offset-X-Neg-0.25.png" />
+    <img src="../assets/ui/ui-objects/UIGradient-Offset-X-Neg-0.25.png" />
     <figcaption>Offset (X) = -0.25</figcaption>
   </figure>
 </GridContainer>
@@ -100,15 +104,15 @@ Similarly, when you rotate the gradient, the control points also rotate.
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/ui/layout-appearance/UIGradient-Rotation-0.png" />
+    <img src="../assets/ui/ui-objects/UIGradient-Rotation-0.png" />
     <figcaption>Rotation = 0</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/layout-appearance/UIGradient-Rotation-Pos-45.png" />
+    <img src="../assets/ui/ui-objects/UIGradient-Rotation-Pos-45.png" />
     <figcaption>Rotation = 45</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/layout-appearance/UIGradient-Rotation-Neg-90.png" />
+    <img src="../assets/ui/ui-objects/UIGradient-Rotation-Neg-90.png" />
     <figcaption>Rotation = -90</figcaption>
   </figure>
 </GridContainer>
@@ -128,11 +132,11 @@ Depending on its parent, `Class.UIStroke` operates as either a **text outline** 
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-As-Text-Outline.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-As-Text-Outline.png" />
     <figcaption>TextLabel with UIStroke child</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-As-Border.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-As-Border.png" />
     <figcaption>Frame with UIStroke and UICorner children</figcaption>
   </figure>
 </GridContainer>
@@ -141,11 +145,11 @@ When applied to a text object, you can override the default stroke behavior by t
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-As-Text-Outline.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-As-Text-Outline.png" />
     <figcaption>UIStroke.ApplyStrokeMode = Contextual</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-Stroke-Mode-Border.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-Stroke-Mode-Border.png" />
     <figcaption>UIStroke.ApplyStrokeMode = Border</figcaption>
   </figure>
 </GridContainer>
@@ -156,11 +160,11 @@ You can set the stroke width through the `Class.UIStroke.Thickness|Thickness` pr
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-Thickness-4.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-Thickness-4.png" />
     <figcaption>UIStroke.Thickness = 4</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-Thickness-12.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-Thickness-12.png" />
     <figcaption>UIStroke.Thickness = 12</figcaption>
   </figure>
 </GridContainer>
@@ -175,11 +179,11 @@ You can set the stroke color through the `Class.UIStroke.Color|Color` property, 
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-Color-Solid.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-Color-Solid.png" />
     <figcaption>UIStroke.Color = (0, 95, 225)</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-Color-Gradient.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-Color-Gradient.png" />
     <figcaption>UIStroke with UIGradient child</figcaption>
   </figure>
 </GridContainer>
@@ -194,11 +198,11 @@ The `Class.UIStroke.Transparency|Transparency` property sets the stroke transpar
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-Transparency-A.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-Transparency-A.png" />
     <figcaption>TextLabel.TextTransparency = 0 &nbsp;/&nbsp; UIStroke.Transparency = 0.5</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-Transparency-B.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-Transparency-B.png" />
     <figcaption>TextLabel.TextTransparency = 1 &nbsp;/&nbsp; UIStroke.Transparency = 0</figcaption>
   </figure>
 </GridContainer>
@@ -209,51 +213,57 @@ The `Class.UIStroke.LineJoinMode|LineJoinMode` property lets you control how cor
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-LineJoinMode-Round.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-LineJoinMode-Round.png" />
     <figcaption>UIStroke.LineJoinMode = Round</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-LineJoinMode-Bevel.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-LineJoinMode-Bevel.png" />
     <figcaption>UIStroke.LineJoinMode = Bevel</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/layout-appearance/UIStroke-LineJoinMode-Miter.png" />
+    <img src="../assets/ui/ui-objects/UIStroke-LineJoinMode-Miter.png" />
     <figcaption>UIStroke.LineJoinMode = Miter</figcaption>
   </figure>
 </GridContainer>
 
 ## Corners
 
-The `Class.UICorner` instance applies deformation to all four corners of its parent `Class.GuiObject`. You can control the applied radius through the `Class.UICorner.CornerRadius|CornerRadius` property using either **Scale** or **Offset**.
+The `Class.UICorner` instance applies deformation to all four corners of its parent `Class.GuiObject`. You can control the applied radius through the `Class.UICorner.CornerRadius|CornerRadius` property using either `Datatype.UDim.Scale|Scale` or `Datatype.UDim.Offset|Offset`.
 
-<img src="../assets/ui/layout-appearance/UICorner-CornerRadius-Properties.png"
+<img src="../assets/studio/properties/UICorner-CornerRadius.png"
 width="320" />
 
-**Scale** rounds the corners to a percentage based on the total length of the **shortest** edge of the parent, meaning that a scale of 0.5 or higher deforms the parent into a "pill" shape, regardless of its width or height.
+`Datatype.UDim.Scale|Scale` rounds the corners to a **percentage** based on the total length of the **shortest** edge of the parent, meaning that a scale of `0.5` or higher deforms the parent into a "pill" shape, regardless of its width or height. `Datatype.UDim.Offset|Offset` rounds the corners to a specific number of **pixels**, regardless of the width/height of the parent.
 
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../assets/ui/layout-appearance/UICorner-Scale-0.25.png" />
-    <figcaption>Scale = 0.25 &nbsp;/&nbsp; Offset = 0</figcaption>
+<Grid container spacing={3}>
+<Grid item>
+	<figure>
+    <img src="../assets/ui/ui-objects/UICorner-Scale-0.25.png" width="364" />
+    <center><figcaption>`Datatype.UDim.Scale|Scale` = `0.25` &nbsp;&middot;&nbsp; `Datatype.UDim.Offset|Offset` = `0`</figcaption></center>
   </figure>
-  <figure>
-    <img src="../assets/ui/layout-appearance/UICorner-Scale-0.5.png" />
-    <figcaption>Scale = 0.5 &nbsp;/&nbsp; Offset = 0</figcaption>
+</Grid>
+<Grid item>
+	<figure>
+    <img src="../assets/ui/ui-objects/UICorner-Scale-0.5.png" width="364" />
+    <center><figcaption>`Datatype.UDim.Scale|Scale` = `0.5` &nbsp;&middot;&nbsp; `Datatype.UDim.Offset|Offset` = `0`</figcaption></center>
   </figure>
-</GridContainer>
+</Grid>
+</Grid>
 
-**Offset** rounds the corners to a specific number of pixels, regardless of the width/height of the parent.
-
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../assets/ui/layout-appearance/UICorner-Offset-25.png" />
-    <figcaption>Scale = 0 &nbsp;/&nbsp; Offset = 25</figcaption>
+<Grid container spacing={3}>
+<Grid item>
+	<figure>
+    <img src="../assets/ui/ui-objects/UICorner-Offset-32.png" width="364" />
+    <center><figcaption>`Datatype.UDim.Scale|Scale` = `0` &nbsp;&middot;&nbsp; `Datatype.UDim.Offset|Offset` = `32`</figcaption></center>
   </figure>
-  <figure>
-    <img src="../assets/ui/layout-appearance/UICorner-Offset-50.png" />
-    <figcaption>Scale = 0 &nbsp;/&nbsp; Offset = 50</figcaption>
+</Grid>
+<Grid item>
+	<figure>
+    <img src="../assets/ui/ui-objects/UICorner-Offset-64.png" width="364" />
+    <center><figcaption>`Datatype.UDim.Scale|Scale` = `0` &nbsp;&middot;&nbsp; `Datatype.UDim.Offset|Offset` = `64`</figcaption></center>
   </figure>
-</GridContainer>
+</Grid>
+</Grid>
 
 ## Padding
 
@@ -261,5 +271,5 @@ A `Class.UIPadding` object applies top, bottom, left, and/or right padding to th
 
 For example, you can move the text inside a text button downward or upward by applying an offset to the bottom of the button.
 
-<video src="../assets/ui/layout-appearance/UIPadding.mp4" controls
+<video src="../assets/ui/ui-objects/UIPadding.mp4" controls
 width="80%"></video>

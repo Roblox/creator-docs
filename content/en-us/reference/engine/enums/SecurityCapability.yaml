@@ -91,3 +91,18 @@ items:
     value: 16
     tags: []
     deprecation_message: ''
+  - name: Input
+    summary: ''
+    value: 17
+    tags: []
+    deprecation_message: ''
+  - name: Environment
+    summary: ''
+    value: 18
+    tags: []
+    deprecation_message: ''
+  - name: RemoteEvent
+    summary: ''
+    value: 19
+    tags: []
+    deprecation_message: ''

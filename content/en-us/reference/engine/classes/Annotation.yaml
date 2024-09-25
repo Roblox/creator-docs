@@ -10,6 +10,18 @@ inherits:
 tags: []
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: Annotation:GetStringUniqueId
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
 events: []
 callbacks: []

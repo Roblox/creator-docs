@@ -6,7 +6,7 @@ summary: |
   Positions sibling UI elements in rows or columns within the parent UI
   container.
 description: |
-  A **UIListLayout** positions sibling UI elements in rows or columns within the
+  A `UIListLayout` positions sibling UI elements in rows or columns within the
   parent UI container, based on the
   `Class.UIListLayout.FillDirection|FillDirection`. The
   `Class.GuiObject.Position|Position` property of each sibling `Class.GuiObject`
@@ -23,7 +23,7 @@ description: |
   `Class.UIListLayout.SortOrder|SortOrder` to either `Enum.SortOrder.Name` or
   `Enum.SortOrder.LayoutOrder`, then rename siblings in alphanumerical order or
   set their `Class.GuiObject.LayoutOrder|LayoutOrder` value, respectively.
-  **UIListLayout** will automatically re‑layout elements when elements are
+  `UIListLayout` will automatically re‑layout elements when elements are
   added/removed, or if a sibling's `Class.Instance.Name|Name` or
   `Class.GuiObject.LayoutOrder|LayoutOrder` changes.
 
@@ -43,7 +43,7 @@ description: |
   Note that there are performance implications of using a
   [flex‑enabled](../../../ui/list-flex-layouts.md#flex-layouts) list layout,
   since extra calculations are needed to calculate flex basis sizes, flexed
-  sizes, and line wrapping. Flex is enabled on a **UIListLayout** when the
+  sizes, and line wrapping. Flex is enabled on a `UIListLayout` when the
   following properties are set, or if any `Class.GuiObject` sibling has a
   `Class.UIFlexItem` parented to it:
 
@@ -64,7 +64,7 @@ properties:
       Controls how to distribute extra horizontal space.
     description: |
       When the list layout's `Class.UIListLayout.FillDirection|FillDirection` is
-      set to `Enum.FillDirection.Horizontal`, the **HorizontalFlex** property
+      set to `Enum.FillDirection.Horizontal`, the `HorizontalFlex` property
       specifies how to distribute extra horizontal space in the parent
       container.
 
@@ -101,11 +101,11 @@ properties:
 
       <img src="../../../assets/engine-api/classes/UIListLayout/HorizontalFlex-Options.png" width="800" alt="UIListLayout examples showing how each HorizontalFlex option affects the size and spacing of sibling UI objects." />
 
-      #### Cross-Direction Behavior
+      ##### Cross-Direction Behavior
 
       In **vertical** list layouts
       (`Class.UIListLayout.FillDirection|FillDirection` set to
-      `Enum.FillDirection.Vertical`), the **HorizontalFlex** property specifies
+      `Enum.FillDirection.Vertical`), the `HorizontalFlex` property specifies
       how to distribute the siblings across the **horizontal cross‑direction**.
       In such layouts, a setting of `Enum.UIFlexAlignment.Fill` makes the
       siblings fill the entire horizontal space while vertical spacing adheres
@@ -113,7 +113,7 @@ properties:
 
       <img src="../../../assets/engine-api/classes/UIListLayout/HorizontalFlex-Cross-Direction.png" width="720" alt="Diagram showing how HorizontalFlex affects the horizontal size of sibling UI objects when the UIListLayout fill direction is set to vertical." />
 
-      #### AutomaticSize Interaction
+      ##### AutomaticSize Interaction
 
       If `Class.GuiObject.AutomaticSize` is enabled for a child of the
       `Class.UIListLayout` in the
@@ -214,7 +214,7 @@ properties:
       Controls how to distribute extra vertical space.
     description: |
       When the list layout's `Class.UIListLayout.FillDirection|FillDirection` is
-      set to `Enum.FillDirection.Vertical`, the **VerticalFlex** property
+      set to `Enum.FillDirection.Vertical`, the `VerticalFlex` property
       specifies how to distribute extra vertical space in the parent container.
 
       <table size="small">
@@ -250,11 +250,11 @@ properties:
 
       <img src="../../../assets/engine-api/classes/UIListLayout/VerticalFlex-Options.png" width="800" alt="UIListLayout examples showing how each VerticalFlex option affects the size and spacing of sibling UI objects." />
 
-      #### Cross-Direction Behavior
+      ##### Cross-Direction Behavior
 
       In **horizontal** list layouts
       (`Class.UIListLayout.FillDirection|FillDirection` set to
-      `Enum.FillDirection.Horizontal`), the **VerticalFlex** property specifies
+      `Enum.FillDirection.Horizontal`), the `VerticalFlex` property specifies
       how to distribute the siblings across the **vertical cross direction**. In
       such layouts, a setting of `Enum.UIFlexAlignment.Fill` makes the siblings
       fill the entire vertical space while horizontal spacing adheres to
@@ -262,7 +262,7 @@ properties:
 
       <img src="../../../assets/engine-api/classes/UIListLayout/VerticalFlex-Cross-Direction.png" width="720" alt="Diagram showing how VerticalFlex affects the vertical size of sibling UI objects when the UIListLayout fill direction is set to horizontal." />
 
-      #### AutomaticSize Interaction
+      ##### AutomaticSize Interaction
 
       If `Class.GuiObject.AutomaticSize` is enabled for a child of the
       `Class.UIListLayout` in the

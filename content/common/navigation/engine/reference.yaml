@@ -500,6 +500,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/ChatWindowConfiguration.yaml
         ignoreTranslation: true
+      - title: ChatWindowMessageProperties
+        path: /reference/engine/classes/ChatWindowMessageProperties
+        type: engineapi
+        source: /reference/engine/classes/ChatWindowMessageProperties.yaml
+        ignoreTranslation: true
       - title: ChorusSoundEffect
         path: /reference/engine/classes/ChorusSoundEffect
         type: engineapi
@@ -649,6 +654,11 @@ navigation:
         path: /reference/engine/classes/CornerWedgePart
         type: engineapi
         source: /reference/engine/classes/CornerWedgePart.yaml
+        ignoreTranslation: true
+      - title: CreatorStoreService
+        path: /reference/engine/classes/CreatorStoreService
+        type: engineapi
+        source: /reference/engine/classes/CreatorStoreService.yaml
         ignoreTranslation: true
       - title: CurveAnimation
         path: /reference/engine/classes/CurveAnimation
@@ -880,6 +890,16 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/ExperienceNotificationService.yaml
         ignoreTranslation: true
+      - title: ExplorerFilterAutocompleterInstance
+        path: /reference/engine/classes/ExplorerFilterAutocompleterInstance
+        type: engineapi
+        source: /reference/engine/classes/ExplorerFilterAutocompleterInstance.yaml
+        ignoreTranslation: true
+      - title: ExplorerFilterInstance
+        path: /reference/engine/classes/ExplorerFilterInstance
+        type: engineapi
+        source: /reference/engine/classes/ExplorerFilterInstance.yaml
+        ignoreTranslation: true
       - title: Explosion
         path: /reference/engine/classes/Explosion
         type: engineapi
@@ -944,6 +964,11 @@ navigation:
         path: /reference/engine/classes/FloorWire
         type: engineapi
         source: /reference/engine/classes/FloorWire.yaml
+        ignoreTranslation: true
+      - title: FluidForceSensor
+        path: /reference/engine/classes/FluidForceSensor
+        type: engineapi
+        source: /reference/engine/classes/FluidForceSensor.yaml
         ignoreTranslation: true
       - title: Folder
         path: /reference/engine/classes/Folder
@@ -3193,6 +3218,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AccessoryType.yaml
         ignoreTranslation: true
+      - title: ActionOnStopSync
+        path: /reference/engine/enums/ActionOnStopSync
+        type: engineapi
+        source: /reference/engine/enums/ActionOnStopSync.yaml
+        ignoreTranslation: true
       - title: ActionType
         path: /reference/engine/enums/ActionType
         type: engineapi
@@ -3302,6 +3332,11 @@ navigation:
         path: /reference/engine/enums/AnimatorRetargetingMode
         type: engineapi
         source: /reference/engine/enums/AnimatorRetargetingMode.yaml
+        ignoreTranslation: true
+      - title: AnnotationEditingMode
+        path: /reference/engine/enums/AnnotationEditingMode
+        type: engineapi
+        source: /reference/engine/enums/AnnotationEditingMode.yaml
         ignoreTranslation: true
       - title: AppLifecycleManagerState
         path: /reference/engine/enums/AppLifecycleManagerState
@@ -3562,6 +3597,11 @@ navigation:
         path: /reference/engine/enums/ChatPrivacyMode
         type: engineapi
         source: /reference/engine/enums/ChatPrivacyMode.yaml
+        ignoreTranslation: true
+      - title: ChatRestrictionStatus
+        path: /reference/engine/enums/ChatRestrictionStatus
+        type: engineapi
+        source: /reference/engine/enums/ChatRestrictionStatus.yaml
         ignoreTranslation: true
       - title: ChatStyle
         path: /reference/engine/enums/ChatStyle
@@ -3873,6 +3913,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/FillDirection.yaml
         ignoreTranslation: true
+      - title: FilterErrorType
+        path: /reference/engine/enums/FilterErrorType
+        type: engineapi
+        source: /reference/engine/enums/FilterErrorType.yaml
+        ignoreTranslation: true
       - title: FilterResult
         path: /reference/engine/enums/FilterResult
         type: engineapi
@@ -4172,6 +4217,11 @@ navigation:
         path: /reference/engine/enums/LeftRight
         type: engineapi
         source: /reference/engine/enums/LeftRight.yaml
+        ignoreTranslation: true
+      - title: LexemeType
+        path: /reference/engine/enums/LexemeType
+        type: engineapi
+        source: /reference/engine/enums/LexemeType.yaml
         ignoreTranslation: true
       - title: Limb
         path: /reference/engine/enums/Limb

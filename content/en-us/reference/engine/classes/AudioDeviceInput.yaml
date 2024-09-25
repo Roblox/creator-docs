@@ -13,8 +13,7 @@ description: |
 code_samples: []
 inherits:
   - Instance
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: AudioDeviceInput.AccessType
@@ -113,6 +112,22 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: AudioDeviceInput.MutedByLocalUser
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Recording
+    serialization:
+      can_load: false
+      can_save: false
   - name: AudioDeviceInput.Player
     summary: |
       Determines whose device is producing sound.

@@ -5,8 +5,7 @@ memory_category: Instances
 summary: |
   Applies an outline to text or a UI border.
 description: |
-  An instance that applies an outline to text or a UI border. Key features
-  include:
+  `UIStroke` applies an outline to text or a UI border. Key features include:
 
   - Adjust the `Class.UIStroke.Color|Color` and
     `Class.UIStroke.Thickness|Thickness` of the stroke outline.
@@ -18,7 +17,7 @@ description: |
   - Use [rich text]((../../../ui/rich-text.md) tags to add stroke to inline text
     segments.
 
-  For more details on the `Class.UIStroke` object, see
+  For more details on the `UIStroke` object, see
   [Appearance Modifiers](../../../ui/appearance-modifiers.md).
 code_samples:
 inherits:
@@ -31,17 +30,17 @@ properties:
       Determines whether to apply the stroke to the object's border instead of
       the text itself.
     description: |
-      When a `Class.UIStroke` instance is applied to a text object, this
-      property determines whether to apply the stroke to the object's border
-      instead of the text itself.
+      When a `UIStroke` instance is applied to a text object, the
+      `ApplyStrokeMode` property determines whether to apply the stroke to the
+      object's border instead of the text itself.
 
       <figure>
-      <img src="../../../assets/ui/layout-appearance/UIStroke-As-Text-Outline.png" width="70%" />
-      <figcaption><code>Class.UIStroke.ApplyStrokeMode</code> of <code>Enum.ApplyStrokeMode.Contextual|Contextual</code></figcaption>
+      <img src="../../../assets/ui/ui-objects/UIStroke-As-Text-Outline.png" width="376" />
+      <figcaption><code>ApplyStrokeMode</code> = <code>Enum.ApplyStrokeMode.Contextual|Contextual</code></figcaption>
       </figure>
       <figure>
-      <img src="../../../assets/ui/layout-appearance/UIStroke-Stroke-Mode-Border.png" width="70%" />
-      <figcaption><code>Class.UIStroke.ApplyStrokeMode</code> of <code>Enum.ApplyStrokeMode.Border|Border</code></figcaption>
+      <img src="../../../assets/ui/ui-objects/UIStroke-Stroke-Mode-Border.png" width="376" />
+      <figcaption><code>ApplyStrokeMode</code> = <code>Enum.ApplyStrokeMode.Border|Border</code></figcaption>
       </figure>
     code_samples:
     type: ApplyStrokeMode
@@ -59,16 +58,16 @@ properties:
     summary: |
       Determines the stroke color.
     description: |
-      Determines the `Class.UIStroke` stroke color. You can also insert a
-      `Class.UIGradient` instance as a child to create gradient strokes.
+      Determines the `UIStroke` color. You can also insert a `Class.UIGradient`
+      instance as a child to create gradient strokes.
 
       <figure>
-      <img src="../../../assets/ui/layout-appearance/UIStroke-Color-Solid.png" width="70%" />
-      <figcaption><code>Class.UIStroke.Color</code> of (0, 95, 225)</figcaption>
+      <img src="../../../assets/ui/ui-objects/UIStroke-Color-Solid.png" width="376" />
+      <figcaption><code>Color</code> = <code>(0, 95, 225)</code></figcaption>
       </figure>
       <figure>
-      <img src="../../../assets/ui/layout-appearance/UIStroke-Color-Gradient.png" width="70%" />
-      <figcaption><code>Class.UIStroke</code> with <code>Class.UIGradient</code> child</figcaption>
+      <img src="../../../assets/ui/ui-objects/UIStroke-Color-Gradient.png" width="376" />
+      <figcaption><code>UIStroke</code> with <code>Class.UIGradient</code> child</figcaption>
       </figure>
     code_samples:
     type: Color3
@@ -86,8 +85,8 @@ properties:
     summary: |
       Determines whether the stroke in visible.
     description: |
-      This property determines whether the `Class.UIStroke` is visible. When set
-      to `false`, the stroke will not be rendered. Defaults to `true`.
+      This property determines whether the `UIStroke` is visible. When set to
+      `false`, the stroke will not be rendered. Defaults to `true`.
     code_samples:
     type: bool
     tags: []
@@ -110,16 +109,16 @@ properties:
       `Enum.LineJoinMode.Miter|Miter`.
 
       <figure>
-      <img src="../../../assets/ui/layout-appearance/UIStroke-LineJoinMode-Round.png" width="60%" />
-      <figcaption><code>Class.UIStroke.LineJoinMode</code> of <code>Enum.LineJoinMode.Round|Round</code></figcaption>
+      <img src="../../../assets/ui/ui-objects/UIStroke-LineJoinMode-Round.png" width="376" />
+      <figcaption><code>LineJoinMode</code> = <code>Enum.LineJoinMode.Round|Round</code></figcaption>
       </figure>
       <figure>
-      <img src="../../../assets/ui/layout-appearance/UIStroke-LineJoinMode-Bevel.png" width="60%" />
-      <figcaption><code>Class.UIStroke.LineJoinMode</code> of <code>Enum.LineJoinMode.Bevel|Bevel</code></figcaption>
+      <img src="../../../assets/ui/ui-objects/UIStroke-LineJoinMode-Bevel.png" width="376" />
+      <figcaption><code>LineJoinMode</code> = <code>Enum.LineJoinMode.Bevel|Bevel</code></figcaption>
       </figure>
       <figure>
-      <img src="../../../assets/ui/layout-appearance/UIStroke-LineJoinMode-Miter.png" width="60%" />
-      <figcaption><code>Class.UIStroke.LineJoinMode</code> of <code>Enum.LineJoinMode.Miter|Miter</code></figcaption>
+      <img src="../../../assets/ui/ui-objects/UIStroke-LineJoinMode-Miter.png" width="376" />
+      <figcaption><code>LineJoinMode</code> = <code>Enum.LineJoinMode.Miter|Miter</code></figcaption>
       </figure>
     code_samples:
     type: LineJoinMode
@@ -140,18 +139,19 @@ properties:
       This property determines the stroke's thickness, measured in pixels from
       the parent's outer edges.
 
-      Be mindful of tweening this `Class.UIStroke` property when applied to text
-      objects. This renders and stores many glyph sizes each frame, potentially
-      causing performance issues or text flickering.
+      <figure>
+      <img src="../../../assets/ui/ui-objects/UIStroke-Thickness-4.png" width="376" />
+      <figcaption><code>Thickness</code> = <code>4</code></figcaption>
+      </figure>
+      <figure>
+      <img src="../../../assets/ui/ui-objects/UIStroke-Thickness-12.png" width="376" />
+      <figcaption><code>Thickness</code> = <code>12</code></figcaption>
+      </figure>
 
-      <figure>
-      <img src="../../../assets/ui/layout-appearance/UIStroke-Thickness-4.png" width="60%" />
-      <figcaption><code>Class.UIStroke.Thickness</code> of 4</figcaption>
-      </figure>
-      <figure>
-      <img src="../../../assets/ui/layout-appearance/UIStroke-Thickness-12.png" width="60%" />
-      <figcaption><code>Class.UIStroke.Thickness</code> of 12</figcaption>
-      </figure>
+      Be mindful of [tweening](../../../ui/animation.md) this `UIStroke`
+      property when applied to text objects. This renders and stores many glyph
+      sizes each frame, potentially causing performance issues or text
+      flickering.
     code_samples:
     type: float
     tags: []
@@ -170,19 +170,19 @@ properties:
       `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` or
       `Class.TextLabel.TextTransparency|TextTransparency`.
     description: |
-      The `Class.UIStroke.Transparency|Transparency` property sets the stroke
-      opacity independently of the parent object's
+      The `Transparency` property sets the stroke opacity independently of the
+      parent object's
       `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` or
       `Class.TextLabel.TextTransparency|TextTransparency`. This allows you to
       render text and borders that are "hollow" (consisting of only an outline).
 
       <figure>
-      <img src="../../../assets/ui/layout-appearance/UIStroke-Transparency-A.png" width="70%" />
-      <figcaption><code>Class.TextLabel.TextTransparency</code> of 0 &nbsp;&middot;&nbsp; <code>Class.UIStroke.Transparency</code> of 0.5</figcaption>
+      <img src="../../../assets/ui/ui-objects/UIStroke-Transparency-A.png" width="376" />
+      <figcaption><code>Transparency</code> = <code>0.5</code> &nbsp;&middot;&nbsp; <code>Class.TextLabel.TextTransparency</code> = <code>0</code></figcaption>
       </figure>
       <figure>
-      <img src="../../../assets/ui/layout-appearance/UIStroke-Transparency-B.png" width="70%" />
-      <figcaption><code>Class.TextLabel.TextTransparency</code> of 1 &nbsp;&middot;&nbsp; <code>Class.UIStroke.Transparency</code> of 0</figcaption>
+      <img src="../../../assets/ui/ui-objects/UIStroke-Transparency-B.png" width="376" />
+      <figcaption><code>Transparency</code> = <code>0</code> &nbsp;&middot;&nbsp; <code>Class.TextLabel.TextTransparency</code> = <code>1</code></figcaption>
       </figure>
     code_samples:
     type: float

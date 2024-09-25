@@ -3,9 +3,9 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  UIBase is the base class for UI layout and constraint classes.
+  `UIBase` is the base class for UI layout and constraint classes.
 description: |
-  UIBase is the base class for UI layout and constraint classes.
+  `UIBase` is the base class for UI layout and constraint classes.
 code_samples:
 inherits:
   - Instance

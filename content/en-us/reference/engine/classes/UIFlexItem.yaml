@@ -5,7 +5,7 @@ memory_category: Instances
 summary: |
   Defines flex behavior for a `Class.GuiObject` within a `Class.UIListLayout`.
 description: |
-  The **UIFlexItem** defines flex behavior for its parent `Class.GuiObject`
+  The `UIFlexItem` object defines flex behavior for its parent `Class.GuiObject`
   under the control of a `Class.UIListLayout`. The defined flex behavior
   overrides that of the controlling `Class.UIListLayout`, letting you configure
   flex behavior on a per‑object basis where necessary.
@@ -29,7 +29,7 @@ properties:
       [flex layout](../../../ui/list-flex-layouts.md#flex-layouts) container.
 
       When the container's size is **larger** than the flex line's combined
-      basis size, a value of `Enum.UIFlexMode.Grow` sets an effective **1:0**
+      basis size, a value of `Enum.UIFlexMode.Grow` sets an effective `1:0`
       grow‑shrink ratio on the parent `Class.GuiObject`. Objects set to
       `Enum.UIFlexMode.Grow` never shrink below their basis size, so overflow
       may occur if the container becomes smaller than the line's combined basis
@@ -40,16 +40,16 @@ properties:
       When the container's size is **smaller** than the flex line's combined
       basis size and the controlling `Class.UIListLayout` is **not** set to wrap
       (resulting in overflow), a value of `Enum.UIFlexMode.Shrink` sets an
-      effective **0:1** grow‑shrink ratio on the parent `Class.GuiObject`.
-      Objects set to `Enum.UIFlexMode.Shrink` never grow above their basis size,
-      so underflow may occur if the container becomes larger than the line's
+      effective `0:1` grow‑shrink ratio on the parent `Class.GuiObject`. Objects
+      set to `Enum.UIFlexMode.Shrink` never grow above their basis size, so
+      underflow may occur if the container becomes larger than the line's
       combined basis size.
 
       <img src="../../../assets/engine-api/classes/UIListLayout/FlexMode-Shrink.png" width="800" alt="Diagram showing two items in a line with FlexMode set to Shrink." />
 
       When the container's size is either larger or smaller than the flex line's
       combined basis size, a value of `Enum.UIFlexMode.Fill` sets an effective
-      **1:1** grow‑shrink ratio on the parent `Class.GuiObject`. This setting
+      `1:1` grow‑shrink ratio on the parent `Class.GuiObject`. This setting
       ensures the flex line always fills the container, even if the container
       size changes.
 

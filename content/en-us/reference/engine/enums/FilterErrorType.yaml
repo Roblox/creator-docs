@@ -1,0 +1,103 @@
+name: FilterErrorType
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: BackslashNotEscapingAnything
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: BadBespokeFilter
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: BadName
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: IncompleteOr
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: IncompleteParenthesis
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: InvalidDoubleStar
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: InvalidTilde
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''
+  - name: PropertyBadOperator
+    summary: ''
+    value: 7
+    tags: []
+    deprecation_message: ''
+  - name: PropertyDoesNotExist
+    summary: ''
+    value: 8
+    tags: []
+    deprecation_message: ''
+  - name: PropertyInvalidField
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''
+  - name: PropertyInvalidValue
+    summary: ''
+    value: 10
+    tags: []
+    deprecation_message: ''
+  - name: PropertyUnsupportedFields
+    summary: ''
+    value: 11
+    tags: []
+    deprecation_message: ''
+  - name: PropertyUnsupportedProperty
+    summary: ''
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: UnexpectedNameIndex
+    summary: ''
+    value: 13
+    tags: []
+    deprecation_message: ''
+  - name: UnexpectedToken
+    summary: ''
+    value: 14
+    tags: []
+    deprecation_message: ''
+  - name: UnfinishedBinaryOperator
+    summary: ''
+    value: 15
+    tags: []
+    deprecation_message: ''
+  - name: UnfinishedQuote
+    summary: ''
+    value: 16
+    tags: []
+    deprecation_message: ''
+  - name: UnknownBespokeFilter
+    summary: ''
+    value: 17
+    tags: []
+    deprecation_message: ''
+  - name: WildcardInProperty
+    summary: ''
+    value: 18
+    tags: []
+    deprecation_message: ''
