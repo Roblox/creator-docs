@@ -1,39 +1,47 @@
 name: ImageCombineType
 type: enum
 summary: |
-  An enum determining how two images should be combined together.
+  Enum for determining how two images are combined together.
 description: |
-  An enum determining how two images should be combined together.
+  Enum for determining how two images are combined together.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: BlendSourceOver
     summary: |
-      Blend pixels from the source with the pixels from the destination using
+      Blends pixels from the source with pixels from the destination using
       source over alpha blending.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Overwrite
     summary: |
-      Overwrite all pixels in the destination image with the pixels from the
-      source image.
+      Overwrites all pixels in the destination image with pixels from the source
+      image.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Add
-    summary: ''
+    summary: |
+      Adds pixels from the source and pixels from the destination together.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Multiply
-    summary: ''
+    summary: |
+      Multiplies pixels from the source and pixels from the destination
+      together. RGBA values are multiplied as values between `0` and `1`. Values
+      lower than `1` have a darkening effect on the image.
     value: 4
     tags: []
     deprecation_message: ''
   - name: AlphaBlend
-    summary: ''
+    summary: |
+      Blends pixels from the source with pixels from the destination based on the
+      alpha of the source pixels. Unlike **BlendSourceOver**, the destination color
+      in **AlphaBlend** affects the resulting color of the image, regardless of the
+      destination color's alpha.
     value: 5
     tags: []
     deprecation_message: ''

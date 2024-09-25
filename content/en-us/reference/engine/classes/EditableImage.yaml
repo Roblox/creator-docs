@@ -5,12 +5,14 @@ memory_category: Instances
 summary: |
   Instance which allows for the runtime creation and manipulation of images.
 description: |
-  `Class.EditableImage` allows for the runtime creation and manipulation of
-  images. It can be created from an existing image using
-  `Class.AssetService:CreateEditableImageAsync()`, or a blank
-  `Class.EditableImage` can be created with `Datatype.Instance.new()`.
-  `Class.EditableImage` overrides the image/texture displayed when parented to
-  certain objects as follows:
+  `Class.EditableImage` allows for the runtime creation and manipulation of images. 
+
+  To create a blank `Class.EditableImage`, use `Datatype.Instance.new()`. To
+  create an `Class.EditableImage` from an existing image, use
+  `Class.AssetService:CreateEditableImageAsync()`.
+
+  `Class.EditableImage` overrides the image or texture displayed when parented
+  to certain objects:
 
   <table size="small">
   <thead>
@@ -53,10 +55,10 @@ description: |
   - Top-left: `(0, 0)`
   - Bottom-right: `(Size.X - 1, Size.Y - 1)`
 
-  When publishing an object via `Class.AssetService:PromptCreateAssetAsync()`
-  that has a property overridden by a child `Class.EditableImage`, the editable
-  image will be published as an image and the overridden property will be set to
-  the new asset ID.
+  When you use `Class.AssetService:PromptCreateAssetAsync()` to publish an
+  object that has a property overridden by a child `Class.EditableImage`, the
+  editable image is published as an image and the overridden property is set to
+  a new asset ID.
 code_samples: []
 inherits:
   - Instance
@@ -68,7 +70,7 @@ properties:
       Size of the `Class.EditableImage` in pixels.
     description: |
       Size of the `Class.EditableImage` in pixels. The maximum size is
-      1024&times;1024 and attempting to set this property to a larger size will
+      1024&times;1024. Attempting to set this property to a larger size will
       cause it to be clamped at 1024.
 
       Setting this property changes the **canvas** size of the editable image
@@ -182,7 +184,9 @@ methods:
       - name: combineType
         type: ImageCombineType
         default:
-        summary: ''
+        summary: |
+          How the pixels of the source image are blended with the pixels
+          of the added image.
     returns:
       - type: void
         summary: ''
@@ -255,7 +259,9 @@ methods:
       - name: combineType
         type: ImageCombineType
         default:
-        summary: ''
+        summary: |
+          How the pixels of the source image are blended with the pixels
+          of the added image.
     returns:
       - type: void
         summary: ''
@@ -320,7 +326,9 @@ methods:
       - name: combineType
         type: ImageCombineType
         default:
-        summary: ''
+        summary: |
+          How the pixels of the source image are blended with the pixels
+          of the added image.
     returns:
       - type: void
         summary: ''
@@ -364,9 +372,11 @@ methods:
     summary: |
       Reads a rectangular region of pixels.
     description: |
-      Reads a rectangular region of pixels. The pixels will be returned as a
+      Reads a rectangular region of pixels. The pixels are returned as a
       flat array where each pixel is represented by four numbers between 0 and 1
-      (red, green, blue, and alpha respectively). Note that this method uses
+      (red, green, blue, and alpha respectively). 
+
+      Note that this method uses
       alpha instead of transparency, unlike the `Class.EditableImage` drawing
       methods.
     code_samples:
@@ -394,21 +404,35 @@ methods:
     security: None
     thread_safety: Safe
   - name: EditableImage:ReadPixelsBuffer
-    summary: ''
-    description: ''
+    summary: |
+      Reads a rectangular region of pixels into a buffer.
+    description: |
+      A version of `Class.EditableImage:ReadPixels()|ReadPixels()` that returns
+      a buffer instead of a table. Each number in the buffer is a single byte,
+      while each number in the table is 4 bytes, making
+      `Class.EditableImage:ReadPixelsBuffer()|ReadPixelsBuffer()` more
+      memory-efficient than `Class.EditableImage:ReadPixels()|ReadPixels()`. 
+
+      Note that this method uses alpha instead of transparency, unlike the
+      `Class.EditableImage` drawing methods.
     code_samples: []
     parameters:
       - name: position
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          Top-left corner of the rectangular region of pixels to read.
       - name: size
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          Size of the rectangular region of pixels to read.
     returns:
       - type: buffer
-        summary: ''
+        summary: |
+          Buffer where each pixel is represented by four bytes (red, green, blue
+          and alpha respectively). The length of the buffer can be calculated as
+          `Size.X * Size.Y * 4` bytes.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -466,6 +490,7 @@ methods:
       Writes a rectangular region of pixels into the `Class.EditableImage`. The
       pixels are provided as a flat array where each pixel is represented by
       four numbers between 0 and 1 (red, green, blue, and alpha respectively).
+
       Note that this method uses alpha instead of transparency, unlike other
       `Class.EditableImage` drawing methods.
     code_samples:
@@ -497,22 +522,36 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableImage:WritePixelsBuffer
-    summary: ''
-    description: ''
+    summary: |
+      Writes a rectangular region of pixels into the image.
+    description: |
+      A version of `Class.EditableImage:WritePixels()|WritePixels()` that takes
+      a buffer instead of a table. Each number in the buffer is a single byte,
+      while each number in the table is 4 bytes, making
+      `Class.EditableImage:WritePixelsBuffer()|WritePixelsBuffer()` more
+      memory-efficient than `Class.EditableImage:WritePixels()|WritePixels()`. 
+
+      Note that this method uses alpha instead of transparency, unlike the
+      `Class.EditableImage` drawing methods.
     code_samples: []
     parameters:
       - name: position
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          Top-left corner of the rectangular region to draw the pixels into.
       - name: size
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          Size of the rectangular region of pixels to write.
       - name: buffer
         type: buffer
         default:
-        summary: ''
+        summary: |
+          A buffer where each pixel is represented by four bytes (red, green,
+          blue, and alpha respectively). The length of the buffer should be
+          `Size.X * Size.Y * 4` bytes.
     returns:
       - type: void
         summary: ''

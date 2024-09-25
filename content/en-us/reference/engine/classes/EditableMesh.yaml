@@ -22,7 +22,8 @@ description: |
 
   #### Stable Vertex/Face IDs
 
-  Many `Class.EditableMesh` methods take **vertex** and **face** IDs. These are
+  Many `Class.EditableMesh` methods take **vertex**, **normal**, **UV**, **color** 
+  and **face** IDs. These are
   represented as integers in Luau but they require some special handling. The
   main difference is that IDs are stable and they remain the same even if other
   parts of the mesh change. For example, if an `Class.EditableMesh` has five
@@ -32,7 +33,62 @@ description: |
   Note that the IDs are not guaranteed to be in order and there may be holes in
   the numbering, so when iterating through vertices or faces, you should iterate
   through the table returned by `Class.EditableMesh:GetVertices()|GetVertices()`
-  or `Class.EditableMesh:GetTriangles()|GetTriangles()`.
+  or `Class.EditableMesh:GetFaces()|GetFaces()`.
+
+  #### Split Vertex Attributes
+
+  A **vertex** is a corner of a face, and topologically connects faces together. 
+  Vertices can have several attributes: position, normal, UV coordinate, color, 
+  and transparency.
+
+  Sometimes it's useful for all faces that touch a vertex to use the same 
+  attribute values, but sometimes you'll want different faces to use different 
+  attribute values on the same vertex. For example, on a smooth sphere, each
+  vertex will only have a single normal. In contrast, at the corner of a cube, the
+  vertex will have 3 different normals (one for each adjacent face). You can
+  also have seams in the UV coordinates or sharp changes in the vertex colors.
+
+  When creating faces, every vertex will by default have one of each attribute:
+  one normal, one UV coordinate, and one color/transparency. If you want to
+  create a seam, you should create new attributes and set them on the face.
+  For example, this code will create a sharp cube:
+
+  ```lua
+  -- Given 4 vertex IDs, adds a new normal and 2 triangles, making a sharp quad
+  local function addSharpQuad(eMesh, vid0, vid1, vid2, vid3)
+  	local nid = eMesh:AddNormal()  -- This creates a normal ID which is automatically computed
+  
+  	local fid1 = eMesh:AddTriangle(vid0, vid1, vid2)
+  	eMesh:SetFaceNormals(fid1, {nid, nid, nid})
+    
+  	local fid2 = eMesh:AddTriangle(vid0, vid2, vid3)
+  	eMesh:SetFaceNormals(fid2, {nid, nid, nid})
+  end
+  
+  -- Makes a cube with creased edges between the 6 sides
+  local function makeSharpCube()
+  	local eMesh = Instance.new("EditableMesh")
+  
+  	local v1 = eMesh:AddVertex(Vector3.new(0, 0, 0))
+  	local v2 = eMesh:AddVertex(Vector3.new(1, 0, 0))
+  	local v3 = eMesh:AddVertex(Vector3.new(0, 1, 0))
+  	local v4 = eMesh:AddVertex(Vector3.new(1, 1, 0))
+  	local v5 = eMesh:AddVertex(Vector3.new(0, 0, 1))
+  	local v6 = eMesh:AddVertex(Vector3.new(1, 0, 1))
+  	local v7 = eMesh:AddVertex(Vector3.new(0, 1, 1))
+  	local v8 = eMesh:AddVertex(Vector3.new(1, 1, 1))
+  
+  	addSharpQuad(eMesh, v5, v6, v8, v7)  -- Front
+  	addSharpQuad(eMesh, v1, v3, v4, v2)  -- Back
+  	addSharpQuad(eMesh, v1, v5, v7, v3)  -- Left
+  	addSharpQuad(eMesh, v2, v4, v8, v6)  -- Right
+  	addSharpQuad(eMesh, v1, v2, v6, v5)  -- Bottom
+  	addSharpQuad(eMesh, v3, v7, v8, v4)  -- Top
+  
+  	eMesh:RemoveUnused()
+  	return eMesh
+  end
+  ```
 
   #### Winding
 
@@ -74,46 +130,56 @@ properties:
       can_save: true
 methods:
   - name: EditableMesh:AddColor
-    summary: ''
-    description: ''
+    summary: |
+      Adds a new color to the geometry and returns a stable color ID.
+    description: |
+      Adds a new color to the geometry and returns a stable color ID.
     code_samples: []
     parameters:
       - name: color
         type: Color3
         default:
-        summary: ''
+        summary: |
+          The new color.
       - name: alpha
         type: float
         default:
-        summary: ''
+        summary: |
+          The color alpha (transparency).
     returns:
       - type: int64
-        summary: ''
+        summary: |
+          Stable color ID of the new color.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:AddNormal
-    summary: ''
-    description: ''
+    summary: |
+      Adds a new normal to the geometry and returns a stable normal ID.
+    description: |
+      Adds a new normal to the geometry and returns a stable normal ID. If the normal value isn't specified,
+      the normal will be automatically calculated.
     code_samples: []
     parameters:
       - name: normal
         type: Vector3?
         default:
-        summary: ''
+        summary: |
+          The normal vector. If the normal value isn't specified, the normal will be automatically calculated.
     returns:
       - type: int64
-        summary: ''
+        summary: |
+          Stable normal ID of the new normal.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:AddTriangle
     summary: |
-      Adds a new triangle to the mesh and returns a stable triangle ID.
+      Adds a new triangle to the mesh and returns a stable face ID.
     description: |
-      Adds a new triangle to the mesh and returns a stable triangle ID.
+      Adds a new triangle to the mesh and returns a stable face ID.
     code_samples: []
     parameters:
       - name: vertexId0
@@ -139,17 +205,21 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:AddUV
-    summary: ''
-    description: ''
+    summary: |
+      Adds a new UV to the geometry and returns a stable UV ID.
+    description: |
+      Adds a new UV to the geometry and returns a stable UV ID.
     code_samples: []
     parameters:
       - name: uv
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          The new UV coordinate.
     returns:
       - type: int64
-        summary: ''
+        summary: |
+          Stable UV ID of the new UV.
     tags: []
     deprecation_message: ''
     security: None
@@ -169,7 +239,7 @@ methods:
     returns:
       - type: int64
         summary: |
-          Stable ID of the new vertex.
+          Stable vertex ID of the new vertex.
     tags: []
     deprecation_message: ''
     security: None
@@ -178,9 +248,9 @@ methods:
     summary: |
       Finds the closest point on the mesh's surface.
     description: |
-      Finds the closest point on the mesh's surface. Returns the triangle ID,
+      Finds the closest point on the mesh's surface. Returns the face ID,
       point on the mesh in local object space, and the barycentric coordinate of
-      the position within the triangle. See
+      the position within the face. See
       `Class.EditableMesh:RaycastLocal()|RaycastLocal()` for more information on
       barycentric coordinates.
     code_samples: []
@@ -193,8 +263,8 @@ methods:
     returns:
       - type: Tuple
         summary: |
-          Tuple of the triangle ID, point on the mesh in local object space, and
-          the barycentric coordinate of the position within the triangle.
+          Tuple of the face ID, point on the mesh in local object space, and
+          the barycentric coordinate of the position within the face.
     tags: []
     deprecation_message: ''
     security: None
@@ -247,8 +317,12 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:GetAdjacentFaces
-    summary: ''
-    description: ''
+    summary: |
+      Returns a list of faces adjacent to a given face.
+    description: |
+      Given a stable face ID, returns a list of adjacent faces.
+
+      <img src="../../../assets/engine-api/classes/EditableMesh/GetAdjacentTriangles.png" alt="Adjacent faces indicated around requested face" width="120" />
     code_samples: []
     parameters:
       - name: faceId
@@ -266,7 +340,7 @@ methods:
     summary: |
       Returns a list of triangles adjacent to a given triangle.
     description: |
-      Given a stable triangle ID, returns a list of adjacent triangles.
+      Given a stable face ID, returns a list of adjacent faces.
 
       <img src="../../../assets/engine-api/classes/EditableMesh/GetAdjacentTriangles.png" alt="Adjacent triangles indicated around requested triangle" width="120" />
     code_samples: []
@@ -275,11 +349,11 @@ methods:
         type: int64
         default:
         summary: |
-          Triangle ID around which to get adjacent triangles.
+          Face ID around which to get adjacent faces.
     returns:
       - type: Array
         summary: |
-          List of adjacent triangles around the given triangle ID.
+          List of adjacent faces around the given face ID.
     tags:
       - Deprecated
     deprecation_message: ''
@@ -308,96 +382,119 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:GetColor
-    summary: ''
-    description: ''
+    summary: |
+      Returns the color for the given color ID.
+    description: |
+      Returns the color for the given color ID.
     code_samples: []
     parameters:
       - name: colorId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Color ID for which to get the color.
     returns:
       - type: Color3?
-        summary: ''
+        summary: |
+          Color for the requested stable color ID.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:GetColorAlpha
-    summary: ''
-    description: ''
+    summary: |
+      Returns the color alpha (transparency) at the given color ID.
+    description: |
+      Returns the color alpha (transparency) at the given stable color ID.
     code_samples: []
     parameters:
       - name: colorId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Color ID for which to get the alpha.
     returns:
       - type: float?
-        summary: ''
+        summary: |
+          Color alpha at the request stable color ID.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:GetColors
-    summary: ''
-    description: ''
+    summary: |
+      Returns all colors of the mesh.
+    description: |
+      Returns all colors of the mesh as a list of stable color IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of stable color IDs.
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:GetFaceColors
-    summary: ''
-    description: ''
+    summary: |
+      Returns the face's color IDs for the vertices on the face.
+    description: |
+      Returns the face's color IDs for the vertices on the face.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Face ID for which to get the color IDs.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of color IDs used for the vertices on the given face.
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:GetFaceNormals
-    summary: ''
-    description: ''
+    summary: |
+      Returns the face's normal IDs for the vertices on the face.
+    description: |
+      Returns the face's normal IDs for the vertices on the face.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Face ID for which to get the normal IDs.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of normal IDs used for the vertices on the given face.
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:GetFaceUVs
-    summary: ''
-    description: ''
+    summary: |
+      Returns the face's UV IDs for the vertices on the face.
+    description: |
+      Returns the face's UV IDs for the vertices on the face.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Face ID for which to get the UV IDs.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of UV IDs used for the vertices on the given face.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -421,8 +518,10 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:GetFaces
-    summary: ''
-    description: ''
+    summary: |
+      Returns all faces of the mesh.
+    description: |
+      Returns all faces of the mesh as a list of stable face IDs.
     code_samples: []
     parameters: []
     returns:
@@ -434,45 +533,56 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:GetFacesWithAttribute
-    summary: ''
-    description: ''
+    summary: |
+      Returns a list of faces that use a given attribute ID.
+    description: |
+      Returns a list of faces that use a given vertex ID, normal ID, UV ID, or color ID.
     code_samples: []
     parameters:
       - name: id
         type: int64
         default:
-        summary: ''
+        summary: |
+          Attribute ID for which to find faces that use it.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of face IDs which use the given attribute ID.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:GetNormal
-    summary: ''
-    description: ''
+    summary: |
+      Returns the normal vector for the given normal ID.
+    description: |
+      Returns the normal vector for the given normal ID.
     code_samples: []
     parameters:
       - name: normalId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Normal ID for which to get the normal vector.
     returns:
       - type: Vector3?
-        summary: ''
+        summary: |
+          Normal vector at the requested normal ID.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:GetNormals
-    summary: ''
-    description: ''
+    summary: |
+      Returns all normals of the mesh.
+    description: |
+      Returns all normals of the mesh as a list of stable normal IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of stable normal IDs.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -509,7 +619,7 @@ methods:
         type: int64
         default:
         summary: |
-          Stable triangle ID for which to get vertices.
+          Stable face ID for which to get vertices.
     returns:
       - type: Tuple
         summary: |
@@ -523,13 +633,13 @@ methods:
     summary: |
       Returns all triangles of the mesh.
     description: |
-      Returns all triangles of the mesh as a list of stable triangle IDs.
+      Returns all triangles of the mesh as a list of stable face IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
         summary: |
-          List of stable triangle IDs.
+          List of stable face IDs.
     tags:
       - Deprecated
     deprecation_message: ''
@@ -537,31 +647,35 @@ methods:
     thread_safety: Unsafe
   - name: EditableMesh:GetUV
     summary: |
-      Returns UV coordinates at the given vertex.
+      Returns UV coordinates at the given UV ID.
     description: |
-      Returns UV coordinates at the given vertex.
+      Returns UV coordinates at the given UV ID.
     code_samples: []
     parameters:
       - name: uvId
         type: int64
         default:
-        summary: ''
+        summary: |
+          UV ID for which to get the UV coordinate.
     returns:
       - type: Vector2?
         summary: |
-          UV coordinates at the requested vertex.
+          UV coordinates at the requested UV ID.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:GetUVs
-    summary: ''
-    description: ''
+    summary: |
+      Returns all UVs of the mesh.
+    description: |
+      Returns all UVs of the mesh as a list of stable UV IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of stable UV IDs.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -646,49 +760,62 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:GetVerticesWithAttribute
-    summary: ''
-    description: ''
+    summary: |
+      Returns a list of vertices that use a given attribute ID.
+    description: |
+      Returns a list of vertices that use a given face ID, normal ID, UV ID, or color ID.
     code_samples: []
     parameters:
       - name: id
         type: int64
         default:
-        summary: ''
+        summary: |
+          Attribute ID for which to find vertices that use it.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of vertex IDs which use the given attribute ID.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:IdDebugString
-    summary: ''
-    description: ''
+    summary: |
+      Returns a string describing a stable ID, useful for debugging purposes.
+    description: |
+      Returns a string describing a stable ID, useful for debugging purposes, like `f17` or `v12`,
+      containing the type, ID number, and version.
     code_samples: []
     parameters:
       - name: id
         type: int64
         default:
-        summary: ''
+        summary: |
+          ID for which to return a debugging information string.
     returns:
       - type: string
-        summary: ''
+        summary: |
+          String that describes the ID in human-readable format.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:MergeVertices
-    summary: ''
-    description: ''
+    summary: |
+      Merges vertices that touch together.
+    description: |
+      Merges vertices that touch together, to use a single vertex ID but keep the other original attribute IDs.
     code_samples: []
     parameters:
       - name: mergeTolerance
         type: float
         default:
-        summary: ''
+        summary: |
+          The distance at which the vertices are considered to touch each other.
     returns:
       - type: Map
-        summary: ''
+        summary: |
+          A mapping of old vertex ID to new vertex ID for vertices that have been merged.
     tags: []
     deprecation_message: ''
     security: None
@@ -696,12 +823,12 @@ methods:
   - name: EditableMesh:RaycastLocal
     summary: ''
     description: |
-      Casts a ray and returns a point of intersection, triangle ID, and
+      Casts a ray and returns a point of intersection, face ID, and
       barycentric coordinates. The inputs and outputs of this method are in the
       mesh's local object space.
 
       A **barycentric coordinate** is a way of specifying a point within a
-      triangle as a weighted combination of the 3 vertices of the triangle. This
+      face as a weighted combination of the 3 vertices of the face. This
       is useful as a general way of blending vertex attributes. See this
       method's code sample as an illustration.
     code_samples:
@@ -720,15 +847,17 @@ methods:
     returns:
       - type: Tuple
         summary: |
-          Tuple of the point of intersection, triangle ID, and barycentric
+          Tuple of the point of intersection, face ID, and barycentric
           coordinates.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:RemoveFace
-    summary: ''
-    description: ''
+    summary: |
+      Removes a face using its stable face ID.
+    description: |
+      Removes a face using its stable face ID.
     code_samples: []
     parameters:
       - name: faceId
@@ -744,16 +873,16 @@ methods:
     thread_safety: Unsafe
   - name: EditableMesh:RemoveTriangle
     summary: |
-      Removes a triangle using its stable triangle ID.
+      Removes a triangle using its stable face ID.
     description: |
-      Removes a triangle using its stable triangle ID.
+      Removes a triangle using its stable face ID.
     code_samples: []
     parameters:
       - name: triangleId
         type: int64
         default:
         summary: |
-          ID of the triangle to remove.
+          ID of the face to remove.
     returns:
       - type: void
         summary: ''
@@ -763,13 +892,16 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:RemoveUnused
-    summary: ''
-    description: ''
+    summary: |
+      Removes all unused vertices, normals, UVs, and colors, and returns the removed IDs.
+    description: 
+      Removes all vertices, normals, UVs, and colors which are not used in any face, and returns the removed IDs.
     code_samples: []
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          All of the removed stable IDs.
     tags: []
     deprecation_message: ''
     security: None
@@ -795,14 +927,17 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:ResetNormal
-    summary: ''
-    description: ''
+    summary: |
+      Reset this normal ID to be automatically calculated.
+    description: |
+      Reset this normal ID to be automatically calculated based on the shape of the mesh, instead of manually set.
     code_samples: []
     parameters:
       - name: normalId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Stable normal ID to reset.
     returns:
       - type: void
         summary: ''
@@ -811,18 +946,22 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:SetColor
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color for a color ID.
+    description: |
+      Sets the color for a color ID.
     code_samples: []
     parameters:
       - name: colorId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Stable color ID for which to set the color.
       - name: color
         type: Color3
         default:
-        summary: ''
+        summary: |
+          Color to set.
     returns:
       - type: void
         summary: ''
@@ -831,18 +970,22 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:SetColorAlpha
-    summary: ''
-    description: ''
+    summary: |
+      Sets the color alpha (transparency) for a color ID.
+    description: |
+      Sets the color alpha (transparency) for a color ID.
     code_samples: []
     parameters:
       - name: colorId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Stable color ID for which to set the color alpha.
       - name: alpha
         type: float
         default:
-        summary: ''
+        summary: |
+          Alpha to set.
     returns:
       - type: void
         summary: ''
@@ -851,18 +994,22 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:SetFaceColors
-    summary: ''
-    description: ''
+    summary: |
+      Sets the face's vertex colors to new color IDs.
+    description: |
+      Sets the face's vertex colors to new color IDs.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Face ID for which to update the vertex colors.
       - name: ids
         type: Array
         default:
-        summary: ''
+        summary: |
+          List of new stable color IDs to use for the given face's vertices.
     returns:
       - type: void
         summary: ''
@@ -872,18 +1019,22 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:SetFaceNormals
-    summary: ''
-    description: ''
+    summary: |
+      Sets the face's vertex normals to new normal IDs.
+    description: |
+      Sets the face's vertex normals to new normal IDs.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Face ID for which to update the vertex normals.
       - name: ids
         type: Array
         default:
-        summary: ''
+        summary: |
+          List of new stable normal IDs to use for the given face's vertices.
     returns:
       - type: void
         summary: ''
@@ -893,18 +1044,22 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:SetFaceUVs
-    summary: ''
-    description: ''
+    summary: |
+      Sets the face's vertex UVs to new UV IDs.
+    description: |
+      Sets the face's vertex UVs to new UV IDs.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Face ID for which to update the vertex UVs.
       - name: ids
         type: Array
         default:
-        summary: ''
+        summary: |
+          List of new stable UV IDs to use for the given face's vertices.
     returns:
       - type: void
         summary: ''
@@ -914,18 +1069,22 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:SetFaceVertices
-    summary: ''
-    description: ''
+    summary: |
+      Sets the face's vertices to new vertex IDs.
+    description: |
+      Sets the face's vertices to new vertex IDs.
     code_samples: []
     parameters:
       - name: faceId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Face ID for which to update the vertices.
       - name: ids
         type: Array
         default:
-        summary: ''
+        summary: |
+          List of new stable vertex IDs to use for the given face.
     returns:
       - type: void
         summary: ''
@@ -935,18 +1094,22 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:SetNormal
-    summary: ''
-    description: ''
+    summary: |
+      Set the normal for a normal ID.
+    description: |
+      Set the normal for a normal ID. This will change the normal value for every face vertex which is using the normal ID.
     code_samples: []
     parameters:
       - name: normalId
         type: int64
         default:
-        summary: ''
+        summary: |
+          Stable normal ID for which to set the normal vector.
       - name: normal
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          Normal vector to set.
     returns:
       - type: void
         summary: ''
@@ -965,7 +1128,7 @@ methods:
         type: int64
         default:
         summary: |
-          Stable ID of the vertex to position.
+          Stable vertex ID of the vertex to position.
       - name: p
         type: Vector3
         default:
@@ -980,15 +1143,16 @@ methods:
     thread_safety: Unsafe
   - name: EditableMesh:SetUV
     summary: |
-      Sets UV coordinates for a vertex.
+      Sets UV coordinates for a UV ID.
     description: |
-      Sets UV coordinates for a vertex.
+      Sets UV coordinates for a UV ID.
     code_samples: []
     parameters:
       - name: uvId
         type: int64
         default:
-        summary: ''
+        summary: |
+          UV ID for which to set the UV coordinates.
       - name: uv
         type: Vector2
         default:
@@ -1012,7 +1176,7 @@ methods:
         type: int64
         default:
         summary: |
-          Stable ID of the vertex for which to set the color.
+          Stable vertex ID of the vertex for which to set the color.
       - name: color
         type: Color3
         default:
@@ -1037,7 +1201,7 @@ methods:
         type: int64
         default:
         summary: |
-          Stable ID of the vertex for which to set the color alpha.
+          Stable vertex ID of the vertex for which to set the color alpha.
       - name: alpha
         type: float
         default:
@@ -1062,7 +1226,7 @@ methods:
         type: int64
         default:
         summary: |
-          Stable ID of the vertex for which to set the normal.
+          Stable vertex ID of the vertex for which to set the normal.
       - name: vnormal
         type: Vector3
         default:
@@ -1077,8 +1241,12 @@ methods:
     security: None
     thread_safety: Unsafe
   - name: EditableMesh:Triangulate
-    summary: ''
-    description: ''
+    summary: |
+      Splits all faces on the mesh to be triangles.
+    description: |
+      Splits all faces on the mesh to be triangles. Currently this does nothing since only triangles can be
+      created, but if your code relies on triangles, it's recommended that you call this method after calling
+      `Class.AssetService:CreateEditableMeshAsync()`.
     code_samples: []
     parameters: []
     returns:
