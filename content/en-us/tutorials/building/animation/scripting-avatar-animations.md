@@ -1,7 +1,6 @@
 ---
 title: Scripting Avatar Animations
 description: The process for updating default animations.
-prev: /tutorials/building/animation/creating-an-animation
 ---
 
 Scripts can be used to update default animations and to add new ones. The two examples covered by this tutorial will change the default run animation and will play an animation on command when a player touches an object.

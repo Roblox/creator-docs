@@ -5,7 +5,7 @@ description: The process for using the Animation Editor to create custom charact
 
 **Character animations** include a series of key poses that programmatically flow together to make your characters appear as if they're moving in their environment. While Roblox provides a set of default character animations for every experience, creating custom animations for your characters helps players understand their unique personalities by how they carry themselves and interact with other characters.
 
-Using the [Walking Character Animations](https://www.roblox.com/games/76570977337311/Walking-Character-Animation) `.rbxl` file as a starting place, this tutorial shows you how to create a walk cycle character animation from start to finish, including guidance on:
+Using the [Walking Character Animations](https://www.roblox.com/games/134383324873456/Walking-Character-Animation) `.rbxl` file as a starting place, this tutorial shows you how to create a walk cycle character animation from start to finish, including guidance on:
 
 - Adding a pre-built character rig to the 3D space that you can move and rotate into different key poses.
 - Breaking down a reference image to guide your animation decisions and ensure each pose reflects your character's personality.
@@ -15,6 +15,8 @@ Using the [Walking Character Animations](https://www.roblox.com/games/7657097733
 After you complete this tutorial, you will have an assetID for your animation, and skills to create additional types of animations that meet the needs for your own characters and experiences.
 
 <img src="../../../assets/tutorials/creating-character-animations/Ref-All.jpg" alt="" width="100%" />
+
+<video controls src="../../../assets/tutorials/creating-character-animations/Final-Animation.mp4" width="100%"></video>
 
 ## Add Rig
 
@@ -511,6 +513,8 @@ To test your poses:
       <img src="../../../assets/studio/general/View-Tab-View-Selector.png" width="782" alt="View Selector tool selected in View tab of Studio" />
 
    1. Select, move, and rotate your rig until the animation matches your character's personality.
+
+      <video controls src="../../../assets/tutorials/creating-character-animations/Final-Animation.mp4" width="80%"></video>
 
 ## Publish Animation
 

@@ -16,7 +16,7 @@ Using a sample [Laser Beam Blaster](https://create.roblox.com/store/asset/163826
 You can create your own assets in third-party modeling tools and follow along with your own design. For information on exporting models for use in Studio, see [Exporting Requirements](../../../art/modeling/export-requirements.md).
 </Alert>
 
-<video controls src="../../../assets/tutorials/laser-traps-with-beams/Script.mp4" width="90%"></video>
+<video controls src="../../../assets/tutorials/laser-traps-with-beams/Script.mp4" width="100%"></video>
 
 ## Get Blaster Asset
 

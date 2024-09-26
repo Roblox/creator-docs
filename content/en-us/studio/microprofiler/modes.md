@@ -22,11 +22,11 @@ Pausing the MicroProfiler with <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P
 
 ## Detailed Mode
 
-In addition to the bar graph from frame mode, detailed mode adds a colorful timeline that shows the different tasks the engine is performing.
+In addition to the bar graph from frame mode, detailed mode adds a colorful timeline that shows labels for each engine process.
 
-- Labels that appear directly below another label indicate tasks that are performed as part of the higher-level task.
+- Labels that appear directly below another label indicate processes that are performed as part of the higher-level process.
 
-  Rather than the parent process, you typically want to troubleshoot the worst-performing child processes; the sum of all child processes defines the length of the parent process.
+  Rather than the parent process, you typically want to troubleshoot the worst-performing child processes; a parent process can't be shorter than the sum of its child processes.
 
 - Scrolling zooms the timeline in or out. Combined with the millisecond labels at the top of the timeline, you can get a sense of how long a task took in an absolute sense, but also how long it took relative to other tasks.
 
@@ -58,7 +58,7 @@ In addition to the bar graph from frame mode, detailed mode adds a colorful time
 
 ## Timers Mode
 
-**Timers mode** is an alternative way of visualizing the data in the detailed view: as a list of labels with processing times and call counts. Horizontal bar graphs in some columns help you spot the busiest tasks.
+**Timers mode** is an alternative way of visualizing the data in the detailed view: as a list of labels with processing times and call counts. Horizontal bar graphs in some columns help you spot the busiest processes.
 
 <img alt="Timers mode." src="../../assets/optimization/microprofiler/micro-timer.png" width="800px" />
 
@@ -80,11 +80,11 @@ Counters mode is a lengthy list of categories and statistics, including instance
 <img alt="Counters mode with a single graph." src="../../assets/optimization/microprofiler/micro-counter.png" width="800px" />
 
 - Just like the detailed view, left-click and hold to pan up and down.
-- Left-click in the Graph column to add a small usage graph with minimum and maximum values. Left-click the graph again to expand it.
+- Left-click in the **Graph** column to add a small usage graph with minimum and maximum values. Left-click the graph again to expand it.
 - Right-click a graph to close it.
 - You can't filter this view, but you can left-click on a category (for example, `memory`) to collapse it.
 
-While counters mode can be useful, the [Developer Console](../../studio/optimization/memory-usage.md) is the recommended way to [identify memory issues](../../performance-optimization/identifying.md#memory). You might also find the [x-ray view](index.md#using-the-web-ui) in the web UI helpful for identifying when problematic memory allocation occurs.
+While counters mode can be useful, the [Developer Console](../../studio/optimization/memory-usage.md) is the recommended way to [identify memory issues](../../performance-optimization/identifying.md#memory). You might also find the [X-ray view](index.md#using-the-web-ui) in the web UI helpful for identifying when problematic memory allocation occurs.
 
 ## Hidden Mode
 
