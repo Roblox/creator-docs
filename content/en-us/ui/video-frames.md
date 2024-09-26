@@ -20,7 +20,7 @@ To upload video assets, you must be a 13+ [ID verified](https://en.help.roblox.c
 - It's 30 seconds or less in either `.mp4` or `.mov` format.
 - Its resolution is less than or equal to 4096&times;2160.
 - It's less than 375 MB.
-- It includes only English audio and text (additional languages will be supported at a later date).
+- It includes only English and/or Spanish audio and text (additional languages will be supported at a later date).
 
 Videos that don't meet these requirements are rejected. Alpha channels are not supported and will be ignored. When uploading videos, consider the following:
 
