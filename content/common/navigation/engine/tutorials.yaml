@@ -78,9 +78,7 @@ navigation:
         section:
           - title: Creating Character Animations
             path: /tutorials/building/animation/creating-an-animation
-          - title: Changing Default Animations
-            path: /tutorials/building/animation/creating-an-animation
-          - title: Triggering Animations
+          - title: Scripting Avatar Animations
             path: /tutorials/building/animation/scripting-avatar-animations
       - title: In Blender
         section:
