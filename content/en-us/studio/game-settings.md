@@ -148,6 +148,10 @@ You should only enable the following settings if you trust all assets from other
     <td>Allows experiences' servers to issue requests to remote servers via `Class.HttpService`.</td>
   </tr>
   <tr>
+    <td>**Secrets**</td>
+    <td>Allows for the creation and configuration of [Secrets](../reference/engine/datatypes/Secret.yaml) for Studio sessions using `Class.HttpService`. Visible only if HTTP requests are allowed.</td>
+  </tr>
+  <tr>
     <td>**Enable&nbsp;Studio&nbsp;Access to API Services**</td>
     <td>Lets Studio access API services. This setting is useful for testing the implementation of services like [data stores](../cloud-services/data-stores).</td>
   </tr>
