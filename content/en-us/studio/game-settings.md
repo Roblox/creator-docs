@@ -149,7 +149,7 @@ You should only enable the following settings if you trust all assets from other
   </tr>
   <tr>
     <td>**Secrets**</td>
-    <td>Allows for the creation and configuration of [Secrets](../reference/engine/datatypes/Secret.yaml) for Roblox Studio sessions using `Class.HttpService`. Requires allowing HTTP requests.</td>
+    <td>Allows for the creation and configuration of [Secrets](../reference/engine/datatypes/Secret.yaml) for Studio sessions using `Class.HttpService`. Visible only if HTTP requests are allowed.</td>
   </tr>
   <tr>
     <td>**Enable&nbsp;Studio&nbsp;Access to API Services**</td>
