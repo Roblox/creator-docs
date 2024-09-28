@@ -1,6 +1,6 @@
 ---
-title: Upload and Publish
-description: Before selling your accessory, upload the accessory for validation and moderation.
+title: Cute hat for everyone
+description:This hat is very good for people who want their things to look cute and kawaii
 prev: /art/accessories/creating-rigid/converting
 ---
 
