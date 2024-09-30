@@ -58,7 +58,7 @@ properties:
       can_load: false
       can_save: true
   - name: AudioAnalyzer.SpectrumEnabled
-    summary: 'Enables usage of `Class.AudioAnalyzer:GetSpectrum|GetSpectrum`'
+    summary: 'Enables usage of `Class.AudioAnalyzer:GetSpectrum|GetSpectrum`.'
     description: |
         Enables usage of `Class.AudioAnalyzer:GetSpectrum|GetSpectrum`.
         If false, `Class.AudioAnalyzer:GetSpectrum|GetSpectrum` returns an empty array,
