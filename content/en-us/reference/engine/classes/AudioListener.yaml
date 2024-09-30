@@ -68,7 +68,7 @@ properties:
       can_save: true
 methods:
   - name: AudioListener:GetConnectedWires
-    summary: 'Returns an array of `Class.Wire|Wires` that are connected to the specified pin'
+    summary: 'Returns an array of `Class.Wire|Wires` that are connected to the specified pin.'
     description: |
         Returns an array of `Class.Wire|Wires` that are connected to the specified pin.
         `Class.AudioListener` has one "Output" pin.
