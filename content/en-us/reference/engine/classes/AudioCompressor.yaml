@@ -40,7 +40,7 @@ properties:
       can_load: true
       can_save: true
   - name: AudioCompressor.Bypass
-    summary: 'If True, audio streams are passed-through unaffected by this effect.'
+    summary: 'If true, audio streams are passed-through unaffected by this effect.'
     description: 'If True, audio streams are passed-through unaffected by this effect.'
     code_samples: []
     type: bool
