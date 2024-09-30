@@ -17,7 +17,7 @@ Automatic translation only provides automated translations for blank entries on 
 
 Automatic Text Capture (ATC) captures text strings from UI elements in your experience and adds them to your translation table. When enabled, the ATC tool adds text from UI elements encountered by users within your experience or during Studio testing.
 
-ATC evaluates over time which strings should be added to your translation table, so it may take up to a few days for new strings to appear in Translator Portal after users encounter them.
+ATC evaluates over time which strings should be added to your translation table, so it may take up to a few days for new strings to appear in Translator Portal after users encounter them. If you require strings to be captured immediately, you can use the [Studio text capture process](#text-capture-in-studio).
 
 To enable Automatic Text Capture:
 
@@ -39,6 +39,22 @@ ATC can not capture some experience objects. These objects may require special h
 <li>Game Pass names and descriptions pulled from the platform.</li>
 </ul>
 </Alert>
+
+### Text Capture in Studio
+
+There may be situations in which you need to immediately capture strings to your translation table. In these cases, you can use the text capture tool in Studio to capture strings while playtesting. These strings will be added to the localization table within 1-2 minutes of encountering them.
+
+To enable text capture in Studio:
+
+1. In Studio, open **Plugins** > **Localization** > **Tools**.
+
+   <img src="../../assets/studio/general/Plugins-Tab-Localization-Tools.png" width="60%" alt="The Studio ribbon plugins tab with localization tools button highlighted." />
+
+2. Enable **Automatic Text Capture**.
+
+   <img src="../../assets/localization/ATC-Studio-Enabled.png" width="45%" alt="The in-Studio localization tool showing ATC toggle enabled." />
+
+Studio text capture stays on if you start and stop playtesting within the same Studio session, but must be enabled again when you start a new Studio session.
 
 ### Automatic Cleanup
 
