@@ -63,7 +63,7 @@ properties:
         Enables usage of `Class.AudioAnalyzer:GetSpectrum|GetSpectrum`.
         If false, `Class.AudioAnalyzer:GetSpectrum|GetSpectrum` returns an empty array,
         but the CPU overhead of this `Class.AudioAnalyzer` is dramatically reduced.
-        So, if you are only analyzing the *volume* of an audio stream,
+        This means that if you are only analyzing the **volume** of an audio stream,
         this can be disabled to improve performance.
     code_samples: []
     type: bool
