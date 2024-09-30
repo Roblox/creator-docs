@@ -38,8 +38,10 @@ properties:
       can_save: true
 methods:
   - name: AudioDeviceOutput:GetConnectedWires
-    summary: ''
-    description: ''
+    summary: 'Returns an array of `Class.Wire|Wires` that are connected to the specified pin'
+    description: |
+        Returns an array of `Class.Wire|Wires` that are connected to the specified pin.
+        `Class.AudioDeviceOutput` has one "Input" pin.
     code_samples: []
     parameters:
       - name: pin

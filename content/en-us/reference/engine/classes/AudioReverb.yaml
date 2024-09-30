@@ -15,8 +15,8 @@ tags: []
 deprecation_message: ''
 properties:
   - name: AudioReverb.Bypass
-    summary: ''
-    description: ''
+    summary: 'If True, audio streams are passed-through unaffected by this effect.'
+    description: 'If True, audio streams are passed-through unaffected by this effect.'
     code_samples: []
     type: bool
     tags: []
@@ -255,8 +255,10 @@ properties:
       can_save: true
 methods:
   - name: AudioReverb:GetConnectedWires
-    summary: ''
-    description: ''
+    summary: 'Returns an array of `Class.Wire|Wires` that are connected to the specified pin'
+    description: |
+        Returns an array of `Class.Wire|Wires` that are connected to the specified pin.
+        `Class.AudioReverb` has one "Input" pin, and one "Output" pin.
     code_samples: []
     parameters:
       - name: pin
