@@ -1,4 +1,100 @@
-name: Model
+content/en-us/reference/engine/classes/Model.yamlgh pr checkout 840 Players.LocalPlayercharacter.ParentEnum.UserInputState.Begin10local START_POSITION = Vector3.new(-20, 10, 0)
+local END_POSITION = Vector3.new(0, 10, 0)
+
+local model = Instance.new("Model")
+
+local part1 = Instance.new("Part")
+part1.Size = Vector3.new(4, 4, 4)
+part1.CFrame = CFrame.new(START_POSITION) * CFrame.Angles(0, math.rad(45), 0)
+part1.Anchored = true
+part1.BrickColor = BrickColor.new("Bright yellow")
+part1.Parent = model
+
+local part2 = Instance.new("Part")
+part2.Size = Vector3.new(2, 2, 2)
+part2.CFrame = part1.CFrame * CFrame.new(0, 3, 0)
+part2.Anchored = true
+part2.BrickColor = BrickColor.new("Bright blue")
+part2.Parent = model
+content/en-us/reference/engine/classes/Model.yaml
+model.PrimaryPart = part1
+model.Parent = workspace
+
+local obstruction = Instance.new("Part")
+obstruction.Name = "Obstruction"
+obstruction.Size = Vector3.new(10, 10, 10)content/en-us/reference/engine/classes/Model.yaml
+obstruction.Position = Vector3.new(0, 10, 0)
+obstruction.Transparency = 0.5
+obstruction.Anchored = true
+obstruction.BrickColor = BrickColor.new("Bright green")
+obstruction.Parent = workspace
+
+task.wait(3)
+-- use TranslateBy to shift the model into the obstruction
+model:TranslateBy(END_POSITION - START_POSITION)part1.Sizepart1.Anchoredpart1.CFramepart1.Parentpart1.BrickColorpart2.CFramepart2.Sizepart2.BrickColorpart2.Anchoredmodel.PrimaryPartpart2.Parentobstruction.Namemodel.Parentobstruction.Positionobstruction.Sizeobstruction.Anchoredobstruction.Transparencyobstruction.Parentobstruction.BrickColorpart1.Positionlocal START_POSITION = Vector3.new(-20, 10, 0)
+local END_POSITION = Vector3.new(0, 10, 0)
+
+local model = Instance.new("Model")
+model.Parent = workspace
+
+local part1 = Instance.new("Part")
+part1.Size = Vector3.new(4, 4, 4)
+part1.Position = START_POSITION
+part1.Anchored = true
+part1.BrickColor = BrickColor.new("Bright yellow")
+part1.Parent = model
+
+local part2 = Instance.new("Part")
+part2.Size = Vector3.new(2, 2, 2)
+part2.Position = START_POSITION + Vector3.new(0, 3, 0)
+part2.Anchored = true
+part2.BrickColor = BrickColor.new("Bright blue")
+part2.Parent = model
+
+model.PrimaryPart = part1
+model.Parent = workspace
+
+local obstruction = Instance.new("Part")
+obstruction.Name = "Obstruction"
+obstruction.Size = Vector3.new(10, 10, 10)
+obstruction.Position = Vector3.new(0, 10, 0)
+obstruction.Anchored = true
+obstruction.BrickColor = BrickColor.new("Bright green")
+obstruction.Parent = workspace
+
+task.wait(3)
+
+model:MoveTo(END_POSITION)part2.Positionlocal CollectionService = game:GetService("CollectionService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+-- Find all the models with the tag we want to replace
+local items = CollectionService:GetTagged("Tree")
+local newModel = ReplicatedStorage.FancyTreeReplacementModel
+for _, item in items do
+	-- Make the new item and scale / position it where the old one was
+	local newItem = newModel:Clone()
+	newItem:ScaleTo(item:GetScale())
+	newItem:PivotTo(item:GetPivot())
+
+	-- Add the same tag to the replacement
+	CollectionService:AddTag(newItem, "Tree")
+
+	-- Delete the old item and parent the new one
+	newItem.Parent = item.Parent
+	item:Destroy()
+endReplicatedStorage.FancyTreeReplacementModelnewItem.Parent5local model = Instance.new("Model")
+model.Parent = workspace
+
+local RNG = Random.new()
+
+for _ = 1, 5 do
+	local part = Instance.new("Part")
+	part.Anchored = true
+	part.Size = Vector3.new(RNG:NextNumber(0.05, 5), RNG:NextNumber(0.05, 5), RNG:NextNumber(0.05, 5))
+	part.Parent = model
+end
+
+print(model:GetExtentsSize())part.Anchoredpart.Size name: Model
 type: class
 category: Building
 memory_category: PhysicsParts
