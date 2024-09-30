@@ -15,7 +15,7 @@ tags: []
 deprecation_message: ''
 properties:
   - name: AudioReverb.Bypass
-    summary: 'If True, audio streams are passed-through unaffected by this effect.'
+    summary: 'If true, audio streams are passed-through unaffected by this effect.'
     description: 'If True, audio streams are passed-through unaffected by this effect.'
     code_samples: []
     type: bool
