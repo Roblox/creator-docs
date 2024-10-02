@@ -202,8 +202,6 @@ properties:
       a value based on how far away you expect a player to view the SurfaceGui.
       Be mindful that a large pixel density could negatively affect performance
       if the face of the adorned part is large enough.
-
-      ![Three parts with SurfaceGuis, each including a 200x50 TextLabel within them. From left-to-right, their PixelsPerStud values are 25, 50 and 75. These values cause the apparent size of each TextLabel to change.](/assets/legacy/SurfaceGui.PixelsPerStud.jpg)
     code_samples:
     type: float
     tags: []

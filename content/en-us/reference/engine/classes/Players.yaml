@@ -132,7 +132,7 @@ properties:
       The `MaxPlayers` property determines the maximum number of players that
       can be in a server. This property can only be set through a specific
       place's settings on the
-      [Creator Dashboard](https://create.roblox.com/creations) or through
+      [Creator Dashboard](https://create.roblox.com/dashboard/creations) or through
       [Game Settings](../../../studio/game-settings.md).
     code_samples:
     type: int
@@ -966,11 +966,6 @@ methods:
             <td>string</td>
             <td>The <code>Class.Player.DisplayName|display name</code> of the friend.</td>
           </tr>
-      	<tr>
-      		<td>IsOnline</td>
-      		<td>bool</td>
-      		<td>If the friend is currently online</td>
-      	</tr>
       </table>
 
       See the code samples for an easy way to iterate over all a player's

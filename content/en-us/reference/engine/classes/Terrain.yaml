@@ -527,19 +527,9 @@ methods:
       Fills a wedge-shaped volume of Terrain with the given `Enum.Material` and
       the area's CFrame and Size.
     description: |
-      **FillWedge** fills a wedge-shaped volume of Terrain with the given
-      `Enum.Material` and the area's CFrame and Size. The orientation of the
-      wedge is the same as an equivalent `Class.WedgePart`.
-
-      <img src="../../../assets/legacy/Terrain.FillWedge.jpg" alt="The results of a call to Terrain:FillWedge with CFrame (0, 50, 0), Size (20, 20, 20), and Material Asphalt" width="537" height="415" />
-
-      In the image above, a floating chunk of Terrain was created by calling
-      this function as in the following code. A transparent, pink part with the
-      Front surface marked with a Motor indicates the provided CFrame and Size.
-
-      ```lua
-      workspace.Terrain:FillWedge(CFrame.new(0, 50, 0), Vector3.new(20, 20, 20), Enum.Material.Asphalt)
-      ```
+      `FillWedge()` fills a wedge-shaped volume of `Class.Terrain` with the
+      given `Enum.Material` and the area's `Datatype.CFrame` and size. The
+      orientation of the wedge is the same as an equivalent `Class.WedgePart`.
     code_samples:
     parameters:
       - name: cframe
