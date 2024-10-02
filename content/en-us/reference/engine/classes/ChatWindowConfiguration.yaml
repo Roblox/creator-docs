@@ -289,6 +289,18 @@ properties:
     serialization:
       can_load: true
       can_save: true
-methods: []
+methods:
+  - name: ChatWindowConfiguration:DeriveNewMessageProperties
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: ChatWindowMessageProperties
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
 events: []
 callbacks: []

@@ -59,7 +59,7 @@ properties:
       Used to store a URL that points to an online script source. Binds the
       online code to the script's `Class.Script.Source`.
     code_samples:
-    type: Content
+    type: ContentId
     tags:
       - Deprecated
     deprecation_message: |

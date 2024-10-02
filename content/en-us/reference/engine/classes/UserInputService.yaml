@@ -377,7 +377,7 @@ properties:
       set `Class.UserInputService.MouseIconEnabled` to false.
     code_samples:
       - UserInputService-MouseIcon
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -971,7 +971,7 @@ methods:
         summary: |
           The `Enum.KeyCode` for which to fetch the associated image.
     returns:
-      - type: Content
+      - type: ContentId
         summary: |
           The returned image asset ID.
     tags: []

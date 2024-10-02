@@ -132,8 +132,8 @@ properties:
       The `MaxPlayers` property determines the maximum number of players that
       can be in a server. This property can only be set through a specific
       place's settings on the
-      [Creator Dashboard](https://create.roblox.com/dashboard/creations) or through
-      [Game Settings](../../../studio/game-settings.md).
+      [Creator Dashboard](https://create.roblox.com/dashboard/creations) or
+      through [Game Settings](../../../studio/game-settings.md).
     code_samples:
     type: int
     tags:

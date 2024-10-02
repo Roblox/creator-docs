@@ -29,7 +29,7 @@ methods:
     code_samples: []
     parameters:
       - name: textureId
-        type: Content
+        type: ContentId
         default:
         summary: |
           Texture ID of the image to populate the `Class.EditableImage`.
@@ -52,7 +52,7 @@ methods:
     code_samples: []
     parameters:
       - name: meshId
-        type: Content
+        type: ContentId
         default:
         summary: |
           Content ID of the mesh from which to create an `Class.EditableMesh`
@@ -106,7 +106,7 @@ methods:
     code_samples: []
     parameters:
       - name: meshId
-        type: Content
+        type: ContentId
         default:
         summary: ''
       - name: options

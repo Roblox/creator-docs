@@ -51,7 +51,7 @@ properties:
       Note that the animation will need to be loaded onto an
       `Class.AnimationTrack` in order to play it.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

@@ -43,7 +43,7 @@ properties:
       To change the activated cursor icon, set this property to the asset ID of
       the image you'd like to use.
     code_samples: []
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -113,7 +113,7 @@ properties:
       To change the cursor icon, set this property to the asset ID of the image
       you'd like to use.
     code_samples: []
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -458,6 +458,51 @@ properties:
       `Enum.UIDragDetectorResponseStyle` for options.
     code_samples: []
     type: UIDragDetectorResponseStyle
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.SelectionModeDragSpeed
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UDim2
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.SelectionModeRotateSpeed
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+  - name: UIDragDetector.UIDragSpeedAxisMapping
+    summary: ''
+    description: ''
+    code_samples: []
+    type: UIDragSpeedAxisMapping
     tags: []
     deprecation_message: ''
     security:

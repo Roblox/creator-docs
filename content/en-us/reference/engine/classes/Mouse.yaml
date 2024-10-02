@@ -252,7 +252,7 @@ properties:
       dependent on your operating system.
     code_samples:
       - dragon-mouse-icon
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

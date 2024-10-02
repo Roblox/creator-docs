@@ -12,7 +12,8 @@ description: |
   `SelectionSphere` does not capture any form of input; it is solely a visual
   effect.
 
-  For an outline/fill overlay effect which covers non‑primitive geometry such as that of a `Class.MeshPart`, see `Class.Highlight`.
+  For an outline/fill overlay effect which covers non‑primitive geometry such as
+  that of a `Class.MeshPart`, see `Class.Highlight`.
 code_samples:
 inherits:
   - PVAdornment

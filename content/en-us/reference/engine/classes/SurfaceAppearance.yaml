@@ -95,7 +95,7 @@ properties:
       See [here](../../../art/modeling/surface-appearance.md#color-albedo) for
       more information.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -129,7 +129,7 @@ properties:
       See [here](../../../art/modeling/surface-appearance.md#metalness) for more
       information.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -183,7 +183,7 @@ properties:
       See [here](../../../art/modeling/surface-appearance.md#normal) for more
       information.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -210,7 +210,7 @@ properties:
       See [here](../../../art/modeling/surface-appearance.md#roughness) for more
       information.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -225,7 +225,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

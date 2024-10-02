@@ -109,7 +109,7 @@ methods:
       - ContentProvider-GetAssetFetchStatus1
     parameters:
       - name: contentId
-        type: Content
+        type: ContentId
         default:
         summary: |
           The ID of the content to fetch the status for.
@@ -135,7 +135,7 @@ methods:
       - ContentProvider-GetAssetFetchStatus1
     parameters:
       - name: contentId
-        type: Content
+        type: ContentId
         default:
         summary: ''
     returns:
@@ -187,7 +187,7 @@ methods:
       - ContentProvider-Preload1
     parameters:
       - name: contentId
-        type: Content
+        type: ContentId
         default:
         summary: ''
     returns:
@@ -238,7 +238,7 @@ methods:
     code_samples:
     parameters:
       - name: assetId
-        type: Content
+        type: ContentId
         default:
         summary: ''
       - name: encryptionKey
@@ -258,7 +258,7 @@ methods:
     code_samples:
     parameters:
       - name: contentId
-        type: Content
+        type: ContentId
         default:
         summary: ''
       - name: sessionKey
@@ -290,7 +290,7 @@ methods:
     code_samples:
     parameters:
       - name: assetId
-        type: Content
+        type: ContentId
         default:
         summary: ''
     returns:
@@ -354,7 +354,7 @@ events:
     code_samples:
     parameters:
       - name: assetId
-        type: Content
+        type: ContentId
         default:
         summary: ''
     tags: []

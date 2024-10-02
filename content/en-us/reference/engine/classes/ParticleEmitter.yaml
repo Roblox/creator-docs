@@ -773,7 +773,7 @@ properties:
       `Class.ParticleEmitter.LightEmission|LightEmission`. Textures with
       transparent backgrounds work best for particles.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

@@ -19,8 +19,10 @@ tags: []
 deprecation_message: ''
 properties:
   - name: AudioFilter.Bypass
-    summary: 'If true, audio streams are passed-through unaffected by this effect.'
-    description: 'If true, audio streams are passed-through unaffected by this effect.'
+    summary: |
+      Whether audio streams are passed-through unaffected by this effect.
+    description: |
+      If `true`, audio streams are passed-through unaffected by this effect.
     code_samples: []
     type: bool
     tags: []
@@ -136,10 +138,12 @@ properties:
       can_save: true
 methods:
   - name: AudioFilter:GetConnectedWires
-    summary: 'Returns an array of `Class.Wire|Wires` that are connected to the specified pin.'
+    summary: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
     description: |
-        Returns an array of `Class.Wire|Wires` that are connected to the specified pin.
-        `Class.AudioFilter` has one "Input" pin, and one "Output" pin.
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin. `Class.AudioFilter` has one "Input" pin and one "Output" pin.
     code_samples: []
     parameters:
       - name: pin

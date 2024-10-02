@@ -16,12 +16,13 @@ description: |
   used to add special behaviors for in‑Studio testing.
 
   `RunService` also houses events that allow your code to adhere to Roblox's
-  frame‑by‑frame loop, such as `Class.RunService.PreRender|PreRender`, `Class.RunService.PreAnimation|PreAnimation`,
+  frame‑by‑frame loop, such as `Class.RunService.PreRender|PreRender`,
+  `Class.RunService.PreAnimation|PreAnimation`,
   `Class.RunService.PreSimulation|PreSimulation`,
   `Class.RunService.PostSimulation|PostSimulation`, and
   `Class.RunService.Heartbeat|Heartbeat`. Selecting the proper event to use for
-  any case is important, so you should read [Task
-  Scheduler](../../../studio/microprofiler/task-scheduler.md) to make an
+  any case is important, so you should read
+  [Task Scheduler](../../../studio/microprofiler/task-scheduler.md) to make an
   informed decision.
 
   ##### Context Test Results
@@ -196,17 +197,17 @@ methods:
 
       ##### Priority
 
-      The `priority` of the binding is an integer; it determines when during
-      the render step to call the custom function. The lower this number, the
-      sooner the custom function will be called. If two bindings have the same
+      The `priority` of the binding is an integer; it determines when during the
+      render step to call the custom function. The lower this number, the sooner
+      the custom function will be called. If two bindings have the same
       priority, the Roblox engine will randomly pick one to run first. The
       default Roblox control scripts run with these specific priorities:
 
       - Player Input: `100`
       - Camera Controls: `200` For convenience; the `Enum.RenderPriority` enum
-      can be used to determine the integer value to set a binding. For example,
-      to make a binding right before the default camera update, simply subtract
-      `1` from the camera priority level.
+        can be used to determine the integer value to set a binding. For
+        example, to make a binding right before the default camera update,
+        simply subtract `1` from the camera priority level.
 
       When using `Enum.RenderPriority`, remember to use `.Value` at the end of
       the desired enum. `Class.RunService:BindToRenderStep()` will not work if
@@ -558,7 +559,7 @@ events:
       The `PreAnimation` event fires every frame, prior to the physics
       simulation but after rendering. The `deltaTimeSim` argument indicates the
       time that has elapsed since the previous frame.
-      
+
       This event is useful for modifying animation objects, such as adjusting
       their speed or priority. Once the `PreAnimation` event is complete, the
       engine proceeds to run these animations, updating the joint transforms
@@ -585,7 +586,7 @@ events:
       `Class.RunService.RenderStepped|RenderStepped`) fires every frame, prior
       to the frame being rendered. The `deltaTimeRender` argument indicates the
       time that has elapsed since the previous frame.
-      
+
       This event allows you to run code and update the world before it's drawn
       on a player's screen. This is useful for last‑minute adjustments such as
       changing object positions, updating animations, or preparing visual
@@ -643,7 +644,7 @@ events:
       `Class.RunService.PreRender|PreRender`) fires every frame, prior to the
       frame being rendered. The `deltaTime` argument indicates the time that has
       elapsed since the previous frame.
-      
+
       This event allows you to run code and update the world before it's drawn
       on a player's screen. This is useful for last‑minute adjustments such as
       changing object positions, updating animations, or preparing visual

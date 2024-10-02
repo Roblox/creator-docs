@@ -107,7 +107,7 @@ properties:
       will instead use the button's text given by
       `Class.PluginToolbar:CreateButton()`.
     code_samples:
-    type: Content
+    type: ContentId
     tags:
       - NotReplicated
     deprecation_message: ''

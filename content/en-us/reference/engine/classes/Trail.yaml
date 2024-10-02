@@ -342,7 +342,7 @@ properties:
       `Class.Trail.WidthScale|WidthScale` properties.
     code_samples:
       - creating-a-trail-with-a-pawprint-texture
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

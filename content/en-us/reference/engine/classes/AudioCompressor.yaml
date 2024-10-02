@@ -40,8 +40,10 @@ properties:
       can_load: true
       can_save: true
   - name: AudioCompressor.Bypass
-    summary: 'If true, audio streams are passed-through unaffected by this effect.'
-    description: 'If true, audio streams are passed-through unaffected by this effect.'
+    summary: |
+      Whether audio streams are passed-through unaffected by this effect.
+    description: |
+      If `true`, audio streams are passed-through unaffected by this effect.
     code_samples: []
     type: bool
     tags: []
@@ -144,10 +146,13 @@ properties:
       can_save: true
 methods:
   - name: AudioCompressor:GetConnectedWires
-    summary: 'Returns an array of `Class.Wire|Wires` that are connected to the specified pin.'
+    summary: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
     description: |
-        Returns an array of `Class.Wire|Wires` that are connected to the specified pin.
-        `Class.AudioCompressor` has one "Input" pin, one "Sidechain" pin, and one "Output" pin.
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin. `Class.AudioCompressor` has one "Input" pin, one "Sidechain" pin, and
+      one "Output" pin.
     code_samples: []
     parameters:
       - name: pin

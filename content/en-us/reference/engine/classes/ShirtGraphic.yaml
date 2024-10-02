@@ -72,7 +72,7 @@ properties:
       end
       ```
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

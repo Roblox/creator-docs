@@ -8,7 +8,7 @@ The `Class.UIListLayout` positions sibling `Class.GuiObject|GuiObjects` into hor
 <img src="../assets/ui/ui-objects/UIListLayout-Example.png" width="840" />
 
 <Alert severity="warning">
-Once you insert a `Class.UIListLayout`, it either overrides or influences the `Class.GuiObject.Position|Position` and/or `Class.GuiObject.Size|Size` of all sibling UI objects, so changes to those properties within the [Properties](../studio/properties.md) window or within a script will not have the normal effect.
+Once you insert a `Class.UIListLayout`, it either overrides or influences the `Class.GuiObject.Position|Position`, `Class.GuiObject.Rotation|Rotation`, and/or `Class.GuiObject.Size|Size` of all sibling UI objects, so changes to those properties within the [Properties](../studio/properties.md) window or within a script will not have the normal effect.
 </Alert>
 
 ## Fill Direction

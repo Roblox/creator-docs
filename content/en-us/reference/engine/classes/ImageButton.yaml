@@ -28,7 +28,7 @@ properties:
       A texture ID that will be used when the `Class.ImageButton` is being
       hovered.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -52,7 +52,7 @@ properties:
       `Class.ImageButton.ScaleType` property.
     code_samples:
       - Image-Hover-Lock
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -183,7 +183,7 @@ properties:
       A texture ID that can be set as an `Class.ImageButton` property. When the
       button is pressed, it will render this image.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

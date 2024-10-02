@@ -74,7 +74,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: Content
+      - type: ContentId
         summary: |
           The temporary asset id.
     tags: []
