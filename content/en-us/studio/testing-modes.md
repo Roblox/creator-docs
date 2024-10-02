@@ -172,7 +172,7 @@ When using Oculus VR, ensure the following:
 You can test your experience in the Roblox app on Quest without linking your headset to your computer. Use the following steps to access your experience on your headset in this mode:
 
 1. In Studio, publish the experience and set the experience to private.
-2. Using your [Creator Dashboard](https://create.roblox.com/creations) or the link in Studio, open the experience page in your web browser.
+2. Using your [Creator Dashboard](https://create.roblox.com/dashboard/creations) or the link in Studio, open the experience page in your web browser.
 3. On the experience page, add the experience to your favorites by clicking the **Favorite** icon.
 4. Using your headset, open the standalone Roblox app.
 5. Scroll down to the **Favorites** section in the home page and run your experience.

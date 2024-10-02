@@ -73,7 +73,7 @@ We follow the [Microsoft Style Guide](https://learn.microsoft.com/en-us/style-gu
 
 For external links to other websites outside of [https://create.roblox.com](https://create.roblox.com), use standard Markdown instead of JSX or HTML:
 
-- `[Creator Dashboard](https://create.roblox.com/creations)`
+- `[Creator Dashboard](https://create.roblox.com/dashboard/creations)`
 - `[Blender](https://www.blender.org/)`
 
 ### Documentation Site Links

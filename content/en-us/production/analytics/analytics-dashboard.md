@@ -20,7 +20,7 @@ If you are an experience owner or a group owner, and your experience meets the e
 
 1. Make sure that you have a verified email address and a 2-Step Verification method on your Roblox account.
 
-2. Navigate to the experience overview page on the [Creator Dashboard](https://create.roblox.com/creations).
+2. Navigate to the experience overview page on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
 3. Read Roblox **Terms of Use** that pop out automatically. Click **Agree** if you agree to them.
 
