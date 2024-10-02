@@ -13,7 +13,8 @@ properties:
   - name: AtmosphereSensor.AirDensity
     summary: |
       Measures the density of the air where the sensor is positioned.
-    description: ''
+    description: |
+      Measures the density of the air where the sensor is positioned.
     code_samples: []
     type: float
     tags:
@@ -31,7 +32,8 @@ properties:
   - name: AtmosphereSensor.RelativeWindVelocity
     summary: |
       Reports the wind velocity relative to the sensor.
-    description: ''
+    description: |
+      Reports the wind velocity relative to the sensor.
     code_samples: []
     type: Vector3
     tags:
