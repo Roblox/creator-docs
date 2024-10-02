@@ -9,7 +9,7 @@ description: |
   UI element, either horizontally or vertically. Each sibling UI element retains
   its original `Class.GuiObject.Size`, but its `Class.GuiObject.Position` will
   be taken under control by the UIListLayout. While under control, the Position
-  property of sibling UI elements will not be editable in the Properties window.
+  property of sibling UI elements will not be editable in the Properties window. Its `Class.GuiObject.Rotation` property will also be ignored.  
 
   You can use the elements' `Class.GuiObject.LayoutOrder` by changing
   `Class.UIListLayout.SortOrder` to LayoutOrder. A UIListLayout will
