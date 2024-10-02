@@ -15,6 +15,10 @@ Once your experience begins tracking custom events, you'll unlock the Custom pag
 
 To unlock the Custom Events dashboard, you must first track custom events in your experience. Start by identifying which metrics are the most important for monitoring and improving your experience. Events are aggregated daily so it may take up to 24 hours for charts to populate on the page.
 
+<Alert severity ='warning'>
+Events can only be sent from the server and in published experiences. Events can't be sent from the client or Studio.
+</Alert>
+
 ### Counters
 
 Counters are one-time events captured without a value. You can use counters for tracking the number of times a specific event has occurred. Use counters for single actions such as clicking a button, starting a quest, or using a tool.
@@ -70,6 +74,10 @@ Custom events also allow breaking down on custom fields to support easier compar
 You can breakdown by custom fields by using the breakdown selector.
 
 <img src="../../assets/analytics/event-types/Custom-Event-Breakdown.png" width = "40%" alt="A dropdown indicating the three custom fields you can compare across, along with standard breakdowns like age, gender, operating system and more."/>
+
+You should use custom fields whenever possible instead of event names, since there is a much tighter cardinality limit on event names than custom fields. Using custom fields also allows you to see visualizations of events across field values.
+
+For example, instead of `PlantCabbage`, `PlantTurnip`, `PlantPepper` as three separate events, you could have a single event with the name `PlantSeed` and custom field values `Plant - Cabbage`, `Plant - Turnip`, and `Plant - Pepper`. This way you can visualize both the total number of seeds planted as well as compare each plant in the same visualization. This also reduces your event name cardinality.
 
 For more information, see [custom fields](./custom-fields.md).
 

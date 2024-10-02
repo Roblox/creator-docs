@@ -9,7 +9,7 @@ You can use up to 3 **custom fields** to filter your [Economy](./economy-events.
 - Player class — Warrior, Mage, Archer
 - Weapon type — SMG, Pistol, Rocket Launcher
 
-The `customFields` parameter is a dictionary argument that allows sending up to three custom values using the provided `Enum.AnalyticsCustomFieldKeys` as keys. You can have up to 8,000 unique combinations of values across the three custom fields.
+The customFields parameter is a dictionary argument that allows sending up to three custom values using the provided `Enum.AnalyticsCustomFieldKeys` as keys by accessing them as `Enum.AnalyticsCustomFieldKeys.CustomField{01, 02, 03}.Name`. Anything other than `CustomField01.Name`, `CustomField02.Name`, and `CustomField03.Name` is ignored. You can have up to 8,000 unique combinations of values across the three custom fields.
 
 Using a fantasy-related experience as an example, you can track an economy event regarding equipment type, player class, and level with the following:
 

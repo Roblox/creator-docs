@@ -423,11 +423,11 @@ same `MeshId` are handled in a single draw call when:
     <td>Light grid and shadow updates</td>
   </tr>
   <tr>
-    <td>Update LightGrid</td>
+    <td>LightGridCPU</td>
     <td>Voxel light grid updates</td>
   </tr>
   <tr>
-    <td>Shadows</td>
+    <td>ShadowMapSystem</td>
     <td>Shadow mapping</td>
   </tr>
   <tr>
