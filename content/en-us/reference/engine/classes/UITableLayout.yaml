@@ -9,12 +9,7 @@ description: |
   A UITableLayout lays out sibling UI elements as rows in a table. Child UI
   elements (the table cells) of these rows are then arranged in columns (within
   rows). Each cell within a row has the same height, and each cell within a
-  column has the same width. The hierarchy in the explorer should look like this
-  (`Class.Frame|Frames` are yellow rows; `Class.TextLabel|TextLabels` are
-  cells).
-
-  <img src="../../../assets/legacy/UITableLayout_Hierarchy.png" alt="Hierarchy of UI elements used with a UITableLayout" />
-  <img src="../../../assets/legacy/UITableLayout_Padding.png" alt="UITableLayout result" />
+  column has the same width.
 
   By changing the `Class.UIGridStyleLayout.FillDirection`, sibling UI elements
   can act as columns instead.
@@ -104,14 +99,7 @@ properties:
       Determines whether sibling UI elements are treated as rows or columns.
     description: |
       MajorAxis determines whether sibling UI elements are treated as rows or
-      columns. Below, the left uses a `Enum.TableMajorAxis` of RowMajor, and the
-      right uses ColumnMajor.
-
-      ![Row major](/assets/legacy/UITableLayout_Padding.png)
-
-      **Note: it seems that this property isn't making noticeable changes, and
-      rather its behavior is determined by
-      `Class.UIGridStyleLayout.FillDirection` instead.**
+      columns.
     code_samples:
       - Build-UI-Table
     type: TableMajorAxis
@@ -132,11 +120,7 @@ properties:
       Padding will position elements with extra space between them. This can be
       done using Scale or Offset components of UDim2. Negative values can bring
       elements closer together. When non-zero, the sibling UI elements may be
-      visible between the cells contained within them. In the image below, you
-      can see the padding of 5 pixels applied between the cells (and the sibling
-      UI elements acting as rows in yellow).
-
-      ![UITableLayout with padding between cells](/assets/legacy/UITableLayout_Padding.png)
+      visible between the cells contained within them.
     code_samples:
       - Build-UI-Table
     type: UDim2

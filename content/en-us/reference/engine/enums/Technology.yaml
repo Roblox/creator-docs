@@ -27,13 +27,14 @@ items:
     deprecation_message: ''
   - name: Compatibility
     summary: |
-      Simulates the removed legacy technology and is not recommended. To achieve
-      a similar look, experiment with another technology setting and add a
+      Simulates the removed legacy technology and is now deprecated. To achieve
+      a similar look, use `Voxel` Lighting and add a
       `Class.ColorGradingEffect` post‑processing effect set to the
       `Enum.TonemapperPreset|Retro` preset.
     value: 2
     tags: []
-    deprecation_message: ''
+    deprecation_message: | 
+      This option is deprecated and cannot be selected in Studio.
   - name: ShadowMap
     summary: |
       Features shadow mapping that produces more realistic and crisp shadows

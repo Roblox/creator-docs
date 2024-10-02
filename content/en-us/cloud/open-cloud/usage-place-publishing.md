@@ -34,10 +34,10 @@ To publish an existing place of an experience with [Place Publishing API](../../
 
 1. Get the **Place ID** of the place that you want to update.
 
-   1. Stay on the [Creations](https://create.roblox.com/creations) page on **Creator Dashboard** and click the thumbnail of the target experience.
+   1. Stay on the [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and click the thumbnail of the target experience.
    1. On the left navigation menu, click the **Places** tab.
    1. Find the place that you want to update and click its thumbnail.
-   1. The **Place ID** is in the redirected URL. For example, in the URL `https://create.roblox.com/creations/experiences/0000000/places/111111/configure`, the **Place ID** is `111111`.
+   1. The **Place ID** is in the redirected URL. For example, in the URL `https://create.roblox.com/dashboard/creations/experiences/0000000/places/111111/configure`, the **Place ID** is `111111`.
 
 1. Add the API Key in the **x-api-key** header of a `POST` request to the API. The following two example requests reference a Roblox XML place file (`.rbxlx`) and a binary place file (`.rbxl`).
 
@@ -63,4 +63,4 @@ To publish an existing place of an experience with [Place Publishing API](../../
    { "versionNumber": 7 }
    ```
 
-1. (Optional) Verify the upload in Studio or on [Creator Dashboard](https://create.roblox.com/creations).
+1. (Optional) Verify the upload in Studio or on [Creator Dashboard](https://create.roblox.com/dashboard/creations).

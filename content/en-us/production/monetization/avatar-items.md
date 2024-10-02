@@ -25,7 +25,7 @@ To set an avatar item on sale, the item creator and the experience owner must pe
 
 Before enabling an avatar item sale in your experience, the creator of the item must add the experience's starting place ID to the avatar item's sales location.
 
-1. Open the [Creations](https://create.roblox.com/creations) page on **Creator Dashboard**.
+1. Open the [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard**.
 2. Click the **&ctdot;** in the corner of the experience's thumbnail and select **Copy Start Place ID**.
 
 3. As the item creator, [update your item's marketplace settings](../../marketplace/publishing-to-marketplace.md#marketplace-settings) and add the Place ID to the item's Sale Location field.
