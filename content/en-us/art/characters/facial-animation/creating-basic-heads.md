@@ -419,7 +419,7 @@ To map your saved poses and the RootFaceJoint:
 
 5. Click the **Type** dropdown, then select **String**.
 6. In the **Property Name** field:
-   1. If you are mapping a pose, input the **frame number** you are mapping.
+   1. If you are mapping a pose, input the **frame number** you are mapping, **Frame0** for example.
    2. If you are mapping the RootFaceJoint, input **RootFaceJoint**.
 7. Leave the **Default Value** and **Description** fields empty.
 8. Click the **OK** button. The new custom property updates with your new property name.
