@@ -9,16 +9,8 @@ summary: |
 description: |
   Overrides `Class.TextChatMessage` properties when returned by callbacks
   defined in `Class.TextChatService.OnIncomingMessage` or
-  `Class.TextChannel.OnIncomingMessage`.
-
-  `Class.TextChatMessageProperties` overrides the matching properties of the
-  corresponding `Class.TextChatMessage`.
-
-  This can be used to customize the appearance of a message with rich text tags.
-  See [Rich Text Markup](../../../ui/rich-text.md) for more.
-
-  To learn more about using TextChatMessageProperties, see
-  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+  `Class.TextChannel.OnIncomingMessage`. This can be used to customize the
+  appearance of a message with [rich text](../../../ui/rich-text.md) tags.
 code_samples: []
 inherits:
   - Instance
@@ -60,8 +52,10 @@ properties:
       can_load: false
       can_save: false
   - name: TextChatMessageProperties.Translation
-    summary: ''
-    description: ''
+    summary: |
+      The `Class.TextChatMessage.Translation` to override.
+    description: |
+      The `Class.TextChatMessage.Translation` to override; represents [automatically translated](../../../production/localization/automatic-translations.md) and filtered text messages based on players' localization settings.
     code_samples: []
     type: string
     tags: []
