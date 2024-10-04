@@ -32,7 +32,7 @@ properties:
       This property determines the color of the surface. This texture is
       sometimes called the albedo texture. The alpha channel is not used.
     code_samples: []
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -100,7 +100,7 @@ properties:
       1, and `Class.Lighting.Ambient` and `Class.Lighting.OutdoorAmbient` to
       (0,0,0) is recommended.
     code_samples: []
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -151,7 +151,7 @@ properties:
       re-export your mesh along with its tangent information from modeling
       software.
     code_samples: []
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -175,7 +175,7 @@ properties:
       scale. Reflections on smooth surfaces are sharp and concentrated.
       Reflections on rough surfaces are more blurry and dispersed.
     code_samples: []
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

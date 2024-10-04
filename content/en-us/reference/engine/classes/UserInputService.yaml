@@ -199,22 +199,17 @@ properties:
     summary: |
       Toggles whether Roblox's mobile controls are hidden on mobile devices.
     description: |
-      **ModalEnabled** property determines whether character controls are hidden
-      on `Class.UserInputService.TouchEnabled|TouchEnabled` devices. By default,
-      this property is `false` and controls are visible.
-
-      ![ModalEnabled = false](/assets/legacy/UISModalEnabledFalse.png)
-
-      ![ModalEnabled = true](/assets/legacy/UISModalEnabledTrue.png)
+      The `ModalEnabled` property determines whether character controls are
+      hidden on `Class.UserInputService.TouchEnabled|TouchEnabled` devices. By
+      default, this property is `false` and controls are visible.
 
       This property will only work when used in a `Class.LocalScript` running
       for the player whose character controls are to be hidden.
 
-      Even if mobile controls are hidden for a player on a mobile device, other
-      UserInputService events such as `Class.UserInputService.InputBegan` and
-      `Class.UserInputService.TouchSwipe` can still be used to process other
-      forms of user input on mobile devices with an enabled touch screen (see
-      the main UserInputService class page for a full list).
+      Even if mobile controls are hidden for a player on a touch‑enabled device,
+      other events such as `Class.UserInputService.InputBegan|InputBegan` and
+      `Class.UserInputService.TouchSwipe|TouchSwipe` can still be used to
+      process other forms of input.
     code_samples:
       - UserInputService-ModalEnabled
     type: bool
@@ -382,7 +377,7 @@ properties:
       set `Class.UserInputService.MouseIconEnabled` to false.
     code_samples:
       - UserInputService-MouseIcon
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -976,7 +971,7 @@ methods:
         summary: |
           The `Enum.KeyCode` for which to fetch the associated image.
     returns:
-      - type: Content
+      - type: ContentId
         summary: |
           The returned image asset ID.
     tags: []

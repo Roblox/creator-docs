@@ -99,7 +99,7 @@ properties:
       specified `Class.MeshPart.CollisionFidelity|CollisionFidelity` and
       `Class.MeshPart.RenderFidelity|RenderFidelity`.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -196,7 +196,7 @@ properties:
 
       [1]: https://www.blender.org/
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

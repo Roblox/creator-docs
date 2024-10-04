@@ -87,7 +87,7 @@ methods:
     code_samples: []
     parameters:
       - name: contentId
-        type: Content
+        type: ContentId
         default:
         summary: |
           The `contentId` identifying the screenshot to share.
@@ -204,7 +204,7 @@ events:
     code_samples: []
     parameters:
       - name: captureContentId
-        type: Content
+        type: ContentId
         default:
         summary: |
           The `contentId` identifying the screenshot that the user saved.

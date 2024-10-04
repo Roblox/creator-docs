@@ -1957,7 +1957,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data\n Stores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
+        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience\n creates a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data\n Stores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
         "operationId": "Cloud_SnapshotDataStores",
         "parameters": [
           {
@@ -5307,7 +5307,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Gets a user's basic and advanced information.\n\n To access a user's public information, no additional scopes are required.\n\n To access a user's premium or verification status, you need the following\n scopes:\n * user.advanced.read\n\n To access a user's social account information, you need the following\n scopes:\n * user.social.read",
+        "description": "Gets a user's basic and advanced information.\n\n To access a user's public information, no additional scopes are required.\n\n To access a user's verification status, you need the following scopes:\n * user.advanced.read\n\n To access a user's social account information, you need the following\n scopes:\n * user.social.read",
         "operationId": "Cloud_GetUser",
         "parameters": [
           {
@@ -7522,7 +7522,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data\n Stores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
+        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience\n creates a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data\n Stores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
         "operationId": "Cloud_SnapshotDataStores",
         "parameters": [
           {
@@ -10872,7 +10872,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Gets a user's basic and advanced information.\n\n To access a user's public information, no additional scopes are required.\n\n To access a user's premium or verification status, you need the following\n scopes:\n * user.advanced.read\n\n To access a user's social account information, you need the following\n scopes:\n * user.social.read",
+        "description": "Gets a user's basic and advanced information.\n\n To access a user's public information, no additional scopes are required.\n\n To access a user's verification status, you need the following scopes:\n * user.advanced.read\n\n To access a user's social account information, you need the following\n scopes:\n * user.social.read",
         "operationId": "Cloud_GetUser",
         "parameters": [
           {
@@ -11147,7 +11147,7 @@
       "AcceptGroupJoinRequestRequest": {
         "type": "object",
         "properties": {},
-        "description": "A join request id."
+        "description": "A join request ID."
       },
       "AssetQuota": {
         "type": "object",
@@ -12873,7 +12873,7 @@
       "DeclineGroupJoinRequestRequest": {
         "type": "object",
         "properties": {},
-        "description": "A join request id."
+        "description": "A join request ID."
       },
       "DeveloperProduct": {
         "required": [
@@ -12990,12 +12990,12 @@
       "FlushMemoryStoreRequest": {
         "type": "object",
         "properties": {},
-        "description": "Asynchronously flush all data structures in the universe."
+        "description": "Request body not required."
       },
       "FlushMemoryStoreResponse": {
         "type": "object",
         "properties": {},
-        "description": "Includes the path to the flush operation and a boolean for whether or not the\n operation completed."
+        "description": "Returns a FlushMemoryStoreResponse object."
       },
       "GamePass": {
         "type": "object",
@@ -13077,7 +13077,7 @@
             "description": "URI for the generated thumbnail."
           }
         },
-        "description": "Returns the URI for the generated thumbnail."
+        "description": "Returns the URL for the user's avatar thumbnail."
       },
       "GetInstanceMetadata": {
         "type": "object",
@@ -13663,7 +13663,7 @@
             "description": "An arbitrary set of attributes associated with the entry.\n\n If this is not provided, existing attributes are cleared."
           }
         },
-        "description": "Increments entry value.\n\n If the value is not numeric, this request fails.",
+        "description": "Increments the entry value.\n\n If the value is not numeric, this request fails.",
         "x-oneOf": {
           "Amount": [
             "amount"
@@ -13671,15 +13671,8 @@
         }
       },
       "IncrementOrderedDataStoreEntryRequest": {
-        "required": [
-          "path"
-        ],
         "type": "object",
         "properties": {
-          "path": {
-            "type": "string",
-            "description": "The name of the ordered data store entry.\n\n Format:\n universes/{universe}/ordered-data-stores/{ordered_data_store}/scopes/{ordered_data_store_scope}/entries/{ordered_data_store_entry}"
-          },
           "amount": {
             "type": "number",
             "description": "The amount by which to increment the entry value. Both the existing value\n and the increment amount must be integers.",
@@ -14117,7 +14110,7 @@
             "description": "A token, which can be sent as `page_token` to retrieve the next page.\n If this field is omitted, there are no subsequent pages."
           }
         },
-        "description": "Returns children instances"
+        "description": "Returns a list of the instance's children."
       },
       "ListInventoryItemsResponse": {
         "type": "object",
@@ -14309,7 +14302,7 @@
             "description": "Present when the task execution succeeds. Contains the output of the\n execution."
           }
         },
-        "description": "A `LuauExecutionSessionTask` (\"task\" for short) executes a given Luau script\n in the context of a specific version of a place.\n\n In a task, physics simulation does not run. Server and local scripts within\n the place also do not automatically run.\n\n The script may access and update the data model of the place, including\n invoking any module scripts. However, data model changes are local to the\n task and cannot be persisted.\n\n The following Engine APIs are disallowed in order to prevent accidental\n modification of production data:\n\n * `Class.AssetService:CreatePlaceAsync()`\n * `Class.AssetService:SavePlaceAsync()`\n * `Class.DataStoreService:GetDataStore()`\n * `Class.DataStoreService:GetGlobalDataStore()`\n * `Class.DataStoreService:GetOrderedDataStore()`\n * `Class.MemoryStoreService:GetHashMap()`\n * `Class.MemoryStoreService:GetQueue()`\n * `Class.MemoryStoreService:GetSortedMap()`\n * `Class.Players:BanAsync()`\n * `Class.Players:UnbanAsync()`\n * `Class.Players:GetBanHistoryAsync()`\n * `Class.HttpService:GetAsync()`\n * `Class.HttpService:PostAsync()`\n * `Class.HttpService:RequestAsync()`\n * `Class.MessagingService:PublishAsync()`\n * `Class.MessagingService:SubscribeAsync()`\n * `Class.DataModel:SavePlace()`\n\n Scripts can be up to 4 MB in size and run for up to 30 seconds. Scripts that\n run for longer than 30 seconds terminate with an error.\n\n Scripts are executed as-is and do not need to be wrapped in a function.\n\n Scripts can return values (using the Luau `return` keyword). Return values\n are serialized to JSON and can be retrieved with the `Get\n LuauExecutionSessionTask` API after the task completes. The total size of the\n return values after JSON serialization must not exceed 4 MB. If the limit is\n exceeded, the task terminates with an error.\n\n If the script raises an unhandled error, the task terminates. The error\n information can be retrieved with the `GetLuauExecutionSessionTask` API.\n\n Standard output (generated by the Luau `print` function) can be retrieved\n with the `ListLuauExecutionSessionTaskLogs` method after the task completes.\n A maximum of 450 KB of logs are retained. If the amount of logs exceeds the\n limit, older logs are discarded.\n\n Information about a task is retained for 24 hours after task completion.\n\n At most two incomplete tasks are allowed per place. Attempting to create a\n third task while the first two are incomplete results in a HTTP 429 response.",
+        "description": "A `LuauExecutionSessionTask` (\"task\" for short) executes a given Luau script\n in the context of a specific version of a place.\n\n In a task, physics simulation does not run. Server and local scripts within\n the place also do not automatically run.\n\n The script may access and update the data model of the place, including\n invoking any module scripts. However, data model changes are local to the\n task and cannot be persisted.\n\n The following Engine APIs are disallowed in order to prevent accidental\n modification of production data:\n\n * `Class.AssetService:CreatePlaceAsync()`\n * `Class.AssetService:SavePlaceAsync()`\n * `Class.DataStoreService:GetDataStore()`\n * `Class.DataStoreService:GetGlobalDataStore()`\n * `Class.DataStoreService:GetOrderedDataStore()`\n * `Class.MemoryStoreService:GetHashMap()`\n * `Class.MemoryStoreService:GetQueue()`\n * `Class.MemoryStoreService:GetSortedMap()`\n * `Class.Players:BanAsync()`\n * `Class.Players:UnbanAsync()`\n * `Class.Players:GetBanHistoryAsync()`\n * `Class.HttpService:GetAsync()`\n * `Class.HttpService:PostAsync()`\n * `Class.HttpService:RequestAsync()`\n * `Class.MessagingService:PublishAsync()`\n * `Class.MessagingService:SubscribeAsync()`\n * `Class.DataModel:SavePlace()`\n\n Scripts can be up to 4 MB in size and run for up to 30 seconds. Scripts that\n run for longer than 30 seconds terminate with an error.\n\n Scripts are executed as-is and do not need to be wrapped in a function.\n\n Scripts can return values (using the Luau `return` keyword). Return values\n are serialized to JSON and can be retrieved with the `Get\n LuauExecutionSessionTask` API after the task completes. The total size of the\n return values after JSON serialization must not exceed 4 MB. If the limit is\n exceeded, the task terminates with an error.\n\n If the script raises an unhandled error, the task terminates. The error\n information can be retrieved with the `GetLuauExecutionSessionTask` API.\n\n Standard output (generated by the Luau `print` function) can be retrieved\n with the `ListLuauExecutionSessionTaskLogs` method after the task completes.\n A maximum of 450 KB of logs are retained. If the amount of logs exceeds the\n limit, older logs are discarded.\n\n Information about a task is retained for 24 hours after task completion.\n\n At most ten incomplete tasks are allowed per place. Attempting to create more\n tasks while the first ten are incomplete results in a HTTP 429 response.",
         "x-resource": true,
         "x-oneOf": {
           "result": [
@@ -14781,7 +14774,7 @@
             "description": "The items read from the queue"
           }
         },
-        "description": "Returns the specified number of items at the front of the queue"
+        "description": "Returns the specified number of items at the front of the queue."
       },
       "RestartUniverseServersRequest": {
         "type": "object",
@@ -14873,7 +14866,7 @@
             }
           }
         },
-        "description": "Returns whether a new snapshot was taken and the time of the latest\n snapshot after the operation (regardless of whether a new snapshot was\n taken).",
+        "description": "Returns whether a new snapshot was taken and the time of the latest snapshot\n after the operation (regardless of whether a new snapshot was taken).",
         "x-oneOf": {
           "NewSnapshotTaken": [
             "newSnapshotTaken"
@@ -15694,7 +15687,7 @@
           "premium": {
             "readOnly": true,
             "type": "boolean",
-            "description": "Whether the user is a premium user.\n\n To access this data, you need an API key / OAuth token with the following\n scope: user.advanced:read",
+            "description": "Whether the user is a premium user.",
             "x-example-values": {
               "exampleValues": [
                 true

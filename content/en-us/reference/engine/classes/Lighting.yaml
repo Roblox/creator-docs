@@ -847,7 +847,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
   - name: Lighting:GetMoonDirection
     summary: |
       Returns a `Datatype.Vector3` representing the direction of the moon from
@@ -877,7 +877,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
   - name: Lighting:GetMoonPhase
     summary: |
       Returns the moon's current phase.
@@ -924,7 +924,7 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
   - name: Lighting:SetMinutesAfterMidnight
     summary: |
       Sets `Class.Lighting.TimeOfDay` and `Class.Lighting.ClockTime` to the

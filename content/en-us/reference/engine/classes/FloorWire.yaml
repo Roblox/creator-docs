@@ -86,7 +86,7 @@ properties:
     description: |
       Sets the texture to be displayed on the FloorWire.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: |
       The FloorWire object has been deprecated and should not be used in new

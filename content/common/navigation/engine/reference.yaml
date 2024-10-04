@@ -4238,6 +4238,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ListDisplayMode.yaml
         ignoreTranslation: true
+      - title: ListenerLocation
+        path: /reference/engine/enums/ListenerLocation
+        type: engineapi
+        source: /reference/engine/enums/ListenerLocation.yaml
+        ignoreTranslation: true
       - title: ListenerType
         path: /reference/engine/enums/ListenerType
         type: engineapi
@@ -5188,6 +5193,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/UIDragDetectorResponseStyle.yaml
         ignoreTranslation: true
+      - title: UIDragSpeedAxisMapping
+        path: /reference/engine/enums/UIDragSpeedAxisMapping
+        type: engineapi
+        source: /reference/engine/enums/UIDragSpeedAxisMapping.yaml
+        ignoreTranslation: true
       - title: UIFlexAlignment
         path: /reference/engine/enums/UIFlexAlignment
         type: engineapi
@@ -5347,6 +5357,11 @@ navigation:
         path: /reference/engine/enums/WeldConstraintPreserve
         type: engineapi
         source: /reference/engine/enums/WeldConstraintPreserve.yaml
+        ignoreTranslation: true
+      - title: WhisperChatPrivacyMode
+        path: /reference/engine/enums/WhisperChatPrivacyMode
+        type: engineapi
+        source: /reference/engine/enums/WhisperChatPrivacyMode.yaml
         ignoreTranslation: true
       - title: WrapLayerAutoSkin
         path: /reference/engine/enums/WrapLayerAutoSkin

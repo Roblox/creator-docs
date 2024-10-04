@@ -58,8 +58,14 @@ properties:
       can_load: false
       can_save: true
   - name: AudioAnalyzer.SpectrumEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Enables usage of `Class.AudioAnalyzer:GetSpectrum|GetSpectrum`.
+    description: |
+      Enables usage of `Class.AudioAnalyzer:GetSpectrum|GetSpectrum()`. If `false`,
+      `Class.AudioAnalyzer:GetSpectrum|GetSpectrum()` returns an empty array, but
+      the CPU overhead of the `Class.AudioAnalyzer` is dramatically reduced.
+      This means that if you are only analyzing the **volume** of an audio
+      stream, you can disable this property to improve performance.
     code_samples: []
     type: bool
     tags: []
@@ -74,8 +80,12 @@ properties:
       can_save: true
 methods:
   - name: AudioAnalyzer:GetConnectedWires
-    summary: ''
-    description: ''
+    summary: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
+    description: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin. `Class.AudioAnalyzer` has one "Input" pin.
     code_samples: []
     parameters:
       - name: pin

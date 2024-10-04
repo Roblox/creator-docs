@@ -34,7 +34,7 @@ properties:
     description: |
       Asset ID of the icon used for the camera button.
     code_samples: []
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

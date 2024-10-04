@@ -23,7 +23,7 @@ properties:
 
       Asset ID for cage mesh.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -76,7 +76,7 @@ properties:
     summary: ''
     description: ''
     code_samples: []
-    type: Content
+    type: ContentId
     tags:
       - NotScriptable
     deprecation_message: ''

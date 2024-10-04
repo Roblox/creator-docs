@@ -161,6 +161,33 @@ By default, there are no limits to 2D motion behind the inherent restrictions of
 </tbody>
 </table>
 
+### Speed Adjustments
+
+Through `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed` and `Class.UIDragDetector.SelectionModeRotateSpeed|SelectionModeRotateSpeed`, you can fine‑tune the maximum drag/rotate speeds for a detector. Furthermore, through `Class.UIDragDetector.UIDragSpeedAxisMapping|UIDragSpeedAxisMapping`, you can fine‑tune the **X**/**Y** dimension dragging speeds, based on the detector's `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed`.
+
+<table>
+<thead>
+  <tr>
+    <th>Property</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>`Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed`</td>
+    <td>Defines the maximum drag speed for translation as a combination of `Datatype.UDim.Scale|Scale` and `Datatype.UDim.Offset|Offset` of the first ancestor `Class.ScreenGui` or `Class.SurfaceGui` the `Class.UIDragDetector` belongs to.</td>
+  </tr>
+  <tr>
+    <td>`Class.UIDragDetector.SelectionModeRotateSpeed|SelectionModeRotateSpeed`</td>
+    <td>Defines the maximum angle per second at which the `Class.UIDragDetector` can rotate.</td>
+  </tr>
+  <tr>
+    <td>`Class.UIDragDetector.UIDragSpeedAxisMapping|UIDragSpeedAxisMapping`</td>
+    <td>Determines the **X**/**Y** dimension dragging speeds, based on the detector's `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed`. The default is `Enum.UIDragSpeedAxisMapping.XY|XY`, meaning the **X** and **Y** axis speeds are based off the **X** and **Y** `Datatype.UDim.Scale|Scale`/`Datatype.UDim.Offset|Offset` values respectively.<br /><br />Alternatives are `Enum.UIDragSpeedAxisMapping|XX` and `Enum.UIDragSpeedAxisMapping|YY`, meaning both the **X** and **Y** axis speeds are based off the **X** (`Enum.UIDragSpeedAxisMapping|XX`) or **Y** (`Enum.UIDragSpeedAxisMapping|YY`) axis for `Datatype.UDim.Scale|Scale`, while the `Datatype.UDim.Offset|Offset` values still apply to their respective axis. For example, if the first ancestor `Class.ScreenGui` is sized 800&times;600 and `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed` is <Typography noWrap>`{0.1, 10}, {0.1, 20}`</Typography>, a setting of `Enum.UIDragSpeedAxisMapping|XX` results in an **X**/**Y** drag speed of `80+10`/`80+20`, while `Enum.UIDragSpeedAxisMapping|YY` results in `60+10`/`60+20` (note the `Datatype.UDim.Offset|Offset` values remain the same in both cases).</td>
+  </tr>
+</tbody>
+</table>
+
 ## Scripting Responses to Clicking and Dragging
 
 Through [event signals](#event-signals), property changes, `Enum.UIDragDetectorDragStyle.Scriptable|Scriptable` drag style, and custom functions, scripts can respond to the manipulation of dragged UI elements to drive various settings or make logical decisions, such as sliders that adjust music and sound effect volume separately.

@@ -704,7 +704,7 @@ properties:
       ```
     code_samples:
       - Sound-Global-Parent
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

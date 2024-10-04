@@ -42,6 +42,30 @@ methods:
     deprecation_message: ''
     security: RobloxScriptSecurity
     thread_safety: Unsafe
+  - name: StartPageService:getLocalGamesFromRegistry
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+  - name: StartPageService:getRecentAPIGamesFromRegistry
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: StartPageService:getStartPageVersionForUser
     summary: ''
     description: ''

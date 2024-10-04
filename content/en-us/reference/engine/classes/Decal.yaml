@@ -178,7 +178,7 @@ properties:
         developers wish to automate this method.
     code_samples:
       - Changing-Decal-Texture
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

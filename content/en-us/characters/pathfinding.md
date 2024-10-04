@@ -21,6 +21,22 @@ With **Pathfinding modifiers** enabled, text labels indicate specific materials 
 
 <img src="../assets/avatar/pathfinding/Navigation-Labels.jpg" width="800" alt="Navigation labels showing on navigation mesh" />
 
+## Known Limitations
+
+Pathfinding features specific limitations to ensure efficient processing and optimal performance.
+
+### Vertical Placement Limit
+
+Pathfinding calculations consider only parts within certain vertical boundaries:
+
+- Lower Boundary &mdash; Parts with a bottom **Y** coordinate less than -65,536 studs are ignored.
+- Upper Boundary &mdash; Parts with a top **Y** coordinate exceeding 65,536 studs are ignored.
+- Vertical Span &mdash; The vertical distance from the lowest part's bottom **Y** coordinate to the highest part's top **Y** coordinate must not exceed 65,536 studs; otherwise, the pathfinding system will ignore those parts during the pathfinding computation.
+
+### Search Distance Limitation
+
+The direct line-of-sight distance for pathfinding from the start to the finish point must not exceed 3,000 studs. Exceeding this distance will result in a `Enum.PathStatus|NoPath` status.
+
 ## Creating Paths
 
 Pathfinding is initiated through `Class.PathfindingService` and its `Class.PathfindingService:CreatePath()|CreatePath()` function.

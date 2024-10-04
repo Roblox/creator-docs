@@ -38,10 +38,10 @@ items:
     deprecation_message: ''
   - name: AlphaBlend
     summary: |
-      Blends pixels from the source with pixels from the destination based on the
-      alpha of the source pixels. Unlike **BlendSourceOver**, the destination color
-      in **AlphaBlend** affects the resulting color of the image, regardless of the
-      destination color's alpha.
+      Blends pixels from the source with pixels from the destination based on
+      the alpha of the source pixels. Unlike **BlendSourceOver**, the
+      destination color in **AlphaBlend** affects the resulting color of the
+      image, regardless of the destination color's alpha.
     value: 5
     tags: []
     deprecation_message: ''

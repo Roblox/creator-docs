@@ -38,7 +38,7 @@ methods:
     code_samples: []
     parameters:
       - name: assetId
-        type: Content
+        type: ContentId
         default:
         summary: |
           The content ID of the animation.
@@ -108,7 +108,7 @@ methods:
         summary: |
           The `Class.AnimationClip` to be used.
     returns:
-      - type: Content
+      - type: ContentId
         summary: |
           A temporary asset ID generated for localized animation playback.
     tags: []
@@ -141,7 +141,7 @@ methods:
         summary: |
           The `Class.AnimationClip` to be used.
     returns:
-      - type: Content
+      - type: ContentId
         summary: |
           A temporary asset ID generated for localized animation playback.
     tags: []
@@ -160,7 +160,7 @@ methods:
     code_samples: []
     parameters:
       - name: assetId
-        type: Content
+        type: ContentId
         default:
         summary: |
           The content ID of the animation.
@@ -205,7 +205,7 @@ methods:
     code_samples: []
     parameters:
       - name: assetId
-        type: Content
+        type: ContentId
         default:
         summary: ''
     returns:

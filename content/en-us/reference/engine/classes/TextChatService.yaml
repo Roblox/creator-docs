@@ -408,6 +408,22 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+  - name: TextChatService.OnChatWindowAdded
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: message
+        type: TextChatMessage
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
   - name: TextChatService.OnIncomingMessage
     summary: |
       Called when `Class.TextChatService` is receiving an incoming message.

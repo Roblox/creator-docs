@@ -44,6 +44,7 @@ GetFollowingsV2 | `GET v2/users/{userId}/universes` | `legacy-universe.following
 :--- | :--- | :---
 GetLocalizedBadgeIcons | `GET v1/badges/{badgeId}/icons` | `legacy-badge:manage`
 DeleteLocalizedBadgeIcon | `DELETE v1/badges/{badgeId}/icons/language-codes/{languageCode}` | `legacy-badge:manage`
+UpdateLocalizedBadgeIcon | `POST v1/badges/{badgeId}/icons/language-codes/{languageCode}` | `legacy-badge:manage`
 GetLocalizedBadgeNamesAndDescriptions | `GET v1/badges/{badgeId}/name-description` | `legacy-badge:manage`
 DeleteLocalizedBadgeNameAndDescription | `DELETE v1/badges/{badgeId}/name-description/language-codes/{languageCode}` | `legacy-badge:manage`
 UpdateLocalizedBadgeNameAndDescription | `PATCH v1/badges/{badgeId}/name-description/language-codes/{languageCode}` | `legacy-badge:manage`
@@ -51,6 +52,7 @@ UpdateLocalizedBadgeName | `PATCH v1/badges/{badgeId}/name/language-codes/{langu
 UpdateLocalizedBadgeDescription | `PATCH v1/badges/{badgeId}/description/language-codes/{languageCode}` | `legacy-badge:manage`
 GetLocalizedDeveloperProductIcons | `GET v1/developer-products/{developerProductId}/icons` | `legacy-developer-product:manage`
 DeleteLocalizedDeveloperProductIcon | `DELETE v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}` | `legacy-developer-product:manage`
+UpdateLocalizedDeveloperProductIcon | `POST v1/developer-products/{developerProductId}/icons/language-codes/{languageCode}` | `legacy-developer-product:manage`
 GetLocalizedDeveloperProductNamesAndDescriptions | `GET v1/developer-products/{developerProductId}/name-description` | `legacy-developer-product:manage`
 DeleteLocalizedDeveloperProductNameAndDescription | `DELETE v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}` | `legacy-developer-product:manage`
 UpdateLocalizedDeveloperProductNameAndDescription | `PATCH v1/developer-products/{developerProductId}/name-description/language-codes/{languageCode}` | `legacy-developer-product:manage`
@@ -58,6 +60,7 @@ UpdateLocalizedDeveloperProductName | `PATCH v1/developer-products/{developerPro
 UpdateLocalizedDeveloperProductDescription | `PATCH v1/developer-products/{developerProductId}/description/language-codes/{languageCode}` | `legacy-developer-product:manage`
 GetLocalizedPassIcons | `GET v1/game-passes/{gamePassId}/icons` | `legacy-game-pass:manage`
 DeleteLocalizedPassIcon | `DELETE v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}` | `legacy-game-pass:manage`
+UpdateLocalizedPassIcon | `POST v1/game-passes/{gamePassId}/icons/language-codes/{languageCode}` | `legacy-game-pass:manage`
 GetLocalizedPassNamesAndDescriptions | `GET v1/game-passes/{gamePassId}/name-description` | `legacy-game-pass:manage`
 DeleteLocalizedPassNameAndDescription | `DELETE v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}` | `legacy-game-pass:manage`
 UpdateLocalizedPassNameAndDescription | `PATCH v1/game-passes/{gamePassId}/name-description/language-codes/{languageCode}` | `legacy-game-pass:manage`

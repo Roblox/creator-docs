@@ -45,7 +45,7 @@ properties:
       `Class.ImageLabel.ImageColor3|ImageColor3` and
       `Class.ImageLabel.ImageTransparency|ImageTransparency`.
     code_samples: []
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

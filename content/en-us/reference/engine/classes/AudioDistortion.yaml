@@ -15,8 +15,10 @@ tags: []
 deprecation_message: ''
 properties:
   - name: AudioDistortion.Bypass
-    summary: ''
-    description: ''
+    summary: |
+      Whether audio streams are passed-through unaffected by this effect.
+    description: |
+      If `true`, audio streams are passed-through unaffected by this effect.
     code_samples: []
     type: bool
     tags: []
@@ -48,8 +50,12 @@ properties:
       can_save: true
 methods:
   - name: AudioDistortion:GetConnectedWires
-    summary: ''
-    description: ''
+    summary: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
+    description: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin. `Class.AudioDistortion` has one "Input" pin and one "Output" pin.
     code_samples: []
     parameters:
       - name: pin

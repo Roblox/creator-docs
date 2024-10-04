@@ -648,7 +648,7 @@ methods:
       - batch-convert-decal-web-urls-to-image-content-ids
     parameters:
       - name: url
-        type: Content
+        type: ContentId
         default:
         summary: |
           The given content URL.

@@ -15,6 +15,10 @@ Once your experience begins tracking Funnel events, you'll unlock the Funnel pag
 
 To track funnel events, first identify the most important funnels in your experience and segment them into steps. Your onboarding flow is a great place to start, as this is where you may be losing most of your users.
 
+<Alert severity ='warning'>
+Events can only be sent from the server and in published experiences. Events can't be sent from the client or Studio.
+</Alert>
+
 ### Tracking One-Time Funnels
 
 A one-time funnel monitors conversion events that only occur once per user.

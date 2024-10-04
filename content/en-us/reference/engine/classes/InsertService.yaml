@@ -139,7 +139,7 @@ methods:
     code_samples:
     parameters:
       - name: meshId
-        type: Content
+        type: ContentId
         default:
         summary: |
           Mesh asset ID.

@@ -221,27 +221,30 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   </tr>
   <tr>
     <td>Perform/Scene/computeLightingPerform/LightGridCPU</td>
-    <td>Updates the voxel lighting. Lights are only rendered in Voxel Lighting mode, but occupancy and sky light are computed in all lighting modes.</td>
-    <td>If updating chunk occupancy takes too long, consider using lower resolution geometry, or reducing the number of parts. If the other sub-markers take too long, consider reducing the number of lights. Consider using non-shadow casting geometry for objects that move and invalidate the occupancy.</td>
+    <td>Updates the voxel lighting, which is used in `Enum.Technology|Voxel` and `Enum.Technology|ShadowMap` modes and at quality levels below 4 in `Enum.Technology|Future` mode.</td>
+    <td>If updating chunk occupancy takes too long, consider using lower resolution geometry, reducing the number of parts, or anchoring parts. If the other sub-markers take too long, consider reducing the number of lights and using non-shadow casting geometry for objects that move and invalidate the occupancy.</td>
   </tr>
-{/*
   <tr>
     <td>Perform/Scene/computeLightingPerform/ShadowMapSystem</td>
-    <td>-- TODO</td>
-    <td>-- TODO</td>
+    <td>Updates shadow maps. Not performed at quality levels below 4 or when `Class.Lighting.Technology` is set to `Enum.Technology|Voxel`.</td>
+    <td>If lighting is set to `Enum.Technology|Future`, lower it to `Enum.Technology|ShadowMap` or reduce the number of lights. You can also use `Class.Light.Shadows` and `Class.BasePart.CastShadows` to disable shadow casting on less important instances. See [Improving Performance](../../performance-optimization/improving.md#mitigation-4).</td>
   </tr>
-*/}
   <tr>
   </tr>
   <tr>
     <td>Perform/Scene/Glow, ColorCorrection, MSAA, SSAO, and SSAOApply</td>
     <td>Post-processing rendering.</td>
-    <td>Reduce the number of post-processing effects, usually this is not significant.</td>
+    <td>Reduce the number of post-processing effects. Usually this is not significant.</td>
   </tr>
   <tr>
     <td>Perform/Scene/UI</td>
     <td>UI rendering. In Id_Screen, there is a label with the number of batches, materials and triangles used.</td>
     <td>Reduce the number of visible UI elements. Using `CanvasGroups` may help at the expense of increased memory use.</td>
+  </tr>
+  <tr>
+    <td>Perform/Scene/UpdateView/updateParticles, updateParticleBoundings</td>
+    <td>Update particle position and bounds.</td>
+    <td>Reduce the number of `Class.ParticleEmitter|ParticleEmitters`, emission rates, lifetimes, etc. Limit the movement of emitters.</td>
   </tr>
   <tr>
     <td>Id_Opaque</td>

@@ -5,7 +5,8 @@ memory_category: Instances
 summary: |
   Instance which allows for the runtime creation and manipulation of images.
 description: |
-  `Class.EditableImage` allows for the runtime creation and manipulation of images. 
+  `Class.EditableImage` allows for the runtime creation and manipulation of
+  images.
 
   To create a blank `Class.EditableImage`, use `Datatype.Instance.new()`. To
   create an `Class.EditableImage` from an existing image, use
@@ -185,8 +186,8 @@ methods:
         type: ImageCombineType
         default:
         summary: |
-          How the pixels of the source image are blended with the pixels
-          of the added image.
+          How the pixels of the source image are blended with the pixels of the
+          added image.
     returns:
       - type: void
         summary: ''
@@ -260,8 +261,8 @@ methods:
         type: ImageCombineType
         default:
         summary: |
-          How the pixels of the source image are blended with the pixels
-          of the added image.
+          How the pixels of the source image are blended with the pixels of the
+          added image.
     returns:
       - type: void
         summary: ''
@@ -327,8 +328,8 @@ methods:
         type: ImageCombineType
         default:
         summary: |
-          How the pixels of the source image are blended with the pixels
-          of the added image.
+          How the pixels of the source image are blended with the pixels of the
+          added image.
     returns:
       - type: void
         summary: ''
@@ -372,13 +373,12 @@ methods:
     summary: |
       Reads a rectangular region of pixels.
     description: |
-      Reads a rectangular region of pixels. The pixels are returned as a
-      flat array where each pixel is represented by four numbers between 0 and 1
-      (red, green, blue, and alpha respectively). 
+      Reads a rectangular region of pixels. The pixels are returned as a flat
+      array where each pixel is represented by four numbers between `0` and `1`
+      (red, green, blue, and alpha respectively).
 
-      Note that this method uses
-      alpha instead of transparency, unlike the `Class.EditableImage` drawing
-      methods.
+      Note that this method uses alpha instead of transparency, unlike the
+      `Class.EditableImage` drawing methods.
     code_samples:
       - EditableImage-ReadPixels1
     parameters:
@@ -411,7 +411,7 @@ methods:
       a buffer instead of a table. Each number in the buffer is a single byte,
       while each number in the table is 4 bytes, making
       `Class.EditableImage:ReadPixelsBuffer()|ReadPixelsBuffer()` more
-      memory-efficient than `Class.EditableImage:ReadPixels()|ReadPixels()`. 
+      memory-efficient than `Class.EditableImage:ReadPixels()|ReadPixels()`.
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
@@ -529,7 +529,7 @@ methods:
       a buffer instead of a table. Each number in the buffer is a single byte,
       while each number in the table is 4 bytes, making
       `Class.EditableImage:WritePixelsBuffer()|WritePixelsBuffer()` more
-      memory-efficient than `Class.EditableImage:WritePixels()|WritePixels()`. 
+      memory-efficient than `Class.EditableImage:WritePixels()|WritePixels()`.
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.

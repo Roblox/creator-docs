@@ -90,7 +90,7 @@ properties:
       ScrollBarThickness by ScrollBarThickness. This is also used as the image
       on the horizontal scroll bar.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -188,7 +188,7 @@ properties:
       `Class.ScrollingFrame.ScrollBarThickness` in the x direction. This is also
       used as the middle image on the horizontal scroll bar.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -306,7 +306,7 @@ properties:
       ScrollBarThickness by ScrollBarThickness. This is also used as the left
       image on the horizontal scroll bar.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

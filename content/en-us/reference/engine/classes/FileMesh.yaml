@@ -47,7 +47,7 @@ properties:
       [Meshes](../../../parts/meshes.md).
     code_samples:
       - Mesh-VertexColor
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -89,7 +89,7 @@ properties:
       [1]: https://www.blender.org/
     code_samples:
       - Mesh-VertexColor
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

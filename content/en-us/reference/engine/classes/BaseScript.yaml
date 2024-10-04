@@ -105,7 +105,7 @@ properties:
       For the LinkedSource property for `Class.ModuleScript|ModuleScripts`,
       please see `Class.ModuleScript.LinkedSource`.
     code_samples:
-    type: Content
+    type: ContentId
     tags:
       - Deprecated
     deprecation_message: |

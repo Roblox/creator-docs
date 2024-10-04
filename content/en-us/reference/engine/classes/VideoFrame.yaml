@@ -164,7 +164,7 @@ properties:
       with.
     code_samples:
       - creating-and-playing-a-video
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

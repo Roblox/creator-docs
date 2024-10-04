@@ -27,7 +27,7 @@ properties:
       If this property is left blank, the `Class.Backpack` GUI will display the
       name of the tool instead.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

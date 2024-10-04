@@ -110,7 +110,7 @@ properties:
     description: |
       The id of the asset this package corresponds to.
     code_samples:
-    type: Content
+    type: ContentId
     tags:
       - ReadOnly
       - NotReplicated

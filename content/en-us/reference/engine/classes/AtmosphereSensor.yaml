@@ -11,8 +11,10 @@ tags: []
 deprecation_message: ''
 properties:
   - name: AtmosphereSensor.AirDensity
-    summary: ''
-    description: ''
+    summary: |
+      Measures the density of the air where the sensor is positioned.
+    description: |
+      Measures the density of the air where the sensor is positioned.
     code_samples: []
     type: float
     tags:
@@ -28,8 +30,10 @@ properties:
       can_load: false
       can_save: true
   - name: AtmosphereSensor.RelativeWindVelocity
-    summary: ''
-    description: ''
+    summary: |
+      Reports the wind velocity relative to the sensor.
+    description: |
+      Reports the wind velocity relative to the sensor.
     code_samples: []
     type: Vector3
     tags:

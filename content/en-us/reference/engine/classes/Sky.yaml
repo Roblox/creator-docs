@@ -66,7 +66,7 @@ properties:
     description: |
       The texture of the moon while using this skybox.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -83,7 +83,7 @@ properties:
     description: |
       The URL link to a picture for the back surface of the sky.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -100,7 +100,7 @@ properties:
     description: |
       Asset ID for the bottom surface of the skybox.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -117,7 +117,7 @@ properties:
     description: |
       Asset ID for the front surface of the skybox.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -134,7 +134,7 @@ properties:
     description: |
       Asset ID for the left surface of the skybox.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -151,7 +151,7 @@ properties:
     description: |
       Asset ID for the right surface of the skybox.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -168,7 +168,7 @@ properties:
     description: |
       Asset ID for the top surface of the skybox.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -220,7 +220,7 @@ properties:
     description: |
       The texture of the sun while using this skybox.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

@@ -22,13 +22,12 @@ description: |
 
   #### Stable Vertex/Face IDs
 
-  Many `Class.EditableMesh` methods take **vertex**, **normal**, **UV**, **color** 
-  and **face** IDs. These are
-  represented as integers in Luau but they require some special handling. The
-  main difference is that IDs are stable and they remain the same even if other
-  parts of the mesh change. For example, if an `Class.EditableMesh` has five
-  vertices `{1, 2, 3, 4, 5}` and you remove vertex `4`, the new vertices will be
-  `{1, 2, 3, 5}`.
+  Many `Class.EditableMesh` methods take **vertex**, **normal**, **UV**,
+  **color** and **face** IDs. These are represented as integers in Luau but they
+  require some special handling. The main difference is that IDs are stable and
+  they remain the same even if other parts of the mesh change. For example, if
+  an `Class.EditableMesh` has five vertices `{1, 2, 3, 4, 5}` and you remove
+  vertex `4`, the new vertices will be `{1, 2, 3, 5}`.
 
   Note that the IDs are not guaranteed to be in order and there may be holes in
   the numbering, so when iterating through vertices or faces, you should iterate
@@ -37,38 +36,38 @@ description: |
 
   #### Split Vertex Attributes
 
-  A **vertex** is a corner of a face, and topologically connects faces together. 
-  Vertices can have several attributes: position, normal, UV coordinate, color, 
+  A **vertex** is a corner of a face, and topologically connects faces together.
+  Vertices can have several attributes: position, normal, UV coordinate, color,
   and transparency.
 
-  Sometimes it's useful for all faces that touch a vertex to use the same 
-  attribute values, but sometimes you'll want different faces to use different 
+  Sometimes it's useful for all faces that touch a vertex to use the same
+  attribute values, but sometimes you'll want different faces to use different
   attribute values on the same vertex. For example, on a smooth sphere, each
-  vertex will only have a single normal. In contrast, at the corner of a cube, the
-  vertex will have 3 different normals (one for each adjacent face). You can
+  vertex will only have a single normal. In contrast, at the corner of a cube,
+  the vertex will have 3 different normals (one for each adjacent face). You can
   also have seams in the UV coordinates or sharp changes in the vertex colors.
 
   When creating faces, every vertex will by default have one of each attribute:
   one normal, one UV coordinate, and one color/transparency. If you want to
-  create a seam, you should create new attributes and set them on the face.
-  For example, this code will create a sharp cube:
+  create a seam, you should create new attributes and set them on the face. For
+  example, this code will create a sharp cube:
 
   ```lua
   -- Given 4 vertex IDs, adds a new normal and 2 triangles, making a sharp quad
   local function addSharpQuad(eMesh, vid0, vid1, vid2, vid3)
   	local nid = eMesh:AddNormal()  -- This creates a normal ID which is automatically computed
-  
+
   	local fid1 = eMesh:AddTriangle(vid0, vid1, vid2)
   	eMesh:SetFaceNormals(fid1, {nid, nid, nid})
-    
+
   	local fid2 = eMesh:AddTriangle(vid0, vid2, vid3)
   	eMesh:SetFaceNormals(fid2, {nid, nid, nid})
   end
-  
+
   -- Makes a cube with creased edges between the 6 sides
   local function makeSharpCube()
   	local eMesh = Instance.new("EditableMesh")
-  
+
   	local v1 = eMesh:AddVertex(Vector3.new(0, 0, 0))
   	local v2 = eMesh:AddVertex(Vector3.new(1, 0, 0))
   	local v3 = eMesh:AddVertex(Vector3.new(0, 1, 0))
@@ -77,14 +76,14 @@ description: |
   	local v6 = eMesh:AddVertex(Vector3.new(1, 0, 1))
   	local v7 = eMesh:AddVertex(Vector3.new(0, 1, 1))
   	local v8 = eMesh:AddVertex(Vector3.new(1, 1, 1))
-  
+
   	addSharpQuad(eMesh, v5, v6, v8, v7)  -- Front
   	addSharpQuad(eMesh, v1, v3, v4, v2)  -- Back
   	addSharpQuad(eMesh, v1, v5, v7, v3)  -- Left
   	addSharpQuad(eMesh, v2, v4, v8, v6)  -- Right
   	addSharpQuad(eMesh, v1, v2, v6, v5)  -- Bottom
   	addSharpQuad(eMesh, v3, v7, v8, v4)  -- Top
-  
+
   	eMesh:RemoveUnused()
   	return eMesh
   end
@@ -158,15 +157,16 @@ methods:
     summary: |
       Adds a new normal to the geometry and returns a stable normal ID.
     description: |
-      Adds a new normal to the geometry and returns a stable normal ID. If the normal value isn't specified,
-      the normal will be automatically calculated.
+      Adds a new normal to the geometry and returns a stable normal ID. If the
+      normal value isn't specified, the normal will be automatically calculated.
     code_samples: []
     parameters:
       - name: normal
         type: Vector3?
         default:
         summary: |
-          The normal vector. If the normal value isn't specified, the normal will be automatically calculated.
+          The normal vector. If the normal value isn't specified, the normal
+          will be automatically calculated.
     returns:
       - type: int64
         summary: |
@@ -248,9 +248,9 @@ methods:
     summary: |
       Finds the closest point on the mesh's surface.
     description: |
-      Finds the closest point on the mesh's surface. Returns the face ID,
-      point on the mesh in local object space, and the barycentric coordinate of
-      the position within the face. See
+      Finds the closest point on the mesh's surface. Returns the face ID, point
+      on the mesh in local object space, and the barycentric coordinate of the
+      position within the face. See
       `Class.EditableMesh:RaycastLocal()|RaycastLocal()` for more information on
       barycentric coordinates.
     code_samples: []
@@ -263,8 +263,8 @@ methods:
     returns:
       - type: Tuple
         summary: |
-          Tuple of the face ID, point on the mesh in local object space, and
-          the barycentric coordinate of the position within the face.
+          Tuple of the face ID, point on the mesh in local object space, and the
+          barycentric coordinate of the position within the face.
     tags: []
     deprecation_message: ''
     security: None
@@ -536,7 +536,8 @@ methods:
     summary: |
       Returns a list of faces that use a given attribute ID.
     description: |
-      Returns a list of faces that use a given vertex ID, normal ID, UV ID, or color ID.
+      Returns a list of faces that use a given vertex ID, normal ID, UV ID, or
+      color ID.
     code_samples: []
     parameters:
       - name: id
@@ -763,7 +764,8 @@ methods:
     summary: |
       Returns a list of vertices that use a given attribute ID.
     description: |
-      Returns a list of vertices that use a given face ID, normal ID, UV ID, or color ID.
+      Returns a list of vertices that use a given face ID, normal ID, UV ID, or
+      color ID.
     code_samples: []
     parameters:
       - name: id
@@ -783,8 +785,8 @@ methods:
     summary: |
       Returns a string describing a stable ID, useful for debugging purposes.
     description: |
-      Returns a string describing a stable ID, useful for debugging purposes, like `f17` or `v12`,
-      containing the type, ID number, and version.
+      Returns a string describing a stable ID, useful for debugging purposes,
+      like `f17` or `v12`, containing the type, ID number, and version.
     code_samples: []
     parameters:
       - name: id
@@ -804,7 +806,8 @@ methods:
     summary: |
       Merges vertices that touch together.
     description: |
-      Merges vertices that touch together, to use a single vertex ID but keep the other original attribute IDs.
+      Merges vertices that touch together, to use a single vertex ID but keep
+      the other original attribute IDs.
     code_samples: []
     parameters:
       - name: mergeTolerance
@@ -815,7 +818,8 @@ methods:
     returns:
       - type: Map
         summary: |
-          A mapping of old vertex ID to new vertex ID for vertices that have been merged.
+          A mapping of old vertex ID to new vertex ID for vertices that have
+          been merged.
     tags: []
     deprecation_message: ''
     security: None
@@ -823,14 +827,14 @@ methods:
   - name: EditableMesh:RaycastLocal
     summary: ''
     description: |
-      Casts a ray and returns a point of intersection, face ID, and
-      barycentric coordinates. The inputs and outputs of this method are in the
-      mesh's local object space.
+      Casts a ray and returns a point of intersection, face ID, and barycentric
+      coordinates. The inputs and outputs of this method are in the mesh's local
+      object space.
 
-      A **barycentric coordinate** is a way of specifying a point within a
-      face as a weighted combination of the 3 vertices of the face. This
-      is useful as a general way of blending vertex attributes. See this
-      method's code sample as an illustration.
+      A **barycentric coordinate** is a way of specifying a point within a face
+      as a weighted combination of the 3 vertices of the face. This is useful as
+      a general way of blending vertex attributes. See this method's code sample
+      as an illustration.
     code_samples:
       - EditableMesh-RaycastLocal
     parameters:
@@ -893,9 +897,11 @@ methods:
     thread_safety: Unsafe
   - name: EditableMesh:RemoveUnused
     summary: |
-      Removes all unused vertices, normals, UVs, and colors, and returns the removed IDs.
-    description: 
-      Removes all vertices, normals, UVs, and colors which are not used in any face, and returns the removed IDs.
+      Removes all unused vertices, normals, UVs, and colors, and returns the
+      removed IDs.
+    description: |
+      Removes all vertices, normals, UVs, and colors which are not used in any
+      face, and returns the removed IDs.
     code_samples: []
     parameters: []
     returns:
@@ -930,7 +936,8 @@ methods:
     summary: |
       Reset this normal ID to be automatically calculated.
     description: |
-      Reset this normal ID to be automatically calculated based on the shape of the mesh, instead of manually set.
+      Reset this normal ID to be automatically calculated based on the shape of
+      the mesh, instead of manually set.
     code_samples: []
     parameters:
       - name: normalId
@@ -1097,7 +1104,8 @@ methods:
     summary: |
       Set the normal for a normal ID.
     description: |
-      Set the normal for a normal ID. This will change the normal value for every face vertex which is using the normal ID.
+      Set the normal for a normal ID. This will change the normal value for
+      every face vertex which is using the normal ID.
     code_samples: []
     parameters:
       - name: normalId
@@ -1244,8 +1252,9 @@ methods:
     summary: |
       Splits all faces on the mesh to be triangles.
     description: |
-      Splits all faces on the mesh to be triangles. Currently this does nothing since only triangles can be
-      created, but if your code relies on triangles, it's recommended that you call this method after calling
+      Splits all faces on the mesh to be triangles. Currently this does nothing
+      since only triangles can be created, but if your code relies on triangles,
+      it's recommended that you call this method after calling
       `Class.AssetService:CreateEditableMeshAsync()`.
     code_samples: []
     parameters: []

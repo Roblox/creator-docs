@@ -9,11 +9,12 @@ description: |
   A `UIListLayout` positions sibling UI elements in rows or columns within the
   parent UI container, based on the
   `Class.UIListLayout.FillDirection|FillDirection`. The
-  `Class.GuiObject.Position|Position` property of each sibling `Class.GuiObject`
-  is ignored and overridden by the list layout, while each sibling retains its
-  defined `Class.GuiObject.Size|Size` unless the layout is configured to utilize
-  a flex layout. See [List and Flex Layouts](../../../ui/list-flex-layouts.md)
-  for further information.
+  `Class.GuiObject.Position|Position` and `Class.GuiObject.Rotation|Rotation`
+  properties of each sibling `Class.GuiObject` are either ignored or overridden
+  by the list layout, while each sibling retains its defined
+  `Class.GuiObject.Size|Size` unless the layout is configured to utilize a flex
+  layout. See [List and Flex Layouts](../../../ui/list-flex-layouts.md) for
+  further information.
 
   <img src="../../../assets/engine-api/classes/UIListLayout/FillDirection.png"
   width="720" alt="UIListLayouts illustrating FillDirection of either horizontal

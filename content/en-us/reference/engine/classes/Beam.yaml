@@ -367,7 +367,7 @@ properties:
       `Class.Beam.TextureLength|TextureLength`, `Class.Beam.Width0|Width0`, and
       `Class.Beam.Width1|Width1` properties.
     code_samples:
-    type: Content
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:

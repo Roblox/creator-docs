@@ -27,11 +27,6 @@ description: |
   <td>The user ID of the friend.</td>
   </tr>
   <tr>
-  <td><code>IsOnline</code></td>
-  <td>boolean</td>
-  <td>Whether the user is currently online.</td>
-  </tr>
-  <tr>
   <td><code>Username</code></td>
   <td>string</td>
   <td>The username of the friend.</td>

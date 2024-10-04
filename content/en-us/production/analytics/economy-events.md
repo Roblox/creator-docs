@@ -15,6 +15,10 @@ Once your experience begins tracking Economy events, you'll unlock the Economy p
 
 To unlock the Economy dashboard, you need to track some economy events in your experience. Start by identifying where users **source** (i.e. gain) and **sink** (i.e. spend) resources in your experience. These are represented in code by `Enum.AnalyticsEconomyFlowType`, which can be either `Source` or `Sink`.
 
+<Alert severity ='warning'>
+Events can only be sent from the server and in published experiences. Events can't be sent from the client or Studio.
+</Alert>
+
 ### Transaction Types
 
 Each source and sink event requires a transaction type, encoded with `Enum.AnalyticsEconomyTransactionType`. By default, the options are:

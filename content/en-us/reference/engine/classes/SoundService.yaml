@@ -83,6 +83,21 @@ properties:
     serialization:
       can_load: true
       can_save: true
+  - name: SoundService.DefaultListenerLocation
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ListenerLocation
+    tags: []
+    deprecation_message: ''
+    security:
+      read: PluginSecurity
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
   - name: SoundService.DistanceFactor
     summary: |
       The number of studs to be considered a meter by `Class.SoundService` when
@@ -244,6 +259,18 @@ properties:
       can_load: true
       can_save: true
 methods:
+  - name: SoundService:GetAudioInstances
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
   - name: SoundService:GetListener
     summary: |
       GetListener returns the current `Class.SoundService` listener type and
