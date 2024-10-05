@@ -302,7 +302,7 @@ local function deepCopy(original)
 		-- then deep copy it to the key (index).
 		-- Else (or) the type isn't a table,
 		-- assign the default value to the index instead.
-		copy[key] = type(value) == "table" and MY_deepCopy(value) or value
+		copy[key] = type(value) == "table" and deepCopy(value) or value
 	end
 	
 	-- Return the finalized copy of the deep cloned table
