@@ -299,5 +299,3 @@ local function GetChildrenOfClass(parent: Instance, className: string): {Instanc
   return children
 end
 ```
-
-
