@@ -43,6 +43,10 @@ To use scripting, you need a developer product ID. To get the product ID:
 
 ## Selling Developer Products
 
+<Alert severity="info">
+If you're using [price optimization](./price-optimization.md), make sure to place the script inside a `Class.LocalScript` so that users see personalized product prices.
+</Alert>
+
 To implement and sell a developer product inside an experience, call `Class.MarketplaceService|MarketplaceService` functions.
 
 Use `Class.MarketplaceService:GetProductInfo()|GetProductInfo()` to retrieve information about a developer product, like name and price, and then to display that product to users. You can sell the product inside your experience's marketplace, for example. For developer products, the second parameter must be `Enum.InfoType.Product`.
@@ -200,6 +204,8 @@ MarketplaceService.ProcessReceipt = processReceipt
 
 <Alert severity="info">
 The `receiptInfo` table passed to the `Class.MarketplaceService.ProcessReceipt()|ProcessReceipt()` callback function contains detailed information about the purchase, like the ID of the purchased product, the user who made the purchase, and the currency they used.
+
+`receiptInfo` also contains the exact Robux amount the user paid for the product, even if you're running a [price optimization test](./price-optimization.md) and showing different users different prices.
 </Alert>
 
 <Alert severity="warning">

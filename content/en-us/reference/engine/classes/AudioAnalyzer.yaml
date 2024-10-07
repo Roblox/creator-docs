@@ -61,11 +61,11 @@ properties:
     summary: |
       Enables usage of `Class.AudioAnalyzer:GetSpectrum|GetSpectrum`.
     description: |
-      Enables usage of `Class.AudioAnalyzer:GetSpectrum|GetSpectrum()`. If `false`,
-      `Class.AudioAnalyzer:GetSpectrum|GetSpectrum()` returns an empty array, but
-      the CPU overhead of the `Class.AudioAnalyzer` is dramatically reduced.
-      This means that if you are only analyzing the **volume** of an audio
-      stream, you can disable this property to improve performance.
+      Enables usage of `Class.AudioAnalyzer:GetSpectrum|GetSpectrum()`. If
+      `false`, `Class.AudioAnalyzer:GetSpectrum|GetSpectrum()` returns an empty
+      array, but the CPU overhead of the `Class.AudioAnalyzer` is dramatically
+      reduced. This means that if you are only analyzing the **volume** of an
+      audio stream, you can disable this property to improve performance.
     code_samples: []
     type: bool
     tags: []

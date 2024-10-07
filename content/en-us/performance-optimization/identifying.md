@@ -109,4 +109,17 @@ A significant portion of an experience's memory consumption on the client are fr
 
 ## Load Times
 
-There are no built-in tools for checking load times, but because they don't require millisecond-level precision, a stopwatch is usually all you need to understand your current baseline and check whether you made a substantive improvement.
+There are no built-in tools for checking load times, but because they don't require millisecond-level precision, a stopwatch is usually all you need to understand your current baseline and check whether you made a substantive improvement. You can use a client script in `Class.ReplicatedFirst` to get some sense of how your changes impact load times, but this script doesn't provide a complete, end-to-end measurement:
+
+```lua
+local startTime = os.clock()
+
+game.Loaded:Connect(function()
+  local loadTime = os.clock() - startTime
+  local roundedLoadTime = math.round(loadTime * 10000) / 10000 -- four decimal places
+  print("Game loaded in " .. roundedLoadTime .. " seconds.")
+  print("Number of instances loaded: " .. #game.Workspace:GetDescendants())
+end)
+```
+
+For additional insight, enable **Studio Settings** > **Network** > **Print Join Size Breakdown**, which prints the top 20 instances by size and a percentage breakdown by instance type when you start the experience in Studio.

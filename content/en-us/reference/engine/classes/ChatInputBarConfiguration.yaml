@@ -5,8 +5,9 @@ memory_category: Instances
 summary: |
   Configures properties of the default chat input bar.
 description: |
-  Configures properties of the default text chat input bar. It is parented to
-  `Class.TextChatService`.
+  Configures properties of the default chat input bar.
+
+  It is parented to `Class.TextChatService`.
 code_samples: []
 inherits:
   - TextChatConfigurations
@@ -16,7 +17,8 @@ deprecation_message: ''
 properties:
   - name: ChatInputBarConfiguration.AbsolutePosition
     summary: |
-      Actual screen position of the default chat input bar in pixels.
+      Describes the actual screen position of the default chat input bar in
+      pixels.
     description: |
       Read-only property that provides the screen position of the default chat
       input bar in pixels. Behaves similarly to
@@ -37,7 +39,7 @@ properties:
       can_save: false
   - name: ChatInputBarConfiguration.AbsoluteSize
     summary: |
-      Actual screen size of the default chat input bar in pixels.
+      Describes the actual screen size of the default chat input bar in pixels.
     description: |
       Read-only property that provides the screen size of the default chat input
       bar in pixels. Behaves similarly to `Class.GuiBase2d.AbsoluteSize`.
@@ -57,10 +59,10 @@ properties:
       can_save: false
   - name: ChatInputBarConfiguration.AutocompleteEnabled
     summary: |
-      Whether to enable autocomplete for the chat input bar.
+      Determines whether to enable autocomplete for the chat input bar.
     description: |
-      Whether to enable autocomplete for the chat input bar. Set to `false` to
-      disable autocomplete.
+      Determines whether to enable autocomplete for the chat input bar. Set to
+      false to disable autocomplete.
     code_samples: []
     type: bool
     tags: []
@@ -75,10 +77,10 @@ properties:
       can_save: true
   - name: ChatInputBarConfiguration.BackgroundColor3
     summary: |
-      Background color of the default chat input bar.
+      Determines the background color of the default chat input bar.
     description: |
-      Background color of the default chat input bar. Default value is
-      `Datatype.Color3|Color3.new(25, 27, 29)`.
+      Determines the background color of the default chat input bar. Default
+      value is `Datatype.Color3|Color3.new(25,27,29)`.
     code_samples: []
     type: Color3
     tags: []
@@ -93,13 +95,13 @@ properties:
       can_save: true
   - name: ChatInputBarConfiguration.BackgroundTransparency
     summary: |
-      Background transparency of the default chat input bar.
+      Determines the background transparency of the default chat input bar.
     description: |
-      Background transparency of the default chat input bar as a number between
-      `0` and `1`. This value is multiplied with the user's
+      Determines the background transparency of the default chat input bar as a
+      number between 0 and 1. This value is multiplied with the user's
       `Class.GuiService.PreferredTransparency` to create the effective
       background transparency used by the chat input bar, which may be more
-      opaque than this value set here. Default value is `0.2`.
+      opaque than this value set here. Default value is 0.2.
     code_samples: []
     type: double
     tags: []
@@ -114,9 +116,11 @@ properties:
       can_save: true
   - name: ChatInputBarConfiguration.Enabled
     summary: |
-      Whether to show the default chat input bar.
+      Determines whether to show the default chat input bar.
     description: |
-      Whether to show the default chat input bar. Set to `false` to hide.
+      Determines whether to show the default chat input bar.
+
+      Set to false to hide the default chat input bar.
     code_samples: []
     type: bool
     tags: []
@@ -131,9 +135,9 @@ properties:
       can_save: true
   - name: ChatInputBarConfiguration.FontFace
     summary: |
-      Font used to render text in the default chat input bar.
+      Determines the font used to render text in the default chat input bar.
     description: |
-      Font used to render text in the default chat input bar. Default is `Enum.Font.BuilderSansMedium`.
+      Determines the font used to render text in the default chat input bar.
     code_samples: []
     type: Font
     tags: []
@@ -148,7 +152,7 @@ properties:
       can_save: true
   - name: ChatInputBarConfiguration.IsFocused
     summary: |
-      Whether the default chat input bar is focused or not.
+      Describes if the default chat input bar is focused or not.
     description: |
       Indicates whether the default chat input bar is focused or not. Useful for
       firing property changed events so you can implement callback functions
@@ -170,12 +174,12 @@ properties:
       can_save: false
   - name: ChatInputBarConfiguration.KeyboardKeyCode
     summary: |
-      Additional key users can press to trigger focusing on the default chat
-      input bar.
+      Determines an additional key users can press to trigger focusing on the
+      default chat input bar.
     description: |
-      Additional key users can press to trigger focusing on the default chat
-      input bar. Useful when you want to have an extra hotkey for focusing in
-      addition to the <kbd>/</kbd> key.
+      Determines an additional key users can press to trigger focusing on the
+      default chat input bar. Useful when you want to have an extra hotkey for
+      focusing in addition to the "/" key.
     code_samples: []
     type: KeyCode
     tags: []
@@ -190,10 +194,12 @@ properties:
       can_save: true
   - name: ChatInputBarConfiguration.PlaceholderColor3
     summary: |
-      Color of the text of the placeholder text in the default chat input bar.
+      Determines the color of the text of the placeholder text in the default
+      chat input bar.
     description: |
-      Color of the text of the placeholder text in the default chat input bar.
-      Default value is `Datatype.Color3|Color3.new(178, 178, 178)`.
+      Determines the color of the text of the placeholder text in the default
+      chat input bar. Default value is
+      `Datatype.Color3|Color3.new(178, 178, 178)`.
     code_samples: []
     type: Color3
     tags: []
@@ -210,6 +216,8 @@ properties:
     summary: |
       A reference to the target `Class.TextChannel`.
     description: |
+      A reference to the target `Class.TextChannel`.
+
       Determines which `Class.TextChannel` to use when the user sends a message
       with the default chat input bar.
     code_samples: []
@@ -226,27 +234,28 @@ properties:
       can_save: true
   - name: ChatInputBarConfiguration.TextBox
     summary: |
-      Reference to a designated `Class.TextBox` instance that sends messages on
-      behalf of the user.
+      A reference to a designated `Class.TextBox` Instance that sends messages
+      on behalf of the user. This property only accepts TextBox instances.
     description: |
-      Reference to a designated `Class.TextBox` instance that sends messages on
-      behalf of the user. You can use it to further integrate your custom chat
-      input bar UI into your experience by freely manipulating appearance,
-      location, and layout. When opting to set this property to a custom
-      `Class.TextBox`, you don't need to write any code for the following
-      behavior:
+      A reference to a designated `Class.TextBox` Instance that sends messages
+      on behalf of the user. This property only accepts TextBox instances.
+
+      You can use it to further integrate your custom chat input bar UI into
+      your experience by freely manipulating appearance, location, and layout.
+      When opting to set this property to a custom TextBox, you don't need to
+      write any code for the following behavior:
 
       - When a user types a message and presses `Enum.KeyCode.Return`, the
         message will be sent to
         `Class.ChatInputBarConfiguration.TargetTextChannel`.
       - When a message is sent, `Class.TextBox.Text` will automatically clear.
 
-      For security, some limitations are imposed on the `Class.TextBox` when it
-      is promoted to `Class.ChatInputBarConfiguration.TextBox`. Lua code will
-      not be able to:
+      For security, some limitations are imposed on the TextBox when it is
+      promoted to `Class.ChatInputBarConfiguration.TextBox`. Lua code will not
+      be able to:
 
       - Change the `Class.TextBox.Text` property.
-      - Use the `Class.TextBox:CaptureFocus()` or `Class.TextBox:ReleaseFocus()`
+      - Use the `Class.TextBox.CaptureFocus` or `Class.TextBox.ReleaseFocus`
         methods.
     code_samples: []
     type: TextBox
@@ -262,10 +271,10 @@ properties:
       can_save: false
   - name: ChatInputBarConfiguration.TextColor3
     summary: |
-      Color of the text in default chat input bar.
+      Determines the color of the text in default chat input bar.
     description: |
-      Color of the text in default chat input bar. Default value is
-      `Datatype.Color3|Color3.new(255, 255, 255)`.
+      Determines the color of the text in default chat input bar. Default value
+      is `Datatype.Color3|Color3.new(255, 255, 255)` (white).
     code_samples: []
     type: Color3
     tags: []
@@ -280,9 +289,10 @@ properties:
       can_save: true
   - name: ChatInputBarConfiguration.TextSize
     summary: |
-      Size of the text in default chat input bar.
+      Determines the size of the text in default chat input bar.
     description: |
-      Size of the text in default chat input bar. Default value is `14`.
+      Determines the size of the text in default chat input bar. Default value
+      is 14.
     code_samples: []
     type: int64
     tags: []
@@ -297,10 +307,10 @@ properties:
       can_save: true
   - name: ChatInputBarConfiguration.TextStrokeColor3
     summary: |
-      Color of the text stroke for text in default chat input bar.
+      Determines the color of the text stroke of text in default chat input bar.
     description: |
-      Color of the text stroke for text in default chat input bar. Default value
-      is `Datatype.Color3|Color3.new(0, 0, 0)`.
+      Determines the color of the text stroke of text in default chat input bar.
+      Default value is `Datatype.Color3|Color3.new(0, 0, 0)` (black).
     code_samples: []
     type: Color3
     tags: []
@@ -315,10 +325,11 @@ properties:
       can_save: true
   - name: ChatInputBarConfiguration.TextStrokeTransparency
     summary: |
-      Transparency of the text stroke for text in default chat input bar.
+      Determines the transparency of the text stroke of text in default chat
+      input bar.
     description: |
-      Transparency of the text stroke for text in default chat input bar.
-      Default value is `0.5`.
+      Determines the color of the text stroke of text in default chat input bar.
+      Default value is 0.5.
     code_samples: []
     type: double
     tags: []

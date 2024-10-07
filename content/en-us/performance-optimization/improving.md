@@ -336,7 +336,7 @@ same `MeshId` are handled in a single draw call when:
   too high.
 
   Objects like decals, textures, and particles don't batch well and introduce
-  additional draw calls. Pay extra attention to these object types in a scene.
+  additional draw calls. Pay extra attention to these object types in a scene. In particular, property changes to `Class.ParticleEmitter|ParticleEmitters` can have a dramatic impact on performance.
 
 - **Missed Instancing Opportunities** - Often, a scene will include the same mesh
   duplicated a number of times, but each copy of the mesh has different mesh or
@@ -534,7 +534,7 @@ For more information on streaming options and their benefits, see [Streaming Pro
 - **Audio files** - Audio files can be a surprising contributor to memory usage, particularly if you load all of them into the client at once rather than only loading what you need for a portion of the experience. For strategies, see [Load Times](#load-times).
 - **High resolution textures** - Graphics memory consumption for a texture is unrelated to the size of the texture on the disk, but rather the number of pixels in the texture.
   - For example, a 1024x1024 pixel texture consumes four times the graphics memory of a 512x512 texture.
-  - Images uploaded to Roblox are transcoded to a fixed format, so there is no memory benefit to uploading images in a color model associated with fewer bytes per pixel. Though the engine automatically downscales texture resolution on some devices, the extent of the downscale depends on the device characteristics, and excessive texture resolution can still cause problems.
+  - Images uploaded to Roblox are transcoded to a fixed format, so there is no memory benefit to uploading images in a color model associated with fewer bytes per pixel. Similarly, compressing images prior to upload or removing the alpha channel from images that don't need it can decrease image size on disk, but either doesn't improve or only minimally improves memory usage. Though the engine automatically downscales texture resolution on some devices, the extent of the downscale depends on the device characteristics, and excessive texture resolution can still cause problems.
   - You can identify the graphics memory consumption for a given texture by expanding the **GraphicsTexture** category in the **Developer Console**.
 
 ### Mitigation

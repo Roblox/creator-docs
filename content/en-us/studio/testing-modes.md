@@ -5,12 +5,13 @@ description: Explore the built-in Studio testing modes for experiences.
 
 import PlaytestOptions from '../includes/studio/testing-modes.md'
 import DeviceEmulator from '../includes/studio/device-emulator.md'
+import ControllerEmulator from '../includes/studio/controller-emulator.md'
 import PauseResumePhysics from '../includes/studio/pause-resume-physics.md'
 import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 Because of the underlying [client-server model](../projects/client-server.md) of the Roblox engine, it's important that you test your experience in various modes before [releasing it to the public](../production/publishing/publishing-experiences-and-places.md#releasing-to-the-public). All of the testing options are accessible from the [Test](../studio/test-tab.md) tab.
 
-<img src="../assets/studio/general/Toolbar-Test-Tab.png" width="800" alt="Test tab indicated in Studio toolbar" />
+<img src="../assets/studio/general/Toolbar-Test-Tab.png" width="840" alt="Test tab indicated in Studio toolbar" />
 
 ## Playtest Options
 
@@ -75,21 +76,27 @@ Using the **Clients and Servers** options, you can launch multiple sessions of S
 1. Make sure **Local Server** is selected in the upper box, then select the number of player sessions to test. Usually 1–2 players is sufficient, although you can simulate up to eight.
 1. Press the **Start** button to begin the client-server simulation.
 
-   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Start.png" width="800" alt="Clients and Servers simulation setup indicated in Test tab" />
+   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Start.png" width="760" alt="Clients and Servers simulation setup indicated in Test tab" />
 
 1. When you're finished testing, press the **Cleanup** button from any of the simulation sessions to close all simulated clients and the simulated server.
 
-   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Cleanup.png" width="800" alt="Cleanup button indicated in Test tab" />
+   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Cleanup.png" width="810" alt="Cleanup button indicated in Test tab" />
 
 ## Device Emulation
 
 <DeviceEmulator components={props.components} />
 
+## Controller Emulation
+
+<BetaAlert betaName="Gamepad Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+<ControllerEmulator components={props.components} />
+
 ## Player Emulation
 
 For detailed emulation of experience [localization](../production/localization/index.md) and content policies, you can test through the **Player** emulator.
 
-<img src="../assets/studio/general/Test-Tab-Emulation-Player.png" width="800" alt="Player emulator button indicated in Test tab" />
+<img src="../assets/studio/general/Test-Tab-Emulation-Player.png" width="840" alt="Player emulator button indicated in Test tab" />
 
 1. Click the **Player** button to open the emulator window.
 1. Toggle on **Enable Test Profile** in the window. Emulation will remain as toggled (enabled or disabled) even if you close the window.
@@ -106,11 +113,11 @@ If you're working on an experience with others in [Collaboration](../projects/co
 
 1. In the **Clients and Servers** section, select **Team Test** in the upper box and press the **Start** button to publish the current state of the experience and create a new Studio session with your character inserted.
 
-   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Team-Test.png" width="800" alt="Team Test setup indicated in Test tab" />
+   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Team-Test.png" width="760" alt="Team Test setup indicated in Test tab" />
 
 1. Other collaborators can then join by pressing **Join** from the **Test** tab.
 
-   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Team-Test-Join.png" width="800" alt="Team Test join button indicated in Test tab" />
+   <img src="../assets/studio/general/Test-Tab-Clients-Servers-Team-Test-Join.png" width="760" alt="Team Test join button indicated in Test tab" />
 
    <Alert severity="info">
    Only one team test session can run at any given time. To close a session and kick out all testers, click the **Shutdown&nbsp;Server** button.

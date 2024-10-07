@@ -3,6 +3,9 @@ title: Gamepad Input
 description: Explains how to accept input from USB gamepads, such as Xbox and PlayStation controllers.
 ---
 
+import ControllerEmulator from '../includes/studio/controller-emulator.md'
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 Roblox accepts input from USB gamepads such as Xbox and PlayStation controllers. Since gamepads come in different varieties, you need to follow additional setup to verify that a player's gamepad inputs are usable in your experience.
 
 To set up gamepad inputs, you can use `Class.ContextActionService` or `Class.UserInputService` to [detect connected gamepads](#detecting-gamepads) for a player's device, [verify supported inputs](#verifying-supported-inputs) that are compatible with Roblox, [receive input](#receiving-input), and more.
@@ -274,3 +277,9 @@ if isVibrationSupported then
 	end
 end
 ```
+
+## Controller Emulation
+
+<BetaAlert betaName="Gamepad Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+<ControllerEmulator components={props.components} />

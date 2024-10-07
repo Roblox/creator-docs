@@ -6,7 +6,7 @@ comments: |
 ---
 
 <Alert severity="error">
-  This guide covers admin commands of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see [In-Experience Text Chat](../../chat/in-experience-text-chat.md#creating-custom-commands) for creating custom chat commands.
+  This guide covers admin commands of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see <a href="../../chat/customizing-in-experience-text-chat.md#creating-custom-commands">In-Experience Text Chat</a> for creating custom chat commands.
 </Alert>
 
 An **admin command** is a keyword or phrase that a user with certain level of control can type into the chat window to trigger an action. This library uses chat modules, which allows for easy implementation of admin commands on top of the legacy chat system. Chat modules listen to incoming messages on the server and can execute actions based on whatever criteria is desired.

@@ -12,18 +12,6 @@ The following beta features are currently available to all users through Studio'
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent style={{paddingBottom: '0px'}}>
-<Button href="https://devforum.roblox.com/t/introducing-aerodynamic-forces-studio-beta/2569269" size="large" color="primaryBrand" variant="outlined" fullWidth>Aerodynamics</Button>
-<p></p>
-<CardMedia component="video" controls src="../assets/studio/beta/Aerodynamics.mp4" />
-<p></p>
-<figcaption>Allows creators to incorporate aerodynamic forces on parts and their assemblies.</figcaption>
-<p></p>
-<BetaAlert betaName="Aerodynamics" leadIn="" leadOut="" components={props.components} />
-</CardContent>
-</Card>
-
-<Card variant="outlined" style={{height: '100%'}}>
-<CardContent style={{paddingBottom: '0px'}}>
 <Button href="../assistant/guide.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Assistant</Button>
 <p></p>
 <CardMedia component="img" image="../assets/studio/beta/Assistant.png" />
@@ -79,6 +67,18 @@ The following beta features are currently available to all users through Studio'
 <figcaption>Use your camera to puppeteer rigs with compatible heads and generate corresponding keyframes.</figcaption>
 <p></p>
 <BetaAlert betaName="Face Capture" leadIn="" leadOut="" components={props.components} />
+</CardContent>
+</Card>
+
+<Card variant="outlined" style={{height: '100%'}}>
+<CardContent style={{paddingBottom: '0px'}}>
+<Button href="../studio/testing-modes.md#controller-emulation" size="large" color="primaryBrand" variant="outlined" fullWidth>Controllers Emulator</Button>
+<p></p>
+<CardMedia component="img" image="../assets/studio/beta/Controllers-Emulator.png" />
+<p></p>
+<figcaption>Accurately emulate gamepad input directly in Studio.</figcaption>
+<p></p>
+<BetaAlert betaName="Gamepad Emulator" leadIn="" leadOut="" components={props.components} />
 </CardContent>
 </Card>
 

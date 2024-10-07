@@ -275,12 +275,9 @@ Options to save and [publish](../production/publishing/publishing-experiences-an
 
 Studio offers a suite of options for testing an experience before [releasing it to the public](../production/publishing/publishing-experiences-and-places.md#releasing-to-the-public). All of the testing options are accessible from the [Test](../studio/test-tab.md) tab.
 
-- **Rapid playtesting** that provides a close simulation of the experience running on the Roblox application.
-
-   <img src="../assets/studio/general/Test-Tab-Playtest-Options.png" width="800" alt="Studio's Test tab with the Playtest button and it Mode Picker button highlighted." />
-
-- **Multi-client simulation** for comparing how each client "sees" other clients within the experience.
-- **Device emulation** that provides insight on how controls operate on a mobile device or how on-screen UI displays on different screens and aspect ratios.
-- **Collaborative playtesting** with members of your [team group](../projects/setting-up-a-team.md).
+- [Rapid Playtesting](../studio/testing-modes.md#playtest-options) &mdash; Provides a close simulation of the experience running on the Roblox application.
+- [Multi-Client Simulation](../studio/testing-modes.md#multi-client-simulation) &mdash; Compares how each client "sees" other clients within the experience.
+- [Device Emulation](../studio/testing-modes.md#device-emulation) &mdash; Provides insight on how controls operate on a mobile device or how on-screen UI displays on different screens and aspect ratios.
+- [Controller Emultation](../studio/testing-modes.md#controller-emulation) &mdash; Accurately emulates [gamepad input](../input/gamepad.md) directly in Studio.
 
 See [Studio Testing Modes](../studio/testing-modes.md) for more information on each testing option.

@@ -55,6 +55,10 @@ To use scripting, you need a pass ID. To get the pass ID:
 
 ## Selling Passes
 
+<Alert severity="info">
+If you're using [price optimization](./price-optimization.md), make sure to place the script inside a `Class.LocalScript` so that users see personalized pass prices.
+</Alert>
+
 You can sell passes outside or inside an experience.
 
 ### Outside an Experience
