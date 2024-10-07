@@ -2,8 +2,10 @@ name: AtmosphereSensor
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A `Class.SensorBase` that outputs data about the `Class.AtmosphereSensor.AirDenstiy|AirDenstiy` and `Class.AtmosphereSensor.RelativeWindVelocity|RelativeWindVelocity` at the sensor's position.
+description: |
+  A `Class.SensorBase` that outputs data about the `Class.AtmosphereSensor.AirDenstiy|AirDenstiy` and `Class.AtmosphereSensor.RelativeWindVelocity|RelativeWindVelocity` at the sensor's position.
 code_samples: []
 inherits:
   - SensorBase
