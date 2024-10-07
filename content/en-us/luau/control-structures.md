@@ -252,9 +252,11 @@ World f
 ]]
 ```
 
+## Control Keywords
+
 ### Breaking Loops
 
-To force a loop to end, use the `break` command. The following code sample shows how to break an infinite `while`—`do` loop.
+To force a loop to end, use the `break` keyword. The following code sample shows how to break an infinite `while`—`do` loop.
 
 ```lua
 local secondsElapsed = 0
@@ -280,4 +282,20 @@ print("Five seconds elapsed. Time to move on!")
 5
 Five seconds elapsed. Time to move on!
 ]]
+```
+
+### Continuing Loops
+
+To force a loop to iterate and start again, use the `continue` keyword. A `for` loop will iterate the counter; `while` and `repeat`—`until` will check the loop condition before continuing. The following code sample gets all children of an `Class.Instance` of a specific `Class.Instance.ClassName|ClassName`.
+
+```lua
+local function GetChildrenOfClass(parent: Instance, className: string): {Instance}
+	local children = {}
+	for _, child in parent:GetChildren() do
+		if child.ClassName ~= className then continue end  -- Iterates the loop
+		table.insert(children, child)
+	end
+
+	return children
+end
 ```
