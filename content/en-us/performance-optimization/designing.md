@@ -21,7 +21,7 @@ Lower-end devices, particularly mobile devices, have severe memory limitations a
 Roblox does not have access to all of a device's memory. Some amount is required for the operating system and other applications.
 </Alert>
 
-For a much more detailed example of how you might think about optimizing your experience for low-end mobile devices, see [Real World Building and Scripting Optimization](https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146).
+More generally, testing on a variety of devices can help you check that the experience matches your visual and performance expectations at different graphics quality levels. For a much more detailed example of how you might think about optimizing your experience for low-end mobile devices, see [Real World Building and Scripting Optimization](https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146).
 
 <a target="_blank" href="https://devforum.roblox.com/t/real-world-building-and-scripting-optimization-for-roblox/3127146"><img src="../assets/optimization/chicken-rocket.jpg" width="400" alt="Header image for Real World Building and Scripting Optimization." /></a>
 

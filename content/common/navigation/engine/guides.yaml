@@ -583,6 +583,8 @@ navigation:
             path: /production/monetization/game-passes
           - title: Developer Products
             path: /production/monetization/developer-products
+          - title: Price Optimization
+            path: /production/monetization/price-optimization
           - title: Avatar Items
             path: /production/monetization/avatar-items
           - title: Engagement-Based Payouts

@@ -76,29 +76,33 @@ The [Immersive Ads](../../production/monetization/immersive-ads.md) system allow
   <figcaption>Examples of experience subscriptions</figcaption>
 </figure>
 
-### Developer Products
-
-A [Developer Product](../../production/monetization/developer-products.md) is an item or ability that a user can purchase more than once, such as in-experience currency, ammo, or potions. You can prompt purchases, record them, and get product information through scripting.
-
-<img src="../../assets/monetization/developer-products/Buy-Product-Example.jpg" width="800" />
-
 ### Passes
 
 A [Pass](../../production/monetization/game-passes.md) allows you to charge a **one-time Robux fee** in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
 
 <img src="../../assets/monetization/game-passes/passes-sample.png" width="800" />
 
-### Paid Access
+### Developer Products
 
-[Paid Access](../../production/monetization/paid-access.md) allows you to charge a **one-time Robux fee** in order for users to access your experience. Some developers temporarily use this feature to create a closed beta where their most engaged users can have early access to an experience and help with testing and feedback.
+A [Developer Product](../../production/monetization/developer-products.md) is an item or ability that a user can purchase more than once, such as in-experience currency, ammo, or potions. You can prompt purchases, record them, and get product information through scripting.
 
-<img src="../../assets/monetization/paid-access/Buy-Access-Example.png" width="400" />
+<img src="../../assets/monetization/developer-products/Buy-Product-Example.jpg" width="800" />
+
+### Price Optimization
+
+[Price optimization](../../production/monetization/price-optimization.md) lets you find the best price points for your passes and developer products, which can help you earn more money over time while keeping your prices competitive.
 
 ### Engagement-Based Payouts
 
 <img src="../../assets/monetization/engagement-based-payouts/Premium-Banner.jpg" />
 
 [Engagement-Based Payouts](../../production/monetization/engagement-based-payouts.md) allow you to automatically earn Robux based on the share of time that [Premium](https://www.roblox.com/premium/membership) subscribers engage in your experiences.
+
+### Paid Access
+
+[Paid Access](../../production/monetization/paid-access.md) allows you to charge a **one-time Robux fee** in order for users to access your experience. Some developers temporarily use this feature to create a closed beta where their most engaged users can have early access to an experience and help with testing and feedback.
+
+<img src="../../assets/monetization/paid-access/Buy-Access-Example.png" width="400" />
 
 ### Private Servers
 

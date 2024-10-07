@@ -4,7 +4,7 @@ title: include
 
 There are three common options for playtesting an experience. Clicking the small arrow below the main button lets you choose from each option, and sets that option as the default.
 
-<img src="../assets/studio/general/Test-Tab-Playtest-Options.png" width="800" alt="Rapid playtest options in Test tab of Studio." />
+<img src="../assets/studio/general/Test-Tab-Playtest-Options.png" width="760" alt="Rapid playtest options in Test tab of Studio." />
 
 <table>
   <thead>
@@ -35,7 +35,7 @@ There are three common options for playtesting an experience. Clicking the small
 
 Once a playtest is running, the following options become available:
 
-<img src="../assets/studio/general/Test-Tab-Running-Options.png" width="800" alt="Additional options available during playtesting in Studio." />
+<img src="../assets/studio/general/Test-Tab-Running-Options.png" width="810" alt="Additional options available during playtesting in Studio." />
 
 <table>
 <thead>

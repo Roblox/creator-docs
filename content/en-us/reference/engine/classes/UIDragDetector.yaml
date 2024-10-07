@@ -6,24 +6,24 @@ summary: |
   Instance which facilitates and encourages interaction with UI elements in an
   experience.
 description: |
-  The `UIDragDetector` instance facilitates and encourages interaction with 2D
-  user interface elements in an experience, such as sliders and spinners. Key
-  features include:
+  The `Class.UIDragDetector` instance facilitates and encourages interaction
+  with 2D user interface elements in an experience, such as sliders and
+  spinners. Key features include:
 
-  - Place a `UIDragDetector` under any `Class.GuiObject` instance to make it
-  draggable via all inputs without a single line of code.
+  - Place a `Class.UIDragDetector` under any `Class.GuiObject` instance to make
+    it draggable via all inputs without a single line of code.
 
   - Choose from several `Class.UIDragDetector.DragStyle|DragStyle` options,
-  define how the object responds to motion via
-  `Class.UIDragDetector.ResponseStyle|ResponseStyle`, and optionally apply axis,
-  movement limits, or drag boundaries.
+    define how the object responds to motion via
+    `Class.UIDragDetector.ResponseStyle|ResponseStyle`, and optionally apply
+    axis, movement limits, or drag boundaries.
 
   - Scripts can respond to manipulation of dragged objects to drive logic
-  responses, such as adjusting settings.
+    responses, such as adjusting settings.
 
-  - `UIDragDetectors` work in Studio as long as you're **not** using the
-  **Select**, **Move**, **Scale**, or **Rotate** tools, nor certain plugins or
-  Studio's **UI** editor tools.
+  - `Class.UIDragDetector|UIDragDetectors` work in Studio as long as you're
+    **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, nor
+    certain plugins or Studio's **UI** editor tools.
 code_samples: []
 inherits:
   - UIComponent
@@ -34,10 +34,10 @@ properties:
   - name: UIDragDetector.ActivatedCursorIcon
     summary: |
       Sets the cursor icon to display when the mouse is activated over the
-      parent of this `UIDragDetector`.
+      parent of this `Class.UIDragDetector`.
     description: |
       Sets the cursor icon to display when the mouse is activated over the
-      parent of this `UIDragDetector`. If this property is left blank, the
+      parent of this `Class.UIDragDetector`. If this property is left blank, the
       detector will use the default icon.
 
       To change the activated cursor icon, set this property to the asset ID of
@@ -80,7 +80,7 @@ properties:
       Instance whose bounding area defines the drag boundaries for the parent
       `Class.GuiObject`.
     description: |
-      When set, the `UIDragDetector` instance will not allow the bounds of
+      When set, the `Class.UIDragDetector` instance will not allow the bounds of
       the parent `Class.GuiObject` to be dragged outside the bounds of the
       **BoundingUI** instance.
 
@@ -104,10 +104,10 @@ properties:
   - name: UIDragDetector.CursorIcon
     summary: |
       Sets the cursor icon to display when the mouse is hovered over the parent
-      of this `UIDragDetector`.
+      of this `Class.UIDragDetector`.
     description: |
       Sets the cursor icon to display when the mouse is hovered over the parent
-      of this `UIDragDetector`. If this property is left blank, the
+      of this `Class.UIDragDetector`. If this property is left blank, the
       detector will use the default icon.
 
       To change the cursor icon, set this property to the asset ID of the image
@@ -126,14 +126,14 @@ properties:
       can_save: true
   - name: UIDragDetector.DragAxis
     summary: |
-      The drag axis for the `UIDragDetector` instance when
+      The drag axis for the `Class.UIDragDetector` instance when
       `Class.UIDragDetector.DragStyle|DragStyle` is set to
       `Enum.UIDragDetectorDragStyle.TranslateLine`.
     description: |
       `Datatype.Vector2` value that defines the axis of movement for the dragged
       object when `Class.UIDragDetector.DragStyle|DragStyle` is set to
       `Enum.UIDragDetectorDragStyle.TranslateLine`. The axis is defined in the
-      local space of the `UIDragDetector` unless
+      local space of the `Class.UIDragDetector` unless
       `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is defined,
       in which case the axis is defined in that instance's local space.
     code_samples: []
@@ -185,7 +185,7 @@ properties:
       The rotation performed by the current drag.
     description: |
       The rotation performed by the current drag. This value is defined in
-      degrees relative to the local space of the `UIDragDetector` unless
+      degrees relative to the local space of the `Class.UIDragDetector` unless
       `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is defined,
       in which case the rotation is defined in the local space of that instance
       and from its positive **X** axis.
@@ -285,9 +285,9 @@ properties:
       can_save: true
   - name: UIDragDetector.Enabled
     summary: |
-      Whether the `UIDragDetector` responds to user input.
+      Whether the `Class.UIDragDetector` responds to user input.
     description: |
-      If `true`, the `UIDragDetector` responds to user input; if `false`,
+      If `true`, the `Class.UIDragDetector` responds to user input; if `false`,
       it does not.
     code_samples: []
     type: bool
@@ -454,7 +454,7 @@ properties:
     description: |
       Once the proposed motion has been computed and potentially constrained,
       this paradigm is used to deterimine how to move (or not move) the
-      `Class.GuiObject` affected by the `UIDragDetector`. See
+      `Class.GuiObject` affected by the `Class.UIDragDetector`. See
       `Enum.UIDragDetectorResponseStyle` for options.
     code_samples: []
     type: UIDragDetectorResponseStyle
@@ -469,14 +469,8 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.SelectionModeDragSpeed
-    summary: |
-      Maximum drag speed for translation.
-    description: |
-      Defines the maximum drag speed for translation as a combination of
-      `Datatype.UDim.Scale|Scale` and `Datatype.UDim.Offset|Offset` of the first
-      ancestor `Class.ScreenGui` or `Class.SurfaceGui` the `UIDragDetector`
-      belongs to. This value must be positive and any value below `0` will be
-      clamped to `0`.
+    summary: ''
+    description: ''
     code_samples: []
     type: UDim2
     tags: []
@@ -490,12 +484,8 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.SelectionModeRotateSpeed
-    summary: |
-      Maximum angle per second the `UIDragDetector` can rotate at.
-    description: |
-      Defines the maximum angle per second at which the `UIDragDetector` can
-      rotate. This value must be positive and any value below `0` will be
-      clamped to `0`.
+    summary: ''
+    description: ''
     code_samples: []
     type: float
     tags: []
@@ -509,12 +499,8 @@ properties:
       can_load: true
       can_save: true
   - name: UIDragDetector.UIDragSpeedAxisMapping
-    summary: |
-      `Enum.UIDragSpeedAxisMapping` value that determines the **X**/**Y**
-      dimension dragging speeds.
-    description: |
-      `Enum.UIDragSpeedAxisMapping` value that determines the **X**/**Y**
-      dimension dragging speeds.
+    summary: ''
+    description: ''
     code_samples: []
     type: UIDragSpeedAxisMapping
     tags: []
