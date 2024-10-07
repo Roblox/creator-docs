@@ -94,14 +94,10 @@ properties:
     summary: |
       Stores the tool's "grip" properties as one `Datatype.CFrame`.
     description: |
-      The Grip property stores the tool's "grip" properties as a single
+      The `Grip` property stores the tool's "grip" properties as a single
       `Datatype.CFrame`. These properties position how the player holds the tool
-      and include `GripUp`, `GripRight`, `GripForward`, and `GripPos`.
-
-      Unlike the grip properties that it stores, this consolidated property
-      doesn't appear in the [Properties](../../../studio/properties.md) window
-      in Studio. Regardless, you can set and get it from a `Class.Script` or
-      `Class.LocalScript`.
+      and include `Class.Tool.GripUp|GripUp`, `Class.Tool.GripRight|GripRight`,
+      `Class.Tool.GripForward|GripForward`, and `Class.Tool.GripPos|GripPos`.
     code_samples:
       - grip-stick
     type: CFrame
