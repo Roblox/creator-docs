@@ -58,6 +58,12 @@ methods:
       <td>A list of external link references (for example, social media links, handles, or iconography) a player is permitted to see. Possible values include: "Discord", "Facebook", "Twitch", "Twitter", "YouTube", "X", "GitHub", and "Guilded".</td>
       </tr>
       <tr>
+      <td>IsContentSharingAllowed</td>
+      <td>Boolean</td>
+      <td>Any experience that allows users to share content off platform</td>
+      <td>When true, the player is allowed to share content using APIs which open external sharing flows such as <code>Class.CaptureService:PromptShareCapture()</code>.</td>
+      </tr>
+      <tr>
       <td>IsEligibleToPurchaseSubscription</td>
       <td>Boolean</td>
       <td>Any experience that wants to sell subscriptions</td>
