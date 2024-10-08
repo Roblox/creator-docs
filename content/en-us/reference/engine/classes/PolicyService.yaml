@@ -61,7 +61,7 @@ methods:
       <td>IsContentSharingAllowed</td>
       <td>Boolean</td>
       <td>Any experience that allows users to share content off platform</td>
-      <td>When true, the player is allowed to share content using APIs which open external sharing flows such as `Class.CaptureService:PromptShareCapture()`.</td>
+      <td>When true, the player is allowed to share content using APIs which open external sharing flows such as <code>Class.CaptureService:PromptShareCapture()</code>.</td>
       </tr>
       <tr>
       <td>IsEligibleToPurchaseSubscription</td>
