@@ -10,10 +10,10 @@ navigation:
   - title: Assistant
     path: /assistant/guide
     section:
-    - title: Overview
-      path: /assistant/guide
-    - title: Prompt Guide and Examples
-      path: /assistant/prompt-engineering
+      - title: Overview
+        path: /assistant/guide
+      - title: Prompt Guide and Examples
+        path: /assistant/prompt-engineering
   - heading: Create
   - title: Roblox Studio
     path: /studio/
@@ -454,6 +454,12 @@ navigation:
         section:
           - title: Overview
             path: /cloud-services/data-stores/
+          - title: Managing Data Stores
+            path: /cloud-services/data-stores/managing-data-stores
+          - title: Best Practices
+            path: /cloud-services/data-stores/best-practices
+          - title: Error Codes and Limits
+            path: /cloud-services/data-stores/error-codes-and-limits
           - title: Observability
             path: /cloud-services/data-stores/observability
           - title: Implementing Player Data and Purchasing Systems

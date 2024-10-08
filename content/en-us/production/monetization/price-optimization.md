@@ -10,7 +10,7 @@ description: Price optimization finds the best price points for your passes and 
 <Alert severity="warning">
 To run a successful price optimization test, your experience has to have enough transactions to produce significant data. In most cases, this means your experience should have had at least 100,000 transactions over the previous 30 days.
 
-To find how many transactions your experience has had, add the total number of product sales over a two-week period. For more information, see [Pass Analytics](./game-passes.md#pass-analytics) and [Developer Product Analytics](./developer-products.md#developer-product-analytics).
+To find how many transactions your experience has had, add the total number of product sales over a 30-day period. For more information, see [Pass Analytics](./game-passes.md#pass-analytics) and [Developer Product Analytics](./developer-products.md#developer-product-analytics).
 </Alert>
 
 **Price optimization** lets you find the best price points for your passes and developer products, which can help you earn more money over time while keeping your prices competitive. When you run a price test, subsets of your users see different prices for the same product. At the end of the test, you receive recommendations for the prices that performed best with your audience.
@@ -85,7 +85,7 @@ To run a price review period:
 - If you start a price optimization test while the dynamic price check tool is running, the dynamic price check tool is automatically disabled.
 - You can't make changes to the prices of products involved in price tests while the tests are in progress.
 - After running a price test, the price optimization tool lets you apply the optimized prices to either all of the involved products or to none of them. To apply the optimized prices to just a selection of the products, take the price test recommendations and manually update the products in the Creator Hub.
-  - If you manually update the product prices, the price test projected revenue impact is no longer accurate. You’re also not able to run a price review period with those products.
+  - The projected revenue impact is based on applying the optimized prices to all of the involved products, so manually updating some product prices means the projected revenue impact is no longer accurate. You’re also not able to run a price review period on just a selection of the products.
 
 ## Glossary
 

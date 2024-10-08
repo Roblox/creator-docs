@@ -1957,7 +1957,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience\n creates a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data\n Stores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
+        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data\n Stores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
         "operationId": "Cloud_SnapshotDataStores",
         "parameters": [
           {
@@ -3555,7 +3555,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
+        "description": "Creates a task but does not wait for the task to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
         "operationId": "Cloud_CreateLuauExecutionSessionTask",
         "parameters": [
           {
@@ -3607,90 +3607,6 @@
               "universe.place.luau-execution-session:write"
             ],
             "title": "Create Luau Execution Session Task"
-          },
-          "resource": {
-            "$ref": "#/components/schemas/LuauExecutionSessionTask",
-            "name": "LuauExecutionSessionTask"
-          }
-        }
-      }
-    },
-    "/cloud/v2/universes/{universe}/places/{place}/luau-execution-session-tasks/{luau-execution-session-task}": {
-      "get": {
-        "tags": [
-          "Cloud"
-        ],
-        "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
-        "operationId": "Cloud_GetLuauExecutionSessionTask",
-        "parameters": [
-          {
-            "name": "universe",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "place",
-            "in": "path",
-            "description": "The place ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "luau-execution-session-task",
-            "in": "path",
-            "description": "The luau-execution-session-task ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "view",
-            "in": "query",
-            "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
-            "schema": {
-              "enum": [
-                "VIEW_UNSPECIFIED",
-                "BASIC",
-                "FULL"
-              ],
-              "type": "string",
-              "format": "enum",
-              "x-example-values": {
-                "exampleValues": [
-                  "VIEW_UNSPECIFIED"
-                ]
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
-                }
-              }
-            }
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-docs": {
-          "category": "Luau Execution",
-          "methodProperties": {
-            "scopes": [
-              "universe.place.luau-execution-session:read",
-              "universe.place.luau-execution-session:write"
-            ],
-            "title": "Get Luau Execution Session Task"
           },
           "resource": {
             "$ref": "#/components/schemas/LuauExecutionSessionTask",
@@ -3783,80 +3699,6 @@
           "resource": {
             "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
             "name": "LuauExecutionSessionTaskLog"
-          }
-        }
-      }
-    },
-    "/cloud/v2/universes/{universe}/places/{place}/luau-execution-sessions/{luau-execution-session}/tasks": {
-      "post": {
-        "tags": [
-          "Cloud"
-        ],
-        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
-        "operationId": "Cloud_CreateLuauExecutionSessionTask",
-        "parameters": [
-          {
-            "name": "universe",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "place",
-            "in": "path",
-            "description": "The place ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "luau-execution-session",
-            "in": "path",
-            "description": "The luau-execution-session ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LuauExecutionSessionTask"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
-                }
-              }
-            }
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-docs": {
-          "category": "Luau Execution",
-          "methodProperties": {
-            "scopes": [
-              "universe.place.luau-execution-session:write"
-            ],
-            "title": "Create Luau Execution Session Task"
-          },
-          "resource": {
-            "$ref": "#/components/schemas/LuauExecutionSessionTask",
-            "name": "LuauExecutionSessionTask"
           }
         }
       }
@@ -4309,7 +4151,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
+        "description": "Creates a task but does not wait for the task to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
         "operationId": "Cloud_CreateLuauExecutionSessionTask",
         "parameters": [
           {
@@ -4370,99 +4212,6 @@
               "universe.place.luau-execution-session:write"
             ],
             "title": "Create Luau Execution Session Task"
-          },
-          "resource": {
-            "$ref": "#/components/schemas/LuauExecutionSessionTask",
-            "name": "LuauExecutionSessionTask"
-          }
-        }
-      }
-    },
-    "/cloud/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-session-tasks/{luau-execution-session-task}": {
-      "get": {
-        "tags": [
-          "Cloud"
-        ],
-        "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
-        "operationId": "Cloud_GetLuauExecutionSessionTask",
-        "parameters": [
-          {
-            "name": "universe",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "place",
-            "in": "path",
-            "description": "The place ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "version",
-            "in": "path",
-            "description": "The version ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "luau-execution-session-task",
-            "in": "path",
-            "description": "The luau-execution-session-task ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "view",
-            "in": "query",
-            "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
-            "schema": {
-              "enum": [
-                "VIEW_UNSPECIFIED",
-                "BASIC",
-                "FULL"
-              ],
-              "type": "string",
-              "format": "enum",
-              "x-example-values": {
-                "exampleValues": [
-                  "VIEW_UNSPECIFIED"
-                ]
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
-                }
-              }
-            }
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-docs": {
-          "category": "Luau Execution",
-          "methodProperties": {
-            "scopes": [
-              "universe.place.luau-execution-session:read",
-              "universe.place.luau-execution-session:write"
-            ],
-            "title": "Get Luau Execution Session Task"
           },
           "resource": {
             "$ref": "#/components/schemas/LuauExecutionSessionTask",
@@ -4564,89 +4313,6 @@
           "resource": {
             "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
             "name": "LuauExecutionSessionTaskLog"
-          }
-        }
-      }
-    },
-    "/cloud/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-sessions/{luau-execution-session}/tasks": {
-      "post": {
-        "tags": [
-          "Cloud"
-        ],
-        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
-        "operationId": "Cloud_CreateLuauExecutionSessionTask",
-        "parameters": [
-          {
-            "name": "universe",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "place",
-            "in": "path",
-            "description": "The place ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "version",
-            "in": "path",
-            "description": "The version ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "luau-execution-session",
-            "in": "path",
-            "description": "The luau-execution-session ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LuauExecutionSessionTask"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
-                }
-              }
-            }
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-docs": {
-          "category": "Luau Execution",
-          "methodProperties": {
-            "scopes": [
-              "universe.place.luau-execution-session:write"
-            ],
-            "title": "Create Luau Execution Session Task"
-          },
-          "resource": {
-            "$ref": "#/components/schemas/LuauExecutionSessionTask",
-            "name": "LuauExecutionSessionTask"
           }
         }
       }
@@ -7522,7 +7188,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience\n creates a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data\n Stores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
+        "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data\n Stores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
         "operationId": "Cloud_SnapshotDataStores",
         "parameters": [
           {
@@ -9120,7 +8786,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
+        "description": "Creates a task but does not wait for the task to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
         "operationId": "Cloud_CreateLuauExecutionSessionTask",
         "parameters": [
           {
@@ -9172,90 +8838,6 @@
               "universe.place.luau-execution-session:write"
             ],
             "title": "Create Luau Execution Session Task"
-          },
-          "resource": {
-            "$ref": "#/components/schemas/LuauExecutionSessionTask",
-            "name": "LuauExecutionSessionTask"
-          }
-        }
-      }
-    },
-    "/v2/universes/{universe}/places/{place}/luau-execution-session-tasks/{luau-execution-session-task}": {
-      "get": {
-        "tags": [
-          "Cloud"
-        ],
-        "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
-        "operationId": "Cloud_GetLuauExecutionSessionTask",
-        "parameters": [
-          {
-            "name": "universe",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "place",
-            "in": "path",
-            "description": "The place ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "luau-execution-session-task",
-            "in": "path",
-            "description": "The luau-execution-session-task ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "view",
-            "in": "query",
-            "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
-            "schema": {
-              "enum": [
-                "VIEW_UNSPECIFIED",
-                "BASIC",
-                "FULL"
-              ],
-              "type": "string",
-              "format": "enum",
-              "x-example-values": {
-                "exampleValues": [
-                  "VIEW_UNSPECIFIED"
-                ]
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
-                }
-              }
-            }
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-docs": {
-          "category": "Luau Execution",
-          "methodProperties": {
-            "scopes": [
-              "universe.place.luau-execution-session:read",
-              "universe.place.luau-execution-session:write"
-            ],
-            "title": "Get Luau Execution Session Task"
           },
           "resource": {
             "$ref": "#/components/schemas/LuauExecutionSessionTask",
@@ -9348,80 +8930,6 @@
           "resource": {
             "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
             "name": "LuauExecutionSessionTaskLog"
-          }
-        }
-      }
-    },
-    "/v2/universes/{universe}/places/{place}/luau-execution-sessions/{luau-execution-session}/tasks": {
-      "post": {
-        "tags": [
-          "Cloud"
-        ],
-        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
-        "operationId": "Cloud_CreateLuauExecutionSessionTask",
-        "parameters": [
-          {
-            "name": "universe",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "place",
-            "in": "path",
-            "description": "The place ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "luau-execution-session",
-            "in": "path",
-            "description": "The luau-execution-session ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LuauExecutionSessionTask"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
-                }
-              }
-            }
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-docs": {
-          "category": "Luau Execution",
-          "methodProperties": {
-            "scopes": [
-              "universe.place.luau-execution-session:write"
-            ],
-            "title": "Create Luau Execution Session Task"
-          },
-          "resource": {
-            "$ref": "#/components/schemas/LuauExecutionSessionTask",
-            "name": "LuauExecutionSessionTask"
           }
         }
       }
@@ -9874,7 +9382,7 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
+        "description": "Creates a task but does not wait for the task to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
         "operationId": "Cloud_CreateLuauExecutionSessionTask",
         "parameters": [
           {
@@ -9935,99 +9443,6 @@
               "universe.place.luau-execution-session:write"
             ],
             "title": "Create Luau Execution Session Task"
-          },
-          "resource": {
-            "$ref": "#/components/schemas/LuauExecutionSessionTask",
-            "name": "LuauExecutionSessionTask"
-          }
-        }
-      }
-    },
-    "/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-session-tasks/{luau-execution-session-task}": {
-      "get": {
-        "tags": [
-          "Cloud"
-        ],
-        "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
-        "operationId": "Cloud_GetLuauExecutionSessionTask",
-        "parameters": [
-          {
-            "name": "universe",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "place",
-            "in": "path",
-            "description": "The place ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "version",
-            "in": "path",
-            "description": "The version ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "luau-execution-session-task",
-            "in": "path",
-            "description": "The luau-execution-session-task ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "view",
-            "in": "query",
-            "description": "The view in which to retrieve the luau execution session task.\n\n Supports BASIC and FULL.\n\n Defaults to BASIC.",
-            "schema": {
-              "enum": [
-                "VIEW_UNSPECIFIED",
-                "BASIC",
-                "FULL"
-              ],
-              "type": "string",
-              "format": "enum",
-              "x-example-values": {
-                "exampleValues": [
-                  "VIEW_UNSPECIFIED"
-                ]
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
-                }
-              }
-            }
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-docs": {
-          "category": "Luau Execution",
-          "methodProperties": {
-            "scopes": [
-              "universe.place.luau-execution-session:read",
-              "universe.place.luau-execution-session:write"
-            ],
-            "title": "Get Luau Execution Session Task"
           },
           "resource": {
             "$ref": "#/components/schemas/LuauExecutionSessionTask",
@@ -10129,89 +9544,6 @@
           "resource": {
             "$ref": "#/components/schemas/LuauExecutionSessionTaskLog",
             "name": "LuauExecutionSessionTaskLog"
-          }
-        }
-      }
-    },
-    "/v2/universes/{universe}/places/{place}/versions/{version}/luau-execution-sessions/{luau-execution-session}/tasks": {
-      "post": {
-        "tags": [
-          "Cloud"
-        ],
-        "description": "Creates a task but does not wait for it to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
-        "operationId": "Cloud_CreateLuauExecutionSessionTask",
-        "parameters": [
-          {
-            "name": "universe",
-            "in": "path",
-            "description": "The universe ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "place",
-            "in": "path",
-            "description": "The place ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "version",
-            "in": "path",
-            "description": "The version ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "luau-execution-session",
-            "in": "path",
-            "description": "The luau-execution-session ID.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LuauExecutionSessionTask"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LuauExecutionSessionTask"
-                }
-              }
-            }
-          }
-        },
-        "x-visibility": "BETA",
-        "x-roblox-docs": {
-          "category": "Luau Execution",
-          "methodProperties": {
-            "scopes": [
-              "universe.place.luau-execution-session:write"
-            ],
-            "title": "Create Luau Execution Session Task"
-          },
-          "resource": {
-            "$ref": "#/components/schemas/LuauExecutionSessionTask",
-            "name": "LuauExecutionSessionTask"
           }
         }
       }
