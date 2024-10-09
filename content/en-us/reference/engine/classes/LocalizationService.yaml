@@ -53,6 +53,11 @@ properties:
 
       This will return a string with the two letter code (for example, "en-us")
       for the locale.
+
+      See also `Class.Player.LocaleId`, the locale ID that a user has set for
+      their Roblox account which is used for localizing in-experience content.
+      This will be a different value when Roblox does not yet internally support
+      that player's locale.
     code_samples:
     type: string
     tags:
@@ -86,21 +91,21 @@ methods:
     thread_safety: Unsafe
   - name: LocalizationService:GetTableEntries
     summary: |
-      Gets all entries used for autotranslation.
+      Gets all entries used for automated localization.
     description: |
       Returns an `Array`, where each element of the returned `Array` is itself
       an `Array` of entries in the same format as described in
       `Class.LocalizationTable:GetEntries()`. The order of the elements in the
       returned `Array` is the same order that the
       `Class.LocalizationTable|LocalizationTables` will be searched through to
-      attempt autotranslation for the provided `Class.Instance`. The entry
-      elements within a particular `Class.LocalizationTable` are returned in an
-      unspecified order.
+      attempt automated localization for the provided `Class.Instance`. The
+      entry elements within a particular `Class.LocalizationTable` are returned
+      in an unspecified order.
 
       This function returns entries regardless of whether the object is a
       `Class.GuiBase2d` with `Class.GuiBase2d.AutoLocalize` enabled. An object
-      that is a `Class.GuiBase2d` will not actually be autotranslated unless
-      `Class.GuiBase2d.AutoLocalize` is enabled.
+      that is a `Class.GuiBase2d` will not actually be automatically localized
+      unless `Class.GuiBase2d.AutoLocalize` is enabled.
 
       The ordering of the tables is as follows:
 
@@ -154,7 +159,7 @@ methods:
       `Class.LocalizationService` as well as the cloud
       `Class.LocalizationTable`, if it is available and already loaded. This
       will be the same set of entries returned by
-      `Class.LocalizationService.GetTableEntries(nil)`.
+      `Class.LocalizationService:GetTableEntries(nil)`.
 
       This function does not yield. It will not wait until the cloud
       `Class.LocalizationTable` has loaded.
@@ -1009,7 +1014,7 @@ methods:
       used for localization are the entries provided by the
       `Class.LocalizationTable` hierarchy under `Class.LocalizationService` as
       well as the cloud table (if available). This will be the same set of
-      entries returned by `Class.LocalizationService.GetTableEntries(nil)`.
+      entries returned by `Class.LocalizationService:GetTableEntries(nil)`.
 
       This function can error and thus should be wrapped in a `pcall()`.
 
@@ -1052,8 +1057,7 @@ methods:
       used for localization are the entries provided by the
       `Class.LocalizationTable` hierarchy under `Class.LocalizationService` as
       well as the cloud table (if available). This will be the same set of
-      entries returned by
-      `Class.LocalizationService:GetTableEntries()|GetTableEntries(nil)`.
+      entries returned by `Class.LocalizationService:GetTableEntries(nil)`.
 
       This function can error and thus should be wrapped in a `pcall()`.
 

@@ -793,18 +793,6 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: UserInputService:GetDeviceLevel
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: DeviceLevel
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: UserInputService:GetDeviceRotation
     summary: |
       Returns an `Class.InputObject` and a `Datatype.CFrame`,describing the
@@ -2532,27 +2520,6 @@ events:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-  - name: UserInputService.TouchDrag
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: dragDirection
-        type: SwipeDirection
-        default:
-        summary: ''
-      - name: numberOfTouches
-        type: int
-        default:
-        summary: ''
-      - name: gameProcessedEvent
-        type: bool
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
   - name: UserInputService.TouchEnded
     summary: |

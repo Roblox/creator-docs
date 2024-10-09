@@ -54,8 +54,8 @@ Whether you're just getting started with Roblox or need a quick refresher, use t
     <Typography variant='h4'>Creating Avatar Items</Typography>
     <Typography variant='body1' >Create accessories, clothing, and bodies that you can sell on the Marketplace.</Typography>
     <a href="../avatar/index.md"><Typography variant='h6' style={{marginBottom: 12}}>Overview</Typography></a>
-    <a href="./marketplace/index.md"><Typography variant='h6' style={{marginBottom: 12}}>Marketplace Overview</Typography></a>
-    <a href="./marketplace/marketplace-fees-and-commissions.md"><Typography variant='h6' style={{marginBottom: 12}}>Fees and Commissions</Typography></a>
+    <a href="../marketplace/index.md"><Typography variant='h6' style={{marginBottom: 12}}>Marketplace Overview</Typography></a>
+    <a href="../marketplace/marketplace-fees-and-commissions.md"><Typography variant='h6' style={{marginBottom: 12}}>Fees and Commissions</Typography></a>
 
   </Grid>
   </Grid>
@@ -249,7 +249,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <a href="../avatar/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Getting Started with Avatar Items</Typography></a>
 <a href="../tutorials/first-experience/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Creating Your First Experience</Typography></a>
 <a href="../production/creator-store.md"><Typography variant='body1' style={{marginBottom: 12}}>Creator Store Overview</Typography></a>
-<a href="./marketplace/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Overview</Typography></a>
+<a href="../marketplace/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Overview</Typography></a>
 </Grid>
 </Grid>
 
@@ -298,7 +298,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <a href="./accessories/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Accessory Specifications</Typography></a>
 <a href="./accessories/clothing-specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Clothing Specifications</Typography></a>
 <a href="./characters/specifications.md"><Typography variant='body1' style={{marginBottom: 12}}>Avatar Character Specifications</Typography></a>
-<a href="./marketplace/marketplace-policy.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Policy</Typography></a>
+<a href="../marketplace/marketplace-policy.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Policy</Typography></a>
 
 </Grid>
 </Grid>
@@ -383,7 +383,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <a href="./accessories/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Accessories Overview</Typography></a>
 <a href="./accessories/layered-clothing.md"><Typography variant='body1' style={{marginBottom: 12}}>Clothing Overview</Typography></a>
 <a href="./characters/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Character Bodies Overview</Typography></a>
-<a href="./marketplace/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Overview</Typography></a>
+<a href="../marketplace/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Overview</Typography></a>
 
 </Grid>
 </Grid>
@@ -434,10 +434,10 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <Typography variant='h5'>Publishing to Creator Store and Marketplace</Typography>
 
 <a href="../production/creator-store.md"><Typography variant='body1' style={{marginBottom: 12}}>Creator Store Overview</Typography></a>
-<a href="./marketplace/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Overview</Typography></a>
-<a href="./marketplace/marketplace-policy.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Policy</Typography></a>
-<a href="./marketplace/publishing-to-marketplace.md"><Typography variant='body1' style={{marginBottom: 12}}>Publishing Avatar Items to Marketplace</Typography></a>
-<a href="./marketplace/marketplace-fees-and-commissions.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Fees and Commissions</Typography></a>
+<a href="../marketplace/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Overview</Typography></a>
+<a href="../marketplace/marketplace-policy.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Policy</Typography></a>
+<a href="../marketplace/publishing-to-marketplace.md"><Typography variant='body1' style={{marginBottom: 12}}>Publishing Avatar Items to Marketplace</Typography></a>
+<a href="../marketplace/marketplace-fees-and-commissions.md"><Typography variant='body1' style={{marginBottom: 12}}>Marketplace Fees and Commissions</Typography></a>
 
 </Grid>
 </Grid>

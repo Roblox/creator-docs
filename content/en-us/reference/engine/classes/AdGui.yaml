@@ -74,19 +74,7 @@ properties:
     serialization:
       can_load: false
       can_save: false
-methods:
-  - name: AdGui:GetSingleReportAdInfo
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Map
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+methods: []
 events: []
 callbacks:
   - name: AdGui.OnAdEvent

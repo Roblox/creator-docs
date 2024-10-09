@@ -266,9 +266,7 @@ All script changes, whether saved by a collaborator, auto-saved, or committed by
 
 ## Saving and Publishing
 
-During a collaborative session, Studio automatically saves the project to the cloud every five minutes. The [Output](../studio/output.md) window shows the place name and save location after the save is successful.
-
-<img src="../assets/studio/general/Output-Window-Auto-Saved.png" alt="The Output window with an auto-save message." width="800" />
+During a collaborative session, Studio automatically saves the project to the cloud every four minutes.
 
 ## Reverting to Previous Versions
 

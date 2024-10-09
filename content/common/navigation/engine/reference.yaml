@@ -215,6 +215,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/AudioFlanger.yaml
         ignoreTranslation: true
+      - title: AudioLimiter
+        path: /reference/engine/classes/AudioLimiter
+        type: engineapi
+        source: /reference/engine/classes/AudioLimiter.yaml
+        ignoreTranslation: true
       - title: AudioListener
         path: /reference/engine/classes/AudioListener
         type: engineapi
@@ -859,11 +864,6 @@ navigation:
         path: /reference/engine/classes/EditableMesh
         type: engineapi
         source: /reference/engine/classes/EditableMesh.yaml
-        ignoreTranslation: true
-      - title: EditableService
-        path: /reference/engine/classes/EditableService
-        type: engineapi
-        source: /reference/engine/classes/EditableService.yaml
         ignoreTranslation: true
       - title: EmotesPages
         path: /reference/engine/classes/EmotesPages
@@ -2355,11 +2355,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/StarterPlayerScripts.yaml
         ignoreTranslation: true
-      - title: StartPageService
-        path: /reference/engine/classes/StartPageService
-        type: engineapi
-        source: /reference/engine/classes/StartPageService.yaml
-        ignoreTranslation: true
       - title: StartupMessageService
         path: /reference/engine/classes/StartupMessageService
         type: engineapi
@@ -3678,6 +3673,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ConnectionState.yaml
         ignoreTranslation: true
+      - title: ContentSourceType
+        path: /reference/engine/enums/ContentSourceType
+        type: engineapi
+        source: /reference/engine/enums/ContentSourceType.yaml
+        ignoreTranslation: true
       - title: ContextActionPriority
         path: /reference/engine/enums/ContextActionPriority
         type: engineapi
@@ -4712,6 +4712,11 @@ navigation:
         path: /reference/engine/enums/RollOffMode
         type: engineapi
         source: /reference/engine/enums/RollOffMode.yaml
+        ignoreTranslation: true
+      - title: RolloutState
+        path: /reference/engine/enums/RolloutState
+        type: engineapi
+        source: /reference/engine/enums/RolloutState.yaml
         ignoreTranslation: true
       - title: RotationOrder
         path: /reference/engine/enums/RotationOrder

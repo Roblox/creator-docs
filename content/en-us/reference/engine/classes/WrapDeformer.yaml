@@ -10,52 +10,36 @@ inherits:
 tags:
   - NotBrowsable
 deprecation_message: ''
-properties:
-  - name: WrapDeformer.Amount
+properties: []
+methods:
+  - name: WrapDeformer:GetDeformedCFrame
     summary: ''
     description: ''
     code_samples: []
-    type: float
+    parameters:
+      - name: originalCFrame
+        type: CFrame
+        default:
+        summary: ''
+    returns:
+      - type: CFrame
+        summary: ''
     tags: []
     deprecation_message: ''
-    security:
-      read: None
-      write: PluginSecurity
-    thread_safety: ReadSafe
-    category: Tuning
-    serialization:
-      can_load: true
-      can_save: true
-  - name: WrapDeformer.Enabled
+    security: None
+    thread_safety: Unsafe
+  - name: WrapDeformer:CreateEditableMeshAsync
     summary: ''
     description: ''
     code_samples: []
-    type: bool
-    tags: []
+    parameters: []
+    returns:
+      - type: EditableMesh
+        summary: ''
+    tags:
+      - Yields
     deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-  - name: WrapDeformer.RenderMeshID
-    summary: ''
-    description: ''
-    code_samples: []
-    type: ContentId
-    tags: []
-    deprecation_message: ''
-    security:
-      read: None
-      write: PluginSecurity
-    thread_safety: ReadSafe
-    category: Appearance
-    serialization:
-      can_load: true
-      can_save: true
-methods: []
+    security: None
+    thread_safety: Unsafe
 events: []
 callbacks: []

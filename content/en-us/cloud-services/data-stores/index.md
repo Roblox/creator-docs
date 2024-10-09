@@ -158,7 +158,7 @@ end
 ```
 
 <Alert severity="warning">
-  The values you retrieve using `Class.GlobalDataStore:GetAsync()|GetAsync()` sometimes can be out of sync with the backend due to the [caching](../../cloud-services/data-stores/managing-data-stores.md/#caching) behavior. For more information, see [Disabling Caching](../../cloud-services/data-stores/managing-data-stores.md/#disabling-caching).
+  The values you retrieve using `Class.GlobalDataStore:GetAsync()|GetAsync()` sometimes can be out of sync with the backend due to the [caching](../../cloud-services/data-stores/managing-data-stores.md#caching) behavior. For more information, see [Disabling Caching](../../cloud-services/data-stores/managing-data-stores.md#disabling-caching).
 </Alert>
 
 ## Incrementing Data
@@ -198,7 +198,7 @@ end
 ## Metadata
 
 <Alert severity="info">
-Ordered data stores don't support [versioning and metadata](../../cloud-services/data-stores/managing-data-stores.md/#versioning), so `Class.DataStoreKeyInfo|DataStoreKeyInfo` is always `nil` for keys in an `Class.OrderedDataStore|OrderedDataStore`. If you need to support versioning and metadata, use `Class.DataStore|DataStore`.
+Ordered data stores don't support [versioning and metadata](../../cloud-services/data-stores/managing-data-stores.md#versioning), so `Class.DataStoreKeyInfo|DataStoreKeyInfo` is always `nil` for keys in an `Class.OrderedDataStore|OrderedDataStore`. If you need to support versioning and metadata, use `Class.DataStore|DataStore`.
 </Alert>
 
 There are two types of metadata associated with keys:
@@ -286,7 +286,7 @@ To manage metadata, expand the `Class.GlobalDataStore:SetAsync()|SetAsync()`, `C
   When calling `Class.GlobalDataStore:SetAsync()|SetAsync()`, `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`, and `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`, you must always update metadata definitions with a value, even when there are no changes to the current value. If you don't, you lose the current value.
 </Alert>
 
-For limits when defining metadata, see [Metadata Limits](../../cloud-services/data-stores/error-codes-and-limits.md/#metadata-limits).
+For limits when defining metadata, see [Metadata Limits](../../cloud-services/data-stores/error-codes-and-limits.md#metadata-limits).
 
 ## Ordered Data Stores
 

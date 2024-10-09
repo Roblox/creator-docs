@@ -1,0 +1,76 @@
+name: AudioLimiter
+type: class
+category:
+memory_category: Internal
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: AudioLimiter.Bypass
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioLimiter.MaxLevel
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+  - name: AudioLimiter.Release
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+methods:
+  - name: AudioLimiter:GetConnectedWires
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: pin
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Objects
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+events: []
+callbacks: []

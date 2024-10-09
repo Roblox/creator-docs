@@ -259,18 +259,6 @@ properties:
       can_load: true
       can_save: true
 methods:
-  - name: SoundService:GetAudioInstances
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Array
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: SoundService:GetListener
     summary: |
       GetListener returns the current `Class.SoundService` listener type and

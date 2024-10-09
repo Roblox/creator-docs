@@ -747,10 +747,14 @@ properties:
       letter code (for example, "en-us") for the locale.
 
       This can be used to determine the geographic demographic of your game's
-      player base.
+      player base, and is also the locale that will be used for automatic
+      localization (see `Class.GuiBase2d.AutoLocalize`) of in-experience
+      content. This property allows access to the player's locale from the
+      server.
 
-      This property allows access to the player's locale from the server. It is
-      similar to the `Class.LocalizationService.RobloxLocaleId` property.
+      See also `Class.LocalizationService.RobloxLocaleId`, the locale ID used
+      for localizing internal content. This will be a different value when
+      Roblox does not yet internally support the local player's set locale.
     code_samples:
       - checking-a-player-s-locale
     type: string

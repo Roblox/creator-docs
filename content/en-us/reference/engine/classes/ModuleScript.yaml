@@ -88,8 +88,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Data
     serialization:

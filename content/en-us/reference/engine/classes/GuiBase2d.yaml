@@ -112,12 +112,15 @@ properties:
   - name: GuiBase2d.AutoLocalize
     summary: |
       When set to true, localization will be applied to this GuiBase2d and its
-      descendants based on the `Class.GuiBase2d.RootLocalizationTable` specified
-      for this GuiBase2d.
+      descendants.
     description: |
-      When set to true, localization will be applied to this GuiBase2d and its
-      descendants based on the `Class.GuiBase2d.RootLocalizationTable` specified
-      for this GuiBase2d.
+      When set to true, localization will be applied to this `Class.GuiBase2d`
+      and its descendants. The entries used for localization are the same set of
+      entries returned by `Class.LocalizationService:GetTableEntries()`. Entries
+      with `Class.GuiBase2d.AutoLocalize` enabled are automatically
+      re-translated after the cloud table loads if necessary.
+
+      See also `Class.GuiBase2d.RootLocalizationTable`.
     code_samples:
     type: bool
     tags: []
@@ -170,14 +173,19 @@ properties:
       object and its ancestors for automated localization to be applied. You can
       set this to reference a LocalizationTable anywhere in the DataModel. It is
       not required to be a child of LocalizationService. When
-      RootLocalizationTable is set on a GUI object then that object and all of
-      its children will use that specific LocalizationTable and its parents for
-      automatic text replacement, instead of using the tables under
-      LocalizationService in an undefined order.
+      `RootLocalizationTable` is set on a GUI object, then that object and all
+      of its children will try to use that specific `Class.LocalizationTable`
+      and its ancestors for automatic text replacement before using the tables
+      under `Class.LocalizationService` in an undefined order and the cloud
+      table.
 
       If there is no translation available in the referenced table it will look
       for a translation in the parent of that table, if it is also a
       LocalizationTable, and so on.
+
+      See also `Class.LocalizationService:GetTableEntries()` which explains how
+      the `Class.GuiBase2d.RootLocalizationTable` is used for automated
+      localization.
     code_samples:
     type: LocalizationTable
     tags: []

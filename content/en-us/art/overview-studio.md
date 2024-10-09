@@ -146,7 +146,7 @@ You can see a complete list of the many [Roblox-created assets on the Creator St
 
 The **Marketplace** is where all Roblox users can purchase virtual cosmetics, such as accessories and clothing, and various character bodies that they can save to their Roblox account and set as their Roblox avatar character.
 
-To sell assets on the Marketplace, your creation must follow specific avatar specifications and meet certain policies and guidelines. For more information, see [Avatar](../avatar/index.md) and [Marketplace](./marketplace/index.md).
+To sell assets on the Marketplace, your creation must follow specific avatar specifications and meet certain policies and guidelines. For more information, see [Avatar](../avatar/index.md) and [Marketplace](../marketplace/index.md).
 
 ## 3D Modeling
 
