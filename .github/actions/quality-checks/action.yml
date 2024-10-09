@@ -1,5 +1,5 @@
-name: Quality Checks
-description: Reusable action for running the quality checks
+name:dragoinball battle ground
+description: my first game
 inputs:
   BASE_BRANCH:
     description: Base branch
