@@ -498,7 +498,7 @@ Use the Animation Editor directly in Studio to create animations for models or m
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../assets/tutorials/UCT-Overview/Creating-Animations.png" />
  </div>
-   <Typography variant='body1' >Creating Animations</Typography>
+   <Typography variant='body1' >Creating Character Animations</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="../tutorials/building/animation/creating-an-animation.md">
        <Button variant="contained" color="secondary" size='large'
@@ -514,7 +514,7 @@ Use the Animation Editor directly in Studio to create animations for models or m
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../assets/tutorials/UCT-Overview/Scripting-Avatar-Animations.png" />
  </div>
-   <Typography variant='body1' >Scripting Avatar Animations</Typography>
+   <Typography variant='body1' >Playing Character Animations</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="../tutorials/building/animation/scripting-avatar-animations.md">
        <Button variant="contained" color="secondary" size='large'

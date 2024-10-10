@@ -90,6 +90,10 @@ If you want to save a set of frame data for later review (or to share with someo
 
 These HTML files use the same [web-based UI](#using-the-web-ui) as the [live connection for mobile devices](#profiling-on-mobile-devices) and [server dumps](#profiling-the-server).
 
+<Alert severity="info">
+Dumps only contain data for the selected number of frames, **not** the entire duration that the experience has been running. The exception is [counters mode](modes.md#counters-mode), which includes data from when Studio or the client started running to the time of the dump.
+</Alert>
+
 ## Profiling on Mobile Devices
 
 To access the MicroProfiler from the mobile client, your mobile device must be connected to the **same network** as your development machine.
@@ -120,13 +124,29 @@ In addition to the standard client MicroProfiler, you can take brief dumps of se
 In general, the MicroProfiler web UI works similarly to [detailed mode](./modes.md#detailed-mode), but it has a few additional features:
 
 - In addition to filtering by group, you can filter by thread.
+
+- Use <kbd>Ctrl</kbd><kbd>F</kbd>/<kbd>⌘</kbd><kbd>F</kbd> to jump to the occurrence of a task that takes up the most time in the dump. For example, `computeLightingPerform` runs in every frame. If you search for it in a dump with 128 frames, you can jump to the frame where it took the longest to complete.
+
 - Use the **X-Ray** menu to enable or disable color coding for memory allocation.
 
   <img alt="The MicroProfiler web view with x-ray enabled." src="../../assets/optimization/microprofiler/micro-xray.png" width="600px" />
 
   - Lighter frames within the main bar graph indicate higher memory allocation.
   - Lighter portions of the preview bar and lighter labels on the timeline indicate portions of the frame with higher memory allocation.
+  - In X-ray mode, press <kbd>C</kbd> to show the total size of the memory allocations rather than the number of allocations.
 
-- Use the **Export** menu to export a CPU or memory flame graph, a specialized visualization that summarizes all of the call stacks included in the dump.
+- Use the **Export** menu to export a CPU or memory flame graph, a specialized visualization that summarizes all of the call stacks included in the dump. The flame graph is especially useful for identifying tasks that don't take particularly long to run, but run so often that their processing time becomes significant.
 
   <img alt="The MicroProfiler flame graph." src="../../assets/optimization/microprofiler/micro-flame.png" />
+
+- Drag and drop a second dump file into the web UI to generate a diff flame graph, which can help you identify improvements or regressions to your experience's performance over time. Click **Combine & Compare** to export a new HTML file.
+
+  <img alt="The MicroProfiler diff flame graph builder showing the left and right sides." src="../../assets/optimization/microprofiler/micro-flame-diff.png" />
+
+  <Alert severity="success">
+  You can combine several dump files—for example, four on each side, from before and after a major update—to get a more aggregated comparison. Comparing data between different places can be useful, too, but don't **combine** data from different places!
+  </Alert>
+
+  The diff flame graph highlights the dump (left or right) that consumes more CPU or memory, with brighter colors indicating a larger difference.
+
+  <img alt="The MicroProfiler diff flame graph." src="../../assets/optimization/microprofiler/micro-flame-diff2.png" />

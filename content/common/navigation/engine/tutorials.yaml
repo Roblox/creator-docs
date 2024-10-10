@@ -78,7 +78,7 @@ navigation:
         section:
           - title: Creating Character Animations
             path: /tutorials/building/animation/creating-an-animation
-          - title: Scripting Avatar Animations
+          - title: Playing Character Animations
             path: /tutorials/building/animation/scripting-avatar-animations
       - title: In Blender
         section:

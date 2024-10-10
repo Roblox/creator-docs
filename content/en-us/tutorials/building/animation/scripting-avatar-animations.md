@@ -1,342 +1,283 @@
 ---
-title: Scripting Avatar Animations
-description: The process for updating default animations.
+title: Playing Character Animations
+description: The process for changing default character animations and triggering custom animations.
 ---
 
-Scripts can be used to update default animations and to add new ones. The two examples covered by this tutorial will change the default run animation and will play an animation on command when a player touches an object.
+**Playing character animations** is an important part of what makes avatars and non-playable characters (NPCs) expressive, realistic, and engaging to your audience. In addition to providing immersive visuals, character animations provide players feedback from their actions, guidance on how to navigate the environment, and vital information about their character and others.
 
-<GridContainer numColumns="2">
-  <figure>
-    <img src="../../../assets/tutorials/scripting-avatar-animations/Using-Animations-FinalExamples-default.jpg" />
-    <figcaption>Changed Default Run</figcaption>
-  </figure>
-  <figure>
-    <img src="../../../assets/tutorials/scripting-avatar-animations/Using-Animations-FinalExamples-event.jpg" />
-    <figcaption>Playing Animations on Command</figcaption>
-  </figure>
-</GridContainer>
+Using the [Hazardous Space Station](https://www.roblox.com/games/134383324873456/Walking-Character-Animation) `.rbxl` file as a reference, this tutorial shows you how to play character animations using two different techniques, including guidance on:
+
+- Swapping default character animation assetIDs with your own custom animations.
+- Triggering animations in response to character actions within the 3D space.
+
+After you complete this tutorial, you will have the skills to customize animations for a wide variety of gameplay situations.
 
 ## Changing Default Animations
 
-By default, Roblox characters include common animations like running, climbing, and jumping. For the first example, you'll create a script to swap the default run animation with a more unique one. If you don't have a run animation to practice with, you can use one of the example animations provided.
+Every character with a default `Class.Humanoid` object, whether it's a player-controlled avatar or a non-player character (NPC), includes a set of **default animations** that play whenever the character performs specific in-experience actions, such as running, climbing, and jumping. Roblox provides these animations out-of-the-box for every experience without any additional scripting effort.
 
-<video controls loop muted>
-    <source src="../../../assets/tutorials/scripting-avatar-animations/Using-Animations-FinalDefaultRunExample.mp4" />
-</video>
+<GridContainer numColumns="3">
+  <figure>
+    <video controls src="../../../assets/tutorials/playing-character-animations/Default-Fall-Animation.mp4" width="100%"></video>
+    <figcaption>Default Fall Animation</figcaption>
+  </figure>
+  <figure>
+    <video controls src="../../../assets/tutorials/playing-character-animations/Default-Swim-Animation.mp4" width="100%"></video>
+    <figcaption>Default Swim Animation</figcaption>
+  </figure>
+  <figure>
+    <video controls src="../../../assets/tutorials/playing-character-animations/Default-Climb-Animation.mp4" width="100%"></video>
+    <figcaption>Default Climb Animation</figcaption>
+  </figure>
+</GridContainer>
 
-### Setup the Script
+However, if these default animations don't meet the design requirements for your world's environment, aesthetic, or overall narrative, you can swap them out with custom animations that apply to every player that joins your experience. This game design technique can help your characters and experiences feel more personal, engaging, and immersive.
 
-So the animation swap applies to all players, the script will be stored in ServerScriptService.
+To demonstrate, the following section teaches you how to swap out the default walk animation with a custom walk cycle animation from [Creating Character Animations](creating-an-animation.md). Using this same process, you can swap out any of the default animations with your own animation assetIDs.
 
-1. In **ServerScriptService**, create a new script named **ChangeRunAnimation**.
+<GridContainer numColumns="2">
+  <figure>
+    <video controls src="../../../assets/tutorials/playing-character-animations/Default-Walk-Animation.mp4" width="99%"></video>
+    <figcaption>Default Walk Animation</figcaption>
+  </figure>
+  <figure>
+    <video controls src="../../../assets/tutorials/playing-character-animations/Custom-Walk-Animation.mp4" width="100%"></video>
+    <figcaption>Custom Walk Animation</figcaption>
+  </figure>
+</GridContainer>
 
-   ![alt](../../../assets/tutorials/scripting-avatar-animations/Using-Animations-ServerScriptChangeDefault.png)
+### Create Script
 
-2. In the script, create two variables:
+Every character's `Class.Humanoid` object includes a child `Class.Animator` object that stores all of the character's default animations. In order to set any of these default animations to new assetIDs, you must create a script in the `Class.ServiceScriptService` so that it can reference and override the `Class.Animator` object's default values as soon as players load into the experience.
 
-   - `Class.Players` - Gets the Players service, giving you access to players that join the game.
-   - `runAnimation` - Sets the ID of the animation to be used. For the ID, use the one made in Creating Animations, or find one from the card below.
+To create a script that will reference the default animation assetIDs:
+
+1. In the **Explorer** window, add a new script to **ServerScriptService**.
+   1. Hover over **ServerScriptService** and click the ⊕ button.
+   1. From the contextual menu, insert a **Script**.
+1. In the new script, paste the following code:
 
    ```lua
    local Players = game:GetService("Players")
-   local runAnimation = "rbxassetid://656118852"
+
+   local function onCharacterAdded(character)
+	   local humanoid = character:WaitForChild("Humanoid")
+	   local animator = humanoid:WaitForChild("Animator")
+	   print("Animator found!")
+
+   local function onPlayerAdded(player)
+	   player.CharacterAdded:Connect(onCharacterAdded)
+   end
+
+   Players.PlayerAdded:Connect(onPlayerAdded)
    ```
 
-3. Copy the highlighted code below. When players join the game through `PlayerAdded`, the script will check if their avatar is loaded. In the next section, you'll add code to swap animations in the `onCharacterAdded` function.
+<BaseAccordion>
+<AccordionSummary>
+  <Typography variant="h4">Code Explanation</Typography>
+</AccordionSummary>
+<AccordionDetails>
 
-```lua
-local Players = game:GetService("Players")
-local runAnimation = "rbxassetid://616163682"
+The `ResetDefaultAnimations` script starts by getting the `Class.Players` service, which contains all `Class.Player` objects for players as they connect to a server. When each of the player's characters load into the experience, the `Class.Player.onCharacterAdded|onCharacterAdded` function waits until it detects the character's `Class.Humanoid` and `Class.Animator` objects.
 
-local function onCharacterAdded(character)
+When it detects an `Class.Animator` object for the first time, the script then prints "Animator found!" to let you know that the script is working as intended.
 
-end
+</AccordionDetails>
+</BaseAccordion>
 
-local function onPlayerAdded(player)
-    player.CharacterAppearanceLoaded:Connect(onCharacterAdded)
-end
+### Replace AssetID
 
-Players.PlayerAdded:Connect(onPlayerAdded)
-```
+Now that you know your script is able to detect when players load and connect to the server, you can modify your script to specifically reference the animation id(s) you want to swap with your own custom animations.
 
-If you need a running animation, use one of the following example IDs. Additional catalog animations can be found on the [Using Animations](../../../animation/using.md#catalog-animation-reference) page.
+The following table contains all of the default character animations that you can call and replace within the `Class.Animator` object. Note that Idle has two variations that you can program to play more or less frequently.
 
 <table>
-  <thead>
-    <tr>
-      <th>Animation</th>
-      <th>ID</th>
-    </tr>
-  </thead>
   <tbody>
-      <tr>
+    <tr>
+      <th>Character Action</th>
+      <th>Animate Script Reference</th>
+    </tr>
+	<tr>
+      <td>**Run**</td>
+      <td>`animateScript.run.RunAnim.AnimationId`</td>
+    </tr>
+	<tr>
+      <td>**Walk**</td>
+      <td>`animateScript.walk.WalkAnim.AnimationId`</td>
+    </tr>
+	<tr>
+      <td>**Jump**</td>
+      <td>`animateScript.jump.JumpAnim.AnimationId`</td>
+    </tr>
+	<tr>
+      <td>**Idle**</td>
       <td>
-      Ninja Run
+        `animateScript.idle.Animation1.AnimationId`<br />
+        `animateScript.idle.Animation2.AnimationId`
       </td>
+    </tr>
+	<tr>
+      <td>**Fall**</td>
+      <td>`animateScript.fall.FallAnim.AnimationId`</td>
+    </tr>
+	<tr>
+      <td>**Swim**</td>
       <td>
-      656118852
+        `animateScript.swim.Swim.AnimationId`
       </td>
-      </tr>
-      <tr>
+    </tr>
+	<tr>
+      <td>**Swim (Idle)**</td>
       <td>
-      Werewolf Run
+        `animateScript.swimidle.SwimIdle.AnimationId`
       </td>
-      <td>
-      1083216690
-      </td>
-      </tr>
-      <tr>
-      <td>
-      Zombie Run
-      </td>
-      <td>
-      616163682
-      </td>
-      </tr>
+    </tr>
+	<tr>
+      <td>**Climb**</td>
+      <td>`animateScript.climb.ClimbAnim.AnimationId`</td>
+    </tr>
   </tbody>
 </table>
 
-### Replace the Animation
+To replace the default walk animation assetID:
 
-Default animations are accessed through a player's **Humanoid** object. In this case, you'll use the humanoid to find the run animation, then swap it's animation ID with a new one.
-
-1. In `onCharacterAdded`, create a variable to store the humanoid.
+1. Call the default walk animate script reference, then replace the assetID with your own custom animation assetID. For example, the following code sample references the walk cycle animation from [Creating Character Animations](creating-an-animation.md).
 
    ```lua
    local Players = game:GetService("Players")
-   local runAnimation = "rbxassetid://616163682"
 
    local function onCharacterAdded(character)
-       local humanoid = character:WaitForChild("Humanoid")
-   end
+	   local humanoid = character:WaitForChild("Humanoid")
+	   local animator = humanoid:WaitForChild("Animator")
+	   print("Animator found!")
+
+	   local animateScript = character:WaitForChild("Animate")
+	   animateScript.walk.WalkAnim.AnimationId = "rbxassetid://122652394532816"
 
    local function onPlayerAdded(player)
-       player.CharacterAppearanceLoaded:Connect(onCharacterAdded)
+	   player.CharacterAdded:Connect(onCharacterAdded)
    end
 
    Players.PlayerAdded:Connect(onPlayerAdded)
    ```
 
-2. Attached to the humanoid is a script named **Animate**, where default animations are parented. Store this in a variable named **animateScript**.
+1. Playtest your experience to ensure your custom walk animation overrides the default animation.
+   1. In the menu bar, click the **Play** button. Studio enters playtest mode.
+
+      <img src="../../../assets/studio/general/Quick-Access-Toolbar-Play.png" alt="A Studio view of the Home tab with the Play button highlighted." width="716" />
+
+   1. Walk around the space station with your avatar.
+
+      <video controls src="../../../assets/tutorials/playing-character-animations/Replace-AssetID-2B.mp4" width="90%"></video>
+
+## Triggering Animations
+
+While the previous technique focuses on swapping out default animations that automatically play whenever a character performs specific in-experience actions, you can programmatically trigger animations to play in response to **any** character action within the 3D space, such as picking up an item or taking damage from a hazard.
+
+<figure>
+  <video controls src="../../../assets/tutorials/playing-character-animations/Pose-Example.mp4" width="90%"></video>
+  <figcaption>In this example, when players touch the golden platform, they trigger a non-default character dance animation.</figcaption>
+</figure>
+
+This method of playing animations is useful because it provides players instantaneous feedback on how they should interact with objects in their environment. To demonstrate, the following section shows you how to trigger an animation whenever characters are too close to hazardous steam leaks as a way of subtly teaching players to avoid walking too close to the walls.
+
+### Insert Volume
+
+One of the most common ways to trigger unique gameplay behavior is to use **volumes**, or invisible regions within the 3D space, to detect when characters or objects interact with specific areas of the environment. When you pair volumes with scripts, you can use their collision feedback to programmatically trigger actions, such as reducing the player's health or playing an animation.
+
+<figure>
+  <img src="../../../assets/tutorials/playing-character-animations/Volume-Example.jpg" alt="A far out view of a mansion room. An outline of a box is in the middle of the room to signify the volume that triggers gameplay events." width="90%" />
+  <figcaption>The Mystery of Duvall Drive uses volumes to trigger gameplay events that change the visual appearance of the room.</figcaption>
+</figure>
+
+When adding a volume to your experience, it's important to scale it so that it only covers the space that you want to trigger your animation. If you make your volume too small, players may never collide with the area to play the animation; conversely, if you make your volume too large, the animation will play before players reach the item or area of interest, and they may not understand what they did to trigger the animation.
+
+To insert a volume around a steam leak that will trigger an animation:
+
+1. In the **Explorer** window, add a new block part.
+1. Position and resize the block until it covers the area that you want to trigger your animation.
+1. In the **Properties** window,
+   1. Set **Name** to **AnimationDetector**.
+   1. Set **Transparency** to `1` to make the block invisible.
+
+      <img src="../../../assets/tutorials/playing-character-animations/Insert-Volume-3.jpg" alt="An outline of a block is visible around a steam vent to signify the position of the volume." width="80%" />
+
+### Create Script
+
+Now that you have a defined region for triggering your animation, it's time to create a script that programmatically detects whenever players collide with the volume. You can then listen for collision events to trigger any animation that makes sense for your gameplay requirements.
+
+For example, this animation technique uses a `Class.LocalScript` instead of a `Class.Script` to provide players immediate feedback when they collide with the volume. If the server were to listen for the collision and play the animation, there could be a delay between the player touching the volume on their client and seeing the animation play because of the replication time from the server to the client.
+
+To create a local script that will detect when the local player's character touches the volume:
+
+1. In the **Explorer** window, add a new script to **StarterCharacterScripts**. This placement ensures the script and its children clone into the player character on join **and** when they respawn back into the experience.
+   1. Expand **StarterPlayer**, then hover over its **StarterCharacterScripts** child and click the ⊕ button.
+   1. From the contextual menu, insert a **LocalScript** and rename it **TriggerAnimation**.
+1. In the new script, paste the following code:
 
    ```lua
-   local Players = game:GetService("Players")
-   local runAnimation = "rbxassetid://616163682"
+   local Workspace = game:GetService("Workspace")
 
-   local function onCharacterAdded(character)
-       local humanoid = character:WaitForChild("Humanoid")
+   local animation = script:WaitForChild("Animation")
+   local humanoid = script.Parent:WaitForChild("Humanoid")
+   local animator = humanoid:WaitForChild("Animator")
+   local animationTrack = animator:LoadAnimation(animation)
+   local animationDetector = Workspace:WaitForChild("AnimationDetector")
 
-       local animateScript = character:WaitForChild("Animate")
-   end
+   local debounce = false
 
-   local function onPlayerAdded(player)
-       player.CharacterAppearanceLoaded:Connect(onCharacterAdded)
-   end
+   animationDetector.Touched:Connect(function(hit)
+	   if debounce then 
+		   return
+	   end
+	
+	   local hitCharacter = hit:FindFirstAncestorWhichIsA("Model")
+	   if hitCharacter ~= localCharacter then
+		   return
+	   end
 
-   Players.PlayerAdded:Connect(onPlayerAdded)
-
+	   debounce = true
+	   animationTrack:Play()
+	   animationTrack.Ended:Wait()
+	   debounce = false
+   end)
    ```
 
-3. Accessing different animations can be done using the dot operator, such as `animateScript.run`. To change the run, set the animation ID to the one stored in `runAnimation`.
+<BaseAccordion>
+<AccordionSummary>
+  <Typography variant="h4">Code Explanation</Typography>
+</AccordionSummary>
+<AccordionDetails>
 
-   ```lua
-   local Players = game:GetService("Players")
-   local runAnimation = "rbxassetid://616163682"
+The `TriggerAnimation` script starts by getting the `Class.Workspace` service, which contains all objects that exist in the 3D world. This is important because the script needs to reference the `Class.Part` object acting as your volume.
 
-   local function onCharacterAdded(character)
-       local humanoid = character:WaitForChild("Humanoid")
+For each player character that loads or respawns back into the experience, the script waits for:
 
-       local animateScript = character:WaitForChild("Animate")
-       animateScript.run.RunAnim.AnimationId = runAnimation
-   end
+- Its child `Class.Animation` object, which you will add in the next section.
+- The character's `Class.Humanoid` and `Class.Animator` objects.
+- The volume object in the workspace named **AnimationDetector**.
 
-   local function onPlayerAdded(player)
-       player.CharacterAppearanceLoaded:Connect(onCharacterAdded)
-   end
+When anything collides with the volume, the `Touched` event handler function gets the first ancestor that's a `Class.Model`, which should be the character if the `Class.BasePart` that collided with the volume is a descendant of a character model. If it is, the function then checks to see if the `Class.Model` is the **local** player's character. If it is, the function then:
 
-   Players.PlayerAdded:Connect(onPlayerAdded)
-   ```
+- Sets debounce to `true`.
+- Plays and waits for the animation to end.
+- Sets debounce back to `false`.
 
-   <Alert severity="info">
+Setting debounce from `false` to `true` to `false` again after the animation finishes playing is a debounce pattern that prevents the animation from repeatedly triggering as players continuously collide with the volume. For more information on this debounce pattern, see [Detecting Collisions](../../../scripting/debounce.md#detecting-collisions).
 
-   A few of the other common animations you can change are listed below:
+</AccordionDetails>
+</BaseAccordion>
 
-   - `animateScript.climb.ClimbAnim`
-   - `animateScript.sit.SitAnim`
-   - `animateScript.fall.FallAnim`
-   - `animateScript.swim`
-   - `animateScript.idle.Animation1`
-   - `animateScript.walk.WalkAnim`
+### Add Animation
 
-   Remember to access each one using `.AnimationId` at the end. For a full guide on changing other default animations, see the [Using Animations](../../../animation/using.md#replacing-default-animations) article.
+If you were to playtest your experience right now, your `TriggerAnimation` script still wouldn't be able to play an animation in response to the local player-volume collision. This is because it's waiting for a child `Class.Animation` object with an animation assetID it can reference, and that `Class.Animation` object doesn't currently exist.
 
-   </Alert>
+To add an animation for the local script to reference as players collide with the volume:
 
-4. Test the game and notice how the default run animation has changed.
+1. In the **Explorer** window, add a new animation to **TriggerAnimation**.
+   1. Hover over **TriggerAnimation** and click the ⊕ button.
+   1. From the contextual menu, insert an **Animation**.
+1. Select the new animation object, then in the **Properties** window, set **AnimationID** to the animation assetID you want to trigger when players touch the volume. For example, the [Hazardous Space Station](https://www.roblox.com/games/134383324873456/Walking-Character-Animation) sample references `rbxassetid://3716468774` to play an animation of a character falling backwards.
+1. Playtest your experience to ensure your animation plays when players are near the first steam leak.
 
-<video controls loop muted>
-    <source src="../../../assets/tutorials/scripting-avatar-animations/Using-Animations-FinalDefaultRunExample.mp4" />
-</video>
-
-## Playing Animations
-
-The second way of using animations is to play them in response to a character's action in-game: for instance, if a player picks up an item, or takes damage.
-
-In this next script, whenever a player presses a button, a shock animation will play and paralyze them until the animation finishes.
-
-<video controls loop muted>
-    <source src="../../../assets/tutorials/scripting-avatar-animations/Using-Animations-FinalEventAnimation.mp4" />
-</video>
-
-### Setup
-
-The remainder of this tutorial uses a pre-made model that includes a [ProximityPrompt](../../../tutorials/building/ui/proximity-prompts.md). Players can walk up to a button and press it to activate an event.
-
-1. Download the [Shock Button](https://www.roblox.com/library/6505388729/Shock-Button-Starter) model and insert it into Studio.
-
-   ![alt](../../../assets/tutorials/scripting-avatar-animations/Using-Animations-ShockButtonModel.jpg)
-
-   <Alert severity="info">
-
-   Models can be added into your Inventory to be used in any game.
-
-   1. In a browser, open the model page, click the **Get** button. This adds the model into your inventory.
-   2. In Studio, go to the **View** tab and click on the **Toolbox**.
-   3. In the Toolbox window, click on the **Inventory** button. Then, make sure the dropdown is on **My Models**.
-   4. Select the **Shock Button** model to add it into the game.
-
-    </Alert>
-
-2. In **StarterPlayer** > **StarterPlayerScripts**, create a local script named **PlayShockAnimation**.
-
-   ![alt](../../../assets/tutorials/scripting-avatar-animations/Using-Animations-ShockPlayerScript.png)
-
-3. The code below calls a function named `onShockTrigger` when the proximity prompt is activated. **Copy** it into your script.
-
-```lua
-local Players = game:GetService("Players")
-
-local player = Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-
-local humanoid = character:WaitForChild("Humanoid")
-local Animator = humanoid:WaitForChild("Animator")
-
-local shockButton = workspace.ShockButton.Button
-local proximityPrompt = shockButton.ProximityPrompt
-local shockParticle = shockButton.ExplosionParticle
-
-local function onShockTrigger(player)
-    shockParticle:Emit(100)
-end
-
-proximityPrompt.Triggered:Connect(onShockTrigger)
-```
-
-<Alert severity="warning">
-This script uses specifically named parts. If you rename parts of the imported model, be sure to update their variables (lines 12-14) in the script.
-</Alert>
-
-### Create and Load an Animation
-
-Animations that the player uses are stored on the player's `Class.Animator` object. To play the shock animation, a new animation track will need to be loaded onto the Animator object when they join the game.
-
-1. Above `onShockTrigger`, create a new **Animation** instance named `shockAnimation`. Then, set the `AnimationID` of that to the desired animation. Use the ID in the code box if needed.
-
-   ```lua
-   local shockButton = workspace.ShockButton.Button
-   local proximityPrompt = shockButton.ProximityPrompt
-   local shockParticle = shockButton.ExplosionParticle
-
-   local shockAnimation = Instance.new("Animation")
-   shockAnimation.AnimationId = "rbxassetid://3716468774"
-
-   local function onShockTrigger(player)
-
-   end
-   ```
-
-2. Create a new variable named `shockAnimationTrack`. On the player's Animator, call `LoadAnimation`, passing in the previously created animation.
-
-   ```lua
-   local shockAnimation = Instance.new("Animation")
-   shockAnimation.AnimationId = "rbxassetid://3716468774"
-
-   local shockAnimationTrack = Animator:LoadAnimation(shockAnimation)
-   ```
-
-3. With the new animation loaded, change some of the track's properties.
-
-   - Set the `Enum.AnimationPriority` to `Action` - Ensures the animation overrides any current animations playing.
-   - Set `Class.AnimationTrack.Looped|Looped` to `false` so the animation doesn't repeat.
-
-   ```lua
-   local shockAnimation = Instance.new("Animation")
-   shockAnimation.AnimationId = "rbxassetid://3716468774"
-
-   local shockAnimationTrack = Animator:LoadAnimation(shockAnimation)
-   shockAnimationTrack.Priority = Enum.AnimationPriority.Action
-   shockAnimationTrack.Looped = false
-   ```
-
-### Play the Animation
-
-Whenever someone triggers the ProximityPrompt on the button, it'll play an animation and temporarily freeze that player.
-
-1. Find the `onShockTrigger` function. On the `shockAnimationTrack`, call the `Play` function.
-
-   ```lua
-   local function onShockTrigger(player)
-       shockParticle:Emit(100)
-
-       shockAnimationTrack:Play()
-   end
-   ```
-
-2. To prevent the player from moving while the animation plays, change the humanoid's `WalkSpeed` property to 0.
-
-   ```lua
-   local function onShockTrigger(player)
-       shockParticle:Emit(100)
-
-       shockAnimationTrack:Play()
-       humanoid.WalkSpeed = 0
-   end
-   ```
-
-### Using Animations with Events
-
-Just how parts have Touched events, animations have events such as `Class.AnimationTrack.Stopped`. For the script, once the animation finishes, you'll restore the player's move speed.
-
-1. Access the `Stopped` event for the animation track using the dot operator, then call the `Wait` function. This pauses the code until that animation finishes.
-
-   ```lua
-   local function onShockTrigger(player)
-       shockParticle:Emit(100)
-
-       shockAnimationTrack:Play()
-       humanoid.WalkSpeed = 0
-       shockAnimationTrack.Stopped:Wait()
-   end
-   ```
-
-2. Return the player's walk speed to 16, the default for Roblox players.
-
-   ```lua
-   local function onShockTrigger(player)
-       shockParticle:Emit(100)
-
-       shockAnimationTrack:Play()
-       humanoid.WalkSpeed = 0
-       shockAnimationTrack.Stopped:Wait()
-       humanoid.WalkSpeed = 16
-   end
-   ```
-
-3. Test the game by walking up the part and press <kbd>E</kbd> to get a shock.
-
-<video controls loop muted>
-    <source src="../../../assets/tutorials/scripting-avatar-animations/Using-Animations-FinalEventAnimation.mp4" />
-</video>
-
-The framework in this script can be easily adapted to different gameplay situations. For instance, try playing a special animation whenever a player touches a trap part, or whenever a team wins a game round.
+   <video controls src="../../../assets/tutorials/playing-character-animations/Add-Animation-3.mp4" width="90%"></video>
