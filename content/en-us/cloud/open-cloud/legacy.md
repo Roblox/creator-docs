@@ -14,6 +14,7 @@ This page summarizes the available operations, but you might find the Swagger do
 - [Game Internationalization API](https://gameinternationalization.roblox.com/docs/)
 - [Localization Tables API](https://localizationtables.roblox.com/docs/)
 - [Groups API](https://groups.roblox.com/docs/)
+- [Develop API](https://develop.roblox.com/docs/)
 
 ## Badges API
 
@@ -110,3 +111,17 @@ UpdateGroupSettings | `PATCH v1/groups/{groupId}/settings` | `legacy-group:manag
 UpdateGroupStatus | `PATCH v1/groups/{groupId}/status` | `legacy-group:manage`
 UpdateGroupNotificationPreference | `PATCH v1/groups/{groupId}/notification-preference` | `legacy-group:manage`
 UpdateGroupDescription | `PATCH v1/groups/{groupId}/description` | `legacy-group:manage`
+
+## Develop API
+
+- Base URL: `https://apis.roblox.com/legacy-develop`
+- Authentication types: OAuth 2.0 and API key
+
+**API** | **Path** | **Scope**
+:--- | :--- | :---
+UpdateTeamCreateSettings | `PATCH v1/universes/{universeId}/teamcreate` | `legacy-team-collaboration:manage`
+GetTeamCreateSettings | `GET v1/universes/{universeId}/teamcreate` | `legacy-team-collaboration:manage`
+MultiGetTeamCreateSettings | `GET v1/universes/multiget/teamcreate` | `legacy-team-collaboration:manage`
+DeleteTeamCreateMembership | `DELETE v1/universes/{universeId}/teamcreate/memberships` | `legacy-team-collaboration:manage`
+GetMembersInTeamCreateSessionByPlace | `GET v1/places/{placeId}/teamcreate/active_session/members` | `legacy-team-collaboration:manage`
+CloseTeamTestGame | `DELETE v2/teamtest/{placeId}` | `legacy-team-collaboration:manage`

@@ -949,9 +949,7 @@ properties:
       `Class.Team` instead of using this property. Setting this property often
       leads to repetition of the same BrickColor value for a certain team across
       many scripts; this is something you want to avoid when adhering to the
-      [don't-repeat-yourself][1] principle.
-
-      [1]: https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+      "Don't Repeat Yourself" (DRY) principle.
     code_samples:
       - Playing-Spectating-Teams
     type: BrickColor
@@ -1087,30 +1085,31 @@ methods:
           </tr>
         </thead>
         <tbody>
-          <tr>              
-            <th> SourceGameId </th>  
+          <tr>
+            <th> SourceGameId </th>
             <td> number </td>
             <td> The <code>Class.DataModel.GameId</code> of the experience the <code>Player</code> teleported from. Only present if the player teleports to the current experience and if a server calls the teleport function. </td>
           </tr>
-          <tr>              
-            <th> SourcePlaceId </th>  
+          <tr>
+            <th> SourcePlaceId </th>
             <td> number </td>
             <td> The <code>Class.DataModel.PlaceId</code> of the place the <code>Player</code> teleported from. Only present if the player teleports to the current place and a server calls the teleport function. </td>
           </tr>
-          <tr>       
-            <th> Members </th>      
+          <tr>
+            <th> Members </th>
             <td> array </td>
             <td> An array containing the <code>Class.Player.UserId</code> numbers of the users teleported alongside the <code>Player</code>. Only present if the player teleported as part of a group. </td>
           </tr>
-          <tr>   
+          <tr>
             <th> TeleportData </th>
             <td> variant </td>
             <td> Reflects the <code>teleportData</code> specified in the original teleport. Useful for sharing information between servers the player teleports to. Only present if <code>teleportData</code> was specified and a server calls the teleport function. </td>
           </tr>
-          <tr>   
+          <tr>
             <th> LaunchData </th>
             <td> string </td>
-            <td> A string containing launch data specified in the URL the player clicks to join the experience. Only present if the URL contains launch data. </td>
+            <td>A plain or JSON encoded string that contains launch data specified in a deep link URL or
+            <code>Class.ExperienceInviteOptions.LaunchData</code>.</td>
           </tr>
         </tbody>
       </table>
@@ -1139,38 +1138,6 @@ methods:
       transmitted via a secure solution like
       [Memory Stores](../../../cloud-services/memory-stores/index.md).
 
-      #### LaunchData
-
-      Contains the string embedded in the launchData URL parameter that the user
-      clicked to join the experience. Only available on the first join. If the
-      user teleports to another server, the data isn't included. If you need the
-      data after a teleport, forward it manually as teleport data. You can only
-      include LaunchData in direct join URLs, not URLs to the experience's page.
-
-      LaunchData is a URL parameter that you can create by adding
-      `&launchData=abcd` to a URL, where `abcd` is the data. Special characters
-      such as spaces must be URL encoded using `Class.HttpService:UrlEncode()`
-      and are automatically decoded when the user joins the game. The decoded
-      launch data can't exceed 200 bytes. You can store more complex data as a
-      JSON string and decode it with `Class.HttpService:JSONDecode()` on the
-      server.
-
-      This link joins the LaunchData sample place and starts the user in room 2:
-      `https://www.roblox.com/games/start?placeId=6900305353&launchData=%7B%22roomId%22%3A%202%7D`
-
-      You can also make sure that this link works for users without Roblox
-      downloaded on their mobile devices by using the AppsFlyer version of the
-      link. The above link would look like:
-
-      `ro.blox.com/Ebh5?af_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2Fstart%3FplaceId%3D6900305353%26launchData%3D%257B%2522roomId%2522%253A%25202%257D&af_web_dp=https%3A%2F%2Fwww.roblox.com%2Fgames%2Fstart%3FplaceId%3D6900305353%26launchData%3D%257B%2522roomId%2522%253A%25202%257D`
-
-      To build the AppsFlyer version of the link, you need to start the URL with
-      `ro.blox.com/Ebh5?` and append the af_dp and af_web_dp parameters with the
-      URL encoded version of Link 1.
-
-      Don't store confidential information in the LaunchData because it's fully
-      visible in the URL. Furthermore, the data might not be authentic because a
-      user can modify the URL.
     code_samples:
       - Player-GetJoinData-Tracking-Traffic-Sources
       - Player-GetJoinData-Referral-Url-Generator

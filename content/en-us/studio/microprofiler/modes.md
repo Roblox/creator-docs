@@ -7,16 +7,21 @@ The MicroProfiler includes several modes, which can help you visualize your expe
 
 ## Frame Mode
 
-The most basic mode, **frame mode** shows a bar graph of frames flowing from the right (most recent) to the left. The height of each bar indicates the number of milliseconds that it took to complete the frame. Hover over a frame for some basic information around CPU and GPU time.
+The most basic mode, **frame mode** shows a bar graph of frames flowing from the right (most recent) to the left. The height of each bar indicates the number of milliseconds that it took to complete the frame. Hover over a frame for some basic information around CPU and GPU usage.
 
-<img alt="The Microprofiler frame graph, showing blue frames and detailed frame information." src="../../assets/optimization/microprofiler/micro-frame.png" width="440px" />
+<img alt="The Microprofiler frame graph, showing blue frames and detailed frame information." src="../../assets/optimization/microprofiler/micro-frame.png" width="300px" />
 
-- Orange bars indicate "standard" frames where the **Jobs** time exceeds the **Render** time.
-- Blue bars indicate frames where the **Render** time exceeds the **Jobs** time. Hover over one of these frames, and you can see a positive value for **Waiting for Rendering Thread**.
+- Orange bars indicate "standard" frames where the **Jobs Wall Time** exceeds the **Render Wall Time**.
+- Blue bars indicate frames where the **Render Wall Time** exceeds the **Jobs Wall Time**.
 
-  Blue frames are common when you run the MicroProfiler inside of Studio, but a large number of these frames in the Roblox client indicates a rendering bottleneck.
+  Blue bars are common when you run the MicroProfiler inside of Studio, but a large number of these frames in the Roblox client indicates a rendering bottleneck. Common causes are excessive object density, object movement, and lighting. See [Improving Performance](../../performance-optimization/improving.md#rendering).
 
-  <img alt="The Microprofiler frame graph, showing blue frames and detailed frame information." src="../../assets/optimization/microprofiler/micro-blue.png" width="440px" />
+- Red bars indicate frames where two conditions are true:
+
+  - **Render Wall Time** exceeds **Jobs Wall Time**
+  - **GPU Wait Time** is greater than 2.5 milliseconds
+
+  Red bars are less common than orange and blue and often the result of excessive object complexity, texture size, and visual effects. Optimization is similar to blue bars. See [Improving Performance](../../performance-optimization/improving.md#rendering).
 
 Pausing the MicroProfiler with <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>) while in frame mode launches **detailed mode**.
 
