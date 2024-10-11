@@ -43,3 +43,6 @@ columns:
         - title: Reference
           navigation: /cloud/reference.yaml
           path: /cloud/reference/
+        - title: Legacy
+          navigation: /cloud/legacy.yaml
+          path: /cloud/legacy

@@ -19,11 +19,11 @@ deprecation_message: |
 properties:
   - name: IntConstrainedValue.ConstrainedValue
     summary: |
-      Hold a `Integer` value between `Class.IntConstrainedValue.MinValue` and
+      Hold an `Integer` value between `Class.IntConstrainedValue.MinValue` and
       `Class.IntConstrainedValue.MaxValue`. Replaced by
       `Class.IntConstrainedValue.Value`, but still functional.
     description: |
-      Hold a `Integer` value between `Class.IntConstrainedValue.MinValue` and
+      Hold an `Integer` value between `Class.IntConstrainedValue.MinValue` and
       `Class.IntConstrainedValue.MaxValue`. Replaced by
       `Class.IntConstrainedValue.Value`, but still functional.
     code_samples:
@@ -86,10 +86,10 @@ properties:
       can_save: true
   - name: IntConstrainedValue.Value
     summary: |
-      Used to hold a integer value between `Class.IntConstrainedValue.MinValue`
+      Used to hold an integer value between `Class.IntConstrainedValue.MinValue`
       and `Class.IntConstrainedValue.MaxValue`.
     description: |
-      Used to hold a integer value between `Class.IntConstrainedValue.MinValue`
+      Used to hold an integer value between `Class.IntConstrainedValue.MinValue`
       and `Class.IntConstrainedValue.MaxValue`.
     code_samples:
     type: int64

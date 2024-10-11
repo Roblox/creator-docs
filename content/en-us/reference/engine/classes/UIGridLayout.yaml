@@ -128,7 +128,7 @@ properties:
   - name: UIGridLayout.FillDirectionMaxCells
     summary: |
       Determines the maximum number of cells that may be used in a row or column
-      before before the next one is started.
+      before the next one is started.
     description: |
       FillDirectionMaxCells determines the number of cells in the grid that can
       be used before continuing on the next row/column (whether this is a row or

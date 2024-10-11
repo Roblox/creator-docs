@@ -566,14 +566,14 @@ navigation:
         path: /production/promotion/experience-events
       - title: Player Invite Prompts
         path: /production/promotion/invite-prompts
-      - title: Deep Linking
-        path: /production/promotion/deeplinking
       - title: Experience Notifications
         path: /production/promotion/experience-notifications
       - title: Nominating for the Discover Page
         path: /production/promotion/nominating-for-the-discover-page
       - title: Getting Featured on Roblox‑Owned Channels
         path: /production/promotion/getting-featured-on-roblox-owned-channels
+      - title: Deep Linking
+        path: /production/promotion/deeplinking
   - title: Monetization
     path: /production/monetization/
     section:

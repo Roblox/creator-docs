@@ -1,0 +1,10 @@
+navigation:
+  - heading: Legacy
+  - title: Overview
+    path: /cloud/legacy
+  - heading: APIs
+  - title: Users
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/users/v1

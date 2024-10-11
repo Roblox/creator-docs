@@ -1108,7 +1108,7 @@ methods:
           <tr>
             <th> LaunchData </th>
             <td> string </td>
-            <td>A plain or JSON encoded string that contains launch data specified in a deep link URL or
+            <td>A plain or JSON encoded string that contains launch data specified in a <a href="../../../production/promotion/deeplinking.md">deep link</a> URL or
             <code>Class.ExperienceInviteOptions.LaunchData</code>.</td>
           </tr>
         </tbody>
