@@ -3,6 +3,56 @@ navigation:
   - title: Overview
     path: /cloud/legacy
   - heading: APIs
+  - title: Badges
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/badges/v1
+  - title: Develop v2
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/develop/v2
+  - title: Develop v1
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/develop/v1
+  - title: Followings v2
+    type: cloudapi
+    versions:
+      - name: v2
+        path: /cloud/legacy/followings/v2
+  - title: Followings v1
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/followings/v1
+  - title: Game Internationalization v2
+    type: cloudapi
+    versions:
+      - name: v2
+        path: /cloud/legacy/gameinternationalization/v2
+  - title: Game Internationalization v1
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/gameinternationalization/v1
+  - title: Groups v2
+    type: cloudapi
+    versions:
+      - name: v2
+        path: /cloud/legacy/groups/v2
+  - title: Groups v1
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/groups/v1
+  - title: Localization Tables
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/localizationtables/v1
   - title: Users
     type: cloudapi
     versions:

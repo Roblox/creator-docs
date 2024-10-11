@@ -3,18 +3,18 @@ title: Legacy Overview
 description: Lists legacy REST APIs for Open Cloud.
 ---
 
-Roblox offers [API key](./open-cloud/api-keys.md) and/or [OAuth 2.0](./open-cloud/oauth2-overview.md) support for certain legacy APIs. Instead of sharing cookies, you can grant access to specific permissions and use these more secure authentication methods.
+Roblox offers [API key](./open-cloud/api-keys.md) and/or [OAuth 2.0](./open-cloud/oauth2-overview.md) support for the legacy APIs on this page. Instead of sharing cookies, you can grant access to specific permissions and use these more secure authentication methods.
 
 These legacy APIs support do not have the same guarantees as the newer Open Cloud APIs. **Specifically, they might change without notice and break your application.**
 
 This page summarizes the available operations, but you might find the Swagger documentation useful, as well:
 
-- [Badges API](https://badges.roblox.com/docs/)
-- [Followings API](https://followings.roblox.com/docs/)
-- [Game Internationalization API](https://gameinternationalization.roblox.com/docs/)
-- [Localization Tables API](https://localizationtables.roblox.com/docs/)
-- [Groups API](https://groups.roblox.com/docs/)
-- [Develop API](https://develop.roblox.com/docs/)
+- [Badges API](/cloud/legacy/badges/v1)
+- [Develop API](/cloud/legacy/develop/v1)
+- [Followings API](/cloud/legacy/followings/v1)
+- [Game Internationalization API](/cloud/legacy/gameinternationalization/v1)
+- [Groups API](/cloud/legacy/groups/v1)
+- [Localization Tables API](/cloud/legacy/localizationtables/v1)
 
 ## Badges API
 
