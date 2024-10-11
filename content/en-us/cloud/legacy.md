@@ -109,7 +109,6 @@ This page summarizes the available operations, but you might find the Swagger do
 | GetGroupSettings                  | `GET v1/groups/{groupId}/settings`                  | `legacy-group:manage` |
 | UpdateGroupSettings               | `PATCH v1/groups/{groupId}/settings`                | `legacy-group:manage` |
 | UpdateGroupStatus                 | `PATCH v1/groups/{groupId}/status`                  | `legacy-group:manage` |
-| UpdateGroupNotificationPreference | `PATCH v1/groups/{groupId}/notification-preference` | `legacy-user:manage` |
 | UpdateGroupDescription            | `PATCH v1/groups/{groupId}/description`             | `legacy-group:manage` |
 
 ## Develop API
