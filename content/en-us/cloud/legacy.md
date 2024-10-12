@@ -7,7 +7,7 @@ Roblox offers [API key](./open-cloud/api-keys.md) and/or [OAuth 2.0](./open-clou
 
 These legacy APIs support do not have the same guarantees as the newer Open Cloud APIs. **Specifically, they might change without notice and break your application.**
 
-This page summarizes the available operations, but you might find the Swagger documentation useful, as well:
+This page summarizes the available operations, but you might find the legacy API documentation useful, as well:
 
 - [Badges API](/cloud/legacy/badges/v1)
 - [Develop API](/cloud/legacy/develop/v1)
