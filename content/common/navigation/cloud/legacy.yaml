@@ -3,21 +3,111 @@ navigation:
   - title: Overview
     path: /cloud/legacy
   - heading: APIs
+  - title: Account Information
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/accountinformation/v1
+  - title: Account Settings
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/accountsettings/v1
+  - title: Ad Configuration
+    type: cloudapi
+    versions:
+      - name: v2
+        path: /cloud/legacy/adconfiguration/v2
+  - title: Asset Delivery v2
+    type: cloudapi
+    versions:
+      - name: v2
+        path: /cloud/legacy/assetdelivery/v2
+  - title: Asset Delivery v1
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/assetdelivery/v1
+  - title: Auth v2
+    type: cloudapi
+    versions:
+      - name: v2
+        path: /cloud/legacy/auth/v2
+  - title: Auth v1
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/auth/v1
+  - title: Avatar v2
+    type: cloudapi
+    versions:
+      - name: v2
+        path: /cloud/legacy/avatar/v2
+  - title: Avatar v1
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/avatar/v1
   - title: Badges
     type: cloudapi
     versions:
       - name: v1
         path: /cloud/legacy/badges/v1
-  - title: Develop v2
+  - title: Catalog v2
+    type: cloudapi
+    versions:
+      - name: v2
+        path: /cloud/legacy/catalog/v2
+  - title: Catalog v1
     type: cloudapi
     versions:
       - name: v1
+        path: /cloud/legacy/catalog/v1
+  - title: Chat
+    type: cloudapi
+    versions:
+      - name: v2
+        path: /cloud/legacy/chat/v2
+  - title: Client Settings v2
+    type: cloudapi
+    versions:
+      - name: v2
+        path: /cloud/legacy/clientsettings/v2
+  - title: Client Settings v1
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/clientsettings/v1
+  - title: Contacts
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/contacts/v1
+  - title: Develop v2
+    type: cloudapi
+    versions:
+      - name: v2
         path: /cloud/legacy/develop/v2
   - title: Develop v1
     type: cloudapi
     versions:
       - name: v1
         path: /cloud/legacy/develop/v1
+  - title: Economy
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/economy/v1
+  - title: Economy Creator Stats
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/economycreatorstats/v1
+  - title: Engagement Payouts
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/engagementpayouts/v1
   - title: Followings v2
     type: cloudapi
     versions:
@@ -28,6 +118,11 @@ navigation:
     versions:
       - name: v1
         path: /cloud/legacy/followings/v1
+  - title: Friends
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/friends/v1
   - title: Game Internationalization v2
     type: cloudapi
     versions:
@@ -38,6 +133,21 @@ navigation:
     versions:
       - name: v1
         path: /cloud/legacy/gameinternationalization/v1
+  - title: Game Join
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/gamejoin/v1
+  - title: Games v2
+    type: cloudapi
+    versions:
+      - name: v2
+        path: /cloud/legacy/games/v2
+  - title: Games v1
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/games/v1
   - title: Groups v2
     type: cloudapi
     versions:
@@ -48,11 +158,86 @@ navigation:
     versions:
       - name: v1
         path: /cloud/legacy/groups/v1
+  - title: Inventory v2
+    type: cloudapi
+    versions:
+      - name: v2
+        path: /cloud/legacy/inventory/v2
+  - title: Inventory v1
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/inventory/v1
+  - title: Item Configuration
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/itemconfiguration/v1
+  - title: Locale
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/locale/v1
   - title: Localization Tables
     type: cloudapi
     versions:
       - name: v1
         path: /cloud/legacy/localizationtables/v1
+  - title: Metrics
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/metrics/v1
+  - title: Notifications
+    type: cloudapi
+    versions:
+      - name: v2
+        path: /cloud/legacy/notifications/v2
+  - title: Premium Features
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/premiumfeatures/v1
+  - title: Presence
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/presence/v1
+  - title: Private Messages
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/privatemessages/v1
+  - title: Publish
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/publish/v1
+  - title: Thumbnails
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/thumbnails/v1
+  - title: Thumbnails Resizer
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/thumbnailsresizer/v1
+  - title: Trades
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/trades/v1
+  - title: Translation Roles
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/translationroles/v1
+  - title: Two Step Verification
+    type: cloudapi
+    versions:
+      - name: v1
+        path: /cloud/legacy/twostepverification/v1
   - title: Users
     type: cloudapi
     versions:
