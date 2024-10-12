@@ -82,6 +82,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.Font
     summary: |
       Determines the font used to render text.
@@ -116,6 +119,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.FontFace
     summary: |
       Determines the font used to render text.
@@ -138,6 +144,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.FontSize
     summary: |
       Determines the height in offsets of one line of text.
@@ -160,6 +169,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.LineHeight
     summary: |
       Scales the spacing between lines of text in the `Class.TextLabel`.
@@ -179,6 +191,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.LocalizedText
     summary: |
       Sets whether a `Class.TextLabel` should be `Class.GuiBase2d.Localize` or
@@ -201,6 +216,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.MaxVisibleGraphemes
     summary: |
       The maximum number of graphemes the `Class.TextLabel` can show.
@@ -228,6 +246,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.OpenTypeFeatures
     summary: ''
     description: ''
@@ -243,6 +264,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.OpenTypeFeaturesError
     summary: ''
     description: ''
@@ -260,6 +284,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.RichText
     summary: |
       Determines whether the TextLabel renders the `Class.TextLabel.Text` string
@@ -284,6 +311,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.Text
     summary: |
       Determines the string rendered by the UI element.
@@ -321,6 +351,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextBounds
     summary: |
       The size of a UI element's text in offsets.
@@ -348,6 +381,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextColor
     summary: ''
     description: ''
@@ -370,6 +406,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextColor3
     summary: |
       This property determines the color of rendered text.
@@ -404,6 +443,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextDirection
     summary: ''
     description: ''
@@ -419,6 +461,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextFits
     summary: |
       Enables when rendered text content does not fit within the UI element's
@@ -447,6 +492,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextScaled
     summary: |
       Determines whether text in a UI element is scaled to fill the UI element.
@@ -507,6 +555,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextSize
     summary: |
       Determine the line height of text in offsets.
@@ -540,6 +591,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextStrokeColor3
     summary: |
       Determines the color of the text stroke (outline).
@@ -565,6 +619,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextStrokeTransparency
     summary: |
       Determines the transparency of the text stroke (outline).
@@ -597,6 +654,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextTransparency
     summary: |
       Determines the transparency of rendered text.
@@ -631,6 +691,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextTruncate
     summary: |
       Controls the truncation of the text displayed in this TextLabel.
@@ -648,6 +711,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextWrap
     summary: |
       Determines if text wraps to multiple lines within the UI element space,
@@ -672,6 +738,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextWrapped
     summary: |
       Determines if text wraps to multiple lines within the
@@ -702,6 +771,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextXAlignment
     summary: |
       Determines the horizontal alignment of rendered text.
@@ -731,6 +803,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextLabel.TextYAlignment
     summary: |
       Determines the vertical alignment of rendered text.
@@ -759,6 +834,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

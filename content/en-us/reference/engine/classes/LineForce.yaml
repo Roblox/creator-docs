@@ -64,6 +64,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: LineForce.InverseSquareLaw
     summary: |
       When true, the force magnitude is multiplied by the inverse square of the
@@ -83,6 +86,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: LineForce.Magnitude
     summary: |
       The magnitude of the force.
@@ -100,6 +106,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: LineForce.MaxForce
     summary: |
       Maximum absolute force that can be applied.
@@ -122,6 +131,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: LineForce.ReactionForceEnabled
     summary: |
       Enables an equal and opposite reaction force on the parent of
@@ -145,6 +157,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

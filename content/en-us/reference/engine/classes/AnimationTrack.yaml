@@ -39,6 +39,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: AnimationTrack.IsPlaying
     summary: |
       A read only property that returns true when the `Class.AnimationTrack` is
@@ -68,6 +71,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: AnimationTrack.Length
     summary: |
       A read only property that returns the length (in seconds) of an
@@ -96,6 +102,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: AnimationTrack.Looped
     summary: |
       Sets whether the animation will repeat after finishing. If it is changed
@@ -129,6 +138,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: AnimationTrack.Priority
     summary: |
       Sets the priority of an `Class.AnimationTrack`. Depending on what this is
@@ -176,6 +188,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: AnimationTrack.Speed
     summary: |
       The Speed of an `Class.AnimationTrack` is a read only property that gives
@@ -216,6 +231,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: AnimationTrack.TimePosition
     summary: |
       Returns the position in time in seconds that an `Class.AnimationTrack` is
@@ -244,6 +262,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: AnimationTrack.WeightCurrent
     summary: |
       Read-only property that gives the current weight of the
@@ -285,6 +306,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: AnimationTrack.WeightTarget
     summary: |
       Read-only property that gives the current weight of the
@@ -329,6 +353,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Animation
+    writeCapabilities: []
 methods:
   - name: AnimationTrack:AdjustSpeed
     summary: |
@@ -370,6 +397,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationTrack:AdjustWeight
     summary: |
       Changes the weight of an animation, with the optional fadeTime parameter
@@ -424,6 +453,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationTrack:GetMarkerReachedSignal
     summary: |
       Returns an `Datatype.RBXScriptSignal|event` that fires when a specified
@@ -476,6 +507,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationTrack:GetTimeOfKeyframe
     summary: |
       Returns the time position of the first `Class.Keyframe` of the given name
@@ -510,6 +543,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationTrack:Play
     summary: |
       Plays the `Class.AnimationTrack`. Once called an `Class.AnimationTrack`
@@ -562,6 +597,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationTrack:Stop
     summary: |
       Stops the `Class.AnimationTrack`. Once called playback of the
@@ -599,6 +636,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: AnimationTrack.DidLoop
     summary: |
@@ -617,6 +656,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationTrack.Ended
     summary: |
       Fires when the `Class.AnimationTrack` is completely done moving anything
@@ -637,6 +678,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationTrack.KeyframeReached
     summary: |
       Fires every time playback of an `Class.AnimationTrack` reaches a
@@ -673,6 +716,8 @@ events:
       [Animation Editor](../../../animation/editor.md).
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationTrack.Stopped
     summary: |
       Fires when the `Class.AnimationTrack` finishes playing. The AnimationTrack
@@ -694,4 +739,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

@@ -49,6 +49,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

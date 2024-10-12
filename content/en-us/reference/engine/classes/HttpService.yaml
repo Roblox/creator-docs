@@ -108,6 +108,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Network
+    writeCapabilities: []
 methods:
   - name: HttpService:GenerateGUID
     summary: |
@@ -144,6 +147,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: HttpService:GetSecret
     summary: |
       Returns a `Datatype.Secret` from the secrets store.
@@ -175,6 +180,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: HttpService:JSONDecode
     summary: |
       Decodes a JSON string into a Lua table.
@@ -213,6 +220,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: HttpService:JSONEncode
     summary: |
       Generate a JSON string from a Lua table.
@@ -255,6 +264,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: HttpService:UrlEncode
     summary: |
       Replaces URL-unsafe characters with '%' and two hexadecimal characters.
@@ -290,6 +301,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: HttpService:GetAsync
     summary: |
       Send an HTTP GET request.
@@ -332,6 +345,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: HttpService:PostAsync
     summary: |
       Performs a HTTP POST request.
@@ -383,6 +398,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: HttpService:RequestAsync
     summary: |
       Sends an HTTP request using any HTTP method given a dictionary of
@@ -533,5 +550,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

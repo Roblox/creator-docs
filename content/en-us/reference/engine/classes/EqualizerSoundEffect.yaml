@@ -39,6 +39,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: EqualizerSoundEffect.LowGain
     summary: |
       The output volume of frequencies lower than 400 Hz.
@@ -57,6 +59,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: EqualizerSoundEffect.MidGain
     summary: |
       The output volume of frequencies between 400 and 4000 Hz.
@@ -75,6 +79,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

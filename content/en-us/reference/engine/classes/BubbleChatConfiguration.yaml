@@ -33,6 +33,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.BackgroundColor3
     summary: |
       Background color of bubbles.
@@ -51,6 +54,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.BackgroundTransparency
     summary: |
       Determines the background transparency of the default bubble chat as a
@@ -73,6 +79,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.BubbleDuration
     summary: |
       Time before a bubble fades out, in seconds.
@@ -90,6 +99,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.BubblesSpacing
     summary: |
       Vertical space between stacked bubbles, in pixels.
@@ -107,6 +119,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.Enabled
     summary: |
       Whether text chat bubbles are enabled.
@@ -124,6 +139,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.Font
     summary: |
       `Datatype.Font` of the bubble text.
@@ -142,6 +160,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.FontFace
     summary: |
       `Datatype.Font` of the bubble text.
@@ -161,6 +182,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.LocalPlayerStudsOffset
     summary: |
       Offset of bubbles from their adornee, in studs.
@@ -179,6 +203,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.MaxBubbles
     summary: |
       Maximum number of text chat bubbles shown per user.
@@ -198,6 +225,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.MaxDistance
     summary: |
       Maximum distance from the camera that bubbles are shown.
@@ -215,6 +245,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.MinimizeDistance
     summary: |
       Distance from the camera when bubbles turn into a single bubble with an
@@ -234,6 +267,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.TailVisible
     summary: |
       Determines if the tail at the bottom of the text chat bubbles is visible.
@@ -252,6 +288,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.TextColor3
     summary: |
       Color of bubble text.
@@ -270,6 +309,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.TextSize
     summary: |
       Size of bubble text.
@@ -287,6 +329,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: BubbleChatConfiguration.VerticalStudsOffset
     summary: |
       Extra space between bubbles and their adornee, in studs.
@@ -304,6 +349,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

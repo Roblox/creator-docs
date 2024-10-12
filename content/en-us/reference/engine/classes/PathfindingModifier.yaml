@@ -52,6 +52,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PathfindingModifier.PassThrough
     summary: |
       Determines if the parts enclosed by the modifier are traversable, even if
@@ -72,6 +74,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

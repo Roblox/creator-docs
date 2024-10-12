@@ -34,6 +34,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.AutoLoad
     summary: |
       Controls whether `Class.AudioPlayer.AssetId|AssetId` loads automatically
@@ -54,6 +57,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.IsPlaying
     summary: |
       Denotes whether this `Class.AudioPlayer` is currently playing.
@@ -74,6 +80,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.IsReady
     summary: |
       Denotes whether this `Class.AudioPlayer` is loaded, buffered, and ready to
@@ -97,6 +106,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.LoopRegion
     summary: |
       A range, in seconds, denoting a desired loop start and loop end within the
@@ -140,6 +152,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.Looping
     summary: |
       Controls whether this `Class.AudioPlayer` loops.
@@ -160,6 +175,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.PlaybackRegion
     summary: |
       Range in seconds denoting a desired start time (minimum) and stop time
@@ -199,6 +217,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.PlaybackSpeed
     summary: |
       Controls how quickly the asset will be played, which controls its pitch.
@@ -217,6 +238,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.TimeLength
     summary: |
       Denotes the length of the loaded asset.
@@ -237,6 +261,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.TimePosition
     summary: |
       Tracks the current position of the playhead within the asset.
@@ -255,6 +282,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.Volume
     summary: |
       Controls how loudly the asset will be played.
@@ -273,6 +303,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioPlayer:GetConnectedWires
     summary: |
@@ -294,6 +327,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioPlayer:Play
     summary: |
       Plays the `Class.AudioPlayer` from wherever its
@@ -311,6 +346,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioPlayer:Stop
     summary: |
       Stops the `Class.AudioPlayer` wherever its
@@ -328,6 +365,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: AudioPlayer.Ended
     summary: ''
@@ -338,6 +377,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioPlayer.Looped
     summary: ''
     description: ''
@@ -347,4 +388,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

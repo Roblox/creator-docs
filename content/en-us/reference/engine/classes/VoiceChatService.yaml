@@ -37,6 +37,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: VoiceChatService.UseAudioApi
     summary: ''
     description: ''
@@ -52,6 +54,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: VoiceChatService:IsVoiceEnabledForUserIdAsync
     summary: |
@@ -92,5 +96,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

@@ -92,6 +92,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: EditableImage:Copy
     summary: |
@@ -123,6 +125,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:Crop
     summary: |
       Crops the `Class.EditableImage` to the specified subregion.
@@ -150,6 +154,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:DrawCircle
     summary: |
       Draws a circle at the specified point.
@@ -195,6 +201,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:DrawImage
     summary: |
       Draws another `Class.EditableImage` into this `Class.EditableImage` at the
@@ -229,6 +237,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:DrawLine
     summary: |
       Draws a line between two provided points.
@@ -270,6 +280,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:DrawProjectionImage
     summary: ''
     description: ''
@@ -294,6 +306,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:DrawRectangle
     summary: |
       Draws a rectangle of the given size at the given top-left position.
@@ -337,6 +351,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:ReadPixels
     summary: |
       Reads a rectangular region of pixels.
@@ -371,6 +387,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:ReadPixelsBuffer
     summary: |
       Reads a rectangular region of pixels into a buffer.
@@ -406,6 +424,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:Resize
     summary: |
       Resizes the contents and canvas.
@@ -426,6 +446,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:Rotate
     summary: |
       Rotates the image around its center.
@@ -451,6 +473,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:WritePixels
     summary: |
       Writes a rectangular region of pixels into the image.
@@ -489,6 +513,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:WritePixelsBuffer
     summary: |
       Writes a rectangular region of pixels into the image.
@@ -528,5 +554,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

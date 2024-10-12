@@ -41,6 +41,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: TriangleMeshPart.FluidFidelity
     summary: |
       Determines the geometric representation used to compute aerodynamic forces
@@ -61,6 +64,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: TriangleMeshPart.MeshSize
     summary: ''
     description: ''
@@ -78,6 +84,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

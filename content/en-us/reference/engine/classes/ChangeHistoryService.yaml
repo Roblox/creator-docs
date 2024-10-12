@@ -62,6 +62,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ChangeHistoryService:GetCanRedo
     summary: |
       Returns whether there are actions that can be redone, and, if there are,
@@ -78,6 +80,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ChangeHistoryService:GetCanUndo
     summary: |
       Returns whether there are actions that can be undone, and, if there are,
@@ -94,6 +98,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ChangeHistoryService:IsRecordingInProgress
     summary: ''
     description: ''
@@ -110,6 +116,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ChangeHistoryService:Redo
     summary: |
       Executes the last action that was undone.
@@ -124,6 +132,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ChangeHistoryService:ResetWaypoints
     summary: |
       Clears the history, causing all undo/redo waypoints to be removed.
@@ -138,6 +148,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ChangeHistoryService:SetEnabled
     summary: |
       Sets whether or not the ChangeHistoryService is enabled.
@@ -159,6 +171,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ChangeHistoryService:SetWaypoint
     summary: |
       Sets a new waypoint which can be used as an undo or redo point.
@@ -191,6 +205,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ChangeHistoryService:TryBeginRecording
     summary: |
       Begins tracking changes made to the data model into a recording.
@@ -232,6 +248,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ChangeHistoryService:Undo
     summary: |
       Undos the last action taken, for which there exists a waypoint.
@@ -246,6 +264,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: ChangeHistoryService.OnRecordingFinished
     summary: |
@@ -285,6 +305,8 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ChangeHistoryService.OnRecordingStarted
     summary: |
       Fired when the user begins an action. Parameters come from
@@ -307,6 +329,8 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ChangeHistoryService.OnRedo
     summary: |
       Fired when the user reverses the undo command. Waypoint describes the type
@@ -324,6 +348,8 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ChangeHistoryService.OnUndo
     summary: |
       Fired when the user undoes an action in studio. Waypoint describes the
@@ -341,4 +367,6 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

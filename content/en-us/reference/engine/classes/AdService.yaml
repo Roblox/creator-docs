@@ -35,6 +35,8 @@ methods:
       work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: AdService.VideoAdClosed
     summary: |
@@ -55,4 +57,6 @@ events:
       work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

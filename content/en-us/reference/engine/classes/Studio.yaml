@@ -31,6 +31,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio."function" Color
     summary: ''
     description: ''
@@ -47,6 +49,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio."local" Color
     summary: ''
     description: ''
@@ -63,6 +67,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio."nil" Color
     summary: ''
     description: ''
@@ -79,6 +85,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio."self" Color
     summary: ''
     description: ''
@@ -95,6 +103,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.ActionOnStopSync
     summary: ''
     description: ''
@@ -110,6 +120,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Active Color
     summary: ''
     description: ''
@@ -125,6 +137,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Active Hover Over Color
     summary: ''
     description: ''
@@ -140,6 +154,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Always Save Script Changes
     summary: |
       If set to true, Roblox Studio will attempt to transfer script changes that
@@ -159,6 +175,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Animate Hover Over
     summary: |
       If set to true, the hover selection box that is shown when mousing over
@@ -180,6 +198,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Auto Clean Empty Line
     summary: ''
     description: ''
@@ -195,6 +215,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Auto Closing Brackets
     summary: ''
     description: ''
@@ -210,6 +232,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Auto Closing Quotes
     summary: ''
     description: ''
@@ -225,6 +249,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Auto Delete Closing Brackets and Quotes
     summary: ''
     description: ''
@@ -240,6 +266,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Auto Indent Rule
     summary: ''
     description: ''
@@ -255,6 +283,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Auto-Recovery Enabled
     summary: ''
     description: ''
@@ -270,6 +300,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Auto-Recovery Interval (Minutes)
     summary: ''
     description: ''
@@ -285,6 +317,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Automatically trigger AI Code Completion
     summary: ''
     description: ''
@@ -300,6 +334,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Background Color
     summary: |
       Specifies the background color of Roblox Studio's script editor.
@@ -318,6 +354,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Basic Objects Display Mode
     summary: |
       Sets the scrolling mode of the `Advanced Objects` tab in Roblox Studio.
@@ -335,6 +373,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Bool Color
     summary: ''
     description: ''
@@ -351,6 +391,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Bracket Color
     summary: ''
     description: ''
@@ -367,6 +409,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Built-in Function Color
     summary: |
       Sets the color of built-in functions and keywords in the script editor.
@@ -385,6 +429,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Camera Mouse Wheel Speed
     summary: |
       Sets how many studs the camera will move forward or backwards when using
@@ -404,6 +450,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Camera Pan Speed
     summary: ''
     description: ''
@@ -419,6 +467,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Camera Shift Speed
     summary: |
       Sets the speed in studs/sec that the camera moves while holding down Shift
@@ -438,6 +488,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Camera Speed
     summary: |
       Sets the speed in studs/sec that the camera moves when movement keys are
@@ -457,6 +509,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Camera Speed Adjust Binding
     summary: ''
     description: ''
@@ -472,6 +526,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Camera Zoom to Mouse Position
     summary: ''
     description: ''
@@ -487,6 +543,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.CameraAdaptiveSpeed
     summary: ''
     description: ''
@@ -502,6 +560,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.CameraTweenFocus
     summary: ''
     description: ''
@@ -517,6 +577,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Clear Output On Start
     summary: |
       If set to true, the output will be automatically cleared when game
@@ -536,6 +598,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.CommandBarLocalState
     summary: ''
     description: ''
@@ -551,6 +615,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Comment Color
     summary: |
       Specifies the color of comments in Roblox Studio's script editor.
@@ -569,6 +635,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Current Line Highlight Color
     summary: ''
     description: ''
@@ -585,6 +653,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Debugger Current Line Color
     summary: ''
     description: ''
@@ -601,6 +671,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Debugger Error Line Color
     summary: ''
     description: ''
@@ -617,6 +689,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.DefaultScriptFileDir
     summary: |
       Specifies the default prompt directory that will be opened when the user
@@ -636,6 +710,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.DeprecatedObjectsShown
     summary: |
       If set to true, deprecated objects will be shown in the Advanced Objects
@@ -655,6 +731,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.DisplayLanguage
     summary: ''
     description: ''
@@ -670,6 +748,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.DraggerActiveColor
     summary: ''
     description: ''
@@ -685,6 +765,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.DraggerMajorGridIncrement
     summary: ''
     description: ''
@@ -700,6 +782,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.DraggerMaxSoftSnaps
     summary: ''
     description: ''
@@ -715,6 +799,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.DraggerPassiveColor
     summary: ''
     description: ''
@@ -730,6 +816,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.DraggerShowHoverRuler
     summary: ''
     description: ''
@@ -745,6 +833,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.DraggerShowMeasurement
     summary: ''
     description: ''
@@ -760,6 +850,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.DraggerShowTargetSnap
     summary: ''
     description: ''
@@ -775,6 +867,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.DraggerSoftSnapMarginFactor
     summary: ''
     description: ''
@@ -790,6 +884,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.DraggerSummonMarginFactor
     summary: ''
     description: ''
@@ -805,6 +901,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.DraggerTiltRotateDuration
     summary: ''
     description: ''
@@ -820,6 +918,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Enable Autocomplete
     summary: |
       When set to true, the script editor and command bar will show an
@@ -839,6 +939,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Enable Autocomplete Doc View
     summary: ''
     description: ''
@@ -854,6 +956,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Enable CoreScript Debugger
     summary: ''
     description: ''
@@ -869,6 +973,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Enable Http Sandboxing
     summary: ''
     description: ''
@@ -884,6 +990,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Enable Internal Beta Features
     summary: ''
     description: ''
@@ -899,6 +1007,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Enable Internal Features
     summary: ''
     description: ''
@@ -914,6 +1024,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Enable Script Analysis
     summary: ''
     description: ''
@@ -929,6 +1041,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Enable Scrollbar Markers
     summary: ''
     description: ''
@@ -944,6 +1058,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Enable Signature Help
     summary: ''
     description: ''
@@ -959,6 +1075,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Enable Signature Help Doc View
     summary: ''
     description: ''
@@ -974,6 +1092,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Enable Temporary Tabs
     summary: ''
     description: ''
@@ -989,6 +1109,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Enable Temporary Tabs In Explorer
     summary: ''
     description: ''
@@ -1004,6 +1126,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Enable Type Hover
     summary: ''
     description: ''
@@ -1019,6 +1143,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.EnableCodeAssist
     summary: ''
     description: ''
@@ -1034,6 +1160,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.EnableIndentationRulers
     summary: ''
     description: ''
@@ -1049,6 +1177,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Error Color
     summary: |
       Specifies the color of the wavy underline shown when malformed code is
@@ -1069,6 +1199,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Find Selection Background Color
     summary: |
       Sets the highlight color of matches in the script editor's Find Selection
@@ -1089,6 +1221,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Font
     summary: |
       Specifies the font used in the script editor.
@@ -1106,6 +1240,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Format On Paste
     summary: ''
     description: ''
@@ -1121,6 +1257,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Format On Type
     summary: ''
     description: ''
@@ -1136,6 +1274,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.FreeCameraSpeedScroll
     summary: ''
     description: ''
@@ -1151,6 +1291,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Function Name Color
     summary: ''
     description: ''
@@ -1167,6 +1309,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Highlight Current Line
     summary: ''
     description: ''
@@ -1182,6 +1326,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Highlight Occurances
     summary: ''
     description: ''
@@ -1197,6 +1343,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.HintColor
     summary: ''
     description: ''
@@ -1213,6 +1361,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Hover Animate Speed
     summary: |
       Specifies how frequently the hover animation flashes when the mouse is
@@ -1232,6 +1382,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Hover Box Thickness
     summary: ''
     description: ''
@@ -1247,6 +1399,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Hover Line Thickness
     summary: ''
     description: ''
@@ -1262,6 +1416,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Hover Over Color
     summary: |
       Specifies the color that the hover selection box uses.
@@ -1279,6 +1435,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.IconOverrideDir
     summary: ''
     description: ''
@@ -1294,6 +1452,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Indent Using Spaces
     summary: ''
     description: ''
@@ -1309,6 +1469,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.IndentationRulerColor
     summary: ''
     description: ''
@@ -1325,6 +1487,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.InformationColor
     summary: ''
     description: ''
@@ -1341,6 +1505,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Keyword Color
     summary: |
       Sets the text color of built-in Lua keywords.
@@ -1359,6 +1525,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.LargeFileLineCountThreshold
     summary: ''
     description: ''
@@ -1374,6 +1542,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.LargeFileThreshold
     summary: ''
     description: ''
@@ -1389,6 +1559,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Line Thickness
     summary: |
       Sets the thickness of the `Class.Model.PrimaryPart` selection adornee.
@@ -1408,6 +1580,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.LoadAllBuiltinPluginsInRunModes
     summary: ''
     description: ''
@@ -1423,6 +1597,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.LoadUserPluginsInRunModes
     summary: ''
     description: ''
@@ -1438,6 +1614,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.LocalAssetsFolder
     summary: ''
     description: ''
@@ -1453,6 +1631,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.LuaDebuggerEnabled
     summary: |
       Specifies whether or not the Lua Debugger feature is enabled.
@@ -1470,6 +1650,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.LuaDebuggerEnabledAtStartup
     summary: ''
     description: ''
@@ -1488,6 +1670,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Luau Keyword Color
     summary: ''
     description: ''
@@ -1504,6 +1688,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Main Volume
     summary: ''
     description: ''
@@ -1519,6 +1705,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Matching Word Background Color
     summary: |
       Sets the highlight color of double-clicked variables in the script editor.
@@ -1537,6 +1725,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Maximum Output Lines
     summary: |
       The maximum number of lines that can be displayed in the output.
@@ -1554,6 +1744,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Menu Item Background Color
     summary: ''
     description: ''
@@ -1570,6 +1762,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Method Color
     summary: ''
     description: ''
@@ -1586,6 +1780,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Number Color
     summary: |
       Specifies the color of numbers in Roblox Studio's script editor.
@@ -1604,6 +1800,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Only Play Audio from Window in Focus
     summary: |
       If set to true, audio being played will only be heard if the game window
@@ -1623,6 +1821,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Operator Color
     summary: |
       Sets the text color of operator characters in the script editor.
@@ -1641,6 +1841,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Output Font
     summary: |
       Specifies the font used by the output.
@@ -1658,6 +1860,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Output Layout Mode
     summary: |
       Sets the layout mode of the output.
@@ -1675,6 +1879,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.PermissionLevelShown
     summary: |
       Sets the highest permission level that APIs have to have in order to be
@@ -1696,6 +1902,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Physical Draggers Select Scope By Default
     summary: ''
     description: ''
@@ -1711,6 +1919,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Pivot Snap To Geometry Color
     summary: ''
     description: ''
@@ -1726,6 +1936,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.PluginDebuggingEnabled
     summary: ''
     description: ''
@@ -1741,6 +1953,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.PluginsDir
     summary: |
       The directory where local plugins are stored.
@@ -1758,6 +1972,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Primary Text Color
     summary: ''
     description: ''
@@ -1774,6 +1990,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Property Color
     summary: ''
     description: ''
@@ -1790,6 +2008,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.ReloadBuiltinPluginsOnChange
     summary: ''
     description: ''
@@ -1805,6 +2025,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.ReloadLocalPluginsOnChange
     summary: ''
     description: ''
@@ -1820,6 +2042,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Respect Studio shortcuts when game has focus
     summary: |
       When set to true, Roblox Studio shortcuts will take priority over inputs
@@ -1839,6 +2063,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Ruler Color
     summary: ''
     description: ''
@@ -1855,6 +2081,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Rulers
     summary: ''
     description: ''
@@ -1870,6 +2098,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.RuntimeUndoBehavior
     summary: ''
     description: ''
@@ -1885,6 +2115,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Script Editor Color Preset
     summary: ''
     description: ''
@@ -1900,6 +2132,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Script Editor Scrollbar Background Color
     summary: ''
     description: ''
@@ -1916,6 +2150,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Script Editor Scrollbar Handle Color
     summary: ''
     description: ''
@@ -1932,6 +2168,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.ScriptTimeoutLength
     summary: |
       The time (in seconds) a script can wait to be resumed before timing out.
@@ -1949,6 +2187,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Scroll Past Last Line
     summary: ''
     description: ''
@@ -1964,6 +2204,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Secondary Text Color
     summary: ''
     description: ''
@@ -1980,6 +2222,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Select Color
     summary: |
       The color of the selection box used with object selections in the
@@ -1999,6 +2243,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Select/Hover Color
     summary: |
       Sets the color of the `Class.Model.PrimaryPart` selection box.
@@ -2016,6 +2262,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Selected Menu Item Background Color
     summary: ''
     description: ''
@@ -2032,6 +2280,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Selected Text Color
     summary: ''
     description: ''
@@ -2048,6 +2298,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Selection Background Color
     summary: |
       Sets the background color of selected text in the script editor.
@@ -2066,6 +2318,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Selection Box Thickness
     summary: ''
     description: ''
@@ -2081,6 +2335,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Selection Color
     summary: |
       Sets the text color of selected text in the script editor.
@@ -2099,6 +2355,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Selection Line Thickness
     summary: ''
     description: ''
@@ -2114,6 +2372,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Set Pivot of Imported Parts
     summary: ''
     description: ''
@@ -2129,6 +2389,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Show Core GUI in Explorer while Playing
     summary: |
       If set to true, the `Class.CoreGui` will be visible in the Explorer while
@@ -2148,6 +2410,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Show Diagnostics Bar
     summary: |
       If set to true, basic diagnostic information is shown in the bottom right.
@@ -2165,6 +2429,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Show FileSyncService
     summary: ''
     description: ''
@@ -2180,6 +2446,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Show Hidden Objects in Explorer
     summary: ''
     description: ''
@@ -2195,6 +2463,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Show Hover Over
     summary: |
       If set to true, hovering over an object in the `Class.Workspace` will show
@@ -2214,6 +2484,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Show Light Guides
     summary: ''
     description: ''
@@ -2229,6 +2501,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Show Navigation Labels
     summary: ''
     description: ''
@@ -2244,6 +2518,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Show Navigation Mesh
     summary: |
       When set to true, the navigation mesh used by the
@@ -2263,6 +2539,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Show Pathfinding Links
     summary: ''
     description: ''
@@ -2278,6 +2556,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Show Plugin GUI Service in Explorer
     summary: |
       When set to true, the `Class.PluginGuiService` will be shown in Roblox
@@ -2297,6 +2577,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Show Singly Selected Attachment Parent Frame
     summary: ''
     description: ''
@@ -2312,6 +2594,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Show Whitespace
     summary: ''
     description: ''
@@ -2327,6 +2611,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Show plus button on hover in Explorer
     summary: ''
     description: ''
@@ -2342,6 +2628,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.ShowCorePackagesInExplorer
     summary: ''
     description: ''
@@ -2357,6 +2645,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Skip Closing Brackets and Quotes
     summary: ''
     description: ''
@@ -2372,6 +2662,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.String Color
     summary: |
       Specifies the color of strings in the script editor.
@@ -2390,6 +2682,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Tab Width
     summary: |
       Specifies how many spaces are used to represent a tab in the script
@@ -2409,6 +2703,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Text Color
     summary: |
       Specifies the color of normal text in the script editor.
@@ -2427,6 +2723,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Text Wrapping
     summary: |
       If set to true, text in the script editor will be wrapped.
@@ -2444,6 +2742,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Theme
     summary: |
       Used to get/set current `Class.StudioTheme|theme` used by Studio.
@@ -2475,6 +2775,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.UI Theme
     summary: |
       Specifies the color scheme of Roblox Studio.
@@ -2496,6 +2798,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Use Bounding Box Move Handles
     summary: ''
     description: ''
@@ -2511,6 +2815,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Warning Color
     summary: |
       Specifies the color of the wavy underline shown when the script analyzer
@@ -2531,6 +2837,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Whitespace Color
     summary: ''
     description: ''
@@ -2547,6 +2855,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: Studio:GetAvailableThemes
     summary: |
@@ -2570,6 +2880,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: Studio.ThemeChanged
     summary: |
@@ -2584,4 +2896,6 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

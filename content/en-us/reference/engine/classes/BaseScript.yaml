@@ -46,6 +46,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BaseScript.Enabled
     summary: |
       Determines whether a `Class.BaseScript` will run or not.
@@ -83,6 +85,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BaseScript.LinkedSource
     summary: |
       The content ID of an uploaded script. When set binds the uploaded code to
@@ -120,6 +124,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BaseScript.RunContext
     summary: |
       Determines the context under which the script will run.
@@ -147,6 +153,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

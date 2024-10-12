@@ -40,6 +40,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioListener.DistanceAttenuation
     summary: |
       Represents how the perceived volume of emitted sounds change as the
@@ -66,6 +69,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioListener:GetConnectedWires
     summary: |
@@ -87,6 +93,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioListener:GetDistanceAttenuation
     summary: |
       Gets the distance attenuation curve that the `Class.AudioListener` is
@@ -106,6 +114,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioListener:GetInteractingEmitters
     summary: ''
     description: ''
@@ -118,6 +128,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioListener:SetDistanceAttenuation
     summary: |
       Sets the distance attenuation curve that the `Class.AudioListener` should
@@ -161,5 +173,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

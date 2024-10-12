@@ -87,6 +87,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.AssemblyAngularVelocity
     summary: |
       The angular velocity of the part's assembly.
@@ -122,6 +124,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.AssemblyCenterOfMass
     summary: |
       The center of mass of the part's assembly in world space.
@@ -150,6 +154,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.AssemblyLinearVelocity
     summary: |
       The linear velocity of the part's assembly.
@@ -187,6 +193,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.AssemblyMass
     summary: |
       The total mass of the part's assembly.
@@ -212,6 +220,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.AssemblyRootPart
     summary: |
       A reference to the root part of the assembly.
@@ -241,6 +251,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.BackParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Back face of a
@@ -270,6 +282,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.BackParamB
     summary: |
       Determines the second parameter for the SurfaceType on the Back face of a
@@ -300,6 +314,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.BackSurface
     summary: |
       Determines the type of surface for the Back face of a part (+Z direction).
@@ -328,6 +344,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.BackSurfaceInput
     summary: |
       Determines the kind of input for the Back face of a part (+Z direction).
@@ -360,6 +378,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.BottomParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Bottom face of a
@@ -389,6 +409,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.BottomParamB
     summary: |
       Determines the second parameter for the SurfaceType on the Bottom face of
@@ -419,6 +441,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.BottomSurface
     summary: |
       Determines the type of surface for the Bottom face of a part (-Y
@@ -448,6 +472,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.BottomSurfaceInput
     summary: |
       Determines the kind of input for the Bottom face of a part (-Y direction).
@@ -480,6 +506,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.BrickColor
     summary: |
       Determines the color of a part.
@@ -507,6 +535,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.CFrame
     summary: |
       Determines the position and orientation of the `Class.BasePart` in the
@@ -543,6 +573,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.CanCollide
     summary: |
       Determines whether a part may collide with other parts.
@@ -575,6 +607,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.CanQuery
     summary: |
       Determines whether the part is considered during spatial query operations.
@@ -601,6 +635,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.CanTouch
     summary: |
       Determines if `Class.BasePart.Touched|Touched` and
@@ -640,6 +676,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.CastShadow
     summary: |
       Determines whether or not a part casts a shadow.
@@ -662,6 +700,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.CenterOfMass
     summary: |
       Describes the world position in which a part's center of mass is located.
@@ -685,6 +725,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.CollisionGroup
     summary: |
       Describes the name of a part's collision group.
@@ -711,6 +753,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.CollisionGroupId
     summary: |
       Describes the automatically set ID number of a part's collision group.
@@ -738,6 +782,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Color
     summary: |
       Determines the color of a part.
@@ -764,6 +810,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.CurrentPhysicalProperties
     summary: |
       Indicates the current physical properties of the part.
@@ -794,6 +842,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.CustomPhysicalProperties
     summary: |
       Determines several physical properties of a part.
@@ -818,6 +868,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Elasticity
     summary: |
       Used to control the Elasticity of the part, but it no longer does
@@ -843,6 +895,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.EnableFluidForces
     summary: |
       Used to enable or disable aerodynamic forces on parts and assemblies.
@@ -861,6 +915,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.ExtentsCFrame
     summary: |
       The `Datatype.CFrame` of the physical extents of the `Class.BasePart`.
@@ -881,6 +937,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.ExtentsSize
     summary: |
       The actual physical size of the `Class.BasePart` as regarded by the
@@ -903,6 +961,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Friction
     summary: |
       Used to control the Friction of the part, but now it no longer does
@@ -930,6 +990,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.FrontParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Front face of a
@@ -959,6 +1021,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.FrontParamB
     summary: |
       Determines the second parameter for the SurfaceType on the Front face of a
@@ -989,6 +1053,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.FrontSurface
     summary: |
       Determines the type of surface for the Front face of a part (-Z
@@ -1018,6 +1084,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.FrontSurfaceInput
     summary: |
       Determines the kind of input for the Front face of a part (-Z direction).
@@ -1050,6 +1118,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.LeftParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Left face of a
@@ -1079,6 +1149,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.LeftParamB
     summary: |
       Determines the second parameter for the SurfaceType on the Left face of a
@@ -1109,6 +1181,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.LeftSurface
     summary: |
       Determines the type of surface for the Left face of a part (-X direction).
@@ -1137,6 +1211,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.LeftSurfaceInput
     summary: |
       Determines the kind of input for the Left face of a part (+X direction).
@@ -1169,6 +1245,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.LocalTransparencyModifier
     summary: |
       Determines a multiplier for `Class.BasePart.Transparency` that is only
@@ -1244,6 +1322,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Locked
     summary: |
       Determines whether a part is selectable in Studio.
@@ -1267,6 +1347,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Mass
     summary: |
       Describes the mass of the part, the product of its density and volume.
@@ -1296,6 +1378,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Massless
     summary: |
       Determines whether the part contributes to the total mass or inertia of
@@ -1330,6 +1414,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Material
     summary: |
       Determines the texture and default physical properties of a part.
@@ -1367,6 +1453,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.MaterialVariant
     summary: |
       The name of `Class.MaterialVariant`.
@@ -1390,6 +1478,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Orientation
     summary: |
       Describes the rotation of the part in the world.
@@ -1429,6 +1519,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.PivotOffset
     summary: |
       Specifies the offset of the part's pivot from its `Datatype.CFrame`.
@@ -1460,6 +1552,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Position
     summary: |
       Describes the position of the part in the world.
@@ -1490,6 +1584,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.ReceiveAge
     summary: |
       Time since last recorded physics update.
@@ -1512,6 +1608,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Reflectance
     summary: |
       Determines how much a part reflects the skybox.
@@ -1537,6 +1635,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.ResizeIncrement
     summary: |
       Describes the smallest change in size allowable by the Resize method.
@@ -1561,6 +1661,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.ResizeableFaces
     summary: |
       Describes the faces on which a part may be resized.
@@ -1591,6 +1693,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.RightParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Right face of a
@@ -1620,6 +1724,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.RightParamB
     summary: |
       Determines the second parameter for the SurfaceType on the Right face of a
@@ -1650,6 +1756,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.RightSurface
     summary: |
       Determines the type of surface for the Right face of a part (+X
@@ -1679,6 +1787,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.RightSurfaceInput
     summary: |
       Determines the kind of input for the Right face of a part (-X direction).
@@ -1703,6 +1813,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.RootPriority
     summary: |
       The main rule in determining the root part of an assembly.
@@ -1731,6 +1843,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.RotVelocity
     summary: |
       Determines a part's change in orientation over time.
@@ -1760,6 +1874,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Rotation
     summary: |
       The rotation of the part in degrees for the three axes.
@@ -1787,6 +1903,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Size
     summary: |
       Determines the dimensions of a part (length, width, height).
@@ -1823,6 +1941,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.SpecificGravity
     summary: |
       The ratio of the part's density to the density of water determined by the
@@ -1935,6 +2055,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.TopParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Top face of a
@@ -1964,6 +2086,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.TopParamB
     summary: |
       Determines the second parameter for the SurfaceType on the Top face of a
@@ -1994,6 +2118,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.TopSurface
     summary: |
       Determines the type of surface for the Top face of a part (+Y direction).
@@ -2022,6 +2148,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.TopSurfaceInput
     summary: |
       Determines the kind of input for the Top face of a part (+Y direction).
@@ -2054,6 +2182,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Transparency
     summary: |
       Determines how much a part can be seen through (the inverse of part
@@ -2089,6 +2219,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Velocity
     summary: |
       Determines a part's change in position over time.
@@ -2125,6 +2257,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.brickColor
     summary: ''
     description: ''
@@ -2144,6 +2278,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: BasePart:AngularAccelerationToTorque
     summary: ''
@@ -2165,6 +2301,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:ApplyAngularImpulse
     summary: |
       Apply an angular impulse to the assembly.
@@ -2199,6 +2337,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:ApplyImpulse
     summary: |
       Apply an impulse to the assembly at the assembly's
@@ -2237,6 +2377,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:ApplyImpulseAtPosition
     summary: |
       Apply an impulse to the assembly at specified position.
@@ -2281,6 +2423,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:BreakJoints
     summary: |
       Breaks any surface connection with any adjacent part, including
@@ -2298,6 +2442,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:CanCollideWith
     summary: |
       Returns whether the parts can collide with each other.
@@ -2320,6 +2466,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:CanSetNetworkOwnership
     summary: |
       Checks whether you can set a part's network ownership.
@@ -2343,6 +2491,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:GetClosestPointOnSurface
     summary: ''
     description: ''
@@ -2359,6 +2509,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:GetConnectedParts
     summary: |
       Returns a table of parts connected to the object by any kind of rigid
@@ -2397,6 +2549,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:GetJoints
     summary: |
       Return all Joints or Constraints that is connected to this Part.
@@ -2412,6 +2566,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:GetMass
     summary: |
       Returns the value of the `Class.BasePart.Mass|Mass` property.
@@ -2432,6 +2588,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:GetNetworkOwner
     summary: |
       Returns the current player who is the network owner of this part, or nil
@@ -2450,6 +2608,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:GetNetworkOwnershipAuto
     summary: |
       Returns true if the game engine automatically decides the network owner
@@ -2468,6 +2628,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:GetNoCollisionConstraints
     summary: ''
     description: ''
@@ -2480,6 +2642,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:GetRenderCFrame
     summary: |
       OBSOLETE. Returns a CFrame describing where the part is being rendered at.
@@ -2499,6 +2663,8 @@ methods:
       `Datatype.CFrame` directly. Do not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:GetRootPart
     summary: |
       Returns the base part of an assembly of parts.
@@ -2523,6 +2689,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:GetTouchingParts
     summary: |
       Returns a table of all `Class.BasePart.CanCollide` true parts that
@@ -2547,6 +2715,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:GetVelocityAtPosition
     summary: |
       Returns the linear velocity of the part's assembly at the given position
@@ -2570,6 +2740,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:IsGrounded
     summary: |
       Returns true if the object is connected to a part that will hold it in
@@ -2590,6 +2762,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:MakeJoints
     summary: |
       Creates a joint on any side of the object that has a surface ID that can
@@ -2636,6 +2810,8 @@ methods:
       `Class.HingeConstraint|HingeConstraints` should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:Resize
     summary: |
       Changes the size of an object just like using the Studio resize tool.
@@ -2661,6 +2837,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:SetNetworkOwner
     summary: |
       Sets the given player as network owner for this and all connected parts.
@@ -2682,6 +2860,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:SetNetworkOwnershipAuto
     summary: |
       Lets the game engine dynamically decide who will handle the part's physics
@@ -2698,6 +2878,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:TorqueToAngularAcceleration
     summary: ''
     description: ''
@@ -2718,6 +2900,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:breakJoints
     summary: ''
     description: ''
@@ -2733,6 +2917,8 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:getMass
     summary: ''
     description: ''
@@ -2748,6 +2934,8 @@ methods:
       variant, `Class.BasePart:GetMass()`.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:makeJoints
     summary: ''
     description: ''
@@ -2763,6 +2951,8 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:resize
     summary: ''
     description: ''
@@ -2786,6 +2976,8 @@ methods:
       should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:IntersectAsync
     summary: |
       Creates a new `Class.IntersectOperation` from the overlapping geometry of
@@ -2869,6 +3061,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:SubtractAsync
     summary: |
       Creates a new `Class.UnionOperation` from the part, minus the geometry
@@ -2928,6 +3122,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart:UnionAsync
     summary: |
       Creates a new `Class.UnionOperation` from the part, plus the geometry
@@ -3011,6 +3207,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: BasePart.LocalSimulationTouched
     summary: ''
@@ -3031,6 +3229,8 @@ events:
       This event is deprecated in favor of `Class.BasePart.Touched`.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.OutfitChanged
     summary: ''
     description: |
@@ -3043,6 +3243,8 @@ events:
       This event is deprecated. Do not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.StoppedTouching
     summary: ''
     description: ''
@@ -3059,6 +3261,8 @@ events:
       should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.TouchEnded
     summary: |
       Fires when a part stops touching another part as a result of physical
@@ -3082,6 +3286,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.Touched
     summary: |
       Fires when a part touches another part as a result of physical movement.
@@ -3114,4 +3320,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

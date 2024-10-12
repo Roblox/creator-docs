@@ -26,6 +26,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AvatarCreationService:GetBatchTokenDetailsAsync
     summary: ''
     description: ''
@@ -43,6 +45,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AvatarCreationService:PromptCreateAvatarAsync
     summary: ''
     description: ''
@@ -64,6 +68,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AvatarCreationService:PromptSelectAvatarGenerationImageAsync
     summary: ''
     description: ''
@@ -81,6 +87,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AvatarCreationService:ValidateUGCAccessoryAsync
     summary: ''
     description: ''
@@ -106,6 +114,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AvatarCreationService:ValidateUGCBodyPartAsync
     summary: ''
     description: ''
@@ -131,6 +141,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AvatarCreationService:ValidateUGCFullBodyAsync
     summary: ''
     description: ''
@@ -152,5 +164,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

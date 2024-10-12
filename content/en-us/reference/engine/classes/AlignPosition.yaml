@@ -77,6 +77,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignPosition.ForceLimitMode
     summary: |
       Determines how the constraint force will be limited. Only used if
@@ -103,6 +106,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignPosition.ForceRelativeTo
     summary: |
       Determines the axes that the constraint uses to limit the force. Only
@@ -133,6 +139,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignPosition.MaxAxesForce
     summary: |
       Maximum force along each axis that the constraint can apply to achieve its
@@ -156,6 +165,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignPosition.MaxForce
     summary: |
       Maximum force magnitude the constraint can apply to achieve its goal.
@@ -181,6 +193,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignPosition.MaxVelocity
     summary: |
       Maximum speed the attachments can move when converging.
@@ -204,6 +219,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignPosition.Mode
     summary: |
       Whether the constraint uses one or two attachments in calculating its
@@ -232,6 +250,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignPosition.Position
     summary: |
       The position to which the constraint should move its
@@ -254,6 +275,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignPosition.ReactionForceEnabled
     summary: |
       Whether the constraint applies force only to
@@ -277,6 +301,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignPosition.Responsiveness
     summary: |
       Controls how quickly the constraint reaches its goal. Higher values cause
@@ -296,6 +323,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignPosition.RigidityEnabled
     summary: |
       Whether force is dependent on other properties, or if the physics solver
@@ -320,6 +350,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

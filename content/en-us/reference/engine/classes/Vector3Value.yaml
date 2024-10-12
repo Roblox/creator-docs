@@ -32,6 +32,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events:
   - name: Vector3Value.Changed
@@ -64,6 +66,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Vector3Value.changed
     summary: ''
     description: ''
@@ -80,4 +84,6 @@ events:
       should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

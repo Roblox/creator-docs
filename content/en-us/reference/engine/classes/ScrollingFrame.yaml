@@ -35,6 +35,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.AbsoluteWindowSize
     summary: |
       The size in offsets of the frame, without the scrollbars.
@@ -54,6 +57,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.AutomaticCanvasSize
     summary: |
       Determines whether `Class.ScrollingFrame.CanvasSize` is resized based on
@@ -80,6 +86,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.BottomImage
     summary: |
       The Down image on the vertical scrollbar. Size of this is always
@@ -101,6 +110,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.CanvasPosition
     summary: |
       The location within the canvas, in offsets, that should be drawn at the
@@ -120,6 +132,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.CanvasSize
     summary: |
       Determines the size of the area that is scrollable. The UDim2 is
@@ -141,6 +156,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.ElasticBehavior
     summary: |
       Determines when elastic scrolling is allowed.
@@ -159,6 +177,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.HorizontalScrollBarInset
     summary: |
       Indicates the inset behavior of the horizontal scrolling bar.
@@ -176,6 +197,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.MidImage
     summary: |
       The middle image on the vertical scrollbar. The size of this can vary in
@@ -199,6 +223,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.ScrollBarImageColor3
     summary: |
       Determines how a rendered scroll bar image will be colorized.
@@ -219,6 +246,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.ScrollBarImageTransparency
     summary: |
       Determines the transparency of the rendered scroll bar image.
@@ -239,6 +269,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.ScrollBarThickness
     summary: |
       How thick the scroll bar appears. This applies to both the horizontal and
@@ -258,6 +291,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.ScrollingDirection
     summary: |
       Determines the direction scrolling is allowed in this scrolling frame.
@@ -277,6 +313,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.ScrollingEnabled
     summary: |
       Determines whether or not scrolling is allowed on the frame. If false, no
@@ -296,6 +335,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.TopImage
     summary: |
       The Up image on the vertical scrollbar. The size of this is always
@@ -317,6 +359,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.VerticalScrollBarInset
     summary: |
       Indicates the inset behavior of the vertical scrolling bar.
@@ -334,6 +379,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.VerticalScrollBarPosition
     summary: |
       Indicates the side that the vertical scrollbar will be located at.
@@ -351,6 +399,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

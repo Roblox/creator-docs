@@ -29,6 +29,8 @@ methods:
       `Class.Plugin`.
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PluginManagerInterface:ExportPlace
     summary: ''
     description: ''
@@ -45,6 +47,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PluginManagerInterface:ExportSelection
     summary: ''
     description: ''
@@ -61,5 +65,7 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

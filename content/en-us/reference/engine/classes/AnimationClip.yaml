@@ -49,6 +49,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: AnimationClip.Priority
     summary: |
       Determines which clip takes priority when multiple animations are playing
@@ -76,6 +79,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

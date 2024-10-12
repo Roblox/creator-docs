@@ -32,6 +32,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioFlanger.Depth
     summary: |
       Controls how strong the pitch modulation of the flanger is.
@@ -52,6 +55,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioFlanger.Mix
     summary: |
       Controls the balance of plain input stream to modified output stream.
@@ -70,6 +76,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioFlanger.Rate
     summary: |
       Controls the rate of pitch modulations.
@@ -88,6 +97,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioFlanger:GetConnectedWires
     summary: |
@@ -109,5 +121,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

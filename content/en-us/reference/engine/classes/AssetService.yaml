@@ -42,6 +42,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:CreateEditableMeshAsync
     summary: |
       Returns a new `Class.EditableMesh` instance created from an existing mesh
@@ -66,6 +68,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:CreateEditableMeshFromPartAsync
     summary: |
       Returns a new `Class.EditableMesh` instance created from an existing
@@ -91,6 +95,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:CreateMeshPartAsync
     summary: |
       Creates a new `Class.MeshPart` with a specified mesh ID and an optional
@@ -135,6 +141,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:CreatePlaceAsync
     summary: |
       Clones a place through the given `templatePlaceID`.
@@ -179,6 +187,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:CreatePlaceInPlayerInventoryAsync
     summary: |
       Clones a place through the given `templatePlaceID` and puts it into the
@@ -211,6 +221,8 @@ methods:
       This method has been removed and is no longer functional.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:GetAssetIdsForPackage
     summary: |
       Returns an array of asset IDs that are contained in a specified package.
@@ -231,6 +243,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:GetAudioMetadataAsync
     summary: |
       Provides relevant metadata about a specific audio source.
@@ -274,6 +288,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:GetBundleDetailsAsync
     summary: |
       Returns details of the contents of specified bundle.
@@ -319,6 +335,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:GetCreatorAssetID
     summary: |
       Returns the UserId of the account who created the creationID asset.
@@ -344,6 +362,8 @@ methods:
       for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:GetGamePlacesAsync
     summary: |
       Returns a `Class.StandardPages` object which contains the name and
@@ -362,6 +382,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:PromptCreateAssetAsync
     summary: |
       Allows in-experience asset creation for users by prompting a publish
@@ -399,6 +421,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:PromptImportAnimationClipFromVideoAsync
     summary: ''
     description: ''
@@ -420,6 +444,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:SavePlaceAsync
     summary: |
       Saves the state of the current place.
@@ -437,6 +463,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:SearchAudio
     summary: |
       Finds audio assets matching a variety of search criteria.
@@ -481,5 +509,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

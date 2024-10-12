@@ -29,6 +29,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ExplorerFilterAutocompleterInstance.RequiresOutsideContext
     summary: ''
     description: ''
@@ -46,6 +48,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: ExplorerFilterAutocompleterInstance:GetSuggestions
     summary: ''
@@ -59,5 +63,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

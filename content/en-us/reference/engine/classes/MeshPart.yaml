@@ -38,6 +38,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: MeshPart.HasJointOffset
     summary: ''
     description: ''
@@ -54,6 +57,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: MeshPart.HasSkinnedMesh
     summary: ''
     description: ''
@@ -70,6 +76,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: MeshPart.JointOffset
     summary: ''
     description: ''
@@ -86,6 +95,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: MeshPart.MeshId
     summary: |
       Content ID of the mesh that is displayed on the `Class.MeshPart`.
@@ -110,6 +122,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: MeshPart.RenderFidelity
     summary: |
       The level of detail used to render the `Class.MeshPart`.
@@ -161,6 +176,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: MeshPart.TextureID
     summary: |
       The texture applied to the `Class.MeshPart`.
@@ -207,6 +225,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
 methods:
   - name: MeshPart:ApplyMesh
     summary: ''
@@ -224,5 +245,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

@@ -36,6 +36,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: SoundEffect.Priority
     summary: |
       Determines the order the effect will be applied in relation to other
@@ -58,6 +60,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

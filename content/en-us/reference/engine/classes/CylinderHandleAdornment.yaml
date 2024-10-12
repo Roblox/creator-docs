@@ -36,6 +36,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: CylinderHandleAdornment.Height
     summary: |
       The height of the cylinder adornment.
@@ -53,6 +56,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: CylinderHandleAdornment.InnerRadius
     summary: |
       Inner radius of a hollow cylinder.
@@ -72,6 +78,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: CylinderHandleAdornment.Radius
     summary: |
       The radius of the cylinder adornment.
@@ -89,6 +98,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

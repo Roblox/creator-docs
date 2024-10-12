@@ -66,6 +66,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UITableLayout.FillEmptySpaceRows
     summary: |
       Determines whether cells are sized such that they occupy the vertical
@@ -94,6 +97,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UITableLayout.MajorAxis
     summary: |
       Determines whether sibling UI elements are treated as rows or columns.
@@ -113,6 +119,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UITableLayout.Padding
     summary: |
       Determines the empty space between cells.
@@ -134,6 +143,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -50,6 +50,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.EmitterSize
     summary: |
       The minimum distance, in studs, at which a 3D `Class.Sound` (direct child
@@ -87,6 +89,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.IsLoaded
     summary: |
       This property will be true when the `Class.Sound` has loaded from Roblox
@@ -120,6 +124,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.IsPaused
     summary: |
       This read-only property will return true when the `Class.Sound` is not
@@ -151,6 +157,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.IsPlaying
     summary: |
       This read-only property will return true when the `Class.Sound` is
@@ -179,6 +187,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.LoopRegion
     summary: |
       A range denoting a desired loop-start and loop-end within the
@@ -214,6 +224,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.Looped
     summary: |
       This sets whether or not the `Class.Sound` repeats once it has finished
@@ -239,6 +251,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.MaxDistance
     summary: |
       The maximum distance, in studs, a client's listener can be from the
@@ -280,6 +294,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.MinDistance
     summary: |
       The minimum distance at which a 3D `Class.Sound` (direct child of a
@@ -304,6 +320,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.Pitch
     summary: |
       Sets how high pitched and fast a `Class.Sound` is when it is played. The
@@ -326,6 +344,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.PlayOnRemove
     summary: |
       When true, the `Class.Sound` will play when it is removed from the game,
@@ -355,6 +375,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.PlaybackLoudness
     summary: |
       A number between 0 and 1000 indicating how loud the `Class.Sound` is
@@ -383,6 +405,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.PlaybackRegion
     summary: |
       A range denoting a desired start (min) and stop (max) time within the
@@ -416,6 +440,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.PlaybackRegionsEnabled
     summary: |
       If **true**, this property gives your `Class.Sound` access to the
@@ -437,6 +463,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.PlaybackSpeed
     summary: |
       Determines the speed at which a `Class.Sound` will play, with higher
@@ -466,6 +494,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.Playing
     summary: |
       Indicates whether the `Class.Sound` is currently playing.
@@ -501,6 +531,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.RollOffMaxDistance
     summary: |
       The maximum distance, in studs, a client's listener can be from the
@@ -538,6 +570,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.RollOffMinDistance
     summary: |
       The minimum distance, in studs, at which a 3D `Class.Sound` (direct child
@@ -571,6 +605,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.RollOffMode
     summary: |
       Controls how the volume of a 3D `Class.Sound` (parented to a
@@ -654,6 +690,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.SoundGroup
     summary: |
       The `Class.SoundGroup` that is linked to this `Class.Sound`. Volume and
@@ -681,6 +719,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.SoundId
     summary: |
       This property is the content ID of the sound file a `Class.Sound` object
@@ -715,6 +755,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.TimeLength
     summary: |
       The length of the `Class.Sound` in seconds. If the `Class.Sound` is not
@@ -742,6 +784,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.TimePosition
     summary: |
       Shows the progress in seconds of the `Class.Sound`. Can be changed to move
@@ -785,6 +829,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.Volume
     summary: |
       The volume of the `Class.Sound`. Can be set between 0 and 10. Defaults to
@@ -812,6 +858,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.isPlaying
     summary: ''
     description: ''
@@ -832,6 +880,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: Sound:Pause
     summary: |
@@ -889,6 +939,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Sound:Play
     summary: |
       Plays the `Class.Sound`. Sets `Class.Sound.TimePosition` to the last value
@@ -943,6 +995,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Sound:Resume
     summary: |
       Resumes the `Class.Sound`. Sets `Class.Sound.Playing` to true. Does not
@@ -997,6 +1051,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Sound:Stop
     summary: |
       Stops the `Class.Sound`. Sets `Class.Sound.Playing` to false then sets
@@ -1049,6 +1105,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Sound:pause
     summary: ''
     description: ''
@@ -1064,6 +1122,8 @@ methods:
       should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Sound:play
     summary: ''
     description: ''
@@ -1079,6 +1139,8 @@ methods:
       be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Sound:stop
     summary: ''
     description: ''
@@ -1094,6 +1156,8 @@ methods:
       be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: Sound.DidLoop
     summary: |
@@ -1124,6 +1188,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.Ended
     summary: |
       Fires when the `Class.Sound` has completed playback and stopped.
@@ -1155,6 +1221,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.Loaded
     summary: |
       Fires when the `Class.Sound` is loaded.
@@ -1177,6 +1245,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.Paused
     summary: |
       Fires whenever the `Class.Sound` is paused using `Class.Sound:Pause()`.
@@ -1199,6 +1269,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.Played
     summary: |
       Fires whenever the `Class.Sound` is played using the `Class.Sound:Play()`
@@ -1225,6 +1297,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.Resumed
     summary: |
       Fires when the `Class.Sound` is resumed using `Class.Sound:Resume()`.
@@ -1247,6 +1321,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Sound.Stopped
     summary: |
       Fires when the `Class.Sound` is stopped due to the `Class.Sound:Stop()`
@@ -1272,4 +1348,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

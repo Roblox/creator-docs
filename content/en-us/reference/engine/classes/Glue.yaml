@@ -32,6 +32,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: Glue.F1
     summary: |
       Determines the face of a `Class.Glue`.
@@ -50,6 +53,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: Glue.F2
     summary: |
       Determines the face of a `Class.Glue`.
@@ -68,6 +74,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: Glue.F3
     summary: |
       Determines the face of a `Class.Glue`.
@@ -86,6 +95,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

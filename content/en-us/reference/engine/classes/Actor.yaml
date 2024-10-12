@@ -63,6 +63,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Actor:BindToMessageParallel
     summary: |
       Binds a Luau callback to a message with the specified topic.
@@ -107,6 +109,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Actor:SendMessage
     summary: |
       Sends a message to an Actor.
@@ -144,5 +148,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

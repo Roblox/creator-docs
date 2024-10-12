@@ -32,6 +32,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: CharacterMesh.BodyPart
     summary: |
       The part of the Character's body that is affected.
@@ -49,6 +52,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: CharacterMesh.MeshId
     summary: |
       Used to load a mesh file, and apply it to the given BodyPart.
@@ -66,6 +72,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: CharacterMesh.OverlayTextureId
     summary: |
       The assetId of the overlay texture. The overlay covers Shirts, Pants,
@@ -85,6 +94,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

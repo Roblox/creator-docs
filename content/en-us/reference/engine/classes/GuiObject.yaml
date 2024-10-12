@@ -63,6 +63,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.AnchorPoint
     summary: |
       Determines the origin point of a `Class.GuiObject`, relative to its
@@ -89,6 +92,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.AutomaticSize
     summary: |
       Determines whether resizing occurs based on child content.
@@ -117,6 +123,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.BackgroundColor
     summary: |
       Determines the color of the `Class.GuiObject` background.
@@ -140,6 +149,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.BackgroundColor3
     summary: |
       Determines the `Class.GuiObject` background color.
@@ -167,6 +179,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.BackgroundTransparency
     summary: |
       Determines the transparency of the `Class.GuiObject` background and
@@ -193,6 +208,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.BorderColor
     summary: |
       Determines the color of the `Class.GuiObject` border.
@@ -215,6 +233,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.BorderColor3
     summary: |
       Determines the color of the `Class.GuiObject` border.
@@ -240,6 +261,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.BorderMode
     summary: |
       Determines in what manner the `Class.GuiObject` border is laid out
@@ -263,6 +287,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.BorderSizePixel
     summary: |
       Determines the pixel width of the `Class.GuiObject` border.
@@ -285,6 +312,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.ClipsDescendants
     summary: |
       Determines if descendant `Class.GuiObject|GuiObjects` outside of the
@@ -310,6 +340,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.Draggable
     summary: |
       Determines whether a `Class.GuiObject|GUI` (and its descendants) can be
@@ -332,6 +365,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.GuiState
     summary: ''
     description: ''
@@ -349,6 +385,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.Interactable
     summary: ''
     description: ''
@@ -364,6 +403,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.LayoutOrder
     summary: |
       Controls the sort order of the `Class.GuiObject` when used with a
@@ -398,6 +440,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.NextSelectionDown
     summary: |
       Sets the `Class.GuiObject` which will be selected when the gamepad
@@ -430,6 +475,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.NextSelectionLeft
     summary: |
       Sets the `Class.GuiObject` which will be selected when the gamepad
@@ -463,6 +511,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.NextSelectionRight
     summary: |
       Sets the `Class.GuiObject` which will be selected when the gamepad
@@ -496,6 +547,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.NextSelectionUp
     summary: |
       Sets the `Class.GuiObject` which will be selected when the gamepad
@@ -528,6 +582,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.Position
     summary: |
       Determines the pixel and scalar position of the `Class.GuiObject`.
@@ -555,6 +612,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.Rotation
     summary: |
       Determines the number of degrees by which the `Class.GuiObject` is
@@ -577,6 +637,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.Selectable
     summary: |
       Determine whether the `Class.GuiObject|GUI` can be selected by a gamepad.
@@ -616,6 +679,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.SelectionImageObject
     summary: |
       Overrides the default selection adornment used for gamepads.
@@ -651,6 +717,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.SelectionOrder
     summary: |
       The order of `Class.GuiObject|GuiObjects` selected by the gamepad UI
@@ -672,6 +741,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.Size
     summary: |
       Determines the pixel and scalar size of the `Class.GuiObject`.
@@ -702,6 +774,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.SizeConstraint
     summary: |
       Sets the `Class.GuiObject.Size|Size` axes that the `Class.GuiObject` will
@@ -725,6 +800,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.Transparency
     summary: |
       A mixed property of
@@ -750,6 +828,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.Visible
     summary: |
       Determines whether the `Class.GuiObject` and its descendants will be
@@ -781,6 +862,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.ZIndex
     summary: |
       Determines the order in which a `Class.GuiObject` renders relative to
@@ -815,6 +899,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods:
   - name: GuiObject:TweenPosition
     summary: |
@@ -884,6 +971,8 @@ methods:
         more detailed description of the tween's completion state.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject:TweenSize
     summary: |
       Smoothly resizes a GUI to a new `Datatype.UDim2`.
@@ -952,6 +1041,8 @@ methods:
         more detailed description of the tween's completion state.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject:TweenSizeAndPosition
     summary: |
       Smoothly moves a GUI to a new size and position.
@@ -1026,6 +1117,8 @@ methods:
         more detailed description of the tween's completion state.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: GuiObject.DragBegin
     summary: |
@@ -1052,6 +1145,8 @@ events:
       supports more input types and can be better customized.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.DragStopped
     summary: |
       Fired when a player stops dragging the object.
@@ -1083,6 +1178,8 @@ events:
       supports more input types and can be better customized.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.InputBegan
     summary: |
       Fired when a user begins interacting via a Human-Computer Interface device
@@ -1116,6 +1213,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.InputChanged
     summary: |
       Fired when a user changes how they're interacting via a Human-Computer
@@ -1151,6 +1250,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.InputEnded
     summary: |
       Fired when a user stops interacting via a Human-Computer Interface device
@@ -1184,6 +1285,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.MouseEnter
     summary: |
       Fires when a user moves their mouse into a GUI element.
@@ -1229,6 +1332,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.MouseLeave
     summary: |
       Fires when a user moves their mouse out of a GUI element.
@@ -1270,6 +1375,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.MouseMoved
     summary: |
       Fires whenever a user moves their mouse while it is inside a GUI element.
@@ -1334,6 +1441,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.MouseWheelBackward
     summary: |
       Fires when a user scrolls their mouse wheel back when the mouse is over a
@@ -1373,6 +1482,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.MouseWheelForward
     summary: |
       Fires when a user scrolls their mouse wheel forward when the mouse is over
@@ -1411,6 +1522,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.SelectionGained
     summary: |
       Fired when the GuiObject is being focused on with the Gamepad selector.
@@ -1432,6 +1545,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.SelectionLost
     summary: |
       Fired when the Gamepad selector stops focusing on the GuiObject.
@@ -1454,6 +1569,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.TouchLongPress
     summary: |
       Fires when the player starts, continues and stops long-pressing the UI
@@ -1494,6 +1611,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.TouchPan
     summary: |
       Fires when the player moves their finger on the UI element.
@@ -1541,6 +1660,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.TouchPinch
     summary: |
       Fires when the player performs a pinch or pull gesture using two fingers
@@ -1593,6 +1714,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.TouchRotate
     summary: |
       Fires when the player performs a rotation gesture using two fingers on the
@@ -1643,6 +1766,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.TouchSwipe
     summary: |
       Fires when the player performs a swipe gesture on the UI element.
@@ -1673,6 +1798,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiObject.TouchTap
     summary: |
       Fires when the player performs a tap gesture on the UI element.
@@ -1700,4 +1827,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

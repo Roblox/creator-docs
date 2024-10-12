@@ -33,6 +33,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: SkateboardController.Throttle
     summary: |
       The direction of movement, tied to the keys W and S. Must be an integer 1
@@ -56,6 +58,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events:
   - name: SkateboardController.AxisChanged
@@ -76,4 +80,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

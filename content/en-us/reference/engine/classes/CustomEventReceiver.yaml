@@ -33,6 +33,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: CustomEventReceiver:GetCurrentValue
     summary: |
@@ -52,6 +54,8 @@ methods:
       `Class.BindableEvent|BindableEvents` and should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: CustomEventReceiver.EventConnected
     summary: |
@@ -73,6 +77,8 @@ events:
       `Class.BindableEvent|BindableEvents` and should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CustomEventReceiver.EventDisconnected
     summary: |
       Fires when the receiver is attached to a different `Class.CustomEvent`
@@ -93,6 +99,8 @@ events:
       `Class.BindableEvent|BindableEvents` and should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CustomEventReceiver.SourceValueChanged
     summary: |
       Fires when the value of the CustomEvent's source is changed, passing the
@@ -112,4 +120,6 @@ events:
       `Class.BindableEvent|BindableEvents` and should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

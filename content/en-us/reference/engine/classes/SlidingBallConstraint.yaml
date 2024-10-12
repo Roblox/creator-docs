@@ -85,6 +85,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.CurrentPosition
     summary: |
       The current offset between the constraint's
@@ -106,6 +109,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.LimitsEnabled
     summary: |
       Sets whether the `Class.SlidingBallConstraint` will limit the range of
@@ -129,6 +135,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.LinearResponsiveness
     summary: |
       Specifies the "sharpness" of the linear servo motor in reaching the
@@ -151,6 +160,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.LowerLimit
     summary: |
       The lower positional limit along the **X** axis of
@@ -172,6 +184,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.MotorMaxAcceleration
     summary: |
       The constraint's maximum acceleration when
@@ -195,6 +210,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.MotorMaxForce
     summary: |
       The constraint's maximum force when
@@ -218,6 +236,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.Restitution
     summary: |
       The elasticity of the constraint's `Class.Attachment|Attachments` when
@@ -244,6 +265,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.ServoMaxForce
     summary: |
       The constraint's maximum force when
@@ -267,6 +291,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.Size
     summary: |
       The constraint's visualized size.
@@ -284,6 +311,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.SoftlockServoUponReachingTarget
     summary: ''
     description: ''
@@ -301,6 +331,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.Speed
     summary: |
       The constraint's desired speed when
@@ -326,6 +359,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.TargetPosition
     summary: |
       The constraint's attempted target position when
@@ -347,6 +383,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.UpperLimit
     summary: |
       The upper positional limit along the **X** axis of
@@ -368,6 +407,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: SlidingBallConstraint.Velocity
     summary: |
       The constraint's attempted velocity when
@@ -389,6 +431,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

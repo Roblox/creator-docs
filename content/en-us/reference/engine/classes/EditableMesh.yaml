@@ -127,6 +127,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: EditableMesh:AddColor
     summary: |
@@ -153,6 +155,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:AddNormal
     summary: |
       Adds a new normal to the geometry and returns a stable normal ID.
@@ -175,6 +179,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:AddTriangle
     summary: |
       Adds a new triangle to the mesh and returns a stable face ID.
@@ -204,6 +210,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:AddUV
     summary: |
       Adds a new UV to the geometry and returns a stable UV ID.
@@ -224,6 +232,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:AddVertex
     summary: |
       Adds a new vertex to the geometry and returns a stable vertex ID.
@@ -244,6 +254,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:FindClosestPointOnSurface
     summary: |
       Finds the closest point on the mesh's surface.
@@ -269,6 +281,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:FindClosestVertex
     summary: |
       Finds the closest vertex to a specific point in space.
@@ -290,6 +304,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:FindVerticesWithinSphere
     summary: |
       Finds all vertices within a specific sphere.
@@ -316,6 +332,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetAdjacentFaces
     summary: |
       Returns a list of faces adjacent to a given face.
@@ -336,6 +354,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetAdjacentTriangles
     summary: |
       Returns a list of triangles adjacent to a given triangle.
@@ -359,6 +379,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetAdjacentVertices
     summary: |
       Returns a list of vertices adjacent to a given vertex.
@@ -381,6 +403,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetColor
     summary: |
       Returns the color for the given color ID.
@@ -401,6 +425,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetColorAlpha
     summary: |
       Returns the color alpha (transparency) at the given color ID.
@@ -421,6 +447,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetColors
     summary: |
       Returns all colors of the mesh.
@@ -437,6 +465,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetFaceColors
     summary: |
       Returns the face's color IDs for the vertices on the face.
@@ -458,6 +488,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetFaceNormals
     summary: |
       Returns the face's normal IDs for the vertices on the face.
@@ -479,6 +511,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetFaceUVs
     summary: |
       Returns the face's UV IDs for the vertices on the face.
@@ -500,6 +534,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetFaceVertices
     summary: ''
     description: ''
@@ -517,6 +553,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetFaces
     summary: |
       Returns all faces of the mesh.
@@ -532,6 +570,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetFacesWithAttribute
     summary: |
       Returns a list of faces that use a given attribute ID.
@@ -553,6 +593,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetNormal
     summary: |
       Returns the normal vector for the given normal ID.
@@ -573,6 +615,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetNormals
     summary: |
       Returns all normals of the mesh.
@@ -589,6 +633,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetPosition
     summary: |
       Gets the position of a vertex.
@@ -609,6 +655,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetTriangleVertices
     summary: |
       Returns a triangle's three vertex IDs.
@@ -630,6 +678,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetTriangles
     summary: |
       Returns all triangles of the mesh.
@@ -646,6 +696,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetUV
     summary: |
       Returns UV coordinates at the given UV ID.
@@ -666,6 +718,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetUVs
     summary: |
       Returns all UVs of the mesh.
@@ -682,6 +736,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetVertexColor
     summary: |
       Returns the color at the given vertex.
@@ -703,6 +759,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetVertexColorAlpha
     summary: |
       Returns the color alpha (transparency) at the given vertex.
@@ -724,6 +782,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetVertexNormal
     summary: |
       Returns the normal at the given vertex.
@@ -745,6 +805,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetVertices
     summary: |
       Returns all vertices as a list of stable vertex IDs.
@@ -760,6 +822,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetVerticesWithAttribute
     summary: |
       Returns a list of vertices that use a given attribute ID.
@@ -781,6 +845,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:IdDebugString
     summary: |
       Returns a string describing a stable ID, useful for debugging purposes.
@@ -802,6 +868,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:MergeVertices
     summary: |
       Merges vertices that touch together.
@@ -824,6 +892,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:RaycastLocal
     summary: ''
     description: |
@@ -857,6 +927,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:RemoveFace
     summary: |
       Removes a face using its stable face ID.
@@ -875,6 +947,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:RemoveTriangle
     summary: |
       Removes a triangle using its stable face ID.
@@ -895,6 +969,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:RemoveUnused
     summary: |
       Removes all unused vertices, normals, UVs, and colors, and returns the
@@ -912,6 +988,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:RemoveVertex
     summary: |
       Removes a vertex using its stable vertex ID.
@@ -932,6 +1010,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:ResetNormal
     summary: |
       Reset this normal ID to be automatically calculated.
@@ -952,6 +1032,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetColor
     summary: |
       Sets the color for a color ID.
@@ -976,6 +1058,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetColorAlpha
     summary: |
       Sets the color alpha (transparency) for a color ID.
@@ -1000,6 +1084,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetFaceColors
     summary: |
       Sets the face's vertex colors to new color IDs.
@@ -1025,6 +1111,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetFaceNormals
     summary: |
       Sets the face's vertex normals to new normal IDs.
@@ -1050,6 +1138,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetFaceUVs
     summary: |
       Sets the face's vertex UVs to new UV IDs.
@@ -1075,6 +1165,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetFaceVertices
     summary: |
       Sets the face's vertices to new vertex IDs.
@@ -1100,6 +1192,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetNormal
     summary: |
       Set the normal for a normal ID.
@@ -1125,6 +1219,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetPosition
     summary: |
       Sets a vertex position in the mesh's local object space.
@@ -1149,6 +1245,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetUV
     summary: |
       Sets UV coordinates for a UV ID.
@@ -1173,6 +1271,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetVertexColor
     summary: |
       Sets the color for a vertex.
@@ -1198,6 +1298,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetVertexColorAlpha
     summary: |
       Sets the color alpha (transparency) for a vertex.
@@ -1223,6 +1325,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetVertexNormal
     summary: |
       Sets the normal for a vertex.
@@ -1248,6 +1352,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:Triangulate
     summary: |
       Splits all faces on the mesh to be triangles.
@@ -1265,5 +1371,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

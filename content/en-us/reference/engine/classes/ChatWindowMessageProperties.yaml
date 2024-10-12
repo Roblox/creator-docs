@@ -26,6 +26,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowMessageProperties.PrefixTextProperties
     summary: ''
     description: ''
@@ -41,6 +44,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowMessageProperties.TextColor3
     summary: ''
     description: ''
@@ -56,6 +62,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowMessageProperties.TextSize
     summary: ''
     description: ''
@@ -71,6 +80,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowMessageProperties.TextStrokeColor3
     summary: ''
     description: ''
@@ -86,6 +98,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowMessageProperties.TextStrokeTransparency
     summary: ''
     description: ''
@@ -101,6 +116,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

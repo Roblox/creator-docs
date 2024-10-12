@@ -35,6 +35,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: AccessoryDescription.AssetId
     summary: |
       The asset ID that should be applied when applying this
@@ -54,6 +57,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: AccessoryDescription.Instance
     summary: |
       A reference to the `Class.Instance` that should be applied when applying
@@ -75,6 +81,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: AccessoryDescription.IsLayered
     summary: |
       Whether the `Class.Accessory` is layered or rigid.
@@ -94,6 +103,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: AccessoryDescription.Order
     summary: |
       The layered clothing sort order, if the `Class.Accessory` is layered.
@@ -112,6 +124,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: AccessoryDescription.Position
     summary: |
       The accessory adjustment position offset, if the `Class.Accessory` is
@@ -131,6 +146,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: AccessoryDescription.Puffiness
     summary: |
       The layered clothing puffiness, if the `Class.Accessory` is layered.
@@ -149,6 +167,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: AccessoryDescription.Rotation
     summary: |
       The accessory adjustment rotation offset, if the `Class.Accessory` is
@@ -168,6 +189,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: AccessoryDescription.Scale
     summary: |
       The accessory adjustment scale, if the `Class.Accessory` is rigid.
@@ -186,6 +210,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
 methods:
   - name: AccessoryDescription:GetAppliedInstance
     summary: |
@@ -203,5 +230,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

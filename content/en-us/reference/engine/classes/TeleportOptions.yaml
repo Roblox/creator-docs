@@ -47,6 +47,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: TeleportOptions.ServerInstanceId
     summary: |
       The `Class.DataModel.JobId` of the server instance to teleport to.
@@ -68,6 +70,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: TeleportOptions.ShouldReserveServer
     summary: |
       A flag to indicate if a reserved server should be allocated and the
@@ -97,6 +101,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: TeleportOptions:GetTeleportData
     summary: |
@@ -122,6 +128,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TeleportOptions:SetTeleportData
     summary: |
       Setter function for data to be passed to the destination place.
@@ -181,5 +189,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

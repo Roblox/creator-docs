@@ -90,6 +90,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Team.AutoColorCharacters
     summary: |
       Deprecated and no longer functional. Historically set whether or not
@@ -118,6 +120,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Team.Score
     summary: |
       This property can be used to store an integer value associated with the
@@ -147,6 +151,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Team.TeamColor
     summary: |
       This property sets the color of the `Class.Team`. Determines the
@@ -179,6 +185,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: Team:GetPlayers
     summary: |
@@ -206,6 +214,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: Team.PlayerAdded
     summary: |
@@ -237,6 +247,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Team.PlayerRemoved
     summary: |
       Fires whenever a `Class.Player` is removed from a `Class.Team`. This can
@@ -267,4 +279,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

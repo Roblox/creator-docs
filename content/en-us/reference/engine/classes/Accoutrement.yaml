@@ -47,6 +47,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Accoutrement.AttachmentPoint
     summary: |
       The exact CFrame of the Accoutrement.
@@ -64,6 +67,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Accoutrement.AttachmentPos
     summary: |
       Sets the position of the object on the Player.
@@ -83,6 +89,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Accoutrement.AttachmentRight
     summary: |
       Sets the offset position of the object on the Player.
@@ -102,6 +111,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Accoutrement.AttachmentUp
     summary: |
       Sets the offset position of the object on the Player.
@@ -121,6 +133,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

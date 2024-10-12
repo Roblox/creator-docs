@@ -41,6 +41,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: ShirtGraphic.Graphic
     summary: |
       The content ID link pointing to the `Class.ShirtGraphic` texture hosted on
@@ -83,6 +86,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

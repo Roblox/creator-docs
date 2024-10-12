@@ -55,6 +55,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: JointInstance.C0
     summary: |
       Determines how the offset point is attached to
@@ -75,6 +78,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: JointInstance.C1
     summary: |
       Is subtracted from the `Class.JointInstance.C0` property to create an
@@ -94,6 +100,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: JointInstance.Enabled
     summary: |
       Sets whether the joint is active or not.
@@ -122,6 +131,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: JointInstance.Part0
     summary: |
       The first `Class.BasePart` that the joint connects.
@@ -139,6 +151,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: JointInstance.Part1
     summary: |
       The second `Class.BasePart` that the joint connects.
@@ -156,6 +171,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: JointInstance.part1
     summary: ''
     description: ''
@@ -176,6 +194,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

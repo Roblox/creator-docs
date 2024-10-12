@@ -28,6 +28,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.AbsoluteSize
     summary: ''
     description: ''
@@ -45,6 +48,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.BackgroundColor3
     summary: ''
     description: ''
@@ -60,6 +66,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.BackgroundTransparency
     summary: ''
     description: ''
@@ -75,6 +84,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.Enabled
     summary: ''
     description: ''
@@ -90,6 +102,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.FontFace
     summary: ''
     description: ''
@@ -105,6 +120,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.HoverBackgroundColor3
     summary: ''
     description: ''
@@ -120,6 +138,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.SelectedTabTextColor3
     summary: ''
     description: ''
@@ -135,6 +156,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.TextColor3
     summary: ''
     description: ''
@@ -150,6 +174,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.TextSize
     summary: ''
     description: ''
@@ -165,6 +192,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.TextStrokeColor3
     summary: ''
     description: ''
@@ -180,6 +210,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.TextStrokeTransparency
     summary: ''
     description: ''
@@ -195,6 +228,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

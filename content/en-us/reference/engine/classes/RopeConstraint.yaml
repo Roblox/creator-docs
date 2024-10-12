@@ -56,6 +56,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: RopeConstraint.Length
     summary: |
       The maximum distance apart the two `Class.Attachment|Attachments` can be.
@@ -74,6 +77,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: RopeConstraint.Restitution
     summary: |
       Elasticity of the `Class.Attachment|Attachments` connected by the
@@ -95,6 +101,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: RopeConstraint.Thickness
     summary: |
       The visualized thickness of the `Class.RopeConstraint`.
@@ -112,6 +121,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: RopeConstraint.WinchEnabled
     summary: |
       Enables the winch motor.
@@ -130,6 +142,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: RopeConstraint.WinchForce
     summary: |
       The maximum force that the winch motor can apply.
@@ -147,6 +162,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: RopeConstraint.WinchResponsiveness
     summary: |
       The sharpness of the winch motor in reaching the
@@ -166,6 +184,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: RopeConstraint.WinchSpeed
     summary: |
       A positive desired velocity at which the winch motor changes the rope
@@ -185,6 +206,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: RopeConstraint.WinchTarget
     summary: |
       The target length for the winch motor.
@@ -202,6 +226,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -31,6 +31,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEcho.DelayTime
     summary: |
       The amount of time between echoes.
@@ -48,6 +51,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEcho.DryLevel
     summary: |
       Gain level determining how loud the original, unaltered audio stream will
@@ -67,6 +73,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEcho.Feedback
     summary: |
       How slowly echoes fade away.
@@ -86,6 +95,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEcho.WetLevel
     summary: |
       Gain level determining how loud the echoed stream will be.
@@ -104,6 +116,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioEcho:GetConnectedWires
     summary: |
@@ -125,5 +140,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

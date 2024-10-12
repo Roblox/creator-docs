@@ -44,6 +44,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: BloomEffect.Size
     summary: |
       Determines the radius of the bloom in pixels.
@@ -64,6 +67,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: BloomEffect.Threshold
     summary: |
       Determines how bright a color must be before it blooms.
@@ -82,6 +88,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -42,6 +42,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BodyThrust.Location
     summary: |
       Determines the relative position where the `Class.BodyThrust.Force|Force`
@@ -62,6 +64,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BodyThrust.force
     summary: ''
     description: ''
@@ -81,6 +85,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BodyThrust.location
     summary: ''
     description: ''
@@ -100,6 +106,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

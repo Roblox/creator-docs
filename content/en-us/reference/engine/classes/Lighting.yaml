@@ -69,6 +69,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.Brightness
     summary: |
       The intensity of illumination in the place.
@@ -103,6 +106,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.ClockTime
     summary: |
       A numerical representation (in hours) of the current time of day used by
@@ -182,6 +188,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.ColorShift_Bottom
     summary: |
       The hue represented in light reflected in the opposite surfaces to those
@@ -219,6 +228,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.ColorShift_Top
     summary: |
       The hue represented in light reflected from surfaces facing the sun or
@@ -254,6 +266,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.EnvironmentDiffuseScale
     summary: |
       Ambient light that is derived from the environment.
@@ -279,6 +294,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.EnvironmentSpecularScale
     summary: |
       Specular light derived from environment.
@@ -300,6 +318,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.ExposureCompensation
     summary: |
       The exposure compensation value.
@@ -346,6 +367,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.FogColor
     summary: |
       A `Datatype.Color3` value giving the hue of `Class.Lighting` fog.
@@ -394,6 +418,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.FogEnd
     summary: |
       The depth from the `Class.Workspace.CurrentCamera`, in studs, at which fog
@@ -446,6 +473,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.FogStart
     summary: |
       The depth from the `Class.Workspace.CurrentCamera`, in studs, at which fog
@@ -498,6 +528,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.GeographicLatitude
     summary: |
       The geographic latitude, in degrees, of the scene, influencing the result
@@ -526,6 +559,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.GlobalShadows
     summary: |
       Toggles voxel-based dynamic lighting for the game.
@@ -581,6 +617,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.Intent
     summary: ''
     description: ''
@@ -597,6 +636,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.OutdoorAmbient
     summary: |
       The lighting hue applied to outdoor areas.
@@ -633,6 +675,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.Outlines
     summary: |
       Determines whether outlines are enabled or disabled in a place.
@@ -661,6 +706,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.Quality
     summary: ''
     description: ''
@@ -677,6 +725,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.ShadowColor
     summary: |
       This is supposed to change the color of player shadows, but currently
@@ -700,6 +751,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.ShadowSoftness
     summary: |
       Controls how blurry the shadows are.
@@ -722,6 +776,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.Technology
     summary: |
       Determines the lighting system for rendering the 3D world. Non-scriptable.
@@ -743,6 +800,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Lighting.TimeOfDay
     summary: |
       A 24 hour string representation of the current time of day used by
@@ -819,6 +879,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
 methods:
   - name: Lighting:GetMinutesAfterMidnight
     summary: |
@@ -848,6 +911,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Lighting:GetMoonDirection
     summary: |
       Returns a `Datatype.Vector3` representing the direction of the moon from
@@ -878,6 +943,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Lighting:GetMoonPhase
     summary: |
       Returns the moon's current phase.
@@ -895,6 +962,8 @@ methods:
       function should not be used.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Lighting:GetSunDirection
     summary: |
       Returns a `Datatype.Vector3` representing the direction of the sun from
@@ -925,6 +994,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Lighting:SetMinutesAfterMidnight
     summary: |
       Sets `Class.Lighting.TimeOfDay` and `Class.Lighting.ClockTime` to the
@@ -1006,6 +1077,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Lighting:getMinutesAfterMidnight
     summary: ''
     description: ''
@@ -1021,6 +1094,8 @@ methods:
       `Class.Lighting:GetMinutesAfterMidnight()` which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Lighting:setMinutesAfterMidnight
     summary: ''
     description: ''
@@ -1040,6 +1115,8 @@ methods:
       `Class.Lighting:SetMinutesAfterMidnight()` which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: Lighting.LightingChanged
     summary: |
@@ -1069,4 +1146,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

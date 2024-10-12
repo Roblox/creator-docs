@@ -34,6 +34,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEqualizer.Editor
     summary: ''
     description: ''
@@ -50,6 +53,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEqualizer.HighGain
     summary: |
       Gain value to be applied to the frequency content of the highest band in
@@ -69,6 +75,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEqualizer.LowGain
     summary: |
       Gain value to be applied to the frequency content of the lowest band in
@@ -88,6 +97,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEqualizer.MidGain
     summary: |
       Gain value to be applied to the frequency content of the middle band in
@@ -107,6 +119,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEqualizer.MidRange
     summary: |
       The frequency range of the band influenced by
@@ -129,6 +144,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioEqualizer:GetConnectedWires
     summary: |
@@ -150,5 +168,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

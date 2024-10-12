@@ -44,6 +44,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.CameraMode
     summary: ''
     description: ''
@@ -59,6 +61,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.ChatVisible
     summary: ''
     description: ''
@@ -74,6 +78,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.ComputerCameraMovementMode
     summary: |
       The camera movement mode currently in-use by the client on desktop.
@@ -91,6 +97,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.ComputerMovementMode
     summary: |
       The type of controls being used by the client on desktop.
@@ -108,6 +116,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.ControlMode
     summary: |
       Toggles whether or not the client can use the Mouse Lock Switch mode.
@@ -130,6 +140,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.Fullscreen
     summary: ''
     description: ''
@@ -145,6 +157,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.GamepadCameraSensitivity
     summary: |
       Describes how sensitive the camera is when using a gamepad.
@@ -162,6 +176,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.GraphicsOptimizationMode
     summary: ''
     description: ''
@@ -177,6 +193,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.GraphicsQualityLevel
     summary: ''
     description: ''
@@ -192,6 +210,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.HasEverUsedVR
     summary: ''
     description: ''
@@ -207,6 +227,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.MasterVolume
     summary: |
       A float between 0 and 1 representing the volume of the game's client.
@@ -225,6 +247,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.MasterVolumeStudio
     summary: ''
     description: ''
@@ -240,6 +264,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.MaxQualityEnabled
     summary: ''
     description: ''
@@ -255,6 +281,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.MouseSensitivity
     summary: |
       A float between 0 and 4 representing the sensitivity of the client's
@@ -274,6 +302,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.OnboardingsCompleted
     summary: ''
     description: ''
@@ -289,6 +319,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.PartyVoiceVolume
     summary: ''
     description: ''
@@ -304,6 +336,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.RCCProfilerRecordFrameRate
     summary: ''
     description: ''
@@ -319,6 +353,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.RCCProfilerRecordTimeFrame
     summary: ''
     description: ''
@@ -334,6 +370,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.RotationType
     summary: |
       Controls how the client's character is rotated.
@@ -351,6 +389,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.SavedQualityLevel
     summary: |
       The graphics quality level set by the client.
@@ -368,6 +408,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.StartMaximized
     summary: ''
     description: ''
@@ -385,6 +427,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.StartScreenPosition
     summary: ''
     description: ''
@@ -402,6 +446,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.StartScreenSize
     summary: ''
     description: ''
@@ -419,6 +465,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.TouchCameraMovementMode
     summary: |
       The camera type in-use by the client while on a mobile device.
@@ -436,6 +484,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.TouchMovementMode
     summary: |
       The type of controls being used by the client on a mobile device.
@@ -453,6 +503,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.UsedCoreGuiIsVisibleToggle
     summary: ''
     description: ''
@@ -468,6 +520,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.UsedCustomGuiIsVisibleToggle
     summary: ''
     description: ''
@@ -483,6 +537,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.UsedHideHudShortcut
     summary: ''
     description: ''
@@ -498,6 +554,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.VREnabled
     summary: ''
     description: ''
@@ -513,6 +571,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.VRRotationIntensity
     summary: ''
     description: ''
@@ -528,6 +588,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.VRSmoothRotationEnabled
     summary: ''
     description: ''
@@ -543,6 +605,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.VignetteEnabled
     summary: ''
     description: ''
@@ -558,6 +622,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: UserGameSettings:GetCameraYInvertValue
     summary: |
@@ -573,6 +639,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings:GetOnboardingCompleted
     summary: |
       Checks if onboarding has been completed.
@@ -604,6 +672,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings:InFullScreen
     summary: |
       Returns true if the user's Roblox window is in full screen mode.
@@ -618,6 +688,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings:InStudioMode
     summary: |
       Returns true if the client's game session is in Roblox Studio.
@@ -632,6 +704,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings:SetCameraYInvertVisible
     summary: |
       If called, Roblox toggles the menu option to invert the user's camera y
@@ -648,6 +722,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings:SetGamepadCameraSensitivityVisible
     summary: |
       If called, Roblox toggles the menu option to control the camera
@@ -664,6 +740,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings:SetOnboardingCompleted
     summary: |
       Sets onboarding as completed.
@@ -698,6 +776,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: UserGameSettings.FullscreenChanged
     summary: |
@@ -717,6 +797,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UserGameSettings.StudioModeChanged
     summary: |
       Fired when the user's client switches between studio mode and in-game
@@ -734,4 +816,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

@@ -75,6 +75,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.Adornee
     summary: |
       Sets the target part or attachment that the BillboardGui is positioned
@@ -95,6 +98,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.AlwaysOnTop
     summary: |
       Determines whether the BillboardGui will render in front of 3D content or
@@ -125,6 +131,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.Brightness
     summary: |
       Determines the factor by which the GUI's light is scaled when
@@ -158,6 +167,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.ClipsDescendants
     summary: |
       When set to true, portions of GuiObjects that fall outside of the
@@ -180,6 +192,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.CurrentDistance
     summary: |
       The current distance in studs that the `Class.BillboardGui` is from the
@@ -202,6 +217,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.DistanceLowerLimit
     summary: |
       Determines the distance in studs that a `Class.BillboardGui` will stop
@@ -224,6 +242,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.DistanceStep
     summary: |
       Distance will be rounded to increments of this value.
@@ -248,6 +269,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.DistanceUpperLimit
     summary: |
       Determines the distance in studs that a `Class.BillboardGui` will stop
@@ -272,6 +296,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.ExtentsOffset
     summary: |
       Determines how the BillboardGui is offset from its
@@ -303,6 +330,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.ExtentsOffsetWorldSpace
     summary: |
       Determines how the BillboardGui is offset from its
@@ -331,6 +361,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.LightInfluence
     summary: |
       Controls how much the BillboardGui is influenced by the lighting in the
@@ -357,6 +390,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.MaxDistance
     summary: |
       Sets the maximum distance a billboard can be from the camera and still be
@@ -427,6 +463,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.PlayerToHideFrom
     summary: |
       Used by scripts to hide the BillboardGui from a specific player.
@@ -452,6 +491,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.Size
     summary: |
       Controls the size that the BillboardGui will have on screen.
@@ -475,6 +517,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.SizeOffset
     summary: |
       A 2D offset in size-relative units that acts like an anchor point.
@@ -512,6 +557,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.StudsOffset
     summary: |
       Determines how the BillboardGui is offset from its
@@ -542,6 +590,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: BillboardGui.StudsOffsetWorldSpace
     summary: |
       Determines how the BillboardGui is offset from its
@@ -571,6 +622,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

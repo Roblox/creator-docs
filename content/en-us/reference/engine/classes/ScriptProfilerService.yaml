@@ -29,6 +29,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptProfilerService:ClientStart
     summary: ''
     description: ''
@@ -49,6 +51,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptProfilerService:ClientStop
     summary: ''
     description: ''
@@ -65,6 +69,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptProfilerService:DeserializeJSON
     summary: ''
     description: ''
@@ -82,6 +88,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptProfilerService:ServerRequestData
     summary: ''
     description: ''
@@ -94,6 +102,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptProfilerService:ServerStart
     summary: ''
     description: ''
@@ -110,6 +120,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptProfilerService:ServerStop
     summary: ''
     description: ''
@@ -122,6 +134,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: ScriptProfilerService.OnNewData
     summary: ''
@@ -140,4 +154,6 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

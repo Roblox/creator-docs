@@ -54,6 +54,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIStroke.Color
     summary: |
       Determines the stroke color.
@@ -81,6 +84,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIStroke.Enabled
     summary: |
       Determines whether the stroke in visible.
@@ -99,6 +105,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIStroke.LineJoinMode
     summary: |
       Determines how corners are interpreted.
@@ -132,6 +141,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIStroke.Thickness
     summary: |
       Determines the stroke's thickness.
@@ -164,6 +176,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIStroke.Transparency
     summary: |
       Sets the stroke opacity independently of the parent object's
@@ -196,6 +211,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -77,6 +77,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ClickDetector.MaxActivationDistance
     summary: |
       Maximum distance between a character and the `Class.ClickDetector` or
@@ -100,6 +102,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events:
   - name: ClickDetector.MouseClick
@@ -133,6 +137,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ClickDetector.MouseHoverEnter
     summary: |
       Fires when the parent of a `Class.ClickDetector` or `Class.DragDetector`
@@ -161,6 +167,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ClickDetector.MouseHoverLeave
     summary: |
       Fires when a player's cursor hovers off the parent of a
@@ -190,6 +198,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ClickDetector.RightMouseClick
     summary: |
       Fires when a player right clicks their mouse cursor on a
@@ -213,6 +223,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ClickDetector.mouseClick
     summary: ''
     description: ''
@@ -229,4 +241,6 @@ events:
       which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

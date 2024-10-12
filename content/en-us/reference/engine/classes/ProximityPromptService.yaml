@@ -53,6 +53,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ProximityPromptService.MaxPromptsVisible
     summary: |
       Maximum number of `Class.ProximityPrompt|ProximityPrompts` that will be
@@ -72,6 +74,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events:
   - name: ProximityPromptService.PromptButtonHoldBegan
@@ -99,6 +103,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ProximityPromptService.PromptButtonHoldEnded
     summary: |
       Triggers when the player stops holding down the
@@ -124,6 +130,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ProximityPromptService.PromptHidden
     summary: |
       Triggers client-side when a prompt becomes hidden.
@@ -141,6 +149,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ProximityPromptService.PromptShown
     summary: |
       Triggers client-side when a prompt becomes visible.
@@ -163,6 +173,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ProximityPromptService.PromptTriggerEnded
     summary: |
       Triggers when the player stops holding down the
@@ -189,6 +201,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ProximityPromptService.PromptTriggered
     summary: |
       Triggers when the user interacts with this prompt.
@@ -214,4 +228,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

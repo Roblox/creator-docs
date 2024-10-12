@@ -41,6 +41,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: SensorBase:Sense
     summary: ''
@@ -56,6 +58,8 @@ methods:
       This method should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: SensorBase.OnSensorOutputChanged
     summary: ''
@@ -66,4 +70,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

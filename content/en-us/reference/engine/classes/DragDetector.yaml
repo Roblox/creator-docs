@@ -61,6 +61,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.ApplyAtCenterOfMass
     summary: |
       Whether constraint force is applied to the object's center of mass.
@@ -82,6 +84,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.Axis
     summary: |
       The primary axis of motion, expressed relative to the reference frame.
@@ -106,6 +110,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.DragFrame
     summary: |
       The `Datatype.CFrame` of the pivot, dependent on the drag detector's
@@ -127,6 +133,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.DragStyle
     summary: |
       The paradigm used to generate proposed motion.
@@ -145,6 +153,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.Enabled
     summary: |
       Whether the `Class.DragDetector` responds to user input.
@@ -163,6 +173,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.GamepadModeSwitchKeyCode
     summary: |
       During gamepad input, the modifier `Enum.KeyCode` for the secondary mode
@@ -184,6 +196,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.KeyboardModeSwitchKeyCode
     summary: |
       During keyboard input, the modifier `Enum.KeyCode` for the secondary mode
@@ -205,6 +219,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.MaxDragAngle
     summary: |
       Along with `Class.DragDetector.MinDragAngle|MinDragAngle`, impedes the
@@ -232,6 +248,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.MaxDragTranslation
     summary: |
       Along with `Class.DragDetector.MinDragTranslation|MinDragTranslation`,
@@ -257,6 +275,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.MaxForce
     summary: |
       Maximum force applied for the object to reach its goal.
@@ -277,6 +297,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.MaxTorque
     summary: |
       Maximum torque applied for the object to reach its goal.
@@ -297,6 +319,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.MinDragAngle
     summary: |
       Along with `Class.DragDetector.MaxDragAngle|MaxDragAngle`, impedes the
@@ -324,6 +348,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.MinDragTranslation
     summary: |
       Along with `Class.DragDetector.MaxDragTranslation|MaxDragTranslation`,
@@ -349,6 +375,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.Orientation
     summary: |
       Specifies the **YXZ** rotation of axes of motion relative to the reference
@@ -371,6 +399,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.PermissionPolicy
     summary: |
       Controls the permission level for which players can interact with the
@@ -391,6 +421,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.ReferenceInstance
     summary: |
       An instance whose `Datatype.CFrame` is the reference frame for the drag
@@ -417,6 +449,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.ResponseStyle
     summary: |
       The paradigm used to move, or not move, the objects affected by the drag
@@ -438,6 +472,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.Responsiveness
     summary: |
       Higher values cause the object to reach its goal more rapidly.
@@ -458,6 +494,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.RunLocally
     summary: |
       Whether user input on a `Class.DragDetector` replicates to the server or
@@ -486,6 +524,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.SecondaryAxis
     summary: |
       The secondary axis of the motion.
@@ -505,6 +545,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.TrackballRadialPullFactor
     summary: |
       If `Class.DragDetector.DragStyle|DragStyle` is
@@ -529,6 +571,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.TrackballRollFactor
     summary: |
       If `Class.DragDetector.DragStyle|DragStyle` is
@@ -553,6 +597,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.VRSwitchKeyCode
     summary: |
       During VR input, the modifier `Enum.KeyCode` for the secondary mode of
@@ -574,6 +620,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.WorldAxis
     summary: |
       The `Class.DragDetector.Axis|Axis` expressed in world space.
@@ -593,6 +641,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.WorldSecondaryAxis
     summary: |
       The `Class.DragDetector.SecondaryAxis|SecondaryAxis` expressed in world
@@ -614,6 +664,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: DragDetector:AddConstraintFunction
     summary: |
@@ -653,6 +705,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector:GetReferenceFrame
     summary: |
       Returns the reference `Datatype.CFrame` in which motion is expressed.
@@ -670,6 +724,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector:RestartDrag
     summary: |
       May be invoked from a script to restart the drag using new parameters.
@@ -687,6 +743,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector:SetDragStyleFunction
     summary: |
       Passes a function to be used if and only if
@@ -723,6 +781,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector:SetPermissionPolicyFunction
     summary: |
       Passes a function to be used if and only if
@@ -774,6 +834,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: DragDetector.DragContinue
     summary: |
@@ -821,6 +883,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.DragEnd
     summary: |
       Fires when a user stops dragging the object.
@@ -839,6 +903,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DragDetector.DragStart
     summary: |
       Fires when a user starts dragging the object.
@@ -891,4 +957,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

@@ -36,6 +36,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: Handles.Style
     summary: |
       Sets the GUI style of the handles. Currently there are only two types;
@@ -55,6 +58,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events:
   - name: Handles.MouseButton1Down
@@ -72,6 +78,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Handles.MouseButton1Up
     summary: |
       Fired when the left mouse button is released on one of the GUI handles.
@@ -87,6 +95,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Handles.MouseDrag
     summary: |
       Fired when the mouse moves while the MouseButton1Down event has fired, but
@@ -108,6 +118,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Handles.MouseEnter
     summary: |
       Fired when a mouse "enters" the GUI handle.
@@ -123,6 +135,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Handles.MouseLeave
     summary: |
       Fired when the mouse leaves the GUI handle.
@@ -138,4 +152,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

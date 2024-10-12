@@ -46,6 +46,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiBase2d.AbsoluteRotation
     summary: |
       Describes the actual screen rotation of a UI element, in degrees.
@@ -76,6 +79,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiBase2d.AbsoluteSize
     summary: |
       Describes the actual screen size of a UI element, in pixels.
@@ -109,6 +115,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiBase2d.AutoLocalize
     summary: |
       When set to true, localization will be applied to this GuiBase2d and its
@@ -133,6 +142,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiBase2d.Localize
     summary: |
       Automatically set to true when a localization table's
@@ -161,6 +173,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiBase2d.RootLocalizationTable
     summary: |
       A reference to a `Class.LocalizationTable` to be used to apply automated
@@ -198,6 +213,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiBase2d.SelectionBehaviorDown
     summary: |
       Customizes gamepad selection behavior in the down direction.
@@ -215,6 +233,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiBase2d.SelectionBehaviorLeft
     summary: |
       Customizes gamepad selection behavior in the left direction.
@@ -232,6 +253,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiBase2d.SelectionBehaviorRight
     summary: |
       Customizes gamepad selection behavior in the right direction.
@@ -249,6 +273,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiBase2d.SelectionBehaviorUp
     summary: |
       Customizes gamepad selection behavior in the up direction.
@@ -266,6 +293,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiBase2d.SelectionGroup
     summary: |
       Allows customization of gamepad selection movement.
@@ -293,6 +323,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events:
   - name: GuiBase2d.SelectionChanged
@@ -325,4 +358,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

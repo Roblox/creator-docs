@@ -94,6 +94,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextService:FilterAndTranslateStringAsync
     summary: |
       Chat translation is not supported in legacy chat. This method is no longer
@@ -128,6 +130,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextService:FilterStringAsync
     summary: |
       Filters a string being received from a user, and returns a
@@ -203,6 +207,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextService:GetFamilyInfoAsync
     summary: |
       Returns a table containing the name and faces of a font family.
@@ -256,6 +262,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextService:GetTextBoundsAsync
     summary: |
       Calculates the width and height of text given parameters.
@@ -299,5 +307,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

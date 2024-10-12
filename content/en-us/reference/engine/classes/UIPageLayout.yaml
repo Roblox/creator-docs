@@ -30,6 +30,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIPageLayout.Circular
     summary: |
       Whether or not the page layout wraps around at the ends.
@@ -47,6 +50,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIPageLayout.CurrentPage
     summary: |
       The page that is either currently being displayed or is the target of the
@@ -68,6 +74,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIPageLayout.EasingDirection
     summary: |
       The easing direction to use when performing an animation.
@@ -85,6 +94,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIPageLayout.EasingStyle
     summary: |
       The easing style to use when performing an animation.
@@ -102,6 +114,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIPageLayout.GamepadInputEnabled
     summary: |
       Controls the overrides of `NextSelection{Up, Down, Left, Right}`. Defaults
@@ -121,6 +136,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIPageLayout.Padding
     summary: |
       Determines the amount that pages are separated from each other by.
@@ -140,6 +158,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIPageLayout.ScrollWheelInputEnabled
     summary: |
       Controls the use of scroll wheel, in case that it is intended for
@@ -159,6 +180,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIPageLayout.TouchInputEnabled
     summary: |
       Controls touch scrolling, in case this is a non-interactive layout.
@@ -178,6 +202,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIPageLayout.TweenTime
     summary: |
       The length of the animation.
@@ -195,6 +222,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods:
   - name: UIPageLayout:JumpTo
     summary: |
@@ -218,6 +248,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UIPageLayout:JumpToIndex
     summary: |
       If the index is `>= 0` and less than the size of the layout, this method
@@ -242,6 +274,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UIPageLayout:Next
     summary: |
       Sets `Class.UIPageLayout.CurrentPage` to the page after the current page
@@ -258,6 +292,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UIPageLayout:Previous
     summary: |
       Sets `Class.UIPageLayout.CurrentPage` to the page before the current page
@@ -274,6 +310,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: UIPageLayout.PageEnter
     summary: |
@@ -290,6 +328,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UIPageLayout.PageLeave
     summary: |
       Fires when a page leaves view, and will not be rendered.
@@ -305,6 +345,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UIPageLayout.Stopped
     summary: |
       Fires when an animation to `Class.UIPageLayout.CurrentPage` is completed
@@ -322,4 +364,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

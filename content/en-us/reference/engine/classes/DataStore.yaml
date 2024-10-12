@@ -49,6 +49,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DataStore:ListKeysAsync
     summary: |
       Returns a `Class.DataStoreKeyPages` object for enumerating through keys of
@@ -97,6 +99,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DataStore:ListVersionsAsync
     summary: |
       Enumerates all versions of a key.
@@ -147,6 +151,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DataStore:RemoveVersionAsync
     summary: |
       Permanently deletes the specified version of a key.
@@ -180,5 +186,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

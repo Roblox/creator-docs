@@ -38,6 +38,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SocialService:PromptGameInvite
     summary: |
       Prompts the given `Class.Player` with the invite screen.
@@ -79,6 +81,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SocialService:PromptPhoneBook
     summary: |
       Prompts the given `Class.Player` with the phone book.
@@ -118,6 +122,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SocialService:ShowSelfView
     summary: |
       Shows the calling player's self view.
@@ -138,6 +144,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SocialService:CanSendCallInviteAsync
     summary: |
       Indicates whether the given `Class.Player` can invite other players to a
@@ -168,6 +176,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SocialService:CanSendGameInviteAsync
     summary: |
       Indicates whether the given `Class.Player` can invite other players.
@@ -207,6 +217,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: SocialService.CallInviteStateChanged
     summary: |
@@ -231,6 +243,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SocialService.GameInvitePromptClosed
     summary: |
       Fires when a player closes an invite prompt.
@@ -252,6 +266,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SocialService.PhoneBookPromptClosed
     summary: |
       Fires when a player closes the phone book prompt.
@@ -268,6 +284,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks:
   - name: SocialService.OnCallInviteInvoked
     summary: |
@@ -303,3 +321,5 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []

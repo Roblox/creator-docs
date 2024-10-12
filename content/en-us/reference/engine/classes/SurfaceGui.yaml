@@ -56,6 +56,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: SurfaceGui.Brightness
     summary: |
       Determines the factor by which the GUI's light is scaled when
@@ -89,6 +92,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: SurfaceGui.CanvasSize
     summary: |
       The size of a 'virtual screen', in 'virtual pixels', which makes
@@ -108,6 +114,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: SurfaceGui.ClipsDescendants
     summary: |
       When set to true, portions of GuiObjects that fall outside of the
@@ -130,6 +139,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: SurfaceGui.LightInfluence
     summary: |
       Controls how much the SurfaceGui is influenced by the lighting in the game
@@ -149,6 +161,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: SurfaceGui.MaxDistance
     summary: |
       Controls how far away the SurfaceGui can be displayed before it stops
@@ -185,6 +200,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: SurfaceGui.PixelsPerStud
     summary: |
       Determines the number of screen-space pixels per world-space stud used to
@@ -214,6 +232,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: SurfaceGui.SizingMode
     summary: |
       Determines whether SurfaceGui will render at fixed size or scale with its
@@ -237,6 +258,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: SurfaceGui.ToolPunchThroughDistance
     summary: |
       Sets the distance left clicking starts acting on the surface gui instead
@@ -257,6 +281,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: SurfaceGui.ZOffset
     summary: |
       Offsets the SurfaceGui relative to the normal of the surface it is
@@ -276,6 +303,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

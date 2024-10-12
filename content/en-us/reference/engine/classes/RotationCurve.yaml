@@ -34,6 +34,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
 methods:
   - name: RotationCurve:GetKeyAtIndex
     summary: |
@@ -53,6 +56,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: RotationCurve:GetKeyIndicesAtTime
     summary: |
       Returns the index of the last and first key of a period of time.
@@ -75,6 +80,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: RotationCurve:GetKeys
     summary: |
       Returns a copy of all the keys in the rotation curve as a Lua array of
@@ -92,6 +99,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: RotationCurve:GetValueAtTime
     summary: |
       Samples the rotation curve at a given time and returns the corresponding
@@ -115,6 +124,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: RotationCurve:InsertKey
     summary: |
       Adds the key passed as an argument to this curve. If a key at the same
@@ -139,6 +150,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: RotationCurve:RemoveKeyAtIndex
     summary: |
       Removes a given number of keys starting from a given index.
@@ -165,6 +178,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: RotationCurve:SetKeys
     summary: |
       Resets this curve's keys using the `Datatype.RotationCurveKey` array
@@ -192,5 +207,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

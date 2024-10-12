@@ -39,6 +39,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ChorusSoundEffect.Mix
     summary: |
       Percentage of the original sound that will be applied to the filter.
@@ -58,6 +60,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ChorusSoundEffect.Rate
     summary: |
       How frequently the pitch variation changes.
@@ -76,6 +80,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

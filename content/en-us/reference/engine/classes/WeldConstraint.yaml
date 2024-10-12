@@ -87,6 +87,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: WeldConstraint.Enabled
     summary: |
       Toggles the constraint on and off.
@@ -109,6 +112,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: WeldConstraint.Part0
     summary: |
       The first part connected by the constraint.
@@ -149,6 +155,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: WeldConstraint.Part1
     summary: |
       The second part connected by the constraint.
@@ -189,6 +198,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

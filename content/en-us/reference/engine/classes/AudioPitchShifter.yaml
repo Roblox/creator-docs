@@ -33,6 +33,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPitchShifter.Pitch
     summary: |
       Pitch modification to be multiplied by the pitch of the input stream.
@@ -51,6 +54,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioPitchShifter:GetConnectedWires
     summary: |
@@ -72,5 +78,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

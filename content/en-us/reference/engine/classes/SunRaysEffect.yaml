@@ -41,6 +41,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: SunRaysEffect.Spread
     summary: |
       Determines how wide the sun rays will spread out.
@@ -60,6 +63,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

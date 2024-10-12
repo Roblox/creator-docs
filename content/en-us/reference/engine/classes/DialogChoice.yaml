@@ -34,6 +34,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: DialogChoice.GoodbyeDialog
     summary: |
       Sets the sentence that the dialog will show to the player when the chat
@@ -53,6 +56,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: DialogChoice.ResponseDialog
     summary: |
       Sets what the NPC will say when the player chooses this DialogChoice.
@@ -70,6 +76,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: DialogChoice.UserDialog
     summary: |
       Sets what the player will say when they choose this DialogChoice.
@@ -87,6 +96,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

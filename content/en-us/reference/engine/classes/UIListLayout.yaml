@@ -138,6 +138,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIListLayout.ItemLineAlignment
     summary: |
       In a flex layout, defines the **cross-directional** alignment of siblings
@@ -191,6 +194,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIListLayout.Padding
     summary: |
       Amount of free space between each element.
@@ -210,6 +216,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIListLayout.VerticalFlex
     summary: |
       Controls how to distribute extra vertical space.
@@ -287,6 +296,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIListLayout.Wraps
     summary: |
       Controls whether siblings within the parent container wrap.
@@ -308,6 +320,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

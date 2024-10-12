@@ -51,6 +51,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:Blockcast
     summary: |
       Casts a block shape in a given direction and returns a
@@ -107,6 +109,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:BulkMoveTo
     summary: |
       Moves a table of `Class.BasePart|BaseParts` to a table of
@@ -152,6 +156,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:FindPartOnRay
     summary: |
       Returns the first `Class.BasePart` or `Class.Terrain` cell intersecting
@@ -219,6 +225,8 @@ methods:
       with `Datatype.RaycastParams` for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:FindPartOnRayWithIgnoreList
     summary: |
       Returns the first `Class.BasePart` or `Class.Terrain` cell intersecting
@@ -263,6 +271,8 @@ methods:
       with `Datatype.RaycastParams` for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:FindPartOnRayWithWhitelist
     summary: |
       Returns the first `Class.BasePart` or `Class.Terrain` cell intersecting
@@ -307,6 +317,8 @@ methods:
       with `Datatype.RaycastParams` for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:FindPartsInRegion3
     summary: |
       Returns an array of `Class.BasePart|BaseParts` in the given
@@ -369,6 +381,8 @@ methods:
       for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:FindPartsInRegion3WithIgnoreList
     summary: |
       Returns an array of `Class.BasePart|BaseParts` in the given
@@ -419,6 +433,8 @@ methods:
       for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:FindPartsInRegion3WithWhiteList
     summary: |
       Returns an array of `Class.BasePart|BaseParts` in the given
@@ -468,6 +484,8 @@ methods:
       for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:GetPartBoundsInBox
     summary: |
       Returns an array of parts whose **bounding boxes** overlap a given box.
@@ -516,6 +534,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:GetPartBoundsInRadius
     summary: |
       Returns an array of parts whose **bounding boxes** overlap a given sphere.
@@ -564,6 +584,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:GetPartsInPart
     summary: |
       Returns an array of parts whose occupied space is shared with the given
@@ -611,6 +633,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:IKMoveTo
     summary: |
       Moves the specified part to the specified location via inverse kinematics
@@ -679,6 +703,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:IsRegion3Empty
     summary: |
       Returns a bool indicating whether there are no `Class.BasePart|BaseParts`
@@ -754,6 +780,8 @@ methods:
       for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:IsRegion3EmptyWithIgnoreList
     summary: |
       Returns a boolean indicating whether there are no
@@ -799,6 +827,8 @@ methods:
       for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:Raycast
     summary: |
       Casts a ray using an origin, direction, and optional
@@ -853,6 +883,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:Shapecast
     summary: ''
     description: ''
@@ -877,6 +909,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:Spherecast
     summary: |
       Casts a spherical shape in a given direction and returns a
@@ -933,6 +967,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:StepPhysics
     summary: |
       Advances the simulation for parts in the world forward based on a
@@ -976,6 +1012,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:findPartOnRay
     summary: ''
     description: ''
@@ -1007,6 +1045,8 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:findPartsInRegion3
     summary: ''
     description: ''
@@ -1034,5 +1074,7 @@ methods:
       `Class.WorldRoot:FindPartsInRegion3()` which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

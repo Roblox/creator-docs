@@ -42,6 +42,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: VehicleSeat.Disabled
     summary: |
       Toggles whether the `Class.VehicleSeat` is active or not.
@@ -61,6 +63,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: VehicleSeat.HeadsUpDisplay
     summary: |
       If true, a fancy speed bar will be displayed speed on screen that tells
@@ -80,6 +84,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: VehicleSeat.MaxSpeed
     summary: |
       The maximum speed that can be attained.
@@ -97,6 +103,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: VehicleSeat.Occupant
     summary: |
       The humanoid that is sitting in the seat.
@@ -116,6 +124,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: VehicleSeat.Steer
     summary: |
       The direction of movement, tied to the keys A and D. Must be one of 1
@@ -141,6 +151,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: VehicleSeat.SteerFloat
     summary: |
       Functions identically to `Class.VehicleSeat.Steer`, but the value is not
@@ -160,6 +172,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: VehicleSeat.Throttle
     summary: |
       The direction of movement, tied to the keys W and S. Must be an integer 1
@@ -185,6 +199,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: VehicleSeat.ThrottleFloat
     summary: |
       Functions identically to `Class.VehicleSeat.Throttle`, but the value is
@@ -204,6 +220,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: VehicleSeat.Torque
     summary: |
       How fast the vehicles will be able to attain `Class.VehicleSeat.MaxSpeed`.
@@ -223,6 +241,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: VehicleSeat.TurnSpeed
     summary: |
       The speed at which the vehicle will turn. Higher numbers can cause
@@ -242,6 +262,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: VehicleSeat:Sit
     summary: |
@@ -264,5 +286,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

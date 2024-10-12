@@ -37,6 +37,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioChorus.Depth
     summary: |
       Controls the maximum delay time of the copied streams in the chorus
@@ -57,6 +60,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioChorus.Mix
     summary: |
       Controls the balance of plain input stream to modified output stream.
@@ -75,6 +81,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioChorus.Rate
     summary: |
       Controls the rate of pitch modulations.
@@ -93,6 +102,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioChorus:GetConnectedWires
     summary: |
@@ -114,5 +126,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

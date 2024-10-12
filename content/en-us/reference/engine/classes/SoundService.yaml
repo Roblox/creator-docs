@@ -83,6 +83,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: SoundService.DefaultListenerLocation
     summary: ''
     description: ''
@@ -98,6 +100,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: SoundService.DistanceFactor
     summary: |
       The number of studs to be considered a meter by `Class.SoundService` when
@@ -137,6 +141,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: SoundService.DopplerScale
     summary: |
       This property determines the degree to which a 3D `Class.Sound` object's
@@ -180,6 +186,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: SoundService.RespectFilteringEnabled
     summary: |
       Sets whether `Class.Sound` playback from a client will replicate to the
@@ -203,6 +211,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: SoundService.RolloffScale
     summary: |
       Sets how fast 3D `Class.Sound` volume attenuates, or 'rolls off'.
@@ -242,6 +252,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: SoundService.VolumetricAudio
     summary: ''
     description: ''
@@ -258,6 +270,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: SoundService:GetListener
     summary: |
@@ -328,6 +342,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SoundService:OpenAttenuationCurveEditor
     summary: ''
     description: ''
@@ -344,6 +360,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SoundService:PlayLocalSound
     summary: |
       Plays a `Class.Sound` locally, meaning the sound will only be heard by the
@@ -368,6 +386,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SoundService:SetListener
     summary: |
       Sets the listener for the `Class.SoundService`.
@@ -423,5 +443,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

@@ -67,6 +67,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
 methods:
   - name: Keyframe:AddMarker
     summary: |
@@ -111,6 +114,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Keyframe:AddPose
     summary: |
       Adds a `Class.Pose` to the `Class.Keyframe` by parenting it to the
@@ -139,6 +144,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Keyframe:GetMarkers
     summary: |
       Returns an array containing all `KeyframeMarkers` that have been added to
@@ -177,6 +184,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Keyframe:GetPoses
     summary: |
       Returns an array containing all `Class.Pose|Poses` that have been added to
@@ -195,6 +204,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Keyframe:RemoveMarker
     summary: |
       Removes a `Class.KeyframeMarker` from the `Class.Keyframe` by settings its
@@ -241,6 +252,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Keyframe:RemovePose
     summary: |
       Removes a `Class.Pose` from the `Class.Keyframe` by setting its
@@ -267,5 +280,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

@@ -42,6 +42,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: LayerCollector.ResetOnSpawn
     summary: |
       Determines if the `Class.LayerCollector` resets (deletes itself and
@@ -69,6 +72,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: LayerCollector.ZIndexBehavior
     summary: |
       Controls how `Class.GuiObject.ZIndex` behaves on all descendants of this
@@ -99,6 +105,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods:
   - name: LayerCollector:GetLayoutNodeTree
     summary: ''
@@ -114,5 +123,7 @@ methods:
       This method should not be used for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

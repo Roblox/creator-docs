@@ -64,6 +64,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:GetLineCount
     summary: |
       Returns the number of lines in the document.
@@ -79,6 +81,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:GetScript
     summary: |
       Returns the underlying `Class.LuaSourceContainer` instance, if one exists,
@@ -96,6 +100,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:GetSelectedText
     summary: |
       Gets the text selected in the editor, or an empty string if there is no
@@ -113,6 +119,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:GetSelection
     summary: |
       Returns the last known selection of the Script Editor in the format:
@@ -132,6 +140,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:GetSelectionEnd
     summary: |
       Gets the larger of the cursor position and anchor. If the editor has no
@@ -149,6 +159,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:GetSelectionStart
     summary: |
       Gets the smaller of the cursor position and anchor. If the editor has no
@@ -166,6 +178,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:GetText
     summary: |
       Returns text from the open editor.
@@ -204,6 +218,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:GetViewport
     summary: |
       Returns the currently displayed line numbers in the editor change.
@@ -223,6 +239,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:HasSelectedText
     summary: |
       Returns whether or not the editor has any text selected.
@@ -238,6 +256,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:IsCommandBar
     summary: |
       Returns true if the `Class.ScriptDocument` represents the Command bar.
@@ -260,6 +280,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:CloseAsync
     summary: |
       Requests that the editor associated with this document close. Yields the
@@ -282,6 +304,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:EditTextAsync
     summary: |
       Replaces the text in the specified range from (`startLine`, `startColumn`)
@@ -339,6 +363,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:ForceSetSelectionAsync
     summary: |
       Asks the editor to set its cursor selection to the argument values.
@@ -380,6 +406,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument:RequestSetSelectionAsync
     summary: |
       Asks the editor to set its cursor selection to the argument values.
@@ -419,6 +447,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: ScriptDocument.SelectionChanged
     summary: |
@@ -450,6 +480,8 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ScriptDocument.ViewportChanged
     summary: |
       Fires when the displayed line numbers in the editor change.
@@ -471,4 +503,6 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

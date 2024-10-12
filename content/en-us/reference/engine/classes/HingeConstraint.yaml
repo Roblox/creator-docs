@@ -84,6 +84,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.AngularResponsiveness
     summary: |
       Specifies the sharpness of the servo motor in reaching the
@@ -106,6 +109,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.AngularSpeed
     summary: |
       The desired angular speed a `Class.HingeConstraint` with
@@ -131,6 +137,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.AngularVelocity
     summary: |
       The angular velocity a `Class.HingeConstraint` with
@@ -154,6 +163,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.CurrentAngle
     summary: |
       The current angle of the `Class.HingeConstraint`.
@@ -175,6 +187,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.LimitsEnabled
     summary: |
       Sets whether the `Class.HingeConstraint` will limit the range of rotation.
@@ -200,6 +215,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.LowerAngle
     summary: |
       The minimum rotation angle the `Class.HingeConstraint` will allow if
@@ -220,6 +238,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.MotorMaxAcceleration
     summary: |
       The maximum angular acceleration a `Class.HingeConstraint` with
@@ -245,6 +266,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.MotorMaxTorque
     summary: |
       The maximum torque a `Class.HingeConstraint` with
@@ -268,6 +292,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.Radius
     summary: |
       The visualized radius of the `Class.HingeConstraint`.
@@ -285,6 +312,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.Restitution
     summary: |
       How elastic `Class.Attachment` connected by a `Class.HingeConstraint` will
@@ -308,6 +338,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.ServoMaxTorque
     summary: |
       The maximum torque a `Class.HingeConstraint` with
@@ -331,6 +364,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.SoftlockServoUponReachingTarget
     summary: ''
     description: ''
@@ -348,6 +384,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.TargetAngle
     summary: |
       The target angle a `Class.HingeConstraint` will attempt to rotate to if
@@ -369,6 +408,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: HingeConstraint.UpperAngle
     summary: |
       The maximum rotation angle the `Class.HingeConstraint` will allow if
@@ -389,6 +431,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

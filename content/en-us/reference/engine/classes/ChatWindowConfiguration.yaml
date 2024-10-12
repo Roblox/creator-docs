@@ -36,6 +36,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowConfiguration.AbsoluteSize
     summary: |
       Describes the actual screen size of the default chat window, in pixels.
@@ -56,6 +59,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowConfiguration.BackgroundColor3
     summary: |
       Determines the background color of the default chat window.
@@ -77,6 +83,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowConfiguration.BackgroundTransparency
     summary: |
       Determines the background transparency of the default chat window.
@@ -98,6 +107,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowConfiguration.Enabled
     summary: |
       Determines whether to show the default chat window.
@@ -117,6 +129,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowConfiguration.FontFace
     summary: |
       Determines the font used to render text in the default chat window.
@@ -134,6 +149,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowConfiguration.HeightScale
     summary: |
       Determines by what factor the height of the default chat window should be
@@ -154,6 +172,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowConfiguration.HorizontalAlignment
     summary: |
       Determines the horizontal alignment of the chat window.
@@ -175,6 +196,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowConfiguration.TextColor3
     summary: |
       Determines the color of the text in default chat window.
@@ -193,6 +217,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowConfiguration.TextSize
     summary: |
       Determines the size of the text in default chat window.
@@ -211,6 +238,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowConfiguration.TextStrokeColor3
     summary: |
       Determines the color of the text stroke of text in default chat window.
@@ -229,6 +259,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowConfiguration.TextStrokeTransparency
     summary: |
       Determines the transparency of the text stroke of text in default chat
@@ -248,6 +281,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowConfiguration.VerticalAlignment
     summary: |
       Determines the vertical alignment of the chat window.
@@ -269,6 +305,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChatWindowConfiguration.WidthScale
     summary: |
       Determines by what factor the width of the default chat window should be
@@ -289,6 +328,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
 methods:
   - name: ChatWindowConfiguration:DeriveNewMessageProperties
     summary: ''
@@ -302,5 +344,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

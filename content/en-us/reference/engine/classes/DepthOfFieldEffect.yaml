@@ -46,6 +46,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: DepthOfFieldEffect.FocusDistance
     summary: |
       Distance away from the camera where objects are in focus.
@@ -66,6 +69,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: DepthOfFieldEffect.InFocusRadius
     summary: |
       Controls the distance away from the
@@ -89,6 +95,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: DepthOfFieldEffect.NearIntensity
     summary: |
       Intensity of the near field blur.
@@ -110,6 +119,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

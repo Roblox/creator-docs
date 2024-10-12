@@ -60,6 +60,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.BasaltName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Basalt.
@@ -80,6 +82,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.BrickName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Brick.
@@ -100,6 +104,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.CardboardName
     summary: ''
     description: ''
@@ -116,6 +122,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.CarpetName
     summary: ''
     description: ''
@@ -132,6 +140,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.CeramicTilesName
     summary: ''
     description: ''
@@ -148,6 +158,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.ClayRoofTilesName
     summary: ''
     description: ''
@@ -164,6 +176,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.CobblestoneName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Cobblestone.
@@ -184,6 +198,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.ConcreteName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Concrete.
@@ -204,6 +220,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.CorrodedMetalName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in CorrodedMetal.
@@ -224,6 +242,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.CrackedLavaName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in CrackedLava.
@@ -244,6 +264,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.DiamondPlateName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in DiamondPlate.
@@ -264,6 +286,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.FabricName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Fabric.
@@ -284,6 +308,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.FoilName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Foil.
@@ -304,6 +330,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.GlacierName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Glacier.
@@ -324,6 +352,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.GraniteName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Granite.
@@ -344,6 +374,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.GrassName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Grass.
@@ -364,6 +396,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.GroundName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Ground.
@@ -384,6 +418,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.IceName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Ice.
@@ -404,6 +440,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.LeafyGrassName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in LeafyGrass.
@@ -424,6 +462,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.LeatherName
     summary: ''
     description: ''
@@ -440,6 +480,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.LimestoneName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Limestone.
@@ -460,6 +502,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.MarbleName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Marble.
@@ -480,6 +524,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.MetalName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Metal.
@@ -500,6 +546,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.MudName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Mud.
@@ -520,6 +568,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.PavementName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Pavement.
@@ -540,6 +590,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.PebbleName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Pebble.
@@ -560,6 +612,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.PlasterName
     summary: ''
     description: ''
@@ -576,6 +630,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.PlasticName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Plastic.
@@ -596,6 +652,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.RockName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Rock.
@@ -616,6 +674,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.RoofShinglesName
     summary: ''
     description: ''
@@ -632,6 +692,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.RubberName
     summary: ''
     description: ''
@@ -648,6 +710,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.SaltName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Salt.
@@ -668,6 +732,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.SandName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Sand.
@@ -688,6 +754,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.SandstoneName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Sandstone.
@@ -708,6 +776,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.SlateName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Slate.
@@ -728,6 +798,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.SmoothPlasticName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in SmoothPlastic.
@@ -748,6 +820,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.SnowName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Snow.
@@ -768,6 +842,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.Use2022Materials
     summary: |
       Switch built-in material pack.
@@ -787,6 +863,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.WoodName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in Wood.
@@ -807,6 +885,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService.WoodPlanksName
     summary: |
       Specify `Class.MaterialVariant` name to override built-in WoodPlanks.
@@ -827,6 +907,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: MaterialService:GetBaseMaterialOverride
     summary: |
@@ -848,6 +930,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService:GetMaterialVariant
     summary: |
       Get the effective MaterialVariant reference given a name and Material.
@@ -875,6 +959,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: MaterialService:SetBaseMaterialOverride
     summary: |
       Set a `Class.MaterialVariant` name that overrides a built-in material.
@@ -899,5 +985,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

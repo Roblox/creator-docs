@@ -35,6 +35,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioFilter.Editor
     summary: ''
     description: ''
@@ -51,6 +54,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioFilter.FilterType
     summary: |
       The curve type of the band represented by the filter.
@@ -70,6 +76,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioFilter.Frequency
     summary: |
       The central frequency that the filter acts around.
@@ -89,6 +98,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioFilter.Gain
     summary: |
       For peaking and shelving filters, controls volume increase or reduction.
@@ -109,6 +121,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioFilter.Q
     summary: |
       For peaking, lowpass, highpass, bandpass, and notch filters, controls the
@@ -136,6 +151,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioFilter:GetConnectedWires
     summary: |
@@ -157,6 +175,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioFilter:GetGainAt
     summary: |
       Returns the magnitude response of the filter at the given frequency.
@@ -179,5 +199,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

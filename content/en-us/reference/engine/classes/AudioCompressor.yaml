@@ -39,6 +39,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioCompressor.Bypass
     summary: |
       Whether audio streams are passed-through unaffected by this effect.
@@ -56,6 +59,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioCompressor.MakeupGain
     summary: |
       A gain value to be applied after compression.
@@ -75,6 +81,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioCompressor.Ratio
     summary: |
       Ratio of input volume to output volume, to be applied when surpassing
@@ -96,6 +105,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioCompressor.Release
     summary: |
       Controls how quickly the compressor will unclamp after the stream volume
@@ -116,6 +128,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioCompressor.Threshold
     summary: |
       Gain value at which the compressor will start to modify the input stream.
@@ -144,6 +159,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioCompressor:GetConnectedWires
     summary: |
@@ -166,5 +184,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

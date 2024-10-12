@@ -88,6 +88,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UnreliableRemoteEvent:FireClient
     summary: |
       Fires the `Class.UnreliableRemoteEvent.OnClientEvent|OnClientEvent` event
@@ -136,6 +138,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UnreliableRemoteEvent:FireServer
     summary: |
       Fires the `Class.UnreliableRemoteEvent.OnServerEvent|OnServerEvent` event
@@ -176,6 +180,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: UnreliableRemoteEvent.OnClientEvent
     summary: |
@@ -211,6 +217,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UnreliableRemoteEvent.OnServerEvent
     summary: |
       Fires from a `Class.Script` when
@@ -249,4 +257,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

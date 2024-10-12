@@ -64,6 +64,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiButton.Modal
     summary: |
       If true while the GUI element is visible, the mouse will not be locked
@@ -83,6 +86,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiButton.Selected
     summary: |
       A boolean property which indicates whether the object has been selected.
@@ -100,6 +106,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiButton.Style
     summary: |
       Sets the style of the GuiButton based on a list of pre-determined styles.
@@ -117,6 +126,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events:
   - name: GuiButton.Activated
@@ -141,6 +153,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiButton.MouseButton1Click
     summary: |
       Fired when the mouse has fully left clicked the GUI button.
@@ -170,6 +184,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiButton.MouseButton1Down
     summary: |
       Fired when the mouse is in the left mouse down state on the GUI object.
@@ -204,6 +220,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiButton.MouseButton1Up
     summary: |
       Fired when the left mouse has released the GUI object.
@@ -238,6 +256,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiButton.MouseButton2Click
     summary: |
       Fired when the mouse has fully right clicked the GUI button.
@@ -267,6 +287,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiButton.MouseButton2Down
     summary: |
       Fired when the mouse is in the right mouse down state on the GUI object.
@@ -301,6 +323,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiButton.MouseButton2Up
     summary: |
       Fired when the right mouse button has been released on a GUI Object.
@@ -335,4 +359,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

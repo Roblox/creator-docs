@@ -41,6 +41,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BodyForce.force
     summary: |
       Determines the amount of force applied on each axis.
@@ -63,6 +65,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

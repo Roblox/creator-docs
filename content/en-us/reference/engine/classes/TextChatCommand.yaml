@@ -33,6 +33,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: TextChatCommand.Enabled
     summary: |
       Determines whether the `Class.TextChatCommand` is enabled.
@@ -55,6 +58,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: TextChatCommand.PrimaryAlias
     summary: |
       A primary alias used to trigger the `Class.TextChatCommand`.
@@ -76,6 +82,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: TextChatCommand.SecondaryAlias
     summary: |
       A secondary alias used to trigger the `Class.TextChatCommand`.
@@ -93,6 +102,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
 methods: []
 events:
   - name: TextChatCommand.Triggered
@@ -130,4 +142,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

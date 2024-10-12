@@ -37,6 +37,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DataStoreSetOptions:SetMetadata
     summary: |
       Sets custom metadata to be associated with the key.
@@ -58,5 +60,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

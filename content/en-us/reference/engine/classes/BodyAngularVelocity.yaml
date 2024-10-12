@@ -51,6 +51,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BodyAngularVelocity.MaxTorque
     summary: |
       Determines the limit of torque that may be exerted on each world axis.
@@ -72,6 +74,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BodyAngularVelocity.P
     summary: |
       Determines how aggressive of a torque is applied in reaching the goal
@@ -94,6 +98,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BodyAngularVelocity.angularvelocity
     summary: ''
     description: ''
@@ -113,6 +119,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: BodyAngularVelocity.maxTorque
     summary: |
       Determines how much force can be applied to each axis.
@@ -136,6 +144,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

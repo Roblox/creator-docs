@@ -40,6 +40,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - DataStore
+    writeCapabilities: []
   - name: DataStoreObjectVersionInfo.IsDeleted
     summary: |
       Whether the version has been marked as deleted.
@@ -60,6 +63,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - DataStore
+    writeCapabilities: []
   - name: DataStoreObjectVersionInfo.Version
     summary: |
       Uniquely identifies a particular version of the key.
@@ -82,6 +88,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - DataStore
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []
