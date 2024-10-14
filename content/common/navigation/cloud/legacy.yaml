@@ -28,16 +28,26 @@ navigation:
     versions:
       - name: v1
         path: /cloud/legacy/assetdelivery/v1
-  - title: Auth v2
+  - title: Authentication v3
+    type: cloudapi
+    versions:
+      - name: v3
+        path: /cloud/legacy/auth/v3
+  - title: Authentication v2
     type: cloudapi
     versions:
       - name: v2
         path: /cloud/legacy/auth/v2
-  - title: Auth v1
+  - title: Authentication v1
     type: cloudapi
     versions:
       - name: v1
         path: /cloud/legacy/auth/v1
+  - title: Avatar v3
+    type: cloudapi
+    versions:
+      - name: v3
+        path: /cloud/legacy/avatar/v3
   - title: Avatar v2
     type: cloudapi
     versions:

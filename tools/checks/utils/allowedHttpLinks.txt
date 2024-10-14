@@ -499,6 +499,8 @@ https://www.youtube-nocookie.com/embed/llR_pNlJDQw
 https://youtu.be/OEmFocfE0Xs
 https://www.youtube.com/watch?v=SgPU84AqpkY&t=74s
 https://www.youtube.com/watch?v=9mXvhYSv7fc&t=96s
+https://www.youtube.com/watch?v=C-DwGRBHvmE&t=512s
+https://www.youtube-nocookie.com/embed/C-DwGRBHvmE
 https://en.wikipedia.org/wiki/Exponential_backoff
 https://en.wikipedia.org/wiki/Moment_of_inertia
 https://en.wikipedia.org/wiki/Shard_(database_architecture)

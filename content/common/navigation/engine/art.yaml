@@ -38,11 +38,6 @@ navigation:
     path: /art/characters/exporting-avatar-animations-from-maya
   - title: Animating Heads
     path: /art/characters/facial-animation/animating-heads
-  - heading: Environment and Lighting
-  - title: Assembling Modular Environments
-    path: /tutorials/use-case-tutorials/modeling/assembling-modular-environments
-  - title: Enhancing Outdoor Environments with Future Lighting
-    path: /tutorials/use-case-tutorials/lighting/enhancing-outdoor-environments-with-future-lighting
 
   - heading: Example Projects
     path:

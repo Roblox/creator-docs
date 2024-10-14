@@ -24,7 +24,7 @@ Avatar character models are made up of 15 separate mesh objects and require addi
 - **No N-gons** - Model your assets in quads where possible.
 - **Transformations** - All translation, rotation, and scale values must be frozen and pivots set to `0`, `0`, `0`.
 - **Orientation** - Characters must face positive Z and stand up in positive Y.
-- **Pose** - Before exporting, set your character to an I-Pose when possible.
+- **Pose** - Before exporting, set your character to an I-Pose, A-Pose, or T-Pose when possible.
 
 ### Body Scale
 
@@ -471,13 +471,9 @@ To ensure that avatar sizes are visually consistent, you must standardize body p
 
 Attachments are points on the humanoid model where rigid accessories attach. Like many [character components](./index.md#components-of-an-avatar), attachment points are set up in third-party modeling software and imported as `Class.Attachment` objects.
 
-The 3D Importer automatically recognizes and converts mesh objects as attachment points if the objects include the affix `\_Att` and follow the naming conventions below. This only applies when importing meshes with caging data, such bodies. Check out examples of this implementation in any of the [downloadable reference models](../../avatar/resources.md#references).
+The 3D Importer automatically recognizes and converts mesh objects as attachment points if the objects include the affix `\_Att` and follow the naming conventions below. This only applies when importing meshes with caging data, such as bodies (accessory attachment points are created using the Accessory Fitting Tool). Check out examples of this implementation in any of the [downloadable reference models](../../avatar/resources.md#references).
 
 Generally, when placing attachment points, position them so they overlap halfway with the character model's mesh part.
-
-  <Alert severity = 'info'>
-
-  </Alert>
 
   <GridContainer numColumns="2">
     <figure>
@@ -564,7 +560,7 @@ Attachments must follow a specific naming convention and positional consistency:
   <tr>
     <td>RightHand</td>
     <td>RightGrip_Att</td>
-    <td>Anywhere in mesh bounding box, must set the rotation of the RightGrip_Att to `90`, `0`, `0`</td>
+    <td>Anywhere in mesh bounding box. <br/><br/>Orient grip attachments **perpendicular** to the lower arm bone. For example, for I-Pose (arms pointing down), set the grip attachment to `90`, `0`, `0` (grip attachment pointing forward).<br/><br/><img src="../../assets/modeling/meshes/Grip_Attachments.png" width="250" /></td>
   </tr>
   <tr>
     <td>LeftUpperArm</td>
@@ -574,7 +570,7 @@ Attachments must follow a specific naming convention and positional consistency:
   <tr>
     <td>LeftHand</td>
     <td>LeftGrip_Att</td>
-    <td>Anywhere in mesh bounding box, must set the rotation of the LeftGrip_Att to `90`, `0`, `0`</td>
+    <td>Anywhere in mesh bounding box. <br/><br/>Orient grip attachments **perpendicular** to the lower arm bone. For example, for I-Pose (arms pointing down), set the grip attachment to `90`, `0`, `0` (grip attachment pointing forward).<br/><br/><img src="../../assets/modeling/meshes/Grip_Attachments.png" width="250" /></td>
   </tr>
   <tr>
     <td>RightFoot</td>
@@ -638,7 +634,7 @@ See the following requirements for humanoid rigging:
   </GridContainer>
 
 - **LowerTorso and Root** - The LowerTorso and Root bone or joint position must be set to `0`, `0`, `0`.
-- **Pose** - Export your character model in an I-Pose for the best Studio compatibility. The LeftUpperArm and RightUpperArm bones can be exported with rotation values to meet this requirement.
+- **Pose** - Export your character model in an I-Pose, A-Pose, or T-Pose for the best Studio compatibility. The LeftUpperArm and RightUpperArm bones can be exported with rotation values to meet this requirement.
 
 ## Skinning
 
@@ -717,15 +713,12 @@ The following are examples of skin tone shading for the face, and you can apply 
 
 ## Outer Cages
 
-Outer cages are non-rendered meshes that Roblox uses to define the outer surfaces of a body part using a `Class.WrapTarget` instance. Outer cages on your character model allow your character to wear layerable accessories, such as clothing.
+Outer cages on your character model allow your character to wear layerable accessories, such as clothing. Models, such as an avatar character, that are the target of meshes that will stretch over it, only require an outer cage, but meshes that deform, like [layered clothing](../accessories/clothing-specifications.md#cage-meshes), require an inner and outer cage.
 
-For general use, see the following requirements for adding inner and outer cage meshes to your model:
+For general use, see the following requirements for adding outer cage meshes to your model:
 
-- **Naming Conventions** - The inner and outer cage must be named after the primary mesh object with **\_InnerCage** and **\_OuterCage** affixed.
-
-   <img src="../../assets/accessories/lc-blender-selecting-cage-in-outlier.png" />
-
-- **Outer Cage** - Models, such as a playable character, that aren't expected deform but are the target of meshes that will stretch over it, only require an Outer Cage.
+- Use Roblox's [Body Cage templates](../../avatar/resources.md#project-files) to ensure naming convention and other configurations are correct.
+- **Naming Conventions** - The outer cage of a body part must be named after the primary mesh object with **\_OuterCage** affixed, for example `LeftUpperArm_OuterCage`.
 - **Vertices and UV Map** - Don't delete vertices or alter the UVs on the Outer Cages as this can cause errors when importing in Studio or when equipping onto a character. Use the Roblox provided templates for the cage meshes to ensure compatibility with other layered assets.
 - **Symmetry and consistency** - Keep each face (the space between vertices) consistently sized and retain symmetry wherever possible. Use symmetry tools in your modeling software whenever possible.
 
