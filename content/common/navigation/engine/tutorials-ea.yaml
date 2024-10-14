@@ -4,14 +4,14 @@ backTo:
 navigation:
   - heading: Environmental Art Curriculum
   - title: Overview
-    path: /tutorials/environmental-art/
+    path: /tutorials/curriculums/environmental-art/
   - title: Greybox Your Environment
-    path: /tutorials/environmental-art/greybox-your-environment
+    path: /tutorials/curriculums/environmental-art/greybox-your-environment
   - title: Develop Polished Assets
-    path: /tutorials/environmental-art/develop-polished-assets
+    path: /tutorials/curriculums/environmental-art/develop-polished-assets
   - title: Assemble an Asset Library
-    path: /tutorials/environmental-art/assemble-an-asset-library
+    path: /tutorials/curriculums/environmental-art/assemble-an-asset-library
   - title: Construct Your World
-    path: /tutorials/environmental-art/construct-your-world
+    path: /tutorials/curriculums/environmental-art/construct-your-world
   - title: Optimize Your Experience
-    path: /tutorials/environmental-art/optimize-your-experience
+    path: /tutorials/curriculums/environmental-art/optimize-your-experience

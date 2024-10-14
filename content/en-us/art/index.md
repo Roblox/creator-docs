@@ -80,7 +80,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
   <Typography variant='h4'>Environmental Art</Typography>
   <Typography variant='body1' >Environmental Art teaches you how to recreate a high-quality environment for a first-person laser tag experience.</Typography>
     <div style={{marginTop:16}}>
-      <a underline="none" href="../tutorials/environmental-art">
+      <a underline="none" href="../tutorials/curriculums/environmental-art/index.md">
       <Button variant="contained" color="secondary" size='large'
       style={{marginRight:8, alignSelf: 'flex-start'}}>Create</Button>
       </a>
@@ -123,7 +123,7 @@ Check out the following showcases made by Roblox and the community. Each of thes
     <Typography variant='body1' >Check out various experiences created by Roblox. Click to see documentation, downloadable resources, and links to try out the experiences yourself!</Typography>
     <a href="../resources/the-mystery-of-duvall-drive/index.md"><Typography variant='h6' style={{marginBottom: 12}}>Mystery of Duvall Drive</Typography></a>
     <a href="../resources/beyond-the-dark/index.md"><Typography variant='h6' style={{marginBottom: 12}}>Beyond the Dark</Typography></a>
-    <a href="../tutorials/3D-art/assembling-modular-environments.md"><Typography variant='h6' style={{marginBottom: 12}}>Modern City template</Typography></a>
+    <a href="../tutorials/use-case-tutorials/modeling/assembling-modular-environments.md"><Typography variant='h6' style={{marginBottom: 12}}>Modern City template</Typography></a>
   </Grid>
   </Grid>
 
@@ -257,9 +257,9 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <Typography variant='h5'>3D Art Tutorials</Typography>
 
-<a href="../tutorials/core/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Core Curriculum</Typography></a>
-<a href="../tutorials/environmental-art/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Environmental Art</Typography></a>
-<a href="../tutorials/gameplay-scripting/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Gameplay Scripting</Typography></a>
+<a href="../tutorials/curriculums/core/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Core Curriculum</Typography></a>
+<a href="../tutorials/curriculums/environmental-art/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Environmental Art</Typography></a>
+<a href="../tutorials/curriculums/gameplay-scripting/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Gameplay Scripting</Typography></a>
 <br />
 
 <p><Typography variant='body1' style={{marginBottom: 12}}>See <a href="../tutorials/index.md">Engine Tutorials</a> for additional 3D Art tutorials.</Typography></p>
@@ -359,13 +359,13 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <Typography variant='h5'>Environment, Lighting, and Effects</Typography>
 
-<a href="../tutorials/environmental-art/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Environmental Art Curriculum</Typography></a>
-<a href="../tutorials/3D-art/assembling-modular-environments.md"><Typography variant='body1' style={{marginBottom: 12}}>Assembling Modular Environments</Typography></a>
-<a href="../tutorials/building/environments/lighting-with-props.md"><Typography variant='body1' style={{marginBottom: 12}}>Lighting with Props</Typography></a>
-<a href="../tutorials/building/environments/in-game-sounds.md"><Typography variant='body1' style={{marginBottom: 12}}>In-Game Sounds</Typography></a>
-<a href="../tutorials/3D-art/enhancing-outdoor-environments-with-future-lighting.md"><Typography variant='body1' style={{marginBottom: 12}}>Enhancing Outdoor Environments with Future Lighting</Typography></a>
-<a href="../tutorials/building/effects/basic-particle-effects.md"><Typography variant='body1' style={{marginBottom: 12}}>Basic Particle Effects</Typography></a>
-<a href="../tutorials/building/effects/custom-particle-effects.md"><Typography variant='body1' style={{marginBottom: 12}}>Custom Particle Effects</Typography></a>
+<a href="../tutorials/curriculums/environmental-art/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Environmental Art Curriculum</Typography></a>
+<a href="../tutorials/use-case-tutorials/modeling/assembling-modular-environments.md"><Typography variant='body1' style={{marginBottom: 12}}>Assembling Modular Environments</Typography></a>
+<a href="../tutorials/use-case-tutorials/lighting/lighting-with-props.md"><Typography variant='body1' style={{marginBottom: 12}}>Lighting with Props</Typography></a>
+<a href="../tutorials/use-case-tutorials/audio/in-game-sounds.md"><Typography variant='body1' style={{marginBottom: 12}}>In-Game Sounds</Typography></a>
+<a href="../tutorials/use-case-tutorials/lighting/enhancing-outdoor-environments-with-future-lighting.md"><Typography variant='body1' style={{marginBottom: 12}}>Enhancing Outdoor Environments with Future Lighting</Typography></a>
+<a href="../tutorials/use-case-tutorials/vfx/basic-particle-effects.md"><Typography variant='body1' style={{marginBottom: 12}}>Basic Particle Effects</Typography></a>
+<a href="../tutorials/use-case-tutorials/vfx/custom-particle-effects.md"><Typography variant='body1' style={{marginBottom: 12}}>Custom Particle Effects</Typography></a>
 <a href="https://devforum.roblox.com/t/custom-skyboxes-101/2849003"><Typography variant='body1' style={{marginBottom: 12}}>Custom Skyboxes 101 (Staff)</Typography></a>
 
 <br />

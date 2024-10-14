@@ -6,80 +6,80 @@ navigation:
     path: /tutorials/first-experience/
   - heading: Curriculum Paths
   - title: Overview
-    path: /tutorials/curriculum-overview
+    path: /tutorials/curriculums/curriculum-overview
   - title: Core
-    path: /tutorials/core/
+    path: /tutorials/curriculums/core/
     navigation: /engine/tutorials-core.yaml
   - title: Environmental Art
-    path: /tutorials/environmental-art/
+    path: /tutorials/curriculums/environmental-art/
     navigation: /engine/tutorials-ea.yaml
   - title: Gameplay Scripting
-    path: /tutorials/gameplay-scripting/
+    path: /tutorials/curriculums/gameplay-scripting/
     navigation: /engine/tutorials-gs.yaml
   - title: User Interface Design
-    path: /tutorials/user-interface-design/
+    path: /tutorials/curriculums/user-interface-design/
     navigation: /engine/tutorials-ui.yaml
   - heading: Use Case Tutorials
   - title: Overview
-    path: /tutorials/use-case-tutorial-overview
+    path: /tutorials/use-case-tutorials/use-case-tutorial-overview
   - title: Modeling
     section:
       - title: Creating Neon Signs
-        path: /tutorials/3D-art/creating-neon-signs
+        path: /tutorials/use-case-tutorials/modeling/creating-neon-signs
       - title: Assembling Modular Environments
-        path: /tutorials/3D-art/assembling-modular-environments
+        path: /tutorials/use-case-tutorials/modeling/assembling-modular-environments
   - title: User Interfaces
     section:
       - title: Creating Score Bars
-        path: /tutorials/building/ui/creating-a-score-bar
+        path: /tutorials/use-case-tutorials/ui/creating-a-score-bar
       - title: Creating Interactive Buttons
-        path: /tutorials/building/ui/interactive-buttons
+        path: /tutorials/use-case-tutorials/ui/interactive-buttons
       - title: Creating Proximity Prompts
-        path: /tutorials/building/ui/proximity-prompts
+        path: /tutorials/use-case-tutorials/ui/proximity-prompts
       - title: Creating Part Interfaces
-        path: /tutorials/building/ui/interfaces-on-parts
+        path: /tutorials/use-case-tutorials/ui/interfaces-on-parts
   - title: Audio
     section:
       - title: Playing Background Music
-        path: /tutorials/building/environments/playing-background-music
+        path: /tutorials/use-case-tutorials/audio/playing-background-music
       - title: Playing Positional Sounds
-        path: /tutorials/building/environments/in-game-sounds
+        path: /tutorials/use-case-tutorials/audio/in-game-sounds
   - title: Lighting
     section:
       - title: Enhancing Indoor Environments
-        path: /tutorials/building/environments/enhancing-indoor-environments
+        path: /tutorials/use-case-tutorials/lighting/enhancing-indoor-environments
       - title: Enhancing Outdoor Environments
-        path: /tutorials/3D-art/enhancing-outdoor-environments-with-future-lighting
+        path: /tutorials/use-case-tutorials/lighting/enhancing-outdoor-environments-with-future-lighting
   - title: VFX
     section:
       - title: Creating Laser Beams
-        path: /tutorials/building/effects/laser-traps-with-beams
+        path: /tutorials/use-case-tutorials/vfx/laser-traps-with-beams
       - title: Creating Waterfalls
-        path: /tutorials/building/effects/creating-waterfalls
+        path: /tutorials/use-case-tutorials/vfx/creating-waterfalls
       - title: Creating Volcanoes
-        path: /tutorials/building/effects/creating-volcanoes
+        path: /tutorials/use-case-tutorials/vfx/creating-volcanoes
       - title: Creating Explosions
-        path: /tutorials/building/effects/using-particles-for-explosions
+        path: /tutorials/use-case-tutorials/vfx/using-particles-for-explosions
   - title: Physics
     section:
       - title: Creating Moving Objects
-        path: /tutorials/building/physics/creating-moving-objects
+        path: /tutorials/use-case-tutorials/physics/creating-moving-objects
       - title: Creating Spinning Objects
-        path: /tutorials/3D-art/creating-spinning-objects
+        path: /tutorials/use-case-tutorials/physics/creating-spinning-objects
       - title: Creating Elevators
-        path: /tutorials/3D-art/creating-elevators
+        path: /tutorials/use-case-tutorials/physics/creating-elevators
       - title: Building Hinged Doors
-        path: /tutorials/building/physics/building-a-hinged-door
+        path: /tutorials/use-case-tutorials/physics/building-a-hinged-door
       - title: Building Ferris Wheels
-        path: /tutorials/building/physics/building-a-ferris-wheel
+        path: /tutorials/use-case-tutorials/physics/building-a-ferris-wheel
   - title: Animation
     section:
       - title: In Studio
         section:
           - title: Creating Character Animations
-            path: /tutorials/building/animation/creating-an-animation
+            path: /tutorials/use-case-tutorials/animation/creating-an-animation
           - title: Playing Character Animations
-            path: /tutorials/building/animation/scripting-avatar-animations
+            path: /tutorials/use-case-tutorials/animation/playing-character-animations
       - title: In Blender
         section:
           - title: Rigging Simple Meshes
@@ -95,26 +95,26 @@ navigation:
       - title: Basic Gameplay
         section:
           - title: Introduction to Scripting
-            path: /tutorials/scripting/basic-scripting/intro-to-scripting
+            path: /tutorials/use-case-tutorials/scripting/basic-scripting/intro-to-scripting
           - title: Deadly Lava
-            path: /tutorials/scripting/basic-scripting/deadly-lava
+            path: /tutorials/use-case-tutorials/scripting/basic-scripting/deadly-lava
           - title: Fading Trap
-            path: /tutorials/scripting/basic-scripting/fading-trap
+            path: /tutorials/use-case-tutorials/scripting/basic-scripting/fading-trap
           - title: Scoring Points
-            path: /tutorials/scripting/basic-scripting/scoring-points
+            path: /tutorials/use-case-tutorials/scripting/basic-scripting/scoring-points
       - title: Intermediate Gameplay
         section:
           - title: Creating Health Pickups
-            path: /tutorials/scripting/intermediate-scripting/creating-a-health-pickup
+            path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/creating-a-health-pickup
           - title: Saving Data
-            path: /tutorials/scripting/intermediate-scripting/saving-data
+            path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/saving-data
           - title: Creating Player Tools
-            path: /tutorials/scripting/intermediate-scripting/creating-player-tools
+            path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/creating-player-tools
           - title: Hit Detection with Lasers
-            path: /tutorials/scripting/intermediate-scripting/hit-detection-with-lasers
+            path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/hit-detection-with-lasers
   - title: Input and Camera
     section:
       - title: Controlling the User's Camera
-        path: /tutorials/scripting/input-and-camera/controlling-the-users-camera
+        path: /tutorials/use-case-tutorials/input-and-camera/controlling-the-users-camera
       - title: Detecting User Input
-        path: /tutorials/scripting/input-and-camera/detecting-user-input
+        path: /tutorials/use-case-tutorials/input-and-camera/detecting-user-input

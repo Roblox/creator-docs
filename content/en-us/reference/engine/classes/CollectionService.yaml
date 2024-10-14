@@ -128,7 +128,7 @@ methods:
       fires under two conditions:
 
       - The tag is assigned to an instance within the `Class.DataModel` (game)
-        using `Class.CollectionService:AddTag()`.
+        using `Class.CollectionService:AddTag()` or `Class.Instance:AddTag()`.
       - An instance with the given tag is added as a descendant of the
         `Class.DataModel`, e.g. by setting `Class.Instance.Parent` or similar.
 
@@ -165,7 +165,7 @@ methods:
       fires under two conditions:
 
       - The tag is removed from an instance within the `Class.DataModel` (game)
-        using `Class.CollectionService:RemoveTag()`.
+        using `Class.CollectionService:RemoveTag()` or `Class.Instance:RemoveTag()`.
       - An instance with the given tag is removed as a descendant of the
         `Class.DataModel`, e.g. by un-setting `Class.Instance.Parent` or
         similar.

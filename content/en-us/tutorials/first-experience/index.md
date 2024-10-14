@@ -12,7 +12,7 @@ Using a sample [high-quality catapult](https://create.roblox.com/store/asset/172
 - Organizing and placing scripts in their proper locations so the Roblox engine can properly simulate and render gameplay.
 - Playtesting and publishing your creation to a global audience that accesses the platform using a variety of devices.
 
-After you complete this process, you can learn how to recreate a simple 3D platformer experience with the [core curriculum](../core/index.md), experiment with different use case tutorials, or start making your own projects.
+After you complete this process, you can learn how to recreate a simple 3D platformer experience with the [core curriculum](../curriculums/core/index.md), experiment with different use case tutorials, or start making your own projects.
 
 <img src="../../assets/getting-started/Overview.jpg" alt="" width="90%" />
 

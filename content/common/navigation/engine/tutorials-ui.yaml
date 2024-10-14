@@ -4,10 +4,10 @@ backTo:
 navigation:
   - heading: UI Design Curriculum
   - title: Overview
-    path: /tutorials/user-interface-design/
+    path: /tutorials/curriculums/user-interface-design/
   - title: Choose an Art Style
-    path: /tutorials/user-interface-design/choose-an-art-style
+    path: /tutorials/curriculums/user-interface-design/choose-an-art-style
   - title: Wireframe Your Layouts
-    path: /tutorials/user-interface-design/wireframe-your-layouts
+    path: /tutorials/curriculums/user-interface-design/wireframe-your-layouts
   - title: Implement Designs in Studio
-    path: /tutorials/user-interface-design/implement-designs-in-studio
+    path: /tutorials/curriculums/user-interface-design/implement-designs-in-studio

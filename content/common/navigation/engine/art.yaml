@@ -40,9 +40,9 @@ navigation:
     path: /art/characters/facial-animation/animating-heads
   - heading: Environment and Lighting
   - title: Assembling Modular Environments
-    path: /tutorials/3D-art/assembling-modular-environments
+    path: /tutorials/use-case-tutorials/modeling/assembling-modular-environments
   - title: Enhancing Outdoor Environments with Future Lighting
-    path: /tutorials/3D-art/enhancing-outdoor-environments-with-future-lighting
+    path: /tutorials/use-case-tutorials/lighting/enhancing-outdoor-environments-with-future-lighting
 
   - heading: Example Projects
     path:

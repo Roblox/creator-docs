@@ -8,7 +8,7 @@ Scripts are plain text files that let you add custom, dynamic behavior to your e
 <Alert severity="success">
 This section is for creators with some coding experience who want to know the specifics of scripting in Roblox.
 
-If you've never written code before and want an introduction to programming, see [Coding Fundamentals](../tutorials/fundamentals/coding-1/coding-fundamentals.md), which covers concepts like variables, functions, conditionals, loops, and arrays. For a more guided, step-by-step approach, see the [Basic Gameplay](../tutorials/scripting/basic-scripting/intro-to-scripting.md) tutorial.
+If you've never written code before and want an introduction to programming, see [Coding Fundamentals](../tutorials/fundamentals/coding-1/coding-fundamentals.md), which covers concepts like variables, functions, conditionals, loops, and arrays. For a more guided, step-by-step approach, see the [Basic Gameplay](../tutorials/use-case-tutorials/scripting/basic-scripting/intro-to-scripting.md) tutorial.
 </Alert>
 
 ## Luau

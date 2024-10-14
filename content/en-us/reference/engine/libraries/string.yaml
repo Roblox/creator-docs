@@ -676,10 +676,10 @@ functions:
     code_samples:
   - name: string.sub
     summary: |
-      Returns the substring of `s` that starts at `i` and continues until j. `i`
+      Returns the substring of `s` that starts at `i` and continues until and including `j`. `i`
       and `j` can be negative. `i` defaults to 1 and `j` defaults to `-1`.
     description: |
-      Returns the substring of `s` that starts at `i` and continues until j. `i`
+      Returns the substring of `s` that starts at `i` and continues until and including `j`. `i`
       and `j` can be negative. `i` defaults to 1 and `j` defaults to `-1`.
     parameters:
       - name: s
