@@ -23,6 +23,7 @@ Roblox currently supports the following event triggers for notifications:
 - **Subscription Purchased** - When a user purchases a subscription, a message is sent containing the subscription and subscriber.
 - **Subscription Refunded** - When a user receives a refund for their subscription, a message is sent containing the subscription and subscriber.
 - **Subscription Renewed** - When a user renews a subscription, a message is sent containing the subscription and subscriber.
+- **Subscription Resubscribed** - When a user resubscribes to a subscription, a message is sent containing the subscription and subscriber.
 - ["Right to be forgotten"](https://gdpr.eu/right-to-be-forgotten/) data deletion requests under the General Data Protection Regulation (**GDPR**).
 
 For more information on subscription events and their fields, see the [Cloud API Subscription](../../cloud/reference/Subscription) reference.

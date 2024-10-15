@@ -98,14 +98,36 @@ For detailed emulation of experience [localization](../production/localization/i
 
 <img src="../assets/studio/general/Test-Tab-Emulation-Player.png" width="840" alt="Player emulator button indicated in Test tab" />
 
-1. Click the **Player** button to open the emulator window.
-1. Toggle on **Enable Test Profile** in the window. Emulation will remain as toggled (enabled or disabled) even if you close the window.
-1. Lower down in the window, the following options are available:
+With the emulator window open, toggle on **Enable Test Profile**. Emulation will remain as toggled (enabled or disabled) even if you close the window.
 
-   - **Locale** lets you emulate a [localized](../production/localization/index.md) language while playtesting.
-   - **Region** lets you emulate a player's country/region while playtesting; this selection may impact other toggles and checkboxes in the window as outlined in `Class.PolicyService:GetPolicyInfoForPlayerAsync()|GetPolicyInfoForPlayerAsync()`.
+Lower down in the window, commonly used options include:
 
-1. Start playtesting in either **Play** or **Play&nbsp;Here** mode to test the chosen settings.
+<table>
+	<thead>
+		<tr>
+			<th>Option</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>**Locale**</td>
+			<td>Lets you emulate a [localized](../production/localization/index.md) language while playtesting.</td>
+		</tr>
+		<tr>
+			<td>**Pseudolocalize**</td>
+			<td>Swaps out characters with similar but slightly different characters so that it's easy to identify which strings are going through the [translation](../production/localization/index.md) system. Enabling this helps you identify **unlocalized** text without having to change the emulation language. For example:<ul><li><Typography variant="body1">`Bloxy Cola` &nbsp;&rang;&nbsp; `ßℓôж¥ Çôℓá`</Typography></li><li><Typography variant="body1">`Dominus Empyreus` &nbsp;&rang;&nbsp; `Ðô₥ïñúƨ É₥ƥ¥řèúƨ`</Typography></li></ul></td>
+		</tr>
+		<tr>
+			<td>**Elongate**</td>
+			<td>Elongates text strings by a factor defined via the slider. For example:<ul><li><Typography variant="body1">`Bloxy Cola` &nbsp;&rang;&nbsp; `Bloooxyy Coolaa` (50% longer)</Typography></li><li><Typography variant="body1">`Dominus Empyreus` &nbsp;&rang;&nbsp; `Doomiinuus Eempyyreus` (30% longer)</Typography></li></ul>Using elongation helps you identify places where your user interfaces might not be able to handle text that's longer than the default translated text. Note that Spanish is on average 30% longer than English and the equivalent for German is even longer. Also note that this only affects text that goes through the [translation](../production/localization/index.md) system.</td>
+		</tr>
+		<tr>
+			<td>**Region**</td>
+			<td>Lets you emulate a player's country/region while playtesting; this selection may impact other toggles and checkboxes in the window as outlined in `Class.PolicyService:GetPolicyInfoForPlayerAsync()|GetPolicyInfoForPlayerAsync()`.</td>
+		</tr>
+	</tbody>
+</table>
 
 ## Collaborative Testing
 

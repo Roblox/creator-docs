@@ -70,11 +70,11 @@ After you submit the questionnaire, your experience receives an age recommendati
   </tr>
   <tr>
     <td>**9+**</td>
-    <td>Content is generally suitable for ages 9 and up. May contain repeated mild violence, heavy unrealistic blood, and/or mild crude humor.</td>
+    <td>Content is generally suitable for ages 9 and up. May contain repeated mild violence, heavy unrealistic blood, mild crude humor, and/or mild fear-based content.</td>
   </tr>
   <tr>
     <td>**13+**</td>
-    <td>Content is generally suitable for ages 13 and up. May contain repeated moderate violence, light realistic blood, moderate crude humor, and/or unplayable gambling content.</td>
+    <td>Content is generally suitable for ages 13 and up. May contain repeated moderate violence, light realistic blood, moderate crude humor, unplayable gambling content, and/or moderate fear-based content.</td>
   </tr>
   <tr>
     <td>**17+**</td>
@@ -146,6 +146,34 @@ If your experience includes strong language, you must disclose it within the exp
 Fear-based content contains scary or horrifying elements that may trigger fear in players. If your experience includes scary elements, including within any [asset type](../../projects/assets/index.md#asset-types), you must specify if it is **mild** or **moderate** within the experience questionnaire based on the content's intensity.
 
 For example, mild scary elements can include loud or heavy breathing, sounds of a pounding heart, shrieking or screaming, creepy-looking NPCs, jump scares, ominous music, and/or gameplay that builds suspense; moderate scary elements can include NPCs with disfigured mouths with realistic blood, lack of flesh with realistic-looking connective tissues, organs, and/or blood vessels visible, realistic open wounds and/or leaking/bleeding eyes with realistic blood.
+
+<BaseAccordion>
+   <AccordionSummary>
+
+   <Typography variant="label1">Moderate Examples (Not Suitable for Young Readers)</Typography>
+   </AccordionSummary>
+   <AccordionDetails>
+
+   The following images meet the moderate criteria for fear-based content.
+
+   <GridContainer numColumns="3">
+     <figure>
+     <img width="100%" img src="../../assets/promotion/misc/ModerateFear-Blocky.png" alt="" />
+     <figcaption>Includes visible organs, blood vessels, and leaking/bleeding eyes.</figcaption>
+     </figure>
+     <figure>
+     <img width="100%" img src="../../assets/promotion/misc/ModerateFear-NoFlesh.png" alt="" />
+     <figcaption>Includes realistic blood and a lack of flesh.</figcaption>
+     </figure>
+     <figure>
+     <img width="100%" img src="../../assets/promotion/misc/ModerateFear-BloodyEyes.png" alt="" />
+     <figcaption>Includes realistic open wounds and leaking/bleeding eyes.</figcaption>
+     </figure>
+   </GridContainer>
+
+   </AccordionDetails>
+   </BaseAccordion>
+<br></br>
 
 After you specify the level of intensity, the questionnaire asks you to specify whether the frequency of the fear-based content within your experience is **occasional** or **repeated**. Occasional scary elements occur either rarely or occasionally, such as at a couple key moments of the experience. Repeated scary elements either indicate that fear-based content occurs often, or that it occurs rarely, but when it does occur, many scary elements happen in quick succession.
 

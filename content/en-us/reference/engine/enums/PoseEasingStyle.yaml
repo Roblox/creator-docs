@@ -7,32 +7,32 @@ tags: []
 deprecation_message: ''
 items:
   - name: Linear
-    summary: ''
+    summary: 'Poses interpolate linearly between key frames.'
     value: 0
     tags: []
     deprecation_message: ''
   - name: Constant
-    summary: ''
+    summary: 'Poses do not interpolate but snap to the key frame indicated by the `Enum.PoseEasingDirection`.'
     value: 1
     tags: []
     deprecation_message: ''
   - name: Elastic
-    summary: ''
+    summary: 'Pose interpolation will overshoot like it is elastic.'
     value: 2
     tags: []
     deprecation_message: ''
   - name: Cubic
-    summary: ''
+    summary: 'Deprecated - Use `Enum.PoseEasingStyle.CubicV2`. Pose interpolation is a cubic curve between keyframes based on the `Enum.PoseEasingDirection`.'
     value: 3
     tags: []
-    deprecation_message: ''
+    deprecation_message: 'Use CubicV2 going forward, Cubic has a bug where the direction is reversed between the editor and runtime.'
   - name: Bounce
-    summary: ''
+    summary: 'Pose interpolation produces a bounce like effect between key frames.'
     value: 4
     tags: []
     deprecation_message: ''
   - name: CubicV2
-    summary: ''
+    summary: 'Pose interpolation is a cubic curve between keyframes based on `Enum.PoseEasingDirection`.'
     value: 5
     tags: []
     deprecation_message: ''
