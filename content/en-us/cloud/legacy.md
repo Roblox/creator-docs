@@ -3,11 +3,11 @@ title: Legacy Overview
 description: Lists legacy REST APIs for Open Cloud.
 ---
 
-Roblox offers [API key](./open-cloud/api-keys.md) and/or [OAuth 2.0](./open-cloud/oauth2-overview.md) support for the legacy APIs on this page. Instead of sharing cookies, you can grant access to specific permissions and use these more secure authentication methods.
+This section contains documentation for Roblox's many legacy APIs. These APIs support cookie-based authentication and might change without notice and break your application.
 
-These legacy APIs support do not have the same guarantees as the newer Open Cloud APIs. **Specifically, they might change without notice and break your application.**
+However, Roblox offers API key and/or OAuth 2.0 support **for the select legacy APIs listed on this page**. Instead of sharing cookies, you can grant access to specific permissions and use these more secure authentication methods. Just like the other legacy APIs, these APIs might change without notice and do not have the stability guarantees of the newer Open Cloud APIs.
 
-This page summarizes the available operations, but you might find the legacy API documentation useful, as well:
+This page summarizes the available operations and authentication types, but you might find the legacy API documentation useful, as well:
 
 - [Badges API](/cloud/legacy/badges/v1)
 - [Develop API](/cloud/legacy/develop/v1)
@@ -24,6 +24,20 @@ This page summarizes the available operations, but you might find the legacy API
 | **API**     | **Path**                    | **Scope**                     |
 | :---------- | :-------------------------- | :---------------------------- |
 | UpdateBadge | `PATCH v1/badges/{badgeId}` | `legacy-universe.badge:write` |
+
+## Develop API
+
+- Base URL: `https://apis.roblox.com/legacy-develop`
+- Authentication types: OAuth 2.0 and API key
+
+| **API**                              | **Path**                                                    | **Scope**                          |
+| :----------------------------------- | :---------------------------------------------------------- | :--------------------------------- |
+| UpdateTeamCreateSettings             | `PATCH v1/universes/{universeId}/teamcreate`                | `legacy-team-collaboration:manage` |
+| GetTeamCreateSettings                | `GET v1/universes/{universeId}/teamcreate`                  | `legacy-team-collaboration:manage` |
+| MultiGetTeamCreateSettings           | `GET v1/universes/multiget/teamcreate`                      | `legacy-team-collaboration:manage` |
+| DeleteTeamCreateMembership           | `DELETE v1/universes/{universeId}/teamcreate/memberships`   | `legacy-team-collaboration:manage` |
+| GetMembersInTeamCreateSessionByPlace | `GET v1/places/{placeId}/teamcreate/active_session/members` | `legacy-team-collaboration:manage` |
+| CloseTeamTestGame                    | `DELETE v2/teamtest/{placeId}`                              | `legacy-team-collaboration:manage` |
 
 ## Followings API
 
@@ -78,6 +92,27 @@ This page summarizes the available operations, but you might find the legacy API
 | OrderLocalizedGameThumbnails                      | `POST v1/game-thumbnails/games/{gameId}/language-codes/{languageCode}/images/order`                | `legacy-universe:manage`          |
 | UpdateLocalizedGameNameAndDescription             | `PATCH v1/name-description/games/{gameId}`                                                         | `legacy-universe:manage`          |
 | GetLocalizedContentNameAndDescriptionHistory      | `POST /v1/name-description/games/translation-history`                                              | `legacy-universe:manage`          |
+| SetSourceLanguage      | `PATCH /v1/source-language/games/{gameId}`                                              | `legacy-universe:manage`          |
+| SetSupportedLanguages      | `PATCH /v1/supported-languages/games/{gameId}`                                              | `legacy-universe:manage`          |
+| GetAutomaticTranslationStatus      | `GET /v1/supported-languages/games/{gameId}/automatic-translation-status`                                              | `legacy-universe:manage`          |
+| SetAutomaticTranslationStatus      | `PATCH /v1/supported-languages/games/{gameId}/languages/{languageCode}/automatic-translation-status`                                              | `legacy-universe:manage`          |
+| GetUniverseDisplayInfoAutomaticTranslationSettings      | `GET /v1/supported-languages/games/{gameId}/universe-display-info-automatic-translation-settings`                                              | `legacy-universe:manage`          |
+| SetUniverseDisplayInfoAutomaticTranslationSettings      | `PATCH /v1/supported-languages/games/{gameId}/languages/{languageCode}/universe-display-info-automatic-translation-settings`                                              | `legacy-universe:manage`          |
+
+## Groups API
+
+- Base URL: `https://apis.roblox.com/legacy-groups`
+- Authentication types: OAuth 2.0 and API key
+
+| **API**                           | **Path**                                            | **Scope**             |
+| :-------------------------------- | :-------------------------------------------------- | :-------------------- |
+| GetAuditLog                       | `GET v1/groups/{groupId}/audit-log`                 | `legacy-group:manage` |
+| GetGroupPolicies                  | `POST v1/groups/policies`                           | `legacy-group:manage` |
+| GetGroupSettings                  | `GET v1/groups/{groupId}/settings`                  | `legacy-group:manage` |
+| UpdateGroupSettings               | `PATCH v1/groups/{groupId}/settings`                | `legacy-group:manage` |
+| UpdateGroupStatus                 | `PATCH v1/groups/{groupId}/status`                  | `legacy-group:manage` |
+| UpdateGroupNotificationPreference | `PATCH v1/groups/{groupId}/notification-preference` | `legacy-user:manage` |
+| UpdateGroupDescription            | `PATCH v1/groups/{groupId}/description`             | `legacy-group:manage` |
 
 ## Localization Tables API
 
@@ -96,31 +131,3 @@ This page summarizes the available operations, but you might find the legacy API
 | GetTableEntriesPaged                    | `GET v1/localization-table/tables/{tableId}/entries`                      | `legacy-universe:manage` |
 | GetTableEntryCount                      | `GET v1/localization-table/tables/{tableId}/entry-count`                  | `legacy-universe:manage` |
 | GetTableEntriesTranslationHistory       | `POST v1/localization-table/tables/{tableId}/entries/translation-history` | `legacy-universe:manage` |
-
-## Groups API
-
-- Base URL: `https://apis.roblox.com/legacy-groups`
-- Authentication types: OAuth 2.0 and API key
-
-| **API**                           | **Path**                                            | **Scope**             |
-| :-------------------------------- | :-------------------------------------------------- | :-------------------- |
-| GetAuditLog                       | `GET v1/groups/{groupId}/audit-log`                 | `legacy-group:manage` |
-| GetGroupPolicies                  | `POST v1/groups/policies`                           | `legacy-group:manage` |
-| GetGroupSettings                  | `GET v1/groups/{groupId}/settings`                  | `legacy-group:manage` |
-| UpdateGroupSettings               | `PATCH v1/groups/{groupId}/settings`                | `legacy-group:manage` |
-| UpdateGroupStatus                 | `PATCH v1/groups/{groupId}/status`                  | `legacy-group:manage` |
-| UpdateGroupDescription            | `PATCH v1/groups/{groupId}/description`             | `legacy-group:manage` |
-
-## Develop API
-
-- Base URL: `https://apis.roblox.com/legacy-develop`
-- Authentication types: OAuth 2.0 and API key
-
-| **API**                              | **Path**                                                    | **Scope**                          |
-| :----------------------------------- | :---------------------------------------------------------- | :--------------------------------- |
-| UpdateTeamCreateSettings             | `PATCH v1/universes/{universeId}/teamcreate`                | `legacy-team-collaboration:manage` |
-| GetTeamCreateSettings                | `GET v1/universes/{universeId}/teamcreate`                  | `legacy-team-collaboration:manage` |
-| MultiGetTeamCreateSettings           | `GET v1/universes/multiget/teamcreate`                      | `legacy-team-collaboration:manage` |
-| DeleteTeamCreateMembership           | `DELETE v1/universes/{universeId}/teamcreate/memberships`   | `legacy-team-collaboration:manage` |
-| GetMembersInTeamCreateSessionByPlace | `GET v1/places/{placeId}/teamcreate/active_session/members` | `legacy-team-collaboration:manage` |
-| CloseTeamTestGame                    | `DELETE v2/teamtest/{placeId}`                              | `legacy-team-collaboration:manage` |
