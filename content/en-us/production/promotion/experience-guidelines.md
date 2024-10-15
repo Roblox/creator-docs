@@ -3,7 +3,7 @@ title: Experience Guidelines
 description: Explains how to provide accurate descriptions of experiences to determine accurate experience ratings.
 ---
 
-**Experience Guidelines** provide information on the experience's main page about what kind of content the experience contains so that users can make informed decisions about what they interact with. Roblox uses this information to recommend experiences on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages according to each user's age group and regional content policies.
+**Experience Guidelines** provide information on the experience's main page about what kind of content the experience contains so that players can make informed decisions about what they interact with. Roblox uses this information to recommend experiences on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages according to each user's age group and regional content policies.
 
 Experience guidelines consist of two components:
 
@@ -12,21 +12,21 @@ Experience guidelines consist of two components:
 
 <img src="../../assets/promotion/misc/Experience-Guidelines-Example.png" width="820" />
 
-Roblox treats experiences without guidelines the same as experiences with an age recommendation of **Ages&nbsp;13+**, meaning Roblox doesn't recommend them to younger users. In addition, experiences without guidelines cannot contain any [17+ content](https://en.help.roblox.com/hc/articles/15869919570708) without risk of moderation. For this reason, Roblox strongly recommends that you fill out the questionnaire for each of your experiences so that they're available to the largest appropriate audience possible.
+Roblox treats experiences without guidelines the same as experiences with an age recommendation of **Ages&nbsp;13+**, meaning Roblox doesn't recommend them to younger players. In addition, experiences without guidelines cannot contain any [17+ content](https://en.help.roblox.com/hc/articles/15869919570708) without risk of moderation. For this reason, Roblox strongly recommends that you fill out the questionnaire for each of your experiences so that they're available to the largest appropriate audience possible.
 
 <Alert severity="info">
-   Experience guidelines only apply to the content you create for your experience. They do **not** apply to user-generated content that users bring with them into your experience, such as avatar clothing and accessories.
+   Experience guidelines only apply to the content you create for your experience. They do **not** apply to user-generated content that players bring with them into your experience, such as avatar clothing and accessories.
 </Alert>
 
 ## Generating Experience Guidelines
 
-If your Roblox account is at least 30 days old, you can generate experience guidelines by filling out the **Experience Questionnaire** which contains a set of questions about the type of content users can possibly encounter within your experience, as well as how frequently it occurs. Your answers give Roblox an understanding of the content in your experience and ensure that the experience is available to the appropriate audience.
+If your Roblox account is at least 30 days old, you can generate experience guidelines by filling out the **Experience Questionnaire** which contains a set of questions about the type of content players can possibly encounter within your experience, as well as how frequently it occurs. Your answers give Roblox an understanding of the content in your experience and ensure that the experience is available to the appropriate audience.
 
 <Alert severity="info">
-   If your experience is going to have [17+ content](https://en.help.roblox.com/hc/articles/15869919570708), it must first receive experience guidelines with an age recommendation of 17+ so that its content is restricted to verified users who are at least 17 years old. You must not add any 17+ content to your experience before before generating guidelines with an age recommendation of 17+.
+   If your experience is going to have [17+ content](https://en.help.roblox.com/hc/articles/15869919570708), it must first receive experience guidelines with an age recommendation of 17+ so that its content is restricted to verified players who are at least 17 years old. You must not add any 17+ content to your experience before before generating guidelines with an age recommendation of 17+.
 </Alert>
 
-As you are completing the questionnaire, **base your answers on the most mature or extreme content users can encounter within your experience**. You can retake the questionnaire and generate new guidelines at any time to accurately reflect the content in your experience. For 17+ experiences, you can't change the age recommendation, but you can update the content descriptors.
+As you are completing the questionnaire, **base your answers on the most mature or extreme content players can encounter within your experience**. You can retake the questionnaire and generate new guidelines at any time to accurately reflect the content in your experience. For 17+ experiences, you can't change the age recommendation, but you can update the content descriptors.
 
 To generate experience guidelines:
 
@@ -38,7 +38,7 @@ To generate experience guidelines:
 
 1. If you've never taken the questionnaire before, read the notes and details and click **Start** to proceed. If you've previously completed the questionnaire, the **Questionnaire Completed** page displays, but you can click the **Restart** button to start over.
 1. Answer each page of questions based on the content within your experience, then click the **Save and Continue** button. After you've answered every question, the **Questionnaire Preview** page displays all of your answers, the age recommendation and content descriptors for the experience, and any regions where your experience is non-compliant based on your answers.
-1. If you need to modify a previous answer, click the **Edit** button, otherwise click the **Submit** button to immediately publish the guidelines to the experience's main page. If your experience receives an age recommendation of 17+, servers running the experience restart to remove all users except those age-verified as 17+, and Studio removes all users from any active [collaboration](../../projects/collaboration.md) session except those age-verified as 17+.
+1. If you need to modify a previous answer, click the **Edit** button, otherwise click the **Submit** button to immediately publish the guidelines to the experience's main page. If your experience receives an age recommendation of 17+, servers running the experience restart to remove all players except those age-verified as 17+, and Studio removes all players from any active [collaboration](../../projects/collaboration.md) session except those age-verified as 17+.
 
 If you believe that the rating doesn't match your intended audience, and the experience doesn't have an age recommendation of 17+, you can update the experience's content so that it's appropriate for your target audience, then resubmit the questionnaire. To learn how you can dynamically adjust the content of your experience for different audiences, see the `Class.PolicyService` reference.
 
@@ -52,7 +52,7 @@ If you believe that the rating doesn't match your intended audience, and the exp
 
 ## Questionnaire Categories
 
-The following sections provide guidance on answering the questions within each category of the questionnaire. **Guidelines only apply to content that you create for your experience**, not user-generated content that users bring with them, such as avatar clothing and accessories.
+The following sections provide guidance on answering the questions within each category of the questionnaire. **Guidelines only apply to content that you create for your experience**, not user-generated content that players bring with them, such as avatar clothing and accessories.
 
 After you submit the questionnaire, your experience receives an age recommendation with content descriptors according to the following table.
 
@@ -84,18 +84,18 @@ After you submit the questionnaire, your experience receives an age recommendati
 </table>
 
 <Alert severity="info">
-   To remain compliant with local laws and regulations, experiences with an age recommendation of 17+ are unplayable for users who created their accounts or are located in certain countries or regions, such as Korea, Saudi Arabia, and Türkiye (Turkey).
+   To remain compliant with local laws and regulations, experiences with an age recommendation of 17+ are unplayable for players who created their accounts or are located in certain countries or regions, such as Korea, Saudi Arabia, and Türkiye (Turkey).
 </Alert>
 
 ### Violence
 
-Violence is the intentional use of physical or psychological force against users or non-playable characters (NPCs). If your experience includes violence, including within any [asset type](../../projects/assets/index.md#asset-types), you must disclose it in the experience questionnaire based on the violence's maximum level of intensity and how often a user might encounter it.
+Violence is the intentional use of physical or psychological force against players or non-playable characters (NPCs). If your experience includes violence, including within any [asset type](../../projects/assets/index.md#asset-types), you must disclose it in the experience questionnaire based on the violence's maximum level of intensity and how often a user might encounter it.
 
 #### Level of Intensity
 
-After you confirm that your experience contains violence, you must specify whether the maximum level of intensity of violence within your experience is **mild**, **moderate**, or **strong**. If you imply violence anywhere within your experience, such as violence that occurs off-screen that users can hear but can't see, your experience automatically meets the mild criteria.
+After you confirm that your experience contains violence, you must specify whether the maximum level of intensity of violence within your experience is **mild**, **moderate**, or **strong**. If you imply violence anywhere within your experience, such as violence that occurs off-screen that players can hear but can't see, your experience automatically meets the mild criteria.
 
-If you visually show violence, the criteria for meeting mild, moderate, or strong violence depends on the **consequence** of the violence. For example, if the consequence of violence is unrealistic, such as characters disappearing the moment they die, your experience meets the mild criteria, but if there is any moment that the consequence of violence is realistic, such as characters mimicking real-life injury or death, your experience meets either the moderate or strong criteria, even if the realistic violence only occurs once. Experiences with strong violence are only available to verified users that are at least 17 years old.
+If you visually show violence, the criteria for meeting mild, moderate, or strong violence depends on the **consequence** of the violence. For example, if the consequence of violence is unrealistic, such as characters disappearing the moment they die, your experience meets the mild criteria, but if there is any moment that the consequence of violence is realistic, such as characters mimicking real-life injury or death, your experience meets either the moderate or strong criteria, even if the realistic violence only occurs once. Experiences with strong violence are only available to verified players that are at least 17 years old.
 
 <Alert severity="error">
    Roblox doesn't allow content that contains extreme violence or serious physical or psychological abuse. This includes animal abuse and torture, realistic depictions of extreme gore, or the depiction, support, or glorification of war crimes or human rights violations, including torture. For more information, see Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410) and [17+ Policy Standards](https://en.help.roblox.com/hc/articles/15869919570708).
@@ -111,7 +111,7 @@ Blood is the red liquid that flows through human and animal bodies that's essent
 
 If you answer **unrealistic**, the questionnaire asks if the blood depictions are infrequent and/or fleeting, such as yellow blood splattering on the screen for a few seconds.
 
-The next question of the blood category asks you to specify whether the level of intensity of blood within your experience is **light** or **heavy**. If you depict blood anywhere within your experience, such as blood splatter from a distance, your experience automatically meets the light criteria. If you depict heavy bloodshed, such as pools of blood, gushing blood, organs or intestines, decapitation, dismemberment, mutilation of body parts, and/or up-close blood spatter, your experience meets the heavy criteria. Experiences that include heavy bloodshed are only available to verified users that are at least 17 years old.
+The next question of the blood category asks you to specify whether the level of intensity of blood within your experience is **light** or **heavy**. If you depict blood anywhere within your experience, such as blood splatter from a distance, your experience automatically meets the light criteria. If you depict heavy bloodshed, such as pools of blood, gushing blood, organs or intestines, decapitation, dismemberment, mutilation of body parts, and/or up-close blood spatter, your experience meets the heavy criteria. Experiences that include heavy bloodshed are only available to verified players that are at least 17 years old.
 
 ### Crude Humor
 
@@ -125,20 +125,32 @@ Gambling is the practice of exchanging real world money, Robux, or in-experience
 
 ### Alcohol
 
-Alcohol is an intoxicating adult beverage. If your experience includes, depicts, or references alcohol or adult businesses and locations that provide or sell alcohol, you must disclose it within the experience questionnaire. Experiences that depict alcohol are only available to verified users that are at least 17 years old.
+Alcohol is an intoxicating adult beverage. If your experience includes, depicts, or references alcohol or adult businesses and locations that provide or sell alcohol, you must disclose it within the experience questionnaire. Experiences that depict alcohol are only available to verified players that are at least 17 years old.
 
 ### Romantic Themes
 
-Romantic themes are the non-sexual expression of love or affection. If your experience includes romantic themes, such as a quick kiss on the mouth, you must disclose it within the experience questionnaire. Experiences that include romantic themes are only available to verified users that are at least 17 years old.
+Romantic themes are the non-sexual expression of love or affection. If your experience includes romantic themes, such as a quick kiss on the mouth, you must disclose it within the experience questionnaire. Experiences that include romantic themes are only available to verified players that are at least 17 years old.
 
 ### Strong Language
 
-Strong language is vulgar and obscene language that users cannot use to harass, discriminate, or threaten others, incite violence, or use in a sexual context. For example, strong language content can be depictions of a non-playable character (NPC) using an obscenity like the "f-word" that isn't directed toward another character or group of people, for example "F* off!".
+Strong language is vulgar and obscene language that players cannot use to harass, discriminate, or threaten others, incite violence, or use in a sexual context. For example, strong language content can be depictions of a non-playable character (NPC) using an obscenity like the "f-word" that isn't directed toward another character or group of people, for example "F* off!".
 
-If your experience includes strong language, you must disclose it within the experience questionnaire. Experiences that include strong language are only available to verified users that are at least 17 years old.
+If your experience includes strong language, you must disclose it within the experience questionnaire. Experiences that include strong language are only available to verified players that are at least 17 years old.
 
 <Alert severity="info">
-   If you want to enable strong language in user communication aside from content for your 17+ experiences, see [here](../../production/publishing/publishing-experiences-and-places.md#creator-dashboard).
+   If you want to enable strong language in user communication aside from content for your 17+ experiences, see [Publishing Experiences and Places](../../production/publishing/publishing-experiences-and-places.md#creator-dashboard).
+</Alert>
+
+### Fear
+
+Fear-based content contains scary or horrifying elements that may trigger fear in players. If your experience includes scary elements, including within any [asset type](../../projects/assets/index.md#asset-types), you must specify if it is **mild** or **moderate** within the experience questionnaire based on the content's intensity.
+
+For example, mild scary elements can include loud or heavy breathing, sounds of a pounding heart, shrieking or screaming, creepy-looking NPCs, jump scares, ominous music, and/or gameplay that builds suspense; moderate scary elements can include NPCs with disfigured mouths with realistic blood, lack of flesh with realistic-looking connective tissues, organs, and/or blood vessels visible, realistic open wounds and/or leaking/bleeding eyes with realistic blood.
+
+After you specify the level of intensity, the questionnaire asks you to specify whether the frequency of the fear-based content within your experience is **occasional** or **repeated**. Occasional scary elements occur either rarely or occasionally, such as at a couple key moments of the experience. Repeated scary elements either indicate that fear-based content occurs often, or that it occurs rarely, but when it does occur, many scary elements happen in quick succession.
+
+<Alert severity="info">
+   The fear descriptor only applies to the content you create for your experiences. It does **not** apply to user-generated content that players bring with them into your experience, such as avatar clothing and accessories.
 </Alert>
 
 ## Experience Guidelines Moderation
@@ -147,7 +159,7 @@ Roblox relies on the information you provide in the experience questionnaire to 
 
 - You receive a moderation notification through a private message on Roblox.
 - The **Questionnaire** page on the [Creator Dashboard](https://create.roblox.com/dashboard/creations) updates to provide moderator feedback and guidance on how to generate accurate experience guidelines.
-- Roblox removes the current guidelines from your experience's main page, and your experience becomes only visible to users aged 13+ years.
+- Roblox removes the current guidelines from your experience's main page, and your experience becomes only visible to players aged 13+ years.
 - Roblox provides a moderation action.
   - If your experience contains 17+ content without an age recommendation of 17+, your experience is subject to moderation consequences.
   - If your experience contains content that is noncompliant with Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), or [17+ Policy Standards](https://en.help.roblox.com/hc/articles/15869919570708), your experience is subject to moderation consequences.
