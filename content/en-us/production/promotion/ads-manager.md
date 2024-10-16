@@ -431,8 +431,13 @@ To create a portal ad:
    <img src="../../assets/promotion/ads-manager/Ad-Upload-Widget.png" width="780" />
 
 3. Navigate to and confirm the image file you'd like to use.
-4. With your ad image selected, preview it by clicking the **Expanding Arrows** over the image thumbnail.
-   <img src="../../assets/promotion/ads-manager/Portal Ad Preview.png" width="780" />
+4. After selecting an image, you can preview it in one of the following ways:
+
+   - Click the **Expanding Arrows** over the image thumbnail to see a static image of the portal ad you're creating.
+
+     <img src="../../assets/promotion/ads-manager/Portal Ad Preview.png" width="780" />
+
+   - Click [**Live Preview**](#live-preview-of-ads) next to the image thumbnail to see and interact with the portal ad like a member of the audience.
 
 5. Name your image ad in the **Ad Name** field and click the **NEXT** button. The [Review](#review-the-campaign) window displays.
 
@@ -447,9 +452,13 @@ To create an image ad:
    <img src="../../assets/promotion/ads-manager/Ad-Upload-Widget.png" width="780" />
 
 2. Navigate to and confirm the image file you'd like to use.
-3. With your ad image selected, preview it by clicking the **Expanding Arrows** over the image thumbnail.
+3. After selecting an image, you can preview it in one of the following ways:
 
-   <img src="../../assets/promotion/ads-manager/Image-Ad-Preview.png" width="780" />
+   - Click the **Expanding Arrows** over the image thumbnail to see a static image of the image ad you're creating.
+
+      <img src="../../assets/promotion/ads-manager/Image-Ad-Preview.png" width="780" />
+
+   - Click [**Live Preview**](#live-preview-of-ads) next to the image thumbnail to see and interact with the image ad like a member of the audience.
 
 4. Name your image ad in the **Ad Name** field and click the **NEXT** button. The [Review](#review-the-campaign) window displays.
 
@@ -459,12 +468,28 @@ To create a video ad:
 
 1. Click the **UPLOAD MEDIA** button in the drag and drop window. A navigation window displays.
 2. Navigate to and confirm the video file you'd like to use.
-3. With your ad video selected, preview it by clicking the **Expanding Arrows** over the video thumbnail.
+3. After selecting a video file, you can preview it in one of the following ways:
+
+   - Click the **Expanding Arrows** over the image thumbnail to see a static image of the video ad you're creating.
+   - Click [**Live Preview**](#live-preview-of-ads) next to the image thumbnail to see and interact with the video like a member of the audience.
+
 4. Name your video ad in the **Ad Name** field and click the **NEXT** button. The [Review](#review-the-campaign) window displays.
 
 #### Search Ads
 
 Search ads have unique audience targeting, and a specific bidding and auction process for keywords. For more information, see the [Search Ads documentation](./search-ads.md).
+
+#### Live Preview of Ads
+
+You can use live preview to see what your immersive ad looks like to the audience inside an experience. Live preview is available for immersive ads in [portal](#portal-ads), [image](#image-ads), and [video](#video-ads) formats.
+
+After selecting and uploading an image or video file, click **Live Preview** next to the image or video thumbnail. This takes you to a demo experience created by Roblox to teach users how to build and advertise on the Roblox platform. Inside the experience, you can see and interact with the ad format you selected in Ads Manager.
+
+<img src="../../assets/promotion/ads-manager/Live-Preview-Experience.png" width="780" />
+
+<Alert severity="info">
+After you upload an image or video file, that file is submitted to Roblox for moderator approval. If approval is pending, a watermark displays on top of the live preview of your ad inside the Roblox for Brands experience. If Roblox rejects your file, the live preview of your ad doesn’t show up inside the demo experience.
+</Alert>
 
 ### Review the Campaign
 
