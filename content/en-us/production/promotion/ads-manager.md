@@ -488,7 +488,7 @@ After selecting and uploading an image or video file, click **Live Preview** nex
 <img src="../../assets/promotion/ads-manager/Live-Preview-Experience.png" width="780" />
 
 <Alert severity="info">
-After you upload an image or video file, that file is submitted to Roblox for moderator approval. If approval is pending, a watermark displays on top of the live preview of your ad inside the Roblox for Brands experience. If Roblox rejects your file, the live preview of your ad doesn’t show up inside the demo experience.
+After you upload an image or video file, that file is submitted to Roblox for moderator approval. If approval is pending, a watermark displays on top of the live preview of your ad inside the demo experience. If Roblox rejects your file, the live preview of your ad doesn’t show up inside the demo experience.
 </Alert>
 
 ### Review the Campaign
