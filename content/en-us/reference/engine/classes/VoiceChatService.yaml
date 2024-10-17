@@ -24,9 +24,9 @@ properties:
       When enabled, each voice-eligible player can be heard as though they were speaking through their character.
       If `Class.VoiceChatService.EnableDefaultVoice` is `true`, and `Class.VoiceChatService.UseAudioApi` is `Enabled`,
       then this setup is represented and controlled by instance types from the Audio API:
-      - An `Class.AudioDeviceInput` will be created and parented-to each voice-eligible `Class.Player`
-      - An `Class.AudioEmitter` will be created and parented-to each voice-eligible player's `Class.Player.Character`
-      - An `Class.AudioListener` will be created and parented-to `Class.Workspace.CurrentCamera`
+      - An `Class.AudioDeviceInput` will be created and parented to each voice-eligible `Class.Player`
+      - An `Class.AudioEmitter` will be created and parented to each voice-eligible player's `Class.Player.Character`
+      - An `Class.AudioListener` will be created and parented to `Class.Workspace.CurrentCamera`
     code_samples: []
     type: bool
     tags: []
