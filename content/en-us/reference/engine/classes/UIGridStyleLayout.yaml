@@ -90,7 +90,7 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Behavior
+    category: Alignment
     serialization:
       can_load: true
       can_save: true
@@ -144,7 +144,7 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Behavior
+    category: Alignment
     serialization:
       can_load: true
       can_save: true

@@ -52,6 +52,10 @@ methods:
     description: ''
     code_samples: []
     parameters:
+      - name: tokenId
+        type: string
+        default:
+        summary: ''
       - name: player
         type: Player
         default:

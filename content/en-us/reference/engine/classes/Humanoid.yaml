@@ -7,7 +7,7 @@ summary: |
 description: |
   The Humanoid is a special object that gives models the functionality of a
   character. It grants the model with the ability to physically walk around and
-  interact with various components of a Roblox level. Humanoids are always
+  interact with various components of a Roblox experience. Humanoids are always
   parented inside of a `Class.Model`, and the model is expected to be an
   assembly of `Class.BasePart` and `Class.Motor6D`; the root part of the
   assembly is expected to be named `HumanoidRootPart`. It also expects a part
