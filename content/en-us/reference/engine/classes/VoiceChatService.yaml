@@ -3,9 +3,10 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  **VoiceChatService** holds voice functions not tied to other instances.
+  **VoiceChatService** is responsible for voice chat's high-level functionality.
 description: |
-  **VoiceChatService** holds voice functions not tied to other instances.
+  **VoiceChatService** is responsible for voice chat's high-level functionality.
+  This mostly consists of configuration options, and functions that are not specifically-controlled by more-specific instances.
 code_samples:
 inherits:
   - Instance
@@ -16,15 +17,16 @@ deprecation_message: ''
 properties:
   - name: VoiceChatService.EnableDefaultVoice
     summary: |
-      Indicates whether or not the place uses the default voice manager.
+      Controls whether or not the default spatial voice chat setup will be used.
     description: |
-      Indicates whether or not the place uses the default voice manager. This is
-      enabled by default.
+      Controls whether or not the default spatial voice chat setup will be used.
 
-      When enabled, the default voice manager adds all voice-eligible users to
-      voice chat as they join the place. When disabled, the place doesn't use
-      the default voice manager, and users are not added to voice chat when they
-      join the place.
+      When enabled, each voice-eligible player can be heard as though they were speaking through their character.
+      If `Class.VoiceChatService.EnableDefaultVoice` is `true`, and `Class.VoiceChatService.UseAudioApi` is `Enabled`,
+      then this setup is represented and controlled by instance types from the Audio API:
+      - An `Class.AudioDeviceInput` will be created and parented-to each voice-eligible `Class.Player`
+      - An `Class.AudioEmitter` will be created and parented-to each voice-eligible player's `Class.Player.Character`
+      - An `Class.AudioListener` will be created and parented-to `Class.Workspace.CurrentCamera`
     code_samples: []
     type: bool
     tags: []
@@ -40,8 +42,24 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: VoiceChatService.UseAudioApi
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether voice chat is implemented using the Audio API.
+    description: |
+      Controls whether voice chat is implemented using the Audio API.
+      When `Enabled`, the `Class.AudioDeviceInput` instance controls input from each player's microphone.
+      
+      If `Class.VoiceChatService.UseAudioApi` is `Enabled` and `Class.VoiceChatService.EnableDefaultVoice` is `true`, then
+      - An `Class.AudioDeviceInput` will be created and parented-to each voice-eligible `Class.Player`
+      - An `Class.AudioEmitter` will be created and parented-to each voice-eligible player's `Class.Player.Character`
+      - An `Class.AudioListener` will be created and parented-to `Class.Workspace.CurrentCamera`
+      
+      If `Class.VoiceChatService.UseAudioApi` is `Enabled` but `Class.VoiceChatService.EnableDefaultVoice` is `false`, then no default setup is provided – however, `Class.AudioDeviceInput`s can still be used when created on their own.
+
+      If `Class.VoiceChatService.UseAudioApi` is `Disabled`, it is only possible to use the default voice chat setup.
+      That is, disabling `Class.VoiceChatService.UseAudioApi` and setting `Class.VoiceChatService.EnableDefaultVoice` to `false` effectively disables voice altogether.
+
+      Currently, `Class.VoiceChatService.UseAudioApi` being `Automatic` has the same meaning as `Disabled`.
+      However, in the future, `Automatic` will become `Enabled`, so that new experiences can achieve greater customization over voice.
     code_samples: []
     type: AudioApiRollout
     tags: []
