@@ -96,7 +96,7 @@ properties:
       - an `Class.AudioDeviceOutput` will be created and parented to `Class.SoundService`
       - a `Class.Wire` will be created and parented to the previously-created `Class.AudioListener`
       - `Class.Wire.SourceInstance` will be set to the previously-created `Class.AudioListener`, and `Class.Wire.TargetInstance` will be set to the previously-created `Class.AudioDeviceOutput`
-      So, the world will be heard from the perspective (postition and orientation) of your camera.
+      As a result, the world will be heard from the perspective (postition and orientation) of your camera.
 
       If `Class.SoundService.DefaultListenerLocation` is `Character`, then
       - an `Class.Attachment` will be created and parented to your `Class.Players.LocalPlayer`'s `Class.Player.Character`'s `Class.Model.PrimaryPart`
@@ -105,7 +105,7 @@ properties:
       - a `Class.Wire` will be created and parented to the previously-created `Class.AudioListener`
       - `Class.Wire.SourceInstance` will be set to the previously-created `Class.AudioListener`, and `Class.Wire.TargetInstance` will be set to the previously-created `Class.AudioDeviceOutput`
       - the previously-created `Class.Attachment` will be updated once-per-frame to face the same direction as `Class.Workspace.CurrentCamera`
-      So, the world will be heard from the position of your character, while matching the orientation of your camera.
+      As a result, the world will be heard from the position of your character, while matching the orientation of your camera.
 
       If `Class.SoundService.DefaultListenerLocation` is `Default`, then its behavior depends on the value of `Class.VoiceChatService.EnableDefaultVoice` and `Class.VoiceChatService.UseAudioApi`.
       When using the default voice setup with the audio API, this behaves similarly to `Camera`.
