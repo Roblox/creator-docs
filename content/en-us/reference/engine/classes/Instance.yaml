@@ -14,7 +14,8 @@ description: |
   parameter and returns the created object. Abstract classes and services cannot
   be created with the Instance.new function.
 code_samples:
-inherits: []
+inherits:
+  - Object
 tags:
   - NotCreatable
   - NotBrowsable
@@ -71,49 +72,6 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
-    writeCapabilities: []
-  - name: Instance.ClassName
-    summary: |
-      A read-only string representing the class this `Class.Instance` belongs
-      to.
-    description: |
-      A read-only string representing the class this `Class.Instance` belongs
-      to.
-
-      This property can be used with various other functions of Instance that
-      are used to identify objects by type, such as `Class.Instance:IsA()` or
-      `Class.Instance:FindFirstChildOfClass()`.
-
-      Note this property is read only and cannot be altered by scripts.
-      Developers wishing to change an instance's class will instead have to
-      create a new `Class.Instance`.
-
-      Unlike `Class.Instance:IsA()`, ClassName can be used to check if an object
-      belongs to a specific class ignoring class inheritance. For example:
-
-      ```
-      for _, child in workspace:GetChildren() do
-          if child.ClassName == "Part" then
-              print("Found a Part")
-              -- will find Parts in model, but NOT TrussParts, WedgeParts, etc
-          end
-      end
-      ```
-    code_samples:
-    type: string
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
     capabilities: []
     writeCapabilities: []
   - name: Instance.Name
@@ -334,28 +292,6 @@ properties:
     category: Behavior
     serialization:
       can_load: true
-      can_save: false
-    capabilities: []
-    writeCapabilities: []
-  - name: Instance.className
-    summary: ''
-    description: ''
-    code_samples:
-    type: string
-    tags:
-      - ReadOnly
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This deprecated property is a variant of `Class.Instance.ClassName` which
-      should be used instead.
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
       can_save: false
     capabilities: []
     writeCapabilities: []
@@ -1120,61 +1056,6 @@ methods:
     thread_safety: Safe
     capabilities: []
     writeCapabilities: []
-  - name: Instance:GetPropertyChangedSignal
-    summary: |
-      Get an event that fires when a given property of the instance changes.
-    description: |
-      This method returns an event that behaves exactly like the
-      `Class.Instance.Changed|Changed` event, except that it only fires when the
-      given property changes. It's generally a good idea to use this method
-      instead of a connection to `Class.Instance.Changed|Changed` with a
-      function that checks the property name. Subsequent calls to this method on
-      the same object with the same property name return the same event.
-
-      `Class.ValueBase` objects, such as `Class.IntValue` and
-      `Class.StringValue`, use a modified `Class.Instance.Changed|Changed` event
-      that fires with the contents of their `Value` property. As such, this
-      method provides a way to detect changes in other properties of those
-      objects.
-
-      Note that this event will not pass any arguments to a connected function,
-      so the value of the changed property must be read directly within a
-      script.
-
-      #### Limitations
-
-      The event returned by this method does **not** fire for physics-related
-      changes, such as when the `Class.BasePart.CFrame|CFrame`,
-      `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity`,
-      `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`,
-      `Class.BasePart.Position|Position`, or
-      `Class.BasePart.Orientation|Orientation` properties of a `Class.BasePart`
-      change due to gravity. To detect changes in these properties, consider
-      using a physics-based event like `Class.RunService.PreSimulation`.
-
-      Additionally, the returned event may not fire on every modification of
-      properties that change very frequently, and/or it may not fire for such
-      properties at all. It's recommended that you carefully test for property
-      changes that impact game logic.
-    code_samples:
-      - Changed-Old-to-New
-      - Changed-and-GetPropertyChangedSignal
-    parameters:
-      - name: property
-        type: string
-        default:
-        summary: |
-          The property to connect to.
-    returns:
-      - type: RBXScriptSignal
-        summary: |
-          A signal that fires whenever the property changes.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: Instance:GetStyled
     summary: ''
     description: ''
@@ -1235,64 +1116,6 @@ methods:
       - type: bool
         summary: ''
     tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Safe
-    capabilities: []
-    writeCapabilities: []
-  - name: Instance:IsA
-    summary: |
-      Returns true if an instance's class matches or inherits from a given
-      class.
-    description: |
-      IsA returns true if the instance's class is **equivalent to** or a
-      **subclass** of a given class. This function is similar to the
-      **instanceof** operators in other languages, and is a form of
-      [type introspection](https://en.wikipedia.org/wiki/Type_introspection). To
-      ignore class inheritance, test the `Class.Instance.ClassName|ClassName`
-      property directly instead. For checking native Lua data types (number,
-      string, etc) use the functions `type` and `typeof`.
-
-      Most commonly, this function is used to test if an object is some kind of
-      part, such as `Class.Part` or `Class.WedgePart`, which inherits from
-      `Class.BasePart` (an abstract class). For example, if your goal is to
-      change all of a character's limbs to the same color, you might use
-      `Class.Instance:GetChildren()|GetChildren` to iterate over the children,
-      then use IsA to filter non-`Class.BasePart` objects which lack the
-      `Datatype.BrickColor` property:
-
-      ```lua
-      local function paintFigure(character, color)
-      	-- Iterate over the child objects of the character
-      	for _, child in character:GetChildren() do
-      		-- Filter out non-part objects, such as Shirt, Pants and Humanoid
-      		-- R15 use MeshPart and R6 use Part, so we use BasePart here to detect both:
-      		if child:IsA("BasePart") then
-      			child.BrickColor = color
-      		end
-      	end
-      end
-      paintFigure(game.Players.Player.Character, BrickColor.new("Bright blue"))
-      ```
-
-      Since all classes inherit from `Class.Instance`, calling
-      `object:IsA("Instance")` will always return true.
-    code_samples:
-      - Instance-IsA1
-    parameters:
-      - name: className
-        type: string
-        default:
-        summary: |
-          The class against which the Instance's class will be checked.
-          Case-sensitive.
-    returns:
-      - type: bool
-        summary: |
-          Describes whether the Instance's class matched or is a subclass of the
-          given class.
-    tags:
-      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Safe
@@ -1624,28 +1447,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: Instance:isA
-    summary: ''
-    description: ''
-    code_samples:
-    parameters:
-      - name: className
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: bool
-        summary: ''
-    tags:
-      - Deprecated
-      - CustomLuaState
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Instance:IsA()` which
-      should be used instead.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: Instance:isDescendantOf
     summary: ''
     description: ''
@@ -1751,63 +1552,6 @@ events:
         default:
         summary: |
           The name of the attribute that has been changed.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: Instance.Changed
-    summary: |
-      Fired immediately after a property of the instance changes, with some
-      limitations.
-    description: |
-      This event fires immediately after an instance property is changed and it
-      works with most use cases (see limitations below). The new value of a
-      changed property is **not** passed in as a parameter, so it must be
-      accessed by using `object[property]`. For example:
-
-      ```
-      object.Changed:Connect(function(property)
-      	print("The new property's value is", object[property])
-      end)
-      ```
-
-      If you are only interested in listening to the change of one specific
-      property, consider using the
-      `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()`
-      method instead.
-
-      For `Class.ValueBase` objects such as `Class.IntValue` and
-      `Class.StringValue`, this event only fires when the object's `Value`
-      property changes. To detect other changes in `Class.ValueBase` objects,
-      use `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()`
-      instead.
-
-      #### Limitations
-
-      This event does **not** fire for physics-related changes, such as when the
-      `Class.BasePart.CFrame|CFrame`,
-      `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity`,
-      `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`,
-      `Class.BasePart.Position|Position`, or
-      `Class.BasePart.Orientation|Orientation` properties of a `Class.BasePart`
-      change due to gravity. To detect changes in these properties, consider
-      using a physics-based event like `Class.RunService.PreSimulation`.
-
-      Additionally, this event may not fire on every modification of properties
-      that change very frequently, and/or it may not fire for such properties at
-      all. It's recommended that you carefully test for property changes that
-      impact game logic.
-    code_samples:
-      - Changed-Event
-      - Change-Detector
-    parameters:
-      - name: property
-        type: string
-        default:
-        summary: |
-          The name of the property that changed.
     tags: []
     deprecation_message: ''
     security: None

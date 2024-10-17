@@ -57,6 +57,25 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: CommerceService:GetCommerceProductInfoAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: commerceProductId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CommerceService:UserEligibleForRealWorldCommerceAsync
     summary: ''
     description: ''

@@ -15,31 +15,31 @@ constructors:
     summary: Returns a new DockWidgetPuginGuiInfo object.
     description: The main constructor function for the `Datatype.DockWidgetPluginGuiInfo`.
     parameters:
-      - name: initDockState
+      - name: InitialDockState
         type: InitialDockState
         default: Enum.InitialDockState.Right
         summary: ''
-      - name: initEnabled
+      - name: InitialEnabled
         type: bool
         default: false
         summary: ''
-      - name: overrideEnabledRestore
+      - name: InitialEnabledShouldOverrideRestore
         type: bool
         default: false
         summary: ''
-      - name: floatXSize
+      - name: FloatingXSize
         type: number
         default: 0
         summary: ''
-      - name: floatYSize
+      - name: FloatingYSize
         type: number
         default: 0
         summary: ''
-      - name: minWidth
+      - name: MinWidth
         type: number
         default: 0
         summary: ''
-      - name: minHeight
+      - name: MinHeight
         type: number
         default: 0
         summary: ''
