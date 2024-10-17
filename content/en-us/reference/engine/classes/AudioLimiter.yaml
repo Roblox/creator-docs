@@ -3,7 +3,7 @@ type: class
 category:
 memory_category: Internal
 summary: |
-  `Class.AudioLimiter` limits how loud audio streams are allowed to be. 
+  Limits how loud audio streams are allowed to be. 
 description: |
   `Class.AudioLimiter` limits how loud audio streams are allowed to be.
   Whenever its input stream exceeds a specified maximum level, the stream's volume is reduced for a moment.
