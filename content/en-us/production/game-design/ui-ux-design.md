@@ -41,7 +41,7 @@ Irrelevant elements can cause confusion and distraction. [_Spellbound RPG_](http
   </figure>
   <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-2.png" alt="A close up view of a selected circular Items button with a brown book icon, along with three additional buttons for skills, equipment, and the players deck. The additional buttons only display when the button is selected." width="90%"/>
-    <figcaption>Items after selection in [_Spellbound RPG_](https://www.roblox.com/games/6468323505/)</figcaption>
+    <figcaption>Items after selection in [*Spellbound RPG*](https://www.roblox.com/games/6468323505/)</figcaption>
   </figure>
 </GridContainer>
 
