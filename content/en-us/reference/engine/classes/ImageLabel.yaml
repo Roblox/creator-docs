@@ -82,6 +82,26 @@ properties:
     capabilities:
       - UI
     writeCapabilities: []
+  - name: ImageLabel.ImageContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Image
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ImageLabel.ImageRectOffset
     summary: |
       The offset in pixels of the sub-area of an image to be displayed.

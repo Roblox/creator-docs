@@ -12,7 +12,22 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: WrapDeformer:GetDeformedCFrame
+  - name: WrapDeformer:CreateEditableMeshAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: EditableMesh
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: WrapDeformer:GetDeformedCFrameAsync
     summary: ''
     description: ''
     code_samples: []
@@ -23,20 +38,6 @@ methods:
         summary: ''
     returns:
       - type: CFrame
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: WrapDeformer:CreateEditableMeshAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: EditableMesh
         summary: ''
     tags:
       - Yields
