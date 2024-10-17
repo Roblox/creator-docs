@@ -90,14 +90,14 @@ In [_Dragon Adventures,_](https://www.roblox.com/games/3475397644/) visual prior
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-9.png" width="60%"/>
-    <figcaption> Coin bundles in _Dragon Adventures_</figcaption>
+    <figcaption> Coin bundles in [_Dragon Adventures_](https://www.roblox.com/games/3475397644/)</figcaption>
   </figure>
 
 In [_Tower Defense Simulator_](https://www.roblox.com/games/3260590327/), both size and proximity are used to visually group and distinguish Daily Tower Skins from Daily Crates.
 
 <figure>
     <img src="../../assets/game-design/ui-ux-design/ui-ux-design-10.png" width="60%"/>
-    <figcaption> _Tower Defense Simulator_ shop</figcaption>
+    <figcaption>The shop in [_Tower Defense Simulator_](https://www.roblox.com/games/3260590327/)</figcaption>
   </figure>
 
 ### Visual language
