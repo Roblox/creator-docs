@@ -37,6 +37,7 @@ properties:
     description: |
       The maximum volume, in decibels, that the limiter will allow to pass through, unclamped.
       Whenever the input stream exceeds `Class.AudioLimiter.MaxLevel`, the output stream's volume will be reduced to compensate.
+      This value ranges from -12 to 0.
     code_samples: []
     type: float
     tags: []
@@ -56,6 +57,7 @@ properties:
     summary: 'The amount of time it takes to unclamp previously-loud streams.'
     description: |
       The amount of time, in seconds, that it takes for the limiter to unclamp any previously (but not currently) loud streams.
+      This value ranges from 0.001 to 1.
     code_samples: []
     type: float
     tags: []
