@@ -36,7 +36,7 @@ properties:
     summary: 'The maximum volume tolerated.'
     description: |
       The maximum volume, in decibels, that the limiter will allow to pass through, unclamped.
-      Whenever 
+      Whenever the input stream exceeds `Class.AudioLimiter.MaxLevel`, the output stream's volume will be reduced to compensate.
     code_samples: []
     type: float
     tags: []
