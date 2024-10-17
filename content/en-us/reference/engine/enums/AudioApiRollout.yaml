@@ -9,7 +9,7 @@ tags: []
 deprecation_message: ''
 items:
   - name: Disabled
-    summary: 'Voice chat will not use the Audio API, meaning its implementation cannot be controlled.'
+    summary: 'Voice chat will not use the Audio API. Roblox will use an internal voice chat implementation that is automatic and hidden.'
     value: 0
     tags: []
     deprecation_message: ''
