@@ -1,23 +1,25 @@
 name: AudioApiRollout
 type: enum
-summary: ''
-description: ''
+summary: |
+  Used to determine whether voice chat uses the Audio API
+description: |
+  Used to determine whether voice chat uses the Audio API
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Disabled
-    summary: ''
+    summary: 'Voice chat will not use the Audio API, meaning its implementation cannot be controlled.'
     value: 0
     tags: []
     deprecation_message: ''
   - name: Automatic
-    summary: ''
+    summary: 'Currently means the same thing as Disabled, but will be updated to mean Enabled in the future. This is the default behavior.'
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: 'Voice chat will use the Audio API, meaning it can be customized or controlled to sound different.'
     value: 2
     tags: []
     deprecation_message: ''
