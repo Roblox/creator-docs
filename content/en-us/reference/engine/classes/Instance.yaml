@@ -1237,7 +1237,7 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-    - name: Instance:ResetPropertyToDefault
+  - name: Instance:ResetPropertyToDefault
     summary: |
       Resets the given property value back to its default value.
     description: |
