@@ -49,8 +49,8 @@ properties:
       When `Enabled`, the `Class.AudioDeviceInput` instance controls input from each player's microphone. 
       A default voice setup using this API can be turned on or off with `Class.VoiceChatService.EnableDefaultVoice`.
       
-      Otherwise, an internal system controls the input from each player's microphone.
-      This system can be turned on or off in its entirety with `Class.VoiceChatService.EnableDefaultVoice`.
+      When `Disabled`, an internal system controls the input from each player's microphone,
+      and this system can be turned on or off in its entirety via `Class.VoiceChatService.EnableDefaultVoice`.
       
       Currently, `Class.VoiceChatService.UseAudioApi` being `Automatic` has the same meaning as `Disabled`.
       However, in the future, `Automatic` will become `Enabled`, so that new experiences can achieve greater customization over voice.
