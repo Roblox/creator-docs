@@ -56,7 +56,7 @@ properties:
   - name: AudioLimiter.Release
     summary: 'The amount of time it takes for previously-loud streams to return to their normal volume.'
     description: |
-      The amount of time, in seconds, that it takes for any previously (but not currently) loud streams to return to their normal volume.
+      The amount of time, in seconds, that it takes for any previously (but not currently) limited streams to return to their normal volume.
       This value ranges from 0.001 to 1.
     code_samples: []
     type: float
