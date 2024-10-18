@@ -1,25 +1,28 @@
 name: AudioApiRollout
 type: enum
 summary: |
-  Used to determine whether voice chat uses the Audio API
+  Used to determine whether voice chat is represented and controlled by `Class.AudioDeviceInput` objects.
 description: |
-  Used to determine whether voice chat uses the Audio API
+  Used to determine whether voice chat is represented and controlled by `Class.AudioDeviceInput` objects.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Disabled
-    summary: 'Voice chat will not use the Audio API. Roblox will use an internal voice chat implementation that is automatic and hidden.'
+    summary: |
+      Voice chat will use an internal voice chat implementation that is automatic and hidden.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Automatic
-    summary: 'Currently means the same thing as Disabled, but will be updated to mean Enabled in the future. This is the default behavior.'
+    summary: |
+      Currently means the same thing as `Disabled`, but will be updated to mean `Enabled` in the future.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: 'Voice chat will use the Audio API, meaning it can be customized or controlled via `Class.AudioDeviceInput|AudioDeviceInputs`.'
+    summary: |
+      Voice chat can be customized or controlled via `Class.AudioDeviceInput|AudioDeviceInputs`.
     value: 2
     tags: []
     deprecation_message: ''
