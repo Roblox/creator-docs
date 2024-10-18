@@ -74,10 +74,10 @@ properties:
   - name: ReflectionMetadataItem.Constraint
     summary: |
       Describes a constraint for a single-argument function whose argument type
-      is a `Class.Instance.ClassName`.
+      is a `Class.Object.ClassName`.
     description: |
       Describes a constraint for a single-argument function whose argument type
-      is a `Class.Instance.ClassName`. Currently there are two constraints
+      is a `Class.Object.ClassName`. Currently there are two constraints
       available:
 
       <table>

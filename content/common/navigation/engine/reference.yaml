@@ -890,16 +890,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/ExperienceNotificationService.yaml
         ignoreTranslation: true
-      - title: ExplorerFilterAutocompleterInstance
-        path: /reference/engine/classes/ExplorerFilterAutocompleterInstance
-        type: engineapi
-        source: /reference/engine/classes/ExplorerFilterAutocompleterInstance.yaml
-        ignoreTranslation: true
-      - title: ExplorerFilterInstance
-        path: /reference/engine/classes/ExplorerFilterInstance
-        type: engineapi
-        source: /reference/engine/classes/ExplorerFilterInstance.yaml
-        ignoreTranslation: true
       - title: Explosion
         path: /reference/engine/classes/Explosion
         type: engineapi
@@ -1584,6 +1574,11 @@ navigation:
         path: /reference/engine/classes/NumberValue
         type: engineapi
         source: /reference/engine/classes/NumberValue.yaml
+        ignoreTranslation: true
+      - title: Object
+        path: /reference/engine/classes/Object
+        type: engineapi
+        source: /reference/engine/classes/Object.yaml
         ignoreTranslation: true
       - title: ObjectValue
         path: /reference/engine/classes/ObjectValue
