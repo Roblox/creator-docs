@@ -39,7 +39,7 @@ properties:
     writeCapabilities: []
   - name: VoiceChatService.UseAudioApi
     summary: |
-      Controls whether voice chat is represented and controlled by an `Class.AudioDeviceInput` object.
+      Controls whether voice chat is represented and controlled by `Class.AudioDeviceInput` objects.
     description: |
       If `Enum.AudioApiRollout|Enabled`, the voice chat setup is represented and controlled by
       `Class.AudioDeviceInput` objects. More specifically:
