@@ -42,7 +42,7 @@ properties:
       Controls whether voice chat is represented and controlled by an `Class.AudioDeviceInput` object.
     description: |
       If `Enum.AudioApiRollout|Enabled`, the voice chat setup is represented and controlled by
-      an `Class.AudioDeviceInput` object. More specifically:
+      `Class.AudioDeviceInput` objects. More specifically:
       
       - An `Class.AudioDeviceInput` will be created and parented to each voice-eligible `Class.Player`.
       - An `Class.AudioEmitter` will be created and parented to each voice-eligible player's `Class.Player.Character`.
