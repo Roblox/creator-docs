@@ -1237,6 +1237,29 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+    - name: Instance:ResetPropertyToDefault
+    summary: |
+      Resets the given property value back to its default value.
+    description: |
+      This method will reset the value of the given property back to its default value,
+      as defined after being created via `Datatype.Instance.new()`.
+      Providing an invalid property or a read-only one will result in an error.
+    code-samples:
+    parameters:
+      - name: name
+        type: string
+        default: 
+        summary: |
+          The name of the property to be reset.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation-message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:SetAttribute
     summary: |
       Sets the attribute with the given name to the given value.
