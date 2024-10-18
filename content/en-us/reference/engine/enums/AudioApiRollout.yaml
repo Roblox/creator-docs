@@ -19,7 +19,7 @@ items:
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: 'Voice chat will use the Audio API, meaning it can be customized or controlled to sound different.'
+    summary: 'Voice chat will use the Audio API, meaning it can be customized or controlled via `Class.AudioDeviceInput|AudioDeviceInputs`.'
     value: 2
     tags: []
     deprecation_message: ''
