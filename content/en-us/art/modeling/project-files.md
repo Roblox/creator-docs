@@ -130,7 +130,7 @@ A Blocky character model with an animatable head and a full body cage.
 </CardContent>
 
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-<Button href="../../assets/avatar/dynamic-heads/reference-files/BlockyCharacter.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+<Button href="../../assets/avatar/dynamic-heads/reference-files/BlockyCharacter.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
 </CardActions>
 
 </Card>

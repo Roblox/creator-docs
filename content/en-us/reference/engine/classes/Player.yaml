@@ -246,7 +246,7 @@ properties:
       first spawns. Use the `Class.Player.CharacterAdded` event to detect when a
       player's character properly loads, and the
       `Class.Player.CharacterRemoving` event to detect when the character is
-      about to despawn. Avoid using `Class.Instance:GetPropertyChangedSignal()`
+      about to despawn. Avoid using `Class.Object:GetPropertyChangedSignal()`
       on this property.
 
       Note that `Class.LocalScript|LocalScripts` that are cloned from

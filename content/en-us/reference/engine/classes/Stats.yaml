@@ -101,8 +101,8 @@ properties:
       A measurement of the total amount of time it takes long it takes for
       Roblox to update all of its Task Scheduler jobs, in milliseconds.
     description: |
-      The HeartbeatTimeMs property is a measurement of the total amount of
-      time it takes long it takes for Roblox to update all of its Task Scheduler
+      The HeartbeatTimeMs property is a measurement of the total amount of time
+      it takes long it takes for Roblox to update all of its Task Scheduler
       jobs, in milliseconds. If this value is high, then it means one of the
       tasks are hogging up a lot of resources.
     code_samples:

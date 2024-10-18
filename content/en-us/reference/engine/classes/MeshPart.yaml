@@ -98,6 +98,26 @@ properties:
     capabilities:
       - Basic
     writeCapabilities: []
+  - name: MeshPart.MeshContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: NotAccessibleSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: MeshPart.MeshId
     summary: |
       Content ID of the mesh that is displayed on the `Class.MeshPart`.
@@ -176,6 +196,26 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: MeshPart.TextureContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: false
+      can_save: false
     capabilities:
       - Basic
     writeCapabilities: []

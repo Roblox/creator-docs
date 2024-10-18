@@ -25,9 +25,9 @@ properties:
       aren't any larger than the grid itself.
 
       This property updates as soon as it's read. It will not fire a
-      `Class.Instance.Changed` event immediately after the UI has changed, but
+      `Class.Object.Changed` event immediately after the UI has changed, but
       if the value is read, it will become current and a
-      `Class.Instance.Changed` event will fire on the next render step.
+      `Class.Object.Changed` event will fire on the next render step.
     code_samples:
     type: Vector2
     tags:
@@ -90,7 +90,7 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Behavior
+    category: Alignment
     serialization:
       can_load: true
       can_save: true
@@ -144,7 +144,7 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Behavior
+    category: Alignment
     serialization:
       can_load: true
       can_save: true
