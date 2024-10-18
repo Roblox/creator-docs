@@ -22,7 +22,8 @@ properties:
       When enabled, each voice-eligible player can be heard as though they were speaking through their character.
       The implementation details of the voice setup depend on `Class.VoiceChatService.UseAudioApi|UseAudioApi`.
 
-      Disabling the default voice setup effectively disables voice chat altogether.
+      When `Class.VoiceChatService.UseAudioApi|UseAudioApi` is `Enum.AudioApiRollout|Disabled`,
+      disabling the default voice setup effectively disables voice chat altogether.
     code_samples: []
     type: bool
     tags: []
