@@ -54,8 +54,6 @@ properties:
       Currently, setting this to `Enum.AudioApiRollout|Automatic` has the same meaning as `Enum.AudioApiRollout|Disabled`.
       However, in the future, `Enum.AudioApiRollout|Automatic` will become `Enum.AudioApiRollout|Enabled`, so that new
       experiences can achieve greater customization over voice.
-
-      Voice chat can be enabled or disabled in its entirety via `Class.VoiceChatService.EnableDefaultVoice|EnableDefaultVoice`.
     code_samples: []
     type: AudioApiRollout
     tags: []
