@@ -22,11 +22,15 @@ properties:
       Controls whether or not the default spatial voice chat setup will be used.
 
       When enabled, each voice-eligible player can be heard as though they were speaking through their character.
-      If `Class.VoiceChatService.EnableDefaultVoice` is `true`, and `Class.VoiceChatService.UseAudioApi` is `Enabled`,
-      then this setup is represented and controlled by instance types from the Audio API:
+      
+      The behavior of the default voice setup depends on `Class.VoiceChatService.UseAudioApi`. 
+      If `Class.VoiceChatService.UseAudioApi` is `Enabled`, then this setup is represented and controlled by instance types from the Audio API. Specifically:
       - An `Class.AudioDeviceInput` will be created and parented to each voice-eligible `Class.Player`
       - An `Class.AudioEmitter` will be created and parented to each voice-eligible player's `Class.Player.Character`
       - An `Class.AudioListener` will be created and parented to `Class.Workspace.CurrentCamera`
+      
+      If `Class.VoiceChatService.UseAudioApi` is `Disabled`, then this setup is made by an internal-only system. 
+      Using this system, disabling the default voice setup effectively disables voice altogether.
     code_samples: []
     type: bool
     tags: []
