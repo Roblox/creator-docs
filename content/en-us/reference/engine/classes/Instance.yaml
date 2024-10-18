@@ -1244,7 +1244,7 @@ methods:
       This method will reset the value of the given property back to its default value,
       as defined after being created via `Datatype.Instance.new()`.
       Providing an invalid property or a read-only one will result in an error.
-    code-samples:
+    code-samples: []
     parameters:
       - name: name
         type: string
