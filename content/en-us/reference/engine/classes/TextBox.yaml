@@ -53,7 +53,7 @@ description: |
   A TextBox supports text selection through its
   `Class.TextBox.CursorPosition|CursorPosition` and
   `Class.TextBox.SelectionStart|SelectionStart` properties. Using
-  `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal`, you can
+  `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal`, you can
   detect when a selection changes. Additionally, it is possible for players to
   copy and paste text within a TextBox, enabling basic clipboard support.
 

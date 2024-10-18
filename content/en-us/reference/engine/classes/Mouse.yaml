@@ -528,9 +528,9 @@ properties:
       local position = Vector2.new(mouse.X, mouse.Y)
       ```
 
-      This property does not fire `Class.Instance.Changed|Changed` or the signal
+      This property does not fire `Class.Object.Changed|Changed` or the signal
       returned from
-      `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal`. Use
+      `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal`. Use
       the `Class.Mouse.Move` event instead.
     code_samples:
       - normalized-mouse-position
@@ -572,9 +572,9 @@ properties:
       local position = Vector2.new(mouse.X, mouse.Y)
       ```
 
-      This property does not fire `Class.Instance.Changed|Changed` or the signal
+      This property does not fire `Class.Object.Changed|Changed` or the signal
       returned from
-      `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal`. Use
+      `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal`. Use
       the `Class.Mouse.Move` event instead.
     code_samples:
       - normalized-mouse-position

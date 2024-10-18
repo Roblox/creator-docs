@@ -12,7 +12,7 @@ inherits:
 tags:
   - Deprecated
 deprecation_message: |
-  This joint type has been deprecated and should not be used in new work
+  This joint type has been deprecated and should not be used in new work.
 properties:
   - name: Glue.F0
     summary: |

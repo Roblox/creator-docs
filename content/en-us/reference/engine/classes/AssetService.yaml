@@ -17,6 +17,34 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: AssetService:CreateEditableImage
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: EditableImage
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AssetService:CreateEditableMesh
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: EditableMesh
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:CreateEditableImageAsync
     summary: |
       Creates a new `Class.EditableImage` instance populated with the given
