@@ -20,7 +20,7 @@ properties:
       Controls whether each voice-eligible player can be heard as though they were speaking through their character.
     description: |
       When enabled, each voice-eligible player can be heard as though they were speaking through their character.
-      The behavior of the voice setup depends on `Class.VoiceChatService.UseAudioApi|UseAudioApi`.
+      The implementation details of the voice setup depend on `Class.VoiceChatService.UseAudioApi|UseAudioApi`.
 
       Disabling the default voice setup effectively disables voice chat altogether.
     code_samples: []
