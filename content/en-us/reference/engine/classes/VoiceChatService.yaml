@@ -46,18 +46,12 @@ properties:
       Controls whether voice chat is implemented using the Audio API.
     description: |
       Controls whether voice chat is implemented using the Audio API.
-      When `Enabled`, the `Class.AudioDeviceInput` instance controls input from each player's microphone.
+      When `Enabled`, the `Class.AudioDeviceInput` instance controls input from each player's microphone. 
+      A default voice setup using this API can be turned on or off with `Class.VoiceChatService.EnableDefaultVoice`.
       
-      If `Class.VoiceChatService.UseAudioApi` is `Enabled` and `Class.VoiceChatService.EnableDefaultVoice` is `true`, then
-      - An `Class.AudioDeviceInput` will be created and parented to each voice-eligible `Class.Player`
-      - An `Class.AudioEmitter` will be created and parented to each voice-eligible player's `Class.Player.Character`
-      - An `Class.AudioListener` will be created and parented to `Class.Workspace.CurrentCamera`
+      Otherwise, an internal system controls the input from each player's microphone.
+      This system can be turned on or off in its entirety with `Class.VoiceChatService.EnableDefaultVoice`.
       
-      If `Class.VoiceChatService.UseAudioApi` is `Enabled` but `Class.VoiceChatService.EnableDefaultVoice` is `false`, then no default setup is provided – however, `Class.AudioDeviceInput`s can still be used when created on their own.
-
-      If `Class.VoiceChatService.UseAudioApi` is `Disabled`, it is only possible to use the default voice chat setup.
-      That is, disabling `Class.VoiceChatService.UseAudioApi` and setting `Class.VoiceChatService.EnableDefaultVoice` to `false` effectively disables voice altogether.
-
       Currently, `Class.VoiceChatService.UseAudioApi` being `Automatic` has the same meaning as `Disabled`.
       However, in the future, `Automatic` will become `Enabled`, so that new experiences can achieve greater customization over voice.
     code_samples: []
