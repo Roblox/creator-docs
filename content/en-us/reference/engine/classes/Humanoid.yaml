@@ -380,7 +380,7 @@ properties:
       `Class.BasePart|Parts` and `Class.Terrain` voxels.
 
       The code sample below demonstrates how to listen to when this property
-      changes using `Class.Instance:GetPropertyChangedSignal()`. When the
+      changes using `Class.Object:GetPropertyChangedSignal()`. When the
       material the humanoid is standing on changes, it will print a message
       indicating the new material being stood on.
 

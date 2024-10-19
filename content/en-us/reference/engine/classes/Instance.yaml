@@ -3,11 +3,9 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  Instance is the base class for all classes in the Roblox class hierarchy.
+  Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
 description: |
-  Instance is the base class for all classes in the Roblox class hierarchy.
-  Every other class that the Roblox engine defines inherits all of the members
-  of Instance. It is not possible to directly create Instance objects.
+  Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree. It is not possible to directly create Instance objects.
 
   Instance has a special function called `Datatype.Instance.new()` which is used
   to create objects via code. This function takes the name of the class as a
@@ -489,10 +487,10 @@ methods:
   - name: Instance:FindFirstAncestorOfClass
     summary: |
       Returns the first ancestor of the `Class.Instance` whose
-      `Class.Instance.ClassName` is equal to the given className.
+      `Class.Object.ClassName` is equal to the given className.
     description: |
       Returns the first ancestor of the `Class.Instance` whose
-      `Class.Instance.ClassName` is equal to the given className.
+      `Class.Object.ClassName` is equal to the given className.
 
       This function works upwards, meaning it starts at the instance's immediate
       `Class.Instance.Parent` and works up towards the `Class.DataModel`. If no
@@ -506,9 +504,9 @@ methods:
       ```
 
       This function is a variant of `Class.Instance:FindFirstAncestor()` which
-      checks the `Class.Instance.ClassName` property rather than
+      checks the `Class.Object.ClassName` property rather than
       `Class.Instance.Name`. `Class.Instance:FindFirstAncestorWhichIsA()` also
-      exists, using the `Class.Instance:IsA()` method instead to respect class
+      exists, using the `Class.Object:IsA()` method instead to respect class
       inheritance.
     code_samples:
     parameters:
@@ -516,7 +514,7 @@ methods:
         type: string
         default:
         summary: |
-          The `Class.Instance.ClassName` to be looked for.
+          The `Class.Object.ClassName` to be looked for.
     returns:
       - type: Instance
         summary: |
@@ -530,17 +528,17 @@ methods:
   - name: Instance:FindFirstAncestorWhichIsA
     summary: |
       Returns the first ancestor of the `Class.Instance` for whom
-      `Class.Instance:IsA()` returns true for the given className.
+      `Class.Object:IsA()` returns true for the given className.
     description: |
       Returns the first ancestor of the `Class.Instance` for whom
-      `Class.Instance:IsA()` returns true for the given className.
+      `Class.Object:IsA()` returns true for the given className.
 
       This function works upwards, meaning it starts at the instance's immediate
       `Class.Instance.Parent` and works up towards the `Class.DataModel`. If no
       matching ancestor is found, it returns nil.
 
       Unlike `Class.Instance:FindFirstAncestorOfClass()`, this function uses
-      `Class.Instance:IsA()` which respects class inheritance. For example:
+      `Class.Object:IsA()` which respects class inheritance. For example:
 
       ```
       print(part:IsA("Part"))  --> true
@@ -563,7 +561,7 @@ methods:
         type: string
         default:
         summary: |
-          The `Class.Instance.ClassName` to be looked for.
+          The `Class.Object.ClassName` to be looked for.
     returns:
       - type: Instance
         summary: |
@@ -665,10 +663,10 @@ methods:
   - name: Instance:FindFirstChildOfClass
     summary: |
       Returns the first child of the `Class.Instance` whose
-      `Class.Instance.ClassName|ClassName` is equal to the given className.
+      `Class.Object.ClassName|ClassName` is equal to the given className.
     description: |
       Returns the first child of the `Class.Instance` whose
-      `Class.Instance.ClassName|ClassName` is equal to the given className.
+      `Class.Object.ClassName|ClassName` is equal to the given className.
 
       If no matching child is found, this function returns nil.
 
@@ -685,7 +683,7 @@ methods:
         type: string
         default:
         summary: |
-          The `Class.Instance.ClassName` to be looked for.
+          The `Class.Object.ClassName` to be looked for.
     returns:
       - type: Instance
         summary: |
@@ -699,17 +697,17 @@ methods:
   - name: Instance:FindFirstChildWhichIsA
     summary: |
       Returns the first child of the `Class.Instance` for whom
-      `Class.Instance:IsA()` returns true for the given className.
+      `Class.Object:IsA()` returns true for the given className.
     description: |
       Returns the first child of the `Class.Instance` for whom
-      `Class.Instance:IsA()` returns true for the given className.
+      `Class.Object:IsA()` returns true for the given className.
 
       If no matching child is found, this function returns nil. If the optional
       recursive argument is true, this function searches all descendants rather
       than only the immediate children of the `Class.Instance`.
 
       Unlike `Class.Instance:FindFirstChildOfClass()`, this function uses
-      `Class.Instance:IsA()` which respects class inheritance. For example:
+      `Class.Object:IsA()` which respects class inheritance. For example:
 
       ```lua
       print(part:IsA("Part")) --> true
@@ -733,7 +731,7 @@ methods:
         type: string
         default:
         summary: |
-          The `Class.Instance.ClassName` to be searched for.
+          The `Class.Object.ClassName` to be searched for.
       - name: recursive
         type: bool
         default: false
@@ -841,13 +839,13 @@ methods:
       Returns an event that fires when the given attribute changes.
     description: |
       This function returns an event that behaves exactly like the
-      `Class.Instance.Changed|Changed` event, except that it only fires when the
+      `Class.Object.Changed|Changed` event, except that it only fires when the
       specific given attribute changes; effectively it is similar to
-      `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()` but
+      `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal()` but
       for attributes.
 
       It's generally a good idea to use this method instead of a connection to
-      `Class.Instance.Changed|Changed` with a function that checks the attribute
+      `Class.Object.Changed|Changed` with a function that checks the attribute
       name. Subsequent calls to this method on the same object with the same
       attribute name return the same event.
 

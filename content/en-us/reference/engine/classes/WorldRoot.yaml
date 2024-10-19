@@ -118,17 +118,17 @@ methods:
     description: |
       This function moves a table of `Class.BasePart|BaseParts` to a table of
       `Datatype.CFrame|CFrames` without necessarily firing the default property
-      `Class.Instance.Changed|Changed` events. This provides a very fast way to
+      `Class.Object.Changed|Changed` events. This provides a very fast way to
       move large numbers of parts, as you don't have to pay the cost of separate
       property sets for each individual part.
 
       The third argument allows you to further optimize the movement operation.
-      By default, the `Class.Instance.Changed|Changed` event of each part fires
+      By default, the `Class.Object.Changed|Changed` event of each part fires
       for `Class.BasePart.Position|Position`,
       `Class.BasePart.Orientation|Orientation`, and
       `Class.BasePart.CFrame|CFrame`. However, if you specify
       `Enum.BulkMoveMode|FireCFrameChanged` as the third argument, only the
-      `Class.Instance.Changed|Changed` event for the
+      `Class.Object.Changed|Changed` event for the
       `Class.BasePart.CFrame|CFrame` property will fire.
 
       Note that you should only use this function if you're sure that part

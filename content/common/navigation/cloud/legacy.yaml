@@ -1,8 +1,7 @@
 navigation:
-  - heading: Legacy
+  - heading: Legacy APIs
   - title: Overview
     path: /cloud/legacy
-  - heading: APIs
   - title: Account Information
     type: cloudapi
     versions:
