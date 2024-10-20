@@ -369,7 +369,9 @@ properties:
       - UI
     writeCapabilities: []
   - name: GuiObject.GuiState
-    summary: ''
+    summary: |
+      Determines whether the player's mouse is being actively pressed on the
+      `Class.GuiObject` or not.
     description: ''
     code_samples: []
     type: GuiState
@@ -389,8 +391,10 @@ properties:
       - UI
     writeCapabilities: []
   - name: GuiObject.Interactable
-    summary: ''
-    description: ''
+    summary: | 
+        Determines whether the `Class.GuiButton` can be interacted with or not.
+    description: |
+      
     code_samples: []
     type: bool
     tags: []
