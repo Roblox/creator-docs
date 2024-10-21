@@ -399,7 +399,7 @@ properties:
   - name: GuiObject.Interactable
     summary: | 
       Determines whether the `Class.GuiButton` can be interacted with or not, or if
-      the `Class.GuiObject`'s `Enum.GuiState|GuiState` is changing or not.
+      the `Enum.GuiState|GuiState` of the `Class.GuiObject` is changing or not.
     description: |
       On a `Class.GuiButton`:
       - When the `Class.GuiObject.Interactable|Interactable` setting on the `Class.GuiButton` is
