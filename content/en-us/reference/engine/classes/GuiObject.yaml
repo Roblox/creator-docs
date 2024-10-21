@@ -401,18 +401,22 @@ properties:
       Determines whether the `Class.GuiButton` can be interacted with or not, or if
       the `Enum.GuiState|GuiState` of the `Class.GuiObject` is changing or not.
     description: |
+      Determines whether the `Class.GuiButton` can be interacted with or not, or if
+      the `Enum.GuiState|GuiState` of the `Class.GuiObject` is changing or not.
+      
       On a `Class.GuiButton`:
       - When the `Class.GuiObject.Interactable|Interactable` setting on the `Class.GuiButton` is
-      set to `false`, The `Class.GuiButton` will no longer be able to be pressed or clicked. and the
+      set to `false`, the `Class.GuiButton` will no longer be able to be pressed or clicked, and the
       `Class.GuiObject.GuiState|GuiState` will be constantly set to `Enum.GuiState.NonInteractable|NonInteractable`.
       - When the `Class.GuiObject.Interactable|Interactable` setting on the `Class.GuiButton` is
-      set to `true`, The `Class.GuiButton` will behave normally again, and the `Class.GuiObject.GuiState|GuiState` will
+      set to `true`, the `Class.GuiButton` will behave normally again and the `Class.GuiObject.GuiState|GuiState` will
       behave normally.
+      
       On a `Class.GuiObject`:
       - When the `Class.GuiObject.Interactable|Interactable` setting on the `Class.GuiButton` is
-      set to `false`, The `Class.GuiObject.GuiState|GuiState` will be constantly set to `Enum.GuiState.NonInteractable|NonInteractable`.
+      set to `false`, the `Class.GuiObject.GuiState|GuiState` will be constantly set to `Enum.GuiState.NonInteractable|NonInteractable`.
       - When the `Class.GuiObject.Interactable|Interactable` setting on the `Class.GuiButton` is
-      set to `true`, The `Class.GuiObject.GuiState|GuiState` will behave normally again.
+      set to `true`, the `Class.GuiObject.GuiState|GuiState` will behave normally again.
     code_samples: []
     type: bool
     tags: []
