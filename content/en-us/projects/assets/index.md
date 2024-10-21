@@ -262,6 +262,13 @@ end
 
 <span><Chip label='rbxhttp://Thumbs/Avatar.ashx?x=100&y=100&format=png' color='primary' size='large' /></span>
 
+
+### rbxtemp
+
+`rbxtemp` allows you to refer `Class.File`s. Use `Class.File.GetTemporaryId` to generate a valid rbxtemp url.
+
+<span><Chip label='rbxtemp://1' color='primary' size='large' /></span>
+
 ### https / http
 
 `https` or `http` points to the exact location of something on the internet. It only works on Roblox-approved domains and raises an error if you use it elsewhere.
