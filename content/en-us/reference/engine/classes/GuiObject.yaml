@@ -373,11 +373,11 @@ properties:
       Determines whether the player's mouse is being actively pressed on the
       `Class.GuiObject` or not.
     description: |
-      When the player's finger is being tapped and held on the `Class.GuiObject`, The
+      When the player's finger is being tapped and held on the `Class.GuiObject`, the
       `Class.GuiObject.GuiState|GuiState` of the `Class.GuiObject` will be set to `Enum.GuiState.Press|Press`. Similarly,
-      When the player's finger is being released from the `Class.GuiObject`, The
+      When the player's finger is being released from the `Class.GuiObject`, the
       `Class.GuiObject.GuiState|GuiState` of the `Class.GuiObject` will be set to `Enum.GuiState.Idle|Idle`,
-      And when `Class.GuiObject.Interactable|Interactable` is turned off on the `Class.GuiObject`, The `Class.GuiState`
+      and when `Class.GuiObject.Interactable|Interactable` is turned off on the `Class.GuiObject`, the `Class.GuiState`
       of the `Class.GuiObject` will be set to `Enum.GuiState.NonInteractable|NonInteractable`.
     code_samples: []
     type: GuiState
