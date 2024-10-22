@@ -81,7 +81,7 @@ For more information, see [Collaboration](../projects/collaboration.md).
 
 ## Testing
 
-Your [team](../projects/setting-up-a-team.md) can instantly test an experience on PC, mobile, VR, and other devices you wish to support through the Roblox app; no need to compile builds, deploy to app stores, or await app store approval.
+Your [team](../projects/groups.md) can instantly test an experience on PC, mobile, VR, and other devices you wish to support through the Roblox app; no need to compile builds, deploy to app stores, or await app store approval.
 
 Studio offers a suite of options for testing an experience before releasing it to the public:
 
