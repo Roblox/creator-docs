@@ -148,6 +148,16 @@ The content folder's location depends on the user's operating system:
   </TabItem>
 </Tabs>
 
+### rbxgameasset
+
+`rbxgameasset` points to an asset uploaded through the [Asset Manager](../../projects/assets/manager.md). It allows access to assets by a user-friendly name instead of ID, so if you upload an image named `Potion.png`, you can reference it as:
+
+<span><Chip label='rbxgameasset://Images/Potion.png' color='primary' size='large' /></span><br />
+
+In the above example, "Images" is the category/folder that appears in the Asset Manager, and "Potion" is the asset name, minus its extension.
+
+> Note that **rbxgameasset** only works for the current game. If you paste a parent object that utilizes the asset in to another game, the asset will not load (or will load a different asset if you've uploaded one with the same name to that ither game). If you need an asset to work across multiple games, use **rbxassetid** instead of **rbxgameasset**.
+
 ### rbxthumb
 
 `rbxthumb` points to a thumbnail image for the provided asset. Its string format takes a thumbnail type (`type`), an asset ID (`id`), and width/height (`w`/`h`).
