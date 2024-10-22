@@ -36,7 +36,7 @@ description: |
           <tr>
               <td><b>rbxgameasset</b></td>
               <td>Path for uploaded asset</td>
-              <td>A textual path to an asset uploaded through the [Asset Manager](../../projects/assets/manager.md).</td>
+              <td>A textual path to an asset uploaded through the [Asset Manager](../../../projects/assets/manager.md).</td>
               <td>rbxasset://Images/Potion.png</td>
           </tr>
           <tr>
