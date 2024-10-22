@@ -264,7 +264,7 @@ end
 
 ### rbxtemp
 
-`rbxtemp` allows you to refer `Class.File`s. Use `Class.File.GetTemporaryId` to generate a valid rbxtemp url. For example:
+`rbxtemp` allows you to refer `Class.File|Files`. Use `Class.File:GetTemporaryId()` to generate a valid `rbxtemp` URL. For example:
 
 <span><Chip label='rbxtemp://1' color='primary' size='large' /></span>
 
