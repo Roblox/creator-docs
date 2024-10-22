@@ -29,15 +29,15 @@ To create the island:
 
 1. In the **Brush Settings** and **Material Settings** sections, keep all default setting except for the following:
 
-   <Grid container spacing={0} alignItems="flex-start">
-    <Grid item>
-   <img src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Draw-Settings.png" alt="Studio's Draw tool settings for this step in the task. The Brush Mode's Add button is highlighted." width="360" />
-   </Grid>
-    <Grid item>
-    - Set **Base Size** to **32**.
-    - Set **Material** to **Sand**.
-   </Grid>
-   </Grid>
+   <GridContainer numColumns="2">
+     <figure>
+       <img src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Draw-Settings.png" alt="Studio's Draw tool settings for this step in the task. The Brush Mode's Add button is highlighted." width="360" />
+     </figure>
+     <Grid item>
+       - Set **Brush Size** to **32**.
+       - Set **Source Material** to **Sand**.
+     </Grid>
+   </GridContainer>
 
 1. In the viewport, click near the spawn location in the viewport. A sphere of sand material displays.
 
@@ -61,19 +61,18 @@ To shape the island:
 
 1. In the **Brush Settings** section, keep all default setting except for the following:
 
-   <Grid container spacing={0} alignItems="flex-start">
-    <Grid item>
-   <img src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Flatten-Settings.png" alt="Studio's Flatten tool settings for this step in the task."  width="360" />
-   </Grid>
-    <Grid item>
-    - Set **Base Size** to **18**.
-    - Enable **Fixed Plane**. New settings display.
-    - Set **Plane Position** to **0**.
-   </Grid>
-   </Grid>
+   <GridContainer numColumns="2">
+     <figure>
+       <img src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Flatten-Settings.png" alt="Studio's Flatten tool settings for this step in the task."  width="360" />
+     </figure>
+     <Grid item>
+       - Set **Base Size** to **18**.
+       - Set **Flatten Plane** to **Fixed**. New settings display.
+       - Set **Fixed Y Plane** to **0**.
+     </Grid>
+   </GridContainer>
 
-1. In the viewport, click and drag your mouse around the sphere until it's completely flat on
-   top.
+1. In the viewport, click and drag your mouse around the sphere until it's completely flat on top.
 
    <video controls loop muted>
    <source src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Flattening-Sphere.mp4" />
@@ -83,12 +82,11 @@ To shape the island:
 
    <img src="../../../../assets/studio/terrain-editor/Edit-Tab-Sculpt.png" alt="Studio's Terrain Editor window with both the Edit tab and Sculpt button highlighted." width="360" />
 
-1. In the **Brush Settings** and **Material Settings** sections, set **Material** to **Sand**, otherwise keep all default settings.
+1. In the **Brush Settings** and **Material Settings** sections, set **Source Material** to **Sand**, otherwise keep all default settings.
 
    <img src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Sculpt-Settings.png" alt="Studio's Sculpt tool settings for this step in the task. The Brush Mode's Add button highlighted." width="360" />
 
-1. In the viewport, click and drag your mouse around the island's edges and below the water line to make
-   the island look more natural.
+1. In the viewport, click and drag your mouse around the island's edges and below the water line to make the island look more natural.
 
    <video controls loop muted>
    <source src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Sculpting-Edges.mp4" />
@@ -116,16 +114,16 @@ To create the water around the island:
    1. Set **Size** to **1800, 5, 1800** to ensure the water fills toward the horizon of your experience.
 1. In the **Material Settings** section, configure the tool with the following settings:
 
-   <Grid container spacing={0} alignItems="flex-start">
-    <Grid item>
-   <img src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Fill-Settings.png" alt="Studio's Fill tool material settings for this step in the task. The Material Mode's Replace button, source material, and target material are highlighted." width="360" />
-   </Grid>
-   <Grid item>
-    - Set **Material Mode** to **Replace**.
-    - Set **Source Material** to **Air**.
-    - Set **Target Material** to **Water**.
-   </Grid>
-   </Grid>
+   <GridContainer numColumns="2">
+     <figure>
+       <img src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Fill-Settings.png" alt="Studio's Fill tool material settings for this step in the task. The Material Mode's Replace button, source material, and target material are highlighted." width="360" />
+     </figure>
+     <Grid item>
+       - Set **Fill Mode** to **Replace**.
+       - Set **Source Material** to **Air**.
+       - Set **Target Material** to **Water**.
+     </Grid>
+   </GridContainer>
 
 1. Click the **Apply** button. Water generates around the island.
 
@@ -146,15 +144,15 @@ To apply materials to the island:
 
 1. In the **Brush Settings** and **Material Settings** sections, keep all default setting except for the following:
 
-   <Grid container spacing={0} alignItems="flex-start">
-    <Grid item>
-   <img src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Paint-Settings.png" alt="Studio's Paint tool settings for this step in the task. The material is highlighted." width="360" />
-   </Grid>
-   <Grid item>
-    - Set **Material Mode** to **Paint**.
-    - Set **Material** to **Leafy Grass**.
-   </Grid>
-   </Grid>
+   <GridContainer numColumns="2">
+     <figure>
+       <img src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Paint-Settings.png" alt="Studio's Paint tool settings for this step in the task. The material is highlighted." width="360" />
+     </figure>
+     <Grid item>
+       - Set **Material Mode** to **Paint**.
+       - Set **Source Material** to **Leafy Grass**.
+     </Grid>
+   </GridContainer>
 
 1. In the viewport, click and drag around the middle of the island to apply the leafy grass material.
 

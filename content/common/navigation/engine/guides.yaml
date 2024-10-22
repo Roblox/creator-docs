@@ -33,16 +33,14 @@ navigation:
           - title: Instance Streaming
             path: /workspace/streaming
       - title: Working in Teams
-        path: /projects/setting-up-a-team
+        path: /projects/groups
         section:
-          - title: Setting Up a Team
-            path: /projects/setting-up-a-team
-          - title: Collaboration
-            path: /projects/collaboration
-          - title: Activity History
-            path: /projects/activity-history
           - title: Groups
             path: /projects/groups
+          - title: Collaboration
+            path: /projects/collaboration
+      - title: Activity History
+        path: /projects/activity-history
       - title: External Tools
         path: /projects/external-tools
   - title: Assets
