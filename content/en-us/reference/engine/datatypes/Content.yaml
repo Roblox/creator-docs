@@ -27,11 +27,17 @@ description: |
               <td>Fetches a user-created asset uploaded to Roblox.</td>
               <td>rbxassetid://7229442422</td>
           </tr>
-      <tr>
+          <tr>
               <td><b>rbxasset</b></td>
               <td>A file path</td>
               <td>Fetches a file from Roblox's content folders.</td>
               <td>rbxasset://textures/face.png</td>
+          </tr>
+          <tr>
+              <td><b>rbxgameasset</b></td>
+              <td>Path for uploaded asset</td>
+              <td>A textual path to an asset uploaded through the [Asset Manager](../../projects/assets/manager.md).</td>
+              <td>rbxasset://Images/Potion.png</td>
           </tr>
           <tr>
               <td><b>rbxthumb</b></td>
