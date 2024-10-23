@@ -1,8 +1,8 @@
 ---
 title: Assemble an Asset Library
 description: Explains how to import and configure your assets within a central location in your experience.
-next: /tutorials/environmental-art/construct-your-world
-prev: /tutorials/environmental-art/develop-polished-assets
+next: /tutorials/curriculums/environmental-art/construct-your-world
+prev: /tutorials/curriculums/environmental-art/develop-polished-assets
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/0shiHaGe87s?si=xILCuyVy8dIviZ2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -254,7 +254,7 @@ To demonstrate this concept, reference the following images that display the hit
     <figcaption>Original Mesh</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-Default.jpg" alt="The same wall model with a colorful hitbox that shows where users can collide with the wall." width="100%"/>
+    <img src="../../../assets/tutorials/environmental-art-curriculum/Section3/CollisionFidelity-Default.jpg" alt="The same wall model with a colorful hitbox that shows where users can collide with the wall." width="100%"/>
     <figcaption>Default</figcaption>
   </figure>
   <figure>

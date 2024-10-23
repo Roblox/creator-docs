@@ -213,6 +213,8 @@ navigation:
             path: /scripting/multithreading
           - title: Native Code Generation
             path: /luau/native-code-gen
+          - title: Script Capabilities
+            path: /scripting/capabilities
           - title: Security Tactics and Cheat Mitigation
             path: /scripting/security/security-tactics
       - title: Luau Reference
@@ -564,6 +566,8 @@ navigation:
         path: /production/promotion/experience-events
       - title: Player Invite Prompts
         path: /production/promotion/invite-prompts
+      - title: Player Referral System
+        path: /production/promotion/referral-system
       - title: Experience Notifications
         path: /production/promotion/experience-notifications
       - title: Nominating for the Discover Page

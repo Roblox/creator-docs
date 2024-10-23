@@ -102,11 +102,15 @@ Within Studio, you can convert single assets or asset hierarchies into **package
 
 For more information, see [Packages](../../projects/assets/packages.md).
 
-## Asset Format Strings
+## Asset URIs
 
-Assets are reflected through formatted strings, each of which points to an online file or a file saved to the client's device. The basic structure is a **protocol** followed by `://` and a **string** that varies according to the protocol.
+Assets and other content stored outside of the current place are identified through **Uniform Resource Identifiers** (URIs) which are formatted strings that point to a file stored online, within the Roblox application package, or saved to the client's device.
 
-<span><Chip label='[Protocol]://[String]' color='primary' size='large' /></span>
+The basic structure is a **scheme** followed by `://` and a **path** that varies according to the scheme.
+
+<span><Chip label='[Scheme]://[Path]' color='primary' size='large' /></span><br/>
+
+The Roblox engine supports several custom URI schemes for referencing content stored on the platform.
 
 ### rbxassetid
 

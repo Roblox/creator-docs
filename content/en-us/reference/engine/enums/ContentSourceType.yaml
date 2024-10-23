@@ -1,23 +1,28 @@
 name: ContentSourceType
 type: enum
-summary: ''
-description: ''
+summary: |
+  The source type of a `Datatype.Content` value.
+description: |
+  The source type of `Datatype.Content` value. Indicates which properties of a `Datatype.Content` contain the referenced content.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
-    summary: ''
+    summary: |
+      Empty value with no source type. Does not reference any content or hold any non‑`nil` value.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Uri
-    summary: ''
+    summary: |
+      An [asset URI](../../../projects/assets/index.md#asset-uris) `string` value contained in `DataType.Content.Uri`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Object
-    summary: ''
+    summary: |
+      A non-`nil` `Class.Object` reference contained in `DataType.Content.Object`.
     value: 2
     tags: []
     deprecation_message: ''

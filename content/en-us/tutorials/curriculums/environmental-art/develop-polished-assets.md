@@ -1,8 +1,8 @@
 ---
 title: Develop Polished Assets
 description: Explains the high-level concepts regarding how to design and develop polished assets.
-next: /tutorials/environmental-art/assemble-an-asset-library
-prev: /tutorials/environmental-art/greybox-your-environment
+next: /tutorials/curriculums/environmental-art/assemble-an-asset-library
+prev: /tutorials/curriculums/environmental-art/greybox-your-environment
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/JiXnyF0fbrU?si=PGiGEjHqosGplmYm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -85,7 +85,7 @@ If you decide to design your own tileable textures in third-party modeling tools
 - Create equal visible distribution so that no one element is more distinguishable than others.
 - Even if a tileable texture is technically seamless, review the overall image to ensure it doesn't have an element that is so pronounced that the texture's repetition is noticeable.
 
-The previous point is near impossible to remove entirely, but you can set Studio material to tile organically, or add in additional decal overlays to hide the repetition effectively. For more information on these techniques, see [Assemble an Asset Library - Creating Custom Materials](./assemble-an-asset-library.md#creating-custom-materials) and [Assembling Modular Environments - Reducing Visible Repetition](./assembling-modular-environments.md#reducing-visible-repetition), respectively.
+The previous point is near impossible to remove entirely, but you can set Studio material to tile organically, or add in additional decal overlays to hide the repetition effectively. For more information on these techniques, see [Assemble an Asset Library - Creating Custom Materials](assemble-an-asset-library.md#create-custom-materials) and [Assembling Modular Environments - Reducing Visible Repetition](assembling-modular-environments.md#reducing-visible-repetition), respectively.
 
 ### Trim Sheets
 
@@ -151,9 +151,9 @@ Not only does this process significantly speed up how quickly you can replace or
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section2/DesigningModularKits-ModularKit.jpg" alt="The sample laser tag experience's modular kit." width="100%"/>
 
-Each asset in this modular kit has a consistent pivot point location either at the forward-most, lower corner, or in a location that allows them to snap to a logical position on the building in 5 stud increments when you enable grid snapping, such as trim pieces onto walls, or doors into their doorway position. In addition, each asset is at least 5 studs tall and wide, so there is never any clashing geometry, even when you rotate and move the assets. For more information on this concept, see [Assembling Modular Environments - The Importance of Consistent Pivot Point Locations](./assembling-modular-environments.md#the-importance-of-consistent-pivot-point-locations).
+Each asset in this modular kit has a consistent pivot point location either at the forward-most, lower corner, or in a location that allows them to snap to a logical position on the building in 5 stud increments when you enable grid snapping, such as trim pieces onto walls, or doors into their doorway position. In addition, each asset is at least 5 studs tall and wide, so there is never any clashing geometry, even when you rotate and move the assets. For more information on this concept, see [Assembling Modular Environments - The Importance of Consistent Pivot Point Locations](assembling-modular-environments.md#the-importance-of-consistent-pivot-point-locations).
 
-<video controls src="../../assets/tutorials/environmental-art-curriculum/Section2/DesigningModularKits-Snapping.mp4" width="100%"></video>
+<video controls src="../../../assets/tutorials/environmental-art-curriculum/Section2/DesigningModularKits-Snapping.mp4" width="100%"></video>
 
 You can use or modify the [sample modular kit](https://www.roblox.com/library/14447738661/Environment-Art-Asset-Library) for replacing graybox geometry in the [world building](../environmental-art/construct-your-world.md) section of this tutorial. However, if you decide to design your own modular kit in third-party modeling tools like [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), keep the following in mind:
 

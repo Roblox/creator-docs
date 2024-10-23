@@ -1,7 +1,6 @@
 ---
 title: Detecting User Input
 description: Explains how to customize and connect user input to actions.
-prev: /tutorials/scripting/input-and-camera/controlling-the-users-camera
 ---
 
 Connecting user input to actions gives users much better and more intuitive control over your experience's features. In this tutorial, you will bind a reloading action to a specific key.

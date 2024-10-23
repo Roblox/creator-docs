@@ -1,8 +1,8 @@
 ---
 title: Creating Teams
 description: Explains how separate players into teams as they join an experience.
-prev: /tutorials/gameplay-scripting/
-next: /tutorials/gameplay-scripting/spawn-respawn
+prev: /tutorials/curriculums/gameplay-scripting/
+next: /tutorials/curriculums/gameplay-scripting/spawn-respawn
 ---
 
 **Creating teams** lets you sort players into groups that compete to complete a common objective, such as scoring the most points or crossing a finish line before other enemy team members. For a first-person shooter, creating teams is particularly important because it establishes complex, coordinated gameplay strategies beyond the skill set of any individual player.

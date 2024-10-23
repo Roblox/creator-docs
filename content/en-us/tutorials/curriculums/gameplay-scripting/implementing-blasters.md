@@ -1,8 +1,8 @@
 ---
 title: Implementing Blaster Behavior
 description: Explains end-to-end how a blast mechanic works in a laser tag experience.
-next: /tutorials/gameplay-scripting/detecting-hits
-prev: /tutorials/gameplay-scripting/adding-rounds
+next: /tutorials/curriculums/gameplay-scripting/detecting-hits
+prev: /tutorials/curriculums/gameplay-scripting/adding-rounds
 ---
 
 **Implementing blaster behavior** is the process of programming a blast mechanic in first-person shooter experiences. While players can blast with a single click or press of a button, creating a satisfying and accurate blast behavior is important because it enhances players' enjoyment of the overall gameplay.
@@ -178,7 +178,7 @@ local ENABLED_WALK_SPEED = 60 -- updated line, be sure to change back
 ```
 
 <Alert severity="info">
-    For this reason, if you decide to increase movement speed, consider adjusting `DISTANCE_SANITY_CHECK_TOLERANCE_STUDS` in **ServerStorage** > **ToleranceValues**. For more information on how to approach this problem, see [Movement Validation](../../scripting/security/security-tactics.md#movement-validation).
+    For this reason, if you decide to increase movement speed, consider adjusting `DISTANCE_SANITY_CHECK_TOLERANCE_STUDS` in **ServerStorage** > **ToleranceValues**. For more information on how to approach this problem, see [Movement Validation](../../../scripting/security/security-tactics.md#movement-validation).
 </Alert>
 
 The server then does the following:

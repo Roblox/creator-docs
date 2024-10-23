@@ -18,8 +18,14 @@ deprecation_message: ''
 properties: []
 methods:
   - name: AssetService:CreateEditableImage
-    summary: ''
-    description: ''
+    summary: |
+      Creates a new `Class.EditableImage`.
+    description: |
+      Creates a new `Class.EditableImage`. By default, the resolution
+      is set at 512&times;512 but it can be specified via the returned object's
+      `Class.EditableImage.Size` parameter. If the device‑specific editable
+      memory budget is exhausted, creation will fail and this method will return
+      `nil`.
     code_samples: []
     parameters: []
     returns:
@@ -32,8 +38,13 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: AssetService:CreateEditableMesh
-    summary: ''
-    description: ''
+    summary: |
+      Creates a new, empty `Class.EditableMesh`.
+    description: |
+      Creates a new, empty `Class.EditableMesh`. Vertices,
+      triangles and their attributes can be added dynamically to it.
+      If the device‑specific editable memory budget is exhausted,
+      creation will fail and this method will return `nil`.
     code_samples: []
     parameters: []
     returns:
@@ -54,6 +65,8 @@ methods:
       texture. Non-asset texture IDs such as `rbxthumb://` are supported. If
       using an image asset, it must be associated with and/or owned by a creator
       of the experience, or it must have been created inside the experience.
+      If the device-specific editable memory budget is exhausted, creation
+      will fail and this method will return `nil`.
     code_samples: []
     parameters:
       - name: textureId
@@ -78,7 +91,13 @@ methods:
       content ID.
     description: |
       Returns a new `Class.EditableMesh` instance created from an existing mesh
-      content ID.
+      content ID. By default a `Class.EditableMesh` created from this method will
+      be fixed size such that mesh data can only be modified, not added nor removed.
+      A fixed size `Class.EditableMesh` consumes less memory and should be preferred
+      when possible.
+      
+      If the device-specific editable memory budget is exhausted, creation
+      will fail and this method will return `nil`.
     code_samples: []
     parameters:
       - name: meshId

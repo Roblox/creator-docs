@@ -1164,6 +1164,11 @@ methods:
             <td> The <code>Class.DataModel.PlaceId</code> of the place the <code>Player</code> teleported from. Only present if the player teleports to the current place and a server calls the teleport function. </td>
           </tr>
           <tr>
+            <th> ReferredByPlayerId </th>
+            <td> number </td>
+            <td> The <code>Class.Player.UserId</code> of the player who invited the current player to the experience. Use this data to identify the referrer and trigger reward logic. </td>
+          </tr>
+          <tr>
             <th> Members </th>
             <td> array </td>
             <td> An array containing the <code>Class.Player.UserId</code> numbers of the users teleported alongside the <code>Player</code>. Only present if the player teleported as part of a group. </td>

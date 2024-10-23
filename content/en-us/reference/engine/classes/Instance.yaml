@@ -56,8 +56,14 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: Instance.Capabilities
-    summary: ''
-    description: ''
+    summary: |
+      The set of capabilities allowed to be used for scripts inside this container.
+    description: |
+      The set of capabilities allowed to be used for scripts inside this instance.
+      For the capabilities to take effect, `Class.Instance.Sandboxed` property has to be enabled.
+
+      This property is used by an experimental feature. See [Script Capabilities](../../../scripting/capabilities.md) page for
+      further details.
     code_samples: []
     type: SecurityCapabilities
     tags: []
@@ -235,8 +241,15 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: Instance.Sandboxed
-    summary: ''
-    description: ''
+    summary: |
+      Turns the instance to be a Sandboxed Container. 
+    description: |
+      Turns the instance to be a Sandboxed Container.
+      Sandboxed Containers are an experimental feature which limits the actions
+      that scripts inside a particular container can perform.
+
+      See [Script Capabilities](../../../scripting/capabilities.md) page for
+      further details.
     code_samples: []
     type: bool
     tags:
