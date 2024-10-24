@@ -18,7 +18,7 @@ items:
     deprecation_message: ''
   - name: Uri
     summary: |
-      An [asset URI](../../../projects/assets/index.md#asset-uris) `string` value contained in `Datatype.Content.Uri`.
+      An [asset URL](../../../projects/assets/index.md#asset-urls) `string` value contained in `Datatype.Content.Url`.
     value: 1
     tags: []
     deprecation_message: ''
