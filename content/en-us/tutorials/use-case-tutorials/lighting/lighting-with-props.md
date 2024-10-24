@@ -1,7 +1,6 @@
 ---
 title: Lighting with Props
 description: The process for creating light sources out of props.
-next: /tutorials/building/environments/playing-background-music
 ---
 
 While overall world lighting is globally controlled through the `Class.Lighting` service, games can also include in-game **light sources** like lamps, torches, spotlights, TV screens, etc.

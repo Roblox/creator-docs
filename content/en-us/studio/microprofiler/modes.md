@@ -11,10 +11,11 @@ The most basic mode, **frame mode** shows a bar graph of frames flowing from the
 
 <img alt="The Microprofiler frame graph, showing blue frames and detailed frame information." src="../../assets/optimization/microprofiler/micro-frame.png" width="300px" />
 
-- Orange bars indicate "standard" frames where the **Jobs Wall Time** exceeds the **Render Wall Time**.
-- Blue bars indicate frames where the **Render Wall Time** exceeds the **Jobs Wall Time**.
+- Orange bars indicate frames where the **Jobs Wall Time** exceeds the **Render Wall Time**. In these frames, at least one of the worker threads, which do things like run scripts, calculate physics, and play animations, took longer to run than the main render thread.
 
-  Blue bars are common when you run the MicroProfiler inside of Studio, but a large number of these frames in the Roblox client indicates a rendering bottleneck. Common causes are excessive object density, object movement, and lighting. See [Improving Performance](../../performance-optimization/improving.md#rendering).
+- Blue bars indicate frames where the **Render Wall Time** exceeds the **Jobs Wall Time**. In these frames, the main render thread took more time than any of the worker threads.
+
+  If the experience is not reaching your frame time goals and has a large number of blue frames, that indicates a rendering bottleneck. Common causes are excessive object density, object movement, and lighting. See [Improving Performance](../../performance-optimization/improving.md#rendering).
 
 - Red bars indicate frames where two conditions are true:
 

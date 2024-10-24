@@ -1,7 +1,6 @@
 ---
 title: In-Game Sounds
 description: The process for creating positional and feedback sounds to enhance an experience.
-prev: /tutorials/building/environments/playing-background-music
 ---
 
 In addition to background music, in-game audio can enhance a player's experience. This tutorial will cover two forms of in-game sounds: **positional** and **feedback** sounds.

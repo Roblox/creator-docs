@@ -132,7 +132,7 @@ Check out the following showcases made by Roblox and the community. Each of thes
 
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-  <img src="../assets/art/Thumbnail-Shrine.png" />
+  <img src="../assets/art/Shrine-Detailed.jpg" />
   </div>
     <Typography variant='h4'>Community Creations</Typography>
         <Typography variant='body1' >Check out these amazing showcase experiences created members of the community!</Typography>

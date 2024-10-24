@@ -1,8 +1,8 @@
 ---
 title: Spawning and Respawning
 description: Explains how spawning and respawning works in a laser tag experience.
-next: /tutorials/gameplay-scripting/adding-rounds
-prev: /tutorials/gameplay-scripting/creating-teams
+next: /tutorials/curriculums/gameplay-scripting/adding-rounds
+prev: /tutorials/curriculums/gameplay-scripting/creating-teams
 ---
 
 **Spawning** is the process of creating an object or character in an experience, and **respawning** is the process of adding an object or character back into an experience after they meet a removal condition, such as a character's health reaching zero or falling off the map. Both processes are important because they ensure players are able to join your experience, and can continue playing to improve their skills.
@@ -272,7 +272,7 @@ end
 ```
 
 <Alert severity="info">
-To learn more about dealing with this type of situation, see [Debounce Patterns](../../scripting/debounce.md).
+To learn more about dealing with this type of situation, see [Debounce Patterns](../../../scripting/debounce.md).
 </Alert>
 
 ## Handle Client State

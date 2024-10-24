@@ -1,73 +1,99 @@
 name: Content
 type: datatype
 summary: |
-  A formatted string with a specific structure to reference some form of
-  content.
+  Represents a reference to asset content stored externally or as an object within the place.
 description: |
-  Assets and other content are reflected through formatted strings, each of
-  which points to an online file or a file saved to the client's device. The
-  basic structure is a **protocol** followed by `://` and a **string** that
-  varies according to the protocol.
-
-  `[Protocol]://[String]`
-
-  <table>
-    <thead>
-          <tr>
-              <th>Protocol</th>
-              <th>String</th>
-              <th>Description</th>
-              <th>Example</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td><b>rbxassetid</b></td>
-              <td>An existing asset ID</td>
-              <td>Fetches a user-created asset uploaded to Roblox.</td>
-              <td>rbxassetid://7229442422</td>
-          </tr>
-          <tr>
-              <td><b>rbxasset</b></td>
-              <td>A file path</td>
-              <td>Fetches a file from Roblox's content folders.</td>
-              <td>rbxasset://textures/face.png</td>
-          </tr>
-          <tr>
-              <td><b>rbxgameasset</b></td>
-              <td>Path for uploaded asset</td>
-              <td>A textual path to an asset uploaded through the [Asset Manager](../../../projects/assets/manager.md).</td>
-              <td>rbxasset://Images/Potion.png</td>
-          </tr>
-          <tr>
-              <td><b>rbxthumb</b></td>
-              <td>Parameters and values</td>
-              <td>Allows for easy loading of thumbnails.</td>
-              <td>rbxthumb://type=Asset&id=24813339&w=150&h=150</td>
-          </tr>
-      <tr>
-              <td><b>rbxhttp</b></td>
-              <td>A path on the Roblox website</td>
-              <td>Fetches content from the Roblox website.</td>
-              <td>rbxhttp://Thumbs/Avatar.ashx?x=100&y=100&format=png</td>
-          </tr>
-          <tr>
-              <td><b>https</b>/<b>http</b></td>
-              <td>A website URL</td>
-              <td>Fetches content from a website using a URL.</td>
-              <td>https://www.roblox.com/asset/?id=9723979220</td>
-          </tr>
-      </tbody>
-  </table>
-
-  For further guidance on using content, see
-  [Asset Format Strings](../../../projects/assets/index.md#asset-format-strings).
+  The `Content` data type represents a reference to asset content stored externally or as an object
+  within the place, wrapping a single value of one of the supported `Enum.ContentSourceType` values.
 code_samples:
 tags: []
 deprecation_message: ''
-constructors: []
-constants: []
-properties: []
+constructors:
+  - name: Content.fromUri
+    summary: |
+      Returns a new `Content` with an [asset URI](../../../projects/assets/index.md#asset-uris) `string` value referencing content external to the place.
+    description: |
+      Returns a new `Content` with an [asset URI](../../../projects/assets/index.md#asset-uris) `string` value referencing content external to the place.
+
+      `Datatype.Content.SourceType` will be `Enum.ContentSourceType|Uri`, and `Datatype.Content.Uri` will contain a non‑`nil` `string` value.
+
+      If `uri` is empty, `Datatype.Content.none` will be returned instead.
+    parameters:
+      - name: uri
+        type: string
+        default:
+        summary: |
+          The [asset URI](../../../projects/assets/index.md#asset-uris) string.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Content.fromObject
+    summary: |
+      Returns a new `Content` with a strong reference to an `Class.Object`.
+    description: |
+      Returns a new `Content` with a strong reference to an `Class.Object`.
+
+      `Datatype.Content.SourceType` will be `Enum.ContentSourceType|Object`, and `Datatype.Content.Object` will contain a non‑`nil` `Class.Object` reference.
+
+      `Datatype.Content.Object` references are **strong** references that hold **shared ownership** of the `Class.Object`. Any `Datatype.Content.Object` reference will extend the lifetime of that `Class.Object` and prevent it from being garbage collected.
+
+      Throws if `object` is `nil`.
+    parameters:
+      - name: object
+        type: Object
+        default:
+        summary: |
+          The `Class.Object` to reference.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+constants:
+  - name: Content.none
+    type: Content
+    summary: |
+      An empty `Content` value with `Datatype.Content.SourceType` of `Enum.ContentSourceType|None`.
+    description: |
+      An empty `Content` value with `Datatype.Content.SourceType` of `Enum.ContentSourceType|None`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+properties:
+  - name: Content.none
+    type: Content
+    summary: |
+      An empty `Content` value with `Datatype.Content.SourceType` of `Enum.ContentSourceType|None`.
+    description: |
+      An empty `Content` value with `Datatype.Content.SourceType` of `Enum.ContentSourceType|None`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: SourceType
+    type: Enum.ContentSourceType
+    summary: |
+      The source type of the contained value.
+    description: |
+      The source type of the contained value. Indicates which property contains a non‑`nil` value.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Uri
+    type: string?
+    summary: |
+      A URI `string` if `Datatype.Content.SourceType` is `Enum.ContentSourceType|Uri`, otherwise `nil`.
+    description: |
+      A URI `string` if `Datatype.Content.SourceType` is `Enum.ContentSourceType|Uri`, otherwise `nil`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Object
+    type: Object?
+    summary: |
+      A reference to a non-`nil` `Class.Object` if `Datatype.Content.SourceType` is `Enum.ContentSourceType|Object`, otherwise `nil`.
+    description: |
+      A reference to a non-`nil` `Class.Object` if `Datatype.Content.SourceType` is `Enum.ContentSourceType|Object`, otherwise `nil`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
 methods:
 functions:
 math_operations:

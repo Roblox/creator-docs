@@ -1,8 +1,8 @@
 ---
 title: Create a Project
 description: This part of the tutorial gets you started with creating a project.
-prev: /tutorials/core/
-next: /tutorials/core/building/create-an-environment-with-terrain
+prev: /tutorials/curriculums/core/
+next: /tutorials/curriculums/core/building/create-an-environment-with-terrain
 ---
 
 In order to start the process of recreating the **Island Jump** [3D platformer experience](https://www.roblox.com/games/14238807008), you must create a project within Roblox Studio. A project is a collection of places, assets, settings and other resources that together represent an experience. You can either start a project from scratch, or you can start with one of Studio's templates to provide a basis for your environment and gameplay mechanics, such as:

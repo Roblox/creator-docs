@@ -1,7 +1,7 @@
 ---
 title: Environmental Art Curriculum
 description: //
-next: /tutorials/environmental-art/greybox-your-environment
+next: /tutorials/curriculums/environmental-art/greybox-your-environment
 hideInPageNavigation: true
 hideBreadcrumbs: true
 ---

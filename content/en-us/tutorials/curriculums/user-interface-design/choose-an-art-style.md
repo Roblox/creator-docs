@@ -1,8 +1,8 @@
 ---
 title: Choose an Art Style
 description: Explains how to greybox the laser tag environment using basic parts.
-next: /tutorials/user-interface-design/wireframe-your-layouts
-prev: /tutorials/user-interface-design/
+next: /tutorials/curriculums/user-interface-design/wireframe-your-layouts
+prev: /tutorials/curriculums/user-interface-design/
 ---
 
 **Choosing an art style** is the process of planning an aesthetic direction for your UI elements. It's important to begin your design process with an art style because art styles provide visual ground rules you can reference to ensure your UI intuitively provides players information about what they can do in your experience.

@@ -34,7 +34,7 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
     <td>A Blocky character model with an [animatable head](../../art/characters/facial-animation/index.md) and a full body cage.</td>
   </tr>
     <tr>
-    <td><a href="../../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.fbx" download>Goblin.fbx</a></td>
+    <td><a href="../../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.zip" download>GoblinCharacter.zip</a></td>
     <td>A Goblin character model with an [animatable head](../../art/characters/facial-animation/index.md) and a full body cage.</td>
   </tr>
     <tr>

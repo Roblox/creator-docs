@@ -5,28 +5,36 @@ memory_category: Instances
 summary: |
   Instance which allows for the runtime creation and manipulation of meshes.
 description: |
-  `Class.EditableMesh` changes the applied visual mesh when parented to a
+  `EditableMesh` changes the applied visual mesh when linked to a
   `Class.MeshPart`, allowing for querying and modification of the mesh both in
   Studio and in experience.
 
-  An `Class.EditableMesh` can be created from an existing mesh ID using
-  `Class.AssetService:CreateEditableMeshAsync()`, or a blank
-  `Class.EditableMesh` can be created with `Datatype.Instance.new()`. It can
-  then be displayed, modified, and its collision model updated. Not all of the
-  steps are necessary; for example, you might want to create an
-  `Class.EditableMesh` just to raycast without ever displaying it.
+  An `EditableMesh` can be created from an existing 'DataType.Content' of a 
+  'Class.MeshPart' or a mesh ID using `Class.AssetService:CreateEditableMeshAsync()`, 
+  or a blank `EditableMesh` can be created with `Class.AssetService:CreateEditableMesh()`. 
+  It can then be displayed, modified, and its collision model updated. Not all 
+  of the steps are necessary; for example, you might want to create an
+  `EditableMesh` just to raycast without ever displaying it.
 
-  An `Class.EditableMesh` is displayed when it's parented to a `Class.MeshPart`,
-  but only the part's appearance changes while the collision model remains the
-  same.
+  An `EditableMesh` is displayed when it's linked to a new `Class.MeshPart`,
+  through `Class.AssetService:CreateMeshPartAsync()`. You can create more `Class.MeshPart` 
+  instances that reference the same `EditableMesh` content, or link to an existing 
+  `Class.MeshPart` through `Class.MeshPart:ApplyMesh()`.
+
+  Calling `Class.AssetService:CreateMeshPartAsync()` will recalculate collision 
+  and fluid geometry with any edits and update the existing `Class.MeshPart`. It 
+  is generally recommended to do this at the end of a conceptual edit operation. 
+  `Class.MeshPart:ApplyMesh()` will update the colission and fluid geometry of 
+  the target `Class.MeshPart`.
+
 
   #### Stable Vertex/Face IDs
 
-  Many `Class.EditableMesh` methods take **vertex**, **normal**, **UV**,
+  Many `EditableMesh` methods take **vertex**, **normal**, **UV**,
   **color** and **face** IDs. These are represented as integers in Luau but they
   require some special handling. The main difference is that IDs are stable and
   they remain the same even if other parts of the mesh change. For example, if
-  an `Class.EditableMesh` has five vertices `{1, 2, 3, 4, 5}` and you remove
+  an `EditableMesh` has five vertices `{1, 2, 3, 4, 5}` and you remove
   vertex `4`, the new vertices will be `{1, 2, 3, 5}`.
 
   Note that the IDs are not guaranteed to be in order and there may be holes in
@@ -53,6 +61,8 @@ description: |
   example, this code will create a sharp cube:
 
   ```lua
+  local AssetService = game:GetService("AssetService")
+  
   -- Given 4 vertex IDs, adds a new normal and 2 triangles, making a sharp quad
   local function addSharpQuad(eMesh, vid0, vid1, vid2, vid3)
   	local nid = eMesh:AddNormal()  -- This creates a normal ID which is automatically computed
@@ -66,7 +76,7 @@ description: |
 
   -- Makes a cube with creased edges between the 6 sides
   local function makeSharpCube()
-  	local eMesh = Instance.new("EditableMesh")
+  	local eMesh = AssetService:CreateEditableMesh()
 
   	local v1 = eMesh:AddVertex(Vector3.new(0, 0, 0))
   	local v2 = eMesh:AddVertex(Vector3.new(1, 0, 0))
@@ -103,7 +113,7 @@ description: |
 
   #### Limitations
 
-  `Class.EditableMesh` currently has a limit of 60,000 vertices and 20,000
+  `EditableMesh` currently has a limit of 60,000 vertices and 20,000
   triangles. Attempting to add too many vertices or triangles will cause an
   error.
 code_samples: []

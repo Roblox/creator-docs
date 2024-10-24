@@ -1,8 +1,8 @@
 ---
 title: Script an Upgrade Button
 description: Explains how to communicate with the Roblox server and handle GUI interactions.
-prev: /tutorials/core/scripting/create-player-hazards
-next: /tutorials/core/building/create-basic-visual-effects
+prev: /tutorials/curriculums/core/scripting/create-player-hazards
+next: /tutorials/curriculums/core/building/create-basic-visual-effects
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/MSGrq7f25lg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -104,8 +104,8 @@ Now that **PlayerData** is able to track jump power, you need to implement logic
 on the server to upgrade jump power from a player's client request.
 
 The server and client can communicate through either
-[Remote Events](../../../scripting/events/remote.md#remote-events) or
-[Remote Functions](../../../scripting/events/remote.md#remote-callbacks).
+[Remote Events](../../../../scripting/events/remote.md#remote-events) or
+[Remote Functions](../../../../scripting/events/remote.md#remote-callbacks).
 Remote events do not yield when they are fired and are appropriate for one-way
 communication. Remote functions yield until they receive a reply, which allows
 for two-way communication. In this case, the client needs to know if the server

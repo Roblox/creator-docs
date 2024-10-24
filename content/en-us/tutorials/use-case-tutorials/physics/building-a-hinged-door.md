@@ -1,7 +1,6 @@
 ---
 title: Building a Hinged Door
 description: The process for creating a door using a HingeConstraint.
-next: /tutorials/building/physics/building-a-ferris-wheel
 ---
 
 Roblox's physics system allows you to construct moving mechanisms like doors, rotating platforms, and even vehicles using **constraints**. For instance, a swinging door can be built using the `Class.HingeConstraint`.

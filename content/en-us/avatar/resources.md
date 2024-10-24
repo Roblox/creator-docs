@@ -100,7 +100,7 @@ A rigged and skinned humanoid character model with a full body cage, facial anim
 </CardContent>
 
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-<Button href="../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+<Button href="../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
 </CardActions>
 
 </Card>
