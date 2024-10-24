@@ -321,7 +321,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
@@ -362,6 +362,29 @@ methods:
       - type: void
         summary: ''
     tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioPlayer:GetWaveformAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: timeRange
+        type: NumberRange
+        default:
+        summary: ''
+      - name: samples
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe

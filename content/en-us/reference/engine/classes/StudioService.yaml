@@ -441,7 +441,7 @@ methods:
           allow only JPG and PNG files to be selected. If no filter is provided,
           the filter is nil and allows the user to select any file type.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           The imported `Class.File|Files`. Returns an empty list if no files
           were selected. Returns nil if the user selected one or more files that

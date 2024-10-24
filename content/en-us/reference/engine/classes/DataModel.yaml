@@ -689,7 +689,7 @@ methods:
         summary: |
           The given content URL.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.Instance|Instances` associated with the content
           URL.
@@ -981,8 +981,8 @@ events:
     tags:
       - Deprecated
     deprecation_message: |
-      This function has been superseded by `Class.Object.Changed`, which
-      should be used in new work instead.
+      This function has been superseded by `Class.Object.Changed`, which should
+      be used in new work instead.
     security: None
     thread_safety: Unsafe
     capabilities: []

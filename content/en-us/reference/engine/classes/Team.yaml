@@ -207,7 +207,7 @@ methods:
       - Teams-GetTeams
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.Player|Players` in the `Class.Team`.
     tags: []

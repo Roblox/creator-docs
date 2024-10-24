@@ -1,6 +1,6 @@
 ---
 title: Player Referral System
-description: Generate shareable referral links that allow players to invite friends to join them inside an experience.
+description: Use referral links to track and reward players that have successfully invited other players into your experience, and players that have joined your experience using a referral link invitation from another player.
 ---
 
 <Alert severity="info">

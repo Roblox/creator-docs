@@ -3,14 +3,16 @@ type: enum
 summary: |
   The source type of a `Datatype.Content` value.
 description: |
-  The source type of `Datatype.Content` value. Indicates which properties of a `Datatype.Content` contain the referenced content.
+  The source type of `Datatype.Content` value. Indicates which properties of a
+  `Datatype.Content` contain the referenced content.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: None
     summary: |
-      Empty value with no source type. Does not reference any content or hold any non‑`nil` value.
+      Empty value with no source type. Does not reference any content or hold
+      any non‑`nil` value.
     value: 0
     tags: []
     deprecation_message: ''
