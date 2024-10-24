@@ -2,7 +2,7 @@ name: ListenerLocation
 type: enum
 summary: ''
 description: |
-  Provides a script-free & configuration-free way to spawn an `Class.AudioListener` by default. Determines where, if anywhere, a default `Class.AudioListener` should go.
+  Provides a script-free and configuration-free way to spawn an `Class.AudioListener` by default. Determines where, if anywhere, a default `Class.AudioListener` should go.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -21,7 +21,8 @@ items:
     deprecation_message: ''
   - name: Character
     summary: |
-      An `Class.AudioListener` will be created and attached to your `Class.Players.LocalPlayer`'s `Class.Players.LocalPlayer.Character`.
+      An `Class.AudioListener` will be created and attached to the local player's
+      `Class.Player.Character`.
     value: 2
     tags: []
     deprecation_message: ''
