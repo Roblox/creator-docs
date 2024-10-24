@@ -27,7 +27,20 @@ methods:
       Instead, a temporary `contentId` is created to identify the new capture.
 
       The `onCaptureReady` callback can be used to prompt the user to save or
-      share the screenshot.
+      share the screenshot:
+
+      ```lua
+      local CaptureService = game:GetService("CaptureService")
+
+      -- Reference to an ImageLabel parent of the script containing this code
+      local imageLabel = script.Parent
+
+      local function onCaptureReady(contentId)
+      	imageLabel.Image = contentId
+      end
+
+      CaptureService:CaptureScreenshot(onCaptureReady)
+      ```
     code_samples: []
     parameters:
       - name: onCaptureReady
