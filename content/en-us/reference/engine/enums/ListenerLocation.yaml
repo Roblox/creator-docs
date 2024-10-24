@@ -1,28 +1,33 @@
 name: ListenerLocation
 type: enum
 summary: ''
-description: ''
+description: |
+  Provides a script-free & configuration-free way to spawn an `Class.AudioListener` by default. Determines where, if anywhere, a default `Class.AudioListener` should go.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      An `Class.AudioListener` will be created and parented to `Class.Workspace.CurrentCamera` in experiences that enable voice chat.
     value: 0
     tags: []
     deprecation_message: ''
   - name: None
-    summary: ''
+    summary: |
+      No `Class.AudioListener|AudioListeners` will be spawned by default.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Character
-    summary: ''
+    summary: |
+      An `Class.AudioListener` will be created and attached to your `Class.Players.LocalPlayer`'s `Class.Players.LocalPlayer.Character`.
     value: 2
     tags: []
     deprecation_message: ''
   - name: Camera
-    summary: ''
+    summary: |
+      An `Class.AudioListener` will be created and parented to `Class.Workspace.CurrentCamera`.
     value: 3
     tags: []
     deprecation_message: ''
