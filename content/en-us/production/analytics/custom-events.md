@@ -28,7 +28,6 @@ Events will automatically track both event count and unique user count. For valu
 ```lua
 local AnalyticsService = game:GetService("AnalyticsService")
 
-
 AnalyticsService:LogCustomEvent(
     player,
     "MissionStarted" -- Event name
@@ -41,7 +40,6 @@ You can also track events with values for metrics that require more quantitative
 
 ```lua
 local AnalyticsService = game:GetService("AnalyticsService")
-
 
 AnalyticsService:LogCustomEvent(
     player,
