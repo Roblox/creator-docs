@@ -345,7 +345,7 @@ functions:
       Copies the specified range of elements from one table to another.
     description: |
       Copies elements in table `src` from `src[a]` up to `src[b]` into table
-      `dst` starting at `t`. Equivalent to the statement
+      `dst` starting at index `t`. Equivalent to the assignment statement
       `dst[t], ..., dst[t + (b - a)] = src[a], ..., src[b]`.
 
       The default for `dst` is `src`. The destination range may overlap with the
