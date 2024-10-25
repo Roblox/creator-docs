@@ -46,7 +46,7 @@ local AnalyticsService = game:GetService("AnalyticsService")
 AnalyticsService:LogCustomEvent(
     player,
     "MissionCompletedDuration", -- Event name
-    10 -- Event value
+    120 -- Event value
 )
 ```
 
