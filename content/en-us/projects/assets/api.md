@@ -1,197 +1,317 @@
 ---
-title: External Catalog Queries
-description: External Catalog Queries let you externally query the Creator Store Catalog and Marketplace Catalog.
+title: Creator Store Queries
+description: Creator Store Queries let you externally query the Creator Store and Marketplace Catalog.
 ---
 
-You can search Roblox's assets outside Studio by accessing the external catalog API. Use the [Creator Store API](#creator-store-api) to query Studio assets, such as meshes, models, and audio, and the [Marketplace API](#marketplace-api) to query avatar assets on the Marketplace.
+You can search Roblox's assets outside Studio by accessing the Creator Store API. Use the [Creator Store API](#creator-store-api) to query Studio assets, such as meshes, models, and audio, and the [Marketplace API](#marketplace-api) to query avatar assets on the Marketplace.
 
 Each API requires a URL and custom search parameters for that specific catalog. If both URL and parameters are valid, the API returns a JSON format with the results of your search.
 
 ## Creator Store API
 
-You can query items from the Creator Store catalog using the following URL:
-`https://search.roblox.com/catalog/json?[params]`
+> [!NOTE]
+> We acknowledge that the toolbox-service API described below is not covered on the official Cloud APIs documentation. We are planning to better support Creator Store search with a cleaner API in future, stay tuned for updates.
 
-You can replace `[params]` with the appropriate [query parameters](#query-parameters) to customize your search.
+
+You can query items from the Creator Store catalog using the following URL:
+`https://apis.roblox.com/toolbox-service/v1/marketplace/{categoryId}[params]`
+
+You can replace `[categoryId]` and `[params]` with the appropriate [query parameters](#query-parameters) to customize your search.
+
+### CategoryId:
+
+Valid categoryIds are:
+
+Audio = 3
+Model = 10
+Decal = 13
+Animation = 24
+Plugin = 38
+MeshPart = 40
+Video = 62
+FontFamily = 73
+Music = 300
+
+
 
 ### Query Parameters
 
 You can specify search parameters by appending a series of parameters and values to the URL, each separated by a `&`.
 
-Use the following parameters to query the Creator Store catalog:
+Use the following parameters to query the Creator Store:
 
 <table>
-<thead>
-  <tr>
-    <th>Parameter</th>
-    <th>Type</th>
-    <th>Options and Values</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Category</td>
-    <td>byte</td>
-    <td>`6` = Models <br />`7` = Plugins <br />`8` = Decals <br />`9` = Audio <br />`10` = Meshes</td>
-  </tr>
-  <tr>
-    <td>CreatorID</td>
-    <td>long</td>
-    <td>Specifies the `Class.Player.UserId|UserID` to filter in the search. If you'd like to find group-created items, enter the group agent's ID, not the group ID.</td>
-  </tr>
-  <tr>
-    <td>CurrencyType</td>
-    <td>byte</td>
-    <td>`0` = All (Default) <br />`3` = CustomRobux <br />`5` = Free <br /> <br /> Use CustomRobux with custom PxMax and PxMin values. </td>
-  </tr>
-  <tr>
-    <td>Genres</td>
-    <td>byte</td>
-    <td>Specifies the genre for the search. The recommended approach to filtering on genres is to match the URL of a catalog page. <br />`1` = TownAndCity <br />`2` = Medieval <br />`3` = SciFi <br />`4` = Fighting <br />`5` = Horror <br />`6` = Naval <br />`7` = Adventure <br />`8` = Sports <br />`9` = Comedy <br />`10` = Western <br />`11` = Military <br />`13` = Building <br />`14` = FPS <br />`15` = RPG </td>
-  </tr>
-  <tr>
-    <td>Keyword</td>
-    <td>string</td>
-    <td>Standard keyword search.</td>
-  </tr>
-  <tr>
-    <td>PageNumber</td>
-    <td>int</td>
-    <td>Specifies a page number in conjunction with `ResultsPerPage` to page through results.</td>
-  </tr>
-  <tr>
-    <td>PxMax</td>
-    <td>int</td>
-    <td>The maximum price in Robux of items in the query.</td>
-  </tr>
-  <tr>
-    <td>PxMin</td>
-    <td>int</td>
-    <td>The minimum price in Robux of items in the query.</td>
-  </tr>
-  <tr>
-    <td>ResultsPerPage</td>
-    <td>int</td>
-    <td>By default this is the same as what's currently shown on each catalog browse page. You can't specify a value larger than this maximum amount.</td>
-  </tr>
-  <tr>
-    <td>SortAggregation</td>
-    <td>byte</td>
-    <td>`0` = PastDay <br />`1` = PastWeek <br />`2` = PastMonth <br />`3` = AllTime</td>
-  </tr>
-  <tr>
-    <td>SortType</td>
-    <td>byte</td>
-    <td>`0` = Relevance (Default)<br />`1` = MostFavorited <br />`2` = Bestselling <br />`3` = RecentlyUpdated <br />`4` = PriceLowToHigh <br />`5` = PriceHighToLow</td>
-  </tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Options and Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>categoryId (path)</td>
+      <td>int</td>
+      <td>
+        Audio = 3<br>
+        Model = 10<br>
+        Decal = 13<br>
+        Animation = 24<br>
+        Plugin = 38<br>
+        MeshPart = 40<br>
+        Video = 62<br>
+        FontFamily = 73<br>
+        Music = 300<br>
+        SoundEffect = 301<br>
+        UnknownAudio = 302<br>
+        Package = 1001<br>
+        SharedPackage = 1002
+      </td>
+    </tr>
+    <tr>
+      <td>sortOrder</td>
+      <td>int</td>
+      <td>Asc = 1<br>Desc = 2</td>
+    </tr>
+    <tr>
+      <td>limit</td>
+      <td>int</td>
+      <td>Number of results to return, maximum 100.</td>
+    </tr>
+    <tr>
+      <td>cursor</td>
+      <td>string</td>
+      <td>Pagination cursor</td>
+    </tr>
+    <tr>
+      <td>pageNumber</td>
+      <td>int</td>
+      <td>Page number to request for</td>
+    </tr>
+    <tr>
+      <td>keyword</td>
+      <td>string</td>
+      <td>Search keyword</td>
+    </tr>
+    <tr>
+      <td>assetSubTypes</td>
+      <td>array[string]</td>
+      <td>Ad, MaterialPack, Package</td>
+    </tr>
+    <tr>
+      <td>excludeAssetSubTypes</td>
+      <td>array[string]</td>
+      <td>Ad, MaterialPack, Package</td>
+    </tr>
+    <tr>
+      <td>creatorType</td>
+      <td>int</td>
+      <td>1 = User<br>2 = Group</td>
+    </tr>
+    <tr>
+      <td>creatorTargetId</td>
+      <td>int64</td>
+      <td>User or Group Id to search for</td>
+    </tr>
+    <tr>
+      <td>minDuration</td>
+      <td>int64</td>
+      <td>Minimum value of the duration range for audio assets in seconds</td>
+    </tr>
+    <tr>
+      <td>maxDuration</td>
+      <td>int64</td>
+      <td>Maximum value of the duration range for audio assets in seconds</td>
+    </tr>
+    <tr>
+      <td>sortDirection</td>
+      <td>int</td>
+      <td>None = 0<br>Ascending = 1<br>Descending = 2</td>
+    </tr>
+    <tr>
+      <td>artist</td>
+      <td>string</td>
+      <td>The name of the artist</td>
+    </tr>
+    <tr>
+      <td>album</td>
+      <td>string</td>
+      <td>The album you are looking for</td>
+    </tr>
+    <tr>
+      <td>audioTypes</td>
+      <td>array[int]</td>
+      <td>Music = 0<br>SoundEffect = 1</td>
+    </tr>
+    <tr>
+      <td>uiSortIntent</td>
+      <td>int</td>
+      <td>
+        Relevance = 1<br>
+        Trending = 6<br>
+        AllTime = 7<br>
+        Top = 8<br>
+        Duration = 9<br>
+        DateCreated = 10<br>
+        DateModified = 11<br>
+        Creator = 12<br>
+        Name = 13<br>
+        What sort order to rank the results by
+      </td>
+    </tr>
+    <tr>
+      <td>includeOnlyVerifiedCreators</td>
+      <td>bool</td>
+      <td>A flag to include only results from verified creators. Verified creators are those that are ID or phone verified.</td>
+    </tr>
+    <tr>
+      <td>minPriceInCents</td>
+      <td>int64</td>
+      <td>Minimum cost in cents (only applicable to plugins)</td>
+    </tr>
+    <tr>
+      <td>maxPriceInCents</td>
+      <td>int64</td>
+      <td>Maximum cost in cents (only applicable to plugins)</td>
+    </tr>
+  </tbody>
 </table>
 
-The following URL will search for 10 items in the "Models" subcategory, sorted by most recently updated.
 
-`https://search.roblox.com/catalog/json?Category=6&SortType=3&ResultsPerPage=10`
+For more detailed documentation regarding the toolbox-service, please refer to the updated documentation at creator store API.
+
+This is a sample response from the endpoint:
+
+```
+{
+  "totalResults": int,
+  "filteredKeyword": string,
+  "spellCheckerResult": {
+    "correctionState": int,
+    "correctedQuery": string,
+    "userQuery": string
+  },
+  "queryFacets": {
+    "appliedFacets": Array[string],
+    "availableFacets": Array[string]
+  },
+  "imageSearchStatus": int,
+  "previousPageCursor": string,
+  "nextPageCursor": string,
+  "data": [
+    {
+      "id": int,
+      "name": string,
+      "searchResultSource": string
+    }
+  ]
+}
+```
+
+To get back the asset metadata, you would go over the data array and extract the ids, call the GetItemDetails endpoint on toolbox-service like this:
+
+```
+GET https://apis.roblox.com/toolbox-service/v1/items/details?assetIds={assetId1}%2C{assetId2}
+```
 
 ### Response Fields
 
-API responses return in a JSON format. The response provides asset details with the following primary fields:
 
-<table>
-<thead>
-  <tr>
-    <th>Field</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>AssetTypeID</td>
-    <td>An asset type value. <br />`3` = Audio<br />`4` = Mesh<br />`5` = Lua<br />`10` = Model<br />`13` = Decal<br />`21` = Badge<br />`24` = Animation<br />`34` = GamePass<br />`38` = Plugin<br />`40` = MeshPart</td>
-  </tr>
-  <tr>
-    <td>BestPrice</td>
-    <td>Empty except for limited edition items, in which case it will return the best price for the item.</td>
-  </tr>
-  <tr>
-    <td>ContentRatingTypeID</td>
-    <td>`0` = No content rating type<br />`1` = 13+ rated item</td>
-  </tr>
-  <tr>
-    <td>CreatedDate</td>
-    <td>Date the item was created in UTC format.</td>
-  </tr>
-  <tr>
-    <td>MinimumMembershipLevel</td>
-    <td>`1` = Any membership<br />`4` = <a href="https://www.roblox.com/premium/membership">Roblox Premium</a> only</td>
-  </tr>
-  <tr>
-    <td>Name</td>
-    <td>Item name in UTF-8 format.</td>
-  </tr>
-  <tr>
-    <td>PriceView</td>
-    <td>This is mostly used by the website to display prices. The options are:<br />`0` = Free<br />`1` = Collectible<br />`2` = HasPrice<br />`3` = NotForSale</td>
-  </tr>
-  <tr>
-    <td>PrivateSales</td>
-    <td>Empty except for limited edition items, in which case it will return the number of private sellers.</td>
-  </tr>
-  <tr>
-    <td>UpdatedDate</td>
-    <td>Date the item was last updated in UTC format.</td>
-  </tr>
-</tbody>
-</table>
+This is the response you should expect to get back from that endpoint:
 
-The following is an example of expected return output for a single item:
-
-```json
+```
 {
-	"AssetId": 3374795585,
-	"Name": "Rat",
-	"Description": "",
-	"AbsoluteUrl": "https://www.roblox.com/catalog/3374795585/Rat",
-	"Price": "",
-	"Updated": "8 months ago",
-	"Favorited": "80 times",
-	"Sales": "1,613",
-	"Remaining": "",
-	"Creator": "ROBLOX",
-	"CreatorAbsoluteUrl": "https://www.roblox.com/users/1/profile",
-	"PrivateSales": "",
-	"PriceView": 0,
-	"BestPrice": "",
-	"ContentRatingTypeID": 0,
-	"IsServerSideThumbnailLookupInCatalogEnabled": true,
-	"AudioUrl": null,
-	"IsLargeItem": false,
-	"IsThumbnailFinal": true,
-	"IsThumbnailUnapproved": false,
-	"ThumbnailUrl": "https://t1.rbxcdn.com/745a4be8c2366db2e55d0a67678434dc",
-	"BcOverlayUrl": null,
-	"LimitedOverlayUrl": null,
-	"DeadlineOverlayUrl": null,
-	"LimitedAltText": null,
-	"NewOverlayUrl": null,
-	"SaleOverlayUrl": null,
-	"IosOverlayUrl": null,
-	"XboxOverlayUrl": null,
-	"GooglePlayOverlayUrl": null,
-	"AmazonOverlayUrl": null,
-	"IsTransparentBackground": false,
-	"IsNewRobuxIconEnabled": true,
-	"AssetTypeID": 10,
-	"CreatorID": 1,
-	"CreatedDate": "/Date(1561635090927)/",
-	"UpdatedDate": "/Date(1562003916210)/",
-	"IsForSale": false,
-	"IsPublicDomain": true,
-	"IsLimited": false,
-	"IsLimitedUnique": false,
-	"MinimumMembershipLevel": 0,
-	"OffSaleDeadline": null,
-	"ProductId": 586905093
+  "data": [
+    {
+      "asset": {
+        "audioDetails": {
+           "audioType": Array[int],
+           "artist": string,
+           "title": string,
+           "musicAlbum": string,
+           "musicGenre": string,
+           "soundEffectCategory": string,
+           "soundEffectSubcategory": string,
+           "tags": Array[string] 
+        },
+        "id": int64,
+        "name": string,
+        "typeId": int,
+        "assetSubTypes": Array[string],
+        "assetGenres": Array[string],
+        "ageGuidelines":{
+          "ageGuideline: int,
+          "blood": {
+             "realism": int,
+             "level": int
+           },
+          "violence": {
+            "intensity": int
+           },
+          "profanity": {
+            "presence": int
+           },
+          "alcohol": {
+            "presence": int
+           },
+          "romance": {
+            "type": int
+           }
+        },
+        "isEndorsed": bool,
+        "description": string,
+        "duration": int,
+        "hasScripts": bool?,
+        "createdUtc": string($date-time),
+        "updatedUtc": string($date-time),
+        "creatingUniverseId": int64?,
+        "isAssetHashApproved": bool,
+        "visibilityStatus": int?,
+        "socialLinks": [{
+           "linkType": int,
+           "url": string,
+           "title": string
+        }]
+      },
+      "creator": {
+        "id": int64,
+        "name": string,
+        "type": int,
+        "isVerifiedCreator": bool,
+        "latestGroupUpdaterUserId": int64?,
+        "latestGroupUpdaterUserName": string
+      },
+      "voting": {
+        "showVotes": bool,
+        "upVotes": int64,
+        "downVotes": int64,
+        "canVote": bool,
+        "userVote": bool?,
+        "hasVoted": bool,
+        "voteCount": int64,
+        "upVotePercent": int
+      },
+      "product": {
+        "productId": int64,
+        "price": int64?,
+        "isForSaleOrIsPublicDomain": bool
+      },
+      "fiatProduct": {
+        "purchasePrice": {
+          "currencyCode": string,
+          "quantity": {
+            "significand": int64,
+            "exponent": int
+          }
+        },
+        "published": bool,
+        "purchasable": bool
+      }
+    }
+  ]
 }
 ```
+
 
 ## Marketplace API
 
