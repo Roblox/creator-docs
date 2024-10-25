@@ -463,44 +463,44 @@ override the old. For example, a "jump" animation should take priority over an "
 Roblox uses seven levels of priority, ordered here from highest to lowest:
 
 <Grid container spacing={2} alignItems="center">
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Highest.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Highest.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}>
 	**Action4**
 	</Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Higher.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Higher.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}>
 	**Action3**
 	</Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-High.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-High.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}>
 	**Action2**
 	</Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Neutral.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Neutral.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}>
 	**Action**
 	</Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Low.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Low.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}>
 	**Movement**
 	</Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Lower.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Lower.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}>
 	**Idle**
 	</Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Lowest.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Lowest.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}>
 	**Core**
 	</Grid>
 </Grid>

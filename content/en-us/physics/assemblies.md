@@ -6,15 +6,15 @@ description: Explains physical assemblies and how they behave in Roblox's rigid 
 An **assembly** is one or more [parts](../parts/index.md) welded by a rigid `Class.WeldConstraint|WeldConstraint` or connected through moveable joints, like `Class.Motor6D|Motor6Ds`. You can group an assembly of parts in a [Model](../parts/models.md) container to quickly organize the parts and related objects as a single asset.
 
 <Grid container spacing={0}>
-  <Grid item xs={6} lg={3}>
+  <Grid item XSmall={6} XLarge={3}>
     <img src="../assets/physics/assemblies/Assembly-Example-Block.png" width="100%" />
     <figcaption>1&nbsp;assembly; 1&nbsp;part</figcaption>
   </Grid>
-  <Grid item xs={6} lg={3}>
+  <Grid item XSmall={6} XLarge={3}>
     <img src="../assets/physics/assemblies/Assembly-Example-Avatar.png" width="100%" />
     <figcaption>1&nbsp;assembly; 18&nbsp;parts</figcaption>
   </Grid>
-  <Grid item xs={12} lg={6}>
+  <Grid item XSmall={12} XLarge={6}>
     <img src="../assets/physics/assemblies/Assembly-Example-Ship.png" width="100%" />
     <figcaption>1&nbsp;assembly; 179&nbsp;parts</figcaption>
   </Grid>
@@ -73,26 +73,26 @@ Every assembly has a **root&nbsp;part** indicated by its `Class.BasePart.Assembl
 You cannot explicitly set the root part, but the following factors affect probability from highest to lowest:
 
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Higher.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Higher.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	An `Class.BasePart.Anchored|Anchored` part will always be assigned as the root part.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-High.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-High.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	Parts with `Class.BasePart.Massless|Massless` set to **false** (default) take precedence.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Low.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Low.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	Higher `Class.BasePart.RootPriority|RootPriority` values take precedence.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Lower.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Lower.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	Precedence based on the part's size, with multipliers for parts with specific names.
 	</Grid>
 </Grid>

@@ -15,7 +15,7 @@ While many creators focus on a single area, the following tutorials walk you thr
 <br>
 </br>
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -32,7 +32,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -49,7 +49,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -76,7 +76,7 @@ While many creators focus on a single area, the following tutorials walk you thr
 **Curriculum paths** provide a comprehensive overview of the various skills you need for different  development areas after you familiarize yourself with Studio's core functionality. In addition to demonstrating how to use Studio features for each creative discipline, this long-form type of structured learning shows you how to examine and solve common design problems within your own experiences.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -93,7 +93,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -110,7 +110,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -133,7 +133,7 @@ While many creators focus on a single area, the following tutorials walk you thr
 **Use case tutorials** focus on a specific task that you can complete in order to learn about various aspects of developing in Studio. In addition to teaching you how to use collections of related features to recreate common components for experiences, this short-form type of structured learning highlights techniques you can use to achieve effects for a variety of design requirements.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -151,7 +151,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -169,7 +169,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -187,7 +187,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -206,7 +206,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -224,7 +224,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -242,7 +242,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -259,7 +259,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
    <div class="container"
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>

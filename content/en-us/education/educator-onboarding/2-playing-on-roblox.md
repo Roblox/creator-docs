@@ -26,7 +26,7 @@ To play and create on Roblox, you need a **free** account.
 2. To create an account, you may be asked to complete a **CAPTCHA**. These are timed challenges used to discourage people creating fake accounts. Challenges vary, but often ask you to find a specific object in an image.
 
   <Grid container>
-    <Grid item xs={4}>
+    <Grid item XSmall={4}>
       <figure>
       <img
       src="../../assets/education/legacy/module2-verify.png"
@@ -34,7 +34,7 @@ To play and create on Roblox, you need a **free** account.
       <figcaption>Captcha Prompt</figcaption>
       </figure>
     </Grid>
-    <Grid item xs={4}>
+    <Grid item XSmall={4}>
       <figure>
       <img
       src="../../assets/education/legacy/module2-capture.jpg"
@@ -110,14 +110,14 @@ A sample page is below.
 3. With Roblox Client open, go through the experience as instructed. This should take about 5 - 10 minutes. Come back to your web browser when you see a sign reading "You Finished the Training!"
 
    <Grid container>
-   <Grid item xs={4}>
+   <Grid item XSmall={4}>
    <figure>
    <img src="../../assets/education/legacy/module2-trainingExample.jpg" width="100%" />
    <figcaption>Example In-Experience</figcaption>
    </figure>
    </Grid>
 
-   <Grid item xs={4}>
+   <Grid item XSmall={4}>
    <figure>
    <img src="../../assets/education/legacy/module2-finishedTraining.jpg" width="100%" />
    <figcaption>Finish Screen</figcaption>

@@ -9,8 +9,8 @@ description: |
   `Class.MeshPart`, allowing for querying and modification of the mesh both in
   Studio and in experience.
 
-  An `EditableMesh` can be created from an existing 'DataType.Content' of a
-  'Class.MeshPart' or a mesh ID using
+  An `EditableMesh` can be created from an existing `Datatype.Content` of a
+  `Class.MeshPart` or a mesh ID using
   `Class.AssetService:CreateEditableMeshAsync()`, or a blank `EditableMesh` can
   be created with `Class.AssetService:CreateEditableMesh()`. It can then be
   displayed, modified, and its collision model updated. Not all of the steps are

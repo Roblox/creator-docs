@@ -483,7 +483,7 @@ describe('compileMdx', () => {
     container
     direction="row">
 
-<Grid item md={7} xs={12}
+<Grid item Medium={7} XSmall={12}
     direction="column"  >
 
 <div class="container"

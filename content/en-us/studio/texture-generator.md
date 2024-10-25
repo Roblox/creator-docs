@@ -152,10 +152,10 @@ When this setting is enabled, the [generation angle](#generation-angle) selected
 <GridContainer numColumns="2">
 <figure>
 <Grid container spacing={1}>
-<Grid item xs={6} lg={6}>
+<Grid item XSmall={6} XLarge={6}>
 <img src="../assets/studio/texture-generator/Specify-Front-View-Bad-Front.jpg" alt="Front view of character's lab coat with Specify Front View disabled" />
 </Grid>
-<Grid item xs={6} lg={6}>
+<Grid item XSmall={6} XLarge={6}>
 <img src="../assets/studio/texture-generator/Specify-Front-View-Bad-Back.jpg" alt="Back view of character's lab coat with Specify Front View disabled" />
 </Grid>
 </Grid>
@@ -167,10 +167,10 @@ When this setting is enabled, the [generation angle](#generation-angle) selected
 </figure>
 <figure>
 <Grid container spacing={1}>
-<Grid item xs={6} lg={6}>
+<Grid item XSmall={6} XLarge={6}>
 <img src="../assets/studio/texture-generator/Specify-Front-View-Good-Front.jpg" alt="Front view of character's lab coat with Specify Front View enabled" />
 </Grid>
-<Grid item xs={6} lg={6}>
+<Grid item XSmall={6} XLarge={6}>
 <img src="../assets/studio/texture-generator/Specify-Front-View-Good-Back.jpg" alt="Back view of character's lab coat with Specify Front View enabled" />
 </Grid>
 </Grid>
