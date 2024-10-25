@@ -15,6 +15,7 @@ This page summarizes the available operations and authentication types, but you 
 - [Game Internationalization API](/cloud/legacy/gameinternationalization/v1)
 - [Groups API](/cloud/legacy/groups/v1)
 - [Localization Tables API](/cloud/legacy/localizationtables/v1)
+- [Publish API](/cloud/legacy/publish/v1)
 
 <Alert severity="warning">
   Refer to the left navigation for documentation of legacy APIs that only support cookie authentication and **not** API key and/or OAuth 2.0 authentication.
@@ -44,6 +45,7 @@ This page summarizes the available operations and authentication types, but you 
 | DeleteTeamCreateMembership           | `DELETE v1/universes/{universeId}/teamcreate/memberships`   | `legacy-team-collaboration:manage` |
 | GetMembersInTeamCreateSessionByPlace | `GET v1/places/{placeId}/teamcreate/active_session/members` | `legacy-team-collaboration:manage` |
 | CloseTeamTestGame                    | `DELETE v2/teamtest/{placeId}`                              | `legacy-team-collaboration:manage` |
+| GetGroupsWithEditGroupGamePermission | `GET v1/user/groups/canmanage`                              | `legacy-group:manage`              |
 
 ## Followings API
 
@@ -119,6 +121,7 @@ This page summarizes the available operations and authentication types, but you 
 | UpdateGroupStatus                 | `PATCH v1/groups/{groupId}/status`                  | `legacy-group:manage` |
 | UpdateGroupNotificationPreference | `PATCH v1/groups/{groupId}/notification-preference` | `legacy-user:manage`  |
 | UpdateGroupDescription            | `PATCH v1/groups/{groupId}/description`             | `legacy-group:manage` |
+| GetPendingGroupJoins              | `GET v1/user/groups/pending`                        | `legacy-group:manage` |
 
 ## Localization Tables API
 
@@ -137,3 +140,12 @@ This page summarizes the available operations and authentication types, but you 
 | GetTableEntriesPaged                    | `GET v1/localization-table/tables/{tableId}/entries`                      | `legacy-universe:manage` |
 | GetTableEntryCount                      | `GET v1/localization-table/tables/{tableId}/entry-count`                  | `legacy-universe:manage` |
 | GetTableEntriesTranslationHistory       | `POST v1/localization-table/tables/{tableId}/entries/translation-history` | `legacy-universe:manage` |
+
+## Publish API
+
+- Base URL: `https://apis.roblox.com/legacy-publish`
+- Authentication types: OAuth 2.0 and API key
+
+| **API**                                 | **Path**                                                                  | **Scope**                |
+| :-------------------------------------- | :------------------------------------------------------------------------ | :----------------------- |
+| UpdateBadgeIcon                         | `POST /v1/badges/{badgeId}/icon`                                          | `legacy-badge:manage`    |

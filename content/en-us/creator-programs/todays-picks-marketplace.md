@@ -14,7 +14,7 @@ description: Today's Picks on Marketplace is a curated sort with items selected 
 </figure><br /><br />
 
 <Grid container spacing={2}>
-  <Grid item container md={8}  direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Large={8} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <h2>Why Apply?</h2>
     <p>Using the combined efforts of our team of Roblox editors and our Marketplace recommendation system, Today's Picks on Marketplace will give us more ways to feature the work and creativity you bring to Roblox.</p>
@@ -28,7 +28,7 @@ description: Today's Picks on Marketplace is a curated sort with items selected 
     <Button href="https://survey.roblox.com/jfe/form/SV_8cZb94oj9OvQm9g" size='large' variant='contained' style={{width:200}}>Apply</Button>
   </Grid>
   </Grid>
-  <Grid item container md={4}  direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
       <img src="../assets/misc/Todays-Picks-Marketplace.png" width="85%" />
   </Grid>

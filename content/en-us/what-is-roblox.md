@@ -5,7 +5,7 @@ hideInPageNavigation: true
 ---
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
-  <Grid item container sm={12} md={6} lg={6} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={6} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -13,7 +13,7 @@ hideInPageNavigation: true
     </div>
   </Grid>
   </Grid>
-  <Grid item container sm={12} md={6} lg={6} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={6} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <p>Roblox is a 3D creation platform that provides everything you need to build, test, distribute, and monetize your creations.</p>
     <p>Creations can be items that users equip for their avatars, the 3D experiences that users join, or assets and plugins that you provide to other creators to build with.</p>
@@ -25,7 +25,7 @@ hideInPageNavigation: true
 Learn, share, and interact with the Roblox community in the following places.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -41,7 +41,7 @@ Learn, share, and interact with the Roblox community in the following places.
     </div>
   </Grid>
   </Grid>
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -51,7 +51,7 @@ Learn, share, and interact with the Roblox community in the following places.
     <Typography variant='body1' >Roblox is designed for massive 3D worlds. Learn how to use Roblox Studio to start building!</Typography>
   </Grid>
   </Grid>
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -67,7 +67,7 @@ Learn, share, and interact with the Roblox community in the following places.
 Avatars are the 3D representations of users on Roblox. They persist across all Roblox experiences and are fully customizable.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -83,7 +83,7 @@ Avatars are the 3D representations of users on Roblox. They persist across all R
     </div>
   </Grid>
   </Grid>
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -93,7 +93,7 @@ Avatars are the 3D representations of users on Roblox. They persist across all R
     <Typography variant='body1'>Watch this interview with PolarCub, one of the top UGC item creators on Roblox.</Typography>
   </Grid>
   </Grid>
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -104,7 +104,7 @@ Avatars are the 3D representations of users on Roblox. They persist across all R
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -114,7 +114,7 @@ Avatars are the 3D representations of users on Roblox. They persist across all R
     <Typography variant='body1'>Accessories are items that users can attach to their avatars at a single attachment point.</Typography>
   </Grid>
   </Grid>
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -124,7 +124,7 @@ Avatars are the 3D representations of users on Roblox. They persist across all R
     <Typography variant='body1'>Build clothing that can layer and stretch on a variety of avatar sizes and shapes.</Typography>
   </Grid>
   </Grid>
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -140,7 +140,7 @@ Avatars are the 3D representations of users on Roblox. They persist across all R
 Attract, retain, and monetize users.
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -156,7 +156,7 @@ Attract, retain, and monetize users.
     </div>
   </Grid>
   </Grid>
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -172,7 +172,7 @@ Attract, retain, and monetize users.
     </div>
   </Grid>
   </Grid>
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -194,7 +194,7 @@ Attract, retain, and monetize users.
 From the web to studio, Roblox provides all the tools you need to start creating for free.
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -210,7 +210,7 @@ From the web to studio, Roblox provides all the tools you need to start creating
     </div>
   </Grid>
   </Grid>
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -223,7 +223,7 @@ From the web to studio, Roblox provides all the tools you need to start creating
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0}}>

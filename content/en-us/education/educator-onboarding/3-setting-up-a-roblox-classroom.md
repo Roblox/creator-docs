@@ -127,12 +127,12 @@ Before beginning a Roblox class, you may have questions from different people su
 Resources and handouts are available about the safety and educational benefits of Roblox.
 
 <Grid container>
-    <Grid item xs={6}>
+    <Grid item XSmall={6}>
         <h5>For Parents</h5>
         <p>Common answers for parents, like what is Roblox and safety features.</p>
         <a href="https://corp.roblox.com/parents/">View</a>
     </Grid>
-    <Grid item xs={6}>
+    <Grid item XSmall={6}>
         <h5>Trust and Safety</h5>
         <p>Print-ready PDF that explains Roblox Education.</p>
         <a href="../../assets/education/legacy/Safety_education_brochure.pdf">View</a>

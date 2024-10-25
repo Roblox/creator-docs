@@ -125,7 +125,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 ### Online Educators
 
 <Grid container spacing={3}>
- <Grid item xs={6}>
+ <Grid item XSmall={6}>
   
 <a href="https://superinventores.com">Academia de Super Inventores</a><br/>
 <a href="https://algorithmics-online.com/product/roblox/" title="Algorithmics Online">Algorithmics Online</a><br/>
@@ -167,7 +167,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://www.kidztopros.com/" title="KidzToPros">KidzToPros</a>
 
   </Grid>
-  <Grid item xs={6}>
+  <Grid item XSmall={6}>
 
 <a href="https://www.kodeclik.com/" title="Kodeclik">Kodeclik</a><br/>
 <a href="https://www.kodecoon.com/" title="Kodecoon Academy">Kodecoon Academy</a><br/>
@@ -223,7 +223,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 #### United States
 
 <Grid container spacing={3}>
-<Grid item xs={6}>
+<Grid item XSmall={6}>
 
 <a href="https://www.atampalisades.com" title="Academy of Technology Art and Music">Academy of Technology Art and Music</a>
 <a href="https://www.acceleratekid.com/camps/" title="AccelerateKID">AccelerateKID</a><br/>
@@ -279,7 +279,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://www.harford.edu" title="Harford Community College">Harford Community College</a>
 
 </Grid>
-<Grid item xs={6}>
+<Grid item XSmall={6}>
 
 <a href="https://www.hofstra.edu/academics/ce/summer-camp/specialty_minecraft_club.html" title="Hofstra Summer Camps">Hofstra Summer Camps</a><br/>
 <a href="https://ideassummercamps.com/roblox-minecraft/" title="IDEAS Summer Camps">IDEAS Summer Camps</a><br/>

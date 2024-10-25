@@ -101,10 +101,10 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </figure>
 
 <Grid container spacing={1}>
-<Grid item xs={2}>
+<Grid item XSmall={2}>
 <Chip label="25%" size="large" style={{backgroundColor:"#00a2ff",color:"white",fontSize:"115%",width:"100%"}} />
 </Grid>
-<Grid item xs={10}>
+<Grid item XSmall={10}>
 <Chip label="Developer Share – Developer Exchange" size="large" color="primary" variant="outlined" style={{fontSize:"105%"}}/>
 </Grid>
 </Grid>
@@ -113,10 +113,10 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </figure>
 
 <Grid container spacing={1}>
-<Grid item xs={2}>
+<Grid item XSmall={2}>
 <Chip label="4%" size="large" style={{backgroundColor:"#00a2ff",color:"white",fontSize:"115%",width:"100%"}} />
 </Grid>
-<Grid item xs={10}>
+<Grid item XSmall={10}>
 <Chip label="Developer Share – Engagement-Based Payouts (EBP)" size="large" color="primary" variant="outlined" style={{fontSize:"105%"}}/>
 </Grid>
 </Grid>
@@ -127,10 +127,10 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </figure>
 
 <Grid container spacing={1}>
-<Grid item xs={2}>
+<Grid item XSmall={2}>
 <Chip label="23%" size="large" style={{backgroundColor:"#00a2ff",color:"white",fontSize:"115%",width:"100%"}} />
 </Grid>
-<Grid item xs={10}>
+<Grid item XSmall={10}>
 <Chip label="App Stores & Payment Processing Fees" size="large" color="primary" variant="outlined" style={{fontSize:"105%"}}/>
 </Grid>
 </Grid>
@@ -141,10 +141,10 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </figure>
 
 <Grid container spacing={1}>
-<Grid item xs={2}>
+<Grid item XSmall={2}>
 <Chip label="20%" size="large" style={{backgroundColor:"#00a2ff",color:"white",fontSize:"115%",width:"100%"}} />
 </Grid>
-<Grid item xs={10}>
+<Grid item XSmall={10}>
 <Chip label="Platform Hosting & Support" size="large" color="primary" variant="outlined" style={{fontSize:"105%"}}/>
 </Grid>
 </Grid>
@@ -153,10 +153,10 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </figure>
 
 <Grid container spacing={1}>
-<Grid item xs={2}>
+<Grid item XSmall={2}>
 <Chip label="17%" size="large" style={{backgroundColor:"#004F80",color:"white",fontSize:"115%",width:"100%"}} />
 </Grid>
-<Grid item xs={10}>
+<Grid item XSmall={10}>
 <Chip label="Platform Investment" size="large" color="primary" variant="outlined" style={{fontSize:"105%"}}/>
 </Grid>
 </Grid>
@@ -165,10 +165,10 @@ This chart illustrates the estimated utilization of each dollar spent in an expe
 </figure>
 
 <Grid container spacing={1}>
-<Grid item xs={2}>
+<Grid item XSmall={2}>
 <Chip label="13%" size="large" style={{backgroundColor:"#004F80",color:"white",fontSize:"115%",width:"100%"}} />
 </Grid>
-<Grid item xs={10}>
+<Grid item XSmall={10}>
 <Chip label="Roblox Share" size="large" color="primary" variant="outlined" style={{fontSize:"105%"}}/>
 </Grid>
 </Grid>
@@ -214,7 +214,7 @@ As follows is an overview of our commission structure. To learn more about fees 
 <Tabs>
 <TabItem label="3D Avatar Assets">
 <Grid container spacing={3}>
-<Grid item xs={12} lg={7}>
+<Grid item XSmall={12} XLarge={7}>
 <h5>In-Experience Purchase</h5>
 
 - Creator receives **30%**
@@ -229,14 +229,14 @@ As follows is an overview of our commission structure. To learn more about fees 
 
 These commissions also apply to the original sale of [Limiteds](../marketplace/marketplace-fees-and-commissions.md#limiteds). When setting assets on sale, you can [configure](../marketplace/publishing-to-marketplace.md#marketplace-settings) your creation as a Limited item to set an available quantity for that asset. Limiteds require a [per-unit fee](../marketplace/marketplace-fees-and-commissions.md#per-unit-fee) and can be [resold](../marketplace/marketplace-fees-and-commissions.md#reselling) by [Roblox Premium](https://www.roblox.com/premium/membership) members. At this time, only Roblox-created Limiteds are tradeable.
 </Grid>
-<Grid item xs={12} lg={5}>
+<Grid item XSmall={12} XLarge={5}>
 <img src="../assets/monetization/earning/Percentages-Clothes-Accessories.png" alt="Pie chart illustrating the commission structure for 3D clothes and accessories" />
 </Grid>
 </Grid>
 </TabItem>
 <TabItem label="Community-Created Limiteds">
 <Grid container spacing={3}>
-<Grid item xs={12} lg={7}>
+<Grid item XSmall={12} XLarge={7}>
 While anyone can buy a Limited item, only Roblox [Premium][link_premium_membership] subscribers can resell them. Every time a creator's Limited item is resold, the creator benefits from a 10% original creator commission on the value of each resale.
 
 - Reseller receives **50%**
@@ -246,7 +246,7 @@ While anyone can buy a Limited item, only Roblox [Premium][link_premium_membersh
 
 After purchasing a Limited, there is up to a 30‑day holding period when the item cannot be resold. Robux acquired from trading or selling items that you didn't create are not considered earned and are ineligible for the [Developer Exchange][link_developer_exchange] program.
 </Grid>
-<Grid item xs={12} lg={5}>
+<Grid item XSmall={12} XLarge={5}>
 <img src="../assets/monetization/earning/Percentages-Reselling-Limiteds.png" alt="Pie chart illustrating the commission structure for community-created Limiteds" />
 </Grid>
 </Grid>
