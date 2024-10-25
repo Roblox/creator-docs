@@ -3,30 +3,29 @@ title: Activity History
 description: Activity History is a log of key configuration, publish, and edit activities within a place.
 ---
 
-<Grid container spacing={2}>
-  <Grid item container md={7}  direction="row" style={{gap: 24, marginBottom: 12}}>
-  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
-  The **Activity History** view in Roblox Studio is a shared log of key changes within your experience. Each entry tells you:
+<Grid container spacing={4} alignItems="top">
+	<Grid item XSmall={12} Medium={6} Large={6} xs={12} sm={12} md={6} lg={6}>
+	The **Activity History** view in Studio is a shared log of key changes within an experience. Each entry tells you:
   <ul>
     <li>What changed</li>
     <li>Who changed it</li>
     <li>When they made the change</li>
   </ul>
-  You can find similar information in the **Activity History** page for your experience on the [Creator Hub](https://create.roblox.com/dashboard/creations), although the two views have some differences. See the [Event Reference](#event-reference).
-  </Grid>
-  </Grid>
-  <Grid item container md={5}  direction="row" style={{gap: 24, marginBottom: 12}}>
-  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
-    <img src="../assets/studio/collaboration/Activity-History.png" alt="A view of the Activity History screen showing several collaborators." />
-  </Grid>
-  </Grid>
+  You can find similar information in an experience's **Activity History** page on the [Creator&nbsp;Hub](https://create.roblox.com/dashboard/creations), although the two views have some differences. See the [Event Reference](#event-reference).
+	</Grid>
+	<Grid item XSmall={12} Medium={6} Large={6} xs={12} sm={12} md={6} lg={6}>
+	<img src="../assets/studio/general/Activity-History.png" width="360" alt="A view of the Activity History window showing various changes and updates." />
+	</Grid>
 </Grid>
 
 ## Working with Activity History
 
 To open the Activity History view in Studio, your experience must be saved to Roblox.
 
-1. In the **View** tab, select **Activity History**. Events are displayed in chronological order, with the most recent appearing first.
+1. In the [View](../studio/view-tab.md) tab, select **Activity History**. Events are displayed in chronological order, with the most recent appearing first.
+
+   <img src="../assets/studio/general/View-Tab-Activity-History.png" width="720" alt="Activity History tool indicated in the View tab." />
+
 1. If you have a large number of events, you can filter them by type or collaborator.
 1. If you want to manage the configuration or get more details on a change, use the **&ctdot;** menu next to each event to get a link to the setting in either Studio or the Creator Hub.
 
@@ -89,4 +88,4 @@ Group given play permissions | &check; | &check;
 Group with play permissions removed | &check; | &check;
 Group role's permissions to this experience changed | &check; | &check;
 
-For more information, see [Group Roles and Permissions](../projects/groups.md#roles-and-permissions)
+For more information, see [Group Roles and Permissions](../projects/groups.md#roles-and-permissions).

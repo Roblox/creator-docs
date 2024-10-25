@@ -1,8 +1,8 @@
 ---
 title: Wireframe Your Layouts
 description: Explains how to greybox the laser tag environment using basic parts.
-next: /tutorials/user-interface-design/implement-designs-in-studio
-prev: /tutorials/user-interface-design/choose-an-art-style
+next: /tutorials/curriculums/user-interface-design/implement-designs-in-studio
+prev: /tutorials/curriculums/user-interface-design/choose-an-art-style
 ---
 
 **Wireframing your layouts** is the process of designing the structure and flow of the information you want to communicate through UI in various workflows. This critical step of the tutorial allows you to iterate on the arrangement of your UI elements, discover pain points, and improve the player's experience before you invest time and resources on a problematic design that doesn't work for your experience.
@@ -132,7 +132,7 @@ When blocking in UI elements for your layouts, consider the following:
 - Interacting with UI that are far from the bottom corners of some mobile and tablet devices is either uncomfortable or impossible. **Place interactive elements in easy-to-reach zones** near the natural resting position for thumbs.
 - When players navigate through your environment, the 3D space can become distracting from your on-screen UI. **Test your layouts against a variety of possible backgrounds** to ensure your on-screen UI elements remain clear and legible.
 
-For more information on what to consider as you design and block in your UI elements for multiple devices, see [Positioning and Sizing - Cross-Platform Factors](../../..ui/positioning-and-sizing.md#cross-platform-factors).
+For more information on what to consider as you design and block in your UI elements for multiple devices, see [Positioning and Sizing - Cross-Platform Factors](../../../ui/positioning-and-sizing.md#cross-platform-factors).
 
 ## Develop User Flows
 

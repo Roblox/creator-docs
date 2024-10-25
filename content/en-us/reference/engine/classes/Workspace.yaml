@@ -741,6 +741,24 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
+  - name: Workspace.SandboxedInstanceMode
+    summary: ''
+    description: ''
+    code_samples: []
+    type: SandboxedInstanceMode
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.SignalBehavior
     summary: ''
     description: ''
@@ -991,7 +1009,7 @@ methods:
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be
@@ -1225,7 +1243,7 @@ methods:
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be made.
@@ -1289,7 +1307,7 @@ methods:
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.BasePart|parts` for whom joints are to be made.
@@ -1365,7 +1383,7 @@ methods:
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be

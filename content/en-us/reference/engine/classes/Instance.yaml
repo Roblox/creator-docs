@@ -3,9 +3,12 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree.
+  Instance is the base class for all classes in the Roblox class hierarchy which
+  can be part of the DataModel tree.
 description: |
-  Instance is the base class for all classes in the Roblox class hierarchy which can be part of the DataModel tree. It is not possible to directly create Instance objects.
+  Instance is the base class for all classes in the Roblox class hierarchy which
+  can be part of the DataModel tree. It is not possible to directly create
+  Instance objects.
 
   Instance has a special function called `Datatype.Instance.new()` which is used
   to create objects via code. This function takes the name of the class as a
@@ -56,8 +59,17 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: Instance.Capabilities
-    summary: ''
-    description: ''
+    summary: |
+      The set of capabilities allowed to be used for scripts inside this
+      container.
+    description: |
+      The set of capabilities allowed to be used for scripts inside this
+      instance. For the capabilities to take effect, `Class.Instance.Sandboxed`
+      property has to be enabled.
+
+      This property is used by an experimental feature. See
+      [Script Capabilities](../../../scripting/capabilities.md) page for further
+      details.
     code_samples: []
     type: SecurityCapabilities
     tags: []
@@ -235,8 +247,15 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: Instance.Sandboxed
-    summary: ''
-    description: ''
+    summary: |
+      Turns the instance to be a Sandboxed Container.
+    description: |
+      Turns the instance to be a Sandboxed Container. Sandboxed Containers are
+      an experimental feature which limits the actions that scripts inside a
+      particular container can perform.
+
+      See [Script Capabilities](../../../scripting/capabilities.md) page for
+      further details.
     code_samples: []
     type: bool
     tags:
@@ -955,7 +974,7 @@ methods:
       - Instance-GetChildren1
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array containing the instance's children.
     tags: []
@@ -1357,7 +1376,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           Array of child objects/instances.
     tags:
@@ -1434,7 +1453,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags:
       - Deprecated

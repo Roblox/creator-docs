@@ -1,7 +1,7 @@
 ---
 title: User Inferface Design Curriculum
 description: //
-next: /tutorials/user-interface-design/choose-an-art-style
+next: /tutorials/curriculums/user-interface-design/choose-an-art-style
 hideInPageNavigation: true
 hideBreadcrumbs: true
 ---

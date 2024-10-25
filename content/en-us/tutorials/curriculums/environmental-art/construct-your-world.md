@@ -1,8 +1,8 @@
 ---
 title: Construct Your World
 description: Explains how to utilize your asset library, configure additional elements of the 3D space to bring your world to life.
-next: /tutorials/environmental-art/optimize-your-experience
-prev: /tutorials/environmental-art/assemble-an-asset-library
+next: /tutorials/curriculums/environmental-art/optimize-your-experience
+prev: /tutorials/curriculums/environmental-art/assemble-an-asset-library
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/hOGh8Aw54ko?si=G64hCpV8SUNvO-Ko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -2251,7 +2251,7 @@ The original greybox design didn't include a roof to the building because it wou
 
 The roof of the building is one of the most complex assets in the final sample laser tag environment because it includes multiple layers that must fit together with each other and with the interior geometry. The following instructions walk you through how to construct each layer, starting with the top-most geometry to the final layer of trim that surrounds the perimeter of the roof.
 
-<img src="../..../assets/tutorials/environmental-art-curriculum/Section4/Roof-Intro.jpg" width="100%"/>
+<img src="../../../assets/tutorials/environmental-art-curriculum/Section4/Roof-Intro.jpg" width="100%"/>
 
 #### Skylights
 
@@ -2964,7 +2964,7 @@ To exactly recreate the top of the roof within the sample [Environment Art - Con
    1. Set **Material** to **Concrete**.
    1. Set **MaterialVariant** to **Concrete_Tie_Holes_A**.
 
-   <img src="../../assets/tutorials/environmental-art-curriculum/Section4/TopRoof-4.jpg" width="100%"/>
+   <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/TopRoof-4.jpg" width="100%"/>
 
 5. Add and configure the following **block** parts for the top roof on the lower middle of the map:
 
@@ -3946,7 +3946,7 @@ In addition, you can layer multiple particle emitters together to give clouds mo
 
 <video controls src="../../../assets/tutorials/environmental-art-curriculum/Section4/CloudVid2.mp4" width="100%"></video>
 
-<img src="../../assets/tutorials/environmental-art-curriculum/Section4/ForegroundClouds-5.jpg" width="100%"/>
+<img src="../../../assets/tutorials/environmental-art-curriculum/Section4/ForegroundClouds-5.jpg" width="100%"/>
 
 ### Dust Particles
 
@@ -4008,11 +4008,11 @@ For example, the `Enum.Technology.Future` lighting system automatically detects 
 
 To configure your own global lighting:
 
-1. In the **Explorer** window, select the **Lighting** service, then in the **Properties** window, set its properties to values that reflect the art style of your experience. For more information on these properties, see [Global Lighting](../../environment/lighting.md).
+1. In the **Explorer** window, select the **Lighting** service, then in the **Properties** window, set its properties to values that reflect the art style of your experience. For more information on these properties, see [Global Lighting](../../../environment/lighting.md).
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-1.jpg" width="100%"/>
 
-1. In the **Explorer** window, select the **Lighting** service's child **Atmosphere** object, then in the **Properties** window, set its properties to values that reflect the art style of your experience. For more information on these properties, see [Atmospheric Effects](../../environment/atmosphere.md).
+1. In the **Explorer** window, select the **Lighting** service's child **Atmosphere** object, then in the **Properties** window, set its properties to values that reflect the art style of your experience. For more information on these properties, see [Atmospheric Effects](../../../environment/atmosphere.md).
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section4/GlobalLighting-2.jpg" width="100%"/>
 

@@ -3,11 +3,12 @@ type: class
 category:
 memory_category: Internal
 summary: |
-  Limits how loud audio streams are allowed to be. 
+  Limits how loud audio streams are allowed to be.
 description: |
-  `AudioLimiter` limits how loud audio streams are allowed to be.
-  Whenever its input stream exceeds a specified maximum level, the stream's volume is reduced for a moment.
-  `AudioLimiter` provides a single **Input** pin, and a single **Output** pin that can be connected to/from by `Class.Wires`.
+  `AudioLimiter` limits how loud audio streams are allowed to be. Whenever its
+  input stream exceeds a specified maximum level, the stream's volume is reduced
+  for a moment. `AudioLimiter` provides a single **Input** pin, and a single
+  **Output** pin that can be connected to/from by `Class.Wires`.
 code_samples: []
 inherits:
   - Instance
@@ -38,10 +39,10 @@ properties:
     summary: |
       The maximum volume tolerated.
     description: |
-      The maximum volume, in decibels, that the limiter will allow to pass through without reduction.
-      Whenever the input stream exceeds `Class.AudioLimiter.MaxLevel|MaxLevel`, the output
-      stream's volume will be reduced to compensate.
-      This value ranges from `-12` to `0`.
+      The maximum volume, in decibels, that the limiter will allow to pass
+      through without reduction. Whenever the input stream exceeds
+      `Class.AudioLimiter.MaxLevel|MaxLevel`, the output stream's volume will be
+      reduced to compensate. This value ranges from `-12` to `0`.
     code_samples: []
     type: float
     tags: []
@@ -59,10 +60,12 @@ properties:
     writeCapabilities: []
   - name: AudioLimiter.Release
     summary: |
-      The amount of time it takes for previously limited streams to return to their normal volume.
+      The amount of time it takes for previously limited streams to return to
+      their normal volume.
     description: |
-      The amount of time, in seconds, that it takes for any previously (but not currently) limited streams to
-      return to their normal volume. This value ranges from `0.001` to `1`.
+      The amount of time, in seconds, that it takes for any previously (but not
+      currently) limited streams to return to their normal volume. This value
+      ranges from `0.001` to `1`.
     code_samples: []
     type: float
     tags: []
@@ -81,10 +84,11 @@ properties:
 methods:
   - name: AudioLimiter:GetConnectedWires
     summary: |
-      Returns an array of `Class.Wire|Wires` that are connected to the specified pin.
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
     description: |
-      Returns an array of `Class.Wire|Wires` that are connected to the specified pin. `Class.AudioLimiter`
-      has one **Input** pin and one **Output** pin.
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin. `Class.AudioLimiter` has one **Input** pin and one **Output** pin.
     code_samples: []
     parameters:
       - name: pin
@@ -92,7 +96,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''

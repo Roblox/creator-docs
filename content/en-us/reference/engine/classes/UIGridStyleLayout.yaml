@@ -25,9 +25,9 @@ properties:
       aren't any larger than the grid itself.
 
       This property updates as soon as it's read. It will not fire a
-      `Class.Object.Changed` event immediately after the UI has changed, but
-      if the value is read, it will become current and a
-      `Class.Object.Changed` event will fire on the next render step.
+      `Class.Object.Changed` event immediately after the UI has changed, but if
+      the value is read, it will become current and a `Class.Object.Changed`
+      event will fire on the next render step.
     code_samples:
     type: Vector2
     tags:

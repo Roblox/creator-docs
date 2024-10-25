@@ -12,13 +12,31 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: WrapDeformer:SetCageMeshContent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: content
+        type: Content
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WrapDeformer:CreateEditableMeshAsync
     summary: ''
     description: ''
     code_samples: []
     parameters: []
     returns:
-      - type: EditableMesh
+      - type: Object
         summary: ''
     tags:
       - Yields

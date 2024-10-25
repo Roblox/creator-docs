@@ -85,7 +85,7 @@ knowledge. Give them a try and add on to them when you're ready!
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
-  <img src="/assets/landing/get-started/Laser-Tag-Template.png" />
+  <img src="/assets/landing/get-started/Laser-Tag-Template.jpg" />
   </div>
     <Typography variant='h4'>Laser Tag</Typography>
     <Typography variant='body1' >Build your own **first-person shooter** with customizable blasters, round systems, and modular building assets to reconfigure a high-quality arena!</Typography>
@@ -103,7 +103,7 @@ knowledge. Give them a try and add on to them when you're ready!
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
-    <img src="/assets/landing/get-started/racing-template.png" />
+    <img src="/assets/landing/get-started/Racing-Detailed.jpg" />
     </div>
     <Typography variant='h4'>Racing</Typography>
     <Typography variant='body1' >Build your own **kart racer** with a customizable driving mechanics, checkpoints, and modular winding track pieces that you can restructure for countless courses!</Typography>
@@ -133,7 +133,7 @@ that teaches you the skills you need to create and monetize your experiences.
     <Typography variant='h4'>Core</Typography>
     <Typography variant='body1' >Core teaches you how to build a simple 3D platformer where players collect coins to trade for jump power.</Typography>
       <div style={{marginTop:16}}>
-        <a underline="none" href="./tutorials/core/">
+        <a underline="none" href="./tutorials/curriculums/core">
         <Button variant="contained" color="secondary" size='large'
         style={{marginRight:16, alignSelf: 'flex-start'}}>Create</Button>
         </a>
@@ -151,7 +151,7 @@ that teaches you the skills you need to create and monetize your experiences.
     <Typography variant='h4'>Environmental Art</Typography>
     <Typography variant='body1' >Environmental Art teaches you how to create a high-quality environment for a laser tag experience.</Typography>
       <div style={{marginTop:16}}>
-        <a underline="none" href="./tutorials/environmental-art">
+        <a underline="none" href="./tutorials/curriculums/environmental-art">
         <Button variant="contained" color="secondary" size='large'
         style={{marginRight:16, alignSelf: 'flex-start'}}>Create</Button>
         </a>
@@ -169,7 +169,7 @@ that teaches you the skills you need to create and monetize your experiences.
     <Typography variant='h4'>Gameplay Scripting</Typography>
     <Typography variant='body1' >Gameplay Scripting teaches you how to organize and implement the scripting logic for large, complex project.</Typography>
       <div style={{marginTop:16}}>
-        <a underline="none" href="./tutorials/gameplay-scripting/">
+        <a underline="none" href="./tutorials/curriculums/gameplay-scripting/">
         <Button variant="contained" color="secondary" size='large'
         style={{marginRight:16, alignSelf: 'flex-start'}}>Create</Button>
         </a>

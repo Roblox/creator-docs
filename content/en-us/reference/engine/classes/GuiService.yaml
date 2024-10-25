@@ -195,8 +195,8 @@ properties:
       recommended way to use this setting; backgrounds will become more opaque
       as `Class.GuiService.PreferredTransparency|PreferredTransparency`
       approaches 0. This should be used with
-      `Class.Object:GetPropertyChangedSignal()` so that it automatically
-      updates when the user changes their preferred transparency.
+      `Class.Object:GetPropertyChangedSignal()` so that it automatically updates
+      when the user changes their preferred transparency.
     code_samples:
       - GuiService-PreferredTransparency
     type: float

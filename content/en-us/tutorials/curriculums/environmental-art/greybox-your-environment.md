@@ -1,8 +1,8 @@
 ---
 title: Greybox Your Environment
 description: Explains how to greybox the laser tag environment using basic parts.
-next: /tutorials/environmental-art/develop-polished-assets
-prev: /tutorials/environmental-art/
+next: /tutorials/curriculums/environmental-art/develop-polished-assets
+prev: /tutorials/curriculums/environmental-art/
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/mW2IptQVeL0?si=RbvxFyCI1iYVc-hk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

@@ -1,7 +1,7 @@
 ---
 title: Gameplay Scripting Curriculum
 description: //
-next: /tutorials/gameplay-scripting/creating-teams
+next: /tutorials/curriculums/gameplay-scripting/creating-teams
 hideInPageNavigation: true
 hideBreadcrumbs: true
 ---

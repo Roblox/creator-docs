@@ -62,7 +62,7 @@ description: |
   a new asset ID.
 code_samples: []
 inherits:
-  - Instance
+  - Object
 tags: []
 deprecation_message: ''
 properties:
@@ -82,7 +82,9 @@ properties:
       changing the size.
     code_samples: []
     type: Vector2
-    tags: []
+    tags:
+      - ReadOnly
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -90,72 +92,11 @@ properties:
     thread_safety: ReadSafe
     category: Data
     serialization:
-      can_load: true
+      can_load: false
       can_save: true
     capabilities: []
     writeCapabilities: []
 methods:
-  - name: EditableImage:Copy
-    summary: |
-      Copies a subregion of the `Class.EditableImage` to a new
-      `Class.EditableImage`.
-    description: |
-      Copies a subregion of the `Class.EditableImage` to a new
-      `Class.EditableImage`.
-    code_samples: []
-    parameters:
-      - name: min
-        type: Vector2
-        default:
-        summary: |
-          Top-left corner of the region to copy, with `(0, 0)` being the
-          top-left corner of the source image.
-      - name: max
-        type: Vector2
-        default:
-        summary: |
-          Bottom-right corner of the region to copy, exclusive. For example, a
-          max of `Class.EditableImage.Size` would end the subregion at the
-          bottom and right edges of the source image.
-    returns:
-      - type: EditableImage
-        summary: |
-          A new `Class.EditableImage` containing the specified subregion.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableImage:Crop
-    summary: |
-      Crops the `Class.EditableImage` to the specified subregion.
-    description: |
-      Crops the `Class.EditableImage` to the specified subregion.
-    code_samples: []
-    parameters:
-      - name: min
-        type: Vector2
-        default:
-        summary: |
-          Top-left corner of the region to crop to, with `(0, 0)` being the
-          top-left corner of the source image.
-      - name: max
-        type: Vector2
-        default:
-        summary: |
-          Bottom-right corner of the region to crop to, exclusive. For example,
-          a max of `Class.EditableImage.Size` would end the subregion at the
-          bottom and right edges of the source image.
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: EditableImage:DrawCircle
     summary: |
       Draws a circle at the specified point.
@@ -220,7 +161,7 @@ methods:
           Position at which the top-left corner of the added image will be
           drawn.
       - name: image
-        type: EditableImage
+        type: Object
         default:
         summary: |
           The `Class.EditableImage` to draw into this `Class.EditableImage`.
@@ -288,7 +229,7 @@ methods:
     code_samples: []
     parameters:
       - name: mesh
-        type: EditableMesh
+        type: Object
         default:
         summary: ''
       - name: projection
@@ -353,40 +294,18 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: EditableImage:ReadPixels
-    summary: |
-      Reads a rectangular region of pixels.
-    description: |
-      Reads a rectangular region of pixels. The pixels are returned as a flat
-      array where each pixel is represented by four numbers between `0` and `1`
-      (red, green, blue, and alpha respectively).
-
-      Note that this method uses alpha instead of transparency, unlike the
-      `Class.EditableImage` drawing methods.
-    code_samples:
-      - EditableImage-ReadPixels1
-    parameters:
-      - name: position
-        type: Vector2
-        default:
-        summary: |
-          Top-left corner of the rectangular region of pixels to read.
-      - name: size
-        type: Vector2
-        default:
-        summary: |
-          Size of the rectangular region of pixels to read.
+  - name: EditableImage:GetContent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
     returns:
-      - type: Array
-        summary: |
-          Flat array where each pixel is represented by four numbers between 0
-          and 1 (red, green, blue, and alpha respectively). The length of the
-          array can be calculated as `Size.X * Size.Y * 4`.
-    tags:
-      - CustomLuaState
+      - type: Content
+        summary: ''
+    tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Safe
+    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: EditableImage:ReadPixelsBuffer
@@ -424,95 +343,6 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableImage:Resize
-    summary: |
-      Resizes the contents and canvas.
-    description: |
-      Resizes the contents and canvas of the `Class.EditableImage` using
-      bilinear interpolation. Max allowed size is 1024&times;1024.
-    code_samples: []
-    parameters:
-      - name: size
-        type: Vector2
-        default:
-        summary: |
-          New size of the `Class.EditableImage`.
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableImage:Rotate
-    summary: |
-      Rotates the image around its center.
-    description: |
-      Rotates the `Class.EditableImage` around its center using bilinear
-      interpolation.
-    code_samples: []
-    parameters:
-      - name: degrees
-        type: float
-        default:
-        summary: |
-          Degrees to rotate the image.
-      - name: changeSize
-        type: bool
-        default:
-        summary: |
-          Whether the size of the canvas should be updated.
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableImage:WritePixels
-    summary: |
-      Writes a rectangular region of pixels into the image.
-    description: |
-      Writes a rectangular region of pixels into the `Class.EditableImage`. The
-      pixels are provided as a flat array where each pixel is represented by
-      four numbers between 0 and 1 (red, green, blue, and alpha respectively).
-
-      Note that this method uses alpha instead of transparency, unlike other
-      `Class.EditableImage` drawing methods.
-    code_samples:
-      - EditableImage-ReadPixelsWritePixels1
-    parameters:
-      - name: position
-        type: Vector2
-        default:
-        summary: |
-          Top-left corner of the rectangular region to draw the pixels into.
-      - name: size
-        type: Vector2
-        default:
-        summary: |
-          Size of the rectangular region of pixels to write.
-      - name: pixels
-        type: Array
-        default:
-        summary: |
-          Flat array where each pixel is represented by four numbers between 0
-          and 1 (red, green, blue, and alpha respectively). The length of the
-          array should be `Size.X * Size.Y * 4`.
-    returns:
-      - type: void
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
   - name: EditableImage:WritePixelsBuffer

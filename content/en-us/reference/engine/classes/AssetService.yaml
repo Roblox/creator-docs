@@ -18,12 +18,22 @@ deprecation_message: ''
 properties: []
 methods:
   - name: AssetService:CreateEditableImage
-    summary: ''
-    description: ''
+    summary: |
+      Creates a new `Class.EditableImage`.
+    description: |
+      Creates a new `Class.EditableImage`. By default, the resolution is set at
+      512&times;512 but it can be specified via the returned object's
+      `Class.EditableImage.Size` parameter. If the device‑specific editable
+      memory budget is exhausted, creation will fail and this method will return
+      `nil`.
     code_samples: []
-    parameters: []
+    parameters:
+      - name: editableImageOptions
+        type: Dictionary?
+        default:
+        summary: ''
     returns:
-      - type: EditableImage
+      - type: Object
         summary: ''
     tags: []
     deprecation_message: ''
@@ -32,16 +42,44 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: AssetService:CreateEditableMesh
-    summary: ''
-    description: ''
+    summary: |
+      Creates a new, empty `Class.EditableMesh`.
+    description: |
+      Creates a new, empty `Class.EditableMesh`. Vertices, triangles and their
+      attributes can be added dynamically to it. If the device‑specific editable
+      memory budget is exhausted, creation will fail and this method will return
+      `nil`.
     code_samples: []
-    parameters: []
+    parameters:
+      - name: editableMeshOptions
+        type: Dictionary?
+        default:
+        summary: ''
     returns:
-      - type: EditableMesh
+      - type: Object
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AssetService:CheckTextureAlphaAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: textureId
+        type: ContentId
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
@@ -53,16 +91,21 @@ methods:
       Creates a new `Class.EditableImage` instance populated with the given
       texture. Non-asset texture IDs such as `rbxthumb://` are supported. If
       using an image asset, it must be associated with and/or owned by a creator
-      of the experience, or it must have been created inside the experience.
+      of the experience, or it must have been created inside the experience. If
+      the device-specific editable memory budget is exhausted, creation will
+      fail and this method will return `nil`.
     code_samples: []
     parameters:
-      - name: textureId
-        type: ContentId
+      - name: content
+        type: Content
         default:
-        summary: |
-          Texture ID of the image to populate the `Class.EditableImage`.
+        summary: ''
+      - name: editableImageOptions
+        type: Dictionary?
+        default:
+        summary: ''
     returns:
-      - type: EditableImage
+      - type: Object
         summary: |
           A new `Class.EditableImage` containing the provided image.
     tags:
@@ -78,17 +121,25 @@ methods:
       content ID.
     description: |
       Returns a new `Class.EditableMesh` instance created from an existing mesh
-      content ID.
+      content ID. By default a `Class.EditableMesh` created from this method
+      will be fixed size such that mesh data can only be modified, not added nor
+      removed. A fixed size `Class.EditableMesh` consumes less memory and should
+      be preferred when possible.
+
+      If the device-specific editable memory budget is exhausted, creation will
+      fail and this method will return `nil`.
     code_samples: []
     parameters:
-      - name: meshId
-        type: ContentId
+      - name: content
+        type: Content
         default:
-        summary: |
-          Content ID of the mesh from which to create an `Class.EditableMesh`
-          instance.
+        summary: ''
+      - name: editableMeshOptions
+        type: Dictionary?
+        default:
+        summary: ''
     returns:
-      - type: EditableMesh
+      - type: Object
         summary: |
           The new `Class.EditableMesh` instance.
     tags:
@@ -115,7 +166,7 @@ methods:
           instance. The part must have a valid `Class.MeshPart.MeshId|MeshId`
           for this method to operate.
     returns:
-      - type: EditableMesh
+      - type: Object
         summary: |
           The new `Class.EditableMesh` instance.
     tags:

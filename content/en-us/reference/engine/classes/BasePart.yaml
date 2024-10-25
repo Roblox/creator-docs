@@ -2543,7 +2543,7 @@ methods:
           A table of parts connected to the object by any kind of
           `Class.JointInstance|joint`.
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2559,7 +2559,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of all Joints or Constraints connected to the Part.
     tags: []
@@ -2636,7 +2636,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
@@ -2708,7 +2708,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           A table of all parts that intersect and can collide with this part.
     tags: []
@@ -3036,7 +3036,7 @@ methods:
     code_samples: []
     parameters:
       - name: parts
-        type: Objects
+        type: Instances
         default:
         summary: |
           The objects taking part in the intersection.
@@ -3097,7 +3097,7 @@ methods:
       - PartOperation-SubtractAsync
     parameters:
       - name: parts
-        type: Objects
+        type: Instances
         default:
         summary: |
           The objects taking part in the subtraction.
@@ -3182,7 +3182,7 @@ methods:
       - PartOperation-UnionAsync
     parameters:
       - name: parts
-        type: Objects
+        type: Instances
         default:
         summary: |
           The objects taking part in the union with the calling part.

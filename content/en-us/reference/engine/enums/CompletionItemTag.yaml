@@ -86,3 +86,13 @@ items:
     value: 11
     tags: []
     deprecation_message: ''
+  - name: ElideLeftOverride
+    summary: ''
+    value: 12
+    tags: []
+    deprecation_message: ''
+  - name: UseTextEditForAutocompleteScore
+    summary: ''
+    value: 13
+    tags: []
+    deprecation_message: ''

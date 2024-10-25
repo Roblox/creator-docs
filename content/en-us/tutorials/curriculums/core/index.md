@@ -1,7 +1,7 @@
 ---
 title: Core Curriculum
 description: //
-next: /tutorials/core/building/create-a-project
+next: /tutorials/curriculums/core/building/create-a-project
 hideInPageNavigation: true
 hideBreadcrumbs: true
 ---
@@ -35,7 +35,7 @@ platforms until they reach a flare on top of the highest platform.
 This course is intended for readers who are familiar
 with general coding concepts but are new to Roblox. If you need help learning
 how to code, try the [absolute basics](../../first-experience/index.md) of working in Studio and
-[coding fundamentals](../fundamentals/coding-1/coding-fundamentals.md).
+[coding fundamentals](../../fundamentals/coding-1/coding-fundamentals.md).
 </Grid>
 
 </Grid>

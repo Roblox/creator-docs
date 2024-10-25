@@ -1,8 +1,8 @@
 ---
 title: Create Player Hazards
 description: Explains how to create player hazards by modifying player behavior and creating a player life cycle.
-next: /tutorials/core/scripting/script-an-upgrade-button
-prev: /tutorials/core/scripting/record-and-display-player-data
+next: /tutorials/curriculums/core/scripting/script-an-upgrade-button
+prev: /tutorials/curriculums/core/scripting/record-and-display-player-data
 ---
 
 <iframe width="880" height="495"

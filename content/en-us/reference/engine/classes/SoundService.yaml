@@ -350,7 +350,7 @@ methods:
     code_samples: []
     parameters:
       - name: selectedCurveObjects
-        type: Objects
+        type: Instances
         default:
         summary: ''
     returns:
@@ -359,6 +359,24 @@ methods:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: SoundService:OpenDirectionalCurveEditor
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: selectedCurveObjects
+        type: Instances
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
@@ -445,5 +463,20 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-events: []
+events:
+  - name: SoundService.OpenDirectionalCurveEditorSignal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: selectedCurveObjects
+        type: Instances
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

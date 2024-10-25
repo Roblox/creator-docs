@@ -37,7 +37,7 @@ events:
     code_samples:
     parameters:
       - name: instances
-        type: Objects
+        type: Instances
         default:
         summary: ''
     tags: []

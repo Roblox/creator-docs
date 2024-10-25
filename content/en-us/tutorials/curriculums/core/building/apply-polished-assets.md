@@ -1,7 +1,7 @@
 ---
 title: Apply Polished Assets
 description: Explains how to finish your scene by replacing simple parts with complex, imported models.
-prev: /tutorials/core/building/customize-global-lighting
+prev: /tutorials/curriculums/core/building/customize-global-lighting
 comments: The links to the Materials and PBR Modeling guides must be replaced by a single link to the Environmental Art curriculum once that is published. The link at the end should also be changed to link to the next sets of tutorials.
 ---
 
@@ -1175,7 +1175,7 @@ To playtest your experience:
 
    <img src="../../../../assets/studio/general/Quick-Access-Toolbar-Stop.png" alt="Studio's Home tab with the Stop button highlighted in the menu bar." width="716" />
 
-Congratulations on completing the Core Curriculum! Now that you have experience creating a simple experience from start to finish, you can extend your project with new gameplay features or additional levels, explore Studio's additional [features](../../../platform.md), or follow additional tutorial curricula, such as the [Environmental Art Curriculum](../../environmental-art/index.md) that teaches you how to create a high-quality laser tag environment. Happy creating!
+Congratulations on completing the Core Curriculum! Now that you have experience creating a simple experience from start to finish, you can extend your project with new gameplay features or additional levels, explore Studio's additional [features](../../../../platform.md), or follow additional tutorial curricula, such as the [Environmental Art Curriculum](../../environmental-art/index.md) that teaches you how to create a high-quality laser tag environment. Happy creating!
 
 <Alert severity="info">
 We're interested in hearing from you about your experience following the Core Curriculum. If you have any questions, concerns, or additional feedback on the process, please comment on our [Core Curriculum Q&A](https://devforum.roblox.com/t/feedback-on-core-curriculum/2592219).

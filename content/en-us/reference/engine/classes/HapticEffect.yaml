@@ -110,6 +110,24 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: HapticEffect:SetKeys
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: keys
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: HapticEffect:Stop
     summary: ''
     description: ''
