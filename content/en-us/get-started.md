@@ -10,7 +10,7 @@ start creating Roblox experiences.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
@@ -24,7 +24,7 @@ start creating Roblox experiences.
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
@@ -42,7 +42,7 @@ start creating Roblox experiences.
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
@@ -63,7 +63,7 @@ Roblox Studio has a variety of templates that you can edit and play without prio
 knowledge. Give them a try and add on to them when you're ready!
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
@@ -81,7 +81,7 @@ knowledge. Give them a try and add on to them when you're ready!
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
@@ -99,7 +99,7 @@ knowledge. Give them a try and add on to them when you're ready!
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
     <div class="container"
     style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
@@ -124,7 +124,7 @@ To dive deeper, follow along with guided curriculum
 that teaches you the skills you need to create and monetize your experiences.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
@@ -142,7 +142,7 @@ that teaches you the skills you need to create and monetize your experiences.
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
@@ -160,7 +160,7 @@ that teaches you the skills you need to create and monetize your experiences.
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
@@ -182,7 +182,7 @@ that teaches you the skills you need to create and monetize your experiences.
 <h2 style={{marginBottom: 24, marginTop: 96}}>Connect</h2>
 Learn, share, and interact with the Roblox community in the following places.
 <Grid container spacing={2} style={{marginBottom: 24}}>
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>
@@ -195,7 +195,7 @@ Learn, share, and interact with the Roblox community in the following places.
   <a href="https://devforum.roblox.com/c/help-and-feedback/54"><Typography variant='buttonLarge' style={{marginBottom: 12}}>Community Help and Feedback</Typography></a>
 </Grid>
 </Grid>
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12}}>

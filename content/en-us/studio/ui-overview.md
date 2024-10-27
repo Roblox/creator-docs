@@ -13,38 +13,38 @@ The **toolbar** resides at the top of Studio. The buttons and tools visible in t
    width="800" alt="Studio's toolbar with the Home, Model, Avatar, Test, View, and Plugins tabs highlighted." />
 
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	The [Home](../studio/home-tab.md) tab contains basic tools for manipulating 3D objects and testing your experience.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	The [Model](../studio/model-tab.md) tab contains tools for manipulating 3D objects in the workspace, creating detailed models, working with physical constraints, and adding advanced objects.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	The [Avatar](../studio/avatar-tab.md) tab contains specialized tools for creating and fitting accessories, importing custom meshes, building default rigs, and creating animations.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-D.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-D.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	The [Test](../studio/test-tab.md) tab contains tools for testing an experience, simulating multiple clients, and emulating different devices.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-E.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-E.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	The [View](../studio/view-tab.md) tab lets you toggle the various windows of Studio, as well as several display features.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-F.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-F.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	The [Plugins](../studio/plugins-tab.md) tab contains tools for managing [plugins](../studio/plugins.md), configuring localization, and creating animations. Any plugins you install can also add buttons to this tab.
 	</Grid>
 </Grid>

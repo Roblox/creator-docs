@@ -12,8 +12,7 @@ hideBreadcrumbs: true
     container
     direction="row">
 
-<Grid item md={7} xs={12}
-    direction="column"  >
+<Grid item Large={7} XSmall={12} direction="column">
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -22,7 +21,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 
 </Grid>
 
-<Grid item md={5} xs={12} direction='column'>
+<Grid item Large={5} XSmall={12} direction="column">
 
 **Environmental art** is the discipline of creating and configuring 3D environments
 that embody and facilitate gameplay requirements, immerse users within your experience,

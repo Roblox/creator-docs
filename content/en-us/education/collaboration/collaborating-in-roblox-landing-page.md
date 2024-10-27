@@ -65,7 +65,7 @@ tools and resources to suit your needs.
 These handouts can be printed out and distributed to your class.
 
 <Grid container>
-<Grid item xs={6}>
+<Grid item XSmall={6}>
 
 <h4>Collaboration Guidelines</h4>
 
@@ -79,7 +79,7 @@ target="_blank" rel="noopener"><Button variant="contained">PDF</Button></a>
 
 </Grid>
 
-<Grid item xs={6}>
+<Grid item XSmall={6}>
 
 <h4>Trust and Safety Brochures</h4>
 
