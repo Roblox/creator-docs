@@ -68,7 +68,10 @@ Use the following parameters to query the Creator Store:
     <tr>
       <td>sortOrder</td>
       <td>int</td>
-      <td>Asc = 1<br>Desc = 2</td>
+      <td>
+      Asc = 1<br></br>
+      Desc = 2
+      </td>
     </tr>
     <tr>
       <td>limit</td>
