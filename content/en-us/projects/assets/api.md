@@ -50,18 +50,18 @@ Use the following parameters to query the Creator Store:
       <td>categoryId (path)</td>
       <td>int</td>
       <td>
-        Audio = 3 <br></br>
-        Model = 10 <br></br>
-        Decal = 13 <br></br>
-        Animation = 24 <br></br>
-        Plugin = 38 <br></br>
-        MeshPart = 40 <br></br>
-        Video = 62 <br></br>
-        FontFamily = 73 <br></br>
-        Music = 300 <br></br>
-        SoundEffect = 301 <br></br>
-        UnknownAudio = 302 <br></br>
-        Package = 1001 <br></br>
+        Audio = 3 </br>
+        Model = 10 </br>
+        Decal = 13 </br>
+        Animation = 24 </br>
+        Plugin = 38 </br>
+        MeshPart = 40 </br>
+        Video = 62 </br>
+        FontFamily = 73 </br>
+        Music = 300 </br>
+        SoundEffect = 301 </br>
+        UnknownAudio = 302 </br>
+        Package = 1001 </br>
         SharedPackage = 1002
       </td>
     </tr>
@@ -69,7 +69,7 @@ Use the following parameters to query the Creator Store:
       <td>sortOrder</td>
       <td>int</td>
       <td>
-      Asc = 1<br></br>
+      Asc = 1</br>
       Desc = 2
       </td>
     </tr>
@@ -107,7 +107,7 @@ Use the following parameters to query the Creator Store:
       <td>creatorType</td>
       <td>int</td>
       <td>
-      1 = User<br></br>
+      1 = User</br>
       2 = Group
       </td>
     </tr>
@@ -130,8 +130,8 @@ Use the following parameters to query the Creator Store:
       <td>sortDirection</td>
       <td>int</td>
       <td>
-      None = 0<br></br>
-      Ascending = 1<br></br>
+      None = 0</br>
+      Ascending = 1</br>
       Descending = 2
       </td>
     </tr>
@@ -148,21 +148,21 @@ Use the following parameters to query the Creator Store:
     <tr>
       <td>audioTypes</td>
       <td>array[int]</td>
-      <td>Music = 0<br></br>SoundEffect = 1</td>
+      <td>Music = 0</br>SoundEffect = 1</td>
     </tr>
     <tr>
       <td>uiSortIntent</td>
       <td>int</td>
       <td>
-        Relevance = 1<br></br>
-        Trending = 6<br></br>
-        AllTime = 7<br></br>
-        Top = 8<br></br>
-        Duration = 9<br></br>
-        DateCreated = 10<br></br>
-        DateModified = 11<br></br>
-        Creator = 12<br></br>
-        Name = 13<br></br>
+        Relevance = 1</br>
+        Trending = 6</br>
+        AllTime = 7</br>
+        Top = 8</br>
+        Duration = 9</br>
+        DateCreated = 10</br>
+        DateModified = 11</br>
+        Creator = 12</br>
+        Name = 13</br>
         What sort order to rank the results by
       </td>
     </tr>
