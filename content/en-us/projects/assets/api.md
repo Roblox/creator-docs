@@ -106,7 +106,10 @@ Use the following parameters to query the Creator Store:
     <tr>
       <td>creatorType</td>
       <td>int</td>
-      <td>1 = User<br>2 = Group</td>
+      <td>
+      1 = User<br></br>
+      2 = Group
+      </td>
     </tr>
     <tr>
       <td>creatorTargetId</td>
@@ -126,7 +129,10 @@ Use the following parameters to query the Creator Store:
     <tr>
       <td>sortDirection</td>
       <td>int</td>
-      <td>None = 0<br>Ascending = 1<br>Descending = 2</td>
+      <td>None = 0<br></br>
+      Ascending = 1<br></br>
+      Descending = 2
+      </td>
     </tr>
     <tr>
       <td>artist</td>
@@ -141,21 +147,21 @@ Use the following parameters to query the Creator Store:
     <tr>
       <td>audioTypes</td>
       <td>array[int]</td>
-      <td>Music = 0<br>SoundEffect = 1</td>
+      <td>Music = 0<br></br>SoundEffect = 1</td>
     </tr>
     <tr>
       <td>uiSortIntent</td>
       <td>int</td>
       <td>
-        Relevance = 1<br>
-        Trending = 6<br>
-        AllTime = 7<br>
-        Top = 8<br>
-        Duration = 9<br>
-        DateCreated = 10<br>
-        DateModified = 11<br>
-        Creator = 12<br>
-        Name = 13<br>
+        Relevance = 1<br></br>
+        Trending = 6<br></br>
+        AllTime = 7<br></br>
+        Top = 8<br></br>
+        Duration = 9<br></br>
+        DateCreated = 10<br></br>
+        DateModified = 11<br></br>
+        Creator = 12<br></br>
+        Name = 13<br></br>
         What sort order to rank the results by
       </td>
     </tr>
