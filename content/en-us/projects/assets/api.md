@@ -129,7 +129,8 @@ Use the following parameters to query the Creator Store:
     <tr>
       <td>sortDirection</td>
       <td>int</td>
-      <td>None = 0<br></br>
+      <td>
+      None = 0<br></br>
       Ascending = 1<br></br>
       Descending = 2
       </td>
