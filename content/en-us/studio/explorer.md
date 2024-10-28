@@ -113,23 +113,23 @@ Through the **Filter Workspace** input near the top of the window, You can filte
 
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-A.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Common filter selector</figcaption></p></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p><figcaption>Common filter selector</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-B.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Clear filter query</figcaption></p></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p><figcaption>Clear filter query</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-C.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Navigate up and down through filtered results</figcaption></p></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p><figcaption>Navigate up and down through filtered results</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-D.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Select all filtered results</figcaption></p></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p><figcaption>Select all filtered results</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-E.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Refresh filtered results</figcaption></p></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p><figcaption>Refresh filtered results</figcaption></p></Grid>
 </Grid>
 
 ### Name Filter

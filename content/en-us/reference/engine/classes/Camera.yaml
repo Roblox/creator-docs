@@ -606,7 +606,7 @@ methods:
     code_samples:
     parameters:
       - name: ignoreList
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.Instance|Instances` to ignore. Descendants of these
@@ -700,13 +700,13 @@ methods:
         summary: |
           An array of `Datatype.Vector3` positions of cast points.
       - name: ignoreList
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.Instance|Instances` that should be ignored, along
           with their descendants.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` that obscure the lines of sight
           between the camera's `Class.Camera.CFrame` and the `castPoints`.

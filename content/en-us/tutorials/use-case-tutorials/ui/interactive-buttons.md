@@ -106,15 +106,15 @@ Buttons should typically be moved within a player's thumb reach on mobile device
 This button needs three custom images — its normal appearance on the screen, a hover-over appearance, and a final image for when the player presses it.
 
 <Grid container spacing={4}>
-    <Grid item xs={4}>
+    <Grid item XSmall={4}>
       <img src="../../../assets/tutorials/interactive-buttons/Map-Icon-Normal.png" />
       <h4>Normal</h4>
     </Grid>
-    <Grid item xs={4}>
+    <Grid item XSmall={4}>
       <img src="../../../assets/tutorials/interactive-buttons/Map-Icon-Hover.png" />
       <h4>Hover</h4>
     </Grid>
-    <Grid item xs={4}>
+    <Grid item XSmall={4}>
       <img src="../../../assets/tutorials/interactive-buttons/Map-Icon-Pressed.png" />
       <h4>Pressed</h4>
     </Grid>

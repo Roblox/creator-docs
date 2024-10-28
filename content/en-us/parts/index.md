@@ -43,31 +43,31 @@ the group as a single assembly in the [Explorer](../studio/explorer.md). See
 `Class.Part` objects can take the shape of blocks, spheres, cylinders, wedges, or corner wedges. In addition, `Class.TrussPart` acts as a truss beam that characters can climb like a ladder.
 
 <Grid container spacing={1}>
-<Grid item xs={4} lg={2}>
+<Grid item XSmall={4} XLarge={2}>
 	<figure>
 	<img src="../assets/modeling/parts/Basic-Part-Block.png" alt="A single Block part." />
 	<figcaption><center>Block</center></figcaption>
 	</figure>
 </Grid>
-<Grid item xs={4} lg={2}>
+<Grid item XSmall={4} XLarge={2}>
 	<figure>
 	<img src="../assets/modeling/parts/Basic-Part-Sphere.png" alt="A single Sphere part." />
 	<figcaption><center>Sphere</center></figcaption>
 	</figure>
 </Grid>
-<Grid item xs={4} lg={2}>
+<Grid item XSmall={4} XLarge={2}>
 	<figure>
 	<img src="../assets/modeling/parts/Basic-Part-Cylinder.png" alt="A single Cylinder part." />
 	<figcaption><center>Cylinder</center></figcaption>
 	</figure>
 </Grid>
-<Grid item xs={4} lg={2}>
+<Grid item XSmall={4} XLarge={2}>
 	<figure>
 	<img src="../assets/modeling/parts/Basic-Part-Wedge.png" alt="A single Wedge part." />
 	<figcaption><center>Wedge</center></figcaption>
 	</figure>
 </Grid>
-<Grid item xs={4} lg={2}>
+<Grid item XSmall={4} XLarge={2}>
 	<figure>
 	<img src="../assets/modeling/parts/Basic-Part-Corner-Wedge.png" alt="A single Corner Wedge part." />
 	<figcaption><center>Corner Wedge</center></figcaption>

@@ -405,7 +405,7 @@ methods:
     code_samples: []
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: ''
     returns:
@@ -471,11 +471,11 @@ methods:
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
@@ -588,11 +588,11 @@ methods:
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
@@ -741,7 +741,7 @@ methods:
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: ''
     returns:

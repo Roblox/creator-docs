@@ -87,15 +87,15 @@ To accurately visualize constraints in Studio, you can use the following options
 
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-A.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>**Show Welds** &mdash; Show `Class.WeldConstraint|WeldConstraints`, separately from the visualization of other constraints.</p></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p>**Show Welds** &mdash; Show `Class.WeldConstraint|WeldConstraints`, separately from the visualization of other constraints.</p></Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-B.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>**Constraint Details** &mdash; Show complete visual details of non-weld constraints.</p></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p>**Constraint Details** &mdash; Show complete visual details of non-weld constraints.</p></Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-C.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>**Scale** &mdash; Relative scale of visualizations.</p></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p>**Scale** &mdash; Relative scale of visualizations.</p></Grid>
 </Grid>
 
 <Alert severity="success">

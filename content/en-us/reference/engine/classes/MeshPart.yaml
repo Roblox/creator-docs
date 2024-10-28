@@ -105,7 +105,6 @@ properties:
     type: Content
     tags:
       - Hidden
-      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -206,7 +205,6 @@ properties:
     type: Content
     tags:
       - Hidden
-      - NotReplicated
     deprecation_message: ''
     security:
       read: None

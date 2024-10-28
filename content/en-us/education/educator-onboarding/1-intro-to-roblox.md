@@ -26,19 +26,19 @@ To start, Roblox is not a single game. It's a platform that hosts millions of us
 Three examples of experiences are included below.
 
 <Grid container>
-  <Grid item xs={4} spacing={3}>
+  <Grid item XSmall={4} spacing={3}>
     <figure>
     <img src="../../assets/education/legacy/plane-crazy.jpg" width="100%" />
     <figcaption><a href="https://www.roblox.com/games/166986752/">Plane Crazy</a></figcaption>
     </figure>
   </Grid>
-  <Grid item xs={4}>
+  <Grid item XSmall={4}>
   <figure>
     <img src="../../assets/education/legacy/module1-gameExamples-ocean.jpg" width="100%" />
     <figcaption><a href="https://www.roblox.com/games/6708164649/">Ocean Conservation Experience</a></figcaption>
   </figure>
   </Grid>
-  <Grid item xs={4}>
+  <Grid item XSmall={4}>
   <figure>
     <img src="../../assets/education/legacy/module1-gameExamples-normalCurve.jpg" width="100%" />
     <figcaption><a href="https://www.roblox.com/games/77019455/">The Normal Model</a></figcaption>

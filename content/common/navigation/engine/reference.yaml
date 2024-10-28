@@ -2010,6 +2010,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/RigidConstraint.yaml
         ignoreTranslation: true
+      - title: RobloxSerializableInstance
+        path: /reference/engine/classes/RobloxSerializableInstance
+        type: engineapi
+        source: /reference/engine/classes/RobloxSerializableInstance.yaml
+        ignoreTranslation: true
       - title: RocketPropulsion
         path: /reference/engine/classes/RocketPropulsion
         type: engineapi
@@ -2019,6 +2024,11 @@ navigation:
         path: /reference/engine/classes/RodConstraint
         type: engineapi
         source: /reference/engine/classes/RodConstraint.yaml
+        ignoreTranslation: true
+      - title: RomarkRbxAnalyticsService
+        path: /reference/engine/classes/RomarkRbxAnalyticsService
+        type: engineapi
+        source: /reference/engine/classes/RomarkRbxAnalyticsService.yaml
         ignoreTranslation: true
       - title: RopeConstraint
         path: /reference/engine/classes/RopeConstraint
@@ -2914,6 +2924,11 @@ navigation:
         path: /reference/engine/classes/VRStatusService
         type: engineapi
         source: /reference/engine/classes/VRStatusService.yaml
+        ignoreTranslation: true
+      - title: WebViewService
+        path: /reference/engine/classes/WebViewService
+        type: engineapi
+        source: /reference/engine/classes/WebViewService.yaml
         ignoreTranslation: true
       - title: WedgePart
         path: /reference/engine/classes/WedgePart
@@ -4752,6 +4767,11 @@ navigation:
         path: /reference/engine/enums/SalesTypeFilter
         type: engineapi
         source: /reference/engine/enums/SalesTypeFilter.yaml
+        ignoreTranslation: true
+      - title: SandboxedInstanceMode
+        path: /reference/engine/enums/SandboxedInstanceMode
+        type: engineapi
+        source: /reference/engine/enums/SandboxedInstanceMode.yaml
         ignoreTranslation: true
       - title: SaveAvatarThumbnailCustomizationFailure
         path: /reference/engine/enums/SaveAvatarThumbnailCustomizationFailure

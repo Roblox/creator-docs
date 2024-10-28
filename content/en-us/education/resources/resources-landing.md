@@ -17,7 +17,7 @@ Resources for running Roblox in classrooms and other settings.
 
 <Grid container spacing={4}>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <h4>Classroom Best Practices</h4>
 Generalized tips for running any Roblox classroom.
 <a href="../../education/resources/classroom-best-practices.md">
@@ -25,7 +25,7 @@ Generalized tips for running any Roblox classroom.
 </a>
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <h4>Frequently Asked Questions</h4>
 Hardware requirements, recommended ages, and more.
 <a href="../../education/resources/frequently-asked-questions-education.md">
@@ -33,7 +33,7 @@ Hardware requirements, recommended ages, and more.
 </a>
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <h4>Roblox Classroom Kit</h4>
 A .ZIP file with handouts and guides for setting up.
 <a href="../../assets/education/handouts/Roblox_Classroom_Kit.zip">
@@ -49,7 +49,7 @@ Resources related to helping you communicate more about your Roblox educational 
 
 <Grid container spacing={4}>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <h4>Marketing Kit</h4>
 Official Roblox art, logos, and branding guidelines.
 <a href="../../education/resources/marketing-materials.md">
@@ -57,7 +57,7 @@ Official Roblox art, logos, and branding guidelines.
 </a>
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <h4>Roblox Educators</h4>
 A list of educators and organizations using Roblox to teach.
 <a href="../../education/resources/frequently-asked-questions-education.md">
@@ -65,7 +65,7 @@ A list of educators and organizations using Roblox to teach.
 </a>
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <h4>Private Servers</h4>
 Make private communities on Roblox for students.
 <a href="../../education/support/private-servers-for-classroom-use.md">

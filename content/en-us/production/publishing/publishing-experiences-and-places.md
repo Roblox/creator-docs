@@ -307,13 +307,13 @@ All experiences should adhere to the following best practices for naming:
   </Alert>
 
   <Grid container spacing={3} alignItems="flex-end">
-  <Grid item xs={12} lg={4}>
+  <Grid item XSmall={12} XLarge={4}>
   <img src="../../assets/publishing/experience-metadata/Experience-Title-Example-A.png" width="180" style={{marginBottom:"0px;"}} />
   <Alert severity="success">
   Entire title visible to players
   </Alert>
   </Grid>
-  <Grid item xs={12} lg={4}>
+  <Grid item XSmall={12} XLarge={4}>
   <img src="../../assets/publishing/experience-metadata/Experience-Title-Example-B.png" width="180" style={{marginBottom:"0px;"}} />
   <Alert severity="error">
   Title pushed out by update note

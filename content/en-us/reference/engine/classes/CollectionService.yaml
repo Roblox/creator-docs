@@ -108,7 +108,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags:
       - Deprecated
@@ -224,7 +224,7 @@ methods:
         summary: |
           The tag to search for.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of all instances with the tag.
     tags: []
