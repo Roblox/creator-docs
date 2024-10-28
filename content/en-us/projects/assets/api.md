@@ -12,13 +12,12 @@ Each API requires a URL and custom search parameters for that specific catalog. 
 > [!NOTE]
 > We acknowledge that the toolbox-service API described below is not covered on the official Cloud APIs documentation. We are planning to better support Creator Store search with a cleaner API in future, stay tuned for updates.
 
-
 You can query items from the Creator Store catalog using the following URL:
 `https://apis.roblox.com/toolbox-service/v1/marketplace/{categoryId}[params]`
 
 You can replace `[categoryId]` and `[params]` with the appropriate [query parameters](#query-parameters) to customize your search.
 
-### CategoryId:
+### CategoryId
 
 Valid categoryIds are:
 
@@ -31,8 +30,6 @@ MeshPart = 40
 Video = 62
 FontFamily = 73
 Music = 300
-
-
 
 ### Query Parameters
 
@@ -53,18 +50,18 @@ Use the following parameters to query the Creator Store:
       <td>categoryId (path)</td>
       <td>int</td>
       <td>
-        Audio = 3<br>
-        Model = 10<br>
-        Decal = 13<br>
-        Animation = 24<br>
-        Plugin = 38<br>
-        MeshPart = 40<br>
-        Video = 62<br>
-        FontFamily = 73<br>
-        Music = 300<br>
-        SoundEffect = 301<br>
-        UnknownAudio = 302<br>
-        Package = 1001<br>
+        Audio = 3 <br></br>
+        Model = 10 <br></br>
+        Decal = 13 <br></br>
+        Animation = 24 <br></br>
+        Plugin = 38 <br></br>
+        MeshPart = 40 <br></br>
+        Video = 62 <br></br>
+        FontFamily = 73 <br></br>
+        Music = 300 <br></br>
+        SoundEffect = 301 <br></br>
+        UnknownAudio = 302 <br></br>
+        Package = 1001 <br></br>
         SharedPackage = 1002
       </td>
     </tr>
@@ -177,12 +174,11 @@ Use the following parameters to query the Creator Store:
   </tbody>
 </table>
 
-
 For more detailed documentation regarding the toolbox-service, please refer to the updated documentation at creator store API.
 
 This is a sample response from the endpoint:
 
-```
+```json
 {
   "totalResults": int,
   "filteredKeyword": string,
@@ -210,16 +206,15 @@ This is a sample response from the endpoint:
 
 To get back the asset metadata, you would go over the data array and extract the ids, call the GetItemDetails endpoint on toolbox-service like this:
 
-```
+```bash
 GET https://apis.roblox.com/toolbox-service/v1/items/details?assetIds={assetId1}%2C{assetId2}
 ```
 
 ### Response Fields
 
-
 This is the response you should expect to get back from that endpoint:
 
-```
+```json
 {
   "data": [
     {
@@ -311,7 +306,6 @@ This is the response you should expect to get back from that endpoint:
   ]
 }
 ```
-
 
 ## Marketplace API
 
