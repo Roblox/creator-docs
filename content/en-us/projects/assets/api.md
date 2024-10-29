@@ -9,27 +9,26 @@ Each API requires a URL and custom search parameters for that specific catalog. 
 
 ## Creator Store API
 
-> [!NOTE]
-> We acknowledge that the toolbox-service API described below is not covered on the official Cloud APIs documentation. We are planning to better support Creator Store search with a cleaner API in future, stay tuned for updates.
+<Alert severity="info">
+The `toolbox-service` API described below is not currently covered on the official [Cloud API](../../cloud/reference/index.md) documentation. Better support for Creator Store search with a cleaner API is underway.
+</Alert>
 
 You can query items from the Creator Store catalog using the following URL:
 `https://apis.roblox.com/toolbox-service/v1/marketplace/{categoryId}[params]`
 
 You can replace `[categoryId]` and `[params]` with the appropriate [query parameters](#query-parameters) to customize your search.
 
-### CategoryId
+Valid category IDs are:
 
-Valid categoryIds are:
-
-Audio = 3
-Model = 10
-Decal = 13
-Animation = 24
-Plugin = 38
-MeshPart = 40
-Video = 62
-FontFamily = 73
-Music = 300
+- Audio = `3`
+- Model = `10`
+- Decal = `13`
+- Animation = `24`
+- Plugin = `38`
+- MeshPart = `40`
+- Video = `62`
+- FontFamily = `73`
+- Music = `300`
 
 ### Query Parameters
 
@@ -49,25 +48,12 @@ Use the following parameters to query the Creator Store:
     <tr>
       <td>categoryId (path)</td>
       <td>int</td>
-      <td>
-        Audio = 3 </br>
-        Model = 10 </br>
-        Decal = 13 </br>
-        Animation = 24 </br>
-        Plugin = 38 </br>
-        MeshPart = 40 </br>
-        Video = 62 </br>
-        FontFamily = 73 </br>
-        Music = 300 </br>
-      </td>
+      <td>`3` = Audio<br />`10` = Model<br />`13` = Decal<br />`24` = Animation<br />`38` = Plugin<br />`40` = MeshPart<br />`62` = Video<br />`73` = FontFamily<br />`300` = Music<br /></td>
     </tr>
     <tr>
       <td>sortOrder</td>
       <td>int</td>
-      <td>
-      Asc = 1</br>
-      Desc = 2
-      </td>
+      <td>`1` = Asc<br />`2` = Desc</td>
     </tr>
     <tr>
       <td>limit</td>
@@ -102,10 +88,7 @@ Use the following parameters to query the Creator Store:
     <tr>
       <td>creatorType</td>
       <td>int</td>
-      <td>
-      1 = User</br>
-      2 = Group
-      </td>
+      <td>`1` = User<br />`2` = Group</td>
     </tr>
     <tr>
       <td>creatorTargetId</td>
@@ -125,11 +108,7 @@ Use the following parameters to query the Creator Store:
     <tr>
       <td>sortDirection</td>
       <td>int</td>
-      <td>
-      None = 0</br>
-      Ascending = 1</br>
-      Descending = 2
-      </td>
+      <td>`0` = None<br />`1` = Ascending<br />`2` = Descending</td>
     </tr>
     <tr>
       <td>artist</td>
@@ -144,23 +123,12 @@ Use the following parameters to query the Creator Store:
     <tr>
       <td>audioTypes</td>
       <td>array[int]</td>
-      <td>Music = 0</br>SoundEffect = 1</td>
+      <td>`0` = Music<br />`1` = SoundEffect</td>
     </tr>
     <tr>
       <td>uiSortIntent</td>
       <td>int</td>
-      <td>
-        Relevance = 1</br>
-        Trending = 6</br>
-        AllTime = 7</br>
-        Top = 8</br>
-        Duration = 9</br>
-        DateCreated = 10</br>
-        DateModified = 11</br>
-        Creator = 12</br>
-        Name = 13</br>
-        What sort order to rank the results by
-      </td>
+      <td>What sort order to rank the results by<br /><br />`1` = Relevance<br />`6` = Trending<br />`7` = AllTime<br />`8` = Top<br />`9` = Duration<br />`10` = DateCreated<br />`11` = DateModified<br />`12` = Creator<br />`13` = Name</td>
     </tr>
     <tr>
       <td>includeOnlyVerifiedCreators</td>
@@ -180,7 +148,7 @@ Use the following parameters to query the Creator Store:
   </tbody>
 </table>
 
-For more detailed documentation regarding the toolbox-service, please refer to the updated documentation at creator store API.
+For more details regarding `toolbox-service`, please refer to the updated documentation below.
 
 This is a sample response from the endpoint:
 
@@ -210,7 +178,7 @@ This is a sample response from the endpoint:
 }
 ```
 
-To get back the asset metadata, you would go over the data array and extract the ids, call the GetItemDetails endpoint on toolbox-service like this:
+To get back the asset metadata, you can go over the data array and extract the IDs with the `GetItemDetails` endpoint on `toolbox-service` like this:
 
 ```bash
 GET https://apis.roblox.com/toolbox-service/v1/items/details?assetIds={assetId1}%2C{assetId2}
@@ -343,7 +311,7 @@ Use the following parameters to query the Marketplace:
   <tr>
     <td>CreatorType</td>
     <td>byte</td>
-    <td>`1` = User or `2` = Group.</td>
+    <td>`1` = User<br />`2` = Group</td>
   </tr>
   <tr>
     <td>CreatorName</td>
@@ -363,7 +331,7 @@ Use the following parameters to query the Marketplace:
   <tr>
     <td>Genres</td>
     <td>byte</td>
-    <td>Specifies the genre for the search. The recommended approach to filtering on genres is to match the URL of a catalog page. <br />`1` = TownAndCity<br />`2` = Medieval<br />`3` = SciFi<br />`4` = Fighting<br />`5` = Horror<br />`6` = Naval<br />`7` = Adventure<br />`8` = Sports<br />`9` = Comedy<br />`10` = Western<br />`11` = Military<br />`13` = Building<br />`14` = FPS<br />`15` = RPG</td>
+    <td>Specifies the genre for the search. The recommended approach to filtering on genres is to match the URL of a catalog page.<br /><br />`1` = TownAndCity<br />`2` = Medieval<br />`3` = SciFi<br />`4` = Fighting<br />`5` = Horror<br />`6` = Naval<br />`7` = Adventure<br />`8` = Sports<br />`9` = Comedy<br />`10` = Western<br />`11` = Military<br />`13` = Building<br />`14` = FPS<br />`15` = RPG</td>
   </tr>
   <tr>
     <td>Keyword</td>
@@ -398,56 +366,7 @@ Use the following parameters to query the Marketplace:
   <tr>
     <td>Subcategory</td>
     <td>byte</td>
-    <td>
-    `0` = Featured<br />
-    `1` = All<br />
-    `2` = Collectibles<br />
-    `3` = Clothing<br />
-    `4` = BodyParts<br />
-    `5` = Gear<br />
-    `9` = Hats<br />
-    `10` = Faces<br />
-    `12` = Shirts<br />
-    `13` = TShirts<br />
-    `14` = Pants<br />
-    `15` = Heads<br />
-    `19` = Accessories<br />
-    `20` = HairAccessories<br />
-    `21` = FaceAccessories<br />
-    `22` = NeckAccessories<br />
-    `23` = ShoulderAccessories<br />
-    `24` = FrontAccessories<br />
-    `25` = BackAccessories<br />
-    `26` = WaistAccessories<br />
-    `27` = AvatarAnimations<br />
-    `37` = Bundles<br />
-    `38` = AnimationBundles <br />
-    `39` = EmoteAnimations<br />
-    `40` = CommunityCreations<br />
-    `41` = Melee<br />
-    `42` = Ranged<br />
-    `43` = Explosive<br />
-    `44` = PowerUp<br />
-    `45` = Navigation<br />
-    `46` = Musical<br />
-    `47` = Social<br />
-    `48` = Building<br />
-    `49` = Transport<br />
-    `54` = HeadAccessories<br />
-    `55` = ClassicTShirts<br />
-    `56` = ClassicShirts<br />
-    `57` = ClassicPants<br />
-    `58` = TShirtAccessories<br />
-    `59` = ShirtAccessories<br />
-    `60` = PantsAccessories<br />
-    `61` = JacketAccessories<br />
-    `62` = SweaterAccessories<br />
-    `63` = ShortsAccessories<br />
-    `64` = ShoesBundles<br />
-    `65` = DressSkirtAccessories<br />
-    `66` = DynamicHeads<br />
-    </td>
-
+    <td>`0` = Featured<br />`1` = All<br />`2` = Collectibles<br />`3` = Clothing<br />`4` = BodyParts<br />`5` = Gear<br />`9` = Hats<br />`10` = Faces<br />`12` = Shirts<br />`13` = TShirts<br />`14` = Pants<br />`15` = Heads<br />`19` = Accessories<br />`20` = HairAccessories<br />`21` = FaceAccessories<br />`22` = NeckAccessories<br />`23` = ShoulderAccessories<br />`24` = FrontAccessories<br />`25` = BackAccessories<br />`26` = WaistAccessories<br />`27` = AvatarAnimations<br />`37` = Bundles<br />`38` = AnimationBundles <br />`39` = EmoteAnimations<br />`40` = CommunityCreations<br />`41` = Melee<br />`42` = Ranged<br />`43` = Explosive<br />`44` = PowerUp<br />`45` = Navigation<br />`46` = Musical<br />`47` = Social<br />`48` = Building<br />`49` = Transport<br />`54` = HeadAccessories<br />`55` = ClassicTShirts<br />`56` = ClassicShirts<br />`57` = ClassicPants<br />`58` = TShirtAccessories<br />`59` = ShirtAccessories<br />`60` = PantsAccessories<br />`61` = JacketAccessories<br />`62` = SweaterAccessories<br />`63` = ShortsAccessories<br />`64` = ShoesBundles<br />`65` = DressSkirtAccessories<br />`66` = DynamicHeads</td>
   </tr>
 </tbody>
 </table>
@@ -470,7 +389,7 @@ API responses return in a JSON format. The response provides asset details in th
 <tbody>
   <tr>
     <td>assetType</td>
-    <td>One of the following asset type values (only returned if the item is an asset).<br />`2` = T-Shirt<br />`8` = Hat<br />`11` = Shirt<br />`12` = Pants<br />`17` = Head<br />`18` = Face<br />`19` = Gear<br />`25` = Arms<br />`26` = Legs<br />`27` = Torso<br />`28` = RightArm<br />`29` = LeftArm<br />`30` = LeftLeg<br />`31` = RightLeg<br />`41` = HairAccessory<br />`42` = FaceAccessory<br />`43` = NeckAccessory<br />`44` = ShoulderAccessory<br />`45` = FrontAccessory<br />`46` = BackAccessory<br />`47` = WaistAccessory<br />`48` = ClimbAnimation<br />`49` = DeathAnimation<br />`50` = FallAnimation<br />`51` = IdleAnimation<br />`52` = JumpAnimation<br />`53` = RunAnimation<br />`54` = SwimAnimation<br />`55` = WalkAnimation<br />`56` = PoseAnimation<br />`61` = EmoteAnimation</td>
+    <td>One of the following asset type values (only returned if the item is an asset).<br /><br />`2` = T-Shirt<br />`8` = Hat<br />`11` = Shirt<br />`12` = Pants<br />`17` = Head<br />`18` = Face<br />`19` = Gear<br />`25` = Arms<br />`26` = Legs<br />`27` = Torso<br />`28` = RightArm<br />`29` = LeftArm<br />`30` = LeftLeg<br />`31` = RightLeg<br />`41` = HairAccessory<br />`42` = FaceAccessory<br />`43` = NeckAccessory<br />`44` = ShoulderAccessory<br />`45` = FrontAccessory<br />`46` = BackAccessory<br />`47` = WaistAccessory<br />`48` = ClimbAnimation<br />`49` = DeathAnimation<br />`50` = FallAnimation<br />`51` = IdleAnimation<br />`52` = JumpAnimation<br />`53` = RunAnimation<br />`54` = SwimAnimation<br />`55` = WalkAnimation<br />`56` = PoseAnimation<br />`61` = EmoteAnimation</td>
   </tr>
   <tr>
     <td>bundleType</td>
