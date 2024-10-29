@@ -59,10 +59,6 @@ Use the following parameters to query the Creator Store:
         Video = 62 </br>
         FontFamily = 73 </br>
         Music = 300 </br>
-        SoundEffect = 301 </br>
-        UnknownAudio = 302 </br>
-        Package = 1001 </br>
-        SharedPackage = 1002
       </td>
     </tr>
     <tr>
