@@ -2,8 +2,15 @@ name: FluidForceSensor
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A `Class.SensorBase` that outputs `Class.FluidForceSensor.Force|Force`, `Class.FluidForceSensor.Torque|Torque` and `Class.FluidForceSensor.CenterOfPressure|CenterOfPressure`.
+description: |
+  `FluidForceSensor` is a `Class.SensorBase` which outputs the results of fluid
+  force simulation from the last physics frame for the part it is attached to.
+  The sensor outputs the `Class.FluidForceSensor.Force|Force`,
+  `Class.FluidForceSensor.Torque|Torque` and
+  `Class.FluidForceSensor.CenterOfPressure|CenterOfPressure` which were computed
+  by the fluid force simulation on the last physics frame.
 code_samples: []
 inherits:
   - SensorBase
@@ -12,8 +19,12 @@ tags:
 deprecation_message: ''
 properties:
   - name: FluidForceSensor.CenterOfPressure
-    summary: ''
-    description: ''
+    summary: |
+      Assembly center of pressure offset from its center of mass in world
+      coordinates.
+    description: |
+      Assembly center of pressure offset from its center of mass in world
+      coordinates.
     code_samples: []
     type: Vector3
     tags:
@@ -31,8 +42,10 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: FluidForceSensor.Force
-    summary: ''
-    description: ''
+    summary: |
+      Assembly fluid force in world coordinates.
+    description: |
+      Assembly fluid force in world coordinates.
     code_samples: []
     type: Vector3
     tags:
@@ -50,8 +63,10 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: FluidForceSensor.Torque
-    summary: ''
-    description: ''
+    summary: |
+      Assembly fluid torque in world coordinates.
+    description: |
+      Assembly fluid torque in world coordinates.
     code_samples: []
     type: Vector3
     tags:
@@ -70,25 +85,36 @@ properties:
     writeCapabilities: []
 methods:
   - name: FluidForceSensor:EvaluateAsync
-    summary: ''
-    description: ''
+    summary: |
+      Asynchronously computes force, torque, and center of pressure for the
+      parent part of a sensor given provided inputs.
+    description: |
+      Asynchronously computes force, torque, and center of pressure for the
+      parent part of a sensor given provided inputs.
     code_samples: []
     parameters:
       - name: linearVelocity
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          Linear velocity in world coordinates.
       - name: angularVelocity
         type: Vector3
         default:
-        summary: ''
+        summary: |
+          Angular velocity in world coordinates.
       - name: cframe
         type: CFrame
         default:
-        summary: ''
+        summary: |
+          `Datatype.CFrame` to be used for evaluation.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          Tuple of `Class.FluidForceSensor.Force|Force`,
+          `Class.FluidForceSensor.Torque|Torque` and
+          `Class.FluidForceSensor.CenterOfPressure|CenterOfPressure` calculated
+          given the input parameters.
     tags:
       - Yields
     deprecation_message: ''
