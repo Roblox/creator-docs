@@ -9,8 +9,9 @@ Each API requires a URL and custom search parameters for that specific catalog. 
 
 ## Creator Store API
 
-> [!NOTE]
-> We acknowledge that the toolbox-service API described below is not covered on the official Cloud APIs documentation. We are planning to better support Creator Store search with a cleaner API in future, stay tuned for updates.
+<Alert severity="info">
+The `toolbox-service` API described below is not currently covered on the official [Cloud API](../../cloud/reference/index.md) documentation. Better support for Creator Store search with a cleaner API is underway.
+</Alert>
 
 You can query items from the Creator Store catalog using the following URL:
 `https://apis.roblox.com/toolbox-service/v1/marketplace/{categoryId}[params]`
