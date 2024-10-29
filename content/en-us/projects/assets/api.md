@@ -1,195 +1,283 @@
 ---
-title: External Catalog Queries
-description: External Catalog Queries let you externally query the Creator Store Catalog and Marketplace Catalog.
+title: Creator Store Queries
+description: Creator Store Queries let you externally query the Creator Store and Marketplace Catalog.
 ---
 
-You can search Roblox's assets outside Studio by accessing the external catalog API. Use the [Creator Store API](#creator-store-api) to query Studio assets, such as meshes, models, and audio, and the [Marketplace API](#marketplace-api) to query avatar assets on the Marketplace.
+You can search Roblox's assets outside Studio by accessing the Creator Store API. Use the [Creator Store API](#creator-store-api) to query Studio assets, such as meshes, models, and audio, and the [Marketplace API](#marketplace-api) to query avatar assets on the Marketplace.
 
 Each API requires a URL and custom search parameters for that specific catalog. If both URL and parameters are valid, the API returns a JSON format with the results of your search.
 
 ## Creator Store API
 
-You can query items from the Creator Store catalog using the following URL:
-`https://search.roblox.com/catalog/json?[params]`
+<Alert severity="info">
+The `toolbox-service` API described below is not currently covered on the official [Cloud API](../../cloud/reference/index.md) documentation. Better support for Creator Store search with a cleaner API is underway.
+</Alert>
 
-You can replace `[params]` with the appropriate [query parameters](#query-parameters) to customize your search.
+You can query items from the Creator Store catalog using the following URL:
+`https://apis.roblox.com/toolbox-service/v1/marketplace/{categoryId}[params]`
+
+You can replace `[categoryId]` and `[params]` with the appropriate [query parameters](#query-parameters) to customize your search.
+
+Valid category IDs are:
+
+- Audio = `3`
+- Model = `10`
+- Decal = `13`
+- Animation = `24`
+- Plugin = `38`
+- MeshPart = `40`
+- Video = `62`
+- FontFamily = `73`
+- Music = `300`
 
 ### Query Parameters
 
 You can specify search parameters by appending a series of parameters and values to the URL, each separated by a `&`.
 
-Use the following parameters to query the Creator Store catalog:
+Use the following parameters to query the Creator Store:
 
 <table>
-<thead>
-  <tr>
-    <th>Parameter</th>
-    <th>Type</th>
-    <th>Options and Values</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Category</td>
-    <td>byte</td>
-    <td>`6` = Models <br />`7` = Plugins <br />`8` = Decals <br />`9` = Audio <br />`10` = Meshes</td>
-  </tr>
-  <tr>
-    <td>CreatorID</td>
-    <td>long</td>
-    <td>Specifies the `Class.Player.UserId|UserID` to filter in the search. If you'd like to find group-created items, enter the group agent's ID, not the group ID.</td>
-  </tr>
-  <tr>
-    <td>CurrencyType</td>
-    <td>byte</td>
-    <td>`0` = All (Default) <br />`3` = CustomRobux <br />`5` = Free <br /> <br /> Use CustomRobux with custom PxMax and PxMin values. </td>
-  </tr>
-  <tr>
-    <td>Genres</td>
-    <td>byte</td>
-    <td>Specifies the genre for the search. The recommended approach to filtering on genres is to match the URL of a catalog page. <br />`1` = TownAndCity <br />`2` = Medieval <br />`3` = SciFi <br />`4` = Fighting <br />`5` = Horror <br />`6` = Naval <br />`7` = Adventure <br />`8` = Sports <br />`9` = Comedy <br />`10` = Western <br />`11` = Military <br />`13` = Building <br />`14` = FPS <br />`15` = RPG </td>
-  </tr>
-  <tr>
-    <td>Keyword</td>
-    <td>string</td>
-    <td>Standard keyword search.</td>
-  </tr>
-  <tr>
-    <td>PageNumber</td>
-    <td>int</td>
-    <td>Specifies a page number in conjunction with `ResultsPerPage` to page through results.</td>
-  </tr>
-  <tr>
-    <td>PxMax</td>
-    <td>int</td>
-    <td>The maximum price in Robux of items in the query.</td>
-  </tr>
-  <tr>
-    <td>PxMin</td>
-    <td>int</td>
-    <td>The minimum price in Robux of items in the query.</td>
-  </tr>
-  <tr>
-    <td>ResultsPerPage</td>
-    <td>int</td>
-    <td>By default this is the same as what's currently shown on each catalog browse page. You can't specify a value larger than this maximum amount.</td>
-  </tr>
-  <tr>
-    <td>SortAggregation</td>
-    <td>byte</td>
-    <td>`0` = PastDay <br />`1` = PastWeek <br />`2` = PastMonth <br />`3` = AllTime</td>
-  </tr>
-  <tr>
-    <td>SortType</td>
-    <td>byte</td>
-    <td>`0` = Relevance (Default)<br />`1` = MostFavorited <br />`2` = Bestselling <br />`3` = RecentlyUpdated <br />`4` = PriceLowToHigh <br />`5` = PriceHighToLow</td>
-  </tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Type</th>
+      <th>Options and Values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>categoryId (path)</td>
+      <td>int</td>
+      <td>`3` = Audio<br />`10` = Model<br />`13` = Decal<br />`24` = Animation<br />`38` = Plugin<br />`40` = MeshPart<br />`62` = Video<br />`73` = FontFamily<br />`300` = Music<br /></td>
+    </tr>
+    <tr>
+      <td>sortOrder</td>
+      <td>int</td>
+      <td>`1` = Asc<br />`2` = Desc</td>
+    </tr>
+    <tr>
+      <td>limit</td>
+      <td>int</td>
+      <td>Number of results to return, maximum 100.</td>
+    </tr>
+    <tr>
+      <td>cursor</td>
+      <td>string</td>
+      <td>Pagination cursor</td>
+    </tr>
+    <tr>
+      <td>pageNumber</td>
+      <td>int</td>
+      <td>Page number to request for</td>
+    </tr>
+    <tr>
+      <td>keyword</td>
+      <td>string</td>
+      <td>Search keyword</td>
+    </tr>
+    <tr>
+      <td>assetSubTypes</td>
+      <td>array[string]</td>
+      <td>Ad, MaterialPack, Package</td>
+    </tr>
+    <tr>
+      <td>excludeAssetSubTypes</td>
+      <td>array[string]</td>
+      <td>Ad, MaterialPack, Package</td>
+    </tr>
+    <tr>
+      <td>creatorType</td>
+      <td>int</td>
+      <td>`1` = User<br />`2` = Group</td>
+    </tr>
+    <tr>
+      <td>creatorTargetId</td>
+      <td>int64</td>
+      <td>User or Group Id to search for</td>
+    </tr>
+    <tr>
+      <td>minDuration</td>
+      <td>int64</td>
+      <td>Minimum value of the duration range for audio assets in seconds</td>
+    </tr>
+    <tr>
+      <td>maxDuration</td>
+      <td>int64</td>
+      <td>Maximum value of the duration range for audio assets in seconds</td>
+    </tr>
+    <tr>
+      <td>sortDirection</td>
+      <td>int</td>
+      <td>`0` = None<br />`1` = Ascending<br />`2` = Descending</td>
+    </tr>
+    <tr>
+      <td>artist</td>
+      <td>string</td>
+      <td>The name of the artist</td>
+    </tr>
+    <tr>
+      <td>album</td>
+      <td>string</td>
+      <td>The album you are looking for</td>
+    </tr>
+    <tr>
+      <td>audioTypes</td>
+      <td>array[int]</td>
+      <td>`0` = Music<br />`1` = SoundEffect</td>
+    </tr>
+    <tr>
+      <td>uiSortIntent</td>
+      <td>int</td>
+      <td>What sort order to rank the results by<br /><br />`1` = Relevance<br />`6` = Trending<br />`7` = AllTime<br />`8` = Top<br />`9` = Duration<br />`10` = DateCreated<br />`11` = DateModified<br />`12` = Creator<br />`13` = Name</td>
+    </tr>
+    <tr>
+      <td>includeOnlyVerifiedCreators</td>
+      <td>bool</td>
+      <td>A flag to include only results from verified creators. Verified creators are those that are ID or phone verified.</td>
+    </tr>
+    <tr>
+      <td>minPriceInCents</td>
+      <td>int64</td>
+      <td>Minimum cost in cents (only applicable to plugins)</td>
+    </tr>
+    <tr>
+      <td>maxPriceInCents</td>
+      <td>int64</td>
+      <td>Maximum cost in cents (only applicable to plugins)</td>
+    </tr>
+  </tbody>
 </table>
 
-The following URL will search for 10 items in the "Models" subcategory, sorted by most recently updated.
+For more details regarding `toolbox-service`, please refer to the updated documentation below.
 
-`https://search.roblox.com/catalog/json?Category=6&SortType=3&ResultsPerPage=10`
-
-### Response Fields
-
-API responses return in a JSON format. The response provides asset details with the following primary fields:
-
-<table>
-<thead>
-  <tr>
-    <th>Field</th>
-    <th>Description</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>AssetTypeID</td>
-    <td>An asset type value. <br />`3` = Audio<br />`4` = Mesh<br />`5` = Lua<br />`10` = Model<br />`13` = Decal<br />`21` = Badge<br />`24` = Animation<br />`34` = GamePass<br />`38` = Plugin<br />`40` = MeshPart</td>
-  </tr>
-  <tr>
-    <td>BestPrice</td>
-    <td>Empty except for limited edition items, in which case it will return the best price for the item.</td>
-  </tr>
-  <tr>
-    <td>ContentRatingTypeID</td>
-    <td>`0` = No content rating type<br />`1` = 13+ rated item</td>
-  </tr>
-  <tr>
-    <td>CreatedDate</td>
-    <td>Date the item was created in UTC format.</td>
-  </tr>
-  <tr>
-    <td>MinimumMembershipLevel</td>
-    <td>`1` = Any membership<br />`4` = <a href="https://www.roblox.com/premium/membership">Roblox Premium</a> only</td>
-  </tr>
-  <tr>
-    <td>Name</td>
-    <td>Item name in UTF-8 format.</td>
-  </tr>
-  <tr>
-    <td>PriceView</td>
-    <td>This is mostly used by the website to display prices. The options are:<br />`0` = Free<br />`1` = Collectible<br />`2` = HasPrice<br />`3` = NotForSale</td>
-  </tr>
-  <tr>
-    <td>PrivateSales</td>
-    <td>Empty except for limited edition items, in which case it will return the number of private sellers.</td>
-  </tr>
-  <tr>
-    <td>UpdatedDate</td>
-    <td>Date the item was last updated in UTC format.</td>
-  </tr>
-</tbody>
-</table>
-
-The following is an example of expected return output for a single item:
+This is a sample response from the endpoint:
 
 ```json
 {
-	"AssetId": 3374795585,
-	"Name": "Rat",
-	"Description": "",
-	"AbsoluteUrl": "https://www.roblox.com/catalog/3374795585/Rat",
-	"Price": "",
-	"Updated": "8 months ago",
-	"Favorited": "80 times",
-	"Sales": "1,613",
-	"Remaining": "",
-	"Creator": "ROBLOX",
-	"CreatorAbsoluteUrl": "https://www.roblox.com/users/1/profile",
-	"PrivateSales": "",
-	"PriceView": 0,
-	"BestPrice": "",
-	"ContentRatingTypeID": 0,
-	"IsServerSideThumbnailLookupInCatalogEnabled": true,
-	"AudioUrl": null,
-	"IsLargeItem": false,
-	"IsThumbnailFinal": true,
-	"IsThumbnailUnapproved": false,
-	"ThumbnailUrl": "https://t1.rbxcdn.com/745a4be8c2366db2e55d0a67678434dc",
-	"BcOverlayUrl": null,
-	"LimitedOverlayUrl": null,
-	"DeadlineOverlayUrl": null,
-	"LimitedAltText": null,
-	"NewOverlayUrl": null,
-	"SaleOverlayUrl": null,
-	"IosOverlayUrl": null,
-	"XboxOverlayUrl": null,
-	"GooglePlayOverlayUrl": null,
-	"AmazonOverlayUrl": null,
-	"IsTransparentBackground": false,
-	"IsNewRobuxIconEnabled": true,
-	"AssetTypeID": 10,
-	"CreatorID": 1,
-	"CreatedDate": "/Date(1561635090927)/",
-	"UpdatedDate": "/Date(1562003916210)/",
-	"IsForSale": false,
-	"IsPublicDomain": true,
-	"IsLimited": false,
-	"IsLimitedUnique": false,
-	"MinimumMembershipLevel": 0,
-	"OffSaleDeadline": null,
-	"ProductId": 586905093
+  "totalResults": int,
+  "filteredKeyword": string,
+  "spellCheckerResult": {
+    "correctionState": int,
+    "correctedQuery": string,
+    "userQuery": string
+  },
+  "queryFacets": {
+    "appliedFacets": Array[string],
+    "availableFacets": Array[string]
+  },
+  "imageSearchStatus": int,
+  "previousPageCursor": string,
+  "nextPageCursor": string,
+  "data": [
+    {
+      "id": int,
+      "name": string,
+      "searchResultSource": string
+    }
+  ]
+}
+```
+
+To get back the asset metadata, you can go over the data array and extract the IDs with the `GetItemDetails` endpoint on `toolbox-service` like this:
+
+```bash
+GET https://apis.roblox.com/toolbox-service/v1/items/details?assetIds={assetId1}%2C{assetId2}
+```
+
+### Response Fields
+
+This is the response you should expect to get back from that endpoint:
+
+```json
+{
+  "data": [
+    {
+      "asset": {
+        "audioDetails": {
+           "audioType": Array[int],
+           "artist": string,
+           "title": string,
+           "musicAlbum": string,
+           "musicGenre": string,
+           "soundEffectCategory": string,
+           "soundEffectSubcategory": string,
+           "tags": Array[string] 
+        },
+        "id": int64,
+        "name": string,
+        "typeId": int,
+        "assetSubTypes": Array[string],
+        "assetGenres": Array[string],
+        "ageGuidelines":{
+          "ageGuideline: int,
+          "blood": {
+             "realism": int,
+             "level": int
+           },
+          "violence": {
+            "intensity": int
+           },
+          "profanity": {
+            "presence": int
+           },
+          "alcohol": {
+            "presence": int
+           },
+          "romance": {
+            "type": int
+           }
+        },
+        "isEndorsed": bool,
+        "description": string,
+        "duration": int,
+        "hasScripts": bool?,
+        "createdUtc": string($date-time),
+        "updatedUtc": string($date-time),
+        "creatingUniverseId": int64?,
+        "isAssetHashApproved": bool,
+        "visibilityStatus": int?,
+        "socialLinks": [{
+           "linkType": int,
+           "url": string,
+           "title": string
+        }]
+      },
+      "creator": {
+        "id": int64,
+        "name": string,
+        "type": int,
+        "isVerifiedCreator": bool,
+        "latestGroupUpdaterUserId": int64?,
+        "latestGroupUpdaterUserName": string
+      },
+      "voting": {
+        "showVotes": bool,
+        "upVotes": int64,
+        "downVotes": int64,
+        "canVote": bool,
+        "userVote": bool?,
+        "hasVoted": bool,
+        "voteCount": int64,
+        "upVotePercent": int
+      },
+      "product": {
+        "productId": int64,
+        "price": int64?,
+        "isForSaleOrIsPublicDomain": bool
+      },
+      "fiatProduct": {
+        "purchasePrice": {
+          "currencyCode": string,
+          "quantity": {
+            "significand": int64,
+            "exponent": int
+          }
+        },
+        "published": bool,
+        "purchasable": bool
+      }
+    }
+  ]
 }
 ```
 
@@ -223,7 +311,7 @@ Use the following parameters to query the Marketplace:
   <tr>
     <td>CreatorType</td>
     <td>byte</td>
-    <td>`1` = User or `2` = Group.</td>
+    <td>`1` = User<br />`2` = Group</td>
   </tr>
   <tr>
     <td>CreatorName</td>
@@ -243,7 +331,7 @@ Use the following parameters to query the Marketplace:
   <tr>
     <td>Genres</td>
     <td>byte</td>
-    <td>Specifies the genre for the search. The recommended approach to filtering on genres is to match the URL of a catalog page. <br />`1` = TownAndCity<br />`2` = Medieval<br />`3` = SciFi<br />`4` = Fighting<br />`5` = Horror<br />`6` = Naval<br />`7` = Adventure<br />`8` = Sports<br />`9` = Comedy<br />`10` = Western<br />`11` = Military<br />`13` = Building<br />`14` = FPS<br />`15` = RPG</td>
+    <td>Specifies the genre for the search. The recommended approach to filtering on genres is to match the URL of a catalog page.<br /><br />`1` = TownAndCity<br />`2` = Medieval<br />`3` = SciFi<br />`4` = Fighting<br />`5` = Horror<br />`6` = Naval<br />`7` = Adventure<br />`8` = Sports<br />`9` = Comedy<br />`10` = Western<br />`11` = Military<br />`13` = Building<br />`14` = FPS<br />`15` = RPG</td>
   </tr>
   <tr>
     <td>Keyword</td>
@@ -278,56 +366,7 @@ Use the following parameters to query the Marketplace:
   <tr>
     <td>Subcategory</td>
     <td>byte</td>
-    <td>
-    `0` = Featured<br />
-    `1` = All<br />
-    `2` = Collectibles<br />
-    `3` = Clothing<br />
-    `4` = BodyParts<br />
-    `5` = Gear<br />
-    `9` = Hats<br />
-    `10` = Faces<br />
-    `12` = Shirts<br />
-    `13` = TShirts<br />
-    `14` = Pants<br />
-    `15` = Heads<br />
-    `19` = Accessories<br />
-    `20` = HairAccessories<br />
-    `21` = FaceAccessories<br />
-    `22` = NeckAccessories<br />
-    `23` = ShoulderAccessories<br />
-    `24` = FrontAccessories<br />
-    `25` = BackAccessories<br />
-    `26` = WaistAccessories<br />
-    `27` = AvatarAnimations<br />
-    `37` = Bundles<br />
-    `38` = AnimationBundles <br />
-    `39` = EmoteAnimations<br />
-    `40` = CommunityCreations<br />
-    `41` = Melee<br />
-    `42` = Ranged<br />
-    `43` = Explosive<br />
-    `44` = PowerUp<br />
-    `45` = Navigation<br />
-    `46` = Musical<br />
-    `47` = Social<br />
-    `48` = Building<br />
-    `49` = Transport<br />
-    `54` = HeadAccessories<br />
-    `55` = ClassicTShirts<br />
-    `56` = ClassicShirts<br />
-    `57` = ClassicPants<br />
-    `58` = TShirtAccessories<br />
-    `59` = ShirtAccessories<br />
-    `60` = PantsAccessories<br />
-    `61` = JacketAccessories<br />
-    `62` = SweaterAccessories<br />
-    `63` = ShortsAccessories<br />
-    `64` = ShoesBundles<br />
-    `65` = DressSkirtAccessories<br />
-    `66` = DynamicHeads<br />
-    </td>
-
+    <td>`0` = Featured<br />`1` = All<br />`2` = Collectibles<br />`3` = Clothing<br />`4` = BodyParts<br />`5` = Gear<br />`9` = Hats<br />`10` = Faces<br />`12` = Shirts<br />`13` = TShirts<br />`14` = Pants<br />`15` = Heads<br />`19` = Accessories<br />`20` = HairAccessories<br />`21` = FaceAccessories<br />`22` = NeckAccessories<br />`23` = ShoulderAccessories<br />`24` = FrontAccessories<br />`25` = BackAccessories<br />`26` = WaistAccessories<br />`27` = AvatarAnimations<br />`37` = Bundles<br />`38` = AnimationBundles <br />`39` = EmoteAnimations<br />`40` = CommunityCreations<br />`41` = Melee<br />`42` = Ranged<br />`43` = Explosive<br />`44` = PowerUp<br />`45` = Navigation<br />`46` = Musical<br />`47` = Social<br />`48` = Building<br />`49` = Transport<br />`54` = HeadAccessories<br />`55` = ClassicTShirts<br />`56` = ClassicShirts<br />`57` = ClassicPants<br />`58` = TShirtAccessories<br />`59` = ShirtAccessories<br />`60` = PantsAccessories<br />`61` = JacketAccessories<br />`62` = SweaterAccessories<br />`63` = ShortsAccessories<br />`64` = ShoesBundles<br />`65` = DressSkirtAccessories<br />`66` = DynamicHeads</td>
   </tr>
 </tbody>
 </table>
@@ -350,7 +389,7 @@ API responses return in a JSON format. The response provides asset details in th
 <tbody>
   <tr>
     <td>assetType</td>
-    <td>One of the following asset type values (only returned if the item is an asset).<br />`2` = T-Shirt<br />`8` = Hat<br />`11` = Shirt<br />`12` = Pants<br />`17` = Head<br />`18` = Face<br />`19` = Gear<br />`25` = Arms<br />`26` = Legs<br />`27` = Torso<br />`28` = RightArm<br />`29` = LeftArm<br />`30` = LeftLeg<br />`31` = RightLeg<br />`41` = HairAccessory<br />`42` = FaceAccessory<br />`43` = NeckAccessory<br />`44` = ShoulderAccessory<br />`45` = FrontAccessory<br />`46` = BackAccessory<br />`47` = WaistAccessory<br />`48` = ClimbAnimation<br />`49` = DeathAnimation<br />`50` = FallAnimation<br />`51` = IdleAnimation<br />`52` = JumpAnimation<br />`53` = RunAnimation<br />`54` = SwimAnimation<br />`55` = WalkAnimation<br />`56` = PoseAnimation<br />`61` = EmoteAnimation</td>
+    <td>One of the following asset type values (only returned if the item is an asset).<br /><br />`2` = T-Shirt<br />`8` = Hat<br />`11` = Shirt<br />`12` = Pants<br />`17` = Head<br />`18` = Face<br />`19` = Gear<br />`25` = Arms<br />`26` = Legs<br />`27` = Torso<br />`28` = RightArm<br />`29` = LeftArm<br />`30` = LeftLeg<br />`31` = RightLeg<br />`41` = HairAccessory<br />`42` = FaceAccessory<br />`43` = NeckAccessory<br />`44` = ShoulderAccessory<br />`45` = FrontAccessory<br />`46` = BackAccessory<br />`47` = WaistAccessory<br />`48` = ClimbAnimation<br />`49` = DeathAnimation<br />`50` = FallAnimation<br />`51` = IdleAnimation<br />`52` = JumpAnimation<br />`53` = RunAnimation<br />`54` = SwimAnimation<br />`55` = WalkAnimation<br />`56` = PoseAnimation<br />`61` = EmoteAnimation</td>
   </tr>
   <tr>
     <td>bundleType</td>
