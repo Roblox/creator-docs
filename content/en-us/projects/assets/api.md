@@ -148,7 +148,7 @@ Use the following parameters to query the Creator Store:
   </tbody>
 </table>
 
-For more detailed documentation regarding the toolbox-service, please refer to the updated documentation at creator store API.
+For more details regarding `toolbox-service`, please refer to the updated documentation below.
 
 This is a sample response from the endpoint:
 
