@@ -260,6 +260,18 @@ if success then
 end
 ```
 
+### rbxgameasset
+
+`rbxgameasset` points to an asset uploaded through the [Asset Manager](../../projects/assets/manager.md). It allows access to assets by a user‑friendly name instead of ID, so if you upload an image named `Potion.png`, you can reference it as:
+
+<span><Chip label='rbxgameasset://Images/Potion' color='primary' size='large' /></span><br />
+
+In the above example, `Images` is the category/folder that appears in the [Asset Manager](../../projects/assets/manager.md) and `Potion` is the asset name, minus its extension.
+
+<Alert severity="warning">
+`rbxgameasset` only works for the current game. If you paste a parent object that utilizes the asset into another game, the asset will not load (or will load a different asset if you've uploaded one with the same name to that other game). If you need an asset to work across multiple games, use `rbxassetid` instead of `rbxgameasset`.
+</Alert>
+
 ### rbxhttp
 
 `rbxhttp` is shorthand for `Class.ContentProvider.BaseUrl`, for example:
