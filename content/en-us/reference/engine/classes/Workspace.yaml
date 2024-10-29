@@ -760,8 +760,16 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: Workspace.SignalBehavior
-    summary: ''
-    description: ''
+    summary: |
+      Configures when the engine resumes event handlers.
+    description: |
+      This property determines whether event handlers will be resumed immediately when the event fires,
+      or deferred and then resumed at a later resumption point. Resumption points currently include:
+      - `Class.RunService.RenderStepped`
+      - Waiting script resumption such as `Library.task.wait()`, `Library.task.spawn()`, and `Library.task.delay()`
+      - `Class.RunService.Stepped`
+      - `Class.RunService.Heartbeat`
+      - `Class.DataModel.BindToClose`
     code_samples:
     type: SignalBehavior
     tags:
