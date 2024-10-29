@@ -178,7 +178,7 @@ This is a sample response from the endpoint:
 }
 ```
 
-To get back the asset metadata, you would go over the data array and extract the ids, call the GetItemDetails endpoint on toolbox-service like this:
+To get back the asset metadata, you can go over the data array and extract the IDs with the `GetItemDetails` endpoint on `toolbox-service` like this:
 
 ```bash
 GET https://apis.roblox.com/toolbox-service/v1/items/details?assetIds={assetId1}%2C{assetId2}
