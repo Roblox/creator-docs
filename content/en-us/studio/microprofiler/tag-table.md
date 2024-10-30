@@ -360,7 +360,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
     <td></td>
   </tr>
   <tr>
-    <td>Simulation/InterpolateNetworkedAssemblies</td>
+    <td>Simulation/physicsSteppedTotal/physicsStepped/interpolateNetworkedAssemblies</td>
     <td>Interpolates assemblies not controlled by this network peer.</td>
     <td>Set the network owner of parts to this peer to reduce this; although this will usually cause more physics work to be done elsewhere.</td>
   </tr>
@@ -370,7 +370,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
     <td>Lower the destroy height or reduce the amount of parts that fall to the destroy height.</td>
   </tr>
   <tr>
-    <td>Heartbeat/HeartbeatInternal/updateVisuallySleeping</td>
+    <td>Heartbeat/heartbeatInternal/workspaceOnHeartbeat/updateVisuallySleeping</td>
     <td>Second part of NotifyMovingAssemblies.</td>
     <td></td>
   </tr>
