@@ -7,6 +7,16 @@ description: |
   special object returned by the Connect method of an Event
   (`Datatype.RBXScriptSignal`). This is used primarily to disconnect a listener
   from an `Datatype.RBXScriptSignal`.
+  ```lua
+  local part : BasePart = script.Parent
+  -- Store a reference to the RBXScriptConnection so we can disconnect it later
+  local connection : RBXScriptConnection = part.Touched:Connect(function(otherPart)
+      print("Hello world!")
+  end)
+  -- Wait 15 seconds, then disconnect the lart
+  task.wait(15)
+  connection:Disconnect()
+  ```
 code_samples:
 tags: []
 deprecation_message: ''
