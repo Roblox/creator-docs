@@ -20,11 +20,11 @@ methods:
     code_samples: []
     parameters:
       - name: editableMeshRoot
-        type: EditableMesh
+        type: Object
         default:
         summary: ''
       - name: editableMeshQuery
-        type: EditableMesh
+        type: Object
         default:
         summary: ''
       - name: meshQueryTransform
@@ -37,6 +37,40 @@ methods:
         summary: ''
     returns:
       - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:GetEditableCagingRelevancyMetrics
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: innerCage
+        type: Object
+        default:
+        summary: ''
+      - name: outerCage
+        type: Object
+        default:
+        summary: ''
+      - name: refMesh
+        type: Object
+        default:
+        summary: ''
+      - name: offsetInner
+        type: Vector3
+        default:
+        summary: ''
+      - name: offsetOuter
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
         summary: ''
     tags: []
     deprecation_message: ''
@@ -67,6 +101,41 @@ methods:
         summary: ''
     returns:
       - type: float
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:GetCagingRelevancyMetrics
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: innerCageMeshId
+        type: string
+        default:
+        summary: ''
+      - name: outerCageMeshId
+        type: string
+        default:
+        summary: ''
+      - name: refMeshId
+        type: string
+        default:
+        summary: ''
+      - name: offsetInner
+        type: Vector3
+        default:
+        summary: ''
+      - name: offsetOuter
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
         summary: ''
     tags:
       - Yields

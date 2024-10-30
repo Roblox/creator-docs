@@ -1,7 +1,6 @@
 ---
 title: Controlling the User's Camera
 description: Explains how to customize the default camera view for a user.
-next: /tutorials/scripting/input-and-camera/detecting-user-input
 ---
 
 The user's view of the world is represented by a `Class.Camera` object. You can change the camera behavior to suit your experience in a variety of ways. For example, the camera can react to events in the world, such as shaking when a monster walks by, or locked to the side of the user character, as in a side-scroller.

@@ -45,17 +45,16 @@ This tutorial covers the basic steps to successfully create and sell an accessor
     container
     direction="row">
 
-<Grid item md={6} xs={12}
-    direction="column"  >
+<Grid item Medium={6} XSmall={12} direction="column" style={{"maxWidth": "800px"}}>
 
 <div class="container"
 style={{position: "relative"}}>
-<img src="../assets/art/accessories/creating-rigid/Chest-Studio.png" width = "90%"/>
+<img src="../assets/art/accessories/creating-rigid/Chest-Studio.png" width = "90%" />
 </div>
 
 </Grid>
 
-<Grid item md={6} xs={12} direction='column'>
+<Grid item Medium={6} XSmall={12} direction="column">
 
 <>
 <Stepper activeStep={6} orientation="vertical">
@@ -139,8 +138,7 @@ Create your own clothing item from scratch using Roblox's project templates as a
     container
     direction="row">
 
-<Grid item md={6} xs={12}
-    direction="column"  >
+<Grid item Medium={6} XSmall={12} direction="column" style={{"maxWidth": "800px"}}>
 
 <div class="container"
 style={{position: "relative"}}>
@@ -149,7 +147,7 @@ style={{position: "relative"}}>
 
 </Grid>
 
-<Grid item md={6} xs={12} direction='column'>
+<Grid item Medium={6} XSmall={12} direction="column">
 
 <>
 <Stepper activeStep={6} orientation="vertical">
@@ -240,8 +238,7 @@ Start here for a comprehensive introduction to each step of body creation using 
     container
     direction="row">
 
-<Grid item md={6} xs={12}
-    direction="column"  >
+<Grid item Medium={6} XSmall={12} direction="column" style={{"maxWidth": "800px"}}>
 
 <div class="container"
 style={{position: "relative"}}>
@@ -250,7 +247,7 @@ style={{position: "relative"}}>
 
 </Grid>
 
-<Grid item md={6} xs={12} direction='column'>
+<Grid item Medium={6} XSmall={12} direction="column">
 
 <>
 <Stepper activeStep={6} orientation="vertical">

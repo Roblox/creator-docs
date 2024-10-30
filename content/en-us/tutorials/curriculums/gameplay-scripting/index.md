@@ -1,7 +1,7 @@
 ---
 title: Gameplay Scripting Curriculum
 description: //
-next: /tutorials/gameplay-scripting/creating-teams
+next: /tutorials/curriculums/gameplay-scripting/creating-teams
 hideInPageNavigation: true
 hideBreadcrumbs: true
 ---
@@ -9,7 +9,7 @@ hideBreadcrumbs: true
 <>
 <Grid alignItems="stretch" container direction="row">
 
-<Grid item md={7} xs={12} direction="column"  >
+<Grid item Large={7} XSmall={12} direction="column">
 
 <div class="container" style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style={{position: "absolute", top: 0, left: 0, width: "95%", height: "95%"}}></iframe>
@@ -17,7 +17,7 @@ hideBreadcrumbs: true
 
 </Grid>
 
-<Grid item md={5} xs={12} direction='column'>
+<Grid item Large={5} XSmall={12} direction="column">
 
 **Gameplay scripting** is the discipline of programming the behavior that makes experiences
 engaging and fun to play, such as their logic, movement, events, and interactions between

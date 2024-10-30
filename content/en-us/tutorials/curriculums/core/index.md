@@ -1,7 +1,7 @@
 ---
 title: Core Curriculum
 description: //
-next: /tutorials/core/building/create-a-project
+next: /tutorials/curriculums/core/building/create-a-project
 hideInPageNavigation: true
 hideBreadcrumbs: true
 ---
@@ -12,8 +12,7 @@ hideBreadcrumbs: true
     container
     direction="row">
 
-<Grid item md={7} xs={12}
-    direction="column"  >
+<Grid item Large={7} XSmall={12} direction="column">
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -22,7 +21,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 
 </Grid>
 
-<Grid item md={5} xs={12} direction='column'>
+<Grid item Large={5} XSmall={12} direction="column">
 
 The core curriculum helps you learn many essential Studio features across
 technical and creative disciplines.
@@ -35,7 +34,7 @@ platforms until they reach a flare on top of the highest platform.
 This course is intended for readers who are familiar
 with general coding concepts but are new to Roblox. If you need help learning
 how to code, try the [absolute basics](../../first-experience/index.md) of working in Studio and
-[coding fundamentals](../fundamentals/coding-1/coding-fundamentals.md).
+[coding fundamentals](../../fundamentals/coding-1/coding-fundamentals.md).
 </Grid>
 
 </Grid>

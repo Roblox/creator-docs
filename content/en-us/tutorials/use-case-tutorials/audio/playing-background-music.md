@@ -1,8 +1,6 @@
 ---
 title: Playing Background Music
 description: The process for creating background music in your experience.
-next: /tutorials/building/environments/in-game-sounds
-prev: /tutorials/building/environments/lighting-with-props
 ---
 
 Audio in Roblox is created with a `Class.Sound` object. Sounds can be positional, such as the sound of a waterfall, or universal for all players. This tutorial will show you how to create a universal sound to play background music.

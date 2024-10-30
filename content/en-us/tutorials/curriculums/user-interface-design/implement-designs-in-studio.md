@@ -1,7 +1,7 @@
 ---
 title: Implement Designs in Studio
 description: Explains how to greybox the laser tag environment using basic parts.
-prev: /tutorials/user-interface-design/wireframe-your-layouts
+prev: /tutorials/curriculums/user-interface-design/wireframe-your-layouts
 ---
 
 **Implementing your designs** is the process of creating your wireframes in Studio using both built-in and custom UI elements with scripts that trigger your UI contextually. This exciting step of the tutorial is where you get to see all of your designs and hard work come together into a cohesive set of workflows that are complete and ready for player interaction.
@@ -1172,7 +1172,7 @@ A player indicator is a UI component that players reference to quickly decipher 
     <figcaption>Green Team</figcaption>
   </figure>
   <figure>
-    <img src="../../assets/tutorials/gameplay-scripting/Creating-Teams/Pink-Team.jpg" width="100%"/>
+    <img src="../../../assets/tutorials/gameplay-scripting/Creating-Teams/Pink-Team.jpg" width="100%"/>
     <figcaption>Pink Team</figcaption>
   </figure>
 </GridContainer>
@@ -1471,7 +1471,7 @@ To exactly recreate the force field screen within the sample [Laser Tag](https:/
 1. Select the **UIGradient** object within the duplicate label, then in the **Properties** window,
    1. Set **Rotation** to `-45` to flip the image so that it nearly mirrors each other along the Y axis.
 
-      <img src="../../assets/tutorials/user-interface-design/Section3/Join-6A.png" width="80%" />
+      <img src="../../../assets/tutorials/user-interface-design/Section3/Join-6A.png" width="80%" />
 
    1. Modify **Transparency** to make the shimmer look more organic.
       1. Click the **Transparency** property, then click the **⋯** button. A number sequence pop-up displays.

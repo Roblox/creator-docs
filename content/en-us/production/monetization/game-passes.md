@@ -70,7 +70,7 @@ To sell a pass in an experience's **Store** page:
 3. Select the pass you want to sell.
 4. Select **Sales**.
 5. Enable to **Item for Sale** toggle.
-6. In the **Price in Robux** field, enter the amount of Robux you want to charge users for the pass. The price you enter affects how much Robux you earn per sale.
+6. In the **Price in Robux** field, enter the amount of Robux you want to charge users for the pass. The price you enter affects how much Robux you earn per sale. The price you enter affects how much Robux you earn per sale. The minimum price is 1 Robux, and the maximum price is 1 billion Robux.
 7. Click **Save Changes**. The pass populates in the experience's **Store** page.
 
 ### Inside an Experience

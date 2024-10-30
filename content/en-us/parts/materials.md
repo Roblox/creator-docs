@@ -175,26 +175,26 @@ All materials have built-in **physical properties** such as density, elasticity,
 When factoring physical properties, the engine prioritizes more granular per-part settings over material behaviors to determine the effective physical properties of a surface:
 
 <Grid container spacing={2} alignItems="center">
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Highest.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Highest.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}>
 	Custom physical properties of the specific part.
 	</Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Higher.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Higher.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}>
 	Custom physical properties of the part's custom material.
 	</Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-High.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-High.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}>
 	Custom physical properties of the [material override](#setting-overrides) of the part's material.
 	</Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Neutral.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Neutral.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}>
 	The [default physical properties](#default-physical-properties) of the part's material.
 	</Grid>
 </Grid>

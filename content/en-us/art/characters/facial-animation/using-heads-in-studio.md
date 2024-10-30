@@ -30,11 +30,11 @@ If you want to experiment with pre-made heads before [making your own](../../../
       <td>A reference experience with a head Blocky model with `Class.FaceControls`.</td>
     </tr>
     <tr>
-      <td>[Goblin Character Model](../../../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.fbx)</td>
+      <td>[Goblin Character Model](../../../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.zip)</td>
       <td>A Goblin character model with an animatable head.</td>
     </tr>
     <tr>
-      <td>[Blocky Character Model](../../../assets/avatar/dynamic-heads/reference-files/BlockyCharacter.fbx)</td>
+      <td>[Blocky Character Model](../../../assets/avatar/dynamic-heads/reference-files/BlockyCharacter.zip)</td>
       <td>A Blocky character model with an animatable head.</td>
     </tr>
     <tr>

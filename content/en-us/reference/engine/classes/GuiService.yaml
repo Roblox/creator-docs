@@ -195,8 +195,8 @@ properties:
       recommended way to use this setting; backgrounds will become more opaque
       as `Class.GuiService.PreferredTransparency|PreferredTransparency`
       approaches 0. This should be used with
-      `Class.Instance:GetPropertyChangedSignal()` so that it automatically
-      updates when the user changes their preferred transparency.
+      `Class.Object:GetPropertyChangedSignal()` so that it automatically updates
+      when the user changes their preferred transparency.
     code_samples:
       - GuiService-PreferredTransparency
     type: float
@@ -258,7 +258,7 @@ properties:
 
       If you would like to determine when this property changes without tracking
       the SelectionGained and SelectionLost events for all GUI elements, you can
-      use the `Class.Instance.Changed|Changed` event.
+      use the `Class.Object.Changed|Changed` event.
     code_samples:
       - printing-when-gamepad-selection-changes
     type: GuiObject
@@ -288,7 +288,7 @@ properties:
       `Class.StarterGui:SetCoreGuiEnabled()`, changing the size and position of
       Roblox UI Controls, and/or others. For this reason, it's recommend that
       you detect and react to changes of this property with
-      `Class.Instance:GetPropertyChangedSignal()`.
+      `Class.Object:GetPropertyChangedSignal()`.
     code_samples:
       - GuiService-TopbarInset
     type: Rect

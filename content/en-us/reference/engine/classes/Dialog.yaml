@@ -273,7 +273,7 @@ methods:
       - Dialog-GetCurrentPlayers1
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''

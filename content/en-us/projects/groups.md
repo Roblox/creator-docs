@@ -1,5 +1,5 @@
 ---
-title: Group Collaboration
+title: Groups (Teams)
 description: Explains Roblox groups and how to collaborate with multiple creators on the same experience.
 ---
 
@@ -51,15 +51,15 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    <tbody>
      <tr>
        <td>**Add or remove group members**</td>
-       <td>Member can [invite](#inviting-members) and [remove](#removing-members) other members.</td>
+       <td>Members with this role can [invite](#inviting-members) and [remove](#removing-members) other members.</td>
      </tr>
      <tr>
-       <td>**Create, configure, and assign group roles**</td>
-       <td>Member can create and manage group roles, and [assign](#assigning-roles) any role to any member.</td>
+       <td>**Add or remove [role] role members**</td>
+       <td>Members with this role can give or remove the role to/from other members in the group. This permission is useful for roles that should have some management permissions but not at the super‑admin level.</td>
      </tr>
      <tr>
        <td>**Configure group profile**</td>
-       <td>Member can update the group's name, description, and other metadata. Does not include transferring ownership.</td>
+       <td>Members with this role can update the group's name, description, and other metadata. Does not include transferring ownership, which only the owner can do.</td>
      </tr>
    </tbody>
    <thead>
@@ -70,15 +70,60 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    <tbody>
      <tr>
       <td>**Play all group experiences**</td>
-      <td>Member can play all experiences owned by the group, whether they're private or public.</td>
+      <td>Members with this role can play all experiences owned by the group, whether they're private or public.</td>
      </tr>
      <tr>
        <td>**Edit all group experiences**</td>
-       <td>Member can edit all experiences and [assets](../projects/assets/index.md) owned by the group. Does not include editing an experience outside of a [collaborative](../projects/collaboration.md) session or saving a place from one experience into another experience.</td>
+       <td>Members with this role can edit all experiences and [assets](../projects/assets/index.md) owned by the group. Does not include editing an experience outside of a [collaborative](../projects/collaboration.md) session or saving a place from one experience into another experience.</td>
      </tr>
      <tr>
        <td>**View all analytics for group experiences**</td>
-       <td>Member can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don't have edit access.</td>
+       <td>Members with this role can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don't have edit access.</td>
+     </tr>
+   </tbody>
+	 <thead>
+     <tr>
+       <th colspan="2">Group Revenue</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+      <td>**Configure group revenue**</td>
+      <td>Members with this role can view all group revenue (as&nbsp;below), and also directly manage it. This includes setting up [recurring payouts](#recurring-payouts), as well as sending [one‑time payouts](#one-time-payouts) to collaborators.</td>
+     </tr>
+     <tr>
+       <td>**View group revenue**</td>
+       <td>Members with this role can view the group Robux balance, any configured recurring split payouts, and (in the future) new revenue logging features.</td>
+     </tr>
+   </tbody>
+	 <thead>
+     <tr>
+       <th colspan="2">Avatar Item Permissions</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+      <td>**Configure classic avatar items**</td>
+      <td>Members with this role can configure classic avatar items such as 2D clothing.</td>
+     </tr>
+     <tr>
+       <td>**Create classic avatar items**</td>
+       <td>Members with this role can create classic avatar items such as 2D clothing.</td>
+     </tr>
+   </tbody>
+	 <thead>
+     <tr>
+       <th colspan="2">Open Cloud Permissions</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+      <td>**Manage all API keys**</td>
+      <td>Members with this role can upload their own [Open Cloud API keys](../cloud/open-cloud/api-keys.md) to the group, as well as configure everyone else's.</td>
+     </tr>
+     <tr>
+       <td>**Manage own API keys**</td>
+       <td>Members with this role can configure and upload their own [Open Cloud API keys](../cloud/open-cloud/api-keys.md) to the group (but not configure everyone else's as above).</td>
      </tr>
    </tbody>
    </table>
@@ -160,20 +205,20 @@ Consider the following scenario where a group experience "Laser&nbsp;Maze" is sp
 
 <br />
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	Assuming the experience earns 1000 Robux, the three members receive 400, 300, and 100 Robux respectively (40%&ndash;30%&ndash;10%).
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	The remaining 200 Robux &mdash; 20% of the experience split&nbsp;&mdash; passes onward to the **group split** percentages, defined at 20%&ndash;20%&ndash;10% among the same three members; they receive an additional 40, 40, and 20 Robux respectively.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	The remaining 100 Robux &mdash; 50% of the group split&nbsp;&mdash; is placed in the group's overall balance.
 	</Grid>
 </Grid>

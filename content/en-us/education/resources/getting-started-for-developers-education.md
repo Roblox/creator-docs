@@ -33,19 +33,19 @@ Below are some examples of educational experiences highlighting the wide range o
 
 <Grid container spacing={4}>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 ![Person with Mars Rover](../../assets/education/developer/thumbnail-missionMars.png)
 <a href="https://www.roblox.com/games/10840095864"><h4>Mission: Mars</h4></a>
 Engineer a rover to withstand challenges on the harsh martian landscape. Designed by the renowned Boston Museum of Science, this experience fosters STEM and design thinking.
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 ![Logo of Lua Learning](../../assets/education/developer/thumbnail-luaLearning.png)
 <a href="https://www.roblox.com/games/1334669864/"><h4>Lua Learning</h4></a>
 Learn computational thinking, and Lua coding within Roblox. Users can complete interactive courses and even find user-created lessons on advanced technical concepts such as network security.
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 ![alt](../../assets/education/developer/thumbnail-untamedAnimals.png)
 <a href="https://www.roblox.com/games/5716123942"><h4>Untamed Animals</h4></a>
 Become a park ranger, or roleplay as an animal as you explore nature and engage in an active ecosystem. This experience has users building empathy for wildlife through gameplay.

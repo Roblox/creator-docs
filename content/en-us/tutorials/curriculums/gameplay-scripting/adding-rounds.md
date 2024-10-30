@@ -1,8 +1,8 @@
 ---
 title: Adding Rounds
 description: Explains how to implement round-based behavior.
-next: /tutorials/gameplay-scripting/implementing-blasters
-prev: /tutorials/gameplay-scripting/spawn-respawn
+next: /tutorials/curriculums/gameplay-scripting/implementing-blasters
+prev: /tutorials/curriculums/gameplay-scripting/spawn-respawn
 ---
 
 **Adding rounds** lets you structure gameplay into phases with a clear start and finish point so that players can measure their progress and have a periodic opportunity for an equal playing field. This is particularly important for team-based gameplay because it offers players the chance to switch up their play style depending on who is on their team during that round.
@@ -193,11 +193,11 @@ For example, if a player is on the team that scored the winning point, they rece
 
 <GridContainer numColumns="2">
   <figure>
-    <video controls src="../../assets/tutorials/gameplay-scripting/Adding-Rounds/Victory-UI.mp4" width="100%"></video>
+    <video controls src="../../../assets/tutorials/gameplay-scripting/Adding-Rounds/Victory-UI.mp4" width="100%"></video>
   <figcaption>Victory feedback</figcaption>
   </figure>
   <figure>
-    <video controls src="../../assets/tutorials/gameplay-scripting/Adding-Rounds/Defeat-UI.mp4" width="100%"></video>
+    <video controls src="../../../assets/tutorials/gameplay-scripting/Adding-Rounds/Defeat-UI.mp4" width="100%"></video>
   <figcaption>Defeat feedback</figcaption>
   </figure>
 </GridContainer>

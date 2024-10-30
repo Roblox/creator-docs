@@ -17,6 +17,19 @@ The **Platformer** template includes:
 
 <UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="18636963376" universeId="6314775459" />
 
+## UGC Homestore
+
+The **UGC Homestore** template includes everything you need to sell your user-generated content (UCG) directly within an experience, including:
+
+- Modular building objects that you can customize to fit the aesthetics of your personal UCG store.
+- Mannequins objects that you can customize with unique accessories and bundles that visitors can try on and purchase either individually or as a set.
+
+When you publish the template as your own experience, all of your items that you've previously published to the Marketplace automatically populate in the template's store. For more information on how to use this template, see [Touring the UGC Homestore Template](https://www.youtube.com/watch?v=6MPWLQmIKLk).
+
+<img src="../assets/resources/templates/Homestore-Template.png" width="50%" alt="" />
+
+<UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="110446511895848" universeId="6680068955" />
+
 ## Laser Tag
 
 The **Laser Tag** template includes:

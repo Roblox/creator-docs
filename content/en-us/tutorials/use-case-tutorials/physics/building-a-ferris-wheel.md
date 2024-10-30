@@ -1,10 +1,9 @@
 ---
 title: Building a Ferris Wheel
 description: The process for creating a Ferris Wheel using a motor.
-prev: /tutorials/building/physics/building-a-hinged-door
 ---
 
-In the last lesson, you learned how to make a door with `Class.HingeConstraint|HingeConstraints`. Many contraptions in Roblox will use multiple constraints to build more complicated mechanisms. In particular, you can configure several constraints to be **actuated**, meaning they will move under their own power. This tutorial will show you how to actuate a `Class.HingeConstraint` to be a **motor** in order to make a ferris wheel.
+Many contraptions in Roblox will use multiple constraints to build more complicated mechanisms. In particular, you can configure several constraints to be **actuated**, meaning they will move under their own power. This tutorial will show you how to actuate a `Class.HingeConstraint` to be a **motor** in order to make a ferris wheel.
 
 <video controls loop muted>
     <source src="../../../assets/tutorials/building-a-ferris-wheel/ferrisWheel-inContext.mp4" />

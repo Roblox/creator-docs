@@ -60,7 +60,7 @@ methods:
     code_samples:
     parameters:
       - name: instancesToAdd
-        type: Objects
+        type: Instances
         default:
         summary: ''
     returns:
@@ -94,7 +94,7 @@ methods:
       - Selection-SelectionChanged1
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of currently selected `Class.Instance|Instances`.
     tags: []
@@ -109,7 +109,7 @@ methods:
     code_samples:
     parameters:
       - name: instancesToRemove
-        type: Objects
+        type: Instances
         default:
         summary: ''
     returns:
@@ -146,7 +146,7 @@ methods:
       - SelectionSet1
     parameters:
       - name: selection
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.Instance|Instances` to set the current selection

@@ -10,15 +10,15 @@ Roblox uses a rigid body physics engine. Parts are subject to physical forces as
 An [assembly](../physics/assemblies.md) is one or more `Class.BasePart|BaseParts` connected by rigid constraints or motors (animated rigid joints). Assemblies can be set to an initial linear or angular velocity, or their behavior can be affected through [constraints](#constraints).
 
 <Grid container spacing={0}>
-  <Grid item xs={6} lg={3}>
+  <Grid item XSmall={6} XLarge={3}>
     <img src="../assets/physics/assemblies/Assembly-Example-Block.png" width="100%" />
     <figcaption>1&nbsp;assembly; 1&nbsp;part</figcaption>
   </Grid>
-  <Grid item xs={6} lg={3}>
+  <Grid item XSmall={6} XLarge={3}>
     <img src="../assets/physics/assemblies/Assembly-Example-Avatar.png" width="100%" />
     <figcaption>1&nbsp;assembly; 18&nbsp;parts</figcaption>
   </Grid>
-  <Grid item xs={12} lg={6}>
+  <Grid item XSmall={12} XLarge={6}>
     <img src="../assets/physics/assemblies/Assembly-Example-Ship.png" width="100%" />
     <figcaption>1&nbsp;assembly; 179&nbsp;parts</figcaption>
   </Grid>

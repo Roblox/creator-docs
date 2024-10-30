@@ -1,8 +1,8 @@
 ---
 title: Create Basic Visual Effects
 description: Explains how to create two different kinds of visual effect using particle emitters.
-prev: /tutorials/core/scripting/script-an-upgrade-button
-next: /tutorials/core/building/customize-global-lighting
+prev: /tutorials/curriculums/core/scripting/script-an-upgrade-button
+next: /tutorials/curriculums/core/building/customize-global-lighting
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/Pk_UX4zMfeg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

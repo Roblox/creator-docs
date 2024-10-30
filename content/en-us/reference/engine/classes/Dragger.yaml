@@ -57,7 +57,7 @@ methods:
         default:
         summary: ''
       - name: parts
-        type: Objects
+        type: Instances
         default:
         summary: ''
     returns:

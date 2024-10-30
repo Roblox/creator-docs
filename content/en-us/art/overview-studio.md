@@ -294,7 +294,7 @@ For more information, see [Terrain](../parts/terrain.md).
 
 Lighting can be categorized into the following:
 
-- **Global lighting** - Refers to the luminescence from either the sun or moon in an outdoor environment. You can set the properties of your global lighting by adjusting the Lighting service. For additional hands-on instructions on adjusting global lighting, see the [Customize Global Lighting](../tutorials/core/building/customize-global-lighting.md) lesson of our Core Curriculum.
+- **Global lighting** - Refers to the luminescence from either the sun or moon in an outdoor environment. You can set the properties of your global lighting by adjusting the Lighting service. For additional hands-on instructions on adjusting global lighting, see the [Customize Global Lighting](../tutorials/curriculums/core/building/customize-global-lighting.md) lesson of our Core Curriculum.
 - **Local lighting** - Refers to light sources placed within your experiences, such as pointlights, spotlights, and surface lights. You can modify lighting scenarios based on different interior rooms or sections of your experience by using one or more light sources.
 
 For additional information on modifying your environment's lighting, see [Lighting](../environment/lighting.md).

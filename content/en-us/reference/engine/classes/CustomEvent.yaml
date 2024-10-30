@@ -24,7 +24,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: |

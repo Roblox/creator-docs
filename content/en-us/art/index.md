@@ -15,7 +15,7 @@ No matter your creative background, Roblox provides a variety of tools, guides, 
 Whether you're just getting started with Roblox or need a quick refresher, use the following popular resources to get up to speed.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
   <div class="container"
@@ -28,7 +28,7 @@ Whether you're just getting started with Roblox or need a quick refresher, use t
   </Grid>
   </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
   <div class="container"
@@ -44,7 +44,7 @@ Whether you're just getting started with Roblox or need a quick refresher, use t
   </Grid>
   </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
   <div class="container"
@@ -70,7 +70,7 @@ that teaches you the skills you need to create and monetize your experiences.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
 <div class="container"
@@ -89,7 +89,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
 <div class="container"
@@ -112,7 +112,7 @@ Check out the following showcases made by Roblox and the community. Each of thes
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
   <div class="container"
@@ -127,12 +127,12 @@ Check out the following showcases made by Roblox and the community. Each of thes
   </Grid>
   </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
   <div class="container"
   style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-  <img src="../assets/art/Thumbnail-Shrine.png" />
+  <img src="../assets/art/Shrine-Detailed.jpg" />
   </div>
     <Typography variant='h4'>Community Creations</Typography>
         <Typography variant='body1' >Check out these amazing showcase experiences created members of the community!</Typography>
@@ -149,7 +149,7 @@ The following articles are from the staff, covering a broad array of topics that
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <img src="../assets/art/Thumbnail-Buttes.jpeg" />
 <Typography variant='h4'>Creating Buttes and Mesas with Studio Terrain</Typography>
@@ -162,7 +162,7 @@ style={{marginRight:8, alignSelf: 'flex-start'}}>Learn more</Button>
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
 <div class="container"
@@ -179,7 +179,7 @@ style={{marginRight:8, alignSelf: 'flex-start'}}>Learn more</Button>
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <img src="../assets/art/Thumbnail-Tinting.jpeg" />
 <Typography variant='h4'>Using Alpha Masks to Customize Colors</Typography>
@@ -192,7 +192,7 @@ style={{marginRight:8, alignSelf: 'flex-start'}}>Learn more</Button>
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <img src="../assets/art/Thumbnail-Looping.png" />
 <Typography variant='h4'>Creating Perfect Audio Loops</Typography>
@@ -205,7 +205,7 @@ style={{marginRight:8, alignSelf: 'flex-start'}}>Learn more</Button>
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <img src="../assets/art/Thumbnail-Radial.png" />
 <Typography variant='h4'>Using Radial Symmetry with Zbrush</Typography>
@@ -218,7 +218,7 @@ style={{marginRight:8, alignSelf: 'flex-start'}}>Learn more</Button>
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
 <Typography variant='h4'>Looking for more?</Typography>
@@ -239,7 +239,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 <Typography variant='h5'>Getting Started and Tutorials</Typography>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <Typography variant='h5'>Topic Overviews</Typography>
 
@@ -252,7 +252,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <Typography variant='h5'>3D Art Tutorials</Typography>
 
@@ -266,7 +266,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
 <Typography variant='h5'>Avatar Tutorials</Typography>
@@ -287,7 +287,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
 <Typography variant='h5'>Technical Specs</Typography>
@@ -302,7 +302,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <Typography variant='h5'>Reference Files</Typography>
 <a href="./modeling/project-files.md"><Typography variant='body1' style={{marginBottom: 12}}>Example Models</Typography></a>
@@ -312,7 +312,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <Typography variant='h5'>Texturing</Typography>
 
@@ -328,7 +328,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <Typography variant='h5'>Studio Tools</Typography>
 
@@ -354,7 +354,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <Typography variant='h5'>Environment, Lighting, and Effects</Typography>
 
@@ -373,7 +373,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 </Grid>
 </Grid>
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
 <Typography variant='h5'>Avatar Item Creation</Typography>
@@ -387,7 +387,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <Typography variant='h5'>Animation</Typography>
 
@@ -401,7 +401,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 <Typography variant='h5'>Facial Animation and Live Heads</Typography>
 
@@ -412,7 +412,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
 <Typography variant='h5'>Rigging and Skinning</Typography>
@@ -427,7 +427,7 @@ The following is a list of common 3D art resources ordered by subject, as well a
 </Grid>
 </Grid>
 
-<Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+<Grid item container XSmall={12} Medium={6} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
 <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
 
 <Typography variant='h5'>Publishing to Creator Store and Marketplace</Typography>

@@ -24,7 +24,7 @@ To create a developer product:
 3. Click **Create a Developer Product**.
 4. Upload an image to display as the product icon. Make sure the image doesn't exceed 512x512 pixels, doesn't include important details outside of its circular boundaries, and is in `.jpg`, `.png`, or `.bmp` format.
 5. Enter a name and a description for the product.
-6. Set the product price in Robux.
+6. Set the product price in Robux. The minimum price is 1 Robux, and the maximum price is 1 billion Robux.
 7. Click **Create Developer Product**.
 
 <Alert severity="info">
