@@ -97,7 +97,7 @@ properties:
       coordinate.
     description: |
       **OffsetStudsV** determines how far the rendered texture is offset on the
-      horizontal axis in studs.
+      vertical axis in studs.
 
       #### Example
 
