@@ -24,19 +24,20 @@ deprecation_message: ''
 properties:
   - name: AudioEmitter.AngleAttenuation
     summary: |
-      Represents how the perceived volume of the emitted sound changes based on the
-      angle between a `Class.AudioListener` and the `Datatype.CFrame.LookVector|LookVector`
-      associated with the `Class.AudioEmitter`.
+      Represents how the perceived volume of the emitted sound changes based on
+      the angle between a `Class.AudioListener` and the
+      `Datatype.CFrame.LookVector|LookVector` associated with the
+      `Class.AudioEmitter`.
     description: |
       Represents a volume-over-angle curve that affects how loudly a
       `Class.AudioListener` will hear the `Class.AudioEmitter`, based on the
-      angle between them and the `Datatype.CFrame.LookVector|LookVector` associated
-      with the `Class.AudioEmitter`.
+      angle between them and the `Datatype.CFrame.LookVector|LookVector`
+      associated with the `Class.AudioEmitter`.
 
       This property is internal and can't be accessed by scripts; it exists to
       support replication. See
-      `Class.AudioEmitter:SetAngleAttenuation()|SetAngleAttenuation()` for
-      usage details.
+      `Class.AudioEmitter:SetAngleAttenuation()|SetAngleAttenuation()` for usage
+      details.
     code_samples: []
     type: BinaryString
     tags: []
@@ -106,13 +107,14 @@ properties:
 methods:
   - name: AudioEmitter:GetAngleAttenuation
     summary: |
-      Gets the angle attenuation curve that the `Class.AudioEmitter` is
-      using, or an empty table if it's using the default curve.
+      Gets the angle attenuation curve that the `Class.AudioEmitter` is using,
+      or an empty table if it's using the default curve.
     description: |
-      Returns a table mapping angle to volume. Keys are numbers between `0` and `180`
-      (inclusive), while values are numbers between `0` and `1`
-      (inclusive) describing how volume attenuates depending on direction. This method returns an
-      empty table if the default angle attenuation curve is being used.
+      Returns a table mapping angle to volume. Keys are numbers between `0` and
+      `180` (inclusive), while values are numbers between `0` and `1`
+      (inclusive) describing how volume attenuates depending on direction. This
+      method returns an empty table if the default angle attenuation curve is
+      being used.
     code_samples: []
     parameters: []
     returns:
@@ -185,31 +187,31 @@ methods:
     writeCapabilities: []
   - name: AudioEmitter:SetAngleAttenuation
     summary: |
-      Sets the angle attenuation curve that the `Class.AudioEmitter` should
-      use, or uses a constant curve of volume `1` if none is provided.
+      Sets the angle attenuation curve that the `Class.AudioEmitter` should use,
+      or uses a constant curve of volume `1` if none is provided.
     description: |
       Sets a volume-over-angle curve that affects how loudly a
       `Class.AudioListener` will hear the `Class.AudioEmitter`, based on the
-      angle between them and the `Datatype.CFrame.LookVector|LookVector` associated
-      with the `Class.AudioEmitter`.
+      angle between them and the `Datatype.CFrame.LookVector|LookVector`
+      associated with the `Class.AudioEmitter`.
 
-      The curve is represented by a table mapping angle keys to volume
-      values. Keys are expected to be unique numbers between `0` and `180` (inclusive),
-      while values are expected to be numbers between `0` 
-      and `1` (inclusive). Tables containing up to 400 key-value pairs are supported.
+      The curve is represented by a table mapping angle keys to volume values.
+      Keys are expected to be unique numbers between `0` and `180` (inclusive),
+      while values are expected to be numbers between `0` and `1` (inclusive).
+      Tables containing up to 400 key-value pairs are supported.
 
       The volume of the `Class.AudioEmitter` from the perspective of a
       `Class.AudioListener` at an angle `a` is determined by linearly
       interpolating between the volume levels for the points on the curve whose
-      angle values are directly above and below `a`. If there is either no
-      point below `a` or no point above `a`, the volume level of the other point
-      is chosen. Essentially, the curve is a sequence of points connected by
+      angle values are directly above and below `a`. If there is either no point
+      below `a` or no point above `a`, the volume level of the other point is
+      chosen. Essentially, the curve is a sequence of points connected by
       straight lines, and beyond its left and right endpoints the curve extends
       outward at their respective volume levels.
 
-      This volume will be multiplied with the volumes from all other
-      attenuation curves (including the ones on the receiving
-      `Class.AudioListener`) to obtain the final audibility.
+      This volume will be multiplied with the volumes from all other attenuation
+      curves (including the ones on the receiving `Class.AudioListener`) to
+      obtain the final audibility.
 
       If the table is empty or `nil`, the `Class.AudioEmitter` defaults to using
       an angle attenuation curve with the constant volume value of `1`.
@@ -252,9 +254,9 @@ methods:
       straight lines, and beyond its left and right endpoints the curve extends
       outward infinitely at their respective volume levels.
 
-      This volume will be multiplied with the volumes from all other
-      attenuation curves (including the ones on the receiving
-      `Class.AudioListener`) to obtain the final audibility.
+      This volume will be multiplied with the volumes from all other attenuation
+      curves (including the ones on the receiving `Class.AudioListener`) to
+      obtain the final audibility.
 
       If the table is empty or `nil`, the `Class.AudioEmitter` defaults to using
       a distance attenuation curve determined by the inverse-square law.

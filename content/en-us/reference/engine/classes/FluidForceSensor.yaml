@@ -3,7 +3,9 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  A `Class.SensorBase` that outputs `Class.FluidForceSensor.Force|Force`, `Class.FluidForceSensor.Torque|Torque` and `Class.FluidForceSensor.CenterOfPressure|CenterOfPressure`.
+  A `Class.SensorBase` that outputs `Class.FluidForceSensor.Force|Force`,
+  `Class.FluidForceSensor.Torque|Torque` and
+  `Class.FluidForceSensor.CenterOfPressure|CenterOfPressure`.
 description: |
   `FluidForceSensor` is a `Class.SensorBase` which outputs the results of fluid
   force simulation from the last physics frame for the part it is attached to.
@@ -14,8 +16,7 @@ description: |
 code_samples: []
 inherits:
   - SensorBase
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: FluidForceSensor.CenterOfPressure

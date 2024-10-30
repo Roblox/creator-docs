@@ -171,6 +171,7 @@ methods:
           The new `Class.EditableMesh` instance.
     tags:
       - Yields
+      - Deprecated
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -190,8 +191,8 @@ methods:
       `Class.MeshPart`. It throws errors if creation fails.
     code_samples: []
     parameters:
-      - name: meshId
-        type: ContentId
+      - name: meshContent
+        type: Content
         default:
         summary: ''
       - name: options
@@ -218,7 +219,7 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: PluginSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

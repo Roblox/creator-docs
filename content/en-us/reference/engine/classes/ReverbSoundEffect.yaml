@@ -38,7 +38,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: ReverbSoundEffect.Density
     summary: |
@@ -57,7 +58,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: ReverbSoundEffect.Diffusion
     summary: |
@@ -78,7 +80,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: ReverbSoundEffect.DryLevel
     summary: |
@@ -97,7 +100,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: ReverbSoundEffect.WetLevel
     summary: |
@@ -116,7 +120,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
 methods: []
 events: []

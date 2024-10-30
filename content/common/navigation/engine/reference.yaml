@@ -3768,11 +3768,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/DebuggerStatus.yaml
         ignoreTranslation: true
-      - title: DecreaseMinimumPartDensityMode
-        path: /reference/engine/enums/DecreaseMinimumPartDensityMode
-        type: engineapi
-        source: /reference/engine/enums/DecreaseMinimumPartDensityMode.yaml
-        ignoreTranslation: true
       - title: DevCameraOcclusionMode
         path: /reference/engine/enums/DevCameraOcclusionMode
         type: engineapi

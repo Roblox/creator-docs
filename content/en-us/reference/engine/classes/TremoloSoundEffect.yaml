@@ -37,7 +37,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: TremoloSoundEffect.Duty
     summary: |
@@ -58,7 +59,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: TremoloSoundEffect.Frequency
     summary: |
@@ -78,7 +80,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
 methods: []
 events: []

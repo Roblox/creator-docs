@@ -376,7 +376,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: RobloxScriptSecurity
+    security: PluginSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

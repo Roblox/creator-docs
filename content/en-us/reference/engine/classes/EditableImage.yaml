@@ -63,7 +63,8 @@ description: |
 code_samples: []
 inherits:
   - Object
-tags: []
+tags:
+  - NotCreatable
 deprecation_message: ''
 properties:
   - name: EditableImage.Size
@@ -97,6 +98,20 @@ properties:
     capabilities: []
     writeCapabilities: []
 methods:
+  - name: EditableImage:Destroy
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:DrawCircle
     summary: |
       Draws a circle at the specified point.
@@ -294,20 +309,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: EditableImage:GetContent
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Content
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: EditableImage:ReadPixelsBuffer
     summary: |
       Reads a rectangular region of pixels into a buffer.
@@ -320,7 +321,8 @@ methods:
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
-    code_samples: []
+    code_samples:
+      - EditableImage-ReadPixels1
     parameters:
       - name: position
         type: Vector2
@@ -357,7 +359,8 @@ methods:
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
-    code_samples: []
+    code_samples:
+      - EditableImage-ReadPixelsWritePixels1
     parameters:
       - name: position
         type: Vector2
