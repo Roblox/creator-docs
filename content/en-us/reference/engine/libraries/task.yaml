@@ -55,7 +55,7 @@ functions:
     description: |
       Accepts a function or a thread (as returned by coroutine.create) and
       defers it until the end of the current
-      [resumption cycle](https://devforum.roblox.com/t/1240569), at which point
+      resumption cycle, at which point
       it is resumed with the engine's scheduler like with
       `Library.task.spawn()`. Arguments after the first are sent to the
       function/thread.
