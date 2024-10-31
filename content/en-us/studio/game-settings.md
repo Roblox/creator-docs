@@ -43,7 +43,7 @@ The **Basic Info** tab contains general settings for an experience, such as its 
   </tr>
   <tr>
     <td>**Screenshots & Videos**</td>
-    <td>Lets you upload [promotional thumbnails](../production/promotion/promotional-thumbnails.md). </td>
+    <td>Lets you upload [promotional thumbnails](../production/promotion/thumbnails.md). </td>
   </tr>
   <tr>
     <td>**Genre**</td>

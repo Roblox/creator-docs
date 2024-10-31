@@ -413,7 +413,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 
 <a href="https://digitalsake.com/" title="digitalsake">digitalsake</a>
 
-#### Cyprus 
+#### Cyprus
 
 <a href="https://impactacademiescyprus.com/" title="impactCy">impact Academies and Camps</a>
 
@@ -423,7 +423,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://kiber-one.cz/moduli/roblox-studio-sdelat-vse-chto-vy-mozhete-sebe-predstavit/" title="KIBERone Czech Republic">KIBERone Czech Republic</a>
 <a href="https://www.logiscool.com/" title="Logiscool">Logiscool</a>
 
-#### Denmark 
+#### Denmark
 
 <a href="https://impactacademies.dk/copenhagen" title="impactDk">impact Academies and Camps</a>
 
@@ -490,7 +490,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://kodingnext.com/" title="Koding Next">Koding Next</a>
 <a href="https://kodingakademi.id/" title="KodingAkademi">KodingAkademi</a>
 
-#### Ireland 
+#### Ireland
 
 <a href="https://impactacademiesie.com/" title="impactIr">impact Academies and Camps</a>
 
@@ -540,7 +540,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://small.academy/cursuri/programare-roblox/" title="Small Academy">Small Academy</a>
 <a href="https://impactacademies.com/" title="impact Academies and Camps">impact Academies and Camps</a>
 
-#### Montenegro 
+#### Montenegro
 
 <a href="https://impactacademies.me/" title="impactMg">impact Academies and Camps</a>
 

@@ -32,7 +32,7 @@ can [release it to the public](#releasing-to-the-public), although beta testing 
     [full&nbsp;release](#full-release).
   </TabItem>
 	<TabItem label="Full Release">
-    When you're ready to release an experience to the world, you can [release it to the public](#releasing-to-the-public) under its final name with a complete description, icon, and other promotional imagery. For guidance on release names, descriptions, and promotional materials, review [metadata best practices](#metadata-best-practices), experience [icons](../../production/publishing/experience-icons.md), and [promotional thumbnails](../../production/promotion/promotional-thumbnails.md).
+    When you're ready to release an experience to the world, you can [release it to the public](#releasing-to-the-public) under its final name with a complete description, icon, and other promotional imagery. For guidance on release names, descriptions, and promotional materials, review [metadata best practices](#metadata-best-practices), experience [icons](../../production/publishing/experience-icons.md), and [promotional thumbnails](../../production/promotion/thumbnails.md).
   </TabItem>
 </Tabs>
 
@@ -266,8 +266,8 @@ Roblox automatically retains saved versions of each place for version control an
 1. Right-click the desired place and select **View History**. The version history window opens.
 1. Locate and select the version to revert to, then click the **Open** button to launch a new Studio session for the selected version.
 1. If the place has been [released to the public](#releasing-to-the-public) and you want to overwrite the place's live/public version with the reverted version:
-	1. Publish the place you just reverted to, choosing the same experience and same place during the publishing process.
-	2. Restart the servers for updates as outlined in [Updating Experiences](#updating-experiences).
+   1. Publish the place you just reverted to, choosing the same experience and same place during the publishing process.
+   2. Restart the servers for updates as outlined in [Updating Experiences](#updating-experiences).
 
 ## Metadata Best Practices
 

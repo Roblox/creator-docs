@@ -45,8 +45,8 @@ To create an event, you must have the [Edit all group experiences](../../project
           <td>**Activity**</td>
           <td>An in-experience festival.</td>
         </tr>
-	    </tbody>
-	    </table>
+       </tbody>
+       </table>
 
    3. Enter a description following general [best practices](../../production/publishing/publishing-experiences-and-places.md#metadata-best-practices) to accurately portray the event. If you're using the event to promote a major experience update, summarize the key updates. If applicable, mention incentives for players to join such as exclusive event‑specific merch or [badges](../../production/publishing/badges.md) that may be earned during the event.
    4. Select a **privacy level**; public events will be viewable to all players while private events will only be visible by you and others with elevated access.
@@ -55,15 +55,15 @@ To create an event, you must have the [Edit all group experiences](../../project
       If you're not yet ready to publicize the event, set it as **private**. Later, when you're ready to begin promoting the event, change it to **public**. Private events and their event pages cannot be seen by users without access, and they will not appear on its experience's detail page.
       </Alert>
 
-   5. Add one or more thumbnails to promote your event. The first thumbnail in the list will be used as the primary event thumbnail, so think carefully about what image you want to choose. If you don't add any thumbnails for the event, the [experience thumbnail](../../production/promotion/promotional-thumbnails.md) will be used.
+   5. Add one or more thumbnails to promote your event. The first thumbnail in the list will be used as the primary event thumbnail, so think carefully about what image you want to choose. If you don't add any thumbnails for the event, the [experience thumbnail](../../production/promotion/thumbnails.md) will be used.
 
-4.  When ready, click **Publish Event** to save your event. If you set the event to public, it will be immediately discoverable on the experience's detail page.
+4. When ready, click **Publish Event** to save your event. If you set the event to public, it will be immediately discoverable on the experience's detail page.
 
    <img src="../../assets/creator-dashboard/Creations-Events-Example.png" width="368" alt="Example events on the Creator Dashboard" />
 
-	 <Alert severity="warning">
-   Assets which are pending review or are moderated will display a placeholder.
-   </Alert>
+<Alert severity="warning">
+Assets which are pending review or are moderated will display a placeholder.
+</Alert>
 
 ## Deleting Events
 
