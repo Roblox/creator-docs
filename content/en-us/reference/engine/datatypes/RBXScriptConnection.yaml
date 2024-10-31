@@ -3,17 +3,18 @@ type: datatype
 summary: |
   A connection between an `Datatype.RBXScriptSignal` and a function.
 description: |
-  The `Datatype.RBXScriptConnection` data type, also known as a Connection, is a
-  special object returned by the Connect method of an Event
+  The `RBXScriptConnection` data type is a special object returned by the
+  `Datatype.RBXScriptSignal:Connect()|Connect()` method of an event
   (`Datatype.RBXScriptSignal`). This is used primarily to disconnect a listener
   from an `Datatype.RBXScriptSignal`.
+  
   ```lua
   local part : BasePart = script.Parent
-  -- Store a reference to the RBXScriptConnection so we can disconnect it later
+  -- Store reference to the RBXScriptConnection so it can be disconnected later
   local connection : RBXScriptConnection = part.Touched:Connect(function(otherPart)
       print("Hello world!")
   end)
-  -- Wait 15 seconds, then disconnect the lart
+  -- Wait 15 seconds, then disconnect
   task.wait(15)
   connection:Disconnect()
   ```
@@ -28,8 +29,8 @@ properties:
     summary: |
       The state of the RBXScriptConnection.
     description: |
-      Describes whether or not the connection is still alive. This becomes false
-      if `connection:Disconnect()` is called.
+      Describes whether or not the connection is still alive. This becomes `false`
+      if `Datatype.RBXScriptConnection:Disconnect()|Disconnect()` is called.
     code_samples: []
     tags: []
     deprecation_message: ''
