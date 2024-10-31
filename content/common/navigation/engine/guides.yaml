@@ -502,8 +502,6 @@ navigation:
         section:
           - title: Overview
             path: /production/publishing/publishing-experiences-and-places
-          - title: Experience Genres
-            path: /production/publishing/experience-genres
           - title: Experience Icons
             path: /production/publishing/experience-icons
           - title: Experience Thumbnails
