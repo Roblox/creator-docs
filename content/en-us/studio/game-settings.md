@@ -149,7 +149,7 @@ You should only enable the following settings if you trust all assets from other
   </tr>
   <tr>
     <td>**Secrets**</td>
-    <td>Allows for the creation and configuration of [Secrets](../reference/engine/datatypes/Secret.yaml) for Studio sessions using `Class.HttpService`. Visible only if HTTP requests are allowed.</td>
+    <td>Allows for the creation and configuration of `Datatype.Secret` for local Studio sessions using `Class.HttpService`. Visible only if HTTP requests are allowed. Secrets defined here are local to the device, and not available in Team Create sessions. Use Creator Hub to define production secrets. </td>
   </tr>
   <tr>
     <td>**Enable&nbsp;Studio&nbsp;Access to API Services**</td>
