@@ -152,10 +152,10 @@ methods:
   - name: AssetService:CreateEditableMeshFromPartAsync
     summary: |
       Returns a new `Class.EditableMesh` instance created from an existing
-      `Class.MeshPart`.
+      `Class.MeshPart`. 
     description: |
       Returns a new `Class.EditableMesh` instance created from the
-      `Class.MeshPart.MeshId|MeshId` of an existing `Class.MeshPart`.
+      `Class.MeshPart.MeshId|MeshId` of an existing `Class.MeshPart`. 
     code_samples: []
     parameters:
       - name: meshPart
@@ -172,7 +172,7 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: ''
+    deprecation_message: 'This function has been deprecated - use `Class.AssetService:CreateEditableMeshAsync()`.'
     security: None
     thread_safety: Unsafe
     capabilities: []
