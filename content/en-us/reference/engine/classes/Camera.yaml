@@ -238,6 +238,8 @@ properties:
       viewport to its opposite corner) the camera can view. See
       `Class.Camera.FieldOfView|FieldOfView` for a more general explanation of
       field of view.
+
+      Note: the `Class.Camera.DiagonalFieldOfView` property represents the field of view that is visible by the `Class.Camera` rendering into the fullscreen area. The fullscreen area may be occluded by notches or screen cutouts on some devices. See `Class.Camera.ViewportSize` for more information.
     code_samples:
     type: float
     tags:
@@ -271,6 +273,8 @@ properties:
         using binoculars.
       - Increasing FOV when the player is "sprinting" to give the impression of
         a lack of control.
+
+      Note: the `Class.Camera.FieldOfView` property represents the field of view that is visible by the `Class.Camera` rendering into the fullscreen area. The fullscreen area may be occluded by notches or screen cutouts on some devices. See `Class.Camera.ViewportSize` for more information.
     code_samples:
     type: float
     tags: []
@@ -534,15 +538,23 @@ properties:
     writeCapabilities: []
   - name: Camera.ViewportSize
     summary: |
-      Describes the dimensions, in pixels, of the client's viewport.
+      The dimensions of the device safe area rectangle on a Roblox client.
+      The units are in Roblox UI offset units, which may be different from
+      native display pixels.
     description: |
-      **ViewportSize** describes the dimensions, in pixels, of the client's
-      viewport.
+      The device safe area rectangle includes the Roblox top bar area, but does not include any display cutouts.
 
-      This property ignores the GUI inset applied by the top bar, meaning the
-      center of the screen can be found at precisely at 50% of the viewport in
-      both directions. You can find the position of a `Datatype.Vector3` in the
-      world on the viewport using `Class.Camera:WorldToViewportPoint()`.
+      <img src="../../../assets/engine-api/enums/ScreenInsets/DeviceSafeInsets.png" width="840"
+      alt="Mobile device screen with cutout showing device safe area." />
+
+      Note: `Class.Camera.ViewportSize` is not equal to the fullscreen area size on displays with cutouts or notches. To obtain the fullscreen area size on all displays, you can query the `AbsoluteSize` property of a `Class.ScreenGui` with `ScreenInsets=None`. See `Enum.ScreenInsets` for a more information about how screen areas are defined.
+
+      <img src="../../../assets/engine-api/enums/ScreenInsets/None.png" width="840"
+      alt="Mobile device screen with cutout showing fullscreen area." />
+
+      `Class.Camera.ViewportSize` is not equal to the fullscreen size in order to improve cross-platform compatibility and backwards compatibility with legacy experiences.
+
+      Note: `Class.Camera.ViewportSize` is not the actual viewport size the camera uses for rendering. The Camera renders in the the fullscreen area. Also the `Class.Camera.FieldOfView` and `Class.Camera.DiagonalFieldOfView` properties are based on the fullscreen area, not `Class.Camera.ViewportSize`.
     code_samples:
     type: Vector2
     tags:
