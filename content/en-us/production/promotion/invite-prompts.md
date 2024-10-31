@@ -11,6 +11,8 @@ The invite prompt system features the following:
 - **Launch Data** &mdash; Include optional [launch data](#including-launch-data) that can be read through `Class.Player:GetJoinData()` when the invited friend joins. Example use cases include routing invited friends to a coordinate location or personalizing the joining experience for the invitee.
 - **Customizable Text** &mdash; Customize the [invite prompt](#prompting-an-invite) message and the [notification](#setting-notification-options) message. For example, an invite prompt for the player may read "Ask your friends to join the adventure!" and the notification message for the invited friend(s) may read "\{displayName\} wants you to join their adventure in \{experienceName\}!".
 
+You can also track and reward inviters and invitees using the [Friend Invite Reward System](./referral-system.md).
+
    <Tabs>
    <TabItem label="In-Experience Prompt">
      <figure>
