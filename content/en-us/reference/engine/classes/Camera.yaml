@@ -239,7 +239,7 @@ properties:
       `Class.Camera.FieldOfView|FieldOfView` for a more general explanation of
       field of view.
 
-      Note: the `Class.Camera.DiagonalFieldOfView` property represents the field of view that is visible by the `Class.Camera` rendering into the fullscreen area. The fullscreen area may be occluded by notches or screen cutouts on some devices. See `Class.Camera.ViewportSize` for more information.
+      Note that `DiagonalFieldOfView` represents the field of view that is visible by the `Class.Camera` rendering into the fullscreen area which may be occluded by notches or screen cutouts on some devices. See `Class.Camera.ViewportSize|ViewportSize` for more information.
     code_samples:
     type: float
     tags:
@@ -274,7 +274,7 @@ properties:
       - Increasing FOV when the player is "sprinting" to give the impression of
         a lack of control.
 
-      Note: the `Class.Camera.FieldOfView` property represents the field of view that is visible by the `Class.Camera` rendering into the fullscreen area. The fullscreen area may be occluded by notches or screen cutouts on some devices. See `Class.Camera.ViewportSize` for more information.
+      Note that `FieldOfView` represents the field of view that is visible by the `Class.Camera` rendering into the fullscreen area which may be occluded by notches or screen cutouts on some devices. See `Class.Camera.ViewportSize|ViewportSize` for more information.
     code_samples:
     type: float
     tags: []
@@ -539,7 +539,7 @@ properties:
   - name: Camera.ViewportSize
     summary: |
       The dimensions of the device safe area rectangle on a Roblox client.
-      The units are in Roblox UI offset units, which may be different from
+      The units are in Roblox UI offset units which may be different from
       native display pixels.
     description: |
       The device safe area rectangle includes the Roblox top bar area, but does not include any display cutouts.
