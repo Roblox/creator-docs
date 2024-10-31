@@ -538,11 +538,9 @@ properties:
     writeCapabilities: []
   - name: Camera.ViewportSize
     summary: |
-      The dimensions of the device safe area rectangle on a Roblox client.
-      The units are in Roblox UI offset units which may be different from
-      native display pixels.
+      The dimensions of the device safe area on a Roblox client.
     description: |
-      The device safe area rectangle includes the Roblox top bar area, but does not include any display cutouts.
+      `Class.Camera.ViewportSize` returns the dimensions of the device safe area on the current screen. The device safe area is a rectangle which includes the Roblox top bar area, but does not include any cutouts in the display. The units of `Class.Camera.ViewportSize` are Roblox UI offset units, which may be different from native display pixels.
 
       <img src="../../../assets/engine-api/enums/ScreenInsets/DeviceSafeInsets.png" width="840"
       alt="Mobile device screen with cutout showing device safe area." />
@@ -557,6 +555,12 @@ properties:
       Note: `Class.Camera.ViewportSize` is not the actual viewport size the camera uses for rendering. The Camera renders in the fullscreen area. Also the `Class.Camera.FieldOfView` and `Class.Camera.DiagonalFieldOfView` properties are based on the fullscreen area, not `Class.Camera.ViewportSize`.
       
       To learn more about how your experience will run on a device with notches/cutouts, please see [this post](https://devforum.roblox.com/t/notched-screen-support-full-release/2074324/1).
+
+      Only one `Class.Camera` has its `Class.Camera.ViewportSize` updated each frame: the `Class.Camera` currently referred to by `Class.Workspace.CurrentCamera`. The `ViewportSize` of all other `Class.Camera`s in your experience won't be updated. This includes `Class.Camera`s that are used for `Class.ViewportFrame`s.
+
+      The initial value of `Class.Camera.ViewportSize` is `(1, 1)`. The `Class.Workspace.CurrentCamera`'s `Class.Camera.ViewportSize` is updated once each frame during the render prepare step.
+
+      For example, a `Class.ViewportFrame` with `Class.ViewportFrame.CurrentCamera` set to a different `Class.Camera` than the `Class.Workspace.CurrentCamera` will have its `ViewportSize` equal to the initial value of `(1, 1)`.
     code_samples:
     type: Vector2
     tags:
