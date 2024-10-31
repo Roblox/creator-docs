@@ -3,9 +3,9 @@ title: MicroProfiler
 description: The MicroProfiler is a Studio and client tool for optimizing your experience.
 ---
 
-The **MicroProfiler** is an optimization tool available in Roblox Studio and the Roblox client that provides detailed timing information for [Task Scheduler](../../studio/microprofiler/task-scheduler.md) processes called **tags**.
+The **MicroProfiler** is an optimization tool available in Roblox Studio and the Roblox client that provides detailed timing information for [Task Scheduler](../../studio/microprofiler/task-scheduler.md) tasks called **tags**.
 
-- For a list of common processes, refer to the [Tag Reference](../../studio/microprofiler/tag-table.md).
+- For a list of common tasks, refer to the [Tag Reference](../../studio/microprofiler/tag-table.md).
 - For a step-by-step example of using the MicroProfiler to identify a performance issue, see the [MicroProfiler Walkthrough](../../studio/microprofiler/using-microprofiler.md).
 
 ## MicroProfiler Basics
@@ -16,7 +16,7 @@ When open, a menu bar is visible at the top of the 3D viewport. In the default m
 
 <img alt="The Microprofiler frame graph, showing blue frames and detailed frame information." src="../../assets/optimization/microprofiler/micro-frame.png" width="440px" />
 
-Bars should generally be around the middle of the graph, but you might see sudden spikes (rapid increases in value). Spikes indicate that more time was taken to perform some process, usually because of an increased workload. For instance, creating a lot of moving parts requires more work from the physics simulation, which then needs more time to process motion and part contacts. The following image shows an example of a spike:
+Bars should generally be around the middle of the graph, but you might see sudden spikes (rapid increases in value). Spikes indicate that more time was taken to perform some task, usually because of an increased workload. For instance, creating a lot of moving parts requires more work from the physics simulation, which then needs more time to process motion and part contacts. The following image shows an example of a spike:
 
 <img alt="The Microprofiler with several bars higher than others." src="../../assets/optimization/microprofiler/micro-spike.png" width="300px" />
 
@@ -26,15 +26,15 @@ For a full summary of the various views and how to navigate the MicroProfiler in
 
 ## Threads
 
-Like many programs, Roblox uses multiple threads to perform several sequences of tasks at the same time. In the MicroProfiler [detailed mode](modes.md#detailed-mode), you can see labels for these on the left.
+Like many programs, Roblox uses multiple threads to perform several sequences of tasks at the same time. In the MicroProfiler [detailed mode](modes.md#detailed-mode), you can see labels for each thread on the left.
 
 <img alt="The lefthand side of the Microprofiler detailed view, with rows for threads." src="../../assets/optimization/microprofiler/micro-panning.png" width="440px" />
 
-There are three types of threads:
+There are three main thread types:
 
-- **Main/Render**: Processes input, `Class.Humanoid|Humanoids`, animations/tweening, physics ownership, sound, and waiting script resumes. Also updates Studio interfaces and coordinates the other threads.
+- **Main/Render**: Perhaps unintuitively, runs on the CPU. Processes input, `Class.Humanoid|Humanoids`, animations/tweening, physics ownership, sound, and waiting script resumes. Also updates Studio interfaces and coordinates the other threads.
 
-- **Worker** ("TSMk2 worker"): Helps the main thread with networking, physics, and pathfinding. Due to the number of CPU cores in modern computers, you likely have many worker threads.
+- **Worker** ("RBX Worker"): Helps the main thread with networking, physics, and pathfinding. Due to the number of cores in modern CPUs, you likely have many worker threads.
 
 - **Render** ("GPU"): Follows a "prepare, perform, present" logic. Communicates with the graphics processing unit (GPU) of the device.
 
@@ -135,7 +135,7 @@ In general, the MicroProfiler web UI works similarly to [detailed mode](./modes.
   - Lighter portions of the preview bar and lighter labels on the timeline indicate portions of the frame with higher memory allocation.
   - In X-ray mode, press <kbd>C</kbd> to show the total size of the memory allocations rather than the number of allocations.
 
-- Use the **Export** menu to export a CPU or memory flame graph, a specialized visualization that summarizes all of the call stacks included in the dump. The flame graph is especially useful for identifying tasks that don't take particularly long to run, but run so often that their processing time becomes significant.
+- Use the **Export** menu to export a CPU or memory flame graph, a specialized visualization that aggregates all of the call stacks included in the dump. The flame graph is especially useful for identifying tasks that don't take particularly long to run (and are therefore hard to notice), but run so often that their processing time becomes significant.
 
   <img alt="The MicroProfiler flame graph." src="../../assets/optimization/microprofiler/micro-flame.png" />
 

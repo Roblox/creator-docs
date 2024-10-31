@@ -96,6 +96,44 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: Stats.FrameTime
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Stats.HeartbeatTime
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Stats.HeartbeatTimeMs
     summary: |
       A measurement of the total amount of time it takes long it takes for
@@ -110,6 +148,7 @@ properties:
     tags:
       - ReadOnly
       - NotReplicated
+      - Deprecated
     deprecation_message: ''
     security:
       read: None
@@ -221,6 +260,25 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: Stats.PhysicsStepTime
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Stats.PhysicsStepTimeMs
     summary: |
       A measurement of how long it takes for the physics engine to update its
@@ -235,6 +293,7 @@ properties:
     tags:
       - ReadOnly
       - NotReplicated
+      - Deprecated
     deprecation_message: ''
     security:
       read: None
@@ -254,6 +313,196 @@ properties:
       A measurement of how many physically simulated components currently exist
       in the game world.
     code_samples:
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Stats.RenderCPUFrameTime
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Stats.RenderGPUFrameTime
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Stats.SceneDrawcallCount
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Stats.SceneTriangleCount
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Stats.ShadowsDrawcallCount
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Stats.ShadowsTriangleCount
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Stats.UI2DDrawcallCount
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Stats.UI2DTriangleCount
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Stats.UI3DDrawcallCount
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Stats.UI3DTriangleCount
+    summary: ''
+    description: ''
+    code_samples: []
     type: int
     tags:
       - ReadOnly

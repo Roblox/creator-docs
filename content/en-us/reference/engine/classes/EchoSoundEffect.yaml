@@ -56,7 +56,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: EchoSoundEffect.DryLevel
     summary: |
@@ -75,7 +76,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: EchoSoundEffect.Feedback
     summary: |
@@ -98,7 +100,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: EchoSoundEffect.WetLevel
     summary: |
@@ -117,7 +120,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
 methods: []
 events: []

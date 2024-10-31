@@ -4,8 +4,9 @@ summary: |
   Represents a reference to asset content stored externally or as an object
   within the place.
 description: |
-  The `Content` data type represents a reference to asset content stored externally or as an object
-  within the place, wrapping a single value of one of the supported `Enum.ContentSourceType` values.
+  The `Content` data type represents a reference to asset content stored
+  externally or as an object within the place, wrapping a single value of one of
+  the supported `Enum.ContentSourceType` values.
 code_samples:
 tags: []
 deprecation_message: ''

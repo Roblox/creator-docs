@@ -18,13 +18,15 @@ items:
     deprecation_message: ''
   - name: Uri
     summary: |
-      An [asset URI](../../../projects/assets/index.md#asset-uris) `string` value contained in `Datatype.Content.Uri`.
+      An [asset URI](../../../projects/assets/index.md#asset-uris) `string`
+      value contained in `Datatype.Content.Uri`.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Object
     summary: |
-      A non-`nil` `Class.Object` reference contained in `Datatype.Content.Object`.
+      A non-`nil` `Class.Object` reference contained in
+      `Datatype.Content.Object`.
     value: 2
     tags: []
     deprecation_message: ''

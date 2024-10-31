@@ -36,7 +36,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: FlangeSoundEffect.Mix
     summary: |
@@ -57,7 +58,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: FlangeSoundEffect.Rate
     summary: |
@@ -77,7 +79,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
 methods: []
 events: []

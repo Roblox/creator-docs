@@ -106,3 +106,8 @@ items:
     value: 19
     tags: []
     deprecation_message: ''
+  - name: LegacySound
+    summary: ''
+    value: 20
+    tags: []
+    deprecation_message: ''
