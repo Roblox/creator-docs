@@ -50,7 +50,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.EmitterSize
     summary: |
@@ -89,7 +90,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.IsLoaded
     summary: |
@@ -124,7 +126,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.IsPaused
     summary: |
@@ -157,7 +160,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.IsPlaying
     summary: |
@@ -187,7 +191,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.LoopRegion
     summary: |
@@ -224,7 +229,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.Looped
     summary: |
@@ -251,7 +257,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.MaxDistance
     summary: |
@@ -294,7 +301,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.MinDistance
     summary: |
@@ -320,7 +328,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.Pitch
     summary: |
@@ -344,7 +353,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.PlayOnRemove
     summary: |
@@ -375,7 +385,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.PlaybackLoudness
     summary: |
@@ -405,7 +416,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.PlaybackRegion
     summary: |
@@ -440,7 +452,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.PlaybackRegionsEnabled
     summary: |
@@ -463,7 +476,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.PlaybackSpeed
     summary: |
@@ -494,7 +508,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.Playing
     summary: |
@@ -531,7 +546,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.RollOffMaxDistance
     summary: |
@@ -569,7 +585,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.RollOffMinDistance
     summary: |
@@ -603,7 +620,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.RollOffMode
     summary: |
@@ -688,7 +706,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.SoundGroup
     summary: |
@@ -717,7 +736,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.SoundId
     summary: |
@@ -753,7 +773,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.TimeLength
     summary: |
@@ -782,7 +803,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.TimePosition
     summary: |
@@ -827,7 +849,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.Volume
     summary: |
@@ -856,7 +879,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
   - name: Sound.isPlaying
     summary: ''
@@ -878,7 +902,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
-    capabilities: []
+    capabilities:
+      - LegacySound
     writeCapabilities: []
 methods:
   - name: Sound:Pause

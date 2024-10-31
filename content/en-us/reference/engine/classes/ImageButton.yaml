@@ -108,8 +108,8 @@ properties:
     thread_safety: ReadSafe
     category: Image
     serialization:
-      can_load: false
-      can_save: false
+      can_load: true
+      can_save: true
     capabilities:
       - UI
     writeCapabilities: []

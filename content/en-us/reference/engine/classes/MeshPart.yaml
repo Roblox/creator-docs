@@ -112,8 +112,8 @@ properties:
     thread_safety: ReadSafe
     category: Appearance
     serialization:
-      can_load: false
-      can_save: false
+      can_load: true
+      can_save: true
     capabilities:
       - Basic
     writeCapabilities: []
@@ -212,8 +212,8 @@ properties:
     thread_safety: ReadSafe
     category: Appearance
     serialization:
-      can_load: false
-      can_save: false
+      can_load: true
+      can_save: true
     capabilities:
       - Basic
     writeCapabilities: []

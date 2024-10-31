@@ -1727,28 +1727,32 @@ events:
     writeCapabilities: []
   - name: Instance.Destroying
     summary: |
-      Fires immediately before (or is deferred until after) the instance is destroyed via `Class.Instance:Destroy()`.
+      Fires immediately before (or is deferred until after) the instance is
+      destroyed via `Class.Instance:Destroy()`.
     description: |
-      The `Class.Instance` will
-      never be deleted from memory while a connected function is still using it. However,
-      if the function yields at any point, the `Class.Instance` and its descendants will be
-      parented to `nil`.
+      The `Class.Instance` will never be deleted from memory while a connected
+      function is still using it. However, if the function yields at any point,
+      the `Class.Instance` and its descendants will be parented to `nil`.
 
-      If the `Class.Workspace.SignalBehavior` property is set to `Enum.SignalBehavior.Immediate`,
-      this event fires immediately before the `Class.Instance` or one of its ancestors is destroyed
-      with `Class.Instance:Destroy()`.
+      If the `Class.Workspace.SignalBehavior` property is set to
+      `Enum.SignalBehavior.Immediate`, this event fires immediately before the
+      `Class.Instance` or one of its ancestors is destroyed with
+      `Class.Instance:Destroy()`.
 
-      If the `Class.Workspace.SignalBehavior` property is set to `Enum.SignalBehavior.Deferred`, this event
-      fires at the next resumption point, which will be after the `Class.Instance` or one of its ancestors is
+      If the `Class.Workspace.SignalBehavior` property is set to
+      `Enum.SignalBehavior.Deferred`, this event fires at the next resumption
+      point, which will be after the `Class.Instance` or one of its ancestors is
       destroyed with `Class.Instance:Destroy()`.
-      
-      With `Enum.SignalBehavior.Deferred|Deferred` behavior, connecting a script to its own
-      `Class.Instance.Destroying` event is problematic, as the script will be destroyed before the callback
-      can be called (meaning it will not execute).
-      
-      When deleting an `Class.Instance` in Studio, such as manually deleting through the
-      [Explorer](../../../studio/explorer.md) or through a plugin, the `Class.Instance` isn't destroyed. Instead,
-      the parent is set to `nil` which you can track with `Class.Instance.AncestryChanged`.
+
+      With `Enum.SignalBehavior.Deferred|Deferred` behavior, connecting a script
+      to its own `Class.Instance.Destroying` event is problematic, as the script
+      will be destroyed before the callback can be called (meaning it will not
+      execute).
+
+      When deleting an `Class.Instance` in Studio, such as manually deleting
+      through the [Explorer](../../../studio/explorer.md) or through a plugin,
+      the `Class.Instance` isn't destroyed. Instead, the parent is set to `nil`
+      which you can track with `Class.Instance.AncestryChanged`.
     code_samples:
       - Instance-Destroying-Immediate
       - Instance-Destroying-Deferred

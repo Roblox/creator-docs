@@ -319,13 +319,13 @@ methods:
       the current thread until it receives a reply from the editor about the
       edit.
 
-      If the function succeeds, it returns (true, nil).
+      If the function succeeds, it returns (`true`, `nil`).
 
       The function throws an error if:
 
       - The range is invalid.
-      - The range would slice a unicode character (e.g., replacing only some of
-        the bytes of the unicode character).
+      - The range would slice a unicode character, for example replace only some of
+        the bytes of the unicode character.
       - The `newText` itself contains invalid UTF-8.
 
       If the function fails, it returns (false, string). The string is a
@@ -397,6 +397,25 @@ methods:
       - name: anchorCharacter
         type: int?
         default: nil
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: PluginSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: ScriptDocument:MultiEditTextAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: edits
+        type: Array
+        default:
         summary: ''
     returns:
       - type: Tuple
