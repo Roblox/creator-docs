@@ -46,10 +46,6 @@ The **Basic Info** tab contains general settings for an experience, such as its 
     <td>Lets you upload [promotional thumbnails](../production/promotion/thumbnails.md). </td>
   </tr>
   <tr>
-    <td>**Genre**</td>
-    <td>The genre that best describes your experience.</td>
-  </tr>
-  <tr>
     <td>**Playable Devices**</td>
     <td>Lets you enable each applicable device that supports your experience.</td>
   </tr>

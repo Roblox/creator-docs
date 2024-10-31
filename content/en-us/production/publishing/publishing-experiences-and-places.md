@@ -52,7 +52,6 @@ To publish a place as the start place of an entirely new experience:
      It's highly recommended that you [create a group](../../projects/groups.md) and publish a new experience under the group's account, not your personal account. Even if you're a solo creator, this allows you to expand your team over time, recruit playtesters, and operate as an independent studio.
      </Alert>
 
-   - **Genre** — The genre that best describes the experience.
    - **Devices** — Each applicable device type that you want to support. The default options are practical for most new creators.
 
 3. Click the **Create** button.
