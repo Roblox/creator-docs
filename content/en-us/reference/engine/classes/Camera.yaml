@@ -554,7 +554,7 @@ properties:
 
       `Class.Camera.ViewportSize` is not equal to the fullscreen size in order to improve cross-platform compatibility and backwards compatibility with legacy experiences.
 
-      Note: `Class.Camera.ViewportSize` is not the actual viewport size the camera uses for rendering. The Camera renders in the the fullscreen area. Also the `Class.Camera.FieldOfView` and `Class.Camera.DiagonalFieldOfView` properties are based on the fullscreen area, not `Class.Camera.ViewportSize`.
+      Note: `Class.Camera.ViewportSize` is not the actual viewport size the camera uses for rendering. The Camera renders in the fullscreen area. Also the `Class.Camera.FieldOfView` and `Class.Camera.DiagonalFieldOfView` properties are based on the fullscreen area, not `Class.Camera.ViewportSize`.
       
       To learn more about how your experience will run on a device with notches/cutouts, please see [this post](https://devforum.roblox.com/t/notched-screen-support-full-release/2074324/1).
     code_samples:
