@@ -546,11 +546,10 @@ properties:
       alt="Mobile device screen with cutout showing device safe area." />
 
       Note: `Class.Camera.ViewportSize` is not equal to the fullscreen area size on displays with cutouts or notches. To obtain the fullscreen area size on all displays, you can query the `AbsoluteSize` property of a `Class.ScreenGui` with `ScreenInsets=None`. See `Enum.ScreenInsets` for a more information about how screen areas are defined.
+      `Class.Camera.ViewportSize` is not equal to the fullscreen size in order to improve cross-platform compatibility and backwards compatibility with legacy experiences.
 
       <img src="../../../assets/engine-api/enums/ScreenInsets/None.png" width="840"
       alt="Mobile device screen with cutout showing fullscreen area." />
-
-      `Class.Camera.ViewportSize` is not equal to the fullscreen size in order to improve cross-platform compatibility and backwards compatibility with legacy experiences.
 
       Note: `Class.Camera.ViewportSize` is not the actual viewport size the camera uses for rendering. The Camera renders in the fullscreen area. Also the `Class.Camera.FieldOfView` and `Class.Camera.DiagonalFieldOfView` properties are based on the fullscreen area, not `Class.Camera.ViewportSize`.
       
