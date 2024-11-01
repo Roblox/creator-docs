@@ -1192,22 +1192,22 @@ methods:
       direction. Does not account for the `Enum.ScreenInsets|CoreUISafeInsets` inset.
     description: |
       This function creates a unit `Datatype.Ray` from a 2D position in device 
-      safe viewport coordinates,
-      defined in pixels. That is, `(0, 0)` corresponds to the top-left point of 
-      the Roblox top bar. The input 2D position does **not** account for the 
-      `Enum.ScreenInsets|CoreUISafeInsets` inset, but it does
-      account for any `Enum.ScreenInsets|DeviceSafeInsets`.
+      safe viewport coordinates, defined in pixels. The ray originates from the
+      `Datatype.Vector3` equivalent of the 2D position in the world at the
+      given depth (in studs) away from the `Class.Camera`.
+      
+      As illustrated below, `(0, 0)` corresponds to the top‑left point of the Roblox
+      top bar. This means that the input 2D position does **not** account for the 
+      `Enum.ScreenInsets|CoreUISafeInsets` inset, but it does account for any
+      `Enum.ScreenInsets|DeviceSafeInsets`.
 
       <img src="../../../assets/engine-api/classes/Camera/ViewportPointToRayOrigin.png" width="840" alt="Diagram showing the origin of the device safe area viewport coordinate system." />
 
-      The `Datatype.Ray` originates from the `Datatype.Vector3` equivalent of the 2D position in the world at the given depth (in studs) away from the 
-      `Class.Camera`.
-
-      Note that UI instances use a different coordinate system. `Class.
-      GuiObject.AbsolutePosition` uses
-      the `Enum.ScreenInsets|CoreUISafeInsets` viewport coordinate system, 
-      while this function uses the
-      `Enum.ScreenInsets|DeviceSafeInsets` viewport coordinate system. If you 
+      Note that UI instances use a different coordinate system
+      (`Class.GuiObject.AbsolutePosition` uses the
+      `Enum.ScreenInsets|CoreUISafeInsets` viewport coordinate system 
+      while this function uses the `Enum.ScreenInsets|DeviceSafeInsets`
+      viewport coordinate system). If you 
       would like to specify position in core UI coordinates, please use
       `Class.Camera:ScreenPointToRay()`.
 
