@@ -1193,12 +1193,11 @@ methods:
       position in core UI coordinates, please use
       `Class.Camera:ScreenPointToRay()`.
 
-      This function only works for the current Workspace camera. Other cameras,
-      such as those you create for a `Class.ViewportFrame`, have an initial
+      Also note that this function only works for the `Class.Workspace.CurrentCamera` camera.
+      Other cameras, such as those you create for a `Class.ViewportFrame`, have an initial
       viewport size of `(1, 1)` and are only updated after you set them to
-      `Class.Workspace.CurrentCamera`. The mismatch in viewport size causes the
-      camera to return a ray with an incorrect `Datatype.Ray.Direction`.
-
+      `Class.Workspace.CurrentCamera|CurrentCamera`. The mismatch in viewport size causes
+      the camera to return a ray with an incorrect `Datatype.Ray.Direction`.
       This function can be used in conjunction with the
       `Class.Camera.ViewportSize` property to create a ray from the centre of
       the screen, for example:
