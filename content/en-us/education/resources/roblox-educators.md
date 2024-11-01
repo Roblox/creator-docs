@@ -360,6 +360,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 #### Azerbaijan
 
 <a href="https://coddyschool.com/courses/sozdanie_igr_v_roblox_studio/" title="CODDY">CODDY</a>
+<a href="https://impactacademiesaz.com/" title="impactAz">impact Academies and Camps</a>
 
 #### Belarus
 
@@ -368,6 +369,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 
 #### Belgium
 
+<a href="https://impactacademies.be/en/liege" title="impactBg">impact Academies and Camps</a>
 <a href="https://www.logiscool.com/" title="Logiscool">Logiscool</a>
 
 #### Brazil
@@ -396,6 +398,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://datawiz.ca/" title="DataWiz Academy">DataWiz Academy</a>
 <a href="https://www.digitalmediaacademy.org" title="Digital Media Academy">Digital Media Academy</a>
 <a href="https://www.geekedu.org/" title="Geekedu Coding for Kids">Geekedu Coding for Kids</a>
+<a href="https://impactacademies.ca/" title="impactCa">impact Academies and Camps</a>
 <a href="https://www.kidsinnovative.com" title="Kids Innovative">Kids Innovative</a>
 <a href="https://www.logiscool.com/" title="Logiscool">Logiscool</a>
 
@@ -410,10 +413,19 @@ We have many educators across the world teaching with Roblox. If you're interest
 
 <a href="https://digitalsake.com/" title="digitalsake">digitalsake</a>
 
+#### Cyprus
+
+<a href="https://impactacademiescyprus.com/" title="impactCy">impact Academies and Camps</a>
+
 #### Czech Republic
 
+<a href="https://impactacademies.cz/" title="impactCz">impact Academies and Camps</a>
 <a href="https://kiber-one.cz/moduli/roblox-studio-sdelat-vse-chto-vy-mozhete-sebe-predstavit/" title="KIBERone Czech Republic">KIBERone Czech Republic</a>
 <a href="https://www.logiscool.com/" title="Logiscool">Logiscool</a>
+
+#### Denmark
+
+<a href="https://impactacademies.dk/copenhagen" title="impactDk">impact Academies and Camps</a>
 
 #### Dominican Republic
 
@@ -431,6 +443,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 #### Germany
 
 <a href="https://coddyschool.com/courses/sozdanie_igr_v_roblox_studio/" title="CODDY">CODDY</a>
+<a href="https://impactacademies.de/" title="impactDe">impact Academies and Camps</a>
 <a href="https://kiber-one.de/moduli/roblox-studio-sdelat-vse-chto-vy-mozhete-sebe-predstavit/" title="KIBERone Germany">KIBERone Germany</a>
 <a href="https://www.logiscool.com/" title="Logiscool">Logiscool</a>
 
@@ -476,6 +489,10 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://timedooracademy.com/" title="Timedoor Academy">Timedoor Academy</a>
 <a href="https://kodingnext.com/" title="Koding Next">Koding Next</a>
 <a href="https://kodingakademi.id/" title="KodingAkademi">KodingAkademi</a>
+
+#### Ireland
+
+<a href="https://impactacademiesie.com/" title="impactIr">impact Academies and Camps</a>
 
 #### Israel
 
@@ -523,6 +540,10 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://small.academy/cursuri/programare-roblox/" title="Small Academy">Small Academy</a>
 <a href="https://impactacademies.com/" title="impact Academies and Camps">impact Academies and Camps</a>
 
+#### Montenegro
+
+<a href="https://impactacademies.me/" title="impactMg">impact Academies and Camps</a>
+
 #### Mozambique
 
 <a href="https://www.codeup.pt" title="Code.Up">Code.Up</a>
@@ -548,6 +569,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 #### Poland
 
 <a href="https://www.giganciprogramowania.edu.pl" title="Giganci Programowania">Giganci Programowania</a>
+<a href="https://impactacademies.pl/" title="impactPl">impact Academies and Camps</a>
 <a href="https://www.kidscoderlab.pl" title="Kids Coder Lab">Kids Coder Lab</a>
 <a href="https://www.wowschool.pl/" title="WOW School">WOW School</a>
 
@@ -572,6 +594,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://coddyschool.com/courses/sozdanie_igr_v_roblox_studio/" title="CODDY">CODDY</a>
 <a href="https://start.codabra.org/" title="Codabra">Codabra</a>
 <a href="https://excklusiveit.com/" title="Exclusive-It">Exclusive-It</a>
+<a href="https://impactacademies.ru/" title="impactRu">impact Academies and Camps</a>
 <a href="https://kiber-one.com/moduli/roblox-studio-sdelat-vse-chto-vy-mozhete-sebe-predstavit/" title="KIBERone Russia">KIBERone Russia</a>
 <a href="https://ozonacademy.ru/" title="Ozon Academy">Ozon Academy</a>
 <a href="https://program-school.org/" title="Program School">Program School</a>
@@ -632,11 +655,13 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://www.conmasfuturo.com/" title="ConMasFuturo">ConMasFuturo</a>
 <a href="https://curiosityandlearn.com/" title="Curiosity and Learn">Curiosity and Learn</a>
 <a href="https://www.giganciprogramowania.edu.pl" title="Giganci Programowania">Giganci Programowania</a>
+<a href="https://impactacademies.es/" title="impactEs">impact Academies and Camps</a>
 <a href="https://kiber-one.es/moduli/roblox-studio-hacer-todo-lo-que-uno-puede-imaginarse/" title="KIBERone Spain">KIBERone Spain</a>
 <a href="https://www.logiscool.com/" title="Logiscool">Logiscool</a>
 
 #### Switzerland
 
+<a href="https://impactacademies.ch/" title="impactCh">impact Academies and Camps</a>
 <a href="https://www.logiscool.com/" title="Logiscool">Logiscool</a>
 <a href="https://www.idtech.com/roblox-summer-camps?utm_source=roblox&amp;utm_medium=website&amp;utm_campaign=2018&amp;utm_content=roblox-site" title="iD Tech">iD Tech</a>
 
@@ -692,6 +717,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://www.firetechcamp.com/" title="Fire Tech">Fire Tech</a>
 <a href="https://funtechsummercamps.com/course-descriptions/roblox-game-maker" title="FunTech">FunTech</a>
 <a href="https://www.idtech.com/roblox-summer-camps?utm_source=roblox&amp;utm_medium=website&amp;utm_campaign=2018&amp;utm_content=roblox-site" title="iD Tech">iD Tech</a>
+<a href="https://impactacademies.co.uk/" title="impactUk">impact Academies and Camps</a>
 
 #### Uruguay
 
@@ -700,6 +726,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 #### Uzbekistan
 
 <a href="https://coddyschool.com/courses/sozdanie_igr_v_roblox_studio/" title="CODDY">CODDY</a>
+<a href="https://impactacademiesuz.com/" title="impactUz">impact Academies and Camps</a>
 
 #### Venezuela
 
