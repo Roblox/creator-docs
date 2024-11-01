@@ -552,22 +552,18 @@ properties:
       display. The units of `Class.Camera.ViewportSize` are Roblox UI offset 
       units, which may be different from native display pixels.
 
-      <img src="../../../assets/engine-api/enums/ScreenInsets/DeviceSafeInsets.
-      png" width="840"
-      alt="Mobile device screen with cutout showing device safe area." />
+      <img
+      src="/assets/engine-api/classes/Camera/DeviceSafeAreaVsFullscreen.png" 
+      width="720" alt="Mobile device screen with cutout showing device safe 
+      area." />
 
       Note: `Class.Camera.ViewportSize` is not equal to the fullscreen area 
       size on displays with cutouts or notches. To obtain the fullscreen area 
       size on all displays, you can query the `AbsoluteSize` property of a 
       `Class.ScreenGui` with `ScreenInsets=None`. See `Enum.ScreenInsets` for a 
       more information about how screen areas are defined.
-      `Class.Camera.ViewportSize` is not equal to the fullscreen size in order 
-      to improve cross-platform compatibility and backwards compatibility with 
-      legacy experiences.
 
-      <img src="../../../assets/engine-api/enums/ScreenInsets/None.png" 
-      width="840"
-      alt="Mobile device screen with cutout showing fullscreen area." />
+      `Class.Camera.ViewportSize|ViewportSize` is not equal to the fullscreen size in order to improve cross-platform compatibility and backwards compatibility with legacy experiences.
 
       Note: `Class.Camera.ViewportSize` is not the actual viewport size the 
       camera uses for rendering. The Camera renders in the fullscreen area. 
@@ -1217,9 +1213,9 @@ methods:
       `Enum.ScreenInsets|CoreUISafeInsets` inset, but it does
       account for any `Enum.ScreenInsets|DeviceSafeInsets`.
 
-      <img src="../../../assets/engine-api/classes/Camera/
-      DeviceSafeViewportCoordinates.png" width="840" alt="Diagram showing the 
-      origin of the device safe area viewport coordinate system." />
+      <img src="/assets/engine-api/classes/Camera/ViewportPointToRayOrigin.png" 
+      width="720" alt="Diagram showing the origin of the device safe area 
+      viewport coordinate system." />
 
       The `Datatype.Ray` originates from the `Datatype.Vector3` equivalent of the 2D position in the world at the given depth (in studs) away from the 
       `Class.Camera`.
@@ -1239,6 +1235,7 @@ methods:
       them to `Class.Workspace.CurrentCamera|CurrentCamera`. The mismatch in 
       viewport size causes the camera to return a ray with an incorrect 
       `Datatype.Ray.Direction`.
+
       This function can be used in conjunction with the
       `Class.Camera.ViewportSize` property to create a ray from the centre of
       the screen, for example:
