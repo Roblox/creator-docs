@@ -26,8 +26,8 @@ properties:
 
       | Shape/Value | Description                                 |
       | ----------- | ------------------------------------------- |
-      | Ball        | A spherical shape, like a basketball.       |
-      | Block       | A simple block shape.                       |
+      | Ball        | A spherical shape.                          |
+      | Block       | A block shape.                              |
       | Cylinder    | A cylinder shape oriented along the X axis. |
       | Wedge       | A wedge shape with a slope on one side.     |
       | CornerWedge | A wedge shape with slopes on two sides.     |
