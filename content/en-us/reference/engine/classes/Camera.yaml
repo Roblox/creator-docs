@@ -546,25 +546,25 @@ properties:
     summary: |
       The dimensions of the device safe area on a Roblox client.
     description: |
-      `Class.Camera.ViewportSize` returns the dimensions of the
+      `Class.Camera.ViewportSize|ViewportSize` returns the dimensions of the
       device safe area on the current screen. This area is a rectangle which
       includes the Roblox top bar area but does not include any device notches
-      or screen cutouts. The units of `Class.Camera.ViewportSize` are Roblox
+      or screen cutouts. The units of `Class.Camera.ViewportSize|ViewportSize` are Roblox
       UI offset units which may be different from native display pixels.
 
       <img src="../../../assets/engine-api/classes/Camera/DeviceSafeAreaVsFullscreen.png" width="840" alt="Mobile device screen with cutout showing device safe area." />
 
-      As noted above, `Class.Camera.ViewportSize` is not equal to the fullscreen area size
-      on displays with cutouts or
+      As noted above, `Class.Camera.ViewportSize|ViewportSize` is not equal to the fullscreen
+      area size on displays with cutouts or
       notches. To obtain the fullscreen area size on all displays, you can query the
       `Class.ScreenGui.AbsoluteSize|AbsoluteSize` property of a `Class.ScreenGui` with
       `Class.ScreenGui.ScreenInsets|ScreenInsets` set to `Enum.ScreenInsets.None|None`. See
       `Enum.ScreenInsets` for a more information about how screen areas are defined.
 
-      Finally, note that `Class.Camera.ViewportSize` is not the actual viewport size the camera
-      uses for rendering (the camera renders in the fullscreen area). Also, the
+      Finally, note that `Class.Camera.ViewportSize|ViewportSize` is not the actual viewport size
+      the camera uses for rendering (the camera renders in the fullscreen area). Also, the
       `Class.Camera.FieldOfView` and `Class.Camera.DiagonalFieldOfView` properties are
-      based on the fullscreen area, not `Class.Camera.ViewportSize`.
+      based on the fullscreen area, not `Class.Camera.ViewportSize|ViewportSize`.
 
       Only one `Class.Camera` has its `Class.Camera.ViewportSize` updated each 
       frame: the `Class.Camera` currently referred to by `Class.Workspace.
