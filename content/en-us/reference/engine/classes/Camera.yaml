@@ -1220,7 +1220,7 @@ methods:
       `Datatype.Ray.Direction`.
 
       This function can be used in conjunction with the
-      `Class.Camera.ViewportSize` property to create a ray from the centre of
+      `Class.Camera.ViewportSize|ViewportSize` property to create a ray from the centre of
       the screen, for example:
 
       ```lua
