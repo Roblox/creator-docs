@@ -1218,14 +1218,14 @@ methods:
         type: float
         default:
         summary: |
-          The position on the X axis, in pixels, of the viewport point at which
-          to originate the `Datatype.Ray`. In device safe area coordinates.
+          The position on the **X** axis, in pixels, of the viewport point at which
+          to originate the `Datatype.Ray`, in device safe area coordinates.
       - name: 'y'
         type: float
         default:
         summary: |
-          The position on the Y axis, in pixels, of the viewport point at which
-          to originate the `Datatype.Ray`. In device safe area coordinates.
+          The position on the **Y** axis, in pixels, of the viewport point at which
+          to originate the `Datatype.Ray`, in device safe area coordinates.
       - name: depth
         type: float
         default: 0
