@@ -553,8 +553,8 @@ properties:
       UI offset units which may be different from native display pixels.
 
       <img
-      src="/assets/engine-api/classes/Camera/DeviceSafeAreaVsFullscreen.png" 
-      width="720" alt="Mobile device screen with cutout showing device safe 
+      src="../../../assets/engine-api/classes/Camera/DeviceSafeAreaVsFullscreen.png" 
+      width="840" alt="Mobile device screen with cutout showing device safe 
       area." />
 
       Note: `Class.Camera.ViewportSize` is not equal to the fullscreen area 
