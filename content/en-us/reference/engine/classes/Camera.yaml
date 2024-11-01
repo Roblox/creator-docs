@@ -546,11 +546,11 @@ properties:
     summary: |
       The dimensions of the device safe area on a Roblox client.
     description: |
-      `Class.Camera.ViewportSize` returns the dimensions of the device safe 
-      area on the current screen. The device safe area is a rectangle which 
-      includes the Roblox top bar area, but does not include any cutouts in the 
-      display. The units of `Class.Camera.ViewportSize` are Roblox UI offset 
-      units, which may be different from native display pixels.
+      `Class.Camera.ViewportSize` returns the dimensions of the
+      device safe area on the current screen. This area is a rectangle which
+      includes the Roblox top bar area but does not include any device notches
+      or screen cutouts. The units of `Class.Camera.ViewportSize` are Roblox
+      UI offset units which may be different from native display pixels.
 
       <img
       src="/assets/engine-api/classes/Camera/DeviceSafeAreaVsFullscreen.png" 
