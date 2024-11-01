@@ -1224,7 +1224,10 @@ methods:
       the screen, for example:
 
       ```lua
-      local camera = workspace.CurrentCamera
+      local Workspace = game:GetService("Workspace")
+      
+      local camera = Workspace.CurrentCamera
+      
       local viewportPoint = camera.ViewportSize / 2
       local unitRay = camera:ViewportPointToRay(viewportPoint.X, viewportPoint.Y, 0)
       ```
@@ -1233,7 +1236,10 @@ methods:
       create a longer ray, you can do the following:
 
       ```lua
-      local camera = workspace.CurrentCamera
+      local Workspace = game:GetService("Workspace")
+      
+      local camera = Workspace.CurrentCamera
+      
       local length = 500
       local unitRay = camera:ScreenPointToRay(100, 100)
       local extendedRay = Ray.new(unitRay.Origin, unitRay.Direction * length)
