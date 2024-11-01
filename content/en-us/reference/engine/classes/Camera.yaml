@@ -566,20 +566,14 @@ properties:
       `Class.Camera.FieldOfView` and `Class.Camera.DiagonalFieldOfView` properties are
       based on the fullscreen area, not `Class.Camera.ViewportSize|ViewportSize`.
 
-      Only one `Class.Camera` has its `Class.Camera.ViewportSize` updated each 
-      frame: the `Class.Camera` currently referred to by `Class.Workspace.
-      CurrentCamera`. The `ViewportSize` of all other `Class.Camera`s in your 
-      experience won't be updated. This includes `Class.Camera`s that are used 
-      for `Class.ViewportFrame`s.
-
-      The initial value of `Class.Camera.ViewportSize` is `(1, 1)`. The `Class.
-      Workspace.CurrentCamera`'s `Class.Camera.ViewportSize` is updated once 
-      each frame during the render prepare step.
-
-      For example, a `Class.ViewportFrame` with `Class.ViewportFrame.
-      CurrentCamera` set to a different `Class.Camera` than the `Class.
-      Workspace.CurrentCamera` will have its `ViewportSize` equal to the 
-      initial value of `(1, 1)`.
+      ##### Camera Updates
+      
+      Only the `Class.Camera` currently referred to by `Class.Workspace.
+      CurrentCamera` has its `Class.Camera.ViewportSize|ViewportSize` updated each 
+      frame during the `Class.RunService.PreRender|PreRender` step. The
+      `Class.Camera.ViewportSize|ViewportSize` of all other cameras in your 
+      experience won't be updated, including those used for
+      `Class.ViewportFrame|ViewportFrames`.
     code_samples:
     type: Vector2
     tags:
