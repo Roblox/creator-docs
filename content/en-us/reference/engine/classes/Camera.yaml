@@ -1175,7 +1175,7 @@ methods:
     summary: |
       Creates a unit `Datatype.Ray` from a position on the viewport (in pixels),
       at a given depth from the `Class.Camera`, orientated in the camera's
-      direction. Does not account for the Core UI inset.
+      direction. Does not account for the `Enum.ScreenInsets|CoreUISafeInsets` inset.
     description: |
       This function creates a unit `Datatype.Ray` from a 2D position in device safe viewport coordinates (defined in pixels). That is, `(0, 0)` corresponds to the top left point of the Roblox top bar.
 
