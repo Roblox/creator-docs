@@ -1198,9 +1198,7 @@ methods:
       `Enum.ScreenInsets|CoreUISafeInsets` inset, but it does
       account for any `Enum.ScreenInsets|DeviceSafeInsets`.
 
-      <img src="/assets/engine-api/classes/Camera/ViewportPointToRayOrigin.png" 
-      width="720" alt="Diagram showing the origin of the device safe area 
-      viewport coordinate system." />
+      <img src="../../../assets/engine-api/classes/Camera/ViewportPointToRayOrigin.png" width="840" alt="Diagram showing the origin of the device safe area viewport coordinate system." />
 
       The `Datatype.Ray` originates from the `Datatype.Vector3` equivalent of the 2D position in the world at the given depth (in studs) away from the 
       `Class.Camera`.
