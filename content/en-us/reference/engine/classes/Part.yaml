@@ -28,7 +28,7 @@ properties:
       | ----------- | ------------------------------------------- |
       | Ball        | A spherical shape.                          |
       | Block       | A block shape.                              |
-      | Cylinder    | A cylinder shape oriented along the X axis. |
+      | Cylinder    | A cylinder shape.                           |
       | Wedge       | A wedge shape with a slope on one side.     |
       | CornerWedge | A wedge shape with slopes on two sides.     |
 
