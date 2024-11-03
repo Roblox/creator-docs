@@ -175,27 +175,27 @@ The following is a list of common tags in the MicroProfiler, grouped by category
     <td>Reduce the number of visible adorned objects, such as `Class.BillboardGui|BillboardGuis`, `Class.Humanoid` name/health labels, etc.</td>
   </tr>
   <tr>
-    <td>Prepare/Pass2D</td>
+    <td>Prepare/Pass2d</td>
     <td>Readies 2D UI rendering (both player and Roblox UI).</td>
     <td>Reduce the amount or complexity of UI elements.</td>
   </tr>
   <tr>
-    <td>Prepare/UpdateInvalidParts</td>
+    <td>Prepare/UpdatePrepare/updateInvalidParts</td>
     <td>Updates parts that had some property changed or added.</td>
     <td>Reduce the amount of properties changes on the world. If a script updates a large set of object properties, break it down across frames.</td>
   </tr>
   <tr>
-    <td>Prepare/UpdateInvalidateFastClusters</td>
+    <td>Prepare/UpdatePrepare/updateInvalidatedFastClusters</td>
     <td>Prepares geometry, typically "FastClusters" used to render `Class.Humanoid|Humanoids`. Sub-markers specify the number of parts, vertices, and size of vertices.</td>
     <td>Reduce the use of 'Humanoids' under objects that are not `Class.Humanoid|Humanoids`. This should not be used to shorten draw calls as FastClusters consume much more memory.</td>
   </tr>
   <tr>
-    <td>Prepare/UpdateDynamicParts</td>
+    <td>Prepare/UpdatePrepare/updateDynamicParts</td>
     <td>Updates positions for `Class.Humanoid|Humanoids`, vehicles and other moving instances for rendering.</td>
     <td>Reduce the number or complexity of moving `Class.Humanoid|Humanoids` or vehicles visible. Combining parts of the same material and color into a union or MeshPart can help with this.</td>
   </tr>
   <tr>
-    <td>Prepare/updateInstancedClusters</td>
+    <td>Prepare/UpdatePrepare/updateInstancedClusters</td>
     <td>Prepares static geometry that uses instanced rendering (parts and mesh parts). Labels "Clusters" and "Instances" indicate the number updated.</td>
     <td>Use less overall mesh and material variation. You can also create clusters by using objects that have similar appearances - size, color, material. </td>
   </tr>
@@ -335,22 +335,22 @@ The following is a list of common tags in the MicroProfiler, grouped by category
     <td>Reduce the amount of joints being created or destroyed.</td>
   </tr>
   <tr>
-    <td>Simulation/physicsStepped</td>
+    <td>Simulation/physicsSteppedTotal/physicsStepped</td>
     <td>Runs the physics simulation.</td>
     <td>Reduce the amount and complexity of physically simulated bodies.</td>
   </tr>
   <tr>
-    <td>physicsStepped/SpacialFilter/filterStep</td>
+    <td>Simulation/physicsSteppedTotal/physicsStepped/SpacialFilter/filterStep</td>
     <td>Updates simulation islands, arranging parts according to network ownership, local simulation. Islands are non-interacting groups of parts which can be simulated independently.</td>
     <td>Avoid setting network ownership frequently. Keep groups of parts far enough away from each other so they can be simulated separately.</td>
   </tr>
   <tr>
-    <td>physicsStepped/worldStep/stepContacts</td>
+    <td>Simulation/physicsSteppedTotal/physicsStepped/worldStep/stepContacts</td>
     <td>Updates contacts between objects.</td>
     <td>Reduce the amount of bodies colliding at once, or use simpler collision boxes. Cubes are better than complex meshes.</td>
   </tr>
   <tr>
-    <td>physicsStepped/worldStep/stepWorld OR stepWorldThrottled</td>
+    <td>Simulation/physicsSteppedTotal/physicsStepped/worldStep/stepWorld **OR** stepWorldThrottled</td>
     <td>Solves physics equations relating to connectors, buoyancy and `Class.Humanoid|Humanoids`. When the engine is overloaded and unable to simulate everything in real time, some steps may be throttled (stepWorldThrottled) and only "real time assemblies" such as `Class.Humanoid|Humanoids` are simulated.</td>
     <td>Depends on where the time is going based on the following three phases: stepContacts: narrow phase collision detection geometry tests. Solver step: integrate time and resolve collisions and other constraints updateBroadphase: update positions of assemblies in collision detection system and find possibly colliding narrow phase pairs.</td>
   </tr>
@@ -360,7 +360,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
     <td></td>
   </tr>
   <tr>
-    <td>Simulation/InterpolateNetworkedAssemblies</td>
+    <td>Simulation/physicsSteppedTotal/physicsStepped/interpolateNetworkedAssemblies</td>
     <td>Interpolates assemblies not controlled by this network peer.</td>
     <td>Set the network owner of parts to this peer to reduce this; although this will usually cause more physics work to be done elsewhere.</td>
   </tr>
@@ -370,7 +370,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
     <td>Lower the destroy height or reduce the amount of parts that fall to the destroy height.</td>
   </tr>
   <tr>
-    <td>Heartbeat/HeartbeatInternal/updateVisuallySleeping</td>
+    <td>Heartbeat/heartbeatInternal/workspaceOnHeartbeat/updateVisuallySleeping</td>
     <td>Second part of NotifyMovingAssemblies.</td>
     <td></td>
   </tr>
