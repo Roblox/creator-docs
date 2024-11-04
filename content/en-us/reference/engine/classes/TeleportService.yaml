@@ -679,7 +679,7 @@ methods:
 
       Players on Xbox One with cross-platform play disabled will arrive in a
       different server with players with cross-platform play enabled. This can
-      cause multiple game servers with the same PrivateServerId to exist."
+      cause multiple game servers with the same PrivateServerId to exist.
     code_samples:
       - TeleportService-ReserveServer1
       - teleportservice-teleport-to-a-reserved-server-via-chat
