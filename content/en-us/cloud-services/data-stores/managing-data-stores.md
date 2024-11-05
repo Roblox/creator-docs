@@ -7,7 +7,7 @@ Manage your data using versioning, listing, and caching.
 
 ## Versioning
 
-The functions `Class.GlobalDataStore:SetAsync()|SetAsync()`, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`, and `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()` create versioned backups of your data using the first write to each key in each UTC hour. Successive writes to a key in the same UTC hour permanently overwrite the previous data.
+Versioning happens when you [set](./index.md#creating-data), [update](./index.md#updating-data), and [increment](./index.md#incrementing-data) data. The functions `Class.GlobalDataStore:SetAsync()|SetAsync()`, `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`, and `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()` create versioned backups of your data using the first write to each key in each UTC hour. Successive writes to a key in the same UTC hour permanently overwrite the previous data.
 
 Versioned backups expire 30 days after a new write overwrites them. The latest version never expires.
 
@@ -88,9 +88,7 @@ end
 
 ### Snapshots
 
-The [Snapshot Data Stores Open Cloud API](/cloud/reference/DataStore#Snapshot-Data-Stores) lets you take a snapshot of all data stores in an experience once a day.
-
-Before you publish any experience update that changes your data storage logic, make sure to take a snapshot. Taking a snapshot guarantees that you have the most recent data available from the previous version of the experience.
+The [Snapshot Data Stores Open Cloud API](/cloud/reference/DataStore#Snapshot-Data-Stores) lets you take a snapshot of all data stores in an experience once a day. Before you publish any experience update that changes your data storage logic, make sure to take a snapshot. Taking a snapshot guarantees that you have the most recent data available from the previous version of the experience.
 
 For example, without a snapshot, if you publish an update at 3:30 UTC that causes data corruption, the corrupted data overwrites any data written between 3:00-3:30 UTC. If you take a snapshot at 3:29 UTC, though, the corrupted data doesn't overwrite anything written before 3:29 UTC, and the latest data for all keys written between 3:00-3:29 UTC is preserved.
 
@@ -172,7 +170,7 @@ end)
 
 ### AllScopes Property
 
-`Class.DataStoreOptions` contains an `Class.DataStoreOptions.AllScopes|AllScopes` property that lets you return keys from all [scopes](#scopes) in a list. You can then use the `Class.DataStoreKey.KeyName|KeyName` property of a list item for common data store operations like `Class.GlobalDataStore:GetAsync()|GetAsync()` and `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()`.
+`Class.DataStoreOptions` contains an `Class.DataStoreOptions.AllScopes|AllScopes` property that lets you return keys from all [scopes](#scopes) in a list. You can then use the `Class.DataStoreKey.KeyName|KeyName` property of a list item for common data store operations like [reading data](./index.md#reading-data) with `Class.GlobalDataStore:GetAsync()|GetAsync()` and [removing data](./index.md#removing-data) with `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()`.
 
 When you use the `AllScopes` property, the second parameter of `Class.DataStoreService:GetDataStore()|GetDataStore()` must be an empty string (`""`).
 
@@ -214,11 +212,11 @@ Use caching to temporarily store data from data stores to improve performance an
 
 Caching applies to modifications you make to data store keys using:
 
-- `Class.GlobalDataStore:GetAsync()|GetAsync()`
-- `Class.GlobalDataStore:SetAsync()|SetAsync()`
-- `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`
-- `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`
-- `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()`
+- `Class.GlobalDataStore:GetAsync()|GetAsync()` to [read data](./index.md#reading-data).
+- `Class.GlobalDataStore:SetAsync()|SetAsync()` to [create data](./index.md#creating-data).
+- `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` to [update data](./index.md#updating-data).
+- `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()` to [increment data](./index.md#incrementing-data).
+- `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()` to [remove data](./index.md#removing-data).
 
 `Class.DataStore:GetVersionAsync()|GetVersionAsync()`, `Class.DataStore:ListVersionsAsync()|ListVersionsAsync()`, `Class.DataStore:ListKeysAsync()|ListKeysAsync()`, and `Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()` don't implement caching and always fetch the latest data from the service backend.
 
@@ -235,3 +233,30 @@ All `Class.GlobalDataStore:GetAsync()|GetAsync()` calls that retrieve a value no
 To disable caching and opt out of using the cache to retrieve the most up-to-date value from the servers, add the `Class.DataStoreGetOptions` parameter to your `Class.GlobalDataStore:GetAsync()|GetAsync()` call and set the `Class.DataStoreGetOptions.UseCache|UseCache` property to `false` to make your request ignore any keys in the cache.
 
 Disabling caching is useful if you have multiple servers writing to a key with high frequency and need to get the latest value from servers. However, it can cause you to consume more of your [data stores limits and quotas](../../cloud-services/data-stores/error-codes-and-limits.md#limits), since `Class.GlobalDataStore:GetAsync()|GetAsync()` requests bypassing caching always count towards your throughput and server limits.
+
+## Serialization
+
+The `Class.DataStoreService` stores data in JSON format. When you save Lua data in Studio, Roblox uses a process called serialization to convert that data into JSON to save it in data stores. Roblox then converts your data back to Lua and returns it to you in another process called deserialization.
+
+Serialization and deserialization support the following Lua data types:
+
+- [Nil](../../luau/nil.md)
+- [Booleans](../../luau/booleans.md)
+- [Numbers](../../luau/numbers.md)
+  - You should not store the special numeric values `inf`, `-inf`, and `nan`, because these values don't conform to JSON standards. You can't access keys that contain these values with Open Cloud.
+- [Strings](../../luau/strings.md)
+- [Tables](../../luau/tables.md)
+  - Tables must only contain other supported data types
+  - Numeric keys are translated into strings if the length of the table is 0
+- [Buffers](../../reference/engine/libraries/buffer.yaml)
+
+If you try to store a data type that serialization doesn't support, you either:
+
+- Fail in storing that data type and get an error message.
+- Succeed in storing that data type as `nil`.
+
+To debug why your data type is being stored as `nil`, you can use the `Class.HttpService.JSONEncode|JSONEncode` function. When you pass your Lua data type into this function, you receive it back in the format Roblox would have stored it with data stores, which lets you preview and investigate the returned data.
+
+<Alert severity="info">
+  Serialization doesn't happen when you use the [DataStore Open Cloud API](/cloud/reference/DataStore) because that data is already sent to Roblox in JSON format and doesn't need to be converted.
+</Alert>

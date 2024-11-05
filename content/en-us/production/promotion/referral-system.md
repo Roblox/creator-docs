@@ -16,6 +16,8 @@ As a developer, you can use these shareable referral links to:
 - Create and distribute rewards to both inviters and invitees.
 
 <img src="../../assets/promotion/referral-system/Invite-Friends.png" width="90%" />
+<sup>The **Invite Friends** pop-up and **Friend Referral Rewards** banner will become available in early 2025.</sup>
+<br/><br/>
 
 To implement a friend referral system, [set up a referral event](#set-up-a-referral-event) and [create referral rewards](#grant-referral-rewards). The `ReferredByPlayerId` property of `Class.Player:GetJoinData()|GetJoinData()` automatically populates for all types of invitations and gives you access to the user ID of the referring player. You can then access this data in the `Players.PlayerAdded` event to identify the inviter and grant rewards to the inviter and the invitee.
 

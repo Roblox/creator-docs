@@ -8,47 +8,11 @@ description: |
   `Class.EditableImage` allows for the runtime creation and manipulation of
   images.
 
-  To create a blank `Class.EditableImage`, use `Datatype.Instance.new()`. To
+  To create a blank `Class.EditableImage`, use `Class.AssetService:CreateEditableImage()`. To
   create an `Class.EditableImage` from an existing image, use
   `Class.AssetService:CreateEditableImageAsync()`.
 
-  `Class.EditableImage` overrides the image or texture displayed when parented
-  to certain objects:
-
-  <table size="small">
-  <thead>
-    <tr>
-      <th>Object</th>
-      <th>Overridden</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>Class.MeshPart</code></td>
-      <td><code>Class.MeshPart.TextureID</code></td>
-    </tr>
-    <tr>
-      <td><code>Class.ImageLabel</code></td>
-      <td><code>Class.ImageLabel.Image</code></td>
-    </tr>
-    <tr>
-      <td><code>Class.ImageButton</code></td>
-      <td><code>Class.ImageButton.Image</code></td>
-    </tr>
-    <tr>
-      <td><code>Class.Decal</code></td>
-      <td><code>Class.Decal.Texture</code></td>
-    </tr>
-    <tr>
-      <td><code>Class.Texture</code></td>
-      <td><code>Class.Texture.Texture</code></td>
-    </tr>
-    <tr>
-      <td><code>Class.SurfaceAppearance</code></td>
-      <td><code>Class.SurfaceAppearance.ColorMap</code></td>
-    </tr>
-  </tbody>
-  </table>
+  `Class.EditableImage` can be used in any `Datatype.Content` property which takes an image, such as `Class.ImageLabel.ImageContent` or `Class.MeshPart.TextureContent`. This is done by setting the content property to `Datatype.Content.fromObject(editableImage)`.
 
   The `Class.EditableImage` coordinate system is relative to the top left of the
   image:
@@ -57,8 +21,8 @@ description: |
   - Bottom-right: `(Size.X - 1, Size.Y - 1)`
 
   When you use `Class.AssetService:PromptCreateAssetAsync()` to publish an
-  object that has a property overridden by a child `Class.EditableImage`, the
-  editable image is published as an image and the overridden property is set to
+  object that has a `Datatype.Content` property which references an `Class.EditableImage`, the
+  editable image is published as an image and the property is set to
   a new asset ID.
 code_samples: []
 inherits:

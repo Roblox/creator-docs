@@ -448,7 +448,10 @@ navigation:
       - title: Monitoring Performance
         path: /performance-optimization/monitoring
   - title: Cloud Services
+    path: /cloud-services/data-stores-vs-memory-stores
     section:
+      - title: Data Stores vs Memory Stores
+        path: /cloud-services/data-stores-vs-memory-stores
       - title: Data Stores
         path: /cloud-services/data-stores/
         section:
