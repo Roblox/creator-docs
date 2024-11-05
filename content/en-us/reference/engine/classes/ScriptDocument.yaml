@@ -324,8 +324,8 @@ methods:
       The function throws an error if:
 
       - The range is invalid.
-      - The range would slice a unicode character, for example replace only some of
-        the bytes of the unicode character.
+      - The range would slice a unicode character, for example replace only some
+        of the bytes of the unicode character.
       - The `newText` itself contains invalid UTF-8.
 
       If the function fails, it returns (false, string). The string is a

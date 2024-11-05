@@ -1,11 +1,11 @@
 name: Axes
 type: datatype
 summary: |
-  The `Axes` data type is for the `Class.ArcHandles` class to control
-  which rotation axes are currently enabled.
+  The `Axes` data type is for the `Class.ArcHandles` class to control which
+  rotation axes are currently enabled.
 description: |
-  The `Axes` data type is for the `Class.ArcHandles` class to control
-  which rotation axes are currently enabled.
+  The `Axes` data type is for the `Class.ArcHandles` class to control which
+  rotation axes are currently enabled.
 code_samples:
 tags: []
 deprecation_message: ''

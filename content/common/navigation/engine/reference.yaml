@@ -90,6 +90,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/AnimationClipProvider.yaml
         ignoreTranslation: true
+      - title: AnimationConstraint
+        path: /reference/engine/classes/AnimationConstraint
+        type: engineapi
+        source: /reference/engine/classes/AnimationConstraint.yaml
+        ignoreTranslation: true
       - title: AnimationController
         path: /reference/engine/classes/AnimationController
         type: engineapi

@@ -8,11 +8,14 @@ description: |
   `Class.EditableImage` allows for the runtime creation and manipulation of
   images.
 
-  To create a blank `Class.EditableImage`, use `Class.AssetService:CreateEditableImage()`. To
-  create an `Class.EditableImage` from an existing image, use
-  `Class.AssetService:CreateEditableImageAsync()`.
+  To create a blank `Class.EditableImage`, use
+  `Class.AssetService:CreateEditableImage()`. To create an `Class.EditableImage`
+  from an existing image, use `Class.AssetService:CreateEditableImageAsync()`.
 
-  `Class.EditableImage` can be used in any `Datatype.Content` property which takes an image, such as `Class.ImageLabel.ImageContent` or `Class.MeshPart.TextureContent`. This is done by setting the content property to `Datatype.Content.fromObject(editableImage)`.
+  `Class.EditableImage` can be used in any `Datatype.Content` property which
+  takes an image, such as `Class.ImageLabel.ImageContent` or
+  `Class.MeshPart.TextureContent`. This is done by setting the content property
+  to `Datatype.Content.fromObject(editableImage)`.
 
   The `Class.EditableImage` coordinate system is relative to the top left of the
   image:
@@ -21,9 +24,9 @@ description: |
   - Bottom-right: `(Size.X - 1, Size.Y - 1)`
 
   When you use `Class.AssetService:PromptCreateAssetAsync()` to publish an
-  object that has a `Datatype.Content` property which references an `Class.EditableImage`, the
-  editable image is published as an image and the property is set to
-  a new asset ID.
+  object that has a `Datatype.Content` property which references an
+  `Class.EditableImage`, the editable image is published as an image and the
+  property is set to a new asset ID.
 code_samples: []
 inherits:
   - Object

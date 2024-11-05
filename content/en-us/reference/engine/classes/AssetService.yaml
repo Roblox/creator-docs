@@ -22,16 +22,21 @@ methods:
       Creates a new `Class.EditableImage`.
     description: |
       Creates a new `Class.EditableImage`. By default, the resolution is set at
-      512&times;512 but it can be specified via the returned object's
-      `Class.EditableImage.Size` parameter. If the device‑specific editable
-      memory budget is exhausted, creation will fail and this method will return
-      `nil`.
+      512&times;512, but you can specify a different size using the  method's
+      option table.
+
+      If the device‑specific editable memory budget is exhausted, creation fails
+      and this method returns `nil`.
     code_samples: []
     parameters:
       - name: editableImageOptions
         type: Dictionary?
         default:
-        summary: ''
+        summary: |
+          Options table containing controls for the method:
+
+          - `Size` – A `Datatype.Vector2` that specifies the image's desired
+            width and height.
     returns:
       - type: Object
         summary: ''
@@ -137,7 +142,13 @@ methods:
       - name: editableMeshOptions
         type: Dictionary?
         default:
-        summary: ''
+        summary: |
+          Options table containing controls for the method:
+
+          - `FixedSize` – A `bool`. Default value is `true`, and the returned
+          `Class.EditableMesh` will not allow you to add or remove vertices,
+          only modify their values. Set to `false` if the ability to change the
+          mesh topology is required, at the expense of using more memory.
     returns:
       - type: Object
         summary: |
@@ -152,10 +163,10 @@ methods:
   - name: AssetService:CreateEditableMeshFromPartAsync
     summary: |
       Returns a new `Class.EditableMesh` instance created from an existing
-      `Class.MeshPart`. 
+      `Class.MeshPart`.
     description: |
       Returns a new `Class.EditableMesh` instance created from the
-      `Class.MeshPart.MeshId|MeshId` of an existing `Class.MeshPart`. 
+      `Class.MeshPart.MeshId|MeshId` of an existing `Class.MeshPart`.
     code_samples: []
     parameters:
       - name: meshPart
@@ -172,7 +183,9 @@ methods:
     tags:
       - Yields
       - Deprecated
-    deprecation_message: 'This function has been deprecated - use `Class.AssetService:CreateEditableMeshAsync()`.'
+    deprecation_message: |
+      This function has been deprecated - use
+      `Class.AssetService:CreateEditableMeshAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities: []

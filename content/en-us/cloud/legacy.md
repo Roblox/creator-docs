@@ -46,6 +46,8 @@ This page summarizes the available operations and authentication types, but you 
 | GetMembersInTeamCreateSessionByPlace | `GET v1/places/{placeId}/teamcreate/active_session/members` | `legacy-team-collaboration:manage` |
 | CloseTeamTestGame                    | `DELETE v2/teamtest/{placeId}`                              | `legacy-team-collaboration:manage` |
 | GetGroupsWithEditGroupGamePermission | `GET v1/user/groups/canmanage`                              | `legacy-group:manage`              |
+| ActivateUniverse                     | `POST v1/universes/{universeId}/activate`                   | `legacy-universe:manage`           |
+| DeactivateUniverse                   | `POST v1/universes/{universeId}/deactivate`                 | `legacy-universe:manage`           |
 
 ## Followings API
 
