@@ -1,0 +1,40 @@
+name: AnimationConstraint
+type: class
+category: Constraints
+memory_category: PhysicsParts
+summary: |
+  F
+description: |
+  An **AnimationConstraint** constrains its `Class.Attachment|Attachments` so
+  that they occupy the same CFrame, offset by the `Class.AnimationConstraint.Transform|Transform`.
+  `Class.Animator|Animators` can update the `Class.AnimationConstraint.Transform|Transform`.
+  
+code_samples:
+inherits:
+  - Constraint
+tags: []
+deprecation_message: ''
+properties:
+  - name: AnimationConstraint.IsKinematic
+    summary: |
+      Sets whether the `Class.AnimationConstraint` is kinematic or physically simulated.
+    description: |
+      When the **IsKinematic** is true, the **AnimationConstraint** will reach its target pose perfectly without participating in physics simulation. When false, it will 
+    code_samples:
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Animation
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
+methods: []
+events: []
+callbacks: []
