@@ -63,7 +63,7 @@ Create a module script named GameSettings to store variables used by other scrip
    return GameSettings
    ```
 
-### MatchManger Script
+### MatchManager Script
 
 The second script connected to the GameManager is the MatchManager. This script manages tasks like starting the timer or resetting players once the match ends.
 
