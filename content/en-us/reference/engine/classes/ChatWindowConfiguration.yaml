@@ -5,9 +5,8 @@ memory_category: Instances
 summary: |
   Configures properties of the default chat window.
 description: |
-  Configures properties of the default chat window.
-
-  It is parented to `Class.TextChatService`.
+  Configures properties of the default text chat window. It is parented to
+  `Class.TextChatService`.
 code_samples: []
 inherits:
   - TextChatConfigurations
@@ -17,8 +16,7 @@ deprecation_message: ''
 properties:
   - name: ChatWindowConfiguration.AbsolutePosition
     summary: |
-      Describes the actual screen position of the default chat window, in
-      pixels.
+      Actual screen position of the default chat window, in pixels.
     description: |
       Read-only property that provides the screen position of the default chat
       window in pixels. Behaves similarly to `Class.GuiBase2d.AbsolutePosition`.
@@ -41,7 +39,7 @@ properties:
     writeCapabilities: []
   - name: ChatWindowConfiguration.AbsoluteSize
     summary: |
-      Describes the actual screen size of the default chat window, in pixels.
+      Actual screen size of the default chat window, in pixels.
     description: |
       Read-only property that provides the screen size of the default chat
       window in pixels. Behaves similarly to `Class.GuiBase2d.AbsoluteSize`.
@@ -64,13 +62,13 @@ properties:
     writeCapabilities: []
   - name: ChatWindowConfiguration.BackgroundColor3
     summary: |
-      Determines the background color of the default chat window.
+      Background color of the default chat window.
     description: |
-      Determines the background color of the default chat window. If the
-      background color is not overridden, this value will respect the user's
+      Background color of the default chat window. If the background color is
+      not overridden, this value will respect the user's
       `Class.GuiService.PreferredTransparency` by making the menu more gray as
       the transparency of the menu decreases. Default value is
-      `Datatype.Color3|Color3.new(25,27,29)`.
+      `Datatype.Color3|Color3.new(25, 27, 29)`.
     code_samples: []
     type: Color3
     tags: []
@@ -88,13 +86,13 @@ properties:
     writeCapabilities: []
   - name: ChatWindowConfiguration.BackgroundTransparency
     summary: |
-      Determines the background transparency of the default chat window.
+      Background transparency of the default chat window.
     description: |
-      Determines the background transparency of the default chat window in a
-      number between 0 and 1. This value is multiplied with the user's
+      Background transparency of the default chat window as a number between `0`
+      and `1`. This value is multiplied with the user's
       `Class.GuiService.PreferredTransparency` to create the effective
       background transparency used by the chat window, which may be more opaque
-      than this value set here. Default value is 0.3.
+      than this value set here. Default value is `0.3`.
     code_samples: []
     type: double
     tags: []
@@ -112,11 +110,9 @@ properties:
     writeCapabilities: []
   - name: ChatWindowConfiguration.Enabled
     summary: |
-      Determines whether to show the default chat window.
+      Whether to show the default chat window.
     description: |
-      Determines whether to show the default chat window.
-
-      Set to `false` to hide the default chat window.
+      Whether to show the default chat window. Set to `false` to hide.
     code_samples: []
     type: bool
     tags: []
@@ -134,9 +130,9 @@ properties:
     writeCapabilities: []
   - name: ChatWindowConfiguration.FontFace
     summary: |
-      Determines the font used to render text in the default chat window.
+      Font used to render text in the default chat window.
     description: |
-      Determines the font used to render text in the default chat window.
+      Font used to render text in the default chat window. Default is `Enum.Font.BuilderSansMedium`.
     code_samples: []
     type: Font
     tags: []
@@ -154,12 +150,11 @@ properties:
     writeCapabilities: []
   - name: ChatWindowConfiguration.HeightScale
     summary: |
-      Determines by what factor the height of the default chat window should be
-      scaled.
+      Factor by which the height of the default chat window should be scaled.
     description: |
-      Determines by what factor the height of the default chat window should be
-      scaled. Must be a value between 0.5 and 2. Defining a value outside of
-      range clamps the actual value to the closest bound.
+      Factor by which the height of the default chat window should be scaled.
+      Must be a value between `0.5` and `2`. Defining a value outside of range
+      clamps the actual value to the closest bound.
     code_samples: []
     type: float
     tags: []
@@ -177,13 +172,15 @@ properties:
     writeCapabilities: []
   - name: ChatWindowConfiguration.HorizontalAlignment
     summary: |
-      Determines the horizontal alignment of the chat window.
+      Horizontal alignment of the chat window.
     description: |
-      Determines the horizontal alignment of the chat window. Behaves similarly
-      to `Class.UIGridStyleLayout.HorizontalAlignment`. Setting to `Left` or
-      `Right` adding a small padding away from touching the corresponding
-      horizontal edge of the screen. Setting to `Center` aligns the window in
-      the horizontal middle of the screen. Default value is `Left`.
+      Horizontal alignment of the chat window. Behaves similarly to
+      `Class.UIGridStyleLayout.HorizontalAlignment`. Setting to
+      `Enum.HorizontalAlignment|Left` or `Enum.HorizontalAlignment|Right` adding
+      a small padding away from touching the corresponding horizontal edge of
+      the screen. Setting to `Enum.HorizontalAlignment|Center` aligns the window
+      in the horizontal middle of the screen. Default value is
+      `Enum.HorizontalAlignment|Left`.
     code_samples: []
     type: HorizontalAlignment
     tags: []
@@ -201,10 +198,10 @@ properties:
     writeCapabilities: []
   - name: ChatWindowConfiguration.TextColor3
     summary: |
-      Determines the color of the text in default chat window.
+      Color of the text in default chat window.
     description: |
-      Determines the color of the text in default chat window. Default value is
-      `Datatype.Color3|Color3.new(255, 255, 255)` (white).
+      Color of the text in default chat window. Default value is
+      `Datatype.Color3|Color3.new(255, 255, 255)`.
     code_samples: []
     type: Color3
     tags: []
@@ -222,10 +219,9 @@ properties:
     writeCapabilities: []
   - name: ChatWindowConfiguration.TextSize
     summary: |
-      Determines the size of the text in default chat window.
+      Size of the text in default chat window.
     description: |
-      Determines the size of the text in default chat window. Default value
-      is 14.
+      Size of the text in default chat window. Default value is `14`.
     code_samples: []
     type: int64
     tags: []
@@ -243,10 +239,10 @@ properties:
     writeCapabilities: []
   - name: ChatWindowConfiguration.TextStrokeColor3
     summary: |
-      Determines the color of the text stroke of text in default chat window.
+      Color of the text stroke for text in default chat window.
     description: |
-      Determines the color of the text stroke of text in default chat window.
-      Default value is `Datatype.Color3|Color3.new(0, 0, 0)` (black).
+      Color of the text stroke for text in default chat window. Default value is
+      `Datatype.Color3|Color3.new(0, 0, 0)`.
     code_samples: []
     type: Color3
     tags: []
@@ -264,11 +260,10 @@ properties:
     writeCapabilities: []
   - name: ChatWindowConfiguration.TextStrokeTransparency
     summary: |
-      Determines the transparency of the text stroke of text in default chat
-      window.
+      Transparency of the text stroke for text in default chat window.
     description: |
-      Determines the color of the text stroke of text in default chat window.
-      Default value is 0.5.
+      Transparency of the text stroke for text in default chat window. Default
+      value is `0.5`.
     code_samples: []
     type: double
     tags: []
@@ -286,13 +281,15 @@ properties:
     writeCapabilities: []
   - name: ChatWindowConfiguration.VerticalAlignment
     summary: |
-      Determines the vertical alignment of the chat window.
+      Vertical alignment of the chat window.
     description: |
-      Determines the vertical alignment of the chat window. Behaves similarly to
-      `Class.UIGridStyleLayout.VerticalAlignment`. Setting to `Top` or `Bottom`
-      adds a small padding away from touching the corresponding edge of the
-      screen. Setting to Center aligns the window in the vertical middle of the
-      screen. Default value is `Top`.
+      Vertical alignment of the chat window. Behaves similarly to
+      `Class.UIGridStyleLayout.VerticalAlignment`. Setting to
+      `Enum.VerticalAlignment|Top` or `Enum.VerticalAlignment|Bottom` adds a
+      small padding away from touching the corresponding edge of the screen.
+      Setting to `Enum.VerticalAlignment|Center` aligns the window in the
+      vertical middle of the screen. Default value is
+      `Enum.VerticalAlignment|Top`.
     code_samples: []
     type: VerticalAlignment
     tags: []
@@ -310,12 +307,11 @@ properties:
     writeCapabilities: []
   - name: ChatWindowConfiguration.WidthScale
     summary: |
-      Determines by what factor the width of the default chat window should be
-      scaled.
+      Factor by which the width of the default chat window should be scaled.
     description: |
-      Determines by what factor the width of the default chat window should be
-      scaled. Must be a value between 0.5 and 2. Defining a value outside of
-      range clamps the actual value to the closest bound.
+      Factor by which the width of the default chat window should be scaled.
+      Must be a value between `0.5` and `2`. Defining a value outside of range
+      clamps the actual value to the closest bound.
     code_samples: []
     type: float
     tags: []
@@ -333,8 +329,14 @@ properties:
     writeCapabilities: []
 methods:
   - name: ChatWindowConfiguration:DeriveNewMessageProperties
-    summary: ''
-    description: ''
+    summary: |
+      Creates a new `Class.ChatWindowMessageProperties` instance that can be
+      used to customize the appearance of messages in the chat window.
+    description: |
+      Creates a new `Class.ChatWindowMessageProperties` instance that can be
+      used to customize the appearance of messages in the chat window.
+      `Class.ChatWindowMessageProperties` inherits from
+      `Class.TextChatMessageProperties`.
     code_samples: []
     parameters: []
     returns:
