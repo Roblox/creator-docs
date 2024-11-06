@@ -12,7 +12,7 @@ Experience guidelines consist of two components:
 
 <img src="../../assets/promotion/misc/Experience-Guidelines-Example.png" width="820" />
 
-Roblox treats experiences without guidelines the same as experiences with an age recommendation of **Ages&nbsp;13+**, meaning Roblox doesn't recommend them to younger players. In addition, experiences without guidelines cannot contain any [17+ content](https://en.help.roblox.com/hc/articles/15869919570708) without risk of moderation. For this reason, Roblox strongly recommends that you fill out the questionnaire for each of your experiences so that they're available to the largest appropriate audience possible.
+Roblox treats experiences without guidelines the same as experiences with an age recommendation of **Ages 13+**, meaning Roblox doesn't recommend them to younger players. In addition, experiences without guidelines cannot contain any [17+ content](https://en.help.roblox.com/hc/articles/15869919570708) without risk of moderation. For this reason, Roblox strongly recommends that you fill out the questionnaire for each of your experiences so that they're available to the largest appropriate audience possible.
 
 <Alert severity="info">
    Experience guidelines only apply to the content you create for your experience. They do **not** apply to user-generated content that players bring with them into your experience, such as avatar clothing and accessories.
@@ -74,7 +74,7 @@ After you submit the questionnaire, your experience receives an age recommendati
   </tr>
   <tr>
     <td>**13+**</td>
-    <td>Content is generally suitable for ages 13 and up. May contain repeated moderate violence, light realistic blood, moderate crude humor, unplayable gambling content, and/or moderate fear-based content.</td>
+    <td>Content is generally suitable for ages 13 and up. May contain repeated moderate violence, light realistic blood, moderate crude humor, unplayable gambling content, moderate fear-based content, free-form user creation, and/or is a social hangout.</td>
   </tr>
   <tr>
     <td>**17+**</td>
@@ -85,6 +85,10 @@ After you submit the questionnaire, your experience receives an age recommendati
 
 <Alert severity="info">
    To remain compliant with local laws and regulations, experiences with an age recommendation of 17+ are unplayable for players who created their accounts or are located in certain countries or regions, such as Korea, Saudi Arabia, and Türkiye (Turkey).
+</Alert>
+
+<Alert severity="warning">
+   While parents can use parental controls to bypass most content restrictions according to what they believe is appropriate for their child, Roblox restricts free form user creation and social hangouts to players over 13.
 </Alert>
 
 ### Violence
@@ -117,11 +121,23 @@ The next question of the blood category asks you to specify whether the level of
 
 Crude humor is a type of humor that depicts or references bodily functions, such as belching, flatulence, vomiting, urinating, and/or defecation for comical purposes. If your experience includes crude humor, including within any [asset type](../../projects/assets/index.md#asset-types), you must specify if it is **mild** or **moderate** within the experience questionnaire based on what bodily functions you use for comical purposes.
 
-For example, if you depict or reference flatulence, vomiting, and/or unrealistic looking feces, such as poop coils or the poop emoji, your experience meets the mild criteria. If you depict or reference urine, urination, or realistic looking feces, your experience meets the moderate criteria.
+For example, if you depict or reference flatulence, vomiting, and/or unrealistic looking feces, such as poop coils or the poop emoji, your experience meets the mild criteria. If you depict or reference urine, urination, realistic looking feces, or your experience is primarily themed or set in a bathroom, your experience meets the moderate criteria.
 
 ### Gambling
 
 Gambling is the practice of exchanging real world money, Robux, or in-experience items of value for a game of chance. While experiences cannot contain playable gambling content, including simulated gambling, you can depict unplayable gambling content, such as showing a casino or people playing cards.
+
+### Social Hangout
+
+Social hangouts are experiences in which the primary theme or activity is to chat or interact with other players with voice or text either as themselves or as their avatar. While this applies to vibe games, clubs, socializing spaces, and supportive places like sad rooms, it does **not** apply to roleplay and/or life simulation experiences where players adopt various roles like teacher or police officer, or are provided with items to role-play with.
+
+If your experience is a social hangout, you must disclose it within the Maturity & Compliance Questionnaire. Social hangouts are only available to players that are at least 13 years old.
+
+### Free-Form User Creation
+
+Free-form user creation are features that allow players to create anything within an experience, such as writing words or making illustrations on a chalkboard. While this applies to in-experience, free-form drawing or creation tools, it does **not** apply to in-experience creations that players assemble with 3D assets, such as building a house or creating an outfit, or anything that goes through Roblox moderation before it's published or replicated.
+
+If your experience includes free-form user creation features, you must disclose it within the Maturity & Compliance Questionnaire. Free-form user creation is only available to players that are at least 13 years old.
 
 ### Alcohol
 
