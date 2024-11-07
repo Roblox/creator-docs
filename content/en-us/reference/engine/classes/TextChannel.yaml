@@ -13,6 +13,8 @@ description: |
   `Class.TextSource` of the user with `TextSource.CanSend = true` must be in
   that channel.
 
+  Messages from different TextChannels can be separated into different tabs in the chat window using `Class.ChannelTabsConfiguration`.
+  
   To learn more, see
   [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
 code_samples:
