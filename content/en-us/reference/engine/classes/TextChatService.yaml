@@ -218,6 +218,8 @@ properties:
       `Class.TextChannel|TextChannels` even if
       `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels`
       is true.
+      
+      Messages from different TextChannels can be separated into different tabs in the chat window using `Class.ChannelTabsConfiguration`.
     code_samples: []
     type: bool
     tags: []
