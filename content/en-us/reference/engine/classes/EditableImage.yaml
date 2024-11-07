@@ -189,30 +189,55 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: EditableImage:DrawImageTransformed
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Draws an image into this `Class.EditableImage` with transformations
+      including scaling and rotation, placing it at the specified position.
+    description: |
+      This method lets you draw an `EditableImage` into this `EditableImage`
+      with transformations applied, such as scaling and rotation. The position
+      parameter specifies where the pivot point of the source image will be
+      placed on this image after transformations. Positions outside the canvas
+      bounds are allowed such that only part of the new image is drawn.
+    code_samples:
+      - EditableImage-DrawImageTransformed
+      - EditableImage-DrawImageTransformed-Crop
     parameters:
       - name: position
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          Position in pixels where the pivot point of the source image will be
+          placed on this image.
       - name: scale
         type: Vector2
         default:
-        summary: ''
+        summary: |
+          Scaling factors for the source image along the X and Y axes.
       - name: rotation
         type: float
         default:
-        summary: ''
+        summary: |
+          The rotation angle in degrees, applied around the pivot point of the
+          source image.
       - name: image
         type: Object
         default:
-        summary: ''
+        summary: |
+          The source `Class.EditableImage` to be drawn into this image.
       - name: options
         type: Dictionary?
         default:
-        summary: ''
+        summary: |
+          Optional dictionary for additional configuration:
+          - `CombineType`: Specifies how the pixels of the source image blend
+            with those of the destination. Default is
+            `Enum.ImageCombineType.AlphaBlend`.
+          - `SamplingMode`: Specifies the sampling method (e.g. `Default` for
+            bilinear or `Pixelated` for nearest neighbor). Default is
+            `Enum.ResamplerMode.Default`.
+          - `PivotPoint`: Specifies the pivot point within the source image for
+            scaling and rotation. Default is the center of the source image
+            (i.e. `Image.Size / 2`).
     returns:
       - type: void
         summary: ''
