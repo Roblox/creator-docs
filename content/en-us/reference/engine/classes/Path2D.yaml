@@ -11,8 +11,10 @@ tags: []
 deprecation_message: ''
 properties:
   - name: Path2D.Closed
-    summary: ''
-    description: ''
+    summary: |
+      Connects the first and last control points when enabled.
+    description: |
+      Connects the first and last control points when enabled.
     code_samples: []
     type: bool
     tags: []
@@ -29,8 +31,10 @@ properties:
       - UI
     writeCapabilities: []
   - name: Path2D.Color3
-    summary: ''
-    description: ''
+    summary: |
+      Determines the Color of the `Class.Path2D`.
+    description: |
+      Determines the Color of the `Class.Path2D`.
     code_samples: []
     type: Color3
     tags: []
@@ -211,8 +215,10 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: Path2D:GetLength
-    summary: ''
-    description: ''
+    summary: |
+      Returns the length of the `Class.Path2D`.
+    description: |
+      Returns the length of the `Class.Path2D`. This function can be expensive if called too frequently.
     code_samples: []
     parameters: []
     returns:
@@ -225,8 +231,10 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: Path2D:GetMaxControlPoints
-    summary: ''
-    description: ''
+    summary: |
+      Returns the maximum allowed number of control points.
+    description: |
+      Returns the maximum allowed number of control points.
     code_samples: []
     parameters: []
     returns:
@@ -444,8 +452,10 @@ methods:
     writeCapabilities: []
 events:
   - name: Path2D.ControlPointChanged
-    summary: ''
-    description: ''
+    summary: |
+      Fires any time control points change.
+    description: |
+      Fires any time control points change.
     code_samples: []
     parameters: []
     tags: []
