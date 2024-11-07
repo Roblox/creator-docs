@@ -439,7 +439,7 @@ end
 
 You can display chat bubbles for non-player characters (NPCs) by calling `Class.TextChatService:DisplayBubble()`, with the NPC character and the message as parameters. These bubbles are customizable using the `Class.TextChatService.OnBubbleAdded` callback just like any other chat bubble.
 
-`Class.TextChatService:DisplayBubble()` only works on client-side scripts, so be sure to use a `Class.LocalScript` in an [appropriate container](/projects/data-model#client), such as `Class.StarterPlayerScripts`. If you attach a `Class.ProximityPrompt` to an NPC, a script for displaying a chat bubble might look like this:
+`Class.TextChatService:DisplayBubble()` only works on client-side scripts, so be sure to use a `Class.Script` with `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`, or a `Class.LocalScript` in an [appropriate container](/projects/data-model#client), such as `Class.StarterPlayerScripts`. If you attach a `Class.ProximityPrompt` to an NPC, a script for displaying a chat bubble might look like this:
 
 ```lua
 local TextChatService = game:GetService("TextChatService")
