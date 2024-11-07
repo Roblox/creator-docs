@@ -12,18 +12,6 @@ The following beta features are currently available to all users through Studio'
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent style={{paddingBottom: '0px'}}>
-<Button href="../assistant/guide.md" size="large" color="primaryBrand" variant="outlined" fullWidth>Assistant</Button>
-<p></p>
-<CardMedia component="img" image="../assets/studio/beta/Assistant.png" />
-<p></p>
-<figcaption>Enables an experimental AI-powered assistant to help answer questions, generate and explain code, and create new materials.</figcaption>
-<p></p>
-<BetaAlert betaName="Assistant Preview" leadIn="" leadOut="" components={props.components} />
-</CardContent>
-</Card>
-
-<Card variant="outlined" style={{height: '100%'}}>
-<CardContent style={{paddingBottom: '0px'}}>
 <Button href="../art/modeling/avatar-setup.md#avatar-auto-setup" size="large" color="primaryBrand" variant="outlined" fullWidth>Avatar Auto-Setup</Button>
 <p></p>
 <CardMedia component="img" image="../assets/studio/beta/Avatar-Auto-Setup.png" />
