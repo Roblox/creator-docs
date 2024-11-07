@@ -949,6 +949,24 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: Workspace.TouchEventsUseCollisionGroups
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.TouchesUseCollisionGroups
     summary: |
       Determines whether `Class.BasePart|parts` in different groups set to not

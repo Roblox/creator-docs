@@ -61,7 +61,9 @@ properties:
     summary: |
       The `Class.TextChatMessage.Translation` to override.
     description: |
-      The `Class.TextChatMessage.Translation` to override; represents [automatically translated](../../../production/localization/automatic-translations.md) and filtered text messages based on players' localization settings.
+      The `Class.TextChatMessage.Translation` to override; represents
+      [automatically translated](../../../production/localization/automatic-translations.md)
+      and filtered text messages based on players' localization settings.
     code_samples: []
     type: string
     tags: []

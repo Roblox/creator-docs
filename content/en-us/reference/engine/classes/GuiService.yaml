@@ -675,6 +675,46 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: GuiService:OnNotificationDisplayed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: notificationId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: GuiService:OnNotificationInteraction
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: notificationId
+        type: string
+        default:
+        summary: ''
+      - name: buttonIndex
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:RemoveSelectionGroup
     summary: |
       Removes a group that was created with

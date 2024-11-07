@@ -15,7 +15,8 @@ properties:
     summary: |
       Font used to render text in the chat window.
     description: |
-      Determines the font used to render text in the chat window. Default is `Enum.Font.BuilderSansMedium`.
+      Determines the font used to render text in the chat window. Default is
+      `Enum.Font.BuilderSansMedium`.
     code_samples: []
     type: Font
     tags: []
@@ -33,9 +34,11 @@ properties:
     writeCapabilities: []
   - name: ChatWindowMessageProperties.PrefixTextProperties
     summary: |
-      Determines the properties of the `Class.TextChatMessage.PrefixText|PrefixText` preceding the chat message.
+      Determines the properties of the
+      `Class.TextChatMessage.PrefixText|PrefixText` preceding the chat message.
     description: |
-      Determines the properties of the `Class.TextChatMessage.PrefixText` preceding the chat message.
+      Determines the properties of the `Class.TextChatMessage.PrefixText`
+      preceding the chat message.
     code_samples: []
     type: ChatWindowMessageProperties
     tags: []
@@ -55,7 +58,8 @@ properties:
     summary: |
       Color of the text in the chat window.
     description: |
-      Determines the color of the text in the chat window. Default value is `Datatype.Color3.new(255, 255, 255)` (white).
+      Determines the color of the text in the chat window. Default value is
+      `Datatype.Color3.new(255, 255, 255)` (white).
     code_samples: []
     type: Color3
     tags: []
@@ -95,7 +99,8 @@ properties:
     summary: |
       Stroke color applied to text in the chat window.
     description: |
-      Determines the stroke color applied to text in the chat window. Default value is `Datatype.Color3.new(0, 0, 0)` (black).
+      Determines the stroke color applied to text in the chat window. Default
+      value is `Datatype.Color3.new(0, 0, 0)` (black).
     code_samples: []
     type: Color3
     tags: []
@@ -115,7 +120,8 @@ properties:
     summary: |
       Transparency of the stroke applied to text in the chat window.
     description: |
-      Determines the transparency of the stroke applied to text in the chat window. Default value is `0.5`.
+      Determines the transparency of the stroke applied to text in the chat
+      window. Default value is `0.5`.
     code_samples: []
     type: double
     tags: []

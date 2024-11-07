@@ -20,7 +20,8 @@ properties:
     summary: |
       Actual screen position of the channel tab bar, in pixels.
     description: |
-      Read-only property that provides the screen position of the channel tab bar in pixels. Behaves similarly to `Class.GuiBase2d.AbsolutePosition`.
+      Read-only property that provides the screen position of the channel tab
+      bar in pixels. Behaves similarly to `Class.GuiBase2d.AbsolutePosition`.
     code_samples: []
     type: Vector2
     tags:
@@ -42,7 +43,8 @@ properties:
     summary: |
       Actual screen size of the channel tab bar, in pixels.
     description: |
-      Read-only property that provides the screen size of the channel tab bar in pixels. Behaves similarly to `Class.GuiBase2d.AbsoluteSize`.
+      Read-only property that provides the screen size of the channel tab bar in
+      pixels. Behaves similarly to `Class.GuiBase2d.AbsoluteSize`.
     code_samples: []
     type: Vector2
     tags:
@@ -132,7 +134,8 @@ properties:
     summary: |
       Font used to render text in the channel tabs.
     description: |
-      Font used to render text in the channel tabs. Default is `Enum.Font.BuilderSansBold`.
+      Font used to render text in the channel tabs. Default is
+      `Enum.Font.BuilderSansBold`.
     code_samples: []
     type: Font
     tags: []

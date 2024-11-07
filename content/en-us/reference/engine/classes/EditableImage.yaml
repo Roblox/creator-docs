@@ -162,6 +162,66 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: EditableImage:DrawImageProjected
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: mesh
+        type: Object
+        default:
+        summary: ''
+      - name: projection
+        type: Dictionary
+        default:
+        summary: ''
+      - name: brushConfig
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableImage:DrawImageTransformed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: position
+        type: Vector2
+        default:
+        summary: ''
+      - name: scale
+        type: Vector2
+        default:
+        summary: ''
+      - name: rotation
+        type: float
+        default:
+        summary: ''
+      - name: image
+        type: Object
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary?
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableImage:DrawLine
     summary: |
       Draws a line between two provided points.
@@ -196,32 +256,6 @@ methods:
         summary: |
           How the pixels of the source image are blended with the pixels of the
           added image.
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableImage:DrawProjectionImage
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: mesh
-        type: Object
-        default:
-        summary: ''
-      - name: projection
-        type: Dictionary
-        default:
-        summary: ''
-      - name: brushConfig
-        type: Dictionary
-        default:
-        summary: ''
     returns:
       - type: void
         summary: ''

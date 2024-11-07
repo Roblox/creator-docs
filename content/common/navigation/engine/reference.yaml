@@ -3448,11 +3448,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AvatarItemType.yaml
         ignoreTranslation: true
-      - title: AvatarJointUpgrade
-        path: /reference/engine/enums/AvatarJointUpgrade
-        type: engineapi
-        source: /reference/engine/enums/AvatarJointUpgrade.yaml
-        ignoreTranslation: true
       - title: AvatarPromptResult
         path: /reference/engine/enums/AvatarPromptResult
         type: engineapi
@@ -3867,6 +3862,11 @@ navigation:
         path: /reference/engine/enums/DraggerMovementMode
         type: engineapi
         source: /reference/engine/enums/DraggerMovementMode.yaml
+        ignoreTranslation: true
+      - title: DraggingScrollBar
+        path: /reference/engine/enums/DraggingScrollBar
+        type: engineapi
+        source: /reference/engine/enums/DraggingScrollBar.yaml
         ignoreTranslation: true
       - title: EasingDirection
         path: /reference/engine/enums/EasingDirection
@@ -5012,6 +5012,11 @@ navigation:
         path: /reference/engine/enums/TableMajorAxis
         type: engineapi
         source: /reference/engine/enums/TableMajorAxis.yaml
+        ignoreTranslation: true
+      - title: TeamCreateErrorState
+        path: /reference/engine/enums/TeamCreateErrorState
+        type: engineapi
+        source: /reference/engine/enums/TeamCreateErrorState.yaml
         ignoreTranslation: true
       - title: Technology
         path: /reference/engine/enums/Technology

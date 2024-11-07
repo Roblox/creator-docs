@@ -423,6 +423,20 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: EditableMesh:GetCenter
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Vector3
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetColor
     summary: |
       Returns the color for the given color ID.
@@ -669,6 +683,20 @@ methods:
       - type: Vector3
         summary: |
           Position of a vertex in the mesh's local object space.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetSize
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Vector3
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None

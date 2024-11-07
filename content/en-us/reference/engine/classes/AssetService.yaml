@@ -22,7 +22,7 @@ methods:
       Creates a new `Class.EditableImage`.
     description: |
       Creates a new `Class.EditableImage`. By default, the resolution is set at
-      512&times;512, but you can specify a different size using the  method's
+      512&times;512, but you can specify a different size using the method's
       option table.
 
       If the device‑specific editable memory budget is exhausted, creation fails
@@ -146,9 +146,9 @@ methods:
           Options table containing controls for the method:
 
           - `FixedSize` – A `bool`. Default value is `true`, and the returned
-          `Class.EditableMesh` will not allow you to add or remove vertices,
-          only modify their values. Set to `false` if the ability to change the
-          mesh topology is required, at the expense of using more memory.
+            `Class.EditableMesh` will not allow you to add or remove vertices,
+            only modify their values. Set to `false` if the ability to change
+            the mesh topology is required, at the expense of using more memory.
     returns:
       - type: Object
         summary: |

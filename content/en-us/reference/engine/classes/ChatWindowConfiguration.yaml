@@ -132,7 +132,8 @@ properties:
     summary: |
       Font used to render text in the default chat window.
     description: |
-      Font used to render text in the default chat window. Default is `Enum.Font.BuilderSansMedium`.
+      Font used to render text in the default chat window. Default is
+      `Enum.Font.BuilderSansMedium`.
     code_samples: []
     type: Font
     tags: []

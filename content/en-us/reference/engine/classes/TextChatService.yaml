@@ -312,6 +312,37 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: TextChatService:CanUsersDirectChatAsync
+    summary: |
+      Determines whether a user has permission to chat directly with other users
+      in experiences based on their parental control settings.
+    description: |
+      Determines whether a user has permission to chat directly with other users
+      in experiences based on their parental control settings. To be used when:
+      - The line of communication is user-initiated (not developer- or
+        gameplay-initiated)
+      - Access to the communication is closed and limited
+    code_samples:
+      - TextChatService-User-Chat
+    parameters:
+      - name: requesterUserId
+        type: int64
+        default:
+        summary: ''
+      - name: userIds
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: TextChatService.BubbleDisplayed
     summary: |
