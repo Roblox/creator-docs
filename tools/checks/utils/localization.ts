@@ -15,6 +15,7 @@ export enum Locale {
   EN_US = 'en-us',
   ES_ES = 'es-es',
   FR_FR = 'fr-fr',
+  IT_IT = 'it-it',
   JA_JP = 'ja-jp',
   KO_KR = 'ko-kr',
   PT_BR = 'pt-br',
@@ -88,6 +89,8 @@ const getCachedContentForFilePath = (filePath: string): string => {
   return content;
 };
 
+export const outdatedTranslationFiles: string[] = [];
+
 export const checkFileImportEquality = (
   filePath: string,
   fileContent: string
@@ -110,6 +113,7 @@ export const checkFileImportEquality = (
     console.log(
       `${Emoji.NoEntry} MDX imports do not match between ${filePath} and ${enUsFilePath}`
     );
+    outdatedTranslationFiles.push(filePath);
     addToSummaryOfRequirements(
       `${Emoji.NoEntry} Requirement: MDX imports do not match between ${filePath} and ${enUsFilePath}`
     );
@@ -167,6 +171,7 @@ export const checkMdxEquality = async (
     } else {
       const errorMessage = `${Emoji.NoEntry} MDX components do not match ${comparisonMessage}`;
       console.log(errorMessage);
+      outdatedTranslationFiles.push(filePath);
       addToSummaryOfRequirements(errorMessage);
     }
   }

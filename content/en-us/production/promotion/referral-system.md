@@ -4,7 +4,7 @@ description: Use referral links to track and reward players that have successful
 ---
 
 <Alert severity="info">
-This feature is still in beta. If you'd like to provide Roblox with feedback about this feature, join the [User Acquisition Referrals](https://www.guilded.gg/i/kbQ4Po42) Guilded group.
+This feature is still in beta. If you'd like to provide Roblox with feedback about this feature, join the [User Acquisition Referrals](https://www.guilded.gg/i/EwKQPZWE) Guilded group.
 </Alert>
 
 The friend referral system encourages existing players to bring new players into your experience, increasing player retention and overall engagement. Players can access and share referral links from [player invite prompts](./invite-prompts.md) or directly from the default in-experience invite menu.
