@@ -1,8 +1,8 @@
 ---
 title: Create a Coin Collection Mechanic
 description: Explains how to implement event-driven logic in an experience.
-next: /tutorials/core/scripting/record-and-display-player-data
-prev: /tutorials/core/building/greybox-a-playable-area
+next: /tutorials/curriculums/core/scripting/record-and-display-player-data
+prev: /tutorials/curriculums/core/building/greybox-a-playable-area
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/pg6nWVARoDM?si=93UpoO1ll2dZDhzO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

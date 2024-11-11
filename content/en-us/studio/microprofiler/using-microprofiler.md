@@ -29,7 +29,7 @@ This walkthrough shows how to use the MicroProfiler to find a problematic aspect
 
 1. Pause the MicroProfiler by pressing <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>). Pausing with the keyboard shortcut opens [detailed mode](./modes.md#detailed-mode).
 
-1. Click and drag to pan the graph. Note how one particular process in the worker threads seems to be using a lot of processing time compared to the main thread. Hover over `Class.RunService.Stepped` and note how long it's taking to render.
+1. Click and drag to pan the graph. Note how one particular task in the worker threads seems to be using a lot of processing time compared to the main thread. Hover over `Class.RunService.Stepped` and note how long it's taking to render.
 
    <img alt="Detailed mode with long labels for processes." src="../../assets/optimization/microprofiler/micro-tut-stepped.png" width="600px" />
 

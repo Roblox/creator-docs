@@ -12,17 +12,17 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: WrapDeformer:GetDeformedCFrame
+  - name: WrapDeformer:SetCageMeshContent
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: originalCFrame
-        type: CFrame
+      - name: content
+        type: Content
         default:
         summary: ''
     returns:
-      - type: CFrame
+      - type: void
         summary: ''
     tags: []
     deprecation_message: ''
@@ -36,7 +36,26 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: EditableMesh
+      - type: Object
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: WrapDeformer:GetDeformedCFrameAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: originalCFrame
+        type: CFrame
+        default:
+        summary: ''
+    returns:
+      - type: CFrame
         summary: ''
     tags:
       - Yields

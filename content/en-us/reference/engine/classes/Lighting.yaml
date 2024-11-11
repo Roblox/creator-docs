@@ -1133,8 +1133,8 @@ events:
       - The fog properties, `Class.Lighting.FogColor`, `Class.Lighting.FogStart`
         and `Class.Lighting.FogEnd` will not fire this event
 
-      In cases where this behavior is not desired, the `Class.Instance.Changed`
-      event or `Class.Instance:GetPropertyChangedSignal()` function can be used.
+      In cases where this behavior is not desired, the `Class.Object.Changed`
+      event or `Class.Object:GetPropertyChangedSignal()` function can be used.
     code_samples:
       - Lighting-LightingChanged1
     parameters:

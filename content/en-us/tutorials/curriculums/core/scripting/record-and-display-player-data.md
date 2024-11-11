@@ -1,8 +1,8 @@
 ---
 title: Record and Display Player Data
 description: Explains how to store and retrieve individual player data in an experience and display it visually through a leaderboard.
-next: /tutorials/core/scripting/create-player-hazards
-prev: /tutorials/core/scripting/script-game-behavior
+next: /tutorials/curriculums/core/scripting/create-player-hazards
+prev: /tutorials/curriculums/core/scripting/script-game-behavior
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/bfWTFFFcLXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

@@ -117,7 +117,8 @@ properties:
       insets affect the contents of a `Class.ScreenGui`.
     code_samples:
     type: bool
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None

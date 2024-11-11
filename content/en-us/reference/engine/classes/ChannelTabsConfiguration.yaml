@@ -2,8 +2,13 @@ name: ChannelTabsConfiguration
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Configures properties of the optional channel tabs in the default chat window.
+description: |
+  Configures properties of the optional channel tabs in the default chat window.
+  It is parented to `Class.TextChatService`.
+
+  To learn more, see [Customizing Text Chat](../../../chat/customizing-in-experience-text-chat.md).
 code_samples: []
 inherits:
   - TextChatConfigurations
@@ -12,8 +17,11 @@ tags:
 deprecation_message: ''
 properties:
   - name: ChannelTabsConfiguration.AbsolutePosition
-    summary: ''
-    description: ''
+    summary: |
+      Actual screen position of the channel tab bar, in pixels.
+    description: |
+      Read-only property that provides the screen position of the channel tab
+      bar in pixels. Behaves similarly to `Class.GuiBase2d.AbsolutePosition`.
     code_samples: []
     type: Vector2
     tags:
@@ -32,8 +40,11 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChannelTabsConfiguration.AbsoluteSize
-    summary: ''
-    description: ''
+    summary: |
+      Actual screen size of the channel tab bar, in pixels.
+    description: |
+      Read-only property that provides the screen size of the channel tab bar in
+      pixels. Behaves similarly to `Class.GuiBase2d.AbsoluteSize`.
     code_samples: []
     type: Vector2
     tags:
@@ -52,8 +63,14 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChannelTabsConfiguration.BackgroundColor3
-    summary: ''
-    description: ''
+    summary: |
+      Background color of the channel tabs.
+    description: |
+      Background color of the channel tabs. If the background color is not
+      overridden, this value will respect the user's
+      `Class.GuiService.PreferredTransparency` by making the menu more gray as
+      the transparency of the menu decreases. Default value is
+      `Datatype.Color3|Color3.new(25, 27, 29)`.
     code_samples: []
     type: Color3
     tags: []
@@ -70,8 +87,14 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChannelTabsConfiguration.BackgroundTransparency
-    summary: ''
-    description: ''
+    summary: |
+      Background transparency of the channel tabs.
+    description: |
+      Background transparency of the channel tabs as a number between `0` and
+      `1`. This value is multiplied with the user's
+      `Class.GuiService.PreferredTransparency` to create the effective
+      background transparency used by the channel tabs, which may be more opaque
+      than this value set here. Default value is `0`.
     code_samples: []
     type: double
     tags: []
@@ -88,8 +111,10 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChannelTabsConfiguration.Enabled
-    summary: ''
-    description: ''
+    summary: |
+      Whether to show the channel tabs.
+    description: |
+      Whether to show the channel tabs. Set to `false` to hide.
     code_samples: []
     type: bool
     tags: []
@@ -106,8 +131,11 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChannelTabsConfiguration.FontFace
-    summary: ''
-    description: ''
+    summary: |
+      Font used to render text in the channel tabs.
+    description: |
+      Font used to render text in the channel tabs. Default is
+      `Enum.Font.BuilderSansBold`.
     code_samples: []
     type: Font
     tags: []
@@ -124,8 +152,11 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChannelTabsConfiguration.HoverBackgroundColor3
-    summary: ''
-    description: ''
+    summary: |
+      Background color of a channel tab when hovering over it.
+    description: |
+      Background color of a channel tab when hovering over it. Default value is
+      `Datatype.Color3|Color3.new(125, 125, 125)`.
     code_samples: []
     type: Color3
     tags: []
@@ -142,8 +173,11 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChannelTabsConfiguration.SelectedTabTextColor3
-    summary: ''
-    description: ''
+    summary: |
+      Color of text in a selected tab.
+    description: |
+      Color of text in a selected tab. Default value is
+      `Datatype.Color3|Color3.new(255, 255, 255)`.
     code_samples: []
     type: Color3
     tags: []
@@ -160,8 +194,11 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChannelTabsConfiguration.TextColor3
-    summary: ''
-    description: ''
+    summary: |
+      Color of text in an unselected tab.
+    description: |
+      Color of text in an unselected tab. Default value is
+      `Datatype.Color3|Color3.new(175, 175, 175)`.
     code_samples: []
     type: Color3
     tags: []
@@ -178,8 +215,10 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChannelTabsConfiguration.TextSize
-    summary: ''
-    description: ''
+    summary: |
+      Size of the text in channel tabs.
+    description: |
+      Size of the text in channel tabs. Default value is `14`.
     code_samples: []
     type: int64
     tags: []
@@ -196,8 +235,11 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChannelTabsConfiguration.TextStrokeColor3
-    summary: ''
-    description: ''
+    summary: |
+      Color of the text stroke for text in channel tabs.
+    description: |
+      Color of the text stroke for text in channel tabs. Default value is
+      `Datatype.Color3|Color3.new(0, 0, 0)`.
     code_samples: []
     type: Color3
     tags: []
@@ -214,8 +256,11 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChannelTabsConfiguration.TextStrokeTransparency
-    summary: ''
-    description: ''
+    summary: |
+      Transparency of the text stroke for text in channel tabs.
+    description: |
+      Transparency of the text stroke for text in channel tabs. Default value is
+      `1`.
     code_samples: []
     type: double
     tags: []

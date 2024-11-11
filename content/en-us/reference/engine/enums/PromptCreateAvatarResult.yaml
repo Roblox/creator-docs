@@ -51,8 +51,13 @@ items:
     value: 9
     tags: []
     deprecation_message: ''
-  - name: UnknownFailure
+  - name: PurchaseFailure
     summary: ''
     value: 10
+    tags: []
+    deprecation_message: ''
+  - name: UnknownFailure
+    summary: ''
+    value: 11
     tags: []
     deprecation_message: ''

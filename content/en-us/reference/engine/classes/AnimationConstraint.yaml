@@ -1,0 +1,184 @@
+name: AnimationConstraint
+type: class
+category:
+memory_category: PhysicsParts
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Constraint
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AnimationConstraint.C0
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.C1
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.IsKinematic
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.MaxForce
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Compliance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.MaxTorque
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Compliance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.Part0
+    summary: ''
+    description: ''
+    code_samples: []
+    type: BasePart
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.Part1
+    summary: ''
+    description: ''
+    code_samples: []
+    type: BasePart
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.Transform
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+methods: []
+events: []
+callbacks: []

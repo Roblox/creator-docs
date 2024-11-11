@@ -598,7 +598,7 @@ methods:
         </tr>
       	<tr>
       	  <td><code>DisplaySubscriptionPeriod</code></td>
-      	  <td>number</td>
+      	  <td>string</td>
           <td>Localized subscription period text for display (for example, <code>/month</code>). Can be used together with <code>DisplayPrice</code>.</td>
         </tr>
       	<tr>

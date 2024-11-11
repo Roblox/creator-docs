@@ -138,13 +138,13 @@ If your experience uses the default control setting of `Enum.DevTouchMovementMod
 Most mobile players use two thumbs &mdash; one on the virtual thumbstick and one on the jump button. Depending on the physical size of the device and the player's hands, reaching too far from the bottom corners becomes uncomfortable or impossible, so you should avoid placing frequently‑used buttons outside of easy‑to‑reach zones.
 
 <Grid container spacing={3} alignItems="flex-end">
-<Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
+<Grid item XSmall={12} Medium={12} Large={12} XLarge={6} XXLarge={6}>
 <img src="../assets/ui/misc/Thumb-Zones-Phone-Reachable.png" width="100%" style={{marginBottom:"0px;"}} />
 <Alert severity="success">
 Button comfortably within reach of player's right thumb
 </Alert>
 </Grid>
-<Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
+<Grid item XSmall={12} Medium={12} Large={12} XLarge={6} XXLarge={6}>
 <img src="../assets/ui/misc/Thumb-Zones-Phone-Non-Reachable.png" width="100%" style={{marginBottom:"0px;"}} />
 <Alert severity="warning">
 Button difficult to reach unless player stretches hand or thumb
@@ -156,13 +156,13 @@ Button difficult to reach unless player stretches hand or thumb
 Remember that comfortable thumb zones differ between phones and tablets because tablets have a larger screen. A button placed 40% below the screen's top edge is reachable on a phone but almost unreachable on a tablet.
 
 <Grid container spacing={3} alignItems="flex-end">
-<Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
+<Grid item XSmall={12} Medium={12} Large={12} XLarge={6} XXLarge={6}>
 <img src="../assets/ui/misc/Thumb-Zones-Tablet-Reachable.png" width="100%" style={{marginBottom:"0px;"}} />
 <Alert severity="success">
 Button 40% from top edge of phone, within reach of player's thumb
 </Alert>
 </Grid>
-<Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
+<Grid item XSmall={12} Medium={12} Large={12} XLarge={6} XXLarge={6}>
 <img src="../assets/ui/misc/Thumb-Zones-Tablet-Non-Reachable.png" width="100%" style={{marginBottom:"0px;"}} />
 <Alert severity="warning">
 Button 40% from top edge of tablet, difficult to reach without stretching

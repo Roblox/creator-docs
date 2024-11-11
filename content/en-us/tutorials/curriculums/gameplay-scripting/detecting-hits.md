@@ -1,7 +1,7 @@
 ---
 title: Detecting Hits
 description: Explains how hit detection works in a laser tag experience.
-prev: /tutorials/gameplay-scripting/implementing-blasters
+prev: /tutorials/curriculums/gameplay-scripting/implementing-blasters
 ---
 
 **Detecting hits** is the process of identifying when blasts collide with players, then reducing their health accordingly. At a high-level, you can think of this work as either:
@@ -90,7 +90,7 @@ local rayResults = castLaserRay(localPlayer, currentCamera.CFrame.Position, rayD
 This information is particularly useful for first-person shooter experiences because it allows you to see when and where blasts intersect with players or the environment. For example, the following image demonstrates two rays that are casting parallel to each other. According to their point of origin and direction, Ray A misses the wall and continues until it meets its maximum distance, while Ray B collides with the wall. For more information on this process, see [Raycasting](../../../workspace/raycasting.md).
 
 <figure>
-  <img src="../../assets/tutorials/gameplay-scripting/Detecting-Hits/Two-Rays.png" width="60%" alt="A diagram where Ray A continues through the wall, and Ray B collides with the wall." />
+  <img src="../../../assets/tutorials/gameplay-scripting/Detecting-Hits/Two-Rays.png" width="60%" alt="A diagram where Ray A continues through the wall, and Ray B collides with the wall." />
 </figure>
 
 The `castLaserRay()` parameters specify that `Raycast()` calls must consider every part in the workspace **except** the character who blasted. The script then casts a ray for each direction in the `directions` table. If a ray hits something, it generates a `Datatype.RaycastResult`, which has five properties:

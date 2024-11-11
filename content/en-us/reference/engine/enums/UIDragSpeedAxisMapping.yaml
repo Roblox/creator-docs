@@ -1,23 +1,39 @@
 name: UIDragSpeedAxisMapping
 type: enum
-summary: ''
-description: ''
+summary: |
+  Used with `Class.UIDragDetector.UIDragSpeedAxisMapping` to determine the
+  **X**/**Y** dimension dragging speeds.
+description: |
+  Used with `Class.UIDragDetector.UIDragSpeedAxisMapping` to determine the
+  **X**/**Y** dimension dragging speeds, based on the detector's
+  `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed`.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: XY
-    summary: ''
+    summary: |
+      Default setting for a detector's
+      `Class.UIDragDetector.UIDragSpeedAxisMapping|UIDragSpeedAxisMapping` where
+      the **X** and **Y** axis speeds are based off the **X** and **Y**
+      `Datatype.UDim.Scale|Scale`/`Datatype.UDim.Offset|Offset` values
+      respectively.
     value: 0
     tags: []
     deprecation_message: ''
   - name: XX
-    summary: ''
+    summary: |
+      Both the **X** and **Y** axis speeds are based off the **X** axis for
+      `Datatype.UDim.Scale|Scale`, while the `Datatype.UDim.Offset|Offset`
+      values still apply to their respective axis.
     value: 1
     tags: []
     deprecation_message: ''
   - name: YY
-    summary: ''
+    summary: |
+      Both the **X** and **Y** axis speeds are based off the **Y** axis for
+      `Datatype.UDim.Scale|Scale`, while the `Datatype.UDim.Offset|Offset`
+      values still apply to their respective axis.
     value: 2
     tags: []
     deprecation_message: ''

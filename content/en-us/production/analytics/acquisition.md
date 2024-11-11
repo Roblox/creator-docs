@@ -39,8 +39,16 @@ Here's a list of all the available acquisition sources:
     <td>**Recommended Experiences** section on **Home**</td>
   </tr>
   <tr>
+    <td>Continue Play</td>
+    <td>**Continue Play** on **Home**</td>
+  </tr>
+  <tr>
+    <td>Curation</td>
+    <td>**Today's Picks** and **Roblox Events** on **Home**</td>
+  </tr>
+  <tr>
     <td>Home Other</td>
-    <td>**Continue Play** and **Favorites** on **Home**</td>
+    <td>**Favorites** and all other traffic on **Home**</td>
   </tr>
   <tr>
     <td>Friends</td>
@@ -48,11 +56,23 @@ Here's a list of all the available acquisition sources:
   </tr>
   <tr>
     <td>Search</td>
-    <td>Organic traffic from **Search** results and **Recommended Experiences** on **Discover**</td>
+    <td>Organic traffic from **Search** results and **Recommended Experiences** on **Experience Details** page</td>
+  </tr>
+  <tr>
+    <td>Charts</td>
+    <td>**All sorts** on **Charts**</td>
   </tr>
   <tr>
     <td>Sponsored Ads</td>
-    <td>Combined acquisition from [Sponsored Experiences](../promotion/ads-manager.md#sponsored-experiences) on **Home** and [Search Ads](../promotion/search-ads.md).</td>
+    <td>Acquisition from [Sponsored Experiences](../promotion/ads-manager.md#sponsored-experiences) and **Sponsored Takeovers** on **Home**</td>
+  </tr>
+  <tr>
+    <td>Search Ads</td>
+    <td>Acquisition from [Search Ads](../promotion/search-ads.md)</td>
+  </tr>
+  <tr>
+    <td>Portal Ads</td>
+    <td>Acquisition from [Portal Ads](../promotion/ads-manager.md#portal-ads)</td>
   </tr>
   <tr>
     <td>Teleport</td>
@@ -63,8 +83,6 @@ Here's a list of all the available acquisition sources:
     <td>All other traffic with unknown sources or can't be attributed, including the traffic from external sources</td>
   </tr>
 </table>
-
-<img src="../../assets/analytics/acquisition/qualified-playthrough-rate.png" width= "78%" alt="Chart indicating qualified playthrough rate through home recommendations."/>
 
 ## Acquisition Attribution
 
@@ -78,10 +96,6 @@ The dashboard categorizes results for each acquisition source as follows:
   <tr>
     <td>Users with Plays</td>
     <td>Unique new users with plays on the experience.</td>
-  </tr>
-  <tr>
-    <td>Users with Qualified Plays</td>
-    <td>Unique new users who engaged with your experience.</td>
   </tr>
   <tr>
     <td>Qualified Play Through Rate</td>
@@ -105,6 +119,8 @@ The dashboard categorizes results for each acquisition source as follows:
   </tr>
 </table>
 
+<img src="../../assets/analytics/acquisition/New-Users-Funnel.png" width= "100%" alt="Chart indicating new users funnel."/>
+
 ## Improving Acquisition
 
 To improve acquisition, you can run an acquisition funnel to identify sources that might drive more traffic or convert better, such as:
@@ -119,7 +135,7 @@ Among all Roblox sources, **Home** is usually where the vast majority of users f
 1. **Improve engagement and retention.** Get your [session time](../../production/analytics/engagement.md#improving-average-session-time) and [Day 1 retention](../../production/analytics/retention.md#improving-day-1-retention) to be comparable or above your similar experience benchmarks. The algorithm cares about these metrics because they signal how engaging and satisfying your experience is for users.
 2. **Optimize monetization.** Get your [payer conversion](../../production/analytics/monetization.md#improving-payer-conversion-rate) rate and [ARPPU](../../production/analytics/monetization.md#improving-average-revenue-per-paying-user-arppu) (average revenue per paying user) to be comparable or above your similar experience benchmarks. The algorithm cares about these metrics because they measure how invested users are in your experience.
 
-<img src="../../assets/analytics/acquisition/traffic-sources.png" width= "78%" alt="An example shows the statistics by acquisition sources." />
+<img src="../../assets/analytics/acquisition/Unique-Users-by-Source.png" width= "100%" alt="An example shows the statistics by unique users with impressions and unique users with plays by source." />
 
 You can adopt the following strategies to improve the number of users visiting your experience from Roblox sources, including **Home**, **Discover**, and **Search**:
 
@@ -129,14 +145,14 @@ You can adopt the following strategies to improve the number of users visiting y
 
 For more information on Roblox sources and best practices on improving the discovery of your experience, see [Discovery](../../discovery.md).
 
-### Improving Conversion Rate from Roblox Sources
+### Improving Qualified Play Through Rate from Roblox Sources
 
 You can get more users to convert by making your experience metadata engaging and accurate:
 
 1. **Use a title, description, and icon** that's true and unique to your experience.
 2. **Add images and videos** to your experience detail page to engage users.
 
-<img src="../../assets/analytics/acquisition/conversion.png" width= "75%" alt="An example shows the statistics of Home and Search Conversion." />
+<img src="../../assets/analytics/acquisition/Qualified-Play-Through-Rate.png" width= "90%" alt="An example shows the qualified play through rate." />
 
 ## Improving Acquisition from External Sources
 

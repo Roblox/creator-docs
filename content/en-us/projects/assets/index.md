@@ -102,11 +102,15 @@ Within Studio, you can convert single assets or asset hierarchies into **package
 
 For more information, see [Packages](../../projects/assets/packages.md).
 
-## Asset Format Strings
+## Asset URIs
 
-Assets are reflected through formatted strings, each of which points to an online file or a file saved to the client's device. The basic structure is a **protocol** followed by `://` and a **string** that varies according to the protocol.
+Assets and other content stored outside of the current place are identified through **Uniform Resource Identifiers** (URIs) which are formatted strings that point to a file stored online, within the Roblox application package, or saved to the client's device.
 
-<span><Chip label='[Protocol]://[String]' color='primary' size='large' /></span>
+The basic structure is a **scheme** followed by `://` and a **path** that varies according to the scheme.
+
+<span><Chip label='[Scheme]://[Path]' color='primary' size='large' /></span><br/>
+
+The Roblox engine supports several custom URI schemes for referencing content stored on the platform.
 
 ### rbxassetid
 
@@ -210,7 +214,7 @@ The content folder's location depends on the user's operating system:
 		</tr>
 		<tr>
 			<td>`GameThumbnail`</td>
-			<td>ID for an experience (`Class.DataModel.GameId`); shows the experience's primary [thumbnail](../../production/promotion/promotional-thumbnails.md)</td>
+			<td>ID for an experience (`Class.DataModel.GameId`); shows the experience's primary [thumbnail](../../production/promotion/thumbnails.md)</td>
 			<td scope="row">256&times;144, 384&times;216, 480&times;270, 576&times;324, 768&times;432</td>
 		</tr>
 		<tr>
@@ -256,11 +260,29 @@ if success then
 end
 ```
 
+### rbxgameasset
+
+`rbxgameasset` points to an asset uploaded through the [Asset Manager](../../projects/assets/manager.md). It allows access to assets by a user‑friendly name instead of ID, so if you upload an image named `Potion.png`, you can reference it as:
+
+<span><Chip label='rbxgameasset://Images/Potion' color='primary' size='large' /></span><br />
+
+In the above example, `Images` is the category/folder that appears in the [Asset Manager](../../projects/assets/manager.md) and `Potion` is the asset name, minus its extension.
+
+<Alert severity="warning">
+`rbxgameasset` only works for the current game. If you paste a parent object that utilizes the asset into another game, the asset will not load (or will load a different asset if you've uploaded one with the same name to that other game). If you need an asset to work across multiple games, use `rbxassetid` instead of `rbxgameasset`.
+</Alert>
+
 ### rbxhttp
 
 `rbxhttp` is shorthand for `Class.ContentProvider.BaseUrl`, for example:
 
 <span><Chip label='rbxhttp://Thumbs/Avatar.ashx?x=100&y=100&format=png' color='primary' size='large' /></span>
+
+### rbxtemp
+
+`rbxtemp` allows you to refer `Class.File|Files`. Use `Class.File:GetTemporaryId()` to generate a valid `rbxtemp` URL. For example:
+
+<span><Chip label='rbxtemp://1' color='primary' size='large' /></span>
 
 ### https / http
 

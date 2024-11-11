@@ -9,7 +9,7 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
 
 <Grid container alignItems='stretch'>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -27,7 +27,7 @@ A skinned tree model with the soil, branches, and leaves as separate meshes boun
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -45,7 +45,7 @@ A robot non-player character used in the <a href="https://www.roblox.com/games/7
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -74,7 +74,7 @@ The following include examples and templates utilizing Roblox's required [avatar
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -94,7 +94,7 @@ A rigged and skinned humanoid character model with a full body cage, facial anim
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -108,13 +108,13 @@ A rigged and skinned humanoid character model with a full body cage, facial anim
 </CardContent>
 
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-<Button href="../../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+<Button href="../../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
 </CardActions>
 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -137,7 +137,7 @@ A Blocky character model with an animatable head and a full body cage.
 
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -160,7 +160,7 @@ A skinned R15 character created from the <a href="../../art/modeling/skinning-a-
 
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -179,7 +179,7 @@ Uncaged example clothing ready for caging in a 3D modeling software.
 
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -199,7 +199,7 @@ Caged 3D accessory models and associated PBR textures. Ready for import into Stu
 </Card>
 
 </Grid>
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -220,7 +220,7 @@ A blank mannequin using Roblox's [Classic](../../art/characters/specifications.m
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -241,7 +241,7 @@ A blank mannequin using Roblox's [Rthro Normal](../../art/characters/specificati
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -272,7 +272,7 @@ If you are using Roblox's avatar template files, you must perform the [cleanup s
 </Alert>
 
 <Grid container style={{margin: -6}}>
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 
 <CardContent>
@@ -292,7 +292,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 
 <CardContent>
@@ -313,7 +313,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 
 <CardContent>
@@ -334,7 +334,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -355,7 +355,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -376,7 +376,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -395,7 +395,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -420,7 +420,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -439,7 +439,7 @@ Standard armature rig template for Blender. Use this template for rigging **bodi
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -458,7 +458,7 @@ Project files for creation, includes a full-body inner and outer cage mesh for c
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -478,7 +478,7 @@ Project files for creation, includes the 15 individual body part cages required 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -504,7 +504,7 @@ Template file containing all content from previous templates, includes rig skele
 
 <Grid container alignItems='stretch'>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -524,7 +524,7 @@ Open-source Blender Studio add-on that allows you to upload assets directly from
 
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 
@@ -543,7 +543,7 @@ Blender add-on for verifying avatar technical compatibility before importing int
 
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent>
 

@@ -1,8 +1,8 @@
 ---
 title: Greybox a Playable Area
 description: Explains how to use Studio's solid modeling tools to plan out the basic structure of your platforms.
-next: /tutorials/core/scripting/script-game-behavior
-prev: /tutorials/core/building/create-an-environment-with-terrain
+next: /tutorials/curriculums/core/scripting/script-game-behavior
+prev: /tutorials/curriculums/core/building/create-an-environment-with-terrain
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/yQJg1knsbh8?si=rmjdGMyHMFj5BdBM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -124,7 +124,7 @@ To insert a cylinder part for your first platform:
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/New-Part-As-Child-Of-Model.png" alt="Studio's Explorer window with the new Part highlighted under the Blockout_Parts model object." width="320" />
 
-1. Navigate back to the **Home** tab, then use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate your cylinder until it's a large, flat surface in the middle of your island. For more information on these tools, see [Manipulating Parts](../../../parts/index.md#manipulating-parts).
+1. Navigate back to the **Home** tab, then use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate your cylinder until it's a large, flat surface in the middle of your island. For more information on these tools, see [Manipulating Parts](../../../../parts/index.md#manipulating-parts).
 
    <img src="../../../../assets/studio/general/Home-Tab-Move.png" alt="Studio's Home tab with the Move tool highlighted." width="716" />
 

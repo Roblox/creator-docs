@@ -13,6 +13,136 @@ tags:
   - NotReplicated
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: UGCValidationService:CalculateEditableMeshInsideMeshPercentage
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: editableMeshRoot
+        type: Object
+        default:
+        summary: ''
+      - name: editableMeshQuery
+        type: Object
+        default:
+        summary: ''
+      - name: meshQueryTransform
+        type: CFrame
+        default:
+        summary: ''
+      - name: meshQueryScale
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:GetEditableCagingRelevancyMetrics
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: innerCage
+        type: Object
+        default:
+        summary: ''
+      - name: outerCage
+        type: Object
+        default:
+        summary: ''
+      - name: refMesh
+        type: Object
+        default:
+        summary: ''
+      - name: offsetInner
+        type: Vector3
+        default:
+        summary: ''
+      - name: offsetOuter
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:CalculateMeshInsideMeshPercentage
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: meshIdRoot
+        type: string
+        default:
+        summary: ''
+      - name: meshIdQuery
+        type: string
+        default:
+        summary: ''
+      - name: meshqueryTransform
+        type: CFrame
+        default:
+        summary: ''
+      - name: meshQueryScale
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: float
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:GetCagingRelevancyMetrics
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: innerCageMeshId
+        type: string
+        default:
+        summary: ''
+      - name: outerCageMeshId
+        type: string
+        default:
+        summary: ''
+      - name: refMeshId
+        type: string
+        default:
+        summary: ''
+      - name: offsetInner
+        type: Vector3
+        default:
+        summary: ''
+      - name: offsetOuter
+        type: Vector3
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

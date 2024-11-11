@@ -321,7 +321,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
@@ -367,10 +367,44 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-events:
-  - name: AudioPlayer.Ended
+  - name: AudioPlayer:GetWaveformAsync
     summary: ''
     description: ''
+    code_samples: []
+    parameters:
+      - name: timeRange
+        type: NumberRange
+        default:
+        summary: ''
+      - name: samples
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+events:
+  - name: AudioPlayer.Ended
+    summary: |
+      Fires when the `Class.AudioPlayer` has completed playback and stopped.
+    description: |
+      Fires after the `Class.AudioPlayer` has completed playback and stopped.
+      Note this event will **not** fire for audio with
+      `Class.AudioPlayer.Looped|Looped` set to `true` since it continues playing
+      upon reaching its end. This event will also **not** fire when the audio is
+      stopped before playback has completed; for this, use
+      `Class.AudioPlayer:GetPropertyChangedSignal()` on the
+      `Class.AudioPlayer.IsPlaying|IsPlaying` property.
+
+      This event is often used to destroy an `Class.AudioPlayer` when it has
+      completed playback.
     code_samples: []
     parameters: []
     tags: []
@@ -380,8 +414,16 @@ events:
     capabilities: []
     writeCapabilities: []
   - name: AudioPlayer.Looped
-    summary: ''
-    description: ''
+    summary: |
+      Fires when the `Class.AudioPlayer` loops.
+    description: |
+      Event that fires after the `Class.AudioPlayer` loops. This happens when
+      the audio reaches the end of its content (or the end of the
+      `Class.AudioPlayer.LoopRegion|LoopRegion` if it is active) and
+      `Class.AudioPlayer.Looping|Looping` is `true`.
+
+      This event does **not** fire if the audio is looped manually by changing
+      its `Class.AudioPlayer.TimePosition|TimePosition`.
     code_samples: []
     parameters: []
     tags: []

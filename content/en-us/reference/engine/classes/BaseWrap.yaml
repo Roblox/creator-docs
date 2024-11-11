@@ -15,6 +15,25 @@ tags:
   - NotCreatable
 deprecation_message: ''
 properties:
+  - name: BaseWrap.CageMeshContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: BaseWrap.CageMeshId
     summary: |
       Asset ID for cage mesh.

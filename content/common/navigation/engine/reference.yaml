@@ -90,6 +90,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/AnimationClipProvider.yaml
         ignoreTranslation: true
+      - title: AnimationConstraint
+        path: /reference/engine/classes/AnimationConstraint
+        type: engineapi
+        source: /reference/engine/classes/AnimationConstraint.yaml
+        ignoreTranslation: true
       - title: AnimationController
         path: /reference/engine/classes/AnimationController
         type: engineapi
@@ -890,16 +895,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/ExperienceNotificationService.yaml
         ignoreTranslation: true
-      - title: ExplorerFilterAutocompleterInstance
-        path: /reference/engine/classes/ExplorerFilterAutocompleterInstance
-        type: engineapi
-        source: /reference/engine/classes/ExplorerFilterAutocompleterInstance.yaml
-        ignoreTranslation: true
-      - title: ExplorerFilterInstance
-        path: /reference/engine/classes/ExplorerFilterInstance
-        type: engineapi
-        source: /reference/engine/classes/ExplorerFilterInstance.yaml
-        ignoreTranslation: true
       - title: Explosion
         path: /reference/engine/classes/Explosion
         type: engineapi
@@ -1585,6 +1580,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/NumberValue.yaml
         ignoreTranslation: true
+      - title: Object
+        path: /reference/engine/classes/Object
+        type: engineapi
+        source: /reference/engine/classes/Object.yaml
+        ignoreTranslation: true
       - title: ObjectValue
         path: /reference/engine/classes/ObjectValue
         type: engineapi
@@ -2015,6 +2015,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/RigidConstraint.yaml
         ignoreTranslation: true
+      - title: RobloxSerializableInstance
+        path: /reference/engine/classes/RobloxSerializableInstance
+        type: engineapi
+        source: /reference/engine/classes/RobloxSerializableInstance.yaml
+        ignoreTranslation: true
       - title: RocketPropulsion
         path: /reference/engine/classes/RocketPropulsion
         type: engineapi
@@ -2024,6 +2029,11 @@ navigation:
         path: /reference/engine/classes/RodConstraint
         type: engineapi
         source: /reference/engine/classes/RodConstraint.yaml
+        ignoreTranslation: true
+      - title: RomarkRbxAnalyticsService
+        path: /reference/engine/classes/RomarkRbxAnalyticsService
+        type: engineapi
+        source: /reference/engine/classes/RomarkRbxAnalyticsService.yaml
         ignoreTranslation: true
       - title: RopeConstraint
         path: /reference/engine/classes/RopeConstraint
@@ -2920,6 +2930,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/VRStatusService.yaml
         ignoreTranslation: true
+      - title: WebViewService
+        path: /reference/engine/classes/WebViewService
+        type: engineapi
+        source: /reference/engine/classes/WebViewService.yaml
+        ignoreTranslation: true
       - title: WedgePart
         path: /reference/engine/classes/WedgePart
         type: engineapi
@@ -3433,11 +3448,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AvatarItemType.yaml
         ignoreTranslation: true
-      - title: AvatarJointUpgrade
-        path: /reference/engine/enums/AvatarJointUpgrade
-        type: engineapi
-        source: /reference/engine/enums/AvatarJointUpgrade.yaml
-        ignoreTranslation: true
       - title: AvatarPromptResult
         path: /reference/engine/enums/AvatarPromptResult
         type: engineapi
@@ -3758,11 +3768,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/DebuggerStatus.yaml
         ignoreTranslation: true
-      - title: DecreaseMinimumPartDensityMode
-        path: /reference/engine/enums/DecreaseMinimumPartDensityMode
-        type: engineapi
-        source: /reference/engine/enums/DecreaseMinimumPartDensityMode.yaml
-        ignoreTranslation: true
       - title: DevCameraOcclusionMode
         path: /reference/engine/enums/DevCameraOcclusionMode
         type: engineapi
@@ -3857,6 +3862,11 @@ navigation:
         path: /reference/engine/enums/DraggerMovementMode
         type: engineapi
         source: /reference/engine/enums/DraggerMovementMode.yaml
+        ignoreTranslation: true
+      - title: DraggingScrollBar
+        path: /reference/engine/enums/DraggingScrollBar
+        type: engineapi
+        source: /reference/engine/enums/DraggingScrollBar.yaml
         ignoreTranslation: true
       - title: EasingDirection
         path: /reference/engine/enums/EasingDirection
@@ -4758,6 +4768,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/SalesTypeFilter.yaml
         ignoreTranslation: true
+      - title: SandboxedInstanceMode
+        path: /reference/engine/enums/SandboxedInstanceMode
+        type: engineapi
+        source: /reference/engine/enums/SandboxedInstanceMode.yaml
+        ignoreTranslation: true
       - title: SaveAvatarThumbnailCustomizationFailure
         path: /reference/engine/enums/SaveAvatarThumbnailCustomizationFailure
         type: engineapi
@@ -4997,6 +5012,11 @@ navigation:
         path: /reference/engine/enums/TableMajorAxis
         type: engineapi
         source: /reference/engine/enums/TableMajorAxis.yaml
+        ignoreTranslation: true
+      - title: TeamCreateErrorState
+        path: /reference/engine/enums/TeamCreateErrorState
+        type: engineapi
+        source: /reference/engine/enums/TeamCreateErrorState.yaml
         ignoreTranslation: true
       - title: Technology
         path: /reference/engine/enums/Technology

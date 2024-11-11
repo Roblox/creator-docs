@@ -6,7 +6,7 @@ description: Roblox's built-in, fully-featured script editor includes modern con
 The **Script Editor** in Studio is the primary tool for scripting on Roblox. It's a self-improving environment that can help you write high-impact code, shorten your development time, and iterate on your experiences. It can improve your scripting experience by:
 
 - Formatting and highlighting syntax in your code.
-- Offering ways to [autocomplete](#autocomplete) phrases in your code as you type.
+- Offering ways to [autocomplete](#autocomplete-features) phrases in your code as you type.
 - Helping you [navigate code](#code-navigation) by jumping to variable and function declarations.
 - Helping you [find and replace](#find-and-replace) code in open scripts or all scripts.
 - Providing [real-time feedback](#real-time-feedback) on your code quality and performance.
@@ -17,29 +17,37 @@ The Script Editor supports all types of [scripts](../scripting/index.md) and ope
 You can [customize](#editor-settings) the Script Editor to suit your preferences and workflows, including font family/size, formatting behavior, and colors for syntax highlighting. You can also toggle features such as [autocomplete](#autocomplete), [signature help](#signature-help), and [script analysis](#script-analysis).
 </Alert>
 
-## Autocomplete
+## Autocomplete Features
 
-The Script Editor generates code-related information that can improve your programming efficiency.
+The Script Editor's autocomplete features generate code-related information that can improve your programming efficiency, such as:
 
-- Autocomplete offers suggestions on how to complete phrases as you type them. Use the <kbd>↑</kbd> and <kbd>↓</kbd> keys to browse the suggestions, then press <kbd>Tab</kbd> or <kbd>Enter</kbd> to accept a suggestion and insert the complete phrase.
+- **Informed suggestions** on how to complete phrases as you type them that are contextual to the experience's [data model](../projects/data-model.md). For example, if you have a `Class.Model` in `Class.Workspace` called **RocketShip**, autocomplete suggests `RocketShip` when you type `workspace.roc` and indicates that it's a `Class.Model`.
 
-   <img src="../assets/studio/script-editor/Autocomplete-Suggestions.png" width="790" alt="Autocomplete showing suggestions based on what user has typed" />
+   <img src="../assets/studio/script-editor/Autocomplete-Data-Model.png" width="780" alt="Autocomplete showing suggestions based on the experience's data model" />
 
-- Autocomplete is tied to the experience's [data model](../projects/data-model.md). For example, if you have a `Class.Model` in `Class.Workspace` called **RocketShip**, autocomplete suggests `RocketShip` when you type `workspace.roc` and indicates that it's a `Class.Model`.
+   <Alert severity="info">
+   Use the <kbd>↑</kbd> and <kbd>↓</kbd> keys to browse the suggestions, then press <kbd>Tab</kbd> or <kbd>Enter</kbd> to accept a suggestion and insert the complete phrase.
+   </Alert>
 
-   <img src="../assets/studio/script-editor/Autocomplete-Data-Model.png" width="790" alt="Autocomplete showing suggestions based on the experience's data model" />
+- **Autofill names** for variables and functions that you declare, helping you avoid pesky typos.
 
-- Autocomplete offers names for variables and functions that you declare, helping you avoid typos.
+   <img src="../assets/studio/script-editor/Autocomplete-Variable.png" width="780" alt="Autocomplete showing suggestions based on a previously declared variable." />
 
-   <img src="../assets/studio/script-editor/Autocomplete-Variable.png" width="790" alt="Autocomplete showing suggestions based on a previously declared variable" />
+- **Documentation pop-ups with code samples** that are similar to those on the [Engine API Reference](/reference/engine), giving you context on the API's usage.
 
-- The autocomplete pop-up provides documentation and code samples similar to those on the [Engine API Reference](/reference/engine), providing you with context on an API's usage.
+   <img src="../assets/studio/script-editor/Autocomplete-API.png" width="780" alt="Autocomplete showing suggestions based on a Roblox engine API." />
 
-   <img src="../assets/studio/script-editor/Autocomplete-API.png" width="790" alt="Autocomplete showing suggestions based on a Roblox engine API" />
+- **On-hover tooltips** that you can customize with your own defined documentation.
 
-- When you type an argument into a function, the autocomplete pop-up also shows the function's **signature**, providing you with a reference for its parameters and return values.
+   <img src="../assets/studio/script-editor/Autocomplete-CustomDocs.png" width="780" alt="Autocomplete showing custom documentation." />
 
-   <img src="../assets/studio/script-editor/Autocomplete-Signature.png" width="790" alt="Autocomplete showing function signature" />
+- **On-hover script analysis diagnostics** with information you can use to troubleshoot errors.
+
+   <img src="../assets/studio/script-editor/Autocomplete-Diagnostics.png" width="780" alt="Autocomplete showing diagnostic information." />
+
+- **Function signatures** when you type an argument, providing you a reference for its parameters and return values.
+
+   <img src="../assets/studio/script-editor/Autocomplete-Signature.png" width="780" alt="Autocomplete showing function signature" />
 
 ## Code Navigation
 
@@ -137,7 +145,7 @@ Furthermore, all suggestions are generated **by** the AI model and do not transf
 The Script Editor supports usage of multiple cursors to make edits simultaneously. You can add cursors based on your needs with a mouse click or keyboard shortcut. The initial cursor is called the **primary cursor** and additional cursors are called **secondary cursors**.
 
 - Edits that you make at the primary cursor copy to the secondary cursors. Each edit counts as one action, so undo/redo of an edit applies to all cursors.
-- Widgets such as [autocomplete](#autocomplete) appear on the primary cursor but not the secondary cursors.
+- Widgets such as [autocomplete](#autocomplete-features) appear on the primary cursor but not the secondary cursors.
 - All of the standard [keyboard shortcuts](#keyboard-shortcuts) for script editing work with multi-cursor editing, including code indentation, toggling comments, and deleting lines.
 
 The following table summarizes multi-cursor workflows and their shortcuts.

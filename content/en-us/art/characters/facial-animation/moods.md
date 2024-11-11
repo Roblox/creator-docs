@@ -22,7 +22,7 @@ A **mood** is a type of [facial animation](../../../art/characters/facial-animat
 
 ## Creating Moods
 
-If you have a character model with an animatable head, you can create any mood animation you can think of using the [Face Animation Editor](../../../art/characters/facial-animation/animating-heads.md#using-the-face-animation-editor). If you don't want to use the [Blocky](../../../assets/avatar/dynamic-heads/reference-files/BlockyCharacter.fbx) or [Goblin](../../../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.fbx) reference character models, you can create or modify an existing model to support animated heads in a third-party modeling software, such as Blender or Maya. For information on how to create an animatable head, see [Creating Basic Heads](../../../art/characters/facial-animation/creating-basic-heads.md).
+If you have a character model with an animatable head, you can create any mood animation you can think of using the [Face Animation Editor](../../../art/characters/facial-animation/animating-heads.md#using-the-face-animation-editor). If you don't want to use the [Blocky](../../../assets/avatar/dynamic-heads/reference-files/BlockyCharacter.fbx) or [Goblin](../../../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.zip) reference character models, you can create or modify an existing model to support animated heads in a third-party modeling software, such as Blender or Maya. For information on how to create an animatable head, see [Creating Basic Heads](../../../art/characters/facial-animation/creating-basic-heads.md).
 
 To create a mood:
 

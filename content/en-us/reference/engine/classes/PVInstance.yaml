@@ -95,7 +95,7 @@ methods:
       `Class.Model|Models` are moved in this way by having their
       `Class.Model.WorldPivot` transformed by the necessary offset.
 
-      Note that for efficiency purposes, `Class.Instance.Changed` events are not
+      Note that for efficiency purposes, `Class.Object.Changed` events are not
       fired for `Class.BasePart.Position|Position` and
       `Class.BasePart.Orientation|Orientation` of `Class.BasePart|BaseParts`
       moved in this way; they are only fired for `Datatype.CFrame`.

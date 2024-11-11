@@ -1,7 +1,6 @@
 ---
 title: Custom Particle Effects
 description: The process for creating a multicolor plume of smoke from an active volcano.
-prev: /tutorials/building/effects/basic-particle-effects
 ---
 
 Time to look at a more complex example of particle effects. You'll make a multicolored plume of smoke pouring out of an active volcano.

@@ -3,9 +3,11 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  **VoiceChatService** holds voice functions not tied to other instances.
+  **VoiceChatService** is responsible for voice chat's high-level functionality.
 description: |
-  **VoiceChatService** holds voice functions not tied to other instances.
+  **VoiceChatService** is responsible for voice chat's high-level functionality.
+  This mostly consists of configuration options, and functions that are not
+  specifically-controlled by more-specific instances.
 code_samples:
 inherits:
   - Instance
@@ -16,15 +18,16 @@ deprecation_message: ''
 properties:
   - name: VoiceChatService.EnableDefaultVoice
     summary: |
-      Indicates whether or not the place uses the default voice manager.
+      Controls whether each voice-eligible player can be heard as though they
+      were speaking through their character.
     description: |
-      Indicates whether or not the place uses the default voice manager. This is
-      enabled by default.
+      When enabled, each voice-eligible player can be heard as though they were
+      speaking through their character. The implementation details of the voice
+      setup depend on `Class.VoiceChatService.UseAudioApi|UseAudioApi`.
 
-      When enabled, the default voice manager adds all voice-eligible users to
-      voice chat as they join the place. When disabled, the place doesn't use
-      the default voice manager, and users are not added to voice chat when they
-      join the place.
+      When `Class.VoiceChatService.UseAudioApi|UseAudioApi` is
+      `Enum.AudioApiRollout|Disabled`, disabling the default voice setup
+      effectively disables voice chat altogether.
     code_samples: []
     type: bool
     tags: []
@@ -40,8 +43,28 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: VoiceChatService.UseAudioApi
-    summary: ''
-    description: ''
+    summary: |
+      Controls whether voice chat is represented and controlled by
+      `Class.AudioDeviceInput` objects.
+    description: |
+      If `Enum.AudioApiRollout|Enabled`, the voice chat setup is represented and
+      controlled by `Class.AudioDeviceInput` objects. More specifically:
+
+      - An `Class.AudioDeviceInput` will be created and parented to each
+        voice-eligible `Class.Player`.
+      - An `Class.AudioEmitter` will be created and parented to each
+        voice-eligible player's `Class.Player.Character`.
+      - An `Class.AudioListener` will be created and parented to
+        `Class.Workspace.CurrentCamera`.
+
+      If `Enum.AudioApiRollout|Disabled`, the voice chat setup is done through
+      an internal-only system.
+
+      Currently, setting this to `Enum.AudioApiRollout|Automatic` has the same
+      meaning as `Enum.AudioApiRollout|Disabled`. However, in the future,
+      `Enum.AudioApiRollout|Automatic` will become
+      `Enum.AudioApiRollout|Enabled`, so that new experiences can achieve
+      greater customization over voice.
     code_samples: []
     type: AudioApiRollout
     tags: []
@@ -86,7 +109,7 @@ methods:
         type: int64
         default:
         summary: |
-          The `UserId` to check.
+          The `Class.Player.UserId` to check.
     returns:
       - type: bool
         summary: |

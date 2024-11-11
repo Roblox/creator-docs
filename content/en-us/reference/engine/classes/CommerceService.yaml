@@ -23,7 +23,7 @@ methods:
         default:
         summary: ''
       - name: commerceProductId
-        type: int64
+        type: string
         default:
         summary: ''
     returns:
@@ -57,6 +57,70 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: CommerceService:SignalPromptCommerceProductPurchaseFinished
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: productId
+        type: string
+        default:
+        summary: ''
+      - name: didTryPurchase
+        type: bool
+        default:
+        summary: ''
+      - name: checkoutSessionId
+        type: string
+        default: ''
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: CommerceService:GetCommerceProductInfoAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: commerceProductId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: CommerceService:PrepareCommerceProductPurchase
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: commerceProductId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CommerceService:UserEligibleForRealWorldCommerceAsync
     summary: ''
     description: ''
@@ -73,6 +137,32 @@ methods:
     capabilities: []
     writeCapabilities: []
 events:
+  - name: CommerceService.BenefitStatusReceived
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: isGranted
+        type: bool
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: CommerceService.FetchReceipt
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: RobloxSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CommerceService.PromptCommerceProductPurchaseFinished
     summary: ''
     description: ''
@@ -83,12 +173,23 @@ events:
         default:
         summary: ''
       - name: productId
-        type: int64
+        type: string
         default:
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: CommerceService.PurchaseBrowserClosed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

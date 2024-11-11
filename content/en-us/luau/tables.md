@@ -326,3 +326,60 @@ local original = {
 
 local clone = deepCopy(original)
 ```
+
+## Freezing Tables
+
+Freezing a table makes it read-only. This means that its keys can't be written to, but can be read. New keys can't be created after a table is frozen. You can check if a table is frozen by using the `Library.table.isfrozen()` method. This feature is used to create constant values which you don't want to change.
+
+### Shallow Freezes
+
+To freeze a table without any nested tables, Luau offers the `Library.table.freeze()` method.
+
+```lua
+local target = {
+	key = "value",
+	engine = "Roblox",
+	playerID = 505306092
+}
+
+table.freeze(target)
+target.playerID = 1 --> attempt to modify a readonly table
+```
+
+### Deep Freezes
+
+To freeze a more complex table with nested tables inside it, you'll need to use a recursive function similar to the following:
+
+```lua
+local function deepFreeze(target)
+	-- Shallow freeze the table
+	table.freeze(target)
+
+	-- Check each key of the table and freeze it if it's a table
+	for _, v in target do
+		if type(v) == "table" then
+			deepFreeze(v)
+		end
+	end
+end
+```
+
+With the function in place, you can deep freeze a table as follows:
+
+```lua
+local target = {
+	key = "value",
+	playerInfo = {
+		playerID = 505306092,
+		playerName = "PlayerName"
+	},
+	otherInfo = {
+		{
+			{1, 3, 5, 7, 9}
+		}
+	}
+}
+
+deepFreeze(target)
+target.playerInfo.playerID = 1 --> attempt to modify a readonly table
+```

@@ -353,7 +353,7 @@ print(t[1]) -- prints 10
 
 ## Using the Set Datatype
 
-A **set** is a collection of items with no order and no duplicate elements. An item either **is** or **is not** contained within a set. Using metatables, you can construct and manipulate sets within Lua scripts.
+A **set** is a collection of items with no order and no duplicate elements. An item either **is** or **is not** contained within a set. Using metatables, you can construct and manipulate sets within Lua scripts.
 
 ### Basic Methods
 

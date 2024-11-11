@@ -174,14 +174,14 @@ Over the years, we've developed teacher-tested resources to help foster supporti
 Digital civility is useful for all Roblox students. Our materials teach skills such as how to identify false or suspicious information, and how to treat others with kindness and respect.
 
 <Grid container>
-<Grid item xs={6}>
+<Grid item XSmall={6}>
 <h4>Intro to Digital Safety</h4>
 
 Learn real-life skills playing a Roblox experience.
 
 <a href="../../education/resources/intro-to-digital-safety.md" target="_blank" rel="noopener"><Button variant="contained">View</Button></a>
 </Grid>
-<Grid item xs={6}>
+<Grid item XSmall={6}>
 
 <h4>Intro to Digital Civility</h4>
 
@@ -196,7 +196,7 @@ Become a digital citizen while learning Roblox Studio skills.
 The resources below have been built with educators on how to create supportive learning environments.
 
 <Grid container>
-<Grid item xs={6}>
+<Grid item XSmall={6}>
 
 <h4>Classroom Best Practices</h4>
 
@@ -204,7 +204,7 @@ Generalized tips for any Roblox classroom.
 
 <a href="../../education/resources/classroom-best-practices.md" target="_blank" rel="noopener"><Button variant="contained">View</Button></a>
 </Grid>
-<Grid item xs={6}>
+<Grid item XSmall={6}>
 
 <h4>Collaboration Best Practices</h4>
 

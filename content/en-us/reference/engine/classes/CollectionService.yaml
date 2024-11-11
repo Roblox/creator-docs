@@ -108,7 +108,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags:
       - Deprecated
@@ -165,7 +165,8 @@ methods:
       fires under two conditions:
 
       - The tag is removed from an instance within the `Class.DataModel` (game)
-        using `Class.CollectionService:RemoveTag()` or `Class.Instance:RemoveTag()`.
+        using `Class.CollectionService:RemoveTag()` or
+        `Class.Instance:RemoveTag()`.
       - An instance with the given tag is removed as a descendant of the
         `Class.DataModel`, e.g. by un-setting `Class.Instance.Parent` or
         similar.
@@ -223,7 +224,7 @@ methods:
         summary: |
           The tag to search for.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of all instances with the tag.
     tags: []

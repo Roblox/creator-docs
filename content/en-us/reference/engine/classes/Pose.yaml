@@ -139,7 +139,7 @@ methods:
       - Keyframe-Reset-Poses
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of sub `Class.Pose|Poses`.
     tags: []

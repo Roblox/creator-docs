@@ -8,6 +8,8 @@ The `Class.DataStoreService` lets you store data that needs to persist between s
 
 If you want to add granular permission control to your data stores and access them outside of Studio or Roblox servers, you can use [Open Cloud APIs for data stores](/cloud/reference/DataStore).
 
+For temporary data that you need to update or access frequently, use [memory stores](./../memory-stores/index.md).
+
 ## Enabling Studio Access
 
 By default, experiences tested in Studio can't access data stores, so you must first enable them. Accessing data stores in Studio can be dangerous for live experiences because Studio accesses the same data stores as the client application. To avoid overwriting production data, do not enable this setting for live experiences. Instead, enable it for a separate test version of the experience.
@@ -198,7 +200,7 @@ end
 ## Metadata
 
 <Alert severity="info">
-Ordered data stores don't support [versioning and metadata](../../cloud-services/data-stores/managing-data-stores.md#versioning), so `Class.DataStoreKeyInfo|DataStoreKeyInfo` is always `nil` for keys in an `Class.OrderedDataStore|OrderedDataStore`. If you need to support versioning and metadata, use `Class.DataStore|DataStore`.
+Ordered data stores don't support [versioning](../../cloud-services/data-stores/managing-data-stores.md#versioning) and metadata, so `Class.DataStoreKeyInfo|DataStoreKeyInfo` is always `nil` for keys in an `Class.OrderedDataStore|OrderedDataStore`. If you need to support versioning and metadata, use `Class.DataStore|DataStore`.
 </Alert>
 
 There are two types of metadata associated with keys:

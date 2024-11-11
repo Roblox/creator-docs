@@ -33,16 +33,14 @@ navigation:
           - title: Instance Streaming
             path: /workspace/streaming
       - title: Working in Teams
-        path: /projects/setting-up-a-team
+        path: /projects/groups
         section:
-          - title: Setting Up a Team
-            path: /projects/setting-up-a-team
-          - title: Collaboration
-            path: /projects/collaboration
-          - title: Activity History
-            path: /projects/activity-history
           - title: Groups
             path: /projects/groups
+          - title: Collaboration
+            path: /projects/collaboration
+      - title: Activity History
+        path: /projects/activity-history
       - title: External Tools
         path: /projects/external-tools
   - title: Assets
@@ -215,6 +213,8 @@ navigation:
             path: /scripting/multithreading
           - title: Native Code Generation
             path: /luau/native-code-gen
+          - title: Script Capabilities
+            path: /scripting/capabilities
           - title: Security Tactics and Cheat Mitigation
             path: /scripting/security/security-tactics
       - title: Luau Reference
@@ -428,6 +428,8 @@ navigation:
         section:
           - title: Overview
             path: /chat/in-experience-text-chat
+          - title: Guidelines
+            path: /chat/guidelines
           - title: Customization
             path: /chat/customizing-in-experience-text-chat
           - title: Bubble Chat
@@ -448,7 +450,10 @@ navigation:
       - title: Monitoring Performance
         path: /performance-optimization/monitoring
   - title: Cloud Services
+    path: /cloud-services/data-stores-vs-memory-stores
     section:
+      - title: Data Stores vs Memory Stores
+        path: /cloud-services/data-stores-vs-memory-stores
       - title: Data Stores
         path: /cloud-services/data-stores/
         section:
@@ -505,7 +510,7 @@ navigation:
           - title: Experience Icons
             path: /production/publishing/experience-icons
           - title: Experience Thumbnails
-            path: /production/promotion/promotional-thumbnails
+            path: /production/publishing/thumbnails
           - title: Badges
             path: /production/publishing/badges
       # - title: Accessories
@@ -566,6 +571,8 @@ navigation:
         path: /production/promotion/experience-events
       - title: Player Invite Prompts
         path: /production/promotion/invite-prompts
+      - title: Friend Invite Reward System
+        path: /production/promotion/referral-system
       - title: Experience Notifications
         path: /production/promotion/experience-notifications
       - title: Nominating for the Discover Page

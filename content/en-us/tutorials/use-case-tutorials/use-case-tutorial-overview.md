@@ -17,7 +17,7 @@ hideInPageNavigation: true
 Use solid modeling operations directly in Studio to form complex shapes by unioning and negating basic parts.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -33,7 +33,7 @@ Use solid modeling operations directly in Studio to form complex shapes by union
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -49,7 +49,7 @@ Use solid modeling operations directly in Studio to form complex shapes by union
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -71,7 +71,7 @@ Use solid modeling operations directly in Studio to form complex shapes by union
 Use third-party modeling tools like Blender to create meshes, then import them into Studio using the 3D Importer.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -87,7 +87,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -132,7 +132,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -148,7 +148,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -164,7 +164,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -180,7 +180,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -204,7 +204,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </AccordionSummary>
 <AccordionDetails>
 
-- [On-Screen UI](../..ui/on-screen-containers.md)
+- [On-Screen UI](../../ui/on-screen-containers.md)
 - [In-Experience UI](../../ui/in-experience-containers.md)
 - [Labels](../../ui/labels.md)
 - [Buttons](../../ui/buttons.md)
@@ -225,7 +225,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -241,7 +241,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -282,7 +282,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -298,7 +298,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -340,7 +340,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -356,7 +356,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -372,7 +372,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -414,7 +414,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -430,7 +430,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -446,7 +446,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -492,7 +492,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 Use the Animation Editor directly in Studio to create animations for models or meshes with rigging and skinning data.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -508,7 +508,7 @@ Use the Animation Editor directly in Studio to create animations for models or m
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -530,7 +530,7 @@ Use the Animation Editor directly in Studio to create animations for models or m
 Use third-party modeling tools like Blender to create meshes with rigging and skinning data, then import them into Studio using the 3D Importer.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -550,7 +550,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -596,7 +596,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -612,7 +612,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -628,7 +628,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -644,7 +644,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -660,7 +660,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -700,7 +700,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 </div>
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -716,7 +716,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -732,7 +732,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -748,7 +748,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  </Grid>
  </Grid>
 
- <Grid item container sm={12} md={6} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+ <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>

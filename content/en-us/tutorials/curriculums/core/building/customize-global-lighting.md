@@ -1,8 +1,8 @@
 ---
 title: Customize Global Lighting
 description: Explains how to use global lighting settings to refine the look and feel of your experience.
-prev: /tutorials/core/building/create-basic-visual-effects
-next: /tutorials/core/building/apply-polished-assets
+prev: /tutorials/curriculums/core/building/create-basic-visual-effects
+next: /tutorials/curriculums/core/building/apply-polished-assets
 ---
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/VtsWu2G0ZiM?si=TZDy2jahPoWpCBnr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

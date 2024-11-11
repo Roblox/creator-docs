@@ -309,5 +309,28 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: TextService:GetTextSizeOffsetAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: fontSize
+        type: int
+        default:
+        summary: ''
+      - name: font
+        type: Font
+        default:
+        summary: ''
+    returns:
+      - type: float
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []
