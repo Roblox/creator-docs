@@ -23,7 +23,7 @@ As a result, Assistant can act directly on your data model, such as inserting an
 
 For a more in-depth look at what Assistant can do and how to use it, see the [Prompt Guide and Examples](prompt-engineering.md) and the following Roblox Staff livestream for tips, tricks, and inspiration.
 
-<iframe width="640" height="360" src="https://www.youtube.com/embed/vMaOGgeuR4Y?si=fuX-80mMMzhQB6sn&amp;start=240" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/vMaOGgeuR4Y?si=fuX-80mMMzhQB6sn&amp;start=240" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Insert and Modify Scripts
 
