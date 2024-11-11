@@ -30,6 +30,7 @@ description: |
   - `Class.AudioFilter`
   - `Class.AudioFlanger`
   - `Class.AudioListener`
+  - `Class.AudioLimiter`
   - `Class.AudioPitchShifter`
   - `Class.AudioPlayer`
   - `Class.AudioReverb`
