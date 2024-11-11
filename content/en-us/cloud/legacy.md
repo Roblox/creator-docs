@@ -5,20 +5,13 @@ description: Lists legacy REST APIs for Open Cloud.
 
 This section contains documentation for Roblox's many legacy APIs.
 
-Roblox offers API key and/or OAuth 2.0 support **for the select legacy APIs listed on this page**. Instead of sharing cookies, you can grant access to specific permissions and use these more secure authentication methods. These APIs might change without notice and break your application and do not have the stability guarantees of the newer Open Cloud APIs.
+Roblox offers API key and/or OAuth 2.0 support **for the select legacy API endpoints listed on this page**. Instead of sharing cookies, you can grant access to specific permissions and use these more secure authentication methods. These APIs might change without notice and break your application and do not have the stability guarantees of the newer Open Cloud APIs.
 
-This page summarizes the available operations and authentication types, but you might find the legacy API documentation useful, as well:
-
-- [Badges API](/cloud/legacy/badges/v1)
-- [Develop API](/cloud/legacy/develop/v1)
-- [Followings API](/cloud/legacy/followings/v1)
-- [Game Internationalization API](/cloud/legacy/gameinternationalization/v1)
-- [Groups API](/cloud/legacy/groups/v1)
-- [Localization Tables API](/cloud/legacy/localizationtables/v1)
+This page summarizes the available operations and authentication types.
 
 <Alert severity="warning">
   Refer to the left navigation for documentation of legacy APIs that only support cookie authentication and **not** API key and/or OAuth 2.0 authentication.
-  
+
   Just like the legacy APIs listed on this page, those APIs might change without notice. We do not recommend depending on those APIs as they rely on needing to share cookies with application code that interacts with these endpoints.
 </Alert>
 
@@ -26,15 +19,18 @@ This page summarizes the available operations and authentication types, but you 
 
 - Base URL: `https://apis.roblox.com/legacy-badges`
 - Authentication types: OAuth 2.0 and API key
-
+- Additional Badges API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/badges/v1).
+- Robux might be required to create a badge. To identify the number of remaining free badges you can create in the specified universe for the current UTC day, use the `/v1/universes/{universeId}/free-badges-quota` endpoint.
 | **API**     | **Path**                    | **Scope**                     |
 | :---------- | :-------------------------- | :---------------------------- |
 | UpdateBadge | `PATCH v1/badges/{badgeId}` | `legacy-universe.badge:write` |
+| CreateBadge | `POST v1/universes/{universeId}/badges` | `legacy-universe.badge:manage-and-spend-robux` |
 
 ## Develop API
 
 - Base URL: `https://apis.roblox.com/legacy-develop`
 - Authentication types: OAuth 2.0 and API key
+- Additional Develop API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/develop/v1).
 
 | **API**                              | **Path**                                                    | **Scope**                          |
 | :----------------------------------- | :---------------------------------------------------------- | :--------------------------------- |
@@ -44,11 +40,17 @@ This page summarizes the available operations and authentication types, but you 
 | DeleteTeamCreateMembership           | `DELETE v1/universes/{universeId}/teamcreate/memberships`   | `legacy-team-collaboration:manage` |
 | GetMembersInTeamCreateSessionByPlace | `GET v1/places/{placeId}/teamcreate/active_session/members` | `legacy-team-collaboration:manage` |
 | CloseTeamTestGame                    | `DELETE v2/teamtest/{placeId}`                              | `legacy-team-collaboration:manage` |
+| GetGroupsWithEditGroupGamePermission | `GET v1/user/groups/canmanage`                              | `legacy-group:manage`              |
+| ActivateUniverse                     | `POST v1/universes/{universeId}/activate`                   | `legacy-universe:manage`           |
+| DeactivateUniverse                   | `POST v1/universes/{universeId}/deactivate`                 | `legacy-universe:manage`           |
+| GetUniversePermissions               | `GET v1/universes/{universeId}/permissions`                 | `legacy-universe:manage`           |
+| MultiGetUniversePermissions          | `GET v1/universes/multiget/permissions`                     | `legacy-universe:manage`           |
 
 ## Followings API
 
 - Base URL: `https://apis.roblox.com/legacy-followings`
 - Authentication types: OAuth 2.0 and API key
+- Additional Followings API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/followings/v1).
 
 | **API**            | **Path**                                              | **Scope**                         |
 | :----------------- | :---------------------------------------------------- | :-------------------------------- |
@@ -62,6 +64,7 @@ This page summarizes the available operations and authentication types, but you 
 
 - Base URL: `https://apis.roblox.com/legacy-game-internationalization`
 - Authentication types: OAuth 2.0 and API key
+- Additional Game Internationalization API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/gameinternationalization/v1).
 
 | **API**                                            | **Path**                                                                                                                     | **Scope**                         |
 | :------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- | :-------------------------------- |
@@ -109,6 +112,7 @@ This page summarizes the available operations and authentication types, but you 
 
 - Base URL: `https://apis.roblox.com/legacy-groups`
 - Authentication types: OAuth 2.0 and API key
+- Additional Groups API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/groups/v1).
 
 | **API**                           | **Path**                                            | **Scope**             |
 | :-------------------------------- | :-------------------------------------------------- | :-------------------- |
@@ -119,11 +123,13 @@ This page summarizes the available operations and authentication types, but you 
 | UpdateGroupStatus                 | `PATCH v1/groups/{groupId}/status`                  | `legacy-group:manage` |
 | UpdateGroupNotificationPreference | `PATCH v1/groups/{groupId}/notification-preference` | `legacy-user:manage`  |
 | UpdateGroupDescription            | `PATCH v1/groups/{groupId}/description`             | `legacy-group:manage` |
+| GetPendingGroupJoins              | `GET v1/user/groups/pending`                        | `legacy-group:manage` |
 
 ## Localization Tables API
 
 - Base URL: `https://apis.roblox.com/legacy-localization-tables`
 - Authentication types: OAuth 2.0 and API key
+- Additional Localization Tables API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/localizationtables/v1).
 
 | **API**                                 | **Path**                                                                  | **Scope**                |
 | :-------------------------------------- | :------------------------------------------------------------------------ | :----------------------- |
@@ -137,3 +143,13 @@ This page summarizes the available operations and authentication types, but you 
 | GetTableEntriesPaged                    | `GET v1/localization-table/tables/{tableId}/entries`                      | `legacy-universe:manage` |
 | GetTableEntryCount                      | `GET v1/localization-table/tables/{tableId}/entry-count`                  | `legacy-universe:manage` |
 | GetTableEntriesTranslationHistory       | `POST v1/localization-table/tables/{tableId}/entries/translation-history` | `legacy-universe:manage` |
+
+## Publish API
+
+- Base URL: `https://apis.roblox.com/legacy-publish`
+- Authentication types: OAuth 2.0 and API key
+- Additional Publish API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/publish/v1).
+
+| **API**                                 | **Path**                                                                  | **Scope**                |
+| :-------------------------------------- | :------------------------------------------------------------------------ | :----------------------- |
+| UpdateBadgeIcon                         | `POST /v1/badges/{badgeId}/icon`                                          | `legacy-badge:manage`    |

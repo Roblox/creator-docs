@@ -1,10 +1,12 @@
 name: Content
 type: datatype
 summary: |
-  Represents a reference to asset content stored externally or as an object within the place.
+  Represents a reference to asset content stored externally or as an object
+  within the place.
 description: |
-  The `Content` data type represents a reference to asset content stored externally or as an object
-  within the place, wrapping a single value of one of the supported `Enum.ContentSourceType` values.
+  The `Content` data type represents a reference to asset content stored
+  externally or as an object within the place, wrapping a single value of one of
+  the supported `Enum.ContentSourceType` values.
 code_samples:
 tags: []
 deprecation_message: ''
@@ -61,9 +63,11 @@ properties:
   - name: Content.none
     type: Content
     summary: |
-      An empty `Content` value with `Datatype.Content.SourceType` of `Enum.ContentSourceType|None`.
+      An empty `Content` value with `Datatype.Content.SourceType` of
+      `Enum.ContentSourceType|None`.
     description: |
-      An empty `Content` value with `Datatype.Content.SourceType` of `Enum.ContentSourceType|None`.
+      An empty `Content` value with `Datatype.Content.SourceType` of
+      `Enum.ContentSourceType|None`.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -72,25 +76,30 @@ properties:
     summary: |
       The source type of the contained value.
     description: |
-      The source type of the contained value. Indicates which property contains a non‑`nil` value.
+      The source type of the contained value. Indicates which property contains
+      a non‑`nil` value.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Uri
     type: string?
     summary: |
-      A URI `string` if `Datatype.Content.SourceType` is `Enum.ContentSourceType|Uri`, otherwise `nil`.
+      A URI `string` if `Datatype.Content.SourceType` is
+      `Enum.ContentSourceType|Uri`, otherwise `nil`.
     description: |
-      A URI `string` if `Datatype.Content.SourceType` is `Enum.ContentSourceType|Uri`, otherwise `nil`.
+      A URI `string` if `Datatype.Content.SourceType` is
+      `Enum.ContentSourceType|Uri`, otherwise `nil`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Object
     type: Object?
     summary: |
-      A reference to a non-`nil` `Class.Object` if `Datatype.Content.SourceType` is `Enum.ContentSourceType|Object`, otherwise `nil`.
+      A reference to a non-`nil` `Class.Object` if `Datatype.Content.SourceType`
+      is `Enum.ContentSourceType|Object`, otherwise `nil`.
     description: |
-      A reference to a non-`nil` `Class.Object` if `Datatype.Content.SourceType` is `Enum.ContentSourceType|Object`, otherwise `nil`.
+      A reference to a non-`nil` `Class.Object` if `Datatype.Content.SourceType`
+      is `Enum.ContentSourceType|Object`, otherwise `nil`.
     code_samples: []
     tags: []
     deprecation_message: ''

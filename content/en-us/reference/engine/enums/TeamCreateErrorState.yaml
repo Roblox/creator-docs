@@ -1,4 +1,4 @@
-name: AvatarJointUpgrade
+name: TeamCreateErrorState
 type: enum
 summary: ''
 description: ''
@@ -6,17 +6,17 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: Default
+  - name: PlaceSizeTooLarge
     summary: ''
     value: 0
     tags: []
     deprecation_message: ''
-  - name: Enabled
+  - name: PlaceSizeApproachingLimit
     summary: ''
     value: 1
     tags: []
     deprecation_message: ''
-  - name: Disabled
+  - name: NoError
     summary: ''
     value: 2
     tags: []

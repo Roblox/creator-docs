@@ -8,47 +8,14 @@ description: |
   `Class.EditableImage` allows for the runtime creation and manipulation of
   images.
 
-  To create a blank `Class.EditableImage`, use `Datatype.Instance.new()`. To
-  create an `Class.EditableImage` from an existing image, use
-  `Class.AssetService:CreateEditableImageAsync()`.
+  To create a blank `Class.EditableImage`, use
+  `Class.AssetService:CreateEditableImage()`. To create an `Class.EditableImage`
+  from an existing image, use `Class.AssetService:CreateEditableImageAsync()`.
 
-  `Class.EditableImage` overrides the image or texture displayed when parented
-  to certain objects:
-
-  <table size="small">
-  <thead>
-    <tr>
-      <th>Object</th>
-      <th>Overridden</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>Class.MeshPart</code></td>
-      <td><code>Class.MeshPart.TextureID</code></td>
-    </tr>
-    <tr>
-      <td><code>Class.ImageLabel</code></td>
-      <td><code>Class.ImageLabel.Image</code></td>
-    </tr>
-    <tr>
-      <td><code>Class.ImageButton</code></td>
-      <td><code>Class.ImageButton.Image</code></td>
-    </tr>
-    <tr>
-      <td><code>Class.Decal</code></td>
-      <td><code>Class.Decal.Texture</code></td>
-    </tr>
-    <tr>
-      <td><code>Class.Texture</code></td>
-      <td><code>Class.Texture.Texture</code></td>
-    </tr>
-    <tr>
-      <td><code>Class.SurfaceAppearance</code></td>
-      <td><code>Class.SurfaceAppearance.ColorMap</code></td>
-    </tr>
-  </tbody>
-  </table>
+  `Class.EditableImage` can be used in any `Datatype.Content` property which
+  takes an image, such as `Class.ImageLabel.ImageContent` or
+  `Class.MeshPart.TextureContent`. This is done by setting the content property
+  to `Datatype.Content.fromObject(editableImage)`.
 
   The `Class.EditableImage` coordinate system is relative to the top left of the
   image:
@@ -57,13 +24,14 @@ description: |
   - Bottom-right: `(Size.X - 1, Size.Y - 1)`
 
   When you use `Class.AssetService:PromptCreateAssetAsync()` to publish an
-  object that has a property overridden by a child `Class.EditableImage`, the
-  editable image is published as an image and the overridden property is set to
-  a new asset ID.
+  object that has a `Datatype.Content` property which references an
+  `Class.EditableImage`, the editable image is published as an image and the
+  property is set to a new asset ID.
 code_samples: []
 inherits:
-  - Instance
-tags: []
+  - Object
+tags:
+  - NotCreatable
 deprecation_message: ''
 properties:
   - name: EditableImage.Size
@@ -82,7 +50,9 @@ properties:
       changing the size.
     code_samples: []
     type: Vector2
-    tags: []
+    tags:
+      - ReadOnly
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -90,63 +60,16 @@ properties:
     thread_safety: ReadSafe
     category: Data
     serialization:
-      can_load: true
+      can_load: false
       can_save: true
     capabilities: []
     writeCapabilities: []
 methods:
-  - name: EditableImage:Copy
-    summary: |
-      Copies a subregion of the `Class.EditableImage` to a new
-      `Class.EditableImage`.
-    description: |
-      Copies a subregion of the `Class.EditableImage` to a new
-      `Class.EditableImage`.
+  - name: EditableImage:Destroy
+    summary: ''
+    description: ''
     code_samples: []
-    parameters:
-      - name: min
-        type: Vector2
-        default:
-        summary: |
-          Top-left corner of the region to copy, with `(0, 0)` being the
-          top-left corner of the source image.
-      - name: max
-        type: Vector2
-        default:
-        summary: |
-          Bottom-right corner of the region to copy, exclusive. For example, a
-          max of `Class.EditableImage.Size` would end the subregion at the
-          bottom and right edges of the source image.
-    returns:
-      - type: EditableImage
-        summary: |
-          A new `Class.EditableImage` containing the specified subregion.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableImage:Crop
-    summary: |
-      Crops the `Class.EditableImage` to the specified subregion.
-    description: |
-      Crops the `Class.EditableImage` to the specified subregion.
-    code_samples: []
-    parameters:
-      - name: min
-        type: Vector2
-        default:
-        summary: |
-          Top-left corner of the region to crop to, with `(0, 0)` being the
-          top-left corner of the source image.
-      - name: max
-        type: Vector2
-        default:
-        summary: |
-          Bottom-right corner of the region to crop to, exclusive. For example,
-          a max of `Class.EditableImage.Size` would end the subregion at the
-          bottom and right edges of the source image.
+    parameters: []
     returns:
       - type: void
         summary: ''
@@ -220,7 +143,7 @@ methods:
           Position at which the top-left corner of the added image will be
           drawn.
       - name: image
-        type: EditableImage
+        type: Object
         default:
         summary: |
           The `Class.EditableImage` to draw into this `Class.EditableImage`.
@@ -230,6 +153,91 @@ methods:
         summary: |
           How the pixels of the source image should be blended with the pixels
           of the added image.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableImage:DrawImageProjected
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: mesh
+        type: Object
+        default:
+        summary: ''
+      - name: projection
+        type: Dictionary
+        default:
+        summary: ''
+      - name: brushConfig
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableImage:DrawImageTransformed
+    summary: |
+      Draws an image into this `Class.EditableImage` with transformations
+      including scaling and rotation, placing it at the specified position.
+    description: |
+      This method lets you draw an `EditableImage` into this `EditableImage`
+      with transformations applied, such as scaling and rotation. The position
+      parameter specifies where the pivot point of the source image will be
+      placed on this image after transformations. Positions outside the canvas
+      bounds are allowed such that only part of the new image is drawn.
+    code_samples:
+      - EditableImage-DrawImageTransformed
+      - EditableImage-DrawImageTransformed-Crop
+    parameters:
+      - name: position
+        type: Vector2
+        default:
+        summary: |
+          Position in pixels where the pivot point of the source image will be
+          placed on this image.
+      - name: scale
+        type: Vector2
+        default:
+        summary: |
+          Scaling factors for the source image along the X and Y axes.
+      - name: rotation
+        type: float
+        default:
+        summary: |
+          The rotation angle in degrees, applied around the pivot point of the
+          source image.
+      - name: image
+        type: Object
+        default:
+        summary: |
+          The source `Class.EditableImage` to be drawn into this image.
+      - name: options
+        type: Dictionary?
+        default:
+        summary: |
+          Optional dictionary for additional configuration:
+          - `CombineType`: Specifies how the pixels of the source image blend
+            with those of the destination. Default is
+            `Enum.ImageCombineType.AlphaBlend`.
+          - `SamplingMode`: Specifies the sampling method (e.g. `Default` for
+            bilinear or `Pixelated` for nearest neighbor). Default is
+            `Enum.ResamplerMode.Default`.
+          - `PivotPoint`: Specifies the pivot point within the source image for
+            scaling and rotation. Default is the center of the source image
+            (i.e. `Image.Size / 2`).
     returns:
       - type: void
         summary: ''
@@ -273,32 +281,6 @@ methods:
         summary: |
           How the pixels of the source image are blended with the pixels of the
           added image.
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableImage:DrawProjectionImage
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: mesh
-        type: EditableMesh
-        default:
-        summary: ''
-      - name: projection
-        type: Dictionary
-        default:
-        summary: ''
-      - name: brushConfig
-        type: Dictionary
-        default:
-        summary: ''
     returns:
       - type: void
         summary: ''
@@ -353,42 +335,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: EditableImage:ReadPixels
-    summary: |
-      Reads a rectangular region of pixels.
-    description: |
-      Reads a rectangular region of pixels. The pixels are returned as a flat
-      array where each pixel is represented by four numbers between `0` and `1`
-      (red, green, blue, and alpha respectively).
-
-      Note that this method uses alpha instead of transparency, unlike the
-      `Class.EditableImage` drawing methods.
-    code_samples:
-      - EditableImage-ReadPixels1
-    parameters:
-      - name: position
-        type: Vector2
-        default:
-        summary: |
-          Top-left corner of the rectangular region of pixels to read.
-      - name: size
-        type: Vector2
-        default:
-        summary: |
-          Size of the rectangular region of pixels to read.
-    returns:
-      - type: Array
-        summary: |
-          Flat array where each pixel is represented by four numbers between 0
-          and 1 (red, green, blue, and alpha respectively). The length of the
-          array can be calculated as `Size.X * Size.Y * 4`.
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Safe
-    capabilities: []
-    writeCapabilities: []
   - name: EditableImage:ReadPixelsBuffer
     summary: |
       Reads a rectangular region of pixels into a buffer.
@@ -401,7 +347,8 @@ methods:
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
-    code_samples: []
+    code_samples:
+      - EditableImage-ReadPixels1
     parameters:
       - name: position
         type: Vector2
@@ -426,95 +373,6 @@ methods:
     thread_safety: Safe
     capabilities: []
     writeCapabilities: []
-  - name: EditableImage:Resize
-    summary: |
-      Resizes the contents and canvas.
-    description: |
-      Resizes the contents and canvas of the `Class.EditableImage` using
-      bilinear interpolation. Max allowed size is 1024&times;1024.
-    code_samples: []
-    parameters:
-      - name: size
-        type: Vector2
-        default:
-        summary: |
-          New size of the `Class.EditableImage`.
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableImage:Rotate
-    summary: |
-      Rotates the image around its center.
-    description: |
-      Rotates the `Class.EditableImage` around its center using bilinear
-      interpolation.
-    code_samples: []
-    parameters:
-      - name: degrees
-        type: float
-        default:
-        summary: |
-          Degrees to rotate the image.
-      - name: changeSize
-        type: bool
-        default:
-        summary: |
-          Whether the size of the canvas should be updated.
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: EditableImage:WritePixels
-    summary: |
-      Writes a rectangular region of pixels into the image.
-    description: |
-      Writes a rectangular region of pixels into the `Class.EditableImage`. The
-      pixels are provided as a flat array where each pixel is represented by
-      four numbers between 0 and 1 (red, green, blue, and alpha respectively).
-
-      Note that this method uses alpha instead of transparency, unlike other
-      `Class.EditableImage` drawing methods.
-    code_samples:
-      - EditableImage-ReadPixelsWritePixels1
-    parameters:
-      - name: position
-        type: Vector2
-        default:
-        summary: |
-          Top-left corner of the rectangular region to draw the pixels into.
-      - name: size
-        type: Vector2
-        default:
-        summary: |
-          Size of the rectangular region of pixels to write.
-      - name: pixels
-        type: Array
-        default:
-        summary: |
-          Flat array where each pixel is represented by four numbers between 0
-          and 1 (red, green, blue, and alpha respectively). The length of the
-          array should be `Size.X * Size.Y * 4`.
-    returns:
-      - type: void
-        summary: ''
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: EditableImage:WritePixelsBuffer
     summary: |
       Writes a rectangular region of pixels into the image.
@@ -527,7 +385,8 @@ methods:
 
       Note that this method uses alpha instead of transparency, unlike the
       `Class.EditableImage` drawing methods.
-    code_samples: []
+    code_samples:
+      - EditableImage-ReadPixelsWritePixels1
     parameters:
       - name: position
         type: Vector2

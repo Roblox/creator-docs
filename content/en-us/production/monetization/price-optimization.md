@@ -85,7 +85,7 @@ To run a price review period:
 - If you start a price optimization test while the dynamic price check tool is running, the dynamic price check tool is automatically disabled.
 - You can't make changes to the prices of products involved in price tests while the tests are in progress.
 - After running a price test, the price optimization tool lets you apply the optimized prices to either all of the involved products or to none of them. To apply the optimized prices to just a selection of the products, take the price test recommendations and manually update the products in the Creator Hub.
-  - The projected revenue impact is based on applying the optimized prices to all of the involved products, so manually updating some product prices means the projected revenue impact is no longer accurate. You’re also not able to run a price review period on just a selection of the products.
+  - The projected revenue impact is based on applying the optimized prices to all of the involved products, so manually updating some product prices means the projected revenue impact is no longer accurate. You're also not able to run a price review period on just a selection of the products.
 
 ## Glossary
 

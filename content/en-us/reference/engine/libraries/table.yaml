@@ -344,8 +344,9 @@ functions:
     summary: |
       Copies the specified range of elements from one table to another.
     description: |
-      Copies elements from table `src` into table `dst`. Is equivalent to the
-      multiple assignment statement: `dst[t], ... = src[a], ..., src[b]`.
+      Copies elements in table `src` from `src[a]` up to `src[b]` into table
+      `dst` starting at index `t`. Equivalent to the assignment statement
+      `dst[t], ..., dst[t + (b - a)] = src[a], ..., src[b]`.
 
       The default for `dst` is `src`. The destination range may overlap with the
       source range.

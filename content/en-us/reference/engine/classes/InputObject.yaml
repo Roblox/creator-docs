@@ -52,9 +52,8 @@ properties:
       `Class.InputObject.Position|position` to track the position and movement
       of the user's mouse/joystick, such as when you're creating custom movement
       or camera scripts. Consider tracking input object changes using the
-      `Class.Object.Changed` event or when user input changes via events such
-      as `Class.UserInputService.InputChanged` and
-      `Class.GuiObject.InputChanged`.
+      `Class.Object.Changed` event or when user input changes via events such as
+      `Class.UserInputService.InputChanged` and `Class.GuiObject.InputChanged`.
 
       Note that an `Class.InputObject` corresponding to
       `Enum.UserInputType.MouseButton1` (left click) and

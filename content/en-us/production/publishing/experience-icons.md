@@ -3,7 +3,7 @@ title: Experience Icons
 description: Icons are an important factor in helping users recognize your experience and grow its brand.
 ---
 
-A high-quality **icon**, in addition to a showcase [thumbnail](../promotion/promotional-thumbnails.md), is an important factor in helping users recognize your experience and grow its brand. With prominent placement in various sections of the [Home](https://www.roblox.com/home) page, it's recommended that the icon expresses the theme, tone, and/or genre of the experience.
+A high-quality **icon**, in addition to a showcase [thumbnail](../promotion/thumbnails.md), is an important factor in helping users recognize your experience and grow its brand. With prominent placement in various sections of the [Home](https://www.roblox.com/home) page, it's recommended that the icon expresses the theme, tone, and/or genre of the experience.
 
 <GridContainer numColumns="3">
 	<figure>
@@ -20,7 +20,7 @@ A high-quality **icon**, in addition to a showcase [thumbnail](../promotion/prom
   </figure>
 </GridContainer>
 
-When you [publish an experience](../../production/publishing/publishing-experiences-and-places.md) for the first time, an icon is automatically generated from a collection of default images. While you can only display one icon per [locale](../../production/localization/index.md), you can also include supplementary [image and video thumbnails](../../production/promotion/promotional-thumbnails.md) that further promote the experience.
+When you [publish an experience](../../production/publishing/publishing-experiences-and-places.md) for the first time, an icon is automatically generated from a collection of default images. While you can only display one icon per [locale](../../production/localization/index.md), you can also include supplementary [image and video thumbnails](../../production/promotion/thumbnails.md) that further promote the experience.
 
 For more information on maximizing the impact of your experience's icon, see [Best Practices](#best-practices).
 

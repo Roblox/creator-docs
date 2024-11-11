@@ -12,8 +12,11 @@ tags:
 deprecation_message: ''
 properties:
   - name: ChatWindowMessageProperties.FontFace
-    summary: ''
-    description: ''
+    summary: |
+      Font used to render text in the chat window.
+    description: |
+      Determines the font used to render text in the chat window. Default is
+      `Enum.Font.BuilderSansMedium`.
     code_samples: []
     type: Font
     tags: []
@@ -30,8 +33,12 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChatWindowMessageProperties.PrefixTextProperties
-    summary: ''
-    description: ''
+    summary: |
+      Determines the properties of the
+      `Class.TextChatMessage.PrefixText|PrefixText` preceding the chat message.
+    description: |
+      Determines the properties of the `Class.TextChatMessage.PrefixText`
+      preceding the chat message.
     code_samples: []
     type: ChatWindowMessageProperties
     tags: []
@@ -48,8 +55,11 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChatWindowMessageProperties.TextColor3
-    summary: ''
-    description: ''
+    summary: |
+      Color of the text in the chat window.
+    description: |
+      Determines the color of the text in the chat window. Default value is
+      `Datatype.Color3.new(255, 255, 255)` (white).
     code_samples: []
     type: Color3
     tags: []
@@ -66,8 +76,10 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChatWindowMessageProperties.TextSize
-    summary: ''
-    description: ''
+    summary: |
+      Size of the text in the chat window.
+    description: |
+      Determines the size of the text in the chat window.
     code_samples: []
     type: int
     tags: []
@@ -84,8 +96,11 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChatWindowMessageProperties.TextStrokeColor3
-    summary: ''
-    description: ''
+    summary: |
+      Stroke color applied to text in the chat window.
+    description: |
+      Determines the stroke color applied to text in the chat window. Default
+      value is `Datatype.Color3.new(0, 0, 0)` (black).
     code_samples: []
     type: Color3
     tags: []
@@ -102,8 +117,11 @@ properties:
       - Chat
     writeCapabilities: []
   - name: ChatWindowMessageProperties.TextStrokeTransparency
-    summary: ''
-    description: ''
+    summary: |
+      Transparency of the stroke applied to text in the chat window.
+    description: |
+      Determines the transparency of the stroke applied to text in the chat
+      window. Default value is `0.5`.
     code_samples: []
     type: double
     tags: []

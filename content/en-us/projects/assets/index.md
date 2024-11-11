@@ -214,7 +214,7 @@ The content folder's location depends on the user's operating system:
 		</tr>
 		<tr>
 			<td>`GameThumbnail`</td>
-			<td>ID for an experience (`Class.DataModel.GameId`); shows the experience's primary [thumbnail](../../production/promotion/promotional-thumbnails.md)</td>
+			<td>ID for an experience (`Class.DataModel.GameId`); shows the experience's primary [thumbnail](../../production/promotion/thumbnails.md)</td>
 			<td scope="row">256&times;144, 384&times;216, 480&times;270, 576&times;324, 768&times;432</td>
 		</tr>
 		<tr>
@@ -259,6 +259,18 @@ if success then
 	corner.Parent = imageLabel
 end
 ```
+
+### rbxgameasset
+
+`rbxgameasset` points to an asset uploaded through the [Asset Manager](../../projects/assets/manager.md). It allows access to assets by a user‑friendly name instead of ID, so if you upload an image named `Potion.png`, you can reference it as:
+
+<span><Chip label='rbxgameasset://Images/Potion' color='primary' size='large' /></span><br />
+
+In the above example, `Images` is the category/folder that appears in the [Asset Manager](../../projects/assets/manager.md) and `Potion` is the asset name, minus its extension.
+
+<Alert severity="warning">
+`rbxgameasset` only works for the current game. If you paste a parent object that utilizes the asset into another game, the asset will not load (or will load a different asset if you've uploaded one with the same name to that other game). If you need an asset to work across multiple games, use `rbxassetid` instead of `rbxgameasset`.
+</Alert>
 
 ### rbxhttp
 

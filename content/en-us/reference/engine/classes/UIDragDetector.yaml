@@ -11,24 +11,23 @@ description: |
   features include:
 
   - Place a `UIDragDetector` under any `Class.GuiObject` instance to make it
-  draggable via all inputs without a single line of code.
+    draggable via all inputs without a single line of code.
 
   - Choose from several `Class.UIDragDetector.DragStyle|DragStyle` options,
-  define how the object responds to motion via
-  `Class.UIDragDetector.ResponseStyle|ResponseStyle`, and optionally apply axis,
-  movement limits, or drag boundaries.
+    define how the object responds to motion via
+    `Class.UIDragDetector.ResponseStyle|ResponseStyle`, and optionally apply
+    axis, movement limits, or drag boundaries.
 
   - Scripts can respond to manipulation of dragged objects to drive logic
-  responses, such as adjusting settings.
+    responses, such as adjusting settings.
 
   - `UIDragDetectors` work in Studio as long as you're **not** using the
-  **Select**, **Move**, **Scale**, or **Rotate** tools, nor certain plugins or
-  Studio's **UI** editor tools.
+    **Select**, **Move**, **Scale**, or **Rotate** tools, nor certain plugins or
+    Studio's **UI** editor tools.
 code_samples: []
 inherits:
   - UIComponent
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: UIDragDetector.ActivatedCursorIcon
@@ -86,8 +85,8 @@ properties:
       Instance whose bounding area defines the drag boundaries for the parent
       `Class.GuiObject`.
     description: |
-      When set, the `UIDragDetector` instance will not allow the bounds of
-      the parent `Class.GuiObject` to be dragged outside the bounds of the
+      When set, the `UIDragDetector` instance will not allow the bounds of the
+      parent `Class.GuiObject` to be dragged outside the bounds of the
       **BoundingUI** instance.
 
       Note that if a portion of the parent `Class.GuiObject` is outside the
@@ -116,8 +115,8 @@ properties:
       of this `UIDragDetector`.
     description: |
       Sets the cursor icon to display when the mouse is hovered over the parent
-      of this `UIDragDetector`. If this property is left blank, the
-      detector will use the default icon.
+      of this `UIDragDetector`. If this property is left blank, the detector
+      will use the default icon.
 
       To change the cursor icon, set this property to the asset ID of the image
       you'd like to use.
@@ -317,8 +316,8 @@ properties:
     summary: |
       Whether the `UIDragDetector` responds to user input.
     description: |
-      If `true`, the `UIDragDetector` responds to user input; if `false`,
-      it does not.
+      If `true`, the `UIDragDetector` responds to user input; if `false`, it
+      does not.
     code_samples: []
     type: bool
     tags: []

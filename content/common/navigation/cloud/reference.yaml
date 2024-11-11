@@ -2,14 +2,14 @@ navigation:
   - heading: Common Components
   - title: Overview
     path: /cloud/reference/
-  - title: OAuth 2.0
-    path: /cloud/reference/oauth2
   - title: Patterns
     path: /cloud/reference/patterns
   - title: Types
     path: /cloud/reference/types
   - title: Errors
     path: /cloud/reference/errors
+  - title: OAuth 2.0
+    path: /cloud/reference/oauth2
   - heading: v2 Resources
   - title: All Cloud API
     path: /cloud/reference

@@ -98,6 +98,24 @@ properties:
     capabilities:
       - Audio
     writeCapabilities: []
+  - name: AudioEcho.RampTime
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEcho.WetLevel
     summary: |
       Gain level determining how loud the echoed stream will be.
@@ -134,7 +152,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''

@@ -18,7 +18,7 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
@@ -54,7 +54,7 @@ methods:
     code_samples: []
     parameters:
       - name: rules
-        type: Objects
+        type: Instances
         default:
         summary: ''
     returns:

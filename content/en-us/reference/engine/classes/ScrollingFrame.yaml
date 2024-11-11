@@ -159,6 +159,27 @@ properties:
     capabilities:
       - UI
     writeCapabilities: []
+  - name: ScrollingFrame.DraggingScrollBar
+    summary: ''
+    description: ''
+    code_samples: []
+    type: DraggingScrollBar
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.ElasticBehavior
     summary: |
       Determines when elastic scrolling is allowed.

@@ -86,11 +86,28 @@ Using the **Clients and Servers** options, you can launch multiple sessions of S
 
 <DeviceEmulator components={props.components} />
 
+### VR Emulation
+
+<BetaAlert betaName="VR Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+**VR emulation** lets you test VR experiences in Studio without a physical headset. Just like emulating any other device, use the **Device Selector** menu to choose the Meta Quest 2 or Meta Quest 3. The [Controller Emulator](#controller-emulation) automatically selects the appropriate controller for the headset.
+
 ## Controller Emulation
 
 <BetaAlert betaName="Gamepad Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 <ControllerEmulator components={props.components} />
+
+### VR Controllers
+
+The combination of a headset and multiple controllers, each with motion tracking, make VR emulation more complex:
+
+1. For motion tracking emulation, press <kbd>Alt</kbd> + <kbd>1</kbd> (<kbd>⌥</kbd> + <kbd>1</kbd>) to lock the mouse to and unlock the mouse from the viewport.
+2. Use <kbd>Shift</kbd> + <kbd>&larr;</kbd> or <kbd>&rarr;</kbd> to switch between the headset, left controller, and right controller.
+
+For example, you might use the **Headset** option to look around as you walk forward with the left controller button, but then switch to the **Right Controller** when you need to use motion controls to aim at a target.
+
+<img src="../assets/studio/general/Controller-Emulator-VR.png" width="840" alt="The Controller Emulator with a Quest 3 controller and viewport." />
 
 ## Player Emulation
 
@@ -98,7 +115,7 @@ For detailed emulation of experience [localization](../production/localization/i
 
 <img src="../assets/studio/general/Test-Tab-Emulation-Player.png" width="840" alt="Player emulator button indicated in Test tab" />
 
-With the emulator window open, toggle on **Enable Test Profile**. Emulation will remain as toggled (enabled or disabled) even if you close the window.
+With the emulator window open, toggle on **Enable Test Profile**. Emulation will remain as toggled (enabled or disabled) even if you close the window.
 
 Lower down in the window, commonly used options include:
 
@@ -145,30 +162,30 @@ If you're working on an experience with others in [Collaboration](../projects/co
    Only one team test session can run at any given time. To close a session and kick out all testers, click the **Shutdown&nbsp;Server** button.
    </Alert>
 
-## Testing in VR
+## Testing with VR Headsets
 
-If you'd like to support Virtual Reality (VR) headsets for your experience, make sure to test in VR in Studio. Studio supports testing for all VR headsets that are compatible with [OpenXR](https://www.khronos.org/openxr/), the open-source industry standard providing access to VR.
+If you'd like to support virtual reality (VR) headsets for your experience, make sure to test in VR in Studio. Studio supports testing for all VR headsets that are compatible with [OpenXR](https://www.khronos.org/openxr/), the open-source industry standard providing access to VR.
 
 <Alert severity="info">
-Currently, Testing in VR is only supported on Windows.
+Currently, testing in VR is only supported on Windows.
 </Alert>
 
 ### Headset Configuration
 
-To enable Studio testing in VR, you must first connect your headset to your PC and configure the OpenXR runtime **before** launching on Studio. If you've already launched Studio, quit and complete the configuration steps first.
+To enable Studio testing in VR, you must connect your headset to your PC and configure the OpenXR runtime **before** launching Studio. If you've already launched Studio, quit and complete the configuration steps first.
 
-If you only have one VR headset, installing the corresponding VR app automatically configures the runtime for you. If you have multiple headsets, you need to set up the runtime manually and make sure to **only** configure the one that you want to use for testing.
+If you only have one VR headset, installing the corresponding VR app automatically configures the runtime for you. If you have multiple headsets, you must set up the runtime manually and make sure to **only** configure the one that you want to use for testing.
 
 The following steps are for the two most common VR apps:
 
-- SteamVR for headsets such as HTC Vive and Valve Index.
-- Oculus for headsets such as Meta Quest and Oculus Rift.
+- SteamVR for headsets such as the HTC Vive and Valve Index.
+- Oculus for headsets such as the Meta Quest and Oculus Rift.
 
 <Tabs>
 <TabItem label="Steam VR">
 
 1. Install and open the SteamVR app on your computer.
-2. Under **SteamVR Settings**, select the **Developer** tab, then select **Show Advanced Settings**.
+2. Under **SteamVR Settings**, select the **Developer** tab. Then select **Show Advanced Settings**.
 3. Set SteamVR as OpenXR runtime.
 4. Turn the controllers on by pressing the **System** button until you hear a beeping sound.
    - To turn the controller off, press and hold the **System** button until you hear the same beeping sound.
@@ -182,15 +199,15 @@ When you quit the SteamVR app, the controllers automatically turn off. The contr
 </TabItem>
 <TabItem label="Oculus VR">
 
-1. Install and open the Oculus App on your computer.
+1. Install and open the Oculus app on your computer.
 2. Confirm that your device is connected and the status is ready.
-3. Under **Settings / General** in the Oculus App, select **OpenXR Runtime**.
+3. Under **Settings / General** in the Oculus app, select **OpenXR Runtime**.
 4. (Optional) Bring up the **Devices** tab and find your headset to confirm the configuration by checking if the status is green without errors.
 
 <Alert severity="info">
 When using Oculus VR, ensure the following:
-- At minimum, Oculus drivers require an NVidia GTX1060 graphics card or equivalent.
-- If you are using Quest 2 with a link cable, you must enable the link inside the headset.
+- At minimum, Oculus drivers require an NVIDIA GeForce GTX 1060 graphics card or equivalent.
+- If you are using a Quest 2 with a link cable, you must enable the link inside the headset.
 </Alert>
 
 </TabItem>

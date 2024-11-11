@@ -205,20 +205,20 @@ Consider the following scenario where a group experience "Laser&nbsp;Maze" is sp
 
 <br />
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	Assuming the experience earns 1000 Robux, the three members receive 400, 300, and 100 Robux respectively (40%&ndash;30%&ndash;10%).
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-B.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	The remaining 200 Robux &mdash; 20% of the experience split&nbsp;&mdash; passes onward to the **group split** percentages, defined at 20%&ndash;20%&ndash;10% among the same three members; they receive an additional 40, 40, and 20 Robux respectively.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-C.png" width="40" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	The remaining 100 Robux &mdash; 50% of the group split&nbsp;&mdash; is placed in the group's overall balance.
 	</Grid>
 </Grid>

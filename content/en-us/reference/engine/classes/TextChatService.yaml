@@ -218,6 +218,8 @@ properties:
       `Class.TextChannel|TextChannels` even if
       `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels`
       is true.
+      
+      Messages from different TextChannels can be separated into different tabs in the chat window using `Class.ChannelTabsConfiguration`.
     code_samples: []
     type: bool
     tags: []
@@ -302,6 +304,37 @@ methods:
         summary: ''
     returns:
       - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: TextChatService:CanUsersDirectChatAsync
+    summary: |
+      Determines whether a user has permission to chat directly with other users
+      in experiences based on their parental control settings.
+    description: |
+      Determines whether a user has permission to chat directly with other users
+      in experiences based on their parental control settings. To be used when:
+      - The line of communication is user-initiated (not developer- or
+        gameplay-initiated)
+      - Access to the communication is closed and limited
+    code_samples:
+      - TextChatService-User-Chat
+    parameters:
+      - name: requesterUserId
+        type: int64
+        default:
+        summary: ''
+      - name: userIds
+        type: Array
+        default:
+        summary: ''
+    returns:
+      - type: Array
         summary: ''
     tags:
       - Yields
@@ -435,17 +468,33 @@ callbacks:
     capabilities: []
     writeCapabilities: []
   - name: TextChatService.OnChatWindowAdded
-    summary: ''
-    description: ''
+    summary: |
+      Called when a new message is about to be displayed in the chat window.
+      This can only be implemented on the client.
+    description: |
+      Called when a new message is about to be displayed in the chat window.
+      This can only be implemented on the client.
+
+      Use this to customize individual messages that appear in the chat window.
+      If this callback returns a `Class.ChatWindowMessageProperties`, those
+      properties will be applied to the associated message, overriding
+      `Class.ChatWindowConfiguration` properties. If a `Class.UIGradient` is
+      parented under `Class.ChatWindowMessageProperties`, it will also override
+      the `Class.ChatWindowConfiguration.TextColor3|TextColor3` property defined
+      in `Class.ChatWindowConfiguration`.
     code_samples: []
     parameters:
       - name: message
         type: TextChatMessage
         default:
-        summary: ''
+        summary: |
+          The incoming `Class.TextChatMessage`.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          If a `Class.TextChatMessage` is returned, those properties will be
+          applied to the associated message, overriding
+          `Class.ChatWindowConfiguration` properties.
     tags: []
     deprecation_message: ''
     security: None

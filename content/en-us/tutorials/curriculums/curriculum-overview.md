@@ -47,8 +47,7 @@ everything you need to know about creating a simple, but polished experience fro
     container
     direction="row">
 
-<Grid item md={6} xs={12}
-    direction="column"  >
+<Grid item Large={6} XSmall={12} direction="column">
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -57,7 +56,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 
 </Grid>
 
-<Grid item md={6} xs={12} direction='column'>
+<Grid item Large={6} XSmall={12} direction="column">
 
 <>
 <Stepper activeStep={3} orientation="vertical">
@@ -119,8 +118,7 @@ Learn the foundational skills you need to become an environmental artist.
     container
     direction="row">
 
-<Grid item md={6} xs={12}
-    direction="column"  >
+<Grid item Large={6} XSmall={12} direction="column">
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -129,7 +127,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 
 </Grid>
 
-<Grid item md={6} xs={12} direction='column'>
+<Grid item Large={6} XSmall={12} direction="column">
 
 <>
 <Stepper activeStep={3} orientation="vertical">
@@ -191,8 +189,7 @@ Learn the programming skills you need to introduce gameplay to the laser tag env
     container
     direction="row">
 
-<Grid item md={6} xs={12}
-    direction="column"  >
+<Grid item Large={6} XSmall={12} direction="column">
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -201,7 +198,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 
 </Grid>
 
-<Grid item md={6} xs={12} direction='column'>
+<Grid item Large={6} XSmall={12} direction="column">
 
 <>
 <Stepper activeStep={3} orientation="vertical">
@@ -263,8 +260,7 @@ Learn the design skills you need to implement UI that informs players of the las
     container
     direction="row">
 
-<Grid item md={6} xs={12}
-    direction="column"  >
+<Grid item Large={6} XSmall={12} direction="column">
 
 <div class="container"
 style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
@@ -273,7 +269,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 
 </Grid>
 
-<Grid item md={6} xs={12} direction='column'>
+<Grid item Large={6} XSmall={12} direction="column">
 
 <>
 <Stepper activeStep={3} orientation="vertical">

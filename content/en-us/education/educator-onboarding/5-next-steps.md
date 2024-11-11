@@ -95,7 +95,7 @@ The following resources are handouts specifically intended to be distributed to 
 We've compiled some of our favorite experiences to showcase the best that Roblox has to offer. To see more, browse the <a href="https://www.roblox.com/discover#/sortName/Curated_67">Learn and Explore</a> Sort.
 
 <Grid container spacing={2}>
-<Grid item xs={6}>
+<Grid item XSmall={6}>
 
   <div>
   <img src="../../assets/education/legacy/module5-gameImages-450x250-ocean.jpg" />
@@ -109,7 +109,7 @@ We've compiled some of our favorite experiences to showcase the best that Roblox
   </div>
 
 </Grid>
-<Grid item xs={6}>
+<Grid item XSmall={6}>
 
   <div>
   <img src="../../assets/education/legacy/module5-gameImages-450x250-lua.jpg" />
@@ -135,7 +135,7 @@ Depending on your needs, Roblox Studio has a wide variety of premade lesson plan
 Try out Roblox with these stand alone lessons. Learn something new in less than an hour.
 
 <Grid container spacing={2}>
-<Grid item xs={6}>
+<Grid item XSmall={6}>
 
   <div>
   <img src="../../assets/education/legacy/WCCHero_312x200.png" />
@@ -150,7 +150,7 @@ Try out Roblox with these stand alone lessons. Learn something new in less than 
 
 </Grid>
 
-<Grid item xs={6}>
+<Grid item XSmall={6}>
   <div>
   <img src="../../assets/legacy/ccw2019_thumbnail_312x200px.png" />
   <h4>Galactic Speedway</h4>
@@ -172,7 +172,7 @@ Lessons below focus on project-based learning with Constructionist principles. S
 
 <Grid container spacing={2}>
 
-<Grid item xs={6}>
+<Grid item XSmall={6}>
   <div>
   <img src="../../assets/education/legacy/introToStudio_thumbnail.jpg" />
   <h4>Create an Obstacle Course</h4>
@@ -185,7 +185,7 @@ Lessons below focus on project-based learning with Constructionist principles. S
   </div>
 </Grid>
 
-<Grid item xs={6}>
+<Grid item XSmall={6}>
   <div>
   <img src="../../assets/education/build-it-play-it-create-and-destroy/cc2019_thumbnail_312x200.jpg" />
   <h4>Design a City</h4>
@@ -206,7 +206,7 @@ For those with more computer experience, explore game design and computer scienc
 
 <Grid container spacing={2}>
 
-<Grid item xs={6}>
+<Grid item XSmall={6}>
   <div>
   <img src="../../assets/education/legacy/introToGameDesign_thumbnail.jpg" />
   <h4>Roblox Developer 101</h4>
@@ -219,7 +219,7 @@ For those with more computer experience, explore game design and computer scienc
   </div>
 </Grid>
 
-<Grid item xs={6}>
+<Grid item XSmall={6}>
   <div>
   <img src="../../assets/education/legacy/coding4_loopingArraysThumbnail.jpg" />
   <h4>Coding Fundamentals</h4>
@@ -240,7 +240,7 @@ We have different options for staying connected.
 
 <Grid container spacing={2}>
 
-<Grid item xs={6}>
+<Grid item XSmall={6}>
   <div>
   <h4>Education Mailing List</h4>
   <p>
@@ -252,7 +252,7 @@ We have different options for staying connected.
   </div>
 </Grid>
 
-<Grid item xs={6}>
+<Grid item XSmall={6}>
   <div>
   <h4>Contact Us</h4>
   <p>

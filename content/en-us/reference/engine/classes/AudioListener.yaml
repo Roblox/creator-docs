@@ -20,6 +20,37 @@ inherits:
 tags: []
 deprecation_message: ''
 properties:
+  - name: AudioListener.AngleAttenuation
+    summary: |
+      Represents how the perceived volume of the emitted sound changes based on
+      the angle between a `Class.AudioEmitter` and the
+      `Datatype.CFrame.LookVector|LookVector` associated with the
+      `Class.AudioListener`.
+    description: |
+      Represents a volume-over-angle curve that affects how loudly a
+      `Class.AudioListener` will hear the `Class.AudioEmitter`, based on the
+      angle between them and the `Datatype.CFrame.LookVector|LookVector`
+      associated with the `Class.AudioListener`.
+
+      This property is internal and can't be accessed by scripts; it exists to
+      support replication. See
+      `Class.AudioListener:SetAngleAttenuation()|SetAngleAttenuation()` for
+      usage details.
+    code_samples: []
+    type: BinaryString
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Listening
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioListener.AudioInteractionGroup
     summary: |
       Controls which `Class.AudioEmitter|AudioEmitters` are audible to this
@@ -73,6 +104,29 @@ properties:
       - Audio
     writeCapabilities: []
 methods:
+  - name: AudioListener:GetAngleAttenuation
+    summary: |
+      Gets the angle attenuation curve that the `Class.AudioListener` is using,
+      or an empty table if it's using the default curve.
+    description: |
+      Returns a table mapping angle to volume. Keys are numbers between `0` and
+      `180` (inclusive), while values are numbers between `0` and `1`
+      (inclusive) describing how volume attenuates depending on direction. This
+      method returns an empty table if the default angle attenuation curve is
+      being used.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: |
+          Table mapping angle to volume, as described above.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioListener:GetConnectedWires
     summary: |
       Returns an array of `Class.Wire|Wires` that are connected to the specified
@@ -87,7 +141,7 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
@@ -122,9 +176,55 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioListener:SetAngleAttenuation
+    summary: |
+      Sets the angle attenuation curve that the `Class.AudioListener` should
+      use, or uses a constant curve of volume `1` if none is provided.
+    description: |
+      Sets a volume-over-angle curve that affects how loudly a
+      `Class.AudioListener` will hear the `Class.AudioEmitter`, based on the
+      angle between them and the `Datatype.CFrame.LookVector|LookVector`
+      associated with the `Class.AudioListener`.
+
+      The curve is represented by a table mapping angle keys to volume values.
+      Keys are expected to be unique numbers between `0` and `180` (inclusive),
+      while values are expected to be numbers between `0` and `1` (inclusive).
+      Tables containing up to 400 key-value pairs are supported.
+
+      The volume of a `Class.AudioEmitter` from the perspective of the
+      `Class.AudioListener` at an angle `a` is determined by linearly
+      interpolating between the volume levels for the points on the curve whose
+      angle values are directly above and below `a`. If there is either no point
+      below `a` or no point above `a`, the volume level of the other point is
+      chosen. Essentially, the curve is a sequence of points connected by
+      straight lines, and beyond its left and right endpoints the curve extends
+      outward at their respective volume levels.
+
+      This volume will be multiplied with the volumes from all other attenuation
+      curves (including the ones on the sending `Class.AudioEmitter`) to obtain
+      the final audibility.
+
+      If the table is empty or `nil`, the `Class.AudioEmitter` defaults to using
+      an angle attenuation curve with the constant volume value of `1`.
+    code_samples:
+    parameters:
+      - name: curve
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
@@ -153,9 +253,9 @@ methods:
       straight lines, and beyond its left and right endpoints the curve extends
       outward infinitely at their respective volume levels.
 
-      This volume will be multiplied with the volume from the
-      `Class.AudioEmitter.DistanceAttenuation` curve of the `Class.AudioEmitter`
-      to obtain the final audibility.
+      This volume will be multiplied with the volumes from all other attenuation
+      curves (including the ones on the sending `Class.AudioEmitter`) to obtain
+      the final audibility.
 
       If the table is empty or `nil`, the `Class.AudioListener` defaults to
       applying a constant volume of 1 everywhere.

@@ -238,6 +238,11 @@ properties:
       viewport to its opposite corner) the camera can view. See
       `Class.Camera.FieldOfView|FieldOfView` for a more general explanation of
       field of view.
+
+      Note that `DiagonalFieldOfView` represents the field of view that is
+      visible by the `Class.Camera` rendering into the fullscreen area which may
+      be occluded by notches or screen cutouts on some devices. See
+      `Class. Camera.ViewportSize|ViewportSize` for more information.
     code_samples:
     type: float
     tags:
@@ -271,6 +276,11 @@ properties:
         using binoculars.
       - Increasing FOV when the player is "sprinting" to give the impression of
         a lack of control.
+
+      Note that `FieldOfView` represents the field of view that is visible by
+      the `Class.Camera` rendering into the fullscreen area which may be
+      occluded by notches or screen cutouts on some devices. See
+      `Class.Camera. ViewportSize|ViewportSize` for more information.
     code_samples:
     type: float
     tags: []
@@ -534,15 +544,40 @@ properties:
     writeCapabilities: []
   - name: Camera.ViewportSize
     summary: |
-      Describes the dimensions, in pixels, of the client's viewport.
+      The dimensions of the device safe area on a Roblox client.
     description: |
-      **ViewportSize** describes the dimensions, in pixels, of the client's
-      viewport.
+      `Class.Camera.ViewportSize|ViewportSize` returns the dimensions of the
+      device safe area on the current screen. This area is a rectangle which
+      includes the Roblox top bar area but does not include any device notches
+      or screen cutouts. The units of `Class.Camera.ViewportSize|ViewportSize`
+      are Roblox UI offset units which may be different from native display
+      pixels.
 
-      This property ignores the GUI inset applied by the top bar, meaning the
-      center of the screen can be found at precisely at 50% of the viewport in
-      both directions. You can find the position of a `Datatype.Vector3` in the
-      world on the viewport using `Class.Camera:WorldToViewportPoint()`.
+      <img src="../../../assets/engine-api/classes/Camera/DeviceSafeAreaVsFullscreen.png" width="840" alt="Mobile device screen with cutout showing device safe area." />
+
+      As noted above, `Class.Camera.ViewportSize|ViewportSize` is not equal to
+      the fullscreen area size on displays with cutouts or notches. To obtain
+      the fullscreen area size on all displays, you can query the
+      `Class.ScreenGui.AbsoluteSize|AbsoluteSize` property of a
+      `Class.ScreenGui` with `Class.ScreenGui.ScreenInsets|ScreenInsets` set to
+      `Enum.ScreenInsets.None|None`. See `Enum.ScreenInsets` for a more
+      information about how screen areas are defined.
+
+      Finally, note that `Class.Camera.ViewportSize|ViewportSize` is not the
+      actual viewport size the camera uses for rendering (the camera renders in
+      the fullscreen area). Also, the `Class.Camera.FieldOfView` and
+      `Class.Camera.DiagonalFieldOfView` properties are based on the fullscreen
+      area, not `Class.Camera.ViewportSize|ViewportSize`.
+
+      ##### Camera Updates
+
+      Only the `Class.Camera` currently referred to by
+      `Class.Workspace. CurrentCamera` has its
+      `Class.Camera.ViewportSize|ViewportSize` updated each frame during the
+      `Class.RunService.PreRender|PreRender` step. The
+      `Class.Camera.ViewportSize|ViewportSize` of all other cameras in your
+      experience won't be updated, including those used for
+      `Class.ViewportFrame|ViewportFrames`.
     code_samples:
     type: Vector2
     tags:
@@ -606,7 +641,7 @@ methods:
     code_samples:
     parameters:
       - name: ignoreList
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.Instance|Instances` to ignore. Descendants of these
@@ -700,13 +735,13 @@ methods:
         summary: |
           An array of `Datatype.Vector3` positions of cast points.
       - name: ignoreList
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.Instance|Instances` that should be ignored, along
           with their descendants.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` that obscure the lines of sight
           between the camera's `Class.Camera.CFrame` and the `castPoints`.
@@ -1158,26 +1193,45 @@ methods:
     summary: |
       Creates a unit `Datatype.Ray` from a position on the viewport (in pixels),
       at a given depth from the `Class.Camera`, orientated in the camera's
-      direction. Does not account for the GUI inset.
+      direction. Does not account for the `Enum.ScreenInsets|CoreUISafeInsets`
+      inset.
     description: |
-      This function creates a unit `Datatype.Ray` from a 2D position on the
-      viewport (defined in pixels). This position does **not** account for the
-      GUI inset. The `Datatype.Ray` originates from the `Datatype.Vector3`
-      equivalent of the 2D position in the world at the given depth (in studs)
-      away from the `Class.Camera`.
+      This function creates a unit `Datatype.Ray` from a 2D position in device
+      safe viewport coordinates, defined in pixels. The ray originates from the
+      `Datatype.Vector3` equivalent of the 2D position in the world at the given
+      depth (in studs) away from the `Class.Camera`.
 
-      As this function does not acknowledge the GUI inset, the viewport position
-      given is not equivalent to the screen position used by GUI elements. If
-      you are not using `Class.ScreenGui.IgnoreGuiInset` and need an otherwise
-      identical function that accounts for the GUI offset, use
-      `Class.Camera:ScreenPointToRay()`.
+      As illustrated below, `(0, 0)` corresponds to the top‑left point of the
+      Roblox top bar. This means that the input 2D position does **not** account
+      for the `Enum.ScreenInsets|CoreUISafeInsets` inset, but it does account
+      for any `Enum.ScreenInsets|DeviceSafeInsets`.
+
+      <img src="../../../assets/engine-api/classes/Camera/ViewportPointToRayOrigin.png" width="840" alt="Diagram showing the origin of the device safe area viewport coordinate system." />
+
+      Note that UI instances use a different coordinate system
+      (`Class.GuiObject.AbsolutePosition` uses the
+      `Enum.ScreenInsets|CoreUISafeInsets` viewport coordinate system while this
+      function uses the `Enum.ScreenInsets|DeviceSafeInsets` viewport coordinate
+      system). If you would like to specify position in core UI coordinates,
+      please use `Class.Camera:ScreenPointToRay()`.
+
+      Also note that this function only works for the
+      `Class.Workspace. CurrentCamera` camera. Other cameras, such as those you
+      create for a `Class.ViewportFrame`, have an initial viewport size of
+      `(1, 1)` and are only updated after you set them to
+      `Class.Workspace.CurrentCamera|CurrentCamera`. The mismatch in viewport
+      size causes the camera to return a ray with an incorrect
+      `Datatype.Ray.Direction`.
 
       This function can be used in conjunction with the
-      `Class.Camera.ViewportSize` property to create a ray from the centre of
-      the screen, for example:
+      `Class.Camera.ViewportSize|ViewportSize` property to create a ray from the
+      centre of the screen, for example:
 
       ```lua
-      local camera = workspace.CurrentCamera
+      local Workspace = game:GetService("Workspace")
+
+      local camera = Workspace.CurrentCamera
+
       local viewportPoint = camera.ViewportSize / 2
       local unitRay = camera:ViewportPointToRay(viewportPoint.X, viewportPoint.Y, 0)
       ```
@@ -1186,33 +1240,30 @@ methods:
       create a longer ray, you can do the following:
 
       ```lua
-      local camera = workspace.CurrentCamera
+      local Workspace = game:GetService("Workspace")
+
+      local camera = Workspace.CurrentCamera
+
       local length = 500
       local unitRay = camera:ScreenPointToRay(100, 100)
       local extendedRay = Ray.new(unitRay.Origin, unitRay.Direction * length)
       ```
-
-      This function only works for the current Workspace camera. Other cameras,
-      such as those you create for a `Class.ViewportFrame`, have an initial
-      viewport size of `(1, 1)` and are only updated after you set them to
-      `Class.Workspace.CurrentCamera`. The mismatch in viewport size causes the
-      camera to return a ray with an incorrect `Datatype.Ray.Direction`.
     code_samples:
     parameters:
       - name: x
         type: float
         default:
         summary: |
-          The position on the X axis, in pixels, of the viewport point at which
-          to originate the `Datatype.Ray`. This position does not account for
-          the GUI inset.
+          The position on the **X** axis, in pixels, of the viewport point at
+          which to originate the `Datatype.Ray`, in device safe area
+          coordinates.
       - name: 'y'
         type: float
         default:
         summary: |
-          The position on the Y axis, in pixels, of the viewport point at which
-          to originate the `Datatype.Ray`. This position does not account for
-          the GUI inset.
+          The position on the **Y** axis, in pixels, of the viewport point at
+          which to originate the `Datatype.Ray`, in device safe area
+          coordinates.
       - name: depth
         type: float
         default: 0

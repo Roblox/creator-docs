@@ -20,8 +20,7 @@ functions:
     description: |
       Accepts a function or a thread (as returned by coroutine.create) and
       calls/resumes it immediately through the engine's scheduler. Arguments
-      after the first are sent to the function/thread. This function does not
-      return any value, even if the provided function returns one immediately.
+      after the first are sent to the function/thread.
 
       This function is based on the fastSpawn pattern rather than being a
       replacement for the deprecated global `spawn` function. It is recommended
@@ -52,15 +51,13 @@ functions:
     code_samples:
   - name: task.defer
     summary: |
-      Calls/resumes a function/coroutine on the next resumption cycle.
+      Calls/resumes a function/coroutine at the end of the current resumption
+      cycle.
     description: |
       Accepts a function or a thread (as returned by coroutine.create) and
-      defers it until the next
-      [resumption cycle](https://devforum.roblox.com/t/1240569), at which point
-      it is resumed with the engine's scheduler like with
-      `Library.task.spawn()`. Arguments after the first are sent to the
-      function/thread. This function does not return any value, even if the
-      provided function returns one immediately.
+      defers it until the end of the current resumption cycle, at which point it
+      is resumed with the engine's scheduler like with `Library.task.spawn()`.
+      Arguments after the first are sent to the function/thread.
 
       This function should be used when a similar behavior to
       `Library.task.spawn()` is desirable, but the thread does not need to run

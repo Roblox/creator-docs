@@ -8,26 +8,26 @@ deprecation_message: ''
 items:
   - name: UIHover
     summary: ''
-    value: 0
+    value: 1
     tags: []
     deprecation_message: ''
   - name: UIClick
     summary: ''
-    value: 1
+    value: 2
     tags: []
     deprecation_message: ''
   - name: UINotification
     summary: ''
-    value: 2
+    value: 3
     tags: []
     deprecation_message: ''
   - name: GameplayExplosion
     summary: ''
-    value: 3
+    value: 4
     tags: []
     deprecation_message: ''
   - name: GameplayCollision
     summary: ''
-    value: 4
+    value: 5
     tags: []
     deprecation_message: ''

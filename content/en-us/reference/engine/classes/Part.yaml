@@ -26,15 +26,19 @@ properties:
 
       | Shape/Value | Description                             |
       | ----------- | --------------------------------------- |
-      | Ball        | A spherical shape, like a basketball.   |
-      | Cylinder    | A rod-like shape, like a tin can.       |
-      | Block       | The default, brick shape.               |
+      | Ball        | A spherical shape.                      |
+      | Block       | A block shape.                          |
+      | Cylinder    | A cylinder shape.                       |
       | Wedge       | A wedge shape with a slope on one side. |
       | CornerWedge | A wedge shape with slopes on two sides. |
 
-      Note that `Class.MeshPart` and
-      [solid modeling](../../../parts/solid-modeling.md) can be used to obtain
-      completely custom part shapes.
+      `Class.MeshPart` and [solid modeling](../../../parts/solid-modeling.md)
+      can be used to obtain completely custom part shapes.
+
+      Collisions between balls, blocks, and wedges, and corner wedges are exact,
+      whereas collisions between terrain, cylinders, TriangleMeshes, and other
+      geometry types are approximations. This means that the ball shape can be
+      useful to create stable colliders for car wheels.
     code_samples:
       - using-a-script-to-create-a-part
     type: PartType

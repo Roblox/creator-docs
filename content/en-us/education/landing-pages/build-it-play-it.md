@@ -15,11 +15,11 @@ Each series can be completed self-directed, while lesson plans are provided for 
 
 <Grid container spacing={6}>
 
-<Grid item xs={8} lg={8}>
+<Grid item XSmall={8} XLarge={8}>
 Using Roblox Studio, you'll learn to create **special effects**, whether it's a magical blast in an arcade experience, or a beam of arrows that guides new players around a world.
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <a href="../../education/build-it-play-it-mansion-of-wonder/landing-page.md">
 <Button variant="text">View Series</Button>
 </a>
@@ -33,11 +33,11 @@ Using Roblox Studio, you'll learn to create **special effects**, whether it's a 
 
 <Grid container spacing={6}>
 
-<Grid item xs={8} lg={8}>
+<Grid item XSmall={8} XLarge={8}>
 Using Roblox Studio, learn how <b>animation</b> and create your own simulator game where people move to gain points. The way players move will be up to you, whether it's swimming through the air or dancing along the track.
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <a href="../../education/build-it-play-it-island-of-move/landing.md">
 <Button variant="button">View Series</Button>
 </a>
@@ -54,11 +54,11 @@ Using Roblox Studio, learn how <b>animation</b> and create your own simulator ga
 
 <Grid container spacing={6}>
 
-<Grid item xs={8} lg={8}>
+<Grid item XSmall={8} XLarge={8}>
 Learn <b>3D modeling</b> while building a spaceship to race in a multiplayer experience with friends.
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <a href="../../education/build-it-play-it-galactic-speedway/main-page.md">
 <Button variant="button">View Series</Button>
 </a> <a href="../../education/lesson-plans/galactic-speedway-lesson.md">
@@ -74,11 +74,11 @@ Learn <b>3D modeling</b> while building a spaceship to race in a multiplayer exp
 
 <Grid container spacing={6}>
 
-<Grid item xs={8} lg={8}>
+<Grid item XSmall={8} XLarge={8}>
 Build an entire city and then with your friends, destroy it as rampaging monsters. Learn how to become a <b>level designer</b> in Roblox.
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <a href="../../education/build-it-play-it-create-and-destroy/landing.md">
 <Button variant="button">View Series</Button>
 </a> <a href="../../education/lesson-plans/create-and-destroy-lesson.md">
@@ -94,11 +94,11 @@ Build an entire city and then with your friends, destroy it as rampaging monster
 
 <Grid container spacing={6}>
 
-<Grid item xs={8} lg={8}>
+<Grid item XSmall={8} XLarge={8}>
 <b>Code</b> a game where players can create their own story. Learn how scripts work in Roblox and get a first introduction to computer science.
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <a href="../../education/build-it-play-it-story-games/landing.md">
 <Button variant="button">View Series</Button>
 </a> <a href="../../education/lesson-plans/story-games-lesson.md">

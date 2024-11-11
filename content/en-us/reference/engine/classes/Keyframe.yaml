@@ -176,7 +176,7 @@ methods:
       - get-keyframe-markers-attached-to-a-keyframe
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array containing all `Class.KeyframeMarker|KeyframeMarkers` that
           have been added to the `Class.Keyframe`.
@@ -197,7 +197,7 @@ methods:
       - Keyframe-Reset-Poses
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.Pose|Poses`.
     tags: []

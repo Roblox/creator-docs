@@ -30,7 +30,7 @@ methods:
       - checking-for-touching-parts
     parameters:
       - name: partList
-        type: Objects
+        type: Instances
         default:
         summary: |
           A list of parts checks to see if any parts in the list are touching
@@ -138,7 +138,7 @@ methods:
     code_samples:
     parameters:
       - name: partList
-        type: Objects
+        type: Instances
         default:
         summary: ''
       - name: cframeList
@@ -246,7 +246,7 @@ methods:
         default:
         summary: ''
       - name: ignoreDescendantsTable
-        type: Objects
+        type: Instances
         default:
         summary: ''
       - name: terrainCellsAreCubes
@@ -296,7 +296,7 @@ methods:
         default:
         summary: ''
       - name: whitelistDescendantsTable
-        type: Objects
+        type: Instances
         default:
         summary: ''
       - name: ignoreWater
@@ -370,7 +370,7 @@ methods:
         summary: |
           The maximum amount of `Class.BasePart|BaseParts` to be returned.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` within the `Datatype.Region3`.
     tags:
@@ -411,7 +411,7 @@ methods:
         summary: |
           The `Datatype.Region3` to be checked.
       - name: ignoreDescendantsTable
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of objects to be ignored.
@@ -421,7 +421,7 @@ methods:
         summary: |
           The maximum number of `Class.BasePart|BaseParts` to be returned.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` found within the
           `Datatype.Region3`.
@@ -463,7 +463,7 @@ methods:
         summary: |
           The `Datatype.Region3` to be checked.
       - name: whitelistDescendantsTable
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of objects to check.
@@ -473,7 +473,7 @@ methods:
         summary: |
           The maximum number of `Class.BasePart|BaseParts` to be returned.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` within the `Datatype.Region3`.
     tags:
@@ -526,7 +526,7 @@ methods:
         summary: |
           Contains reusable portions of the spatial query parameters.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` which matched the spatial
           query.
@@ -576,7 +576,7 @@ methods:
         summary: |
           Contains reusable portions of the spatial query parameters.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` which matched the spatial
           query.
@@ -625,7 +625,7 @@ methods:
         summary: |
           Contains reusable portions of the spatial query parameters.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` which matched the spatial
           query.
@@ -811,7 +811,7 @@ methods:
         summary: |
           The `Datatype.Region3` to be checked.
       - name: ignoreDescendentsTable
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of objects to be ignored.
@@ -999,7 +999,7 @@ methods:
           positive number. Larger values will increase the runtime of this
           function.
       - name: parts
-        type: Objects
+        type: Instances
         default: '{}'
         summary: |
           Optional array of parts that will be simulated. This set must contain
@@ -1065,7 +1065,7 @@ methods:
         default: 20
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags:
       - Deprecated

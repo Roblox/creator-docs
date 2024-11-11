@@ -1,13 +1,13 @@
 ---
-title: Player Referral System
-description: Generate shareable referral links that allow players to invite friends to join them inside an experience.
+title: Friend Invite Reward System
+description: Use referral links to track and reward players that have successfully invited other players into your experience, and players that have joined your experience using a referral link invitation from another player.
 ---
 
 <Alert severity="info">
-This feature is still in beta. If you'd like to provide Roblox with feedback about this feature, join the [User Acquisition Referrals](https://www.guilded.gg/i/kbQ4Po42) Guilded group.
+This feature is still in beta. If you'd like to provide Roblox with feedback about this feature, join the [User Acquisition Referrals](https://www.guilded.gg/i/EwKQPZWE) Guilded group.
 </Alert>
 
-The referral system encourages existing players to bring new players into your experience, increasing player retention and overall engagement. Players can access and share referral links from [player invite prompts](./invite-prompts.md) or directly from the default in-experience invite menu.
+The friend referral system encourages existing players to bring new players into your experience, increasing player retention and overall engagement. Players can access and share referral links from [player invite prompts](./invite-prompts.md) or directly from the default in-experience invite menu.
 
 As a developer, you can use these shareable referral links to:
 
@@ -15,7 +15,11 @@ As a developer, you can use these shareable referral links to:
 - Track which players have joined your experience using a referral link invitation from another player.
 - Create and distribute rewards to both inviters and invitees.
 
-To implement a referral system, [set up a referral event](#set-up-a-referral-event) and [create referral rewards](#grant-referral-rewards). The `ReferredByPlayerId` property of `Class.Player:GetJoinData()|GetJoinData()` automatically populates for all types of invitations and gives you access to the user ID of the referring player. You can then access this data in the `Players.PlayerAdded` event to identify the inviter and grant rewards to the inviter and the invitee.
+<img src="../../assets/promotion/referral-system/Invite-Friends.png" width="90%" />
+<sup>The **Invite Friends** pop-up and **Friend Referral Rewards** banner will become available in early 2025.</sup>
+<br/><br/>
+
+To implement a friend referral system, [set up a referral event](#set-up-a-referral-event) and [create referral rewards](#grant-referral-rewards). The `ReferredByPlayerId` property of `Class.Player:GetJoinData()|GetJoinData()` automatically populates for all types of invitations and gives you access to the user ID of the referring player. You can then access this data in the `Players.PlayerAdded` event to identify the inviter and grant rewards to the inviter and the invitee.
 
 ```lua
 function onPlayerAdded(player)
@@ -107,7 +111,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 ## Manage Abuse Prevention
 
-You can implement safeguards to prevent players from exploiting the referral system.
+You can implement safeguards to prevent players from exploiting the friend referral system.
 
 - Offer one-time rewards to track invitees and make sure they're only rewarded once.
 - Introduce a cooldown period before an inviter can submit another referral.

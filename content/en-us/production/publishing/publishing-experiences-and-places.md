@@ -32,7 +32,7 @@ can [release it to the public](#releasing-to-the-public), although beta testing 
     [full&nbsp;release](#full-release).
   </TabItem>
 	<TabItem label="Full Release">
-    When you're ready to release an experience to the world, you can [release it to the public](#releasing-to-the-public) under its final name with a complete description, icon, and other promotional imagery. For guidance on release names, descriptions, and promotional materials, review [metadata best practices](#metadata-best-practices), experience [icons](../../production/publishing/experience-icons.md), and [promotional thumbnails](../../production/promotion/promotional-thumbnails.md).
+    When you're ready to release an experience to the world, you can [release it to the public](#releasing-to-the-public) under its final name with a complete description, icon, and other promotional imagery. For guidance on release names, descriptions, and promotional materials, review [metadata best practices](#metadata-best-practices), experience [icons](../../production/publishing/experience-icons.md), and [promotional thumbnails](../../production/promotion/thumbnails.md).
   </TabItem>
 </Tabs>
 
@@ -52,7 +52,6 @@ To publish a place as the start place of an entirely new experience:
      It's highly recommended that you [create a group](../../projects/groups.md) and publish a new experience under the group's account, not your personal account. Even if you're a solo creator, this allows you to expand your team over time, recruit playtesters, and operate as an independent studio.
      </Alert>
 
-   - **Genre** — The genre that best describes the experience.
    - **Devices** — Each applicable device type that you want to support. The default options are practical for most new creators.
 
 3. Click the **Create** button.
@@ -266,8 +265,8 @@ Roblox automatically retains saved versions of each place for version control an
 1. Right-click the desired place and select **View History**. The version history window opens.
 1. Locate and select the version to revert to, then click the **Open** button to launch a new Studio session for the selected version.
 1. If the place has been [released to the public](#releasing-to-the-public) and you want to overwrite the place's live/public version with the reverted version:
-	1. Publish the place you just reverted to, choosing the same experience and same place during the publishing process.
-	2. Restart the servers for updates as outlined in [Updating Experiences](#updating-experiences).
+   1. Publish the place you just reverted to, choosing the same experience and same place during the publishing process.
+   2. Restart the servers for updates as outlined in [Updating Experiences](#updating-experiences).
 
 ## Metadata Best Practices
 
@@ -307,13 +306,13 @@ All experiences should adhere to the following best practices for naming:
   </Alert>
 
   <Grid container spacing={3} alignItems="flex-end">
-  <Grid item xs={12} lg={4}>
+  <Grid item XSmall={12} XLarge={4}>
   <img src="../../assets/publishing/experience-metadata/Experience-Title-Example-A.png" width="180" style={{marginBottom:"0px;"}} />
   <Alert severity="success">
   Entire title visible to players
   </Alert>
   </Grid>
-  <Grid item xs={12} lg={4}>
+  <Grid item XSmall={12} XLarge={4}>
   <img src="../../assets/publishing/experience-metadata/Experience-Title-Example-B.png" width="180" style={{marginBottom:"0px;"}} />
   <Alert severity="error">
   Title pushed out by update note

@@ -203,10 +203,10 @@ A common mistake may be updating a player's gold data every time they collect a 
 Now that you understand basic data store usage, test it out in a sample game.
 
 <Grid container spacing={4}>
-    <Grid item xs={6}>
-        <img src="../../../assets/tutorials/intro-to-saving-data/Sample-Place-Gold-Rush.jpg" />
+    <Grid item XSmall={6}>
+        <img src="../../../../assets/tutorials/intro-to-saving-data/Sample-Place-Gold-Rush.jpg" />
     </Grid>
-    <Grid item xs={6}>
+    <Grid item XSmall={6}>
         [Gold Rush](https://www.roblox.com/games/5268331031/Gold-Rush)<br />
         Gather as many gold chunks as you can to set a personal record that will persist between game sessions.
     </Grid>

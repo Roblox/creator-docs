@@ -428,6 +428,8 @@ navigation:
         section:
           - title: Overview
             path: /chat/in-experience-text-chat
+          - title: Guidelines
+            path: /chat/guidelines
           - title: Customization
             path: /chat/customizing-in-experience-text-chat
           - title: Bubble Chat
@@ -448,7 +450,10 @@ navigation:
       - title: Monitoring Performance
         path: /performance-optimization/monitoring
   - title: Cloud Services
+    path: /cloud-services/data-stores-vs-memory-stores
     section:
+      - title: Data Stores vs Memory Stores
+        path: /cloud-services/data-stores-vs-memory-stores
       - title: Data Stores
         path: /cloud-services/data-stores/
         section:
@@ -505,7 +510,7 @@ navigation:
           - title: Experience Icons
             path: /production/publishing/experience-icons
           - title: Experience Thumbnails
-            path: /production/promotion/promotional-thumbnails
+            path: /production/publishing/thumbnails
           - title: Badges
             path: /production/publishing/badges
       # - title: Accessories
@@ -566,7 +571,7 @@ navigation:
         path: /production/promotion/experience-events
       - title: Player Invite Prompts
         path: /production/promotion/invite-prompts
-      - title: Player Referral System
+      - title: Friend Invite Reward System
         path: /production/promotion/referral-system
       - title: Experience Notifications
         path: /production/promotion/experience-notifications

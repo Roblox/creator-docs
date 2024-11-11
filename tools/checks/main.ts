@@ -42,6 +42,7 @@ import {
   checkFileImportEquality,
   checkMdxEquality,
   isLocaleFile,
+  outdatedTranslationFiles,
 } from './utils/localization.js';
 import { Emoji } from './utils/utils.js';
 import { deduplicate } from './utils/utils.js';
@@ -272,6 +273,17 @@ try {
     writeListToFile(
       allowedHttpLinksTextFileFullPath,
       deduplicate(allNonRobloxHttpLinks).sort(),
+      'utf-8'
+    );
+  }
+  if (config.checkLocalizedContent && outdatedTranslationFiles.length > 0) {
+    const outdatedTranslationFilesPath = path.join(
+      outputDirectory,
+      'outdated-translation-files.txt'
+    );
+    writeListToFile(
+      outdatedTranslationFilesPath,
+      outdatedTranslationFiles,
       'utf-8'
     );
   }

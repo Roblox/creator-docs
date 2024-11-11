@@ -227,24 +227,6 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
-  - name: Workspace.DecreaseMinimumPartDensityMode
-    summary: ''
-    description: ''
-    code_samples: []
-    type: DecreaseMinimumPartDensityMode
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-    writeCapabilities: []
   - name: Workspace.DistributedGameTime
     summary: |
       The amount of time, in seconds, that the game has been running.
@@ -741,9 +723,38 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
-  - name: Workspace.SignalBehavior
+  - name: Workspace.SandboxedInstanceMode
     summary: ''
     description: ''
+    code_samples: []
+    type: SandboxedInstanceMode
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: Workspace.SignalBehavior
+    summary: |
+      Configures when the engine resumes event handlers.
+    description: |
+      This property determines whether event handlers will be resumed
+      immediately when the event fires, or deferred and then resumed at a later
+      resumption point. Resumption points currently include:
+
+      - `Class.RunService.RenderStepped`
+      - Waiting script resumption such as `Library.task.wait()`,
+        `Library.task.spawn()`, and `Library.task.delay()`
+      - `Class.RunService.Stepped`
+      - `Class.RunService.Heartbeat`
+      - `Class.DataModel.BindToClose`
     code_samples:
     type: SignalBehavior
     tags:
@@ -938,6 +949,24 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: Workspace.TouchEventsUseCollisionGroups
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.TouchesUseCollisionGroups
     summary: |
       Determines whether `Class.BasePart|parts` in different groups set to not
@@ -991,7 +1020,7 @@ methods:
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be
@@ -1225,7 +1254,7 @@ methods:
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be made.
@@ -1289,7 +1318,7 @@ methods:
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.BasePart|parts` for whom joints are to be made.
@@ -1365,7 +1394,7 @@ methods:
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be

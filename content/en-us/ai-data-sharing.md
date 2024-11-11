@@ -14,7 +14,7 @@ When you publish an experience in Studio, upload an avatar item, or upload a **p
 - The data sharing setting is **off by default** for experiences, avatar items, and paid assets published prior to July 10, 2024.
 - The data sharing setting is **on by default** for experiences, avatar items, and paid assets published on or after July 10, 2024.
 
-You can change your default choice at any time and override it as desired whenever you publish. No data will be collected or used prior to September 10, 2024 to give you time to adjust your preferences.
+You can change your default choice at any time and override it as desired whenever you publish.
 
 <Alert severity="info">
 Because they're distributed with the intent of others using them, **free** [Creator Store](production/creator-store.md) assets are shared by default, with no ability to disable sharing.
