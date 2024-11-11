@@ -428,6 +428,8 @@ navigation:
         section:
           - title: Overview
             path: /chat/in-experience-text-chat
+          - title: Guidelines
+            path: /chat/guidelines
           - title: Customization
             path: /chat/customizing-in-experience-text-chat
           - title: Bubble Chat
@@ -508,7 +510,7 @@ navigation:
           - title: Experience Icons
             path: /production/publishing/experience-icons
           - title: Experience Thumbnails
-            path: /production/promotion/thumbnails
+            path: /production/publishing/thumbnails
           - title: Badges
             path: /production/publishing/badges
       # - title: Accessories
