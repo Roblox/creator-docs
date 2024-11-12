@@ -20,10 +20,11 @@ This page summarizes the available operations and authentication types.
 - Base URL: `https://apis.roblox.com/legacy-badges`
 - Authentication types: OAuth 2.0 and API key
 - Additional Badges API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/badges/v1).
-- Robux might be required to create a badge. To identify the number of remaining free badges you can create in the specified universe for the current UTC day, use the `/v1/universes/{universeId}/free-badges-quota` endpoint.
+- Robux might be required to create a badge. To identify the number of remaining free badges you can create for the current UTC day in the specified universe, use the `/v1/universes/{universeId}/free-badges-quota` endpoint found [here](/cloud/legacy/badges/v1).
+
 | **API**     | **Path**                    | **Scope**                     |
 | :---------- | :-------------------------- | :---------------------------- |
-| UpdateBadge | `PATCH v1/badges/{badgeId}` | `legacy-universe.badge:write` |
+| UpdateBadge | `PATCH v1/badges/{badgeId}` | `legacy-universe.badge:write` or `legacy-universe.badge:manage-and-spend-robux` |
 | CreateBadge | `POST v1/universes/{universeId}/badges` | `legacy-universe.badge:manage-and-spend-robux` |
 
 ## Develop API

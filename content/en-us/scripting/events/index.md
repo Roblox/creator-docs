@@ -11,6 +11,10 @@ Due to the sheer number of events and client-server architecture, Roblox scripti
 
 You don't have to listen for events or take any action in response to them, but the events are firing and available nevertheless. When you do want to respond to an event, you connect a function to it.
 
+<Alert severity="info">
+Deferred events can help you ensure more performant and consistent event handling. See [Deferred Events](deferred.md) for more information.
+</Alert>
+
 ## Connecting Functions to Events
 
 You connect a function to an event using `Datatype.RBXScriptSignal.Connect()|Connect()` to execute code each time the event fires. Most events pass arguments to their connected functions. For example, the `Class.BasePart.Touched` event passes the object that touched the part (such as a left hand or car wheel), and the `Class.Players.PlayerAdded` event passes the `Class.Player` that joined your experience.
@@ -78,7 +82,7 @@ connection = part.Touched:Connect(onPartTouched)
 If you only want to connect a function to an event once—that is, only run the function the first time the event fires—use the `Datatype.RBXScriptSignal.Once()|Once()` method as a more convenient alternative to connecting and disconnecting the function.
 
 <Alert severity="info">
-When Luau destroys an event's object, such as the `Class.Player` object when a user leaves the experience, all of its connections disconnect automatically.
+When Luau destroys an event's object, such as the `Class.Player` object when a user leaves the experience, all of its ([non-deferred](deferred.md)) connections disconnect automatically.
 </Alert>
 
 ## Waiting for Events to Fire

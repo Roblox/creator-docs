@@ -26,7 +26,7 @@ constructors:
   - name: Region3.new
     summary: Returns a new `Datatype.Region3` using the provided vectors as boundaries.
     description: |-
-      Returns a new `Datatype.Region3` given the `Datatype.Vector3` bounds of a the
+      Returns a new `Datatype.Region3` given the `Datatype.Vector3` bounds of the
       rectangular prism volume.
 
       Note that the order of the provided bounds matters: by switching them, the

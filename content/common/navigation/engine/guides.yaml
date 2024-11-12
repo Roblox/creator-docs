@@ -201,6 +201,8 @@ navigation:
         section:
           - title: Overview
             path: /scripting/events/
+          - title: Deferred Events
+            path: /scripting/events/deferred
           - title: Bindable
             path: /scripting/events/bindable
           - title: Remote
