@@ -292,17 +292,17 @@ To copy a more complex table with nested tables inside it, you'll need to use a 
 
 ```lua
 -- The function used for deep copying a table
-local function deepCopy(original)	
+local function deepCopy(original)
 	-- Define the new table for the copy
 	local copy = {}
-	
+
 	-- Loop through the original table to clone
 	for key, value in original do
 		-- If the type of the value is a table, deep copy it to the key (index)
 		-- Else (or) the type isn't a table, assign the default value to the index instead
 		copy[key] = type(value) == "table" and deepCopy(value) or value
 	end
-	
+
 	-- Return the finalized copy of the deep cloned table
 	return copy
 end
@@ -329,7 +329,7 @@ local clone = deepCopy(original)
 
 ## Freezing Tables
 
-Freezing a table makes it read-only. This means that its keys can't be written to, but can be read. New keys can't be created after a table is frozen. You can check if a table is frozen by using the `Library.table.isfrozen()` method. This feature is used to create constant values which you don't want to change.
+Freezing a table makes it read-only, which is useful for creating constant values that you don't want to change. Freezing is permanent; there's no "unfreeze" or "thaw" method. To check if a table is frozen, use `Library.table.isfrozen()`.
 
 ### Shallow Freezes
 
@@ -348,7 +348,7 @@ target.playerID = 1 --> attempt to modify a readonly table
 
 ### Deep Freezes
 
-To freeze a more complex table with nested tables inside it, you'll need to use a recursive function similar to the following:
+To freeze a more complex table with nested tables inside it, use a recursive function similar to the following:
 
 ```lua
 local function deepFreeze(target)

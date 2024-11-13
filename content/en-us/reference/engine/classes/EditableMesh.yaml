@@ -234,7 +234,8 @@ methods:
           ID of the third vertex of the triangle.
     returns:
       - type: int64
-        summary: ''
+        summary: |
+          Stable face ID of the new face.
     tags: []
     deprecation_message: ''
     security: None
@@ -392,7 +393,8 @@ methods:
         summary: ''
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of face IDs adjacent to the given face.
     tags: []
     deprecation_message: ''
     security: None
@@ -430,7 +432,8 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          Center of the bounding box of the `EditableMesh`.
     tags: []
     deprecation_message: ''
     security: None
@@ -569,8 +572,10 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: EditableMesh:GetFaceVertices
-    summary: ''
-    description: ''
+    summary: |
+      Returns the face's vertex IDs.
+    description: |
+      Returns the face's vertex IDs.
     code_samples: []
     parameters:
       - name: faceId
@@ -579,7 +584,8 @@ methods:
         summary: ''
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of vertex IDs around the given face.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -596,7 +602,8 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of stable face IDs.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -696,7 +703,8 @@ methods:
     parameters: []
     returns:
       - type: Vector3
-        summary: ''
+        summary: |
+          Size of the `EditableMesh`.
     tags: []
     deprecation_message: ''
     security: None
