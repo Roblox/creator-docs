@@ -7,7 +7,7 @@ hideBreadcrumbs: true
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/tzPn6QvU8Bo" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br /><br />
 
-Rigid accessories are the most basic 3D cosmetic items that users can equip and wear on their avatar character, such props, weapons, hats, and more. Unlike [clothing accessories](../accessories/layered-clothing.md) that stretch and fit over a character body, rigid accessories attach to a specific point on an avatar character and don't deform or wrap over a target.
+Rigid accessories are the most basic 3D cosmetic items that users can equip and wear fdafdsa on their avatar character, such props, weapons, hats, and more. Unlike [clothing accessories](../accessories/layered-clothing.md) that stretch and fit over a character body, rigid accessories attach to a specific point on an avatar character and don't deform or wrap over a target.
 
 To create a custom Roblox accessory for your own experience or to sell on the Marketplace, it's important to start with the following:
 
