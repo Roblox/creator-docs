@@ -8,7 +8,8 @@ description: |
   Configures properties of the optional channel tabs in the default chat window.
   It is parented to `Class.TextChatService`.
 
-  To learn more, see [Customizing Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+  To learn more, see
+  [Customizing Text Chat](../../../chat/customizing-in-experience-text-chat.md).
 code_samples: []
 inherits:
   - TextChatConfigurations

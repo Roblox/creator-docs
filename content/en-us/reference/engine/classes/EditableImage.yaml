@@ -229,6 +229,7 @@ methods:
         default:
         summary: |
           Optional dictionary for additional configuration:
+
           - `CombineType`: Specifies how the pixels of the source image blend
             with those of the destination. Default is
             `Enum.ImageCombineType.AlphaBlend`.

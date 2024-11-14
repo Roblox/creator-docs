@@ -565,6 +565,20 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: GuiService:GetRawScreenScale
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:InspectPlayerFromHumanoidDescription
     summary: |
       Allows a developer to bring up the Inspect menu showing the assets listed

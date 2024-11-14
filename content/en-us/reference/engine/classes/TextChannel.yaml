@@ -13,8 +13,9 @@ description: |
   `Class.TextSource` of the user with `TextSource.CanSend = true` must be in
   that channel.
 
-  Messages from different TextChannels can be separated into different tabs in the chat window using `Class.ChannelTabsConfiguration`.
-  
+  Messages from different TextChannels can be separated into different tabs in
+  the chat window using `Class.ChannelTabsConfiguration`.
+
   To learn more, see
   [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
 code_samples:
@@ -22,7 +23,27 @@ inherits:
   - Instance
 tags: []
 deprecation_message: ''
-properties: []
+properties:
+  - name: TextChannel.DirectChatRequester
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Player
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
 methods:
   - name: TextChannel:DisplaySystemMessage
     summary: |
@@ -51,6 +72,24 @@ methods:
         summary: |
           A `Class.TextChatMessage` with `Class.TextChatMessage.Status` property
           that indicates the condition of the message.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: TextChannel:SetDirectChatRequester
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: requester
+        type: Player
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
