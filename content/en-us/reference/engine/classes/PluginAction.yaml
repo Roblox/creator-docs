@@ -100,16 +100,15 @@ properties:
     code_samples:
     type: string
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
       read: None
-      write: None
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:
-      can_load: false
+      can_load: true
       can_save: false
     capabilities: []
     writeCapabilities: []
