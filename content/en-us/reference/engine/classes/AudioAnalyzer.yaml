@@ -116,8 +116,9 @@ methods:
     description: |
       Returns the frequency spectrum of the last audio buffer, as an array of
       numbers. The elements of the array are root-mean-square volume levels,
-      evenly spaced from 0 hertz to 24,000 hertz.
-      If any of the analyzer's inputs come from an `Class.AudioDeviceInput`, this method returns an empty array.
+      evenly spaced from 0 hertz to 24,000 hertz. If any of the analyzer's
+      inputs come from an `Class.AudioDeviceInput`, this method returns an empty
+      array.
     code_samples: []
     parameters: []
     returns:

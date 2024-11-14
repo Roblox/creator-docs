@@ -17,6 +17,37 @@ tags:
   - Service
 deprecation_message: ''
 properties:
+  - name: Players.BanningEnabled
+    summary: |
+      Enables or disables the three `Players` methods
+      (`Class.Players:BanAsync()|BanAsync()`,
+      `Class.Players:UnbanAsync()|UnbanAsync()`, and
+      `Class.Players:GetBanHistoryAsync()|GetBanHistoryAsync()`) that constitute
+      the ban API. This property is not scriptable and can only be modified in
+      Studio.
+    description: |
+      Enables or disables the three `Players` methods
+      (`Class.Players:BanAsync()|BanAsync()`,
+      `Class.Players:UnbanAsync()|UnbanAsync()`, and
+      `Class.Players:GetBanHistoryAsync()|GetBanHistoryAsync()`) that constitute
+      the ban API. This property is not scriptable and can only be modified in
+      Studio.
+    code_samples: []
+    type: bool
+    tags:
+      - NotReplicated
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Players.BubbleChat
     summary: |
       Indicates whether or not bubble chat is enabled. It is set with the
@@ -588,7 +619,8 @@ methods:
     summary: |
       Bans users from your experience, with options to specify duration, reason,
       whether the ban applies to the entire universe or just the current place,
-      and more.
+      and more. This method is enabled and disabled by the
+      `Class.Players.BanningEnabled` property, which you can toggle in Studio.
     description: |
       The `Class.Players:BanAsync()` method allows you to easily ban users who
       violate your experience's guidelines. You can specify the ban duration,
@@ -596,7 +628,8 @@ methods:
       message to the banned user in accordance with the
       [Usage Guidelines](../../../players/index.md#banning-users). You should
       also post your experience rules somewhere accessible to all users and
-      provide a way for them to appeal.
+      provide a way for them to appeal. This method is enabled and disabled by
+      the `Class.Players.BanningEnabled` property, which you can toggle in Studio.
 
       ##### Banning and Messaging
 
@@ -773,11 +806,13 @@ methods:
   - name: Players:GetBanHistoryAsync
     summary: |
       Retrieves the ban and unban history of any user within the experience's
-      universe.'
+      universe. This method is enabled and disabled by the
+      `Class.Players.BanningEnabled` property, which you can toggle in Studio.
     description: |
       Retrieves the ban and unban history of any user within the experience's
       universe. This method returns a `Class.BanHistoryPages` instance that
-      inherits from `Class.Pages`.
+      inherits from `Class.Pages`. This method is enabled and disabled by the
+      `Class.Players.BanningEnabled` property, which you can toggle in Studio.
 
       This function call will only succeed on production game servers and not on
       client devices or in Studio.
@@ -1188,10 +1223,13 @@ methods:
   - name: Players:UnbanAsync
     summary: |
       Unbans players banned from `Class.Players:BanAsync()` or the User
-      Restrictions Open Cloud API.
+      Restrictions Open Cloud API. This method is enabled and disabled by the
+      `Class.Players.BanningEnabled` property, which you can toggle in Studio.
     description: |
       Unbans players banned from `Class.Players:BanAsync()` or the
       [User Restrictions Open Cloud API](/cloud/reference/UserRestriction).
+      This method is enabled and disabled by the
+      `Class.Players.BanningEnabled` property, which you can toggle in Studio.
 
       Like `Class.Players:BanAsync()`, this method takes in a `config`
       dictionary that will let you bulk unban users. This configures the users

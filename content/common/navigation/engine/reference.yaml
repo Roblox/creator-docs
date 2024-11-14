@@ -2505,6 +2505,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Teams.yaml
         ignoreTranslation: true
+      - title: TelemetryService
+        path: /reference/engine/classes/TelemetryService
+        type: engineapi
+        source: /reference/engine/classes/TelemetryService.yaml
+        ignoreTranslation: true
       - title: TeleportAsyncResult
         path: /reference/engine/classes/TeleportAsyncResult
         type: engineapi
@@ -3348,6 +3353,16 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AnnotationEditingMode.yaml
         ignoreTranslation: true
+      - title: AnnotationRequestResult
+        path: /reference/engine/enums/AnnotationRequestResult
+        type: engineapi
+        source: /reference/engine/enums/AnnotationRequestResult.yaml
+        ignoreTranslation: true
+      - title: AnnotationRequestType
+        path: /reference/engine/enums/AnnotationRequestType
+        type: engineapi
+        source: /reference/engine/enums/AnnotationRequestType.yaml
+        ignoreTranslation: true
       - title: AppLifecycleManagerState
         path: /reference/engine/enums/AppLifecycleManagerState
         type: engineapi
@@ -3877,11 +3892,6 @@ navigation:
         path: /reference/engine/enums/EasingStyle
         type: engineapi
         source: /reference/engine/enums/EasingStyle.yaml
-        ignoreTranslation: true
-      - title: EditableStatus
-        path: /reference/engine/enums/EditableStatus
-        type: engineapi
-        source: /reference/engine/enums/EditableStatus.yaml
         ignoreTranslation: true
       - title: ElasticBehavior
         path: /reference/engine/enums/ElasticBehavior

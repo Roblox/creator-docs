@@ -204,7 +204,7 @@ The following assets are designed for the specific [auto-setup requirements](../
 <Card style={{height: '100%'}}>
 <CardContent>
 
-<center>Nature Girl - AutoSetup</center>
+<center>Nature Girl - Auto-Setup</center>
 <figure>
 <center> <img src="../assets/art/resources/Archer-Girl-Preview.png" width="100%" /> </center>
 </figure>
@@ -225,7 +225,7 @@ This Auto-Setup template is not compatible with the traditional avatar creation 
 <Card style={{height: '100%'}}>
 <CardContent>
 
-<center>Stylish Male - AutoSetup</center>
+<center>Stylish Male - Auto-Setup</center>
 <figure>
 <center> <img src="../assets/art/resources/StylizedMale-Preview.png" width="100%" /> </center>
 </figure>

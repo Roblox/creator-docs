@@ -218,8 +218,9 @@ properties:
       `Class.TextChannel|TextChannels` even if
       `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels`
       is true.
-      
-      Messages from different TextChannels can be separated into different tabs in the chat window using `Class.ChannelTabsConfiguration`.
+
+      Messages from different TextChannels can be separated into different tabs
+      in the chat window using `Class.ChannelTabsConfiguration`.
     code_samples: []
     type: bool
     tags: []
@@ -319,6 +320,7 @@ methods:
     description: |
       Determines whether a user has permission to chat directly with other users
       in experiences based on their parental control settings. To be used when:
+
       - The line of communication is user-initiated (not developer- or
         gameplay-initiated)
       - Access to the communication is closed and limited

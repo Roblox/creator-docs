@@ -1,0 +1,132 @@
+name: TelemetryService
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties: []
+methods:
+  - name: TelemetryService:LogCounter
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: config
+        type: Dictionary
+        default:
+        summary: ''
+      - name: data
+        type: Dictionary?
+        default:
+        summary: ''
+      - name: value
+        type: float
+        default: 1
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: TelemetryService:LogDurationEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: TelemetryService:LogDurationEventWithTimestamp
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: timestamp
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: TelemetryService:LogEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: config
+        type: Dictionary
+        default:
+        summary: ''
+      - name: data
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: TelemetryService:LogStat
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: config
+        type: Dictionary
+        default:
+        summary: ''
+      - name: data
+        type: Dictionary?
+        default:
+        summary: ''
+      - name: value
+        type: float
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+events: []
+callbacks: []
