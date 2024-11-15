@@ -629,7 +629,8 @@ methods:
       [Usage Guidelines](../../../players/index.md#banning-users). You should
       also post your experience rules somewhere accessible to all users and
       provide a way for them to appeal. This method is enabled and disabled by
-      the `Class.Players.BanningEnabled` property, which you can toggle in Studio.
+      the `Class.Players.BanningEnabled` property, which you can toggle in
+      Studio.
 
       ##### Banning and Messaging
 
@@ -1227,9 +1228,9 @@ methods:
       `Class.Players.BanningEnabled` property, which you can toggle in Studio.
     description: |
       Unbans players banned from `Class.Players:BanAsync()` or the
-      [User Restrictions Open Cloud API](/cloud/reference/UserRestriction).
-      This method is enabled and disabled by the
-      `Class.Players.BanningEnabled` property, which you can toggle in Studio.
+      [User Restrictions Open Cloud API](/cloud/reference/UserRestriction). This
+      method is enabled and disabled by the `Class.Players.BanningEnabled`
+      property, which you can toggle in Studio.
 
       Like `Class.Players:BanAsync()`, this method takes in a `config`
       dictionary that will let you bulk unban users. This configures the users
