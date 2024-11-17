@@ -78,6 +78,8 @@ When [creating an API Key](./api-keys.md) for this example, make sure you perfor
 
 #### Adding Scripts for the User Inventory Support Portal
 
+##### > Python Example
+
 After creating the API key with permissions required for the example app, you need to add Python scripts to perform app functionalities. The `data_stores_methods.py` file shows how to define [`List Entries`](../../reference/cloud/datastores-api/v1.json#list-entries), [`Get Entry`](../../reference/cloud/datastores-api/v1.json#get-entry), and [`Increment Entry`](../../reference/cloud/datastores-api/v1.json#increment-entry) methods. The `update_inventory` file uses the defined methods to list a subset of user inventories, increase the virtual currency for each user, and update the data.
 
 ```python title='data_stores_methods.py'
@@ -187,6 +189,93 @@ export API_KEY=... \
 python update_inventory
 ```
 
+##### > JavaScript Example
+
+After creating the API key with the required permissions for the example app, you need to add JavaScript code to perform app functionalities. The `data_stores_methods.js` file shows how to define [`List Entries`](../../reference/cloud/datastores-api/v1.json#list-entries), [`Get Entry`](../../reference/cloud/datastores-api/v1.json#get-entry), and [`Increment Entry`](../../reference/cloud/datastores-api/v1.json#increment-entry) methods. The `update_inventory.js` file uses the defined methods to list a subset of user inventories, increase the virtual currency for each user, and update the data.
+
+```javascript title='dataStoresMethods.js'
+const fetch = require('node-fetch');
+
+class DataStores {
+  constructor() {
+    this._baseUrl = "https://apis.roblox.com/datastores/v1/universes/{universeId}";
+    this._apiKey = process.env.API_KEY;
+    this._universeId = "UNIVERSE_ID";
+    this.ATTR_HDR = 'Roblox-entry-Attributes';
+    this.USER_ID_HDR = 'Roblox-entry-UserIds';
+    this._objectsUrl = `${this._baseUrl}${this._universeId}/standard-datastores/datastore/entries/entry`;
+    this._incrementUrl = `${this._objectsUrl}/increment`;
+    this._listObjectsUrl = `${this._baseUrl}${this._universeId}/standard-datastores/datastore/entries`;
+  }
+
+  async _getHeaders() {
+    return { 'x-api-key': this._apiKey };
+  }
+
+  async getEntry(datastore, objectKey, scope = null) {
+    const url = `${this._objectsUrl}?datastoreName=${datastore}&entryKey=${objectKey}&scope=${scope || ''}`;
+    const response = await fetch(url, { headers: await this._getHeaders() });
+    const data = await response.json();
+    return data;
+  }
+
+  async listEntries(datastore, scope = null, prefix = "", limit = 100) {
+    const url = `${this._listObjectsUrl}?datastoreName=${datastore}&scope=${scope}&prefix=${prefix}&limit=${limit}`;
+    const response = await fetch(url, { headers: await this._getHeaders() });
+    const data = await response.json();
+    return data;
+  }
+
+  async incrementEntry(datastore, objectKey, incrementBy, scope = null) {
+    const url = `${this._incrementUrl}?datastoreName=${datastore}&entryKey=${objectKey}&incrementBy=${incrementBy}&scope=${scope || ''}`;
+    const response = await fetch(url, { method: 'POST', headers: await this._getHeaders() });
+    const data = await response.json();
+    return data;
+  }
+}
+
+module.exports = DataStores;
+```
+
+```javascript title='updateInventory.js'
+const DataStores = require('./dataStoresMethods');
+const dataStoresApi = new DataStores();
+
+// Set up
+const datastoreName = "Inventory";
+
+// List keys for a subset of users
+dataStoresApi.listEntries(datastoreName)
+  .then(keys => {
+    console.log(keys);
+  });
+
+// Read inventory for each user
+for (let x = 0; x < 5; x++) {
+  const updatedObjectKey = `User_${x + 1}`;
+  dataStoresApi.getEntry(datastoreName, updatedObjectKey)
+    .then(value => {
+      console.log(`${updatedObjectKey} has ${value.gems} gems in their inventory`);
+    });
+}
+
+// Update the currency of each user by 10
+for (let x = 0; x < 5; x++) {
+  const updatedObjectKey = `User_${x + 1}`;
+  dataStoresApi.incrementEntry(datastoreName, updatedObjectKey, 10)
+    .then(value => {
+      console.log(`${updatedObjectKey} now has ${value.robux} robux in their inventory`);
+    });
+}
+```
+
+To test, set the `API_KEY` environment variable and run the JavaScript file:
+
+```bash
+export API_KEY=... \
+node updateInventory.js
+```
+
 ### External Persistent Leaderboard
 
 This section walks through a concrete example of creating an external persistent leaderboard in Python, in which you can list and read your users information stored in ordered data stores, make edits, and then publish to an external website for promotion.
@@ -218,6 +307,8 @@ When [creating an API Key](./api-keys.md) for this example, make sure you perfor
 1. In the **Security** section, explicitly set IP access to the key using [CIDR notation](./api-keys.md#cidr-format), and set an explicit expiration date so your key automatically stops working after that date. For this example, if you plan to do local testing first, you can remove the IP restriction by setting it to **0.0.0.0/0** and let it expire in **30 days**.
 
 #### Adding Scripts for the Leaderboard
+
+##### > Python Example
 
 After creating the API key with permissions required for the example app, you need to add Python scripts to perform app functionalities.
 
@@ -308,3 +399,104 @@ python leaderboard
 ```
 
 After completing testing, you can publish or embed the leaderboard to websites outside of Roblox for more reach.
+
+##### > JavaScript Example
+
+After creating the API key with the required permissions for the example app, you need to add JavaScript code to perform app functionalities.
+
+The `ordered_data_stores.js` file shows how to define [`List`](../../reference/cloud/datastores-api/ordered-v1.json#list), [`Create`](../../reference/cloud/datastores-api/ordered-v1.json#create), [`Update`](../../reference/cloud/datastores-api/ordered-v1.json#update), and [`Increment`](../../reference/cloud/datastores-api/ordered-v1.json#increment) methods. The `leaderboard.js` file uses the defined methods to create entries of users in ordered data stores, display scores, increment scores of winning users, and update the leaderboard. The `leaderboard.js` file also imports a `config.json` file for configuring the Universe ID, API domain, and your API key.
+
+```javascript title='ordered_data_stores.js'
+const axios = require('axios');
+const fs = require('fs');
+
+class DataStores {
+    constructor(configFile) {
+        this._config = JSON.parse(fs.readFileSync(configFile, 'utf-8'));
+    }
+
+    _H() {
+        return { 'x-api-key': this._config.api_key, 'Content-Type': 'application/json' };
+    }
+
+    async list(datastore, scope, pageSize = 10, orderBy = "", filter = "", exclusiveStartKey = "") {
+        const url = `${this._config.api_key_url}universes/${this._config.universe_id}/orderedDataStores/${datastore}/scopes/${scope}/entries`;
+        const response = await axios.get(url, {
+            headers: this._H(),
+            params: { "max_page_size": pageSize, "order_by": orderBy, "filter": filter, "page_token": exclusiveStartKey }
+        });
+        return response.data;
+    }
+
+    async create(datastore, scope, entry, data) {
+        const url = `${this._config.api_key_url}universes/${this._config.universe_id}/orderedDataStores/${datastore}/scopes/${scope}/entries`;
+        const payload = JSON.stringify({ "value": 11 });
+        const response = await axios.post(url, payload, {
+            headers: this._H(),
+            params: { "id": entry }
+        });
+        return response.data;
+    }
+
+    async increment(datastore, scope, entry, incrementBy) {
+        const url = `${this._config.api_key_url}universes/${this._config.universe_id}/orderedDataStores/${datastore}/scopes/${scope}/entries/${entry}:increment`;
+        const payload = JSON.stringify({ "amount": incrementBy });
+        const response = await axios.post(url, payload, { headers: this._H() });
+        return response.data;
+    }
+}
+```
+
+```javascript title='leaderboard.js'
+const leaderboardEndpoints = require('./ordered_data_stores');
+
+const datastores = new leaderboardEndpoints.DataStores('config.json');
+
+// Variables
+const orderedDataStore = 'PlayerScores';
+const scope = 'global';
+const entryNames = ['Ragdoll', 'Balinese', 'Tabby', 'Siamese'];
+
+// Create an entry and give each new player 50 points for joining the game
+entryNames.forEach(async (name) => {
+    await datastores.create(orderedDataStore, scope, name, 50);
+});
+
+// Display the players' scores
+datastores.list(orderedDataStore, scope).then((playerScores) => {
+    console.log(playerScores);
+});
+
+// Increment the first player's score for winning the game
+datastores.increment(orderedDataStore, scope, entryNames[0], 100);
+
+// Increment all the players' scores for participating in the game
+entryNames.forEach(async (name) => {
+    await datastores.increment(orderedDataStore, scope, name, 10);
+});
+
+// Display the updated leaderboard
+datastores.list(orderedDataStore, scope).then((updatedPlayerScores) => {
+    console.log(updatedPlayerScores);
+});
+```
+
+```json title='config'
+{
+  "universe_id": "",
+  "api_key_url": "https://apis.roblox.com/datastores/ordered-v1/",
+  "api_key": ""
+}
+```
+
+To test, set the `API_KEY` environment variable and run the `leaderboard.js` file:
+
+```bash
+export API_KEY=... \
+node leaderboard.js
+```
+
+After completing testing, you can publish or embed the leaderboard to websites outside of Roblox for more reach.
+
+
+
