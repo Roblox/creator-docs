@@ -497,6 +497,3 @@ node leaderboard.js
 ```
 
 After completing testing, you can publish or embed the leaderboard to websites outside of Roblox for more reach.
-
-
-
