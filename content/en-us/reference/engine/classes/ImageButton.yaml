@@ -44,10 +44,11 @@ properties:
     writeCapabilities: []
   - name: ImageButton.Image
     summary: |
-      The image content displayed by the UI element.
+      The image content displayed by the UI element. Reads and writes to
+      `Class.ImageButton.ImageContent|ImageContent`.
     description: |
-      The Image property is a content-type property that should hold the asset
-      ID of a Decal or Image on the Roblox website. It functions identically to
+      This property is a content-type property that should hold the asset
+      ID of a decal or image uploaded to Roblox. It functions identically to
       `Class.Decal.Texture` with regards to loading the image from the Roblox
       website. The rendered image will be colorized using
       `Class.ImageButton.ImageColor3`. It is possible to make the image render
@@ -95,8 +96,23 @@ properties:
       - UI
     writeCapabilities: []
   - name: ImageButton.ImageContent
-    summary: ''
-    description: ''
+    summary: |
+      The image content displayed by the UI element. Supports 
+      [asset URIs](../../../projects/assets/index.md#asset-uris) and
+      `Class.EditableImage` objects. 
+    description: |
+      This property should hold an
+      [asset URI](../../../projects/assets/index.md#asset-uris) or a reference to
+      an `Class.EditableImage` object. 
+      
+      The asset URI can reference a decal or image uploaded to Roblox. It
+      functions identically to `Class.Decal.Texture` with regards to loading the
+      image.
+      
+      The rendered image will be colorized using
+      `Class.ImageButton.ImageColor3`. It is possible to make the image render
+      as tiled, scaled to fit, or 9-sliced, by adjusting the
+      `Class.ImageButton.ScaleType` property.
     code_samples: []
     type: Content
     tags:

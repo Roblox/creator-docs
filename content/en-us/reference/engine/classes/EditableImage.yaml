@@ -61,15 +61,10 @@ properties:
       Size of the `Class.EditableImage` in pixels.
     description: |
       Size of the `Class.EditableImage` in pixels. The maximum size is
-      1024&times;1024. Attempting to set this property to a larger size will
-      cause it to be clamped at 1024.
-
-      Setting this property changes the **canvas** size of the editable image
-      but does not resize the contents. If changing to a larger size, new pixels
-      will be set to an RGBA value of `[0, 0, 0, 0]`. If changing to a smaller
-      size, existing pixels will be cropped. Consider using
-      `Class.EditableImage:Resize()|Resize()` to update the contents while
-      changing the size.
+      1024&times;1024. An `Class.EditableImage` cannot be resized; this property is read-only.
+      In order to resize or crop an image, create a new `Class.EditableImage` and
+      use `Class.EditableImage:DrawImageTransformed()|DrawImageTransformed()` to transfer
+      the contents; then call `Class.EditableImage:Destroy()|Destroy()`.
     code_samples: []
     type: Vector2
     tags:
@@ -89,7 +84,8 @@ properties:
 methods:
   - name: EditableImage:Destroy
     summary: ''
-    description: ''
+    description: |
+      Destroys the contents of the image, immediately reclaiming used memory.
     code_samples: []
     parameters: []
     returns:

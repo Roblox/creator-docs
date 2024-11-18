@@ -13,7 +13,7 @@ Content Maturity consists of two components:
 Roblox treats experiences without Content Maturity information the same as experiences with a Moderate maturity label, meaning they are not recommended to younger players and cannot contain any [Restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Roblox-17-Policy-Standards) without risk of moderation. For this reason, Roblox strongly recommends that you fill out the questionnaire for each of your experiences so that they're available to the largest appropriate audience as possible.
 
 <Alert severity="warning">
-   Content descriptors that generate content maturity labels are separate from genres that classify experiences according to their core gameplay. In cases where there is overlap between genres and in-experience content or behavior, answer the Maturity & Compliance questionnaire as accurately as you can regardless of your genre selection or assignment from Roblox.
+   Content descriptors that generate content maturity labels are separate from [genres](../publishing/experience-genres.md) that classify experiences according to their core gameplay. In cases where there is overlap between genres and in-experience content or behavior, answer the Maturity & Compliance questionnaire as accurately as you can regardless of your genre selection or assignment from Roblox.
 </Alert>
 
 <Alert severity="info">
@@ -35,6 +35,9 @@ To generate Content Maturity information:
 1. **(Optional)** If you want your experience to include restricted content, confirm you are at least 17 years old by [verifying your account](../../production/publishing/account-verification.md) so the questionnaire can ask questions to generate the Restricted maturity label.
 1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations) and click on the thumbnail of the experience you want to generate Content Maturity information for. The experience's **Overview** page displays.
 1. In the left-hand navigation, navigate to the **Audience** section, then select **Maturity & Compliance**.
+
+   <img src="../../assets/creator-dashboard/Experience-Nav-Audience-Questionnaire.png" width="330" alt="Questionnaire button indicated for an experience on the Creator Dashboard" />
+
 1. If you've never taken the questionnaire before, read the notes and details, then click **Start** to proceed. If you've previously completed the questionnaire, the **Questionnaire Completed** page displays, but you can click the **Restart** button to start over.
 1. Answer each page of questions based on the content within your experience, then click the **Save and Continue** button. After you have answered every question, the **Questionnaire Preview** page displays all of your answers, the maturity label, applicable content descriptors, and any regions where your experience is non-compliant according to your answers.
 
@@ -142,7 +145,6 @@ After you specify its intensity, you must also specify how often the violence oc
   <tr>
     <th>Violence Frequency</th>
     <th>Description</th>
-    <th>Experience Examples</th>
   </tr>
 </thead>
 <tbody>
@@ -391,6 +393,8 @@ Romantic themes are the non-sexual expression of love or affection. If your expe
 Alcohol is an intoxicating adult beverage. If your experience includes, depicts, or references alcohol, or depicts adult business and locations that provide or sell alcohol, such as characters drinking alcohol at a bar, you must disclose it within the Maturity & Compliance Questionnaire. Experiences that depict alcohol are only available to verified players that are at least 17 years old.
 
 ### Paid Random Items
+
+**Question 1: Does this experience contain paid random items?**
 
 Paid random items are virtual items players can purchase with Robux or other currency. If your experience includes paid random items, such as a coin players can purchase with Robux to later redeem for a random virtual item, you must disclose it within the Maturity & Compliance Questionnaire.
 

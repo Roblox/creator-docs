@@ -172,7 +172,7 @@ Content Maturity consists of two components:
 - **Maturity Label** - Indicates the level of maturity suitable for the experience according to child development research and industry standards. For more information, see Age Recommendations.
 - **Content Descriptors** - Indicates what type of content is within an experience, such as realistic depictions of blood or paid item trading.
 
-Roblox strongly recommends that you fill out the Content & Maturity questionnaire for each of your experiences so that they're available to the largest appropriate audience possible. Roblox does not recommend experiences without Content Maturity information to users under 13 years old. In addition, if your experience doesn't have Content Maturity information but it does contain [Restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708), the experience will be moderated.
+Roblox strongly recommends that you fill out the Maturity & Compliance questionnaire for each of your experiences so that they're available to the largest appropriate audience possible. Roblox does not recommend experiences without Content Maturity information to users under 13 years old. In addition, if your experience doesn't have Content Maturity information but it does contain [Restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708), the experience will be moderated.
 
 ### Allowing Copying
 
