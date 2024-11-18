@@ -252,6 +252,8 @@ curl --location --request POST https://apis.roblox.com/oauth/v1/token/resources'
 
 <h4>Response</h4>
 
+The value `U` in `ids` indicates that a scope has granted access to a resource owned by the authorizing `owner`.
+
 ```json title="Example Obtain Token Resources Response"
 {
   "resource_infos": [
@@ -263,6 +265,9 @@ curl --location --request POST https://apis.roblox.com/oauth/v1/token/resources'
       "resources": {
         "universe": {
           "ids": ["3828411582"]
+        },
+        "creator": {
+          "ids": ["U"]
         }
       }
     }
