@@ -3,7 +3,7 @@ title: Content Maturity
 description: Explains how to accurately disclose content in experiences to receive appropriate maturity labels and content descriptors.
 ---
 
-**Content Maturity** provides information on the experience's main details page about what kinds of content the experience contains so that players can make informed decisions about what they interact with. Roblox uses this information to recommend experiences on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages based on each user's age group and regional content policies.
+**Content Maturity** provides information on the experience's main details page about what kinds of content the experience contains so that players can make informed decisions about what they interact with. Roblox uses this information to recommend experiences on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages based on each player's age group and regional content policies.
 
 Content Maturity consists of two components:
 
@@ -41,11 +41,11 @@ To generate Content Maturity information:
 1. If you've never taken the questionnaire before, read the notes and details, then click **Start** to proceed. If you've previously completed the questionnaire, the **Questionnaire Completed** page displays, but you can click the **Restart** button to start over.
 1. Answer each page of questions based on the content within your experience, then click the **Save and Continue** button. After you have answered every question, the **Questionnaire Preview** page displays all of your answers, the maturity label, applicable content descriptors, and any regions where your experience is non-compliant according to your answers.
 
-<Alert severity="error">
+   <Alert severity="error">
    Please review your experience and confirm that your answers accurately reflect the content of your experience. If you intentionally misrepresent your experience, you may be subject to [moderation consequences](#content-maturity-moderation).
-</Alert>
+   </Alert>
 
-1. If you need to modify a previous answer, click the **Edit** button, otherwise click the **Submit** button to immediately publish the Content Maturity information to the experience's main page. If your experience receives a Restricted maturity label, servers running the experience restart to remove all users except those age-verified as 17+, and Studio removes all users from any active [collaboration](../../projects/collaboration.md) session except those age-verified as 17+.
+1. If you need to modify a previous answer, click the **Edit** button, otherwise click the **Submit** button to immediately publish the Content Maturity information to the experience's main page. If your experience receives a Restricted maturity label, servers running the experience restart to remove all players except those age-verified as 17+, and Studio removes all creators from any active [collaboration](../../projects/collaboration.md) session except those age-verified as 17+.
 
 As long as your experience doesn't have a Restricted maturity label, if you believe that your Content Maturity information doesn't match your intended audience, you can update the content in your experience so that your experience is appropriate for your target audience, then resubmit the questionnaire. To learn how you can dynamically adjust the content of your experience for different audiences, see the `Class.PolicyService` API reference.
 
@@ -377,7 +377,7 @@ Strong language is vulgar and obscene language that is not used to harass, discr
 If your experience includes strong language, you must disclose it within the Maturity & Compliance Questionnaire. Experiences that include strong language are only available to verified players that are at least 17 years old.
 
 <Alert severity="info">
-   If you want to enable strong language in user communication aside from content for your 17+ experiences, see [Publishing Experiences and Places](../../production/publishing/publishing-experiences-and-places.md#creator-dashboard).
+   If you want to enable strong language in player communication aside from content for your 17+ experiences, see [Publishing Experiences and Places](../../production/publishing/publishing-experiences-and-places.md#creator-dashboard).
 </Alert>
 
 ### Romantic Themes
@@ -400,11 +400,23 @@ Paid random items are virtual items players can purchase with Robux or other cur
 
 You do **not** need to report virtual items that you provide in exchange for players completing an action that doesn't involve the payment of Robux or any other currency.
 
+**Question 2: Does this experience respect the ArePaidRandomItemsRestricted policy API?**
+
+If your experience contains paid random items, it's recommended to take the mandatory precautions to protect players in certain regions that don't allow paid random items so that they can still access your experience. To check when these precautions are necessary, use `Class.PolicyService.GetPolicyInfoForPlayerAsync` to return a dictionary of values that determine whether certain aspects of the experience need to change for that unique player.
+
+One entry within the policy information is `ArePaidRandomItemsRestricted`, a boolean that represents whether a player is eligible to pay for random items. Random items can remain purchaseable if `ArePaidRandomItemsRestricted` returns false, but if `ArePaidRandomItemsRestricted` returns true, include additional logic to hide, replace, or block the purchase of random items for those players so that your experience is available to the largest audience as possible.
+
 ### Paid Item Trading
 
 **Question 1: Does this experience contain the ability for users to trade items that they paid for?**
 
 Paid item trading is the ability for players to purchase virtual items that they can then trade with other players. If your experience includes paid item trading, such as a marketplace for exchanging Limited items, you must disclose it within the Maturity & Compliance Questionnaire.
+
+**Question 2: Does this experience respect the IsPaidItemTradingAllowed policy API?**
+
+If your experience contains paid item trading, it's recommended to take the mandatory precautions to protect players in certain regions that don't allow paid item trading so that they can still access your experience. To check when these precautions are necessary, use `Class.PolicyService.GetPolicyInfoForPlayerAsync` to return a dictionary of values that determine whether certain aspects of the experience need to change for that unique player.
+
+One entry within the policy information is `IsPaidItemTradingAllowed`, a boolean that represents whether a player is eligible to trade paid items. Paid items can remain tradeable if `IsPaidItemTradingAllowed` returns true, but if `IsPaidItemTradingAllowed` returns false, include additional logic to hide, replace, or block the trading of paid items for those players so that your experience is available to the largest audience as possible.
 
 ## Content Maturity Moderation
 
