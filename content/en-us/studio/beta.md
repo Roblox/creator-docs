@@ -96,18 +96,6 @@ The following beta features are currently available to all users through Studio'
 
 <Card variant="outlined" style={{height: '100%'}}>
 <CardContent style={{paddingBottom: '0px'}}>
-<Button href="https://devforum.roblox.com/t/new-audio-api-beta-elevate-sound-and-voice-in-your-experiences/2848873" size="large" color="primaryBrand" variant="outlined" fullWidth>New Audio API</Button>
-<p></p>
-<CardMedia component="img" image="../assets/studio/beta/Audio-API.png" />
-<p></p>
-<figcaption>Enables new instances for customizing, processing, and routing sounds or voices within the engine.</figcaption>
-<p></p>
-<BetaAlert betaName="New Audio API" leadIn="" leadOut="" components={props.components} />
-</CardContent>
-</Card>
-
-<Card variant="outlined" style={{height: '100%'}}>
-<CardContent style={{paddingBottom: '0px'}}>
 <Button href="../studio/ui-overview.md#camera-controls" size="large" color="primaryBrand" variant="outlined" fullWidth>Improved Camera Controls</Button>
 <p></p>
 <CardMedia component="img" image="../assets/studio/beta/Improved-Camera-Controls.png" />
