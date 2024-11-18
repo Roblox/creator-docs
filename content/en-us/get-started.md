@@ -118,7 +118,7 @@ knowledge. Give them a try and add on to them when you're ready!
   </Grid>
 </Grid>
 
-<h2 style={{marginBottom: 24}}>Learn with Curriculum Paths</h2>
+<h2 style={{marginBottom: 24, marginTop: 48}}>Learn with Curriculum Paths</h2>
 
 To dive deeper, follow along with guided curriculum
 that teaches you the skills you need to create and monetize your experiences.

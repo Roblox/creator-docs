@@ -7,7 +7,7 @@ description: The Ads Manager is where advertisers can manage ad campaigns, ads r
 This feature is in beta.
 </Alert>
 
-**Ads Manager** offers advertisers valuable control over their ad campaigns, empowering them to create, optimize, and measure ads effectively while reaching their campaign objectives. Advertisers can use this tool to manage their ad campaigns, ads reporting, and ads billings in one place. Ads Manager allows you to create campaigns for **Immersive Ads** for ad units within experiences ([image](#image-ads) ads, [video](#video-ads) ads, [portal](#portal-ads) ads), [**sponsored experiences**](#sponsored-experiences), which appear on the Home page, and [search ads](./search-ads.md) that appear on Search results.
+**Ads Manager** offers advertisers valuable control over their ad campaigns, empowering them to create, optimize, and measure ads effectively while reaching their campaign objectives. Advertisers can use this tool to manage their ad campaigns, ads reporting, and ads billings in one place. Ads Manager allows you to create campaigns for **immersive ads** for ad units within experiences ([image](#image-ads) ads, [video](#video-ads) ads, [portal](#portal-ads) ads), [**sponsored experiences**](#sponsored-experiences), which appear on the Home page, and [search ads](./search-ads.md) that appear on Search results.
 
 ## Creating an Ad Account
 
@@ -72,9 +72,9 @@ Campaigns are defined by their **campaign objective** and **budgeting and schedu
 
 Campaign objectives are divided into three categories:
 
-- **Awareness:** Campaigns focused on awareness show image or autoplaying video ads to increase awareness of your brand within an experience.
-- **Visits:** Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form of either **Immersive Ads** placed within portal ad units in publisher experiences, or as **sponsored experiences** on the Home page. Advertisers are not able to promote their 17+ experiences using the **Visits** objective.
-- **Video Views:** Campaigns focused on 15-second click-to-play video views to engage audiences in-experience.
+- **Awareness**: Campaigns focused on awareness show image or autoplaying video ads to increase awareness of your brand within an experience.
+- **Visits**: Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form of either **immersive ads** placed within portal ad units in publisher experiences, or as **sponsored experiences** on the Home page. Advertisers are not able to promote their 17+ experiences using the **Visits** objective.
+- **Video Views**: Campaigns focused on 15-second click-to-play video views to engage audiences in-experience.
 
 Budgeting and scheduling parameters control campaign spending and duration. There are two different types of budgets:
 
@@ -113,77 +113,102 @@ To set up an ad campaign:
 
 ### Define Ad Sets
 
-**Ad sets** are a group of ads within a campaign that share the same targeting and bidding parameters. When defining an ad set, you can customize the audience, ad placement, brand suitability, and bidding settings.
+Ad sets are a group of ads within a campaign that share the same targeting and bidding parameters. When defining an ad set, you can customize your ad campaigns according to the following areas:
 
-**Audience** settings on Roblox enables you to choose who will see your ad. You're able to determine their geographical location, gender, age, and what device they're playing on.
+- **Audience settings** - Choose who sees your ad according to their geographical location, gender, age, and what device they're playing on.
+- **Ad placement** - Determine where your ads are discoverable on the platform, such as in search results or within experiences.
+- **Brand Suitability** - Filter what kinds of experiences your ads are served in according to the content within the experiences.
 
-**Ad placement** refers to where your ads will be discoverable.
+By adjusting all three categories, you can control who sees your ad to meet the needs of your respective campaign goals. To define an ad set:
 
-- Advertisers with a visits campaign objective can choose between an **in-experience portal** within an experience or a **sponsored experience** on the Home page.
-
-- Advertisers with an awareness campaign objective can only choose an **in-experience video** or **image**.
-
-**Brand Suitability** controls give you the ability to filter what kinds of experiences your ads will be served in. You're able to select among three inventory tiers: Full, Standard, and Limited.
-
-- **Full Inventory** — Ads served in experiences with **All Ages**, **9+**, **13+**, and **17+** age recommendations. Choosing this option will maximize your reach.
-- **Standard Inventory** — Ads served in experiences with **All Ages** and **9+** age recommendations.
-- **Limited Inventory** — Ads served in experiences with **All Ages** age recommendations. Choosing this option will lower your reach and may increase CPM.
-
-<table>
-<thead>
-  <tr>
-    <th>**Brand Suitability Tiers**</th>
-    <th>Experiences Eligible to Serve Ads</th>
-    <th>Users Eligible to See Ads</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>**Full Inventory**</td>
-    <td>All Ages, 9+, 13+, 17+</td>
-    <td>13+, except in 17+ experiences where users must be 17+ and ID-verified</td>
-  </tr>
-  <tr>
-     <td>**Standard Inventory** </td>
-    <td>All ages, 9+</td>
-    <td>Users age 13+</td>
-  </tr>
-   <tr>
-     <td>**Limited Inventory** </td>
-    <td>All Ages</td>
-    <td>Users age 13+</td>
-  </tr>
-</tbody>
-</table>
-
-These Brand Suitability controls only affect which experiences ads can appear in, not who can see an ad. Per our [advertising standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards), no users under the age of 13 will see Roblox ads. For example, if an advertiser chooses Standard Inventory, their ads may be shown in an experience with a 9+ age recommendation to audiences who are 13+.
-
-Regardless of what option you select, your ads will not be shown in experiences that do not comply with the Roblox community standards. For more information about what type of content gets shown for each inventory type, see [Brand Suitability Tables](#brand-suitability-tables).
-
-**Bidding** refers to advertisers competing to show their ads to players through the available ad units placed in experiences. Bids are reflected as CPM (cost-per-thousand impressions). Your **max bid** for CPM is the maximum amount you're willing to pay every thousand impressions. For more information about Roblox's bidding system, see [Bidding and Auction](#bidding-and-auction).
-
-To define an ad set:
-
-1. Determine the regions or countries you want your ad to appear in. You can select up to 10. When you target a region, you automatically target every country within that region.
+1. Determine up to 10 regions or countries you want your ad to appear in. When you target a region, you automatically target every country within that region.
 
    <img src="../../assets/promotion/ads-manager/Ad-Set-Locations.png" width="780" />
 
-2. Determine the gender and age range of the players you wish to see your ads, as well as which devices you'd like your ads to appear on. Some options may not be available in some locations.
+2. Determine the gender and age range of the players you wish to see your ads, as well as which devices you'd like your ads to appear on. Certain options may not be available in some locations.
    <img src="../../assets/promotion/ads-manager/Ad-Set-Gender-Ages-Devices.png" width="780" />
 
-3. Select where your ad will appear, determined by your campaign objective.
+3. Select where you want to place your ads according to your campaign objective.
+
+   - Advertisers with a **visits campaign objective** can choose between an in-experience portal within an experience or a sponsored experience on the Home page.
+   - Advertisers with an **awareness campaign objective** can choose between an in-experience video or image.
+
    <img src="../../assets/promotion/ads-manager/Ad-Placement.png" width="780" />
 
-4. For Immersive Ads, determine what kinds of experiences you want your ads to be shown in. Selecting **Standard Inventory** or **Limited Inventory** will exclude experiences with more mature content but may limit your reach.
-   <img src="../../assets/promotion/ads-manager/Brand-Suitability.png" width="780" />
+4. Select an inventory tier according to the kinds of experiences you want to serve your ads. Inventory tiers only affect which experiences that ads can appear in, **not** who can see an ad. For example, if an advertiser chooses Standard Inventory, their ads may be shown in an experience with a 9+ age recommendation to audiences who are 13+.
 
-5. Choose which [genres](#genre-targeting) you want to target with your ads. For sponsored experiences, this represents the genre interests of your audience. For Immersive Ads, this represents the genre of the experiences your ads will display in.
+   <table>
+   <thead>
+     <tr>
+       <th>Brand Suitability Tiers</th>
+       <th>Experiences with Content Maturity Labels Eligible to Serve Ads</th>
+       <th>Age of Users Eligible to See Ads</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>**Full Inventory**</td>
+       <td>Minimal, Mild, Moderate, Restricted</td>
+       <td>13+, except in 17+ experiences where users must be 17+ and ID-verified</td>
+     </tr>
+     <tr>
+       <td>**Standard Inventory**</td>
+       <td>Minimal, Mild</td>
+       <td>Users age 13+</td>
+     </tr>
+      <tr>
+       <td>**Limited Inventory**</td>
+       <td>Minimal</td>
+       <td>Users age 13+</td>
+     </tr>
+   </tbody>
+   </table>
 
-6. Determine how you want to spend your budget. A higher CPM can increase the chances of winning the [auction](#bidding-and-auction), but it also means you'll pay more.
+   <Alert severity="warning">
+
+   Selecting **Standard Inventory** or **Limited Inventory** will exclude experiences with more mature content but may limit your reach. Regardless of what option you select, your ads will not be shown to users under the age of 13 or in experiences that do not comply with the Roblox community standards. For more information, see [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards) and [Brand Suitability Tables](#brand-suitability-tables), respectively.
+
+   </Alert>
+
+   For a breakdown of what types of content you can expect for each [content maturity](content-maturity.md) label, reference the following table:
+
+   <table>
+   <thead>
+     <tr>
+       <th>Maturity Label</th>
+       <th>Description</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>**Minimal**</td>
+       <td>May contain occasional mild violence and/or light unrealistic blood.</td>
+     </tr>
+     <tr>
+       <td>**Mild**</td>
+       <td>May contain repeated mild violence, heavy unrealistic blood, mild fear-based content, and/or mild crude humor.</td>
+     </tr>
+     <tr>
+       <td>**Moderate**</td>
+       <td>May contain moderate violence, light realistic blood, moderate fear-based content, moderate crude humor, and/or unplayable gambling content.</td>
+     </tr>
+     <tr>
+       <td>**Restricted**</td>
+       <td>May contain strong violence, heavy realistic blood, moderate crude humor, romantic themes, unplayable gambling content, the presence of alcohol, and/or strong language.</td>
+     </tr>
+   </tbody>
+   </table>
+
+5. Choose which [genres](#genre-targeting) you want to target with your ads.
+
+   - For sponsored experiences, this represents the genre interests of your audience.
+   - For immersive ads, this represents the genre of the experiences your ads will display in.
+
+6. Determine your max bid price to show your ads to players through the available ad units placed in experiences. Bids are reflected as CPM (cost-per-thousand impressions) meaning that your max bid for CPM is the maximum amount you're willing to pay every thousand impressions. For more information about Roblox's bidding system, see [Bidding and Auction](#bidding-and-auction).
 
    <img src="../../assets/promotion/ads-manager/Ad-Set-Bidding.png" width="900" />
 
-7. Lastly, name your ad set and click the **NEXT** button.
+7. Name your ad set, then click the **NEXT** button.
 
    <img src="../../assets/promotion/ads-manager/Ad-Set-Name-Next.png" width="780" />
 
@@ -197,11 +222,11 @@ When you define your ad set, an audience estimation displays that indicates how 
 
 #### Brand Suitability Tables
 
-The following tables show what types of content you can expect to appear alongside your Immersive Ads depending on your brand suitability inventory selection.
+The following tables show what types of content you can expect to appear alongside your immersive ads depending on your brand suitability inventory selection.
 
 While context exclusions are done as effectively as possible, complete accuracy is not guaranteed. Brand Suitability controls only affect which experiences ads are shown in and not the age of who sees an ad. Regardless of what Brand Suitability options you choose, your ads will only be shown to 13+ users. Content types listed within the brand suitability guidelines are thematic examples and are not guaranteed to appear within each inventory tier.
 
-For more information on content exclusions associated with age ratings, see [Experience Guidelines](https://en.help.roblox.com/hc/en-us/articles/8862768451604-Experience-Guidelines-and-Age-Recommendations) and [Age Recommendations](https://en.help.roblox.com/hc/en-us/articles/8862768451604-Experience-Guidelines-and-Age-Recommendations).
+For more information on content exclusions associated with content maturity, see [Content Maturity](content-maturity.md) and [Content Maturity Labels](https://en.help.roblox.com/hc/en-us/articles/8862768451604-Experience-Guidelines-and-Age-Recommendations).
 
 <br />
 <h5>Always Excluded Content</h5>
@@ -352,7 +377,7 @@ You can target particular genres with your ad sets. Note that these are Roblox's
 <br />
 <h5>Experience Genre</h5>
 
-When buying [Immersive Ads](../../production/monetization/immersive-ads.md), which are ads within experiences, experience genres are based on the genre of the experiences your ads will be served in. For instance, if you select only "Roleplaying," your ads will only appear in experiences classified as "Roleplaying."<br />
+When buying [immersive ads](../../production/monetization/immersive-ads.md), which are ads within experiences, experience genres are based on the genre of the experiences your ads will be served in. For instance, if you select only "Roleplaying," your ads will only appear in experiences classified as "Roleplaying."<br />
 
 <br />
 <h5>Audience Genre</h5>

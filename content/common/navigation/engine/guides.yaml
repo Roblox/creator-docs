@@ -531,8 +531,8 @@ navigation:
       - title: Guidelines
         path: /production/promotion/experience-guidelines
         section:
-          - title: Experience Guidelines
-            path: /production/promotion/experience-guidelines
+          - title: Content Maturity
+            path: /production/promotion/content-maturity
           - title: About GDPR and CCPA
             path: /production/publishing/about-GDPR-and-CCPA
           - title: DMCA Guidelines
