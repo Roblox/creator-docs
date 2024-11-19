@@ -6,7 +6,7 @@ description: Explains design requirements to follow for publishing an experience
 With 200M+ Xbox and PlayStation players, consoles present a major opportunity for you to attract more users. Compared to regular devices, designing for controllers and the 10-foot UI experience of consoles has some special guidelines that you need to follow to help your experience succeed on consoles.
 
 <Alert severity="info">
-Experiences designed for consoles always need to provide [Experience Guidelines](../../production/promotion/experience-guidelines.md) to ensure smooth releases and minimize the risk of being removed from consoles.
+Experiences designed for consoles always need to provide [Content Maturity information](../../production/promotion/content-maturity.md) to ensure smooth releases and minimize the risk of being removed from consoles.
 </Alert>
 
 ## Designing for Controllers

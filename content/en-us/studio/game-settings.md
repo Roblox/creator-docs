@@ -34,8 +34,8 @@ The **Basic Info** tab contains general settings for an experience, such as its 
     <td>A description of the experience that describes what a potential player should expect.</td>
   </tr>
 	<tr>
-    <td>**Age Recommendation**</td>
-    <td>[Experience Guidelines](../production/promotion/experience-guidelines.md) provide information on the experience's main page about what kind of content the experience contains.</td>
+    <td>**Content Maturity Label**</td>
+    <td>[Content Maturity Labels](../production/promotion/content-maturity.md) provide information on the experience's main page about what kind of content the experience contains.</td>
   </tr>
   <tr>
     <td>**Game Icon**</td>

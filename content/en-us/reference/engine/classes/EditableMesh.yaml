@@ -28,6 +28,27 @@ description: |
   `Class.MeshPart:ApplyMesh()` will update the colission and fluid geometry of
   the target `Class.MeshPart`.
 
+  #### Enabling EditableMesh for Published Experiences
+  For security purposes, using `Class.EditableMesh` fails by default for published
+  experiences. To enable the use
+  of `Class.EditableMesh`, you must be 13+ age verified and ID verified. After you are
+  verified, open Studio. Select **File > Game Settings > Security** and enable the
+  **Allow Mesh & Image APIs** toggle. Remember to review the Terms of Use before
+  enabling the toggle.
+
+  #### Permissions
+  To prevent misuse, `Class.AssetService:CreateEditableMeshAsync()` will only
+  allow you to load and edit mesh assets:
+
+  - That are owned by the creator of the experience (if the experience is owned
+  by an individual).
+  - That are owned by a group (if the experience is owned by the group).
+  - That are owned by the logged in Studio user (if the place file has not yet
+  been saved or published to Roblox).
+
+  The APIs throw an error if they are used to load an asset that does
+  not meet the criteria above.
+
   #### Stable Vertex/Face IDs
 
   Many `EditableMesh` methods take **vertex**, **normal**, **UV**, **color** and
