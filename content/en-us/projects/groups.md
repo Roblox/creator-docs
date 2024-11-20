@@ -58,6 +58,14 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
        <td>Members with this role can give or remove the role to/from other members in the group. This permission is useful for roles that should have some management permissions but not at the super‑admin level.</td>
      </tr>
      <tr>
+       <td>**Configure limited roles**</td>
+       <td>Members with this role can configure the roles they are assigned and assign permissions to those roles that they themselves have.</td>
+     </tr>
+     <tr>
+       <td>**Administrate all roles**</td>
+       <td>Members with this role can create, delete, and configure any role in the group. This is a super‑admin permission, as it provides nearly full access.</td>
+     </tr>
+     <tr>
        <td>**Configure group profile**</td>
        <td>Members with this role can update the group's name, description, and other metadata. Does not include transferring ownership, which only the owner can do.</td>
      </tr>
@@ -77,11 +85,15 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
        <td>Members with this role can edit all experiences and [assets](../projects/assets/index.md) owned by the group. Does not include editing an experience outside of a [collaborative](../projects/collaboration.md) session or saving a place from one experience into another experience.</td>
      </tr>
      <tr>
+       <td>**Edit & publish all group experiences**</td>
+       <td>Members with this role can both edit experiences, as above, and also publish experiences to Roblox.</td>
+     </tr>
+     <tr>
        <td>**View all analytics for group experiences**</td>
        <td>Members with this role can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don't have edit access.</td>
      </tr>
    </tbody>
-	 <thead>
+   <thead>
      <tr>
        <th colspan="2">Group Revenue</th>
      </tr>
@@ -95,8 +107,12 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
        <td>**View group revenue**</td>
        <td>Members with this role can view the group Robux balance, any configured recurring split payouts, and (in the future) new revenue logging features.</td>
      </tr>
+     <tr>
+       <td>**Advertise group**</td>
+       <td>Members with this role can advertise the group.</td>
+     </tr>
    </tbody>
-	 <thead>
+   <thead>
      <tr>
        <th colspan="2">Avatar Item Permissions</th>
      </tr>
@@ -111,7 +127,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
        <td>Members with this role can create classic avatar items such as 2D clothing.</td>
      </tr>
    </tbody>
-	 <thead>
+   <thead>
      <tr>
        <th colspan="2">Open Cloud Permissions</th>
      </tr>
@@ -126,10 +142,29 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
        <td>Members with this role can configure and upload their own [Open Cloud API keys](../cloud/open-cloud/api-keys.md) to the group (but not configure everyone else's as above).</td>
      </tr>
    </tbody>
+   <thead>
+     <tr>
+       <th colspan="2">Asset Permissions</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+      <td>**View development items**</td>
+      <td>Members with this role can view development items owned by the group, for example **Audio**.</td>
+     </tr>
+     <tr>
+      <td>**Create and configure development items**</td>
+      <td>Members with this role can upload and configure asset development items such as **Decals**.</td>
+     </tr>
+     <tr>
+      <td>**Manage development item permissions**</td>
+      <td>Members with this role can configure permissions of development items, for example audio sharing.</td>
+     </tr>
+   </tbody>
    </table>
 
-3. <Chip label="important" size="medium" variant="outlined" color="warning" /> Click the **Save Changes** button to apply the permission settings.
-4. <Chip label="optional" size="medium" variant="outlined" /> Click the **Settings** tab and choose a color for the role, then click **Save&nbsp;Changes**.
+2. <Chip label="important" size="medium" variant="outlined" color="warning" /> Click the **Save Changes** button to apply the permission settings.
+3. <Chip label="optional" size="medium" variant="outlined" /> Click the **Settings** tab and choose a color for the role, then click **Save&nbsp;Changes**.
 
    <img src="../assets/creator-dashboard/Group-Roles-Settings-Tab.png" width="780" alt="Settings tab indicated for a group role on the Creator Dashboard." />
 
