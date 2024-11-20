@@ -13,8 +13,8 @@ All `Class.GuiObject|GuiObjects` share a core set of properties to [position](#p
 
 The `Class.GuiObject.Position|Position` property is a `Datatype.UDim2` coordinate set that positions the object along the **X** and **Y** axes. A `Datatype.UDim2` is represented by both `Datatype.UDim.Scale|Scale` and `Datatype.UDim.Offset|Offset` values for each axis:
 
-- **Scale** &mdash; Values that represent a **percentage** of the container's size along the corresponding axis, additive of any **Offset** values.
-- **Offset** &mdash; Values that represent how many **pixels** to shift the object on the corresponding axis, additive of any **Scale** values.
+- `Datatype.UDim.Scale|Scale` values represent a **percentage** of the container's size along the corresponding axis, additive of any `Datatype.UDim.Offset|Offset` values.
+- `Datatype.UDim.Offset|Offset` values represent how many **pixels** to shift the object on the corresponding axis, additive of any `Datatype.UDim.Scale|Scale` values.
 
 <figure>
 <img src="../assets/ui/general/UDim2-Components.png" width="334" />
