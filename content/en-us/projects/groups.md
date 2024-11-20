@@ -163,8 +163,8 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    </tbody>
    </table>
 
-2. <Chip label="important" size="medium" variant="outlined" color="warning" /> Click the **Save Changes** button to apply the permission settings.
-3. <Chip label="optional" size="medium" variant="outlined" /> Click the **Settings** tab and choose a color for the role, then click **Save&nbsp;Changes**.
+3. <Chip label="important" size="medium" variant="outlined" color="warning" /> Click the **Save Changes** button to apply the permission settings.
+4. <Chip label="optional" size="medium" variant="outlined" /> Click the **Settings** tab and choose a color for the role, then click **Save&nbsp;Changes**.
 
    <img src="../assets/creator-dashboard/Group-Roles-Settings-Tab.png" width="780" alt="Settings tab indicated for a group role on the Creator Dashboard." />
 
