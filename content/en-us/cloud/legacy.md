@@ -125,6 +125,10 @@ This page summarizes the available operations and authentication types.
 | UpdateGroupNotificationPreference | `PATCH v1/groups/{groupId}/notification-preference` | `legacy-user:manage`  |
 | UpdateGroupDescription            | `PATCH v1/groups/{groupId}/description`             | `legacy-group:manage` |
 | GetPendingGroupJoins              | `GET v1/user/groups/pending`                        | `legacy-group:manage` |
+| GetGroupBans                      | `GET v1/groups/{groupId}/bans`                      | `legacy-group:manage` |
+| BanUserFromGroup                  | `POST v1/groups/{groupId}/bans/{userId}`            | `legacy-group:manage` |
+| UnbanUserFromGroup                | `DELETE v1/groups/{groupId}/bans/{userId}`          | `legacy-group:manage` |
+| GetUserGroupBan                   | `GET v1/groups/{groupId}/bans/{userId}`             | `legacy-group:manage` |
 
 ## Localization Tables API
 
