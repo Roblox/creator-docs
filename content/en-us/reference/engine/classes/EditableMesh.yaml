@@ -161,8 +161,10 @@ tags:
 deprecation_message: ''
 properties:
   - name: EditableMesh.FixedSize
-    summary: ''
-    description: ''
+    summary: 'Returns `true` if a mesh is fixed-size.'
+    description: | 
+      Fixed-sized meshes allow changing the values of vertex attributes
+      but do not allow vertices and triangles to be added or deleted.
     code_samples: []
     type: bool
     tags:

@@ -11,7 +11,7 @@ A common HUD element is a health meter with an icon on the left which can be ada
 
 Using [Hazardous Space Station](https://www.roblox.com/games/99416825187098/Hazardous-Space-Station) as a starting place and [UI Fundamentals&nbsp;- HUD Meter](https://www.roblox.com/games/104506915856758/UI-Fundamentals-HUD-Meter) as a finished reference place, this tutorial demonstrates:
 
-- Setup and use of the **Device Emulator**<Link underline="none" href="../../../studio/testing-modes.md#device-emulation" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link> to test your design on multiple emulated screens.
+- Setup and use of the **Device Emulator** to test your design on multiple emulated screens.
 - Usage of `Class.StarterGui` as both a design and storage container.
 - How to position/size UI elements around built‑in Roblox controls and device notches/islands, such as the camera notch on modern phones.
 - How to replace the default Roblox health meter with your own meter and hook it up to the character's health level.
@@ -19,15 +19,15 @@ Using [Hazardous Space Station](https://www.roblox.com/games/99416825187098/Haza
 
 ## Using the Device Emulator
 
-Roblox is inherently **cross-platform**, as players can discover and join experiences on a PC or console, then later pick up their phone and continue where they left off. Mobile devices (phones and tablets) have the least amount of screen space, so it's important that your UI elements fit on smaller screens and that they're clearly visible to players.
+Roblox is inherently cross-platform, as players can discover and join experiences on a PC or console, then later pick up their phone and continue where they left off. Mobile devices (phones and tablets) have the least amount of screen space, so it's important that your UI elements fit on smaller screens and that they're clearly visible to players.
 
-The best way to test UI designs across platforms is Studio's **Device Emulator**<Link underline="none" href="../../../studio/testing-modes.md#device-emulation" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link>. This tool provides a preset selection of devices and allows you to add your own custom presets.
+The best way to test UI designs across platforms is Studio's [Device Emulator](../../../studio/testing-modes.md#device-emulation). This tool provides a preset selection of devices and allows you to add your own custom presets.
 
 1. Open the [Hazardous Space Station](https://www.roblox.com/games/99416825187098/Hazardous-Space-Station) template in Studio.
 
    <UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="99416825187098" universeId="6627378835" />
 
-2. From the **Test**<Link underline="none" href="../../../studio/test-tab.md" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link> tab, toggle on the **Device** tool.
+2. From the [Test](../../../studio/test-tab.md) tab, toggle on the **Device** tool.
 
    <img src="../../../assets/studio/general/Test-Tab-Emulation-Device.png" width="800" alt="Device button indicated in Test tab" />
 
@@ -43,7 +43,7 @@ A `Class.ScreenGui` container holds UI objects (`Class.GuiObject|GuiObjects`) to
 
 To insert an empty `Class.ScreenGui`:
 
-1. In the **Explorer**<Link underline="none" href="../../../studio/explorer.md" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link> window, locate the `Class.StarterGui` container.
+1. In the [Explorer](../../../studio/explorer.md) window, locate the `Class.StarterGui` container.
 
    <img src="../../../assets/studio/explorer/StarterGui.png" width="320" alt="Explorer window showing the StarterGui container." />
 
@@ -82,11 +82,11 @@ While the default of `Enum.ScreenInsets|CoreUISafeInsets` ensures all UI objects
 </TabItem>
 </Tabs>
 
-1. In the **Explorer**<Link underline="none" href="../../../studio/explorer.md" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link> window, select **HUDContainer**.
+1. In the **Explorer** window, select **HUDContainer**.
 
    <img src="../../../assets/tutorials/creating-hud-meters/StarterGui-HUDContainer.png" width="320" alt="Explorer window showing the HUDContainer selected." />
 
-2. In the **Properties**<Link underline="none" href="../../../studio/properties.md" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link> window, set the `Class.ScreenGui.ScreenInsets|ScreenInsets` property to `Enum.ScreenInsets|DeviceSafeInsets`.
+2. In the [Properties](../../../studio/properties.md) window, set the `Class.ScreenGui.ScreenInsets|ScreenInsets` property to `Enum.ScreenInsets|DeviceSafeInsets`.
 
    <img src="../../../assets/studio/properties/ScreenGui-ScreenInsets-DeviceSafeInsets.png" width="320" alt="ScreenInsets set to DeviceSafeInsets in the Properties window." />
 
@@ -121,7 +121,7 @@ Similar to design applications like Figma and Photoshop, a `Class.Frame` in Robl
    <img src="../../../assets/tutorials/creating-hud-meters/Meter-Design-Parent-Frame.png" width="840" alt="New frame in viewport." />
 
    <Alert severity="warning">
-   If the new frame doesn't appear in the viewport, make sure you've toggled on **GUI&nbsp;overlay** from the **Visualization&nbsp;Options**<Link underline="none" href="../../../studio/ui-overview.md#visualization-options" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link> widget in the upper‑right corner of the 3D viewport, or toggled on **UI&nbsp;Visibility** from the **View**<Link underline="none" href="../../../studio/view-tab.md" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link> tab.
+   If the new frame doesn't appear in the viewport, make sure you've toggled on **GUI&nbsp;overlay** from the [Visualization&nbsp;Options](../../../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport, or toggled on **UI&nbsp;Visibility** from the [View](../../../studio/view-tab.md) tab.
    </Alert>
 
 2. Rename the new frame instance to **MeterBar**.
@@ -149,11 +149,11 @@ Additionally, you'll need to set an upper-right [anchor point](../../../ui/posit
 
 <img src="../../../assets/tutorials/creating-hud-meters/Meter-Design-Parent-Frame-Anchor.png" width="840" alt="Frame anchor point in its upper-right corner." />
 
-1. In the **Explorer**<Link underline="none" href="../../../studio/explorer.md" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link> window, select the **MeterBar** frame that you inserted previously.
+1. In the **Explorer** window, select the **MeterBar** frame that you inserted previously.
 
    <img src="../../../assets/tutorials/creating-hud-meters/StarterGui-HUDContainer-MeterBar.png" width="320" alt="Explorer window showing the MeterBar frame selected." />
 
-2. In the **Properties**<Link underline="none" href="../../../studio/properties.md" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link> window, enter <Typography noWrap>`1, 0, 0, 0`</Typography> for `Class.Frame.Position|Position` and press <kbd>Enter</kbd>. Studio will automatically add the brackets to form the `Datatype.UDim2` of <Typography noWrap>`{1, 0},{0, 0}`</Typography>.
+2. In the **Properties** window, enter <Typography noWrap>`1, 0, 0, 0`</Typography> for `Class.Frame.Position|Position` and press <kbd>Enter</kbd>. Studio will automatically add the brackets to form the `Datatype.UDim2` of <Typography noWrap>`{1, 0},{0, 0}`</Typography>.
 
 3. Enter <Typography noWrap>`1, 0`</Typography> for the `Class.Frame.AnchorPoint|AnchorPoint` property. The frame should now be positioned in the upper‑right corner of the [device safe area](#utilize-safe-areas), slightly indented from the edge as a result of the [padding](#set-edge-padding).
 
@@ -165,7 +165,7 @@ Like position, the `Class.Frame.Size|Size` of a UI object is represented by a `D
 
 By default, the new frame's size is <Typography noWrap>`{0, 100},{0, 100}`</Typography>, meaning 100 **pixels** in both width (**X**) and height (**Y**). While a strict pixel value is useful in certain cases, many UI elements scale more responsively across multiple screens when set to a **percentage** of the overall screen container size.
 
-1. With the **MeterBar** frame selected, access the **Properties**<Link underline="none" href="../../../studio/properties.md" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link> window and navigate to the `Class.Frame.Size|Size` property.
+1. With the **MeterBar** frame selected, access the **Properties** window and navigate to the `Class.Frame.Size|Size` property.
 
 2. Enter a value of `0.35, 0, 0.05, 0` to set a percentage size of 35% wide and 5% tall with no added pixel offsets.
 
@@ -273,7 +273,7 @@ To more clearly indicate the purpose of the meter, you can add an [image label](
 
 ### Constrain the Size
 
-While a [scale height](#resize-the-frame) of `0.05` (5%) looks good on modern phone screens and gaming monitors which are 16:9 aspect ratio or wider, the meter may look slightly too tall on tablet screens and older phones. You can check this by emulating a tablet like **iPad&nbsp;7th&nbsp;Generation** from the **Device Emulator**<Link underline="none" href="../../../studio/testing-modes.md#device-emulation" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link>.
+While a [scale height](#resize-the-frame) of `0.05` (5%) looks good on modern phone screens and gaming monitors which are 16:9 aspect ratio or wider, the meter may look slightly too tall on tablet screens and older phones. You can check this by emulating a tablet like **iPad&nbsp;7th&nbsp;Generation** from the **Device Emulator**.
 
 <img src="../../../assets/tutorials/creating-hud-meters/Device-Emulator-Tablet.png" width="800" alt="Device Emulator set to emulate a tablet device." />
 
@@ -310,7 +310,7 @@ Roblox experiences include a default health meter which becomes visible when cha
 
 To disable the default health meter, you'll use a **client script** (`Class.LocalScript`) within `Class.StarterPlayerScripts` that calls `Class.StarterGui:SetCoreGuiEnabled()`.
 
-1. In the **Explorer**<Link underline="none" href="../../../studio/explorer.md" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link> window, expand the `Class.StarterPlayer` container and locate the `Class.StarterPlayerScripts` container within it.
+1. In the **Explorer** window, expand the `Class.StarterPlayer` container and locate the `Class.StarterPlayerScripts` container within it.
 
    <img src="../../../assets/tutorials/creating-hud-meters/StarterPlayer-StarterPlayerScripts.png" width="320" alt="Explorer window showing the StarterPlayerScripts container inside the StarterPlayer container." />
 
@@ -318,7 +318,7 @@ To disable the default health meter, you'll use a **client script** (`Class.Loca
 
    <img src="../../../assets/tutorials/creating-hud-meters/StarterPlayer-StarterPlayerScripts-HideDefaultHealthMeter.png" width="320" alt="Explorer window showing the new HideDefaultHealthMeter client script inside the StarterPlayerScripts container." />
 
-3. When you insert a new script, it automatically opens in a new script editor tab (if it doesn't, double-click the script in the **Explorer**<Link underline="none" href="../../../studio/explorer.md" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link> window).
+3. When you insert a new script, it automatically opens in a new script editor tab (if it doesn't, double‑click the script in the **Explorer** window).
 
    Paste the following code inside the **HideDefaultHealthMeter** script:
 
@@ -361,7 +361,7 @@ If you playtest the experience now and take damage, you'll notice that the defau
 
 All default Roblox character models contain a `Class.Humanoid` class which provides special behaviors and functionality to the character, such as setting its walk/run speed and managing its health. `Class.Humanoid.Health|Health` changes on the server [replicate](../../../projects/client-server.md#replication) to each player's client and you can detect these changes to update both the size and color of the custom health meter.
 
-1. In the **Explorer**<Link underline="none" href="../../../studio/explorer.md" target="_new"><Typography variant="caption"><sup>&#8505;</sup></Typography></Link> window, locate the `Class.StarterCharacterScripts` container within `Class.StarterPlayer`.
+1. In the **Explorer** window, locate the `Class.StarterCharacterScripts` container within `Class.StarterPlayer`.
 
    <img src="../../../assets/tutorials/creating-hud-meters/StarterPlayer-StarterCharacterScripts.png" width="320" alt="Explorer window showing the StarterCharacterScripts container inside the StarterPlayer container." />
 

@@ -65,6 +65,44 @@ To grant a creator permission to use a private asset in any of these scenarios:
 
 1. At the bottom of the page, click the **Save Changes** button.
 
+### To Groups
+
+To grant a group permission to use one of your private assets, you must have [Edit all group experiences](../../projects/groups.md#roles-and-permissions) permission in that group. After you grant the group permission, group members gain permission to use the asset only in experiences owned by that group (see [Granting Permission to Experiences](#to-experiences)).
+
+Group members can insert the asset into experiences from the **Creations** tab of the [Toolbox](../../projects/assets/toolbox.md). Use the dropdown to select the appropriate **Group** category. You can also use the private asset's ID in the [Properties](../../studio/properties.md) window.
+
+<GridContainer numColumns="2">
+  <figure>
+    <img src="../../assets/studio/toolbox/Creations-Group-Audio.png" alt="A close up view of the Toolbox with the Creations tab highlighted and Group Audio category selected." width="100%" />
+    <figcaption>Inserting a private asset through the Toolbox</figcaption>
+  </figure>
+  <figure>
+    <img src="../../assets/studio/properties/Private-SoundID.jpg" alt="A close up view of the Properties window with the SoundID property highlighted." width="100%" />
+    <figcaption>Inserting a private asset in the Properties window</figcaption>
+  </figure>
+</GridContainer>
+
+If group members want to use the private asset in a script, or if they want to save or publish a template place that they were editing that includes the private asset, they must also give the [experience](#to-experiences) itself permission to use it. If a group member doesn't complete this step, the asset isn't visible or audible during runtime, and an error message displays in the **Output** window.
+
+<img src="../../assets/studio/general/Output-Window-Error.png" alt="An example of an error that displays in the Output Window when a creator or experience doesn't have permission to use a private asset." width="100%" />
+
+To grant a group permission to use a private asset in any of these scenarios:
+
+1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+1. Select **Development Items**, then click either **Audio** or **Videos**.
+
+   <img src="../../assets/creator-dashboard/Development-Items-Asset-Privacy.png" alt="A close up view of tabs on the Creator Dashboard. The Development Items tab and its Audio and Videos subtabs are highlighted." width="780"/>
+
+1. Select the asset you want the group to have permission to use in any of their experiences and **Permissions**.
+
+   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Button.png" alt="A close up view of a Swamp SFX asset's left-hand menu. The Permissions navigation menu item is highlighted." width="330" />
+
+1. Under **Collaborator Access** &rarr; **Creators**, search for the group that you want to grant permission to. You can also see and remove existing groups.
+
+   <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Groups.png" alt="A close up view of the Creators Collaborator Access settings. The search friends bar is highlighted." width="780" />
+
+1. Click the **Save Changes** button.
+
 ### To Experiences
 
 <Alert severity="error">
@@ -170,7 +208,7 @@ To revoke permission for a creator to use a private asset in any additional expe
    <img src="../../assets/creator-dashboard/Development-Items-Asset-Privacy.png" alt="A close up view of tabs on the Creator Dashboard. The Development Items tab and its Audio and Videos subtabs are highlighted." width="780"/>
 
 1. Select the asset you want to revoke permission for one or more creators to use in their own experiences. The asset's **Configure** page displays.
-1. In the asset's left-hand navigation, select **Permissions**. The asset's **Permissions** page displays, and under **Collaborator Access** → **Creators**, all creators who have permission to use the asset display.
+1. In the asset's left-hand navigation, select **Permissions**. The asset's **Permissions** page displays, and under **Collaborator Access** &rarr; **Creators**, all creators who have permission to use the asset display.
 
    <img src="../../assets/creator-dashboard/Asset-Settings-Permissions-Button.png" alt="A close up view of a Swamp SFX asset's left-hand menu. The Permissions navigation menu item is highlighted." width="330" />
 
