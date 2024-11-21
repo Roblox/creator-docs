@@ -75,3 +75,13 @@ The following table details promotional methods for avatar items on the platform
 You can direct users to follow you on social media by embedding social media links on your experience's main details page. Social media links connect your audience over the age of 13 to your social media outside of Roblox, which you can use to market updates, monitor community feedback, and promote your experiences. For more information, see [Linking to Social Media](../../production/promotion/audience-engagement.md#linking-to-social-media).
 
 <img src="../../assets/promotion/misc/Social-Links-Example.png" width="540" />
+
+## Communities
+
+[Communities](../../projects/groups.md) can serve as a form of marketing for the experiences that you publish through them. Users playing an experience often engage with the creator of the experience, which in this case is the group page. Here, users can find social links, follow related communities for new content, and post on comment boards.
+
+Some recommendations for this page include:
+
+- Ensure your community is named after your studio or company.
+- Use thumbnails and descriptions to communicate your brand and identity.
+- Include social links, such as YouTube, Discord, or X (Twitter).
