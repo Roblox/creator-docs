@@ -460,9 +460,8 @@ callbacks:
     returns:
       - type: Tuple
         summary: |
-          If a `Class.TextChatMessage` is returned, those properties will be
-          applied to the associated bubble, overriding
-          `Class.BubbleChatConfiguration` properties.
+          If a `Class.BubbleChatMessageProperties` is returned, its properties
+          override the `Class.BubbleChatConfiguration` properties.
     tags: []
     deprecation_message: ''
     security: None
@@ -494,9 +493,8 @@ callbacks:
     returns:
       - type: Tuple
         summary: |
-          If a `Class.TextChatMessage` is returned, those properties will be
-          applied to the associated message, overriding
-          `Class.ChatWindowConfiguration` properties.
+          If a `Class.ChatWindowMessageProperties` is returned, its properties
+          override the `Class.ChatWindowConfiguration` properties.
     tags: []
     deprecation_message: ''
     security: None

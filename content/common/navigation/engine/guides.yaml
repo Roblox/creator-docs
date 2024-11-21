@@ -43,6 +43,8 @@ navigation:
         path: /projects/activity-history
       - title: External Tools
         path: /projects/external-tools
+      - title: Place Files
+        path: /projects/place-files
   - title: Assets
     path: /projects/assets/
     section:
