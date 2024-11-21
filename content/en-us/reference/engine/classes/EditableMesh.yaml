@@ -9,66 +9,70 @@ description: |
   `Class.MeshPart`, allowing for querying and modification of the mesh both in
   Studio and in experience.
 
-  An `Class.EditableMesh` can be created from an existing `Datatype.Content` of a
-  `Class.MeshPart` or a mesh ID using
-  `Class.AssetService:CreateEditableMeshAsync()`, or a blank `Class.EditableMesh` can
-  be created with `Class.AssetService:CreateEditableMesh()`. It can then be
-  displayed, modified, and its collision model updated. Not all of the steps are
-  necessary; for example, you might want to create an `Class.EditableMesh` just to
-  raycast without ever displaying it.
+  An `Class.EditableMesh` can be created from an existing `Datatype.Content` of
+  a `Class.MeshPart` or a mesh ID using
+  `Class.AssetService:CreateEditableMeshAsync()`, or a blank
+  `Class.EditableMesh` can be created with
+  `Class.AssetService:CreateEditableMesh()`. It can then be displayed, modified,
+  and its collision model updated. Not all of the steps are necessary; for
+  example, you might want to create an `Class.EditableMesh` just to raycast
+  without ever displaying it.
 
-  An `Class.EditableMesh` is displayed when it's linked to a new `Class.MeshPart`,
-  through `Class.AssetService:CreateMeshPartAsync()`. You can create more
-  `Class.MeshPart` instances that reference the same `Class.EditableMesh` content, or
-  link to an existing `Class.MeshPart` through `Class.MeshPart:ApplyMesh()`.
+  An `Class.EditableMesh` is displayed when it's linked to a new
+  `Class.MeshPart`, through `Class.AssetService:CreateMeshPartAsync()`. You can
+  create more `Class.MeshPart` instances that reference the same
+  `Class.EditableMesh` content, or link to an existing `Class.MeshPart` through
+  `Class.MeshPart:ApplyMesh()`.
 
   To recalculate collision and fluid geometry after editing, you can again call
-  `Class.AssetService:CreateMeshPartAsync()` and `Class.MeshPart:ApplyMesh()`
-  to update an existing `Class.MeshPart`. It's generally recommended to do this
-  at the end of a conceptual edit, not after individual calls to methods that
+  `Class.AssetService:CreateMeshPartAsync()` and `Class.MeshPart:ApplyMesh()` to
+  update an existing `Class.MeshPart`. It's generally recommended to do this at
+  the end of a conceptual edit, not after individual calls to methods that
   manipulate geometry. Visual changes to the mesh will always be immediately
   reflected by the engine, without the need to call
   `Class.AssetService:CreateMeshPartAsync()`.
 
   ##### Enabling EditableMesh for Published Experiences
-  
-  For security purposes, using `Class.EditableMesh` fails by default for published
-  experiences. To enable usage, `Class.EditableMesh`, you must be 13+ age verified
-  and ID verified. After you are verified, open Studio's
+
+  For security purposes, using `Class.EditableMesh` fails by default for
+  published experiences. To enable usage, `Class.EditableMesh`, you must be 13+
+  age verified and ID verified. After you are verified, open Studio's
   [Game Settings](../../../studio/game-settings.md), select **Security**, and
   enable the **Allow&nbsp;Mesh&nbsp;&&nbsp;Image&nbsp;APIs** toggle. Remember to
-  review the [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use#creators-restrictions-on-use) before enabling the toggle.
+  review the
+  [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use#creators-restrictions-on-use)
+  before enabling the toggle.
 
   ##### Permissions
-  
+
   To prevent misuse, `Class.AssetService:CreateEditableMeshAsync()` will only
   allow you to load and edit mesh assets:
 
   - That are owned by the creator of the experience (if the experience is owned
-  by an individual).
+    by an individual).
   - That are owned by a group (if the experience is owned by the group).
   - That are owned by the logged in Studio user (if the place file has not yet
-  been saved or published to Roblox).
+    been saved or published to Roblox).
 
-  The APIs throw an error if they are used to load an asset that does
-  not meet the criteria above.
-  
+  The APIs throw an error if they are used to load an asset that does not meet
+  the criteria above.
+
   ##### Fixed-Size Meshes
 
-  When creating an `Class.EditableMesh` from an existing mesh asset (via 
+  When creating an `Class.EditableMesh` from an existing mesh asset (via
   `Class.AssetService:CreateEditableMeshAsync()`), the resulting editable mesh
-  is fixed-size by default. Fixed-size meshes are more efficient in terms of memory
-  but you cannot change the number of vertices, faces, or attributes. Only the values
-  of vertex attributes and positions can be edited.
+  is fixed-size by default. Fixed-size meshes are more efficient in terms of
+  memory but you cannot change the number of vertices, faces, or attributes.
+  Only the values of vertex attributes and positions can be edited.
 
   ##### Stable Vertex/Face IDs
 
-  Many `Class.EditableMesh` methods take **vertex**, **normal**, **UV**, **color** and
-  **face** IDs. These are represented as integers in Luau but they require some
-  special handling. The main difference is that IDs are stable and they remain
-  the same even if other parts of the mesh change. For example, if an
-  `Class.EditableMesh` has five vertices `{1, 2, 3, 4, 5}` and you remove vertex `4`,
-  the new vertices will be `{1, 2, 3, 5}`.
+  Many `Class.EditableMesh` methods take **vertex**, **normal**, **UV**,
+  **color** and **face** IDs. These are represented as integers in Luau but they
+  require some special handling. The main difference is that IDs are stable and
+  they remain the same even if other parts of the mesh change. For example, if
+  an `Class.EditableMesh` has five vertices `{1, 2, 3, 4, 5}` and you remove
+  vertex `4`, the new vertices will be `{1, 2, 3, 5}`.
 
   Note that the IDs are not guaranteed to be in order and there may be holes in
   the numbering, so when iterating through vertices or faces, you should iterate
@@ -146,8 +150,9 @@ description: |
 
   ##### Limitations
 
-  `Class.EditableMesh` currently has a limit of 60,000 vertices and 20,000 triangles.
-  Attempting to add too many vertices or triangles will cause an error.
+  `Class.EditableMesh` currently has a limit of 60,000 vertices and 20,000
+  triangles. Attempting to add too many vertices or triangles will cause an
+  error.
 code_samples: []
 inherits:
   - Object

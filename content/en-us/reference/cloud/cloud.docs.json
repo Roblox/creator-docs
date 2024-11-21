@@ -504,6 +504,71 @@
         }
       }
     },
+    "/cloud/v2/groups/{group}/memberships/{membership}": {
+      "patch": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Updates the group membership for a particular group member. This action\n requires the requester to be able to manage lower ranked members. Guest or\n Owner ranks cannot be assigned, and a requester cannot change their own\n rank.",
+        "operationId": "Cloud_UpdateGroupMembership",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "membership",
+            "in": "path",
+            "description": "The membership ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GroupMembership"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GroupMembership"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Users and Groups",
+          "methodProperties": {
+            "scopes": [
+              "group:write"
+            ],
+            "title": "Update Group Membership"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupMembership",
+            "name": "GroupMembership"
+          }
+        }
+      }
+    },
     "/cloud/v2/groups/{group}/roles": {
       "get": {
         "tags": [
@@ -569,6 +634,59 @@
           "methodProperties": {
             "scopes": [],
             "title": "List Group Roles"
+          },
+          "resource": {
+            "$ref": "#/components/schemas/GroupRole",
+            "name": "GroupRole"
+          }
+        }
+      }
+    },
+    "/cloud/v2/groups/{group}/roles/{role}": {
+      "get": {
+        "tags": [
+          "Cloud"
+        ],
+        "description": "Gets the group role.",
+        "operationId": "Cloud_GetGroupRole",
+        "parameters": [
+          {
+            "name": "group",
+            "in": "path",
+            "description": "The group ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "role",
+            "in": "path",
+            "description": "The role ID.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GroupRole"
+                }
+              }
+            }
+          }
+        },
+        "x-visibility": "BETA",
+        "x-roblox-docs": {
+          "category": "Users and Groups",
+          "methodProperties": {
+            "scopes": [],
+            "title": "Get Group Role"
           },
           "resource": {
             "$ref": "#/components/schemas/GroupRole",

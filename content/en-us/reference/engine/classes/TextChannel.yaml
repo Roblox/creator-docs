@@ -25,8 +25,13 @@ tags: []
 deprecation_message: ''
 properties:
   - name: TextChannel.DirectChatRequester
-    summary: ''
-    description: ''
+    summary: |
+      The `TextChannel` will only deliver messages to users that can send direct
+      messages to the `DirectChatRequester`.
+    description: |
+      The `TextChannel` will only deliver messages to users that can send direct
+      messages to the `DirectChatRequester`. This property can only be set using
+      `Class.TextChannel.SetDirectChatRequester()|SetDirectChatRequester()`.
     code_samples: []
     type: Player
     tags:
@@ -79,8 +84,35 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: TextChannel:SetDirectChatRequester
-    summary: ''
-    description: ''
+    summary: |
+      Sets the `Class.TextChannel.DirectChatRequester|DirectChatRequester` for
+      the `TextChannel`. The `TextChannel` will only deliver messages to users
+      that can send direct messages to the `DirectChatRequester`.
+    description: |
+      Sets the `Class.TextChannel.DirectChatRequester|DirectChatRequester` for
+      the `TextChannel`. This method is only available for use in server
+      scripts.
+
+      Use this API if you are working with `Class.TextChatService` and have a
+      custom implementation of direct chat outside of the default text channels.
+
+      When called on a `TextChannel` that is parented to `TextChatService` and
+      has no existing `TextSources`, `SetDirectChatRequester` adds the requested
+      users as a `TextSource` and set the `DirectChatRequester` property for the
+      channel.
+
+      When `DirectChatRequester` is set, only messages between users that can
+      direct chat with the `DirectChatRequester` are delivered.
+
+      ```lua
+      local function createWhisperChannel(fromPlayer, toPlayer)
+        local whisperChannel = Instance.new("TextChannel")
+        whisperChannel:SetDirectChatRequester(fromPlayer)
+        whisperChannel:AddUserAsync(toPlayer.UserId)
+        -- The TextChannel instance now has two TextSource instances.
+        return whisperChannel
+      end
+      ```
     code_samples: []
     parameters:
       - name: requester

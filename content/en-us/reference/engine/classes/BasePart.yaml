@@ -253,6 +253,23 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: BasePart.AudioCanCollide
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Collision
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BasePart.BackParamA
     summary: |
       Determines the first parameter for the SurfaceType on the Back face of a

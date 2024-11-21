@@ -29,26 +29,27 @@ description: |
   property is set to a new asset ID.
 
   #### Enabling EditableImage for Published Experiences
+
   For security purposes, using `Class.EditableImage` fails by default for
-  published experiences. To enable the use of `Class.EditableImage`, you
-  must be 13+ age verified and ID verified. After you are
-  verified, open **Studio. Select **File > Game Settings > Security** and enable the
-  **Allow Mesh & Image APIs** toggle. Remember to review the Terms of Use before
-  enabling the toggle.
+  published experiences. To enable the use of `Class.EditableImage`, you must be
+  13+ age verified and ID verified. After you are verified, open **Studio**.
+  Select **File > Game Settings > Security** and enable the **Allow Mesh & Image
+  APIs** toggle. Remember to review the Terms of Use before enabling the
+  toggle.
 
   #### Permissions
-  To prevent misuse, `Class.AssetService:CreateEditableImageAsync()` only
-  allows you to load and edit image assets:
+
+  To prevent misuse, `Class.AssetService:CreateEditableImageAsync()` only allows
+  you to load and edit image assets:
 
   - That are owned by the creator of the experience (if the experience is owned
-  by an individual).
+    by an individual).
   - That are owned by a group (if the experience is owned by the group).
   - That are owned by the logged in Studio user (if the place file has not yet
-  been saved or published to Roblox).
+    been saved or published to Roblox).
 
-  The APIs throw an error if they are used to load an asset that does
-  not meet the criteria above.
-
+  The APIs throw an error if they are used to load an asset that does not meet
+  the criteria above.
 code_samples: []
 inherits:
   - Object
@@ -61,10 +62,12 @@ properties:
       Size of the `Class.EditableImage` in pixels.
     description: |
       Size of the `Class.EditableImage` in pixels. The maximum size is
-      1024&times;1024. An `Class.EditableImage` cannot be resized; this property is read-only.
-      In order to resize or crop an image, create a new `Class.EditableImage` and
-      use `Class.EditableImage:DrawImageTransformed()|DrawImageTransformed()` to transfer
-      the contents; then call `Class.EditableImage:Destroy()|Destroy()`.
+      1024&times;1024. An `Class.EditableImage` cannot be resized; this property
+      is read-only. In order to resize or crop an image, create a new
+      `Class.EditableImage` and use
+      `Class.EditableImage:DrawImageTransformed()|DrawImageTransformed()` to
+      transfer the contents; then call
+      `Class.EditableImage:Destroy()|Destroy()`.
     code_samples: []
     type: Vector2
     tags:

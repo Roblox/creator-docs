@@ -1184,6 +1184,20 @@ methods:
             <td>A plain or JSON encoded string that contains launch data specified in a <a href="../../../production/promotion/deeplinking.md">deep link</a> URL or
             <code>Class.ExperienceInviteOptions.LaunchData</code>.</td>
           </tr>
+          <tr>
+            <th> GameJoinContext </th>
+            <td> dictionary </td>
+            <td>
+              A dictionary that includes relevant information based on the context of the game join. It contains the following keys:
+              <ul>
+                <li><code>JoinSource</code>: <code>Enum.JoinSource</code></li>
+                <li><code>ItemType</code>: optional <code>Enum.AvatarItemType</code></li>
+                <li><code>AssetId</code>: optional <code>string</code></li>
+                <li><code>OutfitId</code>: optional <code>string</code></li>
+                <li><code>AssetType</code>: optional <code>Enum.AssetType</code></li>
+              </ul>
+            </td>
+          </tr>
         </tbody>
       </table>
 

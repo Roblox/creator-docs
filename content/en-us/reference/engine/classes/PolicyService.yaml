@@ -20,6 +20,29 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: PolicyService:CanViewBrandProjectAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: brandProjectId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PolicyService:GetPolicyInfoForPlayerAsync
     summary: |
       Returns policy information about a player which is based on geolocation,
