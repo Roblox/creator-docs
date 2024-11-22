@@ -31,8 +31,8 @@ The most direct way to add frame-by-frame game tasks is through the following me
 
 The task scheduler categorizes and completes tasks in the following order. Some tasks may not perform work in a frame, while others may run multiple times.
 
-<img src="../../assets/optimization/task-scheduler/task-scheduler.png"
-   width="100%" />
+<img src="../../assets/optimization/task-scheduler/scheduler-priority.png"
+   width="80%" />
 
 ## Best Practices
 

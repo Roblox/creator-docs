@@ -6,8 +6,8 @@ summary: |
   Defines a point and orientation relative to a parent `Class.BasePart`,
   `Class.Bone`, or another `Class.Attachment`.
 description: |
-  An `Class.Attachment` defines a point and orientation relative to a parent
-  `Class.BasePart`, `Class.Bone`, or another `Class.Attachment`. The offset is
+  An `Attachment` defines a point and orientation relative to a parent
+  `Class.BasePart`, `Class.Bone`, or another `Attachment`. The offset is
   stored in the `Class.Attachment.CFrame|CFrame` property. The offset can also
   be set through other properties, such as
   `Class.Attachment.WorldCFrame|WorldCFrame`.
@@ -58,9 +58,9 @@ properties:
       `Datatype.CFrame` offset of the attachment.
     description: |
       The `Datatype.CFrame` offset of the attachment. Changes to this property
-      will reflect onto the `Class.Attachment.Position` and
-      `Class.Attachment.Rotation` properties of this object. Similarly, a change
-      to either of those properties will reflect onto this property.
+      will reflect onto the `Class.Attachment.Position|Position` and
+      `Class.Attachment.Rotation|Rotation` properties of this object. Similarly,
+      a change to either of those properties will reflect onto this property.
     code_samples:
     type: CFrame
     tags: []
@@ -137,7 +137,7 @@ properties:
       - Deprecated
     deprecation_message: |
       This property is deprecated and should not be used in new work. See
-      `Class.Attachment.Orientation` instead.
+      `Class.Attachment.Orientation|Orientation` instead.
     security:
       read: None
       write: None
@@ -302,7 +302,8 @@ properties:
       - NotReplicated
       - Deprecated
     deprecation_message: |
-      This item has been superseded by `Class.Attachment.WorldOrientation` which
+      This item has been superseded by
+      `Class.Attachment.WorldOrientation|WorldOrientation` which
       should be used in new work.
     security:
       read: None
@@ -352,7 +353,7 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      This function is deprecated and should not be used in new work.
+      This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -390,7 +391,7 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      This function is deprecated and should not be used in new work.
+      This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -412,7 +413,7 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      This function is deprecated and should not be used in new work.
+      This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -436,7 +437,7 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      This function is deprecated and should not be used in new work.
+      This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
     capabilities: []

@@ -88,10 +88,67 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AssetService:CreateAssetAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: object
+        type: Object
+        default:
+        summary: ''
+      - name: assetType
+        type: AssetType
+        default:
+        summary: ''
+      - name: requestParameters
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AssetService:CreateAssetVersionAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: object
+        type: Object
+        default:
+        summary: ''
+      - name: assetType
+        type: AssetType
+        default:
+        summary: ''
+      - name: assetId
+        type: int64
+        default:
+        summary: ''
+      - name: requestParameters
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:CreateEditableImageAsync
     summary: |
-      Creates a new `Class.EditableImage` object populated with the given
-      image.
+      Creates a new `Class.EditableImage` object populated with the given image.
     description: |
       Creates a new `Class.EditableImage` object populated with the given
       texture. Non-asset texture IDs such as `rbxthumb://` are supported. If

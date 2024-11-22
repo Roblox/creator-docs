@@ -553,7 +553,6 @@ properties:
     type: PathfindingUseImprovedSearch
     tags:
       - NotScriptable
-      - NotBrowsable
     deprecation_message: ''
     security:
       read: None

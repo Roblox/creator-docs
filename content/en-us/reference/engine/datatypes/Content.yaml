@@ -9,18 +9,19 @@ description: |
   the supported `Enum.ContentSourceType` values.
 
   ##### Warning
-  
-  Replication is not yet supported for
-  `Datatype.Content.Object|Object` values. When an `Class.Instance` with a
-  `Datatype.Content` property containing a `Datatype.Content.Object|Object`
-  value is replicated, an unusable placeholder `Class.Object` of the same type
-  will be used instead of the `Class.Object` itself, and any attempt to read or
-  write the contents of that placeholder object will throw. These placeholder
-  objects will render as a cyan and magenta checkerboard pattern.
-  
-  This will be replaced with standard replication behavior in the future. For now,
-  do not use `Class.EditableImage` or `Class.EditableMesh` as `Datatype.Content`
-  on the server on an `Class.Instance` that can replicate to clients.
+
+  Replication is not yet supported for `Datatype.Content.Object|Object` values.
+  When an `Class.Instance` with a `Datatype.Content` property containing a
+  `Datatype.Content.Object|Object` value is replicated, an unusable placeholder
+  `Class.Object` of the same type will be used instead of the `Class.Object`
+  itself, and any attempt to read or write the contents of that placeholder
+  object will throw. These placeholder objects will render as a cyan and magenta
+  checkerboard pattern.
+
+  This will be replaced with standard replication behavior in the future. For
+  now, do not use `Class.EditableImage` or `Class.EditableMesh` as
+  `Datatype.Content` on the server on an `Class.Instance` that can replicate to
+  clients.
 code_samples:
 tags: []
 deprecation_message: ''

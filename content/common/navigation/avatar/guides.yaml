@@ -71,6 +71,8 @@ navigation:
     path: /marketplace/publishing-to-marketplace
   - title: Marketplace Fees and Commissions
     path: /marketplace/marketplace-fees-and-commissions
+  - title: UGC Homestore
+    path: /marketplace/homestore
   - title: Frequently Asked Questions
     path: /marketplace/frequently-asked-questions
 

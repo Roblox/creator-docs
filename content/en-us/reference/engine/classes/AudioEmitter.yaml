@@ -104,6 +104,24 @@ properties:
     capabilities:
       - Audio
     writeCapabilities: []
+  - name: AudioEmitter.SimulationFidelity
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AudioSimulationFidelity
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Simulation
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioEmitter:GetAngleAttenuation
     summary: |
@@ -277,5 +295,32 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-events: []
+events:
+  - name: AudioEmitter.WiringChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: connected
+        type: bool
+        default:
+        summary: ''
+      - name: pin
+        type: string
+        default:
+        summary: ''
+      - name: wire
+        type: Wire
+        default:
+        summary: ''
+      - name: instance
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []
