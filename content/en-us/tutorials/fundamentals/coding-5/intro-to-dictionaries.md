@@ -87,6 +87,7 @@ One everyday use of dictionaries is organizing player or character information. 
 ### Using Dictionary Values
 
 There are two ways to access dictionary values:
+
 - `tableName["keyName"]` (importantly, note the quotations)
 - `tableName.keyName`
 
