@@ -74,7 +74,7 @@ But just because the original creator can request the removal of those three Tro
 </Grid>
 </figure>
 
-Another way to strengthen your IP protection is incorporating your own unique trademark into your items. This can be a helpful way to build your own brand natively on Roblox and visually differentiate your creations from others.
+Another way to strengthen your IP protection is incorporating your own unique trademark into your items. This can begj a helpful way to build your own brand natively on Roblox and visually differentiate your creations from others.
 
 To protect the creativity of others, the Roblox [Terms of Use](https://www.roblox.com/catalog/10546552/Trojan-Infantry-Helmet) states that **any content you create must respect the intellectual property rights of others – both on and off our platform**.
 
