@@ -475,7 +475,7 @@ methods:
         type: CFrame
         default:
         summary: |
-          The cframe (position and orientation) of the terrain block.
+          The position and orientation of the terrain block.
       - name: size
         type: Vector3
         default:
@@ -513,7 +513,7 @@ methods:
         type: CFrame
         default:
         summary: |
-          The CFrame (position and orientation) of the terrain cylinder.
+          The position and orientation of the terrain cylinder.
       - name: height
         type: float
         default:
