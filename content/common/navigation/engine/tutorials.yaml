@@ -32,12 +32,10 @@ navigation:
     section:
       - title: Creating HUD Meters
         path: /tutorials/use-case-tutorials/ui/creating-hud-meters
-      - title: Creating Interactive Buttons
-        path: /tutorials/use-case-tutorials/ui/interactive-buttons
+      - title: Making UI Interactive
+        path: /tutorials/use-case-tutorials/ui/interactive-ui
       - title: Creating Proximity Prompts
         path: /tutorials/use-case-tutorials/ui/proximity-prompts
-      - title: Creating Part Interfaces
-        path: /tutorials/use-case-tutorials/ui/interfaces-on-parts
       - title: Creating Score Bars
         path: /tutorials/use-case-tutorials/ui/creating-a-score-bar
   - title: Audio
