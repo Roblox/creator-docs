@@ -87,7 +87,8 @@ One everyday use of dictionaries is organizing player or character information. 
 ### Using Dictionary Values
 
 There are two ways to access dictionary values:
-`tableName["keyName"]` — note the quotations — and `tableName.keyName`.
+- `tableName["keyName"]` (importantly, note the quotations)
+- `tableName.keyName`
 
 ```lua
 local enemy = {
