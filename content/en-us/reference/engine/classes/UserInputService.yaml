@@ -2643,6 +2643,74 @@ events:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: UserInputService.TouchDrag
+    summary: |
+      Fires when a user drags at least one finger on a 
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device at a speed 
+      above a certain threshold.
+    description: |
+      The `TouchDrag` event fires when a user drags at least one finger on a 
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device at a speed 
+      above a certain threshold.
+      
+      This event triggers the first time this speed is exceeded, even if 
+      the user has not lifted their finger from the device. 
+      Use it to detect the start of a directional drag gesture and to track 
+      the movement of the user's finger along a specified axis.
+
+      You can use `TouchDrag` with `Class.UserInputService.TouchSwipe|TouchSwipe`. 
+      For example, you can use `TouchDrag` in a scrolling list of clothing accessory
+      items to detect when a user horizontally drags on an item to reveal context actions,
+      and then use `Class.UserInputService.TouchSwipe|TouchSwipe` to detect the
+      user's finger swipe when they add the item to their outfit.
+      
+      The `TouchDrag` event only fires when the Roblox client window is in focus, and
+      it can only be used in a `Class.LocalScript`. Inputs are not captured when the
+      window is minimized.
+
+      For more precise tracking of touch input movement, 
+      use `Class.UserInputService.TouchMoved`.
+
+      ##### See Also
+
+      - `Class.UserInputService.TouchTap`
+      - `Class.UserInputService.TouchTapInWorld`
+      - `Class.UserInputService.TouchLongPress`
+      - `Class.UserInputService.TouchMoved`
+      - `Class.UserInputService.TouchPan`
+      - `Class.UserInputService.TouchPinch`
+      - `Class.UserInputService.TouchRotate`
+      - `Class.UserInputService.TouchStarted`
+      - `Class.UserInputService.TouchSwipe`
+      - `Class.UserInputService.TouchEnded`
+    code_samples:
+      - UserInputService-TouchDrag
+    parameters:
+      - name: swipeDirection
+        type: SwipeDirection
+        default:
+        summary: |
+          Indicates the direction the user swiped.
+      - name: numberOfTouches
+        type: int
+        default:
+        summary: |
+          The number of touches (for example, fingers) involved in the gesture.
+      - name: gameProcessedEvent
+        type: bool
+        default:
+        summary: |
+          Indicates whether the Roblox engine internally observed this input and
+          acted on it. Generally, this refers to UI processing; if a button
+          is touched or clicked from this input, `gameProcessedEvent` returns
+          `true`. This also applies to input events connected through
+          `Class.ContextActionService`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UserInputService.TouchEnded
     summary: |
       Fired when a user releases their finger from the screen on a TouchEnabled
@@ -2692,6 +2760,7 @@ events:
       - `Class.UserInputService.TouchPinch`
       - `Class.UserInputService.TouchRotate`
       - `Class.UserInputService.TouchSwipe`
+      - `Class.UserInputService.TouchDrag`
       - `Class.UserInputService.TouchStarted`
     code_samples:
       - UserInputService-TouchTap
@@ -2766,6 +2835,7 @@ events:
       - `Class.UserInputService.TouchPinch`
       - `Class.UserInputService.TouchRotate`
       - `Class.UserInputService.TouchSwipe`
+      - `Class.UserInputService.TouchDrag`
       - `Class.UserInputService.TouchStarted`
       - `Class.UserInputService.TouchEnded`
     code_samples:
@@ -2847,6 +2917,7 @@ events:
       - `Class.UserInputService.TouchPinch`
       - `Class.UserInputService.TouchRotate`
       - `Class.UserInputService.TouchSwipe`
+      - `Class.UserInputService.TouchDrag`
       - `Class.UserInputService.TouchStarted`
       - `Class.UserInputService.TouchEnded`
     code_samples:
@@ -2915,6 +2986,7 @@ events:
       - `Class.UserInputService.TouchPinch`
       - `Class.UserInputService.TouchRotate`
       - `Class.UserInputService.TouchSwipe`
+      - `Class.UserInputService.TouchDrag`
       - `Class.UserInputService.TouchStarted`
       - `Class.UserInputService.TouchEnded`
     code_samples:
@@ -2992,6 +3064,7 @@ events:
       - `Class.UserInputService.TouchPan`
       - `Class.UserInputService.TouchRotate`
       - `Class.UserInputService.TouchSwipe`
+      - `Class.UserInputService.TouchDrag`
       - `Class.UserInputService.TouchStarted`
       - `Class.UserInputService.TouchEnded`
     code_samples:
@@ -3077,6 +3150,7 @@ events:
       - `Class.UserInputService.TouchPan`
       - `Class.UserInputService.TouchPinch`
       - `Class.UserInputService.TouchSwipe`
+      - `Class.UserInputService.TouchDrag`
       - `Class.UserInputService.TouchStarted`
       - `Class.UserInputService.TouchEnded`
     code_samples:
@@ -3156,6 +3230,7 @@ events:
       - `Class.UserInputService.TouchPinch`
       - `Class.UserInputService.TouchRotate`
       - `Class.UserInputService.TouchSwipe`
+      - `Class.UserInputService.TouchDrag`
       - `Class.UserInputService.TouchEnded`
     code_samples:
       - UserInputService-TouchStarted
@@ -3183,11 +3258,12 @@ events:
     writeCapabilities: []
   - name: UserInputService.TouchSwipe
     summary: |
-      Fired when a user swipes their fingers on a
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device - such as the
-      screen of a mobile device.
+      Fires on a
+      `Class.UserInputService.TouchEnabled|TouchEnabled` device when a user
+      places their finger(s) down on the screen, pans across the screen, and
+      lifts their finger off with a certain speed of movement.
     description: |
-      The TouchSwipe event fires when a user swipes their fingers on a
+      The `TouchSwipe` event fires when a user swipes their fingers on a
       `Class.UserInputService.TouchEnabled|TouchEnabled` device.
 
       This event can be used to determine when a user swipes their fingers on
@@ -3214,6 +3290,7 @@ events:
       - `Class.UserInputService.TouchPan`
       - `Class.UserInputService.TouchPinch`
       - `Class.UserInputService.TouchRotate`
+      - `Class.UserInputService.TouchDrag`
       - `Class.UserInputService.TouchStarted`
       - `Class.UserInputService.TouchEnded`
     code_samples:
@@ -3321,6 +3398,7 @@ events:
       - `Class.UserInputService.TouchPinch`
       - `Class.UserInputService.TouchRotate`
       - `Class.UserInputService.TouchSwipe`
+      - `Class.UserInputService.TouchDrag`
       - `Class.UserInputService.TouchStarted`
       - `Class.UserInputService.TouchEnded`
     code_samples:
