@@ -41,8 +41,8 @@ methods:
       **minValue**/**maxValue** are optional parameters which filter the
       results.
 
-      See [Data Stores](../../../cloud-services/data-stores) for request limits
-      and descriptions of the error codes.
+      See [Data Stores](../../../cloud-services/data-stores/index.md) for
+      request limits and descriptions of the error codes.
     code_samples:
     parameters:
       - name: ascending
