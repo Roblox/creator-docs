@@ -33,7 +33,7 @@ The best way to test UI designs across platforms is Studio's [Device Emulator](.
 
 3. From the bar directly above the main viewport, select a phone emulation such as **iPhone&nbsp;X** or **Samsung&nbsp;Galaxy&nbsp;A51**. Then, set the view size to **Fit&nbsp;to&nbsp;Window** to utilize the maximum space in Studio.
 
-   <img src="../../../assets/tutorials/creating-hud-meters/Device-Emulator-Phone.png" width="800" alt="Device Emulator settings options indicated at top of viewport window." />
+   <img src="../../../assets/studio/general/Device-Emulator-Phone.png" width="800" alt="Device Emulator settings options indicated at top of viewport window." />
 
 ## Create a Screen Container
 
@@ -110,7 +110,7 @@ One way to apply padding to a UI container is through the insertion of a `Class.
 
 With the [screen container configured](#create-a-screen-container), you can begin constructing the health meter using Roblox UI objects such as [frames](../../../ui/frames.md) and an [image label](../../../ui/labels.md).
 
-<img src="../../../assets/tutorials/creating-hud-meters/Meter-Design-Components.png" width="840" alt="Basic Roblox components used for the health meter." />
+<img src="../../../assets/tutorials/creating-hud-meters/Meter-Design-Components.png" width="840" alt="Basic components used for the health meter." />
 
 ### Create the Parent Frame
 
@@ -234,7 +234,7 @@ Now that the health meter's containing frame is complete, you can add an **inner
 
    <img src="../../../assets/tutorials/creating-hud-meters/Meter-Design-Inner-Fill-Rounded.png" width="840" alt="Inner fill frame corners rounded with a UICorner modifier." />
 
-6. To better represent that a full meter indicates good health, select **InnerFill** and set its `Class.Frame.BackgroundColor3|BackgroundColor3` property to <Typography noWrap>`0, 225, 50`</Typography> (in a later task, you'll [script](#listen-for-health-changes) this color to change based on actual health).
+6. To better represent that a full meter indicates good health, select **InnerFill** and set its `Class.Frame.BackgroundColor3|BackgroundColor3` property to <Typography noWrap>`[0, 225, 50]`</Typography> (in a later task, you'll [script](#listen-for-health-changes) this color to change based on actual health).
 
    <img src="../../../assets/tutorials/creating-hud-meters/Meter-Design-Inner-Fill-Colored.png" width="840" alt="Inner fill frame recolored green to represent good health." />
 
@@ -275,7 +275,7 @@ To more clearly indicate the purpose of the meter, you can add an [image label](
 
 While a [scale height](#resize-the-frame) of `0.05` (5%) looks good on modern phone screens and gaming monitors which are 16:9 aspect ratio or wider, the meter may look slightly too tall on tablet screens and older phones. You can check this by emulating a tablet like **iPad&nbsp;7th&nbsp;Generation** from the **Device Emulator**.
 
-<img src="../../../assets/tutorials/creating-hud-meters/Device-Emulator-Tablet.png" width="800" alt="Device Emulator set to emulate a tablet device." />
+<img src="../../../assets/studio/general/Device-Emulator-Tablet.png" width="800" alt="Device Emulator set to emulate a tablet device." />
 
 <img src="../../../assets/tutorials/creating-hud-meters/Emulation-Tablet-Unconstrained.png" width="840" alt="Emulation on tablet device with meter bar taller than desired." />
 
