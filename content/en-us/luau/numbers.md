@@ -1,14 +1,29 @@
----
+content/en-us/luau/numbers.md---
 title: Numbers
 description: A double-precision floating-point number.
----
+print(math.floor(3.3))  --> 3
+print(math.floor(-3.3))  --> -4
+print(math.ceil(3.3))  --> 4
+print(math.ceil(-3.3))  --> -3
+print(math.modf(3.3))  --> 3 0.2999999999999998
+print(math.modf(-3.3))  --> -3 -0.2999999999999998---
 
 The **number** data type, or `double`, represents a [double-precision (64-bit) floating-point](https://wikipedia.org/wiki/Double-precision_floating-point_format) number. Numbers can range from -1.7 \* 10<sup>308</sup> to 1.7 \* 10<sup>308</sup> (around 15 digits of precision, positive or negative).
 
 ## Signed and Unsigned
 
 The sign of the number indicates whether it's positive or negative. For example, `1` is positive and `-1` is negative. In Luau, the number `-0` is equivalent to `0`.
+local testInt = 5
+local testDecimal = 9.12761656
+local testString = "Hello"
 
+print(type(testInt))  --> number
+print(type(testDecimal))  --> number
+print(type(testString))  --> string
+
+print(typeof(testInt))  --> number
+print(typeof(testDecimal))  --> number
+print(typeof(testString))  --> string
 ```lua
 print(0 == -0)  --> true
 print(-0 > 1)  --> false
