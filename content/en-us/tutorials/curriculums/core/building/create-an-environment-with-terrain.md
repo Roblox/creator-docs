@@ -161,7 +161,7 @@ To apply materials to the island:
    </video>
 
 1. Navigate back to the **Terrain Editor** window, then in the **Brush Settings** and **Material Settings** sections,
-   1. Set **Base Size** to **3**.
+   1. Set **Brush Size** to **3**.
    1. Set **Material** to **Grass**.
 1. In the viewport, drag along the edges of the island to apply blades of grass, leaving space in the middle of the island for
    the spawn location and the initial platforms.
