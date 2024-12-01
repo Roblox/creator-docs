@@ -66,7 +66,7 @@ To shape the island:
        <img src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Flatten-Settings.png" alt="Studio's Flatten tool settings for this step in the task."  width="360" />
      </figure>
      <Grid item>
-       - Set **Base Size** to **18**.
+       - Set **Brush Size** to **18**.
        - Set **Flatten Plane** to **Fixed**. New settings display.
        - Set **Fixed Y Plane** to **0**.
      </Grid>
