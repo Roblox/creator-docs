@@ -73,7 +73,7 @@ methods:
         default:
         summary: |
           Unix timestamp in milliseconds for which the requested version was 
-          current. Must be greater than zero. Must not be more then ten minutes 
+          current. Must be greater than zero. Must not be more than ten minutes 
           in the future.
     returns:
       - type: Tuple
