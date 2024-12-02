@@ -152,11 +152,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <img src="../../assets/tutorials/UCT-Overview/Interactive-Buttons.png" />
+ <img src="../../assets/tutorials/UCT-Overview/Interactive-UI.png" />
  </div>
-   <Typography variant='body1' >Creating Interactive Buttons</Typography>
+   <Typography variant='body1' >Making UI Interactive</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./ui/interactive-buttons.md">
+       <a underline="none" href="./ui/interactive-ui.md">
        <Button variant="contained" color="secondary" size='large'
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
        </a>
@@ -173,22 +173,6 @@ Use third-party modeling tools like Blender to create meshes, then import them i
    <Typography variant='body1' >Creating Proximity Prompts</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="./ui/proximity-prompts.md">
-       <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
-       </a>
-     </div>
- </Grid>
- </Grid>
-
- <Grid item container Medium={12} Large={6} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
- <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
- <div class="container"
- style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <img src="../../assets/tutorials/UCT-Overview/Part-Interfaces.png" />
- </div>
-   <Typography variant='body1' >Creating Interfaces on Parts</Typography>
-     <div style={{marginTop:16}}>
-       <a underline="none" href="./ui/interfaces-on-parts.md">
        <Button variant="contained" color="secondary" size='large'
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
        </a>

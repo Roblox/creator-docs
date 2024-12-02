@@ -7,10 +7,6 @@ Automatic **engagement-based payouts** let you earn Robux based on the share of 
 
 To encourage Premium subscriber growth and increase your potential to earn engagement-based payouts, you can add the [Premium Purchase Modal](#premium-purchase-modal) directly into an experience. Keep in mind, users from some countries may not have access to Premium subscriptions.
 
-<Alert severity="warning">
-[Paid Access](../../production/monetization/paid-access.md) experiences are not eligible for engagement-based payouts.
-</Alert>
-
 ## Accessing Payout Data
 
 Payout data can provide vital feedback to help you understand what factors drive Premium subscribers to your experiences.

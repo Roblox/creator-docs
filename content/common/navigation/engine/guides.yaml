@@ -39,6 +39,11 @@ navigation:
             path: /projects/groups
           - title: Collaboration
             path: /projects/collaboration
+      - title: Experience Ownership Transfer
+        path: /projects/experience-ownership-transfer
+        section:
+          - title: Transferring Roblox Animations
+            path: /projects/transferring-animations
       - title: Activity History
         path: /projects/activity-history
       - title: External Tools
