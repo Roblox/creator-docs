@@ -218,7 +218,8 @@ methods:
     summary: |
       Returns the length of the `Class.Path2D`.
     description: |
-      Returns the length of the `Class.Path2D`. This function can be expensive if called too frequently.
+      Returns the length of the `Class.Path2D`. This function can be expensive
+      if called too frequently.
     code_samples: []
     parameters: []
     returns:

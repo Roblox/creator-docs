@@ -39,10 +39,17 @@ navigation:
             path: /projects/groups
           - title: Collaboration
             path: /projects/collaboration
+      - title: Experience Ownership Transfer
+        path: /projects/experience-ownership-transfer
+        section:
+          - title: Transferring Roblox Animations
+            path: /projects/transferring-animations
       - title: Activity History
         path: /projects/activity-history
       - title: External Tools
         path: /projects/external-tools
+      - title: Place Files
+        path: /projects/place-files
   - title: Assets
     path: /projects/assets/
     section:
@@ -201,6 +208,8 @@ navigation:
         section:
           - title: Overview
             path: /scripting/events/
+          - title: Deferred Events
+            path: /scripting/events/deferred
           - title: Bindable
             path: /scripting/events/bindable
           - title: Remote
@@ -507,6 +516,8 @@ navigation:
         section:
           - title: Overview
             path: /production/publishing/publishing-experiences-and-places
+          - title: Experience Genres
+            path: /production/publishing/experience-genres
           - title: Experience Icons
             path: /production/publishing/experience-icons
           - title: Experience Thumbnails
@@ -527,10 +538,10 @@ navigation:
           - title: Selling on the Creator Store
             path: /production/selling-on-creator-store
       - title: Guidelines
-        path: /production/promotion/experience-guidelines
+        path: /production/promotion/content-maturity
         section:
-          - title: Experience Guidelines
-            path: /production/promotion/experience-guidelines
+          - title: Content Maturity
+            path: /production/promotion/content-maturity
           - title: About GDPR and CCPA
             path: /production/publishing/about-GDPR-and-CCPA
           - title: DMCA Guidelines

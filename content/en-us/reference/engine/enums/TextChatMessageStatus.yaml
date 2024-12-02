@@ -58,3 +58,8 @@ items:
       Message is too long.
     tags: []
     deprecation_message: ''
+  - name: ModerationTimeout
+    summary: ''
+    value: 9
+    tags: []
+    deprecation_message: ''

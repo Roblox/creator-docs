@@ -34,8 +34,8 @@ The **Basic Info** tab contains general settings for an experience, such as its 
     <td>A description of the experience that describes what a potential player should expect.</td>
   </tr>
 	<tr>
-    <td>**Age Recommendation**</td>
-    <td>[Experience Guidelines](../production/promotion/experience-guidelines.md) provide information on the experience's main page about what kind of content the experience contains.</td>
+    <td>**Content Maturity Label**</td>
+    <td>[Content Maturity Labels](../production/promotion/content-maturity.md) provide information on the experience's main page about what kind of content the experience contains.</td>
   </tr>
   <tr>
     <td>**Game Icon**</td>
@@ -43,7 +43,7 @@ The **Basic Info** tab contains general settings for an experience, such as its 
   </tr>
   <tr>
     <td>**Screenshots & Videos**</td>
-    <td>Lets you upload [promotional thumbnails](../production/promotion/thumbnails.md). </td>
+    <td>Lets you upload [promotional thumbnails](../production/publishing/thumbnails.md). </td>
   </tr>
   <tr>
     <td>**Playable Devices**</td>
@@ -145,7 +145,8 @@ You should only enable the following settings if you trust all assets from other
   </tr>
   <tr>
     <td>**Secrets**</td>
-    <td>Allows for the creation and configuration of `Datatype.Secret` for local Studio sessions using `Class.HttpService`. Visible only if HTTP requests are allowed. Secrets defined here are local to the device, and not available in Team Create sessions. Use Creator Hub to define production secrets. </td>
+    <td>Allows for the creation and configuration of `Datatype.Secret` for local Studio sessions using `Class.HttpService`. Must be a valid JSON object, with base64-encoded secret. Example: `{"secretName": ["cGFzc3dvcmQ=", "*.domain.tld"]}`, where `cGFzc3dvcmQ=` is base64-encoded word `password`, and `*.domain.tld` is domain name restriction. <br /><br />
+    Visible only if HTTP requests are allowed. Secrets defined here are local to the device, and not available in Team Create sessions. Use [Creator Hub](https://create.roblox.com/) to define production secrets. </td>
   </tr>
   <tr>
     <td>**Enable&nbsp;Studio&nbsp;Access to API Services**</td>

@@ -88,17 +88,78 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AssetService:CreateAssetAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: object
+        type: Object
+        default:
+        summary: ''
+      - name: assetType
+        type: AssetType
+        default:
+        summary: ''
+      - name: requestParameters
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AssetService:CreateAssetVersionAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: object
+        type: Object
+        default:
+        summary: ''
+      - name: assetType
+        type: AssetType
+        default:
+        summary: ''
+      - name: assetId
+        type: int64
+        default:
+        summary: ''
+      - name: requestParameters
+        type: Dictionary
+        default: nil
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:CreateEditableImageAsync
     summary: |
-      Creates a new `Class.EditableImage` instance populated with the given
-      image.
+      Creates a new `Class.EditableImage` object populated with the given image.
     description: |
-      Creates a new `Class.EditableImage` instance populated with the given
+      Creates a new `Class.EditableImage` object populated with the given
       texture. Non-asset texture IDs such as `rbxthumb://` are supported. If
       using an image asset, it must be associated with and/or owned by a creator
       of the experience, or it must have been created inside the experience. If
       the device-specific editable memory budget is exhausted, creation will
       fail and this method will return `nil`.
+
+      See the **Enabling EditableImage for Published Experiences** and
+      **Permissions** sections of `Class.EditableImage` for special
+      considerations when using this API.
     code_samples: []
     parameters:
       - name: content
@@ -122,10 +183,10 @@ methods:
     writeCapabilities: []
   - name: AssetService:CreateEditableMeshAsync
     summary: |
-      Returns a new `Class.EditableMesh` instance created from an existing mesh
+      Returns a new `Class.EditableMesh` object created from an existing mesh
       content ID.
     description: |
-      Returns a new `Class.EditableMesh` instance created from an existing mesh
+      Returns a new `Class.EditableMesh` object created from an existing mesh
       content ID. By default a `Class.EditableMesh` created from this method
       will be fixed size such that mesh data can only be modified, not added nor
       removed. A fixed size `Class.EditableMesh` consumes less memory and should
@@ -133,6 +194,10 @@ methods:
 
       If the device-specific editable memory budget is exhausted, creation will
       fail and this method will return `nil`.
+
+      See the **Enabling EditableMesh for Published Experiences** and
+      **Permissions** sections of `Class.EditableMesh` for special
+      considerations when using this API.
     code_samples: []
     parameters:
       - name: content

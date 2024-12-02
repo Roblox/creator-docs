@@ -3,6 +3,10 @@ title: Price Optimization
 description: Price optimization finds the best price points for your passes and developer products, helping you earn more money over time.
 ---
 
+<Alert severity="error">
+Price optimization tests will not be available from December 6 2024 to January 6 2025. To make sure your prices are optimized before the holiday season, start a pricing test before December 6.
+</Alert>
+
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/ULr3CZ8egP8" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <br />

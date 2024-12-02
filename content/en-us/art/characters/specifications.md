@@ -85,20 +85,20 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   </tr>
   <tr>
     <td>Torso</td>
-    <td>1</td>
-    <td>2</td>
+    <td>.8</td>
+    <td>1.7</td>
     <td>.7</td>
   </tr>
   <tr>
     <td>Leg</td>
     <td>.25</td>
-    <td>2</td>
+    <td>1.4</td>
     <td>.5</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**1.5**</td>
-    <td>**4.5**</td>
+    <td>**1.35**</td>
+    <td>**3.6**</td>
     <td>**.7**</td>
   </tr>
 </tbody>
@@ -130,20 +130,20 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   </tr>
   <tr>
     <td>Torso</td>
-    <td>4</td>
-    <td>3</td>
+    <td>4.6</td>
+    <td>3.5</td>
     <td>2.25</td>
   </tr>
   <tr>
     <td>Leg</td>
     <td>1.5</td>
-    <td>3</td>
+    <td>4</td>
     <td>2</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**8**</td>
-    <td>**8**</td>
+    <td>**8.6**</td>
+    <td>**9.5**</td>
     <td>**2.25**</td>
   </tr>
 </tbody>
@@ -193,20 +193,20 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   </tr>
   <tr>
     <td>Torso</td>
-    <td>1</td>
-    <td>2</td>
+    <td>.85</td>
+    <td>1.7</td>
     <td>.7</td>
   </tr>
   <tr>
     <td>Leg</td>
     <td>.25</td>
-    <td>2</td>
+    <td>1.4</td>
     <td>.5</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**1.5**</td>
-    <td>**4.5**</td>
+    <td>**1.35**</td>
+    <td>**3.6**</td>
     <td>**.7**</td>
   </tr>
 </tbody>
@@ -238,20 +238,20 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   </tr>
   <tr>
     <td>Torso</td>
-    <td>2.5</td>
     <td>3</td>
+    <td>3.5</td>
     <td>2</td>
   </tr>
   <tr>
     <td>Leg</td>
     <td>1.5</td>
-    <td>3</td>
+    <td>4</td>
     <td>2</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**5.5**</td>
-    <td>**8**</td>
+    <td>**6**</td>
+    <td>**9.5**</td>
     <td>**2**</td>
   </tr>
 </tbody>
@@ -301,20 +301,20 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   </tr>
   <tr>
     <td>Torso</td>
-    <td>1</td>
-    <td>2</td>
+    <td>.85</td>
+    <td>1.7</td>
     <td>.7</td>
   </tr>
   <tr>
     <td>Leg</td>
     <td>.25</td>
-    <td>2</td>
+    <td>1.4</td>
     <td>.5</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**1.5**</td>
-    <td>**4.5**</td>
+    <td>**1.35**</td>
+    <td>**3.6**</td>
     <td>**.7**</td>
   </tr>
 </tbody>
@@ -335,7 +335,7 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   <tr>
     <td>Head</td>
     <td>1.5</td>
-    <td>1.75</td>
+    <td>1.8</td>
     <td>2</td>
   </tr>
   <tr>
@@ -346,20 +346,20 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   </tr>
   <tr>
     <td>Torso</td>
-    <td>3.5</td>
-    <td>3.25</td>
+    <td>4</td>
+    <td>3.8</td>
     <td>2</td>
   </tr>
   <tr>
     <td>Leg</td>
     <td>1.5</td>
-    <td>2.75</td>
+    <td>3.5</td>
     <td>2</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**7.5**</td>
-    <td>**7.75**</td>
+    <td>**8**</td>
+    <td>**9.1**</td>
     <td>**2**</td>
   </tr>
 </tbody>

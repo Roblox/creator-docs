@@ -553,7 +553,6 @@ properties:
     type: PathfindingUseImprovedSearch
     tags:
       - NotScriptable
-      - NotBrowsable
     deprecation_message: ''
     security:
       read: None
@@ -749,12 +748,21 @@ properties:
       immediately when the event fires, or deferred and then resumed at a later
       resumption point. Resumption points currently include:
 
-      - `Class.RunService.RenderStepped`
+      - Input processing (resumes once per input to be processed, see
+        `Class.UserInputService`)
+      - `Class.RunService.PreRender`
+      - Legacy waiting script resumption such as `wait()`, `spawn()`, and
+        `delay()`
+      - `Class.RunService.PreAnimation`
+      - `Class.RunService.PreSimulation`
+      - `Class.RunService.PostSimulation`
       - Waiting script resumption such as `Library.task.wait()`,
         `Library.task.spawn()`, and `Library.task.delay()`
-      - `Class.RunService.Stepped`
       - `Class.RunService.Heartbeat`
       - `Class.DataModel.BindToClose`
+
+      For more information, see
+      [Deferred Events](../../../scripting/events/deferred.md).
     code_samples:
     type: SignalBehavior
     tags:

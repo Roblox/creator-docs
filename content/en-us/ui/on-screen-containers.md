@@ -46,7 +46,7 @@ The following properties let you customize the [screen insets](#screen-insets) a
 
 ### Screen Insets
 
-Modern phones take advantage of the entire screen but typically include notches, cutouts, and other elements that occupy screen space. Every Roblox experience also includes the **top&nbsp;bar** region which contains buttons for quick access to the main menu, [chat](../chat/in-experience-text-chat.md), [leaderboard](../players/leaderboards.md), and more.
+Modern phones take advantage of the entire screen but typically include notches, cutouts, and other elements that occupy screen space. Every Roblox experience also includes the **top bar controls** for quick access to the main menu, [chat](../chat/in-experience-text-chat.md), [leaderboard](../players/leaderboards.md), and more.
 
 <img src="../assets/engine-api/enums/ScreenInsets/Top-Bar-Cutout.png" width="840" alt="Mobile device showing Roblox top bar buttons and device cutout." />
 

@@ -32,7 +32,7 @@ can [release it to the public](#releasing-to-the-public), although beta testing 
     [full&nbsp;release](#full-release).
   </TabItem>
 	<TabItem label="Full Release">
-    When you're ready to release an experience to the world, you can [release it to the public](#releasing-to-the-public) under its final name with a complete description, icon, and other promotional imagery. For guidance on release names, descriptions, and promotional materials, review [metadata best practices](#metadata-best-practices), experience [icons](../../production/publishing/experience-icons.md), and [promotional thumbnails](../../production/promotion/thumbnails.md).
+    When you're ready to release an experience to the world, you can [release it to the public](#releasing-to-the-public) under its final name with a complete description, icon, and other promotional imagery. For guidance on release names, descriptions, and promotional materials, review [metadata best practices](#metadata-best-practices), experience [icons](../../production/publishing/experience-icons.md), and [experience thumbnails](../../production/publishing/thumbnails.md).
   </TabItem>
 </Tabs>
 
@@ -104,12 +104,12 @@ You can customize your experience's settings from the [Creator Dashboard][creato
 
 ### Creator Dashboard
 
-Most experience settings are configurable from the [Creator Dashboard][creatordashboard], including [localization](../localization/index.md), access settings, [analytics](../analytics/index.md), and [monetization products](../monetization/index.md). You can also fill out the [questionnaire](../promotion/experience-guidelines.md#questionnaire-categories) required for generating [experience guidelines](#experience-guidelines). To configure an experience:
+Most experience settings are configurable from the [Creator Dashboard][creatordashboard], including [localization](../localization/index.md), access settings, [analytics](../analytics/index.md), and [monetization products](../monetization/index.md). You can also fill out the [Maturity & Compliance questionnaire](../promotion/content-maturity.md) required for generating a content maturity label and content descriptors that players use to make informed decisions about what content they interact with. To configure an experience:
 
 1. Select the experience you want to configure from your [list of creations](https://create.roblox.com/dashboard/creations) on the dashboard.
 1. Click on the category you wish to configure from the left-hand navigation.
 
-The **Communication Settings** category allows you to enable **strong language** if your experience is rated 17+. You can find this under the **Audience** section of the left-hand navigation. Enable the toggle to relax the text chat filter for some strong language in your experience. This also adds a tag above your experience page to warn other users that your experience may include strong language.
+The **Communication Settings** category allows you to enable **strong language** if your experience receives a Restricted maturity label. You can find this under the **Audience** section of the left-hand navigation. Enable the toggle to relax the text chat filter for some strong language in your experience. This also adds a tag above your experience page to warn other users that your experience may include strong language.
 
 <img src="../../assets/publishing/experiences-places-assets/Strong-Language-Pill.png" width="375" alt="Pill indicating the experience contains strong language" />
 
@@ -134,7 +134,7 @@ New experiences begin as **private** and are only accessible to you and members 
 
    <img src="../../assets/creator-dashboard/Experience-Context-Menu-Make-Public.png" width="420" alt="Make Public option from Creator Dashboard" />
 
-1. **(Recommended)** Explore how to provide [Experience Guidelines](#experience-guidelines) for the experience.
+1. **(Recommended)** Explore how to provide [Content Maturity labels and content descriptors](#content-maturity) for the experience.
 
 ### Linking to Experiences
 
@@ -163,16 +163,16 @@ Once an experience is [public](#releasing-to-the-public), you can copy its link 
 </TabItem>
 </Tabs>
 
-### Experience Guidelines
+### Content Maturity
 
-[Experience Guidelines](../promotion/experience-guidelines.md) provide information on the experience's main page about what kind of content the experience contains so that users can make informed decisions about what they interact with. Roblox uses this information to recommend experiences on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages based on each user's appropriate age group and regional content policies.
+[Content Maturity](../promotion/content-maturity.md) provides information on the experience's main details page about what kind of content the experience contains so that players can make informed decisions about what they interact with. Roblox uses this information to recommend experiences on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages based on each user's age group and regional content policies.
 
-Each experience guideline has two components:
+Content Maturity consists of two components:
 
-- **Age Recommendations** — Indicates which age group an experience is suitable for based on child development research and industry standards. For more information, see [Age Recommendations](https://en.help.roblox.com/hc/en-us/articles/8862768451604).
-- **Content Descriptors** — Indicates what type of content is within an experience, such as realistic depictions of blood or paid item trading.
+- **Maturity Label** - Indicates the level of maturity suitable for the experience according to child development research and industry standards. For more information, see Age Recommendations.
+- **Content Descriptors** - Indicates what type of content is within an experience, such as realistic depictions of blood or paid item trading.
 
-Roblox strongly recommends that you fill out the guidelines questionnaire for each of your experiences so that they're available to the largest appropriate audience possible. Roblox does not recommend experiences without guidelines to users under 13 years old, and if your experience has no guidelines but contains [17+ content](https://en.help.roblox.com/hc/en-us/articles/15869919570708), it will be moderated.
+Roblox strongly recommends that you fill out the Maturity & Compliance questionnaire for each of your experiences so that they're available to the largest appropriate audience possible. Roblox does not recommend experiences without Content Maturity information to users under 13 years old. In addition, if your experience doesn't have Content Maturity information but it does contain [Restricted content](https://en.help.roblox.com/hc/en-us/articles/15869919570708), the experience will be moderated.
 
 ### Allowing Copying
 

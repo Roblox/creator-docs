@@ -46,6 +46,28 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
-methods: []
+methods:
+  - name: ServiceVisibilityService:SetServiceVisibilityPreference
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: service
+        type: Instance
+        default:
+        summary: ''
+      - name: visible
+        type: bool
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

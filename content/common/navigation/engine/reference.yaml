@@ -25,6 +25,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Accoutrement.yaml
         ignoreTranslation: true
+      - title: ActivityHistoryEventService
+        path: /reference/engine/classes/ActivityHistoryEventService
+        type: engineapi
+        source: /reference/engine/classes/ActivityHistoryEventService.yaml
+        ignoreTranslation: true
       - title: Actor
         path: /reference/engine/classes/Actor
         type: engineapi
@@ -264,6 +269,11 @@ navigation:
         path: /reference/engine/classes/AvatarEditorService
         type: engineapi
         source: /reference/engine/classes/AvatarEditorService.yaml
+        ignoreTranslation: true
+      - title: AvatarPreloader
+        path: /reference/engine/classes/AvatarPreloader
+        type: engineapi
+        source: /reference/engine/classes/AvatarPreloader.yaml
         ignoreTranslation: true
       - title: Backpack
         path: /reference/engine/classes/Backpack
@@ -895,6 +905,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/ExperienceNotificationService.yaml
         ignoreTranslation: true
+      - title: ExplorerServiceVisibilityService
+        path: /reference/engine/classes/ExplorerServiceVisibilityService
+        type: engineapi
+        source: /reference/engine/classes/ExplorerServiceVisibilityService.yaml
+        ignoreTranslation: true
       - title: Explosion
         path: /reference/engine/classes/Explosion
         type: engineapi
@@ -1484,6 +1499,11 @@ navigation:
         path: /reference/engine/classes/MessagingService
         type: engineapi
         source: /reference/engine/classes/MessagingService.yaml
+        ignoreTranslation: true
+      - title: MLModelDeliveryService
+        path: /reference/engine/classes/MLModelDeliveryService
+        type: engineapi
+        source: /reference/engine/classes/MLModelDeliveryService.yaml
         ignoreTranslation: true
       - title: Model
         path: /reference/engine/classes/Model
@@ -2505,6 +2525,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Teams.yaml
         ignoreTranslation: true
+      - title: TelemetryService
+        path: /reference/engine/classes/TelemetryService
+        type: engineapi
+        source: /reference/engine/classes/TelemetryService.yaml
+        ignoreTranslation: true
       - title: TeleportAsyncResult
         path: /reference/engine/classes/TeleportAsyncResult
         type: engineapi
@@ -3348,6 +3373,16 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AnnotationEditingMode.yaml
         ignoreTranslation: true
+      - title: AnnotationRequestResult
+        path: /reference/engine/enums/AnnotationRequestResult
+        type: engineapi
+        source: /reference/engine/enums/AnnotationRequestResult.yaml
+        ignoreTranslation: true
+      - title: AnnotationRequestType
+        path: /reference/engine/enums/AnnotationRequestType
+        type: engineapi
+        source: /reference/engine/enums/AnnotationRequestType.yaml
+        ignoreTranslation: true
       - title: AppLifecycleManagerState
         path: /reference/engine/enums/AppLifecycleManagerState
         type: engineapi
@@ -3407,6 +3442,11 @@ navigation:
         path: /reference/engine/enums/AudioFilterType
         type: engineapi
         source: /reference/engine/enums/AudioFilterType.yaml
+        ignoreTranslation: true
+      - title: AudioSimulationFidelity
+        path: /reference/engine/enums/AudioSimulationFidelity
+        type: engineapi
+        source: /reference/engine/enums/AudioSimulationFidelity.yaml
         ignoreTranslation: true
       - title: AudioSubType
         path: /reference/engine/enums/AudioSubType
@@ -3708,6 +3748,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/CoreGuiType.yaml
         ignoreTranslation: true
+      - title: CreateAssetResult
+        path: /reference/engine/enums/CreateAssetResult
+        type: engineapi
+        source: /reference/engine/enums/CreateAssetResult.yaml
+        ignoreTranslation: true
       - title: CreateOutfitFailure
         path: /reference/engine/enums/CreateOutfitFailure
         type: engineapi
@@ -3877,11 +3922,6 @@ navigation:
         path: /reference/engine/enums/EasingStyle
         type: engineapi
         source: /reference/engine/enums/EasingStyle.yaml
-        ignoreTranslation: true
-      - title: EditableStatus
-        path: /reference/engine/enums/EditableStatus
-        type: engineapi
-        source: /reference/engine/enums/EditableStatus.yaml
         ignoreTranslation: true
       - title: ElasticBehavior
         path: /reference/engine/enums/ElasticBehavior

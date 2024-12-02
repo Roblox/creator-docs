@@ -6,6 +6,9 @@ description: |
   Determines when the engine resumes event handlers. At some future point, the
   default mode will be `Deferred` but opt-out will still be possible through use
   of `Immediate`.
+
+  For more information, see
+  [Deferred Events](../../../scripting/events/deferred.md).
 code_samples:
 tags: []
 deprecation_message: ''

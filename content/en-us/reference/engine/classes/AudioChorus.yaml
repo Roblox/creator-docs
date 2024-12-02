@@ -128,5 +128,32 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-events: []
+events:
+  - name: AudioChorus.WiringChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: connected
+        type: bool
+        default:
+        summary: ''
+      - name: pin
+        type: string
+        default:
+        summary: ''
+      - name: wire
+        type: Wire
+        default:
+        summary: ''
+      - name: instance
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

@@ -13,8 +13,7 @@ items:
     value: 0
     summary: |
       Let the physics engine select the geometric representation for aerodynamic
-      force and torque calculations.  
-      .
+      force and torque calculations.
     tags: []
     deprecation_message: ''
   - name: UseCollisionGeometry

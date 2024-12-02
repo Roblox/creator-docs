@@ -285,11 +285,3 @@ You can express your experience's theme through overall theme and colors to help
     <figcaption>Dark and stormy theme for a horror experience</figcaption>
   </figure>
 </GridContainer>
-
-### Keep Multiple Thumbnails Active
-
-To get the most out of your personalized thumbnails, always keep multiple thumbnails active instead of choosing one winner. This allows personalization to adapt to changing user trends.
-
-### Avoid Clickbait
-
-To avoid clickbait, make sure your thumbnail content reflects what users can expect from your experience.

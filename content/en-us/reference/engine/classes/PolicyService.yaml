@@ -20,6 +20,29 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
+  - name: PolicyService:CanViewBrandProjectAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: brandProjectId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PolicyService:GetPolicyInfoForPlayerAsync
     summary: |
       Returns policy information about a player which is based on geolocation,
@@ -55,7 +78,7 @@ methods:
       <td>AllowedExternalLinkReferences</td>
       <td>Array of strings</td>
       <td>Any experience that references external links</td>
-      <td>A list of external link references (for example, social media links, handles, or iconography) a player is permitted to see. Possible values include: "Discord", "Facebook", "Twitch", "Twitter", "YouTube", "X", "GitHub", and "Guilded".</td>
+      <td>A list of external link references (for example, social media links, handles, or iconography) a player is permitted to see. Possible values include: "Discord", "Facebook", "Twitch", "YouTube", "X", "GitHub", and "Guilded".</td>
       </tr>
       <tr>
       <td>IsContentSharingAllowed</td>

@@ -30,14 +30,14 @@ navigation:
         path: /tutorials/use-case-tutorials/modeling/assembling-modular-environments
   - title: User Interfaces
     section:
-      - title: Creating Score Bars
-        path: /tutorials/use-case-tutorials/ui/creating-a-score-bar
-      - title: Creating Interactive Buttons
-        path: /tutorials/use-case-tutorials/ui/interactive-buttons
+      - title: Creating HUD Meters
+        path: /tutorials/use-case-tutorials/ui/creating-hud-meters
+      - title: Making UI Interactive
+        path: /tutorials/use-case-tutorials/ui/interactive-ui
       - title: Creating Proximity Prompts
         path: /tutorials/use-case-tutorials/ui/proximity-prompts
-      - title: Creating Part Interfaces
-        path: /tutorials/use-case-tutorials/ui/interfaces-on-parts
+      - title: Creating Score Bars
+        path: /tutorials/use-case-tutorials/ui/creating-a-score-bar
   - title: Audio
     section:
       - title: Playing Background Music

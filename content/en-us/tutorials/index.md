@@ -196,10 +196,9 @@ While many creators focus on a single area, the following tutorials walk you thr
    <Typography variant='h4'>UI</Typography>
    <Typography variant='body1' >
      <ul>
-     <li>Learn how to display <a href="./use-case-tutorials/ui/interfaces-on-parts.md">informative UI</a> in the 3D space</li>
-     <li>Learn how to create <a href="./use-case-tutorials/ui/proximity-prompts.md">interactive prompts</a> that only appear as players approach 3D objects</li>
-     <li>Learn how to create <a href="./use-case-tutorials/ui/interactive-buttons.md">2D buttons</a> on the player's screen for actions and menus</li>
-     <li>Learn how to combine <a href="./use-case-tutorials/ui/creating-a-score-bar.md">UI objects with scripts</a> to display player information</li>
+		 <li>Learn how to combine UI objects with scripts to create a [custom health meter](./use-case-tutorials/ui/creating-hud-meters.md)</li>
+		 <li>Learn how to make [interactive UI objects](./use-case-tutorials/ui/interactive-ui.md) hooked to in‑experience behavior and state transitions</li>
+     <li>Learn how to create [interactive prompts](./use-case-tutorials/ui/proximity-prompts.md) that only appear as players approach 3D objects</li>
      </ul></Typography>
      <div style={{marginTop:16}}>
      </div>

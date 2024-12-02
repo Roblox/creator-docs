@@ -3,11 +3,11 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  An internal service that is responsible for the behavior or
+  An internal service that is responsible for the behavior of
   `Class.SpawnLocation|SpawnLocations`. Its functionality is not accessible to
   developers.
 description: |
-  An internal service that is responsible for the behavior or
+  An internal service that is responsible for the behavior of
   `Class.SpawnLocation|SpawnLocations`. Its functionality is not accessible to
   developers.
 code_samples:

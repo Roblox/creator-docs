@@ -136,11 +136,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <img src="../../assets/tutorials/UCT-Overview/Score-Bars.png" />
+ <img src="../../assets/tutorials/UCT-Overview/Creating-HUD-Meters.png" />
  </div>
-   <Typography variant='body1' >Creating Score Bars</Typography>
+   <Typography variant='body1' >Creating HUD Meters</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./ui/creating-a-score-bar.md">
+       <a underline="none" href="./ui/creating-hud-meters.md">
        <Button variant="contained" color="secondary" size='large'
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
        </a>
@@ -152,11 +152,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <img src="../../assets/tutorials/UCT-Overview/Interactive-Buttons.png" />
+ <img src="../../assets/tutorials/UCT-Overview/Interactive-UI.png" />
  </div>
-   <Typography variant='body1' >Creating Interactive Buttons</Typography>
+   <Typography variant='body1' >Making UI Interactive</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./ui/interactive-buttons.md">
+       <a underline="none" href="./ui/interactive-ui.md">
        <Button variant="contained" color="secondary" size='large'
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
        </a>
@@ -184,11 +184,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
- <img src="../../assets/tutorials/UCT-Overview/Part-Interfaces.png" />
+ <img src="../../assets/tutorials/UCT-Overview/Score-Bars.png" />
  </div>
-   <Typography variant='body1' >Creating Interfaces on Parts</Typography>
+   <Typography variant='body1' >Creating Score Bars</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./ui/interfaces-on-parts.md">
+       <a underline="none" href="./ui/creating-a-score-bar.md">
        <Button variant="contained" color="secondary" size='large'
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
        </a>

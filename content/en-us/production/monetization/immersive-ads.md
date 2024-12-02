@@ -94,7 +94,7 @@ Experiences must meet the following criteria to be eligible to be an ad publishe
   - For group-owned experiences, this requirement applies to the owner of the group.
   - Requirement is persistent - if a publisher disables identity verification, they will lose eligibility.
 - Your experience must be **Public**. If a publisher makes the experience Private, the experience will lose eligibility.
-- You must complete the **Experience Guidelines Questionnaire** for your experience.
+- You must complete the **Maturity & Compliance Questionnaire** for your experience.
 - Your experience must maintain **2,000 unique visitors per month**.
   - This is calculated and updated monthly, based on visitor data.
   - Bots cannot be included in visitor counts.

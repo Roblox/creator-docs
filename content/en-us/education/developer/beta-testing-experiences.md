@@ -3,7 +3,7 @@ title: Beta Testing Experiences
 description: Learn common methods of beta testing on Roblox, recommended for success metrics, and options for community feedback.
 ---
 
-Developers on the Roblox platform have a strong culture of conducting beta tests in order to get feedback from the community and to begin collecting analytics about their user base. There's several ways to collect user feedback, starting with closed betas and then moving to open betas after the initial feedback has been addressed.
+Developers on the Roblox platform have a strong culture of conducting beta tests in order to get feedback from the community and to begin collecting analytics about their user base. There are several ways to collect user feedback, starting with closed betas and then moving to open betas after the initial feedback has been addressed.
 
 ## Testing Options
 
@@ -276,7 +276,7 @@ A think-aloud is a method of studying the mental processes people use in a task.
 
 ## Analytics
 
-Analytics gathered during a beta program are often used to gauge if a launch experience will be on track to meeting it's goals. For instance, many common Roblox experiences have specific goals for retention, monetization, and session time.
+Analytics gathered during a beta program are often used to gauge if a launch experience is on track to meeting its goals. For instance, many common Roblox experiences have specific goals for retention, monetization, and session time.
 
 ### Tracking Analytics
 
