@@ -27,22 +27,22 @@ To enable Automatic Text Capture:
    <img src="../../assets/localization/Portal-Enable-ATC.png"
    width="800" alt="The Localization Settings section highlighting the toggle for Capture text from Experience UI while users play."/>
 
-ATC adds text strings to the localization table within 1-2 minutes of encountering the text in the experience. If you do not want ATC to collect a certain text string, such as a name or unique text entry, disable the `Class.GuiBase2d.AutoLocalize|AutoLocalize` property of the text object.
+ATC adds text strings to the localization table within 1–2 minutes of encountering the text in the experience. If you do not want ATC to collect a certain text string, such as a name or unique text entry, disable the `Class.GuiBase2d.AutoLocalize|AutoLocalize` property of the text object.
 
 <Alert severity="info">
 ATC can not capture some experience objects. These objects may require special handling with <a href="./localizing-with-scripting.md">localization scripts</a>. The current exemptions are:
 <ul>
-<li>The default Roblox leaderboards and chat </li>
-<li>Items or tools owned by a player </li>
+<li>The default Roblox leaderboards and chat</li>
+<li>Items or tools owned by a player</li>
 <li>Images with embedded text</li>
 <li>Badge names and descriptions pulled from the platform</li>
-<li>Game Pass names and descriptions pulled from the platform.</li>
+<li>Pass names and descriptions pulled from the platform</li>
 </ul>
 </Alert>
 
 ### Text Capture in Studio
 
-There may be situations in which you need to immediately capture strings to your translation table. In these cases, you can use the text capture tool in Studio to capture strings while playtesting. These strings will be added to the localization table within 1-2 minutes of encountering them.
+There may be situations in which you need to immediately capture strings to your translation table. In these cases, you can use the text capture tool in Studio to capture strings while playtesting. These strings will be added to the localization table within 1–2 minutes of encountering them.
 
 To enable text capture in Studio:
 
@@ -92,7 +92,7 @@ You can track your automatic translation quota usage on your experience's locali
 <img src="../../assets/localization/Automatic-Translation-Quotas.png"
      width="800" alt="The Localization Languages section depicting the Automatic Translation Quotas at the top of the page, including the date of the monthly quota renewal." />
 
-Quotas are calculated on a **per-character** and **per-language basis**. For example, translating the source string "hello" into all 15 automatic translation-supported languages will count as 5 x 15 = 75 characters towards your quota.
+Quotas are calculated on a **per-character** and **per-language basis**. For example, translating the source string "hello" into all 15 automatic translation-supported languages will count as 5×15 (75) characters towards your quota.
 
 ### Automatic Translation Updates
 
@@ -151,6 +151,9 @@ Roblox supports automatic translation between the languages listed below. Curren
     <td>Korean</td>
   </tr>
   <tr>
+    <td>Polish</td>
+  </tr>
+  <tr>
     <td>Portuguese</td>
   </tr>
   <tr>
@@ -164,9 +167,6 @@ Roblox supports automatic translation between the languages listed below. Curren
   </tr>
   <tr>
     <td>Turkish</td>
-  </tr>
-  <tr>
-    <td>Polish</td>
   </tr>
   <tr>
     <td>Vietnamese</td>

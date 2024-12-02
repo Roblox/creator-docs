@@ -5,7 +5,7 @@ next: /tutorials/fundamentals/coding-5/pairs-and-ipairs
 prev: /tutorials/fundamentals/coding-5/making-changes-to-arrays
 ---
 
-Dictionaries are tables that associate names or "\*keys\*\*" with a value instead of an index.
+Dictionaries are tables that associate names or **keys** with a value instead of an index.
 
 Example:
 
@@ -16,11 +16,11 @@ local pet = {
 }
 ```
 
-Use dictionaries when you need to label values, not just list them in order as an array does —practice using dictionaries in this tutorial by manipulating values associated with a player.
+Use dictionaries when you need to label values, not just list them in order as an array does. Practice using dictionaries in this tutorial by manipulating values associated with a player.
 
 ## Dictionary Syntax
 
-Like arrays, dictionaries are assigned to a variable with curly brackets`{}`. **Key value pairs** are stored on separate lines followed by a comma. Keys and values can be any data type, including strings, numbers, and variable names.
+Like arrays, dictionaries are assigned to a variable with curly brackets `{}`. **Key-value pairs** are stored on separate lines followed by a comma. Keys and values can be any data type, including strings, numbers, and variable names.
 
 ```lua
 local playerNames = {
@@ -87,8 +87,9 @@ One everyday use of dictionaries is organizing player or character information. 
 ### Using Dictionary Values
 
 There are two ways to access dictionary values:
-`tableName["keyName"]` -- Note the quotations
-`tableName.keyName`
+
+- `tableName["keyName"]` (importantly, note the quotations)
+- `tableName.keyName`
 
 ```lua
 local enemy = {
@@ -100,7 +101,7 @@ print("The villain " .. enemy["Name"] .. " approaches!")
 print("The villain " .. enemy.Name .. " approaches!")
 ```
 
-Which style to use usually depends on the purpose of the table. For tables holding a collection of values like a list of players in a server, coders will usually use tableName["keyName"]. For a dictionary used to describe an object, coders are more likely to use tableName.keyName.
+Which style to use usually depends on the purpose of the table. For tables holding a collection of values like a list of players in a server, coders will usually use `tableName["keyName"]`. For a dictionary used to describe an object, coders are more likely to use `tableName.keyName`.
 
 ## Changing a Dictionary Value
 
@@ -158,7 +159,7 @@ Dictionaries can interact with pre-existing variables declared in other parts of
    end
    ```
 
-4. Insert name into the `playerPoints` dictionary as a key, and set the value, the player's points, to 0.
+4. Insert `name` into the `playerPoints` dictionary as a key, and set the value, the player's points, to 0.
 
    ```lua
    local function setPoints(newPlayer)
@@ -169,10 +170,10 @@ Dictionaries can interact with pre-existing variables declared in other parts of
    ```
 
    <Alert severity="warning">
-   Since `name` was created as a variable, it can be accessed with the actual variable name. If `name` had been simply a key name, it would need to be accessed the same as other strings, playerPoints["name"]
+   Since `name` was created as a variable, it can be accessed with the actual variable name. If `name` were a key name, it would need to be accessed the same as other strings: `playerPoints["name"]`.
    </Alert>
 
-5. Use `name` to print the name of the player and playerPoints[name] to print the value of the key matching the variable.
+5. Use `name` to print the name of the player and `playerPoints[name]` to print the value of the key matching the variable.
 
    ```lua
    local function setPoints(newPlayer)
@@ -183,7 +184,7 @@ Dictionaries can interact with pre-existing variables declared in other parts of
    end
    ```
 
-6. Run the project and look into the output editor.
+6. Run the project and observe the output.
 
 ```lua title="Finished script"
 local Players = game:GetService("Players")
@@ -208,7 +209,7 @@ Below are some challenges that apply to using dictionaries in different ways. Se
 
 - Create a trap part that does damage over time to a player. Once a player touches the trap, damage them, wait, then allow them to be damaged again.
 - Create a function that checks which of two players has the most points by accessing a dictionary.
-- Create a cipher, a system of swapping one word for another to create a "secret" code, for example, how the letter "A" can be swapped with "G", or how the word apple can be swapped for the word orange.
+- Create a cipher, a system of swapping one string for another to create a "secret" code. For example, the letter "A" can be swapped with "G," or the word "apple" can be swapped with "orange."
 
 ## Dictionaries and pairs()
 
@@ -257,7 +258,7 @@ Dictionaries are tables that use key-value pairs instead of indexed values. Dict
 
 All keys within a dictionary should use the same data type, but the values can mix data types without issue.
 
-The style of how a dictionary is accessed can convey the purpose of a dictionary. A dictionary of enemy properties will likely be accessed with the dot operator, while a list of names will likely use tableName[keyName].
+The way in which a dictionary is accessed can convey its purpose. A dictionary of enemy properties will likely be accessed with the dot operator, while a list of names will likely use `tableName[keyName]`.
 
 When using brackets, be careful; key names created within the table must be treated as strings: `tableName["keyName"]`. However, when referencing objects like parts, the quotations are not needed: `tableName[keyName]`.
 
