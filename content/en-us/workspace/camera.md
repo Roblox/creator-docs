@@ -9,11 +9,11 @@ Roblox's built-in camera powers a default **third person** mode and an optional 
 
 You can configure common camera settings directly within Studio's `Class.StarterPlayer` object. These settings include [zoom distance](#zoom-distance) and various [camera](#camera-mode), [occlusion](#occlusion-mode), and [movement](#movement-mode) modes.
 
-1. In the [Explorer](../studio/explorer.md) window, select the **StarterPlayer** object.
+1. In the **Explorer** window, select the **StarterPlayer** object.
 
    <img src="../assets/studio/explorer/StarterPlayer.png" width="320" alt="StarterPlayer in Explorer" />
 
-1. In the [Properties](../studio/properties.md) window, scroll down to locate the **Camera** section. You can configure the following properties directly or through a script.
+1. In the **Properties** window, scroll down to locate the **Camera** section. You can configure the following properties directly or through a script.
 
    <img src="../assets/studio/properties/StarterPlayer-Camera-Group.png" width="320" alt="Camera properties on StarterPlayer in Properties Window" />
 

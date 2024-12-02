@@ -9,11 +9,11 @@ Characters, such as avatars or NPCs, are a single `Class.Model` containing the a
 
 <GridContainer numColumns="2">
 	<figure>
-		<img src="../assets/modeling/model-objects/Model-Example-3D.jpg" alt="Model named Octavia" />
+		<img src="../assets/modeling/model-objects/Model-Example-3D.jpg" alt="An example character model of a humanoid monster girl in a dark purple dress." />
 		<figcaption>A model named Octavia</figcaption>
 	</figure>
 	<figure>
-    	<img src="../assets/modeling/model-objects/Model-Example-Hierarchy.png" width="320" alt="The groupings which comprise the Octavia model in Studio's Explorer window" />
+    	<img src="../assets/modeling/model-objects/Model-Example-Hierarchy.png" width="320" alt="The groupings which comprise the Octavia model in Studio's Explorer window." />
     	<figcaption>The groupings that comprise the model</figcaption>
     </figure>
 </GridContainer>
@@ -25,7 +25,7 @@ When you **group** objects together, they automatically become a `Class.Model` o
 1. In the 3D viewport or the [Explorer](../studio/explorer.md) window, select every object that you want to group into a model.
 1. Right-click on one of the objects and select **Group**, or press <kbd>Ctrl</kbd><kbd>G</kbd> on Windows or <kbd>⌘</kbd><kbd>G</kbd> on Mac. A new `Class.Model` object displays with all of the objects that make up the model nested underneath.
 
-   <img src="../assets/modeling/model-objects/Model-Group-Simple.png" width="320" alt="Three basic objects grouped into a Model object" />
+   <img src="../assets/modeling/model-objects/Model-Group-Simple.png" width="320" alt="A close up view of the Explorer window. A Model object is highlighted with three nested children." />
 
 <Alert severity="info">
 To completely ungroup a model back to its original objects, right-click it and select **Ungroup**, or press <kbd>Ctrl</kbd><kbd>U</kbd> on Windows or <kbd>⌘</kbd><kbd>U</kbd> on Mac.
@@ -45,7 +45,7 @@ To set a primary part:
 
 As you hover over models in the viewport, they are outlined to indicate their potential selection. You can select an outlined model by clicking it, or you can select multiple models by holding <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>⌘</kbd> as you hover over and click them.
 
-<img src="../assets/studio/general/Editor-Window-Object-Selection.jpg" width="800" alt="Multiple models selected in 3D viewport"/>
+<img src="../assets/studio/general/Editor-Window-Object-Selection.jpg" width="800" alt="A warehouse view in the 3D viewport. Multiple models are selected and highlighted with a light blue outline."/>
 
 As models typically contain multiple child [parts](../parts/index.md) or [meshes](../parts/meshes.md), some children may be hidden from view. To select a specific child without moving the camera around or locating the child in the [Explorer](../studio/explorer.md) hierarchy, click while holding <kbd>Alt</kbd> on Windows or <kbd>⌥</kbd> on Mac to perform [selection cycling](../studio/ui-overview.md#selection-cycling).
 
@@ -94,7 +94,7 @@ While models act similarly to `Class.Folder` objects for most purposes in your e
 
 When a `Class.Humanoid` is present inside a model that contains a `Class.Part` named **Head**, Roblox displays a name and/or health bar above that part. For more information, see [Character Name/Health Display](../characters/name-health-display.md).
 
-<img src="../assets/avatar/name-health-display/Display-Indicated.jpg" width="800" alt="Character display information above an in-experience avatar" />
+<img src="../assets/avatar/name-health-display/Display-Indicated.jpg" width="800" alt="Character display information above an in-experience avatar." />
 
 ### Destroy Height
 

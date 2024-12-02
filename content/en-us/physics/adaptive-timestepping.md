@@ -7,7 +7,7 @@ The Roblox physics engine simulates all parts inside the 3D workspace through Ne
 
 By default, Roblox simulates physics at 240&nbsp;Hz. Given cycles of approximately 60 frames per second, around 4&nbsp;worldsteps are advanced per frame. With **adaptive timestepping**, the physics engine automatically assigns parts to three "solver&nbsp;islands" by varying their simulation timestep, with an emphasis on 60&nbsp;Hz for best performance. However, parts that are "harder" to solve will use a faster timestep like 240&nbsp;Hz to ensure physical stability.
 
-<img src="../assets/physics/adaptive-timestepping/Diagram-Labels.png" width="100%" />
+<img src="../assets/physics/adaptive-timestepping/Diagram-Labels.png" alt="" width="100%" />
 
 Assignment criterions are subject to change, but parts assigned to the 240&nbsp;Hz island include [assemblies](../physics/assemblies.md) with high velocity values, high acceleration values, and complex mechanisms that are hard to solve.
 
@@ -17,24 +17,21 @@ To enable adaptive timestepping in Studio:
 
 1. In the **Explorer** window, select the **Workspace** object.
 
-   <img src="../assets/studio/explorer/Workspace.png"
-   width="320" />
+   <img src="../assets/studio/explorer/Workspace.png" alt="" width="320" />
 
 2. In the **Properties** window, locate **PhysicsSteppingMethod** and select **Adaptive**.
 
-   <img
-   src="../assets/physics/adaptive-timestepping/PhysicsSteppingMethod-Adaptive.png"
-   width="320" />
+   <img src="../assets/physics/adaptive-timestepping/PhysicsSteppingMethod-Adaptive.png" alt="" width="320" />
 
 To observe the timestepping process in action, you can open the Studio **Microprofiler** (<kbd>Ctrl</kbd><kbd>F6</kbd>; <kbd>⌘</kbd><kbd>F6</kbd>). Once the experience is running, press <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>) to pause at the current frame.
 
 Under the scope named **physicsStepped**, observe that the scope name of **worldStep** now reads **worldStep&nbsp;-&nbsp;Adaptive**.
 
-<img src="../assets/physics/adaptive-timestepping/Adaptive-Timestepping-Microprofiler-A.png" width="80%" />
+<img src="../assets/physics/adaptive-timestepping/Adaptive-Timestepping-Microprofiler-A.png" alt="" width="80%" />
 
 Hovering your cursor above **LDLPGSSolver::solve** will reveal the status of how many islands belong in each frequency bucket; **1dt&nbsp;Islands**&nbsp;(240&nbsp;Hz), **2dt&nbsp;Islands**&nbsp;(120&nbsp;Hz) and **4dt&nbsp;Islands**&nbsp;(60&nbsp;Hz).
 
-<img src="../assets/physics/adaptive-timestepping/Adaptive-Timestepping-Microprofiler-B.png" width="80%" />
+<img src="../assets/physics/adaptive-timestepping/Adaptive-Timestepping-Microprofiler-B.png" alt="" width="80%" />
 
 ## Debugging Visualization
 
@@ -43,11 +40,11 @@ During testing, it may be useful to visualize frequencies for simulated parts. T
 1. Open the Studio settings window (**File** &rang; **Studio Settings**).
 2. From the **Physics** tab, enable **Are&nbsp;Timesteps&nbsp;Shown**.
 
-   <img src="../assets/physics/adaptive-timestepping/Settings-Are-Timesteps-Shown.png" width="500" />
+   <img src="../assets/physics/adaptive-timestepping/Settings-Are-Timesteps-Shown.png" alt="" width="500" />
 
 Once enabled, simulated parts will be outlined by their current simulation rate. If a part stops being simulated, either via the [sleep system](../physics/sleep-system.md) or a network ownership change, the part will no longer be outlined.
 
-<img src="../assets/physics/adaptive-timestepping/Diagram-Labels.png" width="100%" />
+<img src="../assets/physics/adaptive-timestepping/Diagram-Labels.png" alt="" width="100%" />
 
 <figure>
   <video src="../assets/physics/adaptive-timestepping/Adaptive-Timestepping.mp4" controls width="100%"></video>

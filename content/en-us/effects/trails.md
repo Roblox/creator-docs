@@ -34,7 +34,7 @@ To create a trail on a part:
    1. Hover over the part and click the **&CirclePlus;** button. A contextual menu displays.
    2. From the menu, insert two **Attachments** and one **Trail**.
 
-      <img src="../assets/studio/explorer/Part-Trail-Setup.png" width="320" />
+      <img src="../assets/studio/explorer/Part-Trail-Setup.png" alt="" width="320" />
 
 2. Select the new **Trail** object and assign its attachments. Ensure you assign each attachment property to a different `Class.Attachment` object.
 
@@ -79,7 +79,7 @@ The `Class.Trail.Color|Color` property tints the trail's texture to either a spe
    1. Click on the color square to open the **Colors** pop-up window and select a color.
    2. Input three numbers into the RGB color value field.
 
-   <img src="../assets/studio/properties/Color-Input-Options.png" width="320" />
+   <img src="../assets/studio/properties/Color-Input-Options.png" alt="" width="320" />
 
 </TabItem>
 <TabItem label="Color Gradient">

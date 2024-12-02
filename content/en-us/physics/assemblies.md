@@ -7,15 +7,15 @@ An **assembly** is one or more [parts](../parts/index.md) welded by a rigid `Cla
 
 <Grid container spacing={0}>
   <Grid item XSmall={6} XLarge={3}>
-    <img src="../assets/physics/assemblies/Assembly-Example-Block.png" width="100%" />
+    <img src="../assets/physics/assemblies/Assembly-Example-Block.png" alt="A light blue cube against a dark blue background that represents an assembly of 1 part." width="100%" />
     <figcaption>1&nbsp;assembly; 1&nbsp;part</figcaption>
   </Grid>
   <Grid item XSmall={6} XLarge={3}>
-    <img src="../assets/physics/assemblies/Assembly-Example-Avatar.png" width="100%" />
+    <img src="../assets/physics/assemblies/Assembly-Example-Avatar.png" alt="A humanoid character model against a dark blue background that represents an assembly of 18 parts." width="100%" />
     <figcaption>1&nbsp;assembly; 18&nbsp;parts</figcaption>
   </Grid>
   <Grid item XSmall={12} XLarge={6}>
-    <img src="../assets/physics/assemblies/Assembly-Example-Ship.png" width="100%" />
+    <img src="../assets/physics/assemblies/Assembly-Example-Ship.png" alt="A pirate that represents an assemble of 179 parts." width="100%" />
     <figcaption>1&nbsp;assembly; 179&nbsp;parts</figcaption>
   </Grid>
 </Grid>
@@ -73,25 +73,25 @@ Every assembly has a **root&nbsp;part** indicated by its `Class.BasePart.Assembl
 You cannot explicitly set the root part, but the following factors affect probability from highest to lowest:
 
 <Grid container spacing={2}>
-	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Higher.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Higher.png" alt="" width="50" style={{float:"right"}} /></Grid>
 	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	An `Class.BasePart.Anchored|Anchored` part will always be assigned as the root part.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-High.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-High.png" alt="" width="50" style={{float:"right"}} /></Grid>
 	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	Parts with `Class.BasePart.Massless|Massless` set to **false** (default) take precedence.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Low.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Low.png" alt="" width="50" style={{float:"right"}} /></Grid>
 	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	Higher `Class.BasePart.RootPriority|RootPriority` values take precedence.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Lower.png" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Lower.png" alt="" width="50" style={{float:"right"}} /></Grid>
 	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	Precedence based on the part's size, with multipliers for parts with specific names.
 	</Grid>
@@ -112,7 +112,7 @@ When one of an assembly's parts is anchored, that part becomes the root part and
 
    <figure>
      <img src="../assets/physics/assemblies/Assembly-Anchor-Diagram-2.png" width="720" />
-     <figcaption>Anchored part (left) becomes the new root part</figcaption>
+     <figcaption>Anchored part (as indicated with an anchor icon) becomes the new root part</figcaption>
    </figure>
 
 3. If more than one part is anchored, the assembly will **split**. Below, both the left and top parts are anchored, so the original assembly splits into two assemblies as shown by the colored outlines. Also, the `Class.WeldConstraint` between the two assemblies deactivates, since you cannot have an active weld between two anchored assemblies.

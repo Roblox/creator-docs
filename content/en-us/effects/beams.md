@@ -70,11 +70,11 @@ The visual quality of your beams can change depending on the graphics settings o
 
 The `Class.Beam.Texture|Texture` property renders that texture across the length of the beam. You can set a beam's `Class.Beam.Texture|Texture` property to any asset ID. For more information, including how to add or upload your own textures, see [Importing Assets](../projects/assets/manager.md#importing-assets).
 
-<img src="../assets/lighting-and-effects/beam/Texture-Applied.png" width="800" />
+<img src="../assets/lighting-and-effects/beam/Texture-Applied.png" alt="A texture of dark gray circles against a grey background emits between two attachments." width="800" />
 
 A beam renders its texture using two triangles drawn between `Class.Beam.Segments|Segments`, and the segments are laid out between the two attachment points' orientation. When you rotate attachment points in different directions, segments also rotate.
 
-<img src="../assets/lighting-and-effects/beam/Attachments-Rotated.png" width="800" />
+<img src="../assets/lighting-and-effects/beam/Attachments-Rotated.png" alt="The same texture from the previous image is now curved because the attachments are in different orientations." width="800" />
 
 ### Color
 
@@ -89,7 +89,7 @@ The `Class.Beam.Color|Color` property tints the beam's texture to either a speci
    1. Click on the color square to open the **Colors** pop-up window and select a color.
    2. Input three numbers into the RGB color value field.
 
-   <img src="../assets/studio/properties/Color-Input-Options.png" width="320" />
+   <img src="../assets/studio/properties/Color-Input-Options.png" alt="" width="320" />
 
 </TabItem>
 <TabItem label="Color Gradient">
@@ -175,7 +175,7 @@ You can set the beam's width in studs at each endpoint by configuring the
 The beam below has a `Class.Beam.Width0|Width0` value of **0.5** and a
 `Class.Beam.Width1|Width1` value of **3**.
 
-<img src="../assets/lighting-and-effects/beam/Width-Adjusted.png" width="800" />
+<img src="../assets/lighting-and-effects/beam/Width-Adjusted.png" alt="A texture emits between two attachments. The texture starts with a small width and ends with a large width."  width="800" />
 
 ### Texture Length/Mode
 
@@ -211,4 +211,4 @@ Beams are configured to use a cubic Bézier curve formed by four control points.
 
 <img src="../assets/engine-api/classes/Beam/Curvature-Diagram.png" width="800" alt="Beam curvature diagram" />
 
-<img src="../assets/lighting-and-effects/beam/Curves-Applied.png" width="800" />
+<img src="../assets/lighting-and-effects/beam/Curves-Applied.png" alt=""  width="800" />

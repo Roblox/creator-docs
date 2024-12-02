@@ -11,15 +11,15 @@ Roblox supports many types of meshes, as long as they adhere to the [general mes
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/art/Basic-Mesh-Example.png" />
+    <img src="../assets/art/Basic-Mesh-Example.png" alt="A tree mesh object without a texture." />
     <figcaption>A mesh object sets the shape and geometry of the 3D object</figcaption>
   </figure>
   <figure>
-    <img src="../assets/art/Basic-Texture-Example.png" />
+    <img src="../assets/art/Basic-Texture-Example.png" alt="The texture image map for the leaves of the tree in the previous image." />
     <figcaption>A texture image map applies a surface appearance and color</figcaption>
   </figure>
   <figure>
-    <img src="../assets/art/Basic-Mesh-Combined-Example.png" />
+    <img src="../assets/art/Basic-Mesh-Combined-Example.png" alt="A tree mesh object with the leaves texture applied." />
     <figcaption>The mesh and texture combine to make a unique custom 3D object</figcaption>
   </figure>
 </GridContainer>
@@ -56,8 +56,8 @@ Unlike basic parts, meshes have more customization options that you can adjust f
 Studio supports four PBR texture maps, each corresponding to a visual characteristic of an object's surface appearance. Combining multiple texture maps can more accurately simulate color, roughness, and reflectivity in any lighting environment, and enhance the visual elements of your assets and environment. For more information on PBR textures and the texture maps, see [PBR Textures](../art/modeling/surface-appearance.md).
 
 <GridContainer numColumns="2">
-  <img src="../assets/modeling/surface-appearance/SurfaceAppearance-Example-1.jpg" />
-  <img src="../assets/modeling/surface-appearance/SurfaceAppearance-Example-3.jpg" />
+  <img src="../assets/modeling/surface-appearance/SurfaceAppearance-Example-1.jpg" alt="" />
+  <img src="../assets/modeling/surface-appearance/SurfaceAppearance-Example-3.jpg" alt="" />
 </GridContainer>
 
 You can apply PBR textures using one of the following objects:
@@ -106,17 +106,17 @@ You can dynamically control a mesh's level of detail using its `Enum.RenderFidel
   <tr>
     <td>Less than 250 studs</td>
     <td>Highest</td>
-    <td><img src="../assets/modeling/meshes/Render-Fidelity-High.jpg" width="200" /></td>
+    <td><img src="../assets/modeling/meshes/Render-Fidelity-High.jpg" alt="A potion mesh object that is rendered in the highest level of detail." width="200" /></td>
   </tr>
   <tr>
     <td>250-500 studs</td>
     <td>Medium</td>
-    <td><img src="../assets/modeling/meshes/Render-Fidelity-Medium.jpg" width="200" /></td>
+    <td><img src="../assets/modeling/meshes/Render-Fidelity-Medium.jpg" alt="A potion mesh object that is rendered in a medium level of detail. Its edges are more jagged than the previous image." width="200" /></td>
   </tr>
   <tr>
     <td>500 or more studs</td>
     <td>Lowest</td>
-    <td><img src="../assets/modeling/meshes/Render-Fidelity-Low.jpg" width="200" /></td>
+    <td><img src="../assets/modeling/meshes/Render-Fidelity-Low.jpg" alt="A potion mesh object that is rendered in the lowest level of detail. Its edges are more jagged than the previous image, and the liquid is no longer shiny." width="200" /></td>
   </tr>
 </tbody>
 </table>
@@ -152,7 +152,7 @@ You can dynamically control a mesh's level of detail using its `Enum.RenderFidel
 To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
-For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../performance-optimization/improving.md#physics-computation). For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
+For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../performance-optimization/improving.md#physics-computation). For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/curriculums/environmental-art/optimize-your-experience.md#review-physics-and-rendering-parameters).
 
 ## Rigging and Skinning Meshes
 

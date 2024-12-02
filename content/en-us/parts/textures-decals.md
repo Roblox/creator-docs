@@ -23,22 +23,22 @@ can:
 
   <GridContainer numColumns="2">
     <figure>
-      <img src="../assets/modeling/textures-decals/Decal-Texture-Sample-2.png" width="63%" />
+      <img src="../assets/modeling/textures-decals/Decal-Texture-Sample-2.png" alt="An example texture image of a light blue hexagon on top of a dark blue background." width="63%" />
       <figcaption>Texture image</figcaption>
     </figure>
     <figure>
-      <img src="../assets/modeling/textures-decals/Texture-On-Surface.jpg" />
+      <img src="../assets/modeling/textures-decals/Texture-On-Surface.jpg" alt="The same blue texture repeated eight times on a block part." />
       <figcaption>Texture applied to a part (repeating)</figcaption>
     </figure>
   </GridContainer>
 
   <GridContainer numColumns="2">
     <figure>
-      <img src="../assets/modeling/textures-decals/Decal-Texture-Sample-1.png" width="63%" />
+      <img src="../assets/modeling/textures-decals/Decal-Texture-Sample-1.png" alt="An example decal image of a light purple hexagon on top of a dark purple background."  width="63%" />
       <figcaption>Decal image</figcaption>
     </figure>
     <figure>
-      <img src="../assets/modeling/textures-decals/Decal-On-Surface.jpg" />
+      <img src="../assets/modeling/textures-decals/Decal-On-Surface.jpg" alt="The same purple decal stretched on the top face of a block part." />
       <figcaption>Decal applied to a part (stretched)</figcaption>
     </figure>
   </GridContainer>
@@ -69,15 +69,15 @@ To add a texture or decal to a part or union:
 
 4. **(Optional)** Set a color tint by clicking the small box to the left of the **Color3** property or by entering a RGB color code.
 
-   <img src="../assets/modeling/textures-decals/Properties-Color3-Picker.png" width="320" />
-   <img src="../assets/modeling/textures-decals/Properties-Color3-RGB-Entry.png" width="320" />
+   <img src="../assets/modeling/textures-decals/Properties-Color3-Picker.png" alt="A close of view of the Color3 property with the small color box highlighted." width="320" />
+   <img src="../assets/modeling/textures-decals/Properties-Color3-RGB-Entry.png" alt="A close of view of the Color3 property with the RGB code highlighted." width="320" />
    <GridContainer numColumns="2">
      <figure>
-       <img src="../assets/modeling/textures-decals/Texture-On-Surface.jpg" />
+       <img src="../assets/modeling/textures-decals/Texture-On-Surface.jpg" alt="A block part with a repeating blue hexagon texture on its top face." />
        <figcaption>Default</figcaption>
      </figure>
      <figure>
-       <img src="../assets/modeling/textures-decals/Texture-Color3-255-0-100.jpg" />
+       <img src="../assets/modeling/textures-decals/Texture-Color3-255-0-100.jpg" alt="The same block part with a repeating hexagon texture on its top face, but the hexagons are pink against on dark purple background." />
        <figcaption>Color3 = [255, 0, 100]</figcaption>
      </figure>
    </GridContainer>
@@ -86,11 +86,11 @@ To add a texture or decal to a part or union:
 
    <GridContainer numColumns="2">
      <figure>
-       <img src="../assets/modeling/textures-decals/Texture-On-Surface.jpg" />
+       <img src="../assets/modeling/textures-decals/Texture-On-Surface.jpg" alt="A block part with a repeating blue hexagon texture on its top face." />
        <figcaption>Default</figcaption>
      </figure>
      <figure>
-       <img src="../assets/modeling/textures-decals/Texture-Transparency-0.4.jpg" />
+       <img src="../assets/modeling/textures-decals/Texture-Transparency-0.4.jpg" alt="The same block part with a repeating hexagon texture on its top face, but the hexagons are semi-transparent." />
        <figcaption>Transparency = 0.6</figcaption>
      </figure>
    </GridContainer>
@@ -101,11 +101,11 @@ A **face** is a surface on a part/union that displays a texture or decal: **Top*
 
 <GridContainer numColumns="2">
   <figure>
-    <img src="../assets/modeling/textures-decals/Texture-Face-Front.jpg" />
+    <img src="../assets/modeling/textures-decals/Texture-Face-Front.jpg" alt="A block part with a texture that displays on the block's front face. The Show Orientation Indicator highlights the block's front face orientation." />
     <figcaption>Front</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/textures-decals/Texture-Face-Top.jpg" />
+    <img src="../assets/modeling/textures-decals/Texture-Face-Top.jpg" alt="A block part with a texture that displays on the block's top face. The Show Orientation Indicator highlights the block's front face orientation." />
     <figcaption>Top</figcaption>
   </figure>
 </GridContainer>
@@ -114,7 +114,7 @@ To choose a face:
 
 1. **(Optional)** To assist in choosing the correct face, right-click the part/union and select **Show Orientation Indicator**. This displays a blue circle with an **F** and a line attached to the object's **Front** face, and a green arrow that points in the direction of the object's **Top** face.
 
-   <img src="../assets/modeling/textures-decals/Orientation-Indicator.jpg" width="600" />
+   <img src="../assets/modeling/textures-decals/Orientation-Indicator.jpg" alt="" width="600" />
 
 2. Select a texture or decal that is a child of the part or union.
 
@@ -132,15 +132,15 @@ The `Class.Texture.StudsPerTileU|StudsPerTileU` and `Class.Texture.StudsPerTileV
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/modeling/textures-decals/Decal-Texture-Sample-2.png" />
+    <img src="../assets/modeling/textures-decals/Decal-Texture-Sample-2.png" alt="An example texture image of a light blue hexagon on top of a dark blue background." />
     <figcaption>Texture Image</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/textures-decals/Texture-Sample-UV-1.png" />
+    <img src="../assets/modeling/textures-decals/Texture-Sample-UV-1.png" alt="The same texture on a surface of 8x6 studs with size of each tile in 2x2." />
     <figcaption>Surface of 8&times;6 Studs</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/textures-decals/Texture-Sample-UV-2.png" />
+    <img src="../assets/modeling/textures-decals/Texture-Sample-UV-2.png" alt="The same texture on a surface of 8x6 studs with size of each tile in 4x4." />
     <figcaption>Surface of 8&times;6 Studs</figcaption>
   </figure>
 </GridContainer>
@@ -157,15 +157,15 @@ If you want more control over a texture's position, offset the texture by adjust
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/modeling/textures-decals/Decal-Texture-Sample-2.png" />
+    <img src="../assets/modeling/textures-decals/Decal-Texture-Sample-2.png" alt="An example texture image of a light blue hexagon on top of a dark blue background." />
     <figcaption>Texture Image</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/textures-decals/Texture-Sample-Offset-1.png" />
+    <img src="../assets/modeling/textures-decals/Texture-Sample-Offset-1.png" alt="The same texture on a surface of 8x6 studs with an offset of 1 stud." />
     <figcaption>Surface of 8&times;6 Studs</figcaption>
   </figure>
   <figure>
-    <img src="../assets/modeling/textures-decals/Texture-Sample-Offset-2.png" />
+    <img src="../assets/modeling/textures-decals/Texture-Sample-Offset-2.png" alt="The same texture on a surface of 8x6 studs with an offset of 1.5 studs." />
     <figcaption>Surface of 8&times;6 Studs</figcaption>
   </figure>
 </GridContainer>

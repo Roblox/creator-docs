@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://apis.roblox.com/cloud"
+      "url": "https://apis.roblox.com"
     }
   ],
   "paths": {
@@ -16,6 +16,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Create Creator Store Product",
         "description": "Add a Creator Store product.",
         "operationId": "Cloud_CreateCreatorStoreProduct",
         "requestBody": {
@@ -61,6 +62,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get Creator Store Product",
         "description": "Get a Creator Store product.",
         "operationId": "Cloud_GetCreatorStoreProduct",
         "parameters": [
@@ -105,6 +107,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Update Creator Store Product",
         "description": "Update a Creator Store product.",
         "operationId": "Cloud_UpdateCreatorStoreProduct",
         "parameters": [
@@ -183,6 +186,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get Group",
         "description": "Gets the specified group.",
         "operationId": "Cloud_GetGroup",
         "parameters": [
@@ -227,6 +231,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Group Join Requests",
         "description": "List join requests under a group.",
         "operationId": "Cloud_ListGroupJoinRequests",
         "parameters": [
@@ -310,6 +315,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Accept Group Join Request",
         "description": "Accepts a join request.",
         "operationId": "Cloud_AcceptGroupJoinRequest",
         "parameters": [
@@ -369,6 +375,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Decline Group Join Request",
         "description": "Declines a join request.",
         "operationId": "Cloud_DeclineGroupJoinRequest",
         "parameters": [
@@ -428,6 +435,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Group Memberships",
         "description": "List group members in a group.",
         "operationId": "Cloud_ListGroupMemberships",
         "parameters": [
@@ -509,6 +517,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Update Group Membership",
         "description": "Updates the group membership for a particular group member. This action\n requires the requester to be able to manage lower ranked members. Guest or\n Owner ranks cannot be assigned, and a requester cannot change their own\n rank.",
         "operationId": "Cloud_UpdateGroupMembership",
         "parameters": [
@@ -574,6 +583,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Group Roles",
         "description": "List roles in a group.\n\n The permissions field for roles is viewable based on the requester's access\n and scopes.\n\n Permissions for the guest role are always visible - a scope is not needed.\n\n If the requester is a member of the group and has the `group:read` scope,\n permissions in their role are visible.\n\n If the requester is the owner of the group and has the `group:read` scope,\n permissions in all roles are visible.",
         "operationId": "Cloud_ListGroupRoles",
         "parameters": [
@@ -647,7 +657,8 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Gets the group role.",
+        "summary": "Get Group Role",
+        "description": "Get the group role",
         "operationId": "Cloud_GetGroupRole",
         "parameters": [
           {
@@ -700,6 +711,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get Group Shout",
         "description": "Gets the group shout.\n\n If a guest can view the group shout, this is always retrievable.\n\n If a guest cannot, a member who has the permissions to view the group\n shout, along with the `group:read` scope, will be able to read the group\n shout.",
         "operationId": "Cloud_GetGroupShout",
         "parameters": [
@@ -744,6 +756,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get Universe",
         "description": "Gets the specified universe.",
         "operationId": "Cloud_GetUniverse",
         "parameters": [
@@ -786,6 +799,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Update Universe",
         "description": "Updates the specified universe.\n\n This method is guaranteed to return all updated fields.\n This method may additionally return the full resource.",
         "operationId": "Cloud_UpdateUniverse",
         "parameters": [
@@ -851,6 +865,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Data Stores",
         "description": "Returns a list of data stores.",
         "operationId": "Cloud_ListDataStores",
         "parameters": [
@@ -934,6 +949,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Data Store Entries",
         "description": "Returns a list of entries from a data store.\n\n Only the `path` and `id` fields are populated; use `GetDataStoreEntry`\n to retrieve other fields.\n\n Specify the wildcard scope (`-`) to list entries from all scopes.",
         "operationId": "Cloud_ListDataStoreEntries",
         "parameters": [
@@ -1037,6 +1053,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Create Data Store Entry",
         "description": "Creates an entry with the provided ID and value.\n\n Returns a 400 Bad Request if the entry exists.",
         "operationId": "Cloud_CreateDataStoreEntry",
         "parameters": [
@@ -1122,7 +1139,8 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Gets the specified entry.\n\n To get the entry at a specific revision, add `@<revisionId>` to the end of\n the path.\n\n For example, to get `my-entry` at the revision ID\n `08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\n If your entry ID contains one or more `@` characters, and you want to get\n the latest version rather than at any specific revision, append the special\n revision ID `@latest` to the end of the path. Otherwise, the segment of the\n entry ID after the last `@` will be interpreted as a revision ID.\n\n For example, to get the latest revision of `my-entry`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.",
+        "summary": "Get Data Store Entry",
+        "description": "Gets the specified entry.\n\n To get the entry at a specific revision, add `@<revisionId>` to the end of\n the path.\n\n For example, to get `my-entry` at the revision ID\n `08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\n If your entry ID contains one or more `@` characters, and you want to get\n the latest version rather than at any specific revision, append the special\n revision ID `@latest` to the end of the path. Otherwise, the segment of the\n entry ID after the last `@` will be interpreted as a revision ID.\n\n For example, to get the latest revision of `my-entry`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.\n\n To get the entry that was current at a specific time, add\n `@latest:<timestamp>` to the end of the path, where `<timestamp>` is\n RFC-3339 formatted. The given timestamp must be after\n the Unix epoch (1/1/1970) and not more than ten minutes in the future.\n\n For example, to get the revision of `my-entry` that was current on\n 12/2/2024 at 06:00 UTC, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@latest:2024-12-02T06:00:00Z`.",
         "operationId": "Cloud_GetDataStoreEntry",
         "parameters": [
           {
@@ -1184,6 +1202,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Delete Data Store Entry",
         "description": "Marks the specified entry for deletion.\n\n Entries are not be deleted immediately; instead, the `state` field will\n be set to `DELETED`. Permanent deletion occurs after 30 days.\n\n On success, returns 200 OK. If the entry doesn't exist, returns\n 404 Not Found.",
         "operationId": "Cloud_DeleteDataStoreEntry",
         "parameters": [
@@ -1240,6 +1259,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Update Data Store Entry",
         "description": "Updates the value, attributes, and users of an entry.\n\n Updating specific revisions of the entry is **unsupported**. If you specify\n a revision ID in the path and `allow_missing` is `true`, the update request\n will instead create a new entry with the `@<revisionId>` suffix as part of\n the key.\n\n Partial update is **unsupported**. If attributes or users are not\n provided when updating the value, they will be cleared. Value must always\n be provided when updating an entry.",
         "operationId": "Cloud_UpdateDataStoreEntry",
         "parameters": [
@@ -1327,6 +1347,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Increment Data Store Entry",
         "description": "Increments the value of the specified entry. Both the existing value and\n the increment amount must be integers.\n\n If the entry doesn't exist, creates an entry with the specified value.\n\n Incrementing specific revisions of the entry is **unsupported**. If you\n specify a revision ID in the path, the increment request will create a new\n entry with the `@<revisionId>` suffix as part of the key.\n\n Known issue: the value may be incremented past the valid range of  values.\n When this happens, the returned value will be clamped to the valid range,\n but the backend may persist the original value. This behavior is maintained\n for backwards compatibility reasons, but may change in a future version of\n this API.",
         "operationId": "Cloud_IncrementDataStoreEntry",
         "parameters": [
@@ -1402,6 +1423,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Data Store Entry Revisions",
         "description": "List revisions of the data store entry.\n\n This method returns partial data store entries.\n\n In particular, only the `path`, `id`, `createTime`, `revisionCreateTime`,\n `revisionId`, `etag`, and `state` fields are populated. Both the `path` and\n `id` fields will have an `@<version>` suffix.\n\n In order to get the full entry at a revision, you can use the provided\n `path` field with the `GetDataStoreEntry` method, i.e. `GET\n /v1/universes/1234/data-stores/5678/entries/my-entry@<version>`.",
         "operationId": "Cloud_ListDataStoreEntryRevisions",
         "parameters": [
@@ -1503,6 +1525,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Data Store Entries",
         "description": "Returns a list of entries from a data store.\n\n Only the `path` and `id` fields are populated; use `GetDataStoreEntry`\n to retrieve other fields.\n\n Specify the wildcard scope (`-`) to list entries from all scopes.",
         "operationId": "Cloud_ListDataStoreEntries",
         "parameters": [
@@ -1615,6 +1638,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Create Data Store Entry",
         "description": "Creates an entry with the provided ID and value.\n\n Returns a 400 Bad Request if the entry exists.",
         "operationId": "Cloud_CreateDataStoreEntry",
         "parameters": [
@@ -1709,7 +1733,8 @@
         "tags": [
           "Cloud"
         ],
-        "description": "Gets the specified entry.\n\n To get the entry at a specific revision, add `@<revisionId>` to the end of\n the path.\n\n For example, to get `my-entry` at the revision ID\n `08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\n If your entry ID contains one or more `@` characters, and you want to get\n the latest version rather than at any specific revision, append the special\n revision ID `@latest` to the end of the path. Otherwise, the segment of the\n entry ID after the last `@` will be interpreted as a revision ID.\n\n For example, to get the latest revision of `my-entry`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.",
+        "summary": "Get Data Store Entry",
+        "description": "Gets the specified entry.\n\n To get the entry at a specific revision, add `@<revisionId>` to the end of\n the path.\n\n For example, to get `my-entry` at the revision ID\n `08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@08DC3D3F43F9FCC1.0000000001.08DC3D3F43F9FCC1.01`.\n\n If your entry ID contains one or more `@` characters, and you want to get\n the latest version rather than at any specific revision, append the special\n revision ID `@latest` to the end of the path. Otherwise, the segment of the\n entry ID after the last `@` will be interpreted as a revision ID.\n\n For example, to get the latest revision of `my-entry`, use the path\n `/v2/universes/1234/data-stores/5678/entries/my@entry@latest`.\n\n To get the entry that was current at a specific time, add\n `@latest:<timestamp>` to the end of the path, where `<timestamp>` is\n RFC-3339 formatted. The given timestamp must be after\n the Unix epoch (1/1/1970) and not more than ten minutes in the future.\n\n For example, to get the revision of `my-entry` that was current on\n 12/2/2024 at 06:00 UTC, use the path\n `/v2/universes/1234/data-stores/5678/entries/my-entry@latest:2024-12-02T06:00:00Z`.",
         "operationId": "Cloud_GetDataStoreEntry",
         "parameters": [
           {
@@ -1780,6 +1805,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Delete Data Store Entry",
         "description": "Marks the specified entry for deletion.\n\n Entries are not be deleted immediately; instead, the `state` field will\n be set to `DELETED`. Permanent deletion occurs after 30 days.\n\n On success, returns 200 OK. If the entry doesn't exist, returns\n 404 Not Found.",
         "operationId": "Cloud_DeleteDataStoreEntry",
         "parameters": [
@@ -1845,6 +1871,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Update Data Store Entry",
         "description": "Updates the value, attributes, and users of an entry.\n\n Updating specific revisions of the entry is **unsupported**. If you specify\n a revision ID in the path and `allow_missing` is `true`, the update request\n will instead create a new entry with the `@<revisionId>` suffix as part of\n the key.\n\n Partial update is **unsupported**. If attributes or users are not\n provided when updating the value, they will be cleared. Value must always\n be provided when updating an entry.",
         "operationId": "Cloud_UpdateDataStoreEntry",
         "parameters": [
@@ -1941,6 +1968,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Increment Data Store Entry",
         "description": "Increments the value of the specified entry. Both the existing value and\n the increment amount must be integers.\n\n If the entry doesn't exist, creates an entry with the specified value.\n\n Incrementing specific revisions of the entry is **unsupported**. If you\n specify a revision ID in the path, the increment request will create a new\n entry with the `@<revisionId>` suffix as part of the key.\n\n Known issue: the value may be incremented past the valid range of  values.\n When this happens, the returned value will be clamped to the valid range,\n but the backend may persist the original value. This behavior is maintained\n for backwards compatibility reasons, but may change in a future version of\n this API.",
         "operationId": "Cloud_IncrementDataStoreEntry",
         "parameters": [
@@ -2025,6 +2053,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Data Store Entry Revisions",
         "description": "List revisions of the data store entry.\n\n This method returns partial data store entries.\n\n In particular, only the `path`, `id`, `createTime`, `revisionCreateTime`,\n `revisionId`, `etag`, and `state` fields are populated. Both the `path` and\n `id` fields will have an `@<version>` suffix.\n\n In order to get the full entry at a revision, you can use the provided\n `path` field with the `GetDataStoreEntry` method, i.e. `GET\n /v1/universes/1234/data-stores/5678/entries/my-entry@<version>`.",
         "operationId": "Cloud_ListDataStoreEntryRevisions",
         "parameters": [
@@ -2135,6 +2164,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Snapshot Data Stores",
         "description": "Takes a new snapshot of the data stores in an experience.\n\n After a snapshot, the next write to every key in the experience will\n create a versioned backup of the previous data, regardless of the time of\n the last write.\n\n In effect, all data current at the time of the snapshot is guaranteed to be\n available as a versioned backup for at least 30 days.\n\n Snapshots can be taken once per UTC day, per experience. If the latest\n snapshot was taken within the same UTC day, this operation is a no-op and\n the time of the latest snapshot will be returned.\n\n For more information on using snapshots, see the [Data\n Stores](https://create.roblox.com/docs/cloud-services/data-stores#snapshots)\n Engine guide.",
         "operationId": "Cloud_SnapshotDataStores",
         "parameters": [
@@ -2191,6 +2221,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Create Memory Store Queue Item",
         "description": "Creates a new queue item.\n\n If `ttl` is set, the item will automatically be removed from the queue\n after the time interval specified.\n\n If a numerical `priority` is set, the item will be inserted into the queue\n based on the priority value. The higher the value, the closer to the front\n of the queue the item will be. If priority values are the same then the\n item will be inserted after existing values with the same priority.",
         "operationId": "Cloud_CreateMemoryStoreQueueItem",
         "parameters": [
@@ -2256,6 +2287,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Discard Memory Store Queue Items",
         "description": "Discards read items from the front of the queue.\n\n Takes a `readId` from a previous `Read` operation.",
         "operationId": "Cloud_DiscardMemoryStoreQueueItems",
         "parameters": [
@@ -2315,6 +2347,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Read Memory Store Queue Items",
         "description": "Returns the specified number of items at the front of the queue.",
         "operationId": "Cloud_ReadMemoryStoreQueueItems",
         "parameters": [
@@ -2408,6 +2441,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Memory Store Sorted Map Items",
         "description": "Gets and returns items in the map with a given order and filter.",
         "operationId": "Cloud_ListMemoryStoreSortedMapItems",
         "parameters": [
@@ -2506,6 +2540,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Create Memory Store Sorted Map Item",
         "description": "Creates the specified map item if it doesn't exist.",
         "operationId": "Cloud_CreateMemoryStoreSortedMapItem",
         "parameters": [
@@ -2592,6 +2627,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get Memory Store Sorted Map Item",
         "description": "Gets and returns the value of the given key in the map.",
         "operationId": "Cloud_GetMemoryStoreSortedMapItem",
         "parameters": [
@@ -2654,6 +2690,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Delete Memory Store Sorted Map Item",
         "description": "Deletes the specified item from the map.",
         "operationId": "Cloud_DeleteMemoryStoreSortedMapItem",
         "parameters": [
@@ -2710,6 +2747,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Update Memory Store Sorted Map Item",
         "description": "Updates the specified map item.",
         "operationId": "Cloud_UpdateMemoryStoreSortedMapItem",
         "parameters": [
@@ -2797,6 +2835,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Flush Memory Store",
         "description": "Asynchronously flush all data structures in the universe.",
         "operationId": "Cloud_FlushMemoryStore",
         "parameters": [
@@ -2869,6 +2908,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Ordered Data Store Entries",
         "description": "Returns a list of entries from an ordered data store.",
         "operationId": "Cloud_ListOrderedDataStoreEntries",
         "parameters": [
@@ -2976,6 +3016,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Create Ordered Data Store Entry",
         "description": "Creates an entry with the provided ID and value.\n\n Returns a 400 Bad Request if the entry exists.",
         "operationId": "Cloud_CreateOrderedDataStoreEntry",
         "parameters": [
@@ -3070,6 +3111,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get Ordered Data Store Entry",
         "description": "Gets the specified entry.",
         "operationId": "Cloud_GetOrderedDataStoreEntry",
         "parameters": [
@@ -3141,6 +3183,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Delete Ordered Data Store Entry",
         "description": "Deletes the specified entry.\n\n On success, returns 200 OK. If the entry doesn't exist, returns\n 404 Not Found.",
         "operationId": "Cloud_DeleteOrderedDataStoreEntry",
         "parameters": [
@@ -3206,6 +3249,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Update Ordered Data Store Entry",
         "description": "Updates the value of an entry.",
         "operationId": "Cloud_UpdateOrderedDataStoreEntry",
         "parameters": [
@@ -3302,6 +3346,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Increment Ordered Data Store Entry",
         "description": "Increments the value of the specified entry. Both the existing value and\n the increment amount must be integers.\n\n If the entry doesn't exist, creates an entry with the specified value.\n\n Known issue: the value may be incremented past the valid range of  values.\n When this happens, the returned value will be clamped to the valid range,\n but the backend may persist the original value. This behavior is maintained\n for backwards compatibility reasons, but may change in a future version of\n this API.",
         "operationId": "Cloud_IncrementOrderedDataStoreEntry",
         "parameters": [
@@ -3385,6 +3430,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get Place",
         "description": "Gets the specified place.",
         "operationId": "Cloud_GetPlace",
         "parameters": [
@@ -3436,6 +3482,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Update Place",
         "description": "Updates the specified place.",
         "operationId": "Cloud_UpdatePlace",
         "parameters": [
@@ -3510,6 +3557,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get Instance",
         "description": "Gets an instance and its property data.\n\n The maximum supported response data size is 500,000 bytes. If this limit is\n exceeded, the returned `Operation` will be completed with an error result\n that has an error code of `422`.",
         "operationId": "Cloud_GetInstance",
         "parameters": [
@@ -3588,6 +3636,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Update Instance",
         "description": "Updates an instance's property data.\n\n When updating a `Script` instance's source property, the maximum supported\n property size is 200,000 bytes after UTF-8 encoding.",
         "operationId": "Cloud_UpdateInstance",
         "parameters": [
@@ -3687,6 +3736,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Instance Children",
         "description": "Lists an instance's children.\n\n The maximum supported response data size is 500,000 bytes. If this limit is\n exceeded, the returned `Operation` will be completed with an error result\n that has an error code of `422`.",
         "operationId": "Cloud_ListInstanceChildren",
         "parameters": [
@@ -3796,6 +3846,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Create Luau Execution Session Task",
         "description": "Creates a task but does not wait for the task to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
         "operationId": "Cloud_CreateLuauExecutionSessionTask",
         "parameters": [
@@ -3861,6 +3912,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Luau Execution Session Task Logs",
         "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
         "operationId": "Cloud_ListLuauExecutionSessionTaskLogs",
         "parameters": [
@@ -3955,6 +4007,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get Luau Execution Session Task",
         "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
         "operationId": "Cloud_GetLuauExecutionSessionTask",
         "parameters": [
@@ -4049,6 +4102,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Luau Execution Session Task Logs",
         "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
         "operationId": "Cloud_ListLuauExecutionSessionTaskLogs",
         "parameters": [
@@ -4152,6 +4206,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List User Restrictions",
         "description": "List user restrictions for users that have ever been banned in either a\n universe or a specific place.",
         "operationId": "Cloud_ListUserRestrictions",
         "parameters": [
@@ -4244,6 +4299,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get User Restriction",
         "description": "Get the user restriction.",
         "operationId": "Cloud_GetUserRestriction",
         "parameters": [
@@ -4306,6 +4362,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Update User Restriction",
         "description": "Update the user restriction.",
         "operationId": "Cloud_UpdateUserRestriction",
         "parameters": [
@@ -4412,6 +4469,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Create Luau Execution Session Task",
         "description": "Creates a task but does not wait for the task to complete.\n\n To check whether a task has\n completed, call the `GetLuauExecutionSessionTask` method and inspect the\n `state` field of the returned resource.\n\n Quotas:\n * 5 calls per minute per API key owner\n * 45 calls per minute per IP address",
         "operationId": "Cloud_CreateLuauExecutionSessionTask",
         "parameters": [
@@ -4486,6 +4544,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Luau Execution Session Task Logs",
         "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
         "operationId": "Cloud_ListLuauExecutionSessionTaskLogs",
         "parameters": [
@@ -4589,6 +4648,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get Luau Execution Session Task",
         "description": "Gets information about a task.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
         "operationId": "Cloud_GetLuauExecutionSessionTask",
         "parameters": [
@@ -4692,6 +4752,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Luau Execution Session Task Logs",
         "description": "Lists log chunks generated by a `LuauExecutionSessionTask`.\n\n Quotas:\n * 45 calls per minute per API key owner or IP address",
         "operationId": "Cloud_ListLuauExecutionSessionTaskLogs",
         "parameters": [
@@ -4804,6 +4865,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get Subscription",
         "description": "Get the subscription.\n\n The `universe.subscription-product.subscription:read` scope only allows\n you to get your own subscriptions—or rather, the subscription ID must\n match the user ID that makes the request—so its best use case is with\n OAuth 2.0 authentication rather than an API key. To read all\n subscriptions for a universe, use the `universe:write` scope.",
         "operationId": "Cloud_GetSubscription",
         "parameters": [
@@ -4889,6 +4951,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List User Restrictions",
         "description": "List user restrictions for users that have ever been banned in either a\n universe or a specific place.",
         "operationId": "Cloud_ListUserRestrictions",
         "parameters": [
@@ -4972,6 +5035,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get User Restriction",
         "description": "Get the user restriction.",
         "operationId": "Cloud_GetUserRestriction",
         "parameters": [
@@ -5025,6 +5089,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Update User Restriction",
         "description": "Update the user restriction.",
         "operationId": "Cloud_UpdateUserRestriction",
         "parameters": [
@@ -5122,6 +5187,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List User Restriction Logs",
         "description": "List changes to UserRestriction resources within a given universe.\n This includes both universe-level and place-level restrictions.\n\n For universe-level restriction logs, the `place` field will be empty.",
         "operationId": "Cloud_ListUserRestrictionLogs",
         "parameters": [
@@ -5205,6 +5271,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Restart Universe Servers",
         "description": "Restarts all active servers for a specific universe if and only if a new\n version of the experience has been published. Used for releasing experience\n updates.",
         "operationId": "Cloud_RestartUniverseServers",
         "parameters": [
@@ -5261,6 +5328,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Get User",
         "description": "Gets a user's basic and advanced information.\n\n To access a user's public information, no additional scopes are required.\n\n To access a user's verification status, you need the following scopes:\n * user.advanced.read\n\n To access a user's social account information, you need the following\n scopes:\n * user.social.read",
         "operationId": "Cloud_GetUser",
         "parameters": [
@@ -5305,6 +5373,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "List Inventory Items",
         "description": "List the inventory items in a user's inventory.\n\n The inventory items returned depend on the target user’s choice under\n **Settings > Privacy > Who can see my inventory?**:\n * If the user granted inventory visibility to \"Everyone,\" then any API key\n or OAuth2 token can be used to view the target’s inventory, no matter what\n scopes it has or who created it.\n * If the user has not granted inventory visibility to \"Everyone\":\n   * Their inventory can still be viewed with an API key created by the\n   target user with **Inventory: Read** permission.\n   * Their inventory can still be viewed with an OAuth2 token if the target\n   user authorizes an app requesting permissions for the\n   `user.inventory-item:read` scope.",
         "operationId": "Cloud_ListInventoryItems",
         "parameters": [
@@ -5386,6 +5455,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Create User Notification",
         "description": "Sends a notification to a user.",
         "operationId": "Cloud_CreateUserNotification",
         "parameters": [
@@ -5442,6 +5512,7 @@
         "tags": [
           "Cloud"
         ],
+        "summary": "Generate User Thumbnail",
         "description": "Generates and returns the URL for the user's avatar thumbnail.",
         "operationId": "Cloud_GenerateUserThumbnail",
         "parameters": [
@@ -7099,7 +7170,7 @@
             "description": "Present when the task execution succeeds. Contains the output of the\n execution."
           }
         },
-        "description": "A `LuauExecutionSessionTask` (\"task\" for short) executes a given Luau script\n in the context of a specific version of a place.\n\n In a task, physics simulation does not run. Server and local scripts within\n the place also do not automatically run.\n\n The script may access and update the data model of the place, including\n invoking any module scripts. However, data model changes are local to the\n task and cannot be persisted.\n\n The script can also invoke engine APIs that read and/or modify data stored in\n the cloud, such as those for DataStores. Exercise caution when using these\n APIs.\n\n Scripts can be up to 4 MB in size and run for up to 30 seconds. Scripts that\n run for longer than 30 seconds terminate with an error.\n\n Scripts are executed as-is and do not need to be wrapped in a function.\n\n Scripts can return values (using the Luau `return` keyword). Return values\n are serialized to JSON and can be retrieved with the `Get\n LuauExecutionSessionTask` API after the task completes. The total size of the\n return values after JSON serialization must not exceed 4 MB. If the limit is\n exceeded, the task terminates with an error.\n\n If the script raises an unhandled error, the task terminates. The error\n information can be retrieved with the `GetLuauExecutionSessionTask` API.\n\n Standard output (generated by the Luau `print` function) can be retrieved\n with the `ListLuauExecutionSessionTaskLogs` method after the task completes.\n A maximum of 450 KB of logs are retained. If the amount of logs exceeds the\n limit, older logs are discarded.\n\n Information about a task is retained for 24 hours after task completion.\n\n At most ten incomplete tasks are allowed per place. Attempting to create more\n tasks while the first ten are incomplete results in a HTTP 429 response.",
+        "description": "A `LuauExecutionSessionTask` (\"task\" for short) executes a given Luau script\n in the context of a specific version of a place.\n\n In a task, physics simulation does not run. Server and local scripts within\n the place also do not automatically run.\n\n The script may access and update the data model of the place, including\n invoking any module scripts. However, data model changes are local to the\n task and cannot be persisted.\n\n The script can also invoke engine APIs that read and/or modify data stored in\n the cloud, such as those for DataStores. Exercise caution when using such\n APIs.\n\n Scripts can be up to 4 MB in size and run for up to 30 seconds. Scripts that\n run for longer than 30 seconds terminate with an error.\n\n Scripts are executed as-is and do not need to be wrapped in a function.\n\n Scripts can return values (using the Luau `return` keyword). Return values\n are serialized to JSON and can be retrieved with the `Get\n LuauExecutionSessionTask` API after the task completes. The total size of the\n return values after JSON serialization must not exceed 4 MB. If the limit is\n exceeded, the task terminates with an error.\n\n If the script raises an unhandled error, the task terminates. The error\n information can be retrieved with the `GetLuauExecutionSessionTask` API.\n\n Standard output (generated by the Luau `print` function) can be retrieved\n with the `ListLuauExecutionSessionTaskLogs` method after the task completes.\n A maximum of 450 KB of logs are retained. If the amount of logs exceeds the\n limit, older logs are discarded.\n\n Information about a task is retained for 24 hours after task completion.\n\n At most ten incomplete tasks are allowed per place. Attempting to create more\n tasks while the first ten are incomplete results in a HTTP 429 response.",
         "x-resource": true,
         "x-oneOf": {
           "result": [

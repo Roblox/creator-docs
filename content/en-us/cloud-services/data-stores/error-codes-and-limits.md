@@ -211,6 +211,12 @@ Requests you make to data stores can fail due to poor connectivity or other issu
   </tr>
   <tr>
     <td></td>
+    <td>`GetVersionAtTimeAsyncThrottle`</td>
+    <td>`GetVersionAtTimeAsync` request dropped. Request was throttled.</td>
+    <td>`Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()` request has exceeded the maximum queue size and Roblox is unable to process the requests at the current throughput.</td>
+  </tr>
+  <tr>
+    <td></td>
     <td>`ListDataStoresAsyncThrottle`</td>
     <td>`ListDataStoresAsync` request dropped. Request was throttled.</td>
     <td>`Class.DataStoreService:ListDataStoresAsync()|ListDataStoresAsync()` request has exceeded the maximum queue size and Roblox is unable to process the requests at the current throughput.</td>
@@ -232,6 +238,13 @@ Requests you make to data stores can fail due to poor connectivity or other issu
     <td>`RemoveVersionAsyncThrottle`</td>
     <td>`RemoveVersionAsync` request dropped. Request was throttled.</td>
     <td>`Class.DataStore:RemoveVersionAsync()|RemoveVersionAsync()` request has exceeded the maximum queue size and Roblox is unable to process the requests at the current throughput.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>`InvalidTimestamp`</td>
+    <td>Timestamp must be positive and not more than ten minutes in the future.</td>
+    <td>The timestamp provided to `Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()` was not valid.</td>
     <td></td>
   </tr>
 </tbody>
@@ -339,7 +352,7 @@ Each server is allowed a certain number of data store requests based on the requ
   </tr>
   <tr>
     <td><b>Get Version</b></td>
-    <td>`Class.DataStore:GetVersionAsync()|GetVersionAsync()`</td>
+    <td>`Class.DataStore:GetVersionAsync()|GetVersionAsync()`<br></br>`Class.DataStore:GetVersionAtTimeAsync()|GetVersionAtTimeAsync()`</td>
     <td>5 + numPlayers × 2</td>
   </tr>
   <tr>

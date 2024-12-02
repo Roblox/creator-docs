@@ -23,15 +23,15 @@ are three types of light sources:
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/lighting-and-effects/light-sources/PointLight-Range-8.jpg" />
+    <img src="../assets/lighting-and-effects/light-sources/PointLight-Range-8.jpg" alt="" />
     <figcaption>Point Lights</figcaption>
   </figure>
   <figure>
-    <img src="../assets/lighting-and-effects/light-sources/SpotLight-Face-Bottom.jpg" />
+    <img src="../assets/lighting-and-effects/light-sources/SpotLight-Face-Bottom.jpg" alt="" />
     <figcaption>Spotlights</figcaption>
   </figure>
   <figure>
-    <img src="../assets/lighting-and-effects/light-sources/SurfaceLight-Angle-0.jpg" />
+    <img src="../assets/lighting-and-effects/light-sources/SurfaceLight-Angle-0.jpg" alt="" />
     <figcaption>Surface Lights</figcaption>
   </figure>
 </GridContainer>
@@ -75,15 +75,15 @@ width="100%"></video>
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/ui/highlighting-objects/OutlineTransparency-1.jpg" />
+    <img src="../assets/ui/highlighting-objects/OutlineTransparency-1.jpg" alt="A tree mesh against a grey background." />
     <figcaption>Base object</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/Adding-Highlight.jpg" />
+    <img src="../assets/ui/highlighting-objects/Adding-Highlight.jpg" alt="The same tree mesh with a white outline and a red highlight interior." />
     <figcaption>White outline, 50% red interior</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/Overview-Yellow-Outline.jpg" />
+    <img src="../assets/ui/highlighting-objects/Overview-Yellow-Outline.jpg" alt="The same tree mesh with a yellow outline and a black highlight interior." />
     <figcaption>Yellow outline, black interior</figcaption>
   </figure>
 </GridContainer>
