@@ -593,6 +593,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://algoritmika.org/" title="Algorithmics">Algorithmics</a>
 <a href="https://coddyschool.com/courses/sozdanie_igr_v_roblox_studio/" title="CODDY">CODDY</a>
 <a href="https://start.codabra.org/" title="Codabra">Codabra</a>
+<a href="https://era-it-center.ru/roblox-studio/" title="Era IT">Era IT</a>
 <a href="https://excklusiveit.com/" title="Exclusive-It">Exclusive-It</a>
 <a href="https://impactacademies.ru/" title="impactRu">impact Academies and Camps</a>
 <a href="https://kiber-one.com/moduli/roblox-studio-sdelat-vse-chto-vy-mozhete-sebe-predstavit/" title="KIBERone Russia">KIBERone Russia</a>
