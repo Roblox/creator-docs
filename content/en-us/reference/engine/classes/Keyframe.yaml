@@ -22,7 +22,7 @@ description: |
   objects. The poses are named in accordance with the `Class.BasePart|BaseParts`
   they correspond to and are structured in terms of joint hierarchy. This means
   each `Class.Pose` is parented to the `Class.Pose` corresponding to the part it
-  is attached to. See below for a visual example.
+  is attached to.
 
   Note, as `Class.Pose|Poses` are named in accordance with the
   `Class.BasePart|BaseParts` they correspond to, animations require distinct
