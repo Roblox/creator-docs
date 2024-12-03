@@ -29,25 +29,25 @@ methods:
     deprecation_message: ''
   - name: Enum:FromName
     summary: |
-      Convert a enum name to an enum
+      Converts an enum name to an `Datatype.Enum`.
     description: |
-      Returns either the converted Enum, or nil
+      Returns either the converted `Datatype.Enum` or `nil`.
     parameters:
     returns:
       - type: Enum | nil
-        summary: 'Converts from string to enum'
+        summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: Enum:FromValue
     summary: |
-      Convert an enum value to an enum
+      Converts an enum value to an `Datatype.Enum`.
     description: |
-      Returns either the converted Enum, or nil
+      Returns either the converted `Datatype.Enum` or `nil`.
     parameters:
     returns:
       - type: Enum | nil
-        summary: 'Converts from a value to enum'
+        summary: ''
     code_samples: []
     tags: []
     deprecation_message: ''
