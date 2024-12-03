@@ -40,7 +40,14 @@
         ],
         "responses": {
           "200": {
-            "description": "Asset resource retrieved successfully."
+            "description": "Asset resource retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Asset"
+                }
+              }
+            }
           },
           "400": {
             "description": "Malformed request, likely due to an invalid read mask."
@@ -294,7 +301,16 @@
           }
         ],
         "responses": {
-          "200": { "description": "Asset version retrieved successfully." },
+          "200": {
+            "description": "Asset version retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetVersion"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden - API key without Read scope or user doesn't have access."
           },
@@ -352,7 +368,19 @@
           }
         ],
         "responses": {
-          "200": { "description": "Asset versions listed successfully." },
+          "200": {
+            "description": "Asset versions listed successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AssetVersion"
+                  }
+                }
+              }
+            }
+          },
           "400": { "description": "Bad request - invalid parameters." },
           "403": {
             "description": "Forbidden - API key without Read scope or user doesn't have access."
@@ -419,7 +447,16 @@
           }
         },
         "responses": {
-          "200": { "description": "Asset rolled back successfully." },
+          "200": {
+            "description": "Asset rolled back successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetVersion"
+                }
+              }
+            }
+          },
           "400": { "description": "Bad request - invalid request body." },
           "403": {
             "description": "Forbidden - API key without Write scope or user doesn't have access."
@@ -577,6 +614,22 @@
           }
         },
         "description": "Represents an asset."
+      },
+      "AssetVersion": {
+        "type": "object",
+        "properties": {
+          "creationContext": {
+            "$ref": "#/components/schemas/CreationContext"
+          },
+          "path": {
+            "type": "string",
+            "description": "The returned resource path of the asset version. Format: `assets/{assetId}/versions/{version}`. Example: `assets/2205400862/versions/1`."
+          },
+          "moderationResult": {
+            "$ref": "#/components/schemas/ModerationResult"
+          }
+        },
+        "description": "An asset version."
       },
       "CreationContext": {
         "type": "object",

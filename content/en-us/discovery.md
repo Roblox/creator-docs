@@ -67,7 +67,7 @@ New metric change insights are being actively tested on your **Experience Overvi
 
 If you have a brand new experience, you may not have enough users for recommendations to understand how your engagement and monetization metrics compare with other experiences.
 
-Consider driving new users to your experience with [social links](/production/promotion/audience-engagement.md#linking-to-social-media), [sponsored ads](./production/promotion/ads-manager.md#sponsored-experiences), and other channels so that recommendations can get enough signal. Roblox continues to add recommendations improvements to be better at discovering new experiences.
+Consider driving new users to your experience with [social media links](./production/promotion/social-media-links.md), [sponsored ads](./production/promotion/ads-manager.md#sponsored-experiences), and other channels so that recommendations can get enough signal. Roblox continues to add recommendations improvements to be better at discovering new experiences.
 
 ## Discovery for Other Surfaces
 

@@ -5,10 +5,6 @@ description: Experience Notifications are a way for users to keep up with their 
 
 import Intro from '../../includes/experience-notifications/intro.md'
 import Eligibility from '../../includes/experience-notifications/eligibility.md'
-import UserExperienceEnabling from '../../includes/experience-notifications/user-experience-enabling.md'
-import UserExperienceReceiving from '../../includes/experience-notifications/user-experience-receiving.md'
-import UserExperienceExamples from '../../includes/experience-notifications/user-experience-examples.md'
-import UserExperienceBestPractices from '../../includes/experience-notifications/user-experience-best-practices.md'
 import ImplementationCreateNotificationString from '../../includes/experience-notifications/implementation-create-notification-string.md'
 import DeliverySystem from '../../includes/experience-notifications/delivery-system.md'
 import AnalyticsOverview from '../../includes/experience-notifications/analytics-overview.md'
@@ -18,29 +14,13 @@ import Guidelines from '../../includes/experience-notifications/guidelines.md'
 
 <Intro components={props.components} />
 
-## Experience Eligibility Requirements
+## Eligibility Requirements
 
 <Eligibility components={props.components} />
 
-## User Experience
+## Usage Guidelines
 
-### Enabling Notifications
-
-Users of age 13+ are eligible to receive Experience Notifications and can enable them by clicking the **Notify** button on your experience's details screen, or through an [in‑experience permission prompt](#prompting-users-to-enable-notifications) within your experience.
-
-<UserExperienceEnabling components={props.components} />
-
-### Receiving Notifications
-
-<UserExperienceReceiving components={props.components} />
-
-### Example Notifications
-
-<UserExperienceExamples components={props.components} />
-
-### Best Practices
-
-<UserExperienceBestPractices components={props.components} />
+<Guidelines components={props.components} />
 
 ## Implementation
 
@@ -80,7 +60,9 @@ To implement Experience Notifications, you must obtain the Lua package from the 
 
 ### Sending an Experience Notification
 
-Once you've [created a notification string](#creating-a-notification-string) and included the [package](#including-the-package) in your project, you can send notifications from server‑side scripts.
+Once you've [created a notification string](#creating-a-notification-string) and included the [package](#including-the-package) in your project, you can send notifications from server‑side scripts. Notifications will be delivered to [opted-in](https://en.help.roblox.com/hc/en-us/articles/24769602332692-Out-of-Experience-Notifications) users age 13+ through their Roblox notification stream, at which point they can join the experience directly via the **Join** button on the notification and spawn according to your [launch data](#including-launch-and-analytics-data).
+
+<img src="../../assets/open-cloud/experience-notifications/Notification-Stream.png" width="393" alt="Notifications stream on the Roblox app" />
 
 To send a basic notification to a specific user, include the [notification string](#creating-a-notification-string) asset ID in the payload's `messageId` field, then call the [createUserNotification](#createusernotification) function with the recipient's `Class.Player.UserId` and the request data.
 
@@ -111,7 +93,7 @@ end
 
 To customize the notification for each recipient, you can include **parameters** in the [notification string](#creating-a-notification-string), then customize the parameters when calling the API. For example, you can define the notification string as:
 
-- <Typography variant="subtitle2" color="primary">\{userId-friend\} beat your high score by \{points\} points! Time to level up?</Typography>
+<p><Chip label="{userId-friend} beat your high score by {points} points! Time to level up?" size="large" color="primary" variant="outlined" /></p>
 
 Then, set the `userId-friend` and `points` parameters in the script:
 
@@ -237,10 +219,6 @@ end
 ### Itemized Stats
 
 <AnalyticsItemizedStats components={props.components} />
-
-## Guidelines
-
-<Guidelines components={props.components} />
 
 ## API Reference
 

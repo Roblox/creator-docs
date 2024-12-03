@@ -4,6 +4,33 @@ title: include
 
 <BaseAccordion>
 <AccordionSummary>
+<Typography variant="subtitle2">Best Practices</Typography>
+</AccordionSummary>
+<AccordionDetails>
+Notifications should be **personalized** to the receiver and should be based on in‑experience activity that's specifically relevant to the user. Inversely, notifications should not be of a generic, advertising nature.
+
+<Alert severity="success">
+<Typography variant="subtitle2">You're 2 races away from completing the weekly challenge!</Typography>
+</Alert>
+
+<Alert severity="error">
+<Typography variant="subtitle2">A new line of race cars just dropped in Race Car Craze. Check them out!</Typography>
+</Alert>
+
+Ideally, notifications should also alert users of something they can take **immediate action** on. Avoid purely informational notifications that do not prompt a direct response or action.
+
+<Alert severity="success">
+<Typography variant="subtitle2">Allie @LaterSk8er1 just beat your record on the Tokyo Tour track! Time for revenge?</Typography>
+</Alert>
+
+<Alert severity="error">
+<Typography variant="subtitle2">It's been a few days since you participated in a race with Allie @LaterSk8er1.</Typography>
+</Alert>
+</AccordionDetails>
+</BaseAccordion>
+
+<BaseAccordion>
+<AccordionSummary>
 <Typography variant="subtitle2">Respect Community Standards</Typography>
 </AccordionSummary>
 <AccordionDetails>
@@ -18,41 +45,29 @@ All notification content and behaviors are subject to Roblox's [Community Standa
 <AccordionDetails>
 Notification content is **not** permitted to incorporate dark patterns or other tactics that manipulate or deceive users into making choices they don't intend, or which may be counter to their best interests. This could include the following:
 
-- **Disguised Ads** &mdash; Notifications that are intentionally disguised as organic content, but are actually advertising.
+- **Disguised Ads** &mdash; Notifications that are intentionally disguised as organic content, but are actually advertising. For example, assume that clicking the following notification leads to Petz World but no "important information" is displayed.
 
-  <blockquote>
   <Alert severity="error">
-  <Typography variant="subtitle2">Click here for important information about your Petz World account.</Typography>
+	<Typography variant="subtitle2">Click here for important information about your Petz World account.</Typography>
   </Alert>
-	<figcaption>Clicking notification leads to Petz World but no "important information" is displayed</figcaption>
-	</blockquote>
 
 - **Time Pressured Actions** &mdash; Notifications that pressure users into clicking, subscribing, consenting, or purchasing through applying false time pressure.
 
-  <blockquote>
   <Alert severity="error">
   <Typography variant="subtitle2">Make a purchase in Petz World in the next 10 minutes to avoid missing out on important gameplay updates!</Typography>
   </Alert>
-  <figcaption>The information provided about the purchase reward is false/inaccurate</figcaption>
-  </blockquote>
 
-- **Bait-and-Switch with Free Items or Other Rewards** &mdash; Notifications that falsely tell users that they'll receive something for free when it's not.
+- **Bait-and-Switch with Free Items or Other Rewards** &mdash; Notifications that falsely tell users that they'll receive something for free when it's not. For example, upon clicking the following notification, it becomes clear that something further is required to get the gift.
 
-  <blockquote>
   <Alert severity="error">
   <Typography variant="subtitle2">Play Petz World now and get a free dog bed!</Typography>
   </Alert>
-  <figcaption>Upon clicking the notification, it becomes clear that something further is required to get the gift</figcaption>
-  </blockquote>
 
-- **Tricking Users Into Purchasing** &mdash; Notifications that trick users into making unintended purchases.
+- **Tricking Users Into Purchasing** &mdash; Notifications that trick users into making unintended purchases. For example, assume that clicking the following notification leads directly to a purchase system pre‑loaded with items that the user didn't choose to buy.
 
-  <blockquote>
   <Alert severity="error">
   <Typography variant="subtitle2">Check out our new Petz in Petz World!</Typography>
   </Alert>
-  <figcaption>When clicked, the user is brought directly to a purchase system pre‑loaded with items that the user didn't choose to buy</figcaption>
-  </blockquote>
 
 </AccordionDetails>
 </BaseAccordion>
