@@ -27,5 +27,29 @@ methods:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: Enum:FromName
+    summary: |
+      Convert a enum name to an enum
+    description: |
+      Returns either the converted Enum, or nil
+    parameters:
+    returns:
+      - type: Enum | nil
+        summary: 'Converts from string to enum'
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Enum:FromValue
+    summary: |
+      Convert an enum value to an enum
+    description: |
+      Returns either the converted Enum, or nil
+    parameters:
+    returns:
+      - type: Enum | nil
+        summary: 'Converts from a value to enum'
+    code_samples: []
+    tags: []
+    deprecation_message: ''
 functions:
 math_operations:
