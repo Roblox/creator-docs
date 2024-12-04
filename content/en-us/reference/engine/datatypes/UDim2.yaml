@@ -4,10 +4,10 @@ summary: |
   Represents a two-dimensional value where each dimension is composed of a
   relative scale and an absolute offset.
 description: |
-  The `UDim2` data type represents a two-dimensional value where each dimension
-  is composed of a relative scale and an absolute offset in pixels. It is a
-  combination of two `Datatype.UDim` data types representing the **X** and **Y**
-  dimensions. The most common usages for `UDim2` are setting the
+  The `Datatype.UDim2` data type represents a two-dimensional value where each
+  dimension is composed of a relative scale and an absolute offset in pixels. It
+  is a combination of two `Datatype.UDim` data types representing the **X** and
+  **Y** dimensions. The most common usages for `Datatype.UDim2` are setting the
   `Class.GuiObject.Size|Size` and `Class.GuiObject.Position|Position` of
   `Class.GuiObject|GuiObjects`.
 
@@ -22,10 +22,10 @@ deprecation_message: ''
 constructors:
   - name: UDim2.new
     summary: |
-      Returns a new `UDim2` with the coordinates of two zero `Datatype.UDim`
+      Returns a new `Datatype.UDim2` with the coordinates of two zero `Datatype.UDim`
       components representing each axis.
     description: |
-      Returns a new `UDim2` with the coordinates of two zero `Datatype.UDim`
+      Returns a new `Datatype.UDim2` with the coordinates of two zero `Datatype.UDim`
       components representing each axis.
     parameters:
     code_samples: []
@@ -33,10 +33,10 @@ constructors:
     deprecation_message: ''
   - name: UDim2.new
     summary: |
-      Returns a new `UDim2` given the coordinates of the two `Datatype.UDim`
+      Returns a new `Datatype.UDim2` given the coordinates of the two `Datatype.UDim`
       components representing each axis.
     description: |
-      Returns a new `UDim2` given the coordinates of the two `Datatype.UDim`
+      Returns a new `Datatype.UDim2` given the coordinates of the two `Datatype.UDim`
       components representing each axis.
     parameters:
       - name: xScale
@@ -64,10 +64,10 @@ constructors:
     deprecation_message: ''
   - name: UDim2.new
     summary: |
-      Returns a new `UDim2` from the given `Datatype.UDim` objects representing
+      Returns a new `Datatype.UDim2` from the given `Datatype.UDim` objects representing
       the **X** and **Y** dimensions, respectively.
     description: |
-      Returns a new `UDim2` from the given `Datatype.UDim` objects representing
+      Returns a new `Datatype.UDim2` from the given `Datatype.UDim` objects representing
       the **X** and **Y** dimensions, respectively.
     parameters:
       - name: x
@@ -83,9 +83,9 @@ constructors:
     deprecation_message: ''
   - name: UDim2.fromScale
     summary: |
-      Returns a new `UDim2` with the given scale components and no offsets.
+      Returns a new `Datatype.UDim2` with the given scale components and no offsets.
     description: |
-      Returns a new `UDim2` with the given scalar coordinates and no offsets.
+      Returns a new `Datatype.UDim2` with the given scalar coordinates and no offsets.
       Equivalent to:
 
       ```lua
@@ -105,9 +105,9 @@ constructors:
     deprecation_message: ''
   - name: UDim2.fromOffset
     summary: |
-      Returns a new `UDim2` with the given offset components and no scaling.
+      Returns a new `Datatype.UDim2` with the given offset components and no scaling.
     description: |
-      Returns a new `UDim2` with the given offset coordinates and no scaling. Equivalent to:
+      Returns a new `Datatype.UDim2` with the given offset coordinates and no scaling. Equivalent to:
 
       ```lua
       UDim2.fromOffset(xOffset, yOffset) == UDim2.new(0, xOffset, 0, yOffset)
@@ -129,46 +129,46 @@ properties:
   - name: UDim2.X
     type: UDim
     summary: |
-      The **X** dimension scale and offset of the `UDim2`.
+      The **X** dimension scale and offset of the `Datatype.UDim2`.
     description: |
-      The **X** dimension scale and offset of the `UDim2`.
+      The **X** dimension scale and offset of the `Datatype.UDim2`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim2.Y
     type: UDim
     summary: |
-      The **Y** dimension scale and offset of the `UDim2`.
+      The **Y** dimension scale and offset of the `Datatype.UDim2`.
     description: |
-      The **Y** dimension scale and offset of the `UDim2`.
+      The **Y** dimension scale and offset of the `Datatype.UDim2`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim2.Width
     type: UDim
     summary: |
-      The **X** dimension scale and offset of the `UDim2`.
+      The **X** dimension scale and offset of the `Datatype.UDim2`.
     description: |
-      The **X** dimension scale and offset of the `UDim2`.
+      The **X** dimension scale and offset of the `Datatype.UDim2`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim2.Height
     type: UDim
     summary: |
-      The **Y** dimension scale and offset of the `UDim2`.
+      The **Y** dimension scale and offset of the `Datatype.UDim2`.
     description: |
-      The **Y** dimension scale and offset of the `UDim2`.
+      The **Y** dimension scale and offset of the `Datatype.UDim2`.
     code_samples: []
     tags: []
     deprecation_message: ''
 methods:
   - name: UDim2:Lerp
     summary: |
-      Returns a `UDim2` interpolated linearly between the value and the given
+      Returns a `Datatype.UDim2` interpolated linearly between the value and the given
       goal.
     description: |
-      Returns a `UDim2` interpolated linearly between this `UDim2` and the given
+      Returns a `Datatype.UDim2` interpolated linearly between this `Datatype.UDim2` and the given
       `goal`. The `alpha` value should be a number between `0` and `1`.
     parameters:
       - name: goal
@@ -189,11 +189,11 @@ functions:
 math_operations:
   - operation: +
     summary: |
-      Produces a `UDim2` with components that are the sum of the respective
-      components of the two `UDim2` objects.
+      Produces a `Datatype.UDim2` with components that are the sum of the respective
+      components of the two `Datatype.UDim2` objects.
     description: |
-      Produces a `UDim2` with components that are the sum of the respective
-      components of the two `UDim2` objects.
+      Produces a `Datatype.UDim2` with components that are the sum of the respective
+      components of the two `Datatype.UDim2` objects.
     type_a: UDim2
     type_b: UDim2
     return_type: UDim2
@@ -202,11 +202,11 @@ math_operations:
     deprecation_message: ''
   - operation: '-'
     summary: |
-      Produces a `UDim2` with components that are the difference of the
-      respective components of the two `UDim2` objects.
+      Produces a `Datatype.UDim2` with components that are the difference of the
+      respective components of the two `Datatype.UDim2` objects.
     description: |
-      Produces a `UDim2` with components that are the difference of the
-      respective components of the two `UDim2` objects.
+      Produces a `Datatype.UDim2` with components that are the difference of the
+      respective components of the two `Datatype.UDim2` objects.
     type_a: UDim2
     type_b: UDim2
     return_type: UDim2

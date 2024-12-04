@@ -615,8 +615,10 @@ navigation:
             path: /production/monetization/avatar-items
           - title: Engagement-Based Payouts
             path: /production/monetization/engagement-based-payouts
-          - title: Paid Access
-            path: /production/monetization/paid-access
+          - title: Paid Access in Robux
+            path: /production/monetization/paid-access-robux
+          - title: Paid Access in Local Currency
+            path: /production/monetization/paid-access-local-currency
           - title: Private Servers
             path: /production/monetization/private-servers
       - title: Resources

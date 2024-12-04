@@ -5,10 +5,10 @@ memory_category: Instances
 summary: |
   Defines flex behavior for a `Class.GuiObject` within a `Class.UIListLayout`.
 description: |
-  The `UIFlexItem` object defines flex behavior for its parent `Class.GuiObject`
-  under the control of a `Class.UIListLayout`. The defined flex behavior
-  overrides that of the controlling `Class.UIListLayout`, letting you configure
-  flex behavior on a per‑object basis where necessary.
+  The `Class.UIFlexItem` object defines flex behavior for its parent
+  `Class.GuiObject` under the control of a `Class.UIListLayout`. The defined
+  flex behavior overrides that of the controlling `Class.UIListLayout`, letting
+  you configure flex behavior on a per‑object basis where necessary.
 
   <img src="../../../assets/ui/ui-objects/UIFlexItem-Example.png" width="720" alt="Example of UIFlexItem applied to a specific GuiObject under control of a UIListLayout." />
 

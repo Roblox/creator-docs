@@ -173,82 +173,82 @@ Reference the following table for a list of mouse cursors and their potential us
   </thead>
   <tbody>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-Pointer.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-Pointer.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/Arrow`</td>
       <td>Default clicking and selection.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-PointingHand.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-PointingHand.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/PointingHand`</td>
       <td>Hovering over an active link/button.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-OpenHand.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-OpenHand.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/OpenHand`</td>
       <td>Hovering over a draggable item.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-GrabbingHand.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-GrabbingHand.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/ClosedHand`</td>
       <td>Dragging an item.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-IBeam.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-IBeam.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/IBeam`</td>
       <td>Hovering in a text field.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-ResizeNS.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-ResizeNS.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/SizeNS`</td>
       <td>Hovering over a vertical resize handle.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-ResizeEW.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-ResizeEW.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/SizeEW`</td>
       <td>Hovering over a horizontal resize handle.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-ResizeNESW.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-ResizeNESW.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/SizeNESW`</td>
       <td>Hovering over a corner resize handle.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-ResizeNWSE.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-ResizeNWSE.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/SizeNWSE`</td>
       <td>Hovering over a corner resize handle.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-ResizeAll.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-ResizeAll.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/SizeAll`</td>
       <td>Hovering over a multi-direction resize handle.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-ResizeSplitV.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-ResizeSplitV.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/SplitNS`</td>
       <td>Hovering over a vertical "split" handle.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-ResizeSplitH.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-ResizeSplitH.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/SplitEW`</td>
       <td>Hovering over a horizontal "split" handle.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-Forbidden.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-Forbidden.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/Forbidden`</td>
       <td>Hovering over a locked/forbidden item.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-Wait.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-Wait.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/Wait`</td>
       <td>Indicating an action is in progress.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-Busy.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-Busy.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/Busy`</td>
       <td>	Indicating the system is busy.</td>
     </tr>
     <tr>
-      <td><img src="../assets/studio/plugins/Mouse-Icon-Crosshair.png" /></td>
+      <td><img src="../assets/misc/Mouse-Icon-Crosshair.png" width="30" /></td>
       <td>`rbxasset://SystemCursors/Cross`</td>
       <td>Hovering over a pinpoint selection area.</td>
     </tr>

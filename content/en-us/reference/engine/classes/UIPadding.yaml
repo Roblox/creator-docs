@@ -5,9 +5,9 @@ memory_category: Instances
 summary: |
   Applies padding to the borders of the parent `Class.GuiObject`.
 description: |
-  Applies padding to the borders of the parent `Class.GuiObject`, either as a
-  pixel amount (`Datatype.UDim.Offset|Offset`) or percentage of the parent's
-  size (`Datatype.UDim.Scale|Scale`).
+  `Class.UIPadding` applies padding to the borders of the parent
+  `Class.GuiObject`, either as a pixel amount (`Datatype.UDim.Offset|Offset`) or
+  percentage of the parent's size (`Datatype.UDim.Scale|Scale`).
 code_samples:
 inherits:
   - UIComponent

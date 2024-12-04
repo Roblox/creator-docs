@@ -34,26 +34,26 @@ Create avatar items for Roblox, ranging from clothing, accessories, bodies, and 
 
 <GridContainer numColumns='2'>
 
-<Card>
+<Card style={{height: '100%'}}>
   <CardMedia component='img' height='165' image='../../assets/art/avatar/Rigid-Thumbnail.png' alt="rigid accessory thumbnail example"/>
-  <CardContent>
+  <CardContent style={{marginBottom:"66px"}}>
     <Typography variant="h5" component="div">Rigid accessories</Typography>
     <br />
     Understand the various components that make up rigid accessories, the most basic form of 3D avatar cosmetics.
   </CardContent>
-  <CardActions>
+  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
     <Button href="../art/accessories/index.md" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
 
-<Card>
+<Card style={{height: '100%'}}>
   <CardMedia component='img' height='165' image='../../assets/art/avatar/Clothing-Thumbnail.png' alt="clothing thumbnail example"/>
-  <CardContent>
+  <CardContent style={{marginBottom:"66px"}}>
     <Typography variant="h5" component="div">Layered clothing</Typography>
     <br />
     Understand the advanced components of layered clothing, accessories that stretch and fit over a target.
   </CardContent>
-  <CardActions>
+  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
     <Button href="../art/accessories/layered-clothing.md" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
@@ -63,7 +63,7 @@ Create avatar items for Roblox, ranging from clothing, accessories, bodies, and 
 <GridContainer numColumns='2'>
 <Card style={{height: '100%'}}>
   <CardMedia component='img' height='165' image='../../assets/art/avatar/Bodies-Thumbnail.png' alt="bodies thumbnail example"/>
-  <CardContent>
+  <CardContent style={{marginBottom:"66px"}}>
     <Typography variant="h5" component="div">Characters</Typography>
     <br />
     Learn the various components that make up the unique Roblox avatar, including using mesh geometry, rigs, facial animation, and other important components.
@@ -73,14 +73,14 @@ Create avatar items for Roblox, ranging from clothing, accessories, bodies, and 
   </CardActions>
 </Card>
 
-<Card>
+<Card style={{height: '100%'}}>
   <CardMedia component='img' height='165' image='../../assets/art/avatar/Tutorial-Thumbnail.png' alt="tutorial thumbnail example"/>
-  <CardContent>
+  <CardContent style={{marginBottom:"66px"}}>
     <Typography variant="h5" component="div">Tutorials</Typography>
     <br />
     Follow step-by-step guides to create accessories, clothing, and characters to start creating your own unique 3D avatar asset.
   </CardContent>
-  <CardActions>
+  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
     <Button href="../avatar/tutorials.md" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
@@ -99,19 +99,19 @@ If you're looking to integrate avatars, accessories, and clothes into experience
 After creating your items, you can begin the process of selling your assets on the Marketplace. Learn more about the policies, processes, and payment structures that enable you to manage and sell your creations safely and efficiently.
 
 <GridContainer numColumns='2'>
-<Card>
-  <CardContent>
+<Card style={{height: '100%'}}>
+  <CardContent style={{marginBottom:"66px"}}>
     <Typography variant="h5" component="div">Marketplace Policy</Typography>
     <br />
     Learn about the user requirements for selling, as well as the technical and community-related specifications required for the Marketplace.
   </CardContent>
-  <CardActions>
+  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
     <Button href="../marketplace/marketplace-policy.md" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
 
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:"66px"}}>
 <Typography variant="h5" component="div">Intellectual Property</Typography>
 <br />
 Understand how IP works on the Roblox ecosystem to protect yourself and the community.
@@ -124,7 +124,7 @@ Understand how IP works on the Roblox ecosystem to protect yourself and the comm
 
 <GridContainer numColumns='2'>
 <Card style={{height: '100%'}}>
-  <CardContent>
+  <CardContent style={{marginBottom:"66px"}}>
     <Typography variant="h5" component="div">Publishing Steps</Typography>
     <br />
     Upload your catalog-ready asset to the Marketplace and set the item on sale using various creator controls.
@@ -133,13 +133,13 @@ Understand how IP works on the Roblox ecosystem to protect yourself and the comm
     <Button href="../marketplace/publishing-to-marketplace.md" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
-<Card>
-  <CardContent>
+<Card style={{height: '100%'}}>
+  <CardContent style={{marginBottom:"66px"}}>
     <Typography variant="h5" component="div">Fees and Commissions</Typography>
     <br />
     Understand how fees, payments, commissions, and other monetary and purchasing details work for your various asset types.
   </CardContent>
-  <CardActions>
+  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
     <Button href="../marketplace/marketplace-fees-and-commissions.md" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
@@ -150,36 +150,36 @@ Understand how IP works on the Roblox ecosystem to protect yourself and the comm
 Roblox provides additional resources and tools to enable creation. Check out the various Studio and third-party tools designed to expedite and ease the process of creation.
 
 <GridContainer numColumns='2'>
-<Card>
-  <CardContent>
+<Card style={{height: '100%'}}>
+  <CardContent style={{marginBottom:"66px"}}>
     <Typography variant="h5" component="div">Downloadable Resources</Typography>
     <br />
     View various downloadable resources ranging from sample model files, template files, project boilerplates, and more.
   </CardContent>
-  <CardActions>
+  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
     <Button href="../avatar/resources.md" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
-<Card>
-  <CardContent>
+<Card style={{height: '100%'}}>
+  <CardContent style={{marginBottom:"66px"}}>
     <Typography variant="h5" component="div">Studio Tools</Typography>
     <br />
     Studio provides several tools designed to make the creation process more straightforward and efficient.
   </CardContent>
-  <CardActions>
+  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
     <Button href="../avatar/resources.md#add-ons-and-tools" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>
 </GridContainer> <br />
 
 <GridContainer numColumns='2'>
-<Card>
-  <CardContent>
+<Card style={{height: '100%'}}>
+  <CardContent style={{marginBottom:"66px"}}>
     <Typography variant="h5" component="div">Third-Party Add-ons</Typography>
     <br />
     Third-party add-ons and tools are available to help expedite the creation process in your third-party applications.
   </CardContent>
-  <CardActions>
+  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
     <Button href="../avatar/resources.md#add-ons-and-tools" size='large' color='primary' variant='text'>Learn More</Button>
   </CardActions>
 </Card>

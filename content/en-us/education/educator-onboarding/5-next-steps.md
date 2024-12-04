@@ -152,7 +152,7 @@ Try out Roblox with these stand alone lessons. Learn something new in less than 
 
 <Grid item XSmall={6}>
   <div>
-  <img src="../../assets/legacy/ccw2019_thumbnail_312x200px.png" />
+  <img src="../../assets/education/legacy/ccw2019_thumbnail_312x200px.png" />
   <h4>Galactic Speedway</h4>
   <p>
   Build your own spaceship and race it with friends.

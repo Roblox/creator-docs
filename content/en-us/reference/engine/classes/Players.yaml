@@ -5,10 +5,10 @@ memory_category: Instances
 summary: |
   A service that contains presently connected `Class.Player` objects.
 description: |
-  The `Players` service contains `Class.Player` objects for presently connected
-  clients to a Roblox server. It also contains information about a place's
-  configuration. It can fetch information about players not connected to the
-  server, such as character appearances, friends, and avatar thumbnail.
+  The `Class.Players` service contains `Class.Player` objects for presently
+  connected clients to a Roblox server. It also contains information about a
+  place's configuration. It can fetch information about players not connected to
+  the server, such as character appearances, friends, and avatar thumbnail.
 code_samples: []
 inherits:
   - Instance
@@ -19,14 +19,14 @@ deprecation_message: ''
 properties:
   - name: Players.BanningEnabled
     summary: |
-      Enables or disables the three `Players` methods
+      Enables or disables the three `Class.Players` methods
       (`Class.Players:BanAsync()|BanAsync()`,
       `Class.Players:UnbanAsync()|UnbanAsync()`, and
       `Class.Players:GetBanHistoryAsync()|GetBanHistoryAsync()`) that constitute
       the ban API. This property is not scriptable and can only be modified in
       Studio.
     description: |
-      Enables or disables the three `Players` methods
+      Enables or disables the three `Class.Players` methods
       (`Class.Players:BanAsync()|BanAsync()`,
       `Class.Players:UnbanAsync()|UnbanAsync()`, and
       `Class.Players:GetBanHistoryAsync()|GetBanHistoryAsync()`) that constitute
@@ -53,7 +53,7 @@ properties:
       Indicates whether or not bubble chat is enabled. It is set with the
       `Class.Players:SetChatStyle()` method.
     description: |
-      The `BubbleChat` property indicates whether or not bubble chat is enabled.
+      This property indicates whether or not bubble chat is enabled.
       It is set with the `Class.Players:SetChatStyle()` method using the
       `Enum.ChatStyle` enum.
 
@@ -82,7 +82,7 @@ properties:
     summary: |
       Indicates whether `Class.Character|Characters` will respawn automatically.
     description: |
-      The `CharacterAutoLoads` property indicates whether
+      This property indicates whether
       `Class.Character|Characters` will respawn automatically. The default value
       is true.
 
@@ -141,7 +141,7 @@ properties:
     summary: |
       The `Class.Player` that the `Class.LocalScript` is running for.
     description: |
-      `LocalPlayer` is a read-only property which refers to the `Class.Player`
+      This read-only property refers to the `Class.Player`
       whose client is running the experience.
 
       This property is only defined for `Class.LocalScript|LocalScripts` and
@@ -168,7 +168,7 @@ properties:
     summary: |
       The maximum number of players that can be in a server.
     description: |
-      The `MaxPlayers` property determines the maximum number of players that
+      This property determines the maximum number of players that
       can be in a server. This property can only be set through a specific
       place's settings on the
       [Creator Dashboard](https://create.roblox.com/dashboard/creations) or
@@ -218,7 +218,7 @@ properties:
     summary: |
       The preferred number of players for a server.
     description: |
-      The `PreferredPlayers` property indicates the number of players to which
+      This property indicates the number of players to which
       Roblox's matchmaker will fill servers. This number will be less than the
       maximum number of players (`Class.Players.MaxPlayers`) supported by the
       experience.
@@ -242,7 +242,7 @@ properties:
     summary: |
       Controls the amount of time taken for a players character to respawn.
     description: |
-      The `RespawnTime` property controls the time, in seconds, it takes for a
+      This property controls the time, in seconds, it takes for a
       player to respawn when `Class.Players.CharacterAutoLoads` is true. It
       defaults to 5.0 seconds.
 
@@ -251,7 +251,7 @@ properties:
       individually.
 
       Although this property can be set from within a `Class.Script`, you can
-      more easily set it directly on the `Players` object in Studio's
+      more easily set it directly on the `Class.Players` object in Studio's
       [Explorer](../../../studio/explorer.md) window.
     code_samples:
     type: float
@@ -370,7 +370,7 @@ methods:
       Returns the `Class.Player` with the given `Class.Player.UserId|UserId` if
       they are in-game.
     description: |
-      This function searches each `Class.Player|player` in `Class.Players` for
+      This function searches each `Class.Player` in `Class.Players` for
       one whose `Class.Player.UserId` matches the given UserId. If such a player
       does not exist, it simply returns `nil`. It is equivalent to the following
       function:
@@ -411,7 +411,7 @@ methods:
     writeCapabilities: []
   - name: Players:GetPlayerFromCharacter
     summary: |
-      Returns the `Class.Player` whose `Class.Player.Character|Character`
+      Returns the `Class.Player` whose `Class.Player.Character`
       matches the given instance, or `nil` if one cannot be found.
     description: |
       This function returns the `Class.Player` associated with the given
@@ -530,7 +530,7 @@ methods:
     writeCapabilities: []
   - name: Players:TeamChat
     summary: |
-      Makes the `LocalPlayer` chat the given message, which will only be
+      Makes the local player chat the given message, which will only be
       viewable by users on the same team.
     description: |
       This function makes the `Class.Players.LocalPlayer` chat the given
@@ -1121,7 +1121,7 @@ methods:
 
       This method errors if no account exists with the given UserId. If you
       aren't certain such an account exists, it's recommended to wrap calls to
-      this function with `pcall`. In addition, you can manually cache results to
+      this function with `Global.LuaGlobals.pcall()`. In addition, you can manually cache results to
       make future calls with the same UserId fast. See the code samples to learn
       more.
     code_samples:
@@ -1155,7 +1155,7 @@ methods:
 
       This method errors if no account exists with the given username. If you
       aren't certain such an account exists, it's recommended to wrap calls to
-      this function with `pcall`. In addition, you can manually cache results to
+      this function with `Global.LuaGlobals.pcall()`. In addition, you can manually cache results to
       quickly make future calls with the same username. See the code samples to
       learn more.
     code_samples:
@@ -1307,7 +1307,7 @@ events:
     summary: |
       Fires when a player enters the game.
     description: |
-      The `PlayerAdded` event fires when a player enters the game. This is used
+      This event fires when a player enters the game. This is used
       to fire an event when a player joins a game, such as loading the player's
       saved `Class.GlobalDataStore` data.
 
@@ -1333,10 +1333,11 @@ events:
       functions.
 
       Note that this event does not work as expected in **Play** mode because
-      the player is created before scripts run that connect to `PlayerAdded`. To
-      handle this case, as well as cases in which the script is added into the
-      game after a player enters, create an `onPlayerAdded()` function that you
-      can call to handle a player's entrance.
+      the player is created before scripts run that connect to
+      `Class.Players.PlayerAdded|PlayerAdded`. To handle this case, as well as
+      cases in which the script is added into the game after a player enters,
+      create an `onPlayerAdded()` function that you can call to handle a
+      player's entrance.
     code_samples:
       - Players-PlayerAdded1
     parameters:

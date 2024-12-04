@@ -26,7 +26,7 @@ experience on any devices you choose. An experience can be published **privately
 ## Monetization
 
 Users can spend Robux in experiences for items such as new vehicles or
-power-ups, and creators can also earn Robux from [engagement-based payouts](../production/monetization/engagement-based-payouts.md), [private servers](../production/monetization/private-servers.md) and [paid access](../production/monetization/paid-access.md). There are two main methods of
+power-ups, and creators can also earn Robux from [engagement-based payouts](../production/monetization/engagement-based-payouts.md), [private servers](../production/monetization/private-servers.md), [paid access in Robux](../production/monetization/paid-access-robux.md), and [paid access in local currency](../production/monetization/paid-access-local-currency.md). There are two main methods of
 [monetizing](../production/monetization/index.md) within an experience:
 
 - [Developer Products](../production/monetization/developer-products.md) - users can purchase

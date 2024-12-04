@@ -18,8 +18,8 @@ can [release it to the public](#releasing-to-the-public), although beta testing 
 
 <Tabs>
   <TabItem label="Paid-Access Beta">
-    Under the [paid access](../../production/monetization/paid-access.md) model, users
-    must pay an upfront fee in **Robux**, the platform's currency. This limits
+    Under the [paid access in Robux](../../production/monetization/paid-access-robux.md) and [paid access in local currency](../monetization/paid-access-local-currency.md) models, users
+    must pay an upfront fee in **Robux**, the platform's currency, or in their **local currency**. This limits
     your user base, allowing you to test and iterate with smaller server fills,
     although the test results you gather may not reflect performance among a
     wider audience.

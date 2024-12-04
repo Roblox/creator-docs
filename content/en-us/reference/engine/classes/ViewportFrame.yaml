@@ -3,7 +3,7 @@ type: class
 category: GUI
 memory_category: Gui
 summary: |
-  `Class.GuiObject|GUI` that can display children 3D objects.
+  `Class.GuiObject` that can display children 3D objects.
 description: |
   **ViewportFrame** is a `Class.GuiObject` that can render 3D objects inside its
   bounds, offering a way to display 3D objects in a 2D space like a

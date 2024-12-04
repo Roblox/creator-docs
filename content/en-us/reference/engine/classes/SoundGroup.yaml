@@ -9,32 +9,24 @@ summary: |
 description: |
   A `Class.SoundGroup` is used to manage the volume and effects on multiple
   `Class.Sound|Sounds` at once. Every sound in the sound group will have its
-  volume adjusted by the group's `Class.SoundGroup.Volume` property. If the
-  SoundGroup has any `Class.SoundEffect|SoundEffects` as children, those effects
-  will be applied to all of the `Class.Sound|Sounds` in the group.
+  volume adjusted by the group's `Class.SoundGroup.Volume|Volume` property which
+  acts as a multiplier, meaning a `Class.Sound` with volume `0.5` assigned to a
+  `Class.SoundGroup` with a volume of `0.5` will have an effective volume of
+  `0.25`.
+  
+  If the `Class.SoundGroup` has any `Class.SoundEffect|SoundEffects` as
+  children, those effects will be applied to all of the `Class.Sound|Sounds` in
+  the group.
 
-  The `Class.SoundGroup.Volume` property acts as a multiplier, and thus sounds
-  in a SoundGroup will retain their relative volumes when it is set. This means
-  if a sound's volume is 0.5 and it is assigned to a SoundGroup with a volume of
-  0.5, its effective volume will be 0.25.
+  Note that a `Class.Sound` must be added to a `Class.SoundGroup` by setting its
+  `Class.Sound.SoundGroup|SoundGroup` property, not by simply parenting the
+  `Class.Sound` to the `Class.SoundGroup`. A `Class.Sound` can only belong to
+  one `Class.SoundGroup` at a time, although you can nest groups as outlined
+  [here](../../../sound/groups.md#nesting-soundgroups).
 
-  Grouping sounds of the same category has several uses for developers. One
-  common usage of a sound group is to assign all of the music that can play in
-  game to a SoundGroup called "music." Players could then easily toggle all
-  music on or off.
-
-  ## Setting sound groups
-
-  A `Class.Sound` is added to a `Class.SoundGroup` by setting the
-  `Class.Sound.SoundGroup` property of the `Class.Sound`. A `Class.Sound` can
-  only be in one `Class.SoundGroup` at a time. Whilst they can be parented
-  elsewhere, it is recommended to keep SoundGroups parented to the
-  `Class.SoundService`. In the below example, a sound is parented to a
-  SoundGroup called 'Music'.
-
-      Sound.SoundGroup = game:GetService("SoundService"):FindFirstChild("Music")
+  See [Sound Groups](../../../sound/groups.md) for further details on working
+  with the `Class.SoundGroup` class.
 code_samples:
-  - Sound-SoundGroup
 inherits:
   - Instance
 tags: []
@@ -43,16 +35,10 @@ properties:
   - name: SoundGroup.Volume
     summary: |
       The volume multiplier applied to `Class.Sound|Sounds` that are in the
-      `Class.SoundGroup`. This value ranges from 0 to 10.
+      `Class.SoundGroup`.
     description: |
-      The volume multiplier applied to `Class.Sound|Sounds` that are in the
-      `Class.SoundGroup`. This value ranges from 0 to 10.
-
-      This property acts as a multiplier, and thus sounds in a
-      `Class.SoundGroup` will retain their relative volumes when it is set. This
-      means if a sound's `Class.Sound.Volume` is 0.5 and it is assigned to a
-      `Class.SoundGroup` with a volume of 0.5, its effective volume will be
-      0.25.
+      The volume multiplier applied to `Class.Sound|Sounds` which belong to the
+      `Class.SoundGroup`. Value can range from `0` to `10`.
     code_samples:
       - Sound-SoundGroup
     type: float

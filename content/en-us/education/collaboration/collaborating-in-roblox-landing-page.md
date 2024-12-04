@@ -3,7 +3,7 @@ title: Collaborating in Roblox
 description: Educators can use Roblox for collaborative learning in the classroom. Learn strategies and tips for building social-emotional skills.
 ---
 
-<img src="../../assets/legacy/collabrationArticle_heroBanner.jpg" width="100%" />
+<img src="../../assets/education/legacy/collabrationArticle_heroBanner.jpg" width="100%" />
 
 As educators, we understand the value collaboration offers. Whether it's
 building social-emotional learning skills or preparing students for future jobs,

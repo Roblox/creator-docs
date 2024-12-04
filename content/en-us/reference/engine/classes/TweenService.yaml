@@ -6,8 +6,8 @@ summary: |
   Used to create `Class.Tween|Tweens` which interpolate, or tween, the
   properties of instances.
 description: |
-  `TweenService` is used to create `Class.Tween|Tweens` which interpolate, or
-  tween, the properties of instances. `Class.Tween|Tweens` can be used on any
+  `Class.TweenService` is used to create `Class.Tween|Tweens` which interpolate,
+  or tween, the properties of instances. `Class.Tween|Tweens` can be used on any
   object with compatible property types, including:
 
   - [number](../../../luau/numbers.md)
@@ -47,7 +47,7 @@ methods:
       Creates a new `Class.Tween` given the object whose properties are to be
       tweened, a `Datatype.TweenInfo`, and a dictionary of goal property values.
     description: |
-      The `Create()` constructor creates a new `Class.Tween` from three
+      This constructor creates a new `Class.Tween` from three
       arguments: the object to tween, the `Datatype.TweenInfo` specifications,
       and a table containing the properties to tween and values to tween to.
 

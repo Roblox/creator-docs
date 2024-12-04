@@ -5,23 +5,23 @@ memory_category: Instances
 summary: |
   Primary container of on-screen 2D user interface elements.
 description: |
-  `ScreenGui` is a storage container for 2D `Class.GuiObject|GuiObjects`
-  displayed on the user's screen. A `ScreenGui` only shows if parented to a
-  player's `Class.PlayerGui`; parenting a `ScreenGui` to `Class.StarterGui`
-  ensures it clones into each player's `Class.PlayerGui` when they join the
-  experience and their character first spawns. See [On‑Screen UI
+  `Class.ScreenGui` is a storage container for 2D `Class.GuiObject|GuiObjects`
+  displayed on the user's screen. A `Class.ScreenGui` only shows if parented to
+  a player's `Class.PlayerGui`; parenting a `Class.ScreenGui` to
+  `Class.StarterGui` ensures it clones into each player's `Class.PlayerGui` when
+  they join the experience and their character first spawns. See [On‑Screen UI
   Containers](../../../ui/on-screen-containers.md) for further details.
 
   <img src="../../../assets/ui/ui-objects/ScreenGui-Example.jpg" width="840" alt="Example ScreenGui with various GuiObject children, including a Frame, TextLabel, TextBox, and ImageButton." />
 
-  For performance improvements, the appearance of a `ScreenGui` is cached
+  For performance improvements, the appearance of a `Class.ScreenGui` is cached
   until one of the following events occurs:
 
   - A descendant is added to or removed from it.
   - A property of a descendant changes.
-  - A property of the `ScreenGui` itself changes.
+  - A property of the `Class.ScreenGui` itself changes.
 
-  If any of these events occur, the `ScreenGui` appearance is recomputed
+  If any of these events occur, the `Class.ScreenGui` appearance is recomputed
   on the next frame it gets rendered.
 code_samples:
 inherits:
@@ -31,11 +31,11 @@ deprecation_message: ''
 properties:
   - name: ScreenGui.ClipToDeviceSafeArea
     summary: |
-      Whether to clip the contents of this `ScreenGui` to the device's
+      Whether to clip the contents of this `Class.ScreenGui` to the device's
       safe area.
     description: |
       If this property is `true`, all `Class.GuiObject` descendants of the
-      `ScreenGui` will be clipped to the device's safe area (see
+      `Class.ScreenGui` will be clipped to the device's safe area (see
       `Enum.ScreenInsets`). The default is `true` to maintain backwards
       compatibility of UI that is intentionally hidden offscreen, such as
       objects that slide into view from a screen edge when they're needed.
@@ -75,11 +75,11 @@ properties:
     writeCapabilities: []
   - name: ScreenGui.DisplayOrder
     summary: |
-      Controls the Z-index order in which multiple `ScreenGui` containers are
+      Controls the Z-index order in which multiple `Class.ScreenGui` containers are
       drawn.
     description: |
-      This property controls the Z-index order in which multiple `ScreenGui`
-      containers are drawn. Those with a higher `DisplayOrder` will be drawn on
+      This property controls the Z-index order in which multiple `Class.ScreenGui`
+      containers are drawn. Those with a higher `Class.ScreenGui.DisplayOrder|DisplayOrder` will be drawn on
       top of those with a lower value.
     code_samples:
     type: int
@@ -98,7 +98,7 @@ properties:
     writeCapabilities: []
   - name: ScreenGui.IgnoreGuiInset
     summary: |
-      Determines whether the `ScreenGui` overflows into the range of
+      Determines whether the `Class.ScreenGui` overflows into the range of
       Roblox's core UI elements.
     description: |
       If this property is `false` (default),
@@ -113,7 +113,7 @@ properties:
       `Enum.ScreenInsets|DeviceSafeInsets`.
 
       See `Class.ScreenGui.ScreenInsets|ScreenInsets` for details on how screen
-      insets affect the contents of a `ScreenGui`.
+      insets affect the contents of a `Class.ScreenGui`.
     code_samples:
     type: bool
     tags:
@@ -138,7 +138,7 @@ properties:
     description: |
       This property specifies whether automatic UI compatibility transformations
       are applied to descendant "fullscreen" `Class.GuiObject|GuiObjects` of
-      the `ScreenGui` on displays with screen cutouts. Eligibility occurs
+      the `Class.ScreenGui` on displays with screen cutouts. Eligibility occurs
       if the total area of the descendant `Class.GuiObject` (including any
       applied border or `Class.UIStroke`) covers the device's safe area both
       horizontally and vertically. See the `Enum.SafeAreaCompatibility` enum
@@ -149,7 +149,7 @@ properties:
       screens without any cutouts. However, it's recommended that you avoid
       fullscreen extensions for new work; instead, use the
       `Class.ScreenGui.ScreenInsets|ScreenInsets` property to specify which
-      insets should be respected for different `ScreenGui` containers.
+      insets should be respected for different `Class.ScreenGui` containers.
 
       Note that descendant UI objects will continue to be clipped by the
       device's safe area if
@@ -173,10 +173,10 @@ properties:
   - name: ScreenGui.ScreenInsets
     summary: |
       Controls the safe area insets that are applied to the contents of the
-      `ScreenGui`.
+      `Class.ScreenGui`.
     description: |
       This property controls the safe area insets that are applied to the
-      contents of the `ScreenGui`.
+      contents of the `Class.ScreenGui`.
 
       The default of `Enum.ScreenInsets|CoreUISafeInsets` keeps all descendant
       `Class.GuiObject|GuiObjects` inside the core UI safe area, clear of the
@@ -188,7 +188,7 @@ properties:
       If you set this property to `Enum.ScreenInsets|None`, UI objects may be
       obscured behind core UI objects or device cutouts like the camera notch.
       As a result, you should only use `Enum.ScreenInsets|None` for a
-      `ScreenGui` that contains noninteractive content like background
+      `Class.ScreenGui` that contains noninteractive content like background
       images.
 
       See

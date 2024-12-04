@@ -37,7 +37,7 @@ Search results populate in the following ways:
 <br />
 
 <Alert severity ='warning'>
-All Roblox advertisers of experiences must abide by our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). Currently, [paid access experiences](../monetization/paid-access.md) and [17+ experiences](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Roblox-17-Policy-Standards) are not eligible to advertise using search ads. Roblox prevents surfacing experiences identified as clickbait or spam.
+All Roblox advertisers of experiences must abide by our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). Currently, [paid access experiences in Robux](../monetization/paid-access-robux.md), [paid access experiences in local currency](../monetization/paid-access-local-currency.md), and [17+ experiences](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Roblox-17-Policy-Standards) are not eligible to advertise using search ads. Roblox prevents surfacing experiences identified as clickbait or spam.
 </Alert>
 
 ## Creating Search Ads
@@ -61,21 +61,25 @@ To create search ads:
    3. Set the **budget type**, **date range**, and **campaign name**.
    4. Click **NEXT**.
 4. In the Ad Set page:
+
    1. Select **Search Experience**. The audience estimation shows the approximate number of Roblox user accounts your search ad might reach over a month. This number is based on the keywords you choose and the budget and bids you set when creating your ad.
 
       <img src="../../assets/promotion/search-ads/Ad-Set-Search.png" width="80%" alt=""/>
 
    2. In **Keyword(s)**, choose up to 10 keywords for each Ad Set. Keywords populate after typing in the text field. You should group relevant keywords together within each Ad Set for clearer reporting on campaign performance.  
       <img src="../../assets/promotion/search-ads/Select-Keywords.png" width="70%" alt=""/>
-   3.  Click **NEXT**.
-5.  In the Ad page:
-    1.  Set your **Destination Experience**. This is the experience that users are directed to after clicking on the search ad.
+   3. Click **NEXT**.
 
-         <img src="../../assets/promotion/search-ads/Edit-Ad-Creative.png" width="70%" alt=""/>
+5. In the Ad page:
 
-    2.  Enter a name for this specific ad.
-    3.  Click **NEXT**.
-6.  In the Review Campaign page, review the final details of your advertisement and click **SUBMIT** to launch your campaign.
+   1. Set your **Destination Experience**. This is the experience that users are directed to after clicking on the search ad.
+
+   <img src="../../assets/promotion/search-ads/Edit-Ad-Creative.png" width="70%" alt=""/>
+
+   2. Enter a name for this specific ad.
+   3. Click **NEXT**.
+
+6. In the Review Campaign page, review the final details of your advertisement and click **SUBMIT** to launch your campaign.
 
 After launching your campaign, you can monitor the campaign's performance with [Ads Reporting](#reporting) and [Billing](./ads-manager.md#ads-billing).
 

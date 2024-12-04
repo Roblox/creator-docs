@@ -4,15 +4,15 @@ summary: |
   Represents a one-dimensional value with two components, a relative scale and
   an absolute offset.
 description: |
-  The `UDim` data type represents a one-dimensional value with two components, a
-  relative scale and an absolute offset in pixels.
+  The `Datatype.UDim` data type represents a one-dimensional value with two
+  components, a relative scale and an absolute offset in pixels.
 code_samples:
 tags: []
 deprecation_message: ''
 constructors:
   - name: UDim.new
-    summary: Returns a `UDim` from the given components.
-    description: Returns a `UDim` from the given components.
+    summary: Returns a `Datatype.UDim` from the given components.
+    description: Returns a `Datatype.UDim` from the given components.
     parameters:
       - name: Scale
         type: number
@@ -30,18 +30,18 @@ properties:
   - name: UDim.Scale
     type: number
     summary: |
-      The relative scale component of the `UDim`.
+      The relative scale component of the `Datatype.UDim`.
     description: |
-      The relative scale component of the `UDim`.
+      The relative scale component of the `Datatype.UDim`.
     code_samples: []
     tags: []
     deprecation_message: ''
   - name: UDim.Offset
     type: number
     summary: |
-      The absolute offset component of the `UDim`.
+      The absolute offset component of the `Datatype.UDim`.
     description: |
-      The absolute offset component of the `UDim` in pixels.
+      The absolute offset component of the `Datatype.UDim` in pixels.
     code_samples: []
     tags: []
     deprecation_message: ''
@@ -50,9 +50,9 @@ functions:
 math_operations:
   - operation: +
     summary: |
-      Produces a `UDim` representing the sum of the two `UDim` values.
+      Produces a `Datatype.UDim` representing the sum of the two `Datatype.UDim` values.
     description: |
-      Produces a `UDim` representing the sum of the two `UDim` values.
+      Produces a `Datatype.UDim` representing the sum of the two `Datatype.UDim` values.
     type_a: UDim
     type_b: UDim
     return_type: UDim
@@ -61,10 +61,10 @@ math_operations:
     deprecation_message: ''
   - operation: '-'
     summary: |
-      Produces a `UDim` representing the difference between the two `UDim`
+      Produces a `Datatype.UDim` representing the difference between the two `Datatype.UDim`
       values.
     description: |
-      Produces a `UDim` representing the difference between the two `UDim`
+      Produces a `Datatype.UDim` representing the difference between the two `Datatype.UDim`
       values.
     type_a: UDim
     type_b: UDim

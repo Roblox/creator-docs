@@ -6,7 +6,7 @@ summary: |
   A container for objects to be copied to a Player's PlayerScripts when they
   join a game.
 description: |
-  `StarterPlayerScripts` is a container object located within the
+  `Class.StarterPlayerScripts` is a container object located within the
   `Class.StarterPlayer` service. It can contain `Class.LocalScript|LocalScripts`
   and other objects to be copied to the `Class.PlayerScripts` container once
   when a `Class.Player` joins the game. For example, if you want to create
