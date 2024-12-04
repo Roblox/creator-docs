@@ -52,8 +52,8 @@ for translation in the experience's **Localization** page, where all localizatio
 You can promote your experience within the Roblox Ecosystem in multiple ways:
 
 - Use the [Ads Manager](../production/promotion/ads-manager.md#sponsored-experiences) to create ad campaigns using image, video, or portal ads within existing experiences.
-- Roblox [experience events](./promotion/experience-events.md) are time-based events that users can join and discover through an events detail page.
-- You can use [audience engagement](./promotion/audience-engagement.md) tools and additional features, such as [experience notifications](../cloud-services/experience-notifications.md), to promote your content to a wider audience and keep in touch with your existing user-base.
+- Roblox [experience events](../production/promotion/experience-events.md) are time-based events that users can join and discover through an events detail page.
+- You can use integrated features such as [update announcements](../production/promotion/experience-events.md#announcing-updates) and [experience notifications](../production/promotion/experience-notifications.md) to promote your content to a wider audience and keep in touch with your existing user base.
 
 ## Analytics
 
