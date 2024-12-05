@@ -68,7 +68,7 @@ The **Client** tab includes the following charts, all of which are broken down b
         </tr>
         <tr>
             <td>Client memory usage</td>
-            <td>Line graph showing client memory usage by device type. Continual increases can indicate a memory leak. See [Memory](../../performance-optimization/identifying.md#memory).</td>
+            <td>Line graph showing client memory usage by device type. Continual increases can indicate a memory leak. See [Memory](../../performance-optimization/identifying.md#client-memory).</td>
         </tr>
         <tr>
             <td>Client memory usage percentage</td>
