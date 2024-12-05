@@ -17,7 +17,7 @@ Each of the following sections include a brief description as well as additional
 
 ## Basic Layout
 
-After [installing Studio](../studio/setting-up-roblox-studio.md), familiarize yourself with Studio's many 3D art tools and interfaces. While you can customize Studio to show various layouts and tools, Studio opens with the most commonly used windows by default:
+After [installing Studio](../studio/setup.md), familiarize yourself with Studio's many 3D art tools and interfaces. While you can customize Studio to show various layouts and tools, Studio opens with the most commonly used windows by default:
 
 <img src="../assets/art/Studio-Overview.png" width = "100%" alt=""/>
 
@@ -82,12 +82,12 @@ Like all creation tools, keyboard shortcuts allow you to work efficiently and qu
     <td>Anchoring a part locks it in place, even when other objects collide with it. </td>
   </tr>
   <tr>
-    <td>In [Studio Settings](../studio/setting-up-roblox-studio.md#customization)</td>
+    <td>In [Studio Settings](../studio/setup.md#customization)</td>
     <td>Change highlight and selection colors</td>
     <td>Changing highlight and selection colors can help with accessibility.</td>
   </tr>
   <tr>
-    <td>In [Studio Settings](../studio/setting-up-roblox-studio.md#customization)</td>
+    <td>In [Studio Settings](../studio/setup.md#customization)</td>
     <td>Change camera speed</td>
     <td>Modify how fast the camera moves by default. </td>
   </tr>

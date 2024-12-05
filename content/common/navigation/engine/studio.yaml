@@ -7,11 +7,9 @@ navigation:
   - title: Overview # merge working in studio content into here
     path: /studio/
   - title: Studio Setup
-    path: /studio/setting-up-roblox-studio
+    path: /studio/setup
   - title: Studio Interface
     path: /studio/ui-overview
-  - title: Beta Features
-    path: /studio/beta
   - heading: Building Tools
   - title: Align Tool
     path: /studio/align-tool
