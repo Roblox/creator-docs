@@ -82,70 +82,6 @@ Using the **Clients and Servers** options, you can launch multiple sessions of S
 
    <img src="../assets/studio/general/Test-Tab-Clients-Servers-Cleanup.png" width="810" alt="Cleanup button indicated in Test tab" />
 
-## Device Emulation
-
-<DeviceEmulator components={props.components} />
-
-### VR Emulation
-
-<BetaAlert betaName="VR Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
-
-**VR emulation** lets you test VR experiences in Studio without a physical headset. Just like emulating any other device, use the **Device Selector** menu to choose the Meta Quest 2 or Meta Quest 3. The [Controller Emulator](#controller-emulation) automatically selects the appropriate controller for the headset.
-
-## Controller Emulation
-
-<BetaAlert betaName="Gamepad Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
-
-<ControllerEmulator components={props.components} />
-
-### VR Controllers
-
-The combination of a headset and multiple controllers, each with motion tracking, make VR emulation more complex:
-
-1. For motion tracking emulation, press <kbd>Alt</kbd> + <kbd>1</kbd> (<kbd>⌥</kbd> + <kbd>1</kbd>) to lock the mouse to and unlock the mouse from the viewport.
-2. Use <kbd>Shift</kbd> + <kbd>&larr;</kbd> or <kbd>&rarr;</kbd> to switch between the headset, left controller, and right controller.
-
-For example, you might use the **Headset** option to look around as you walk forward with the left controller button, but then switch to the **Right Controller** when you need to use motion controls to aim at a target.
-
-<img src="../assets/studio/general/Controller-Emulator-VR.png" width="840" alt="The Controller Emulator with a Quest 3 controller and viewport." />
-
-## Player Emulation
-
-For detailed emulation of experience [localization](../production/localization/index.md) and content policies, you can test through the **Player** emulator.
-
-<img src="../assets/studio/general/Test-Tab-Emulation-Player.png" width="840" alt="Player emulator button indicated in Test tab" />
-
-With the emulator window open, toggle on **Enable Test Profile**. Emulation will remain as toggled (enabled or disabled) even if you close the window.
-
-Lower down in the window, commonly used options include:
-
-<table>
-	<thead>
-		<tr>
-			<th>Option</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>**Locale**</td>
-			<td>Lets you emulate a [localized](../production/localization/index.md) language while playtesting.</td>
-		</tr>
-		<tr>
-			<td>**Pseudolocalize**</td>
-			<td>Swaps out characters with similar but slightly different characters so that it's easy to identify which strings are going through the [translation](../production/localization/index.md) system. Enabling this helps you identify **unlocalized** text without having to change the emulation language. For example:<ul><li><Typography variant="body1">`Bloxy Cola` &nbsp;&rang;&nbsp; `ßℓôж¥ Çôℓá`</Typography></li><li><Typography variant="body1">`Dominus Empyreus` &nbsp;&rang;&nbsp; `Ðô₥ïñúƨ É₥ƥ¥řèúƨ`</Typography></li></ul></td>
-		</tr>
-		<tr>
-			<td>**Elongate**</td>
-			<td>Elongates text strings by a factor defined via the slider. For example:<ul><li><Typography variant="body1">`Bloxy Cola` &nbsp;&rang;&nbsp; `Bloooxyy Coolaa` (50% longer)</Typography></li><li><Typography variant="body1">`Dominus Empyreus` &nbsp;&rang;&nbsp; `Doomiinuus Eempyyreus` (30% longer)</Typography></li></ul>Using elongation helps you identify places where your user interfaces might not be able to handle text that's longer than the default translated text. Note that Spanish is on average 30% longer than English and the equivalent for German is even longer. Also note that this only affects text that goes through the [translation](../production/localization/index.md) system.</td>
-		</tr>
-		<tr>
-			<td>**Region**</td>
-			<td>Lets you emulate a player's country/region while playtesting; this selection may impact other toggles and checkboxes in the window as outlined in `Class.PolicyService:GetPolicyInfoForPlayerAsync()|GetPolicyInfoForPlayerAsync()`.</td>
-		</tr>
-	</tbody>
-</table>
-
 ## Collaborative Testing
 
 If you're working on an experience with others in [Collaboration](../projects/collaboration.md) mode, you can test with other creators as follows:
@@ -162,9 +98,36 @@ If you're working on an experience with others in [Collaboration](../projects/co
    Only one team test session can run at any given time. To close a session and kick out all testers, click the **Shutdown&nbsp;Server** button.
    </Alert>
 
-## Testing with VR Headsets
+## Device Emulation
 
-If you'd like to support virtual reality (VR) headsets for your experience, make sure to test in VR in Studio. Studio supports testing for all VR headsets that are compatible with [OpenXR](https://www.khronos.org/openxr/), the open-source industry standard providing access to VR.
+<DeviceEmulator components={props.components} />
+
+## Controller Emulation
+
+<BetaAlert betaName="Gamepad Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+<ControllerEmulator components={props.components} />
+
+## VR Emulation
+
+<BetaAlert betaName="VR Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+**VR emulation** lets you test VR experiences in Studio without a physical headset. Just like emulating any other device, use the [Device Selector](#device-emulation) menu to choose the **Meta&nbsp;Quest&nbsp;2** or **Meta&nbsp;Quest&nbsp;3**. The [Controller Emulator](#controller-emulation) automatically selects the appropriate controller for the headset.
+
+<Grid container spacing={1}>
+<Grid item XSmall={12} Medium={6} Large={6} XLarge={6}><img src="../assets/studio/general/Controller-Emulator-VR.png" width="540" alt="The Controller Emulator with a Quest 3 controller." /></Grid>
+<Grid item XSmall={12} Medium={6} Large={6} XLarge={6}><img src="../assets/studio/general/Emulator-Viewport-VR.jpg" width="716" alt="Emulator with a Quest 3 emulation." /></Grid>
+</Grid>
+
+The combination of a headset and multiple controllers, each with motion tracking, make VR emulation more complex:
+
+- For motion tracking emulation, press <kbd>Alt</kbd><kbd>1</kbd> (<kbd>⌥</kbd><kbd>1</kbd>) to lock the mouse to and unlock the mouse from the viewport.
+
+- Use <kbd>Shift</kbd><kbd>&larr;</kbd> or <kbd>Shift</kbd><kbd>&rarr;</kbd> to switch between the headset, left controller, and right controller. For example, you might use the **Headset** option to look around as you walk forward with the left controller button, but then switch to the **Right&nbsp;Controller** when you need to use motion controls to aim at a target.
+
+## VR Headsets
+
+If you'd like to support virtual reality (VR) headsets for your experience, make sure to test or [emulate](#vr-emulation) VR in Studio. Studio supports testing for all VR headsets that are compatible with [OpenXR](https://www.khronos.org/openxr/), the open‑source industry standard providing access to VR.
 
 <Alert severity="info">
 Currently, testing in VR is only supported on Windows.
@@ -232,3 +195,40 @@ After [configuring your headset](#headset-configuration), you can turn on the St
 3. Under **General** settings, turn on **VR Mode**.
 
 You can now test your experience using your VR headset using any of the available [playtest options](#playtest-options). During a VR testing session, if your headset cable disconnects or you close the Roblox Studio Beta app on the headset, you'll need to restart Studio to re-run testing.
+
+## Player Emulation
+
+For detailed emulation of experience [localization](../production/localization/index.md) and content policies, you can test through the **Player** emulator.
+
+<img src="../assets/studio/general/Test-Tab-Emulation-Player.png" width="840" alt="Player emulator button indicated in Test tab" />
+
+With the emulator window open, toggle on **Enable Test Profile**. Emulation will remain as toggled (enabled or disabled) even if you close the window.
+
+Lower down in the window, commonly used options include:
+
+<table>
+	<thead>
+		<tr>
+			<th>Option</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>**Locale**</td>
+			<td>Lets you emulate a [localized](../production/localization/index.md) language while playtesting.</td>
+		</tr>
+		<tr>
+			<td>**Pseudolocalize**</td>
+			<td>Swaps out characters with similar but slightly different characters so that it's easy to identify which strings are going through the [translation](../production/localization/index.md) system. Enabling this helps you identify **unlocalized** text without having to change the emulation language. For example:<ul><li><Typography variant="body1">`Bloxy Cola` &nbsp;&rang;&nbsp; `ßℓôж¥ Çôℓá`</Typography></li><li><Typography variant="body1">`Dominus Empyreus` &nbsp;&rang;&nbsp; `Ðô₥ïñúƨ É₥ƥ¥řèúƨ`</Typography></li></ul></td>
+		</tr>
+		<tr>
+			<td>**Elongate**</td>
+			<td>Elongates text strings by a factor defined via the slider. For example:<ul><li><Typography variant="body1">`Bloxy Cola` &nbsp;&rang;&nbsp; `Bloooxyy Coolaa` (50% longer)</Typography></li><li><Typography variant="body1">`Dominus Empyreus` &nbsp;&rang;&nbsp; `Doomiinuus Eempyyreus` (30% longer)</Typography></li></ul>Using elongation helps you identify places where your user interfaces might not be able to handle text that's longer than the default translated text. Note that Spanish is on average 30% longer than English and the equivalent for German is even longer. Also note that this only affects text that goes through the [translation](../production/localization/index.md) system.</td>
+		</tr>
+		<tr>
+			<td>**Region**</td>
+			<td>Lets you emulate a player's country/region while playtesting; this selection may impact other toggles and checkboxes in the window as outlined in `Class.PolicyService:GetPolicyInfoForPlayerAsync()|GetPolicyInfoForPlayerAsync()`.</td>
+		</tr>
+	</tbody>
+</table>

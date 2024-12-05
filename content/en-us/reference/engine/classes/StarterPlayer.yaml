@@ -8,7 +8,7 @@ summary: |
 description: |
   A service which allows the defaults of properties in the `Class.Player` object
   to be set. When a player enters the server, each property of the player object
-  is set to the current value of the corresponding property in `StarterPlayer`.
+  is set to the current value of the corresponding property in `Class.StarterPlayer`.
 
   Additionally, you may add four objects to this service:
 
@@ -33,7 +33,7 @@ properties:
       Describes the current game's permission levels regarding custom avatar
       animations from the website.
     description: |
-      The `AllowCustomAnimations` property describes the current game's
+      This property describes the current game's
       permission levels regarding custom avatar `Class.Animation|Animations`
       from the website.
 
@@ -62,7 +62,7 @@ properties:
       Sets whether the character will automatically jump when hitting an
       obstacle on a mobile device.
     description: |
-      The `AutoJumpEnabled` property sets whether the character will
+      This property sets whether the character will
       automatically jump when hitting an obstacle on a mobile device.
 
       This property is copied from the `Class.StarterPlayer` to a `Class.Player`
@@ -111,7 +111,7 @@ properties:
       The maximum distance the player's default camera is allowed to zoom out in
       studs.
     description: |
-      The `CameraMaxZoomDistance` property sets the maximum distance in studs
+      This property sets the maximum distance in studs
       the camera can be from the character with the default cameras.
 
       This property sets the default value of
@@ -139,7 +139,7 @@ properties:
       The minimum distance in studs the player's default camera is allowed to
       zoom in.
     description: |
-      The `CameraMinZoonDistance` property sets the minimum distance in studs
+      This property sets the minimum distance in studs
       the camera can be from the character with the default cameras.
 
       This property sets the default value of
@@ -208,9 +208,9 @@ properties:
       Determines the starting value of `Class.Humanoid.JumpHeight` for
       `Class.Player.Character`.
     description: |
-      `CharacterJumpHeight` determines the starting value of
+      This property determines the starting value of
       `Class.Humanoid.JumpHeight` for a player's
-      `Class.Player.Character|Character`. The value of this property defaults to
+      `Class.Player.Character`. The value of this property defaults to
       7.2 studs.
 
       This property is only visible in the Properties window If
@@ -239,9 +239,9 @@ properties:
       Determines the starting value of `Class.Humanoid.JumpPower` for
       `Class.Player.Character`.
     description: |
-      `CharacterJumpPower` determines the starting value of
+      This property determines the starting value of
       `Class.Humanoid.JumpPower` for a player's
-      `Class.Player.Character|Character`. The value of this property defaults to
+      `Class.Player.Character`. The value of this property defaults to
       50 and when applied to the player's `Class.Humanoid` it will be
       constrained between 0 and 1000.
 
@@ -271,9 +271,9 @@ properties:
       Determines the starting value of `Class.Humanoid.MaxSlopeAngle` for
       `Class.Player.Character`.
     description: |
-      `CharacterMaxSlopeAngle` determines the starting value of
+      This property determines the starting value of
       `Class.Humanoid.MaxSlopeAngle` for a player's
-      `Class.Player.Character|Character`. It defaults to 89°, so humanoids can
+      `Class.Player.Character`. It defaults to 89°, so humanoids can
       climb pretty much any slope they want by default. When applied to the
       player's `Class.Humanoid` it will be constrained between 0 and 89.
 
@@ -301,7 +301,7 @@ properties:
     description: |
       `CharacterUseJumpPower` determines the starting value of
       `Class.Humanoid.UseJumpPower` for a player's
-      `Class.Player.Character|Character`. Toggling it will change which property
+      `Class.Player.Character`. Toggling it will change which property
       is visible in the properties window:
       `Class.StarterPlayer.CharacterJumpHeight|CharacterJumpHeight` (false) or
       `Class.StarterPlayer.CharacterJumpPower` (true). Defaults to true.
@@ -328,9 +328,9 @@ properties:
       Determines the starting value of `Class.Humanoid.WalkSpeed` for
       `Class.Player.Character`.
     description: |
-      `CharacterWalkSpeed` determines the starting value of
+      This property determines the starting value of
       `Class.Humanoid.WalkSpeed` for a player's
-      `Class.Player.Character|Character`. This property defaults to 16.
+      `Class.Player.Character`. This property defaults to 16.
 
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
@@ -379,7 +379,7 @@ properties:
       Lets developer overwrite the default camera mode for each player if the
       player is on a computer.
     description: |
-      The `DevComputerCameraMovementMode` property lets the developer overwrite
+      This property lets the developer overwrite
       the player's camera mode if the player is on a computer.
 
       This is the default property for players joining the game. It can be
@@ -415,7 +415,7 @@ properties:
       Lets developer overwrite the player's movement mode if the player is on a
       computer.
     description: |
-      The `DevComputerMovementMove` property lets the developer overwrite the
+      This property lets the developer overwrite the
       player's movement mode if the player is on a computer.
 
       This is the default property for players joining the game. It can be
@@ -451,7 +451,7 @@ properties:
       Lets developer overwrite the default camera movement mode for each player
       if the player is on a mobile device.
     description: |
-      The `DevTouchCameraMovementMode` property lets the developer overwrite the
+      This property lets the developer overwrite the
       player's camera mode if the player is on a touch device.
 
       This is the default property for players joining the game. It can be
@@ -486,7 +486,7 @@ properties:
       Lets developer overwrite the player's movement mode if the player is on a
       touch device.
     description: |
-      The `DevTouchMovementMode` property lets the developer overwrite the
+      This property lets the developer overwrite the
       player's movement mode if the player is on a touch device.
 
       This is the default property for players joining the game. It can be
@@ -539,7 +539,7 @@ properties:
     summary: |
       Determines if a player can toggle mouse lock by default.
     description: |
-      The `EnableMouseLockOption` property determines if a player can toggle
+      This property determines if a player can toggle
       mouse lock by default.
 
       Mouselock will lock the player's cursor to the center of the screen.
@@ -571,7 +571,7 @@ properties:
       Sets the distance at which this player will see other `Class.Humanoid`
       health bars. If set to 0, the health bars will not be displayed.
     description: |
-      The `HealthDisplayDistance` property sets the distance in studs at which
+      This property sets the distance in studs at which
       this player will see other `Class.Humanoid` health bars. If set to 0, the
       health bars will not be displayed. This property is set to 100 studs by
       default.
@@ -600,7 +600,7 @@ properties:
     summary: |
       Whether or not the appearance of a player's character should be loaded.
     description: |
-      The `LoadCharacterAppearance` property sets whether or not the appearance
+      This property sets whether or not the appearance
       of a player's character should be loaded.
 
       Setting this to `false` results in the player having no clothes (including
@@ -676,14 +676,10 @@ properties:
   - name: StarterPlayer.NameDisplayDistance
     summary: |
       Sets the distance at which this player will see other `Class.Humanoid`
-      names. If set to 0, names are hidden.
+      names.
     description: |
       Sets the distance at which this player will see other `Class.Humanoid`
-      names. If set to 0, names are hidden.
-
-      The NameDisplayDistance `Class.StarterPlayer` property sets the distance
-      in studs at which this player will see other `Class.Humanoid` names. If
-      set to 0, names are hidden. This property is set to 100 studs by default.
+      names. If set to `0`, names are hidden. This property is set to `100` studs by default.
 
       To change the display distance for a player once they join the game, you
       can set the `Class.Player.NameDisplayDistance` property.

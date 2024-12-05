@@ -6,7 +6,7 @@ summary: |
   A `Class.GuiObject` that renders as a plain rectangle, generally used as a
   container.
 description: |
-  `Frame` is a `Class.GuiObject` that acts as a container for other
+  `Class.Frame` is a `Class.GuiObject` that acts as a container for other
   `Class.GuiObject|GuiObjects`. You can use it for UI that either displays on a
   user's [screen](../../../ui/on-screen-containers.md) or on a
   [surface](../../../ui/in-experience-containers.md) within the experience.

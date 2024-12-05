@@ -113,23 +113,21 @@ properties:
     writeCapabilities: []
   - name: TextBox.CursorPosition
     summary: |
-      Determines the offset of the text cursor in bytes, or -1 if there is no
+      Determines the offset of the text cursor in bytes, or `-1` if there is no
       cursor.
     description: |
-      **CursorPosition** determines the offset of the text cursor in bytes, or
-      -1 if the TextBox is not currently being edited. A value of 1 represents
-      the beginning, the position before the first byte in the
+      This property determines the offset of the text cursor in bytes, or `-1`
+      if the `Class.TextBox` is not currently being edited. A value of `1`
+      represents the position before the first byte in the
       `Class.TextBox.Text|Text` property. When used in conjunction with the
       `Class.TextBox.SelectionStart|SelectionStart` property, it is possible to
-      both get and set selected text within a TextBox.
+      both get and set selected text within a `Class.TextBox`.
 
-      ![A visual explanation of how CursorPosition works](/assets/legacy/TextBox.CursorPosition.jpg)
-
-      It should be noted that the units of this property is **bytes** and that
-      many unicode characters such as emoji are **longer than 1 byte**. For
-      instance, if a player types into the TextBox "Hello👋" &ndash; "Hello"
-      immediately followed by the waving hand sign &ndash; the cursor position
-      would be 10, not 7, since the emoji uses 4 bytes.
+      Note that the units of this property are **bytes** and that
+      many unicode characters such as emoji are longer than 1 byte. For
+      instance, if a player types in "Hello👋" ("Hello"
+      immediately followed by the waving hand sign), the cursor position
+      would be `10`, not `7`, since the emoji uses 4 bytes.
     code_samples:
       - textbox-selections
     type: int
@@ -211,9 +209,9 @@ properties:
     writeCapabilities: []
   - name: TextBox.FontSize
     summary: |
-      Determines the font size of a `Class.TextBox|GUI` object.
+      Determines the font size of a `Class.TextBox` object.
     description: |
-      This property determines the font size of a `Class.TextBox|GUI` object.
+      This property determines the font size of a `Class.TextBox` object.
     code_samples:
     type: FontSize
     tags:
@@ -569,7 +567,7 @@ properties:
       Determines the color of rendered text.
     description: |
       This property determines the color of all the text rendered by a
-      `Class.GuiObject|GUI` element. This property along with
+      `Class.GuiObject` element. This property along with
       `Class.TextBox.Font`, `Class.TextBox.TextSize` and
       `Class.TextBox.TextTransparency` will determine the visual properties of
       text. Text is rendered after the text stroke
@@ -897,10 +895,10 @@ properties:
   - name: TextBox.TextWrapped
     summary: |
       Determines if text wraps to multiple lines within the
-      `Class.GuiObject|GUI` element space, truncating excess text.
+      `Class.GuiObject` element space, truncating excess text.
     description: |
       When enabled, this property will render text on multiple lines within a
-      `Class.TextBox|GUI` element's space so that `Class.TextBox.TextBounds`
+      `Class.TextBox` element's space so that `Class.TextBox.TextBounds`
       will never exceed the `Class.GuiBase2d.AbsoluteSize` of the GUI element.
 
       This is achieved by breaking long lines of text into multiple lines. Line

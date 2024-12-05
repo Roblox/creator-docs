@@ -20,7 +20,7 @@ hideBreadcrumbs: true
 If you've never used Roblox Studio or coded before, start here before following any of the curriculum paths.
 </Typography>
 
-- [Setting up Roblox Studio](../../studio/setting-up-roblox-studio.md) - Install
+- [Setting up Roblox Studio](../../studio/setup.md) - Install
   and configure Roblox Studio.
 - [Create Your First Experience](../first-experience/index.md) - Build a simple experience.
 - [Coding Fundamentals](../../tutorials/fundamentals/coding-1/coding-fundamentals.md) - Learn the basics of programming with Lua.

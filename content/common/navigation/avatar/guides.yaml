@@ -23,6 +23,8 @@ navigation:
     path: /art/accessories/clothing-specifications
   - title: Reference Files
     path: /art/accessories/project-files
+  - title: Caging Best Practices
+    path: /art/accessories/caging-best-practices
   - title: Export Settings
     path: /art/accessories/clothing-export-settings
   - title: Importing into Studio

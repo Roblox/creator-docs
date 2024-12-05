@@ -3,15 +3,15 @@ type: class
 category: Animations
 memory_category: Instances
 summary: |
-  The `Tween` object controls the playback of an interpolation.
+  The `Class.Tween` object controls the playback of an interpolation.
 description: |
-  The `Tween` object controls the playback of an interpolation. Creating and
-  configuring a `Tween` is done with the `Class.TweenService:Create()` function;
-  `Datatype.Instance.new()` cannot be used for this particular object.
+  The `Class.Tween` object controls the playback of an interpolation. Creating
+  and configuring a `Class.Tween` is done with the `Class.TweenService:Create()`
+  function; `Datatype.Instance.new()` cannot be used for this particular object.
 
   Note that while the configuration of a tween can be accessed after a tween has
   been created, it can not be modified. If new goals are needed for an
-  interpolation, a new `Tween` must be created.
+  interpolation, a new `Class.Tween` must be created.
 
   Also note that multiple tweens can be played on the same object at the same
   time, but they must not be interpolating the same property. If two tweens
@@ -29,7 +29,7 @@ properties:
       Read-only property that points to the `Class.Instance` whose properties
       are being interpolated by the tween.
     description: |
-      The `Instance` property of a `Tween` (read-only) points to the
+      This property of a `Class.Tween` (read-only) points to the
       `Class.Instance` whose properties are being interpolated.
     code_samples:
       - Tween-Instance

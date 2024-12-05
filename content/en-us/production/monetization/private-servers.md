@@ -15,7 +15,7 @@ Private servers offer users privacy in circumstances like:
 - Gathering in-experience resources.
 
 <Alert severity="warning">
-You cannot enable both [Paid Access](../monetization/paid-access.md) and private servers.
+You cannot enable [paid access in Robux](../monetization/paid-access-robux.md) or [paid access in local currency](../monetization/paid-access-local-currency.md) and private servers at the same time.
 </Alert>
 
 <Alert severity="warning">
