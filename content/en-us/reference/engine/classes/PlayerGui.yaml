@@ -128,10 +128,10 @@ methods:
     summary: |
       Sets the transparency of the top bar.
     description: |
-      This method sets the transparency of the top bar
-      `Class.CoreGui`. A value of `0` is completely opaque and a value of `1` is
-      completely transparent. Values outside of the range `[0, 1]` are clamped.
-      The default transparency of the topbar is `0.5`.
+      This method sets the transparency of the top bar `Class.CoreGui`. A value
+      of `0` is completely opaque and a value of `1` is completely transparent.
+      Values outside of the range `[0, 1]` are clamped. The default transparency
+      of the topbar is `0.5`.
 
       Using the `Class.StarterGui:SetCore()` method with the `"TopbarEnabled"`
       option allows you to enable/disable the entire topbar and all of its

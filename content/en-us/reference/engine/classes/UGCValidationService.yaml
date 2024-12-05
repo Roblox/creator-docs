@@ -112,6 +112,46 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: UGCValidationService:ReportUGCValidationCounter
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: success
+        type: bool
+        default:
+        summary: ''
+      - name: validationType
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UGCValidationService:ReportUGCValidationFailureTelemetry
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: errorType
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UGCValidationService:ValidateEditableMeshUVDuplicates
     summary: ''
     description: ''

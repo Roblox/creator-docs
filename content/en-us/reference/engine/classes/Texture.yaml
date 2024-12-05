@@ -14,7 +14,7 @@ description: |
   repeat when the `Class.BasePart` is resized. The size of the repeating
   textures is determined by the `Class.Texture.StudsPerTileU|StudsPerTileU` and
   `Class.Texture.StudsPerTileV|StudsPerTileV` properties.
-  
+
   The applied image is determined by the `Class.Decal.Texture|Texture` property.
   For information on how to upload images, see
   [Assets](../../../projects/assets/index.md).
@@ -34,7 +34,8 @@ properties:
       coordinate.
     description: |
       `Class.Texture.OffsetStudsU|OffsetStudsU` determines how far the rendered
-      texture is offset on the horizontal axis, in studs, as visualized [here](../../../parts/textures-decals.md#offsetting-textures).
+      texture is offset on the horizontal axis, in studs, as visualized
+      [here](../../../parts/textures-decals.md#offsetting-textures).
 
       See also `Class.Texture.OffsetStudsV|OffsetStudsV`.
     code_samples:
@@ -58,7 +59,8 @@ properties:
       coordinate.
     description: |
       `Class.Texture.OffsetStudsV|OffsetStudsV` determines how far the rendered
-      texture is offset on the vertical axis, in studs, as visualized [here](../../../parts/textures-decals.md#offsetting-textures).
+      texture is offset on the vertical axis, in studs, as visualized
+      [here](../../../parts/textures-decals.md#offsetting-textures).
 
       See also `Class.Texture.OffsetStudsU|OffsetStudsU`.
     code_samples:

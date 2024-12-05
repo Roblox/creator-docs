@@ -123,11 +123,10 @@ properties:
       `Class.TextBox.SelectionStart|SelectionStart` property, it is possible to
       both get and set selected text within a `Class.TextBox`.
 
-      Note that the units of this property are **bytes** and that
-      many unicode characters such as emoji are longer than 1 byte. For
-      instance, if a player types in "Hello👋" ("Hello"
-      immediately followed by the waving hand sign), the cursor position
-      would be `10`, not `7`, since the emoji uses 4 bytes.
+      Note that the units of this property are **bytes** and that many unicode
+      characters such as emoji are longer than 1 byte. For instance, if a player
+      types in "Hello👋" ("Hello" immediately followed by the waving hand sign),
+      the cursor position would be `10`, not `7`, since the emoji uses 4 bytes.
     code_samples:
       - textbox-selections
     type: int
@@ -567,11 +566,10 @@ properties:
       Determines the color of rendered text.
     description: |
       This property determines the color of all the text rendered by a
-      `Class.GuiObject` element. This property along with
-      `Class.TextBox.Font`, `Class.TextBox.TextSize` and
-      `Class.TextBox.TextTransparency` will determine the visual properties of
-      text. Text is rendered after the text stroke
-      (`Class.TextBox.TextStrokeColor3`).
+      `Class.GuiObject` element. This property along with `Class.TextBox.Font`,
+      `Class.TextBox.TextSize` and `Class.TextBox.TextTransparency` will
+      determine the visual properties of text. Text is rendered after the text
+      stroke (`Class.TextBox.TextStrokeColor3`).
 
       It's important that text is easily read by players! Be sure to choose
       colors with little-to-no saturation, like white, grey, or black. Make sure
@@ -894,12 +892,12 @@ properties:
     writeCapabilities: []
   - name: TextBox.TextWrapped
     summary: |
-      Determines if text wraps to multiple lines within the
-      `Class.GuiObject` element space, truncating excess text.
+      Determines if text wraps to multiple lines within the `Class.GuiObject`
+      element space, truncating excess text.
     description: |
       When enabled, this property will render text on multiple lines within a
-      `Class.TextBox` element's space so that `Class.TextBox.TextBounds`
-      will never exceed the `Class.GuiBase2d.AbsoluteSize` of the GUI element.
+      `Class.TextBox` element's space so that `Class.TextBox.TextBounds` will
+      never exceed the `Class.GuiBase2d.AbsoluteSize` of the GUI element.
 
       This is achieved by breaking long lines of text into multiple lines. Line
       breaks will prefer whitespace; should a long unbroken word exceed the

@@ -26,8 +26,9 @@ properties:
       renders as a result of its ancestors' sizes and positions. Note that the
       object's `Class.GuiObject.AnchorPoint|AnchorPoint` influences
       `Class.GuiBase2d.AbsolutePosition|AbsolutePosition`.
-      
-      See also `Class.GuiBase2d.AbsoluteRotation|AbsoluteRotation` and `Class.GuiBase2d.AbsoluteSize|AbsoluteSize`.
+
+      See also `Class.GuiBase2d.AbsoluteRotation|AbsoluteRotation` and
+      `Class.GuiBase2d.AbsoluteSize|AbsoluteSize`.
     code_samples:
     type: Vector2
     tags:
@@ -55,7 +56,8 @@ properties:
       element, in degrees. It does **not** perform bounds checking, so its value
       may not be in the range `0` to `360`.
 
-      See also `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` and `Class.GuiBase2d.AbsoluteSize|AbsoluteSize`.
+      See also `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` and
+      `Class.GuiBase2d.AbsoluteSize|AbsoluteSize`.
     code_samples:
     type: float
     tags:
@@ -75,13 +77,15 @@ properties:
     writeCapabilities: []
   - name: GuiBase2d.AbsoluteSize
     summary: |
-      Describes the actual screen size of a `Class.GuiBase2d` element, in pixels.
+      Describes the actual screen size of a `Class.GuiBase2d` element, in
+      pixels.
     description: |
       `Class.GuiBase2d.AbsoluteSize|AbsoluteSize` is a read-only property that
       describes the actual screen size of a `Class.GuiBase2d` element, in
       pixels.
 
-      See also `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` and `Class.GuiBase2d.AbsoluteRotation|AbsoluteRotation`.
+      See also `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` and
+      `Class.GuiBase2d.AbsoluteRotation|AbsoluteRotation`.
     code_samples:
     type: Vector2
     tags:
@@ -167,7 +171,7 @@ properties:
       `Class.GuiBase2d.AutoLocalize|AutoLocalize` must be set to `true` on the
       `Class.GuiBase2d` and its ancestors for automated localization to be
       applied.
-      
+
       You can set this to reference a `Class.LocalizationTable` anywhere in the
       `Class.DataModel`. The `Class.GuiBase2d` object and all of its children
       will try to use that specific `Class.LocalizationTable` and its ancestors
@@ -283,7 +287,7 @@ properties:
       Allows for customization of how gamepad selection can move between
       buttons, which are descendants of the selection group, leave the group,
       and select other buttons.
-      
+
       Setting `Class.GuiBase2d.SelectionGroup|SelectionGroup` to `true` exposes
       the `Class.GuiBase2d.SelectionBehaviorUp|SelectionBehaviorUp`,
       `Class.GuiBase2d.SelectionBehaviorDown|SelectionBehaviorDown`,
@@ -316,7 +320,8 @@ events:
   - name: GuiBase2d.SelectionChanged
     summary: |
       Fires when the gamepad selection moves to, leaves, or changes within the
-      connected `Class.GuiBase2d` or any descendant `Class.GuiObject|GuiObjects`.
+      connected `Class.GuiBase2d` or any descendant
+      `Class.GuiObject|GuiObjects`.
     description: |
       This event fires when the gamepad selection moves to, leaves, or changes
       within the connected `Class.GuiBase2d` or any descendant

@@ -108,9 +108,11 @@ properties:
     writeCapabilities: []
   - name: GuiButton.Style
     summary: |
-      Sets the style of the `Class.GuiButton` based on a list of pre-determined styles.
+      Sets the style of the `Class.GuiButton` based on a list of pre-determined
+      styles.
     description: |
-      Sets the style of the `Class.GuiButton` based on a list of pre-determined styles.
+      Sets the style of the `Class.GuiButton` based on a list of pre-determined
+      styles.
     code_samples:
     type: ButtonStyle
     tags: []
@@ -210,7 +212,8 @@ events:
       Fires when the user releases their left mouse button off of the
       `Class.GuiButton`.
     description: |
-      This event fires when the user releases their left mouse button off of the `Class.GuiButton`.
+      This event fires when the user releases their left mouse button off of the
+      `Class.GuiButton`.
 
       For an event requiring the user to press **and** release their left mouse
       on a `Class.GuiButton` in order for the event to fire, consider using
@@ -288,9 +291,11 @@ events:
     writeCapabilities: []
   - name: GuiButton.MouseButton2Up
     summary: |
-      Fires when the user releases their right mouse button off of the `Class.GuiButton`.
+      Fires when the user releases their right mouse button off of the
+      `Class.GuiButton`.
     description: |
-      This event fires when the user releases their right mouse button off of the `Class.GuiButton`.
+      This event fires when the user releases their right mouse button off of
+      the `Class.GuiButton`.
 
       For an event requiring the user to press **and** release their right mouse
       on a `Class.GuiButton` in order for the event to fire, consider using

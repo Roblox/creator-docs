@@ -1710,6 +1710,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/PathfindingService.yaml
         ignoreTranslation: true
+      - title: PerformanceControlService
+        path: /reference/engine/classes/PerformanceControlService
+        type: engineapi
+        source: /reference/engine/classes/PerformanceControlService.yaml
+        ignoreTranslation: true
       - title: PermissionsService
         path: /reference/engine/classes/PermissionsService
         type: engineapi
@@ -2895,6 +2900,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/VideoFrame.yaml
         ignoreTranslation: true
+      - title: VideoPlayer
+        path: /reference/engine/classes/VideoPlayer
+        type: engineapi
+        source: /reference/engine/classes/VideoPlayer.yaml
+        ignoreTranslation: true
       - title: VideoService
         path: /reference/engine/classes/VideoService
         type: engineapi
@@ -3838,6 +3848,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/DeviceFeatureType.yaml
         ignoreTranslation: true
+      - title: DeviceForm
+        path: /reference/engine/enums/DeviceForm
+        type: engineapi
+        source: /reference/engine/enums/DeviceForm.yaml
+        ignoreTranslation: true
       - title: DeviceLevel
         path: /reference/engine/enums/DeviceLevel
         type: engineapi
@@ -4208,11 +4223,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/InputType.yaml
         ignoreTranslation: true
-      - title: Intent
-        path: /reference/engine/enums/Intent
-        type: engineapi
-        source: /reference/engine/enums/Intent.yaml
-        ignoreTranslation: true
       - title: InterpolationThrottlingMode
         path: /reference/engine/enums/InterpolationThrottlingMode
         type: engineapi
@@ -4272,6 +4282,11 @@ navigation:
         path: /reference/engine/enums/LexemeType
         type: engineapi
         source: /reference/engine/enums/LexemeType.yaml
+        ignoreTranslation: true
+      - title: LightingStyle
+        path: /reference/engine/enums/LightingStyle
+        type: engineapi
+        source: /reference/engine/enums/LightingStyle.yaml
         ignoreTranslation: true
       - title: Limb
         path: /reference/engine/enums/Limb
@@ -4667,11 +4682,6 @@ navigation:
         path: /reference/engine/enums/ProximityPromptStyle
         type: engineapi
         source: /reference/engine/enums/ProximityPromptStyle.yaml
-        ignoreTranslation: true
-      - title: Quality
-        path: /reference/engine/enums/Quality
-        type: engineapi
-        source: /reference/engine/enums/Quality.yaml
         ignoreTranslation: true
       - title: QualityLevel
         path: /reference/engine/enums/QualityLevel

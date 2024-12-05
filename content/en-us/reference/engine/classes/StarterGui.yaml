@@ -7,8 +7,8 @@ summary: |
   `Class.PlayerGui` of `Class.Player|Players`. Also provides a range of
   functions for interacting with the `Class.CoreGui`.
 description: |
-  `Class.StarterGui` is a container object designed to hold `Class.LayerCollector`
-  objects such as `Class.ScreenGui|ScreenGuis`.
+  `Class.StarterGui` is a container object designed to hold
+  `Class.LayerCollector` objects such as `Class.ScreenGui|ScreenGuis`.
 
   When a `Class.Player.Character` spawns, the contents of their
   `Class.PlayerGui` (if any) are emptied. Children of the `Class.StarterGui` are
@@ -19,9 +19,9 @@ description: |
   only be placed into each player's `Class.PlayerGui` once and will not be
   deleted when the `Class.Player` respawns.
 
-  `Class.StarterGui` also includes a range of functions allowing you to interact with
-  the `Class.CoreGui`. For example `Class.StarterGui:SetCoreGuiEnabled()` can be
-  used to disable elements of the `Class.CoreGui`, and
+  `Class.StarterGui` also includes a range of functions allowing you to interact
+  with the `Class.CoreGui`. For example `Class.StarterGui:SetCoreGuiEnabled()`
+  can be used to disable elements of the `Class.CoreGui`, and
   `Class.StarterGui:SetCore()` can perform a range of functions including
   creating notifications and system messages.
 code_samples:
@@ -73,8 +73,8 @@ properties:
       - Deprecated
     deprecation_message: |
       This property is deprecated. Use `Class.LayerCollector.ResetOnSpawn` to
-      control the resetting behavior for individual
-      `Class.LayerCollector` objects.
+      control the resetting behavior for individual `Class.LayerCollector`
+      objects.
     security:
       read: None
       write: None

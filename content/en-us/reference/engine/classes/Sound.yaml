@@ -150,8 +150,7 @@ properties:
     writeCapabilities: []
   - name: Sound.IsPlaying
     summary: |
-      Read-only property which returns `true` when the `Class.Sound` is
-      playing.
+      Read-only property which returns `true` when the `Class.Sound` is playing.
     description: |
       This read-only property returns true when the `Class.Sound` is playing.
 
@@ -185,24 +184,24 @@ properties:
       `Class.Sound.PlaybackRegion|PlaybackRegion`, in seconds.
 
       - If `Class.Sound.LoopRegion|LoopRegion.Min` `>`
-      `Class.Sound.PlaybackRegion|PlaybackRegion.Min`, the loop starts from
-      `Class.Sound.LoopRegion|LoopRegion.Min`.
+        `Class.Sound.PlaybackRegion|PlaybackRegion.Min`, the loop starts from
+        `Class.Sound.LoopRegion|LoopRegion.Min`.
 
       - If `Class.Sound.LoopRegion|LoopRegion.Min` `<`
-      `Class.Sound.PlaybackRegion|PlaybackRegion.Min`, the loop starts from
-      `Class.Sound.PlaybackRegion|PlaybackRegion.Min`.
+        `Class.Sound.PlaybackRegion|PlaybackRegion.Min`, the loop starts from
+        `Class.Sound.PlaybackRegion|PlaybackRegion.Min`.
 
       - If `Class.Sound.LoopRegion|LoopRegion.Max` `>`
-      `Class.Sound.PlaybackRegion|PlaybackRegion.Max`, the loop starts at
-      `Class.Sound.PlaybackRegion|PlaybackRegion.Max`.
+        `Class.Sound.PlaybackRegion|PlaybackRegion.Max`, the loop starts at
+        `Class.Sound.PlaybackRegion|PlaybackRegion.Max`.
 
       - If `Class.Sound.LoopRegion|LoopRegion.Max` `<`
-      `Class.Sound.PlaybackRegion|PlaybackRegion.Max`, the loop starts at
-      **exactly** that time.
+        `Class.Sound.PlaybackRegion|PlaybackRegion.Max`, the loop starts at
+        **exactly** that time.
 
       - If `Class.Sound.LoopRegion|LoopRegion.Min` `==`
-      `Class.Sound.LoopRegion|LoopRegion.Max`, the `Class.Sound` uses the
-      `Class.Sound.PlaybackRegion|PlaybackRegion` property instead.
+        `Class.Sound.LoopRegion|LoopRegion.Max`, the `Class.Sound` uses the
+        `Class.Sound.PlaybackRegion|PlaybackRegion` property instead.
     code_samples: []
     type: NumberRange
     tags: []
@@ -226,7 +225,7 @@ properties:
       This sets whether or not the `Class.Sound` repeats once it has finished
       playing. Looped sounds are suitable for a range of applications including
       music and background ambient sounds.
-      
+
       The `Class.Sound.DidLoop|DidLoop` event can be used to track the number of
       times as sound has looped.
     code_samples:
@@ -404,16 +403,21 @@ properties:
       `Class.Sound.TimeLength|TimeLength`, in seconds.
 
       - If `Class.Sound.PlaybackRegion|PlaybackRegion.Min` `>` `0`, the sound
-      begins to play from the `Class.Sound.PlaybackRegion|PlaybackRegion.Min`
-      time.
+        begins to play from the `Class.Sound.PlaybackRegion|PlaybackRegion.Min`
+        time.
 
-      - If `Class.Sound.PlaybackRegion|PlaybackRegion.Min` `<` `0`, the sound begins to play from `0`.
+      - If `Class.Sound.PlaybackRegion|PlaybackRegion.Min` `<` `0`, the sound
+        begins to play from `0`.
 
-      - If `Class.Sound.PlaybackRegion|PlaybackRegion.Max` `>` `Class.Sound.TimeLength`, the sound stops at `Class.Sound.TimeLength`.
+      - If `Class.Sound.PlaybackRegion|PlaybackRegion.Max` `>`
+        `Class.Sound.TimeLength`, the sound stops at `Class.Sound.TimeLength`.
 
-      - If `Class.Sound.PlaybackRegion|PlaybackRegion.Max` `<` `Class.Sound.TimeLength`, the sound stops at **exactly** that time.
+      - If `Class.Sound.PlaybackRegion|PlaybackRegion.Max` `<`
+        `Class.Sound.TimeLength`, the sound stops at **exactly** that time.
 
-      - If `Class.Sound.PlaybackRegion|PlaybackRegion.Min` `==` `Class.Sound.PlaybackRegion|PlaybackRegion.Max`, this property is inactive.
+      - If `Class.Sound.PlaybackRegion|PlaybackRegion.Min` `==`
+        `Class.Sound.PlaybackRegion|PlaybackRegion.Max`, this property is
+        inactive.
     code_samples: []
     type: NumberRange
     tags: []
@@ -488,8 +492,7 @@ properties:
 
       In Studio's [Properties](../../../studio/properties.md) window, while in
       **Edit** mode, toggling `Class.Sound.Playing|Playing` to `true` does not
-      begin playing the sound, but the sound will begin playing during
-      runtime.
+      begin playing the sound, but the sound will begin playing during runtime.
 
       This property should not be confused with
       `Class.Sound.IsPlaying|IsPlaying` which is a read-only property.
@@ -582,7 +585,7 @@ properties:
       This property controls how the volume of a `Class.Sound` which is parented
       to a `Class.BasePart` or `Class.Attachment` attenuates (fades out) as the
       distance between the listener and parent changes.
-      
+
       For details on the different modes, see `Enum.RollOffMode`.
     code_samples:
     type: RollOffMode
@@ -671,9 +674,8 @@ properties:
     writeCapabilities: []
   - name: Sound.TimePosition
     summary: |
-      Progress of the `Class.Sound` in seconds. Can be changed to move
-      the playback position of the `Class.Sound` both before and during
-      playback.
+      Progress of the `Class.Sound` in seconds. Can be changed to move the
+      playback position of the `Class.Sound` both before and during playback.
     description: |
       This property reflects the progress of the `Class.Sound` in seconds. It
       can be changed to move the playback position of the sound both before and
@@ -691,7 +693,7 @@ properties:
 
       ```
       local newPosition = 1.5
-      
+
       if newPosition >= sound.TimeLength then
       	newPosition = newPosition - sound.TimeLength
       end
@@ -718,7 +720,8 @@ properties:
     summary: |
       The volume of the `Class.Sound`.
     description: |
-      The volume of the `Class.Sound`. Can be set between `0` and `10` and defaults to `0.5`.
+      The volume of the `Class.Sound`. Can be set between `0` and `10` and
+      defaults to `0.5`.
 
       Note that if the `Class.Sound` is a member of a `Class.SoundGroup`, its
       playback volume (but not its `Class.Sound.Volume|Volume` property) will be
@@ -979,9 +982,11 @@ events:
     writeCapabilities: []
   - name: Sound.Paused
     summary: |
-      Fires whenever the `Class.Sound` is paused using `Class.Sound:Pause()|Pause()`.
+      Fires whenever the `Class.Sound` is paused using
+      `Class.Sound:Pause()|Pause()`.
     description: |
-      Fires whenever the `Class.Sound` is paused using `Class.Sound:Pause()|Pause()`.
+      Fires whenever the `Class.Sound` is paused using
+      `Class.Sound:Pause()|Pause()`.
     code_samples:
       - Sound-Functions
     parameters:
@@ -989,7 +994,8 @@ events:
         type: string
         default:
         summary: |
-          The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that was paused.
+          The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that was
+          paused.
     tags: []
     deprecation_message: ''
     security: None
@@ -1012,7 +1018,8 @@ events:
         type: string
         default:
         summary: |
-          The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that was played.
+          The `Class.Sound.SoundId|SoundId` of the `Class.Sound` that was
+          played.
     tags: []
     deprecation_message: ''
     security: None

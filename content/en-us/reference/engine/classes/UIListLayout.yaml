@@ -65,9 +65,9 @@ properties:
       Controls how to distribute extra horizontal space.
     description: |
       When the list layout's `Class.UIListLayout.FillDirection|FillDirection` is
-      set to `Enum.FillDirection.Horizontal`, the `Class.UIListLayout.HorizontalFlex|HorizontalFlex` property
-      specifies how to distribute extra horizontal space in the parent
-      container.
+      set to `Enum.FillDirection.Horizontal`, the
+      `Class.UIListLayout.HorizontalFlex|HorizontalFlex` property specifies how
+      to distribute extra horizontal space in the parent container.
 
       <table size="small">
         <thead>
@@ -106,11 +106,12 @@ properties:
 
       In **vertical** list layouts
       (`Class.UIListLayout.FillDirection|FillDirection` set to
-      `Enum.FillDirection.Vertical`), the `Class.UIListLayout.HorizontalFlex|HorizontalFlex` property specifies
-      how to distribute the siblings across the **horizontal cross‑direction**.
-      In such layouts, a setting of `Enum.UIFlexAlignment.Fill` makes the
-      siblings fill the entire horizontal space while vertical spacing adheres
-      to `Class.UIListLayout.VerticalFlex|VerticalFlex`.
+      `Enum.FillDirection.Vertical`), the
+      `Class.UIListLayout.HorizontalFlex|HorizontalFlex` property specifies how
+      to distribute the siblings across the **horizontal cross‑direction**. In
+      such layouts, a setting of `Enum.UIFlexAlignment.Fill` makes the siblings
+      fill the entire horizontal space while vertical spacing adheres to
+      `Class.UIListLayout.VerticalFlex|VerticalFlex`.
 
       <img src="../../../assets/engine-api/classes/UIListLayout/HorizontalFlex-Cross-Direction.png" width="720" alt="Diagram showing how HorizontalFlex affects the horizontal size of sibling UI objects when the UIListLayout fill direction is set to vertical." />
 
@@ -224,8 +225,9 @@ properties:
       Controls how to distribute extra vertical space.
     description: |
       When the list layout's `Class.UIListLayout.FillDirection|FillDirection` is
-      set to `Enum.FillDirection.Vertical`, the `Class.UIListLayout.VerticalFlex|VerticalFlex` property
-      specifies how to distribute extra vertical space in the parent container.
+      set to `Enum.FillDirection.Vertical`, the
+      `Class.UIListLayout.VerticalFlex|VerticalFlex` property specifies how to
+      distribute extra vertical space in the parent container.
 
       <table size="small">
         <thead>
@@ -264,10 +266,11 @@ properties:
 
       In **horizontal** list layouts
       (`Class.UIListLayout.FillDirection|FillDirection` set to
-      `Enum.FillDirection.Horizontal`), the `Class.UIListLayout.VerticalFlex|VerticalFlex` property specifies
-      how to distribute the siblings across the **vertical cross direction**. In
-      such layouts, a setting of `Enum.UIFlexAlignment.Fill` makes the siblings
-      fill the entire vertical space while horizontal spacing adheres to
+      `Enum.FillDirection.Horizontal`), the
+      `Class.UIListLayout.VerticalFlex|VerticalFlex` property specifies how to
+      distribute the siblings across the **vertical cross direction**. In such
+      layouts, a setting of `Enum.UIFlexAlignment.Fill` makes the siblings fill
+      the entire vertical space while horizontal spacing adheres to
       `Class.UIListLayout.HorizontalFlex|HorizontalFlex`.
 
       <img src="../../../assets/engine-api/classes/UIListLayout/VerticalFlex-Cross-Direction.png" width="720" alt="Diagram showing how VerticalFlex affects the vertical size of sibling UI objects when the UIListLayout fill direction is set to horizontal." />

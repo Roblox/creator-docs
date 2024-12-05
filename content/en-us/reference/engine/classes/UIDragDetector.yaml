@@ -11,19 +11,19 @@ description: |
   spinners. Key features include:
 
   - Place a `Class.UIDragDetector` under any `Class.GuiObject` instance to make
-  it draggable via all inputs without a single line of code.
+    it draggable via all inputs without a single line of code.
 
   - Choose from several `Class.UIDragDetector.DragStyle|DragStyle` options,
-  define how the object responds to motion via
-  `Class.UIDragDetector.ResponseStyle|ResponseStyle`, and optionally apply axis,
-  movement limits, or drag boundaries.
+    define how the object responds to motion via
+    `Class.UIDragDetector.ResponseStyle|ResponseStyle`, and optionally apply
+    axis, movement limits, or drag boundaries.
 
   - Scripts can respond to manipulation of dragged objects to drive logic
-  responses, such as adjusting settings.
+    responses, such as adjusting settings.
 
   - `Class.UIDragDetector|UIDragDetectors` work in Studio as long as you're
-  **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, nor
-  certain plugins or Studio's **UI** editor tools.
+    **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, nor
+    certain plugins or Studio's **UI** editor tools.
 code_samples: []
 inherits:
   - UIComponent

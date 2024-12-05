@@ -42,11 +42,13 @@ properties:
     description: |
       This property is a content-type property that should hold the asset ID of
       a decal or image uploaded to Roblox. It functions identically to
-      `Class.Decal.Texture` with regards to loading the image from Roblox. The rendered image will be colorized using
+      `Class.Decal.Texture` with regards to loading the image from Roblox. The
+      rendered image will be colorized using
       `Class.ImageButton.ImageColor3|ImageColor3`.
-      
+
       Note that it is possible to make the image render as tiled, scaled to fit,
-      or 9-sliced by adjusting the `Class.ImageButton.ScaleType|ScaleType` property.
+      or 9-sliced by adjusting the `Class.ImageButton.ScaleType|ScaleType`
+      property.
     code_samples:
       - Image-Hover-Lock
     type: ContentId
@@ -67,10 +69,10 @@ properties:
     summary: |
       Determines how a rendered image will be colorized.
     description: |
-      This property determines how an image is colorized. When set to
-      white, no colorization occurs. This property is very useful for reusing
-      image assets: If the source image is completely white with transparency,
-      you can set the entire color of the image at once with this property.
+      This property determines how an image is colorized. When set to white, no
+      colorization occurs. This property is very useful for reusing image
+      assets: If the source image is completely white with transparency, you can
+      set the entire color of the image at once with this property.
     code_samples:
       - Image-Hover-Lock
     type: Color3
@@ -92,11 +94,11 @@ properties:
       The image content displayed by the UI element. Supports asset URIs and
       `Class.EditableImage` objects.
     description: |
-      This property should hold an [asset
-      URI](../../../projects/assets/index.md#asset-uris) or a reference to an
-      `Class.EditableImage` object. The asset URI can reference a decal or image
-      uploaded to Roblox. It functions identically to `Class.Decal.Texture` with
-      regards to loading the image.
+      This property should hold an
+      [asset URI](../../../projects/assets/index.md#asset-uris) or a reference
+      to an `Class.EditableImage` object. The asset URI can reference a decal or
+      image uploaded to Roblox. It functions identically to
+      `Class.Decal.Texture` with regards to loading the image.
 
       The rendered image will be colorized using
       `Class.ImageButton.ImageColor3|ImageColor3`. It is possible to make the

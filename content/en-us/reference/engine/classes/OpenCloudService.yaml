@@ -45,6 +45,10 @@ methods:
         type: Dictionary
         default:
         summary: ''
+      - name: headers
+        type: Dictionary
+        default: nil
+        summary: ''
     returns:
       - type: Dictionary
         summary: ''

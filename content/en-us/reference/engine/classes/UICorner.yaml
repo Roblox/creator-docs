@@ -38,16 +38,17 @@ properties:
     summary: |
       Determines the radius of the component.
     description: |
-      A `Datatype.UDim` property that determines the radius of the `Class.UICorner`
-      component, internally calculated as follows:
+      A `Datatype.UDim` property that determines the radius of the
+      `Class.UICorner` component, internally calculated as follows:
 
       - The radius of the **X** axis is always the same as the radius of **Y**
         axis.
       - `Datatype.UDim.Scale|Scale` rounding will always apply to the
         **minimum** width or height.
-      - Rounded rectangles will always be in a "pill" shape if `Class.UICorner.CornerRadius|CornerRadius` is
-        set to a value that leads to a calculated result greater than half of
-        the rectangle's minimum width or height.
+      - Rounded rectangles will always be in a "pill" shape if
+        `Class.UICorner.CornerRadius|CornerRadius` is set to a value that leads
+        to a calculated result greater than half of the rectangle's minimum
+        width or height.
     code_samples:
     type: UDim
     tags: []

@@ -47,9 +47,9 @@ methods:
       Creates a new `Class.Tween` given the object whose properties are to be
       tweened, a `Datatype.TweenInfo`, and a dictionary of goal property values.
     description: |
-      This constructor creates a new `Class.Tween` from three
-      arguments: the object to tween, the `Datatype.TweenInfo` specifications,
-      and a table containing the properties to tween and values to tween to.
+      This constructor creates a new `Class.Tween` from three arguments: the
+      object to tween, the `Datatype.TweenInfo` specifications, and a table
+      containing the properties to tween and values to tween to.
 
       The `propertyTable` parameter needs to be a dictionary where the keys are
       the string names of the property (for example `Position`, `Transparency`,

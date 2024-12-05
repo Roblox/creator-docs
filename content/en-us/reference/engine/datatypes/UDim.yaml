@@ -50,9 +50,11 @@ functions:
 math_operations:
   - operation: +
     summary: |
-      Produces a `Datatype.UDim` representing the sum of the two `Datatype.UDim` values.
+      Produces a `Datatype.UDim` representing the sum of the two `Datatype.UDim`
+      values.
     description: |
-      Produces a `Datatype.UDim` representing the sum of the two `Datatype.UDim` values.
+      Produces a `Datatype.UDim` representing the sum of the two `Datatype.UDim`
+      values.
     type_a: UDim
     type_b: UDim
     return_type: UDim
@@ -61,11 +63,11 @@ math_operations:
     deprecation_message: ''
   - operation: '-'
     summary: |
-      Produces a `Datatype.UDim` representing the difference between the two `Datatype.UDim`
-      values.
+      Produces a `Datatype.UDim` representing the difference between the two
+      `Datatype.UDim` values.
     description: |
-      Produces a `Datatype.UDim` representing the difference between the two `Datatype.UDim`
-      values.
+      Produces a `Datatype.UDim` representing the difference between the two
+      `Datatype.UDim` values.
     type_a: UDim
     type_b: UDim
     return_type: UDim
