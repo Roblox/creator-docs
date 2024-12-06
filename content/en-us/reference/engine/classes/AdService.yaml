@@ -5,8 +5,11 @@ memory_category: Instances
 summary: |
   A class that allows the display of mobile video ads.
 description: |
-  This **AdService** is a service for displaying mobile video ads as a form of
+  This **AdService** was a service for displaying mobile video ads as a form of
   monetization.
+
+  It has been superseeded by [Immersive Ads](../../../production/monetization/immersive-ads)
+  which should be used instead to serve ad units to visitors of your experience.
 code_samples:
 inherits:
   - Instance
@@ -31,8 +34,8 @@ methods:
       - Deprecated
     deprecation_message: |
       `Class.AdService` has been decommissioned and is no longer operational.
-      There is no replacement service and this event should not be used in new
-      work.
+      [Immersive Ads](../../../production/monetization/immersive-ads) should
+      be used as a replacement to `Class.AdService`.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -53,8 +56,8 @@ events:
       - Deprecated
     deprecation_message: |
       `Class.AdService` has been decommissioned and is no longer operational.
-      There is no replacement service and this event should not be used in new
-      work.
+      [Immersive Ads](../../../production/monetization/immersive-ads) should
+      be used as a replacement to `Class.AdService`.
     security: None
     thread_safety: Unsafe
     capabilities: []
