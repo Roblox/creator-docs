@@ -14,6 +14,12 @@ description: |
   `Datatype.Font` is used by the `Class.TextLabel.FontFace`,
   `Class.TextButton.FontFace`, and `Class.TextBox.FontFace` properties.
 
+  See Also:
+
+  - `Enum.Font`, an older alternative to this datatype that is required by some
+    methods and properties. Please note that most fonts cannot be represented
+    with this enum.
+
   #### Font List
 
   | Name               | Asset ID                                          | Weights                                                                       |
