@@ -1173,22 +1173,32 @@ methods:
     writeCapabilities: []
   - name: Workspace:GetServerTimeNow
     summary: |
-      Returns the server epoch time in seconds.
+      Returns the server's Unix time in seconds.
     description: |
-      **GetServerTimeNow** returns the epoch time on the server with microsecond
-      precision. The time is adjusted for drift and smoothed monotonically (it
-      is guaranteed to be non-decreasing). The server clock progresses no faster
-      than 1.006&times; speed and no slower than 0.994&times; speed.
+      `Class.Workspace:GetServerTimeNow()|GetServerTimeNow()` returns the
+      client's best approximation of the current time on the server. This is
+      useful for creating synchronized experiences as every client will get
+      about the same results regardless of their timezone or local clock.
 
-      Returns a Unix timestamp that can be used with `Library.os|os.date()` or
-      with `Datatype.DateTime.fromUnixTimestamp()`.
+      This returns a Unix timestamp, similar to `Library.os|os.time()`, that can
+      be used with `Library.os|os.date()` or with
+      `Datatype.DateTime.fromUnixTimestamp()`.
 
-      This function is useful for creating synchronized experiences, as it has
-      three properties necessary for doing so: it's a real-world time clock,
-      it's monotonic, and it has decent precision.
+      The timestamp returned by this function is smoothed so that:
+
+      - It is monotonic; its value will never decrease.
+      - It moves at the same rate as the local clock to within 0.6%.
+
+      `Class.Workspace:GetServerTimeNow()|GetServerTimeNow()` is expensive to
+      call compared to `Datatype.DateTime.now()`, and is less precise than
+      `Library.os|os.clock()`, so it should be used to make sure an event starts
+      at the right real world time or to adjust things periodically to keep a
+      series of events in sync.
 
       This function relies on the server, so calling it from a client that isn't
-      connected will throw an error.
+      connected will throw an error. Also note that this function is not
+      suitable for things like timed rewards as it is not secure compared to
+      tracking such timers on the server.
 
       See also:
 
@@ -1201,7 +1211,7 @@ methods:
     returns:
       - type: double
         summary: |
-          The estimated epoch time on the server.
+          The estimated Unix timestamp on the server.
     tags: []
     deprecation_message: ''
     security: None

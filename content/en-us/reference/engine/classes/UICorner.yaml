@@ -6,9 +6,9 @@ summary: |
   UI modifier which applies deformation to corners of its parent
   `Class.GuiObject`.
 description: |
-  `UICorner` is a modifier which applies deformation to corners of its parent
-  `Class.GuiObject`. Input, but not descendants, will be clipped to the round
-  corner area. See [here](../../../ui/appearance-modifiers.md#corners) for
+  `Class.UICorner` is a modifier which applies deformation to corners of its
+  parent `Class.GuiObject`. Input, but not descendants, will be clipped to the
+  round corner area. See [here](../../../ui/appearance-modifiers.md#corners) for
   examples.
 
   In order to keep the circular shape of round corners with the
@@ -27,7 +27,7 @@ description: |
   suitable for decorative borders that are not simply rounded. See
   [9‑Slice Design](../../../ui/9-slice.md) for details.
 
-  Note that `UICorner` can not be applied to a `Class.ScrollingFrame`.
+  Note that `Class.UICorner` can not be applied to a `Class.ScrollingFrame`.
 code_samples:
 inherits:
   - UIComponent
@@ -38,16 +38,17 @@ properties:
     summary: |
       Determines the radius of the component.
     description: |
-      A `Datatype.UDim` property that determines the radius of the `UICorner`
-      component, internally calculated as follows:
+      A `Datatype.UDim` property that determines the radius of the
+      `Class.UICorner` component, internally calculated as follows:
 
       - The radius of the **X** axis is always the same as the radius of **Y**
         axis.
       - `Datatype.UDim.Scale|Scale` rounding will always apply to the
         **minimum** width or height.
-      - Rounded rectangles will always be in a "pill" shape if `CornerRadius` is
-        set to a value that leads to a calculated result greater than half of
-        the rectangle's minimum width or height.
+      - Rounded rectangles will always be in a "pill" shape if
+        `Class.UICorner.CornerRadius|CornerRadius` is set to a value that leads
+        to a calculated result greater than half of the rectangle's minimum
+        width or height.
     code_samples:
     type: UDim
     tags: []

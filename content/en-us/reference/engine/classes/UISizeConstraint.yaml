@@ -6,8 +6,8 @@ summary: |
   Ensures a `Class.GuiObject` does not become larger or smaller than the
   constraint's maximum size or minimum size.
 description: |
-  The `UISizeConstraint` ensures a `Class.GuiObject` does not become larger or
-  smaller than the `Class.UISizeConstraint.MaxSize|MaxSize` and
+  The `Class.UISizeConstraint` ensures a `Class.GuiObject` does not become
+  larger or smaller than the `Class.UISizeConstraint.MaxSize|MaxSize` and
   `Class.UISizeConstraint.MinSize|MinSize`. For example, if
   `Class.UISizeConstraint.MaxSize|MaxSize` is set to
   <Typography noWrap>`(200, 200)`</Typography> and

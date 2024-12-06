@@ -2,7 +2,7 @@
 title: include
 ---
 
-The **Controller Emulator** lets you accurately emulate gamepad input directly in Studio. The default controller is **Generic**, and you can select alternatives for Playstation, Xbox, and Quest devices from the upper‑left picker menu.
+The **Controller Emulator** lets you accurately emulate gamepad input directly in Studio. The default controller is a generic gamepad but you can select alternatives for Playstation, Xbox, and Quest devices from the upper‑left picker menu.
 
 <img src="../assets/studio/general/Test-Tab-Emulation-Controllers.png" width="840" alt="Emulate Device Controllers button indicated in Test tab" />
 

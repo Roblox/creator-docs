@@ -89,7 +89,21 @@ To check the frame rate of your experience:
 When evaluating frame rate, it can help to set the graphics quality to its maximum value to remove the effect of the frame rate manager. In the client, open the menu, click **Settings**, change  **Graphics Mode** to manual, and raise graphics quality.
 </Alert>
 
-## Memory
+## Server Memory
+
+Try to keep server memory usage below 50%. Total server memory uses the following formula:
+
+`6.25 GiB + (100 MiB * largest_number_of_connected_players)`
+
+<Alert severity="info">
+These numbers use powers of 2, so 1 GiB refers to 2^30 bytes and 1 MiB to 2^20 bytes.
+</Alert>
+
+For example, a server with 30 connected players has approximately 9.18 GiB of total memory. Servers gain memory when players connect, but **don't** lose it when players disconnect. If 10 players leave, the server still has 9.18 GiB of memory rather than shrinking to 8.2 GiB.
+
+When servers shut down (for example, when they are empty or as part of the [update process](../production/publishing/publishing-experiences-and-places.md#updating-experiences)), their replacements start with the base amount of memory and begin scaling up as players connect.
+
+## Client Memory
 
 There are several ways to check memory usage for an experience:
 
@@ -100,9 +114,8 @@ High memory usage is not necessarily indicative of a problem, but some indicatio
 
 - A significant percentage of client crashes showing in the **Performance Dashboard**, particularly a sudden uptick that coincides with an update. Some number of crashes are expected, but you should investigate if your crash rates increase above 2-3%.
 - A crash occurs while testing on a device that you want your experience to support.
-- Your server memory usage exceeds 3 GB.
 
-A significant portion of an experience's memory consumption on the client are from assets, such as images and meshes, loaded into graphics memory so they can be rendered. In the **Developer console**, you can view the graphics memory consumed by assets under the following labels:
+A significant portion of an experience's memory consumption on the client are from assets, such as images and meshes, loaded into graphics memory so they can be rendered. In the **Developer Console**, check the following labels:
 
 - **GraphicsMeshParts** - Graphics memory consumed by meshes.
 - **GraphicsTexture** - Graphics memory consumed by textures.

@@ -188,7 +188,7 @@ methods:
           given prefix.
       - name: pageSize
         type: int
-        default: 32
+        default: 0
         summary: |
           **(Optional)** Number of items to be returned in each page. By default
           is 32.

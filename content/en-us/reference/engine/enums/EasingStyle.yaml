@@ -1,13 +1,13 @@
 name: EasingStyle
 type: enum
 summary: |
-  Pass to `Datatype.TweenInfo|TweenInfo.new` to control the motion of a
+  Enum used with `Datatype.TweenInfo|TweenInfo.new` to control the motion of a
   `Class.Tween`.
 description: |
-  Passed to `Datatype.TweenInfo|TweenInfo.new()` to control the motion of a
-  `Class.Tween`. The following graphs reflect easing styles for
-  `Enum.EasingDirection|Enum.EasingDirection.In`. For graphs reflecting
-  `Enum.EasingDirection|Enum.EasingDirection.Out` and
+  These enum values are passed to `Datatype.TweenInfo|TweenInfo.new()` to
+  control the motion of a `Class.Tween`. The following graphs reflect easing
+  styles for `Enum.EasingDirection|Enum.EasingDirection.In`. For graphs
+  reflecting `Enum.EasingDirection|Enum.EasingDirection.Out` and
   `Enum.EasingDirection|Enum.EasingDirection.InOut`, see
   [UI&nbsp;Animations](../../../ui/animation.md#style).
 
@@ -36,21 +36,21 @@ items:
     deprecation_message: ''
   - name: Quad
     summary: |
-      Similar to **Sine** but with a slightly sharper curve based on quadratic
+      Similar to `Sine` but with a slightly sharper curve based on quadratic
       interpolation.
     value: 3
     tags: []
     deprecation_message: ''
   - name: Quart
     summary: |
-      Similar to **Cubic** but with an even sharper curve based on quartic
+      Similar to `Cubic` but with an even sharper curve based on quartic
       interpolation.
     value: 4
     tags: []
     deprecation_message: ''
   - name: Quint
     summary: |
-      Similar to **Quart** but with an even sharper curve based on quintic
+      Similar to `Quart` but with an even sharper curve based on quintic
       interpolation.
     value: 5
     tags: []
@@ -78,13 +78,13 @@ items:
   - name: Circular
     summary: |
       Follows a circular arc, such that acceleration is more sudden and
-      deceleration more gradual versus **Quint** or **Exponential**.
+      deceleration more gradual versus `Quint` or `Exponential`.
     value: 9
     tags: []
     deprecation_message: ''
   - name: Cubic
     summary: |
-      Similar to **Quad** but with a slightly sharper curve based on cubic
+      Similar to `Quad` but with a slightly sharper curve based on cubic
       interpolation.
     value: 10
     tags: []

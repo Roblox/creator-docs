@@ -82,7 +82,7 @@ Inside the viewport, you can move the camera with the following controls. See al
   </tr>
   <tr>
     <td><kbd>Shift</kbd></td>
-    <td>In combination with any movement key, changes the camera speed. If desired, you can [customize](../studio/setting-up-roblox-studio.md#customizing-studio) the camera speed within Studio's settings.</td>
+    <td>In combination with any movement key, changes the camera speed. If desired, you can [customize](../studio/setup.md#customizing-studio) the camera speed within Studio's settings.</td>
   </tr>
   <tr>
     <td><kbd>F</kbd></td>

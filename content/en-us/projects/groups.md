@@ -168,7 +168,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
 
    <img src="../assets/creator-dashboard/Group-Roles-Settings-Tab.png" width="780" alt="Settings tab indicated for a group role on the Creator Dashboard." />
 
-	 <img src="../assets/creator-dashboard/Group-Roles-Role-Color.png" width="780" alt="Color options indicated for a group role on the Creator Dashboard." />
+    <img src="../assets/creator-dashboard/Group-Roles-Role-Color.png" width="780" alt="Color options indicated for a group role on the Creator Dashboard." />
 
    <Alert severity="info">
    A role's **Settings** section is also where group owners and members with sufficient permissions can remove a role entirely through the **Delete&nbsp;Role** button.
@@ -222,6 +222,10 @@ If you're the owner of a selected group, you'll find a **Payouts** page under **
 
 <Alert severity="info">
 Some groups may not have this page unlocked initially for various reasons, such as the group having no funds to payout.
+</Alert>
+
+<Alert severity="warning">
+Group owners can't share payouts across group members for experiences that charge for [paid access in local currency](../production/monetization/paid-access-local-currency.md).
 </Alert>
 
 ### One-Time Payouts

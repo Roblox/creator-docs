@@ -110,7 +110,7 @@ The **Monetization** tab contains settings that let you [monetize](../production
   </tr>
   <tr>
     <td>**Paid Access**</td>
-    <td>Lets you enable [paid access](../production/monetization/paid-access.md).</td>
+    <td>Lets you enable [paid access in Robux](../production/monetization/paid-access-robux.md) or [paid access in local currency](../production/monetization/paid-access-local-currency.md).</td>
   </tr>
   <tr>
     <td>**Private Servers**</td>

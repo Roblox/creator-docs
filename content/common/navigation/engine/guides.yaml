@@ -208,7 +208,7 @@ navigation:
         section:
           - title: Overview
             path: /scripting/events/
-          - title: Deferred Events
+          - title: Deferred
             path: /scripting/events/deferred
           - title: Bindable
             path: /scripting/events/bindable
@@ -576,16 +576,16 @@ navigation:
             path: /production/promotion/sponsoring-items
           - title: Complying with Advertising Standards
             path: /production/promotion/complying-with-advertising-standards
-      - title: Audience Engagement
-        path: /production/promotion/audience-engagement
-      - title: Experience Events
+      - title: Events and Updates
         path: /production/promotion/experience-events
+      - title: Experience Notifications
+        path: /production/promotion/experience-notifications
+      - title: Social Media Links
+        path: /production/promotion/social-media-links
       - title: Player Invite Prompts
         path: /production/promotion/invite-prompts
       - title: Friend Invite Reward System
         path: /production/promotion/referral-system
-      - title: Experience Notifications
-        path: /production/promotion/experience-notifications
       - title: Nominating for the Discover Page
         path: /production/promotion/nominating-for-the-discover-page
       - title: Getting Featured on Roblox‑Owned Channels
@@ -615,8 +615,10 @@ navigation:
             path: /production/monetization/avatar-items
           - title: Engagement-Based Payouts
             path: /production/monetization/engagement-based-payouts
-          - title: Paid Access
-            path: /production/monetization/paid-access
+          - title: Paid Access in Robux
+            path: /production/monetization/paid-access-robux
+          - title: Paid Access in Local Currency
+            path: /production/monetization/paid-access-local-currency
           - title: Private Servers
             path: /production/monetization/private-servers
       - title: Resources

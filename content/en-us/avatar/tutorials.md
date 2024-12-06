@@ -22,7 +22,7 @@ Learn how to create assets with structured tutorials that walks through each cre
 
 - [Download Blender](https://www.blender.org/) - Install and setup Blender. Roblox's tutorial content uses Blender 3.0+.
 - [Familiarize yourself with Blender](https://docs.blender.org/manual/en/latest/) - Use Blender's official docs or community-created content of your choice to get up to speed with Blender's UI and functions.
-- [Setting up Roblox Studio](../studio/setting-up-roblox-studio.md) - Install
+- [Setting up Roblox Studio](../studio/setup.md) - Install
   and configure Roblox Studio.
 
 </AccordionDetails>

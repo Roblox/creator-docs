@@ -3,13 +3,13 @@ type: class
 category: Lighting
 memory_category: Instances
 summary: |
-  The `Lighting` service controls global lighting in an experience. It
-  includes a range of adjustable properties that you can use to change how
-  lighting appears and interacts with other objects.
+  The `Lighting` service controls global lighting in an experience. It includes
+  a range of adjustable properties that you can use to change how lighting
+  appears and interacts with other objects.
 description: |
-  The `Lighting` service controls global lighting in an experience. It
-  includes a range of adjustable properties that you can use to change how
-  lighting appears and interacts with other objects, as summarized in
+  The `Lighting` service controls global lighting in an experience. It includes
+  a range of adjustable properties that you can use to change how lighting
+  appears and interacts with other objects, as summarized in
   [Lighting Properties](../../../environment/lighting.md).
 
   <img src="../../../assets/lighting-and-effects/lighting-properties/TimeOfDay-17.jpg" width="800" />
@@ -21,8 +21,9 @@ description: |
   <img src="../../../assets/lighting-and-effects/atmosphere/Offset-A.jpg" width="800" />
 
   In addition, `Lighting` (along with `Class.Workspace.CurrentCamera`) may
-  contain [post‑processing effects](../../../environment/post-processing-effects.md) such as `Class.SunRaysEffect` and
-  `Class.BlurEffect`.
+  contain
+  [post‑processing effects](../../../environment/post-processing-effects.md)
+  such as `Class.SunRaysEffect` and `Class.BlurEffect`.
 code_samples:
 inherits:
   - Instance
@@ -39,10 +40,10 @@ properties:
       `Ambient` is the lighting hue applied to areas that are occluded from the
       sky, such as indoor areas.
 
-      `Ambient` defaults to `[0, 0, 0]` (black). As long as the red, green,
-      and blue channels of this property do not exceed the corresponding
-      channels in `Class.Lighting.OutdoorAmbient|OutdoorAmbient`, the change in
-      hue will be reserved for areas occluded from the sun/moon.
+      `Ambient` defaults to `[0, 0, 0]` (black). As long as the red, green, and
+      blue channels of this property do not exceed the corresponding channels in
+      `Class.Lighting.OutdoorAmbient|OutdoorAmbient`, the change in hue will be
+      reserved for areas occluded from the sun/moon.
 
       Note that when `Class.Lighting.GlobalShadows|GlobalShadows` is disabled,
       there is no distinction between areas occluded from the sky and
@@ -252,7 +253,9 @@ properties:
     description: |
       This property determines the exposure compensation amount which applies a
       bias to the exposure level of the scene prior to the tonemap step.
-      Defaults to `0` (no exposure compensation) and has a range from `-5` to `5`. A value of `1` indicates twice as much exposure and `-1` means half as much exposure.
+      Defaults to `0` (no exposure compensation) and has a range from `-5` to
+      `5`. A value of `1` indicates twice as much exposure and `-1` means half
+      as much exposure.
     code_samples:
     type: float
     tags: []
@@ -272,7 +275,8 @@ properties:
     summary: |
       A `Datatype.Color3` value giving the hue of `Lighting` fog.
     description: |
-      A `Datatype.Color3` value giving the hue of `Lighting` fog. Note that fog properties are hidden when `Lighting` contains an `Class.Atmosphere`
+      A `Datatype.Color3` value giving the hue of `Lighting` fog. Note that fog
+      properties are hidden when `Lighting` contains an `Class.Atmosphere`
       object.
     code_samples:
     type: Color3
@@ -318,8 +322,8 @@ properties:
       begins to show.
     description: |
       The depth from the `Class.Workspace.CurrentCamera`, in studs, at which fog
-      begins to show. Note that fog properties are hidden when
-      `Lighting` contains an `Class.Atmosphere` object.
+      begins to show. Note that fog properties are hidden when `Lighting`
+      contains an `Class.Atmosphere` object.
     code_samples:
     type: float
     tags: []
@@ -399,11 +403,11 @@ properties:
     capabilities:
       - Environment
     writeCapabilities: []
-  - name: Lighting.Intent
+  - name: Lighting.LightingStyle
     summary: ''
     description: ''
     code_samples: []
-    type: Intent
+    type: LightingStyle
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -428,7 +432,7 @@ properties:
       and blue channels of `Class.Lighting.Ambient|Ambient` do not exceed the
       corresponding channels in `OutdoorAmbient`, the hue of the lighting in
       outdoor areas will be determined by this property.
-      
+
       The effective `OutdoorAmbient` value is clamped to be greater than or
       equal to `Class.Lighting.Ambient|Ambient` in all channels, meaning that if
       a channel of `Class.Lighting.Ambient|Ambient` exceeds its corresponding
@@ -486,11 +490,11 @@ properties:
     capabilities:
       - Environment
     writeCapabilities: []
-  - name: Lighting.Quality
+  - name: Lighting.PrioritizeLightingQuality
     summary: ''
     description: ''
     code_samples: []
-    type: Quality
+    type: bool
     tags:
       - NotScriptable
     deprecation_message: ''
@@ -561,9 +565,9 @@ properties:
     description: |
       Determines the lighting system for rendering the 3D world. This property
       is non‑scriptable and only modifiable in Studio. See `Enum.Technology` for
-      available options and [Lighting
-      Technology](../../../environment/lighting.md#technology) for detailed
-      descriptions and visual effects of each option.
+      available options and
+      [Lighting Technology](../../../environment/lighting.md#technology) for
+      detailed descriptions and visual effects of each option.
     code_samples:
     type: Technology
     tags: []
@@ -585,7 +589,9 @@ properties:
       `Lighting`.
     description: |
       A 24-hour string representation of the current time of day used by
-      `Lighting`. Note that this property does not correspond with the actual time of day and will not change during gameplay unless it has been changed by a script.
+      `Lighting`. Note that this property does not correspond with the actual
+      time of day and will not change during gameplay unless it has been changed
+      by a script.
 
       For a numeric measure of `Lighting` time, use
       `Class.Lighting.ClockTime|ClockTime`. Changing
@@ -639,10 +645,11 @@ methods:
       Returns a `Datatype.Vector3` representing the direction of the moon from
       the position <Typography noWrap>`(0, 0, 0)`</Typography>. Note that when
       the moon has "set" and is no longer visible, the `Datatype.Vector3`
-      returned by this method will continue to point towards the moon below
-      the horizon.
+      returned by this method will continue to point towards the moon below the
+      horizon.
 
-      `Class.Lighting:GetSunDirection()|GetSunDirection()` is a variant of this method for obtaining the direction of the sun.
+      `Class.Lighting:GetSunDirection()|GetSunDirection()` is a variant of this
+      method for obtaining the direction of the sun.
     code_samples:
     parameters: []
     returns:
@@ -666,11 +673,10 @@ methods:
     returns:
       - type: float
         summary: ''
-    tags:
-      - Deprecated
+    tags: []
     deprecation_message: |
-      There is currently no way to change the moon's phase, and thus this
-      method should not be used.
+      There is currently no way to change the moon's phase, and thus this method
+      should not be used.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -680,11 +686,13 @@ methods:
       Returns a `Datatype.Vector3` representing the direction of the sun.
     description: |
       Returns a `Datatype.Vector3` representing the direction of the sun from
-      the position <Typography noWrap>`(0, 0, 0)`</Typography>. Note that when the sun has "set" and is no longer visible, the
-      `Datatype.Vector3` returned by this method will continue to point
-      towards the sun below the horizon.
+      the position <Typography noWrap>`(0, 0, 0)`</Typography>. Note that when
+      the sun has "set" and is no longer visible, the `Datatype.Vector3`
+      returned by this method will continue to point towards the sun below the
+      horizon.
 
-      `Class.Lighting:GetMoonDirection()|GetMoonDirection()` is a variant of this method for obtaining the direction of the moon.
+      `Class.Lighting:GetMoonDirection()|GetMoonDirection()` is a variant of
+      this method for obtaining the direction of the moon.
     code_samples:
     parameters: []
     returns:
@@ -699,10 +707,13 @@ methods:
     writeCapabilities: []
   - name: Lighting:SetMinutesAfterMidnight
     summary: |
-      Sets `Class.Lighting.TimeOfDay|TimeOfDay` and `Class.Lighting.ClockTime|ClockTime` to the
-      given number of minutes after midnight.
+      Sets `Class.Lighting.TimeOfDay|TimeOfDay` and
+      `Class.Lighting.ClockTime|ClockTime` to the given number of minutes after
+      midnight.
     description: |
-      Sets `Class.Lighting.TimeOfDay|TimeOfDay` and `Class.Lighting.ClockTime|ClockTime` to the given number of minutes after midnight.
+      Sets `Class.Lighting.TimeOfDay|TimeOfDay` and
+      `Class.Lighting.ClockTime|ClockTime` to the given number of minutes after
+      midnight.
 
       This method allows a numerical value to be used, for example in a
       day/night cycle `Class.Script`, without the need to convert to a string in
@@ -710,7 +721,9 @@ methods:
       allows values greater than 24 hours to be given that correspond to times
       in the next day.
 
-      The following code sample includes a simple day/night cycle script. The speed of time and the initial time can be changed using the `TIME_SPEED` and `START_TIME` parameters.
+      The following code sample includes a simple day/night cycle script. The
+      speed of time and the initial time can be changed using the `TIME_SPEED`
+      and `START_TIME` parameters.
 
       ```lua
       local Lighting = game:GetService("Lighting")
@@ -786,14 +799,17 @@ methods:
 events:
   - name: Lighting.LightingChanged
     summary: |
-      This event fires when a `Lighting` property is changed or a
-      `Class.Sky` is added or removed from `Lighting`.
+      This event fires when a `Lighting` property is changed or a `Class.Sky` is
+      added or removed from `Lighting`.
     description: |
-      This event fires when a `Lighting` property is changed or a
-      `Class.Sky` is added or removed from `Lighting`, with some exceptions:
+      This event fires when a `Lighting` property is changed or a `Class.Sky` is
+      added or removed from `Lighting`, with some exceptions:
 
-      - Changing `Class.Lighting.GlobalShadows|GlobalShadows` will not fire this event.
-      - Changing fog properties `Class.Lighting.FogColor|FogColor`, `Class.Lighting.FogStart|FogStart`, or `Class.Lighting.FogEnd|FogEnd` will not fire this event.
+      - Changing `Class.Lighting.GlobalShadows|GlobalShadows` will not fire this
+        event.
+      - Changing fog properties `Class.Lighting.FogColor|FogColor`,
+        `Class.Lighting.FogStart|FogStart`, or `Class.Lighting.FogEnd|FogEnd`
+        will not fire this event.
 
       In cases where this behavior is not desired, the `Class.Object.Changed`
       event or `Class.Object:GetPropertyChangedSignal()` method can be used.

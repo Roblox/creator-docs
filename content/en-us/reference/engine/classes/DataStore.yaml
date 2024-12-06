@@ -57,7 +57,7 @@ methods:
     description: |
       This function retrieves the key version that was current at a given time
       as well as a `Class.DataStoreKeyInfo` instance.
-    code_samples: 
+    code_samples:
       - retrieving-datastore-versions-by-time
     parameters:
       - name: key
@@ -72,8 +72,8 @@ methods:
         type: int64
         default:
         summary: |
-          Unix timestamp in milliseconds for which the requested version was 
-          current. Must be greater than zero. Must not be more than ten minutes 
+          Unix timestamp in milliseconds for which the requested version was
+          current. Must be greater than zero. Must not be more than ten minutes
           in the future.
     returns:
       - type: Tuple
