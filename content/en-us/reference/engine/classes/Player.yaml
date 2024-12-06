@@ -318,7 +318,7 @@ properties:
       for a player's `Class.Player.Character|character`.
     description: |
       This property determines the user ID of the account whose character
-      appearance is used for a player's `Class.Player.Character`. By default,
+      appearance is used for a player's `Class.Player.Character|character`. By default,
       this property is the `Class.Player.UserId`, which uses the player's avatar
       as they have created it on the Roblox website.
 

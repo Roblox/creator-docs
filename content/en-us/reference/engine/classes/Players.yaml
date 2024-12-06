@@ -80,12 +80,12 @@ properties:
     writeCapabilities: []
   - name: Players.CharacterAutoLoads
     summary: |
-      Indicates whether `Class.Character|Characters` will respawn automatically.
+      Indicates whether `Class.Player.Character|characters` will respawn automatically.
     description: |
-      This property indicates whether `Class.Character|Characters` will respawn
+      This property indicates whether `Class.Player.Character|characters` will respawn
       automatically. The default value is true.
 
-      If this property is disabled (false), player `Class.Character|Characters`
+      If this property is disabled (false), player `Class.Player.Character|characters`
       will not spawn until the `Class.Player:LoadCharacter()` function is called
       for each `Class.Player`, including when players join the experience.
 
