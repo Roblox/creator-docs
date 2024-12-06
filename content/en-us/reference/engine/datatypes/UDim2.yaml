@@ -165,11 +165,12 @@ properties:
 methods:
   - name: UDim2:Lerp
     summary: |
-      Returns a `Datatype.UDim2` interpolated linearly between the value and the given
-      goal.
+      Returns a `Datatype.UDim2` interpolated linearly between the value and the
+      given goal.
     description: |
-      Returns a `Datatype.UDim2` interpolated linearly between this `Datatype.UDim2` and the given
-      `goal`. The `alpha` value should be a number between `0` and `1`.
+      Returns a `Datatype.UDim2` interpolated linearly between this
+      `Datatype.UDim2` and the given `goal`. The `alpha` value should be a
+      number between `0` and `1`.
     parameters:
       - name: goal
         type: UDim2
@@ -189,11 +190,11 @@ functions:
 math_operations:
   - operation: +
     summary: |
-      Produces a `Datatype.UDim2` with components that are the sum of the respective
-      components of the two `Datatype.UDim2` objects.
+      Produces a `Datatype.UDim2` with components that are the sum of the
+      respective components of the two `Datatype.UDim2` objects.
     description: |
-      Produces a `Datatype.UDim2` with components that are the sum of the respective
-      components of the two `Datatype.UDim2` objects.
+      Produces a `Datatype.UDim2` with components that are the sum of the
+      respective components of the two `Datatype.UDim2` objects.
     type_a: UDim2
     type_b: UDim2
     return_type: UDim2

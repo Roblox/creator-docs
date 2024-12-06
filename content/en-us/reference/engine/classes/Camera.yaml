@@ -12,20 +12,20 @@ description: |
 
   The most important camera properties are:
 
-  - `Class.Camera.CFrame|CFrame` which represents the position and orientation of the
-    camera.
+  - `Class.Camera.CFrame|CFrame` which represents the position and orientation
+    of the camera.
 
-  - `Class.Camera.CameraType|CameraType` which is read by the experience's camera scripts
-    and determines how the camera should update each frame.
+  - `Class.Camera.CameraType|CameraType` which is read by the experience's
+    camera scripts and determines how the camera should update each frame.
 
-  - `Class.Camera.CameraSubject|CameraSubject` which is read by the experience's camera
-    scripts and determines what object the camera should follow.
+  - `Class.Camera.CameraSubject|CameraSubject` which is read by the experience's
+    camera scripts and determines what object the camera should follow.
 
-  - `Class.Camera.FieldOfView|FieldOfView` which represents the visible extent of the
-    observable world.
+  - `Class.Camera.FieldOfView|FieldOfView` which represents the visible extent
+    of the observable world.
 
-  - `Class.Camera.Focus|Focus` which represents the point the camera is looking at.
-    It's important this property is set, as certain visuals will be more
+  - `Class.Camera.Focus|Focus` which represents the point the camera is looking
+    at. It's important this property is set, as certain visuals will be more
     detailed and will update more frequently depending on how close they are to
     the focus point.
 
@@ -53,9 +53,14 @@ properties:
       You can move the camera by setting this property. However, the default
       camera scripts also set it, so you should either:
 
-      - Set the camera `Class.Camera.CameraType|CameraType` to `Enum.CameraType.Scriptable` so that the default camera scripts will not update the camera's `Datatype.CFrame`. This method is simplest and recommended in most cases.
+      - Set the camera `Class.Camera.CameraType|CameraType` to
+        `Enum.CameraType.Scriptable` so that the default camera scripts will not
+        update the camera's `Datatype.CFrame`. This method is simplest and
+        recommended in most cases.
 
-      - Completely replace the default camera scripts with alternatives. This approach is only recommended if you do not need any default camera functionality.
+      - Completely replace the default camera scripts with alternatives. This
+        approach is only recommended if you do not need any default camera
+        functionality.
 
       The most intuitive way to position and orient the `Class.Camera` is by
       using the `Datatype.CFrame.lookAt()` constructor. In the following
@@ -136,8 +141,8 @@ properties:
       - When set to a `Class.BasePart`, the camera scripts follow its position,
         with a vertical offset in the case of `Class.VehicleSeat|VehicleSeats`.
 
-      `CameraSubject` cannot be set to `nil`. Attempting to do so will revert
-      it to its previous value.
+      `CameraSubject` cannot be set to `nil`. Attempting to do so will revert it
+      to its previous value.
 
       To restore `CameraSubject` to its default value, set it to the local
       character's `Class.Humanoid`:
@@ -147,7 +152,7 @@ properties:
       local Workspace = game:GetService("Workspace")
 
       local localPlayer = Players.LocalPlayer
-      local camera = Workspace.CurrentCamera 
+      local camera = Workspace.CurrentCamera
 
       local function resetCameraSubject()
       	if camera and localPlayer.Character then
@@ -178,17 +183,17 @@ properties:
     description: |
       The default Roblox camera scripts have several built-in behaviors. Setting
       this property toggles between the various `Enum.CameraType` behaviors.
-      Note that some camera types require a valid `Class.Camera.CameraSubject|CameraSubject`
-      to work correctly.
+      Note that some camera types require a valid
+      `Class.Camera.CameraSubject|CameraSubject` to work correctly.
 
       The default camera scripts will not move or update the camera if
-      `CameraType` is set to `Enum.CameraType.Scriptable`. For more
-      information on positioning and orienting the camera manually, see
+      `CameraType` is set to `Enum.CameraType.Scriptable`. For more information
+      on positioning and orienting the camera manually, see
       `Class.Camera.CFrame|CFrame`.
 
-      For all `CameraType` settings **except** `Enum.CameraType.Scriptable`,
-      the `Class.Camera.CameraSubject|CameraSubject` property represents the
-      object whose position the camera's `Class.Camera.Focus|Focus` is set to.
+      For all `CameraType` settings **except** `Enum.CameraType.Scriptable`, the
+      `Class.Camera.CameraSubject|CameraSubject` property represents the object
+      whose position the camera's `Class.Camera.Focus|Focus` is set to.
     code_samples:
     type: CameraType
     tags: []
@@ -206,7 +211,8 @@ properties:
   - name: Camera.CoordinateFrame
     summary: ''
     description: |
-      The old version of the `Class.Camera.CFrame|CFrame` property which functions identically to it.
+      The old version of the `Class.Camera.CFrame|CFrame` property which
+      functions identically to it.
 
       This item should be used in a `Class.LocalScript` in order to work as
       expected online.
@@ -261,10 +267,10 @@ properties:
     summary: |
       Sets the angle of the camera's vertical field of view.
     description: |
-      The `FieldOfView` (FOV) property sets how many degrees in the vertical direction
-      the camera can view. This property is clamped between `1` and `120`
-      degrees and defaults at `70`. Very low or very high fields of view are not
-      recommended as they can be disorientating to players.
+      The `FieldOfView` (FOV) property sets how many degrees in the vertical
+      direction the camera can view. This property is clamped between `1` and
+      `120` degrees and defaults at `70`. Very low or very high fields of view
+      are not recommended as they can be disorientating to players.
 
       Note that uniform scaling is enforced, meaning the vertical and horizontal
       field of view are always related by the aspect ratio of the screen.
@@ -397,9 +403,9 @@ properties:
         `Datatype.CFrame` of the head.
       - `Class.VRService:RecenterUserHeadCFrame()` which is used to recenter the
         head to the current position and orientation of the VR device.
-      - The `Class.Camera:GetRenderCFrame()|GetRenderCFrame()` method which returns the
-        `Class.Camera.CFrame|CFrame` combined with the `Datatype.CFrame` of the user's
-        head.
+      - The `Class.Camera:GetRenderCFrame()|GetRenderCFrame()` method which
+        returns the `Class.Camera.CFrame|CFrame` combined with the
+        `Datatype.CFrame` of the user's head.
     code_samples:
     type: bool
     tags: []
@@ -418,8 +424,8 @@ properties:
     summary: |
       Sets the scale of the user's perspective of the world when using VR.
     description: |
-      `HeadScale` is the scale of the user's perspective of the world when
-      using VR.
+      `HeadScale` is the scale of the user's perspective of the world when using
+      VR.
 
       The size of 1 stud in VR is `0.3 meters / HeadScale`, meaning that larger
       `HeadScale` values equate to the world looking smaller from the user's
@@ -428,8 +434,8 @@ properties:
 
       This property is automatically controlled by
       `Class.VRService.AutomaticScaling` to align the player's perspective with
-      the size of their avatar. If you intend to control `HeadScale` yourself
-      or use custom characters, toggle `Class.VRService.AutomaticScaling` to
+      the size of their avatar. If you intend to control `HeadScale` yourself or
+      use custom characters, toggle `Class.VRService.AutomaticScaling` to
       `Enum.VRScaling.Off`.
 
       This property should not be confused with `Class.Humanoid.HeadScale` which
@@ -454,8 +460,8 @@ properties:
       Sets the angle of the camera's field of view along the longest viewport
       axis.
     description: |
-      The `MaxAxisFieldOfView` property sets how many degrees along the
-      longest viewport axis the camera can view.
+      The `MaxAxisFieldOfView` property sets how many degrees along the longest
+      viewport axis the camera can view.
 
       When the longest axis is the vertical axis, this property will behave
       similar to the `Class.Camera.FieldOfView|FieldOfView` property. This is
@@ -515,7 +521,8 @@ properties:
       device.
     description: |
       This property toggles whether to apply tilt and roll from the
-      `Class.Camera.CFrame|CFrame` property while the player is using a VR device.
+      `Class.Camera.CFrame|CFrame` property while the player is using a VR
+      device.
 
       To prevent motion sickness, the horizon should remain level. Tilting and
       rolling the player's view while using a VR device can cause a disconnect
@@ -572,12 +579,10 @@ properties:
       ##### Camera Updates
 
       Only the `Class.Camera` currently referred to by
-      `Class.Workspace.CurrentCamera` has its
-      `ViewportSize` updated each frame during the
-      `Class.RunService.PreRender|PreRender` step. The
-      `ViewportSize` of all other cameras in your
-      experience won't be updated, including those used for
-      `Class.ViewportFrame|ViewportFrames`.
+      `Class.Workspace.CurrentCamera` has its `ViewportSize` updated each frame
+      during the `Class.RunService.PreRender|PreRender` step. The `ViewportSize`
+      of all other cameras in your experience won't be updated, including those
+      used for `Class.ViewportFrame|ViewportFrames`.
     code_samples:
     type: Vector2
     tags:
@@ -603,8 +608,8 @@ properties:
       - NotReplicated
       - Deprecated
     deprecation_message: |
-      This property is a deprecated variant of `Class.Camera.Focus|Focus` which should
-      be used instead.
+      This property is a deprecated variant of `Class.Camera.Focus|Focus` which
+      should be used instead.
     security:
       read: None
       write: None
@@ -622,12 +627,11 @@ methods:
       `Class.Camera.Focus|Focus` in order to make sure there is no obstructions
       between the `Class.Camera.Focus|Focus` and `Class.Camera.CFrame|CFrame`.
     description: |
-      This method is used by `PopperCam` in the default camera scripts to
-      ensure obstructions do not come between the `Class.Camera` and its
-      subject.
+      This method is used by `PopperCam` in the default camera scripts to ensure
+      obstructions do not come between the `Class.Camera` and its subject.
 
-      This method will check all `Class.BasePart|BaseParts` and
-      `Class.Terrain` in the `Class.Workspace` with the following exceptions:
+      This method will check all `Class.BasePart|BaseParts` and `Class.Terrain`
+      in the `Class.Workspace` with the following exceptions:
 
       - Any `Class.Instance` specified in the `ignoreList` (including its
         descendants) will be ignored
@@ -665,7 +669,7 @@ methods:
       Returns the current 'pan' speed of the `Class.Camera`.
     description: |
       This method is broken and should not be used.
-      
+
       This method returns the current pan speed of the `Class.Camera`.
 
       The pan speed of the `Class.Camera` describes the speed at which the
@@ -681,8 +685,8 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      This method has been deprecated and no longer works. It should not be
-      used in new work.
+      This method has been deprecated and no longer works. It should not be used
+      in new work.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -752,11 +756,11 @@ methods:
       Returns the actual `Datatype.CFrame`where the `Class.Camera` is being
       rendered, accounting for any roll applied and the impact of VR devices.
     description: |
-      This method returns the actual `Datatype.CFrame` of the `Class.Camera`
-      as it is rendered, including the impact of VR (VR head transformations are
+      This method returns the actual `Datatype.CFrame` of the `Class.Camera` as
+      it is rendered, including the impact of VR (VR head transformations are
       not applied to the `Class.Camera.CFrame|CFrame` property, so it is best
-      practice to use `Class.Camera:GetRenderCFrame()|GetRenderCFrame()` to obtain the "true"
-      `Datatype.CFrame` of a player's view).
+      practice to use `Class.Camera:GetRenderCFrame()|GetRenderCFrame()` to
+      obtain the "true" `Datatype.CFrame` of a player's view).
 
       For example, when using VR, the `Class.Camera` is actually rendered at the
       following `Datatype.CFrame`:
@@ -789,17 +793,18 @@ methods:
   - name: Camera:GetRoll
     summary: |
       Returns in radians the current roll, or rotation around the camera's
-      Z-axis, applied to the `Class.Camera` using `Class.Camera:SetRoll()|SetRoll()`.
+      Z-axis, applied to the `Class.Camera` using
+      `Class.Camera:SetRoll()|SetRoll()`.
     description: |
       This method returns, in radians, the current roll applied to the
-      `Class.Camera` using `Class.Camera:SetRoll()|SetRoll()`. Roll is defined as rotation
-      around the camera's Z-axis.
+      `Class.Camera` using `Class.Camera:SetRoll()|SetRoll()`. Roll is defined
+      as rotation around the camera's Z-axis.
 
-      This method only returns roll applied using the `Class.Camera:SetRoll()|SetRoll()`
-      method. Roll manually applied to the camera's
-      `Class.Camera.CFrame|CFrame` is not accounted for. To obtain the actual
-      roll of the `Class.Camera`, including roll manually applied, you can use
-      the following snippet:
+      This method only returns roll applied using the
+      `Class.Camera:SetRoll()|SetRoll()` method. Roll manually applied to the
+      camera's `Class.Camera.CFrame|CFrame` is not accounted for. To obtain the
+      actual roll of the `Class.Camera`, including roll manually applied, you
+      can use the following snippet:
 
       ```lua
       local function getActualRoll()
@@ -817,9 +822,9 @@ methods:
     returns:
       - type: float
         summary: |
-          The current roll applied by `Class.Camera:SetRoll()|SetRoll()`, in radians.
-    tags:
-      - Deprecated
+          The current roll applied by `Class.Camera:SetRoll()|SetRoll()`, in
+          radians.
+    tags: []
     deprecation_message: |
       This method has been deprecated.
     security: None
@@ -877,16 +882,18 @@ methods:
       orientated towards the camera's `Class.Camera.Focus|Focus`.
 
       When the tween has completed, the camera's
-      `Class.Camera.InterpolationFinished|InterpolationFinished` event will fire.
+      `Class.Camera.InterpolationFinished|InterpolationFinished` event will
+      fire.
 
-      If this method is called while the `Class.Camera` is already tweening,
-      the older tween will be stopped (without firing
-      `Class.Camera.InterpolationFinished|InterpolationFinished`) and overridden by the new tween.
+      If this method is called while the `Class.Camera` is already tweening, the
+      older tween will be stopped (without firing
+      `Class.Camera.InterpolationFinished|InterpolationFinished`) and overridden
+      by the new tween.
 
-      Interpolate can only be used if the current `Class.Camera.CameraType|CameraType` is
-      `Scriptable`, regardless of whether the default camera scripts are being
-      used. If it is used with any other `Class.Camera.CameraType|CameraType` an error will
-      be thrown.
+      Interpolate can only be used if the current
+      `Class.Camera.CameraType|CameraType` is `Scriptable`, regardless of
+      whether the default camera scripts are being used. If it is used with any
+      other `Class.Camera.CameraType|CameraType` an error will be thrown.
 
       You are advised to use `Class.TweenService` to tween the `Class.Camera`
       instead as it is more reliable and offers a variety of easing styles. See
@@ -945,14 +952,13 @@ methods:
       Pans the `Class.Camera` around the `Class.Camera.Focus|Focus` in 45 degree
       increments around the **Y** axis.
     description: |
-      This method pans the `Class.Camera` around the
-      `Class.Camera.Focus|Focus` in 45 degree increments around the **Y** axis.
+      This method pans the `Class.Camera` around the `Class.Camera.Focus|Focus`
+      in 45 degree increments around the **Y** axis.
 
       The rotation is applied to the camera's `Class.Camera.CFrame|CFrame`
       property.
 
-      This method pans the `Class.Camera` in 45 degree increments, for
-      example:
+      This method pans the `Class.Camera` in 45 degree increments, for example:
 
       ```lua
       workspace.CurrentCamera:PanUnits(1) -- 45 degrees
@@ -986,11 +992,10 @@ methods:
       at a set depth from the `Class.Camera` orientated in the camera's
       direction. Accounts for the GUI inset.
     description: |
-      This method creates a unit `Datatype.Ray` from a 2D position on the
-      screen (defined in pixels), accounting for the GUI inset. The
-      `Datatype.Ray` originates from the `Datatype.Vector3` equivalent of the 2D
-      position in the world at the given depth (in studs) away from the
-      `Class.Camera`.
+      This method creates a unit `Datatype.Ray` from a 2D position on the screen
+      (defined in pixels), accounting for the GUI inset. The `Datatype.Ray`
+      originates from the `Datatype.Vector3` equivalent of the 2D position in
+      the world at the given depth (in studs) away from the `Class.Camera`.
 
       As this method acknowledges the GUI inset, the offset applied to GUI
       elements (such as from the top bar) is accounted for. This means the
@@ -1022,16 +1027,16 @@ methods:
         type: float
         default:
         summary: |
-          The position on the **X** axis, in pixels, of the screen point at which to
-          originate the `Datatype.Ray`. This position accounts for the GUI
-          inset.
+          The position on the **X** axis, in pixels, of the screen point at
+          which to originate the `Datatype.Ray`. This position accounts for the
+          GUI inset.
       - name: 'y'
         type: float
         default:
         summary: |
-          The position on the **Y** axis, in pixels, of the screen point at which to
-          originate the `Datatype.Ray`. This position accounts for the GUI
-          inset.
+          The position on the **Y** axis, in pixels, of the screen point at
+          which to originate the `Datatype.Ray`. This position accounts for the
+          GUI inset.
       - name: depth
         type: float
         default: 0
@@ -1056,8 +1061,8 @@ methods:
       Sets the `Enum.CameraPanMode` to be used by the `Class.Camera` on mobile
       devices.
     description: |
-      This method sets the `Enum.CameraPanMode` to be used by the
-      `Class.Camera` on mobile devices.
+      This method sets the `Enum.CameraPanMode` to be used by the `Class.Camera`
+      on mobile devices.
 
       When the \*'EdgeBump' `Enum.CameraPanMode` is used, swipe to pan is
       disabled and the edge bump camera controls are enabled.
@@ -1087,9 +1092,9 @@ methods:
     description: |
       This method is outdated and no longer considered best practice.
 
-      This method sets the current roll, in radians, of the `Class.Camera`.
-      The roll is applied after the `Class.Camera.CFrame|CFrame` and represents
-      the rotation around the camera's Z-axis.
+      This method sets the current roll, in radians, of the `Class.Camera`. The
+      roll is applied after the `Class.Camera.CFrame|CFrame` and represents the
+      rotation around the camera's Z-axis.
 
       For example, the following would invert the `Class.Camera`:
 
@@ -1100,21 +1105,23 @@ methods:
       SetRoll has no effect on any roll applied using the
       `Class.Camera.CFrame|CFrame` property. Roll applied using SetRoll is not
       reflected in the `Class.Camera.CFrame|CFrame` property but is reflected in
-      the `Datatype.CFrame` returned by`Class.Camera:GetRenderCFrame()|GetRenderCFrame()`.
+      the `Datatype.CFrame` returned
+      by`Class.Camera:GetRenderCFrame()|GetRenderCFrame()`.
 
-      This method can only be used when the
-      `Class.Camera.CameraType|CameraType` is set to `Scriptable`, regardless
-      of whether the default camera scripts are being used. If it is used with
-      any other `Class.Camera.CameraType|CameraType` a warning is given in the
-      output.
+      This method can only be used when the `Class.Camera.CameraType|CameraType`
+      is set to `Scriptable`, regardless of whether the default camera scripts
+      are being used. If it is used with any other
+      `Class.Camera.CameraType|CameraType` a warning is given in the output.
 
       Any roll applied using this method will be lost when the
       `Class.Camera.CameraType|CameraType` is changed from `Scriptable`.
 
-      To obtain the roll set using this method use `Class.Camera:GetRoll()|GetRoll()`.
+      To obtain the roll set using this method use
+      `Class.Camera:GetRoll()|GetRoll()`.
 
       As this method is outdated, you are advised to instead apply roll to the
-      `Class.Camera` using the `Class.Camera.CFrame|CFrame` property. For example:
+      `Class.Camera` using the `Class.Camera.CFrame|CFrame` property. For
+      example:
 
       ```lua
       local currentCFrame = workspace.CurrentCamera.CFrame
@@ -1131,8 +1138,7 @@ methods:
     returns:
       - type: void
         summary: ''
-    tags:
-      - Deprecated
+    tags: []
     deprecation_message: |
       This method has been deprecated. Instead use the
       `Class.Camera.CFrame|CFrame` property to 'roll' the `Class.Camera`.
@@ -1146,12 +1152,11 @@ methods:
       degree increments around the camera's **X** axis.
     description: |
       This method tilts the `Class.Camera` by rotating it around the
-      `Class.Camera.Focus|Focus` around the camera's **X** axis by a given multiple
-      of 10 degrees.
+      `Class.Camera.Focus|Focus` around the camera's **X** axis by a given
+      multiple of 10 degrees.
 
       The rotation is applied to the camera's `Class.Camera.CFrame|CFrame`
-      property and
-      is constrained between `-81.05` and `81.05` degrees.
+      property and is constrained between `-81.05` and `81.05` degrees.
     code_samples:
     parameters:
       - name: units
@@ -1272,9 +1277,8 @@ methods:
       and whether this point is within the bounds of the screen. Accounts for
       the GUI inset.
     description: |
-      This method returns the screen location and depth of a
-      `Datatype.Vector3` `worldPoint` and whether this point is within the
-      bounds of the screen.
+      This method returns the screen location and depth of a `Datatype.Vector3`
+      `worldPoint` and whether this point is within the bounds of the screen.
 
       This method takes in account the current GUI inset, such as the space
       occupied by the top bar, meaning that the 2D position returned is in the
@@ -1310,10 +1314,10 @@ methods:
         summary: |
           A tuple containing, in order:
 
-          - A `Datatype.Vector3` whose **X** and **Y** components represent the offset
-            of the `worldPoint` from the top left corner of the screen, in
-            pixels. The `Datatype.Vector3` **Z** component represents the depth
-            of the `worldPoint` from the screen (in studs).
+          - A `Datatype.Vector3` whose **X** and **Y** components represent the
+            offset of the `worldPoint` from the top left corner of the screen,
+            in pixels. The `Datatype.Vector3` **Z** component represents the
+            depth of the `worldPoint` from the screen (in studs).
 
           - A boolean indicating if the `worldPoint` is within the bounds of the
             screen.
@@ -1329,9 +1333,8 @@ methods:
       and whether this point is within the bounds of the screen. Does not
       account for the GUI inset.
     description: |
-      This method returns the screen location and depth of a
-      `Datatype.Vector3` `worldPoint` and whether this point is within the
-      bounds of the screen.
+      This method returns the screen location and depth of a `Datatype.Vector3`
+      `worldPoint` and whether this point is within the bounds of the screen.
 
       This method does not take in account the current GUI inset, such as the
       space occupied by the top bar, meaning that the 2D position returned is
@@ -1412,15 +1415,15 @@ events:
       using`Class.Camera:Interpolate()|Interpolate()`.
     description: |
       This event fires when the `Class.Camera` has finished interpolating using
-      the `Class.Camera:Interpolate()` method. It will not fire if a tween is interrupted due to `Class.Camera:Interpolate()` being called again.
+      the `Class.Camera:Interpolate()` method. It will not fire if a tween is
+      interrupted due to `Class.Camera:Interpolate()` being called again.
 
       You are advised to use `Class.TweenService` to animate the `Class.Camera`
       instead, as it is more reliable and provides more options for easing
       styles.
     code_samples:
     parameters: []
-    tags:
-      - Deprecated
+    tags: []
     deprecation_message: |
       This event has been deprecated. Instead use `Class.TweenService` to
       smoothly animate the `Class.Camera`.

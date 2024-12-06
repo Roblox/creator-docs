@@ -13,6 +13,7 @@ inherits:
 tags:
   - NotCreatable
   - Settings
+  - NotReplicated
   - NotBrowsable
 deprecation_message: ''
 properties:

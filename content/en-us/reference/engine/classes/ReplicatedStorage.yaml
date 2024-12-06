@@ -10,7 +10,7 @@ description: |
   `Class.ModuleScript`, `Class.RemoteFunction`, `Class.RemoteEvent`, and other
   objects that are useful to both server-side `Class.Script|Scripts` and
   client-side `Class.LocalScript|LocalScripts`.
-  
+
   Objects parented to this service are fully replicated to clients and normal
   replication rules apply. Any changes that are made on the client persist but
   won't be replicated to the server, and client changes may be overwritten if
@@ -22,7 +22,7 @@ description: |
   eventually run on a `Class.Player` client such as
   `Class.StarterPlayerScripts`, `Class.StarterCharacterScripts`, or
   `Class.StarterGui`.
-  
+
   Similarly, `Class.Script|Scripts` do not run when parented to this service
   unless you change their `Enum.RunContext` property from the default value of
   `Enum.RunContext.Legacy|Legacy`. Server `Class.Script|Scripts` that run on

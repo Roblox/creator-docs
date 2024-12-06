@@ -1,4 +1,4 @@
-name: Quality
+name: LightingStyle
 type: enum
 summary: ''
 description: ''
@@ -6,12 +6,12 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: Performance
+  - name: Realistic
     summary: ''
     value: 0
     tags: []
     deprecation_message: ''
-  - name: Quality
+  - name: Soft
     summary: ''
     value: 1
     tags: []

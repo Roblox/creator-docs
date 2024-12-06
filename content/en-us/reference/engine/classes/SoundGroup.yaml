@@ -13,7 +13,7 @@ description: |
   acts as a multiplier, meaning a `Class.Sound` with volume `0.5` assigned to a
   `Class.SoundGroup` with a volume of `0.5` will have an effective volume of
   `0.25`.
-  
+
   If the `Class.SoundGroup` has any `Class.SoundEffect|SoundEffects` as
   children, those effects will be applied to all of the `Class.Sound|Sounds` in
   the group.

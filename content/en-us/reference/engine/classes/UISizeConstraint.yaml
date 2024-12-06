@@ -9,8 +9,9 @@ description: |
   The `Class.UISizeConstraint` ensures a `Class.GuiObject` does not become
   larger or smaller than the `Class.UISizeConstraint.MaxSize|MaxSize` and
   `Class.UISizeConstraint.MinSize|MinSize`. For example, if
-  `Class.UISizeConstraint.MaxSize|MaxSize` is set to <Typography noWrap>`(200,
-  200)`</Typography> and `Class.UISizeConstraint.MinSize|MinSize` to <Typography
+  `Class.UISizeConstraint.MaxSize|MaxSize` is set to
+  <Typography noWrap>`(200, 200)`</Typography> and
+  `Class.UISizeConstraint.MinSize|MinSize` to <Typography
   noWrap>`(100, 100)`</Typography>, the constrained object cannot scale to be
   larger than 200&times;200 pixels or smaller than 100&times;100 pixels.
 

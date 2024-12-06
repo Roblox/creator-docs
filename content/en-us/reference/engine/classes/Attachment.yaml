@@ -7,10 +7,9 @@ summary: |
   `Class.Bone`, or another `Class.Attachment`.
 description: |
   An `Attachment` defines a point and orientation relative to a parent
-  `Class.BasePart`, `Class.Bone`, or another `Attachment`. The offset is
-  stored in the `Class.Attachment.CFrame|CFrame` property. The offset can also
-  be set through other properties, such as
-  `Class.Attachment.WorldCFrame|WorldCFrame`.
+  `Class.BasePart`, `Class.Bone`, or another `Attachment`. The offset is stored
+  in the `Class.Attachment.CFrame|CFrame` property. The offset can also be set
+  through other properties, such as `Class.Attachment.WorldCFrame|WorldCFrame`.
 
   Attachments are used by several kinds of `Class.Constraint|Constraints` and
   are also valid alternatives to `Class.BasePart` as a parent for objects such
@@ -303,8 +302,8 @@ properties:
       - Deprecated
     deprecation_message: |
       This item has been superseded by
-      `Class.Attachment.WorldOrientation|WorldOrientation` which
-      should be used in new work.
+      `Class.Attachment.WorldOrientation|WorldOrientation` which should be used
+      in new work.
     security:
       read: None
       write: None

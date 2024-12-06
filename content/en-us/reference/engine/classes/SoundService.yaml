@@ -87,10 +87,12 @@ properties:
   - name: SoundService.DistanceFactor
     summary: |
       The number of studs to be considered a meter by `Class.SoundService` when
-      calculating volume attenuation of `Class.Sound|Sounds` parented to a `Class.BasePart` or `Class.Attachment`.
+      calculating volume attenuation of `Class.Sound|Sounds` parented to a
+      `Class.BasePart` or `Class.Attachment`.
     description: |
       The number of studs to be considered a meter by `Class.SoundService` when
-      calculating volume attenuation of `Class.Sound|Sounds` parented to a `Class.BasePart` or `Class.Attachment`.
+      calculating volume attenuation of `Class.Sound|Sounds` parented to a
+      `Class.BasePart` or `Class.Attachment`.
 
       By default, this property is `3.33`, meaning that a meter is considered
       3.33 studs for the purposes of volume attenuation. The greater the
@@ -116,7 +118,8 @@ properties:
     writeCapabilities: []
   - name: SoundService.DopplerScale
     summary: |
-      Degree to which the pitch of a `Class.Sound` varies due to the Doppler effect.
+      Degree to which the pitch of a `Class.Sound` varies due to the Doppler
+      effect.
     description: |
       This property determines the degree to which the pitch of a `Class.Sound`
       varies due to the Doppler effect, a phenomenon whereby the pitch of a
@@ -225,7 +228,8 @@ methods:
     description: |
       This method returns the `Class.SoundService` current listener type and
       what is set as the listener, meaning the point from which audio in the
-      experience is "heard" by the player. By default, the listener is set to `Class.Workspace.CurrentCamera`. The listener can be changed using
+      experience is "heard" by the player. By default, the listener is set to
+      `Class.Workspace.CurrentCamera`. The listener can be changed using
       `Class.SoundService:SetListener()|SetListener()`.
 
       The first result returned is the listener's `Enum.ListenerType` and the
@@ -257,8 +261,6 @@ methods:
               </tr>
           </tbody>
       </table>
-
-      
     code_samples:
     parameters: []
     returns:
@@ -344,7 +346,7 @@ methods:
 
       By default, the listener is set to `Class.Workspace.CurrentCamera`, but a
       range of different types of listeners can be used.
-      
+
       The listener can be retrieved using
       `Class.SoundService:GetListener()|GetListener()`.
     code_samples:

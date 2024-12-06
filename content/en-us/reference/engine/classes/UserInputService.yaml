@@ -1932,7 +1932,8 @@ methods:
       control the navigation `Class.GuiObject|GuiObjects`.
     description: |
       This function returns `true` if the specified `Enum.UserInputType` gamepad
-      is allowed to control Navigation and Selection `Class.GuiObject|GuiObjects`.
+      is allowed to control Navigation and Selection
+      `Class.GuiObject|GuiObjects`.
 
       If you want to set a navigation gamepad, you can use
       `Class.UserInputService:SetNavigationGamepad()`. You can also use
@@ -2643,74 +2644,6 @@ events:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: UserInputService.TouchDrag
-    summary: |
-      Fires when a user drags at least one finger on a 
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device at a speed 
-      above a certain threshold.
-    description: |
-      The `TouchDrag` event fires when a user drags at least one finger on a 
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device at a speed 
-      above a certain threshold.
-      
-      This event triggers the first time this speed is exceeded, even if 
-      the user has not lifted their finger from the device. 
-      Use it to detect the start of a directional drag gesture and to track 
-      the movement of the user's finger along a specified axis.
-
-      You can use `TouchDrag` with `Class.UserInputService.TouchSwipe|TouchSwipe`. 
-      For example, you can use `TouchDrag` in a scrolling list of clothing accessory
-      items to detect when a user horizontally drags on an item to reveal context actions,
-      and then use `Class.UserInputService.TouchSwipe|TouchSwipe` to detect the
-      user's finger swipe when they add the item to their outfit.
-      
-      The `TouchDrag` event only fires when the Roblox client window is in focus, and
-      it can only be used in a `Class.LocalScript`. Inputs are not captured when the
-      window is minimized.
-
-      For more precise tracking of touch input movement, 
-      use `Class.UserInputService.TouchMoved`.
-
-      ##### See Also
-
-      - `Class.UserInputService.TouchTap`
-      - `Class.UserInputService.TouchTapInWorld`
-      - `Class.UserInputService.TouchLongPress`
-      - `Class.UserInputService.TouchMoved`
-      - `Class.UserInputService.TouchPan`
-      - `Class.UserInputService.TouchPinch`
-      - `Class.UserInputService.TouchRotate`
-      - `Class.UserInputService.TouchStarted`
-      - `Class.UserInputService.TouchSwipe`
-      - `Class.UserInputService.TouchEnded`
-    code_samples:
-      - UserInputService-TouchDrag
-    parameters:
-      - name: swipeDirection
-        type: SwipeDirection
-        default:
-        summary: |
-          Indicates the direction the user swiped.
-      - name: numberOfTouches
-        type: int
-        default:
-        summary: |
-          The number of touches (for example, fingers) involved in the gesture.
-      - name: gameProcessedEvent
-        type: bool
-        default:
-        summary: |
-          Indicates whether the Roblox engine internally observed this input and
-          acted on it. Generally, this refers to UI processing; if a button
-          is touched or clicked from this input, `gameProcessedEvent` returns
-          `true`. This also applies to input events connected through
-          `Class.ContextActionService`.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: UserInputService.TouchEnded
     summary: |
       Fired when a user releases their finger from the screen on a TouchEnabled
@@ -3258,10 +3191,9 @@ events:
     writeCapabilities: []
   - name: UserInputService.TouchSwipe
     summary: |
-      Fires on a
-      `Class.UserInputService.TouchEnabled|TouchEnabled` device when a user
-      places their finger(s) down on the screen, pans across the screen, and
-      lifts their finger off with a certain speed of movement.
+      Fires on a `Class.UserInputService.TouchEnabled|TouchEnabled` device when
+      a user places their finger(s) down on the screen, pans across the screen,
+      and lifts their finger off with a certain speed of movement.
     description: |
       The `TouchSwipe` event fires when a user swipes their fingers on a
       `Class.UserInputService.TouchEnabled|TouchEnabled` device.
@@ -3331,8 +3263,8 @@ events:
       screen on a `Class.UserInputService.TouchEnabled|TouchEnabled` device.
 
       This event will fire regardless of whether the user touches/taps the game
-      world or a `Class.GuiObject` element. If you are looking for an event
-      that only fires when the user touches/taps the game world, use
+      world or a `Class.GuiObject` element. If you are looking for an event that
+      only fires when the user touches/taps the game world, use
       `Class.UserInputService.TouchTapInWorld`.
 
       To check if a user's device is TouchEnabled, and that touch events will

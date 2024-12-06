@@ -5,7 +5,8 @@ memory_category: Instances
 summary: |
   Applies an outline to text or a UI border.
 description: |
-  `Class.UIStroke` applies an outline to text or a UI border. Key features include:
+  `Class.UIStroke` applies an outline to text or a UI border. Key features
+  include:
 
   - Adjust the `Class.UIStroke.Color|Color` and
     `Class.UIStroke.Thickness|Thickness` of the stroke outline.
@@ -30,8 +31,9 @@ properties:
       Determines whether to apply the stroke to the object's border instead of
       the text itself.
     description: |
-      When a `Class.UIStroke` instance is applied to a text object, this property determines whether to apply the stroke to the
-      object's border instead of the text itself.
+      When a `Class.UIStroke` instance is applied to a text object, this
+      property determines whether to apply the stroke to the object's border
+      instead of the text itself.
 
       <figure>
       <img src="../../../assets/ui/ui-objects/UIStroke-As-Text-Outline.png" width="376" />
@@ -60,8 +62,8 @@ properties:
     summary: |
       Determines the stroke color.
     description: |
-      Determines the `Class.UIStroke` color. You can also insert a `Class.UIGradient`
-      instance as a child to create gradient strokes.
+      Determines the `Class.UIStroke` color. You can also insert a
+      `Class.UIGradient` instance as a child to create gradient strokes.
 
       <figure>
       <img src="../../../assets/ui/ui-objects/UIStroke-Color-Solid.png" width="376" />
@@ -90,8 +92,8 @@ properties:
     summary: |
       Determines whether the stroke in visible.
     description: |
-      This property determines whether the `Class.UIStroke` is visible. When set to
-      `false`, the stroke will not be rendered. Defaults to `true`.
+      This property determines whether the `Class.UIStroke` is visible. When set
+      to `false`, the stroke will not be rendered. Defaults to `true`.
     code_samples:
     type: bool
     tags: []

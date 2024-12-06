@@ -1,0 +1,33 @@
+name: DeviceForm
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Console
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Phone
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Tablet
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Desktop
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: VR
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''

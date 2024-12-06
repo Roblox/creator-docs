@@ -13,6 +13,7 @@ inherits:
 tags:
   - NotCreatable
   - Settings
+  - NotReplicated
 deprecation_message: ''
 properties:
   - name: PhysicsSettings.AllowSleep

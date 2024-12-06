@@ -172,11 +172,11 @@ methods:
       Queues an asset to be downloaded by the `Class.ContentProvider`.
     description: |
       Usually, content is loaded only when it starts being used. That explains
-      why it often takes a moment for an image to appear in a
-      `Class.GuiObject`, or a `Mesh|mesh` to appear in a
-      `Class.BasePart|part`, or why a `Class.Sound|sound` doesn't play for the
-      first time. All because the asset has not yet finished loading. Preload is
-      used to load this content beforehand, so that it works instantly.
+      why it often takes a moment for an image to appear in a `Class.GuiObject`,
+      or a `Mesh|mesh` to appear in a `Class.BasePart|part`, or why a
+      `Class.Sound|sound` doesn't play for the first time. All because the asset
+      has not yet finished loading. Preload is used to load this content
+      beforehand, so that it works instantly.
     code_samples:
       - ContentProvider-Preload1
     parameters:

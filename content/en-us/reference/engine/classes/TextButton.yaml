@@ -24,8 +24,8 @@ properties:
     description: |
       This property provides a copy of `Class.TextButton.Text|Text` that
       contains exactly what is being rendered by the `Class.TextButton`. This is
-      useful for eliminating style tags used for [rich
-      text](../../../ui/rich-text.md) markup; for example, when
+      useful for eliminating style tags used for
+      [rich text](../../../ui/rich-text.md) markup; for example, when
       `Class.TextButton.RichText|RichText` is enabled, the
       `Class.TextButton.ContentText|ContentText` property shows the text as it
       appears to the user.
@@ -79,7 +79,7 @@ properties:
       With the exception of the `Enum.Font.Legacy` font, each font will render
       text with the line height equal to the
       `Class.TextButton.TextSize|TextSize` property.
-      
+
       The `Enum.Font.Code` font is the only monospace font. It has the unique
       property that each character has the exact same width and height ratio of
       1:2, where the width of each character is approximately half the
@@ -113,8 +113,8 @@ properties:
       allows setting fonts that don't exist in `Enum.Font`.
 
       This property is kept in sync with the `Class.TextButton.Font|Font`
-      property, such that when setting `Class.TextButton.FontFace|FontFace`,
-      the font is set to the corresponding `Enum.Font` value or to
+      property, such that when setting `Class.TextButton.FontFace|FontFace`, the
+      font is set to the corresponding `Enum.Font` value or to
       `Enum.Font.Unknown` if there are no matches.
     code_samples: []
     type: Font
@@ -142,8 +142,8 @@ properties:
       - NotReplicated
       - Deprecated
     deprecation_message: |
-      This property is deprecated in favor of `Class.TextButton|TextSize` which is an integer and not an enum and thus offers far more options for
-      sizes.
+      This property is deprecated in favor of `Class.TextButton|TextSize` which
+      is an integer and not an enum and thus offers far more options for sizes.
     security:
       read: None
       write: None
@@ -208,8 +208,9 @@ properties:
     description: |
       This property controls the maximum number of graphemes (or units of text)
       that are shown on the `Class.TextButton`. It is primarily provided as an
-      easy way to create a [typewriter effect](../../../ui/animation.md#typewriter-effect) where the characters appear one
-      at a time.
+      easy way to create a
+      [typewriter effect](../../../ui/animation.md#typewriter-effect) where the
+      characters appear one at a time.
 
       Changing the property does not change the position or size of the visible
       graphemes; the layout will be calculated as if all graphemes are visible.
@@ -271,7 +272,8 @@ properties:
     writeCapabilities: []
   - name: TextButton.RichText
     summary: |
-      Determines whether the `Class.TextButton` renders its text using rich text formatting.
+      Determines whether the `Class.TextButton` renders its text using rich text
+      formatting.
     description: |
       This property determines whether the `Class.TextButton` renders its text
       using [rich text](../../../ui/rich-text.md) markup to style sections of
@@ -433,11 +435,11 @@ properties:
     writeCapabilities: []
   - name: TextButton.TextFits
     summary: |
-      A boolean representation of whether the button's text fits within the
-      size of it.
+      A boolean representation of whether the button's text fits within the size
+      of it.
     description: |
-      A boolean representation of whether the button's text fits within the
-      size of it.
+      A boolean representation of whether the button's text fits within the size
+      of it.
     code_samples:
     type: bool
     tags:
@@ -476,11 +478,12 @@ properties:
       Here are the core differences between the two properties:
 
       - `Class.TextButton.TextScaled|TextScaled` scales the content (text) to
-      accommodate the UI. Without careful consideration, some text may become
-      unreadable if scaled too small.
+        accommodate the UI. Without careful consideration, some text may become
+        unreadable if scaled too small.
 
-      - `Class.GuiObject.AutomaticSize|AutomaticSize` resizes the UI to accommodate content while maintaining a consistent font size. For more
-      information, see [here](../../../ui/size-modifiers.md#automatic-sizing).
+      - `Class.GuiObject.AutomaticSize|AutomaticSize` resizes the UI to
+        accommodate content while maintaining a consistent font size. For more
+        information, see [here](../../../ui/size-modifiers.md#automatic-sizing).
 
       Additionally, it's recommended that you avoid applying both
       `Class.GuiObject.AutomaticSize|AutomaticSize` and
@@ -562,7 +565,7 @@ properties:
       This property sets the transparency of the stroke, or outline, of rendered
       text. Along with `Class.TextButton.TextStrokeColor3|TextStrokeColor3`, it
       determines the final visual appearance of the text stroke.
-      
+
       Note that text stroke is multiple renderings of the same transparency, so
       this property is essentially multiplicative on itself four times over.
       Therefore, it's recommended to set
@@ -590,8 +593,8 @@ properties:
     summary: |
       Determines the transparency of rendered text.
     description: |
-      This property determines the transparency of all the text
-      rendered by the `Class.TextButton`.
+      This property determines the transparency of all the text rendered by the
+      `Class.TextButton`.
     code_samples:
     type: float
     tags: []
@@ -629,9 +632,11 @@ properties:
     writeCapabilities: []
   - name: TextButton.TextWrap
     summary: |
-      Determines whether or not text should wrap at the edges of the `Class.TextButton` element's space.
+      Determines whether or not text should wrap at the edges of the
+      `Class.TextButton` element's space.
     description: |
-      This property determines whether or not text should wrap at the edges of the `Class.TextButton` element's space.
+      This property determines whether or not text should wrap at the edges of
+      the `Class.TextButton` element's space.
     code_samples:
     type: bool
     tags:
@@ -653,15 +658,15 @@ properties:
     writeCapabilities: []
   - name: TextButton.TextWrapped
     summary: |
-      Determines if text wraps to multiple lines within the
-      `Class.TextButton` element's space, truncating excess text.
+      Determines if text wraps to multiple lines within the `Class.TextButton`
+      element's space, truncating excess text.
     description: |
       When enabled, this property will render text on multiple lines within a
       `Class.TextButton` element's space so that
       `Class.TextButton.TextBounds|TextBounds` will never exceed the
       `Class.GuiBase2d.AbsoluteSize` of the element. This is achieved by
       breaking long lines of text into multiple lines.
-      
+
       Line breaks will prefer whitespace; should a long unbroken word exceed the
       width of the element, that word will be broken into multiple lines.
 
@@ -693,7 +698,7 @@ properties:
       the object's space. It is used in conjunction with
       `Class.TextButton.TextYAlignment|TextYAlignment` to fully determine text
       alignment on both axes.
-      
+
       Note that this property won't affect the read-only properties
       `Class.TextButton.TextBounds|TextBounds` and
       `Class.TextButton.TextFits|TextFits`.
