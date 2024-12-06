@@ -8,7 +8,7 @@ description: |
   This **AdService** was a service for displaying mobile video ads as a form of
   monetization.
 
-  It has been superseeded by [Immersive Ads](../../../production/monetization/immersive-ads)
+  It has been superseeded by [Immersive Ads](../../../production/monetization/immersive-ads.md)
   which should be used instead to serve ad units to visitors of your experience.
 code_samples:
 inherits:
@@ -34,7 +34,7 @@ methods:
       - Deprecated
     deprecation_message: |
       `Class.AdService` has been decommissioned and is no longer operational.
-      [Immersive Ads](../../../production/monetization/immersive-ads) should
+      [Immersive Ads](../../../production/monetization/immersive-ads.md) should
       be used as a replacement to `Class.AdService`.
     security: None
     thread_safety: Unsafe
@@ -56,7 +56,7 @@ events:
       - Deprecated
     deprecation_message: |
       `Class.AdService` has been decommissioned and is no longer operational.
-      [Immersive Ads](../../../production/monetization/immersive-ads) should
+      [Immersive Ads](../../../production/monetization/immersive-ads.md) should
       be used as a replacement to `Class.AdService`.
     security: None
     thread_safety: Unsafe
