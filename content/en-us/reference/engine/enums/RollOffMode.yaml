@@ -16,6 +16,7 @@ items:
     summary: |
       Volume attenuates from `Class.Sound.RollOffMinDistance` in an inverse
       manner. This option mirrors how sounds attenuate in the real world.
+      This is done through `Class.Sound.RollOffMinDistance`/`Distance`
     value: 0
     tags: []
     deprecation_message: ''
@@ -23,6 +24,7 @@ items:
     summary: |
       Volume attenuates between `Class.Sound.RollOffMinDistance` and
       `Class.Sound.RollOffMaxDistance` with a linear relationship.
+      This is done through (`Class.Sound.RollOffMaxDistance`/`Distance`)/(`Class.Sound.RollOffMaxDistance`-`Class.Sound.RollOffMinDistance`)
     value: 1
     tags: []
     deprecation_message: ''
@@ -30,6 +32,7 @@ items:
     summary: |
       Volume attenuates between `Class.Sound.RollOffMinDistance` and
       `Class.Sound.RollOffMaxDistance` with a linear squared relationship.
+      This is done through Squaring `Linear`
     value: 2
     tags: []
     deprecation_message: ''
@@ -38,6 +41,7 @@ items:
       A hybrid model which follows the `Inverse` model when close to
       `Class.Sound.RollOffMinDistance` and the `LinearSquare` model when close
       to `Class.Sound.RollOffMaxDistance`.
+      This is done through `Libraries.math.min`((`Class.Sound.RollOffMinDistance`/`Distance`)*`LinearSquare`)
     value: 3
     tags: []
     deprecation_message: ''
