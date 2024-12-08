@@ -45,11 +45,11 @@ To assign an `Datatype.EnumItem` as the value of a property, use the full `Datat
 
 ```lua
 local part = Instance.new("Part")		-- Create a new part
-part.Parent = workspace
-
 part.Shape = Enum.PartType.Cylinder  -- By EnumItem (best practice)
 part.Shape = Enum.PartType.Cylinder.Value -- By EnumItem Value
 part.Shape = 2  -- By EnumItem Value
 part.Shape = Enum.PartType.Cylinder.Name -- By EnumItem Name
 part.Shape = "Cylinder"  -- By EnumItem Name
+
+part.Parent = workspace
 ```

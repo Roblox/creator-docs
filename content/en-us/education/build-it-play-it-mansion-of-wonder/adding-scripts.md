@@ -239,8 +239,8 @@ The three scripts below will look for the particle emitter and beam objects crea
      playerBeam = beamTemplate:Clone()
      playerBeam.Attachment0 = playerBeamAttachment
      playerBeam.Attachment1 = targetBeamAttachment
-     playerBeam.Parent = humanoidRootPart
      playerBeam.Enabled = true
+     playerBeam.Parent = humanoidRootPart
    end
 
    local function setupPlayer()

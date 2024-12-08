@@ -178,7 +178,7 @@ properties:
       -- Create a part and parent it to the workspace
       local part = Instance.new("Part")
       part.Parent = workspace
-      -- Instance new can also take Parent as a second parameter
+      -- Instance new can also take Parent as a second parameter, though it is not recommended and should be avoided
       Instance.new("NumberValue", workspace)
       ```
 

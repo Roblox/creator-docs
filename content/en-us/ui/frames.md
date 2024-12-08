@@ -119,8 +119,8 @@ If you want a 3D object such as a `Class.BasePart` to rotate on its own within t
 	-- Viewport camera initialization
 	local viewportCamera = Instance.new("Camera")
 	viewportCamera.FieldOfView = cameraFieldOfView
-	viewportCamera.Parent = viewportFrame
 	viewportFrame.CurrentCamera = viewportCamera
+	viewportCamera.Parent = viewportFrame
 
 	-- Viewport object initialization
 	local object = viewportFrame:FindFirstChildWhichIsA("BasePart")

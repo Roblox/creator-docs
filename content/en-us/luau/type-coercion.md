@@ -39,19 +39,19 @@ Luau coerces numbers and strings of enum values into the full enum name. For exa
 
 ```lua
 local part1 = Instance.new("Part")
-part1.Parent = workspace
 part1.Material = 816
+part1.Parent = workspace
 print(part1.Material) -- Enum.Material.Concrete
 
 local part2 = Instance.new("Part")
-part2.Parent = workspace
 part2.Material = "Concrete"
+part2.Parent = workspace
 print(part2.Material) -- Enum.Material.Concrete
 
 -- This is best practice because it's the most explicit
 local part3 = Instance.new("Part")
-part3.Parent = workspace
 part3.Material = Enum.Material.Concrete
+part3.Parent = workspace
 print(part3.Material) -- Enum.Material.Concrete
 ```
 

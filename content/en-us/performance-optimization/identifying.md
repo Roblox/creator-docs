@@ -131,7 +131,7 @@ game.Loaded:Connect(function()
   local loadTime = os.clock() - startTime
   local roundedLoadTime = math.round(loadTime * 10000) / 10000 -- four decimal places
   print("Game loaded in " .. roundedLoadTime .. " seconds.")
-  print("Number of instances loaded: " .. #game.Workspace:GetDescendants())
+  print("Number of instances loaded: " .. #workspace:GetDescendants())
 end)
 ```
 
