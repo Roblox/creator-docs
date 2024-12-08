@@ -123,8 +123,10 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: TweenService:SmoothDamp
-    summary: ''
-    description: ''
+    summary: |
+      Calculates a value simulating a critically damped spring. Supports number/Vector2/Vector3/CFrame.
+    description: |
+      Returns a value that allows smoothing a value towards a target simulating a critically damped spring. Supports number/Vector2/Vector3/CFrame.
     code_samples: []
     parameters:
       - name: current
