@@ -5,12 +5,12 @@ memory_category: Instances
 summary: |
   Performance metrics for a game.
 description: |
-  Stats is a service that provides real-time performance information about the
-  current running game instance. Its primary purpose is to provide developers
-  with an end point to measure where resources are being consumed, as well as
-  how much memory is being consumed overall.
+  `Class.Stats` is a service that provides real-time performance information about
+  the current running game instance. Its primary purpose is to provide an end point
+  to measure where resources are being consumed, as well as how much memory is
+  being consumed overall.
 
-  The service also stores a tree of `Class.StatsItem`, which can have their
+  The service also stores a tree of `Class.StatsItem` objects which can have their
   values read by plugins.
 code_samples:
 inherits:
@@ -24,7 +24,7 @@ properties:
     summary: |
       A measurement of how many parts are currently in contact with one another.
     description: |
-      ContactsCount describes how many parts are currently in contact with each
+      This property describes how many parts are currently in contact with each
       other, such that one of the two parts are being physically simulated, and
       thus can be recognized by the `Class.BasePart:GetTouchingParts()` method.
     code_samples:
