@@ -426,6 +426,7 @@ TextChatService.OnBubbleAdded = function(message: TextChatMessage, adornee: Inst
 			uiGradient.Color = ColorSequence.new(Color3.fromRGB(110, 4, 0), Color3.fromRGB(0, 0, 0))
 			uiGradient.Rotation = 90
 			uiGradient.Parent = bubbleProperties
+			
 			return bubbleProperties
 		end
 	end
