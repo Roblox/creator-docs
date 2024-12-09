@@ -5,14 +5,14 @@ memory_category: Gui
 summary: |
   A 2D user interface element that displays a single non-interactive image.
 description: |
-  An `ImageLabel` renders a rectangle, like a `Class.Frame` does, with an image
-  asset. The display of the image can be manipulated through the
+  An `Class.ImageLabel` renders a rectangle, like a `Class.Frame` does, with an
+  image asset. The display of the image can be manipulated through the
   `Class.ImageLabel.ImageColor3|ImageColor3` and
   `Class.ImageLabel.ImageTransparency|ImageTransparency` properties. To display
   only the image and hide the rectangle, set
   `Class.GuiObject.BackgroundTransparency` to `1`.
 
-  Advanced `ImageLabel` usage includes:
+  Advanced `Class.ImageLabel` usage includes:
 
   - Tiled images can be created by setting
     `Class.ImageLabel.ScaleType|ScaleType` to `Enum.ScaleType.Tile`, then
@@ -64,10 +64,10 @@ properties:
     summary: |
       Determines how a rendered image will be colorized.
     description: |
-      The `ImageColor3` property determines how an image is colorized. When set
-      to white, no colorization occurs. This property is very useful for reusing
-      image assets; if the source image is completely white with transparency,
-      you can set the entire color of the image at once with this property.
+      This property determines how an image is colorized. When set to white, no
+      colorization occurs. This property is very useful for reusing image
+      assets; if the source image is completely white with transparency, you can
+      set the entire color of the image at once with this property.
     code_samples: []
     type: Color3
     tags: []
@@ -166,8 +166,8 @@ properties:
     summary: |
       Determines the transparency of the rendered image.
     description: |
-      `ImageTransparency` determines the alpha of a UI element's rendered image.
-      A value of `0` is completely opaque and a value of `1` is completely
+      This property determines the alpha of a UI element's rendered image. A
+      value of `0` is completely opaque and a value of `1` is completely
       transparent (invisible).
     code_samples:
       - Oscillate-ImageTransparency
@@ -189,8 +189,8 @@ properties:
     summary: |
       Indicates whether the image has finished loading from Roblox.
     description: |
-      The `IsLoaded` property indicates if the `Class.ImageLabel.Image` property
-      has finished loading from Roblox. Images declined by moderation will never
+      This property indicates if the `Class.ImageLabel.Image` property has
+      finished loading from Roblox. Images declined by moderation will never
       load.
     code_samples:
       - Image-Load-Time
@@ -239,9 +239,9 @@ properties:
       Determines how an image will scale if displayed in a UI element whose size
       differs from the source image.
     description: |
-      The `ScaleType` property determines in what way an
-      `Class.ImageLabel.Image` is rendered when the UI element's absolute size
-      differs from the source image's size.
+      This property determines in what way an `Class.ImageLabel.Image` is
+      rendered when the UI element's absolute size differs from the source
+      image's size.
 
       By default, this property is `Enum.ScaleType.Stretch` which will simply
       stretch/compact the image dimensions so it fits the UI element's space
@@ -280,8 +280,8 @@ properties:
     summary: |
       Sets the slice boundaries of a 9-sliced image.
     description: |
-      The `SliceCenter` property sets the slice boundaries of a 9-sliced image
-      when `Class.ImageLabel.ScaleType|ScaleType` is set to
+      This property sets the slice boundaries of a 9-sliced image when
+      `Class.ImageLabel.ScaleType|ScaleType` is set to
       `Enum.ScaleType.Slice|Enum.ScaleType.Slice`. Please note that this
       property is only visible in the
       [Properties](../../../studio/properties.md) window under this condition.
@@ -331,13 +331,14 @@ properties:
     writeCapabilities: []
   - name: ImageLabel.TileSize
     summary: |
-      Sets the tiling size of the ImageLabel.
+      Sets the tiling size of the `Class.ImageLabel`.
     description: |
-      `TileSize` sets the tiling size of the `ImageLabel` with a default of
+      This property sets the tiling size of the `Class.ImageLabel` with a
+      default of
       <Typography noWrap>`Datatype.UDim2.new(1, 0, 1, 0)`</Typography>. Tiling
       starts at the top-left corner of the image. This property is only active
-      if the `Class.ImageLabel.ScaleType|ScaleType` for the `ImageLabel` is set
-      to `Enum.ScaleType.Tile`.
+      if the `Class.ImageLabel.ScaleType|ScaleType` for the `Class.ImageLabel`
+      is set to `Enum.ScaleType.Tile`.
     code_samples:
       - Image-ScaleType-Demo
     type: UDim2

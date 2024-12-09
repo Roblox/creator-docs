@@ -11,15 +11,15 @@ An [assembly](../physics/assemblies.md) is one or more `Class.BasePart|BaseParts
 
 <Grid container spacing={0}>
   <Grid item XSmall={6} XLarge={3}>
-    <img src="../assets/physics/assemblies/Assembly-Example-Block.png" width="100%" />
+    <img src="../assets/physics/assemblies/Assembly-Example-Block.png" alt="A light blue cube against a dark blue background that represents an assembly of 1 part." width="100%" />
     <figcaption>1&nbsp;assembly; 1&nbsp;part</figcaption>
   </Grid>
   <Grid item XSmall={6} XLarge={3}>
-    <img src="../assets/physics/assemblies/Assembly-Example-Avatar.png" width="100%" />
+    <img src="../assets/physics/assemblies/Assembly-Example-Avatar.png" alt="A humanoid character model against a dark blue background that represents an assembly of 18 parts." width="100%" />
     <figcaption>1&nbsp;assembly; 18&nbsp;parts</figcaption>
   </Grid>
   <Grid item XSmall={12} XLarge={6}>
-    <img src="../assets/physics/assemblies/Assembly-Example-Ship.png" width="100%" />
+    <img src="../assets/physics/assemblies/Assembly-Example-Ship.png" alt="A pirate that represents an assemble of 179 parts." width="100%" />
     <figcaption>1&nbsp;assembly; 179&nbsp;parts</figcaption>
   </Grid>
 </Grid>

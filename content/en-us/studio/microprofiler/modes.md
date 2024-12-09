@@ -94,7 +94,7 @@ Counters mode is a lengthy list of categories and statistics, including instance
 - Right-click a graph to close it.
 - You can't filter this view, but you can left-click on a category (for example, `memory`) to collapse it.
 
-While counters mode can be useful, the [Developer Console](../../studio/optimization/memory-usage.md) is the recommended way to [identify memory issues](../../performance-optimization/identifying.md#memory). You might also find the [X-ray view](index.md#using-the-web-ui) in the web UI helpful for identifying when problematic memory allocation occurs.
+While counters mode can be useful, the [Developer Console](../../studio/optimization/memory-usage.md) is the recommended way to [identify memory issues](../../performance-optimization/identifying.md#client-memory). You might also find the [X-ray view](index.md#using-the-web-ui) in the web UI helpful for identifying when problematic memory allocation occurs.
 
 ## Hidden Mode
 

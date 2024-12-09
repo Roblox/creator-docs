@@ -26,7 +26,7 @@ experience on any devices you choose. An experience can be published **privately
 ## Monetization
 
 Users can spend Robux in experiences for items such as new vehicles or
-power-ups, and creators can also earn Robux from [engagement-based payouts](../production/monetization/engagement-based-payouts.md), [private servers](../production/monetization/private-servers.md) and [paid access](../production/monetization/paid-access.md). There are two main methods of
+power-ups, and creators can also earn Robux from [engagement-based payouts](../production/monetization/engagement-based-payouts.md), [private servers](../production/monetization/private-servers.md), [paid access in Robux](../production/monetization/paid-access-robux.md), and [paid access in local currency](../production/monetization/paid-access-local-currency.md). There are two main methods of
 [monetizing](../production/monetization/index.md) within an experience:
 
 - [Developer Products](../production/monetization/developer-products.md) - users can purchase
@@ -52,8 +52,8 @@ for translation in the experience's **Localization** page, where all localizatio
 You can promote your experience within the Roblox Ecosystem in multiple ways:
 
 - Use the [Ads Manager](../production/promotion/ads-manager.md#sponsored-experiences) to create ad campaigns using image, video, or portal ads within existing experiences.
-- Roblox [experience events](./promotion/experience-events.md) are time-based events that users can join and discover through an events detail page.
-- You can use [audience engagement](./promotion/audience-engagement.md) tools and additional features, such as [experience notifications](../cloud-services/experience-notifications.md), to promote your content to a wider audience and keep in touch with your existing user-base.
+- Roblox [experience events](../production/promotion/experience-events.md) are time-based events that users can join and discover through an events detail page.
+- You can use integrated features such as [update announcements](../production/promotion/experience-events.md#announcing-updates) and [experience notifications](../production/promotion/experience-notifications.md) to promote your content to a wider audience and keep in touch with your existing user base.
 
 ## Analytics
 

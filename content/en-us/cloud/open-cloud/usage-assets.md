@@ -231,7 +231,7 @@ curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/{asset
 <TabItem label="Metadata">
 
 ```bash title ="Example Request for Updating Asset Metadata"
-curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/v1/assets/{assetId}?updateMask=description%2CdisplayName' \
+curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/{assetId}?updateMask=description%2CdisplayName' \
 --header 'x-api-key;' \
 --form 'request={
     \"assetType\": \"{assetType}\",
@@ -246,7 +246,7 @@ curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/v1/ass
 <TabItem label="Content and Metadata">
 
 ```bash title ="Example Request for Updating Both Asset Content and Metadata"
-curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/v1/assets/{assetId}?updateMask=description%2CdisplayName' \
+curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/{assetId}?updateMask=description%2CdisplayName' \
 --header 'x-api-key: {apiKey}' \
 --form 'request={
     \"assetType\": \"{assetType}\",

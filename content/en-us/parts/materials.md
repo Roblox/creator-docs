@@ -19,7 +19,7 @@ You can quickly apply materials to [parts](../parts/index.md) through the [Mater
 
 The **Material** widget is accessible from either the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tabs. Clicking the small dropdown arrow reveals a material picker.
 
-<img src="../assets/studio/general/Model-Tab-Material-Picker.png" width="704" alt="Studio's Model tab with the Material widget's picker." />
+<img src="../assets/studio/general/Model-Tab-Material-Picker.png" width="704" alt="Studio's Model tab with the Material widget's picker highlighted." />
 
 By default, clicking the overall **Material** button applies the chosen material to any **selected** parts. If you prefer a fill/paint workflow instead, toggle on **Material&nbsp;Action&nbsp;as&nbsp;Tool** and then click parts in the 3D viewport to apply the chosen material.
 
@@ -77,15 +77,15 @@ To create a custom material in the [Material Manager](#material-manager):
 
 1. Click the **base material** from which your custom material will inherit [physical properties](#physical-properties). If you skip this step, the base material will be **Plastic**, but you can change it later.
 
-   <img src="../assets/studio/material-manager/Base-Material-Selected.png" width="700" alt="Base material selected in Material Manager" />
+   <img src="../assets/studio/material-manager/Base-Material-Selected.png" width="700" alt="A Base material of Asphalt that's selected in the Material Manager." />
 
 2. In the top-left corner, click **Create Material Variant**.
 
-   <img src="../assets/studio/material-manager/Create-Material-Variant.png" width="700" alt="Create Material Variant button indicated in Material Manager" />
+   <img src="../assets/studio/material-manager/Create-Material-Variant.png" width="700" alt="Create Material Variant button indicated in Material Manager." />
 
    A new variant appears in the palette with an icon in the bottom-right corner, indicating it's a custom material.
 
-   <img src="../assets/studio/material-manager/Custom-Material-Icon.png" width="700" alt="New MaterialVariant tile in Material Manager with icon to indicate a custom material" />
+   <img src="../assets/studio/material-manager/Custom-Material-Icon.png" width="700" alt="New MaterialVariant tile in Material Manager with icon to indicate a custom material." />
 
 3. In the inspector, rename your custom material to describe its purpose. You can change the name later, but if you do so **after** applying the material to parts, you'll need to re-apply it to those parts.
 4. For each **texture map** option such as **Color** or **Normal**, paste an asset&nbsp;ID or import a new texture from your computer. Square textures work best. If you don't specify an asset for a texture map, that texture remains blank.
@@ -101,7 +101,7 @@ For [parts](../parts/index.md), you can use a custom material just like any othe
 
 You can also apply the new material to a part by setting its **MaterialVariant** property in the [Properties](../studio/properties.md) window. In this case, Studio automatically sets its **Material** property to the base material you chose when creating the material.
 
-<img src="../assets/modeling/materials/Properties-Material-And-MaterialVariant.png" width="320" alt="Material and MaterialVariant properties set in the Properties window" />
+<img src="../assets/modeling/materials/Properties-Material-And-MaterialVariant.png" width="320" alt="Material and MaterialVariant properties set in the Properties window." />
 
 <Alert severity="warning">
 Note that if you rename a custom material **after** applying it to parts, those parts will not automatically use the custom material with the new name. This behavior allows for [Adaptive Materials](#adaptive-materials). If you want parts to continue using a custom material after you rename it, you'll need to re-apply the custom material.
@@ -124,11 +124,11 @@ To set a custom material as a material override in the [Material Manager](#mater
 1. Click the custom material that you want to set as an override.
 1. In the inspector, scroll down to **Overrides** and enable **Set as Override**.
 
-   <img src="../assets/studio/material-manager/Set-Override-Enabled.png" width="320" />
+   <img src="../assets/studio/material-manager/Set-Override-Enabled.png" width="320" alt="." />
 
    The new override appears as a property of **MaterialService** in the [Properties](../studio/properties.md) window.
 
-   <img src="../assets/modeling/materials/Properties-View-Override.png" width="320" />
+   <img src="../assets/modeling/materials/Properties-View-Override.png" alt="" width="320" />
 
 #### Terrain Details
 
@@ -139,15 +139,15 @@ To customize the faces of terrain using a custom material:
 1. In the palette of the [Material Manager](#material-manager), click the custom material.
 1. In the inspector, confirm that its **Set as Override** toggle is enabled.
 
-   <img src="../assets/studio/material-manager/Set-Override-Enabled.png" width="320" />
+   <img src="../assets/studio/material-manager/Set-Override-Enabled.png" alt="" width="320" />
 
 1. In the **Terrain Details** section, click **Create** for each face you want to customize.
 
-   <img src="../assets/studio/material-manager/Terrain-Details-Create-Buttons.png" width="320" />
+   <img src="../assets/studio/material-manager/Terrain-Details-Create-Buttons.png" width="320" alt="" />
 
 1. For each face you enable, expand the arrow to access and edit details such as its name, texture maps, studs per tile, and pattern.
 
-   <img src="../assets/studio/material-manager/Terrain-Details-Edit.png" width="320" />
+   <img src="../assets/studio/material-manager/Terrain-Details-Edit.png" width="320" alt="" />
 
 #### Disabling Overrides
 
@@ -158,13 +158,13 @@ You can disable an entire material override and all base materials that it's cur
 1. In the palette of the [Material Manager](#material-manager), click a **custom material** that's being used as an override.
 1. In the inspector, scroll down to **Overrides** and disable **Set as Override**.
 
-   <img src="../assets/studio/material-manager/Set-Override-Disabled.png" width="320" />
+   <img src="../assets/studio/material-manager/Set-Override-Disabled.png" width="320" alt="" />
 </TabItem>
 <TabItem label="Disable Override for Specific Material">
 1. In the palette of the [Material Manager](#material-manager), click a **base material** which is being overridden by a custom material.
 2. In the inspector, scroll down to **Material Override** and select **None** from the menu.
 
-   <img src="../assets/studio/material-manager/Disable-Material-Override-Specific.png" width="320" />
+   <img src="../assets/studio/material-manager/Disable-Material-Override-Specific.png" width="320" alt="" />
 </TabItem>
 </Tabs>
 

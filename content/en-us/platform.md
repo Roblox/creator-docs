@@ -14,7 +14,7 @@ Our platform provides you with unparalleled opportunities to create content from
 
 <img src="./assets/getting-started/platform-overview/Everything-You-Need.jpg" alt="" width="100%" />
 
-Roblox offers you the ability to create anything you can imagine. With a comprehensive set of free powerful 3D collaborative creation tools, [Roblox Studio](./studio/setting-up-roblox-studio.md) is an advanced development environment to help you start creating immediately. Studio's functionality ranges from an advanced physics engine and robust data storage, to Gen AI technology and APIs that automate workflows, to third-party professional integrations, such as Blender, and much more.
+Roblox offers you the ability to create anything you can imagine. With a comprehensive set of free powerful 3D collaborative creation tools, [Roblox Studio](./studio/setup.md) is an advanced development environment to help you start creating immediately. Studio's functionality ranges from an advanced physics engine and robust data storage, to Gen AI technology and APIs that automate workflows, to third-party professional integrations, such as Blender, and much more.
 
 With Roblox, you can deploy globally in seconds across major platforms&nbsp;— from mobile to console to desktop to VR&nbsp;— and in multiple languages. We also simplify creation by providing hosting and an infrastructure that powers automatic, synchronous real-time gameplay as well as covering storage, localization, and payment processing.
 

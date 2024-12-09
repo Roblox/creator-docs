@@ -98,11 +98,15 @@ A [Developer Product](../../production/monetization/developer-products.md) is an
 
 [Engagement-Based Payouts](../../production/monetization/engagement-based-payouts.md) allow you to automatically earn Robux based on the share of time that [Premium](https://www.roblox.com/premium/membership) subscribers engage in your experiences.
 
-### Paid Access
+### Paid Access in Robux
 
-[Paid Access](../../production/monetization/paid-access.md) allows you to charge a **one-time Robux fee** in order for users to access your experience. Some developers temporarily use this feature to create a closed beta where their most engaged users can have early access to an experience and help with testing and feedback.
+[Paid access in Robux](../../production/monetization/paid-access-robux.md) allows you to charge users a **one-time Robux fee** to access your experience. Some developers temporarily use this feature to create a closed beta where their most engaged users can have early access to an experience and help with testing and feedback.
 
 <img src="../../assets/monetization/paid-access/Buy-Access-Example.png" width="400" />
+
+### Paid Access in Local Currency
+
+[Paid access in local currency](../../production/monetization/paid-access-local-currency.md) allows you to charge users a **one-time fee in their local currency** to access your experience. If their local currency isn't available, they're charged in USD. Some developers temporarily use this feature to create a closed beta where their most engaged users can have early access to an experience and help with testing and feedback.
 
 ### Private Servers
 

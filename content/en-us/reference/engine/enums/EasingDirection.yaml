@@ -1,14 +1,11 @@
 name: EasingDirection
 type: enum
 summary: |
-  Pass to `Datatype.TweenInfo.new()` to control the direction
+  Enum used with `Datatype.TweenInfo.new()` to control the direction
   `Class.Tween|Tweens` play in.
 description: |
-  Pass to `Datatype.TweenInfo.new()` to control the direction
-  `Class.Tween|Tweens` play in.
-
-  For a video demonstration of each easing direction, see
-  [UI Animations - Direction](../../../ui/animation.md#direction).
+  These enum values are passed to `Datatype.TweenInfo.new()` to control the
+  direction `Class.Tween|Tweens` play in.
 code_samples:
 tags: []
 deprecation_message: ''

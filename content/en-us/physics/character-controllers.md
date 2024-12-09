@@ -13,7 +13,7 @@ The `Class.ControllerManager` instance manages simulated motion control for its 
 2. Group the part as a `Class.Model` instance for organization along with the other components.
 3. Add a `Class.ControllerManager` instance to the model. If **ControllerManager** doesn't initially appear in the object insertion menu, **uncheck** "Show only recommended objects" in the menu's [insertion settings](../studio/explorer.md#inserting-and-parenting).
 
-	 <img src="../assets/physics/character-controller/Explorer-Core-Setup.png" width="320" alt="ControllerManager and RootPart inside model" />
+	 <img src="../assets/physics/character-controller/Explorer-Core-Setup.png" width="320" alt="ControllerManager and RootPart inside a model." />
 
 ### Sensor Setup
 
@@ -22,12 +22,12 @@ A `Class.ControllerPartSensor` detects parts with the same code the `Class.Human
 1. Insert a `Class.ControllerPartSensor` as a child of **RootPart** and rename it **GroundSensor** for easier identification of its purpose. Then, in the [Properties](../studio/properties.md) window, set its `Class.ControllerPartSensor.SearchDistance|SearchDistance` property to **2** but leave its `Class.ControllerPartSensor.SensorMode|SensorMode` as **Floor**.
 
    <img src="../assets/physics/character-controller/Explorer-RootPart-GroundSensor.png" width="320" alt="GroundSensor as child of RootPart" /><br />
-	 <img src="../assets/physics/character-controller/Properties-GroundSensor.png" width="320" alt="GroundSensor properties" />
+	 <img src="../assets/physics/character-controller/Properties-GroundSensor.png" width="320" alt="" />
 
 2. Insert another `Class.ControllerPartSensor` as a child of **RootPart** and rename it **ClimbSensor**. Then, in the [Properties](../studio/properties.md) window, set its `Class.ControllerPartSensor.SearchDistance|SearchDistance` property to **1** and its `Class.ControllerPartSensor.SensorMode|SensorMode` to **Ladder**.
 
    <img src="../assets/physics/character-controller/Explorer-RootPart-ClimbSensor.png" width="320" alt="ClimbSensor as child of RootPart" /><br />
-	 <img src="../assets/physics/character-controller/Properties-ClimbSensor.png" width="320" alt="ClimbSensor properties" />
+	 <img src="../assets/physics/character-controller/Properties-ClimbSensor.png" width="320" alt="" />
 
 ### Controller Setup
 
@@ -35,11 +35,11 @@ Controller instances like `Class.GroundController` and `Class.ClimbController` t
 
 1. Insert both a `Class.GroundController` and `Class.ClimbController` as children of the `Class.ControllerManager`.
 
-   <img src="../assets/physics/character-controller/Explorer-Controllers.png" width="320" alt="GroundController and ClimbController as children of ControllerManager" />
+   <img src="../assets/physics/character-controller/Explorer-Controllers.png" width="320" alt="GroundController and ClimbController as children of ControllerManager." />
 
 2. Select the new `Class.GroundController` instance and then, in the [Properties](../studio/properties.md) window, set its `Class.GroundController.GroundOffset|GroundOffset` property to a value at which the managed part should "levitate" above the ground. It's important that this value is **less** than the value of `Class.ControllerPartSensor.SearchDistance|SearchDistance` for the [GroundSensor](#sensor-setup), since that sensor will deactivate if it loses sense of the ground and effectively stop its forces on the part.
 
-   <img src="../assets/physics/character-controller/Properties-GroundController.png" width="320" alt="GroundController properties" />
+   <img src="../assets/physics/character-controller/Properties-GroundController.png" width="320" alt="" />
 
 ### Linking References
 
@@ -47,7 +47,7 @@ To complete the core setup, you'll need to link various properties of the `Class
 
 1. Select the `Class.ControllerManager` instance.
 
-   <img src="../assets/physics/character-controller/Explorer-ControllerManager.png" width="320" alt="ControllerManager selected in Explorer window" />
+   <img src="../assets/physics/character-controller/Explorer-ControllerManager.png" width="320" alt="ControllerManager selected in Explorer window." />
 
 1. In the [Properties](../studio/properties.md) window, click each of the following properties and then, back in the [Explorer](../studio/explorer.md) window, click the respective instance to complete the link.
 
@@ -68,20 +68,20 @@ With [sensors](#sensor-setup) and [controllers](#controller-setup) in place, and
 
 2. **RootPart** should levitate above the ground at the `Class.GroundController.GroundOffset` value you set in [Adding Controllers](#controller-setup). It should also rotate to align with the `Class.ControllerManager.FacingDirection` vector.
 
-   <img src="../assets/physics/character-controller/Testing-Labeled.jpg" width="800" alt="Character levitating above ground at GroundOffset, facing in direction of FacingDirection vector" />
+   <img src="../assets/physics/character-controller/Testing-Labeled.jpg" width="800" alt="Character levitating above ground at GroundOffset, facing in direction of FacingDirection vector." />
 
 3. Experiment with different movement and facing directions by changing the `Class.ControllerManager.MovingDirection|MovingDirection` and `Class.ControllerManager.FacingDirection|FacingDirection` vectors of the `Class.ControllerManager` during runtime. Also experiment with different properties of the `Class.GroundController` instance such as `Class.GroundController.AccelerationTime|AccelerationTime`, `Class.GroundController.DecelerationTime|DecelerationTime`, and `Class.GroundController.GroundOffset|GroundOffset`.
 
    <Grid container spacing={4}>
    <Grid item>
 	 <figure>
-	 <img src="../assets/physics/character-controller/Properties-Testing-ControllerManager.png" width="320" alt="ControllerManager properties for moving and facing direction" />
+	 <img src="../assets/physics/character-controller/Properties-Testing-ControllerManager.png" width="320" alt="ControllerManager properties for moving and facing direction are highlighted." />
    <figcaption>ControllerManager</figcaption>
 	 </figure>
 	 </Grid>
    <Grid item>
 	 <figure>
-	 <img src="../assets/physics/character-controller/Properties-Testing-GroundController.png" width="320" alt="GroundController properties for acceleration, deceleration, and ground offset" />
+	 <img src="../assets/physics/character-controller/Properties-Testing-GroundController.png" width="320" alt="GroundController properties for acceleration, deceleration, and ground offset are highlighted." />
 	 <figcaption>GroundController</figcaption>
 	 </figure>
 	 </Grid>

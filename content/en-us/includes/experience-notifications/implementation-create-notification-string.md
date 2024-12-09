@@ -15,13 +15,13 @@ As with [Player Invite Prompts](../../production/promotion/invite-prompts.md), y
 
    Example notification strings:
 
-   - <Typography variant="subtitle2" color="primary">You're \{numQuests\} quests away from completing the weekly challenge!</Typography>
-   - <Typography variant="subtitle2" color="primary">Your \{eggName\} hatched! Come meet your new pet.</Typography>
-   - <Typography variant="subtitle2" color="primary">You won \{numRaces\} races this week and unlocked the \{racetrackName\} track!</Typography>
-   - <Typography variant="subtitle2" color="primary">\{userId-friend\} just beat your record on the Tokyo Tour track! Time for revenge?</Typography>
+	 <p><Chip label="You're {numQuests} quests away from completing the weekly challenge!" size="large" color="primary" variant="outlined" /></p>
+	 <p><Chip label="Your {eggName} hatched! Come meet your new pet." size="large" color="primary" variant="outlined" /></p>
+	 <p><Chip label="You won {numRaces} races this week and unlocked the {racetrackName} track!" size="large" color="primary" variant="outlined" /></p>
+	 <p><Chip label="{userId-friend} just beat your record on the Tokyo Tour track! Time for revenge?" size="large" color="primary" variant="outlined" /></p>
 
    <Alert severity="warning">
-   Before writing notification strings, please review the [guidelines](#guidelines) for using the system.
+   Before writing notification strings, please review the [guidelines](#usage-guidelines) for using the system.
 	 </Alert>
 
 1. When ready, click the **Create Notification String** button.
@@ -29,4 +29,4 @@ As with [Player Invite Prompts](../../production/promotion/invite-prompts.md), y
 
    <img src="../../assets/creator-dashboard/Notifications-Exp-Notif-Copy-Asset-ID.png" width="780" />
 
-1. Use the copied ID for the `messageId` key value in the `payload` table as demonstrated in the [example script](#sending-an-experience-notification).
+4. Use the copied ID for the `messageId` key value in the `payload` table as demonstrated in the [example script](#sending-an-experience-notification).

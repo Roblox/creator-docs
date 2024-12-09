@@ -8,15 +8,15 @@ The `Class.Highlight` instance is a visual effect which you can use to call atte
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/ui/highlighting-objects/OutlineTransparency-1.jpg" />
+    <img src="../assets/ui/highlighting-objects/OutlineTransparency-1.jpg" alt="A tree mesh against a grey background." />
     <figcaption>Base object</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/Overview-Yellow-Outline.jpg" />
+    <img src="../assets/ui/highlighting-objects/Overview-Yellow-Outline.jpg" alt="The same tree mesh with a yellow outline and a black highlight interior." />
     <figcaption>Yellow outline and black interior</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/Overview-Yellow-Interior.jpg" />
+    <img src="../assets/ui/highlighting-objects/Overview-Yellow-Interior.jpg" alt="The same tree mesh with a black outline and a yellow highlight interior." />
     <figcaption>Black outline and yellow interior</figcaption>
   </figure>
 </GridContainer>
@@ -40,7 +40,7 @@ To add a highlight effect to an object, you can parent a new `Class.Highlight` d
 1. In the [Explorer](../studio/explorer.md) window, hover over either a `Class.Model` or a `Class.BasePart`, then click the &CirclePlus; button. A contextual menu displays.
 2. From the menu, insert a **Highlight**. The highlight displays on the object with its default property values that create a white outline and a red tint overlay.
 
-   <img src="../assets/ui/highlighting-objects/Adding-Highlight.jpg" width="320" />
+   <img src="../assets/ui/highlighting-objects/Adding-Highlight.jpg" alt="" width="320" />
 
 ### Setting the Adornee
 
@@ -56,15 +56,15 @@ The `Class.Highlight.OutlineColor|OutlineColor` property sets the `Datatype.Colo
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/ui/highlighting-objects/OutlineColor-Red.jpg" />
+    <img src="../assets/ui/highlighting-objects/OutlineColor-Red.jpg" alt="A tree mesh with red outline." />
     <figcaption>OutlineColor = [255, 100, 50]</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/OutlineColor-Green.jpg" />
+    <img src="../assets/ui/highlighting-objects/OutlineColor-Green.jpg" alt="A tree mesh with green outline." />
     <figcaption>OutlineColor = [0, 255, 125]</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/OutlineColor-Blue.jpg" />
+    <img src="../assets/ui/highlighting-objects/OutlineColor-Blue.jpg" alt="A tree mesh with blue outline." />
     <figcaption>OutlineColor = [75, 150, 255]</figcaption>
   </figure>
 </GridContainer>
@@ -75,11 +75,11 @@ The `Class.Highlight.OutlineTransparency|OutlineTransparency` property sets the 
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/ui/highlighting-objects/OutlineTransparency-0.jpg" />
+    <img src="../assets/ui/highlighting-objects/OutlineTransparency-0.jpg" alt="A tree mesh with black opaque outline."/>
     <figcaption>OutlineTransparency = 0</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/OutlineTransparency-1.jpg" />
+    <img src="../assets/ui/highlighting-objects/OutlineTransparency-1.jpg" alt="A tree mesh with transparent outline." />
     <figcaption>OutlineTransparency = 1</figcaption>
   </figure>
 </GridContainer>
@@ -90,15 +90,15 @@ The `Class.Highlight.FillColor|FillColor` property sets the `Datatype.Color3` va
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/ui/highlighting-objects/FillColor-Red.jpg" />
+    <img src="../assets/ui/highlighting-objects/FillColor-Red.jpg" alt="A tree mesh with a red fill." />
     <figcaption>FillColor = [255, 100, 50]</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/FillColor-Green.jpg" />
+    <img src="../assets/ui/highlighting-objects/FillColor-Green.jpg" alt="A tree mesh with a red fill." />
     <figcaption>FillColor = [0, 255, 125]</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/FillColor-Blue.jpg" />
+    <img src="../assets/ui/highlighting-objects/FillColor-Blue.jpg" alt="A tree mesh with a blue fill." />
     <figcaption>FillColor = [75, 150, 255]</figcaption>
   </figure>
 </GridContainer>
@@ -109,15 +109,15 @@ The `Class.Highlight.FillTransparency|FillTransparency` property sets the visibi
 
 <GridContainer numColumns="3">
   <figure>
-    <img src="../assets/ui/highlighting-objects/FillTransparency-0.jpg" />
+    <img src="../assets/ui/highlighting-objects/FillTransparency-0.jpg" alt="A tree mesh with an opaque black fill." />
     <figcaption>FillTransparency = 0</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/FillTransparency-Half.jpg" />
+    <img src="../assets/ui/highlighting-objects/FillTransparency-Half.jpg" alt="A tree mesh with an semi-transparent black fill." />
     <figcaption>FillTransparency = 0.5</figcaption>
   </figure>
   <figure>
-    <img src="../assets/ui/highlighting-objects/FillTransparency-1.jpg" />
+    <img src="../assets/ui/highlighting-objects/FillTransparency-1.jpg" alt="A tree mesh with a transparent black fill." />
     <figcaption>FillTransparency = 1</figcaption>
   </figure>
 </GridContainer>
@@ -132,10 +132,10 @@ The `Class.Highlight.DepthMode|DepthMode` property controls how the effect displ
 
 <Tabs>
 <TabItem label="AlwaysOnTop">
-<img src="../assets/ui/highlighting-objects/DepthMode-AlwaysOnTop.jpg" width="800" height="450" />
+<img src="../assets/ui/highlighting-objects/DepthMode-AlwaysOnTop.jpg" alt="Two objects are behind pillars, but because their AlwayOnTop property is set to true, you can still see the objects and their highlight." width="800" height="450" />
 </TabItem>
 <TabItem label="Occluded">
-<img src="../assets/ui/highlighting-objects/DepthMode-Occluded.jpg" width="800" height="450" />
+<img src="../assets/ui/highlighting-objects/DepthMode-Occluded.jpg" alt="Two objects are behind pillars, but because their Occuluded property is set to true, you can only see the objects and their highlight in areas where they are unobstructed." width="800" height="450" />
 </TabItem>
 </Tabs>
 

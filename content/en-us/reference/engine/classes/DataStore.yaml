@@ -51,6 +51,45 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: DataStore:GetVersionAtTimeAsync
+    summary: |
+      Retrieves the key version that was current at a given time.
+    description: |
+      This function retrieves the key version that was current at a given time
+      as well as a `Class.DataStoreKeyInfo` instance.
+    code_samples:
+      - retrieving-datastore-versions-by-time
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: |
+          Key name for which the version info is requested. If
+          `Class.DataStoreOptions.AllScopes` was set to true when accessing the
+          data store through `Class.DataStoreService:GetDataStore()`, this key
+          name must be prepended with the original scope as in "scope/key".
+      - name: timestamp
+        type: int64
+        default:
+        summary: |
+          Unix timestamp in milliseconds for which the requested version was
+          current. Must be greater than zero. Must not be more than ten minutes
+          in the future.
+    returns:
+      - type: Tuple
+        summary: |
+          The value of the key that was current at the specified time and a
+          `Class.DataStoreKeyInfo` instance that includes the version number,
+          date and time the version was created, and functions to retrieve
+          `Class.Player.UserId|UserIds` and metadata. `nil` if no available
+          version was current at the requested time.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DataStore:ListKeysAsync
     summary: |
       Returns a `Class.DataStoreKeyPages` object for enumerating through keys of

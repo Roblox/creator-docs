@@ -67,7 +67,33 @@ New metric change insights are being actively tested on your **Experience Overvi
 
 If you have a brand new experience, you may not have enough users for recommendations to understand how your engagement and monetization metrics compare with other experiences.
 
-Consider driving new users to your experience with [social links](/production/promotion/audience-engagement.md#linking-to-social-media), [sponsored ads](./production/promotion/ads-manager.md#sponsored-experiences), and other channels so that recommendations can get enough signal. Roblox continues to add recommendations improvements to be better at discovering new experiences.
+Consider driving new users to your experience with [social media links](./production/promotion/social-media-links.md), [sponsored ads](./production/promotion/ads-manager.md#sponsored-experiences), and other channels so that recommendations can get enough signal. Roblox continues to add recommendations improvements to be better at discovering new experiences.
+
+## Best Practices for Discovery
+
+Your content must always adhere to our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). To increase your reach and help your experience get discovered, make sure to also follow the best practices for discovery:
+
+- **Be accurate.** Avoid using irrelevant keywords in your metadata and follow the [metadata best practices](./production/publishing/publishing-experiences-and-places.md#metadata-best-practices).
+- **Build trust.** You should not rely on promotional monetary rewards to drive engagement. Instead, your metadata should reflect what your experience is about.
+- **Use unique metadata.** Focus on using original imagery and naming that you or your teammates created to help your experience stand out. Avoid publishing content with repetitive titles and images that have been previously published. When using  [thumbnail personalization](./production/publishing/thumbnails.md#thumbnail-personalization-for-the-home-page), make sure all thumbnails accurately reflect your experience.
+- **Add your own spin to existing trends** in the title, images, description, and in-experience content when you follow trends. Unique updates add value and differentiate your experience from other experiences following the same trend.
+
+### Issues that Limit Exposure
+
+The level of exposure your content receives on the homepage and in search is directly influenced by its quality. Certain issues can reduce visibility or prevent your content from being recommended, including:
+
+- **Leading with giveaways**: Metadata that implies any type of monetary reward is not prioritized for recommendations.
+    - Example: An experience titled "Robux! Play now!" receives less exposure because the title leads with monetary implications instead of in-experience content.
+- **Mismatched metadata and content**: Metadata and content that is highly mismatched is not recommended to users and is less visible in search results.
+    - Example: An experience titled "The Great Dinosaur Quest" that has a thumbnail showing dinosaurs but where the actual gameplay is a generic obstacle course with no dinosaurs or adventure elements.
+- **Non-unique experiences**: Experiences with metadata and place files that closely resemble existing experiences on Roblox are no longer prioritized for recommendations and might rank lower in search results.
+    - Example: An experience with the same title and visuals as a previously published experience.
+ 
+### Tracking and Improving Content Quality
+
+Roblox continually reclassifies content quality with every update, giving all experiences the opportunity to improve their reach. To be reassessed and improve your reach, make sure to align your experience with our [best practices](#best-practices-for-discovery). 
+
+To check if your experience is affected by quality issues, go to the **Creator Dashboard**. Experiences with reduced exposure display a banner that updates daily and provides the latest status about quality and visibility.
 
 ## Discovery for Other Surfaces
 

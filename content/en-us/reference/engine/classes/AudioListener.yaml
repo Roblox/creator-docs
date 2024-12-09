@@ -295,26 +295,35 @@ methods:
     writeCapabilities: []
 events:
   - name: AudioListener.WiringChanged
-    summary: ''
-    description: ''
+    summary: |
+      Fires when another instance is connected to or disconnected from the
+      `Class.AudioListener` via a `Class.Wire`.
+    description: |
+      Event that fires after a `Class.Wire` becomes connected or disconnected,
+      and that `Class.Wire` is now or was previously connected to a pin on the
+      `Class.AudioListener` and to some other wirable instance.
     code_samples: []
     parameters:
       - name: connected
         type: bool
         default:
-        summary: ''
+        summary: |
+          Whether the instance got connected or disconnected.
       - name: pin
         type: string
         default:
-        summary: ''
+        summary: |
+          The pin on the `Class.AudioListener` that the `Class.Wire` targets.
       - name: wire
         type: Wire
         default:
-        summary: ''
+        summary: |
+          The `Class.Wire` between the `Class.AudioListener` and the other instance.
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
     tags: []
     deprecation_message: ''
     security: None

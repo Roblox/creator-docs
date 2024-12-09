@@ -34,7 +34,7 @@ The following table details promotional methods for experiences on the platform.
 	</tr>
 	<tr>
 		<td>**Time-Based Events**</td>
-		<td>Invite users back into your experiences with engaging time-based events that display on your experience's main details page. For more information, see [Experience Events](../../production/promotion/experience-events.md).</td>
+		<td>Invite users back into your experiences with engaging time-based events that display on your experience's main details page. For more information, see [Events and Updates](../../production/promotion/experience-events.md).</td>
 	</tr>
 	<tr>
 		<td>**Player Invite Prompts**</td>
@@ -72,7 +72,7 @@ The following table details promotional methods for avatar items on the platform
 
 ## Social Media
 
-You can direct users to follow you on social media by embedding social media links on your experience's main details page. Social media links connect your audience over the age of 13 to your social media outside of Roblox, which you can use to market updates, monitor community feedback, and promote your experiences. For more information, see [Linking to Social Media](../../production/promotion/audience-engagement.md#linking-to-social-media).
+You can direct users to follow you on social media by embedding social media links on your experience's main details page. Social media links connect your audience over the age of 13 to your social media outside of Roblox, which you can use to market updates, monitor community feedback, and promote your experiences. For more information, see [Social Media Links](../../production/promotion/social-media-links.md).
 
 <img src="../../assets/promotion/misc/Social-Links-Example.png" width="540" />
 

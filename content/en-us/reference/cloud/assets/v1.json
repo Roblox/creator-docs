@@ -40,7 +40,14 @@
         ],
         "responses": {
           "200": {
-            "description": "Asset resource retrieved successfully."
+            "description": "Asset resource retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Asset"
+                }
+              }
+            }
           },
           "400": {
             "description": "Malformed request, likely due to an invalid read mask."
@@ -269,6 +276,118 @@
         }
       }
     },
+    "/v1/assets/{assetId}:archive": {
+      "post": {
+        "tags": ["Assets"],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-cloud-api-operation-name": "Archive Asset",
+        "summary": "Archives the asset.",
+        "description": "Archives the asset. Archived assets disappear from the website and are no longer usable or visible in Roblox experiences, but you can [restore](#POST-v1-assets-{assetId}:restore) them.",
+        "operationId": "Assets_ArchiveAsset",
+        "parameters": [
+          {
+            "name": "assetId",
+            "in": "path",
+            "description": "The unique identifier of the asset.",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Asset archived succesfully successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Asset"
+                }
+              }
+            }
+          },
+          "400": { "description": "Bad request - invalid request." },
+          "403": {
+            "description": "Forbidden - API key without Write scope or user doesn't have access."
+          },
+          "404": { "description": "Asset not found." }
+        },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Read", "Label.Write"]
+          },
+          {
+            "roblox-oauth2": ["asset:read", "asset:write"]
+          }
+        ],
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "Archive Asset",
+            "script": "curl --location 'https://apis.roblox.com/assets/v1/assets/{assetid}:archive' \\\n--header 'x-api-key: {apiKey}' \\\n--header 'Content-Type: application/json'"
+          }
+        ],
+        "x-roblox-throttling-limit": {
+          "perApiKey": {
+            "periodInSeconds": "60",
+            "maxInPeriod": 60
+          }
+        }
+      }
+    },
+    "/v1/assets/{assetId}:restore": {
+      "post": {
+        "tags": ["Assets"],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-cloud-api-operation-name": "Restore Asset",
+        "summary": "Restores an archived asset.",
+        "description": "Restores an archived asset.",
+        "operationId": "Assets_RestoreAsset",
+        "parameters": [
+          {
+            "name": "assetId",
+            "in": "path",
+            "description": "The unique identifier of the asset.",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Asset restored successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Asset"
+                }
+              }
+            }
+          },
+          "400": { "description": "Bad request - invalid request." },
+          "403": {
+            "description": "Forbidden - API key without Write scope or user doesn't have access."
+          },
+          "404": { "description": "Asset not found." }
+        },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Read", "Label.Write"]
+          },
+          {
+            "roblox-oauth2": ["asset:read", "asset:write"]
+          }
+        ],
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "Restore Asset",
+            "script": "curl --location 'https://apis.roblox.com/assets/v1/assets/{assetid}:restore' \\\n--header 'x-api-key: {apiKey}' \\\n--header 'Content-Type: application/json'"
+          }
+        ],
+        "x-roblox-throttling-limit": {
+          "perApiKey": {
+            "periodInSeconds": "60",
+            "maxInPeriod": 60
+          }
+        }
+      }
+    },
     "/v1/assets/{assetId}/versions/{versionNumber}": {
       "get": {
         "tags": ["Assets"],
@@ -294,7 +413,16 @@
           }
         ],
         "responses": {
-          "200": { "description": "Asset version retrieved successfully." },
+          "200": {
+            "description": "Asset version retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetVersion"
+                }
+              }
+            }
+          },
           "403": {
             "description": "Forbidden - API key without Read scope or user doesn't have access."
           },
@@ -352,7 +480,19 @@
           }
         ],
         "responses": {
-          "200": { "description": "Asset versions listed successfully." },
+          "200": {
+            "description": "Asset versions listed successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AssetVersion"
+                  }
+                }
+              }
+            }
+          },
           "400": { "description": "Bad request - invalid parameters." },
           "403": {
             "description": "Forbidden - API key without Read scope or user doesn't have access."
@@ -419,7 +559,16 @@
           }
         },
         "responses": {
-          "200": { "description": "Asset rolled back successfully." },
+          "200": {
+            "description": "Asset rolled back successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssetVersion"
+                }
+              }
+            }
+          },
           "400": { "description": "Bad request - invalid request body." },
           "403": {
             "description": "Forbidden - API key without Write scope or user doesn't have access."
@@ -572,11 +721,30 @@
             },
             "description": "A list of previews, each with an asset path and alt text. Previews must be **Image** assets."
           },
+          "state": {
+            "$ref": "#/components/schemas/State"
+          },
           "socialLink": {
             "$ref": "#/components/schemas/SocialLink"
           }
         },
         "description": "Represents an asset."
+      },
+      "AssetVersion": {
+        "type": "object",
+        "properties": {
+          "creationContext": {
+            "$ref": "#/components/schemas/CreationContext"
+          },
+          "path": {
+            "type": "string",
+            "description": "The returned resource path of the asset version. Format: `assets/{assetId}/versions/{version}`. Example: `assets/2205400862/versions/1`."
+          },
+          "moderationResult": {
+            "$ref": "#/components/schemas/ModerationResult"
+          }
+        },
+        "description": "An asset version."
       },
       "CreationContext": {
         "type": "object",
@@ -670,6 +838,15 @@
           }
         },
         "description": "A social media link for the asset. Maximum of three per asset. Object name can be any of: <ul><li>`facebookSocialLink`</li><li>`twitterSocialLink`</li><li>`youtubeSocialLink`</li><li>`twitchSocialLink`</li><li>`discordSocialLink`</li><li>`githubSocialLink`</li><li>`robloxSocialLink`</li><li>`guildedSocialLink`</li><li>`devForumSocialLink`</li></ul>For syntax, see the sample request under [Update Asset](#PATCH-v1-assets-_assetId_)."
+      },
+      "State": {
+        "type": "string",
+        "description": "Whether the asset is active or archived. Unspecified isn't used.",
+        "enum": [
+          "Unspecified",
+          "Active",
+          "Archived"
+        ]
       },
       "Status": {
         "type": "object",
