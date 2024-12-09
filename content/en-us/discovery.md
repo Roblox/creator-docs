@@ -95,6 +95,8 @@ Roblox continually reclassifies content quality with every update, giving all ex
 
 To check if your experience is affected by quality issues, go to the **Creator Dashboard**. Experiences with reduced exposure display a banner that updates daily and provides the latest status about quality and visibility.
 
+If you come across any issues, go to [Support](https://www.roblox.com/support), select **Bug Report**, and provide the Universe ID of your experience along with a description of your issue.
+
 ## Discovery for Other Surfaces
 
 Home's **Recommended For You** is not the only discovery surface that Roblox offers. Below is a primer on our other surfaces:
