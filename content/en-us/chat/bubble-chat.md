@@ -424,9 +424,9 @@ TextChatService.OnBubbleAdded = function(message: TextChatMessage, adornee: Inst
 			-- Add a UIGradient as a child to customize the gradient
 			local uiGradient : UIGradient = Instance.new("UIGradient")
 			uiGradient.Color = ColorSequence.new(Color3.fromRGB(110, 4, 0), Color3.fromRGB(0, 0, 0))
-			uiGradient.Parent = bubbleProperties
 			uiGradient.Rotation = 90
-
+			uiGradient.Parent = bubbleProperties
+			
 			return bubbleProperties
 		end
 	end
