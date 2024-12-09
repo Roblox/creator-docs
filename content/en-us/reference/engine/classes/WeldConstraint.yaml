@@ -138,9 +138,9 @@ properties:
       partB.Parent = workspace
 
       local weld = Instance.new("WeldConstraint")
-      weld.Parent = partA
       weld.Part0 = partA
       weld.Part1 = partB
+      weld.Parent = partA
       ```
     code_samples:
     type: BasePart
@@ -175,15 +175,15 @@ properties:
       local partB = Instance.new("Part")
 
       partA.Position = Vector3.new(0, 10, 0)
-      partA.Parent = game.Workspace
+      partA.Parent = workspace
 
       partB.Position = Vector3.new(0, 10, 10)
-      partB.Parent = game.Workspace
+      partB.Parent = workspace
 
       local weld = Instance.new("WeldConstraint")
-      weld.Parent = partA
       weld.Part0 = partA
       weld.Part1 = partB
+      weld.Parent = partA
       ```
     code_samples:
     type: BasePart
