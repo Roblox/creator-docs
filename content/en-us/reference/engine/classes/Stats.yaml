@@ -119,7 +119,7 @@ properties:
     writeCapabilities: []
   - name: Stats.HeartbeatTime
     summary: | 
-      A measurement of the total amount of time it takes long it takes for Roblox to update all of its Task Scheduler jobs
+      A measurement of the total amount of time it takes for the server to update its Task Scheduler jobs in seconds.
     description: |
       This property is a measurement of the total amount of time it takes for the server to update its Task Scheduler jobs in seconds. If this value is high, examine [server compute](/performance-optimization/identifying#server-compute).
     code_samples: []
