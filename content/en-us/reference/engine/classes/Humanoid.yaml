@@ -1482,9 +1482,6 @@ methods:
       end
       ```
 
-      When this function is called, the humanoid will automatically unequip any
-      `Class.Tool|Tools` that it currently has equipped
-
       Although they will be equipped, `Class.Tool|Tools` for which
       `Class.Tool.RequiresHandle` is _true_ will not function if they have no
       handle, regardless if this function is used to equip them or not
