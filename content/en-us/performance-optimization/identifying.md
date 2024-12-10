@@ -70,7 +70,7 @@ Another symptom of degraded server heartbeat is increased latency (commonly know
 
 ## Client Compute
 
-The default client frame rate cap is 60 FPS. However, users can raise their frame rate cap up to 240 FPS.
+The default client frame rate cap is 60 FPS. However, users can raise their frame rate cap up to 240 FPS on Windows.
 
 Frame rate differs wildly between devices. For example, a high-end PC might be able to "brute force" a computational issue and only experience an imperceptible frame rate dip. If you test on lower-end devices, problems tend to be more severe and thus easier to notice.
 
