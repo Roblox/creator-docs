@@ -100,7 +100,7 @@ properties:
     summary: |
       A measurement of how long it takes for the engine to process all tasks required to render a frame.
     description: |
-      This property is a measurement of how long it takes for the engine to render a frame. It can be used to calculate frames per second (FPS) through dividing `1` by this value. A high frame time value indicates the engine and device are struggling to render frames.
+      This property is only available in client scripts and is a measurement of how long it took to render the most-recent frame in seconds. Divide 1 by this value to calculate an FPS value for the frame time. High frame times are indicative of performance problems on the device. Consider using the [MicroProfiler](/studio/microprofiler) to troubleshoot.
     code_samples: []
     type: float
     tags:
