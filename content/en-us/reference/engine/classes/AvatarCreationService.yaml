@@ -37,7 +37,8 @@ methods:
     writeCapabilities: []
   - name: AvatarCreationService:GetValidationRules
     summary: |
-      Gets data regarding rules that assets must abide by to pass UGC validation.
+      Gets data regarding rules that assets must abide by to pass UGC
+      validation.
     description: |
       Gets data regarding rules that assets must abide by to pass UGC
       validation. Validation is an essential step before creating avatars and
@@ -172,7 +173,7 @@ methods:
       		},
       		...
       	}
-      }      
+      }
       ```
     code_samples: []
     parameters: []
@@ -231,7 +232,8 @@ methods:
     writeCapabilities: []
   - name: AvatarCreationService:PromptCreateAvatarAsync
     summary: |
-      Prompts a `Class.Player` to purchase and create an avatar from a `Class.HumanoidDescription`.
+      Prompts a `Class.Player` to purchase and create an avatar from a
+      `Class.HumanoidDescription`.
     description: |
       Prompts a `Class.Player` to purchase and create an avatar from a
       `Class.HumanoidDescription`. The price of the creation is dictated by the
@@ -239,13 +241,11 @@ methods:
 
       For avatar creation, the `Class.HumanoidDescription` is expected to
       include new assets to be created for each of the 6 body parts
-      (`Enum.BodyPart.Head|Head`,
-      `Enum.BodyPart.Torso|Torso`,
-      `Enum.BodyPart.RightLeg|RightLeg`,
-      `Enum.BodyPart.LeftLeg|LeftLeg`,
-      `Enum.BodyPart.RightArm|RightArm`,
-      `Enum.BodyPart.LeftArm|LeftArm`). Optionally, it can also
-      include a new `Enum.AccessoryType.Hair|Hair` accessory.
+      (`Enum.BodyPart.Head|Head`, `Enum.BodyPart.Torso|Torso`,
+      `Enum.BodyPart.RightLeg|RightLeg`, `Enum.BodyPart.LeftLeg|LeftLeg`,
+      `Enum.BodyPart.RightArm|RightArm`, `Enum.BodyPart.LeftArm|LeftArm`).
+      Optionally, it can also include a new `Enum.AccessoryType.Hair|Hair`
+      accessory.
 
       To support this, the `Class.HumanoidDescription` should include 6
       `Class.BodyPartDescription` children (one for each body part). For each,
@@ -257,17 +257,17 @@ methods:
       the relevant `Enum.BodyPart`.
 
       Each body part `Class.MeshPart` will also need to include:
-  
+
       - An `Class.EditableImage`.
       - A `Class.WrapDeformer` with an `Class.EditableMesh`.
 
       If including an accessory such as hair, the `Class.HumanoidDescription`
       should include a child `Class.AccessoryDescription` where:
-      
-      - The `Class.AccessoryDescription.Instance` property references
-      the `Class.Accessory` instance.
-      - The `Class.AccessoryDescription.AccessoryType` property is
-      set to the relevant `Enum.AccessoryType`.
+
+      - The `Class.AccessoryDescription.Instance` property references the
+        `Class.Accessory` instance.
+      - The `Class.AccessoryDescription.AccessoryType` property is set to the
+        relevant `Enum.AccessoryType`.
 
       Finally, the `Class.HumanoidDescription` should include the humanoid
       scales of `Class.HumanoidDescription.BodyTypeScale|BodyTypeScale`,
@@ -285,8 +285,9 @@ methods:
         default:
         summary: |
           The ID of an avatar creation token. The token must be valid in that
-          the universe the method is called from
-          is the same universe the token was created for. Furthermore, the token creator must maintain ID verification and
+          the universe the method is called from is the same universe the token
+          was created for. Furthermore, the token creator must maintain ID
+          verification and
           [Roblox Premium](https://www.roblox.com/premium/membership).
       - name: player
         type: Player
@@ -303,16 +304,17 @@ methods:
         summary: |
           A tuple containing, in order:
 
-          - An `Enum.PromptCreateAvatarResult` indicating the result of the creation prompt.
+          - An `Enum.PromptCreateAvatarResult` indicating the result of the
+            creation prompt.
 
           - A string result. In the case of
-          `Enum.PromptCreateAvatarResult.Success`, this will indicate the bundle
-          ID. In the case of any failure enum, this will indicate the resultant
-          error message.
+            `Enum.PromptCreateAvatarResult.Success`, this will indicate the
+            bundle ID. In the case of any failure enum, this will indicate the
+            resultant error message.
 
           - A secondary optional string result. In the case of
-          `Enum.PromptCreateAvatarResult.Success`, this will indicate the outfit
-          ID. In the case of any failure enum, this will be `nil`.
+            `Enum.PromptCreateAvatarResult.Success`, this will indicate the
+            outfit ID. In the case of any failure enum, this will be `nil`.
     tags:
       - Yields
     deprecation_message: ''
@@ -343,8 +345,8 @@ methods:
     summary: |
       Studio only. Runs UGC validation for an `Enum.AccessoryType`.
     description: |
-      Studio only. Given a `Class.Player` and `Class.Instance` for an `Enum.AccessoryType`,
-      determines if UGC validation passes. 
+      Studio only. Given a `Class.Player` and `Class.Instance` for an
+      `Enum.AccessoryType`, determines if UGC validation passes.
     code_samples: []
     parameters:
       - name: player
@@ -362,7 +364,9 @@ methods:
         default:
         summary: |
           `Enum.AccessoryType` the instance is expected to be. Expects
-          `Enum.AccessoryType.Eyebrow|Eyebrow`, `Enum.AccessoryType.Eyelash|Eyelash`, or `Enum.AccessoryType.Hair|Hair`.
+          `Enum.AccessoryType.Eyebrow|Eyebrow`,
+          `Enum.AccessoryType.Eyelash|Eyelash`, or
+          `Enum.AccessoryType.Hair|Hair`.
     returns:
       - type: Tuple
         summary: |
@@ -370,8 +374,8 @@ methods:
 
           - A boolean indicating if validation was successful for the accessory.
           - An optional table of strings. This includes failure reasons if
-          validation was unsuccessful; otherwise `nil` if validation was
-          successful.
+            validation was unsuccessful; otherwise `nil` if validation was
+            successful.
     tags:
       - Yields
     deprecation_message: ''
@@ -383,8 +387,10 @@ methods:
     summary: |
       Studio only. Runs UGC validation for an `Enum.BodyPart`.
     description: |
-      Studio only. Given a `Class.Player` and `Class.Instance` for an `Enum.BodyPart`,
-      determines if UGC validation passes. The `instance` parameter is expected as a `Class.Folder` in the following example format with relevant `Class.MeshPart|MeshParts`:
+      Studio only. Given a `Class.Player` and `Class.Instance` for an
+      `Enum.BodyPart`, determines if UGC validation passes. The `instance`
+      parameter is expected as a `Class.Folder` in the following example format
+      with relevant `Class.MeshPart|MeshParts`:
 
       - `LeftArm` (`Class.Folder`)
         - `R15ArtistIntent` (`Class.Folder`)
@@ -418,8 +424,8 @@ methods:
 
           - A boolean indicating if validation was successful for the body part.
           - An optional table of strings. This includes failure reasons if
-          validation was unsuccessful; otherwise `nil` if validation was
-          successful.
+            validation was unsuccessful; otherwise `nil` if validation was
+            successful.
     tags:
       - Yields
     deprecation_message: ''
@@ -431,8 +437,8 @@ methods:
     summary: |
       Studio only. Runs UGC validation for a whole body.
     description: |
-      Studio only. Given a `Class.Player` and `Class.HumanoidDescription`, all instances in
-      the `Class.HumanoidDescription` will be validated.
+      Studio only. Given a `Class.Player` and `Class.HumanoidDescription`, all
+      instances in the `Class.HumanoidDescription` will be validated.
 
       The `Class.HumanoidDescription` is expected to include instances set on
       `Class.BodyPartDescription` children for each of the 6 required
@@ -450,14 +456,17 @@ methods:
         type: HumanoidDescription
         default:
         summary: |
-          `Class.HumanoidDescription` representing the body that validation is run on.
+          `Class.HumanoidDescription` representing the body that validation is
+          run on.
     returns:
       - type: Tuple
         summary: |
           A tuple containing, in order:
 
           - A boolean indicating if validation was successful for the body.
-          - An optional table of strings. This includes failure reasons if validation was unsuccessful; otherwise `nil` if validation was successful.
+          - An optional table of strings. This includes failure reasons if
+            validation was unsuccessful; otherwise `nil` if validation was
+            successful.
     tags:
       - Yields
     deprecation_message: ''

@@ -5,9 +5,10 @@ memory_category: Instances
 summary: |
   A class that allows the display of mobile video ads.
 description: |
-  This `Class.AdService` was a service for displaying mobile video ads as a form of
-  monetization. It has been superseded by [Immersive Ads](../../../production/monetization/immersive-ads.md)
-  which should be used instead to serve ad units to visitors of your experience.
+  This `Class.AdService` was a service for displaying mobile video ads as a form
+  of monetization. It has been superseded by
+  [Immersive Ads](../../../production/monetization/immersive-ads.md) which
+  should be used instead to serve ad units to visitors of your experience.
 code_samples:
 inherits:
   - Instance

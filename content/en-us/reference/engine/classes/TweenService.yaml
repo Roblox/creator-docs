@@ -126,8 +126,9 @@ methods:
     summary: |
       Calculates a value simulating a critically damped spring.
     description: |
-      Returns a value that allows smoothing a value towards a target simulating a critically damped spring.
-      Supports `Datatype.Vector2`, `Datatype.Vector3`, and `Datatype.CFrame`, and number.
+      Returns a value that allows smoothing a value towards a target simulating
+      a critically damped spring. Supports `Datatype.Vector2`,
+      `Datatype.Vector3`, and `Datatype.CFrame`, and number.
     code_samples: []
     parameters:
       - name: current

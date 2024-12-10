@@ -5,13 +5,13 @@ memory_category: Instances
 summary: |
   Performance metrics for a game.
 description: |
-  `Class.Stats` is a service that provides real-time performance information about
-  the current running game instance. Its primary purpose is to provide an end point
-  to measure where resources are being consumed, as well as how much memory is
-  being consumed overall.
+  `Class.Stats` is a service that provides real-time performance information
+  about the current running game instance. Its primary purpose is to provide an
+  end point to measure where resources are being consumed, as well as how much
+  memory is being consumed overall.
 
-  The service also stores a tree of `Class.StatsItem` objects which can have their
-  values read by plugins.
+  The service also stores a tree of `Class.StatsItem` objects which can have
+  their values read by plugins.
 code_samples:
 inherits:
   - Instance
@@ -48,9 +48,9 @@ properties:
       In a networked game, this describes roughly how many kilobytes of data are
       being received by the current instance, per second.
     description: |
-      In a networked game, this property describes roughly how many kilobytes
-      of data are being received by the current instance, per second. If from
-      the server's perspective, this represents the total amount of data being
+      In a networked game, this property describes roughly how many kilobytes of
+      data are being received by the current instance, per second. If from the
+      server's perspective, this represents the total amount of data being
       received from the clients connected to the server. If from a client's
       perspective, this represents the total amount of data being received from
       the server.
@@ -98,9 +98,14 @@ properties:
     writeCapabilities: []
   - name: Stats.FrameTime
     summary: |
-      A measurement of how long it takes for the engine to process all tasks required to render a frame.
+      A measurement of how long it takes for the engine to process all tasks
+      required to render a frame.
     description: |
-      This property is only available in client scripts and is a measurement of how long it took to render the most-recent frame in seconds. Divide 1 by this value to calculate an FPS value for the frame time. High frame times are indicative of performance problems on the device. Consider using the [MicroProfiler](/studio/microprofiler) to troubleshoot.
+      This property is only available in client scripts and is a measurement of
+      how long it took to render the most-recent frame in seconds. Divide 1 by
+      this value to calculate an FPS value for the frame time. High frame times
+      are indicative of performance problems on the device. Consider using the
+      [MicroProfiler](/studio/microprofiler) to troubleshoot.
     code_samples: []
     type: float
     tags:
@@ -118,10 +123,14 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: Stats.HeartbeatTime
-    summary: | 
-      A measurement of the total amount of time it takes for the server to update its Task Scheduler jobs in seconds.
+    summary: |
+      A measurement of the total amount of time it takes for the server to
+      update its Task Scheduler jobs in seconds.
     description: |
-      This property is a measurement of the total amount of time it takes for the server to update its Task Scheduler jobs in seconds. If this value is high, examine [server compute](/performance-optimization/identifying#server-compute).
+      This property is a measurement of the total amount of time it takes for
+      the server to update its Task Scheduler jobs in seconds. If this value is
+      high, examine
+      [server compute](/performance-optimization/identifying#server-compute).
     code_samples: []
     type: float
     tags:
@@ -266,9 +275,12 @@ properties:
     writeCapabilities: []
   - name: Stats.PhysicsStepTime
     summary: |
-      A measurement of how long it takes for the physics engine to update its current state.
+      A measurement of how long it takes for the physics engine to update its
+      current state.
     description: |
-      This property is a measurement of how long it takes for the physics engine to update its current state. If this value is high, it means the game instance is under stress from the physics simulations taking place.
+      This property is a measurement of how long it takes for the physics engine
+      to update its current state. If this value is high, it means the game
+      instance is under stress from the physics simulations taking place.
     code_samples: []
     type: float
     tags:
@@ -336,9 +348,13 @@ properties:
     writeCapabilities: []
   - name: Stats.RenderCPUFrameTime
     summary: |
-      A measurement of how long it takes for the CPU to process all of its tasks required to render a frame.
+      A measurement of how long it takes for the CPU to process all of its tasks
+      required to render a frame.
     description: |
-      This property is a measurement of how long it takes for the CPU to process all of its tasks required to render a frame. A high value can indicate that the CPU is taking longer to render a frame, which can lead to performance issues.
+      This property is a measurement of how long it takes for the CPU to process
+      all of its tasks required to render a frame. A high value can indicate
+      that the CPU is taking longer to render a frame, which can lead to
+      performance issues.
     code_samples: []
     type: float
     tags:
@@ -357,9 +373,13 @@ properties:
     writeCapabilities: []
   - name: Stats.RenderGPUFrameTime
     summary: |
-      A measurement of how long it takes for the GPU to process all of its tasks required to render a frame.
+      A measurement of how long it takes for the GPU to process all of its tasks
+      required to render a frame.
     description: |
-      This property is a measurement of how long it takes for the GPU to process all of its tasks required to render a frame. A high value can indicate that the GPU is taking longer to render a frame, which can lead to performance issues.
+      This property is a measurement of how long it takes for the GPU to process
+      all of its tasks required to render a frame. A high value can indicate
+      that the GPU is taking longer to render a frame, which can lead to
+      performance issues.
     code_samples: []
     type: float
     tags:
@@ -378,9 +398,13 @@ properties:
     writeCapabilities: []
   - name: Stats.SceneDrawcallCount
     summary: |
-      A measurement of the number of draw calls made by the game's current scene.
+      A measurement of the number of draw calls made by the game's current
+      scene.
     description: |
-       This property is a measurement of the number of draw calls made by the game's current scene. A draw call is a single rendering operation, such as drawing a mesh. A high draw call count could mean a scene is too complex or unoptimized, which can lead to performance issues.
+      This property is a measurement of the number of draw calls made by the
+      game's current scene. A draw call is a single rendering operation, such as
+      drawing a mesh. A high draw call count could mean a scene is too complex
+      or unoptimized, which can lead to performance issues.
     code_samples: []
     type: int
     tags:
@@ -399,9 +423,12 @@ properties:
     writeCapabilities: []
   - name: Stats.SceneTriangleCount
     summary: |
-      A measurement of the number of triangles rendered by the game's current scene.
+      A measurement of the number of triangles rendered by the game's current
+      scene.
     description: |
-      This property is a measurement of the number of triangles rendered by the game's current scene. A count of triangles rendered is useful when trying to estimate the complexity and performance of a scene.
+      This property is a measurement of the number of triangles rendered by the
+      game's current scene. A count of triangles rendered is useful when trying
+      to estimate the complexity and performance of a scene.
     code_samples: []
     type: int
     tags:
@@ -420,9 +447,12 @@ properties:
     writeCapabilities: []
   - name: Stats.ShadowsDrawcallCount
     summary: |
-      A measurement of the number of draw calls being made for shadows by the game's current scene.
+      A measurement of the number of draw calls being made for shadows by the
+      game's current scene.
     description: |
-      This property is a measurement of the number of draw calls being made for shadows by the game's current scene. A high count means more shadows are being created by the amount of rendered objects in a scene.
+      This property is a measurement of the number of draw calls being made for
+      shadows by the game's current scene. A high count means more shadows are
+      being created by the amount of rendered objects in a scene.
     code_samples: []
     type: int
     tags:
@@ -441,9 +471,12 @@ properties:
     writeCapabilities: []
   - name: Stats.ShadowsTriangleCount
     summary: |
-      A measurement of the number of traingles rendered as shadows in the game's current scene.
+      A measurement of the number of traingles rendered as shadows in the game's
+      current scene.
     description: |
-      This property is a measurement of the number of triangles rendered as shadows in the game's current scene. A high count means there are a lot of triangles used to cast shadows, which can hinder performance.
+      This property is a measurement of the number of triangles rendered as
+      shadows in the game's current scene. A high count means there are a lot of
+      triangles used to cast shadows, which can hinder performance.
     code_samples: []
     type: int
     tags:
@@ -462,9 +495,12 @@ properties:
     writeCapabilities: []
   - name: Stats.UI2DDrawcallCount
     summary: |
-      A measurement of the number of 2D draw calls made for UI elements in the game's current scene.
+      A measurement of the number of 2D draw calls made for UI elements in the
+      game's current scene.
     description: |
-      This property is a measurement of the number of 2D draw calls made for UI elements in the game's current scene. A high count can mean there are a lot of 2D UI elements being used.
+      This property is a measurement of the number of 2D draw calls made for UI
+      elements in the game's current scene. A high count can mean there are a
+      lot of 2D UI elements being used.
     code_samples: []
     type: int
     tags:
@@ -483,9 +519,13 @@ properties:
     writeCapabilities: []
   - name: Stats.UI2DTriangleCount
     summary: |
-      A measurement of the number of triangles that are being rendered for 2D UI elements in the game's current scene.
+      A measurement of the number of triangles that are being rendered for 2D UI
+      elements in the game's current scene.
     description: |
-      This property is a measurement of the number of triangles that are being rendered for 2D UI elements in the game's current scene. A high count can mean there are many or complex 2D UI elements used, which can contribute to performance loss in regards to rendering.
+      This property is a measurement of the number of triangles that are being
+      rendered for 2D UI elements in the game's current scene. A high count can
+      mean there are many or complex 2D UI elements used, which can contribute
+      to performance loss in regards to rendering.
     code_samples: []
     type: int
     tags:
@@ -504,9 +544,14 @@ properties:
     writeCapabilities: []
   - name: Stats.UI3DDrawcallCount
     summary: |
-      A measurement of the number of 3D draw calls made for UI elements in the game's current scene. 
+      A measurement of the number of 3D draw calls made for UI elements in the
+      game's current scene.
     description: |
-      This property is a measurement of the number of 3D draw calls made for UI elements in the game's current scene. A high count could indicate a high amount of 3D objects being used within UI, potentially hurting performance; however, it is very unlikely you would see a significant count since UI elements are typically 2D.
+      This property is a measurement of the number of 3D draw calls made for UI
+      elements in the game's current scene. A high count could indicate a high
+      amount of 3D objects being used within UI, potentially hurting
+      performance; however, it is very unlikely you would see a significant
+      count since UI elements are typically 2D.
     code_samples: []
     type: int
     tags:
@@ -525,9 +570,13 @@ properties:
     writeCapabilities: []
   - name: Stats.UI3DTriangleCount
     summary: |
-      A measurement of the number of triangles being rendered for 3D UI elements in the game's current scene.
+      A measurement of the number of triangles being rendered for 3D UI elements
+      in the game's current scene.
     description: |
-      This property is a measurement of the number of triangles being rendered for 3D UI elements in the game's current scene; however, it is very unlikely you would see a significant count since UI elements are typically 2D.
+      This property is a measurement of the number of triangles being rendered
+      for 3D UI elements in the game's current scene; however, it is very
+      unlikely you would see a significant count since UI elements are typically
+      2D.
     code_samples: []
     type: int
     tags:
