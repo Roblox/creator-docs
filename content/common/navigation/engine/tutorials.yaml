@@ -87,9 +87,9 @@ navigation:
           - title: Skinning Simple Meshes
             path: /art/modeling/skinning-a-simple-mesh
           - title: Rigging Humanoid Models
-            path: /art/modeling/rigging-a-humanoid-model.md
+            path: /art/modeling/rigging-a-humanoid-model
           - title: Skinning Humanoid Models
-            path: /art/modeling/skinning-a-humanoid-model.md
+            path: /art/modeling/skinning-a-humanoid-model
   - title: Scripting
     section:
       - title: Basic Gameplay
