@@ -2,6 +2,13 @@ navigation:
   - heading: Code Samples
   - title: Overview
     path: /samples/
+  - heading: Feature Packages
+  - title: Overview
+    path: /resources/feature-packages/
+  - title: Bundles
+    path: /resources/feature-packages/bundles
+  - title: Missions
+    path: /resources/feature-packages/missions
   - heading: Developer Modules
   - title: Overview
     path: /resources/modules/

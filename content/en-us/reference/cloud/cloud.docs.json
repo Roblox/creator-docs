@@ -56,7 +56,7 @@
         }
       }
     },
-    "/cloud/v2/creator-store-products/{creator-store-product_id}": {
+    "/cloud/v2/creator-store-products/{creator_store_product_id}": {
       "get": {
         "tags": [
           "Cloud"
@@ -295,7 +295,7 @@
         }
       }
     },
-    "/cloud/v2/groups/{group_id}/join-requests/{join-request_id}:accept": {
+    "/cloud/v2/groups/{group_id}/join-requests/{join_request_id}:accept": {
       "post": {
         "tags": [
           "Cloud"
@@ -354,7 +354,7 @@
         }
       }
     },
-    "/cloud/v2/groups/{group_id}/join-requests/{join-request_id}:decline": {
+    "/cloud/v2/groups/{group_id}/join-requests/{join_request_id}:decline": {
       "post": {
         "tags": [
           "Cloud"
@@ -901,7 +901,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/data-stores/{data-store_id}/entries": {
+    "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries": {
       "get": {
         "tags": [
           "Cloud"
@@ -1073,7 +1073,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/data-stores/{data-store_id}/entries/{entry_id}": {
+    "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}": {
       "get": {
         "tags": [
           "Cloud"
@@ -1274,7 +1274,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/data-stores/{data-store_id}/entries/{entry_id}:increment": {
+    "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:increment": {
       "post": {
         "tags": [
           "Cloud"
@@ -1349,7 +1349,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/data-stores/{data-store_id}/entries/{entry_id}:listRevisions": {
+    "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/entries/{entry_id}:listRevisions": {
       "get": {
         "tags": [
           "Cloud"
@@ -1444,7 +1444,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/data-stores/{data-store_id}/scopes/{scope_id}/entries": {
+    "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries": {
       "get": {
         "tags": [
           "Cloud"
@@ -1634,7 +1634,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/data-stores/{data-store_id}/scopes/{scope_id}/entries/{entry_id}": {
+    "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}": {
       "get": {
         "tags": [
           "Cloud"
@@ -1862,7 +1862,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/data-stores/{data-store_id}/scopes/{scope_id}/entries/{entry_id}:increment": {
+    "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}:increment": {
       "post": {
         "tags": [
           "Cloud"
@@ -1946,7 +1946,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/data-stores/{data-store_id}/scopes/{scope_id}/entries/{entry_id}:listRevisions": {
+    "/cloud/v2/universes/{universe_id}/data-stores/{data_store_id}/scopes/{scope_id}/entries/{entry_id}:listRevisions": {
       "get": {
         "tags": [
           "Cloud"
@@ -2313,7 +2313,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted-map_id}/items": {
+    "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted_map_id}/items": {
       "get": {
         "tags": [
           "Cloud"
@@ -2484,7 +2484,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted-map_id}/items/{item_id}": {
+    "/cloud/v2/universes/{universe_id}/memory-store/sorted-maps/{sorted_map_id}/items/{item_id}": {
       "get": {
         "tags": [
           "Cloud"
@@ -2749,7 +2749,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered-data-store_id}/scopes/{scope_id}/entries": {
+    "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries": {
       "get": {
         "tags": [
           "Cloud"
@@ -2938,7 +2938,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered-data-store_id}/scopes/{scope_id}/entries/{entry_id}": {
+    "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}": {
       "get": {
         "tags": [
           "Cloud"
@@ -3166,7 +3166,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered-data-store_id}/scopes/{scope_id}/entries/{entry_id}:increment": {
+    "/cloud/v2/universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{scope_id}/entries/{entry_id}:increment": {
       "post": {
         "tags": [
           "Cloud"
@@ -3695,7 +3695,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-session-tasks/{luau-execution-session-task_id}/logs": {
+    "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-session-tasks/{luau_execution_session_task_id}/logs": {
       "get": {
         "tags": [
           "Cloud"
@@ -3783,7 +3783,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-sessions/{luau-execution-session_id}/tasks/{task_id}": {
+    "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}": {
       "get": {
         "tags": [
           "Cloud"
@@ -3872,7 +3872,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-sessions/{luau-execution-session_id}/tasks/{task_id}/logs": {
+    "/cloud/v2/universes/{universe_id}/places/{place_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}/logs": {
       "get": {
         "tags": [
           "Cloud"
@@ -4055,7 +4055,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions/{user-restriction_id}": {
+    "/cloud/v2/universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}": {
       "get": {
         "tags": [
           "Cloud"
@@ -4292,7 +4292,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-session-tasks/{luau-execution-session-task_id}/logs": {
+    "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-session-tasks/{luau_execution_session_task_id}/logs": {
       "get": {
         "tags": [
           "Cloud"
@@ -4389,7 +4389,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau-execution-session_id}/tasks/{task_id}": {
+    "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}": {
       "get": {
         "tags": [
           "Cloud"
@@ -4487,7 +4487,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau-execution-session_id}/tasks/{task_id}/logs": {
+    "/cloud/v2/universes/{universe_id}/places/{place_id}/versions/{version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{task_id}/logs": {
       "get": {
         "tags": [
           "Cloud"
@@ -4593,7 +4593,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/subscription-products/{subscription-product_id}/subscriptions/{subscription_id}": {
+    "/cloud/v2/universes/{universe_id}/subscription-products/{subscription_product_id}/subscriptions/{subscription_id}": {
       "get": {
         "tags": [
           "Cloud"
@@ -4750,7 +4750,7 @@
         }
       }
     },
-    "/cloud/v2/universes/{universe_id}/user-restrictions/{user-restriction_id}": {
+    "/cloud/v2/universes/{universe_id}/user-restrictions/{user_restriction_id}": {
       "get": {
         "tags": [
           "Cloud"
@@ -5768,7 +5768,7 @@
             "description": "The resource path for the role of the group member."
           }
         },
-        "description": "A membership to a group. You can use a user ID instead of a membership ID.",
+        "description": "A membership to a group. A user ID can be used in place of a membership ID.",
         "x-resource": true
       },
       "GroupRole": {
@@ -6570,7 +6570,7 @@
             "description": "Present when the task execution succeeds. Contains the output of the\n execution."
           }
         },
-        "description": "A `LuauExecutionSessionTask` (\"task\" for short) executes a given Luau script\n in the context of a specific version of a place.\n\n In a task, physics simulation does not run. Server and local scripts within\n the place also do not automatically run.\n\n The script may access and update the data model of the place, including\n invoking any module scripts. However, data model changes are local to the\n task and cannot be persisted.\n\n The script can also invoke engine APIs that read and/or modify data stored in\n the cloud, such as those for DataStores. Exercise caution when using these\n APIs.\n\n Scripts can be up to 4 MB in size and run for up to 30 seconds. Scripts that\n run for longer than 30 seconds terminate with an error.\n\n Scripts are executed as-is and do not need to be wrapped in a function.\n\n Scripts can return values (using the Luau `return` keyword). Return values\n are serialized to JSON and can be retrieved with the `Get\n LuauExecutionSessionTask` API after the task completes. The total size of the\n return values after JSON serialization must not exceed 4 MB. If the limit is\n exceeded, the task terminates with an error.\n\n If the script raises an unhandled error, the task terminates. The error\n information can be retrieved with the `GetLuauExecutionSessionTask` API.\n\n Standard output (generated by the Luau `print` function) can be retrieved\n with the `ListLuauExecutionSessionTaskLogs` method after the task completes.\n A maximum of 450 KB of logs are retained. If the amount of logs exceeds the\n limit, older logs are discarded.\n\n Information about a task is retained for 24 hours after task completion.\n\n At most ten incomplete tasks are allowed per place. Attempting to create more\n tasks while the first ten are incomplete results in a HTTP 429 response.",
+        "description": "A `LuauExecutionSessionTask` (\"task\" for short) executes a given Luau script\n in the context of a specific version of a place.\n\n In a task, physics simulation does not run. Server and local scripts within\n the place also do not automatically run.\n\n The script may access and update the data model of the place, including\n invoking any module scripts. However, data model changes are local to the\n task and cannot be persisted.\n\n The script can also invoke engine APIs that read and/or modify data stored in\n the cloud, such as those for DataStores. Exercise caution when using such\n APIs.\n\n Scripts can be up to 4 MB in size and run for up to 30 seconds. Scripts that\n run for longer than 30 seconds terminate with an error.\n\n Scripts are executed as-is and do not need to be wrapped in a function.\n\n Scripts can return values (using the Luau `return` keyword). Return values\n are serialized to JSON and can be retrieved with the `Get\n LuauExecutionSessionTask` API after the task completes. The total size of the\n return values after JSON serialization must not exceed 4 MB. If the limit is\n exceeded, the task terminates with an error.\n\n If the script raises an unhandled error, the task terminates. The error\n information can be retrieved with the `GetLuauExecutionSessionTask` API.\n\n Standard output (generated by the Luau `print` function) can be retrieved\n with the `ListLuauExecutionSessionTaskLogs` method after the task completes.\n A maximum of 450 KB of logs are retained. If the amount of logs exceeds the\n limit, older logs are discarded.\n\n Information about a task is retained for 24 hours after task completion.\n\n At most ten incomplete tasks are allowed per place. Attempting to create more\n tasks while the first ten are incomplete results in a HTTP 429 response.",
         "x-resource": true,
         "x-oneOf": {
           "result": [
