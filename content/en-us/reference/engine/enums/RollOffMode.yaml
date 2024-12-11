@@ -15,7 +15,7 @@ items:
   - name: Inverse
     summary: |
       Volume attenuates from `Class.Sound.RollOffMinDistance` in an inverse
-      manner. This option mirrors how sounds attenuate in the real world.
+      manner, mirroring how sounds attenuate in the real world.
       This is done through `Class.Sound.RollOffMinDistance`/`distance`,
       where `distance` is the `Datatype.Vector3.Magnitude` between the audio source and the audio listener.
     value: 0
@@ -34,7 +34,7 @@ items:
     summary: |
       Volume attenuates between `Class.Sound.RollOffMinDistance` and
       `Class.Sound.RollOffMaxDistance` with a linear squared relationship.
-      This is done through Squaring `Linear`
+      This is done through squaring `Linear`.
     value: 2
     tags: []
     deprecation_message: ''
