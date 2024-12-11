@@ -22,7 +22,6 @@ Experiences with paid access are not available on Xbox.
 To charge users for paid access in Robux, you must:
 
 - Have a verified email address.
-- Be 13 years of age or older with a [verified ID](./../publishing/account-verification.md#verifying-through-government-id).
 - Have an account that is at least 30 days old.
 
 ## Pricing

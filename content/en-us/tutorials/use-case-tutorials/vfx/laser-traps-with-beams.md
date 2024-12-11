@@ -30,6 +30,8 @@ You can add this model to your inventory within Studio by clicking the **Add to 
 
 <BrowseSampleCard href='https://create.roblox.com/store/asset/16382650186' description='Create your laser beam with this high-quality laser beam blaster.' title='Laser Beam Blaster' assetId={16382650186}  />
 
+<br> </br>
+
 To get this blaster asset from your inventory into your experience:
 
 1. In the menu bar, select the **View** tab.

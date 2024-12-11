@@ -102,7 +102,8 @@ events:
         type: Wire
         default:
         summary: |
-          The `Class.Wire` between the `Class.AudioDistortion` and the other instance.
+          The `Class.Wire` between the `Class.AudioDistortion` and the other
+          instance.
       - name: instance
         type: Instance
         default:
