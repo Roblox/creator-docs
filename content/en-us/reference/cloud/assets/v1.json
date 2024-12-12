@@ -12,13 +12,95 @@
   ],
   "paths": {
     "/v1/assets": {
+      "post": {
+        "tags": ["Assets"],
+        "x-roblox-cloud-api-operation": true,
+        "x-roblox-cloud-api-operation-name": "Create Asset",
+        "summary": "Creates an asset with provided content and metadata.",
+        "description": "Creates an asset with provided content and metadata.\n\nYou can't add [SocialLink](#SocialLink) objects when you create an asset. Instead, use [Update Asset](#PATCH-v1-assets-_assetId_).\n\nProvide the asset attributes, binary asset file path, and content type in the form data. See [Content Types](../../../cloud/open-cloud/usage-assets.md#supported-asset-types-and-limits).",
+        "operationId": "Assets_CreateAsset",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "request": {
+                    "$ref": "#/components/schemas/Asset",
+                    "description": "Asset attributes to create."
+                  },
+                  "fileContent": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "The binary asset file path and the content type. See [Content Types](../../../cloud/open-cloud/usage-assets.md#supported-asset-types-and-limits)."
+                  }
+                },
+                "required": [
+                  "request",
+                  "fileContent"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Returns the Operation ID for checking the creation status.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Operation"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid argument. Failed to parse the request or the file.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Status"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "The API key is not valid for this operation / You don't have the authorization."
+          },
+          "500": {
+            "description": "Server internal error / Unknown error."
+          }
+        },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Read", "Label.Write"]
+          },
+          {
+            "roblox-oauth2": ["asset:read", "asset:write"]
+          }
+        ],
+        "x-roblox-cloud-api-operation-code-samples": [
+          {
+            "language": "Create Asset",
+            "script": "curl --location --request POST 'https://apis.roblox.com/assets/v1/assets' \\\n--header 'x-api-key: {apiKey}' \\\n--form 'request=\"{ \n  \\\"assetType\\\": \\\"Model\\\",  \n  \\\"displayName\\\": \\\"Name\\\", \n  \\\"description\\\": \\\"This is a description\\\", \n  \\\"creationContext\\\": { \n    \\\"creator\\\": { \n      \\\"userId\\\": \\\"${userId}\\\" \n    } \n  } \n}\"' \\\n--form 'fileContent=@\"/filepath/model.fbx\";type=model/fbx' \n"
+          }
+        ],
+        "x-roblox-throttling-limit": {
+          "perApiKey": {
+            "periodInSeconds": "60",
+            "maxInPeriod": 60
+          }
+        }
+      }
+    },
+    "/v1/assets/{assetId}": {
       "get": {
         "tags": ["Assets"],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-cloud-api-operation-name": "Get Asset",
         "summary": "Retrieve specific asset content. Include the `readMask` parameter for additional asset metadata.",
         "description": "Retrieve specific asset content and metadata.",
-        "operationId": "Assets_CreateAsset",
+        "operationId": "Assets_GetAsset",
         "parameters": [
           {
             "name": "assetId",
@@ -26,7 +108,7 @@
             "description": "The unique identifier of the asset.",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/Asset"
+              "type": "string"
             }
           },
           {
@@ -90,105 +172,19 @@
           }
         }
       },
-      "post": {
-        "tags": ["Assets"],
-        "x-roblox-cloud-api-operation": true,
-        "x-roblox-cloud-api-operation-name": "Create Asset",
-        "summary": "Creates an asset with provided content and metadata.",
-        "description": "Creates an asset with provided content and metadata.\n\nYou can't add [SocialLink](#SocialLink) objects when you create an asset. Instead, use [Update Asset](#PATCH-v1-assets-_assetId_).",
-        "operationId": "Assets_CreateAsset",
-        "parameters": [
-          {
-            "name": "request",
-            "in": "formData",
-            "description": "Asset attributes to create or update. Send as form data like the following example request shows.",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/Asset"
-            }
-          },
-          {
-            "name": "fileContent",
-            "in": "formData",
-            "description": "The binary asset file path and the content type. Format: `fileContent=@\"/filepath/{File}\";type={ContentType}`. Example: `fileContent=@\"/filepath/model.fbx\";type=model/fbx`. See [Content Types](../../../cloud/open-cloud/usage-assets.md#supported-asset-types-and-limits).",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Returns the Operation ID for checking the creation status.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Operation"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid argument. Failed to parse the request or the file.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Status"
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "The API key is not valid for this operation / You don't have the authorization."
-          },
-          "500": {
-            "description": "Server internal error / Unknown error."
-          }
-        },
-        "security": [
-          {
-            "roblox-api-key": ["Label.Read", "Label.Write"]
-          },
-          {
-            "roblox-oauth2": ["asset:read", "asset:write"]
-          }
-        ],
-        "x-roblox-cloud-api-operation-code-samples": [
-          {
-            "language": "Create Asset",
-            "script": "curl --location --request POST 'https://apis.roblox.com/assets/v1/assets' \\\n--header 'x-api-key: {apiKey}' \\\n--form 'request=\"{ \n  \\\"assetType\\\": \\\"Model\\\",  \n  \\\"displayName\\\": \\\"Name\\\", \n  \\\"description\\\": \\\"This is a description\\\", \n  \\\"creationContext\\\": { \n    \\\"creator\\\": { \n      \\\"userId\\\": \\\"${userId}\\\" \n    } \n  } \n}\"' \\\n--form 'fileContent=@\"/filepath/model.fbx\";type=model/fbx' \n"
-          }
-        ],
-        "x-roblox-throttling-limit": {
-          "perApiKey": {
-            "periodInSeconds": "60",
-            "maxInPeriod": 60
-          }
-        }
-      }
-    },
-    "/v1/assets/{assetId}": {
       "patch": {
         "tags": ["Assets"],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-cloud-api-operation-name": "Update Asset",
         "summary": "Updates an asset with provided content and metadata.",
-        "description": "Updates an asset with provided content and metadata, including the description, display name, icon, social links, and previews. Currently can only update the content body for **Models**. Icons and Previews must be **Image** assets. Icons must have square dimensions.",
+        "description": "Updates an asset with provided content and metadata, including the description, display name, icon, social links, and previews. Currently can only update the content body for **Models**. Icons and Previews must be **Image** assets. Icons must have square dimensions.\n\nProvide the asset attributes, binary asset file path, and content type in the form data. See [Content Types](../../../cloud/open-cloud/usage-assets.md#supported-asset-types-and-limits).",
         "operationId": "Assets_UpdateAsset",
         "parameters": [
           {
-            "name": "request",
-            "in": "formData",
-            "description": "Send as form data like the following example requests.",
+            "name": "assetId",
+            "in": "path",
+            "description": "The unique identifier of the asset.",
             "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/Asset"
-            }
-          },
-          {
-            "name": "fileContent",
-            "in": "formData",
-            "description": "The binary asset file path and the content type. Format: `fileContent=@\"/filepath/{File}\";type={ContentType}`. Example: `fileContent=@\"/filepath/model.fbx\";type=model/fbx`. See [Content Types](../../../cloud/open-cloud/usage-assets.md#supported-asset-types-and-limits).",
             "schema": {
               "type": "string"
             }
@@ -205,13 +201,27 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/Asset"
+                "type": "object",
+                "properties": {
+                  "request": {
+                    "$ref": "#/components/schemas/Asset",
+                    "description": "Asset attributes to update."
+                  },
+                  "fileContent": {
+                    "type": "string",
+                    "format": "binary",
+                    "description": "The binary asset file path and the content type. See [Content Types](../../../cloud/open-cloud/usage-assets.md#supported-asset-types-and-limits)."
+                  }
+                },
+                "required": [
+                  "request",
+                  "fileContent"
+                ]
               }
             }
-          },
-          "required": true
+          }
         },
         "responses": {
           "200": {
@@ -527,7 +537,7 @@
         "x-roblox-cloud-api-operation": true,
         "x-roblox-cloud-api-operation-name": "Rollback Asset Version",
         "summary": "Rollback an asset to a previous version.",
-        "description": "Rollback an asset to a specific previous version.",
+        "description": "Rollback an asset to a specific previous version.\n\n Provide the asset version path in the form data.",
         "operationId": "Assets_RollbackAssetVersion",
         "parameters": [
           {
@@ -536,24 +546,22 @@
             "description": "The unique identifier of the asset.",
             "required": true,
             "schema": { "type": "string" }
-          },
-          {
-            "name": "assetVersion",
-            "in": "formData",
-            "description": "The asset version path in the format of `assets/{assetId}/versions/{versionNumber}`.",
-            "required": true,
-            "schema": { "type": "string" }
           }
         ],
         "requestBody": {
-          "required": true,
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
                 "type": "object",
                 "properties": {
-                  "assetVersion": { "type": "string" }
-                }
+                  "assetVersion": {
+                    "type": "string",
+                    "description": "The asset version path in the format of `assets/{assetId}/versions/{versionNumber}`."
+                  }
+                },
+                "required": [
+                  "assetVersion"
+                ]
               }
             }
           }
@@ -605,8 +613,18 @@
         "summary": "Get the result of an asset creation or update.",
         "description": "Get the result of an asset creation or update using the returned Operation ID. Requires **Read** for the API key permission and **asset:read** for OAuth 2.0 apps.",
         "operationId": "Assets_GetOperation",
+        "parameters": [
+          {
+            "name": "operationId",
+            "in": "path",
+            "description": "The unique identifier of the operation.",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
         "responses": {
           "200": {
+            "description": "Operation result retrieved successfully.",
             "content": {
               "application/json": {
                 "schema": {
@@ -876,6 +894,20 @@
         "type": "apiKey",
         "name": "roblox-api-key",
         "in": "header"
+      },
+      "roblox-oauth2": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://apis.roblox.com/oauth/v1/authorize",
+            "tokenUrl": "https://apis.roblox.com/oauth/v1/token",
+            "refreshUrl": "https://apis.roblox.com/oauth/v1/token", 
+            "scopes": {
+              "asset:read": "This allows viewing information about your assets.",
+              "asset:write": "This allows uploading and updating assets to Roblox."
+            }
+          }
+        }
       }
     }
   },

@@ -10,6 +10,8 @@ navigation:
     path: /cloud/reference/errors
   - title: OAuth 2.0
     path: /cloud/reference/oauth2
+  - title: OpenAPI Descriptions
+    path: /cloud/reference/openapi
   - heading: v2 Resources
   - title: All Cloud API
     path: /cloud/reference
