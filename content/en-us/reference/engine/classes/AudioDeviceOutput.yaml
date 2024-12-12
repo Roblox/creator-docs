@@ -82,12 +82,14 @@ events:
         type: string
         default:
         summary: |
-          The pin on the `Class.AudioDeviceOutput` that the `Class.Wire` targets.
+          The pin on the `Class.AudioDeviceOutput` that the `Class.Wire`
+          targets.
       - name: wire
         type: Wire
         default:
         summary: |
-          The `Class.Wire` between the `Class.AudioDeviceOutput` and the other instance.
+          The `Class.Wire` between the `Class.AudioDeviceOutput` and the other
+          instance.
       - name: instance
         type: Instance
         default:

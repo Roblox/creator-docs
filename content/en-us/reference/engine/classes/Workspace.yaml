@@ -146,24 +146,6 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
-  - name: Workspace.CSGAsyncDynamicCollision
-    summary: ''
-    description: ''
-    code_samples: []
-    type: CSGAsyncDynamicCollision
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-    capabilities: []
-    writeCapabilities: []
   - name: Workspace.ClientAnimatorThrottling
     summary: |
       Specifies the animation throttling mode for the local client.

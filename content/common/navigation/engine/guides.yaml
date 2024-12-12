@@ -613,6 +613,8 @@ navigation:
             path: /production/monetization/price-optimization
           - title: Avatar Items
             path: /production/monetization/avatar-items
+          - title: Avatar Creation Tokens
+            path: /production/monetization/avatar-creation-token
           - title: Engagement-Based Payouts
             path: /production/monetization/engagement-based-payouts
           - title: Paid Access in Robux
