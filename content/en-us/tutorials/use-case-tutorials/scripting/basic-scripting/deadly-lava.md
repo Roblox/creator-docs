@@ -43,7 +43,7 @@ Use an **event** to detect when a user touches the lava. Every part has a `Touch
 
 1. Declare a new function called `kill`.
 2. Access the `Touched` event on the lava object using a dot, just like a property: `lava.Touched`.
-3. Call the `Connect` function on the `Touched` event, passing it to the `kill` function.
+3. Call the `Connect` function on the `Touched` event, passing `kill()` as the function to call when the part is touched.
 
    ```lua
    local lava = script.Parent
