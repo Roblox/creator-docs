@@ -43,7 +43,7 @@ items:
       A hybrid model which follows the `Inverse` model when close to
       `Class.Sound.RollOffMinDistance` and the `LinearSquare` model when close
       to `Class.Sound.RollOffMaxDistance`.
-      This is done through `Libraries.math.min`((`Class.Sound.RollOffMinDistance`/`distance`)*`LinearSquare`),
+      This is done through (`Class.Sound.RollOffMinDistance`/`distance`)*`LinearSquare`,
       where `distance` is the `Datatype.Vector3.Magnitude` between the audio source and the audio listener.
     value: 3
     tags: []
