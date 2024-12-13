@@ -444,7 +444,7 @@ A common example of this bundle type is a single-use starter pack offer that dis
    <tr>
    <td>`singleUse`</td>
    <td>`bool`</td>
-   <td>**(Optional)** If not set, the purchase can be reactivated after it's purchased or expired.<br></br><br></br>If set, once purchased or expired the first time, it will not be promptable ever again, even if you call `BundleKit.promptIfValidAsync` with the bundleId.</td>
+   <td>**(Optional)** If not set, the purchase can be reactivated after it's purchased or expired.<br></br><br></br>If set, once purchased or expired the first time, it will not be promptable ever again, even if you call `Bundles.promptIfValidAsync` with the bundleId.</td>
    </tr>
    </tbody>
    </table>
