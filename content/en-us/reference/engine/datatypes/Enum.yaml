@@ -27,5 +27,29 @@ methods:
     code_samples: []
     tags: []
     deprecation_message: ''
+  - name: Enum:FromName
+    summary: |
+      Converts an enum name to an `Datatype.Enum`.
+    description: |
+      Returns either the converted `Datatype.Enum` or `nil`.
+    parameters:
+    returns:
+      - type: Enum | nil
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: Enum:FromValue
+    summary: |
+      Converts an enum value to an `Datatype.Enum`.
+    description: |
+      Returns either the converted `Datatype.Enum` or `nil`.
+    parameters:
+    returns:
+      - type: Enum | nil
+        summary: ''
+    code_samples: []
+    tags: []
+    deprecation_message: ''
 functions:
 math_operations:

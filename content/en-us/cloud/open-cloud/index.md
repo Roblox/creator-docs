@@ -28,6 +28,6 @@ The legacy APIs, no matter which types of authentication they support, can incor
 
    See the documentation for how to use [API keys](api-keys.md) or [OAuth 2.0](oauth2-overview.md). API keys are the easiest way to get started.
 
-1. Use a tool like [Postman](https://www.postman.com) or the [OAuth 2.0 sample app](oauth2-sample.md) to test API calls.
+1. Test API calls using tools like [Postman](https://www.postman.com) with [OpenAPI descriptions](../reference/openapi.md) and the [OAuth 2.0 sample app](oauth2-sample.md).
 1. Review the [resource guides](experience-notifications.md) for end-to-end walkthroughs of using certain APIs.
 1. See the Open Cloud [reference documentation](../reference/index.md) for the full list of v1 and v2 resources, [common API patterns](../reference/patterns.md), and [types](../reference/types.md).

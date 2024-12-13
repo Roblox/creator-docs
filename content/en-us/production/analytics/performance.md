@@ -91,22 +91,20 @@ The **Server** tab includes the following charts:
     <tbody>
         <tr>
             <td>Server CPU time</td>
-            <td>Stacked area chart showing milliseconds (ms) of processing time per frame. Values over 16.67 ms are highly undesirable; they can cause server frame rates to drop below 60.</td>
-        </tr>
-        <tr>
-            <td>Server memory usage</td>
-            <td>Stacked area chart showing server memory usage in MB. Try to keep this value below 3 GB. If this number stays above 3 GB or continually increases over time, investigate ways to [improve memory usage](../../performance-optimization/improving.md#script-memory-usage).</td>
+            <td>Stacked area chart showing milliseconds (ms) of processing time per frame. Values over 16.67 ms are highly undesirable; they can cause server frame rates to drop below 60. See [Server Compute](../../performance-optimization/identifying.md#server-compute)</td>
         </tr>
         <tr>
             <td>Server frame rate</td>
             <td>Line graph showing server frame rate in FPS. Ideally, this value is always 60. Server frame rate is capped at 60, and drops can reduce client frame rate and increase latency. See [Script Computation](../../performance-optimization/improving.md#script-computation).</td>
         </tr>
-        {/*
+        <tr>
+            <td>Server memory usage</td>
+            <td>Stacked area chart showing server memory usage in MB. Try to keep this value below 50% of the [total server memory](../../performance-optimization/identifying.md#server-memory). However, the chart doesn't show the total server memory, so another good guideline is to stay below 3 GB. If this number stays high or continually increases over time, investigate ways to [improve memory usage](../../performance-optimization/improving.md#script-memory-usage).</td>
+        </tr>
         <tr>
             <td>Server memory by age</td>
-            <td>Stacked area chart showing time that memory remains allocated before the engine garbage collects it. If one process group ages more than the other process groups over time, investigate a possible memory leak.</td>
+            <td>Stacked area chart showing server memory usage by server age. If memory usage increases significantly over the lifespan of the server, investigate possible memory leaks in the categories with the most growth, particularly [scripts](../../performance-optimization/improving.md#script-memory-usage), [physics](../../performance-optimization/improving.md#physics-memory-usage), and [rendering](../../performance-optimization/improving.md#rendering).</td>
         </tr>
-        */}
         <tr>
             <td>Cores used per server</td>
             <td>Line graph showing server CPU core count usage. Low core count usage combined with high server CPU time is an indicator that you should investigate [Multithreading](../../scripting/multithreading.md).</td>

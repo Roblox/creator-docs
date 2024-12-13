@@ -62,7 +62,7 @@ To create an API key:
 1. Copy and save the API key string to a secure location that is **not** a
    public repository of your code.
 1. Check your created API key on the
-   [Credentials](https://create.roblox.com/credentials) page of **Creator
+   [API Extensions](https://create.roblox.com/dashboard/credentials) page of **Creator
    Dashboard**.
 
 <Alert severity="warning"> The API key string is equivalent to the password of
