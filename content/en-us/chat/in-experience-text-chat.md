@@ -1,158 +1,108 @@
 ---
-title: In-Experience Text Chat
-description: The in-experience text chat system allows players to communicate with each other using text-based messages in live sessions.
+title: TextChatService Overview
+description: The TextChatService system allows players to communicate with each other using text-based messages in live sessions.
 ---
 
-With the **in-experience text chat** system on Roblox, players can communicate with each other using text-based messages in live sessions. The system provides a set of methods and events for extending and customizing chat functionalities, such as delivering messages based on [customized requirements](#customizing-message-delivery-behaviors), adding special permissions or moderation to specific players, and creating [custom commands](#creating-custom-commands) to execute specific actions.
+Roblox offers text-based messaging between players in live sessions through `Class.TextChatService`. This service has its standard functionality, but also provides a set of methods and events for extending and customizing chat, such as delivering messages based on [customized requirements](#conditionally-delivering-messages), adding special permissions or moderation to specific players, and creating [custom commands](./examples/custom-text-chat-commands.md) to execute specific actions.
 
-This guide covers the chat workflow and approaches for extending the functionalities of the chat system. For more information on customizing the chat user interface (UI), see [Customizing Text Chat](../chat/customizing-in-experience-text-chat.md).
+<Alert severity="success">
+This page includes a high-level overview of how messaging works and instructions on migrating from legacy chat, but the easiest way to get started with customizing your experience's chat system is to [see the examples](examples/simple-custom-frontend-ui.md).
+</Alert>
 
-## Chat Workflow
+## Text Chat Instances
 
-The in-experience text chat system consists of both [mutable classes](#mutable-chat-classes) that you can extend for customized chat delivery behaviors and [immutable data objects](#immutable-chat-objects) representing certain chat elements returned by mutable classes.
+The following sections summarize the primary classes and instances that you can use to customize the chat system.
 
-### Mutable Chat Classes
+### Top-Level Configuration
 
-The in-experience text chat system provides the following mutable classes:
+- `Class.TextChatService` - This singleton class is responsible for managing the overall chat system, including handling chat message filtering, moderation, and user permissions. Use properties like `Class.TextChatService.CreateDefaultTextChannels` and `Class.TextChatService.CreateDefaultCommands` to enable or disable default chat channels and commands.
 
-- `Class.TextChatService` — This singleton class is responsible for managing the overall chat system, including handling chat message filtering, moderation, and user permissions. Accessible from the server, it provides a set of methods and events that other text chat APIs or player actions can invoke through the chat delivery workflow.
-- `Class.TextChannel` — This class represents a text chat channel that passes player-sent chat messages from the client to the server and displays them to other players based on permissions. You can use it to create, modify, and manage text channels in your experience. Additionally, you can create multiple text channels to group players together for chat purposes, such as allowing players to chat with their group members that are not visible to others.
-- `Class.TextChatCommand` — This class enables you to create custom chat commands that allow players to invoke specific actions or behaviors by typing special characters followed by a command name. Chat commands are helpful for adding additional functionality and interactivity to the chat experience. You can also use them to create admin commands to manage and moderate your experience with shortcuts.
+### Default UI Configuration
 
-### Immutable Chat Objects
+`TextChatService` provides a default UI that can be customized to fit your experience's needs. Each of these configurations can be disabled to hide the associated UI element and can be replaced with custom interfaces if desired.
 
-The in-experience text chat system includes the following immutable objects with read-only properties that you can't modify:
+- `Class.ChatWindowConfiguration` - Represents the default chat window UI, including its appearance and behavior. Disable it to hide the chat window.
+- `Class.ChatInputBarConfiguration` - Represents the default chat input bar UI, including its appearance and behavior.
+- `Class.BubbleChatConfiguration` - Represents the default bubble chat UI, including its appearance and behavior.
 
-- `Class.TextChatMessage`: This object represents a single chat message in a text chat channel with basic information such as the sender of the message, the original message, the filtered message, and the creation timestamp.
-- `Class.TextSource`: This object represents a message sender in a text chat channel with detailed permissions of a player in the channel. If a player is in multiple text chat channels, they can have multiple text sources as well.
+### Channels, Messages, and Commands
 
-### Chat Flowchart
+- `Class.TextChannel` - Represents a text chat channel that passes user-sent chat messages from the client to the server, which then displays them to other users based on permissions. These instances must be parented to `TextChatService` in order to function. If `Class.TextChatService.CreateDefaultTextChannels` is set to true, the service automatically creates two text channels, `RBXGeneral` and `RBXSystem`. You can manually create additional `TextChannel` instances and parent them to `Class.TextChatService`, as well.
 
-Through the chat message sending and delivery process, methods, callbacks, and events of mutable chat classes work alongside immutable chat objects on three sides of the [client‑server](../projects/client-server.md) model:
+  - `Class.TextSource` - Represents a user in a `Class.TextChannel`. These instances are directly parented to the `Class.TextChannel` when `Class.TextChannel:AddUserAsync` is used. Text sources contains detailed permissions of a user in the channel, such as their ability to send messages. A single user can be associated with multiple text sources if they have been added to multiple text channels.
 
-- The sending client, which is the local device of a player sending a message.
-- Receiving clients, which are other players' local devices.
-- The server, which is the central processor for receiving the message from the sending client and handles the delivery to receiving clients.
+- `Class.TextChatMessage` - Represents a single chat message in a text channel, with basic information such as the sender of the message, the original message, the filtered message, and the creation timestamp.
+- `Class.TextChatCommand` - Allows users to invoke specific actions or behaviors by sending messages that match `Class.TextChatCommand.PrimaryAlias` or `Class.TextChatCommand.SecondaryAlias`. These instances must be parented to `TextChatService` in order to function. Chat commands are helpful for adding additional functionality and interactivity to the chat experience. If `Class.TextChatService.CreateDefaultCommands` is set to true, default chat commands will be created automatically. You can manually create additional `TextChatCommand` instances and parent them to `Class.TextChatService`, as well.
+
+## Chat Flowchart
+
+Text chat uses the [client‑server](../projects/client-server.md) model, with a **sending client**, the **server**, and **receiving clients**.
 
 <img
-  alt="A flowchart of the in-experience text chat workflow"
+  alt="A flowchart for in-experience text chat."
   src="../assets/players/in-experience-text-chat/Chat-Workflow.png"
   width="100%" />
 
-As the flowchart shows, the in-experience text chat system processes a chat message through the following steps:
-
 1. A player sends a message from their local device, triggering the `Class.TextChannel:SendAsync()` method. This method processes the message and determines whether it's a chat command or a regular chat message.
-2. If the player input is a chat command, it fires the `Class.TextChatCommand.Triggered` event to perform the action you have defined for the command.
-3. If the player input is a regular chat message, it fires `Class.TextChatService.SendingMessage` to display the original message to the sender on the sending client. At the same time, the `Class.TextChannel:SendAsync()` passes the message to the server.
-4. The server fires `Class.TextChannel.ShouldDeliverCallback` to determine whether to deliver the message to other players based on the permissions you set and Roblox community filtering requirements.
-5. If `Class.TextChannel.ShouldDeliverCallback` determines that message is eligible to deliver to other players, the server applies any filters and fires `Class.TextChannel.OnIncomingMessage` twice:
-   1. The first time on the sending client to signal that the server is processing the message through the `Class.TextChatService.MessageReceived` event. This also replaces the local message on the sending client with the incoming message to the display on receiving clients. The message can be identical if the original message doesn't require filtering.
-   2. The second time is on the receiving client to trigger the `Class.TextChatService.MessageReceived` event to display the message to other players.
 
-There are several areas of the chat system workflow that you can extend and customize the behavior, but the steps of how the system operates remain the same.
+   - If the message is a chat command, it fires the `Class.TextChatCommand.Triggered` event to perform the defined action. No further steps are required.
 
-## Customizing Message Delivery Behaviors
+   - If the message is a regular chat message, it fires the `Class.TextChatService.SendingMessage` event to display the message to the sender on the sending client. At the same time, `Class.TextChannel:SendAsync()` passes the message to the server.
 
-In addition to sticking with the default chat message delivery behavior, you can use `Class.TextChannel.ShouldDeliverCallback` to add permissions and specific behaviors to determine whether players can receive a message for customized engagement, such as:
+1. The server fires `Class.TextChannel.ShouldDeliverCallback` to determine whether to deliver the message to other players based on the permissions you set (-- TODO: The permissions you set?) and Roblox community filtering requirements.
 
-- Supporting group-based chat that only players in the same group or squad can communicate between.
-- Supporting proximity-based chat where players can only send messages to those close to them.
-- Preventing players with certain attributes from sending messages to others. For example, disallow players with a death status to send messages to alive players.
-- Adding the guessing competition feature where correct answers in chat are not visible to other players.
+1. If `Class.TextChannel.ShouldDeliverCallback` determines that message is eligible to deliver to other players, the server applies any filters (--TODO: Example filter?) and fires `Class.TextChannel.OnIncomingMessage` twice:
 
-The following example shows how to implement exclusive chat for player characters who are close to each other in locations. It extends the callback with a function using `Class.TextSource` to identify the locations of a player who might be a potential message receiver. If this function returns `false`, it means that the player character locates further than the preset valid range from the message sender's character, so the system doesn't deliver the message to that player.
+   1. The first time is on the sending client and signals that the server is processing the message through the `Class.TextChatService.MessageReceived` event. This event replaces the local message on the sending client with the processed message from the server. The message is identical if the original didn't require filtering.
 
-```lua
-local TextChatService = game:GetService("TextChatService")
-local Players = game:GetService("Players")
+   2. The second time is on the receiving clients, which triggers the `Class.TextChatService.MessageReceived` event to display the message to other players.
 
--- This example uses the general channel; you can replace this with a dedicated channel
-local generalChannel: TextChannel = TextChatService:WaitForChild("TextChannels").RBXGeneral
+### Text Chat Hooks and Callbacks
 
--- Define a function to get the position of a player's character
-local function getPositionFromUserId(userId: number)
-	-- Get the player associated with the given user ID
-	local targetPlayer = Players:GetPlayerByUserId(userId)
+The `Class.TextChatService` API encourages a clear separation on the appearance and delivery of chat messages. Multiple instances of the text chat system provide hooks and callbacks to format in centralized, clear locations.
 
-	-- If the player exists, get their character's position.
-	if targetPlayer then
-		local targetCharacter = targetPlayer.Character
-		if targetCharacter then
-			return targetCharacter:GetPivot().Position
-		end
-	end
+<Alert severity='warning'>
+All callbacks are expected to be non-yielding functions. Yielding or waiting for a response in a callback blocks the chat system and can cause unexpected behavior.
+</Alert>
 
-	-- Return a default position if the player or character cannot be found
-	return Vector3.zero
-end
+<img
+  alt="A flowchart of the TextChatService callbacks order"
+  src="../assets/players/in-experience-text-chat/TextChatService-Callbacks.png"
+  width="100%" />
 
--- Set the callback for the general channel to control message delivery
-generalChannel.ShouldDeliverCallback = function(textChatMessage: TextChatMessage, targetTextSource: TextSource)
-	-- Get the positions of the message sender and target
-	local sourcePos = getPositionFromUserId(textChatMessage.TextSource.UserId)
-	local targetPos = getPositionFromUserId(targetTextSource.UserId)
+| Callback                                  | Return Value                        |
+| ----------------------------------------- | ----------------------------------- |
+| `Class.TextChannel.ShouldDeliverCallback` | boolean                             |
+| `Class.TextChatService.OnIncomingMessage` | `Class.TextChatMessageProperties`   |
+| `Class.TextChannel.OnIncomingMessage`     | `Class.TextChatMessageProperties`   |
+| `Class.TextChatService.OnBubbleAdded`     | `Class.BubbleChatMessageProperties` |
+| `Class.TextChatService.OnChatWindowAdded` | `Class.ChatWindowMessageProperties` |
 
-	-- If the distance between the sender and target is less than 50 units, deliver the message
-	return (targetPos - sourcePos).Magnitude < 50
-end
-```
+#### Conditionally Delivering Messages
 
-## Creating Custom Commands
+- `Class.TextChannel.ShouldDeliverCallback` - This callback should be defined on the server only. The callback is fired for each `Class.TextSource` child of the text channel when a message is sent to determine whether the message should be delivered. This callback can be used to implement custom message delivery logic that may depend on additional gameplay context, such as:
 
-The in-experience text chat system has built-in chat commands for common purposes, such as creating team-based chat channels and playing avatar emote. You can enable them by setting `Class.TextChatService.CreateDefaultCommands` and `Class.TextChatService.CreateDefaultTextChannels` to true through scripting or in Studio settings. You can also add custom commands using `Class.TextChatCommand`. Players sending a defined command in the chat input bar trigger a callback defined by `Class.TextChatCommand.Triggered` to perform your customized actions.
+  - [Proximity-based chat](./examples/proximity-chat.md) where users can only send messages to those close to them.
+  - Preventing users with certain attributes (--TODO: Example?) from sending messages to others.
 
-The following example shows how to create a chat command that allows players to increase or decrease their character's size when they input `/super` or `/mini`.
+#### Customizing Message Display
 
-1. Insert a `Class.TextChatCommand` instance inside `Class.TextChatService`.
-1. Rename it to **SizeCommand**.
+The default `TextChatService` UI relies on [rich text](../ui/rich-text.md) to format and customize how messages are displayed. You can use the following callbacks to format messages before they are displayed to users. You might want to add colors or [chat tags](../chat/chat-window.md#adding-chat-tags) to user's names or format message content.
 
-   <img src="../assets/studio/explorer/TextChatService-TextChatCommand.png" width="320" />
+The following callbacks are called on every `TextChatMessage` that is about to be displayed, which lets you customize chat window appearance based on the `TextChannel`, `TextSource`, or `TextChatMessage` content.
 
-1. Set its **PrimaryAlias** property to `/super` and its **SecondaryAlias** to `/mini`.
+When a client sends a message, these callbacks are called once when the message is sent to the server and the `Class.TextChatMessage.Status` value will be `Enum.TextChatMessageStatus.Sending`. Once the message is received by the server and is being delivered to other users, the sender client receives the message again with an updated `Enum.TextChatMessageStatus` value.
 
-   <img src="../assets/players/in-experience-text-chat/TextChatCommand-Aliases.png" width="320" />
-
-1. Insert the following `Class.Script` inside `Class.ServerScriptService` to define a callback for the chat command that scales the character's size.
-
-   ```lua title='Script' highlight='4,6'
-   local TextChatService = game:GetService("TextChatService")
-   local Players = game:GetService("Players")
-
-   local sizeCommand: TextChatCommand = TextChatService:WaitForChild("SizeCommand")
-
-   sizeCommand.Triggered:Connect(function(textSource, message)
-   	local scaleMult = 1
-   	local messageWords = string.split(message, " ")
-   	if messageWords[1] == "/super" then
-   		scaleMult = 2
-   	elseif messageWords[1] == "/mini" then
-   		scaleMult = 0.5
-   	end
-
-   	local player = Players:GetPlayerByUserId(textSource.UserId)
-   	if player then
-   		local character = player.Character
-   		if character then
-   			local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-   			if humanoid then
-   				for _, child in humanoid:GetChildren() do
-   					if child:IsA("NumberValue") then
-   						child.Value *= scaleMult
-   					end
-   				end
-   			end
-   		end
-   	end
-   end)
-   ```
-
-   <video controls src="../assets/players/in-experience-text-chat/Text-Custom-Command.mp4" width="90%"></video>
+- `Class.TextChatService.OnIncomingMessage` - This callback should be defined on the client only. The callback is fired when a message is received, either from the server or if the local client has just sent a message. The callback is called on every `TextChatMessage` received from all `TextChannel` instances and is the first to process the message before it is displayed to the user.
+- `Class.TextChannel.OnIncomingMessage` - This callback should be defined on the client only. The callback is fired when a message is received from the server. The callback is called on every `TextChatMessage` received from the `TextChannel`. Default `TextChannel` instances created from `Class.TextChatService.CreateDefaultTextChannels` have this callback defined and can be overwritten.
+- `Class.TextChatService.OnBubbleAdded` - This callback should be defined on the client only. Use it to customize the appearance of chat bubbles independent of the appearance of the message in the chat window UI.
+- `Class.TextChatService.OnChatWindowAdded` - This callback should be defined on the client only. Use it to customize the appearance of chat messages in the chat window UI independent of the appearance of the message in chat bubbles.
 
 ## Migrating From Legacy Chat
 
-This section assists you in migrating from the [legacy chat system](../chat/legacy/legacy-chat-system.md) by providing alternative methods for implementing common chat functionalities and behaviors using the in-experience text chat system.
+This section assists you in migrating from the [legacy chat system](../chat/legacy/legacy-chat-system.md) by providing alternative methods for implementing common chat functionalities and behaviors using `TextChatService`.
 
-To switch the chat system of an existing experience from the legacy chat system to the in-experience text chat system:
+To switch the chat system of an existing experience from the legacy chat system to `TextChatService`:
 
 1. In the [Explorer](../studio/explorer.md) window, select **TextChatService**.
 2. In the [Properties](../studio/properties.md) window, find the **ChatVersion** dropdown and select **TextChatService**.
@@ -161,86 +111,87 @@ To switch the chat system of an existing experience from the legacy chat system 
 
 ### Basic Functionalities
 
-Though both systems share the same basic chat functionalities, the in-experience text chat system implementations are in general more sustainable and easier to iterate on.
+Though both systems share the same basic chat functionalities, TextChatService implementations are in general more sustainable and easier to iterate on.
 
 <table>
   <thead>
     <tr>
       <th>Functionality</th>
       <th>Legacy Chat</th>
-      <th>In-Experience Text Chat</th>
+      <th>TextChatService</th>
       <th>Differences</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Send a Chat Message</td>
+      <td>Send a chat message</td>
       <td>`Class.Players:Chat()`</td>
       <td>`Class.TextChannel:SendAsync()`</td>
-      <td>The `Class.TextChatService:SendAsync()` method supports more advanced chat features such as rich text formatting and message priority. It also includes built-in filtering to help prevent inappropriate messages from being sent.</td>
+      <td>The `Class.TextChatService:SendAsync()` method supports more advanced chat features, such as rich text formatting and message priority. It also includes built-in filtering to help prevent inappropriate messages from being sent.</td>
     </tr>
     <tr>
-      <td>Implement Messaging Callbacks</td>
+      <td>Implement messaging callbacks</td>
       <td>`Class.Chat:InvokeChatCallback()`<br />`Class.Chat:RegisterChatCallback()`</td>
       <td>`Class.TextChatService.SendingMessage`<br />`Class.TextChatService.OnIncomingMessage`</td>
-      <td>The legacy chat system binds a function to chat system events for delivering messages. The two methods of the in-experience text chat system have more flexibilities and customization options.</td>
+      <td>The legacy chat system binds a function to chat system events for delivering messages. The two methods of `TextChatService` offer better flexibility and customization.</td>
     </tr>
     <tr>
-      <td>Add Custom Chat Commands</td>
+      <td>Add custom chat commands</td>
       <td>`ChatService/ChatCommand` module</td>
       <td>`Class.TextChatCommand`</td>
-      <td>The in-experience text chat system has a dedicated class representing a text command for customization rather than using a legacy chat module.</td>
+      <td>`TextChatService` has a dedicated class for text commands rather than using a legacy chat module.</td>
     </tr>
     <tr>
-      <td>Display a System Message</td>
-      <td>`Class.StarterGui:SetCore()` using `"ChatMakeSystemMessage"`</td>
+      <td>Display a system message</td>
+      <td>`Class.StarterGui:SetCore()` using `ChatMakeSystemMessage`</td>
       <td>`Class.TextChannel:DisplaySystemMessage()`</td>
       <td>The `Class.TextChannel.OnIncomingMessage` callback can return a `Class.TextChatMessageProperties` instance to customize the message appearance.</td>
     </tr>
     <tr>
-      <td>Disable Chat</td>
+      <td>Disable chat</td>
       <td>[Game Settings](../studio/game-settings.md) in Studio and `ChatWindow/ChatSettings` module for hiding the chat window</td>
       <td>`Class.ChatWindowConfiguration.Enabled`</td>
+      <td>--TODO: No diff?</td>
     </tr>
   </tbody>
 </table>
 
 ### Message Filtering
 
-The in-experience text chat system automatically filters chat messages based on each player's account information, so you don't need to manually implement text filtering for all kinds of chat messages.
+TextChatService automatically filters chat messages based on each player's account information, so you don't need to manually implement text filtering for all kinds of chat messages.
 
 <table>
   <thead>
     <tr>
       <th>Functionality</th>
       <th>Legacy Chat</th>
-      <th>In-Experience Text Chat</th>
+      <th>TextChatService</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Filter Message for Individual Player</td>
+      <td>Filter chat message for individual player</td>
       <td>`Class.Chat:FilterStringAsync()`</td>
-      <td>n/a</td>
+      <td>Automatic</td>
     </tr>
     <tr>
-      <td>Filter Broadcasting Messages</td>
+      <td>Filter broadcasting messages</td>
       <td>`Class.Chat:FilterStringForBroadcast()`</td>
-			<td>n/a</td>
+      <td>Automatic</td>
     </tr>
   </tbody>
 </table>
 
 ### Window and Bubble Chat
 
-Both the chat window and [bubble chat](../chat/bubble-chat.md) behavior and [customization](../chat/customizing-in-experience-text-chat.md) options of the in-experience text chat system are identical to those of the legacy chat system. As the legacy chat system only allows customization using chat modules or the `Class.Players` container, the in-experience text chat system provides dedicated classes, `Class.ChatWindowConfiguration` and `Class.BubbleChatConfiguration`, to manage all chat window and bubble chat properties respectively. Additionally, you can easily adjust and preview your bubble chat appearance and behavior properties using Studio settings instead of having to script them all.
+Both the [chat window](../chat/chat-window.md) and [bubble chat](../chat/bubble-chat.md) behavior and customization options of `TextChatService` are identical to those of the legacy chat system. As the legacy chat system only allows customization using chat modules or the `Class.Players` container, `TextChatService` provides dedicated classes (`Class.ChatWindowConfiguration` and `Class.BubbleChatConfiguration`) to manage all chat window and bubble chat properties. Additionally, you can easily adjust and preview your bubble chat appearance and behavior properties using Studio settings instead of having to script them all.
 
 <table>
   <thead>
     <tr>
       <th>Functionality</th>
       <th>Legacy Chat</th>
-      <th>In-Experience Text Chat</th>
+      <th>TextChatService</th>
     </tr>
   </thead>
   <tbody>
@@ -271,3 +222,75 @@ Both the chat window and [bubble chat](../chat/bubble-chat.md) behavior and [cus
     </tr>
   </tbody>
 </table>
+
+### Migrating Speaker "Extra Data"
+
+The legacy Lua chat system allowed devleopers to use `SetExtraData` on the `Speaker` class. This data was used to format the name color, chat color, or to apply name tags for a given speaker.
+
+```lua title='Legacy Chat System SetExtraData'
+-- An example of setting extra data on a speaker in the legacy chat system
+ChatService.SpeakerAdded:Connect(function(playerName)
+    local speaker = ChatService:GetSpeaker(playerName)
+    speaker:SetExtraData("NameColor", Color3.fromRGB(255, 255, 55))
+    speaker:SetExtraData("ChatColor", Color3.fromRGB(212, 175, 55))
+    speaker:SetExtraData("Tags", {{TagText = "YourTagName", TagColor = Color3.fromRGB(0, 255, 0)}, {TagText = "OtherTagName", TagColor = Color3.fromRGB(255, 0, 0)}})
+end)
+```
+
+TextChatService does not have a direct equivalent to `SetExtraData`. Instead, use [TextChatService callbacks](#text-chat-hooks-and-callbacks) such as `Class.TextChatService.OnWindowAdded` to customize the appearance of messages using rich text based on the `TextSource` of the message.
+
+The following is an example of emulating legacy Lua chat's "extra data" by access attributes on the TextSource's `Class.Player`:
+
+```lua title='TextChatService SetAttributes'
+local Players = game:GetService("Players")
+
+Players.PlayerAdded:Connect(function(player)
+  player:SetAttribute("NameColor", Color3.fromRGB(255, 255, 55))
+  player:SetAttribute("ChatColor", Color3.fromRGB(212, 175, 55))
+  player:SetAttribute("isYourTag", true)
+  player:SetAttribute("isOtherTag", true)
+end)
+```
+
+Then you can use the `OnChatWindowAdded` callback to customize the appearance of the chat window based on the attributes set on the player:
+
+```lua title='TextChatService OnChatWindowAdded'
+local TextChatService = game:GetService("TextChatService")
+local Players = game:GetService("Players")
+
+TextChatService.OnChatWindowAdded = function(textChatMessage)
+	local textSource = textChatMessage.TextSource
+	if textSource then
+		local player = Players:GetPlayerByUserId(textSource.UserId)
+		if player then
+			local overrideProperties = TextChatService.ChatWindowConfiguration:DeriveNewMessageProperties()
+			overrideProperties.PrefixText = textChatMessage.PrefixText
+			overrideProperties.Text = textChatMessage.Text
+
+			local nameColor = player:GetAttribute("NameColor")
+			if nameColor and typeof(nameColor) == "Color3" then
+				overrideProperties.PrefixTextProperties.TextColor3 = nameColor
+			end
+
+			local chatColor = player:GetAttribute("ChatColor")
+			if chatColor and typeof(chatColor) == "Color3" then
+				overrideProperties.TextColor3 = chatColor
+			end
+
+			local isYourTag = player:GetAttribute("isYourTag")
+			if isYourTag == true then
+				overrideProperties.PrefixText = `<font color='rgb(0, 255, 0)'>[YourTag]</font> {overrideProperties.PrefixText}`
+			end
+
+			local isOtherTag = player:GetAttribute("isOtherTag")
+			if isOtherTag == true then
+				overrideProperties.PrefixText = `<font color='rgb(255, 0, 0)'>[OtherTag]</font> {overrideProperties.PrefixText}`
+			end
+
+			return overrideProperties
+		end
+	end
+
+	return nil
+end
+```
