@@ -164,7 +164,7 @@ properties:
       A `Datatype.Vector3` representing the direction of the light source.
     description: |
       A `Datatype.Vector3` representing the direction of the light source from
-      position `Datatype.Vector3|vector.new(0, 0, 0)`. Defaults to
+      position `Datatype.Vector3|vector.zero`. Defaults to
       `Datatype.Vector3|vector.new(-1, -1, -1)`.
     code_samples:
     type: Vector3

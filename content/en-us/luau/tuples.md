@@ -10,7 +10,7 @@ A **tuple** is a list of values. Many [methods](./functions.md#methods) and [cal
 If a [method](./functions.md#methods) or [callback](./functions.md#callbacks) accepts a tuple as a parameter, then it accepts multiple values. For example, the API Reference shows that the `Class.BindableFunction:Invoke()` method accepts a "Tuple" as a parameter, so it accepts multiple arguments.
 
 ```lua
-BindableFunction:Invoke(1, true, "string", vector.new(0, 0, 0))
+BindableFunction:Invoke(1, true, "string", vector.zero)
 ```
 
 ## Returns
