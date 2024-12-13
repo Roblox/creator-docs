@@ -37,7 +37,7 @@ properties:
       second) into the desired [angular velocity][3] (radians per second). For
       example: Setting
       `Class.BodyAngularVelocity.AngularVelocity|AngularVelocity` to
-      `Vector3.new(0, 1, 0) * math.rad(360)` ≈ `Vector3.new(0, 6.283, 0)` will
+      `vector.new(0, 1, 0) * math.rad(360)` ≈ `vector.new(0, 6.283, 0)` will
       cause a part to spin around the Y axis once per second.
     code_samples:
     type: Vector3

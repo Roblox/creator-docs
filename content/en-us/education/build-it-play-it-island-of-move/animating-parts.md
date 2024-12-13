@@ -206,7 +206,7 @@ local inTween = false
 
 -- Customizable variables
 local TWEEN_TIME = 1
-local TWEEN_SCALE = Vector3.zero
+local TWEEN_SCALE = vector.zero
 
 -- Tween variables
 local tweenInfo = TweenInfo.new(

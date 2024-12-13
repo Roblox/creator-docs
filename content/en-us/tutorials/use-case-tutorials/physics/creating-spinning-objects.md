@@ -288,7 +288,7 @@ To spin an assembly using `Class.BasePart.ApplyAngularImpulse|ApplyAngularImpuls
 ``` lua
 
 local part = script.Parent
-local impulse = Vector3.new(0, math.random(0, 100), 0)
+local impulse = vector.new(0, math.random(0, 100), 0)
 part:ApplyAngularImpulse(impulse)
 
 ```

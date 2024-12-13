@@ -77,7 +77,7 @@ Properties are straightforward to access — just use a `.` after the object ref
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local chair = ReplicatedStorage:WaitForChild("Chair")
 
-chair.LeftArmRest.Size = Vector3.new(10, 1, 10)
+chair.LeftArmRest.Size = vector.new(10, 1, 10)
 ```
 
 ## Creating Attributes

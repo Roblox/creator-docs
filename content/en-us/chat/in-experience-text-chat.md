@@ -83,7 +83,7 @@ local function getPositionFromUserId(userId: number)
 	end
 
 	-- Return a default position if the player or character cannot be found
-	return Vector3.zero
+	return vector.zero
 end
 
 -- Set the callback for the general channel to control message delivery

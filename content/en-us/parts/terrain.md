@@ -471,7 +471,7 @@ To import a heightmap and optional colormap:
 You can script terrain generation using the `Class.Terrain` class. For example, to create terrain with grass material that fills a volume, you can use methods such as `Class.Terrain:FillBall()|FillBall()`, `Class.Terrain:FillBlock()|FillBlock()`, `Class.Terrain:FillCylinder()|FillCylinder()`, `Class.Terrain:FillRegion()|FillRegion()`, or `Class.Terrain:FillWedge()|FillWedge()`.
 
 ```lua title='Fill Block Volume'
-workspace.Terrain:FillBlock(CFrame.new(0, 0, 0), Vector3.new(4, 4, 4), Enum.Material.Grass)
+workspace.Terrain:FillBlock(CFrame.new(0, 0, 0), vector.new(4, 4, 4), Enum.Material.Grass)
 ```
 
 ## Large-Scale Editing

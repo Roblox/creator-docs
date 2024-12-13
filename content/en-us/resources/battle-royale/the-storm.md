@@ -29,7 +29,7 @@ The default center of the storm is the center of the map, but you can change the
 
 ```lua
 map_size = 2450 * 4,
-map_offset = Vector3.new(4900, 0, 4900),
+map_offset = vector.new(4900, 0, 4900),
 ```
 
 ### Storm Options

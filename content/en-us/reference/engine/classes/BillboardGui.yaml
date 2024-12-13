@@ -442,8 +442,8 @@ properties:
       part.Parent = workspace
 
       -- Move camera next to part. Wait a bit and then move camera
-      local cameraPosition0 = part.Position + Vector3.new(0, 0, 10)
-      local cameraPosition1 = part.Position + Vector3.new(0, 0, 20)
+      local cameraPosition0 = part.Position + vector.new(0, 0, 10)
+      local cameraPosition1 = part.Position + vector.new(0, 0, 20)
       camera.CFrame = CFrame.lookAt(cameraPosition0, part.Position)
 
       -- Contents of billboard will be visible here

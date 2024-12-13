@@ -12,7 +12,7 @@ description: |
   to create a new RayValue named "Value" within the `Class.Workspace`. It
   creates a ray at (0, 50, 0) and it faces in the positive-X direction.
 
-  `Instance.new("RayValue").Value = Ray.new(Vector3.new(0, 50, 0), Vector3.new(10, 0, 0))`
+  `Instance.new("RayValue").Value = Ray.new(vector.new(0, 50, 0), vector.new(10, 0, 0))`
 
   Since there is no trivial way to edit rays within Studio, sometimes it is
   better to use a CFrameValue instead (which can be changed through a part or

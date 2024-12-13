@@ -344,7 +344,7 @@ teleportEvent.OnServerEvent:Connect(teleportPlayer)
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local teleportEvent = ReplicatedStorage:WaitForChild("TeleportEvent")
-local teleportTarget = Vector3.new(50, 2, 120)
+local teleportTarget = vector.new(50, 2, 120)
 
 -- Fire the remote event
 teleportEvent:FireServer(teleportTarget)

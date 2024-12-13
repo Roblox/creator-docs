@@ -145,7 +145,7 @@ local player = Players.LocalPlayer
 local character = player.Character
 local humanoid = character:WaitForChild("Humanoid")
 
-local TEST_DESTINATION = Vector3.new(100, 0, 100)
+local TEST_DESTINATION = vector.new(100, 0, 100)
 
 local waypoints
 local nextWaypointIndex
@@ -213,7 +213,7 @@ local player = Players.LocalPlayer
 local character = player.Character
 local humanoid = character:WaitForChild("Humanoid")
 
-local TEST_DESTINATION = Vector3.new(100, 0, 100)
+local TEST_DESTINATION = vector.new(100, 0, 100)
 
 local waypoints
 local nextWaypointIndex
@@ -245,7 +245,7 @@ local player = Players.LocalPlayer
 local character = player.Character
 local humanoid = character:WaitForChild("Humanoid")
 
-local TEST_DESTINATION = Vector3.new(100, 0, 100)
+local TEST_DESTINATION = vector.new(100, 0, 100)
 
 local waypoints
 local nextWaypointIndex
@@ -286,7 +286,7 @@ local player = Players.LocalPlayer
 local character = player.Character
 local humanoid = character:WaitForChild("Humanoid")
 
-local TEST_DESTINATION = Vector3.new(100, 0, 100)
+local TEST_DESTINATION = vector.new(100, 0, 100)
 
 local waypoints
 local nextWaypointIndex
@@ -358,7 +358,7 @@ local player = Players.LocalPlayer
 local character = player.Character
 local humanoid = character:WaitForChild("Humanoid")
 
-local TEST_DESTINATION = Vector3.new(100, 0, 100)
+local TEST_DESTINATION = vector.new(100, 0, 100)
 
 local waypoints
 local nextWaypointIndex
@@ -525,7 +525,7 @@ To create a `Class.PathfindingLink` using this example:
    local character = player.Character
    local humanoid = character:WaitForChild("Humanoid")
 
-   local TEST_DESTINATION = Vector3.new(228.9, 17.8, 292.5)
+   local TEST_DESTINATION = vector.new(228.9, 17.8, 292.5)
 
    local waypoints
    local nextWaypointIndex

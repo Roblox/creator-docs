@@ -75,7 +75,7 @@ local Players = game:GetService("Players")
 local teleporter = script.Parent
 local showModal = true
 
-local TELEPORT_POSITION = Vector3.new(1200, 200, 60)
+local TELEPORT_POSITION = vector.new(1200, 200, 60)
 
 -- Teleport character to exclusive area
 local function teleportPlayer(player)

@@ -64,7 +64,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local remoteFunction = ReplicatedStorage:WaitForChild("RemoteFunctionTest")
 
 -- Pass part color and position when invoking the function
-local newPart = remoteFunction:InvokeServer(Color3.fromRGB(200, 0, 50), Vector3.new(0, 25, 0))
+local newPart = remoteFunction:InvokeServer(Color3.fromRGB(200, 0, 50), vector.new(0, 25, 0))
 
 if newPart then
 	print("The server created the requested part:", newPart)

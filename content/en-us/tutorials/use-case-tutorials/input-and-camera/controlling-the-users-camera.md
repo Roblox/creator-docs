@@ -124,7 +124,7 @@ All character models contain a part named **HumanoidRootPart**, which can be use
        if character then
            local root = character:FindFirstChild("HumanoidRootPart")
            if root then
-               local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
+               local rootPosition = root.Position + vector.new(0, HEIGHT_OFFSET, 0)
            end
        end
    end
@@ -150,8 +150,8 @@ local function updateCamera()
     if character then
         local root = character:FindFirstChild("HumanoidRootPart")
         if root then
-            local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
-            local cameraPosition = Vector3.new(rootPosition.X, rootPosition.Y, CAMERA_DEPTH)
+            local rootPosition = root.Position + vector.new(0, HEIGHT_OFFSET, 0)
+            local cameraPosition = vector.new(rootPosition.X, rootPosition.Y, CAMERA_DEPTH)
         end
     end
 end
@@ -176,8 +176,8 @@ local function updateCamera()
     if character then
         local root = character:FindFirstChild("HumanoidRootPart")
         if root then
-            local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
-            local cameraPosition = Vector3.new(rootPosition.X, rootPosition.Y, CAMERA_DEPTH)
+            local rootPosition = root.Position + vector.new(0, HEIGHT_OFFSET, 0)
+            local cameraPosition = vector.new(rootPosition.X, rootPosition.Y, CAMERA_DEPTH)
             camera.CFrame = CFrame.lookAt(cameraPosition, rootPosition)
         end
     end
@@ -211,8 +211,8 @@ The last step is to run this function repeatedly to keep the camera in sync with
        if character then
            local root = character:FindFirstChild("HumanoidRootPart")
            if root then
-               local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
-               local cameraPosition = Vector3.new(rootPosition.X, rootPosition.Y, CAMERA_DEPTH)
+               local rootPosition = root.Position + vector.new(0, HEIGHT_OFFSET, 0)
+               local cameraPosition = vector.new(rootPosition.X, rootPosition.Y, CAMERA_DEPTH)
                camera.CFrame = CFrame.lookAt(cameraPosition, rootPosition)
            end
        end
@@ -241,8 +241,8 @@ The basic structure of getting the user's position and updating the camera's pos
        if character then
            local root = character:FindFirstChild("HumanoidRootPart")
            if root then
-               local rootPosition = root.Position + Vector3.new(0, HEIGHT_OFFSET, 0)
-               local cameraPosition = rootPosition + Vector3.new(CAMERA_DEPTH, CAMERA_DEPTH, CAMERA_DEPTH)
+               local rootPosition = root.Position + vector.new(0, HEIGHT_OFFSET, 0)
+               local cameraPosition = rootPosition + vector.new(CAMERA_DEPTH, CAMERA_DEPTH, CAMERA_DEPTH)
                camera.CFrame = CFrame.lookAt(cameraPosition, rootPosition)
            end
        end

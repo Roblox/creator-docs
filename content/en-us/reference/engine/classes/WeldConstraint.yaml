@@ -131,10 +131,10 @@ properties:
       local partA = Instance.new("Part")
       local partB = Instance.new("Part")
 
-      partA.Position = Vector3.new(0, 10, 0)
+      partA.Position = vector.new(0, 10, 0)
       partA.Parent = workspace
 
-      partB.Position = Vector3.new(0, 10, 10)
+      partB.Position = vector.new(0, 10, 10)
       partB.Parent = workspace
 
       local weld = Instance.new("WeldConstraint")
@@ -174,10 +174,10 @@ properties:
       local partA = Instance.new("Part")
       local partB = Instance.new("Part")
 
-      partA.Position = Vector3.new(0, 10, 0)
+      partA.Position = vector.new(0, 10, 0)
       partA.Parent = workspace
 
-      partB.Position = Vector3.new(0, 10, 10)
+      partB.Position = vector.new(0, 10, 10)
       partB.Parent = workspace
 
       local weld = Instance.new("WeldConstraint")

@@ -343,7 +343,7 @@ If you set a detector's `Class.DragDetector.DragStyle|DragStyle` to **Scriptable
 local dragDetector = script.Parent.DragDetector
 dragDetector.DragStyle = Enum.DragDetectorDragStyle.Scriptable
 
-local cachedHitPoint = Vector3.zero
+local cachedHitPoint = vector.zero
 local cachedHitNormal = Vector3.yAxis
 
 local function followTheCursor(cursorRay)
@@ -352,7 +352,7 @@ local function followTheCursor(cursorRay)
 	raycastParams.FilterDescendantsInstances = {dragDetector.Parent}
 	raycastParams.FilterType = Enum.RaycastFilterType.Exclude
 
-	local hitPoint = Vector3.zero
+	local hitPoint = vector.zero
 	local hitNormal = Vector3.yAxis
 
 	local raycastResult = workspace:Raycast(cursorRay.Origin, cursorRay.Direction, raycastParams)
@@ -406,7 +406,7 @@ local function snapToWorldGrid(proposedMotion)
 	local roundedX = math.floor(newWorldPosition.X / snapIncrement + 0.5) * snapIncrement
 	local roundedY = math.floor(newWorldPosition.Y / snapIncrement + 0.5) * snapIncrement
 	local roundedZ = math.floor(newWorldPosition.Z / snapIncrement + 0.5) * snapIncrement
-	local newRoundedWorldPosition = Vector3.new(roundedX, roundedY, roundedZ)
+	local newRoundedWorldPosition = vector.new(roundedX, roundedY, roundedZ)
 	return proposedMotion.Rotation + (newRoundedWorldPosition - startPartPosition)
 end
 
@@ -452,8 +452,8 @@ local emitter = script.Parent.EmitterPart.ParticleEmitter
 
 local dragDetector = slider.DragDetector
 dragDetector.ReferenceInstance = originPart
-dragDetector.MinDragTranslation = Vector3.zero
-dragDetector.MaxDragTranslation = Vector3.new(10, 0, 10)
+dragDetector.MinDragTranslation = vector.zero
+dragDetector.MaxDragTranslation = vector.new(10, 0, 10)
 
 local dragRangeX = dragDetector.MaxDragTranslation.X - dragDetector.MinDragTranslation.X
 local dragRangeZ = dragDetector.MaxDragTranslation.Z - dragDetector.MinDragTranslation.Z

@@ -65,9 +65,9 @@ If you want to play a video in your experience with code, paste the following co
 
 ```lua
 local screenPart = Instance.new("Part")
-screenPart.Size = Vector3.new(16, 9, 1)
-screenPart.Position = Vector3.new(0, 8, -20)
-screenPart.Orientation = Vector3.new(0, 180, 0)
+screenPart.Size = vector.new(16, 9, 1)
+screenPart.Position = vector.new(0, 8, -20)
+screenPart.Orientation = vector.new(0, 180, 0)
 screenPart.Anchored = true
 screenPart.Parent = workspace
 
