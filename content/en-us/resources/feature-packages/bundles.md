@@ -389,7 +389,7 @@ Consider the following best practice guidance on redundant recordings of Receipt
 
 Constants for the **Core** feature package live in two spots:
 
-- Shared constants live in `ReplicatedStorage.FeaturePackageCore.Configs.SharedConstants`.
+- Shared constants live in `ReplicatedStorage.FeaturePackagesCore.Configs.SharedConstants`.
 
 - Package-specific constants, in this case the **Bundles** feature package, live in `ReplicatedStorage.Bundles.Configs.Constants`.
 
@@ -399,7 +399,7 @@ The main things you might want to adjust to meet the design requirements of your
 - Purchase effect duration and particle colors
 - Heads up display collapsibility
 
-Additionally, you can find strings for translation broken out into one location: `ReplicatedStorage.FeaturePackageCore.Configs.TranslationStrings`.
+Additionally, you can find strings for translation broken out into one location: `ReplicatedStorage.FeaturePackagesCore.Configs.TranslationStrings`.
 
 ## Customizing UI Components
 

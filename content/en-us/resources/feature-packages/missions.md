@@ -370,11 +370,11 @@ You mainly need to hook up four things once dragging the **Missions** feature pa
 
 Constants for the **Core** feature package live in two spots:
 
-- Shared constants live in `ReplicatedStorage.FeaturePackageCore.Configs.SharedConstants`.
+- Shared constants live in `ReplicatedStorage.FeaturePackagesCore.Configs.SharedConstants`.
 
 - Package-specific constants, in this case the **Missions** feature package, live in `ReplicatedStorage.Missions.Configs.Constants`.
 
-Additionally, you can find strings for translation broken out into one location: `ReplicatedStorage.FeaturePackageCore.Configs.TranslationStrings`.
+Additionally, you can find strings for translation broken out into one location: `ReplicatedStorage.FeaturePackagesCore.Configs.TranslationStrings`.
 
 ## Customizing UI Components
 
