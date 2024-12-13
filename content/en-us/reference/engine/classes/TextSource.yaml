@@ -21,7 +21,7 @@ description: |
   associated with the `Class.TextSource` via `Class.TextSource.UserId`.
 
   To learn more about using TextSources, see
-  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+  [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
 code_samples:
 inherits:
   - Instance
