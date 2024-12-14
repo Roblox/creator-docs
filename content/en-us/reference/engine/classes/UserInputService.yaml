@@ -1343,7 +1343,7 @@ methods:
       local key = Enum.KeyCode.ButtonA
 
       local mappings = {
-        ButtonA = "rbxasset://BUTTON_A_ASSET",  -- Replace with the desired ButtonA asset
+        ButtonA = "rbxasset://BUTTON_A_ASSET", -- Replace with the desired ButtonA asset
         ButtonCross = "rbxasset://BUTTON_CROSS_ASSET"  -- Replace with the desired ButtonCross asset
       }
 

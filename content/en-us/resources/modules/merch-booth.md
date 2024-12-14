@@ -106,11 +106,11 @@ Items such as [clothing and accessories](../../art/accessories/index.md) must be
    local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
    local items = {
-   	607702162,  -- Roblox Baseball Cap
-   	4819740796,  -- Robox
-   	1374269,  -- Kitty Ears
-   	11884330,  -- Nerd Glasses
-   	10476359,  -- Paper Hat
+   	607702162, -- Roblox Baseball Cap
+   	4819740796, -- Robox
+   	1374269, -- Kitty Ears
+   	11884330, -- Nerd Glasses
+   	10476359, -- Paper Hat
    }
 
    for _, assetId in items do
@@ -169,8 +169,8 @@ Adding [passes](../../production/monetization/game-passes.md) requires pass IDs 
    local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
    local items = {
-   	4343758,  -- ColdFyre Armor
-   	28521575,  -- Slime Shield
+   	4343758, -- ColdFyre Armor
+   	28521575, -- Slime Shield
    }
 
    for _, assetId in items do
@@ -225,8 +225,8 @@ Adding [developer products](../../production/monetization/developer-products.md)
    local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
    local items = {
-   	1236602053,  -- Mana Refill
-   	1257880672,  -- Healing Potion
+   	1236602053, -- Mana Refill
+   	1257880672, -- Healing Potion
    }
 
    for _, assetId in items do
@@ -723,11 +723,11 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
 local items = {
-	607702162,  -- Roblox Baseball Cap
-	4819740796,  -- Robox
-	1374269,  -- Kitty Ears
-	11884330,  -- Nerd Glasses
-	10476359,  -- Paper Hat
+	607702162, -- Roblox Baseball Cap
+	4819740796, -- Robox
+	1374269, -- Kitty Ears
+	11884330, -- Nerd Glasses
+	10476359, -- Paper Hat
 }
 
 for _, assetId in items do
@@ -746,8 +746,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
 local items = {
-	4343758,  -- ColdFyre Armor
-	28521575,  -- Slime Shield
+	4343758, -- ColdFyre Armor
+	28521575, -- Slime Shield
 }
 
 for _, assetId in items do
@@ -766,8 +766,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
 local items = {
-	1236602053,  -- Mana Refill
-	1257880672,  -- Healing Potion
+	1236602053, -- Mana Refill
+	1257880672, -- Healing Potion
 }
 
 for _, assetId in items do

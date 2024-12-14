@@ -52,7 +52,7 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
    local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
 
    FriendsLocator.configure({
-   	showAllPlayers = RunService:IsStudio(),  -- Allows for debugging in Studio
+   	showAllPlayers = RunService:IsStudio(), -- Allows for debugging in Studio
    })
    ```
 
@@ -86,8 +86,8 @@ The **FriendsLocator** module exposes [events](#events) so that you can introduc
    local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
 
    FriendsLocator.configure({
-   	showAllPlayers = RunService:IsStudio(),  -- Allows for debugging in Studio
-   	teleportToFriend = false,  -- Prevent teleport on icon click/tap
+   	showAllPlayers = RunService:IsStudio(), -- Allows for debugging in Studio
+   	teleportToFriend = false, -- Prevent teleport on icon click/tap
    })
 
    FriendsLocator.clicked:Connect(function(player, playerCFrame)

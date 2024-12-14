@@ -6,7 +6,7 @@ description: WeldConstraint attaches two BaseParts together and ensures they sta
 A `Class.WeldConstraint` connects two `Class.BasePart|BaseParts` and ensures they stay in the same relative position and orientation to each other. Even if the two parts are not touching, you can weld them together.
 
 <Alert severity="info">
-To attach two `Class.Attachment|Attachments` or `Class.Bone|Bones`,  versus two `Class.BasePart|BaseParts`, see [RigidConstraint](../../physics/constraints/rigid.md).
+To attach two `Class.Attachment|Attachments` or `Class.Bone|Bones`, versus two `Class.BasePart|BaseParts`, see [RigidConstraint](../../physics/constraints/rigid.md).
 </Alert>
 
 The fastest way to create a `Class.WeldConstraint` is by selecting **Weld** through Studio's **Create** menu in the [Model](../../studio/model-tab.md) tab.
