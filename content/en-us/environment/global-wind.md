@@ -50,8 +50,8 @@ local gustCycleDelay = 5  -- Max duration between gust cycles in seconds
 local gustCycleDuration = 3.5  -- Duration of each gust cycle in seconds
 
 -- During each gust cycle, a portion of "gust" will be added to "baseWind" in a ramped fashion
-local baseWind = vector.new(5, 0, 2)  -- Base wind speed and direction
-local gust = vector.new(25, 0, 10)  -- Gust speed and direction
+local baseWind = vector.create(5, 0, 2)  -- Base wind speed and direction
+local gust = vector.create(25, 0, 10)  -- Gust speed and direction
 local gustIntervals = 100  -- Number of iterations used to calculate each gust interval
 local dg = gustCycleDuration / gustIntervals
 local dgf = dg / gustCycleDuration

@@ -24,12 +24,12 @@ constructors:
       ```lua
       -- Set new instance's parent last (recommended)
       local part = Instance.new("Part")
-      part.Position = vector.new(0, 10, 0)
+      part.Position = vector.create(0, 10, 0)
       part.Parent = workspace
 
       -- Set new instance's parent in constructor (discouraged)
       local part = Instance.new("Part", workspace)
-      part.Position = vector.new(0, 10, 0)
+      part.Position = vector.create(0, 10, 0)
       ````
     parameters:
       - name: className

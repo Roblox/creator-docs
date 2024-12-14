@@ -47,7 +47,7 @@ Nested loops can seem somewhat abstract, so a visual example can help. For this 
    -- Makes a single cube
    local function createPart()
      local part = Instance.new("Part")
-     part.Size = vector.new(2, 2, 2)
+     part.Size = vector.create(2, 2, 2)
      part.CFrame = CFrame.new(20, 0, 20)
      part.Color = currentColor
      part.Parent = workspace
@@ -110,7 +110,7 @@ For the cube tower script, first code a function that spawns a single cube. The 
    -- Creates individual cubes
    local function makeCube()
      local cube = Instance.new("Part")
-     cube.Size = vector.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
+     cube.Size = vector.create(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
    end
    ```
 
@@ -119,7 +119,7 @@ For the cube tower script, first code a function that spawns a single cube. The 
    ```lua
    local function makeCube()
      local cube = Instance.new("Part")
-     cube.Size = vector.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
+     cube.Size = vector.create(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
      cube.Color = currentColor
    end
    ```
@@ -129,7 +129,7 @@ For the cube tower script, first code a function that spawns a single cube. The 
    ```lua
    local function makeCube()
        local cube = Instance.new("Part")
-       cube.Size = vector.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
+       cube.Size = vector.create(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
        cube.Color = currentColor
        cube.Parent = workspace
    end
@@ -149,7 +149,7 @@ To create a tower, spawn cubes at specific points by setting the X, Y, Z propert
    -- Creates individual cubes
    local function makeCube(spawnX, spawnY, spawnZ)
        local cube = Instance.new("Part")
-       cube.Size = vector.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
+       cube.Size = vector.create(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
        cube.Color = currentColor
        cube.Parent = workspace
    end
@@ -160,7 +160,7 @@ To create a tower, spawn cubes at specific points by setting the X, Y, Z propert
    ```lua
    local function makeCube(spawnX, spawnY, spawnZ)
        local cube = Instance.new("Part")
-       cube.Size = vector.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
+       cube.Size = vector.create(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
        cube.Color = currentColor
        cube.CFrame = CFrame.new(spawnX, spawnY, spawnZ)
        cube.Parent = workspace
@@ -278,7 +278,7 @@ local CUBE_SIZE = 2
 -- Creates individual cubes
 local function makeCube(spawnX, spawnY, spawnZ)
     local cube = Instance.new("Part")
-    cube.Size = vector.new(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
+    cube.Size = vector.create(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE)
     cube.Color = currentColor
     cube.Transparency = cubeTransparency -- Sets transparency
     cube.CFrame = CFrame.new(spawnX, spawnY, spawnZ)

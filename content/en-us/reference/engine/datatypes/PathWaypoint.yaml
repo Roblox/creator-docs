@@ -9,11 +9,11 @@ description: |
   create points along a generated path.
 
   The code block below constructs a `Datatype.PathWaypoint` variable with
-  `vector.new(10, 10, 10)` as its position, `Enum.PathWaypointAction.Walk` as
+  `vector.create(10, 10, 10)` as its position, `Enum.PathWaypointAction.Walk` as
   its action, and `Custom Label` as its label:
 
   ```lua
-  local pos = vector.new(10, 10, 10)
+  local pos = vector.create(10, 10, 10)
   local waypoint = PathWaypoint.new(pos, Enum.PathWaypointAction.Walk, "Custom Label")
   ```
 
@@ -21,7 +21,7 @@ description: |
   property will be set to default as empty string.
 
   ```lua
-  local pos = vector.new(10, 10, 10)
+  local pos = vector.create(10, 10, 10)
   local waypoint = PathWaypoint.new(pos, Enum.PathWaypointAction.Walk)
   ```
 

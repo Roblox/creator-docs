@@ -62,7 +62,7 @@ To customize the minimap or use the minimap system with your own map and minimap
 <tbody>
   <tr>
     <td>`map_size`</td>
-    <td>The size of one edge of your map in studs. Note the minimap assumes your map is square and that the map center is located at this world point: `vector.new(map_size, 0, map_size)`.</td>
+    <td>The size of one edge of your map in studs. Note the minimap assumes your map is square and that the map center is located at this world point: `vector.create(map_size, 0, map_size)`.</td>
   </tr>
   <tr>
     <td>`minimap_width`</td>

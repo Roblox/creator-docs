@@ -406,7 +406,7 @@ local function snapToWorldGrid(proposedMotion)
 	local roundedX = math.floor(newWorldPosition.X / snapIncrement + 0.5) * snapIncrement
 	local roundedY = math.floor(newWorldPosition.Y / snapIncrement + 0.5) * snapIncrement
 	local roundedZ = math.floor(newWorldPosition.Z / snapIncrement + 0.5) * snapIncrement
-	local newRoundedWorldPosition = vector.new(roundedX, roundedY, roundedZ)
+	local newRoundedWorldPosition = vector.create(roundedX, roundedY, roundedZ)
 	return proposedMotion.Rotation + (newRoundedWorldPosition - startPartPosition)
 end
 
@@ -453,7 +453,7 @@ local emitter = script.Parent.EmitterPart.ParticleEmitter
 local dragDetector = slider.DragDetector
 dragDetector.ReferenceInstance = originPart
 dragDetector.MinDragTranslation = vector.zero
-dragDetector.MaxDragTranslation = vector.new(10, 0, 10)
+dragDetector.MaxDragTranslation = vector.create(10, 0, 10)
 
 local dragRangeX = dragDetector.MaxDragTranslation.X - dragDetector.MinDragTranslation.X
 local dragRangeZ = dragDetector.MaxDragTranslation.Z - dragDetector.MinDragTranslation.Z

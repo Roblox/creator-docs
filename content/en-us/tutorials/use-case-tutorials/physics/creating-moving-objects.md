@@ -286,7 +286,7 @@ To move an assembly using `Class.BasePart.ApplyImpulse|ApplyImpulse`:
 local volume = script.Parent
 
 local function onTouched(other)
-	local impulse = vector.new(0, 2500, 0)
+	local impulse = vector.create(0, 2500, 0)
 	local character = other.Parent
 	local humanoid = character:FindFirstChildWhichIsA("Humanoid")
 	if humanoid and other.Name == "LeftFoot" then

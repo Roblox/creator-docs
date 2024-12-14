@@ -172,7 +172,7 @@ In addition, we run the sequence to set textures, positions, and brightness, run
 ```lua
 beam.Texture = textures[info.textIdx]
 
-beamPart.Position = vector.new(info.center.X + og_center.X, og_center.Y, info.center.Y + og_center.Z)
+beamPart.Position = vector.create(info.center.X + og_center.X, og_center.Y, info.center.Y + og_center.Z)
 
 -- Wipe
 beam.Brightness = 10

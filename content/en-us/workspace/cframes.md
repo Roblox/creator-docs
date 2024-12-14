@@ -44,7 +44,7 @@ Alternatively, you can provide a new `Datatype.Vector3` position to `Datatype.CF
 local redBlock = workspace.RedBlock
 
 -- Create new CFrame
-local newVector3 = vector.new(-2, 2, 4)
+local newVector3 = vector.create(-2, 2, 4)
 local newCFrame = CFrame.new(newVector3)
 
 -- Overwrite redBlock's current CFrame with new CFrame
@@ -85,7 +85,7 @@ local redBlock = workspace.RedBlock
 local blueCube = workspace.BlueCube
 
 -- Create a Vector3 for both the start position and target position
-local startPosition = vector.new(0, 3, 0)
+local startPosition = vector.create(0, 3, 0)
 local targetPosition = blueCube.Position
 
 -- Put the redBlock at 'startPosition' and point its front surface at 'targetPosition'
@@ -110,7 +110,7 @@ To offset an object by a specific number of studs from its current position, add
 ```lua highlight='3'
 local redBlock = workspace.RedBlock
 
-redBlock.CFrame = CFrame.new(redBlock.Position) + vector.new(0, 1.25, 0)
+redBlock.CFrame = CFrame.new(redBlock.Position) + vector.create(0, 1.25, 0)
 ```
 
 <GridContainer numColumns="2">
@@ -130,7 +130,7 @@ You can use the same technique to offset an object from the position of another 
 local redBlock = workspace.RedBlock
 local blueCube = workspace.BlueCube
 
-redBlock.CFrame = CFrame.new(blueCube.Position) + vector.new(0, 2, 0)
+redBlock.CFrame = CFrame.new(blueCube.Position) + vector.create(0, 2, 0)
 ```
 
 <GridContainer numColumns="2">

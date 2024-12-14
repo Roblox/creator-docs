@@ -65,8 +65,8 @@ properties:
       The most intuitive way to position and orient the `Class.Camera` is by
       using the `Datatype.CFrame.lookAt()` constructor. In the following
       example, the `Class.Camera` is positioned at
-      `Datatype.Vector3|vector.new(0, 10, 0)` and is oriented to be looking towards
-      `Datatype.Vector3|vector.new(10, 0, 0)`.
+      `Datatype.Vector3|vector.create(0, 10, 0)` and is oriented to be looking towards
+      `Datatype.Vector3|vector.create(10, 0, 0)`.
 
       ```lua
       local Workspace = game:GetService("Workspace")
@@ -74,8 +74,8 @@ properties:
       local camera = Workspace.CurrentCamera
       camera.CameraType = Enum.CameraType.Scriptable
 
-      local pos = vector.new(0, 10, 0)
-      local lookAtPos = vector.new(10, 0, 0)
+      local pos = vector.create(0, 10, 0)
+      local lookAtPos = vector.create(10, 0, 0)
 
       Workspace.CurrentCamera.CFrame = CFrame.lookAt(pos, lookAtPos)
       ```
@@ -104,7 +104,7 @@ properties:
         	character = player.CharacterAdded:Wait()
         end
 
-        local pos = camera.CFrame * vector.new(0, 20, 0)
+        local pos = camera.CFrame * vector.create(0, 20, 0)
         local lookAtPos = character.PrimaryPart.Position
         local targetCFrame = CFrame.lookAt(pos, lookAtPos)
 
@@ -715,8 +715,8 @@ methods:
       local camera = Workspace.CurrentCamera
 
       local castPoints = {
-      	vector.new(0, 10, 0),
-      	vector.new(0, 15, 0)
+      	vector.create(0, 10, 0),
+      	vector.create(0, 15, 0)
       }
       local ignoreList = {}
 
@@ -810,7 +810,7 @@ methods:
       local function getActualRoll()
       	local camera = workspace.CurrentCamera
 
-      	local trueUp = vector.new(0, 1, 0)
+      	local trueUp = vector.create(0, 1, 0)
       	local cameraUp = camera:GetRenderCFrame().upVector
 
       	return math.acos(trueUp:Dot(cameraUp))
@@ -1291,7 +1291,7 @@ methods:
 
       local camera = Workspace.CurrentCamera
 
-      local worldPoint = vector.new(0, 10, 0)
+      local worldPoint = vector.create(0, 10, 0)
       local vector, onScreen = camera:WorldToScreenPoint(worldPoint)
 
       local screenPoint = Vector2.new(vector.X, vector.Y)
@@ -1350,7 +1350,7 @@ methods:
 
       local camera = Workspace.CurrentCamera
 
-      local worldPoint = vector.new(0, 10, 0)
+      local worldPoint = vector.create(0, 10, 0)
       local vector, onScreen = camera:WorldToViewportPoint(worldPoint)
 
       local viewportPoint = Vector2.new(vector.X, vector.Y)

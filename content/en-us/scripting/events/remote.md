@@ -172,7 +172,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
 
 -- Fire the remote event and pass additional arguments
-remoteEvent:FireServer(Color3.fromRGB(255, 0, 0), vector.new(0, 25, -20))
+remoteEvent:FireServer(Color3.fromRGB(255, 0, 0), vector.create(0, 25, -20))
 ```
 
 ### Server&nbsp;→ Client
@@ -342,7 +342,7 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local remoteFunction = ReplicatedStorage:FindFirstChildOfClass("RemoteFunction")
 
 -- Pass a color and position when invoking the callback
-local newPart = remoteFunction:InvokeServer(Color3.fromRGB(255, 0, 0), vector.new(0, 25, -20))
+local newPart = remoteFunction:InvokeServer(Color3.fromRGB(255, 0, 0), vector.create(0, 25, -20))
 
 -- Output the returned part reference
 print("The server created the requested part:", newPart)

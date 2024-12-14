@@ -1265,11 +1265,11 @@ methods:
       returned by default.
 
       For example, the following code snippet sets the instance's
-      **InitialPosition** attribute to `Datatype.Vector3|vector.new(0, 10, 0)`:
+      **InitialPosition** attribute to `Datatype.Vector3|vector.create(0, 10, 0)`:
 
       ```lua
       local part = workspace.Part
-      part:SetAttribute("InitialPosition", vector.new(0, 10, 0))
+      part:SetAttribute("InitialPosition", vector.create(0, 10, 0))
       ```
 
       #### Limitations

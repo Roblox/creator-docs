@@ -36,8 +36,8 @@ description: |
   ```lua
   local function Region3int16toRegion3(region16)
   	return Region3.new(
-  		vector.new(region16.Min.X, region16.Min.Y, region16.Min.Z),
-  		vector.new(region16.Max.X, region16.Max.Y, region16.Max.Z)
+  		vector.create(region16.Min.X, region16.Min.Y, region16.Min.Z),
+  		vector.create(region16.Max.X, region16.Max.Y, region16.Max.Z)
   	)
   end
   ```

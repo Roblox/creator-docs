@@ -202,14 +202,14 @@ local RunService = game:GetService("RunService")
 local part = Instance.new("Part")
 part.Anchored = true
 part.Color = Color3.new(0.75, 0.2, 0.5)
-part.Size = vector.new(2, 1, 2)
+part.Size = vector.create(2, 1, 2)
 part.Material = Enum.Material.Neon
-part.Position = vector.new(0, 4, 0)
+part.Position = vector.create(0, 4, 0)
 part.Parent = workspace
 
 -- Create an attachment on the part
 local attachment = Instance.new("Attachment")
-attachment.Position = vector.new(0, 0.5, 0)
+attachment.Position = vector.create(0, 0.5, 0)
 attachment.Parent = part
 
 -- Create a particle emitter on the attachment

@@ -135,7 +135,7 @@ For example, the **Wall** tile type is expressed as follows:
 
 ```lua
 ObjectTypeConfigurations.Wall = {
-	ASSET_OFFSET_FROM_CENTER = vector.new(0, 0, -CELL_DIMENSIONS.Z / 2),
+	ASSET_OFFSET_FROM_CENTER = vector.create(0, 0, -CELL_DIMENSIONS.Z / 2),
 	CONNECTIVITY = 0xFF8000, -- 0b 111 111 111 000 000 000 000 000
 	OCCUPANCY = 0x20, -- 0b 00 00 00 00 1 0 0 0 0 0
 }

@@ -442,7 +442,7 @@ Now that you know where to create a laser beam, you need to add the beam itself.
 
 2. Set the following properties of `laserPart`:
 
-   1. **Size**: vector.new(0.2, 0.2, laserDistance)
+   1. **Size**: vector.create(0.2, 0.2, laserDistance)
    2. **CFrame**: laserCFrame
    3. **Anchored**: true
    4. **CanCollide**: false
@@ -461,7 +461,7 @@ Now that you know where to create a laser beam, you need to add the beam itself.
    	local laserCFrame = CFrame.lookAt(startPosition, endPosition) * CFrame.new(0, 0, -laserDistance / 2)
 
    	local laserPart = Instance.new("Part")
-   	laserPart.Size = vector.new(0.2, 0.2, laserDistance)
+   	laserPart.Size = vector.create(0.2, 0.2, laserDistance)
    	laserPart.CFrame = laserCFrame
    	laserPart.Anchored = true
    	laserPart.CanCollide = false
@@ -1063,7 +1063,7 @@ function LaserRenderer.createLaser(toolHandle, endPosition)
 	local laserCFrame = CFrame.lookAt(startPosition, endPosition) * CFrame.new(0, 0, -laserDistance / 2)
 
 	local laserPart = Instance.new("Part")
-	laserPart.Size = vector.new(0.2, 0.2, laserDistance)
+	laserPart.Size = vector.create(0.2, 0.2, laserDistance)
 	laserPart.CFrame = laserCFrame
 	laserPart.Anchored = true
 	laserPart.CanCollide = false

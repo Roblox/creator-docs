@@ -300,12 +300,12 @@ end
 -- Bind the callback to be called in parallel execution context
 actor:BindToMessageParallel("GenerateChunk", function(x, y, z, seed)
 	local voxels = generateVoxelsWithSeed(x, y, z, seed)
-	local corner = vector.new(x * 16, y * 16, z * 16)
+	local corner = vector.create(x * 16, y * 16, z * 16)
 
 	-- Currently, WriteVoxels() must be called in the serial phase
 	task.synchronize()
 	workspace.Terrain:WriteVoxels(
-		Region3.new(corner, corner + vector.new(16, 16, 16)),
+		Region3.new(corner, corner + vector.create(16, 16, 16)),
 		4,
 		voxels.materials,
 		voxels.occupancy

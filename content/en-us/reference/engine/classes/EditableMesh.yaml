@@ -115,14 +115,14 @@ description: |
   local function makeSharpCube()
   	local eMesh = AssetService:CreateEditableMesh()
 
-  	local v1 = eMesh:AddVertex(vector.new(0, 0, 0))
-  	local v2 = eMesh:AddVertex(vector.new(1, 0, 0))
-  	local v3 = eMesh:AddVertex(vector.new(0, 1, 0))
-  	local v4 = eMesh:AddVertex(vector.new(1, 1, 0))
-  	local v5 = eMesh:AddVertex(vector.new(0, 0, 1))
-  	local v6 = eMesh:AddVertex(vector.new(1, 0, 1))
-  	local v7 = eMesh:AddVertex(vector.new(0, 1, 1))
-  	local v8 = eMesh:AddVertex(vector.new(1, 1, 1))
+  	local v1 = eMesh:AddVertex(vector.create(0, 0, 0))
+  	local v2 = eMesh:AddVertex(vector.create(1, 0, 0))
+  	local v3 = eMesh:AddVertex(vector.create(0, 1, 0))
+  	local v4 = eMesh:AddVertex(vector.create(1, 1, 0))
+  	local v5 = eMesh:AddVertex(vector.create(0, 0, 1))
+  	local v6 = eMesh:AddVertex(vector.create(1, 0, 1))
+  	local v7 = eMesh:AddVertex(vector.create(0, 1, 1))
+  	local v8 = eMesh:AddVertex(vector.create(1, 1, 1))
 
   	addSharpQuad(eMesh, v5, v6, v8, v7)  -- Front
   	addSharpQuad(eMesh, v1, v3, v4, v2)  -- Back

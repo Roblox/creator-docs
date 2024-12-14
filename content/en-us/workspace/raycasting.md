@@ -16,7 +16,7 @@ You can cast a ray with the `Class.WorldRoot:Raycast()` method (`Class.WorldRoot
 
 ```lua title='Basic Raycast' highlight='4'
 local rayOrigin = vector.zero
-local rayDirection = vector.new(0, -100, 0)
+local rayDirection = vector.create(0, -100, 0)
 
 local raycastResult = workspace:Raycast(rayOrigin, rayDirection)
 ```
@@ -58,7 +58,7 @@ When casting a ray, the direction parameter should encompass the desired length 
 
 ```lua title='Raycast Filtering' highlight='4-7,9'
 local rayOrigin = vector.zero
-local rayDirection = vector.new(0, -100, 0)
+local rayDirection = vector.create(0, -100, 0)
 
 local raycastParams = RaycastParams.new()
 raycastParams.FilterDescendantsInstances = {script.Parent}
@@ -138,7 +138,7 @@ You can exempt any `Class.BasePart` from hit detection by setting its `Class.Bas
 
 ```lua title='Raycast Hit Detection' highlight='7-11'
 local rayOrigin = vector.zero
-local rayDirection = vector.new(0, -100, 0)
+local rayDirection = vector.create(0, -100, 0)
 
 local raycastResult = workspace:Raycast(rayOrigin, rayDirection)
 
