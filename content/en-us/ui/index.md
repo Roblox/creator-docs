@@ -15,7 +15,7 @@ You can quickly create high-quality graphical user interfaces with minimal scrip
 
 [In-experience containers](../ui/in-experience-containers.md) such as `Class.SurfaceGui|SurfaceGuis` and `Class.BillboardGui|BillboardGuis` hold UI objects that you want to display within your experience's 3D world.
 
-<img src="../assets/ui/in-experience/SurfaceGui-Diagram.jpg" width="800" />
+<video src="../assets/ui/in-experience/Showcase.mp4" controls width="100%"></video>
 
 ## UI Objects
 

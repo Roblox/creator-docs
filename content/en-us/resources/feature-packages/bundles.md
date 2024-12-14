@@ -389,7 +389,7 @@ Consider the following best practice guidance on redundant recordings of Receipt
 
 Constants for the **Core** feature package live in two spots:
 
-- Shared constants live in `ReplicatedStorage.FeaturePackageCore.Configs.SharedConstants`.
+- Shared constants live in `ReplicatedStorage.FeaturePackagesCore.Configs.SharedConstants`.
 
 - Package-specific constants, in this case the **Bundles** feature package, live in `ReplicatedStorage.Bundles.Configs.Constants`.
 
@@ -399,7 +399,7 @@ The main things you might want to adjust to meet the design requirements of your
 - Purchase effect duration and particle colors
 - Heads up display collapsibility
 
-Additionally, you can find strings for translation broken out into one location: `ReplicatedStorage.FeaturePackageCore.Configs.TranslationStrings`.
+Additionally, you can find strings for translation broken out into one location: `ReplicatedStorage.FeaturePackagesCore.Configs.TranslationStrings`.
 
 ## Customizing UI Components
 
@@ -444,7 +444,7 @@ A common example of this bundle type is a single-use starter pack offer that dis
    <tr>
    <td>`singleUse`</td>
    <td>`bool`</td>
-   <td>**(Optional)** If not set, the purchase can be reactivated after it's purchased or expired.<br></br><br></br>If set, once purchased or expired the first time, it will not be promptable ever again, even if you call `BundleKit.promptIfValidAsync` with the bundleId.</td>
+   <td>**(Optional)** If not set, the purchase can be reactivated after it's purchased or expired.<br></br><br></br>If set, once purchased or expired the first time, it will not be promptable ever again, even if you call `Bundles.promptIfValidAsync` with the bundleId.</td>
    </tr>
    </tbody>
    </table>

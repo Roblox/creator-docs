@@ -120,17 +120,21 @@ The server CPU and memory charts default to the **Overall** view, but have dropd
 
 If a category is higher than usual or appears to be taking up a disproportionate amount of time, use the dropdown menu to drill down on the group and identify processes that could be causing issues.
 
-<img src="../../assets/analytics/performance/perf-dash-drilldown.png" alt="The server CPU time chart showing the physics dropdown." width="600px" />
+<img src="../../assets/analytics/performance/perf-dash-drilldown.png" alt="The server CPU time chart showing the physics dropdown." width="700px" />
 
 <Alert severity="success">
 To exclude a group or process from a chart, click its label in the legend.
 </Alert>
 
-The categories in the dropdown menu map to the ones in the [MicroProfiler](../../studio/microprofiler/index.md), so you can open the MicroProfiler, select **Detailed** or **Timers** modes, and then use the **Groups** menu to filter by the problematic process group.
+- CPU categories and tasks map to the ones in the [MicroProfiler](../../studio/microprofiler/index.md), so you can take [server dumps](../../studio/microprofiler/index.md#profiling-the-server), select **Timers** mode, and then use the **Groups** menu to filter by the problematic process group.
 
-For example, if you spot a potential problem with the **assemble** process under the **Physics** group, you can find it under the same name in the MicroProfiler:
+  For example, if you spot a potential problem with the **assemble** process under the **Physics** group, you can find it under the same name in the MicroProfiler:
 
-<img src="../../assets/analytics/performance/perf-dash-micro.png" alt="The MicroProfiler showing the assemble process within the Physics group." width="500px" />
+  <img src="../../assets/analytics/performance/perf-dash-micro.png" alt="The MicroProfiler showing the assemble process within the Physics group." width="700px" />
+
+- Memory tags map to the ones in `Enum.DeveloperMemoryTag`, with the notable exception of **CoreMemory:Total**, which is equivalent to `Enum.DeveloperMemoryTag.Internal`. You can use the [Developer Console](../../studio/optimization/memory-usage.md#memory) to check tags for excessive usage. This image shows how you might use the Developer Console to investigate an issue with **PlaceMemory:GraphicsTexture** that you see in the dashboard:
+
+  <img src="../../assets/analytics/performance/perf-dash-dev.png" alt="The Developer Console showing the server memory view." width="750px" />
 
 ## Troubleshooting
 

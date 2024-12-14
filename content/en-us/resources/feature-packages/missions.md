@@ -21,11 +21,11 @@ For information on how to provide players with fresh goals and incentives so tha
 
 The **Creator Store** is a tab of the Toolbox that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add one or more assets directly into an open experience, including feature packages!
 
-Every feature package requires the **Core Feature Package** to function properly. Once the **Core Feature Package** and **Missions Feature Package** assets are within your inventory, you can reuse them in any project on the platform.
+Every feature package requires the **Core** feature package to function properly. Once the **Core** and **Missions** feature package assets are within your inventory, you can reuse them in any project on the platform.
 
 To get the packages from your inventory into your experience:
 
-1. Add the **Core Feature Package** and **Missions Feature Package** to your inventory within Studio by clicking the **Add to Inventory** link in the following set of components.
+1. Add the **Core** and **Missions** to your inventory within Studio by clicking the **Add to Inventory** link in the following set of components.
 
 	<Grid container spacing={2} style={{marginBottom: 48}}>
 
@@ -52,12 +52,12 @@ To get the packages from your inventory into your experience:
 
    <img src="../../assets/studio/toolbox/Inventory-Tab.png" alt="Studio's Toolbox window with the Inventory tab highlighted." width="360" />
 
-5. Click the **Core Feature Package** tile, then the **Missions Feature Package** tile. Both package folders display in the **Explorer** window.
+5. Click the **Feature Package Core** tile, then the **Missions Feature Package** tile. Both package folders display in the **Explorer** window.
 6. Drag the package folders into **ReplicatedStorage**.
 
 ## Defining Missions
 
-Each completeable mission includes a set of tasks that must be finished to complete the mission, configuration options, and optional display metadata, all of which can be defined within `ReplicatedStorage.MissionKit.Configs.Missions`, with types exported from the `Types` script in the same folder.
+Each completeable mission includes a set of tasks that must be finished to complete the mission, configuration options, and optional display metadata, all of which can be defined within `ReplicatedStorage.Missions.Configs.Missions`, with types exported from the `Types` script in the same folder.
 
 ### Required Fields
 
@@ -299,7 +299,7 @@ Time tasks have a target amount of time spent, and are started and stopped. When
 
 ## Configuring Categories
 
-Categories do not have to be explicitly defined to be used, as the category for a mission has default values that will be used. However, you can configure these values in `ReplicatedStorage.MissionKit.Configs.Categories` to add additional effects to the category. Categories are identified by unique `CategoryIds`, the same ones referenced in the missions config.
+Categories do not have to be explicitly defined to be used, as the category for a mission has default values that will be used. However, you can configure these values in `ReplicatedStorage.Missions.Configs.Categories` to add additional effects to the category. Categories are identified by unique `CategoryIds`, the same ones referenced in the missions config.
 
    <table>
    <thead>
@@ -320,23 +320,23 @@ Categories do not have to be explicitly defined to be used, as the category for 
 
 ## Integrating Server Logic
 
-Take a look at `ReplicatedStorage.MissionKit.Server.Examples.MissionKitExample`, which shows how your server will interact with **Missions Feature Package**.
+Take a look at `ReplicatedStorage.Missions.Server.Examples.MissionsExample`, which shows how your server will interact with the **Missions** feature package.
 
-You mainly need to hook up four things once dragging **Missions Feature Package** into your experience:
+You mainly need to hook up four things once dragging the **Missions** feature package into your experience:
 
 1. Define missions in your missions config.
 
 2. Add logic to your experience to update task progress or the counters the progress is tied to.
 
-   ``` lua
+   ``` lua title="README"
    -- Increases progress on a mission Jumping with a Jumps task
-   MissionKit.addProgressToTask(player, "Jumping", "Jumps", 1)
+   Missions.addProgressToTask(player, "Jumping", "Jumps", 1)
 
    -- Starts the timer on a mission BattlingTime with a TimeInBattle task
-   MissionKit.startTimedTask(player, "BattlingTime", "TimeInBattle")
+   Missions.startTimedTask(player, "BattlingTime", "TimeInBattle")
 
    -- Stops the timer on a mission BattlingTime with a TimeInBattle task
-   MissionKit.stopTimedTask(player, "BattlingTime", "TimeInBattle")
+   Missions.stopTimedTask(player, "BattlingTime", "TimeInBattle")
 
    -- Increases the progress on all tasks tied to the Jumps counter
    CounterSystem.addCounter(player, "Jumps", 1)
@@ -351,37 +351,37 @@ You mainly need to hook up four things once dragging **Missions Feature Package*
 
 3. Set mission completion handlers, and optionally unlock or fail handlers. Use the completion handler to award the rewards from the mission in your experience.
 
-   ``` lua
+   ``` lua title="README"
    local function completeHandler(player: Player, missionId: Types.MissionId)
-       print(`{player} completed mission {missionId}`)
-       -- Award player their rewards.
-   end
+        print(`{player} completed mission {missionId}`)
+        -- Award player their rewards.
+    end
 
-   MissionKit.setCompletionHandler(missionId, completeHandler)
+   Missions.setCompletionHandler(missionId, completeHandler)
    ```
 
-4. Unlock missions that are not unlocked automatically. **Missions Feature Package** logic ensures that all mission requirements are met before the mission is complete, and its rewards are collectible.
+4. Unlock missions that are not unlocked automatically. **Missions** feature package logic ensures that all mission requirements are met before the mission is complete, and its rewards are collectible.
 
-   ``` lua
-    MissionKit.unlockMission(player, "Manual")
+   ``` lua title="README"
+    Missions.unlockMission(player, "Manual")
    ```
 
 ## Configuring Constants
 
-Constants for **Core Feature Package** live in two spots:
+Constants for the **Core** feature package live in two spots:
 
-- Shared constants live in `ReplicatedStorage.CreatorKitCore.Configs.SharedConstants`.
+- Shared constants live in `ReplicatedStorage.FeaturePackagesCore.Configs.SharedConstants`.
 
-- Package-specific constants, in this case **Missions Feature Package**, live in `ReplicatedStorage.MissionKit.Configs.Constants`.
+- Package-specific constants, in this case the **Missions** feature package, live in `ReplicatedStorage.Missions.Configs.Constants`.
 
-Additionally, you can find strings for translation broken out into one location: `ReplicatedStorage.CreatorKitCore.Configs.TranslationStrings`.
+Additionally, you can find strings for translation broken out into one location: `ReplicatedStorage.FeaturePackagesCore.Configs.TranslationStrings`.
 
 ## Customizing UI Components
 
-By modifying the package objects, such as colors, font, and transparency, you can adjust the visual presentation of your **Missions Feature Package** UI. For example, in `ReplicatedStorage.MissionKit.Configs.Constants`, you can enable `SingleTaskMode` to display a progress bar for a task directly on the mission itself for missions that only have a single task.
+By modifying the package objects, such as colors, font, and transparency, you can adjust the visual presentation of your missions UI. For example, in `ReplicatedStorage.Missions.Configs.Constants`, you can enable `SingleTaskMode` to display a progress bar for a task directly on the mission itself for missions that only have a single task.
 
 <Alert severity="warning">
-If you move any of the objects around hierarchically, the code will not be able to find them, and you'll need to make adjustments in **MissionKitUI**.
+If you move any of the objects around hierarchically, the code will not be able to find them, and you'll need to make adjustments in **MissionsUI**.
 </Alert>
 
-In addition, if your experience already has an existing UI that you would like to integrate with **Missions Feature Package**, the client `Class.ModuleScript` `MissionKitClient` contains all the functions necessary to get the information about a player's missions sent from the server.
+In addition, if your experience already has an existing UI that you would like to integrate with the **Missions** feature package, the client `Class.ModuleScript` `MissionsClient` contains all the functions necessary to get the information about a player's missions sent from the server.
