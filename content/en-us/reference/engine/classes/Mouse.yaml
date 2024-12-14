@@ -436,7 +436,7 @@ properties:
       local Players = game:GetService("Players")
       local player = Players.LocalPlayer
       local mouse = player:GetMouse()
-      print(mouse.UnitRay.Direction.magnitude) -- Always 1
+      print(mouse.UnitRay.Direction.Magnitude) -- Always 1
       ```
     code_samples:
     type: Ray
