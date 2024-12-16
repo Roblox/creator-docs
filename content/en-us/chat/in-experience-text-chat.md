@@ -49,9 +49,9 @@ Text chat uses the [client‑server](../projects/client-server.md) model, with a
 
    - If the message is a regular chat message, it fires the `Class.TextChatService.SendingMessage` event to display the message to the sender on the sending client. At the same time, `Class.TextChannel:SendAsync()` passes the message to the server.
 
-1. The server fires `Class.TextChannel.ShouldDeliverCallback` to determine whether to deliver the message to other players based on the permissions you set (-- TODO: The permissions you set?) and Roblox community filtering requirements.
+1. The server fires `Class.TextChannel.ShouldDeliverCallback` to determine whether to deliver the message to other players based on permissions and Roblox community filtering requirements.
 
-1. If `Class.TextChannel.ShouldDeliverCallback` determines that message is eligible to deliver to other players, the server applies any filters (--TODO: Example filter?) and fires `Class.TextChannel.OnIncomingMessage` twice:
+1. If `Class.TextChannel.ShouldDeliverCallback` determines that message is eligible to deliver to other players, the server applies any filters and fires `Class.TextChannel.OnIncomingMessage` twice:
 
    1. The first time is on the sending client and signals that the server is processing the message through the `Class.TextChatService.MessageReceived` event. This event replaces the local message on the sending client with the processed message from the server. The message is identical if the original didn't require filtering.
 
@@ -83,7 +83,7 @@ All callbacks are expected to be non-yielding functions. Yielding or waiting for
 - `Class.TextChannel.ShouldDeliverCallback` - This callback should be defined on the server only. The callback is fired for each `Class.TextSource` child of the text channel when a message is sent to determine whether the message should be delivered. This callback can be used to implement custom message delivery logic that may depend on additional gameplay context, such as:
 
   - [Proximity-based chat](./examples/proximity-chat.md) where users can only send messages to those close to them.
-  - Preventing users with certain attributes (--TODO: Example?) from sending messages to others.
+  - Preventing users with certain attributes from sending messages to others.
 
 #### Customizing Message Display
 
@@ -151,7 +151,7 @@ Though both systems share the same basic chat functionalities, TextChatService i
       <td>Disable chat</td>
       <td>[Game Settings](../studio/game-settings.md) in Studio and `ChatWindow/ChatSettings` module for hiding the chat window</td>
       <td>`Class.ChatWindowConfiguration.Enabled`</td>
-      <td>--TODO: No diff?</td>
+      <td></td>
     </tr>
   </tbody>
 </table>
