@@ -100,12 +100,14 @@ events:
         type: string
         default:
         summary: |
-          The pin on the `Class.AudioPitchShifter` that the `Class.Wire` targets.
+          The pin on the `Class.AudioPitchShifter` that the `Class.Wire`
+          targets.
       - name: wire
         type: Wire
         default:
         summary: |
-          The `Class.Wire` between the `Class.AudioPitchShifter` and the other instance.
+          The `Class.Wire` between the `Class.AudioPitchShifter` and the other
+          instance.
       - name: instance
         type: Instance
         default:

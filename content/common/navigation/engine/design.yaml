@@ -23,6 +23,8 @@ navigation:
     path: /production/game-design/monetization-foundations
   - title: Season Pass Design
     path: /production/game-design/season-pass-design
+  - title: Starter Pack Design
+    path: /production/game-design/starter-pack-design
   - title: Subscription Design
     path: /production/game-design/subscription-design
   - title: Contextual Purchases

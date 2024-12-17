@@ -91,22 +91,20 @@ The **Server** tab includes the following charts:
     <tbody>
         <tr>
             <td>Server CPU time</td>
-            <td>Stacked area chart showing milliseconds (ms) of processing time per frame. Values over 16.67 ms are highly undesirable; they can cause server frame rates to drop below 60.</td>
-        </tr>
-        <tr>
-            <td>Server memory usage</td>
-            <td>Stacked area chart showing server memory usage in MB. Try to keep this value below 3 GB. If this number stays above 3 GB or continually increases over time, investigate ways to [improve memory usage](../../performance-optimization/improving.md#script-memory-usage).</td>
+            <td>Stacked area chart showing milliseconds (ms) of processing time per frame. Values over 16.67 ms are highly undesirable; they can cause server frame rates to drop below 60. See [Server Compute](../../performance-optimization/identifying.md#server-compute)</td>
         </tr>
         <tr>
             <td>Server frame rate</td>
             <td>Line graph showing server frame rate in FPS. Ideally, this value is always 60. Server frame rate is capped at 60, and drops can reduce client frame rate and increase latency. See [Script Computation](../../performance-optimization/improving.md#script-computation).</td>
         </tr>
-        {/*
+        <tr>
+            <td>Server memory usage</td>
+            <td>Stacked area chart showing server memory usage in MB. Try to keep this value below 50% of the [total server memory](../../performance-optimization/identifying.md#server-memory). However, the chart doesn't show the total server memory, so another good guideline is to stay below 3 GB. If this number stays high or continually increases over time, investigate ways to [improve memory usage](../../performance-optimization/improving.md#script-memory-usage).</td>
+        </tr>
         <tr>
             <td>Server memory by age</td>
-            <td>Stacked area chart showing time that memory remains allocated before the engine garbage collects it. If one process group ages more than the other process groups over time, investigate a possible memory leak.</td>
+            <td>Stacked area chart showing server memory usage by server age. If memory usage increases significantly over the lifespan of the server, investigate possible memory leaks in the categories with the most growth, particularly [scripts](../../performance-optimization/improving.md#script-memory-usage), [physics](../../performance-optimization/improving.md#physics-memory-usage), and [rendering](../../performance-optimization/improving.md#rendering).</td>
         </tr>
-        */}
         <tr>
             <td>Cores used per server</td>
             <td>Line graph showing server CPU core count usage. Low core count usage combined with high server CPU time is an indicator that you should investigate [Multithreading](../../scripting/multithreading.md).</td>
@@ -122,17 +120,21 @@ The server CPU and memory charts default to the **Overall** view, but have dropd
 
 If a category is higher than usual or appears to be taking up a disproportionate amount of time, use the dropdown menu to drill down on the group and identify processes that could be causing issues.
 
-<img src="../../assets/analytics/performance/perf-dash-drilldown.png" alt="The server CPU time chart showing the physics dropdown." width="600px" />
+<img src="../../assets/analytics/performance/perf-dash-drilldown.png" alt="The server CPU time chart showing the physics dropdown." width="700px" />
 
 <Alert severity="success">
 To exclude a group or process from a chart, click its label in the legend.
 </Alert>
 
-The categories in the dropdown menu map to the ones in the [MicroProfiler](../../studio/microprofiler/index.md), so you can open the MicroProfiler, select **Detailed** or **Timers** modes, and then use the **Groups** menu to filter by the problematic process group.
+- CPU categories and tasks map to the ones in the [MicroProfiler](../../studio/microprofiler/index.md), so you can take [server dumps](../../studio/microprofiler/index.md#profiling-the-server), select **Timers** mode, and then use the **Groups** menu to filter by the problematic process group.
 
-For example, if you spot a potential problem with the **assemble** process under the **Physics** group, you can find it under the same name in the MicroProfiler:
+  For example, if you spot a potential problem with the **assemble** process under the **Physics** group, you can find it under the same name in the MicroProfiler:
 
-<img src="../../assets/analytics/performance/perf-dash-micro.png" alt="The MicroProfiler showing the assemble process within the Physics group." width="500px" />
+  <img src="../../assets/analytics/performance/perf-dash-micro.png" alt="The MicroProfiler showing the assemble process within the Physics group." width="700px" />
+
+- Memory tags map to the ones in `Enum.DeveloperMemoryTag`, with the notable exception of **CoreMemory:Total**, which is equivalent to `Enum.DeveloperMemoryTag.Internal`. You can use the [Developer Console](../../studio/optimization/memory-usage.md#memory) to check tags for excessive usage. This image shows how you might use the Developer Console to investigate an issue with **PlaceMemory:GraphicsTexture** that you see in the dashboard:
+
+  <img src="../../assets/analytics/performance/perf-dash-dev.png" alt="The Developer Console showing the server memory view." width="750px" />
 
 ## Troubleshooting
 

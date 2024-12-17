@@ -106,6 +106,26 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "roblox-api-key": {
+        "type": "apiKey",
+        "name": "roblox-api-key",
+        "in": "header"
+      },
+      "roblox-oauth2": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://apis.roblox.com/oauth/v1/authorize",
+            "tokenUrl": "https://apis.roblox.com/oauth/v1/token",
+            "refreshUrl": "https://apis.roblox.com/oauth/v1/token", 
+            "scopes": {
+              "universe-messaging-service:publish": "This grants the ability to publish messages on behalf of users."
+            }
+          }
+        }
+      }
     }
   }
 }
