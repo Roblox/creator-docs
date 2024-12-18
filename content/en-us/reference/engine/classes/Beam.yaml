@@ -141,9 +141,9 @@ properties:
 
       ```lua
       local colorSequence = ColorSequence.new({
-      		ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)),  -- Red
-      		ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 188, 203)),  -- Cyan
-      		ColorSequenceKeypoint.new(1, Color3.fromRGB(196, 0, 255)),  -- Purple
+      		ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)), -- Red
+      		ColorSequenceKeypoint.new(0.5, Color3.fromRGB(0, 188, 203)), -- Cyan
+      		ColorSequenceKeypoint.new(1, Color3.fromRGB(196, 0, 255)), -- Purple
       	}
       )
       ```
@@ -511,9 +511,9 @@ properties:
 
       ```lua
       local numberSequence = NumberSequence.new({
-      		NumberSequenceKeypoint.new(0, 0),  -- Opaque
-      		NumberSequenceKeypoint.new(0.5, 1),  -- Transparent
-      		NumberSequenceKeypoint.new(1, 0),  -- Opaque
+      		NumberSequenceKeypoint.new(0, 0), -- Opaque
+      		NumberSequenceKeypoint.new(0.5, 1), -- Transparent
+      		NumberSequenceKeypoint.new(1, 0), -- Opaque
       	}
       )
       ```

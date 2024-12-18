@@ -200,7 +200,7 @@ Overrides default configuration options through the following keys/values in the
 	</tr>
 	<tr>
 		<td>`cameraPortraitPosition`</td>
-		<td>Distance of the photo booth's camera, in front and upward from the character,  when taking a photo in portrait mode (`Datatype.Vector2`).</td>
+		<td>Distance of the photo booth's camera, in front and upward from the character, when taking a photo in portrait mode (`Datatype.Vector2`).</td>
 		<td>(10, 1)</td>
 	</tr>
 	<tr>

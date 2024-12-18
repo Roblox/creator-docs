@@ -262,7 +262,7 @@ DatastoresApi = tutorialFunctions.DataStores()
 datastoreName = "PlayerInventory"
 
 # List keys for global scope
-specialScopeKeys = DatastoresApi.list_entries(datastoreName, scope = "global",  allScopes = False)
+specialScopeKeys = DatastoresApi.list_entries(datastoreName, scope = "global", allScopes = False)
 print(keys.content)
 # List keys for special scope
 specialScopeKeys = DatastoresApi.list_entries(datastoreName, scope = "special", allScopes = False)
