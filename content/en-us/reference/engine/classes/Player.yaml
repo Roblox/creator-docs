@@ -1116,7 +1116,7 @@ methods:
       instances or positions, you can use the following:
 
       ```lua
-      local distance = (position1 - position2).magnitude
+      local distance = (position1 - position2).Magnitude
       ```
     code_samples:
       - Player-DistanceFromCharacter1
