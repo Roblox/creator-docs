@@ -142,7 +142,7 @@ Right now, the light only turns on and off once. To make the lamp continuously g
          task.wait(timeChange)
       end
 
-      for currentBrightness  = 5, 0, -brightnessChange do
+      for currentBrightness = 5, 0, -brightnessChange do
          light.Brightness = currentBrightness
          task.wait(timeChange)
       end

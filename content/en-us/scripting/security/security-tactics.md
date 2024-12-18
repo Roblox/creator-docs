@@ -139,7 +139,7 @@ local payload = {
 	Price = {
 		Name = "Price",
 		ClassName = "NumberValue",
-		Value = 0,  -- Negative values could also be used, resulting in giving currency rather than taking it!
+		Value = 0, -- Negative values could also be used, resulting in giving currency rather than taking it!
 	},
 }
 
