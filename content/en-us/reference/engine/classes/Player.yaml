@@ -686,8 +686,30 @@ properties:
 
       You can get the name of the player followed using this user ID and the
       `Class.Players:GetNameFromUserIdAsync()` function.
-    code_samples:
-      - Followed-Alert
+    code_samples: |
+  ```lua
+ local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+
+local screenGUi = Instance.new("ScreenGui")
+screenGUi.Parent = player:WaitForChild("PlayerGui")
+
+local function onPlayerAdded(newPlayer)
+	if newPlayer.FollowUserId == player.UserId then
+		local textLabel = Instance.new("TextLabel")
+		textLabel.Parent = screenGUi
+		textLabel.Text = "You were followed to this game by " .. newPlayer.Name .. "!"
+		task.delay(3, function()
+			if textLabel then
+				textLabel:Destroy()
+			end
+		end)
+	end
+end
+
+Players.PlayerAdded:Connect(onPlayerAdded)
+  ```
     type: int64
     tags:
       - ReadOnly
