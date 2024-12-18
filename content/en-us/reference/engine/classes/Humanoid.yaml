@@ -1482,8 +1482,9 @@ methods:
       end
       ```
 
-      When this function is called, the humanoid will automatically unequip any
-      `Class.Tool|Tools` that it currently has equipped
+      When this function is called, the `Class.Humanoid` will first
+      automatically unequip all `Class.Tool|Tools` that it currently has
+      equipped.
 
       Although they will be equipped, `Class.Tool|Tools` for which
       `Class.Tool.RequiresHandle` is _true_ will not function if they have no
