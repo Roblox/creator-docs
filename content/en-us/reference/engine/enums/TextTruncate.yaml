@@ -17,11 +17,16 @@ items:
   - name: AtEnd
     summary: |
       Text is truncated at the end of the text; extra graphemes that cannot fit
-      into the space are replaced with `...`. Word boundaries are respected if possible.
-      Example: If the Control is between -> and <- 
-      ->Long text is truncated at the en<-d of the last complete word
-      The text will look like:
-      Long text is truncated at the...
+      into the space are replaced with `...`. Word boundaries are respected if
+      possible.
+
+      For example, if the control is between -> and <- like so:
+
+      `->Long text is truncated at the en<-d of the last complete word`
+
+      The text will be:
+
+      `Long text is truncated at the...`
     value: 1
     tags: []
     deprecation_message: ''
