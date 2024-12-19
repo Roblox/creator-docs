@@ -158,8 +158,8 @@ local SurfaceArt = require(ReplicatedStorage:WaitForChild("SurfaceArt"))
 local function createParticleEmitter(canvas, position)
 	local attachment = Instance.new("Attachment")
 	attachment.Position = canvas.CFrame:PointToObjectSpace(position)
-	attachment.Axis = Vector3.new(0, 0, 1)
-	attachment.SecondaryAxis = Vector3.new(1, 0, 0)
+	attachment.Axis = vector.create(0, 0, 1)
+	attachment.SecondaryAxis = vector.create(1, 0, 0)
 	attachment.Parent = canvas
 
 	local particleEmitter = Instance.new("ParticleEmitter")

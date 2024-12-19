@@ -1862,7 +1862,7 @@ methods:
       `Class.Workspace.CurrentCamera|CurrentCamera`.
 
       ```lua
-      humanoid:Move(Vector3.new(0, 0, -1), true)
+      humanoid:Move(vector.create(0, 0, -1), true)
       ```
 
       When this function is called, the `Class.Humanoid` will move until the
