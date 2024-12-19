@@ -27,12 +27,17 @@ items:
     deprecation_message: ''
   - name: SplitWord
     summary: |
-      If the end of the line occurs in the middle of a word, the text is truncated inside of that word; extra graphemes that cannot fit
-      into the space are replaced with `...`.
-      Example: If the Control is between -> and <- 
-      ->Long text is truncated at the en<-d of the last complete word
-      The text will look like:
-      Long text is truncated at the en...
+      If the end of the line occurs in the middle of a word, the text is
+      truncated inside of that word. Extra graphemes that cannot fit into the
+      space are replaced with `...`.
+
+      For example, if the control is between -> and <- like so:
+
+      `->Long text is truncated at the en<-d of the last complete word`
+
+      The text will be:
+
+      `Long text is truncated at the en...`
     value: 2
     tags: []
     deprecation_message: ''
