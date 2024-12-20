@@ -119,7 +119,7 @@ def get_entry(self, datastore, object_key, scope = None):
         if 'Content-MD5' in r.headers:
             expected_checksum = r.headers['Content-MD5']
             checksum = base64.b64encode(hashlib.md5(r.content).digest())
-            #print(f'Expected {expected_checksum},  got {checksum}')
+            #print(f'Expected {expected_checksum}, got {checksum}')
 
         attributes = None
         if self.ATTR_HDR in r.headers:

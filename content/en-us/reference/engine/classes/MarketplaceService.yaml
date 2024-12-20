@@ -394,7 +394,7 @@ methods:
         </tr>
         </tbody>
       </table>
-      	
+
       #### Creator Information
 
       <table size="small">
@@ -753,8 +753,8 @@ methods:
         <tr>
       	  <td><code>PaymentStatus</code></td>
       	  <td><code>Enum.SubscriptionPaymentStatus</code></td>
-      	  <td><code>Enum.SubscriptionPaymentStatus.Paid</code> if the user paid for this particular subscription period. 
-          <code>Enum.SubscriptionPaymentStatus.Refunded</code> if the user refunded this particular subscription period. 
+      	  <td><code>Enum.SubscriptionPaymentStatus.Paid</code> if the user paid for this particular subscription period.
+          <code>Enum.SubscriptionPaymentStatus.Refunded</code> if the user refunded this particular subscription period.
           </td>
         </tr>
         </tbody>
@@ -1049,8 +1049,7 @@ events:
       Note: This is not a trusted event from the client. To check if the user
       owns the items purchased, `Class.MarketplaceService.PlayerOwnsAsset` or
       `Class.MarketplaceService.PlayerOwnsBundle` can be used.
-    code_samples:
-      - Bulk-Purchase-Finished
+    code_samples: []
     parameters:
       - name: player
         type: Instance

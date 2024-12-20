@@ -112,7 +112,7 @@ Good Variable Names
 - `playerPoints`
 - `numberStorageArray`
 
-Bad Variables Names
+Bad Variable Names
 
 - `myVariable` - Doesn't describe the purpose of the variable
 - `player name` - The included space will cause issues

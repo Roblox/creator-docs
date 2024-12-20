@@ -188,6 +188,24 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: TeleportService:GetThirdPartyTeleportInfo
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: goForth
+        type: bool
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TeleportService:SetTeleportGui
     summary: |
       Sets the custom `Class.ScreenGui|teleport GUI` that will be shown to the
@@ -538,6 +556,24 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: TeleportService:TeleportTrustedBackForth
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: goForth
+        type: bool
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

@@ -69,7 +69,7 @@ Note the `Datatype.DockWidgetPluginGuiInfo.new()` constructor expects its parame
 ```lua
 -- Create new "DockWidgetPluginGuiInfo" object
 local widgetInfo = DockWidgetPluginGuiInfo.new(
-	Enum.InitialDockState.Float,  -- Widget will be initialized in floating panel
+	Enum.InitialDockState.Float, -- Widget will be initialized in floating panel
 	true,   -- Widget will be initially enabled
 	false,  -- Don't override the previous enabled state
 	200,    -- Default width of the floating window
@@ -322,7 +322,7 @@ local function onButton1Down()
 		Sender = "SomeDragSource",  -- Describes from where the data originated
 		MouseIcon = "",             -- Image content to use for the cursor
 		DragIcon = "",              -- Image content to render under the cursor during drag
-		HotSpot = Vector2.zero -- Where on the DragIcon to center the cursor
+		HotSpot = Vector2.zero      -- Where on the DragIcon to center the cursor
 	}
 	plugin:StartDrag(dragInfo)
 end

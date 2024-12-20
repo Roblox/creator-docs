@@ -930,6 +930,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Feature.yaml
         ignoreTranslation: true
+      - title: FeatureRestrictionManager
+        path: /reference/engine/classes/FeatureRestrictionManager
+        type: engineapi
+        source: /reference/engine/classes/FeatureRestrictionManager.yaml
+        ignoreTranslation: true
       - title: File
         path: /reference/engine/classes/File
         type: engineapi
@@ -1994,6 +1999,11 @@ navigation:
         path: /reference/engine/classes/ReflectionMetadataYieldFunctions
         type: engineapi
         source: /reference/engine/classes/ReflectionMetadataYieldFunctions.yaml
+        ignoreTranslation: true
+      - title: RelativeGui
+        path: /reference/engine/classes/RelativeGui
+        type: engineapi
+        source: /reference/engine/classes/RelativeGui.yaml
         ignoreTranslation: true
       - title: RemoteDebuggerServer
         path: /reference/engine/classes/RemoteDebuggerServer
@@ -3777,11 +3787,6 @@ navigation:
         path: /reference/engine/enums/CreatorTypeFilter
         type: engineapi
         source: /reference/engine/enums/CreatorTypeFilter.yaml
-        ignoreTranslation: true
-      - title: CSGAsyncDynamicCollision
-        path: /reference/engine/enums/CSGAsyncDynamicCollision
-        type: engineapi
-        source: /reference/engine/enums/CSGAsyncDynamicCollision.yaml
         ignoreTranslation: true
       - title: CurrencyType
         path: /reference/engine/enums/CurrencyType

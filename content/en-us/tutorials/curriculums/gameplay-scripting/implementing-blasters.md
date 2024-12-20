@@ -79,7 +79,7 @@ The next step is to generate the blast data. If you review **ReplicatedStorage**
 
 - The player who initiates the blast.
 - A `DataType.CFrame` that represents the blast's point of origin.
-- A `RayResult` table that contains each laser beam's final destination and the hit player,  if hit another player.
+- A `RayResult` table that contains each laser beam's final destination and the hit player, if hit another player.
 
 To generate this data, `blastClient` calls **ReplicatedStorage** > **attemptBlastClient** > **blastClient** > **generateBlastData**, which you can review below.
 
