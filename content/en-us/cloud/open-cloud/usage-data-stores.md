@@ -78,7 +78,8 @@ When [creating an API Key](./api-keys.md) for this example, make sure you perfor
 
 #### Adding Scripts for the User Inventory Support Portal
 
-##### > Python Example
+<details open>
+   <summary>Click for Python Example</summary>
 
 After creating the API key with permissions required for the example app, you need to add Python scripts to perform app functionalities. The `data_stores_methods.py` file shows how to define [`List Entries`](../../reference/cloud/datastores-api/v1.json#list-entries), [`Get Entry`](../../reference/cloud/datastores-api/v1.json#get-entry), and [`Increment Entry`](../../reference/cloud/datastores-api/v1.json#increment-entry) methods. The `update_inventory` file uses the defined methods to list a subset of user inventories, increase the virtual currency for each user, and update the data.
 
@@ -188,8 +189,10 @@ To test, set the `API_KEY` environment variable and run `update_inventory` file:
 export API_KEY=... \
 python update_inventory
 ```
+</details>
 
-##### > JavaScript Example
+<details>
+   <summary>Click for JavaScript Example</summary>
 
 After creating the API key with the required permissions for the example app, you need to add JavaScript code to perform app functionalities. The `data_stores_methods.js` file shows how to define [`List Entries`](../../reference/cloud/datastores-api/v1.json#list-entries), [`Get Entry`](../../reference/cloud/datastores-api/v1.json#get-entry), and [`Increment Entry`](../../reference/cloud/datastores-api/v1.json#increment-entry) methods. The `update_inventory.js` file uses the defined methods to list a subset of user inventories, increase the virtual currency for each user, and update the data.
 
@@ -275,6 +278,7 @@ To test, set the `API_KEY` environment variable and run the JavaScript file:
 export API_KEY=... \
 node updateInventory.js
 ```
+</details>
 
 ### External Persistent Leaderboard
 
@@ -308,7 +312,8 @@ When [creating an API Key](./api-keys.md) for this example, make sure you perfor
 
 #### Adding Scripts for the Leaderboard
 
-##### > Python Example
+<details open>
+<summary>Click for Python Example</summary>
 
 After creating the API key with permissions required for the example app, you need to add Python scripts to perform app functionalities.
 
@@ -400,7 +405,10 @@ python leaderboard
 
 After completing testing, you can publish or embed the leaderboard to websites outside of Roblox for more reach.
 
-##### > JavaScript Example
+</details>
+
+<details>
+<summary>Click for JavaScript Example</summary>
 
 After creating the API key with the required permissions for the example app, you need to add JavaScript code to perform app functionalities.
 
@@ -497,3 +505,4 @@ node leaderboard.js
 ```
 
 After completing testing, you can publish or embed the leaderboard to websites outside of Roblox for more reach.
+</details>
