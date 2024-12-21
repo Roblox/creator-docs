@@ -334,11 +334,10 @@ For example, the following code sample uses `Class.PolicyService:GetPolicyInfoFo
 ```lua
 local Players = game:GetService("Players")
 local PolicyService = game:GetService("PolicyService")
-local Workspace = game:GetService("Workspace")
 
 local player = Players.LocalPlayer
--- Sample assumes a "Main Portal Template" model exists under Workspace
-local mainPortal = Workspace:WaitForChild("Main Portal Template")
+-- Sample assumes a "Main Portal Template" model exists under workspace
+local mainPortal = workspace:WaitForChild("Main Portal Template")
 
 -- Get the policy info for the user
 	local success, result = pcall(PolicyService.GetPolicyInfoForPlayerAsync, PolicyService, player)

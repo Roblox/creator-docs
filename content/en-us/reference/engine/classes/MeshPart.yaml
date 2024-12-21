@@ -235,9 +235,7 @@ properties:
       applied to the mesh.
 
       ```
-      local Workspace = game:GetService("Workspace")
-
-      local meshPart = Workspace.MeshPart
+      local meshPart = workspace.MeshPart
       meshPart.TextureContent = Content.none  -- No texture
       ```
 
@@ -263,9 +261,8 @@ properties:
 
       ```
       local AssetService = game:GetService("AssetService")
-      local Workspace = game:GetService("Workspace")
 
-      local meshPart = Workspace.MeshPart
+      local meshPart = workspace.MeshPart
 
       local editableImage = AssetService:CreateEditableImageAsync(meshPart.TextureContent)
       meshPart.TextureContent = Content.fromObject(editableImage)  -- Live updates
@@ -309,9 +306,7 @@ properties:
       to the mesh.
 
       ```
-      local Workspace = game:GetService("Workspace")
-
-      local meshPart = Workspace.MeshPart
+      local meshPart = workspace.MeshPart
       meshPart.TextureID = ""  -- No texture
       ```
 

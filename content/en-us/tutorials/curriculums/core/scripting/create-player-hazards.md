@@ -52,9 +52,8 @@ To create the basic water hazard:
 
    ```lua
    local Players = game:GetService("Players")
-   local Workspace = game:GetService("Workspace")
 
-   local hazardsFolder = Workspace.World.Hazards
+   local hazardsFolder = workspace.World.Hazards
    local hazards = hazardsFolder:GetChildren()
 
    local function onHazardTouched(otherPart)

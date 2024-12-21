@@ -598,7 +598,6 @@ The default health meter system includes a brief, subtle red tint on the screen 
 2. Select all lines and paste over them with the following code:
 
 		```lua title='UpdateCustomMeter'
-		local Workspace = game:GetService("Workspace")
 		local Players = game:GetService("Players")
 		local TweenService = game:GetService("TweenService")
 
@@ -614,7 +613,7 @@ The default health meter system includes a brief, subtle red tint on the screen 
 		local cachedHealth = humanoid.Health / humanoid.MaxHealth
 
 		-- Get (or create new) color correction effect inside player camera
-		local colorCorrection = Workspace.CurrentCamera:FindFirstChildWhichIsA("ColorCorrectionEffect") or Instance.new("ColorCorrectionEffect", Workspace.CurrentCamera)
+		local colorCorrection = workspace.CurrentCamera:FindFirstChildWhichIsA("ColorCorrectionEffect") or Instance.new("ColorCorrectionEffect", workspace.CurrentCamera)
 		colorCorrection.Name = "DamageColorEffect"
 
 		-- Reference to meter bar inner frame

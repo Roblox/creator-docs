@@ -216,13 +216,11 @@ To create a local script that will detect when the local player's character touc
 1. In the new script, paste the following code:
 
    ```lua
-   local Workspace = game:GetService("Workspace")
-
    local animation = script:WaitForChild("Animation")
    local humanoid = script.Parent:WaitForChild("Humanoid")
    local animator = humanoid:WaitForChild("Animator")
    local animationTrack = animator:LoadAnimation(animation)
-   local animationDetector = Workspace:WaitForChild("AnimationDetector")
+   local animationDetector = workspace:WaitForChild("AnimationDetector")
 
    local debounce = false
 
@@ -249,7 +247,7 @@ To create a local script that will detect when the local player's character touc
 </AccordionSummary>
 <AccordionDetails>
 
-The `TriggerAnimation` script starts by getting the `Class.Workspace` service, which contains all objects that exist in the 3D world. This is important because the script needs to reference the `Class.Part` object acting as your volume.
+The `TriggerAnimation` script starts by setting variables for the Humanoid and necessary animation references. This is important because the script needs to reference these later.
 
 For each player character that loads or respawns back into the experience, the script waits for:
 

@@ -92,7 +92,6 @@ If you believe all the content in your experience collectively constitutes an ad
 ```lua
 local Players = game:GetService("Players")
 local PolicyService = game:GetService("PolicyService")
-local Workspace = game:GetService("Workspace")
 
 local player = Players.LocalPlayer
 

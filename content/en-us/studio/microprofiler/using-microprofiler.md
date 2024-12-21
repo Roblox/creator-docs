@@ -61,7 +61,7 @@ Now that the MicroProfiler has provided a starting point, you can troubleshoot t
    		local endPosition = getRandomPosition()
    		local direction = endPosition - startPosition
 
-   		Workspace:Raycast(
+   		workspace:Raycast(
             startPosition,
             endPosition
          )
@@ -86,7 +86,7 @@ Now that the MicroProfiler has provided a starting point, you can troubleshoot t
          local endPosition = getRandomPosition()
          local direction = endPosition - startPosition
 
-         Workspace:Raycast(
+         workspace:Raycast(
             startPosition,
             endPosition
          )

@@ -295,7 +295,6 @@ data. To update **CoinService**:
 
     ```lua
     -- Initializing services and variables
-    local Workspace = game:GetService("Workspace")
     local Players = game:GetService("Players")
     local ServerStorage = game:GetService("ServerStorage")
 
@@ -303,7 +302,7 @@ data. To update **CoinService**:
     local Leaderboard = require(ServerStorage.Leaderboard)
     local PlayerData = require(ServerStorage.PlayerData)
 
-    local coinsFolder = Workspace.World.Coins
+    local coinsFolder = workspace.World.Coins
     local coins = coinsFolder:GetChildren()
 
     local COIN_KEY_NAME = PlayerData.COIN_KEY_NAME

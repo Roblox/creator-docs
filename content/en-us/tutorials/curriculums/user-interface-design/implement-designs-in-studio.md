@@ -1920,7 +1920,6 @@ The following `ReplicatedStorage.FirstPersonBlasterVisuals` client script handle
 ``` lua
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local Workspace = game:GetService("Workspace")
 local RunService = game:GetService("RunService")
 
 local BlastData = require(ReplicatedStorage.Blaster.BlastData)
@@ -1938,7 +1937,7 @@ local laserBlastedBindableEvent = ReplicatedStorage.Instances.LaserBlastedBindab
 local RIG_OFFSET_FROM_CAMERA = CFrame.new(2, -2, -3) * CFrame.Angles(math.rad(0.25), math.rad(95.25), 0)
 
 local localPlayer = Players.LocalPlayer
-local currentCamera = Workspace.CurrentCamera
+local currentCamera = workspace.CurrentCamera
 
 local rigModel = nil
 local cooldownBar = nil
@@ -1949,7 +1948,7 @@ local function addFirstPersonVisuals()
 
 	-- Add the first person rig
 	rigModel = blasterConfig.RigModel:Clone()
-	rigModel.Parent = Workspace
+	rigModel.Parent = workspace
 
 	-- Add the cooldownBar
 	cooldownBar = addCooldownBar(rigModel.PrimaryPart.CooldownBarAttachment)

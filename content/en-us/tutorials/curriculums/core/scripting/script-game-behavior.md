@@ -68,10 +68,9 @@ which tells the engine to run the script on the server, and prevents clients fro
 
    ```lua
    -- Initializing services and variables
-   local Workspace = game:GetService("Workspace")
    local Players = game:GetService("Players")
 
-   local coinsFolder = Workspace.World.Coins
+   local coinsFolder = workspace.World.Coins
    local coins = coinsFolder:GetChildren()
 
    local COOLDOWN = 10
@@ -129,16 +128,15 @@ which tells the engine to run the script on the server, and prevents clients fro
      workspace for all references to coin objects with the
      `Class.Instance:GetChildren()|GetChildren()` method. This method returns an
      array containing everything parented to the object it's associated with,
-     which in this case is the `Workspace.World.Coins` folder you created
+     which in this case is the `workspace.World.Coins` folder you created
      previously.
    - **Defines a global variable** - The `COOLDOWN` variable is used later to
      define how long to disable a coin after it's collected.
 
      ```lua title="Initializing Services and Variables"
-     local Workspace = game:GetService("Workspace")
      local Players = game:GetService("Players")
 
-     local coinsFolder = Workspace.World.Coins
+     local coinsFolder = workspace.World.Coins
      local coins = coinsFolder:GetChildren()
 
      local COOLDOWN = 10
