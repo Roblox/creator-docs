@@ -234,7 +234,7 @@ sound:Play()
 -- Start checking if emitter should be enabled
 RunService.Heartbeat:Connect(function()
 	-- Enable the emitter within a time range of the audio; otherwise disable it
-	emitter.Enabled = if sound.TimePosition >= 5 and sound.TimePosition < 20 then true else false
+	emitter.Enabled = sound.TimePosition >= 5 and sound.TimePosition < 20
 end)
 ```
 
