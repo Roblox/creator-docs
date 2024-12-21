@@ -69,15 +69,13 @@ properties:
       `Datatype.Vector3.new(10, 0, 0)`.
 
       ```lua
-      local Workspace = game:GetService("Workspace")
-
-      local camera = Workspace.CurrentCamera
+      local camera = workspace.CurrentCamera
       camera.CameraType = Enum.CameraType.Scriptable
 
       local pos = Vector3.new(0, 10, 0)
       local lookAtPos = Vector3.new(10, 0, 0)
 
-      Workspace.CurrentCamera.CFrame = CFrame.lookAt(pos, lookAtPos)
+      workspace.CurrentCamera.CFrame = CFrame.lookAt(pos, lookAtPos)
       ```
 
       Although the camera can be placed in the manner demonstrated above, you
@@ -93,9 +91,8 @@ properties:
         ```lua
         local Players = game:GetService("Players")
         local TweenService = game:GetService("TweenService")
-        local Workspace = game:GetService("Workspace")
 
-        local camera = Workspace.CurrentCamera
+        local camera = workspace.CurrentCamera
         camera.CameraType = Enum.CameraType.Scriptable
 
         local player = Players.LocalPlayer
@@ -149,10 +146,9 @@ properties:
 
       ```lua
       local Players = game:GetService("Players")
-      local Workspace = game:GetService("Workspace")
 
       local localPlayer = Players.LocalPlayer
-      local camera = Workspace.CurrentCamera
+      local camera = workspace.CurrentCamera
 
       local function resetCameraSubject()
       	if camera and localPlayer.Character then
@@ -378,9 +374,8 @@ properties:
 
       ```lua
       local UserInputService = game:GetService("UserInputService")
-      local Workspace = game:GetService("Workspace")
 
-      local camera = Workspace.CurrentCamera
+      local camera = workspace.CurrentCamera
 
       local headCFrame = UserInputService:GetUserCFrame(Enum.UserCFrame.Head)
       headCFrame = headCFrame.Rotation + headCFrame.Position * camera.HeadScale
@@ -710,9 +705,7 @@ methods:
       should opt for the `Class.WorldRoot:Raycast()` method.
 
       ```lua
-      local Workspace = game:GetService("Workspace")
-
-      local camera = Workspace.CurrentCamera
+      local camera = workspace.CurrentCamera
 
       local castPoints = {
       	Vector3.new(0, 10, 0),
@@ -767,9 +760,8 @@ methods:
 
       ```lua
       local UserInputService = game:GetService("UserInputService")
-      local Workspace = game:GetService("Workspace")
 
-      local camera = Workspace.CurrentCamera
+      local camera = workspace.CurrentCamera
 
       local headCFrame = UserInputService:GetUserCFrame(Enum.UserCFrame.Head)
       headCFrame = headCFrame.Rotation + headCFrame.Position * camera.HeadScale
@@ -1007,9 +999,7 @@ methods:
       create a longer ray, you can do the following:
 
       ```lua
-      local Workspace = game:GetService("Workspace")
-
-      local camera = Workspace.CurrentCamera
+      local camera = workspace.CurrentCamera
       local length = 500
       local unitRay = camera:ScreenPointToRay(100, 100)
       local extendedRay = Ray.new(unitRay.Origin, unitRay.Direction * length)
@@ -1216,9 +1206,7 @@ methods:
       centre of the screen, for example:
 
       ```lua
-      local Workspace = game:GetService("Workspace")
-
-      local camera = Workspace.CurrentCamera
+      local camera = workspace.CurrentCamera
 
       local viewportPoint = camera.ViewportSize / 2
       local unitRay = camera:ViewportPointToRay(viewportPoint.X, viewportPoint.Y, 0)
@@ -1228,9 +1216,7 @@ methods:
       create a longer ray, you can do the following:
 
       ```lua
-      local Workspace = game:GetService("Workspace")
-
-      local camera = Workspace.CurrentCamera
+      local camera = workspace.CurrentCamera
 
       local length = 500
       local unitRay = camera:ScreenPointToRay(100, 100)
@@ -1287,9 +1273,7 @@ methods:
       `Class.Camera:WorldToViewportPoint()|WorldToViewportPoint()`.
 
       ```lua
-      local Workspace = game:GetService("Workspace")
-
-      local camera = Workspace.CurrentCamera
+      local camera = workspace.CurrentCamera
 
       local worldPoint = Vector3.new(0, 10, 0)
       local vector, onScreen = camera:WorldToScreenPoint(worldPoint)
@@ -1346,9 +1330,7 @@ methods:
       `Class.Camera:WorldToScreenPoint()|WorldToScreenPoint()`.
 
       ```lua
-      local Workspace = game:GetService("Workspace")
-
-      local camera = Workspace.CurrentCamera
+      local camera = workspace.CurrentCamera
 
       local worldPoint = Vector3.new(0, 10, 0)
       local vector, onScreen = camera:WorldToViewportPoint(worldPoint)
