@@ -362,7 +362,7 @@ Remember that module scripts are used to centralize similar code. Since the time
    ```lua
    while myTimer:isRunning() do
    	-- Adding +1 makes sure the timer display ends at 1 instead of 0.
-   	timeLeft.Value = (math.floor(myTimer:getTimeLeft() + 1))
+   	timeLeft.Value = (myTimer:getTimeLeft() + 1) // 1
    	-- By not setting the time for wait, it offers more accurate looping
    	task.wait()
    end
@@ -378,7 +378,7 @@ Remember that module scripts are used to centralize similar code. Since the time
 
    	while myTimer:isRunning() do
    		-- Adding +1 makes sure the timer display ends at 1 instead of 0.
-   		timeLeft.Value = (math.floor(myTimer:getTimeLeft() + 1))
+   		timeLeft.Value = (myTimer:getTimeLeft() + 1) // 1
    		-- By not setting the time for wait, it offers more accurate looping
    		task.wait()
    	end
@@ -492,7 +492,7 @@ local function startTimer()
 
 	while myTimer:isRunning() do
 		-- Adding +1 makes sure the timer display ends at 1 instead of 0.
-		timeLeft.Value = (math.floor(myTimer:getTimeLeft() + 1))
+		timeLeft.Value = (myTimer:getTimeLeft() + 1) // 1
 		-- By not setting the time for wait, it offers more accurate looping
 		task.wait()
 	end
