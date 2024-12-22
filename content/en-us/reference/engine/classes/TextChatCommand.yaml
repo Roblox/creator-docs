@@ -11,7 +11,7 @@ description: |
   "/{PrimaryAlias}" or "/{SecondaryAlias}" into the chat.
 
   To learn more about using `Class.TextChatService`, see
-  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+  [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
 code_samples: []
 inherits:
   - Instance

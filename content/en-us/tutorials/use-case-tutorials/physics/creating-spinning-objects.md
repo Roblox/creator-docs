@@ -156,7 +156,7 @@ However, if your block is a larger size and on grass terrain, you need to increa
 
 ### Using HingeConstraint Constraints
 
-`Class.HingeConstraint` objects are a type of [mechanical constraint](../../physics/mechanical-constraints.md) that allows two attachments to rotate around one axis, constraining the attachments to the same position and their primary axes in the same direction. When you set `Class.HingeConstraint.ActuatorType` to **Motor**, this constraint applies torque on the two attachments with the goal of the attachments reaching and maintaining a constant angular velocity.
+`Class.HingeConstraint` objects are a type of [mechanical constraint](../../../physics/mechanical-constraints.md) that allows two attachments to rotate around one axis, constraining the attachments to the same position and their primary axes in the same direction. When you set `Class.HingeConstraint.ActuatorType` to **Motor**, this constraint applies torque on the two attachments with the goal of the attachments reaching and maintaining a constant angular velocity.
 
 <video controls src="../../../assets/physics/constraints/Hinge-ActuatorType-Motor.mp4" alt="Video showing angular power configured for motor behavior" width="60%" ></video>
 
@@ -180,6 +180,8 @@ The **Creator Store** is a tab of the Toolbox that you can use to find all asset
 This tutorial references a propeller model that you can use as you replicate each step of the `Class.HingeConstraint` technique of spinning objects. You can add this model to your inventory within Studio by clicking the **Add to Inventory** link in the following component. Once assets are within your inventory, you can reuse them in any project on the platform.
 
 <BrowseSampleCard href='https://create.roblox.com/store/asset/16558528602' description='Create your spinning object with this propeller model.' title='Propeller' assetId={16558528602}  />
+
+<br> </br>
 
 To get this propeller asset from your inventory into your experience:
 
@@ -218,7 +220,7 @@ To configure attachments for the hinge constraint:
 
 1. Move **BaseAttachment** to the top of **Base**, and **HeadAttachment** to the bottom edge of **Propeller**. This tells Studio where to connect the hinge itself, and overlap both attachments at runtime.
 
-   <img src="../../assets/tutorials/creating-spinning-objects/HC-Attachments-4.jpg" width="80%" />
+   <img src="../../../assets/tutorials/creating-spinning-objects/HC-Attachments-4.jpg" width="80%" />
 
 #### Configure Constraint
 

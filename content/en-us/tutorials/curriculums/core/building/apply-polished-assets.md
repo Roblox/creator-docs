@@ -52,6 +52,8 @@ You can add the library to your inventory within Studio by clicking the **Add to
 
 <BrowseSampleCard href='https://create.roblox.com/store/asset/14238769242' description='Create the completed version of the Core sample experience with these art assets. Includes six 3D assets and two custom materials.' title='Core Curriculum Library' assetId={14238769242}  />
 
+<br> </br>
+
 To get the asset library from your inventory into your experience:
 
 1. In the menu bar, select the **View** tab.

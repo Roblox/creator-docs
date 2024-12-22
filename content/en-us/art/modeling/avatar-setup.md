@@ -3,10 +3,6 @@ title: Avatar Setup
 description: The Avatar Setup tool previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
 ---
 
-import BetaAlert from '../../includes/beta-features/beta-alert.md'
-
-<BetaAlert betaName="Avatar Auto-Setup Beta" leadIn="The auto-setup feature of this tool is currently in beta through " leadOut="." components={props.components} />
-
 The **Avatar Setup** tool allows you to auto-setup avatar meshes, preview animations, clothing, skin tones, and test avatar character bodies directly in Studio. Marketplace creators can also begin the uploading and validation process from this tool to quickly publish their assets.
 
 <img src="../../assets/studio/general/Avatar-Tab-Avatar-Setup.png" width="760" alt="Avatar Preview button indicated in Avatar tab" />
