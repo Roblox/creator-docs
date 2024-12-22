@@ -212,7 +212,7 @@ methods:
       local LocalizationService = game:GetService("LocalizationService")
 
       local success, translator = pcall(function()
-      	return LocalizationService:GetTranslatorForPlayerAsync(game.Players.LocalPlayer)
+      	return LocalizationService:GetTranslatorForPlayerAsync(game:GetSerivce("Players").LocalPlayer)
       end)
 
       if success then

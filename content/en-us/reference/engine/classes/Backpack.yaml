@@ -30,10 +30,10 @@ description: |
 
   ```lua
   -- Accessing Backpack from a Server Script:
-  game.Players.PlayerName.Backpack
+  game:GetSerivce("Players").PlayerName.Backpack
 
   -- Accessing Backpack from a LocalScript:
-  game.Players.LocalPlayer.Backpack
+  game:GetSerivce("Players").LocalPlayer.Backpack
   ```
 code_samples:
   - Backpack-Give-Tool
