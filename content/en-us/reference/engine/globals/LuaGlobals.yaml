@@ -95,7 +95,7 @@ functions:
       position information to the message.
     parameters:
       - name: message
-        type: string
+        type: Variant
         default:
         summary: |
           The error message to display.
