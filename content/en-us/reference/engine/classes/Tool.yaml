@@ -393,7 +393,7 @@ events:
       ```lua
       local tool = Instance.new("Tool")
       tool.RequiresHandle = false
-      tool.Parent = game.Players.LocalPlayer.Backpack
+      tool.Parent = game:GetSerivce("Players").LocalPlayer.Backpack
 
       function onActivation()
       	print("Tool activated")
@@ -425,7 +425,7 @@ events:
       ```lua
       local tool = Instance.new("Tool")
       tool.RequiresHandle = false
-      tool.Parent = game.Players.LocalPlayer.Backpack
+      tool.Parent = game:GetSerivce("Players").LocalPlayer.Backpack
 
       function toolDeactivated()
       	print("Tool deactivated")

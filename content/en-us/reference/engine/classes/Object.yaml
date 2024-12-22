@@ -165,7 +165,7 @@ methods:
       		end
       	end
       end
-      paintFigure(game.Players.Player.Character, BrickColor.new("Bright blue"))
+      paintFigure(game:GetSerivce("Players").Player.Character, BrickColor.new("Bright blue"))
       ```
 
       Since all classes inherit from `Class.Object`, calling

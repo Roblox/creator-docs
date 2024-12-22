@@ -1422,7 +1422,7 @@ events:
       local CustomScrollingFrame = script.Parent
       local SubFrame = CustomScrollingFrame:FindFirstChild("SubFrame")
 
-      local mouse = game.Players.LocalPlayer:GetMouse()
+      local mouse = game:GetSerivce("Players").LocalPlayer:GetMouse()
       function getPosition(X, Y)
       	local gui_X = CustomScrollingFrame.AbsolutePosition.X
       	local gui_Y = CustomScrollingFrame.AbsolutePosition.Y
