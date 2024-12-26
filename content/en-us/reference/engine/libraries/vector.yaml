@@ -214,7 +214,7 @@ functions:
   - name: vector.min
     summary: Applies `math.min` to the corresponding components of the input vectors.
     description: |
-      Applies `math.max` to the corresponding components of the input vectors. Equivalent to `vector.create(math.min((...).x), math.min((...).y), math.min((...).z))`.
+      Applies `math.min` to the corresponding components of the input vectors. Equivalent to `vector.create(math.min((...).x), math.min((...).y), math.min((...).z))`.
     parameters:
       - name: ...
         type: vector
