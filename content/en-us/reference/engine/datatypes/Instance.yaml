@@ -38,7 +38,7 @@ constructors:
         summary: |
           Class name of the new instance to create.
       - name: parent
-        type: Instance
+        type: Instance?
         default:
         summary: |
           Optional object to parent the new instance to. Not recommended for performance reasons (see description above).
