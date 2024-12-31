@@ -31,14 +31,12 @@ The [Toolbox](../projects/assets/toolbox.md) contains a wide variety of audio as
 
 You can import custom audio as long as it meets the following requirements:
 
-- You have the legal rights to that asset.
-- It adheres to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
 - It's a single track/stream in either `.mp3`, `.ogg`, `.wav` or `.flac` format.
-- It's less than 20 MB in size and 7 minutes in duration.
+- It's less than 20 MB in size and 9 minutes in duration.
 - Its sample rate is less than or equal to 48 kHz.
 - Its channels are set to mono or stereo 2.0, 3.0, or 5.1 surround.
 
-If you're [ID verified](../production/publishing/account-verification.md), you can import 100 free audio assets per 30 days; if you're unverified, you can upload 10 free audio assets per 30 days. Studio assigns each new audio asset a **unique asset ID** that you can use within your experiences to [play the audio](../sound/objects.md).
+If you're [ID verified](../production/publishing/account-verification.md), you can import 250 free audio assets per 30 days; if you're unverified, you can upload 20 free audio assets per 30 days. Studio assigns each new audio asset a **unique asset ID** that you can use within your experiences to [play the audio](../sound/objects.md).
 
 ### Uploading
 
@@ -63,4 +61,3 @@ You can upload audio through the [Asset Manager](../projects/assets/manager.md),
    If Studio continues to reject the audio you're trying to import, ensure your audio tools are updated, then verify that the audio files meet the import requirements.
 	 </Alert>
 
-The audio assets are now within the moderation queue and are only visible to you within the **Audio** folder of the [Asset Manager](../projects/assets/manager.md) and, after passing moderation, the [Toolbox](../projects/assets/toolbox.md). Although you are initially the only one who can view and use private audio assets, the [asset privacy](../projects/assets/privacy.md) system lets you grant usage permissions to specific friends and experiences.
