@@ -456,6 +456,71 @@ methods:
           </tbody>
       </table>
 
+      #### HTTP Methods
+
+      The HTTP request methods specify the purpose of the request being made and what is expected if the request is successful. 
+      For instance: The [`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET) request method tells the server at the requested address that a resource is being requested and if 
+      it succeeds, the resource at that address will be returned. Similarly, the [`HEAD`](https://developer.mozilla.org/docs/Web/HTTP/Methods/HEAD) request method does the same except the 
+      server knows to return a response without a `Body` element.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Method</th>
+                  <th>Description</th>
+                  <th>Supported</th>
+                  <th>Safe</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><b>[`GET`](https://developer.mozilla.org/docs/Web/HTTP/Methods/GET)</b></td>
+                  <td>The `GET` method requests the resource at the specified address. Does not support use of the `Body` parameter.</td>
+                  <td>Yes</td>
+              </tr>
+              <tr>
+                  <td><b>[`HEAD`](https://developer.mozilla.org/docs/Web/HTTP/Methods/HEAD)</b></td>
+                  <td>The `HEAD` method requests a response identical to a `GET` request, but with no response body. Does not support use of the `Body` parameter.</td>
+                  <td>Yes</td>
+              </tr>
+              <tr>
+                  <td><b>[`POST`](https://developer.mozilla.org/docs/Web/HTTP/Methods/POST)</b></td>
+                  <td>The `POST` method submits the supplied `Body` data to the requested address.</td>
+                  <td>Yes</td>
+              </tr>
+              <tr>
+                  <td><b>[`PUT`](https://developer.mozilla.org/docs/Web/HTTP/Methods/PUT)</b></td>
+                  <td>The `PUT` method replaces all current iterations of the resource specified within the supplied `Body` data.</td>
+                  <td>Yes</td>
+              </tr>
+              <tr>
+                  <td><b>[`DELETE`](https://developer.mozilla.org/docs/Web/HTTP/Methods/DELETE)</b></td>
+                  <td>The `DELETE` method deletes the resource specified in the supplied `Body` data at the requested address.</td>
+                  <td>Yes</td>
+              </tr>
+              <tr>
+                  <td><b>[`CONNECT`](https://developer.mozilla.org/docs/Web/HTTP/Methods/CONNECT)</b></td>
+                  <td>The `CONNECT` method establishes a tunnel to the requested server identified with the supplied `Body` data.</td>
+                  <td>No</td>
+              </tr>
+              <tr>
+                  <td><b>[`OPTIONS`](https://developer.mozilla.org/docs/Web/HTTP/Methods/OPTIONS)</b></td>
+                  <td>The `OPTIONS` method requests the permitted communication options for the supplied address.</td>
+                  <td>Yes</td>
+              </tr>
+              <tr>
+                  <td><b>[`TRACE`](https://developer.mozilla.org/docs/Web/HTTP/Methods/TRACE)</b></td>
+                  <td>The `TRACE` method performs a message loop-back test along the path to the resource specified in the supplied `Body` data.</td>
+                  <td>Yes</td>
+              </tr>
+              <tr>
+                  <td><b>[`PATCH`](https://developer.mozilla.org/docs/Web/HTTP/Methods/PATCH)</b></td>
+                  <td>The `PATCH` method applies partial changes to the resource specified in the supplied `Body` data at the requested address.</td>
+                  <td>Yes</td>
+              </tr>
+          </tbody>
+      </table>
+
       #### HTTP Headers
 
       In the request dictionary, you can specify custom HTTP headers to use in
