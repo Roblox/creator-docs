@@ -592,5 +592,12 @@ https://github.com/evaera/roblox-animation-transfer?tab=readme-ov-file
 https://github.com/evaera/roblox-animation-transfer
 https://support.tipalti.com/Content/Topics/UserGuide/PaymentInformation/PaymentMethodsCoverage/IntroUSD.htm?Highlight=payment%20coverage#USD
 https://github.com/Roblox/creator-docs/tree/main/content/en-us/reference/cloud
-https://developer.mozilla.org/
-
+https://developer.mozilla.org/docs/Web/HTTP/Methods/GET
+https://developer.mozilla.org/docs/Web/HTTP/Methods/HEAD
+https://developer.mozilla.org/docs/Web/HTTP/Methods/POST
+https://developer.mozilla.org/docs/Web/HTTP/Methods/PUT
+https://developer.mozilla.org/docs/Web/HTTP/Methods/DELETE
+https://developer.mozilla.org/docs/Web/HTTP/Methods/CONNECT
+https://developer.mozilla.org/docs/Web/HTTP/Methods/OPTIONS
+https://developer.mozilla.org/docs/Web/HTTP/Methods/TRACE
+https://developer.mozilla.org/docs/Web/HTTP/Methods/PATCH
