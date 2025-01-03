@@ -51,6 +51,8 @@ methods:
       signal created by `Class.CollectionService:GetInstanceAddedSignal()` with
       the given tag.
 
+      **Warning:** An instance's tags that were added client-side will be dropped if the server later adds or removes a tag on that instance, because the server replicates all tags together and overwrites previous tags.
+
       **Warning:** When tagging an instance, it is common that some resources
       are used to give the tag its functionality, e.g. event connections or
       tables. To prevent memory leaks, it is a good idea to clean these up
