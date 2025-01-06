@@ -54,7 +54,7 @@ After you get a hash map, call any of the following functions to read or write d
 </tbody>
 </table>
 
-For more in depth documentation about each function, see `Class.MemoryStoreHashMap`.
+For in-depth documentation about each function, see `Class.MemoryStoreHashMap`.
 
 <Alert severity="warning">
 All functions accessing data structures in memory stores are asynchronous network calls that might occasionally fail. You should wrap these calls in `Global.LuaGlobals.pcall()` to catch and handle errors, as shown in the code samples.
