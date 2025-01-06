@@ -113,7 +113,9 @@ You can also combine functions inside a `Class.LocalScript|LocalScript`. For exa
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
-local player = game.Players.LocalPlayer
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
 local button = script.Parent
 
 -- Replace the placeholder ID with your developer product ID
