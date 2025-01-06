@@ -324,7 +324,7 @@ methods:
       ##### Warnings
       
       - An instance's tags that were added client-side will be dropped if the server
-      later adds or removes a tag on that instance, because the server replicates
+      later adds or removes a tag on that instance because the server replicates
       all tags together and overwrites previous tags.
 
       - When tagging an instance, it is common that some resources are
