@@ -29,6 +29,8 @@ description: |
   The Backpack can be accessed from both the client and the server.
 
   ```lua
+  local Players = game:GetService("Players")
+  
   -- Accessing Backpack from a Server Script:
   game:GetSerivce("Players").PlayerName.Backpack
 
