@@ -6,7 +6,7 @@ summary: |
   Represents a text chat command.
 description: |
   Represents a text chat command. Can be used to create custom text chat
-  commands when parented to the `TextChatCommands` folder inside
+  commands when parented to the `TextChatCommands|no-link` folder inside
   `Class.TextChatService`. Custom commands can have up to two aliases,
   and the Triggered event fires when a user types "/{PrimaryAlias}" or
   "/{SecondaryAlias}" into the chat.
