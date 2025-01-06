@@ -29,11 +29,13 @@ description: |
   The Backpack can be accessed from both the client and the server.
 
   ```lua
+  local Players = game:GetService("Players")
+  
   -- Accessing Backpack from a Server Script:
-  game.Players.PlayerName.Backpack
+  local backpack = Players.PlayerName.Backpack
 
   -- Accessing Backpack from a LocalScript:
-  game.Players.LocalPlayer.Backpack
+  local backpack = Players.LocalPlayer.Backpack
   ```
 code_samples:
   - Backpack-Give-Tool

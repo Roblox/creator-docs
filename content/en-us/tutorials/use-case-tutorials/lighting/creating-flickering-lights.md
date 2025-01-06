@@ -147,7 +147,7 @@ end
 RunService.Heartbeat:Connect(function()
 	-- Solves for the NumberSequence's time (between 0 and 1).
 	local t = time() / loopDuration
-	local numberSequenceTime = t - math.floor(t)
+	local numberSequenceTime = t - (t // 1)
 
 	-- Gets the NumberSequence's value at this time.
 	local brightnessValue = evaluateNumberSequence(brightnessCurve, numberSequenceTime)
