@@ -32,7 +32,7 @@ description: |
   local Players = game:GetService("Players")
   
   -- Accessing Backpack from a Server Script:
-  game:GetSerivce("Players").PlayerName.Backpack
+  local backpack = Players.PlayerName.Backpack
 
   -- Accessing Backpack from a LocalScript:
   game:GetSerivce("Players").LocalPlayer.Backpack
