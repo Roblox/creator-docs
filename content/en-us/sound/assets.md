@@ -34,7 +34,7 @@ You can import custom audio as long as it meets the following requirements:
 - You have the legal rights to that asset.
 - It adheres to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
 - It's a single track/stream in either `.mp3`, `.ogg`, `.wav` or `.flac` format.
-- It's less than 20 MB in size and 7 minutes in duration.
+- It's less than 50 MB in size and 20 minutes in duration.
 - Its sample rate is less than or equal to 48 kHz.
 - Its channels are set to mono or stereo 2.0, 3.0, or 5.1 surround.
 
