@@ -155,6 +155,8 @@ methods:
       `Datatype.BrickColor` property:
 
       ```lua
+      local Players = game:GetService("Players")
+      
       local function paintFigure(character, color)
       	-- Iterate over the child objects of the character
       	for _, child in character:GetChildren() do
@@ -165,7 +167,7 @@ methods:
       		end
       	end
       end
-      paintFigure(game:GetSerivce("Players").Player.Character, BrickColor.new("Bright blue"))
+      paintFigure(Players.Player.Character, BrickColor.new("Bright blue"))
       ```
 
       Since all classes inherit from `Class.Object`, calling
