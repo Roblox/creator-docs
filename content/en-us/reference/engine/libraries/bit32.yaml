@@ -451,7 +451,7 @@ functions:
       For positive displacements, the following equality holds:
 
       ```lua
-      assert(bit32.rshift(b, disp) == math.floor(b % 2^32 / 2^disp))
+      assert(bit32.rshift(b, disp) == (b % 2^32 / 2^disp) // 1)
       ```
 
       This shift operation is what is called logical shift.
