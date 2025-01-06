@@ -60,7 +60,7 @@ methods:
       - When tagging an instance, it is common that some resources
       are used to give the tag its functionality, for example event connections or
       tables. To prevent memory leaks, it's a good idea to clean these up
-      (disconnect, set to nil, etc) when no longer needed for a tag. Do this
+      (disconnect, set to `nil`, etc.) when no longer needed for a tag. Do this
       when calling `Class.CollectionService:RemoveTag()`, calling
       `Class.Instance:Destroy()` or in a function connected to a signal returned
       by `Class.CollectionService:GetInstanceRemovedSignal()`.
