@@ -209,10 +209,11 @@ methods:
       text as the second argument:
 
       ```lua
+      local Players = game:GetService("Players")
       local LocalizationService = game:GetService("LocalizationService")
 
       local success, translator = pcall(function()
-      	return LocalizationService:GetTranslatorForPlayerAsync(game:GetSerivce("Players").LocalPlayer)
+      	return LocalizationService:GetTranslatorForPlayerAsync(Players.LocalPlayer)
       end)
 
       if success then
