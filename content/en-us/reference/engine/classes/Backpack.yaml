@@ -35,7 +35,7 @@ description: |
   local backpack = Players.PlayerName.Backpack
 
   -- Accessing Backpack from a LocalScript:
-  game:GetSerivce("Players").LocalPlayer.Backpack
+  local backpack = Players.LocalPlayer.Backpack
   ```
 code_samples:
   - Backpack-Give-Tool
