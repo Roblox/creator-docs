@@ -294,7 +294,7 @@ For this one we will be using the `__index` metamethod just to make it simple:
 ```lua
 local function mathProblem(num)
     for i = 1, 20 do
-    	num = math.floor(num * 10 + 65)
+    	num = (num * 10 + 65) // 1
     end
     for i = 1, 10 do
     	num += i - 1
