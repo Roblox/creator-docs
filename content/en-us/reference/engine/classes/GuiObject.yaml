@@ -1417,11 +1417,14 @@ events:
       of the user's mouse relative to a GUI element:
 
       ```lua
+      local Players = game:GetService("Players")
+      
       local CustomScrollingFrame = script.Parent
       local SubFrame = CustomScrollingFrame:FindFirstChild("SubFrame")
 
-      local mouse = game:GetSerivce("Players").LocalPlayer:GetMouse()
-      function getPosition(X, Y)
+      local mouse = Players.LocalPlayer:GetMouse()
+      
+      local function getPosition(X, Y)
       	local gui_X = CustomScrollingFrame.AbsolutePosition.X
       	local gui_Y = CustomScrollingFrame.AbsolutePosition.Y
 
