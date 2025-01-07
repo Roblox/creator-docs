@@ -26,7 +26,7 @@ If your animations are stored as Animation instances under pre-prepared Characte
 ```lua
 local ANIMSTRING = ""
 
-for _, character in pairs(workspace:GetChildren()) do
+for _, character in workspace:GetChildren() do
 	  if not character:IsA("Model") then
 		  continue
 	  end
@@ -36,7 +36,7 @@ for _, character in pairs(workspace:GetChildren()) do
 		  continue
 	  end
 
-	  for _, animation in pairs(animations:GetChildren()) do
+	  for _, animation in animations:GetChildren() do
 		  local animationId = string.match(animation.AnimationId, "%d+")
 		  if animationId then
 			  ANIMSTRING ..= (animationId .. " " .. character.Name .. "_" .. string.gsub(animation.Name, " ", "_") .. "\n")
@@ -119,7 +119,7 @@ local function convertFileToAnimationMap(animFileText: string)
 	local NEW_ANIMATION_MAP = ""
 
 	local lines = string.split(animFileText, "\n")
-	for _, line in pairs(lines) do
+	for _, line in lines do
 		local components = string.split(line, " ")
 		if #components ~= 2 then
 			continue
