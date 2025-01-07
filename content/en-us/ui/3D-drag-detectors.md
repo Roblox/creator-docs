@@ -398,14 +398,14 @@ local function snapToWorldGrid(proposedMotion)
 	if startPartPosition == nil then
 		return proposedMotion
 	end
-	local snapIncrement = math.floor(SNAP_INCREMENT)
+	local snapIncrement = SNAP_INCREMENT // 1
 	if snapIncrement < 1 then
 		return proposedMotion
 	end
 	local newWorldPosition = startPartPosition + proposedMotion.Position
-	local roundedX = math.floor(newWorldPosition.X / snapIncrement + 0.5) * snapIncrement
-	local roundedY = math.floor(newWorldPosition.Y / snapIncrement + 0.5) * snapIncrement
-	local roundedZ = math.floor(newWorldPosition.Z / snapIncrement + 0.5) * snapIncrement
+	local roundedX = ((newWorldPosition.X / snapIncrement + 0.5) // 1) * snapIncrement
+	local roundedY = ((newWorldPosition.Y / snapIncrement + 0.5) // 1) * snapIncrement
+	local roundedZ = ((newWorldPosition.Z / snapIncrement + 0.5) // 1) * snapIncrement
 	local newRoundedWorldPosition = Vector3.new(roundedX, roundedY, roundedZ)
 	return proposedMotion.Rotation + (newRoundedWorldPosition - startPartPosition)
 end
