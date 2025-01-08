@@ -224,9 +224,7 @@ To create a pose:
 
    <Alert severity="info" variant="standard">
    When creating poses, you can toggle between **Move** and **Rotate**
-   modes by pressing <kbd>Ctrl</kbd><kbd>2</kbd> or <kbd>Ctrl</kbd><kbd>4</kbd>,
-   respectively (<kbd>⌘</kbd><kbd>2</kbd> or <kbd>⌘</kbd><kbd>4</kbd>
-   on Mac). These modes work exactly like moving and rotating base objects, including the snap settings and incremental values located in the **Snap to Grid** section of the **Model** tab.
+   modes by pressing <kbd>R</kbd>. These modes work exactly like moving and rotating base objects, including the snap settings and incremental values located in the **Snap to Grid** section of the **Model** tab.
    </Alert>
 
 5. Continue moving or rotating bones or meshes until you get the desired pose.
