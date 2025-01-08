@@ -23,8 +23,7 @@ properties:
       `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` is a read-only
       property that provides the screen position of a `Class.GuiBase2d` element
       in pixels. This represents the actual pixel position at which an element
-      renders as a result of its ancestors' sizes and positions. Note that the
-      object's `Class.GuiObject.AnchorPoint|AnchorPoint` influences
+      renders as a result of its ancestors' sizes and positions. Note that
       `Class.GuiBase2d.AbsolutePosition|AbsolutePosition`, but it will always
       represent the top-left corner of the `Class.GuiBase2d` element.
 
