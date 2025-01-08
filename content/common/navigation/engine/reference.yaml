@@ -3298,6 +3298,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AdEventType.yaml
         ignoreTranslation: true
+      - title: AdFormat
+        path: /reference/engine/enums/AdFormat
+        type: engineapi
+        source: /reference/engine/enums/AdFormat.yaml
+        ignoreTranslation: true
       - title: AdornCullingMode
         path: /reference/engine/enums/AdornCullingMode
         type: engineapi
@@ -4917,6 +4922,11 @@ navigation:
         path: /reference/engine/enums/Severity
         type: engineapi
         source: /reference/engine/enums/Severity.yaml
+        ignoreTranslation: true
+      - title: ShowAdResult
+        path: /reference/engine/enums/ShowAdResult
+        type: engineapi
+        source: /reference/engine/enums/ShowAdResult.yaml
         ignoreTranslation: true
       - title: SignalBehavior
         path: /reference/engine/enums/SignalBehavior

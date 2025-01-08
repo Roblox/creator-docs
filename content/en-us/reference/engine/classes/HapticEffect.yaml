@@ -35,8 +35,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Data
     serialization:
@@ -52,8 +52,8 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Data
     serialization:
@@ -110,7 +110,7 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: HapticEffect:SetKeys
+  - name: HapticEffect:SetWaveformKeys
     summary: ''
     description: ''
     code_samples: []
@@ -124,7 +124,7 @@ methods:
         summary: ''
     tags: []
     deprecation_message: ''
-    security: RobloxScriptSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

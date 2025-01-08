@@ -5,8 +5,9 @@ description: |
   The `Enum.Font` enum is used in `Class.TextBox`, `Class.TextLabel`, and
   `Class.TextButton` to determine how the GUI element will render its text.
 
-  See also `Datatype.Font` as a newer alternative to this enum which encapsulates fonts
-  as a datatype and provides access to more fonts than this enum allows.
+  See also `Datatype.Font` as a newer alternative to this enum which
+  encapsulates fonts as a datatype and provides access to more fonts than this
+  enum allows.
 code_samples:
 tags: []
 deprecation_message: ''
