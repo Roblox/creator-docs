@@ -249,6 +249,23 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
+  - name: Workspace.FallHeightEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.FallenPartsDestroyHeight
     summary: |
       Determines the height at which falling `Class.BasePart|BaseParts` and

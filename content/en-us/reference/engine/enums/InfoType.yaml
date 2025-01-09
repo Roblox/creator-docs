@@ -10,19 +10,20 @@ deprecation_message: ''
 items:
   - name: Asset
     summary: |
-      Asset format type - the product is an asset.
+      The product is an asset.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Product
     summary: |
-      Product format type - the product is a produce (e.g. Developer product).
+      Product such as a
+      [Developer Product](../../../production/monetization/developer-products.md).
     value: 1
     tags: []
     deprecation_message: ''
   - name: GamePass
     summary: |
-      GamePass format type - the product is a GamePass.
+      The product is a game pass.
     value: 2
     tags: []
     deprecation_message: ''
