@@ -35,6 +35,25 @@ properties:
     capabilities:
       - Audio
     writeCapabilities: []
+  - name: AudioLimiter.Editor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: State Editing
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioLimiter.MaxLevel
     summary: |
       The maximum volume tolerated.

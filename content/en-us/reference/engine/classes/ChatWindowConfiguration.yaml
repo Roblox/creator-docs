@@ -339,7 +339,8 @@ methods:
       `Class.ChatWindowMessageProperties` inherits from
       `Class.TextChatMessageProperties`.
 
-      This is intended to be used during custom `Class.TextChatService.OnChatWindowAdded` callbacks.
+      This is intended to be used during custom
+      `Class.TextChatService.OnChatWindowAdded` callbacks.
 
       ```lua
       local TextChatService = game:GetService("TextChatService")

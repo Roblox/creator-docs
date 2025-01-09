@@ -5,20 +5,20 @@ description: An overview of how assets work on the platform.
 
 Almost everything in Roblox is represented as a cloud-based asset with a unique corresponding ID. This ID is typically in the form of `rbxassetid://[ID]`, which gets applied to various instances as a property that's appropriate for that particular asset type. For example, `Class.Texture`, `Class.MeshPart`, and `Class.Sound` instances reference image, mesh, and audio assets through their respective `Class.Texture.TextureID|TextureID`, `Class.MeshPart.MeshID|MeshID`, and `Class.Sound.SoundID|SoundID` properties.
 
-<table>
-  <tbody>
-    <tr>
-      <td><img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" /></td>
-      <td><img src="../../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" alt="An untextured treasure chest MeshPart asset." width="90%" /></td>
-      <td><audio controls><source src="../../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio></td>
-    </tr>
-    <tr>
-			<td><code>rbxassetid://7229442422</code></td>
-			<td><code>rbxassetid://6768917255</code></td>
-			<td><code>rbxassetid://9125402735</code></td>
-    </tr>
-  </tbody>
-</table>
+<GridContainer numColumns="3">
+	<figure>
+		`rbxassetid://7229442422`
+		<img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" />
+	</figure>
+	<figure>
+		`rbxassetid://6768917255`
+		<img src="../../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" alt="An untextured treasure chest MeshPart asset." width="90%" />
+	</figure>
+	<figure>
+		`rbxassetid://9125402735`
+		<audio controls><source src="../../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio>
+	</figure>
+</GridContainer>
 
 This cloud-based asset system allows you to store assets through Roblox and reuse them across the platform in various contexts, such as in different objects and places, without maintaining local copies as part of each saved Studio experience. You can find millions of project assets in the [Creator Store][CreatorMarketplaceURL], equip avatar assets in the [Marketplace][MarketplaceURL], or you can create your own assets and [import](#asset-management) them directly into Studio through the asset management tools.
 
@@ -214,7 +214,7 @@ The content folder's location depends on the user's operating system:
 		</tr>
 		<tr>
 			<td>`GameThumbnail`</td>
-			<td>ID for an experience (`Class.DataModel.GameId`); shows the experience's primary [thumbnail](../../production/promotion/thumbnails.md)</td>
+			<td>ID for an experience (`Class.DataModel.GameId`); shows the experience's primary [thumbnail](../../production/publishing/thumbnails.md)</td>
 			<td scope="row">256&times;144, 384&times;216, 480&times;270, 576&times;324, 768&times;432</td>
 		</tr>
 		<tr>
