@@ -644,36 +644,27 @@ methods: []
 events:
   - name: Mouse.Button1Down
     summary: |
-      Fired when the left mouse button is pressed.
+      Fires when the left mouse button is pressed.
     description: |
-      The Button1Down even fires when the player presses their left mouse
-      button.
-
-      This can also be accessed from a `Class.Tool`. For example, when placed in
-      a `Class.LocalScript`, the code below prints Button1Down whenever the left
-      mouse button is pressed:
+      This event fires when the player presses their left mouse button. Note
+      that this can be accessed from a `Class.Tool`; for example, when placed in
+      a `Class.LocalScript`, the code below prints `Button1Down` whenever the
+      left mouse button is pressed.
 
       ```lua
-      local Tool = script.Parent --make sure this is a Tool object
+      local tool = script.Parent  -- Make sure this is a Tool object
 
-      Tool.Equipped:Connect(function(Mouse)
-      	Mouse.Button1Down:Connect(function()
+      tool.Equipped:Connect(function(mouse)
+      	mouse.Button1Down:Connect(function()
       		print("Button1Down")
       	end)
       end)
       ```
 
-      Developers can find out the position of the mouse in world-space, and if
-      it is pointing at any `Class.BasePart`, using the `Class.Mouse.Hit` and
-      `Class.Mouse.Target` properties.
-
-      For information on how to obtain the mouse object, please see the
-      `Class.Mouse` page.
-
-      Note, developers are recommended to use `Class.UserInputService` instead
-      of the `Class.Mouse` object in new work.
+      You can find out the position of the mouse in world space and if it's
+      pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
+      `Class.Mouse.Target|Target` properties.
     code_samples:
-      - Mouse-Button1Down
     parameters: []
     tags: []
     deprecation_message: ''
@@ -685,19 +676,25 @@ events:
     summary: |
       Fires when the left mouse button is released.
     description: |
-      Fires when the left mouse button is released.
+      This event fires when the player releases their left mouse button. Note
+      that this can be accessed from a `Class.Tool`; for example, when placed in
+      a `Class.LocalScript`, the code below prints `Button1Up` whenever the left
+      mouse button is released.
 
-      For information on how to obtain the `Class.Mouse` object, please see the
-      `Class.Mouse` page.
+      ```lua
+      local tool = script.Parent  -- Make sure this is a Tool object
 
-      Developers can find out the position of the mouse in world-space, and if
-      it is pointing at any `Class.BasePart` using the `Class.Mouse.Hit` and
-      `Class.Mouse.Target` properties.
+      tool.Equipped:Connect(function(mouse)
+      	mouse.Button1Up:Connect(function()
+      		print("Button1Up")
+      	end)
+      end)
+      ```
 
-      Note, developers are recommended to use `Class.UserInputService` instead
-      of the `Class.Mouse` object in new work.
+      You can find out the position of the mouse in world space and if it's
+      pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
+      `Class.Mouse.Target|Target` properties.
     code_samples:
-      - Mouse-Button1Up1
     parameters: []
     tags: []
     deprecation_message: ''
@@ -709,34 +706,25 @@ events:
     summary: |
       Fires when the right mouse button is pressed.
     description: |
-      The Button2Down even fires when the player presses their right mouse
-      button.
-
-      This can also be accessed from a `Class.Tool`. For example, when placed in
-      a `Class.LocalScript`, the code below prints Button2Down whenever the
-      right mouse button is pressed:
+      This event fires when the player presses their right mouse button. Note
+      that this can be accessed from a `Class.Tool`; for example, when placed in
+      a `Class.LocalScript`, the code below prints `Button2Down` whenever the
+      right mouse button is pressed.
 
       ```lua
-      local Tool = script.Parent --make sure this is a Tool object
+      local tool = script.Parent  -- Make sure this is a Tool object
 
-      Tool.Equipped:Connect(function(Mouse)
-      	Mouse.Button2Down:Connect(function()
+      tool.Equipped:Connect(function(mouse)
+      	mouse.Button2Down:Connect(function()
       		print("Button2Down")
       	end)
-      end).
+      end)
       ```
 
-      Developers can find out the position of the mouse in world-space, and if
-      it is pointing at any `Class.BasePart`, using the `Class.Mouse.Hit` and
-      `Class.Mouse.Target` properties.
-
-      For information on how to obtain the mouse object, please see the
-      `Class.Mouse` page.
-
-      Note, developers are recommended to use `Class.UserInputService` instead
-      of the `Class.Mouse` object in new work.
+      You can find out the position of the mouse in world space and if it's
+      pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
+      `Class.Mouse.Target|Target` properties.
     code_samples:
-      - color-randomizer-tool-button2down-
     parameters: []
     tags: []
     deprecation_message: ''
@@ -748,25 +736,25 @@ events:
     summary: |
       Fired when the right mouse button is released.
     description: |
-      Fired when the right mouse button is released.
+      This event fires when the player releases their right mouse button. Note
+      that this can be accessed from a `Class.Tool`; for example, when placed in
+      a `Class.LocalScript`, the code below prints `Button2Up` whenever the
+      right mouse button is released.
 
       ```lua
-      mouse.Button2Up:Connect(function()
-      print("button 2 up!")
-      end
+      local tool = script.Parent  -- Make sure this is a Tool object
+
+      tool.Equipped:Connect(function(mouse)
+      	mouse.Button2Up:Connect(function()
+      		print("Button2Up")
+      	end)
+      end)
       ```
 
-      For information on how to obtain the `Class.Mouse` object, please see the
-      `Class.Mouse` page.
-
-      Developers can find out the position of the mouse in world-space, and if
-      it is pointing at any `Class.BasePart` using the `Class.Mouse.Hit` and
-      `Class.Mouse.Target` properties.
-
-      Note, developers are recommended to use `Class.UserInputService` instead
-      of the `Class.Mouse` object in new work.
+      You can find out the position of the mouse in world space and if it's
+      pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
+      `Class.Mouse.Target|Target` properties.
     code_samples:
-      - color-randomizer-tool-button1up-
     parameters: []
     tags: []
     deprecation_message: ''
