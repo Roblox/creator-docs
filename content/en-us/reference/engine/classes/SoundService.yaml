@@ -374,6 +374,21 @@ methods:
     capabilities: []
     writeCapabilities: []
 events:
+  - name: SoundService.OpenAudioCompressorEditorSignal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: selectedCompressorObjects
+        type: Instances
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SoundService.OpenDirectionalCurveEditorSignal
     summary: ''
     description: ''

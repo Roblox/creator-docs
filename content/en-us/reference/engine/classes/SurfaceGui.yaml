@@ -23,7 +23,8 @@ description: |
   the 3D world while the `Class.SurfaceGui` itself remains in the
   `Class.PlayerGui`.
 
-  See [In-Experience UI](../../../ui/in-experience-containers.md#surface-ui) for a guide on working with `Class.SurfaceGui` containers.
+  See [In-Experience UI](../../../ui/in-experience-containers.md#surface-ui) for
+  a guide on working with `Class.SurfaceGui` containers.
 
   ##### Caching Behavior
 
@@ -47,7 +48,7 @@ properties:
     description: |
       This property determines whether the `Class.SurfaceGui` will always render
       on top of other 3D objects.
-      
+
       When set to `false` (default), the `Class.SurfaceGui` renders like other
       3D content and is occluded by other 3D objects. When set to `true`, the
       `Class.SurfaceGui` always renders on top of 3D content and the appearance
@@ -55,7 +56,8 @@ properties:
 
       - Colors match how they appear inside a `Class.ScreenGui`.
       - Text may appear sharper on high DPI devices.
-      - `Class.SurfaceGui.LightInfluence|LightInfluence` is treated as though it's `0`.
+      - `Class.SurfaceGui.LightInfluence|LightInfluence` is treated as though
+        it's `0`.
       - `Class.SurfaceGui.Brightness|Brightness` has no effect.
     code_samples:
     type: bool
@@ -108,10 +110,12 @@ properties:
   - name: SurfaceGui.CanvasSize
     summary: |
       The size of a "virtual screen" in "virtual pixels" which makes
-      `Class.SurfaceGui|SurfaceGuis` pixel-to-pixel compatible with `Class.ScreenGui|ScreenGuis`.
+      `Class.SurfaceGui|SurfaceGuis` pixel-to-pixel compatible with
+      `Class.ScreenGui|ScreenGuis`.
     description: |
       The size of a "virtual screen" in "virtual pixels" which makes
-      `Class.SurfaceGui|SurfaceGuis` pixel-to-pixel compatible with `Class.ScreenGui|ScreenGuis`.
+      `Class.SurfaceGui|SurfaceGuis` pixel-to-pixel compatible with
+      `Class.ScreenGui|ScreenGuis`.
     code_samples:
     type: Vector2
     tags: []
@@ -155,9 +159,13 @@ properties:
     writeCapabilities: []
   - name: SurfaceGui.LightInfluence
     summary: |
-      Controls how much the `Class.SurfaceGui` is influenced by environmental lighting.
+      Controls how much the `Class.SurfaceGui` is influenced by environmental
+      lighting.
     description: |
-      Controls how much the `Class.SurfaceGui` is influenced by environmental lighting, in a range from `0` to `1`. Setting this to `1` means that surrounding lighting has complete control over the appearance, while setting it to `0` means that the lighting has no effect.
+      Controls how much the `Class.SurfaceGui` is influenced by environmental
+      lighting, in a range from `0` to `1`. Setting this to `1` means that
+      surrounding lighting has complete control over the appearance, while
+      setting it to `0` means that the lighting has no effect.
     code_samples:
     type: float
     tags: []
@@ -215,7 +223,7 @@ properties:
       proportionally through use of `Class.UIScale`, `Class.GuiObject.Size`,
       `Class.TextLabel.TextSize`, or similar, this property allows for higher
       definition to be used.
-      
+
       It's important to select a value based on how far away you expect a player
       to view the `Class.SurfaceGui`. Also be mindful that a large pixel density
       could negatively affect performance if the face of the adorned part is

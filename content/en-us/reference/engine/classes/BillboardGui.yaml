@@ -17,9 +17,13 @@ description: |
   <img src="/assets/ui/in-experience/BillboardGui-Diagram.jpg" width="800" alt="BillboardGui with a TextLabel describing the screen console it floats above." />
 
   A billboard's `Class.BillboardGui.Size|Size` property works slightly
-  differently than `Class.GuiObject.Size`. While the **offset** components work the same, the **scale** components are used as stud sizes in 3D space.
+  differently than `Class.GuiObject.Size`. While the **offset** components work
+  the same, the **scale** components are used as stud sizes in 3D space.
 
-  When creating a size-scaled `Class.BillboardGui` that contains a `Class.TextLabel`, it's useful to enable the label's `Class.TextLabel.TextScaled|TextScaled` property so that its text scales along with the billboard canvas as the camera distance changes.
+  When creating a size-scaled `Class.BillboardGui` that contains a
+  `Class.TextLabel`, it's useful to enable the label's
+  `Class.TextLabel.TextScaled|TextScaled` property so that its text scales along
+  with the billboard canvas as the camera distance changes.
 
   Note that interactive UI elements like `Class.ImageButton|ImageButtons` and
   `Class.TextButton|TextButtons` inside a `Class.BillboardGui` will only receive
@@ -29,7 +33,8 @@ description: |
   attachment in the 3D world while the `Class.BillboardGui` itself remains in
   the `Class.PlayerGui`.
 
-  See [In-Experience UI](../../../ui/in-experience-containers.md#billboard-ui) for a guide on working with `Class.BillboardGui` containers.
+  See [In-Experience UI](../../../ui/in-experience-containers.md#billboard-ui)
+  for a guide on working with `Class.BillboardGui` containers.
 
   ##### Caching Behavior
 
@@ -107,7 +112,7 @@ properties:
     description: |
       This property determines whether the `Class.BillboardGui` will always
       render on top of other 3D objects.
-      
+
       When set to `false` (default), the `Class.BillboardGui` renders like other
       3D content and is occluded by other 3D objects. When set to `true`, the
       `Class.BillboardGui` always renders on top of 3D content and the
@@ -115,7 +120,8 @@ properties:
 
       - Colors match how they appear inside a `Class.ScreenGui`.
       - Text may appear sharper on high DPI devices.
-      - `Class.BillboardGui.LightInfluence|LightInfluence` is treated as though it's `0`.
+      - `Class.BillboardGui.LightInfluence|LightInfluence` is treated as though
+        it's `0`.
       - `Class.BillboardGui.Brightness|Brightness` has no effect.
     code_samples:
     type: bool
@@ -361,9 +367,13 @@ properties:
     writeCapabilities: []
   - name: BillboardGui.LightInfluence
     summary: |
-      Controls how much the `Class.BillboardGui` is influenced by environmental lighting.
+      Controls how much the `Class.BillboardGui` is influenced by environmental
+      lighting.
     description: |
-      Controls how much the `Class.BillboardGui` is influenced by environmental lighting, in a range from `0` to `1`. Setting this to `1` means that surrounding lighting has complete control over the appearance, while setting it to `0` means that the lighting has no effect.
+      Controls how much the `Class.BillboardGui` is influenced by environmental
+      lighting, in a range from `0` to `1`. Setting this to `1` means that
+      surrounding lighting has complete control over the appearance, while
+      setting it to `0` means that the lighting has no effect.
     code_samples:
     type: float
     tags: []
@@ -496,7 +506,11 @@ properties:
       </tbody>
       </table>
 
-      See also `Class.BillboardGui.StudsOffset|StudsOffset`, `Class.BillboardGui.StudsOffsetWorldSpace|StudsOffsetWorldSpace`, `Class.BillboardGui.ExtentsOffset|ExtentsOffset`, and `Class.BillboardGui.ExtentsOffsetWorldSpace|ExtentsOffsetWorldSpace` which are offset properties that work in 3D space instead.
+      See also `Class.BillboardGui.StudsOffset|StudsOffset`,
+      `Class.BillboardGui.StudsOffsetWorldSpace|StudsOffsetWorldSpace`,
+      `Class.BillboardGui.ExtentsOffset|ExtentsOffset`, and
+      `Class.BillboardGui.ExtentsOffsetWorldSpace|ExtentsOffsetWorldSpace` which
+      are offset properties that work in 3D space instead.
     code_samples:
     type: Vector2
     tags: []
