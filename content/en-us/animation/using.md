@@ -175,8 +175,8 @@ setting the animation's `Weight` value under the following formula:
 In the following example, `idle.Animation1` will play ⅓ of the time the character is idle, while `idle.Animation2` will play ⅔ of the time.
 
 ```lua title='Script - Replace Default Character Animations' highlight='3,4'
-	animateScript.idle.Animation1.AnimationId = "rbxassetid://656117400"
-	animateScript.idle.Animation2.AnimationId = "rbxassetid://656118341"
+	animateScript.idle.Animation1.AnimationId = "rbxassetid://10921155160"
+	animateScript.idle.Animation2.AnimationId = "rbxassetid://10921155867"
 	animateScript.idle.Animation1.Weight.Value = 5
 	animateScript.idle.Animation2.Weight.Value = 10
 ```
