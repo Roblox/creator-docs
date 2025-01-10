@@ -315,14 +315,14 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 	  </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />657564596</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />657552124</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />658409194</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />657595757, 657568135, 885499184</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />657600338</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />657560551</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />657557095</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />658360781</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921121197</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921127095</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921123517</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921117521, 10921118894, 10921119700</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921122579</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921125160</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921125935</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921116196</Grid>
 		</Grid>
 	  </td>
 	</tr>
