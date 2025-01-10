@@ -564,5 +564,22 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 		</Grid>
 	  </td>
 	</tr>
+	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/1189398/Wicked-Popular-Animation-Pack" target="_blank" rel="noopener">**Wicked Popular**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />72301599441680</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />92072849924640</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />104325245285198</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />118832222982049, 76049494037641, 138255200176080</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />121152442762481</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />99384245425157</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />113199415118199</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />131326830509784</Grid>
+		</Grid>
+	  </td>
+	</tr>
   </tbody>
 </table>
