@@ -19,6 +19,42 @@ deprecation_message: |
   This service has been decommissioned and is no longer operational.
 properties: []
 methods:
+  - name: AdService:CreateAdRewardFromDevProductId
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: devProductId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: AdReward
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AdService:GetAdAvailability
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: adFormat
+        type: AdFormat
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AdService:ShowVideoAd
     summary: |
       Show mobile video advertisements.
@@ -39,7 +75,64 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AdService:ShowRewardedVideoAdAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: reward
+        type: AdReward
+        default:
+        summary: ''
+    returns:
+      - type: ShowAdResult
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
+  - name: AdService.AdAvailabilityChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: adFormat
+        type: AdFormat
+        default:
+        summary: ''
+      - name: adAvailabilityResult
+        type: Variant
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AdService.ShowReportAdPopup
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: adInfo
+        type: Dictionary
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AdService.VideoAdClosed
     summary: |
       Fires when an `Class.AdService` video closes.

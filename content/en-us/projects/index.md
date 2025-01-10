@@ -24,20 +24,20 @@ objects are available and how to organize and use them, see
 
 In Roblox, assets such as images, meshes, and audio are stored as **cloud-based assets**, so you don't need to bundle local copies into a saved Studio experience. Each asset in the cloud is assigned a unique **asset&nbsp;ID** from which multiple experiences can utilize them. You can create assets directly in Studio, such as models, or import assets like images, audio, and meshes from other tools.
 
-<table>
-  <tbody>
-    <tr>
-      <td><img src="../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" /></td>
-      <td><img src="../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" alt="An untextured treasure chest MeshPart asset." width="90%" /></td>
-      <td><audio controls><source src="../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio></td>
-    </tr>
-    <tr>
-			<td><code>rbxassetid://7229442422</code></td>
-			<td><code>rbxassetid://6768917255</code></td>
-			<td><code>rbxassetid://9125402735</code></td>
-    </tr>
-  </tbody>
-</table>
+<GridContainer numColumns="3">
+  <figure>
+    `rbxassetid://7229442422`
+		<img src="../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" />
+  </figure>
+  <figure>
+    `rbxassetid://6768917255`
+		<img src="../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" alt="An untextured treasure chest MeshPart asset." width="90%" />
+  </figure>
+	<figure>
+    `rbxassetid://9125402735`
+		<audio controls><source src="../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio>
+  </figure>
+</GridContainer>
 
 By default, assets are private to your experience and you can use an asset in any place by referencing its ID. You can also distribute them to the community in the [Creator Store](https://create.roblox.com/store/), so others can use them as well.
 

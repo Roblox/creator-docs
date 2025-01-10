@@ -166,7 +166,7 @@ if not bubbleImageLabel then
 	bubbleImageLabel = Instance.new("ImageLabel")
 	bubbleImageLabel.Parent = bubbleChatConfiguration
 end
-bubbleImageLabel.Image = "rbxassetid://6733332557"
+bubbleImageLabel.Image = "rbxassetid://109157529833093"
 bubbleImageLabel.ScaleType = Enum.ScaleType.Slice
 bubbleImageLabel.SliceCenter = Rect.new(40, 40, 320, 120)
 bubbleImageLabel.SliceScale = 0.5

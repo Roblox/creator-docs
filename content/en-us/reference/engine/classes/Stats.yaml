@@ -590,6 +590,34 @@ properties:
     capabilities: []
     writeCapabilities: []
 methods:
+  - name: Stats:GetMemoryCategoryNames
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: Stats:GetMemoryUsageMbAllCategories
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Stats:GetMemoryUsageMbForTag
     summary: |
       Returns the number of megabytes that are being consumed in the specified
