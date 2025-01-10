@@ -615,23 +615,6 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 		</Grid>
 	  </td>
 	</tr>
-	  <tr>
-      <td>
-        <a href="https://www.roblox.com/bundles/455003/No-Boundaries-Animation-Pack-by-Walmart" target="_blank" rel="noopener">**No Boundaries**</a>
-      </td>
-	  <td>
-		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />18747070484</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />18747074203</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />18747069148</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />18747067405, 18747063918, 18747065848</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />18747062535</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />18747073181</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />18747071682</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />18747060903</Grid>
-		</Grid>
-	  </td>
-	</tr>
 	<tr>
       <td>
         <a href="https://www.roblox.com/bundles/667/Oldschool-Animation-Pack" target="_blank" rel="noopener">**Oldschool**</a>
