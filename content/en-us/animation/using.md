@@ -417,14 +417,14 @@ When using avatar animation bundles to [replace default animations](#replacing-d
       </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />2510198475</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />2510202577</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />2510197830</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />2510197257, 2510196951, 3711062489</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />2510195892</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />2510199791</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />2510201162</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />2510192778</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921261968</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921269718</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921263860</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921259953, 10921258489, 10921261056</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921262864</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921264784</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921265698</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921257536</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -502,14 +502,14 @@ When using avatar animation bundles to [replace default animations](#replacing-d
       </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />1083216690</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />1083178339</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921336997</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921342074</Grid>
 			<Grid item XSmall={4} XLarge={2}>**Jump**<br />1083218792</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />1083195517, 1083214717, 1099492820</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />1083189019</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />1083222527</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />1083225406</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />1083182000</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921330408, 10921333667, 10921334755</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921337907</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921340419</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921341319</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921329322</Grid>
 		</Grid>
 	  </td>
 	</tr>
