@@ -86,7 +86,7 @@ climbing, swimming, and jumping. You can replace these [default animations](#def
 1. Obtain the **asset ID** of the new animation as follows:
 
    - For a custom animation built with the [Animation Editor](../animation/editor.md), follow the [export](../animation/editor.md#exporting-an-animation) instructions.
-   - Copy an appropriate ID from the [catalog animation reference](#catalog-animations) below. For example, to replace the default run animation with the <a href="https://www.roblox.com/catalog/658830056/Ninja-Run" target="_blank" rel="noopener">Ninja&nbsp;Run</a> variant, use `656118852`.
+   - Copy an appropriate ID from the [catalog animation reference](#catalog-animations) below. For example, to replace the default run animation with the <a href="https://www.roblox.com/catalog/658830056/Ninja-Run" target="_blank" rel="noopener">Ninja&nbsp;Run</a> variant, use `10921157929`.
 
 2. In the [Explorer](../studio/explorer.md) window, add a new `Class.Script` to **ServerScriptService**.
 
@@ -143,7 +143,7 @@ climbing, swimming, and jumping. You can replace these [default animations](#def
    	end
 
    	local animateScript = character:WaitForChild("Animate")
-   	animateScript.run.RunAnim.AnimationId = "rbxassetid://656118852"
+   	animateScript.run.RunAnim.AnimationId = "rbxassetid://10921157929"
    	--animateScript.walk.WalkAnim.AnimationId = "rbxassetid://"
    	--animateScript.jump.JumpAnim.AnimationId = "rbxassetid://"
    	--animateScript.idle.Animation1.AnimationId = "rbxassetid://"
@@ -237,10 +237,27 @@ The following table contains all of the default character animations that you ca
 
 ### Catalog Animations
 
-When using avatar animation bundles to [replace default animations](#replacing-default-animations), use the following references for the respective asset IDs. For example, if you want to apply the <a href="https://www.roblox.com/catalog/658832070/Ninja-Jump" target="_blank" rel="noopener">Ninja&nbsp;Jump</a> animation, use `656117878`. Note that **Idle** has multiple variations.
+When using avatar animation bundles to [replace default animations](#replacing-default-animations), use the following references for the respective asset IDs. For example, if you want to apply the <a href="https://www.roblox.com/catalog/658832070/Ninja-Jump" target="_blank" rel="noopener">Ninja&nbsp;Jump</a> animation, use `10921160088`. Note that **Idle** has multiple variations.
 
 <table>
   <tbody>
+	<tr>
+	  <td>
+	  	<a href="https://www.roblox.com/bundles/427999/adidas-Sports-Animation-Pack" target="_blank" rel="noopener">**adidas Sports**</a>
+	  </td>
+		<td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />18537384940</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />18537392113</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />18537380791</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />18537376492, 18537371272, 18537374150</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />18537367238</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />18537389531</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />18537387180</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />18537363391</Grid>
+		</Grid>
+	  </td>
+	</tr>
 	<tr>
 	  <td>
 	  	<a href="https://www.roblox.com/bundles/34/Astronaut-Animation-Pack" target="_blank" rel="noopener">**Astronaut**</a>
@@ -255,6 +272,23 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921044000</Grid>
 			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921045006</Grid>
 			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921032124</Grid>
+		</Grid>
+	  </td>
+	</tr>
+	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/331856/Bold-Animation-Pack-by-e-l-f" target="_blank" rel="noopener">**Bold**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />16738337225</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />16738340646</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />16738336650</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />16738333868, 16738334710, 16738335517</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />16738333171</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />16738339158</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />16738339817</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />16744204409</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -289,6 +323,23 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921079380</Grid>
 			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921081059</Grid>
 			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921070953</Grid>
+		</Grid>
+	  </td>
+	</tr>
+	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/1601900/Catwalk-Glam-Animation-Pack-by-e-l-f" target="_blank" rel="noopener">**Catwalk Glam**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />81024476153754</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />109168724482748</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />116936326516985</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />133806214992291, 94970088341563, 87105332133518</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />92294537340807</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />134591743181628</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />98854111361360</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />119377220967554</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -361,6 +412,23 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 	  </td>
 	</tr>
 	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/932296/NFL-Animation-Pack" target="_blank" rel="noopener">**NFL**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />117333533048078</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />110358958299415</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />119846112151352</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />92080889861410, 74451233229259, 80884010501210</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />129773241321032</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />136750772888868</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />79090109939093</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />134630013742019</Grid>
+		</Grid>
+	  </td>
+	</tr>
+	<tr>
 	  <td>
 	    <a href="https://www.roblox.com/bundles/75/Ninja-Animation-Package" target="_blank" rel="noopener">**Ninja**</a>
 	  </td>
@@ -378,6 +446,40 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 	  </td>
 	</tr>
 	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/455003/No-Boundaries-Animation-Pack-by-Walmart" target="_blank" rel="noopener">**No Boundaries**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />18747070484</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />18747074203</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />18747069148</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />18747067405, 18747063918, 18747065848</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />18747062535</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />18747073181</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />18747071682</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />18747060903</Grid>
+		</Grid>
+	  </td>
+	</tr>
+	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/667/Oldschool-Animation-Pack" target="_blank" rel="noopener">**Oldschool**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921240218</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921244891</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921242013</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921230744, 10921232093, 10921233298</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921241244</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921243048</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921244018</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921229866</Grid>
+		</Grid>
+	  </td>
+	</tr>
+	<tr>
 	  <td>
 	    <a href="https://www.roblox.com/bundles/55/Pirate-Animation-Package" target="_blank" rel="noopener">**Pirate**</a>
 	  </td>
@@ -391,6 +493,23 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 			<Grid item XSmall={4} XLarge={2}>**Swim**<br />750784579</Grid>
 			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />750785176</Grid>
 			<Grid item XSmall={4} XLarge={2}>**Climb**<br />750779899</Grid>
+		</Grid>
+	  </td>
+	</tr>
+	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/1189398/Wicked-Popular-Animation-Pack" target="_blank" rel="noopener">**Wicked Popular**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />72301599441680</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />92072849924640</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />104325245285198</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />118832222982049, 76049494037641, 138255200176080</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />121152442762481</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />99384245425157</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />113199415118199</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />131326830509784</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -527,125 +646,6 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921352344</Grid>
 			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921353442</Grid>
 			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921343576</Grid>
-		</Grid>
-	  </td>
-	</tr>
-	<tr>
-      <td>
-        <a href="https://www.roblox.com/bundles/427999/adidas-Sports-Animation-Pack" target="_blank" rel="noopener">**adidas Sports**</a>
-      </td>
-	  <td>
-		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />18537384940</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />18537392113</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />18537380791</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />18537376492, 18537371272, 18537374150</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />18537367238</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />18537389531</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />18537387180</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />18537363391</Grid>
-		</Grid>
-	  </td>
-	</tr>
-	<tr>
-      <td>
-        <a href="https://www.roblox.com/bundles/932296/NFL-Animation-Pack" target="_blank" rel="noopener">**NFL**</a>
-      </td>
-	  <td>
-		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />117333533048078</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />110358958299415</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />119846112151352</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />92080889861410, 74451233229259, 80884010501210</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />129773241321032</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />136750772888868</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />79090109939093</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />134630013742019</Grid>
-		</Grid>
-	  </td>
-	</tr>
-	<tr>
-      <td>
-        <a href="https://www.roblox.com/bundles/1189398/Wicked-Popular-Animation-Pack" target="_blank" rel="noopener">**Popular**</a>
-      </td>
-	  <td>
-		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />72301599441680</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />92072849924640</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />104325245285198</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />118832222982049, 76049494037641, 138255200176080</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />121152442762481</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />99384245425157</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />113199415118199</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />131326830509784</Grid>
-		</Grid>
-	  </td>
-	</tr>
-	<tr>
-      <td>
-        <a href="https://www.roblox.com/bundles/1601900/Catwalk-Glam-Animation-Pack-by-e-l-f" target="_blank" rel="noopener">**Catwalk Glam**</a>
-      </td>
-	  <td>
-		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />81024476153754</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />109168724482748</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />116936326516985</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />133806214992291, 94970088341563, 87105332133518</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />92294537340807</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />134591743181628</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />98854111361360</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />119377220967554</Grid>
-		</Grid>
-	  </td>
-	</tr>
-	<tr>
-      <td>
-        <a href="https://www.roblox.com/bundles/455003/No-Boundaries-Animation-Pack-by-Walmart" target="_blank" rel="noopener">**No Boundaries**</a>
-      </td>
-	  <td>
-		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />18747070484</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />18747074203</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />18747069148</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />18747067405, 18747063918, 18747065848</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />18747062535</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />18747073181</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />18747071682</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />18747060903</Grid>
-		</Grid>
-	  </td>
-	</tr>
-	<tr>
-      <td>
-        <a href="https://www.roblox.com/bundles/667/Oldschool-Animation-Pack" target="_blank" rel="noopener">**Oldschool**</a>
-      </td>
-	  <td>
-		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921240218</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921244891</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921242013</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921230744, 10921232093, 10921233298</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921241244</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921243048</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921244018</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921229866</Grid>
-		</Grid>
-	  </td>
-	</tr>
-	<tr>
-      <td>
-        <a href="https://www.roblox.com/bundles/331856/Bold-Animation-Pack-by-e-l-f" target="_blank" rel="noopener">**Bold**</a>
-      </td>
-	  <td>
-		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />16738337225</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />16738340646</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />16738336650</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />16738333868, 16738334710, 16738335517</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />16738333171</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />16738339158</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />16738339817</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />16744204409</Grid>
 		</Grid>
 	  </td>
 	</tr>
