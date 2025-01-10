@@ -566,7 +566,7 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 	</tr>
 	<tr>
       <td>
-        <a href="https://www.roblox.com/bundles/1189398/Wicked-Popular-Animation-Pack" target="_blank" rel="noopener">**Wicked Popular**</a>
+        <a href="https://www.roblox.com/bundles/1189398/Wicked-Popular-Animation-Pack" target="_blank" rel="noopener">**Popular**</a>
       </td>
 	  <td>
 		<Grid container spacing={1}>
@@ -629,6 +629,23 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921243048</Grid>
 			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921244018</Grid>
 			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921229866</Grid>
+		</Grid>
+	  </td>
+	</tr>
+	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/331856/Bold-Animation-Pack-by-e-l-f" target="_blank" rel="noopener">**Bold**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />16738337225</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />16738340646</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />16738336650</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />16738333868, 16738334710, 16738335517</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />16738333171</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />16738339158</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />16738339817</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />16744204409</Grid>
 		</Grid>
 	  </td>
 	</tr>
