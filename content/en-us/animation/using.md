@@ -581,5 +581,22 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 		</Grid>
 	  </td>
 	</tr>
+	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/1601900/Catwalk-Glam-Animation-Pack-by-e-l-f" target="_blank" rel="noopener">**Catwalk Glam**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />81024476153754</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />109168724482748</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />116936326516985</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />133806214992291, 94970088341563, 87105332133518</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />92294537340807</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />134591743181628</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />98854111361360</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />119377220967554</Grid>
+		</Grid>
+	  </td>
+	</tr>
   </tbody>
 </table>
