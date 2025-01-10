@@ -547,5 +547,22 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 		</Grid>
 	  </td>
 	</tr>
+	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/932296/NFL-Animation-Pack" target="_blank" rel="noopener">**NFL**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />117333533048078</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />110358958299415</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />119846112151352</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />92080889861410, 74451233229259, 80884010501210</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />129773241321032</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />136750772888868</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />79090109939093</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />134630013742019</Grid>
+		</Grid>
+	  </td>
+	</tr>
   </tbody>
 </table>
