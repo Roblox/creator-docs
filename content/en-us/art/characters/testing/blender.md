@@ -1,5 +1,5 @@
 ---
-title: Test in Blender
+title: Testing in Blender
 comments:
 description: Verify the important aspects of your character model in Blender before importing into Studio.
 next: /art/characters/testing/studio
@@ -8,7 +8,7 @@ prev: /art/characters/testing/
 
 You can quickly verify many of your components in Blender, allowing you to catch out problems that may cause issues later on. You can use a mix of Blender native tools and Roblox's helper plugins to check for many common issues in your character model.
 
-## Facial animation data
+## Facial Animation Data
 
 Facial animation uses multiple modeling components to work effectively. If using a template, or making changes to a model with existing facial animation data, it's sometimes possible to make a change that affects the saved poses, either in the animation timeline, or in the custom property of the head mesh.
 
@@ -30,17 +30,17 @@ Use the following steps to help verify the integrity of your facial animation da
       2. In templates and some reference models, this bone is commonly named `DynamicHead` and indicates the beginning of the facial animation rig.
 
    2. There should be about the same number of custom properties as unique animation frames, with each animation pose having its own mapped custom property.
-   3. The names for the mapped poses here should match the spelling and capitalization of the [FACS pose reference](../../../art/characters/facial-animation/facs-poses-reference.md).
+   3. The names for the mapped poses here should match the spelling and capitalization of the [FACS Pose Reference](../../../art/characters/facial-animation/facs-poses-reference.md).
 
    <video controls src="../../../assets/art/avatar/basic-creation/Testing_01.mp4" width="100%"></video>
 
 <Alert severity = 'error'>
-If you discover issues with your face animation data, you may need to repeat the skinning, posing, or mapping processes for your character's head. See [Creating Heads](../../../art/characters/facial-animation/create-basic-heads.md) for a general overview of the avatar head creation process.
+If you discover issues with your face animation data, you may need to repeat the skinning, posing, or mapping processes for your character's head. See [Creating Heads](../../../art/characters/facial-animation/creating-basic-heads.md) for a general overview of the avatar head creation process.
 
 If you are using a template and run into issues, it's possible the facial data was overridden by a saved animation, or the rigging or mapped data was mistakenly deleted. If it's difficult to quickly identify and resolve the issue, it may be quicker to restart your character customization from the original template file.
 </Alert>
 
-## Body skin
+## Body Skinning
 
 Properly skinning your character models ensures natural joint movements and realistic poses and expressions. There are several ways to verify skinning data, like using Blender's Pose Mode to pose the joints and examine how certain orientations can affect the joint skinning.
 
@@ -57,24 +57,24 @@ Use the following steps in Blender to verify your joint skinning in Pose mode:
 
    <video controls src="../../../assets/art/avatar/basic-creation/Testing_02.mp4" width="100%"></video>
 
-You can also run through common poses and movements using Roblox's [Calisthenics Tool](../../../art/modeling/calisthenics-tool.md) add-on, which applies several common animations to an avatar armature that you can play back and review in Blender's animation timeline.
+You can also run through common poses and movements using Roblox's [Calisthenics tool](../../../art/modeling/calisthenics-tool.md) add-on, which applies several common animations to an avatar armature that you can play back and review in Blender's animation timeline.
 
 <Alert severity = 'warning'>
-The [Calisthenics Tool](../../../art/modeling/calisthenics-tool.md) adds animations to your timeline to quickly preview body animations. Be careful when saving or exporting your character when using this tool, as it may conflict with saved facial animation data that uses the same timeline.
+The [Calisthenics tool](../../../art/modeling/calisthenics-tool.md) adds animations to your timeline to quickly preview body animations. Be careful when saving or exporting your character when using this tool, as it may conflict with saved facial animation data that uses the same timeline.
 </Alert>
 
 <video controls src="../../../assets/art/avatar/basic-creation/Testing_03.mp4" width="100%"></video>
 
 <Alert severity = 'error'>
-If you discover issues with your skinning, you may need to troubleshoot and reapply rigging and skinning steps to your humanoid. See [Rigging and skinning](../../../art/modeling/rigging.md) for an overview of the rigging and skinning processes.
+If you discover issues with your skinning, you may need to troubleshoot and reapply rigging and skinning steps to your humanoid. See [Rigging and Skinning](../../../art/modeling/rigging.md) for an overview of the rigging and skinning processes.
 
 If you are using a template, it's possible the skinning data was affected by a destructive modeling change. This may require reskinning, or starting over your character customization from the original template file.
 </Alert>
 
-## Technical specifications
+## Technical Specifications
 
 Your avatar components should match the requirements provided in the [avatar specifications](../../../art/characters/specifications.md). When using templates and following appropriate non-destructive modeling practices, most of these components should not be touched, but you should still double-check that each component is compliant with the technical requirements.
 
 <Alert severity = 'success'>
-If you are using Roblox character templates and are ready to export into Studio, see [Exporting instructions](../../../art/characters/creating/export-textures.md) for specific export instructions for template files.
+If you are using Roblox character templates and are ready to export into Studio, see [Exporting instructions](../../../art/characters/creating/exporting-textures.md) for specific export instructions for template files.
 </Alert>

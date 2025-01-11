@@ -1,10 +1,10 @@
 ---
-title: 3D workspace
-description: Describes the workspace container service, which holds all objects that exist in the 3D world.
+title: 3D Workspace
+description: Describes the Workspace container service, which holds all objects that exist in the 3D world.
 ---
 
 `Class.Workspace` is a container service that holds objects that you want the
-Roblox Engine to render in the 3D world. You typically will add these objects to
+Roblox engine to render in the 3D world. You typically will add these objects to
 the workspace:
 
 - `Class.BasePart` objects, which includes both `Class.Part` and `Class.MeshPart` objects.
@@ -24,7 +24,7 @@ the workspace:
 <th><center>Sphere</center></th>
 <th><center>Cylinder</center></th>
 <th><center>Wedge</center></th>
-<th><center>Corner wedge</center></th>
+<th><center>Corner Wedge</center></th>
 </tr>
 </thead>
 <tbody>
@@ -87,7 +87,7 @@ also contain scripts that act on the individual objects of the model.
     </figure>
 </GridContainer>
 
-## Access the workspace in scripts
+## Accessing the Workspace in Scripts
 
 Within a script, you can access a place's `Class.Workspace` in three different ways, all of which are valid.
 

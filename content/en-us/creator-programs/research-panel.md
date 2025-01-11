@@ -13,7 +13,7 @@ The [Roblox Research Panel](https://robloxresearchpanel.com/) is an exclusive pr
     variant="filled" />
 </figure>
 
-## Why participate?
+## Why Participate?
 
 As a valued member of the Roblox community, your feedback is essential. By joining the Roblox Research Panel, you can:
 
@@ -21,14 +21,14 @@ As a valued member of the Roblox community, your feedback is essential. By joini
 - Earn Rewards: Participate in activities to earn points, redeemable for a variety of gift cards.
 - Be Heard: Engage in meaningful discussions with fellow members and provide feedback that matters.
 
-## Types of research
+## Types of Research
 
 - Surveys: Share your thoughts through detailed surveys on various topics.
 - Polls: Give your quick opinions on specific subjects via short polls.
 - Discussions: Join in-depth discussions and provide valuable feedback on new ideas and features.
 - Testing: Try new Roblox features.
 
-## How to join
+## How to Join
 
 Joining the Roblox Research Panel is by invitation only.
 

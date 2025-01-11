@@ -1,15 +1,15 @@
 navigation:
-  - heading: Code samples
+  - heading: Code Samples
   - title: Overview
     path: /samples/
-  - heading: Feature packages
+  - heading: Feature Packages
   - title: Overview
     path: /resources/feature-packages/
   - title: Bundles
     path: /resources/feature-packages/bundles
   - title: Missions
     path: /resources/feature-packages/missions
-  - heading: Developer modules
+  - heading: Developer Modules
   - title: Overview
     path: /resources/modules/
   - title: Selfie Mode
@@ -34,73 +34,73 @@ navigation:
     path: /resources/modules/social-interactions
   - title: Event Sequencer
     path: /resources/modules/event-sequencer
-  - heading: Scripting libraries
+  - heading: Scripting Libraries
   - title: Overview
     path: /resources/scripting-libraries
-  - heading: Projects and kits
+  - heading: Projects and Kits
   - title: Templates
     path: /resources/templates
-  - title: Roblox Connect project
+  - title: Roblox Connect Project
     path: /resources/roblox-connect
-  - title: Plant reference project
+  - title: Plant Reference Project
     path: /resources/plant-reference-project
   - title: Battle Royale
     path: /resources/battle-royale/
     section:
       - title: Overview
         path: /resources/battle-royale/
-      - title: Installation and setup
+      - title: Installation and Setup
         path: /resources/battle-royale/installation-and-setup
-      - title: Run the game
-        path: /resources/battle-royale/run-the-game
-      - title: Core scripts
+      - title: Running the Game
+        path: /resources/battle-royale/running-the-game
+      - title: Core Scripts
         path: /resources/battle-royale/core-scripts
-      - title: Pickup system
+      - title: Pickup System
         path: /resources/battle-royale/pickup-system
-      - title: Building system
+      - title: Building System
         path: /resources/battle-royale/building-system
-      - title: Minimap system
+      - title: Minimap System
         path: /resources/battle-royale/minimap-system
-      - title: The storm
+      - title: The Storm
         path: /resources/battle-royale/the-storm
-  - title: Weapons kit
+  - title: Weapons Kit
     path: /resources/weapons-kit
-  - title: NPC kit
+  - title: NPC Kit
     path: /resources/npc-kit
-  - heading: Creator programs
+  - heading: Creator Programs
   - title: Overview
     path: /creator-programs/
-  - title: All programs
+  - title: All Programs
     section:
-      - title: Brand Developer Directory
-        path: /creator-programs/brand-developer-directory
-      - title: Community Feedback
-        path: /creator-programs/feedback
-      - title: Creator Affiliate Pilot
-        path: /creator-programs/creator-affiliate
-      - title: Creator Events
-        path: /creator-programs/creator-events
-      - title: Creator Fund
-        path: /creator-fund
-      - title: Creator Spotlights
-        path: /creator-programs/spotlights
-      - title: Developer Awards
-        path: /creator-programs/developer-awards
-      - title: Inspire
-        path: /creator-programs/inspire
-      - title: Learn & Explore Sort
-        path: /creator-programs/learn-explore-sort
-      - title: Managed Brand Integrations
-        path: /creator-programs/managed-brand-integrations
-      - title: Notable Translators
-        path: /creator-programs/notable-translators
-      - title: Roblox Developers Conference (RDC)
-        path: /creator-programs/rdc
-      - title: Roblox Innovation Awards
-        path: /creator-programs/innovation-awards
-      - title: Roblox Research Panel
-        path: /creator-programs/research-panel
-      - title: Today's Picks on Home
-        path: /creator-programs/todays-picks-home
-      - title: Today's Picks on Marketplace
-        path: /creator-programs/todays-picks-marketplace
+    - title: Brand Developer Directory
+      path: /creator-programs/brand-developer-directory
+    - title: Community Feedback Program
+      path: /creator-programs/feedback
+    - title: Creator Affiliate Pilot Program
+      path: /creator-programs/creator-affiliate
+    - title: Creator Events
+      path: /creator-programs/creator-events
+    - title: Creator Fund
+      path: /creator-fund
+    - title: Creator Spotlights
+      path: /creator-programs/spotlights
+    - title: Developer Awards
+      path: /creator-programs/developer-awards
+    - title: Inspire
+      path: /creator-programs/inspire
+    - title: Learn & Explore Sort
+      path: /creator-programs/learn-explore-sort
+    - title: Managed Brand Integrations
+      path: /creator-programs/managed-brand-integrations
+    - title: Notable Translators Program
+      path: /creator-programs/notable-translators
+    - title: Roblox Developers Conference (RDC)
+      path: /creator-programs/rdc
+    - title: Roblox Innovation Awards
+      path: /creator-programs/innovation-awards
+    - title: Roblox Research Panel
+      path: /creator-programs/research-panel
+    - title: Today's Picks on Home
+      path: /creator-programs/todays-picks-home
+    - title: Today's Picks on Marketplace
+      path: /creator-programs/todays-picks-marketplace

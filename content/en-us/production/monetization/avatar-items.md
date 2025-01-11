@@ -1,5 +1,5 @@
 ---
-title: Avatar items
+title: Avatar Items
 description: Sell community created Avatar items exclusively through your experience.
 ---
 
@@ -13,24 +13,24 @@ By selling unique avatar items in your experience, you can create experience-spe
 For information on how to create and sell your own avatar items, which requires third-party software such as Blender or Maya, see Roblox's [Avatar](../../avatar/index.md) documentation.
 </Alert>
 
-## Enable in-experience sales
+## Enabling In-Experience Sales
 
 To set an avatar item on sale, the item creator and the experience owner must perform the following:
 
-1. The **item creator** must [add the experience's Place ID](#add-place-id) to their item's sale location data.
-2. The **experience owner** must [add the avatar item's Asset ID](#add-items-to-experience) and enable the item.
+1. The **item creator** must [add the experience's Place ID](#adding-place-id) to their item's sale location data.
+2. The **experience owner** must [add the avatar item's Asset ID](#adding-items-to-experience) and enable the item.
    1. If the experience owner and the item creator are the same person, Roblox automatically adds and enables the asset to the experience after setting the sale location.
 
-### Add place ID
+### Adding Place ID
 
 Before enabling an avatar item sale in your experience, the creator of the item must add the experience's starting place ID to the avatar item's sales location.
 
 1. Open the [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard**.
 2. Click the **&ctdot;** in the corner of the experience's thumbnail and select **Copy Start Place ID**.
 
-3. As the item creator, [update your item's marketplace settings](../../marketplace/publish-to-marketplace.md#marketplace-settings) and add the Place ID to the item's Sale Location field.
+3. As the item creator, [update your item's marketplace settings](../../marketplace/publishing-to-marketplace.md#marketplace-settings) and add the Place ID to the item's Sale Location field.
 
-### Add items to experience
+### Adding Items to Experience
 
 After the item creator adds your experience to the asset's sale location, you can now enable the item for the experience.
 
@@ -47,7 +47,7 @@ To search and enable an asset for sale:
    <img src="../../assets/monetization/avatar-items/Avatar-Items-Enable.png" width="80%" />
    </figure>
 
-## Avatar items analytics
+## Avatar Items Analytics
 
 Avatar Items analytics help you gauge the success of individual Avatar Items, identify trends, and forecast potential future earnings.
 

@@ -1,5 +1,5 @@
 ---
-title: Texturing setup
+title: Texturing Setup
 description: Set up Blender to optimize your project for texturing the eyes and face of your template.
 next: /art/characters/creating/texturing-eyes
 prev: /art/characters/creating/sculpting
@@ -13,7 +13,7 @@ prev: /art/characters/creating/sculpting
   <figure><img src="../../../assets/art/avatar/basic-creation/Post-Texturing.png" /><figcaption>Model after texturing</figcaption></figure>
 </GridContainer>
 
-Each template comes with a color texture map, which you can alter and modify using Blender's texture editing tools. Since most Roblox avatars can take advantage of custom skin tones, it's important to understand how to [preview custom skin tones](../../../art/characters/creating/index.md#preview-skin-tones) in Blender to verify how your final asset will look in a Roblox experience.
+Each template comes with a color texture map, which you can alter and modify using Blender's texture editing tools. Since most Roblox avatars can take advantage of custom skin tones, it's important to understand how to [preview custom skin tones](../../../art/characters/creating/index.md#previewing-skin-tones) in Blender to verify how your final asset will look in a Roblox experience.
 
 For the purpose of demonstrating the basic texturing process, this tutorial goes over basic texture painting setup, applies a completely opaque texture over parts of the character eyes, and partially opaque details over the face. You can apply these same techniques to other parts of your character geometry.
 
@@ -21,7 +21,7 @@ For the purpose of demonstrating the basic texturing process, this tutorial goes
 When texturing parts of your character model's body, ensure that your character model includes a modesty layer over sensitive regions. See [Community Standards](../../../marketplace/marketplace-policy.md) for more information on Roblox's policies.
 </Alert>
 
-## Set texture resolution
+## Setting Texture Resolution
 
 Roblox Studio supports a texture resolution of **1024 x 1024** for albedo texture maps. When using applications like Blender or Maya to texture paint directly on a model, extremely fine details may not paint as expected due to the resolution and level of detail of the painting.
 

@@ -22,7 +22,7 @@ Whenever possible, use the Open Cloud v2 API. This API has the strongest stabili
 
 The legacy APIs, no matter which types of authentication they support, can incorporate breaking changes without notice and have minimal stability guarantees. They are not part of the Open Cloud v1 or v2 APIs, and we don't recommend them for production applications.
 
-## Get started with Open Cloud
+## Getting Started with Open Cloud
 
 1. Set up authentication for your application.
 

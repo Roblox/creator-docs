@@ -21,7 +21,7 @@ Note that this tool behaves differently depending on how many `Class.BasePart|Ba
 - If one `Class.BasePart` is already selected, the next `Class.BasePart` clicked will be connected to the selected one with a new `Class.WeldConstraint`.
 - If multiple `Class.BasePart|BaseParts` are selected, those which are touching or overlapping will be automatically welded together by new `Class.WeldConstraint|WeldConstraints`.
 
-## Reposition behavior
+## Repositioning Behavior
 
 Roblox handles moving a welded part differently depending on whether the part
 was moved through its `Class.BasePart.Position|Position` or through its

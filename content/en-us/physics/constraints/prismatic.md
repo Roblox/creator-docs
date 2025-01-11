@@ -4,7 +4,7 @@ description: PrismaticConstraint allows two attachments to slide along one axis 
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.PrismaticConstraint`, see [Mechanical constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.PrismaticConstraint`, see [Mechanical Constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;Units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 A `Class.PrismaticConstraint` creates a rigid joint between two attachments, allowing them to slide along one axis but not rotate. The constraint can also be [powered](#linear-power) for mechanisms like sliding doors and elevator platforms.
@@ -15,7 +15,7 @@ A `Class.PrismaticConstraint` creates a rigid joint between two attachments, all
 Orientation of a prismatic's attachments affects how it will move. To ensure movement occurs along the desired axis, each attachment's `Class.Attachment.Axis|Axis`, visualized by the yellow arrow, should point in the same direction.
 </Alert>
 
-## Linear power
+## Linear Power
 
 If a prismatic's `Class.PrismaticConstraint|ActuatorType` is set to `Enum.ActuatorType|Motor`, it attempts to translate the attachments with the goal of reaching `Class.PrismaticConstraint|Velocity`. You can further control this translation through both `Class.PrismaticConstraint|MotorMaxAcceleration` and `Class.PrismaticConstraint|MotorMaxForce`.
 

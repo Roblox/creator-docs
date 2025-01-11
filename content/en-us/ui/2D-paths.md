@@ -1,5 +1,5 @@
 ---
-title: 2D paths
+title: 2D Paths
 description: The Path2D instance, along with its API methods and properties, lets you implement 2D splines and 2D curved lines.
 ---
 
@@ -7,7 +7,7 @@ The `Class.Path2D` instance, along with its API methods and properties, lets you
 
 <video src="../assets/ui/2D-paths/Path2D.mp4" controls width="90%" alt="Video showing a UI object animating back and forth across a complex path."></video>
 
-## Create a 2D path
+## Creating a 2D Path
 
 To add a `Class.Path2D` to the screen or an in-experience object:
 
@@ -19,21 +19,21 @@ To add a `Class.Path2D` to the screen or an in-experience object:
 
    <img src="../assets/ui/2D-paths/Widget-Add-Point.png" width="600" alt="Add Point tool indicated in the 2D path editor widget." />
 
-3. Begin clicking on the screen to add a series of **control points** to form a path. The initial path will likely be imprecise but you can [fine‑tune](#move-points) the position of any control point later.
+3. Begin clicking on the screen to add a series of **control points** to form a path. The initial path will likely be imprecise but you can [fine‑tune](#moving-points) the position of any control point later.
 
    <img src="../assets/ui/2D-paths/Path-Example-Create-Basic.png" width="600" alt="Diagram illustrating an example path created using the Add Point tool to connect a series of points." />
 
    <Alert severity="info">
-   If you drag the mouse after clicking, [tangents](#control-point-tangents) will be created on that point. Tangents can also be procedurally [added](#add-tangents) to any control point.
+   If you drag the mouse after clicking, [tangents](#control-point-tangents) will be created on that point. Tangents can also be procedurally [added](#adding-tangents) to any control point.
 	 </Alert>
 
 4. When finished, click the widget's **Done** button or press <kbd>Enter</kbd>.
 
-## Modify control points
+## Modifying Control Points
 
 With a `Class.Path2D` selected in the [Explorer](../studio/explorer.md) hierarchy, you can modify its individual control points as well as their [tangents](#control-point-tangents).
 
-### Move points
+### Moving Points
 
 To move an individual control point on a path, enable the **Select** tool (<kbd>V</kbd>) and then click‑and‑drag it to a new position.
 
@@ -49,7 +49,7 @@ Note that a point's position is not absolute, but rather **relative** to the pat
 
 <img src="../assets/ui/2D-paths/Control-Point-Relativity.png" width="864" alt="Diagram illustrating how the positions of path control points are relative to their parent container." />
 
-### Add points
+### Adding Points
 
 New control points can be added to a `Class.Path2D` either between two existing points or from either end point using the **Add&nbsp;Point** tool (<kbd>P</kbd>).
 
@@ -70,19 +70,19 @@ New control points can be added to a `Class.Path2D` either between two existing 
 Remember that if you drag the mouse after clicking to add a new control point, [tangents](#control-point-tangents) will be created on that point.
 </Alert>
 
-### Delete points
+### Deleting Points
 
 To delete a control point, hover over and right‑click it, then select **Delete&nbsp;Point** from the contextual popup menu.
 
 <img src="../assets/ui/2D-paths/Path-Example-Delete-Point.png" width="600" alt="Diagram illustrating how a path control point is deleted by right-clicking it and selecting Delete Point." />
 
-### Control point tangents
+### Control Point Tangents
 
 Control point **tangents** let you create and adjust curves on a path.
 
 <img src="../assets/ui/2D-paths/Tangents.png" width="800" alt="Diagram illustrating a curved path with several tangent control points." />
 
-#### Add tangents
+#### Adding Tangents
 
 To add tangents to any control point that doesn't already have tangents:
 
@@ -90,11 +90,11 @@ To add tangents to any control point that doesn't already have tangents:
 
    <img src="../assets/ui/2D-paths/Widget-Add-Tangent.png" width="600" alt="Add Tangent tool indicated in the 2D path editor widget." />
 
-2. Hover over the desired control point, then click to add two [mirrored](#break-and-mirror) tangents (optionally drag after clicking to [adjust](#adjust-tangents) the new tangents).
+2. Hover over the desired control point, then click to add two [mirrored](#breaking-and-mirroring) tangents (optionally drag after clicking to [adjust](#adjusting-tangents) the new tangents).
 
    <img src="../assets/ui/2D-paths/Path-Example-Add-Tangent.png" width="600" alt="Diagram illustrating how a path control point with tangents is created with the Add Tangent tool." />
 
-#### Adjust tangents
+#### Adjusting Tangents
 
 To adjust existing tangents for an individual control point:
 
@@ -113,9 +113,9 @@ In the [Properties](../studio/properties.md) window, expand the `Class.Path2D.Se
 
    <img src="../assets/studio/properties/Path2D-SelectedControlPointData-Expanded.png" width="320" alt="LeftTangent and RightTangent properties of a Path2D control point indicated in the Properties window." />
 
-2. Set the position for `Datatype.Path2DControlPoint.LeftTangent|LeftTangent` and/or `Datatype.Path2DControlPoint.RightTangent|RightTangent`. Note that this will [break the mirrored behavior](#break-and-mirror) of the tangents.
+2. Set the position for `Datatype.Path2DControlPoint.LeftTangent|LeftTangent` and/or `Datatype.Path2DControlPoint.RightTangent|RightTangent`. Note that this will [break the mirrored behavior](#breaking-and-mirroring) of the tangents.
 
-#### Delete tangents
+#### Deleting Tangents
 
 To delete both tangents from a control point, hover over and right-click that point, then select **Clear&nbsp;Tangents** from the contextual popup menu.
 
@@ -125,9 +125,9 @@ To delete just one of the tangents (left or right), hover over and right‑click
 
 <img src="../assets/ui/2D-paths/Path-Example-Delete-Tangent.png" width="800" alt="Diagram illustrating how one tangent of a control point is deleted by right-clicking it and selecting Delete Tangent." />
 
-#### Break and mirror
+#### Breaking and Mirroring
 
-By default, tangents mirror each other. When you [drag to adjust](#adjust-tangents) one tangent marker, the paired tangent point will move in unison.
+By default, tangents mirror each other. When you [drag to adjust](#adjusting-tangents) one tangent marker, the paired tangent point will move in unison.
 
 <img src="../assets/ui/2D-paths/Path-Example-Adjust-Tangent.png" width="800" alt="Diagram illustrating how the tangents of a control point are adjusted with the Select tool enabled." />
 
@@ -139,7 +139,7 @@ To "break" the tangents so that each can be moved independently of the other, ho
 To re-establish mirror behavior, hover over and right‑click the associated control point, then select **Mirror&nbsp;Tangents** from the contextual menu. Note that you will **not** see an immediate change in the path after re‑establishing mirror behavior, as the system cannot predict which tangent point you want to begin mirroring. Mirror behavior will resume only once you [drag to adjust](#adjusting-tangents) one of the tangent markers.
 </Alert>
 
-## Path visual properties
+## Path Visual Properties
 
 You can customize the visual appearance of a `Class.Path2D` with the following properties:
 
@@ -181,11 +181,11 @@ You can customize the visual appearance of a `Class.Path2D` with the following p
   </figure>
 	<figure>
     <img src="../assets/ui/2D-paths/Path-Example-ZIndex-Layering.png" width="600" alt="Diagram illustrating a path layered in front of another using the ZIndex property." />
-    <figcaption>ZIndex layering</figcaption>
+    <figcaption>ZIndex Layering</figcaption>
   </figure>
 </GridContainer>
 
-## Path scripting
+## Path Scripting
 
 Scripting is useful for several path-related workflows. The following examples use methods such as `Class.Path2D:GetControlPoints()|GetControlPoints()` which returns a table of `Datatype.Path2DControlPoint|Path2DControlPoints` and `Class.Path2D:GetPositionOnCurveArcLength()|GetPositionOnCurveArcLength()` which returns the `Datatype.UDim2` position at a given `t` value along the spline.
 

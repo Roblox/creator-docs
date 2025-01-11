@@ -1,5 +1,5 @@
 ---
-title: Mouse and keyboard input
+title: Mouse and Keyboard Input
 description: Explains Roblox support for computer mice and keyboards.
 ---
 
@@ -7,7 +7,7 @@ A large percentage of Roblox sessions are played on devices with a mouse and key
 
 For convenience, Roblox sets the most common mouse and keyboard inputs as [default bindings](#roblox-default-bindings) which, except for the reserved bindings, you can overwrite.
 
-## Generic mouse input
+## Generic Mouse Input
 
 Like all device inputs, you can capture mouse inputs using `Class.UserInputService`. This service provides a scalable way to capture input changes and device input states for multiple devices at once. Roblox also supports legacy mouse input detection with `Class.PlayerMouse` and `Class.ClickDetector|ClickDetectors`.
 
@@ -34,7 +34,7 @@ end
 UserInputService.InputEnded:Connect(onInputEnded)
 ```
 
-## Generic keyboard input
+## Generic Keyboard Input
 
 To access keyboard events, use the `Class.UserInputService.InputEnded` event to track whenever any keystroke or other input ends. Similar to [mouse](#generic-mouse-input) events, this event only works within a `Class.LocalScript`.
 
@@ -57,13 +57,13 @@ end
 UserInputService.InputEnded:Connect(onInputEnded)
 ```
 
-## UI input
+## UI Input
 
 Mouse and keyboard input automatically works with interactive UI elements such as `Class.TextButton|TextButtons` and `Class.ImageButton|ImageButtons`, as well as `Class.TextBox|TextBoxes` which capture text input like a field in a form.
 
 For more information on creating buttons and text input objects, see [Buttons](../ui/buttons.md) and [Text Input](../ui/text-input.md).
 
-## Character movement modes
+## Character Movement Modes
 
 You can set mouse and keyboard movement controls schemes for Roblox experiences by changing the values of `Class.StarterPlayer.DevComputerMovementMode` to one of the following:
 
@@ -94,11 +94,11 @@ You can set mouse and keyboard movement controls schemes for Roblox experiences 
 </tbody>
 </table>
 
-## Mouse icons
+## Mouse Icons
 
 You can customize the appearance and behavior of a user's mouse icon within your experience to create a cohesive style across all of your UI elements. This includes temporarily changing the user's mouse icon in specific circumstances, such as hovering over a button.
 
-### Change the icon
+### Changing the Icon
 
 You can change the user's mouse icon in a `Class.LocalScript` by setting the `Class.UserInputService.MouseIcon|MouseIcon` property in `Class.UserInputService` to a custom Roblox asset ID. For example, the following `Class.LocalScript` changes the user's default mouse icon to a circle with a blue dot in the middle:
 
@@ -108,7 +108,7 @@ local UserInputService = game:GetService("UserInputService")
 UserInputService.MouseIcon = "rbxassetid://3400146391"
 ```
 
-### Hide the icon
+### Hiding the Icon
 
 You can hide the user's mouse icon by setting the `Class.UserInputService.MouseIconEnabled` to `false` in a `Class.LocalScript`. For example, the following code switches the mouse icon from visible to invisible and back every two seconds:
 
@@ -123,7 +123,7 @@ while true do
 end
 ```
 
-### Lock the icon
+### Locking the Icon
 
 You can lock the mouse icon's position to the screen using `Class.UserInputService.MouseBehavior` with a `Enum.MouseBehavior` value of `Enum.MouseBehavior|LockCurrentPosition` or `Enum.MouseBehavior|LockCenter`, then unlock it again with a value of `Enum.MouseBehavior|Default`.
 
@@ -143,9 +143,9 @@ UserInputService.InputChanged:Connect(function(inputObject)
 end)
 ```
 
-## Roblox default bindings
+## Roblox Default Bindings
 
-Roblox provides default key bindings for all experiences. These are the most common inputs used for movement, camera control, and basic environment interaction. Excluding the reserved bindings, you can use `Class.ContextActionService` to create cross‑platform binds that prioritize multiple bindings to a single action, as described in [context-dependent inputs](../input/mobile.md#context-dependent-inputs).
+Roblox provides default key bindings for all experiences. These are the most common inputs used for movement, camera control, and basic environment interaction. Excluding the reserved bindings, you can use `Class.ContextActionService` to create cross‑platform binds that prioritize multiple bindings to a single action, as described in [Context-Dependent Inputs](../input/mobile.md#context-dependent-inputs).
 
 `Enum.CoreGuiType` features, such as the **Backpack** or **Chat**, have a list of additional default inputs. You can't overwrite reserved inputs such as <kbd>Esc</kbd> (Roblox menu) or <kbd>F9</kbd> (Developer Console).
 

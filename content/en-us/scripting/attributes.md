@@ -1,5 +1,5 @@
 ---
-title: Properties and attributes
+title: Properties and Attributes
 description: How to use scripts to manipulate object properties and attributes.
 ---
 
@@ -9,11 +9,11 @@ Making experiences interactive often means manipulating object properties and at
 
 - Attributes are essentially custom properties that you define. For example, the [Plant](../resources/plant-reference-project.md) reference project uses attributes to set the purchase price for seeds and the maximum plant size that a pot can hold.
 
-## Replication order
+## Replication Order
 
 Before you begin retrieving and manipulating objects, you must have an understanding of replication order.
 
-The Roblox Engine doesn't guarantee the order in which objects are replicated from the server to the client, which makes the `Class.Instance:WaitForChild()` method essential for accessing objects in client scripts, particularly objects in the `Class.Workspace`. Still, some aspects of the process are predictable:
+The Roblox engine doesn't guarantee the order in which objects are replicated from the server to the client, which makes the `Class.Instance:WaitForChild()` method essential for accessing objects in client scripts, particularly objects in the `Class.Workspace`. Still, some aspects of the process are predictable:
 
 1. The client loads the contents of `Class.ReplicatedFirst`, such as a loading screen, assets, and scripts.
 1. `Class.LocalScript|LocalScripts` (and `Class.Script|Scripts` with a `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client|Client`) in `ReplicatedFirst` run. These scripts can safely get objects from `ReplicatedFirst` without using `WaitForChild()`:
@@ -44,9 +44,9 @@ The Roblox Engine doesn't guarantee the order in which objects are replicated fr
 
 1. `LocalScripts` in `StarterCharacterScripts` run.
 
-If your experience uses [instance streaming](../workspace/streaming.md) (`Class.Workspace.StreamingEnabled`), some or most objects might not have loaded into the workspace, so using `WaitForChild()` to access workspace objects becomes an even more important safety measure. In particular, see [Streaming In](../workspace/streaming.md#stream-in) and [Per-Model Streaming Controls](../workspace/streaming.md#per-model-streaming-controls) for additional information on loading and tuning streaming behavior.
+If your experience uses [instance streaming](../workspace/streaming.md) (`Class.Workspace.StreamingEnabled`), some or most objects might not have loaded into the workspace, so using `WaitForChild()` to access workspace objects becomes an even more important safety measure. In particular, see [Streaming In](../workspace/streaming.md#streaming-in) and [Per-Model Streaming Controls](../workspace/streaming.md#per-model-streaming-controls) for additional information on loading and tuning streaming behavior.
 
-## Get objects
+## Getting Objects
 
 The first step to modifying object properties and attributes is to get a reference to the object. The simplest solution is to make the script a child of the object in the Explorer and use `script.Parent` to reference the object.
 
@@ -67,7 +67,7 @@ local signsFolder = ReplicatedStorage:WaitForChild("Signs")
 local sign = signsFolder:WaitForChild("InteractiveSign")
 ```
 
-## Modify properties
+## Modifying Properties
 
 Properties are straightforward to access — just use a `.` after the object reference&nbsp;— although if you're working with a model, you might need to choose an individual part rather than the model itself.
 
@@ -80,7 +80,7 @@ local chair = ReplicatedStorage:WaitForChild("Chair")
 chair.LeftArmRest.Size = Vector3.new(10, 1, 10)
 ```
 
-## Create attributes
+## Creating Attributes
 
 Although you can create attributes programmatically, the more common solution is to create them with default values in the Studio user interface. Then you can use scripts to modify their values in response to player actions.
 
@@ -88,7 +88,7 @@ Although you can create attributes programmatically, the more common solution is
 
 For information on creating attributes in Studio, see [Instance Attributes](../studio/properties.md#instance-attributes).
 
-## Set attributes
+## Setting Attributes
 
 To modify an attribute's value, call `Class.Instance:SetAttribute()` with a name and value.
 
@@ -100,7 +100,7 @@ cabbage:SetAttribute("Harvestable", true)
 
 If the attribute doesn't already exist, this method creates it.
 
-## Get attribute values
+## Getting Attribute Values
 
 To get the value of one existing attribute, call `Class.Instance:GetAttribute()` on the instance.
 
@@ -127,7 +127,7 @@ for k, v in cabbageAttributes do
 end
 ```
 
-## Delete attributes
+## Deleting Attributes
 
 To delete an attribute, set its value to nil.
 
@@ -137,7 +137,7 @@ local cabbage = script.Parent
 cabbage:SetAttribute("GrowthRate", nil)
 ```
 
-## Detect changes
+## Detecting Changes
 
 There are several ways to listen for changes to properties and attributes:
 

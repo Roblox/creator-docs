@@ -1,5 +1,5 @@
 ---
-title: Text filtering
+title: Text Filtering
 description: Text filtering prevents users from seeing inappropriate language and blocks personally identifiable information.
 ---
 
@@ -9,7 +9,7 @@ Applied to various sources and inputs, **text filtering** prevents users from se
 Because filtering is crucial for a safe environment, Roblox actively moderates the content of experiences to make sure they meet [community standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). If Roblox receives reports or automatically detects that your experience doesn't apply text filtering, then the system removes the experience until you add filtering.
 </Alert>
 
-## Filter scenarios
+## Filter Scenarios
 
 Text can be gathered and/or displayed to users in a variety of scenarios, including:
 
@@ -21,7 +21,7 @@ Text can be gathered and/or displayed to users in a variety of scenarios, includ
 
 - An experience that stores text such as users' pet names using [data stores](../cloud-services/data-stores), where the stored text might include inappropriate words that should be filtered when retrieving them.
 
-## Filtering process
+## Filtering Process
 
 `Class.TextService:FilterStringAsync()` filters in-experience text by taking a string of text and the `Class.Player.UserId|UserId` of the user who created the text as input. It returns a `Class.TextFilterResult` object which has two additional methods that you can call in different scenarios:
 
@@ -34,7 +34,7 @@ In the context of `Class.TextBox` input, the following example gathers input on 
 Do not filter text in real-time "per character entered" into a `Class.TextBox`, as doing so yields for text that's only visible to the user typing it. Instead, filter the entered text **after** the user submits it.
 </Alert>
 
-```lua title="Filtering text input - client script"
+```lua title="Filtering Text Input - Client Script"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local textBox = script.Parent

@@ -1,11 +1,11 @@
 ---
-title: Lighting and effects
+title: Lighting and Effects
 description: Create more immersive environments through lighting, atmospheres, and special effects.
 ---
 
 The `Class.Lighting` container services let you control and customize an experience's environment such as [lighting](#global-lighting), [atmosphere](#atmospheric-effects), and [clouds](#clouds-and-skies). You can also apply [post-processing effects](#post-processing-effects) to adjust how the experience appears on the screen.
 
-## Global lighting
+## Global Lighting
 
 The `Class.Lighting` service contains properties that you can adjust to update the global lighting in an experience, such as the `Class.Lighting.ClockTime|ClockTime` and `Class.Lighting.Brightness|Brightness`.
 
@@ -28,7 +28,7 @@ The `Class.Lighting` service contains properties that you can adjust to update t
 In addition to global lighting, you can create and attach [light sources](../effects/light-sources.md) to parts or attachments to simulate objects like lamps, torches, spotlights, or TV screens.
 </Alert>
 
-## Atmospheric effects
+## Atmospheric Effects
 
 [Atmospheric effects](../environment/atmosphere.md) simulate realistic environments by scattering sunlight in unique ways. Using the `Class.Atmosphere` object in the `Class.Lighting` service, you can control air particle [density](../environment/atmosphere.md#density), simulate [haze](../environment/atmosphere.md#haze) or [glare](../environment/atmosphere.md#glare), set an atmosphere's [color](../environment/atmosphere.md#color), and more.
 
@@ -37,7 +37,7 @@ In addition to global lighting, you can create and attach [light sources](../eff
 <figcaption>Atmospheric effects used to render a brilliant sunset scene</figcaption>
 </figure>
 
-## Clouds and skies
+## Clouds and Skies
 
 By default, the `Class.Sky` object forms a [skybox](../environment/skybox.md) with celestial bodies such as a sun, moon, and stars. In addition, you can adjust the cloud cover, density, and color properties of the `Class.Clouds` object to render realistic, [dynamic clouds](../environment/clouds.md) that drift slowly across the sky through [global wind](../environment/global-wind.md).
 
@@ -46,16 +46,17 @@ By default, the `Class.Sky` object forms a [skybox](../environment/skybox.md) wi
 <figcaption>Wind blowing dynamic clouds across the sky</figcaption>
 </figure>
 
-## Post-processing effects
+## Post-Processing Effects
 
-**Post-processing effects** are customizable filters that allow you to quickly
+Post-processing effects are customizable filters that allow you to quickly
 enrich the visuals of your experience. Using the post-processing effect objects
-in the `Class.Lighting` service or `Class.Camera`, you can:
+in the `Class.Lighting` service or
+`Class.Camera`, you can:
 
-- Simulate a camera viewing a bright light and exaggerate its glow.
-- Apply a Gaussian blur to the entirety of your experience or add a blur to parts of your experience that aren't in focus.
-- Enhance an environment's appearance to create a specific mood through hue.
-- Render a halo of light that moves with the sun.
+- Simulate a camera viewing a bright light and exaggerate its glow ([bloom](../environment/post-processing-effects.md#bloom)).
+- Apply a Gaussian [blur](../environment/post-processing-effects.md#blur) to the entirety of your experience or add a blur to parts of your experience that aren't in focus ([depth‑of‑field](../environment/post-processing-effects.md#depth-of-field)).
+- Enhance an environment's appearance to create a specific mood through hue ([color correction](../environment/post-processing-effects.md#color-correction)).
+- Render a halo of light that moves with the sun ([sun rays](../environment/post-processing-effects.md#sun-rays)).
 
 <figure>
 <img src="../assets/lighting-and-effects/post-processing/DepthOfFieldEffect-With.jpg" width="800" alt="Landscape with depth-of-field effect applied, simulating distance blur" />

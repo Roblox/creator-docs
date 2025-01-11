@@ -1,5 +1,5 @@
 ---
-title: Input and camera
+title: Input and Camera
 description: Explains how Roblox supports various input devices and camera configurations.
 ---
 
@@ -11,7 +11,7 @@ Inputs also include user camera controls, and you can customize various camera
 settings using built-in settings or custom scripts to achieve a certain look and
 feel for your users.
 
-## Mouse and keyboard
+## Mouse and Keyboard
 
 The most common mouse and keyboard inputs are already set in an experience as
 Roblox default keybinds. You can set up additional inputs or replace existing
@@ -21,7 +21,7 @@ Once you're comfortable with testing and developing your inputs on mouse and
 keyboard, make your experience compatible with multiple platforms by setting up
 mobile and gamepad inputs.
 
-See [Mouse and keyboard input](../input/mouse-and-keyboard.md) for more
+See [Mouse and Keyboard Input](../input/mouse-and-keyboard.md) for more
 information on setting up your first custom inputs.
 
 ## Mobile
@@ -34,7 +34,7 @@ You can bind a single action to a traditional PC input and create an on-screen
 button for touchscreen devices. You can also dynamically update input behavior
 so that inputs trigger certain actions only in certain contexts.
 
-See [Mobile input](../input/mobile.md) for more information on creating
+See [Mobile Input](../input/mobile.md) for more information on creating
 setting up cross-platform and dynamic inputs.
 
 ## Gamepad
@@ -43,14 +43,14 @@ Roblox accepts input from USB gamepads such as Xbox and Playstation controllers.
 Gamepads require additional steps to detect and verify connected gamepads before
 binding controller inputs to actions.
 
-See [Gamepad input](../input/gamepad.md) for more information on setting up
+See [Gamepad Input](../input/gamepad.md) for more information on setting up
 gamepad inputs for your experience.
 
-## Customize the camera
+## Customizing the Camera
 
 Roblox experiences include a default user-friendly camera configuration. You can
 edit the camera settings to create a more immersive and unique experience for
 your users.
 
-See [Customize the camera](../workspace/camera.md) for more
+See [Customizing the Camera](../workspace/camera.md) for more
 information on customizing the properties of your camera system.

@@ -1,5 +1,5 @@
 ---
-title: General specifications
+title: General Specifications
 description: Lists the specific technical requirements for custom models created outside of Studio.
 ---
 
@@ -7,14 +7,14 @@ Roblox supports a wide variety of mesh configurations created from third-party s
 
 Check that your model meets the following modeling specifications and guidelines before exporting to ensure Studio compatibility. Specific types of assets, like characters and accessories, have additional specifications:
 
-- If you are creating a rigid accessory model, ensure that your model follows the [accessory specifications](../../art/accessories/specifications.md).
-- If you are creating a clothing accessory model, ensure that your model follows the [clothing specifications](../../art/accessories/clothing-specifications.md).
-- If you are creating an avatar character model, ensure that your model follows the [character specifications](../../art/characters/specifications.md).
+- If you are creating a rigid accessory model, ensure that your model follows [Accessory Specifications](../../art/accessories/specifications.md).
+- If you are creating a clothing accessory model, ensure that your model follows [Clothing Specifications](../../art/accessories/clothing-specifications.md).
+- If you are creating an avatar character model, ensure that your model follows [Character Specifications](../../art/characters/specifications.md).
 
-When ready to export, see the [export settings](../../art/modeling/export-requirements.md) for mesh export settings for Blender and Maya.
+When ready to export, see [Export Requirements](../../art/modeling/export-requirements.md) for mesh export settings for Blender and Maya.
 
 <Alert severity='info'>
-If you meet certain account requirements, you can sell your custom meshes as accessories on the Marketplace. See [Rigid accessories](../../art/accessories/index.md) for an overview on the creation process for these types of accessories.
+If you meet certain account requirements, you can sell your custom meshes as accessories on the Marketplace. See [Clothing and Accessories](../../art/accessories/index.md) for an overview on the creation process for these types of accessories.
 </Alert>
 
 ## Geometry
@@ -26,9 +26,9 @@ See the following specifications for general geometry:
 - **No N-gons** - Meshes must be in quads where possible.
 - **Volume** - Meshes cannot be 0 thickness and must have some volume.
 
-## Rigging and skinning
+## Rigging and Skinning
 
-Roblox supports third-party meshes with an internal rig, or skeleton structure that can be used as additional articulation points in your model. See [Character rigs](../../art/characters/specifications.md#rig) for specific standards for an R15 character rig.
+Roblox supports third-party meshes with an internal rig, or skeleton structure that can be used as additional articulation points in your model. See [Character Rigs](../../art/characters/specifications.md#rigging) for specific standards for an R15 character rig.
 
 <GridContainer numColumns="2">
   <figure>
@@ -45,36 +45,36 @@ See the following requirements for general rigging and skinning:
 
 - **Transformations** - All bones (Blender) or joints (Maya) must be frozen and have scale values set to `1`, `1`, `1` and rotation values set to `0`, `0`, `0`.
 - **Symmetry** - When possible, maintain symmetry when applying influences to a rig
-- **Root joint** - The root bone or joint should always be set to `0`, `0`, `0`.
-- **Max influences** - A vertex can not be influenced by more than 4 bones or joints.
-- **No Root influences** - Do not apply influences to the Root bone or joint.
+- **Root Joint** - The root bone or joint should always be set to `0`, `0`, `0`.
+- **Max Influences** - A vertex can not be influenced by more than 4 bones or joints.
+- **No Root Influences** - Do not apply influences to the Root bone or joint.
 
 ## Textures
 
-Roblox supports basic color textures and modern [PBR textures](../../art/modeling/surface-appearance.md). For technical requirements and best practices when generating individual texture images, see [Texture specifications](../../art/modeling/texture-specifications.md).
+Roblox supports basic color textures and modern [PBR textures](../../art/modeling/surface-appearance.md). For technical requirements and best practices when generating individual texture images, see [Texture Specifications](../../art/modeling/texture-specifications.md).
 
 ## Animations
 
-An animation can be included on any `.fbx` mesh export. For information on prepping a character animation from a modeling software for export, see [Export animations from Maya](../../art/characters/export-avatar-animations-from-maya.md).
+An animation can be included on any `.fbx` mesh export. For information on prepping a character animation from a modeling software for export, see [Exporting Animations from Maya](../../art/characters/exporting-avatar-animations-from-maya.md).
 
 See the following requirements for assets with animation:
 
-- **Single track animation** - Only a single animation track can be exported with a mesh or model. If you want to export multiple animations, you need to create separate exports for each animation you want to import.
+- **Single Track Animation** - Only a single animation track can be exported with a mesh or model. If you want to export multiple animations, you need to create separate exports for each animation you want to import.
 
-## Inner and outer cages
+## Inner and Outer Cages
 
 Inner and Outer cages are non-rendered meshes that Roblox uses to define the inner and outer surfaces of a mesh using a `Class.WrapLayer` or `Class.WrapTarget` instance. These cages are most often used with characters and accessories, though you can use cage meshes for any mesh object.
 
 <Alert severity="warning">
-Character models must include an outer cage in order to properly equip layered clothing and accessories. See [Character specifications](../../art/characters/specifications.md) for additional information.
+Character models must include an outer cage in order to properly equip layered clothing and accessories. See [Character Specifications](../../art/characters/specifications.md) for additional information.
 </Alert>
 
 For general use, see the following requirements for adding inner and outer cage meshes to your model:
 
-- **Naming conventions** - The inner and outer cage must be named after the primary mesh object with **\_InnerCage** and **\_OuterCage** affixed.
+- **Naming Conventions** - The inner and outer cage must be named after the primary mesh object with **\_InnerCage** and **\_OuterCage** affixed.
 
    <img src="../../assets/accessories/lc-blender-selecting-cage-in-outlier.png" alt="The Outliner in Blender showing two mesh objects called Tshirt_InnerCage and Tshirt_OuterCage."/>
 
-- **Outer cage** - Models, such as a playable character, that aren't expected deform but are the target of meshes that will stretch over it, only require an Outer Cage.
-- **Vertices and UV map** - Don't delete vertices or alter the UVs on the Inner or Outer Cages as this can cause errors when importing in Studio or when equipping onto a character.
+- **Outer Cage** - Models, such as a playable character, that aren't expected deform but are the target of meshes that will stretch over it, only require an Outer Cage.
+- **Vertices and UV Map** - Don't delete vertices or alter the UVs on the Inner or Outer Cages as this can cause errors when importing in Studio or when equipping onto a character.
 - **Symmetry and consistency** - Keep each face (the space between vertices) consistently sized and retain symmetry wherever possible. Use symmetry tools in your modeling software whenever possible.

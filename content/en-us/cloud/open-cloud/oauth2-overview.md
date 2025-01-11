@@ -1,5 +1,5 @@
 ---
-title: OAuth 2.0 overview
+title: OAuth 2.0 Overview
 description: Introduces the 3rd-party app creation support with OAuth 2.0 authorization framework.
 ---
 
@@ -28,7 +28,7 @@ defines the roles involved in the authorization process, the protocol of how
 roles interact with each other, and the authorization flows that you need to
 follow to develop secure and compatible apps.
 <Alert severity="info">
-  You must be [ID verified](../../production/publishing/account-verification.md#verify-through-government-id)
+  You must be [ID verified](../../production/publishing/account-verification.md#verifying-through-government-id)
   to register and publish OAuth 2.0 apps.
 </Alert>
 </dd>
@@ -54,7 +54,7 @@ another in authorization flows.
 - **Authorization server**: The Roblox server that authenticates the identity of
   the resource owner and issues access tokens to the client.
 
-## Grant types
+## Grant Types
 
 Authorization flows, or grant types, are the steps of actions that roles perform
 during the authorization process. Roblox supports the OAuth 2.0 authorization
@@ -62,7 +62,7 @@ code flow and its Proof Key for Code Exchange (PKCE) extension, with different
 implementation requirements for apps that are capable or incapable of storing
 client secrets.
 
-### Authorization code flow
+### Authorization Code Flow
 
 Through the authorization code flow, a client exchanges an authorization code
 for an access token and a refresh token to complete the authorization process in
@@ -91,7 +91,7 @@ authorization code flow that you'll read in the following sections:
 
 <img src="../../assets/open-cloud/protocol-flow.png" width="80%" />
 
-### Authorization code flow with PKCE
+### Authorization Code Flow with PKCE
 
 The [PKCE extension](https://www.rfc-editor.org/rfc/rfc7636) of the
 authorization code flow helps reduce risk of leaking the authorization code and
@@ -136,7 +136,7 @@ process with the following steps:
 
 1. The client retrieves the permitted resources after getting the access token.
 
-## OpenID Connect support
+## OpenID Connect Support
 
 Roblox uses [OpenID Connect (OIDC)](https://openid.net/connect/) as an
 identity layer on top of the OAuth 2.0 protocol for authentication to protect
@@ -145,13 +145,13 @@ of users and obtain their basic public profile information, such as user ID,
 usernames, display names, and profile links.
 
 <Alert severity="info">
-When [adding permission scopes](oauth2-registration.md#register-an-app) to your app on
+When [adding permission scopes](oauth2-registration.md#registering-an-app) to your app on
 **Creator Dashboard**, make sure to select the `openid` identity scope for
 receiving an ID token in the token response as part of the authentication
 process.
 </Alert>
 
-## Registration and implementation
+## Registration and Implementation
 
 To implement a web or mobile app that uses authorization code flow, you need to:
 
@@ -163,5 +163,5 @@ To implement a web or mobile app that uses authorization code flow, you need to:
    flow. For a complete reference of the OAuth 2.0 endpoints that you need to
    call, see the [Authentication](../../cloud/reference/oauth2.md) reference.
 
-1. Go through the [review process](oauth2-registration.md#submit-for-review)
+1. Go through the [review process](oauth2-registration.md#submitting-for-review)
    to get more user quota.

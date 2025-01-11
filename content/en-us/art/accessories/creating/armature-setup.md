@@ -1,11 +1,11 @@
 ---
-title: Armature setup
+title: Armature Setup
 description: Transfer and parent an armature template to your custom clothing Blender project.
-next: /art/accessories/creating/test-poses
+next: /art/accessories/creating/testing-poses
 prev: /art/accessories/creating/texture-painting
 ---
 
-**Rigging** is the process that enables the clothing object to move and deform with a Roblox character's R15 rig. In this tutorial, you'll parent the clothing item to Roblox's provided R15 armature and verify the Automatic Skinning Transfer data. After rigging, be sure to test out some basic poses to ensure that your clothes move and stretch correctly with any character body.
+**Rigging** is the process that enables the clothing object to move and deform with a Roblox character's R15 rig. In this tutorial, you'll parent the clothing item to Roblox's provided R15 armature and verify the automatic skinning data. After rigging, be sure to test out some basic poses to ensure that your clothes move and stretch correctly with any character body.
 
 <GridContainer numColumns="2">
   <figure>
@@ -24,7 +24,7 @@ The rigging process requires the following:
 2. Parent the rig with Blender's automatic weights.
 3. Test poses.
 
-## Transfer armature
+## Transferring Armature
 
 Roblox provides an R15 base armature that you can import into your own project. While it is possible to create your own R15 armature rig, importing a premade rig saves you time and reduces the potential for error.
 
@@ -50,7 +50,7 @@ To import the R15 character armature into your file:
 
 <video controls src="../../../assets/art/accessories/creating/Rigging_01.mp4" width="100%"></video>
 
-## Parent armature
+## Parenting Armature
 
 With the armature rig in place, you can use Blender's **Parent with Automatic Weights** functionality to quickly set your clothing mesh as a child of the armature. This feature also applies vertex weighting, or **skinning**, automatically to your mesh, which can save you significant time over skinning your clothing manually.
 

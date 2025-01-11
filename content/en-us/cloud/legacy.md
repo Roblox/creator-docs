@@ -1,5 +1,5 @@
 ---
-title: Legacy overview
+title: Legacy Overview
 description: Lists legacy REST APIs for Open Cloud.
 ---
 

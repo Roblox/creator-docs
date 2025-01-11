@@ -1,5 +1,5 @@
 ---
-title: Accessibility guidelines
+title: Accessibility Guidelines
 
 description: Explains the practice of designing products and services to be usable by people with disabilities.
 ---
@@ -8,7 +8,7 @@ description: Explains the practice of designing products and services to be usab
 
 Accessibility isn't limited to the physical world&nbsp;&mdash; online experiences can be made accessible, too. Recent stats cite that over 26% of people have some type of disability, so making your Roblox experience accessible can help you reach a wider audience.
 
-## Text size
+## Text Size
 
 Users may find it difficult to read small text. Compare the following in-experience shop menu with a blur applied, simulating what it might look like to a user with impaired vision.
 
@@ -40,7 +40,7 @@ If you increase the size of the smaller font labels, it will be clearer to most 
   </TabItem>
 </Tabs>
 
-## Color contrast
+## Color Contrast
 
 Users might find it difficult to read light text on a light background, or dark text on a dark background. To improve accessibility, it's recommended that you pick text and background colors with sufficient color contrast.
 
@@ -59,7 +59,7 @@ Users might find it difficult to read light text on a light background, or dark 
   </figure>
 </GridContainer>
 
-## Color non-reliance
+## Color Non-Reliance
 
 Over 5% of people in the world have some form of color blindness. Although it's rare for someone to see **only** in black and white, imagine viewing an experience in grayscale:
 
@@ -84,7 +84,7 @@ By modifying the image to use different **symbols** alongside colors, more users
   </TabItem>
 </Tabs>
 
-## Sound non-reliance
+## Sound Non-Reliance
 
 Sound is an excellent addition for immersive experiences, but hearing-impaired users or anyone who turns their volume off will be confused by in-experience events that are **only** conveyed with sound.
 
@@ -92,7 +92,7 @@ Consider the following scene where a ringing phone is signalled only by sound, a
 
 <video src="../../assets/publishing/accessibility/Sound-Reliance.mp4" controls width="800" alt="Video showing comparison between sound usage only and sound plus visual aids"></video>
 
-## Volume controls
+## Volume Controls
 
 Different sounds playing at the same time can be overwhelming, distracting, or difficult to distinguish. Providing users with volume controls for different [groups](../../sound/groups.md) of audio such as sound effects, music, and speech lets them customize their experience and focus on what they need to.
 

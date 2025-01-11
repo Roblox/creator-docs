@@ -1,5 +1,5 @@
 ---
-title: UI appearance modifiers
+title: UI Appearance Modifiers
 description: Explains how to use appearance modifiers to customize basic user interface objects.
 ---
 
@@ -30,7 +30,7 @@ You can configure the gradient by:
 - Choosing the gradient's starting point (inside or outside the parent's bounds) through the `Class.UIGradient.Offset|Offset` property.
 - Choosing the gradient's angle through the `Class.UIGradient.Rotation|Rotation` property.
 
-### Color sequence
+### Color Sequence
 
 To set a gradient's color sequence:
 
@@ -81,7 +81,7 @@ To adjust a gradient's transparency across its range:
    - Delete a keypoint by selecting it and clicking the **Delete** button.
    - Reset the sequence by clicking the **Reset** button.
 
-### Offset and rotation
+### Offset and Rotation
 
 The `Class.UIGradient.Offset|Offset` and `Class.UIGradient.Rotation|Rotation` properties let you adjust the gradient's control points and its angle. As illustrated in the following diagrams, `Class.UIGradient.Offset|Offset` is based on a **percentage** of the parent's width or height, and both positive or negative values are valid.
 
@@ -126,7 +126,7 @@ The `Class.UIStroke` instance applies an outline to text or a border. Key featur
 - Three [corner styles](#corner-style) (round, bevel, or miter).
 - Stroke [gradient](#color--gradient) support through the `Class.UIGradient` instance.
 
-### Text outline / border
+### Text Outline / Border
 
 Depending on its parent, `Class.UIStroke` operates as either a **text outline** or as a **border**. When you parent `Class.UIStroke` to a text object, it applies to the text's outline; when you parent `Class.UIStroke` to other `Class.GuiObject|GuiObjects`, it applies to the border.
 
@@ -173,7 +173,7 @@ You can set the stroke width through the `Class.UIStroke.Thickness|Thickness` pr
 Avoid [tweening](../ui/animation.md) the `Class.UIStroke.Thickness|Thickness` property of a `Class.UIStroke` instance applied to **text** objects. This renders and stores many glyph sizes each frame, potentially causing performance issues or text flickering.
 </Alert>
 
-### Color / gradient
+### Color / Gradient
 
 You can set the stroke color through the `Class.UIStroke.Color|Color` property, as well as insert a child `Class.UIGradient` instance to create gradient strokes.
 
@@ -207,7 +207,7 @@ The `Class.UIStroke.Transparency|Transparency` property sets the stroke transpar
   </figure>
 </GridContainer>
 
-### Corner style
+### Corner Style
 
 The `Class.UIStroke.LineJoinMode|LineJoinMode` property lets you control how corners are interpreted. It accepts a value of either **Round**, **Bevel**, or **Miter**.
 

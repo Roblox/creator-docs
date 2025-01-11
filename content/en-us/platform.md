@@ -1,5 +1,5 @@
 ---
-title: Platform overview
+title: Platform Overview
 description: Learn about the unique value propositions on Roblox.
 next: /creation
 ---

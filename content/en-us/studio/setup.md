@@ -1,11 +1,11 @@
 ---
-title: Roblox Studio setup
+title: Roblox Studio Setup
 description: Explains how to install Roblox Studio on your system.
 ---
 
 Create immersive 3D experiences on Roblox with **Roblox Studio**, a free application available on Windows and Mac.
 
-## System requirements
+## System Requirements
 
 The following system specifications ensure that Studio runs smoothly:
 
@@ -19,7 +19,7 @@ The following system specifications ensure that Studio runs smoothly:
 
 <figcaption>&sup1; When installing [WebView2](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section) for Windows 10 or earlier, try the **Evergreen Standalone Installer** if the **Evergreen Bootstrapper** installation fails.</figcaption>
 
-## Installation
+## Installing Studio
 
 To install Roblox Studio on your Windows or Mac computer:
 
@@ -47,17 +47,17 @@ Many customization options are accessible via **File**&nbsp;&rang; **Studio Sett
 <img src="../assets/studio/general/Studio-Settings-Layout.png" width="750" alt="A close up view of the Studio Settings window." />
 
 <Alert severity="success">
-In addition to general settings, you can customize Studio's [window layout](../studio/ui-overview.md#layout-customization) to best suit your workflows.
+In addition to general settings, you can customize Studio's [window layout](../studio/ui-overview.md#customizing-the-layout) to best suit your workflows.
 </Alert>
 
-## Updates
+## Updating Studio
 
-In contrast to certain other engines, every experience runs on the latest version of the Roblox Engine. You should keep Studio up-to-date to utilize the latest APIs and features.
+In contrast to certain other engines, every experience runs on the latest version of the Roblox engine. You should keep Studio up-to-date to utilize the latest APIs and features.
 
 If your current version of Studio is outdated, you'll see an **Update Available** button in the upper-right corner. Clicking the button will prompt you to save/close the currently open place so that Studio can automatically update and restart.
 
 <img src="../assets/studio/general/Toolbar-Update-Prompt.png" width="754" alt="Studio's Model tab with the Update Studio button highlighted." />
 
-## Beta features
+## Beta Features
 
 Many beta features are available through Studio's **File**&nbsp;&rang; **Beta&nbsp;Features** menu. Once you've enabled beta features, click the **Save** button and you'll be prompted to restart Studio for the features to take effect.

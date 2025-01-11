@@ -3,11 +3,11 @@ title: Plugins
 description: Explains how to create, publish, and monetize extensions to Studio that add custom functionality.
 ---
 
-A **plugin** is an extension that adds additional features or functionality to Studio. You can [install](../production/creator-store.md#find-assets) community-made plugins from the Creator Store, or you can [create](#create-new-plugins) and [publish](#upload-distribute-and-monetize-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your experiences.
+A **plugin** is an extension that adds additional features or functionality to Studio. You can [install](../production/creator-store.md#finding-assets) community-made plugins from the Creator Store, or you can [create](#creating-new-plugins) and [publish](#uploading-distributing-and-monetizing-plugins) your own to the [Toolbox](../projects/assets/toolbox.md) to use across your experiences.
 
-If you choose to also distribute your plugins to the Creator Store, you can either offer them for free or sell them for **United States Dollars** (the minimum price is $4.99). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins, see [Selling on the Creator Store](../production/sell-on-creator-store.md).
+If you choose to also distribute your plugins to the Creator Store, you can either offer them for free or sell them for **United States Dollars** (the minimum price is $4.99). Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. For more information on selling plugins, see [Selling on the Creator Store](../production/selling-on-creator-store.md).
 
-## Create new plugins
+## Creating New Plugins
 
 You can create your own plugins to improve your workflow in Studio. The following code sample is a plugin called **EmptyScriptAdder** that inserts an empty script as the child of an object or in `Class.ServerScriptService`. The following sections explain the major parts to creating this plugin.
 
@@ -42,7 +42,7 @@ end
 newScriptButton.Click:Connect(onNewScriptButtonClicked)
 ```
 
-### Save plugin scripts
+### Saving a Plugin Script
 
 Plugins start from scripts. To create a plugin, create a `Class.Script` and save it as a plugin using the [Explorer](../studio/explorer.md). For example, to create the **EmptyScriptAdder Plugin**:
 
@@ -59,28 +59,28 @@ Plugins start from scripts. To create a plugin, create a `Class.Script` and save
 Make sure to delete the original script in `Class.ServerStorage` and work from the plugin inside `Class.PluginDebugService`, otherwise you may end up applying changes to the wrong script.
 </Alert>
 
-### Reload and save changes
+### Reloading and Saving Changes
 
 With your `Class.Plugin` inside `Class.PluginDebugService`, you can easily update the plugin by right-clicking it and then selecting **Save and Reload Plugin** from the context menu. If you simply want to reload the plugin, for example to step through a section of code using a breakpoint without saving the plugin, you can
 alternatively select **Reload Plugin**.
 
-### Add toolbar buttons
+### Adding a Toolbar Button
 
 To add a button for your plugin to the **Plugins** tab of the Studio toolbar, use the `Class.Plugin:CreateToolbar()` and `Class.PluginToolbar:CreateButton()` methods. In the code for **EmptyScriptAdder**, line 5 creates a new section in the toolbar named **Custom Script Tools** and line 8 creates a button named **Create Empty Script**.
 
 <img src="../assets/studio/plugins/Plugin-Toolbar-Button.png" width="800" alt="New plugin button added to toolbar in Studio" />
 
-### Execute code on click
+### Executing Code on Click
 
 To make the plugin execute code when a user clicks the toolbar button, connect a function to the button's `Class.PluginToolbarButton.Click` event. In the code for **EmptyScriptAdder**, the connecting function is `onNewScriptButtonClicked()`.
 
-### Check user selection
+### Checking User Selection
 
 To modify a plugin's behavior based on what the user has selected, use the `Class.Selection` service. The `onNewScriptButtonClicked()` function checks if the user has anything selected and creates the new script as its child instead of inside `Class.ServerScriptService`. If the user doesn't have anything selected, it creates the new script in `Class.ServerScriptService`.
 
 <img src="../assets/studio/plugins/Plugin-Inserted-Script.png" width="320" />
 
-### Support undo and redo
+### Supporting Undo and Redo
 
 Use `Class.ChangeHistoryService` to allow users to undo and redo changes made by a plugin within an experience. In your script, set the plugin to call `Class.ChangeHistoryService:TryBeginRecording()` and store the identifier assigned to the API call before making changes. Then set the plugin to call `Class.ChangeHistoryService:FinishRecording()` after making changes, so it captures any changes made during the recording session for undo and redo.
 
@@ -128,7 +128,7 @@ button.Click:Connect(function()
 end)
 ```
 
-## Upload, distribute and monetize plugins
+## Uploading, Distributing and Monetizing Plugins
 
 As with [models](../parts/models.md), [meshes](../parts/meshes.md), [images](../parts/textures-decals.md), and [animations](../animation/editor.md#creating-an-animation), you can distribute plugins to Roblox to make them easy to reuse from the [Toolbox](../projects/assets/toolbox.md). You can choose to make them publicly available to all other creators on the [Creator Store](../production/creator-store.md), or to distribute them privately for your own use. If you choose to distribute your plugin publicly, you can set a price at which to sell it to other creators.
 

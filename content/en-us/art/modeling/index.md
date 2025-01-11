@@ -1,5 +1,5 @@
 ---
-title: Custom meshes
+title: Custom Meshes
 description: External modeling is the use of a third-party modeling software to create custom meshes.
 ---
 
@@ -13,7 +13,7 @@ In Roblox, custom 3D assets generally fall under three types of applications:
 - **Avatar models** for users or non-player characters (NPCs).
 - **Accessory models** that character models can equip and wear, like clothing and cosmetics.
 
-If you meet certain account requirements, you can publish and sell your avatar-ready models on the Marketplace and earn a commission for each sale. For more information, see [Roblox avatars](../../avatar/index.md).
+If you meet certain account requirements, you can publish and sell your avatar-ready models on the Marketplace and earn a commission for each sale. For more information, see Roblox's [Avatar documentation](../../avatar/index.md).
 
 <GridContainer numColumns="3">
   <figure>
@@ -30,7 +30,7 @@ If you meet certain account requirements, you can publish and sell your avatar-r
   </figure>
 </GridContainer>
 
-## Supported meshes
+## Supported Meshes
 
 Roblox supports many types of custom meshes, as long as they adhere to the [general mesh specifications](../../art/modeling/specifications.md). A basic custom mesh consists of at least one mesh object and one texture:
 
@@ -51,7 +51,7 @@ Roblox supports many types of custom meshes, as long as they adhere to the [gene
 
 Studio also supports meshes that include [rigging and skinning](#rigging-and-skinning) data, [PBR textures](#pbr-textures), and other [Studio-related objects](#studio-related-objects) like cage meshes and attachments. Many of these various components are required if you are creating avatar character models or accessories.
 
-### Rigging and skinning
+### Rigging and Skinning
 
 A **rigged mesh** is a mesh with an internal poseable skeleton rig and bone structure. Rigged meshes allow mesh surfaces to rotate and move where internal bone joints are placed within a model, such as a character's knee or elbow. Skinning a rigged mesh allows the mesh object to bend organically, imitating the natural way joints would move in real life.
 
@@ -66,20 +66,20 @@ A **rigged mesh** is a mesh with an internal poseable skeleton rig and bone stru
   </figure>
 </GridContainer>
 
-For more information on rigging and skinning, see [Rigging and skinning](../../art/modeling/rigging.md).
+For more information on rigging and skinning, see [Rigging and Skinning](../../art/modeling/rigging.md).
 
-### PBR textures
+### PBR Textures
 
-**Physically-Based rendering** (PBR) textures allow you to represent realistic shading and lighting by using multiple types of texture images, or **maps**, on a single object. Combining multiple texture maps can more accurately simulate color, roughness, and reflectivity in any lighting environment and can enhance the visual elements of your assets and environment.
+**Physically-Based Rendering** (PBR) textures allow you to represent realistic shading and lighting by using multiple types of texture images, or **maps**, on a single object. Combining multiple texture maps can more accurately simulate color, roughness, and reflectivity in any lighting environment and can enhance the visual elements of your assets and environment.
 
 <GridContainer numColumns="2">
   <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Example-1.jpg" alt="A realistic looking leafy bush with shadows and depth."/>
   <img src="../../assets/modeling/surface-appearance/SurfaceAppearance-Example-3.jpg" alt="A realistic looking rock with moss on the top." />
 </GridContainer>
 
-For more information on PBR textures, see [PBR textures](../../art/modeling/surface-appearance.md).
+For more information on PBR textures, see [PBR Textures](../../art/modeling/surface-appearance.md).
 
-### Studio-related objects
+### Studio-Related Objects
 
 Studio automatically converts certain types of objects found in 3D modeling files as specific workspace objects in the experience. These are typically used when creating a character or accessory, and configuring these in your modeling software can sometimes be the primary way of correctly setting up these Studio objects.
 
@@ -105,38 +105,38 @@ If you are interested in specific avatar creation topics, use the following tabl
 </thead>
 <tbody>
   <tr>
-    <td>Reference files</td>
-    <td>[Example models, project kits, and templates](../../art/modeling/project-files.md)</td>
+    <td>Reference Files</td>
+    <td>[Example Models, Project Kits, Templates](../../art/modeling/project-files.md)</td>
   </tr>
   <tr>
-    <td>Technical specs</td>
-    <td>[.FBX export settings](../../art/modeling/export-requirements.md)<br /><br />[General mesh specifications](../../art/modeling/specifications.md)<br /><br />
-    [Avatar specifications](../../art/characters/specifications.md)<br /><br />[Accessory specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace policy](../../marketplace/marketplace-policy.md)</td>
+    <td>Technical Specs</td>
+    <td>[.FBX Export Settings](../../art/modeling/export-requirements.md)<br /><br />[General Mesh Specifications](../../art/modeling/specifications.md)<br /><br />
+    [Avatar Specifications](../../art/characters/specifications.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Policy](../../marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
-    <td>Bodies and clothing creation</td>
-    <td>[Accessories overview](../../art/accessories/index.md)<br /><br />[Bodies overview](../../art/characters/index.md)<br /><br />[Face accessory creation](../../art/characters/facial-animation/create-face-accessories.md)<br /><br />[Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace requirements](../../marketplace/marketplace-policy.md)</td>
+    <td>Bodies and Clothing Creation</td>
+    <td>[Accessories Overview](../../art/accessories/index.md)<br /><br />[Bodies Overview](../../art/characters/index.md)<br /><br />[Creating Face Accessories](../../art/characters/facial-animation/creating-face-accessories.md)<br /><br />[Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Requirements](../../marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
     <td>Texturing</td>
-    <td>[Texture specifications](../../art/modeling/texture-specifications.md)<br /><br />[PBR textures](../../art/modeling/surface-appearance.md)</td>
+    <td>[Texturing Requirements](../../art/modeling/texture-specifications.md)<br /><br />[PBR Textures](../../art/modeling/surface-appearance.md)</td>
   </tr>
   <tr>
-    <td>Rigging and skinning</td>
-    <td>[Rigging and skinning overview](../../art/modeling/rigging.md)<br /><br />[Basic mesh rigging](../../art/modeling/rig-a-simple-mesh.md) <br /><br />[Facial bone rigging](../../art/characters/facial-animation/create-basic-heads.md#rigging)<br /><br />[Facial bone skinning](../../art/characters/facial-animation/create-basic-heads.md#skin-face-bones)<br /><br />[Avatar rigging requirements](../../art/characters/specifications.md#rigging)<br /><br />[Automatic skinning transfer](../../art/accessories/automatic-skinning-transfer.md)</td>
+    <td>Rigging and Skinning</td>
+    <td>[Rigging and Skinning Overview](../../art/modeling/rigging.md)<br /><br />[Rigging Basic Meshes](../../art/modeling/rigging-a-simple-mesh.md) <br /><br />[Rigging Facial Bones](../../art/characters/facial-animation/creating-basic-heads.md#rigging)<br /><br />[Skinning Facial Bones](../../art/characters/facial-animation/creating-basic-heads.md#skinning-face-bones)<br /><br />[Avatar Rig Requirements](../../art/characters/specifications.md#rigging)<br /><br />[Auto Skin Transfer](../../art/accessories/automatic-skinning-transfer.md)</td>
   </tr>
 
   <tr>
-    <td>Facial animation and live heads</td>
-    <td>[Basic head creation](../../art/characters/facial-animation/create-basic-heads.md)<br /><br />[Face accessory creation](../../art/characters/facial-animation/create-face-accessories.md)<br /><br />[FACS pose references](../../art/characters/facial-animation/facs-poses-reference.md)</td>
+    <td>Facial Animation and Live Heads</td>
+    <td>[Basic Head Creation](../../art/characters/facial-animation/creating-basic-heads.md)<br /><br />[Creating Face Accessories](../../art/characters/facial-animation/creating-face-accessories.md)<br /><br />[FACS Pose References](../../art/characters/facial-animation/facs-poses-reference.md)</td>
   </tr>
   <tr>
-    <td>Testing and validation</td>
+    <td>Testing and Validation</td>
     <td>[Calisthenics Tool](../../art/modeling/calisthenics-tool.md)<br /><br />[Clothing Validation Tool](../../art/accessories/validation-tool.md)</td>
   </tr>
   <tr>
     <td>Publishing and Marketplace</td>
-    <td>[Upload to Marketplace](../../marketplace/publish-to-marketplace.md)<br /><br />[Marketplace policy](../../marketplace/marketplace-policy.md)<br /><br />[Fees and commissions](../../marketplace/marketplace-fees-and-commissions.md)</td>
+    <td>[Uploading to Marketplace](../../marketplace/publishing-to-marketplace.md)<br /><br />[Marketplace Policy](../../marketplace/marketplace-policy.md)<br /><br />[Fees and Commissions](../../marketplace/marketplace-fees-and-commissions.md)</td>
   </tr>
 </tbody>
 </table>

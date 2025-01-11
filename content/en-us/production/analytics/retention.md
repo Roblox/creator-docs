@@ -9,20 +9,20 @@ description: Explains how to improve retention metrics for your experience.
 
 **Retention** measures how many users return to your experience after their first visit in 1 day, 7 days, and 30 days.
 
-## View retention metrics
+## Viewing Retention Metrics
 
 To view your experience's retention analytics:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
 1. In the **Analytics** menu on the left, select **Retention**.
 
-You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md).
+You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md#granting-group-permission).
 
-## Improve day 1 retention
+## Improving Day 1 Retention
 
 Day 1 retention is the percentage of new users who come back to your experience after visiting it for the first time. To improve this metric, focus on your experience's **core loop**, **first-time user experience**, and **performance**.
 
-### Core loop
+### Core Loop
 
 Core loop is the actions that users repeat in your experience to make progress in a single session.
 
@@ -39,9 +39,9 @@ The following example is one path to improve your core loop:
 
 <br />
 
-To learn more on how to design core loops, see [Core loops](../../production/game-design/core-loops.md).
+To learn more on how to design core loops, see [Core Loops](../../production/game-design/core-loops.md).
 
-### First-time user experience
+### First-time User Experience
 
 **First-time user experience (FTUE)** is how new users experience your core loop for the first time. To improve your FTUE:
 
@@ -77,11 +77,11 @@ To learn more on how to design your FTUE, see [Onboarding](../../production/game
 2. **Monitor crash rates, frame rates, and errors** each time you update your experience.
 3. **Set up a user community** that can help identify bugs and crashes.
 
-## Improve day 7 retention
+## Improving Day 7 Retention
 
 Day 7 retention is the percentage of new users who come back to your experience after visiting it for the first time on the 8th day (Day 7). To improve this metric, focus on your experience's **progression system**.
 
-### Progression system
+### Progression System
 
 Progression system is how users accomplish goals and gain rewards in your experience, such as leveling up and unlocking new content. To build a healthy progression system:
 
@@ -103,11 +103,11 @@ You can use analytics to improve your progression system:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hD2Ive5RqtE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Improve day 30 retention
+## Improving Day 30 Retention
 
 Day 30 retention is the percentage of new users who come back to your experience after visiting it for the first time on the 31st day (Day 30). To improve this metric, focus on your experience's ending system.
 
-### Ending system
+### Ending System
 
 Ending system is what's available to users after they've completed the main objectives of your experience or reached higher levels. To improve it:
 

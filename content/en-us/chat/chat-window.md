@@ -1,17 +1,13 @@
 ---
-title: Customize the chat window
+title: Customizing the Chat Window
 description: Customize the chat window and message UI of your in-experience text chat.
 ---
 
 The [in-experience text chat](../chat/in-experience-text-chat.md) system, powered by `Class.TextChatService`, allows players to easily communicate and socialize with each other in live experiences. In addition to supporting the default text chat, you can [customize](#chat-window-configuration) the front‑end user interface.
 
-## Chat window configuration
+## Chat Window Configuration
 
-The overall chat window consists of:
-
-- Chat window
-- Input bar
-- Channel tabs (optional)
+The overall chat window consists of the **chat window**, an **input bar**, and optional **channel tabs**.
 
 <img src="../assets/players/in-experience-text-chat/Chat-Window-Components.jpg" width="800" alt="Core components of the text chat window." />
 
@@ -50,13 +46,13 @@ end
 </TabItem>
 </Tabs>
 
-When `Class.ChannelTabsConfiguration` is enabled, each default `Class.TextChannel` appears in a tab as outlined in the following table. In addition, each custom `Class.TextChannel` creates a tab corresponding to the channel's `Class.Instance.Name|Name` property.
+When `Class.ChannelTabsConfiguration` is enabled, each **default** `Class.TextChannel` appears in a tab as outlined in the following table. In addition, each **custom** `Class.TextChannel` creates a tab corresponding to the channel's `Class.Instance.Name|Name` property.
 
 <table size="small">
 	<thead>
 		<tr>
-			<th>Default channel</th>
-			<th>Tab name</th>
+			<th>Default Channel</th>
+			<th>Tab Name</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -79,9 +75,9 @@ When `Class.ChannelTabsConfiguration` is enabled, each default `Class.TextChanne
 	</tbody>
 </table>
 
-### Window appearance
+### Window Appearance
 
-Appearance of the overall chat window is customizable through `Class.ChatWindowConfiguration`.
+Appearance of the overall **chat window** is customizable through `Class.ChatWindowConfiguration`.
 
 <img src="../assets/studio/explorer/TextChatService-ChatWindowConfiguration.png" width="320" height="94" alt="ChatWindowConfiguration instance in Explorer hierarchy." />
 
@@ -152,9 +148,9 @@ Appearance of the overall chat window is customizable through `Class.ChatWindowC
 </tbody>
 </table>
 
-### Input bar appearance
+### Input Bar Appearance
 
-Appearance of the chat input bar is customizable through `Class.ChatInputBarConfiguration`.
+Appearance of the chat **input bar** is customizable through `Class.ChatInputBarConfiguration`.
 
 <img src="../assets/studio/explorer/TextChatService-ChatInputBarConfiguration.png" width="320" height="94" alt="ChatInputBarConfiguration instance in Explorer hierarchy." />
 
@@ -220,7 +216,7 @@ Appearance of the chat input bar is customizable through `Class.ChatInputBarConf
 </tbody>
 </table>
 
-### Channel tabs appearance
+### Channel Tabs Appearance
 
 Appearance of the **channel tabs** is customizable through `Class.ChannelTabsConfiguration`.
 
@@ -283,7 +279,7 @@ Appearance of the **channel tabs** is customizable through `Class.ChannelTabsCon
 </tbody>
 </table>
 
-## Customize messages
+## Customizing Messages
 
 You can customize the appearance of chat message bodies and prefixes using `Class.ChatWindowMessageProperties` and `Class.TextChatService.OnChatWindowAdded` callbacks without overriding the existing UI. The customization options let you modify the appearance of chat messages to match your experience's theme, and you can also sort or highlight messages from different user groups by adding chat tags and coloring prefixes.
 
@@ -291,9 +287,9 @@ You can customize the appearance of chat message bodies and prefixes using `Clas
 `Class.ChatWindowMessageProperties` and `Class.TextChatService.OnChatWindowAdded|OnChatWindowAdded` only affect the appearance of messages in the chat window. To customize chat bubbles, see [Bubble Chat](../chat/bubble-chat.md).
 </Alert>
 
-### Color user names
+### Coloring User Names
 
-When a user sends a chat message, their `Class.Player.DisplayName|DisplayName` displays as the prefix portion of the message. By default, each user's name is colored according to their `Class.Player.TeamColor` but you can change the colors of chat names using `Class.ChatWindowMessageProperties|ChatWindowMessageProperties` and `Class.TextChatService.OnChatWindowAdded|OnChatWindowAdded`. The following `Class.LocalScript` in `Class.StarterPlayerScripts` assigns a predetermined color to each user, picking randomly from a table of RGB colors.
+When a user sends a chat message, their `Class.Player.DisplayName|DisplayName` displays as the **prefix** portion of the message. By default, each user's name is colored according to their `Class.Player.TeamColor` but you can change the colors of chat names using `Class.ChatWindowMessageProperties|ChatWindowMessageProperties` and `Class.TextChatService.OnChatWindowAdded|OnChatWindowAdded`. The following `Class.LocalScript` in `Class.StarterPlayerScripts` assigns a predetermined color to each user, picking randomly from a table of RGB colors.
 
 <img src="../assets/players/in-experience-text-chat/Chat-User-Name-Colored.png" width="780" alt="Colored user name in the chat window." />
 
@@ -354,9 +350,9 @@ TextChatService.OnChatWindowAdded = function(message: TextChatMessage)
 end
 ```
 
-### Add chat tags
+### Adding Chat Tags
 
-If your experience has users with special [attributes](../studio/properties.md#instance-attributes) like VIP status, you can attach chat tags wrapped in brackets to the front of user messages to highlight their messages. The following `Class.LocalScript` in `Class.StarterPlayerScripts` examines all `Class.Player` instances representing users in your experience and appends VIP chat tags to those with the `IsVIP` attribute.
+If your experience has users with special [attributes](../studio/properties.md#instance-attributes) like VIP status, you can attach **chat tags** wrapped in brackets to the front of user messages to highlight their messages. The following `Class.LocalScript` in `Class.StarterPlayerScripts` examines all `Class.Player` instances representing users in your experience and appends VIP chat tags to those with the `IsVIP` attribute.
 
 <img src="../assets/players/in-experience-text-chat/Chat-Tag-VIP.png" width="780" alt="VIP chat tag appended to user name in the chat window." />
 
@@ -383,7 +379,7 @@ TextChatService.OnChatWindowAdded = function(message: TextChatMessage)
 end
 ```
 
-### Rich text customization
+### Rich Text Customization
 
 Rich text [font color tags](../ui/rich-text.md#supported-tags) can be used to format chat messages, helpful if you want to apply formatting to very specific parts of the message. Note that rich text does not support gradients, but the following code sample shows how you can move the user name (stored in `Class.TextChatMessage.PrefixText`) into the message body and then apply rich text tagging to only the name portion.
 
@@ -417,7 +413,7 @@ TextChatService.OnChatWindowAdded = function(message: TextChatMessage)
 end
 ```
 
-## Send messages from non‑player sources
+## Sending Messages from Non‑Player Sources
 
 Sometimes, you might want to show non‑player dialogue in the chat window, such as "speech" from a public address system or a non‑player character.
 
@@ -442,9 +438,9 @@ generalChannel:DisplaySystemMessage(PREFIX .. player.DisplayName)
 
 For a more detailed guide on how to customize the appearance of system messages, see [Customizing System Messages](./examples/custom-system-messages.md).
 
-#### Default system messages
+#### Default System Messages
 
-When `Class.TextChatService.CreateDefaultTextChannels` is true, one of the default text channels is the RBXSystem channel. The default chat scripts automatically display system messages in this channel. You can customize the appearance of these messages using the `Class.TextChannel.OnIncomingMessage` callback.
+When `Class.TextChatService.CreateDefaultTextChannels` is true, one of the default text channels is the **RBXSystem** channel. The default chat scripts automatically display system messages in this channel. You can customize the appearance of these messages using the `Class.TextChannel.OnIncomingMessage` callback.
 
 You might want to customize or alter the system messages that are automatically emitted by the chat system. Since the default system messages are localized for users, you should reference them by `TextChatMessage.Metadata` in your [text chat callbacks](../chat/in-experience-text-chat.md#text-chat-hooks-and-callbacks) if you wish to customize their appearance.
 
@@ -585,7 +581,7 @@ Below is a reference of the default system messages that are emitted by the chat
 	</tbody>
 </table>
 
-### NPC/object
+### NPC/Object
 
 You can also stylize non-player dialogue and add [chat bubbles](../chat/bubble-chat.md) to make it appear like messages are coming from an NPC or object within the 3D world.
 

@@ -1,5 +1,5 @@
 ---
-title: Missions package
+title: Missions Package
 description: Learn about the missions feature package.
 ---
 
@@ -17,7 +17,7 @@ Using the package's customization options, you can personalize all missions to m
 For information on how to provide players with fresh goals and incentives so that they're motivated to play longer and increase their engagement, see [Introduction to Quest Design](../../production/game-design/introduction-to-quest-design.md).
 </Alert>
 
-## Get package
+## Get Package
 
 The **Creator Store** is a tab of the Toolbox that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add one or more assets directly into an open experience, including feature packages!
 
@@ -55,11 +55,11 @@ To get the packages from your inventory into your experience:
 5. Click the **Feature Package Core** tile, then the **Missions Feature Package** tile. Both package folders display in the **Explorer** window.
 6. Drag the package folders into **ReplicatedStorage**.
 
-## Define missions
+## Defining Missions
 
 Each completeable mission includes a set of tasks that must be finished to complete the mission, configuration options, and optional display metadata, all of which can be defined within `ReplicatedStorage.Missions.Configs.Missions`, with types exported from the `Types` script in the same folder.
 
-### Required fields
+### Required Fields
 
 The following fields are required for each mission.
 
@@ -90,7 +90,7 @@ The following fields are required for each mission.
    </tbody>
    </table>
 
-### Unlock conditions
+### Unlock Conditions
 
 By default, missions are unlocked for players automatically and can be completed exactly once. However, you can use the following **optional** configuration options to alter this behavior.
 
@@ -202,7 +202,7 @@ Missions have metadata that specifies how they will be displayed in the Missions
    </tbody>
    </table>
 
-## Define tasks
+## Defining Tasks
 
 Each mission can have zero or more tasks. If a mission has zero tasks, it is claimable immediately after it's unlocked; if a mission has one or more tasks, once the tasks are complete, the player can collect any rewards associated with the mission. Each task has a `taskId`, which is the key associated with the task for a given mission.
 
@@ -245,7 +245,7 @@ Both task types share the following fields:
    </tbody>
    </table>
 
-### Count tasks fields
+### Count Tasks Fields
 
 Count tasks have a required value. When the task progress meets this amount, the task is complete.
 
@@ -266,7 +266,7 @@ Count tasks have a required value. When the task progress meets this amount, the
    </tbody>
    </table>
 
-### Time tasks fields
+### Time Tasks Fields
 
 Time tasks have a target amount of time spent, and are started and stopped. When the target amount of time is met, the task is complete.
 
@@ -297,7 +297,7 @@ Time tasks have a target amount of time spent, and are started and stopped. When
    </tbody>
    </table>
 
-## Configure categories
+## Configuring Categories
 
 Categories do not have to be explicitly defined to be used, as the category for a mission has default values that will be used. However, you can configure these values in `ReplicatedStorage.Missions.Configs.Categories` to add additional effects to the category. Categories are identified by unique `CategoryIds`, the same ones referenced in the missions config.
 
@@ -318,7 +318,7 @@ Categories do not have to be explicitly defined to be used, as the category for 
    </tbody>
    </table>
 
-## Integrate server logic
+## Integrating Server Logic
 
 Take a look at `ReplicatedStorage.Missions.Server.Examples.MissionsExample`, which shows how your server will interact with the **Missions** feature package.
 
@@ -366,7 +366,7 @@ You mainly need to hook up four things once dragging the **Missions** feature pa
     Missions.unlockMission(player, "Manual")
    ```
 
-## Configure constants
+## Configuring Constants
 
 Constants for the **Core** feature package live in two spots:
 
@@ -376,7 +376,7 @@ Constants for the **Core** feature package live in two spots:
 
 Additionally, you can find strings for translation broken out into one location: `ReplicatedStorage.FeaturePackagesCore.Configs.TranslationStrings`.
 
-## Customize UI components
+## Customizing UI Components
 
 By modifying the package objects, such as colors, font, and transparency, you can adjust the visual presentation of your missions UI. For example, in `ReplicatedStorage.Missions.Configs.Constants`, you can enable `SingleTaskMode` to display a progress bar for a task directly on the mission itself for missions that only have a single task.
 

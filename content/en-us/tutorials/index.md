@@ -1,5 +1,5 @@
 ---
-title: Start learning with tutorials
+title: Start Learning with Tutorials
 description: Learn how to create Roblox experiences, avatars, and avatar items with use case tutorials, curriculum paths, and videos.
 hideInPageNavigation: true
 ---
@@ -8,7 +8,7 @@ Roblox offers both short and long-form tutorials to help you learn various creat
 
 - **Experiences** - 3D worlds that you can create and publish using Roblox Studio.
 - **Avatars** - Character models with many specialized features that allow players to interact with experiences and express themselves.
-- **Avatar items** - Clothing and accessories that players can use to customize their avatars.
+- **Avatar Items** - Clothing and accessories that players can use to customize their avatars.
 
 While many creators focus on a single area, the following tutorials walk you through the fundamentals of each process.
 
@@ -21,12 +21,12 @@ While many creators focus on a single area, the following tutorials walk you thr
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
    <img src="../assets/landing/get-started/first-experience.png" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
    </div>
-   <Typography variant='h4'>Create your first experience</Typography>
+   <Typography variant='h4'>Create Your First Experience</Typography>
    <Typography variant='body1'>Learn about important concepts for developing on Roblox by recreating an experience that launches projectiles at floating platforms.</Typography>
    <div style={{marginTop:16}}>
      <a underline="none" href="./first-experience/index.md">
      <Button variant="contained" color="secondary" size='large'
-     style={{marginRight:16, alignSelf: 'flex-start'}}>Get started</Button>
+     style={{marginRight:16, alignSelf: 'flex-start'}}>Get Started</Button>
      </a>
    </div>
  </Grid>
@@ -38,12 +38,12 @@ While many creators focus on a single area, the following tutorials walk you thr
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
    <img src="../assets/art/avatar/templates/Round-Concepts.png" />
    </div>
-   <Typography variant='h4'>Create your first avatar character</Typography>
+   <Typography variant='h4'>Create Your First Avatar Character</Typography>
    <Typography variant='body1' >Learn how to create your own custom avatar character using Blender and one of Roblox's downloadable template models.</Typography>
    <div style={{marginTop:16}}>
-     <a underline="none" href="../art/characters/create/index.md">
+     <a underline="none" href="../art/characters/creating/index.md">
      <Button variant="contained" color="secondary" size='large'
-     style={{marginRight:16, alignSelf: 'flex-start'}}>Get started</Button>
+     style={{marginRight:16, alignSelf: 'flex-start'}}>Get Started</Button>
      </a>
    </div>
  </Grid>
@@ -53,16 +53,16 @@ While many creators focus on a single area, the following tutorials walk you thr
  <Grid item container wrap="nowrap" direction="column" style={{gap: 8, flex: 1}}>
  <div class="container"
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
-  <img src="../assets/art/accessories/creating-rigid/Studio-Mask-Preview-Cropped.png" />
+ <img src="../assets/art/accessories/creating-rigid/Studio-Mask-Preview-Cropped.png" />
  </div>
-   <Typography variant='h4'>Create your first avatar item</Typography>
+   <Typography variant='h4'>Create Your First Avatar Item</Typography>
    <Typography variant='body1' >Learn how to convert a mesh object in Blender to either a publishable accessory item or an equipable and layable clothing item for avatars.</Typography>
    <div style={{marginTop:16}}>
-     <a underline="none" href="../art/accessories/create-rigid/index.md">
+     <a underline="none" href="../art/accessories/creating-rigid/index.md">
      <Button variant="contained" color="secondary" size='large'
      style={{marginRight:16, alignSelf: 'flex-start'}}>Accessories</Button>
      </a>
-     <a underline="none" href="../art/accessories/create/index.md">
+     <a underline="none" href="../art/accessories/creating/index.md">
      <Button variant="contained" color="secondary" size='large'
      style={{marginRight:16, alignSelf: 'flex-start'}}>Clothing</Button>
      </a>
@@ -71,7 +71,7 @@ While many creators focus on a single area, the following tutorials walk you thr
  </Grid>
 </Grid>
 
-<h2 style={{marginBottom: 24}}>Curriculum paths</h2>
+<h2 style={{marginBottom: 24}}>Curriculum Paths</h2>
 
 **Curriculum paths** provide a comprehensive overview of the various skills you need for different  development areas after you familiarize yourself with Studio's core functionality. In addition to demonstrating how to use Studio features for each creative discipline, this long-form type of structured learning shows you how to examine and solve common design problems within your own experiences.
 
@@ -87,7 +87,7 @@ While many creators focus on a single area, the following tutorials walk you thr
      <div style={{marginTop:16}}>
        <a underline="none" href="./curriculums/core/index.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
        </a>
      </div>
  </Grid>
@@ -99,12 +99,12 @@ While many creators focus on a single area, the following tutorials walk you thr
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <iframe src="https://www.youtube-nocookie.com/embed/nwShvDmFHWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
  </div>
-   <Typography variant='h4'>Environmental art</Typography>
+   <Typography variant='h4'>Environmental Art</Typography>
    <Typography variant='body1' >Learn how to recreate a high-quality environment for a first-person laser tag experience.</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="./curriculums/environmental-art/index.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
        </a>
      </div>
  </Grid>
@@ -116,19 +116,19 @@ While many creators focus on a single area, the following tutorials walk you thr
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <iframe src="https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
  </div>
-   <Typography variant='h4'>Gameplay scripting</Typography>
+   <Typography variant='h4'>Gameplay Scripting</Typography>
    <Typography variant='body1' >Learn how to organize and implement the gameplay logic for a large, complex project.</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="./curriculums/gameplay-scripting/index.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
        </a>
      </div>
  </Grid>
  </Grid>
 </Grid>
 
-<h2 style={{marginBottom: 24, marginTop: 96}}>Use case tutorials</h2>
+<h2 style={{marginBottom: 24, marginTop: 96}}>Use Case Tutorials</h2>
 
 **Use case tutorials** focus on a specific task that you can complete in order to learn about various aspects of developing in Studio. In addition to teaching you how to use collections of related features to recreate common components for experiences, this short-form type of structured learning highlights techniques you can use to achieve effects for a variety of design requirements.
 
@@ -142,9 +142,9 @@ While many creators focus on a single area, the following tutorials walk you thr
    <Typography variant='h4'>Modeling</Typography>
    <Typography variant='body1' >
      <ul>
-     <li>Learn the basics of <a href="./use-case-tutorials/modeling/create-neon-signs.md">solid modeling</a> in Studio</li>
-     <li>Learn how to <a href="../art/modeling/rig-a-simple-mesh.md">rig</a> and <a href="../art/modeling/skin-a-simple-mesh.md">skin</a> a simple mesh in Blender</li>
-     <li>Learn how to <a href="../art/modeling/rig-a-humanoid-model.md">rig</a> and <a href="../art/modeling/skin-a-humanoid-model.md">skin</a> a humanoid model in Blender</li>
+     <li>Learn the basics of <a href="./use-case-tutorials/modeling/creating-neon-signs.md">solid modeling</a> in Studio</li>
+     <li>Learn how to <a href="../art/modeling/rigging-a-simple-mesh.md">rig</a> and <a href="../art/modeling/skinning-a-simple-mesh.md">skin</a> a simple mesh in Blender</li>
+     <li>Learn how to <a href="../art/modeling/rigging-a-humanoid-model.md">rig</a> and <a href="../art/modeling/skinning-a-humanoid-model.md">skin</a> a humanoid model in Blender</li>
      </ul></Typography>
      <div style={{marginTop:16}}>
      </div>
@@ -160,9 +160,9 @@ While many creators focus on a single area, the following tutorials walk you thr
    <Typography variant='h4'>Environments</Typography>
    <Typography variant='body1' >
      <ul>
-     <li>Learn how to set global and local lighting properties to enhance <a href="./use-case-tutorials/lighting/enhance-indoor-environments.md">indoor</a> and <a href="./use-case-tutorials/lighting/enhance-outdoor-environments-with-future-lighting.md">outdoor</a> environments</li>
-     <li>Learn how to play <a href="./use-case-tutorials/audio/play-background-music.md">background</a> and <a href="./use-case-tutorials/audio/in-game-sounds.md">positional</a> audio for player immersion</li>
-     <li>Learn how to <a href="./use-case-tutorials/modeling/assemble-modular-environments.md">assemble modular assets</a> that snap together in numerous configurations</li>
+     <li>Learn how to set global and local lighting properties to enhance <a href="./use-case-tutorials/lighting/enhancing-indoor-environments.md">indoor</a> and <a href="./use-case-tutorials/lighting/enhancing-outdoor-environments-with-future-lighting.md">outdoor</a> environments</li>
+     <li>Learn how to play <a href="./use-case-tutorials/audio/playing-background-music.md">background</a> and <a href="./use-case-tutorials/audio/in-game-sounds.md">positional</a> audio for player immersion</li>
+     <li>Learn how to <a href="./use-case-tutorials/modeling/assembling-modular-environments.md">assemble modular assets</a> that snap together in numerous configurations</li>
      </ul></Typography>
      <div style={{marginTop:16}}>
      </div>
@@ -214,9 +214,9 @@ While many creators focus on a single area, the following tutorials walk you thr
    <Typography variant='h4'>Physics</Typography>
    <Typography variant='body1' >
      <ul>
-     <li>Learn how to <a href="./use-case-tutorials/physics/create-moving-objects.md">move</a> and <a href="./use-case-tutorials/physics/create-spinning-objects.md">spin</a> objects in a way that emulates real-world physical behavior</li>
-     <li>Learn how to <a href="./use-case-tutorials/physics/create-elevators.md">move objects</a> to transport players linearly from point A to B</li>
-     <li>Learn how to use <a href="./use-case-tutorials/physics/build-a-hinged-door.md">constraints</a> for mechanical connections, such as door hinges, rope, and welds</li>
+     <li>Learn how to <a href="./use-case-tutorials/physics/creating-moving-objects.md">move</a> and <a href="./use-case-tutorials/physics/creating-spinning-objects.md">spin</a> objects in a way that emulates real-world physical behavior</li>
+     <li>Learn how to <a href="./use-case-tutorials/physics/creating-elevators.md">move objects</a> to transport players linearly from point A to B</li>
+     <li>Learn how to use <a href="./use-case-tutorials/physics/building-a-hinged-door.md">constraints</a> for mechanical connections, such as door hinges, rope, and welds</li>
      </ul></Typography>
      <div style={{marginTop:16}}>
      </div>
@@ -232,9 +232,9 @@ While many creators focus on a single area, the following tutorials walk you thr
    <Typography variant='h4'>Animation</Typography>
    <Typography variant='body1' >
      <ul>
-     <li>Learn the basics of <a href="./use-case-tutorials/animation/create-an-animation.md">creating animations</a> using the built-in Animation Editor</li>
-     <li>Learn how to <a href="./use-case-tutorials/animation/play-character-animations.md#change-default-animations">swap default avatar animations</a> with your own creations</li>
-     <li>Learn how to <a href="./use-case-tutorials/animation/play-character-animations.md#trigger-animations">trigger avatar animations</a> from gameplay interactions</li>
+     <li>Learn the basics of <a href="./use-case-tutorials/animation/creating-an-animation.md">creating animations</a> using the built-in Animation Editor</li>
+     <li>Learn how to <a href="./use-case-tutorials/animation/playing-character-animations.md#changing-default-animations">swap default avatar animations</a> with your own creations</li>
+     <li>Learn how to <a href="./use-case-tutorials/animation/playing-character-animations.md#triggering-animations">trigger avatar animations</a> from gameplay interactions</li>
      </ul></Typography>
      <div style={{marginTop:16}}>
      </div>
@@ -250,8 +250,8 @@ While many creators focus on a single area, the following tutorials walk you thr
    <Typography variant='h4'>Scripting</Typography>
    <Typography variant='body1' >
      <ul>
-     <li>Learn how to script the gameplay logic for player hazards, such as <a href="./use-case-tutorials/scripting/basic-scripting/deadly-lava.md">deadly lava</a> and <a href="./use-case-tutorials/scripting/basic-scripting/fade-trap.md">fading traps</a></li>
-     <li>Learn how to script the gameplay logic for player information, such as their <a href="./use-case-tutorials/scripting/basic-scripting/score-points.md">score</a>, <a href="./use-case-tutorials/scripting/intermediate-scripting/create-a-health-pickup.md">health</a>, and <a href="./use-case-tutorials/scripting/intermediate-scripting/save-data.md">data</a> that needs to persist between sessions</li>
+     <li>Learn how to script the gameplay logic for player hazards, such as <a href="./use-case-tutorials/scripting/basic-scripting/deadly-lava.md">deadly lava</a> and <a href="./use-case-tutorials/scripting/basic-scripting/fading-trap.md">fading traps</a></li>
+     <li>Learn how to script the gameplay logic for player information, such as their <a href="./use-case-tutorials/scripting/basic-scripting/scoring-points.md">score</a>, <a href="./use-case-tutorials/scripting/intermediate-scripting/creating-a-health-pickup.md">health</a>, and <a href="./use-case-tutorials/scripting/intermediate-scripting/saving-data.md">data</a> that needs to persist between sessions</li>
      </ul></Typography>
      <div style={{marginTop:16}}>
      </div>
@@ -264,11 +264,11 @@ While many creators focus on a single area, the following tutorials walk you thr
    style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
    <img src="../assets/tutorials/controlling-the-players-camera/SidescrollingCameraExample.jpg" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}} />
    </div>
-   <Typography variant='h4'>Input and camera</Typography>
+   <Typography variant='h4'>Input and Camera</Typography>
    <Typography variant='body1' >
      <ul>
-     <li>Learn how to create a <a href="./use-case-tutorials/input-and-camera/control-the-users-camera.md#create-a-first-person-camera">first-person camera</a>, <a href="./use-case-tutorials/input-and-camera/control-the-users-camera.md#create-a-side-scrolling-camera">side-scrolling camera</a>, or <a href="./use-case-tutorials/input-and-camera/control-the-users-camera.md#create-an-isometric-camera">isometric camera</a> to suit your specific gameplay</li>
-     <li>Learn how to <a href="./use-case-tutorials/input-and-camera/detect-user-input.md">detect user input</a> to trigger unique actions in your experiences</li>
+     <li>Learn how to create a <a href="./use-case-tutorials/input-and-camera/controlling-the-users-camera.md#creating-a-first-person-camera">first-person camera</a>, <a href="./use-case-tutorials/input-and-camera/controlling-the-users-camera.md#creating-a-side-scrolling-camera">side-scrolling camera</a>, or <a href="./use-case-tutorials/input-and-camera/controlling-the-users-camera.md#creating-an-isometric-camera">isometric camera</a> to suit your specific gameplay</li>
+     <li>Learn how to <a href="./use-case-tutorials/input-and-camera/detecting-user-input.md">detect user input</a> to trigger unique actions in your experiences</li>
      </ul></Typography>
      <div style={{marginTop:16}}>
      </div>

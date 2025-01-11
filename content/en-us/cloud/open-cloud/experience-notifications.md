@@ -1,5 +1,5 @@
 ---
-title: Experience notifications
+title: Experience Notifications
 description: Experience Notifications are a way for users to keep up with their favorite experiences through timely, personalized notifications.
 ---
 
@@ -14,29 +14,29 @@ import Guidelines from '../../includes/experience-notifications/guidelines.md'
 
 <Intro components={props.components} />
 
-## Eligibility requirements
+## Eligibility Requirements
 
 <Eligibility components={props.components} />
 
-## Usage guidelines
+## Usage Guidelines
 
 <Guidelines components={props.components} />
 
 ## Implementation
 
-Implementing Experience Notifications begins with [creating a notification string](#create-a-notification-string). Once a notification string is set up, you can [send notifications](#send-an-experience-notification) with optional [custom parameters](#customize-notifications-using-parameters).
+Implementing Experience Notifications begins with [creating a notification string](#creating-a-notification-string). Once a notification string is set up, you can [send notifications](#sending-an-experience-notification) with optional [custom parameters](#customizing-notifications-using-parameters).
 
 Alternatively, you can use the [Engine API](../../production/promotion/experience-notifications.md) to trigger notifications through server-side scripts.
 
-### Create a notification string
+### Creating a Notification String
 
 <ImplementationCreateNotificationString components={props.components} />
 
-### Send an experience notification
+### Sending an Experience Notification
 
 The [UserNotification](../../cloud/reference/UserNotification) API lets you send Experience Notifications to users. Before using it, you must [generate an API key](../../cloud/open-cloud/api-keys.md) or [configure OAuth 2.0](../../cloud/open-cloud/oauth2-overview.md) for your app. The examples on this page use API keys.
 
-Notifications will be delivered to [opted-in](https://en.help.roblox.com/hc/en-us/articles/24769602332692-Out-of-Experience-Notifications) users age 13+ through their Roblox notification stream, at which point they can join the experience directly via the **Join** button on the notification and spawn according to your [launch data](#include-launch-and-analytics-data).
+Notifications will be delivered to [opted-in](https://en.help.roblox.com/hc/en-us/articles/24769602332692-Out-of-Experience-Notifications) users age 13+ through their Roblox notification stream, at which point they can join the experience directly via the **Join** button on the notification and spawn according to your [launch data](#including-launch-and-analytics-data).
 
 <img src="../../assets/open-cloud/experience-notifications/Notification-Stream.png" width="393" alt="Notifications stream on the Roblox app" />
 
@@ -73,9 +73,9 @@ Example response which returns the notification ID in the `id` field:
 }
 ```
 
-### Customize notifications using parameters
+### Customizing Notifications Using Parameters
 
-To customize the notification for each recipient, you can include **parameters** in the [notification string](#create-a-notification-string), then customize the parameters when calling the API. For example, you can define the notification string as:
+To customize the notification for each recipient, you can include **parameters** in the [notification string](#creating-a-notification-string), then customize the parameters when calling the API. For example, you can define the notification string as:
 
 <p><Chip label="{userId-friend} beat your high score by {points} points! Time to level up?" size="large" color="primary" variant="outlined" /></p>
 
@@ -100,7 +100,7 @@ curl --location 'https://apis.roblox.com/cloud/v2/users/${UserId}/notifications'
 }'
 ```
 
-### Include launch and analytics data
+### Including Launch and Analytics Data
 
 To further improve user experience, you can include **launch data** in the notification, useful for scenarios such as routing users to a coordinate location or personalizing the joining experience. Additionally, you can include [analytics](#analytics) data to segment the performance of different categories of notifications.
 
@@ -125,7 +125,7 @@ curl --location 'https://apis.roblox.com/cloud/v2/users/${UserId}/notifications'
 }'
 ```
 
-## Delivery system
+## Delivery System
 
 <DeliverySystem components={props.components} />
 
@@ -133,10 +133,10 @@ curl --location 'https://apis.roblox.com/cloud/v2/users/${UserId}/notifications'
 
 <AnalyticsOverview components={props.components} />
 
-### Notifications summary
+### Notifications Summary
 
 <AnalyticsNotificationsSummary components={props.components} />
 
-### Itemized stats
+### Itemized Stats
 
 <AnalyticsItemizedStats components={props.components} />

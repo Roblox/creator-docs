@@ -1,5 +1,5 @@
 ---
-title: Onboarding techniques
+title: Onboarding Techniques
 description: Onboarding
 ---
 
@@ -13,7 +13,7 @@ Onboarding techniques are strategies used to help direct players through the onb
 - Contextual tutorials
 - Timed hints
 
-## Visual elements
+## Visual Elements
 
 **Visual elements** are assets or effects that appear in an experience to help players understand how to play, where to go, what to pay attention to, or what actions to take. Because of these characteristics, visual elements thrive when used in conjunction with an experience's onboarding funnel.
 
@@ -38,7 +38,7 @@ Examples of visual elements in onboarding include:
     <figcaption>Directional arrows and icons in _Creatures of Sonaria._ </figcaption>
   </figure>
 
-### Improve clarity
+### Improve Clarity
 
 Players who don't understand what to do in the first few minutes of a game are likely to quit, but so are players who are bored by lengthy and prescriptive tutorials. Utilizing visual elements in onboarding funnels enables you to teach players what they need to know, while also allowing them to get to the fun quickly. When information must be communicated efficiently, visual elements are used to improve clarity in three ways:
 
@@ -93,9 +93,9 @@ In Jailbreak, players are not told explicitly what to do in order to escape the 
     <figcaption>Footprints hint at a possible escape route in _Jailbreak._ </figcaption>
   </figure>
 
-When considering implementing hints into your onboarding funnel, be intentional in determining who will see them and when they appear. For more on utilizing hints, see [Timed hints](#timed-hints).
+When considering implementing hints into your onboarding funnel, be intentional in determining who will see them and when they appear. For more on utilizing hints, see [Timed Hints](#timed-hints).
 
-### Increase accessibility
+### Increase Accessibility
 
 Visual elements are more broadly accessible than text. Visuals like arrows and particle effects communicate without words and don't require translation to be understood by a global audience. This helps players who rely on localization into other languages, as well as UI designers who don't have to worry about a text string getting longer after translation.
 
@@ -103,14 +103,14 @@ For experiences that appeal to younger players, teaching without words can help 
 
 Using visual elements also ensures accessibility on various platforms, such as mobile devices, where text can be too small to read comfortably. Visual elements are also easier to interpret, especially for players who are visually impaired.
 
-For more information about designing accessible visual elements, see this video on [color contrast](https://www.youtube.com/watch?v=syQcaeRqqc4).
+For more information about designing accessible visual elements, see this video on [Color Contrast](https://www.youtube.com/watch?v=syQcaeRqqc4).
 
 <figure>
     <img src="../../assets/game-design/onboarding-techniques/visual-elements-5.png" width="80%"/>
     <figcaption>Directional arrows in _Winds of Fortune._ </figcaption>
   </figure>
 
-### Enhance immersion
+### Enhance Immersion
 
 Visual elements can help players stay immersed in gameplay. Directional trails, for example, provide direction while allowing players the freedom to explore and make other choices. They strongly suggest an action, but don't require it. While most players will follow the directions, the availability of choice makes the tutorial feel less forced than if they had no other options, and allows players to stay immersed in the experience and explore at their own pace.
 
@@ -119,7 +119,7 @@ Visual elements can help players stay immersed in gameplay. Directional trails, 
     <figcaption>Directional trail in _Hello Kitty Cafe._ </figcaption>
   </figure>
 
-### Facilitate feedback
+### Facilitate Feedback
 
 Visual elements can be used as feedback outside of tutorials and onboarding funnels. Feedback occurs when a player takes an action in a game and the game responds in a way that communicates the results of the action. Visual elements can be used to communicate feedback and provide players with actionable information to help them make their next choice.
 
@@ -143,7 +143,7 @@ Anytime a player takes an action in a game, it's imperative to provide clear fee
 
 For more information about feedback and other User Experience (UX) best practices, see [UI and UX](./ui-ux-design.md)
 
-## Contextual tutorials
+## Contextual Tutorials
 
 Also known as **just in time** tutorials, **contextual tutorials** are tutorials triggered by normal play, such as entering a new map zone or picking up a new weapon. By waiting for players to engage naturally, contextual tutorials personalize instruction, which maximizes their relevance and utility within the broader onboarding funnel. Contextual tutorials facilitate:
 
@@ -195,7 +195,7 @@ In addition to helping players through the onboarding tutorial, showing timely h
 
 When deciding how and when to use timed hints, observing playtesters can provide valuable information about where such hints are needed and how long to wait before displaying them. Try to find a balance between displaying them so quickly that players feel that they haven't gotten the chance to figure it out on their own, and waiting so long that they get frustrated.
 
-### Use cases
+### Use Cases
 
 In [Plant](https://create.roblox.com/docs/resources/plant-reference-project), players follow a simple loop of planting seeds, selling produce, and investing currency into larger pots and more valuable plants. A great candidate for timed hint utilization is in the UI when planting seeds. In order to plant a seed, players have to select the **PLANT CABBAGE SEED** button.
 

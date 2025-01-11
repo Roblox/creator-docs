@@ -9,16 +9,16 @@ Emotes are expressive character [animations](../animation/index.md) that are acc
 
 In your experience, you can perform the following emote customizations:
 
-- [Open and close](#open-and-close) a user's emotes menu programmatically.
-- [Add or remove](#add-and-remove-emotes) emotes options from a user's menu.
-- [Disable](#disable) access to the menu.
-- [Play](#play-emotes) an emote, targeting a specific user character.
+- [Open and close](#opening-and-closing) a user's emotes menu programmatically.
+- [Add or remove](#adding-and-removing-emotes) emotes options from a user's menu.
+- [Disable](#disabling) access to the menu.
+- [Play](#playing-emotes) an emote, targeting a specific user character.
 
-## Emotes menu
+## Emotes Menu
 
 You can open and close a user's emote menu manually, customize the menu to display specific emotes, or disable the menu completely.
 
-### Open and close
+### Opening and Closing
 
 To manually open or close a player's emote menu, call `Class.GuiService:SetEmotesMenuOpen()` with a boolean value of true or false.
 
@@ -32,7 +32,7 @@ GuiService:SetEmotesMenuOpen(true)
 
 If you need to detect whether the emotes menu is open, call `Class.GuiService:GetEmotesMenuOpen()`. This returns a boolean indicating the menu's current state.
 
-### Add and remove emotes
+### Adding and Removing Emotes
 
 Customize the emote menu by setting emotes from the catalog and then equipping emotes to a `Class.Humanoid`. Set emotes with the `Class.HumanoidDescription:SetEmotes()` method and equip up to 8 emotes to the emotes menu using `Class.HumanoidDescription:SetEquippedEmotes()`.
 
@@ -63,7 +63,7 @@ humanoidDescription:SetEquippedEmotes(equippedEmotes)
 Key names, such as "Shrug" or "Salute" are customizable and will appear to the player as written. Emotes will also show up in the order they were set, starting at the top of the wheel and continuing clockwise.
 </Alert>
 
-### Disable
+### Disabling
 
 Disable the emotes menu with `Class.StarterGui:SetCoreGuiEnabled()`. Disabling the emotes menu will not prevent emotes from being performed with a chat command.
 
@@ -76,7 +76,7 @@ StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.EmotesMenu, false)
 
 In addition to disabling the menu, you can disable loading of user-owned emotes by setting the `Class.StarterPlayer.UserEmotesEnabled` property within **StarterPlayer** > **Character** to **false**. This specific property can only be set in Studio and cannot be set by scripts.
 
-## Play emotes
+## Playing Emotes
 
 To manually play an emote that a character has in its `Class.HumanoidDescription`, call `Class.Humanoid:PlayEmote()`, passing the string name of the emote. This call will return true to indicate that the emote was played successfully, or false otherwise.
 

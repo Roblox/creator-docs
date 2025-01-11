@@ -1,5 +1,5 @@
 ---
-title: Developer products
+title: Developer Products
 description: Developer products let you charge users a Robux fee for items or abilities that they can access and use inside your experience.
 ---
 
@@ -11,10 +11,10 @@ A **developer product** is an item or ability that a user can purchase more than
    For items or abilities that a user should only purchase **once**, such as a special weapon or a permanent power-up, see [Passes](../../production/monetization/game-passes.md).
 </Alert>
 
-## Create developer products
+## Creating Developer Products
 
 <Alert severity="warning">
-   Before creating a developer product, make sure your experience has been [published](../../production/publishing/publish-experiences-and-places.md) and is accessible on Roblox.
+   Before creating a developer product, make sure your experience has been [published](../../production/publishing/publishing-experiences-and-places.md) and is accessible on Roblox.
 </Alert>
 
 To create a developer product:
@@ -28,10 +28,10 @@ To create a developer product:
 7. Click **Create Developer Product**.
 
 <Alert severity="info">
-   If you want to use the developer product as a randomized reward, review the [randomized virtual item policy](./randomized-virtual-items-policy.md).
+   If you want to use the developer product as a randomized reward, review the [Randomized Virtual Item Policy](./randomized-virtual-items-policy.md).
 </Alert>
 
-## Get developer product IDs
+## Getting Developer Product IDs
 
 To use scripting, you need a developer product ID. To get the product ID:
 
@@ -41,7 +41,7 @@ To use scripting, you need a developer product ID. To get the product ID:
 
    <img src="../../assets/creator-dashboard/Developer-Product-Copy-Asset-ID.png" width="400" />
 
-## Sell developer products
+## Selling Developer Products
 
 <Alert severity="info">
 If you're using [price optimization](./price-optimization.md), make sure to place the script inside a `Class.LocalScript` so that users see personalized product prices.
@@ -143,7 +143,7 @@ button.MouseButton1Click:Connect(function()
 end)
 ```
 
-## Handle developer product purchases
+## Handling Developer Product Purchases
 
 After a user purchases a developer product, you must handle and record the transaction. To do this, use a `Class.Script` within `Class.ServerScriptService` using the `Class.MarketplaceService.ProcessReceipt()|ProcessReceipt()` function.
 
@@ -218,7 +218,7 @@ The functions for handling each product ID must return `true` for the transactio
 Although Roblox itself does **not** record the purchase history of developer products by specific users, you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores).
 </Alert>
 
-## Developer product analytics
+## Developer Product Analytics
 
 Use developer product analytics to analyze the success of individual products, identify trends, and forecast potential future earnings.
 

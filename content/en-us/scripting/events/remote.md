@@ -1,5 +1,5 @@
 ---
-title: Remote events and callbacks
+title: Remote Events and Callbacks
 description: Remote network events and callbacks allow for back-and-forth communication across the client-server boundary.
 ---
 
@@ -16,14 +16,14 @@ Unlike [Bindable Events](bindable.md), which have more limited utility, the use 
 - **Gameplay** - Basic gameplay, such as a player reaching the end of a level, can require a remote event. A client script notifies the server, and server scripts reset the player's position.
 - **Server verification** - If a player tries to drink a potion, do they actually _have_ that potion? To ensure fairness, the server has to be the source of truth for an experience. A client script can use a remote event to notify the server that the player is drinking a potion, and then server scripts can decide whether the player actually has that potion and whether to confer any benefits.
 - **User interface updates** - As the game state changes, server scripts can use remote events to notify clients of changes to scores, objectives, etc.
-- **In-experience Marketplace purchases** - For an example implementation that uses remote functions, see [Prompting Subscription Purchases](../../production/monetization/subscriptions.md#prompt-subscription-purchases).
+- **In-experience Marketplace purchases** - For an example implementation that uses remote functions, see [Prompting Subscription Purchases](../../production/monetization/subscriptions.md#prompting-subscription-purchases).
 
-## Quick reference
+## Quick Reference
 
 The following tables serve as a quick reference for how to use `Class.RemoteEvent|RemoteEvents` and `Class.RemoteFunction|RemoteFunctions` to communicate between the client and server.
 
 <Tabs>
-<TabItem label="Remote events">
+<TabItem label="Remote Events">
 <table>
 <thead>
   <tr><td colspan="2">[Client &rarr; Server](#client-server)</td></tr>
@@ -66,7 +66,7 @@ The following tables serve as a quick reference for how to use `Class.RemoteEven
 </tbody>
 </table>
 </TabItem>
-<TabItem label="Remote functions">
+<TabItem label="Remote Functions">
 <table>
 <thead>
   <tr><td colspan="2">[Client &rarr; Server &rarr; Client](#client-server-client)</td></tr>
@@ -93,7 +93,7 @@ The following tables serve as a quick reference for how to use `Class.RemoteEven
 </TabItem>
 </Tabs>
 
-## Remote events
+## Remote Events
 
 A `Class.RemoteEvent` object facilitates asynchronous, one-way communication across the client-server boundary without yielding for a response.
 
@@ -130,7 +130,7 @@ Once you've created a `Class.RemoteEvent`, it can facilitate one-way communicati
 Clients cannot communicate directly with other clients, although you can effectively dispatch an event from one client to another by using the `Class.RemoteEvent:FireServer()` method, then calling `Class.RemoteEvent:FireClient()|FireClient()` or `Class.RemoteEvent:FireAllClients()|FireAllClients()` in the event handler for `Class.RemoteEvent.OnServerEvent|OnServerEvent`.
 </Alert>
 
-### Client&nbsp;→ server
+### Client&nbsp;→ Server
 
 You can use a `Class.LocalScript` to trigger an event on the [server](../../projects/client-server.md) by calling the `Class.RemoteEvent:FireServer()|FireServer()` method on a `Class.RemoteEvent`. If you pass arguments to `Class.RemoteEvent:FireServer()|FireServer()`, they pass to the event handler on the server with certain [limitations](#argument-limitations). Note that the first parameter of the event handler on the server is always the `Class.Player` object of the client that calls it, and additional parameters follow.
 
@@ -175,7 +175,7 @@ local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
 remoteEvent:FireServer(Color3.fromRGB(255, 0, 0), Vector3.new(0, 25, -20))
 ```
 
-### Server&nbsp;→ client
+### Server&nbsp;→ Client
 
 You can use a `Class.Script` to trigger an event on a [client](../../projects/client-server.md) by calling the `Class.RemoteEvent:FireClient()|FireClient()` method on a `Class.RemoteEvent`. The first argument for `Class.RemoteEvent:FireClient()|FireClient()` is the `Class.Player` object of the client that you want to respond to the event, and additional arguments pass to the client with certain [limitations](#argument-limitations). Note that the event handler doesn't need to include the `Class.Player` object as its first argument because you can determine the player on the client with `Class.Players.LocalPlayer`.
 
@@ -225,7 +225,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-### Server&nbsp;→ all clients
+### Server&nbsp;→ All Clients
 
 You can use a `Class.Script` to trigger an event on all clients by calling the `Class.RemoteEvent:FireAllClients()|FireAllClients()` method on a `Class.RemoteEvent`. Unlike `Class.RemoteEvent:FireClient()|FireClient()`, the `Class.RemoteEvent:FireAllClients()|FireAllClients()` method doesn't require a `Class.Player` object because it fires the `Class.RemoteEvent` to all clients.
 
@@ -271,7 +271,7 @@ for timeRemaining = -1, countdown do
 end
 ```
 
-## Remote callbacks
+## Remote Callbacks
 
 A `Class.RemoteFunction` object facilitates synchronous, two-way communication across the client-server boundary. The sender of a remote function will yield until it receives a response from the recipient.
 
@@ -298,7 +298,7 @@ Once you've created a `Class.RemoteFunction`, it can facilitate two-way communic
   </figure>
 </GridContainer>
 
-### Client&nbsp;→ server&nbsp;→ client
+### Client&nbsp;→ Server&nbsp;→ Client
 
 You can use a `Class.LocalScript` to call a function on the [server](../../projects/client-server.md) by calling the `Class.RemoteFunction:InvokeServer()|InvokeServer()` method on a `Class.RemoteFunction`. Unlike a [remote event](#remote-events), the `Class.LocalScript` that invokes the `Class.RemoteFunction` yields until the callback returns. Arguments that you pass to `Class.RemoteFunction:InvokeServer()|InvokeServer()` pass to the `Class.RemoteFunction.OnServerInvoke|OnServerInvoke` callback of the `Class.RemoteFunction` with certain [limitations](#argument-limitations). Note that if you define multiple callbacks to the same `Class.RemoteFunction`, only the last definition executes.
 
@@ -348,7 +348,7 @@ local newPart = remoteFunction:InvokeServer(Color3.fromRGB(255, 0, 0), Vector3.n
 print("The server created the requested part:", newPart)
 ```
 
-### Server&nbsp;→ client&nbsp;→ server
+### Server&nbsp;→ Client&nbsp;→ Server
 
 You can use a `Class.Script` to call a function on the client by calling the `Class.RemoteFunction:InvokeClient()|InvokeClient()` method on a `Class.RemoteFunction`, but it has serious risks as follows:
 
@@ -358,11 +358,11 @@ You can use a `Class.Script` to call a function on the client by calling the `Cl
 
 For actions that don't require two-way communications, such as updating a GUI, use a `Class.RemoteEvent` and communicate from [server to client](#server-client).
 
-## Argument limitations
+## Argument Limitations
 
 When you fire a `Class.RemoteEvent` or invoke a `Class.RemoteFunction`, it forwards any arguments that you pass with the event or to the callback function. Any type of Roblox object such as an `Datatype.Enum`, `Class.Instance`, or others can be passed, as well as Luau types such as numbers, strings, and booleans, although you should carefully explore the following limitations.
 
-### Non-string indices
+### Non-String Indices
 
 If any **indices** of a passed table are non-string types such as an `Class.Instance`, [userdata](../../luau/userdata.md), or [function](../../luau/functions.md), Roblox automatically converts those indices to strings.
 
@@ -398,7 +398,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-### Passed functions
+### Passed Functions
 
 Functions included as arguments for a `Class.RemoteEvent` or `Class.RemoteFunction` will **not** be replicated across the [client-server](../../projects/client-server.md) boundary, making it impossible to pass functions remotely. Instead, the resulting argument on the receiving side will be `nil`.
 
@@ -427,7 +427,7 @@ end
 remoteEvent:FireAllClients(testFunction)
 ```
 
-### Table indexing
+### Table Indexing
 
 If you pass a table of data, do not pass a mixed table of numeric and string keys. Instead, pass a table that consists **entirely** of key-value pairs (dictionary) or **entirely** of numeric indices.
 
@@ -473,7 +473,7 @@ remoteEvent:FireServer(inventoryData)
 remoteEvent:FireServer(characterData)
 ```
 
-### Table identities
+### Table Identities
 
 Tables passed as arguments to remote events/callbacks are copied, meaning they will not be exactly equivalent to those provided when firing the event or invoking the callback. Nor will tables returned to the invoker be exactly equivalent to those provided. You can demonstrate this by running the following script on a `Class.RemoteFunction` and observing how the table identities differ.
 
@@ -544,7 +544,7 @@ setmetatable(truck, Car)
 remoteEvent:FireServer(truck)
 ```
 
-### Non-replicated instances
+### Non-Replicated Instances
 
 If a `Class.RemoteEvent` or `Class.RemoteFunction` passes a value that's only visible to the sender, Roblox doesn't replicate it across the client-server boundary and passes `nil` instead of the value. For example, if a `Class.Script` passes a descendant of `Class.ServerStorage`, the client listening to the event will receive a `nil` value because that object isn't replicable for the client.
 

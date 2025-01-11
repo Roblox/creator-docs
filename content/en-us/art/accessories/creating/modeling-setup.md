@@ -1,5 +1,5 @@
 ---
-title: Modeling setup
+title: Modeling Setup
 description: Setup your Blender environment with the correct files and templates to model efficiently.
 next: /art/accessories/creating/trimming
 prev: /art/accessories/creating/
@@ -28,7 +28,7 @@ This modeling tutorial covers the following processes:
 6. Sculpting fabric and other details onto the mesh object.
 7. Closing the holes in your mesh, making it watertight.
 
-## Set up mesh
+## Setting Up Mesh
 
 To get your project started, download and open Roblox's [Clothing_Cage.blend](../../../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip) project and begin setting up your basic project objects.
 
@@ -56,7 +56,7 @@ To set up your project and your initial mesh object:
 
    <video controls src="../../../assets/art/accessories/creating/Modeling_00.mp4" width="100%"></video>
 
-## Clear extra attributes
+## Clearing Extra Attributes
 
 The cage mesh objects in the template include some helper vertex color properties that need to be removed from your clothing mesh. If left in, the vertex colors may clash with the texture of the object after importing in Studio.
 

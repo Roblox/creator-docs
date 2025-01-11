@@ -1,5 +1,5 @@
 ---
-title: Weapons kit
+title: Weapons Kit
 description: The Weapons Kit assists in creating competitive combat-based experiences.
 ---
 
@@ -62,7 +62,7 @@ To use an endorsed weapon in your experience:
 
    <img src="../assets/resources/weapons-kit/Move-WeaponsSystem-Folder.png" width="320" />
 
-## System folder structure
+## System Folder Structure
 
 The **WeaponsSystem** folder is a unified folder that contains assets, configurations, and scripts that power all endorsed weapons in the experience. If located in **ServerScriptService**, it overrides any equivalent **WeaponsSystem** folders that may reside within individual weapons.
 
@@ -92,16 +92,16 @@ Within the **WeaponsSystem** folder, different aspects are controlled by the fol
 <thead>
   <tr>
     <th>Aspect</th>
-    <th>Handled primarily within...</th>
+    <th>Handled Primarily Within...</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>Weapons functionality</td>
+    <td>Weapons Functionality</td>
     <td><ul><li>[WeaponsSystem](#system-folder-structure)</li><li>**Libraries**/**BaseWeapon**</li><li>**WeaponTypes**/**BulletWeapon**</li><li>**WeaponTypes**/**BowWeapon**</li></ul></td>
   </tr>
   <tr>
-    <td>[Shoulder camera](#shoulder-camera)</td>
+    <td>[Shoulder Camera](#shoulder-camera)</td>
     <td><ul><li>**Libraries**/**ShoulderCamera**</li></ul></td>
   </tr>
   <tr>
@@ -111,15 +111,15 @@ Within the **WeaponsSystem** folder, different aspects are controlled by the fol
 </tbody>
 </table>
 
-## Weapon structure
+## Weapon Structure
 
 Endorsed weapons are `Class.Tool|Tools` and are named as they will appear in the player's backpack. Each weapon is structured with a similar hierarchy.
 
-### Weapon type
+### Weapon Type
 
 The **WeaponType** `Class.StringValue` corresponds with the `Class.ModuleScript` for the weapon in the **WeaponsSystem**/**WeaponTypes** folder. The two base values are **BulletWeapon** and **BowWeapon**.
 
-### Weapon model
+### Weapon Model
 
 Each weapon contains a `Class.Model` made up of one or more `Class.BasePart|BaseParts` to form the physical weapon. One of these should be set as the model's `Class.Model.PrimaryPart|PrimaryPart`.
 
@@ -133,11 +133,11 @@ The model also includes the following important descendants which may be parente
 - **Reload** <Chip label="optional" size="small" variant="outlined" /> &ndash; `Class.Sound` that plays when the weapon is reloaded.
 - Additional descendants for any [specialized options](#specialized-options).
 
-### Weapon handle
+### Weapon Handle
 
 The **Handle** part determines where a player character holds the weapon. This must be a `Class.Part`, it must be named **Handle**, and it must be a direct child of the weapon (tool).
 
-### Configuration folder
+### Configuration Folder
 
 The **Configuration** folder contains specific "value" types for weapon behavior. Beyond the defaults, you can add additional configuration items for [specialized options](#specialized-options) when applicable.
 
@@ -280,11 +280,11 @@ As follows are the base configurations and their default values:
 </tbody>
 </table>
 
-## Specialized options
+## Specialized Options
 
 You can add/modify the following options for any weapon. These customizations require modifying either the weapon's `Class.Model`, the weapon's `Class.Configuration`, or both. Some configurations are dependent on others, such as [Muzzle Particles](#muzzle-particles) which require the necessary children for [Projectile/Hit Effects and Sounds](#projectilehit-effects-and-sounds).
 
-### Bolt animations and sounds
+### Bolt Animations and Sounds
 
 A weapon's **bolt** is the part that moves back and forth each time it's fired.
 
@@ -346,7 +346,7 @@ A weapon's **bolt** is the part that moves back and forth each time it's fired.
 </tbody>
 </table>
 
-### Eject bullet casings
+### Ejecting Bullet Casings
 
 Weapons can include physical bullet casings that eject upon firing and fall to the ground.
 
@@ -402,7 +402,7 @@ Weapons can include physical bullet casings that eject upon firing and fall to t
 </tbody>
 </table>
 
-### Projectile/hit effects and sounds
+### Projectile/Hit Effects and Sounds
 
 You can configure physical projectiles for any weapon, along with `Sounds`, `Beams`, and `ParticleEmitters` for hit effects and other special effects.
 
@@ -517,7 +517,7 @@ You can configure physical projectiles for any weapon, along with `Sounds`, `Bea
 </tbody>
 </table>
 
-#### Muzzle particles
+#### Muzzle Particles
 
 This option emits particles from the specified `Class.ParticleEmitter` at the weapon's **TipAttachment** `Class.Attachment` when it's fired.
 
@@ -533,7 +533,7 @@ For the specified shot effect, add a ParticleEmitter asset within `WeaponsSystem
 <img src="../assets/resources/weapons-kit/Weapon-MuzzleParticles.png"
    width="35%" />
 
-### Muzzle flashes
+### Muzzle Flashes
 
 This option creates a `Class.Beam` flash effect when the weapon is fired.
 
@@ -555,7 +555,7 @@ Configuration descendants:
 - **MuzzleFlashSize0** (`Class.NumberValue`) (optional) — Minimum size of muzzle flash; default is **1**.
 - **MuzzleFlashSize1** (`Class.NumberValue`) (optional) — Maximum size of muzzle flash; default is **1**.
 
-### Particle trails
+### Particle Trails
 
 This option creates a trail of varying length from the weapon to the projectile impact point.
 
@@ -567,7 +567,7 @@ Configuration descendants:
 - **TrailLengthFactor** (`Class.NumberValue`) (optional) — The trail length will be set to this value multiplied by the distance the bullet/projectile traveled in the last frame; default is **1**. Note that this will be overridden if you include **TrailLength**.
 - **ShowEntireTrailUntilHit** (`Class.BoolValue`) (optional) — Set to **true** to render the trail from the weapon tip all the way to wherever the projectile is; this will override both **TrailLength** and **TrailLengthFactor** and the trail will only disappear once the projectile hits something. Set to **false** to use one of the above two options to calculate trail length. Default is **false**.
 
-### Hit marks
+### Hit Marks
 
 This visual addition appears on the surface where projectiles hit and is useful for arrows, bullet holes, scorch marks, etc.
 
@@ -589,7 +589,7 @@ You can add the following optional asset within `WeaponsSystem/Assets/Effects/Hi
   - **Impact** (`Class.ImageLabel`) (optional) — Direct child of **ImpactBillboard**; this begins fully opaque, grows to the full size of the **ImpactBillboard** over 0.1 seconds, then shrinks to half its size and fades to full transparency over 0.1 seconds.
 - Any `Class.Part`/`Class.MeshPart`/`Class.SpecialMesh` that you want to appear as a physical projectile (optional). For example, including an arrow `Class.MeshPart` and setting **AlignHitMarkToNormal** noted above to **false** will make the arrow stick out of the surface from the direction you shot it.
 
-### Exploding projectiles
+### Exploding Projectiles
 
 Projectiles can include an Explosion object to damage player characters in an area around the impact point.
 
@@ -602,7 +602,7 @@ Configuration descendants:
 - **BlastPressure** (`Class.NumberValue`) (optional) — BlastPressure of explosion; default is **10000**.
 - **BlastDamage** (`Class.NumberValue`) (optional) — Damage dealt to things in the center of the explosion. Note that the explosion does less damage the farther away hit objects are from the center of the explosion. Default is **100**.
 
-### Charging weapon
+### Charging Weapon
 
 A charging weapon like the Railgun must be charged up between shots before it can fire again.
 
@@ -631,7 +631,7 @@ Configuration descendants:
 - **NumChargeCompleteParticles** (`Class.IntValue`) (optional) — Number of particles the - ChargeCompleteParticles emitter will emit once the weapon is fully charged. Default is **25**.
 - **NumDischargeCompleteParticles** (`Class.IntValue`) (optional) — Number of particles the - **DischargeCompleteParticles** emitter will emit when the weapon is completely discharged. Default is **25**.
 
-### Bow weapon
+### Bow Weapon
 
 A bow weapon like the Crossbow can include a realistic string and arms construction, as well as a visual arrow nocked to the string.
 
@@ -663,7 +663,7 @@ Model descendants:
 - **LooseScale** (`Class.Vector3Value`) (optional) — Scale of the `Class.SpecialMesh` when the bow is at rest.
 - **TightScale** (`Class.Vector3Value`) (optional) — Scale of the `Class.SpecialMesh` when the bow is fully drawn.
 
-## Weapons system GUI
+## Weapons System GUI
 
 The core weapons system interfaces with this system to update the GUI based on things like spread of the gun, indicators for when you get hit or hit others, etc.
 
@@ -674,7 +674,7 @@ The **WeaponsSystemGui** is a `Class.ScreenGui` object in `WeaponsSystem/Assets`
 - [Scope](#scope) - A `Class.Frame` for zooming in with weapons that use a scope.
 - [SmallTouchscreen](#smalltouchscreen) - A `Class.Frame` for buttons on small touchscreens.
 
-### Scaling elements
+### Scaling Elements
 
 ScalingElements is a `Class.Folder` parented under WeaponsSystemGui with the following descendants:
 
@@ -682,7 +682,7 @@ ScalingElements is a `Class.Folder` parented under WeaponsSystemGui with the fol
 <thead>
   <tr>
     <th>Name</th>
-    <th>Instance type</th>
+    <th>Instance Type</th>
     <th>Description</th>
   </tr>
 </thead>
@@ -722,7 +722,7 @@ Scope is a `Class.Frame` that contains **ScopeImage** (`Class.ImageLabel`) which
 <thead>
   <tr>
     <th>Name</th>
-    <th>Instance type</th>
+    <th>Instance Type</th>
     <th>Description</th>
   </tr>
 </thead>
@@ -742,7 +742,7 @@ SmallTouchScreen is a `Class.Frame` containing buttons that display on small tou
 - AimButton (`Class.ImageButton`)
 - FireButton (`Class.ImageButton`)
 
-### Create a directional indicator
+### Create a Directional Indicator
 
 Directional indicators are used to show the direction of something around the player's crosshair. For example, if someone shoots you, a red semi-circle can show up around your crosshair in the direction the shot came from. Other examples include indicators to show the direction of footsteps, indirect gunfire, or even environmental objects such as chests.
 
@@ -752,7 +752,7 @@ To create a new indicator, add a new Indicator `Class.Frame` in `WeaponsSystemGu
 <thead>
   <tr>
     <th>Name</th>
-    <th>Instance type</th>
+    <th>Instance Type</th>
     <th>Description</th>
   </tr>
 </thead>
@@ -787,7 +787,7 @@ If an indicator is activated an additional time before it has had time to fade c
 You can also activate directional indicators from outside of WeaponsGui by replacing self in the above code with the instance of `WeaponsGui` in your code. However, it's recommended that you activate it from inside `WeaponsGui` and trigger it via a `Class.RemoteEvent` or a `Class.BindableEvent`. For reference, see how `DamageIndicator` is activated within `WeaponsGui`.
 </Alert>
 
-#### Indicator configuration
+#### Indicator Configuration
 
 The DirectionalIndicators can be further modified by adjusting the `Class.Configuration` object parented under the `[Indicator]`. All of these settings have a default value, so there is no need to set configurations when not modifying a setting.
 
@@ -797,7 +797,7 @@ The following configurations can be set:
 <thead>
   <tr>
     <th>Name</th>
-    <th>Instance type</th>
+    <th>Instance Type</th>
     <th>Description</th>
   </tr>
 </thead>
@@ -835,7 +835,7 @@ The following configurations can be set:
 </tbody>
 </table>
 
-### Show damage billboard
+### Show Damage Billboard
 
 The damage billboard is used to show little numbers above a character's head when they are damaged. These will only show up for the player that damaged another player's character, not for spectating players.
 
@@ -845,11 +845,11 @@ Damage billboards are handled in `WeaponsSystem/Libraries/DamageBillboardHandler
 DamageBillboardHandler:ShowDamageBillboard(damage, adornmentPart)
 ```
 
-## Shoulder camera
+## Shoulder Camera
 
 The shoulder camera is a third-person camera that looks over the player character's right shoulder. To customize the shoulder camera, modify the variables under the -- Configuration parameters (constants) comment in the `ShoulderCamera.new()` function of `WeaponsSystem/Libraries/ShoulderCamera`. You can modify things such as field of view, offset from the character, walk speed while [sprinting or zooming](#sprint-and-zoom-control), etc.
 
-## Sprint and zoom control
+## Sprint and Zoom Control
 
 By default, the weapons system adds "sprint" capability, so players can sprint by holding the <kbd>Shift</kbd> key, pushing fully up on the dynamic thumbstick (mobile), or pushing fully up on the left joystick (gamepad). If you want to disable sprinting, set the value of **SprintEnabled** within **WeaponsSystem**/**Configuration** to **false**.
 

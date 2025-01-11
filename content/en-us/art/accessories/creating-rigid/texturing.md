@@ -1,5 +1,5 @@
 ---
-title: Texture painting
+title: Texture Painting
 description: Covers the process of associating PBR textures to rigid accessories in Blender.
 prev: /art/accessories/creating-rigid/modeling-setup
 next: /art/accessories/creating-rigid/exporting
@@ -15,7 +15,7 @@ This tutorial covers basic texture painting in Blender. Common workflows in the 
 While PBR textures are not required for accessories and is not covered in this tutorial, adding PBR textures can add extra visual flair and realism to elevate your creations. This typically requires additional software. <br /> <br /> For more information, see [PBR textures](../../modeling/surface-appearance.md).
 </Alert>
 
-## UV projecting
+## UV Projecting
 
 <video controls src="../../../assets/art/accessories/creating-rigid/UV-Projecting.mp4" width="100%"></video>
 
@@ -25,7 +25,7 @@ Use Blender's automatic UV Project feature to "unwrap" your 3D object onto a 2D 
 2. In the top UV menu, select **Smart UV Project**.
 3. Set Island Margin to `.02`.
 
-## Add new material
+## Adding New Material
 
 <video controls src="../../../assets/art/accessories/creating-rigid/Adding-New-Material.mp4" width="100%"></video>
 
@@ -39,7 +39,7 @@ Add a new material for Blender to associate this new texture, and assign it to a
    1. Name the texture image file. Using an affix like "\_TXT" can help organize your files later.
    2. Select the color and pick a color. This tutorial recommends using a metallic color for your metal borders to save time.
 
-## Texture painting
+## Texture Painting
 
 Texture painting allows you to paint directly on the 3D object or the 2D mapping of the surface.
 
@@ -49,7 +49,7 @@ Since Blender automatically mapped the 2D atlas of the texture, it's not easy to
 There are many ways to texture within Blender. To keep this process simple, the tutorial used Blender's [Smart UV Project](https://docs.blender.org/manual/en/2.79/editors/uv_image/uv/editing/unwrapping/mapping_types.html), but there are many ways to manually create your 2D texture islands and organize your mesh and texture.
 </Alert>
 
-### Mark 3D object
+### Marking 3D Object
 
 <video controls src="../../../assets/art/accessories/creating-rigid/Marking-3d-Object.mp4" width="100%"></video>
 
@@ -62,7 +62,7 @@ Switch to Texture Paint mode and use the paintbrush to track the "wood" parts of
    1. Use <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>Z</kbd> to undo any accidental brushes on the metal border.
    2. Hold <kbd>F</kbd> and drag the mouse to adjust brush size.
 
-### Paint 2D map
+### Painting 2D Map
 
 <video controls src="../../../assets/art/accessories/creating-rigid/Painting-2d-Map.mp4" width="100%"></video>
 

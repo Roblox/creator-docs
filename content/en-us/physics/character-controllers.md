@@ -1,21 +1,21 @@
 ---
-title: Character controllers
+title: Character Controllers
 description: Controller instances can be used as a component in a custom character implementation.
 ---
 
 The `Class.ControllerManager` instance manages simulated motion control for its assigned `Class.ControllerManager.RootPart|RootPart`. Along with `Class.ControllerPartSensor|ControllerPartSensors`, it can be used to build a physics‑based character controller.
 
-## Core setup
+## Core Setup
 
 `Class.ControllerManager` requires a `Class.BasePart` to use as its root. Movement forces and part sensing will be on this part.
 
 1. Choose a `Class.Part` or `Class.MeshPart` and name it **RootPart**.
 2. Group the part as a `Class.Model` instance for organization along with the other components.
-3. Add a `Class.ControllerManager` instance to the model. If **ControllerManager** doesn't initially appear in the object insertion menu, **uncheck** "Show only recommended objects" in the menu's [insertion settings](../studio/explorer.md#insert-and-parent).
+3. Add a `Class.ControllerManager` instance to the model. If **ControllerManager** doesn't initially appear in the object insertion menu, **uncheck** "Show only recommended objects" in the menu's [insertion settings](../studio/explorer.md#inserting-and-parenting).
 
 	 <img src="../assets/physics/character-controller/Explorer-Core-Setup.png" width="320" alt="ControllerManager and RootPart inside a model." />
 
-### Sensor setup
+### Sensor Setup
 
 A `Class.ControllerPartSensor` detects parts with the same code the `Class.Humanoid` uses for detecting floors and ladders.
 
@@ -29,9 +29,9 @@ A `Class.ControllerPartSensor` detects parts with the same code the `Class.Human
    <img src="../assets/physics/character-controller/Explorer-RootPart-ClimbSensor.png" width="320" alt="ClimbSensor as child of RootPart" /><br />
 	 <img src="../assets/physics/character-controller/Properties-ClimbSensor.png" width="320" alt="" />
 
-### Controller setup
+### Controller Setup
 
-Controller instances like `Class.GroundController` and `Class.ClimbController` tell the managed part how to interact with the world, working alongside the sensors you configured during the [sensor setup](#sensor-setup).
+Controller instances like `Class.GroundController` and `Class.ClimbController` tell the managed part how to interact with the world, working alongside the sensors you configured in [Sensor Setup](#sensor-setup).
 
 1. Insert both a `Class.GroundController` and `Class.ClimbController` as children of the `Class.ControllerManager`.
 
@@ -41,7 +41,7 @@ Controller instances like `Class.GroundController` and `Class.ClimbController` t
 
    <img src="../assets/physics/character-controller/Properties-GroundController.png" width="320" alt="" />
 
-### Link references
+### Linking References
 
 To complete the core setup, you'll need to link various properties of the `Class.ControllerManager` instance to objects within the main `Class.Model`.
 
@@ -58,9 +58,9 @@ To complete the core setup, you'll need to link various properties of the `Class
 
    <img src="../assets/physics/character-controller/Linking-References.png" width="680" alt="ControllerManager properties linked to instances within overall model" />
 
-### Test
+### Testing
 
-With [sensors](#sensor-setup) and [controllers](#controller-setup) in place, and with [references linked](#link-references), you can test the controller in Studio.
+With [sensors](#sensor-setup) and [controllers](#controller-setup) in place, and with [references linked](#linking-references), you can test the controller in Studio.
 
 1. Start a playtest using the **Run** mode (<kbd>F8</kbd>) since you don't need to insert your avatar character in this scenario.
 
@@ -91,7 +91,7 @@ With [sensors](#sensor-setup) and [controllers](#controller-setup) in place, and
    Remember that `Class.GroundController.GroundOffset|GroundOffset` must be **less** than the value of `Class.ControllerPartSensor.SearchDistance|SearchDistance` for the [GroundSensor](#sensor-setup), since that sensor will deactivate if it loses sense of the ground and effectively stop its forces on the part. This will cause a bouncing effect as gravity and the `Class.GroundController` repeatedly swap control of the part.
 	 </Alert>
 
-## Custom sensors
+## Custom Sensors
 
 The `Class.ControllerPartSensor.SensorMode` options of `Enum.SensorMode|Floor` and `Enum.SensorMode|Ladder` run the exact `Class.Humanoid` sensor code, letting you use them for backwards compatibility. However, you can also customize how and when walkable and climbable parts are detected, ultimately changing when the managed part walks/climbs.
 

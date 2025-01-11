@@ -1,5 +1,5 @@
 ---
-title: Roblox for Unreal developers
+title: Roblox for Unreal Developers
 description: If you're an experienced Unreal developer, use this page to get oriented with Roblox.
 ---
 
@@ -10,7 +10,7 @@ import Transforms from './includes/engine-comparisons/transforms.md'
 
 This page includes information to help experienced Unreal Engine developers get started with Roblox: basic orientation, a conceptual comparison, and key differences between the two platforms.
 
-## Get oriented
+## Getting Oriented
 
 ![The Unreal Editor user interface with markup to show the various windows and panels.](./assets/engine-comparisons/unreal-editor.png)
 
@@ -20,7 +20,7 @@ Unreal's Outliner and Roblox Studio's [Explorer](studio/explorer.md) are the pri
 
 The Roblox Studio [Asset Manager](projects/assets/manager.md) and [Toolbox](projects/assets/toolbox.md) overlap with the Unreal Content Browser. The Asset Manager lets you manage all assets within your experience, whereas the Toolbox lets you access any assets you've published. The Toolbox also lets you search the Creator Store for assets from Roblox or the community. The Creator Store is similar to the Unreal Engine Marketplace, but you can access it directly from the Studio user interface.
 
-## Philosophical differences
+## Philosophical Differences
 
 Roblox is a "simulation engine" rather than a traditional game engine. Unreal `Actors` and Roblox `Class.Part|Parts` both serve as fundamental building blocks, but in practice, the two are quite different:
 
@@ -40,7 +40,7 @@ You can see the difference immediately if you create an `Actor` and a `Part`. Th
 </figure>
 </GridContainer>
 
-Another useful comparison is the Unreal `Actor` to the Roblox `Class.Model`. Models act as a container for a collection of interconnected parts in the same way that `Actors` in Unreal are containers for components. You specify one of the model's parts as its [primary part](parts/models.md#set-a-primary-part) to define the pivot point. Models also hold scripts, animations, sound effects, prompts, constraints, particle emitters, and more.
+Another useful comparison is the Unreal `Actor` to the Roblox `Class.Model`. Models act as a container for a collection of interconnected parts in the same way that `Actors` in Unreal are containers for components. You specify one of the model's parts as its [primary part](parts/models.md#setting-a-primary-part) to define the pivot point. Models also hold scripts, animations, sound effects, prompts, constraints, particle emitters, and more.
 
 For example, an Unreal `Actor` might have a `NiagraComponent` that uses several emitters to achieve the desired visual effect, a mesh for the shape, a physics constraint to add springiness, and a script for player interactivity. In Outliner, you see a single `Actor` named `SpringyFireball`.
 
@@ -59,9 +59,9 @@ Roblox's physics-by-default philosophy extends to the process of building 3D mod
 
 Rather than using standard metric units for length and mass, Roblox uses notional units called studs and Roblox Mass Units (RMUs). For approximate metric conversions and recommendations around use, see [Units](physics/units.md).
 
-## Location matters
+## Location Matters
 
-Roblox experiences are multiplayer by default, so Roblox Studio includes many different storage locations with specific behaviors. For example, a script might run when you put it in `Class.ReplicatedStorage`, but not when you put it into `Class.StarterPlayerScripts`. For more information, see [Client-server runtime](projects/client-server) and [Object organization](projects/data-model#object-organization).
+Roblox experiences are multiplayer by default, so Roblox Studio includes many different storage locations with specific behaviors. For example, a script might run when you put it in `Class.ReplicatedStorage`, but not when you put it into `Class.StarterPlayerScripts`. For more information, see [Client-Server Runtime](projects/client-server) and [Object Organization](projects/data-model#object-organization).
 
 <ScriptLocations components={props.components} />
 
@@ -83,7 +83,7 @@ Compared to Luau, C++ has an overall performance advantage, which might or might
 
 Unreal also includes a visual scripting system called Blueprints. Roblox has third-party plugins that offer similar functionality, but no comparable system built-in.
 
-### Luau code sample
+### Luau Code Sample
 
 <CodeSample components={props.components} />
 
@@ -124,7 +124,7 @@ Similar to Unreal, Roblox Studio supports [plugins](studio/plugins.md), which ca
 | Unreal | Roblox | Notes |
 | :--- | :--- | :--- |
 | Level | [Place](projects.md#places) | |
-| Actor | `Class.Part` or `Class.Model` | See [Philosophical differences](#philosophical-differences). |
+| Actor | `Class.Part` or `Class.Model` | See [Philosophical Differences](#philosophical-differences). |
 | Blueprint Class | [Package](projects/assets/packages.md) | |
 | Transform | `Datatype.CFrame` | `CFrame` doesn't include scale information. See [Transforms](#transforms). |
 | Outliner | Explorer window | |

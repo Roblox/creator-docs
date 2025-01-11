@@ -9,7 +9,7 @@ Frames are `Class.GuiObject|GuiObjects` that act as containers for other `Class.
 
 When you manipulate frames, you also manipulate the `Class.GuiObject|GuiObjects` they contain. For example, if you change the position of a `Class.Frame` object with a child `Class.TextLabel`, you also change the position of that label. In addition, all frames are also `Class.GuiObject|GuiObjects`, so you can customize their properties, such as `Class.GuiObject.BackgroundColor3|BackgroundColor3`, `Class.GuiObject.BorderMode|BorderMode`, `Class.GuiObject.Transparency|Transparency`, and `Class.GuiObject.Rotation|Rotation`, to fit the aesthetics of your experience.
 
-## Frame types
+## Frame Types
 
 There are three primary frame types, each serving a specific purpose in UI design.
 
@@ -35,7 +35,7 @@ The `Class.ScrollingFrame.CanvasSize|CanvasSize` property determines how large o
 
 The `Class.ScrollingFrame.CanvasPosition|CanvasPosition` property determines your default position within the canvas in pixels, and it sets the scroll bar position accordingly. Note that this property doesn't do anything when the scroll bar isn't visible.
 
-<h4>Scroll bar</h4>
+<h4>Scroll Bar</h4>
 
 The **scroll bar** displays your position within the content of the `Class.ScrollingFrame` that isn't visible. There are two types of scroll bars: a vertical scroll bar and a horizontal scroll bar. A vertical scroll bar allows you to scroll up and down, while a horizontal scroll bar allows you to scroll left and right.
 

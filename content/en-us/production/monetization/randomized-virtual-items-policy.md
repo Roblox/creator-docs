@@ -1,5 +1,5 @@
 ---
-title: Randomized virtual items policy
+title: Randomized Virtual Items Policy
 description: Explains Roblox's policy for selling randomized virtual items.
 ---
 

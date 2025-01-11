@@ -1,19 +1,19 @@
 ---
-title: Import rigid accessories
+title: Importing Rigid Accessories
 description: Use the 3D Importer to add third-party models to Studio before using the Accessory Fitting Tool to convert the model to an Accessory.
 ---
 
-Use the following instructions to [import](#import-3d-assets) your `.fbx` or `.gltf` third-party model into Studio and [convert](#convert-rigid-accessories) the asset to an `Accessory` object that you can save to use in your experience, share with others, or upload to the Marketplace.
+Use the following instructions to [import](#importing-3d-assets) your `.fbx` or `.gltf` third-party model into Studio and [convert](#converting-rigid-accessories) the asset to an `Accessory` object that you can save to use in your experience, share with others, or upload to the Marketplace.
 
 <Alert severity ='info'>
-The following asset example and instructions are part of the [Rigid accessory tutorial](../accessories/creating-rigid/index.md) which covers the process of converting a model from Blender to publishing the asset to the Marketplace.
+The following asset example and instructions are part of the [Rigid Accessory Tutorial](../accessories/creating-rigid/index.md) which covers the process of converting a model from Blender to publishing the asset to the Marketplace.
 </Alert>
 
-## Import 3D assets
+## Importing 3D Assets
 
 Studio's 3D Importer provides a quick and easy way to import third-party 3D assets into your projects. The importer provides object previews and error-checking to ensure that your asset meets Roblox's [general 3D requirements](../modeling/specifications.md).
 
-Keep in mind, the model that you intend to create as a rigid accessory must also follow Roblox's [accessory specifications](../accessories/specifications.md) to eventually use this asset as an `Class.Accessory`, or you may experience errors later in the workflow.
+Keep in mind, the model that you intend to create as a rigid accessory must also follow Roblox's [Accessory Specifications](../accessories/specifications.md) to eventually use this asset as an `Class.Accessory`, or you may experience errors later in the workflow.
 
 To import your asset:
 
@@ -28,7 +28,7 @@ To import your asset:
 3. Select **Import**. The asset populates in your workspace as a `Class.Model` with the appropriate textures applied as a `Class.SurfaceAppearance` or `Class.MeshPart.TextureID`.
 
 <BaseAccordion>
-<AccordionSummary>Manually add textures</AccordionSummary>
+<AccordionSummary>Manually adding textures</AccordionSummary>
 <AccordionDetails>
 
 If textures didn't load correctly, add them manually. You may need to save and publish your experience in order to access the [Asset Manager](../../projects/assets/manager.md).
@@ -61,7 +61,7 @@ If textures didn't load correctly, add them manually. You may need to save and p
 After successful import, your model object should populate in your project as a `Class.Model` with the appropriate textures applied. See [3D Importer](../../art/modeling/3d-importer.md) for additional information on import settings and troubleshooting.
 </Alert>
 
-## Convert rigid accessories
+## Converting Rigid Accessories
 
 After importing your asset into Studio, you can begin **fitting** your imported object to a mannequin and **converting** the `Class.Model` object into a `Class.Accessory`. When fitting and converting your accessory it's important to use the [**Accessory Fitting Tool (AFT)**](../accessories/accessory-fitting-tool.md) to correctly preview the placement and apply the correct configurations to your accessory.
 
@@ -98,7 +98,7 @@ To fit and generate your accessory:
 
 After successful fitting and converting, your 3D model should populate in your project as an `Class.Accessory`. With this `Class.Accessory` you can perform any of the following:
 
-- Begin the process of [uploading and publishing](../../marketplace/publish-to-marketplace.md#upload-an-asset) the accessory to the Marketplace.
+- Begin the process of [uploading and publishing](../../marketplace/publishing-to-marketplace.md#uploading-an-asset) the accessory to the Marketplace.
 
 - Use the accessory in your current experience by equipping it to character models with [HumanoidDescription](../../characters/appearance.md#humanoiddescription), or by dragging and dropping the accessory under the appropriate character `Class.Model` object.
 

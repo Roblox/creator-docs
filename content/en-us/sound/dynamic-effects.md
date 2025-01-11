@@ -1,11 +1,11 @@
 ---
-title: Dynamic effects
+title: Dynamic Effects
 description: Dynamic Effects modify or enhance the audio of your experience.
 ---
 
 Dynamic effects modify or enhance the audio of individual `Class.Sound` objects or an entire `Class.SoundGroup`. You can apply these effects to make your audio more immersive within your experience, such as using `Class.ReverbSoundEffect` in large rooms to make them feel massive.
 
-## Apply dynamic effects
+## Applying Dynamic Effects
 
 Each dynamic effect you apply has additional properties you can adjust until you achieve the type of sound you desire. For more information on these properties, see each dynamic effect's API page.
 
@@ -13,12 +13,12 @@ To apply a dynamic effect:
 
 1. In the **Explorer** window, insert a new dynamic effect into a `Class.Sound` or `Class.SoundGroup` object.
 
-   1. Hover over the object and click the ⊕ button. A contextual menu displays.
-   2. From the menu, insert a **dynamic effect**.
+   1. Hover over the audio object and click the ⊕ button. A contextual menu displays.
+   1. From the menu, insert a **dynamic effect**.
 
-      <img src="../assets/studio/explorer/SoundService-SoundGroup-ReverbSoundEffect.png" width="320" />
+      <img src="../assets/audio/sound-groups/Insert-Dynamic-Effect.png" width="320" />
 
-2. **(Optional)** In the **Properties** window, select the new dynamic effect and adjust its properties.
+2. (Optional) In the **Properties** window, select the new dynamic effect and adjust its properties.
 
    <img src="../assets/audio/sound-groups/Dynamic-Effect-Properties.png" width="320" />
 

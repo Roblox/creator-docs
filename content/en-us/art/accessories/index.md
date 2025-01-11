@@ -1,5 +1,5 @@
 ---
-title: Rigid accessories
+title: Rigid Accessories
 description: Rigid accessories are basic 3D cosmetics users can equip and wear on their avatar character.
 hideBreadcrumbs: true
 ---
@@ -22,13 +22,13 @@ To create a custom Roblox accessory for your own experience or to sell on the Ma
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/Eed29gV0hLA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br /><br />
 
-## Components of a rigid accessory
+## Components of a Rigid Accessory
 
 All accessory models are made up of the same base components of a [mesh object](#mesh-part), [textures](#textures), and [attachment](#attachments).
 
 When [creating accessories](#creation-process), most of these components are created first in your modeling software, then converted to their appropriate Roblox Studio instance on import.
 
-### Mesh part
+### Mesh Part
 
 <GridContainer numColumns="2">
 <figure><img src="../../assets/art/accessories/Mesh-Bow-Example.png" /><figcaption>Bow rigid accessory mesh object</figcaption></figure>
@@ -64,10 +64,10 @@ In Studio, textures images are imported as image assets and are set to `Class.Me
 
 Attachment points define where accessories attach to a character's body. In Studio, attachments are represented by `Class.Attachment` objects.
 
-## Creation process
+## Creation Process
 
 Custom accessories are first created in 3D modeling programs, such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), before importing the `.fbx` or `.gltf` model into Studio.
-To get started creating your first avatar asset, see the [avatar tutorials](../../avatar/tutorials.md).
+To get started creating your first avatar asset, see [Avatar Tutorials](../../avatar/tutorials.md).
 
 Depending on the type of asset you are creating, the creation process follows these high-level workflows:
 
@@ -98,31 +98,31 @@ If you are interested in specific avatar creation topics, use the following tabl
 <tbody>
   <tr>
     <td>Tutorials</td>
-    <td>[Rigid accessory creation](../../art/accessories/creating-rigid/index.md) <br /><br />[Basic clothing creation](../../art/accessories/creating/index.md)</td>
+    <td>[Rigid Accessory Creation](../../art/accessories/creating-rigid/index.md) <br /><br />[Basic Clothing Creation](../../art/accessories/creating/index.md)</td>
   </tr>
   <tr>
-    <td>Reference files</td>
-    <td>[Accessory and clothing reference files](../../art/modeling/project-files.md)</td>
+    <td>Reference Files</td>
+    <td>[Accessory and Clothing Reference Files](../../art/modeling/project-files.md)</td>
   </tr>
   <tr>
-    <td>Technical specs</td>
-    <td>[.FBX export settings](../../art/modeling/export-requirements.md)<br /><br />[General mesh specifications](../../art/modeling/specifications.md)<br /><br />[Accessory specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace policy](../../marketplace/marketplace-policy.md)</td>
+    <td>Technical Specs</td>
+    <td>[.FBX Export Settings](../../art/modeling/export-requirements.md)<br /><br />[General Mesh Specifications](../../art/modeling/specifications.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Policy](../../marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
-    <td>Cosmetic creation</td>
-    <td>[Accessories overview](../../art/accessories/specifications.md)<br /><br />[Layered clothing overview](../../art/accessories/layered-clothing.md)<br /><br /><br />[Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace requirements](../../marketplace/marketplace-policy.md)</td>
+    <td>Cosmetic Creation</td>
+    <td>[Accessories Overview](../../art/accessories/specifications.md)<br /><br />[Layered Clothing Overview](../../art/accessories/layered-clothing.md)<br /><br /><br />[Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Requirements](../../marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
     <td>Texturing</td>
-    <td>[Texturing requirements](../../art/modeling/texture-specifications.md)<br /><br />[PBR textures](../../art/modeling/surface-appearance.md)</td>
+    <td>[Texturing Requirements](../../art/modeling/texture-specifications.md)<br /><br />[PBR Textures](../../art/modeling/surface-appearance.md)</td>
   </tr>
   <tr>
-    <td>Rigging and skinning</td>
-    <td>[Rigging and skinning overview](../../art/modeling/rigging.md)<br /><br />[Humanoid rig requirements](../../art/characters/specifications.md#rigging)<br /><br />[Rig facial bones](../../art/characters/facial-animation/create-basic-heads.md#rigging)<br /><br />[Automatic Skin Transfer](../../art/accessories/automatic-skinning-transfer.md)<br /><br />[Skin facial bones](../../art/characters/facial-animation/create-basic-heads.md#skin-face-bones)</td>
+    <td>Rigging and Skinning</td>
+    <td>[Rigging and Skinning Overview](../../art/modeling/rigging.md)<br /><br />[Humanoid Rig Requirements](../../art/characters/specifications.md#rigging)<br /><br />[Rigging Facial Bones](../../art/characters/facial-animation/creating-basic-heads.md#rigging)<br /><br />[Auto Skin Transfer](../../art/accessories/automatic-skinning-transfer.md)<br /><br />[Skinning Facial Bones](../../art/characters/facial-animation/creating-basic-heads.md#skinning-face-bones)</td>
   </tr>
   <tr>
     <td>Publishing and Marketplace</td>
-    <td>[Uploading to Marketplace](../../marketplace/publish-to-marketplace.md)<br /><br />[Marketplace Policy](../../marketplace/marketplace-policy.md)<br /><br />[Fees and commissions](../../marketplace/marketplace-fees-and-commissions.md)</td>
+    <td>[Uploading to Marketplace](../../marketplace/publishing-to-marketplace.md)<br /><br />[Marketplace Policy](../../marketplace/marketplace-policy.md)<br /><br />[Fees and Commissions](../../marketplace/marketplace-fees-and-commissions.md)</td>
   </tr>
 </tbody>
 </table>

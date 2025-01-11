@@ -1,17 +1,17 @@
 ---
-title: Deadly lava
+title: Deadly Lava
 description: The process for creating a lava floor that kills players on contact.
 next: /tutorials/scripting/basic-scripting/fading-trap
 prev: /tutorials/scripting/basic-scripting/intro-to-scripting
 ---
 
-In [Introduction to scripting](./intro-to-scripting.md), you learned how to make changes in an experience in a loop over time. What if you want to make changes based on user behavior? In this tutorial, you'll learn how to make a deadly lava floor which kills users when they step on it.
+In [Introduction to Scripting](./intro-to-scripting.md), you learned how to make changes in an experience in a loop over time. What if you want to make changes based on user behavior? In this tutorial, you'll learn how to make a deadly lava floor which kills users when they step on it.
 
 <video controls loop muted>
   <source src="../../../../assets/tutorials/deadly-lava/lavaFloorGameplay.mp4" />
 </video>
 
-## Set up
+## Setting Up
 
 You need a place in your world to put the deadly lava. If you followed the [Introduction to Scripting](./intro-to-scripting.md) course, the lava floor would fit nicely in the gap covered by the disappearing platforms.
 
@@ -37,7 +37,7 @@ You need a place in your world to put the deadly lava. If you followed the [Intr
    local lava = script.Parent
    ```
 
-## Connect to an event
+## Connecting to an Event
 
 Use an **event** to detect when a user touches the lava. Every part has a `Touched` event that fires when something touches it. You can **connect** to this event to run a function when it fires.
 
@@ -57,7 +57,7 @@ Use an **event** to detect when a user touches the lava. Every part has a `Touch
 
 Any code you write in the `kill` function will now run whenever something touches the lava. Note that a **colon** is used for the `Connect` function, **not** a dot - don't worry about why at this point, just remember the difference.
 
-## Get the touching part
+## Getting the Touching Part
 
 To kill the user, the function will need an object associated with that user. A part's `Touched` event can provide the "other part" that touched it — but only if you request it by making it a **parameter** of the function.
 
@@ -75,7 +75,7 @@ lava.Touched:Connect(kill)
 
 When the `kill` function is called, the `otherPart` parameter will represent the part that touched the lava floor, and the code you'll write in the function will be able to use it.
 
-## Character and humanoid
+## Character and Humanoid
 
 When a user touches the lava, Roblox can detect the specific body part of the user that touched it, such as the left leg or right foot. This part is in the user's **Character** model, which contains all of the objects that make up the user's avatar in the experience, including:
 
@@ -109,7 +109,7 @@ end
 lava.Touched:Connect(kill)
 ```
 
-## Check the humanoid
+## Checking the Humanoid
 
 You can easily check if the Humanoid was found using an **if** statement. The code in an if statement will only run if the condition defined in the first line is true.
 
@@ -133,7 +133,7 @@ lava.Touched:Connect(kill)
 In Lua, any value other than false or nil (an empty value) is evaluated as true in a conditional statement, so in this case you can use `humanoid` directly as the condition.
 </Alert>
 
-## Set character health
+## Setting Character Health
 
 Now that the `Class.Humanoid` has been checked, its properties can be changed. If you set its `Health` property to **0**, the associated Character dies. In the body of the if statement, set the `Health` property of humanoid to 0.
 
@@ -151,7 +151,7 @@ lava.Touched:Connect(kill)
 
 With that, your lava floor is complete! Test your experience and you should find that your deadly lava successfully kills users on contact. Try using your lava as an extra challenge in an obby, or as a boundary for a world.
 
-## Final code
+## Final Code
 
 ```lua
 local lava = script.Parent

@@ -1,5 +1,5 @@
 ---
-title: Social media links
+title: Social Media Links
 description: Explains how to engage with your audience by promoting your experience on social media.
 ---
 

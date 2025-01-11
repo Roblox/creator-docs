@@ -9,11 +9,11 @@ users can understand and enjoy your experience as intended. Any experience can i
 
 <img src="../../assets/localization/Concept-Banner.jpg" width="80%" />
 
-## Localization settings
+## Localization Settings
 
 Your experience's localization settings is the starting place for enabling
 translations and accessing your localization tools. You'll need to set your
-[source](#set-source-language) and [supported](#set-supported-languages)
+[source](#setting-source-language) and [supported](#setting-supported-languages)
 languages before starting any localization to a new language.
 
 The localization page also includes tools to start translating your experiences, add translation collaborators and download translation analytics.
@@ -44,7 +44,7 @@ A link to your experience's localization settings is also available in Studio. T
    src="../../assets/localization/Game-Settings-Configure-Localization.png"
    width="800" />
 
-### Set source language
+### Setting Source Language
 
 Before you can start any localization, Roblox needs to know which language you
 are translating from and which languages you are translating to.
@@ -64,7 +64,7 @@ To set the **source** language:
 2. Select a language from the list.
 3. Click **Confirm** to add the language.
 
-### Set supported languages
+### Setting Supported Languages
 
 The **supported languages** are the languages you intend to provide translations
 for. You can have multiple supported languages for your experience. See
@@ -85,20 +85,20 @@ To set the **supported** languages:
 
 4. Click **Confirm** to add the language.
 
-## Automatic translations
+## Automatic Translations
 
-Roblox's automatic translation tool is available on any experience and allows you to immediately begin localizing the strings in your experience and broadening your potential audience. In many cases, you can start making significant progress on your localization journey using automatic translations before adding [custom translations](#custom-translations) or working with [manual translators](#work-with-translators).
+Roblox's automatic translation tool is available on any experience and allows you to immediately begin localizing the strings in your experience and broadening your potential audience. In many cases, you can start making significant progress on your localization journey using automatic translations before adding [custom translations](#custom-translations) or working with [manual translators](#working-with-translators).
 
-For more information on enabling automatic translations in your experience, see [Automatic translations](../../production/localization/automatic-translations.md).
+For more information on enabling automatic translations in your experience, see [Automatic Translations](../../production/localization/automatic-translations.md).
 
-## Custom translations
+## Custom Translations
 
 Apply various customizations to your translations to improve and expand your experience's localization. You, or any assigned translator, can manually add and modify translations to your experience's translation table. You can also access this table programmatically, allowing you to create contextual translations, switch out images or assets based on language, or even manually display translations from a different language.
 
-For more information on custom translation use-cases, see [Translate in-experience content](../../production/localization/custom-translations.md).
+For more information on custom translation use-cases, see [Translating In-Experience Content](../../production/localization/custom-translations.md).
 
-## Work with translators
+## Working with Translators
 
 Add Roblox users as translators for your experience to help you review and polish automatic translations or provide and edit manual translations.
 
-You can download monthly analytics to track your translation coverage and the contribution of your translators. For more information on working with localization contributors, see [Work with translators](../../production/localization/work-with-translators.md).
+You can download monthly analytics to track your translation coverage and the contribution of your translators. For more information on working with localization contributors, see [Working with Translators](../../production/localization/working-with-translators.md).

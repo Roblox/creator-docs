@@ -1,5 +1,5 @@
 ---
-title: Experience ownership transfer
+title: Experience Ownership Transfer
 description: Transfer ownership of an experience to other Roblox users or groups.
 ---
 
@@ -13,7 +13,7 @@ Before making a transfer or accepting a transfer, you must first:
 - Upload your private `ModuleScripts` to the group you're transferring the experience to. If the experience uses packages where the package owner is a user and not a group, you might have to recreate those packages or replace them with packages that are already owned by a group.
 - Publish your animation assets to the group you're transferring the experience to.
 
-  - If you have a large number of animations to upload, you can use a community-supported third-party tool like Roblox Animation Transfer. See [Transfer animations](./transfer-animations.md) for more details.
+  - If you have a large number of animations to upload, you can use a community-supported third-party tool like Roblox Animation Transfer. See [Transferring Roblox Animations](./transferring-animations.md) for more details.
   - If you have a small number of animations to upload, you can manually re-upload them and then update your animation asset references to support old and new IDs based on the `CreatorID` and `CreatorType`. See the following code for an example:
 
   ```lua
@@ -63,7 +63,7 @@ Before making a transfer or accepting a transfer, you must first:
 As a best practice, if you're using Open Cloud API keys for the experience, create an API key as the new owner with the name `RobloxTransferApiKey`. During the transfer, the relevant scopes are added to this new key and removed from the original key. You can then use a feature flag to allow your backend services to start using the new key after the transfer is complete.
 </Alert>
 
-## Transfer an experience
+## Transferring an Experience
 
 To transfer an experience to a group:
 
@@ -86,7 +86,7 @@ Once the group accepts the transfer, Roblox makes your experience private and cl
 To cancel a pending transfer, click **Cancel transfer request** in the **Content Settings** page.
 </Alert>
 
-## Receive a transferred experience
+## Receiving a Transferred Experience
 
 To receive a transferred experience:
 
@@ -103,7 +103,7 @@ To receive a transferred experience:
 If you don't want to receive the transfer, click **Decline transfer** in the **Transfer Details** dialog.
 </Alert>
 
-## Frequently asked questions
+## Frequently Asked Questions
 
 **What kind of information does the transferred experience retain?**
 

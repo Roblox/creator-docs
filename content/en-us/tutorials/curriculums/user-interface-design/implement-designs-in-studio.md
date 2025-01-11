@@ -1,5 +1,5 @@
 ---
-title: Implement designs in Studio
+title: Implement Designs in Studio
 description: Explains how to greybox the laser tag environment using basic parts.
 prev: /tutorials/curriculums/user-interface-design/wireframe-your-layouts
 ---
@@ -18,7 +18,7 @@ After you review the techniques in this section, you can apply them to your own 
    The instructions in this section of the tutorial show you how to exactly recreate the UI components using the UI Design Asset Library. This process takes about 90 minutes or less from start to finish. If you don't want to use the provided values, you can adjust each UI element to meet the specifications of your own experience, or use the sample itself for the rest of the tutorial.
 </Alert>
 
-## Get asset library
+## Get Asset Library
 
 Asset libraries are collections of assets you can add into your inventory for easy access and reuse. The asset library you will use for your project from the [Creator Store](../../../production/creator-store.md) includes nine 2D individual UI element assets, and the final versions of the objective, blaster selector, and player info components you are creating in this section of the tutorial.
 
@@ -115,7 +115,7 @@ To get the asset library from your inventory into your experience:
 1. Click the dropdown menu, then select the **My Packages** sort.
 1. Click the **Final Screen UI Components** tile, then in the **Explorer** window, select **Completed Components**, then drag them into the **StarterGui** service. You can now enable any of the final components to reference their design.
 
-## Emulate devices
+## Emulate Devices
 
 Studio's **Device Emulator** allows you to test how players will see and interact with your UI on various devices. This tool is a vital part of the implementation process because the aspect ratio of your viewport in Studio doesn't necessarily reflect the aspect ratio of the screens players use to access your experience, and it's important that your UI is both legible and accessible on every device.
 
@@ -136,7 +136,7 @@ To emulate your screen to the smallest screen size:
 
    <img src="../../../assets/tutorials/user-interface-design/Section3/DeviceDropdown.jpg" width="80%" />
 
-## Create ScreenGui objects
+## Create ScreenGui Objects
 
 To display UI elements on every player's screen, you can create a `Class.ScreenGui` object in the `Class.StarterGui` service. `Class.ScreenGui` objects are the primary containers for on-screen UI, and the `Class.StarterGui` service copies its contents to each player's `Class.PlayerGui` container as they enter an experience.
 
@@ -485,7 +485,7 @@ To exactly recreate the crosshair within the sample [Laser Tag](https://www.robl
 
 1. **(Optional)** Insert a **UIAspectRatioConstraint** into **Crosshair** to ensure the label's aspect ratio remains the same no matter the player's screen size. The sample sets its `Class.UIAspectRatioConstraint.AspectRatio` property to **0.895**.
 
-#### Hit marker
+#### Hit Marker
 
 A hit marker is a UI element that only displays when a blast makes impact with another player on the enemy team. Like the crosshair, this UI element is a vital gameplay requirement for first-person shooter experiences because it provides visual feedback of when players are successful in tagging out their opponents.
 
@@ -584,7 +584,7 @@ return setupHitmarker
 Now, whenever a player blasts their blaster and the blast makes impact with another player, the hit marker momentarilly displays.
 </Alert>
 
-#### Blaster selector
+#### Blaster Selector
 
 A blaster selector is a UI component that players use to select their blaster type before joining or rejoining a round. The sample laser tag experience provides two types of blasters: one that produces several beams with a wide, horizontal spread, and another that produces a single beam. The type of blaster that players select influences their strategy during the round, making this UI component an essential workflow for the overall experience.
 
@@ -1001,7 +1001,7 @@ return setupNavButtons
 Now, whenever a player joins the experience or respawns back into a round after their health reaches zero, the blaster selector UI displays, they can make a selection, and each button functions as expected.
 </Alert>
 
-#### Blast button
+#### Blast Button
 
 A blast button is a UI component that players use to blast their blaster if they are accessing the experience through a mobile or tablet device. The sample laser tag experience uses a blaster button with an icon that depicts both a crosshair and a blast to communicate the button's function without text.
 
@@ -1162,7 +1162,7 @@ Following the visual hierarchy best practices from [Wireframe Your Layouts](wire
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/PlayerUI-Intro.png" />
 </figure>
 
-#### Player indicator
+#### Player Indicator
 
 A player indicator is a UI component that players reference to quickly decipher what team they belong to as soon as they spawn into their team's spawn zone. The sample laser tag experience provides two versions of the player indicator depending on if the player is on the **green** or **pink** team.
 
@@ -1406,7 +1406,7 @@ return setPlayerName
 Now, whenever a player joins or rejoins the round after respawning, the player indicator displays on the bottom-left of their screen.
 </Alert>
 
-#### Force field screen
+#### Force Field Screen
 
 A force field screen is a UI element that overlays the viewport to inform players they're safe from enemy team fire while joining or rejoining a round. Following the aesthetic guidelines for icons from [Choose an Art Style](./choose-an-art-style.md), the sample laser tag experience utilizes a semi-transparent hexagonal pattern to symbolize a force field. This design decision not only reinforces the overall futuristic art style for all UI in the experience, but it also communicates the player's state without any text or additional guidance.
 
@@ -1603,7 +1603,7 @@ return scheduleDestroyForceField
 Now, whenever a player joins or rejoins the round after respawning, the new force field screen UI displays instead of the default first-person `Class.ForceField` visuals.
 </Alert>
 
-#### Respawn screen
+#### Respawn Screen
 
 A respawn screen is a UI element that dims the viewport to inform players that they have been tagged out, and that the server is in the process of respawning them back to their spawn zone. This UI element is important because it gives players time to process that they've been tagged out, and strategize their next move before they rejoin the active round.
 
@@ -1828,7 +1828,7 @@ Now, whenever a player's health reaches zero, the respawn screen displays until 
 Now that you are familiar with common `Class.GuiObject|GuiObjects` for on-screen UI, try to recreate the **RoundResultsGui** `Class.ScreenGui` object and all of its children for the on-screen display when players win or lose a match. You can use the [sample laser tag experience](https://www.roblox.com/games/14817965191/Laser-Tag-1A) `.rbxl` file as a reference, or adjust the values to meet the gameplay requirements of your own experience.
 </Alert>
 
-## Create SurfaceGui objects
+## Create SurfaceGui Objects
 
 To display UI on a part's surface in the 3D space that responds to scripting logic for **each individual player**, you can parent a `Class.SurfaceGui` object to the part that you want to display your UI within the `Class.ReplicatedStorage` service. This technique ensures your UI and its scripting logic are available to both the server and each player's client.
 
@@ -1844,7 +1844,7 @@ To create a `Class.SurfaceGui` object:
 
     <img src="../../../assets/tutorials/user-interface-design/Section3/SurfaceGuiContainers.png" width="320" />
 
-### Cooldown meter
+### Cooldown Meter
 
 A cooldown meter is a UI component that informs players how long they have to wait before they're able to blast their blaster again. This slight pause prevents players from being able to blast as quickly as they can click or press a button, which is unrealistic for laser tag gameplay.
 
@@ -2079,7 +2079,7 @@ return runCooldownBarEffect
 Now, whenever a player blasts their blaster, the cooldown bar animates to communicate when the player can blast again.
 </Alert>
 
-## Create BillboardGui objects
+## Create BillboardGui Objects
 
 In order to display UI elements within the 3D space that respond to scripting logic and always face each player's camera regardless of their viewing angle, such as player names or map markers, you can create a `Class.BillboardGui` object as a child of a `Class.BasePart` or `Class.Attachment` that exists in the 3D space.
 
@@ -2097,7 +2097,7 @@ To create a `Class.BillboardGui` object:
 1. Rename the **BillboardGui** according to the context of its child UI elements.
 1. Repeat this process for every UI element you need to contextually display above players' heads.
 
-### Team indicator
+### Team Indicator
 
 A team indicator is a UI element that informs players which team other players in the round belong to so that they can easily differentiate between their allies and enemy team members. This information is important because the gameplay of a first-person shooter experience requires players to make quick strategic decisions while they're in combat zones so that they don't get tagged out and lose the match.
 
@@ -2277,7 +2277,7 @@ onLocalTeamChanged()
 Now, whenever a player's is in an active round, team indicators display over other players' heads unless they are on the enemy team and behind an object.
 </Alert>
 
-### Tagged out indicator
+### Tagged Out Indicator
 
 A tagged out indicator is a UI element that informs players when other players are no longer active in the round and are in the process of respawning back to their spawn zone. This information is important because the gameplay of a first-person shooter experience requires players to move onto their next target as soon as they tag out a player so that they don't become vulnerable in the arena by playing in the same location for too long.
 

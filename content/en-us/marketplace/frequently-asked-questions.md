@@ -1,5 +1,5 @@
 ---
-title: Frequently asked questions
+title: Frequently Asked Questions
 description: Marketplace FAQ providing answers and resources for common questions.
 ---
 

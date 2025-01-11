@@ -1,13 +1,13 @@
 ---
-title: Intro to for loops
+title: Intro to For Loops
 description: Use for loops to repeat code in this lesson for Roblox Lua. This lesson explains how for loops work and includes practice scripts.
 next: /tutorials/fundamentals/coding-4/glow-lights-with-for-loops
-prev: /tutorials/fundamentals/coding-4/repeat-code-with-while-loops
+prev: /tutorials/fundamentals/coding-4/repeating-code-with-while-loops
 ---
 
 There are different ways to make code run over and over. If you want the code to only run a certain amount of times, use a **for loop**. This article will cover the logic behind for loops and demonstrate some practical examples, such as coding a countdown.
 
-## How for loops work
+## How For Loops Work
 
 For loops use three values to control how many times they run: a **control** variable, an **end** value, and an **increment** value. Starting from the value of the control variable, the for loops will either count up or down each time it runs code inside the loop until it passes the end value. Positive increment values count up, and negative increment values count down.
 
@@ -17,7 +17,7 @@ For loops use three values to control how many times they run: a **control** var
 Different computer languages might use other terminology with for loops. For instance, in C# or JavaScript, the end value might be called the condition.
 </Alert>
 
-## Steps in a for loop
+## Steps in a For Loop
 
 To understand for loops, it helps to see a flow chart diagram showing the logic of how they progress.
 
@@ -33,7 +33,7 @@ Once the control variable passes the end value, the loop will stop. For example,
 
 <img src="../../../assets/education/coding-4/forLoopDiagram_generic3.png" width="75%" />
 
-## Code a countdown
+## Code a Countdown
 
 To see how a for loop works, use these steps to code a for loop that starts at 10 and counts down to 0, one number at a time. Every time the loop runs, it'll print the current value inside the control variable.
 
@@ -90,18 +90,18 @@ To see how a for loop works, use these steps to code a for loop that starts at 1
 
    Notice that the loop will print out the current value of count each time it goes through an **iteration**. An iteration is the complete process of checking the control value, running code, and updating the increment value. Because the control variable starts at 0 and has to go pass 10, the loop will go through 11 iterations before stopping.
 
-### Troubleshooting tips
+### Troubleshooting Tips
 
 At this point, if the loop doesn't work as intended, try one of the following below.
 
 - Check that you have **two commas** separating the numbers in your for loop. Having extra or missing commas will make the loop not start.
 - If the for loop prints all at once, make sure that there is a wait function that uses at least 1 second.
 
-## Different for loop examples
+## Different For Loop Examples
 
 Changing the three values of a for loop will change how the loop functions. Below are different examples of for loops with different start, end, and increment values. Try putting them into scripts and see what happens.
 
-### Count up by one
+### Counting Up By One
 
 ```lua
 for count = 0, 5, 1 do
@@ -110,7 +110,7 @@ for count = 0, 5, 1 do
 end
 ```
 
-### Count up in even numbers
+### Counting Up in Even Numbers
 
 ```lua
 for count = 0, 10, 2 do
@@ -119,7 +119,7 @@ for count = 0, 10, 2 do
 end
 ```
 
-### If for loops don't run at all
+### If For Loops Don't Run At All
 
 If the control variable starts out **beyond** the end value, like in the example below, the for loop won't run at all.
 

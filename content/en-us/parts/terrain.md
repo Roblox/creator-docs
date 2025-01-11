@@ -1,19 +1,19 @@
 ---
-title: Environmental terrain
+title: Environmental Terrain
 description: Explore how to generate and sculpt realistic terrain environments such as mountains, bodies of water, grass-covered hills, or a flat desert.
 ---
 
 import BetaAlert from '../includes/beta-features/beta-alert.md'
 
-Studio's [Terrain Editor](../studio/terrain-editor.md) lets you generate and sculpt detailed and realistic terrain environments such as mountains, bodies of water, grass-covered hills, or a flat desert. Terrain is made up of grids of **voxels** which are 4&times;4&times;4 stud regions in the 3D world with a set material.
+Studio's [Terrain Editor](../studio/terrain-editor.md) lets you generate and sculpt detailed and realistic terrain environments such as mountains, bodies of water, [grass-covered hills](#animated-grass), or a flat desert. Terrain is made up of grids of **voxels** which are 4&times;4&times;4 stud regions in the 3D world with a set [material](#terrain-materials).
 
 <img src="../assets/modeling/terrain/Showcase.jpg" width="100%" alt="Desert terrain with mountains in the distance" />
 
-Using the Terrain Editor, you can easily [generate](#generate-terrain) and edit terrain either at a [voxel](#detailed-editing) or [region](#large-scale-editing) level with the option of importing a [heightmap](#heightmaps-and-colormaps) and [colormap](#heightmaps-and-colormaps). For more precise, dynamic, or procedural terrain editing, you can also [script](#scripting) terrain creation.
+Using the [Terrain Editor](../studio/terrain-editor.md), you can easily [generate](#generating-terrain) and edit terrain either at a [voxel](#detailed-editing) or [region](#large-scale-editing) level with the option of importing a [heightmap](#heightmaps-and-colormaps) and [colormap](#heightmaps-and-colormaps). For more precise, dynamic, or procedural terrain editing, you can also [script](#scripting) terrain creation.
 
-## Terrain materials
+## Terrain Materials
 
-The following default materials are available for terrain, and you can also apply [custom materials](../parts/materials.md#custom-materials). Materials affect both the shape and appearance of terrain in the world; for example, [animated grass](#grass-animation) renders only on the **Grass** material and the **Water** material [ripples and shimmers](#water-appearance) with a subtle motion.
+The following default [materials](../parts/materials.md) are available for terrain, and you can also apply [custom materials](../parts/materials.md#custom-materials). Materials affect both the shape and appearance of terrain in the world; for example, [animated grass](#animated-grass) renders only on the **Grass** material and the **Water** material [ripples and shimmers](#water-appearance) with a subtle motion.
 
 <GridContainer numColumns="4">
   <figure>
@@ -110,7 +110,7 @@ The following default materials are available for terrain, and you can also appl
   </figure>
 </GridContainer>
 
-### Water appearance
+### Water Appearance
 
 By default, terrain water ripples, oscillates, and shimmers with a subtle motion.
 
@@ -118,11 +118,11 @@ By default, terrain water ripples, oscillates, and shimmers with a subtle motion
 
 To customize the color and motion of water:
 
-1. In the **Explorer** window, navigate to the **Workspace**, then select the **Terrain** object.
+1. Select the **Terrain** object under **Workspace** in the [Explorer](../studio/explorer.md) window.
 
    <img src="../assets/studio/explorer/Workspace-Terrain.png" width="320" alt="Terrain object shown in Explorer window of Studio" />
 
-1. In the **Properties** window, customize the appearance of water through the following properties:
+1. Customize the appearance of water through the following properties in the [Properties](../studio/properties.md) window:
 
    <table>
    <thead>
@@ -163,7 +163,7 @@ If you have a place with shoreline terrain (water meeting land), it's recommende
 Some water properties are only visible while playtesting. To preview all properties while editing, open **Studio&nbsp;Settings**, search for **Editor&nbsp;Quality&nbsp;Level**, and set it to the highest level.
 </Alert>
 
-### Grass animation
+### Animated Grass
 
 While most materials are static, you can add animated blades of grass to the **Grass** terrain material. By default, grass sways gently in a simulated wind, and you can adjust the direction/strength of its animation through [global wind](../environment/global-wind.md).
 
@@ -171,23 +171,23 @@ While most materials are static, you can add animated blades of grass to the **G
 
 To add animated grass to the **Grass** material:
 
-1. In the **Explorer** window, navigate to the **Workspace**, then select the **Terrain** object.
+1. Select the **Terrain** object under **Workspace** in the [Explorer](../studio/explorer.md) window.
 
    <img src="../assets/studio/explorer/Workspace-Terrain.png" width="320" alt="Terrain object shown in Explorer window of Studio" />
 
-2. In the **Properties** window, toggle on the **Decoration** property.
+2. Toggle on the **Decoration** property in the [Properties](../studio/properties.md) window.
 
    <img src="../assets/studio/properties/Terrain-Decoration.png" width="320" alt="Decoration property of Terrain object in Properties window of Studio" />
 
-3. Adjust the grass length by entering a value between `0.1` and `1` for the **GrassLength** property.
+3. Adjust the grass length by entering a value between 0.1 and 1 for the **GrassLength** property.
 
    <img src="../assets/studio/properties/Terrain-GrassLength.png" width="320" alt="GrassLength property of Terrain object in Properties window of Studio" />
 
 	 <img src="../assets/modeling/terrain/Terrain-GrassLength.jpg" width="720" alt="GrassLength comparison depicted on rolling grassland hills." />
 
-4. Adjust the direction and strength of its animation through [global wind](../environment/global-wind.md).
+4. If desired, adjust the direction and strength of its animation through [global wind](../environment/global-wind.md).
 
-### Custom terrain colors
+### Custom Terrain Colors
 
 Each terrain material is assigned a default color, but you can customize any material's color to better fit your experience.
 
@@ -205,26 +205,26 @@ Each terrain material is assigned a default color, but you can customize any mat
 
 To customize any material color other than water:
 
-1. In the **Explorer** window, navigate to the **Workspace**, then select the **Terrain** object.
+1. Select the **Terrain** object under **Workspace** in the [Explorer](../studio/explorer.md) window.
 
    <img src="../assets/studio/explorer/Workspace-Terrain.png" width="320" alt="Terrain object shown in Explorer window of Studio" />
 
-2. In the **Properties** window, expand **MaterialColors**. All materials display with their RGB code.
+2. Expand **MaterialColors** in the [Properties](../studio/properties.md) window. All materials display with their RGB code.
 
    <img src="../assets/studio/properties/Terrain-MaterialColors-Expand.png" width="320" alt="MaterialColors property shown in Properties window of Studio" />
 
-3. For any material, either input a new RGB code or click the color box to open the [colors popup](../parts/index.md#colors-popup).
+3. For any given material, either input a new RGB code or click the color box to open the [colors popup](../parts/index.md#colors-popup).
 
-## Generate terrain
+## Generating Terrain
 
 Using the following tools and methods, you can generate large
-areas of terrain procedurally with the Generate tool or scripting, or automatically based on a heightmap and colormap.
+areas of terrain procedurally with the [Generate](#generate-tool) tool or [scripting](#scripting), or automatically based on a [heightmap](#heightmaps-and-colormaps) and optional [colormap](#heightmaps-and-colormaps).
 
-### Generate tool
+### Generate Tool
 
-The **Generate** tool allows you to procedurally generate terrain in seconds. This is useful if you want to create a large map and fine-tune [terrain details](#detailed-editing).
+The [Generate](../studio/terrain-editor.md#generate) tool allows you to procedurally generate terrain in seconds. This is useful if you want to create a large map and then fine-tune [terrain details](#detailed-editing).
 
-1. In the **Terrain Editor**, navigate to the **Create** tab and select the **Generate** tool.
+1. Navigate to the [Create](../studio/terrain-editor.md#create-tab) tab of the [Terrain Editor](../studio/terrain-editor.md) and select the [Generate](../studio/terrain-editor.md#generate) tool.
 
    <img src="../assets/studio/terrain-editor/Create-Tab-Generate.png" width="360" alt="Generate tool indicated in Create tab of Terrain Editor" />
 
@@ -256,11 +256,12 @@ The **Generate** tool allows you to procedurally generate terrain in seconds. Th
    </Grid>
    </Grid>
 
-4. Click the **Generate** button.
+4. Adjust any other desired settings as documented [here](../studio/terrain-editor.md#generate).
+5. Click the **Generate** button.
 
    <video src="../assets/studio/terrain-editor/Generate-Tool.mp4" controls width="800" alt="Video of terrain generating procedurally via the Generate tool"></video>
 
-### Heightmaps and colormaps
+### Heightmaps and Colormaps
 
 A **heightmap** is a 2D representation of a 3D terrain map, as viewed directly from above. Brighter areas of a heightmap result in higher terrain, like mountains, while darker areas result in lower regions, like valleys.
 
@@ -285,7 +286,7 @@ An optional **colormap**, along with a heightmap, converts colors to terrain mat
 
 To import a heightmap and optional colormap:
 
-1. In the **Terrain Editor**, navigate to the **Create** tab and select the **Import** tool.
+1. Navigate to the [Create](../studio/terrain-editor.md#create-tab) tab of the [Terrain Editor](../studio/terrain-editor.md) and select the [Import](../studio/terrain-editor.md#import) tool.
 
    <img src="../assets/studio/terrain-editor/Create-Tab-Import.png" width="360" alt="Import tool indicated in Create tab of Terrain Editor" />
 
@@ -299,7 +300,7 @@ To import a heightmap and optional colormap:
    <TabItem label="Colormap">
 	 To apply a colormap, click the **Colormap** tab, click its import button, and choose the file to import. Colors on the image should match the following RGB/hex values and use hard edges, since anti‑aliasing or edge smoothing may create pixel colors outside the expected value ranges.
 
-	 The following table describes color mapping to a corresponding material. If your colormap contains a color that's not in the table, Studio chooses the closest matching material; for this reason, it is best to download the <a href="../assets/modeling/terrain/RobloxColorMapIndex.png" target="_blank" rel="noopener">`RobloxColorMapIndex`</a> file and directly sample its colors, or type the exact RGB/hex values into the color picker of your image editing application.
+	 The following table describes color mapping to a corresponding material. If your colormap contains a color that's not in the table, Studio chooses the closest matching material; for this reason, it is best to download the <a href="../assets/modeling/terrain/RobloxColorMapIndex.png" target="_blank" rel="noopener">`RobloxColorMapIndex.png`</a> file and directly sample its colors, or type the exact RGB/hex values into the color picker of your image editing application.
 
    <table size="small">
    <thead>
@@ -455,7 +456,7 @@ To import a heightmap and optional colormap:
    </TabItem>
    </Tabs>
 
-4. In the 3D viewport, move/resize the **selection region** in which to generate terrain. Alternatively, enter values into the **Select** tool fields to set a more specific position and size.
+4. In the 3D viewport, move/resize the **selection region** in which to generate terrain. Alternatively, enter values into the [Select](../studio/terrain-editor.md#select) tool fields to set a more specific position and size.
 
    <Alert severity="info">
    	Minimum and maximum terrain heights depend on the darkest and lightest areas of the heightmap image in relation to the **Y** size (height) of the selection region. For instance, if you choose a height of 128, pure black areas are 64 studs below the center position and pure white areas are 64 studs above the center position.
@@ -473,13 +474,13 @@ You can script terrain generation using the `Class.Terrain` class. For example, 
 workspace.Terrain:FillBlock(CFrame.new(0, 0, 0), Vector3.new(4, 4, 4), Enum.Material.Grass)
 ```
 
-## Large-scale editing
+## Large-Scale Editing
 
-The Terrain Editor's **Edit** tab contains tools for large-scale editing.
+The terrain editor's [Edit](../studio/terrain-editor.md#edit-tab) tab contains tools for large-scale editing through region [selection](#selecting-regions), [transform](#transforming-regions), [fill](#filling-and-replacing), [replace](#filling-and-replacing), or setting [sea level](#setting-sea-level).
 
-### Select regions
+### Selecting Regions
 
-The **Select** tool is the universal tool for selecting rectangular regions of terrain.
+The [Select](../studio/terrain-editor.md#select) tool is the universal tool for selecting rectangular regions of terrain.
 
 <img src="../assets/studio/terrain-editor/Edit-Tab-Select.png" width="360" alt="Select tool indicated in Edit tab of Terrain Editor" />
 
@@ -490,7 +491,7 @@ Select a region by clicking and dragging in the 3D viewport, reposition it with 
 <figcaption>Move draggers and scale handles on a selected region</figcaption>
 </figure>
 
-Studio also supports the following keyboard and mouse shortcuts, assuming the Select tool is active and nothing is selected in the Explorer window.
+Studio also supports the following keyboard and mouse shortcuts, assuming the [Select](../studio/terrain-editor.md#select) tool is active and nothing is selected in the [Explorer](../studio/explorer.md) hierarchy.
 
 <table size="small">
   <thead>
@@ -509,7 +510,7 @@ Studio also supports the following keyboard and mouse shortcuts, assuming the Se
     <tr>
       <td><kbd>Ctrl</kbd><kbd>V</kbd></td>
 			<td><kbd>⌘</kbd><kbd>V</kbd></td>
-      <td>Paste terrain that has been copied to the clipboard and swap to the Transform tool so that the new terrain can be transformed.</td>
+      <td>Paste terrain that has been copied to the clipboard and swap to the [Transform](../studio/terrain-editor.md#transform) tool so that the new terrain can be [transformed](#transforming-regions).</td>
     </tr>
 		<tr>
       <td><kbd>Ctrl</kbd><kbd>X</kbd></td>
@@ -519,7 +520,7 @@ Studio also supports the following keyboard and mouse shortcuts, assuming the Se
 		<tr>
       <td><kbd>Ctrl</kbd><kbd>D</kbd></td>
 			<td><kbd>⌘</kbd><kbd>D</kbd></td>
-      <td>Duplicate terrain within the selected region and swap to the Transform tool so that the new terrain can be transformed.</td>
+      <td>Duplicate terrain within the selected region and swap to the [Transform](../studio/terrain-editor.md#transform) tool so that the new terrain can be [transformed](#transforming-regions).</td>
     </tr>
 		<tr>
       <td><kbd>Delete</kbd></td>
@@ -539,13 +540,13 @@ Studio also supports the following keyboard and mouse shortcuts, assuming the Se
 	</tbody>
 </table>
 
-### Transform regions
+### Transforming Regions
 
-The **Transform** tool lets you manipulate entire selected regions to a new position, size, or orientation.
+The [Transform](../studio/terrain-editor.md#transform) tool lets you manipulate entire selected regions to a new position, size, or orientation.
 
 To transform a region:
 
-1. Select a region and then activate the **Transform** tool. Note that the tool will be automatically activated if you paste or duplicate terrain.
+1. [Select](#selecting-regions) a region and then activate the [Transform](../studio/terrain-editor.md#transform) tool. Note that the tool will be automatically activated if you paste or duplicate terrain.
 
    <img src="../assets/studio/terrain-editor/Edit-Tab-Transform.png" width="360" alt="Transform tool indicated in Edit tab of Terrain Editor" />
 
@@ -563,13 +564,13 @@ To transform a region:
    By default, this tool uses **Live Edit** mode to constantly update terrain as you transform it. To view only a wireframe preview of the terrain as you transform it, disable live edit mode and then, while transforming, press <kbd>Enter</kbd>/<kbd>Return</kbd> or click the **Apply** button to apply the changes.
    </Alert>
 
-### Fill and replace regions
+### Filling and Replacing
 
-The **Fill** tool lets you fill an entire selected region with a specific material, or replace all material within the region with another material.
+The [Fill](../studio/terrain-editor.md#fill) tool lets you fill an entire selected region with a specific material, or replace all material within the region with another material.
 
 To fill or replace terrain:
 
-1. Select a region, then activate the **Fill** tool.
+1. [Select](#selecting-regions) a region and then activate the [Fill](../studio/terrain-editor.md#fill) tool.
 
    <img src="../assets/studio/terrain-editor/Edit-Tab-Fill.png" width="360" alt="Fill tool indicated in Edit tab of Terrain Editor" />
 
@@ -583,13 +584,11 @@ To fill or replace terrain:
     <figcaption>Selected region filled with Salt material</figcaption>
    </figure>
 
-### Set sea level
+### Setting Sea Level
 
-The **Sea Level** tool lets you create a consistent water level or remove all water within a region.
+The [Sea Level](../studio/terrain-editor.md#sea-level) tool lets you create a consistent water level or remove all water within a region.
 
-To set the sea level:
-
-1. Activate the **Sea Level** tool.
+1. Activate the [Sea Level](../studio/terrain-editor.md#sea-level) tool.
 
    <img src="../assets/studio/terrain-editor/Edit-Tab-Sea-Level.png" width="360" alt="Sea Level tool indicated in Edit tab of Terrain Editor" />
 
@@ -599,9 +598,9 @@ To set the sea level:
 
    <video src="../assets/studio/terrain-editor/Sea-Level-Tool.mp4" controls width="800" alt="Video of sea level being created and modified using the Sea Level tool"></video>
 
-## Detailed editing
+## Detailed Editing
 
-The Terrain Editor's **Edit** tab also contains tools for precision editing using a "brush" tool to draw, sculpt, smooth, flatten, or paint terrain.
+The terrain editor's [Edit](../studio/terrain-editor.md#edit-tab) tab also contains tools for precision editing using a "brush" tool to [draw](#drawing), [sculpt](#sculpting), [smooth](#smoothing), [flatten](#flattening), or [paint](#painting).
 
 <img src="../assets/studio/terrain-editor/Edit-Tab-Detail-Tools.png" width="360" alt="Detailed editing tools indicated in Edit tab of Terrain Editor" />
 
@@ -653,34 +652,34 @@ For tools which use the brush, Studio supports the following keyboard and mouse 
 	</tbody>
 </table>
 
-### Draw
+### Drawing
 
-The **Draw** tool **adds** or **subtracts** terrain using the brush. This tool functions in a dual mode where holding down <kbd>Ctrl</kbd> or <kbd>⌘</kbd> toggles on "subtract" mode instead of the default "add" mode. Additionally, holding down <kbd>Shift</kbd> temporarily activates the [Smooth](../studio/terrain-editor.md#smooth) tool.
+The [Draw](../studio/terrain-editor.md#draw) tool **adds** or **subtracts** terrain using the brush. This tool functions in a dual mode where holding down <kbd>Ctrl</kbd> or <kbd>⌘</kbd> toggles on "subtract" mode instead of the default "add" mode. Additionally, holding down <kbd>Shift</kbd> temporarily activates the [Smooth](../studio/terrain-editor.md#smooth) tool.
 
 <video src="../assets/studio/terrain-editor/Draw-Tool.mp4" controls width="800" alt="Video of terrain being added and subtracted using the Draw tool"></video>
 
-### Sculpt
+### Sculpting
 
-The **Sculpt** tool **adds** or **subtracts** terrain using the brush. Unlike the Draw tool, this tool includes a **strength** slider to allow for more gentle manipulation of terrain.
+The [Sculpt](../studio/terrain-editor.md#sculpt) tool **adds** or **subtracts** terrain using the brush. Unlike the [Draw](../studio/terrain-editor.md#draw) tool, this tool includes a **strength** slider to allow for more gentle manipulation of terrain.
 
-Similar to the Draw tool, the Sculpt tool functions in a dual mode where holding down <kbd>Ctrl</kbd> or <kbd>⌘</kbd> toggles on "subtract" mode instead of the default "add" mode. Additionally, holding down <kbd>Shift</kbd> temporarily activates the Smooth tool.
+Similar to the [Draw](../studio/terrain-editor.md#draw) tool, the [Sculpt](../studio/terrain-editor.md#sculpt) tool functions in a dual mode where holding down <kbd>Ctrl</kbd> or <kbd>⌘</kbd> toggles on "subtract" mode instead of the default "add" mode. Additionally, holding down <kbd>Shift</kbd> temporarily activates the [Smooth](../studio/terrain-editor.md#smooth) tool.
 
 <video src="../assets/studio/terrain-editor/Sculpt-Tool.mp4" controls width="800" alt="Video of terrain being added and subtracted using the Sculpt tool"></video>
 
-### Smooth
+### Smoothing
 
-The **Smooth** tool smoothes out abrupt edges in terrain using the brush. This tool can be used in standalone mode, or you can toggle it on by holding <kbd>Shift</kbd> while using the Draw or Sculpt tools.
+The [Smooth](../studio/terrain-editor.md#smooth) tool smoothes out abrupt edges in terrain using the brush. This tool can be used in standalone mode, or you can toggle it on by holding <kbd>Shift</kbd> while using the [Draw](../studio/terrain-editor.md#draw) or [Sculpt](../studio/terrain-editor.md#sculpt) tools.
 
 <video src="../assets/studio/terrain-editor/Smooth-Tool.mp4" controls width="800" alt="Video of terrain being smoothed using the Smooth tool"></video>
 
-### Flatten
+### Flattening
 
-The **Flatten** tool flattens terrain to a consistent level across a visualized plane. By default, the tool lowers terrain above the plane **and** raises terrain below to the plane, but you can opt to selectively lower **or** raise through the tool's **Flatten&nbsp;Mode** option.
+The [Flatten](../studio/terrain-editor.md#flatten) tool flattens terrain to a consistent level across a visualized plane. By default, the tool lowers terrain above the plane **and** raises terrain below to the plane, but you can opt to selectively lower **or** raise through the tool's **Flatten&nbsp;Mode** option.
 
 <video src="../assets/studio/terrain-editor/Flatten-Tool.mp4" controls width="800" alt="Video of terrain being flattened to a plane using the Flatten tool"></video>
 
-### Paint
+### Painting
 
-The **Paint** tool, using the brush, **paints** a terrain material over an existing material or **replaces** one material with another material.
+The [Paint](../studio/terrain-editor.md#paint) tool, using the brush, **paints** a terrain [material](#terrain-materials) over an existing material or **replaces** one material with another material.
 
 <video src="../assets/studio/terrain-editor/Paint-Tool.mp4" controls width="800" alt="Video of terrain being painted and replaced using the Paint tool"></video>

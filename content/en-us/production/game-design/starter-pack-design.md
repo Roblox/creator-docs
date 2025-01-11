@@ -1,5 +1,5 @@
 ---
-title: Starter pack design
+title: Starter Pack Design
 description: Teaches you about best practice guidance on designing starter packs.
 ---
 
@@ -10,7 +10,7 @@ According to industry benchmarks, games that implement a starter pack may see an
 The tips below are based on industry best practices and the Developer Excellence team's experience. Feel free to follow our suggestions, or design the starter pack that best suits your own game.
 
 <Alert severity="info">
-For out-of-the-box functionality to sell collections of items to players at a discount, see the [Bundles feature package](../../resources/feature-packages/bundles.md).
+For out-of-the-box functionality to sell collections of items to players at a discount, see the [Bundles Feature Package](../../resources/feature-packages/bundles.md).
 </Alert>
 
 ## Availability
@@ -23,7 +23,7 @@ In addition to being single-time purchases, starter packs are often offered to p
 
 Starter packs are designed to help new players jumpstart their experience, but they do not necessarily remain relevant past a certain point of progression; for example, 500 coins might be a significant amount of currency to a Level 1 player, but a trivial amount to a Level 10 player.
 
-The [Bundles feature package](../../resources/feature-packages/bundles.md) allows you to define the timer that's best for your game. In general, it is preferable to give players time to make the decision to purchase rather than aggressively limiting its availability; we recommend between 24 hours and 3 days for most experiences.
+The [Bundles Feature Package](../../resources/feature-packages/bundles.md) allows you to define the timer that's best for your game. In general, it is preferable to give players time to make the decision to purchase rather than aggressively limiting its availability; we recommend between 24 hours and 3 days for most experiences.
 
 ## Surfacing
 
@@ -51,6 +51,6 @@ The starter pack should be one of the best offers in the game, with **outsized a
 
 Whatever price you choose, **we recommend a discount of around 90%** to make value abundantly clear. For items like XP that aren't directly monetized, consider how much time it takes players to earn them and work backward to assign a value.
 
-Beyond your starter pack, make sure that your game has sufficient **spend depth**, or a variety of purchasable content and price points, to appeal to spenders of all levels. Along with frequent content updates, this will help encourage any new payers converted by the starter pack to continue spending in your game. You can use the [Bundles package](../../resources/feature-packages/bundles.md) to create item offers for this purpose, from permanent content packs to limited-time event bundles.
+Beyond your starter pack, make sure that your game has sufficient **spend depth**, or a variety of purchasable content and price points, to appeal to spenders of all levels. Along with frequent content updates, this will help encourage any new payers converted by the starter pack to continue spending in your game. You can use the [Bundles Package](../../resources/feature-packages/bundles.md) to create item offers for this purpose, from permanent content packs to limited-time event bundles.
 
-For more information on monetizing your experience, check out [Monetization foundation](monetization-foundations.md).
+For more information on monetizing your experience, check out [Monetization Foundation](monetization-foundations.md).

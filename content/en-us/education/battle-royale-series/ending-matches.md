@@ -319,7 +319,7 @@ To use the function just created, call it from within the anonymous function con
    end)
    ```
 
-2. To see if a winning player is found, start a **test server**. When there is only one player left you should see FoundWinner in the Output Window.
+2. To see if a winning player is found, start a **test server**. When there is only one player left you should see FoundWinner in the output window.
 
    <img src="../../assets/education/battle-royale-series/arena_6_showGameEndFoundWinner.png" />
 

@@ -1,52 +1,52 @@
 backTo:
-  title: Back to avatar tutorials
+  title: Back to Avatar Tutorials
   path: /avatar/tutorials/
 navigation:
   - heading: Overview
-  - title: Avatar creation
+  - title: Avatar Creation
     path: /art/characters/creating/
-  - heading: Project setup
-  - title: Template files
+  - heading: Project Setup
+  - title: Template Files
     path: /art/characters/creating/template-files
-  - title: Extra head objects
+  - title: Extra Head Objects
     path: /art/characters/creating/head-objects
-  - title: Blender configurations
+  - title: Blender Configurations
     path: /art/characters/creating/blender-configurations
 
   - heading: Modeling
-  - title: Best practices
+  - title: Best Practices
     path: /art/characters/creating/modeling-best-practices
-  - title: Tips and settings
+  - title: Tips and Settings
     path: /art/characters/creating/modeling-tips
-  - title: Sculpt
+  - title: Sculpting
     path: /art/characters/creating/sculpting
 
   - heading: Texturing
-  - title: Texture painting setup
+  - title: Texture Painting Setup
     path: /art/characters/creating/texturing-setup
-  - title: Texturing eyes
+  - title: Texturing Eyes
     path: /art/characters/creating/texturing-eyes
-  - title: Texturing face
+  - title: Texturing Face
     path: /art/characters/creating/texturing-face
-  - title: PBR textures (optional)
+  - title: PBR Textures (Optional)
     path: /art/characters/creating/texturing-pbr
 
   - heading: Caging
-  - title: Caging character head
+  - title: Caging Character Head
     path: /art/characters/creating/caging
 
   - heading: Cleanup
-  - title: Combine head geometry
-    path: /art/characters/creating/combine-head-geometry
-  - title: Remove extra bones
-    path: /art/characters/creating/remove-extra-bones
-  - title: Verify attachments
-    path: /art/characters/creating/verify-attachments
-  - title: Final checks
+  - title: Combining Head Geometry
+    path: /art/characters/creating/combining-head-geometry
+  - title: Removing Extra Bones
+    path: /art/characters/creating/removing-extra-bones
+  - title: Verifying Attachments
+    path: /art/characters/creating/verifying-attachments
+  - title: Final Checks
     path: /art/characters/creating/final-checks
 
-  - heading: Export
-  - title: Embed and export textures
-    path: /art/characters/creating/export-textures
-  - title: Export character model
-    path: /art/characters/creating/export-character
+  - heading: Exporting
+  - title: Embedding and Exporting Textures
+    path: /art/characters/creating/exporting-textures
+  - title: Exporting Character Model
+    path: /art/characters/creating/exporting-character

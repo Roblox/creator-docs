@@ -7,14 +7,14 @@ The Avatar Editor Service lets you access and make changes to a user's avatar wi
 
 We recommend implementing the Avatar Editor Service with an in-game avatar editor for a complete character customization experience. See the [Simple Avatar Editor Demo](https://www.roblox.com/games/9376329300/Simple-Avatar-Editor-Demo) reference place for an example of this feature.
 
-To begin using the Avatar Editor Service, you must first [request access](#request-access) to the user's inventory. After access is successfully granted, you can perform the following actions:
+To begin using the Avatar Editor Service, you must first [request access](#requesting-access) to the user's inventory. After access is successfully granted, you can perform the following actions:
 
-- [Read user's inventory](#read-user-inventory) to get a list of items owned by the user.
-- [Search the Marketplace](#search-the-marketplace), using a variety of properties to filter and sort.
-- [Equip avatar items and save outfits](#save-avatars-and-outfits) to the user's avatar.
-- [Prompt the user to purchase](#purchase-items) an Marketplace item.
+- [Read user's inventory](#reading-user-inventory) to get a list of items owned by the user.
+- [Search the Marketplace](#searching-the-marketplace), using a variety of properties to filter and sort.
+- [Equip avatar items and save outfits](#saving-avatars-and-outfits) to the user's avatar.
+- [Prompt the user to purchase](#purchasing-items) an Marketplace item.
 
-## Request access
+## Requesting Access
 
 To begin accessing a user's inventory, you need to prompt the user to allow access through `Class.AvatarEditorService:PromptAllowInventoryReadAccess()|PromptAllowInventoryReadAccess()`. You need to perform this request once per session.
 
@@ -38,7 +38,7 @@ The user receives the following prompt:
 
 Once the user accepts the prompt, the `Class.AvatarEditorService` can begin accessing the user's inventory.
 
-## Read user inventory
+## Reading User Inventory
 
 Once access is granted by the user, you can read their inventory with the `Class.AvatarEditorService:GetInventory()|GetInventory()` function, supplying an array of `Enum.AvatarAssetType|AvatarAssetTypes` to filter by. This function returns an `Class.InventoryPages` object containing the user owned items.
 
@@ -66,7 +66,7 @@ if result == Enum.AvatarPromptResult.Success then
 end
 ```
 
-## Search the Marketplace
+## Searching the Marketplace
 
 `Class.AvatarEditorService` includes functions and events which let you search the Roblox catalog. To search, supply your query with a `Datatype.CatalogSearchParams` object that includes one or more of the following properties:
 
@@ -142,7 +142,7 @@ for _, item in currentPage do
 end
 ```
 
-## Save avatars and outfits
+## Saving Avatars and Outfits
 
 When used alongside an in-game avatar editor, `Class.AvatarEditorService` can save and update avatar items and outfits to the Roblox platform. Users don't receive catalog items they don't own when saving an avatar or outfit.
 
@@ -199,7 +199,7 @@ if result == Enum.AvatarPromptResult.Success then
 end
 ```
 
-## Purchase items
+## Purchasing Items
 
 When saving either an avatar or an outfit that uses catalog items, the user doesn't receive any items that they do not own. Before saving an avatar or outfit, check if the user owns the asset with `Class.MarketplaceService:PlayerOwnsAsset()` and provide them with an option to purchase the item with `Class.MarketplaceService:PromptPurchase()`.
 

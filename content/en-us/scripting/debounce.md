@@ -1,11 +1,11 @@
 ---
-title: Debounce patterns
+title: Debounce Patterns
 description: Debounce patterns are coding techniques that prevent a function from running too many times.
 ---
 
 A **debounce** pattern is a coding technique that prevents a function from running too many times or an input from triggering multiple times. The following scripting scenarios illustrate debounce as a best practice.
 
-## Detect collisions
+## Detecting Collisions
 
 Suppose you want to create a hazardous trap part that inflicts 10 damage when touched. An initial implementation might use a basic `Class.BasePart.Touched` connection and a `damagePlayer` function like this:
 
@@ -52,7 +52,7 @@ end
 part.Touched:Connect(damagePlayer)
 ```
 
-## Trigger sounds
+## Triggering Sounds
 
 Debounce is also useful when working with sound effects, such as playing a sound when two parts collide (`Class.BasePart.Touched|Touched`), or playing a sound on the `Class.GuiButton.Activated|Activated` event when a user interacts with an on-screen button. In both cases, calling `Class.Sound:Play()` starts playback from the beginning of its track and&nbsp;&mdash; without a debounce system&nbsp;&mdash; the sound may play multiple times in quick succession.
 
@@ -88,11 +88,11 @@ end
 button.Activated:Connect(onButtonActivated)
 ```
 
-## Pickup effects
+## Pickup Effects
 
 Experiences often include collectible pickups in the 3D world such as medkits, ammo packs, and more. If you design these pickups to remain in the world for players to grab again and again, a "cooldown" time should be added before the pickup refreshes and reactivates.
 
-Similar to [detecting collisions](#detect-collisions), you can manage the debounce state with an [instance attribute](../studio/properties.md#instance-attributes), and visualize the cooldown period by changing the part's `Class.BasePart.Transparency|Transparency`.
+Similar to [detecting collisions](#detecting-collisions), you can manage the debounce state with an [instance attribute](../studio/properties.md#instance-attributes), and visualize the cooldown period by changing the part's `Class.BasePart.Transparency|Transparency`.
 
 ```lua title='Script - Health Pickup Using Debounce' highlight='10, 11, 13, 15-17'
 local part = script.Parent

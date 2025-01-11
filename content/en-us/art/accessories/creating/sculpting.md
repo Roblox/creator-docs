@@ -1,5 +1,5 @@
 ---
-title: Sculpt detail
+title: Sculpting Detail
 description: Use Blender's sculpting and simulation tools to add detail to your clothing shape.
 next: /art/accessories/creating/watertight
 prev: /art/accessories/creating/trimming

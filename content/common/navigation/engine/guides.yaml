@@ -1,18 +1,18 @@
 defaultType: markdown
 navigation:
   - heading: Learn the basics
-  - title: Get started
+  - title: Get Started
     path: /get-started
-  - title: Platform overview
+  - title: Platform Overview
     path: /platform
-  - title: Creation overview
+  - title: Creation Overview
     path: /creation
   - title: Assistant
     path: /assistant/guide
     section:
       - title: Overview
         path: /assistant/guide
-      - title: Prompt guide and examples
+      - title: Prompt Guide and Examples
         path: /assistant/prompt-engineering
   - heading: Create
   - title: Roblox Studio
@@ -26,51 +26,51 @@ navigation:
       - title: Architecture
         path: /projects/data-model
         section:
-          - title: Data model
+          - title: Data Model
             path: /projects/data-model
-          - title: Client-server runtime
+          - title: Client-Server Runtime
             path: /projects/client-server
-          - title: Instance streaming
+          - title: Instance Streaming
             path: /workspace/streaming
-      - title: Work in teams
+      - title: Working in Teams
         path: /projects/groups
         section:
           - title: Groups
             path: /projects/groups
           - title: Collaboration
             path: /projects/collaboration
-      - title: Experience ownership transfer
+      - title: Experience Ownership Transfer
         path: /projects/experience-ownership-transfer
         section:
-          - title: Transfer animations
-            path: /projects/transfer-animations
-      - title: Activity history
+          - title: Transferring Roblox Animations
+            path: /projects/transferring-animations
+      - title: Activity History
         path: /projects/activity-history
-      - title: External tools
+      - title: External Tools
         path: /projects/external-tools
-      - title: Place files
+      - title: Place Files
         path: /projects/place-files
   - title: Assets
     path: /projects/assets/
     section:
       - title: Overview
         path: /projects/assets/
-      - title: Manage
+      - title: Managing
         path: /projects/assets/manager
         section:
-          - title: Asset manager
+          - title: Asset Manager
             path: /projects/assets/manager
           - title: Toolbox
             path: /projects/assets/toolbox
-          - title: External catalog queries
+          - title: External Catalog Queries
             path: /projects/assets/api
       - title: Packages
         path: /projects/assets/packages
-      - title: Asset privacy
+      - title: Asset Privacy
         path: /projects/assets/privacy
-      - title: In-experience asset creation
+      - title: In-Experience Asset Creation
         path: /projects/assets/in-experience-asset-creation
-  - title: 3D workspace
+  - title: 3D Workspace
     path: /workspace/
     section:
       - title: Overview
@@ -80,9 +80,9 @@ navigation:
         section:
           - title: Overview
             path: /parts/
-          - title: Solid modeling
+          - title: Solid Modeling
             path: /parts/solid-modeling
-          - title: Textures and decals
+          - title: Textures and Decals
             path: /parts/textures-decals
       - title: Meshes
         path: /parts/meshes
@@ -99,16 +99,16 @@ navigation:
             path: /physics/
           - title: Assemblies
             path: /physics/assemblies
-          - title: Network ownership
+          - title: Network Ownership
             path: /physics/network-ownership
           #- title: Joints
           #  path: /physics/joints
-          - title: Mechanical constraints
+          - title: Mechanical Constraints
             path: /physics/mechanical-constraints
             section:
               - title: Overview
                 path: /physics/mechanical-constraints
-              - title: BallSocket
+              - title: Ball Socket
                 path: /physics/constraints/ball-socket
               - title: Hinge
                 path: /physics/constraints/hinge
@@ -118,7 +118,7 @@ navigation:
                 path: /physics/constraints/cylindrical
               - title: Spring
                 path: /physics/constraints/spring
-              - title: TorsionSpring
+              - title: Torsion Spring
                 path: /physics/constraints/torsion-spring
               - title: Universal
                 path: /physics/constraints/universal
@@ -132,43 +132,43 @@ navigation:
                 path: /physics/constraints/weld
               - title: Rigid
                 path: /physics/constraints/rigid
-              - title: NoCollision
+              - title: No Collision
                 path: /physics/constraints/no-collision
-          - title: Mover constraints
+          - title: Mover Constraints
             path: /physics/mover-constraints
             section:
               - title: Overview
                 path: /physics/mover-constraints
-              - title: LinearVelocity
+              - title: Linear Velocity
                 path: /physics/constraints/linear-velocity
-              - title: AngularVelocity
+              - title: Angular Velocity
                 path: /physics/constraints/angular-velocity
-              - title: AlignPosition
+              - title: Align Position
                 path: /physics/constraints/align-position
-              - title: AlignOrientation
+              - title: Align Orientation
                 path: /physics/constraints/align-orientation
-              - title: VectorForce
+              - title: Vector Force
                 path: /physics/constraints/vector-force
               - title: Torque
                 path: /physics/constraints/torque
-              - title: LineForce
+              - title: Line Force
                 path: /physics/constraints/line-force
-          - title: Sleep system
+          - title: Sleep System
             path: /physics/sleep-system
-          - title: Adaptive timestepping
+          - title: Adaptive Timestepping
             path: /physics/adaptive-timestepping
-          - title: Character controllers
+          - title: Character Controllers
             path: /physics/character-controllers
-          - title: Roblox units
+          - title: Roblox Units
             path: /physics/units
       - title: Effects
         path: /effects/
         section:
           - title: Overview
             path: /effects/
-          - title: Light sources
+          - title: Light Sources
             path: /effects/light-sources
-          - title: Particle emitters
+          - title: Particle Emitters
             path: /effects/particle-emitters
           - title: Beams
             path: /effects/beams
@@ -178,7 +178,7 @@ navigation:
             path: /effects/highlighting
       - title: Camera
         path: /workspace/camera
-      - title: Spatial data
+      - title: Spatial Data
         section:
           #- title: Object World Space
           #  path: /workspace/object-world-space
@@ -195,13 +195,13 @@ navigation:
     section:
       - title: Overview
         path: /scripting/
-      - title: Types and locations
+      - title: Types and Locations
         path: /scripting/locations
-      - title: Reuse code
+      - title: Reusing Code
         path: /scripting/module
       - title: Services
         path: /scripting/services
-      - title: Properties and attributes
+      - title: Properties and Attributes
         path: /scripting/attributes
       - title: Events
         path: /scripting/events/
@@ -218,15 +218,15 @@ navigation:
         section:
           - title: Scheduler
             path: /scripting/scheduler
-          - title: Multi-threading
+          - title: Multi-Threading
             path: /scripting/multithreading
-          - title: Native code generation
+          - title: Native Code Generation
             path: /luau/native-code-gen
-          - title: Script capabilities
+          - title: Script Capabilities
             path: /scripting/capabilities
-          - title: Security tactics and cheat mitigation
+          - title: Security Tactics and Cheat Mitigation
             path: /scripting/security/security-tactics
-      - title: Luau reference
+      - title: Luau Reference
         path: /luau/
         section:
           - title: Overview
@@ -249,7 +249,7 @@ navigation:
                 path: /luau/tuples
               - title: Userdata
                 path: /luau/userdata
-          - title: Data structures
+          - title: Data Structures
             section:
               - title: Queues
                 path: /luau/queues
@@ -267,28 +267,28 @@ navigation:
                 path: /luau/scope
               - title: Operators
                 path: /luau/operators
-              - title: Control structures
+              - title: Control Structures
                 path: /luau/control-structures
               - title: Functions
                 path: /luau/functions
-              - title: Type coercion
+              - title: Type Coercion
                 path: /luau/type-coercion
-              - title: Type checking
+              - title: Type Checking
                 path: /luau/type-checking
   - title: Environment
     path: /environment/
     section:
       - title: Overview
         path: /environment/
-      - title: Global lighting
+      - title: Global Lighting
         path: /environment/lighting
       - title: Atmosphere
         path: /environment/atmosphere
       - title: Clouds
         path: /environment/clouds
-      - title: Global wind
+      - title: Global Wind
         path: /environment/global-wind
-      - title: Post-processing effects
+      - title: Post-Processing Effects
         path: /environment/post-processing-effects
       - title: Skyboxes
         path: /environment/skybox
@@ -303,9 +303,9 @@ navigation:
         path: /characters/emotes
       - title: Pathfinding
         path: /characters/pathfinding
-      - title: Name and health display
+      - title: Name and Health Display
         path: /characters/name-health-display
-      - title: R6 to R15 adapter
+      - title: R6 to R15 Adapter
         path: /characters/r6-to-r15-adapter
   - title: Players
     path: /players/
@@ -313,31 +313,31 @@ navigation:
       - title: Overview
         path: /players/
       - title: Teleporting
-        path: /projects/teleport
+        path: /projects/teleporting
       - title: Teams
         path: /players/teams
-      - title: In-experience tools
+      - title: In-Experience Tools
         path: /players/tools
       - title: Leaderboards
         path: /players/leaderboards
-      - title: Loading screens
-        path: /players/load-screens
+      - title: Loading Screens
+        path: /players/loading-screens
       - title: Player UI
         section:
-          - title: Avatar editor
+          - title: Avatar Editor
             path: /players/avatar-editor
-          - title: Avatar inspect menu
+          - title: Avatar Inspect Menu
             path: /players/avatar-inspect-menu
-          - title: Avatar context menu
+          - title: Avatar Context Menu
             path: /players/avatar-context-menu
-          - title: Disable default UI
-            path: /players/disable-ui
+          - title: Disabling Default UI
+            path: /players/disabling-ui
   - title: Input
     path: /input/
     section:
       - title: Overview
         path: /input/
-      - title: Mouse and keyboard
+      - title: Mouse and Keyboard
         path: /input/mouse-and-keyboard
       - title: Mobile
         path: /input/mobile
@@ -348,100 +348,100 @@ navigation:
     section:
       - title: Overview
         path: /sound/
-      - title: Audio assets
+      - title: Audio Assets
         path: /sound/assets
-      - title: Sound objects
+      - title: Objects
         path: /sound/objects
-      - title: Sound groups
+      - title: Groups
         path: /sound/groups
-      - title: Dynamic effects
+      - title: Dynamic Effects
         path: /sound/dynamic-effects
-  - title: User interface
+  - title: User Interface
     path: /ui/
     section:
       - title: Overview
         path: /ui/
-      - title: On-screen UI
+      - title: On-Screen UI
         path: /ui/on-screen-containers
-      - title: In-experience UI
+      - title: In-Experience UI
         path: /ui/in-experience-containers
-      - title: UI objects
+      - title: UI Objects
         section:
           - title: Labels
             path: /ui/labels
           - title: Frames
             path: /ui/frames
-          - title: Video frames
+          - title: Video Frames
             path: /ui/video-frames
-          - title: 2D paths
+          - title: 2D Paths
             path: /ui/2D-paths
           - title: Interactive
             section:
               - title: Buttons
                 path: /ui/buttons
-              - title: Text input fields
+              - title: Text Input Fields
                 path: /ui/text-input
-              - title: Proximity prompts
+              - title: Proximity Prompts
                 path: /ui/proximity-prompts
-              - title: UI drag detectors
+              - title: UI Drag Detectors
                 path: /ui/ui-drag-detectors
-              - title: 3D drag detectors
+              - title: 3D Drag Detectors
                 path: /ui/3D-drag-detectors
-      - title: Position and size
-        path: /ui/position-and-size
-      - title: Layout structures
+      - title: Positioning and Sizing
+        path: /ui/positioning-and-sizing
+      - title: Layout Structures
         section:
-          - title: List and flex layouts
+          - title: List and Flex Layouts
             path: /ui/list-flex-layouts
-          - title: Grids and tables
+          - title: Grids and Tables
             path: /ui/grid-table-layouts
-          - title: Page layouts
+          - title: Page Layouts
             path: /ui/page-layouts
-      - title: Appearance modifiers
+      - title: Appearance Modifiers
         path: /ui/appearance-modifiers
-      - title: Size modifiers and constraints
+      - title: Size Modifiers and Constraints
         path: /ui/size-modifiers
-      - title: UI animation/tweens
+      - title: UI Animation/Tweens
         path: /ui/animation
-      - title: 9-slice design
+      - title: 9-Slice Design
         path: /ui/9-slice
-      - title: Rich text markup
+      - title: Rich Text Markup
         path: /ui/rich-text
-      - title: Text filtering
+      - title: Text Filtering
         path: /ui/text-filtering
   - title: Animation
     path: /animation/
     section:
       - title: Overview
         path: /animation/
-      - title: Create animations
+      - title: Creating Animations
         section:
-          - title: Animation editor
+          - title: Animation Editor
             path: /animation/editor
-          - title: Animation events
+          - title: Animation Events
             path: /animation/events
-          - title: Animation capture
+          - title: Animation Capture
             path: /animation/capture
-          - title: Curve editor
+          - title: Curve Editor
             path: /animation/curve-editor
-          - title: Inverse kinematics
+          - title: Inverse Kinematics
             path: /animation/inverse-kinematics
-      - title: Use animations
+      - title: Using Animations
         path: /animation/using
   - title: Chat
     section:
-      - title: Voice chat
+      - title: Voice Chat
         path: /chat/voice-chat
-      - title: Text chat
+      - title: Text Chat
         path: /chat/in-experience-text-chat
         section:
           - title: Overview
             path: /chat/in-experience-text-chat
           - title: Guidelines
             path: /chat/guidelines
-          - title: Chat window
+          - title: Chat Window
             path: /chat/chat-window
-          - title: Bubble chat
+          - title: Bubble Chat
             path: /chat/bubble-chat
           - title: Examples
             path: /chat/examples/simple-custom-frontend-ui
@@ -450,90 +450,90 @@ navigation:
                 path: /chat/examples/simple-custom-frontend-ui
               #- title: Custom System Messages
               #  path: /chat/examples/custom-system-messages
-              - title: Chat tags
+              - title: Chat Tags
                 path: /chat/examples/group-chat-tags
-              - title: Proximity chat
+              - title: Proximity Chat
                 path: /chat/examples/proximity-chat
-              - title: Custom chat commands
+              - title: Custom Chat Commands
                 path: /chat/examples/custom-text-chat-commands
-          - title: Legacy chat system
+          - title: Legacy Chat System
             path: /chat/legacy/legacy-chat-system
-  - title: Performance optimization
+  - title: Performance Optimization
     path: /performance-optimization/
     section:
       - title: Overview
         path: /performance-optimization/
-      - title: Design for performance
-        path: /performance-optimization/design
-      - title: Identify issues
-        path: /performance-optimization/identify
-      - title: Improve performance
-        path: /performance-optimization/improve
-      - title: Monitor performance
-        path: /performance-optimization/monitor
-  - title: Cloud services
+      - title: Designing for Performance
+        path: /performance-optimization/designing
+      - title: Identifying Issues
+        path: /performance-optimization/identifying
+      - title: Improving Performance
+        path: /performance-optimization/improving
+      - title: Monitoring Performance
+        path: /performance-optimization/monitoring
+  - title: Cloud Services
     path: /cloud-services/data-stores-vs-memory-stores
     section:
-      - title: Data stores vs memory stores
+      - title: Data Stores vs Memory Stores
         path: /cloud-services/data-stores-vs-memory-stores
-      - title: Data stores
+      - title: Data Stores
         path: /cloud-services/data-stores/
         section:
           - title: Overview
             path: /cloud-services/data-stores/
-          - title: Manage data stores
-            path: /cloud-services/data-stores/manage-data-stores
-          - title: Best practices
+          - title: Managing Data Stores
+            path: /cloud-services/data-stores/managing-data-stores
+          - title: Best Practices
             path: /cloud-services/data-stores/best-practices
-          - title: Error codes and limits
+          - title: Error Codes and Limits
             path: /cloud-services/data-stores/error-codes-and-limits
           - title: Observability
             path: /cloud-services/data-stores/observability
-          - title: Implement player data and purchase systems
+          - title: Implementing Player Data and Purchasing Systems
             path: /cloud-services/data-stores/player-data-purchasing
-      - title: Memory stores
+      - title: Memory Stores
         path: /cloud-services/memory-stores/
         section:
           - title: Overview
             path: /cloud-services/memory-stores/
-          - title: Sorted map
+          - title: Sorted Map
             path: /cloud-services/memory-stores/sorted-map
           - title: Queue
             path: /cloud-services/memory-stores/queue
-          - title: Hash map
+          - title: Hash Map
             path: /cloud-services/memory-stores/hash-map
           - title: Observability
             path: /cloud-services/memory-stores/observability
-          - title: Per-partition limits
+          - title: Per-Partition Limits
             path: /cloud-services/memory-stores/per-partition-limits
-          - title: Best practices
+          - title: Best Practices
             path: /cloud-services/memory-stores/best-practices
-      - title: Cross-server communication
+      - title: Cross-Server Messaging
         path: /cloud-services/cross-server-messaging
-  - title: Roblox for Unity developers
+  - title: Roblox for Unity Developers
     path: /unity
-  - title: Roblox for Unreal developers
+  - title: Roblox for Unreal Developers
     path: /unreal
 
   - heading: Distribute
   - title: Overview
     path: /production/
-  - title: Roblox user base
+  - title: Roblox User Base
     path: /production/roblox-user-base
   - title: Discovery
     path: /discovery
-  - title: Publish
+  - title: Publishing
     section:
       - title: Experiences
-        path: /production/publishing/publish-experiences-and-places
+        path: /production/publishing/publishing-experiences-and-places
         section:
           - title: Overview
-            path: /production/publishing/publish-experiences-and-places
-          - title: Genres
+            path: /production/publishing/publishing-experiences-and-places
+          - title: Experience Genres
             path: /production/publishing/experience-genres
-          - title: Icons
+          - title: Experience Icons
             path: /production/publishing/experience-icons
-          - title: Thumbnails
+          - title: Experience Thumbnails
             path: /production/publishing/thumbnails
           - title: Badges
             path: /production/publishing/badges
@@ -548,28 +548,28 @@ navigation:
         section:
           - title: Creator Store
             path: /production/creator-store
-          - title: Sell on the Creator Store
-            path: /production/sell-on-creator-store
+          - title: Selling on the Creator Store
+            path: /production/selling-on-creator-store
       - title: Guidelines
         path: /production/promotion/content-maturity
         section:
-          - title: Content maturity
+          - title: Content Maturity
             path: /production/promotion/content-maturity
           - title: About GDPR and CCPA
             path: /production/publishing/about-GDPR-and-CCPA
-          - title: DMCA guidelines
+          - title: DMCA Guidelines
             path: /production/publishing/dmca-guidelines
-          - title: Accessibility guidelines
+          - title: Accessibility Guidelines
             path: /production/publishing/accessibility
-          - title: Console guidelines
+          - title: Console Guidelines
             path: /production/publishing/console-guidelines
-          - title: VR guidelines
+          - title: VR Guidelines
             path: /production/publishing/vr-guidelines
-      - title: Account verification
+      - title: Account Verification
         path: /production/publishing/account-verification
       - title: Rights Manager
         path: /production/publishing/rights-manager
-      - title: AI data sharing
+      - title: AI Data Sharing
         path: /ai-data-sharing
   - title: Promotion
     path: /production/promotion/
@@ -577,103 +577,103 @@ navigation:
       - title: Overview
         path: /production/promotion/
       - title: Advertising
-        path: /production/promotion/advertise-on-roblox
+        path: /production/promotion/advertising-on-roblox
         section:
           - title: Overview
-            path: /production/promotion/advertise-on-roblox
+            path: /production/promotion/advertising-on-roblox
           - title: Ads Manager
             path: /production/promotion/ads-manager
-          - title: Search ads
+          - title: Search Ads
             path: /production/promotion/search-ads
-          - title: Sponsor items
-            path: /production/promotion/sponsor-items
-          - title: Comply with advertising standards
-            path: /production/promotion/comply-with-advertising-standards
-      - title: Events and updates
+          - title: Sponsoring Items
+            path: /production/promotion/sponsoring-items
+          - title: Complying with Advertising Standards
+            path: /production/promotion/complying-with-advertising-standards
+      - title: Events and Updates
         path: /production/promotion/experience-events
-      - title: Experience notifications
+      - title: Experience Notifications
         path: /production/promotion/experience-notifications
-      - title: Social media links
+      - title: Social Media Links
         path: /production/promotion/social-media-links
-      - title: Player invite prompts
+      - title: Player Invite Prompts
         path: /production/promotion/invite-prompts
-      - title: Friend invite reward system
+      - title: Friend Invite Reward System
         path: /production/promotion/referral-system
-      - title: Nominate for the Discover page
-        path: /production/promotion/nominate-for-the-discover-page
-      - title: Get featured on Roblox‑owned channels
-        path: /production/promotion/get-featured-on-roblox-owned-channels
-      - title: Deep links
-        path: /production/promotion/deeplinks
+      - title: Nominating for the Discover Page
+        path: /production/promotion/nominating-for-the-discover-page
+      - title: Getting Featured on Roblox‑Owned Channels
+        path: /production/promotion/getting-featured-on-roblox-owned-channels
+      - title: Deep Linking
+        path: /production/promotion/deeplinking
   - title: Monetization
     path: /production/monetization/
     section:
       - title: Overview
         path: /production/monetization/
       - title: Earning on Roblox
-        path: /production/earn-on-roblox
+        path: /production/earning-on-roblox
       - title: Products
         section:
-          - title: Immersive ads
+          - title: Immersive Ads
             path: /production/monetization/immersive-ads
           - title: Subscriptions
             path: /production/monetization/subscriptions
           - title: Passes
             path: /production/monetization/game-passes
-          - title: Developer products
+          - title: Developer Products
             path: /production/monetization/developer-products
-          - title: Price optimization
+          - title: Price Optimization
             path: /production/monetization/price-optimization
-          - title: Avatar items
+          - title: Avatar Items
             path: /production/monetization/avatar-items
-          - title: Avatar creation tokens
+          - title: Avatar Creation Tokens
             path: /production/monetization/avatar-creation-token
-          - title: Engagement-based payouts
+          - title: Engagement-Based Payouts
             path: /production/monetization/engagement-based-payouts
-          - title: Paid access in Robux
+          - title: Paid Access in Robux
             path: /production/monetization/paid-access-robux
-          - title: Paid access in local currency
+          - title: Paid Access in Local Currency
             path: /production/monetization/paid-access-local-currency
-          - title: Private servers
+          - title: Private Servers
             path: /production/monetization/private-servers
       - title: Resources
         section:
-          - title: Build your business
+          - title: Building Your Business
             path: /production/monetization/business-resources
-          - title: Randomized virtual items policy
+          - title: Randomized Virtual Items Policy
             path: /production/monetization/randomized-virtual-items-policy
   - title: Localization
     path: /production/localization/
     section:
       - title: Overview
         path: /production/localization/
-      - title: Automatic translations
+      - title: Automatic Translations
         path: /production/localization/automatic-translations
-      - title: Custom translations
+      - title: Custom Translations
         path: /production/localization/custom-translations
         section:
           - title: Overview
             path: /production/localization/custom-translations
-          - title: Manually edit localization table
+          - title: Manually Editing Localization Table
             path: /production/localization/manual-translations
-          - title: Translate dynamic content
-            path: /production/localization/translate-dynamic-content
-          - title: Localize with scripting
-            path: /production/localization/localize-with-scripting
-      - title: Work with translators
-        path: /production/localization/work-with-translators
-      - title: Language codes
+          - title: Translating Dynamic Content
+            path: /production/localization/translating-dynamic-content
+          - title: Localizing with Scripting
+            path: /production/localization/localizing-with-scripting
+      - title: Working With Translators
+        path: /production/localization/working-with-translators
+      - title: Language Codes
         path: /production/localization/language-codes
   - title: Analytics
     path: /production/analytics/
     section:
       - title: Overview
         path: /production/analytics/
-      - title: Monitor
+      - title: Monitoring
         section:
           - title: Performance
             path: /production/analytics/performance
-          - title: Error report
+          - title: Error Report
             path: /production/analytics/error-report
       - title: Dashboards
         path: /production/analytics/analytics-dashboard
@@ -690,20 +690,20 @@ navigation:
             path: /production/analytics/audience
           - title: Monetization
             path: /production/analytics/monetization
-      - title: Event types
+      - title: Event Types
         path: /production/analytics/event-types
         section:
           - title: Overview
             path: /production/analytics/event-types
-          - title: Economy events
+          - title: Economy Events
             path: /production/analytics/economy-events
-          - title: Funnel events
+          - title: Funnel Events
             path: /production/analytics/funnel-events
-          - title: Custom events
+          - title: Custom Events
             path: /production/analytics/custom-events
-          - title: Custom fields
+          - title: Custom Fields
             path: /production/analytics/custom-fields
-  - heading: For educators
-  - title: Go to educator onboarding
+  - heading: For Educators
+  - title: Go to Educator Onboarding
     path: /education/educator-onboarding/landing
     navigation: /education.yaml

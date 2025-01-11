@@ -1,11 +1,11 @@
 ---
-title: Use animations
+title: Using Animations
 description: Explains the process of playing animations through scripts, and replacing default animations.
 ---
 
-Once you have [created an animation](../animation/editor.md), you need to use scripts to include them in your experience. You can either [play animations manually](#play-animations-from-scripts) from scripts or [replace default animations](#replace-default-animations) for player characters.
+Once you have [created an animation](../animation/editor.md), you need to use scripts to include them in your experience. You can either [play animations manually](#playing-animations-from-scripts) from scripts or [replace default animations](#replacing-default-animations) for player characters.
 
-## Play animations from scripts
+## Playing Animations From Scripts
 
 In some cases, you'll need to play an animation directly from inside a script, such as when a user presses a certain key or picks up a special item.
 
@@ -48,7 +48,7 @@ kickAnimationTrack:GetMarkerReachedSignal("KickEnd"):Connect(function(paramStrin
 end)
 ```
 
-### Non-humanoids
+### Non-Humanoids
 
 To play animations on rigs that do **not** contain a `Class.Humanoid`, you must create an `Class.AnimationController` with a child `Class.Animator`. For example, the following `Class.Script` (assumed to be a direct child of the rig) loads a "kick" animation and plays it.
 
@@ -78,7 +78,7 @@ kickAnimationTrack:GetMarkerReachedSignal("KickEnd"):Connect(function(paramStrin
 end)
 ```
 
-## Replace default animations
+## Replacing Default Animations
 
 By default, Roblox player characters include common animations like running,
 climbing, swimming, and jumping. You can replace these [default animations](#default-character-animations) with animations from the [catalog](#catalog-animations) or with your own [custom](../animation/editor.md) animations.
@@ -161,10 +161,10 @@ climbing, swimming, and jumping. You can replace these [default animations](#def
    Players.PlayerAdded:Connect(onPlayerAdded)
    ```
 
-## Set animation weights
+## Setting Animation Weights
 
 You can use multiple animations for the same action. For example, there
-are two `idle` variations in the code sample for [replacing default animations](#replace-default-animations).
+are two `idle` variations in the code sample for [replacing default animations](#replacing-default-animations).
 
 When multiple animations exist for a character state, the **Animate** script
 randomly chooses which one to play, but you can influence the outcome by
@@ -181,17 +181,17 @@ In the following example, `idle.Animation1` will play ⅓ of the time the charac
 	animateScript.idle.Animation2.Weight.Value = 10
 ```
 
-## Animation references
+## Animation References
 
-### Default character animations
+### Default Character Animations
 
-The following table contains all of the default character animations that you can [replace](#replace-default-animations) with [catalog](#catalog-animations) animations or your own [custom](../animation/editor.md) animations. Note that **Idle** has two variations which you can [weight](#set-animation-weights) to play more or less frequently.
+The following table contains all of the default character animations that you can [replace](#replacing-default-animations) with [catalog](#catalog-animations) animations or your own [custom](../animation/editor.md) animations. Note that **Idle** has two variations which you can [weight](#setting-animation-weights) to play more or less frequently.
 
 <table>
   <tbody>
     <tr>
-      <th>Character action</th>
-      <th>Animate script reference</th>
+      <th>Character Action</th>
+      <th>Animate Script Reference</th>
     </tr>
 	<tr>
       <td>**Run**</td>
@@ -235,9 +235,9 @@ The following table contains all of the default character animations that you ca
   </tbody>
 </table>
 
-### Catalog animations
+### Catalog Animations
 
-When using avatar animation bundles to [replace default animations](#replace-default-animations), use the following references for the respective asset IDs. For example, if you want to apply the <a href="https://www.roblox.com/catalog/658832070/Ninja-Jump" target="_blank" rel="noopener">Ninja&nbsp;Jump</a> animation, use `656117878`. Note that **Idle** has multiple variations.
+When using avatar animation bundles to [replace default animations](#replacing-default-animations), use the following references for the respective asset IDs. For example, if you want to apply the <a href="https://www.roblox.com/catalog/658832070/Ninja-Jump" target="_blank" rel="noopener">Ninja&nbsp;Jump</a> animation, use `656117878`. Note that **Idle** has multiple variations.
 
 <table>
   <tbody>

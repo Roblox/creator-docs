@@ -1,5 +1,5 @@
 ---
-title: Home tab
+title: Home Tab
 description: The Home tab contains basic tools for building and testing your experience.
 ---
 
@@ -47,7 +47,7 @@ The first section from left contains tools for copying, cutting, pasting, and du
   </tbody>
 </table>
 
-## Transform tools
+## Transform Tools
 
 The primary transform tools include **Select**, **Move**, **Scale**, and **Rotate**. When you choose a tool, visual draggers display on the selected object in the viewport.
 
@@ -76,7 +76,7 @@ If the selected object and its visual draggers are not currently in view within 
 
 ### Mode
 
-The **Mode** selector toggles between standard geometric transformations and [simulation of mechanical constraints](../physics/mechanical-constraints.md#simulate-constraints) while moving or rotating parts.
+The **Mode** selector toggles between standard geometric transformations and [simulation of mechanical constraints](../physics/mechanical-constraints.md#simulating-constraints) while moving or rotating parts.
 
 <img src="../assets/studio/general/Home-Tab-Mode.png" width="716" alt="Mode selector indicated in Home tab" />
 
@@ -86,7 +86,7 @@ The **Collisions** checkbox toggles the collisions state when you're transformin
 
 <img src="../assets/studio/general/Home-Tab-Collisions-On.png" width="716" alt="Collisions checkbox indicated in Home tab" />
 
-### Transform coordinates
+### Transform Coordinates
 
 <kbd>Ctrl</kbd><kbd>L</kbd> on Windows or <kbd>⌘</kbd><kbd>L</kbd> on Mac toggles between transforming an object relative to **world** coordinates or the object's **local** coordinates. When in local mode, an **L** symbol appears to the lower-right of the object.
 
@@ -111,13 +111,13 @@ The [Toolbox](../projects/assets/toolbox.md) includes all of the models, images,
 
 <img src="../assets/studio/general/Home-Tab-Toolbox.png" width="716" alt="Toolbox indicated in Home tab" />
 
-## Part insertion
+## Part Insertion
 
 The **Part** button inserts a new part into the workspace. Clicking the small dropdown arrow on the button lets you select either **Block**, **Sphere**, **Wedge**, **Corner&nbsp;Wedge**, or **Cylinder**. For more information, see [Parts](../parts/index.md).
 
 <img src="../assets/studio/general/Home-Tab-Part-Tools.png" width="716" alt="Part menu indicated in Home tab" />
 
-## UI designer
+## UI Designer
 
 The **UI** button opens a tab which lets you quickly insert, resize, and reposition common on-screen UI objects, such as [labels](../ui/labels.md), [frames](../ui/frames.md), and [buttons](../ui/buttons.md).
 
@@ -131,7 +131,7 @@ The **Import 3D** tool allows you to import nearly any type of `.fbx` or `.obj` 
 
 <img src="../assets/studio/general/Home-Tab-Import-3D.png" width="780" alt="Import 3D button indicated in Home tab" />
 
-## Color widget
+## Color Widget
 
 Clicking the small dropdown arrow on the **Color** widget reveals a hexagonal color picker.
 
@@ -145,7 +145,7 @@ By default, clicking the overall **Color** button applies the chosen color to an
 For alternative ways to apply custom colors, see [Coloring Parts](../parts/index.md#colors-popup).
 </Alert>
 
-## Material widget
+## Material Widget
 
 Clicking the small dropdown arrow on the **Material** widget reveals a [material](../parts/materials.md) picker.
 
@@ -155,7 +155,7 @@ By default, clicking the overall **Material** button applies the chosen material
 
 <img src="../assets/studio/general/Home-Tab-Material-Action-As-Tool.png" width="776" alt="Studio's Home tab with the Material Action as Tool selector indicated." />
 
-## Group tools
+## Group Tools
 
 You can group objects into a [model](../parts/models.md) by selecting them and clicking the **Group** button. This action has a default shortcut of <kbd>Ctrl</kbd><kbd>G</kbd> (Windows) or <kbd>⌘</kbd><kbd>G</kbd> (Mac).
 
@@ -165,7 +165,7 @@ To **ungroup** an existing model or folder, click the small arrow next to the bu
 
 <img src="../assets/studio/general/Home-Tab-Group-Tools.png" width="776" alt="Group tools indicated in Home tab" />
 
-## Lock tools
+## Lock Tools
 
 You can enable the **Lock Tool** by clicking the small arrow next to the **Lock** button and selecting **Lock&nbsp;Tool**. This action has a default shortcut of <kbd>Alt</kbd><kbd>L</kbd> (Windows) or <kbd>⌥</kbd><kbd>L</kbd> (Mac).
 
@@ -175,13 +175,13 @@ To unlock all objects, click the small arrow next to the button and select **Unl
 
 <img src="../assets/studio/general/Home-Tab-Lock-Tools.png" width="776" alt="Lock tools indicated in Home tab" />
 
-## Anchor toggle
+## Anchor Toggle
 
 The **Anchor** toggle controls whether the part will be **immovable** by physics. When `Class.BasePart.Anchored|Anchored`, a part will never change position due to gravity, other parts collisions, overlapping other parts, or any other physics-related causes. This action has a default shortcut of <kbd>Alt</kbd><kbd>A</kbd> (Windows) or <kbd>⌥</kbd><kbd>A</kbd> (Mac).
 
 <img src="../assets/studio/general/Home-Tab-Anchor.png" width="776" alt="Anchor toggle indicated in Home tab" />
 
-## Playtest options
+## Playtest Options
 
 There are three common options for playtesting an experience. Clicking the button starts a playtest of the currently selected mode, and clicking the small arrow below the button lets you choose a different mode.
 

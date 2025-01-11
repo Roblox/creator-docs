@@ -19,8 +19,8 @@ This document goes over how we put the most important parts of the Kerr-Newman D
 
 You can follow the articles sequentially or jump between the following sections:
 
-- [Building architecture](../../resources/beyond-the-dark/building-architecture.md) explains how to build content in a modular way. This allows you to go from early layouts to a polished experience in the fastest way possible.
-- [Custom characters](../../resources/beyond-the-dark/custom-characters.md) explains how we built the creepy creatures in the station and best practices for building your skinned custom avatars to import into Studio. It also covers some tips for adding visual effects, sound effects, and lights to the character.
-- [Layered clothing](../../resources/beyond-the-dark/layered-clothing.md) shows how we used this new system to leverage the new cage deformer feature to fit suits to these characters.
-- [Sound design](../../resources/beyond-the-dark/sound-design.md) details how we set up Roblox's SoundService and place sounds for maximum immersion.
-- [User interface](../../resources/beyond-the-dark/user-interface.md) describes how to add a literal layer to the experience and digs into how we built the parallax effect on the map as well as the local holo-screens.
+- [Building Architecture](../../resources/beyond-the-dark/building-architecture.md) explains how to build content in a modular way. This allows you to go from early layouts to a polished experience in the fastest way possible.
+- [Custom Characters](../../resources/beyond-the-dark/custom-characters.md) explains how we built the creepy creatures in the station and best practices for building your skinned custom avatars to import into Studio. It also covers some tips for adding visual effects, sound effects, and lights to the character.
+- [Layered Clothing](../../resources/beyond-the-dark/layered-clothing.md) shows how we used this new system to leverage the new cage deformer feature to fit suits to these characters.
+- [Sound Design](../../resources/beyond-the-dark/sound-design.md) details how we set up Roblox's SoundService and place sounds for maximum immersion.
+- [User Interface](../../resources/beyond-the-dark/user-interface.md) describes how to add a literal layer to the experience and digs into how we built the parallax effect on the map as well as the local holo-screens.

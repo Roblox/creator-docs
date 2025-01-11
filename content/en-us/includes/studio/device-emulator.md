@@ -2,7 +2,7 @@
 title: include
 ---
 
-The **Device Emulator** lets you emulate various devices directly in Studio, providing insight on how controls operate on a mobile device or how [on-screen UI](../../ui/on-screen-containers.md) displays on different screens and aspect ratios.
+The **Device** emulator lets you emulate various devices directly in Studio, providing insight on how controls operate on a mobile device or how [on-screen UI](../../ui/on-screen-containers.md) displays on different screens and aspect ratios.
 
 <img src="../assets/studio/general/Test-Tab-Emulation-Device.png" width="800" alt="Device button indicated in Test tab" />
 

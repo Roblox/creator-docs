@@ -1,15 +1,15 @@
 ---
 title: Output Window
-description: The Output Window in Roblox Studio displays error messages, calls to print(), and calls to warn().
+description: The Output window in Roblox Studio displays error messages, calls to print(), and calls to warn().
 ---
 
-The **output** window, accessible from the [View](./view-tab.md) tab, displays errors captured from running scripts, messages from Roblox Engine, messages from calls to `print()`, and errors from calls to `warn()`.
+The **Output** window, accessible from the [View](./view-tab.md) tab, displays errors captured from running scripts, messages from Roblox engine, messages from calls to `print()`, and errors from calls to `warn()`.
 
 <img src="../assets/studio/general/View-Tab-Output.png" width="768" alt="Output button indicated in View tab of Studio" />
 
-Plugins can interact with the Output Window through `Class.LogService`, which can record and clear the Output Window contents. You can customize the output through the following elements:
+Plugins can interact with the output window through `Class.LogService`, which can record and clear the output window contents. You can customize the output through the following elements:
 
-<img src="../assets/studio/general/Output-Window-Diagram.png" width="820" alt="Sections of Output Window indicated by lettered pointers" />
+<img src="../assets/studio/general/Output-Window-Diagram.png" width="820" alt="Sections of Output window indicated by lettered pointers" />
 
 <Grid container spacing={2}>
 	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Box-Label-A.png" width="40" style={{float:"right"}} /></Grid>

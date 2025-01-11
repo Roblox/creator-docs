@@ -1,5 +1,5 @@
 ---
-title: Sculpt the head
+title: Sculpting the Head
 description: Use Blender's sculpting tools to make unique changes to the shape of your character.
 next: /art/characters/creating/texturing-setup
 prev: /art/characters/creating/modeling-tips

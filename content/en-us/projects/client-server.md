@@ -1,5 +1,5 @@
 ---
-title: Client-server runtime
+title: Client-Server Runtime
 description: An overview of the client-server model in Roblox.
 ---
 

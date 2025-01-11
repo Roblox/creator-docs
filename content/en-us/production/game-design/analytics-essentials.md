@@ -1,6 +1,6 @@
 ---
-title: Analytics essentials
-description: Analytics essentials
+title: Analytics Essentials
+description: Analytics Essentials
 ---
 
 Roblox offers a variety of analytics features to help you chart your experience's growth, track user behavior and retention, and find opportunities for optimization. You can use analytics to understand what actions you can take to grow your experience.
@@ -13,7 +13,7 @@ Analytics provide a high level overview of your experience's health and surface 
 
 For an in-depth look at all the analytics features Roblox offers to help you improve you experience, see [Analytics](../../production/analytics/index.md).
 
-## Engagement metrics
+## Engagement Metrics
 
 <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/N2l0BDgSNtQ?si=nSd4PCd8ta_tIC-n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -27,7 +27,7 @@ Engagement metrics reveal how often and for how long players are interacting wit
 
 - **Average session length:** The average session length is how long a player plays your experience on average from the start of their session to the time they log out. This metric helps you design content to fit within that window of time to ensure your experience can be enjoyed by the majority of your players. The average session length also serves as a health metric. If the average session length fluctuates after a significant update or seasonal event, it can inform you how your latest content was received.
 
-## Retention metrics
+## Retention Metrics
 
 <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/LpAU6TheAZ4?si=_1r_ZtlJ3WsrZMUf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -41,7 +41,7 @@ Retention metrics determine if players are returning to your experience. Three o
 
 - **Day 30 (D30) retention:** D30 retention tracks the amount of players who return to your experience after 30 days. If this number is low, it's often indicative of a lack of end-game content or lack of an end-game goal. Consider if you have enough content at the end of your experience for seasoned players, be it quests, social aspects, or narrative elements.
 
-## Monetization metrics
+## Monetization Metrics
 
 <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/L6_HXinYTt0?si=N2nIj9L5wy9C0lBF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -53,4 +53,4 @@ Monetization metrics indicate much revenue your experience is generating. Three 
 - **Conversion rate:** The conversion rate is considered one of the most important metrics. The conversion rate is the percentage of all users who have spent any amount of money at all in your experience. The reason why this is one of the most important metrics is that if a player makes an initial purchase, they are much more likely to make a purchase again in the future. Consider if your monetization practices encourage your players to spend.
 - **Average revenue per paying user (ARPPU):** The ARPPU metric tracks the total amount spent for all players in your experience, known as **spend depth**. This tells you if players in your experience are motivated to spend a lot, a little, or somewhere in between. If this number is low, it's often indicative of purchase item value's not being correctly optimized.
 
-To learn how to design systems that increase all of these metrics and encourage players to spend money in your experience, see [Monetization foundations](../../production/game-design/monetization-foundations.md).
+To learn how to design systems that increase all of these metrics and encourage players to spend money in your experience, see [Monetization Foundations](../../production/game-design/monetization-foundations.md).

@@ -21,7 +21,7 @@ Scripts need to reside in **script containers** in the data model. Based on the 
 You can also use `Class.LocalScript` objects for client-side scripts, but we recommend using regular scripts with the run context setting to specify whether the script runs on the client or server.
 </Alert>
 
-## Module scripts
+## Module Scripts
 
 `Class.ModuleScript` objects are reusable modules that script objects
 load by calling the `Global.LuaGlobals.require()` function. Module scripts must return exactly one
@@ -111,7 +111,7 @@ If you `Global.LuaGlobals.require()` a `Class.ModuleScript` from both sides of t
 
 Module scripts have some common patterns that you can use to simplify your code and provide more flexibility over the features Roblox Studio provides. By incorporating these patterns into your development, you can avoid common pitfalls as your Roblox experience grows in size and complexity.
 
-#### Data sharing
+#### Data Sharing
 
 To associate data with individual objects, you can assign attributes to them or create `Class.Configuration` folders with value objects such as `Class.StringValue` or `Class.IntValue`. However, both approaches are troublesome if you want to add or modify dozens of objects or data values. They also don't store tables or functions.
 
@@ -137,7 +137,7 @@ GunConfig.Damage = {
 return GunConfig
 ```
 
-#### Custom events
+#### Custom Events
 
 Custom events enable scripts to communicate with each other, but having to keep track of references to individual `Class.BindableEvent` objects may clutter your code.
 
@@ -271,7 +271,7 @@ NetworkManagerServer.GetServerEventSignal("RequestA"):Connect(function(player, .
 end)
 ```
 
-## Create scripts
+## Creating Scripts
 
 To create script objects in the Studio **Explorer** window:
 

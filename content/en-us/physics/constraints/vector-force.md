@@ -1,10 +1,10 @@
 ---
-title: VectorForce
+title: Vector Force
 description: The VectorForce constraint applies constant linear force on an assembly.
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mover constraints, including `Class.VectorForce`, see [Mover constraints](../../physics/mover-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mover constraints, including `Class.VectorForce`, see [Mover Constraints](../../physics/mover-constraints.md). Also see [Roblox&nbsp;Units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 The `Class.VectorForce` constraint applies constant linear force on an assembly. The direction and strength of the force is determined by a `Datatype.Vector3` and can be relative to an attachment on the part, another attachment, or the world coordinate system.
@@ -15,7 +15,7 @@ The `Class.VectorForce` constraint applies constant linear force on an assembly.
 Because the `Class.VectorForce` constraint applies **constant** force and acceleration, very high speeds may result if no other forces are involved. If you want to maintain a more steady velocity over time, use a [LinearVelocity](../../physics/constraints/linear-velocity.md) constraint. Alternatively, if you only need **initial** velocity, set the `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity` property directly on the assembly.
 </Alert>
 
-## Force location
+## Force Location
 
 By default, force is applied to the assembly at the location of `Class.Constraint.Attachment0|Attachment0`. Thus, if its center of mass is not aligned with the direction/point of force, torque will be applied as well. If desired, force can be focused at the center of mass by toggling on `Class.VectorForce.ApplyAtCenterOfMass|ApplyAtCenterOfMass`.
 

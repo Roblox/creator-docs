@@ -7,23 +7,23 @@ With the **Parallel Luau** programming model, you can run code on multiple threa
 
 <video controls width="100%" src="../assets/scripting/scripts/Parallel-Luau.mp4"></video>
 
-## Parallel programming model
+## Parallel Programming Model
 
-By default, scripts execute sequentially. If your experience has complex logic or content, such as non-player characters (NPCs), raycasting validation, and procedural generation, then sequential execution might cause lag for your users. With the parallel programming model, you can [split tasks into multiple scripts](#split-code-into-multiple-threads) and run them in parallel. This makes your experience code run faster, which improves the user experience.
+By default, scripts execute sequentially. If your experience has complex logic or content, such as non-player characters (NPCs), raycasting validation, and procedural generation, then sequential execution might cause lag for your users. With the parallel programming model, you can [split tasks into multiple scripts](#splitting-code-into-multiple-threads) and run them in parallel. This makes your experience code run faster, which improves the user experience.
 
 The parallel programming model also adds safety benefits to your code. By splitting code into multiple threads, when you edit code in one thread, it doesn't affect other code running in parallel. This reduces the risk of having one bug in your code corrupting the entire experience, and minimizes the delay for users in live servers when you push an update.
 
-Adopting the parallel programming model doesn't mean to put everything in multiple threads. For example, the [server-side raycasting validation](#server-side-raycasting-validation) sets each individual user a remote event in parallel but still requires the initial code to run serially to change global properties, which is a common pattern for parallel execution.
+Adopting the parallel programming model doesn't mean to put everything in multiple threads. For example, the [Server-side Raycasting Validation](#server-side-raycasting-validation) sets each individual user a remote event in parallel but still requires the initial code to run serially to change global properties, which is a common pattern for parallel execution.
 
-Most times you need to combine serial and parallel phases to achieve your desired output, since currently there are some operations not supported in parallel that can prevent scripts from running, such as modifying instances in parallel phases. For more information on the level of usage of APIs in parallel, see [thread safety](#thread-safety).
+Most times you need to combine serial and parallel phases to achieve your desired output, since currently there are some operations not supported in parallel that can prevent scripts from running, such as modifying instances in parallel phases. For more information on the level of usage of APIs in parallel, see [Thread Safety](#thread-safety).
 
-## Split code into multiple threads
+## Splitting Code Into Multiple Threads
 
 To run your experience's scripts in multiple threads concurrently, you need to split them into logical chunks under different **actors** in the [data model](../projects/data-model.md). Actors are represented by `Class.Actor` instances inheriting from `Class.DataModel`. They work as units of execution isolation that distribute the load across multiple cores running simultaneously.
 
-### Place actor instances
+### Placing Actor Instances
 
-You can put actors in proper containers or use them to replace the top-level instance types of your 3D entities such as NPCs and raycasters, then add corresponding scripts.
+You can put actors in proper containers or use them to replace the top-level instance types of your 3D entities such as NPCs and raycasters, then add corresponding [scripts](../scripting/index.md).
 
 <img alt="An example of a Script under an Actor" src="../assets/studio/explorer/ServerScriptService-Actor.png" width="320" />
 
@@ -31,7 +31,7 @@ For most situations, you shouldn't put an actor as a child of another actor in t
 
 <img alt="A tree of actors and scripts that shows how a script is owned by its closest actor" src="../assets/scripting/scripts/Actor-Tree.png" width="320" />
 
-### Desynchronize threads
+### Desynchronizing Threads
 
 Though putting scripts under actors grants them the capability for parallel execution, by default the code still runs on the single thread serially, which doesn't improve the runtime performance. You need to call the `Library.task.desynchronize()`, a yieldable function that suspends the execution of the current coroutine for running code in parallel and resumes it at the next parallel execution opportunity. To switch a script back to serial execution, call `Library.task.synchronize()`.
 
@@ -53,7 +53,7 @@ end)
 You can't use `require()` in a desynchronized parallel phase. Require scripts you want to use first in a serial context.
 </Alert>
 
-Scripts that are part of the same actor always execute sequentially with respect to each other, so you need multiple actors. For example, if you put all parallel-enabled behavior scripts for your NPC in one actor, they still run serially on a single thread, but if you have multiple actors for different NPC logic, each of them runs in parallel on its own thread. For more information, see [Best practices](#best-practices).
+Scripts that are part of the same actor always execute sequentially with respect to each other, so you need multiple actors. For example, if you put all parallel-enabled behavior scripts for your NPC in one actor, they still run serially on a single thread, but if you have multiple actors for different NPC logic, each of them runs in parallel on its own thread. For more information, see [Best Practices](#best-practices).
 
 <GridContainer numColumns="2">
   <figure>
@@ -66,18 +66,18 @@ Scripts that are part of the same actor always execute sequentially with respect
   </figure>
 </GridContainer>
 
-### Thread safety
+### Thread Safety
 
-During the parallel execution, you can access most instances of the `DataModel` hierarchy as usual, but some API properties and functions aren't safe to read or write. If you use them in your parallel code, Roblox Engine can automatically detect and prevent these accesses from occurring.
+During the parallel execution, you can access most instances of the `DataModel` hierarchy as usual, but some API properties and functions aren't safe to read or write. If you use them in your parallel code, Roblox engine can automatically detect and prevent these accesses from occurring.
 
 API members have a thread safety level that indicates whether and how you can use them in your parallel code, as the following table shows:
 
 <table>
 	<thead>
 		<tr>
-			<th>Safety level</th>
-			<th>For properties</th>
-			<th>For functions</th>
+			<th>Safety Level</th>
+			<th>For Properties</th>
+			<th>For Functions</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -110,19 +110,19 @@ You can find thread safety tags for API members on the [API reference](/referenc
 If an API member doesn't specify a thread safety level, by default its thread safety level is **Unsafe**.
 </Alert>
 
-## Cross-thread communication
+## Cross-Thread Communication
 
 Under the multithreading context, you can still allow scripts in different actors to communicate with each other to exchange data, coordinate tasks, and synchronize activities. The engine supports the following mechanisms for cross-thread communication:
 
-- [Actor messaging](#actor-messaging) API for sending messages to an actor using scripts.
-- [Shared table](#shared-table) data structure for efficiently sharing a large amount of data between multiple actors on a shared state.
-- [Direct data model communication](#direct-data-model-communication) for simple communication with restrictions.
+- [Actor Messaging](#actor-messaging) API for sending messages to an actor using scripts.
+- [Shared Table](#shared-table) data structure for efficiently sharing a large amount of data between multiple actors on a shared state.
+- [Direct Data Model Communication](#direct-data-model-communication) for simple communication with restrictions.
 
 You can support multiple mechanisms to accommodate your cross-thread communication needs. For example, you can send a shared table through the Actor Messaging API.
 
-### Actor messaging
+### Actor Messaging
 
-The **actor messaging** API allows a script, either in a serial or parallel context, to send data to an actor in the same data model. Communication through this API is asynchronous, in which the sender doesn't block until the receiver receives the message.
+The **Actor Messaging** API allows a script, either in a serial or parallel context, to send data to an actor in the same data model. Communication through this API is asynchronous, in which the sender doesn't block until the receiver receives the message.
 
 When sending messages using this API, you need to define a **topic** for categorizing the message. Each message can only be sent to a single actor, but that actor can internally have multiple callbacks bound to a message. Only scripts that are descendants of an actor can receive messages.
 
@@ -157,19 +157,19 @@ end)
 print("Bound to messages")
 ```
 
-### Shared table
+### Shared Table
 
 `Datatype.SharedTable` is a table-like data structure accessible from scripts running under multiple actors. It's useful for situations that involve a large amount of data and require a common shared state between multiple threads. For example, when multiple actors work on a common world state that is not stored in the data model.
 
 Sending a shared table to another actor doesn't make a copy of the data. Instead, shared tables allow safe and atomic updates by multiple scripts simultaneously. Every update to a shared table by one actor is immediately visible to all actors. Shared tables can also be cloned in a resource-efficient process that utilizes structural sharing instead of copying the underlying data.
 
-### Direct data model communication
+### Direct Data Model Communication
 
 You can also facilitate communication between multiple threads directly using the data model, in which different actors can write and subsequently read properties or attributes. However, to maintain the thread-safety, scripts running in parallel generally can't write to the data model. So directly using the data model for communication comes with restrictions and may force scripts to synchronize frequently, which can impact performance of your scripts.
 
 ## Examples
 
-### Server-side raycasting validation
+### Server-Side Raycasting Validation
 
 For a fighting and battle experience, you need to enable [raycasting](../workspace/raycasting.md) for your users' weapons. With the client simulating the weapons to achieve good latency, the server has to confirm the hit, which involves doing raycasts and some amount of heuristics that compute expected character velocity, and look at past behavior.
 
@@ -225,7 +225,7 @@ end
 remoteEventConnection = remoteEvent.OnServerEvent:Connect(onRemoteMouseEvent)
 ```
 
-### Server-side procedural terrain generation
+### Server-Side Procedural Terrain Generation
 
 To create a vast world for your experience, you can populate the world dynamically. Procedural generation typically creates independent terrain chunks, with the generator performing relatively intricate calculations for object placement, material usage, and voxel filling. Running generation code in parallel can enhance efficiency of the process. The following code sample serves as an example.
 
@@ -313,7 +313,7 @@ actor:BindToMessageParallel("GenerateChunk", function(x, y, z, seed)
 end)
 ```
 
-## Best practices
+## Best Practices
 
 To apply the maximum benefits of parallel programming, refer to the following best practices when adding your Lua code:
 

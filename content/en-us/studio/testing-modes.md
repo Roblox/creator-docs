@@ -1,5 +1,5 @@
 ---
-title: Studio testing modes
+title: Studio Testing Modes
 description: Explore the built-in Studio testing modes for experiences.
 ---
 
@@ -9,15 +9,15 @@ import ControllerEmulator from '../includes/studio/controller-emulator.md'
 import PauseResumePhysics from '../includes/studio/pause-resume-physics.md'
 import BetaAlert from '../includes/beta-features/beta-alert.md'
 
-Because of the underlying [client-server model](../projects/client-server.md) of the Roblox Engine, it's important that you test your experience in various modes before [releasing it to the public](../production/publishing/publish-experiences-and-places.md#release-to-the-public). All of the testing options are accessible from the [Test](../studio/test-tab.md) tab.
+Because of the underlying [client-server model](../projects/client-server.md) of the Roblox engine, it's important that you test your experience in various modes before [releasing it to the public](../production/publishing/publishing-experiences-and-places.md#releasing-to-the-public). All of the testing options are accessible from the [Test](../studio/test-tab.md) tab.
 
 <img src="../assets/studio/general/Toolbar-Test-Tab.png" width="840" alt="Test tab indicated in Studio toolbar" />
 
-## Playtest options
+## Playtest Options
 
 <PlaytestOptions components={props.components} />
 
-### Toggle client/server
+### Client/Server Toggle
 
 When testing in either **Play** or **Play&nbsp;Here** mode, Studio runs two separate simulations &mdash; one **client** simulation and one **server** simulation &mdash; which can provide a more accurate impression of how the experience will execute in production.
 
@@ -25,7 +25,7 @@ While playing solo, you can toggle between **Client** and **Server** modes by cl
 
 <img src="../assets/studio/debugging/Client-Server-Toggle.png" width="680" alt="Client/Server toggle button indicated in Test tab" />
 
-#### Controls and camera
+#### Controls and Camera
 
 Depending on the mode, control of your character and the camera changes as follows:
 
@@ -44,7 +44,7 @@ Depending on the mode, control of your character and the camera changes as follo
 </TabItem>
 </Tabs>
 
-#### Explorer window
+#### Explorer Window
 
 Within the [Explorer](../studio/explorer.md) window hierarchy, certain objects only exist in their expected containers.
 
@@ -59,19 +59,19 @@ Within the [Explorer](../studio/explorer.md) window hierarchy, certain objects o
   </figure>
 </GridContainer>
 
-#### Output
+#### Output Window
 
 In the [Output](../studio/output.md) window, messages are labeled **blue** (client) or **green** (server), indicating their origin from either the client or server. For messages output from `Class.ModuleScript|ModuleScripts`, the label color is determined by whether the module was called from a client-side `Class.LocalScript` or from a server-side `Class.Script`.
 
 <img src="../assets/studio/general/Output-Window-Client-Server-Labels.png" width="800" alt="Output window showing green label for server output and blue label for client output" />
 
-### Pause and resume physics
+### Pausing & Resuming Physics
 
 <PauseResumePhysics components={props.components} />
 
-## Multi-client simulation
+## Multi-Client Simulation
 
-Using the **clients and servers** options, you can launch multiple sessions of Studio, one acting as the server and each other acting as a client. This testing mode is a valuable tool for comparing how a client "sees" other clients within the experience.
+Using the **Clients and Servers** options, you can launch multiple sessions of Studio, one acting as the server and each other acting as a client. This testing mode is a valuable tool for comparing how a client "sees" other clients within the experience.
 
 1. Make sure **Local Server** is selected in the upper box, then select the number of player sessions to test. Usually 1–2 players is sufficient, although you can simulate up to eight.
 1. Press the **Start** button to begin the client-server simulation.
@@ -82,7 +82,7 @@ Using the **clients and servers** options, you can launch multiple sessions of S
 
    <img src="../assets/studio/general/Test-Tab-Clients-Servers-Cleanup.png" width="810" alt="Cleanup button indicated in Test tab" />
 
-## Collaborative testing
+## Collaborative Testing
 
 If you're working on an experience with others in [Collaboration](../projects/collaboration.md) mode, you can test with other creators as follows:
 
@@ -98,21 +98,21 @@ If you're working on an experience with others in [Collaboration](../projects/co
    Only one team test session can run at any given time. To close a session and kick out all testers, click the **Shutdown&nbsp;Server** button.
    </Alert>
 
-## Device emulation
+## Device Emulation
 
 <DeviceEmulator components={props.components} />
 
-## Controller emulation
+## Controller Emulation
 
 <BetaAlert betaName="Gamepad Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
 <ControllerEmulator components={props.components} />
 
-## VR emulation
+## VR Emulation
 
 <BetaAlert betaName="VR Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
 
-**VR emulation** lets you test VR experiences in Studio without a physical headset. Just like emulating any other device, use the [device selector](#device-emulation) menu to choose the **Meta&nbsp;Quest&nbsp;2** or **Meta&nbsp;Quest&nbsp;3**. The [controller emulator](#controller-emulation) automatically selects the appropriate controller for the headset.
+**VR emulation** lets you test VR experiences in Studio without a physical headset. Just like emulating any other device, use the [Device Selector](#device-emulation) menu to choose the **Meta&nbsp;Quest&nbsp;2** or **Meta&nbsp;Quest&nbsp;3**. The [Controller Emulator](#controller-emulation) automatically selects the appropriate controller for the headset.
 
 <Grid container spacing={1}>
 <Grid item XSmall={12} Medium={6} Large={6} XLarge={6}><img src="../assets/studio/general/Controller-Emulator-VR.png" width="540" alt="The Controller Emulator with a Quest 3 controller." /></Grid>
@@ -125,7 +125,7 @@ The combination of a headset and multiple controllers, each with motion tracking
 
 - Use <kbd>Shift</kbd><kbd>&larr;</kbd> or <kbd>Shift</kbd><kbd>&rarr;</kbd> to switch between the headset, left controller, and right controller. For example, you might use the **Headset** option to look around as you walk forward with the left controller button, but then switch to the **Right&nbsp;Controller** when you need to use motion controls to aim at a target.
 
-## VR headsets
+## VR Headsets
 
 If you'd like to support virtual reality (VR) headsets for your experience, make sure to test or [emulate](#vr-emulation) VR in Studio. Studio supports testing for all VR headsets that are compatible with [OpenXR](https://www.khronos.org/openxr/), the open‑source industry standard providing access to VR.
 
@@ -133,7 +133,7 @@ If you'd like to support virtual reality (VR) headsets for your experience, make
 Currently, testing in VR is only supported on Windows.
 </Alert>
 
-### Headset configuration
+### Headset Configuration
 
 To enable Studio testing in VR, you must connect your headset to your PC and configure the OpenXR runtime **before** launching Studio. If you've already launched Studio, quit and complete the configuration steps first.
 
@@ -176,7 +176,7 @@ When using Oculus VR, ensure the following:
 </TabItem>
 </Tabs>
 
-### Roblox Quest app
+### Roblox Quest App
 
 You can test your experience in the Roblox app on Quest without linking your headset to your computer. Use the following steps to access your experience on your headset in this mode:
 
@@ -186,7 +186,7 @@ You can test your experience in the Roblox app on Quest without linking your hea
 4. Using your headset, open the standalone Roblox app.
 5. Scroll down to the **Favorites** section in the home page and run your experience.
 
-### Studio VR mode
+### Studio VR Mode
 
 After [configuring your headset](#headset-configuration), you can turn on the Studio VR testing mode through the following steps:
 
@@ -196,7 +196,7 @@ After [configuring your headset](#headset-configuration), you can turn on the St
 
 You can now test your experience using your VR headset using any of the available [playtest options](#playtest-options). During a VR testing session, if your headset cable disconnects or you close the Roblox Studio Beta app on the headset, you'll need to restart Studio to re-run testing.
 
-## Player emulation
+## Player Emulation
 
 For detailed emulation of experience [localization](../production/localization/index.md) and content policies, you can test through the **Player** emulator.
 

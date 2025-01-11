@@ -1,5 +1,5 @@
 ---
-title: Private servers
+title: Private Servers
 description: Private servers are a subscription-based feature that allows users to decide who can play an experience with them.
 ---
 
@@ -22,7 +22,7 @@ You cannot enable [paid access in Robux](../monetization/paid-access-robux.md) o
 Players under the age of 13 may not be able to join private servers depending on their privacy and parental control settings.
 </Alert>
 
-## Enable private servers
+## Enabling Private Servers
 
 Before you can enable private servers, your experience must be **public** to all users.
 

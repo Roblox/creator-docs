@@ -1,5 +1,5 @@
 ---
-title: DMCA guidelines
+title: DMCA Guidelines
 description: Explains copyright law and the details of DMCA claims.
 ---
 
@@ -7,7 +7,7 @@ description: Explains copyright law and the details of DMCA claims.
 The information below is provided for general informational purposes only and is not legal advice. If you have any questions about this information or your specific situation or rights, please contact an attorney.
 </Alert>
 
-## Frequently asked questions
+## Frequently Asked Questions
 
 <BaseAccordion>
 <AccordionSummary>

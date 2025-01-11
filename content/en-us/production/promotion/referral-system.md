@@ -1,5 +1,5 @@
 ---
-title: Friend invite reward system
+title: Friend Invite Reward System
 description: Use referral links to track and reward players that have successfully invited other players into your experience, and players that have joined your experience using a referral link invitation from another player.
 ---
 
@@ -37,7 +37,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-## Set up a referral event
+## Set Up a Referral Event
 
 To set up a referral event:
 
@@ -71,7 +71,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-## Grant referral rewards
+## Grant Referral Rewards
 
 To encourage participation, grant rewards to both inviters and invitees. For example, you can give inviters a badge or in-experience currency when their friend joins the experience, and give invitees a welcome reward for joining the experience through a referral link.
 
@@ -113,7 +113,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-## Manage abuse prevention
+## Manage Abuse Prevention
 
 You can implement safeguards to prevent players from exploiting the friend referral system.
 

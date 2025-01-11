@@ -1,5 +1,5 @@
 ---
-title: Script capabilities
+title: Script Capabilities
 description: Script Capabilities is a system that controls which actions scripts can perform.
 ---
 
@@ -7,19 +7,19 @@ description: Script Capabilities is a system that controls which actions scripts
 This page describes a feature that is still experimental and is available as a client beta. Features described here might undergo additional changes based on developer feedback and/or bug fixes.
 </Alert>
 
-**Script capabilities** is a system that offers control over actions that scripts can perform inside the `Class.DataModel` subtree. It provides better control over experience scripts rather than being an "all or nothing" system where any script can do anything that other scripts can.
+Script Capabilities is a system that offers control over actions that scripts can perform inside the `Class.DataModel` subtree. It provides better control over experience scripts rather than being an "all or nothing" system where any script can do anything that other scripts can.
 
 - This system lets you limit what models taken from the toolbox can do and makes it easier to include user-generated content inside the experience, even those that contain scripts.
 - It can also help ensure better security of experiences that allow players to run their own code, which is often executed in a restricted or emulated environment.
 - It can also be used to share libraries that restrict what they can do themselves. For example, a library providing additional math methods can be restricted to the smallest set of capabilities it needs so that other developers using that library don't have to validate the entire codebase to make sure it doesn't include malicious code.
 
-## Enable script capabilities
+## Enabling Script Capabilities
 
 To enable this feature, change the `Class.Workspace.SandboxedInstanceMode|SandboxedInstanceMode` setting from `Default` to `Experimental` in the Explorer.
 
 When the client beta test is completed, this step will no longer be required.
 
-## Sandboxed container
+## Sandboxed Container
 
 This system introduces a concept of a **sandboxed container**.
 An instance of type `Class.Model`, `Class.Folder`, `Class.Script`, or descendants of any of those classes have a `Class.Instance.Sandboxed|Sandboxed` property available in the Studio **Properties** window, under the **Permissions** section.
@@ -47,7 +47,7 @@ The current thread cannot call 'Clone' (lacking capability CreateInstances)
 The current thread cannot call 'GetSecret' (lacking capability Network)
 ```
 
-### Execution control
+### Execution Control
 
 This set includes two capabilities:
 
@@ -64,7 +64,7 @@ When a script fails to start because the execution control capability is missing
 Cannot start server script 'Script' (lacking capability RunServerScript)
 ```
 
-### Instance access control
+### Instance Access Control
 
 This set includes only a single capability:
 
@@ -76,15 +76,15 @@ Additionally, any Roblox API event that passes in an `Class.Instance` instead pa
 
 Avoid setting this capability; sandboxing guarantees are weaker when scripts can interact with any instance in an experience.
 
-#### Access to services
+#### Access to Services
 
 Even without **AccessOutsideWrite**, scripts in the sandboxed container can still access to `game`, `workspace`, and services. This access is provided so that scripts can still call useful methods of those globals, like `Class.DataModel.GetService`, but access to their child instances is still validated.
 
-#### Internally passed instances
+#### Internally Passed Instances
 
 If an instance is passed through a function call that doesn't go through Roblox APIs, the reference is preserved. However, if a `Class.ModuleScript` is passed in this way, it can't be required without **AccessOutsideWrite**. This is because the return of the `Class.ModuleScript` is often mutable and can be modified by a script in a sandboxed container.
 
-### Script functionality control
+### Script Functionality Control
 
 This set of capabilities controls some general aspects of scripts:
 
@@ -97,7 +97,7 @@ Keep in mind that default function restrictions still apply. Even if **LoadStrin
 
 To create new instances, aside from **CreateInstances**, an additional Engine API capability providing access to that instance is required.
 
-### Engine API access control
+### Engine API Access Control
 
 This last group of capabilities controls script access to various Engine APIs:
 
@@ -123,13 +123,13 @@ There are also instances that are available without any capabilities aside from 
 
 If an instance property or method is accessed without a required capability, an error is reported describing the missing capability.
 
-Finally, capabilities do not cover every instance in the Roblox Engine today. Instances not listed in this section or the following one are not available for interaction from a sandboxed container and throw an error saying that an **Unassigned** capability is not available to the current script.
+Finally, capabilities do not cover every instance in the Roblox engine today. Instances not listed in this section or the following one are not available for interaction from a sandboxed container and throw an error saying that an **Unassigned** capability is not available to the current script.
 
 An additional limitation is that `Global.LuaGlobals.getfenv` and `Global.LuaGlobals.setfenv` functions are not available for scripts in a sandboxed container.
 
 Only script access to instances is limited. The instances themselves can still exist and operate by themselves inside a sandboxed container. Lights still shine, user interfaces are still visible, and audio setups that are already wired play sounds.
 
-#### Engine API capability assignments
+#### Engine API Capability Assignments
 
 <Alert severity="success">
 This feature is currently in the experimental stage, so the assignments of the APIs are not final. The capability of each instance is displayed on the documentation page for that instance.
@@ -222,9 +222,9 @@ Here is the list of instances and methods (if different from the instance capabi
   - `Class.BaseRemoteEvent`, `Class.RemoteEvent`, `Class.UnreliableRemoteEvent`
   - `Class.RemoteFunction`
 
-## Interactions between containers
+## Interactions Between Containers
 
-### Nested containers
+### Nested Containers
 
 When one sandboxed container is nested inside another one, the instances of the inner container are accessible to the outer one.
 
@@ -233,7 +233,7 @@ For example, if the outer container has capabilities of **Basic**, **Audio** and
 
 If there are no capabilities in common between the inner and outer containers, the resulting capability set is empty.
 
-### Bindable functions and events
+### Bindable Functions and Events
 
 `Class.BindableEvent` and `Class.BindableFunction` provide the best way to communicate with the container or allow it to run callbacks with capabilities it itself is not allowed to use directly.
 
@@ -241,14 +241,14 @@ When an event or a function is fired, connections are executed in the context of
 
 It is important to note that even with the **AccessOutsideWrite** capability, scripts in sandboxed containers cannot invoke events or functions outside their containers if they have a larger capability set than the container itself.
 
-### Module require
+### Module Require
 
 Inner `Class.ModuleScript|ModuleScripts` can be required by the sandboxed container as usual.
 However, if the target instance is outside the container, the `Class.ModuleScript` can only be required if the capability set that is available to it is smaller or equal to the capabilities available to the container.
 
 This limitation does not apply to **RunClientScript** and **RunServerScript** capabilities. If the `Class.ModuleScript` is placed in a container with only **RunClientScript** but is required from a script that has the **RunServerScript** capability, it is allowed to succeed and run those functions on the server.
 
-### Directly called functions
+### Directly Called Functions
 
 If a `Class.ModuleScript` in a sandboxed container is required from outside the container, some of the protections are not available. In particular, the target function is able to access all instances available to the caller. If the caller is not in a sandboxed container, the call acts as if **AccessOutsideWrite** is available to it.
 
@@ -261,7 +261,7 @@ If required, it is recommended to assign table members using `Global.LuaGlobals.
 
 The overall recommendation is to communicate with `Class.BindableEvent` and `Class.BindableFunction` whenever possible.
 
-### Movement of instances
+### Movement of Instances
 
 Most instances do not have restrictions on movement between containers. Script instances, however, can only be moved into a container that has the same set of capabilities or a subset of those capabilities.
 

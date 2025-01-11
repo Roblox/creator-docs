@@ -1,5 +1,5 @@
 ---
-title: Intro to dictionaries
+title: Intro to Dictionaries
 description: Learn how to use a dictionary table to tag values within data sets.
 next: /tutorials/fundamentals/coding-5/pairs-and-ipairs
 prev: /tutorials/fundamentals/coding-5/making-changes-to-arrays
@@ -18,7 +18,7 @@ local pet = {
 
 Use dictionaries when you need to label values, not just list them in order as an array does. Practice using dictionaries in this tutorial by manipulating values associated with a player.
 
-## Dictionary syntax
+## Dictionary Syntax
 
 Like arrays, dictionaries are assigned to a variable with curly brackets `{}`. **Key-value pairs** are stored on separate lines followed by a comma. Keys and values can be any data type, including strings, numbers, and variable names.
 
@@ -47,7 +47,7 @@ print(partList[redPart])
 Use consistent data types for dictionary keys. Mixing data types, such as using both strings and variables for keys, can lead to inconsistent results when manipulating the array and confuse other coders.
 </Alert>
 
-## Create a dictionary
+## Creating a Dictionary
 
 One everyday use of dictionaries is organizing player or character information. These steps explore how a theoretical enemy character's information can be stored and accessed.
 
@@ -84,7 +84,7 @@ One everyday use of dictionaries is organizing player or character information. 
    }
    ```
 
-### Use dictionary values
+### Using Dictionary Values
 
 There are two ways to access dictionary values:
 
@@ -103,7 +103,7 @@ print("The villain " .. enemy.Name .. " approaches!")
 
 Which style to use usually depends on the purpose of the table. For tables holding a collection of values like a list of players in a server, coders will usually use `tableName["keyName"]`. For a dictionary used to describe an object, coders are more likely to use `tableName.keyName`.
 
-## Change a dictionary value
+## Changing a Dictionary Value
 
 Changing a key's value is the same as any other variable; use the equal `=` operator.
 
@@ -120,9 +120,9 @@ Changing a key's value is the same as any other variable; use the equal `=` oper
    print("The enemy's name is " .. enemy.Name)
    ```
 
-2. Playtest and check the Output Window.
+2. Playtest and check the Output window.
 
-## Pre-existing variables as keys
+## Pre-existing Variables as Keys
 
 Dictionaries can interact with pre-existing variables declared in other parts of a script. The following coding example uses a variable to add a player's name as a key when they join the experience and then sets their points value to 0.
 
@@ -203,7 +203,7 @@ end
 Players.PlayerAdded:Connect(setPoints)
 ```
 
-### Optional challenges
+### Optional Challenges
 
 Below are some challenges that apply to using dictionaries in different ways. See if you can build out the code for these.
 

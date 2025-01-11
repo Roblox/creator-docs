@@ -1,11 +1,11 @@
 ---
-title: Accessories from an existing model
+title: Accessories from an Existing Model
 description: This tutorial covers the basic steps required to publish a custom asset on the Marketplace.
 ---
 
 In many cases, you may want to convert a premade model from your modeling
 software into an accessory on Roblox. If you are looking to create your
-accessory from scratch, see [Create accessories](./creating-rigid/index.md).
+accessory from scratch, see [Creating Accessories](./creating-rigid/index.md).
 
 Using a provided 3D reference file, this tutorial covers each step in the workflow to properly configure and export a 3D model with PBR textures from Blender and generate your own rigid accessory in Studio. After you create the accessory, you can upload it to the Marketplace, save it to your toolbox, and use it in your own experiences.
 
@@ -41,7 +41,7 @@ Using a provided reference 3D asset, this tutorial covers the following rigid ac
 While this content covers the Blender workflow with a provided reference example, you can apply the same concepts to other third-party modeling applications and custom assets.
 </Alert>
 
-## Modeling setup
+## Modeling Setup
 
 Whether you are using an existing shape or creating your own 3D object, it's important to consider [technical requirements](../../art/accessories/specifications.md), such as keeping your geometry within a polycount budget, and [policy requirements](../../marketplace/marketplace-policy.md), such as ensuring your design does not infringe on other creator's IP both within and outside of the Roblox ecosystem.
 
@@ -76,7 +76,7 @@ There are many tools and workflows to create your own unique asset. For addition
 
 **Texturing** is the process of applying a surface appearance to a 3D object. Blender provides various tools and features to create and connect your own texture maps to your asset, allowing you to preview your model's final appearance and link the texture images to your exported file.
 
-The mask example asset uses [physically-based rendering (PBR) textures](../../art/modeling/surface-appearance.md), which are advanced textures that create realistic surfaces under different lighting environments. PBR textures use multiple image files, or **maps**, to represent the various surface properties of your 3D object.
+The mask example asset uses [Physically-Based Rendering (PBR) textures](../../art/modeling/surface-appearance.md), which are advanced textures that create realistic surfaces under different lighting environments. PBR textures use multiple image files, or **maps**, to represent the various surface properties of your 3D object.
 
 <GridContainer numColumns="4">
 <figure>
@@ -108,7 +108,7 @@ Metalness Map
 This tutorial doesn't cover the PBR texture creation process, which typically involves using third-party software such as ZBrush or Substance 3D Painter. Instead, this section goes over the process of bringing premade PBR image files into Blender and properly associating them to your asset on export.
 
 <Alert severity = 'warning'>
-While PBR textures are not required for accessories, adding PBR textures can add extra visual flair and realism to elevate your creations. For an example on using Blender to create a basic, non-PBR texture, see [Texture basic clothing](../../art/accessories/creating/unwrapping.md).
+While PBR textures are not required for accessories, adding PBR textures can add extra visual flair and realism to elevate your creations. For an example on using Blender to create a basic, non-PBR texture, see [Texturing Basic Clothing](../../art/accessories/creating/unwrapping.md).
 </Alert>
 
 To configure and link your PBR textures to your model:
@@ -143,10 +143,10 @@ To configure and link your PBR textures to your model:
 <Alert severity = 'success'>
 You've completed the texturing section of this tutorial. If desired, download a [reference sample](../../assets/art/accessories/creating-rigid/Rigid_Mask_Texturing-Completed.blend) of this stage of the project for comparison.
 
-If you are creating your own PBR textures, check out [Material references](../../art/modeling/material-reference.md) for various PBR material examples you can apply to your next accessory.
+If you are creating your own PBR textures, check out [Material References](../../art/modeling/material-reference.md) for various PBR material examples you can apply to your next accessory.
 </Alert>
 
-## Clean up
+## Clean Up
 
 After modeling and texturing your asset, you can begin the process of **exporting** your Blender project as a `.fbx`. The start of this process includes cleaning up your project, which can involve deleting or removing any extra objects, such as lights, cameras, or mannequin meshes, to ensure you only export the accessory mesh, and applying any modifiers to your mesh object.
 
@@ -159,7 +159,7 @@ To freeze your transforms:
 
    <img src="../../assets/art/accessories/creating-rigid/Blender-Apply-Transforms.png" />
 
-## Export
+## Exporting
 
 After modeling and texturing your asset, you can begin the process of **exporting** your Blender project as a `.fbx`. The start of this process includes cleaning up your project, which can involve deleting or removing any extra objects, such as lights, cameras, or mannequins, to ensure you only export the accessory mesh, and applying any modifiers to your mesh object.
 
@@ -190,7 +190,7 @@ To export your model as a `.fbx`:
 You've completed the exporting section of this tutorial. If desired, download a [reference sample](../../assets/art/accessories/creating-rigid/Rigid_Mask_Export.fbx) of this exported file for comparison. You can use this reference in the next importing step.
 </Alert>
 
-## Import
+## Importing
 
 Studio's 3D Importer provides a quick and easy way to import third-party 3D assets into your projects. The importer provides object previews and error-checking to ensure that your asset meets Studio's general 3D requirements.
 
@@ -231,7 +231,7 @@ To import your asset:
 After successful import, your model object should populate in your project as a `Class.Model` with the appropriate textures applied. See [3D Importer](../../art/modeling/3d-importer.md) for additional information on import settings and troubleshooting.
 </Alert>
 
-## Convert
+## Converting
 
 After importing your asset into Studio, you can begin **fitting** your imported object to a mannequin and **converting** the `Class.Model` object into a `Class.Accessory`. When fitting and converting your accessory it's important to use the **Accessory Fitting Tool (AFT)** to correctly preview the placement and apply the correct configurations to your accessory.
 
@@ -274,7 +274,7 @@ To fit and generate your accessory:
 <Alert severity = 'success'>
 After successful fitting and converting, your 3D model should populate in your project as a `Class.Accessory`. With this `Class.Accessory` you can perform any of the following:
 
-- [Upload the accessory](../../art/accessories/creating-rigid/publishing.md) to the Marketplace.
+- [Upload the accessory](../../art/accessories/creating-rigid/publishing.md) to the Marketplace.- [Upload the accessory](../../art/accessories/creating-rigid/publishing.md) to the Marketplace.
 - Use the accessory in your current experience by equipping it to character models with [HumanoidDescription](../../characters/appearance.md#humanoiddescription), or by dragging and dropping the accessory under the appropriate character `Class.Model` object.
 - Save the accessory to your [Toolbox](../../projects/assets/toolbox.md) to share or use within any of your experiences.
 
@@ -301,18 +301,18 @@ If you intend to sell the asset on the Marketplace, use the following steps to b
 
    1. **Title**: The name of your accessory.
    2. **Description**: A short description of your asset.
-   3. **Asset Category**: The type of accessory. This should match the Accessory Type selected during the [Fitting and conversion](../../art/accessories/creating-rigid/converting.md) process.
+   3. **Asset Category**: The type of accessory. This should match the Accessory Type selected during the [Fitting and Conversion](../../art/accessories/creating-rigid/converting.md) process.
    4. **Creator**: Use the dropdown to select if you'd like to publish this asset as an individual or as part of an associated group.
 
       <img src="../../assets/art/accessories/creating-rigid/Validation-Successful.png" />
 
 4. After you select the **Asset Category**, Studio begins validating the asset to ensure that it matches Roblox's accessory technical requirements.
    1. If set up correctly, the window displays a green Validation Successful confirmation.
-   2. If you see an error `Could not find a Part called Handle...`, you may have published your accessory as a MeshPart instead of a legacy accessory. See [Use the Accessory Fitting tool](#convert) step 6 for more information.
+   2. If you see an error `Could not find a Part called Handle...`, you may have published your accessory as a MeshPart instead of a legacy accessory. See [Using the Accessory Fitting Tool](#converting) step 6 for more information.
    3. If other errors appear, see the error messages for specific details. Some errors may require going back to the modeling software and adjusting the asset.
-5. If the validation is successful, you can submit the asset to the upload and moderation queue for a fee. See [Fees and commissions](../../marketplace/marketplace-fees-and-commissions.md) for current fee information.
+5. If the validation is successful, you can submit the asset to the upload and moderation queue for a fee. See [Fees and Commissions](../../marketplace/marketplace-fees-and-commissions.md) for current fee information.
 
-## Publish
+## Publishing
 
 After uploading your asset for moderation, you can check your asset's current moderation status on your [Creator Dashboard > Avatar Items](https://create.roblox.com/dashboard/creations). Moderation can take up to 24 hours during which a placeholder icon is used on the creation page.
 
@@ -329,8 +329,8 @@ You now have your accessory added to the Marketplace catalog! Use the item's Mar
 See the following resources for additional Marketplace policy and related information:
 
 - [Marketplace policy](../../marketplace/marketplace-policy.md)
-- [Fees and commissions](../../marketplace/marketplace-fees-and-commissions.md)
-- [Intellectual property](../../marketplace/intellectual-property.md)
+- [Fees and Commissions](../../marketplace/marketplace-fees-and-commissions.md)
+- [Intellectual Property](../../marketplace/intellectual-property.md)
 - [Moderation](../../marketplace/moderation.md)
 
 </Alert>

@@ -1,8 +1,8 @@
 ---
-title: Open the Developer Console
+title: Opening Developer Console
 ---
 
-You can open the console during a testing or live experience session using any of the following ways:
+You can open **Developer Console** during a testing or live experience session using any of the following ways:
 
 - Press <kbd>F9</kbd>.
 - Type `/console` into the chat.

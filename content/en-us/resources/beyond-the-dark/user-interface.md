@@ -1,12 +1,12 @@
 ---
-title: User interface
+title: User Interface
 prev: /resources/beyond-the-dark/sound-design
 description: Explains the design concepts for user-interface effects in Beyond The Dark.
 ---
 
 We wanted to add an interactive map UI to let users consume information in the space station that looked and felt like it lived in this world. We decided to build the map inside the 3D space instead of on a screen that overlays the experience. This type of diegetic visualization allows for more immersion with the world as opposed to feeling like it is a completely separate experience.
 
-## Design the map
+## Designing the Map
 
 To design the map:
 
@@ -23,7 +23,7 @@ To design the map:
    src="../../assets/resources/beyond-the-dark/user-interface/UI-Export.png"
    width="80%" />
 
-## Build the map
+## Building the map
 
 Building the map inside Studio involved using `Class.Part|Parts` and `Class.SurfaceGui|SurfaceGuis`.
 

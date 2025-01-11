@@ -9,7 +9,7 @@ Characters can range between **basic** characters, such as a simple non-player c
 
 All Roblox users are associated with an account-based avatar character. Along with this avatar character, Roblox represents users as **players** in the data model, giving developers access to additional character customization properties, social features, and relevant gameplay and account information. For more information on account specific player features, see [Players](../players/index.md).
 
-## Basic characters
+## Basic Characters
 
 Basic characters are often used as NPCs and typically perform one or two simple tasks. A common component of basic characters include a display name, health, and basic movement.
 
@@ -33,9 +33,9 @@ You can use the following components within your `Class.Model` object to enable 
   </figure>
 </GridContainer>
 
-With these components, the character model displays a `Class.Humanoid.DisplayName`, has health, and can move with `Class.Humanoid.Move()`. For more information on additional configurations of the display and health elements, see [Name/health display](../characters/name-health-display.md).
+With these components, the character model displays a `Class.Humanoid.DisplayName`, has health, and can move with `Class.Humanoid.Move()`. For more information on additional configurations of the display and health elements, see [Name/Health Display](../characters/name-health-display.md).
 
-## Avatar characters
+## Avatar Characters
 
 Avatar characters use a standardized set of character components that allow you to use body and facial animations, and equip clothing and accessories. By standardizing the components, all avatar character models can access these features, whether they are controlled by a player or an NPC.
 
@@ -68,4 +68,4 @@ If you are creating your own custom avatar character, you must configure your ch
 See [Avatars](../art/characters/index.md) for information regarding the creation of avatar components, creation guides, and marketplace information.
 </Alert>
 
-For information on modifying and customizing existing characters in your experience, see [Character appearance](../characters/appearance.md).
+For information on modifying and customizing existing characters in your experience, see [Character Appearance](../characters/appearance.md).

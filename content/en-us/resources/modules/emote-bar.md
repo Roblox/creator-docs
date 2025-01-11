@@ -7,7 +7,7 @@ Emotes are a core component of any social experience. The **EmoteBar** [develope
 
 <video src="../../assets/developer-modules/emote-bar/Showcase.mp4" controls width="100%"></video>
 
-## Module usage
+## Module Usage
 
 ### Installation
 
@@ -75,7 +75,7 @@ The module is preconfigured with 7 emotes and it can be easily customized with y
 <p>Also note that this developer module will modify the local user's emotes via `Class.HumanoidDescription:SetEmotes()`, meaning that calls to `Class.HumanoidDescription:GetEmotes()` will return values modified by this module.</p>
 </Alert>
 
-### Mega emotes
+### Mega Emotes
 
 A **mega emote** is formed when multiple players in the same area perform the same emote at the same time. As more and more players join in, the mega emote grows larger. As players stop performing the emote, the mega emote grows smaller until eventually it disappears.
 
@@ -85,7 +85,7 @@ A **mega emote** is formed when multiple players in the same area perform the sa
 
 An emote's **tempo** is the speed at which it plays when its button is tapped once. The default speed of an emote is determined by its `defaultTempo`. An emote's speed can be increased or decreased by tapping its button faster or slower.
 
-## API reference
+## API Reference
 
 ### Types
 

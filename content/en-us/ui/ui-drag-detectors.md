@@ -1,5 +1,5 @@
 ---
-title: UI drag detectors
+title: UI Drag Detectors
 description: UI drag detectors facilitate and encourage interaction with 2D user interface elements in an experience, such as sliders and spinners.
 ---
 
@@ -23,7 +23,7 @@ The `Class.UIDragDetector` instance facilitates and encourages interaction with 
 For drag detectors that manipulate 3D objects in an experience, such as opening doors and drawers or sliding a part around, see [3D Drag Detectors](../ui/3D-drag-detectors.md).
 </Alert>
 
-## Make UI elements draggable
+## Making UI Elements Draggable
 
 To make any `Class.GuiObject` instances draggable, simply add a `Class.UIDragDetector` as a direct descendant.
 
@@ -38,9 +38,9 @@ To make any `Class.GuiObject` instances draggable, simply add a `Class.UIDragDet
 Remember that `Class.UIDragDetector|UIDragDetectors` only work in Studio if you're **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, nor certain plugins or Studio's **UI** editor tools.
 </Alert>
 
-## Customize UI drag detectors
+## Customizing UI Drag Detectors
 
-### Drag style
+### Drag Style
 
 `Class.UIDragDetector|UIDragDetectors` map cursor motion to calculate proposed 2D motion and/or rotation. Through the `Class.UIDragDetector.DragStyle|DragStyle` property, you can choose from different mappings to suit your needs. For example, `Enum.UIDragDetectorDragStyle.TranslatePlane` produces translation in the 2D plane of the `Class.LayerCollector`, while `Enum.UIDragDetectorDragStyle.Rotate` normally produces a rotation instead of translation.
 
@@ -71,7 +71,7 @@ Remember that `Class.UIDragDetector|UIDragDetectors` only work in Studio if you'
 </tbody>
 </table>
 
-### Drag direction
+### Drag Direction
 
 By default, 2D motion and the associated `Class.UIDragDetector.DragStyle|DragStyle` map to the space of the ancestor `Class.LayerCollector`. However, you may want to change the `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` or the `Class.UIDragDetector.DragAxis|DragAxis` when building different UI components.
 
@@ -97,7 +97,7 @@ By default, 2D motion and the associated `Class.UIDragDetector.DragStyle|DragSty
 </tbody>
 </table>
 
-### Response to motion
+### Response to Motion
 
 The `Class.UIDragDetector.ResponseStyle` property specifies how an object's position value is changed by the proposed motion. The custom response styles let you use the resulting `Class.UIDragDetector.DragUDim2` and `Class.UIDragDetector.DragRotation` values as desired, without having the detector's parent execute the proposed motion.
 
@@ -128,7 +128,7 @@ The `Class.UIDragDetector.ResponseStyle` property specifies how an object's posi
 </tbody>
 </table>
 
-### Translation & rotation limits
+### Translation & Rotation Limits
 
 By default, there are no limits to 2D motion behind the inherent restrictions of the `Class.UIDragDetector.DragStyle|DragStyle`. Limits for both minimum and maximum translations and rotations can be declared with the following properties if desired. Additionally, you can define how the dragged object is constrained within the bounds of a specified `Class.GuiObject` such as a `Class.Frame`.
 
@@ -161,7 +161,7 @@ By default, there are no limits to 2D motion behind the inherent restrictions of
 </tbody>
 </table>
 
-### Speed adjustments
+### Speed Adjustments
 
 Through `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed` and `Class.UIDragDetector.SelectionModeRotateSpeed|SelectionModeRotateSpeed`, you can fine‑tune the maximum drag/rotate speeds for a detector. Furthermore, through `Class.UIDragDetector.UIDragSpeedAxisMapping|UIDragSpeedAxisMapping`, you can fine‑tune the **X**/**Y** dimension dragging speeds, based on the detector's `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed`.
 
@@ -188,7 +188,7 @@ Through `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed` and
 </tbody>
 </table>
 
-## Script responses to clicking and dragging
+## Scripting Responses to Clicking and Dragging
 
 Through [event signals](#event-signals), property changes, `Enum.UIDragDetectorDragStyle.Scriptable|Scriptable` drag style, and custom functions, scripts can respond to the manipulation of dragged UI elements to drive various settings or make logical decisions, such as sliders that adjust music and sound effect volume separately.
 
@@ -196,7 +196,7 @@ Through [event signals](#event-signals), property changes, `Enum.UIDragDetectorD
 For user-initiated script responses like [Event Signals](#event-signals) and [Scripted Drag Style](#scripted-drag-style), you'll most commonly need to put your script code inside a `Class.LocalScript`, or a `Class.Script` with `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client|Client`.
 </Alert>
 
-### Event signals
+### Event Signals
 
 Through the following event signals, you can detect when a user starts, continues, and ends dragging an object.
 
@@ -260,7 +260,7 @@ uiDragDetector.DragEnd:Connect(function(inputPosition)
 end)
 ```
 
-### Position & rotation changes
+### Position & Rotation Changes
 
 In addition to [event signals](#event-signals), you can monitor changes to the detector's `Class.UIDragDetector.DragUDim2|DragUDim2` and/or `Class.UIDragDetector.DragRotation|DragRotation` properties directly.
 
@@ -293,7 +293,7 @@ changeHue()
 uiDragDetector:GetPropertyChangedSignal("DragRotation"):Connect(changeHue)
 ```
 
-### Scripted drag style
+### Scripted Drag Style
 
 If you set a detector's `Class.UIDragDetector.DragStyle` to `Enum.UIDragDetectorDragStyle.Scriptable`, you can provide your own function that takes in a `Datatype.Vector2` of the input position and returns a `Datatype.UDim2` (position) and a float (rotation). The detector will update the object to the computed position/rotation based off of the returns, the `Class.UIDragDetector.DragSpace|DragSpace` property, and the `Class.UIDragDetector.DragRelativity|DragRelativity` property.
 
@@ -323,7 +323,7 @@ end
 uiDragDetector:SetDragStyleFunction(computeSinWaveCoordinate)
 ```
 
-### Custom constraint function
+### Custom Constraint Function
 
 `Class.UIDragDetector|UIDragDetectors` do not have built-in motion rules about grids and snapping, but you can register custom constraint functions to edit the detector's `Class.UIDragDetector.DragUDim2` and `Class.UIDragDetector.DragRotation` before they are applied. For example, you can keep motion on a grid by rounding positions to specific increments, or define allowed areas of motion. Note that this is applied **before** any existing translation/rotation limits.
 

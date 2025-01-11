@@ -1,5 +1,5 @@
 ---
-title: Core loops
+title: Core Loops
 description: Core Loops
 ---
 
@@ -13,7 +13,7 @@ An experience's **core loop** is the central gameplay through which an entire ex
 - Most repeated set of actions
 - Progression engine
 
-## Minute to minute player interaction
+## Minute to Minute Player Interaction
 
 The first step in a core loop is the **minute to minute player interaction**. These constant actions form the baseline for the experience and vary depending on genre.
 
@@ -24,7 +24,7 @@ In an action RPG, exploration represents the minute to minute player interaction
     <figcaption>First step in a core loop in an Action RPG </figcaption>
   </figure>
 
-## Most repeated set of actions
+## Most Repeated Set of Actions
 
 The second step in a core loop is the **most repeated set of actions**. The minute to minute interaction facilitates these actions, and these are often the defining mechanic of the experience. While experiences might involve multiple action sets, the most frequently repeated actions become part of the experience's core loop.
 
@@ -35,7 +35,7 @@ In an action RPG, fighting is the most repeated set of actions. As they explore 
     <figcaption>Second step in a core loop in an Action RPG </figcaption>
   </figure>
 
-## Progression engine
+## Progression Engine
 
 The third step in a core loop is the **progression engine**, which propels players through the experience. Without a progression system, an experience becomes repetitive, boring, and shallow.
 

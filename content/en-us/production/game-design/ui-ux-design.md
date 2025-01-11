@@ -1,5 +1,5 @@
 ---
-title: UI and UX design
+title: UI and UX Design
 description: UI and UX design in Roblox
 ---
 
@@ -171,21 +171,21 @@ These choices are deliberate, aiming to facilitate player comprehension and navi
 
 UX design relates to how players interact with the game, how they make their choices known to the game, and how they move from one choice to the next. Although UX often works hand-in-hand with user interface (UI), it is more focused on interactivity and player experience than the visual and informational design of UI.
 
-### Understanding players
+### Understanding Players
 
 A primary goal of the UX designer is to create interactions and flows that are intuitive, unobtrusive and convenient for players to use. That process starts with an understanding of the players themselves, the intended audience for a game. When identifying players of an experience, consider the following:
 
 - **Demographics:** Demographics help to inform design choices by revealing generalized information about a player group. For example, younger players are generally more likely to play on mobile or tablet devices than personal computers, so games intended for that audience often prioritize designing and polishing the mobile user experience.
 
-- **Experience level:** Developers may choose to design for players with little gaming experience, a significant amount, or somewhere in between. Interactions that are familiar to experienced players, such as tapping a number key to equip an item in a toolbar, or pressing c to crouch, may not be obvious to inexperienced players, and require additional messaging or training.
+- **Experience Level:** Developers may choose to design for players with little gaming experience, a significant amount, or somewhere in between. Interactions that are familiar to experienced players, such as tapping a number key to equip an item in a toolbar, or pressing c to crouch, may not be obvious to inexperienced players, and require additional messaging or training.
 
-- **Genre familiarity:** Similar to general experience level, genre familiarity reflects players' experience level with a specific type of game. Games that fall into popular genres on Roblox, like Roleplay, Survival Horror, and First-Person Shooter, are likely to have many potential players who have played a similar game before. Games in other genres may have fewer experienced players, but that experience gap can be overcome through tutorials and usability.
+- **Genre Familiarity:** Similar to general experience level, genre familiarity reflects players' experience level with a specific type of game. Games that fall into popular genres on Roblox, like Roleplay, Survival Horror, and First-Person Shooter, are likely to have many potential players who have played a similar game before. Games in other genres may have fewer experienced players, but that experience gap can be overcome through tutorials and usability.
 
-- **Gameplay style:** Players often favor specific types of play, ranging from competition and achievement-collecting to exploration and cooperation. These preferences are not only reflected in the game mechanics players prefer but also influence UX decisions. Designers consider which interactions to prioritize, which to polish, and which to present to the players. They also take into account the mindset players will have when they engage with these interactions and the emotions they aim to evoke from them.
+- **Gameplay Style:** Players often favor specific types of play, ranging from competition and achievement-collecting to exploration and cooperation. These preferences are not only reflected in the game mechanics players prefer but also influence UX decisions. Designers consider which interactions to prioritize, which to polish, and which to present to the players. They also take into account the mindset players will have when they engage with these interactions and the emotions they aim to evoke from them.
 
 After considering these factors and selecting a target player group (or groups), get to know them by meeting them, playing with them, and learning about their goals and preferences to better inform design choices.
 
-### Design interactions
+### Designing Interactions
 
 _Interactions_ are features that allow players to experience and communicate their choices in a game. UX designers want those interactions to be intuitive, and require as little explanation as possible. To do this they utilize:
 
@@ -231,7 +231,7 @@ Communication from the game to the player is known as _feedback_. Feedback helps
 
 When feedback is missing or insufficient, players might not know what they've accomplished, understand whether the effects were good or bad, or even know whether the feature they're using is functioning correctly or experiencing bugs.
 
-### Design flows
+### Designing Flows
 
 Multiple interactions are often required for a player to complete a goal. UX designers are concerned with how players navigate from one action or UI screen or choice to the next and make sure that these paths are logical and convenient.
 

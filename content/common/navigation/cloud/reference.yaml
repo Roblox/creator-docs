@@ -1,5 +1,5 @@
 navigation:
-  - heading: Common components
+  - heading: Common Components
   - title: Overview
     path: /cloud/reference/
   - title: Patterns
@@ -10,27 +10,27 @@ navigation:
     path: /cloud/reference/errors
   - title: OAuth 2.0
     path: /cloud/reference/oauth2
-  - title: OpenAPI descriptions
+  - title: OpenAPI Descriptions
     path: /cloud/reference/openapi
-  - heading: v2 resources
+  - heading: v2 Resources
   - title: All Cloud API
     path: /cloud/reference
     type: cloudapi2
     source: /reference/cloud/cloud.docs.json
-  - heading: v1 resources
+  - heading: v1 Resources
   - title: Assets
     type: cloudapi
     versions:
       - name: v1
         path: /reference/cloud/assets/v1
-  - title: Data stores
+  - title: Data Stores
     section:
-      - title: Standard data stores
+      - title: Standard Data Stores
         type: cloudapi
         versions:
           - name: v1
             path: /reference/cloud/datastores-api/v1
-      - title: Ordered data stores
+      - title: Ordered Data Stores
         type: cloudapi
         versions:
           - name: v1
@@ -40,7 +40,7 @@ navigation:
     versions:
       - name: v1
         path: /reference/cloud/messaging-service/v1
-  - title: Place publishing
+  - title: Place Publishing
     type: cloudapi
     versions:
       - name: v1

@@ -1,5 +1,5 @@
 ---
-title: Roblox units
+title: Roblox Units
 description: Explore the physical units used in Roblox and how they convert to metric units.
 ---
 
@@ -9,7 +9,7 @@ This article outlines Roblox physical units and how they convert to metric units
 - Tuning linear/angular velocities, forces, torques, stiffness, and damping of [mechanical constraints](../physics/mechanical-constraints.md) and [mover constraints](../physics/mover-constraints.md).
 - Adjusting the density of [custom materials](../parts/materials.md#custom-materials).
 
-## Unit conversions
+## Unit Conversions
 
 <Tabs>
 <TabItem label="Primary Units">
@@ -42,7 +42,7 @@ In general, you can use the conversions in the following table to relate Roblox'
 </table>
 <figcaption>\* RMU = Roblox Mass Unit</figcaption>
 </TabItem>
-<TabItem label="Derived units">
+<TabItem label="Derived Units">
 The primary units are used to generate conversions for **derived** units such as water density and air pressure at standard conditions. The following physical properties are expressed in metric units and Roblox units, with primary unit equivalents provided in brackets. All conversions have been rounded to three significant figures.
 
 <table size="small">
@@ -127,7 +127,7 @@ The following table illustrates gravitational acceleration in Roblox units and m
 </tbody>
 </table>
 </TabItem>
-<TabItem label="Physical limits">
+<TabItem label="Physical Limits">
 Roblox places limits on certain physical properties, as outlined in the following table. Details on these properties is located in the `Datatype.PhysicalProperties` documentation.
 
 <table size="small">
@@ -169,7 +169,7 @@ Roblox places limits on certain physical properties, as outlined in the followin
 </TabItem>
 </Tabs>
 
-## Importance of unit consistency
+## Importance of Unit Consistency
 
 Internally, the Roblox physics engine does not use unit conversions. You're free to define your own unit interpretations for studs (length) and RMUs (mass), but these should be used in a consistent manner throughout the experience. For example, if you decide that one stud equals one foot (30.483&nbsp;cm), the unit density of water implies an RMU is equal to 62.4&nbsp;lbs (28.3&nbsp;kg):
 

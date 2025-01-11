@@ -1,5 +1,5 @@
 ---
-title: Builder font license
+title: Builder Font License
 description: License for using Roblox's Builder font.
 ---
 

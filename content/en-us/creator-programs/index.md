@@ -1,5 +1,5 @@
 ---
-title: Creator programs
+title: Creator Programs
 description: Roblox offers various programs for creators on the platform to provide additional support and exposure. This page includes programs that are available publicly for creators. Check them out and see what you qualify for.
 hideInPageNavigation: true
 ---

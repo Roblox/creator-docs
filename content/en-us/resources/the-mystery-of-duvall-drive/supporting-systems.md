@@ -1,5 +1,5 @@
 ---
-title: Supporting systems
+title: Supporting Systems
 comments:
 prev: /resources/the-mystery-of-duvall-drive/foundational-gameplay-systems
 description: Explains the supporting systems and functions in The Mystery of Duvall Drive.
@@ -31,7 +31,7 @@ Note that we use `Class.Camera.ViewportPointToRay` or `Class.Camera.ScreenPointT
 
 ThoughtBubbles are overall similar, using a raycast to check if a mesh or its parents have a **ThoughtBubble** tag. It also uses the ThoughtText attribute for text, and a **ThoughtBubble** tag to point to a placeholder object used for positioning the UI in the world. Thought bubbles that use the same positional object but have different text have different cooldowns.
 
-### Special cases
+### Special Cases
 
 Lore has a couple of special cases, one of which is the corrupted seals. When a player clicks a corrupted seal, it displays lore UI, and it waits for a click to start a mission, which affects the game flow. This is handled by the [`GameStateClient`](../../resources/the-mystery-of-duvall-drive/foundational-gameplay-systems.md#gamestatemanager) that uses a bindable `LoreManagerFunc` to request lore UI. A callback is provided to the Lore system by `GameStateClient` to know when lore is "closed" by the player. Another special case is when **ThoughtBubbles** and **Lore** tags are on the same object. In this case, to avoid an overlap of lore and thought bubble text, we run the thought bubble after the lore is closed.
 
@@ -89,7 +89,7 @@ The **PlayerMissionRespawn** script uses a **RespawnVolume** tag and `Class.Coll
 
 When processing `GameEvents.PlayerRespawn`, the script can use `RespawnPositions`, if mission config provides it. If not, it uses `TeleportPositions` for the specific mission. We don't have a "checkpoint" system, so `CalcClosestTeleportPos` just selects closest **Respawn** or **Teleport** spots from where the player hit the `RespawnVolume`, using the only horizontal, "2D" distance.
 
-## Small helper systems
+## Small Helper Systems
 
 ### PianoManager
 
@@ -113,7 +113,7 @@ P1.Touched:Connect(function(otherPart) utils.ProcessPortal(otherPart, P2) end)
 
 **ProcessPortal** handles checking that otherPart is a human, teleporting the player through a `Datatype.CFrame` coordinate change, and invoking a small cutscene to hide the transition using a **Teleport_Jump** event in [**EventManager**](../../resources/the-mystery-of-duvall-drive/foundational-gameplay-systems.md#eventmanager).
 
-### Configuration scripts
+### Configuration Scripts
 
 We have several configuration, data definition, and common functionality scripts:
 

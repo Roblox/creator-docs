@@ -1,5 +1,5 @@
 ---
-title: In-game sounds
+title: In-Game Sounds
 description: The process for creating positional and feedback sounds to enhance an experience.
 ---
 
@@ -7,7 +7,7 @@ In addition to background music, in-game audio can enhance a player's experience
 
 For the first example, you'll create a positional sound for a waterfall. In the second example, a script will be used to play a jingle when players touch a collectable.
 
-## Positional sounds
+## Positional Sounds
 
 When a **Sound** object is parented to a part or attachment, it becomes positional. Audio will emit from its location and grow louder as players get closer, as in the case of this waterfall.
 
@@ -15,7 +15,7 @@ When a **Sound** object is parented to a part or attachment, it becomes position
     <source src="../../../assets/tutorials/in-game-sounds/ingameSounds-waterfall-web.mp4" />
 </video>
 
-### Create a sound
+### Create a Sound
 
 1. In any desired part, create a new **Sound** object named **WaterfallSound**.
 
@@ -38,7 +38,7 @@ When a **Sound** object is parented to a part or attachment, it becomes position
 
 4. Test the game to confirm you hear the waterfall ambience.
 
-### Adjust sound distance
+### Adjust Sound Distance
 
 Notice when testing, the audio plays immediately, even if the player is far away from the object. Using the roll-off properties, you can modify the distance at which a player hears a sound to create fading effects.
 
@@ -56,14 +56,14 @@ Notice when testing, the audio plays immediately, even if the player is far away
    <source src="../../../assets/tutorials/in-game-sounds/ingameSounds-waterfall-web.mp4" />
    </video>
 
-### Fine tune the roll off
+### Fine Tuning the Roll Off
 
 Depending on your needs, you may want to adjust different properties for special effects or increased realism. See the following properties:
 
 - `Class.Sound.RollOffMaxDistance|RollOffMinDistance` - Minimum distance (in studs) a sound decreases in volume.
 - `Class.SoundGroup` - Used to adjust and balance volume between groups of sounds, like background music and in-game effects.
 
-## Feedback sounds
+## Feedback Sounds
 
 Sounds can be played on command using scripts. You can link sounds to events, such as players touching a part or interacting with a menu. Here, you'll create a script that plays a chime whenever players touch collectable objects.
 
@@ -71,7 +71,7 @@ Sounds can be played on command using scripts. You can link sounds to events, su
     <source src="../../../assets/tutorials/in-game-sounds/ingameSounds-collectables.mp4" />
 </video>
 
-### Set up collectables
+### Set Up Collectables
 
 The remainder of this tutorial uses a pre-made model. This model includes parts and scripts so players can collect gemstones.
 
@@ -91,7 +91,7 @@ The remainder of this tutorial uses a pre-made model. This model includes parts 
 
    ![alt](../../../assets/tutorials/in-game-sounds/ingameSounds-createFeedbackSound.png)
 
-### Set up the script
+### Setup the Script
 
 1. In **StarterPlayer** > **StarterPlayerScripts**, create a new local script named **CollectableSounds**.
 
@@ -119,7 +119,7 @@ The remainder of this tutorial uses a pre-made model. This model includes parts 
    end
    ```
 
-### Play a sound
+### Play a Sound
 
 1. Create a variable for **SoundService**, then another variable to store the **feedback sound**.
 

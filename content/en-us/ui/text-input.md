@@ -1,11 +1,11 @@
 ---
-title: Text input fields
+title: Text Input Fields
 description: Text input fields allow users to input text from their physical or on-screen keyboard.
 ---
 
 import TextFiltering from '../includes/text-filtering/text-filtering.md'
 
-A `Class.TextBox` is a rectangle that allows a user to provide text input while it's in focus. When you [script](#script-text-inputs) a `Class.TextBox`, you can use it as a search bar or an input field on a form. To help users know what type of text they should input, you can also provide a prompt through the `Class.TextBox.PlaceholderText|PlaceholderText` property.
+A `Class.TextBox` is a rectangle that allows a user to provide text input while it's in focus. When you [script](#scripting-text-inputs) a `Class.TextBox`, you can use it as a search bar or an input field on a form. To help users know what type of text they should input, you can also provide a prompt through the `Class.TextBox.PlaceholderText|PlaceholderText` property.
 
 <img src="../assets/ui/ui-objects/TextBox-Example.jpg" width="840" />
 
@@ -15,7 +15,7 @@ properties such as `Class.GuiObject.BackgroundColor3|BackgroundColor3`,
 `Class.GuiObject.Transparency|Transparency`, and
 `Class.GuiObject.Rotation|Rotation` to fit the aesthetics of your experience.
 
-## Create text inputs on the screen
+## Creating Text Inputs on the Screen
 
 A `Class.TextBox` on a screen is useful for
 things like an input field for a form.
@@ -34,7 +34,7 @@ To add a `Class.TextBox` to a screen:
 
    1. Insert a **TextBox**.
 
-## Create text inputs on part faces
+## Creating Text Inputs on Part Faces
 
 To add a `Class.TextBox` to the face of a part:
 
@@ -57,10 +57,10 @@ To add a `Class.TextBox` to the face of a part:
    1. In the **Explorer** window, select the part.
 
 <Alert severity="warning">
-  If you don't see the `Class.TextBox`, try [choosing a different face](../parts/textures-decals.md#choose-a-face) in the <b>Face</b> property of the <b>SurfaceGui</b>.
+  If you don't see the `Class.TextBox`, try [choosing a different face](../parts/textures-decals.md#choosing-a-face) in the <b>Face</b> property of the <b>SurfaceGui</b>.
 </Alert>
 
-## Script text inputs
+## Scripting Text Inputs
 
 Like [buttons](../ui/buttons.md), you can script any action for a `Class.TextBox` object when a user interacts with it. For example, the following script connects the `Class.TextBox.FocusLost|FocusLost` event which fires when the user presses the <kbd>Enter</kbd> button or clicks outside the box. If `enterPressed` is `true`, meaning the user submitted the input instead of merely clicking outside the box, the script prints the contents of the entry to the [Output](../studio/output.md) window.
 
@@ -88,6 +88,6 @@ end
 textBox:GetPropertyChangedSignal("Text"):Connect(allowOnlyNumbers)
 ```
 
-## Text filtering
+## Text Filtering
 
 <TextFiltering components={props.components} context="characters/strings that users input through text inputs" />

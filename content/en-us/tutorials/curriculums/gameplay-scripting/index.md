@@ -1,7 +1,7 @@
 ---
-title: Gameplay scripting curriculum
+title: Gameplay Scripting Curriculum
 description: //
-next: /tutorials/curriculums/gameplay-scripting/create-teams
+next: /tutorials/curriculums/gameplay-scripting/creating-teams
 hideInPageNavigation: true
 hideBreadcrumbs: true
 ---
@@ -39,10 +39,10 @@ data model, and the client-server relationship. If you need help learning how to
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="h4">Chapter 1 - Create teams</Typography>
+<Typography variant="h4">Chapter 1 - Creating Teams</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Learn how to [sort players into teams](create-teams.md) when a round is active.
+Learn how to [sort players into teams](creating-teams.md) when a round is active.
 </AccordionDetails>
 </BaseAccordion>
 
@@ -50,7 +50,7 @@ Learn how to [sort players into teams](create-teams.md) when a round is active.
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="h4">Chapter 2 - Spawn and respawn</Typography>
+<Typography variant="h4">Chapter 2 - Spawning and Respawning</Typography>
 </AccordionSummary>
 <AccordionDetails>
 Learn how to [trigger unique actions](spawn-respawn.md) when players spawn and respawn back into a round.
@@ -61,10 +61,10 @@ Learn how to [trigger unique actions](spawn-respawn.md) when players spawn and r
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="h4">Chapter 3 - Add rounds</Typography>
+<Typography variant="h4">Chapter 3 - Adding Rounds</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Learn how to [implement rounds](add-rounds.md) that track points, display final results, and reset teams.
+Learn how to [implement rounds](adding-rounds.md) that track points, display final results, and reset teams.
 </AccordionDetails>
 </BaseAccordion>
 
@@ -72,10 +72,10 @@ Learn how to [implement rounds](add-rounds.md) that track points, display final 
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="h4">Chapter 4 - Implement blasters</Typography>
+<Typography variant="h4">Chapter 4 - Implementing Blasters</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Learn how to [script blast behavior](implement-blasters.md) for two different blaster types.
+Learn how to [script blast behavior](implementing-blasters.md) for two different blaster types.
 </AccordionDetails>
 </BaseAccordion>
 
@@ -83,10 +83,10 @@ Learn how to [script blast behavior](implement-blasters.md) for two different bl
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="h4">Chapter 5 - Detect hits</Typography>
+<Typography variant="h4">Chapter 5 - Detecting Hits</Typography>
 </AccordionSummary>
 <AccordionDetails>
-Learn how to [perform hit detection](detect-hits.md) from blast data, and allocate damage to reduce player health.
+Learn how to [perform hit detection](detecting-hits.md) from blast data, and allocate damage to reduce player health.
 </AccordionDetails>
 </BaseAccordion>
 

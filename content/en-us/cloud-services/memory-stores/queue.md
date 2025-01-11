@@ -1,5 +1,5 @@
 ---
-title: Memory store queue
+title: Memory Store Queue
 description: Explains how to implement the queue data structure for memory stores.
 ---
 
@@ -7,7 +7,7 @@ A **queue** is a linear data structure with a collection of items that either fo
 
 Memory store queues are useful for order-based processing and storing user information, such as skill levels, to facilitate matchmaking based on your desired criteria. For example, you can add a lobby place as the start place of your experience, use memory store queues as a centralized user information storage system accessible by multiple servers, manage the placement order of users using the queues, and teleport user who have completed the matchmaking to the main place of your experience.
 
-## Get a queue
+## Getting a Queue
 
 To get a queue, call `Class.MemoryStoreService:GetQueue()` with a **name**, which is global within the experience for any script to access, and an optional **invisibility timeout** in seconds, which prevents duplicated processing of the same queue item. Invisibility timeout is 30 seconds by default if you leave it empty like the following code sample.
 
@@ -31,15 +31,15 @@ After you get a queue, call any of the following functions to read or write data
 <tbody>
   <tr>
     <td>`Class.MemoryStoreQueue:AddAsync()`</td>
-    <td>[Add](#add-data) a new item to the queue.</td>
+    <td>[Add](#adding-data) a new item to the queue.</td>
   </tr>
   <tr>
     <td>`Class.MemoryStoreQueue:ReadAsync()`</td>
-    <td>[Read](#read-and-remove-data) one or more items from the queue as a single operation.</td>
+    <td>[Read](#reading-and-removing-data) one or more items from the queue as a single operation.</td>
   </tr>
   <tr>
     <td>`Class.MemoryStoreQueue:RemoveAsync()`</td>
-    <td>[Remove](#read-and-remove-data) one or more items previously read from the queue.</td>
+    <td>[Remove](#reading-and-removing-data) one or more items previously read from the queue.</td>
   </tr>
 </tbody>
 </table>
@@ -48,7 +48,7 @@ After you get a queue, call any of the following functions to read or write data
 All functions accessing data structures in memory stores are asynchronous network calls that might occasionally fail. You should wrap these calls in `Global.LuaGlobals.pcall()` to catch and handle errors, like the code sample in each section shows.
 </Alert>
 
-## Add data
+## Adding Data
 
 To add a new item to the queue, call `Class.MemoryStoreQueue:AddAsync()` with the item value, an expiration time in seconds, and an optional priority of the item. If you want to keep your queue in the FIFO sequence, you can leave the priority empty or pass `0`.
 
@@ -65,7 +65,7 @@ if not addSuccess then
 end
 ```
 
-## Read and remove data
+## Reading and Removing Data
 
 To read one or more items from the queue at once, call `Class.MemoryStoreQueue:ReadAsync()`, which returns an `id` representing the read item. When you finish processing items, immediately call `Class.MemoryStoreQueue:RemoveAsync()` to delete them from the queue with its `id`. This ensures that you never process an item more than once. To capture and respond to all items that are continuously being added to a queue, include a [loop](../../luau/control-structures.md) like the following code sample:
 

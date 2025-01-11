@@ -1,5 +1,5 @@
 navigation:
-  - title: Get started
+  - title: Getting Started
     path: /avatar/
 
   - heading: Accessories
@@ -8,11 +8,11 @@ navigation:
     path: /art/accessories/
   - title: Specifications
     path: /art/accessories/specifications
-  - title: Body scale
+  - title: Body Scale
     path: /art/accessories/body-scale
-  - title: Export settings
+  - title: Export Settings
     path: /art/accessories/export-settings
-  - title: Import into Studio
+  - title: Importing into Studio
     path: /art/accessories/importing
 
   - heading: Clothing
@@ -21,15 +21,15 @@ navigation:
     path: /art/accessories/layered-clothing
   - title: Specifications
     path: /art/accessories/clothing-specifications
-  - title: Reference files
+  - title: Reference Files
     path: /art/accessories/project-files
-  - title: Caging best practices
+  - title: Caging Best Practices
     path: /art/accessories/caging-best-practices
-  - title: Export settings
+  - title: Export Settings
     path: /art/accessories/clothing-export-settings
-  - title: Import into Studio
-    path: /art/accessories/import-clothing
-  - title: Classic clothing
+  - title: Importing into Studio
+    path: /art/accessories/importing-clothing
+  - title: Classic Clothing
     path: /art/accessories/classic-clothing
 
   - heading: Characters
@@ -37,63 +37,63 @@ navigation:
     path: /art/characters/
   - title: Specifications
     path: /art/characters/specifications
-  - title: Reference files
+  - title: Reference Files
     path: /art/characters/project-files
-  - title: Export settings
+  - title: Export Settings
     path: /art/characters/export-settings
-  - title: Import into Studio
-    path: /art/characters/import
+  - title: Importing into Studio
+    path: /art/characters/importing
   - title: Heads
     path: /art/characters/facial-animation/
     section:
       - title: Overview
         path: /art/characters/facial-animation/
-      - title: Use heads in Studio
-        path: /art/characters/facial-animation/use-heads-in-studio
-      - title: Animate heads
-        path: /art/characters/facial-animation/animate-heads
+      - title: Using Heads in Studio
+        path: /art/characters/facial-animation/using-heads-in-studio
+      - title: Animating Heads
+        path: /art/characters/facial-animation/animating-heads
       - title: Moods
         path: /art/characters/facial-animation/moods
-      - title: FACS poses reference
+      - title: FACS Poses Reference
         path: /art/characters/facial-animation/facs-poses-reference
 
-  - heading: Publish and sell
-  - title: Marketplace overview
+  - heading: Publishing and Selling
+  - title: Marketplace Overview
     path: /marketplace/
-  - title: Policies and guidelines
+  - title: Policies and Guidelines
     path: /marketplace/marketplace-policy
     section:
-      - title: Marketplace policy
+      - title: Marketplace Policy
         path: /marketplace/marketplace-policy
-      - title: Intellectual property
+      - title: Intellectual Property
         path: /marketplace/intellectual-property
       - title: Moderation
         path: /marketplace/moderation
-  - title: Upload and publish
-    path: /marketplace/publish-to-marketplace
-  - title: Marketplace fees and commissions
+  - title: Uploading and Publishing
+    path: /marketplace/publishing-to-marketplace
+  - title: Marketplace Fees and Commissions
     path: /marketplace/marketplace-fees-and-commissions
   - title: UGC Homestore
     path: /marketplace/homestore
-  - title: Frequently asked questions
+  - title: Frequently Asked Questions
     path: /marketplace/frequently-asked-questions
 
-  - heading: Studio tools
+  - heading: Studio Tools
   - title: 3D Importer
     path: /art/modeling/3d-importer
-  - title: Accessory Fitting tool
+  - title: Accessory Fitting Tool
     path: /art/accessories/accessory-fitting-tool
   - title: Avatar Setup
     path: /art/modeling/avatar-setup
-  - title: Automatic Skinning Transfer
+  - title: Automatic Skinning
     path: /art/accessories/automatic-skinning-transfer
-  - title: Custom thumbnails
+  - title: Custom Thumbnails
     path: /marketplace/custom-thumbnails
 
-  - heading: Third party add-ons
-  - title: Roblox Blender plugin
+  - heading: Third Party Add-ons
+  - title: Roblox Blender Plugin
     path: /art/modeling/roblox-blender-plugin
   - title: Calisthenics Tool
     path: /art/modeling/calisthenics-tool
-  - title: Clothing Validation Tool
+  - title: Validation Tool
     path: /art/accessories/validation-tool

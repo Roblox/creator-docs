@@ -4,7 +4,7 @@ description: RodConstraint keeps two attachments separated by a defined length, 
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.RodConstraint`, see [Mechanical constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.RodConstraint`, see [Mechanical Constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;Units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 A `Class.RodConstraint` keeps two attachments separated by its defined `Class.RodConstraint.Length|Length`. By default, both attachments can rotate freely, although you can enable limits to restrict rotational tilt.

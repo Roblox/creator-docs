@@ -1,5 +1,5 @@
 ---
-title: Texture painting
+title: Texture Painting
 description: Use Blender's Texture Painting tools to apply a surface appearance to your clothing item.
 prev: /art/accessories/creating/texture-map
 next: /art/accessories/creating/armature-setup

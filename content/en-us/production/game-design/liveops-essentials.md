@@ -1,5 +1,5 @@
 ---
-title: LiveOps essentials
+title: LiveOps Essentials
 description: LiveOps Essentials is an overview of what live ops are and how to think about designing them effectively.
 ---
 
@@ -16,7 +16,7 @@ description: LiveOps Essentials is an overview of what live ops are and how to t
 
 Without LiveOps updates, even dedicated players lose interest. After completing all challenges and consuming all content, they grow bored. A blend of LiveOps updates following [best practices](#best-practices) keeps the game fresh and engaging.
 
-## Content cadence
+## Content Cadence
 
 **Content cadence**, the regular release of new content in a live game, varies based on developers' capabilities, ranging from weekly to monthly releases. These frequent introductions of fresh content aim to keep players engaged between major updates.
 
@@ -39,9 +39,9 @@ When choosing content for cadence releases, look at art assets that support curr
 
 Each game has a unique content cadence, based on its specific systems, player preferences, and developer capabilities. Striking a balance between player desires and what developers can reliably deliver is crucial.
 
-For a more in-depth discussion of the design and production of content releases, see [Content updates](../../production/game-design/content-updates.md).
+For a more in-depth discussion of the design and production of content releases, see [Content Updates](../../production/game-design/content-updates.md).
 
-## Major updates
+## Major Updates
 
 Unlike content cadences, which involve artists creating content to support existing systems, major updates engage artists, designers, and programmers to provide new or expanded systems that alters the gameplay experience.
 
@@ -60,7 +60,7 @@ Major updates aim to introduce new, permanent systems that evolve gameplay and b
 
 - Live Events: Large, time-limited events aimed at attracting new players and re-engaging lapsed ones through a game shakeup, such as map overhauls or new player roles.
 
-## Quality of life improvements
+## Quality of Life Improvements
 
 While content cadence and major updates introduce new content and systems into the game, quality of life (QoL) updates involve polishing the existing experience, making it more usable and enjoyable for players. Although typically smaller than other update types, QoL updates can have an outsized impact on the gameplay experience, and contribute significantly to player goodwill.
 
@@ -81,7 +81,7 @@ Quality of life updates may be released as needed, or as developers find time be
 
 To identify high-value opportunities for quality of life updates, gather player feedback about common frustrations and time sinks. Developers may also have their own wishlists of improvements to consider.
 
-## Bug fixes
+## Bug Fixes
 
 Bug fix updates address implementation issues and ensure that the game is functioning as intended. Bugs can range from minor issues that do not impact gameplay, like typos in non-critical text, to major problems that completely shut down the game.
 
@@ -92,7 +92,7 @@ Bug fix updates address implementation issues and ensure that the game is functi
 
 When prioritizing bugs to work on, consider their severity (how drastically they impact the gameplay experience), how much time and effort they require to fix, and the number of players impacted.
 
-## Best practices
+## Best Practices
 
 Consider doing the following when deciding the type, content, and frequency of your LiveOps updates:
 
@@ -100,7 +100,7 @@ Consider doing the following when deciding the type, content, and frequency of y
 - Improving gameplay
 - Prioritizing mental health
 
-<h4>Listening to players</h4>
+<h4>Listening to Players</h4>
 
 Although the developers are the ultimate vision-holders, players are a good source of insight for growing and improving a game. When determining the next update, consider:
 
@@ -109,7 +109,7 @@ Although the developers are the ultimate vision-holders, players are a good sour
 
 Game groups and social media like Guilded allow developers to connect with players and gather their feedback. Even more important than players' specific suggestions is the reasoning behind them. Often, the gap that they are trying to fill can be addressed in other creative ways that achieve both the players' and developers' goals.
 
-<h4>Improving gameplay</h4>
+<h4>Improving Gameplay</h4>
 
 LiveOps updates are also the developers' opportunity to augment and improve their game. They can identify high-value updates by asking:
 
@@ -124,7 +124,7 @@ Analytics provide valuable insights into player behavior and game health, and ma
 - What new features and content inspire them?
 - What are their capabilities?
 
-<h4>Prioritize mental health</h4>
+<h4>Prioritizing Mental Health</h4>
 
 Supporting a live game may at times feel like a grind. It is important for developers to take the time to work on features and content that inspire them, so they remain fulfilled by their work and excited about the game's future.
 

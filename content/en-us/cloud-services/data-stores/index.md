@@ -1,5 +1,5 @@
 ---
-title: Data stores
+title: Data Stores
 description: How to implement data stores to store persistent data.
 comments: The Creator Hub links to some of the anchors on this page, so if you move any of the headers, the team might need to update the links.
 ---
@@ -10,17 +10,17 @@ If you want to add granular permission control to your data stores and access th
 
 For temporary data that you need to update or access frequently, use [memory stores](./../memory-stores/index.md).
 
-## Enable Studio access
+## Enabling Studio Access
 
 By default, experiences tested in Studio can't access data stores, so you must first enable them. Accessing data stores in Studio can be dangerous for live experiences because Studio accesses the same data stores as the client application. To avoid overwriting production data, do not enable this setting for live experiences. Instead, enable it for a separate test version of the experience.
 
-To enable Studio access in a [published](../../production/publishing/publish-experiences-and-places.md) experience:
+To enable Studio access in a [published](../../production/publishing/publishing-experiences-and-places.md) experience:
 
 1. Go to **Home** > **Game Settings** > **Security**.
 2. Enable the **Enable Studio Access to API Services** toggle.
 3. Click **Save**.
 
-## Access data stores
+## Accessing Data Stores
 
 To access a data store inside an experience:
 
@@ -37,14 +37,14 @@ local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
   The server can only access data stores through `Class.Script|Scripts`. Attempting client-side access in a `Class.LocalScript` causes an error.
 </Alert>
 
-## Create data
+## Creating Data
 
 A data store is essentially a dictionary, similar to a Lua table. A unique **key** indexes each value in the data store, like a user's unique `Class.Player.UserId` or a named string for an experience promo.
 
 <table>
 <thead>
   <tr>
-    <th>**User data key**</th>
+    <th>**User Data Key**</th>
     <th>**Value**</th>
   </tr>
 </thead>
@@ -64,7 +64,7 @@ A data store is essentially a dictionary, similar to a Lua table. A unique **key
 </tbody>
 <thead>
   <tr>
-    <th>**Promo data key**</th>
+    <th>**Promo Data Key**</th>
     <th>**Value**</th>
   </tr>
 </thead>
@@ -103,7 +103,7 @@ end
   Functions like `Class.GlobalDataStore:SetAsync()|SetAsync()` that access a data store's contents are network calls that might occasionally fail. To catch and handle errors, make sure to wrap these calls in `Global.LuaGlobals.pcall()`.
 </Alert>
 
-## Update data
+## Updating Data
 
 To change any stored value in a data store, call `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` with the entry's key name and a callback function that defines how you want to update the entry. This callback takes the current value and returns a new value based on the logic you define. If the callback returns `nil`, the write operation is cancelled and the value isn't updated.
 
@@ -129,7 +129,7 @@ if success then
 end
 ```
 
-### Set vs update
+### Set vs Update
 
 Use set to quickly update a specific key. The `Class.GlobalDataStore:SetAsync()|SetAsync()` function:
 
@@ -142,7 +142,7 @@ Use update to handle multi-server attempts. The `Class.GlobalDataStore:UpdateAsy
 - Is slower because it reads before it writes
 - Counts against both the read and write limits
 
-## Read data
+## Reading Data
 
 To read the value of a data store entry, call `Class.GlobalDataStore:GetAsync()|GetAsync()` with the entry's key name.
 
@@ -160,10 +160,10 @@ end
 ```
 
 <Alert severity="warning">
-  The values you retrieve using `Class.GlobalDataStore:GetAsync()|GetAsync()` sometimes can be out of sync with the backend due to the [caching](../../cloud-services/data-stores/manage-data-stores.md#caching) behavior. For more information, see [Disabling Caching](../../cloud-services/data-stores/manage-data-stores.md#disable-caching).
+  The values you retrieve using `Class.GlobalDataStore:GetAsync()|GetAsync()` sometimes can be out of sync with the backend due to the [caching](../../cloud-services/data-stores/managing-data-stores.md#caching) behavior. For more information, see [Disabling Caching](../../cloud-services/data-stores/managing-data-stores.md#disabling-caching).
 </Alert>
 
-## Increment data
+## Incrementing Data
 
 To increment an integer in a data store, call `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()` with the entry's key name and a number for how much to change the value. `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()` is a convenience function that lets you avoid calling `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()` and manually incrementing the integer.
 
@@ -180,7 +180,7 @@ if success then
 end
 ```
 
-## Remove data
+## Removing Data
 
 To remove an entry and return the value associated with the key, call `Class.GlobalDataStore:RemoveAsync()|RemoveAsync()`.
 
@@ -288,9 +288,9 @@ To manage metadata, expand the `Class.GlobalDataStore:SetAsync()|SetAsync()`, `C
   When calling `Class.GlobalDataStore:SetAsync()|SetAsync()`, `Class.GlobalDataStore:IncrementAsync()|IncrementAsync()`, and `Class.GlobalDataStore:UpdateAsync()|UpdateAsync()`, you must always update metadata definitions with a value, even when there are no changes to the current value. If you don't, you lose the current value.
 </Alert>
 
-For limits when defining metadata, see the [metadata limits](../../cloud-services/data-stores/error-codes-and-limits.md#metadata-limits).
+For limits when defining metadata, see [Metadata Limits](../../cloud-services/data-stores/error-codes-and-limits.md#metadata-limits).
 
-## Ordered data stores
+## Ordered Data Stores
 
 By default, data stores don't sort their content. If you need to get data in an ordered way, like in persistent leaderboard stats, call `Class.DataStoreService:GetOrderedDataStore()|GetOrderedDataStore()` instead of `Class.DataStoreService:GetDataStore()|GetDataStore()`.
 

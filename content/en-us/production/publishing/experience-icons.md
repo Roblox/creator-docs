@@ -1,5 +1,5 @@
 ---
-title: Icons
+title: Experience Icons
 description: Icons are an important factor in helping users recognize your experience and grow its brand.
 ---
 
@@ -20,13 +20,13 @@ A high-quality **icon**, in addition to a showcase [thumbnail](../promotion/thum
   </figure>
 </GridContainer>
 
-When you [publish an experience](../../production/publishing/publish-experiences-and-places.md) for the first time, an icon is automatically generated from a collection of default images. While you can only display one icon per [locale](../../production/localization/index.md), you can also include supplementary [image and video thumbnails](../../production/promotion/thumbnails.md) that further promote the experience.
+When you [publish an experience](../../production/publishing/publishing-experiences-and-places.md) for the first time, an icon is automatically generated from a collection of default images. While you can only display one icon per [locale](../../production/localization/index.md), you can also include supplementary [image and video thumbnails](../../production/promotion/thumbnails.md) that further promote the experience.
 
-For more information on maximizing the impact of your experience's icon, see [best practices](#best-practices).
+For more information on maximizing the impact of your experience's icon, see [Best Practices](#best-practices).
 
-## Upload icons
+## Uploading Icons
 
-To ensure your experience's icon always displays in high resolution and with an ideal aspect ratio, use a template of **512×512 pixels**. In some places on the Roblox site and app, icons scale down to smaller sizes like 150×150 pixels, so it's recommended that you preview an icon at smaller sizes to confirm its details remain clear. In addition, see [best&nbsp;practices](#best-practices) for tips on icon format and design.
+To ensure your experience's icon always displays in high resolution and with an ideal aspect ratio, use a template of **512×512 pixels**. In some places on the Roblox site and app, icons scale down to smaller sizes like 150×150 pixels, so it's recommended that you preview an icon at smaller sizes to confirm its details remain clear. In addition, see [Best&nbsp;Practices](#best-practices) for tips on icon format and design.
 
 To upload an experience icon:
 
@@ -48,11 +48,11 @@ To upload an experience icon:
 
 1. If the preview icon appears as you expect, click **Save Changes**.
 
-## Best practices
+## Best Practices
 
 To create the most positive impact for users looking to play your experience, consider the following best practices.
 
-### Quality and aspect ratio
+### Quality and Aspect Ratio
 
 When you upload an icon image, it should be **square** and at least **512×512 pixels** so that it always displays in high resolution and at an ideal aspect ratio across the Roblox site and app.
 
@@ -77,7 +77,7 @@ When you upload an icon image, it should be **square** and at least **512×512 p
   </figure>
 </GridContainer>
 
-### Relevant content
+### Relevant Content
 
 An icon will have a higher impact if it's unique and provides relevant imagery on what users should expect when they join the experience. Icons with ambiguous graphics may lead to unnecessary confusion.
 
@@ -102,7 +102,7 @@ An icon will have a higher impact if it's unique and provides relevant imagery o
   </figure>
 </GridContainer>
 
-### Color and contrast
+### Color and Contrast
 
 You can express your experience's theme through color and contrast to help users decide if it's suitable and appealing to them.
 

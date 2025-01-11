@@ -7,14 +7,14 @@ A `Class.Trail` is an object that creates a trail between and behind two `Class.
 
 <video src="../assets/lighting-and-effects/trail/Showcase.mp4" controls width="100%"></video>
 
-After you [create a trail](#create-trails), you can:
+After you [create a trail](#creating-a-trail), you can:
 
 - Add a [texture](#texture) to create interesting visuals.
 - Set a constant or gradient [color](#color) and/or [transparency](#transparency).
 - Modify a trail's [lifetime](#lifetime).
 - Specify the texture's [length and mode](#texture-lengthmode) to affect how it scales, repeats, and moves along with the trail's attachments.
 
-## Create trails
+## Creating a Trail
 
 Before you begin to create a trail, it's useful to toggle on visibility of attachments so you can more easily discern how their spacing affects the trail's width.
 
@@ -43,14 +43,14 @@ To create a trail on a part:
    3. Back in the **Properties** window, select the **Attachment1** property. Your cursor changes.
    4. In the **Explorer** window, select the second attachment you created.
 
-3. Using the [Move](../parts/index.md#move) tool, position both attachments within the part according to how wide you want the trail to be.
+3. Using the [Move](../parts/index.md#moving) tool, position both attachments within the part according to how wide you want the trail to be.
 4. To see the trail, move the part in any direction and the trail follows.
 
 <Alert severity="warning">
 Trails require attachments to function properly. If you remove either `Class.Attachment` object from step 2, the trail stops rendering its texture.
 </Alert>
 
-## Customize trails
+## Customizing Trails
 
 By experimenting with the following properties, you can customize a trail's visual appearance to make unique gameplay elements like wind gusts, sword slashes, and tire marks from fast cars.
 
@@ -60,7 +60,7 @@ The visual quality of your trails can change depending on the graphics settings 
 
 ### Texture
 
-The `Class.Trail.Texture|Texture` property renders a texture across the length of the trail. You can set a trail's `Class.Trail.Texture|Texture` property to any asset ID. For more information, including how to add or import your own textures, see [Import assets](../projects/assets/manager.md#import-assets).
+The `Class.Trail.Texture|Texture` property renders a texture across the length of the trail. You can set a trail's `Class.Trail.Texture|Texture` property to any asset ID. For more information, including how to add or import your own textures, see [Importing Assets](../projects/assets/manager.md#importing-assets).
 
 <video src="../assets/lighting-and-effects/trail/Textures.mp4" controls width="800"></video>
 
@@ -161,7 +161,7 @@ appearance.
 <figcaption>Trail with lifetime of 0.5 (left) vs. trail with lifetime of 3.0 (right)</figcaption>
 </figure>
 
-### Texture length/mode
+### Texture Length/Mode
 
 A trail's `Class.Trail.TextureLength|TextureLength` and `Class.Trail.TextureMode|TextureMode` determine how its [texture](#texture) scales, repeats, and moves along with the trail's attachments.
 

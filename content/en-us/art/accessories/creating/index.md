@@ -1,5 +1,5 @@
 ---
-title: Basic clothing creation
+title: Basic Clothing Creation
 description: This tutorial covers the basic steps required in Blender to Studio-ready clothing assets from scratch.
 next: /art/accessories/creating/modeling-setup
 ---

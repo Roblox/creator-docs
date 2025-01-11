@@ -1,11 +1,11 @@
 ---
-title: Open Cloud error handling
+title: Open Cloud Error Handling
 description: Explains the error model of Open Cloud web APIs.
 ---
 
 To handle error responses properly, you need to understand the error model shared by all Open Cloud endpoints.
 
-## Error model
+## Error Model
 
 All standard data stores error responses have the same format, which includes:
 
@@ -41,14 +41,14 @@ All ordered data stores error responses have the same format, which includes:
 
 The `code` will contain a string of the high-level error while the `message` will contain specific details related to the error
 
-## Error codes
+## Error Codes
 
 Reference the following table for a summary of all high-level Open Cloud errors.
 
 <table>
   <thead>
     <tr>
-      <th>HTTP status code</th>
+      <th>HTTP Status Code</th>
       <th>Error</th>
       <th>Descriptions</th>
     </tr>

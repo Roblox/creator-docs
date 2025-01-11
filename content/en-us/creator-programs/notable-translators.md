@@ -20,7 +20,7 @@ The Notable Translators Program (Pilot) aims to give more visibility to dedicate
 - Have a Roblox account that is at least 2 months old
 - Have native or near-native language proficiency in the language you're testing for
 
-## How to participate
+## How to Participate
 
 Please use one of the links below to take the translation test. Only one submission per candidate.
 

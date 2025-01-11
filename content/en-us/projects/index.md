@@ -7,18 +7,18 @@ A Roblox project is a collection of [places](#places), [assets](#assets), [setti
 
 ## Places
 
-Experiences on Roblox are made up of individual **places**, comparable to scenes in Unity or maps in Unreal Engine. Each place contains all components for that portion of the experience, including its specific environment, parts, meshes, scripts, and user interface. See [Experiences and places](../production/publishing/publish-experiences-and-places.md) for details on creating and managing experiences.
+Experiences on Roblox are made up of individual **places**, comparable to scenes in Unity or maps in Unreal Engine. Each place contains all components for that portion of the experience, including its specific environment, parts, meshes, scripts, and user interface. See [Experiences and Places](../production/publishing/publishing-experiences-and-places.md) for details on creating and managing experiences.
 
 <figure>
 <img src="../assets/publishing/experiences-places-assets/Experience-Hierarchy.png" alt="An experience grouping of three individual places with unique environments." width="800" />
 </figure>
 
-Every place is represented by a **data model**, a hierarchy of objects that describe everything about the place. The Roblox Engine uses the data model as a source of truth for a place's state, so it can simulate and render it on client devices. For more information on how the engine interprets the data model, see [Client-server runtime](../projects/client-server.md).
+Every place is represented by a **data model**, a hierarchy of objects that describe everything about the place. The Roblox engine uses the data model as a source of truth for a place's state, so it can simulate and render it on client devices. For more information on how the Roblox engine interprets the data model, see [Client-Server Runtime](../projects/client-server.md).
 
 Proper, intentional object organization within the data model is essential for
 functionality and maintenance of your project. For more information on what
 objects are available and how to organize and use them, see
-[Data model](../projects/data-model.md).
+[Data Model](../projects/data-model.md).
 
 ## Assets
 
@@ -57,7 +57,7 @@ Experience settings are managed from the [Creator Dashboard](https://create.robl
 
 - **Basic Info** &mdash; Basic information about the experience, such as its name, description, and genre. Much of the information here is used in your experience's listing.
 - **Communication** &mdash; Settings which enable eligible users to use [voice chat](../chat/voice-chat.md) or animate their avatar via their camera within your experience.
-- **Permissions** &mdash; Configures who can access your experience. New experiences begin as **private** and can only be edited and joined by you and members of your [group](../projects/groups.md) with the correct permissions. When appropriate, you can [release](../production/publishing/publish-experiences-and-places.md#release-to-the-public) the experience to the public.
+- **Permissions** &mdash; Configures who can access your experience. New experiences begin as **private** and can only be edited and joined by you and members of your [group](../projects/groups.md) with the correct permissions. When appropriate, you can [release](../production/publishing/publishing-experiences-and-places.md#releasing-to-the-public) the experience to the public.
 - **Monetization** &mdash; Options for earning revenue from your experience, as outlined in [Monetization](../production/monetization/index.md).
 - **Localization** &mdash; Configuration for different [languages and regions](../production/localization/index.md).
 - **Avatar** &mdash; Settings related to avatars, such as avatar scaling and
@@ -93,4 +93,4 @@ Studio offers a suite of options for testing an experience before releasing it t
   device or how on-screen UI displays on different screens and aspect ratios.
 - **Collaborative playtesting** with members of your team.
 
-For more information on each testing option, see [Studio testing modes](../studio/testing-modes.md).
+For more information on each testing option, see [Studio Testing Modes](../studio/testing-modes.md).

@@ -1,7 +1,7 @@
 ---
-title: Intro to module scripts
+title: Intro to Module Scripts
 description: Learn key concepts around organizing and reusing code in Roblox with modular scripts.
-next: /tutorials/fundamentals/coding-6/create-with-module-scripts
+next: /tutorials/fundamentals/coding-6/creating-with-module-scripts
 prev: /tutorials/fundamentals/coding-6/landing
 ---
 
@@ -15,11 +15,11 @@ By storing commonly used code in module scripts, it makes maintaining and organi
 Normal scripts should be used for standalone elements of a game, such as touching a pickup, while module scripts are useful for storing code that can be reused by multiple independent scripts, like rewarding points.
 </Alert>
 
-## Module script basics
+## Module Script Basics
 
 Module scripts are actually their own separate object compared to script objects. In Roblox, module scripts can be denoted with a **purple** icon.
 
-### Create a module script
+### Creating a Module Script
 
 ModuleScripts are commonly placed in **ServerScriptService** when used by server-side scripts and **ReplicatedStorage** when used by client-side local scripts (such as GUI interactions).
 
@@ -27,7 +27,7 @@ ModuleScripts are commonly placed in **ServerScriptService** when used by server
 
 <img src="../../../assets/education/coding-6/intro-to-module-scripts/create-module-script.png" width="50%" />
 
-### Structure of module scripts
+### Structure of Module Scripts
 
 When created, every module script starts out with the code below:
 
@@ -47,7 +47,7 @@ return RewardManager
 
 So other scripts can use a module's non-local functions or variables, every module ends with return `MyModule`. Whenever another script tries to get code from the module, return lets that script access code stored inside the module table.
 
-### Add to module scripts
+### Adding to Module Scripts
 
 To add a function or variable to the module which can be used in another script, type the module table's name, followed by a dot, and the name of the function or variable, like in `TestModule.myVariable`. Using the dot operator is another way of adding code into a table, allowing other scripts to access that code whenever the module table is returned.
 
@@ -69,7 +69,7 @@ return TestModule
 Anything added to the module table should be typed between `local MyModule = {}` and `return MyModule`, or else the code may create an error.
 </Alert>
 
-### Scope in module scripts
+### Scope in Module Scripts
 
 For a module function or variable to be used in an outside script, **don't** type `local`.
 
@@ -99,7 +99,7 @@ end
 return RewardManager
 ```
 
-## Use modules in other scripts
+## Using Modules In Others Scripts
 
 By itself, a module script can't run code — it needs to be loaded in another script using the keyword `Global.LuaGlobals.require()`. The function `Global.LuaGlobals.require()` accepts one argument, the location of the module script in the Explorer.
 
@@ -117,7 +117,7 @@ local MyModule = require(ServerStorage.ModuleScript)
 MyModule.myFunction()
 ```
 
-## RewardManager example
+## RewardManager Example
 
 ```lua title="ModuleScript - RewardManager"
 local RewardManager = {}
@@ -156,7 +156,7 @@ print("Should award " .. coins .. " coins")
 If you're in another script, make sure that the module script function or variable is spelled **exactly** the same as found in that module. To help, you can copy the exact function or variable name from the module and then just paste it in the normal script where it'll be used.
 </Alert>
 
-## General troubleshooting
+## General Troubleshooting
 
 Some of the tips here address common issues when working with module scripts. Keep in mind that module scripts can be a complicated topic with more nuance. For more details, see this more technical guide on [Module Scripts](../../../scripting/module.md).
 
