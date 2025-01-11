@@ -1,5 +1,5 @@
 ---
-title: Building system
+title: Building System
 comments:
 description: Explains the process of creating a building system in the Battle Royale kit.
 prev: /resources/battle-royale/pickup-system
@@ -18,7 +18,7 @@ To maintain an orderly and structured system:
 - Each tile must connect to another existing tile or to the ground.
 - Place all building tiles within a grid coordinated with the game world so that tiles connect properly and do not overlap.
 
-## Tile composition
+## Tile Composition
 
 In order for users to build new tiles quickly and easily, the building system needs to understand which tiles are connected to each other and where new tiles can be placed on the grid.
 
@@ -38,7 +38,7 @@ Ensuring that a tile occupies the correct location in a grid system is important
 <table>
 <thead>
   <tr>
-    <th>Bit index</th>
+    <th>Bit Index</th>
     <th>Meaning</th>
   </tr>
 </thead>
@@ -113,7 +113,7 @@ width="75%" />
 
 A building system object is considered connected to another building system object in the grid if they share at least 2 connectivity points on the surface of a cell.
 
-## Create new tile types
+## Creating New Tile Types
 
 To create a new tile type:
 
@@ -141,7 +141,7 @@ ObjectTypeConfigurations.Wall = {
 }
 ```
 
-## Work with terrain
+## Working With Terrain
 
 If you would like to create a map with free-form [terrain](../../parts/terrain.md) that lines up perfectly with the building system, we recommend that you use the **heightmap import** system as outlined in [Environmental Terrain](../../parts/terrain.md) and that you observe the following details:
 

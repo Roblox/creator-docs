@@ -1,75 +1,75 @@
 navigation:
-  - title: 3D art overview
+  - title: 3D Art Overview
     path: /art/
 
-  - heading: Get started
+  - heading: Getting Started
   - title: Studio
     path: /art/overview-studio
-  - title: Third-party software
+  - title: Third-Party Software
     path: /art/overview-dcc
 
   - heading: Modeling
   - title: Overview
     path: /art/modeling/
-  - title: Modeling specifications
+  - title: Modeling Specifications
     path: /art/modeling/specifications
-  - title: Reference assets
+  - title: Reference Assets
     path: /art/modeling/project-files
-  - title: Rigging and skinning
+  - title: Rigging and Skinning
     path: /art/modeling/rigging
-  - title: Blender and Maya export settings
+  - title: Blender and Maya Export Settings
     path: /art/modeling/export-requirements
   - title: 3D Importer
     path: /art/modeling/3d-importer
-  - title: Roblox Blender plugin
+  - title: Roblox Blender Plugin
     path: /art/modeling/roblox-blender-plugin
 
   - heading: Texturing
-  - title: Texture specifications
+  - title: Texture Specifications
     path: /art/modeling/texture-specifications
-  - title: Physically-based rendering (PBR)
+  - title: Physically-based Rendering (PBR)
     path: /art/modeling/surface-appearance
-  - title: PBR material references
+  - title: PBR Material References
     path: /art/modeling/material-reference
 
   - heading: Animation
     section:
-  - title: Export animations from Maya
-    path: /art/characters/export-avatar-animations-from-maya
-  - title: Animate heads
-    path: /art/characters/facial-animation/animate-heads
+  - title: Exporting Animations from Maya
+    path: /art/characters/exporting-avatar-animations-from-maya
+  - title: Animating Heads
+    path: /art/characters/facial-animation/animating-heads
 
-  - heading: Example projects
+  - heading: Example Projects
     path:
   - title: The Mystery of Duvall Drive
     path: /resources/the-mystery-of-duvall-drive/
     section:
       - title: Overview
         path: /resources/the-mystery-of-duvall-drive/
-      - title: Construct the house
-        path: /resources/the-mystery-of-duvall-drive/construct-the-house
-      - title: Materialize the world
-        path: /resources/the-mystery-of-duvall-drive/materialize-the-world
-      - title: Immersive narrative
+      - title: Constructing the House
+        path: /resources/the-mystery-of-duvall-drive/constructing-the-house
+      - title: Materializing the World
+        path: /resources/the-mystery-of-duvall-drive/materializing-the-world
+      - title: Immersive Narrative
         path: /resources/the-mystery-of-duvall-drive/immersive-narrative
-      - title: Stream in immersion
-        path: /resources/the-mystery-of-duvall-drive/stream-in-immersion
-      - title: Develop a moving world
-        path: /resources/the-mystery-of-duvall-drive/develop-a-moving-world
-      - title: Design dark soundscapes
-        path: /resources/the-mystery-of-duvall-drive/design-dark-soundscapes
-      - title: Technical overview
+      - title: Streaming in Immersion
+        path: /resources/the-mystery-of-duvall-drive/streaming-in-immersion
+      - title: Developing a Moving World
+        path: /resources/the-mystery-of-duvall-drive/developing-a-moving-world
+      - title: Designing Dark Soundscapes
+        path: /resources/the-mystery-of-duvall-drive/designing-dark-soundscapes
+      - title: Technical Overview
         path: /resources/the-mystery-of-duvall-drive/technical-overview
         section:
           - title: Overview
             path: /resources/the-mystery-of-duvall-drive/technical-overview
-          - title: Main design requirements
+          - title: Main Design Requirements
             path: /resources/the-mystery-of-duvall-drive/main-design-requirements
-          - title: Foundational gameplay systems
+          - title: Foundational Gameplay Systems
             path: /resources/the-mystery-of-duvall-drive/foundational-gameplay-systems
-          - title: Supporting systems
+          - title: Supporting Systems
             path: /resources/the-mystery-of-duvall-drive/supporting-systems
-  - title: Beyond the Dark
+  - title: Beyond The Dark
     path: /resources/beyond-the-dark/
     section:
       - title: Overview
@@ -78,9 +78,9 @@ navigation:
         path: /resources/beyond-the-dark/building-architecture
       - title: Characters
         path: /resources/beyond-the-dark/custom-characters
-      - title: Layered clothing
+      - title: Layered Clothing
         path: /resources/beyond-the-dark/layered-clothing
-      - title: Sound design
+      - title: Sound Design
         path: /resources/beyond-the-dark/sound-design
-      - title: User interface
+      - title: User Interface
         path: /resources/beyond-the-dark/user-interface

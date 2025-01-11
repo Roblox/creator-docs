@@ -1,7 +1,7 @@
 ---
-title: Fading trap
+title: Fading Trap
 description: The process for creating a platform that fades away when a player steps on it.
-next: /tutorials/scripting/basic-scripting/score-points
+next: /tutorials/scripting/basic-scripting/scoring-points
 prev: /tutorials/scripting/basic-scripting/deadly-lava
 ---
 
@@ -11,7 +11,7 @@ In [Deadly Lava](./deadly-lava.md), you learned how to trigger code based on use
 	<source src="../../../../assets/tutorials/fading-trap/completedFadingTrap.mp4" />
 </video>
 
-## Set up
+## Setting Up
 
 If you followed [Deadly Lava](./deadly-lava.md), you can place your fading platform above the lava floor that users can't jump across.
 
@@ -37,7 +37,7 @@ If you followed [Deadly Lava](./deadly-lava.md), you can place your fading platf
    platform.Touched:Connect(fade)
    ```
 
-## Fade the platform
+## Fading the Platform
 
 Having the platform vanish in an instant would be no fun at all as users would find it impossible to get across the gap. Instead, the platform should **fade away** before users fall through it to give them a chance to jump off.
 
@@ -72,7 +72,7 @@ In **FadeOnTouch**:
 
 When the loop runs, count increases by 1 with each iteration. This means that the platform's `Transparency` will increase by 0.1 every 0.1 seconds, reaching full transparency after 1 second.
 
-## Reappear
+## Reappearing
 
 After the platform has vanished, users should fall through it. The platform should also come back a few seconds after it fades - otherwise, users would never get to try the jump again if they failed. The CanCollide property controls whether users can fall through a part.
 
@@ -98,7 +98,7 @@ After the platform has vanished, users should fall through it. The platform shou
    platform.Touched:Connect(fade)
    ```
 
-## Debounce variable
+## Debounce Variable
 
 In [Deadly Lava](./deadly-lava.md), you learned that the `Touched` event runs each time a user's body part comes into contact with the part. This behavior causes issues when a user runs across the fading platform: the function will run multiple times, resetting the loop each time.
 
@@ -125,7 +125,7 @@ end
 platform.Touched:Connect(fade)
 ```
 
-## Check the variable
+## Checking the Variable
 
 An if statement can be used to only run the code in the fade function if the `isTouched` debouncing variable is false. Wrap the body of the fade function in an `if` statement with the condition `not isTouched`.
 
@@ -165,7 +165,7 @@ if isTouched == nil then
 end
 ```
 
-## Toggle the debounce
+## Toggling the Debounce
 
 Currently, the code in the `fade` function will always run because `isTouched` is false and `not isTouched` evaluates to true. To complete the debounce routine, you'll need to toggle the variable's value in two places.
 
@@ -199,7 +199,7 @@ You can duplicate this platform across a wider gap to create a challenging obsta
 	<source src="../../../../assets/tutorials/fading-trap/multipleFadingTraps.mp4" />
 </video>
 
-## Final code
+## Final Code
 
 ```lua
 local platform = script.Parent

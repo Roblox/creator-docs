@@ -1,5 +1,5 @@
 ---
-title: Implement player data and purchasing systems
+title: Implementing Player Data and Purchasing Systems
 description: Guide for implementing player data and purchase handling systems.
 ---
 
@@ -9,7 +9,7 @@ Roblox provides a set of APIs to interface with data stores via `Class.DataStore
 
 Most experiences on Roblox use these APIs to implement some form of a player data system. These implementations differ in their approach, but generally seek to solve the same set of issues.
 
-## Common problems
+## Common Problems
 
 Below are some of the most common problems player data systems attempt to solve:
 
@@ -34,7 +34,7 @@ Below are some of the most common problems player data systems attempt to solve:
 
 - **Atomic Purchase Handling:** Verify, award, and record purchases atomically to prevent items from being lost or awarded multiple times.
 
-## Sample code
+## Sample Code
 
 <Alert severity="warning">
 This code is provided for reference purposes only and has not proven itself over a long period of time in a popular experience. It exists so that you can examine its approach to solving various problems and apply them to your own player data systems. Don't use this code in your experience as-is without extensive testing.
@@ -126,7 +126,7 @@ These methods, when called:
 
 Ultimately, our view is that the simple approach (processing every request) is preferable here and creates a clearer environment to navigate in when approaching complex issues like session locking. The only exception to this is during `Class.DataModel:BindToClose()`, where clearing the queue becomes necessary to save all users' data in time and the value individual function calls return is no longer an ongoing concern. To account for this, we expose a `skipAllQueuesToLastEnqueued` method. For more context, see [Player Data](#player-data).
 
-## Session locking
+## Session Locking
 
 **Class:** [`SessionLockedDataStoreWrapper`](#sample-code)
 
@@ -190,7 +190,7 @@ To maintain the lock on a key, you must regularly access it for as long as it is
 
 If the lock expiry time has been exceeded without the lock being updated, then any server is free to take over the lock. If a different server takes the lock, attempts by the current server to read or write the key fail unless it establishes a new lock.
 
-## Developer product processing
+## Developer Product Processing
 
 **Singleton:** [`ReceiptHandler`](#sample-code)
 
@@ -248,7 +248,7 @@ The comments in `ReceiptProcessor` outline the approach:
 
    If this save request is not successful, a later request to save the player's in-memory session data could still succeed. During the next `ProcessReceipt` call, step 2 handles this situation and returns `PurchaseGranted`.
 
-## Player data
+## Player Data
 
 **Singletons:** [`PlayerData.Server`](#sample-code), [`PlayerData.Client`](#sample-code)
 
@@ -266,7 +266,7 @@ Modules that provide an interface for game code to synchronously read and write 
 4. Replicating loading and/or saving errors to the client so that it can show error dialogs
 5. Saving the player's data periodically, when the player leaves, and when the server shuts down
 
-#### Load player data
+#### Loading Player Data
 
 <img src="../../assets/data/player-data-purchasing/data-load-diagram.png" alt="An process diagram illustrating the loading system" width="60%" />
 
@@ -280,7 +280,7 @@ Modules that provide an interface for game code to synchronously read and write 
 
 1. Any threads yielded using `waitForDataLoadAsync` for the player are resumed.
 
-#### Provide an interface for server code
+#### Providing an Interface for Server Code
 
 - `PlayerDataServer` is a singleton that can be required and accessed by any server code running in the same environment.
 - Player data is organized into a dictionary of keys and values. You can manipulate these values on the server using the `setValue`, `getValue`, `updateValue` and `removeValue` methods. These methods all operate synchronously without yielding.
@@ -288,14 +288,14 @@ Modules that provide an interface for game code to synchronously read and write 
 - A `hasErrored` method can query if the player's initial load failed, causing them to use default data. Check this method before allowing the player to make any purchases, as purchases cannot be saved to data without a successful load.
 - A `playerDataUpdated` signal fires with the `player`, `key`, and `value` whenever a player's data is changed. Individual systems can subscribe to this.
 
-#### Replicate changes to the client
+#### Replicating Changes to the Client
 
 - Any change to player data in `PlayerDataServer` is replicated to `PlayerDataClient`, unless that key was marked as private using setValueAsPrivate
   - `setValueAsPrivate` is used to denote keys that should not be sent to the client
 - `PlayerDataClient` includes a method to get the value of a key (get) and a signal that fires when it is updated (updated). A `hasLoaded` method and a `loaded` signal are also included, so the client can wait for data to load & replicate before starting its systems
 - `PlayerDataClient` is a singleton that can be required and accessed by any client code running in the same environment
 
-#### Replicate errors to the client
+#### Replicating Errors to the Client
 
 - Error statuses encountered when saving or loading player data are replicated to `PlayerDataClient`.
 - Access this information with the `getLoadError` and `getSaveError` methods, along with the `loaded` and `saved` signals.
@@ -304,7 +304,7 @@ Modules that provide an interface for game code to synchronously read and write 
 
 <img src="../../assets/data/player-data-purchasing/data-warning.png" alt="A screenshot of an example warning that could be shown when player data fails to load" width="60%" />
 
-#### Save player data
+#### Saving Player Data
 
 <img src="../../assets/data/player-data-purchasing/data-save-diagram.png" alt="A process diagram illustrating the saving system" width="60%" />
 

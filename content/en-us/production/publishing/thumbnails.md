@@ -1,5 +1,5 @@
 ---
-title: Thumbnails
+title: Experience Thumbnails
 description: Thumbnail images and videos appear on the Roblox home page and at the top of an experience's detail page to showcase features and share information.
 ---
 
@@ -17,7 +17,7 @@ To access your thumbnails:
 While thumbnails help users know what your experience offers, [icons](../publishing/experience-icons.md) are still important to help users recognize your experience and grow its brand.
 </Alert>
 
-## Thumbnail personalization for the Home page
+## Thumbnail Personalization for the Home Page
 
 **Thumbnail personalization** helps you attract more users to your experience by showing the most relevant thumbnail to each user on their Home page. The goal of thumbnail personalization is to improve your qualified play through rate, which is the percentage of users that actively engage with your experience for a significant amount of time.
 
@@ -33,7 +33,7 @@ After you set up and activate thumbnail personalization, its algorithm shows eac
 
 <iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/5NvGzKVyKxg" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Set up thumbnail personalization
+### Setting Up Thumbnail Personalization
 
 To set up thumbnail personalization:
 
@@ -46,7 +46,7 @@ To set up thumbnail personalization:
 
 <img src="../../assets/publishing/experience-thumbnails/Thumbnail-Home-Page-Tab.png" alt="Example of the Home Page tab" />
 
-### Keep multiple thumbnails active
+### Keeping Multiple Thumbnails Active
 
 <Alert severity="warning">
 To get the most out of thumbnail personalization, make sure to **keep multiple thumbnails active** instead of choosing one winner, as this allows personalization to adapt to changing user trends.
@@ -58,7 +58,7 @@ For example, if you had removed the thumbnail associated with the green line in 
 
 We recommend testing multiple new thumbnails with any major experience or content update, and then not making changes to your thumbnails until your experience's next update.
 
-### Analyze thumbnail personalization performance
+### Analyzing Thumbnail Personalization Performance
 
 After a few hours, the **Thumbnail Performance** table in the **Home Page** tab populates with statistics related to each of your active thumbnails:
 
@@ -99,7 +99,7 @@ After a few hours, the **Thumbnail Performance** table in the **Home Page** tab 
 
 You can also use the **Impressions by thumbnail** and the **Qualified play through rate by thumbnail** graphs to further analyze the performance of your personalized thumbnails over time.
 
-## Thumbnails for the experience detail page
+## Thumbnails for the Experience Detail Page
 
 You can use two types of thumbnails to promote your experience on the experience's detail page:
 
@@ -125,7 +125,7 @@ You can use two types of thumbnails to promote your experience on the experience
 </tbody>
 </table>
 
-### Upload
+### Uploading
 
 You can upload up to 10 images or YouTube video links for each of your experiences' detail pages. All uploaded images and linked videos are moderated to make sure they adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410) and [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846).
 
@@ -154,7 +154,7 @@ To upload video thumbnails:
 4. Click **Add video**.
 
 </TabItem>
-<TabItem label="Auto-generated">
+<TabItem label="Auto-Generated">
 
 Roblox can auto‑generate images from the experience itself to showcase your environment designs. Auto‑generated thumbnails are based on Studio's camera position for the most recent publish of the place.
 
@@ -166,19 +166,19 @@ To upload auto-generated thumbnails:
 </TabItem>
 </Tabs>
 
-### Order
+### Ordering
 
 If you upload multiple thumbnails, your experience's detail page cycles through all of the thumbnails automatically. To change the order of the thumbnail cycle, click and hold a thumbnail's **order** icon and drag it up or down.
 
-### Delete
+### Deleting
 
 To delete an uploaded thumbnail, click the thumbnail's **menu** icon and then click **Delete**.
 
-## Capture thumbnails in free camera mode
+## Capturing Thumbnails in Free Camera Mode
 
 Free camera mode is a useful tool to capture in-experience screenshots and videos because it allows you to move the camera to positions that aren't possible when testing or playing under normal circumstances. To enable free camera mode:
 
-1. Go to an experience where you have server-side [Developer Console](../../studio/developer-console.md) access.
+1. Go to an experience where you have server-side developer console access.
 
 2. In the **Home** tab of the menu bar, go to the **Test** section and click **Play**.
 
@@ -189,7 +189,7 @@ Once in free camera mode, you can use the following controls:
 <table>
 <thead>
   <tr>
-    <th>Keys/shortcuts</th>
+    <th>Keys/Shortcuts</th>
     <th>Action</th>
   </tr>
 </thead>
@@ -207,11 +207,11 @@ Once in free camera mode, you can use the following controls:
     <td>In combination with any movement key, changes the camera speed.</td>
   </tr>
   <tr>
-    <td>**Right mouse button**</td>
+    <td>**Right Mouse Button**</td>
     <td>When pressed, dragging the mouse moves the camera view around.</td>
   </tr>
   <tr>
-    <td>**Mouse scroll wheel**</td>
+    <td>**Mouse Scroll Wheel**</td>
     <td>Zooms the camera in or out.</td>
   </tr>
   <tr>
@@ -220,12 +220,12 @@ Once in free camera mode, you can use the following controls:
   </tr>
   <tr>
     <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>C</kbd>&nbsp;(Windows)<br /><kbd>⌘</kbd><kbd>Shift</kbd><kbd>C</kbd> (Mac)</td>
-    <td>Disables all user-created GUIs but not `Class.CoreGui|CoreGuis`.</td>
+    <td>Disables all user-created GUIs but not  `Class.CoreGui|CoreGuis`.</td>
   </tr>
 </tbody>
 </table>
 
-## Best practices
+## Best Practices
 
 To create the most positive impact for users looking to play your experience, consider the following best practices.
 
@@ -233,7 +233,7 @@ To create the most positive impact for users looking to play your experience, co
 In addition to the practices shown below, avoid placing any essential text or elements at the **bottom** of the thumbnail, as it may potentially be covered by metadata like the player count.
 </Alert>
 
-### Quality and aspect ratio
+### Quality and Aspect Ratio
 
 A thumbnail image should be **16:9** aspect ratio and ideally **1920×1080 pixels** so that it always displays in high resolution across the Roblox site and app. Displayed thumbnails will be stretched to 16:9 aspect ratio regardless of the upload's aspect ratio.
 
@@ -252,7 +252,7 @@ A thumbnail image should be **16:9** aspect ratio and ideally **1920×1080 pixel
   </figure>
 </GridContainer>
 
-### Relevant content
+### Relevant Content
 
 A thumbnail will have a higher impact if it's unique and provides relevant imagery on what users should expect when they join the experience. Thumbnails with ambiguous imagery or graphics may lead to unnecessary confusion.
 
@@ -271,7 +271,7 @@ A thumbnail will have a higher impact if it's unique and provides relevant image
   </figure>
 </GridContainer>
 
-### Theme and color
+### Theme and Color
 
 You can express your experience's theme through overall theme and colors to help users decide if it's suitable and appealing to them.
 

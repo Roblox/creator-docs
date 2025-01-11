@@ -1,5 +1,5 @@
 ---
-title: Layered clothing
+title: Layered Clothing
 description: Layered clothing are cosmetic accessories that stretch, fit, and layer over any body type simulating real-life clothing.
 hideBreadcrumbs: true
 ---
@@ -21,13 +21,13 @@ To create a custom Roblox accessory for your own experience or to sell on the Ma
 
 Roblox also supports [classic clothing](#classic-clothing), 2D images that can be applied to your character's surface.
 
-## Components of a layered clothing accessory
+## Components of a Layered Clothing Accessory
 
 All accessory models are made up of the same base components of a [mesh object](#mesh-part), [textures](#textures), and [attachment](#attachments). Layered clothing requires additional components, such as a [poseable rig](#rigging-armature), and an [inner and outer cage](#inner-and-outer-cages), to allow the asset to stretch, fit, and layer over a target character and existing clothing items.
 
 When [creating accessories](#creation-process), all of the components are created first in your modeling software, then converted to their appropriate Roblox Studio instance on import.
 
-### Mesh part
+### Mesh Part
 
 <GridContainer numColumns="2">
 
@@ -64,7 +64,7 @@ For layered clothing, the attachment point is used to associate with the correct
 
 Attachments for clothing items are automatically generated in Studio using the [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md).
 
-### Rigging armature
+### Rigging Armature
 
 <GridContainer numColumns="2">
   <figure><img src="../../assets/art/accessories/Rigging-Example.png" />  <figcaption>To ensure natural movement of the clothing item, it must be weighted to a character rig</figcaption></figure>
@@ -74,7 +74,7 @@ Attachments for clothing items are automatically generated in Studio using the [
 
 A rigging armature defines how a layered asset can move with a character model. Using rigging and skinning techniques, you can set the areas of your clothes to move naturally with a character model's joints, such as ensuring a shirt sleeve correctly follows the movement of the elbow and shoulder. In Studio, this rigging and skinning data is saved to the mesh geometry.
 
-### Inner and outer cages
+### Inner and Outer Cages
 
 <GridContainer numColumns="2">
   <figure><img src="../../assets/art/accessories/Inner-Cage-Example.png" />  <figcaption>The inner cage defines the inner surface of the clothing item where the clothes wrap over</figcaption></figure>
@@ -84,7 +84,7 @@ A rigging armature defines how a layered asset can move with a character model. 
 
 Cage meshes indicate the inner and outer surfaces of a layered accessory. The inside cage of a t-shirt defines how the t-shirt stretches and fits over a character body. The outer cage of a t-shirt defines how additional layered clothing fit over the t-shirt. In Studio, these cages are represented by `Class.WrapLayer` objects.
 
-## Creation process
+## Creation Process
 
 Custom accessories are first created in 3D modeling programs, such as [Blender](https://www.blender.org/) or [Maya](https://www.autodesk.com/products/maya/overview), before importing the `.fbx` or `.gltf` model into Studio.
 To get started creating your first avatar asset, see [Avatar Tutorials](../../avatar/tutorials.md).
@@ -118,41 +118,41 @@ If you are interested in specific avatar creation topics, use the following tabl
 <tbody>
   <tr>
     <td>Tutorials</td>
-    <td>[Rigid accessory creation](../../art/accessories/creating-rigid/index.md) <br /><br />[Basic clothing creation](../../art/accessories/creating/index.md)</td>
+    <td>[Rigid Accessory Creation](../../art/accessories/creating-rigid/index.md) <br /><br />[Basic Clothing Creation](../../art/accessories/creating/index.md)</td>
   </tr>
   <tr>
-    <td>Reference files</td>
-    <td>[Accessory and clothing reference files](../../art/modeling/project-files.md)</td>
+    <td>Reference Files</td>
+    <td>[Accessory and Clothing Reference Files](../../art/modeling/project-files.md)</td>
   </tr>
   <tr>
-    <td>Technical specs</td>
-    <td>[.FBX export settings](../../art/modeling/export-requirements.md)<br /><br />[General mesh specifications](../../art/modeling/specifications.md)<br /><br />[Accessory specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace policy](../../marketplace/marketplace-policy.md)</td>
+    <td>Technical Specs</td>
+    <td>[.FBX Export Settings](../../art/modeling/export-requirements.md)<br /><br />[General Mesh Specifications](../../art/modeling/specifications.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Policy](../../marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
-    <td>Cosmetic creation</td>
-    <td>[Accessories overview](../../art/accessories/specifications.md)<br /><br />[Layered clothing overview](../../art/accessories/index.md)<br /><br />[Create face accessories](../../art/characters/facial-animation/create-face-accessories.md)<br /><br />[Accessory fitting tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace requirements](../../marketplace/marketplace-policy.md)</td>
+    <td>Cosmetic Creation</td>
+    <td>[Accessories Overview](../../art/accessories/specifications.md)<br /><br />[Layered Clothing Overview](../../art/accessories/index.md)<br /><br />[Creating Face Accessories](../../art/characters/facial-animation/creating-face-accessories.md)<br /><br />[Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md)<br /><br />[Accessory Specifications](../../art/accessories/specifications.md)<br /><br />[Marketplace Requirements](../../marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
     <td>Texturing</td>
-    <td>[Texturing requirements](../../art/modeling/texture-specifications.md)<br /><br />[PBR textures](../../art/modeling/surface-appearance.md)</td>
+    <td>[Texturing Requirements](../../art/modeling/texture-specifications.md)<br /><br />[PBR Textures](../../art/modeling/surface-appearance.md)</td>
   </tr>
   <tr>
-    <td>Rigging and skinning</td>
-    <td>[Rigging and skinning overview](../../art/modeling/rigging.md)<br /><br />[Humanoid rigging requirements](../../art/characters/specifications.md#rigging)<br /><br />[Rigging facial bones](../../art/characters/facial-animation/create-basic-heads.md#rigging)<br /><br />[Auto skin transfer](../../art/accessories/automatic-skinning-transfer.md)<br /><br />[Skin facial bones](../../art/characters/facial-animation/create-basic-heads.md#skin-face-bones)</td>
+    <td>Rigging and Skinning</td>
+    <td>[Rigging and Skinning Overview](../../art/modeling/rigging.md)<br /><br />[Humanoid Rig Requirements](../../art/characters/specifications.md#rigging)<br /><br />[Rigging Facial Bones](../../art/characters/facial-animation/creating-basic-heads.md#rigging)<br /><br />[Auto Skin Transfer](../../art/accessories/automatic-skinning-transfer.md)<br /><br />[Skinning Facial Bones](../../art/characters/facial-animation/creating-basic-heads.md#skinning-face-bones)</td>
   </tr>
   <tr>
-    <td>Testing and validation</td>
-    <td>[Calisthenics tool](../../art/modeling/calisthenics-tool.md)<br /><br />[Clothing validation tool](../../art/accessories/validation-tool.md)</td>
+    <td>Testing and Validation</td>
+    <td>[Calisthenics Tool](../../art/modeling/calisthenics-tool.md)<br /><br />[Clothing Validation Tool](../../art/accessories/validation-tool.md)</td>
   </tr>
   <tr>
     <td>Publishing and Marketplace</td>
-    <td>[Upload to Marketplace](../../marketplace/publish-to-marketplace.md)<br /><br />[Marketplace policy](../../marketplace/marketplace-policy.md)<br /><br />[Fees and commissions](../../marketplace/marketplace-fees-and-commissions.md)</td>
+    <td>[Uploading to Marketplace](../../marketplace/publishing-to-marketplace.md)<br /><br />[Marketplace Policy](../../marketplace/marketplace-policy.md)<br /><br />[Fees and Commissions](../../marketplace/marketplace-fees-and-commissions.md)</td>
   </tr>
 </tbody>
 </table>
 
-## Classic clothing
+## Classic Clothing
 
-Classic clothing assets are 2D images that you can apply to the surface of an avatar body as t-shirts, shirts, or pants. You can design these assets in any image processing software, test the textures in Studio, and then upload the designs to the Marketplace to sell. See [Classic clothing](../../art/accessories/classic-clothing.md) for more information on creating, uploading, and selling these assets.
+Classic clothing assets are 2D images that you can apply to the surface of an avatar body as t-shirts, shirts, or pants. You can design these assets in any image processing software, test the textures in Studio, and then upload the designs to the Marketplace to sell. See [Classic Clothing](../../art/accessories/classic-clothing.md) for more information on creating, uploading, and selling these assets.
 
 <img src="../../assets/accessories/classic-clothing/Dummy-Clothed.jpg" width="80%" />

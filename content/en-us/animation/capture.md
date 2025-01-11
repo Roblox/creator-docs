@@ -1,5 +1,5 @@
 ---
-title: Animation capture
+title: Animation Capture
 description: Animation Capture in the Animation Editor allows you to generate high-quality, realistic animations for faces and bodies.
 ---
 
@@ -22,7 +22,7 @@ With the ability to record up to 60-second animations, you can quickly provide b
 
 <BetaAlert betaName="Face Capture" leadIn="To ensure that you are able to utilize your camera to record and create facial animations, you must first enable the beta feature through " leadOut=". If you do not enable the beta, the Animation Editor only displays its default UI options without face recording functionality." components={props.components} />
 
-### Record face animations
+### Recording Face Animations
 
 Before you begin to record your face, ensure that you're in a well lit room close enough to your camera so that your face is in the center of your camera's recording frame. This increases your camera's ability to distinguish you from your surroundings so that you can accurately puppeteer your avatar and create high-quality animations.
 
@@ -70,7 +70,7 @@ To record your face and create an animation:
 
    <img src="../assets/animation/face-recorder/Re-Record-Button.jpg" width="150" />
 
-After you finish your recording, you can [fine-tune](../animation/editor.md#keyframes) the keyframes, [save](../animation/editor.md#save-an-animation) your animation, then [export](../animation/editor.md#export-an-animation) it to use across all of your experiences.
+After you finish your recording, you can [fine-tune](../animation/editor.md#keyframes) the keyframes, [save](../animation/editor.md#saving-an-animation) your animation, then [export](../animation/editor.md#exporting-an-animation) it to use across all of your experiences.
 
 ## Body
 
@@ -80,7 +80,7 @@ The **Animation Capture - Body** allows you to quickly generate high-quality, re
 
 <BetaAlert betaName="Live Animation Creator" leadIn="To import a video for animation creation, you must first enable the beta feature through " leadOut=". If you do not enable the beta, the Animation Editor only displays its default UI options without live animation creation functionality." components={props.components} />
 
-### Import videos for animation
+### Importing Videos for Animation
 
 Before you import a video to the Animation Editor, ensure the **.mp4** or **.mov** file meets the following requirements:
 
@@ -115,4 +115,4 @@ To import a video to create an animation:
 6. Click the **Choose Video** button.
 7. Select the video you want to import from your local machine, then click the **Open** button. After about a minute, keyframes that correspond to movement in your video display within the timeline.
 
-After your import is successful, you can [save](../animation/editor.md#save-an-animation) and [export](../animation/editor.md#export-an-animation) your animation to use across all of your experiences.
+After your import is successful, you can [save](../animation/editor.md#saving-an-animation) and [export](../animation/editor.md#exporting-an-animation) your animation to use across all of your experiences.

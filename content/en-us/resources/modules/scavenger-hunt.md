@@ -11,7 +11,7 @@ The **ScavengerHunt** [developer module](../../resources/modules/index.md) gives
 This module utilizes [data stores](../../cloud-services/data-stores). To test it in Studio, make sure **Enable Studio Access to API Services** is enabled from the **Security** section of the [Game Settings](../../studio/game-settings.md) window.
 </Alert>
 
-## Module usage
+## Module Usage
 
 ### Installation
 
@@ -39,7 +39,7 @@ To use the **ScavengerHunt** module in an experience:
 
    <img src="../../assets/developer-modules/scavenger-hunt/Move-Package.png" width="320" />
 
-### Use tokens
+### Using Tokens
 
 The scavenger hunt module uses **tokens** as the items which players search for and collect. The module comes with one token model that you can position in the 3D world.
 
@@ -79,7 +79,7 @@ Remember that each token must have a unique name as a means of tracking player p
 The module will automatically disable the `Class.BasePart.CanCollide|CanCollide` property of tokens at runtime so that players do not physically collide with them. As such, all tokens should be **anchored** so they do not fall through the world geometry.
 </Alert>
 
-### Use regions
+### Using Regions
 
 Regions differ slightly from tokens, as large areas that are marked as "collected" once the player enters them. Additionally, when a player leaves the region, the flavor text modal automatically dismisses and the region itself is removed from the workspace.
 
@@ -113,7 +113,7 @@ The module is preconfigured to work for most use cases, but it can be easily cus
    })
    ```
 
-### Collection events
+### Collection Events
 
 Every time a player collects a token or enters a region, the [collected](#collected) event fires. You can listen to this event from a server-side `Class.Script` and respond accordingly. The connected function receives the `Class.Player` that collided with the token or entered the region and that token or region's name.
 
@@ -162,7 +162,7 @@ end)
 When using custom modals, be sure to provide a way for players to close/hide them, or an automatic dismissal after a delay.
 </Alert>
 
-### GUI visibility
+### GUI Visibility
 
 By default, the scavenger hunt hides all `Class.ScreenGui|ScreenGuis` and `Class.CoreGui|CoreGuis` (except for the player list) when the info modal or completion modal appears. If you want to override this auto-hiding behavior and programmatically decide which GUIs should remain visible, include the [hideOtherGuis](#hideotherguis) and [showOtherGuis](#showotherguis) callbacks and respond with your own custom logic.
 
@@ -214,7 +214,7 @@ ScavengerHunt.showOtherGuis(function()
 end)
 ```
 
-## API reference
+## API Reference
 
 ### Functions
 

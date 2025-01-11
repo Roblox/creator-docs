@@ -1,29 +1,29 @@
 ---
-title: LiveOps planning
+title: LiveOps Planning
 description: LiveOps Essentials is an overview of what live ops are and how to think about designing them effectively.
 ---
 
 [LiveOps](./liveops-essentials.md) maintain a dynamic and captivating experience through releasing two interweaving content types:
 
 - **Events:** Temporary activities like contests and promotions that complement the [core loop](./core-loops.md). Events offer rewards like exclusive items, status, or currency to maintain player interest between larger content releases.
-- **Content updates:** Significant permanent experience updates that expand or deepen the core loop. Larger content releases provide robust new content for players to enjoy. To learn more about content updates, see [Content updates](./content-updates.md).
+- **Content Updates:** Significant permanent experience updates that expand or deepen the core loop. Larger content releases provide robust new content for players to enjoy. To learn more about content updates, see [Content Updates](./content-updates.md).
 
 To initiate and execute a continuous LiveOps plan, consider how you will:
 
 - **Plan:** Define your objectives and methods for achieving them.
 - **Communicate:** Determine how to inform players about upcoming events.
-- **Monitor and analyze:** Evaluate player involvement and the event's success in meeting objectives and assess the event's effectiveness post-completion.
+- **Monitor and Analyze:** Evaluate player involvement and the event's success in meeting objectives and assess the event's effectiveness post-completion.
 
 ## Plan
 
-When designing LiveOps for your experience, consider your **key performance indicators** (KPIs). Determine which metric you want to impact, like daily active users. It's crucial to acknowledge that events typically influence several KPIs simultaneously.
+When designing LiveOps for your experience, consider your **Key Performance Indicators** (KPIs). Determine which metric you want to impact, like daily active users. It's crucial to acknowledge that events typically influence several KPIs simultaneously.
 
 When planning for KPI objectives, consider the following:
 
 - **Player actions:** Clarify the intended player actions during the event and the KPIs these actions will likely influence.
 - **Player impact:** Consider how increased player interaction with certain events might alter the usual patterns of earning or buying in-experience currencies and items. An event like a fishing tournament exposes players to a key currency-earning part of the experience and likely yields significant engagement, but the type of reward players receive has to be intentionally designed to not negatively impact the experience's economy.
 
-To learn more about KPIs, see [Analytics essentials](./analytics-essentials.md).
+To learn more about KPIs, see [Analytics Essentials](./analytics-essentials.md).
 
 <figure>
     <img src="../../assets/game-design/live-ops-planning/live-ops-planning.png" width="70%"/>
@@ -49,11 +49,11 @@ After deciding how to communicate your event to players, be intentional with des
 
 > Take the time to design an impactful and memorable start to an event to inspire players and ensure sure they're excited about the event, will want to engage with it, and keep coming back after the event is over.
 
-## Monitor and analyze
+## Monitor and Analyze
 
 When designing LiveOps for your experience, monitor your experience effectively by accessing comprehensive data, such as the sources of and spending of your experience's currency and other relevant resources. Integrate tracking into your experience's design to understand how players interact with your features.
 
-For more about monitoring the impact your events have on your economy, see [Balance virtual economies](./balance-virtual-economies.md).
+For more about monitoring the impact your events have on your economy, see [Balancing Virtual Economies](./balancing-virtual-economies.md).
 
 When tracking data, make sure it's:
 
@@ -67,4 +67,4 @@ Comparing your event's data to the week before the event and the week after help
 
 If the event had a lasting impact, determine whether it was positive or negative, and if your findings impact how you'll design future events to achieve your desired outcome.
 
-For additional information and best practices on how to design optimal events, see [LiveOps essentials](./liveops-essentials.md).
+For additional information and best practices on how to design optimal events, see [LiveOps Essentials](./liveops-essentials.md).

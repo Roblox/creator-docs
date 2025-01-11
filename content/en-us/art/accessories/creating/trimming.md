@@ -1,5 +1,5 @@
 ---
-title: Trim clothing shape
+title: Trimming Clothing Shape
 description: Create the general shape of your clothing item by removing unnecessary sections of your duplicated mesh.
 next: /art/accessories/creating/sculpting
 prev: /art/accessories/creating/modeling-setup
@@ -12,7 +12,7 @@ With a clean mesh object to work with, cut the basic shape of the type of clothi
    <figcaption>Long-sleeve trimming of the full-body mesh.</figcaption>
 </figure></center>
 
-## Trim clothing shape
+## Trimming Clothing Shape
 
 Create the general shape of your clothing type by trimming sections of your duplicated mannequin mesh.
 
@@ -27,7 +27,7 @@ To trim your clothing shape:
 
    <video controls src="../../../assets/art/accessories/creating/Modeling_02.mp4" width="100%"></video>
 
-## Add and smooth vertices
+## Add and Smooth Vertices
 
 With the basic shape created, subdivide the surface of your clothing mesh to add vertices and smooth out the mesh. This process removes the grid-like surface and allows you to apply more complex sculpting detail later.
 
@@ -51,7 +51,7 @@ To add and smooth your vertices:
 
    <video controls src="../../../assets/art/accessories/creating/Modeling_03.mp4" width="100%"></video>
 
-## Scale and position
+## Scaling and Positioning
 
 With your base clothing shape created, the next steps are to scale out the mesh and reposition it on top of the mannequin.
 

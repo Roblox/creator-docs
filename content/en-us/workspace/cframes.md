@@ -11,9 +11,9 @@ Some examples of `Datatype.CFrame` applications in a game might be:
 - Moving the camera so that it focuses on specific NPCs as a player interacts with them.
 - Placing a status indicator directly above a player's head to show if they are paralyzed, boosted, poisoned, etc.
 
-## CFrame basics
+## CFrame Basics
 
-### Position a CFrame
+### Positioning a CFrame
 
 You can create an empty `Datatype.CFrame` at the default position of (0, 0, 0) by using `Datatype.CFrame.new()`. To position a `Datatype.CFrame` at a specific point, provide x-, y-, and z-coordinates as arguments to `Datatype.CFrame.new()`. In the following example, the `redBlock` part's `Datatype.CFrame` property changes to `newCFrame`, repositioning it to (-2, 2, 4).
 
@@ -51,7 +51,7 @@ local newCFrame = CFrame.new(newVector3)
 redBlock.CFrame = newCFrame
 ```
 
-### Rotate a CFrame
+### Rotating a CFrame
 
 To create a rotated `Datatype.CFrame`, use the `Datatype.CFrame.Angles()` constructor, providing a rotation angle in radians for the desired axes. The parameters to `Datatype.CFrame.Angles()` is in radians, not degrees. If you prefer degrees, use `Library.math.rad()` to convert degrees to radians. In the following example, the `redBlock` part rotates 45 degrees counterclockwise on its y-axis.
 
@@ -76,7 +76,7 @@ redBlock.CFrame = newCFrame
   </figure>
 </GridContainer>
 
-### Face a CFrame toward a point
+### Facing Toward a Point
 
 You can use `Datatype.CFrame.new()` to point the front surface of a `Datatype.CFrame` at a specific point in the world. In the following example, `redBlock` part positions at (0, 3, 0) and points its front surface, marked by the white circle, at the `blueCube` part.
 
@@ -103,7 +103,7 @@ redBlock.CFrame = CFrame.new(startPosition, targetPosition)
   </figure>
 </GridContainer>
 
-### Offset a CFrame
+### Offsetting a CFrame
 
 To offset an object by a specific number of studs from its current position, add or subtract a `Datatype.Vector3` to or from a new `Datatype.CFrame` at the object's position. To get a properly-formatted `Datatype.Vector3` position of an object to use with `Datatype.CFrame.new()`, as seen here, its `Class.BasePart.Position|Position` property (`redBlock.Position`) is a convenient shortcut.
 
@@ -144,7 +144,7 @@ redBlock.CFrame = CFrame.new(blueCube.Position) + Vector3.new(0, 2, 0)
   </figure>
 </GridContainer>
 
-## Dynamic CFrame orientation
+## Dynamic CFrame Orientation
 
 The `Datatype.CFrame.new()` and `Datatype.CFrame.Angles()` constructors reposition or rotate an object at a specific orientation within the world, but you sometimes can't rely on a fixed world position and rotation angle. For example:
 
@@ -153,7 +153,7 @@ The `Datatype.CFrame.new()` and `Datatype.CFrame.Angles()` constructors repositi
 
 In these cases, use `Datatype.CFrame` methods instead of their constructors.
 
-### Relative position
+### Relative Position
 
 The `Datatype.CFrame:ToWorldSpace()` function transforms an object's `Datatype.CFrame`&nbsp;&mdash; respecting its own local orientation&nbsp;&mdash; to a new **world** orientation. This makes it ideal for offsetting a part relative to itself or another object, regardless of how it's currently positioned/rotated.
 
@@ -178,7 +178,7 @@ redBlock.CFrame = blueCube.CFrame:ToWorldSpace(offsetCFrame)
   </figure>
 </GridContainer>
 
-### Relative rotation
+### Relative Rotation
 
 You can also use `Datatype.CFrame:ToWorldSpace()` to rotate an object relative to itself. In the following example, the `redBlock` part rotates 70 degrees counterclockwise on its y-axis and 20 degrees clockwise on its z-axis.
 
@@ -200,7 +200,7 @@ redBlock.CFrame = redBlock.CFrame:ToWorldSpace(rotatedCFrame)
   </figure>
 </GridContainer>
 
-### Face a specific surface toward a point
+### Facing a Specific Surface Toward a Point
 
 You can make the front of an object face another object by supplying a `Datatype.Vector3` point as the second parameter of `Datatype.CFrame.new()`. You can also use relative rotation to make any face of the object point toward a `Datatype.Vector3` point. The following example performs two consecutive `Datatype.CFrame` operations:
 
@@ -237,7 +237,7 @@ redBlock.CFrame = redBlock.CFrame:ToWorldSpace(rotatedCFrame)
   </figure>
 </GridContainer>
 
-### Find a point between points
+### Finding a Point Between Points
 
 You can use **linear interpolation**, or **lerp**, to position a `Datatype.CFrame` between two points. In the following example, the `redBlock` part repositions between the `greenCube` and `cyanCube` parts. The value of `0.7` places it 70% of the distance away from the green cube.
 

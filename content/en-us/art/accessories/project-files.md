@@ -1,5 +1,5 @@
 ---
-title: Accessory project files and references
+title: Accessory Project Files and References
 description: Download various accessory-related project files and reference files.
 ---
 
@@ -10,7 +10,7 @@ See [Resources](../../avatar/resources.md) for a complete list of avatar-related
 The following `.fbx`, `.blend`, and `.ma` project files are available to use as templates or as reference:
 
 <Tabs>
-  <TabItem label="Clothing and mannequins">
+  <TabItem label="Clothing and Mannequins">
   <table>
 <thead>
   <tr>

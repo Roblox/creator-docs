@@ -1,5 +1,5 @@
 ---
-title: Best practices when designing MemoryStore data structures
+title: Best Practices when designing MemoryStore Data Structures
 description: Explains how to best design data structures to reduce the chance of experiencing throttling.
 ---
 
@@ -7,7 +7,7 @@ Depending on the data structure type, MemoryStoreService enforces [limits](../..
 
 Each Roblox experience has the [Memory Store Observability Dashboard](../../cloud-services/memory-stores/observability.md), which includes a set of charts that you can use to monitor memory store usage.
 
-## Sorted maps and queues
+## Sorted Maps and Queues
 
 Sorted maps and queues both have limits on the maximum number of items and maximum total memory. Additionally, the items in one of these data structures always reside on a single partition. Every request to one of those data structures is a request to the same partition.
 
@@ -21,7 +21,7 @@ Sharding is the process of storing a set of related data across multiple data st
 
 The key challenge to sharding is finding a way to spread the data across multiple data structures in a way that maintains the same functionality as the original.
 
-### Sharding a sorted map
+### Sharding a Sorted Map
 
 To shard a sorted map, consider splitting your data into alphabetic subsections with character ranges. For example, assume that you only have keys with the first letter from A-Z, and you believe four sorted maps is sufficient for your current use case and future growth:
 
@@ -68,7 +68,7 @@ local playerScore = bucket:GetAsync(player)
 print(playerScore)
 ```
 
-### Sharding a queue
+### Sharding a Queue
 
 Sharding a queue is tricker than sharding a sorted map. Although you want to spread the request throughput across multiple queues, adds, reads, and removes only ever occur at the front or back of the queue.
 
@@ -159,7 +159,7 @@ local players, ids = readFromQueue(20, true, -1)
 removeFromQueue(ids)
 ```
 
-## Hash maps
+## Hash Maps
 
 Hash maps do not have individual memory or item count limits and are automatically sharded, but you can still encounter throttling if you use them poorly.
 

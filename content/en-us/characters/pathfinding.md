@@ -1,5 +1,5 @@
 ---
-title: Character pathfinding
+title: Character Pathfinding
 description: Pathfinding is the process of moving a character along a logical path to reach a destination.
 ---
 
@@ -7,13 +7,13 @@ description: Pathfinding is the process of moving a character along a logical pa
 
 <video controls src="../assets/avatar/pathfinding/Showcase.mp4" width="100%" alt="Video showcase of character pathfinding across a series of bridges"></video>
 
-## Navigation visualization
+## Navigation Visualization
 
 To assist with pathfinding layout and debugging, Studio can render a navigation mesh and [modifier](#pathfinding-modifiers) labels. To enable them, toggle on **Navigation&nbsp;mesh** and **Pathfinding&nbsp;modifiers** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 
 <img src="../assets/studio/general/Visualization-Options.png" width="780" alt="A close up view of the 3D viewport with the Visualization Options button indicated in the upper-right corner." />
 
-With **Navigation mesh** enabled, colored areas show where a character might walk or swim, while non-colored areas are blocked. The small arrows indicate areas that a character will attempt to reach by jumping, assuming you set `AgentCanJump` to `true` when [creating the path](#create-paths).
+With **Navigation mesh** enabled, colored areas show where a character might walk or swim, while non-colored areas are blocked. The small arrows indicate areas that a character will attempt to reach by jumping, assuming you set `AgentCanJump` to `true` when [creating the path](#creating-paths).
 
 <img src="../assets/avatar/pathfinding/Navigation-Mesh.jpg" width="800" alt="Navigation mesh showing in Studio" />
 
@@ -21,11 +21,11 @@ With **Pathfinding modifiers** enabled, text labels indicate specific materials 
 
 <img src="../assets/avatar/pathfinding/Navigation-Labels.jpg" width="800" alt="Navigation labels showing on navigation mesh" />
 
-## Known limitations
+## Known Limitations
 
 Pathfinding features specific limitations to ensure efficient processing and optimal performance.
 
-### Vertical placement limit
+### Vertical Placement Limit
 
 Pathfinding calculations consider only parts within certain vertical boundaries:
 
@@ -33,11 +33,11 @@ Pathfinding calculations consider only parts within certain vertical boundaries:
 - Upper Boundary &mdash; Parts with a top **Y** coordinate exceeding 65,536 studs are ignored.
 - Vertical Span &mdash; The vertical distance from the lowest part's bottom **Y** coordinate to the highest part's top **Y** coordinate must not exceed 65,536 studs; otherwise, the pathfinding system will ignore those parts during the pathfinding computation.
 
-### Search distance limitation
+### Search Distance Limitation
 
 The direct line-of-sight distance for pathfinding from the start to the finish point must not exceed 3,000 studs. Exceeding this distance will result in a `Enum.PathStatus|NoPath` status.
 
-## Create paths
+## Creating Paths
 
 Pathfinding is initiated through `Class.PathfindingService` and its `Class.PathfindingService:CreatePath()|CreatePath()` function.
 
@@ -111,7 +111,7 @@ local path = PathfindingService:CreatePath({
 })
 ```
 
-Note that the agent can climb `Class.TrussPart|TrussParts` during pathfinding assuming you set `AgentCanClimb` to `true` when [creating the path](#create-paths) and nothing blocks the agent from the truss climbing path. A climbable path has the **Climb** label and the [cost](#set-material-costs) for a climbable path is **1** by default.
+Note that the agent can climb `Class.TrussPart|TrussParts` during pathfinding assuming you set `AgentCanClimb` to `true` when [creating the path](#creating-paths) and nothing blocks the agent from the truss climbing path. A climbable path has the **Climb** label and the [cost](#setting-material-costs) for a climbable path is **1** by default.
 
 <img src="../assets/avatar/pathfinding/Path-TrussPart.jpg" width="800" alt="Path going up a climbable TrussPart ladder" />
 
@@ -126,7 +126,7 @@ local path = PathfindingService:CreatePath({
 })
 ```
 
-## Move along paths
+## Moving Along Paths
 
 This section uses the following pathfinding script for the player's character. To test while reading:
 
@@ -198,7 +198,7 @@ end
 followPath(TEST_DESTINATION)
 ```
 
-### Compute the path
+### Computing the Path
 
 After you've created a valid path with `Class.PathfindingService:CreatePath()|CreatePath()`, it must be **computed** by calling `Class.Path:ComputeAsync()` with a `Datatype.Vector3` for both the starting point and destination.
 
@@ -230,7 +230,7 @@ end
 
 <img src="../assets/avatar/pathfinding/Path-Start-End.jpg" width="800" alt="Path start/end marked on series of islands and bridges" />
 
-### Get waypoints
+### Getting Waypoints
 
 Once the `Class.Path` is computed, it will contain a series of **waypoints** that trace the path from start to end. These points can be gathered with the `Class.Path:GetWaypoints()` function.
 
@@ -271,7 +271,7 @@ end
 <figcaption>Waypoints indicated across computed path</figcaption>
 </figure>
 
-### Path movement
+### Path Movement
 
 Each waypoint consists of both a **position** (`Datatype.Vector3`) and **action** (`Enum.PathWaypointAction|PathWaypointAction`). To move a character containing a `Class.Humanoid`, like a typical Roblox character, the easiest way is to call `Class.Humanoid:MoveTo()` from waypoint to waypoint, using the `Class.Humanoid.MoveToFinished|MoveToFinished` event to detect when the character reaches each waypoint.
 
@@ -339,7 +339,7 @@ end
 
 <video controls src="../assets/avatar/pathfinding/Simple-Path.mp4" width="800" alt="Video of character following simple path across islands and bridges"></video>
 
-### Handle blocked paths
+### Handling Blocked Paths
 
 Many Roblox worlds are dynamic; parts might move or fall and floors may collapse. This can block a computed path and prevent the character from reaching its destination. To handle this, you can connect the `Class.Path.Blocked` event and re-compute the path around whatever blocked it.
 
@@ -393,15 +393,15 @@ end
 Currently, `Class.Model|Models` containing a `Class.Humanoid` instance, including typical player characters, will **not** be considered for path [computation](#computing-the-path) or path blockage, although the agent may still be blocked by those models physically.
 </Alert>
 
-## Pathfinding modifiers
+## Pathfinding Modifiers
 
 By default, `Class.Path:ComputeAsync()` returns the **shortest** path between the starting point and destination, with the exception that it attempts to avoid jumps. This looks unnatural in some situations&nbsp;&mdash; for instance, a path may go through water rather than over a nearby bridge simply because the path through water is geometrically shorter.
 
 <img src="../assets/avatar/pathfinding/Paths-Shortest-Best.jpg" width="800" alt="Two paths indicated with the shorter path not necessarily more logical" />
 
-To optimize pathfinding even further, you can implement **pathfinding modifiers** to compute smarter paths across various [materials](#set-material-costs), around defined [regions](#work-with-regions), or through [obstacles](#ignore-obstacles).
+To optimize pathfinding even further, you can implement **pathfinding modifiers** to compute smarter paths across various [materials](#setting-material-costs), around defined [regions](#working-with-regions), or through [obstacles](#ignoring-obstacles).
 
-### Set material costs
+### Setting Material Costs
 
 When working with `Class.Terrain` and `Class.BasePart` materials, you can include a `Costs` table within `Class.PathfindingService:CreatePath()|CreatePath()` to make certain materials more traversable than others. All materials have a default cost of **1** and any material can be defined as non-traversable by setting its value to `Library.math.huge`.
 
@@ -423,9 +423,9 @@ local path = PathfindingService:CreatePath({
 
 <video controls src="../assets/avatar/pathfinding/Bridge-Path.mp4" width="800" alt="Video showing how material costs determine preference of non-water traversal"></video>
 
-### Work with regions
+### Working With Regions
 
-In some cases, [material preference](#set-material-costs) is not enough. For example, you might want characters to avoid a **defined region**, regardless of the materials underfoot. This can be achieved by adding a `Class.PathfindingModifier` object to a part.
+In some cases, [material preference](#setting-material-costs) is not enough. For example, you might want characters to avoid a **defined region**, regardless of the materials underfoot. This can be achieved by adding a `Class.PathfindingModifier` object to a part.
 
 1. Create an `Class.BasePart.Anchored|Anchored` part around the dangerous region and set its `Class.BasePart.CanCollide|CanCollide` property to **false**.
 
@@ -451,7 +451,7 @@ In some cases, [material preference](#set-material-costs) is not enough. For exa
 
    <video controls src="../assets/avatar/pathfinding/GeyserBlocker-Path.mp4" width="800"></video>
 
-### Ignore obstacles
+### Ignoring Obstacles
 
 In some cases, it's useful to pathfind through solid obstacles as if they didn't exist. This lets you compute a path through specific physical blockers, versus the computation failing outright.
 
@@ -467,7 +467,7 @@ In some cases, it's useful to pathfind through solid obstacles as if they didn't
 
    <img src="../assets/avatar/pathfinding/Zombie-Full-Path.jpg" width="750" alt="Zombie NPC path passing through the previously blocking door" />
 
-## Pathfinding links
+## Pathfinding Links
 
 Sometimes it's necessary to find a path across a space that cannot be normally traversed, such as across a chasm, and perform a custom action to reach the next waypoint. This can be achieved through the `Class.PathfindingLink` object.
 
@@ -611,14 +611,14 @@ To create a `Class.PathfindingLink` using this example:
 
    <video controls src="../assets/avatar/pathfinding/Boat-Path.mp4" width="800" alt="Video showing character using the PathfindingLink to traverse the water using the boat" ></video>
 
-## Streaming compatibility
+## Streaming Compatibility
 
 In-experience [instance streaming](../workspace/streaming.md) is a powerful feature that dynamically loads and unloads 3D content as a player's character moves around the world. As they explore the 3D space, new subsets of the space stream to their device and some of the existing subsets might stream out.
 
 Consider the following best practices for using `Class.PathfindingService` in streaming-enabled experiences:
 
-- Streaming can block or unblock a given path as a character moves along it. For example, while a character runs through a forest, a tree might stream in somewhere ahead of them and obstruct the path. To make pathfinding work seamlessly with streaming, it's highly recommended that you use the [handling blocked paths](#handle-blocked-paths) technique and re-compute the path when necessary.
+- Streaming can block or unblock a given path as a character moves along it. For example, while a character runs through a forest, a tree might stream in somewhere ahead of them and obstruct the path. To make pathfinding work seamlessly with streaming, it's highly recommended that you use the [Handling Blocked Paths](#handling-blocked-paths) technique and re-compute the path when necessary.
 
-- A common approach in pathfinding is to use the coordinates of existing objects for [computation](#compute-the-path), such as setting a path destination to the position of an existing **TreasureChest** model in the world. This approach is fully compatible with server-side `Class.Script|Scripts` since the server has full view of the world at all times, but `Class.LocalScript|LocalScripts` and `Class.ModuleScript|ModuleScripts` that run on the client may fail if they attempt to compute a path to an object that's not streamed in.
+- A common approach in pathfinding is to use the coordinates of existing objects for [computation](#computing-the-path), such as setting a path destination to the position of an existing **TreasureChest** model in the world. This approach is fully compatible with server-side `Class.Script|Scripts` since the server has full view of the world at all times, but `Class.LocalScript|LocalScripts` and `Class.ModuleScript|ModuleScripts` that run on the client may fail if they attempt to compute a path to an object that's not streamed in.
 
   To address this issue, consider setting the destination to the position of a `Class.BasePart` within a [persistent](../workspace/streaming.md#model-streaming-controls) model. Persistent models load soon after the player joins and they never stream out, so a client-side script can connect to the `Class.Workspace.PersistentLoaded|PersistentLoaded` event and safely access the model for creating waypoints after the event fires.

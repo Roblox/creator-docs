@@ -1,5 +1,5 @@
 ---
-title: Highlighting objects
+title: Highlighting Objects
 description: Highlighting objects lets you call attention to specific objects within your experience.
 ---
 
@@ -27,26 +27,26 @@ Useful applications of the highlight effect include:
 - Making distant objects visible through objects that are closer to the user.
 - Indicating the current position and status of other characters.
 
-## Add highlights
+## Adding Highlights
 
 As a performance limit, Studio only displays 31 simultaneous `Class.Highlight` instances on the client-side at a time. If you add more than this limit, the additional `Class.Highlight` instances are silently ignored.
 
 Note also that highlights on low-end devices may be more pixelated but will otherwise look the same as on other devices with any combination of settings.
 
-### Parent to objects
+### Parenting to Objects
 
 To add a highlight effect to an object, you can parent a new `Class.Highlight` directly to the object.
 
-1. In the **Explorer** window, hover over either a `Class.Model` or a `Class.BasePart`, then click the &CirclePlus; button. A contextual menu displays.
+1. In the [Explorer](../studio/explorer.md) window, hover over either a `Class.Model` or a `Class.BasePart`, then click the &CirclePlus; button. A contextual menu displays.
 2. From the menu, insert a **Highlight**. The highlight displays on the object with its default property values that create a white outline and a red tint overlay.
 
    <img src="../assets/ui/highlighting-objects/Adding-Highlight.jpg" alt="" width="320" />
 
-### Set the adornee
+### Setting the Adornee
 
 Alternatively, you can place the `Class.Highlight` instance outside of a child/parent relationship either within the workspace, `Class.StarterPlayer`, `Class.StarterGui`, `Class.StarterPack`, or `Class.ReplicatedStorage`, then set its `Class.Highlight.Adornee|Adornee` property to the `Class.Model` or `Class.BasePart` that you want to highlight.
 
-## Customize highlights
+## Customizing Highlights
 
 You can change the properties of a `Class.Highlight` instance to create interesting visual effects that properly highlight objects in theme with your experience.
 
@@ -147,7 +147,7 @@ The `Class.Highlight.Enabled|Enabled` property allows you to quickly enable or d
 While a disabled `Class.Highlight` doesn't display, it still takes one of the 31 available `Class.Highlight` slots. If you plan to permanently disable a `Class.Highlight` instance, it's best to delete the highlight rather than disable it.
 </Alert>
 
-## Performance tips
+## Performance Tips
 
 While you have a lot of options to customize `Class.Highlight` instances, the following tips are recommended to increase your experience's performance on all devices:
 

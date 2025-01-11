@@ -1,5 +1,5 @@
 ---
-title: Contextual purchases
+title: Contextual Purchases
 description: Contextual Purchases
 ---
 
@@ -13,7 +13,7 @@ Approaches to contextual purchases can be divided into the following categories:
 - Complementary
 - UI
 
-## In-play
+## In-Play
 
 **In-play** contextual purchases refer to presenting a purchase opportunity when a player is actively participating in an in-experience activity. Carefully consider the timing of any in-play contextual purchases to avoid negatively impacting a player's session.
 
@@ -32,7 +32,7 @@ Approaches to contextual purchases can be divided into the following categories:
 
 This approach mimics the "continue countdown" option used by traditional arcade games. Make sure that your in-play contextual purchase opportunities account for players having time to finish the entire "buy Robux" purchase flow, which can take several seconds to complete. If it isn't feasible to design gameplay pauses to accommodate these transactions taking place, in-play contextual purchases might not be appropriate for your experience.
 
-## Pre-play
+## Pre-Play
 
 **Pre-play** contextual purchases refer to presenting a purchase opportunity when a player is waiting to participate in an in-experience activity. This often occurs in instance-based experiences where gameplay occurs in isolated and repeated loops.
 

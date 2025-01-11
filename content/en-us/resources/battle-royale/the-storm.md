@@ -1,5 +1,5 @@
 ---
-title: The storm
+title: The Storm
 comments:
 prev: /resources/battle-royale/minimap-system
 description: Explains the implementation details for the storm feature in the Battle Royale game kit.
@@ -19,11 +19,11 @@ Due to the part size limit, it's not possible to make the storm one huge cylinde
 - `ServerScriptService/Core/ShrinkingBarrier`
 - `ReplicatedStorage/Core/ShrinkingBarrierVisualization`
 
-## Customize the storm
+## Customizing the Storm
 
 Within `ReplicatedFirst/Configurations/MainConfiguration`, the following variables can be adjusted to customize the storm:
 
-### Map offset
+### Map Offset
 
 The default center of the storm is the center of the map, but you can change the `map_offset` value to force players toward another point as the storm boundary shrinks.
 
@@ -32,7 +32,7 @@ map_size = 2450 * 4,
 map_offset = Vector3.new(4900, 0, 4900),
 ```
 
-### Storm options
+### Storm Options
 
 Lower down, the `storm` table contains configuration values which determine how the storm behaves during matches, such as its radius, timing, and how much it shrinks.
 

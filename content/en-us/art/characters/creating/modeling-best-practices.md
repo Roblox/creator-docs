@@ -1,5 +1,5 @@
 ---
-title: Modeling best practices
+title: Modeling Best Practices
 description: Understand important modeling concepts to prevent major issues before any modeling steps.
 next: /art/characters/creating/modeling-tips
 prev: /art/characters/creating/blender-configurations
@@ -19,7 +19,7 @@ By understanding how to make non-destructive sculpting changes to the head, the 
 When editing templates, **don't delete or add vertices to your character body**. This ensures that your character's skinning and facial animation data remains unaltered and fully functional. See [Best Practices](#best-practices) for additional information on customizing your character body without breaking the underlying structure of the avatar template.
 </Alert>
 
-## Non-destructive modeling
+## Non-Destructive Modeling
 
 Non-destructive modeling means using a process that doesn't alter the physical shape or construction of the base mesh object. When modifying a template model, don't use tools or functions that delete or add vertices to your meshes. Instead, use Blender's sculpting tools to alter the shape of your character by **only changing the position of existing vertices**. This ensures that vertices and faces that have skinning or animation data associated with them retain that important character data.
 
@@ -27,7 +27,7 @@ Non-destructive modeling means using a process that doesn't alter the physical s
 Extreme geometric changes, even if the vertices are not deleted, can still adversely affect your rigging and skinning. It's important to choose a starting template file close to your final design and to make consistent and proportional changes when sculpting.
 </Alert>
 
-## Edge flow
+## Edge Flow
 
 Edge flow is a common modeling concept of ensuring that the vertices of your model naturally follow the organic curvature of your model's shape. When making changes to your model's topography, you should maintain a natural edge flow by ensuring that your vertices remain a proportionate distance from each other and follow the common muscle groups and contours of your model.
 
@@ -36,8 +36,8 @@ Even when maintaining edge flow, you should avoid sculpting certain regions of t
 <table>
 <thead>
   <tr>
-    <th>Round head region</th>
-    <th>Edge flow notes</th>
+    <th>Round Head Region</th>
+    <th>Edge Flow Notes</th>
   </tr>
 </thead>
 <tbody>

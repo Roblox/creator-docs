@@ -1,19 +1,19 @@
 ---
-title: Network ownership
-description: Learn how the Roblox Engine utilizes network ownership to improve physical responsiveness for players.
+title: Network Ownership
+description: Learn how the Roblox engine utilizes network ownership to improve physical responsiveness for players.
 ---
 
 In order to support complex physical mechanisms while also aiming for a smooth and responsive experience for players, the Roblox [physics](../physics/index.md) engine utilizes a **distributed physics** system in which computations are distributed between the server and all connected clients. Within this system, the engine assigns **network ownership** of physically simulated `Class.BasePart|BaseParts` to either a client or server to divide the work of calculating physics.
 
 Clients experience **more responsive** physics interactions with parts that they own, since there's no latency from communication with the server. Network ownership also improves server performance because physics computations can be split up among individual clients, allowing the server to prioritize other tasks.
 
-## BasePart ownership
+## BasePart Ownership
 
 By default, the server retains ownership of any `Class.BasePart`. Additionally, the server **always** owns anchored `Class.BasePart|BaseParts` and you cannot manually change their ownership.
 
 Based on a client's hardware capacity and the player's `Class.Player.Character` proximity to an unanchored `Class.BasePart`, the engine automatically assigns ownership of that part to the client. Thus, parts close to a player's character are more likely to become player-owned.
 
-## Assembly ownership
+## Assembly Ownership
 
 If a physics-based mechanism has no anchored parts, [setting ownership](#setting-ownership) on an [assembly](../physics/assemblies.md) within that mechanism sets the same ownership for **every assembly** in the mechanism.
 
@@ -21,7 +21,7 @@ If you anchor a lone assembly that is **not** part of a broader mechanism, its o
 
 If you anchor one assembly within a broader mechanism of assemblies, its ownership goes to the server, but ownership of the other assemblies remains unchanged. Unanchoring the same assembly reverts its previously set ownership.
 
-## Setting ownership
+## Setting Ownership
 
 In experiences with complex physics interactions or in cases where you need to assign direct control, you can set ownership through a server-side call to `Class.BasePart:SetNetworkOwner()`.
 
@@ -60,7 +60,7 @@ end)
 For smooth performance and responsive behavior, ensure you also assign ownership of any loose `Class.BasePart|BaseParts` on top of a vehicle to the same client that controls the vehicle.
 </Alert>
 
-## Visualizing ownership
+## Visualizing Ownership
 
 To assist with network ownership debugging, Studio can render colored outlines around objects when playtesting.
 
@@ -69,7 +69,7 @@ To assist with network ownership debugging, Studio can render colored outlines a
 <table>
 <thead>
 	<tr>
-		<th colspan="2">Outline color</th>
+		<th colspan="2">Outline Color</th>
 		<th>Description</th>
 	</tr>
 </thead>
@@ -104,7 +104,7 @@ To enable network ownership visualization:
 
 2. In the dropdown menu, toggle on **Network owners**.
 
-## Security concerns
+## Security Concerns
 
 Roblox cannot verify physics calculations when a client has ownership over a `Class.BasePart`. Clients can exploit this and send bad data to the server, such as teleporting the `Class.BasePart`, making it go through walls or fly around.
 

@@ -271,7 +271,7 @@ properties:
       Determines the height at which falling `Class.BasePart|BaseParts` and
       their ancestor `Class.Model|Models` are removed from `Class.Workspace`.
     description: |
-      This property determines the height at which the Roblox Engine
+      This property determines the height at which the Roblox engine
       automatically removes falling `Class.BasePart|BaseParts` and their
       ancestor `Class.Model|Models` from `Class.Workspace` by parenting them to
       `nil`. This is to prevent parts that have fallen off the map from

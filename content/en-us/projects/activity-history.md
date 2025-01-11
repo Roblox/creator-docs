@@ -1,6 +1,6 @@
 ---
-title: Activity history
-description: Activity history is a log of key configuration, publish, and edit activities within a place.
+title: Activity History
+description: Activity History is a log of key configuration, publish, and edit activities within a place.
 ---
 
 <Grid container spacing={4} alignItems="top">
@@ -18,7 +18,7 @@ description: Activity history is a log of key configuration, publish, and edit a
 	</Grid>
 </Grid>
 
-## Work with Activity History
+## Working with Activity History
 
 To open the Activity History view in Studio, your experience must be saved to Roblox.
 
@@ -29,11 +29,11 @@ To open the Activity History view in Studio, your experience must be saved to Ro
 1. If you have a large number of events, you can filter them by type or collaborator.
 1. If you want to manage the configuration or get more details on a change, use the **&ctdot;** menu next to each event to get a link to the setting in either Studio or the Creator Hub.
 
-## Event reference
+## Event Reference
 
 Activity History shows the following events. Most are visible in Studio and the Creator Hub, but some are only visible in one location or the other.
 
-### Place configuration
+### Place Configuration
 
 Event | Shown in Studio | Shown in Creator Hub
 :--- | :---: | :---:
@@ -45,7 +45,7 @@ Place removed from experience |  | &check;
 **Allow place to be copied as a template using Create Place API** changed | &check; | &check;
 **Allow place to be updated using Save Place API** changed | &check; | &check;
 
-### Experience configuration
+### Experience Configuration
 
 Event | Shown in Studio | Shown in Creator Hub
 :--- | :---: | :---:
@@ -58,7 +58,7 @@ Age recommendation questionnaire updated | &check; | &check;
 Playable devices changed | &check; | &check;
 **Enable Studio Access to API Services** enabled or disabled | &check; | &check;
 
-### Monetization settings
+### Monetization Settings
 
 Event | Shown in Studio | Shown in Creator Hub
 :--- | :---: | :---:
@@ -75,9 +75,9 @@ Notification string created |  | &check;
 Notification string deleted |  | &check;
 Notification string updated |  | &check;
 
-For more information, see [Experience notifications](../production/promotion/experience-notifications.md).
+For more information, see [Experience Notifications](../production/promotion/experience-notifications.md).
 
-### Collaboration permissions
+### Collaboration Permissions
 
 Event | Shown in Studio | Shown in Creator Hub
 :--- | :---: | :---:
@@ -88,4 +88,4 @@ Group given play permissions | &check; | &check;
 Group with play permissions removed | &check; | &check;
 Group role's permissions to this experience changed | &check; | &check;
 
-For more information, see [Group roles and permissions](../projects/groups.md#roles-and-permissions).
+For more information, see [Group Roles and Permissions](../projects/groups.md#roles-and-permissions).

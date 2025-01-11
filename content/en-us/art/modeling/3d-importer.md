@@ -8,18 +8,18 @@ description: 3D Importer imports third-party .fbx, .gltf, and .obj 3D model asse
 
 The 3D Importer allows you to import `.fbx`, `.gltf`, or `.obj` 3D models into Studio as a custom `Class.Model`. This tool supports a wide variety of 3D models, including:
 
-- Meshes with basic or PBR ([surface appearance](../../art/modeling/surface-appearance.md)) textures.
-- Meshes with [rigging and skinning data](../../art/modeling/rigging.md).
+- Meshes with basic or PBR ([Surface Appearance](../../art/modeling/surface-appearance.md)) textures.
+- Meshes with [rigging and skinning data](../../art/modeling/rigging.md)
 - Meshes with animation data.
 - Specialized meshes, such as [accessories](../../art/accessories/index.md), or characters with [facial animation data](../../art/characters/facial-animation/index.md).
 
 <Alert severity ='info'>
-To directly import 3D assets using HTTP requests, see the [Open Cloud usage guide for assets](../../cloud/open-cloud/usage-assets.md).
+To directly import 3D assets using HTTP requests, see [Cloud Usage Guide for Assets](../../cloud/open-cloud/usage-assets.md).
 </Alert>
 
 The 3D Importer is divided into three sections:
 
-<img src="../../assets/modeling/meshes/3d-Importer-Panels.png" width="80%" alt="The 3D importer interface, showing a preview of the mesh in the top left, a list of 3D objects on the bottom left, and a list of toggle-able properties on the right side."/>
+<img src="../../assets/modeling/meshes/3d-Importer-Panels.png" width="80%" alt="The 3D Importer interface, showing a preview of the mesh in the top left, a list of 3D objects on the bottom left, and a list of toggle-able properties on the right side."/>
 
 A. The **preview panel**, located in the top left, allows you to rotate and examine 3D objects before importing into your workspace or Toolbox.
 
@@ -27,7 +27,7 @@ B. The **hierarchy panel**, located in the bottom left, allows you to select spe
 
 C. The **inspector panel**, located on the right, allows you to apply various settings to the imported object.
 
-## Import 3D objects
+## Importing 3D Objects
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ikYZloBgqtE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br />
@@ -35,7 +35,7 @@ C. The **inspector panel**, located on the right, allows you to apply various se
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RCsYZe3LoDM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br />
 
-Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets Studio's [mesh requirements](../../art/characters/specifications.md) to reduce errors or unexpected behavior.
+Before importing a 3D object, ensure that the `.fbx`, `.gltf` or `.obj` meets Studio's [Mesh Requirements](../../art/characters/specifications.md) to reduce errors or unexpected behavior.
 
 To import a 3D object:
 
@@ -43,12 +43,12 @@ To import a 3D object:
 
    <img src="../../assets/studio/general/Avatar-Tab-Import-3D.png" width="760" alt="Top ribbon of the Avatar tab in Studio highlighting the Import 3D button."  />
 
-2. Select the `.fbx`, `.gltf` or `.obj` you intend to import. The Importer window displays.
+2. Select the `.fbx`, `.gltf` or `.obj` you intend to import. The importer window displays.
 3. Verify the object preview and check that the [import settings](#import-settings) are correct for your object.
 4. Verify any [warning or error messages](#warnings-and-errors).
 5. Click **Import**.
 
-### Import settings
+### Import Settings
 
 Depending on the object selected in the hierarchy panel, the inspector panel displays the following groups of settings:
 
@@ -59,7 +59,7 @@ Depending on the object selected in the hierarchy panel, the inspector panel dis
 - **Object General**: Affects the selected child object.
 - **Object Geometry**: Affects the geometry of the selected child object.
 
-#### File general
+#### File General
 
 The 3D Importer provides the following settings for all meshes:
 
@@ -101,12 +101,12 @@ The 3D Importer provides the following settings for all meshes:
   </tr>
   <tr>
     <td>Uses Cage</td>
-    <td>If enabled, the 3D Importer finds cage meshes in the model and converts them to `WrapInstance` objects, such as `Class.WrapLayer` or `Class.WrapTarget`. If disabled, the Importer treats them as regular meshes. If the 3D Importer initially detects cage meshes in the model, this is **enabled** by default.</td>
+    <td>If enabled, the 3D Importer finds cage meshes in the model and converts them to `WrapInstance` objects, such as `Class.WrapLayer` or `Class.WrapTarget`. If disabled, the importer treats them as regular meshes. If the 3D Importer initially detects cage meshes in the model, this is **enabled** by default.</td>
   </tr>
 </tbody>
 </table>
 
-#### Rig general
+#### Rig General
 
 The 3D Importer provides the following settings for meshes with rigging data:
 
@@ -120,7 +120,7 @@ The 3D Importer provides the following settings for meshes with rigging data:
 <tbody>
   <tr>
     <td>Rig Type</td>
-    <td>Sets the type of rig the mesh should be associated with. The options are:<br />- **R15**<br />- **Custom**<br />- **No Rig**<br /><br />By default, the 3D importer attempts to select the most appropriate setting based on the detected rigging and skinning data of the mesh. </td>
+    <td>Sets the type of rig the mesh should be associated with. The options are:<br />- **R15**<br />- **Custom**<br />- **No Rig**<br /><br />By default, the 3D Importer attempts to select the most appropriate setting based on the detected rigging and skinning data of the mesh. </td>
   </tr>
   <tr>
     <td>Validate UGC Body</td>
@@ -133,7 +133,7 @@ The 3D Importer provides the following settings for meshes with rigging data:
 </tbody>
 </table>
 
-#### File transform
+#### File Transform
 
 The 3D Importer provides the following settings for all meshes:
 
@@ -156,7 +156,7 @@ The 3D Importer provides the following settings for all meshes:
 </tbody>
 </table>
 
-#### File geometry
+#### File Geometry
 
 File geometry includes information on the file dimensions and polycount of the entire model. You can edit the following settings for all meshes:
 
@@ -183,7 +183,7 @@ File geometry includes information on the file dimensions and polycount of the e
 </tbody>
 </table>
 
-#### Object general
+#### Object General
 
 When selecting a specific child object of your mesh, the 3D Importer populates Object General settings. You can edit the following settings for the selected child objects:
 
@@ -210,7 +210,7 @@ When selecting a specific child object of your mesh, the 3D Importer populates O
 </tbody>
 </table>
 
-#### Object geometry
+#### Object Geometry
 
 Object Geometry includes information on the dimensions and polycount of the selected child object of the model. You can edit the following settings for the selected child objects:
 
@@ -233,7 +233,7 @@ Object Geometry includes information on the dimensions and polycount of the sele
 </tbody>
 </table>
 
-### Warnings and errors
+### Warnings and Errors
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UEHEsmCslBU" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br />

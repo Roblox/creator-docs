@@ -1,5 +1,5 @@
 ---
-title: Custom text chat system messages
+title: Custom Text Chat System Messages
 description: Learn how to display and format system messages in the chat window.
 ---
 
@@ -45,7 +45,7 @@ TextChannel.OnIncomingMessage = function(message: TextChatMessage)
 end
 ```
 
-## Use metadata to categorize messages
+## Using Metadata to Categorize Messages
 
 Use metadata however you see fit to categorize messages and apply different styles to different types of messages.
 

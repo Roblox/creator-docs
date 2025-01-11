@@ -1,5 +1,5 @@
 ---
-title: Intro to arrays
+title: Intro to Arrays
 description: Learn how to use arrays in Roblox Lua to store multiple values at a time. This tutorial shows how to create and change arrays while making an interactive NPC in Roblox.
 next: /tutorials/fundamentals/coding-5/loops-and-arrays
 prev: /tutorials/fundamentals/coding-5/landing
@@ -21,7 +21,7 @@ There are different types of tables. One type is an **array**, which stores list
 
 `local myArray = {"item1", "item2", 10, workspace.Part, myVariable}`
 
-### Create a talking character
+### Creating a Talking Character
 
 To explore arrays, you'll work with a non-playable character (NPC) that, when clicked, shows a different line of dialogue.
 
@@ -37,7 +37,7 @@ This project will use a pre-made NPC model, which includes a partial script and 
 
 2. In Explorer, import the NPC by right-clicking on **Workspace** > **Insert From File** and select the downloaded file.
 
-## Code a dialogue array
+## Coding a Dialogue Array
 
 These steps use an array to store different phrases for the NPC to say when players interact with it.
 
@@ -73,7 +73,7 @@ These steps use an array to store different phrases for the NPC to say when play
    local dialogueArray = {"Hi!", "Do I know you?", "Goodbye!"}
    ```
 
-## Use array indexes
+## Using Array Indexes
 
 Each value in the array is assigned an `index` number. Indexes are assigned to values in the order in which the values are stored. The first value is at index 1, the second at index 2, and so forth.
 
@@ -104,7 +104,7 @@ In the array just created, `"Hi"` is at index 1, and `"Goodbye!"` is at index 3.
 </tbody>
 </table>
 
-## Use specific index values
+## Using Specific Index Values
 
 Use index values to assign specific pieces of dialogue to the NPC. To use a value at a specific index, add the index in brackets directly after the array's name, like `dialogueArray[1]`.
 
@@ -127,7 +127,7 @@ Use index values to assign specific pieces of dialogue to the NPC. To use a valu
 
    <img src="../../../assets/education/coding-5/introArrays_showSpeech.jpg" width="75%" />
 
-## Change dialogue lines
+## Changing Dialogue Lines
 
 When the player interacts with the NPC, the NPC will always say the same line. That's boring. Instead, use a variable to update which index value to use.
 
@@ -168,7 +168,7 @@ Notice there's an **error** in the Output Window once the script reaches the end
 
 You'll fix this in the next section so the dialogue restarts from the beginning after it shows the last string.
 
-## Array sizes
+## Array Sizes
 
 You can use the size of the array to know when to reset the desired index to 1. Find the **size** of an array by typing `#`, without spaces, before an array's name.
 
@@ -176,7 +176,7 @@ For example: `#dialogueArray`
 
 Check the array's size against the variable's current value to know when it's time to start back at the beginning.
 
-### Restart the dialogue
+### Restarting the Dialogue
 
 Use the array size to check when it's time to cycle back to the first piece of dialogue.
 
@@ -241,14 +241,14 @@ This script used an array to create a list of possible dialogue lines for a Non-
    prompt.Triggered:Connect(speak)
 ```
 
-### Troubleshooting tips
+### Troubleshooting Tips
 
 If the character doesn't go through the array of dialogue, try the following troubleshooting tips.
 
 - Check the if statement that `dialogueIndex` is set back to 1. In the else statement, check that `dialogueIndex` has 1 added to itself.
 - When getting the array's size, ensure there are no spaces after the # in `#dialogueArray`.
 
-## Optional challenges
+## Optional Challenges
 
 Try one of the optional challenges below.
 

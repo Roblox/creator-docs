@@ -1,5 +1,5 @@
 ---
-title: Adaptive timestepping
+title: Adaptive Timestepping
 description: Adaptive timestepping automatically assigns physical parts to varying simulation timesteps.
 ---
 
@@ -11,7 +11,7 @@ By default, Roblox simulates physics at 240&nbsp;Hz. Given cycles of approximate
 
 Assignment criterions are subject to change, but parts assigned to the 240&nbsp;Hz island include [assemblies](../physics/assemblies.md) with high velocity values, high acceleration values, and complex mechanisms that are hard to solve.
 
-## Enable adaptive mode
+## Enabling Adaptive Mode
 
 To enable adaptive timestepping in Studio:
 
@@ -33,7 +33,7 @@ Hovering your cursor above **LDLPGSSolver::solve** will reveal the status of how
 
 <img src="../assets/physics/adaptive-timestepping/Adaptive-Timestepping-Microprofiler-B.png" alt="" width="80%" />
 
-## Debug visualization
+## Debugging Visualization
 
 During testing, it may be useful to visualize frequencies for simulated parts. To enable this option:
 
@@ -51,10 +51,10 @@ Once enabled, simulated parts will be outlined by their current simulation rate.
   <figcaption>Simulated parts outlined by the color representing their current simulation rate</figcaption>
 </figure>
 
-## Fixed-rate scenarios
+## Fixed-Rate Scenarios
 
 Adaptive timestepping can improve physics performance by up to 2.5 times and it is recommended in most cases. However, some experiences should use **Fixed** mode (240&nbsp;Hz), including:
 
 Experiences that require highly accurate simulations and stability, such as racing games, "destruction" simulations, or games featuring complex mechanisms like tanks.
 
-Simulations where most parts default to the 240&nbsp;Hz solver island (red outlines during [debugging](#debug-visualization)). When 240&nbsp;Hz islands interact with islands of different frequencies (60&ndash;120&nbsp;Hz), those islands are converted to 240&nbsp;Hz with an overhead that may negate any performance gains resulting from adaptive timestepping.
+Simulations where most parts default to the 240&nbsp;Hz solver island (red outlines during [debugging](#debugging-visualization)). When 240&nbsp;Hz islands interact with islands of different frequencies (60&ndash;120&nbsp;Hz), those islands are converted to 240&nbsp;Hz with an overhead that may negate any performance gains resulting from adaptive timestepping.

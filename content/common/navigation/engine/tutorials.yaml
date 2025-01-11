@@ -1,114 +1,120 @@
 navigation:
-  - heading: Get started
+  - heading: Get Started
   - title: Overview
     path: /tutorials/
-  - title: Create your first experience
+  - title: Create Your First Experience
     path: /tutorials/first-experience/
-  - heading: Curriculum paths
+  - heading: Curriculum Paths
   - title: Overview
     path: /tutorials/curriculums/curriculum-overview
   - title: Core
     path: /tutorials/curriculums/core/
     navigation: /engine/tutorials-core.yaml
-  - title: Environmental art
+  - title: Environmental Art
     path: /tutorials/curriculums/environmental-art/
     navigation: /engine/tutorials-ea.yaml
-  - title: Gameplay scripting
+  - title: Gameplay Scripting
     path: /tutorials/curriculums/gameplay-scripting/
     navigation: /engine/tutorials-gs.yaml
-  - title: User interface design
+  - title: User Interface Design
     path: /tutorials/curriculums/user-interface-design/
     navigation: /engine/tutorials-ui.yaml
-  - heading: Use case tutorials
+  - heading: Use Case Tutorials
   - title: Overview
     path: /tutorials/use-case-tutorials/use-case-tutorial-overview
   - title: Modeling
     section:
-      - title: Neon signs
-        path: /tutorials/use-case-tutorials/modeling/create-neon-signs
-      - title: Modular environments
-        path: /tutorials/use-case-tutorials/modeling/assemble-modular-environments
-  - title: User interfaces
+      - title: Creating Neon Signs
+        path: /tutorials/use-case-tutorials/modeling/creating-neon-signs
+      - title: Assembling Modular Environments
+        path: /tutorials/use-case-tutorials/modeling/assembling-modular-environments
+  - title: User Interfaces
     section:
-      - title: HUD meters
-        path: /tutorials/use-case-tutorials/ui/create-hud-meters
-      - title: Interactive UI
+      - title: Creating HUD Meters
+        path: /tutorials/use-case-tutorials/ui/creating-hud-meters
+      - title: Making UI Interactive
         path: /tutorials/use-case-tutorials/ui/interactive-ui
-      - title: Proximity prompts
+      - title: Creating Proximity Prompts
         path: /tutorials/use-case-tutorials/ui/proximity-prompts
-      - title: Score bars
-        path: /tutorials/use-case-tutorials/ui/create-a-score-bar
+      - title: Creating Score Bars
+        path: /tutorials/use-case-tutorials/ui/creating-a-score-bar
   - title: Audio
     section:
-      - title: Background music
-        path: /tutorials/use-case-tutorials/audio/play-background-music
-      - title: Positional sounds
+      - title: Playing Background Music
+        path: /tutorials/use-case-tutorials/audio/playing-background-music
+      - title: Playing Positional Sounds
         path: /tutorials/use-case-tutorials/audio/in-game-sounds
   - title: Lighting
     section:
-      - title: Indoor environments
-        path: /tutorials/use-case-tutorials/lighting/enhance-indoor-environments
-      - title: Outdoor environments
-        path: /tutorials/use-case-tutorials/lighting/enhance-outdoor-environments-with-future-lighting
+      - title: Enhancing Indoor Environments
+        path: /tutorials/use-case-tutorials/lighting/enhancing-indoor-environments
+      - title: Enhancing Outdoor Environments
+        path: /tutorials/use-case-tutorials/lighting/enhancing-outdoor-environments-with-future-lighting
   - title: VFX
     section:
-      - title: Laser beams
+      - title: Creating Laser Beams
         path: /tutorials/use-case-tutorials/vfx/laser-traps-with-beams
-      - title: Waterfalls
-        path: /tutorials/use-case-tutorials/vfx/create-waterfalls
-      - title: Volcanoes
-        path: /tutorials/use-case-tutorials/vfx/create-volcanoes
-      - title: Explosions
-        path: /tutorials/use-case-tutorials/vfx/use-particles-for-explosions
+      - title: Creating Waterfalls
+        path: /tutorials/use-case-tutorials/vfx/creating-waterfalls
+      - title: Creating Volcanoes
+        path: /tutorials/use-case-tutorials/vfx/creating-volcanoes
+      - title: Creating Explosions
+        path: /tutorials/use-case-tutorials/vfx/using-particles-for-explosions
   - title: Physics
     section:
-      - title: Moving objects
-        path: /tutorials/use-case-tutorials/physics/create-moving-objects
-      - title: Spinning objects
-        path: /tutorials/use-case-tutorials/physics/create-spinning-objects
+      - title: Creating Moving Objects
+        path: /tutorials/use-case-tutorials/physics/creating-moving-objects
+      - title: Creating Spinning Objects
+        path: /tutorials/use-case-tutorials/physics/creating-spinning-objects
+      - title: Creating Elevators
+        path: /tutorials/use-case-tutorials/physics/creating-elevators
+      - title: Building Hinged Doors
+        path: /tutorials/use-case-tutorials/physics/building-a-hinged-door
+      - title: Building Ferris Wheels
+        path: /tutorials/use-case-tutorials/physics/building-a-ferris-wheel
   - title: Animation
     section:
       - title: In Studio
         section:
-          - title: Create character animations
-            path: /tutorials/use-case-tutorials/animation/create-an-animation
-          - title: Play character animations
-            path: /tutorials/use-case-tutorials/animation/play-character-animations
+          - title: Creating Character Animations
+            path: /tutorials/use-case-tutorials/animation/creating-an-animation
+          - title: Playing Character Animations
+            path: /tutorials/use-case-tutorials/animation/playing-character-animations
       - title: In Blender
         section:
-          - title: Rig simple meshes
-            path: /art/modeling/rig-a-simple-mesh
-          - title: Skin simple meshes
-            path: /art/modeling/skin-a-simple-mesh
-          - title: Rig humanoid models
-            path: /art/modeling/rig-a-humanoid-model
-          - title: Skin humanoid models
-            path: /art/modeling/skin-a-humanoid-model
+          - title: Rigging Simple Meshes
+            path: /art/modeling/rigging-a-simple-mesh
+          - title: Skinning Simple Meshes
+            path: /art/modeling/skinning-a-simple-mesh
+          - title: Rigging Humanoid Models
+            path: /art/modeling/rigging-a-humanoid-model
+          - title: Skinning Humanoid Models
+            path: /art/modeling/skinning-a-humanoid-model
   - title: Scripting
     section:
-      - title: Basic gameplay
+      - title: Basic Gameplay
         section:
-          - title: Introduction to scripting
+          - title: Introduction to Scripting
             path: /tutorials/use-case-tutorials/scripting/basic-scripting/intro-to-scripting
-          - title: Deadly lava
+          - title: Deadly Lava
             path: /tutorials/use-case-tutorials/scripting/basic-scripting/deadly-lava
-          - title: Fading trap
+          - title: Fading Trap
             path: /tutorials/use-case-tutorials/scripting/basic-scripting/fading-trap
-          - title: Score points
-            path: /tutorials/use-case-tutorials/scripting/basic-scripting/score-points
-      - title: Intermediate gameplay
+          - title: Scoring Points
+            path: /tutorials/use-case-tutorials/scripting/basic-scripting/scoring-points
+      - title: Intermediate Gameplay
         section:
-          - title: Health pickups
-            path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/create-a-health-pickup
-          - title: Save data
-            path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/save-data
-          - title: Player tools
-            path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/create-player-tools
-          - title: Hit detection with lasers
+          - title: Creating Health Pickups
+            path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/creating-a-health-pickup
+          - title: Saving Data
+            path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/saving-data
+          - title: Creating Player Tools
+            path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/creating-player-tools
+          - title: Hit Detection with Lasers
             path: /tutorials/use-case-tutorials/scripting/intermediate-scripting/hit-detection-with-lasers
-  - title: Input and camera
+  - title: Input and Camera
     section:
-      - title: Control the user's camera
-        path: /tutorials/use-case-tutorials/input-and-camera/control-the-users-camera
-      - title: Detect user input
-        path: /tutorials/use-case-tutorials/input-and-camera/detect-user-input
+      - title: Controlling the User's Camera
+        path: /tutorials/use-case-tutorials/input-and-camera/controlling-the-users-camera
+      - title: Detecting User Input
+        path: /tutorials/use-case-tutorials/input-and-camera/detecting-user-input

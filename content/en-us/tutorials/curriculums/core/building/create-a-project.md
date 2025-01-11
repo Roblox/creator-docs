@@ -1,5 +1,5 @@
 ---
-title: Create a project
+title: Create a Project
 description: This part of the tutorial gets you started with creating a project.
 prev: /tutorials/curriculums/core/
 next: /tutorials/curriculums/core/building/create-an-environment-with-terrain

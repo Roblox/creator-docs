@@ -1,11 +1,11 @@
 ---
-title: Audio assets
+title: Audio Assets
 description: Explore how to find and import audio assets for use in your experiences.
 ---
 
-You can [explore](#explore-assets) a wide variety of free‑to‑use audio assets in the [Toolbox](../projects/assets/toolbox.md), or you can [upload](#import-audio) audio assets that you're certain you have permission to use, such as audio files you make yourself. The [asset privacy](../projects/assets/privacy.md) system automatically ensures that the IDs of your uploaded audio can't be accessed by users without the proper permissions.
+You can [explore](#exploring-assets) a wide variety of free‑to‑use audio assets in the [Toolbox](../projects/assets/toolbox.md), or you can [upload](#importing-audio) audio assets that you're certain you have permission to use, such as audio files you make yourself. The [asset privacy](../projects/assets/privacy.md) system automatically ensures that the IDs of your uploaded audio can't be accessed by users without the proper permissions.
 
-## Explore assets
+## Exploring Assets
 
 The [Toolbox](../projects/assets/toolbox.md) contains a wide variety of audio assets made by Roblox and the Roblox community for creators to use within their experiences, including more than 100,000 professionally-produced sound effects and music tracks from top audio and music partners.
 
@@ -25,7 +25,7 @@ The [Toolbox](../projects/assets/toolbox.md) contains a wide variety of audio as
 	See [Sound Objects](../sound/objects.md) for details on how to use `Class.Sound` instances in an experience.
 	</Alert>
 
-## Import audio
+## Importing Audio
 
 ### Requirements
 
@@ -40,7 +40,7 @@ You can import custom audio as long as it meets the following requirements:
 
 If you're [ID verified](../production/publishing/account-verification.md), you can import 100 free audio assets per 30 days; if you're unverified, you can upload 10 free audio assets per 30 days. Studio assigns each new audio asset a **unique asset ID** that you can use within your experiences to [play the audio](../sound/objects.md).
 
-### Upload
+### Uploading
 
 You can upload audio through the [Asset Manager](../projects/assets/manager.md), the [Creator Dashboard](https://create.roblox.com/dashboard/creations), or the [Open Cloud API](../cloud/open-cloud/usage-assets.md). To upload through the [Asset Manager](../projects/assets/manager.md):
 

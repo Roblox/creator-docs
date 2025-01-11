@@ -1,5 +1,5 @@
 ---
-title: Choose an art style
+title: Choose an Art Style
 description: Explains how to greybox the laser tag environment using basic parts.
 next: /tutorials/curriculums/user-interface-design/wireframe-your-layouts
 prev: /tutorials/curriculums/user-interface-design/
@@ -19,7 +19,7 @@ After you complete this section, you will learn how to design the structure and 
 
 <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section1/Intro.jpg" alt="" />
 
-## Identify your UI elements
+## Identify Your UI Elements
 
 The first step in choosing an art style for your UI is to identify what UI elements you need for the varying types of information you want to communicate to your audience. Doing this work at the start of your design process is crucial because it allows you to categorize UI elements by their functional purpose, make semantic decisions according to where and when players are going to interact with each UI element, and plan where you can reuse UI elements across your experience.
 
@@ -71,7 +71,7 @@ After you sort your experience's UI needs into categories, you can create a list
 
 Now that you have a list of UI elements for your experience, it's time to begin making stylistic and semantic choices for each grouping of UI elements, starting with a color theme.
 
-## Select a color theme
+## Select a Color Theme
 
 A **color theme**, or color palette, is a selection of colors that each communicate a message through consistent application within your experience, such as using a bright color to indicate when something is selectable. Applying a color theme to your UI elements is important, especially when you rely on color conventions within the genre of your experience, because it allows players to quickly understand your UI with minimal effort.
 
@@ -107,7 +107,7 @@ To highlight the guidance in the last point, the sample laser tag experience uti
     <img src="../../../assets/tutorials/user-interface-design/Section1/PlayerInfoPreview.png" />
 </figure>
 
-## Outline simple icons
+## Outline Simple Icons
 
 An **icon** is a symbol that represents an action, object, or concept in an experience. Outlining icons that are simple and intuitive is important because the end result enables players to easily recognize what they are able to do and what you want to tell them through your UI without using text, which can clutter the screen and pull attention away from content that matters. This process is even more crucial if your audience accesses your experience using a small screen on mobile devices.
 
@@ -143,7 +143,7 @@ When outlining simple icons for your own experience, consider the following:
 
 If you don't know what types of icons are common within your experience's genre, check out the [Game UI Database](https://gameuidatabase.com/). This free resource tool for UI designers includes screenshots from hundreds of games of different genres that you can reference during your design process.
 
-## Establish an interaction order
+## Establish an Interaction Order
 
 An **interaction order** is the sequence of interactions players can have with your UI. As there are often multiple interactable UI elements on the screen, it's important to establish an intuitive interaction order to assist players in making decisions as they navigate various workflows.
 
@@ -178,7 +178,7 @@ When establishing an interaction order for the workflows in your own experience,
 
 In [Implement in Studio](implement-designs-in-Studio.md), you will learn how to use `Class.UIAspectRatioConstraint` objects to ensure UI elements maintain a specific aspect ratio no matter what device players use to access your experience. In addition to making your design process easier, this technique can also help you meet the Web Content Accessibility Guidelines' [Touch Target Size and Spacing](https://w3c.github.io/Mobile-A11y-TF-Note/#targetSize) recommendation to create a touch zone for interactive UI elements that's at least 9x9 mm on mobile devices.
 
-## Determine a text system
+## Determine a Text System
 
 A **text system** is a set of rules about fonts and style for all of the words in your UI, such as "always bold headers" or "use green font when referencing a health stat." Determining a text system early into your design process allows you to have a structure that you can consistently apply throughout your experience so players know what to expect as they search for the information they need.
 

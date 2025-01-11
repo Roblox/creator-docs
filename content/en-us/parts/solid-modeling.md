@@ -1,5 +1,5 @@
 ---
-title: Solid modeling
+title: Solid Modeling
 description: Solid modeling is the process of joining parts together to form complex shapes.
 ---
 
@@ -18,29 +18,29 @@ together in unique ways to form more complex shapes known as **unions** or **int
   </thead>
   <tbody>
     <tr>
-      <td>[Union](#union-parts)</td>
+      <td>[Union](#unioning-parts)</td>
 	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>G</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>G</kbd> (Mac)</td>
       <td>Join two or more parts together to form a single solid union.</td>
     </tr>
 	<tr>
-      <td>[Intersect](#intersect-parts)</td>
+      <td>[Intersect](#intersecting-parts)</td>
 	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>I</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>I</kbd> (Mac)</td>
       <td>Intersect overlapping parts into a single solid intersection.</td>
     </tr>
     <tr>
-      <td>[Negate](#negate-parts)</td>
+      <td>[Negate](#negating-parts)</td>
 	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>N</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>N</kbd> (Mac)</td>
       <td>Negate parts, useful for making holes and indentations.</td>
     </tr>
     <tr>
-      <td>[Separate](#separate-unions-or-intersections)</td>
+      <td>[Separate](#separating-unions-or-intersections)</td>
 	  <td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>U</kbd>&nbsp;(Windows)<br /><kbd>Shift</kbd><kbd>⌘</kbd><kbd>U</kbd> (Mac)</td>
       <td>Separate the union or intersection back into its individual parts.</td>
     </tr>
   </tbody>
 </table>
 
-## Union parts
+## Unioning Parts
 
 The **Union** tool joins two or more parts together to form a single solid `Class.UnionOperation`. By default, a new union respects the `Class.BasePart.Color|Color` property of each of its parts, although you can enable its `Class.PartOperation.UsePartColor|UsePartColor` property to change the entire union to a specific color.
 
@@ -55,12 +55,12 @@ The **Union** tool joins two or more parts together to form a single solid `Clas
 
 To combine parts together into a union:
 
-1. Select all parts that you want to join together.
+1. Select all parts to join together.
 2. Click the **Union** button. All of the parts combine into one solid `Class.UnionOperation` with the name **Union**.
 
    <img src="../assets/studio/general/Model-Tab-Union.png" alt="Union tool indicated in Model tab" width="732" />
 
-## Intersect parts
+## Intersecting Parts
 
 The **Intersect** tool intersects overlapping parts into a single solid `Class.IntersectOperation`. By default, the face colors of the resulting intersection are borrowed from the `Class.BasePart.Color|Color` property of the original parts, although you can enable its `Class.PartOperation.UsePartColor|UsePartColor` property to change the entire intersection to a specific color.
 
@@ -79,14 +79,14 @@ The **Intersect** tool intersects overlapping parts into a single solid `Class.I
 
 To intersect overlapping parts together:
 
-1. Select all parts that you want to intersect.
+1. Select all parts to intersect.
 2. Click the **Intersect** button. All of the parts combine into one solid `Class.IntersectOperation` with the name **Intersection**.
 
    <img src="../assets/studio/general/Model-Tab-Intersect.png" alt="Intersect tool indicated in Model tab" width="732" />
 
-## Negate parts
+## Negating Parts
 
-The **Negate** tool negates a part so that when it's [unioned with another part](#union-parts), the shape of the negated part is **subtracted** from the other part.
+The **Negate** tool negates a part so that when it's [unioned with another part](#unioning-parts), the shape of the negated part is **subtracted** from the other part.
 
 <Tabs>
   <TabItem label="Separate Parts">
@@ -103,7 +103,7 @@ The **Negate** tool negates a part so that when it's [unioned with another part]
 
 To subtract a part from other overlapping parts:
 
-1. Select the part you want to negate from other parts.
+1. Select the part you would like to negate from other parts.
 1. Click **Negate**. The part becomes a `Class.NegateOperation` with the name **NegativePart** and turns pink and translucent to indicate its state.
 
    <img src="../assets/studio/general/Model-Tab-Negate.png" alt="Negate tool indicated in Model tab" width="732" />
@@ -113,26 +113,26 @@ To subtract a part from other overlapping parts:
 
    <img src="../assets/studio/general/Model-Tab-Union-Negated.png" alt="Union tool indicated in Model tab" width="732" />
 
-## Separate unions or intersections
+## Separating Unions or Intersections
 
 The **Separate** tool separates a `Class.UnionOperation` back into its individual parts, essentially serving as an "undo" tool for unions and intersections.
 
 To separate a union or intersection back into individual parts:
 
-1. Select the union or intersection.
+1. Select a `Class.UnionOperation`.
 1. Click **Separate**. The parts separate back into their original form.
 
    <img src="../assets/studio/general/Model-Tab-Separate.png" alt="Separate tool indicated in Model tab" width="732" />
 
-## Render fidelity
+## Render Fidelity
 
 By default, new solid modeled operations will always be shown in `Enum.RenderFidelity.Automatic|Automatic` render fidelity, meaning the part's detail is based on its distance from the camera as outlined in the following table.
 
 <table>
     <thead>
         <tr>
-            <th>Distance from camera</th>
-            <th>Render fidelity</th>
+            <th>Distance From Camera</th>
+            <th>Render Fidelity</th>
         </tr>
     </thead>
     <tbody>
@@ -151,7 +151,7 @@ By default, new solid modeled operations will always be shown in `Enum.RenderFid
     </tbody>
 </table>
 
-## Smoothing angle
+## Smoothing Angle
 
 A solid modeled part's `Class.PartOperation.SmoothingAngle|SmoothingAngle` property smooths angles between adjacent surfaces of the same color or material. A higher value produces a smoother appearance while a lower value produces a rougher appearance with more sharp edges.
 
@@ -168,7 +168,7 @@ While a value between 30 and 70 degrees usually produces a good result, values b
   </figure>
 </GridContainer>
 
-## In-experience solid modeling
+## In-Experience Solid Modeling
 
 In addition to the **Union**, **Intersect**, and **Negate** tools in Studio, you can allow players to use solid modeling operations while inside an experience through `Class.BasePart:UnionAsync()|UnionAsync()`, `Class.BasePart:IntersectAsync()|IntersectAsync()`, and `Class.BasePart:SubtractAsync()|SubtractAsync()`. All of these methods must be called on a `Class.BasePart` and they all require an array of one or more parts to union with, intersect with, or subtract from the calling part.
 

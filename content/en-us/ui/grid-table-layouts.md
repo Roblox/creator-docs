@@ -1,5 +1,5 @@
 ---
-title: Grid and table layouts
+title: Grid and Table Layouts
 description: How to use grid and table layouts for highly structured user interfaces.
 ---
 
@@ -16,7 +16,7 @@ In comparison to `Class.UIListLayout`, `Class.UIGridLayout` and `Class.UITableLa
 	</figure>
 </GridContainer>
 
-## Grid layout
+## Grid Layout
 
 `Class.UIGridLayout` positions sibling `Class.GuiObject|GuiObjects` in a grid of uniform cells of the same size within their parent container. Cells are added by row or column based on the layout's `Class.UIGridLayout.FillDirection|FillDirection` until the next cell doesn't fit, then a new row or column begins. For further control, you can use the `Class.UIGridLayout.FillDirectionMaxCells|FillDirectionMaxCells` property to set the maximum number of cells per row or column.
 
@@ -39,7 +39,7 @@ Once you insert a `Class.UIGridLayout`, it either overrides or influences the `C
 `Class.UIGridLayout` respects any [constraints](../ui/size-modifiers.md) you place on objects within the grid. For example, if an object has a `Class.UISizeConstraint` with a `Class.UISizeConstraint.MinSize|MinSize` property that is higher than the grid's `Class.UIGridLayout.CellSize|CellSize` property, the object will span multiple cells.
 </Alert>
 
-## Table layout
+## Table Layout
 
 `Class.UITableLayout` positions sibling `Class.GuiObject|GuiObjects` and their children into table format. The default `Class.UITableLayout.FillDirection|FillDirection` of `Enum.FillDirection|Vertical` means that siblings are first positioned into rows, and children of those siblings are positioned horizontally to form columns, such that each cell within a row has the same height and each cell within a column has the same width.
 

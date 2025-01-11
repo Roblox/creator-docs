@@ -1,5 +1,5 @@
 ---
-title: Environmental art curriculum
+title: Environmental Art Curriculum
 description: //
 next: /tutorials/curriculums/environmental-art/greybox-your-environment
 hideInPageNavigation: true
@@ -44,7 +44,7 @@ learning how to build an environment, try the [core curriculum](../core/index.md
 
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 1 - Greybox your environment</Typography>
+      <Typography variant="h4">Chapter 1 - Greybox Your Environment</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -67,7 +67,7 @@ experience gameplay before investing time into polishing assets.
 
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 2 - Develop polished assets</Typography>
+      <Typography variant="h4">Chapter 2 - Develop Polished Assets</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -89,7 +89,7 @@ experience gameplay before investing time into polishing assets.
 
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 3 - Assemble an asset library</Typography>
+      <Typography variant="h4">Chapter 3 - Assemble an Asset Library</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -111,7 +111,7 @@ experience gameplay before investing time into polishing assets.
 
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 4 - Construct your world</Typography>
+      <Typography variant="h4">Chapter 4 - Construct Your World</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -133,7 +133,7 @@ experience gameplay before investing time into polishing assets.
 
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 5 - Optimize your experience</Typography>
+      <Typography variant="h4">Chapter 5 - Optimize Your Experience</Typography>
    </AccordionSummary>
    <AccordionDetails>
 

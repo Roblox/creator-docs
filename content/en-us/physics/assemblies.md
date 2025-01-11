@@ -31,7 +31,7 @@ The joints that combine multiple parts into assemblies are only active in the `C
 To view colored outlines around parts in order to visualize single rigid body assemblies, toggle on **Assemblies** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
-## Assembly properties
+## Assembly Properties
 
 The following `Class.BasePart` properties show data regarding its assembly. Their values will be the same for any part in the same assembly, so it doesn't matter which part you use.
 
@@ -66,7 +66,7 @@ The following `Class.BasePart` properties show data regarding its assembly. Thei
 </tbody>
 </table>
 
-## Assembly root part
+## Assembly Root Part
 
 Every assembly has a **root&nbsp;part** indicated by its `Class.BasePart.AssemblyRootPart|AssemblyRootPart` property. This is the part that doesn't move when `Class.Motor6D` transforms are updated, as well as the part used to keep consistent physics replication and network ownership.
 
@@ -97,7 +97,7 @@ You cannot explicitly set the root part, but the following factors affect probab
 	</Grid>
 </Grid>
 
-## Anchoring behavior
+## Anchoring Behavior
 
 When one of an assembly's parts is anchored, that part becomes the root part and all of the other parts become implicitly anchored with it. The following sequence illustrates this behavior.
 

@@ -1,5 +1,5 @@
 ---
-title: Data model
+title: Data Model
 description: Explains the hierarchy of objects that describe everything about a place.
 ---
 
@@ -10,9 +10,9 @@ also contains objects that can control runtime behavior, such as scripts that
 modify properties, call methods and functions, and respond to events that enable
 dynamic behavior and interactivity.
 
-The Roblox Engine uses the data model as a source of truth for a place's state,
+The Roblox engine uses the data model as a source of truth for a place's state,
 so it can simulate and render it on client devices. For more information on how
-the Roblox Engine interprets the data model, see [Client-Server
+the Roblox engine interprets the data model, see [Client-Server
 Runtime](/projects/client-server).
 
 ## Objects
@@ -25,10 +25,10 @@ provides. There are many categories of objects with a wide variety of uses, but
 you'll frequently work with `Class.BasePart` and `Class.LuaSourceContainer`
 objects, commonly referred to as parts and scripts.
 
-For a comprehensive list of all the features of the Roblox Engine, see the
+For a comprehensive list of all the features of the Roblox engine, see the
 [reference documentation](/reference/engine).
 
-### 3D building blocks
+### 3D Building Blocks
 
 `Class.BasePart` is the core class for physically-simulated 3D building blocks in the world. It defines the properties and methods common to all physical objects with properties like position, size, and orientation.
 
@@ -77,10 +77,10 @@ client, or have them communicate across the network boundary.
 For scripts to behave properly, you must place them in the correct containers in
 the data model. For more information, see the [Server](#server) and [Client](#client) sections.
 
-## Object organization
+## Object Organization
 
 While you have a lot of flexibility in how you organize your data model, the
-Roblox Engine expects certain objects to be in certain **container services**
+Roblox engine expects certain objects to be in certain **container services**
 which are objects that have specific behaviors and can affect the behaviors of
 the objects they contain. The main categories of container services include:
 
@@ -99,8 +99,8 @@ the objects they contain. The main categories of container services include:
   `Class.VoiceChatService` and `Class.TextChatService`.
 
 <Alert severity="info">
-The Roblox Engine has many more services that provide
-built-in functionality that you can call within your scripts. The Roblox Engine
+The Roblox engine has many more services that provide
+built-in functionality that you can call within your scripts. The Roblox engine
 doesn't give these services special treatment in the data model. For more
 information, see [Services](../scripting/services.md).
 </Alert>
@@ -135,7 +135,7 @@ For example, you can set a camera to follow user movements or stay fixed in a
 particular location. You can also adjust the field of view, distance, and angle
 to create different visual effects of how users view your 3D world.
 
-For more information, see [Customize the camera](../workspace/camera.md).
+For more information, see [Customizing the Camera](../workspace/camera.md).
 
 <h4>Terrain</h4>
 
@@ -146,7 +146,7 @@ for your 3D world and apply one material to that terrain, you can use the
 [Terrain Editor](../studio/terrain-editor.md) to edit regions of your
 terrain.
 
-For more information, see [Environmental terrain](../parts/terrain.md).
+For more information, see [Environmental Terrain](../parts/terrain.md).
 
 ### Environment
 
@@ -179,7 +179,7 @@ For more information, see [Sound](../sound/index.md).
 ### Replication
 
 **Replication** is the process of the server synchronizing the state of your
-place with all connected clients. The Roblox Engine intelligently and
+place with all connected clients. The Roblox engine intelligently and
 automatically replicates data, physics, and chat messages between the server and
 client for many cases, but you can also specify certain objects to replicate by
 placing them in specific containers.
@@ -204,7 +204,7 @@ container to replicate any objects that don't need to exist in the 3D world
 until needed, such as a `Class.ParticleEmitter` for cloning and parenting to all
 incoming character models.
 
-For more information on how replication works, see [Client-server runtime](../projects/client-server.md).
+For more information on how replication works, see [Client-Server Runtime](../projects/client-server.md).
 
 ### Server
 
@@ -263,8 +263,8 @@ the client:
 <table>
 <thead>
   <tr>
-    <th>Edit data model</th>
-    <th>Runtime data model</th>
+    <th>Edit Data Model</th>
+    <th>Runtime Data Model</th>
     <th>Notes</th>
   </tr>
 </thead>
@@ -298,7 +298,8 @@ the client:
 </table>
 
 <Alert severity="info">
-For more information on edit and runtime data models, see [Client-server runtime](./client-server.md#client).
+For more information on edit and runtime data models,
+see [Client-Server Runtime](./client-server.md#client).
 </Alert>
 
 <Alert severity="warning">
@@ -314,7 +315,7 @@ service explicitly.
 in-experience text chat tasks, such as managing channels, decorating messages,
 filtering text, creating commands, and developing custom chats interfaces.
 
-For more information, see [In-experience text chat system](../chat/in-experience-text-chat.md).
+For more information, see [In-Experience Text Chat System](../chat/in-experience-text-chat.md).
 
 <h4>VoiceChatService</h4>
 
@@ -322,9 +323,9 @@ For more information, see [In-experience text chat system](../chat/in-experience
 feature that simulates realistic communication based on how close you are to
 other users. You can use this service to toggle the feature on and off.
 
-For more information, see [Voice chat](../chat/voice-chat.md).
+For more information, see [Voice Chat](../chat/voice-chat.md).
 
-## Folders and models
+## Folders and Models
 
 There are two primary methods for grouping objects in the data model:
 **folders** and **models**. Both are containers for objects, but they have

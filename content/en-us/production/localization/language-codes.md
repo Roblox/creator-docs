@@ -1,6 +1,6 @@
 ---
-title: Language codes
-description: Language codes are languages you can specify by locale ID to support multi-lingual support.
+title: Language Codes
+description: Language Codes are languages you can specify by locale ID to support multi-lingual support.
 ---
 
 You can specify languages by their language code or locale ID. Refer to the following table for a list of language codes and locale IDs that you can currently support in your localization tables on Roblox:
@@ -9,7 +9,7 @@ You can specify languages by their language code or locale ID. Refer to the foll
 <thead>
   <tr>
     <th>Language</th>
-    <th>Language code</th>
+    <th>Language Code</th>
     <th>Locale ID</th>
   </tr>
 </thead>

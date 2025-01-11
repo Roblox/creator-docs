@@ -1,9 +1,9 @@
 ---
 title: Services
-description: Services provide pre-built functionality in the Roblox Engine.
+description: Services provide pre-built functionality in the Roblox engine.
 ---
 
-In [Reuse code](module.md), you might have noticed frequent use of the `game:GetService()` method. Roblox services let you access the built-in features of the engine, like selling in-experience items, enabling chat, playing sounds, animating objects, and managing instances.
+In [Reusing Code](module.md), you might have noticed frequent use of the `game:GetService()` method. Roblox services let you access the built-in features of the engine, like selling in-experience items, enabling chat, playing sounds, animating objects, and managing instances.
 
 In fact, services are the first step in **the most fundamental, common pattern of Roblox development**:
 
@@ -47,12 +47,12 @@ Some key details include:
 
 Rather than comparing [standard libraries](/reference/engine/libraries), [global functions and variables](/reference/engine/globals), or third-party libraries, a big part of Roblox development is identifying which of the many, many services can help you add the desired functionality to your experiences. In the example above, instead of using a standard I/O library to write to disk, you use [cloud services](#cloud-services) to store data.
 
-## Container services
+## Container Services
 
 Container services can contain and influence other objects. These container
 services reside at the root of the data model and are visible in Studio's
 Explorer window. Collectively, these container services
-form a structured hierarchy for the data model, so the Roblox Engine can
+form a structured hierarchy for the data model, so the Roblox engine can
 properly interpret and render your place. The following table includes some common container services.
 
 Service | Description
@@ -70,9 +70,9 @@ To further examine the data model, you can use these methods:
 For more information on container services, see the [data
 model](/projects/data-model#object-organization) documentation.
 
-## Scripting services
+## Scripting Services
 
-Scripting services provide standard functionality in the Roblox Engine that you
+Scripting services provide standard functionality in the Roblox engine that you
 call within scripts. The following table includes some common scripting services.
 
 Service | Description
@@ -84,7 +84,7 @@ Service | Description
 `Class.SoundService` | Controls various global aspects of how audio plays in an experience, such as the doppler scale and volumetric audio. Can also contain sound groups to control the volume and dynamic effects properties of multiple audio signals at once.
 `Class.CollectionService` | Manages groups (collections) of instances with tags that replicate from the server to the client, letting you more easily assign and work with groups of related instances.
 
-## Cloud services
+## Cloud Services
 
 Roblox also has special cloud services for handling tasks and processes
 that occur in the Roblox cloud. The following table includes some common cloud services.

@@ -1,5 +1,5 @@
 ---
-title: Control structures
+title: Control Structures
 description: Control structures are statements that manage the flow of Luau code execution.
 ---
 
@@ -12,7 +12,7 @@ description: Control structures are statements that manage the flow of Luau code
 
 The condition for `if` statements, `while` loops, and `repeat` loops can be any Luau expression or value. If a value isn't `false` or `nil`, then Luau evaluates it as `true` in conditional statements. Unlike other scripting languages, Luau considers both zero and the empty string as `true`.
 
-## If statements
+## If Statements
 
 The basic `if` statement tests its condition. If the condition is true, then Luau executes the code between `then` and `end`.
 
@@ -30,7 +30,7 @@ else
 end
 ```
 
-## While loops
+## While Loops
 
 A `while`—`do` loop evaluates if a specified condition is true or false. If the condition is `false` or `nil`, then the loop ends, and Luau skips the code in the loop. If the condition is `true`, then Luau executes the code in the loop and repeats the process.
 
@@ -59,7 +59,7 @@ Timer reached zero!
 ]]
 ```
 
-### Infinite loops
+### Infinite Loops
 
 You can use a `while`—`do` loop to write infinite game loops by setting `true` as the condition.
 
@@ -82,7 +82,7 @@ Looping...
 Always include a delay such as <InlineCode>task.wait()</InlineCode> in an infinite loop. Omitting it freezes the experience and crashes Studio.
 </Alert>
 
-## Repeat loops
+## Repeat Loops
 
 The `repeat`—`until` loop repeats until a condition is true. The conditional test evaluates **after** the code block runs, so the code block always runs at least once. Unlike other languages, the Luau scope of a local variable declared inside a `repeat`—`until` loop includes the condition.
 
@@ -110,11 +110,11 @@ Goblins repopulated!
 ]]
 ```
 
-## For loops
+## For Loops
 
 A for loop executes code a set number of times, either based on a [numerical counter](#numeric-for-loops) or the number of [items in a collection](#generic-for-loops).
 
-### Numeric for loops
+### Numeric For Loops
 
 A `for`—`do` loop determines the number of times to execute the loop using a counter. The loop is declared with a start value, end value, and optional increment.
 
@@ -156,13 +156,13 @@ end
 ]]
 ```
 
-### Generic for loops
+### Generic For Loops
 
 The generic `for` loop iterates over items in a collection rather than a sequence of numbers. With generic `for` loops, you can execute code for each item in the collection, and can easily use each item in the code.
 
 For loops need a function, or iterator, to iterate over different types of collections. The global `ipairs()` returns an iterator for arrays, and the global `pairs()` returns an iterator for dictionaries. The `Library.string` library provides `Library.string.gmatch()` to iterate over strings.
 
-### Generalized iteration
+### Generalized Iteration
 
 In Luau, you can iterate over a table using the `in` keyword directly on the table, instead of using an iterator function such as `ipairs()`:
 
@@ -252,7 +252,9 @@ World f
 ]]
 ```
 
-## Break loops
+## Control Keywords
+
+### Breaking Loops
 
 To force a loop to end, use the `break` keyword. The following code sample shows how to break an infinite `while`—`do` loop.
 
@@ -282,7 +284,7 @@ Five seconds elapsed. Time to move on!
 ]]
 ```
 
-## Continue loops
+### Continuing Loops
 
 To force a loop to iterate and start again, use the `continue` keyword. A `for` loop will iterate the counter; `while` and `repeat`—`until` will check the loop condition before continuing. The following code sample gets all children of an `Class.Instance` of a specific `Class.Instance.ClassName|ClassName`.
 

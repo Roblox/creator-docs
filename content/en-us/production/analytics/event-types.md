@@ -1,5 +1,5 @@
 ---
-title: Event types
+title: Event Types
 description: Overview of using event types to track user sources, sinks and milestones in your experience.
 ---
 
@@ -7,11 +7,11 @@ description: Overview of using event types to track user sources, sinks and mile
 
 Event types help you identify opportunities to grow and monetize your experience. They allow you to **integrate event tracking in your experience** and visualize your in-experience economy and player usage patterns on the Analytics dashboard
 
-Once you begin tracking these events from your experience using the `Class.AnalyticsService`, you'll unlock new [economy](./economy-events.md), [funnel](./funnel-events.md), and [custom](./custom-events.md) dashboards under Analytics on the Creator Dashboard. You can use these dashboards to identify growth opportunities and segment users by age, gender, platform, OS and custom fields. All of these features are **free to use**.
+Once you begin tracking these events from your experience using the `Class.AnalyticsService`, you'll unlock new [Economy](./economy-events.md), [Funnel](./funnel-events.md), and [Custom](./custom-events.md) dashboards under Analytics on the Creator Dashboard. You can use these dashboards to identify growth opportunities and segment users by age, gender, platform, OS and custom fields. All of these features are **free to use**.
 
 <img src="../../assets/analytics/event-types/Overview-Economy-Funnels.png" alt="Economy and Funnels dashboard pages populated with data."/>
 
-## Event types
+## Event Types
 
 Roblox provides three sets of analytic dashboards you can use to track different aspects of your experience:
 
@@ -35,11 +35,11 @@ Roblox provides three sets of analytic dashboards you can use to track different
       - **User Behavior** — What is the most frequently used ability on each map?
       - **Core Loop** — How do kill/death ratios compare across different weapons?
 
-For more information on setting up these dashboards, see [Economy events](./economy-events.md), [Funnel events](./funnel-events.md) and [Custom events](./custom-events.md).
+For more information on setting up these dashboards, see [Economy Events](./economy-events.md), [Funnel Events](./funnel-events.md) and [Custom Events](./custom-events.md).
 
-## Validate your event tracking
+## Validating Your Event Tracking
 
-Once you add [economy](./economy-events.md), [funnel](./funnel-events.md), or [custom](./custom-events.md) events to your experience, charts on the respective pages typically take 24 hours to appear. In the meantime, you can check if events are set up correctly using the **View Events** tool:
+Once you add [Economy](./economy-events.md), [Funnel](./funnel-events.md), or [Custom](./custom-events.md) events to your experience, charts on the respective pages typically take 24 hours to appear. In the meantime, you can check if events are set up correctly using the **View Events** tool:
 
 1. Navigate to the **Economy**, **Funnel**, or **Custom** pages of your Analytics dashboard for your experience.
 2. Click the **View Events** button at the top of each page. A near real-time list of the most recent events displays.
@@ -49,7 +49,7 @@ Once you add [economy](./economy-events.md), [funnel](./funnel-events.md), or [c
 
 You can also visit your experience's [error report](./error-report.md) to see if there are any errors with your event tracking.
 
-## Event tracking limitations
+## Event Tracking Limitations
 
 The following limitations apply when tracking your events with `Class.AnalyticsService`:
 
@@ -65,7 +65,7 @@ For example, instead of tracking `WarriorXP`, `MageXP`, `PaladinXP` as separate 
   <tr>
     <th></th>
     <th>**Limitation**</th>
-    <th>**Maximum value**</th>
+    <th>**Maximum Value**</th>
     <th>**Examples**</th>
   </tr></thead>
 <tbody>

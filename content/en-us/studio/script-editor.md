@@ -1,9 +1,9 @@
 ---
-title: Script editor
+title: Script Editor
 description: Roblox's built-in, fully-featured script editor includes modern conveniences like autocomplete, code highlighting, and multi-cursor editing.
 ---
 
-The **script editor** in Studio is the primary tool for scripting on Roblox. It's a self-improving environment that can help you write high-impact code, shorten your development time, and iterate on your experiences. It can improve your scripting experience by:
+The **Script Editor** in Studio is the primary tool for scripting on Roblox. It's a self-improving environment that can help you write high-impact code, shorten your development time, and iterate on your experiences. It can improve your scripting experience by:
 
 - Formatting and highlighting syntax in your code.
 - Offering ways to [autocomplete](#autocomplete-features) phrases in your code as you type.
@@ -17,7 +17,7 @@ The Script Editor supports all types of [scripts](../scripting/index.md) and ope
 You can [customize](#editor-settings) the Script Editor to suit your preferences and workflows, including font family/size, formatting behavior, and colors for syntax highlighting. You can also toggle features such as [autocomplete](#autocomplete), [signature help](#signature-help), and [script analysis](#script-analysis).
 </Alert>
 
-## Autocomplete features
+## Autocomplete Features
 
 The Script Editor's autocomplete features generate code-related information that can improve your programming efficiency, such as:
 
@@ -35,7 +35,7 @@ The Script Editor's autocomplete features generate code-related information that
 
 - **Documentation pop-ups with code samples** that are similar to those on the [Engine API Reference](/reference/engine), giving you context on the API's usage.
 
-   <img src="../assets/studio/script-editor/Autocomplete-API.png" width="780" alt="Autocomplete showing suggestions based on a Roblox Engine API." />
+   <img src="../assets/studio/script-editor/Autocomplete-API.png" width="780" alt="Autocomplete showing suggestions based on a Roblox engine API." />
 
 - **On-hover tooltips** that you can customize with your own defined documentation.
 
@@ -49,21 +49,21 @@ The Script Editor's autocomplete features generate code-related information that
 
    <img src="../assets/studio/script-editor/Autocomplete-Signature.png" width="780" alt="Autocomplete showing function signature" />
 
-## Code navigation
+## Code Navigation
 
-### Go to declaration
+### Go to Declaration
 
 You can jump to the declaration of a function or variable by holding <kbd>Ctrl</kbd> on Windows or <kbd>⌘</kbd> on Mac when clicking the call, or by right-clicking its call and clicking **Go&nbsp;to&nbsp;Declaration**.
 
 <img src="../assets/studio/script-editor/Go-To-Declaration.png" width="800" alt="Go to Declaration workflow on a declared function" />
 
-### Script function filter
+### Script Function Filter
 
 The **Script Function Filter** displays a list of all functions declared in a script. To open it, press <kbd>Alt</kbd><kbd>F</kbd> on Windows or <kbd>⌥</kbd><kbd>F</kbd> on Mac. With the list open, you can browse the signatures for each function, filter through them by name, and double-click one to jump to its declaration.
 
 <img src="../assets/studio/script-editor/Script-Functions-Filter.png" width="800" alt="Script Function Filter showing all functions inside a script" />
 
-## Find and replace
+## Find and Replace
 
 The **Find/Replace** widget lets you find and replace code in an open script. The widget supports matching case, matching the whole word, and searching by regular expressions. To open it, press <kbd>Ctrl</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>F</kbd> on Mac.
 
@@ -73,7 +73,7 @@ The **Find/Replace** widget lets you find and replace code in an open script. Th
 For broader searches, the **Find All / Replace All** window lets you find/replace code across multiple scripts in the experience. To open it, press <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>Shift</kbd><kbd>F</kbd> on Mac.
 </Alert>
 
-## Real-time feedback
+## Real-Time Feedback
 
 ### Script Analysis
 
@@ -88,9 +88,9 @@ The **Script Analysis** window, accessible from the [View](./view-tab.md) tab, p
 <figcaption>Errors explained in Script Analysis window</figcaption>
 </figure>
 
-### Output
+### Output Window
 
-The **Output** window, accessible from the [View](./view-tab.md) tab, displays errors captured from running scripts, messages from Roblox Engine, messages from calls to `print()`, and errors from calls to `warn()`. For details on configuring it for your workflow, see [Output](../studio/output.md).
+The **Output** window, accessible from the [View](./view-tab.md) tab, displays errors captured from running scripts, messages from Roblox engine, messages from calls to `print()`, and errors from calls to `warn()`. For details on configuring it for your workflow, see [Output Window](../studio/output.md).
 
 <img src="../assets/studio/general/Output-Window.png" width="800" />
 
@@ -109,7 +109,7 @@ Press <kbd>Tab</kbd> to accept a suggestion, or ignore it by continuing to type.
 **Code Assist** helps automate basic coding tasks so you can focus on creative work, but it does not always suggest perfect code (see [Limitations](#limitations)). It's still your responsibility to review, test, and determine if the code suggestion is contextually appropriate.
 </Alert>
 
-### Improve suggestions
+### Improving Suggestions
 
 To get more accurate and relevant suggestions, it's recommended that you follow clean coding practices, regardless of assistance, and:
 
@@ -134,13 +134,13 @@ The tool helps automate basic coding tasks but it does not always suggest perfec
 - The suggestion may be incomplete due to the limited length of output from the learning models.
 - There's a daily cap for the number of suggestions and, once the cap is reached, you will get no suggestions until the next day.
 
-### Code privacy
+### Code Privacy
 
 Currently, Roblox does not use any non-public data to train the learning models. The tool only uses a small subset of free marketplace assets for tuning large language models and the subset has passed various checks for quality and safety filters.
 
 Furthermore, all suggestions are generated **by** the AI model and do not transfer from one user to another. Since your code is not used for model training, it won't be suggested to other users of **Code&nbsp;Assist**, with the one exception of code being posted to free marketplace items.
 
-## Multi-cursor
+## Multi-Cursor
 
 The Script Editor supports usage of multiple cursors to make edits simultaneously. You can add cursors based on your needs with a mouse click or keyboard shortcut. The initial cursor is called the **primary cursor** and additional cursors are called **secondary cursors**.
 
@@ -160,42 +160,42 @@ The following table summarizes multi-cursor workflows and their shortcuts.
   </thead>
   <tbody>
     <tr>
-      <td>**Add/remove cursor at mouse location**</td>
+      <td>**Add/Remove Cursor at Mouse Location**</td>
       <td><kbd>Alt</kbd>&nbsp;+ click</td>
       <td><kbd>⌥</kbd>&nbsp;+ click</td>
     </tr>
     <tr>
-      <td>**Remove most recently added cursor**</td>
+      <td>**Remove Most Recently Added Cursor**</td>
       <td><kbd>Ctrl</kbd><kbd>U</kbd></td>
       <td><kbd>⌘</kbd><kbd>U</kbd></td>
     </tr>
 		<tr>
-      <td>**Add/modify cursor on mouse drag**</td>
+      <td>**Add/Modify Cursor on Mouse Drag**</td>
       <td><kbd>Alt</kbd>&nbsp;+ drag</td>
       <td><kbd>⌥</kbd>&nbsp;+ drag</td>
     </tr>
 		<tr>
-      <td>**Add cursor above/below**</td>
+      <td>**Add Cursor Above/Below**</td>
       <td><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>↑</kbd>&nbsp;/ <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>↓</kbd></td>
       <td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>↑</kbd>&nbsp;/ <kbd>⌘</kbd><kbd>⌥</kbd><kbd>↓</kbd></td>
     </tr>
 		<tr>
-      <td>**Add cursor to next matching selection**</td>
+      <td>**Add Cursor to Next Matching Selection**</td>
       <td><kbd>Ctrl</kbd><kbd>D</kbd></td>
       <td><kbd>⌘</kbd><kbd>D</kbd></td>
     </tr>
 		<tr>
-      <td>**Add cursor to every matching selection**</td>
+      <td>**Add Cursor to Every Matching Selection**</td>
       <td><kbd>Shift</kbd><kbd>Alt</kbd><kbd>L</kbd></td>
       <td><kbd>Shift</kbd><kbd>⌥</kbd><kbd>L</kbd></td>
     </tr>
 		<tr>
-      <td>**Column/block select**</td>
+      <td>**Column/Block Select**</td>
       <td><kbd>Shift</kbd><kbd>Alt</kbd>&nbsp;+ drag</td>
       <td><kbd>Shift</kbd><kbd>⌥</kbd>&nbsp;+ drag</td>
     </tr>
 		<tr>
-      <td>**Split selections into lines**</td>
+      <td>**Split Selections Into Lines**</td>
       <td><kbd>Shift</kbd><kbd>Alt</kbd><kbd>I</kbd></td>
       <td><kbd>Shift</kbd><kbd>⌥</kbd><kbd>I</kbd></td>
     </tr>
@@ -206,11 +206,11 @@ The following table summarizes multi-cursor workflows and their shortcuts.
 To remove all secondary cursors, exit multi-cursor editing, and return to the primary cursor, press <kbd>Esc</kbd>.
 </Alert>
 
-### Add cursors
+### Adding Cursors
 
 You can add cursors with a combination of keyboard shortcuts and mouse maneuvers. Cursors merge if they occupy the same space, such as if you add cursors with arrow keys or delete all the characters between cursors.
 
-#### At mouse location
+#### At Mouse Location
 
 To add a cursor at your mouse pointer location:
 
@@ -219,12 +219,12 @@ To add a cursor at your mouse pointer location:
 
    <video controls width="512" src="../assets/studio/script-editor/AddWithClick.mp4"></video>
 
-#### With mouse drag
+#### With Mouse Drag
 
 You can drag the mouse to add a cursor to a selection, split a multi-line selection into lines, or select columns and blocks of code/whitespace.
 
 <Tabs>
-<TabItem label="Drag select">
+<TabItem label="Drag Select">
 To add a cursor to a selection of code through dragging:
 
 1. Hold <kbd>Alt</kbd> on Windows or <kbd>⌥</kbd> on Mac.
@@ -233,13 +233,13 @@ To add a cursor to a selection of code through dragging:
    <video controls width="512" src="../assets/studio/script-editor/AddWithDrag.mp4"></video>
 
 </TabItem>
-<TabItem label="Split into lines">
+<TabItem label="Split Into Lines">
 To split a multi-line selection into lines and add a cursor at the end of each line, press <kbd>Shift</kbd><kbd>Alt</kbd><kbd>I</kbd> on Windows or <kbd>Shift</kbd><kbd>⌥</kbd><kbd>I</kbd> on Mac.
 
 <video controls width="405" src="../assets/studio/script-editor/SplitSelectionsIntoLines.mp4"></video>
 
 </TabItem>
-<TabItem label="Column/block select">
+<TabItem label="Column/Block Select">
 To select columns and blocks of code or whitespace, drag the mouse while holding <kbd>Shift</kbd><kbd>Alt</kbd> on Windows or <kbd>Shift</kbd><kbd>⌥</kbd> on Mac. As you drag, a cursor will be added on each highlighted line.
 
 <video controls width="405" src="../assets/studio/script-editor/ColumnBlockSelect.mp4"></video>
@@ -247,7 +247,7 @@ To select columns and blocks of code or whitespace, drag the mouse while holding
 </TabItem>
 </Tabs>
 
-#### Above and below primary cursor
+#### Above and Below Primary Cursor
 
 To add a cursor directly above or below the primary cursor:
 
@@ -256,12 +256,12 @@ To add a cursor directly above or below the primary cursor:
 
    <video controls width="434" src="../assets/studio/script-editor/AddAboveBelow.mp4"></video>
 
-#### To matching selections
+#### To Matching Selections
 
 You can add cursors to all matches of a selection or to the next/previous match, and optionally toggle whether matches are case-sensitive and/or match the whole word.
 
 <Tabs>
-<TabItem label="All matching">
+<TabItem label="All Matching">
 To add a cursor to all matches of a selected portion:
 
 1. Select the code that you want to search for matches of.
@@ -270,7 +270,7 @@ To add a cursor to all matches of a selected portion:
    <video controls width="454" src="../assets/studio/script-editor/AddToAllMatches.mp4"></video>
 
 </TabItem>
-<TabItem label="Next/previous match">
+<TabItem label="Next/Previous Match">
 To add a cursor to the **next** matching selection:
 
 1. Select the code that you want to search for matches of.
@@ -290,7 +290,7 @@ There is no default shortcut for adding a cursor to the **previous** matching se
 4. Confirm your setting by clicking **OK** in the bottom-right corner of the window.
 
 </TabItem>
-<TabItem label="Case or whole word match">
+<TabItem label="Case or Whole Word Match">
 For each of the matching-related workflows above, you can match **case** and/or **whole word** as follows:
 
 1. Open the Find/Replace tool (<kbd>Ctrl</kbd><kbd>F</kbd> on Windows or <kbd>⌘</kbd><kbd>F</kbd> on Mac).
@@ -305,11 +305,11 @@ For each of the matching-related workflows above, you can match **case** and/or 
 </TabItem>
 </Tabs>
 
-### Remove cursors
+### Removing Cursors
 
 You can remove cursors with the following keyboard shortcuts and mouse maneuvers. Alternatively, you can exit multi-cursor editing by pressing <kbd>Esc</kbd>.
 
-#### At mouse location
+#### At Mouse Location
 
 To remove a cursor:
 
@@ -318,13 +318,13 @@ To remove a cursor:
 
    <video controls width="485" src="../assets/studio/script-editor/RemoveWithClick.mp4"></video>
 
-#### Most recently added
+#### Most Recently Added
 
 To remove the most recently added cursor, press <kbd>Ctrl</kbd><kbd>U</kbd> on Windows or <kbd>⌘</kbd><kbd>U</kbd> on Mac.
 
 <video controls width="393" src="../assets/studio/script-editor/UndoRecentCursor.mp4"></video>
 
-### Copy and paste cursors
+### Copying and Pasting Cursors
 
 Copying a selection of code includes the cursors within it. The behavior of the paste depends on the number of cursors at the source and the number of cursors at the destination:
 
@@ -333,14 +333,14 @@ Copying a selection of code includes the cursors within it. The behavior of the 
 
 <video controls width="679" src="../assets/studio/script-editor/CopyPaste.mp4"></video>
 
-### On-type formatting
+### On-Type Formatting
 
 Pressing enter/return will auto-indent each cursor at the new line relative to
 the previous line. If the previous line starts with an incomplete block, the formatter will try to complete it.
 
 <video controls width="459" src="../assets/studio/script-editor/OnTypeFormatting.mp4"></video>
 
-## Editor settings
+## Editor Settings
 
 Many customization options are accessible via **File**&nbsp;&rang; **Studio Settings** (<kbd>Alt</kbd><kbd>S</kbd> on Windows; <kbd>⌥</kbd><kbd>S</kbd> on Mac).
 
@@ -361,30 +361,30 @@ Commonly modified options include:
     <td>Font face and size for code in the editor.</td>
   </tr>
   <tr>
-    <td>**Tab width**</td>
+    <td>**Tab Width**</td>
     <td>Number of spaces representing a <kbd>Tab</kbd> indent.</td>
   </tr>
   <tr>
-    <td>**Indent using spaces**</td>
+    <td>**Indent Using Spaces**</td>
     <td>If enabled, spaces equal to **Tab&nbsp;Width** are inserted with <kbd>Tab</kbd> press.</td>
   </tr>
   <tr>
-    <td>**Text wrapping**</td>
+    <td>**Text Wrapping**</td>
     <td>If enabled, longer lines of code wrap to the next line.</td>
   </tr>
   <tr>
-    <td>**Script Editor color preset**</td>
+    <td>**Script Editor Color Preset**</td>
     <td>Color preset for code elements, selection colors, and more. After choosing a preset, you can set specific colors for options like **Selection Color** and **Comment Color**.</td>
   </tr>
 </tbody>
 </table>
 
-## Keyboard shortcuts
+## Keyboard Shortcuts
 
 The Script Editor has the following keyboard shortcuts. You can also access many commands from the [Script](../studio/script-tab.md) tab which appears in the Studio toolbar whenever you're viewing or editing a script.
 
 <Tabs>
-<TabItem label="File and display">
+<TabItem label="File & Display">
 <table size="small">
   <thead>
     <tr>
@@ -395,44 +395,44 @@ The Script Editor has the following keyboard shortcuts. You can also access many
   </thead>
   <tbody>
     <tr>
-      <td>**Close script**</td>
+      <td>**Close Script**</td>
       <td><kbd>Ctrl</kbd><kbd>W</kbd></td>
       <td><kbd>⌘</kbd><kbd>W</kbd></td>
     </tr>
     <tr>
-      <td>**Reopen last closed script**</td>
+      <td>**Reopen Last Closed Script**</td>
       <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>T</kbd></td>
       <td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>T</kbd></td>
     </tr>
     <tr>
-      <td>**Quick open**</td>
+      <td>**Quick Open**</td>
       <td><kbd>Ctrl</kbd><kbd>P</kbd></td>
       <td><kbd>⌘</kbd><kbd>P</kbd></td>
     </tr>
     <tr>
-      <td>**Show script in Explorer**</td>
+      <td>**Show Script in Explorer**</td>
       <td><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>K</kbd></td>
       <td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>K</kbd></td>
     </tr>
 		<tr>
-      <td>**Zoom in**</td>
+      <td>**Zoom In**</td>
       <td><kbd>Ctrl</kbd><kbd>=</kbd></td>
       <td><kbd>⌘</kbd><kbd>=</kbd></td>
     </tr>
     <tr>
-      <td>**Zoom out**</td>
+      <td>**Zoom Out**</td>
       <td><kbd>Ctrl</kbd><kbd>-</kbd></td>
       <td><kbd>⌘</kbd><kbd>-</kbd></td>
     </tr>
     <tr>
-      <td>**Reset script zoom**</td>
+      <td>**Reset Script Zoom**</td>
       <td><kbd>Ctrl</kbd><kbd>0</kbd></td>
       <td><kbd>⌘</kbd><kbd>0</kbd></td>
     </tr>
   </tbody>
 </table>
 </TabItem>
-<TabItem label="Basic editing">
+<TabItem label="Basic Editing">
 <table size="small">
   <thead>
     <tr>
@@ -468,7 +468,7 @@ The Script Editor has the following keyboard shortcuts. You can also access many
       <td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>Z</kbd></td>
     </tr>
     <tr>
-      <td>**Select all**</td>
+      <td>**Select All**</td>
       <td><kbd>Ctrl</kbd><kbd>A</kbd></td>
       <td><kbd>⌘</kbd><kbd>A</kbd></td>
     </tr>
@@ -478,56 +478,56 @@ The Script Editor has the following keyboard shortcuts. You can also access many
       <td><kbd>⌘</kbd><kbd>F</kbd></td>
     </tr>
     <tr>
-      <td>**Find&nbsp;all** / **replace&nbsp;all**</td>
+      <td>**Find&nbsp;All** / **Replace&nbsp;All**</td>
       <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F</kbd></td>
       <td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>F</kbd></td>
     </tr>
     <tr>
-      <td>**Indent** / **unindent**</td>
+      <td>**Indent** / **Unindent**</td>
       <td><kbd>Ctrl</kbd><kbd>\]</kbd>&nbsp;/ <kbd>Ctrl</kbd><kbd>\[</kbd></td>
       <td><kbd>⌘</kbd><kbd>\]</kbd>&nbsp;/ <kbd>⌘</kbd><kbd>\[</kbd></td>
     </tr>
     <tr>
-      <td>**Toggle comment**</td>
+      <td>**Toggle Comment**</td>
       <td><kbd>Ctrl</kbd><kbd>/</kbd></td>
       <td><kbd>⌘</kbd><kbd>/</kbd></td>
     </tr>
     <tr>
-      <td>**Expand all folds**</td>
+      <td>**Expand All Folds**</td>
       <td><kbd>Ctrl</kbd><kbd>E</kbd></td>
       <td><kbd>⌘</kbd><kbd>E</kbd></td>
     </tr>
     <tr>
-      <td>**Collapse all folds**</td>
+      <td>**Collapse All Folds**</td>
       <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd></td>
       <td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>E</kbd></td>
     </tr>
     <tr>
-      <td>**Delete line**</td>
+      <td>**Delete Line**</td>
       <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>K</kbd></td>
       <td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>K</kbd></td>
     </tr>
     <tr>
-      <td>**Delete to start of line**</td>
+      <td>**Delete to Start of Line**</td>
       <td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Backspace</kbd></td>
       <td><kbd>⌘</kbd><kbd>Delete</kbd></td>
     </tr><tr>
-      <td>**Move line up/down**</td>
+      <td>**Move Line Up/Down**</td>
       <td><kbd>Alt</kbd><kbd>↑</kbd>&nbsp;/ <kbd>Alt</kbd><kbd>↓</kbd></td>
       <td><kbd>⌥</kbd><kbd>↑</kbd>&nbsp;/ <kbd>⌥</kbd><kbd>↓</kbd></td>
     </tr>
     <tr>
-      <td>**Go to declaration**</td>
+      <td>**Go to Declaration**</td>
       <td><kbd>Ctrl</kbd><kbd>F12</kbd></td>
       <td><kbd>⌘</kbd><kbd>F12</kbd></td>
     </tr>
     <tr>
-      <td>**Open script function filter**</td>
+      <td>**Open Script Function Filter**</td>
       <td><kbd>Alt</kbd><kbd>F</kbd></td>
       <td><kbd>⌥</kbd><kbd>F</kbd></td>
     </tr>
 		<tr>
-      <td>**Format selection**</td>
+      <td>**Format Selection**</td>
       <td><kbd>Alt</kbd><kbd>Shift</kbd><kbd>F</kbd></td>
       <td><kbd>⌥</kbd><kbd>Shift</kbd><kbd>F</kbd></td>
     </tr>
@@ -545,42 +545,42 @@ The Script Editor has the following keyboard shortcuts. You can also access many
   </thead>
   <tbody>
     <tr>
-      <td>**Add/remove cursor at mouse location**</td>
+      <td>**Add/Remove Cursor at Mouse Location**</td>
       <td><kbd>Alt</kbd>&nbsp;+ click</td>
       <td><kbd>⌥</kbd>&nbsp;+ click</td>
     </tr>
     <tr>
-      <td>**Remove most recently added cursor**</td>
+      <td>**Remove Most Recently Added Cursor**</td>
       <td><kbd>Ctrl</kbd><kbd>U</kbd></td>
       <td><kbd>⌘</kbd><kbd>U</kbd></td>
     </tr>
 		<tr>
-      <td>**Add/modify cursor on mouse drag**</td>
+      <td>**Add/Modify Cursor on Mouse Drag**</td>
       <td><kbd>Alt</kbd>&nbsp;+ drag</td>
       <td><kbd>⌥</kbd>&nbsp;+ drag</td>
     </tr>
 		<tr>
-      <td>**Add cursor above/below**</td>
+      <td>**Add Cursor Above/Below**</td>
       <td><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>↑</kbd>&nbsp;/ <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>↓</kbd></td>
       <td><kbd>⌘</kbd><kbd>⌥</kbd><kbd>↑</kbd>&nbsp;/ <kbd>⌘</kbd><kbd>⌥</kbd><kbd>↓</kbd></td>
     </tr>
 		<tr>
-      <td>**Add cursor to next matching selection**</td>
+      <td>**Add Cursor to Next Matching Selection**</td>
       <td><kbd>Ctrl</kbd><kbd>D</kbd></td>
       <td><kbd>⌘</kbd><kbd>D</kbd></td>
     </tr>
 		<tr>
-      <td>**Add cursor to every matching selection**</td>
+      <td>**Add Cursor to Every Matching Selection**</td>
       <td><kbd>Shift</kbd><kbd>Alt</kbd><kbd>L</kbd></td>
       <td><kbd>Shift</kbd><kbd>⌥</kbd><kbd>L</kbd></td>
     </tr>
 		<tr>
-      <td>**Column/block select**</td>
+      <td>**Column/Block Select**</td>
       <td><kbd>Shift</kbd><kbd>Alt</kbd>&nbsp;+ drag</td>
       <td><kbd>Shift</kbd><kbd>⌥</kbd>&nbsp;+ drag</td>
     </tr>
 		<tr>
-      <td>**Split selections into lines**</td>
+      <td>**Split Selections Into Lines**</td>
       <td><kbd>Shift</kbd><kbd>Alt</kbd><kbd>I</kbd></td>
       <td><kbd>Shift</kbd><kbd>⌥</kbd><kbd>I</kbd></td>
     </tr>

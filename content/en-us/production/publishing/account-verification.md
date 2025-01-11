@@ -1,15 +1,15 @@
 ---
-title: Account verification
+title: Account Verification
 description: Explains how to verify your Roblox account.
 ---
 
-**Account verification** is the process of connecting your identity on Roblox to your real world identity, either through a government ID or through your phone number. When you verify your account, you can distribute more of each asset type and maximize their discoverability within the [Creator Store](../../production/creator-store.md), distribute audio assets under 10 seconds, monetize your [plugins](../../studio/plugins.md), and access age-restricted Studio features such as [voice chat](../../chat/voice-chat.md).
+**Account Verification** is the process of connecting your identity on Roblox to your real world identity, either through a government ID or through your phone number. When you verify your account, you can distribute more of each asset type and maximize their discoverability within the [Creator Store](../../production/creator-store.md), distribute audio assets under 10 seconds, monetize your [plugins](../../studio/plugins.md), and access age-restricted Studio features such as [voice chat](../../chat/voice-chat.md).
 
 <Alert severity="warning">
-**Phone number verification is not sufficient** to sell priced assets on the Creator Store. To sell priced assets, you need to verify with a [government ID](account-verification.md#verify-through-government-id) and create a seller account. For more information, see [Sell on the Creator Store](../sell-on-creator-store.md).
+**Phone number verification is not sufficient** to sell priced assets on the Creator Store. To sell priced assets, you need to verify with a [government ID](account-verification.md#verifying-through-government-id) and create a seller account. For more information, see [Selling on the Creator Store](../selling-on-creator-store.md).
 </Alert>
 
-## Verify through government ID
+## Verifying Through Government ID
 
 In order to verify your account with this method, you must:
 
@@ -36,7 +36,7 @@ To verify your account with a government-issued ID:
 1. As the different prompts display, use your phone to take pictures of your government-issued ID and your face. If the service is unable to process your verification data, it prompts you to re-capture the necessary images; otherwise a success message displays and the **Verify My Age** button changes to **Age Verified**.
 1. **(Optional)** Restart Studio to validate your new age verification status.
 
-## Verify through phone number
+## Verifying Through Phone Number
 
 In order to verify your account with this method, you must be at least 13 years of age and have a phone number that can receive text messages. You can only use your phone number with a **single** Roblox account.
 
@@ -65,7 +65,7 @@ To verify your account with your phone number:
 
 1. **(Optional)** Restart Studio to validate your new age verification status.
 
-## Check verification status by script
+## Checking Verification Status by Script
 
 Within a `Class.Script`, the `Class.Player:IsVerified()` method lets you check the verification status of users accessing your experiences, allowing you to limit access to specific content, ranked queues, or even the experience itself. Because users that verify their accounts connect their Roblox identity to their real-world identity, it's much less likely they will cheat, spam, or otherwise risk being blocked from your experience, making this method especially useful for competitive and ranked experiences.
 

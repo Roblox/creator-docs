@@ -1,5 +1,5 @@
 ---
-title: Export from Blender
+title: Exporting
 description: Use Blender's .fbx exporter with the correct settings to create a Studio-ready asset.
 prev: /art/accessories/creating-rigid/texturing
 next: /art/accessories/creating-rigid/importing
@@ -7,7 +7,7 @@ next: /art/accessories/creating-rigid/importing
 
 <video controls src="../../../assets/art/accessories/creating-rigid/Exporting.mp4" width="100%"></video>
 
-After modeling and texturing your asset, you can begin the process of **exporting** your Blender project as a `.fbx` or `.gltf`. For up-to-date settings, see [Export settings](../../modeling/export-requirements.md).
+After modeling and texturing your asset, you can begin the process of **exporting** your Blender project as a `.fbx` or `.gltf`. For up-to-date settings, see [Export Settings](../../modeling/export-requirements.md).
 
 <Alert severity ='warning'>
 If you are creating your own accessory object, it's important to clean up your project, which can involve deleting or removing any extra objects, such as lights, cameras, or mannequins, to ensure you only export the accessory mesh, and applying any modifiers to your mesh object.

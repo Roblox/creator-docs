@@ -1,5 +1,5 @@
 ---
-title: Partitions and data distribution
+title: Partitions and Data Distribution
 description: Explains the concept of a partition and per-partition limits.
 ---
 
@@ -9,7 +9,7 @@ With the release of the `Class.MemoryStoreHashMap` data structure, Roblox remove
 
 The MemoryStores API stores data on _partitions_, which are just subdivisions of storage. Whenever you write an item to a memory store, that item is stored on exactly one partition. Partitions are fully managed by the MemoryStores API; you do not need to manage them yourself.
 
-## Partition assignment
+## Partition Assignment
 
 Partition storage is different according to the data structure an item is being stored on. For sorted maps and queues, each data structure is assigned a single partition.
 
@@ -34,4 +34,4 @@ For example, consider a per-partition limit of 150,000 requests per minute (RPM)
 
 <img src="../../assets/data/memory-store/Per-Partition-Limits-4.png" width="100%" />
 
-For this reason, if you don't need sorting or "first in, first out" functionality, hash maps are usually the best choice for a memory store data structure. For more information, see the [best practices](../../cloud-services/memory-stores/best-practices.md).
+For this reason, if you don't need sorting or "first in, first out" functionality, hash maps are usually the best choice for a memory store data structure. For more information, see [Best Practices](../../cloud-services/memory-stores/best-practices.md).

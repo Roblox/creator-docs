@@ -206,7 +206,7 @@ Once there are enough players, have them wait a short transition time. Then, sen
    Keep the code within the scope of the while loop (between `do` and `end`). If code is outside, parts of your game loop might not repeat and players will just be stuck in the intermission phase.
    </Alert>
 
-2. After the wait, call the `prepareGame()` from the MatchManager module. When the code runs, this will just print text to the Output Window. Wait until the next section to test this code.
+2. After the wait, call the `prepareGame()` from the MatchManager module. When the code runs, this will just print text to the output window. Wait until the next section to test this code.
 
    ```lua
    while true do

@@ -15,7 +15,7 @@ You don't have to listen for events or take any action in response to them, but 
 Deferred events can help you ensure more performant and consistent event handling. See [Deferred Events](deferred.md) for more information.
 </Alert>
 
-## Connect functions to events
+## Connecting Functions to Events
 
 You connect a function to an event using `Datatype.RBXScriptSignal.Connect()|Connect()` to execute code each time the event fires. Most events pass arguments to their connected functions. For example, the `Class.BasePart.Touched` event passes the object that touched the part (such as a left hand or car wheel), and the `Class.Players.PlayerAdded` event passes the `Class.Player` that joined your experience.
 
@@ -54,7 +54,7 @@ Players.PlayerAdded:Connect(function(player)
 end)
 ```
 
-## Disconnect functions from events
+## Disconnecting Functions from Events
 
 The `Datatype.RBXScriptSignal.Connect()|Connect()` method returns an `Datatype.RBXScriptConnection` object. If you connect a function to an event, but don't want to call the function the next time an event fires (such as after some condition is met), disconnect it by calling `Datatype.RBXScriptConnection:Disconnect()|Disconnect()` on the `Datatype.RBXScriptConnection` object.
 
@@ -85,7 +85,7 @@ If you only want to connect a function to an event once—that is, only run the 
 When Luau destroys an event's object, such as the `Class.Player` object when a user leaves the experience, all of its ([non-deferred](deferred.md)) connections disconnect automatically.
 </Alert>
 
-## Wait for events to fire
+## Waiting for Events to Fire
 
 If you want a script to yield until a specific event fires, use the `Datatype.RBXScriptSignal:Wait()|Wait()` method. This method returns the event's arguments, which you can assign to variables for later use:
 

@@ -16,7 +16,7 @@ The summary section serves as a snapshot of the aggregate performance of your no
 <tbody>
   <tr>
     <td>**Opted-in Users**</td>
-    <td>The total number of users that have turned on notifications for your experience. Please note that this does include users under the age of 13 who are only able to receive notification of [experience updates](../../production/promotion/experience-events.md#announce-experience-updates), not personalized [experience notifications](../../production/promotion/experience-notifications.md).</td>
+    <td>The total number of users that have turned on notifications for your experience. Please note that this does include users under the age of 13 who are only able to receive notification of [experience updates](../../production/promotion/experience-events.md#announcing-updates), not personalized [experience notifications](../../production/promotion/experience-notifications.md).</td>
   </tr>
   <tr>
     <td>**Impressions**</td>

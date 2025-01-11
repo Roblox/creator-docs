@@ -1,5 +1,5 @@
 ---
-title: Deferred engine events
+title: Deferred Engine Events
 description: Deferred engine events defer event handlers until certain resumption points.
 ---
 
@@ -20,7 +20,7 @@ The total time taken does not change, but the ordering is different.
 
 "Re-entrancy" prevents events from continuously firing one another when they reach a certain depth. The current limit for this is 10.
 
-## Deferred event benefits
+## Deferred Event Benefits
 
 The `Immediate` behavior has some disadvantages. For every instance added to your game, property that changes, or some other trigger that is invoked, the engine needs to run Lua code before anything else happens.
 
@@ -35,7 +35,7 @@ By having specific portions of the engine life cycle in which Lua can run, the e
 - Performance-critical systems don't need to yield to Lua, which leads to performance gains.
 - Unless the engine itself changes it, the place never changes outside of a resumption point.
 
-## Resumption points
+## Resumption Points
 
 After being deferred, an event handler is resumed at the next resumption point. Currently, the set of resumption points includes:
 
@@ -49,11 +49,11 @@ After being deferred, an event handler is resumed at the next resumption point. 
 - `Class.RunService.Heartbeat`
 - `Class.DataModel.BindToClose`
 
-## Common affected code patterns
+## Common Affected Code Patterns
 
 With remote events, the following examples either stop working correctly or have subtly different behavior; they rely on events being resumed immediately.
 
-### Trigger and catch events mid-execution
+### Triggering and Catching Events Mid-Execution
 
 In this example, `false` is always returned when deferred events are enabled because the callback has not run. To work correctly, the thread must yield until at least when the event should have fired.
 
@@ -66,7 +66,7 @@ doSomethingToTriggerEvent() -- Causes `event` to fire
 return success
 ```
 
-### Listen for the first occurrence of an event
+### Listening for the First Occurrence of an Event
 
 ```lua
 connection = event:Connect(function ()
@@ -83,7 +83,7 @@ Any other method of disconnection besides `Class.Instance.Disconnect()|Disconnec
 
 Alternatively, use `Datatype.RBXScriptSignal.Once()|Once()` as a more convenient method for connecting to an event that you only need the first invocation of.
 
-### Events that change ancestry or properties
+### Events That Change Ancestry or Properties
 
 Deferred events cause events that handle a change in ancestry or a property to fire after the ancestry or property is changed:
 

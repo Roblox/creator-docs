@@ -15,7 +15,7 @@ With the launch of the Creator Fund, we want new and existing developers to have
     variant="filled"/>
 </figure>
 
-## Eligible projects
+## Eligible Projects
 
 We are looking for ambitious, innovative projects that enable creative ideas that are unlike anything else on the platform.
 
@@ -29,7 +29,7 @@ We prioritize projects that encompass:
 
 If you are accepted into the program, we partner with you to define key deliverables for your project and provide funding based off of your progress towards these milestones.
 
-## Application requirements
+## Application Requirements
 
 - 18+ age requirement.
 - Details about you and/or your team.

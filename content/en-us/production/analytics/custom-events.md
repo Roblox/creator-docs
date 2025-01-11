@@ -1,17 +1,17 @@
 ---
-title: Custom events
+title: Custom Events
 description: Custom Events let you track and aggregate unique metrics to your experience.
 ---
 
 **Custom events** let you track metrics specific to your experience that other events do not fully capture. This includes:
 
 - **Adoption** — How many users click on a specific UI component?
-- **User behavior** — What is the most frequently used ability on each map?
-- **Core loop** — How do kill/death ratios compare across different weapons?
+- **User Behavior** — What is the most frequently used ability on each map?
+- **Core Loop** — How do kill/death ratios compare across different weapons?
 
 Once your experience begins tracking custom events, you'll unlock the Custom page of the Analytics dashboard on the Creator Hub. You can add up to 100 custom events to your experience.
 
-## Track custom events
+## Tracking Custom Events
 
 To unlock the Custom Events dashboard, you must first track custom events in your experience. Start by identifying which metrics are the most important for monitoring and improving your experience. Events are aggregated daily so it may take up to 24 hours for charts to populate on the page.
 
@@ -34,7 +34,7 @@ AnalyticsService:LogCustomEvent(
 )
 ```
 
-### Events with values
+### Events with Values
 
 You can also track events with values for metrics that require more quantitative data into your experience, such as kill/death ratios or the amount of time a user spends on a mission. It can also be used as a way to send events in batches in order to stay under the rate limits, i.e. sending 10 zombies killed instead of 1 zombie killed ten times.
 
@@ -48,7 +48,7 @@ AnalyticsService:LogCustomEvent(
 )
 ```
 
-## Event aggregations
+## Event Aggregations
 
 All events metrics include the following aggregations and include slice-and-dicing support:
 
@@ -64,7 +64,7 @@ View your event aggregations in the Custom page by selecting the aggregation typ
 
 <img src="../../assets/analytics/event-types/Custom-Event-Aggregations.png" width = "40%" alt="A list of all the different aggregation options to filter your custom event data."/>
 
-## Use custom fields
+## Using Custom Fields
 
 Custom events also allow breaking down on custom fields to support easier comparison between segments. For example, you can provide quest names to each event to see which ones users prefer the most, or attach player class to see if a class has a significantly higher kill/death ratio.
 
@@ -76,9 +76,9 @@ You should use custom fields whenever possible instead of event names, since the
 
 For example, instead of `PlantCabbage`, `PlantTurnip`, `PlantPepper` as three separate events, you could have a single event with the name `PlantSeed` and custom field values `Plant - Cabbage`, `Plant - Turnip`, and `Plant - Pepper`. This way you can visualize both the total number of seeds planted as well as compare each plant in the same visualization. This also reduces your event name cardinality.
 
-For more information, see [Custom fields](./custom-fields.md).
+For more information, see [custom fields](./custom-fields.md).
 
-## Use custom events to grow your experience
+## Using Custom Events to Grow Your Experience
 
 Custom events enable you to track metrics that matter most to your game, providing insights into how players interact with specific features and content. Use these events to uncover patterns in player behavior and optimize your core game loop.
 
@@ -87,5 +87,5 @@ In the reference game [Plant](../../resources/plant-reference-project.md), the c
 <img src="../../assets/analytics/event-types/Custom-Event-Graph.png" width = "100%" alt="Custom Event graph for the reference Plant game."/>
 
 - Try to improve the diversity of content within your experience and encourage players to explore other options as part of the [core loop](../game-design/core-loops.md) to prevent repetitiveness.
-- Explore why users significantly prefer turnips over other plants, and if there are any imbalances that turnips are causing (such as with [economy events](./economy-events.md)).
+- Explore why users significantly prefer turnips over other plants, and if there are any imbalances that turnips are causing (such as with [Economy Events](./economy-events.md)).
 - Add more event tracking within your loop, such as planting seeds, watering plants, and going to the shop, to better track player behavior and other areas of improvement.

@@ -1,339 +1,339 @@
 backTo:
-  title: Back to guides
+  title: Back to Guides
   path: /platform
 navigation:
-  - heading: Educator training
-  - title: Educator onboarding
+  - heading: Educator Training
+  - title: Educator Onboarding
     path: /education/educator-onboarding/landing
     section:
       - title: Intro to Roblox
         path: /education/educator-onboarding/1-intro-to-roblox
-      - title: Play on Roblox
+      - title: Playing on Roblox
         path: /education/educator-onboarding/2-playing-on-roblox
-      - title: Set up a Roblox classroom
+      - title: Setting Up a Roblox Classroom
         path: /education/educator-onboarding/3-setting-up-a-roblox-classroom
-      - title: Run classrooms
+      - title: Running Classrooms
         path: /education/educator-onboarding/4-running-classrooms
-      - title: Next steps
+      - title: Next Steps
         path: /education/educator-onboarding/5-next-steps
-  - title: Classroom facilitation
+  - title: Classroom Facilitation
     section:
-      - title: Intro to digital civility
+      - title: Intro to Digital Civility
         path: /education/resources/intro-to-digital-civility
-      - title: Intro to digital safety
+      - title: Intro to Digital Safety
         path: /education/resources/intro-to-digital-safety
-      - title: Teach remotely
+      - title: Teaching Remotely
         path: /education/resources/teaching-remotely
-      - title: Create private servers
+      - title: Creating Private Servers
         path: /education/support/private-servers-for-classroom-use
-      - title: Collaboration best practices
+      - title: Collaboration Best Practices
         path: /education/resources/collaboration-best-practices
-      - title: Classroom best practices
+      - title: Classroom Best Practices
         path: /education/resources/classroom-best-practices
   - title: Resources
     path: /education/resources/resources-landing
     section:
-      - title: List of Roblox educators
+      - title: List of Roblox Educators
         path: /education/resources/roblox-educators
-      - title: Marketing materials
+      - title: Marketing Materials
         path: /education/resources/marketing-materials
       - title: Roblox for AP CSP
         path: /education/resources/roblox-for-the-ap-csp-create-performance-task
-      - title: Create bundled installers
+      - title: Creating Bundled Installers
         path: /education/support/creating-bundled-installers
-  - title: Frequently asked questions
+  - title: Frequently Asked Questions
     path: /education/resources/frequently-asked-questions-education
 
-  - heading: Lesson plans
-  - title: Unit lessons
+  - heading: Lesson Plans
+  - title: Unit Lessons
     section:
-      - title: Intro to game design and coding
+      - title: Intro to Game Design and Coding
         path: /education/lesson-plans/intro-to-game-and-coding
-      - title: Roblox developer 101
+      - title: Roblox Developer 101
         path: /education/lesson-plans/roblox-developer/landing
         section:
-          - title: Roblox Studio basics
+          - title: Roblox Studio Basics
             path: /education/lesson-plans/roblox-developer/roblox-developer-1
-          - title: Coding fundamentals
+          - title: Coding Fundamentals
             path: /education/lesson-plans/roblox-developer/roblox-developer-2
-          - title: Adventure game Pt. 1
+          - title: Adventure Game Pt. 1
             path: /education/lesson-plans/roblox-developer/roblox-developer-3
-          - title: Adventure game Pt. 2
+          - title: Adventure Game Pt. 2
             path: /education/lesson-plans/roblox-developer/roblox-developer-4
-          - title: Adventure game Pt. 3
+          - title: Adventure Game Pt. 3
             path: /education/lesson-plans/roblox-developer/roblox-developer-5
-      - title: Digital citizenship
+      - title: Digital Citizenship
         path: /education/lesson-plans/digital-citizenship/landing
         section:
           - title: Intro to Roblox
             path: /education/lesson-plans/digital-citizenship/intro-to-roblox
-          - title: Be a digital citizen
+          - title: Being a Digital Citizen
             path: /education/lesson-plans/digital-citizenship/being-a-digital-citizen
-          - title: Lights and polish
+          - title: Lights and Polish
             path: /education/lesson-plans/digital-citizenship/lights-and-polish
-          - title: Coding fundamentals
+          - title: Coding Fundamentals
             path: /education/lesson-plans/digital-citizenship/coding-fundamentals
-          - title: Animate characters
+          - title: Animating Characters
             path: /education/lesson-plans/digital-citizenship/animating-characters
-          - title: Finish projects
+          - title: Finishing Projects
             path: /education/lesson-plans/digital-citizenship/finishing-projects
-  - title: Activity lessons
+  - title: Activity Lessons
     section:
       - title: Galactic Speedway
         path: /education/lesson-plans/galactic-speedway-lesson
       - title: Animate in Roblox
         path: /education/lesson-plans/animate-in-roblox-lesson
-      - title: Story games
+      - title: Story Games
         path: /education/lesson-plans/story-games-lesson
-      - title: Create and destroy
+      - title: Create and Destroy
         path: /education/lesson-plans/create-and-destroy-lesson
-  - heading: Tutorial series
-  - title: Featured content
+  - heading: Tutorial Series
+  - title: Featured Content
     path: /education/support/education-content
-  - title: Coding fundamentals
+  - title: Coding Fundamentals
     path: /tutorials/fundamentals/coding-1/coding-fundamentals
     navigation: /engine/tutorials-fundamentals.yaml
-  - title: Build It, Play It series
+  - title: Build It, Play It Series
     path: /education/landing-pages/build-it-play-it
     section:
       - title: Mansion of Wonder
         path: /education/build-it-play-it-mansion-of-wonder/landing-page
         section:
-          - title: Beginner content
+          - title: Beginner Content
             path: /education/build-it-play-it-mansion-of-wonder/beginner-landing-page
             section:
-              - title: Become an artist
+              - title: Become an Artist
                 path: /education/build-it-play-it-mansion-of-wonder/become-an-artist
-              - title: Test and play
+              - title: Test and Play
                 path: /education/build-it-play-it-mansion-of-wonder/test-and-play
-              - title: Particle emitters
+              - title: Particle Emitters
                 path: /education/build-it-play-it-mansion-of-wonder/particle-emitters
-              - title: Save by publishing
+              - title: Save by Publishing
                 path: /education/build-it-play-it-mansion-of-wonder/save-by-publishing
-              - title: Challenge checkpoint 1
+              - title: Challenge Checkpoint 1
                 path: /education/build-it-play-it-mansion-of-wonder/challenge-checkpoint
-              - title: Use textures
+              - title: Using Textures
                 path: /education/build-it-play-it-mansion-of-wonder/using-textures
-              - title: Finish the blast
+              - title: Finish the Blast
                 path: /education/build-it-play-it-mansion-of-wonder/using-textures
-              - title: Make an explosion
+              - title: Making an Explosion
                 path: /education/build-it-play-it-mansion-of-wonder/making-an-explosion
-              - title: Challenge checkpoint 2
+              - title: Challenge Checkpoint 2
                 path: /education/build-it-play-it-mansion-of-wonder/challenge-checkpoint-2
-              - title: Make final touches
+              - title: Make Final Touches
                 path: /education/build-it-play-it-mansion-of-wonder/make-final-touches
-              - title: Invite friends
+              - title: Invite Friends
                 path: /education/build-it-play-it-mansion-of-wonder/invite-friends
-              - title: Challenge checkpoint 3
+              - title: Challenge Checkpoint 3
                 path: /education/build-it-play-it-mansion-of-wonder/challenge-checkpoint-3
-              - title: Next steps
+              - title: Next Steps
                 path: /education/build-it-play-it-mansion-of-wonder/next-steps
-              - title: Create a sparkler
+              - title: Creating a Sparkler
                 path: /education/build-it-play-it-mansion-of-wonder/creating-a-sparkler
-          - title: Experienced content
+          - title: Experienced Content
             path: /education/build-it-play-it-mansion-of-wonder/experienced-landing-page
             section:
-              - title: Create engaging experiences
+              - title: Creating Engaging Experiences
                 path: /education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences
-              - title: Connect the beam
+              - title: Connect the Beam
                 path: /education/build-it-play-it-mansion-of-wonder/connect-the-beam
-              - title: Use particles for actions
+              - title: Using Particles for Actions
                 path: /education/build-it-play-it-mansion-of-wonder/using-particles-for-actions
-              - title: Add scripts
+              - title: Adding Scripts
                 path: /education/build-it-play-it-mansion-of-wonder/adding-scripts
-              - title: Next steps
+              - title: Next Steps
                 path: /education/build-it-play-it-mansion-of-wonder/next-steps-advanced
       - title: Island of Move
         path: /education/build-it-play-it-island-of-move/landing
         section:
-          - title: Beginner content
+          - title: Beginner Content
             path: /education/build-it-play-it-island-of-move/beginner-landing-page
             section:
-              - title: Open the template
+              - title: Opening the Template
                 path: /education/build-it-play-it-island-of-move/opening-the-template
-              - title: Test the game
+              - title: Test the Game
                 path: /education/build-it-play-it-island-of-move/test-the-game
-              - title: Create animations
+              - title: Creating Animations
                 path: /education/build-it-play-it-island-of-move/creating-animations
-              - title: Create the first pose
+              - title: Create the First Pose
                 path: /education/build-it-play-it-island-of-move/create-the-first-pose
-              - title: Save and publish
+              - title: Save and Publish
                 path: /education/build-it-play-it-island-of-move/save-and-publish
-              - title: Challenge checkpoint 1
+              - title: Challenge Checkpoint 1
                 path: /education/build-it-play-it-island-of-move/challenge-checkpoint
-              - title: Loop animations
+              - title: Looping Animations
                 path: /education/build-it-play-it-island-of-move/looping-animations
-              - title: Add the second pose
+              - title: Adding the Second Pose
                 path: /education/build-it-play-it-island-of-move/adding-the-second-pose
-              - title: Challenge checkpoint 2
+              - title: Challenge Checkpoint 2
                 path: /education/build-it-play-it-island-of-move/challenge-checkpoint-2
-              - title: Export animations
+              - title: Exporting Animations
                 path: /education/build-it-play-it-island-of-move/exporting-animations
-              - title: Change the animation
+              - title: Change the Animation
                 path: /education/build-it-play-it-island-of-move/change-the-animation
-              - title: Invite friends to play
+              - title: Invite Friends to Play
                 path: /education/build-it-play-it-island-of-move/invite-friends-to-play
-              - title: Challenge checkpoint 3
+              - title: Challenge Checkpoint 3
                 path: /education/build-it-play-it-island-of-move/challenge-checkpoint-3
-              - title: Go beyond the challenge
+              - title: Go Beyond the Challenge
                 path: /education/build-it-play-it-island-of-move/go-beyond-the-challenge
-          - title: Experienced content
+          - title: Experienced Content
             path: /education/build-it-play-it-island-of-move/animations-and-feedback
             section:
-              - title: Animations and feedback
+              - title: Animations and Feedback
                 path: /education/build-it-play-it-island-of-move/animations-and-feedback
-              - title: Design poses
+              - title: Designing Poses
                 path: /education/build-it-play-it-island-of-move/designing-poses
-              - title: Add animations
+              - title: Adding Animations
                 path: /education/build-it-play-it-island-of-move/adding-animations
                 source: /education/build-it-play-it-island-of-move/adding-animations
-              - title: Animate parts
+              - title: Animating Parts
                 path: /education/build-it-play-it-island-of-move/animating-parts
                 source: /education/build-it-play-it-island-of-move/animating-parts
       - title: Galactic Speedway
         path: /education/build-it-play-it-galactic-speedway/main-page
         section:
-          - title: Get off the ground
+          - title: Get Off the Ground
             path: /education/build-it-play-it-galactic-speedway/get-off-the-ground
-          - title: Take flight
+          - title: Take Flight
             path: /education/build-it-play-it-galactic-speedway/take-flight
-          - title: Design your speeder
+          - title: Designing Your Speeder
             path: /education/build-it-play-it-galactic-speedway/designing-your-speeder
-          - title: Move the body
+          - title: Moving the Body
             path: /education/build-it-play-it-galactic-speedway/moving-the-body
-          - title: Save and publish
+          - title: Save and Publish
             path: /education/build-it-play-it-galactic-speedway/save-and-publish
-          - title: Challenge checkpoint 1
+          - title: Challenge Checkpoint 1
             path: /education/build-it-play-it-galactic-speedway/take-the-challenge
-          - title: Add wings
+          - title: Adding Wings
             path: /education/build-it-play-it-galactic-speedway/adding-wings
-          - title: Duplicate and design
+          - title: Duplicate and Design
             path: /education/build-it-play-it-galactic-speedway/duplicate-and-design
-          - title: Group the parts
+          - title: Grouping the Parts
             path: /education/build-it-play-it-galactic-speedway/grouping-the-parts
-          - title: Add to the gorage
+          - title: Add to the Garage
             path: /education/build-it-play-it-galactic-speedway/add-to-the-garage
-          - title: Test the speeder
+          - title: Test the Speeder
             path: /education/build-it-play-it-galactic-speedway/test-the-speeder
-          - title: Challenge checkpoint 2
+          - title: Challenge Checkpoint 2
             path: /education/build-it-play-it-galactic-speedway/take-the-challenge-2
-          - title: Customize and share
+          - title: Customize and Share
             path: /education/build-it-play-it-galactic-speedway/customize-and-share
-          - title: Go for a race
+          - title: Going for a Race
             path: /education/build-it-play-it-galactic-speedway/going-for-a-race
-          - title: Challenge checkpoint 3
+          - title: Challenge Checkpoint 3
             path: /education/build-it-play-it-galactic-speedway/take-the-challenge-3
-          - title: Go beyond the challenge
+          - title: Go Beyond the Challenge
             path: /education/build-it-play-it-galactic-speedway/go-beyond-the-challenge
-          - title: Share your speeders
+          - title: Sharing Your Speeders
             path: /education/build-it-play-it-galactic-speedway/sharing-your-speeders
-          - title: Add new models
+          - title: Add New Models
             path: /education/build-it-play-it-galactic-speedway/add-new-models
-          - title: Colors and textures
+          - title: Colors and Textures
             path: /education/build-it-play-it-galactic-speedway/colors-and-textures
-          - title: Design the world
+          - title: Design the World
             path: /education/build-it-play-it-galactic-speedway/design-the-world
-      - title: Create and destroy
+      - title: Create and Destroy
         path: /education/build-it-play-it-create-and-destroy/landing
         section:
-          - title: Design a map
+          - title: Designing a Map
             path: /education/build-it-play-it-create-and-destroy/designing-a-map
-          - title: Snap to grid
+          - title: Snap to Grid
             path: /education/build-it-play-it-create-and-destroy/snap-to-grid
-          - title: Save and publish
+          - title: Save and Publish
             path: /education/build-it-play-it-create-and-destroy/save-and-publish
-          - title: Challenge checkpoint 1
+          - title: Challenge Checkpoint 1
             path: /education/build-it-play-it-create-and-destroy/challenge-1
-          - title: Build one half
+          - title: Build One Half
             path: /education/build-it-play-it-create-and-destroy/build-one-half
-          - title: Playtest the map
+          - title: Playtest the Map
             path: /education/build-it-play-it-create-and-destroy/playtest-the-map
-          - title: Build the roads
+          - title: Build the Roads
             path: /education/build-it-play-it-create-and-destroy/build-the-roads
-          - title: Buildings and props
+          - title: Buildings and Props
             path: /education/build-it-play-it-create-and-destroy/buildings-and-props
-          - title: Complete the city
+          - title: Complete the City
             path: /education/build-it-play-it-create-and-destroy/complete-the-city
-          - title: Island terrain
+          - title: Island Terrain
             path: /education/build-it-play-it-create-and-destroy/island-terrain
-          - title: Terrain tools
+          - title: Terrain Tools
             path: /education/build-it-play-it-create-and-destroy/terrain-tools
-          - title: Challenge checkpoint 2
+          - title: Challenge Checkpoint 2
             path: /education/build-it-play-it-create-and-destroy/challenge-2
-          - title: Change the script
+          - title: Change the Script
             path: /education/build-it-play-it-create-and-destroy/change-the-script
-          - title: Icons and thumbnails
+          - title: Icons and Thumbnails
             path: /education/build-it-play-it-create-and-destroy/icons-and-thumbnails
-          - title: Challenge checkpoint 3
+          - title: Challenge Checkpoint 3
             path: /education/build-it-play-it-create-and-destroy/challenge-3
-          - title: Finish the challenge
+          - title: Finish the Challenge
             path: /education/build-it-play-it-create-and-destroy/finish-the-challenge
-      - title: Story games
+      - title: Story Games
         path: /education/build-it-play-it-story-games/landing
         section:
-          - title: Write the story
+          - title: Writing the Story
             path: /education/build-it-play-it-story-games/writing-the-story
-          - title: Open the template
+          - title: Opening the Template
             path: /education/build-it-play-it-story-games/opening-the-template
           - title: Challenge Checkpoint 1
             path: /education/build-it-play-it-story-games/first-challenge
-          - title: Start coding
+          - title: Start Coding
             path: /education/build-it-play-it-story-games/start-coding
-          - title: Code a question
+          - title: Coding a Question
             path: /education/build-it-play-it-story-games/coding-a-question
-          - title: Test and save
+          - title: Test and Save
             path: /education/build-it-play-it-story-games/test-and-save
-          - title: Challenge checkpoint 2
+          - title: Challenge Checkpoint 2
             path: /education/build-it-play-it-story-games/second-challenge
-          - title: Code the story
+          - title: Coding the Story
             path: /education/build-it-play-it-story-games/code-the-story
-          - title: Finish and add more
+          - title: Finishing and Add More
             path: /education/build-it-play-it-story-games/finish-and-add
-          - title: Challenge checkpoint 3
+          - title: Challenge Checkpoint 3
             path: /education/build-it-play-it-story-games/third-challenge
-          - title: Complete the challenge
+          - title: Completing the Challenge
             path: /education/build-it-play-it-story-games/complete-the-challenge
-  - title: Adventure game project
+  - title: Adventure Game Project
     path: /education/adventure-game-series/landing
     section:
-      - title: Create the map
+      - title: Creating the Map
         path: /education/adventure-game-series/create-the-map
-      - title: Code the leaderboard
+      - title: Coding the Leaderboard
         path: /education/adventure-game-series/code-the-leaderboard
-      - title: Collect items
+      - title: Collecting Items
         path: /education/adventure-game-series/collect-items
-      - title: Sell items
+      - title: Selling Items
         path: /education/adventure-game-series/selling-items
-      - title: Buy upgrades
+      - title: Buying Upgrades
         path: /education/adventure-game-series/buying-upgrades
-      - title: Finish the project
+      - title: Finishing the Project
         path: /education/adventure-game-series/finishing-the-project
-  - title: Battle Royale project
+  - title: Battle Royale Project
     path: /education/battle-royale-series/landing
     section:
-      - title: Project setup
+      - title: Project Setup
         path: /education/battle-royale-series/project-setup
-      - title: Code the game loop
+      - title: Coding the Game Loop
         path: /education/battle-royale-series/coding-the-game-loop
-      - title: Manage players
+      - title: Managing Players
         path: /education/battle-royale-series/managing-players
-      - title: Timers and events
+      - title: Timers and Events
         path: /education/battle-royale-series/timers-and-events
-      - title: Create a GUI
+      - title: Creating a GUI
         path: /education/battle-royale-series/creating-a-gui
-      - title: End matches
+      - title: Ending Matches
         path: /education/battle-royale-series/ending-matches
-      - title: Cleanup and reset
+      - title: Cleanup and Reset
         path: /education/battle-royale-series/cleanup-and-reset
-      - title: Finish the project
+      - title: Finishing the Project
         path: /education/battle-royale-series/finishing-the-project
 
-  - heading: Education developers
-  - title: Get started for developers
+  - heading: Education Developers
+  - title: Getting Started for Developers
     path: /education/resources/getting-started-for-developers-education
-  - title: Design educational experiences
+  - title: Designing Educational Experiences
     path: /education/developer/designing-educational-experiences
-  - title: Plan for educational settings
+  - title: Planning for Educational Settings
     path: /education/developer/planning-for-educational-settings
-  - title: Beta test experiences
+  - title: Beta Testing Experiences
     path: /education/developer/beta-testing-experiences

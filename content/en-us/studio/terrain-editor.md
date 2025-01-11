@@ -11,7 +11,7 @@ The **Terrain Editor**, accessible from the [Home](../studio/home-tab.md) or [Vi
 For detailed instructions on working with terrain, see the [Terrain](../parts/terrain.md) guide.
 </Alert>
 
-## Create tab
+## Create Tab
 
 The **Create** tab includes the [Import](#import), [Generate](#generate), and [Clear](#clear) tools.
 
@@ -41,7 +41,7 @@ The **Import** tool imports a [heightmap](../parts/terrain.md#heightmaps-and-col
 <table size="small">
 <thead>
 	<tr>
-    <th colspan="2">Selection settings</th>
+    <th colspan="2">Selection Settings</th>
 	</tr>
 </thead>
 <tbody>
@@ -51,7 +51,7 @@ The **Import** tool imports a [heightmap](../parts/terrain.md#heightmaps-and-col
 </tbody>
 <thead>
 	<tr>
-    <th colspan="2">Heightmap settings</th>
+    <th colspan="2">Heightmap Settings</th>
 	</tr>
 </thead>
 <tbody>
@@ -81,7 +81,7 @@ The **Generate** tool procedurally generates terrain within a selected region. T
 <table size="small">
 <thead>
 	<tr>
-    <th colspan="2">Selection settings</th>
+    <th colspan="2">Selection Settings</th>
 	</tr>
 </thead>
 <tbody>
@@ -91,7 +91,7 @@ The **Generate** tool procedurally generates terrain within a selected region. T
 </tbody>
 <thead>
 	<tr>
-    <th colspan="2">Biome settings</th>
+    <th colspan="2">Biome Settings</th>
 	</tr>
 </thead>
 <tbody>
@@ -124,7 +124,7 @@ The **Clear** tool reveals a button that clears all terrain within the entire pl
 
 <img src="../assets/studio/terrain-editor/Create-Tab-Clear.png" width="360" alt="Clear tool indicated in Create tab of Terrain Editor" />
 
-## Edit tab
+## Edit Tab
 
 The **Edit** tab includes the [Select](#select), [Transform](#transform), [Fill](#fill), [Sea&nbsp;Level](#sea-level), [Draw](#draw), [Sculpt](#sculpt), [Smooth](#smooth), [Paint](#paint), and [Flatten](#flatten) tools.
 
@@ -137,7 +137,7 @@ The **Select** tool is a universal tool for selecting rectangular regions of ter
 <table size="small">
 <thead>
 	<tr>
-    <th colspan="2">Selection settings</th>
+    <th colspan="2">Selection Settings</th>
 	</tr>
 </thead>
 <tbody>
@@ -219,7 +219,7 @@ The **Transform** tool manipulates entire [selected](#select) regions to a new p
 <table size="small">
 <thead>
 	<tr>
-    <th colspan="2">Transform settings</th>
+    <th colspan="2">Transform Settings</th>
 	</tr>
 </thead>
 <tbody>
@@ -272,7 +272,7 @@ The **Fill** tool fills an entire [selected](#select) region with a specific mat
 <table size="small">
 <thead>
 	<tr>
-    <th colspan="2">Selection settings</th>
+    <th colspan="2">Selection Settings</th>
 	</tr>
 </thead>
 <tbody>
@@ -282,7 +282,7 @@ The **Fill** tool fills an entire [selected](#select) region with a specific mat
 </tbody>
 <thead>
 	<tr>
-    <th colspan="2">Material settings</th>
+    <th colspan="2">Material Settings</th>
 	</tr>
 </thead>
 <tbody>
@@ -306,7 +306,7 @@ The **Fill** tool fills an entire [selected](#select) region with a specific mat
 <figcaption>Selected region filled with Salt material</figcaption>
 </figure>
 
-### Sea level
+### Sea Level
 
 The **Sea Level** tool lets you create a consistent water level or remove all water within a region.
 
@@ -317,7 +317,7 @@ The **Sea Level** tool lets you create a consistent water level or remove all wa
 <table size="small">
 <thead>
 	<tr>
-    <th colspan="2">Sea level settings</th>
+    <th colspan="2">Sea Level Settings</th>
 	</tr>
 </thead>
 <tbody>
@@ -347,7 +347,7 @@ The **Draw** tool **adds** or **subtracts** terrain using the brush. This tool f
 <table size="small">
 <thead>
 	<tr>
-    <th colspan="2">Brush settings</th>
+    <th colspan="2">Brush Settings</th>
 	</tr>
 </thead>
 <tbody>
@@ -386,7 +386,7 @@ The **Draw** tool **adds** or **subtracts** terrain using the brush. This tool f
 </tbody>
 <thead>
 	<tr>
-    <th colspan="2">Material settings</th>
+    <th colspan="2">Material Settings</th>
 	</tr>
 </thead>
 <tbody>
@@ -613,7 +613,7 @@ The **Flatten** tool flattens terrain to a consistent level across a visualized 
 </tbody>
 </table>
 
-## Studio shortcuts
+## Studio Shortcuts
 
 For tools which use the **brush** ([Draw](#draw), [Sculpt](#sculpt), [Smooth](#smooth), [Flatten](#flatten), [Paint](#paint)), Studio supports the following keyboard and mouse shortcuts.
 

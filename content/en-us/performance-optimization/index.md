@@ -1,11 +1,11 @@
 ---
-title: Performance optimization
+title: Performance Optimization
 description: Introduces the performance optimization process.
 ---
 
 Performance optimization is the process of building and iterating on an experience to improve frame rate, memory usage, and load times. Players expect games to perform well, so taking the time to understand and improve your experience's performance can be critical to its success.
 
-The first step in performance optimization is to [Design for Performance](design.md), which means following a set of best practices **as you build** a new experience. After you publish an experience, the optimization process follows a common cycle:
+The first step in performance optimization is to [Design for Performance](designing.md), which means following a set of best practices **as you build** a new experience. After you publish an experience, the optimization process follows a common cycle:
 
 <GridContainer numColumns="2">
 <figure>
@@ -18,7 +18,7 @@ The first step in performance optimization is to [Design for Performance](design
 </figure>
 </GridContainer>
 
-## Why performance matters
+## Why Performance Matters
 
 To put it simply, performant games are more fun. When a game has a consistent, smooth frame rate, even basic actions like running and jumping feel more precise and enjoyable. Aiming can go from feeling impossible to feeling completely natural. A game with a small memory footprint and fast load times might always have plenty of other people to play with.
 
@@ -26,7 +26,7 @@ Performance optimization also lets you expand your ambitions. If your experience
 
 From a business perspective, performant games often have higher user engagement, better user retention, and make more money.
 
-## Measure performance
+## Measuring Performance
 
 - **Frame rate** is the number of unique frames that the client presents to the user, measured in frames per second (FPS). The cause of low frame rates is typically expensive computational operations—in other words, overtaxing the CPU, GPU, or both.
 

@@ -1,5 +1,5 @@
 ---
-title: Third-party tools
+title: Third-Party Tools
 description: These popular tools can enhance developer productivity.
 ---
 
@@ -9,7 +9,7 @@ For professional development studios, setting up third-party tools and investing
 Although this page covers several popular tools, it shouldn't be taken as a strict recommendation of them. Every team has different needs, so this page is intended to help you examine ways to improve your workflow rather than tell you to download anything in particular.
 </Alert>
 
-## The syncing problem
+## The Syncing Problem
 
 At its core, using external tools with Roblox is a _syncing_ problem:
 
@@ -21,7 +21,7 @@ For the whole solution to feel seamless and automatic, you need to a) listen for
 
 Rather than Roblox's cloud-first approach, Rojo allows for a "file system-first" approach. It extracts all script files in your project into Luau files. Then it runs a server. The Rojo plugin connects to the server to synchronize those files with Studio.
 
-## Install Rojo with Foreman
+## Installing Rojo with Foreman
 
 You can manually download and run a Rojo binary, but that approach runs the risk of different developers on your team using different Rojo versions. A better solution is to use a tool manager like [Foreman](https://github.com/Roblox/foreman), which uses a configuration file—a list of repositories and versions—to make the installation and upgrade process consistent across machines.
 
@@ -37,7 +37,7 @@ Then you install these tools with `foreman install`. In addition to a global `fo
 
 When a tool releases a new version, you then explicitly bump the version number in your `.toml` file, use Foreman to perform the upgrade, test the new version, and downgrade if it causes any problems. For commands and installation instructions, see [Foreman](https://github.com/Roblox/foreman?tab=readme-ov-file#installation).
 
-## Run Rojo
+## Running Rojo
 
 After you install Rojo with Foreman, what you've really installed is the Rojo server. The next step is to install the Rojo plugin for Roblox Studio:
 
@@ -67,7 +67,7 @@ In Roblox Studio, open the `.rbxl` file you just built, start the Rojo plugin, a
 
 Rojo projects have certain naming requirements for files, numerous configuration options, and some limitations, all of which are covered in the [Rojo documentation](https://rojo.space/docs/v7/).
 
-## Package managers
+## Package Managers
 
 Roblox has a robust set of included APIs, but if you want to make use of community software packages in a consistent, reproducible way, you need a package manager. [Wally](https://wally.run/) is a popular option. You can install it through Foreman, just like Rojo.
 
@@ -140,7 +140,7 @@ Like most other software projects, the goal is that contributors can clone a rep
 For a detailed walkthrough of using React to create a Roblox UI, see [React + Roblox](https://devforum.roblox.com/t/how-to-react-roblox/2964543).
 </Alert>
 
-## Version control
+## Version Control
 
 Having a set of plain text files on your computer unlocks a variety of capabilities, but the primary one is _version control_. You can store your scripts and configuration files in a [Git](https://git-scm.com/) or [Mercurial](https://www.mercurial-scm.org/) repository; host remote repositories and review code changes in [GitHub](https://github.com), [GitLab](https://gitlab.com), or [Bitbucket](https://bitbucket.org); and use whichever text editor you like.
 
@@ -159,6 +159,6 @@ The tools on this page are most applicable to scripts; 3D artists already use ex
 
 The Roblox implementation of packages follows many of the same principles as the tools on this page: a centralized repository with version history that offers a seamless way to keep all copies of an asset in sync. For more information on how they can improve your workflow, see [Packages](../projects/assets/packages.md).
 
-## Undo everything
+## Undoing Everything
 
 Because third-party tools sync changes back to Roblox Studio rather than replacing it, no part of this workflow involves any lock-in. At any time, you can stop using one or all of these tools and go back to editing your experience exclusively in Studio. The lack of risk makes experimenting with third-party tools particularly appealing.

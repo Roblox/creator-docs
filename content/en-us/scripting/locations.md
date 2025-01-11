@@ -1,5 +1,5 @@
 ---
-title: Script types and locations
+title: Script Types and Locations
 description: How scripts run in Roblox, and how location impacts that behavior.
 ---
 
@@ -9,7 +9,7 @@ For many developers, the fundamental challenge of adapting to Roblox scripting i
 
 The reason for this complexity is that Roblox experiences are multiplayer by default. Scripts need the ability to only run on the server, only run on the client, or be shared across both. The evolution of the Roblox platform over time has further complicated the situation.
 
-## Script types
+## Script Types
 
 Roblox has three types of scripts:
 
@@ -37,7 +37,7 @@ To change a script run context, select it in the [Explorer](../studio/explorer.m
 - To share code between server and client scripts, use `Class.ModuleScript|ModuleScripts` in `ReplicatedStorage`.
 - Use `Class.LocalScript|LocalScripts` in `StarterCharacterScripts`, `StarterPlayerScripts`, `StarterGui`, and `StarterPack`.
 
-## Script locations
+## Script Locations
 
 <ScriptLocations components={props.components} />
 
@@ -45,7 +45,7 @@ This image shows which Explorer window locations can contain client scripts. Rem
 
 <img alt="Diagram showing which script locations run on clients." src="../assets/scripting/client-server/Client-Script-Containers.png" width="520" />
 
-## Example project structure
+## Example Project Structure
 
 The [Plant](../resources/plant-reference-project.md) reference project shows how you might organize your code in a large, complex experience.
 

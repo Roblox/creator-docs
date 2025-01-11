@@ -1,5 +1,5 @@
 ---
-title: OAuth 2.0 app implementation
+title: OAuth 2.0 App Implementation
 description: Introduces OAuth 2.0 authentication implementation.
 ---
 
@@ -38,7 +38,7 @@ To implement the authorization code flow, your app performs the following steps:
 
 The following sections describe each step in greater depth.
 
-## Generate a code challenge (for PKCE only)
+## Generating a Code Challenge (For PKCE only)
 
 Before initiating the authorization process, you need to generate a code
 challenge from a code verifier. You can use libraries or built-in functions in
@@ -76,7 +76,7 @@ var code_challenge = base64URLEncode(sha256(code_verifier));
 
 For PKCE, you need both the code verifier and challenge values in later steps.
 
-## Construct the authorization URL
+## Constructing the Authorization URL
 
 <Alert severity="info">
   See the [authorization endpoint reference documentation](/cloud/reference/oauth2#get-v1authorize)
@@ -121,7 +121,7 @@ https://apis.roblox.com/oauth/v1/authorize?client_id=7290610391231237934964
 When users visit the URL, they are taken through the authorization flow. If
 successful, Roblox redirects the user to the specified `redirect_uri`.
 
-## Handle authorization callbacks
+## Handling Authorization Callbacks
 
 When an authorization flow is successful, your app receives a `GET` request from
 the Roblox authorization server at the `redirect_uri` that you specified. In the
@@ -155,7 +155,7 @@ parameters.
 - The `state` parameter helps your app maintain state in the case of a
   failure.
 
-## Exchange an authorization code for access tokens
+## Exchanging an authorization code for access tokens
 
 When you have parsed the authorization `code`, exchange it for
 tokens to access desired Roblox resources:
@@ -179,7 +179,7 @@ tokens to access desired Roblox resources:
    }
    ```
 
-## Make a call to a resource method
+## Making a call to a resource method
 
 Now that you have the required access token, you can use it to make
 authenticated calls to resource methods. Include the access token in the header of all API requests to

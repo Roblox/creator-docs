@@ -1,11 +1,11 @@
 ---
-title: Tag reference
+title: Tag Reference
 description: A list of tags for the MicroProfiler.
 ---
 
 The following is a list of common tags in the MicroProfiler, grouped by category. Understanding these tags can help you identify problematic code in your experience. The tables contain tag label, descriptions and performance advice for improving performance and optimizing your experience.
 
-## AI/navigation
+## AI/Navigation
 
 <table>
 <thead>
@@ -43,7 +43,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance advice</th>
+    <th>Performance Advice</th>
   </tr>
 </thead>
 <tbody>
@@ -77,7 +77,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance advice</th>
+    <th>Performance Advice</th>
   </tr>
 </thead>
 <tbody>
@@ -106,7 +106,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance advice</th>
+    <th>Performance Advice</th>
   </tr>
 </thead>
 <tbody>
@@ -160,7 +160,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance notes</th>
+    <th>Performance Notes</th>
   </tr>
 </thead>
 <tbody>
@@ -281,7 +281,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance advice</th>
+    <th>Performance Advice</th>
   </tr>
 </thead>
 <tbody>
@@ -320,7 +320,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance advice</th>
+    <th>Performance Advice</th>
   </tr>
 </thead>
 <tbody>
@@ -404,7 +404,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance advice</th>
+    <th>Performance Advice</th>
   </tr>
 </thead>
 <tbody>

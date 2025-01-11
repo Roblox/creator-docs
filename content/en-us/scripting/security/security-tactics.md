@@ -1,5 +1,5 @@
 ---
-title: Security tactics and cheat mitigation
+title: Security Tactics and Cheat Mitigation
 description: Explore security tactics and cheat mitigation tactics for Roblox experiences.
 ---
 
@@ -13,7 +13,7 @@ Collectively, this means that a skilled exploiter can potentially execute code t
 
 While you can implement limited [design defenses](#defensive-design-tactics) to catch common attacks, it's highly recommended that you implement more reliable [server-side mitigation tactics](#server-side-mitigation), as the server is the ultimate authority for any running experience.
 
-## Defensive design tactics
+## Defensive Design Tactics
 
 Basic design decisions can serve as "first step" security measures to discourage exploits. For example, in a shooter game where players get points for killing other players, an exploiter may create a bunch of bots that teleport to the same place so they can be quickly killed for points. Given this potential exploit, consider two approaches and their predictable outcome:
 
@@ -21,7 +21,7 @@ Basic design decisions can serve as "first step" security measures to discourage
 <thead>
   <tr>
     <th>Approach</th>
-    <th>Predictable outcome</th>
+    <th>Predictable Outcome</th>
   </tr>
 </thead>
 <tbody>
@@ -46,13 +46,13 @@ Basic design decisions can serve as "first step" security measures to discourage
 
 While defensive design obviously isn't a perfect or comprehensive solution, it can contribute to a broader security approach, along with [server-side mitigation](#server-side-mitigation).
 
-## Server-side mitigation
+## Server-Side Mitigation
 
 As much as possible, the **server** should cast the final verdict on what is "true" and what the current state of the world is. Clients can, of course, request the server to make changes or perform an action, but the server should **validate and approve** each of these changes/actions before the results are replicated to other players.
 
 With the exception of certain physics operations, changes to the data model on the client do not replicate to the server, so the main attack path is often via the network events you've declared with `Class.RemoteEvent|RemoteEvents` and `Class.RemoteFunction|RemoteFunctions`. Remember that an exploiter running their own code on your client can invoke these with whatever data they want.
 
-### Remote runtime type validation
+### Remote Runtime Type Validation
 
 One attack path is for an exploiter to invoke `Class.RemoteEvent|RemoteEvents` and `Class.RemoteFunction|RemoteFunctions` with arguments of the incorrect type. In some scenarios, this may cause code on the server listening to these remotes to error in a way that's advantageous to the exploiter.
 
@@ -105,7 +105,7 @@ end
 remoteFunction.OnServerInvoke = createPart
 ```
 
-### Data validation
+### Data Validation
 
 Another attack that exploiters might launch is to send [technically valid types](#remote-runtime-type-validation) but make them extremely large, long, or otherwise malformed. For example, if the server has to perform an expensive operation on a string that scales with length, an exploiter could send an incredibly large or malformed string to bog down the server.
 
@@ -169,11 +169,11 @@ end
 buyItemEvent.OnServerInvoke = buyItem
 ```
 
-### Value validation
+### Value Validation
 
 In addition to validating [types](#remote-runtime-type-validation) and [data](#data-validation), you should validate the **values** passed through `Class.RemoteEvent|RemoteEvents` and `Class.RemoteFunction|RemoteFunctions`, ensuring they are valid and logical in the context being requested. Two common examples are an [in-experience shop](#in-experience-shop) and a [weapon targeting](#weapon-targeting) system.
 
-#### In-experience shop
+#### In-Experience Shop
 
 Consider an in-experience shop system with a user interface, for instance a product selection menu with a "Buy" button. When the button is pressed, you can invoke a `Class.RemoteFunction` between the client and the server to request the purchase. However, it's important that the **server**, the most reliable manager of the experience, confirms that the user has enough money to buy the item.
 
@@ -182,7 +182,7 @@ Consider an in-experience shop system with a user interface, for instance a prod
   <figcaption>Example purchase flow from client to server through a `Class.RemoteFunction`</figcaption>
 </figure>
 
-#### Weapon targeting
+#### Weapon Targeting
 
 Combat scenarios warrant special attention on validating values, particularly through aiming and hit validation.
 
@@ -200,7 +200,7 @@ Imagine a game where a player can fire a laser beam at another player. Rather th
 - Confirm that the hit player is alive.
 - Store weapon and player state on the server and confirm that a firing player is not blocked by a current action such as reloading or a state like sprinting.
 
-#### Data store manipulation
+#### DataStore Manipulation
 
 In experiences using `Class.DataStoreService` to save player data, exploiters may take advantage of invalid [data](#data-validation), and more obscure methods, to prevent a `Class.DataStore` from saving properly. This can be especially abused in experiences with item trading, marketplaces, and similar systems where items or currency leave a player's inventory.
 
@@ -211,11 +211,11 @@ Ensure that any actions performed through a `Class.RemoteEvent` or `Class.Remote
 - Table indices cannot be `NaN` or `nil`. Iterate over all tables passed by the client and verify all indices are valid.
 - `Class.DataStore|DataStores` can only accept valid UTF-8 characters, so you should sanitize all strings provided by the client via `Library.utf8|utf8.len()` to ensure they are valid. `Library.utf8|utf8.len()` will return the length of a string, treating unicode characters as a single character; if an invalid UTF-8 character is encountered it will return `nil` and the position of the invalid character. Note that invalid UTF-8 strings can also be present in tables as keys and values.
 
-### Remote throttling
+### Remote Throttling
 
 If a client is able to make your server complete a computationally expensive operation, or access a rate-limited service like `Class.DataStoreService` via a `Class.RemoteEvent`, it's critical that you implement **rate limiting** to ensure the operation is not called too frequently. Rate limiting can be implemented by tracking when the client last invoked a remote event and rejecting the next request if it's called too soon.
 
-### Movement validation
+### Movement Validation
 
 For competitive experiences, you may wish to validate player character movements on the server to ensure they aren't teleporting around the map or moving faster than acceptable.
 

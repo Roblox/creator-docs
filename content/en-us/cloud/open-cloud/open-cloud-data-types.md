@@ -1,5 +1,5 @@
 ---
-title: Open Cloud data types
+title: Open Cloud Data Types
 description: Explains the different data types of Open Cloud web APIs.
 ---
 

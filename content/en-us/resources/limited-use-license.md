@@ -1,5 +1,5 @@
 ---
-title: Limited use license
+title: Limited Use License
 comments: Referenced in some project example pages -- easier to have this as a separate doc.
 description: Roblox's Limited Use License.
 ---

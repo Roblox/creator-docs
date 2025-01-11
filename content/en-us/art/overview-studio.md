@@ -1,5 +1,5 @@
 ---
-title: 3D art and Studio
+title: 3D Art and Studio
 description: An overview of fundamental 3D art tools, concepts, workflows, and resources for Roblox Studio.
 hideBreadcrumbs: true
 ---
@@ -15,7 +15,7 @@ Each of the following sections include a brief description as well as additional
 - [Materials and Textures](#materials-and-textures) - Discover how Roblox uses materials and textures with your models to enhance the surface appearance of your objects.
 - [Environments](#environments) - Craft immersive environments using terrain tools, lighting effects, and atmospheric elements.
 
-## Basic layout
+## Basic Layout
 
 After [installing Studio](../studio/setup.md), familiarize yourself with Studio's many 3D art tools and interfaces. While you can customize Studio to show various layouts and tools, Studio opens with the most commonly used windows by default:
 
@@ -31,9 +31,9 @@ After [installing Studio](../studio/setup.md), familiarize yourself with Studio'
 
 - **Output** &mdash; This window displays all error, warning, or manually returned messages from the Roblox Engine. This window is useful for troubleshooting behavior in your experience.
 
-For more information on the Studio interface and individual tools, see the [Studio overview](../studio/index.md).
+For more information on the Studio interface and individual tools, see [Studio Overview](../studio/index.md).
 
-## Common shortcuts
+## Common Shortcuts
 
 Like all creation tools, keyboard shortcuts allow you to work efficiently and quickly. While Studio has many built-in keyboard shortcuts and offers various customizations, the following shortcuts and settings can be very useful for 3D artists:
 
@@ -94,9 +94,9 @@ Like all creation tools, keyboard shortcuts allow you to work efficiently and qu
 </tbody>
 </table>
 
-For additional keyboard shortcuts, see [Studio shortcuts](../studio/shortcuts.md).
+For additional keyboard shortcuts, see [Studio Shortcuts](../studio/shortcuts.md).
 
-## Assets and packages
+## Assets and Packages
 
 Before you begin creating, it's important to understand how Roblox handles **assets** and **packages**, the most basic object or group of objects that you can save, use, and share.
 
@@ -128,7 +128,7 @@ The **Creator Store** is where you can find many assets created and shared by Ro
 
 Access the Creator Store through Studio's Toolbox or the [Creator Hub](https://create.roblox.com/store/models). For more information, see [Creator Store](../production/creator-store.md).
 
-#### Roblox created models
+#### Roblox Created Models
 
 Roblox also provides free model packs that you can use within your experiences. These are high quality assets used in many of Roblox's showcase experiences. You can add these to your toolbox in various ways by directly adding them from the Creator Dashboard, or searching for them in the Toolbox.
 
@@ -148,7 +148,7 @@ The **Marketplace** is where all Roblox users can purchase virtual cosmetics, su
 
 To sell assets on the Marketplace, your creation must follow specific avatar specifications and meet certain policies and guidelines. For more information, see [Avatar](../avatar/index.md) and [Marketplace](../marketplace/index.md).
 
-## 3D modeling
+## 3D Modeling
 
 3D modeling is the process of creating three-dimensional digital representations of objects or environments. Roblox supports [basic 3D modeling](#basic-parts) in Studio, using primitive parts and allowing you to combine, subtract, and intersect the basic parts into more complex models.
 
@@ -169,7 +169,7 @@ Roblox also supports [custom 3D models](#mesh-parts) created from 3D modeling so
   </figure>
 </GridContainer>
 
-### Basic parts
+### Basic Parts
 
 Studio natively supports basic parts that allow you to quickly add simple geometry to your experience. This is ideal for creating simple environments or even greyboxing or prototyping a more complex 3D space.
 
@@ -182,7 +182,7 @@ Basic parts include the following benefits:
 
 For more information on using basic parts, as well as solid modeling operations, see [Parts](../parts/index.md).
 
-### Mesh parts
+### Mesh Parts
 
 Meshes are collections of vertices, edges, and faces that make up a 3D object. Unlike parts, which you can directly create in Studio, you first create meshes in a third-party modeling application like Blender or Maya before importing the model file into Studio. After importing a mesh, Studio represents the mesh object as a `Class.MeshPart`.
 
@@ -202,9 +202,9 @@ Meshes are collections of vertices, edges, and faces that make up a 3D object. U
   </figure>
 </GridContainer>
 
-For more information on creating custom meshes, see [Custom meshes](../art/modeling/index.md).
+For more information on creating custom meshes, see [3D Art Modeling](../art/modeling/index.md).
 
-## Materials and textures
+## Materials and Textures
 
 It's always important to consider the surface appearance of your objects, as this empowers you to create cohesive and engaging assets and environments. Studio includes many tools to manage the look and feel of your assets, primarily by customizing your objects with [materials](#materials) and [textures](#textures).
 
@@ -226,7 +226,7 @@ Materials also affect physical properties beyond appearance. The following are v
 
 - **Glass** - When a part's material is set to glass and its transparency is greater than `0`, it distorts and slightly blurs the image behind it, and becomes less transparent when viewed from an angle.
 - **Forcefield** - Any texture object placed on a mesh using the `ForceField` material will shimmer and shine at random intervals depending on the R channel of the texture's RGB color.
-- **Neon** - Adds a glowing effect on parts. This is useful for decorating places, especially sci-fi or night city environments. This behavior might change at lower render settings when playing on less performant devices. For more information on performance behavior, see [Improve performance](../performance-optimization/improve.md).
+- **Neon** - Adds a glowing effect on parts. This is useful for decorating places, especially sci-fi or night city environments. This behavior might change at lower render settings when playing on less performant devices. For more information on performance behavior, see [Performance Optimization](../performance-optimization/improving.md).
 
 For additional information, see [Materials](../parts/materials.md).
 
@@ -258,7 +258,7 @@ There are two types of textures in Roblox, single image **basic textures** and *
 <Alert severity = 'warning'>
 Loading many unique PBR textures at once can affect performance in your experience. When working with many similar meshes, you can save processing power and memory by using a single set of PBR textures and [modifying alpha channels in combination with your mesh object base colors](https://devforum.roblox.com/t/using-alpha-masks-in-color-maps-to-customizetint-base-colors).
 
-For additional tips on improving performance with your assets, see [Improve performance](../performance-optimization/improve.md#rendering).
+For additional tips on improving performance with your assets, see [Performance Optimization](../performance-optimization/improving.md#rendering).
 </Alert>
 
 <GridContainer numColumns="2">
@@ -270,7 +270,7 @@ For additional tips on improving performance with your assets, see [Improve perf
 </figure>
 </GridContainer>
 
-For more information see [Textures and decals](../parts/textures-decals.md) and [PBR textures](../art/modeling/surface-appearance.md).
+For more information see [Textures and Decals](../parts/textures-decals.md) and [PBR Textures](../art/modeling/surface-appearance.md).
 
 ## Environments
 
@@ -284,7 +284,7 @@ Environments refer to the visual and spatial world within your experience. Envir
 
 While many experiences are include interior spaces, such as a city building or spaceship, it's important to use terrain for outdoor environments whenever possible to ensure performance and expected lighting and environmental behavior.
 
-For more information, see [Environmental terrain](../parts/terrain.md).
+For more information, see [Terrain](../parts/terrain.md).
 
 ### Lighting
 
@@ -294,7 +294,7 @@ For more information, see [Environmental terrain](../parts/terrain.md).
 
 Lighting can be categorized into the following:
 
-- **Global lighting** - Refers to the luminescence from either the sun or moon in an outdoor environment. You can set the properties of your global lighting by adjusting the Lighting service. For additional hands-on instructions on adjusting global lighting, see the [Customize global lighting](../tutorials/curriculums/core/building/customize-global-lighting.md) lesson of our Core Curriculum.
+- **Global lighting** - Refers to the luminescence from either the sun or moon in an outdoor environment. You can set the properties of your global lighting by adjusting the Lighting service. For additional hands-on instructions on adjusting global lighting, see the [Customize Global Lighting](../tutorials/curriculums/core/building/customize-global-lighting.md) lesson of our Core Curriculum.
 - **Local lighting** - Refers to light sources placed within your experiences, such as pointlights, spotlights, and surface lights. You can modify lighting scenarios based on different interior rooms or sections of your experience by using one or more light sources.
 
-For additional information on modifying your environment's lighting, see [Global lighting](../environment/lighting.md).
+For additional information on modifying your environment's lighting, see [Lighting](../environment/lighting.md).

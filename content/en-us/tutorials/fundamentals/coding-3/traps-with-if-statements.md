@@ -1,5 +1,5 @@
 ---
-title: If/then practice with traps
+title: If/then Practice with Traps
 description: Create a trap that sets the player's health to zero with Roblox Lua.
 next: /tutorials/fundamentals/coding-3/powerups-with-if-statements
 prev: /tutorials/fundamentals/coding-3/intro-to-if-statements
@@ -9,7 +9,7 @@ Traps that decrease players' health are a fun game-play element that can be code
 
 <video controls src="../../../assets/education/coding-3/trap-exampleFinal.mp4" width="80%"></video>
 
-## Set up the trap
+## Setting up the Trap
 
 Traps work exceptionally well in experiences with movement-based challenges, like obbies. These steps will start by setting up the necessary variables and functions. Do as much as you can without looking at the code boxes first.
 
@@ -46,7 +46,7 @@ Traps work exceptionally well in experiences with movement-based challenges, lik
    trapPart.Touched:Connect(onTouch)
    ```
 
-## Check for player touch
+## Checking for Player Touch
 
 Remember, the parameter `otherPart` records whatever touches the trap part, which might be a part of a player or just the baseplate.
 
@@ -56,7 +56,7 @@ To ensure the trap will only destroy players and won't destroy random decor item
 Humanoids are present in player avatars and many NPCs. Humanoids have several unique properties. One such property is Health.
 </Alert>
 
-### Find a specific object
+### Finding a Specific Object
 
 The function `FindFirstChildWhichIsA()` can be used to look for specific object types, which is handy because we're looking for a Humanoid-type object. Players will likely touch the trap with only a part of their avatar, so a variable must be set up to find the parent of the touching part and search it for a Humanoid.
 
@@ -89,7 +89,7 @@ The function `FindFirstChildWhichIsA()` can be used to look for specific object 
    trapPart.Touched:Connect(onTouch)
    ```
 
-### Check with an if statement
+### Checking with an if Statement
 
 If a Humanoid is found, then set the Humanoid's Health to zero.
 
@@ -131,7 +131,7 @@ If a Humanoid is found, then set the Humanoid's Health to zero.
 
 3. **Run** the code and check that you can see the output whenever a player touches the part.
 
-## Change the player's health
+## Changing the Player's Health
 
 If the statement is true, you can use the same humanoid variable to set the player's health to 0.
 

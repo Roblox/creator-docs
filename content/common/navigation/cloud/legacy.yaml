@@ -2,31 +2,31 @@ navigation:
   - heading: Legacy APIs
   - title: Overview
     path: /cloud/legacy
-  - title: Account information
+  - title: Account Information
     type: cloudapi
     ignoreTranslation: true
     versions:
       - name: v1
         path: /cloud/legacy/accountinformation/v1
-  - title: Account settings
+  - title: Account Settings
     type: cloudapi
     ignoreTranslation: true
     versions:
       - name: v1
         path: /cloud/legacy/accountsettings/v1
-  - title: Ad configuration
+  - title: Ad Configuration
     type: cloudapi
     ignoreTranslation: true
     versions:
       - name: v2
         path: /cloud/legacy/adconfiguration/v2
-  - title: Asset delivery v2
+  - title: Asset Delivery v2
     type: cloudapi
     ignoreTranslation: true
     versions:
       - name: v2
         path: /cloud/legacy/assetdelivery/v2
-  - title: Asset delivery v1
+  - title: Asset Delivery v1
     type: cloudapi
     ignoreTranslation: true
     versions:
@@ -92,13 +92,13 @@ navigation:
     versions:
       - name: v2
         path: /cloud/legacy/chat/v2
-  - title: Client settings v2
+  - title: Client Settings v2
     type: cloudapi
     ignoreTranslation: true
     versions:
       - name: v2
         path: /cloud/legacy/clientsettings/v2
-  - title: Client settings v1
+  - title: Client Settings v1
     type: cloudapi
     ignoreTranslation: true
     versions:
@@ -128,13 +128,13 @@ navigation:
     versions:
       - name: v1
         path: /cloud/legacy/economy/v1
-  - title: Economy creator stats
+  - title: Economy Creator Stats
     type: cloudapi
     ignoreTranslation: true
     versions:
       - name: v1
         path: /cloud/legacy/economycreatorstats/v1
-  - title: Engagement payouts
+  - title: Engagement Payouts
     type: cloudapi
     ignoreTranslation: true
     versions:
@@ -158,19 +158,19 @@ navigation:
     versions:
       - name: v1
         path: /cloud/legacy/friends/v1
-  - title: Game internationalization v2
+  - title: Game Internationalization v2
     type: cloudapi
     ignoreTranslation: true
     versions:
       - name: v2
         path: /cloud/legacy/gameinternationalization/v2
-  - title: Game internationalization v1
+  - title: Game Internationalization v1
     type: cloudapi
     ignoreTranslation: true
     versions:
       - name: v1
         path: /cloud/legacy/gameinternationalization/v1
-  - title: Game join
+  - title: Game Join
     type: cloudapi
     ignoreTranslation: true
     versions:
@@ -212,7 +212,7 @@ navigation:
     versions:
       - name: v1
         path: /cloud/legacy/inventory/v1
-  - title: Item configuration
+  - title: Item Configuration
     type: cloudapi
     ignoreTranslation: true
     versions:
@@ -224,7 +224,7 @@ navigation:
     versions:
       - name: v1
         path: /cloud/legacy/locale/v1
-  - title: Localization tables
+  - title: Localization Tables
     type: cloudapi
     ignoreTranslation: true
     versions:
@@ -242,7 +242,7 @@ navigation:
     versions:
       - name: v2
         path: /cloud/legacy/notifications/v2
-  - title: Premium features
+  - title: Premium Features
     type: cloudapi
     ignoreTranslation: true
     versions:
@@ -254,7 +254,7 @@ navigation:
     versions:
       - name: v1
         path: /cloud/legacy/presence/v1
-  - title: Private messages
+  - title: Private Messages
     type: cloudapi
     ignoreTranslation: true
     versions:
@@ -272,7 +272,7 @@ navigation:
     versions:
       - name: v1
         path: /cloud/legacy/thumbnails/v1
-  - title: Thumbnails resizer
+  - title: Thumbnails Resizer
     type: cloudapi
     ignoreTranslation: true
     versions:
@@ -284,13 +284,13 @@ navigation:
     versions:
       - name: v1
         path: /cloud/legacy/trades/v1
-  - title: Translation roles
+  - title: Translation Roles
     type: cloudapi
     ignoreTranslation: true
     versions:
       - name: v1
         path: /cloud/legacy/translationroles/v1
-  - title: Two step verification
+  - title: Two Step Verification
     type: cloudapi
     ignoreTranslation: true
     versions:

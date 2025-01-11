@@ -1,24 +1,24 @@
 ---
-title: Custom text chat commands
+title: Custom Text Chat Commands
 description: Learn how to create custom chat commands.
 ---
 
-`Class.TextChatService` has built-in chat commands for common purposes, such as muting other players and using avatar emotes. You can enable them by setting `Class.TextChatService.CreateDefaultCommands` to true in the Studio properties panel.
+`Class.TextChatService` has built-in chat commands for common purposes, such as muting other players and using avatar emotes. You can enable them by setting `Class.TextChatService.CreateDefaultCommands` to true in the Studio **Properties** panel.
 
 You can also add custom commands using `Class.TextChatCommand`. Users sending a defined command in the chat input bar trigger a callback defined by `Class.TextChatCommand.Triggered` to perform your customized actions.
 
 The following example shows how to create a chat command that allows players to increase or decrease their character's size when they input `/super` or `/mini`.
 
 1. Add a `Class.TextChatCommand` instance inside `Class.TextChatService`.
-2. Rename it SizeCommand.
+1. Rename it **SizeCommand**.
 
    <img src="../../assets/studio/explorer/TextChatService-TextChatCommand.png" width="320" />
 
-3. Set its PrimaryAlias property to `/super` and its SecondaryAlias to `/mini`.
+1. Set its **PrimaryAlias** property to `/super` and its **SecondaryAlias** to `/mini`.
 
    <img src="../../assets/players/in-experience-text-chat/TextChatCommand-Aliases.png" width="320" />
 
-4. Insert the following `Class.Script` inside `Class.ServerScriptService` to define a callback for the chat command that scales the character's size:
+1. Insert the following `Class.Script` inside `Class.ServerScriptService` to define a callback for the chat command that scales the character's size:
 
    ```lua title='Script' highlight='4,6'
    local TextChatService = game:GetService("TextChatService")

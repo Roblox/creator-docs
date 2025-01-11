@@ -9,10 +9,10 @@ description: Passes let you charge users a one-time Robux fee to access privileg
    For items that a player might purchase multiple times, such as potions, temporary power-ups, or in-experience currency, see [Developer Products](../../production/monetization/developer-products.md).
 </Alert>
 
-## Create passes
+## Creating Passes
 
 <Alert severity="warning">
-   Before creating a pass, make sure your experience has been [published](../../production/publishing/publish-experiences-and-places.md) and is accessible on Roblox.
+   Before creating a pass, make sure your experience has been [published](../../production/publishing/publishing-experiences-and-places.md) and is accessible on Roblox.
 </Alert>
 
 To create a pass:
@@ -43,7 +43,7 @@ To create a pass:
    If you want to use the pass as a randomized reward, review the [Randomized Virtual Item Policy](./randomized-virtual-items-policy.md).
 </Alert>
 
-## Get pass IDs
+## Getting Pass IDs
 
 To use scripting, you need a pass ID. To get the pass ID:
 
@@ -53,7 +53,7 @@ To use scripting, you need a pass ID. To get the pass ID:
 
    <img src="../../assets/creator-dashboard/Pass-Copy-Asset-ID.png" width="400" />
 
-## Sell passes
+## Selling Passes
 
 <Alert severity="info">
 If you're using [price optimization](./price-optimization.md), make sure to place the script inside a `Class.LocalScript` so that users see personalized pass prices.
@@ -61,7 +61,7 @@ If you're using [price optimization](./price-optimization.md), make sure to plac
 
 You can sell passes outside or inside an experience.
 
-### Outside an experience
+### Outside an Experience
 
 To sell a pass in an experience's **Store** page:
 
@@ -73,7 +73,7 @@ To sell a pass in an experience's **Store** page:
 6. In the **Price in Robux** field, enter the amount of Robux you want to charge users for the pass. The price you enter affects how much Robux you earn per sale. The price you enter affects how much Robux you earn per sale. The minimum price is 1 Robux, and the maximum price is 1 billion Robux.
 7. Click **Save Changes**. The pass populates in the experience's **Store** page.
 
-### Inside an experience
+### Inside an Experience
 
 To implement and sell a pass inside an experience, call `Class.MarketplaceService|MarketplaceService` functions.
 
@@ -162,7 +162,7 @@ MarketplaceService.PromptGamePassPurchaseFinished:Connect(onPromptPurchaseFinish
 Although Roblox itself does **not** record the purchase history of developer products by specific users, you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores).
 </Alert>
 
-## Assign pass privileges
+## Assigning Pass Privileges
 
 You must manually assign pass privileges to users that purchase your passes. To do this, use `Class.Players.PlayerAdded|PlayerAdded` when a user joins your experience to check if they already own the pass and to assign them the pass privileges.
 
@@ -199,7 +199,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-## Pass analytics
+## Pass Analytics
 
 Use pass analytics to analyze the success of individual passes, identify trends, and forecast potential future earnings.
 

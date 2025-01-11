@@ -1,6 +1,6 @@
 ---
-title: Monetization foundations
-description: Monetization foundations
+title: Monetization Foundations
+description: Monetization Foundations
 ---
 
  <figure>
@@ -69,7 +69,7 @@ They can then be further divided into categories of utility:
 - **Enhancement:** These items improve the experience in some way, such as granting increased speed, protection, strength, tools or event mode access.
 - **Expression:** These items personalize the player's experience and makes them unique, such as skins, emotes, and pets.
 
-## The shop
+## The Shop
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/C3YrGutsuSo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -135,7 +135,7 @@ New content and item updates invites players back to the store to see what's new
 - Attract attention
 - Communicate value
 
-### Attract attention
+### Attract Attention
 
 How you attract attention to your shop and items depends on your experience's unique style. [_Pet Simulator X_](https://www.roblox.com/games/6284583030/) uses descriptive language to build excitement.
 
@@ -154,7 +154,7 @@ You can effectively communicate the value of items in your shop by employing the
 - Chance-based merchandise
 - Bundles
 
-#### Clear language and imagery
+#### Clear Language and Imagery
 
 Clear language and imagery help show why purchasing an item is worthwhile. It's important to clearly show the benefit of the item, whether it's a percentage bonus, percentage savings or number of uses. [_MeloBlox Adventure_](https://www.roblox.com/games/5803957966/) is very clear and organized, leading with the term "VIP Benefits" at the top and listing the extensive number of benefits players can expect to receive.
 
@@ -185,7 +185,7 @@ Another example of using clear language and imagery to communicate value is thro
 
 In all cases, ensure that your merchandising terms and item descriptions are truthful and accurate so players know exactly what they will receive. Be mindful to not "oversell" items and remember that you are building a relationship with your players that depends on obtaining and maintaining trust.
 
-#### Chance-based merchandising
+#### Chance-Based Merchandising
 
 Another common merchandising strategy is to use a chance-based system. In chance-based systems, players don't purchase items directly, but instead purchase the opportunity to receive several kinds of items, usually of varying rarity. There are three common variations of this technique: There are three common variations of this technique:
 
@@ -222,7 +222,7 @@ For more information on how to design fair loot boxes from two experts in the fi
 
 Bundles are a great way to package up items that go together, whether it's a group of items that new players would find appealing or items that share a common theme. Because a bundle has multiple items, ensure players can clearly see each one and let them know what each item does. As best practice, have a comparison to other bundles to gauge the value of grouped items.
 
-## Starter packs
+## Starter Packs
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/G0ZLMT9sHTE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -242,7 +242,7 @@ Common durations for starter packs are anywhere from a day to a week, depending 
 - Contextual descriptions
 - Price calculations
 
-### Prominent location
+### Prominent Location
 
 For a beginner that is not yet familiar with your experience, showcase the starter pack in a place that is easy to find. If you place it prominently, consider how much information you need to provide so the purchase makes sense to the player who might not know anything about the experience.
 
@@ -253,7 +253,7 @@ For a beginner that is not yet familiar with your experience, showcase the start
 
 There are several good places to surface the starter pack in your UI. Clicking into the starter pack icon can open the offer directly, or open the offer in the context of the experience's shop.
 
-### Thoughtful design
+### Thoughtful Design
 
 Once you decide how players will see the starter pack, consider the starter pack visualization. Opening the offer in the shop encourages players to get familiar with the shop in general and can serve as a natural transition to exploring all the options available for purchase.
 
@@ -262,7 +262,7 @@ Once you decide how players will see the starter pack, consider the starter pack
     <figcaption>Starter pack in [*_Sword Fighters Simulator_*](https://www.roblox.com/games/11040063484/)</figcaption>
   </figure>
 
-### Contextual descriptions
+### Contextual Descriptions
 
 Contextual descriptions tell the player why the items are significant and the value they provide. Intentionally designing descriptions to teach players about the impact of the items on the gameplay can serve as a tutorial before they even start playing.
 
@@ -271,7 +271,7 @@ Contextual descriptions tell the player why the items are significant and the va
     <figcaption>Contextual description in *_Sword Fighters Simulator_*</figcaption>
   </figure>
 
-### Price calculations
+### Price Calculations
 
 The starter pack should be merchandised as a special deal using price calculations to help show the item's value. Make sure when assembling the bundle to calculate the cost of each individual item visually, clearly indicating the kind of discount players will get. This helps players understand the value of the presented item compared to other items in the shop.
 
@@ -280,7 +280,7 @@ The starter pack should be merchandised as a special deal using price calculatio
     <figcaption>Price calculation in _Sword Fighters Simulator_</figcaption>
   </figure>
 
-## Season passes
+## Season Passes
 
 <figure>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wIT3hWvwYPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -302,7 +302,7 @@ A good season pass includes the following characteristics:
 - Manageable timeframe
 - Progression system
 
-### Item shop best practices
+### Item Shop Best Practices
 
 A good season pass follows item shop best practices. It's content is:
 
@@ -337,7 +337,7 @@ Good season passes are inviting. As a subset of an experience's shop, season pas
     <figcaption>Descriptive and enticing rewards in *Bot Clash Simulator*</figcaption>
   </figure>
 
-### Free and premium passes
+### Free and Premium Passes
 
 Good season passes have both a free and premium pass that present opportunities for players to earn rewards. The free pass is a set of rewards which any player can earn by engaging with the missions or tasks provided. The free season pass often serves as a more advanced version of daily quests. The premium pass is a superset of the free pass rewards and enables paid players the opportunity to earn even more. Having both free and premium passes ensures that non-paying players can still earn rewards and enjoy your experience, while rewarding paying players with worthwhile bonuses.
 
@@ -359,7 +359,7 @@ A good season pass has worthwhile rewards for players to earn. Merchandising tec
     <figcaption>Final reward in *Jailbreak*</figcaption>
   </figure>
 
-### Manageable timeframes
+### Manageable Timeframes
 
 With the right implementation, season passes can be great for day-to-day engagement and longer term retention. Having manageable timeframes ensures that players feel adequately rewarded for the time they spend playing the experience. Similar to daily quests, consider designing the distance between rewards on your season pass relative to the average session time for players who join your experience. Ensure that progression is based on completion of short and long term missions, and that the amount of experience points needed to move through each level is clearly communicated.
 

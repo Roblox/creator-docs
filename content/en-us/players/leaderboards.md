@@ -1,5 +1,5 @@
 ---
-title: In-experience leaderboards
+title: In-Experience Leaderboards
 description: In-experience Leaderboards let you display user information to all users in the experience, such as top scores.
 ---
 
@@ -7,7 +7,7 @@ Roblox has a built-in **leaderboard system** that lets you display user informat
 
 <img alt="Leaderboard Screen" src="../assets/players/leaderboard/Leaderboard-Screen-1.jpeg" width="100%" />
 
-## Set up the leaderboard
+## Setting up the Leaderboard
 
 To set up the leaderboard and add players when they enter the experience:
 
@@ -47,7 +47,7 @@ To set up the leaderboard and add players when they enter the experience:
    It's essential that the folder is named `leaderstats` with all lowercase letters. Roblox doesn't add the player to the leaderboard if you name it any other way.
    </Alert>
 
-## Add stats
+## Adding Stats
 
 Leaderboards use **value type objects** to store and display player stats. This script will show a player's gold using an `Class.IntValue`, a placeholder for an integer.
 
@@ -89,7 +89,7 @@ These lines accomplish the following:
 
    <img alt="Leaderboards Multiple Players" src="../assets/players/leaderboard/Leaderboards-Multiple-Players.png" width="80%" />
 
-## Update stats
+## Updating Stats
 
 To update a player's leaderboard stat, change the `Value` property of that stat within their `leaderstats` folder. For example, you can attach the following `Class.Script` to any pickup object to increase the **Gold** stat of the player collects it.
 
@@ -116,7 +116,7 @@ end
 goldChunk.Touched:Connect(onPartTouch)
 ```
 
-## Order stats
+## Ordering Stats
 
 There are three ways to control the order of stats in a leaderboard:
 
@@ -152,7 +152,7 @@ Players.PlayerAdded:Connect(leaderboardSetup)
 `IsPrimary` takes precedence over any `Priority` values. If multiple stats have `IsPrimary` values set to `true`, their `Priority` values determine the leaderboard order.
 </Alert>
 
-## Hide the leaderboard
+## Hiding the Leaderboard
 
 To hide the leaderboard, such as on a menu screen or during a cutscene, place a `Class.LocalScript` within `Class.StarterGui` or `Class.StarterPlayerScripts` containing a call to `Class.StarterGui:SetCoreGuiEnabled()|StarterGui`.
 

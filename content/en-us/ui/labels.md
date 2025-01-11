@@ -1,5 +1,5 @@
 ---
-title: Text & image labels
+title: Text & Image Labels
 description: Explore how labels display customizable text and images in user interfaces.
 ---
 
@@ -13,7 +13,7 @@ import TextFiltering from '../includes/text-filtering/text-filtering.md'
 
 <img src="../assets/ui/ui-objects/Labels-Example.jpg" width="800" />
 
-## Create labels on the screen
+## Creating Labels on the Screen
 
 Labels on a screen are useful for things like displaying images of characters
 with dialog.
@@ -34,7 +34,7 @@ To add a label to a screen:
 
    <img src="../assets/ui/button-text-input/ImageButton-Screen-New.jpg" width="80%" />
 
-## Create labels on part faces
+## Creating Labels on Part Faces
 
 Labels on a part are useful for things like creating billboards, posters, and
 wallpaper.
@@ -56,12 +56,12 @@ To add a label to the face of a part:
    <img src="../assets/ui/button-text-input/ImageButton-SurfaceGui-New.jpg" width="80%" />
 
    <Alert severity="warning">
-   If you don't see the button, try [choosing a different face](../parts/textures-decals.md#choose-a-face) in the <b>Face</b> property of the <b>SurfaceGui</b>.
+   If you don't see the button, try [choosing a different face](../parts/textures-decals.md#choosing-a-face) in the <b>Face</b> property of the <b>SurfaceGui</b>.
    </Alert>
 
-## Adjust ImageLabel properties
+## Adjusting ImageLabel Properties
 
-All images within an `Class.ImageLabel` must be assets that have been [imported](../projects/assets/manager.md#import-assets) to Studio. While the image automatically scales to fit the area of the rectangle, the image looks best when it displays at its native resolution.
+All images within an `Class.ImageLabel` must be assets that have been [imported](../projects/assets/manager.md#importing-assets) to Studio. While the image automatically scales to fit the area of the rectangle, the image looks best when it displays at its native resolution.
 
 You can customize the visual appearance of an image with the following
 properties:
@@ -74,6 +74,6 @@ properties:
 
 For example, to display only the image and hide the rectangle, set the `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` property to `1`.
 
-## Text filtering
+## Text Filtering
 
 <TextFiltering components={props.components} context="characters/strings that are displayed on text labels" />

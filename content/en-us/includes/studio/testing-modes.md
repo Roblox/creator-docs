@@ -54,7 +54,7 @@ Once a playtest is running, the following options become available:
   <tr>
     <td>**Pause&nbsp;Physics** / **Resume&nbsp;Physics**</td>
     <td></td>
-    <td>Lets you [pause and resume physics](#pause--resume-physics) without disabling rendering.</td>
+    <td>Lets you [pause and resume physics](#pausing--resuming-physics) without disabling rendering.</td>
   </tr>
   <tr>
     <td>**Stop**</td>

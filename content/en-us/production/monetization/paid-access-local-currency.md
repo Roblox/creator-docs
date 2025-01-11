@@ -1,5 +1,5 @@
 ---
-title: Paid access in local currency
+title: Paid Access in Local Currency
 description: Paid access lets you charge users a one-time fee in their local currency to access your experience.
 ---
 
@@ -14,7 +14,7 @@ Some developers temporarily enable paid access to create a closed beta so that t
 </Alert>
 
 <Alert severity="warning">
-Users can only purchase paid access in local currency on desktop and on web, but they can play their purchased experiences on any of the devices you [enable in the Creator Hub](#enable-paid-access-in-the-creator-hub).
+Users can only purchase paid access in local currency on desktop and on web, but they can play their purchased experiences on any of the devices you [enable in the Creator Hub](#enabling-paid-access-in-the-creator-hub).
 </Alert>
 
 ## Eligibility
@@ -22,9 +22,9 @@ Users can only purchase paid access in local currency on desktop and on web, but
 To charge users for paid access in local currency, you must:
 
 - Have a verified email address.
-- Be 13 years of age or older with a [verified ID](./../publishing/account-verification.md#verify-through-government-id).
-- Successfully [set up an account with Roblox's third-party payment provider Tipalti](#set-up-your-account-to-receive-payouts).
-- Reside in a country supported by Tipalti. See [Payment methods coverage](https://support.tipalti.com/Content/Topics/UserGuide/PaymentInformation/PaymentMethodsCoverage/IntroUSD.htm?Highlight=payment%20coverage#USD) for a list of eligible countries.
+- Be 13 years of age or older with a [verified ID](./../publishing/account-verification.md#verifying-through-government-id).
+- Successfully [set up an account with Roblox's third-party payment provider Tipalti](#setting-up-your-account-to-receive-payouts).
+- Reside in a country supported by Tipalti. See [Payment Methods Coverage](https://support.tipalti.com/Content/Topics/UserGuide/PaymentInformation/PaymentMethodsCoverage/IntroUSD.htm?Highlight=payment%20coverage#USD) for a list of eligible countries.
 
 <Alert severity="warning">
 Users residing in Argentina, China, Colombia, India, Indonesia, Russia, Taiwan, Turkey, UAE, Ukraine, or Vietnam are not able to purchase paid access experiences in local currency.
@@ -73,7 +73,7 @@ Users have 48 hours to request a refund after purchasing a paid access experienc
 
 Refunds aren't available after 48 hours.
 
-## Set up your account to receive payouts
+## Setting Up Your Account to Receive Payouts
 
 You must set up a Tipalti account to receive payouts for purchases of paid access in local currency. To set up a Tipalti account:
 
@@ -90,7 +90,7 @@ Local currency earnings from paid access purchases are held in escrow for a mini
 For experiences owned by groups, the group owner must be the one to set up a Tipalti account. Only group owners can receive payouts.
 </Alert>
 
-## Enable paid access in the Creator Hub
+## Enabling Paid Access in the Creator Hub
 
 To enable paid access in the Creator Hub:
 
@@ -104,15 +104,15 @@ To enable paid access in the Creator Hub:
 Before becoming available to users, your paid access experience must undergo a policy moderation review. You'll receive an email and a notification in the Creator Hub with a decision after the moderation team has reviewed your experience.
 </Alert>
 
-## Enable paid access in Roblox Studio
+## Enabling Paid Access in Roblox Studio
 
 To enable paid access in Roblox Studio:
 
 1. In Studio, go to **Home** > **Game Settings**.
 2. Under **Monetization**, click **Configure on Creator Hub**.
-3. Follow the steps to [enable paid access in the Creator Hub](#enable-paid-access-in-the-creator-hub).
+3. Follow the steps to [enable paid access in the Creator Hub](#enabling-paid-access-in-the-creator-hub).
 
-## View transaction history
+## Viewing Transaction History
 
 To view your transaction history for local currency paid access purchases:
 

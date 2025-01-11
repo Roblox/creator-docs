@@ -13,7 +13,7 @@ Developer Awards is a data-driven program designed to reward developers for reac
     variant="filled" />
 </figure>
 
-## Award categories
+## Award Categories
 
 - Virtual Items
 
@@ -58,10 +58,10 @@ Developer Awards is a data-driven program designed to reward developers for reac
 - Must be at least 13 years old
 - Must be the owner of your experience
 
-## Receiving an award
+## Receiving an Award
 
 There is no application. Roblox will reach out regarding swag bags and trophies.
 
-## Contact info
+## Contact Info
 
 devawards@roblox.com

@@ -1,5 +1,5 @@
 ---
-title: Rigid accessory export settings
+title: Rigid Accessory Export Settings
 description: Use the appropriate export settings in Maya and Blender to generate Studio-ready .fbx files.
 ---
 

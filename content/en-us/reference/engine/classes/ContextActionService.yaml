@@ -296,7 +296,7 @@ methods:
       This function binds _functionToBind_ to input events such as key presses,
       mouse movement, or controller input. The specific input types the engine
       listens for are listed as parameters of BindAction. Whenever a player uses
-      any of these input types, the Roblox Engine calls "functionToBind".
+      any of these input types, the Roblox engine calls "functionToBind".
       BindAction sets the priorityLevel via `Enum.ContextActionPriority` to
       Default.Value, which is 2000. Use `Class.ContextActionService:GetButton()`
       to control the priority of bound events.

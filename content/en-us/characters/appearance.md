@@ -1,5 +1,5 @@
 ---
-title: Character appearance
+title: Character Appearance
 description: Customize your in-experience character appearance and properties with the Avatar Game Settings and HumanoidDescription.
 ---
 
@@ -15,7 +15,7 @@ To create a unique experience that alters the appearance of your users, you can 
 - Configure the Avatar [Game Settings](#game-settings) to set basic global avatar appearance defaults for all users.
 - Use [HumanoidDescription](#humanoiddescription) at any point to apply a wide-range of specific character customizations to one or more users in your experience.
 
-## Game settings
+## Game Settings
 
 The **Avatar** section in [Game Settings](../studio/game-settings.md#avatar) menu allows you to quickly set several global character properties in your experience. When editing the Avatar Game Settings, your avatar displays in the workspace as a visual preview.
 
@@ -59,7 +59,7 @@ You can adjust the following character properties in your experience using the A
 </tbody>
 </table>
 
-### Avatar types
+### Avatar Types
 
 The **Avatar Type** setting sets your experience to only load **R15** or **R6** character models.
 
@@ -78,7 +78,7 @@ The **Avatar Type** setting sets your experience to only load **R15** or **R6** 
   </figure>
 </GridContainer>
 
-### Collision boundaries
+### Collision Boundaries
 
 The **Collision** setting sets the collision boundaries for characters in the experience. This doesn't impact the physical appearance of the characters in your experience.
 
@@ -95,7 +95,7 @@ You can adjust the following character properties in your experience using `Clas
 <table>
 <thead>
   <tr>
-    <th>Character property</th>
+    <th>Character Property</th>
     <th>Description</th>
   </tr>
 </thead>
@@ -129,15 +129,15 @@ You can adjust the following character properties in your experience using `Clas
 
 You can customize a character with `Class.HumanoidDescription` using the following steps:
 
-1. [Create a description](#create-humanoiddescription) from the user's character, a specific Outfit ID, or from a specific User ID.
-2. [Modify the description](#modify-humanoiddescription) to customize the properties that you want to apply to the `Class.Humanoid` character.
-3. [Apply the description](#apply-humanoiddescription) on either a single character, all player characters, or even on all spawning characters.
+1. [Create a description](#creating-humanoiddescription) from the user's character, a specific Outfit ID, or from a specific User ID.
+2. [Modify the description](#modifying-humanoiddescription) to customize the properties that you want to apply to the `Class.Humanoid` character.
+3. [Apply the description](#applying-humanoiddescription) on either a single character, all player characters, or even on all spawning characters.
 
 <Alert severity="warning">
 When updating a character's properties through `Class.HumanoidDescription`, it is important to use an up-to-date `Class.HumanoidDescription` of that specific `Class.Humanoid` with `Class.Humanoid:GetAppliedDescription()|Humanoid:GetAppliedDescription()`.
 </Alert>
 
-### Create HumanoidDescription
+### Creating HumanoidDescription
 
 You can create a new `Class.HumanoidDescription` instance directly within the Explorer hierarchy or within a `Class.Script` with the following code:
 
@@ -147,7 +147,7 @@ local humanoidDescription = Instance.new("HumanoidDescription")
 
 In most cases, you should use an existing `Class.HumanoidDescription` instead of a default new `Class.HumanoidDescription` by referencing an [existing player character](#from-the-player-character), [avatar outfit](#from-an-existing-outfit), or [user ID](#from-a-specific-user).
 
-#### From the player character
+#### From the Player Character
 
 Use the following code sample to create a new `Class.HumanoidDescription` based on the player character's current properties:
 
@@ -161,7 +161,7 @@ if humanoid then
 end
 ```
 
-#### From an existing outfit
+#### From an Existing Outfit
 
 Use the following sample code to create a `Class.HumanoidDescription` from an outfit ID using `Class.Players:GetHumanoidDescriptionFromOutfitId()|Players.GetHumanoidDescriptionFromOutfitID`:
 
@@ -173,7 +173,7 @@ local outfitId = 480059254
 local humanoidDescriptionFromOutfit = Players:GetHumanoidDescriptionFromOutfitId(outfitId)
 ```
 
-#### From a specific user
+#### From a Specific User
 
 Use the following sample code to create a `Class.HumanoidDescription` from a user ID using `Class.Players:GetHumanoidDescriptionFromUserId()`:
 
@@ -185,7 +185,7 @@ local userId = 491243243
 local humanoidDescriptionFromUser = Players:GetHumanoidDescriptionFromUserId(userId)
 ```
 
-### Modify HumanoidDescription
+### Modifying HumanoidDescription
 
 To customize `Class.HumanoidDescription` properties, set them directly on the `Class.HumanoidDescription` or use a specified method before applying the `Class.HumanoidDescription` to a character.
 
@@ -201,7 +201,7 @@ humanoidDescription.GraphicTShirt = 1711661
 humanoidDescription.HeadColor = Color3.new(0, 1, 0)
 ```
 
-#### Set multiple accessories
+#### Setting Multiple Accessories
 
 For layered or bulk accessory changes, you can use `Class.HumanoidDescription:SetAccessories()` to make accessory related updates. The following code sample adds a layered sweater and jacket in that order to a `Class.HumanoidDescription`:
 
@@ -223,7 +223,7 @@ local accessoryTable = {
 humanoidDescription:SetAccessories(accessoryTable, false)
 ```
 
-### Apply HumanoidDescription
+### Applying HumanoidDescription
 
 Apply `Class.HumanoidDescription` to specific `Class.Humanoid` characters in your experience with `Class.Humanoid:ApplyDescription()` or `Class.Player:LoadCharacterWithHumanoidDescription()|Humanoid.LoadCharacterWithHumanoidDescription`.
 
@@ -231,7 +231,7 @@ Apply `Class.HumanoidDescription` to specific `Class.Humanoid` characters in you
 Changing the assets on a character while also changing `Class.HumanoidDescription` might lead to undefined behavior.
 </Alert>
 
-#### On a single character
+#### On a Single Character
 
 `Class.Humanoid:ApplyDescription()|ApplyDescription()` can target any `Class.Humanoid`. Use the following code to add a new pair of sunglasses and a new torso to the player character:
 
@@ -247,7 +247,7 @@ if humanoid then
 end
 ```
 
-#### On all player characters
+#### On All Player Characters
 
 Use the following sample code to apply a `Class.HumanoidDescription` to all current players in the game:
 
@@ -270,7 +270,7 @@ for _, player in Players:GetPlayers() do
 end
 ```
 
-#### On all spawning characters
+#### On All Spawning Characters
 
 Use the following sample code to set a specific `Class.HumanoidDescription` for all spawning player characters:
 

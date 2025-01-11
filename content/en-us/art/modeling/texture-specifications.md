@@ -1,24 +1,24 @@
 ---
-title: Texture specifications
+title: Texture Specifications
 description: Texture Specifications lists the specific technical requirements and best practices for custom textures created outside of Studio.
 ---
 
-A texture is a digital image applied to the surface of a 3D object to simulate and enhance its visual appearance. Roblox supports various texture types that you import with a custom 3D object, or upload directly as individual image files. For details on implementing basic textures, see [Textures and decals](../../parts/textures-decals.md).
+A texture is a digital image applied to the surface of a 3D object to simulate and enhance its visual appearance. Roblox supports various texture types that you import with a custom 3D object, or upload directly as individual image files. For details on implementing basic textures, see [Textures and Decals](../../parts/textures-decals.md).
 
-Roblox also supports [physically-based rendering (PBR) textures](../../art/modeling/surface-appearance.md) which override a mesh's existing `Class.MeshPart.TextureID|TextureID` and can be used to create immersive environments and objects.
+Roblox also supports [Physically Based Rendering (PBR) textures](../../art/modeling/surface-appearance.md) which override a mesh's existing `Class.MeshPart.TextureID|TextureID` and can be used to create immersive environments and objects.
 
 See the following requirements when creating your own basic and advanced textures:
 
-- **File formats** — File formats for textures that are uploaded separately in Studio must be submitted as a `.png`, `.jpg`, `.tga`, or `.bmp`.
+- **File Formats** — File formats for textures that are uploaded separately in Studio must be submitted as a `.png`, `.jpg`, `.tga`, or `.bmp`.
 
 - **Resolution** — Roblox supports up to 1024×1024 pixel texture resolutions. To optimize for performance, you may consider using smaller resolutions. Use the following general guidance:
 
   - For smaller 5×5 stud objects, use 256×256 texture resolutions.
   - For medium 10×10 stud objects, use 512×512 texture resolutions.
   - For larger 20×20 stud objects, use 1024×1024 texture resolutions.
-  - See [PBR texture budgets](#surfaceappearance) for similar guidances with PBR texture maps.
+  - See [PBR Texture Budgets](#surfaceappearance) for similar guidances with PBR texture maps.
 
-- **Single material** - Mesh objects can only have one material assigned.
+- **Single Material** - Mesh objects can only have one material assigned.
 
 <Alert severity ='info'>
 Roblox default [materials](../../parts/materials.md) follow a similar texel resolution pattern:
@@ -28,7 +28,7 @@ Roblox default [materials](../../parts/materials.md) follow a similar texel reso
 
 ## SurfaceAppearance
 
-You can add a [surface appearance](../../art/modeling/surface-appearance.md) to your mesh in Studio to add PBR texture options. The `Class.SurfaceAppearance` instance uses UV mapping, a form of texture mapping, to accurately map up to four 2D images onto the mesh object.
+You can add a [Surface Appearance](../../art/modeling/surface-appearance.md) to your mesh in Studio to add PBR texture options. The `Class.SurfaceAppearance` instance uses UV mapping, a form of texture mapping, to accurately map up to four 2D images onto the mesh object.
 
 See the following requirements for `Class.SurfaceAppearance` assets:
 
@@ -37,9 +37,9 @@ See the following requirements for `Class.SurfaceAppearance` assets:
    <table>
   <thead>
     <tr>
-      <th>Texture type</th>
-      <th>Texture schema suffix</th>
-      <th>Texture image details</th>
+      <th>Texture Type</th>
+      <th>Texture Schema Suffix</th>
+      <th>Texture Image Details</th>
     </tr>
   </thead>
   <tbody>
@@ -71,9 +71,9 @@ See the following requirements for `Class.SurfaceAppearance` assets:
    <table>
    <thead>
     <tr>
-      <th>Recommended map size</th>
-      <th>Approximate asset size (unit cube)</th>
-      <th>Example assets</th>
+      <th>Recommended Map Size</th>
+      <th>Approximate Asset Size (Unit Cube)</th>
+      <th>Example Assets</th>
     </tr>
    </thead>
    <tbody>
@@ -104,7 +104,7 @@ See the following requirements for `Class.SurfaceAppearance` assets:
    When rendering many textures at the same time, Roblox may downsample textures to optimize for performance.
    </Alert>
 
-## UV mapping
+## UV Mapping
 
 All textures use UV mapping, a 3D modeling process to project a 3D model's surface to a 2D image, or UV atlas. See the following requirements for UV mapping, especially if you're manually editing or optimizing your UV atlas:
 

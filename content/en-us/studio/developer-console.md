@@ -7,9 +7,11 @@ import OpeningSteps from '../includes/developer-console/opening-developer-consol
 
 The **Developer Console** is a tool for debugging your experience when testing in Studio or running it in production. It shows log messages and errors similar to the [Output](../studio/output.md) window and detailed information on [Memory](#memory), [Network](#network), and more.
 
+## Opening the Console
+
 <OpeningSteps components={props.components}/>
 
-## Console sections
+## Console Sections
 
 The shortcut bar at the top of the console shows the number of critical errors and warnings, client memory usage, and average ping time; click any of these to jump to its corresponding section in the console. Below the shortcut bar is a series of tools as outlined below.
 
@@ -22,7 +24,7 @@ The **Log** tool shows diagnostic messages from scripts.
 <img src="../assets/studio/console/Log-Sections.png" width="780" />
 
 <Tabs>
-<TabItem label="Client/server toggle">
+<TabItem label="Client/Server Toggle">
 
 Using the client-server switch, you can toggle between **Client** and **Server** views:
 
@@ -30,7 +32,7 @@ Using the client-server switch, you can toggle between **Client** and **Server**
 - The **Server** view shows output from server-side `Class.Script|Scripts` (`Class.Script.RunContext|RunContext` set to `Enum.RunContext.Client` or `Enum.RunContext.Legacy`). Only the experience owner or [group](../projects/groups.md) members with editing permission can view server output messages.
 
 </TabItem>
-<TabItem label="Output filters">
+<TabItem label="Output Filters">
 
 Using the checkboxes, you can filter output messages in the log:
 
@@ -56,7 +58,7 @@ Using the checkboxes, you can filter output messages in the log:
 </table>
 
 </TabItem>
-<TabItem label="Command bar">
+<TabItem label="Command Bar">
 
 The **Server** view also includes a command bar that lets users with editing permissions run arbitrary Luau code. Unlike the [Command Bar](../studio/ui-overview.md#command-bar) in Studio, this console command bar has the same security restrictions as `Class.Script|Scripts` and `Class.LocalScript|LocalScripts`, so it can't run protected functions.
 
@@ -69,7 +71,7 @@ The **Server** view also includes a command bar that lets users with editing per
 
 - **Memory** — View real-time memory consumption by usage categories, including memory usage by both your custom components and the engine internal processes.
 
-- **Luau heap** — Create snapshots on the heap memory, which refers to the memory allocation to your scripts. This tool provides various memory allocation views to help you identify current memory allocation and issues from different perspectives, such as object types and engine classes. It also allows you to create multiple snapshots to compare differences in memory usage over time.
+- **Luau Heap** — Create snapshots on the heap memory, which refers to the memory allocation to your scripts. This tool provides various memory allocation views to help you identify current memory allocation and issues from different perspectives, such as object types and engine classes. It also allows you to create multiple snapshots to compare differences in memory usage over time.
 
 For more information, see [Memory Usage](../studio/optimization/memory-usage.md)
 

@@ -1,9 +1,9 @@
 ---
-title: PBR textures
+title: PBR Textures
 description: PBR textures are advanced textures using multiple texture maps.
 ---
 
-**Physically-Based rendering** (PBR) textures allow you to represent realistic shading and lighting by using multiple types of texture images, or **maps**, on a single object. Combining multiple texture maps can more accurately simulate color, roughness, and reflectivity in any lighting environment and can enhance the visual elements of your assets and environment.
+**Physically-Based Rendering** (PBR) textures allow you to represent realistic shading and lighting by using multiple types of texture images, or **maps**, on a single object. Combining multiple texture maps can more accurately simulate color, roughness, and reflectivity in any lighting environment and can enhance the visual elements of your assets and environment.
 
 <Tabs>
 <TabItem label="Clothing">
@@ -22,9 +22,9 @@ description: PBR textures are advanced textures using multiple texture maps.
 
 Various applications and workflows are available for creating PBR textures. You can use these during the modeling and texturing phases of custom 3D object creation, provided that Roblox Studio [supports](../../art/characters/specifications.md#textures) the specific texture maps you're using.
 
-This guide provides instructions on [setting up](#enable-surface-appearance) your mesh objects to use PBR texture maps, and describes common use-cases and best practices for Roblox's supported PBR [texture maps](#texture-maps). When creating your own surfaces, see [Material references](../../art/modeling/material-reference.md) for common material values, image comparisons and clothing examples.
+This guide provides instructions on [setting up](#enabling-surface-appearance) your mesh objects to use PBR texture maps, and describes common use-cases and best practices for Roblox's supported PBR [texture maps](#texture-maps). When creating your own surfaces, see [Material References](../../art/modeling/material-reference.md) for common material values, image comparisons and clothing examples.
 
-## Enable surface appearance
+## Enabling Surface Appearance
 
 You can add PBR textures to any `Class.MeshPart` by adding a `Class.SurfaceAppearance` object which overwrites the original assigned texture. In general, you can't modify `Class.SurfaceAppearance` properties by scripts during an experience because the engine requires some pre-processing to display these graphics. Similar to adding a basic texture, each texture image map must point to the appropriate uploaded image asset ID.
 
@@ -39,7 +39,7 @@ To enable surface appearance for a `Class.MeshPart`:
 
    <img src="../../assets/modeling/surface-appearance/Applying-Texture-Maps.png" width="320" alt="A close-up of the Properties window where the user selected the ColorMap property. A popup displays all available image textures to select." />
 
-## Texture maps
+## Texture Maps
 
 Studio currently supports 4 types of PBR texture maps: **Color**, **Normal**, **Metalness**, **Roughness**. Each of these maps correspond to an important aspect of the object's surface appearance. Texture maps only change visual appearance and don't affect the geometry of the `Class.MeshPart` object.
 
@@ -51,19 +51,19 @@ See the following examples for an overview of Roblox's supported texture maps an
 
 <Tabs>
 <TabItem label="Color">
-The `Class.SurfaceAppearance.ColorMap|ColorMap` property sets the color data of the surface, including any transparency present in the map. See [Color&nbsp;(albedo)](#color-albedo) for additional information.
+The `Class.SurfaceAppearance.ColorMap|ColorMap` property sets the color data of the surface, including any transparency present in the map. See [Color&nbsp;(Albedo)](#color-albedo) for additional information.
 <GridContainer numColumns="3">
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap.jpg" alt="A completely filled image, mostly red with various black splotches and white scratches."/>
-    	<figcaption>Example map</figcaption>
+    	<figcaption>Example Map</figcaption>
 	</figure>
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap-Before.jpg" alt="A blank white sphere with a dark background."/>
-    	<figcaption>Example mesh</figcaption>
+    	<figcaption>Example Mesh</figcaption>
 	</figure>
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-ColorMap-After.jpg" alt="A red sphere with black splotches and white scratches with a dark background."/>
-    	<figcaption>Mesh and texture</figcaption>
+    	<figcaption>Mesh and Texture</figcaption>
 	</figure>
 </GridContainer>
 </TabItem>
@@ -72,15 +72,15 @@ The `Class.SurfaceAppearance.NormalMap|NormalMap` texture property defines the t
 <GridContainer numColumns="3">
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-NormalMap.jpg" alt="A completely filled image, mostly cyan with streaks and bumps across the surface giving the impression of a tactile surface." />
-    	<figcaption>Example map</figcaption>
+    	<figcaption>Example Map</figcaption>
 	</figure>
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-NormalMap-Before.jpg" alt="A blank teal sphere with a dark background."/>
-    	<figcaption>Example mesh</figcaption>
+    	<figcaption>Example Mesh</figcaption>
 	</figure>
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-NormalMap-After.jpg" alt="A teal sphere with tactile streaks and bumps across the surface."/>
-    	<figcaption>Mesh and texture</figcaption>
+    	<figcaption>Mesh and Texture</figcaption>
 	</figure>
   </GridContainer>
 </TabItem>
@@ -89,15 +89,15 @@ The grayscale `Class.SurfaceAppearance.RoughnessMap|RoughnessMap` texture proper
 <GridContainer numColumns="3">
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-RoughnessMap.png" alt="A completely filled image of black diamond shapes over a light grey background."/>
-    	<figcaption>Example map</figcaption>
+    	<figcaption>Example Map</figcaption>
 	</figure>
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-RoughnessMap-Before.jpg" alt="A blank purple sphere with a dark background."/>
-    	<figcaption>Example mesh</figcaption>
+    	<figcaption>Example Mesh</figcaption>
 	</figure>
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-RoughnessMap-After.jpg" alt="A purple sphere that has glossy diamond shapes over its surface."/>
-    	<figcaption>Mesh and texture</figcaption>
+    	<figcaption>Mesh and Texture</figcaption>
 	</figure>
   </GridContainer>
 </TabItem>
@@ -106,15 +106,15 @@ The grayscale `Class.SurfaceAppearance.MetalnessMap|MetalnessMap` texture proper
 <GridContainer numColumns="3">
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-MetalnessMap.jpg" alt="A completely filled image with a completely black border and scratch-like streaks revealing a white center."/>
-    	<figcaption>Example map</figcaption>
+    	<figcaption>Example Map</figcaption>
 	</figure>
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-MetalnessMap-Before.jpg" alt="A blank light blue sphere with a dark background."/>
-    	<figcaption>Example mesh</figcaption>
+    	<figcaption>Example Mesh</figcaption>
 	</figure>
 	<figure>
     	<img src="../../assets/modeling/surface-appearance/SurfaceAppearance-MetalnessMap-After.jpg" alt="A light blue sphere with parts of its surface looking scratched. The scratched areas reveal a metal-ness quality that is more reflective."/>
-    	<figcaption>Mesh and texture</figcaption>
+    	<figcaption>Mesh and Texture</figcaption>
 	</figure>
   </GridContainer>
 </TabItem>
@@ -124,7 +124,7 @@ The grayscale `Class.SurfaceAppearance.MetalnessMap|MetalnessMap` texture proper
 For technical details on texture file requirements, see [texture requirements](../../art/modeling/texture-specifications.md).
 </Alert>
 
-### Color (albedo)
+### Color (Albedo)
 
 The **color**, or **albedo**, map determines the color of your texture and consists of mostly color information with little to no lighting or textural information. For additional customization, you can also add [transparency](#alpha-modes) in your albedo texture by adding opacity to your image map.
 
@@ -132,7 +132,7 @@ The **color**, or **albedo**, map determines the color of your texture and consi
 While albedo maps and generic [non-PBR texture maps](../../parts/textures-decals.md), commonly known as **diffuse maps**, contain very similar base color data for a surface, diffuse maps often include shading and lighting values to imitate a specific visual element that are more effectively handled by PBR's [normal](#normal), [roughness](#roughness), and [metalness](#metalness) maps. Using a typical diffuse map instead of an albedo map may often look incorrect when the lighting doesn't match with these added baked-in texture elements.
 </Alert>
 
-#### Alpha modes
+#### Alpha Modes
 
 For objects that require partial or complete sections of transparency, such as grass, leaves, lace, or decals like dirt or grunge, you can use various **alpha modes** to apply transparency to your color map. If your color map image format supports alpha channels, you can apply a grayscale alpha map where 0.0 is opaque and 1.0 is transparent. Similarly, when using an image format such as a `.png`, any opacity on the color map applies as transparency on the asset.
 
@@ -175,7 +175,7 @@ The following example uses the **Overlay** mode for custom characters, revealing
 </figure>
 </GridContainer>
 
-See [Custom skin tone](../../art/characters/specifications.md#custom-skin-tone) for additional details on optimizing an overlay for skin and similar applications.
+See [Custom Skin Tone](../../art/characters/specifications.md#custom-skin-tone) for additional details on optimizing an overlay for skin and similar applications.
 
 ##### Transparency
 
@@ -218,7 +218,7 @@ The following example demonstrates how a partial and full transparency in this m
 </TabItem>
 </Tabs>
 
-#### Color tinting
+#### Color Tinting
 
 You can apply a tint to your color map by modifying the `Class.SurfaceAppearance.Color` property. Tinting does not affect performance and you can save on memory by reusing a single ColorMap with different tints. Use color tinting to create additional low-cost variation between your `Class.MeshPart` PBR textures or to programmatically modify your PBR surface colors in real-time.
 
@@ -317,7 +317,7 @@ Various combinations of the roughness and metalness can represent almost every p
 
 **Fresnel** refers to the amount of reflection of a surface in reference to the current viewing angle. Studio's Fresnel processing aims for physical real-world accuracy, although you may get unexpected specular contribution at certain angles even with rough surfaces. In some cases, you can compensate by making your roughness map around 0.1 more rough to achieve a consistent lighting response with your materials.
 
-Even though Roblox renders this lighting effect accurately, the brightness and reflectivity of a surface may not respond consistently between your texture content creating software, such as Substance Painter, and Studio. See [Clothing examples](../../art/modeling/material-reference.md#clothing-examples) for differences in rendering between applications.
+Even though Roblox renders this lighting effect accurately, the brightness and reflectivity of a surface may not respond consistently between your texture content creating software, such as Substance Painter, and Studio. See [Clothing Examples](../../art/modeling/material-reference.md#clothing-examples) for differences in rendering between applications.
 
 ### Metalness
 
@@ -345,5 +345,5 @@ Different PBR renderers use various workflows for processing reflectiveness. Stu
 In most cases, you should set this value to either 0.0 (non-metal) or 1.0 (metal). You can use partial metalness values when creating more uncommon surfaces with moderate reflective properties, like satin or silk. This practice can subtly fake the reflections in the material to highlight the color from the [color/albedo map](#color-albedo) over colors reflected in the environment.
 
 <Alert severity = 'info'>
-Various combinations of the roughness and metalness can represent almost every possible real-world material surface. See [Material references](../../art/modeling/material-reference.md) for examples and references of how combinations of material values can create various surface appearances.
+Various combinations of the roughness and metalness can represent almost every possible real-world material surface. See [Material References](../../art/modeling/material-reference.md) for examples and references of how combinations of material values can create various surface appearances.
 </Alert>

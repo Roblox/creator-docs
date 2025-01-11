@@ -1,5 +1,5 @@
 ---
-title: OAuth 2.0 authentication
+title: OAuth 2.0 Authentication
 description: Describes how to make authenticated calls to Open Cloud with API keys and OAuth 2.0
 ---
 
@@ -70,7 +70,7 @@ The authorization code:
 - Can only be redeemed once.
 - Is invalid after one use.
 
-## Token exchange
+## Token Exchange
 
 To obtain tokens to access APIs, exchange an **authorization code** for a set of
 confidential tokens. All token endpoints support two types of client
@@ -83,7 +83,7 @@ authentication:
 The following list describes the various tokens you receive from this
 endpoint.
 
-- **Access token** - Represents the authorization from a creator or user for a
+- **Access Token** - Represents the authorization from a creator or user for a
   third-party app to access their protected Roblox resources. It's a string
   denoting a specific scope, lifetime, and other access attributes. Once the
   Roblox authorization server issues an access token to an app, the token:
@@ -92,7 +92,7 @@ endpoint.
   - Can be used multiple times before it expires.
   - Can be invalidated before it expires if an app user revokes the authorization.
 
-- **Refresh token** - Refreshes an authorization session. An app can use
+- **Refresh Token** - Refreshes an authorization session. An app can use
   the refresh token to obtain a new set of tokens, which includes an access token,
   a refresh token, and an ID token. A refresh token:
 
@@ -100,7 +100,7 @@ endpoint.
   - Can only be used once before it expires to refresh tokens.
   - Can be invalidated before it expires if an app user revokes the authorization.
 
-- **ID token** - Provides proof that a user's identity has been authenticated. Its
+- **ID Token** - Provides proof that a user's identity has been authenticated. Its
   content depends on the scopes requested and can contain basic user information,
   including a user's Roblox display name and username. The ID token is only for
   identity authentication purposes and doesn't provide access to any Roblox

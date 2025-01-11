@@ -1,5 +1,5 @@
 ---
-title: Script an upgrade button
+title: Script an Upgrade Button
 description: Explains how to communicate with the Roblox server and handle GUI interactions.
 prev: /tutorials/curriculums/core/scripting/create-player-hazards
 next: /tutorials/curriculums/core/building/create-basic-visual-effects
@@ -14,7 +14,7 @@ do anything, and most of the game world is inaccessible without the ability to
 jump very high. This section of the tutorial teaches you how to finish the logic
 for your experience by adding an on-screen button that spends coins to increase jumping power.
 
-## Create the upgrade button
+## Create the Upgrade Button
 
 2D interfaces in Roblox are typically made up of a collection of GUI components
 inside of a GUI container. In this case, you only need a `Class.TextButton`
@@ -34,14 +34,14 @@ To create the GUI:
    button to **JumpButton**.
 1. **(Optional)** Customize the button's appearance and position by configuring its properties. Simple suggestions include:
    - Set the **Text** property to **Upgrade Jump (5 Coins)**.
-   - Set the **TextSize** property to `25`.
-   - Set **AnchorPoint** to `1, 1` and **Position** to `{1, 0},{1, 0}` to move the button to the bottom right corner.
+   - Set the **TextSize** property to **25**.
+   - Set **AnchorPoint** to **1, 1** and Position to **{1, 0},{1, 0}** to move the button to the bottom right corner.
 
 You'll add the button to the player's GUI later in this tutorial, but before you
 do, you need to define all the logic and data that is required for the button to
 work.
 
-## Define jump power data
+## Define Jump Power Data
 
 Currently, only coin count is stored for each player in the **PlayerData**
 module script. You need to also store and update jump power in the same
@@ -98,14 +98,14 @@ To update the **PlayerData** module script to store jumping power:
    return PlayerData
    ```
 
-## Update jump power data
+## Update Jump Power Data
 
 Now that **PlayerData** is able to track jump power, you need to implement logic
 on the server to upgrade jump power from a player's client request.
 
 The server and client can communicate through either
-[Remote events](../../../../scripting/events/remote.md#remote-events) or
-[Remote functions](../../../../scripting/events/remote.md#remote-callbacks).
+[Remote Events](../../../../scripting/events/remote.md#remote-events) or
+[Remote Functions](../../../../scripting/events/remote.md#remote-callbacks).
 Remote events do not yield when they are fired and are appropriate for one-way
 communication. Remote functions yield until they receive a reply, which allows
 for two-way communication. In this case, the client needs to know if the server
@@ -216,7 +216,7 @@ To implement the jump upgrade:
 
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Code explanation</Typography>
+      <Typography variant="h4">Code Explanation</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -224,7 +224,7 @@ To implement the jump upgrade:
 
    - **Update the jump power data** - `updateJumpPower()` updates the jump power of the player and the leaderboard to
      provide visual feedback. This function resembles the code that damages players
-     in [Create player hazards](./create-player-hazards.md). Provided a
+     in [Create Player Hazards](./create-player-hazards.md). Provided a
      `Class.Player.Character|Character` model and `Class.Humanoid` exist for the
      player being upgraded, the function updates the
      `Class.Humanoid.JumpPower|JumpPower` property to the new value stored by
@@ -239,7 +239,7 @@ To implement the jump upgrade:
    </AccordionDetails>
    </BaseAccordion>
 
-## Add the button to the player GUI
+## Add the Button to the Player GUI
 
 A `Class.ScreenGui` object only shows on-screen if it is parented to a player's
 `Class.PlayerGui` object. By default, this contains the
@@ -285,7 +285,7 @@ To add the button to the player's GUI when they join:
 
    <BaseAccordion>
    <AccordionSummary>
-     <Typography variant="h4">Code explanation</Typography>
+     <Typography variant="h4">Code Explanation</Typography>
    </AccordionSummary>
    <AccordionDetails>
       The following sections describe the code in more detail.

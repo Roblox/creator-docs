@@ -13,13 +13,13 @@ description: Today's Picks on Home is a curation of the best experiences on a da
     variant="filled" />
 </figure>
 
-## Why apply?
+## Why Apply?
 
 Your amazing creations are what makes Roblox special, and we are thrilled to feature more of them on Home, providing you with additional exposure on our platform.
 
 <img src="../assets/misc/Todays-Picks-Home.png" />
 
-## How to apply
+## How to Apply
 
 If you wish to nominate your experience to be featured for Today's Picks, please complete the survey below. Our editorial team reviews nominations on an ongoing basis. Due to the high volume of applicants, only those selected for Today's Picks on Home will be notified. If you haven't heard back, we encourage you to fill out the form each time your experience has a notable update.
 

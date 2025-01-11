@@ -10,6 +10,8 @@ At its most basic level, **raycasting** is the act of sending out an invisible r
   <figcaption>Lasers are fired by floating orbs, and raycasting determines whether a laser hits a platform. Platforms touched by the lasers are temporarily destroyed.</figcaption>
 </figure>
 
+## Casting a Ray
+
 You can cast a ray with the `Class.WorldRoot:Raycast()` method (`Class.WorldRoot:Raycast()|workspace:Raycast()`) from a `Datatype.Vector3` origin in a `Datatype.Vector3` direction.
 
 ```lua title='Basic Raycast' highlight='4'
@@ -23,30 +25,7 @@ local raycastResult = workspace:Raycast(rayOrigin, rayDirection)
 When casting a ray, the direction parameter should encompass the desired length of the ray. For instance, if the magnitude of the direction is 10, the resulting ray will also be of length 10. The maximum length is 15,000 studs.
 </Alert>
 
-When applicable, you can calculate an unknown directional vector (`rayDirection`) using a known **origin** and **destination**. This is useful when casting a ray between two points that can change, such as from one player character to another.
-
-1. The origin plus a directional vector indicate the ray's destination:
-
-   <i>rayOrigin</i> + <i>rayDirection</i> = <i>rayDestination</i>
-
-2. Subtract <i>rayOrigin</i> from both sides of the equation:
-
-   <i>rayOrigin</i> + <i>rayDirection</i> &minus; <i>rayOrigin</i> = <i>rayDestination</i> &minus; <i>rayOrigin</i>
-
-3. The ray's direction equals the destination minus the origin:
-
-   <i>rayDirection</i> = <i>rayDestination</i> &minus; <i>rayOrigin</i>
-
-```lua highlight='4'
-local rayOrigin = workspace.TestOrigin.Position
-local rayDestination = workspace.TestDestination.Position
-
-local rayDirection = rayDestination - rayOrigin
-
-local raycastResult = workspace:Raycast(rayOrigin, rayDirection)
-```
-
-## Filter options
+### Filtering
 
 `Class.WorldRoot:Raycast()` accepts an optional `Datatype.RaycastParams` object which tells the raycast to selectively include or exclude certain `Class.BasePart|BaseParts`, ignore the **Water** material for `Class.Terrain`, or use a [collision group](../workspace/collisions.md#collision-filtering).
 
@@ -89,9 +68,34 @@ raycastParams.IgnoreWater = true
 local raycastResult = workspace:Raycast(rayOrigin, rayDirection, raycastParams)
 ```
 
-## Hit detection
+### Calculating Direction
 
-If the [raycasting operation](#cast-a-ray) hits an eligible `Class.BasePart` or `Class.Terrain` cell, a `Datatype.RaycastResult` object is returned containing the results. To test for a hit, confirm that the result is not `nil` and utilize the following properties as needed.
+When applicable, you can calculate an unknown directional vector (`rayDirection`) using a known **origin** and **destination**. This is useful when casting a ray between two points that can change, such as from one player character to another.
+
+1. The origin plus a directional vector indicate the ray's destination:
+
+   <i>rayOrigin</i> + <i>rayDirection</i> = <i>rayDestination</i>
+
+2. Subtract <i>rayOrigin</i> from both sides of the equation:
+
+   <i>rayOrigin</i> + <i>rayDirection</i> &minus; <i>rayOrigin</i> = <i>rayDestination</i> &minus; <i>rayOrigin</i>
+
+3. The ray's direction equals the destination minus the origin:
+
+   <i>rayDirection</i> = <i>rayDestination</i> &minus; <i>rayOrigin</i>
+
+```lua highlight='4'
+local rayOrigin = workspace.TestOrigin.Position
+local rayDestination = workspace.TestDestination.Position
+
+local rayDirection = rayDestination - rayOrigin
+
+local raycastResult = workspace:Raycast(rayOrigin, rayDirection)
+```
+
+## Detecting Hits
+
+If the [raycasting operation](#casting-a-ray) hits an eligible `Class.BasePart` or `Class.Terrain` cell, a `Datatype.RaycastResult` object is returned containing the results. To test for a hit, confirm that the result is not `nil` and utilize the following properties as needed.
 
 <table>
 <thead>

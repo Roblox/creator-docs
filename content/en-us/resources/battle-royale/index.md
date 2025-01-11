@@ -29,7 +29,7 @@ At a high level, Roblox Battle Royale contains the following:
 
 All of these systems are supported on a wide range of hardware, screen sizes, and game controllers, from mobile phones to Xbox to high-end desktop PCs. The code is designed to be performant and easy to read so anyone can learn how to build a game like this.
 
-## Play modes
+## Play Modes
 
 There are 4 play modes included in this project:
 

@@ -1,7 +1,7 @@
 ---
-title: Caging setup
+title: Caging Setup
 description: Isolate your outer cage meshes and hide extra objects before modifying your clothing cage.
-next: /art/accessories/creating/modify-cage
+next: /art/accessories/creating/modifying-cage
 prev: /art/accessories/creating/testing-poses
 ---
 

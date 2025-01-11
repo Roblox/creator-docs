@@ -1,19 +1,19 @@
 ---
-title: Atmospheric effects
+title: Atmospheric Effects
 description: Atmospheric effects simulate realistic environments by scattering sunlight in unique ways.
 ---
 
 **Atmospheric effects** simulate realistic environments by scattering sunlight
-in unique ways based on properties that control air particles. Using the `Class.Atmosphere` object, you can:
+in unique ways based on [properties](#atmosphere-properties) that control air particles. Using the `Class.Atmosphere` object, you can:
 
-- Control particle density.
-- Create a silhouette or blend distant objects with an offset.
-- Simulate a haze or glare.
-- Set an atmosphere's color or decay.
+- Control particle [density](#density).
+- Create a silhouette or blend distant objects ([offset](#offset)).
+- Simulate a [haze](#haze) or [glare](#glare).
+- Set an atmosphere's [color](#color) or [decay](#decay).
 
 <img src="../assets/lighting-and-effects/atmosphere/Sahara-Sunset.jpg" width="100%" alt="Atmospheric effects used to render a brilliant sunset scene" />
 
-## Atmosphere properties
+## Atmosphere Properties
 
 Every property of the `Class.Atmosphere` object inside the `Class.Lighting` service works together to support the overall vision, themes, and mood of your experience.
 

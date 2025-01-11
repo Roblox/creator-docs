@@ -1,5 +1,5 @@
 ---
-title: Texturing eyes
+title: Texturing Eyes
 description: Use Blender's texture painting tools to apply a custom surface appearance on your character's eyes.
 next: /art/characters/creating/texturing-face
 prev: /art/characters/creating/texturing-setup

@@ -1,5 +1,5 @@
 ---
-title: Assemble an asset library
+title: Assemble an Asset Library
 description: Explains how to import and configure your assets within a central location in your experience.
 next: /tutorials/curriculums/environmental-art/construct-your-world
 prev: /tutorials/curriculums/environmental-art/develop-polished-assets
@@ -26,7 +26,7 @@ After you complete this section, you will learn how to utilize your asset librar
     Before you begin to compile your asset library by importing your tileable textures, trim sheets, modular assets, and props into Studio, it's best practice to arrange and organize all of your content in a folder structure according to their data type, such as trim sheets, decals, modular assets, and props. This can provide you an ease of reference as you create custom materials and visual treatments.
 </Alert>
 
-## Create custom materials
+## Create Custom Materials
 
 Studio represents custom materials as `Class.MaterialVariant` objects within the `Class.MaterialService`. These `Class.MaterialVariant` objects have four properties that combine the four tileable [texture maps](../../../art/modeling/surface-appearance.md#texture-maps) to create a high-quality custom material with physical characteristics:
 
@@ -78,7 +78,7 @@ To create `Class.MaterialVariant` objects for your tileable textures:
 
 10. Repeat this process for each tileable texture you want to include in your experience.
 
-## Create SurfaceAppearance packages
+## Create SurfaceAppearance Packages
 
 Studio utilizes trim sheets within `Class.SurfaceAppearance` objects that you can parent to `Class.MeshPart|MeshParts` that contain UV data. Similar to custom materials, `Class.SurfaceAppearance` objects have four properties that combine the four trim sheet texture maps to create a high-quality 3D visual surface treatment:
 
@@ -110,7 +110,7 @@ To create `Class.SurfaceAppearance` packages that you can child to your modular 
 
 8. **(Optional)** Select the **SurfaceAppearance** object's child **PackageLink** object, then in the **Properties** window, enable **AutoUpdate** to automatically update the package if you make any modifications to the **SurfaceAppearance** object.
 
-## Import modular assets and props
+## Import Modular Assets and Props
 
 Studio represents the modular assets and props that you import as `Class.Model` objects with child `Class.MeshPart|MeshParts` for each component of the asset. For example, if you import a wall section with a top trim, bottom trim, and wall component, Studio represents the `.fbx` or `.obj` file as a **Wall_Section** `Class.Model` with separate child **Top_Trim**, **Bottom_Trim**, and **Wall** `Class.MeshPart|MeshParts`.
 
@@ -134,7 +134,7 @@ To import your modular assets and props into the experience:
 6. Repeat this process for each modular asset and prop.
 7. Move all of your assets into one area of your experience near your greybox geometry. This zone is your asset library.
 
-## Apply SurfaceAppearance data
+## Apply SurfaceAppearance Data
 
 When you go through the process of unwrapping the UVs of a mesh in third-party modeling software, the software stores the UV data within the mesh's `.fbx` or `.obj` file. When you import that mesh into Studio, the resulting `Class.MeshPart` object retains that data, but you still need to apply a `Class.SurfaceAppearance` object with texture map properties from your trim sheet in order to display your trim textures on the asset.
 
@@ -144,19 +144,19 @@ To apply `Class.SurfaceAppearance` texture map data to unwrapped meshes in your 
 2. Child the duplicate **SurfaceAppearance** package to either a modular asset or a prop. The asset applies its UV data to the texture maps and displays its visual treatment.
 3. Repeat this process for each modular asset and prop.
 
-## Set physics and rendering parameters
+## Set Physics and Rendering Parameters
 
 Now that you have your assets within Studio, it's important to set physics and rendering parameters that allow the assets to retain the highest possible visual quality across devices with memory and GPU limitations. In general, the more closely you adhere to the guidance in this section, the more performant you make your experience. However, it's important to carefully consider the context of where you plan to place each asset within the overall environment to ensure you maintain your aesthetic goals and gameplay requirements.
 
 ### Anchored
 
-The `Class.BasePart.Anchored` property determines whether the Roblox Engine's physics system affects the position of the object. When you enable this property for a `Class.Part` or `Class.MeshPart`, it removes the object from the physical calculations of the dynamic simulation that's always running in experience, meaning the object will never change position due to gravity or collision from other objects.
+The `Class.BasePart.Anchored` property determines whether the Roblox engine's physics system affects the position of the object. When you enable this property for a `Class.Part` or `Class.MeshPart`, it removes the object from the physical calculations of the dynamic simulation that's always running in experience, meaning the object will never change position due to gravity or collision from other objects.
 
 Objects that don't simulate a physics response are cheaper to render because they don't take up the GPU that's necessary for those physics calculations. When you free up GPU, you improve performance for your experience, especially on low-end devices that need to save GPU for fast-paced gameplay. It's for this reason that **every** asset aside from doors in the final sample laser tag environment are anchored.
 
 ### CanCollide
 
-The `Class.BasePart.CanCollide` property determines whether the object can physically interact with other objects. When you enable this property for a `Class.Part` or `Class.MeshPart`, the object is impenetrable, and the Roblox Engine accounts for it in physics calculations. These calculations can impact your experience's performance when there are many objects the engine must consider in its physics calculations.
+The `Class.BasePart.CanCollide` property determines whether the object can physically interact with other objects. When you enable this property for a `Class.Part` or `Class.MeshPart`, the object is impenetrable, and the Roblox engine accounts for it in physics calculations. These calculations can impact your experience's performance when there are many objects the engine must consider in its physics calculations.
 
 To alleviate some of this impact on performance, disable this property for objects that the user will never interact with. For example, the final sample laser tag environment disables this property for all foliage.
 
@@ -164,19 +164,19 @@ To alleviate some of this impact on performance, disable this property for objec
 
 ### CanTouch
 
-The `Class.BasePart.CanTouch` property determines if `Class.BasePart.Touched|Touched` and `Class.BasePart.TouchEnded|TouchEnded` events fire on the object. When you enable this property for a `Class.Part` or `Class.MeshPart`, the Roblox Engine checks the object's touch event state to see if it needs to trigger or stop an event.
+The `Class.BasePart.CanTouch` property determines if `Class.BasePart.Touched|Touched` and `Class.BasePart.TouchEnded|TouchEnded` events fire on the object. When you enable this property for a `Class.Part` or `Class.MeshPart`, the Roblox engine checks the object's touch event state to see if it needs to trigger or stop an event.
 
 This process happens for every single frame, which can take up a significant amount of memory if the engine needs to check the touch event state for many objects at once. To alleviate some of this impact on memory, only enable this property for objects that must trigger an event.
 
 ### CanQuery
 
-The `Class.BasePart.CanQuery` property determines whether the Roblox Engine considers the object during spatial query operations, such as raycasting. Studio enables this property for every `Class.Part` or `Class.MeshPart` by default, meaning that the engine checks to see if each object needs to call a spatial query operation. This process occurs for every single frame, which can take up a significant amount of memory when the engine needs to make these checks for many objects at once.
+The `Class.BasePart.CanQuery` property determines whether the Roblox engine considers the object during spatial query operations, such as raycasting. Studio enables this property for every `Class.Part` or `Class.MeshPart` by default, meaning that the Roblox engine checks to see if each object needs to call a spatial query operation. This process occurs for every single frame, which can take up a significant amount of memory when the engine needs to make these checks for many objects at once.
 
-For this reason, it's recommended to disable this property for objects that the Roblox Engine doesn't need to consider for spatial query operations. When making decisions about where to disable this property, consider how each asset impacts gameplay. For example, the final sample laser tag environment keeps this property enabled for every wall in the building because the engine needs to account for these surfaces as users fire lasers from their laser tag gun. If the engine doesn't account for these assets, then the laser would shoot straight through the building as though it wasn't there at all.
+For this reason, it's recommended to disable this property for objects that the Roblox engine doesn't need to consider for spatial query operations. When making decisions about where to disable this property, consider how each asset impacts gameplay. For example, the final sample laser tag environment keeps this property enabled for every wall in the building because the engine needs to account for these surfaces as users fire lasers from their laser tag gun. If the engine doesn't account for these assets, then the laser would shoot straight through the building as though it wasn't there at all.
 
 ### CastShadow
 
-The `Class.BasePart.CastShadow` property determines whether the object casts a shadow. When you enable this property for a `Class.Part` or `Class.MeshPart`, the Roblox Engine calculates every vertex location of the object at runtime, then draws a raycast from the sun to any of its neighboring objects until it collides with another object to create the shadow.
+The `Class.BasePart.CastShadow` property determines whether the object casts a shadow. When you enable this property for a `Class.Part` or `Class.MeshPart`, the Roblox engine calculates every vertex location of the object at runtime, then draws a raycast from the sun to any of its neighboring objects until it collides with another object to create the shadow.
 
 These calculations can come at a performance cost, especially when you have many objects of geometric complexity. This is because objects with geometric complexity have more polygons than objects that are geometrically simple, meaning they have more vertices that the engine needs to calculate for the object's shadow. The fewer polygons in an object, the faster the operation and cheaper its shadow.
 
@@ -197,7 +197,7 @@ Shadows can provide a great sense of realism to objects with 3D geometrical dept
 
 ### DoubleSided
 
-The `Class.MeshPart.DoubleSided` property determines whether to render both faces or polygons in the mesh. When you enable this property for a planar `Class.MeshPart`, such as leaves, hair, or cloth cards, the Roblox Engine renders both faces or polygons in the mesh to allow users to see the fullness of the object no matter what angle they are looking at the object. For example, the following tree leaves are single-sided planar meshes, and when you enable this property, any of the leaves that face away from the camera become visible to the user.
+The `Class.MeshPart.DoubleSided` property determines whether to render both faces or polygons in the mesh. When you enable this property for a planar `Class.MeshPart`, such as leaves, hair, or cloth cards, the Roblox engine renders both faces or polygons in the mesh to allow users to see the fullness of the object no matter what angle they are looking at the object. For example, the following tree leaves are single-sided planar meshes, and when you enable this property, any of the leaves that face away from the camera become visible to the user.
 
 <GridContainer numColumns="2">
   <figure>
@@ -227,7 +227,7 @@ The `Class.MeshPart.CollisionFidelity` property determines how closely the physi
   </figure>
 </GridContainer>
 
-You can set this property to a different value to reduce the precision of a mesh's hitbox. For example, when you set this property to **Hull**, the Roblox Engine significantly reduces the vertices of the mesh's hitbox, and when you set this property to **Box**, the engine reduces the mesh's hitbox to a cube that surrounds the mesh. In addition, if you want to increase the precision of a mesh's hitbox, you can set this property to **PreviseConvexDecomposition** to increase the amount of vertices in the hitbox
+You can set this property to a different value to reduce the precision of a mesh's hitbox. For example, when you set this property to **Hull**, the Roblox engine significantly reduces the vertices of the mesh's hitbox, and when you set this property to **Box**, the engine reduces the mesh's hitbox to a cube that surrounds the mesh. In addition, if you want to increase the precision of a mesh's hitbox, you can set this property to **PreviseConvexDecomposition** to increase the amount of vertices in the hitbox
 
 <GridContainer numColumns="3">
   <figure>
@@ -244,7 +244,7 @@ You can set this property to a different value to reduce the precision of a mesh
   </figure>
 </GridContainer>
 
-Similar to `Class.BasePart.CastShadow`, the more vertices the Roblox Engine needs to render, the higher the performance cost. For this reason, it's important to consider how you want users to interact with each mesh to see if you can reduce the amount of vertices the engine needs to render for the mesh's hitbox. In cases where it isn't necessary for a hitbox to be precise, set this property to either **Box** or **Hull**.
+Similar to `Class.BasePart.CastShadow`, the more vertices the Roblox engine needs to render, the higher the performance cost. For this reason, it's important to consider how you want users to interact with each mesh to see if you can reduce the amount of vertices the engine needs to render for the mesh's hitbox. In cases where it isn't necessary for a hitbox to be precise, set this property to either **Box** or **Hull**.
 
 To demonstrate this concept, reference the following images that display the hitbox of every mesh of the wall model that provides a rise in elevation between the first and second floor of the final sample laser tag environment. The default hitbox for the main wall has a lot of unnecessary geometry when it only needs to provide a surface to prevent the user from moving in that direction. If you set the property to **Box** for this mesh, you can remove this redundant geometry while keeping the purpose of the hitbox intact.
 
@@ -286,11 +286,11 @@ To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from
 
 ### RenderFidelity
 
-The `Class.MeshPart.RenderFidelity` property determines the mesh's level of detail that displays to the user. When you set this property to `Enum.RenderFidelity.Automatic`, the Roblox Engine reduces the mesh's fidelity the further the user is from the mesh, and when you set this property to `Enum.RenderFidelity.Precise`, every vertex of your mesh renders exactly as you intend no matter the distance between them.
+The `Class.MeshPart.RenderFidelity` property determines the mesh's level of detail that displays to the user. When you set this property to `Enum.RenderFidelity.Automatic`, the Roblox engine reduces the mesh's fidelity the further the user is from the mesh, and when you set this property to `Enum.RenderFidelity.Precise`, every vertex of your mesh renders exactly as you intend no matter the distance between them.
 
 The more objects the engine must render precisely to the user from any distance, especially if they have a high vertex count, the higher the performance cost. To alleviate some of this impact on performance, set this property to `Enum.RenderFidelity.Performance` for objects with geometric complexity, such as foliage in the sample asset library, because they don't need to display in their entirety from a distance for any gameplay requirement. This reduces your experience's polygon count without yielding overall visual quality.
 
-## Convert assets into packages
+## Convert Assets into Packages
 
 Now that all of your modular assets are in Studio with rendering parameters that are set up to retain their high visual quality for all users, it's time to convert them into packages. It's important to convert your assets into packages because it allows you to reuse them repeatedly throughout your current experience and other projects. In addition, you can easily make edits to a package that instantly populate to all of its instances, saving you a lot of time in the iteration process.
 

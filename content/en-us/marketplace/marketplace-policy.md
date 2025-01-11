@@ -1,13 +1,13 @@
 ---
-title: Marketplace policy
+title: Marketplace Policy
 description: Marketplace Requirements lists the specific requirements for Marketplace Assets.
 ---
 
 3D accessories and clothing assets you sell on the [Marketplace](https://www.roblox.com/catalog), such as clothing accessories, must follow specific requirements. Some requirements may require additional configuration on a third-party modeling software, such as Blender or Maya.
 
-If you are ready to sell an item and the item meets the requirements below, see [Publish Marketplace items](../marketplace/publish-to-marketplace.md) for details on publishing the asset.
+If you are ready to sell an item and the item meets the requirements below, see [Publishing Marketplace Items](../marketplace/publishing-to-marketplace.md) for details on publishing the asset.
 
-## Creator requirements
+## Creator Requirements
 
 To upload, publish, and maintain existing content on-sale, Roblox requires users and groups to have [ID verification](https://en.help.roblox.com/hc/en-us/articles/4407282410644) and [Premium membership](https://www.roblox.com/premium/membership). Your ID-verified account must participate in an active Premium 1000/2200 membership to keep your Marketplace items on sale after uploading and publishing.
 
@@ -50,7 +50,7 @@ See the following breakdown of the user and group requirements:
 </tbody>
 </table>
 
-## General creation guidelines
+## General Creation Guidelines
 
 When designing and creating your assets, follow these guidelines to ensure that your item passes moderation and allows Roblox users to express themselves with safety and civility. Failure to follow these guidelines may result in [moderation](../marketplace/moderation.md) and item removal.
 
@@ -73,7 +73,7 @@ Whether or not you are the original creator of the asset, you must ensure that y
 - Do not include excessive text on items.
 - Do not miscategorize your items, such as listing a pants asset in the Shirt category. See [Miscategorization](#miscategorization).
 
-## Accessory and clothing guidelines
+## Accessory and Clothing Guidelines
 
 Submissions of accessory and clothing items to the Marketplace must follow additional guidelines, along with the [general guidelines](#general-creation-guidelines), [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and respective technical specifications for [Accessory](../art/accessories/specifications.md) or [Clothing](../art/accessories/clothing-specifications.md) items.
 
@@ -93,11 +93,11 @@ Do not miscategorize items when you upload them. Proper categorization includes 
   - Designs that combine Head items with hair designs (e.g. beanie with hair sticking out, mohawk with headphones) can be in the Head or Hair category.
 - Designs that are components of facial anatomy (e.g. noses, mustache) or accessories that augment facial anatomy (e.g. eyeshadow, blush, wrinkles) must be in the Face category.
 
-## Avatar body guidelines
+## Avatar Body Guidelines
 
 Submissions of avatar bodies to the Marketplace must follow additional guidelines, along with the [general guidelines](#general-creation-guidelines), [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards), and [Avatar technical specifications](../art/characters/specifications.md).
 
-### Body part requirements
+### Body Part Requirements
 
 Each body can only include the following parts, and cannot have additional appendages:
 
@@ -118,7 +118,7 @@ Avatars must adhere to the [appropriate size requirements](../art/characters/spe
 
 Roblox moderates avatars that do not follow the body part requirements under the [Misusing Roblox Systems Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Rules).
 
-### Modesty layers
+### Modesty Layers
 
 A _modesty layer_ is a layer of clothing that covers an avatar's upper torso and lower torso. In general, modesty layers are required if your character resembles a human. See the following for specific policies for when modesty layers are required:
 
@@ -333,11 +333,11 @@ For all modesty layers, the following applies:
 
 Roblox moderates avatars that do not follow the modesty layers requirements under the [Romantic and Sexual Content Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Rules).
 
-#### Lower torso
+#### Lower Torso
 
 The **lower torso** modesty layer must provide full coverage from the avatar's hips to the bottom of the groin and buttocks. Lower torso modesty layers can include clothing styles such as briefs, high-waisted underwear, boxers, or boy shorts that fully cover the buttocks.
 
-#### Upper torso
+#### Upper Torso
 
 You must add an **upper torso** modesty layer if your avatar uses a skin-like texture in the chest where the breasts protrude off the chest and have a rounded or oblong shape. Upper torso modesty layers are not required for characters with flat, muscle-shaped pectorals.
 
@@ -355,7 +355,7 @@ For upper torso modesty layers, the following applies:
 
 Upper torso modesty layers can include strapless bras, racerback bras, balconette bras, tube tops, crop tops, or bandeau tops.
 
-### Age appropriate
+### Age Appropriate
 
 Avatar bodies must not be sexually suggestive, or depict or suggest nudity in genital areas. This includes:
 
@@ -366,7 +366,7 @@ Avatar bodies must not be sexually suggestive, or depict or suggest nudity in ge
 
 Roblox moderates avatars that do not follow the modesty layers requirements under the [Romantic and Sexual Content Community Standard](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Rules).
 
-### Accessories and clothing
+### Accessories and Clothing
 
 Avatar bodies cannot include any accessories or clothing. Accessories are items that you can find separately in the Marketplace that are not part of the body part requirements, such as equipable tails, wings, extra limbs, glasses, clothing, [tattoos](#tattoos), and [makeup](#makeup). You must upload and sell these items separately. Heads can include hair, eyelashes, and eyebrows, but these must also be separate items.
 
@@ -554,6 +554,6 @@ Your avatar head cannot include any additional color, shading, or outlining not 
 </tbody>
 </table>
 
-### Customizable skin tones
+### Customizable Skin Tones
 
 Roblox recommends including customizable skin tones, or skin tone mutability, for avatars that resemble humans. Skin tone mutability is optional. Similarly, for avatars created through formal brand partnerships, skin tone mutability is optional. For more information on creating customizable skin tone textures, see [Custom Skin Tone](../art/characters/specifications.md#custom-skin-tone).

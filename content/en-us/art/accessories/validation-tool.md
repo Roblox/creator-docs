@@ -18,7 +18,7 @@ The **Layered Clothing Validation Tool** is a supplemental tool you can install 
 
 While this tool can save you time in the typical iteration process between your 3D modeling program and Studio, the tool doesn't provide comprehensive verification of all aspects of layered clothing assets. You must ensure your layered clothing model meets both the [general mesh requirements](../../art/modeling/specifications.md) and Roblox-specific [layered clothing requirements](../../art/accessories/specifications.md#layered-requirements) prior to importing it into Studio.
 
-## Install the Clothing Validation Tool
+## Installing the Validation Tool
 
 There are two separate installation files and instructions for Blender and Maya.
 
@@ -104,7 +104,7 @@ To install the Clothing Validation Tool in Maya:
 
      <img src="../../assets/accessories/validation-tool/Maya-Shortcut.png" width="40%" />
 
-## Validate assets
+## Validating Assets
 
 With the plugin active and a layered asset in your workspace, you can begin validating content. After the check, results with issues change to **red** (Blender) or **yellow** (Maya). You can resolve some failed checks by clicking the check button. See [Checks and Troubleshooting Steps](#checks-and-troubleshooting-steps) for details on each validation check.
 
@@ -129,7 +129,7 @@ To use the Validation Tool on your asset:
 This Validation Tool only checks for common clothing creation issues. Ensure your layered clothing model meets both the [general mesh specifications](../../art/modeling/specifications.md) and Roblox-specific [layered clothing specifications](../../art/accessories/specifications.md#layered-requirements) before uploading to Studio.
 </Alert>
 
-## Checks and troubleshooting steps
+## Checks and Troubleshooting Steps
 
 Refer to the table below for details on the specific checks and troubleshooting steps:
 

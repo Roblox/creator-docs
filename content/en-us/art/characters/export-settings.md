@@ -1,5 +1,5 @@
 ---
-title: Character body export settings
+title: Character Body Export Settings
 description: Use the appropriate export settings in Maya and Blender to generate Studio-ready .fbx files.
 ---
 
@@ -12,7 +12,7 @@ Check that your model meets Roblox's [avatar character specifications](../../art
 - If you are creating a generic mesh, ensure that your model follows Roblox's [general specifications](../../art/modeling/specifications.md) and use the [general export settings](../../art/modeling/export-requirements.md).
 
 <Alert severity = 'error'>
-If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/combine-head-geometry.md) in order for the assets to properly validate.
+If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/combining-head-geometry.md) in order for the assets to properly validate.
 </Alert>
 
 <Tabs>
@@ -41,7 +41,7 @@ To export the `.fbx` file in Blender:
    <img src="../../assets/modeling/skinned-meshes/Blender-Export-Settings-4.png" width="320" /> <br />
 
 7. Click the **Export FBX** button.
-8. After exporting, use Studio's [3D importer](../../art/modeling/3d-importer.md) to import your model. See [Test characters in Studio](../../art/characters/testing/studio.md) for additional importing and testing information
+8. After exporting, use Studio's [3D Importer](../../art/modeling/3d-importer.md) to import your model. See [Testing Characters in Studio](../../art/characters/testing/studio.md) for additional importing and testing information
 
 </TabItem>
 <TabItem label="Maya">
@@ -60,7 +60,7 @@ To export a mesh in Maya as a `.fbx` file:
    - Navigate to **FBX File Format**, then set the **Type** property to **Binary**, and the **Version** property to **FBX 2020**.
 9. Click the **Export All** button.
    <img src="../../assets/accessories/lc-requirements-maya-settings.png" />
-10. After exporting, use Studio's [3D importer](../../art/modeling/3d-importer.md) to import your model. See [Test characters in Studio](../../art/characters/testing/studio.md) for additional importing and testing information.
+10. After exporting, use Studio's [3D Importer](../../art/modeling/3d-importer.md) to import your model. See [Testing Characters in Studio](../../art/characters/testing/studio.md) for additional importing and testing information
 
 </TabItem>
 </Tabs>

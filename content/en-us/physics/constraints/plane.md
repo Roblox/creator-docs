@@ -4,7 +4,7 @@ description: PlaneConstraint moves two attachments into a position/orientation a
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.PlaneConstraint`, see [Mechanical constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.PlaneConstraint`, see [Mechanical Constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;Units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 A `Class.PlaneConstraint` moves its `Class.Constraint.Attachment0|Attachment0` and `Class.Constraint.Attachment1|Attachment1` into a position/orientation along a plane whose normal vector is the primary axis of `Class.Constraint.Attachment0|Attachment0`. Both parent assemblies remain free to translate and rotate unless otherwise constrained.

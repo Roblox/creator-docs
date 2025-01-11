@@ -1,5 +1,5 @@
 ---
-title: Data stores vs memory stores
+title: Data Stores vs Memory Stores
 description: When to use standard data stores, ordered data stores, and memory stores.
 ---
 
@@ -7,13 +7,13 @@ To store data, you can use [data stores](./data-stores/index.md) with the `Class
 
 Alternatively, you can also use Lua types and variables to [store data in-memory in Lua](#when-to-use-in-memory-storage-in-lua), without using the data or memory store services.
 
-## When to use data stores
+## When to Use Data Stores
 
 The `Class.DataStoreService` stores long-term data that needs to last between sessions, such as user progress or inventory items. Data stores are consistent per experience, so every server for every place within an experience can access and change the same data. There are two types of data stores: standard and ordered.
 
 **Standard data stores** can store data like numbers, strings, and tables that don't need to be ranked or sorted. This data is stored as key-value pairs, where each entry is stored under a key that is unique within its data store and that you can retrieve, update, or delete.
 
-**Ordered data stores** can only store numbers. Each entry is stored under a key that is unique within its data store and that you can retrieve, update, or delete. You can rank and sort this data numerically and retrieve it in ascending or descending order based on stored numerical values. For more information, see [Ordered data stores](./data-stores/index.md#ordered-data-stores).
+**Ordered data stores** can only store numbers. Each entry is stored under a key that is unique within its data store and that you can retrieve, update, or delete. You can rank and sort this data numerically and retrieve it in ascending or descending order based on stored numerical values. For more information, see [Ordered Data Stores](./data-stores/index.md#ordered-data-stores).
 
 <table>
 <thead>
@@ -48,7 +48,7 @@ The `Class.DataStoreService` stores long-term data that needs to last between se
   If you want to add granular permission control to your data stores and access them outside of Studio or Roblox servers, you can use [Open Cloud APIs for data stores](/cloud/reference/DataStore).
 </Alert>
 
-## When to use memory stores
+## When to Use Memory Stores
 
 The `Class.MemoryStoreService` is a high throughput and low latency service that stores temporary data that needs to be updated or accessed frequently, such as global leaderboards or matchmaking queues. With memory stores, every server for every place within an experience can access and change the same data quickly and frequently. Data in a memory store expires after a certain period of time, lasting up to 45 days.
 
@@ -71,7 +71,7 @@ Although memory stores store temporary data, they also support permanent feature
 </tbody>
 </table>
 
-## When to use in-memory storage in Lua
+## When to Use In-Memory Storage in Lua
 
 You can use in-memory storage in Lua to store temporary data that needs to be accessed with minimal latency and without the cost of making external service calls to data stores or memory stores. There are no extra steps required to set up in-memory storage as it's already built in by default in Lua.
 

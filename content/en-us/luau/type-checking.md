@@ -1,11 +1,11 @@
 ---
-title: Type checking
+title: Type Checking
 description: Luau uses gradual typing through the use of type annotations and inference.
 ---
 
 Luau supports a gradual type system through the use of type annotations and type inference. These types are used to provide better warnings, errors, and suggestions in the [Script Editor](../studio/script-editor.md).
 
-## Define a type
+## Defining a Type
 
 Use the `type` keyword to define your own types:
 
@@ -13,7 +13,7 @@ Use the `type` keyword to define your own types:
 type Vector2 = {x: number, y: number}
 ```
 
-## Inference modes
+## Inference Modes
 
 There are three Luau type inference modes that can be set on the first line of a `Class.Script`:
 
@@ -55,7 +55,7 @@ local foo: string? = nil
 
 This will allow the variable to be either the specified type (in this case `string`) or `nil`.
 
-### Literal types
+### Literal Types
 
 You can also cast strings and booleans to literal values instead of using `string` and `boolean`:
 
@@ -66,7 +66,7 @@ alwaysHelloWorld = "Just hello!"  -- Type error: Type '"Just hello!"' could not 
 local alwaysTrue: true = false  -- Type error: Type 'false' could not be converted into 'true'
 ```
 
-### Type casts
+### Type Casts
 
 Sometimes, you might need to assist the typechecker by explicitly casting a value to a different type with the `::` operator:
 
@@ -79,7 +79,7 @@ myString = myNumber :: any  -- OK; all expressions can be cast to 'any'
 local myFlag = myNumber :: boolean  -- Not OK; types are unrelated
 ```
 
-## Function typing
+## Function Typing
 
 Consider the following function:
 
@@ -118,7 +118,7 @@ local function FindSource(script: BaseScript, pattern: string): (string, number)
 end
 ```
 
-### Define a functional type
+### Defining a Functional Type
 
 A functional type can be defined by using the syntax `(in) -> out`. Using the functions from the previous examples, the types of the functions are:
 
@@ -127,7 +127,7 @@ type add = (x: number, y: number) -> number
 type FindSource = (script: BaseScript, pattern: string) -> (string, number)
 ```
 
-## Table types
+## Table Types
 
 Luau does not have a `table` type; instead, table types are defined using `{}` syntax. One way of defining tables is using the `{type}` syntax, which defines a list type.
 
@@ -211,7 +211,7 @@ Instead, use the syntax `...type` to define a variadic type.
 type addLotsOfNumbers = (...number) -> number
 ```
 
-## Unions and intersections
+## Unions and Intersections
 
 You can even define a type as two or more types using a union or intersection:
 
@@ -225,7 +225,7 @@ local numString1: numberOrString = true  -- Type error
 local numString2: type1and2 = {foo = "hello", bar = 1}
 ```
 
-## Define an inferred type
+## Defining an Inferred Type
 
 You can use the `typeof` function in a type definition for inferred types:
 
@@ -299,7 +299,7 @@ type State<T> = {
 }
 ```
 
-### Function generics
+### Function Generics
 
 Functions can also use generics. The `State` example infers the value of `T` from the function's incoming arguments.
 
@@ -317,7 +317,7 @@ local Activated = State("Activated", false)  -- State<boolean>
 local TimesClicked = State("TimesClicked", 0)  -- State<number>
 ```
 
-## Type exports
+## Type Exports
 
 To make it so a type can be used outside of a `Class.ModuleScript`, use the `export` keyword:
 

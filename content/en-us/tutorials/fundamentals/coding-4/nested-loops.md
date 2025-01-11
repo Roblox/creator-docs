@@ -1,17 +1,17 @@
 ---
-title: Nested loops
+title: Nested Loops
 description: Learn how to use nested loops. This computer science lesson uses Roblox Lua to combine multiple nested for loops.
 next: /tutorials/fundamentals/coding-5/landing
-prev: /tutorials/fundamentals/coding-4/create-a-timed-bridge
+prev: /tutorials/fundamentals/coding-4/creating-a-timed-bridge
 ---
 
 Nesting loops allows you to repeat tasks in batches. For example, baking three batches of six cupcakes, or assigning weapons to players on two teams.
 
-## How nested loops run
+## How Nested Loops Run
 
 When loops are nested, scripts go line by line until it reaches the next loop. The inner loop will run until it's condition is met before returning to the outer loop.
 
-### Nested loop logic
+### Nested Loop Logic
 
 The following diagram shows the steps a loop takes.
 
@@ -33,7 +33,7 @@ The following diagram shows the steps a loop takes.
 </tbody>
 </table>
 
-### Nested loop example
+### Nested Loop Example
 
 Nested loops can seem somewhat abstract, so a visual example can help. For this exercise, copy and paste a sample script and run it in Studio. This script will create towers of parts. The outer loop will control how many parts to make, while the inner loop will create the actual batch.
 
@@ -74,17 +74,17 @@ Nested loops can seem somewhat abstract, so a visual example can help. For this 
 
 2. Watch as the script spawns a different batch of colored parts. After going through one batch, it'll pause for 2 seconds. The print statement in the outer loop will run only one time per completed inner loop.
 
-## Nested for loop tower
+## Nested For Loop Tower
 
 Each loop has its own set of code, so can be responsible for different tasks. One thing nested loops can do is change the placement of where an object spawns to create a tower like the one in this video. There's three different loops, one each for controlling where along the width, length, and height of the tower the cube spawns.
 
 <video controls src="../../../assets/education/coding-4/LoopingTower2_Compressed.mp4" width="100%"></video>
 
-## Code a cube maker script
+## Coding a Cube Maker Script
 
 To practice nested loops, you'll make a script that creates a tower of cubes. For the cube tower script, first code a function that spawns a single cube. The tower will be built by repeatedly calling this function.
 
-### Set up the script
+### Setting up the Script
 
 For the cube tower script, first code a function that spawns a single cube. The tower will be built by repeatedly calling this function.
 
@@ -139,7 +139,7 @@ For the cube tower script, first code a function that spawns a single cube. The 
    In Roblox code, once an object is created by script, it's recommended to parent it at the end. It's faster to make changes to an instance before there is a physical object in the game world.
    </Alert>
 
-### Spawn in different directions
+### Spawning in Different Directions
 
 To create a tower, spawn cubes at specific points by setting the X, Y, Z properties of each new cube. X and Z are side to side. Y is up and down.
 
@@ -171,7 +171,7 @@ To create a tower, spawn cubes at specific points by setting the X, Y, Z propert
    In Roblox, CFrame is a data type used to store 3D position and orientation. It's used to place objects in a world.
    </Alert>
 
-### Spawn with nested loops
+### Spawning with Nested Loops
 
 The script will have three loops total, one each for the length, width, and height of the tower. To complete an entire floor before moving upwards, start with setting the Y coordinate in the first, outermost loop.
 
@@ -259,11 +259,11 @@ The script will have three loops total, one each for the length, width, and heig
 
    <video controls src="../../../assets/education/coding-4/nestedLoop-finalExample.mp4" width="100%"></video>
 
-## Optional challenges
+## Optional Challenges
 
 Below are different self-directed challenges that use nested loops in different ways. Try and code on your own before looking at the solution.
 
-### Fade away parts
+### Fade Away Parts
 
 As the tower is built, have the parts fade in transparency from left to right.
 
@@ -303,7 +303,7 @@ for heightIndex = 1, TOWER_SIZE do
 end
 ```
 
-### Rain down objects
+### Rain Down Objects
 
 Instead of parts, try spawning an actual object. The example here used cupcakes.
 

@@ -1,15 +1,15 @@
 ---
-title: Plugins tab
+title: Plugins Tab
 description: The Plugins tab lets you install and manage community-made and Roblox plugins.
 ---
 
-The **plugins** tab contains tools for managing [plugins](../studio/plugins.md), configuring localization, and discovering audio used throughout a place. Any installed plugins may also add buttons to this tab.
+The **Plugins** tab contains tools for managing [plugins](../studio/plugins.md), configuring localization, and discovering audio used throughout a place. Any installed plugins may also add buttons to this tab.
 
 <img src="../assets/studio/general/Toolbar-Plugins-Tab.png" width="800" alt="Plugins tab indicated in Studio toolbar" />
 
-## Manage Plugins
+## Studio Plugins
 
-The **Manage Plugins** button lets you enable/disable, update, or uninstall plugins you've [installed](../production/creator-store.md#find-assets) from the Creator Store, while the
+The **Manage Plugins** button lets you enable/disable, update, or uninstall plugins you've [installed](../production/creator-store.md#finding-assets) from the Creator Store, while the
 **Plugins&nbsp;Folder** button opens the local system folder containing plugins you've [created](../studio/plugins.md) or manually installed.
 
 <img src="../assets/studio/general/Plugins-Tab-Tools.png" width="800" alt="Plugin management buttons indicated in Plugins tab" />

@@ -1,5 +1,5 @@
 ---
-title: Optimize your experience
+title: Optimize Your Experience
 description: Explains how to configure your assets and Studio settings to improve frame rate and performance levels.
 prev: /tutorials/curriculums/environmental-art/construct-your-world
 ---
@@ -13,15 +13,15 @@ prev: /tutorials/curriculums/environmental-art/construct-your-world
 Using the [Environment Art - Optimizing](https://www.roblox.com/games/14447845297/Environment-Art-Optimizing) `.rbxl` file as a reference, this section of the environmental art curriculum shows you how to review and configure your place file for optimal graphics, including guidance on:
 
 - Reviewing the physics and rendering parameters of each asset to confirm they preserve memory and engine performance.
-- Culling excess texture, geometry, or transparencies that unnecessarily increase the amount of calculations the Roblox Engine must perform to render your assets.
+- Culling excess texture, geometry, or transparencies that unnecessarily increase the amount of calculations the Roblox engine must perform to render your assets.
 
-While the Roblox Engine handles most optimization work for you, you can assist in these optimization efforts by utilizing the [Microprofiler](../../../studio/microprofiler/index.md) to see where it takes more time to render specific frames. Using this information, you can make informed decisions about what assets need your attention in regards to their parameters or excess content.
+While the Roblox engine handles most optimization work for you, you can assist in these optimization efforts by utilizing the [Microprofiler](../../../studio/microprofiler/index.md) to see where it takes more time to render specific frames. Using this information, you can make informed decisions about what assets need your attention in regards to their parameters or excess content.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section5/Overview.jpg" alt="" width="100%"/>
 
-## Review physics and render parameters
+## Review Physics and Rendering Parameters
 
-In [Assemble an asset library](./assemble-an-asset-library.md), you learned how important it is to set physics and rendering parameters that allow your assets to retain their high visual quality across devices with memory and GPU limitations. However, it's common as you construct your environment to adjust these parameters according to an asset's contextual position and purpose within your experience. For example, much of the foliage in the final sample laser tag environment casts shadows despite a performance cost because it adds to the realism of the environment.
+In [Assemble an Asset Library](./assemble-an-asset-library.md), you learned how important it is to set physics and rendering parameters that allow your assets to retain their high visual quality across devices with memory and GPU limitations. However, it's common as you construct your environment to adjust these parameters according to an asset's contextual position and purpose within your experience. For example, much of the foliage in the final sample laser tag environment casts shadows despite a performance cost because it adds to the realism of the environment.
 
 When you modify physics and rendering parameters, it's useful near the end of the development process to review all parameters to see where you can optimize a parameter while maintaining aesthetic goals and gameplay requirements. To illustrate, you can disable `Class.BasePart.CastShadow` property for the foliage near the edges of the gameplay area to save on performance without interfering with a user's gameplay or visual experience.
 
@@ -36,26 +36,26 @@ When you modify physics and rendering parameters, it's useful near the end of th
   </figure>
 </GridContainer>
 
-## Cull nonessential content
+## Cull Nonessential Content
 
 After you review your physics and rendering parameters, you can review the assets themselves to see where you can cull any nonessential content from the experience that doesn't affect your gameplay, such as identical textures with different assetIDs, complex geometry with a high vertice count, or transparencies that layer on top of each other depending on the camera view. The following sections detail what you can do to review this content, and why it helps optimization efforts.
 
-### Remove duplicate textures
+### Remove Duplicate Textures
 
-As you transition between developing your assets and constructing your environment, it's common to iterate over meshes or textures as you find what's necessary for your aesthetic goals or gameplay requirements. If you don't convert your assets into [packages](../../../projects/assets/packages.md), when you import these iterations into Studio, you're making unique assetIDs that the Roblox Engine needs to reference as it renders your assets within the environment.
+As you transition between developing your assets and constructing your environment, it's common to iterate over meshes or textures as you find what's necessary for your aesthetic goals or gameplay requirements. If you don't convert your assets into [packages](../../../projects/assets/packages.md), when you import these iterations into Studio, you're making unique assetIDs that the Roblox engine needs to reference as it renders your assets within the environment.
 
-For example, if you were to import the following two fire hydrant meshes into Studio separately, even if they are exactly the same in appearance, the Roblox Engine treats them as two objects with unique assetIDs. The more unique calls the engine needs to make, the more of an impact on memory and performance. For this reason, it's important to confirm when you're reusing an asset multiple times, each instance of that asset uses the same assetID so that the engine only needs to make a single call to render it repeatedly.
+For example, if you were to import the following two fire hydrant meshes into Studio separately, even if they are exactly the same in appearance, the Roblox engine treats them as two objects with unique assetIDs. The more unique calls the engine needs to make, the more of an impact on memory and performance. For this reason, it's important to confirm when you're reusing an asset multiple times, each instance of that asset uses the same assetID so that the engine only needs to make a single call to render it repeatedly.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section5/RemovingTextures-Firehydrants.jpg" alt="Two of the exact same fire hydrant with unique assetIDs. There is no visual difference but the duplicate assetIDs negatively impacts performance." width="100%"/>
 
-### Optimize geometry
+### Optimize Geometry
 
 If you find that you need to make more adjustments to increase frame rate across devices, it's useful to see where you can optimize your geometry by either:
 
 - Combining groups of meshes into a single asset.
 - Decreasing the polygon count of assets with geometric complexity.
 
-Expanding on this first technique, every unique asset in your experience represents a draw call on the GPU in which it sends a signal to the GPU to call information in order for the Roblox Engine to render the asset correctly. The more unique assets you have, the more draw calls the system needs to make. For this reason, if you have a group of meshes that make up a larger component in your experience, you can group them together in third-party modeling tools to reduce the need for multiple draw calls.
+Expanding on this first technique, every unique asset in your experience represents a draw call on the GPU in which it sends a signal to the GPU to call information in order for the Roblox engine to render the asset correctly. The more unique assets you have, the more draw calls the system needs to make. For this reason, if you have a group of meshes that make up a larger component in your experience, you can group them together in third-party modeling tools to reduce the need for multiple draw calls.
 
 To illustrate this point, the final sample laser tag environment parents multiple parts and meshes together to create the large towers outside of the building. If you were to combine all of these individual components together, you could make it a single asset with only one assetID, and reduce the number of draw calls from 8 to 1. However, it's important to note that this technique removes your ability to freely change the visual and physical characteristics of each component, such as its position or material.
 
@@ -66,12 +66,12 @@ For example, in the following image, the left tower remains multiple assets unde
 Expanding on the second technique, assets with geometric complexity have more polygons, meaning they have more vertices that the engine needs to calculate as it renders their visual appearance. This means that assets with less complexity and fidelity are less costly to render, leading to an improvement in both performance and memory.
 
 <Alert severity="warning">
-If you choose to utilize this second technique, after you simplify your geometry in third-party tooling, it's important to remember to update your packages with the new import instead of creating a new assetID, otherwise the Roblox Engine needs to make two separate calls for each assetID.
+If you choose to utilize this second technique, after you simplify your geometry in third-party tooling, it's important to remember to update your packages with the new import instead of creating a new assetID, otherwise the Roblox engine needs to make two separate calls for each assetID.
 </Alert>
 
-### Delete layered transparencies
+### Delete Layered Transparencies
 
-To provide a sense of realism to the environment, the final sample laser tag environment includes many meshes with varying levels of transparency, such as the foliage in the outdoor space, glass on the futuristic signage or planter railing. When the camera views multiple semi-transparent objects that are in front or behind each other, the Roblox Engine must render the overlapping pixels multiple times to account for the
+To provide a sense of realism to the environment, the final sample laser tag environment includes many meshes with varying levels of transparency, such as the foliage in the outdoor space, glass on the futuristic signage or planter railing. When the camera views multiple semi-transparent objects that are in front or behind each other, the Roblox engine must render the overlapping pixels multiple times to account for the
 transparent areas. This process is called high transparency overdraw, and it comes at a significant impact to performance.
 
 For example, consider the following view of a planter in the sample environment. The engine must render the transparent areas of the leaves between the plant closest to the camera to the plant closest to the outdoor area in layers, equating to hundreds of thousands of overdrawn pixels. To alleviate some of this impact, it's important to review the layout of all semi-transparent objects in your environment, and ensure there aren't too many places where there are many layers of overlap, especially in large areas of the screen.

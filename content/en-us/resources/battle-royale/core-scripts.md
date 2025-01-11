@@ -1,22 +1,22 @@
 ---
-title: Core scripts
+title: Core Scripts
 comments:
 description: Explains the two scripts responsible for the Battle Royale gameplay loop.
-prev: /resources/battle-royale/run-the-game
+prev: /resources/battle-royale/running-the-game
 next: /resources/battle-royale/pickup-system
 ---
 
 The core game loop in Roblox Battle Royale is generally handled by two scripts, specifically `ServerScriptService/Server` on the server and `StarterPlayer/StarterPlayerScripts/Client` on the client.
 
-## Initial setup
+## Initial Setup
 
 The `ReplicatedFirst/InitialSetup` script configures a few engine-level systems — built-in UI, chat, etc. — and ensures that the client loads the assets referenced in `ReplicatedFirst/Configurations/AssetPreloads` before proceeding.
 
-## Game stages
+## Game Stages
 
 The initialization and updating of specific systems is done differently depending on the current stage of the game. Most of these cases are handled by `ServerScriptService/Core/GameStageHandler` on the server and `ReplicatedStorage/Core/StageManager` on the client. When a stage is requested, a module of the same name is required and various setup functions called on it. If there is already a module handling the current stage, shutdown functions are called on it prior to the new stage handler being initialized.
 
-## Places/server roles
+## Places/Server Roles
 
 Within `ReplicatedFirst/Configurations/MainConfiguration`, different gameplay modes are organized into lists of stages to be executed.
 

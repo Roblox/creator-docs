@@ -1,5 +1,5 @@
 ---
-title: Usage guidelines
+title: Usage Guidelines
 description: Important guidelines for using the in-experience text chat feature.
 comments: Eventually fold the key points of this page into other pages and remove.
 ---

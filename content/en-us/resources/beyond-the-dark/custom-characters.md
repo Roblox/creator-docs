@@ -1,5 +1,5 @@
 ---
-title: Custom characters
+title: Custom Characters
 comments: |
   1. Needs linking to Rigging / Skinning section in External Modeling.
   2. Should also link to Modeling Requirements in end of Rigging section.
@@ -18,7 +18,7 @@ appearance)](/art/modeling/surface-appearance), and VFX to build one of our more
   src="../../assets/resources/beyond-the-dark/custom-characters/Creature_Banner.png"
   width="100%" />
 
-## Rig
+## Rigging
 
 When we were rigging the Creature, we found it best to model the character in a neutral pose, because that pose is best suited to bending in multiple directions. If we modeled the Creature with its tentacles already curled, it would have led to stretching if we animated the tentacles to bend in the opposite direction. The following screenshots show the Creature in its natural state:
 
@@ -48,7 +48,7 @@ We found the following guidelines useful, so that the character mesh imports cor
 - Mesh normals should face outward (the model shouldn't look inside-out).
 - Skeletons shouldn't have any scale factor; all joints should be [1, 1, 1].
 
-## Skin
+## Skinning
 
 When we finished the Creature's skeleton, the next step was to skin the mesh. Skinning can be an arduous task, so to make matters easier, it's best to be familiar with the different initial skinning settings of your DCC application to find the one you like.
 Since this is an organic character, we skinned it with plenty of falloff on each joint and overlap between them. This way, the bending feels smooth and not sharp. The following screenshots show bad skinning and smooth skinning respectively:
@@ -71,7 +71,7 @@ We found the following guidelines produced the best outcomes for skinning:
 - Any joint you want to import into Studio must have some influence on the model's skinning, otherwise the engine doesn't import it.
   Whenever possible, skin your model in its original or "bind" pose.
 
-## Import the mesh to Studio
+## Importing the Mesh to Studio
 
 Importing your custom characters into Studio is one of the more exciting parts of the process, because you get to see your creations in the experience you're building!
 
@@ -97,7 +97,7 @@ To import the mesh into Studio:
    src="../../assets/resources/beyond-the-dark/custom-characters/Custom-Import-2.png"
    width="80%" />
 
-## Make the creature glow
+## Making the Creature Glow
 
 Once the Creature's model was stable and didn't require any more immediate import into Studio, we started putting together the SurfaceAppearance objects, lights, and visual effects. We did this to ensure that the quality of the model was good enough before proceeding to place and edit any one aspect of it.
 
@@ -134,7 +134,7 @@ In addition, we wanted the Creature's tentacles to emit some particles, so it wo
   src="../../assets/resources/beyond-the-dark/custom-characters/Particle-Emitter.jpeg"
   width="80%" />
 
-## Make the VFX follow the character
+## Making the VFX Follow the Character
 
 The skinned character's mesh positions aren't updated when the Creature animates, so we needed a method to make sure the VFX, SFX, and lights all followed the Creature properly. To accomplish this, we created a VFX controller script and used CollectionService to inform the parts that contained the VFX where the creature's bones were and to follow them.
 
@@ -216,7 +216,7 @@ The skinned character's mesh positions aren't updated when the Creature animates
 
 4. Finally, we added an **AttachedBoneName** custom attribute to the part we wanted to animate and added the precise name of the joint we wanted it to follow.
 
-## Texture the creature
+## Texturing the Creature
 
 Next, we set up the PBR (Physically Based Rendered) texture maps. These powerful bitmaps give the creature the varied sheen and surface variations to make it look like it has a lot of small bumps and imperfections. This visual effect helps sell the appearance of the Creature when it's closer to the player.
 
@@ -251,7 +251,7 @@ Here's how we created the surface appearance texture maps:
    - Make sure your maps are no bigger than 1024×1024.
    - Your green channel may need to be flipped depending on the application you worked in.
 
-## Animate the creature
+## Animating the Creature
 
 Animating is very subjective and has a personal style. Options include motion capture, hand "key frame" animating in your DCC application, or using Studio's powerful Animation Editor.
 
@@ -319,7 +319,7 @@ To import an animation:
    Check the character after you've closed the Animation Editor to ensure that the **AnimSaves** folder was deleted, as its files are only useful during editing.
    </Alert>
 
-## Final results
+## Final Results
 
 After a few finishing tweaks to colors, light brightnesses, and some more particle effects to give it a stronger halo effect in front of windows, here's the final result in the space station!
 

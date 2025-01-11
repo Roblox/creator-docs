@@ -19,7 +19,7 @@ For more information on built-in functions for working with tables, see the `Lib
 
 An **array** is an ordered list of values. Arrays are useful for storing collections of data, such as a group of players with special permissions.
 
-### Create arrays
+### Creating Arrays
 
 To create an array using a Luau table, declare the values in sequential order, separated by commas.
 
@@ -29,7 +29,7 @@ local testArray = {"A string", 3.14159, workspace.Camera}
 print(testArray)
 ```
 
-### Read from arrays
+### Reading from Arrays
 
 To read from an array, add a pair of square brackets after its reference and specify the index number of the element inside (`[pos]`):
 
@@ -46,7 +46,7 @@ print(testArray[3]) -- Camera
 Unlike some languages, Luau uses 1-based indexing for arrays, so the first item in the array is <InlineCode>[1]</InlineCode>, not <InlineCode>[0]</InlineCode>.
 </Alert>
 
-### Write to arrays
+### Writing to Arrays
 
 To define or rewrite the value of an array at an index, declare the index number in square brackets (`[index]`) followed by `=` and the value:
 
@@ -60,7 +60,7 @@ print(testArray[2]) --12345
 print(testArray[4]) -- New string
 ```
 
-### Iterate over arrays
+### Iterating over Arrays
 
 To iterate over an array, you can use a `for` loop. Because the arrays have numerical indices, you can also use a numeric `for` loop from **1** to the length of the array (`#array`).
 
@@ -89,7 +89,7 @@ end
 ]]
 ```
 
-### Insert items
+### Inserting Items
 
 There are two built-in ways to insert an item to the **end** of an array:
 
@@ -118,7 +118,7 @@ print(testArray[2]) -- NEW ITEM #2
 print(testArray[3]) -- Next item
 ```
 
-### Remove items
+### Removing Items
 
 To remove an item from an array, use `Library.table.remove()`. This removes the item at the specified position and moves any following items back one index position.
 
@@ -135,7 +135,7 @@ print(testArray[2]) -- Last item
 
 Dictionaries are an extension of arrays. Dictionaries store a set of key-value pairs, where the keys can be any number, string, or object.
 
-### Create dictionaries
+### Creating Dictionaries
 
 To create a dictionary table, define each **key** followed by `=` and the **value**. Separate each key-value pair with a comma:
 
@@ -158,7 +158,7 @@ local testDictionary = {
 }
 ```
 
-### Read from dictionaries
+### Reading from Dictionaries
 
 To read from a dictionary, add a pair of brackets after its reference and specify the key name. Directly reference a string key using quotes (`["key"]`) or use a variable value (`[key]`).
 
@@ -175,7 +175,7 @@ print(testDictionary["PartType"]) -- Block
 print(testDictionary[part]) -- true
 ```
 
-### Write to dictionaries
+### Writing to Dictionaries
 
 To define or rewrite the value of a new or existing dictionary key, declare the key name in brackets (`[key]`) followed by `=` and the value:
 
@@ -197,7 +197,7 @@ print(testDictionary["Sour"]) -- false
 print(testDictionary["FruitCount"]) -- 10
 ```
 
-### Iterate over dictionaries
+### Iterating over Dictionaries
 
 To iterate over a dictionary, use the global `pairs()` function in a `for` loop:
 
@@ -223,7 +223,7 @@ FruitColor Yellow
 Unlike using <InlineCode>ipairs()</InlineCode> on an array, using <InlineCode>pairs()</InlineCode> on a dictionary doesn't necessarily return items in the same order that they're in the dictionary.
 </Alert>
 
-### Remove key-value pairs
+### Removing Key-value Pairs
 
 To remove or erase a key-value pair from a dictionary, set its value for a key to `nil`.
 
@@ -245,7 +245,7 @@ FruitColor Yellow
 ]]
 ```
 
-## Tables as references
+## Tables as References
 
 If you store a table in a new variable, Luau doesn't create a copy of that table. Instead, the variable becomes a **reference**, or pointer, to the original table. Any reference to a table reflects any changes to the original table:
 
@@ -270,9 +270,9 @@ Reference: 1000 2000
 ]]
 ```
 
-## Clone tables
+## Cloning Tables
 
-### Shallow clones
+### Shallow Clones
 
 To copy a table without any nested tables, Luau offers the `Library.table.clone()` method.
 
@@ -286,7 +286,7 @@ local original = {
 local clone = table.clone(original)
 ```
 
-### Deep clones
+### Deep Clones
 
 To copy a more complex table with nested tables inside it, you'll need to use a recursive function similar to the following:
 
@@ -327,11 +327,11 @@ local original = {
 local clone = deepCopy(original)
 ```
 
-## Freeze tables
+## Freezing Tables
 
 Freezing a table makes it read-only, which is useful for creating constant values that you don't want to change. Freezing is permanent; there's no "unfreeze" or "thaw" method. To check if a table is frozen, use `Library.table.isfrozen()`.
 
-### Shallow freezes
+### Shallow Freezes
 
 To freeze a table without any nested tables, Luau offers the `Library.table.freeze()` method.
 
@@ -346,7 +346,7 @@ table.freeze(target)
 target.playerID = 1 --> attempt to modify a readonly table
 ```
 
-### Deep freezes
+### Deep Freezes
 
 To freeze a more complex table with nested tables inside it, use a recursive function similar to the following:
 

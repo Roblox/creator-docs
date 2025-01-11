@@ -4,14 +4,14 @@ description: SpringConstraint applies a force on its attachments based on spring
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.SpringConstraint`, see [Mechanical constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.SpringConstraint`, see [Mechanical Constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;Units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 A `Class.SpringConstraint` applies a force on its attachments based on spring and damper behavior. You can customize a spring's [damping](#damping) and [stiffness](#stiffness), as well as set minimum and maximum [limits](#limits) on the spring's length.
 
 <video controls src="../../assets/physics/constraints/Spring-Demo.mp4" width="90%" alt="Demo video of SpringConstraint"></video>
 
-## Free length
+## Free Length
 
 `Class.SpringConstraint.FreeLength|FreeLength` defines the natural resting length of the spring. If the attachments are further apart than the free length, they are forced together; if the attachments are closer together than the free length, they are forced apart.
 

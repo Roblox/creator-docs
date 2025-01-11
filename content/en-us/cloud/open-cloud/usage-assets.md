@@ -1,5 +1,5 @@
 ---
-title: Usage guide for assets
+title: Usage Guide for Assets
 description: Explains how to use Open Cloud Web APIs for assets to support usage such as uploading and updating.
 ---
 
@@ -15,7 +15,7 @@ The [Assets API](../../reference/cloud/assets/v1.json) of Open Cloud allows you 
 This API contains beta endpoints that might be subject to changes for future releases.
 </Alert>
 
-## Supported asset types and limits
+## Supported Asset Types and Limits
 
 For endpoints that don't create a new asset or update the content of existing assets, there are no restrictions and limits. However, the asset content uploading functionality powered by the **Create Asset** and **Update Asset** endpoints only supports limited types of assets with restrictions. For each call, you can only create or update one asset with the file size up to 20 MB with the following limits:
 
@@ -26,9 +26,9 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
 <table>
   <thead>
       <tr>
-        <th>Asset type</th>
+        <th>Asset Type</th>
         <th>Format</th>
-        <th>Content type</th>
+        <th>Content Type</th>
         <th>Restrictions</th>
       </tr>
   </thead>
@@ -127,18 +127,18 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
   </tbody>
 </table>
 
-## Security permissions
+## Security Permissions
 
 The API supports both first-party use with [API key authorization](./api-keys.md) and third-party use in [OAuth 2 applications](./oauth2-overview.md). Each way requires different security permission settings.
 
-### API keys
+### API Keys
 
-To use the API in your own scripts or tools, you need to [create an API key](./api-keys.md#create-api-keys) for authorization and security. To manage assets that you own individually, create the API key under your account. To manage group-owned assets, create the API key under the target group. For more information on group-owned API keys, see [Group-owned API key permissions](./api-keys.md#group-owned-api-key-permissions).
+To use the API in your own scripts or tools, you need to [Create an API key](./api-keys.md#creating-api-keys) for authorization and security. To manage assets that you own individually, create the API key under your account. To manage group-owned assets, create the API key under the target group. For more information on group-owned API keys, see [Group-Owned API Key Permissions](./api-keys.md#group-owned-api-key-permissions).
 
 Once you create an API key, you can't switch its ownership between individuals or groups, so if you create an API key under your own account, you can't use it for managing group assets.
 
 <Alert severity="warning">
-To create an API key for a group or create a group asset, you must have the corresponding permissions. For more information on granting group permissions, see [Group roles and permissions](../../projects/groups.md#roles-and-permissions).
+To create an API key for a group or create a group asset, you must have the corresponding permissions. For more information on granting group permissions, see [Group Roles and Permissions](../../projects/groups.md#roles-and-permissions).
 </Alert>
 
 Regardless of whether you are creating the API key for yourself or your group, make sure to add the following permissions:
@@ -152,11 +152,11 @@ Once you have the API key, copy it to the `x-api-key` request header. All endpoi
 --header 'x-api-key: ${ApiKey}' \
 ```
 
-### OAuth 2.0 apps
+### OAuth 2.0 Apps
 
-To use the API for a third-party OAuth 2.0 application, add the `asset:read` and `asset:write` permission scopes when [registering your app](./oauth2-registration.md#add-permissions). Choose these scopes based on the requirements of the endpoints you plan to use.
+To use the API for a third-party OAuth 2.0 application, add the `asset:read` and `asset:write` permission scopes when [registering your app](./oauth2-registration.md#adding-permissions). Choose these scopes based on the requirements of the endpoints you plan to use.
 
-## Create a new asset
+## Creating a New Asset
 
 To upload a new asset by an HTTP request:
 
@@ -187,7 +187,7 @@ To upload a new asset by an HTTP request:
 
    ```
 
-## Update an existing asset
+## Updating an Existing Asset
 
 <Alert severity="info">
 Asset updating is powered by beta endpoints that might be subject to changes for future releases.
@@ -267,7 +267,7 @@ curl --location --request PATCH 'https://apis.roblox.com/assets/v1/assets/{asset
 </TabItem>
 </Tabs>
 
-## Retrieve asset operation status
+## Retrieving Asset Operation Status
 
 If your request for creating a new asset or updating an existing asset succeeds, it returns an **Operation ID** in the format of `{ "path": "operations/${operationId}" }`. You can use it to check the status and result of your upload with the following steps:
 
@@ -311,7 +311,7 @@ If your request for creating a new asset or updating an existing asset succeeds,
    2. Select the **Category** of the asset that you want to check.
    3. Find the target asset and click its thumbnail to view the asset.
 
-## Add assets API to OAuth 2.0 apps
+## Adding Assets API to OAuth 2.0 Apps
 
 You can create [OAuth 2.0 applications](../../cloud/open-cloud/oauth2-overview.md) supporting Assets API to allow your users to upload and update assets to Roblox.
 
@@ -321,9 +321,9 @@ Third-Party app support through OAuth 2.0 is a Beta feature that might be subjec
 
 To use Assets API for your application and request permissions from your users, perform the following settings:
 
-1. When [registering your application](./oauth2-registration.md#register-an-app), under **Permissions**, select **asset:read** and **asset:write** scopes.
+1. When [registering your application](./oauth2-registration.md#registering-an-app), under **Permissions**, select **asset:read** and **asset:write** scopes.
 
-1. When [implementing the authorization flow](../../cloud/open-cloud/oauth2-overview.md#implement-authorization-flows), include `asset:read` and `asset:write` as the scope parameters of the authorization URL that redirects users back to your application, like the following example:
+1. When [implementing the authorization flow](../../cloud/open-cloud/oauth2-overview.md#implementing-authorization-flows), include `asset:read` and `asset:write` as the scope parameters of the authorization URL that redirects users back to your application, like the following example:
 
    ```plain
    https://www.authorize.roblox.com?client_id=819547628404595165403873012&redirect_uri=https://my-app.com/redirect&scope=asset:read+asset:write&response_type=Code&prompts=login+consent&nonce=12345&state=6789

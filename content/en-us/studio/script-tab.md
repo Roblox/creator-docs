@@ -1,9 +1,9 @@
 ---
-title: Script tab
+title: Script Tab
 description: The Script tab contains tools for writing, testing, and debugging scripts.
 ---
 
-The **script** tab contains tools for writing and testing scripts. You can only access this tab when you're viewing or editing a script.
+The **Script** tab contains tools for writing and testing scripts. You can only access this tab when you're viewing or editing a script.
 
 <img src="../assets/studio/general/Toolbar-Script-Tab.png" width="780" alt="Script tab indicated in Studio toolbar" />
 
@@ -108,13 +108,13 @@ The **Format** section lets you format sections or the entirety of the script fo
 </tbody>
 </table>
 
-## Pause and resume scripts
+## Pausing & Resuming Scripts
 
-While playtesting, the **Pause Scripts** and **Resume Scripts** buttons are useful for pausing both scripts and rendering, without [pausing physics](../studio/test-tab.md#pause-and-resume-physics).
+While playtesting, the **Pause Scripts** and **Resume Scripts** buttons are useful for pausing both scripts and rendering, without [pausing physics](../studio/test-tab.md#pausing--resuming-physics).
 
 <img src="../assets/studio/general/Script-Tab-Pause-Resume-Scripts.png" width="723" alt="Pause Scripts and Resume Scripts buttons available during playtesting in Studio." />
 
-## Debugging tools
+## Debugging Tools
 
 The **Debugger** section lets you control the [debugger](../studio/debugging.md).
 
@@ -172,7 +172,7 @@ In the neighboring **Debug Errors** section, you can opt to treat script errors 
 </tbody>
 </table>
 
-## Other actions
+## Other Actions
 
 The **Actions** section at the furthest right contains miscellaneous script actions.
 

@@ -1,9 +1,9 @@
 ---
-title: Size modifiers and constraints
+title: Size Modifiers and Constraints
 description: Explains how use size modifiers and size constraints with user interface objects.
 ---
 
-Alongside basic [sizing](../ui/position-and-size.md) of UI objects, you can utilize size modifiers to [scale](#scale) an object proportionally or [automatically resize](#automatic-sizing) it. You can also insert [size constraints](#constraints) to control **aspect ratio**, or set a minimum and maximum **size** or **text size**.
+Alongside basic [sizing](../ui/positioning-and-sizing.md) of UI objects, you can utilize size modifiers to [scale](#scale) an object proportionally or [automatically resize](#automatic-sizing) it. You can also insert [size constraints](#constraints) to control **aspect ratio**, or set a minimum and maximum **size** or **text size**.
 
 ## Scale
 
@@ -13,7 +13,7 @@ This modifier is useful for "zooming in" while designing a detailed user interfa
 
 <img src="../assets/ui/ui-objects/UIScale-Example.png" width="800" />
 
-## Automatic sizing
+## Automatic Sizing
 
 The `Class.GuiObject.AutomaticSize|AutomaticSize` property automatically resizes a parent `Class.GuiObject` to the size of its descendants. You can use this property in a variety of cases, including:
 
@@ -44,7 +44,7 @@ Once automatic sizing is set, note that other object properties behave as follow
 
 <Tabs>
 <TabItem label="AnchorPoint">
-Similar to the concept of [sizing](../ui/position-and-size.md#size) an object, `Class.GuiObject.AutomaticSize|AutomaticSize` takes the `Class.GuiObject.AnchorPoint|AnchorPoint` property into consideration when resizing content. For example, the following video displays three `Class.TextLabel|TextLabels` that automatically resize from their anchor point.
+Similar to the concept of [sizing](../ui/positioning-and-sizing.md#size) an object, `Class.GuiObject.AutomaticSize|AutomaticSize` takes the `Class.GuiObject.AnchorPoint|AnchorPoint` property into consideration when resizing content. For example, the following video displays three `Class.TextLabel|TextLabels` that automatically resize from their anchor point.
 
 <video controls width="80%" src="../assets/ui/automatic-sizing/customizing-anchorpoint.mp4"></video>
 
@@ -87,7 +87,7 @@ For example, if you set the `Class.UISizeConstraint.MinSize|MinSize` property to
 When a UI object is under control of both a layout structure such as `Class.UIListLayout` and a `Class.UISizeConstraint`, the constraint will **override** the layout and control the object's size.
 </Alert>
 
-### Text size
+### Text Size
 
 The `Class.UITextSizeConstraint` specifies a minimum and maximum font size for a `Class.GuiObject` with text, such as a `Class.TextLabel`, `Class.TextButton`, or `Class.TextBox`. This constraint ensures that the **text** within a `Class.GuiObject` doesn't become illegible or too large.
 
@@ -101,7 +101,7 @@ For example, the following `Class.TextLabel` object has a `Class.UITextSizeConst
 Do not use `Class.UITextSizeConstraint.MinTextSize|MinTextSize` property values lower than `9` or the text will be difficult to read for many viewers.
 </Alert>
 
-### Aspect ratio
+### Aspect Ratio
 
 The `Class.UIAspectRatioConstraint` enforces a **width‑to‑height** aspect ratio on a `Class.GuiObject` regardless of its core size, even if that size is set as a percentage of its parent. For example, inserting this constraint as a child of a `Class.Frame` and setting the constraint's `Class.UIAspectRatioConstraint.AspectRatio|AspectRatio` property to `2` (`2:1`) keeps the frame's width at twice that of its height. Similarly, setting this constraint's `Class.UIAspectRatioConstraint.AspectRatio|AspectRatio` property to `0.5` (`0.5:1`) keeps the frame's width at half that of its height.
 

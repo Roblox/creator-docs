@@ -3,11 +3,11 @@ title: Subscriptions
 description: Subscriptions within experiences let you offer users recurring benefits for a monthly fee.
 ---
 
-**Subscriptions** within experiences let you offer users recurring benefits for a monthly fee. Similar to [passes](./game-passes.md), the major difference between subscriptions and passes is that the benefits of a pass are granted in perpetuity, while the benefits of a subscription are contingent on the user paying a monthly fee. Subscriptions on Roblox have the following characteristics:
+**Subscriptions** within experiences let you offer users recurring benefits for a monthly fee. Similar to [Passes](./game-passes.md), the major difference between subscriptions and passes is that the benefits of a pass are granted in perpetuity, while the benefits of a subscription are contingent on the user paying a monthly fee. Subscriptions on Roblox have the following characteristics:
 
 - **Auto-renewal:** Subscriptions are auto-renewing, not one-time purchases, and are priced in local currency.
-- **Robux payout:** You receive subscription revenue in Robux. For more details, see [Earn with subscriptions](#earn-with-subscriptions).
-- **Single-tiered:** All subscriptions within an experience can be owned by users simultaneously. Mutually exclusive subscriptions are not supported.
+- **Robux Payout:** You receive subscription revenue in Robux. For more details, see [Earning with Subscriptions](#earning-with-subscriptions).
+- **Single-Tiered:** All subscriptions within an experience can be owned by users simultaneously. Mutually exclusive subscriptions are not supported.
 
 Users can purchase subscriptions on the desktop app or website using Roblox gift card credit or a credit or debit card, and through payment methods on the Apple and Google stores in qualifying regions. Users can view and manage their subscription purchases in the Subscriptions tab in their Roblox account settings.
 
@@ -19,7 +19,7 @@ Subscriptions will be rolled out to more regions in the future.
 To learn how to design subscriptions for your experience, see [Subscription Design](../../production/game-design/subscription-design.md). For a reference on how to implement subscriptions into your experience's monetization strategy, see this [implementation example](https://devforum.roblox.com/t/subscriptions-within-experiences-livetopia-implementation/2710072).
 </Alert>
 
-## Subscription guidelines
+## Subscription Guidelines
 
 Before creating your subscriptions, ensure they align with [Roblox's Terms of Use](https://en.help.roblox.com/hc/articles/19694609252884/) and comply with local laws. Any experience that engages in scams, attempts to mislead users with false offerings, or otherwise violate our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) will be taken down. In addition, ensure your subscriptions abide by the following guidelines:
 
@@ -30,7 +30,7 @@ Before creating your subscriptions, ensure they align with [Roblox's Terms of Us
 - **Do not direct users to purchase on another platform (e.g. mobile, web, etc.) in-experience:** While you are free to communicate with users off-platform, using the Roblox app to direct users to purchase elsewhere is prohibited.
 - **Do not gate subscription benefits by additional requirements once a user has paid:** Requiring a user to perform additional tasks, such as posting to social media, to get access to benefits they have paid for is prohibited. This guideline does not impact battle passes, which you are allowed to both create and market as a subscription purchase.
 
-## Create subscriptions
+## Creating Subscriptions
 
 Before you can create a subscription, you must be phone or [ID verified](../publishing/account-verification.md). To create a subscription:
 
@@ -61,25 +61,25 @@ Before you can create a subscription, you must be phone or [ID verified](../publ
    After creating your subscription, you can't make changes to anything but the cover image and description.
 </Alert>
 
-### Activate subscriptions
+### Activating Subscriptions
 
 Once a subscription is ready to go on-sale, click **&ctdot;** at the top right corner of the subscription tile and select **Activate**. Activated subscriptions are available for sale in the **Experience Details** page and within the experience itself.
 
 <img src="../../assets/monetization/subscriptions/subscriptions-activate.png" width="60%"/>
 
-Before activating your subscription for the first time, you must confirm a shortened version of your experience name. This shortened experience name is displayed to the user when they subscribe, appearing alongside the subscription name you created in [Create subscriptions](#create-subscriptions). It's also visible managing subscriptions in Roblox and App Store Settings.
+Before activating your subscription for the first time, you must confirm a shortened version of your experience name. This shortened experience name is displayed to the user when they subscribe, appearing alongside the subscription name you created in [Creating Subscriptions](#creating-subscriptions). It's also visible managing subscriptions in Roblox and App Store Settings.
 
  <Alert severity="warning">
    Shortened experience names are permanent and cannot be changed when set. Shortened experience names don't change the name of your experience on Roblox.
 </Alert>
 
-## Edit subscriptions
+## Editing Subscriptions
 
 You can have up to 50 subscriptions per experience between active and inactive subscriptions. To edit subscriptions, navigate to your experience in the [Creator Dashboard](https://create.roblox.com/) and select **Monetization Products** > **Subscriptions**.
 
 You can edit a subscription's image, description, or state. If you want to edit more than these properties, you need to delete and recreate the subscriptions with the desired changes.
 
-### Change image
+### Changing Image
 
 To update a subscription's image:
 
@@ -89,7 +89,7 @@ To update a subscription's image:
 
 2. Choose a new image and click **Save**, then **Save Changes**. The new image goes live after successfully passing moderation.
 
-### Change description
+### Changing Description
 
 To change a subscription's description:
 
@@ -97,7 +97,7 @@ To change a subscription's description:
 2. Edit the description, then click **Save Changes**. Descriptions are capped at 1,000 characters and can support emojis.
 3. Confirm changes by clicking **Yes, Confirm** on the confirmation window. Description updates are reflected immediately.
 
-### Change state
+### Changing State
 
 Subscriptions have two possible states:
 
@@ -114,7 +114,7 @@ To change a subscription's state:
 Deleting an active subscription results in full refunds for active subscribers and zero Robux for you. In most situations, if you want to delete a subscription, take it off sale first, select the option to cancel all renewals, and wait for the current period to conclude. Deleting a subscription requires the last four digits of the subscription ID for confirmation.
 </Alert>
 
-## Integrate subscriptions into an experience
+## Integrating Subscriptions into an Experience
 
 This code sample is a simple example of how to implement subscription detection in your experience:
 
@@ -162,7 +162,7 @@ Players.PlayerAdded:Connect(checkSubStatus)
 Players.UserSubscriptionStatusChanged:Connect(onUserSubscriptionStatusChanged)
 ```
 
-### Replace a game pass with a subscription
+### Replacing a Game Pass with a Subscription
 
 One option for rolling out subscriptions in your experience is to replace an existing Game Pass with a subscription. This is a great option if you want to quickly implement subscriptions in your experience without adding new features or awards.
 
@@ -248,7 +248,7 @@ Players.UserSubscriptionStatusChanged:Connect(onUserSubscriptionStatusChanged)
 MarketplaceService.PromptGamePassPurchaseFinished:Connect(onPromptGamePassPurchaseFinished)
 ```
 
-### Prompt subscription purchases
+### Prompting Subscription Purchases
 
 Although users can purchase subscriptions directly from an experience's **Game Details** page, you should also add a way to purchase a subscription in-game.
 
@@ -257,7 +257,7 @@ When you prompt a subscription purchase, `Players.UserSubscriptionStatusChanged`
 Although you can prompt a subscription purchase from the client, checking if a user already has a subscription via `MarketplaceService.GetUserSubscriptionStatusAsync` must be done from the server.
 
 <Alert severity="warning">
-When adding subscriptions to your experience, make sure to only offer them in supported regions and platforms. If not, users in unsupported regions and platforms can view the offering but will be unable to complete the purchase.
+When adding subscriptions to your experience, make sure to only offer them in supported regions and platforms. If not, users in unsupported regions and platforms can view the offering, but are unable to complete the purchase.
 </Alert>
 
 This example creates a `RemoteFunction` that the client can use to request the status of a subscription:
@@ -340,7 +340,7 @@ Other relevant functions are available in `Class.MarketplaceService`:
 - `Class.MarketplaceService:GetUserSubscriptionPaymentHistoryAsync()`
 - `Class.MarketplaceService:GetUserSubscriptionStatusAsync()`
 
-## Earn with subscriptions
+## Earning with Subscriptions
 
 Subscriptions are priced in local currency, but you earn Robux at a rate of US $0.01 to 1 Robux according to the base platform price you selected for the subscription after platform fees. Roblox takes a 30% platform fee for the first month only, meaning that you receive the full subscription earnings from the second month onward. This revenue split is consistent across all platforms.
 
@@ -359,7 +359,7 @@ Users cancelling an active subscription and failing to renew it does not automat
 Subscriptions are currently ineligible to be cross-sold by other experiences and are ineligible for affiliate fees. This additional opportunity will be supported at a later date.
 </Alert>
 
-### Subscription payouts
+### Subscription Payouts
 
 Payouts are found in **Robux Balance** > **My Transactions**:
 
@@ -371,7 +371,7 @@ Payouts are found in **Robux Balance** > **My Transactions**:
 
 To view refunding information of individual users, use `Class.MarketplaceService:GetUserSubscriptionPaymentHistoryAsync()`.
 
-## Subscription analytics
+## Subscription Analytics
 
 **Subscription analytics** help you gauge the success of individual subscriptions, identify trends, and forecast potential future earnings. Subscriptions are added to the subscriptions analytics page after the first time they're activated and are not removed when they're deactivated or deleted. You can access ready-made analytics through the Creator Dashboard, or you can capture subscription updates in real-time using webhooks.
 
@@ -387,20 +387,20 @@ To access subscription analytics on the Creator Dashboard:
 Subscription analytics track the following metrics:
 
 - **Subscriptions:** The total amount of active subscriptions in your experience.
-- **Estimated revenue:** The net revenue earned by experiences after fees. Does not include refund information.
-- **Subscriber breakdown:** The different types of subscribers.
+- **Estimated Revenue:** The net revenue earned by experiences after fees. Does not include refund information.
+- **Subscriber Breakdown:** The different types of subscribers.
   - **New**: The number of subscription purchases by first-time subscribers.
   - **Renewed**: The number of renewing subscriptions purchased in a prior period.
   - **Resurrected**: The number of new subscriptions purchased by users who had previously canceled.
 - **Cancellations**: The number of subscriptions that were not renewed. This includes all cancellations regardless of trigger, be it user cancellation, subscription deactivation by the creator, or by other means.
   - Cancellations are different from refunds. Cancelled subscriptions are subscriptions that will no longer renew but are paid in full for the remainder of the billing cycle, whereas refunds return the paid subscription amount to the user.
-- **Subscriptions by platform**: The number of subscriptions purchased on each platform.
-- **Platform earnings**: The net revenue earned through subscriptions purchased on each platform.
+- **Subscriptions by Platform**: The number of subscriptions purchased on each platform.
+- **Platform Earnings**: The net revenue earned through subscriptions purchased on each platform.
 
 This information is visible in the form of charts based on a date range under the **Trends** tab, and as a comprehensive list of total subscriptions offered under the **History** tab.
 
 <img src="../../assets/monetization/subscriptions/subscriptions-analytics.png" width="100%"/>
 
-### Through webhooks
+### Through Webhooks
 
-The Cloud API Webhook feature includes triggers for four subscription events: cancelled, purchased, refunded and renewed. These notifications fire immediately, so you can respond in real-time or create your own custom analytics. For more information on how to set up a webhook, see [Webhook notifications](../../cloud/webhooks/webhook-notifications.md).
+The Cloud API Webhook feature includes triggers for four subscription events: cancelled, purchased, refunded and renewed. These notifications fire immediately, so you can respond in real-time or create your own custom analytics. For more information on how to set up a webhook, see [Webhook Notifications](../../cloud/webhooks/webhook-notifications.md).

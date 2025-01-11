@@ -4,7 +4,7 @@ description: RopeConstraint prevents two attachments from separating further tha
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.RopeConstraint`, see [Mechanical constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.RopeConstraint`, see [Mechanical Constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;Units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 A `Class.RopeConstraint` prevents two attachments from separating further than a defined `Class.RopeConstraint.Length|Length`. The attachments can move closer together than this length and both can freely rotate. `Class.RopeConstraint.Restitution|Restitution` defines the elasticity of the attachments when they reach the separation limit specified by `Class.RopeConstraint.Length|Length`.

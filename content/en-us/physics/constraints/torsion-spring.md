@@ -1,10 +1,10 @@
 ---
-title: TorsionSpring
+title: Torsion Spring
 description: TorsionSpringConstraint applies torque based on a relative angle and relative angular velocity, in an attempt to bring two axes from two parts together.
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.TorsionSpringConstraint`, see [Mechanical constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.TorsionSpringConstraint`, see [Mechanical Constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;Units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 A `Class.TorsionSpringConstraint` applies torque based on a relative angle and relative angular velocity. It attempts to bring two axes from two parts together and is useful for [hinged](../../physics/constraints/hinge.md) swinging doors with a spring-back effect.

@@ -1,7 +1,7 @@
 ---
 title: The Mystery of Duvall Drive
 comments:
-next: /resources/the-mystery-of-duvall-drive/construct-the-house
+next: /resources/the-mystery-of-duvall-drive/constructing-the-house
 description: The Mystery of Duvall Drive is a showcase demo with accompanying documentation on the concepts and processes used during development.
 ---
 
@@ -16,14 +16,14 @@ Similar to the previous [Beyond the Dark](../../resources/beyond-the-dark/index.
 
 - **`Class.MaterialService`** and custom materials
 - **Packages** and their ability to streamline processes
-- **Volumetric audio** and `Class.SoundService`
-- **Streaming enabled** for complex experiences
+- **Volumetric Audio** and `Class.SoundService`
+- **Streaming Enabled** for complex experiences
 
 You can follow the articles sequentially or jump between the following sections:
 
-- **[Construct the house](../../resources/the-mystery-of-duvall-drive/construct-the-house.md)** explores the transformation from a simple blueprint to the final environment, including the process to ensure the environment was fun from start to finish.
-- **[Materialize the world](../../resources/the-mystery-of-duvall-drive/materialize-the-world.md)** details how both `Class.MaterialService` and `Class.SurfaceAppearance` create the look and feel of each room's normal and corrupted state.
-- **[Immersive narrative](../../resources/the-mystery-of-duvall-drive/immersive-narrative.md)** demonstrates how to utilize UI features to build lore throughout the playable area.
-- **[Stream in immersion](../../resources/the-mystery-of-duvall-drive/stream-in-immersion.md)** explains how we both code and constructed the experience to take advantage of Streaming Enabled capabilities.
-- **[Develop a moving world](../../resources/the-mystery-of-duvall-drive/develop-a-moving-world.md)** describes how and why movement can give the world a sense of life and reactiveness.
-- **[Design dark soundscapes](../../resources/the-mystery-of-duvall-drive/design-dark-soundscapes.md)** details how `Class.SoundService` and [volumetric audio](../../sound/objects.md#volumetric) craft the distinct soundscapes of the normal and corrupted worlds.
+- **[Constructing the House](../../resources/the-mystery-of-duvall-drive/constructing-the-house.md)** explores the transformation from a simple blueprint to the final environment, including the process to ensure the environment was fun from start to finish.
+- **[Materializing the World](../../resources/the-mystery-of-duvall-drive/materializing-the-world.md)** details how both `Class.MaterialService` and `Class.SurfaceAppearance` create the look and feel of each room's normal and corrupted state.
+- **[Immersive Narrative](../../resources/the-mystery-of-duvall-drive/immersive-narrative.md)** demonstrates how to utilize UI features to build lore throughout the playable area.
+- **[Streaming in Immersion](../../resources/the-mystery-of-duvall-drive/streaming-in-immersion.md)** explains how we both code and constructed the experience to take advantage of Streaming Enabled capabilities.
+- **[Developing a Moving World](../../resources/the-mystery-of-duvall-drive/developing-a-moving-world.md)** describes how and why movement can give the world a sense of life and reactiveness.
+- **[Designing Dark Soundscapes](../../resources/the-mystery-of-duvall-drive/designing-dark-soundscapes.md)** details how `Class.SoundService` and [volumetric audio](../../sound/objects.md#volumetric) craft the distinct soundscapes of the normal and corrupted worlds.

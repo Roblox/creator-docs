@@ -1,5 +1,5 @@
 ---
-title: Box modeling
+title: Box Modeling
 description: Create your basic rigid accessory model in Blender.
 next: /art/accessories/creating-rigid/texturing
 prev: /art/accessories/creating-rigid/
@@ -15,7 +15,7 @@ The following instructions are based off of the [Box Modeling 101 staff article]
 Whether you are using an existing shape or creating your own 3D object, it's important to consider [technical requirements](../../../art/accessories/specifications.md), such as keeping your geometry within a polycount budget, and [policy requirements](../../../marketplace/marketplace-policy.md), such as ensuring your design does not infringe on other creator's IP both within and outside of the Roblox ecosystem.
 </Alert>
 
-## General shape
+## General Shape
 
 <video controls src="../../../assets/art/accessories/creating-rigid/General-Shape.mp4" width="100%"></video>
 
@@ -30,7 +30,7 @@ In a new Blender file, delete everything except the starter cube, then create th
 5. Select the top face of the box and press <kbd>E</kbd> to extrude.
 6. Drag your mouse to extrude the lid. Extend the lid to about half the height of the main body.
 
-## Rounded lid
+## Rounded Lid
 
 <video controls src="../../../assets/art/accessories/creating-rigid/Rounded-Lid.mp4" width="100%"></video>
 Create the rounded lid shape using segmentation:
@@ -40,7 +40,7 @@ Create the rounded lid shape using segmentation:
 3. With both lines selected, press <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>B</kbd> to Bevel.
 4. In the context menu at the bottom right, set the number of segments to `6` and enable **Clamp Overlap**.
 
-### Merge vertices
+### Merge Vertices
 
 Sometimes tools like the Bevel tool may move vertices very close to each other without merging them. Use the Merge Vertices function to ensure that your object shares vertices wherever possible.
 
@@ -49,7 +49,7 @@ Sometimes tools like the Bevel tool may move vertices very close to each other w
 3. Right-click and select **Merge Vertices by Distance**.
 4. In the pop-up modal, set the distance to `.01`.
 
-## Side insets
+## Side Insets
 
 <video controls src="../../../assets/art/accessories/creating-rigid/Side-Insets.mp4" width="100%"></video>
 
@@ -62,11 +62,11 @@ Create the left and right insets of your chest:
 4. With your new insets selected, right-click and select **Extrude Along Normals**.
 5. Use the mouse to drag and adjust the distance of extrusion into the chest.
 
-## Front insets
+## Front Insets
 
 Create the front and back insets of your chest by creating new lines and then extruding your faces between those lines.
 
-### Vertical loop cuts
+### Vertical Loop Cuts
 
 <video controls src="../../../assets/art/accessories/creating-rigid/Vertical-Loop-Cuts.mp4" width="100%"></video>
 
@@ -80,7 +80,7 @@ To create your vertical loop cuts:
 6. With the new lines selected, press <kbd>S</kbd> to scale and <kbd>Y</kbd> to scale within the y-axis.
 7. Use the mouse to drag the lines until they nearly reach the edges of your chest. Click to confirm.
 
-### Horizontal loop cuts
+### Horizontal Loop Cuts
 
 <video controls src="../../../assets/art/accessories/creating-rigid/Horizontal-Loop-Cuts.mp4" width="100%"></video>
 
@@ -107,13 +107,13 @@ Create the extrusions for the front, top, and back of the chest.
 3. With the faces selected, hold <kbd>Shift</kbd> and click on the metal borders to deselect them. The front and back faces, and the top segmentations, should remain selected.
 4. Right click and select **Extrude Faces Along Normals**. Drag the mouse to extrude the faces about the same width as the metal borders.
 
-## Complete border
+## Complete Border
 
 <video controls src="../../../assets/art/accessories/creating-rigid/Complete-Border.mp4" width="100%"></video>
 
 The chest is almost ready, but is still missing the continuous metal border across the top edge. Remove the existing faces and add new geometry to the treasure chest.
 
-### Delete faces
+### Delete Faces
 
 Delete the faces of the top side metal borders:
 
@@ -122,7 +122,7 @@ Delete the faces of the top side metal borders:
 3. Press <kbd>X</kbd> to delete.
 4. Repeat steps 2-3 on the other side.
 
-### Add faces
+### Add Faces
 
 Add new faces to the sides that complete the geometry of the treasure chest box.
 

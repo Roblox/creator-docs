@@ -1,79 +1,79 @@
 backTo:
-  title: Back to guides
+  title: Back to Guides
   path: /platform/
 navigation:
-  - heading: Coding fundamentals
+  - heading: Coding Fundamentals
   - title: Overview
     path: /tutorials/fundamentals/coding-1/coding-fundamentals
-  - title: Variables & objects
+  - title: Variables & Objects
     path: /tutorials/fundamentals/coding-1/landing
     section:
-      - title: Create a script
-        path: /tutorials/fundamentals/coding-1/create-a-script
-      - title: Object properties
+      - title: Creating a Script
+        path: /tutorials/fundamentals/coding-1/creating-a-script
+      - title: Object Properties
         path: /tutorials/fundamentals/coding-1/object-properties
-      - title: Parents and children
+      - title: Parents and Children
         path: /tutorials/fundamentals/coding-1/parents-and-children
-  - title: Functions and events
+  - title: Functions and Events
     path: /tutorials/fundamentals/coding-2/functions-and-events
     section:
-      - title: Code a function
-        path: /tutorials/fundamentals/coding-2/code-a-function
-      - title: Use information with parameters
-        path: /tutorials/fundamentals/coding-2/use-parameters-and-events
-      - title: Parameters practice - buttons
+      - title: Coding a Function
+        path: /tutorials/fundamentals/coding-2/coding-a-function
+      - title: Using Information with Parameters
+        path: /tutorials/fundamentals/coding-2/using-parameters-and-events
+      - title: Parameters Practice - Buttons
         path: /tutorials/fundamentals/coding-2/parameters-practice-buttons
-      - title: Multiple parameters and arguments
+      - title: Multiple Parameters and Arguments
         path: /tutorials/fundamentals/coding-2/multiple-parameters-and-arguments
   - title: Conditionals
     path: /tutorials/fundamentals/coding-3/landing
     section:
-      - title: Intro to if statements
+      - title: Intro to If Statements
         path: /tutorials/fundamentals/coding-3/intro-to-if-statements
-      - title: If/then practice - traps
+      - title: If/then Practice - Traps
         path: /tutorials/fundamentals/coding-3/traps-with-if-statements
-      - title: If/then practice - power ups
+      - title: If/then Practice - Power ups
         path: /tutorials/fundamentals/coding-3/powerups-with-if-statements
-      - title: Multiple conditions with else/if
+      - title: Multiple Conditions with Else/If
         path: /tutorials/fundamentals/coding-3/multiple-conditions
-      - title: Else/if practice - giving points
-        path: /tutorials/fundamentals/coding-3/give-points
+      - title: Else/If Practice - Giving Points
+        path: /tutorials/fundamentals/coding-3/giving-points
   - title: Loops
     path: /tutorials/fundamentals/coding-4/landing
     section:
-      - title: Repeat code with while loops
-        path: /tutorials/fundamentals/coding-4/repeat-code-with-while-loops
-      - title: Intro to for loops
+      - title: Repeating Code with while Loops
+        path: /tutorials/fundamentals/coding-4/repeating-code-with-while-loops
+      - title: Intro to For Loops
         path: /tutorials/fundamentals/coding-4/intro-to-for-loops
-      - title: Glow lights with for loops
+      - title: Glowing Lights with For Loops
         path: /tutorials/fundamentals/coding-4/glow-lights-with-for-loops
-      - title: Timed bridge for loops
-        path: /tutorials/fundamentals/coding-4/create-a-timed-bridge
-      - title: Nest loops
+      - title: Timed Bridge For Loops
+        path: /tutorials/fundamentals/coding-4/creating-a-timed-bridge
+      - title: Nesting Loops
         path: /tutorials/fundamentals/coding-4/nested-loops
-  - title: Dictionaries and arrays
+  - title: Dictionaries and Arrays
     path: /tutorials/fundamentals/coding-5/landing
     section:
-      - title: Intro to arrays
+      - title: Intro to Arrays
         path: /tutorials/fundamentals/coding-5/intro-to-arrays
-      - title: Loop through arrays
+      - title: Looping through Arrays
         path: /tutorials/fundamentals/coding-5/loops-and-arrays
-      - title: Make changes to arrays
-        path: /tutorials/fundamentals/coding-5/make-changes-to-arrays
-      - title: Intro to dictionaries
+      - title: Making Changes to Arrays
+        path: /tutorials/fundamentals/coding-5/making-changes-to-arrays
+      - title: Intro to Dictionaries
         path: /tutorials/fundamentals/coding-5/intro-to-dictionaries
       - title: Pairs and iPairs
         path: /tutorials/fundamentals/coding-5/pairs-and-ipairs
-      - title: Return values from tables
-        path: /tutorials/fundamentals/coding-5/return-values-from-tables
-  - title: Organize code
+      - title: Returning Values From Tables
+        path: /tutorials/fundamentals/coding-5/returning-values-from-tables
+  - title: Organizing Code
     path: /tutorials/fundamentals/coding-6/landing
     section:
-      - title: Intro to module scripts
+      - title: Intro to Module Scripts
         path: /tutorials/fundamentals/coding-6/intro-to-module-scripts
-      - title: Create with module scripts
-        path: /tutorials/fundamentals/coding-6/create-with-module-scripts
-      - title: Code abstraction
+      - title: Creating with Module Scripts
+        path: /tutorials/fundamentals/coding-6/creating-with-module-scripts
+      - title: Coding Abstraction
         path: /tutorials/fundamentals/coding-6/coding-concept-abstraction
-      - title: Code algorithms
+      - title: Coding Algorithms
         path: /tutorials/fundamentals/coding-6/coding-concept-algorithms

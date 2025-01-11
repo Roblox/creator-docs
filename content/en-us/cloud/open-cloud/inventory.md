@@ -1,5 +1,5 @@
 ---
-title: User inventories
+title: User Inventories
 description: Covers core use cases for the Inventory API, such as verifying that a user owns a particular item and filtering return values for categories of items.
 ---
 
@@ -13,7 +13,7 @@ Responses from the [Inventory API][1] include items from the following categorie
 
 Before using the [Inventory API][1], you must [generate an API key](api-keys.md) or [configure OAuth 2](oauth2-overview.md) for your app. The examples on this page use API keys.
 
-## Check item ownership
+## Checking Item Ownership
 
 If you want to check whether a user owns a particular item (for example, a limited, badge, pass, or private server), use the `filter` parameter to check for a comma-separated list of one or more IDs. This code sample checks for three asset IDs:
 
@@ -103,7 +103,7 @@ The following response indicates that the user owns one of the three items:
 }
 ```
 
-## Filter items
+## Filtering Items
 
 If you want to display, for example, only the collectibles that a user owns, use the same code as above, just with a different `filter` parameter.
 
@@ -138,7 +138,7 @@ filter=gamePasses=true;badges=true
 
 Most calls to the API do not require any specific permissions, but several filters require Inventory read permissions. For more information, see [Filtering](../reference/patterns.md#list-inventory-items).
 
-## Paginate results
+## Paginating Results
 
 If a response includes a value for `nextPageToken`, use that value in the
 `pageToken` parameter of the subsequent request to retrieve the next page. For

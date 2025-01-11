@@ -1,13 +1,13 @@
 ---
-title: Properties window
+title: Properties Window
 description: The Properties window lets you adjust properties of a selected object to change how it looks and behaves.
 ---
 
-The **properties** window, accessible from the [View](../studio/view-tab.md) tab, allows you to adjust certain properties of a selected object to change how the object looks and behaves. Additionally, you can manage [tags](#instance-tags) and configure instance [attributes](#instance-attributes) at the bottom of the window.
+The **Properties** window, accessible from the [View](../studio/view-tab.md) tab, allows you to adjust certain properties of a selected object to change how the object looks and behaves. Additionally, you can manage [tags](#instance-tags) and configure instance [attributes](#instance-attributes) at the bottom of the window.
 
 <img src="../assets/studio/general/View-Tab-Properties.png" width="876" alt="Properties toggle button in Studio" />
 
-## Header bar
+## Header Bar
 
 When you select an object, the window's header bar changes to reflect both the class and name of the object.
 
@@ -26,7 +26,7 @@ When you select an object, the window's header bar changes to reflect both the c
 	</Grid>
 </Grid>
 
-## Section organization
+## Section Organization
 
 The **Properties** window divides an object's properties into sections. For example, a `Class.MeshPart` includes sections like **Appearance** and **Transform** which respectively allow you to change its appearance and transform its `Class.BasePart.Size|Size`, `Class.BasePart.CFrame|CFrame`, and origin.
 
@@ -36,7 +36,7 @@ You can collapse or expand any section or subsection by clicking the small arrow
 
 <img src="../assets/studio/properties/Section-Expand-Collapse.png" width="320" />
 
-## Expand inputs
+## Expanding Inputs
 
 Some properties are collapsed by default, but you can expand them by clicking the small arrow next to its name. For instance, `Class.BasePart|BaseParts` contain a **Position** property which represents an X, Y, Z coordinate in the 3D world. In Studio, these coordinates can be entered in two ways:
 
@@ -55,13 +55,13 @@ Some properties are collapsed by default, but you can expand them by clicking th
 After you expand or collapse a property, it remains expanded or collapsed for other objects of the same class, as well as related objects that share the same property.
 </Alert>
 
-## Filter properties
+## Filtering Properties
 
 You can filter properties by typing a search query into the **Filter Properties** input near the top of the window. For example, filtering by the letters "velo" finds all properties containing them, such as **AssemblyLinear<u>Velo</u>city** and **AssemblyAngular<u>Velo</u>city**. Quickly access this input by pressing <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>Shift</kbd><kbd>P</kbd>).
 
 <img src="../assets/studio/properties/Instance-Filtered.png" width="320" />
 
-## Instance tags
+## Instance Tags
 
 The **Tags** section allows you to apply specific tags for use with `Class.CollectionService`. Tags are sets of strings applied to instances that replicate from the server to the client. They are also serialized when places are saved.
 
@@ -79,7 +79,7 @@ To add tags to an instance through the **Properties** window:
 
    <img src="../assets/studio/properties/Remove-Tag-Button.png" width="320" />
 
-## Instance attributes
+## Instance Attributes
 
 **Attributes** allow you to customize instances with your own data. They are similar to built-in object properties, but you can create and modify your own attributes for any instance. Key features include:
 
@@ -105,7 +105,7 @@ Examples of attribute usage include:
 
   <img src="../assets/studio/properties/Attributes-Example-C.png" width="320" />
 
-### Supported types
+### Supported Types
 
 You can store the following types/values in attributes:
 
@@ -144,7 +144,7 @@ You can store the following types/values in attributes:
 	</Grid>
 </Grid>
 
-### Studio usage
+### Studio Usage
 
 New attributes can be created and modified in Studio as follows:
 

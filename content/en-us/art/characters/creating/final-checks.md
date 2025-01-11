@@ -1,8 +1,8 @@
 ---
-title: Final checks
+title: Final Checks
 description: Before exporting, verify that your model meets Studio's requirements.
-next: /art/characters/creating/export-textures
-prev: /art/characters/creating/verify-attachments
+next: /art/characters/creating/exporting-textures
+prev: /art/characters/creating/verifying-attachments
 ---
 
 Depending on the types of customizations you made to your template project or model, the following are additional tasks to look out for when cleaning up your project:

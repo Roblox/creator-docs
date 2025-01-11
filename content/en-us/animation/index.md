@@ -25,10 +25,10 @@ When creating animations, Studio provides the following features to animate effe
 
 - Make realistic animations by posing and animating `Class.Bone|Bones` of a [rigged mesh](../art/modeling/rigging.md).
 
-## Inverse kinematics
+## Inverse Kinematics
 
 You can use [inverse kinematics](../animation/inverse-kinematics.md) APIs to automatically create animations and poses based on environmental and external events. With inverse kinematics, you can procedurally generate various animation events, such as having a character's head track a bird flying in the sky, or making a character's arm automatically reach for a door knob when nearby.
 
-## Animation events
+## Animation Events
 
 An [animation event](../animation/events.md) is a specific point in an animation that triggers an action. You can define animation event markers across the Animation Editor timeline span, then use `Class.AnimationTrack:GetMarkerReachedSignal()` to detect those markers as the animation runs to perform specific actions, such as playing a sound effect whenever the user's foot touches the ground.

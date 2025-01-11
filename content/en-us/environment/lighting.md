@@ -1,5 +1,5 @@
 ---
-title: Global lighting
+title: Global Lighting
 description: Explains how to customize the global lighting with the Lighting service.
 ---
 
@@ -7,11 +7,11 @@ The `Class.Lighting` service contains properties that you can adjust to update
 and customize the global lighting in an experience. There are five categories of
 lighting properties:
 
-- **Color** &mdash; Configures hue within the experience.
-- **Intensity** &mdash; Configures the intensity or amount of light hitting the camera.
-- **Shadows** &mdash; Configures how a user experiences shadows within the experience.
-- **Environment** &mdash; Configures the conditions of the experience's world, such as the time of day and geographic latitude.
-- **Technology** &mdash; Configures the lighting technology Studio uses to render lighting and shadows.
+- [Color](#color) &mdash; Configures hue within the experience.
+- [Intensity](#intensity) &mdash; Configures the intensity or amount of light hitting the camera.
+- [Shadows](#shadows) &mdash; Configures how a user experiences shadows within the experience.
+- [Environment](#environment) &mdash; Configures the conditions of the experience's world, such as the time of day and geographic latitude.
+- [Technology](#technology) &mdash; Configures the lighting technology Studio uses to render lighting and shadows.
 
 ## Color
 

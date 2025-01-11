@@ -1,27 +1,27 @@
 ---
-title: Global wind
+title: Global Wind
 description: The global wind vector sets the direction and strength that wind blows through an experience, affecting terrain grass, dynamic clouds, and particles.
 ---
 
-The `Class.Workspace.GlobalWind|GlobalWind` vector sets the direction and strength that wind blows through an experience, affecting terrain grass and dynamic clouds. You can set it as a [constant vector](#global-wind-vector), or adjust it through [scripting](#scripted-effects) to create cyclical gusts of wind. Additionally, you can influence [particles](#particle-influence) to follow the global wind vector.
+The `Class.Workspace.GlobalWind|GlobalWind` vector sets the direction and strength that wind blows through an experience, affecting [terrain grass](../parts/terrain.md#animated-grass) and [dynamic&nbsp;clouds](../environment/clouds.md). You can set it as a [constant vector](#global-wind-vector), or adjust it through [scripting](#scripted-effects) to create cyclical gusts of wind. Additionally, you can influence [particles](#particle-influence) to follow the global wind vector.
 
 <video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Showcase.mp4" controls width="100%" alt="Video of wind blowing clouds and grass across rolling hills in the 3D world"></video>
 
 <Alert severity="warning">
-To see the effects of global wind in an experience, you'll need to enable [animated terrain grass](../parts/terrain.md#grass-animation) and/or [dynamic clouds](../environment/clouds.md).
+To see the effects of global wind in an experience, you'll need to enable [animated terrain grass](../parts/terrain.md#animated-grass) and/or [dynamic clouds](../environment/clouds.md).
 </Alert>
 
-## Global wind vector
+## Global Wind Vector
 
 Global wind is controlled through The `Class.Workspace.GlobalWind|GlobalWind` vector is a property of `Class.Workspace` and you can edit it directly in Studio, or set it through [scripting](#scripted-effects).
 
 To set the global wind vector in Studio:
 
-1. In the **Explorer** window, select the top-level **Workspace** service.
+1. Select the top-level **Workspace** object in the [Explorer](../studio/explorer.md) window.
 
    <img src="../assets/studio/explorer/Workspace.png" width="320" alt="Workspace object shown in Explorer window of Studio" />
 
-1. In the **Properties** window, locate the **GlobalWind** property and set an **X**, **Y**, and **Z** value for its direction and strength.
+1. In the [Properties](../studio/properties.md) window, locate the **GlobalWind** property and set an **X**, **Y**, and **Z** value for its direction and strength.
 
    <img src="../assets/studio/properties/Workspace-GlobalWind.png" width="320" alt="GlobalWind property shown in Properties window of Studio" />
 
@@ -33,7 +33,7 @@ Particles emitted by a `Class.ParticleEmitter` will follow the global wind vecto
 
 <video src="../assets/lighting-and-effects/aero-fluid-dynamics/Global-Wind-Particles.mp4" controls width="800" alt="Video of wind blowing particles from a ParticleEmitter"></video>
 
-## Wind direction widget
+## Wind Direction Widget
 
 To make it easier to tune global wind, you can use the **Wind&nbsp;Direction** widget, accessible from the [View](../studio/view-tab.md) tab. The widget lets you visualize how wind is blowing using a "wind&nbsp;sock" model, and you can dynamically set the wind's **Speed**, **Yaw**, and **Pitch** by clicking the desired aspect name and sliding the slider along the bottom, or you can adjust yaw or pitch by manipulating the green ring and blue arrow on the animated portion. You can also click and drag the widget to reposition it anywhere in the 3D viewport.
 
@@ -41,7 +41,7 @@ To make it easier to tune global wind, you can use the **Wind&nbsp;Direction** w
 
 <img src="../assets/lighting-and-effects/aero-fluid-dynamics/Wind-Direction-Widget.jpg" width="800" alt="Wind Direction widget showing in 3D viewport of Studio" />
 
-## Scripted effects
+## Scripted Effects
 
 Scripting of the `Class.Workspace.GlobalWind|GlobalWind` property opens up a whole range of possibilities. For example, you can use the following code sample to cause cyclical gusts of wind that ease in and out using the `Library.math.sin()` function.
 
