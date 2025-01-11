@@ -1,5 +1,5 @@
 ---
-title: Console Development Guidelines
+title: Console development guidelines
 description: Explains design requirements to follow for publishing an experience to consoles.
 ---
 
@@ -9,11 +9,11 @@ With 200M+ Xbox and PlayStation players, consoles present a major opportunity fo
 Experiences designed for consoles always need to provide [Content Maturity information](../../production/promotion/content-maturity.md) to ensure smooth releases and minimize the risk of being removed from consoles.
 </Alert>
 
-## Designing for Controllers
+## Design for controllers
 
 Console experiences receive commands from users through input controllers, which require special designs for smooth interactions.
 
-### Simplifying UI
+### Simplify the UI
 
 <img src="../../assets/publishing/console/UI-Navigation.png" width="70%" />
 
@@ -31,11 +31,11 @@ Apply the following to simplify the UI design for consoles:
 As controllers aren't just for consoles and VR but also are available on devices such as desktop and mobile, minimizing the number of moves needed can enhance the UI for all devices and input types in addition to PlayStation and Xbox.
 </Alert>
 
-### Adding Supplemental Control
+### Add supplemental control
 
 Unlike mobiles and desktops, navigation is always sequential on consoles, so users can't jump between far away elements as quickly as on other devices. To enhance the speed of navigation, consider adding additional buttons and shortcuts for essential in-experience actions.
 
-### Accommodating Dynamic Button Icons
+### Accommodate dynamic button icons
 
 <img src="../../assets/publishing/console/Buttons.png" width="50%" />
 
@@ -70,7 +70,7 @@ As your experience expands to more platforms, be sure to show button icons that 
   imageLabel.Image = mappedIcon
   ```
 
-## Providing Haptic Feedback
+## Provide haptic feedback
 
 <img src="../../assets/publishing/console/Haptic-Feedback.png" width="60%" />
 
@@ -82,13 +82,13 @@ One unique advantage of controllers is the capability of providing haptic feedba
 
 `Class.HapticService` also allows you to control the individual motors in a controller to set the intensity and duration of vibrations individually, so you can set different vibrations for different purposes and maintain the consistency with which actions trigger feedback. Design haptics carefully and avoid overuse, as users might find constant vibrations unpleasant and annoying.
 
-## Building for the 10ft Experience
+## Build for the 10ft experience
 
 <img src="../../assets/publishing/console/10ft-Experience.png" width="60%" />
 
 When on consoles, users are typically sitting 10 feet away from the screen. A scale factor of 1.5x ensures that the UI is comfortable, easy to navigate, and with legible fonts.
 
-### Considering TV Safe-Area
+### Consider TV safe-area
 
 <figure>
   <img src="../../assets/publishing/console/TV-Safe-Area.png" width="60%" alt="An example illustration showing the dimensions of the TV-safe and unsafe zone."/>
@@ -97,7 +97,7 @@ When on consoles, users are typically sitting 10 feet away from the screen. A sc
 
 Since not all TVs show content fully to the edges of the screen due to historical and technical limitations, put UI elements in TV-safe areas to ensure important experience elements are visible on various TVs.
 
-### Implementing Dynamically-Sized UI
+### Implement dynamically-sized UI
 
 Implement your UI using relative sizes and relative positions to measure everything as percentages of a frame. Incorporate a scale factor to all UI sizes by:
 
@@ -109,12 +109,12 @@ Implement your UI using relative sizes and relative positions to measure everyth
   </Alert>
 - Implementing `Class.ScrollingFrame` to reduce clutter on screen as the UI scales up.
 
-## Adapting Progressive Disclosure
+## Adapt progressive disclosure
 
 <img src="../../assets/publishing/console/Progressive-Disclosure.png" width="100%" />
 
 Progressive disclosure defers advanced or rarely used features to a secondary screen. It's one of the best ways to declutter your UI and make it easy to use. For the console UX, it's common and faster to have the user go in and out of screens rather than fitting everything onto one screen like designing for desktops.
 
-## Providing Sound Feedback
+## Provide sound feedback
 
 Unlike desktop or mobile interfaces, on which interactions are typically silent or rely on subtle haptic feedback, you can add sound effects to improve console interactions. When users navigate through the UI using a controller, consider incorporating sound effects to confirm selections or signal menu traversal, which can elevate the overall experience.

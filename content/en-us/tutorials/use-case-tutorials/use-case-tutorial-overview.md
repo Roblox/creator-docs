@@ -1,5 +1,5 @@
 ---
-title: Use Case Tutorials
+title: Use case tutorials
 description: An overview of creation use case tutorials covering topics like modeling, UI, and visual effects.
 hideInPageNavigation: true
 ---
@@ -12,7 +12,7 @@ hideInPageNavigation: true
 **Modeling** is the process of crafting 3D objects for props, environments, and characters within your experiences. This process is important because it allows you to create both the visual and interactive content that encourages players to explore and engage with the 3D space.
 </div>
 
-<Typography variant='h2'>Studio Modeling</Typography>
+<Typography variant='h2'>Studio modeling</Typography>
 
 Use solid modeling operations directly in Studio to form complex shapes by unioning and negating basic parts.
 
@@ -23,11 +23,11 @@ Use solid modeling operations directly in Studio to form complex shapes by union
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <iframe src="https://www.youtube-nocookie.com/embed/SgPU84AqpkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen  style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}></iframe>
  </div>
-   <Typography variant='body1' >Intro to World Buiding</Typography>
+   <Typography variant='body1' >Intro to world building</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="https://www.youtube.com/watch?v=SgPU84AqpkY&t=74s">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -39,11 +39,11 @@ Use solid modeling operations directly in Studio to form complex shapes by union
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Neon-Signs.png" />
  </div>
-   <Typography variant='body1' >Creating Neon Signs with Solid Modeling</Typography>
+   <Typography variant='body1' >Create neon signs with solid modeling</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./modeling/creating-neon-signs.md">
+       <a underline="none" href="./modeling/create-neon-signs.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -55,18 +55,18 @@ Use solid modeling operations directly in Studio to form complex shapes by union
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Modular-Environments.png" />
  </div>
-   <Typography variant='body1' >Assembling Modular Environments</Typography>
+   <Typography variant='body1' >Assemble modular environments</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./modeling/assembling-modular-environments.md">
+       <a underline="none" href="./modeling/assemble-modular-environments.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
  </Grid>
 </Grid>
 
-<Typography variant='h2'>Blender Modeling</Typography>
+<Typography variant='h2'>Blender modeling</Typography>
 
 Use third-party modeling tools like Blender to create meshes, then import them into Studio using the 3D Importer.
 
@@ -77,11 +77,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Box-Modeling.png" />
  </div>
-   <Typography variant='body1' >Box Modeling 101</Typography>
+   <Typography variant='body1' >Box modeling 101</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="https://devforum.roblox.com/t/modeling-101-in-blender-box-modeling">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -93,11 +93,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Vertex-Coloring.png" />
  </div>
-   <Typography variant='body1' >Vertex Coloring Meshes</Typography>
+   <Typography variant='body1' >Vertex coloring meshes</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="https://devforum.roblox.com/t/vertex-colored-meshes-using-blender-and-studio">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -107,25 +107,25 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 <BaseAccordion>
 <AccordionSummary>
 
-<Typography variant="h5">Related Docs</Typography>
+<Typography variant="h5">Related docs</Typography>
 </AccordionSummary>
 <AccordionDetails>
 
 - [Parts](../../parts/index.md)
-- [Solid Modeling](../../parts/solid-modeling.md)
+- [Solid modeling](../../parts/solid-modeling.md)
 - [Meshes](../../parts/meshes.md)
-- [Texture and Decals](../../parts/textures-decals.md)
-- [Mesh Specifications](../../art/modeling/specifications.md)
-- [Texture Specifications](../../art/modeling/texture-specifications.md)
-- [Export Requirements](../../art/modeling/export-requirements.md)
-- [Roblox Blender Plugin](../../art/modeling/roblox-blender-plugin.md)
+- [Texture and decals](../../parts/textures-decals.md)
+- [Mesh specifications](../../art/modeling/specifications.md)
+- [Texture specifications](../../art/modeling/texture-specifications.md)
+- [Export requirements](../../art/modeling/export-requirements.md)
+- [Roblox Blender plugin](../../art/modeling/roblox-blender-plugin.md)
 
 </AccordionDetails>
 </BaseAccordion>
 
 <br /> <br />
 
-<Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>User Interfaces</Typography>
+<Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>User interfaces</Typography>
 
 <div style={{marginBottom: 24}}>
 **User interfaces** (UI) are visual or interactive elements that either provide essential gameplay information or teach players how to complete unique user flows within your experiences. Strategically implementing UI in key locations on-screen and in the 3D space is important because UI communicates what players need to know to be successful and to have a positive user experience, such as information about their main objective or their location in the overall map.
@@ -138,11 +138,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Creating-HUD-Meters.png" />
  </div>
-   <Typography variant='body1' >Creating HUD Meters</Typography>
+   <Typography variant='body1' >Create HUD meters</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./ui/creating-hud-meters.md">
+       <a underline="none" href="./ui/create-hud-meters.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -154,11 +154,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Interactive-UI.png" />
  </div>
-   <Typography variant='body1' >Making UI Interactive</Typography>
+   <Typography variant='body1' >Make UI interactive</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="./ui/interactive-ui.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -170,11 +170,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Proximity-Prompts.png" />
  </div>
-   <Typography variant='body1' >Creating Proximity Prompts</Typography>
+   <Typography variant='body1' >Create proximity prompts</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="./ui/proximity-prompts.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -186,11 +186,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Score-Bars.png" />
  </div>
-   <Typography variant='body1' >Creating Score Bars</Typography>
+   <Typography variant='body1' >Create score bars</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./ui/creating-a-score-bar.md">
+       <a underline="none" href="./ui/create-a-score-bar.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -200,18 +200,18 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 <BaseAccordion>
 <AccordionSummary>
 
-<Typography variant="h5">Related Docs</Typography>
+<Typography variant="h5">Related docs</Typography>
 </AccordionSummary>
 <AccordionDetails>
 
-- [On-Screen UI](../../ui/on-screen-containers.md)
-- [In-Experience UI](../../ui/in-experience-containers.md)
+- [On-screen UI](../../ui/on-screen-containers.md)
+- [In-experience UI](../../ui/in-experience-containers.md)
 - [Labels](../../ui/labels.md)
 - [Buttons](../../ui/buttons.md)
 - [Frames](../../ui/frames.md)
-- [UI Appearance Modifiers](../../ui/appearance-modifiers.md)
-- [Proximity Prompts](../../ui/proximity-prompts.md)
-- [Positioning and Sizing UI Objects](../../ui/positioning-and-sizing.md)
+- [UI appearance modifiers](../../ui/appearance-modifiers.md)
+- [Proximity prompts](../../ui/proximity-prompts.md)
+- [Position and size UI objects](../../ui/position-and-size.md)
 
 </AccordionDetails>
 </BaseAccordion>
@@ -231,11 +231,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Background-Music.png" />
  </div>
-   <Typography variant='body1' >Playing Background Music</Typography>
+   <Typography variant='body1' >Playing background music</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./audio/playing-background-music.md">
+       <a underline="none" href="./audio/play-background-music.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -247,11 +247,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Positional-Audio.png" />
  </div>
-   <Typography variant='body1' >Playing Positional Sounds</Typography>
+   <Typography variant='body1' >Playing positional sounds</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="./audio/in-game-sounds.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -261,14 +261,14 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 <BaseAccordion>
 <AccordionSummary>
 
-<Typography variant="h5">Related Docs</Typography>
+<Typography variant="h5">Related docs</Typography>
 </AccordionSummary>
 <AccordionDetails>
 
-- [Audio Assets](../../sound/assets.md)
-- [Sound Objects](../../sound/objects.md)
-- [Sound Groups](../../sound/groups.md)
-- [Dynamic Effects](../../sound/dynamic-effects.md)
+- [Audio assets](../../sound/assets.md)
+- [Sound objects](../../sound/objects.md)
+- [Sound groups](../../sound/groups.md)
+- [Dynamic effects](../../sound/dynamic-effects.md)
 
 </AccordionDetails>
 </BaseAccordion>
@@ -288,11 +288,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Indoor-Lighting.png" />
  </div>
-   <Typography variant='body1' >Enhancing Indoor Environments</Typography>
+   <Typography variant='body1' >Enhance indoor environments</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./lighting/enhancing-indoor-environments.md">
+       <a underline="none" href="./lighting/enhance-indoor-environments.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -304,11 +304,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Outdoor-Lighting.png" />
  </div>
-   <Typography variant='body1' >Enhancing Outdoor Environments</Typography>
+   <Typography variant='body1' >Enhance outdoor environments</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./lighting/enhancing-outdoor-environments-with-future-lighting.md">
+       <a underline="none" href="./lighting/enhance-outdoor-environments-with-future-lighting.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -318,14 +318,14 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 <BaseAccordion>
 <AccordionSummary>
 
-<Typography variant="h5">Related Docs</Typography>
+<Typography variant="h5">Related docs</Typography>
 </AccordionSummary>
 <AccordionDetails>
 
-- [Local Light Sources](../../effects/light-sources.md)
-- [Global Lighting Overview](../../environment/lighting.md)
-- [Atmospheric Effects](../../environment/atmosphere.md)
-- [Post-Processing Effects](../../environment/post-processing-effects.md)
+- [Local light sources](../../effects/light-sources.md)
+- [Global lighting overview](../../environment/lighting.md)
+- [Atmospheric effects](../../environment/atmosphere.md)
+- [Post-processing effects](../../environment/post-processing-effects.md)
 - [Skyboxes](../../environment/skybox.md)
 
 </AccordionDetails>
@@ -346,11 +346,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Laser-Beams.png" />
  </div>
-   <Typography variant='body1' >Creating Laser Beams</Typography>
+   <Typography variant='body1' >Create laser beams</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="./vfx/laser-traps-with-beams.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -362,11 +362,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Waterfalls.png" />
  </div>
-   <Typography variant='body1' >Creating Waterfalls</Typography>
+   <Typography variant='body1' >Create waterfalls</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./vfx/creating-waterfalls.md">
+       <a underline="none" href="./vfx/create-waterfalls.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -378,11 +378,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Volcanoes.png" />
  </div>
-   <Typography variant='body1' >Creating Volcanoes</Typography>
+   <Typography variant='body1' >Create volcanoes</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./vfx/creating-volcanoes.md">
+       <a underline="none" href="./vfx/create-volcanoes.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -393,11 +393,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 <BaseAccordion>
 <AccordionSummary>
 
-<Typography variant="h5">Related Docs</Typography>
+<Typography variant="h5">Related docs</Typography>
 </AccordionSummary>
 <AccordionDetails>
 
-- [Particle Emitters](../../effects/particle-emitters.md)
+- [Particle emitters](../../effects/particle-emitters.md)
 - [Beams](../../effects/beams.md)
 - [Trails](../../effects/trails.md)
 - [Flipbooks](../../effects/particle-emitters.md#flipbooks)
@@ -424,7 +424,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
      <div style={{marginTop:16}}>
        <a underline="none" href="https://www.youtube.com/watch?v=9mXvhYSv7fc&t=96s">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -436,11 +436,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Moving-Objects.png" />
  </div>
-   <Typography variant='body1' >Creating Moving Objects</Typography>
+   <Typography variant='body1' >Create moving objects</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./physics/creating-moving-objects.md">
+       <a underline="none" href="./physics/create-moving-objects.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -452,11 +452,11 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Spinning-Objects.png" />
  </div>
-   <Typography variant='body1' >Creating Spinning Objects</Typography>
+   <Typography variant='body1' >Creating spinning objects</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./physics/creating-spinning-objects.md">
+       <a underline="none" href="./physics/create-spinning-objects.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -466,15 +466,15 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 <BaseAccordion>
 <AccordionSummary>
 
-<Typography variant="h5">Related Docs</Typography>
+<Typography variant="h5">Related docs</Typography>
 </AccordionSummary>
 <AccordionDetails>
 
 - [Assemblies](../../physics/assemblies.md)
-- [Network Ownership](../../physics/network-ownership.md)
-- [Mechanical Constraints](../../physics/mechanical-constraints.md)
-- [Mover Constraints](../../physics/mover-constraints.md)
-- [Roblox Units](../../physics/units.md)
+- [Network ownership](../../physics/network-ownership.md)
+- [Mechanical constraints](../../physics/mechanical-constraints.md)
+- [Mover constraints](../../physics/mover-constraints.md)
+- [Roblox units](../../physics/units.md)
 
 </AccordionDetails>
 </BaseAccordion>
@@ -487,7 +487,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 **Animation** is the process of creating motion for your characters, objects, and environments using internal rigs that you can pose between keyframes. Designing models with rigging and skinning data is important because it allows you to create engaging, dynamic, and expressive objects that bend and flex naturally.
 </div>
 
-<Typography variant='h2'>Studio Animation</Typography>
+<Typography variant='h2'>Studio animation</Typography>
 
 Use the Animation Editor directly in Studio to create animations for models or meshes with rigging and skinning data.
 
@@ -498,11 +498,11 @@ Use the Animation Editor directly in Studio to create animations for models or m
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Creating-Animations.png" />
  </div>
-   <Typography variant='body1' >Creating Character Animations</Typography>
+   <Typography variant='body1' >Create character animations</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./animation/creating-an-animation.md">
+       <a underline="none" href="./animation/create-an-animation.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -514,18 +514,18 @@ Use the Animation Editor directly in Studio to create animations for models or m
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Scripting-Avatar-Animations.png" />
  </div>
-   <Typography variant='body1' >Playing Character Animations</Typography>
+   <Typography variant='body1' >Play character animations</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./animation/playing-character-animations.md">
+       <a underline="none" href="./animation/play-character-animations.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
  </Grid>
 </Grid>
 
-<Typography variant='h2'>Blender Animation</Typography>
+<Typography variant='h2'>Blender animation</Typography>
 
 Use third-party modeling tools like Blender to create meshes with rigging and skinning data, then import them into Studio using the 3D Importer.
 
@@ -536,15 +536,15 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Simple-Mesh.png" />
  </div>
-   <Typography variant='body1' >Rigging and Skinning a Simple Mesh</Typography>
+   <Typography variant='body1' >Rig and skin a simple mesh</Typography>
    <div style={{marginTop:16}}>
-     <a underline="none" href="../../art/modeling/rigging-a-simple-mesh.md">
+     <a underline="none" href="../../art/modeling/rig-a-simple-mesh.md">
      <Button variant="contained" color="secondary" size='large'
-     style={{marginRight:16, alignSelf: 'flex-start'}}>Rigging</Button>
+     style={{marginRight:16, alignSelf: 'flex-start'}}>Rig</Button>
      </a>
-     <a underline="none" href="../../art/modeling/skinning-a-simple-mesh.md">
+     <a underline="none" href="../../art/modeling/skin-a-simple-mesh.md">
      <Button variant="contained" color="secondary" size='large'
-     style={{marginRight:16, alignSelf: 'flex-start'}}>Skinning</Button>
+     style={{marginRight:16, alignSelf: 'flex-start'}}>Skin</Button>
      </a>
    </div>
  </Grid>
@@ -556,15 +556,15 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Humanoid-Model.png" />
  </div>
-   <Typography variant='body1' >Rigging and Skinning a Humanoid Model</Typography>
+   <Typography variant='body1' >Rig and skin a humanoid model</Typography>
    <div style={{marginTop:16}}>
-     <a underline="none" href="../../art/modeling/rigging-a-humanoid-model.md">
+     <a underline="none" href="../../art/modeling/rig-a-humanoid-model.md">
      <Button variant="contained" color="secondary" size='large'
-     style={{marginRight:16, alignSelf: 'flex-start'}}>Rigging</Button>
+     style={{marginRight:16, alignSelf: 'flex-start'}}>Rig</Button>
      </a>
-     <a underline="none" href="../../art/modeling/skinning-a-humanoid-model.md">
+     <a underline="none" href="../../art/modeling/skin-a-humanoid-model.md">
      <Button variant="contained" color="secondary" size='large'
-     style={{marginRight:16, alignSelf: 'flex-start'}}>Skinning</Button>
+     style={{marginRight:16, alignSelf: 'flex-start'}}>Skin</Button>
      </a>
    </div>
  </Grid>
@@ -573,15 +573,15 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="h5">Related Docs</Typography>
+<Typography variant="h5">Related docs</Typography>
 </AccordionSummary>
 <AccordionDetails>
 
-- [Animation Editor](../../animation/editor.md)
-- [Animation Capture](../../animation/capture.md)
-- [Curve Editor](../../animation/curve-editor.md)
-- [Inverse Kinematics](../../animation/inverse-kinematics.md)
-- [Using Animations](../../animation/using.md)
+- [Animation editor](../../animation/editor.md)
+- [Animation capture](../../animation/capture.md)
+- [Curve editor](../../animation/curve-editor.md)
+- [Inverse kinematics](../../animation/inverse-kinematics.md)
+- [Use animations](../../animation/use.md)
 
 </AccordionDetails>
 </BaseAccordion>
@@ -602,11 +602,11 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Script-Types-Locations.png" />
  </div>
-   <Typography variant='body1' >Script Types and Locations</Typography>
+   <Typography variant='body1' >Script types and locations</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="../../scripting/locations.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -622,7 +622,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
      <div style={{marginTop:16}}>
        <a underline="none" href="../../scripting/services.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -634,11 +634,11 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Properties-Attributes.png" />
  </div>
-   <Typography variant='body1' >Properties and Attributes</Typography>
+   <Typography variant='body1' >Properties and attributes</Typography>
      <div style={{marginTop:16}}>
        <a underline="none" href="../../scripting/attributes.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -654,7 +654,7 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
      <div style={{marginTop:16}}>
        <a underline="none" href="../../scripting/events/index.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -666,11 +666,11 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Saving-Data.png" />
  </div>
-   <Typography variant='body1' >Saving Data</Typography>
+   <Typography variant='body1' >Save data</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="../../tutorials/use-case-tutorials/scripting/intermediate-scripting/saving-data.md">
+       <a underline="none" href="../../tutorials/use-case-tutorials/scripting/intermediate-scripting/save-data.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -680,20 +680,20 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 <BaseAccordion>
 <AccordionSummary>
 
-<Typography variant="h5">Related Docs</Typography>
+<Typography variant="h5">Related docs</Typography>
 </AccordionSummary>
 <AccordionDetails>
 
-- [Reusing Code](../../scripting/module.md)
-- [Scheduling Code](../../scripting/scheduler.md)
-- [Luau Reference](../../luau/index.md)
+- [Reuse code](../../scripting/module.md)
+- [Schedule code](../../scripting/scheduler.md)
+- [Luau reference](../../luau/index.md)
 
 </AccordionDetails>
 </BaseAccordion>
 
 <br /> <br />
 
-<Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Camera and Input</Typography>
+<Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Camera and input</Typography>
 
 <div style={{marginBottom: 24}}>
 **Camera** is the object that determines what the player is able to see in the 3D space, and **input** is the method or device in which players access and interact with your experience, such as a mobile device or gamepad. Designing gameplay around your camera configuration and which input types players can use to access your experience is important because your design decisions directly impact accessibility, user experience, and how players can engage with objects.
@@ -706,11 +706,11 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/First-Person-Camera.png" />
  </div>
-   <Typography variant='body1' >Creating a First-Person Camera </Typography>
+   <Typography variant='body1' >Create a first-person camera </Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./input-and-camera/controlling-the-users-camera.md#creating-a-first-person-camera">
+       <a underline="none" href="./input-and-camera/control-the-users-camera.md#create-a-first-person-camera">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -722,11 +722,11 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Side-Scrolling-Camera.png" />
  </div>
-   <Typography variant='body1' >Creating a Side-Scrolling Camera</Typography>
+   <Typography variant='body1' >Create a side-scrolling camera</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./input-and-camera/controlling-the-users-camera.md#creating-a-side-scrolling-camera">
+       <a underline="none" href="./input-and-camera/control-the-users-camera.md#create-a-side-scrolling-camera">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -738,11 +738,11 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Isometric-Camera.png" />
  </div>
-   <Typography variant='body1' >Creating an Isometric Camera</Typography>
+   <Typography variant='body1' >Create an isometric camera</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./input-and-camera/controlling-the-users-camera.md#creating-an-isometric-camera">
+       <a underline="none" href="./input-and-camera/control-the-users-camera.md#create-an-isometric-camera">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -754,11 +754,11 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
  style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
  <img src="../../assets/tutorials/UCT-Overview/Player-Input.png" />
  </div>
-   <Typography variant='body1' >Detecting User Input</Typography>
+   <Typography variant='body1' >Detect user input</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="./input-and-camera/detecting-user-input.md">
+       <a underline="none" href="./input-and-camera/detect-user-input.md">
        <Button variant="contained" color="secondary" size='large'
-       style={{marginRight:8, alignSelf: 'flex-start'}}>Get Started</Button>
+       style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>
      </div>
  </Grid>
@@ -767,14 +767,14 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="h5">Related Docs</Typography>
+<Typography variant="h5">Related docs</Typography>
 </AccordionSummary>
 <AccordionDetails>
 
-- [Customizing the Camera](../../workspace/camera.md)
-- [Mouse and Keyboard Input](../../input/mouse-and-keyboard.md)
-- [Mobile Input](../../input/mobile.md)
-- [Gamepad Input](../../input/gamepad.md)
+- [Customize the camera](../../workspace/camera.md)
+- [Mouse and keyboard input](../../input/mouse-and-keyboard.md)
+- [Mobile input](../../input/mobile.md)
+- [Gamepad input](../../input/gamepad.md)
 
 </AccordionDetails>
 </BaseAccordion>

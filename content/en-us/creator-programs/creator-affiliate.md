@@ -24,7 +24,7 @@ We are looking for creators, influencers, and studios with one or more of the fo
 - **The ability to reach [new audiences](https://corp.roblox.com/newsroom/2024/07/roblox-genre-insights-what-will-you-create-next) and meet their needs in growing genres and markets.** Growing genres include open world action, sports, driving, and social cooperation, and growing markets include Japan, India, Germany, Brazil, and South Korea.
 - **Marketing expertise.** You can demonstrate this through previous creative and successful marketing campaigns, as well as through the quality of your Creator Affiliate Pilot Program application.
 
-## How it Works
+## How it works
 
 You can add your affiliate link to:
 
@@ -42,7 +42,7 @@ You must also provide an FTC disclosure that mentions you might earn a commissio
 - Meet our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards)
 - Be based in countries supporting [DevEx](https://en.help.roblox.com/hc/en-us/articles/203314100-Developer-Exchange-DevEx-Overview-How-to-Submit-Requirements)
 
-## How to Apply
+## How to apply
 
 You can apply to the Creator Affiliate Pilot Program using the link below.
 

@@ -394,7 +394,7 @@ properties:
 
       - Players may experience motion sickness if an equivalent head tracking
         solution is not added.
-      - The Roblox engine performs latency optimizations when `HeadLocked` is
+      - The Roblox Engine performs latency optimizations when `HeadLocked` is
         true.
 
       ##### See Also

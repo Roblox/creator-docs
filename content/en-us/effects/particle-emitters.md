@@ -1,5 +1,5 @@
 ---
-title: Particle Emitters
+title: Particle emitters
 description: Particle emitters emit 2D images to simulate special effects like fire, smoke, and sparks.
 ---
 
@@ -7,7 +7,7 @@ A `Class.ParticleEmitter` is an object that emits customizable 2D images (partic
 
 <video src="../assets/lighting-and-effects/particle-emitter/Showcase.mp4" controls width="100%" alt="Video of particles emitting from a MeshPart in the 3D world"></video>
 
-## Creating a Particle Emitter
+## Create particle emitters
 
 You can parent a `Class.ParticleEmitter` to an `Class.Attachment` or an object of the `Class.BasePart` class. When parented to a `Class.BasePart`, particles spawn randomly within the part's bounding box or [shape](#shape); when parented to an `Class.Attachment`, particles spawn from the attachment's position.
 
@@ -22,14 +22,14 @@ itself instead of using `Class.ParticleEmitter.EmissionDirection|EmissionDirecti
 
 <video src="../assets/lighting-and-effects/particle-emitter/Emission-Direction.mp4" controls width="800" alt="Video of the particle emission direction changing faces on a parent MeshPart"></video>
 
-To create a particle emitter on a given `Class.BasePart` or `Class.Attachment`:
+To create a particle emitter on a part or attachment:
 
 1. In the **Explorer** window, hover over the part or attachment and click the &CirclePlus; button. A contextual menu displays.
 2. From the menu, insert a **ParticleEmitter**. The particle emitter immediately emits particles within the part's area or from the attachment's position.
 
    <img src="../assets/studio/explorer/MeshPart-ParticleEmitter.png" width="320" alt="ParticleEmitter object as child of MeshPart in Explorer hierarchy" />
 
-## Customizing Particles
+## Customize particles
 
 By experimenting with the following properties, you can customize a particle's visual appearance to make unique gameplay elements like bursting volcanos, magical dust, and dust motes.
 
@@ -53,7 +53,7 @@ If you're creating an image to use as a particle texture, it's best to use `.png
 
 <Alert severity="info">
 For steps on how to import an image for use as a particle texture,
-see [Importing Assets](../projects/assets/manager.md#importing-assets).
+see [Import assets](../projects/assets/manager.md#import-assets).
 </Alert>
 
 To insert an image into a particle emitter:
@@ -222,7 +222,7 @@ orientation mode to use for an emitter's particle geometry.
 <thead>
 <tr>
 <td>Orientation</td>
-<td>Particle Behavior</td>
+<td>Particle behavior</td>
 </tr>
 </thead>
 <tbody>
@@ -250,19 +250,19 @@ orientation mode to use for an emitter's particle geometry.
   <figcaption>Expected outcome of particle orientation</figcaption>
 </figure>
 
-### Light Emission
+### Light emission
 
 The `Class.ParticleEmitter.LightEmission|LightEmission` property determines the blending of particle `Class.ParticleEmitter.Texture|Texture` colors with the colors behind them. A value of 0 uses normal blending mode while a value of 1 uses additive blending. Higher values can make particles glow even in environments with low lighting.
 
 <video src="../assets/lighting-and-effects/particle-emitter/LightEmission.mp4" controls width="800" alt="Video showing light emission values of 0 vs. 1"></video>
 
-### Spread Angle
+### Spread angle
 
 The `Class.ParticleEmitter.SpreadAngle|SpreadAngle` property has an **X** and a **Y** value which determine the range of angles from which a particle can emit. The range is calculated from both sides around the axes; for example, a value of `(45, 0)` emits particles in a range of 0&deg; to 45&deg; away from the `Class.ParticleEmitter.EmissionDirection|EmissionDirection` across the **X** axis.
 
 <video src="../assets/lighting-and-effects/particle-emitter/SpreadAngle.mp4" controls width="800" alt="Video of X axis spread angle 0° vs. 45°"></video>
 
-### Wind Influence
+### Wind influence
 
 If you've enabled [global&nbsp;wind](../environment/global-wind.md) in an experience, particles will follow the global wind vector as long as the emitter's `Class.ParticleEmitter.WindAffectsDrag|WindAffectsDrag` property is enabled and its `Class.ParticleEmitter.Drag|Drag` property is greater than 0.
 
@@ -436,7 +436,7 @@ The `Class.ParticleEmitter.FlipbookStartRandom|FlipbookStartRandom` property det
 </TabItem>
 </Tabs>
 
-### Other Properties
+### Other properties
 
 To further customize particles, consider the following emitter properties, and click through to the `Class.ParticleEmitter` reference page for more details.
 

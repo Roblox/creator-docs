@@ -1,5 +1,5 @@
 ---
-title: Manually Editing Localization Table
+title: Manually edit localization table
 description: Learn how to manually add, edit, and remove entries to your experience's cloud localization table.
 ---
 
@@ -7,17 +7,17 @@ When localizing your content, you might need to manually modify your localizatio
 
 Whether you have translation entries automatically captured or manually added, all the translation entries are saved to the [**cloud localization table**](#cloud-localization-table). To modify the localization table, you can perform the following actions:
 
-- [Add source content](#adding-source-content) to the table, either manually or automatically.
-- [Remove content](#removing-content-from-localization-table) from the table, such as usernames or other strings that shouldn't be translated.
-- [Add translations](#adding-translations) to entries in the table for any supported languages set in your experience.
+- [Add source content](#add-source-content) to the table, either manually or automatically.
+- [Remove content](#remove-content-from-localization-table) from the table, such as usernames or other strings that shouldn't be translated.
+- [Add translations](#add-translations) to entries in the table for any supported languages set in your experience.
 
 Before making any changes to your table, it's important to understand each field in the [cloud localization table](#cloud-localization-table) to prevent issues or conflicts.
 
-## Cloud Localization Table
+## Cloud localization table
 
 The localization table is the reference for all translations within your experience. It's important to understand each field of the localization table to effectively add or modify entries.
 
-When populated, the table contains all user-facing content within your experience that requires translation along with any available translations for specific languages. You can [add source content](#adding-source-content) and [add translations](#with-file-upload) to the Cloud Localization Table or [download and upload a `.csv` version of your table](#with-file-upload). Only users who have edit permission for an experience can access an experience's localization table.
+When populated, the table contains all user-facing content within your experience that requires translation along with any available translations for specific languages. You can [add source content](#add-source-content) and [add translations](#with-file-upload) to the Cloud Localization Table or [download and upload a `.csv` version of your table](#with-file-upload). Only users who have edit permission for an experience can access an experience's localization table.
 
 The localization table has the following columns:
 
@@ -67,19 +67,19 @@ Some fields in the localization table must be unique to avoid unexpected behavio
 
 </Alert>
 
-## Adding Source Content
+## Add source content
 
-You must add source text to translate to the experience's localization table before you or any collaborators add translations. You can use [Automatic Text Capture](#automatic-text-capture) to collect text strings automatically as your experience is played by users or [manually add text sources](#manually-adding-source-content).
+You must add source text to translate to the experience's localization table before you or any collaborators add translations. You can use [Automatic Text Capture](#automatic-text-capture) to collect text strings automatically as your experience is played by users or [manually add text sources](#manually-add-source-content).
 
-See [Localizing Images and Sounds](./localizing-with-scripting.md#localizing-images-and-sounds) for instructions on localizing non-text content.
+See [Localizing images and sounds](./localize-with-scripting.md#localize-images-and-sounds) for instructions on localizing non-text content.
 
 ### Automatic Text Capture
 
 The **Automatic Text Capture (ATC)** tool collects text strings that users encounter in your experience through GUI objects, such as `Class.TextLabel|TextLabels` or `Class.BillboardGui` and is usually the fastest way to collect translatable text from your experience. In many cases, the Automatic Text Capture tool is already enabled for [automatic translations](../localization/automatic-translations.md#enable-automatic-text-capture).
 
-### Manually Adding Source Content
+### Manually add source content
 
-You can also add content manually. This is recommended if your experience contains text that doesn't appear during typical gameplay, like a complex conversation tree, which may take longer to collect via ATC. You can add entries to the table [in the localization page](#adding-sources-with-localization-settings) or [with a `.csv` file upload](#adding-sources-with-file-upload). It is recommended to use the `.csv` upload if you want to specify an entry's Key, Context, or Example fields.
+You can also add content manually. This is recommended if your experience contains text that doesn't appear during typical gameplay, like a complex conversation tree, which may take longer to collect via ATC. You can add entries to the table [in the localization page](#add-sources-with-localization-settings) or [with a `.csv` file upload](#add-sources-with-file-upload). It is recommended to use the `.csv` upload if you want to specify an entry's Key, Context, or Example fields.
 
 <Alert severity ='warning'>
 Entries in the localization table are case-sensitive.
@@ -87,9 +87,9 @@ Entries in the localization table are case-sensitive.
 For example, when using "hello" as a source value on the localization table, Roblox does not apply translations for "Hello" or "HELLO".
 </Alert>
 
-You can manually add image and sound asset IDs to the localization table with a `.csv` upload. For more information see [Localizing Images and Sounds](./localizing-with-scripting.md#localizing-images-and-sounds).
+You can manually add image and sound asset IDs to the localization table with a `.csv` upload. For more information see [Localize images and sounds](./localize-with-scripting.md#localize-images-and-sounds).
 
-#### Adding Sources With Localization Settings
+#### Add sources with localization settings
 
 You can add source content in the [localization page](../localization/index.md#localization-settings). This is ideal for making quick additions to your localization table.
 
@@ -111,7 +111,7 @@ To add source content through the localization page:
 6. If the string has multiple meanings, such as a character's back and a back button, input the full path of the specific text object in the **Context** field.
 7. Click **Save**.
 
-#### Adding Sources With File Upload
+#### Add sources with file upload
 
 You can add source content to your localization table with a `.csv` upload. You can use this option when making large numbers of updates to your localization table.
 
@@ -154,11 +154,11 @@ To add source content through the `.csv` upload:
 6. In Studio, in the **Cloud Localization Table** section, select **Update** and upload the new `.csv` file.
 7. Click **Confirm** on the **Confirm Upload** prompt to save the new entry to the cloud localization table.
 
-## Removing Content from Localization Table
+## Remove content from localization table
 
 If you find source content that is wrong or no longer needed in your localization, you can remove this content by either clearing all entries collected via ATC or manually removing source content. When you remove source content, you also remove any associated translations.
 
-### Clear Unmodified Auto-Captured Entries
+### Clear unmodified auto-captured entries
 
 You might want to remove some auto-captured entries if the ATC tool collects strings that shouldn't be translated, such as usernames, user-generated names, or chat strings. This option only clears auto-captured entries that you haven't manually edited.
 
@@ -172,7 +172,7 @@ To clear unmodified auto-captured entries:
    src="../../assets/localization/Portal-Clear-Strings.png"
    width="80%" />
 
-### Manually Remove Source Content
+### Manually remove source content
 
 You can also remove entries manually. This is recommended if you have specific entries you want to remove or if the entries you want to remove were manually modified in any way, such as content that is added manually or ATC entries that have been manually edited.
 
@@ -198,17 +198,17 @@ To remove source content through a `.csv` upload:
 6. In Studio, in the **Cloud Localization Table** section, select **Update** and upload the new `.csv` file.
 7. Click **Confirm** on the **Confirm Upload** prompt to save the new entry to the cloud localization table.
 
-## Adding Translations
+## Add translations
 
 You can add translations to source entries on your experience's localization table using the [translator portal](#in-translator-portal) or [with a `.csv` file upload](#with-file-upload).
 
-In some cases, strings may require real-time translation during gameplay, such as a timer, using units of measurement, or when displaying player names. You can add translation parameters to the localization table as placeholders for this type of content. See [Translating Dynamic Content](./translating-dynamic-content.md) for implementation details.
+In some cases, strings may require real-time translation during gameplay, such as a timer, using units of measurement, or when displaying player names. You can add translation parameters to the localization table as placeholders for this type of content. See [Translate dynamic content](./translate-dynamic-content.md) for implementation details.
 
 ### In Translator Portal
 
 Your experience's [Translator Portal](../localization/index.md#localization-settings) provides a direct way to provide translations for the collected strings. Users added as translators for your experience can access the Translator Portal.
 
-#### Adding String Translations
+#### Add string translations
 
 To translate text through the localization page:
 
@@ -225,7 +225,7 @@ To translate text through the localization page:
 You cannot make edits to an existing source's <b>Key</b>, <b>Context</b> or <b>Example</b> fields through the localization settings page. To add or edit a source's <b>Key</b>, <b>Context,</b> or <b>Example</b> fields, you can remove and re-add the entry on the Localization page with these fields included, or make the edits directly with [file upload](#with-file-upload).
 </Alert>
 
-#### Adding Experience Information Translations
+#### Add experience information translations
 
 You can modify experience information, such as the name, description, icon, and thumbnails, by updating the localization table:
 
@@ -243,7 +243,7 @@ You can modify experience information, such as the name, description, icon, and 
       <img src="../../assets/localization/Portal-Adding-Information-Thumbnail.png" width="100%"
       />
 
-#### Adding Experience Product Translations
+#### Add experience product translations
 
 You can modify experience product details, such as developer [products](../../production/monetization/developer-products.md), [game passes](../../production/monetization/game-passes.md), and [badges](../../production/publishing/badges.md):
 
@@ -255,7 +255,7 @@ You can modify experience product details, such as developer [products](../../pr
    <img src="../../assets/localization/Portal-Adding-Product.png" width="100%"
    />
 
-### With File Upload
+### With file upload
 
 Using Studio or Creator Hub, you can download, modify, and re-upload your localization table as a `.csv` spreadsheet. This is helpful when editing several translations at a time or when collaborating with translators outside of Roblox.
 
@@ -268,7 +268,7 @@ When modifying or adding translations with file upload, the following behavior a
   <tr>
     <th>**Does the entry already exist in the Cloud Localization Table?**</th>
     <th>**Changes made to CSV**</th>
-    <th>**Expected Behavior on Upload**</th>
+    <th>**Expected behavior on upload**</th>
   </tr>
 </thead>
 <tbody>
@@ -318,7 +318,7 @@ To begin adding a new supported language, you need to manually add the country c
 </ul>
 </Alert>
 
-#### Using Creator Hub
+#### With Creator Hub
 
 To translate text using the `.csv` in Creator Hub:
 
@@ -330,7 +330,7 @@ To translate text using the `.csv` in Creator Hub:
 6. Select **Upload CSV** and upload the updated `.csv`.
 7. Click **Confirm** on the prompt to save the new entries to the cloud localization table.
 
-#### Using Studio
+#### With Studio
 
 To translate text using the `.csv` through Studio:
 

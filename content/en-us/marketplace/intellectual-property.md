@@ -1,5 +1,5 @@
 ---
-title: Intellectual Property
+title: Intellectual property
 description: Explains protected intellectual property, both for individual and Roblox creations.
 ---
 
@@ -32,7 +32,7 @@ Other examples where you may not have IP ownership:
 - If you give credit to the copyright owner, you don't automatically have the rights to use their copyrighted work.
 - If you want to create a hat on Roblox inspired by a well-known style of hat, such as a top hat, you may not be able to stop other users from uploading similar hats.
 
-## Protecting Your Own IP
+## Protect your own IP
 
 In order to protect your IP, it's important that your creations are unique. For example, the creation below takes a well-established concept (a Trojan helmet) and adds intricate details that make the design an original expression of the idea, such as the shape and orientation of the gold adornments and the shape of the facial opening.
 
@@ -81,7 +81,7 @@ To protect the creativity of others, the Roblox [Terms of Use](https://www.roblo
 - This means you should not upload content you do not own or did not get the owner's permission to use.
 - Infringing on someone's intellectual property is not only a violation of Roblox's Terms of Use, but it's also a violation of the law.
 
-## Roblox Protecting Your IP
+## Roblox protecting your IP
 
 Roblox complies with the [Digital Millennium Copyright Act (DMCA)](https://www.copyright.gov/dmca/) and has a designated process for receiving and handling copyright takedown reports from the owner of the original work.
 

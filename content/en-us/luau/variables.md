@@ -5,7 +5,7 @@ description: A name that holds a value.
 
 A **variable** is a name that holds a value. Variable values can be [numbers](./numbers.md), [strings](./strings.md), [booleans](./booleans.md), [data types](/reference/engine/datatypes), and more.
 
-## Naming Variables
+## Name variables
 
 Variable names can be any non-reserved string of letters, digits, and underscores that don't start with a digit.
 
@@ -21,17 +21,17 @@ if        -- NOT valid
 
 Variable names are **case-sensitive**, so `TestVar` and `TESTVAR` are different names. Avoid naming variables with an underscore and all uppercase letters, such as `_VERSION`, because Luau may reserve them for internal global variables.
 
-### Best Practices
+### Best practices
 
 It's best practice to spell out words fully. Abbreviations generally make code easier to write, but harder to read. Following common naming practices when naming your variables can help you and others understand their meaning or purpose:
 
 - Use `PascalCase` names for class and enum-like objects.
 - Use `PascalCase` names for all Roblox APIs. `camelCase` APIs are mostly deprecated.
 - Use `camelCase` names for local variables, member values, and [functions](./functions.md).
-- Use `LOUD_SNAKE_CASE` names for local constants (variables with values that you don't expect to [change](#changing-values)).
+- Use `LOUD_SNAKE_CASE` names for local constants (variables with values that you don't expect to [change](#change-values)).
 - Don't capitalize entire acronyms within names. For example, write `aJsonVariable` or `MakeHttpCall`.
 
-### Reserved Names
+### Reserved names
 
 Luau reserves the following keywords, so you can't use them to name variables or [functions](./functions.md):
 
@@ -57,7 +57,7 @@ Luau reserves the following keywords, so you can't use them to name variables or
 - `not`
 - `while`
 
-## Assigning Values
+## Assign values
 
 To create a variable and assign a value to it, use the `=` operator. Put the variable on the left of the `=` and the value on the right. If you don't put a value, the value is `nil`.
 
@@ -75,7 +75,7 @@ print(word) -- Hello
 print(reference) -- Camera
 ```
 
-### Assigning Values to Multiple Variables
+### Assign values to multiple variables
 
 You can assign values to multiple variables in one line by separating each variable-value pair with a comma. If you have more variables than values, then Luau assigns `nil` to the extra variables. If you have more values than variables, Luau doesn't assign the extra values to any variables.
 
@@ -89,7 +89,7 @@ print(d, e, f) -- 4, 5, nil
 print(g, h) -- 7, 8
 ```
 
-## Changing Values
+## Change values
 
 To change a value of a variable, assign another value to it.
 

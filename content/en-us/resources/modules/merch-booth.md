@@ -11,7 +11,7 @@ The **MerchBooth** [developer module](../../resources/modules/index.md) lets you
 To offer assets created by third parties in the merch booth, make sure **Allow Third Party Sales** is enabled from the **Security** section of the [Game Settings](../../studio/game-settings.md) window. If this setting is disabled, you will not be able to sell UGC assets created by other users.
 </Alert>
 
-## Module Usage
+## Module usage
 
 ### Installation
 
@@ -65,11 +65,11 @@ The module is preconfigured to work for most use cases, but it can be easily cus
 
    <img src="../../assets/developer-modules/merch-booth/UI-Visual-Customization.jpg" width="800" />
 
-### Adding Items
+### Add items
 
 What's a merch booth without merch? The following sections outline how to add [avatar assets](#avatar-assets), [passes](#passes), and [developer products](#developer-products) to your merch booth.
 
-#### Avatar Assets
+#### Avatar assets
 
 Items such as [clothing and accessories](../../art/accessories/index.md) must be added through their **asset&nbsp;ID** located on the item's detail page in the [Avatar Shop](https://www.roblox.com/catalog).
 
@@ -183,7 +183,7 @@ Adding [passes](../../production/monetization/game-passes.md) requires pass IDs 
    end
    ```
 
-#### Developer Products
+#### Developer products
 
 Adding [developer products](../../production/monetization/developer-products.md) requires product IDs which can be located in the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
@@ -239,7 +239,7 @@ Adding [developer products](../../production/monetization/developer-products.md)
    end
    ```
 
-### Custom Catalog Button
+### Custom catalog button
 
 By default, a right-side **catalog button** lets players open the booth at any time.
 
@@ -268,7 +268,7 @@ In some cases, it may be useful to [remove](#togglecatalogbutton) this button an
    end)
    ```
 
-### Shoppable Regions
+### Shoppable regions
 
 A helpful way to drive purchases in your experience is to automatically show the merch booth when a player enters an area.
 
@@ -334,7 +334,7 @@ To create a shoppable region:
 	CollectionService:GetInstanceAddedSignal("ShopRegion"):Connect(setupRegion)
 	```
 
-### Proximity Prompts
+### Proximity prompts
 
 As an alternative to the 2D catalog view, you can add **proximity prompts** over in-experience objects. This encourages players to discover items in the 3D environment, preview them on their own avatar, purchase them, and instantly equip them. See [addProximityButton](#addproximitybutton) for details.
 
@@ -344,7 +344,7 @@ As an alternative to the 2D catalog view, you can add **proximity prompts** over
 If a player has opened an item view through a proximity prompt, it automatically closes when the player moves further away from the prompt object than its activation distance. If you want to keep the booth open regardless of the player's distance from the prompt, set `closeWhenFarFromPrompt` to `false` in a [configure](#configure) call.
 </Alert>
 
-### Changing the Equip Effect
+### Change the equip effect
 
 By default, the merch booth shows a generic sparkle effect when a player equips an item from it. To change the effect, set `particleEmitterTemplate` to your own instance of a `Class.ParticleEmitter` in a [configure](#configure) call.
 
@@ -365,7 +365,7 @@ MerchBooth.configure({
 })
 ```
 
-### GUI Visibility
+### GUI visibility
 
 By default, the merch booth hides all `Class.ScreenGui|ScreenGuis` and `Class.CoreGui|CoreGuis` when its UI appears, including the chat, leaderboard, and others included by Roblox. If you want to disable this behavior, set `hideOtherUis` to `false` in a [configure](#configure) call.
 
@@ -379,7 +379,7 @@ MerchBooth.configure({
 })
 ```
 
-### Character Movement
+### Character movement
 
 It can be advantageous to prevent a character from moving while they are in the merch booth. This can be done by setting `disableCharacterMovement` to `true` in a [configure](#configure) call.
 
@@ -393,7 +393,7 @@ MerchBooth.configure({
 })
 ```
 
-## API Reference
+## API reference
 
 ### Types
 

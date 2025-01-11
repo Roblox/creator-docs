@@ -1,21 +1,21 @@
 ---
-title: Classic Clothing
+title: Classic clothing
 description: Classic clothing are decals you can apply to a classic character model's surface. You can create classic clothing items on Roblox and upload them to the Marketplace.
 ---
 
 <Alert severity="warning">
-Current user-generated avatars on the Marketplace do not support 2D classic clothing. For information on creating modern 3D cosmetics, including rigid accessories and clothing items, see [Getting Started](../../avatar/index.md).
+Current user-generated avatars on the Marketplace do not support 2D classic clothing. For information on creating modern 3D cosmetics, including rigid accessories and clothing items, see [Get started](../../avatar/index.md).
 </Alert>
 
 Classic clothing are a type of 2D cosmetic item that you can apply to the surface of a classic avatar character. You can [create](#creating) your own classic clothing items and sell them on the [Marketplace](https://www.roblox.com/catalog).
 
 This guide covers the process of creating a classic clothes asset using the following steps:
 
-1. Designing an image for a [T-shirt](#t-shirts) or [Shirts and Pants](#shirts-and-pants) using a third-party image processing program.
-2. [Testing](#testing) the look of the classic clothes in Studio.
-3. [Uploading](#uploading) the image assets to the Marketplace.
+1. Designing an image for a [t-shirt](#t-shirts) or [shirts and pants](#shirts-and-pants) using a third-party image processing program.
+2. [Testing](#test) the look of the classic clothes in Studio.
+3. [Uploading](#upload) the image assets to the Marketplace.
 
-## Creating
+## Create
 
 The three types of classic clothing items are **T-shirts**, **Shirts**, and **Pants**. Each has different design and format requirements.
 
@@ -26,22 +26,22 @@ T-shirts are square images applied to the front of an avatar's torso. To make a 
 1. Create a square image (such as 512×512 pixels).
 2. Use an image editor to apply changes in the specific square sections of the template images.
 3. Upload it to Roblox using the [Asset Manager](../../projects/assets/manager.md) to test in your own experience.
-4. Follow the [Testing](#testing) steps to ensure your 2D image looks as expected.
-5. Follow the [Uploading](#uploading) steps to upload and sell your asset on the Marketplace.
+4. Follow the [testing](#test) steps to ensure your 2D image looks as expected.
+5. Follow the [uploading](#upload) steps to upload and sell your asset on the Marketplace.
 
-### Shirts and Pants
+### Shirts and pants
 
 Classic shirts and pants are image assets that wrap around an avatar's body. Because classic shirts and pants have specific size requirements, download and modify the provided template files to begin creating these assets.
 
 <GridContainer numColumns="2">
   <figure>
     <img src="../../assets/accessories/classic-clothing/Template-Shirts-R15.png" />
-    <figcaption><center> <a href="../../assets/accessories/classic-clothing/Classic-Clothing-Templates.zip" download>Shirt (Torso and Arms)</a></center></figcaption>
+    <figcaption><center> <a href="../../assets/accessories/classic-clothing/Classic-Clothing-Templates.zip" download>Shirt (torso and arms)</a></center></figcaption>
 
   </figure>
   <figure>
     <img src="../../assets/accessories/classic-clothing/Template-Pants-R15.png" />
-    <figcaption><center> <a href = "../../assets/accessories/classic-clothing/Classic-Clothing-Templates.zip" download>Pants (Torso and Legs)</a></center></figcaption>
+    <figcaption><center> <a href = "../../assets/accessories/classic-clothing/Classic-Clothing-Templates.zip" download>Pants (torso and legs)</a></center></figcaption>
   </figure>
 </GridContainer>
 
@@ -54,8 +54,8 @@ Table of sizes for each template part
 <thead>
   <tr>
     <th>Shape</th>
-    <th>Pixel Size (width x height)</th>
-    <th>Clothing Parts</th>
+    <th>Pixel size (width x height)</th>
+    <th>Clothing parts</th>
   </tr>
 </thead>
 <tbody>
@@ -106,7 +106,7 @@ When applying clothing to R15 avatars in Roblox, some limits exist with the temp
   </figure>
 </GridContainer>
 
-## Testing
+## Test
 
 To ensure the best quality results, you can test your clothes before uploading or selling. You can test your clothes without needing to pay any fees.
 
@@ -160,7 +160,7 @@ To ensure the best quality results, you can test your clothes before uploading o
 To make sure your clothing looks as good as possible on as many avatars as possible, make sure you test on a few different rig types. Some character rigs may not support classic clothing effectively.
 </Alert>
 
-## Uploading
+## Upload
 
 After finalizing and testing your design, you can upload the clothing item to the [Marketplace](https://www.roblox.com/catalog) for a [fee](../../marketplace/marketplace-fees-and-commissions.md#classic-clothing). After Roblox reviews and uploads the item to the Marketplace, you will receive a [commission](../../marketplace/marketplace-fees-and-commissions.md#commissions) for all sales of your items.
 

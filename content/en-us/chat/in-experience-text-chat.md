@@ -1,23 +1,23 @@
 ---
-title: TextChatService Overview
+title: TextChatService overview
 description: The TextChatService system allows players to communicate with each other using text-based messages in live sessions.
 ---
 
-Roblox offers text-based messaging between players in live sessions through `Class.TextChatService`. This service has its standard functionality, but also provides a set of methods and events for extending and customizing chat, such as delivering messages based on [customized requirements](#conditionally-delivering-messages), adding special permissions or moderation to specific players, and creating [custom commands](./examples/custom-text-chat-commands.md) to execute specific actions.
+Roblox offers text-based messaging between players in live sessions through `Class.TextChatService`. This service has its standard functionality, but also provides a set of methods and events for extending and customizing chat, such as delivering messages based on [customized requirements](#conditionally-deliver-messages), adding special permissions or moderation to specific players, and creating [custom commands](./examples/custom-text-chat-commands.md) to execute specific actions.
 
 <Alert severity="success">
 This page includes a high-level overview of how messaging works and instructions on migrating from legacy chat, but the easiest way to get started with customizing your experience's chat system is to [see the examples](examples/simple-custom-frontend-ui.md).
 </Alert>
 
-## Text Chat Instances
+## Text chat instances
 
 The following sections summarize the primary classes and instances that you can use to customize the chat system.
 
-### Top-Level Configuration
+### Top-level configuration
 
 - `Class.TextChatService` - This singleton class is responsible for managing the overall chat system, including handling chat message filtering, moderation, and user permissions. Use properties like `Class.TextChatService.CreateDefaultTextChannels` and `Class.TextChatService.CreateDefaultCommands` to enable or disable default chat channels and commands.
 
-### Default UI Configuration
+### Default UI configuration
 
 `TextChatService` provides a default UI that can be customized to fit your experience's needs. Each of these configurations can be disabled to hide the associated UI element and can be replaced with custom interfaces if desired.
 
@@ -25,7 +25,7 @@ The following sections summarize the primary classes and instances that you can 
 - `Class.ChatInputBarConfiguration` - Represents the default chat input bar UI, including its appearance and behavior.
 - `Class.BubbleChatConfiguration` - Represents the default bubble chat UI, including its appearance and behavior.
 
-### Channels, Messages, and Commands
+### Channels, messages, and commands
 
 - `Class.TextChannel` - Represents a text chat channel that passes user-sent chat messages from the client to the server, which then displays them to other users based on permissions. These instances must be parented to `TextChatService` in order to function. If `Class.TextChatService.CreateDefaultTextChannels` is set to true, the service automatically creates two text channels, `RBXGeneral` and `RBXSystem`. You can manually create additional `TextChannel` instances and parent them to `Class.TextChatService`, as well.
 
@@ -34,7 +34,7 @@ The following sections summarize the primary classes and instances that you can 
 - `Class.TextChatMessage` - Represents a single chat message in a text channel, with basic information such as the sender of the message, the original message, the filtered message, and the creation timestamp.
 - `Class.TextChatCommand` - Allows users to invoke specific actions or behaviors by sending messages that match `Class.TextChatCommand.PrimaryAlias` or `Class.TextChatCommand.SecondaryAlias`. These instances must be parented to `TextChatService` in order to function. Chat commands are helpful for adding additional functionality and interactivity to the chat experience. If `Class.TextChatService.CreateDefaultCommands` is set to true, default chat commands will be created automatically. You can manually create additional `TextChatCommand` instances and parent them to `Class.TextChatService`, as well.
 
-## Chat Flowchart
+## Chat flowchart
 
 Text chat uses the [client‑server](../projects/client-server.md) model, with a **sending client**, the **server**, and **receiving clients**.
 
@@ -57,7 +57,7 @@ Text chat uses the [client‑server](../projects/client-server.md) model, with a
 
    2. The second time is on the receiving clients, which triggers the `Class.TextChatService.MessageReceived` event to display the message to other players.
 
-### Text Chat Hooks and Callbacks
+### Text chat hooks and callbacks
 
 The `Class.TextChatService` API encourages a clear separation on the appearance and delivery of chat messages. Multiple instances of the text chat system provide hooks and callbacks to format in centralized, clear locations.
 
@@ -78,16 +78,16 @@ All callbacks are expected to be non-yielding functions. Yielding or waiting for
 | `Class.TextChatService.OnBubbleAdded`     | `Class.BubbleChatMessageProperties` |
 | `Class.TextChatService.OnChatWindowAdded` | `Class.ChatWindowMessageProperties` |
 
-#### Conditionally Delivering Messages
+#### Conditionally deliver messages
 
 - `Class.TextChannel.ShouldDeliverCallback` - This callback should be defined on the server only. The callback is fired for each `Class.TextSource` child of the text channel when a message is sent to determine whether the message should be delivered. This callback can be used to implement custom message delivery logic that may depend on additional gameplay context, such as:
 
   - [Proximity-based chat](./examples/proximity-chat.md) where users can only send messages to those close to them.
   - Preventing users with certain attributes from sending messages to others.
 
-#### Customizing Message Display
+#### Customize message display
 
-The default `TextChatService` UI relies on [rich text](../ui/rich-text.md) to format and customize how messages are displayed. You can use the following callbacks to format messages before they are displayed to users. You might want to add colors or [chat tags](../chat/chat-window.md#adding-chat-tags) to user's names or format message content.
+The default `TextChatService` UI relies on [rich text](../ui/rich-text.md) to format and customize how messages are displayed. You can use the following callbacks to format messages before they are displayed to users. You might want to add colors or [chat tags](../chat/chat-window.md#add-chat-tags) to user's names or format message content.
 
 The following callbacks are called on every `TextChatMessage` that is about to be displayed, which lets you customize chat window appearance based on the `TextChannel`, `TextSource`, or `TextChatMessage` content.
 
@@ -98,7 +98,7 @@ When a client sends a message, these callbacks are called once when the message 
 - `Class.TextChatService.OnBubbleAdded` - This callback should be defined on the client only. Use it to customize the appearance of chat bubbles independent of the appearance of the message in the chat window UI.
 - `Class.TextChatService.OnChatWindowAdded` - This callback should be defined on the client only. Use it to customize the appearance of chat messages in the chat window UI independent of the appearance of the message in chat bubbles.
 
-## Migrating From Legacy Chat
+## Migrate from legacy chat
 
 This section assists you in migrating from the [legacy chat system](../chat/legacy/legacy-chat-system.md) by providing alternative methods for implementing common chat functionalities and behaviors using `TextChatService`.
 
@@ -109,7 +109,7 @@ To switch the chat system of an existing experience from the legacy chat system 
 
    <img src="../assets/studio/properties/TextChatService-ChatVersion-TextChatService.png" width="320" />
 
-### Basic Functionalities
+### Basic functionalities
 
 Though both systems share the same basic chat functionalities, TextChatService implementations are in general more sustainable and easier to iterate on.
 
@@ -117,7 +117,7 @@ Though both systems share the same basic chat functionalities, TextChatService i
   <thead>
     <tr>
       <th>Functionality</th>
-      <th>Legacy Chat</th>
+      <th>Legacy chat</th>
       <th>TextChatService</th>
       <th>Differences</th>
     </tr>
@@ -156,7 +156,7 @@ Though both systems share the same basic chat functionalities, TextChatService i
   </tbody>
 </table>
 
-### Message Filtering
+### Message filtering
 
 TextChatService automatically filters chat messages based on each player's account information, so you don't need to manually implement text filtering for all kinds of chat messages.
 
@@ -164,7 +164,7 @@ TextChatService automatically filters chat messages based on each player's accou
   <thead>
     <tr>
       <th>Functionality</th>
-      <th>Legacy Chat</th>
+      <th>Legacy chat</th>
       <th>TextChatService</th>
     </tr>
   </thead>
@@ -182,7 +182,7 @@ TextChatService automatically filters chat messages based on each player's accou
   </tbody>
 </table>
 
-### Window and Bubble Chat
+### Window and bubble chat
 
 Both the [chat window](../chat/chat-window.md) and [bubble chat](../chat/bubble-chat.md) behavior and customization options of `TextChatService` are identical to those of the legacy chat system. As the legacy chat system only allows customization using chat modules or the `Class.Players` container, `TextChatService` provides dedicated classes (`Class.ChatWindowConfiguration` and `Class.BubbleChatConfiguration`) to manage all chat window and bubble chat properties. Additionally, you can easily adjust and preview your bubble chat appearance and behavior properties using Studio settings instead of having to script them all.
 
@@ -190,7 +190,7 @@ Both the [chat window](../chat/chat-window.md) and [bubble chat](../chat/bubble-
   <thead>
     <tr>
       <th>Functionality</th>
-      <th>Legacy Chat</th>
+      <th>Legacy chat</th>
       <th>TextChatService</th>
     </tr>
   </thead>
@@ -223,7 +223,7 @@ Both the [chat window](../chat/chat-window.md) and [bubble chat](../chat/bubble-
   </tbody>
 </table>
 
-### Migrating Speaker "Extra Data"
+### Migrate speaker "extra data"
 
 The legacy Lua chat system allowed devleopers to use `SetExtraData` on the `Speaker` class. This data was used to format the name color, chat color, or to apply name tags for a given speaker.
 

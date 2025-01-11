@@ -12,7 +12,7 @@ description: Prototyping
 - **Time efficiency:** The value of prototyping is the speed in which you can iterate and explore solutions to potential problems. Prototyping ensures that you detect design flaws, oversights, and unexpected technical requirements in the early stages of pre-production, instead of months into development. The time and energy required to prototype in the early stages of creating an experience is less than the time and energy required to fix costly oversights in the later stages.
 - **Finding the fun:** Prototyping ensures that the experience being designed is actually fun to play. Ideas for experiences can be abstract, but prototyping forces you to confirm that your vision can be brought to life in the way you imagine.
 
-## Paper Prototyping
+## Paper prototyping
 
   <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/IJSih2t_jso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -47,7 +47,7 @@ Despite its benefits, prototyping on paper has drawbacks due to the difference i
 - **Simulation limitations:** Simulating unique mechanics and interactions are limited or impossible to create on paper or using physical assets.
 - **False positives:** Some activities might prove more fun and engaging using paper and physical assets than doing them on a phone, computer, or console.
 
-## Studio Prototyping
+## Studio prototyping
 
 <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/Q4Cec876KLU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -72,7 +72,7 @@ Despite its benefits, the limitations of studio prototyping include:
       <figcaption>A more complex prototype made in Roblox Studio. </figcaption>
     </figure>
 
-## Best Practices
+## Best practices
 
 The difference between working on a feature and prototyping is scope. Prototyping should be fast and quick, hitting certain aspects of the feature being tested but not the entire feature itself.
 
@@ -80,7 +80,7 @@ When prototyping, have several playtest sessions with your team to confirm your 
 
 When prototyping, take extra care to explore the following parts of your experience:
 
-- **Core loop:** The core loop is the central gameplay through which an entire experience is built. To learn more about core loop design, see [Core Loops](../../production/game-design/core-loops.md).
+- **Core loop:** The core loop is the central gameplay through which an entire experience is built. To learn more about core loop design, see [Core loops](../../production/game-design/core-loops.md).
 - **UI/UX:** Ensure that your menu interaction input controls are intuitive and well designed. To learn more about UI/UX design, see [UI and UX](../../production/game-design/ui-ux-design.md).
 - **Game rules:** Get into the details of how your experience will function. As an example, if you know that your game will feature a respawn mechanic, explore how long the respawn timer could be, where the player will physically respawn in experience, and if there are any factors that could change the rate at which a player can rejoin the fun.
 - **Edge cases:** Explore how a player might push the limits of what your experience can do. Design solutions and stop gaps to either prevent or encourage this behavior.

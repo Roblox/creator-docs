@@ -1,5 +1,5 @@
 ---
-title: Basic Particle Effects
+title: Basic particle effects
 description: The process of creating particles to elevate the visual effects in your experience.
 ---
 
@@ -11,7 +11,7 @@ In this tutorial, you will use a `Class.ParticleEmitter` object to create a spar
   <source src="../../../assets/tutorials/basic-particle-effects/basicParticleFinished.mp4" />
 </video>
 
-## Particle Emitters
+## Particle emitters
 
 The `Class.ParticleEmitter` is a special type of object that will **emit** particles from its position when parented to a part or `Class.Attachment`.
 
@@ -37,7 +37,7 @@ The example provided below is a model of a gold nugget. A simple particle effect
 The pre-made `Class.Fire` and `Class.Smoke` objects can be a convenient way to save time on creating effects, but they are far less customizable than ParticleEmitters.
 </Alert>
 
-## Particle Emission
+## Particle emission
 
 Particles are generated randomly throughout the entire volume of a part. They emerge from one **face** of the part according to the **EmissionDirection** property. It defaults to **Top**, meaning the top surface of a part. If you rotate the part, the direction the particles are emitted from will change accordingly.
 
@@ -51,7 +51,7 @@ If you resize the part to be bigger, the particles will be emitted over a wider 
   <source src="../../../assets/tutorials/basic-particle-effects/scalingParticleEffect.mp4" />
 </video>
 
-## Particle Properties
+## Particle properties
 
 ### Color
 
@@ -105,7 +105,7 @@ SpreadAngle has an **X** and a **Y** value which determine the range of angles t
   <img src="../../../assets/tutorials/basic-particle-effects/particleSpreadAngle.jpg" />
 </GridContainer>
 
-### Additional Properties
+### Additional properties
 
 To further improve the sparkle effect, try the following property values.
 

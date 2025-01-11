@@ -1,5 +1,5 @@
 ---
-title: Coding Concept - Abstraction
+title: Coding concept - abstraction
 description: Abstractions in computer science are simplified representations of a larger idea or concept. This is used for computer science AP CSP lessons.
 next: /tutorials/fundamentals/coding-6/coding-concept-algorithms
 prev: /tutorials/fundamentals/coding-6/creating-with-module-scripts
@@ -11,11 +11,11 @@ prev: /tutorials/fundamentals/coding-6/creating-with-module-scripts
 
 A common example in coding languages is `print()`. Most of its code is hidden, so the coder can focus on what needs to be printed and not the rest of the code.
 
-## Why Create Abstractions
+## Why create abstractions
 
 Abstractions keeps programs organized, reduces complexity, and makes code easier to update.
 
-### Shop Example
+### Shop example
 
 Say that you have an in-game shop that sells just two different backpacks. The code for the second backpack was copied with slight changes, such as a different name and selling price.
 
@@ -38,7 +38,7 @@ Here, the code is **not** abstracted. Each backpack has a script of its own. Wha
 
 - A holiday sale, 25% off all backpacks.
 
-## Designing Abstractions
+## Design abstractions
 
 Having separate backpack scripts makes adding and updating backpacks time consuming. Instead, create an abstraction so you don't have to make updates in so many different places.
 

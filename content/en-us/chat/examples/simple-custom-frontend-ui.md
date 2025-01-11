@@ -1,20 +1,20 @@
 ---
-title: Custom Text Chat UI
+title: Custom text chat UI
 description: Example of how to create a simple frontend UI powered with TextChatService.
 ---
 
 This example shows how to use the `Class.TextChatService` API to design your own frontend. It reuses the default text channels from `TextChatService.CreateDefaultTextChannels` and is very simple compared to the default UI.
 
-1. First, disable the default UI that comes with the `TextChatService` by setting the `ChatWindowConfiguration.Enabled` and `ChatInputBarConfiguration.Enabled` properties to `false` in the Studio **Properties** window.
+1. First, disable the default UI that comes with the `TextChatService` by setting the `ChatWindowConfiguration.Enabled` and `ChatInputBarConfiguration.Enabled` properties to `false` in the studio properties window.
 
    ![Explorer and Properties windows showing how to disable the default UI.](../../assets/players/in-experience-text-chat/TextChat-Example1.png)
 
-1. Create a replacement for the chat input bar. This is the text box that emits messages when the user presses <kbd>Enter</kbd>.
+2. Create a replacement for the chat input bar. This is the text box that emits messages when the user presses <kbd>Enter</kbd>.
 
    1. Create a `ScreenGui` and parent it to the `StarterGui`.
-   1. Create a `TextBox` and parent it to the `ScreenGui`. To position the text box at the bottom-center of the screen, set the `TextBox.AnchorPoint` to `Vector2.new(0.5, 1)` and the `TextBox.Position` to `UDim2.new(0.5, 0, 1, 0)`.
-   1. Create a `LocalScript` and parent it to the `TextBox`.
-   1. Add the following code to the `LocalScript`:
+   2. Create a `TextBox` and parent it to the `ScreenGui`. To position the text box at the bottom-center of the screen, set the `TextBox.AnchorPoint` to `Vector2.new(0.5, 1)` and the `TextBox.Position` to `UDim2.new(0.5, 0, 1, 0)`.
+   3. Create a `LocalScript` and parent it to the `TextBox`.
+   4. Add the following code to the `LocalScript`:
 
       ```lua title='Client'
       --!strict
@@ -41,13 +41,13 @@ This example shows how to use the `Class.TextChatService` API to design your own
       end)
       ```
 
-1. Create a replacement for the chat window. This is the `ScrollingFrame` that displays messages as they are received from `TextChatService.MessageReceived`. This step also creates a `UIListLayout` to automatically layout the messages.
+3. Create a replacement for the chat window. This is the `ScrollingFrame` that displays messages as they are received from `TextChatService.MessageReceived`. This step also creates a `UIListLayout` to automatically layout the messages.
 
    1. Create a `ScreenGui` and parent it to the `StarterGui`.
-   1. Create a `ScrollingFrame` and parent it to the `ScreenGui`.
-   1. Create a `UIListLayout` and parent it to the `ScrollingFrame`.
-   1. Create a `LocalScript` and parent it to the `ScrollingFrame`.
-   1. Add the following code to the `LocalScript`:
+   2. Create a `ScrollingFrame` and parent it to the `ScreenGui`.
+   3. Create a `UIListLayout` and parent it to the `ScrollingFrame`.
+   4. Create a `LocalScript` and parent it to the `ScrollingFrame`.
+   5. Add the following code to the `LocalScript`:
 
       ```lua title='Client'
       --!strict

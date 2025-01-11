@@ -1,5 +1,5 @@
 ---
-title: Bindable Events and Callbacks
+title: Bindable events and callbacks
 description: Bindable events and callbacks allow for back-and-forth communication on the same side of the client-server boundary.
 ---
 
@@ -15,7 +15,7 @@ Depending on how your experience works, bindable events can help make your code 
 To communicate between scripts **across** the client-server boundary, see [Remote Events](remote.md).
 </Alert>
 
-## Bindable Events
+## Bindable events
 
 The `Class.BindableEvent` object enables custom events through asynchronous, one-way communication between scripts.
 
@@ -55,7 +55,7 @@ bindableEvent:Fire("Round started!")
 You can connect multiple functions to the same `Class.BindableEvent`, but Luau executes them in an unpredictable order. To ensure that functions execute in a particular order, combine them into a single function and connect it to the event.
 </Alert>
 
-## Custom Callbacks
+## Custom callbacks
 
 The `Class.BindableFunction` object allows for synchronous, two-way communication between scripts. You can use it to define a custom callback function and invoke it manually by calling `Class.BindableFunction:Invoke()`. The code invoking the function **yields** until the corresponding callback is found, and the callback receives the arguments that you passed to `Class.BindableFunction:Invoke()|Invoke()`. If the callback was never set, the script that invokes it doesn't resume execution.
 
@@ -97,11 +97,11 @@ print(sum)  --> 6
 Each `Class.BindableFunction` can only utilize one `Class.BindableFunction.OnInvoke|OnInvoke` callback. If you make multiple definitions, only the last one assigned runs. Also note that if the `Class.BindableFunction.OnInvoke|OnInvoke` callback does not have a `return` statement, the invocation returns `nil`.
 </Alert>
 
-## Argument Limitations
+## Argument limitations
 
 When you fire a `Class.BindableEvent` or invoke a `Class.BindableFunction`, it forwards any arguments that you pass with the event or to the callback function. You can pass any type of Roblox object (`Datatype.Enum`, `Class.Instance`, etc.), as well as Luau types like numbers, strings, and booleans, although you should carefully consider the following limitations.
 
-### Non-String Indices
+### Non-string indices
 
 If any **indices** of a passed table are non-string types, such as an `Class.Instance`, [userdata](../../luau/userdata.md), or [function](../../luau/functions.md), Roblox automatically converts those indices to strings.
 
@@ -131,7 +131,7 @@ bindableEvent:Fire({
 })
 ```
 
-### Table Indexing
+### Table indexing
 
 If you pass a table of data, do not pass a mixed table of numeric and string keys. Instead, pass a table that consists **entirely** of key-value pairs (a dictionary) or **entirely** of numeric indices (an array).
 
@@ -178,7 +178,7 @@ bindableEvent:Fire(inventoryData)
 bindableEvent:Fire(characterData)
 ```
 
-### Table Identities
+### Table identities
 
 Tables passed as arguments to bindable events and callbacks are copied, meaning they will not be exactly equivalent to those provided when firing the event or invoking the callback. Nor will tables returned to the invoker be exactly equivalent to those provided. You can demonstrate this by running the following script on a `Class.BindableFunction` and observing how the table identities differ.
 

@@ -1,7 +1,7 @@
 ---
-title: Caging
+title: Caging character head
 description: Cage your avatar characters in Blender to support layerable accessories and clothing.
-next: /art/characters/creating/combining-head-geometry
+next: /art/characters/creating/combine-head-geometry
 prev: /art/characters/creating/texturing-pbr
 ---
 

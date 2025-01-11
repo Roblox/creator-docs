@@ -1,5 +1,5 @@
 ---
-title: Bundles Package
+title: Bundles package
 description: Learn about the bundles feature package.
 ---
 
@@ -13,7 +13,7 @@ Using the package's customization options, you can tailor your bundles to meet t
 For information on how to strategically provide purchase opportunities to meet player needs at key stages of your experience, see [Contextual Purchases](../../production/game-design/contextual-purchases.md). For industry best practices on how implement starter pack bundles, see [Starter Pack Design](../../production/game-design/starter-pack-design.md).
 </Alert>
 
-## Get Package
+## Get package
 
 The **Creator Store** is a tab of the Toolbox that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add one or more assets directly into an open experience, including feature packages!
 
@@ -57,7 +57,7 @@ To get the packages from your inventory into your experience:
 
    1. Navigate to the **Security** tab, then enable **Enable Studio Access to API Services**.
 
-## Defining Currencies
+## Define currencies
 
 <Alert severity="info">
 If you do not plan on charging in-experience currencies for any bundles, you can skip this section and configure bundles through `devProductId`.
@@ -141,7 +141,7 @@ end
 
 Specifically, you need to fill out `awardInExperiencePurchase`, which is called by a loop through `Currencies` inside of the example `initializePurchaseHandlers` (i.e. each currencyId is connected to the handler through `Bundles.setInExperiencePurchaseHandler(currencyId, awardInExperiencePurchase)`).
 
-## Defining Bundles
+## Define bundles
 
 All bundles offerable in your experience can be defined within `ReplicatedStorage.Bundles.Configs.Bundles`, with types exported from the `Types` script in the same folder.
 
@@ -253,7 +253,7 @@ For example, your entire bundle will likely look like this:
     }
 ```
 
-## Integrating Server Logic
+## Integrate server logic
 
 Take a look at `ReplicatedStorage.Bundles.Server.Examples.BundlesExample`, which shows how your server will interact with the **Bundles** feature package and the above methods on the `Class.ModuleScript`. The snippets below are from that script.
 
@@ -385,7 +385,7 @@ Consider the following best practice guidance on redundant recordings of Receipt
 
 - This redundancy helps ensure that all purchase logic has been appropriately handled and that your DataStore+Bundles Feature Package's DataStore reaches eventual consistency, with the your data store being the source of truth.
 
-## Configuring Constants
+## Configure constants
 
 Constants for the **Core** feature package live in two spots:
 
@@ -401,7 +401,7 @@ The main things you might want to adjust to meet the design requirements of your
 
 Additionally, you can find strings for translation broken out into one location: `ReplicatedStorage.FeaturePackagesCore.Configs.TranslationStrings`.
 
-## Customizing UI Components
+## Customize UI components
 
 By modifying the package objects, such as colors, font, and transparency, you can adjust the visual presentation of your bundle prompts. However, keep in mind that if you move any of the objects around hierarchically, the code will not be able to find them, and you'll need to make adjustments to your code.
 
@@ -417,7 +417,7 @@ The heads up display is also made up of two components:
 
 If you want to have greater control over the heads up display, instead of just using the existing HUD UI within `ReplicatedStorage.Bundles.Objects.BundlesGui`, you can move things around to meet your own design requirements. Just be sure to update client script behavior in the `ReplicatedStorage.Bundles.Client.UIController` script.
 
-## API Reference
+## API reference
 
 ### Types
 

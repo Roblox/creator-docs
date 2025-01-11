@@ -3,9 +3,9 @@ title: Calisthenics Tool
 description: Calisthenics Tool is a Blender plugin that you can use to verify skinning quality of an asset.
 ---
 
-The **Calisthenics Tool** is a supplemental [Blender](https://www.blender.org/) add-on that allows you to quickly test your asset through a set of animation cycles to verify your skinning data. At any point during the animation testing, you can pause and use Blender's skinning tools, such as [Weight Painting brushes](https://docs.blender.org/manual/en/latest/sculpt_paint/weight_paint/introduction.html), to resolve any skinning imperfections.
+The **Calisthenics tool** is a supplemental [Blender](https://www.blender.org/) add-on that allows you to quickly test your asset through a set of animation cycles to verify your skinning data. At any point during the animation testing, you can pause and use Blender's skinning tools, such as [Weight Painting brushes](https://docs.blender.org/manual/en/latest/sculpt_paint/weight_paint/introduction.html), to resolve any skinning imperfections.
 
-Skinning your clothing and characters is a critical and often time-intensive process to create high quality assets that move and fit with different character bodies. Similar to the [Layered Clothing Validation tool](../../art/accessories/validation-tool.md), the Calisthenics Tool can save you time when testing your character models after rigging and skinning.
+Skinning your clothing and characters is a critical and often time-intensive process to create high quality assets that move and fit with different character bodies. Similar to the [Layered Clothing Validation Tool](../../art/accessories/validation-tool.md), the Calisthenics Tool can save you time when testing your character models after rigging and skinning.
 
 <Alert severity = 'info'>
 The Calisthenics tool doesn't provide complete verification of all potential skinning issues. You must also ensure that your custom models meet Studio's [avatar character specifications](../../art/characters/specifications.md) and any applicable [layered clothing specifications](../../art/accessories/specifications.md) for the best results in your experience.
@@ -59,7 +59,7 @@ To install the Calisthenics Tool in Blender:
   </figure>
 </GridContainer>
 
-## Using the Calisthenics Tool
+## Use the Calisthenics Tool
 
 After installation, you can use the Calisthenics Tool whenever you want to test an R15 character rig with skinning data. With the Calisthenics Tool, you can check how a character would move with generic animations, as well as attach rigid reference accessories to verify attachment during these movements. The tool also includes an option to automatically export your character, removing reference animation and accessory data.
 
@@ -69,7 +69,7 @@ You can try out the Calisthenics Tool using an [example character model](../../a
 For demonstration purposes, this reference model doesn't contain FACS data. If you require a reference with facial animation, you can download the same model with FACS data from our [reference models](../../art/characters/specifications.md#reference-files).
 </Alert>
 
-### Testing Animations
+### Test animations
 
 When testing your character model, first set the armature in the Calisthenics Tool then select one of the reference animations. It is important to visually verify your skinning quality using various movements and angles to ensure the best results for your model.
 
@@ -92,10 +92,10 @@ To test animations:
 5. Press **Stop Animation** to clear animation data.
    <video controls src="../../assets/modeling/skinned-meshes/calisthenic-tool/2_Set-Armature-Test.mp4" width="80%"></video>
 
-6. If you notice any unexpected skinning deformations, pause on the frame and switch to **Weight Paint mode** or use Blender's other skinning tools to resolve. See [Skinning a Humanoid Model](../../art/modeling/skinning-a-humanoid-model.md) for additional instruction.
+6. If you notice any unexpected skinning deformations, pause on the frame and switch to **Weight Paint mode** or use Blender's other skinning tools to resolve. See [Skin a humanoid model](../../art/modeling/skin-a-humanoid-model.md) for additional instruction.
    <video controls src="../../assets/modeling/skinned-meshes/calisthenic-tool/3_Fix-Skinning-Example.mp4" width="80%"></video>
 
-### Testing Accessory Attachments
+### Test accessory attachments
 
 You can add reference attachments to your character model using the **Attach Test Accessory** buttons. These test accessories help preview how rigid accessories attach to your character and how they can move with your model. The tool includes two sets of rigid accessories to apply to your character.
 
@@ -118,7 +118,7 @@ To test accessories:
    - **Detach Test Accessories**: Removes any test accessories from your character.
 2. If an accessory is not attaching at an expected location, reposition the associated **Attachment object** in your character rig.
 
-### Exporting Models
+### Export models
 
 When you are ready to export your model, you can export your character directly through the Calisthenics Tool. The tool automatically clears any of the test data and applies appropriate export settings.
 

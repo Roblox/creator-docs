@@ -18,9 +18,9 @@ Roblox scripts use the [Luau](https://luau-lang.org) programming language, which
 - Compared to Lua 5.1, Luau adds performance enhancements and many useful features, including an optional typing system, string interpolation, and generalized iteration for tables.
 - All valid Lua 5.1 code is valid Luau code, but the opposite is not true.
 
-Most books and online resources for Lua are still broadly applicable to Luau. For a detailed summary of differences, see [Compatibility](https://luau-lang.org/compatibility) in the Luau documentation. For language syntax, see the [Luau Reference](../luau/index.md).
+Most books and online resources for Lua are still broadly applicable to Luau. For a detailed summary of differences, see [Compatibility](https://luau-lang.org/compatibility) in the Luau documentation. For language syntax, see the [Luau reference](../luau/index.md).
 
-### Luau Basics
+### Luau basics
 
 Luau is gradually typed, so you don't need to specify a type when you create a variable. You can use `Global.LuaGlobals.type()` to check object type:
 
@@ -92,7 +92,7 @@ for key, value in myDictionary do -- Luau generalized iteration
 end
 ```
 
-## Your First Script
+## Your first script
 
 1. In Roblox Studio, hover over **ServerScriptService** in the [Explorer](../studio/explorer.md) window and click **+**.
 1. Select **Script** to add a new script.
@@ -123,7 +123,7 @@ end
    world
    ```
 
-## Getting Comfortable
+## Get comfortable
 
 A big part of adapting to a new development environment is configuring it to meet your needs and understanding the tools at your disposal:
 
@@ -135,7 +135,7 @@ A big part of adapting to a new development environment is configuring it to mee
 
 For more information about configuring Studio for scripting, see [Script Editor](../studio/script-editor.md). For information on using your favorite text editor and version control system, see [External Tools](../projects/external-tools.md).
 
-## Your Second Script
+## Your second script
 
 1. In Roblox Studio, add a script to **ReplicatedStorage** in the [Explorer](../studio/explorer.md) window and rename it to `OhNo`.
 1. Add the following code to the file:

@@ -1,5 +1,5 @@
 ---
-title: Sound Design
+title: Sound design
 next: /resources/beyond-the-dark/user-interface
 prev: /resources/beyond-the-dark/layered-clothing
 description: Explains the design concepts for sound in Beyond The Dark.
@@ -20,7 +20,7 @@ The DSR-14 spaceship contains the following audio that were sent through a custo
 - 10 scripted audio events
 - 50 3D sounds
 
-## Designing Sound Assets and Effects
+## Design sound assets and effects
 
 The space station's fish tank emits some of our favorite sounds in the experience. It's a perfect encapsulation of the design philosophy that we employed, using spot ambiences to make the space feel dynamic and fresh every time you enter or exit a distinct area. Other places we did this included neon light buzzes, fans, and the black hole rumble.
 
@@ -52,7 +52,7 @@ When we layer these sounds together, it fits the object and space very well. How
 
 Other sound assets were created for multiple scripted sequences on the ship, for example the black hole triggering the anti-gravity effect. These assets were largely made from recordings of a toaster oven door, pitched down and run through various reverb and EQ effects. Pitching this source material down implies the large size of the ship, and the reverb does a great job of continuing to reinforce that effect, by making the whole thing feel like a cave. Some synthesized laser elements were also generated and added for additional accent and impact on the events.
 
-## The Mix
+## The mix
 
 The mix uses a nested bus structure with sound groups, and two sidechain compressors. The main goal of the mix was to create clarity and listener interest.
 

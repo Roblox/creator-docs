@@ -7,15 +7,15 @@ import BetaAlert from '../includes/beta-features/beta-alert.md'
 
 Roblox's materials are unlike materials on other platforms, in that their visual appearance **and** their [physical properties](#physical-properties) reflect those of materials in the real world. For example, concrete is heavier than plastic and sinks faster in water. When you set the material of a part or terrain, Roblox simulates its physical material properties to make this behavior just work.
 
-The Roblox engine offers a range of [base materials](#base-materials) suitable to build many experiences, including various categories of metal, rock, and organic materials.
+The Roblox Engine offers a range of [base materials](#base-materials) suitable to build many experiences, including various categories of metal, rock, and organic materials.
 
 You can also create your own [custom materials](#custom-materials) and apply them to parts or [terrain](../parts/terrain.md). Custom materials have an additional [adaptive materials](#adaptive-materials) behavior that lets you adapt any model to use your art style and custom materials, even if someone else created the model.
 
-## Applying Materials
+## Apply materials
 
 You can quickly apply materials to [parts](../parts/index.md) through the [Material](#material-widget) widget. The [Material Manager](#material-manager) offers the same functionality and an additional "paint&nbsp;tool" application mode.
 
-### Material Widget
+### Material widget
 
 The **Material** widget is accessible from either the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tabs. Clicking the small dropdown arrow reveals a material picker.
 
@@ -25,7 +25,7 @@ By default, clicking the overall **Material** button applies the chosen material
 
 <img src="../assets/studio/general/Model-Tab-Material-Action-As-Tool.png" width="704" alt="Studio's Model tab with the Material Action as Tool selector indicated." />
 
-### Material Manager
+### Material manager
 
 If you've enabled the [Material Picker](#material-widget) beta, access the **Material Manager** from the picker window. If you have not enabled the beta, locate its dedicated button to the left of the **Color** button in the [Home](../studio/home-tab.md) or [Model](../studio/model-tab.md) tab.
 
@@ -57,7 +57,7 @@ You can also use a material as a painting tool that applies to parts:
 </TabItem>
 </Tabs>
 
-## Custom Materials
+## Custom materials
 
 The [Material Manager](#material-manager) provides a user interface to interact with various aspects of `Class.MaterialService`, including creating new custom materials and applying them to parts and [terrain](../parts/terrain.md). Custom materials are represented by `Class.MaterialVariant` instances within `Class.MaterialService`.
 
@@ -69,7 +69,7 @@ You can apply custom materials per-part or globally to both parts and terrain, a
 `Class.MaterialVariant` and `Class.SurfaceAppearance` instances both use [PBR](../art/modeling/surface-appearance.md) textures to customize the appearance of objects. The difference is that `Class.MaterialVariant` is for customizing the appearance of reusable tileable material, whereas `Class.SurfaceAppearance` is for customizing the visual appearance of a specific mesh with UV mapping. `Class.MaterialVariant` instances also have [physical properties](#physical-properties) that `Class.SurfaceAppearance` instances don't.
 </Alert>
 
-### Creating Custom Materials
+### Create custom materials
 
 You can edit all properties of a custom material in the [Material Manager](#material-manager) or through the properties of a `Class.MaterialVariant` instance. You can also generate custom materials through the prompt‑based [Material Generator](../studio/material-generator.md).
 
@@ -95,9 +95,9 @@ To create a custom material in the [Material Manager](#material-manager):
 If necessary, you can delete a custom material from the [Material Manager](#material-manager) by selecting it and clicking the **Delete** button below its preview globe. Alternatively, you can delete its associated `Class.MaterialVariant` instance within **MaterialService** of the [Explorer](../studio/explorer.md).
 </Alert>
 
-### Applying Custom Materials
+### Apply custom materials
 
-For [parts](../parts/index.md), you can use a custom material just like any other material, applying it to selected parts through the [Material](#applying-materials) widget or the [Material Manager](#material-manager).&sup1;
+For [parts](../parts/index.md), you can use a custom material just like any other material, applying it to selected parts through the [Material](#apply-materials) widget or the [Material Manager](#material-manager).&sup1;
 
 You can also apply the new material to a part by setting its **MaterialVariant** property in the [Properties](../studio/properties.md) window. In this case, Studio automatically sets its **Material** property to the base material you chose when creating the material.
 
@@ -109,7 +109,7 @@ Note that if you rename a custom material **after** applying it to parts, those 
 
 <figcaption>&sup1; Unlike on parts, you cannot **directly** apply custom materials to [terrain](../parts/terrain.md), although you can set a custom material as a [material override](#material-overrides) to an existing base material for all terrain using that material.</figcaption>
 
-### Material Overrides
+### Material overrides
 
 You can set a custom material as a **material override** to make its base material serve as a reference to the custom material. When you do so, Studio will use the custom material for both the textures and [physical properties](#physical-properties) of any part or [terrain](../parts/terrain.md) that uses the custom material.
 
@@ -117,7 +117,7 @@ You can set a custom material as a **material override** to make its base materi
 Material overrides are the only way to apply custom materials to terrain. Note also that the materials for terrain are global per place, so you can't apply multiple variants of the same base material to the terrain in a single place.
 </Alert>
 
-#### Setting Overrides
+#### Set overrides
 
 To set a custom material as a material override in the [Material Manager](#material-manager):
 
@@ -130,7 +130,7 @@ To set a custom material as a material override in the [Material Manager](#mater
 
    <img src="../assets/modeling/materials/Properties-View-Override.png" alt="" width="320" />
 
-#### Terrain Details
+#### Terrain details
 
 By default, applying a custom material to parts or as an override applies that custom material as tiles across each face. For terrain, you can optionally configure `Class.TerrainDetail` instances to customize the **top**, **side**, and **bottom** of terrain voxels using that custom material.
 
@@ -149,7 +149,7 @@ To customize the faces of terrain using a custom material:
 
    <img src="../assets/studio/material-manager/Terrain-Details-Edit.png" width="320" alt="" />
 
-#### Disabling Overrides
+#### Disable overrides
 
 You can disable an entire material override and all base materials that it's currently overriding, or you can disable the override for a specific base material.
 
@@ -168,7 +168,7 @@ You can disable an entire material override and all base materials that it's cur
 </TabItem>
 </Tabs>
 
-## Physical Properties
+## Physical properties
 
 All materials have built-in **physical properties** such as density, elasticity, and friction. Through the application of [custom materials](#custom-materials) with unique physical properties, you can affect global material behavior for all parts and [terrain](../parts/terrain.md) which use the custom material, such as creating an extremely slippery variant of the **Ice** material.
 
@@ -225,7 +225,7 @@ If you need to override a part's custom material properties and set physical pro
 </TabItem>
 </Tabs>
 
-## Adaptive Materials
+## Adaptive materials
 
 When you apply a custom material to a part, the part's `Class.Part.MaterialVariant` property becomes the name of its `Class.MaterialVariant` rather than its specific instance. This means that when you reuse the part in the same or a different place, as in a model or package, it's easier for you to adapt different custom materials to adjust the part's look. The adaptive behavior of custom materials has the following effects:
 
@@ -244,9 +244,9 @@ The [Creator Store](../production/creator-store.md) has a category called Materi
 To make the most of adaptive materials, use a consistent naming convention for your `Class.MaterialVariant` instances. For example, you can use `PascalCase` with the base material of the custom material as the first word, as in `GrassWet`, `GrassDry`, and `GrassBurned`.
 </Alert>
 
-## Asset and Property Reference
+## Asset and property reference
 
-### Base Materials
+### Base materials
 
 Shaders generate the look and feel of materials. The base material shaders work differently than the shader which `Class.MaterialVariant` instances use, so you can't create custom materials that look exactly like base materials, but you can still create custom materials that use their textures. The following tables list the asset&nbsp;IDs for material details such as `Class.SurfaceAppearance.ColorMap|ColorMap` and `Class.SurfaceAppearance.RoughnessMap|RoughnessMap`.
 
@@ -1221,9 +1221,9 @@ Shaders generate the look and feel of materials. The base material shaders work 
 The base materials were upgraded in 2022 to support custom materials. New places use the upgraded materials by default, but you may need to explicitly enable upgraded materials for older places by selecting **MaterialService** in the [Explorer](../studio/explorer.md) window and then, in the [Properties](../studio/properties.md) window, enabling its **Use2022Materials** property. Note that after upgrading, you might need to adjust terrain colors since terrain made with upgraded materials uses tint instead of hue shift.
 </Alert>
 
-### Default Colors
+### Default colors
 
-The following table lists the default RGB values for each base material. For information on how to color parts and terrain, see [Parts](../parts/index.md#coloring-parts) and [Environmental Terrain](../parts/terrain.md#custom-terrain-colors).
+The following table lists the default RGB values for each base material. For information on how to color parts and terrain, see [Parts](../parts/index.md#color-parts) and [Environmental Terrain](../parts/terrain.md#custom-terrain-colors).
 
 <table size="small">
 <thead>
@@ -1452,9 +1452,9 @@ The following table lists the default RGB values for each base material. For inf
 </tbody>
 </table>
 
-### Default Physical Properties
+### Default physical properties
 
-The following table lists each material's default physical properties as detailed in the `Datatype.PhysicalProperties` reference. For information on customizing physical properties, see [Physical Properties](#physical-properties).
+The following table lists each material's default physical properties as detailed in the `Datatype.PhysicalProperties` reference. For information on customizing physical properties, see [Physical properties](#physical-properties).
 
 <table size="small">
   <thead>

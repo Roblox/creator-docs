@@ -1,5 +1,5 @@
 ---
-title: Search Ads
+title: Search ads
 description: Search ads promote experiences in the search results of Roblox's experience catalog.
 ---
 
@@ -40,7 +40,7 @@ Search results populate in the following ways:
 All Roblox advertisers of experiences must abide by our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). Currently, [paid access experiences in Robux](../monetization/paid-access-robux.md), [paid access experiences in local currency](../monetization/paid-access-local-currency.md), and [17+ experiences](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Roblox-17-Policy-Standards) are not eligible to advertise using search ads. Roblox prevents surfacing experiences identified as clickbait or spam.
 </Alert>
 
-## Creating Search Ads
+## Create search ads
 
 Search ads are managed in the [Ads Manager](./ads-manager.md) as a Visits campaign objective. Search ads also use a [modified bidding and auction](#bidding-and-auction) process to determine pricing and availability of individual keywords.
 
@@ -50,7 +50,7 @@ Unlike other ad types, you can't modify brand suitability and audience targeting
 
 To create search ads:
 
-1. Navigate to the [Ads Manager](https://advertise.roblox.com/landing). If it's your first time creating an ad campaign, you must first [create an account](./ads-manager.md#creating-an-ad-account) and [add a payment method](./ads-manager.md#adding-a-payment-method).
+1. Navigate to the [Ads Manager](https://advertise.roblox.com/landing). If it's your first time creating an ad campaign, you must first [create an account](./ads-manager.md#create-an-ad-account) and [add a payment method](./ads-manager.md#add-a-payment-method).
 2. In **Manage Ads**, click **CREATE**.
 
    <img src="../../assets/promotion/ads-manager/Campaign-Create.png" width="80%" alt=""/>
@@ -81,9 +81,9 @@ To create search ads:
 
 6. In the Review Campaign page, review the final details of your advertisement and click **SUBMIT** to launch your campaign.
 
-After launching your campaign, you can monitor the campaign's performance with [Ads Reporting](#reporting) and [Billing](./ads-manager.md#ads-billing).
+After launching your campaign, you can monitor the campaign's performance with [ads reporting](#reporting) and [billing](./ads-manager.md#ads-billing).
 
-## Bidding and Auction
+## Bidding and auction
 
 Ads on Roblox work in a bidding system, where advertisers bid to have their ads shown to users through the available ad units placed in an experience. Search ads differ from other ads in that they also calculate the relevance of the experience to the user's query. **This means that experiences that are more relevant to a search query have a greater chance of displaying as ads**.
 
@@ -113,6 +113,6 @@ The following is the [same bidding and auction information](./ads-manager.md#bid
 
 ## Reporting
 
-You can review your ad campaign's performance using the Ad Manager's [Ads Reporting tool](./ads-manager.md#ads-reporting). At this time, you can't filter reports by keywords, but you can create ad sets with a single keyword to compare how an individual keyword performs for your campaign.
+You can review your ad campaign's performance using the Ad Manager's [ads reporting tool](./ads-manager.md#ads-reporting). At this time, you can't filter reports by keywords, but you can create ad sets with a single keyword to compare how an individual keyword performs for your campaign.
 
 Search ad metrics also populate in the [Analytics Dashboard](../analytics/acquisition.md#acquisition-sources) acquisition metrics. At this time, search ad and sponsored ad results are combined as a single Sponsored Ad metric on acquisition reports.

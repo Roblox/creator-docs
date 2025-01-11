@@ -110,7 +110,7 @@ The basic structure is a **scheme** followed by `://` and a **path** that varies
 
 <span><Chip label='[Scheme]://[Path]' color='primary' size='large' /></span><br/>
 
-The Roblox engine supports several custom URI schemes for referencing content stored on the platform.
+The Roblox Engine supports several custom URI schemes for referencing content stored on the platform.
 
 ### rbxassetid
 

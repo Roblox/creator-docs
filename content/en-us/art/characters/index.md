@@ -1,5 +1,5 @@
 ---
-title: Avatar Characters
+title: Avatar characters
 description: All Roblox users are represented by an avatar character which can be customized with body parts, accessories, and clothes from the Marketplace or within experiences.
 hideBreadcrumbs: true
 ---
@@ -18,7 +18,7 @@ Custom avatars are first created in 3D modeling programs, such as [Blender](http
 - Review the [basic character creation tutorial](../characters/creating/index.md) to get started on creating your first avatar character using Roblox's templates.
 - [Various tools, resources, and guides](#resources) provided by Roblox to standardize and expedite the creation process.
 
-## Components of an Avatar
+## Components of an avatar
 
 All avatar character models are made up of several fundamental components that provide users the functionality and flexibility to interact with their world. Many of these components are never made visible to the user, but they enable powerful avatar features that enhance social and environmental interactions. When creating avatar characters, all of these components are typically created first in your modeling software and then converted to their appropriate Roblox Studio instance on import.
 
@@ -48,7 +48,7 @@ Each avatar character is made up of the following rendered and non-rendered comp
   </TabItem>
 </Tabs>
 
-### Body Parts
+### Body parts
 
 <GridContainer numColumns="2">
   <figure><img src="../../assets/art/avatar/Body-Parts-Visual.png" />  <figcaption>Each avatar character is made up of 15 separate mesh objects</figcaption></figure>
@@ -72,7 +72,7 @@ Textures are image files that define the surface appearance of your character. Y
 When texturing parts of your character model's body, ensure that your character model includes a modesty layer over sensitive regions. See [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410#safety) for more information on Roblox's policies.
 </Alert>
 
-### Rigging Armature
+### Rigging armature
 
 <GridContainer numColumns="2">
   <figure><img src="../../assets/art/avatar/Rigging-Visual.png" />  <figcaption>The armature is made up of 16 bones, 1 for each body part geometry and a root bone</figcaption></figure>
@@ -82,7 +82,7 @@ When texturing parts of your character model's body, ensure that your character 
 
 An armature allows each character to articulate its limbs and move naturally through the environment. Often referred to as bones or joints, this rigging character information includes skinning data which allows connected limbs, like the knees or elbows to bend organically. In Studio, each bone of the character armature is represented by `Class.Bone` objects that connect the character `Class.MeshPart` objects together.
 
-### Face Animation Data
+### Face animation data
 
 <GridContainer numColumns="2">
   <figure><img src="../../assets/art/avatar/Facial-Rig-Visual.png" />  <figcaption>Each avatar character face is rigged and skinned to create various expressions</figcaption></figure>
@@ -93,7 +93,7 @@ An armature allows each character to articulate its limbs and move naturally thr
 <figure><img src="../../assets/art/avatar/Facial-Animation-Timeline.png" /><figcaption>Each required face pose is saved as a keyframe in the animation timeline.</figcaption></figure>
 Facial animation data allow each character to use global facial expressions. Each character includes facial bones and skinning, animation timeline data, and mapped pose data that allows it. In Studio, these facial animation elements are represented by a `Class.FaceControls` instance.
 
-### Cage Meshes
+### Cage meshes
 
 <GridContainer numColumns="2">
   <figure><img src="../../assets/art/avatar/Cage-Mesh-Visual.png" />  <figcaption>Head and Upper Torso cage mesh objects (wireframe)</figcaption></figure>
@@ -117,20 +117,20 @@ Attachment points define where rigid 3D accessories and equipables attach to the
 
 When wearing layered clothing, the clothing isn't attached directly to the attachment, but it does reference the associated attachment point during ragdoll and dismemberment animations.
 
-## Creation Process
+## Creation process
 
 When designing an avatar model, you must export all of the avatar components in a single `.fbx` or `.gltf` for import into Studio. Since 3D creation isn't a linear process and always requires reiteration and testing, the process of creating an avatar character model can differ between individuals and various creation workflows.
 
 In general, the creation process follows these typical workflows:
 
 <GridContainer numColumns="2">
-  <figure><figcaption><center>Basic Creation with Templates</center></figcaption><img src="../../assets/art/avatar/Workflow-Bodies-Templates.png"/><figcaption>Customize a Roblox template character that already includes all the necessary components.  See [Creating with Templates](../characters/creating/index.md) for guides and instructions.</figcaption></figure>
+  <figure><figcaption><center>Basic Creation with Templates</center></figcaption><img src="../../assets/art/avatar/Workflow-Bodies-Templates.png"/><figcaption>Customize a Roblox template character that already includes all the necessary components.  See [Create with templates](../characters/creating/index.md) for guides and instructions.</figcaption></figure>
 
   <figure><figcaption><center>Advanced Creation from Scratch</center></figcaption><img src="../../assets/art/avatar/Workflow-Bodies-Traditional.png"/><figcaption>Create characters from scratch, allowing full customization of the avatar character's components.</figcaption></figure>
 </GridContainer>
 
 <Alert severity = 'warning'>
-Ensure that all assets you create follow any applicable [Marketplace Policies](../marketplace/marketplace-policy.md) and [Roblox Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+Ensure that all assets you create follow any applicable [Marketplace policies](../marketplace/marketplace-policy.md) and [Roblox Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 </Alert>
 
 ## Resources
@@ -149,40 +149,40 @@ If you are interested in specific avatar creation topics, use the following tabl
 <tbody>
   <tr>
     <td>Tutorials</td>
-    <td>[Basic Character Creation Tutorial](../accessories/creating/index.md)</td>
+    <td>[Basic character creation tutorial](../accessories/creating/index.md)</td>
   </tr>
   <tr>
-    <td>Reference Files</td>
-    <td>[Avatar references and project files](../characters/project-files.md)<br /><br />[Example Mesh/Model Objects](../modeling/project-files.md)</td>
+    <td>Reference files</td>
+    <td>[Avatar references and project files](../characters/project-files.md)<br /><br />[Example mesh/model objects](../modeling/project-files.md)</td>
   </tr>
   <tr>
-    <td>Technical Specs</td>
-    <td>[.FBX Export Settings](../characters/export-settings.md)<br /><br />[Avatar Specifications](../characters/specifications.md)<br /><br />[General Mesh Specifications](../modeling/specifications.md)<br /><br />[Accessory Specifications](../accessories/specifications.md)<br /><br />[Marketplace Policy](../marketplace/marketplace-policy.md)</td>
+    <td>Technical specs</td>
+    <td>[.FBX export settings](../characters/export-settings.md)<br /><br />[Avatar specifications](../characters/specifications.md)<br /><br />[General mesh specifications](../modeling/specifications.md)<br /><br />[Accessory specifications](../accessories/specifications.md)<br /><br />[Marketplace policy](../marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
-    <td>Cosmetic Creation</td>
-    <td>[Accessories Overview](../accessories/specifications.md)<br /><br />[Creating Face Accessories](../characters/facial-animation/creating-face-accessories.md)<br /><br />[Accessory Fitting Tool](../accessories/accessory-fitting-tool.md)<br /><br />[Accessory Specifications](../accessories/specifications.md)<br /><br />[Marketplace Requirements](../marketplace/marketplace-policy.md)</td>
+    <td>Cosmetic creation</td>
+    <td>[Accessories overview](../accessories/index.md)<br /><br />[Creating face accessories](../characters/facial-animation/create-face-accessories.md)<br /><br />[Accessory Fitting Tool](../accessories/accessory-fitting-tool.md)<br /><br />[Accessory specifications](../accessories/specifications.md)<br /><br />[Marketplace requirements](../../marketplace/marketplace-policy.md)</td>
   </tr>
   <tr>
     <td>Texturing</td>
-    <td>[Texturing Requirements](../modeling/texture-specifications.md)<br /><br />[PBR Textures](../modeling/surface-appearance.md)</td>
+    <td>[Texturing requirements](../modeling/texture-specifications.md)<br /><br />[PBR textures](../modeling/surface-appearance.md)</td>
   </tr>
   <tr>
-    <td>Rigging and Skinning</td>
-    <td>[Rigging and Skinning Overview](../modeling/rigging.md)<br /><br />[Humanoid Rig Requirements](../characters/specifications.md#rigging)<br /><br />[Rigging Facial Bones](../characters/facial-animation/creating-basic-heads.md#rigging)<br /><br />[Auto Skin Transfer](../accessories/automatic-skinning-transfer.md)<br /><br />[Skinning Facial Bones](../characters/facial-animation/creating-basic-heads.md#skinning-face-bones)</td>
+    <td>Rigging and skinning</td>
+    <td>[Rigging and skinning overview](../modeling/rigging.md)<br /><br />[Humanoid rig requirements](../characters/specifications.md#rig)<br /><br />[Rigging facial bones](../characters/facial-animation/create-basic-heads.md#rig)<br /><br />[Automatic Skinning Transfer](../accessories/automatic-skinning-transfer.md)<br /><br />[Skinning facial bones](../characters/facial-animation/create-basic-heads.md#skin-face-bones)</td>
   </tr>
 
   <tr>
-    <td>Facial Animation and Live Heads</td>
-    <td>[Basic Head Creation](../characters/facial-animation/creating-basic-heads.md)<br /><br />[Creating Face Accessories](../characters/facial-animation/creating-face-accessories.md)<br /><br />[FACS Pose References](../characters/facial-animation/facs-poses-reference.md)</td>
+    <td>Facial animation and live heads</td>
+    <td>[Basic head creation](../characters/facial-animation/create-basic-heads.md)<br /><br />[Face accessory creation](../characters/facial-animation/create-face-accessories.md)<br /><br />[FACS pose references](../characters/facial-animation/facs-poses-reference.md)</td>
   </tr>
   <tr>
-    <td>Testing and Validation</td>
+    <td>Testing and validation</td>
     <td>[Calisthenics Tool](../modeling/calisthenics-tool.md)<br /><br />[Clothing Validation Tool](../accessories/validation-tool.md)</td>
   </tr>
   <tr>
     <td>Publishing and Marketplace</td>
-    <td>[Uploading to Marketplace](../marketplace/publishing-to-marketplace.md)<br /><br />[Marketplace Policy](../marketplace/marketplace-policy.md)<br /><br />[Fees and Commissions](../marketplace/marketplace-fees-and-commissions.md)</td>
+    <td>[Uploading to Marketplace](../../marketplace/publish-to-marketplace)<br /><br />[Marketplace policy](../../marketplace/marketplace-policy)<br /><br />[Fees and commissions](../../marketplace/marketplace-fees-and-commissions)</td>
   </tr>
 </tbody>
 </table>

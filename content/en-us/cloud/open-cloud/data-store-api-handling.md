@@ -1,5 +1,5 @@
 ---
-title: Handling API Requests for Data Stores
+title: Handling API requests for data stores
 description: Explains how to properly handle parameters of Open Cloud API requests for data stores.
 ---
 
@@ -7,7 +7,7 @@ Before sending requests to Open Cloud APIs for [standard data stores](../../refe
 
 ## Authorization
 
-Like all Open Cloud APIs, data store endpoints require all requests to include the `x-api-key` header, which contains an API key with enough permissions for the request. This requires you to apply the key to the experience and the data store, and the endpoint operation is permitted. If the key is invalid, `403 Unauthorized` is returned. For more information on API keys, see [Managing API Keys](api-keys.md).
+Like all Open Cloud APIs, data store endpoints require all requests to include the `x-api-key` header, which contains an API key with enough permissions for the request. This requires you to apply the key to the experience and the data store, and the endpoint operation is permitted. If the key is invalid, `403 Unauthorized` is returned. For more information on API keys, see [Manage API keys](api-keys.md).
 
 ## Throttling
 
@@ -15,14 +15,14 @@ All endpoints have two types of universe level throttling: **request-per-minute 
 
 Unlike the Lua API, these limits currently do not scale based on user counts. Exceeding these limits causes the endpoint to return `429 Too Many Requests`.
 
-### Standard Data Stores Throttling Limits
+### Standard data stores throttling limits
 
 <table>
   <thead>
     <tr>
-      <th>Request Type</th>
+      <th>Request type</th>
       <th>Method</th>
-      <th>Throttle Limits</th>
+      <th>Throttle limits</th>
     </tr>
     <tr>
       <td>Write</td>
@@ -63,14 +63,14 @@ Unlike the Lua API, these limits currently do not scale based on user counts. Ex
   </tbody>
 </table>
 
-### Ordered Data Stores Throttling Limits
+### Ordered data stores throttling limits
 
 <table>
   <thead>
     <tr>
-      <th>Request Type</th>
+      <th>Request type</th>
       <th>Method</th>
-      <th>Throttle Limits</th>
+      <th>Throttle limits</th>
     </tr>
     <tr>
       <td>Write</td>
@@ -107,7 +107,7 @@ Unlike the Lua API, these limits currently do not scale based on user counts. Ex
   </tbody>
 </table>
 
-## Input Validation
+## Input validation
 
 Before sending your request, make sure to validate endpoint parameters on formatting requirements and constraints based on the following table. Individual endpoints can have additional requirements beyond these. If a parameter doesn't satisfy the following restrictions, the endpoint returns a `400 Bad Request`.
 
@@ -332,7 +332,7 @@ The following examples are incorrect `filter` values that can fail your requests
 - `10 <= entry` - `entry` and the comparison value are on the wrong side.
 - `entry <= 10 && entry <= 50` - `&&` can only be used to specify a range with both two comparison operators for the min and max value.
 
-### Allow Missing Flags
+### Allow missing flags
 
 When sending requests to the [`Update`](../../reference/cloud/datastores-api/ordered-v1.json#update) method to update an existing ordered data store entry, you can add an optional `allow_missing` flag to allow the creation of an entry even if the entry doesn't exist.
 

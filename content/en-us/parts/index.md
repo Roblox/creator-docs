@@ -75,7 +75,7 @@ the group as a single assembly in the [Explorer](../studio/explorer.md). See
 </Grid>
 </Grid>
 
-## Part Properties
+## Part properties
 
 Each part has a variety of properties that you can customize through the [Properties](../studio/properties.md) window.
 
@@ -92,23 +92,23 @@ The following are commonly utilized properties:
 - `Class.BasePart|CanCollide` controls whether or not a part can collide with other parts. When this property is set to true, the part is impenetrable and the physics engine accounts for it within your experience. Conversely, when this property is set to false, the part can pass through anything, and the physics engine does **not** account for it.
 - `Class.BasePart|Transparency` sets a part's visibility to any value between the default value of 0 (fully visible) and 1 (fully transparent). If you have many partially transparent parts, they can slow down performance. To alleviate this, merge them using [solid modeling](../parts/solid-modeling.md).
 
-## Inserting Parts
+## Insert parts
 
 The **Part** button inserts a new part into the workspace. Clicking the small dropdown arrow on the button lets you select either **Block**, **Sphere**, **Wedge**, **Corner&nbsp;Wedge**, or **Cylinder**.
 
 <img src="../assets/studio/general/Model-Tab-Part-Tools.png" width="660" alt="Studio's Model tab with the Insert Part tool and its Part Type Picker highlighted." />
 
 <Alert severity="info">
-To insert a `Class.TrussPart` (not available on the insertion menu), use the [Explorer](../studio/explorer.md) as outlined [here](../studio/explorer.md#inserting-and-parenting).
+To insert a `Class.TrussPart` (not available on the insertion menu), use the [Explorer](../studio/explorer.md) as outlined [here](../studio/explorer.md#insert-and-parent).
 </Alert>
 
-## Selecting Parts
+## Select parts
 
-As you hover over parts in the viewport, they are outlined to indicate their potential selection. You can select an outlined part by clicking it, or you can select multiple parts by holding <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>⌘</kbd> as you hover over and click them. See [here](../studio/ui-overview.md#selecting-objects) for advanced methods of selecting parts in the 3D viewport.
+As you hover over parts in the viewport, they are outlined to indicate their potential selection. You can select an outlined part by clicking it, or you can select multiple parts by holding <kbd>Shift</kbd>, <kbd>Ctrl</kbd>, or <kbd>⌘</kbd> as you hover over and click them. See [here](../studio/ui-overview.md#object-selection) for advanced methods of selecting parts in the 3D viewport.
 
 <img src="../assets/studio/general/Editor-Window-Object-Selection.jpg" width="800" alt="Multiple models selected in 3D viewport"/>
 
-## Transforming Parts
+## Transform parts
 
 You can move, scale, and rotate selected parts either through modeling tools or by setting a new position, size, or orientation in the [Properties](#part-properties) window.
 
@@ -124,7 +124,7 @@ the arrow axis indicators change to a part's local orientation, and an **L** ind
   </TabItem>
 </Tabs>
 
-### Moving
+### Move
 
 You can move a selected part to a new position using the **Move** tool (default shortcut <kbd>2</kbd>) or by **cursor&nbsp;dragging**. While moving a part, you can temporarily toggle [snapping](../studio/model-tab.md#transform-snapping) by holding <kbd>Shift</kbd>.
 
@@ -164,7 +164,7 @@ While cursor dragging, <kbd>T</kbd> and <kbd>R</kbd> can be used to quickly rota
 </TabItem>
 </Tabs>
 
-### Scaling
+### Scale
 
 To scale (resize) a selected part along the **X**, **Y**, or **Z** axis, use the **Scale** tool (default shortcut <kbd>3</kbd>) and click/drag a handle. While dragging, you can temporarily toggle [snapping](../studio/model-tab.md#transform-snapping) by holding <kbd>Shift</kbd>.
 
@@ -172,7 +172,7 @@ To scale (resize) a selected part along the **X**, **Y**, or **Z** axis, use the
 
 <img src="../assets/modeling/parts/Transform-Scale.png" width="720" alt="A block part with the Scale tool's visual aids." />
 
-### Rotating
+### Rotate
 
 To rotate a selected part around the **X**, **Y**, or **Z** axis, use the **Rotate** tool (default shortcut <kbd>4</kbd>) and click/drag a rotation ring. While dragging, you can temporarily toggle [snapping](../studio/model-tab.md#transform-snapping) by holding <kbd>Shift</kbd>.
 
@@ -180,11 +180,11 @@ To rotate a selected part around the **X**, **Y**, or **Z** axis, use the **Rota
 
 <img src="../assets/modeling/parts/Transform-Rotate.png" width="720" alt="A block part with the Rotate tool's visual aids." />
 
-## Coloring Parts
+## Color parts
 
 While a part is gray by default, you can change it to any color through the following methods.
 
-### Hexagon Map
+### Hexagon map
 
 Clicking the small dropdown arrow on the **Color** widget reveals a hexagonal color picker.
 
@@ -194,22 +194,22 @@ By default, clicking the overall **Color** button applies the chosen color to an
 
 <img src="../assets/studio/general/Model-Tab-Color-Action-As-Tool.png" width="704" alt="Studio's Model tab with the Color Action as Tool selector indicated." />
 
-### Colors Popup
+### Colors popup
 
 The **Colors** popup allows you to set a color through your operating system's color picker widget. To access it, navigate to the [Properties](../studio/properties.md) window and click the small box to the left of the `Class.BasePart.Color|Color` property.
 
 <img src="../assets/studio/properties/Color-Picker.png" alt="A close up view of the Properties window with the Color property's color box highlighted." width="320" />
 
-### RGB Value
+### RGB value
 
 To define a specific RGB color value for a part, enter an RGB value into the
 `Class.BasePart.Color|Color` property field.
 
 <img src="../assets/studio/properties/Color-RGB-Entry.png" alt="A close up view of the Properties window with the Color property's RGB color value highlighted." width="320" />
 
-## Applying Materials
+## Apply materials
 
-Similar to [color](#coloring-parts), you can customize a part's **material** to simulate real-world materials such as wood, glass, or fabric. When selecting a material, consider the following:
+Similar to [color](#color-parts), you can customize a part's **material** to simulate real-world materials such as wood, glass, or fabric. When selecting a material, consider the following:
 
 - **Material affects the physical traits of a part, not just its appearance**. For example, the **Concrete** material is heavier than the **Plastic** material, so a concrete brick will have higher density than a plastic brick and sink in water faster.
 

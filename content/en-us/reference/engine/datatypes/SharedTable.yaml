@@ -19,7 +19,7 @@ description: |
   Like a Luau table, a `Datatype.SharedTable` object stores a set of key-value
   element pairs. Unlike a Luau table, only selected types of objects may be
   stored in a SharedTable, similar to other restrictions you'll find elsewhere
-  in the Roblox engine.
+  in the Roblox Engine.
 
   Keys must either be (1) a string or (2) a nonnegative integer number less than
   2<sup>32</sup>. Other kinds of keys are not supported.

@@ -24,13 +24,13 @@ Roblox supports many types of meshes, as long as they adhere to the [general mes
   </figure>
 </GridContainer>
 
-Studio also supports meshes with components for creating avatar character models or accessories, such as [rigging and skinning](#rigging-and-skinning-meshes) data.
+Studio also supports meshes with components for creating avatar character models or accessories, such as [rigging and skinning](#rigging-and-skinning) data.
 
 <Alert severity='info'>
 You can sell `Class.MeshPart` assets as avatar bodies, accessories, and clothing on the Marketplace. See [Avatar](../avatar/index.md) for more information.
 </Alert>
 
-## Importing Meshes
+## Import meshes
 
 You can import meshes into Studio using the [3D Importer](../art/modeling/3d-importer.md). With this tool, you can preview and examine meshes before importing them into your workspace or Toolbox, such as verifying texture, rigging, skinning, and animation data. It also flags issues and rejects meshes with error.
 
@@ -43,13 +43,13 @@ If the mesh file you are importing contains objects using specific naming conven
 
 If you want to bulk-import meshes along with non-3D assets, such as images and audio, you can use the [Asset Manager](../projects/assets/manager.md). However, the Asset Manager doesn't support importing meshes with rigging, skinning, and animation data, accessories, or characters with facial animations.
 
-## Customizing Meshes
+## Customize meshes
 
 Unlike basic parts, meshes have more customization options that you can adjust for advanced rendering fidelity.
 
 ### Texture
 
-**Textures** determine the visual appearance of meshes. Studio allows you to either apply one texture using the `Class.MeshPart.TextureID` property, or apply up to four Physically-Based Rendering (PBR) textures within a `Class.SurfaceAppearance` or `Class.MaterialVariant` child object of the mesh. PBR textures allow you to represent realistic shading and lighting by using multiple types of texture images, or maps, on a single object.
+**Textures** determine the visual appearance of meshes. Studio allows you to either apply one texture using the `Class.MeshPart.TextureID` property, or apply up to four physically-based rendering (PBR) textures within a `Class.SurfaceAppearance` or `Class.MaterialVariant` child object of the mesh. PBR textures allow you to represent realistic shading and lighting by using multiple types of texture images, or maps, on a single object.
 
 <Tabs>
 <TabItem label="PBR Textures">
@@ -78,7 +78,7 @@ If you add both `Class.SurfaceAppearance` and `Class.MaterialVariant` as child o
 <TabItem label="Single Texture">
 If the mesh you import to Studio doesn't come with texture data, or you want to change the existing texture, use the following steps to add a single texture:
 
-1. [Import the texture file](../projects/assets/manager.md#importing-assets) to Asset Manager. The file must follow the [texture specifications](../art/modeling/texture-specifications.md). Upon completion, Studio automatically assigns and prompts an asset ID.
+1. [Import the texture file](../projects/assets/manager.md#import-assets) to Asset Manager. The file must follow the [texture specifications](../art/modeling/texture-specifications.md). Upon completion, Studio automatically assigns and prompts an asset ID.
 2. Copy the asset ID.
 3. In the **Explorer** window, select the **MeshPart** object.
 4. In the **Properties** window, select the **TextureID** field and paste the asset ID of the texture.
@@ -90,15 +90,15 @@ If your mesh has existing PBR textures, setting a Texture ID can't override the 
 </TabItem>
 </Tabs>
 
-### Level of Detail
+### Level of detail
 
 You can dynamically control a mesh's level of detail using its `Enum.RenderFidelity` property. The default value is `Enum.RenderFidelity.Automatic|Automatic`, meaning the mesh's detail is based on its distance from the camera as outlined in the following table.
 
 <table>
 <thead>
   <tr>
-    <th>Distance&nbsp;From&nbsp;Camera</th>
-    <th>Render Fidelity</th>
+    <th>Distance&nbsp;from&nbsp;camera</th>
+    <th>Render fidelity</th>
     <th>Example</th>
   </tr>
 </thead>
@@ -121,7 +121,7 @@ You can dynamically control a mesh's level of detail using its `Enum.RenderFidel
 </tbody>
 </table>
 
-### Collision Fidelity
+### Collision fidelity
 
 **Collision fidelity** determines how closely the visual representation of a mesh matches its physical bounds. The `Class.MeshPart.CollisionFidelity` property has the following options, in order of fidelity and performance impact from lowest to highest:
 
@@ -152,9 +152,9 @@ You can dynamically control a mesh's level of detail using its `Enum.RenderFidel
 To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
-For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../performance-optimization/improving.md#physics-computation). For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set Physics and Rendering Parameters](../tutorials/curriculums/environmental-art/optimize-your-experience.md#review-physics-and-rendering-parameters).
+For more information on the performance impact of collision fidelity options and how to mitigate them, see [Improve performance](../performance-optimization/improve.md#physics-computation). For an in-depth walkthrough on how to choose a collision fidelity option that balances your precision and performance requirements, see [Set physics and rendering parameters](../tutorials/curriculums/environmental-art/optimize-your-experience.md#review-physics-and-rendering-parameters).
 
-## Rigging and Skinning Meshes
+## Rigging and Skinning
 
 **Rigging** is the process of connecting a mesh with an internal poseable skeleton rig. Rigged meshes allow mesh surfaces to rotate and move using internal bones within a model, such as a character's knee or elbow. **Skinning** a rigged mesh allows the rigged mesh object to deform, stretch, and bend in a more realistic manner.
 
@@ -169,4 +169,4 @@ For more information on the performance impact of collision fidelity options and
   </figure>
 </GridContainer>
 
-For more information on rigging and skinning, see [Rigging and Skinning](../art/modeling/rigging.md). After rigging a mesh, you can add animation and poses to it using the Animation Editor. See [Creating an Animation](../animation/editor.md#creating-an-animation) for more information. Marketplace 3D assets, such as avatar clothing and bodies, also require rigging and skinning. See [Avatar](../avatar/index.md) for more information on requirements for Marketplace assets.
+For more information on rigging and skinning, see [Rigging and skinning](../art/modeling/rigging.md). After rigging a mesh, you can add animation and poses to it using the Animation Editor. See [Create an animation](../animation/editor.md#create-an-animation) for more information. Marketplace 3D assets, such as avatar clothing and bodies, also require rigging and skinning. See [Avatar](../avatar/index.md) for more information on requirements for Marketplace assets.

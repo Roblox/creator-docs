@@ -1,8 +1,8 @@
 ---
-title: Spawning and Respawning
+title: Spawn and respawn
 description: Explains how spawning and respawning works in a laser tag experience.
-next: /tutorials/curriculums/gameplay-scripting/adding-rounds
-prev: /tutorials/curriculums/gameplay-scripting/creating-teams
+next: /tutorials/curriculums/gameplay-scripting/add-rounds
+prev: /tutorials/curriculums/gameplay-scripting/create-teams
 ---
 
 **Spawning** is the process of creating an object or character in an experience, and **respawning** is the process of adding an object or character back into an experience after they meet a removal condition, such as a character's health reaching zero or falling off the map. Both processes are important because they ensure players are able to join your experience, and can continue playing to improve their skills.
@@ -18,11 +18,11 @@ Using the [sample laser tag experience](https://www.roblox.com/games/14817965191
 
 This section includes plenty of scripting content, but instead of writing everything from scratch when creating an experience, it encourages you to leverage existing components, rapidly iterate, and figure out which systems need a custom implementation to match your vision. After you complete this section, you will learn how to implement round-based gameplay that tracks points, monitors player state, and displays round results.
 
-## Configure Spawn Locations
+## Configure spawn locations
 
 If you were to playtest the experience right now, all players would randomly spawn at either the `Class.SpawnLocation` object in the green team's spawn zone, or the `Class.SpawnLocation` object in the pink team's spawn zone. This presents a gameplay issue where players could tag each other within each spawn zone as soon as their opponent's force field disappears.
 
-To combat this problem, the sample laser tag experience configures both spawn locations with a `Class.SpawnLocation.Neutral|Neutral` property set to **false** to restrict the opposing team's players from spawning in the wrong spawn zone, and a `Class.SpawnLocation.TeamColor|TeamColor` property set to the corresponding `Class.Team.Color` value from [Assign Team Colors](creating-teams.md#assign-team-colors) in the previous section of the tutorial:
+To combat this problem, the sample laser tag experience configures both spawn locations with a `Class.SpawnLocation.Neutral|Neutral` property set to **false** to restrict the opposing team's players from spawning in the wrong spawn zone, and a `Class.SpawnLocation.TeamColor|TeamColor` property set to the corresponding `Class.Team.Color` value from [Assign Team Colors](create-teams.md#assign-team-colors) in the previous section of the tutorial:
 
 - **TeamASpawn** – The spawn location in the green team's spawn zone with a `Class.SpawnLocation.TeamColor|TeamColor` property set to **Mint**.
 - **TeamBSpawn** – The spawn location in the pink team's spawn zone with a `Class.SpawnLocation.TeamColor|TeamColor` property set to **Carnation Pink**.
@@ -101,7 +101,7 @@ local function spawnPlayersInLobby(players: { Player })
 end
 ```
 
-## Connect New Players
+## Connect new players
 
 Luau code in Studio is often event-driven, meaning that scripts listen for events from a Roblox service, then call a function in response. For example, when adding new players to a multiplayer experience, there must be an event that handles everything necessary for players to connect successfully. In the sample laser tag experience, this corresponding event is `Players.PlayerAdded:Connect`.
 
@@ -199,7 +199,7 @@ end
 
 If you add breakpoints or even just a `print()` statement, you can see that `onPlayerStateChanged()` gets called frequently throughout the experience: such as during initial setup of a round, to set itself on the main code path, after the player chooses a blaster, and when the player returns to the lobby, or the **Neutral** spawn location. Furthermore, after the player chooses a blaster, **ServerScriptService** > **BlasterSelectedHandler** sets the `PlayerState` to `Playing`, and `PlayerStateHandler` can finally remove the force field by calling `scheduleDestroyForceField()`.
 
-## Customize Force Fields
+## Customize force fields
 
 Instead of using a custom implementation, the sample laser tag experience uses Studio's built-in `Class.ForceField` class to prevent players from taking damage while they're selecting their blaster. This ensures that the only requirement for players to spawn with a force field is to include spawn locations with a `Class.SpawnLocation.Duration` property that is greater than 0. The sample uses an arbitrary value of 9,999 to enable force fields, then handles the actual duration programmatically in **ReplicatedStorage** > **ForceFieldClientVisuals**.
 
@@ -275,7 +275,7 @@ end
 To learn more about dealing with this type of situation, see [Debounce Patterns](../../../scripting/debounce.md).
 </Alert>
 
-## Handle Client State
+## Handle client state
 
 While most of this section focuses on **ServerScriptService** > **PlayerStateHandler**, there's another script of the same name in **ReplicatedStorage**. The reason for the split is the client-server architecture:
 
@@ -326,7 +326,7 @@ local function onPlaying()
 end
 ```
 
-## Respawn Characters
+## Respawn characters
 
 The sample laser tag experience handles respawning character back into a round through the `onTaggedOut()` state in **ReplicatedStorage** > **PlayerStateHandler**. Like the `onSelectingBlaster()` and `onPlaying()` state, `onTaggedOut()` triggers unique behavior according to the changes to the `playerState` attribute. Specifically, it disables player movement, presents the respawn UI, and disables the blaster.
 
@@ -368,7 +368,7 @@ Players.RespawnTime = 10 -- new line, in seconds
 In an experience with a progression system, such as checkpoints, you can use `Class.Player.RespawnLocation` to specify an exact location for players to respawn to after their health reaches zero.
 </Alert>
 
-## Miscellaneous Setup
+## Miscellaneous setup
 
 As part of initial setup, the sample laser tag experience also performs some small, but critical steps:
 
@@ -376,6 +376,6 @@ As part of initial setup, the sample laser tag experience also performs some sma
 
 - The experience uses a first-person camera by setting the `StarterPlayer.CameraMode.LockFirstPerson` property. Note that if you want to let users change between first- and third-person cameras, you must change the property programmatically rather than just setting it once in Studio, and modify the controls and UI to compensate for the change in perspective.
 
-- The experience uses the built-in Roblox leaderboard with the unit of "points", which players earn each time they tag another player out. You can see the configuration in **ServerScriptService** > **SetupLeaderboard**, but [In-Experience Leaderboards](../../../players/leaderboards.md) offers a full overview. Note that `onPlayerTagged` adds points to the leaderboard, which you'll learn about in [Adding Rounds](adding-rounds.md) and [Detecting Hits](detecting-hits.md).
+- The experience uses the built-in Roblox leaderboard with the unit of "points", which players earn each time they tag another player out. You can see the configuration in **ServerScriptService** > **SetupLeaderboard**, but [In-Experience Leaderboards](../../../players/leaderboards.md) offers a full overview. Note that `onPlayerTagged` adds points to the leaderboard, which you'll learn about in [Add rounds](add-rounds.md) and [Detect hits](detect-hits.md).
 
 Now that players can spawn, choose a blaster, and aim it from a first-person point of view, the next section teaches you about the scripts behind creating round-based gameplay.

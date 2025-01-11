@@ -9,7 +9,7 @@ You can think of the stack data structure as a stack of dinner plates: you start
 
 Stacks have two main operations: **push** for adding an element to the top of the stack and **pop** for removing the element from the top of the stack. A Stack can either have a fixed size or be dynamically resized. Stacks are helpful for design usage such as backtracking algorithms.
 
-## Implementing Stacks
+## Implement stacks
 
 Though Luau doesn't have stacks as a built-in data structure, you can use [tables](../luau/tables.md) to implement stacks. The following code sample shows how to create a stack, `push` an object to a stack, and `pop` an object from the stack. To use this implementation for your experience, you should save it as a `Class.ModuleScript` and store it in `Class.ReplicatedStorage`, so your stack is accessible for both client and server.
 

@@ -1,5 +1,5 @@
 ---
-title: Roblox Connect Project
+title: Roblox Connect project
 description: Explore Roblox Connect, an experience where you can call a friend and have a conversation as your avatars, together in a shared immersive space.
 ---
 
@@ -9,11 +9,11 @@ description: Explore Roblox Connect, an experience where you can call a friend a
 To run [Roblox Connect][robloxconnecturl], you and your friends need to be on client version 602 or higher. Additionally, to implement the current [methods and events](#api-implementation) in one of your own experiences, it must have been published to Roblox for at least one week.
 </Alert>
 
-## Project Overview
+## Project overview
 
 Developers can introduce synchronous avatar communication into any experience on Roblox utilizing current methods and events. Some of the noteworthy [Roblox Connect][robloxconnecturl] feature highlights and call privacy details are shared below.
 
-### Environment Switcher
+### Environment switcher
 
 To provide a better immersive communicative experience, the project includes an **environment switcher** that allows players to move from environment to environment. When moving among environments in the same place, player characters are repositioned via `Class.PVInstance:PivotTo()|PivotTo()`. When moving to an environment in a different place, players are teleported via `Class.TeleportService` to their desired location.
 
@@ -23,13 +23,13 @@ In regards to the call, teleport is to a reserved server and all call participan
 
 <img src="../assets/resources/roblox-connect/Environment-Switcher.png" width="375" alt="Environment switcher in Roblox Connect" />
 
-### Camera Modes
+### Camera modes
 
 [Roblox Connect][robloxconnecturl] introduces two unique camera modes in addition to the default camera mode, both of which you can utilize to enhance your own experiences. Furthermore, when switching between various camera modes, a camera transitioner makes switching between modes feel seamless.
 
 <img src="../assets/resources/roblox-connect/Camera-Mode-Switcher.png" width="360" alt="Camera mode switcher in Roblox Connect" />
 
-#### Picture-in-Picture
+#### Picture-in-picture
 
 In **picture-in-picture** mode, camera focus is on your call partner and a small view of your character floats on the screen. This mode also includes head tracking, and the local player's movement is restricted.
 
@@ -45,7 +45,7 @@ The **cinematic** mode attempts to keep both player characters within your camer
 
 The **freeplay** mode uses the default Roblox character camera, letting you move around while also talking to your call partner. Your partner's character will not necessarily be in view.
 
-### Emote Bar
+### Emote bar
 
 The project's **emote bar** is a cloned version of the [EmoteBar](../resources/modules/emote-bar.md) developer module. Out of the box, the module contains a lot of key features, but [Roblox Connect][robloxconnecturl] requires a few specific changes such as returning the character to "idle" state after performing the emote once.
 
@@ -55,7 +55,7 @@ The project's **emote bar** is a cloned version of the [EmoteBar](../resources/m
 
 If someone who is not in the call is added to the reserved server, or is already in the reserved server, the call is ended.
 
-## API Implementation
+## API implementation
 
 [Roblox Connect][robloxconnecturl] takes advantage of new `Class.SocialService` and `Class.PlayerViewService` methods and events to build an immersive communication platform.
 

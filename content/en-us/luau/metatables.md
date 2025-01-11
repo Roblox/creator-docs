@@ -14,7 +14,7 @@ print(list[3])
 
 You might expect this code to search through the list for the third index in list, find nothing, and return nil. That's not correct, though. What actually happens is the code searches through the list for the third index, finds nothing, and then checks if there's a metatable attached to the table, returning nil if there isn't one.
 
-## Manipulating Metatables
+## Manipulate metatables
 
 The two primary functions for adding and finding a table's metatable, are `setmetatable` and `getmetatable`
 
@@ -188,7 +188,7 @@ print(2 / a) -- 0.2, 0.4
 print(a / 2) -- 5, 2.5
 ```
 
-### Using Metatables
+### Use metatables
 
 There are many ways to use metatables, for example the `__unm` metamethod (to make a table negative):
 
@@ -285,7 +285,7 @@ for k, v in table1 + table2 do
 end
 ```
 
-### Use Cases
+### Use cases
 
 Now, all of these examples can be implemented as a simple function, but you can do a lot more than that. Let's try a simple program that will memorize a number when a possibly laggy math problem is put into it.
 
@@ -317,7 +317,7 @@ print(t[2]) -- will be slow because it's the first time using this number.
 print(t[1]) -- will be fast because it's just grabbing the number from the table.
 ```
 
-#### Rawset, Rawget, Rawequal
+#### Rawset, rawget, rawequal
 
 When playing with metatables, you may run into some problems. What happens if you need to use the `__index` metamethod to create new values in a table, but that table's metatable also has a `__newindex` metamethod in it? You'll want to use the Lua built-in function rawset to set the value without invoking any metamethods. Take the following code as an example of what happens if you don't use these functions.
 
@@ -351,11 +351,11 @@ local t = setmetatable({}, {
 print(t[1]) -- prints 10
 ```
 
-## Using the Set Datatype
+## Use the set datatype
 
 A **set** is a collection of items with no order and no duplicate elements. An item either **is** or **is not** contained within a set. Using metatables, you can construct and manipulate sets within Lua scripts.
 
-### Basic Methods
+### Basic methods
 
 The following code includes basic set functionality, letting you construct new
 sets, add and remove an item, check if a set contains an item, and output the
@@ -399,7 +399,7 @@ function Set:output()
 end
 ```
 
-#### Create Set
+#### Create set
 
 A new set can be constructed by calling `Set.new()` with an optional array of items to add.
 
@@ -409,7 +409,7 @@ local fruits = Set.new({"Apple", "Lemon", "Orange", "Cherry", "Lime", "Peach"})
 
 Note that by definition, a set has no concept of ordering.
 
-#### Add Item
+#### Add item
 
 Adding an item to an existing set can be done via the `Set:add()` method.
 
@@ -418,7 +418,7 @@ local fruits = Set.new({"Apple", "Lemon", "Orange", "Cherry", "Lime", "Peach"})
 fruits:add("Mango")
 ```
 
-#### Remove Item
+#### Remove item
 
 To remove an item from a set, call `Set:remove()` with the item name.
 
@@ -427,7 +427,7 @@ local fruits = Set.new({"Apple", "Lemon", "Orange", "Cherry", "Lime", "Peach"})
 fruits:remove("Orange")
 ```
 
-#### Check for Item
+#### Check for item
 
 To check if a set contains a specific item, use `Set:contains()`.
 
@@ -441,7 +441,7 @@ local result2 = fruits:contains("Watermelon")
 print(result2) -- false
 ```
 
-### Additional Methods
+### Additional methods
 
 Other useful operations can be implemented for sets, letting you compare items between sets, combine sets, or subtract one set from another.
 

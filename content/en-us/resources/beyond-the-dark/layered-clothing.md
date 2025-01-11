@@ -1,5 +1,5 @@
 ---
-title: Layered Clothing Example
+title: Layered clothing example
 description: Explains the concepts for applying layered clothing in Beyond The Dark.
 next: /resources/beyond-the-dark/sound-design
 prev: /resources/beyond-the-dark/custom-characters
@@ -13,7 +13,7 @@ We recommend building a base body character upon which you can fit the layered c
 For additional layered clothing resources, such as guides, example projects, and reference models, see [3D accessories](../../art/accessories#3d-accessories).
 </Alert>
 
-## Building the Custom Character
+## Build the custom character
 
 We wanted the users in our experience to embody someone sent to the station to investigate some disturbing events. We weren't sure early on what our actual character would be or if there would be multiple types of characters, but we wanted them to wear space suits. Because of this, we decided to make the clothing a separate component which would allow flexibility in our design.
 
@@ -24,7 +24,7 @@ We ultimately settled on a single character design that we named "The Visitor," 
   src="../../assets/resources/beyond-the-dark/layered-clothing/Custom-Character-Example.png"
   width="80%" />
 
-### Making the Base Body
+### Make the base body
 
 The base body is essentially the lowest layer of the layered clothing system. This can be anything from our character's body in underwear, to a fishman or even a blocky avatar.
 
@@ -38,7 +38,7 @@ Layered Clothing Checklist:
 - The poly budget for each part cannot exceed 10,000 triangles.
 - Character size cannot exceed 2000×2000×2000 units.
 
-### Making the Model
+### Make the model
 
 Layered Clothing lets clothes fit on almost any kind of body, whether it be a fishman, a rock golem, or a human space explorer. The only requirements are that they be bipedal humanoids.
 
@@ -75,7 +75,7 @@ To make sure the parts still appear contiguous, it's recommended you cap your me
   src="../../assets/resources/beyond-the-dark/layered-clothing/Seams-Example-2.png"
   width="80%" />
 
-### Texturing
+### Texture
 
 Texturing your characters lets you bring them to life based on how you want them to look. For the space station, we wanted a character that was a similar level of realism as its surroundings and settled on the following character:
 
@@ -122,7 +122,7 @@ And the following images show skin tone transparency in action in Studio, and sh
   src="../../assets/resources/beyond-the-dark/layered-clothing/Texture-Comparisons.png"
   width="75%" />
 
-### Caging
+### Cage
 
 Once we established the base body, we needed to cage it so that layered clothing could fit on it. Cages are the way that the clothing and body interact. Both the body and the clothing have the same cage, deformed by the user to define the clothing's fit. The body cage tells the clothing the shape of the character without all the fine details of the mesh itself. The clothing's inner cage defines how tight the clothing's fit is.
 
@@ -159,7 +159,7 @@ We decided that we wanted the outer cage to cover the skin, but not the gloves a
   src="../../assets/resources/beyond-the-dark/layered-clothing/Body-Cage-Example-6.png"
   width="80%" />
 
-### Skinning
+### Skin
 
 Skinning the character, similar to Custom Characters, is what gives the organic bending and twisting of your character when moving through the environment. We found the following guidelines useful, so that the character mesh imports correctly into Studio:
 
@@ -189,7 +189,7 @@ Skinning the character, similar to Custom Characters, is what gives the organic 
   <img src="../../assets/resources/beyond-the-dark/layered-clothing/Shoulder-Seams-Example-2.png" />
   </GridContainer>
 
-### Gloves and Boots
+### Gloves and boots
 
 As you'll notice from the base body, we decided to include gloves and boots. You might want to do this temporarily as well, for the following reasons:
 
@@ -209,7 +209,7 @@ As you'll notice from the base body, we decided to include gloves and boots. You
    src="../../assets/resources/beyond-the-dark/layered-clothing/Caging-With-Gloves.png"
    width="80%" />
 
-## Building the Suit
+## Build the suit
 
 Early on in the process, we decided that the suit should fit onto multiple characters, and that we wanted to release the assets to the Marketplace so others could enjoy the clothing. In addition to Layered Clothing, our character needed "hardpoint" items like a helmet and backpack as finishing touches. The following image shows how the space suit looks on a variety of characters.
 
@@ -262,7 +262,7 @@ With those guidelines in mind, here are the steps we followed to build the space
    src="../../assets/resources/beyond-the-dark/layered-clothing/Clothing-Posing.png"
    width="80%" />
 
-### Texturing
+### Texture
 
 After we skinned the clothing, and it moved the way we intended, we moved to texturing.
 
@@ -293,7 +293,7 @@ When texturing your clothing, keep the following points in mind:
 - Without metalness, the surface appearance defaults to 0 metalness, or a plastic surface.
 - Without roughness, the surface appearance defaults to 0 roughness, or a smooth surface.
 
-### Skinning
+### Skin
 
 Skinning clothing is required to have it bend properly with the base body. By skinning it, you're also telling the animations how the clothing should bend, including which parts are rigid or move with the character.
 
@@ -320,7 +320,7 @@ Since the gloves were going to be rigid, and the suit top stopped well above the
 
 Once skinning on the suit top was done, we simply repeated the same procedure on the pants to get them ready for Studio and bringing into the engine!
 
-### Importing to Studio
+### Import to Studio
 
 When the clothing looked good in our DCC application and in Studio, we were ready to import it into Studio and use the Accessory Tool, an upcoming release which will help you refine the clothing's cages to get the best fit possible. The tool can also export clothing as an accessory, which lets you add your clothing to a character.
 
@@ -331,7 +331,7 @@ In Studio, we named our Layered Clothing items with an LC\_ prefix, so we could 
   src="../../assets/resources/beyond-the-dark/layered-clothing/Accessories-In-Explorer.png"
   width="320" />
 
-## Building the Helmet
+## Build the helmet
 
 The helmet is an important element of the suit. We wanted users to see the character's face and also capture the sheen of the helmet's glass surface.
 
@@ -342,7 +342,7 @@ The helmet is an important element of the suit. We wanted users to see the chara
 
 Accessories where we don't want deformation to fit the head, like this helmet, are best built as "hardpoint" accessories, which are the types of accessories that you currently find in the Marketplace. The main difference with the helmet and what you find in the Marketplace is that it uses `Class.SurfaceAppearance`, which creates convincing plastic and metal looks and gives the helmet visor some transparency.
 
-### Making the Model
+### Make the model
 
 To build a helmet model:
 
@@ -367,7 +367,7 @@ To build a helmet model:
      <img src="../../assets/resources/beyond-the-dark/layered-clothing/Trim-Map-Texture-4.png" />
    </GridContainer>
 
-### Importing to Studio
+### Import to Studio
 
 When we had the helmet roughly fitted and placed in our DCC application, we could then import it into Studio with all the effects we wanted.
 
@@ -398,7 +398,7 @@ When we had the helmet roughly fitted and placed in our DCC application, we coul
    src="../../assets/resources/beyond-the-dark/layered-clothing/Helmet-Attachments.jpeg"
    width="80%" />
 
-### Introducing the Accessory Tool
+### Introduce the accessory tool
 
 <Alert severity="info"> See [Accessory Fitting Tool](../../art/accessories/accessory-fitting-tool.md) for more information on converting a mesh or model to an `Class.Accessory`. </Alert>
 

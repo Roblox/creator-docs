@@ -1,5 +1,5 @@
 ---
-title: Users and Players
+title: Users and players
 description: The Player instance contains information on the individual users within your experience.
 ---
 
@@ -13,11 +13,11 @@ Client and server-side scripts can both connect to the `Class.Players.PlayerAdde
 
 Use Scripts to access server-related services, such as a data store to retrieve and save data when a user joins or leaves. Use LocalScripts if the client needs to create and remove gameplay instances tied to the new user, such as a GUI display for the user's stats on a custom leaderboard.
 
-### User Joining
+### User joining
 
 When a client connects to an experience, its associated `Class.Player` object clones to the `Class.Players` service. The `Class.Players.PlayerAdded` represents users joining the experience. Some example use-cases include loading user data, assigning teams, and changing a user's character's clothing. The `Class.Players.PlayerAdded` event passes the `Class.Player` object of the user who joins, which you can use when calling other functions, such as data store and `Class.RemoteEvent` objects.
 
-#### Loading User Data on Join
+#### Load user data on join
 
 To load a user's data when they join an experience, use the `Class.Players.PlayerAdded` event in a `Class.Script`. The following example `Class.Script` listens to the event and attempts to retrieve a user's data using their user ID as the datastore key. After successfully retrieving the user data, you can use it to load the user's progress and stats.
 
@@ -45,13 +45,13 @@ end)
 The `Class.Instance.Name` of the `Class.Player` object is the name of the user. If you need a unique reference to a user, such as to save information about them in a [data store](../cloud-services/data-stores/index.md), use their `Class.Player.UserId` instead of their `Class.Player.Name` because users can't change their `UserId` even though they can change their Username and Display Name.
 </Alert>
 
-### User Leaving
+### User leaving
 
 When a client disconnects from an experience, the server destroys its associated `Class.Player` object from the `Class.Players` service. The `Class.Players.PlayerRemoving` event represents users leaving the experience. Some example use-cases include saving user data, removing their stats from a scoreboard, and destroying any of their models, such as their house. The `Class.Players.PlayerRemoving` event passes the `Class.Player` object of the user who leaves, which you can use when calling other functions, such as data store and `Class.RemoteEvent` objects.
 
 Notice that the event is called `Class.Player.PlayerRemoving`, not `Class.Player.PlayerRemoved`, because "removed" would imply that the `Class.Player` object is already removed and is therefore inaccessible to scripts.
 
-#### Saving User Data on Leave
+#### Save user data on leave
 
 To save a user's data when they leave an experience, use the `Class.Players.PlayerRemoving` event in a `Class.Script`. The following example `Class.Script` listens to the event and attempts to save a user's data using their user ID as the data store key.
 
@@ -77,18 +77,18 @@ end)
 
 ```
 
-### Character Spawning
+### Character spawning
 
 A user's `Class.Player.Character` model represents their avatar. By default, `Class.Player.CharacterAutoLoads` is true, and a user's character model automatically spawns when they join the experience. If `Class.Player.CharacterAutoLoads` is false, then you need to call `Class.Player:LoadCharacter()` to manually spawn the character.
 
 When a user's `Class.Player.Character` spawns, Scripts and LocalScripts in `Class.StarterCharacterScripts` clone into the character model and the `Class.Player.CharacterAdded` event fires.
 The `Class.Player.CharacterAdded` event passes the new character model to any event listeners, which you can use to find the character's `Class.Humanoid` object and modify its behavior. For example, you can use `Class.Humanoid:ApplyDescription()` to change the outfit of the avatar and `Class.Humanoid.WalkSpeed` or `Class.Humanoid.JumpHeight` to modify the avatar's movement.
 
-### Character Despawning
+### Character despawning
 
 When the player's `Class.Humanoid` dies, its body parts fall to the ground and the `Class.Humanoid.Died` event fires. The server automatically removes the character model and any scripts inside it after amount of time that the `Class.Players.Respawntime` property determines. You can use the `Class.Player.CharacterRemoving` event to reset other objects associated with the character, such as the network ownership of a vehicle they were driving.
 
-#### Counting Player Deaths
+#### Count player deaths
 
 You can use the `Class.Humanoid.Died` event to handle scoring for a kill or create a custom ragdoll model. The following `Class.Script` connects to `Class.Player.CharacterAdded` to retrieve each user's character model, then connects to the character's `Class.Humanoid` object. When the humanoid's `Class.Humanoid.Died` event fires, the script increments the number of times the user's humanoid has died and outputs that number.
 
@@ -105,13 +105,13 @@ game:GetService("Players").PlayerAdded:Connect(function(player)
 end)
 ```
 
-## Banning Users
+## Ban users
 
 To ensure civility and fair play in your experiences, you can ban users who violate your experience rules and community guidelines. You can modify ban durations, ban messages, and even extend bans to potential alternate accounts. When using this feature, you must also follow guidelines for [banning](#ban-guidelines) and [messaging](#message-guidelines).
 
 For implementation and usage instructions, see `Class.Players.BanAsync`.
 
-### Ban Guidelines
+### Ban guidelines
 
 When implementing bans in your experience, adhere to the following guidelines:
 
@@ -123,7 +123,7 @@ When implementing bans in your experience, adhere to the following guidelines:
   - Roblox will not mediate these appeals, unless the user believes the creator's experience rules or enforcement of their rules violate the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 - Roblox can moderate an experience if there is reason to believe that a creator's experience rules or enforcement of their rules violate the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
-### Message Guidelines
+### Message guidelines
 
 When a user is banned, they receive an error modal displaying information such as the ban length and reason. In the text-filtered message, you can include additional information such as appeal or contact information as long as you meet Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 

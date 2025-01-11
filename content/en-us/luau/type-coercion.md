@@ -1,5 +1,5 @@
 ---
-title: Type Coercion
+title: Type coercion
 description: Type coercion in Luau allows for arithmetic, concatenation, and assignment of differently typed values.
 ---
 
@@ -55,7 +55,7 @@ part3.Parent = workspace
 print(part3.Material) -- Enum.Material.Concrete
 ```
 
-### TimeOfDay
+### Time of day
 
 The `Class.Lighting.TimeOfDay` property, which defines whether it is night, day, or any other time, is a string representation of the `Datatype.DateTime` data type. If you assign a number to `Class.Lighting.TimeOfDay`, Luau converts it to the string representation of `Datatype.DateTime`.
 

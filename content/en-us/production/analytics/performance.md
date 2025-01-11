@@ -1,5 +1,5 @@
 ---
-title: Performance Dashboard
+title: Performance dashboard
 description: Explains how to improve performance analytics metrics for your experience.
 ---
 
@@ -7,16 +7,16 @@ The **Performance** dashboard provides up-to-the-minute client and server metric
 
 ![An overview of the performance dashboard.](../../assets/analytics/performance/perf-dash-overview.png)
 
-## Accessing the Dashboard
+## Access the dashboard
 
-To access the Performance page, you must either be the experience owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#granting-group-permission).
+To access the Performance page, you must either be the experience owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#grant-group-permission).
 
 1. Navigate to the [Creations](https://create.roblox.com/dashboard/creations) page on the **Creator Hub**.
 2. Under the **Creator Hub** dropdown, select your account or the group that owns the experience.
 3. Select the experience.
 4. In the **Monitoring** dropdown, select **Performance**.
 
-## Using the Dashboard
+## Use the dashboard
 
 The dashboard begins with the current number of users, the number of servers they are spread across, and a device breakdown. For the dashboard to show client and server **charts** like the ones below, your experience must have at least 100 daily active users (DAU).
 
@@ -38,7 +38,7 @@ When reviewing charts or filtering:
 Percentile values are calculated smallest to largest, so for metrics where lower numbers are better (e.g. server CPU time), P10 represents the "best case" and P90 the "worst case" rather than the other way around.
 </Alert>
 
-## Client Charts
+## Client charts
 
 The **Client** tab includes the following charts, all of which are broken down by platform or operating system:
 
@@ -77,7 +77,7 @@ The **Client** tab includes the following charts, all of which are broken down b
     </tbody>
 </table>
 
-## Server Charts
+## Server charts
 
 The **Server** tab includes the following charts:
 
@@ -126,7 +126,7 @@ If a category is higher than usual or appears to be taking up a disproportionate
 To exclude a group or process from a chart, click its label in the legend.
 </Alert>
 
-- CPU categories and tasks map to the ones in the [MicroProfiler](../../studio/microprofiler/index.md), so you can take [server dumps](../../studio/microprofiler/index.md#profiling-the-server), select **Timers** mode, and then use the **Groups** menu to filter by the problematic process group.
+- CPU categories and tasks map to the ones in the [MicroProfiler](../../studio/microprofiler/index.md), so you can take [server dumps](../../studio/microprofiler/index.md#profile-the-server), select **Timers** mode, and then use the **Groups** menu to filter by the problematic process group.
 
   For example, if you spot a potential problem with the **assemble** process under the **Physics** group, you can find it under the same name in the MicroProfiler:
 
@@ -141,7 +141,7 @@ To exclude a group or process from a chart, click its label in the legend.
 If you spot a potential problem, use the following steps to remediate and fix it:
 
 1. Check your recent updates and consider rolling them back if the impact to metrics is severe.
-2. See the [Identifying Performance Issues](../../performance-optimization/identifying.md) and [Improving Performance](../../performance-optimization/improving.md) for information on troubleshooting problems with server compute, client compute, and memory usage.
+2. See [Identify performance issues](../../performance-optimization/identify.md) and [Improve performance](../../performance-optimization/improve.md) for information on troubleshooting problems with server compute, client compute, and memory usage.
 3. Use built-in testing tools to further drill down on problems:
 
    - [Developer Console](../../studio/developer-console.md) for viewing error and log messages and detailed information on memory and networking.

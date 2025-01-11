@@ -1,15 +1,15 @@
 ---
-title: Arrays and Dictionaries
+title: Arrays and dictionaries
 description: Learn how to store data in tables with arrays and dictionaries in Roblox Lua.
 next: /tutorials/fundamentals/coding-5/intro-to-arrays
 prev: /tutorials/fundamentals/coding-4/nested-loops
 ---
 
-### Series Description
+### Series description
 
 Data structures are how coders store and organize entire sets of data. In Lua, data structures are tables. Unlike variables, tables can hold any number of values. Tables can store a list of high scores, a player's inventory, or all of an object's properties. Two types of tables covered in this series are **dictionaries** and **arrays**.
 
-### Objectives and Prerequisites
+### Objectives and prerequisites
 
 <table>
 <tbody>
@@ -34,7 +34,7 @@ Data structures are how coders store and organize entire sets of data. In Lua, d
 </tbody>
 </table>
 
-### Series Contents
+### Series contents
 
 <table>
 <thead>
@@ -45,19 +45,19 @@ Data structures are how coders store and organize entire sets of data. In Lua, d
 </thead>
 <tbody>
    <tr>
-    <td>[Intro to Arrays](../coding-5/intro-to-arrays.md)</td>
+    <td>[Intro to arrays](../coding-5/intro-to-arrays.md)</td>
     <td>Learn how to store like groupings of data together with arrays.</td>
    </tr>
    <tr>
-    <td>[Loops and Arrays](../coding-5/loops-and-arrays.md)</td>
+    <td>[Loops and arrays](../coding-5/loops-and-arrays.md)</td>
     <td>Combine arrays with loops to repeat code with a disappearing path trap.</td>
    </tr>
    <tr>
-   <td>[Making Changes to Arrays](../coding-5/making-changes-to-arrays.md)</td>
+   <td>[Make changes to arrays](../coding-5/make-changes-to-arrays.md)</td>
     <td>Add and remove values in arrays by coding a script to manage a player's inventory</td>
    </tr>
    <tr>
-   <td>[Intro to Dictionaries](../coding-5/intro-to-dictionaries.md)</td>
+   <td>[Intro to dictionaries](../coding-5/intro-to-dictionaries.md)</td>
     <td>Organize complex sets of data with pairs using dictionaries.</td>
    </tr>
 

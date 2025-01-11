@@ -7,7 +7,7 @@ A queue is a linear data structure with a collection of items. There are two typ
 
 Queue is a built-in data structure of the [non-persistent data storage](../cloud-services/memory-stores/queue.md) service named `Class.MemoryStoreService`, for which you can directly call the built-in functions to get a queue and add, read, or remove data from the queue. For any other usage, such as scheduling tasks and handling requests in your experience, you can use tables to implement queues on your own.
 
-## Regular Queues
+## Regular queues
 
 Regular queues are maintained in the FIFO sequence, in which all items are added to the back of the queue and read or removed in the same order as they are added, from the front to the end.
 
@@ -16,7 +16,7 @@ Regular queues are maintained in the FIFO sequence, in which all items are added
   <figcaption>The order of how a regular queue adds, reads, and removes items</figcaption>
 </figure>
 
-## Priority Queues
+## Priority queues
 
 Priority queues are not following the FIFO rule, in which each item can be added with a priority number that indicates its order being read or removed. The item at the back of a priority queue has the default priority of 0, and the item at the front of the queue has the highest set priority, which is 5 in the following example.
 
@@ -29,7 +29,7 @@ For this example, an item with a set priority of 3 is being added to a queue. Th
 
 Priority queues are useful for situations where you want to read or access data based on the order of importance instead of the order of being added. You can set a priority as an integer when adding an item, and the queue processes items with higher priority before items with lower priorities. For example, you can use priority queues for matchmaking by assigning higher priorities to users who have been waiting for a long time.
 
-## Implementing Queues
+## Implement queues
 
 You can use built-in queues of `Class.MemoryStoreService` or use [tables](../luau/tables.md) to implement queues for all other usage. The following code sample shows the implementation a **regular queue**. To use this implementation for your experience, you should save it as a `Class.ModuleScript` and store it in `Class.ReplicatedStorage`, so your queue is accessible for both client and server.
 

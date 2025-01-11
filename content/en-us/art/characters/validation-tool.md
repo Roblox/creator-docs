@@ -1,5 +1,5 @@
 ---
-title: Blender Validation Tool
+title: Blender validation tool
 description: The Avatar Validation Tool checks for common character model issues in Blender.
 ---
 
@@ -9,7 +9,7 @@ The **Avatar Validation Tool** is a supplemental Blender add-on you can use to q
 
 This tool can save you time by checking for common validation specifications before you export your model, but it doesn't provide a comprehensive verification of all aspects of your character model. You should always continually test your character model, including testing your characters [in Studio](../../art/characters/testing/studio.md) and verifying on your own if your model meets Roblox's [character specifications](../../art/characters/specifications.md).
 
-## Installing
+## Install
 
 <Alert severity = 'warning'>
 The Validation Tool plugin is compatible with Blender 3.5.1+. You may experience unexpected behavior if using earlier versions of Blender.
@@ -42,7 +42,7 @@ To install the Validation Tool in Blender:
   </figure>
 </GridContainer>
 
-## Validating
+## Validate
 
 After installing the plugin, you can begin validating your character models. When validating, results with issues display as red. In some cases, you can apply an automatic fix to checks that have issues. See [Checks and Troubleshooting Steps](#checks-and-troubleshooting) for details on each validation check.
 
@@ -59,7 +59,7 @@ To use the validation tool on your asset:
 This validation tool only checks for common validation issues. You should always continually test your character model, including testing your characters [in Studio](../../art/characters/testing/studio.md) and verifying on your own if your model meets Roblox's [character specifications](../../art/characters/specifications.md).
 </Alert>
 
-## Checks and Troubleshooting
+## Checks and troubleshooting
 
 Each button on the validation tool performs a different check against the expected [character specifications](../../art/characters/specifications.md). The following are the specific types of verification each check performs, as well as general troubleshooting steps to resolve discovered issues:
 

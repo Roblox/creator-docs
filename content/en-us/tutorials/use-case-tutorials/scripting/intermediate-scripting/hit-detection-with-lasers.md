@@ -1,7 +1,7 @@
 ---
-title: Hit Detection with Lasers
+title: Hit detection with lasers
 description: The process for casting a laser from a blaster and detecting collision.
-prev: /tutorials/scripting/intermediate-scripting/creating-player-tools
+prev: /tutorials/scripting/intermediate-scripting/create-player-tools
 ---
 
 In this tutorial, you'll learn how to cast a laser from the blaster in [Creating Player Tools](./creating-player-tools.md) and detect whether or not it hits a player.
@@ -10,7 +10,7 @@ In this tutorial, you'll learn how to cast a laser from the blaster in [Creating
     <source src="../../../../assets/tutorials/hit-detection-with-lasers/Introduction-Video.mp4" />
 </video>
 
-## Raycasting to Find Collisions
+## Raycasting to find collisions
 
 **Raycasting** creates an invisible ray from a start position towards a given direction with a defined length. If the ray collides with objects or terrain in its path, it will return information on the collision such as the position and the object it collided with.
 
@@ -19,11 +19,11 @@ In this tutorial, you'll learn how to cast a laser from the blaster in [Creating
     <figcaption>Raycast from A towards B colliding with a wall</figcaption>
 </figure>
 
-## Finding the Mouse Location
+## Find the mouse location
 
 Before a laser can be shot, you must first know where the player is aiming. This can be found by raycasting from the player's 2D mouse location on the screen directly forwards from the camera into the game world. The ray will collide with whatever the player is aiming at with the mouse.
 
-1. Open the **ToolController** script inside the Blaster tool from [Creating Player Tools](./creating-player-tools.md). If you haven't completed that tutorial yet you can download the [Blaster](https://www.roblox.com/library/6571559694/Blaster) model and insert it into StarterPack.
+1. Open the **ToolController** script inside the Blaster tool from [Create Player Tools](./create-player-tools.md). If you haven't completed that tutorial yet you can download the [Blaster](https://www.roblox.com/library/6571559694/Blaster) model and insert it into StarterPack.
 
    ![](../../../../assets/tutorials/hit-detection-with-lasers/Explorer-ToolController.png)
 
@@ -124,7 +124,7 @@ The length of the direction vector determines how far the ray will travel. The r
        local raycastResult = workspace:Raycast(screenToWorldRay.Origin, directionVector)
    ```
 
-## Collision Information
+## Collision information
 
 If the raycast operation finds an object hit by the ray, it will return a `Datatype.RaycastResult`, which contains information about the collision between the ray and object.
 
@@ -186,7 +186,7 @@ local function getWorldMousePosition()
 end
 ```
 
-## Firing Towards the Target
+## Fire towards the target
 
 Now that the 3D mouse position is known, it can be used as a **target position** to fire a laser towards. A second ray can be cast between the player's weapon and the target position using the **Raycast** function.
 
@@ -323,7 +323,7 @@ Finally, you'll need to check that the raycast operation returned a value. If a 
    end
    ```
 
-## Checking the Object Hit
+## Check the object hit
 
 To find if the object hit by the laser is part of a player's character or just a piece of scenery, you'll need to look for a `Class.Humanoid`, as every character has one.
 
@@ -360,9 +360,9 @@ If you have other models in the game that contain humanoids, further checks will
    end
    ```
 
-Now the laser blaster should print `Player hit` to the output window every time the raycast operation hits another player.
+Now the laser blaster should print `Player hit` to the Output Window every time the raycast operation hits another player.
 
-## Testing with Multiple Players
+## Test with multiple players
 
 Two players are needed to test if the weapon raycast is finding other players, so you need to start a local server.
 
@@ -382,7 +382,7 @@ Two players are needed to test if the weapon raycast is finding other players, s
 
 You can find out more about the Test tab [here](../../../../studio/test-tab.md).
 
-## Finding the Laser Position
+## Find the laser position
 
 The blaster should fire a red beam of light at its target. The function for this will be inside a `Class.ModuleScript` so it can be reused in other scripts later on. First, the script will need to find the position where the laser beam should be rendered.
 
@@ -434,7 +434,7 @@ The blaster should fire a red beam of light at its target. The function for this
    end
    ```
 
-## Creating the Laser Part
+## Create the laser part
 
 Now that you know where to create a laser beam, you need to add the beam itself. This can be done easily with a Neon part.
 
@@ -504,7 +504,7 @@ Now the function to render the laser beam is complete, it can be called by the *
     <source src="../../../../assets/tutorials/hit-detection-with-lasers/Laser-Render-Video.mp4" />
 </video>
 
-## Controlling Weapon Fire Rate
+## Control weapon fire rate
 
 Weapons need a delay between each shot to stop players from dealing too much damage in a short amount of time. This can be controlled by checking if enough time has passed since a player last fired.
 
@@ -573,7 +573,7 @@ Weapons need a delay between each shot to stop players from dealing too much dam
 
 When you test the blaster you should find that no matter how fast you click, there will always be a short 0.3 seconds delay between each shot.
 
-## Damaging the Player
+## Damage the player
 
 Clients cannot damage other clients directly; the server needs to be responsible for issuing damage when a player is hit.
 
@@ -652,7 +652,7 @@ The server needs to deal damage to the player who has been hit when the event is
 
 6. Test the blaster with 2 players by starting a local server. When you shoot the other player, their health will decrease by the number assigned to `LASER_DAMAGE`.
 
-## Rendering Other Player's Laser Beams
+## Render other player's laser beams
 
 Currently, the laser beam is created by the client firing the weapon, so only they will be able to see the laser beam.
 
@@ -660,7 +660,7 @@ If the laser beam was created on the server then everyone would be able to see i
 
 To solve this issue, every client will create their own laser beams. This means the client shooting the weapon will see the laser beam instantly. Other clients will experience a small delay between when another player shoots and a beam appears. This is the best case scenario: there is no way to communicate one client's laser to other clients any faster.
 
-### Shooter's Client
+### Shooter's client
 
 First, the client needs to tell the server it has fired a laser and provide the end position.
 
@@ -681,7 +681,7 @@ First, the client needs to tell the server it has fired a laser and provide the 
    end
    ```
 
-### The Server
+### The server
 
 The server now must receive the event that the client has fired and tell all clients the start and end position of the laser beam so they can also render it.
 
@@ -739,7 +739,7 @@ The server can now call **FireAllClients** on the **LaserFired** remote event to
    end
    ```
 
-### Rendering on the Clients
+### Render on the clients
 
 Now **FireAllClients** has been called, each client will receive an event from the server to render a laser beam. Each client can reuse the **LaserRenderer** module from earlier to render the laser beam using the tool's handle position and end position value sent by the server. The player that fired the laser beam in the first place should ignore this event otherwise they'll see 2 lasers.
 
@@ -781,7 +781,7 @@ Now **FireAllClients** has been called, each client will receive an event from t
     <source src="../../../../assets/tutorials/hit-detection-with-lasers/Client-Laser-Communication-Video.mp4" />
 </video>
 
-## Sound Effects
+## Sound effects
 
 The shooting sound effect currently only plays on the client that's shooting the projectile. You'll need to move the code to play the sound so that other players will hear it too.
 
@@ -813,7 +813,7 @@ The shooting sound effect currently only plays on the client that's shooting the
    end
    ```
 
-## Securing Remotes using Validation
+## Secure remotes using validation
 
 If the server isn't checking data from incoming requests, a hacker can abuse remote functions and events and use them to send fake values to the server. It's important to use **server-side validation** to prevent this.
 
@@ -944,7 +944,7 @@ Your laser blaster is now complete, with a basic hit detection system using rayc
     <source src="../../../../assets/tutorials/hit-detection-with-lasers/Introduction-Video.mp4" />
 </video>
 
-## Final Code
+## Final code
 
 ### ToolController
 

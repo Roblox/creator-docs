@@ -5,7 +5,7 @@ description: Explains methods to detect physical collisions, handle collision ev
 
 A collision occurs when two 3D objects come into contact within the 3D world. For customized collision handling, `Class.BasePart` has a set of [collision events](#collision-events) and [collision filtering](#collision-filtering) techniques, so you can control which physical assemblies collide with others.
 
-## Collision Events
+## Collision events
 
 Collision **events** occur when two `Class.BasePart|BaseParts` touch or stop touching in the 3D world. You can detect these collisions through the `Class.BasePart.Touched|Touched` and `Class.BasePart.TouchEnded|TouchEnded` events which occur regardless of either part's `Class.BasePart.CanCollide|CanCollide` property value. When considering collision handling on parts, note the following:
 
@@ -71,11 +71,11 @@ end
 part.TouchEnded:Connect(onTouchEnded)
 ```
 
-## Collision Filtering
+## Collision filtering
 
 Collision **filtering** defines which physical parts collide with others. You can configure filtering for numerous objects through [collision groups](#collision-groups) or you can control collisions on a [part‑to‑part](#part-to-part-filtering) basis with `Class.NoCollisionConstraint` instances.
 
-### Collision Groups
+### Collision groups
 
 Collision **groups** let you assign `Class.BasePart|BaseParts` to dedicated groups and specify whether or not they collide with those in other groups. Parts within non‑colliding groups pass through each other completely, even if both parts have their `Class.BasePart.CanCollide|CanCollide` property set to `true`.
 
@@ -88,7 +88,7 @@ You can easily set up collision groups through Studio's **Collision Groups Edito
 
 <img src="../assets/studio/general/Model-Tab-Collision-Groups.png" width="754" alt="Collision Groups tool indicated in Model tab of Studio" />
 
-The editor functions in either **List&nbsp;View** which favors [docking](../studio/ui-overview.md#repositioning-windows) to the left or right side of Studio, or in a wider **Table&nbsp;View**, which favors docking to the top or bottom.
+The editor functions in either **List&nbsp;View** which favors [docking](../studio/ui-overview.md#reposition-windows) to the left or right side of Studio, or in a wider **Table&nbsp;View**, which favors docking to the top or bottom.
 
 <Tabs>
   <TabItem label="List View">
@@ -99,7 +99,7 @@ The editor functions in either **List&nbsp;View** which favors [docking](../stud
   </TabItem>
 </Tabs>
 
-#### Registering Groups
+#### Register groups
 
 <Tabs>
 <TabItem label="Studio Editor">
@@ -124,7 +124,7 @@ To create a new collision group:
 
 </TabItem>
 <TabItem label="Scripting">
-To create a new collision group through scripting, include the `Class.PhysicsService` service and register the group with `Class.PhysicsService:RegisterCollisionGroup()`. It may be helpful to pre-declare your group names in local variables, as the same strings can be used for [assigning objects](#assigning-objects-to-groups) and [configuring groups](#configuring-group-collisions) within the same script.
+To create a new collision group through scripting, include the `Class.PhysicsService` service and register the group with `Class.PhysicsService:RegisterCollisionGroup()`. It may be helpful to pre-declare your group names in local variables, as the same strings can be used for [assigning objects](#assign-objects-to-groups) and [configuring groups](#configure-group-collisions) within the same script.
 
 ```lua title="Collision Group Setup" highlight='1,3,4,7,8'
 local PhysicsService = game:GetService("PhysicsService")
@@ -138,13 +138,13 @@ PhysicsService:RegisterCollisionGroup(doors)
 ```
 
 <Alert severity="warning">
-Since scripts are not guaranteed to execute in any particular order, it's highly recommended that you register collision groups in a single script. Abstracting group registration among multiple scripts may result in a race condition where a group is not yet registered at the time you [configure groups](#configuring-group-collisions) or [assign objects](#assigning-objects-to-groups) to them.
+Since scripts are not guaranteed to execute in any particular order, it's highly recommended that you register collision groups in a single script. Abstracting group registration among multiple scripts may result in a race condition where a group is not yet registered at the time you [configure groups](#configure-group-collisions) or [assign objects](#assign-objects-to-groups) to them.
 </Alert>
 
 </TabItem>
 </Tabs>
 
-#### Configuring Group Collisions
+#### Configure group collisions
 
 <Tabs>
 <TabItem label="Studio Editor">
@@ -181,11 +181,11 @@ PhysicsService:CollisionGroupSetCollidable(cubes, doors, false)
 </TabItem>
 </Tabs>
 
-#### Assigning Objects to Groups
+#### Assign objects to groups
 
 <Tabs>
 <TabItem label="Studio Editor">
-To assign objects to groups you've [registered](#registering-groups) through the Studio editor:
+To assign objects to groups you've [registered](#register-groups) through the Studio editor:
 
 1. Select one or more `Class.BasePart|BaseParts` that qualify as part of a collision group.
 2. Assign them to the group by clicking the **&CirclePlus;** button for its row. Objects can belong to only one collision group at a time, so placing them in a new group removes them from their current group.
@@ -220,7 +220,7 @@ workspace.Door1.CollisionGroup = doors
 </TabItem>
 </Tabs>
 
-#### StudioSelectable Collision Group
+#### StudioSelectable collision group
 
 Tools in Studio use the collision filtering system to determine which objects are candidates for selection when clicking in the 3D viewport. Objects whose assigned collision group does **not** collide with **StudioSelectable** will be ignored.
 
@@ -242,7 +242,7 @@ local mouseRay = workspace.CurrentCamera:ViewportPointToRay(mouseLocation.X, mou
 local filteredSelectionHit = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 10000, raycastParams)
 ```
 
-### Part-to-Part Filtering
+### Part-to-part filtering
 
 To prevent collisions between two specific parts without
 setting up [collision groups](#collision-groups), such as between a vehicle's wheel and its chassis, consider the
@@ -253,7 +253,7 @@ constraint. Advantages include:
 - Connected parts will not collide with each other, but they can still
   collide with other objects.
 
-### Disabling Character Collisions
+### Disable character collisions
 
 Roblox player characters collide with each other by default. This can lead to
 interesting but unintended gameplay, such as characters jumping on top of each other to reach specific areas. If this behavior is undesirable, you can prevent it through the following `Class.Script` in `Class.ServerScriptService`.
@@ -286,7 +286,7 @@ Players.PlayerAdded:Connect(function(player)
 end)
 ```
 
-## Model Collisions
+## Model collisions
 
 `Class.Model` objects are containers for parts rather than inheriting from `Class.BasePart`, so they can't directly connect to `Class.BasePart.Touched` or `Class.BasePart.TouchEnded` events. To determine whether a model triggers a collision events, you need to loop through its children and connect the custom `onTouched()` and `onTouchEnded()` functions to each child `Class.BasePart`.
 
@@ -327,7 +327,7 @@ for _, child in model:GetChildren() do
 end
 ```
 
-## Mesh and Solid Model Collisions
+## Mesh and solid model collisions
 
 `Class.MeshPart` and `Class.PartOperation` (parts joined by [solid modeling](../parts/solid-modeling.md)) are subclasses of `Class.BasePart`, so meshes and solid modeled parts inherit the same [collision events](#collision-events) and [collision filtering](#collision-filtering) options as regular parts. However, since meshes and solid modeled parts usually have more complex geometries, they have a distinctive `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` property which determines how precisely the physical bounds align with the visual representation for collision handling.
 

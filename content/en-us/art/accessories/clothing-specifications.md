@@ -1,5 +1,5 @@
 ---
-title: Clothing Specifications
+title: Clothing specifications
 description: Layered clothing specifications lists the specific technical requirements for the visible mesh, cages, and proper rigging and skinning data.
 ---
 
@@ -158,7 +158,7 @@ See [Creating Layered Models](../../art/accessories/creating/index.md) for a bas
 
 ### Rigging and Skinning
 
-Rigging and skinning a layered accessory allows the accessory to move naturally with a character body. You can perform this manually through a modeling tool, or [use automatic skinning transfer](../../art/accessories/automatic-skinning-transfer.md) to generate an accessory's skinning data at run time.
+Rigging and skinning a layered accessory allows the accessory to move naturally with a character body. You can perform this manually through a modeling tool, or [use Automatic Skinning Transfer transfer](../../art/accessories/automatic-skinning-transfer.md) to generate an accessory's skinning data at run time.
 
 If using modeling software to skin your accessories, keep in mind that **Joint Influences** (Maya) or **Bone Assignments** (Blender) per vertex should be limited to **4**.
 

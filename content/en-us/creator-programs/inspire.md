@@ -21,13 +21,13 @@ See [Roblox Level Up](https://www.youtube.com/@RobloxLevelUp) for content from I
 - Comfortable with public speaking
 - Meet our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards)
 
-## How to Participate
+## How to participate
 
 - Fill out an application
 - Submit a workshop proposal
 - If picked, join a Zoom call where a DevRel team member can further assess expertise on your chosen topic, alongside your public speaking skills
 - Prepare workshop and present at Inspire
 
-## Contact Info
+## Contact info
 
 devrel-inspire@roblox.com

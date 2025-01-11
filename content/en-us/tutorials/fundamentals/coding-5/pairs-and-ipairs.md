@@ -1,7 +1,7 @@
 ---
 title: pairs and ipairs
 description: pairs() and ipairs() are used to go through Roblox Lua tables. This lesson covers how to code them for a script and when to use them.
-next: /tutorials/fundamentals/coding-5/returning-values-from-tables
+next: /tutorials/fundamentals/coding-5/return-values-from-tables
 prev: /tutorials/fundamentals/coding-5/intro-to-dictionaries
 ---
 
@@ -143,12 +143,12 @@ Use `pairs()` to see what was picked, and then `ipairs()` to print the list of i
    The above step is an example of error checking in computer science. It's always a good practice to code what happens if there's a missing value possible in your code. If not, it's possible there might be an error during run time.
    </Alert>
 
-## Optional Challenges
+## Optional challenges
 
 Below are some challenges that apply using pairs and ipairs in different ways. Try seeing if you can build out the code for these.
 
 **Challenge**: Create a Waiter NPC
-Instead of using the output window, use the NPC from [Intro To Arrays](../coding-5/intro-to-arrays.md) to create a waiter to take customer orders.
+Instead of using the Output Window, use the NPC from [Intro To Arrays](../coding-5/intro-to-arrays.md) to create a waiter to take customer orders.
 
 **Challenge**: Allow Players to Place Orders
 Allow players to select an ingredient by touching a physical part such as a proximity prompt. For more information, see [Proximity Prompts](../../../ui/proximity-prompts.md).
