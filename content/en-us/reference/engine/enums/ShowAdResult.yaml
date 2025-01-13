@@ -1,4 +1,4 @@
-name: HapticEffectType
+name: ShowAdResult
 type: enum
 summary: ''
 description: ''
@@ -6,33 +6,28 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: Custom
+  - name: PlayerIneligible
     summary: ''
     value: 0
     tags: []
     deprecation_message: ''
-  - name: UIHover
+  - name: ExperienceIneligible
     summary: ''
     value: 1
     tags: []
     deprecation_message: ''
-  - name: UIClick
+  - name: NotShown
     summary: ''
     value: 2
     tags: []
     deprecation_message: ''
-  - name: UINotification
+  - name: ShowCompleted
     summary: ''
     value: 3
     tags: []
     deprecation_message: ''
-  - name: GameplayExplosion
+  - name: ShowInterrupted
     summary: ''
     value: 4
-    tags: []
-    deprecation_message: ''
-  - name: GameplayCollision
-    summary: ''
-    value: 5
     tags: []
     deprecation_message: ''

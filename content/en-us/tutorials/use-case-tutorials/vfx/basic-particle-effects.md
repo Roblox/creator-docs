@@ -19,9 +19,9 @@ The particles themselves are **2D images** that always face the camera. Particle
 
 The example provided below is a model of a gold nugget. A simple particle effect will be used to make it sparkle.
 
-1. Create a `Class.MeshPart` in the Workspace and name it GoldNugget.
+1. Create a `Class.MeshPart` in the `Class.Workspace` and name it **GoldNugget**.
 2. Set the **MeshId** property to `rbxassetid://2903918852`.
-3. Set the Material property to **Neon** and the Color property to **255**, **180**, **0**.
+3. Set the **Material** property to **Neon** and the **Color** property to `255, 180, 0`.
 
    <img alt="Color, Material and MeshID properties" src="../../../assets/tutorials/basic-particle-effects/meshProperties.jpg" width="60%" />
 

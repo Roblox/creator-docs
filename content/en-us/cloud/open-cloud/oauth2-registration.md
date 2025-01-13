@@ -86,8 +86,8 @@ redirect URLs meet the following requirements:
 ## Submitting for Review
 
 To minimize the chances of malicious apps harming the community, registering an
-app doesn't make it publicly accessible. Instead, it remains in **private mode**
-with a limit of 100 authorized users. This mode is helpful for testing and
+app doesn't make it broadly accessible. Instead, it remains in **private mode**
+with a limit of 10 unique users. This mode is helpful for testing and
 debugging within your team.
 
 If you want to extend the user base for your app, you need to publish it in

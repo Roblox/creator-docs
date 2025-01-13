@@ -53,6 +53,10 @@ methods:
         type: string?
         default:
         summary: ''
+      - name: showDomainAsTitle
+        type: bool?
+        default:
+        summary: ''
     returns:
       - type: void
         summary: ''
@@ -85,6 +89,10 @@ methods:
         summary: ''
       - name: transitionAnimation
         type: string?
+        default:
+        summary: ''
+      - name: showDomainAsTitle
+        type: bool?
         default:
         summary: ''
     returns:
