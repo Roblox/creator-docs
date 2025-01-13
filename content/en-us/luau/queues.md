@@ -58,20 +58,20 @@ function Queue.new<T>(): Queue<T>
 end
 
 -- Check if the queue is empty
-function Queue.IsEmpty<T>(self: Queue<T>)
+function Queue.isEmpty<T>(self: Queue<T>)
 	return self._first > self._last
 end
 
 -- Add a value to the queue
-function Queue.Enqueue<T>(self: Queue<T>, value: T)
+function Queue.enqueue<T>(self: Queue<T>, value: T)
 	local last = self._last + 1
 	self._last = last
 	self._queue[last] = value
 end
 
 -- Remove a value from the queue
-function Queue.Dequeue<T>(self: Queue<T>): T
-	if self:IsEmpty() then
+function Queue.dequeue<T>(self: Queue<T>): T
+	if self:isEmpty() then
 		error("Cannot dequeue from empty queue")
 	end
 
@@ -96,27 +96,27 @@ local Queue = require(ReplicatedStorage:WaitForChild("Queue"))
 local myQueue = Queue.new()
 
 -- Add some values to the queue
-myQueue:Enqueue(5)
-myQueue:Enqueue(10)
-myQueue:Enqueue(15)
+myQueue:enqueue(5)
+myQueue:enqueue(10)
+myQueue:enqueue(15)
 
 -- myQueue = { 5, 10, 15 }
 
 -- Remove one value from the queue
-local first = myQueue:Dequeue()
+local first = myQueue:dequeue()
 print("The first value added to the queue was", first)
 
 -- myQueue = { 10, 15 }
 
 -- Add more values to the queue
-myQueue:Enqueue(20)
-myQueue:Enqueue(25)
-myQueue:Enqueue(30)
+myQueue:enqueue(20)
+myQueue:enqueue(25)
+myQueue:enqueue(30)
 
 -- myQueue = { 10, 15, 20, 25, 30 }
 
 -- Remove another value from the queue
-local second = myQueue:Dequeue()
+local second = myQueue:dequeue()
 print("The second value added to the queue was", second)
 
 -- myQueue = { 15, 20, 25, 30 }
