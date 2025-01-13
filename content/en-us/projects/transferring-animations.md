@@ -24,9 +24,11 @@ If your animations are stored as Animation instances under pre-prepared Characte
 1. In Roblox Studio, run the following script. Studio outputs the result as a single long string.
 
 ```lua
+local Workspace = game:GetService("Workspace")
+
 local ANIMSTRING = ""
 
-for _, character in workspace:GetChildren() do
+for _, character in Workspace:GetChildren() do
 	  if not character:IsA("Model") then
 		  continue
 	  end
