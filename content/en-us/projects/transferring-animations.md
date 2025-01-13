@@ -3,13 +3,13 @@ title: Transferring Roblox Animations
 description: Transfer animations when you transfer your experience to a new group owner.
 ---
 
-<Alert severity="info">
+<Alert severity="warning">
 The instructions on this page make use of a third-party tool. Roblox does not officially support this tool and is not responsible for its availability, updates, or functionality.
 </Alert>
 
 In Roblox, animations are locked to experiences owned by users who also own those animations. To prevent animations from breaking when you transfer your experience to a group, you must publish your animation assets to the new experience group owner.
 
-If you have a large number of animations to upload, you can use the community-supported tool [Roblox Animation Transfer](https://github.com/evaera/roblox-animation-transfer) to re-upload the animations and map their old `AnimationIds` to their new corresponding `AnimationIds`.
+If you have a large number of animations to upload, you can use the community-supported tool [Roblox Animation Transfer](https://github.com/evaera/roblox-animation-transfer) to re-upload the animations and map their old `Class.Animation.AnimationId|AnimationIds` to their new corresponding `Class.Animation.AnimationId|AnimationIds`.
 
 ## Prerequisites
 
@@ -19,33 +19,35 @@ For more information about prerequisites, see the [Roblox Animation Transfer REA
 
 ## Mapping AnimationIds to Names
 
-If your animations are stored as Animation instances under pre-prepared Character models in your experience, you can generate a text file to map the `AnimationIds` to their corresponding names.
+If your animations are stored as Animation instances under pre-prepared Character models in your experience, you can generate a text file to map the `Class.Animation.AnimationId|AnimationIds` to their corresponding names.
 
 1. In Roblox Studio, run the following script. Studio outputs the result as a single long string.
 
-```lua
-local ANIMSTRING = ""
-
-for _, character in pairs(workspace:GetChildren()) do
-	  if not character:IsA("Model") then
-		  continue
-	  end
-
-	  local animations = character:FindFirstChild("Animations")
-	  if not animations then
-		  continue
-	  end
-
-	  for _, animation in pairs(animations:GetChildren()) do
-		  local animationId = string.match(animation.AnimationId, "%d+")
-		  if animationId then
-			  ANIMSTRING ..= (animationId .. " " .. character.Name .. "_" .. string.gsub(animation.Name, " ", "_") .. "\n")
+	```lua
+	local Workspace = game:GetService("Workspace")
+	
+	local ANIMSTRING = ""
+	
+	for _, character in Workspace:GetChildren() do
+		  if not character:IsA("Model") then
+			  continue
 		  end
-	  end
-end
-
-print(ANIMSTRING)
-```
+	
+		  local animations = character:FindFirstChild("Animations")
+		  if not animations then
+			  continue
+		  end
+	
+		  for _, animation in animations:GetChildren() do
+			  local animationId = string.match(animation.AnimationId, "%d+")
+			  if animationId then
+				  ANIMSTRING ..= (animationId .. " " .. character.Name .. "_" .. string.gsub(animation.Name, " ", "_") .. "\n")
+			  end
+		  end
+	end
+	
+	print(ANIMSTRING)
+	```
 
 2. Create a new text file on your computer.
 3. Paste the string output by Studio into the text file.
@@ -81,68 +83,68 @@ After transferring your animations to the new group owner, you must swap the old
 2. Create two child modules, one corresponding to the user, or the original owner, and the other corresponding to the group, or the new owner.
 3. To prevent the experience from breaking if you choose to publish it to another location, run the following script. By default, the script returns the user's animations.
 
-```lua
-local module = {}
-local GROUP_ID = 12345678
-local gameContext = {
-	["User"] = require(script:WaitForChild("Animations_User")),
-	["Group"] = require(script:WaitForChild("Animations_Group"))
-}
-
-local function getAnimationMapForGameContext()
-	if game.CreatorType == Enum.CreatorType.Group and game.CreatorId == GROUP_ID then
-		return gameContext.Group
+	```lua
+	local module = {}
+	local GROUP_ID = 12345678
+	local gameContext = {
+		["User"] = require(script:WaitForChild("Animations_User")),
+		["Group"] = require(script:WaitForChild("Animations_Group"))
+	}
+	
+	local function getAnimationMapForGameContext()
+		if game.CreatorType == Enum.CreatorType.Group and game.CreatorId == GROUP_ID then
+			return gameContext.Group
+		end
+		return gameContext.User
 	end
-	return gameContext.User
-end
-
-local animationMap = getAnimationMapForGameContext()
-function module.getAnimation(animName: string)
-	return animationMap[animName]
-end
-
-return module
-```
+	
+	local animationMap = getAnimationMapForGameContext()
+	function module.getAnimation(animName: string)
+		return animationMap[animName]
+	end
+	
+	return module
+	```
 
 4. Turn the generated text files into animation maps in Studio.
    1. Replace the animation list inside the `animFileText` variable with the contents of the text file that you want to change into an animation map.
    2. Run the following script to return a string:
 
-```lua
-local animFileText = [[
-4215167 Animation_Name_1
-6171235 Animation_Name_2
-1251267 Animation_Name_3
-]]
-
-local function convertFileToAnimationMap(animFileText: string)
-	local NEW_ANIMATION_MAP = ""
-
-	local lines = string.split(animFileText, "\n")
-	for _, line in pairs(lines) do
-		local components = string.split(line, " ")
-		if #components ~= 2 then
-			continue
+	```lua
+	local animFileText = [[
+	4215167 Animation_Name_1
+	6171235 Animation_Name_2
+	1251267 Animation_Name_3
+	]]
+	
+	local function convertFileToAnimationMap(animFileText: string)
+		local NEW_ANIMATION_MAP = ""
+	
+		local lines = string.split(animFileText, "\n")
+		for _, line in lines do
+			local components = string.split(line, " ")
+			if #components ~= 2 then
+				continue
+			end
+	
+			local animationId = components[1]
+			local animationName = components[2]
+	
+			NEW_ANIMATION_MAP = string.format("%s\t[\"%s\"] = \"rbxassetid://%s\",\n", NEW_ANIMATION_MAP, animationName, animationId)
 		end
-
-		local animationId = components[1]
-		local animationName = components[2]
-
-		NEW_ANIMATION_MAP = string.format("%s\t[\"%s\"] = \"rbxassetid://%s\",\n", NEW_ANIMATION_MAP, animationName, animationId)
+	
+		return string.format("return {\n%s}", NEW_ANIMATION_MAP)
 	end
+	
+	print(convertFileToAnimationMap(animFileText))
+	```
 
-	return string.format("return {\n%s}", NEW_ANIMATION_MAP)
-end
-
-print(convertFileToAnimationMap(animFileText))
-```
-
-5. Create a new `ModuleScript` parented to your `Animations` module.
-6. Place the returned `animFileText` string inside the `ModuleScript`.
+5. Create a new `Class.ModuleScript` parented to your `Animations` module.
+6. Place the returned `animFileText` string inside the `Class.ModuleScript`.
 7. Update the experience to source all animations through the `Animations` module by running the following script:
 
-```lua
-local Animations = require(PATH.TO.ANIMATIONS)
-local warriorWalk = Instance.new("Animation")
-warriorWalk.AnimationId = Animations.getAnimation("Warrior_Walk")
-```
+	```lua
+	local Animations = require(PATH.TO.ANIMATIONS)
+	local warriorWalk = Instance.new("Animation")
+	warriorWalk.AnimationId = Animations.getAnimation("Warrior_Walk")
+	```
