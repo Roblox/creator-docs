@@ -66,7 +66,7 @@
         "operationId": "Cloud_GetCreatorStoreProduct",
         "parameters": [
           {
-            "name": "creator-store-product",
+            "name": "creator_store_product_id",
             "in": "path",
             "description": "The creator-store-product ID.",
             "required": true,
@@ -110,7 +110,7 @@
         "operationId": "Cloud_UpdateCreatorStoreProduct",
         "parameters": [
           {
-            "name": "creator-store-product",
+            "name": "creator_store_product_id",
             "in": "path",
             "description": "The creator-store-product ID.",
             "required": true,
@@ -184,7 +184,7 @@
         "operationId": "Cloud_GetGroup",
         "parameters": [
           {
-            "name": "group",
+            "name": "group_id",
             "in": "path",
             "description": "The group ID.",
             "required": true,
@@ -228,7 +228,7 @@
         "operationId": "Cloud_ListGroupJoinRequests",
         "parameters": [
           {
-            "name": "group",
+            "name": "group_id",
             "in": "path",
             "description": "The group ID.",
             "required": true,
@@ -305,7 +305,7 @@
         "operationId": "Cloud_AcceptGroupJoinRequest",
         "parameters": [
           {
-            "name": "group",
+            "name": "group_id",
             "in": "path",
             "description": "The group ID.",
             "required": true,
@@ -314,7 +314,7 @@
             }
           },
           {
-            "name": "join-request",
+            "name": "join_request_id",
             "in": "path",
             "description": "The join-request ID.",
             "required": true,
@@ -364,7 +364,7 @@
         "operationId": "Cloud_DeclineGroupJoinRequest",
         "parameters": [
           {
-            "name": "group",
+            "name": "group_id",
             "in": "path",
             "description": "The group ID.",
             "required": true,
@@ -373,7 +373,7 @@
             }
           },
           {
-            "name": "join-request",
+            "name": "join_request_id",
             "in": "path",
             "description": "The join-request ID.",
             "required": true,
@@ -423,7 +423,7 @@
         "operationId": "Cloud_ListGroupMemberships",
         "parameters": [
           {
-            "name": "group",
+            "name": "group_id",
             "in": "path",
             "description": "The group ID.",
             "required": true,
@@ -498,7 +498,7 @@
         "operationId": "Cloud_UpdateGroupMembership",
         "parameters": [
           {
-            "name": "group",
+            "name": "group_id",
             "in": "path",
             "description": "The group ID.",
             "required": true,
@@ -507,7 +507,7 @@
             }
           },
           {
-            "name": "membership",
+            "name": "membership_id",
             "in": "path",
             "description": "The membership ID.",
             "required": true,
@@ -563,7 +563,7 @@
         "operationId": "Cloud_ListGroupRoles",
         "parameters": [
           {
-            "name": "group",
+            "name": "group_id",
             "in": "path",
             "description": "The group ID.",
             "required": true,
@@ -630,7 +630,7 @@
         "operationId": "Cloud_GetGroupRole",
         "parameters": [
           {
-            "name": "group",
+            "name": "group_id",
             "in": "path",
             "description": "The group ID.",
             "required": true,
@@ -639,7 +639,7 @@
             }
           },
           {
-            "name": "role",
+            "name": "role_id",
             "in": "path",
             "description": "The role ID.",
             "required": true,
@@ -683,7 +683,7 @@
         "operationId": "Cloud_GetGroupShout",
         "parameters": [
           {
-            "name": "group",
+            "name": "group_id",
             "in": "path",
             "description": "The group ID.",
             "required": true,
@@ -727,7 +727,7 @@
         "operationId": "Cloud_GetUniverse",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -769,7 +769,7 @@
         "operationId": "Cloud_UpdateUniverse",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -834,7 +834,7 @@
         "operationId": "Cloud_ListDataStores",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -911,7 +911,7 @@
         "operationId": "Cloud_ListDataStoreEntries__Using_Universes",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -920,7 +920,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1004,7 +1004,7 @@
         "operationId": "Cloud_CreateDataStoreEntry__Using_Universes",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -1013,7 +1013,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1083,7 +1083,7 @@
         "operationId": "Cloud_GetDataStoreEntry__Using_Universes_DataStores",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -1092,7 +1092,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1101,7 +1101,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -1145,7 +1145,7 @@
         "operationId": "Cloud_DeleteDataStoreEntry__Using_Universes_DataStores",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -1154,7 +1154,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1163,7 +1163,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -1201,7 +1201,7 @@
         "operationId": "Cloud_UpdateDataStoreEntry__Using_Universes_DataStores",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -1210,7 +1210,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1219,7 +1219,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -1284,7 +1284,7 @@
         "operationId": "Cloud_IncrementDataStoreEntry__Using_Universes_DataStores",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -1293,7 +1293,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1302,7 +1302,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -1359,7 +1359,7 @@
         "operationId": "Cloud_ListDataStoreEntryRevisions__Using_Universes_DataStores",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -1368,7 +1368,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1377,7 +1377,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -1454,7 +1454,7 @@
         "operationId": "Cloud_ListDataStoreEntries__Using_Universes_DataStores",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -1463,7 +1463,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1472,7 +1472,7 @@
             }
           },
           {
-            "name": "scope",
+            "name": "scope_id",
             "in": "path",
             "description": "The scope ID.",
             "required": true,
@@ -1556,7 +1556,7 @@
         "operationId": "Cloud_CreateDataStoreEntry__Using_Universes_DataStores",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -1565,7 +1565,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1574,7 +1574,7 @@
             }
           },
           {
-            "name": "scope",
+            "name": "scope_id",
             "in": "path",
             "description": "The scope ID.",
             "required": true,
@@ -1644,7 +1644,7 @@
         "operationId": "Cloud_GetDataStoreEntry__Using_Universes_DataStores_Scopes",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -1653,7 +1653,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1662,7 +1662,7 @@
             }
           },
           {
-            "name": "scope",
+            "name": "scope_id",
             "in": "path",
             "description": "The scope ID.",
             "required": true,
@@ -1671,7 +1671,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -1715,7 +1715,7 @@
         "operationId": "Cloud_DeleteDataStoreEntry__Using_Universes_DataStores_Scopes",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -1724,7 +1724,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1733,7 +1733,7 @@
             }
           },
           {
-            "name": "scope",
+            "name": "scope_id",
             "in": "path",
             "description": "The scope ID.",
             "required": true,
@@ -1742,7 +1742,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -1780,7 +1780,7 @@
         "operationId": "Cloud_UpdateDataStoreEntry__Using_Universes_DataStores_Scopes",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -1789,7 +1789,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1798,7 +1798,7 @@
             }
           },
           {
-            "name": "scope",
+            "name": "scope_id",
             "in": "path",
             "description": "The scope ID.",
             "required": true,
@@ -1807,7 +1807,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -1872,7 +1872,7 @@
         "operationId": "Cloud_IncrementDataStoreEntry__Using_Universes_DataStores_Scopes",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -1881,7 +1881,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1890,7 +1890,7 @@
             }
           },
           {
-            "name": "scope",
+            "name": "scope_id",
             "in": "path",
             "description": "The scope ID.",
             "required": true,
@@ -1899,7 +1899,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -1956,7 +1956,7 @@
         "operationId": "Cloud_ListDataStoreEntryRevisions__Using_Universes_DataStores_Scopes",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -1965,7 +1965,7 @@
             }
           },
           {
-            "name": "data-store",
+            "name": "data_store_id",
             "in": "path",
             "description": "The data-store ID.",
             "required": true,
@@ -1974,7 +1974,7 @@
             }
           },
           {
-            "name": "scope",
+            "name": "scope_id",
             "in": "path",
             "description": "The scope ID.",
             "required": true,
@@ -1983,7 +1983,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -2060,7 +2060,7 @@
         "operationId": "Cloud_SnapshotDataStores",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -2116,7 +2116,7 @@
         "operationId": "Cloud_CreateMemoryStoreQueueItem",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -2125,7 +2125,7 @@
             }
           },
           {
-            "name": "queue",
+            "name": "queue_id",
             "in": "path",
             "description": "The queue ID.",
             "required": true,
@@ -2181,7 +2181,7 @@
         "operationId": "Cloud_DiscardMemoryStoreQueueItems",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -2190,7 +2190,7 @@
             }
           },
           {
-            "name": "queue",
+            "name": "queue_id",
             "in": "path",
             "description": "The queue ID.",
             "required": true,
@@ -2240,7 +2240,7 @@
         "operationId": "Cloud_ReadMemoryStoreQueueItems",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -2249,7 +2249,7 @@
             }
           },
           {
-            "name": "queue",
+            "name": "queue_id",
             "in": "path",
             "description": "The queue ID.",
             "required": true,
@@ -2323,7 +2323,7 @@
         "operationId": "Cloud_ListMemoryStoreSortedMapItems",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -2332,7 +2332,7 @@
             }
           },
           {
-            "name": "sorted-map",
+            "name": "sorted_map_id",
             "in": "path",
             "description": "The sorted-map ID.",
             "required": true,
@@ -2415,7 +2415,7 @@
         "operationId": "Cloud_CreateMemoryStoreSortedMapItem",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -2424,7 +2424,7 @@
             }
           },
           {
-            "name": "sorted-map",
+            "name": "sorted_map_id",
             "in": "path",
             "description": "The sorted-map ID.",
             "required": true,
@@ -2494,7 +2494,7 @@
         "operationId": "Cloud_GetMemoryStoreSortedMapItem",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -2503,7 +2503,7 @@
             }
           },
           {
-            "name": "sorted-map",
+            "name": "sorted_map_id",
             "in": "path",
             "description": "The sorted-map ID.",
             "required": true,
@@ -2512,7 +2512,7 @@
             }
           },
           {
-            "name": "item",
+            "name": "item_id",
             "in": "path",
             "description": "The item ID.",
             "required": true,
@@ -2556,7 +2556,7 @@
         "operationId": "Cloud_DeleteMemoryStoreSortedMapItem",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -2565,7 +2565,7 @@
             }
           },
           {
-            "name": "sorted-map",
+            "name": "sorted_map_id",
             "in": "path",
             "description": "The sorted-map ID.",
             "required": true,
@@ -2574,7 +2574,7 @@
             }
           },
           {
-            "name": "item",
+            "name": "item_id",
             "in": "path",
             "description": "The item ID.",
             "required": true,
@@ -2612,7 +2612,7 @@
         "operationId": "Cloud_UpdateMemoryStoreSortedMapItem",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -2621,7 +2621,7 @@
             }
           },
           {
-            "name": "sorted-map",
+            "name": "sorted_map_id",
             "in": "path",
             "description": "The sorted-map ID.",
             "required": true,
@@ -2630,7 +2630,7 @@
             }
           },
           {
-            "name": "item",
+            "name": "item_id",
             "in": "path",
             "description": "The item ID.",
             "required": true,
@@ -2695,7 +2695,7 @@
         "operationId": "Cloud_FlushMemoryStore",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -2759,7 +2759,7 @@
         "operationId": "Cloud_ListOrderedDataStoreEntries",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -2768,7 +2768,7 @@
             }
           },
           {
-            "name": "ordered-data-store",
+            "name": "ordered_data_store_id",
             "in": "path",
             "description": "The ordered-data-store ID.",
             "required": true,
@@ -2777,7 +2777,7 @@
             }
           },
           {
-            "name": "scope",
+            "name": "scope_id",
             "in": "path",
             "description": "The scope ID.",
             "required": true,
@@ -2860,7 +2860,7 @@
         "operationId": "Cloud_CreateOrderedDataStoreEntry",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -2869,7 +2869,7 @@
             }
           },
           {
-            "name": "ordered-data-store",
+            "name": "ordered_data_store_id",
             "in": "path",
             "description": "The ordered-data-store ID.",
             "required": true,
@@ -2878,7 +2878,7 @@
             }
           },
           {
-            "name": "scope",
+            "name": "scope_id",
             "in": "path",
             "description": "The scope ID.",
             "required": true,
@@ -2948,7 +2948,7 @@
         "operationId": "Cloud_GetOrderedDataStoreEntry",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -2957,7 +2957,7 @@
             }
           },
           {
-            "name": "ordered-data-store",
+            "name": "ordered_data_store_id",
             "in": "path",
             "description": "The ordered-data-store ID.",
             "required": true,
@@ -2966,7 +2966,7 @@
             }
           },
           {
-            "name": "scope",
+            "name": "scope_id",
             "in": "path",
             "description": "The scope ID.",
             "required": true,
@@ -2975,7 +2975,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -3019,7 +3019,7 @@
         "operationId": "Cloud_DeleteOrderedDataStoreEntry",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -3028,7 +3028,7 @@
             }
           },
           {
-            "name": "ordered-data-store",
+            "name": "ordered_data_store_id",
             "in": "path",
             "description": "The ordered-data-store ID.",
             "required": true,
@@ -3037,7 +3037,7 @@
             }
           },
           {
-            "name": "scope",
+            "name": "scope_id",
             "in": "path",
             "description": "The scope ID.",
             "required": true,
@@ -3046,7 +3046,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -3084,7 +3084,7 @@
         "operationId": "Cloud_UpdateOrderedDataStoreEntry",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -3093,7 +3093,7 @@
             }
           },
           {
-            "name": "ordered-data-store",
+            "name": "ordered_data_store_id",
             "in": "path",
             "description": "The ordered-data-store ID.",
             "required": true,
@@ -3102,7 +3102,7 @@
             }
           },
           {
-            "name": "scope",
+            "name": "scope_id",
             "in": "path",
             "description": "The scope ID.",
             "required": true,
@@ -3111,7 +3111,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -3176,7 +3176,7 @@
         "operationId": "Cloud_IncrementOrderedDataStoreEntry",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -3185,7 +3185,7 @@
             }
           },
           {
-            "name": "ordered-data-store",
+            "name": "ordered_data_store_id",
             "in": "path",
             "description": "The ordered-data-store ID.",
             "required": true,
@@ -3194,7 +3194,7 @@
             }
           },
           {
-            "name": "scope",
+            "name": "scope_id",
             "in": "path",
             "description": "The scope ID.",
             "required": true,
@@ -3203,7 +3203,7 @@
             }
           },
           {
-            "name": "entry",
+            "name": "entry_id",
             "in": "path",
             "description": "The entry ID.",
             "required": true,
@@ -3259,7 +3259,7 @@
         "operationId": "Cloud_GetPlace",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -3268,7 +3268,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -3310,7 +3310,7 @@
         "operationId": "Cloud_UpdatePlace",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -3319,7 +3319,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -3384,7 +3384,7 @@
         "operationId": "Cloud_GetInstance",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -3393,7 +3393,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -3402,7 +3402,7 @@
             }
           },
           {
-            "name": "instance",
+            "name": "instance_id",
             "in": "path",
             "description": "The instance ID.",
             "required": true,
@@ -3454,7 +3454,7 @@
         "operationId": "Cloud_UpdateInstance",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -3463,7 +3463,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -3472,7 +3472,7 @@
             }
           },
           {
-            "name": "instance",
+            "name": "instance_id",
             "in": "path",
             "description": "The instance ID.",
             "required": true,
@@ -3545,7 +3545,7 @@
         "operationId": "Cloud_ListInstanceChildren",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -3554,7 +3554,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -3563,7 +3563,7 @@
             }
           },
           {
-            "name": "instance",
+            "name": "instance_id",
             "in": "path",
             "description": "The instance ID.",
             "required": true,
@@ -3640,7 +3640,7 @@
         "operationId": "Cloud_CreateLuauExecutionSessionTask__Using_Universes",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -3649,7 +3649,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -3705,7 +3705,7 @@
         "operationId": "Cloud_ListLuauExecutionSessionTaskLogs__Using_Universes_Places",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -3714,7 +3714,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -3723,7 +3723,7 @@
             }
           },
           {
-            "name": "luau-execution-session-task",
+            "name": "luau_execution_session_task_id",
             "in": "path",
             "description": "The luau-execution-session-task ID.",
             "required": true,
@@ -3793,7 +3793,7 @@
         "operationId": "Cloud_GetLuauExecutionSessionTask__Using_Universes_Places_LuauExecutionSessions",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -3802,7 +3802,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -3811,7 +3811,7 @@
             }
           },
           {
-            "name": "luau-execution-session",
+            "name": "luau_execution_session_id",
             "in": "path",
             "description": "The luau-execution-session ID.",
             "required": true,
@@ -3820,7 +3820,7 @@
             }
           },
           {
-            "name": "task",
+            "name": "task_id",
             "in": "path",
             "description": "The task ID.",
             "required": true,
@@ -3882,7 +3882,7 @@
         "operationId": "Cloud_ListLuauExecutionSessionTaskLogs__Using_Universes_Places_LuauExecutionSessions",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -3891,7 +3891,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -3900,7 +3900,7 @@
             }
           },
           {
-            "name": "luau-execution-session",
+            "name": "luau_execution_session_id",
             "in": "path",
             "description": "The luau-execution-session ID.",
             "required": true,
@@ -3909,7 +3909,7 @@
             }
           },
           {
-            "name": "task",
+            "name": "task_id",
             "in": "path",
             "description": "The task ID.",
             "required": true,
@@ -3979,7 +3979,7 @@
         "operationId": "Cloud_ListUserRestrictions__Using_Universes",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -3988,7 +3988,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -4065,7 +4065,7 @@
         "operationId": "Cloud_GetUserRestriction__Using_Universes_Places",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -4074,7 +4074,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -4083,7 +4083,7 @@
             }
           },
           {
-            "name": "user-restriction",
+            "name": "user_restriction_id",
             "in": "path",
             "description": "The user-restriction ID.",
             "required": true,
@@ -4127,7 +4127,7 @@
         "operationId": "Cloud_UpdateUserRestriction__Using_Universes_Places",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -4136,7 +4136,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -4145,7 +4145,7 @@
             }
           },
           {
-            "name": "user-restriction",
+            "name": "user_restriction_id",
             "in": "path",
             "description": "The user-restriction ID.",
             "required": true,
@@ -4228,7 +4228,7 @@
         "operationId": "Cloud_CreateLuauExecutionSessionTask__Using_Universes_Places",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -4237,7 +4237,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -4246,7 +4246,7 @@
             }
           },
           {
-            "name": "version",
+            "name": "version_id",
             "in": "path",
             "description": "The version ID.",
             "required": true,
@@ -4302,7 +4302,7 @@
         "operationId": "Cloud_ListLuauExecutionSessionTaskLogs__Using_Universes_Places_Versions",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -4311,7 +4311,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -4320,7 +4320,7 @@
             }
           },
           {
-            "name": "version",
+            "name": "version_id",
             "in": "path",
             "description": "The version ID.",
             "required": true,
@@ -4329,7 +4329,7 @@
             }
           },
           {
-            "name": "luau-execution-session-task",
+            "name": "luau_execution_session_task_id",
             "in": "path",
             "description": "The luau-execution-session-task ID.",
             "required": true,
@@ -4399,7 +4399,7 @@
         "operationId": "Cloud_GetLuauExecutionSessionTask__Using_Universes_Places_Versions_LuauExecutionSessions",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -4408,7 +4408,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -4417,7 +4417,7 @@
             }
           },
           {
-            "name": "version",
+            "name": "version_id",
             "in": "path",
             "description": "The version ID.",
             "required": true,
@@ -4426,7 +4426,7 @@
             }
           },
           {
-            "name": "luau-execution-session",
+            "name": "luau_execution_session_id",
             "in": "path",
             "description": "The luau-execution-session ID.",
             "required": true,
@@ -4435,7 +4435,7 @@
             }
           },
           {
-            "name": "task",
+            "name": "task_id",
             "in": "path",
             "description": "The task ID.",
             "required": true,
@@ -4497,7 +4497,7 @@
         "operationId": "Cloud_ListLuauExecutionSessionTaskLogs__Using_Universes_Places_Versions_LuauExecutionSessions",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -4506,7 +4506,7 @@
             }
           },
           {
-            "name": "place",
+            "name": "place_id",
             "in": "path",
             "description": "The place ID.",
             "required": true,
@@ -4515,7 +4515,7 @@
             }
           },
           {
-            "name": "version",
+            "name": "version_id",
             "in": "path",
             "description": "The version ID.",
             "required": true,
@@ -4524,7 +4524,7 @@
             }
           },
           {
-            "name": "luau-execution-session",
+            "name": "luau_execution_session_id",
             "in": "path",
             "description": "The luau-execution-session ID.",
             "required": true,
@@ -4533,7 +4533,7 @@
             }
           },
           {
-            "name": "task",
+            "name": "task_id",
             "in": "path",
             "description": "The task ID.",
             "required": true,
@@ -4603,7 +4603,7 @@
         "operationId": "Cloud_GetSubscription",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -4612,7 +4612,7 @@
             }
           },
           {
-            "name": "subscription-product",
+            "name": "subscription_product_id",
             "in": "path",
             "description": "The subscription-product ID.",
             "required": true,
@@ -4621,7 +4621,7 @@
             }
           },
           {
-            "name": "subscription",
+            "name": "subscription_id",
             "in": "path",
             "description": "The subscription ID.",
             "required": true,
@@ -4683,7 +4683,7 @@
         "operationId": "Cloud_ListUserRestrictions",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -4760,7 +4760,7 @@
         "operationId": "Cloud_GetUserRestriction__Using_Universes",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -4769,7 +4769,7 @@
             }
           },
           {
-            "name": "user-restriction",
+            "name": "user_restriction_id",
             "in": "path",
             "description": "The user-restriction ID.",
             "required": true,
@@ -4813,7 +4813,7 @@
         "operationId": "Cloud_UpdateUserRestriction__Using_Universes",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -4822,7 +4822,7 @@
             }
           },
           {
-            "name": "user-restriction",
+            "name": "user_restriction_id",
             "in": "path",
             "description": "The user-restriction ID.",
             "required": true,
@@ -4905,7 +4905,7 @@
         "operationId": "Cloud_ListUserRestrictionLogs",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -4982,7 +4982,7 @@
         "operationId": "Cloud_PublishUniverseMessage",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -5032,7 +5032,7 @@
         "operationId": "Cloud_RestartUniverseServers",
         "parameters": [
           {
-            "name": "universe",
+            "name": "universe_id",
             "in": "path",
             "description": "The universe ID.",
             "required": true,
@@ -5088,7 +5088,7 @@
         "operationId": "Cloud_GetUser",
         "parameters": [
           {
-            "name": "user",
+            "name": "user_id",
             "in": "path",
             "description": "The user ID.",
             "required": true,
@@ -5132,7 +5132,7 @@
         "operationId": "Cloud_ListInventoryItems",
         "parameters": [
           {
-            "name": "user",
+            "name": "user_id",
             "in": "path",
             "description": "The user ID.",
             "required": true,
@@ -5207,7 +5207,7 @@
         "operationId": "Cloud_CreateUserNotification",
         "parameters": [
           {
-            "name": "user",
+            "name": "user_id",
             "in": "path",
             "description": "The user ID.",
             "required": true,
@@ -5263,7 +5263,7 @@
         "operationId": "Cloud_GenerateUserThumbnail",
         "parameters": [
           {
-            "name": "user",
+            "name": "user_id",
             "in": "path",
             "description": "The user ID.",
             "required": true,

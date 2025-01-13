@@ -61,23 +61,6 @@
         "responses": {
           "200": {
             "description": "",
-            "headers": {
-              "date": {
-                "schema": {
-                  "type": "date-time"
-                }
-              },
-              "content-type": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "conent-length": {
-                "schema": {
-                  "type": "integer"
-                }
-              }
-            },
             "content": {
               "application/json": {
                 "schema": {
@@ -199,23 +182,6 @@
         "responses": {
           "200": {
             "description": "",
-            "headers": {
-              "date": {
-                "schema": {
-                  "type": "date-time"
-                }
-              },
-              "content-type": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "conent-length": {
-                "schema": {
-                  "type": "integer"
-                }
-              }
-            },
             "content": {
               "application/json": {
                 "schema": {
@@ -264,7 +230,7 @@
       "get": {
         "tags": ["Entries"],
         "summary": "Get entry.",
-        "description": "Returns the value and metadata associated with an entry.",
+        "description": "Returns the value and metadata associated with an entry.\n\nMetadata can be found in the response headers like the following:\n```text\ncontent-md5: zuYxEhwuySMv0i8CitXImw==\nroblox-entry-version: 08D9E6A3F2188CFF.0000000001.08D9E6A3F2188CFF.01\nroblox-entry-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-version-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-attributes: { \"myAttribute\": \"myValue\" }\nroblox-entry-userids: [1, 2, 3]\n```\n\n| Header | Description |\n|---|---| \n| `content-md5` | The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/open-cloud/data-store-api-handling.md#content-md5). |\n| `roblox-entry-version` | The version of the returned entry. |\n| `roblox-entry-created-time` | The time at which the entry was created. |\n| `roblox-entry-version-created-time` | The time at which this particular version was created. |\n| `roblox-entry-attributes` | Attributes tagged with the entry. Serialized JSON map object. |\n| `roblox-entry-userids` | Comma-separated list of Roblox user IDs tagged with the entry. |\n",
         "operationId": "Entries_GetEntryAsync",
         "x-roblox-cloud-api-operation-name": "Get Entry",
         "parameters": [
@@ -309,93 +275,57 @@
         ],
         "responses": {
           "200": {
-            "description": "Returns the user content of the entry in the body of the response.",
+            "description": "Successfully retrieved the entry.",
             "headers": {
-              "date": {
-                "schema": {
-                  "type": "date-time"
-                }
-              },
-              "content-type": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "conent-length": {
-                "schema": {
-                  "type": "integer"
-                }
-              },
               "content-md5": {
                 "schema": {
-                  "type": "string"
-                }
+                  "type": "string",
+                  "format": "byte"
+                },
+                "description": "The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/open-cloud/data-store-api-handling.md#content-md5)."
               },
               "roblox-entry-version": {
                 "schema": {
-                  "type": "string"
-                }
+                  "type": "string",
+                  "format": "binary"
+                },
+                "description": "The version of the returned entry."
               },
               "roblox-entry-created-time": {
                 "schema": {
-                  "type": "date-time"
-                }
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "description": "The time at which the entry was created."
               },
               "roblox-entry-version-created-time": {
                 "schema": {
-                  "type": "date-time"
-                }
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "description": "The time at which this particular version was created."
+              },
+              "roblox-entry-attributes": {
+                "schema": {
+                  "type": "object"
+                },
+                "description": "Attributes tagged with the entry. Serialized JSON map object."
               },
               "roblox-entry-userids": {
                 "schema": {
-                  "type": "array"
-                }
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                },
+                "description": "Comma-separated list of Roblox user IDs tagged with the entry."
               }
             },
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {
-                    "roblox-entry-created-time": {
-                      "type": "string",
-                      "description": "The time at which the entry was created.",
-                      "format": "date-time"
-                    },
-                    "last-modified": {
-                      "type": "string",
-                      "description": "The time at which this particular version was created.",
-                      "format": "date-time"
-                    },
-                    "roblox-entry-version": {
-                      "type": "string",
-                      "description": "The version of the returned entry.",
-                      "format": "binary"
-                    },
-                    "roblox-entry-attributes": {
-                      "type": "string",
-                      "description": "Attributes associated with the returned entry. Serialized JSON map object.",
-                      "format": "binary"
-                    },
-                    "roblox-entry-userids": {
-                      "type": "array",
-                      "items": {
-                        "type": "integer"
-                      },
-                      "description": "Comma-separated list of Roblox user IDs tagged with the entry."
-                    },
-                    "content-md5": {
-                      "type": "string",
-                      "description": "The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/open-cloud/data-store-api-handling.md#content-md5).",
-                      "format": "binary"
-                    }
-                  },
-                  "example": "{\n  \"content-md5\": \"zuYxEhwuySMvOi8CitXImw==\",\n  \"roblox-entry-version\": \"08D9E6A3F2188CFF.0000000001.08D9E6A3F2188CFF.01\",\n  \"roblox-entry-created-time\": \"2022-02-02T23:30:06.5388799+00:00\",\n  \"roblox-entry-version-created-time\": \"2022-02-02T23:30:06.5388799+00:00\",\n  \"roblox-entry-userids\": [ 1, 2, 3 ]\n}"
-                },
-                "encoding": {
-                  "metadata": {
-                    "contentType": "application/json; charset=utf-8; content-length=388;"
-                  }
+                  "description": "The user content of the entry."
                 }
               }
             }
@@ -523,23 +453,6 @@
         "responses": {
           "200": {
             "description": "",
-            "headers": {
-              "date": {
-                "schema": {
-                  "type": "date-time"
-                }
-              },
-              "content-type": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "conent-length": {
-                "schema": {
-                  "type": "integer"
-                }
-              }
-            },
             "content": {
               "text/json": {
                 "schema": {
@@ -614,14 +527,7 @@
         ],
         "responses": {
           "204": {
-            "description": "The entry is deleted.",
-            "headers": {
-              "date": {
-                "schema": {
-                  "type": "date-time"
-                }
-              }
-            }
+            "description": "The entry is deleted."
           }
         },
         "security": [
@@ -643,7 +549,7 @@
       "post": {
         "tags": ["Entries"],
         "summary": "Increment entry",
-        "description": "Increments the value for an entry by a given amount, or create a new entry with that amount.",
+        "description": "Increments the value for an entry by a given amount, or create a new entry with that amount. Returns the entry and metadata.\n\nMetadata can be found in the response headers like the following:\n```text\ncontent-md5: zuYxEhwuySMv0i8CitXImw==\nroblox-entry-version: 08D9E6A3F2188CFF.0000000001.08D9E6A3F2188CFF.01\nroblox-entry-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-version-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-attributes: { \"myAttribute\": \"myValue\" }\nroblox-entry-userids: [1, 2, 3]\n```\n\n| Header | Description |\n|---|---| \n| `content-md5` | The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/open-cloud/data-store-api-handling.md#content-md5). |\n| `roblox-entry-version` | The version of the returned entry. |\n| `roblox-entry-created-time` | The time at which the entry was created. |\n| `roblox-entry-version-created-time` | The time at which this particular version was created. |\n| `roblox-entry-attributes` | Attributes tagged with the entry. Serialized JSON map object. |\n| `roblox-entry-userids` | Comma-separated list of Roblox user IDs tagged with the entry. |\n",
         "operationId": "Entries_IncrementEntryAsync",
         "x-roblox-cloud-api-operation-name": "Increment Entry",
         "parameters": [
@@ -718,91 +624,55 @@
           "200": {
             "description": "Returns the latest version of the entry after it has been incremented.",
             "headers": {
-              "date": {
-                "schema": {
-                  "type": "date-time"
-                }
-              },
-              "content-type": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "conent-length": {
-                "schema": {
-                  "type": "integer"
-                }
-              },
               "content-md5": {
                 "schema": {
-                  "type": "string"
-                }
+                  "type": "string",
+                  "format": "byte"
+                },
+                "description": "The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/open-cloud/data-store-api-handling.md#content-md5)."
               },
               "roblox-entry-version": {
                 "schema": {
-                  "type": "string"
-                }
+                  "type": "string",
+                  "format": "binary"
+                },
+                "description": "The version of the returned entry."
               },
               "roblox-entry-created-time": {
                 "schema": {
-                  "type": "date-time"
-                }
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "description": "The time at which the entry was created."
               },
               "roblox-entry-version-created-time": {
                 "schema": {
-                  "type": "date-time"
-                }
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "description": "The time at which this particular version was created."
+              },
+              "roblox-entry-attributes": {
+                "schema": {
+                  "type": "object"
+                },
+                "description": "Attributes tagged with the entry. Serialized JSON map object."
               },
               "roblox-entry-userids": {
                 "schema": {
-                  "type": "array"
-                }
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                },
+                "description": "Comma-separated list of Roblox user IDs tagged with the entry."
               }
             },
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {
-                    "roblox-entry-created-time": {
-                      "type": "string",
-                      "description": "The time at which the entry was created.",
-                      "format": "date-time"
-                    },
-                    "last-modified": {
-                      "type": "string",
-                      "description": "The time at which this particular version was created.",
-                      "format": "date-time"
-                    },
-                    "roblox-entry-version": {
-                      "type": "string",
-                      "description": "The version of the returned entry.",
-                      "format": "binary"
-                    },
-                    "roblox-entry-attributes": {
-                      "type": "string",
-                      "description": "Attributes associated with the returned entry. Serialized JSON map object.",
-                      "format": "binary"
-                    },
-                    "roblox-entry-userids": {
-                      "type": "array",
-                      "items": {
-                        "type": "integer"
-                      },
-                      "description": "Comma-separated list of Roblox user IDs tagged with the entry."
-                    },
-                    "content-md5": {
-                      "type": "string",
-                      "description": "The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/open-cloud/data-store-api-handling.md#content-md5).",
-                      "format": "binary"
-                    }
-                  },
-                  "example": "{\n  \"content-md5\": \"K4phWUsfTE2wkCqKOVztkw==\",\n  \"roblox-entry-version\": \"08D9E6A3F2188CFF.0000000009.08D9E6DF74AC5F42.01\",\n  \"roblox-entry-created-time\": \"2022-02-02T23:30:06.5388799+00:00\",\n  \"roblox-entry-version-created-time\": \"2022-02-03T06:36:05.9184962+00:00\",\n  \"roblox-entry-userids\": []\n}"
-                },
-                "encoding": {
-                  "metadata": {
-                    "contentType": "application/json; charset=utf-8; content-length=388;"
-                  }
+                  "description": "The user content of the entry."
                 }
               }
             }
@@ -833,7 +703,7 @@
       "get": {
         "tags": ["Entries"],
         "summary": "Get entry version.",
-        "description": "Returns the value and metadata of a specific version of an entry.",
+        "description": "Returns the value and metadata of a specific version of an entry.\n\nMetadata can be found in the response headers like the following:\n```text\ncontent-md5: zuYxEhwuySMv0i8CitXImw==\nroblox-entry-version: 08D9E6A3F2188CFF.0000000001.08D9E6A3F2188CFF.01\nroblox-entry-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-version-created-time: 2022-02-02T23:30:06.5388799+00:00\nroblox-entry-attributes: { \"myAttribute\": \"myValue\" }\nroblox-entry-userids: [1, 2, 3]\n```\n\n| Header | Description |\n|---|---| \n| `content-md5` | The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/open-cloud/data-store-api-handling.md#content-md5). |\n| `roblox-entry-version` | The version of the returned entry. |\n| `roblox-entry-created-time` | The time at which the entry was created. |\n| `roblox-entry-version-created-time` | The time at which this particular version was created. |\n| `roblox-entry-attributes` | Attributes tagged with the entry. Serialized JSON map object. |\n| `roblox-entry-userids` | Comma-separated list of Roblox user IDs tagged with the entry. |\n",
         "operationId": "Entries_GetEntryVersionAsync",
         "x-roblox-cloud-api-operation-name": "Get Entry Version",
         "parameters": [
@@ -887,81 +757,57 @@
         ],
         "responses": {
           "200": {
-            "description": "",
+            "description": "Successfully retrieved the entry.",
             "headers": {
-              "date": {
-                "schema": {
-                  "type": "date-time"
-                }
-              },
-              "content-type": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "conent-length": {
-                "schema": {
-                  "type": "integer"
-                }
-              },
               "content-md5": {
                 "schema": {
-                  "type": "string"
-                }
+                  "type": "string",
+                  "format": "byte"
+                },
+                "description": "The base-64 encoded MD5 checksum of the content. See [Content-MD5](../../../cloud/open-cloud/data-store-api-handling.md#content-md5)."
               },
               "roblox-entry-version": {
                 "schema": {
-                  "type": "string"
-                }
+                  "type": "string",
+                  "format": "binary"
+                },
+                "description": "The version of the returned entry."
               },
               "roblox-entry-created-time": {
                 "schema": {
-                  "type": "date-time"
-                }
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "description": "The time at which the entry was created."
               },
               "roblox-entry-version-created-time": {
                 "schema": {
-                  "type": "date-time"
-                }
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "description": "The time at which this particular version was created."
               },
               "roblox-entry-attributes": {
                 "schema": {
-                  "type": "string"
-                }
+                  "type": "object"
+                },
+                "description": "Attributes tagged with the entry. Serialized JSON map object."
               },
               "roblox-entry-userids": {
                 "schema": {
-                  "type": "array"
-                }
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                },
+                "description": "Comma-separated list of Roblox user IDs tagged with the entry."
               }
             },
             "content": {
               "application/json": {
                 "schema": {
                   "type": "object",
-                  "properties": {
-                    "roblox-entry-created-time": {
-                      "type": "string",
-                      "description": "The time at which the entry was created.",
-                      "format": "date-time"
-                    },
-                    "last-modified": {
-                      "type": "string",
-                      "description": "The time at which this particular version was created.",
-                      "format": "date-time"
-                    },
-                    "roblox-entry-version": {
-                      "type": "string",
-                      "description": "The version of the returned entry.",
-                      "format": "binary"
-                    }
-                  },
-                  "example": "{\n  \"content-md5\": \"sTf90fedVsft8zZf6nUg8g==\",\n  \"roblox-entry-version\": \"08D9E6A3F2188CFF.0000000003.08D9E6DE485A7680.01\",\n  \"roblox-entry-created-time\": \"2022-02-02T23:30:06.5388799+00:00\",\n  \"roblox-entry-version-created-time\": \"2022-02-03T06:27:42.0652160+00:00\",\n  \"roblox-entry-attributes\": {},\n  \"roblox-entry-userids\": [ 269323 ]\n}"
-                },
-                "encoding": {
-                  "metadata": {
-                    "contentType": "application/json; charset=utf-8; content-length=388;"
-                  }
+                  "description": "The user content of the entry."
                 }
               }
             }
@@ -1087,23 +933,6 @@
         "responses": {
           "200": {
             "description": "",
-            "headers": {
-              "date": {
-                "schema": {
-                  "type": "date-time"
-                }
-              },
-              "content-type": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "conent-length": {
-                "schema": {
-                  "type": "integer"
-                }
-              }
-            },
             "content": {
               "text/json": {
                 "schema": {

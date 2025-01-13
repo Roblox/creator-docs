@@ -9,7 +9,7 @@ description: |
   It is parented to `Class.TextChatService`.
 
   To learn more, see
-  [Customizing Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+  [Customizing the Chat Window](../../../chat/chat-window.md).
 code_samples: []
 inherits:
   - TextChatConfigurations

@@ -13,7 +13,17 @@ deprecation_message: ''
 properties:
   - name: SurfaceGuiBase.Active
     summary: ''
-    description: ''
+    description: |
+      This property determines whether the `Class.SurfaceGui` will sink input,
+      for example if the parent or `Class.SurfaceGuiBase.Adornee|Adornee` part
+      contains a `Class.ClickDetector` class like `Class.DragDetector`.
+
+      Note that interactive UI elements like `Class.ImageButton|ImageButtons`
+      and `Class.TextButton|TextButtons` inside a `Class.SurfaceGui` will only
+      receive user input if they are parented to the `Class.PlayerGui`. The
+      `Class.SurfaceGui.Adorneee` property can be used to target a part in the
+      3D world while the `Class.SurfaceGui` itself remains in the
+      `Class.PlayerGui`.
     code_samples: []
     type: bool
     tags: []
@@ -30,8 +40,12 @@ properties:
       - UI
     writeCapabilities: []
   - name: SurfaceGuiBase.Adornee
-    summary: ''
-    description: ''
+    summary: |
+      `Class.BasePart` on which to apply the `Class.SurfaceGui`, overriding the
+      default parent association.
+    description: |
+      `Class.BasePart` on which to apply the `Class.SurfaceGui`, overriding the
+      default parent association.
     code_samples: []
     type: Instance
     tags: []
@@ -48,8 +62,12 @@ properties:
       - UI
     writeCapabilities: []
   - name: SurfaceGuiBase.Face
-    summary: ''
-    description: ''
+    summary: |
+      `Enum.NormalId` face upon which to apply the `Class.SurfaceGui`.
+    description: |
+      `Enum.NormalId` face of the `Class.SurfaceGui` parent (or its
+      `Class.SurfaceGuiBase.Adornee|Adornee`) upon which to apply the
+      `Class.SurfaceGui`.
     code_samples: []
     type: NormalId
     tags: []

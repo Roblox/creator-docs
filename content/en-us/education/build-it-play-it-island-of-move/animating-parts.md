@@ -49,9 +49,9 @@ For this project, a tween will move an object from a starting position to a goal
 
    -- Tween variables
    local buttonTweenInfo = TweenInfo.new(
-   	TWEEN_TIME,  -- Time
-   	Enum.EasingStyle.Quad,  -- EasingStyle
-   	Enum.EasingDirection.Out  -- EasingDirection
+   	TWEEN_TIME, -- Time
+   	Enum.EasingStyle.Quad, -- EasingStyle
+   	Enum.EasingDirection.Out -- EasingDirection
    )
 
    local function buttonPress()
@@ -159,10 +159,10 @@ local TWEEN_MOVE_DISTANCE = 3
 
 -- Tween variables
 local tweenInfo = TweenInfo.new(
-	TWEEN_TIME,  -- Time
-	Enum.EasingStyle.Quad,  -- EasingStyle
-	Enum.EasingDirection.Out,  -- EasingDirection
-	1,  -- RepeatCount (when less than zero the tween will loop indefinitely)
+	TWEEN_TIME, -- Time
+	Enum.EasingStyle.Quad, -- EasingStyle
+	Enum.EasingDirection.Out, -- EasingDirection
+	1, -- RepeatCount (when less than zero the tween will loop indefinitely)
 	true  -- Reverses (tween will reverse once reaching its goal)
 )
 
@@ -210,8 +210,8 @@ local TWEEN_SCALE = Vector3.zero
 
 -- Tween variables
 local tweenInfo = TweenInfo.new(
-	TWEEN_TIME,  -- Time
-	Enum.EasingStyle.Exponential,  -- EasingStyle
+	TWEEN_TIME, -- Time
+	Enum.EasingStyle.Exponential, -- EasingStyle
 	Enum.EasingDirection.Out  -- EasingDirection
 )
 
@@ -263,10 +263,10 @@ local hitCount = 0
 
 -- Tween variables
 local tweenInfo = TweenInfo.new(
-	TWEEN_TIME,  -- Time
-	Enum.EasingStyle.Exponential,  -- EasingStyle
-	Enum.EasingDirection.InOut,  -- EasingDirection
-	0,  -- RepeatCount (when less than zero the tween will loop indefinitely)
+	TWEEN_TIME, -- Time
+	Enum.EasingStyle.Exponential, -- EasingStyle
+	Enum.EasingDirection.InOut, -- EasingDirection
+	0, -- RepeatCount (when less than zero the tween will loop indefinitely)
 	true  -- Reverses (tween will reverse once reaching its goal)
 )
 

@@ -8,7 +8,7 @@ description: |
   Immutable data object representing a text chat message.
 
   To learn more about using TextChatMessages, see
-  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+  [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
 code_samples: []
 inherits:
   - Instance
@@ -240,7 +240,7 @@ properties:
       with the same localization settings or using languages without the text
       filter support, so this property can be an empty string if no translation
       happens. For customization, see
-      [Customizing Translated Messages](../../../chat/customizing-in-experience-text-chat.md).
+      [Customizing Translated Messages](../../../chat/chat-window.md).
     code_samples: []
     type: string
     tags: []

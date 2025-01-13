@@ -6,6 +6,11 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
+  - name: Custom
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
   - name: UIHover
     summary: ''
     value: 1

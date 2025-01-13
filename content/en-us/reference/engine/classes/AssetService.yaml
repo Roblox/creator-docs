@@ -107,6 +107,7 @@ methods:
         default:
         summary: |
           Currently supported types are:
+
           - `Enum.AssetType.Model` – with `object` as any valid `Class.Instance`
             root.
           - `Enum.AssetType.Plugin` – with `object` as any valid
@@ -117,14 +118,21 @@ methods:
             `Class.EditableImage` root.
       - name: requestParameters
         type: Dictionary
-        default:
+        default: nil
         summary: |
           Options table containing asset metadata:
+
           - `Name` – Name of the asset as a string. Defaults to `[object.Name]`.
-          - `Description` – Description of the asset as a string. Defaults to `"Created with AssetService:CreateAssetAsync"`.
-          - `CreatorId` – ID of the asset creator as a number. Defaults to the logged in Roblox Studio user for Plugin context. Required for Open Cloud Luau Execution context.
-          - `CreatorType` – `Enum.AssetCreatorType` indicating the type of asset creator. Defaults to `Enum.AssetCreatorType.User` in Plugin context. Required for Open Cloud Luau Execution context.
-          - `IsPackage` – Boolean value, only applicable to the `Enum.AssetType.Model` type. Defaults to `true`.
+          - `Description` – Description of the asset as a string. Defaults to
+            `"Created with AssetService:CreateAssetAsync"`.
+          - `CreatorId` – ID of the asset creator as a number. Defaults to the
+            logged in Roblox Studio user for Plugin context. Required for Open
+            Cloud Luau Execution context.
+          - `CreatorType` – `Enum.AssetCreatorType` indicating the type of asset
+            creator. Defaults to `Enum.AssetCreatorType.User` in Plugin context.
+            Required for Open Cloud Luau Execution context.
+          - `IsPackage` – Boolean value, only applicable to the
+            `Enum.AssetType.Model` type. Defaults to `true`.
     returns:
       - type: Tuple
         summary: |
@@ -134,10 +142,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities:
-      - PluginOrOpenCloud
-    writeCapabilities:
-      - PluginOrOpenCloud
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:CreateAssetVersionAsync
     summary: |
       Creates a new version for an existing asset from the given object.
@@ -157,6 +163,7 @@ methods:
         default:
         summary: |
           Currently supported types are:
+
           - `Enum.AssetType.Model` – with `object` as any valid `Class.Instance`
             root.
           - `Enum.AssetType.Plugin` – with `object` as any valid
@@ -172,14 +179,21 @@ methods:
           The ID of the asset for the new version.
       - name: requestParameters
         type: Dictionary
-        default:
+        default: nil
         summary: |
           Options table containing asset metadata:
+
           - `Name` – A `string`. Name of the asset. Default: object.Name.
-          - `Description` – A `string`. Description of the asset. Default: "Created with AssetService:CreateAssetAsync".
-          - `CreatorId` – A `number`. ID of the asset creator. Default: The logged in Roblox Studio user for Plugin context. Required for Open Cloud Luau Execution context.
-          - `CreatorType` – A `Enum.AssetCreatorType`. Type of asset creator. Default: `Enum.AssetCreatorType.User` in Plugin context. Required for Open Cloud Luau Execution context.
-          - `IsPackage` – A `bool`. Only applicable to the `Enum.AssetType.Model` type. Default: true.
+          - `Description` – A `string`. Description of the asset. Default:
+            "Created with AssetService:CreateAssetAsync".
+          - `CreatorId` – A `number`. ID of the asset creator. Default: The
+            logged in Roblox Studio user for Plugin context. Required for Open
+            Cloud Luau Execution context.
+          - `CreatorType` – A `Enum.AssetCreatorType`. Type of asset creator.
+            Default: `Enum.AssetCreatorType.User` in Plugin context. Required
+            for Open Cloud Luau Execution context.
+          - `IsPackage` – A `bool`. Only applicable to the
+            `Enum.AssetType.Model` type. Default: true.
     returns:
       - type: Tuple
         summary: |
@@ -190,10 +204,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-    capabilities:
-      - PluginOrOpenCloud
-    writeCapabilities:
-      - PluginOrOpenCloud
+    capabilities: []
+    writeCapabilities: []
   - name: AssetService:CreateEditableImageAsync
     summary: |
       Creates a new `Class.EditableImage` object populated with the given image.

@@ -1,9 +1,9 @@
 ---
-title: Bubble Chat
+title: Customizing Bubble Chat
 description: The text chat system allows users to communicate and socialize with each other.
 ---
 
-With the [in-experience text chat](../chat/in-experience-text-chat.md) system, you can support **bubble chat** to display customizable speech chat bubbles above user avatars and NPCs. Bubble chat can make your experience more visually immersive and help users easily identify messages and their speakers in a contextually relevant manner. This feature is especially useful for experiences where users need to focus on the content in the meantime communicating with others in a less obtrusive way.
+With [TextChatService](../chat/in-experience-text-chat.md), you can use **bubble chat** to display customizable speech chat bubbles above user avatars and NPCs. Bubble chat can make your experience more visually immersive and help users easily identify messages and their speakers in a contextually relevant manner. This feature is especially useful for experiences where users need to focus on the content in the meantime communicating with others in a less obtrusive way.
 
 <video src="../assets/players/in-experience-text-chat/Player-Conversation-Bubbles.mp4" controls width="100%"></video>
 
@@ -25,7 +25,7 @@ After enabling bubble chat, you can customize the appearance and behavior of you
 
 <img src="../assets/players/in-experience-text-chat/TextChatService-BubbleChatConfiguration.png" width="320" />
 
-Alternatively, you can add a `Class.LocalScript` in `Class.StarterPlayerScripts` with all your customization settings. This allows the engine to apply your customizations during runtime, overriding the settings in Studio. It's useful for adding special effects to chat bubbles when users trigger certain events or conditions.
+Alternatively, add a `Class.LocalScript` in `Class.StarterPlayerScripts` with all your customization settings. This allows the engine to apply your customizations during runtime, overriding the settings in Studio. It's useful for adding special effects to chat bubbles when users trigger certain events or conditions.
 
 ### Basic Customization
 
@@ -166,7 +166,7 @@ if not bubbleImageLabel then
 	bubbleImageLabel = Instance.new("ImageLabel")
 	bubbleImageLabel.Parent = bubbleChatConfiguration
 end
-bubbleImageLabel.Image = "rbxassetid://6733332557"
+bubbleImageLabel.Image = "rbxassetid://109157529833093"
 bubbleImageLabel.ScaleType = Enum.ScaleType.Slice
 bubbleImageLabel.SliceCenter = Rect.new(40, 40, 320, 120)
 bubbleImageLabel.SliceScale = 0.5
@@ -323,7 +323,7 @@ The following tables outline the available `Class.GuiObject` and [appearance mod
 
 ## Per-Bubble Customization
 
-You can individually style and modify chat bubble behaviors based on specific conditions that overrides your general settings. For example, you can use chat bubbles to differentiate NPCs and users, highlight critical health status, and apply special effects to messages with pre-defined keywords.
+You can individually style and modify chat bubble behaviors based on specific conditions in order to override your general settings. For example, you can use chat bubbles to differentiate NPCs and users, highlight critical health status, and apply special effects to messages with pre-defined keywords.
 
 To set per-bubble customization, add a client-side `Class.LocalScript` using `Class.BubbleChatMessageProperties`, which overrides matching properties of `Class.BubbleChatConfiguration`, and the `Class.TextChatService.OnBubbleAdded` callback to specify how to customize each bubble. The callback supplies you with the `Class.TextChatMessage` property as well as the adornee, so you can apply the customization based on attributes associated with users, the chat text content, user character properties, and any special conditions you want to define.
 
@@ -435,9 +435,15 @@ end
 
 <video src="../assets/players/in-experience-text-chat/Low-Health-Bubble.mp4" controls width="90%"></video>
 
-## NPC Bubbles
+## Manually Displaying Bubbles
 
-You can display chat bubbles for non-player characters (NPCs) by calling `Class.TextChatService:DisplayBubble()`, with the NPC character and the message as parameters. These bubbles are customizable using the `Class.TextChatService.OnBubbleAdded` callback just like any other chat bubble.
+You might want to display a chat bubble when players haven't sent a message, such as with NPCs. Use the `Class.TextChatService:DisplayBubble` method to manually display a chat bubble.
+
+Customization of these bubbles is the same as the customization of the bubbles that are automatically displayed when Players send messages through TextChannels using the [`Class.TextChatService.OnBubbleAdded` callback](#per-bubble-customization).
+
+### NPC Bubbles
+
+Display chat bubbles for non-player characters (NPCs) by calling `Class.TextChatService:DisplayBubble(character, message)`, with the NPC character and the message as parameters. These bubbles are customizable using the `Class.TextChatService.OnBubbleAdded` callback just like any other chat bubble.
 
 `Class.TextChatService:DisplayBubble()` only works on client-side scripts, so be sure to use a `Class.Script` with `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`, or a `Class.LocalScript` in an [appropriate container](/projects/data-model#client), such as `Class.StarterPlayerScripts`. If you attach a `Class.ProximityPrompt` to an NPC, a script for displaying a chat bubble might look like this:
 

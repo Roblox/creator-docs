@@ -70,7 +70,7 @@ These steps use an array to store different phrases for the NPC to say when play
 3. Within the brackets `{}` of the array just created, type at least three strings of dialogue, separated by commas.
 
    ```lua
-   local dialogueArray = {"Hi!",  "Do I know you?",  "Goodbye!"}
+   local dialogueArray = {"Hi!", "Do I know you?", "Goodbye!"}
    ```
 
 ## Using Array Indexes
@@ -202,11 +202,7 @@ Use the array size to check when it's time to cycle back to the first piece of d
       local dialogue = dialogueArray[dialogueIndex]
       Chat:Chat(head, dialogue)
 
-      if dialogueIndex == #dialogueArray then
-        dialogueIndex = 1
-      else
-        dialogueIndex += 1
-      end
+      dialogueIndex = if dialogueIndex == #dialogueArray then 1 else dialogueIndex + 1
     end
    ```
 
@@ -232,19 +228,14 @@ This script used an array to create a list of possible dialogue lines for a Non-
    local head = characterParts.Head
 
    -- Add array here
-   local dialogueArray = {"Hi!",  "Do I know you?",  "Goodbye!"}
+   local dialogueArray = {"Hi!", "Do I know you?", "Goodbye!"}
    local dialogueIndex = 1
 
    local function speak()
       local dialogue = dialogueArray[dialogueIndex]
       Chat:Chat(head, dialogue)
 
-      if dialogueIndex == #dialogueArray then
-         dialogueIndex = 1
-
-      else
-         dialogueIndex += 1
-      end
+      dialogueIndex = if dialogueIndex == #dialogueArray then 1 else dialogueIndex + 1
    end
 
    prompt.Triggered:Connect(speak)

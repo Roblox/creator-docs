@@ -100,6 +100,11 @@
             "description": "Too Many Requests."
           }
         },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Read"]
+          }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "curl",
@@ -148,14 +153,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "CreateEntryRequest",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/CreateEntryRequest"
-            }
           }
         ],
         "requestBody": {
@@ -192,6 +189,11 @@
             "description": "Too Many Requests."
           }
         },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Write"]
+          }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "curl",
@@ -268,6 +270,11 @@
             "description": "Too Many Requests."
           }
         },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Read"]
+          }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "curl",
@@ -335,6 +342,11 @@
             "description": "Too Many Requests."
           }
         },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Write"]
+          }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "curl",
@@ -349,7 +361,7 @@
         "x-roblox-cloud-api-operation-name": "Update",
         "parameters": [
           {
-            "name": "universeIdId",
+            "name": "universeId",
             "in": "path",
             "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
             "required": true,
@@ -382,14 +394,6 @@
             "required": true,
             "schema": {
               "type": "string"
-            }
-          },
-          {
-            "name": "UpdateEntryRequest",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/UpdateEntryRequest"
             }
           },
           {
@@ -438,6 +442,11 @@
             "description": "Too Many Requests."
           }
         },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Write"]
+          }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "curl",
@@ -488,14 +497,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "incrementEntryRequest",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/IncrementEntryRequest"
-            }
           }
         ],
         "requestBody": {
@@ -532,6 +533,11 @@
             "description": "Too Many Requests."
           }
         },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Write"]
+          }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "curl",
@@ -614,6 +620,13 @@
           }
         },
         "description": "A list of Entries in the parent collection."
+      }
+    },
+    "securitySchemes": {
+      "roblox-api-key": {
+        "type": "apiKey",
+        "name": "roblox-api-key",
+        "in": "header"
       }
     }
   },

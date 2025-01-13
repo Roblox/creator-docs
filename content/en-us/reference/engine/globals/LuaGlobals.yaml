@@ -95,7 +95,7 @@ functions:
       position information to the message.
     parameters:
       - name: message
-        type: string
+        type: Variant
         default:
         summary: |
           The error message to display.
@@ -756,6 +756,10 @@ functions:
       succeeds without errors. In this case, `xpcall()` also returns all results
       from the call, after this first result. In case of any error, `xpcall()`
       returns false plus the result from `err`.
+
+      Unlike `Global.LuaGlobals.pcall()`, the `err` function preserves the stack
+      trace of function `f`, which can be inspected using `Library.debug.info()`
+      or `Library.debug.traceback()`.
     parameters:
       - name: f
         type: function

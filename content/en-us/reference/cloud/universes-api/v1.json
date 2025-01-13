@@ -79,7 +79,11 @@
             "description": "Server internal error / Unknown error."
           }
         },
-        "security": [],
+        "security": [
+          {
+            "roblox-api-key": ["Label.Write"]
+          }
+        ],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-code-samples": [
           {
@@ -94,6 +98,15 @@
           }
         },
         "x-roblox-size-limit": 10485760
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "roblox-api-key": {
+        "type": "apiKey",
+        "name": "roblox-api-key",
+        "in": "header"
       }
     }
   }

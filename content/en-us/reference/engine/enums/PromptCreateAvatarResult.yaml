@@ -61,3 +61,8 @@ items:
     value: 11
     tags: []
     deprecation_message: ''
+  - name: TokenInvalid
+    summary: ''
+    value: 12
+    tags: []
+    deprecation_message: ''

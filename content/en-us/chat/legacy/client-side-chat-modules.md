@@ -6,7 +6,7 @@ comments: |
 ---
 
 <Alert severity="error">
-  This guide covers client-side chat modules of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see <a href="../../chat/customizing-in-experience-text-chat.md">In-Experience Text Chat</a>.
+  This guide covers client-side chat modules of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see <a href="../../chat/in-experience-text-chat.md">In-Experience Text Chat</a>.
 </Alert>
 
 You can use the following chat modules to support client-side behaviors of the [Legacy Chat System](../../chat/legacy/legacy-chat-system.md#message-creator-modules).

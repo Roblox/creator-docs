@@ -338,7 +338,26 @@ methods:
       used to customize the appearance of messages in the chat window.
       `Class.ChatWindowMessageProperties` inherits from
       `Class.TextChatMessageProperties`.
-    code_samples: []
+
+      This is intended to be used during custom
+      `Class.TextChatService.OnChatWindowAdded` callbacks.
+
+      ```lua
+      local TextChatService = game:GetService("TextChatService")
+      local ChatWindowConfiguration = TextChatService.ChatWindowConfiguration
+
+      TextChatService.OnChatWindowAdded = function(textChatMessage)
+        local properties = ChatWindowConfiguration:DeriveNewMessageProperties()
+
+        if textChatMessage.Metadata == "Important" then
+          properties.TextColor3 = Color3.fromRGB(255, 0, 0)
+        end
+
+        return properties
+      end
+      ```
+    code_samples:
+      - TextChatService-User-Chat
     parameters: []
     returns:
       - type: ChatWindowMessageProperties

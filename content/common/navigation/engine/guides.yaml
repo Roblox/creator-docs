@@ -439,10 +439,23 @@ navigation:
             path: /chat/in-experience-text-chat
           - title: Guidelines
             path: /chat/guidelines
-          - title: Customization
-            path: /chat/customizing-in-experience-text-chat
+          - title: Chat Window
+            path: /chat/chat-window
           - title: Bubble Chat
             path: /chat/bubble-chat
+          - title: Examples
+            path: /chat/examples/simple-custom-frontend-ui
+            section:
+              - title: Custom UI
+                path: /chat/examples/simple-custom-frontend-ui
+              #- title: Custom System Messages
+              #  path: /chat/examples/custom-system-messages
+              - title: Chat Tags
+                path: /chat/examples/group-chat-tags
+              - title: Proximity Chat
+                path: /chat/examples/proximity-chat
+              - title: Custom Chat Commands
+                path: /chat/examples/custom-text-chat-commands
           - title: Legacy Chat System
             path: /chat/legacy/legacy-chat-system
   - title: Performance Optimization

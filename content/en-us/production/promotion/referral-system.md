@@ -57,7 +57,7 @@ function onPlayerAdded(player)
     local referredByPlayerId = joinData.ReferredByPlayerId
 
     -- Check if the player was invited through a referral
-    if referredByPlayerId then
+    if referredByPlayerId and referredByPlayerId ~= 0 then
         -- Fire the referral event to the client, passing the inviter's ID
         referrerEvent:FireClient(player, referredByPlayerId)
 
@@ -88,7 +88,7 @@ function onPlayerAdded(player)
     local referredByPlayerId = joinData.ReferredByPlayerId
 
     -- Check if the player was invited through a referral
-    if referredByPlayerId then
+    if referredByPlayerId and referredByPlayerId ~= 0 then
         -- Fire the referral event to the client, passing the inviter's ID
         referrerEvent:FireClient(player, referredByPlayerId)
 
@@ -130,7 +130,7 @@ function onPlayerAdded(player)
     local referredByPlayerId = joinData.ReferredByPlayerId
 
     -- Check if the player was invited and has not already used a referral
-    if referredByPlayerId and not referredPlayers[player.UserId] then
+    if referredByPlayerId and referredByPlayerId ~= 0 and not referredPlayers[player.UserId] then
         -- Mark the player as referred
         referredPlayers[player.UserId] = true
 

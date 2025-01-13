@@ -348,13 +348,11 @@ properties:
     writeCapabilities: []
   - name: Stats.RenderCPUFrameTime
     summary: |
-      A measurement of how long it takes for the CPU to process all of its tasks
-      required to render a frame.
+      A measurement of how long it takes for the CPU to process all of its
+      rendering tasks for a frame.
     description: |
       This property is a measurement of how long it takes for the CPU to process
-      all of its tasks required to render a frame. A high value can indicate
-      that the CPU is taking longer to render a frame, which can lead to
-      performance issues.
+      all of its rendering tasks for a frame.
     code_samples: []
     type: float
     tags:
@@ -377,9 +375,7 @@ properties:
       required to render a frame.
     description: |
       This property is a measurement of how long it takes for the GPU to process
-      all of its tasks required to render a frame. A high value can indicate
-      that the GPU is taking longer to render a frame, which can lead to
-      performance issues.
+      all of its tasks required to render a frame.
     code_samples: []
     type: float
     tags:
@@ -471,7 +467,7 @@ properties:
     writeCapabilities: []
   - name: Stats.ShadowsTriangleCount
     summary: |
-      A measurement of the number of traingles rendered as shadows in the game's
+      A measurement of the number of triangles rendered as shadows in the game's
       current scene.
     description: |
       This property is a measurement of the number of triangles rendered as
@@ -594,6 +590,34 @@ properties:
     capabilities: []
     writeCapabilities: []
 methods:
+  - name: Stats:GetMemoryCategoryNames
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: Stats:GetMemoryUsageMbAllCategories
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Stats:GetMemoryUsageMbForTag
     summary: |
       Returns the number of megabytes that are being consumed in the specified
