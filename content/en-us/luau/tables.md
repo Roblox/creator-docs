@@ -141,9 +141,9 @@ To create a dictionary table, define each **key** followed by `=` and the **valu
 
 ```lua
 local testDictionary = {
-	FruitName = "Lemon",
-	FruitColor = "Yellow",
-	Sour = true
+	fruitName = "Lemon",
+	fruitColor = "Yellow",
+	sour = true
 }
 ```
 
@@ -153,7 +153,7 @@ The keys for dictionaries can be numbers, strings, and objects. For example, a k
 local part = Instance.new("Part")
 
 local testDictionary = {
-	PartType = "Block",
+	partType = "Block",
 	[part] = true
 }
 ```
@@ -166,11 +166,11 @@ To read from a dictionary, add a pair of brackets after its reference and specif
 local part = Instance.new("Part")
 
 local testDictionary = {
-	PartType = "Block",
+	partType = "Block",
 	[part] = true
 }
 -- Include quotes for string keys
-print(testDictionary["PartType"]) -- Block
+print(testDictionary["partType"]) -- Block
 -- Omit quotes for non-string keys
 print(testDictionary[part]) -- true
 ```
@@ -181,20 +181,20 @@ To define or rewrite the value of a new or existing dictionary key, declare the 
 
 ```lua
 local testDictionary = {
-	FruitName = "Lemon",
-	Sour = true
+	fruitName = "Lemon",
+	sour = true
 }
 
 -- Change value of existing keys
-testDictionary["FruitName"] = "Cherry"
-testDictionary["Sour"] = false
+testDictionary["fruitName"] = "Cherry"
+testDictionary["sour"] = false
 
 -- Insert new key-value pair
-testDictionary["FruitCount"] = 10
+testDictionary["fruitCount"] = 10
 
-print(testDictionary["FruitName"]) -- Cherry
-print(testDictionary["Sour"]) -- false
-print(testDictionary["FruitCount"]) -- 10
+print(testDictionary["fruitName"]) -- Cherry
+print(testDictionary["sour"]) -- false
+print(testDictionary["fruitCount"]) -- 10
 ```
 
 ### Iterating over Dictionaries
@@ -203,9 +203,9 @@ To iterate over a dictionary, use the global `pairs()` function in a `for` loop:
 
 ```lua
 local testDictionary = {
-	FruitName = "Lemon",
-	FruitColor = "Yellow",
-	Sour = true
+	fruitName = "Lemon",
+	fruitColor = "Yellow",
+	sour = true
 }
 
 for key, value in pairs(testDictionary) do
@@ -213,9 +213,9 @@ for key, value in pairs(testDictionary) do
 end
 
 --[[ Resulting output:
-FruitName Lemon
-Sour true
-FruitColor Yellow
+fruitName Lemon
+sour true
+fruitColor Yellow
 ]]
 ```
 
@@ -229,19 +229,19 @@ To remove or erase a key-value pair from a dictionary, set its value for a key t
 
 ```lua
 local testDictionary = {
-	FruitName = "Lemon",
-	FruitColor = "Yellow",
-	Sour = true
+	fruitName = "Lemon",
+	fruitColor = "Yellow",
+	sour = true
 }
 
-testDictionary["Sour"] = nil
+testDictionary["sour"] = nil
 
 for key, value in pairs(testDictionary) do
 	print(key, value)
 end
 --[[ Resulting output:
-FruitName Lemon
-FruitColor Yellow
+fruitName Lemon
+fruitColor Yellow
 ]]
 ```
 
