@@ -280,7 +280,7 @@ To copy a table without any nested tables, Luau offers the `Library.table.clone(
 local original = {
 	key = "value",
 	engine = "Roblox",
-	playerId = 505306092
+	playerID = 505306092
 }
 
 local clone = table.clone(original)
@@ -314,7 +314,7 @@ With the function in place, you can make a deep copy as follows:
 local original = {
 	key = "value",
 	playerInfo = {
-		playerId = 505306092,
+		playerID = 505306092,
 		playerName = "PlayerName"
 	},
 	otherInfo = {
@@ -339,11 +339,11 @@ To freeze a table without any nested tables, Luau offers the `Library.table.free
 local target = {
 	key = "value",
 	engine = "Roblox",
-	playerId = 505306092
+	playerID = 505306092
 }
 
 table.freeze(target)
-target.playerId = 1 --> attempt to modify a readonly table
+target.playerID = 1 --> attempt to modify a readonly table
 ```
 
 ### Deep Freezes
@@ -370,7 +370,7 @@ With the function in place, you can deep freeze a table as follows:
 local target = {
 	key = "value",
 	playerInfo = {
-		playerId = 505306092,
+		playerID = 505306092,
 		playerName = "PlayerName"
 	},
 	otherInfo = {
@@ -381,5 +381,5 @@ local target = {
 }
 
 deepFreeze(target)
-target.playerInfo.playerId = 1 --> attempt to modify a readonly table
+target.playerInfo.playerID = 1 --> attempt to modify a readonly table
 ```
