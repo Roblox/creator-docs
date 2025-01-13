@@ -3,21 +3,21 @@ type: library
 summary: |
   A library of vector functions.
 description: |
-  This library implements functionality for the vector type in addition to the built-in primitive operator support. It uses vectors with 3 components (x, y, and z).
+  This library implements functionality for the vector type in addition to the built-in primitive operator support. It uses vectors with three components (`x`, `y`, and `z`).
 
-  Individual vector components can be accessed using the fields x or X, y or Y, z or Z. Since vector values are immutable, writes to individual components are not supported.
+  Individual vector components can be accessed using the fields `x` or `X`, `y` or `Y`, `z` or `Z`. Since vector values are immutable, writing to individual components is not supported.
 code_samples:
 properties:
   - name: vector.zero
     type: vector
-    summary: Constant vector with all components set to 0.
-    description: Constant vector with all components set to 0.
+    summary: Constant vector with all components set to `0`.
+    description: Constant vector with all components set to `0`.
     tags:
     code_samples:
   - name: vector.one
     type: vector
-    summary: Constant vector with all components set to 1.
-    description: Constant vector with all components set to 1.
+    summary: Constant vector with all components set to `1`.
+    description: Constant vector with all components set to `1`.
     tags:
     code_samples:
 functions:
@@ -125,8 +125,8 @@ functions:
     tags:
     code_samples:
   - name: vector.floor
-    summary: Applies `math.floor` to every component of the input vector.
-    description: Applies `math.floor` to every component of the input vector.
+    summary: Applies `Library.math.floor()` to every component of the input vector.
+    description: Applies `Library.math.floor()` to every component of the input vector.
     parameters:
       - name: vec
         type: vector
@@ -138,8 +138,8 @@ functions:
     tags:
     code_samples:
   - name: vector.ceil
-    summary: Applies `math.ceil` to every component of the input vector.
-    description: Applies `math.ceil` to every component of the input vector.
+    summary: Applies `Library.math.ceil()` to every component of the input vector.
+    description: Applies `Library.math.ceil()` to every component of the input vector.
     parameters:
       - name: vec
         type: vector
@@ -151,8 +151,8 @@ functions:
     tags:
     code_samples:
   - name: vector.abs
-    summary: Applies `math.abs` to every component of the input vector.
-    description: Applies `math.abs` to every component of the input vector.
+    summary: Applies `Library.math.abs()` to every component of the input vector.
+    description: Applies `Library.math.abs()` to every component of the input vector.
     parameters:
       - name: vec
         type: vector
@@ -164,8 +164,8 @@ functions:
     tags:
     code_samples:
   - name: vector.sign
-    summary: Applies `math.sign` to every component of the input vector.
-    description: Applies `math.sign` to every component of the input vector.
+    summary: Applies `Library.math.sign()` to every component of the input vector.
+    description: Applies `Library.math.sign()` to every component of the input vector.
     parameters:
       - name: vec
         type: vector
@@ -177,8 +177,8 @@ functions:
     tags:
     code_samples:
   - name: vector.clamp
-    summary: Applies `math.clamp` to every component of the input vector.
-    description: Applies `math.clamp` to every component of the input vector.
+    summary: Applies `Library.math.clamp()` to every component of the input vector.
+    description: Applies `Library.math.clamp()` to every component of the input vector.
     parameters:
       - name: vec
         type: vector
@@ -198,9 +198,9 @@ functions:
     tags:
     code_samples:
   - name: vector.max
-    summary: Applies `math.max` to the corresponding components of the input vectors.
+    summary: Applies `Library.math.max()` to the corresponding components of the input vectors.
     description: |
-      Applies `math.max` to the corresponding components of the input vectors. Equivalent to `vector.create(math.max((...).x), math.max((...).y), math.max((...).z))`.
+      Applies `Library.math.max()` to the corresponding components of the input vectors.
     parameters:
       - name: ...
         type: vector
@@ -212,9 +212,9 @@ functions:
     tags:
     code_samples:
   - name: vector.min
-    summary: Applies `math.min` to the corresponding components of the input vectors.
+    summary: Applies `Library.math.min()` to the corresponding components of the input vectors.
     description: |
-      Applies `math.min` to the corresponding components of the input vectors. Equivalent to `vector.create(math.min((...).x), math.min((...).y), math.min((...).z))`.
+      Applies `Library.math.min()` to the corresponding components of the input vectors.
     parameters:
       - name: ...
         type: vector
