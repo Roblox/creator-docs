@@ -360,4 +360,4 @@ The `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` property has th
 To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
-For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../performance-optimization/improving.md#physics-computation). For an in‑depth walkthrough on how to choose a collision fidelity option that balances your precision needs and performance requirements, see [here](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
+For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../performance-optimization/improving.md#physics-computation).
