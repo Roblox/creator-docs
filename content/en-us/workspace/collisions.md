@@ -262,27 +262,27 @@ interesting but unintended gameplay, such as characters jumping on top of each o
 local PhysicsService = game:GetService("PhysicsService")
 local Players = game:GetService("Players")
 
-PhysicsService:RegisterCollisionGroup("Characters")
-PhysicsService:CollisionGroupSetCollidable("Characters", "Characters", false)
+local CollisionGroupName = "Characters"
+PhysicsService:RegisterCollisionGroup(CollisionGroupName)
+PhysicsService:CollisionGroupSetCollidable(CollisionGroupName, CollisionGroupName, false)
 
-local function onDescendantAdded(descendant)
-	-- Set collision group for any part descendant
-	if descendant:IsA("BasePart") then
-		descendant.CollisionGroup = "Characters"
+local function setCollisionGroup(model)
+	-- Apply collision group to all existing parts in the model
+	for _, descendant in model:GetDescendants() do
+		if descendant:IsA("BasePart") then
+			descendant.CollisionGroup = CollisionGroupName
+		end
 	end
-end
-
-local function onCharacterAdded(character)
-	-- Process existing and new descendants for physics setup
-	for _, descendant in character:GetDescendants() do
-		onDescendantAdded(descendant)
-	end
-	character.DescendantAdded:Connect(onDescendantAdded)
 end
 
 Players.PlayerAdded:Connect(function(player)
-	-- Detect when the player's character is added
-	player.CharacterAdded:Connect(onCharacterAdded)
+	player.CharacterAdded:Connect(function(character)
+		setCollisionGroup(character)
+	end)
+	-- If the player already has a character, apply the collision group immediately
+	if player.Character then
+		setCollisionGroup(player.Character)
+	end
 end)
 ```
 
@@ -360,4 +360,4 @@ The `Class.TriangleMeshPart.CollisionFidelity|CollisionFidelity` property has th
 To view collision fidelity in Studio, toggle on **Collision&nbsp;fidelity** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
-For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../performance-optimization/improving.md#physics-computation). For an in‑depth walkthrough on how to choose a collision fidelity option that balances your precision needs and performance requirements, see [here](../tutorials/environmental-art/assemble-an-asset-library.md#collisionfidelity).
+For more information on the performance impact of collision fidelity options and how to mitigate them, see [Performance Optimization](../performance-optimization/improving.md#physics-computation).
