@@ -80,7 +80,7 @@ Here's the list of available metamethods:
 		</tr>
 	  <tr>
 		  <td>__mul(table, value)</td>
-		  <td>The * mulitplication operator.</td>
+		  <td>The * multiplication operator.</td>
 		</tr>
 	  <tr>
 		  <td>__div(table, value)</td>
