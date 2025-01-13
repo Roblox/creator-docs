@@ -86,7 +86,7 @@ climbing, swimming, and jumping. You can replace these [default animations](#def
 1. Obtain the **asset ID** of the new animation as follows:
 
    - For a custom animation built with the [Animation Editor](../animation/editor.md), follow the [export](../animation/editor.md#exporting-an-animation) instructions.
-   - Copy an appropriate ID from the [catalog animation reference](#catalog-animations) below. For example, to replace the default run animation with the <a href="https://www.roblox.com/catalog/658830056/Ninja-Run" target="_blank" rel="noopener">Ninja&nbsp;Run</a> variant, use `656118852`.
+   - Copy an appropriate ID from the [catalog animation reference](#catalog-animations) below. For example, to replace the default run animation with the <a href="https://www.roblox.com/catalog/658830056/Ninja-Run" target="_blank" rel="noopener">Ninja&nbsp;Run</a> variant, use `10921157929`.
 
 2. In the [Explorer](../studio/explorer.md) window, add a new `Class.Script` to **ServerScriptService**.
 
@@ -143,7 +143,7 @@ climbing, swimming, and jumping. You can replace these [default animations](#def
    	end
 
    	local animateScript = character:WaitForChild("Animate")
-   	animateScript.run.RunAnim.AnimationId = "rbxassetid://656118852"
+   	animateScript.run.RunAnim.AnimationId = "rbxassetid://10921157929"
    	--animateScript.walk.WalkAnim.AnimationId = "rbxassetid://"
    	--animateScript.jump.JumpAnim.AnimationId = "rbxassetid://"
    	--animateScript.idle.Animation1.AnimationId = "rbxassetid://"
@@ -175,8 +175,8 @@ setting the animation's `Weight` value under the following formula:
 In the following example, `idle.Animation1` will play ⅓ of the time the character is idle, while `idle.Animation2` will play ⅔ of the time.
 
 ```lua title='Script - Replace Default Character Animations' highlight='3,4'
-	animateScript.idle.Animation1.AnimationId = "rbxassetid://656117400"
-	animateScript.idle.Animation2.AnimationId = "rbxassetid://656118341"
+	animateScript.idle.Animation1.AnimationId = "rbxassetid://10921155160"
+	animateScript.idle.Animation2.AnimationId = "rbxassetid://10921155867"
 	animateScript.idle.Animation1.Weight.Value = 5
 	animateScript.idle.Animation2.Weight.Value = 10
 ```
@@ -237,24 +237,58 @@ The following table contains all of the default character animations that you ca
 
 ### Catalog Animations
 
-When using avatar animation bundles to [replace default animations](#replacing-default-animations), use the following references for the respective asset IDs. For example, if you want to apply the <a href="https://www.roblox.com/catalog/658832070/Ninja-Jump" target="_blank" rel="noopener">Ninja&nbsp;Jump</a> animation, use `656117878`. Note that **Idle** has multiple variations.
+When using avatar animation bundles to [replace default animations](#replacing-default-animations), use the following references for the respective asset IDs. For example, if you want to apply the <a href="https://www.roblox.com/catalog/658832070/Ninja-Jump" target="_blank" rel="noopener">Ninja&nbsp;Jump</a> animation, use `10921160088`. Note that **Idle** has multiple variations.
 
 <table>
   <tbody>
+	<tr>
+	  <td>
+	  	<a href="https://www.roblox.com/bundles/427999/adidas-Sports-Animation-Pack" target="_blank" rel="noopener">**adidas Sports**</a>
+	  </td>
+		<td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />18537384940</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />18537392113</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />18537380791</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />18537376492, 18537371272, 18537374150</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />18537367238</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />18537389531</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />18537387180</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />18537363391</Grid>
+		</Grid>
+	  </td>
+	</tr>
 	<tr>
 	  <td>
 	  	<a href="https://www.roblox.com/bundles/34/Astronaut-Animation-Pack" target="_blank" rel="noopener">**Astronaut**</a>
 	  </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />891636393</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />891636393</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />891627522</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />891621366, 891633237, 1047759695</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />891617961</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />891639666</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />891663592</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />891609353</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921039308</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921046031</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921042494</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921034824, 10921036806, 10921038149</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921040576</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921044000</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921045006</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921032124</Grid>
+		</Grid>
+	  </td>
+	</tr>
+	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/331856/Bold-Animation-Pack-by-e-l-f" target="_blank" rel="noopener">**Bold**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />16738337225</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />16738340646</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />16738336650</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />16738333868, 16738334710, 16738335517</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />16738333171</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />16738339158</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />16738339817</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />16744204409</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -264,14 +298,14 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 	  </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />910025107</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />910034870</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />910016857</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />910004836, 910009958, 1018536639</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />910001910</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />910028158</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />910030921</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />909997997</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921057244</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10980888364</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921062673</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921054344, 10921055107, 10921056055</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921061530</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921063569</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10922582160</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921053544</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -281,14 +315,31 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 	  </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />742638842</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />742640026</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />742637942</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />742637544, 742638445, 885477856</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />742637151</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />742639220</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />742639812</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />742636889</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921076136</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921082452</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921078135</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921071918, 10921072875, 10921074502</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921077030</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921079380</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921081059</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921070953</Grid>
+		</Grid>
+	  </td>
+	</tr>
+	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/1601900/Catwalk-Glam-Animation-Pack-by-e-l-f" target="_blank" rel="noopener">**Catwalk Glam**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />81024476153754</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />109168724482748</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />116936326516985</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />133806214992291, 94970088341563, 87105332133518</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />92294537340807</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />134591743181628</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />98854111361360</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />119377220967554</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -298,14 +349,14 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 	  </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />845386501</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />845403856</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />845398858</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />845397899, 845400520, 901160519</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />845396048</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />845401742</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />845403127</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />845392038</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921104374</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921111375</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921107367</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921101664, 10921102574, 10921103538</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921105765</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921108971</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921110146</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921100400</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -315,14 +366,14 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 	  </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />657564596</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />657552124</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />658409194</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />657595757, 657568135, 885499184</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />657600338</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />657560551</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />657557095</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />658360781</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921121197</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921127095</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921123517</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921117521, 10921118894, 10921119700</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921122579</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921125160</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921125935</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921116196</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -332,14 +383,14 @@ When using avatar animation bundles to [replace default animations](#replacing-d
       </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />616010382</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />616013216</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />616008936</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />616006778, 616008087, 886862142</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />616005863</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />616011509</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />616012453</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />616003713</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921135644</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921140719</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921137402</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921132962, 10921133721, 10921134514</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921136539</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921138209</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921139478</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921132092</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -349,14 +400,31 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 	  </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />707861613</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />707897309</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />707853694</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />707742142, 707855907, 885508740</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />707829716</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />707876443</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />707894699</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />707826056</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921148209</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921152678</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921149743</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921144709, 10921145797, 10921146941</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921148939</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921150788</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921151661</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921143404</Grid>
+		</Grid>
+	  </td>
+	</tr>
+	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/932296/NFL-Animation-Pack" target="_blank" rel="noopener">**NFL**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />117333533048078</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />110358958299415</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />119846112151352</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />92080889861410, 74451233229259, 80884010501210</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />129773241321032</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />136750772888868</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />79090109939093</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />134630013742019</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -366,14 +434,48 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 	  </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />656118852</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />656121766</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />656117878</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />656117400, 656118341, 886742569</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />656115606</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />656119721</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />656121397</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />656114359</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921157929</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921162768</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921160088</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921155160, 10921155867, 10921156883</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921159222</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921161002</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10922757002</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921154678</Grid>
+		</Grid>
+	  </td>
+	</tr>
+	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/455003/No-Boundaries-Animation-Pack-by-Walmart" target="_blank" rel="noopener">**No Boundaries**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />18747070484</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />18747074203</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />18747069148</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />18747067405, 18747063918, 18747065848</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />18747062535</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />18747073181</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />18747071682</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />18747060903</Grid>
+		</Grid>
+	  </td>
+	</tr>
+	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/667/Oldschool-Animation-Pack" target="_blank" rel="noopener">**Oldschool**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921240218</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921244891</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921242013</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921230744, 10921232093, 10921233298</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921241244</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921243048</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921244018</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921229866</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -395,19 +497,36 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 	  </td>
 	</tr>
 	<tr>
+      <td>
+        <a href="https://www.roblox.com/bundles/1189398/Wicked-Popular-Animation-Pack" target="_blank" rel="noopener">**Wicked Popular**</a>
+      </td>
+	  <td>
+		<Grid container spacing={1}>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />72301599441680</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />92072849924640</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />104325245285198</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />118832222982049, 76049494037641, 138255200176080</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />121152442762481</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />99384245425157</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />113199415118199</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />131326830509784</Grid>
+		</Grid>
+	  </td>
+	</tr>
+	<tr>
 	  <td>
 	    <a href="https://www.roblox.com/bundles/82/Robot-Animation-Pack" target="_blank" rel="noopener">**Robot**</a>
 	  </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />616091570</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />616095330</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />616090535</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />616088211, 616089559, 885531463</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />616087089</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />616092998</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />616094091</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />616086039</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921250460</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921255446</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921252123</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921248039, 10921248831, 10921249579</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921251156</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921253142</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921253767</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921247141</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -417,14 +536,14 @@ When using avatar animation bundles to [replace default animations](#replacing-d
       </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />2510198475</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />2510202577</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />2510197830</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />2510197257, 2510196951, 3711062489</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />2510195892</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />2510199791</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />2510201162</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />2510192778</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921261968</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921269718</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921263860</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921259953, 10921258489, 10921261056</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921262864</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921264784</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921265698</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921257536</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -434,14 +553,14 @@ When using avatar animation bundles to [replace default animations](#replacing-d
       </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />616140816</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />616146177</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />616139451</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />616136790, 616138447, 886888594</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />616134815</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />616143378</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />616144772</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />616133594</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921276116</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921283326</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921279832</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921272275, 10921273958, 10921275151</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921278648</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921281000</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921281964</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921271391</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -451,14 +570,14 @@ When using avatar animation bundles to [replace default animations](#replacing-d
       </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />616117076</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />616122287</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />616115533</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />616111295, 616113536, 885535855</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />616108001</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />616119360</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />616120861</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />616104706</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921291831</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921298616</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921294559</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921288909, 10921290167, 10921290942</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921293373</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921295495</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921297391</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921286911</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -468,14 +587,14 @@ When using avatar animation bundles to [replace default animations](#replacing-d
       </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />782842708</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />782843345</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />782847020</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />782841498, 782845736, 980952228</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />782846423</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />782844582</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />782845186</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />782843869</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921306285</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921312010</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921308158</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921301576, 10921302207, 10921303913</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921307241</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921309319</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921310341</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921300839</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -485,14 +604,14 @@ When using avatar animation bundles to [replace default animations](#replacing-d
       </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />1083462077</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />1083473930</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />1083455352</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />1083445855, 1083450166, 1088037547</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />1083443587</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />1083464683</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />1083467779</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />1083439238</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921320299</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921326949</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921322186</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921315373, 10921316709, 10921317792</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921321317</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921324408</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921325443</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921314188</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -502,14 +621,14 @@ When using avatar animation bundles to [replace default animations](#replacing-d
       </td>
 	  <td>
 		<Grid container spacing={1}>
-			<Grid item XSmall={4} XLarge={2}>**Run**<br />1083216690</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />1083178339</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Run**<br />10921336997</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921342074</Grid>
 			<Grid item XSmall={4} XLarge={2}>**Jump**<br />1083218792</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />1083195517, 1083214717, 1099492820</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />1083189019</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />1083222527</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />1083225406</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />1083182000</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921330408, 10921333667, 10921334755</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921337907</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921340419</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921341319</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921329322</Grid>
 		</Grid>
 	  </td>
 	</tr>
@@ -520,13 +639,13 @@ When using avatar animation bundles to [replace default animations](#replacing-d
 	  <td>
 		<Grid container spacing={1}>
 			<Grid item XSmall={4} XLarge={2}>**Run**<br />616163682</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Walk**<br />616168032</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Jump**<br />616161997</Grid>
-			<Grid item XSmall={12} XLarge={6}>**Idle**<br />616158929, 616160636, 885545458</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Fall**<br />616157476</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim**<br />616165109</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />616166655</Grid>
-			<Grid item XSmall={4} XLarge={2}>**Climb**<br />616156119</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Walk**<br />10921355261</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Jump**<br />10921351278</Grid>
+			<Grid item XSmall={12} XLarge={6}>**Idle**<br />10921344533, 10921345304, 10921347258</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Fall**<br />10921350320</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim**<br />10921352344</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Swim (Idle)**<br />10921353442</Grid>
+			<Grid item XSmall={4} XLarge={2}>**Climb**<br />10921343576</Grid>
 		</Grid>
 	  </td>
 	</tr>
