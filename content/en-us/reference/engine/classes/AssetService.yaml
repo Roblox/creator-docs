@@ -484,13 +484,13 @@ methods:
           Array of dictionary tables in the same order as the request, where
           each dictionary contains the following metadata for its asset/content:
 
-          - `AssetId` ([string](/luau/strings.md))
+          - `AssetId` (string)
 
-          - `Title` ([string](/luau/strings.md))
+          - `Title` (string)
 
-          - `Artist` ([string](/luau/strings.md))
+          - `Artist` (string)
 
-          - `Duration` ([number](/luau/numbers.md)) in seconds
+          - `Duration` (number) in seconds
 
           - `AudioType` (`Enum.AudioSubType`)
 

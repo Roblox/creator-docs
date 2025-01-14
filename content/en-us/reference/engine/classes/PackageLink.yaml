@@ -154,7 +154,7 @@ properties:
     writeCapabilities: []
   - name: PackageLink.PermissionLevel
     summary: |
-      The package permission for the current studio user.
+      The package permission for the current Studio user.
     description: |
       The package permission for the current Studio user.
     code_samples:

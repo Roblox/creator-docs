@@ -1,5 +1,5 @@
 ---
-title: AI Data Sharing
+title: AI data sharing
 description: Understand AI data sharing policies and how to update your preferences.
 ---
 
@@ -20,7 +20,7 @@ You can change your default choice at any time and override it as desired whenev
 Because they're distributed with the intent of others using them, **free** [Creator Store](production/creator-store.md) assets are shared by default, with no ability to disable sharing.
 </Alert>
 
-## Managing Data Sharing Preferences
+## Manage data sharing preferences
 
 To set your global data sharing preferences:
 
@@ -29,7 +29,7 @@ To set your global data sharing preferences:
 1. Enable or disable **Make sharing data the default option when publishing experiences**.
 1. (Optional) Choose individual experiences, avatar items, and paid Creator Store assets to share or not share.
 
-## How Roblox Uses Data
+## How Roblox uses data
 
 All data shared with Roblox is for AI-enhancement purposes only and is not shared with third parties. Data is processed and stored in accordance with strict security protocols, contains no personal information, is split into tokens (small snippets) for further anonymization, and is retained for only as long as it is beneficial for model improvement. Roblox regularly reviews and purges shared data.
 
@@ -39,4 +39,4 @@ If you share something and then later stop sharing it, Roblox will remove it fro
 
 Previously, Roblox launched a program that allowed you to share your scripts with Roblox, a public Luau dataset, or both. Roblox no longer uses the script data that was shared only with Roblox. Instead, you now decide if you want to share entire experiences, including their scripts.
 
-The Luau public dataset is not affected by this change. You can set your sharing preferences on the Creator Hub in the **Public Luau** tab. For more details on the public dataset, see [Empower Luau Creation](https://create.roblox.com/data-collection).
+The Luau public dataset is not affected by this change. You can set your sharing preferences on the Creator Hub in the **Public Luau** tab. For more details on the public dataset, see [Empower Luau creation](https://create.roblox.com/data-collection).

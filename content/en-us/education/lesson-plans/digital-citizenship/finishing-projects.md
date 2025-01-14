@@ -1,5 +1,5 @@
 ---
-title: Finishing Projects
+title: Finish projects
 description: Learn digital citizenship with Roblox. A full course created for middle to high school students. For the last session, students finish projects .
 next:
 prev: /education/lesson-plans/digital-citizenship/animating-characters
@@ -68,14 +68,14 @@ prev: /education/lesson-plans/digital-citizenship/animating-characters
    - **Challenging** - players are challenge but not punished or overly frustrated.
    - **Error-free** - no script errors, unusual looking parts/visuals, etc.
 
-### Wrapping Up the Project
+### Wrap up the project
 
 1. Explain that students have this time to make improvements before getting feedback.
 
    - Emphasize that improvements should be small (e.g. tweaking a current part of the obstacle course rather than adding new parts).
    - If unclear what to work on, ask students to self-evaluate against the three goals (fun, challenging, errors) and look for something to improve.
 
-### Wrap Up and Showcase
+### Wrap up and showcase
 
 1. Wrap up by leading a class discussion. Ask one of more of the below prompts.
 

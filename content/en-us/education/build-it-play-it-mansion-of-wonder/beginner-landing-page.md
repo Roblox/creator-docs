@@ -11,7 +11,7 @@ Will you conquer these creatures with bolts of lightning or piles of angry cats?
 
 <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/beginner-landing-page/trailer.mp4" width="100%"></video>
 
-## Downloading Roblox Studio
+## Download Roblox Studio
 
 Before starting, you'll need **Roblox Studio**. This program is used to create every experience on Roblox and is available for free on a **PC** or **Mac**. If you've played Roblox on your computer, you already have Studio installed. When using Studio, we recommend using a **mouse** if you have one.
 
@@ -32,22 +32,22 @@ With your new account, remember these safety tips:
 - **Roblox employees will never ask for your password** — Report anyone who asks using the [Report Abuse](https://en.help.roblox.com/hc/articles/203312410) feature.
 - **There's no such thing as free Robux** — Never trust players or sites who say they have a way to get free Robux!
 
-## Series Overview
+## Series overview
 
 To design your personalized **magic blast**, follow along with these three step-by-step tutorials.
 
 <GridContainer numColumns="3">
   <figure>
     <img src="../../assets/education/build-it-play-it-mansion-of-wonder/beginner-landing-page/lesson-1-thumbnail.jpeg" />
-    <figcaption>1: Design the Blast</figcaption>
+    <figcaption>1: Design the blast</figcaption>
   </figure>
   <figure>
     <img src="../../assets/education/build-it-play-it-mansion-of-wonder/beginner-landing-page/lesson-2-thumbnail.jpeg" />
-    <figcaption>2: Make It Unique</figcaption>
+    <figcaption>2: Make it unique</figcaption>
   </figure>
   <figure>
     <img src="../../assets/education/build-it-play-it-mansion-of-wonder/beginner-landing-page/lesson-3-thumbnail.jpeg" />
-    <figcaption>3: Make Final Touches</figcaption>
+    <figcaption>3: Make final touches</figcaption>
   </figure>
 </GridContainer>
 

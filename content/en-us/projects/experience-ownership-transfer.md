@@ -1,5 +1,5 @@
 ---
-title: Experience Ownership Transfer
+title: Experience ownership transfer
 description: Transfer ownership of an experience to other Roblox users or groups.
 ---
 
@@ -13,7 +13,7 @@ Before making a transfer or accepting a transfer, you must first:
 - Upload your private `ModuleScripts` to the group you're transferring the experience to. If the experience uses packages where the package owner is a user and not a group, you might have to recreate those packages or replace them with packages that are already owned by a group.
 - Publish your animation assets to the group you're transferring the experience to.
 
-  - If you have a large number of animations to upload, you can use a community-supported third-party tool like Roblox Animation Transfer. See [Transferring Roblox Animations](./transferring-animations.md) for more details.
+  - If you have a large number of animations to upload, you can use a community-supported third-party tool like Roblox Animation Transfer. See [Transfer animations](./transfer-animations.md) for more details.
   - If you have a small number of animations to upload, you can manually re-upload them and then update your animation asset references to support old and new IDs based on the `CreatorID` and `CreatorType`. See the following code for an example:
 
   ```lua
@@ -63,7 +63,7 @@ Before making a transfer or accepting a transfer, you must first:
 As a best practice, if you're using Open Cloud API keys for the experience, create an API key as the new owner with the name `RobloxTransferApiKey`. During the transfer, the relevant scopes are added to this new key and removed from the original key. You can then use a feature flag to allow your backend services to start using the new key after the transfer is complete.
 </Alert>
 
-## Transferring an Experience
+## Transfer an experience
 
 To transfer an experience to a group:
 
@@ -72,7 +72,7 @@ To transfer an experience to a group:
 3. Click **Initiate ownership transfer**.
 4. In the **Transfer Details** dialog, carefully read and acknowledge the implications of the transfer. Then, click **Next**.
 
-   <img src="./assets/projects/Transferring-Experience.png" width="450" />
+   <img src="../assets/projects/Transferring-Experience.png" width="450" />
 
 5. Select a group to transfer the experience to. You must be able to publish experiences to this group.
 6. Verify the transfer by entering the experience name.
@@ -86,14 +86,14 @@ Once the group accepts the transfer, Roblox makes your experience private and cl
 To cancel a pending transfer, click **Cancel transfer request** in the **Content Settings** page.
 </Alert>
 
-## Receiving a Transferred Experience
+## Receive a transferred experience
 
 To receive a transferred experience:
 
 1. Go to the experience page of the experience you're receiving. You can navigate to this page by clicking the transfer request notification you received when the experience's current owner initiated the transfer, or by directly getting the overview page link from the current owner.
 2. In the **Transfer Details** dialog, carefully read and acknowledge the implications of the transfer. Then, click **Next**.
 
-   <img src="./assets/projects/Receiving-Experience-Transfer.png" width="450" />
+   <img src="../assets/projects/Receiving-Experience-Transfer.png" width="450" />
 
 3. Verify the transfer by entering the experience name.
 4. Click **Accept transfer**. Roblox makes the experience private and the transfer process completes in a few minutes.
@@ -103,7 +103,7 @@ To receive a transferred experience:
 If you don't want to receive the transfer, click **Decline transfer** in the **Transfer Details** dialog.
 </Alert>
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 **What kind of information does the transferred experience retain?**
 

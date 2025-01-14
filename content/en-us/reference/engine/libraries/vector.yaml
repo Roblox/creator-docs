@@ -192,7 +192,7 @@ functions:
         type: vector
         default:
         summary: ''
-    returns: 
+    returns:
       - type: vector
         summary: ''
     tags:

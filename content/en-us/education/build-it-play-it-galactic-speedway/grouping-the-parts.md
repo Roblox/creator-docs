@@ -1,5 +1,5 @@
 ---
-title: Grouping the Parts
+title: Group the parts
 prev: /education/build-it-play-it-galactic-speedway/duplicate-and-design
 next: /education/build-it-play-it-galactic-speedway/add-to-the-garage
 description: Learn how to group parts together to create models in Roblox Studio as part of the Build It Play It Galactic Speedway challenge.

@@ -5,7 +5,7 @@ next: /education/lesson-plans/digital-citizenship/being-a-digital-citizen
 prev: /education/lesson-plans/digital-citizenship/landing
 ---
 
-**Lesson Description**: Start the course by learning digital safety tips while being online. Then, start creating an obstacle course using Roblox Studio, the software used to make all Roblox games.
+**Lesson description**: Start the course by learning digital safety tips while being online. Then, start creating an obstacle course using Roblox Studio, the software used to make all Roblox games.
 
 <table>
 <tbody>
@@ -102,11 +102,11 @@ prev: /education/lesson-plans/digital-citizenship/landing
    - Rest of the sessions will include developing a game, practicing positive communication skills by giving and receiving feedback, and finding ways to create an uplifting community by helping others in their class.
 3. Explain today's session will be learning the basics of Roblox Studio by building an obstacle course.
 
-### Intro to Digital Safety
+### Intro to digital safety
 
 1. Lead students through Intro to Digital Safety, using <a href="../../../assets/education/handouts/digital-safety-presentation.pptx">Presentation: Digital Safety</a>.
 
-### Digital Safety Scavenger Hunt
+### Digital safety scavenger hunt
 
 1. Have students open the<a href="https://www.roblox.com/games/5450795073/Digital-Safety-Scavenger-Hunt" target="_blank" rel="noopener">Beat the Scammers</a> Roblox experience. Make sure to send students to a private server created for that game.
 
@@ -132,7 +132,7 @@ prev: /education/lesson-plans/digital-citizenship/landing
    - Encourage students to use the Explorer, a foundational skill in Roblox Studio.
    - If parts fall or disappear when playtesting, remind students to turn Anchoring on for that part.
 
-### Wrap Up
+### Wrap up
 
 1. Recap what students have learned in Digital Safety, such as private/personal information and ways to spot unreliable information.
 2. If there's time, allow students to showcase work by trading seats with a partner and playing their obstacle course.

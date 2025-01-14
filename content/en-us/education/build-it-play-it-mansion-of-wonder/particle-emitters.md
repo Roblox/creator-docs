@@ -1,5 +1,5 @@
 ---
-title: Adding Particle Emitters
+title: Add particle emitters
 prev: /education/build-it-play-it-mansion-of-wonder/test-and-play
 next: /education/build-it-play-it-mansion-of-wonder/save-by-publishing
 description: Learn Roblox Studio camera controls and the basics of editing particle emitters in the Build It Play It Mansion of Wonders.
@@ -11,7 +11,7 @@ These objects are used to make special effects in Roblox Studio. If you've seen 
 
 <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/particle-example.mp4" width="100%"></video>
 
-## Finding the Blast
+## Find the blast
 
 The template has two customizable ParticleEmitters: one for the **magic blast** that flies through the air and another for the **explosion** when it hits an enemy. Start first with the blast, and in a later tutorial, you'll work on the explosion.
 
@@ -64,7 +64,7 @@ The template has two customizable ParticleEmitters: one for the **magic blast** 
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/particle-emitters/select-blaster-shot.gif" />
 
-## Changing the Color
+## Change the color
 
 Start personalizing the magical blast by giving it a new color.
 

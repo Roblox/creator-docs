@@ -1,5 +1,5 @@
 ---
-title: Take the Challenge
+title: Take the challenge
 prev: /education/build-it-play-it-galactic-speedway/test-the-speeder
 next: /education/build-it-play-it-galactic-speedway/customize-and-share
 description: Take the second challenge of Roblox Build It Play It Galactic Speedway and earn the Scrap Metal Hard Hat avatar item and Galactic Mechanic badge.

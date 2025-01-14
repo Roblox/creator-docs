@@ -801,10 +801,10 @@ events:
     writeCapabilities: []
   - name: UserGameSettings.StudioModeChanged
     summary: |
-      Fired when the user's client switches between studio mode and in-game
+      Fired when the user's client switches between Studio mode and in-game
       mode. This gets fired periodically in Roblox Studio when a session starts.
     description: |
-      Fired when the user's client switches between studio mode and in-game
+      Fired when the user's client switches between Studio mode and in-game
       mode. This gets fired periodically in Roblox Studio when a session starts.
     code_samples:
     parameters:

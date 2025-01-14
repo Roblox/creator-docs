@@ -1,5 +1,5 @@
 ---
-title: Rich Text Markup
+title: Rich text markup
 description: Rich Text Markup are simple markup tags to style sections of a string.
 comments: |
   1. Replace numbered footnotes with dedicated style.
@@ -7,7 +7,7 @@ comments: |
 
 UI **rich text** utilizes simple markup tags to style sections of a string in bold, italics, underline, fill color, stroke variations, and more. You can apply styling tags to `Class.TextLabel`, `Class.TextButton`, and `Class.TextBox` objects.
 
-## Enabling Rich Text
+## Enable rich text
 
 You must enable rich text on a per-object basis through its **RichText** property in the [Properties](../studio/properties.md) window, or by setting the property to `true` in a `Class.LocalScript`.
 
@@ -29,15 +29,15 @@ When editing an object's **Text** property in Studio, toggling the **RichText** 
 <a href="../production/localization/index.md">Localizing</a> a game to support other languages removes rich text formatting tags. To ensure formatting appears in other languages, re-apply the tags manually to your localized strings.
 </Alert>
 
-## Supported Tags
+## Supported tags
 
 Rich text tags are similar to XML/HTML tags and you must include both an opening and closing tag around the formatted text.
 
-`<b>Formatted Text</b>`
+`<b>Formatted text</b>`
 
 You can also nest tags inside each other as long as you close them in the reverse order of how you opened them.
 
-`<b><i><u>Formatted Text</u></i></b>`
+`<b><i><u>Formatted text</u></i></b>`
 
 ### Color
 
@@ -58,7 +58,7 @@ You can also nest tags inside each other as long as you close them in the revers
 <img src="../assets/ui/rich-text/Example-Size.png" width="600" />
 </blockquote>
 
-### Font Face
+### Font face
 
 `<font face=""> </font>`
 
@@ -70,7 +70,7 @@ You can also nest tags inside each other as long as you close them in the revers
 Font face/family names are listed on the `Datatype.Font` enum reference page.
 </Alert>
 
-### Font Family
+### Font family
 
 `<font family=""> </font>`
 
@@ -82,7 +82,7 @@ Font face/family names are listed on the `Datatype.Font` enum reference page.
 Font face/family names are listed on the `Datatype.Font` enum reference page.
 </Alert>
 
-### Font Weight
+### Font weight
 
 `<font weight=""> </font>`
 
@@ -153,7 +153,7 @@ See [Appearance Modifiers](../ui/appearance-modifiers.md) for details on `<strok
 <img src="../assets/ui/rich-text/Example-Strikethrough.png" width="600" />
 </blockquote>
 
-### Line Break
+### Line break
 
 `<br />`
 
@@ -172,7 +172,7 @@ See [Appearance Modifiers](../ui/appearance-modifiers.md) for details on `<strok
 <img src="../assets/ui/rich-text/Example-Uppercase.png" width="600" />
 </blockquote>
 
-### Small Caps
+### Small caps
 
 `<smallcaps> </smallcaps>`<br/>`<sc> </sc>`
 
@@ -191,7 +191,7 @@ See [Appearance Modifiers](../ui/appearance-modifiers.md) for details on `<strok
 <img src="../assets/ui/rich-text/Example-Comment.png" width="600" />
 </blockquote>
 
-## Escape Forms
+## Escape forms
 
 If you want to render certain characters like `<` or `>` and exempt them from consideration as part of rich text tags, you can write them in their **escape form**.
 

@@ -1,5 +1,5 @@
 ---
-title: Coding the Game Loop
+title: Code the game loop
 description: Create a battle royale experience in Roblox Studio. Code a round manager for a game.
 next: /education/battle-royale-series/managing-players
 prev: /education/battle-royale-series/project-setup
@@ -7,7 +7,7 @@ prev: /education/battle-royale-series/project-setup
 
 With the map created, it's time to start building out the scripts. The remainder of this course will heavily focus on scripting all different elements of the game loop.
 
-## Setting up the Scripts
+## Set up the scripts
 
 The battle royale will use a combination of module scripts and normal scripts. Below are the scripts and their functions.
 
@@ -28,7 +28,7 @@ The battle royale will use a combination of module scripts and normal scripts. B
 </tbody>
 </table>
 
-### GameSettings Script
+### GameSettings script
 
 Create a module script named GameSettings to store variables used by other scripts, like match and intermission duration. These variables will be used by the GameManager script later.
 
@@ -63,7 +63,7 @@ Create a module script named GameSettings to store variables used by other scrip
    return GameSettings
    ```
 
-### MatchManager Script
+### MatchManager script
 
 The second script connected to the GameManager is the MatchManager. This script manages tasks like starting the timer or resetting players once the match ends.
 
@@ -89,11 +89,11 @@ Within MatchManager is a function named `prepareGame()` starts the game by trans
    return MatchManager
    ```
 
-## Coding the Game Loop
+## Code the game loop
 
 The main game loop will be coded in the GameManager script using the variables just created. Remember, there are three phases in the game loop: intermission, competition, and cleanup & reset.
 
-### GameManager Script
+### GameManager script
 
 This script is a normal server script, so put it in ServerScriptService, rather than the module scripts folder. The actual game loop will be in a while true do loop.
 
@@ -139,7 +139,7 @@ This script is a normal server script, so put it in ServerScriptService, rather 
    end
    ```
 
-### Coding the Intermission
+### Code the intermission
 
 While the game loop runs indefinitely, the intermission should pause the loop and only continue when there are enough players for a match. To code this pause, include a nested repeat loop for the intermission in the while loop. That nested loop will repeat until there are enough players, pausing the main loop. Once there are enough players, it'll exit and transition players into a match.
 
@@ -178,14 +178,14 @@ With a **repeat loop**, the code in the loop will run at least once. Unlike a wh
 
 4. Playtest and check that the print statement `"Starting intermission"` is shown at least twice. Seeing the message twice proves the repeat loop didn't find enough players and ran again. You'll have to wait the length of intermission before seeing the message a second time.
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 At this point, if you're not spawning as intended, try one of the following below.
 
 - `Library.task.wait()` should be inside the repeat loop. Without the wait, the script will run too many times in a second, overloading Roblox Studio and causing an error.
 - In the Game Settings module, the variable `intermissionDuration` should be greater than 1. If lower, the script can repeat too often, causing slow down issues.
 
-### Ending the Intermission
+### End the intermission
 
 Once there are enough players, have them wait a short transition time. Then, send them into the match by calling the `prepareGame()` function in MatchManager. Remember, that function just prints a line, but you'll add more code later.
 
@@ -206,7 +206,7 @@ Once there are enough players, have them wait a short transition time. Then, sen
    Keep the code within the scope of the while loop (between `do` and `end`). If code is outside, parts of your game loop might not repeat and players will just be stuck in the intermission phase.
    </Alert>
 
-2. After the wait, call the `prepareGame()` from the MatchManager module. When the code runs, this will just print text to the output window. Wait until the next section to test this code.
+2. After the wait, call the `prepareGame()` from the MatchManager module. When the code runs, this will just print text to the Output window. Wait until the next section to test this code.
 
    ```lua
    while true do
@@ -225,11 +225,11 @@ Once there are enough players, have them wait a short transition time. Then, sen
    If you add onto the script after this project, keep in mind code below the while true do loop **won't** run. Keep relevant code inside the while loop or call module functions from the main loop.
    </Alert>
 
-## Testing Multiplayer Games
+## Test multiplayer games
 
 Right now, to have the code run `prepareGame()`, it needs to exit the repeat loop. But, to do that, there needs to be more than one player. This means if you use the playtest button, the function will never run because you're the only player in the game (unless your minimum players is one). To test this out, you'll need to simulate a multiplayer game.
 
-### Starting a Local Server
+### Start a local server
 
 To test code requiring more than one player, create a local server. While published games are normally on Roblox servers, a **local server** simulates a multiplayer game on your computer with simulated players.
 
@@ -243,7 +243,7 @@ To test code requiring more than one player, create a local server. While publis
 
 3. Wait a few seconds for the server to set up. Multiple windows will open in addition to your original Studio window. You may need to allow access to Roblox Studio from firewalls or other online security software.
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 At this point, you're unable to see the test servers, try one of the following below.
 
@@ -251,7 +251,7 @@ At this point, you're unable to see the test servers, try one of the following b
 - Set the number of players to a small amount, like 2 or 3.
 - If the issue doesn't resolve, try restarting Studio or restarting your computer.
 
-### Testing in the Local Server
+### Test in the local server
 
 You'll see multiple windows when the server starts. Each one represents a different part of the server/client relationship.
 
@@ -279,18 +279,18 @@ With the server up, you can check if the code worked.
 
    <img src="../../assets/education/battle-royale-series/arena_2_showCleanup.png" />
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 At this point, if the intended print statements didn't appear, try one of the following below.
 
 - Check that functions like `prepareGame()` are in scope of the while true do loop.
 - If the print from MatchManager didn't work, check some common troubleshooting with module scripts, like making sure that the MatchManager script is required in GameManager or that `prepareGame()` is added to that module's table.
 
-## Completed Scripts
+## Completed scripts
 
 Below are completed scripts to double check your work.
 
-### GameManager Script
+### GameManager script
 
 ```lua
 -- Services
@@ -316,7 +316,7 @@ while true do
 end
 ```
 
-### MatchManager Script
+### MatchManager script
 
 ```lua
 local MatchManager = {}
@@ -328,7 +328,7 @@ end
 return MatchManager
 ```
 
-### GameSettings Script
+### GameSettings script
 
 ```lua
 local GameSettings = {}

@@ -19,7 +19,7 @@ To see **EventSequencer** in action within an editable place, check out the [Con
 
 <img src="../../assets/developer-modules/event-sequencer/Edit-Concert-Template.png" width="540" />
 
-## Module Usage
+## Module usage
 
 ### Installation
 
@@ -47,17 +47,17 @@ To use the **EventSequencer** framework in an experience:
 
    <img src="../../assets/developer-modules/event-sequencer/Move-Package.png" width="320" />
 
-### Framework Modes
+### Framework modes
 
-#### Replace Mode
+#### Replace mode
 
-The default framework mode is **replace mode** in which you design unique [scenes](#creating-scenes) by placing [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and user interface objects into that scene's **Environment** folder. When a scene loads, those objects and properties get distributed into `Class.Workspace`, `Class.Terrain`, and `Class.Lighting`, **replacing** existing objects/properties to form a cloned space.
+The default framework mode is **replace mode** in which you design unique [scenes](#create-scenes) by placing [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and user interface objects into that scene's **Environment** folder. When a scene loads, those objects and properties get distributed into `Class.Workspace`, `Class.Terrain`, and `Class.Lighting`, **replacing** existing objects/properties to form a cloned space.
 
 <Alert severity="success">
 This mode is best for **new** event experiences consisting of multiple sequential scenes, such as a pre-show venue to the main concert to a post-show party.
 </Alert>
 
-#### Inline Mode
+#### Inline mode
 
 An alternate framework mode is **inline mode** in which you similarly design unique [scenes](#creating-scenes) with scripting logic for their flow/events, but the framework will **not** destroy existing [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and user interface objects in order to clone assets/properties from a scene's **Environment** folder upon loading.
 
@@ -75,7 +75,7 @@ To enable inline mode:
 
    <img src="../../assets/developer-modules/event-sequencer/Inline-BoolValue-Enabled.png" width="320" />
 
-### Creating Scenes
+### Create scenes
 
 A **scene** is essentially part of an overall event or a cutscene wrapped up in a series of folders. Each scene contains scripting logic that defines its flow/events, and a scene can store its own [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and user interface objects.
 
@@ -93,7 +93,7 @@ To get started quickly, you can find an empty scene inside the module's main fol
    While developing an event, you can alternatively place scenes elsewhere in the [Explorer](../../studio/explorer.md) hierarchy and tag them with **SequencerScene** using the [Tags](../../studio/properties.md#instance-tags) section of their properties, or Studio's [Tag&nbsp;Editor](../../studio/view-tab.md#windows-and-tools) (**BlankScene** is already tagged as such). However, you'll need to move all event-ready scenes to **ReplicatedStorage** in order for them to work within the overall event flow.
    </Alert>
 
-#### Time Length
+#### Time length
 
 Each scene should have a **time length**, in seconds, defining its duration &mdash; just like a movie or concert has a set duration. Time length is defined as a numeric [attribute](../../studio/properties.md#instance-attributes) on the scene's folder named **TimeLength** which you can set directly in Studio or programmatically through `Class.Instance:SetAttribute()`.
 
@@ -159,11 +159,11 @@ This script executes [schema](#scene-schemas) logic on the client.
 
 This script executes [schema](#scene-schemas) logic on the server.
 
-### Scene Schemas
+### Scene schemas
 
 A scene's **schema** defines what happens at what point in the scene's timeline. You should define a scene's schema in both its [Client](#client) and [Server](#server) modules and include **lifecycle hooks** to manage when **configurations** occur.
 
-#### Lifecycle Hooks
+#### Lifecycle hooks
 
 Schema [lifecycle hooks](#schema-lifecycle-hooks) let you manage when scene operations occur. A scene in production will typically run in the most simple flow:
 
@@ -185,7 +185,7 @@ Schema [configurations](#schema-configurations) define the core operations of a 
 You can use configurations in both the [Client](#client) and [Server](#server) module schemas, but it's recommended that you perform operations like [audio](#audio) and [animations](#animate) on the client side, just like in a typical experience.
 </Alert>
 
-### Seeking Scenes
+### Seek scenes
 
 A unique feature of **EventSequencer** is the ability to "seek" around scenes as you might seek through a video. In [Replace Mode](#replace-mode), you can also switch between scenes to preview an entire multi-scene event before deploying it to production.
 
@@ -229,9 +229,9 @@ A unique feature of **EventSequencer** is the ability to "seek" around scenes as
    </tbody>
    </table>
 
-## Scene Manager Plugin
+## Scene manager plugin
 
-The [Scene Manager](https://www.roblox.com/library/9995053698/Scene-Manager) plugin is a useful tool for loading and unloading scenes, [lighting](#saving-and-loading-lighting), and [terrain](#saving-and-loading-terrain). Unless you're using [Inline Mode](#inline-mode), it's highly recommended that you use this plugin instead of manually placing/editing scene objects and properties.
+The [Scene Manager](https://www.roblox.com/library/9995053698/Scene-Manager) plugin is a useful tool for loading and unloading scenes, [lighting](#save-and-load-lighting), and [terrain](#save-and-load-terrain). Unless you're using [Inline Mode](#inline-mode), it's highly recommended that you use this plugin instead of manually placing/editing scene objects and properties.
 
 <Alert severity="warning">
 This plugin is not intended for usage with [Inline Mode](#inline-mode), as that mode expects you to use existing assets and global property settings for the place, not load in scene-specific assets/properties from the scene's [Environment](#environment) folder.
@@ -254,9 +254,9 @@ To install the plugin:
 4. Click the plugin's icon to view its details and then click the **Install** button.
 5. Once the plugin is installed, it appears in Studio's [Plugins](../../studio/plugins-tab.md) tab.
 
-### Loading and Unloading Scenes
+### Load and unload scenes
 
-As outlined in [Creating Scenes](#creating-scenes), a scene's **Environment** folder contains everything that users see and hear, including [3D objects](../../parts/index.md). The plugin helps you quickly load a scene's assets into or out of organized folders within the workspace.
+As outlined in [creating scenes](#create-scenes), a scene's **Environment** folder contains everything that users see and hear, including [3D objects](../../parts/index.md). The plugin helps you quickly load a scene's assets into or out of organized folders within the workspace.
 
 <Alert severity="error">
 Scenes must be tagged with **SequencerScene** for the plugin to recognize them (**BlankScene** is already tagged as such). A tool such as the **Tag&nbsp;Editor**, accessible from the [View](../../studio/view-tab.md) tab, may be helpful. If you've created a scene but it doesn't appear in the plugin, make sure that it's tagged, then save and reopen the place.
@@ -265,7 +265,7 @@ Scenes must be tagged with **SequencerScene** for the plugin to recognize them (
 <table>
 <thead>
 	<tr>
-		<th>Plugin Action</th>
+		<th>Plugin action</th>
 		<th>Description</th>
 	</tr>
 </thead>
@@ -293,7 +293,7 @@ Scenes must be tagged with **SequencerScene** for the plugin to recognize them (
 </tbody>
 </table>
 
-### Saving and Loading Lighting
+### Save and load lighting
 
 The top-level `Class.Lighting` service stores all of a place's lighting properties and visual effects. Since it's a top-level service, you cannot manually move it to a particular scene's **Environment**/**Server** or **Environment**/**Client** folder. Instead, you can utilize the plugin to copy its properties and children to the scene's **Environment**/**Lighting** folder.
 
@@ -326,7 +326,7 @@ The top-level `Class.Lighting` service stores all of a place's lighting properti
 <p>The framework also applies a **UseCurrentLighting** attribute to the top-level `Class.Lighting` service with a default of **false**. If set to **true**, the service's lighting overrides all scene-specific lighting during playtesting &mdash; however, scene lighting always takes precedence in a published event. As a real world analogy, this lets you stage a concert in full light before "turning down the lights" as the show begins.</p>
 </Alert>
 
-### Saving and Loading Terrain
+### Save and load terrain
 
 Since `Class.Terrain` is a top-level class within `Class.Workspace`, you cannot manually move generated or sculpted terrain to a particular scene's **Environment**/**Server** or **Environment**/**Client** folder. Instead, you can utilize the plugin to copy it to the scene's **Environment**/**Terrain** folder.
 
@@ -345,9 +345,9 @@ Since `Class.Terrain` is a top-level class within `Class.Workspace`, you cannot 
 If a scene contains absolutely no terrain, you should still click **Save Terrain** for it. This saves an "empty" terrain region for the scene and effectively clears all terrain from any scene shown before it.
 </Alert>
 
-## API Reference
+## API reference
 
-### Schema Lifecycle Hooks
+### Schema lifecycle hooks
 
 #### OnSetup
 
@@ -449,7 +449,7 @@ end
 In cases like a post-show venue which may be considered "endless," omit the **OnEndScene** lifecycle event and make the [TimeLength](#time-length) value as long as needed to accommodate all of your schema [configurations](#configurations). Also, do not [inform](#inform) anything to the schema, as those things will be cleaned up when the scene reaches its time length.
 </Alert>
 
-### Schema Configurations
+### Schema configurations
 
 #### audio
 
@@ -786,7 +786,7 @@ end
 
 #### inform
 
-Informs the framework of any modules, UI objects, connections, etc. which are created in the [OnRun](#onrun) lifecycle hook, ensuring they are properly cleaned up when [seeking](#seeking-scenes). Use cases include:
+Informs the framework of any modules, UI objects, connections, etc. which are created in the [OnRun](#onrun) lifecycle hook, ensuring they are properly cleaned up when [seeking](#seek-scenes). Use cases include:
 
 - Informing the framework of a temporary ad-hoc connection such as `Class.RunService.Heartbeat` so that the connection is cleaned up when seeking to an earlier point in the scene's duration.
 
@@ -859,7 +859,7 @@ Informs the framework of any modules, UI objects, connections, etc. which are cr
   ```
 
 <Alert severity="warning">
-While **inform** is critical for [seeking](#seeking-and-switching-scenes) support, you should only use it to inform the framework of any module, UI object, connection, etc. that is created/initialized during the [OnRun](#onrun) lifecycle hook. If you want to reference something throughout the entirety of the scene, simply initialize it in [OnSetup](#onsetup) and clean it up in [OnEndScene](#onendscene).
+While **inform** is critical for [seeking](#seek-and-switch-scenes) support, you should only use it to inform the framework of any module, UI object, connection, etc. that is created/initialized during the [OnRun](#onrun) lifecycle hook. If you want to reference something throughout the entirety of the scene, simply initialize it in [OnSetup](#onsetup) and clean it up in [OnEndScene](#onendscene).
 </Alert>
 
 ### Functions
@@ -967,7 +967,7 @@ end)
 setSeekingPermissions(permissions: `Library.table`)
 </figcaption>
 
-Grants seeking permission based on the event's `Class.DataModel.PlaceId|PlaceId` as well as specific `Class.Player.UserId|UserIds` and/or [groups](../../projects/groups.md) and roles within them. See [Seeking and Switching Scenes](#seeking-scenes) for more information.
+Grants seeking permission based on the event's `Class.DataModel.PlaceId|PlaceId` as well as specific `Class.Player.UserId|UserIds` and/or [groups](../../projects/groups.md) and roles within them. See [seek and switch scenes](#seek-scenes) for more information.
 
 #### getCurrentSceneEnvironment
 

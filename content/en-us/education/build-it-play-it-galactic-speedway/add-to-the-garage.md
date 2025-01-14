@@ -1,5 +1,5 @@
 ---
-title: Add to the Garage
+title: Add to the garage
 prev: /education/build-it-play-it-galactic-speedway/grouping-the-parts
 next: /education/build-it-play-it-galactic-speedway/test-the-speeder
 description: Learn how to add your custom spaceship to the garage using the Roblox Studio Explorer as part of the Roblox Build It Play It Galactic Speedway challenge.
@@ -14,7 +14,7 @@ Remember how you flew a test speeder earlier? To fly your own speeder, it needs 
     src="../../assets/education/build-it-play-it-galactic-speedway/add-to-the-garage/find-garage.png"
     width="100%" />
    <Alert severity="info">
-   <AlertTitle>Don't See the Explorer?</AlertTitle>
+   <AlertTitle>Don't see the explorer?</AlertTitle>
    If you closed the Explorer, or don't see it, enable it by going to the View tab and clicking Explorer.
    <img
     src="../../assets/education/build-it-play-it-galactic-speedway/add-to-the-garage/reopen-explorer.png"
@@ -26,7 +26,7 @@ Remember how you flew a test speeder earlier? To fly your own speeder, it needs 
     src="../../assets/education/build-it-play-it-galactic-speedway/add-to-the-garage/paste-into-garage.png"
     width="100%" />
    <Alert severity="warning">
-   <AlertTitle>Driftspeeder not Appearing?</AlertTitle>
+   <AlertTitle>Driftspeeder not appearing?</AlertTitle>
    To get your speeder back, use undo (<kbd>Ctrl</kbd>+<kbd>Z</kbd> or <kbd>⌘</kbd>+<kbd>Z</kbd>) and repeat the process of **Cut** and **Paste Into**.
    </Alert>
 
@@ -36,7 +36,7 @@ Remember how you flew a test speeder earlier? To fly your own speeder, it needs 
      width="100%" />
 
    <Alert severity="warning">
-   <AlertTitle>Making Changes After Grouping</AlertTitle>
+   <AlertTitle>Making changes after grouping</AlertTitle>
    To make changes to your speeder, just ungroup it and then make your changes. Group it all back together again when you're done.
 
    If you've added new parts, you'll have to move the model back to the garage:

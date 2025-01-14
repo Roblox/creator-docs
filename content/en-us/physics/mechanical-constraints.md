@@ -1,5 +1,5 @@
 ---
-title: Mechanical Constraints
+title: Mechanical constraints
 description: Mechanical constraints behave as conceptual mechanical connections such as hinges, springs, and motors.
 ---
 
@@ -133,7 +133,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 
 </GridContainer>
 
-## Constraint Visualization
+## Constraint visualization
 
 To accurately visualize constraints in Studio, you can use the following options from the [Model](../studio/model-tab.md) tab:
 
@@ -156,14 +156,14 @@ To accurately visualize constraints in Studio, you can use the following options
 In addition to the above visualization, you can view colored outlines around mechanisms (groups of parts that share simulation step and [network ownership](../physics/network-ownership.md)) by toggling on **Mechanisms** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
-## Creating Constraints
+## Create constraints
 
 All mechanical constraints must connect one or two `Class.Attachment|Attachments` or `Class.Bone|Bones`, except for [WeldConstraint](../physics/constraints/weld.md) and [NoCollisionConstraint](../physics/constraints/no-collision.md). When connected to `Class.Bone|Bones`, the constraint will use their animated position and orientation.
 
 To create a mechanical constraint, you can use either the **Create** tool or the [Explorer](../studio/explorer.md) window.
 
 <Tabs>
-<TabItem label="Create Tool">
+<TabItem label="Create tool">
 
 1. In the [Model](../studio/model-tab.md) tab, access the **Create** button's picker menu and select the desired constraint type, for example **Spring**.
 
@@ -212,9 +212,9 @@ Note that [WeldConstraint](../physics/constraints/weld.md) and [NoCollisionConst
 </TabItem>
 </Tabs>
 
-## Physical Simulation
+## Physical simulation
 
-To simulate physics while [moving](../parts/index.md#moving) or [rotating](../parts/index.md#rotating) parts, you can switch to **Physical** mode in
+To simulate physics while [moving](../parts/index.md#move) or [rotating](../parts/index.md#rotate) parts, you can switch to **Physical** mode in
 the [Model](../studio/model-tab.md) tab, effectively forcing parts to obey physical limitations. For example, if two parts are attached by a [RopeConstraint](../physics/constraints/rope.md) and you drag one part around the scene, the other part will follow as the rope becomes taut.
 
 <img src="../assets/physics/constraints/Model-Tab-Mode-Physical.png" alt="" width="670" />

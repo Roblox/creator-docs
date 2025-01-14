@@ -1,5 +1,5 @@
 ---
-title: Bundles Package
+title: Bundles package
 description: Learn about the bundles feature package.
 ---
 
@@ -13,7 +13,7 @@ Using the package's customization options, you can tailor your bundles to meet t
 For information on how to strategically provide purchase opportunities to meet player needs at key stages of your experience, see [Contextual Purchases](../../production/game-design/contextual-purchases.md). For industry best practices on how implement starter pack bundles, see [Starter Pack Design](../../production/game-design/starter-pack-design.md).
 </Alert>
 
-## Get Package
+## Get package
 
 The **Creator Store** is a tab of the Toolbox that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add one or more assets directly into an open experience, including feature packages!
 
@@ -23,21 +23,21 @@ To get the packages from your inventory into your experience:
 
 1. Add the **Core** and **Bundles** feature package to your inventory within Studio by clicking the **Add to Inventory** link in the following set of components.
 
-	<Grid container spacing={2} style={{marginBottom: 48}}>
+    <Grid container spacing={2} style={{marginBottom: 48}}>
 
-	<Grid item container xs={12} sm={6} direction='row'>
-	<Grid item container direction='column'>
-	<BrowseSampleCard href='https://create.roblox.com/store/asset/94918533221001' description='The Core Feature Package offers shared DataStore table logic for all feature packages.' title='Core Feature Package' assetId={94918533221001}  />
-	</Grid>
-	</Grid>
+    <Grid item container xs={12} sm={6} direction='row'>
+    <Grid item container direction='column'>
+    <BrowseSampleCard href='https://create.roblox.com/store/asset/94918533221001' description='The Core Feature Package offers shared DataStore table logic for all feature packages.' title='Core Feature Package' assetId={94918533221001}  />
+    </Grid>
+    </Grid>
 
-	<Grid item container xs={12} sm={6} direction='row'>
-	<Grid item container direction='column'>
-	<BrowseSampleCard href='https://create.roblox.com/store/asset/72975253516300' description='The Bundles Feature Package offers functionality to sell collections of items to players at a discount.' title='Bundles Feature Package' assetId={72975253516300}  />
-	</Grid>
-	</Grid>
+    <Grid item container xs={12} sm={6} direction='row'>
+    <Grid item container direction='column'>
+    <BrowseSampleCard href='https://create.roblox.com/store/asset/72975253516300' description='The Bundles Feature Package offers functionality to sell collections of items to players at a discount.' title='Bundles Feature Package' assetId={72975253516300}  />
+    </Grid>
+    </Grid>
 
-	</Grid>
+    </Grid>
 
 2. In the menu bar, select the **View** tab.
 3. In the **Show** section, click **Toolbox**. The **Toolbox** window displays.
@@ -57,7 +57,7 @@ To get the packages from your inventory into your experience:
 
    1. Navigate to the **Security** tab, then enable **Enable Studio Access to API Services**.
 
-## Defining Currencies
+## Define currencies
 
 <Alert severity="info">
 If you do not plan on charging in-experience currencies for any bundles, you can skip this section and configure bundles through `devProductId`.
@@ -66,11 +66,11 @@ If you do not plan on charging in-experience currencies for any bundles, you can
 If your experience has its own currency system, you can register those with the **Core** feature package by defining them in `ReplicatedStorage.FeaturePackagesCore.Configs.Currencies`. There is a commented out example of a Gems currency already in this file; replace it with your own.
 
 ``` lua title="Currencies"
-	Gems = {
-		displayName = "Gems",
-		symbol = "💎",
-		icon = nil,
-	},
+    Gems = {
+        displayName = "Gems",
+        symbol = "💎",
+        icon = nil,
+    },
 ```
 
 The `Currencies` script tells the **Core** feature package some metadata about your currency:
@@ -88,18 +88,18 @@ Once your currency is set up, you need to manually specify the bundle's price, c
 ``` lua title="Bundles"
     -- If you want to use a dev product, you must provide a unique devProductId, only used by one bundle.
     -- We will fetch bundle price and icon from the developer product
-	pricing = {
-		priceType = CurrencyTypes.PriceType.Marketplace,
-		devProductId = 1795621566,
-	},
+    pricing = {
+        priceType = CurrencyTypes.PriceType.Marketplace,
+        devProductId = 1795621566,
+    },
 
     -- Otherwise, if you want to use in-experience currency instead of a dev product, you can use the following instead:
     -- Price here is in the in-experience currency, not Robux
     pricing = {
-    	priceType = CurrencyTypes.PriceType.InExperience,
-    	price = 79,
-    	currencyId = "Gems",
-    	icon = 18712203759,
+        priceType = CurrencyTypes.PriceType.InExperience,
+        price = 79,
+        currencyId = "Gems",
+        icon = 18712203759,
     },
 ```
 
@@ -107,41 +107,41 @@ You also need to reference the `BundlesExample` script to call `setInExperienceP
 
 ``` lua title="BundlesExample"
 local function awardInExperiencePurchase(
-	_player: Player,
-	_bundleId: Types.BundleId,
-	_currencyId: CurrencyTypes.CurrencyId,
-	_price: number
+    _player: Player,
+    _bundleId: Types.BundleId,
+    _currencyId: CurrencyTypes.CurrencyId,
+    _price: number
 )
-	-- Check if the player has enough currency to purchase the bundle
-	-- Update player data, give items, etc.
-	-- Deduct the currency from the player
+    -- Check if the player has enough currency to purchase the bundle
+    -- Update player data, give items, etc.
+    -- Deduct the currency from the player
 
-	task.wait(2)
-	return true
+    task.wait(2)
+    return true
 end
 
 local function initializePurchaseHandlers()
-	local bundles = Bundles.getBundles()
-	for bundleId, bundle in bundles do
-		-- Bundle is not associated with a developer product if it does not have marketplace price type
-		if not bundle or bundle.pricing.priceType ~= "Marketplace" then
-			continue
-		end
+    local bundles = Bundles.getBundles()
+    for bundleId, bundle in bundles do
+        -- Bundle is not associated with a developer product if it does not have marketplace price type
+        if not bundle or bundle.pricing.priceType ~= "Marketplace" then
+            continue
+        end
 
-		Bundles.setPurchaseHandler(bundleId, awardMarketplacePurchase)
-		receiptHandlers[bundle.pricing.devProductId] = receiptHandler
-	end
+        Bundles.setPurchaseHandler(bundleId, awardMarketplacePurchase)
+        receiptHandlers[bundle.pricing.devProductId] = receiptHandler
+    end
 
-	-- If you have any in-experience currencies that you are using for bundles, set the handler here
-	for currencyId, _ in Currencies do
-		Bundles.setInExperiencePurchaseHandler(currencyId, awardInExperiencePurchase)
-	end
+    -- If you have any in-experience currencies that you are using for bundles, set the handler here
+    for currencyId, _ in Currencies do
+        Bundles.setInExperiencePurchaseHandler(currencyId, awardInExperiencePurchase)
+    end
 end
 ```
 
 Specifically, you need to fill out `awardInExperiencePurchase`, which is called by a loop through `Currencies` inside of the example `initializePurchaseHandlers` (i.e. each currencyId is connected to the handler through `Bundles.setInExperiencePurchaseHandler(currencyId, awardInExperiencePurchase)`).
 
-## Defining Bundles
+## Define bundles
 
 All bundles offerable in your experience can be defined within `ReplicatedStorage.Bundles.Configs.Bundles`, with types exported from the `Types` script in the same folder.
 
@@ -158,7 +158,7 @@ If you want a bundle with multiple items, and if these are already represented b
                 text = "x1",
                 color = Color3.fromRGB(236, 201, 74),
             } -- Caption is optional! You can also omit this field
-        } 
+        }
     },
 ```
 
@@ -190,14 +190,14 @@ For example, your entire bundle will likely look like this:
             priceType = CurrencyTypes.PriceType.Marketplace,
             devProductId = <DEV_PRODUCT_ID>,
         },
-        
+
         -- Otherwise, if you want to use in-experience currency instead of a dev product, you can use the following instead:
         -- Price here is in the in-experience currency, not Robux
         -- pricing = {
-        -- 	priceType = CurrencyTypes.PriceType.InExperience,
-        -- 	price = 79,
-        -- 	currencyId = <CURRENCY_ID>,
-        -- 	icon = <IMAGE_ASSET_ID>,
+        --  priceType = CurrencyTypes.PriceType.InExperience,
+        --  price = 79,
+        --  currencyId = <CURRENCY_ID>,
+        --  icon = <IMAGE_ASSET_ID>,
         -- },
 
         includedItems = {
@@ -212,7 +212,7 @@ For example, your entire bundle will likely look like this:
                 -- The price and icon will be fetched from the developer product
                 -- devProductId = <ITEM_DEV_PRODUCT_ID>
 
-			    -- There are more optional metadata fields that are UI-specific if needed
+                -- There are more optional metadata fields that are UI-specific if needed
                 metadata = {
                     caption = {
                         text = "x1",
@@ -253,7 +253,7 @@ For example, your entire bundle will likely look like this:
     }
 ```
 
-## Integrating Server Logic
+## Integrate server logic
 
 Take a look at `ReplicatedStorage.Bundles.Server.Examples.BundlesExample`, which shows how your server will interact with the **Bundles** feature package and the above methods on the `Class.ModuleScript`. The snippets below are from that script.
 
@@ -385,7 +385,7 @@ Consider the following best practice guidance on redundant recordings of Receipt
 
 - This redundancy helps ensure that all purchase logic has been appropriately handled and that your DataStore+Bundles Feature Package's DataStore reaches eventual consistency, with the your data store being the source of truth.
 
-## Configuring Constants
+## Configure constants
 
 Constants for the **Core** feature package live in two spots:
 
@@ -401,7 +401,7 @@ The main things you might want to adjust to meet the design requirements of your
 
 Additionally, you can find strings for translation broken out into one location: `ReplicatedStorage.FeaturePackagesCore.Configs.TranslationStrings`.
 
-## Customizing UI Components
+## Customize UI components
 
 By modifying the package objects, such as colors, font, and transparency, you can adjust the visual presentation of your bundle prompts. However, keep in mind that if you move any of the objects around hierarchically, the code will not be able to find them, and you'll need to make adjustments to your code.
 
@@ -417,7 +417,7 @@ The heads up display is also made up of two components:
 
 If you want to have greater control over the heads up display, instead of just using the existing HUD UI within `ReplicatedStorage.Bundles.Objects.BundlesGui`, you can move things around to meet your own design requirements. Just be sure to update client script behavior in the `ReplicatedStorage.Bundles.Client.UIController` script.
 
-## API Reference
+## API reference
 
 ### Types
 

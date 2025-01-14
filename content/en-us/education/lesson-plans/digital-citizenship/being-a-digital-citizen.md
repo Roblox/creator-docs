@@ -1,5 +1,5 @@
 ---
-title: Being a Digital Citizen
+title: Being a digital citizen
 description: Learn digital citizenship with Roblox. A full course created for middle to high school students. This session introduces upstanding and safety online.
 next: /education/lesson-plans/digital-citizenship/lights-and-polish
 prev: /education/lesson-plans/digital-citizenship/intro-to-roblox
@@ -96,7 +96,7 @@ prev: /education/lesson-plans/digital-citizenship/intro-to-roblox
    - Will first learn about digital citizenship and how to intervene in cyberbullying.
    - Rest of the time will be devoted to improving their projects, ending with a feedback opportunity where they'll get to player each other's experiences.
 
-### Digital Citizenship
+### Digital citizenship
 
 1. Go through the lesson <a href="../../../education/resources/intro-to-digital-civility.md" target="_blank" rel="noopener">Intro to Digital Civility</a>.
 2. Guide students in an activity to practice upstanding.
@@ -105,7 +105,7 @@ prev: /education/lesson-plans/digital-citizenship/intro-to-roblox
    - Explain that students will hear different situations that they might see in an experience online. They'll listen and will practice a response.
    - Go through prompts in the Resource: Upstander Roleplay Situations and have students verbally roleplay their response.
 
-### Work on Projects
+### Work on projects
 
 1. If needed, continue teaching any other lessons from the previous day.
 2. Inform students they'll have this time to improve their projects.
@@ -117,7 +117,7 @@ prev: /education/lesson-plans/digital-citizenship/intro-to-roblox
    - If in person, they can just trade seats.
    - If remote, have students make their games public so others can play by sharing links.
 
-### Project Feedback
+### Project feedback
 
 1. Open Presentation: Project Feedback and pass out Handout: Project Feedback to each student. This
 
@@ -131,7 +131,7 @@ prev: /education/lesson-plans/digital-citizenship/intro-to-roblox
    - Will make that change tomorrow.
    - Have students pair up and share the change they'll make.
 
-### Wrap Up
+### Wrap up
 
 1. Recap what students have created and the vocabulary term: **upstander**.
 2. Have students connect giving feedback outside the classroom (online games, sports, talking with family). Remind that good online behavior is just like real life behavior. Ask these questions to start.

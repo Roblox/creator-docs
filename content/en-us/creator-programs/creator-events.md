@@ -21,7 +21,7 @@ To preview events hosted by our community creators, visit our [past events](http
 
 - You are comfortable with public speaking.
 
-### Nice to Have (Not Required)
+### Nice to have (not required)
 
 - Previous experience in hosting events, either in-person or virtual.
 
@@ -33,13 +33,13 @@ To preview events hosted by our community creators, visit our [past events](http
 
 - Experience with presentation tools, such as PowerPoint and Google Slides.
 
-## Application Process
+## Application process
 
 Fill out the application carefully to start the process. After we receive your application, you should hear from us within 2–3 weeks. Large volumes of applications might cause delays.
 
 <Button href="https://survey.roblox.com/jfe/form/SV_cSnxeXTXIbKFz0i" size='large' variant='contained' style={{width:200}}>Apply</Button>
 
-### After Initial Acceptance
+### After initial acceptance
 
 You need to prepare the following materials if your application passes the initial screening:
 
@@ -56,7 +56,7 @@ You need to prepare the following materials if your application passes the initi
 
 We have created a **handbook** for our voluntary Event Organizers to help you gain insights and support on hosting events. We also have a **Guilded server** for Event Organizers to communicate with each other to exchange useful tips and advice.
 
-## Program Membership Details
+## Program membership details
 
 As a voluntary Event Organizer, you can:
 

@@ -26,9 +26,9 @@ This animation technique can provide solutions to the following examples:
 
 You can use an `Class.IKControl` to procedurally add IK to your character rigs outside of the Animation Editor. Studio allows you to programmatically apply IK to all characters, such as R15, Rthro, and custom imported skinned characters, to create realistic movement and interactions in your experience.
 
-When adding an `Class.IKControl`, set the [required properties](#required-properties) correctly to avoid unexpected and unnatural animation results. As with all animation, [test your IKControls](#testing-ikcontrols) to ensure that you achieve the desired behavior.
+When adding an `Class.IKControl`, set the [required properties](#required-properties) correctly to avoid unexpected and unnatural animation results. As with all animation, [test your IKControls](#test-ikcontrols) to ensure that you achieve the desired behavior.
 
-### Required Properties
+### Required properties
 
 When adding a `Class.IKControl` to your character's `Class.Humanoid` or `Class.AnimationController`, you must set the following required properties to enable IK:
 
@@ -59,7 +59,7 @@ When adding a `Class.IKControl` to your character's `Class.Humanoid` or `Class.A
 </tbody>
 </table>
 
-### Testing IKControls
+### Test IKControls
 
 You can add and edit `Class.IKControl` programmatically or directly through the Explorer. You can even add and make changes to `Class.IKControl` during a Play test to quickly check how various properties affect a character's movements.
 
@@ -104,7 +104,7 @@ To quickly test your `Class.IKControl` using an `Class.Attachment` as a target:
 
    <video controls src="../assets/animation/inverse-kinematics/IK-Drag-Hand.mp4" width="40%"></video>
 
-### Adding Constraints
+### Add constraints
 
 You can use `Class.Constraint|Constraints` to restrict how joints can move when reaching its target. Constraints can ensure joints like the elbows and knees bend naturally, or to make the mechanical joints rotate in a specific orientation.
 

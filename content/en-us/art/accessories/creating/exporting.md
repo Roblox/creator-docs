@@ -1,7 +1,7 @@
 ---
-title: Exporting
+title: Export
 description: Use Blender's FBX export with specific settings when exporting a clothing asset.
-prev: /art/accessories/creating/modifying-cage
+prev: /art/accessories/creating/modify-cage
 next: /art/accessories/creating/importing
 ---
 

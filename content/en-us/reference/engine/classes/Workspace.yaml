@@ -271,7 +271,7 @@ properties:
       Determines the height at which falling `Class.BasePart|BaseParts` and
       their ancestor `Class.Model|Models` are removed from `Class.Workspace`.
     description: |
-      This property determines the height at which the Roblox engine
+      This property determines the height at which the Roblox Engine
       automatically removes falling `Class.BasePart|BaseParts` and their
       ancestor `Class.Model|Models` from `Class.Workspace` by parenting them to
       `nil`. This is to prevent parts that have fallen off the map from
@@ -1391,7 +1391,7 @@ methods:
       This function is used by the Roblox Studio Move tool when the user starts
       moving a selection. In conjunction with `Class.Plugin:GetJoinMode()` and
       `Class.Workspace:JoinToOutsiders()` it can be used to retain join
-      functionality when developing custom studio build tools. See the snippets
+      functionality when developing custom Studio build tools. See the snippets
       below for an example.
 
       ```

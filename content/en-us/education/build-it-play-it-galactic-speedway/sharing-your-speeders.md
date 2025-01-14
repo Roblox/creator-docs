@@ -1,5 +1,5 @@
 ---
-title: Sharing Your Speeders
+title: Share your speeders
 prev: /education/build-it-play-it-galactic-speedway/go-beyond-the-challenge
 description: Learn how to share the spaceship models you build in Roblox Studio as part of the Build It Play It Galactic Speedway challenge with your friends.
 ---
@@ -37,7 +37,7 @@ To share your speeder with friends:
      src="../../assets/education/build-it-play-it-galactic-speedway/sharing-your-speeders/new-model-uploaded.png"
      width="75%" />
 
-## Viewing and Using Models
+## View and use models
 
 If you've added models from friends, or just want to reuse your own, find them in the **Inventory**. This stores any models you've added and lets you add them into a game.
 

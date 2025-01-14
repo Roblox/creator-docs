@@ -14,14 +14,14 @@ Through this sort, you can receive recognition as a credible educational develop
     variant="filled" />
 </figure>
 
-## Experience Eligibility
+## Experience eligibility
 
 - Explores a subject matter, such as science, history, or math, or have educational value that is clear to an educator
 - Doesn't allow users to encounter aggressive monetization as a part of their first time user experience. Monetization should not detract from learning or gameplay (i.e. users must pay to access large portions of content or gain an unfair advantage in gameplay due to monetization.)
 - Remains appropriate for a classroom for students of all ages, even if it contains advanced subject matter
 - Like ratio above 50% and maintains at least 15 concurrent users
 
-## How to Apply
+## How to apply
 
 Submit through the form below. Due to the high volume of applicants, only those considered for the Learn & Explore sort will be contacted. Applications are reviewed by the Education team at Roblox every 1-2 months.
 

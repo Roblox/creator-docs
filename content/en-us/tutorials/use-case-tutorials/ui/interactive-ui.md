@@ -1,11 +1,11 @@
 ---
-title: Making UI Interactive
+title: Create interactive UI
 description: Learn how to build interactive UI and connect stateful scripts to power it.
 ---
 
 import BetaAlert from '../../../includes/beta-features/beta-alert.md'
 
-A **HUD** (**Heads-Up Display**) in your experience commonly displays non‑interactive UI elements such as the health meter demonstrated in [Creating HUD Meters](../ui/creating-hud-meters.md). Atop this, almost every experience requires **interactive** UI such as buttons that respond to player activation, animate when activated, tween in/out menus with other interactive controls, etc.
+A **HUD** (**Heads-Up Display**) in your experience commonly displays non‑interactive UI elements such as the health meter demonstrated in [Create HUD meters](../ui/create-hud-meters.md). Atop this, almost every experience requires **interactive** UI such as buttons that respond to player activation, animate when activated, tween in/out menus with other interactive controls, etc.
 
 <img src="../../../assets/tutorials/interactive-ui/Intro.png" width="840" alt="In-game view showing a settings button and settings menu with volume sliders." />
 
@@ -17,15 +17,15 @@ Using [UI Fundamentals&nbsp;- HUD Meter](https://www.roblox.com/games/1045069158
 - How to connect buttons to player activation to toggle in/out the settings menu.
 - How to connect draggable UI sliders to adjust the volume of sound effects and background ambience separately.
 
-## Using the Device Emulator
+## Enable the Device Emulator
 
-As noted in [Creating HUD Meters](../ui/creating-hud-meters.md), phones and tablets have the least amount of screen space, so it's important that your UI elements fit on smaller screens and that they're clearly visible to players. If you haven't done so already, enable the [Device Emulator](../../../studio/testing-modes.md#device-emulation) in Studio:
+As noted in [Create HUD meters](../ui/create-hud-meters.md), phones and tablets have the least amount of screen space, so it's important that your UI elements fit on smaller screens and that they're clearly visible to players. If you haven't done so already, enable the [Device Emulator](../../../studio/test-modes.md#device-emulation) in Studio:
 
 1. Open the [UI Fundamentals&nbsp;- HUD Meter](https://www.roblox.com/games/104506915856758/UI-Fundamentals-HUD-Meter) template in Studio.
 
    <UseStudioButton variant="" buttonTextTranslationKey="Action.EditInStudio" placeId="104506915856758" universeId="6690464830" />
 
-2. From the [Test](../../../studio/test-tab.md) tab, toggle on the **Device** tool.
+2. From the **Test** tab, toggle on the **Device** tool.
 
    <img src="../../../assets/studio/general/Test-Tab-Emulation-Device.png" width="800" alt="Device button indicated in Test tab" />
 
@@ -33,7 +33,7 @@ As noted in [Creating HUD Meters](../ui/creating-hud-meters.md), phones and tabl
 
    <img src="../../../assets/studio/general/Device-Emulator-Phone.png" width="800" alt="Device Emulator settings options indicated at top of viewport window." />
 
-## Create the Settings Button
+## Create the settings button
 
 `Class.GuiButton|GuiButtons` are interactive user interface elements with built‑in functionality such as the multi‑platform `Class.GuiButton.Activated|Activated` event which fires when the button is clicked or tapped. The `Class.GuiButton` class extends to two variations, `Class.TextButton` and `Class.ImageButton`, and this tutorial uses a "gear" shaped `Class.ImageButton` to toggle the settings menu open or closed.
 
@@ -41,7 +41,7 @@ As noted in [Creating HUD Meters](../ui/creating-hud-meters.md), phones and tabl
 
 To construct the settings button:
 
-1. In the [Explorer](../../../studio/explorer.md) window, locate **HUDContainer** inside `Class.StarterGui`.
+1. In the **Explorer** window, locate **HUDContainer** inside `Class.StarterGui`.
 
    <img src="../../../assets/tutorials/interactive-ui/StarterGui-HUDContainer.png" width="320" alt="Explorer window showing the HUDContainer selected." />
 
@@ -51,7 +51,7 @@ To construct the settings button:
 	 
 	 <img src="../../../assets/tutorials/interactive-ui/Settings-Button-Design-Initial.png" width="840" alt="New ImageButton in viewport." />
 
-3. With the new button selected, set the following in the [Properties](../../../studio/properties.md) window:
+3. With the new button selected, set the following in the **Properties** window:
 
    - `Class.ImageButton.AnchorPoint|AnchorPoint` = `0.5, 0.25` (horizontal center and vertical upper quarter)
    - `Class.ImageButton.BackgroundTransparency|BackgroundTransparency` = `1` (fully transparent)
@@ -76,7 +76,7 @@ To construct the settings button:
 
    <img src="../../../assets/tutorials/interactive-ui/Settings-Button-Design-Finalized.png" width="840" alt="Final settings button in top-center of the screen." />
 
-## Create the Settings Menu
+## Create the settings menu
 
 <BetaAlert betaName="UIDragDetectors" leadIn="To construct the interactive sliders in this section, enable " leadOut="." components={props.components} />
 
@@ -84,9 +84,9 @@ The new [settings button](#create-the-settings-button) will be scripted to toggl
 
 <img src="../../../assets/tutorials/interactive-ui/Settings-Menu-Design-Components.png" width="840" alt="Basic components used for the settings menu." />
 
-### Create the Parent Frame
+### Create the parent frame
 
-As noted in [Creating HUD Meters](../ui/creating-hud-meters.md), a `Class.Frame` serves as a container for other UI objects. The entire settings menu will be constructed with a single parent frame, making it simple to manage as a stateful object that reacts to input differently depending on the current state.
+As noted in [Create HUD meters](../ui/create-hud-meters.md), a `Class.Frame` serves as a container for other UI objects. The entire settings menu will be constructed with a single parent frame, making it simple to manage as a stateful object that reacts to input differently depending on the current state.
 
 1. Insert a `Class.Frame` into **HUDContainer** and rename it **SettingsMenu**.
 
@@ -137,7 +137,7 @@ As noted in [Creating HUD Meters](../ui/creating-hud-meters.md), a `Class.Frame`
 
    <img src="../../../assets/tutorials/interactive-ui/Settings-Menu-Design-Parent-Frame-Finalized.png" width="840" alt="Frame styled with rounded corners." />
 
-### Construct a Slider
+### Construct a slider
 
 To allow players to adjust volume levels, the settings menu will contain two draggable **slider widgets** powered by `Class.UIDragDetector`, a convenient object that facilitates interaction with 2D user interface elements.
 
@@ -169,7 +169,7 @@ To create a parent container for the first slider:
    - `Class.UIListLayout.HorizontalFlex|HorizontalFlex` = `Enum.UIFlexAlignment.Fill|Fill` (resize elements horizontally to fill the entire parent container, overriding their defined width)
    - `Class.UIListLayout.VerticalAlignment|VerticalAlignment` = `Enum.VerticalAlignment.Center|Center` (align elements along their vertical center)
 
-#### Slider Icon
+#### Slider icon
 
 A simple icon including an audio note and "burst" symbol helps players identify the slider's purpose when they open the settings menu.
 
@@ -195,7 +195,7 @@ A simple icon including an audio note and "burst" symbol helps players identify 
 
 	 <img src="../../../assets/tutorials/interactive-ui/Settings-Menu-Design-Slider-Icon-Finalized.png" width="840" alt="Finalized icon in the settings menu." />
 
-#### Range Frame
+#### Range frame
 
 Directly to the right of the [icon](#slider-icon), the interactive portion of the slider should be contained within another `Class.Frame`.
 
@@ -228,7 +228,7 @@ Directly to the right of the [icon](#slider-icon), the interactive portion of th
 
    <img src="../../../assets/tutorials/interactive-ui/Settings-Menu-Design-Range-Frame-Outline.png" width="840" alt="Slider frame positioned to the right of the icon." />
 
-#### Interactive Handle
+#### Interactive handle
 
 With the [slider container](#range-frame) constructed, you can now create a **draggable handle** for players to interact with during gameplay.
 
@@ -278,7 +278,7 @@ If you playtest the experience now, you'll be able to drag the handle left and r
 
 <video src="../../../assets/tutorials/interactive-ui/Handle-Demo.mp4" controls width="90%" alt="Video showing the slider handle being dragged back and forth, bounded in range by the SliderFrame container."></video>
 
-#### Inner Fill
+#### Inner fill
 
 To more clearly indicate that the slider controls a 0% to 100% range, you can add an **inner fill** to the left side of the container which will sync with the handle's variable position.
 
@@ -310,7 +310,7 @@ To more clearly indicate that the slider controls a 0% to 100% range, you can ad
 
    <img src="../../../assets/tutorials/interactive-ui/Settings-Menu-Design-Slider-Inner-Fill-Finalized.png" width="840" alt="InnerFill frame styled with blue background and rounded corners." />
 
-### Duplicate the Slider
+### Duplicate the slider
 
 With the [first slider](#construct-a-slider) constructed, you can easily duplicate it and modify some visual aspects to indicate another purpose, in this case the volume level of background audio symbolized by an icon of musical notes.
 
@@ -367,7 +367,7 @@ With the [first slider](#construct-a-slider) constructed, you can easily duplica
 
 	 <img src="../../../assets/tutorials/interactive-ui/Settings-Menu-Design-BackgroundVolumeSlider-Inner-Fill.png" width="840" alt="BackgroundVolumeSlider with modified InnerFill color." />
 
-### Create the Close Button
+### Create the close button
 
 The final element of the settings menu is a **close button** which provides players an additional input to close the menu (the **SettingsButton** in the top‑center will serve the same purpose).
 
@@ -394,11 +394,11 @@ The final element of the settings menu is a **close button** which provides play
 
 	 <img src="../../../assets/tutorials/interactive-ui/Settings-Menu-Design-Close-Button-Finalized.png" width="840" alt="Finalized close button in upper-right corner of settings menu." />
 
-## Create the Control Modules
+## Create the control modules
 
 An extensible **control module** setup makes interactive UI management more streamlined than individual scripts placed within each object. `Class.ModuleScript|ModuleScripts` facilitate this extensible functionality by letting you reuse code between scripts on different sides of the client‑server boundary or the same side of the boundary.
 
-### Stateful Object Controller
+### Stateful object controller
 
 The following stateful object controller module lets you attach behavior to UI objects such as **SettingsButton** and **SettingsMenu**, and easily toggle/tween between various states. To create the module:
 
@@ -491,7 +491,7 @@ The following stateful object controller module lets you attach behavior to UI o
    </AccordionDetails>
    </BaseAccordion>
 
-### Slider Controller
+### Slider controller
 
 An additional module initializes and controls the two volume sliders. It also allows you to connect a callback function to each slider in order to detect player interaction with the slider and apply desired changes in the experience.
 
@@ -591,7 +591,7 @@ An additional module initializes and controls the two volume sliders. It also al
    </AccordionDetails>
    </BaseAccordion>
 
-## Create the Settings Script
+## Create the settings script
 
 With the [settings button](#create-the-settings-button) and [settings menu](#create-the-settings-menu) finalized, you can hook everything together with a single script that utilizes the [control modules](#create-the-control-modules).
 

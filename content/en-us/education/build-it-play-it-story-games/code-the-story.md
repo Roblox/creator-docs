@@ -1,5 +1,5 @@
 ---
-title: Coding the Story
+title: Code the story
 description: Part of the Story Games series that teaches you to code in Roblox. Use string variables and concatenation to code the story script.
 next: /education/build-it-play-it-story-games/finish-and-add
 prev: /education/build-it-play-it-story-games/second-challenge
@@ -7,7 +7,7 @@ prev: /education/build-it-play-it-story-games/second-challenge
 
 After the player answers all of the questions, they'll get to see their answers combined with the story. The story will also be stored in a variable using strings and then be combined with the strings holding the player's answers.
 
-## Coding the First String
+## Code the first string
 
 Remember the first sentence you wrote for the story? Time to add that into the code.
 
@@ -40,7 +40,7 @@ Remember the first sentence you wrote for the story? Time to add that into the c
      -- =============================================
    ```
 
-## Adding the Name
+## Add the name
 
 Next, the first string of the story needs to be combined with the player's answer. Combining things together is called **concatenation**. To combine the two strings together, use `..`
 
@@ -66,7 +66,7 @@ Next, the first string of the story needs to be combined with the player's answe
        -- =============================================
    ```
 
-## Showing the Story
+## Show the story
 
 Now that the story is typed, it needs to be shown to players. T
 
@@ -89,7 +89,7 @@ Now that the story is typed, it needs to be shown to players. T
 
    <img src="../../assets/education/story-games/wcc2018_annotatedStory.png" />
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 If the sentence didn't show up, try one of the following.
 

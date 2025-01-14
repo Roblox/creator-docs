@@ -1,5 +1,5 @@
 ---
-title: Take the Challenge!
+title: Take the challenge!
 description: Complete the first Create and Destroy challenge to get a free Roblox avatar item.
 next: /education/build-it-play-it-create-and-destroy/build-one-half
 prev: /education/build-it-play-it-create-and-destroy/snap-to-grid

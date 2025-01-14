@@ -43,7 +43,7 @@ description: |
   non-empty. No two entries can have the same Key, Source, and Context.
 
   See
-  [Translating Dynamic Content](../../../production/localization/translating-dynamic-content.md)
+  [Translating Dynamic Content](../../../production/localization/translate-dynamic-content.md)
   for more information.
 code_samples:
   - LocalizationTable1

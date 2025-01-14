@@ -1,5 +1,5 @@
 ---
-title: Getting Started for Developers
+title: Get started for developers
 description: Learn how to develop educational experiences and games on Roblox.
 duration:
 thumbnail: None
@@ -23,11 +23,11 @@ Roblox experiences transport students through space and time into virtual worlds
 
 This section helps developers understand what they can design on Roblox. See the <a href="https://education.roblox.com/partners/" target="_blank" rel="noopener">Education Partners</a> page to learn more about leveraging the Roblox platform for educational purposes.
 
-### Inspiration for Developers
+### Inspiration for developers
 
 Designers looking for ideas for educational experience can find a variety of topics and example mechanics in live experiences to explore on Roblox within the Inspiration Guide.
 
-#### Example Educational Experiences
+#### Example educational experiences
 
 Below are some examples of educational experiences highlighting the wide range of educational content developed on and available on Roblox.
 
@@ -53,7 +53,7 @@ Become a park ranger, or roleplay as an animal as you explore nature and engage 
 
 </Grid>
 
-## Developing on Roblox
+## Develop on Roblox
 
 All Roblox experiences are developed in Roblox Studio, a professional development engine similar to Unity or Unreal.
 
@@ -74,7 +74,7 @@ All Roblox experiences are developed in Roblox Studio, a professional developmen
 </tbody>
 </table>
 
-## Designing for Education
+## Design for education
 
 To assist developers interested in learning, Roblox provides resources specific to educational game design. These articles cover topics such as integrating gameplay with learning, meeting student user needs, and more.
 
@@ -95,7 +95,7 @@ To assist developers interested in learning, Roblox provides resources specific 
 </tbody>
 </table>
 
-## Resources and Opportunities
+## Resources and opportunities
 
 In addition to documentation, Roblox Education has different programs that kickstart the development of educational projects.
 
@@ -111,12 +111,12 @@ In addition to documentation, Roblox Education has different programs that kicks
    </tr>
    <tr>
     <td>Learn and Explore Sort</td>
-    <td>Many Roblox users interested in education find new experiences in the curated Learn and Explore Sort. Experiences here can expect more significant traffic and visibility. Information about eligibility can be found on the <a href="../../production/promotion/nominating-for-the-discover-page.md#learn--explore-criteria" target="_blank" rel="noopener">Special Sort</a> page.</td>
+    <td>Many Roblox users interested in education find new experiences in the curated Learn and Explore Sort. Experiences here can expect more significant traffic and visibility. Information about eligibility can be found on the <a href="../../production/promotion/nominate-for-the-discover-page.md#learn--explore-criteria" target="_blank" rel="noopener">Special Sort</a> page.</td>
    </tr>
 </tbody>
 </table>
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 **Can I contract Roblox to develop a project?**
 

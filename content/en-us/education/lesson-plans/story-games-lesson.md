@@ -1,18 +1,18 @@
 ---
-title: Code a Story Game
+title: Code a story game
 description: Learn to code a story game as part of the Hour of Code™ initiative.
 ---
 
 <img src="../../assets/education/lesson-plans/storyGames-hero.jpg" width="100%" />
 
-**Lesson Description**: Start your coding journey with Roblox while joining millions participating in the world-wide Hour of Code™ initiative.
+**Lesson description**: Start your coding journey with Roblox while joining millions participating in the world-wide Hour of Code™ initiative.
 
-**ISTE Standards**: Innovative Designer 4a, 4c, 4d, Creative Communicator 6b, 6d
+**ISTE standards**: Innovative Designer 4a, 4c, 4d, Creative Communicator 6b, 6d
 
 <table>
 <tbody>
    <tr>
-    <td><b>Lesson Objectives</b></td>
+    <td><b>Lesson objectives</b></td>
     <td>
       <ul>
         <li>Create variables for storing user input using Lua code in Roblox Studio.</li>
@@ -22,7 +22,7 @@ description: Learn to code a story game as part of the Hour of Code™ initiativ
       </td>
    </tr>
    <tr>
-    <td><b>Skills and Concepts</b></td>
+    <td><b>Skills and concepts</b></td>
     <td>
     <ul>
     <li><b>Variable</b> - A placeholder for information in code.</li>
@@ -95,7 +95,7 @@ description: Learn to code a story game as part of the Hour of Code™ initiativ
   </tbody>
 </table>
 
-## Lesson Plan
+## Lesson plan
 
 ### Introduction
 
@@ -103,70 +103,70 @@ description: Learn to code a story game as part of the Hour of Code™ initiativ
 2. Tell students they will be building a game using Roblox Studio, the tool used to create all Roblox experiences. Students will write a story and then use user's answers to replace words and names. For example: One day [name] woke up and ate a giant [user's favorite food].
 3. Play the project overview video to show students the experience they will create and build excitement.
 
-### Guided Work - Create Stories
+### Guided work - Create stories
 
 1. Provide students paper and pencil to write their stories.
 2. Lead students through the lessons <a href="../../education/build-it-play-it-story-games/writing-the-story.md" target="_blank" rel="noopener">Writing the Story</a>.
    - Have students do this activity away from computers to reduce distractions.
    - Brainstorming Tip: Have students generate ideas by having one suggest a character (wizard, chef, etc), and another suggesting what that character does.
 
-### Guided Tutorial - Story Games
+### Guided tutorial - Story games
 
 1. Lead students through the tutorials starting at <a href="../../education/build-it-play-it-story-games/opening-the-template.md" target="_blank" rel="noopener">Opening the Template.</a> and ending with <a href="../../education/build-it-play-it-story-games/finish-and-add.md" target="_blank" rel="noopener">Finish and Add</a>.
 
-### Independent Work - Finish Student Projects
+### Independent work - Finish student projects
 
 1. Show students the tips and tricks from <a href="../../education/build-it-play-it-story-games/finish-and-add.md#optional-additions" target="_blank" rel="noopener">Finish and Add</a>.
 2. Have students catch up on their projects. If finished, add the following challenges, have them add two or more characters (each using a different variable: name2, name3).
 
-### Wrap Up
+### Wrap up
 
 1. Recap what students have created and vocabulary: variable, string, concatenation.
 2. Encourage 2 or 3 students to verbally share the story they wrote as a class. For example, one student reads out the story and then calls on another student to provide an answer.
 
 ## Appendix
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
-**General Troubleshooting Tips**
+**General troubleshooting tips**
 
 - Introduce students to "Ask 3 Before Me": a student needs to ask three peers before asking the instructor for help.
 - Have neighbors test each others work. As they test, encourage students to look out for common errors like missing spaces in concatenation.
 
-**Lesson 1: Creating Variables**
+**Lesson 1: Create variables**
 
 - To help students better find the Story Manger script, draw the order on a display board: `StarterGUI` > `GameGUI` > `StoryManager`.
 - As students type in their first variable, make sure it's between the two dashed green lines. This will help avoid future errors.
 
-**Lesson 2: Getting Player Answers**
+**Lesson 2: Get player answers**
 
 - Stress strict capitalization and spelling as students type words like `storyMaker` and `GetInput`. Having one letter misspelled or incorrectly capitalized will cause an error.
 - Remind students to press the Stop button whenever they're done playtesting.
 
-**Lesson 3: Telling the Story**
+**Lesson 3: Tell the story**
 
 - As students type out sentences, they may notice extra spaces or some words combined together. String variables show literally everything between quotations.
 - If the story writes words that are combined like, "wizardNia", add an extra space before that variable.
 
-### Customize the Lesson
+### Customize the lesson
 
-**Simplify the Lesson**
+**Simplify the lesson**
 
 - Have students focus on just writing one question, one sentence, and one variable.
 
-**Expand the Lesson**
+**Expand the lesson**
 
 - Have students include at least one technique from <a href="../../education/build-it-play-it-story-games/finish-and-add.md" target="_blank" rel="noopener">Tips and Tricks</a>.
 - Allow students to trade places to play each other experiences when finished.
 
-### Miscellaneous Resources
+### Miscellaneous resources
 
 Below are questions to check for understanding in the content.
 
 <table>
 <thead>
    <tr>
-    <th width="50%">Lesson 1 Questions</th>
+    <th width="50%">Lesson 1 questions</th>
     <th width="50%" >Answer</th>
    </tr>
 </thead>
@@ -193,7 +193,7 @@ Below are questions to check for understanding in the content.
 <table>
 <thead>
     <tr>
-    <th width="50%">Lesson 2 Questions</th>
+    <th width="50%">Lesson 2 questions</th>
     <th width="50%">Answer</th>
     </tr>
 </thead>
@@ -216,7 +216,7 @@ Below are questions to check for understanding in the content.
 <table>
 <thead>
     <tr>
-    <th width="50%">Lesson 3 Questions</th>
+    <th width="50%">Lesson 3 questions</th>
     <th width="50%">Answer</th>
     </tr>
 </thead>
@@ -228,7 +228,7 @@ Below are questions to check for understanding in the content.
 </tbody>
 </table>
 
-**Course Description**
+**Course description**
 
 Discover how to build the ultimate interactive word game using Roblox's free coding and design tools. In this unique one-hour course, students will be able to explore the basics of computer programming and game design, then share their completed experience online with friends to craft their own fun stories! Created specifically for students new to programming, this curriculum was developed in partnership between Roblox, the largest entertainment platform for user-generated 3D experiences, and Hour of Code™, a global movement that aims to broaden participation in computer science.
 

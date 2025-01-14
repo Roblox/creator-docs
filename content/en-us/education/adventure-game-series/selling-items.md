@@ -1,5 +1,5 @@
 ---
-title: Selling Items
+title: Sell items
 description: Part of the Adventure Game Series in Roblox. Code how to sell items in a Roblox experience.
 next: /education/adventure-game-series/buying-upgrades
 prev: /education/adventure-game-series/collect-items
@@ -9,11 +9,11 @@ prev: /education/adventure-game-series/collect-items
 
 For the next stage of the game loop, players need to sell their items for gold to allow them to purchase more space in their backpacks.
 
-## Creating a Sell Platform
+## Create a sell platform
 
 Players will sell their items by stepping onto a platform that gives them gold for each item in their bag.
 
-### Setting up the Platform
+### Set up the platform
 
 The platform can be any part and will include a script that handles selling.
 
@@ -32,7 +32,7 @@ The platform can be any part and will include a script that handles selling.
    local sellPart = script.Parent
    ```
 
-### Handling Touch Events
+### Handle touch events
 
 To use the platform, the script needs a function to check if any players touch it.
 
@@ -121,13 +121,13 @@ To use the platform, the script needs a function to check if any players touch i
    sellPart.Touched:Connect(onTouch)
    ```
 
-7. Play your project and step on sellPart; you should see the message `"A Player touched sellPart"` in the Output Window.
+7. Play your project and step on sellPart; you should see the message `"A Player touched sellPart"` in the Output window.
 
-## Selling Items
+## Sell items
 
 In this experience, a player will get 100 Gold for each item. After getting money, their items will be set back to 0, letting players explore the world for more items.
 
-### Coding a New Sell Function
+### Code a new sell function
 
 1. Under the variables, create a function named `sellItems()` that gets two parameters named `playerItems` and `playerGold`.
 

@@ -12,7 +12,7 @@ description: Prototyping
 - **Time efficiency:** The value of prototyping is the speed in which you can iterate and explore solutions to potential problems. Prototyping ensures that you detect design flaws, oversights, and unexpected technical requirements in the early stages of pre-production, instead of months into development. The time and energy required to prototype in the early stages of creating an experience is less than the time and energy required to fix costly oversights in the later stages.
 - **Finding the fun:** Prototyping ensures that the experience being designed is actually fun to play. Ideas for experiences can be abstract, but prototyping forces you to confirm that your vision can be brought to life in the way you imagine.
 
-## Paper Prototyping
+## Paper prototyping
 
   <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/IJSih2t_jso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -47,23 +47,23 @@ Despite its benefits, prototyping on paper has drawbacks due to the difference i
 - **Simulation limitations:** Simulating unique mechanics and interactions are limited or impossible to create on paper or using physical assets.
 - **False positives:** Some activities might prove more fun and engaging using paper and physical assets than doing them on a phone, computer, or console.
 
-## Studio Prototyping
+## Studio prototyping
 
 <iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/Q4Cec876KLU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <br />
 
-_Studio prototyping_ is the act of using Roblox Studio to design and iterate the early stages of an experience. The benefits of starting directly in studio for prototyping includes:
+_Studio prototyping_ is the act of using Roblox Studio to design and iterate the early stages of an experience. The benefits of starting directly in Studio for prototyping includes:
 
-- **Rapid Playtesting:** Creating directly in studio enables you to have a quick playable version of the system in your game that you can easily share with others for feedback.
-- **Reusable work:** Creating in directly in studio allows you to build off your work. Unlike paper prototyping, you don't have to start over when the prototyping period concludes, and can continue working from where you left off.
-- **Early technical issues detection:** The abstraction of paper prototyping can result in unrealistic ideas that are impossible to technically implement. Prototyping in studio forces you to determine if your idea is something you can practically create with the resources available to you.
+- **Rapid Playtesting:** Creating directly in Studio enables you to have a quick playable version of the system in your game that you can easily share with others for feedback.
+- **Reusable work:** Creating in directly in Studio allows you to build off your work. Unlike paper prototyping, you don't have to start over when the prototyping period concludes, and can continue working from where you left off.
+- **Early technical issues detection:** The abstraction of paper prototyping can result in unrealistic ideas that are impossible to technically implement. Prototyping in Studio forces you to determine if your idea is something you can practically create with the resources available to you.
     <figure>
       <img src="../../assets/game-design/prototyping/prototyping-3.png" alt="An example greybox obby course with various gray, purple, and red parts above an open space without a baseplate." width="70%"/>
       <figcaption>An early obby prototype made in Roblox Studio.</figcaption>
     </figure>
 
-Despite its benefits, the limitations of studio prototyping include:
+Despite its benefits, the limitations of Studio prototyping include:
 
 - **Smaller testing scope:** Due to the time required to script, debug, and replace assets involved in a prototype, the scope to test potential gameplay interactions and systems is limited.
 - **Increased iteration time** Due to the increased cost of creating different virtual environments, more time is required to iterate multiple systems in an experience.
@@ -72,7 +72,7 @@ Despite its benefits, the limitations of studio prototyping include:
       <figcaption>A more complex prototype made in Roblox Studio. </figcaption>
     </figure>
 
-## Best Practices
+## Best practices
 
 The difference between working on a feature and prototyping is scope. Prototyping should be fast and quick, hitting certain aspects of the feature being tested but not the entire feature itself.
 
@@ -80,7 +80,7 @@ When prototyping, have several playtest sessions with your team to confirm your 
 
 When prototyping, take extra care to explore the following parts of your experience:
 
-- **Core loop:** The core loop is the central gameplay through which an entire experience is built. To learn more about core loop design, see [Core Loops](../../production/game-design/core-loops.md).
+- **Core loop:** The core loop is the central gameplay through which an entire experience is built. To learn more about core loop design, see [Core loops](../../production/game-design/core-loops.md).
 - **UI/UX:** Ensure that your menu interaction input controls are intuitive and well designed. To learn more about UI/UX design, see [UI and UX](../../production/game-design/ui-ux-design.md).
 - **Game rules:** Get into the details of how your experience will function. As an example, if you know that your game will feature a respawn mechanic, explore how long the respawn timer could be, where the player will physically respawn in experience, and if there are any factors that could change the rate at which a player can rejoin the fun.
 - **Edge cases:** Explore how a player might push the limits of what your experience can do. Design solutions and stop gaps to either prevent or encourage this behavior.

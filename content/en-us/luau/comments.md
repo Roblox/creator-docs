@@ -5,7 +5,7 @@ description: Comments are text that the Luau parser ignores at runtime.
 
 A **comment** is text that the Luau parser ignores at runtime.
 
-## Single-line Comments
+## Single-line comments
 
 You can define single-line comments with a double hyphen (`--`) anywhere outside a string. Single-line comments extend to the end of the line.
 
@@ -21,7 +21,7 @@ if not foo then
 end
 ```
 
-## Block Comments
+## Block comments
 
 You can define multiline block comments with double hyphens and double brackets (`--[[]]`). Use block comments for documenting items:
 
@@ -47,7 +47,7 @@ If necessary, you can nest multiple brackets inside a block comment using the sa
 ]=]
 ```
 
-## TODO Comments
+## To-do comments
 
 Roblox Studio supports special `TODO` comments. Studio bolds any text following `TODO` (until broken by a space):
 

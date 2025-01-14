@@ -1,8 +1,8 @@
 ---
-title: Moving the Body
+title: Move the body
 prev: /education/build-it-play-it-galactic-speedway/designing-your-speeder
 next: /education/build-it-play-it-galactic-speedway/save-and-publish
-description: Learn how to move parts in Roblox studio to build your own spaceship as part of the Build It Play It Galactic Speedway challenge.
+description: Learn how to move parts in Roblox Studio to build your own spaceship as part of the Build It Play It Galactic Speedway challenge.
 ---
 
 There are six different bodies to choose from in the scrapyard. Each body can be combined with other parts for a completely different look.
@@ -30,7 +30,7 @@ There are six different bodies to choose from in the scrapyard. Each body can be
    <video controls src="../../assets/education/build-it-play-it-galactic-speedway/moving-the-body/move-body.mp4" width="100%"></video>
 
 <Alert severity="warning">
-<AlertTitle>Parts Getting Stuck or Moving Slowly?</AlertTitle>
+<AlertTitle>Parts getting stuck or moving slowly?</AlertTitle>
 Check in the Model tab that **Collisions** and **Move** snapping are turned **off**. Your settings should look like the picture below.
 <img
 src="../../assets/education/build-it-play-it-galactic-speedway/moving-the-body/correct-snap-collide.png"

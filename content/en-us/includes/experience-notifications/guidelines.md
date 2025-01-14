@@ -4,7 +4,7 @@ title: include
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="subtitle2">Best Practices</Typography>
+<Typography variant="subtitle2">Best practices</Typography>
 </AccordionSummary>
 <AccordionDetails>
 Notifications should be **personalized** to the receiver and should be based on in‑experience activity that's specifically relevant to the user. Inversely, notifications should not be of a generic, advertising nature.
@@ -31,7 +31,7 @@ Ideally, notifications should also alert users of something they can take **imme
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="subtitle2">Respect Community Standards</Typography>
+<Typography variant="subtitle2">Respect community standards</Typography>
 </AccordionSummary>
 <AccordionDetails>
 All notification content and behaviors are subject to Roblox's [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards) and platform‑wide [text filtering](../../ui/text-filtering.md), regardless of your experience's [age guidelines](../../production/promotion/experience-guidelines.md). This means that if your experience is a 17+ experience, your notifications are still subject to the platform‑wide standards, **not** the [17+&nbsp;Policy Standards](https://en.help.roblox.com/hc/en-us/articles/15869919570708).
@@ -40,7 +40,7 @@ All notification content and behaviors are subject to Roblox's [Community Standa
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="subtitle2">Avoid Deceptive Nudge Tactics</Typography>
+<Typography variant="subtitle2">Avoid deceptive nudge tactics</Typography>
 </AccordionSummary>
 <AccordionDetails>
 Notification content is **not** permitted to incorporate dark patterns or other tactics that manipulate or deceive users into making choices they don't intend, or which may be counter to their best interests. This could include the following:
@@ -74,7 +74,7 @@ Notification content is **not** permitted to incorporate dark patterns or other 
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography variant="subtitle2">Do Not Gate Gameplay</Typography>
+<Typography variant="subtitle2">Do not gate gameplay</Typography>
 </AccordionSummary>
 <AccordionDetails>
 Experiences should **not** require users to turn on notifications in order to participate or advance in gameplay.

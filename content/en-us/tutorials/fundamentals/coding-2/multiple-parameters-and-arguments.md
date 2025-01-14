@@ -1,5 +1,5 @@
 ---
-title: Multiple Parameters and Arguments
+title: Multiple parameters and arguments
 description: Pass multiple pieces of information into a function in Roblox Lua using arguments and parameters.
 next: /tutorials/fundamentals/coding-3/landing
 prev: /tutorials/fundamentals/coding-2/parameters-practice-buttons
@@ -15,14 +15,14 @@ local function assignTeam(playerName, whichTeam)
 end
 ```
 
-## Practice with Multiple Parameters
+## Practice with multiple parameters
 
 To practice working with multiple parameters, create a function that sorts objects in your game into trash or recycling.
 
 - The **first** parameter will be trash, which will be destroyed.
 - The **second** parameter will be for recycling, which will be made shiny and new again.
 
-### Set Up the Function
+### Set up the function
 
 First set up the function with multiple parameters and then test your work.
 
@@ -39,7 +39,7 @@ end
 sortGarbage()
 ```
 
-### Using Multiple Parameters
+### Use multiple parameters
 
 Inside the function, parameters can be used similar to variables. In this example, `trash` is destroyed and then `recyclable` is given sparkles using a Particle Emitter.
 
@@ -88,7 +88,7 @@ Inside the function, parameters can be used similar to variables. In this exampl
    sortGarbage()
    ```
 
-## Passing Values Through Parameters
+## Pass values through parameters
 
 Time to take out the trash! With the parameters set up, the functions are ready to take in information.
 
@@ -123,7 +123,7 @@ Time to take out the trash! With the parameters set up, the functions are ready 
 
 4. Test your code. The object passed in first will be destroyed. The second object will sparkle.
 
-## Order of Parameters
+## Order of parameters
 
 Typically, arguments are matched to parameters based on the order they're passed in. For instance, the first argument is used for the first parameter. The second argument is used for the second.
 

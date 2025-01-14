@@ -1,5 +1,5 @@
 ---
-title: Adventure Game Pt. 1
+title: Adventure game part 1
 description: The first part of a Roblox Developer education series. Teach students to create an adventure game in Roblox.
 next: /education/lesson-plans/roblox-developer/roblox-developer-4
 prev: /education/lesson-plans/roblox-developer/roblox-developer-2
@@ -7,12 +7,12 @@ prev: /education/lesson-plans/roblox-developer/roblox-developer-2
 
 <img src="../../../assets/education/adventure-game-series/adventure-sellingItemsHero.jpg" width="100%" />
 
-**Lesson Description**: After learning the basics of using Roblox Studio and scripting, students take their skills further by starting a more complex project, the adventure game. They'll plan out elements of their game, create a virtual world, and setup basic gameplay components like keeping track of player items.
+**Lesson description**: After learning the basics of using Roblox Studio and scripting, students take their skills further by starting a more complex project, the adventure game. They'll plan out elements of their game, create a virtual world, and setup basic gameplay components like keeping track of player items.
 
 <table>
 <tbody>
    <tr>
-    <td><b>Lesson Objectives</b></td>
+    <td><b>Lesson objectives</b></td>
     <td>
       <ul>
         <li>Practice pre-production by planning out elements of a game and creating them in Roblox Studio.</li>
@@ -21,7 +21,7 @@ prev: /education/lesson-plans/roblox-developer/roblox-developer-2
       </td>
    </tr>
    <tr>
-    <td><b>Skills and Concepts</b></td>
+    <td><b>Skills and concepts</b></td>
     <td>
     <ul>
     <li><b>Game Mechanic</b> - An action players do in a game, like run or collect. Games are made of multiple game mechanics.</li>
@@ -82,7 +82,7 @@ prev: /education/lesson-plans/roblox-developer/roblox-developer-2
   </tbody>
 </table>
 
-### Lesson Plan
+### Lesson plan
 
 #### Introduction
 
@@ -91,7 +91,7 @@ prev: /education/lesson-plans/roblox-developer/roblox-developer-2
    - Create a world in Roblox referencing their plans in the game design document.
    - Create and code items for players to gather in-game.
 
-#### Guided Work - Planning a Game
+#### Guided work - Plan a game
 
 1. Note that students don't need access to computers at the start of this section.
 2. Lead students through the lesson: <a href="../../../education/adventure-game-series/create-the-map.md" target="_blank" rel="noopener">Create the Map</a>, stopping before the section: Creating the Environment.
@@ -99,13 +99,13 @@ prev: /education/lesson-plans/roblox-developer/roblox-developer-2
    - Areas drawn should be achievable in scale of what a student can do in a week - such as a house with a front lawn or a simple forest vs a detailed city block. This helps focus students and they can always add more when finished.
    - Drawings don't have to be complex - simple symbols like circles and squares are enough.
 
-#### Guided Work - Creating the World
+#### Guided work - Create the world
 
 1. Students should be at their computers for this section.
 2. Lead students through the lesson: <a href="../../../education/adventure-game-series/create-the-map.md" target="_blank" rel="noopener">Create the Map</a>, starting at Creating the Environment
    - Briefly show students each terrain tool at once and give at most six minutes to create their starting areas. They can always add more later.
 
-#### Guided Tutorial - Setting up The Game
+#### Guided tutorial - Set up the game
 
 1. Lead students through the following tutorials: <a href="../../../education/adventure-game-series/code-the-leaderboard.md" target="_blank" rel="noopener">Coding the Leaderboard</a>.
 
@@ -119,19 +119,19 @@ prev: /education/lesson-plans/roblox-developer/roblox-developer-2
 
 ### Appendix
 
-#### Troubleshooting Tips
+#### Troubleshooting tips
 
 - The name of the `leaderstats` variable must be `"leaderstats"`. Without this, the script won't know to create a new leaderboard.
 - <a href="../../../assets/education/lesson-plans/adventureGameReferenceHandout.pdf" target="_blank" rel="noopener">Handout: Adventure Game Reference</a> helps students keep track of variable names. This is especially useful if they replaced default variable names, like `"Gold"` with something of their own, like `"Rubies"`.
 - Remind students to build everything using parts, not by using the Toolbox. Using the Toolbox may introduce unexpected issues into their games.
 
-#### Classroom Management
+#### Classroom management
 
 - As students work on their project, help them keep in mind a reasonable scale of what they can accomplish by the end of the sessions.
 - If students have ambitious goals (<em>I want to build three different worlds in my game)</em>, remind them to focus on their goals for today's current session. Have them write down their additional ideas on the game design document.
 - Set strict expectations as to how much time students can spend working on their starting area. They can always continue in later sessions.
 
-#### Customizing the Lesson
+#### Customize the lesson
 
 - Students can spend more time building out their starting area using the terrain tools or adding decorative parts.
 - If students are unclear what to add, ask questions about what objects they'd expect to find in that themed world (E.g. <em>If you were on a moonbase, what would you see? How can you build that using parts?</em>)

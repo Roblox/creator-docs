@@ -5,7 +5,7 @@ description: A fixed list of items (enumeration).
 
 The **enumeration** data type, or `Datatype.Enum`, is a fixed list of items. You can access enums through the global object called `Datatype.Enum`. For a full list of Enums and their items, see [Enums](/reference/engine/enums) in the API Reference.
 
-## Getting Items of Enums
+## Get enum items
 
 To get all items of an Enum, call the `GetEnumItems()` method on the enum. The following code sample demonstrates how to call `GetEnumItems()` on the `Enum.PartType` enum.
 
@@ -22,7 +22,7 @@ end
 ]]
 ```
 
-## Enum Items
+## Data type
 
 The `Datatype.EnumItem` is the data type for items in enums. An `Datatype.EnumItem` has three properties:
 
@@ -39,7 +39,7 @@ print(Enum.PartType.Cylinder.Value) -- 2
 print(Enum.PartType.Cylinder.EnumType) -- PartType
 ```
 
-## Assigning Enum Items
+## Assign enum items
 
 To assign an `Datatype.EnumItem` as the value of a property, use the full `Datatype.Enum` declaration. You can also use its `Value` or `EnumType`.
 

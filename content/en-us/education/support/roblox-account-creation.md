@@ -1,5 +1,5 @@
 ---
-title: Roblox Account Creation
+title: Roblox account creation
 summary: Create Roblox accounts and log into Roblox Studio.
 description: Create Roblox accounts and log into Roblox Studio.
 duration: 5 min
@@ -12,12 +12,12 @@ This document shows students how to create accounts online and log into Roblox
 Studio. Students should have Roblox Studio installed and tested on their
 computers before continuing.
 
-## Creating New Accounts
+## Create new accounts
 
 1. If you're completely new to Roblox, <a href="https://www.roblox.com/home" target="_blank" rel="noopener">sign up for a free account</a>.
 2. Have students document their account information somewhere safe.
 
-## Account Safety
+## Account safety
 
 Once students have created accounts, be sure to cover tips to keep their accounts safe.
 
@@ -28,7 +28,7 @@ Once students have created accounts, be sure to cover tips to keep their account
 
 For more tips, see [Keeping Your Account Safe](https://en.help.roblox.com/hc/en-us/articles/203313380-Account-Security-Theft-Keeping-your-Account-Safe).
 
-## Opening Roblox Studio
+## Open Roblox Studio
 
 Roblox Studio is the tool used to make all Roblox games. If Roblox Studio is not already on your computer, get a secure download [here](https://www.roblox.com/create).
 

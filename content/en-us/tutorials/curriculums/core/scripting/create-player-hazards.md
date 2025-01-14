@@ -1,5 +1,5 @@
 ---
-title: Create Player Hazards
+title: Create player hazards
 description: Explains how to create player hazards by modifying player behavior and creating a player life cycle.
 next: /tutorials/curriculums/core/scripting/script-an-upgrade-button
 prev: /tutorials/curriculums/core/scripting/record-and-display-player-data
@@ -19,7 +19,7 @@ invisible part at the same level as the water in your experience, so that fallin
 into the hazard changes the player's health to zero and respawns them back to the
 start of the experience.
 
-## Create a Basic Water Hazard
+## Create a basic water hazard
 
 To create the basic water hazard:
 
@@ -32,14 +32,14 @@ To create the basic water hazard:
 
 1. Move and scale the part to cover the water line around the island and platforms. For example, the
    sample [Island Jump - Scripting](https://www.roblox.com/games/14239042199/Island-Jump-Scripting) experience
-   sets **Size** to **825, 1, 576** and **CFrame.Position** to **174, -6.5, 38**.
+   sets **Size** to `825, 1, 576` and **CFrame.Position** to `174, -6.5, 38`.
 
    <img src="../../../../assets/tutorials/create-player-hazards/Hazard-Part-On-Water.jpg" alt="A far out view of all of the cylinder sea stacks and the island. A large block part covers the water where a player could land if they fell from a sea stack." width="600" />
 
 1. Select the part, then in the **Properties** window, configure the following properties so
    the hazard is invisible, and players can pass right through it:
 
-   - Set **Transparency** to **1**. This makes the hazard invisible, so that the
+   - Set **Transparency** to `1`. This makes the hazard invisible, so that the
      actual water appears to be the hazard.
    - Disable **CanCollide**. This tells the engine that other parts can pass
      through the hazard uninterrupted, meaning players can fall through the hazard.
@@ -75,7 +75,7 @@ To create the basic water hazard:
 
     <BaseAccordion>
     <AccordionSummary>
-      <Typography variant="h4">Code Explanation</Typography>
+      <Typography variant="h4">Code explanation</Typography>
     </AccordionSummary>
     <AccordionDetails>
       The **HazardService** has many similarities to **CoinService**. However,
@@ -88,7 +88,7 @@ To create the basic water hazard:
    </AccordionDetails>
    </BaseAccordion>
 
-## Connect to the Player Lifecycle
+## Connect to the player lifecycle
 
 The player lifecycle represents events that occur when players interact in your
 experience, such as joining, leaving, or respawning. You need to connect
@@ -134,7 +134,7 @@ Players.PlayerRemoving:Connect(onPlayerRemoved)
 
 <BaseAccordion>
 <AccordionSummary>
-  <Typography variant="h4">Code Explanation</Typography>
+  <Typography variant="h4">Code explanation</Typography>
 </AccordionSummary>
 <AccordionDetails>
 
@@ -142,12 +142,12 @@ The code defines functions to reset coin counts during the appropriate
 lifecycle events:
 
 - `Class.Player.PlayerAdded` fires when a player joins the experience, and sets
-  the coin count to **0**.
+  the coin count to `0`.
 - `Class.Player.CharacterAdded` fires when a player's character model is added
   to the world. It occurs after `Class.Player.PlayerAdded|PlayerAdded` and
   whenever the player respawns.
 - `Class.Humanoid.Died` fires when a player dies, and sets
-  the coin count to **0**. `Library.task.spawn()` creates
+  the coin count to `0`. `Library.task.spawn()` creates
   a separate thread for handling this, so other aspects of the player life cycle
   can execute.
 - `Class.Player.PlayerRemoved` fires when a player leaves the experience to
@@ -168,7 +168,7 @@ water, your character should die and lose their coins. To test your game:
 
 1. Move your character to collect some coins, then jump in the water. If your
    scripts are working correctly, your character dies, and the coin count on
-   the leaderboard resets to **0**.
+   the leaderboard resets to `0`.
 
    <video
    controls loop muted>

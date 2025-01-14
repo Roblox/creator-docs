@@ -1,5 +1,5 @@
 ---
-title: Adding the Second Pose
+title: Add the second pose
 description: Part of the Roblox Build It, Play It Challenge - Island of Move. Create the second pose.
 next: /education/build-it-play-it-island-of-move/challenge-checkpoint-2
 prev: /education/build-it-play-it-island-of-move/looping-animations
@@ -32,7 +32,7 @@ Next move to the middle of the timeline and start working on the second pose. Af
 
     </Alert>
 
-## Play the Animation
+## Play the animation
 
 Time to see the animation in action! You'll want to turn on looping so that the animation doesn't stop right away and you can get a better idea of how it will look in-game.
 

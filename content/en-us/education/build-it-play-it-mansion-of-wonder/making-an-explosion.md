@@ -1,5 +1,5 @@
 ---
-title: Making an Explosion
+title: Make an explosion
 prev: /education/build-it-play-it-mansion-of-wonder/finish-the-blast
 next: /education/build-it-play-it-mansion-of-wonder/challenge-checkpoint-2
 description: Learn how to make and explosion effect from scratch with a custom texture using particle emitters in Roblox Studio as part of the Build It Play It Mansion of Wonder.
@@ -9,7 +9,7 @@ Now for the explosions! The same skills you learned in making the magic blast al
 
 <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/making-an-explosion/final-shot-example.mp4"  ></video>
 
-## Changing the Look
+## Change the look
 
 Start by changing basic properties of the explosion, such as the color and texture.
 

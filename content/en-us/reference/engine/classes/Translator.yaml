@@ -63,17 +63,17 @@ methods:
       - If none of the `Class.LocalizationTable|LocalizationTables` available to
         this `Class.Translator` include a value for the given key.
       - If the
-        [format string](../../../production/localization/translating-dynamic-content.md)
+        [format string](../../../production/localization/translate-dynamic-content.md)
         for the key uses numbered parameters and **args** is not an array.
       - If the
-        [format string](../../../production/localization/translating-dynamic-content.md)
+        [format string](../../../production/localization/translate-dynamic-content.md)
         uses named parameters and **args** is not a table of key-value pairs.
       - If **args** is missing values for parameters that are used in the
         matching
-        [format string](../../../production/localization/translating-dynamic-content.md).
+        [format string](../../../production/localization/translate-dynamic-content.md).
 
       See
-      [Localizing with Scripting](../../../production/localization/localizing-with-scripting.md)
+      [Localize with scripting](../../../production/localization/localize-with-scripting.md)
       for more details and usage examples of this function.
     code_samples:
     parameters:
@@ -108,7 +108,7 @@ methods:
       provided object, given the provided **Source** text.
 
       See
-      [Localizing with Scripting](../../../production/localization/localizing-with-scripting.md)
+      [Localize with scripting](../../../production/localization/localize-with-scripting.md)
       for more details and usage examples of this function.
 
       #### Context Overrides

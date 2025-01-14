@@ -1,5 +1,5 @@
 ---
-title: Memory Store Sorted Map
+title: Memory store sorted map
 description: Explains how to implement the sorted map data structure for memory stores.
 ---
 
@@ -11,7 +11,7 @@ In addition to the [data structure size limits](../../cloud-services/memory-stor
 
 If you need to store data that surpasses this limit for your experience, you can adopt the sharding technique to split and distribute them through **key prefix** into multiple data structures. Sharding memory stores can also help improve the scalability of your system.
 
-## Getting a Sorted Map
+## Get a sorted map
 
 To get a sorted map, call `Class.MemoryStoreService:GetSortedMap()` with a **name** you want to define for the map. The name is global within the experience, so you can access the same sorted map on any script using the name.
 
@@ -33,23 +33,23 @@ After you get a sorted map, call any of the following functions to read or write
 <tbody>
   <tr>
     <td>`Class.MemoryStoreSortedMap:SetAsync()`</td>
-    <td>[Add](#adding-or-overwriting-data) a new key or overwrite the value and/or sort key if the key already exists.</td>
+    <td>[Add](#add-or-overwrite-data) a new key or overwrite the value and/or sort key if the key already exists.</td>
   </tr>
   <tr>
     <td>`Class.MemoryStoreSortedMap:GetAsync()`</td>
-    <td>[Read](#getting-data) a particular key.</td>
+    <td>[Read](#get-data) a particular key.</td>
   </tr>
   <tr>
     <td>`Class.MemoryStoreSortedMap:GetRangeAsync()`</td>
-    <td>[Read](#getting-data) all existing keys or a specific range of them.</td>
+    <td>[Read](#get-data) all existing keys or a specific range of them.</td>
   </tr>
   <tr>
     <td>`Class.MemoryStoreSortedMap:UpdateAsync()`</td>
-    <td>[Update](#updating-data) the value of a key and/or sort key after retrieving it from a sorted map.</td>
+    <td>[Update](#update-data) the value of a key and/or sort key after retrieving it from a sorted map.</td>
   </tr>
   <tr>
     <td>`Class.MemoryStoreSortedMap:RemoveAsync()`</td>
-    <td>[Remove](#removing-data) a key from the sorted map.</td>
+    <td>[Remove](#remove-data) a key from the sorted map.</td>
   </tr>
 </tbody>
 </table>
@@ -58,7 +58,7 @@ After you get a sorted map, call any of the following functions to read or write
 All functions accessing data structures in memory stores are asynchronous network calls that might occasionally fail. You should wrap these calls in `Global.LuaGlobals.pcall()` to catch and handle errors, like the code sample in each section does.
 </Alert>
 
-## Adding or Overwriting Data
+## Add or overwrite data
 
 To add a new key or overwrite the value or sort key of a key in the sorted map, call `Class.MemoryStoreSortedMap:SetAsync()` with the key **name**, its **value**, an **expiration time** in seconds and an **optional sort key**. The memory automatically cleans up once the key expires. The maximum expiration time is 3,888,000 seconds (45 days). The sort key, if provided, must be a valid number (integer or floating point) or a string.
 
@@ -96,11 +96,11 @@ if setSuccess then
 end
 ```
 
-## Getting Data
+## Get data
 
 You can either get a data value and sort key associated with a specific key or get multiple values and sort keys for keys within a range.
 
-### Getting Data with One Key
+### Get data with one key
 
 To get a value and sort key associated with one key from the sorted map, call `Class.MemoryStoreSortedMap:GetAsync()` with the key **name**.
 
@@ -127,7 +127,7 @@ else
 end
 ```
 
-### Getting Data with Multiple Keys
+### Get data with multiple keys
 
 To get data for multiple keys from the sorted map as a single operation, call `Class.MemoryStoreSortedMap:GetRangeAsync()`. This function lists all existing keys by default, but you can set the upper and lower bounds for the key range. For example, the following code sample retrieves up to 20 items starting from the beginning of the sorted map, with keys greater than or equal to `10`, sort keys greater than or equal to `100` and keys less than or equal to `50`, sort keys less than or equal to `500`.
 
@@ -156,7 +156,7 @@ if getSuccess then
 end
 ```
 
-## Updating Data
+## Update data
 
 To retrieve the value and sort key of a key from a sorted map and update it, call `Class.MemoryStoreSortedMap:UpdateAsync()` with the key **name**, a **callback function** to update the value and sort key for this key, and an **expiration time** in seconds. The maximum expiration time is 3,888,000 seconds (45 days).
 
@@ -194,11 +194,11 @@ The latency for `Class.MemoryStoreSortedMap:UpdateAsync()|UpdateAsync()` is simi
 
 When contention occurs, the system automatically retries the operation until one of these three happens: the operation succeeds, the callback function returns nil, or the maximum number of retries is reached. If the system reaches the maximum number of retries, it returns a conflict.
 
-## Removing Data
+## Remove data
 
 You can use `Class.MemoryStoreSortedMap:RemoveAsync()` for both removing one key from the sorted map and deleting all data in a memory store sorted map.
 
-### Removing a Key
+### Remove a key
 
 To remove a key from the sorted map, call `Class.MemoryStoreSortedMap:RemoveAsync()` with a key **name**.
 
@@ -222,7 +222,7 @@ if not removeSuccess then
 end
 ```
 
-### Deleting All Data
+### Delete all data
 
 To delete memory in sorted maps, list all your keys with `Class.MemoryStoreSortedMap:GetRangeAsync()`, then remove them with `Class.MemoryStoreSortedMap:RemoveAsync()`.
 

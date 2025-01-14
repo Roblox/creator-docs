@@ -1,15 +1,15 @@
 ---
-title: Parameters Practice - Buttons
+title: Parameters practice - buttons
 description: Practice connecting functions to events by creating a button that activates a bridge.
 next: /tutorials/fundamentals/coding-2/multiple-parameters-and-arguments
-prev: /tutorials/fundamentals/coding-2/using-parameters-and-events
+prev: /tutorials/fundamentals/coding-2/use-parameters-and-events
 ---
 
 Buttons can be used by players to unlock new areas, give points, and reveal treasure. Whenever a player touches a button, it should give some feedback to let players know it's being interacted with, like change colors or make sounds.
 
 In this example, the button will be used to activate a bridge. When the button has been pressed, it'll turn green and players will be able to use the bridge. If the player hasn't pressed the button, they'll fall through the bridge when they try to walk on it.
 
-## Make a Bridge
+## Make a bridge
 
 Start off by setting up the bridge.
 
@@ -24,7 +24,7 @@ Start off by setting up the bridge.
 4. Test the game, the bridge should be misty looking and people shouldn't be able to walk on it yet.
    <img src="../../../assets/education/coding-2/transparent-bridge.jpg" width="80%" />
 
-## Create the Button
+## Create the button
 
 Now that the bridge is set up, create the button.
 
@@ -34,7 +34,7 @@ Now that the bridge is set up, create the button.
 4. Move the button so it's slightly floating and not touching anything. This is so to make sure the `Touched` event doesn't accidentally fire.
    <img src="../../../assets/education/coding-2/red-button.jpg" width="80%" />
 
-## Making the Button Interactive
+## Make the button interactive
 
 This time, instead of using the `Class.BasePart.Touched|Touched` event to create a trap, you'll use it to create a button that makes the bridge usable. To make the bridge collidable, use the code `bridge.CanCollide = true` within a custom function that runs when a player touches the button. You know everything else you need to complete the following steps.
 
@@ -71,18 +71,18 @@ end
 button.Touched:Connect(buttonPressed)
 ```
 
-### Troubleshooting Your Code
+### Troubleshoot your code
 
 **Issue: The bridge is already solid when the game starts.**
 Make sure that the parts are Anchored and not touching anything. The parts might touch something, like terrain or another part, and cause the buttonPressed() function to fire accidentally.
 
-**Issue: You get an error in the Output Window saying: "Bridge is not a valid member of Workspace"**
+**Issue: You get an error in the Output window saying: "Bridge is not a valid member of Workspace"**
 Check the following:
 
 - The naming of your bridge. The bridge in your script must be named exactly like in the Explorer.
 - That `part.Touched:Connect(buttonPressed)` is outside the `buttonPressed()` function.
 
-### Optional Code Challenge
+### Optional code challenge
 
 The script in this lesson can also be used to keep doors that keep players out of specific areas. Practice your coding skills and do the following:
 

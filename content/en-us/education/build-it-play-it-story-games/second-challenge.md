@@ -1,5 +1,5 @@
 ---
-title: Second Challenge
+title: Second challenge
 description: The second part of the Story Games series that teaches you to code in Roblox. Complete a quiz to earn a free Roblox avatar prize.
 next: /education/build-it-play-it-story-games/code-the-story
 prev: /education/build-it-play-it-story-games/test-and-save

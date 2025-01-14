@@ -1,9 +1,9 @@
 ---
-title: Quick Access Toolbar
+title: Quick access toolbar
 description: The Quick Access Toolbar contains shortcuts to various Studio actions and commands.
 ---
 
-The **Quick Access Toolbar** contains shortcuts to various Studio actions and commands.
+The **quick access toolbar** contains shortcuts to various Studio actions and commands.
 
 <img src="../assets/studio/general/Quick-Access-Toolbar.png" width="716" alt="Quick Access Toolbar indicated in Studio toolbar" />
 

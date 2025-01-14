@@ -1,5 +1,5 @@
 ---
-title: Take the Challenge
+title: Take the challenge
 prev: /education/build-it-play-it-galactic-speedway/going-for-a-race
 next: /education/build-it-play-it-galactic-speedway/go-beyond-the-challenge
 description: Take the third challenge of Roblox Build It Play It Galactic Speedway and earn the Alien Friend avatar item and Taking the Victory Lap badge.

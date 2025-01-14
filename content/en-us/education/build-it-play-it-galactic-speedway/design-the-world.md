@@ -1,5 +1,5 @@
 ---
-title: Design the World
+title: Design the world
 prev: /education/build-it-play-it-galactic-speedway/go-beyond-the-challenge
 description: Learn how to use the Roblox Studio terrain tools to customize the racetrack world in the Build It Play It Galactic Speedway challenge.
 ---
@@ -8,7 +8,7 @@ description: Learn how to use the Roblox Studio terrain tools to customize the r
 
 Change the season of Junker's Canyon or make it look even more alien by painting new textures and colors onto the landscape.
 
-## Painting Textures
+## Paint textures
 
 You can use the **Terrain Paint** tool to add snow, water, or even lava into your world.
 
@@ -35,7 +35,7 @@ You can use the **Terrain Paint** tool to add snow, water, or even lava into you
 
    <img src="../../assets/education/build-it-play-it-galactic-speedway/design-the-world/terrain-winter-version.jpeg" />
 
-## Changing Texture Colors
+## Change texture colors
 
 Being on an alien planet, not all grass has to be green. Try changing the color of the terrain you paint, turning snow purple or even black.
 
@@ -54,7 +54,7 @@ Being on an alien planet, not all grass has to be green. Try changing the color 
 
    <video controls src="../../assets/education/build-it-play-it-galactic-speedway/design-the-world/show-terrain-color-change.mp4"></video>
 
-## Take the Challenge
+## Take the challenge
 
 <img src="../../assets/education/build-it-play-it-galactic-speedway/design-the-world/hero-jetpack.jpeg" />
 
@@ -64,7 +64,7 @@ Test your knowledge and earn the **Jetpack Backpack** avatar item and **Terrafor
 <Button variant="contained">Play Quiz Game</Button>
 </a>
 
-## Get Your Final Prize
+## Get your final prize
 
 <img src="../../assets/education/build-it-play-it-galactic-speedway/design-the-world/junkbot-hero.jpeg" />
 

@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Messaging Service",
-    "description": "You can send and receive the following request and response to broadcast messages across servers of your experience. For information on the usage of the API, see [Messaging Usage Guide](../../../cloud/open-cloud/usage-messaging.md).",
+    "description": "This page contains reference documentation for the Open Cloud v1 Messaging Service API, which can broadcast messages across all servers in your experience.\n\nThe v2 API has its own version of the [Publish Message](/cloud/reference/Universe#Publish-Universe-Message) method. For information on using the v2 method, see the [Messaging usage guide](../../../cloud/open-cloud/usage-messaging.md).",
     "version": "v1"
   },
   "servers": [
@@ -119,7 +119,7 @@
           "authorizationCode": {
             "authorizationUrl": "https://apis.roblox.com/oauth/v1/authorize",
             "tokenUrl": "https://apis.roblox.com/oauth/v1/token",
-            "refreshUrl": "https://apis.roblox.com/oauth/v1/token", 
+            "refreshUrl": "https://apis.roblox.com/oauth/v1/token",
             "scopes": {
               "universe-messaging-service:publish": "This grants the ability to publish messages on behalf of users."
             }

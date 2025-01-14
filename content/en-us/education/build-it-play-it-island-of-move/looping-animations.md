@@ -1,5 +1,5 @@
 ---
-title: Looping Animations
+title: Loop animations
 description: Part of the Roblox Build It, Play It Challenge - Island of Move. Learn how to loop the animation.
 next: /education/build-it-play-it-island-of-move/adding-the-second-pose
 prev: /education/build-it-play-it-island-of-move/challenge-checkpoint
@@ -9,7 +9,7 @@ To make sure the animation repeats smoothly, copy the first pose to the end of t
 
 <img src="../../assets/education/build-it-play-it-island-of-move/looping-animations/show-timeline.png" width="100%" />
 
-## Copy the First Pose
+## Copy the first pose
 
 The first pose is at `0:00` on the timeline.
 
