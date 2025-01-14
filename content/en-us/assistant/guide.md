@@ -17,7 +17,7 @@ description: How to use Assistant to help build, grow, and monetize your creatio
 
 ## Studio features
 
-You can access Assistant from [Studio](../studio/index.md) and the [documentation](/assistant), but Studio has the larger set of features. In Studio, Assistant consists of a large language model (LLM) that generates code and a run-command module (similar to the existing [command bar](../studio/ui-overview.md#command-bar)) that runs code.
+You can access Assistant from [Studio](../studio/index.md) and the [documentation](https://create.roblox.com/docs/assistant), but Studio has the larger set of features. In Studio, Assistant consists of a large language model (LLM) that generates code and a run-command module (similar to the existing [command bar](../studio/ui-overview.md#command-bar)) that runs code.
 
 As a result, Assistant can act directly on your data model, such as inserting and modifying objects, writing and inserting scripts, and automating repetitive tasks like modifying properties in bulk.
 
