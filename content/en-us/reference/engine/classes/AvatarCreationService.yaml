@@ -69,39 +69,39 @@ methods:
       		[Enum.AssetType.DynamicHead] = {
       			["Bounds"] = {
       				["Classic"] = {
-      					["MinSize"]: Vector3,
-      					["MaxSize"]: Vector3,
+      					["MinSize"]: vector,
+      					["MaxSize"]: vector,
       			},
       				["ProportionsSlender"] = {
-      					["MinSize"]: Vector3,
-      					["MaxSize"]: Vector3,
+      					["MinSize"]: vector,
+      					["MaxSize"]: vector,
       				},
       				["ProportionsNormal"] = {
-      					["MinSize"]: Vector3,
-      					["MaxSize"]: Vector3,
+      					["MinSize"]: vector,
+      					["MaxSize"]: vector,
       				},
       			},
       			["SubParts"] = {
       				["Head"] = {
       					["NeckRigAttachment"] = {
-      						["LowerBound"]: Vector3,
-      						["UpperBound"]: Vector3,
+      						["LowerBound"]: vector,
+      						["UpperBound"]: vector,
       					},
       					["FaceFrontAttachment"] = {
-      						["LowerBound"]: Vector3,
-      						["UpperBound"]: Vector3,
+      						["LowerBound"]: vector,
+      						["UpperBound"]: vector,
       					},
       					["HatAttachment"] = {
-      						["LowerBound"]: Vector3,
-      						["UpperBound"]: Vector3,
+      						["LowerBound"]: vector,
+      						["UpperBound"]: vector,
       					},
       					["HairAttachment"] = {
-      						["LowerBound"]: Vector3,
-      						["UpperBound"]: Vector3,
+      						["LowerBound"]: vector,
+      						["UpperBound"]: vector,
       					},
       					["FaceCenterAttachment"] = {
-      						["LowerBound"]: Vector3,
-      						["UpperBound"]: Vector3,
+      						["LowerBound"]: vector,
+      						["UpperBound"]: vector,
       					},
       				},
       			},
@@ -109,51 +109,51 @@ methods:
       		[Enum.AssetType.LeftArm] = {
       			["Bounds"] = {
       				["Classic"] = {
-      					["MinSize"]: Vector3,
-      					["MaxSize"]: Vector3,
+      					["MinSize"]: vector,
+      					["MaxSize"]: vector,
       				},
       				["ProportionsSlender"] = {
-      					["MinSize"]: Vector3,
-      					["MaxSize"]: Vector3,
+      					["MinSize"]: vector,
+      					["MaxSize"]: vector,
       				},
       				["ProportionsNormal"] = {
-      					["MinSize"]: Vector3,
-      					["MaxSize"]: Vector3,
+      					["MinSize"]: vector,
+      					["MaxSize"]: vector,
       				},
       			},
       			["SubParts"] = {
       				["LeftHand"] = {
       					["LeftWristRigAttachment"] = {
-      						["LowerBound"]: Vector3,
-      						["UpperBound"]: Vector3,
+      						["LowerBound"]: vector,
+      						["UpperBound"]: vector,
       					},
       					["LeftGripAttachment"] = {
-      						["LowerBound"]: Vector3,
-      						["UpperBound"]: Vector3,
+      						["LowerBound"]: vector,
+      						["UpperBound"]: vector,
       					},
       				},
       				["LeftUpperArm"] = {
       					["LeftShoulderRigAttachment"] = {
-      						["LowerBound"]: Vector3,
-      						["UpperBound"]: Vector3,
+      						["LowerBound"]: vector,
+      						["UpperBound"]: vector,
       					},
       					["LeftShoulderAttachment"] = {
-      						["LowerBound"]: Vector3,
-      						["UpperBound"]: Vector3,
+      						["LowerBound"]: vector,
+      						["UpperBound"]: vector,
       					},
       						["LeftElbowRigAttachment"] = {
-      						["LowerBound"]: Vector3,
-      						["UpperBound"]: Vector3,
+      						["LowerBound"]: vector,
+      						["UpperBound"]: vector,
       					},
       				},
       				["LeftLowerArm"] = {
       					["LeftElbowRigAttachment"] = {
-      						["LowerBound"]: Vector3,
-      						["UpperBound"]: Vector3,
+      						["LowerBound"]: vector,
+      						["UpperBound"]: vector,
       					},
       					["LeftWristRigAttachment"] = {
-      						["LowerBound"]: Vector3,
-      						["UpperBound"]: Vector3,
+      						["LowerBound"]: vector,
+      						["UpperBound"]: vector,
       					},
       				},
       			},
@@ -164,8 +164,8 @@ methods:
       		[Enum.AssetType.HairAccessory] = {
       			["Attachments"] = {
       				{
-      					["Size"]: Vector3,
-      					["Offset"]: Vector3,
+      					["Size"]: vector,
+      					["Offset"]: vector,
       					["Name"]: string,
       				},
       			},
