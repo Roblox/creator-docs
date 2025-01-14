@@ -147,7 +147,7 @@ To prevent cheating, the previous chapter [Implementing Blasters](implementing-b
    Roblox abstracts away the most involved bits of math, so the result is a short, highly reusable helper function with applicability across a range of experiences:
 
    ```lua title="getAngleBetweenDirections"
-   local function getAngleBetweenDirections(directionA: Vector3, directionB: Vector3)
+   local function getAngleBetweenDirections(directionA: vector, directionB: vector)
        local dotProduct = directionA:Dot(directionB)
        local cosAngle = math.clamp(dotProduct, -1, 1)
        local angle = math.acos(cosAngle)

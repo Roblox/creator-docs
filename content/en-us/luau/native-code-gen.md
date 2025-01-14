@@ -74,8 +74,8 @@ local function sumComponentsSlow(v)
 	return v.X + v.Y + v.Z
 end
 
--- "v" is declared to be a Vector3; code specialized for vectors is generated
-local function sumComponentsFast(v: Vector3)
+-- "v" is declared to be a vector; code specialized for vectors is generated
+local function sumComponentsFast(v: vector)
 	return v.X + v.Y + v.Z
 end
 ```
