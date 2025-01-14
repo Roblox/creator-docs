@@ -122,7 +122,7 @@ end
 
 local function initializePurchaseHandlers()
 	local bundles = Bundles.getBundles()
-	for bundleId, bundle in pairs(bundles) do
+	for bundleId, bundle in bundles do
 		-- Bundle is not associated with a developer product if it does not have marketplace price type
 		if not bundle or bundle.pricing.priceType ~= "Marketplace" then
 			continue
@@ -133,7 +133,7 @@ local function initializePurchaseHandlers()
 	end
 
 	-- If you have any in-experience currencies that you are using for bundles, set the handler here
-	for currencyId, _ in pairs(Currencies) do
+	for currencyId, _ in Currencies do
 		Bundles.setInExperiencePurchaseHandler(currencyId, awardInExperiencePurchase)
 	end
 end
@@ -286,7 +286,7 @@ You mainly need to hook up four things once dragging the **Bundles** feature pac
 
     local function initializePurchaseHandlers()
         local bundles = Bundles.getBundles()
-        for bundleId, bundle in pairs(bundles) do
+        for bundleId, bundle in bundles do
             -- Bundle is not associated with a developer product if it does not have marketplace price type
             if not bundle or bundle.pricing.priceType ~= "Marketplace" then
                 continue
@@ -297,7 +297,7 @@ You mainly need to hook up four things once dragging the **Bundles** feature pac
         end
 
         -- If you have any in-experience currencies that you are using for bundles, set the handler here
-        for currencyId, _ in pairs(Currencies) do
+        for currencyId, _ in Currencies do
             Bundles.setInExperiencePurchaseHandler(currencyId, awardInExperiencePurchase)
         end
     end
