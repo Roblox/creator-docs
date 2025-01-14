@@ -10,7 +10,7 @@ A **badge** is a special award you can gift players when they meet a goal within
 <figcaption>Example badges in a player's inventory</figcaption>
 </figure>
 
-## Creating Badges
+## Create badges
 
 You can create up to 5 badges for free in a 24‑hour period (GMT) for each experience you own. If you want to create more within the 24‑hour period, each additional badge costs 100 Robux.
 
@@ -54,13 +54,13 @@ To create a badge:
 	 <figcaption>Badge on experience's main page</figcaption>
 	 </figure>
 
-## Scripting Badges
+## Script badges
 
-Common badge scripting workflows include [awarding badges](#awarding-badges), checking if a player has previously [earned](#checking-earned-badges) a badge in your experience, and [getting badge information](#getting-badge-info).
+Common badge scripting workflows include [awarding badges](#award-badges), checking if a player has previously [earned](#check-earned-badges) a badge in your experience, and [getting badge information](#get-badge-info).
 
-### Locating Badge IDs
+### Locate badge IDs
 
-A badge's ID is its unique identifier. You'll need this ID when implementing workflows such as [awarding the badge](#awarding-badges) to a player.
+A badge's ID is its unique identifier. You'll need this ID when implementing workflows such as [awarding the badge](#award-badges) to a player.
 
 1. On the [Creator Dashboard](https://create.roblox.com/dashboard/creations), navigate to the associated experience's **Badges** section under **Engagement**.
 
@@ -70,7 +70,7 @@ A badge's ID is its unique identifier. You'll need this ID when implementing wor
 
    <img src="../../assets/creator-dashboard/Badge-Copy-Asset-ID.png" width="400" />
 
-### Awarding Badges
+### Award badges
 
 You can award badges to players throughout your experience by calling the `Class.BadgeService:AwardBadge()` method in a server-side `Class.Script`. `Class.BadgeService:GetBadgeInfoAsync()` returns properties of the badge, including `IsEnabled` which confirms whether or not the badge can be awarded to a player. You can enable or disable a badge from the **Configure Badge** form on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
@@ -97,9 +97,9 @@ local function awardBadge(player, badgeId)
 end
 ```
 
-### Checking Earned Badges
+### Check earned badges
 
-The following script checks when any player enters the experience, then uses the `Class.BadgeService:UserHasBadgeAsync()` method to verify if that player owns the badge with the [matching ID](#locating-badge-ids) set in the variable `BADGE_ID`. You can also verify badge ownership in batches using the `Class.BadgeService:CheckUserBadgesAsync()` method.
+The following script checks when any player enters the experience, then uses the `Class.BadgeService:UserHasBadgeAsync()` method to verify if that player owns the badge with the [matching ID](#locate-badge-ids) set in the variable `BADGE_ID`. You can also verify badge ownership in batches using the `Class.BadgeService:CheckUserBadgesAsync()` method.
 
 ```lua
 local BadgeService = game:GetService("BadgeService")
@@ -126,10 +126,10 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-### Getting Badge Info
+### Get badge info
 
 To get information about a badge, such as its description or icon asset
-ID, call the `Class.BadgeService:GetBadgeInfoAsync()` method with a [badge ID](#locating-badge-ids). For example:
+ID, call the `Class.BadgeService:GetBadgeInfoAsync()` method with a [badge ID](#locate-badge-ids). For example:
 
 ```lua
 local BadgeService = game:GetService("BadgeService")

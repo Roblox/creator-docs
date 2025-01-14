@@ -1,5 +1,5 @@
 ---
-title: Classroom Resources
+title: Classroom resources
 description: Resources to help you get started teaching with Roblox in the classroom.
 ---
 
@@ -11,7 +11,7 @@ Find resources to help teach with Roblox, whether it's handouts for the classroo
 We've curated our most popular resources, but the rest of the content can be found in the **left** navigation bar under **Educator Training**.
 </Alert>
 
-## Education Resources
+## Education resources
 
 Resources for running Roblox in classrooms and other settings.
 
@@ -43,7 +43,7 @@ A .ZIP file with handouts and guides for setting up.
 
 </Grid>
 
-## Community Resources
+## Community resources
 
 Resources related to helping you communicate more about your Roblox educational offerings.
 
@@ -75,7 +75,7 @@ Make private communities on Roblox for students.
 
 </Grid>
 
-## Technical Resources
+## Technical resources
 
 <table>
 <thead>
@@ -105,7 +105,7 @@ Make private communities on Roblox for students.
 </tbody>
 </table>
 
-## Contact Us
+## Contact us
 
 If you need assistance that isn't covered by one of the resources here, you can reach out to our Education team.
 

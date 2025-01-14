@@ -1,5 +1,5 @@
 ---
-title: Go Beyond the Challenge
+title: Go beyond the challenge
 comments: |
   1. Add link to /education/build-it-play-it-island-of-move/create-better-animations.
 description: Part of the Roblox Build It, Play It Challenge - Island of Move. Finish the challenge.
@@ -10,7 +10,7 @@ prev: /education/build-it-play-it-island-of-move/challenge-checkpoint-3
 
 So far, you've learned how to animate a character and bring that motion into your own simulator game. Below are a few ways to continue customizing your game.
 
-## Other Cool Tricks
+## Other cool tricks
 
 <table>
 <tr>
@@ -45,7 +45,7 @@ Get started coding by creating traps, powerups, and more.
 </tr>
 </table>
 
-## Improving Your Game
+## Improve your game
 
 Add a little extra style to your simulator game.
 

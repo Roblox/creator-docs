@@ -1,5 +1,5 @@
 ---
-title: The Roblox User Base
+title: The Roblox user base
 description: Explains the distinct qualities of Roblox's user base and culture.
 ---
 
@@ -37,19 +37,19 @@ Roblox is also expanding **geographically**. While the US, UK and Canada are sti
   <figcaption>Distribution of Daily Active Users in Q2 2022 worldwide</figcaption>
 </figure>
 
-## User Behavior on the Platform
+## User behavior on the platform
 
 A Roblox session typically means **playing a handful of different experiences**. Roblox is closer in many ways to YouTube than the App Store. It's important to realize that individual experiences fit into a larger, overarching experience. While some users do focus their attention in a session on one experience, it's very common for users to join an experience for a short time, switch to another, and repeat. User behavior in your experience may reflect this in more ways than just session length.
 
-Understanding your audience means understanding the other experiences your users engage with regularly. Since experiences are so interconnected, there tends to be a lot of **common conventions** and **mechanics** across the platform. Studying and emulating these conventions helps your users familiarize themselves with your experience quickly and may reduce the risk of them bouncing off in frustration. For more about designing for behavior on the platform, see [Designing for Roblox](../production/game-design/index.md).
+Understanding your audience means understanding the other experiences your users engage with regularly. Since experiences are so interconnected, there tends to be a lot of **common conventions** and **mechanics** across the platform. Studying and emulating these conventions helps your users familiarize themselves with your experience quickly and may reduce the risk of them bouncing off in frustration. For more about designing for behavior on the platform, see [Design for Roblox](../production/game-design/index.md).
 
-### Social Factors
+### Social factors
 
 Roblox allows users to add **Friends**, join them in their experience, and invite them to yours. Chat is built directly into every experience, so news spreads fast from user to user. In addition to socializing in various user made Groups on-platform, users are often active on platforms like Discord and X (Twitter).
 
-Engaging experiences will generate a lot of **organic traffic** through word of mouth. Users find an experience they like, invite their friends, and then those friends invite more friends. YouTube can also attract a lot of attention, as users want to try out whatever their favorite YouTuber is playing. For more on generating traffic and building a community, see [Promoting on Roblox](../production/promotion/index.md).
+Engaging experiences will generate a lot of **organic traffic** through word of mouth. Users find an experience they like, invite their friends, and then those friends invite more friends. YouTube can also attract a lot of attention, as users want to try out whatever their favorite YouTuber is playing. For more on generating traffic and building a community, see [Promote on Roblox](../production/promotion/index.md).
 
-## Roblox Culture
+## Roblox culture
 
 Roblox culture represents the dominant gaming, social, and consumer culture of the future. It has its own vocabulary, memes, celebrities, and even myths. Understanding the culture is essential to understanding your users.
 
@@ -82,7 +82,7 @@ The sharing of **community-generated content** is the foundation of Roblox cultu
     <td>The username of Roblox founder and CEO David Baszucki.</td>
   </tr>
   <tr>
-    <td><b>Developer Forum</b></td>
+    <td><b>Developer forum</b></td>
     <td>A [community forum](https://devforum.roblox.com/) where developers can make posts, report bugs, request features, and read announcements from Roblox staff members. Typically shortened to DevForum.</td>
   </tr>
   <tr>
@@ -98,7 +98,7 @@ The sharing of **community-generated content** is the foundation of Roblox cultu
     <td>A generic term for anything that can be created on Roblox, such as games, showcases, and concerts.</td>
   </tr>
   <tr>
-    <td><b>Game Pass</b></td>
+    <td><b>Pass</b></td>
     <td>A premium item sold in an experience that provides a permanent boost to gameplay.</td>
   </tr>
   <tr>
@@ -118,7 +118,7 @@ The sharing of **community-generated content** is the foundation of Roblox cultu
     <td>Shorthand for "obstacle course", a popular genre on Roblox that requires users to climb, jump and navigate obstacles to reach the end of the course.</td>
   </tr>
   <tr>
-    <td><b>Paid Access</b></td>
+    <td><b>Paid access</b></td>
     <td>While most experiences on Roblox are free, some developers choose to charge a fee for access. Paid access can be especially useful for developers who want to test their experience with a smaller audience prior to a full, free release.</td>
   </tr>
   <tr>
@@ -126,7 +126,7 @@ The sharing of **community-generated content** is the foundation of Roblox cultu
     <td>Roblox experiences consist of one or more places, similar to how games comprise scenes in Unity or maps in the Unreal Engine.</td>
   </tr>
   <tr>
-    <td><b>Private Server</b></td>
+    <td><b>Private server</b></td>
     <td>Some Roblox experiences offer users the ability to create private servers in which only they and their invited friends can play. Developers may offer private servers for free, or charge users a subscription fee to create them.</td>
   </tr>
   <tr>

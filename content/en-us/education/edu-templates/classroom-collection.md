@@ -1,7 +1,7 @@
 ---
-title: Classroom Collection
+title: Classroom collection
 summary:
-description: Classroom Collection
+description: Classroom collection
 duration:
 thumbnail: None
 group: null
@@ -47,16 +47,16 @@ width="100%" />
 
 </a>
 
-## Content Badges
+## Content badges
 
 <span>STEM</span>
-<span>Social Studies</span>
-<span>Language Arts</span>
+<span>Social studies</span>
+<span>Language arts</span>
 <span>Arts</span>
 <span>Vocational </span>
 
-## Age Badges
+## Age badges
 
-<span>Early Childhood</span>
+<span>Early childhood</span>
 <span>Primary</span>
 <span>Secondary</span>

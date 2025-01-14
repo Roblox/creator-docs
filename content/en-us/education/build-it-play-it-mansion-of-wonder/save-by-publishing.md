@@ -1,5 +1,5 @@
 ---
-title: Save by Publishing
+title: Save by publishing
 prev: /education/build-it-play-it-mansion-of-wonder/particle-emitters
 next: /education/build-it-play-it-mansion-of-wonder/challenge-checkpoint
 description: Learn how to save the projects you make in Roblox Studio for the Build it Play It Mansion of Wonders challenge.

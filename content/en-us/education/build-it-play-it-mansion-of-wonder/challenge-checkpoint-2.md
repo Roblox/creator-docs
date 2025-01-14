@@ -1,5 +1,5 @@
 ---
-title: Challenge Checkpoint
+title: Challenge checkpoint
 prev: /education/build-it-play-it-mansion-of-wonder/making-an-explosion
 next: /education/build-it-play-it-mansion-of-wonder/make-final-touches
 description: Earn the second set of rewards in Roblox's Build It Play It Mansion of Wonders -- the Ghastly Aura avatar item and Alchemical Antics badge.

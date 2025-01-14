@@ -1,5 +1,5 @@
 ---
-title: Importing
+title: Import
 description: Use the 3D Importer to import your custom accessory into Studio.
 prev: /art/accessories/creating/exporting
 next: /art/accessories/creating/converting

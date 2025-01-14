@@ -1,5 +1,5 @@
 ---
-title: Invite Friends
+title: Invite friends
 prev: /education/build-it-play-it-mansion-of-wonder/make-final-touches
 next: /education/build-it-play-it-mansion-of-wonder/challenge-checkpoint-3
 description: Learn how to invite your friends to play the game you build in Roblox Studio by configuring the game's permissions. Part of the Build It Play It Mansion of Wonder series.

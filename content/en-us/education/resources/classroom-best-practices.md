@@ -1,5 +1,5 @@
 ---
-title: Classroom Best Practices
+title: Best practices for the classroom
 description: For teachers, best practices for running Roblox in a classroom. Includes tips to make teaching with Roblox fun and easy.
 ---
 
@@ -8,7 +8,7 @@ width="100%" />
 
 While every classroom is unique, we've included the following practices designed by teachers that can be easily integrated into an existing class culture.
 
-## Preparing for Class
+## Prepare for class
 
 **Go Through Projects and Learning Experiences**
 
@@ -25,7 +25,7 @@ Examples of student expectations:
 
 Additionally, identify consequences for students who break any guidelines.
 
-## Managing a Classroom
+## Manage a classroom
 
 **Helping with Transitions**
 
@@ -76,7 +76,7 @@ For instance, the practices below have been successful for teachers:
 
 It's likely that students will ask questions unrelated to learning objectives, such as your "favorite Roblox game," or "Can you give me free Robux?". To preempt these questions, point out at the start of class that you'll be addressing questions related to the project or experience at hand.
 
-## Code and Creation Tips
+## Code and creation tips
 
 **Celebrate Small Wins to Motivate Students**
 

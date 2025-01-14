@@ -1,6 +1,6 @@
 ---
-title: Series Title
-description: Series Title
+title: Series title
+description: Series title
 ---
 
 <img src="../../assets/misc/Placeholder-1200-275.png" width="100%" />
@@ -8,7 +8,7 @@ description: Series Title
 <table>
   <tbody>
     <tr>
-      <td><h4>Learning Objectives</h4></td>
+      <td><h4>Learning objectives</h4></td>
       <td>
         Students will be able to:
         <ul>
@@ -34,11 +34,11 @@ Description text. Briefly summarize the project, learning, and more.
 
 <b>ISTE Standards</b>: Innovative Designer 4a, 4c, 4d, Creative Communicator 6b, 6d.
 
-## Series Sample
+## Series sample
 
 <video controls src="../../assets/lighting-and-effects/beam/Showcase.mp4" width="75%"></video>
 
-## Series Contents
+## Series contents
 
 - Link to Series Module
 - Link to Series Module

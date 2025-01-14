@@ -1,5 +1,5 @@
 ---
-title: Icons and Thumbnails
+title: Icons and thumbnails
 description: Part of the Create and Destroy series. Learn how to add thumbnails into a Roblox experience.
 next: /education/build-it-play-it-create-and-destroy/challenge-3
 prev: /education/build-it-play-it-create-and-destroy/change-the-script
@@ -10,18 +10,18 @@ Before sharing your experience, add a custom image for the game icon and thumbna
 - The **game icon** is the image that shows up on the Roblox Games page
 - The **thumbnail** is the image that shows up on the game's dedicated page.
 
-## Delete the Palette
+## Delete the palette
 
 Before taking pictures of the experience for the thumbnail and icon, you may want to delete the palette so it doesn't show up.
 
 1. Drag a selection box around the objects on the palette, then press Delete.
 2. In the Explorer (top right), click on the search box and type baseplate. Find and click on the object **PaletteBaseplate** and press <kbd>Delete</kbd>.
 
-## Create a Game Icon
+## Create a game icon
 
 A **game icon** can be any image that's a good first impression of your experience when other players see it in the search or game pages. For now, use a screenshot of your world. You can always come back later and create something more in image-editing software.
 
-### Get a Screenshot
+### Get a screenshot
 
 1. Set up your camera in Studio exactly as you want the game icon to look.
 
@@ -35,14 +35,14 @@ A **game icon** can be any image that's a good first impression of your experien
 
    <img src="../../assets/education/build-it-play-it-create-and-destroy/takeScreenshot.png" />
 
-## Finding Screenshots
+## Find screenshots
 
 If you're not sure where screenshots in Roblox appear, you can do the following to find the location.
 
-1. In the View tab, make sure the Output Window is open. If not, click on Output.
-2. Take a screenshot as normal and get a message in the Output Window. To open the folder, click on the message. This will open the folder with screenshots.
+1. In the View tab, make sure the Output window is open. If not, click on Output.
+2. Take a screenshot as normal and get a message in the Output window. To open the folder, click on the message. This will open the folder with screenshots.
 
-### Upload the Icon
+### Upload the icon
 
 With a screenshot taken, upload it so others can see it.
 
@@ -58,7 +58,7 @@ With a screenshot taken, upload it so others can see it.
 
    <img src="../../assets/education/build-it-play-it-create-and-destroy/saveGameIcon.png" />
 
-## Upload the Thumbnail
+## Upload the thumbnail
 
 For the game thumbnail, you can use the same screenshot or take another one. Thumbnails are still created in the Game Settings section.
 
@@ -70,7 +70,7 @@ For the game thumbnail, you can use the same screenshot or take another one. Thu
 
    <img src="../../assets/education/build-it-play-it-create-and-destroy/saveGameThumbnail.png" width="100%" />
 
-## Sharing with Friends
+## Share with friends
 
 When you first publish an experience, it's automatically set to private. Making it public in the Game Settings menu will allow friends to be able to join with a link.
 

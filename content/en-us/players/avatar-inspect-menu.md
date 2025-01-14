@@ -11,12 +11,12 @@ The **Avatar Inspect Menu** allows users to view another user's Roblox avatar ch
 
 You can customize a user's **Avatar Inspect Menu** in the following ways:
 
-- Change the inspect target from the user's Roblox avatar to their [current in-experience appearance](#inspecting-currently-equipped-items).
-- Change the inspect target to a [specific User ID](#inspecting-specific-users), even if they are not in the experience.
+- Change the inspect target from the user's Roblox avatar to their [current in-experience appearance](#inspect-currently-equipped-items).
+- Change the inspect target to a [specific User ID](#inspect-specific-users), even if they are not in the experience.
 
 For more specific catalog access, you can also use the [Avatar Editor Service](../players/avatar-editor.md) to access and make changes to a user's platform-wide avatar within an experience.
 
-## Inspecting Currently Equipped Items
+## Inspect currently equipped items
 
 By default, the Inspect Menu shows the same information as the user's Roblox Avatar profile page. The avatar outfit may not match the user's current appearance, since you may have opted to equip different accessories or avatar items at that specific moment.
 
@@ -46,7 +46,7 @@ if humanoid then
 end
 ```
 
-## Inspecting Specific Users
+## Inspect specific users
 
 The Avatar Inspect Menu can inspect players who aren't in the current experience. You can use `Class.GuiService:InspectPlayerFromUserId()` to inspect a player from any `Class.Player.UserId`.
 

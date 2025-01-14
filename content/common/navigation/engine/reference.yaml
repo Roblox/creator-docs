@@ -5541,4 +5541,9 @@ navigation:
         type: engineapi
         source: /reference/engine/libraries/utf8.yaml
         ignoreTranslation: true
+      - title: vector
+        path: /reference/engine/libraries/vector
+        type: engineapi
+        source: /reference/engine/libraries/vector.yaml
+        ignoreTranslation: true
   - include: /engine/releaseNotes.yaml

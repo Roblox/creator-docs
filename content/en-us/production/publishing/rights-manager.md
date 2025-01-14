@@ -6,10 +6,10 @@ description: Explains how to request the removal of copyright infringing experie
 The **Rights Manager** is an Intellectual Property (IP) management tool that lets rights holders or their authorized representative report unauthorized use of copyright content on Roblox. All rights holders, including those that don't have a presence on Roblox, can use this tool to request the removal of unauthorized experiences, avatar items, and assets hosted on the platform.
 
 <Alert severity="info">
-For more information on IP and the Digital Millennium Copyright Act (DMCA), see [Intellectual Property](../../marketplace/intellectual-property.md) and [DMCA Guidelines](./dmca-guidelines.md).
+For more information on IP and the Digital Millennium Copyright Act (DMCA), see the [intellectual property](../../marketplace/intellectual-property.md) and [DMCA Guidelines](./dmca-guidelines.md).
 </Alert>
 
-## Registering Ownership
+## Register ownership
 
 In order to use the Rights Manager, you must first register either as a rights owner or their authorized representative. This allows Roblox to confirm your legal identity with the creations that you own or represent. You only need to complete this process once.
 
@@ -18,7 +18,7 @@ Roblox requires two forms of verification during the registration process to ver
 - Government ID verification
 - Email verification
 
-Once verification is complete, Roblox discards any personal data from your documents, excluding your date of birth. Roblox uses your date of birth to ensure that the age on your account is accurate, and doesn't share it with anyone you report for IP infringement. For more information on how Roblox uses this information, see [Age ID Verification FAQs](https://en.help.roblox.com/hc/en-us/articles/4407276151188-Age-ID-Verification-FAQs).
+Once verification is complete, Roblox discards any personal data from your documents, excluding your date of birth. Roblox uses your date of birth to ensure that the age on your account is accurate, and doesn't share it with anyone you report for IP infringement. For more information on how Roblox uses this information, see [Age ID verification FAQs](https://en.help.roblox.com/hc/en-us/articles/4407276151188-Age-ID-Verification-FAQs).
 
 To register as a rights owner or their authorized representative:
 
@@ -43,7 +43,7 @@ To register as a rights owner or their authorized representative:
 1. At the bottom of the page, click the **Submit For Review** button. A pop-up dialog display displays.
 1. In the pop-up dialog, select the **Submit For Review** button. Your registration form enters Roblox review, and you can no longer edit your registration details.
 
-## Filing IP Removal Request
+## File IP removal request
 
 Once Roblox accepts your registration, you can create IP removal requests for one or more assets, experiences, and avatar items to protect your intellectual property. After you submit an IP removal request, you cannot edit any information within the request while Roblox reviews its content.
 
@@ -96,7 +96,7 @@ To file an IP removal request:
       1. In the **Signature** field, enter your full legal name as your electronic signature.
 1. At the bottom of the page, click the **Submit For Review** button. The new IP removal request enters Roblox review.
 
-## Reviewing IP Removal Requests
+## Review IP removal requests
 
 All IP removal requests display within a table on the Rights Manager landing page, and you can review each reported creation's status as Roblox processes your report.
 

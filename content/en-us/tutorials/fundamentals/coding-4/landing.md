@@ -5,16 +5,16 @@ next: /tutorials/fundamentals/coding-4/repeating-code-with-while-loops
 prev: /tutorials/fundamentals/coding-3/giving-points
 ---
 
-### Series Description
+### Series description
 
 In computer science, loops are a common feature in many scripts, often used to repeat sets of code. This series will cover two of the most common loops: for and while loops.
 
-### Objectives and Prerequisites
+### Objectives and prerequisites
 
 <table>
 <tbody>
    <tr>
-    <td width="20%"><b>Learning Objectives</b></td>
+    <td width="20%"><b>Learning objectives</b></td>
     <td>
     Understand situations where loops are useful as opposed to alternative forms of writing a script.
 

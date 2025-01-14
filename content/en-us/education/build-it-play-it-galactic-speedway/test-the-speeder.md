@@ -1,5 +1,5 @@
 ---
-title: Test the Speeder
+title: Test the speeder
 prev: /education/build-it-play-it-galactic-speedway/add-to-the-garage
 next: /education/build-it-play-it-galactic-speedway/take-the-challenge-2
 description: Learn how to take your custom built spaceship on a test flight in Roblox Studio as part of the Build It Play It Galactic Speedway challenge.
@@ -17,7 +17,7 @@ Before moving on, take time to check that your speeder works correctly.
 
 <video controls src="../../assets/education/build-it-play-it-galactic-speedway/test-the-speeder/test-speeder.mp4"  width="100%"></video>
 
-## Troubleshooting the Speeder
+## Troubleshoot the speeder
 
 If your driftspeeder does not show up in the selection screen, check the following steps:
 

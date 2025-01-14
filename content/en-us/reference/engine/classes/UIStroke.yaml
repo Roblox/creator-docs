@@ -15,7 +15,7 @@ description: |
   - Choose the `Class.UIStroke.LineJoinMode|LineJoinMode` of the stroke (round,
     bevel, or miter).
   - Add a gradient to the stroke via the `Class.UIGradient` instance.
-  - Use [rich text]((../../../ui/rich-text.md) tags to add stroke to inline text
+  - Use [rich text](../../../ui/rich-text.md) tags to add stroke to inline text
     segments.
 
   For more details on the `Class.UIStroke` object, see

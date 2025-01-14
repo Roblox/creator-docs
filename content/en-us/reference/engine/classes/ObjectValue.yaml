@@ -6,12 +6,12 @@ summary: |
   A container object for a reference to another instance.
 description: |
   A ObjectValue is an object whose purpose is to store a single reference to
-  another object. If this object is duplicated within studio and the value
+  another object. If this object is duplicated within Studio and the value
   refers to an object also being copied, then the new ObjectValue will point to
   the copied object instead of the original. Otherwise, the same value is kept.
   Copying and pasting this object will clear the value field.
 
-  The value of this can be set within studio like other reference-type fields
+  The value of this can be set within Studio like other reference-type fields
   (such as `Class.Model.PrimaryPart`): click the field within the Properties
   window, then click the object you wish to set it to within the game view or
   Explorer window. You can clear the field (set it to `nil`) by clicking the X

@@ -1,5 +1,5 @@
 ---
-title: Build the Roads
+title: Build the roads
 description: Part of the Create and Destroy series. Place roads to continue building a city in Roblox Studio.
 next: /education/build-it-play-it-create-and-destroy/buildings-and-props
 prev: /education/build-it-play-it-create-and-destroy/playtest-the-map
@@ -15,7 +15,7 @@ Next, duplicate the road tiles in your palette to create roads between the build
   You can save time building roads by duplicating a road tile in your arena, rather than always duplicating from the palette.
   </Alert>
 
-## Map Example
+## Map example
 
 Leave plenty of room for the other buildings and decorations.
 

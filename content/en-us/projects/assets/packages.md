@@ -8,18 +8,18 @@ id: packages
 
 To keep assets organized and reusable across your team or across multiple projects, group your instances and convert them into reusable **packages**. Packages make the overall process of building worlds faster and more ergonomic, but they also help with consistency, deduplication, collaboration, and versioning:
 
-- Easily [update all copies](#mass-updates) of a package to the latest version (or only [update specific copies](#updating-outdated-copies)).
+- Easily [update all copies](#mass-updates) of a package to the latest version (or only [update specific copies](#update-outdated-copies)).
 - Set packages to [automatically update](#automatic-updates) whenever there's a new version.
 - Give collaborators **Edit** or **Use** permissions to the contents of a package.
 - View the full version history for a package, compare versions, and restore old versions.
 
-The most efficient workflow is to [create a package](#creating-packages), [share it](#sharing-and-access-levels) with any collaborators, and [set it to auto-update](#automatic-updates). And you don't have to wait for a model to be "done" before using it in a package. Even if the package is a placeholder on top of a simple shape, you can use it to [greybox your environment](../../tutorials/environmental-art/greybox-your-environment.md) and then have the placeholder copies automatically update as you publish more detailed versions.
+The most efficient workflow is to [create a package](#create-packages), [share it](#share-and-access-levels) with any collaborators, and [set it to auto-update](#automatic-updates). And you don't have to wait for a model to be "done" before using it in a package. Even if the package is a placeholder on top of a simple shape, you can use it to [greybox your environment](../../tutorials/curriculums/environmental-art/greybox-your-environment.md) and then have the placeholder copies automatically update as you publish more detailed versions.
 
-## Creating Packages
+## Create Packages
 
 You can create a package from any single object or any single parent and children branch of objects. If you want to create a package for a single object, we recommend adding it to a `Class.Model` grouping first so that you can add, remove, or scale instance within the package later without breaking the package.
 
-1. In the Explorer window or 3D viewport, right-click the desired object and select **Convert to Package**.
+1. In the **Explorer** window or 3D viewport, right-click the desired object and select **Convert to Package**.
 
    <img src="../../assets/studio/packages/Contextual-Menu-Convert.png" alt="The context menu that display when you right-click an object in the Explorer window. The Convert to Package menu item is highlighted." width="300" />
 
@@ -42,11 +42,11 @@ You can create a package from any single object or any single parent and childre
 Don't delete or move the **PackageLink** instance! Doing so for any package copy converts the copy back into a normal object and loses package capabilities such as ability to update when there's a new version.
 </Alert>
 
-## Inserting Packages
+## Insert packages
 
 To insert a package that doesn't already exist in the current place, you must **initially** insert it from the [Toolbox](../../projects/assets/toolbox.md):
 
-- From **Inventory** &rarr; **My Packages** for packages that you've published to or obtained from the [Creator Store](../../production/creator-store.md), as well as packages that a friend owns and has given you [permissions](#sharing-and-access-levels) to use.
+- From **Inventory** &rarr; **My Packages** for packages that you've published to or obtained from the [Creator Store](../../production/creator-store.md), as well as packages that a friend owns and has given you [permissions](#share-and-access-levels) to use.
 - From **Creations** &rarr; **Group Packages** for packages published by members of your [group](../../projects/groups.md) (including yourself).
 
 <GridContainer numColumns="2">
@@ -71,75 +71,75 @@ Once you've inserted a package into a place's data model, it appears in the **Pa
 Be careful when inserting assets that you didn't create into your experiences, as they can contain malicious scripts. Save your experience first and then investigate any scripts within unfamiliar assets so that you can easily revert back to the place version.
 </Alert>
 
-## Publishing Package Changes
+## Publish package changes
 
 You can publish any changes you make to a package as a new version to make them available to other copies of the package throughout the place and across all experiences. Note that it's **not** required to publish a modified package before publishing a place (the modified version is saved along with the place for future iteration).
 
 To publish changes to a package:
 
-1. In the Explorer window or 3D viewport, right-click the modified copy and select **Publish to Package**.
+1. In the **Explorer** window or 3D viewport, right-click the modified copy and select **Publish to Package**.
 
    <img src="../../assets/studio/packages/Contextual-Menu-Publish.png" alt="The context menu that display when you right-click an object in the Explorer window. The Publish to Package menu item is highlighted." width="300" />
 
-1. If a package copy has [auto-update](#automatic-updates) turned on, it immediately pulls in the updated version when you open the place that contains them. Other copies get a white dot on the package icon that indicates an update is available. You can [individually update](#updating-outdated-copies) or [mass-update](#mass-updates) them as needed.
+1. If a package copy has [auto-update](#automatic-updates) turned on, it immediately pulls in the updated version when you open the place that contains them. Other copies get a white dot on the package icon that indicates an update is available. You can [individually update](#update-outdated-copies) or [mass-update](#mass-updates) them as needed.
 
    <img src="../../assets/studio/packages/Package-Update-Available.png" alt="Two packages in the Explorer set to auto-update, and one with an update available." width="215" />
 
-1. (Optional) Add a description of your changes:
+1. **(Optional)** Add a description of your changes:
 
    1. Right-click the package and select **Package Details**.
    1. In the Asset Configuration window, select **Versions**.
    1. Under your most-recent change, select **Add**.
    1. Describe your changes and click **Submit**.
 
-## Updating Outdated Copies
+## Update outdated copies
 
 You can update outdated package copies to the most recent version, or you can continue to use the older version.
 
 To update one or more package copies to the latest version:
 
-1. In the [Explorer](../../studio/explorer.md) window, locate outdated copies by the white dot on the package icon. You can also select the outdated copy in the 3D viewport, but it might be harder to find this way.
+1. In the **Explorer** window, locate outdated copies by the white dot on the package icon. You can also select the outdated copy in the 3D viewport, but it might be harder to find this way.
 
    <img src="../../assets/studio/packages/Package-Update-Available.png" alt="Two packages in the Explorer set to auto-update, and one with an update available." width="215" />
 
 1. Right-click the outdated copy and select **Get Latest Package**. You can also select multiple packages, right-click, and **Get Latest For Selected Packages**.
 
-### Mass Updates
+### Mass updates
 
-Extensive use of packages may result in many package copies across multiple places in an experience. In addition to [individual syncing](#updating-outdated-copies) and [automatic updates](#automatic-updates), you can update all copies of a package through **mass updating**.
+Extensive use of packages may result in many package copies across multiple places in an experience. In addition to [individual syncing](#update-outdated-copies) and [automatic updates](#automatic-updates), you can update all copies of a package through **mass updating**.
 
 1. (Recommended) Close other Studio instances with any of the experience's places open; this prevents another unsaved instance of a place from potentially overwriting your updates.
-1. In the Explorer window or 3D viewport, right-click the desired package and select **Update All**.
+1. In the **Explorer** window or 3D viewport, right-click the desired package and select **Update All**.
 1. Choose all places in the experience or some subset of places and click **Update**.
 
    <img src="../../assets/studio/packages/Mass-Update.png" alt="A view of the mass update window, showing two places." width="500" />
 
-   To prevent unintended overwrites, mass updating does not affect [modified](#modifying-packages) versions of a package. After the mass update completes, Studio displays a warning with the number of packages that it did **not** update, if any.
+   To prevent unintended overwrites, mass updating does not affect [modified](#modify-packages) versions of a package. After the mass update completes, Studio displays a warning with the number of packages that it did **not** update, if any.
 
 <Alert severity="info">
 Mass updating packages automatically **saves** the selected places but does not **publish** them.
 </Alert>
 
-### Automatic Updates
+### Automatic updates
 
 To make syncing easier, you can set a package copy to update automatically whenever a newer version is published. Auto-update of the package copies will take place when a place is opened in Studio.
 
-1. In the [Explorer](../../studio/explorer.md) window, expand the package's hierarchy tree and select its **PackageLink** object.
+1. In the **Explorer** window, expand the package's hierarchy tree and select its **PackageLink** object.
 
    <img src="../../assets/studio/packages/PackageLink-Explorer.png" alt="A close up view of a packaged chandelier model in the Explorer window. The PackageLink object is highlighted." width="215" />
 
-1. In the [Properties](../../studio/properties.md) window, enable the **AutoUpdate** property. If you have [nested packages](#nested-packages), this property only applies to the highest-level parent package, meaning automatic updates only occur when the **parent** package is updated.
+1. In the **Properties** window, enable the **AutoUpdate** property. If you have [nested packages](#nested-packages), this property only applies to the highest-level parent package, meaning automatic updates only occur when the **parent** package is updated.
 
 <Alert severity="warning">
 Automatic updating does not apply to [modified](#modifying-packages) package copies. Once you modify a package instance, its **AutoUpdate** property becomes disabled and is ignored.
 </Alert>
 
-## Sharing and Access Levels
+## Share and access levels
 
 If desired, you can share packages with friends or grant access to specific user roles within your group.
 
-1. In the Explorer, Toolbox, or Asset Manager, right-click the desired package and select **Package Details**.
-1. In the Asset Configuration window, select **Permissions**.
+1. In the **Explorer** window, **Toolbox**, or **Asset Manager**, right-click the desired package and select **Package Details**.
+1. In the **Asset Configuration** window, select **Permissions**.
 
    - For a **group-owned** package, expand the roles tree. Then choose a permission level for each role. Selection boxes that are disabled indicate that the permission is already [configured](../../projects/groups.md#roles-and-permissions) for that role and cannot be changed from this window.
 
@@ -185,7 +185,7 @@ If desired, you can share packages with friends or grant access to specific user
      </tbody>
      </table>
 
-## Modifying Packages
+## Modify Packages
 
 You can edit packages and their children just like other objects. Modifying packages disables auto-update until you publish or revert the changes.
 
@@ -202,11 +202,11 @@ Once modified, packages with unpublished changes get a modified icon in the [Exp
 
 <img src="../../assets/studio/packages/Modify-Notification.png" alt="The Explorer window with an icon that identifies unpublished package changes." width="500" />
 
-### Adding or Updating Configurations
+### Add or update configurations
 
 You can include [instance attributes](../../studio/properties.md#instance-attributes) at the root of a package to customize its behavior, for example the max speed of a packaged vehicle or the debounce time for a packaged button.
 
-When you publish a package, the current set of attributes/values will become the package's **default configurations**. On any given copy of a package, configurations are shown in **bold italics** and those attribute values can be changed on a per-instance basis. When package copies are [updated](#updating-outdated-copies), modified configuration values will be preserved, while other attributes will be updated to the latest default value.
+When you publish a package, the current set of attributes/values will become the package's **default configurations**. On any given copy of a package, configurations are shown in **bold italics** and those attribute values can be changed on a per-instance basis. When package copies are [updated](#update-outdated-copies), modified configuration values will be preserved, while other attributes will be updated to the latest default value.
 
 <img src="../../assets/studio/packages/Package-Configured-Attributes.png" width="506" alt="The Attributes section of the Properties window. Two properties are highlighted as having their default values while two other italicized properties are highlighted to show they have been configured." />
 
@@ -218,17 +218,17 @@ Currently the only way to handle configuration values is to add scripts in the p
 If you simply want to update the default **values** for configurations, you can change those attribute values and republish the package (the package will **not** be flagged as modified in this case). If you want to publish other modifications but not change the default configuration values, you should publish on a package without any value changes, or revert the configurations to their defaults before you publish.
 </Alert>
 
-### Nested Packages
+### Nested packages
 
 You can nest packages inside of other packages to maintain and collaborate on complex hierarchies, such as a series of vehicle mechanics which can be modified independently of the vehicle's parent package. This example shows a car package that contains four copies of the same wheel package:
 
 <img src="../../assets/studio/packages/Nested-Packages.png" alt="An expanded hierarchy in the Explorer window showing how packages can contain packages." width="414" />
 
 <Alert severity="warning">
-If you modify a nested package, both the nested package **and** the parent package are considered as modified. You must [publish changes](#publishing-package-changes) to any **nested** package before you're allowed to publish changes to its **parent** package, since publishing the parent would mark it as current/unmodified and conflict with the nested package's modifications.
+If you modify a nested package, both the nested package **and** the parent package are considered as modified. You must [publish changes](#publish-package-changes) to any **nested** package before you're allowed to publish changes to its **parent** package, since publishing the parent would mark it as current/unmodified and conflict with the nested package's modifications.
 </Alert>
 
-### Package Scripts
+### Package scripts
 
 Each script within an **unmodified** package is read-only and shows a notification on the top with a hyperlink to unlock the script.
 
@@ -241,39 +241,39 @@ Clicking the hyperlink:
 
 Once the package is published and moved to an **unmodified** state, the scripts under it become read-only with a hyperlink to modify.
 
-## Reverting Package Changes
+## Revert package changes
 
-Instead of undoing an entire series of package changes one by one, you can [revert unpublished changes](#reverting-unpublished-changes) in one action, restore a package to a previous [version](#restoring-to-version), or revert changes to specific [configurations](#reverting-configurations).
+Instead of undoing an entire series of package changes one by one, you can [revert unpublished changes](#revert-unpublished-changes) in one action, restore a package to a previous [version](#restore-to-version), or revert changes to specific [configurations](#revert-configurations).
 
-### Reverting Unpublished Changes
+### Revert unpublished changes
 
 To undo an entire series of **unpublished** changes:
 
-1. In the Explorer window, locate modified copies by the exclamation point next to their names. You can also select modified copies in the 3D viewport, which might be easier.
+1. In the **Explorer** window, locate modified copies by the exclamation point next to their names. You can also select modified copies in the 3D viewport, which might be easier.
 
 1. Right-click a single modified copy and select **Undo Changes to Package**, or select multiple copies (at least one of them modified), right-click, and select **Undo Changes to Selected Packages**.
 
-### Restoring to Version
+### Restore to version
 
 To restore a package to a **previously published** version:
 
-1. In the Explorer window, 3D viewport, Toolbox, or Asset Manager, right-click the desired package and select **Package Details**.
-1. In the Asset Configuration window, select **Versions**. The window displays details for each published version, including the date and time of publication, along with any descriptions of the changes.
+1. In the **Explorer** window, 3D viewport, **Toolbox**, or **Asset Manager**, right-click the desired package and select **Package Details**.
+1. In the **Asset Configuration** window, select **Versions**. The window displays details for each published version, including the date and time of publication, along with any descriptions of the changes.
 1. Click the checkmark next to the version you want to restore and click **Submit**.
 
    <img src="../../assets/studio/packages/Versions.png" alt="The pop-up window for a chandelier asset. It displays multiple versions." width="800" />
 
 <Alert severity="warning">
-Reverting changes to a package does not reset the configuration to the default. See [Reverting Configuration](#reverting-configuration).
+Reverting changes to a package does not reset the configuration to the default. See [Reverting Configuration](#revert-configuration).
 </Alert>
 
-### Reverting Configurations
+### Revert configurations
 
-To revert any [configuration](#adding-or-updating-configurations) attribute to its default, select the **Reset** option from the gear menu in the **Attributes** section of the [Properties](../../studio/properties.md) window.
+To revert any [configuration](#add-or-update-configurations) attribute to its default, select the **Reset** option from the gear menu in the **Attributes** section of the **Properties** window.
 
 <img src="../../assets/studio/packages/Package-Configured-Attributes-Reset.png" alt="The Attributes section of the Properties window. The gear menu is expanded and the Reset menu item is highlighted." width="346" />
 
-## Comparing Package Versions
+## Compare package versions
 
 When a package has multiple versions, you can compare changes between versions using the diff viewer, which is helpful for reviewing package updates, comparing your local changes against the latest version, and checking the content of past versions before restoring.
 
@@ -293,7 +293,7 @@ The tool has a package hierarchy menu that indicates all added, removed, or modi
 
 To compare package versions:
 
-1. In the Explorer window or 3D viewport, right-click the target package and select **Compare Package Versions**.
+1. In the **Explorer** window or 3D viewport, right-click the target package and select **Compare Package Versions**.
 1. By default, the window compares changes between your local copy and the latest version. Use the two dropdown menus to compare different versions.
 
    <img src="../../assets/studio/packages/version-selector.png" alt="A close up view of an example diff viewer. The compare settings are highlighted." width="850" />
@@ -321,5 +321,5 @@ To compare package versions:
 
 Alternatively, you can open the script diff tool directly:
 
-1. In the Explorer window or 3D viewport, right-click the target package, which must either be a script or contain scripts, and select **View Script Changes**.
+1. In the **Explorer** window or 3D viewport, right-click the target package, which must either be a script or contain scripts, and select **View Script Changes**.
 1. In the diff tab that opens, compare all changes of the selected script between the current package copy and the latest published or local version.

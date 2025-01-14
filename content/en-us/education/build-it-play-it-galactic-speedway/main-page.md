@@ -33,7 +33,7 @@ With your new account, remember these safety tips:
 For more tips, please see <a href = "https://en.help.roblox.com/hc/en-us/articles/203313380-Account-Security-Theft-Keeping-your-Account-Safe-" >Keeping Your Account Safe</a>.
 </Alert>
 
-## Three Lessons, Three Prizes
+## Three lessons, three prizes
 
 To build the driftspeeder and add it to the race, follow along with each of the three step-by-step tutorials.
 <GridContainer numColumns="3">

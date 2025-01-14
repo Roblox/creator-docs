@@ -1,20 +1,20 @@
 ---
-title: Error Report
+title: Error report
 description: Explains how error reports can help you improve your experience.
 ---
 
 **Error report** lets you view up-to-the-minute Lua system errors and warnings for both server and client. Monitor your error report before and after updating your experience to identify potential issues early.
 
-## Viewing Your Error Report
+## View your error report
 
 To view your experience's error report:
 
 - Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page in the **Creator Dashboard** and select your experience.
 - Select **Error Report**.
 
-You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md#granting-group-permission).
+You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md).
 
-## Monitoring Errors and Warnings
+## Monitor errors and warnings
 
 You can apply the following filters and toggles to your error report:
 
@@ -30,7 +30,7 @@ Below the filters and toggles, a chart displays the numbers of errors and warnin
     <figcaption>Errors and warnings shown over time by category.</figcaption>
   </figure>
 
-## Troubleshooting Errors and Warnings
+## Troubleshoot errors and warnings
 
 The Errors and Warnings table has the following columns:
 
@@ -46,11 +46,11 @@ The Errors and Warnings table has the following columns:
     <figcaption>The error report table.</figcaption>
   </figure>
 
-<h4>Viewing the stack trace for an error or warning</h4>
+<h4>View the stack trace for an error or warning</h4>
 
 If you see a dropdown on an error or warning, click to expand it and see its corresponding _stack trace_. A stack trace is a list of the calls that your experience was performing when the exception was thrown. This can help you figure out what's going wrong.
 
- <h4>Error and Warning limits</h4>
+ <h4>Error and warning limits</h4>
 
 The error report can report up to 500 unique errors and 500 unique warnings at a time. The report drops any unique warnings after this limit and resets every 6 hours. To maximize the number of errors and warnings you can log, consider removing unique identifiers such as:
 
@@ -58,7 +58,7 @@ The error report can report up to 500 unique errors and 500 unique warnings at a
 - X, Y, Z location coordinates
 - Asset IDs
 
-## Resolving Errors and Warnings
+## Resolve errors and warnings
 
 To resolve errors and warnings, consider the following debugging steps:
 

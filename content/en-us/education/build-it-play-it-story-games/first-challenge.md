@@ -1,5 +1,5 @@
 ---
-title: First Challenge
+title: First challenge
 description: The first part of the Story Games series that teaches you to code in Roblox. Complete a quiz to earn a free Roblox avatar prize.
 next: /education/build-it-play-it-story-games/start-coding
 prev: /education/build-it-play-it-story-games/opening-the-template

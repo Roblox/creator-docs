@@ -1,5 +1,5 @@
 ---
-title: Native Code Generation
+title: Native code generation
 description: Luau Native Code Generation allows Luau code to be translated directly to CPU machine code.
 ---
 
@@ -7,7 +7,7 @@ With Luau support for native code generation, server-side scripts in your experi
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/llR_pNlJDQw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-## Enabling Native
+## Enable native code generation
 
 To enable native code generation for a `Class.Script`, add the <Typography noWrap>`--!native`</Typography> comment at the top:&sup1;
 
@@ -30,7 +30,7 @@ end
 
 <figcaption><sup>1</sup> In the future, some scripts might automatically start running natively if it is determined to be profitable, but manually placed `--!native` comments are currently required.</figcaption>
 
-## Best Practices
+## Best practices
 
 The following tips will help you benefit most from native code generation:
 
@@ -48,17 +48,17 @@ The following tips will help you benefit most from native code generation:
 
 These problems can be addressed by a judicious use of the `@native` attribute.
 
-## Code to Avoid
+## Code to avoid
 
 While all features will behave the same with or without native code generation enabled, some of them will not run natively and might cause de‑optimization or a fallback to interpreted execution. These include:
 
 - Use of deprecated `Global.LuaGlobals.getfenv()`/`Global.LuaGlobals.setfenv()` calls.
 - Use of various Luau built‑in functions like `Library.math.asin()` with non‑numeric arguments.
-- Passing improperly typed parameters to typed functions, for example calling `foo(true)` when `foo` is declared as `function foo(arg: string)`. Remember to always use correct [type annotations](#using-type-annotations).
+- Passing improperly typed parameters to typed functions, for example calling `foo(true)` when `foo` is declared as `function foo(arg: string)`. Remember to always use correct [type annotations](#use-type-annotations).
 
 When using the [Script Profiler](#script-profiler), you can compare time taken by a regular version of the function versus the one compiled natively. If a function inside a <Typography noWrap>`--!native`</Typography> script or marked with `@native` doesn't appear to be natively executing, one or more factors from the list above may be triggering de‑optimization.
 
-## Using Type Annotations
+## Use type annotations
 
 Native code generation attempts to infer the most likely type for a given variable in order to optimize code paths. For example, it's assumed that <Typography noWrap>`a + b`</Typography> is performed on numbers, or that a table is accessed in `t.X`. Given operator overloading, however, `a` and `b` may be tables or `Datatype.Vector3` types, or `t` may be a Roblox datatype.
 
@@ -80,7 +80,7 @@ local function sumComponentsFast(v: Vector3)
 end
 ```
 
-## Studio Tooling
+## Studio tooling
 
 The following Studio tooling is supported for <Typography noWrap>`--!native`</Typography> scripts and `@native` functions.
 
@@ -88,7 +88,7 @@ The following Studio tooling is supported for <Typography noWrap>`--!native`</Ty
 
 General [debugging](../studio/debugging.md) of scripts is supported, but the views for locals/upvalues may be incomplete and missing variables from [call stack](../studio/debugging.md#call-stack-window) frames that are executing natively.
 
-Also note that when debugging code selected for native compilation, placing [breakpoints](../studio/debugging.md#inserting-breakpoints) will disable native execution for those functions.
+Also note that when debugging code selected for native compilation, placing [breakpoints](../studio/debugging.md#insert-breakpoints) will disable native execution for those functions.
 
 ### Script Profiler
 
@@ -96,15 +96,15 @@ In the [Script Profiler](../studio/optimization/scriptprofiler.md), functions ex
 
 <img src="../assets/studio/console/ScriptProfiler-Native-Annotation.png" width="800" alt="Example of native functions flagged in the Script Profiler" />
 
-If a function marked `@native` or inside a <Typography noWrap>`--!native`</Typography> script doesn't show the `<native>` annotation, that function may not be executing natively due to [breakpoint](../studio/debugging.md#inserting-breakpoints) placement, use of [discouraged code](#code-to-avoid), or mismatched [type annotations](#using-type-annotations).
+If a function marked `@native` or inside a <Typography noWrap>`--!native`</Typography> script doesn't show the `<native>` annotation, that function may not be executing natively due to [breakpoint](../studio/debugging.md#insert-breakpoints) placement, use of [discouraged code](#code-to-avoid), or mismatched [type annotations](#use-type-annotations).
 
-### Luau Heap
+### Luau heap
 
-In the [Luau Heap](../studio/optimization/memory-usage.md#luau-heap) profiler, memory taken by native functions displays as `[native]` elements in the graph.
+In the [Luau heap](../studio/optimization/memory-usage.md#luau-heap) profiler, memory taken by native functions displays as `[native]` elements in the graph.
 
 <img src="../assets/studio/console/LuauHeap-Native-Annotation.png" width="840" alt="Example of native memory usage flagged in the Luau Heap profiler" />
 
-### Size Analysis
+### Size analysis
 
 Every natively-compiled script consumes memory. When the size of compiled code reaches a predefined limit, native compilation stops and the remaining code is run non‑natively. This makes it essential to choose scripts carefully for native compilation.
 
@@ -119,7 +119,7 @@ In the [Output](../studio/output.md) window, you'll see the total number of scri
 
 For each script, the output displays the number of functions compiled and the native code memory consumption. Each function is then listed in descending order of native code size, with anonymous functions shown as `[anonymous]` and entire scripts shown as `[top level]`. In the final column, the percentage is computed with respect to the native code size limit. Note that native code size of functions is reported precisely but the memory consumption for scripts is rounded up to the nearest page size.
 
-## Limits and Troubleshooting
+## Limits and troubleshooting
 
 Compiling code into instructions for a particular CPU requires additional storage memory. Additionally, optimizations for complex functions may take too much time to perform. Hitting an internal limit will report an error in Studio's [Output](../studio/output.md) window, including:
 

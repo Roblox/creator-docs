@@ -1,5 +1,5 @@
 ---
-title: NPC Kit
+title: NPC kit
 description: The NPC Kit provides several pre-built, customizable NPCs for use an any experience.
 ---
 
@@ -41,14 +41,14 @@ To use an NPC in your game:
 
 5. Locate the NPC and click it to add it into the place.
 
-## Character Structure
+## Character structure
 
 Each NPC model typically contains the following objects:
 
 <table>
 <thead>
   <tr>
-    <th>Object Name or [Type]</th>
+    <th>Object name or [Type]</th>
     <th>Type</th>
     <th>Description</th>
   </tr>
@@ -120,7 +120,7 @@ Each NPC model typically contains the following objects:
 **Square brackets []** refer to the object in general and the name doesn't matter. For example, [Model] refers to the weapon's `Class.Model` and you can rename it to whatever makes sense.
 </Alert>
 
-### Design Notes
+### Design notes
 
 When using the NPC kit, keep in mind the following design notes:
 
@@ -137,7 +137,7 @@ The Animate `Class.Script` in the NPC `Class.Model` handles [animation](../anima
 <table>
 <thead>
   <tr>
-    <th>Object Name or [Type]</th>
+    <th>Object name or [Type]</th>
     <th>Type</th>
     <th>Description</th>
   </tr>
@@ -168,7 +168,7 @@ The BodyPart `Class.BasePart` in the NPC `Class.Model` represent the various cha
 <table>
 <thead>
   <tr>
-    <th>Object Name or [Type]</th>
+    <th>Object name or [Type]</th>
     <th>Type</th>
     <th>Description</th>
   </tr>
@@ -214,7 +214,7 @@ Each NPC includes a `Class.Configuration` object within its hierarchy which acts
 <table>
 <thead>
   <tr>
-    <th>Object Name or [Type]</th>
+    <th>Object name or [Type]</th>
     <th>Type</th>
     <th>Description</th>
   </tr>
@@ -273,7 +273,7 @@ Each NPC includes a `Class.Configuration` object within its hierarchy which acts
 </tbody>
 </table>
 
-## Assigning Tags
+## Assign tags
 
 The **NPC** script uses `Class.CollectionService` tags to manage aggression toward other characters and players. Various tags from the following table can be assigned as follows:
 

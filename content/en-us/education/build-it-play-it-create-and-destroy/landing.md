@@ -1,5 +1,5 @@
 ---
-title: Create and Destroy
+title: Create and destroy
 description: Get started creating games and experiences in Roblox. Create a multiplayer game where you destroy buildings for points.
 next: /education/build-it-play-it-create-and-destroy/designing-a-map
 prev:
@@ -32,7 +32,7 @@ If you're new to Roblox and are <a href="https://www.roblox.com/home">signing up
 For more tips, please see <a href = "https://en.help.roblox.com/hc/en-us/articles/203313380-Account-Security-Theft-Keeping-your-Account-Safe-" >Keeping Your Account Safe</a>.
 </Alert>
 
-### Three Lessons, Three Prizes
+### Three lessons, three prizes
 
 <GridContainer numColumns="3">
   <figure>

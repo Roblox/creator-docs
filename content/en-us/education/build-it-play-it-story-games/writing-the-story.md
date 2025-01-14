@@ -1,11 +1,11 @@
 ---
-title: Writing the Story
+title: Write the story
 description: Part of the Story Games series that teaches you to code in Roblox. This section is brainstorming ideas for a story.
 next: /education/build-it-play-it-story-games/opening-the-template
 prev: /education/build-it-play-it-story-games/landing
 ---
 
-## Brainstorming Ideas
+## Brainstorm ideas
 
 Before coding, write the story you'll use as the base of your game. The story can be about anything you wish.
 
@@ -19,7 +19,7 @@ An example story is below:
 
 _In a tree on a hill lives the great wizard Nia. Every morning, the wizard loves eating a giant bowl of honey roasted lizard leaf._
 
-## Creating Placeholders
+## Create placeholders
 
 With an idea for a story, you can start the process of turning it into a game.
 

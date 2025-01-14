@@ -1,5 +1,5 @@
 ---
-title: Creating Engaging Experiences
+title: Create engaging experiences
 prev: /education/build-it-play-it-mansion-of-wonder/experienced-landing-page
 next: /education/build-it-play-it-mansion-of-wonder/connect-the-beam
 description: Start learning how to add a tutorial using beam effects in Roblox Studio as part of the Build It Play It Mansion of Wonder. You can add these to your own game, or use a provided template.
@@ -22,7 +22,7 @@ For instance, these two pictures compare the impact user experience can have to 
   </figure>
 </GridContainer>
 
-## Project Setup
+## Project setup
 
 This course will walk through designing a guided tutorial using an starter template. Alternatively, you can use your own project since the finished tutorial system can be applied to any experience.
 
@@ -30,7 +30,7 @@ This course will walk through designing a guided tutorial using an starter templ
 
 The starter place for this series includes parts of an amusement park themed game where players collect tickets for a prize. New players will be directed to booths to collect their tickets.
 
-### Importing the Template
+### Import the template
 
 1. Open the [Build It Play It - Boardwalk](https://www.roblox.com/games/6763393969) starter place. On the new webpage, click on the **...** button and select **Edit**. If prompted, allow your browser to Open Roblox.
 
@@ -40,7 +40,7 @@ The starter place for this series includes parts of an amusement park themed gam
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/open-template.jpeg" />
 
-### Using Your Own Project
+### Use your own project
 
 If using your own project, use the main actions your players will do during the experience. For instance, in a farming game, have players collect wheat to sell at a shop booth.
 
@@ -50,11 +50,11 @@ Additionally, we recommend the following:
 
 2. **Follow the Course and Adapt** - When finished, replace the premade models with your own. Keep in mind, you may need to rename some variable references in scripts.
 
-## The Template
+## The template
 
 The place includes two interactive booths with `Class.ProximityPrompt|ProximityPrompts`, which are objects that run scripts when players interact with something in the template. During the tutorial, players will interact with each booth to collect tickets and advance the tutorial. Note that all parts but the booth and test player are locked.
 
-## Beams and Attachments
+## Beams and attachments
 
 To guide players to booths for tickets, you'll create a path using beams like in the video below.
 

@@ -1,5 +1,5 @@
 ---
-title: Template Head Structure
+title: Template head structure
 description: Each Roblox avatar template contains modular separate pieces that must later be combined or removed.
 next: /art/characters/creating/blender-configurations
 prev: /art/characters/creating/template-files
@@ -7,7 +7,7 @@ prev: /art/characters/creating/template-files
 
 In each template file, each avatar body includes extra head mesh objects and face armature bones. Separating these objects within the templates allow you to make easier changes to each of these separate objects, as demonstrated during the texturing step.
 
-To avoid validation errors, you must [join](../../../art/characters/creating/combining-head-geometry.md) and [remove](../../../art/characters/creating/removing-extra-bones.md) these extra objects during the cleanup process prior to exporting.
+To avoid validation errors, you must [join](../../../art/characters/creating/combine-head-geometry.md) and [remove](../../../art/characters/creating/remove-extra-bones.md) these extra objects during the cleanup process prior to exporting.
 
 The extra head mesh objects are the following:
 <GridContainer numColumns="2">

@@ -32,7 +32,7 @@ Eligibility can include, but is not limited to:
 - Created a community resource that has helped many
 - Designed avatar assets that have grown into a popular Roblox clothing line
 
-## How to Apply
+## How to apply
 
 Fill out the application below. Roblox staff reviews applications every three months and will reach out if you have been selected.
 

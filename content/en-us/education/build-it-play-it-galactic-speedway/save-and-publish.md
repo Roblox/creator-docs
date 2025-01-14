@@ -1,5 +1,5 @@
 ---
-title: Save and Publish
+title: Save and publish
 prev: /education/build-it-play-it-galactic-speedway/moving-the-body
 next: /education/build-it-play-it-galactic-speedway/take-the-challenge
 description: Learn how to save all the progress you have made building a spaceship in the Roblox Build It Play It Galactic Speedway challenge.
@@ -21,6 +21,6 @@ It's a good idea to publish your game every ten minutes while you're working or 
    width="100%" />
 
 <Alert severity="info">
-<AlertTitle>Saving After Publishing</AlertTitle>
+<AlertTitle>Saving after publishing</AlertTitle>
 Next time you want to save your work, just go to **File → Publish to Roblox** or use the hotkey <kbd>Alt</kbd>+<kbd>P</kbd> or <kbd>⌘</kbd>+<kbd>P</kbd>.
 </Alert>

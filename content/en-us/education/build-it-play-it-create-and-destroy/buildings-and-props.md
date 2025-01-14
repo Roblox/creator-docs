@@ -1,5 +1,5 @@
 ---
-title: Buildings and Props
+title: Buildings and props
 description: Part of the Create and Destroy series. Add building and props to decorate a city.
 next: /education/build-it-play-it-create-and-destroy/complete-the-city
 prev: /education/build-it-play-it-create-and-destroy/build-the-roads
@@ -12,7 +12,7 @@ Once you're happy with the roads in your city, start placing the medium building
 
    <img src="../../assets/education/build-it-play-it-create-and-destroy/firstHalfSetup_800x450.jpg" width="100%" />
 
-## Finish With Props
+## Finish with props
 
 Next, start placing provided props, such as trees or cars, around the map. Players don't get any points for smashing these; they're there to add realism to your world.
 

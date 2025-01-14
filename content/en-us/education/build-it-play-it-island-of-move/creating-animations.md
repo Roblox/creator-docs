@@ -1,5 +1,5 @@
 ---
-title: Creating Animations
+title: Create animations
 description: Part of the Roblox Build It, Play It Challenge - Island of Move. Learn how to start creating animations.
 next: /education/build-it-play-it-island-of-move/create-the-first-pose
 prev: /education/build-it-play-it-island-of-move/test-the-game
@@ -9,7 +9,7 @@ Creating animations is like posing an action figure. For this tutorial, you'll c
 
 <video controls src="../../assets/education/build-it-play-it-island-of-move/creating-animations/show-animation-breakdown.mp4" width="100%"></video>
 
-## Set Up the Animation Editor
+## Set up the Animation Editor
 
 The poses and the final animation will be created using the Animation Editor.
 
@@ -32,7 +32,7 @@ The poses and the final animation will be created using the Animation Editor.
 
    <img src="../../assets/education/build-it-play-it-island-of-move/creating-animations/rig-selected.jpeg" width="50%" />
 
-## Preparing To Pose
+## Prepare to pose
 
 Before creating the poses, make it easier to pose figures by changing a program setting and then position the camera.
 
@@ -76,6 +76,6 @@ Before creating the poses, make it easier to pose figures by changing a program 
    </Alert>
 
    <Alert severity="warning">
-   <AlertTitle>Can't Move the Camera?</AlertTitle>
+   <AlertTitle>Can't move the camera?</AlertTitle>
    If the camera doesn't move when you press <kbd>W A S D</kbd>, click somewhere inside the game world.
    </Alert>

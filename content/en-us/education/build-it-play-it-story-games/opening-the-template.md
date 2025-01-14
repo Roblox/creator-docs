@@ -1,5 +1,5 @@
 ---
-title: Opening the Template
+title: Open the template
 description: Part of the Story Games series that teaches you to code in Roblox. Open the template used to code the story game experience.
 next: /education/build-it-play-it-story-games/first-challenge
 prev: /education/build-it-play-it-story-games/writing-the-story
@@ -7,14 +7,14 @@ prev: /education/build-it-play-it-story-games/writing-the-story
 
 With the story created, it's time to turn that vision into code using Roblox.
 
-## Starting Roblox Studio
+## Start Roblox Studio
 
 The experience will be created using **Roblox Studio**. It's free to use and can instantly publish games to iPhone, Android, Xbox Live, PC, Mac, and VR.
 
 1. Open **Roblox Studio** by double-clicking the it's icon on the desktop (Windows) or clicking the dock icon (Mac).
 2. On the login screen, enter your Roblox username and password, then click Log In.
 
-## Opening the Template
+## Open the template
 
 A template has been created that has everything needed for the experience to work, except the code for the actual story. Templates are pre-made worlds that you can use as a base for your own experiences.
 
@@ -28,7 +28,7 @@ A template has been created that has everything needed for the experience to wor
 
    <img src="../../assets/education/story-games/openFromFile.png" />
 
-## Closing Extra Windows
+## Close extra windows
 
 The first time you launch Roblox Studio, extra windows might open up that you don't need right now. Closing the extra windows will give you more space to see what you're doing.
 

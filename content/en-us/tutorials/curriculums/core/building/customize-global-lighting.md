@@ -1,5 +1,5 @@
 ---
-title: Customize Global Lighting
+title: Customize global lighting
 description: Explains how to use global lighting settings to refine the look and feel of your experience.
 prev: /tutorials/curriculums/core/building/create-basic-visual-effects
 next: /tutorials/curriculums/core/building/apply-polished-assets
@@ -13,10 +13,10 @@ next: /tutorials/curriculums/core/building/apply-polished-assets
 Using only a few modifications to Studio's default lighting settings, this section of the tutorial teaches you how to customize your global lighting in order to change the sun's position and light color, make dramatic shadows, and thicken the atmosphere.
 
 <Alert severity="info">
-   There are many additional lighting objects you can customize to impact global lighting in your experience. For an overview on all lighting objects available in Studio, see [Lighting and Effects](../../../../environment/index.md).
+   There are many additional lighting objects you can customize to impact global lighting in your experience. For an overview on all lighting objects available in Studio, see [Lighting and effects](../../../../environment/index.md).
 </Alert>
 
-## Set Lighting Properties
+## Set lighting properties
 
 The `Class.Lighting` service contains five high-level categories of properties that you can adjust to customize the global lighting in your experience:
 
@@ -29,10 +29,10 @@ The `Class.Lighting` service contains five high-level categories of properties t
 The following instructions show you how to adjust properties within almost all of these categories to alter the colors of ambient and reflective lighting, make the edges of shadows sharper, utilize the most advanced lighting technology, and modify the position of the sun and your world to match the sample [Island Jump - Final](https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample) settings.
 
 <Alert severity="info">
-   For an overview on the additional properties within the `Class.Lighting` service, see [Global Lighting](../../../../environment/lighting.md).
+   For an overview on the additional properties within the `Class.Lighting` service, see [Global lighting](../../../../environment/lighting.md).
 </Alert>
 
-### Adjust the Color of Light
+### Adjust the color of light
 
 The first step in matching the sample **Island Jump - Final** experience's `Class.Lighting` service properties is to adjust the color of both ambient and reflective lighting in your environment. There are two Lighting service properties that control the color of ambient lighting:
 
@@ -57,11 +57,11 @@ To adjust the color of ambient lighting in your environment:
 
 1. In the **Explorer** window, select **Lighting**.
 2. In the **Properties** window,
-   1. Set **Ambient** to **16, 16, 16**. The entire environment becomes subtly darker.
-   1. Set **ColorShift_Top** to **196, 222, 255**. The hue that reflects from surfaces facing the sun lightens.
-   1. Set **OutdoorAmbient** to **134, 158, 190**. All areas except for the tunnel display with a blue-grey hue.
+   1. Set **Ambient** to `16, 16, 16`. The entire environment becomes subtly darker.
+   1. Set **ColorShift_Top** to `196, 222, 255`. The hue that reflects from surfaces facing the sun lightens.
+   1. Set **OutdoorAmbient** to `134, 158, 190`. All areas except for the tunnel display with a blue-grey hue.
 
-### Harden Shadows
+### Harden shadows
 
 The second step in matching the sample **Island Jump - Final** experience's `Class.Lighting` service properties is to harden the shadows in your environment. This creates a more dramatic effect when players navigate between the outdoor and covered areas of your experience.
 
@@ -80,9 +80,9 @@ The second step in matching the sample **Island Jump - Final** experience's `Cla
 To harden the shadows in your environment:
 
 1. In the **Explorer** window, select **Lighting**.
-2. In the **Properties** window, set **ShadowSoftness** to **0**. Shadows produce hard edges.
+2. In the **Properties** window, set **ShadowSoftness** to `0`. Shadows produce hard edges.
 
-### Enable the Future Lighting System
+### Enable the future lighting system
 
 The third step in matching the sample **Island Jump - Final** experience's `Class.Lighting` service properties is to enable the most advanced lighting system in Studio. Studio begins every experience with the `Enum.Technology.ShadowMap` lighting system that renders crisp shadows and illumination from global lighting. However, to enhance the environment and equip your local light sources to produce precise shadows and illumination, you must enable the `Enum.Technology.Future` lighting system technology instead.
 
@@ -105,7 +105,7 @@ To enable the Future lighting system:
 1. In the **Explorer** window, select **Lighting**.
 2. In the **Properties** window, click the **Technology** dropdown, then select **Future**. The lighting system updates.
 
-### Change Sun Position
+### Change sun position
 
 The final step in matching the sample **Island Jump - Final** experience's `Class.Lighting` service properties is to change the position of the sun in the sky. There are three properties that control the sun's position:
 
@@ -135,10 +135,10 @@ To change the sun position:
 
 1. In the **Explorer** window, select **Lighting**.
 2. In the **Properties** window,
-   1. Set **ClockTime** to **9**. The sun moves to the position it would be in the real world at 9:00 in the morning.
-   1. Set **GeographicLatitude** to **78**. The world moves by 78 degrees, which also moves the sun to the right of your sea stack platforms.
+   1. Set **ClockTime** to `9`. The sun moves to the position it would be in the real world at 9:00 in the morning.
+   1. Set **GeographicLatitude** to `78`. The world moves by 78 degrees, which also moves the sun to the right of your sea stack platforms.
 
-## Atmosphere Properties
+## Atmosphere properties
 
 The `Class.Lighting` service's child `Class.Atmosphere` object allows you to create realistic environmental lighting effects by scattering sunlight in unique ways based on properties that simulate air particles. These properties can be very useful in creating a thickness in the environment's air, giving the atmosphere a tangible sense of depth.
 
@@ -148,7 +148,7 @@ The following instructions show you how to adjust `Class.Atmosphere` properties 
    For an overview on the additional properties within the `Class.Atmosphere`, see [Atmospheric Effects](../../../../environment/atmosphere.md).
 </Alert>
 
-### Increase Air Particle Density
+### Increase air particle density
 
 The first step in matching the sample **Island Jump - Final** experience's `Class.Atmosphere` properties is to increase air particle density. The `Class.Atmosphere.Density` property controls how many particles exist in the air of your environment. When you increase this property, the additional amount of particles obstruct the players' view of objects in the background. This is particularly useful for hiding the boundaries of your water terrain.
 
@@ -167,9 +167,9 @@ The first step in matching the sample **Island Jump - Final** experience's `Clas
 To increase air particle density in your environment:
 
 1. In the **Explorer** window, navigate to the **Lighting** service, then select its child **Atmosphere** object.
-2. In the **Properties** window, set **Density** to **0.375**. The air becomes thicker.
+2. In the **Properties** window, set **Density** to `0.375`. The air becomes thicker.
 
-### Blend Distant Objects
+### Blend distant objects
 
 The second step in matching the sample **Island Jump - Final** experience's `Class.Atmosphere` properties, as well as the final step in this section of the tutorial, is to blend distant objects on the horizon. The `Class.Atmosphere.Offset` property controls how light transmits between the camera and the sky background. When you increase this value, it creates a horizon silhouette; when you decrease this value, it blends distant objects into the sky for a seemingly endless and seamless open world.
 
@@ -190,7 +190,7 @@ While the sample experience could have set this property to zero to completely h
 To blend distant objects in your environment:
 
 1. In the **Explorer** window, navigate to the **Lighting** service, then select its child **Atmosphere** object.
-2. In the **Properties** window, set **Offset** to **0.17**. The air becomes thicker.
+2. In the **Properties** window, set **Offset** to `0.17`. The air becomes thicker.
 
 Now that your experience's global lighting is set to custom properties, in the next section of the tutorial, you will learn how to replace your greybox layout with high-quality polished assets.
 

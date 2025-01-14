@@ -1,5 +1,5 @@
 ---
-title: Evaluating Multiple Statements
+title: Evaluate multiple statements
 description: How to use the and keyword to evaluate more than one statement at a time in Roblox Luau.
 next: /tutorials/fundamentals/coding-3/multiple-conditions
 prev: /tutorials/fundamentals/coding-3/traps-with-if-statements
@@ -19,11 +19,11 @@ if 4 + 2 == 6 and 4 ~= 6 then
 end
 ```
 
-## Creating a Powerup
+## Create a powerup
 
 Powerups are in-experience items that give players special abilities like flying, invisibility, or speed. This powerup will boost the player's walking speed every time the powerup is touched. Continuously applying boosts can make the player go way too fast, so `and` will be used to control the upper walking speed limit.
 
-### Setting Up the Powerup
+### Set up the powerup
 
 Use this code with a simple part or a model, such as a crystal, coin, or glowing neon orb.
 
@@ -62,7 +62,7 @@ Use this code with a simple part or a model, such as a crystal, coin, or glowing
 
    ```
 
-## Speeding Players Up
+## Speed players up
 
 The speed boost will make avatars walk faster every time the speed boost is touched. That will quickly become very, very fast. The keyword `and` will ensure players can't go too fast by only enabling the speed boost if the player is under a certain speed.
 
@@ -90,7 +90,7 @@ The speed boost will make avatars walk faster every time the speed boost is touc
 
    ```
 
-### Fine Tuning the Speed Boost
+### Fine tune the speed boost
 
 OnTouch is called every time the speed boost is touched. Every step or slightest bounce triggers the Touched event and calls the connected function. The part's property, `CanTouch` can keep the Touched event from firing. Take advantage of CanTouch and turn off the speed boost for one second every time it's been activated.
 

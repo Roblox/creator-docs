@@ -1,5 +1,5 @@
 ---
-title: Light Sources
+title: Light sources
 description: Light sources simulate realistic lighting from objects such as torches, spotlights, and screens.
 ---
 
@@ -19,11 +19,11 @@ The `Class.Lighting.Technology|Technology` property, modifiable only in the [Pro
 To view **light guides** that indicate the color and field of effect from light sources, such as the angle of light emission from the cone's apex of a `Class.SpotLight`, open **File**&nbsp;&rang; **Studio&nbsp;Settings** and toggle on **Show&nbsp;Light&nbsp;Guides**.
 </Alert>
 
-## Light Types
+## Light types
 
 Light types include [Point Light](#point-light), [Spotlight](#spotlight), and [Surface Light](#surface-light). Each shares various properties from the `Class.Light` class, including `Class.Light.Color|Color`, `Class.Light.Brightness|Brightness`, and `Class.Light.Shadows|Shadows`.
 
-### Point Light
+### Point light
 
 A `Class.PointLight` emits light spherically from a single point. This object is ideal for **non-directional** lights like bulbs, torches, and fireballs.
 
@@ -84,7 +84,7 @@ To create a `Class.SpotLight` in Studio:
 1. Set the light's `Class.SpotLight.Face|Face` property to specify which direction light emits from.
 1. Adjust the light's `Class.SpotLight.Angle|Angle` and `Class.SpotLight.Range|Range`, as well as [shared properties](#shared-properties) like `Class.SpotLight.Brightness|Brightness` and `Class.SpotLight.Color|Color`.
 
-### Surface Light
+### Surface light
 
 A `Class.SurfaceLight` emits light from the face of a `Class.BasePart`. This object is ideal for lighting from TV or computer screens, billboards, and fluorescent panels.
 
@@ -121,7 +121,7 @@ To create a `Class.SurfaceLight` in Studio:
 1. Set the light's `Class.SurfaceLight.Face|Face` property to specify which surface light emits from.
 1. Adjust the light's `Class.SurfaceLight.Angle|Angle` and `Class.SurfaceLight.Range|Range`, as well as [shared properties](#shared-properties) like `Class.SurfaceLight.Brightness|Brightness` and `Class.SurfaceLight.Color|Color`.
 
-## Shared Properties
+## Shared properties
 
 All light sources share various properties from the `Class.Light` class, including [color](#color), [brightness](#brightness), and [shadows](#shadows).
 

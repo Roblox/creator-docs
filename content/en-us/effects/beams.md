@@ -13,7 +13,7 @@ A `Class.Beam` is an object that renders a `Class.Texture` between two `Class.At
 <video src="../assets/lighting-and-effects/beam/Showcase.mp4" controls
 width="100%"></video>
 
-## Creating a Beam
+## Create beams
 
 Before you begin to create a beam, it's useful to toggle on visibility of attachments so you can see where the beam starts and ends.
 
@@ -54,7 +54,7 @@ To create a beam:
 Beams require attachments to function properly. If you remove either attachment object from step 4, the beam stops rendering its texture.
 </Alert>
 
-## Customizing Beams
+## Customize beams
 
 By experimenting with the following properties, you can customize a beam's visual appearance to make unique gameplay elements like force fields, waterfalls, and pathway obstacles.
 
@@ -177,7 +177,7 @@ The beam below has a `Class.Beam.Width0|Width0` value of **0.5** and a
 
 <img src="../assets/lighting-and-effects/beam/Width-Adjusted.png" alt="A texture emits between two attachments. The texture starts with a small width and ends with a large width."  width="800" />
 
-### Texture Length/Mode
+### Texture length/mode
 
 A beam's `Class.Beam.TextureLength|TextureLength` and `Class.Beam.TextureMode|TextureMode` determine how its [texture](#texture) repeats across its length.
 

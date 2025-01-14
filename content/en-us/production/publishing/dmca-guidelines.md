@@ -1,5 +1,5 @@
 ---
-title: DMCA Guidelines
+title: DMCA guidelines
 description: Explains copyright law and the details of DMCA claims.
 ---
 
@@ -7,7 +7,7 @@ description: Explains copyright law and the details of DMCA claims.
 The information below is provided for general informational purposes only and is not legal advice. If you have any questions about this information or your specific situation or rights, please contact an attorney.
 </Alert>
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 <BaseAccordion>
 <AccordionSummary>
@@ -49,8 +49,7 @@ The **Digital Millennium Copyright Act** ("DMCA") allows copyright holders or th
 
   If you are a copyright owner or an agent of a copyright owner and believe that
   any content on Roblox infringes upon your copyrights, you may submit a
-  notification pursuant to the DMCA by contacting our Copyright Agent at
-  [copyright_agent@roblox.com](mailto:copyright_agent@roblox.com), or Legal, Roblox Corporation, 970 Park Place, Suite
+  notification pursuant to the DMCA by contacting our Copyright Agent at copyright_agent@roblox.com, or Legal, Roblox Corporation, 970 Park Place, Suite
   100, San Mateo, CA 94403. You may also contact us by phone at (888)&nbsp;858-2569.
 
 - **What information must I provide when filing a DMCA claim?**

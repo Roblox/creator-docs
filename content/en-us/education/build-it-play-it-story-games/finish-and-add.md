@@ -1,5 +1,5 @@
 ---
-title: Finishing and Add More
+title: Finish and add more
 description: Part of the Story Games series that teaches you to code in Roblox. Continue adding more to the story script.
 next: /education/build-it-play-it-story-games/third-challenge
 prev: /education/build-it-play-it-story-games/code-the-story
@@ -11,7 +11,7 @@ You're **almost** done with the project!
 
 What's left is to complete the first sentence, then add in another question to give players some more choice.
 
-## Finishing the Sentence
+## Finish the sentence
 
 To add more words or punctuation to the sentence, add another string using concatenation.
 
@@ -27,7 +27,7 @@ To add more words or punctuation to the sentence, add another string using conca
      -- =============================================
    ```
 
-## Adding a Second Question
+## Add a second question
 
 To ask a second question, create a new question and keep adding to the same variable holding the story.
 
@@ -75,7 +75,7 @@ To ask a second question, create a new question and keep adding to the same vari
    local story = "In a tree on a hill lives the great wizard " .. name1 .. ". " .. "Every morning, the wizard loves eating a giant bowl of honey roasted " .. food1 .. ". "
    ```
 
-## Optional Additions
+## Optional additions
 
 If you're interested in developing the story more, we've included some ideas. For example, some ways of improving the story include:
 
@@ -85,7 +85,7 @@ If you're interested in developing the story more, we've included some ideas. Fo
 
 Also, below are some **tips and tricks** to make stories for fun for players.
 
-### Using Variables More Than Once
+### Use variables more than once
 
 Variables can be used more than once — just use concatenation between strings where you want to include the word(s).
 
@@ -95,7 +95,7 @@ Variables can be used more than once — just use concatenation between strings 
 **Result**:
 I am Sameth and you are in the palace of Sameth!
 
-### Adding Line Breaks
+### Add line breaks
 
 Line breaks can be added by typing `\n` in a string. Also, more than one line break can be combined like `\n\n`.
 

@@ -1,5 +1,5 @@
 ---
-title: Finishing the Project
+title: Finish the project
 description: Part of the Adventure Game Series in Roblox. Finish the project by adjusting scripts.
 next:
 prev: /education/adventure-game-series/buying-upgrades
@@ -7,7 +7,7 @@ prev: /education/adventure-game-series/buying-upgrades
 
 Your experience is almost ready for others to play! Before sharing, you'll make some small changes to scripts, build out your world a bit more, and then play-test your experience.
 
-## Starting Player Variables
+## Start player variables
 
 While making the experience, many variables were set to small values, like the player's starting spaces was 2. While this made it easy to test, this might not be the right number for players in their final experience.
 
@@ -36,13 +36,13 @@ Before sharing your experience with others, it's important that the variables fe
    local upgradeCost = 500
    ```
 
-## Adding More Items
+## Add more items
 
 Where you place your items will affect how much fun a player has getting them. Different placements and obstacles to getting items are two ways of making item collection more fun.
 
 <img src="../../assets/education/adventure-game-series/map-crystals.jpg" />
 
-## Playtesting and Feedback
+## Playtesting and feedback
 
 Each number that a game designer uses for something in their experience is an educated guess based on what might be fun. Each part of your experience should be challenging, but fair.
 
@@ -52,7 +52,7 @@ Giving a player 10 spaces to start with might sound fun, but you don't really kn
 - Does the cost of upgrading feel too easy or too hard?
 - Are there any bugs that you didn't notice?
 
-## Expanding the Experience
+## Expand the experience
 
 Although you've finished the course, there are many ways you can continue adding to your experience using the skills you've learned:
 

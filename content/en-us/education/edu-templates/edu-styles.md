@@ -1,6 +1,6 @@
 ---
-title: Edu Styles
-description: Edu Styles
+title: Edu styles
+description: Edu styles
 ---
 
 ## Alerts
@@ -10,14 +10,14 @@ description: Edu Styles
 - `success` - Additional information not crucial to a lesson
 - `warning` - Warning. Use this as a heads up.
 
-## Learning Objective Table
+## Learning objective table
 
 To be used at the start of an individual module.
 
 <table>
   <tbody>
     <tr>
-      <td><h4>Learning Objectives</h4></td>
+      <td><h4>Learning objectives</h4></td>
       <td>
         Students will be able to:
         <ul>

@@ -1,13 +1,13 @@
 ---
-title: Sleep System
+title: Sleep system
 description: Explore how the sleep system automatically prevents unnecessary simulation of non-moving parts.
 ---
 
-Each [assembly](../physics/assemblies.md) in the Roblox engine corresponds to a single **rigid body**. The position and velocity of each rigid body describe where it's located and how fast it's moving, and one of the primary engine tasks is to update the positions and velocities of each assembly.
+Each [assembly](../physics/assemblies.md) in the Roblox Engine corresponds to a single **rigid body**. The position and velocity of each rigid body describe where it's located and how fast it's moving, and one of the primary engine tasks is to update the positions and velocities of each assembly.
 
 Assemblies can be connected together with [mechanical constraints](../physics/mechanical-constraints.md) and [mover constraints](../physics/mover-constraints.md) to form mechanisms such as cars or airplanes. As the number of assemblies and constraints in a mechanism increases, the time required to simulate the mechanism also increases. Fortunately, this increase is offset when the **sleep system** determines that the engine can skip simulation of non‑moving assemblies.
 
-## Sleep States
+## Sleep states
 
 Each assembly can be in one of three states: [awake](#awake), [sleep‑checking](#sleep-checking), or [sleeping](#sleeping).
 
@@ -15,7 +15,7 @@ Each assembly can be in one of three states: [awake](#awake), [sleep‑checking]
 
 An **awake** assembly is moving or accelerating, and is therefore simulated. Assemblies enter this state from situations outlined in [sleep‑checking](#sleep-checking) and [sleeping](#sleeping), as well as [additional wake situations](#additional-wake-situations).
 
-### Sleep-Checking
+### Sleep-checking
 
 A non-moving assembly that shares a constraint with at least one [awake](#awake) neighboring assembly is put into the **sleep-checking** state and is not simulated. On each worldstep, a sleep-checking assembly checks whether:
 
@@ -36,7 +36,7 @@ In some cases, simply checking for non-movement would cause an assembly to incor
 If an assembly falls asleep when you expect it to remain awake, it's commonly because the assembly is moving too slowly. In addition to automatic checks outlined in [sleep‑checking](#sleep-checking) and [sleeping](#sleeping), you can forcibly wake up an assembly through the conditions outlined in [additional wake situations](#additional-wake-situations).
 </Alert>
 
-## Threshold Reference
+## Threshold reference
 
 The following table provides the various displacement and velocity thresholds used to determine if an assembly is moving or accelerating.
 
@@ -45,7 +45,7 @@ The following table provides the various displacement and velocity thresholds us
 	<tr>
 		<th>Threshold</th>
 		<th>Value</th>
-		<th>State Change</th>
+		<th>State change</th>
 	</tr>
 </thead>
 <tbody>
@@ -82,7 +82,7 @@ The following table provides the various displacement and velocity thresholds us
 </tbody>
 </table>
 
-## Additional Wake Situations
+## Additional wake situations
 
 In addition to situations outlined in [sleep‑checking](#sleep-checking) and [sleeping](#sleeping), an assembly enters the [awake](#awake) state when:
 
@@ -116,7 +116,7 @@ In addition to situations outlined in [sleep‑checking](#sleep-checking) and [s
 
 - The assembly is within the `Class.Explosion.BlastRadius|BlastRadius` of an `Class.Explosion`.
 
-## Debugging Visualization
+## Debug visualization
 
 During playtesting, you can visualize assembly sleep states by toggling on **Awake&nbsp;parts** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 
