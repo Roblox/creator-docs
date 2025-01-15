@@ -63,7 +63,7 @@ Modular assets can consist of a nearly infinite variety of different shapes, siz
   </figure>
 </GridContainer>
 
-For information on how to configure pivot locations for parts and models you create within Studio, see [Pivot Tools](../../../studio/pivot-tools.md#edit-pivot). For information on how to configure pivot locations for meshes you create in third-party modeling tools, see the pivot point documentation for [Blender](https://docs.blender.org/manual/en/2.80/scene_layout/object/editing/transform/control/pivot_point.html) or [Maya](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2022/ENU/Maya-Basics/files/GUID-150B390E-840B-4FE3-B8E9-8DEBCE7CEC97-htm.html).
+For information on how to configure pivot locations for parts and models you create within Studio, see [Pivot Tools](../../../studio/pivot-tools.md#edit-pivot). For information on how to configure pivot locations for meshes you create in third-party modeling tools, see the pivot point documentation for [Blender](https://docs.blender.org/manual/en/2.80/scene_layout/object/editing/transform/control/pivot_point/index.html) or [Maya](https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2022/ENU/Maya-Basics/files/GUID-150B390E-840B-4FE3-B8E9-8DEBCE7CEC97-htm.html).
 
 ## Configure snapping behavior
 

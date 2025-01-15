@@ -3,7 +3,7 @@ title: Moods
 description: Moods are a type of facial animation that loop indefinitely, allowing users to express persistent facial emotion.
 ---
 
-A **mood** is a type of [facial animation](../../../art/characters/facial-animation/index.md) for animatable heads that loops indefinitely, allowing users to express themselves and react to others with a persistent facial emotion. Moods play simultaneously with other character [default animations](../../../animation/use.md#replace-default-animations), such as walking, climbing, and swimming, and if the default animation has a facial animation, the default animation blends with the character's mood.
+A **mood** is a type of [facial animation](../../../art/characters/facial-animation/index.md) for animatable heads that loops indefinitely, allowing users to express themselves and react to others with a persistent facial emotion. Moods play simultaneously with other character [default animations](../../../animation/using.md#default-character-animations), such as walking, climbing, and swimming, and if the default animation has a facial animation, the default animation blends with the character's mood.
 
 <GridContainer numColumns="2">
   <figure>

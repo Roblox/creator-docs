@@ -19,7 +19,7 @@ Using [UI Fundamentals&nbsp;- HUD Meter](https://www.roblox.com/games/1045069158
 
 ## Enable the Device Emulator
 
-As noted in [Create HUD meters](../ui/create-hud-meters.md), phones and tablets have the least amount of screen space, so it's important that your UI elements fit on smaller screens and that they're clearly visible to players. If you haven't done so already, enable the [Device Emulator](../../../studio/test-modes.md#device-emulation) in Studio:
+As noted in [Create HUD meters](../ui/create-hud-meters.md), phones and tablets have the least amount of screen space, so it's important that your UI elements fit on smaller screens and that they're clearly visible to players. If you haven't done so already, enable the [Device Emulator](../../../studio/testing-modes.md#device-emulation) in Studio:
 
 1. Open the [UI Fundamentals&nbsp;- HUD Meter](https://www.roblox.com/games/104506915856758/UI-Fundamentals-HUD-Meter) template in Studio.
 
@@ -48,7 +48,7 @@ To construct the settings button:
 2. Insert an `Class.ImageButton` into **HUDContainer** and rename it to **SettingsButton**.
 
    <img src="../../../assets/tutorials/interactive-ui/StarterGui-HUDContainer-SettingsButton.png" width="320" alt="Explorer window showing new ImageButton inserted and renamed to SettingsButton." />
-	 
+
 	 <img src="../../../assets/tutorials/interactive-ui/Settings-Button-Design-Initial.png" width="840" alt="New ImageButton in viewport." />
 
 3. With the new button selected, set the following in the **Properties** window:

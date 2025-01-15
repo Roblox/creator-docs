@@ -120,7 +120,7 @@ prev: /education/lesson-plans/roblox-developer/landing
 
 #### Guided tutorial - Create scripts
 
-1. Lead students through the [Creating a Script](../../../tutorials/fundamentals/coding-1/creating-a-script.md) tutorial.
+1. Lead students through the [Create a script](../../../tutorials/fundamentals/coding-1/create-a-script.md) tutorial.
 
 #### Wrap up
 

@@ -5,8 +5,8 @@ description: Sound Groups are audio mixers that group multiple audio objects so 
 
 A `Class.SoundGroup` is an **audio mixer** that groups multiple audio objects, such as `Class.Sound` objects or additional `Class.SoundGroup|SoundGroups`, allowing you to control the volume and dynamic effects properties of multiple audio signals at once. Useful applications include:
 
-- [Assigning audio](#assign-audio-objects-to-soundgroups) to **SoundEffects** and **BackgroundMusic** sound groups so that you can adjust each group's master volume for optimal audio balancing.
-- [Nesting sound groups](#nest-soundgroups) into meaningful categories under a mix tree.
+- [Assigning audio](#assign-audio-objects-to-sound-groups) to **SoundEffects** and **BackgroundMusic** sound groups so that you can adjust each group's master volume for optimal audio balancing.
+- [Nesting sound groups](#nest-sound-groups) into meaningful categories under a mix tree.
 - Grouping all sounds that need a specific [dynamic effect](../sound/dynamic-effects.md). For example, you can group all sounds inside a cave to a **Cave** sound group, then apply a `Class.ReverbSoundEffect` to simulate the sounds reflecting off of the cave's environment.
 
 When creating `Class.SoundGroup|SoundGroups`, it's best to keep them all in a single location for organizational purposes as you continue to add and edit audio within your experience. The following example stores the new `Class.SoundGroup` under `Class.SoundService`, as this service determines how `Class.Sound` objects play in experiences.

@@ -103,7 +103,7 @@ If you believe that your content on Roblox has been taken down because of mistak
 <AccordionDetails>
 When we notify you about DMCA notices, we also provide instructions about how to
 submit a counter‑notice, which may be sent to our DMCA agent:
-[copyright_agent@roblox.com](mailto:copyright_agent@roblox.com). Note that if you are under 13 years of age, a parent or other adult representative will have to submit the counter‑notice on your behalf.
+copyright_agent@roblox.com. Note that if you are under 13 years of age, a parent or other adult representative will have to submit the counter‑notice on your behalf.
 
 - **What will happen after I submit a DMCA counter‑notice?**
 
@@ -140,6 +140,6 @@ regarding DMCA.
 <Typography variant="h6">What if I think someone has copied original material that I uploaded to Roblox?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-If you believe that someone has improperly copied original material that you previously uploaded to Roblox, you may file a complaint using Roblox's User-to-User Copying Complaint Process. A complaint may be filed by emailing [copyright_agent@roblox.com](mailto:copyright_agent@roblox.com), identifying the copied material, the original work, and any other relevant details. Please view the "Disputes Between Users and Creators or Between Creators" section of our [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) for more information.
+If you believe that someone has improperly copied original material that you previously uploaded to Roblox, you may file a complaint using Roblox's User-to-User Copying Complaint Process. A complaint may be filed by emailing copyright_agent@roblox.com, identifying the copied material, the original work, and any other relevant details. Please view the "Disputes Between Users and Creators or Between Creators" section of our [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) for more information.
 </AccordionDetails>
 </BaseAccordion>

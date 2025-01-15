@@ -9,7 +9,7 @@ Roblox Studio includes free powerful 3D creation tools that enable you to effect
 Each of the following sections include a brief description as well as additional links for further learning:
 
 - [Basic layout of Roblox Studio's interface](#basic-layout) - Familiarize yourself with the various panels and tools available in Roblox Studio to navigate effectively.
-- [Common Shortcuts](#common-shortcuts) - Increase efficiency by mastering essential keyboard shortcuts for faster workflows in Roblox Studio.
+- [Common shortcuts](#common-shortcuts) - Increase efficiency by mastering essential keyboard shortcuts for faster workflows in Roblox Studio.
 - [How to use assets and packages](#assets-and-packages) - Learn to import, edit, and share assets and packages to enhance your workflow and collaboration.
 - [3D modeling within Studio](#3d-modeling) - Explore the fundamentals of creating and importing 3D models within Roblox Studio.
 - [Materials and Textures](#materials-and-textures) - Discover how Roblox uses materials and textures with your models to enhance the surface appearance of your objects.
@@ -82,12 +82,12 @@ Like all creation tools, keyboard shortcuts allow you to work efficiently and qu
     <td>Anchoring a part locks it in place, even when other objects collide with it. </td>
   </tr>
   <tr>
-    <td>In [Studio Settings](../studio/setup.md#customization)</td>
+    <td>In [Studio settings](../studio/setup.md#customization)</td>
     <td>Change highlight and selection colors</td>
     <td>Changing highlight and selection colors can help with accessibility.</td>
   </tr>
   <tr>
-    <td>In [Studio Settings](../studio/setup.md#customization)</td>
+    <td>In [Studio settings](../studio/setup.md#customization)</td>
     <td>Change camera speed</td>
     <td>Modify how fast the camera moves by default. </td>
   </tr>
@@ -128,7 +128,7 @@ The **Creator Store** is where you can find many assets created and shared by Ro
 
 Access the Creator Store through Studio's Toolbox or the [Creator Hub](https://create.roblox.com/store/models). For more information, see [Creator Store](../production/creator-store.md).
 
-#### Roblox created models
+#### Roblox-created models
 
 Roblox also provides free model packs that you can use within your experiences. These are high quality assets used in many of Roblox's showcase experiences. You can add these to your toolbox in various ways by directly adding them from the Creator Dashboard, or searching for them in the Toolbox.
 

@@ -68,8 +68,8 @@ Example response which returns the notification ID in the `id` field:
 
 ```json
 {
-	"path": "users/505306092/notifications/6ca4d981-36fa-4255-82a1-14d95c116889",
-	"id": "6ca4d981-36fa-4255-82a1-14d95c116889"
+  "path": "users/505306092/notifications/6ca4d981-36fa-4255-82a1-14d95c116889",
+  "id": "6ca4d981-36fa-4255-82a1-14d95c116889"
 }
 ```
 

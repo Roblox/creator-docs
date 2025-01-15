@@ -19,15 +19,14 @@ Once you set up a webhook, whenever a target event occurs, Roblox sends a reques
 
 Roblox currently supports the following event triggers for notifications:
 
-- **Subscription Cancelled** - When a user cancels a [subscription](../../production/monetization/subscriptions.md), a message is sent containing the [subscription](../../cloud/reference/Subscription) and subscriber, as well as the reason given for the cancellation.
+- **Subscription Cancelled** - When a user cancels a [subscription](../../production/monetization/subscriptions.md), a message is sent containing the subscription and subscriber, as well as the reason given for the cancellation.
 - **Subscription Purchased** - When a user purchases a subscription, a message is sent containing the subscription and subscriber.
 - **Subscription Refunded** - When a user receives a refund for their subscription, a message is sent containing the subscription and subscriber.
 - **Subscription Renewed** - When a user renews a subscription, a message is sent containing the subscription and subscriber.
 - **Subscription Resubscribed** - When a user resubscribes to a subscription, a message is sent containing the subscription and subscriber.
 - ["Right to be forgotten"](https://gdpr.eu/right-to-be-forgotten/) data deletion requests under the General Data Protection Regulation (**GDPR**).
 
-For more information on subscription events and their fields, see the [Cloud API Subscription](../../cloud/reference)
-(../../cloud/reference/Subscription) reference.
+For more information on subscription events and their fields, see the [Cloud API Subscription](../../cloud/reference/Subscription/) reference.
 
 ## Configure webhooks on Creator Dashboard
 
@@ -39,7 +38,7 @@ If you're setting up webhooks and handling personal data, ensure they comply wit
 
 To set up a webhook:
 
-1. Navigate to the [Webhooks](https://create.roblox.com/settings/webhooks) section of the [Creator Dashboard](https://create.roblox.com/settings/webhooks).
+1. Navigate to the [Webhooks](https://create.roblox.com/settings/webhooks) section of the Creator Dashboard.
 1. Click the **Add Webhook** button.
 1. Complete the configuration fields:
    1. **Webhook URL** — Specify the URL where you want to receive notifications and accept incoming webhook URLs from third-party entities. For more information on the requirements, see [Set up webhook URLs](#set-up-webhook-urls).
@@ -84,7 +83,7 @@ Third-party tools usually have their own requirements for webhooks that you need
 
 You can test whether the webhook you've configured can successfully receive notifications on the [Creator Dashboard](https://create.roblox.com/dashboard/creations):
 
-1. Navigate to the [Webhooks](https://create.roblox.com/dashboard/settings/webhooks) configuration page.
+1. Navigate to the [Webhooks](https://create.roblox.com/settings/webhooks) configuration page.
 2. Select the webhook you want to test from the list of configured webhooks.
 3. Click the pencil icon next to the target webhook.
 

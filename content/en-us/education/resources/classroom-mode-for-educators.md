@@ -141,7 +141,7 @@ Customizable announcements can be used to present questions or point out timing 
 
 ### Student features
 
-Students sharing an experience with an educator will get their own set of tools. Currently, we just support a toggle button to raise or lower an hand to get an educator's attention.
+Students sharing an experience with an educator will get their own set of tools. Currently, we just support a toggle button to raise or lower a hand to get an educator's attention.
 
 <GridContainer numColumns="2">
   <figure>

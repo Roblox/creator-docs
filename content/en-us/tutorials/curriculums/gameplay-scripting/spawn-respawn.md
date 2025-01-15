@@ -376,6 +376,6 @@ As part of initial setup, the sample laser tag experience also performs some sma
 
 - The experience uses a first-person camera by setting the `StarterPlayer.CameraMode.LockFirstPerson` property. Note that if you want to let users change between first- and third-person cameras, you must change the property programmatically rather than just setting it once in Studio, and modify the controls and UI to compensate for the change in perspective.
 
-- The experience uses the built-in Roblox leaderboard with the unit of "points", which players earn each time they tag another player out. You can see the configuration in **ServerScriptService** > **SetupLeaderboard**, but [In-Experience Leaderboards](../../../players/leaderboards.md) offers a full overview. Note that `onPlayerTagged` adds points to the leaderboard, which you'll learn about in [Add rounds](add-rounds.md) and [Detect hits](detect-hits.md).
+- The experience uses the built-in Roblox leaderboard with the unit of "points", which players earn each time they tag another player out. You can see the configuration in **ServerScriptService** > **SetupLeaderboard**, but [In-Experience Leaderboards](../../../players/leaderboards.md) offers a full overview. Note that `onPlayerTagged` adds points to the leaderboard, which you'll learn about in [Add rounds](./add-rounds.md) and [Detect hits](detect-hits.md).
 
 Now that players can spawn, choose a blaster, and aim it from a first-person point of view, the next section teaches you about the scripts behind creating round-based gameplay.

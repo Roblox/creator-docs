@@ -59,7 +59,7 @@ This mode is best for **new** event experiences consisting of multiple sequentia
 
 #### Inline mode
 
-An alternate framework mode is **inline mode** in which you similarly design unique [scenes](#creating-scenes) with scripting logic for their flow/events, but the framework will **not** destroy existing [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and user interface objects in order to clone assets/properties from a scene's **Environment** folder upon loading.
+An alternate framework mode is **inline mode** in which you similarly design unique [scenes](#create-scenes) with scripting logic for their flow/events, but the framework will **not** destroy existing [3D objects](../../parts/index.md), [terrain](../../parts/terrain.md), [lighting properties](../../environment/lighting.md), [environmental effects](../../environment/index.md#environment), and user interface objects in order to clone assets/properties from a scene's **Environment** folder upon loading.
 
 <Alert severity="success">
 This mode is best for existing experiences, as it preserves the design and layout of your place while letting you orchestrate events such as cutscenes.

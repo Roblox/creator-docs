@@ -7,7 +7,7 @@ description: Face accessories are 3D accessories that move and animate with a li
    <b>This guide covers advanced topics.</b> Before you begin, you should have prior knowledge on modeling, UV mapping, rigging, animation, and how to set up a character in [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview).
 </Alert>
 
-A face accessory is a cosmetic `Class.Accessory` that attaches to the head and can include items such as hair, eyebrows, glasses, and facial hair. To create a face accessory that is compatible with animatable heads, you use a similar design process as [layered clothing](../../../art/accessories#creation-process) to allow your accessory model to deform and stretch on a head when the head is posed or animated.
+A face accessory is a cosmetic `Class.Accessory` that attaches to the head and can include items such as hair, eyebrows, glasses, and facial hair. To create a face accessory that is compatible with animatable heads, you use a similar design process as [layered clothing](../../../art/accessories/index.md#creation-process) to allow your accessory model to deform and stretch on a head when the head is posed or animated.
 
 To create a face accessory, use a third-party modeling tool, such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview), to create a 3D model with the following requirements:
 

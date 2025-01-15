@@ -9,7 +9,7 @@ The **Explorer** window shows a hierarchical list of every instance inside an ex
 
 ## Parent-child hierarchy
 
-Roblox uses the concept of **parenting** to organize objects. All children of a parent object appear under its branch when [expanded](#expanding-and-collapsing-branches).
+Roblox uses the concept of **parenting** to organize objects. All children of a parent object appear under its branch when [expanded](#expand-and-collapse-branches).
 
 <figure>
 <img src="../assets/studio/explorer/Parent-Child-Hierarchy.jpg" width="800" alt="Explorer hierarchy showing Camera, Terrain, Block, and SignModel as children of Workspace; Board and Post as children of SignModel" />
@@ -107,7 +107,7 @@ You can organize objects into folders as follows:
 
 ## Filter instances
 
-Through the **Filter Workspace** input near the top of the window, You can filter instances by [name](#name-filter), [property](#property-filters), class/subclass/tag [bespoke](#bespoke-filters) queries, and [ancestry](#ancestry-filters) queries. You can also [combine parameters](#combining-parameters) for advanced logical filtering.
+Through the **Filter Workspace** input near the top of the window, You can filter instances by [name](#name-filter), [property](#property-filters), class/subclass/tag [bespoke](#bespoke-filters) queries, and [ancestry](#ancestry-filters) queries. You can also [combine parameters](#combine-parameters) for advanced logical filtering.
 
 <img src="../assets/studio/explorer/Filter-Diagram.png" width="372" alt="Objects filtered by query in Filter Workspace field" />
 
@@ -328,11 +328,11 @@ For advanced logical searches, you can combine filters through unions and groupi
 
 ## Select filtered results
 
-Within a [filtered](#filtering-instances) hierarchy, certain key shortcuts and mouse operations behave differently than they do within a non-filtered hierarchy.
+Within a [filtered](#filter-instances) hierarchy, certain key shortcuts and mouse operations behave differently than they do within a non-filtered hierarchy.
 
 ### Select all
 
-Within a non-filtered hierarchy, pressing <kbd>Ctrl</kbd><kbd>A</kbd> on Windows or <kbd>⌘</kbd><kbd>A</kbd> on Mac selects all objects. Within a [filtered](#filtering-instances) hierarchy, the same shortcut or the "select&nbsp;all" button selects only the **filter-matching** objects.
+Within a non-filtered hierarchy, pressing <kbd>Ctrl</kbd><kbd>A</kbd> on Windows or <kbd>⌘</kbd><kbd>A</kbd> on Mac selects all objects. Within a [filtered](#filter-instances) hierarchy, the same shortcut or the "select&nbsp;all" button selects only the **filter-matching** objects.
 
 <Tabs>
   <TabItem label="Non-Filtered">
@@ -353,7 +353,7 @@ Within a non-filtered hierarchy, pressing <kbd>Ctrl</kbd><kbd>A</kbd> on Windows
 
 Within a non-filtered hierarchy, clicking an object and then <kbd>Shift</kbd>-clicking another object selects everything within the range.
 
-Within a [filtered](#filtering-instances) hierarchy, if both the initially clicked object **and** the <kbd>Shift</kbd>-clicked object match the filter query, only filter-matching objects within the range are selected.
+Within a [filtered](#filter-instances) hierarchy, if both the initially clicked object **and** the <kbd>Shift</kbd>-clicked object match the filter query, only filter-matching objects within the range are selected.
 
 <Tabs>
   <TabItem label="Non-Filtered">
@@ -374,7 +374,7 @@ Within a [filtered](#filtering-instances) hierarchy, if both the initially click
 
 Clicking and dragging from the right side of the window initiates a selection box. Within a non-filtered hierarchy, everything within the box is selected.
 
-Within a [filtered](#filtering-instances) hierarchy, only filter-matching objects within the selection box are selected.
+Within a [filtered](#filter-instances) hierarchy, only filter-matching objects within the selection box are selected.
 
 <Tabs>
   <TabItem label="Non-Filtered">

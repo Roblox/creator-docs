@@ -50,7 +50,7 @@ methods:
     summary: |
       Creates a new, empty `Class.EditableMesh`.
     description: |
-      Creates a new, empty `Class.EditableMesh`. Vertices, triangles and their
+      Creates a new, empty `Class.EditableMesh`. Vertices, triangles, and their
       attributes can be added dynamically to it. If the device‑specific editable
       memory budget is exhausted, creation will fail and this method will return
       `nil`.
@@ -59,7 +59,10 @@ methods:
       - name: editableMeshOptions
         type: Dictionary?
         default:
-        summary: ''
+        summary: |
+          Table containing options for the created `Class.EditableMesh`.
+          Currently no options are available since
+          `Class.EditableMesh.FixedSize|FixedSize` will always be `false` for empty editable meshes.
     returns:
       - type: Object
         summary: ''
@@ -217,8 +220,7 @@ methods:
       the device-specific editable memory budget is exhausted, creation will
       fail and this method will return `nil`.
 
-      See the **Enabling EditableImage for Published Experiences** and
-      **Permissions** sections of `Class.EditableImage` for special
+      See the `Class.EditableImage` documentation for special
       considerations when using this API.
     code_samples: []
     parameters:
@@ -229,7 +231,10 @@ methods:
       - name: editableImageOptions
         type: Dictionary?
         default:
-        summary: ''
+        summary: |
+          Table containing options for the created `Class.EditableImage`.
+          Currently no options are available since resizing via
+          `Class.EditableImage.Size|Size` is not supported.
     returns:
       - type: Object
         summary: |

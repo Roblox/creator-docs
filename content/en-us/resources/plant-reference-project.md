@@ -330,7 +330,7 @@ uses the following methods, in order of preference:
 - Replication via the [player data system](#replication-via-player-data-system).
 - Replication via [attributes](#replication-via-attributes).
 - Replication via [tags](#replication-via-tags).
-- Messaging [directly](#messaging-directly-via-network-module) via the **Network** module.
+- Messaging [directly](#message-directly-via-network-module) via the **Network** module.
 
 ### Replication via player data system
 

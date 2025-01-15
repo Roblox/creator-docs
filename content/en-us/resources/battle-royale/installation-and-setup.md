@@ -220,7 +220,7 @@ By default, Roblox balances players/servers for an optimal social gameplay exper
 
 5. Click **Save** at the bottom of the window.
 
-## Publish aditional places
+## Publish additional places
 
 Now you'll need to open the remaining `.rbxl` files from the downloaded bundle, modify their `_places` tables, and publish them.
 

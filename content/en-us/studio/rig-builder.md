@@ -13,7 +13,7 @@ At this time, the rig builder tool doesn't generate character rigs compatible wi
 
 ## Rig types
 
-There are two types of default rigs you can [insert](#insert-a-pre-built-rig) into your experience with the rig builder. An **R6** rig is a legacy rig made up of 6 mesh objects, while an **R15** rig is a model with 15 mesh objects, significantly expanding the R6's limited motion range. When creating rigs for use in your experience, use a rig type that is consistent with the rig types you intend to support in your experience.
+There are two types of default rigs you can [insert](#insert-pre-built-rigs) into your experience with the rig builder. An **R6** rig is a legacy rig made up of 6 mesh objects, while an **R15** rig is a model with 15 mesh objects, significantly expanding the R6's limited motion range. When creating rigs for use in your experience, use a rig type that is consistent with the rig types you intend to support in your experience.
 
 <Alert severity = 'warning'>
 Note that you can only equip clothing and other layerable accessories to **R15** models.

@@ -2506,6 +2506,8 @@ events:
       `Class.CharacterMesh|CharacterMeshes`. This event will fire when all such
       objects have been inserted into the `Class.Player.Character`.
 
+      This event only fires on the server.
+
       One use for this event is to ensure all accessories have loaded before
       destroying them. See below for an example of this.
     code_samples:

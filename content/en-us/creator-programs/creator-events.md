@@ -70,4 +70,4 @@ As a voluntary Event Organizer, you can:
 
 ## Contact
 
-If you have any questions or concerns about this program, please reach out to any [program staff](https://devforum.roblox.com/g/Events_Staff) on the DevForum. Alternatively, you can email us at [dev-events@roblox.com](mailto:dev-events@roblox.com).
+If you have any questions or concerns about this program, please reach out to any [program staff](https://devforum.roblox.com/g/Events_Staff) on the DevForum. Alternatively, you can email us at dev-events@roblox.com.

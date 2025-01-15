@@ -89,7 +89,7 @@ prev: /education/lesson-plans/digital-citizenship/lights-and-polish
 
 1. Lead students through the following tutorials:
 
-   - [Code a function](../../../tutorials/fundamentals/coding-2/coding-a-function.md)
+   - [Code a function](../../../tutorials/fundamentals/coding-2/code-a-function.md)
    - [Intro to if statements](../../../tutorials/fundamentals/coding-3/intro-to-if-statements.md)
    - [Traps with if statements](../../../tutorials/fundamentals/coding-3/traps-with-if-statements.md)
 

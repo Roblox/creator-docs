@@ -248,7 +248,7 @@ Serialization and deserialization support the following Lua data types:
 - [Tables](../../luau/tables.md)
   - Tables must only contain other supported data types
   - Numeric keys are translated into strings if the length of the table is 0
-- [Buffers](../../reference/engine/libraries/buffer.yaml)
+- [Buffers](/reference/engine/libraries/buffer)
 
 If you try to store a data type that serialization doesn't support, you either:
 

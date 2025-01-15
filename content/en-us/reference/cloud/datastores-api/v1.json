@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Standard Data Stores",
-    "description": "This page includes reference documentation for working with standard data stores. For more information on using the API, see [Handling API Requests for Data Stores](../../../cloud/open-cloud/data-store-api-handling.md) and the [Usage Guide](../../../cloud/open-cloud/usage-data-stores.md).",
+    "title": "Standard data stores",
+    "description": "This page includes reference documentation for working with standard data stores. For more information on using the API, see [Handle API requests for data stores](../../../cloud/open-cloud/data-store-api-handling.md) and the [usage guide](../../../cloud/open-cloud/usage-data-stores.md).",
     "version": "v1"
   },
   "servers": [

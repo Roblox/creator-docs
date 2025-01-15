@@ -711,7 +711,7 @@ addItemAsync(assetId: `number`, productType: `Enum.InfoType`, hideFromCatalog: `
 
 Asynchronously adds an item to the merch booth so that it's eligible for purchase in the experience. `assetId` is the item's asset ID, `productType` is the item's `Enum.InfoType` enum, and `hideFromCatalog` can be used to hide the item in the catalog view.
 
-See [Adding Items](#adding-items) for details, as usage varies slightly for **assets** versus **game passes** or **developer products**.
+See [Adding Items](#add-items) for details, as usage varies slightly for **assets** versus **game passes** or **developer products**.
 
 <Alert severity="warning">
   This function can only be called from a `Class.Script` and it performs an asynchronous network call that may occasionally fail. As shown below, it's recommended that it be wrapped in `Global.LuaGlobals.pcall()` to catch and handle errors.

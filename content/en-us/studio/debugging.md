@@ -29,7 +29,7 @@ Repeat the previous steps until you solve the problem or find its root cause. As
 
 ### Insert breakpoints
 
-Breakpoints are checkpoints that pause or "break" the execution of your scripts at specific lines. You can use the pauses to inspect and debug your experience, [watch](#watch-window) variables, and inspect the [call stack](#call-stack-window). Breakpoints are one of the most effective ways to debug functions, so they're one of the most important debugging tools. You can insert a breakpoint at any line of executable code.
+Breakpoints are checkpoints that pause or "break" the execution of your scripts at specific lines. You can use the pauses to inspect and debug your experience, [watch](#watch) variables, and inspect the [call stack](#call-stack). Breakpoints are one of the most effective ways to debug functions, so they're one of the most important debugging tools. You can insert a breakpoint at any line of executable code.
 
 To insert a standard breakpoint at a line of code, left-click the margin to the right of its line number. You can also right-click the margin and click Insert Breakpoint. The breakpoint appears as a red dot. To disable it, click the dot.
 
@@ -41,7 +41,7 @@ If you insert a breakpoint at a line in a script, the script pauses before it ex
 
 <img alt="Active breakpoint in the debugger shows yellow arrow" src="../assets/studio/debugging/Gutter-Breakpoint-Active.png" width="320px" />
 
-When the script pauses, execute the following code one line at a time by stepping through them with the buttons in the [Script](../studio/script-tab.md) tab. The buttons also appear in the top-left corner of the [Call Stack](#call-stack-window) window. As you step through the code, monitor how your experience changes as the current line executes.
+When the script pauses, execute the following code one line at a time by stepping through them with the buttons in the [Script](../studio/script-tab.md) tab. The buttons also appear in the top-left corner of the [Call Stack](#call-stack) window. As you step through the code, monitor how your experience changes as the current line executes.
 
 <img src="../assets/studio/general/Script-Tab-Debugging-Tools.png" width="663" alt="Debugging tools indicated in Script tab"/>
 
@@ -80,7 +80,7 @@ The following table summarizes the three ways to step through code. To continue 
 
 ### Inspect code
 
-When a breakpoint pauses the experience during a playtest, you can inspect the [Watch](#watch-window) window, [Call Stack](#call-stack-window) window, [Output](#output) window, and [Script Editor](#script-editor) to find information about variable values and function executions. With this information, you can find the root cause of the problem in your experience.
+When a breakpoint pauses the experience during a playtest, you can inspect the [Watch](#watch) window, [Call Stack](#call-stack) window, [Output](#output) window, and [Script Editor](#script-editor) to find information about variable values and function executions. With this information, you can find the root cause of the problem in your experience.
 
 #### Watch
 

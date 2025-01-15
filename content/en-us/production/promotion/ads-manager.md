@@ -683,7 +683,7 @@ You can use the following status tables to understand what each status means.
 
 ## Ads billing
 
-**Ads billing** charges advertisers for ad placements on Roblox using the [payment method on file](#adding-a-payment-method). Billing information can be found under **Payment Activity**.
+**Ads billing** charges advertisers for ad placements on Roblox using the [payment method on file](#add-a-payment-method). Billing information can be found under **Payment Activity**.
 
 <img src="../../assets/promotion/ads-manager/Payment-Activity.png" width="360" />
 

@@ -360,11 +360,9 @@ The following is a list of common 3D art resources ordered by subject, as well a
 
 <a href="../tutorials/curriculums/environmental-art/index.md"><Typography variant='body1' style={{marginBottom: 12}}>Environmental art curriculum</Typography></a>
 <a href="../tutorials/use-case-tutorials/modeling/assemble-modular-environments.md"><Typography variant='body1' style={{marginBottom: 12}}>Assemble modular environments</Typography></a>
-<a href="../tutorials/use-case-tutorials/lighting/light-with-props.md"><Typography variant='body1' style={{marginBottom: 12}}>Light with props</Typography></a>
+<a href="../effects/light-sources.md"><Typography variant='body1' style={{marginBottom: 12}}>Light with props</Typography></a>
 <a href="../tutorials/use-case-tutorials/audio/in-game-sounds.md"><Typography variant='body1' style={{marginBottom: 12}}>In-game sounds</Typography></a>
 <a href="../tutorials/use-case-tutorials/lighting/enhance-outdoor-environments-with-future-lighting.md"><Typography variant='body1' style={{marginBottom: 12}}>Enhance outdoor environments with future lighting</Typography></a>
-<a href="../tutorials/use-case-tutorials/vfx/basic-particle-effects.md"><Typography variant='body1' style={{marginBottom: 12}}>Basic particle effects</Typography></a>
-<a href="../tutorials/use-case-tutorials/vfx/custom-particle-effects.md"><Typography variant='body1' style={{marginBottom: 12}}>Custom particle effects</Typography></a>
 <a href="https://devforum.roblox.com/t/custom-skyboxes-101/2849003"><Typography variant='body1' style={{marginBottom: 12}}>Custom skyboxes 101 (Staff)</Typography></a>
 
 <br />

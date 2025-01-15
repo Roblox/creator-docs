@@ -165,7 +165,7 @@ Teach how to code and create games for the Roblox platform - perfect for educato
 
 #### Guided tutorial - Create scripts
 
-1. Lead students through the [Create a script](../../tutorials/fundamentals/coding-1/creating-a-script.md) tutorial.
+1. Lead students through the [Create a script](../../tutorials/fundamentals/coding-1/create-a-script.md) tutorial.
 
 #### Wrap up
 
@@ -276,7 +276,7 @@ Teach how to code and create games for the Roblox platform - perfect for educato
 
 1. Lead students through the following tutorials:
 
-   - [Code a function](../../tutorials/fundamentals/coding-2/coding-a-function.md)
+   - [Code a function](../../tutorials/fundamentals/coding-2/code-a-function.md)
    - [Intro to if statements](../../tutorials/fundamentals/coding-3/intro-to-if-statements.md)
    - [Traps with if statements](../../tutorials/fundamentals/coding-3/traps-with-if-statements.md)
 

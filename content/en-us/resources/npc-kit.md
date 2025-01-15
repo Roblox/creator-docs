@@ -7,7 +7,7 @@ description: The NPC Kit provides several pre-built, customizable NPCs for use a
 The content of this project and documentation can be used under Roblox's [Limited Use License](../resources/limited-use-license.md).
 </Alert>
 
-NPCs (non-player characters) can add a lot of depth to an experience. All of the following NPCs can be visually customized, their [behavior modified](#configuration), and the zombie/soldiers can even defend an area by attacking players or other characters using a [tag system](#assigning-tags) to set behavior.
+NPCs (non-player characters) can add a lot of depth to an experience. All of the following NPCs can be visually customized, their [behavior modified](#configuration), and the zombie/soldiers can even defend an area by attacking players or other characters using a [tag system](#assign-tags) to set behavior.
 
 To use an NPC in your game:
 
