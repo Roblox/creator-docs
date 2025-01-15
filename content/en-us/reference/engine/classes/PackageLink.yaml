@@ -96,7 +96,6 @@ properties:
     type: bool
     tags:
       - Hidden
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:

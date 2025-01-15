@@ -62,7 +62,8 @@ methods:
         summary: |
           Table containing options for the created `Class.EditableMesh`.
           Currently no options are available since
-          `Class.EditableMesh.FixedSize|FixedSize` will always be `false` for empty editable meshes.
+          `Class.EditableMesh.FixedSize|FixedSize` will always be `false` for
+          empty editable meshes.
     returns:
       - type: Object
         summary: ''
@@ -220,8 +221,8 @@ methods:
       the device-specific editable memory budget is exhausted, creation will
       fail and this method will return `nil`.
 
-      See the `Class.EditableImage` documentation for special
-      considerations when using this API.
+      See the `Class.EditableImage` documentation for special considerations
+      when using this API.
     code_samples: []
     parameters:
       - name: content

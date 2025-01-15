@@ -452,8 +452,8 @@ properties:
     description: |
       Controls the size that the `Class.BillboardGui` will have on screen.
       Unlike `Class.GuiObject.Size`, the
-      [scale](../../../ui/position-and-size.md#size) components of this
-      property set the billboard's stud size in 3D space.
+      [scale](../../../ui/position-and-size.md#size) components of this property
+      set the billboard's stud size in 3D space.
     code_samples:
     type: UDim2
     tags: []

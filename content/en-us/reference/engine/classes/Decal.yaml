@@ -204,6 +204,25 @@ properties:
     capabilities:
       - Basic
     writeCapabilities: []
+  - name: Decal.TextureContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Decal.Transparency
     summary: |
       Determines the transparency of the `Class.Decal` with 0 being completely
