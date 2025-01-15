@@ -110,7 +110,7 @@ Similar to open access betas, these experiences should be playable, mostly bug f
 
 Running an open beta takes time and energy away from development as developers must respond to feedback and interact with their community. A lower-impact alternative is the limited time test. In this method, developers plan for an open access beta test during a specific time frame, such as a key weekend or week. An experience is opened and closed based off the time. Similar to the open access beta, the experience should be playable, generally bug-free, but can lack content.
 
-To launch the limited time test, we advise developers to advertise the event. Developers can use experience [announcements](../../production/promotion/audience-engagement.md#announcing-updates), group, and [social media](../../production/promotion/audience-engagement.md#linking-to-social-media) to communicate when the experience will be temporarily opened.
+To launch the limited time test, we advise developers to advertise the event. Developers can use experience [notifications](../../production/promotion/experience-notifications.md), group, and [social media](../../production/promotion/index.md#social-media) to communicate when the experience will be temporarily opened.
 
 <table>
 <thead>

@@ -84,7 +84,7 @@ curl --include --location --request GET "https://apis.roblox.com/cloud/v2/univer
 </Tabs>
 
 Rather than just listing the children, the response includes an `Operation`
-object with a different endpoint. [Poll this endpoint](#polling-for-results) to
+object with a different endpoint. [Poll this endpoint](#poll-for-results) to
 asynchronously retrieve the actual list of children. A more complete code sample
 looks like this:
 
@@ -410,16 +410,17 @@ from the web. The demo consists of the following:
 
 ### Create an API key
 
-   1. Go to the [Creator Hub Open Cloud API Keys](https://create.roblox.com/dashboard/credentials?activeTab=ApiKeysTab) page and click **Create API Key**.
-   1. Fill out the form with the following information.
-      - **Name**: PotionShop
-      - **API System**: Add the **universe-place-instances** API system. Add your Potion Shop experience to the system. For **Experience Operations**, add read and write access.
-      - **Accepted IP Addresses**: Add 0.0.0.0/0 as an IP Address
-      - **Expiration**: No Expiration
-      - Click **Save & Generate Key** and then **Copy Key to Clipboard**.
+1.  Go to the [Creator Hub Open Cloud API Keys](https://create.roblox.com/dashboard/credentials?activeTab=ApiKeysTab) page and click **Create API Key**.
+1.  Fill out the form with the following information.
 
-   1. Paste the API key to the API Key cell (D2) on the Intro tab of your Google
-      Sheet.
+    - **Name**: PotionShop
+    - **API System**: Add the **universe-place-instances** API system. Add your Potion Shop experience to the system. For **Experience Operations**, add read and write access.
+    - **Accepted IP Addresses**: Add 0.0.0.0/0 as an IP Address
+    - **Expiration**: No Expiration
+    - Click **Save & Generate Key** and then **Copy Key to Clipboard**.
+
+1.  Paste the API key to the API Key cell (D2) on the Intro tab of your Google
+    Sheet.
 
 ### Obtain the universe and place ID
 

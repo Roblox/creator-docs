@@ -88,7 +88,7 @@ If you want to save a set of frame data for later review (or to share with someo
 - On Windows, check `%LOCALAPPDATA%\Roblox\logs`.
 - On macOS, check `~/Library/Logs/Roblox`.
 
-These HTML files use the same [web-based UI](#using-the-web-ui) as the [live connection for mobile devices](#profiling-on-mobile-devices) and [server dumps](#profiling-the-server).
+These HTML files use the same [web-based UI](#use-the-web-ui) as the [live connection for mobile devices](#profile-mobile-devices) and [server dumps](#profile-the-server).
 
 <Alert severity="info">
 Dumps only contain data for the selected number of frames, **not** the entire duration that the experience has been running. The exception is [counters mode](modes.md#counters-mode), which includes data from when Studio or the client started running to the time of the dump.

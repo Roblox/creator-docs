@@ -150,7 +150,7 @@ eventManagerFunc:Invoke("Stop", {eventInstId = cooldownId} )
 
 Interpolants or other actions that are "cosmetic" (do not change simulation for all players) could be run on clients, which could result in smoother interpolation. In the event description, we could provide a default value for all actions as onServer = true (without it, default is client). Each action can overwrite it by setting its own onServer.
 
-To easily connect running an event to a trigger, we used helper functions `ConnectTriggerToEvent` or `ConnectSpawnedTriggerToEvent`, the latter of which finds the trigger by name. To allow the same event to be triggered using different triggers, we could call `eventManagerFunc` with a "Setup" key and a set of trigger volumes. For an example of a trigger volume in action, see [Making the Expanding Pantry](../../resources/the-mystery-of-duvall-drive/developing-a-moving-world.md#making-the-expanding-pantry).
+To easily connect running an event to a trigger, we used helper functions `ConnectTriggerToEvent` or `ConnectSpawnedTriggerToEvent`, the latter of which finds the trigger by name. To allow the same event to be triggered using different triggers, we could call `eventManagerFunc` with a "Setup" key and a set of trigger volumes. For an example of a trigger volume in action, see [Making the Expanding Pantry](../../resources/the-mystery-of-duvall-drive/develop-a-moving-world.md#making-the-expanding-pantry).
 
 #### Event parameters
 

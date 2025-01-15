@@ -85,7 +85,7 @@ If you decide to design your own tileable textures in third-party modeling tools
 - Create equal visible distribution so that no one element is more distinguishable than others.
 - Even if a tileable texture is technically seamless, review the overall image to ensure it doesn't have an element that is so pronounced that the texture's repetition is noticeable.
 
-The previous point is near impossible to remove entirely, but you can set Studio material to tile organically, or add in additional decal overlays to hide the repetition effectively. For more information on these techniques, see [Assemble an asset library - Creating custom materials](assemble-an-asset-library.md#create-custom-materials) and [Assemble modular environments - Reduce visible repetition](../../use-case-tutorials/modeling/assemble-modular-environments.md#reduce-visible-repetition), respectively.
+The previous point is near impossible to remove entirely, but you can set Studio material to tile organically, or add in additional decal overlays to hide the repetition effectively. For more information on these techniques, see [Assemble an asset library - Creating custom materials](./assemble-an-asset-library.md#create-custom-materials) and [Assemble modular environments - Reduce visible repetition](../../use-case-tutorials/modeling/assemble-modular-environments.md#reduce-visible-repetition), respectively.
 
 ### Trim sheets
 

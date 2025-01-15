@@ -171,7 +171,7 @@ Following the visual hierarchy best practices from [Wireframe Your Layouts](wire
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/ObjectiveUI-Intro.png" />
 </figure>
 
-For example, the sample provides an objective UI component that players reference to know what they need to do to be successful in a round. As players tag out enemy team members and earn points, this component keeps track of each team's score against the overall goal within the header's prompt. For a high-level review of all of the client and server scripts that work together to track points, see  [Track Points](../gameplay-scripting/adding-rounds.md#track-points) in the Gameplay Scripting Curriculum.
+For example, the sample provides an objective UI component that players reference to know what they need to do to be successful in a round. As players tag out enemy team members and earn points, this component keeps track of each team's score against the overall goal within the header's prompt. For a high-level review of all of the client and server scripts that work together to track points, see  [Track points](../gameplay-scripting/add-rounds.md#track-points) in the Gameplay Scripting Curriculum.
 
 <figure>
     <img width="90%" img src="../../../assets/tutorials/user-interface-design/Section3/Objective-Intro.jpg" />
@@ -372,7 +372,7 @@ setupTouchButtonAsync(gui)
   </TabItem>
   <TabItem key = "2" label="setObjective">
 
-After a player selects their blaster, the following `ReplicatedStorage.HUDGuiSetup.setObjective` script requires the **TEAM_SCORE_LIMIT** module script so that it can swap the placeholder string "%d"  in the UI objective's `Class.TextLabel` object. To learn more about this placeholder string, see [Set Objective](../gameplay-scripting/adding-rounds.md#set-objective) in the Gameplay Scripting curriculum.
+After a player selects their blaster, the following `ReplicatedStorage.HUDGuiSetup.setObjective` script requires the **TEAM_SCORE_LIMIT** module script so that it can swap the placeholder string "%d"  in the UI objective's `Class.TextLabel` object. To learn more about this placeholder string, see [Set Objective](../gameplay-scripting/add-rounds.md#set-objective) in the Gameplay Scripting curriculum.
 
 ``` lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -398,7 +398,7 @@ The module script then calls its `getTeamFromTeamColor` function to validate tha
 
 When this occurs, `startSyncingTeamPoints` sets both team counters' `Class.TextLabel` objects to their corresponding `teamPoints` values, and continues to update them whenever a player scores a point by tagging another player out on the opposite team.
 
-To learn more about how the server knows when a team meets the objective goal and wins the round, see [Track Points](../gameplay-scripting/adding-rounds.md#track-points) in the Gameplay Scripting Curriculum.
+To learn more about how the server knows when a team meets the objective goal and wins the round, see [Track Points](../gameplay-scripting/add-rounds.md#track-points) in the Gameplay Scripting Curriculum.
 
 ``` lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -1122,7 +1122,7 @@ return setupTouchButtonAsync
   </TabItem>
   <TabItem key = "3" label="UserInputHandler">
 
-The following `ReplicatedStorage.UserInputHandler` client script connects the blast functionality with user input. If the player is using touch controls and the blaster button is enabled on their device, the script listens for touch activation on the blaster button, then activates `attemptBlastClient`. For more information on `attemptBlastClient`and blaster behavior, see [Check Whether the Player Can Blast](../gameplay-scripting/implementing-blasters.md#check-whether-the-player-can-blast) from the Gameplay Scripting curriculum.
+The following `ReplicatedStorage.UserInputHandler` client script connects the blast functionality with user input. If the player is using touch controls and the blaster button is enabled on their device, the script listens for touch activation on the blaster button, then activates `attemptBlastClient`. For more information on `attemptBlastClient`and blaster behavior, see [Check Whether the Player Can Blast](../gameplay-scripting/implement-blasters.md#check-whether-the-player-can-blast) from the Gameplay Scripting curriculum.
 
 ``` lua
 local ContextActionService = game:GetService("ContextActionService")
@@ -1332,7 +1332,7 @@ setupTouchButtonAsync(gui)
 
 After a player selects their blaster, the following `ReplicatedStorage.HUDGuiSetup.StartSyncingTeamColor` script calls the `setPlayerTeamIcon` function to match the player indicator's team color and icon to the player's corresponding team. It starts by checking the player's `Class.Player.TeamColor` value set by the `Class.Teams` service. If their `Class.Player.TeamColor|TeamColor` value equals **mint**, the **TeamAIcon** from step 6 becomes visible; conversely, if their `Class.Player.TeamColor|TeamColor` value equals **carnation pink**, the **TeamBIcon** from step 6 becomes visible.
 
-For more information on how players sort into a team with a unique team color, see [Creating Teams](../gameplay-scripting/creating-teams.md) in the Gameplay Scripting curriculum.
+For more information on how players sort into a team with a unique team color, see [Creating Teams](../gameplay-scripting/create-teams.md) in the Gameplay Scripting curriculum.
 
 ``` lua
 local Players = game:GetService("Players")
@@ -2041,7 +2041,7 @@ return addCooldownBar
 
 The following `FirstPersonBlasterVisuals.runCooldownBarEffect` module script handles the tweening visual effect that communicates the blaster is unable to blast again until the red bar is no longer visible. When a player blasts their blaster, the script sets `Bar` to the full width of `Container`, then tweens the size down to `0` for the duration of `secondsBetweenBlasts`. Once the size of `Bar` is `0`, the player can blast again, and the entire process repeats.
 
-For more information on blaster behavior, see [Implementing Blasters](../gameplay-scripting/implementing-blasters.md) from the Gameplay Scripting curriculum.
+For more information on blaster behavior, see [Implement Blasters](../gameplay-scripting/implement-blasters.md) from the Gameplay Scripting curriculum.
 
 ``` lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")

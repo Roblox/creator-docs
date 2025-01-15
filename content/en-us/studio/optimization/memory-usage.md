@@ -19,7 +19,7 @@ The **Memory** tool categorizes and displays real-time memory usage. It displays
 
 To view memory allocation:
 
-1. [Open](#open-developer-console) **Developer Console**.
+1. Open the **Developer Console**.
 1. Expand the tools dropdown to select **Memory**.
 
    <img src="../../assets/studio/console/Memory-Open.png" width="200" alt="Dropdown menu of all Developer Console tools with the Memory option highlighted for selection." />
@@ -154,7 +154,7 @@ The **Luau heap** tool allows you to create snapshots on the current allocation 
 
 To create a snapshot of your memory allocation:
 
-1. [Open](#open-developer-console) **Developer Console**.
+1. Open the **Developer Console**.
 1. Expand the tools dropdown to select **LuauHeap**.
 
    <img src="../../assets/studio/console/LuauHeap-Open.png" width="200" alt="Dropdown menu of all Developer Console tools with the LuauHeap option highlighted for selection." />

@@ -10,7 +10,7 @@ Layered clothing lets you create 3D clothes and accessories that nearly any avat
 We recommend building a base body character upon which you can fit the layered clothing you're creating. We'll go over how to do this in an external DCC application and combine it all in Studio to create the final character from the space station.
 
 <Alert severity="info">
-For additional layered clothing resources, such as guides, example projects, and reference models, see [3D accessories](../../art/accessories#3d-accessories).
+For additional layered clothing resources, such as guides, example projects, and reference models, see [3D accessories](../../art/accessories/index.md).
 </Alert>
 
 ## Build the custom character

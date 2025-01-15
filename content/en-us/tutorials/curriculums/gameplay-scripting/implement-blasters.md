@@ -103,7 +103,7 @@ end
 
 This function starts by using `getBlasterConfig` to retrieve the player's blaster type. The sample provides two types of blasters: one that produces several beams with a wide, horizontal spread, and another that produces a single beam. You can find their configurations in **ReplicatedStorage** > **Instances** > **LaserBlastersFolder**.
 
-The function then uses `currentCamera.CFrame` as the point of origin for the blast, passing it to `getDirectionsForBlast`. At this point, the code is no longer about the blaster, it's about the laser beam, which you will learn more about in the [Detecting Hits](detecting-hits.md) section of the tutorial. Finally, after creating the `rayResults` table, `generateBlastData` has all the information it needs to return the blast data to `blastClient`.
+The function then uses `currentCamera.CFrame` as the point of origin for the blast, passing it to `getDirectionsForBlast`. At this point, the code is no longer about the blaster, it's about the laser beam, which you will learn more about in the [detect hits](./detect-hits.md) section of the tutorial. Finally, after creating the `rayResults` table, `generateBlastData` has all the information it needs to return the blast data to `blastClient`.
 
 ## Notify the server
 
@@ -189,7 +189,7 @@ The server then does the following:
 - Reduces health for any tagged players.
 - Replicates the blast to all other players so that they can see third-person visuals.
 
-For more information on these server operations, see the [Detecting Hits](detecting-hits.md) section of the tutorial.
+For more information on these server operations, see the [detect hits](./detect-hits.md) section of the tutorial.
 
 ## Reset the blaster
 

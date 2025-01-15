@@ -10,7 +10,7 @@ In-game, player will have important stats they need to see like the items they'v
 <img src="../../assets/education/adventure-game-series/adventure-leaderboard-finished.jpg" width="70%" />
 
 <Alert severity="info">
-Note that the leaderboard in this experience doesn't save player information in-between sessions. For information on saving player data, you'll need to use an advanced coding concept called [data stores](../../cloud-services/data-stores).
+Note that the leaderboard in this experience doesn't save player information in-between sessions. For information on saving player data, you'll need to use an advanced coding concept called [data stores](../../cloud-services/data-stores/index.md).
 
 </Alert>
 

@@ -3,7 +3,7 @@ title: Memory stores
 description: Explains how to implement memory store data structures to store frequent in-memory data.
 ---
 
-`Class.MemoryStoreService` is a high throughput and low latency data service that provides fast in-memory data storage accessible from all servers in a live session. **Memory Stores** are suitable for frequent and ephemeral data that change rapidly and don't need to be durable, because they are faster to access and vanish when reaching the maximum lifetime. For data that needs to persist across sessions, use [data stores](../../cloud-services/data-stores).
+`Class.MemoryStoreService` is a high throughput and low latency data service that provides fast in-memory data storage accessible from all servers in a live session. **Memory Stores** are suitable for frequent and ephemeral data that change rapidly and don't need to be durable, because they are faster to access and vanish when reaching the maximum lifetime. For data that needs to persist across sessions, use [data stores](../../cloud-services/data-stores/index.md).
 
 ## Data structures
 

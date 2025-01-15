@@ -51,7 +51,7 @@ This property does not apply padding **around** the list's overall bounds; see `
 
 ## Flex layouts
 
-Integrating **flex** into a `Class.UIListLayout` is a powerful way to [equally fill/distribute](#equal-fill-or-distribution) or [align/stretch](#item-line-alignment) list items across their line, or [flex specific items](#flexing-individual-items) across a variable space.
+Integrating **flex** into a `Class.UIListLayout` is a powerful way to [equally fill/distribute](#equal-fill-or-distribution) or [align/stretch](#item-line-alignment) list items across their line, or [flex specific items](#flex-individual-items) across a variable space.
 
 <Alert severity="warning">
 While flex is a powerful tool, you should not apply it to a `Class.UIListLayout` without purpose, as it adds a slight performance cost above non‑flex, especially when resizing the layout or dynamically adding/removing flex items.

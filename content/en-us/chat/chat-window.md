@@ -209,7 +209,7 @@ Appearance of the chat input bar is customizable through `Class.ChatInputBarConf
 	</tr>
 	<tr>
 		<td>`Class.ChatInputBarConfiguration.AutocompleteEnabled|AutocompleteEnabled`</td>
-		<td>Whether the text chat system shows autocomplete options for emojis and [commands](../chat/in-experience-text-chat.md#creating-custom-commands). Emojis are autocompleted by typing `:` followed by non-whitespace characters, while commands are autocompleted by typing `/`.</td>
+		<td>Whether the text chat system shows autocomplete options for emojis and [commands](../chat/in-experience-text-chat.md). Emojis are autocompleted by typing `:` followed by non-whitespace characters, while commands are autocompleted by typing `/`.</td>
 		<td>`true`</td>
 	</tr>
 	<tr>

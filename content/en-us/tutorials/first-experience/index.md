@@ -314,7 +314,7 @@ To publish your experience for the first time:
    1. At the bottom-right of the window, click the **Create** button. Your experience is now in the cloud with a `Class.DataModel.GameID|UniverseID` and a `Class.DataModel.PlaceID|PlaceID` for the starting place.
 
 1. Make the experience public to all players.
-   1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard). The **Creations** landing page displays your first experience.
+   1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations). The **Creations** landing page displays your first experience.
 
       <img width="80%" img src="../../assets/getting-started/Publish-2A.png" />
 

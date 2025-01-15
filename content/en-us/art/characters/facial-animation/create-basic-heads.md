@@ -80,7 +80,7 @@ Your character must have an internal bone structure to drive the vertices of the
 
 ### RootFaceJoint
 
-The **RootFaceJoint** is a bone that is parented under the standard R15 head bone. This root bone does not control any vertices, but it must parent all other face bones. In Blender, you can quickly add a bone by **extruding** a child bone from the head bone and then map the bone name as a property in the Head_Geo mesh. The RootFaceJoint bone object is commonly named "DynamicHead" in the reference templates and examples, but you can use any name as long as you [map the root bone](#map) in custom properties.
+The **RootFaceJoint** is a bone that is parented under the standard R15 head bone. This root bone must parent all other face bones. In Blender, you can quickly add a bone by **extruding** a child bone from the head bone and then map the bone name as a property in the Head_Geo mesh. The RootFaceJoint bone object is commonly named "DynamicHead" in the reference templates and examples, but you can use any name as long as you [map the root bone](#map) in custom properties.
 
 To add a RootFaceJoint bone:
 

@@ -9,8 +9,8 @@ browsing the
 such as **Most Engaging**, **Up-and-Coming**, and **Roleplay**. While most sorts generate automatically, you can nominate your experiences to the
 [Learn & Explore](#learn--explore-criteria) sort. Experiences you nominate
 should have a consistent and active user base, be well-liked by the community,
-and remain public to all users. Consequently, [Paid
-Access](../monetization/production/monetization/paid-access-robux.md) experiences are ineligible.
+and remain public to all users. Consequently, paid
+access in [Robux](../monetization/paid-access-robux.md) and [local currency](../monetization/paid-access-local-currency.md) experiences are ineligible.
 
 <img src="../../assets/promotion/misc/Experiences-Sorted-View.png"
 	width="80%" />
@@ -59,5 +59,5 @@ To ensure content is fresh, the Roblox Education team
 occasionally rotates and refreshes this sort category. If an experience is
 removed, you will receive prior notice and an opportunity to re-apply in the
 future. The Education team is glad to offer feedback for experiences on a
-case-by-case basis. For questions, contact <a href='mailto:education@roblox.com'>education@roblox.com</a>.
+case-by-case basis. For questions, contact education@roblox.com.
 </Alert>

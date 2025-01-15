@@ -189,7 +189,7 @@ Before it decreases health, the script first verifies if the tagged player is on
 	end
 ```
 
-However, if the tagged player **is** on the enemy team, the player takes the appropriate amount of damage according to the blaster type. In addition, if the player takes enough damage to become tagged out, the script rewards a point to the team of the player that initiated the blast. For more information on how the sample tracks points, see [Add rounds](add-rounds.md#track-points) later in the tutorial.
+However, if the tagged player **is** on the enemy team, the player takes the appropriate amount of damage according to the blaster type. In addition, if the player takes enough damage to become tagged out, the script rewards a point to the team of the player that initiated the blast. For more information on how the sample tracks points, see [Add rounds](./add-rounds.md#track-points) later in the tutorial.
 
 ```lua
 	local humanoid = character and character:FindFirstChild("Humanoid")
@@ -206,7 +206,7 @@ return onPlayerTagged
 ```
 
 <Alert severity="info">
-For more information on what happens when a player fires their blaster, see [Implement blaster behavior](implement-blasters.md) and [Detect hits](detect-hits.md) later on in the tutorial.
+For more information on what happens when a player fires their blaster, see [Implement blaster behavior](./implement-blasters.md) and [Detect hits](./detect-hits.md) later on in the tutorial.
 </Alert>
 
 If you were to test the experience right now, all players would randomly spawn at either spawn zone at opposite ends of the arena regardless of what team they belong to, meaning that each team would spawn right next to each other.

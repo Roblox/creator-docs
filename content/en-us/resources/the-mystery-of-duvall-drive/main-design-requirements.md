@@ -10,7 +10,7 @@ The following list provides an overview of the main technical design requirement
 
 ## Missions
 
-There are several types of missions players must solve in order to progress through the experience, including navigating a [series of spinning platforms](../../resources/the-mystery-of-duvall-drive/developing-a-moving-world.md#make-the-corrupted-treehouse) until players are able to retrieve a special item, or finding different ingredients in an [expanding pantry](../../resources/the-mystery-of-duvall-drive/develop-a-moving-world.md#make-the-expanding-pantry) and placing them into a boiling pot. To organize the scripting process of creating and debugging missions, we created a mission framework and a debug version.
+There are several types of missions players must solve in order to progress through the experience, including navigating a [series of spinning platforms](../../resources/the-mystery-of-duvall-drive/develop-a-moving-world.md#make-the-corrupted-treehouse) until players are able to retrieve a special item, or finding different ingredients in an [expanding pantry](../../resources/the-mystery-of-duvall-drive/develop-a-moving-world.md#make-the-expanding-pantry) and placing them into a boiling pot. To organize the scripting process of creating and debugging missions, we created a mission framework and a debug version.
 
 ### Mission framework
 

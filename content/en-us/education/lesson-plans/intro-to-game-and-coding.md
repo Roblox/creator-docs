@@ -122,9 +122,9 @@ description: Learn how to build an obstacle course and code color changing block
 
 2. Lead students through the following tutorials:
 
-   - [Creating a Script](../../tutorials/fundamentals/coding-1/create-a-script.md)
-   - [Object Properties](../../tutorials/fundamentals/coding-1/object-properties.md)
-   - [Parents and Children](../../tutorials/fundamentals/coding-1/parents-and-children.md)
+   - [Create a script](../../tutorials/fundamentals/coding-1/create-a-script.md)
+   - [Object properties](../../tutorials/fundamentals/coding-1/object-properties.md)
+   - [Parents and children](../../tutorials/fundamentals/coding-1/parents-and-children.md)
 
 ### Independent work - Finish student projects
 

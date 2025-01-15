@@ -2,7 +2,7 @@
 title: Object properties
 description: Learn how to use Lua to change the appearance properties of different objects, such as color and shape.
 next: /tutorials/fundamentals/coding-1/parents-and-children
-prev: /tutorials/fundamentals/coding-1/creating-a-script
+prev: /tutorials/fundamentals/coding-1/create-a-script
 ---
 
 **Properties** control how objects look and function. Each object in Roblox Studio has its own set of properties. For example, a part object has color, size, and shape properties. Properties can be changed in the Properties window or through code.

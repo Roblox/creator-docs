@@ -1,7 +1,7 @@
 ---
 title: Export character model
 description: Export your character model from Blender using the correct settings and processes.
-prev: /art/characters/creating/exporting-textures
+prev: /art/characters/creating/export-textures
 ---
 
 <Alert severity = 'warning'>

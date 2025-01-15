@@ -1,7 +1,7 @@
 ---
 title: Functions and events
 description: Landing page for chapter on coding functions in Lua and using events on Roblox.
-next: /tutorials/fundamentals/coding-2/coding-a-function
+next: /tutorials/fundamentals/coding-2/code-a-function
 prev: /tutorials/fundamentals/coding-1/parents-and-children
 ---
 

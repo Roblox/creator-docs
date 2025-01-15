@@ -95,7 +95,7 @@ Use third-party modeling tools like Blender to create meshes, then import them i
  </div>
    <Typography variant='body1' >Vertex coloring meshes</Typography>
      <div style={{marginTop:16}}>
-       <a underline="none" href="https://devforum.roblox.com/t/vertex-colored-meshes-using-blender-and-studio">
+       <a underline="none" href="https://devforum.roblox.com/t/vertex-colored-meshes-using-blender-and-studio/3023162">
        <Button variant="contained" color="secondary" size='large'
        style={{marginRight:8, alignSelf: 'flex-start'}}>Get started</Button>
        </a>

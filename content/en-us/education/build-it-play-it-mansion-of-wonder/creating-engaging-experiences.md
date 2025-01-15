@@ -24,7 +24,7 @@ For instance, these two pictures compare the impact user experience can have to 
 
 ## Project setup
 
-This course will walk through designing a guided tutorial using an starter template. Alternatively, you can use your own project since the finished tutorial system can be applied to any experience.
+This course will walk through designing a guided tutorial using a starter template. Alternatively, you can use your own project since the finished tutorial system can be applied to any experience.
 
 <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences/template-overview.jpeg" width="100%" />
 

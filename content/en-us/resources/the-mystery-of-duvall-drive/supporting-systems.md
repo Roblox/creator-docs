@@ -65,7 +65,7 @@ An object with an animated `Class.SurfaceGui` would have an Animator `Class.Modu
 
 ## LocalSpaceAnimations
 
-The **LocalSpaceAnimations** `Class.LocalScript` uses a **LocalSpaceRotation** tag to rotate mostly "cosmetic" objects with a given rotational velocity and delay around either the X, Y, or Z axis. We used this either for distant objects that players wouldn't interact with, or for smaller objects that don't affect simulation much. Parameters defined through the `Speed`, `Delay`, and `Axis` values. For implementation details, see [Rotating Cloud Meshes](../../resources/the-mystery-of-duvall-drive/developing-a-moving-world.md#rotating-cloud-meshes).
+The **LocalSpaceAnimations** `Class.LocalScript` uses a **LocalSpaceRotation** tag to rotate mostly "cosmetic" objects with a given rotational velocity and delay around either the X, Y, or Z axis. We used this either for distant objects that players wouldn't interact with, or for smaller objects that don't affect simulation much. Parameters defined through the `Speed`, `Delay`, and `Axis` values. For implementation details, see [Rotating Cloud Meshes](../../resources/the-mystery-of-duvall-drive/develop-a-moving-world.md#rotating-cloud-meshes).
 
 ## HeadlampManager
 
