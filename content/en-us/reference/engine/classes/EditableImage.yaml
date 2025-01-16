@@ -183,22 +183,50 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: EditableImage:DrawImageProjected
-    summary: ''
-    description: ''
+    summary: |
+      Projects another `Class.EditableImage` into an `Class.EditableMesh` and
+      stores the result on this `Class.EditableImage`.
+    description: |
+      Projects another `Class.EditableImage` into an `Class.EditableMesh` and
+      stores the result on this `Class.EditableImage` by using the specified
+      projection and brush configuration.
     code_samples: []
     parameters:
       - name: mesh
-        type: Object
+        type: EditableMesh
         default:
-        summary: ''
+        summary: |
+          The `Class.EditableMesh` used to project into.
       - name: projection
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          Projection configuration dictionary including the following
+          key-value pairs:
+
+          - `Direction` (`Datatype.Vector3`) where the projector is facing.
+          - `Position` (`Datatype.Vector3`) as the position in local space
+            with respect to the mesh.
+          - `Size` (`Datatype.Vector3`) as the size of the projector.
+          - `Up` (`Datatype.Vector3`) as the up vector of the projector in
+            local space with respect to the mesh.
       - name: brushConfig
         type: Dictionary
         default:
-        summary: ''
+        summary: |
+          Brush configuration dictionary including the following key-value
+          pairs:
+
+          - `AlphaBlendType` (`Enum.ImageAlphaType`) which determines how
+            this projection will blend alpha values.
+          - `ColorBlendType` (`Enum.ImageCombineType`) which determines
+            how this projection will blend color values.
+          - `Decal` (`Class.EditableImage`) as the image used for projection.
+          - `FadeAngle` (number) as the angle in degrees for the projection
+            edges to fall off.
+          - `BlendIntensity` (number) as the value between `0` and `1` which
+            controls how much of the projection is blended into the resulting
+            image.
     returns:
       - type: void
         summary: ''

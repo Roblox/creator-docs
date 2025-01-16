@@ -118,7 +118,7 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
           <li>Up to 30 seconds of duration.</li>
           <li>Up to 4096x2160 resolution.</li>
           <li>Up to 375 MB.</li>
-          <li>Currently, only English and/or Spanish audio and text is allowed.</li>
+          <li>Currently, only English, Spanish, Portuguese, Indonesian, Chinese (simplified and traditional), Japanese, and/or Korean audio and text are allowed.</li>
           <li>Up to 3 uploads per month if you're 13+ and ID-verified.</li>
         </ul>
       </td>
