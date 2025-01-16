@@ -431,7 +431,7 @@ methods:
           </tbody>
       </table>
 
-      ##### HTTP methods
+      ##### Supported HTTP methods
 
       The HTTP request methods specify the purpose of the request being made and
       what is expected if the request is successful. For instance, the `GET`
@@ -473,11 +473,6 @@ methods:
                   <td><code>DELETE</code> &nbsp;<a href="https://developer.mozilla.org/docs/Web/HTTP/Methods/DELETE">&#9432;</a></td>
                   <td>The <code>DELETE</code> method deletes the resource specified in the supplied <code>Body</code> data at the requested address.</td>
                   <td>Yes</td>
-              </tr>
-              <tr>
-                  <td><code>CONNECT</code> &nbsp;<a href="https://developer.mozilla.org/docs/Web/HTTP/Methods/CONNECT">&#9432;</a></td>
-                  <td>The <code>CONNECT</code> method establishes a tunnel to the requested server identified with the supplied <code>Body</code> data.</td>
-                  <td>No</td>
               </tr>
               <tr>
                   <td><code>OPTIONS</code>&nbsp;&nbsp;<a href="https://developer.mozilla.org/docs/Web/HTTP/Methods/OPTIONS">&#9432;</a></td>
