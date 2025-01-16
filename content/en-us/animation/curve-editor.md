@@ -28,13 +28,13 @@ While the Animation Editor displays a rig's orientation as three separate X, Y, 
 
 However, the Curve Editor allows you to work with Euler angles either globally or on a per-part basis, which allows you to define independent tracks for the X, Y and Z angles. This provides additional levels of control to make your animations more fluid and realistic.
 
-## Setting Rotation Type
+## Set rotation type
 
 <Alert severity="warning">
 It's important to verify your rotation type **before you open the Curve Editor** because once you convert quaternions to Euler angle tracks, it's impossible to convert them back into quaternions.
 </Alert>
 
-The Animation Editor automatically converts quaternions to Euler angles when you [open the Curve Editor](#opening-the-curve-editor), but you can keep quaternion values by setting the Animation Editor's rotation type to quaternions.
+The Animation Editor automatically converts quaternions to Euler angles when you [open the Curve Editor](#open-the-curve-editor), but you can keep quaternion values by setting the Animation Editor's rotation type to quaternions.
 
 To set rotation type:
 
@@ -47,14 +47,14 @@ To set rotation type:
 
 2. Hover over **Default Rotation Type**, then select either **Euler Angles** or **Quaternions**. Your rotation type sets to your choice and becomes the default rotation type for future projects.
 
-## Opening the Curve Editor
+## Open the Curve Editor
 
 You can switch the Animation Editor's timeline between the Dope Sheet Editor and the Curve Editor at any time.
 
 To open the Curve Editor:
 
-1. [Open the Animation Editor](../animation/editor.md#opening-the-animation-editor).
-2. (Optional) If you want to keep your orientation keyframe quaternion values, [set the rotation type](#setting-rotation-type) to **quaternions**.
+1. [Open the Animation Editor](../animation/editor.md#open-the-animation-editor).
+2. (Optional) If you want to keep your orientation keyframe quaternion values, [set the rotation type](#set-rotation-type) to **quaternions**.
 3. In the top-left corner of the **timeline**, click the **Curve Animation** icon. A pop-up window displays to confirm that your `Class.KeyframeSequence` clip will convert to a new CurveAnimation clip.
 
    <img
@@ -74,7 +74,7 @@ To open the Curve Editor:
       Because `Class.KeyframeSequence|KeyframeSequences` work with quaternions and curve animations work with Euler angles by default, your animation might appear slightly different between keyframes, especially if any of your Euler angles approach [Gimbal lock](https://en.wikipedia.org/wiki/Gimbal_lock).
       </Alert>
 
-   2. If you [set the rotation](#setting-rotation-type) type to quaternions, the conversion to curves preserves the quaternions and the animation remains the same.
+   2. If you [set the rotation](#set-rotation-type) type to quaternions, the conversion to curves preserves the quaternions and the animation remains the same.
 
       <img
       alt="Curve Editor Overview"
@@ -83,7 +83,7 @@ To open the Curve Editor:
 
 ## Interpolation
 
-Interpolation is Studio's process of "filling in" position and orientation values between your keyframes. This allows the rig to seamlessly animate from one orientation or position to another instead of disjointedly jumping between keyframes. While Euler angle curves interpolate between the values of each keyframe, quaternion curves interpolate from `0` to `1` over a set time. To illustrate this, the following images display the same `Class.KeyframeSequence` after you open the Curve Editor with either a Euler angle or a quaternion [rotation type](#setting-rotation-type):
+Interpolation is Studio's process of "filling in" position and orientation values between your keyframes. This allows the rig to seamlessly animate from one orientation or position to another instead of disjointedly jumping between keyframes. While Euler angle curves interpolate between the values of each keyframe, quaternion curves interpolate from `0` to `1` over a set time. To illustrate this, the following images display the same `Class.KeyframeSequence` after you open the Curve Editor with either a Euler angle or a quaternion [rotation type](#set-rotation-type):
 
 <GridContainer numColumns="2">
   <figure>
@@ -98,9 +98,9 @@ Interpolation is Studio's process of "filling in" position and orientation value
 
 For **Euler angle curves**, the height of each keyframe represents its orientation value over time. For example, the highest keyframe represents a rotation of about 120 degrees around the X axis, and the lowest keyframe represents a rotation of about -10 degrees. For **quaternion curves**, each segment represents orientation changing between keyframes, and the line displays the interpolation between them. In the previous example, the animation starts from orientation A, then interpolates linearly to orientation B. Once it is at B, the interpolation starts again from orientation B to orientation C, then continues with this pattern until the rig reaches its final orientation.
 
-You can modify how the Curve Editor handles interpolation for both Euler angle curves and quaternion curves by [setting tangents](#setting-tangents), [changing the interpolation mode](#changing-interpolation-mode), or by [generating interpolation curves](#generating-interpolation-curves) between two or more keyframes.
+You can modify how the Curve Editor handles interpolation for both Euler angle curves and quaternion curves by [setting tangents](#set-tangents), [changing the interpolation mode](#change-interpolation-mode), or by [generating interpolation curves](#generate-interpolation-curves) between two or more keyframes.
 
-### Setting Tangents
+### Set tangents
 
 The Curve Editor provides **tangents**, or handles, that let you quickly adjust the interpolation either before or after a keyframe. Euler angle curves have a tangent both before and after the keyframe while quaternion curves have one tangent at the beginning and another at the end of a segment. The initial tangent controls the interpolation after the keyframe and the secondary tangent controls the interpolation before the keyframe. For example:
 
@@ -136,7 +136,7 @@ To set a tangent:
 2. Release the tangent. The interpolation between keyframes adjusts accordingly.
 3. (Optional) If you set one tangent and want to align the unset tangent horizontally, right-click the unset tangent, then select **Set Tangent to Zero** from the contextual menu.
 
-#### Resetting Tangents
+#### Reset tangents
 
 If you ever set a tangent to a new position and the resulting interpolation is undesirable, you can always use Auto-Tangent Mode to clear a tangent's value and reset it back to its default interpolation behavior.
 
@@ -150,7 +150,7 @@ To reset a tangent:
 
 2. Select **Set Tangent To Zero**. The tangent resets to its default interpolation behavior.
 
-### Changing Interpolation Mode
+### Change interpolation mode
 
 Interpolation mode is the rate at which an animation moves between different keyframe positions within the animation. There are three interpolation modes available for curve animations:
 
@@ -168,7 +168,7 @@ To change interpolation mode:
    src="../assets/animation/curve-editor/Interpolation-Mode.png"
    width="600" />
 
-### Generating Interpolation Curves
+### Generate interpolation curves
 
 For curve animations, bounce and elastic easing styles are not available as standard interpolations like they are for `Class.KeyframeSequence|KeyframeSequences`. However, when you convert a `Class.KeyframeSequence` to a curve animation, the Animation Editor automatically adds additional keyframes to your animation to keep the animation intact, and you can select two or more keyframes and generate an **interpolation curve** that removes and replaces any of their intermediate keyframes to mimic bounce and elastic easing behavior.
 
@@ -190,7 +190,7 @@ To generate interpolation curves:
    src="../assets/animation/curve-editor/Generate-Curve-Editor.png"
    width="400" />
 
-## Setting Euler Angles Order
+## Set Euler angles order
 
 When you're working with Euler angles, Studio represents the X, Y, and Z axis through three channel values that follow a specific order to move your rig from its starting orientation to its next orientation. Each order is named after the [matrix multiplications](https://en.wikipedia.org/wiki/Matrix_multiplication) to get to the final orientation. For example, an XYZ order (X × Y × Z) means that the rig moves starting on the Z axis, then the Y axis, then the X axis. The Animation Editor defaults to this **XYZ order**, but you can change the order at any time.
 

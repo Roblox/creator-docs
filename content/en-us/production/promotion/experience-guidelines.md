@@ -1,14 +1,14 @@
 ---
-title: Experience Guidelines
+title: Experience guidelines
 description: Explains how to provide accurate descriptions of experiences to determine accurate experience ratings.
 ---
 
-**Experience Guidelines** provide information on the experience's main page about what kind of content the experience contains so that players can make informed decisions about what they interact with. Roblox uses this information to recommend experiences on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages according to each user's age group and regional content policies.
+**Experience guidelines** provide information on the experience's main page about what kind of content the experience contains so that players can make informed decisions about what they interact with. Roblox uses this information to recommend experiences on the [Home](https://www.roblox.com/home) and [Discover](https://www.roblox.com/discover) pages according to each user's age group and regional content policies.
 
 Experience guidelines consist of two components:
 
-- **Age Recommendations** — Indicates which age group an experience is suitable for based on child development research and industry standards. For more information, see [Age Recommendations](https://en.help.roblox.com/hc/en-us/articles/8862768451604).
-- **Content Descriptors** — Indicates what type of content is within an experience, such as realistic depictions of blood or paid item trading.
+- **Age recommendations** — Indicates which age group an experience is suitable for based on child development research and industry standards. For more information, see [Age recommendations](https://en.help.roblox.com/hc/en-us/articles/8862768451604).
+- **Content descriptors** — Indicates what type of content is within an experience, such as realistic depictions of blood or paid item trading.
 
 <img src="../../assets/promotion/misc/Experience-Guidelines-Example.png" width="820" />
 
@@ -18,7 +18,7 @@ Roblox treats experiences without guidelines the same as experiences with an age
    Experience guidelines only apply to the content you create for your experience. They do **not** apply to user-generated content that players bring with them into your experience, such as avatar clothing and accessories.
 </Alert>
 
-## Generating Experience Guidelines
+## Generate experience guidelines
 
 If your Roblox account is at least 30 days old, you can generate experience guidelines by filling out the **Experience Questionnaire** which contains a set of questions about the type of content players can possibly encounter within your experience, as well as how frequently it occurs. Your answers give Roblox an understanding of the content in your experience and ensure that the experience is available to the appropriate audience.
 
@@ -50,7 +50,7 @@ If you believe that the rating doesn't match your intended audience, and the exp
 	Please review your experience and confirm that your answers accurately reflect the content of your experience. If you intentionally misrepresent your experience, you may be subject to [moderation consequences](#experience-guidelines-moderation).
 </Alert>
 
-## Questionnaire Categories
+## Questionnaire categories
 
 The following sections provide guidance on answering the questions within each category of the questionnaire. **Guidelines only apply to content that you create for your experience**, not user-generated content that players bring with them, such as avatar clothing and accessories.
 
@@ -59,13 +59,13 @@ After you submit the questionnaire, your experience receives an age recommendati
 <table>
 <thead>
   <tr>
-    <th>Age Recommendation</th>
+    <th>Age recommendation</th>
     <th>Description</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>**All Ages**</td>
+    <td>**All ages**</td>
     <td>Content is generally suitable for all ages. May contain occasional mild violence and/or light unrealistic blood.</td>
   </tr>
   <tr>
@@ -95,7 +95,7 @@ After you submit the questionnaire, your experience receives an age recommendati
 
 Violence is the intentional use of physical or psychological force against players or non-playable characters (NPCs). If your experience includes violence, including within any [asset type](../../projects/assets/index.md#asset-types), you must disclose it in the experience questionnaire based on the violence's maximum level of intensity and how often a user might encounter it.
 
-#### Level of Intensity
+#### Level of intensity
 
 After you confirm that your experience contains violence, you must specify whether the maximum level of intensity of violence within your experience is **mild**, **moderate**, or **strong**. If you imply violence anywhere within your experience, such as violence that occurs off-screen that players can hear but can't see, your experience automatically meets the mild criteria.
 
@@ -117,7 +117,7 @@ If you answer **unrealistic**, the questionnaire asks if the blood depictions ar
 
 The next question of the blood category asks you to specify whether the level of intensity of blood within your experience is **light** or **heavy**. If you depict blood anywhere within your experience, such as blood splatter from a distance, your experience automatically meets the light criteria. If you depict heavy bloodshed, such as pools of blood, gushing blood, organs or intestines, decapitation, dismemberment, mutilation of body parts, and/or up-close blood spatter, your experience meets the heavy criteria. Experiences that include heavy bloodshed are only available to verified players that are at least 17 years old.
 
-### Crude Humor
+### Crude humor
 
 Crude humor is a type of humor that depicts or references bodily functions, such as belching, flatulence, vomiting, urinating, and/or defecation for comical purposes. If your experience includes crude humor, including within any [asset type](../../projects/assets/index.md#asset-types), you must specify if it is **mild** or **moderate** within the experience questionnaire based on what bodily functions you use for comical purposes.
 
@@ -127,13 +127,13 @@ For example, if you depict or reference flatulence, vomiting, and/or unrealistic
 
 Gambling is the practice of exchanging real world money, Robux, or in-experience items of value for a game of chance. While experiences cannot contain playable gambling content, including simulated gambling, you can depict unplayable gambling content, such as showing a casino or people playing cards.
 
-### Social Hangout
+### Social hangout
 
 Social hangouts are experiences in which the primary theme or activity is to chat or interact with other players with voice or text either as themselves or as their avatar. While this applies to vibe games, clubs, socializing spaces, and supportive places like sad rooms, it does **not** apply to roleplay and/or life simulation experiences where players adopt various roles like teacher or police officer, or are provided with items to role-play with.
 
 If your experience is a social hangout, you must disclose it within the Maturity & Compliance Questionnaire. Social hangouts are only available to players that are at least 13 years old.
 
-### Free-Form User Creation
+### Free-form user creation
 
 Free-form user creation are features that allow players to create anything within an experience, such as writing words or making illustrations on a chalkboard. While this applies to in-experience, free-form drawing or creation tools, it does **not** apply to in-experience creations that players assemble with 3D assets, such as building a house or creating an outfit, or anything that goes through Roblox moderation before it's published or replicated.
 
@@ -143,18 +143,18 @@ If your experience includes free-form user creation features, you must disclose 
 
 Alcohol is an intoxicating adult beverage. If your experience includes, depicts, or references alcohol or adult businesses and locations that provide or sell alcohol, you must disclose it within the experience questionnaire. Experiences that depict alcohol are only available to verified players that are at least 17 years old.
 
-### Romantic Themes
+### Romantic themes
 
 Romantic themes are the non-sexual expression of love or affection. If your experience includes romantic themes, such as a quick kiss on the mouth, you must disclose it within the experience questionnaire. Experiences that include romantic themes are only available to verified players that are at least 17 years old.
 
-### Strong Language
+### Strong language
 
 Strong language is vulgar and obscene language that players cannot use to harass, discriminate, or threaten others, incite violence, or use in a sexual context. For example, strong language content can be depictions of a non-playable character (NPC) using an obscenity like the "f-word" that isn't directed toward another character or group of people, for example "F* off!".
 
 If your experience includes strong language, you must disclose it within the experience questionnaire. Experiences that include strong language are only available to verified players that are at least 17 years old.
 
 <Alert severity="info">
-   If you want to enable strong language in user communication aside from content for your 17+ experiences, see [Publishing Experiences and Places](../../production/publishing/publishing-experiences-and-places.md#creator-dashboard).
+   If you want to enable strong language in user communication aside from content for your 17+ experiences, see [Publishing Experiences and Places](../../production/publishing/publish-experiences-and-places.md#creator-dashboard).
 </Alert>
 
 ### Fear
@@ -197,7 +197,7 @@ After you specify the level of intensity, the questionnaire asks you to specify 
    The fear descriptor only applies to the content you create for your experiences. It does **not** apply to user-generated content that players bring with them into your experience, such as avatar clothing and accessories.
 </Alert>
 
-## Experience Guidelines Moderation
+## Experience guidelines moderation
 
 Roblox relies on the information you provide in the experience questionnaire to generate accurate guidelines, so the moderation team may review your generated guidelines to ensure their validity based on the content of your experience. Whenever Roblox discovers a discrepancy between your submission and the content in your experience, the following actions occur:
 

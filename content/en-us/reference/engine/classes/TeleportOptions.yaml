@@ -18,7 +18,7 @@ description: |
   - ShouldReserveServer + ReservedServerAccessCode
 
   For more information on how to teleport players between servers, see
-  [Teleporting Between Places](../../../projects/teleporting.md).
+  [Teleporting Between Places](../../../projects/teleport.md).
 code_samples:
 inherits:
   - Instance
@@ -34,7 +34,7 @@ properties:
       server that the user(s) should be teleported to.
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     type: string
     tags: []
@@ -57,7 +57,7 @@ properties:
       the user(s) should be teleported to.
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     type: string
     tags: []
@@ -88,7 +88,7 @@ properties:
       player(s) to.
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     type: bool
     tags: []
@@ -118,7 +118,7 @@ methods:
       `Class.TeleportService:GetLocalPlayerTeleportData()` functions.
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     parameters: []
     returns:
@@ -174,7 +174,7 @@ methods:
 
       For more information on how to send and receive user data along with
       teleports, see, see
-      [Teleporting Between Places](../../../projects/teleporting.md#sending-user-data-along-with-teleports).
+      [Teleporting Between Places](../../../projects/teleport.md#sending-user-data-along-with-teleports).
     code_samples:
     parameters:
       - name: teleportData

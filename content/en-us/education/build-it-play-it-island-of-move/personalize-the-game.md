@@ -1,12 +1,12 @@
 ---
-title: Personalize the Game
+title: Personalize the game
 description: Part of the Roblox Build It, Play It Challenge - Island of Move. Customize the template script.
 prev: /education/build-it-play-it-island-of-move/go-beyond-the-challenge
 ---
 
 Make the Move It Simulator into your own unique vision by changing the rewards a player earns, the name of the game, and settings like player speed. Making these changes can change the mood of your game. In a few minutes, go from just a template to a unique game based off your vision.
 
-## Changing the Game Settings
+## Change the game settings
 
 The words you see in-game like "Move It Simulator", and "Roblox Developer" are all changeable. You can even make players move faster. These changes can be done by opening a script called _GameSettings_. That script includes different **variables**, or placeholders, for names and numbers used.
 
@@ -22,7 +22,7 @@ The words you see in-game like "Move It Simulator", and "Roblox Developer" are a
 
    <img src="../../assets/education/build-it-play-it-island-of-move/personalize-the-game/open-game-settings.png" width="50%" />
 
-### Changing Words
+### Change words
 
 Inside _GameSettings_, you can change words displayed to players. This can even include the game title or messages shown when players level up.
 
@@ -61,7 +61,7 @@ To start, give the game its own unique name.
      </figure>
    </GridContainer>
 
-### Changing Numbers
+### Change numbers
 
 By modifying different numbers in _GameSettings_, you can create a unique experience for your players. For instance, players can start out moving extra fast or gain levels slowly.
 
@@ -78,7 +78,7 @@ By modifying different numbers in _GameSettings_, you can create a unique experi
 
 Run the game and notice that your player begins the game faster than before.
 
-## Challenge Checkpoint
+## Challenge checkpoint
 
 You've customized your game, now claim your free prize! Celebrate your new skills by getting the **Kinetic Staff** and **Do-It-Yourself** badge. Copy the code below.
 
@@ -90,7 +90,7 @@ Click the button to open a Roblox game, find the in-game character, and click **
 <Button variant="contained">Enter World</Button>
 </a>
 
-## Continue Customizing
+## Continue customizing
 
 You've taken the first steps in making this game your own, now keep going! Below are a few options to change the look and feel of your game.
 

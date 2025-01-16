@@ -1,5 +1,5 @@
 ---
-title: Change the Animation
+title: Change the animation
 description: Part of the Roblox Build It, Play It Challenge - Island of Move. Swap the default walk animation with your own.
 next: /education/build-it-play-it-island-of-move/invite-friends-to-play
 prev: /education/build-it-play-it-island-of-move/exporting-animations
@@ -7,7 +7,7 @@ prev: /education/build-it-play-it-island-of-move/exporting-animations
 
 The template has a pre-built setting for what animation to use when players run. To change the animation, you'll need to replace the default animation with yours.
 
-## Change the Animation ID
+## Change the animation ID
 
 Now that you have the animation ID, you can enter it in your game. Then, Studio will know what animation to play.
 
@@ -47,7 +47,7 @@ Now that you have the animation ID, you can enter it in your game. Then, Studio 
 
    </Alert>
 
-## Test and Check
+## Test and check
 
 After swapping the animation, play the game to see your creation.
 
@@ -61,7 +61,7 @@ After swapping the animation, play the game to see your creation.
    If you make updates to the animation, remember to **Export** it.
    </Alert>
 
-## Troubleshooting Tips
+## Troubleshooting tips
 
 **Issue:** Animation is spotty, skips, or looks glitchy.
 

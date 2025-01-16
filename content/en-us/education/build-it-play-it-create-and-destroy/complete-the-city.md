@@ -1,5 +1,5 @@
 ---
-title: Complete the City
+title: Complete the city
 description: Part of the Create and Destroy series. Finish creating a city for the multiplayer experience.
 next: /education/build-it-play-it-create-and-destroy/island-terrain
 prev: /education/build-it-play-it-create-and-destroy/buildings-and-props

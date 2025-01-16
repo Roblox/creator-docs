@@ -1,5 +1,5 @@
 ---
-title: Using Textures
+title: Use textures
 prev: /education/build-it-play-it-mansion-of-wonder/challenge-checkpoint
 next: /education/build-it-play-it-mansion-of-wonder/finish-the-blast
 description: Learn how to customize and change the texture of particle emitters in Roblox Studio as part of the Build It Play It Mansion of Wonder.
@@ -11,7 +11,7 @@ For example, notice in the video below how a single texture is changed and repea
 
 <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/using-textures/particle-texture-example.mp4" width="100%"></video>
 
-## Changing the Blast Texture
+## Change the blast texture
 
 1. A starter pack of textures has been provided. Pick one you want to use for your blast and **copy** the **number** beneath its image below.
 

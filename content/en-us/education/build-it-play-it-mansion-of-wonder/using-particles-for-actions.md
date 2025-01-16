@@ -1,5 +1,5 @@
 ---
-title: Using Particles for Actions
+title: Use particles for actions
 prev: /education/build-it-play-it-mansion-of-wonder/connect-the-beam
 next: /education/build-it-play-it-mansion-of-wonder/adding-scripts
 description: Learn how to use particle effects to give players feedback to their actions, and learn several techniques to further customize your particles in Roblox Studio. Part of the Build It Play It Mansion of Wonder series.
@@ -15,7 +15,7 @@ In the example below, a celebratory burst of ticket-shaped particles emits whene
 Giving **multiple forms** of feedback is also another way of improving a player's user experience. A player with the sound down or one who is hearing impaired may rely more on visual cues. Other players may be low vision and paying more attention to sound.
 </Alert>
 
-## Creating Particles
+## Create particles
 
 When creating a particle, it needs to be inserted into a part or attachment. In this example, you'll place particles in the TestPlayer object used earlier.
 
@@ -83,18 +83,18 @@ When creating a particle, it needs to be inserted into a part or attachment. In 
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/show-texture-color-size.jpeg" width="50%" />
 
-## Creating a Burst Effect
+## Create a burst effect
 
 Different properties can be changed so that the particles look more like a quick burst rather than a gentle stream. After designing the particle, you'll disable the emitter so that it only plays when activated by a script.
 
-## Making Particles Spread
+## Make particles spread
 
 The ParticleEmitter sends out particles along two planes controlled by the property, **SpreadAngle**.
 
 1. To make the particles fly out in all directions like the example, set the **SpreadAngle X** and **Y** to **360**.
    <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/using-particles-for-actions/spread-angle.mp4"></video>
 
-## Different Burst Properties
+## Different burst properties
 
 After adding the recommended values under the video, the particles will look like they are quickly bursting from the player like a firework.
 

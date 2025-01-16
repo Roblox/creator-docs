@@ -9,7 +9,7 @@ description: |
   between different places and servers.
 
   For more information on how to teleport players between servers, see
-  [Teleporting Between Places](../../../projects/teleporting.md).
+  [Teleporting Between Places](../../../projects/teleport.md).
 code_samples:
 inherits:
   - Instance
@@ -805,7 +805,7 @@ methods:
 
       For more information on how to teleport players between servers and
       receive user data from a teleport, see
-      [Teleporting Between Places](../../../projects/teleporting.md#sending-user-data-along-with-teleports).
+      [Teleporting Between Places](../../../projects/teleport.md#sending-user-data-along-with-teleports).
     code_samples:
     parameters:
       - name: placeId
@@ -1027,7 +1027,7 @@ events:
       </table>
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     parameters:
       - name: player

@@ -30,7 +30,7 @@ description: |
   after the `x`, `y` and `z` positional values. This matrix is used internally
   when doing calculations involving rotations, using **radians** as their unit
   (for conversion from one to the other, use `Library.math.rad()` or
-  `Library.math.deg()`). For more information on how the Roblox engine performs
+  `Library.math.deg()`). For more information on how the Roblox Engine performs
   rotations, see `Enum.RotationOrder`.
 
   The table below represents the components of a `Datatype.CFrame` object's

@@ -1,5 +1,5 @@
 ---
-title: Record and Display Player Data
+title: Record and display player data
 description: Explains how to store and retrieve individual player data in an experience and display it visually through a leaderboard.
 next: /tutorials/curriculums/core/scripting/create-player-hazards
 prev: /tutorials/curriculums/core/scripting/script-game-behavior
@@ -13,7 +13,7 @@ Now that you can detect when a player has collected a coin, this section of the 
 teaches you how to count how many coins players have collected, and make that amount visible
 on a leaderboard.
 
-## Create a Module Script to Record Coin Collection
+## Create a module script to record coin collection
 
 To handle the storage and management of each player's coin collection data,
 you need to create a `Class.ModuleScript` object to contain a data structure and
@@ -79,7 +79,7 @@ To create a module script:
    <BaseAccordion>
    <AccordionSummary>
 
-   <Typography variant="h4">Code Explanation</Typography>
+   <Typography variant="h4">Code explanation</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -89,7 +89,7 @@ To create a module script:
    `PlayerData` table, allowing multiple scripts to modify and share coin
    collection data.
 
-   <h4>Declaring the Data Structures</h4>
+   <h4>Declare the data structures</h4>
 
    The module script begins with a declaration of an empty table, `PlayerData`,
    which is returned at the end of the script. It also contains
@@ -117,7 +117,7 @@ To create a module script:
    return PlayerData
    ```
 
-   <h4>Defining a local data accessor</h4>
+   <h4>Define a local data accessor</h4>
 
    `getData()` is a local function that retrieves data for a specific
    `playerData` table. If a player hasn't collected a coin, it returns a
@@ -138,7 +138,7 @@ To create a module script:
    end
    ```
 
-   <h4>Defining public data accessors</h4>
+   <h4>Define public data accessors</h4>
 
    `getValue()` and `updateValue()` are public-facing functions that other
    scripts that require this module script can call. In our case, the
@@ -163,7 +163,7 @@ To create a module script:
    </AccordionDetails>
    </BaseAccordion>
 
-## Implement a Leaderboard
+## Implement a leaderboard
 
 You can represent the coin collection data visually with an on-screen
 leaderboard. Roblox includes a built-in system that automatically generates a
@@ -220,12 +220,12 @@ rename the module script to **Leaderboard**.
    <BaseAccordion>
    <AccordionSummary>
 
-   <Typography variant="h4">Code Explanation</Typography>
+   <Typography variant="h4">Code explanation</Typography>
    </AccordionSummary>
    <AccordionDetails>
    The following sections describe how the leaderboard works in more detail.
 
-    <h4>Creating a Leaderboard</h4>
+    <h4>Create a leaderboard</h4>
 
    The `setupLeaderboard()` function creates a new folder instance named
    `leaderstats` and sets it as a child of the specified player. Roblox
@@ -254,7 +254,7 @@ rename the module script to **Leaderboard**.
    end
    ```
 
-   <h4>Updating Player Stats</h4>
+   <h4>Update player stats</h4>
 
    `setStat()` is the only public function in the **Leaderboard** module. It
    creates stat values for a specified player or the leaderboard itself if it
@@ -284,7 +284,7 @@ rename the module script to **Leaderboard**.
    </AccordionDetails>
    </BaseAccordion>
 
-## Integrate the Module Scripts
+## Integrate the module scripts
 
 With both the **PlayerData** and **Leaderboard** module scripts complete,
 require them in the **CoinService** script to manage and display player coin
@@ -350,7 +350,7 @@ data. To update **CoinService**:
 
     <BaseAccordion>
     <AccordionSummary>
-      <Typography variant="h4">Code Explanation</Typography>
+      <Typography variant="h4">Code explanation</Typography>
     </AccordionSummary>
     <AccordionDetails>
       The changes to the original **CoinService** script include:

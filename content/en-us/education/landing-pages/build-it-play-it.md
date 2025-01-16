@@ -1,5 +1,5 @@
 ---
-title: Build It, Play It Challenges
+title: Build It, Play It challenges
 description: Get started learning Roblox Studio with these quick lessons. Build games and experiences.
 ---
 
@@ -21,7 +21,7 @@ Using Roblox Studio, you'll learn to create **special effects**, whether it's a 
 
 <Grid item XSmall={4} XLarge={4}>
 <a href="../../education/build-it-play-it-mansion-of-wonder/landing-page.md">
-<Button variant="text">View Series</Button>
+<Button variant="text">View series</Button>
 </a>
 </Grid>
 
@@ -39,10 +39,10 @@ Using Roblox Studio, learn how <b>animation</b> and create your own simulator ga
 
 <Grid item XSmall={4} XLarge={4}>
 <a href="../../education/build-it-play-it-island-of-move/landing.md">
-<Button variant="button">View Series</Button>
+<Button variant="button">View series</Button>
 </a>
 <a href="../../education/lesson-plans/animate-in-roblox-lesson.md">
-<Button variant="text">Lesson Plan</Button>
+<Button variant="text">Lesson plan</Button>
 </a>
 </Grid>
 
@@ -60,9 +60,9 @@ Learn <b>3D modeling</b> while building a spaceship to race in a multiplayer exp
 
 <Grid item XSmall={4} XLarge={4}>
 <a href="../../education/build-it-play-it-galactic-speedway/main-page.md">
-<Button variant="button">View Series</Button>
+<Button variant="button">View series</Button>
 </a> <a href="../../education/lesson-plans/galactic-speedway-lesson.md">
-<Button variant="text">Lesson Plan</Button>
+<Button variant="text">Lesson plan</Button>
 </a>
 </Grid>
 
@@ -80,9 +80,9 @@ Build an entire city and then with your friends, destroy it as rampaging monster
 
 <Grid item XSmall={4} XLarge={4}>
 <a href="../../education/build-it-play-it-create-and-destroy/landing.md">
-<Button variant="button">View Series</Button>
+<Button variant="button">View series</Button>
 </a> <a href="../../education/lesson-plans/create-and-destroy-lesson.md">
-<Button variant="text">Lesson Plan</Button>
+<Button variant="text">Lesson plan</Button>
 </a>
 </Grid>
 
@@ -100,9 +100,9 @@ Build an entire city and then with your friends, destroy it as rampaging monster
 
 <Grid item XSmall={4} XLarge={4}>
 <a href="../../education/build-it-play-it-story-games/landing.md">
-<Button variant="button">View Series</Button>
+<Button variant="button">View series</Button>
 </a> <a href="../../education/lesson-plans/story-games-lesson.md">
-<Button variant="text">Lesson Plan</Button>
+<Button variant="text">Lesson plan</Button>
 </a>
 </Grid>
 

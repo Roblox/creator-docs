@@ -1,5 +1,5 @@
 ---
-title: Clothing Specifications
+title: Clothing specifications
 description: Layered clothing specifications lists the specific technical requirements for the visible mesh, cages, and proper rigging and skinning data.
 ---
 
@@ -133,7 +133,7 @@ If setting attachment names manually in Studio, use the following `Class.Attachm
 
 ### Face Accessories
 
-Face accessories, such as hair, eyebrows, and eyelashes are unique accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes can not be uploaded as standalone accessories and must be bundled with avatar bodies. For more information on bundling your face accessories with avatar models, see [Publishing Bodies with Eyelashes and Eyebrows](../accessories/publishing-eyebrows-eyelashes.md).
+Face accessories, such as hair, eyebrows, and eyelashes are unique accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes can not be uploaded as standalone accessories and must be bundled with avatar bodies. For more information on bundling your face accessories with avatar models, see [Publishing Bodies with Eyelashes and Eyebrows](../accessories/publish-eyebrows-eyelashes.md).
 
 - **Naming Convention when bundled** - When including these assets with an avatar body upload, the accessory objects must use the following name conventions:
   - `EyebrowAccessory`
@@ -162,7 +162,7 @@ Rigging and skinning a layered accessory allows the accessory to move naturally 
 
 If using modeling software to skin your accessories, keep in mind that **Joint Influences** (Maya) or **Bone Assignments** (Blender) per vertex should be limited to **4**.
 
-For more information on basic skinning in third-party modeling software, such as Blender's [Automatic Weights](https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html#with-automatic-weights), see [Skinning a Simple Mesh](../../art/modeling/skinning-a-simple-mesh.md) for instructions on rigging, applying weights, and skinning a basic mesh.
+For more information on basic skinning in third-party modeling software, such as Blender's [Automatic Weights](https://docs.blender.org/manual/en/latest/animation/armatures/skinning/parenting.html#with-automatic-weights), see [Skinning a Simple Mesh](../../art/modeling/skin-a-simple-mesh.md) for instructions on rigging, applying weights, and skinning a basic mesh.
 
 ### Cage Meshes
 

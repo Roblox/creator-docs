@@ -1,5 +1,5 @@
 ---
-title: Running Classrooms
+title: Run a classroom
 description: Covers running a Roblox class with topics such as class management, collaboration options, and student evaluations.
 next: /education/educator-onboarding/5-next-steps
 prev: /education/educator-onboarding/3-setting-up-a-roblox-classroom
@@ -13,11 +13,11 @@ By the end of this article, you will:
 - Recognize optional learning tools, such as Live Collaboration or Private Servers.
 - Know where to find resources on digital civility and classroom management.
 
-## Assessments and Evaluation
+## Assessments and evaluation
 
 As an educator, there are different ways to gauge student progress and understanding. Options are included for those playing experiences and designing them.
 
-### Assessing Virtual Learning Experiences
+### Assess virtual learning experiences
 
 Roblox has built-in tools that allow anyone to screenshots or record video. These media artifacts can then be integrated into existing assignments. For example, a student may make recordings of a historical shrine as evidence in an Asian history assignment. To learn about these options, see <a href="https://en.help.roblox.com/hc/en-us/articles/203314160-How-Do-I-Take-a-Screenshot-" target="_blank" rel="noopener">Taking a Screenshot</a> or <a href="https://en.help.roblox.com/hc/en-us/articles/203314190" target="_blank" rel="noopener">Recording Videos</a>.
 
@@ -28,11 +28,11 @@ Additionally, some virtual learning experiences may have built-in assessments, s
 <figcaption>Quiz in <a href="https://www.roblox.com/games/1334669864/" target="_blank" rel="noopener">Lua Learning</a></figcaption>
 </figure>
 
-### Assessing Code and Creation
+### Assess code and creation
 
 Projects created in Roblox Studio can be shared as local files or uploaded to the cloud. Uploading to the cloud allows projects to be shared through a hyperlink. An educator can then take that local file, or link, to evaluate a project. To view an example of how a Roblox Studio project can be evaluated, see the <a href="../../assets/education/legacy/Handout_-_Project_Rubric.pdf">Project-Based Rubric</a> handout.
 
-### Quizzes and Rubrics
+### Quizzes and rubrics
 
 Examples of traditional quizzes and rubrics are included from sample lessons
 below. Both are available to download and customize at the end of this course.
@@ -40,7 +40,7 @@ below. Both are available to download and customize at the end of this course.
 <table>
   <tr>
     <td>
-    <h4>Traditional Knowledge</h4>
+    <h4>Traditional knowledge</h4>
     <a href="../../assets/education/legacy/Handout_-_Computer_Science_Quiz.docx" target="_blank" rel="noopener">
       <Button variant="contained">DOCX</Button>
     </a>
@@ -57,7 +57,7 @@ below. Both are available to download and customize at the end of this course.
   </tr>
   <tr>
     <td>
-    <h4>Project-Based Rubric</h4>
+    <h4>Project-based rubric</h4>
       <a href="../../assets/education/legacy/Handout_-_Project_Rubric.docx" target="_blank" rel="noopener">
       <Button variant="contained">DOCX</Button>
       </a>
@@ -74,7 +74,7 @@ below. Both are available to download and customize at the end of this course.
   </tr>
 </table>
 
-## Classroom Tools
+## Classroom tools
 
 To make learning and teaching easier, there are optional features in Roblox. For example, students can build collaboratively in Roblox Studio.
 
@@ -84,7 +84,7 @@ A quick summary of each tool and use cases are below.
 <tbody>
 <tr>
 <td>
-<b><a href = "#roblox-chat">Roblox Chat</a></b>
+<b><a href = "#roblox-chat">Roblox chat</a></b>
 </td>
 <td>
 Roblox offers multiple means of communicating on the platform, like experience-messaging and private messages.
@@ -92,7 +92,7 @@ Roblox offers multiple means of communicating on the platform, like experience-m
 </tr>
 <tr>
 <td>
-<b><a href = "#live-collaboration">Live Collaboration</a></b>
+<b><a href = "#live-collaboration">Live collaboration</a></b>
 </td>
 <td>
 A tool in Roblox Studio that allows people to invite friends to collaborate on a project simultaneously with them.
@@ -100,7 +100,7 @@ A tool in Roblox Studio that allows people to invite friends to collaborate on a
 </tr>
 <tr>
 <td>
-<b><a href = "#private-servers">Private Servers</a></b>
+<b><a href = "#private-servers">Private servers</a></b>
 </td>
 <td>
 A closed server for experiences that allows you to control who can join.
@@ -117,7 +117,7 @@ Social networks with member lists and post boards. Also allows for collaboration
 </tbody>
 </table>
 
-### Roblox Chat
+### Roblox chat
 
 Most Roblox experiences offer basic chat features.
 
@@ -134,7 +134,7 @@ These features include:
 href="https://en.help.roblox.com/hc/en-us/articles/206224956-Chatting-and-Playing-with-Friends"><Button
 variant="contained">Learn More</Button></a>
 
-### Live Collaboration
+### Live collaboration
 
 **Live Collaboration** allows the owner of a project to invite friends to join them in
 Roblox Studio to **collaboratively** build worlds or edit scripts together in
@@ -147,7 +147,7 @@ Studio.
 variant="contained">Learn More</Button></a>
 </p>
 
-### Private Servers
+### Private servers
 
 Normally, whenever a player enters a Roblox experience, they're in a public server. If desired, educators can create private servers which allow for control over who may join. Invites to play can be sent with hyperlinks which can be shared through email or a learning management system (like Google Classroom).
 
@@ -165,17 +165,17 @@ Groups are mini-communities that can be formed on the Roblox platform. Each grou
 target="_blank" rel="noopener"><Button variant="contained">Learn More</Button></a>
 </p>
 
-## Fostering a Positive Culture
+## Foster a positive culture
 
 Over the years, we've developed teacher-tested resources to help foster supportive learning environments. Practices such as digital civility better prepare students for the online world.
 
-### Teaching Digital Civility
+### Teach digital civility
 
 Digital civility is useful for all Roblox students. Our materials teach skills such as how to identify false or suspicious information, and how to treat others with kindness and respect.
 
 <Grid container>
 <Grid item XSmall={6}>
-<h4>Intro to Digital Safety</h4>
+<h4>Intro to digital safety</h4>
 
 Learn real-life skills playing a Roblox experience.
 
@@ -183,7 +183,7 @@ Learn real-life skills playing a Roblox experience.
 </Grid>
 <Grid item XSmall={6}>
 
-<h4>Intro to Digital Civility</h4>
+<h4>Intro to digital civility</h4>
 
 Become a digital citizen while learning Roblox Studio skills.
 
@@ -191,14 +191,14 @@ Become a digital citizen while learning Roblox Studio skills.
 </Grid>
 </Grid>
 
-### Classroom Management
+### Classroom management
 
 The resources below have been built with educators on how to create supportive learning environments.
 
 <Grid container>
 <Grid item XSmall={6}>
 
-<h4>Classroom Best Practices</h4>
+<h4>Classroom best practices</h4>
 
 Generalized tips for any Roblox classroom.
 
@@ -206,7 +206,7 @@ Generalized tips for any Roblox classroom.
 </Grid>
 <Grid item XSmall={6}>
 
-<h4>Collaboration Best Practices</h4>
+<h4>Collaboration best practices</h4>
 
 Guidelines for collaborative study and play.
 

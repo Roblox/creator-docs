@@ -1,11 +1,11 @@
 ---
-title: Studio Shortcuts
+title: Studio shortcuts
 description: Explains Studio default shortcuts and key commands that make development quicker and easier.
 ---
 
 Studio has many default shortcuts and key commands that make development quicker and easier. You can customize every shortcut and bind many actions without defaults to any key through **File**&nbsp;&rarr; **Advanced**&nbsp;&rarr; **Customize&nbsp;Shortcuts**.
 
-## Files and Publishing
+## Files and publishing
 
 <table size="small">
   <thead>
@@ -86,7 +86,7 @@ Studio has many default shortcuts and key commands that make development quicker
   </tbody>
 </table>
 
-## Camera Controls
+## Camera controls
 
 <table size="small">
   <thead>
@@ -143,7 +143,7 @@ Studio has many default shortcuts and key commands that make development quicker
   </tbody>
 </table>
 
-## Selecting and Editing
+## Select and edit
 
 <Tabs>
 <TabItem label="General">
@@ -376,7 +376,7 @@ Studio has many default shortcuts and key commands that make development quicker
 </TabItem>
 </Tabs>
 
-## Interface Controls
+## Interface controls
 
 <table size="small">
 	<thead>
@@ -457,7 +457,7 @@ Studio has many default shortcuts and key commands that make development quicker
 	</tbody>
 </table>
 
-## Testing and Diagnostics
+## Testing and diagnostics
 
 <table size="small">
 	<thead>

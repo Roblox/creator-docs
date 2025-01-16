@@ -1,5 +1,5 @@
 ---
-title: Material References
+title: Material references
 description: PBR texture examples and various texture map values.
 ---
 
@@ -11,7 +11,7 @@ The following figure illustrates the various base surface types you can achieve 
 <img src="../../assets/modeling/surface-appearance/Roughness-Metalness-Matrix.png"/>
 </figure>
 
-## Common Materials
+## Common materials
 
 You can use the following material reference values as a baseline for creating your own custom surfaces:
 
@@ -115,16 +115,16 @@ You can use the following material reference values as a baseline for creating y
 </figure>
 </GridContainer>
 
-## Clothing Examples
+## Clothing examples
 
 Layered clothing can take advantage of PBR textures to achieve realistic and visually popping cosmetics for avatar characters. Use the following reference examples to compare how various material values are used to achieve a certain cosmetic effect and its comparable real-time rendering in Substance Painter and Roblox Studio:
 
 <table>
 <thead>
   <tr>
-    <th><center>Substance Painter Render</center></th>
-    <th><center>Roblox Studio Render</center></th>
-    <th>Material Values</th>
+    <th><center>Substance Painter render</center></th>
+    <th><center>Roblox Studio render</center></th>
+    <th>Material values</th>
   </tr>
 </thead>
 <tbody>

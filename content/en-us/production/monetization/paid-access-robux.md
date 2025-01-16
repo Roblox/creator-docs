@@ -1,5 +1,5 @@
 ---
-title: Paid Access in Robux
+title: Paid access in Robux
 description: Paid access lets you charge users a one-time fee in Robux to access your experience.
 ---
 
@@ -36,7 +36,7 @@ Payouts for purchases of paid access in Robux are held in escrow for up to 7 day
 
 Refunds are not available for users who purchase paid access in Robux.
 
-## Enabling Paid Access in the Creator Hub
+## Enable paid access in the Creator Hub
 
 To enable paid access in the Creator Hub:
 
@@ -46,13 +46,13 @@ To enable paid access in the Creator Hub:
 4. Under **Devices**, select which devices you want to enable paid access for.
 5. Click **Save Changes**.
 
-## Enabling Paid Access in Roblox Studio
+## Enable paid access in Roblox Studio
 
 To enable paid access in Roblox Studio:
 
 1. In Studio, go to **Home** > **Game Settings**.
 2. Under **Monetization**, click **Configure on Creator Hub**.
-3. Follow the steps to [enable paid access in the Creator Hub](#enabling-paid-access-in-the-creator-hub).
+3. Follow the steps to [enable paid access in the Creator Hub](#enable-paid-access-in-the-creator-hub).
 
 ## Policies
 

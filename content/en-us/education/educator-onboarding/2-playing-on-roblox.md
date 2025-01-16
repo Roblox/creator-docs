@@ -1,5 +1,5 @@
 ---
-title: Playing on Roblox
+title: Play on Roblox
 description: For educators, learn how to play Roblox. This covers creating an account, learning controls, and common terms found on Roblox.
 next: /education/educator-onboarding/3-setting-up-a-roblox-classroom
 prev: /education/educator-onboarding/1-intro-to-roblox
@@ -13,11 +13,11 @@ By the end of this article, you will:
 - Understand the layout of the Roblox platform and how to launch experiences.
 - Learn basic skills in Roblox Client, such as avatar controls and camera manipulation.
 
-## Creating Your Account
+## Create your account
 
 To play and create on Roblox, you need a **free** account.
 
-### Account Creation
+### Account creation
 
 1. Create an account by signing up on the <a href="https://www.roblox.com" target="_blank" rel="noopener">Roblox Home Page</a>. Follow the prompts to create your account.
 
@@ -31,7 +31,7 @@ To play and create on Roblox, you need a **free** account.
       <img
       src="../../assets/education/legacy/module2-verify.png"
       width="100%" />
-      <figcaption>Captcha Prompt</figcaption>
+      <figcaption>Captcha prompt</figcaption>
       </figure>
     </Grid>
     <Grid item XSmall={4}>
@@ -39,26 +39,26 @@ To play and create on Roblox, you need a **free** account.
       <img
       src="../../assets/education/legacy/module2-capture.jpg"
       width="100%" />
-      <figcaption>Captcha Challenge</figcaption>
+      <figcaption>Captcha calculateshallenge</figcaption>
       </figure>
     </Grid>
   </Grid>
 
     <Alert severity="info">
-    <AlertTitle>CAPTCHAs and Students</AlertTitle>
+    <AlertTitle>CAPTCHAs and students</AlertTitle>
     Note that your students may have to accomplish CAPTCHA challenges when logging
     into accounts. Because of this, we encourage setting aside time for account
     log-ins at the start of class.
     </Alert>
 
-## The Roblox Home Page
+## The Roblox home page
 
 Once you've logged in, you'll see the Roblox home page. This includes recommended games and navigation options. Additionally, you'll see your username and a headshot of your **avatar**, your virtual representation in Roblox.
 
 <img src="../../assets/education/legacy/module2-homepage.jpg" />
 
 <Alert severity="info">
-  <AlertTitle>Customizing Avatars</AlertTitle>
+  <AlertTitle>Customize avatars</AlertTitle>
 Many users enjoy customizing their avatar, changing it to be a realistic
 representation of themselves, or even becoming a fantasy character. Avatars are
 customized using avatar items in the <a
@@ -85,7 +85,7 @@ Before moving onto the training experience, it's recommended you add an email to
    target="_blank" rel="noopener">Account Security</a>.
    </Alert>
 
-## Learn Roblox Client
+## Learn Roblox client
 
 With an account created, you'll now launch your first Roblox experience. The **What is Roblox? - Training Experience** is designed by the Roblox team to introduce educators how to play Roblox and feel comfortable on the platform.
 
@@ -99,7 +99,7 @@ A sample page is below.
 
 <img src="../../assets/education/legacy/module2-gamePage.png" />
 
-### Launch the Experience
+### Launch the experience
 
 1. To start, go to the [What is Roblox? Training Experience](https://www.roblox.com/games/7086173721).
 
@@ -113,19 +113,19 @@ A sample page is below.
    <Grid item XSmall={4}>
    <figure>
    <img src="../../assets/education/legacy/module2-trainingExample.jpg" width="100%" />
-   <figcaption>Example In-Experience</figcaption>
+   <figcaption>Example in-experience</figcaption>
    </figure>
    </Grid>
 
    <Grid item XSmall={4}>
    <figure>
    <img src="../../assets/education/legacy/module2-finishedTraining.jpg" width="100%" />
-   <figcaption>Finish Screen</figcaption>
+   <figcaption>Finish screen</figcaption>
    </figure>
    </Grid>
    </Grid>
 
-### Desktop Controls
+### Desktop controls
 
 While all controls are introduced in the experience, here's a quick reference.
 
@@ -174,7 +174,7 @@ While all controls are introduced in the experience, here's a quick reference.
 </tbody>
 </table>
 
-### Mobile Controls
+### Mobile controls
 
 Roblox works easily on any mobile device. Whenever playing Roblox, we recommend holding the phone with thumbs on the screen like below.
 

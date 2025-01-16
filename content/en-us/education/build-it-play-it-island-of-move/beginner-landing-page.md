@@ -34,7 +34,7 @@ With your new account, remember these safety tips:
 
 </Alert>
 
-## Three Lessons, Three Prizes
+## Three lessons, three prizes
 
 To design an animation for your own simulator game, follow along with each of the three step-by-step tutorials.
 

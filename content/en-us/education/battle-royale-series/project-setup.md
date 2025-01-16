@@ -1,6 +1,6 @@
 ---
 title: Battle Royale
-description: Create a battle royale experience in Roblox Studio. Learn coding in Roblox and how to make a game.
+description: Create a Battle Royale experience in Roblox Studio. Learn coding in Roblox and how to make a game.
 next: /education/battle-royale-series/coding-the-game-loop
 prev: /education/battle-royale-series/landing
 ---
@@ -45,7 +45,7 @@ During each phase, a different set of tasks happened that you'll code during thi
 - **Match** - Timer starts and players are teleported to an arena where they compete. If a player loses, they're teleported back to the lobby.
 - **Cleanup and Reset** - Happens when one player is left or the timer finishes. Players are then teleported back to the lobby where the loop restarts.
 
-## Developing the Experience
+## Develop the experience
 
 Battle royales are made of many elements, like code and art assets. To manage larger projects, developers plan a **workflow**, or a series of steps, to get to completion.
 
@@ -58,7 +58,7 @@ During this series, you'll go through the following workflow:
 
 Instead of working on different parts of a project simultaneously, developers break large projects into manageable chunks. Each phase should have its own specific goal before going to the next phase. This makes it easier to catch potential errors and save time down the road. For instance, designing art to polish a map that hasn't been tested may result in wasted time if the map needs to be redesigned to be fun.
 
-### Planning the Project
+### Plan the project
 
 The first phase is to plan your vision in a process called **preproduction**. Taking the time to make a plan helps you focus on important design choices, such as where to place obstacles and player spawns.
 
@@ -75,7 +75,7 @@ To plan, you'll create a layout map with paper or a drawing software. A layout m
   </figure>
 </GridContainer>
 
-### Designing a Map Layout
+### Design a map layout
 
 For the sketch, the objective here is to create a design you can then replicate in Studio. The map arena should have enough variety to be fun, but also include balance as to not give users an unfair advantage.
 
@@ -95,7 +95,7 @@ For the sketch, the objective here is to create a design you can then replicate 
 
    <img src="../../assets/education/battle-royale-series/vectorMap_example_obstacle.png" />
 
-### Tips for Layouts
+### Tips for layouts
 
 Keep designs simple, but engaging. Since players make split second decisions in moving through a level, give them enough choices to make a level feel different each time, but not too much that they can't remember how to move through the map or feel overwhelmed.
 
@@ -114,13 +114,13 @@ Keep designs simple, but engaging. Since players make split second decisions in 
   </figure>
 </GridContainer>
 
-## Creating the Map
+## Create the map
 
 Recreate the layout map quickly in Roblox Studio using basic parts in a process called grayboxing. Stay focused on designing a fun, playable map. Don't spend time adding textures or small details, like decorative props. After you've created a working map with code, then spend time designing art to fit the map's setting.
 
 <img src="../../assets/education/battle-royale-series/arena_finishedProject_arenaHero.jpg" />
 
-### Building a Lobby
+### Build a lobby
 
 Before creating the arena, build the lobby, where players enter the experience and socialize between matches.
 
@@ -135,7 +135,7 @@ Before creating the arena, build the lobby, where players enter the experience a
 
 3. Place all lobby parts into a folder named Lobby.
 
-### Arena and Spawns
+### Arena and spawns
 
 The arena is where players will compete. When building the arena, you'll **graybox** the environment with simple parts and colors. A graybox environment is an approximation of the final design, so a large cylinder may be an equally sized tree in the final version.
 
@@ -159,7 +159,7 @@ This process, common in level design, gives designers a working prototype to tes
    As you place spawns, keep in mind that all players will randomly spawn when joining.
    </Alert>
 
-### Graybox the Arena
+### Graybox the arena
 
 Remember that grayboxing is an approximation of the final design using simple parts. A grayboxed level should give designers an understanding of how players move through the arena. To create the arena, use an optional building kit or basic parts.
 
@@ -184,7 +184,7 @@ As you build, some tips for map design are below.
 - **Vary Height** - Flat maps can get repetitive for players. Use hills, stairs, and ramps of different heights to add variety to the map.
 - **Build Half of the Map and then Duplicate** - This technique allows you to quickly build a symmetrical map. -**Test and Check for Scale** - While building, think about the map in relation to a player. For example, how spacious does an area feel or can a player fit easily through a door. Keep in mind the average avatar is 6.5 studs tall.
 
-### Playtesting the Graybox
+### Playtest the graybox
 
 With the arena completed, it's important to see if it's fun and interesting to move around.
 

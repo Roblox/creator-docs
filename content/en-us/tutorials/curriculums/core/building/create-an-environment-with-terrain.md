@@ -1,5 +1,5 @@
 ---
-title: Create an Environment with Terrain
+title: Create an environment with terrain
 description: Explains how to create the island where players spawn using Studio's terrain tools.
 next: /tutorials/curriculums/core/building/greybox-a-playable-area
 prev: /tutorials/curriculums/core/building/create-a-project
@@ -13,7 +13,7 @@ prev: /tutorials/curriculums/core/building/create-a-project
 
 Before you begin, it's important to note that sculpting terrain is an art form, and it's difficult to exactly recreate brush strokes and subtle material edits. As long as your terrain meets the needs of your own experience, it's normal and expected for your environment to look and feel different from the sample [Island Jump](https://www.roblox.com/games/14239096301/) experience.
 
-## Create the Island
+## Create the island
 
 The first step in creating your environment is to create a small island that players will spawn to when they start the experience, and when their health reaches zero after they fall off a platform. Using the Terrain Editor's **Draw** tool, you can click and drag anywhere within the viewport to generate a large sphere of terrain to start the island, which you can later shape and flatten for a wide surface area.
 
@@ -49,7 +49,7 @@ To create the island:
    If you cannot see the sphere, try zooming your camera out until your spawn location is smaller.
 </Alert>
 
-## Shape the Island
+## Shape the island
 
 If you keep the island in its current shape, players would have a difficult time navigating without falling off the island. Using the Terrain Editor's **Flatten** tool, you can click and drag on the sphere to evenly level the terrain on a fixed plane, and provide players a relatively flat surface as they start your experience. While this shape initially looks unnatural, you can also use the Terrain Editor's **Sculpt** tool around the edges of the island to ensure it looks organic and realistic.
 
@@ -66,9 +66,9 @@ To shape the island:
        <img src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Editor-Flatten-Settings.png" alt="Studio's Flatten tool settings for this step in the task."  width="360" />
      </figure>
      <Grid item>
-       - Set **Brush Size** to **18**.
+       - Set **Brush Size** to `18`.
        - Set **Flatten Plane** to **Fixed**. New settings display.
-       - Set **Fixed Y Plane** to **0**.
+       - Set **Fixed Y Plane** to `0`.
      </Grid>
    </GridContainer>
 
@@ -97,7 +97,7 @@ To shape the island:
    grows or erodes existing terrain.
 </Alert>
 
-## Create Water
+## Create water
 
 While there are multiple ways to generate a large body of water, the following instructions utilize the
 Terrain Editor's **Fill** tool. This method allows you to replace any material in a specific region with another
@@ -110,8 +110,8 @@ To create the water around the island:
    <img src="../../../../assets/studio/terrain-editor/Edit-Tab-Fill.png" alt="Studio's Terrain Editor window with both the Edit tab and Fill button highlighted." width="360" />
 
 1. In the **Selection Settings** section,
-   1. Set **Position** to **0, -15, 0** to ensure the water fills below the top of the island.
-   1. Set **Size** to **1800, 5, 1800** to ensure the water fills toward the horizon of your experience.
+   1. Set **Position** to `0, -15, 0` to ensure the water fills below the top of the island.
+   1. Set **Size** to `1800, 5, 1800` to ensure the water fills toward the horizon of your experience.
 1. In the **Material Settings** section, configure the tool with the following settings:
 
    <GridContainer numColumns="2">
@@ -131,7 +131,7 @@ To create the water around the island:
    <source src="../../../../assets/tutorials/create-an-environment-with-terrain/Terrain-Filling-Water.mp4" />
    </video>
 
-## Apply Materials
+## Apply materials
 
 Now that you have the basis of your island, you can customize its appearance with different materials. Using the Terrain Editor's **Paint** tool,
 you can click and drag on your terrain to apply both a grassy surface and blades of grass to the middle of the island's surface.
@@ -161,13 +161,13 @@ To apply materials to the island:
    </video>
 
 1. Navigate back to the **Terrain Editor** window, then in the **Brush Settings** and **Material Settings** sections,
-   1. Set **Brush Size** to **3**.
+   1. Set **Brush Size** to `3`.
    1. Set **Material** to **Grass**.
 1. In the viewport, drag along the edges of the island to apply blades of grass, leaving space in the middle of the island for
    the spawn location and the initial platforms.
 1. In the **Explorer** window, select the **SpawnLocation** object.
 1. In the **Home** tab, select the **Move** tool.
-1. In the viewport, move the spawn location toward the edge of the island to make space for the first platform. The sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) `.rbxl` file uses a position of **-127, -3, 9**.
+1. In the viewport, move the spawn location toward the edge of the island to make space for the first platform. The sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) `.rbxl` file uses a position of `-127, -3, 9`.
 
    <video controls loop muted>
    <source src="../../../../assets/tutorials/create-an-environment-with-terrain/create-an-environment-with-terrain-spawn.mp4" />
@@ -181,8 +181,7 @@ To apply materials to the island:
 
 ## Playtest
 
-Once you are happy with your island's appearance, you can playtest your experience to check the scale of the island and how it
-feels in the context of your experience's 3D world.
+Once you are happy with your island's appearance, you can playtest your experience to check the scale of the island and how it feels in the context of your experience's 3D world.
 
 To playtest your experience:
 

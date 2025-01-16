@@ -1,5 +1,5 @@
 ---
-title: Mobile Input
+title: Mobile input
 description: Explains Roblox support for mobile devices.
 ---
 
@@ -9,27 +9,27 @@ When designing a mobile experience, consider the [device orientation](#device-or
 
 - [Create on-screen buttons](#custom-mobile-buttons) visible only on mobile devices.
 - [Setup context dependent inputs](#context-dependent-inputs) that allows the same button or input to perform a different action depending on the situation.
-- [Detect other input devices](#detecting-other-devices), such as a mouse or keyboard connected to a mobile tablet, to provide the correct on-screen prompts to the user.
+- [Detect other input devices](#detect-other-devices), such as a mouse or keyboard connected to a mobile tablet, to provide the correct on-screen prompts to the user.
 
-## Device Orientation
+## Device orientation
 
 On phones and tablets, the device orientation majorly affects the user experience and interaction. For example, landscape mode is best operated with two thumbs while portrait mode may lend itself to one-finger interface.
 
 By default, Roblox experiences run in landscape mode, allowing the experience to switch between landscape "left" and landscape "right" as the user's device rotates. However, experiences can be locked to a particular orientation if desired.
 
-### Orientation Modes
+### Orientation modes
 
 There are five different orientation modes, including two sensor-based modes and three locked modes.
 
 <table>
 <thead>
   <tr>
-    <th colspan="2">Sensor Modes</th>
+    <th colspan="2">Sensor modes</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>Landscape Sensor</td>
+    <td>Landscape sensor</td>
     <td>The default Roblox setting in which the experience always appears in landscape mode (no portrait mode) and the device detects its physical orientation to ensure the experience view is always oriented upward.</td>
   </tr>
   <tr>
@@ -42,16 +42,16 @@ There are five different orientation modes, including two sensor-based modes and
 <table>
 <thead>
   <tr>
-    <th colspan="2">Locked Modes</th>
+    <th colspan="2">Locked modes</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>Landscape Left</td>
+    <td>Landscape left</td>
     <td>On devices with a physical home button, the home button is to the left of the display. On devices with a virtual home/nav bar, its touch region is at the bottom of the display.</td>
   </tr>
   <tr>
-    <td>Landscape Right</td>
+    <td>Landscape right</td>
     <td>On devices with a physical home button, the home button is to the right of the display. On devices with a virtual home/nav bar, its touch region is at the bottom of the display.</td>
   </tr>
   <tr>
@@ -65,11 +65,11 @@ There are five different orientation modes, including two sensor-based modes and
 Roblox does not include a "portrait upside-down" mode since many devices do not natively support that orientation.
 </Alert>
 
-### Orientation Properties
+### Orientation properties
 
-When setting an orientation, you can set the [Starting Orientation](#starting-orientation), the [In-Experience Orientation](#in-experience-orientation), and the [Current Orientation](#current-orientation).
+When setting an orientation, you can set the [starting orientation](#starting-orientation), the [in-experience orientation](#in-experience-orientation), and the [current orientation](#current-orientation).
 
-#### Starting Orientation
+#### Starting orientation
 
 `Class.StarterGui.ScreenOrientation` sets the default orientation for a place. Acceptable values include:
 
@@ -81,7 +81,7 @@ When setting an orientation, you can set the [Starting Orientation](#starting-or
 
 Because this property affects all new users who join the experience, you can set its value in `Class.StarterGui` → `Enum.ScreenOrientation` within Studio.
 
-#### In-Experience Orientation
+#### In-experience orientation
 
 `Class.PlayerGui.ScreenOrientation` explicitly changes the experience's orientation for a user. When this property is set to one of the `Enum.ScreenOrientation` enums in a `Class.LocalScript`, the experience will immediately orient itself to match the setting. This can be useful when an experience needs to provide a particular experience like locking the view to portrait for a minigame.
 
@@ -96,7 +96,7 @@ task.wait(2)
 playerGUI.ScreenOrientation = Enum.ScreenOrientation.Portrait
 ```
 
-#### Current Orientation
+#### Current orientation
 
 `Class.PlayerGui.CurrentScreenOrientation` gets the current device orientation. Possible values include:
 
@@ -113,7 +113,7 @@ local playerGUI = Players.LocalPlayer:WaitForChild("PlayerGui")
 print(playerGUI.CurrentScreenOrientation)
 ```
 
-## Character Movement Modes
+## Character movement modes
 
 Roblox offers several `Class.StarterPlayer` properties you can set to change how users on mobile devices can move through your experience.
 
@@ -158,7 +158,7 @@ You can set mobile movement control schemes for Roblox experiences by changing t
 </tbody>
 </table>
 
-### Automatic Jumping
+### Automatic jumping
 
 When `Class.StarterPlayer.AutoJumpEnabled` is enabled, the user's character automatically jumps across gaps when approaching the edge of a platform. `Class.StarterPlayer.AutoJumpEnabled` is enabled by default for mobile devices.
 
@@ -264,7 +264,7 @@ ContextActionService:BindAction("Interact", talkToNPC, true, Enum.KeyCode.T, Enu
 ContextActionService:SetTitle("Interact", "Talk")
 ```
 
-## Detecting Other Devices
+## Detect other devices
 
 In cross-platform experiences, it's important to reference the user's preferred input options by displaying input options for the actively used device. For example, a mobile device can have a [mouse and keyboard](./mouse-and-keyboard.md) or [gamepad](./gamepad.md) connected, or it's possible that a desktop has a touchscreen enabled. If multiple input sources are enabled, you can use `Class.UserInputService:GetLastInputType()|GetLastInputType()` to get the user's last used input device.
 

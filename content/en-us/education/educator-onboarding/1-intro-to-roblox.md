@@ -73,8 +73,8 @@ Roblox is actually two software packages with different hardware requirements.
 <thead>
 <tr>
 <th scope="col">Software</th>
-<th scope="col">Use Case</th>
-<th scope="col">Hardware Requirements</th>
+<th scope="col">Use case</th>
+<th scope="col">Hardware requirements</th>
 </tr>
 </thead>
 <tbody>
@@ -94,25 +94,25 @@ Roblox is actually two software packages with different hardware requirements.
 </tbody>
 </table>
 
-#### Common Questions About Software
+#### Common questions about software
 
-**Roblox Client Plays All Experiences**
+**Roblox client plays all experiences**
 Installing Roblox Client allows you to play any experience on Roblox. Experiences do not have their own installations.
 
-**More Detail on Hardware Specifications**
+**More detail on hardware specifications**
 For more details such as supported graphics cards or unique mobile device questions, see the <a href="https://en.help.roblox.com/hc/en-us/articles/203312800-Computer-Hardware-Operating-System-Requirements">Hardware Requirements</a> page.
 
 **Software Updates**
 Both Client and Studio require consistent internet access. Regular updates occur on a weekly basis. When the software does update, changes are often minor and do not disrupt curriculum.
 
-### Recommended Ages
+### Recommended ages
 
 Roblox offers educational opportunities and challenges **for all ages**.
 
 - For **students under 10**, there are virtual learning experiences, such as games to improve math skills or roleplay as dinosaurs.
 - **Older students** can find learning experiences for content such as physics or history. Additionally, they can work in Roblox Studio for project-based learning.
 
-## Using Roblox to Learn
+## Use Roblox to learn
 
 <img
 src="../../assets/education/legacy/Twitterheader1500x500.jpg"

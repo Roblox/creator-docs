@@ -1,5 +1,5 @@
 ---
-title: Glowing Lights with For Loops
+title: Glow lights with for loops
 description: Create glowing lights in Roblox Studio using a for loop. This practical example teaches computer science with Roblox.
 next: /tutorials/fundamentals/coding-4/creating-a-timed-bridge
 prev: /tutorials/fundamentals/coding-4/intro-to-for-loops
@@ -9,7 +9,7 @@ To practice for loops, you'll create a lamp that gradually glows brighter and th
 
 <video controls src="../../../assets/education/coding-4/glowing-light-finished.mp4" width="100%"></video>
 
-## Setting up the Part and Script
+## Set up the part and script
 
 The lamp will be a part with an attached light and script.
 
@@ -45,11 +45,11 @@ The lamp will be a part with an attached light and script.
    local timeChange = 1
    ```
 
-## Making the Lamp Glow
+## Make the lamp glow
 
 The lamp will use two **for loops**, one that counts up to make the lamp brighter, and one that counts down to dim it. Each for loop will have a control variable called currentBrightness. That way, as the for loop's control variable goes up and down, so will the brightness of the light.
 
-### First Loop (Light Increase)
+### First loop (light increase)
 
 Remember, a for loop starts with keyword `for` followed by a control variable. This script will set the brightness value of the light to value in the control variable.
 
@@ -99,7 +99,7 @@ If you can't see the brightness change over time in the first loop:
 - Check that `timeChange` is at least 1 or higher. Smaller numbers will make the brightness change faster, but be harder to see over time.
 - Make sure that the first line of your for loop has two total commas separating the control variable, end value, and increment value.
 
-### Second Loop (Light Decrease)
+### Second loop (light decrease)
 
 To dim the light, use a second for loop. The values of this loop will be reversed so the light starts bright and each second, gets dimmer.
 
@@ -121,7 +121,7 @@ To dim the light, use a second for loop. The values of this loop will be reverse
 
    <video controls src="../../../assets/education/coding-4/glowing-light-singleLoop.mp4" width="100%"></video>
 
-### Making the Light Repeat
+### Make the light repeat
 
 Right now, the light only turns on and off once. To make the lamp continuously glow on and off, the for loops will be placed inside a repeating while loop.
 
@@ -153,7 +153,7 @@ Right now, the light only turns on and off once. To make the lamp continuously g
 
    <video controls src="../../../assets/education/coding-4/glowing-light-finished.mp4" width="100%"></video>
 
-## Finished Light Script
+## Finished light script
 
 A finished version of the script can be referenced below.
 

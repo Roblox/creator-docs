@@ -1,5 +1,5 @@
 ---
-title: Challenge Checkpoint
+title: Challenge checkpoint
 description: Complete the third Island of Move challenge to earn free Roblox avatar items.
 next: /education/build-it-play-it-island-of-move/go-beyond-the-challenge
 prev: /education/build-it-play-it-island-of-move/invite-friends-to-play

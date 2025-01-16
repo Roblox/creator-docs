@@ -9,7 +9,7 @@ description: Script Profiler is a tool within the Developer Console that records
 Script Profiler only records function calls that consume CPU resources, so it doesn't record threads that sleep or wait for results.
 </Alert>
 
-## Recording Profiling Sessions
+## Record profiling sessions
 
 Before recording, you need to select the recording environment from:
 
@@ -64,7 +64,7 @@ To record a new profiling session:
 6. Click **Start** to begin the profiling session. If you set a duration, Script Profiler displays a countdown timer with the remaining time in the session.
 7. Click **Stop** or wait until the recording finishes to display the profiling data.
 
-## Reading Profiling Data
+## Read profiling data
 
 After a session stops, Script Profiler generates a table showing how much time each function call costs in CPU time. The table sorts function calls from the most-time-spent to least-time-spent, and allows you to search for specific functions by their name. It provides the following two views:
 
@@ -100,7 +100,7 @@ You can also select from the following display options to tailor your debugging 
   </tbody>
 </table>
 
-## Exporting Profiling Data
+## Export profiling data
 
 Script Profiler allows you to export recorded profiling data as a JSON file. To export recorded data after a profiling session:
 

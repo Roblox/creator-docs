@@ -1,5 +1,5 @@
 ---
-title: Designing Educational Experiences
+title: Design educational experiences
 description: Learn how to get started creating educational experiences and games using Roblox.
 ---
 
@@ -20,7 +20,7 @@ Additional topics covered include:
 
 <img src="../../assets/education/developer/petGame-pets.jpg" />
 
-## Slide Deck
+## Slide deck
 
 Download the presentation as a `.PDF` below.
 

@@ -13,9 +13,9 @@ Roblox Studio's collaborative nature and ease of prototyping makes it a great op
 - Built-in features allowing real-time collaboration.
 - Ability to innovate and express oneself using the scripting language, Lua.
 
-## Roblox For Computer Science
+## Roblox for computer science
 
-### Coding with Lua
+### Code with Lua
 
 Lua is excellent as a first coding language, or for those ready for a new challenge after visual languages such as MIT Scratch. Lua is a typed syntax language. It's similar to Python, but without white space concerns. This means your students' code won't break if they forget to indent a block of code or add a semicolon.
 
@@ -33,7 +33,7 @@ For Lua coding principles that you can adapt to the classroom, check our <a href
 
 Roblox Studio is built with [collaboration](../../projects/collaboration.md) in mind, making it an ideal choice for students studying for the AP test independently or online. Additionally, students can work simultaneously in the <a href="https://www.youtube.com/watch?v=6wuZJTiwCtM&feature=emb_logo" target="_blank" rel="noopener">same script</a>, or dedicate scripts to specific tasks, making it easy to track a student's individual contributions.
 
-### Types of Student Projects
+### Types of student projects
 
 Some examples of abstractions and algorithms students can incorporate within a 6 - 8 hour timeframe are:
 
@@ -53,11 +53,11 @@ Students are required to submit the following for the Create Performance Task:
 
 For more information, refer to the <a href = "https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf?course=ap-computer-science-principles" target = "_blank">AP CSP Exam Sheet </a> for precise details.
 
-### Example Roblox Idea
+### Example Roblox idea
 
 For the written submission, students will need to identify an algorithm in their project that incorporates two smaller algorithms. They will also need to call out an abstraction. Students are allowed to reuse an algorithm for an abstraction so long as they describe how it's an abstraction, rather than repeating their previous answer.
 
-### Project Example
+### Project example
 
 **Program Purpose:** Players collect coins in a game and then use the coins to buy items.
 
@@ -69,7 +69,7 @@ For the written submission, students will need to identify an algorithm in their
 
 **Potential Abstraction:** Rather than creating an individual function for the sale of each type of item, `buyItem()` has a parameter for the item being bought, `itemToBuy`. The item cost is found using `getCost()`, which returns a value from a dictionary of items and how much they cost. That cost is then used in `verifyPurchase()` and `purchaseItem()`.
 
-### Recommended Task Milestones
+### Recommended task milestones
 
 Plan on spending **at least two hours** preparing students for the PT Create Task, and then a minimum of 12 hours of class time to complete and submit a program along with written and video responses.
 
@@ -130,14 +130,14 @@ This recommended schedule gives students approximately 6 or 7 hours for completi
   </tbody>
 </table>
 
-### Video Requirements
+### Video requirements
 
 The video should be of running code and demonstrate the purpose of the overall program as well as at least one significant feature. All videos must be under one minute and not exceed 30 MB.
 For an example of an exemplary video response, with scoring notes see <a href="https://apcentral.collegeboard.org/courses/ap-computer-science-principles/classroom-resources/create-applications-ideas-sample-response-a" target= "_blank"> AP Central: Sample Response A. </a>
 
 For complete requirements see the <a href ="https://apstudents.collegeboard.org/ap/2019-07/digital-portfolio-student-user-guide-apcsp.pdf" target = "_blank">Digital Portfolio Student User Guide.</a>
 
-### Prepping for the PT
+### Prep for the PT
 
 Plan on spending one class session introducing the project and showing examples of graded projects. Use a second session to plan the project.
 
@@ -168,13 +168,13 @@ Below are resources to help you structure your prep for the PT Create.
 </ul>
 </ul>
 
-## Roblox Specific Tips
+## Roblox specific tips
 
-### Keep Visuals and 3D Worlds Simple
+### Keep visuals and 3D worlds simple
 
 When creating games, students can get invested in decorating or customizing their world. Help them keep in mind that they only have a limited time, and encourage them to use basic block shapes and colors to plan out their game.
 
-### Plan Out Needed Scripts
+### Plan out needed scripts
 
 As part of the planning session, have students write down what scripts they will need, where that script will be located, and that script's function. Make sure that students can identify at least one function that simplifies their code. Usually these functions will have parameters that allow them to take in different values, or will be called from multiple places. Student code should be logical, not created through trial and error or hacked together.
 
@@ -185,6 +185,6 @@ Below are some questions to help students reflect:
 - What assets, such as art or sounds, are needed to make the program function as intended? What tasks and behaviors need to be coded?
 - If you become low on time, what features can be cut?
 
-### Avoid Using Toolbox Assets
+### Avoid using toolbox assets
 
 The Toolbox is a part of Roblox Studio that includes prebuilt assets, like 3D models. While these can often save students time in building, they often already include scripts that may have unwanted functionality or conflict with the student's code. If students are not diligent about removing all scripts included with prepackaged assets, it can result in time wasted while debugging later.

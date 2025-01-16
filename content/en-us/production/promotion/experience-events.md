@@ -1,5 +1,5 @@
 ---
-title: Experience Events and Updates
+title: Experience events and updates
 description: Explore how to create and promote time-based events for your experience, as well as announce experience updates to opted-in users.
 ---
 
@@ -7,11 +7,11 @@ As part of your [promotional](../../production/promotion/index.md) initiatives, 
 
 <img src="../../assets/promotion/experience-events/Dedicated-Event-Page-Live.jpg" alt="Example event page on the Roblox website" />
 
-In addition to events, the integrated [update announcements](#announcing-experience-updates) system lets you announce experience updates for which opted‑in players receive a notification in their Roblox notifications stream, along with a link to join the experience directly from the notification.
+In addition to events, the integrated [update announcements](#announce-experience-updates) system lets you announce experience updates for which opted‑in players receive a notification in their Roblox notifications stream, along with a link to join the experience directly from the notification.
 
 <img src="../../assets/promotion/experience-events/Notification-Update.png" width="700" alt="Example update announcement notification on the Roblox website" />
 
-## Creating Events
+## Create events
 
 To create an event, you must have the [Edit all group experiences](../../projects/groups.md#roles-and-permissions) permission in a [group‑owned](../../projects/groups.md) experience, or be the sole owner of a user‑owned experience. Currently, you can publish a maximum of 10 ongoing or upcoming events.
 
@@ -29,7 +29,7 @@ To create an event, you must have the [Edit all group experiences](../../project
 
 5. Select an event **category** that most accurately describes your event. The category may be shown alongside your event thumbnail in certain places on Roblox.
 
-6. Enter the event title, subtitle, and description. The description is optional but it can help provide additional information about the details of your event. If you supply a description, it should follow general [best practices](../../production/publishing/publishing-experiences-and-places.md#metadata-best-practices) and accurately portray the event, including:
+6. Enter the event title, subtitle, and description. The description is optional but it can help provide additional information about the details of your event. If you supply a description, it should follow general [best practices](../../production/publishing/publish-experiences-and-places.md#metadata-best-practices) and accurately portray the event, including:
 
    - A summary of the event and how it relates to the overall experience. If you're using the event to promote a major experience update, summarize the key updates.
 
@@ -50,11 +50,11 @@ To create an event, you must have the [Edit all group experiences](../../project
    Assets which are pending review or are moderated will display a placeholder.
    </Alert>
 
-## Event Discovery
+## Event discovery
 
 The following sections detail how you can promote events and how events are discoverable by players on the Roblox platform.
 
-### Event Details Page
+### Event details page
 
 All published events feature an event details page which you can share with players on and off platform. To access a **shareable link**, you can use either the event details page itself or the **Events** page.
 
@@ -70,16 +70,16 @@ From the experience's **Events** page, hover over the event thumbnail, click the
 </Tabs>
 
 <Alert severity="warning">
-Event pages persist even after an event ends, but players will no longer be able to join from the page. To remove an event page entirely, see [Deleting Events](#deleting-events).
+Event pages persist even after an event ends, but players will no longer be able to join from the page. To remove an event page entirely, see [Deleting Events](#delete-events).
 </Alert>
 
-### Experience Detail Page
+### Experience detail page
 
 All published events also appear in a dedicated **Events** section on the experience's detail page. Players can join active events directly through the **Join&nbsp;Event** button, or click **Notify&nbsp;Me** for upcoming events to receive stream notifications in their Roblox inbox and the ability to opt into [push notifications](#streampush-notifications).
 
 <img src="../../assets/promotion/experience-events/Experience-Page-Promotion.png" width="840" alt="Event promoted on experience's detail page" />
 
-### Group Page
+### Group page
 
 If you create events as an admin for a [group](../../projects/groups.md), the group's events will appear under the **Events** tab on the group page.
 
@@ -96,7 +96,7 @@ In addition, you can feature an event in the group's **About** section for extra
 
    <img src="../../assets/promotion/experience-events/Group-Page-About-Tab.jpg" width="720" alt="Event featured on group's page under the About tab." />
 
-### Stream/Push Notifications
+### Stream/push notifications
 
 Players who click **Notify Me** for an upcoming event will receive stream notifications in their Roblox inbox when the event starts. In addition, they can opt into **push notifications** to receive a notification on their device that will take them into the experience. Stream notifications remain accessible in the player's Roblox inbox for the duration of the event, making it easy for them to hop back in at any time.
 
@@ -111,7 +111,7 @@ Players who click **Notify Me** for an upcoming event will receive stream notifi
 	</figure>
 </GridContainer>
 
-## Deleting Events
+## Delete events
 
 To delete an event and remove its [detail page](#event-details-page):
 
@@ -123,7 +123,7 @@ To delete an event and remove its [detail page](#event-details-page):
 
    <img src="../../assets/creator-dashboard/Event-Context-Menu-Delete-Event.png" width="600" alt="Event's right-click context menu indicating the selection of Delete Event" />
 
-## Using Event Attribution
+## Use event attribution
 
 When a player joins an experience through an event entry point, such as by clicking on an event [notification](#streampush-notifications) or through the join button on the [event details page](#event-details-page), the event ID is added to the player's `GameJoinContext`. You can use this information in your experience to identify players who have come to participate in the event and show them custom prompts or otherwise personalize their experience.
 
@@ -146,7 +146,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-## Announcing Experience Updates
+## Announce experience updates
 
 <Alert severity="info">
 Events and updates are currently in the process of being combined. Announcing updates still uses the old form, but that is subject to change in the future.
@@ -193,11 +193,11 @@ To announce an update:
 	 <td>Number of people who have viewed the update.</td>
 	 </tr>
 	 <tr>
-	 <td>**Visit Rate**</td>
+	 <td>**Visit rate**</td>
 	 <td>Percentage of people who have visited the experience from the notification.</td>
 	 </tr>
 	 <tr>
-	 <td>**Unfollow Rate**</td>
+	 <td>**Unfollow rate**</td>
 	 <td>Percentage of people who have unfollowed the experience from the notification.</td>
 	 </tr>
 	 </tbody>

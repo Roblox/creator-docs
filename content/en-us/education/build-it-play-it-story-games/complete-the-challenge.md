@@ -1,5 +1,5 @@
 ---
-title: Completing the Challenge
+title: Complete the challenge
 description: Part of the Story Games series that teaches you to code in Roblox. Learn how to share an experience in Roblox.
 prev: /education/build-it-play-it-story-games/third-challenge
 ---
@@ -10,7 +10,7 @@ prev: /education/build-it-play-it-story-games/third-challenge
 
 Now that you've completed the game, here are a few ideas to take your game further and keep learning.
 
-## Sharing Your Experience
+## Share your experience
 
 One of the most exciting features of Roblox is that it's really easy to share your game with friends. Currently your game is probably private, meaning only you can play it. For your friends to see the game, you need to make it public.
 
@@ -33,7 +33,7 @@ One of the most exciting features of Roblox is that it's really easy to share yo
 5. In the pop-up, click the desired way you'd like to share.
    <img src="../../assets/education/story-games/shareGameFriends.png" width="75%" />
 
-## Adding More to the Story
+## Add more to the story
 
 Although you completed the challenge, there's always more that you can add into the story.
 

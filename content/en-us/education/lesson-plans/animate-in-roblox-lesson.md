@@ -12,7 +12,7 @@ description: Learn about animation and study how the human body moves.
 <table>
 <tbody>
    <tr>
-    <td><b>Lesson Objectives</b></td>
+    <td><b>Lesson objectives</b></td>
     <td>
       <ul>
         <li>Understand the process of how computers simulate motion in an animation using individual poses.</li>
@@ -21,7 +21,7 @@ description: Learn about animation and study how the human body moves.
       </td>
    </tr>
    <tr>
-    <td><b>Skills and Concepts</b></td>
+    <td><b>Skills and concepts</b></td>
     <td>
     <ul>
     <li><b>Animation</b> - A series of images used to create the illusion of movement.</li>
@@ -62,7 +62,7 @@ description: Learn about animation and study how the human body moves.
     <tr>
       <th>Duration</th>
       <th>Activity</th>
-      <th>Description </th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
@@ -99,7 +99,7 @@ description: Learn about animation and study how the human body moves.
   </tbody>
 </table>
 
-## Lesson Plan
+## Lesson plan
 
 ### Introduction
 
@@ -108,7 +108,7 @@ description: Learn about animation and study how the human body moves.
    - Once finished, that animation will be added into a Roblox experience where it'll be the default way users walk around.
 2. Introduce and define animations in Presentation: Slide 3.
 
-### Guided Tutorial - Plan an Animation
+### Guided tutorial - Plan an animation
 
 1. Lead students through Presentation: Slide 4 - 5.
    - As a class, have students brainstorm actions (ex: real life actions/sports like swimming or dancing, or fantastical like flying.
@@ -116,7 +116,7 @@ description: Learn about animation and study how the human body moves.
 2. Recap by letting 2-3 students share their planned animation.
    - Optional - Let students physically perform their planned animation.
 
-### Guided Tutorial - Studio and Animation Basics
+### Guided tutorial - Studio and animation basics
 
 1. Set expectations that you'll guide students through a tutorial to make their animation. Even if they're not finished, they'll have more time in the independent work time.
 2. Lead students through <a href="../../education/build-it-play-it-island-of-move/opening-the-template.md" target="_blank" rel="noopener">Opening the Template</a> to <a href="../../education/build-it-play-it-island-of-move/adding-the-second-pose.md" target="_blank" rel="noopener">Adding the Second Pose</a>.
@@ -124,11 +124,11 @@ description: Learn about animation and study how the human body moves.
    - At Test the Game, give students at most 2 minutes to play-test.
    - Slides are provided to help you throughout the tutorial.
 
-### Independent Work - Improve Animations
+### Independent work - Improve animations
 
 1. Have students catch up on their projects. If finished, challenge them to improve their animations using tips in Presentation: Slide 10.
 
-### Guided Tutorial - Add Animations
+### Guided tutorial - Add animations
 
 1. Lead students through <a href="../../education/build-it-play-it-island-of-move/exporting-animations.md" target="_blank" rel="noopener">Exporting Animations</a> to <a href="../../education/build-it-play-it-island-of-move/change-the-animation.md" target="_blank" rel="noopener">Change the Animation</a>.
 2. Have students playtest their experience to ensure they see their animation.
@@ -140,48 +140,48 @@ description: Learn about animation and study how the human body moves.
 
 ## Appendix
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
-**General Troubleshooting**
+**General troubleshooting**
 
 - Introduce students to "Ask 3 Before Me": a student needs to ask three peers before asking the instructor for help.
 
-**General Animating Tips**
+**General animating tips**
 
 - Encourage students to frequently use their body or reference pictures when animating. Having a visual reference point can help them understand which body part to rotate. Students can use image search engines (with Safe Mode on) for reference pictures.
 - Remind students to frequently view their animation in Roblox Studio from different angles. An animation may look correct from one angle but not another.
 
-### Classroom Management
+### Classroom management
 
-**Using Motion in the Classroom**
+**Using motion in the classroom**
 This lesson uses motion in two ways: students can play their experiences using mobile devices with accelerometers. Additionally, poses can be physically done in real life as reference. If you plan to include either feature in the classroom, set strict guidelines with students. For instance, ensure they are in a safe place where they can make motion where they're not at risk to themselves or others.
 
-**Timing Notes**
+**Timing notes**
 To ensure students finish their project, give them time limits for each pose, such as 2-4 minutes per pose. They can always improve poses.
 
-### Customizing the Lesson
+### Customize the lesson
 
-**Simplify the Lesson**
+**Simplify the lesson**
 Have students follow along to build their own version of a specific animation (such as swimming in the tutorial). Students can follow your steps, then personalize in the independent work time.
 
-**Providing Feedback For Projects**
+**Provide feedback for projects**
 Students can provide each other feedback with the optional <a href="../../assets/education/lesson-plans/animateInRoblox-evaluation.pdf" target="_blank" rel="noopener">Animation Feedback Handout</a>. If using this handout, before students start working, have them create a goal for their animation. After completing their work, pair up students to see each other's animation and respond to the prompts in the handout.
 
-**Integrating with Science Curriculum**
+**Integratr with science curriculum**
 
 <ul>
 <li>This lesson can be customized to go along with a science lesson on the muscle or skeletal systems. Encourage students to perform their animations in real-life and explain what specific bones or muscles are being used.&nbsp;</li>
 <li>Optionally, you can include an educational video, such as <a href="https://www.youtube.com/watch?v=j918PoWWaB0">SciShow Kids - How Do Our Bodies Move</a>, in the Introduction.</li>
 </ul>
 
-**Integrating with Fine Arts Curriculum**
+**Integrate with fine arts curriculum**
 
 - Animation can be used as an opportunity for students to study motion and drawing. For instance, in the planning phase, students can draw stick figures to represent each pose of their animation.
 - Alternatively, you can expand this lesson by having students create a flipbook animation first of their pose, before making it in Roblox Studio.
 
-### Miscellaneous Resources
+### Miscellaneous resources
 
-**Course Description:**
+**Course description:**
 Create your very own Roblox experience and learn how to animate! This challenge is all about movement, both in-game and in real life. We'll show you how to make a game where users race their avatars around a track and gain levels by moving in real life with their mobile device. How do their avatars move? That's up to you: you'll get to build the animations from scratch. Will they fly? Run backward? Turn cartwheels? The possibilities are as limitless as your imagination.
 
 In this course, your student will:

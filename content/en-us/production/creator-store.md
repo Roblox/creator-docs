@@ -5,13 +5,13 @@ description: The Creator Store is where you can find all assets for public use i
 
 The **Creator Store** features assets made by Roblox and the Roblox community for the community to use within their experiences, including models, images, meshes, audio, fonts, videos, and plugins.
 
-You can create and distribute models, images, meshes, plugins, and audio sound effects under 10 seconds to the Creator Store for others to use as long as you are the original creator, and it adheres to Roblox's [Community Rules][CommunityRulesURL] and [Terms&nbsp;of&nbsp;Use][TermsUseURL]. If you have a [seller account](./selling-on-creator-store.md), you can also sell your plugins to other creators.
+You can create and distribute models, images, meshes, plugins, and audio sound effects under 10 seconds to the Creator Store for others to use as long as you are the original creator, and it adheres to Roblox's [Community Rules][CommunityRulesURL] and [Terms&nbsp;of&nbsp;Use][TermsUseURL]. If you have a [seller account](./sell-on-creator-store.md), you can also sell your plugins to other creators.
 
 <Alert severity="warning">
 To maintain community safety, Roblox may terminate accounts that publish spam or assets with malicious or obfuscated code.
 </Alert>
 
-## Asset Moderation
+## Asset moderation
 
 Roblox performs both human and automated asset moderation on a proactive and reactive basis to ensure assets adhere to the [Community Rules][CommunityRulesURL], [Terms&nbsp;of&nbsp;Use][TermsUseURL], and [Digital Millennium Copyright Act](../production/publishing/dmca-guidelines.md) (DMCA). If any asset violates these moderation policies, such as including discriminatory or adult content, the moderation team flags and removes the asset to protect users from harmful or non-compliant content. This process generally happens within a few hours after you upload the asset.
 
@@ -25,7 +25,7 @@ In addition, the Creator Store **restricts** use of the following practices to e
 These policies only apply to assets on the Creator Store, **not** private models or scripts inside experiences.
 </Alert>
 
-## Opening Creator Store
+## Open the Creator Store
 
 To open the Creator Store:
 
@@ -39,7 +39,7 @@ To open the Creator Store:
 
    <img src="../assets/studio/toolbox/Creator-Store-Tab.png" width="360" />
 
-## Finding Assets
+## Find assets
 
 With millions of assets available, it's helpful to narrow the search results to find exactly what you are looking for. To find a specific asset:
 
@@ -56,7 +56,7 @@ The Creator Store curates a selection of assets according to your filters.
 
 <img src="../assets/studio/toolbox/Model-Search-Example.png" width="360" />
 
-### Community Ratings
+### Community ratings
 
 In addition to the Creator Store's filters, you can view an asset's community approval when you hover over its tile. There are four asset community ratings:
 
@@ -65,14 +65,14 @@ In addition to the Creator Store's filters, you can view an asset's community ap
 - **Yellow** - The asset has moderate community confidence.
 - **Green** - The asset has high community confidence.
 
-### Trusted Reviews
+### Trusted reviews
 
 Users can now leave reviews on Creator Store assets in addition to the currently available thumbs up or down ratings. To improve reliability and ensure authentic feedback, only users that acquire the asset are able to submit reviews. After submitting a review:
 
 - Asset creators can respond to reviews, closing the feedback loop.
 - The community can mark reviews as helpful for future users.
 
-## Adding Assets to Experiences
+## Add assets to experiences
 
 To add an asset to your experience from the [Toolbox](../projects/assets/toolbox.md), click it or drag‑and‑drop it into the 3D viewport.
 
@@ -84,7 +84,7 @@ To add an asset to your experience from the [Toolbox](../projects/assets/toolbox
 Some assets include scripts that perform specific actions, such as animating at runtime or triggering a sound. If you want to use an asset without allowing any of its scripts to run, right-click the object in the [Explorer](../studio/explorer.md) window and select **Disable&nbsp;Scripts** from the context menu.
 </Alert>
 
-## Verifying Your Account
+## Verify your account
 
 In addition to being able to distribute more of each asset type, verifying your account ensures that you are eligible to distribute audio assets under 10 seconds, and that your assets are visible to creators, as the default option for discoverability for assets on the Creator Store is reserved for verified accounts. In order to verify your account, you must:
 
@@ -92,15 +92,15 @@ In addition to being able to distribute more of each asset type, verifying your 
 - Have a government-issued photo ID with your picture on it, such as a driver's license, passport, or residency permit.
 - Have a mobile device with a camera that can take photos of your face and ID.
 
-For information on how to verify your account either through a government-issued ID or through a phone number, see [Account Verification](../production/publishing/account-verification.md).
+For information on how to verify your account either through a government-issued ID or through a phone number, see [Account verification](../production/publishing/account-verification.md).
 
 <Alert severity="warning">
 
-**Phone number verification is not sufficient** to sell priced assets on the Creator Store. To sell priced assets, you need to verify with a [government ID](./publishing/account-verification.md#verifying-through-government-id) and create a seller account. For more information, see [Selling on the Creator Store](./selling-on-creator-store.md).
+**Phone number verification is not sufficient** to sell priced assets on the Creator Store. To sell priced assets, you need to verify with a [government ID](./publishing/account-verification.md#verify-through-government-id) and create a seller account. For more information, see [Sell on the Creator Store](./sell-on-creator-store.md).
 
 </Alert>
 
-## Distributing and Selling Assets
+## Distribute and sell assets
 
 Distributing to the Creator Store is the only way to make your assets publicly available to all users to use within their own experiences in Studio. You can distribute any mesh or image that you have imported through the [Asset Manager](../projects/assets/manager.md), or any [model](../parts/models.md), [plugin](../studio/plugins.md), or [audio asset](../sound/assets.md) sound effect under 10 seconds that you have uploaded to your inventory.
 
@@ -110,10 +110,10 @@ Every asset that you import must adhere to the [Community Rules][CommunityRulesU
 <thead>
   <tr>
     <th></th>
-    <th>Mesh Assets</th>
-    <th>Image Assets</th>
-		<th>Model Assets</th>
-		<th>Audio Assets</th>
+    <th>Mesh assets</th>
+    <th>Image assets</th>
+		<th>Model assets</th>
+		<th>Audio assets</th>
 		<th>Plugins</th>
   </tr>
 </thead>
@@ -137,16 +137,16 @@ Every asset that you import must adhere to the [Community Rules][CommunityRulesU
 </tbody>
 </table>
 
-You can also choose to **sell** plugins on the Creator Store for **United States Dollars**. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. Note that you can only set USD pricing for plugins through the Creator Dashboard. For more information, see [Selling on the Creator Store](./selling-on-creator-store.md).
+You can also choose to **sell** plugins on the Creator Store for **United States Dollars**. Roblox offers a market-leading revenue share for these sales, as only taxes and payment processing fees are deducted. Note that you can only set USD pricing for plugins through the Creator Dashboard. For more information, see [Sell on the Creator Store](./sell-on-creator-store.md).
 
 ### Through Creator Dashboard
 
 To distribute an asset through the [Creator Dashboard](https://create.roblox.com/dashboard/creations):
 
-1. In the horizontal navigation, select [Development Items](https://create.roblox.com/dashboard/creations?activeTab=Model). All assets you have [previously imported](../projects/assets/manager.md#importing-assets) display within their respective category.
+1. In the horizontal navigation, select [Development Items](https://create.roblox.com/dashboard/creations?activeTab=Model). All assets you have [previously imported](../projects/assets/manager.md#import-assets) display within their respective category.
 1. Select the asset that you want to distribute. The asset's **Configure** page displays.
 1. In the **Settings** section, enable the **Distribute on Creator Store** toggle.
-1. **(Optional)** If you have a [seller account](./selling-on-creator-store.md) and are distributing a plugin, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset will be free to all creators.
+1. **(Optional)** If you have a [seller account](./sell-on-creator-store.md) and are distributing a plugin, set a price in USD for the asset in the **USD Pricing** field. If you keep the default value of **Free**, the asset will be free to all creators.
 1. **(Optional)** If you are [ID or phone verified](../production/publishing/account-verification.md), add up to 5 supplementary thumbnails for your asset.
 1. Click the **Save** button.
 1. If you are distributing an audio asset for the first time, enable all legal agreements, then click the **Submit** button.
@@ -155,20 +155,20 @@ The asset will become public and visible to everyone within the Creator Store, p
 
 ### Through Studio
 
-You can upload assets directly in Studio from the [Toolbox](../projects/assets/toolbox.md) or [Explorer](../studio/explorer.md) window. However, you must complete the process on the [Creator Dashboard](#through-creator-dashboard) to list an asset for sale on the Creator Store, distribute audio assets under 10 seconds, or set a [USD price](./selling-on-creator-store.md) for a plugin.
+You can upload assets directly in Studio from the [Toolbox](../projects/assets/toolbox.md) or [Explorer](../studio/explorer.md) window. However, you must complete the process on the [Creator Dashboard](#through-creator-dashboard) to list an asset for sale on the Creator Store, distribute audio assets under 10 seconds, or set a [USD price](./sell-on-creator-store.md) for a plugin.
 
 <Tabs>
 <TabItem label="Toolbox">
 Assuming the asset is in your [inventory](../projects/assets/toolbox.md#inventory) and you want to distribute it in the Creator Store:
 
-1. In the [Toolbox](../projects/assets/toolbox.md), select the **Creations** tab. All assets you have [previously imported](../projects/assets/manager.md#importing-assets) display within the chosen category.
+1. In the [Toolbox](../projects/assets/toolbox.md), select the **Creations** tab. All assets you have [previously imported](../projects/assets/manager.md#import-assets) display within the chosen category.
 
    <img src="../assets/studio/toolbox/Creations-Tab.png" width="360" />
 
 2. Right-click the asset you'd like to distribute and select **Edit Asset**.
 3. In the **Asset Configuration** window that opens, confirm and/or update asset details such as **Title** and **Description**.
 4. Click **Save**. Once the asset has uploaded, click the dashboard link formatted as `https://create.roblox.com/dashboard/creations/store/.../configure`.
-5. In the browser window that opens, follow the instructions above in [Through Creator Dashboard](#through-creator-dashboard).
+5. In the browser window that opens, follow the instructions [through the Creator Dashboard](#through-creator-dashboard).
 
 </TabItem>
 <TabItem label="Explorer">
@@ -182,7 +182,7 @@ To upload an asset from the [Explorer](../studio/explorer.md) and distribute it 
 
 3. If you need to **overwrite** a previously-uploaded asset with a new version, click **Overwrite an existing asset...** in the bottom-left of the configuration window.
 4. Click **Save**. Once the asset has uploaded, click the dashboard link formatted as `https://create.roblox.com/dashboard/creations/store/.../configure`.
-5. In the browser window that opens, follow the instructions above in [Through Creator Dashboard](#through-creator-dashboard).
+5. In the browser window that opens, follow the instructions [through the Creator Dashboard](#through-creator-dashboard).
 
 </TabItem>
 </Tabs>

@@ -1,5 +1,5 @@
 ---
-title: Mover Constraints
+title: Mover constraints
 description: Mover constraints apply force or torque to move one or more assemblies.
 ---
 
@@ -79,7 +79,7 @@ The physics engine includes the following `Class.Constraint|Constraints` that ap
 
 </GridContainer>
 
-## Constraint Visualization
+## Constraint visualization
 
 To accurately visualize constraints in Studio, you can use the following options from the [Model](../studio/model-tab.md) tab:
 
@@ -102,14 +102,14 @@ To accurately visualize constraints in Studio, you can use the following options
 In addition to the above visualization, you can view colored outlines around mechanisms (groups of parts that share simulation step and [network ownership](../physics/network-ownership.md)) by toggling on **Mechanisms** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
-## Creating Constraints
+## Create constraints
 
 Mover constraints typically connect one or two `Class.Attachment|Attachments` or `Class.Bone|Bones`. When connected to `Class.Bone|Bones`, the constraint will use their animated position and orientation.
 
 To create a mover constraint, you can use either the **Create** tool or the [Explorer](../studio/explorer.md) window.
 
 <Tabs>
-<TabItem label="Create Tool">
+<TabItem label="Create tool">
 
 1. In the Model tab, access the **Create** button's picker menu and select the desired constraint type, for example **Angular&nbsp;Velocity**.
 
@@ -164,8 +164,8 @@ To create a mover constraint, you can use either the **Create** tool or the [Exp
 </TabItem>
 </Tabs>
 
-## Physical Simulation
+## Physical simulation
 
-To simulate physics while [moving](../parts/index.md#moving) or [rotating](../parts/index.md#rotating) parts, you can switch to **Physical** mode in the [Model](../studio/model-tab.md) tab, effectively forcing parts to obey physical limitations. For example, if you drag one part around the scene and it collides with another part, it will physically push that part out of the way.
+To simulate physics while [moving](../parts/index.md#move) or [rotating](../parts/index.md#rotate) parts, you can switch to **Physical** mode in the [Model](../studio/model-tab.md) tab, effectively forcing parts to obey physical limitations. For example, if you drag one part around the scene and it collides with another part, it will physically push that part out of the way.
 
 <img src="../assets/physics/constraints/Model-Tab-Mode-Physical.png" alt="" width="670" />

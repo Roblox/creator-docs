@@ -1,5 +1,5 @@
 ---
-title: Snap to Grid
+title: Snap to grid
 description: Part of the Create and Destroy series. Learn how to use the snap to grid settings in Roblox Studio.
 next: /education/build-it-play-it-create-and-destroy/save-and-publish
 prev: /education/build-it-play-it-create-and-destroy/designing-a-map
@@ -15,7 +15,7 @@ The small tiles are 4x4 and the large are 8x8, so changing the **Move** setting 
 2. Where it says 1 stud, click and type **4**.
    <img src="../../assets/education/build-it-play-it-create-and-destroy/setSnapSettings.png" />
 
-## Place the Starting Points
+## Place the starting points
 
 When designing maps, start with the most important elements such as the starting locations and largest map features.
 
@@ -23,7 +23,7 @@ In Roblox Studio, the player starting locations are set using SpawnLocation obje
 
 <img src="../../assets/education/build-it-play-it-create-and-destroy/showSpawnLocations_800x450.jpg" width="75%" />
 
-## Place the First SpawnLocation
+## Place the first SpawnLocation
 
 1. From the Model tab, select the **Move** tool.
    <img src="../../assets/education/build-it-play-it-create-and-destroy/setMoveTool.png" />
@@ -39,7 +39,7 @@ In Roblox Studio, the player starting locations are set using SpawnLocation obje
     If the SpawnLocation moves in a way you don't want, just <kbd>Ctrl + Z</kbd> or Command <kbd>⌘ + Z</kbd> to undo and set it back to where it was.
     </Alert>
 
-## Place the Second SpawnLocation
+## Place the second SpawnLocation
 
 Pick which half of the island you want to build and where you want the second SpawnLocation to go. The white gridlines are there to help you know where the middle of the island is.
 

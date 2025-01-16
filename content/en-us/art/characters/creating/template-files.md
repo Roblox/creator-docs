@@ -1,5 +1,5 @@
 ---
-title: Template Files
+title: Template files
 description: Roblox provides template models to create your own unique avatar character in Blender.
 next: /art/characters/creating/head-objects
 prev: /art/characters/creating/
@@ -10,15 +10,15 @@ Each template comes pre-baked with the [necessary components of an avatar charac
 <table>
 <thead>
   <tr>
-    <th>Template Prototype</th>
+    <th>Template prototype</th>
     <th></th>
-    <th>Sample Customizations</th>
+    <th>Sample customizations</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>
-    <img src="../../../assets/art/avatar/templates/Muzzle-Prototype.png" /><br /><center>Muzzle Head Template</center>
+    <img src="../../../assets/art/avatar/templates/Muzzle-Prototype.png" /><br /><center>Muzzle head template</center>
     </td>
     <td>
     </td>
@@ -28,7 +28,7 @@ Each template comes pre-baked with the [necessary components of an avatar charac
   </tr>
   <tr>
     <td>
-    <img src="../../../assets/art/avatar/templates/Round-Prototype.png" /><br /><center>Round Head Template</center>
+    <img src="../../../assets/art/avatar/templates/Round-Prototype.png" /><br /><center>Round head template</center>
     </td>
    <td>
     </td>

@@ -7,7 +7,7 @@ It can be challenging to locate friends in-experience. The **FriendsLocator** [d
 
 <video src="../../assets/developer-modules/friends-locator/Showcase.mp4" controls width="100%"></video>
 
-## Module Usage
+## Module usage
 
 ### Installation
 
@@ -35,7 +35,7 @@ To use the **FriendsLocator** module in an experience:
 
    <img src="../../assets/developer-modules/friends-locator/Move-Package.png" width="320" />
 
-### Testing in Studio
+### Test in Studio
 
 To test the module in Studio, the **FriendsLocator** module must be run in a multi-client simulation, since no friends will be present in a solo playtest.
 
@@ -69,14 +69,14 @@ To test the module in Studio, the **FriendsLocator** module must be run in a mul
    </Alert>
 
    <Alert severity="warning">
-   By default, clicking/tapping a friend's icon will teleport your character to that character's location. If you keep this default behavior and you find that streaming pause is occurring under the [instance streaming](../../workspace/streaming.md) architecture, you may want to [request area streaming](../../workspace/streaming.md#requesting-area-streaming) around the teleport location as shown in the [clicked](#clicked) event code sample.
+   By default, clicking/tapping a friend's icon will teleport your character to that character's location. If you keep this default behavior and you find that streaming pause is occurring under the [instance streaming](../../workspace/streaming.md) architecture, you may want to [request area streaming](../../workspace/streaming.md#request-area-streaming) around the teleport location as shown in the [clicked](#clicked) event code sample.
    </Alert>
 
-### Connecting to Events
+### Connect to events
 
 The **FriendsLocator** module exposes [events](#events) so that you can introduce custom behaviors when users interact with a locator icon.
 
-1. Make sure that you've created the **ConfigureFriendsLocator** script outlined in [Testing&nbsp;in&nbsp;Studio](#testing-in-studio).
+1. Make sure that you've created the **ConfigureFriendsLocator** script outlined in [testing&nbsp;in&nbsp;Studio](#test-in-studio).
 2. Add lines 8 and 11-13 to the script:
 
    ```lua title='LocalScript - ConfigureFriendsLocator' highlight='8,11-13'
@@ -95,9 +95,9 @@ The **FriendsLocator** module exposes [events](#events) so that you can introduc
    end)
    ```
 
-3. Conduct a [multi-client test](#testing-in-studio) and click on another character's locator icon. Notice that your character does not teleport to that location, and the event triggers to allow for custom handling of icon clicks.
+3. Conduct a [multi-client test](#test-in-studio) and click on another character's locator icon. Notice that your character does not teleport to that location, and the event triggers to allow for custom handling of icon clicks.
 
-### Custom Locator UI
+### Custom locator UI
 
 If the default style does not fit your experience, you can replace the default avatar portrait UI with your own UI.
 
@@ -126,7 +126,7 @@ To replace the default UI:
 
    The module will look for these items and display the friend's avatar portrait and/or display name respectively.
 
-## API Reference
+## API reference
 
 ### Functions
 

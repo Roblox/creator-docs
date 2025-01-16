@@ -1,45 +1,46 @@
 backTo:
-  title: Back to Avatar Tutorials
+  title: Back to avatar tutorials
   path: /avatar/tutorials/
 navigation:
   - title: Overview
     path: /art/accessories/creating/
+
   - heading: Modeling
-  - title: Setting Up Mesh
+  - title: Set up mesh
     path: /art/accessories/creating/modeling-setup
-  - title: Trimming Clothing Shape
+  - title: Trim clothing shape
     path: /art/accessories/creating/trimming
-  - title: Sculpting Detail
+  - title: Sculpt detail
     path: /art/accessories/creating/sculpting
-  - title: Making Mesh Watertight
+  - title: Make mesh watertight
     path: /art/accessories/creating/watertight
 
   - heading: Texturing
-  - title: Creating Seams and Unwrapping
+  - title: Create seams and unwrap
     path: /art/accessories/creating/unwrapping
-  - title: Creating a Texture Map
+  - title: Create a texture map
     path: /art/accessories/creating/texture-map
-  - title: Texture Painting
+  - title: Texture painting
     path: /art/accessories/creating/texture-painting
 
   - heading: Rigging
-  - title: Armature Setup
+  - title: Armature setup
     path: /art/accessories/creating/armature-setup
-  - title: Testing Poses
-    path: /art/accessories/creating/testing-poses
+  - title: Test poses
+    path: /art/accessories/creating/test-poses
 
   - heading: Caging
-  - title: Caging Setup
+  - title: Caging setup
     path: /art/accessories/creating/caging-setup
-  - title: Modifying Outer Cage
-    path: /art/accessories/creating/modifying-cage
+  - title: Modify outer cage
+    path: /art/accessories/creating/modify-cage
 
-  - heading: Exporting
-  - title: Exporting FBX
+  - heading: Export
+  - title: Export FBX
     path: /art/accessories/creating/exporting
 
-  - heading: Importing and Converting
-  - title: Using Studio's 3D Importer
+  - heading: Import and convert
+  - title: Use Studio's 3D importer
     path: /art/accessories/creating/importing
-  - title: Using the Accessory Fitting Tool
+  - title: Use the accessory fitting tool
     path: /art/accessories/creating/converting

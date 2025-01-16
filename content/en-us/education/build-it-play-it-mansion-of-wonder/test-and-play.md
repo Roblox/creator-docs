@@ -1,5 +1,5 @@
 ---
-title: Test and Play
+title: Test and play
 prev: /education/build-it-play-it-mansion-of-wonder/become-an-artist
 next: /education/build-it-play-it-mansion-of-wonder/particle-emitters
 description: Learn how to use Roblox Studio to play the Build It Play It Mansion of Wonder template game.

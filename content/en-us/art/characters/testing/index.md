@@ -1,5 +1,5 @@
 ---
-title: Testing Characters
+title: Testing characters
 comments:
 description: Verify the important aspects of your character model in Blender and in Studio.
 next: /art/characters/testing/blender
@@ -7,7 +7,7 @@ next: /art/characters/testing/blender
 
 It's important to constantly test your models during and after the creation process to ensure that your character can interact with various social and environmental elements in any experience.
 
-Whether you are using a template character, or your own custom assets, use the information provided in [Testing in Blender](../../../art/characters/testing/blender.md) and [Testing in Studio](../../../art/characters/testing/studio.md) throughout your workflow to comprehensively test your assets and quality check your models.
+Whether you are using a template character, or your own custom assets, use the information provided in [Test in Blender](../../../art/characters/testing/blender.md) and [Test in Studio](../../../art/characters/testing/studio.md) throughout your workflow to comprehensively test your assets and quality check your models.
 
 Use the following table as an overview of common tests and resources to verify each component of your character model.
 
@@ -20,7 +20,7 @@ Use the following table as an overview of common tests and resources to verify e
 <thead>
   <tr>
     <th style={{width:"25%"}}>Component</th>
-    <th>Testing Recommendations</th>
+    <th>Testing recommendations</th>
   </tr>
 </thead>
 <tbody>
@@ -60,7 +60,7 @@ Use the following table as an overview of common tests and resources to verify e
 <thead>
   <tr>
     <th style={{width:"25%"}}>Component</th>
-    <th>Testing Recommendations</th>
+    <th>Testing recommendations</th>
   </tr>
 </thead>
 <tbody>

@@ -1,5 +1,5 @@
 ---
-title: Playtest the Map
+title: Playtest the map
 description: Part of the Create and Destroy series. Playtest the map to see how it looks in-game.
 next: /education/build-it-play-it-create-and-destroy/build-the-roads
 prev: /education/build-it-play-it-create-and-destroy/build-one-half

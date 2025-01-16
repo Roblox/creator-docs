@@ -1,5 +1,5 @@
 ---
-title: Terrain Tools
+title: Terrain tools
 description: Part of the Create and Destroy series. Learn how to use Terrain Tools in Roblox Studio to make an island.
 next: /education/build-it-play-it-create-and-destroy/challenge-2
 prev: /education/build-it-play-it-create-and-destroy/island-terrain
@@ -9,7 +9,7 @@ prev: /education/build-it-play-it-create-and-destroy/island-terrain
 
 The **Terrain Editor** is used to sculpt natural features. To start, you'll shape the shape of the island, then get into details such as mountains and painting the landscape.
 
-## Create the Shape
+## Create the shape
 
 1. In the Terrain Editor window, select the **Edit** tab. Then, click the **Add** tool.
 
@@ -22,7 +22,7 @@ The **Terrain Editor** is used to sculpt natural features. To start, you'll shap
 3. Click and drag the blue cursor to create a natural island shape. Cover the hard edges of the square building area, and try to get rid of any straight lines. If you don't like the results, press <kbd>Ctrl + Z</kbd> or <kbd>⌘ + Z</kbd>.
    <video controls src="../../assets/education/build-it-play-it-create-and-destroy/showTerrainAdd.mp4" width="100%"></video>
 
-## Adding Details
+## Add details
 
 Right now, the island may look a bit jagged. Next, you'll smooth out the terrain and fine-tune it with the Subtract and Paint tools.
 

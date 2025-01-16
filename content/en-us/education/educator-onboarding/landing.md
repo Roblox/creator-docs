@@ -1,5 +1,5 @@
 ---
-title: Educator Onboarding
+title: Educator onboarding
 description: Learn how to get started teaching with Roblox in the classroom. Get your students to create accounts, learn lessons to use, and understand how to play.
 next: /education/educator-onboarding/1-intro-to-roblox
 prev:
@@ -10,7 +10,7 @@ prev:
 
 This course introduces you to Roblox, preparing you to feel confident in using Roblox as an educational tool. Training, which includes setting up a Roblox account and software on your device, will take 30 to 45 minutes.
 
-### Learning Objectives
+### Learning objectives
 
 - Understand how to implement Roblox software and accounts in a classroom.
 - Identify where to find resources, such as standards-aligned learning materials and handouts.
@@ -24,7 +24,7 @@ In a hurry? This document covers all the steps needed to start a classroom, such
 
 </Alert>
 
-### Series Modules
+### Series modules
 
 <table>
 <thead>
@@ -35,23 +35,23 @@ In a hurry? This document covers all the steps needed to start a classroom, such
 </thead>
 <tbody>
 <tr>
-<td scope="row"><b><a href="../../education/educator-onboarding/1-intro-to-roblox.md"> Getting Started</a></b></td>
+<td scope="row"><b><a href="../../education/educator-onboarding/1-intro-to-roblox.md"> Get started</a></b></td>
 <td scope="row">Learn about the Roblox platform.</td>
 </tr>
 <tr>
-<td scope="row"><b><a href="../../education/educator-onboarding/2-playing-on-roblox.md">Playing on Roblox</a></b></td>
+<td scope="row"><b><a href="../../education/educator-onboarding/2-playing-on-roblox.md">Play on Roblox</a></b></td>
 <td scope="row">Create your account and play an experience.</td>
 </tr>
 <tr>
-<td scope="row"><b><a href="../../education/educator-onboarding/3-setting-up-a-roblox-classroom.md">Setting up Classrooms</a></b></td>
+<td scope="row"><b><a href="../../education/educator-onboarding/3-setting-up-a-roblox-classroom.md">Set up classrooms</a></b></td>
 <td scope="row">Covers account and software setup.</td>
 </tr>
 <tr>
-<td scope="row"><b><a href="../../education/educator-onboarding/4-running-classrooms.md">Running Classrooms</a></b></td>
+<td scope="row"><b><a href="../../education/educator-onboarding/4-running-classrooms.md">Run classrooms</a></b></td>
 <td scope="row">Tips and resources on running a successful classroom.</td>
 </tr>
 <tr>
-<td scope="row"><b><a href="../../education/educator-onboarding/5-next-steps.md">Next Steps</a></b></td>
+<td scope="row"><b><a href="../../education/educator-onboarding/5-next-steps.md">Next steps</a></b></td>
 <td scope="row">A collection of useful resources, handouts, and guides.</td>
 </tr>
 </tbody>

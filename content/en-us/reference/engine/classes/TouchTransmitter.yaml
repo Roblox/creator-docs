@@ -23,7 +23,6 @@ description: |
   the TouchTransmitter. Otherwise the connection will not be cleaned up which
   can cause performance issues over time.
 code_samples:
-  - TouchTransmitter
 inherits:
   - Instance
 tags:

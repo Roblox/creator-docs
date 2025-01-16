@@ -1,5 +1,5 @@
 ---
-title: Blender Configuration
+title: Blender configuration
 description: Roblox avatar template projects have several helper configurations and settings to help expedite the character creation process.
 next: /art/characters/creating/modeling-best-practices
 prev: /art/characters/creating/head-objects
@@ -28,7 +28,7 @@ The following is a breakdown of what is included in each Blender template file:
   width="800" /><figcaption>Blender Project Hierarchy</figcaption></figure>
 </GridContainer>
 
-### Disabled Objects
+### Disabled objects
 
 When using the template project files for Blender, you might notice some objects, like attachment objects, are permanently hidden in the Viewport even when toggling the **Hide In Viewport** icon <img src="../../../assets/art/blender-ui/Visibility-Icon.png" style={{marginBottom:"0px;"}} width="20px"/>. Since attachment objects are often not modified until the end of the character creation process, these objects have **Disable In Viewport** <img src="../../../assets/art/blender-ui/Disabled-Icon.png" style={{marginBottom:"0px;"}} width="20px"/> enabled to make the organization of your project more efficient, especially when bulk toggling object visibility.
 
@@ -45,7 +45,7 @@ If you need access to disabled objects, use the following instructions to access
 3. The **Disable In Viewport** icon <img src="../../../assets/art/blender-ui/Disabled-Icon.png" style={{marginBottom:"0px;"}}/> now appears next to every object in the Outliner. Toggle the icon to change the Disabled status for your objects.
    <img src="../../../assets/art/blender-ui/Outliner-Disabled-Enabled.png" />
 
-### Custom Skin Tones
+### Custom skin tones
 
 The Blender project files include a shader configuration that allows you to preview custom skin tones, similar to how they display in Roblox if users customize their skin tones.
 
@@ -57,7 +57,7 @@ Textures with full or partial transparency allow the underlying `Class.Part.Colo
   <figure><img src="../../../assets/art/avatar/templates/Custom-Skin-Tones.png" /><figcaption>The same avatar character using the same texture map. Each model has different underlying part colors except where the texture map applies a full color. </figcaption></figure>
 </GridContainer>
 
-#### Previewing Skin Tones
+#### Preview skin tones
 
 <Alert severity = 'warning'>
 You must use **Blender 3.4+** to ensure that the helper shader configurations render correctly. If you are using a previous version of Blender, textures may not render as expected.
@@ -83,16 +83,16 @@ To preview your character's skin tone in Blender:
    src="../../../assets/art/avatar/basic-creation/Color_Picker_01.mp4"
    width="100%"></video>
 
-#### Export Setup
+#### Export setup
 
 While the skin tone preview is a critical element to verifying your templates color and tone compatibility in Roblox, it prevents your color texture map from automatically being packaged with the final `.fbx` file. There are two ways to resolve this before exporting your model:
 
 1. In the Shading tab, disconnect the **Mix** node and replace it with the **ColorMap** node.
 2. Export your textures manually as separate image files and add them later in Studio.
 
-For instructions on how to perform either export workflow, see [Exporting Textures](../../../art/characters/creating/exporting-textures.md).
+For instructions on how to perform either export workflow, see [Export textures](../../../art/characters/creating/export-textures.md).
 
-### Scene Scale
+### Scene scale
 
 <Alert severity = 'warning'>
 You can skip this section if you are using the Blender downloadable templates. The `.blend` versions of the templates which already contain many of the project settings required when setting up a Blender project configuration.
@@ -112,7 +112,7 @@ Alternatively, you can modify your scaling when exporting your files:
 2. Set **Transform** > **Scale** to `.01`.
    <img src="../../../assets/modeling/skinned-meshes/Blender-Export-Settings-2.png" width="320" />
 
-### Animation Range
+### Animation range
 
 <Alert severity = 'warning'>
 You can skip this section if you are using the Blender downloadable templates. The `.blend` versions of the templates which already contain many of the project settings required when setting up a Blender project configuration.

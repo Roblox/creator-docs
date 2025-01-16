@@ -1,5 +1,5 @@
 ---
-title: Page Layouts
+title: Page layouts
 description: Explore how page layouts organize interface content into distinct pages.
 ---
 

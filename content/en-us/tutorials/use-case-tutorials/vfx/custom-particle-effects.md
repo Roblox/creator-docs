@@ -1,5 +1,5 @@
 ---
-title: Custom Particle Effects
+title: Custom particle effects
 description: The process for creating a multicolor plume of smoke from an active volcano.
 ---
 
@@ -9,7 +9,7 @@ Time to look at a more complex example of particle effects. You'll make a multic
    <source src="../../../assets/tutorials/custom-particle-effects/finishedVolcanoClose.mp4" />
 </video>
 
-## Starter Project
+## Starter project
 
 First up, you'll need something like a volcano you can use for the effect. The [Treasure Island example world](https://www.roblox.com/games/6307505882/Treasure-Island) pictured in this tutorial includes a volcano.
 
@@ -28,7 +28,7 @@ A volcano with an orange neon part will be used to emit particles. This part is 
      <img src="../../../assets/tutorials/custom-particle-effects/particleEmitterInsertionWorkspace.jpg" />
    </GridContainer>
 
-## Particle Texture
+## Particle texture
 
 A `Class.ParticleEmitter` has a property called **Texture** that determines the image that will be repeated in the effect. If you want to use your own image, you'll need to upload it to Roblox and get the **Asset ID** to paste into that property. See [Textures and Decals](../../../parts/textures-decals.md) for more details.
 
@@ -48,7 +48,7 @@ For a smoke effect, a circle with faded edges works well. A pre-made example of 
 
 ![](../../../assets/tutorials/custom-particle-effects/newTextureVolcano.jpg)
 
-## Fading Effect
+## Fading effect
 
 Despite the change of texture, the volcano effect still doesn't look much like smoke. It would look better if the particles faded out over time in the same way that smoke dissipates in the air.
 
@@ -72,7 +72,7 @@ Some emitter properties can be set up to change over time with a **sequence**. S
    <source src="../../../assets/tutorials/custom-particle-effects/fadingParticles.mp4" />
    </video>
 
-## Growing Smoke
+## Growing smoke
 
 To really look like smoke, the particles should be large enough to overlap with each other and should spread as they rise from the source.
 
@@ -89,7 +89,7 @@ This can be achieved by applying a sequence to the **Size** property. By making 
 
    ![](../../../assets/tutorials/custom-particle-effects/sizeSequenceParticles.jpg)
 
-## Color Sequences
+## Color sequences
 
 Sequences aren't just for linear property values - you can even use them to change the color of particles over time.
 
@@ -122,7 +122,7 @@ The **Acceleration** property determines how the speed of particles changes over
 Understanding how these properties can work together is the key to achieving many effects — for instance, you could simulate water drops falling from a surface to the ground by setting **Speed** to **0** and **Y** acceleration to a negative value.
 </Alert>
 
-## Thicker Smoke
+## Thicker smoke
 
 If the acceleration change has spread the smoke particles out too much, you can increase the **Rate** property to thicken it back up again. A rate of **40** works nicely here. Set the emitter's **Rate** property to **40.**
 

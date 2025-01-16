@@ -1,5 +1,5 @@
 ---
-title: Building Your Business
+title: Build your business
 description: Explains the resources that can help you run and build businesses on Roblox.
 ---
 
@@ -7,19 +7,19 @@ See the following resources to help you run and build businesses on Roblox.
 
 ## Videos
 
-### Growing Bigger Developer Studios
+### Grow bigger developer studios
 
 Learn how to create partnerships with developers and grow your team.
 
 <p><iframe width="746" height="420" src="https://www.youtube-nocookie.com/embed/TOhNGkOVrek" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
-### Tips For Scaling Up a Company on Roblox
+### Tips for scaling up a company on Roblox
 
 Get tips and lessons Nathan learned while scaling up a company on Roblox.
 
 <p><iframe width="746" height="420" src="https://www.youtube-nocookie.com/embed/TLRakuu4vd0" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
-### Protecting You and Your Business
+### Protect you and your business
 
 How to protect yourself, your business, and your intellectual property.
 
@@ -43,7 +43,7 @@ Learn how to guide your up-and-coming Roblox developer.
 
 If you plan to hire staff to create experiences, you need to make sure you're compliant with all applicable employment laws. This agreement describes some of the key terms to consider when engaging with other developers.
 
-**[Developer Economics](../../production/earning-on-roblox.md)**
+**[Developer Economics](../../production/earn-on-roblox.md)**
 
 See how Roblox pays creators and developers to build great content on our platform.
 

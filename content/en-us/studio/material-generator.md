@@ -5,7 +5,7 @@ description: The Material Generator is designed to create material variants from
 
 The **Material Generator** is designed to create material variants from text entries. Using it, you can type any phrase and hit **Generate** to see results within a few seconds. Once you find a satisfying result, you can instantly save it as a new custom material.
 
-## Generating Materials
+## Generate materials
 
 To generate materials, click **Generate** from the [Material Picker](../parts/materials.md#material-widget) dropdown.
 
@@ -72,7 +72,7 @@ With the tool's window open:
 
 4. When ready, choose a **Base Material** to apply that material's [default physical properties](../parts/materials.md#default-physical-properties) to your custom material. Then click the **Save & Apply Variant** button to save the custom material to the [Material Manager](../parts/materials.md#material-manager).
 
-## Best Practices
+## Best practices
 
 Generating satisfying materials can be an iterative process requiring a longer list of descriptors to help focus in on the material you want. Here are some tips:
 

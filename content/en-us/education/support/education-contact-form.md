@@ -1,5 +1,5 @@
 ---
-title: Contact Us
+title: Contact us
 description: Contact Roblox Education for questions regarding how our resources can be used to teach coding and more in the classroom.
 ---
 

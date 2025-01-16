@@ -7,7 +7,7 @@ It can be interesting to learn about other players. The **ProfileCard** [develop
 
 <video src="../../assets/developer-modules/profile-card/Showcase.mp4" controls width="100%"></video>
 
-## Module Usage
+## Module usage
 
 ### Installation
 
@@ -88,7 +88,7 @@ Note that players under the age of 13 will only see the status message if it's a
 </TabItem>
 </Tabs>
 
-## API Reference
+## API reference
 
 ### Functions
 

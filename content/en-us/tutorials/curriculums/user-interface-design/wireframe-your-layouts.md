@@ -1,5 +1,5 @@
 ---
-title: Wireframe Your Layouts
+title: Wireframe your layouts
 description: Explains how to greybox the laser tag environment using basic parts.
 next: /tutorials/curriculums/user-interface-design/implement-designs-in-studio
 prev: /tutorials/curriculums/user-interface-design/choose-an-art-style
@@ -15,7 +15,7 @@ Using the [sample laser tag experience](https://www.roblox.com/games/14817965191
 
 After you complete this section, you will learn how to construct and configure your UI in Studio that respects your art style and wireframes.
 
-## Plan a Visual Hierarchy
+## Plan a visual hierarchy
 
 A visual hierarchy is an organization structure that highlights UI elements by their order of importance. Planning a visual hierarchy for the different workflows in your experience is important because it sets players up for success in accomplishing their goals, which is especially necessary for the rapid gameplay of first-person shooter experiences in which goals change from moment to moment.
 
@@ -76,7 +76,7 @@ For a full review of the visual hierarchy for the sample laser tag experience, s
    For more information on prioritizing UI elements on the screen, see [UI & UX Design](../../../production/game-design/ui-ux-design.md#prioritization).
 </Alert>
 
-## Block in UI Elements
+## Block in UI elements
 
 Now that you have a visual hierarchy in mind, you can block in individual UI elements using basic shapes to review the composition of your custom UI layout alongside Roblox's core UI on multiple devices. This process allows you to see where you need to modify your design so that it's effective on all screen sizes that players can use to access your experience, such as on mobile, tablet, laptop, and TV screens.
 
@@ -96,7 +96,7 @@ Before you begin, you need to figure out how much screen space is available for 
    </Grid>
    </Grid>
 
-You can [disable](../../../players/disabling-ui.md) any of these elements that don't meet the gameplay requirements of your own experience in order to save screen space for your custom UI. For example, the sample laser tag experience doesn't require a backpack because players only have the ability to select a single blaster. However, if players could select multiple blasters at once, the experience could disable this core UI to ensure there's always room for the blaster selector when players respawn, then provide another location to select from your inventory.
+You can [disable](../../../players/disable-ui.md) any of these elements that don't meet the gameplay requirements of your own experience in order to save screen space for your custom UI. For example, the sample laser tag experience doesn't require a backpack because players only have the ability to select a single blaster. However, if players could select multiple blasters at once, the experience could disable this core UI to ensure there's always room for the blaster selector when players respawn, then provide another location to select from your inventory.
 
 In addition to Roblox's core UI, you must also consider the necessary screen space for Roblox's default touch controls. For example, when players access your experience using a mobile device, a virtual thumbstick displays in the bottom-left corner of the screen, and a jump button displays in the bottom-right corner of the screen. This ensures that players are always able to navigate your experience, even when they don't have access to a keyboard or controller.
 
@@ -132,9 +132,9 @@ When blocking in UI elements for your layouts, consider the following:
 - Interacting with UI that are far from the bottom corners of some mobile and tablet devices is either uncomfortable or impossible. **Place interactive elements in easy-to-reach zones** near the natural resting position for thumbs.
 - When players navigate through your environment, the 3D space can become distracting from your on-screen UI. **Test your layouts against a variety of possible backgrounds** to ensure your on-screen UI elements remain clear and legible.
 
-For more information on what to consider as you design and block in your UI elements for multiple devices, see [Positioning and Sizing - Cross-Platform Factors](../../../ui/positioning-and-sizing.md#cross-platform-factors).
+For more information on what to consider as you design and block in your UI elements for multiple devices, see [Positioning and Sizing - Cross-Platform Factors](../../../ui/position-and-size.md#cross-platform-factors).
 
-## Develop User Flows
+## Develop user flows
 
 A user flow is a collection of paths that players can take in an experience to complete a task, such as to choose a weapon, purchase an item, or heal a character. User flows typically start where you expect players to begin the task, and finish with the final action or achievement players reach at the end of the task. In addition, effective user flows also account for unusual paths players may want to take on their own to achieve the same goal.
 

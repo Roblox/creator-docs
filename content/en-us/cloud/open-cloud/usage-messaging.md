@@ -1,19 +1,19 @@
 ---
-title: Messaging Usage Guide
+title: Messaging usage guide
 description: Explains how to use Open Cloud Messaging Service API to support cross-server messaging.
 ---
 
-The [Messaging Service API](../../reference/cloud/messaging-service/v1.json) is the Open Cloud equivalent of the Lua `Class.MessagingService`, which enables you to communicate across servers or client instances of your experience. The Lua API only allows you to write and update a script manually in Studio for publishing messages, but the Open Cloud API lets you send messages to live servers from external tools to automate and improve your experience operation workflows.
+The [Messaging Service API](/cloud/reference/Universe#Publish-Universe-Message) is the Open Cloud equivalent of the Engine `Class.MessagingService`, which lets you communicate across your experience's servers and clients. The Engine API only allows you to write and update scripts manually in Studio for publishing messages, but the Open Cloud API lets you send messages to live servers from external tools to automate and improve your operations workflows.
 
 ## Usage
 
-There are several helpful tools that you can build by supporting cross-server communication with Messaging Service API, including:
+There are several helpful tools that you can build by supporting cross-server communication with the Messaging Service API, including:
 
 - **Announcement Portals**: A web portal can be helpful to support sending announcements to all users across servers in your experience, such as announcing an upcoming event, an update, and the winner for a competition. On the portal, you can edit a message and click a button that calls the API to send the message out for all users or selected users.
 
-- **Moderation System**: A moderation system can help keep your experience safe and secure. When detecting a user with inappropriate behavior, you can publish a message to trigger the experience server to warn or ban the specific user. You can also support [data stores](../../reference/cloud/datastores-api/v1.json) in the moderation system to add user accounts to a blocklist that prevents them from rejoining.
+- **Moderation System**: A moderation system can help keep your experience safe and secure. When detecting a user with inappropriate behavior, you can publish a message to trigger the experience server to warn or ban the specific user. You can also use [data stores](/cloud/reference/DataStore) in the moderation system to add user accounts to a blocklist that prevents them from rejoining.
 
-- **LiveOps Dashboard**: LiveOps Dashboard is a useful tool for managing live events, such as a Halloween party. On the LiveOps dashboard, you can pre-code an event, update event messages, trigger the event when it's ready, and reward selected users with special items like a virtual crown without updating any of the experience's code.
+- **LiveOps Dashboard**: LiveOps dashboards are useful tools for managing live events, such as a Halloween party. On the dashboard, you can pre-code an event, update event messages, trigger the event when it's ready, and reward selected users with special items like a virtual crown without updating any of the experience's code.
 
 <Alert severity="info">
 Currently, the API can only target live experience servers through HTTP.
@@ -23,13 +23,13 @@ Currently, the API can only target live experience servers through HTTP.
 
 Limit | Description
 --- | ---
-**Rate** | Roblox throttles message requests at 50 + 5<em>n</em> per minute, where <em>n</em> is the number of players in the experience. For example, an experience with 20 players begins to throttle at 150 message requests per minute.
+**Rate** | Roblox throttles message requests at `50 + (5 * number_of_players_in_experience)`. For example, an experience with 20 players begins to throttle at 150 message requests per minute.
 **Topic size** | 80 characters
 **Message size** | 1,024 characters (1 KB)
 
-## Setting up a Topic for Messaging
+## Set up a topic for messaging
 
-Before you can publish a message to all of your experience's live servers, you need to set up a **topic**, which is a customized message channel that is accessible from multiple servers. After defining a **topic**, you need to subscribe users to the **topic** for receiving your incoming messages.
+Before you can publish a message to your experience's live servers, you must set up a **topic**, which is a customized message channel that is accessible from multiple servers. After defining a topic, you subscribe users to the topic in order to receive your incoming messages.
 
 Currently, you can only define a topic in Studio and use Lua `Class.MessagingService:SubscribeAsync()` to subscribe users to it. The following code sample subscribes any user to a topic when they join the experience:
 
@@ -53,16 +53,16 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-## Publishing Messages to Live Servers
+## Publish messages to live servers
 
-After [setting up](#setting-up-a-topic-for-messaging) a **topic**, you can publish a message to all of your experience's live servers with the following steps:
+After [setting up](#set-up-a-topic-for-messaging) a topic, publish a message to your experience's live servers:
 
-1. [Create an API key](./api-keys.md#creating-an-API-key) on [Creator Dashboard](https://create.roblox.com/credentials). Make sure you perform the following settings:
+1. [Create an API key](./api-keys.md#creating-an-API-key) on [Creator Dashboard](https://create.roblox.com/dashboard/credentials) and copy it somewhere safe. Make sure you perform the following settings:
 
    1. Add **messaging-service** to **Access Permissions**.
-   2. Add **Publish** operation to your selected experience.
+   2. Select an experience, and add the **universe-messaging-service:publish** operation.
 
-2. Get the **Universe ID**, the identifier of the experience in which you want to send your messages to.
+2. Get the **Universe ID** for your experience:
 
    1. Navigate to the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
    1. Find the experience that you want to publish your messages to.
@@ -70,27 +70,27 @@ After [setting up](#setting-up-a-topic-for-messaging) a **topic**, you can publi
 
       <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-Universe-ID.png" width="420" alt="Copy Universe ID option from Creator Dashboard" />
 
-3. Add the API Key in the `x-api-key` header of a `POST` request to the API like the following example:
+3. Add the API key and universe to a `POST` request, as in this example:
 
    ```bash title='Example Request for Publishing a Message'
-   curl \
-   --location \
-   --request POST \
-   'https://apis.roblox.com/messaging-service/v1/universes/{universeId}/topics/{topic}' \
-   -H 'x-api-key: abc...' \
+   curl -L -X POST 'https://apis.roblox.com/cloud/v2/universes/{universe}:publishMessage' \
+   -H 'x-api-key: {api-key}' \
    -H 'Content-Type: application/json' \
-   --data-raw '{"message":"message to publish"}'
+   --data '{
+    "topic": "your-topic",
+    "message": "Hello, everyone!"
+   }'
    ```
 
+4. Send the HTTP request to publish the message.
+
    <Alert severity="info">
-   If your request succeeds, it returns an empty response body.
+   If your request succeeds, it returns HTTP 200 with an empty response body.
    </Alert>
 
-4. Call the API to send the message out.
+## Add the Messaging Service API to OAuth 2.0 apps
 
-## Adding Messaging Service API to OAuth 2.0 Apps
-
-You can create [OAuth 2.0 applications](../../cloud/open-cloud/oauth2-overview.md) supporting Messaging Service API to allow your users to publish messages to live servers through your OAuth 2.0 application.
+You can create [OAuth 2.0 applications](../../cloud/open-cloud/oauth2-overview.md) that allow your users to publish messages to their own live servers.
 
 <Alert severity="warning">
 Third-party app support through OAuth 2.0 is a beta feature that might be subject to changes for future releases.
@@ -138,8 +138,8 @@ To use Messaging Service API for your application and request permissions from y
 4. Your application can now send messages to any experience that a user has granted permission. When sending the request, include the access token in the authorization header and the `universeId` and topic in the request URI in the following format:
 
    ```bash title="Example Request"
-   curl --location --request POST 'https://apis.roblox.com/messaging-service/v1/universes/{universeId}/topics/{topic}' \
+   curl --location --request POST 'https://apis.roblox.com/cloud/v2/universes/{universe}:publishMessage' \
    --header 'Authorization: Bearer <access_token>' \
    --header 'Content-Type: application/json' \
-   --data-raw '{"message":"message to publish"}'
+   --data-raw '{"topic": "some-topic","message":"message to publish"}'
    ```

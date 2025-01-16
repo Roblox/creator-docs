@@ -3,7 +3,7 @@ content/en-us/index/index.md
 content/en-us/resources/scripting-libraries.md
 content/en-us/samples/index.md
 content/en-us/discovery.md
-content/en-us/production/promotion/advertising-on-roblox.md
-content/en-us/production/promotion/complying-with-advertising-standards.md
-content/en-us/production/promotion/sponsoring-items.md
-content/en-us/production/earning-on-roblox.md
+content/en-us/production/promotion/advertise-on-roblox.md
+content/en-us/production/promotion/comply-with-advertising-standards.md
+content/en-us/production/promotion/sponsor-items.md
+content/en-us/production/earn-on-roblox.md

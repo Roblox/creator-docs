@@ -10,7 +10,7 @@ customization options for Roblox experiences, including settings for
 <img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
 
 <Alert severity="warning">
-The **Game Settings** window is only available for experiences saved or [published](../production/publishing/publishing-experiences-and-places.md) to Roblox.
+The **Game Settings** window is only available for experiences saved or [published](../production/publishing/publish-experiences-and-places.md) to Roblox.
 </Alert>
 
 ## Basic Info
@@ -158,7 +158,7 @@ You should only enable the following settings if you trust all assets from other
   </tr>
   <tr>
     <td>**Allow Third Party Teleports**</td>
-    <td>Lets players [teleport](../projects/teleporting.md) to other experiences.</td>
+    <td>Lets players [teleport](../projects/teleport.md) to other experiences.</td>
   </tr>
 </tbody>
 </table>
