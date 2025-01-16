@@ -1,5 +1,5 @@
 ---
-title: In-Experience UI Containers
+title: In-experience UI containers
 description: In-experience UI containers hold SurfaceGuis, BillboardGuis, and GuiObjects that you want to display in the 3D space.
 ---
 
@@ -15,8 +15,6 @@ In-experience UI containers hold `Class.GuiObject|GuiObjects` that you want to d
 Similar to `Class.Decal|Decals` and `Class.Texture|Textures`, UI objects such as `Class.TextLabel|TextLabels` and `Class.ImageLabel|ImageLabels` parented to a `Class.SurfaceGui` face the same direction as the surface they're on, editable through the `Class.SurfaceGui.Face` property.
 
 <img src="../assets/ui/in-experience/SurfaceGui-Diagram.jpg" width="800" alt="SurfaceGui on a 3D part in the place with an ImageLabel child to depict a screen console." />
-
-### Creating and Parenting
 
 To apply a `Class.SurfaceGui` to an in-experience `Class.BasePart`, simply parent it to that part and set the `Class.SurfaceGui.Face` property. Child UI objects then appear on that face of the parent part.
 
@@ -48,21 +46,17 @@ Interactive UI elements like `Class.ImageButton|ImageButtons` and `Class.TextBut
 To assist in choosing the correct face for a `Class.SurfaceGui`, right-click the target part and select **Show&nbsp;Orientation&nbsp;Indicator**. This displays a blue circle with an **F** and a line attached to the object's `Enum.NormalId.Front|Front` face, and a green arrow that points in the direction of the object's `Enum.NormalId.Top|Top` face.
 </Alert>
 
-### Sizing and Positioning
+### Size and position
 
-The "canvas" of a `Class.SurfaceGui` occupies the entire `Class.SurfaceGui.Face|Face` of the parent or `Class.SurfaceGui.Adornee|Adornee` part. As a best practice, it's recommended that you use **scale** values for the [size](../ui/positioning-and-sizing.md#size) and [position](../ui/positioning-and-sizing.md#position) of child UI objects like `Class.ImageLabel|ImageLabels`. You can also apply a `Class.UIAspectRatioConstraint` to children of the `Class.SurfaceGui` to maintain their desired aspect ratio regardless of the face's size.
+The "canvas" of a `Class.SurfaceGui` occupies the entire `Class.SurfaceGui.Face|Face` of the parent or `Class.SurfaceGui.Adornee|Adornee` part. As a best practice, it's recommended that you use **scale** values for the [size](../ui/position-and-size.md#size) and [position](../ui/position-and-size.md#position) of child UI objects like `Class.ImageLabel|ImageLabels`. You can also apply a `Class.UIAspectRatioConstraint` to children of the `Class.SurfaceGui` to maintain their desired aspect ratio regardless of the face's size.
 
 <video src="../assets/ui/in-experience/SurfaceGui-Sizing.mp4" controls width="90%"></video>
 
-### Container Properties
-
-The following properties let you customize how a `Class.SurfaceGui` is occluded, how light influences its appearance, and how far into the distance players can see its content.
-
-#### Occlusion
+### Occlusion mode
 
 The `Class.SurfaceGui.AlwaysOnTop|AlwaysOnTop` property determines whether the `Class.SurfaceGui` will render over top of 3D content or be occluded by it. When set to `false` (default), the `Class.SurfaceGui` renders like other 3D content and is occluded by other 3D objects. When set to `true`, it always renders over top of 3D content and it is not influenced by [brightness/light](#brightness-and-light-influence) in the 3D environment.
 
-#### Brightness and Light Influence
+### Brightness and light influence
 
 `Class.SurfaceGui.Brightness|Brightness` and `Class.SurfaceGui.LightInfluence|LightInfluence` work in conjunction to determine how environmental light affects the UI content of the `Class.SurfaceGui`.
 
@@ -83,13 +77,13 @@ The `Class.SurfaceGui.AlwaysOnTop|AlwaysOnTop` property determines whether the `
 Note that `Class.SurfaceGui.Brightness|Brightness` is inaccessible in Studio and has no effect when either `Class.SurfaceGui.LightInfluence|LightInfluence` is `1` or `Class.SurfaceGui.AlwaysOnTop|AlwaysOnTop` is `true`.
 </Alert>
 
-#### Distance Visibility
+### Distance visibility
 
 `Class.SurfaceGui.MaxDistance|MaxDistance` controls how far from the camera the `Class.SurfaceGui` will be displayed before it stops rendering. A value of `0` means there is no limit and it will render infinitely far away. The default value of `1000` works fine for most cases.
 
 For `Class.SurfaceGui|SurfaceGuis` that appear outdoors, it's recommended that `Class.SurfaceGui.MaxDistance|MaxDistance` is high enough to ensure that the container's UI is sufficiently small on the screen when it appears or disappears, minimizing the sudden pop‑in/out effect.
 
-#### Display Order
+### Display order
 
 If multiple `Class.SurfaceGui` containers exist on the same face, you can layer them by Z‑index through their `Class.SurfaceGui.ZOffset|ZOffset` property (changing this does not visually "lift" or "sink" the container from the surface).
 
@@ -99,9 +93,7 @@ The `Class.BillboardGui` container displays UI objects in the 3D space but, unli
 
 <img src="../assets/ui/in-experience/BillboardGui-Diagram.jpg" width="800" alt="BillboardGui with a TextLabel describing the screen console it floats above." />
 
-### Creating and Parenting
-
-To link a `Class.BillboardGui` to an in-experience `Class.BasePart` or `Class.Attachment`, simply parent it to that part or attachment and, if desired, adjust its [size/position](#sizing-and-positioning-1).
+To link a `Class.BillboardGui` to an in-experience `Class.BasePart` or `Class.Attachment`, simply parent it to that part or attachment and, if desired, adjust its [size/position](#size-and-position-1).
 
 <Grid container spacing={2} alignItems="top">
 	<Grid item>
@@ -118,9 +110,9 @@ Alternatively, you can place the `Class.BillboardGui` inside a container like `C
 Interactive UI elements like `Class.ImageButton|ImageButtons` and `Class.TextButton|TextButtons` inside a `Class.BillboardGui` will only receive user input if they are parented to the player's `Class.PlayerGui`, typically via placing the `Class.BillboardGui` inside `Class.StarterGui` as noted above.
 </Alert>
 
-### Sizing and Positioning
+### Size and position
 
-For billboard sizing, the [scale](../ui/positioning-and-sizing.md#size) components of the `Class.BillboardGui.Size|Size` property set the billboard's stud size in 3D space. For example, a setting of <Typography noWrap>`{10, 0},{2, 0}`</Typography> <Typography noWrap>(`Datatype.UDim2.fromScale(10, 2)`)</Typography> forms a billboard with a 10:2 aspect ratio that scales larger or smaller depending on its distance from the camera.
+For billboard sizing, the [scale](../ui/position-and-size.md#size) components of the `Class.BillboardGui.Size|Size` property set the billboard's stud size in 3D space. For example, a setting of <Typography noWrap>`{10, 0},{2, 0}`</Typography> <Typography noWrap>(`Datatype.UDim2.fromScale(10, 2)`)</Typography> forms a billboard with a 10:2 aspect ratio that scales larger or smaller depending on its distance from the camera.
 
 For positioning, the `Class.BillboardGui.StudsOffset|StudsOffset` property shifts the billboard canvas on the **X** axis (left/right), **Y** axis (up/down), and **Z** axis (forward/back) relative to the camera.
 
@@ -130,15 +122,11 @@ For positioning, the `Class.BillboardGui.StudsOffset|StudsOffset` property shift
 When creating a size-scaled `Class.BillboardGui` that contains a `Class.TextLabel`, it's useful to enable the label's `Class.TextLabel.TextScaled|TextScaled` property so that its text scales along with the billboard canvas as the camera distance changes.
 </Alert>
 
-### Container Properties
-
-The following properties let you customize how a `Class.BillboardGui` is occluded, how light influences its appearance, and how far into the distance players can see its content.
-
-#### Occlusion
+### Occlusion mode
 
 The `Class.BillboardGui.AlwaysOnTop|AlwaysOnTop` property determines whether the `Class.BillboardGui` will render over top of 3D content or be occluded by it. When set to `false` (default), the `Class.BillboardGui` renders like other 3D content and is occluded by other 3D objects. When set to `true`, it always renders over top of 3D content and it is not influenced by [brightness/light](#brightness-and-light-influence-1) in the 3D environment.
 
-#### Brightness and Light Influence
+### Brightness and light influence
 
 `Class.BillboardGui.Brightness|Brightness` and `Class.BillboardGui.LightInfluence|LightInfluence` work in conjunction to determine how environmental light affects the UI content of the `Class.BillboardGui`.
 
@@ -159,6 +147,6 @@ The `Class.BillboardGui.AlwaysOnTop|AlwaysOnTop` property determines whether the
 Note that `Class.BillboardGui.Brightness|Brightness` is inaccessible in Studio and has no effect when either `Class.BillboardGui.LightInfluence|LightInfluence` is `1` or `Class.BillboardGui.AlwaysOnTop|AlwaysOnTop` is `true`.
 </Alert>
 
-#### Distance Visibility
+### Distance visibility
 
 `Class.BillboardGui.MaxDistance|MaxDistance` controls how far from the camera the `Class.BillboardGui` will be displayed before it stops rendering. A value of `0` or `inf` (default) means there is no limit and it will render infinitely far away.

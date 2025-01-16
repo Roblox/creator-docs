@@ -1181,7 +1181,7 @@ methods:
           <tr>
             <th> LaunchData </th>
             <td> string </td>
-            <td>A plain or JSON encoded string that contains launch data specified in a <a href="../../../production/promotion/deeplinking.md">deep link</a> URL or
+            <td>A plain or JSON encoded string that contains launch data specified in a <a href="../../../production/promotion/deeplinks.md">deep link</a> URL or
             <code>Class.ExperienceInviteOptions.LaunchData</code>.</td>
           </tr>
           <tr>
@@ -2505,6 +2505,8 @@ events:
       `Class.Shirt|Shirts`, `Class.Pants` and
       `Class.CharacterMesh|CharacterMeshes`. This event will fire when all such
       objects have been inserted into the `Class.Player.Character`.
+
+      This event only fires on the server.
 
       One use for this event is to ensure all accessories have loaded before
       destroying them. See below for an example of this.

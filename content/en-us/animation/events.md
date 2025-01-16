@@ -1,5 +1,5 @@
 ---
-title: Animation Events
+title: Animation events
 description: Animation Events are markers across the timeline span in the Animation Editor.
 ---
 
@@ -7,7 +7,7 @@ You can define animation **event markers** across the timeline span and use
 `Class.AnimationTrack:GetMarkerReachedSignal()|GetMarkerReachedSignal()`
 to detect those markers as the animation runs.
 
-## Showing Events
+## Show events
 
 By default, the event track isn't visible. To show the event track:
 
@@ -25,10 +25,10 @@ By default, the event track isn't visible. To show the event track:
    src="../assets/animation/animation-editor/Animation-Events-Bar.png"
    width="600" />
 
-You can now [create](#creating-events), [detect](#detecting-events), and
-[duplicate](#duplicating-events) events.
+You can now [create](#create-events), [detect](#detect-events), and
+[duplicate](#duplicate-events) events.
 
-## Creating Events
+## Create events
 
 Event markers are visual indicators of where an animation event begins. After you create an event
 marker, you can move it to any frame position on the timeline.
@@ -59,7 +59,7 @@ To create a new event marker:
    src="../assets/animation/animation-editor/Animation-Events-Marker-In-Timeline.png"
    width="700" />
 
-## Detecting Events
+## Detect events
 
 To detect animation events in a `Class.LocalScript`,
 connect a function to the `Class.AnimationTrack:GetMarkerReachedSignal()|GetMarkerReachedSignal()` function of `Class.AnimationTrack`. For example:
@@ -94,7 +94,7 @@ marker within the Animation Editor. This lets you pass a custom <b>string</b>
 (single value, comma-separated string, etc.) to the `Class.AnimationTrack:GetMarkerReachedSignal()|GetMarkerReachedSignal()` function, as illustrated by the <b>paramString</b> argument in the code example above. This string can then be parsed or converted, if necessary, and used for whatever action you wish to perform in the event.
 </Alert>
 
-## Duplicating Events
+## Duplicate events
 
 As you create events, they become available for usage throughout the whole
 animation, not only at the frame position where you originally created them. For
@@ -131,5 +131,5 @@ steps:
 <Alert
     severity="info"
     variant="standard">
-You can also duplicate events by clicking the <b>Edit Animation Events</b> button (just as if you were <a href="#creating-events">creating a new event</a>), clicking <b>Add Event</b> in the pop-up menu, selecting the desired event from the dropdown, and clicking <b>Save</b>.
+You can also duplicate events by clicking the <b>Edit Animation Events</b> button (just as if you were <a href="#create-events">creating a new event</a>), clicking <b>Add Event</b> in the pop-up menu, selecting the desired event from the dropdown, and clicking <b>Save</b>.
 </Alert>

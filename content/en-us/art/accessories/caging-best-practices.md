@@ -1,5 +1,5 @@
 ---
-title: Caging Best Practices
+title: Caging best practices
 description: In-depth description and images of various caging best practices for layered clothing.
 ---
 

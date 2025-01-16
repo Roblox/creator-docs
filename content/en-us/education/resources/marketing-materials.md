@@ -1,5 +1,5 @@
 ---
-title: Marketing Materials
+title: Marketing materials
 description: Marketing materials for educators using Roblox in the classroom. Includes high quality renders and logos.
 duration:
 thumbnail: None
@@ -13,7 +13,7 @@ For organizations looking to use Roblox in their branding materials, we've inclu
 
 <a href="../../assets/education/stock-graphics/edu-marketing.zip"><Button variant="contained">Download</Button></a>
 
-## Branding Guidelines
+## Branding guidelines
 
 In order to use the Roblox logo, you must follow these guidelines.
 

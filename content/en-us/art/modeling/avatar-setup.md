@@ -1,9 +1,9 @@
 ---
 title: Avatar Setup
-description: The Avatar Setup tool previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
+description: The Avatar setup tool previews animations, clothing, accessories, and body constructs on avatar rigs, directly in Studio.
 ---
 
-The **Avatar Setup** tool allows you to auto-setup avatar meshes, preview animations, clothing, skin tones, and test avatar character bodies directly in Studio. Marketplace creators can also begin the uploading and validation process from this tool to quickly publish their assets.
+The **Avatar Setup Tool** allows you to auto-setup avatar meshes, preview animations, clothing, skin tones, and test avatar character bodies directly in Studio. Marketplace creators can also begin the uploading and validation process from this tool to quickly publish their assets.
 
 <img src="../../assets/studio/general/Avatar-Tab-Avatar-Setup.png" width="760" alt="Avatar Preview button indicated in Avatar tab" />
 
@@ -14,15 +14,15 @@ The **Avatar Setup** tool allows you to auto-setup avatar meshes, preview animat
 </figure>
 <figure>
     <img src="../../assets/avatar/avatar-setup/Avatar-Setup-Example-B.png" />
-    <figcaption>Using additional Avatar Setup features, you can [test](#testing-interface) out skin tones, animations, rigid and layered clothing, and more.</figcaption>
+    <figcaption>Using additional Avatar setup features, you can [test](#testing-interface) out skin tones, animations, rigid and layered clothing, and more.</figcaption>
 </figure>
 </GridContainer>
 
-## Avatar Auto-Setup
+## Avatar auto-setup
 
 The **auto-setup** feature converts a body model into a finished avatar model with all the advanced components that allow characters to interact with the world and express themselves.
 
-Creating these [avatar components](../characters/index.md#components-of-an-avatar), including tasks like rigging, skinning, facial animation, and more, often require hours or days to configure in a third-party modeling tool such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview). Using the Avatar auto-setup tool, you can input a simple character model and create a Marketplace-ready avatar model within minutes.
+Creating these [avatar components](../characters/index.md#components-of-an-avatar), including tasks like rigging, skinning, facial animation, and more, often require hours or days to configure in a third-party modeling tool such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview). Using the Avatar Setup Tool, you can input a simple character model and create a Marketplace-ready avatar model within minutes.
 
 Auto-setup performs the following on a submitted character model:
 
@@ -33,7 +33,7 @@ Auto-setup performs the following on a submitted character model:
 - **Partitioning** — Separates the body mesh into the appropriate R15 parts.
 - **Creating attachments** — Adds the appropriate attachment points enabling the character to wear rigid accessories.
 
-### How Auto-Setup Works
+### How auto-setup works
 
 The auto-setup tool utilizes machine learning (ML) models that handles the rigging, skinning, and caging application. After creating the rigging, skinning, and caging data, the tool applies body partitioning and attachment point generation using a geometry-based solution. If existing non-rig components, such as cages, attachments, or animation, are already included in the imported `Class.Model`, the auto-setup tool removes them and generates new components. If the model includes a compatible R15 rig, the tool preserves the rigging and skinning data and does not overwrite this data.
 
@@ -58,7 +58,7 @@ See the following examples for the types of bodies and styles that work best wit
 
 Roblox intends to continue releasing updated versions of the auto-setup ML models over time. When uploading an avatar body asset, Studio gives you the option to add your input model as part of a dataset for additional training and improvements as well as provide feedback on the quality of the auto-setup output.
 
-### Model Requirements
+### Model requirements
 
 For best results, Avatar auto-setup expects the input body model to follow a specific set of requirements. These requirements may require using a third-party modeling tool to adjust your current character mesh, as they are different from the traditional [avatar character requirements](../characters/specifications.md). As the auto-setup tool improves, some of these requirements may lift.
 
@@ -102,9 +102,9 @@ The full requirements for the input body model are as follows:
    <table>
     <thead>
       <tr>
-        <th>Body Part Grouping</th>
-        <th>Maximum Triangles</th>
-        <th>Maximum Quads</th>
+        <th>Body part grouping</th>
+        <th>Maximum triangles</th>
+        <th>Maximum quads</th>
       </tr>
     </thead>
     <tbody>
@@ -151,13 +151,13 @@ The full requirements for the input body model are as follows:
 14. **Includes texture** — Models should include one or more texture maps. If the input body includes multiple textures, the tool bakes the textures to a single map. This applies to [PBR textures](../modeling/surface-appearance.md) where the four textures are baked — one for each albedo, normal, metalness and roughness.
 15. **Follows Marketplace and Community Policy** — The model must conform to Roblox's [Marketplace Policy](../../marketplace/marketplace-policy.md) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
 
-#### Examples of Non-Supported Models
+#### Examples of non-supported models
 
 The following are common examples of models that may not yield expected results with auto-setup:
 
 <BaseAccordion>
 <AccordionSummary>
-<Typography>Non-Supported Model Examples</Typography>
+<Typography>Non-supported model examples</Typography>
 
 </AccordionSummary>
 <AccordionDetails>
@@ -165,32 +165,32 @@ The following are common examples of models that may not yield expected results 
 <tbody>
   <tr>
     <td>
-        <center><figure><img src="../../assets/avatar/avatar-setup/Assymetry.png" alt=""/><figcaption>**Asymmetry** &mdash; Setup tool expects symmetry with limbs.</figcaption></figure></center>
+        <center><figure><img src="../../assets/avatar/avatar-setup/Assymetry.png" alt=""/><figcaption>**Asymmetry** &mdash; setup tool expects symmetry with limbs.</figcaption></figure></center>
     </td>
   </tr>
   <tr>
     <td>
-        <center><figure><img src="../../assets/avatar/avatar-setup/I-pose.png" alt=""/><figcaption>**I-pose** &mdash; Setup tool expects A-Pose.</figcaption></figure></center>
+        <center><figure><img src="../../assets/avatar/avatar-setup/I-pose.png" alt=""/><figcaption>**I-pose** &mdash; setup tool expects A-Pose.</figcaption></figure></center>
     </td>
   </tr>
   <tr>
     <td>
-        <center><figure><img src="../../assets/avatar/avatar-setup/Non-Contiguous.png" alt=""/><figcaption>**Non-contiguous mesh** &mdash; Setup tool expects the body mesh to be completely contiguous.</figcaption></figure></center>
+        <center><figure><img src="../../assets/avatar/avatar-setup/Non-Contiguous.png" alt=""/><figcaption>**Non-contiguous mesh** &mdash; setup tool expects the body mesh to be completely contiguous.</figcaption></figure></center>
     </td>
   </tr>
   <tr>
     <td>
-        <center><figure><img src="../../assets/avatar/avatar-setup/No-Neck.png" alt=""/><figcaption>**No neck** — Setup tool expects a neck connecting a head to the torso.</figcaption></figure></center>
+        <center><figure><img src="../../assets/avatar/avatar-setup/No-Neck.png" alt=""/><figcaption>**No neck** — setup tool expects a neck connecting a head to the torso.</figcaption></figure></center>
     </td>
   </tr>
   <tr>
     <td>
-        <center><figure><img src="../../assets/avatar/avatar-setup/Long-Neck.png" alt=""/><figcaption>**Out of proportion limbs** &mdash; Setup tool expects a more realistic humanoid-style character model.</figcaption></figure></center>
+        <center><figure><img src="../../assets/avatar/avatar-setup/Long-Neck.png" alt=""/><figcaption>**Out of proportion limbs** &mdash; setup tool expects a more realistic humanoid-style character model.</figcaption></figure></center>
     </td>
   </tr>
   <tr>
     <td>
-        <center><figure><img src="../../assets/avatar/avatar-setup/Non-Proportional-Limbs.png" alt=""/><figcaption>**Out of proportion limbs** &mdash; Setup tool expects a more realistic humanoid-style character model.</figcaption></figure></center>
+        <center><figure><img src="../../assets/avatar/avatar-setup/Non-Proportional-Limbs.png" alt=""/><figcaption>**Out of proportion limbs** &mdash; setup tool expects a more realistic humanoid-style character model.</figcaption></figure></center>
     </td>
   </tr>
 </tbody>
@@ -198,7 +198,7 @@ The following are common examples of models that may not yield expected results 
 </AccordionDetails>
 </BaseAccordion>
 
-### Importing Models
+### Import models
 
 Studio supports `.gltf`, `.fbx`, and `.obj` models using the 3D Importer. If you are exporting your model from a third-party tool, see [Export Settings](../characters/export-settings.md) for export configurations.
 
@@ -264,14 +264,14 @@ To import the model into Studio:
    When a new model is imported, it's also added to the moderation queue. If an avatar asset is moderated incorrectly, you will receive a moderation email with a link to appeal. This appeal takes up to 10 minutes to resolve.
    </Alert>
 
-### Running Auto-Setup
+### Run auto-setup
 
 When your project has the appropriate `Class.Model` in your workspace, you can begin the auto-setup process.
 
 1. Select the model in the workspace.
    1. If you want to select only specific meshes of your model, navigate to the Explorer, expand the `Class.Model` object, and hold shift and click on the individual mesh objects.
-2. With the Model selected, navigate to the **Avatar tab** and select **Avatar Setup**.
-3. In the Avatar Setup panel, click the blue **Set Up Avatar** button. This process can take several minutes.
+2. With the Model selected, navigate to the **Avatar tab** and select **Avatar setup**.
+3. In the Avatar setup panel, click the blue **Set Up Avatar** button. This process can take several minutes.
    <img src="../../assets/avatar/avatar-setup/Auto-Setup-Start.png" alt=""/>
 
 4. Once complete, a `Class.Model` of your avatar populates in your workspace.
@@ -283,30 +283,30 @@ When your project has the appropriate `Class.Model` in your workspace, you can b
 
       <img src="../../assets/avatar/avatar-setup/Auto-Setup-Scaling.png" alt=""/>
 
-   2. Use the various [Avatar Setup tools](#testing-interface) to verify the components of your avatar before saving the `Class.Model` to your Toolbox or uploading to the Marketplace.
+   2. Use the various [tools](#test-interface) to verify the components of your avatar before saving the `Class.Model` to your Toolbox or uploading to the Marketplace.
 
-## Testing Interface
+## Test interface
 
 After auto-setup, or when using the tool with an avatar-ready character model, the character populates in the preview window. It's important to test that your avatar components have correctly generated by testing out different clothing, rigid accessories, and animations. If you discover any issues, you may need to update your base input model in your third-party modeling software and/or retry the auto-setup process.
 
 <GridContainer numColumns='2'>
 <figure><img src="../../assets/avatar/avatar-setup/Testing-Interface.png" alt="" width = "100%"/></figure>
-<figure>Once an avatar is added to the tool, four tabs appear on the left side of the panel: <ul><li>[Check Body](#check-body)</li> <li>[Check Face](#check-face)</li> <li>[Test in Experience](#test-in-experience)</li> <li>[Publish](#publish)</li></ul></figure>
+<figure>Once an avatar is added to the tool, four tabs appear on the left side of the panel: <ul><li>[Check body](#check-body)</li> <li>[Check face](#check-face)</li> <li>[Test in experience](#test-in-experience)</li> <li>[Publish](#publish)</li></ul></figure>
 </GridContainer>
 
-### Check Body
+### Check body
 
 The **Check Body** interface contains tabs for Animations, Clothing, Accessories, and Body assets, such as skin-tone and swapping body parts. Clicking a subtab like Shirts, Waist, or Skin reveals a selection column along the left side of the window for testing various cosmetics and visuals.
 
 <img src="../../assets/avatar/avatar-setup/Skin-Tone-Selector.png" alt="" width = "60%"/>
 
-#### Equipping Items
+#### Equip items
 
 Selected items are equipped on the avatar and are added to the currently equipped column on the right side. Selected animations begin playing as a preview of how they'll look in a running experience.
 
 To unequip an item, click it again in the selection column, press the **X** button at the top right of the equipped item, or right-click the asset in the Equipped column and select **Unequip**. You can also drag and order the various equipped accessories to set the worn order.
 
-#### Adding Items
+#### Add items
 
 The add item button allows you to add custom assets to the tool's palette for testing.
 
@@ -319,7 +319,7 @@ To add an item to the palette:
 
 3. The item appears in the appropriate section and subsection of the Check Body interface, such as **Accessories** → **Hair**.
 
-### Check Face
+### Check face
 
 The **Check Face** interface zooms into the face and allows you test various facial poses.
 
@@ -334,9 +334,9 @@ The **Check Face** interface zooms into the face and allows you test various fac
 </figure>
 </GridContainer>
 
-### Test in Experience
+### Test in experience
 
-The **Test in Experience** button starts playtesting the experience with the previewed avatar. Any changes made in the Avatar Setup preview tools, such as equipped clothing or accessories, or modifications, such as skin tone or body part swaps, do not transfer over to the playable character model in this mode.
+The **Test in Experience** button starts playtesting the experience with the previewed avatar. Any changes made in the Avatar setup preview tools, such as equipped clothing or accessories, or modifications, such as skin tone or body part swaps, do not transfer over to the playable character model in this mode.
 
 ### Publish
 
@@ -348,6 +348,6 @@ The upload option opens the following prompt which goes through additional valid
 
 For additional resources on the publishing process and Marketplace, see the following:
 
-- [Publishing to the Marketplace](../../marketplace/publishing-to-marketplace.md)
-- [Marketplace Fees and Commissions](../../marketplace/marketplace-fees-and-commissions.md)
-- [Marketplace Policy](../../marketplace/marketplace-policy.md)
+- [Publish to the Marketplace](../../marketplace/publish-to-marketplace.md)
+- [Marketplace fees and commissions](../../marketplace/marketplace-fees-and-commissions.md)
+- [Marketplace policy](../../marketplace/marketplace-policy.md)

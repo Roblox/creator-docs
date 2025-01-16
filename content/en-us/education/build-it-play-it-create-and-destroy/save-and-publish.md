@@ -1,5 +1,5 @@
 ---
-title: Save and Publish
+title: Save and publish
 description: Part of the Create and Destroy series. Learn how to save and publish a Roblox experience.
 next: /education/build-it-play-it-create-and-destroy/challenge-1
 prev: /education/build-it-play-it-create-and-destroy/snap-to-grid

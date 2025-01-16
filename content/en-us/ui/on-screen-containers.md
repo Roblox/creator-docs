@@ -1,5 +1,5 @@
 ---
-title: On-Screen UI Containers
+title: On-screen UI containers
 description: Learn how to display UI objects on a user's screen.
 ---
 
@@ -14,8 +14,6 @@ For UI containers that hold `Class.GuiObject|GuiObjects` that you want to displa
 </Alert>
 </figure>
 
-## Creating and Parenting
-
 To display a `Class.ScreenGui` and its child `Class.GuiObject|GuiObjects` to every player who joins the experience, place it inside the `Class.StarterGui` container. When a player joins an experience and their character first spawns, the `Class.ScreenGui` and its contents clone into the `Class.PlayerGui` container for that player, located within the `Class.Players` container.
 
 <img src="../assets/ui/ui-objects/StarterGui-To-PlayerGui.png" width="840" alt="Diagram of how a ScreenGui clones from StarterGui to a player's PlayerGui" />
@@ -28,23 +26,21 @@ By default, `Class.GuiObject|GuiObjects` inside a `Class.ScreenGui` within `Clas
 If `Class.Players.CharacterAutoLoads` is disabled, the contents of `Class.StarterGui` will not be cloned until `Class.Player:LoadCharacter()` is called.
 </Alert>
 
-## Managing Screen Containers
-
 As an experience grows in scope, you may require multiple screen interfaces such as a title screen, settings menu, shop interface, and more. In such cases, you can place multiple unique `Class.ScreenGui` containers inside `Class.StarterGui` and toggle each container's `Class.ScreenGui.Enabled|Enabled` property depending on whether it should be visible and active (while `false`, contents will not render, process user input, or update in response to changes).
 
 <img src="../assets/ui/ui-objects/ScreenGuis-Enabled.png" width="760" alt="Explorer hierarchy showing multiple ScreenGui containers, one enabled and the others disabled, in order to control which are visible at a given time." />
 
-The `Class.ScreenGui.Enabled|Enabled` property can be initially toggled through the [Properties](../studio/properties.md) window and/or you can set it during playtime from a client‑side script by [accessing](#accessing-player-ui) the player's `Class.PlayerGui` and setting it to `true` or `false` for the desired container(s).
+The `Class.ScreenGui.Enabled|Enabled` property can be initially toggled through the [Properties](../studio/properties.md) window and/or you can set it during playtime from a client‑side script by [accessing](#access-player-ui) the player's `Class.PlayerGui` and setting it to `true` or `false` for the desired container(s).
 
 <Alert severity="info">
 When using multiple `Class.ScreenGui` interfaces, you can layer them by Z‑index through their `Class.ScreenGui.DisplayOrder|DisplayOrder` property. See [Display Order](#display-order) for more information.
 </Alert>
 
-## Container Properties
+## Container properties
 
 The following properties let you customize the [screen insets](#screen-insets) across multiple devices, the [display order](#display-order) when using multiple screen containers, and more.
 
-### Screen Insets
+### Screen insets
 
 Modern phones take advantage of the entire screen but typically include notches, cutouts, and other elements that occupy screen space. Every Roblox experience also includes the **top bar controls** for quick access to the main menu, [chat](../chat/in-experience-text-chat.md), [leaderboard](../players/leaderboards.md), and more.
 
@@ -75,11 +71,11 @@ No insets are added to the fullscreen area. This mode may result in UI that is o
 </TabItem>
 </Tabs>
 
-### Display Order
+### Display order
 
 When using multiple `Class.ScreenGui` interfaces, you can layer them by Z‑index through their `Class.ScreenGui.DisplayOrder|DisplayOrder` property. For example, to display a modal settings menu on one `Class.ScreenGui` in front of the experience's main user interface on another `Class.ScreenGui`, assign a higher `Class.ScreenGui.DisplayOrder|DisplayOrder` to the modal's than the underlying interface's.
 
-### Reset on Spawn
+### Reset on spawn
 
 The `Class.ScreenGui.ResetOnSpawn|ResetOnSpawn` boolean property determines if the `Class.ScreenGui` resets (deletes itself and re‑clones into the player's `Class.PlayerGui`) every time the player's character respawns.
 
@@ -106,9 +102,9 @@ The `Class.ScreenGui.ResetOnSpawn|ResetOnSpawn` boolean property determines if t
 </tbody>
 </table>
 
-## Accessing Player UI
+## Access player UI
 
-As noted, [parenting](#creating-and-parenting) a `Class.ScreenGui` to `Class.StarterGui` clones it and its child `Class.GuiObject|GuiObjects` into a player's `Class.PlayerGui` container when they join the experience and their character first spawns.
+As noted, parenting a `Class.ScreenGui` to `Class.StarterGui` clones it and its child `Class.GuiObject|GuiObjects` into a player's `Class.PlayerGui` container when they join the experience and their character first spawns.
 
 If you need to control a player's UI container during playtime, for example to show/hide a specific `Class.ScreenGui` or any of its children, access it as follows from a `Class.LocalScript`:
 
@@ -125,6 +121,6 @@ titleScreen.Enabled = false  -- Hide title screen
 settingsMenu.Enabled = true  -- Show settings menu
 ```
 
-## Disabling Default UI
+## Disable default UI
 
 <DefaultUI components={props.components} />

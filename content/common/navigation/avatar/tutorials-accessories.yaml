@@ -1,23 +1,23 @@
 backTo:
-  title: Back to Avatar Tutorials
+  title: Back to avatar tutorials
   path: /avatar/tutorials/
 navigation:
   - title: Overview
     path: /art/accessories/creating-rigid/
-  - heading: Modeling
-  - title: Box Modeling
+  - heading: Model
+  - title: Box modeling
     path: /art/accessories/creating-rigid/modeling-setup
-  - heading: Texturing
-  - title: Texture Painting
+  - heading: Texture
+  - title: Texture painting
     path: /art/accessories/creating-rigid/texturing
-  - heading: Exporting
-  - title: Exporting from Blender
+  - heading: Export
+  - title: Export from Blender
     path: /art/accessories/creating-rigid/exporting
-  - heading: Importing into Studio
-  - title: Using Studio's 3D Importer
+  - heading: Import
+  - title: Use Studio's 3D importer
     path: /art/accessories/creating-rigid/importing
-  - title: Converting to Accessory
+  - title: Convert to accessory
     path: /art/accessories/creating-rigid/converting
-  - heading: Publishing to Marketplace
-  - title: Upload and Publishing
+  - heading: Publish
+  - title: Upload and publish
     path: /art/accessories/creating-rigid/publishing

@@ -1,5 +1,5 @@
 ---
-title: Going for a Race
+title: Going for a race
 prev: /education/build-it-play-it-galactic-speedway/customize-and-share
 next: /education/build-it-play-it-galactic-speedway/take-the-challenge-3
 description: Learn how to race your spaceship in the Roblox Build It Play It and customize your published game so that your friends can play with you.
@@ -14,7 +14,7 @@ With your driftspeeder fully customized, it's time to test it out in an actual r
 
    <img src="../../assets/education/build-it-play-it-galactic-speedway/going-for-a-race/testing-plane.jpeg" />
 
-## Invite Friends to Play
+## Invite friends to play
 
 When you first publish a game, it's automatically set to private. Set it to **public** so others can get a chance to race in your speeder.
 

@@ -1,11 +1,11 @@
 ---
-title: Automating Right to Erasure Requests
+title: Automate right to erasure requests
 description: Explains how to automate Right to Erasure requests with webhooks and Open Cloud APIs for data stores.
 ---
 
 The **General Data Protection Regulation (GDPR)** is a European regulation on data protection and privacy. It grants individuals the right to request the deletion of their personal data, known as the [right to erasure](https://gdpr-info.eu/art-17-gdpr/). If you store any **Personally Identifiable Information (PII)** of your users, such as their User IDs, you must comply with GDPR requirements by deleting this information upon receiving a user's request.
 
-Instead of handling requests manually, you can [set up a webhook](../../cloud/webhooks/webhook-notifications.md) and use a bot within a third-party messaging application to automate the process. As [data stores](../../cloud-services/data-stores) being the most common way for storing PII data, this tutorial provides an example on how to create a bot within Guilded or Discord that uses the [Open Cloud API for data stores](../../cloud/open-cloud/usage-data-stores.md) to delete PII data as an automation solution.
+Instead of handling requests manually, you can [set up a webhook](../../cloud/webhooks/webhook-notifications.md) and use a bot within a third-party messaging application to automate the process. As [data stores](../../cloud-services/data-stores/index.md) being the most common way for storing PII data, this tutorial provides an example on how to create a bot within Guilded or Discord that uses the [Open Cloud API for data stores](../../cloud/open-cloud/usage-data-stores.md) to delete PII data as an automation solution.
 
 ## Workflow
 
@@ -21,11 +21,11 @@ Upon completing this tutorial, you should be able to create a locally-running cu
 
 <img src="../../assets/misc/Webhooks-Bot-Workflow.png" width="100%" />
 
-## Configuring a Webhook with Third-Party Integration
+## Configure a webhook with third-party integration
 
 Before creating a bot, set up a server with webhook integration on the third-party messaging application. Then use the server to configure a webhook on Creator Dashboard.
 
-### Setting Up a Server
+### Set up a server
 
 The following steps show how to set up the server using Guilded or Discord.
 
@@ -50,23 +50,23 @@ The following steps show how to set up the server using Guilded or Discord.
 </TabItem>
 </Tabs>
 
-### Configuring a Webhook on Roblox
+### Configure a webhook on Roblox
 
-After obtaining the third-party server URL, use it to [configure a webhook](../../cloud/webhooks/webhook-notifications.md#configuring-webhooks-on-creator-dashboard) on Creator Dashboard. make sure you perform the following settings:
+After obtaining the third-party server URL, use it to [configure a webhook](../../cloud/webhooks/webhook-notifications.md#configure-webhooks-on-creator-dashboard) on Creator Dashboard. make sure you perform the following settings:
 
 <Alert severity="info">
 Currently, only group owners can receive Right to Erasure requests for group-owned experiences. To implement the automation solution for a group-owned experience, make sure that the group owner configures the webhook.
 </Alert>
 
 - Add the Guilded or Discord server URL as the **Webhook URL**.
-- Include a custom **Secret**. Though a secret is optional for completing the configuration, you should include one to prevent bad actors from impersonating Roblox and deleting your data. For more information on the usage of a secret, see [Verifying Webhook Security](../../cloud/webhooks/webhook-notifications.md#verifying-webhook-security).
+- Include a custom **Secret**. Though a secret is optional for completing the configuration, you should include one to prevent bad actors from impersonating Roblox and deleting your data. For more information on the usage of a secret, see [Verify webhook security](../../cloud/webhooks/webhook-notifications.md#verifying-webhook-security).
 - Select **Right to Erasure Request** under **Triggers**.
 
 You can test the webhook using the **Test Response** button to see if you receive a notification in your server's **#general** channel from Roblox. If you don't receive the notification, try again or check your server settings to troubleshoot the error.
 
 <img src="../../assets/misc/Webhooks-Sample-Notification.png" width="50%" alt="Example notification on Guilded"/>
 
-## Configuring a Bot
+## Configure a bot
 
 After you add the webhook, use it to configure the bot with the following steps:
 
@@ -106,11 +106,11 @@ After you add the webhook, use it to configure the bot with the following steps:
 </TabItem>
 </Tabs>
 
-## Creating an Open Cloud API Key
+## Create an Open Cloud API key
 
-To allow your third-party bot to access your data stores for storing PII data of users, [create an Open Cloud API key](https://create.roblox.com/docs/reference/cloud/managing-api-keys) that can access your experiences and add the **Delete Entry** permission of data stores for data deletion. If you use ordered data stores for storing PII, you also need to add the **Write** permission of ordered data stores. After completion, copy and save the API key in a secure location to use it in later steps.
+To allow your third-party bot to access your data stores for storing PII data of users, [create an Open Cloud API key](../open-cloud/api-keys.md) that can access your experiences and add the **Delete Entry** permission of data stores for data deletion. If you use ordered data stores for storing PII, you also need to add the **Write** permission of ordered data stores. After completion, copy and save the API key in a secure location to use it in later steps.
 
-## Obtaining Identifiers of Experiences and Places
+## Obtain identifiers of experiences and places
 
 For the bot to locate the PII data requested by users for deletion, obtain the following identifiers of all experiences that you intend to use the bot for:
 
@@ -121,7 +121,7 @@ To obtain these identifiers, open the [Creations](https://create.roblox.com/dash
 
 <img src="../../assets/creator-dashboard/Experience-Context-Menu-Copy-Universe-ID-Start-Place-ID.png" width="420" alt="Copy Universe ID and Copy Start Place ID options from Creator Dashboard" />
 
-## Adding Scripts
+## Add scripts
 
 After you finish setting up the webhook, bot, and API key for data stores, add them to the scripts that implement the bot's automation logic. The following example uses Python 3:
 
@@ -465,7 +465,7 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
 To ensure constant and secure execution of the scripts, save and run them locally only. Keep your local device or virtual machine running the scripts turned on at all times. In the event that your device goes offline, you need to manually manage any missed messages during the offline period and handle delivery failures according to the [retry policy](../../cloud/webhooks/webhook-notifications.md#delivery-failure-retry-policy).
 </Alert>
 
-## Testing
+## Test
 
 You can create and run a test message to verify that your custom program can properly handle right to erasure requests and delete PII data:
 

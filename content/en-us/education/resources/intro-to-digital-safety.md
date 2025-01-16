@@ -1,5 +1,5 @@
 ---
-title: Intro to Digital Safety
+title: Intro to digital safety
 description: Learn how to protect personal and private information.
 ---
 
@@ -7,7 +7,7 @@ description: Learn how to protect personal and private information.
 
 Playing and learning with Roblox can be a great way of connecting with others and participating in a global community. By taking proactive measures to protect your privacy and understand how to spot unreliable information, you can prevent others from ruining the experience for you.
 
-## Personal and Private Information
+## Personal and private information
 
 Part of the joy of being online is sharing with others. Whether it's talking about favorite movies, or making memories in a virtual field trip. As you share, keep yourself safe from scams and other risks by being mindful of what you communicate to others.
 
@@ -25,7 +25,7 @@ Part of the joy of being online is sharing with others. Whether it's talking abo
 
 To protect yourself, always learn about a platform's privacy practices and settings. On Roblox, don't share personal information, even if it's with a friend. Even simple information, like an email, can lead to someone finding your real life identity or give them hints as to how to get into your account. This can lead to events like having your identity and Robux stolen, someone impersonating you and saying rude things to friends, or selling off your items.
 
-## Reporting Bad Actors
+## Report bad actors
 
 When a negative situation happens, like seeing an abusive player or being the victim of a scam, you can take action with a report. Creating a report lets a platform, like Roblox, know that something needs to be investigated. By providing specific and clear information, you can solve personal account problems and help others in the community.
 
@@ -41,7 +41,7 @@ To file a Roblox report, do the following:
    Different social media websites, games, and other platforms have their own ways of making reports. For a trusted source to see how to make reports on a variety of websites, see [ReportHarmfulContent.com](https://reportharmfulcontent.com) . Note, while this website is focused on the United Kingdom, the information is applicable internationally.
    </Alert>
 
-### Writing Helpful Reports
+### Write helpful reports
 
 As you create a report, make the description specific and clear. This helps Roblox staff respond more effectively to an issue. Notice the difference between the following reports.
 
@@ -53,7 +53,7 @@ _"Snarly805 is messaging people about giving out free robux if they go to this w
 
     - **Specific and Clear** - Mentions a specific user by account name and what they were doing.
 
-## Reliable Information Online
+## Reliable information online
 
 In addition to being mindful of your personal information, be watchful with what information you trust. While some sources, like the official Roblox website can be trusted, you may find games or websites looking to take advantage of you with scams.
 
@@ -61,7 +61,7 @@ In addition to being mindful of your personal information, be watchful with what
 Be cautious with private messages. It's okay to talk to people online but be careful with people you don't know, especially for people asking for suspicious favors. Scammers often will try and get you to click on links or chat on platforms outside Roblox, such as Instagram or Discord.
 </Alert>
 
-### Spotting Unreliable Information
+### Spot unreliable information
 
 Below are clues used to spot unreliable websites and information.
 
@@ -99,7 +99,7 @@ _i'm making a game and i wanna put your roblox character in it. could you upload
 
 Users would go to Youtube and follow instructions where they'd type in a browser link which had malicious code. Scammers would then gain access to accounts.
 
-## Activity - Investigate Scams
+## Activity - Investigate scams
 
 You can use real life scams to get your students to critically think about the information they see and apply the information they learn here.
 
@@ -115,7 +115,7 @@ Explain a situation and ask the following questions:
 - How would you know this is a scam? What clues are there?
 - If your friend was accidentally sending you a scam, how would you inform them about it so they can learn?
 
-## Examples of Information
+## Examples of information
 
 Below are examples of information you might find in a Roblox game. What makes one reliable and the other unreliable?
 
@@ -130,13 +130,13 @@ _If you buy a game pass in this game's shop for 200 Robux, we'll give you a free
 
     - **Reliable** - While it is a transaction, it stays within Roblox. It also lets you know what's being traded and you know what you're getting in the end.
 
-## Additional Resources
+## Additional resources
 
-### Protecting Accounts
+### Protect accounts
 
 One way of protecting your account is to use 2 Factor Authentication (or sometimes called 2FA). This feature makes sure nobody else can log into your account, even if they know your password. Whenever you log in, you'll receive a unique code from Roblox in your email, giving you an extra layer of protection. Learn more in Add [2-Step Verification](https://en.help.roblox.com/hc/en-us/articles/212459863-Add-2-Step-Verification-to-Your-Account) to Your Account.
 
-### Scavenger Hunt Game
+### Scavenger hunt game
 
 <img src="../../assets/education/intro-to-digital-safety/digitalSafety_gameHero.png" />
 
@@ -146,7 +146,7 @@ To help you identify reliable information, go through a scavenger hunt in a Robl
 <Button variant="contained">Play Experience</Button>
 </a>
 
-### Supplemental Materials
+### Supplemental materials
 
 - [Scavenger Hunt Handout](../../assets/education/intro-to-digital-safety/Digital_Safety_Scavenger_Hunt_Handout.docx) - A Powerpoint presentation covering the information on this page.
 - [Digital Safety Presentation](../../assets/education/intro-to-digital-safety/Intro_to_Digital_Safety_Lesson_Slides.pptx) - A Powerpoint presentation covering the information on this page.

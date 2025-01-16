@@ -4,7 +4,7 @@ description: HingeConstraint allows its two attachments to rotate about one axis
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.HingeConstraint`, see [Mechanical Constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;Units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.HingeConstraint`, see [Mechanical constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 A `Class.HingeConstraint`
@@ -18,7 +18,7 @@ powered to behave like a [motor](#angular-power) or [servo](#angular-power), and
 Orientation of a hinge's attachments affects how it rotates. To ensure rotation occurs around the desired axis, each attachment's `Class.Attachment.Axis|Axis`, visualized by the yellow arrow, should point in the same direction.
 </Alert>
 
-### Angular Power
+### Angular power
 
 If a hinge's `Class.HingeConstraint.ActuatorType|ActuatorType` is set to `Enum.ActuatorType|Motor`, it attempts to rotate the attachments with the goal of reaching its `Class.HingeConstraint.AngularVelocity|AngularVelocity`. You can further control this rotation through both `Class.HingeConstraint.MotorMaxAcceleration|MotorMaxAcceleration` and `Class.HingeConstraint.MotorMaxTorque|MotorMaxTorque`.
 

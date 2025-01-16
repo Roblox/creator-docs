@@ -29,7 +29,7 @@ properties:
       See also:
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     type: string
     tags:
@@ -57,7 +57,7 @@ properties:
       this same reserved server.
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     type: string
     tags:

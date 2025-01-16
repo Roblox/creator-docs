@@ -1,5 +1,5 @@
 ---
-title: Avatar Tab
+title: Avatar tab
 description: The Avatar tab contains specialized tools for working with avatars and accessories.
 ---
 
@@ -7,7 +7,7 @@ The **Avatar** tab contains the standard [transform tools](../studio/model-tab.m
 
 <img src="../assets/studio/general/Toolbar-Avatar-Tab.png" width="868" alt="Avatar tab indicated in Studio toolbar" />
 
-## Accessory Tools
+## Accessory tools
 
 The **Accessory** section contains tools for creating layered or rigid [accessories](../art/accessories/index.md) from imported custom meshes.
 

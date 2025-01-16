@@ -29,6 +29,6 @@ A member of our team will reach out to you with the next steps via the contact i
 
 <Button href="https://survey.roblox.com/jfe/form/SV_802xyrv9VHb7VHM" size='large' variant='contained' style={{width:200}}>Apply</Button>
 
-## Contact Info
+## Contact info
 
 PartnerProgram@roblox.com

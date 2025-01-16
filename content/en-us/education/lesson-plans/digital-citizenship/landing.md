@@ -1,5 +1,5 @@
 ---
-title: Digital Citizenship with Roblox
+title: Digital citizenship with Roblox
 description: Learn digital citizenship with Roblox. A full course created for middle to high school students.
 next: /education/lesson-plans/digital-citizenship/intro-to-roblox
 prev:
@@ -9,13 +9,13 @@ prev:
 
 Teach your students digital citizenship while building their skills in computer science and design thinking. Throughout this course, students will learn how to stay safe online and create positive relationships. As they do so, they'll use Roblox Studio to design an obstacle course, getting a sampling of professional fields like 3D modeling, animation and coding. While iterating on their designs, they'll focus on their collaborative communication skills , providing peer feedback and reflecting on their design process.
 
-**Learning Objectives and Outcomes**
+**Learning objectives and outcomes**
 
 - Participate online in a way that fosters positive relationships and builds community.
 - Practice design thinking by planning, designing, and playtesting a game.
 - Create scripts for gameplay elements using coding concepts like if/then statements and variables.
 
-**ISTE Standards**: Empowered Learner 1d, Innovative Designer 4a, 4c, Creative Communicator 6b, 6c
+**ISTE standards**: Empowered Learner 1d, Innovative Designer 4a, 4c, Creative Communicator 6b, 6c
 
 <Alert severity='info'>
 This course is comprised of multiple lesson plans intended to be used over time. We estimate each lesson plan will be a full class day (45 minutes) for high school students.

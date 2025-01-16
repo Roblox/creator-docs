@@ -1,5 +1,5 @@
 ---
-title: Create the Map
+title: Create the map
 description: Part of the Adventure Game Series in Roblox. Learn how to use terrain tools in Roblox Studio.
 next: /education/adventure-game-series/code-the-leaderboard
 prev: /education/adventure-game-series/landing
@@ -16,17 +16,17 @@ Each part of the game loop is a different game mechanic, or action, players can 
 - **Sell** items for gold.
 - **Buy** bag upgrades to holds more items at a time.
 
-## Planning the Project
+## Plan the project
 
 Before professional developers start a new project, they plan out what things will look like in a process called **pre-production**. They'll often create a game design document that includes how the experience works.
 
 While **game design documents** (GDDs) can often be long, for this series, you'll start with a vision of what players will do and sketches of the world they'll explore. Having a clear vision helps speed up development and also make it easier to communicate your ideas to get feedback from others.
 
-### Creating a Game Design Document
+### Create a game design document
 
 To start, get a piece of paper or open up a word editor to keep track of the document.
 
-### Game Loop Prompts
+### Game loop prompts
 
 The following are used to help you figure out the game loop, or what players will be doing.
 
@@ -72,7 +72,7 @@ The following are used to help you figure out the game loop, or what players wil
 </tbody>
 </table>
 
-### Map Layouts
+### Map layouts
 
 The last part of the game design document is to create the map layout. This gives you an idea of what to create later. An example layout is below.
 
@@ -86,7 +86,7 @@ In the layout, annotate these key places:
 - Where players will buy upgrades.
 - Environment details, such as grasslands, hills, and more.
 
-## Creating the Environment
+## Create the environment
 
 The environment will be created using the **Terrain Editor**. This tool in Roblox Studio is used to create landscapes like mountains, rivers, or deserts. While using the tools, reference the map layout previously created.
 
@@ -119,7 +119,7 @@ You'll use the tools in the Terrain Editor to create the world you drew in your 
 
      <img src="../../assets/education/adventure-game-series/subtractToolExample.gif" width="50%" />
 
-## Finished Map Sample
+## Finished map sample
 
 Once finished, your map might look like the following.
 

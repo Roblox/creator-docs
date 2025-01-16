@@ -4,7 +4,7 @@ description: UniversalConstraint ensures two axes on two assemblies remain perpe
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.UniversalConstraint`, see [Mechanical Constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;Units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.UniversalConstraint`, see [Mechanical constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 A `Class.UniversalConstraint` ensures two axes on two assemblies remain perpendicular. Example applications include vehicle power transmission to the rear drive shafts, robotics, and more.

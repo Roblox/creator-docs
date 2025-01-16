@@ -1,5 +1,5 @@
 ---
-title: Designing Your Speeder
+title: Design your speeder
 prev: /education/build-it-play-it-galactic-speedway/take-flight
 next: /education/build-it-play-it-galactic-speedway/moving-the-body
 description: Learn the high level process of designing a spaceship in Roblox Studio, as well as how to move the Studio camera so you can see the parts you have to build with. All part of the Roblox Build It Play It Galactic Speedway challenge.
@@ -22,7 +22,7 @@ Now that you've piloted a driftspeeder, it's time to design your own. The speede
   </figure>
 </GridContainer>
 
-## Salvaging Parts
+## Salvage parts
 
 The scrapyard is divided into three sections, one for each step. By combining, rotating, and resizing these parts, you can create thousands of unique designs.
 
@@ -41,7 +41,7 @@ The scrapyard is divided into three sections, one for each step. By combining, r
   </figure>
 </GridContainer>
 
-## Get Ready to Build
+## Get ready to build
 
 To move parts where you want them, first turn off **collisions** and **move snapping**. Turning off collisions allow objects to pass through one another. Having snapping off lets you freely move objects.
 
@@ -62,7 +62,7 @@ To move parts where you want them, first turn off **collisions** and **move snap
    src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/turn-move-snap-off.png"
    width="100%" />
 
-## Change the Camera View
+## Change the camera view
 
 To work on the driftspeeder, use the camera controls below.
 
@@ -101,6 +101,6 @@ Move the camera so that you can better see the driftspeeder bodies and the work 
 <video controls src="../../assets/education/build-it-play-it-galactic-speedway/designing-your-speeder/move-camera-to-focus.mp4" width="100%"></video>
 
 <Alert severity="warning">
-<AlertTitle>Can't Move the Camera?</AlertTitle>
+<AlertTitle>Can't move the camera?</AlertTitle>
 If the camera doesn't move when you press <kbd>W A S D</kbd>, click somewhere inside the game world.
 </Alert>

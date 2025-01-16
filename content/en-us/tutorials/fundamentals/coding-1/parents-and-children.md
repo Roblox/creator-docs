@@ -1,5 +1,5 @@
 ---
-title: Parents and Children
+title: Parents and children
 description: Practice navigating object hierarchies instead of using specific names in your code.
 next: /tutorials/fundamentals/coding-2/functions-and-events
 prev: /tutorials/fundamentals/coding-1/object-properties
@@ -11,7 +11,7 @@ To do this, you must understand **parent and child relationships**.
 
 Parents and children are ways to describe the hierarchy between different objects. Anytime you've added a new part to Workspace, Workspace has been the parent object, and the part became a child object. When you added a script to ServerScriptService, ServerScriptService was the parent, and the script was a new child.
 
-## Setting Up the Project and Script
+## Set up the project and script
 
 To demonstrate parent and child relationships, you'll start with a single part that changes colors and then duplicate the script across multiple parts.
 
@@ -29,7 +29,7 @@ To demonstrate parent and child relationships, you'll start with a single part t
 
 4.Test and check that the part changes color as desired.
 
-## Parent and Child Relationships
+## Parent and child relationships
 
 A **parent** is anything with objects, like scripts or parts, attached below it. Anything under the parent is its **children**. In the example below, ColorPart is the parent, and ColorChanger is the child.
 
@@ -37,7 +37,7 @@ A **parent** is anything with objects, like scripts or parts, attached below it.
 
 With the current script, you can only change the color of a **single part** named ColorPart. To change any part's color, you can design the code to work on the script's parent object, whatever it happens to be named. The code `script.Parent`, will go up the hierarchy and find the object the script is attached to.
 
-### Using script.Parent
+### Use script.Parent
 
 `script.Parent` can be assigned to a variable like any other value with the `=` symbol.
 
@@ -48,7 +48,7 @@ With the current script, you can only change the color of a **single part** name
    colorPart.Color = Color3.fromRGB(50, 240, 255)
    ```
 
-### Testing Reusable Parts
+### Test reusable parts
 
 Now that the variable will refer to whatever part the script is attached to, you can make as many copies as you want.
 

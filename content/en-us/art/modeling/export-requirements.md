@@ -1,14 +1,14 @@
 ---
-title: Export Settings
+title: Export settings
 description: Use the appropriate export settings in Maya and Blender to generate Studio-ready .fbx files.
 ---
 
-Export your mesh or model as a `.fbx` to take advantage of all of Studio's 3D import features. When rigging or skinning a model, a `.fbx` export contains both the rig and influence data you need to later [import](../../parts/meshes.md#importing-meshes) into Studio.
+Export your mesh or model as a `.fbx` to take advantage of all of Studio's 3D import features. When rigging or skinning a model, a `.fbx` export contains both the rig and influence data you need to later [import](../../parts/meshes.md#import-meshes) into Studio.
 
 Check that your model meets Roblox's [modeling specifications](../../art/modeling/specifications.md) before exporting to ensure Studio compatibility. Specific types of assets, like characters and accessories, have additional specifications:
 
-- If you are creating an avatar character model, ensure that your model follows [Character Specifications](../../art/characters/specifications.md).
-- If you are creating an accessory model, ensure that your model follows [Accessory Specifications](../../art/accessories/specifications.md).
+- If you are creating an avatar character model, ensure that your model follows the [character specifications](../../art/characters/specifications.md).
+- If you are creating an accessory model, ensure that your model follows the [accessory specifications](../../art/accessories/specifications.md).
 
 <Tabs>
   <TabItem label="Blender">

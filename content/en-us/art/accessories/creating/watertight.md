@@ -1,5 +1,5 @@
 ---
-title: Making Mesh Watertight
+title: Make mesh watertight
 description: Seal off your geometry to ensure that there are no angles where the interior backfaces of your object are exposed.
 next: /art/accessories/creating/unwrapping
 prev: /art/accessories/creating/sculpting

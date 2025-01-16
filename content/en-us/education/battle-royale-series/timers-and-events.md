@@ -1,5 +1,5 @@
 ---
-title: Timers and Events
+title: Timers and events
 description: Create a battle royale experience in Roblox Studio. Code a timer and use bindable events for a match based game.
 next: /education/battle-royale-series/creating-a-gui
 prev: /education/battle-royale-series/managing-players
@@ -7,7 +7,7 @@ prev: /education/battle-royale-series/managing-players
 
 During the course of a round, the scripts will need to track time and send signals between different scripts. Time will be managed using a time script, while events, a concept in Roblox coding, will signal changes such as the end of a match.
 
-## Sending Signals with Events
+## Send signals with events
 
 With players now in the arena, events can be used to signal the start of the match and the code for the timer can begin. Later, an event can also be used to signal the end of the match, and that it's time to transition players back to the lobby.
 
@@ -15,7 +15,7 @@ These events aren't prebuilt, so custom event objects called **bindable events**
 
 Multiple scripts can listen for the same bindable events. This keeps your code organized and makes it easier to add additional code for the start or end of the match later if needed.
 
-### Creating Bindable Events
+### Create bindable events
 
 Start by creating bindable event objects for the start and end of the match. Since bindable events don't interact with the client, they can be stored in Server Storage.
 
@@ -23,7 +23,7 @@ Start by creating bindable event objects for the start and end of the match. Sin
 
    <img src="../../assets/education/battle-royale-series/arena_4_showBindableEvents.png" />
 
-### Using Events
+### Use events
 
 Right now, when players enter the arena, the intermission keeps restarting rather than beginning the timer. The main game loop needs to be told to stop and wait until the MatchEnd event fires before moving on to the next part of the code.
 
@@ -62,18 +62,18 @@ Events have two built-in functions: `Connect()` and `Wait()`. Instead of using `
 
 3. **Test** the game. Confirm that once players are in the arena, the intermission loop **does not** continue. The script is now waiting for the `matchEnd` signal to fire.
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 At this point, the code doesn't work as expected, try one of the following below.
 
 - Double check the usage of the dot or colon operators in `matchEnd.Event:Wait()`.
 - Make sure that MatchEnd is a BindableEvent, and not another type, such as a RemoteEvent.
 
-## Using a Timer
+## Use a timer
 
 One of the conditions that will cause the end of the match is a timer running out, which will be handled through the script.
 
-### Setting Up the Timer
+### Set up the timer
 
 To add a timer into the game, use the premade module script in the steps below. It includes functions to start and end a timer, as well as return the amount of time left.
 
@@ -173,7 +173,7 @@ To add a timer into the game, use the premade module script in the steps below. 
   The timer module script can be called by other scripts to create more timers as needed, like if you wanted to have traps appear after a specific time. To use the timer in more than one situation, create a new Timer object, like `myTrapTimer = timer.new()`. Timer objects should only be used for a single purpose, rather than reused.
   </Alert>
 
-### Starting and Stopping
+### Start and stop
 
 Now that a timer is created, use the included functions `start()` and `stop()` during a match. Below is a description of each function and the parameter it accepts.
 
@@ -225,7 +225,7 @@ Now that a timer is created, use the included functions `start()` and `stop()` d
    end
    ```
 
-### Starting the Timer
+### Start the timer
 
 The timer can be triggered at the start of a match using the Match Start event.
 
@@ -270,15 +270,15 @@ The timer can be triggered at the start of a match using the Match Start event.
    end
    ```
 
-4. Test the game. In the Output Window, confirm that you can see the print statements for the timer's start and stop functions.
+4. Test the game. In the Output window, confirm that you can see the print statements for the timer's start and stop functions.
 
    <img src="../../assets/education/battle-royale-series/arena_4_outputFinished.png" />
 
-## Completed Scripts
+## Completed scripts
 
 Below are completed scripts to double check your work.
 
-### MatchManager Script
+### MatchManager script
 
 ```lua
 local MatchManager = {}
@@ -322,7 +322,7 @@ matchStart.Event:Connect(startTimer)
 return MatchManager
 ```
 
-### GameManager Script
+### GameManager script
 
 ```lua
 -- Services

@@ -1,5 +1,5 @@
 ---
-title: List and Flex Layouts
+title: List and flex layouts
 description: How to use list layouts and flex settings for highly responsive user interfaces.
 ---
 
@@ -11,7 +11,7 @@ The `Class.UIListLayout` positions sibling `Class.GuiObject|GuiObjects` into hor
 Once you insert a `Class.UIListLayout`, it either overrides or influences the `Class.GuiObject.Position|Position`, `Class.GuiObject.Rotation|Rotation`, and/or `Class.GuiObject.Size|Size` of all sibling UI objects, so changes to those properties within the [Properties](../studio/properties.md) window or within a script will not have the normal effect.
 </Alert>
 
-## Fill Direction
+## Fill direction
 
 The `Class.UIListLayout.FillDirection|FillDirection` property determines the direction in which the list layout's siblings will render.
 
@@ -49,9 +49,9 @@ The `Class.UIListLayout.Padding|Padding` property determines the amount of empty
 This property does not apply padding **around** the list's overall bounds; see `Class.UIPadding` to apply top, bottom, left, and/or right padding to the contents of the parent.
 </Alert>
 
-## Flex Layouts
+## Flex layouts
 
-Integrating **flex** into a `Class.UIListLayout` is a powerful way to [equally fill/distribute](#equal-fill-or-distribution) or [align/stretch](#item-line-alignment) list items across their line, or [flex specific items](#flexing-individual-items) across a variable space.
+Integrating **flex** into a `Class.UIListLayout` is a powerful way to [equally fill/distribute](#equal-fill-or-distribution) or [align/stretch](#item-line-alignment) list items across their line, or [flex specific items](#flex-individual-items) across a variable space.
 
 <Alert severity="warning">
 While flex is a powerful tool, you should not apply it to a `Class.UIListLayout` without purpose, as it adds a slight performance cost above non‑flex, especially when resizing the layout or dynamically adding/removing flex items.
@@ -59,7 +59,7 @@ While flex is a powerful tool, you should not apply it to a `Class.UIListLayout`
 Additionally, a [grid layout](../ui/grid-table-layouts.md#grid-layout) may be preferable when items should strictly align to a grid in both the **X** and **Y** directions, since grid layouts enforce a consistent cell size while flex layouts may use a variable number of items per line.
 </Alert>
 
-### Equal Fill or Distribution
+### Equal fill or distribution
 
 When the list layout's [fill direction](#fill-direction) is set to `Enum.FillDirection|Horizontal`, the `Class.UIListLayout.HorizontalFlex|HorizontalFlex` property specifies how to distribute extra horizontal space in the parent container. Similarly, when the fill direction is set to `Enum.FillDirection|Vertical`, the `Class.UIListLayout.VerticalFlex|VerticalFlex` property specifies how to distribute extra vertical space.
 
@@ -91,7 +91,7 @@ One practical use of `Class.UIListLayout.HorizontalFlex|HorizontalFlex` is a **t
 </TabItem>
 </Tabs>
 
-### Item Line Alignment
+### Item line alignment
 
 The `Class.UIListLayout.ItemLineAlignment|ItemLineAlignment` property defines the **cross‑directional** alignment of siblings within a line, letting you align objects of different widths/heights or make objects of lesser width/height fill their entire line.
 
@@ -114,7 +114,7 @@ One practical use case for `Class.UIListLayout.ItemLineAlignment|ItemLineAlignme
 </TabItem>
 </Tabs>
 
-### Flexing Individual Items
+### Flex individual items
 
 While flexing an entire layout is a powerful utility, certain layouts are more suited to **individual item flexing**. In such layouts, some elements in the list maintain their core size while other items flex to fill variable spaces. One practical usage is a slider bar widget with uniform [labels](../ui/labels.md) on both ends and a flexible slider bar that fills the entire width between.
 

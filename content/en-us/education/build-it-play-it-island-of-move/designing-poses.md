@@ -1,5 +1,5 @@
 ---
-title: Designing Poses
+title: Design poses
 description: Learn how to make animations in Roblox Studio with step by step tutorials in this one hour challenge. Design a pose for an animation.
 next: /education/build-it-play-it-island-of-move/adding-animations
 prev: /education/build-it-play-it-island-of-move/animations-and-feedback
@@ -28,7 +28,7 @@ The process of animating involves moving and rotating avatar parts to create key
 
 <video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/showOverallAnimationTimelapse_optimized.mp4" width="100%"></video>
 
-## Setting a Neutral Pose
+## Set a neutral pose
 
 Used at the start and end of this animation, the **neutral** pose shows the player at rest. So that the animation begins with the player at rest, add a keyframe at the start. In the process of animating, keyframes store information on how parts are positioned.
 
@@ -36,7 +36,7 @@ Used at the start and end of this animation, the **neutral** pose shows the play
 
    <img src="../../assets/education/build-it-play-it-island-of-move-intermediate/addKeyframes.gif" />
 
-## Creating the Second Pose
+## Create the second pose
 
 The second pose shows anticipation as the player crouches before leaping. Depending on your animation, the second pose may be different.
 
@@ -69,7 +69,7 @@ The second pose shows anticipation as the player crouches before leaping. Depend
 
    <video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/showPose2TimeLapse_optimized.mp4" width="100%"></video>
 
-## Creating the Third Pose
+## Create the third pose
 
 The next set of keyframes will be near the middle, showing the most extreme motion of the animation. In this animation, the avatar will be at the highest point of their jump.
 
@@ -97,7 +97,7 @@ The next set of keyframes will be near the middle, showing the most extreme moti
      </figure>
    </GridContainer>
 
-## Adding the Last Pose
+## Add the last pose
 
 For the last pose, copy the first pose and paste it at the end. While you could customize the last neutral pose, this is a quick way of returning the animation to its starting point so it loops smoothly.
 
@@ -111,7 +111,7 @@ For the last pose, copy the first pose and paste it at the end. While you could 
 
    <img src="../../assets/education/build-it-play-it-island-of-move-intermediate/bipi_t2_showLastFrames.png" />
 
-## Testing the Animation
+## Test the animation
 
 Seeing an animation play more than once can make it easier to spot changes you want to make.
 
@@ -125,11 +125,11 @@ Seeing an animation play more than once can make it easier to spot changes you w
 
    <video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/showFinalVictoryPose_simple.mp4" width="100%"></video>
 
-## Improving and Exporting
+## Improve and export
 
 With the keyframes created, take time to make the animation more satisfying by adding or fine-tuning frames. Below are some optional ways to improve animations.
 
-### Adding More Poses
+### Add more poses
 
 Extra poses can add subtle details that make an animation go from "just okay" to "looking great." Incorporate extra poses to exaggerate a motion, show anticipation, or communicate a character's personality.
 
@@ -137,7 +137,7 @@ For example, carefully watch the video below a few times. Notice how the animati
 
 <video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/showImprovedAnimationMoreFrames_improved_optimized.mp4" width="100%"></video>
 
-### Moving Keyframes
+### Move keyframes
 
 Smooth out actions or make them feel more realistic by adjusting when keyframes happen.
 
@@ -158,7 +158,7 @@ Smooth out actions or make them feel more realistic by adjusting when keyframes 
 
    <video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/showChangeFrameDifference_opt.mp4" width="100%"></video>
 
-## Exporting the Animation
+## Export the animation
 
 Once finished, export the animation so it can be added in-game.
 

@@ -26,7 +26,7 @@ Luau includes the following data types:
 
 Luau is dynamically typed by default. Variables, function parameters, and return values can be any data type. This helps you write code faster because you don't need to provide types for each piece of data. You can still declare explicit types for variables in Luau and enable [strict type checking](type-checking.md) to make type issues obvious and easy to locate.
 
-## Data Structures
+## Data structures
 
 You can also implement the following data structures using primitive data types:
 

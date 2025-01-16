@@ -6,7 +6,7 @@ summary: |
   Object is the base class for all classes in the Roblox class hierarchy.
 description: |
   Object is the base class for all classes in the Roblox class hierarchy. Every
-  other class that the Roblox engine defines inherits all of the members of
+  other class that the Roblox Engine defines inherits all of the members of
   Object. It is not possible to directly create Object.
 code_samples: []
 inherits: []
@@ -156,7 +156,7 @@ methods:
 
       ```lua
       local Players = game:GetService("Players")
-      
+
       local function paintFigure(character, color)
       	-- Iterate over the child objects of the character
       	for _, child in character:GetChildren() do

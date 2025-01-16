@@ -1,15 +1,15 @@
 ---
-title: Object Properties
+title: Object properties
 description: Learn how to use Lua to change the appearance properties of different objects, such as color and shape.
 next: /tutorials/fundamentals/coding-1/parents-and-children
-prev: /tutorials/fundamentals/coding-1/creating-a-script
+prev: /tutorials/fundamentals/coding-1/create-a-script
 ---
 
 **Properties** control how objects look and function. Each object in Roblox Studio has its own set of properties. For example, a part object has color, size, and shape properties. Properties can be changed in the Properties window or through code.
 
 To learn about properties, you'll explore common properties found in parts and then write a script to change part colors.
 
-## The Properties Window
+## The properties window
 
 The **Properties** window can be used to learn about an object's properties. Use it to take a look at a part's properties.
 
@@ -20,7 +20,7 @@ The **Properties** window can be used to learn about an object's properties. Use
 
 If you don't see the Properties window, go to the **View** tab and click the Properties button.
 
-## Adding Comments to Scripts
+## Add comments to scripts
 
 Comments are special lines starting with `--` that help coders remember what parts of scripts do. Unlike other code, comments don't run; they're just there so you can leave notes to yourself and other programmers. This script will change a part's `Class.BasePart.Color|Color` property at the start of the game.
 
@@ -34,7 +34,7 @@ Comments are special lines starting with `--` that help coders remember what par
    -- Changes the color of a part
    ```
 
-### Locating the Part
+### Locate the part
 
 To make changes to a part, you must be able to describe the part's location. The Explorer is an excellent tool for **referencing** locations. In this case, PracticePart is under Workspace.
 
@@ -53,7 +53,7 @@ Now that you know where the part is, the part's location needs to be translated 
     A long way to get to Workspace would be `game.Workspace`. However, needing to access Workspace is so common that Roblox made the keyword `workspace` as a shortcut.
     </Alert>
 
-### Changing a Property with Code
+### Change a property with code
 
 You'll use an RGB value to change the part's color. Computers use **RGB values**, the combination of red, green, and blue, to create all the colors on your screen.
 

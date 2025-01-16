@@ -1,5 +1,5 @@
 ---
-title: Animating Characters
+title: Animate characters
 description: Learn digital citizenship with Roblox. A full course created for middle to high school students. This session has students learning animation.
 next: /education/lesson-plans/digital-citizenship/finishing-projects
 prev: /education/lesson-plans/digital-citizenship/coding-fundamentals
@@ -93,7 +93,7 @@ prev: /education/lesson-plans/digital-citizenship/coding-fundamentals
 
 2. After creating an animation, will get feedback on their animation from a peer to help them improve it. Remind that this is another opportunity to practice civility both online and in-person.
 
-### Plan an Animation
+### Plan an animation
 
 1. Lead students through Presentation: Animations in Roblox - Slide 3-4.
 
@@ -103,7 +103,7 @@ prev: /education/lesson-plans/digital-citizenship/coding-fundamentals
 
 2. Recap by letting 2-3 students share their planned animation.
 
-### Designing an Animation
+### Design an animation
 
 1. Lead students through <a href="../../../education/build-it-play-it-island-of-move/creating-animations.md" target="_blank" rel="noopener">Creating Animations</a> to <a href="../../../education/build-it-play-it-island-of-move/exporting-animations.md" target="_blank" rel="noopener">Exporting Animations</a>.
 
@@ -111,7 +111,7 @@ prev: /education/lesson-plans/digital-citizenship/coding-fundamentals
    - Skip any pages referring to Challenge Checkpoints.
    - Slides are provided to help you throughout the tutorial.
 
-### Add Animations
+### Add animations
 
 1. Explain that students will use their exported animation as their players' walk
 2. Use instructions in Presentation: Animations in Roblox - Slide 10 - 11.
@@ -123,7 +123,7 @@ prev: /education/lesson-plans/digital-citizenship/coding-fundamentals
    - If student animations aren't working, have them repeat the process.
    - For any students that are finished, have them help others.
 
-### Feedback and Redesign
+### Feedback and redesign
 
 1. Provide students the Handout: Animation Feedback.
    - Remind students about practicing civility in earlier sessions. Recap some guidelines if needed, or best practices in providing and receiving feedback.
@@ -131,7 +131,7 @@ prev: /education/lesson-plans/digital-citizenship/coding-fundamentals
 3. When students have finished offering feedback, take a moment to discuss the value of feedback. Note they may not agree with feedback, but it's a valuable opportunity for them to grow.
 4. Give students time to implement an idea they had after receiving feedback.
 
-### Wrap Up
+### Wrap up
 
 1. Recap what students have created and vocabulary: animation and keypose.
 2. Have students end the class by doing the pose they created in-game (if possible).

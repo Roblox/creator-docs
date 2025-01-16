@@ -1,11 +1,11 @@
 ---
-title: Implementing Teams
+title: Implement teams
 description: The Teams service allows you assign users to different teams within your experience.
 ---
 
 You can divide users in your experience to multiple teams using the `Class.Teams` service to support your experience needs. By enabling the `Class.Teams` service, it automatically updates the color of the name above each user character `Class.Model` to differentiate members that belong to different teams, and the default user list displays users based on their teams.
 
-## Configuring Teams
+## Configure teams
 
 By default, your **Explorer** hierarchy includes the `Class.Teams` service. If you don't find it or accidentally deleted it, you can still add it to your experience through the following steps:
 
@@ -19,7 +19,7 @@ By default, your **Explorer** hierarchy includes the `Class.Teams` service. If y
 
    <img src="../assets/players/teams/Explorer-Teams-Object.png" width="320" />
 
-## Adding Teams
+## Add teams
 
 With the `Class.Teams` service present, you can create a new team through the following steps:
 
@@ -36,7 +36,7 @@ You can now select the new `Class.Team` object and, in the **Properties** window
   <img src="../assets/players/teams/Set-TeamColor.png" />
 </GridContainer>
 
-## Assigning Users to Teams
+## Assign users to teams
 
 By default, Roblox **auto-assigns** new users joining the experience to the team with the fewest members, and you can still use the following steps to assign users to a specific team:
 
@@ -48,7 +48,7 @@ By default, Roblox **auto-assigns** new users joining the experience to the team
 
 3. Assign a user to a specific team by changing their `Class.Player.Team` property to the team name in the format of `Teams[name of the team]`, such as `Teams["Blue Team"]`.
 
-## Spawning Teams
+## Spawn teams
 
 You can use `Class.SpawnLocation` objects to spawn users of different teams at specific locations when they join or respawn. By default, `Class.SpawnLocation|SpawnLocations` are **neutral** and any user can spawn upon them, so you need to lock each one to the team that can occupy it using the following steps:
 

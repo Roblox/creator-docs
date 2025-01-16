@@ -1,5 +1,5 @@
 ---
-title: Animations and Feedback
+title: Animations and feedback
 description: Learn how to make animations in Roblox Studio with step by step tutorials in this one hour challenge. Start by creating an animation.
 next: /education/build-it-play-it-island-of-move/designing-poses
 prev: /education/build-it-play-it-island-of-move/landing
@@ -11,7 +11,7 @@ Below is an example of the animation you can expect to produce by the end of thi
 
 <video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/victoryPose_finalSingleObbyExample_web.mp4" width="100%"></video>
 
-## Animations and Feedback
+## Animations and feedback
 
 Before learning to create an animation, take a moment to think about how animations and feedback are connected. Imagine an adventure game where you fight monsters. After hitting a monster, nothing happens - it doesn't react and there's no sound effect. You might think that the game is broken, but after a few more hits, the monster just disappears.
 
@@ -23,13 +23,13 @@ One way of giving feedback is with animations. Whenever a player performs an act
 
 <video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/showNPCAnimationsFeedback_withFeedback.mp4" width="100%"></video>
 
-## Project Setup
+## Project setup
 
 The first step in making a victory animation is to create an animation using the Animation Editor. Later, you'll hook it up with code to celebrate a player's in-game accomplishment. That code will work in any experience you've created.
 
 <video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/showFinalAnimation_singleAlt.mp4" width="100%"></video>
 
-## Setting up for Animation
+## Set up for animation
 
 First, you'll change some settings and open the animation editor. Roblox Studio features a powerful, built-in Animation Editor that allows you to design and publish custom animations.
 
@@ -49,7 +49,7 @@ First, you'll change some settings and open the animation editor. Roblox Studio 
      <img src="../../assets/education/build-it-play-it-island-of-move-intermediate/bipi_t2_createRig_showRig.jpg" />
    </GridContainer>
 
-### Creating a New Animation
+### Create a new animation
 
 Individual animations, such as walking or jumping, need to be created and saved.
 

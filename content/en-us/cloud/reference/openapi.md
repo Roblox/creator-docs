@@ -1,5 +1,5 @@
 ---
-title: OpenAPI Descriptions
+title: OpenAPI descriptions
 description: Provides links to the Open Cloud JSON files that are compliant to the OpenAPI Specification, explains their use cases, and outlines additional information.
 ---
 
@@ -9,7 +9,7 @@ These files are open source and can be used with tools like the [Swagger Editor]
 
 These OpenAPI descriptions are still under active development and may contain issues. The pages under the **Resources** section are the official reference.
 
-## OpenAPI Description Files
+## OpenAPI description files
 
 OpenAPI description files are available at the following locations within the [creator-docs](https://github.com/Roblox/creator-docs/tree/main/content/en-us/reference/cloud) repository:
 
@@ -33,7 +33,7 @@ https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/m
 https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/universes-api/v1.json
 ```
 
-### Vendor Extensions
+### Vendor extensions
 
 Roblox uses [specification extensions](https://spec.openapis.org/oas/v3.0.4#specification-extensions) to extend the OpenAPI specification. These extensions represent information that the specification doesn't capture by default. Extensions may appear throughout the file where allowed by the OpenAPI specification.
 
@@ -43,7 +43,7 @@ The majority of these specification extensions are experimental. The extensions 
 The OpenAPI descriptions for V1 and V2 resources utilitize distinct specification extensions due to underlying implementation differences.
 </Alert>
 
-**V1 Resource Specification Extensions**
+**V1 resource specification extensions**
 
 | Extension                                       	| Location         	| Description                                                                                     	|
 |-------------------------------------------------	|------------------	|-------------------------------------------------------------------------------------------------	|
@@ -52,7 +52,7 @@ The OpenAPI descriptions for V1 and V2 resources utilitize distinct specificatio
 | `x-roblox-cloud-api-operation-code-samples`     	| Operation Object 	| Object. A list of code samples, an object with the language/title and the corresponding script. 	|
 | `x-roblox-cloud-api-operation-throttling-limit` 	| Operation Object 	| Object. The throttling limits for the operation.                                                	|
 
-**V2 Resource Specification Extensions**
+**V2 resource specification extensions**
 
 | Extension                             	| Location         	| Description                                                                                                   	|
 |---------------------------------------	|------------------	|---------------------------------------------------------------------------------------------------------------	|

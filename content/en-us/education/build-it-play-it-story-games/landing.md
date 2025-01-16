@@ -1,5 +1,5 @@
 ---
-title: Story Games Project
+title: Story Games project
 description: Learn to code in Roblox with this word game. Script your first experience and learn about variables and computer science.
 next: /education/build-it-play-it-story-games/writing-the-story
 prev:
@@ -11,7 +11,7 @@ Play the video below to see the library you'll be working in and the game in act
 
 <video controls src="../../assets/education/story-games/wccVideo_final_wSound.mp4" width="100%"></video>
 
-### Your Coding Journey
+### Your coding journey
 
 You'll create your story game by going through three different lessons. Each lesson will have instructions teaching you how to code your game from start to finish.
 
@@ -36,7 +36,7 @@ After finishing a lesson, you'll get the chance to earn prizes by playing a quiz
 
 <img src="../../assets/education/story-games/wcc2018_quizGameExample_900x500.jpg" width="75%" />
 
-## Getting Roblox Studio Ready
+## Get Roblox Studio ready
 
 **Roblox Studio** is used to make every game you see on Roblox. If you already have Roblox Studio installed, login and click the Next button at the bottom of this page.
 

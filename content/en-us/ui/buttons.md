@@ -1,9 +1,9 @@
 ---
-title: Text & Image Buttons
+title: Text & image buttons
 description: Buttons allow users to prompt an action.
 ---
 
-**Buttons** are `Class.GuiObject|GuiObjects` that allow users to perform an action. You can customize buttons to provide context and feedback, such as changing the visual appearance or [scripting](#scripting-buttons) audible feedback when a user clicks a button.
+**Buttons** are `Class.GuiObject|GuiObjects` that allow users to perform an action. You can customize buttons to provide context and feedback, such as changing the visual appearance or [scripting](#script-buttons) audible feedback when a user clicks a button.
 
 There are two types of buttons which you can place [on‑screen](../ui/on-screen-containers.md) or [in‑experience](../ui/in-experience-containers.md):
 
@@ -13,7 +13,7 @@ There are two types of buttons which you can place [on‑screen](../ui/on-screen
 
 <img src="../assets/ui/button-text-input/ImageButton-Examples.jpg" width="800" />
 
-## Creating Buttons on the Screen
+## Create buttons on the screen
 
 Buttons on a screen are useful to quickly guide users to various menus or pages.
 
@@ -33,7 +33,7 @@ To add a button to the screen:
 
    <img src="../assets/ui/button-text-input/ImageButton-Screen-New.jpg" width="800" />
 
-## Creating Buttons on Part Faces
+## Create buttons on part faces
 
 Buttons on a part are useful for allowing users to interact with parts. For
 example, you can let users step on a button to complete an action.
@@ -57,10 +57,10 @@ To add a button to the face of a part:
    width="800" />
 
    <Alert severity="warning">
-   If you don't see the button, try [choosing a different face](../parts/textures-decals.md#choosing-a-face) in the <b>Face</b> property of the <b>SurfaceGui</b>.
+   If you don't see the button, try [choosing a different face](../parts/textures-decals.md#choose-a-face) in the <b>Face</b> property of the <b>SurfaceGui</b>.
    </Alert>
 
-## Changing the Appearance of an ImageButton
+## Change the appearance of an ImageButton
 
 Changing the appearance of an `Class.ImageButton` when a user is interacting with it provides useful visual feedback. For example, when an `Class.ImageButton` changes visual appearance when a user hovers over it, it lets the user know that it isn't disabled and that they have the option to click it if they want to perform that `Class.ImageButton` action.
 
@@ -89,13 +89,13 @@ An `Class.ImageButton` has three properties to change its visual appearance:
 
 To change the appearance of an `Class.ImageButton` with user input:
 
-1. Add an **ImageButton** to a [screen](#creating-buttons-on-the-screen) or a [surface](#creating-buttons-on-the-screen).
+1. Add an **ImageButton** to a [screen](#create-buttons-on-the-screen) or a [surface](#create-buttons-on-the-screen).
 
 2. In the **Explorer** window, click the **ImageButton** object.
 
 3. In the **Properties** window, assign three different respective asset IDs for the **Image**, **HoverImage**, and **PressedImage** properties.
 
-## Scripting Buttons
+## Script buttons
 
 You can script an action when a user presses a button by connecting the button to a `Class.GuiButton.Activated` event. For example, when you parent the following `Class.LocalScript` to a button, the button changes to a random color every time a user clicks it.
 

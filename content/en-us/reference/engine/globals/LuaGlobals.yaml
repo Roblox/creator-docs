@@ -1,4 +1,4 @@
-name: Lua Globals
+name: Lua globals
 type: global
 summary: |
   A list of functions and variables that are native to Lua.

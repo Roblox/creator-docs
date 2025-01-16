@@ -7,7 +7,7 @@ The **Animation Editor** plugin allows you to design and publish custom
 animations on rigs.
 
 A rig is an object with individual sections connected by joints. You can
-move these joints to [create poses](#creating-poses), and
+move these joints to [create poses](#create-poses), and
 the Animation Editor then smoothly animates the rig from pose-to-pose. As
 long as all moving parts are connected with
 `Class.Motor6D`
@@ -19,7 +19,7 @@ rigs.
 <img src="../assets/animation/animation-editor/Editor-Sections-Labeled.png"
    width="80%" />
 
-### Media and Playback Controls
+### Media and playback controls
 
 <table>
   <tr>
@@ -128,7 +128,7 @@ rigs.
   </tr>
   </table>
 
-### Track List
+### Track list
 
 <table>
   <tr>
@@ -165,7 +165,7 @@ rigs.
   </tr>
 </table>
 
-## Creating an Animation
+## Create an animation
 
 You can only create animations using rigs. If you don't have a rig available, insert a pre-built rig using the [Rig Builder](../studio/rig-builder.md) plugin. The pre-built rigs have all of the basic parts and mechanisms to
 build a character animation.
@@ -187,12 +187,12 @@ If you have a rig, you can create a new animation for it using the following ste
    click the **Create** button. The Animation Editor window displays
    the [media and playback controls](#media-and-playback-controls), [timeline](#timeline), and [track list](#track-list).
 
-From here, you can begin [creating poses](#creating-poses)
+From here, you can begin [creating poses](#create-poses)
 for your rig and modifying the animation settings, such as [looping
-the animation](#looping-an-animation) or [setting its
-priority](#setting-a-priority).
+the animation](#loop-an-animation) or [setting its
+priority](#set-a-priority).
 
-### Creating Poses
+### Create poses
 
 An animation consists of different **poses**, or specific positions and orientations of `Class.Bone` or `Class.MeshPart` objects within a rig. You can create poses by moving or rotating bones or meshes, such as the rig's hands, feet, or torso. After you create multiple poses on different positions of the timeline, the Animation Editor runs between them with your [easing settings](#easing) to smoothly animate the rig from pose-to-pose.
 
@@ -249,11 +249,11 @@ To create a pose:
 
 ## Keyframes
 
-Once you [create basic poses](#creating-poses) for a rig,
+Once you [create basic poses](#create-poses) for a rig,
 fine-tuning individual keyframes can significantly improve the final
 animation.
 
-### Adding Keyframes
+### Add keyframes
 
 Whenever you change a part's position or orientation, a new keyframe
 displays on the timeline. You can also add keyframes to a timeline
@@ -286,7 +286,7 @@ To add a keyframe for multiple parts of the rig:
 Note that the keyframes insert at the frame position closest to where you click,
 not at the position of the scrubber.
 
-### Moving Keyframes
+### Move keyframes
 
 You can increase or decrease the amount of time between keyframes by moving
 either individual keyframes or every keyframe in a frame position.
@@ -315,7 +315,7 @@ To move every keyframe in a frame position:
 
 2. Click-and-drag it to a new frame position.
 
-### Duplicating Keyframes
+### Duplicate keyframes
 
 You can duplicate either a specific keyframe or multiple keyframes for
 multiple parts into a new position in the timeline. This is particularly
@@ -328,24 +328,24 @@ To duplicate one or more keyframes:
 1. Move the **scrubber** to a new frame position.
 1. Press <kbd>Ctrl</kbd><kbd>V</kbd> (<kbd>⌘</kbd><kbd>V</kbd>). The keyframe(s) paste into the new frame position.
 
-### Deleting Keyframes
+### Delete keyframes
 
 To delete one or more keyframes, select the keyframe(s), then press
 **Delete** or **Backspace**.
 
-### Optimizing Keyframes
+### Optimize keyframes
 
 Animators can often generate many keyframes during the course of animation, especially when using various animation tools and features. To help reduce the number of unnecessary keyframes and make it easier to animate on the timeline, the Animation Editor provides tools for [automatic](#automatic-optimization) and [on-demand](#on-demand-optimization) keyframe optimization.
 
-#### Automatic Optimization
+#### Automatic optimization
 
-The Animation Editor automatically detects and removes unnecessary keyframes when creating [facial animations](../art/characters/facial-animation/animating-heads.md) and when [promoting a keyframe animation to a curve animation](../animation/curve-editor.md#opening-the-curve-editor).
+The Animation Editor automatically detects and removes unnecessary keyframes when creating [facial animations](../art/characters/facial-animation/animate-heads.md) and when [promoting a keyframe animation to a curve animation](../animation/curve-editor.md#open-the-curve-editor).
 
-If 3 or more consecutive keyframes have the same value in a track, the animation editor removes the intermediary keyframes and keeps only the first and last keyframes.
+If 3 or more consecutive keyframes have the same value in a track, the Animation Editor removes the intermediary keyframes and keeps only the first and last keyframes.
 
 If the track only contains keyframes with default values, such as an `Datatype.CFrame.identity|Identity Cframe`, or a `0` value for a curve animation, the entire track is removed from the animation.
 
-#### On-Demand Optimization
+#### On-demand optimization
 
 <img
     alt="Optimize Keyframes"
@@ -379,7 +379,7 @@ To access the **Optimize Keyframes** tool:
 For each keyframe in the [Animation Editor](../animation/editor.md), you can choose both an
 [easing style](#easing-style) and an [easing direction](#easing-direction).
 
-#### Easing Style
+#### Easing style
 
 **Easing style** is the rate at which an animation moves between different frame
 positions within the animation. By default, a part will move and/or rotate from
@@ -415,7 +415,7 @@ To change the easing style for one or more keyframes:
    - **Elastic** - Moves as if the object is attached to a rubber band.
    - **Bounce** - Moves as if the start or end position of the tween is bouncy.
 
-#### Easing Direction
+#### Easing direction
 
 **Easing direction** defines which end of the animation movement is affected by
 the [easing style](#easing-style). By default, the motion is slower at the
@@ -435,7 +435,7 @@ To change the easing direction for one or more keyframes:
    - **In** - The motion will be slower at the beginning and faster toward the
      end.
 
-## Looping an Animation
+## Loop an animation
 
 To make an animation automatically loop, navigate to the [Media and
 Playback Controls](#media-and-playback-controls) and click
@@ -451,7 +451,7 @@ the **Looping** button.
     keyframes and use them as the final keyframes.
 </Alert>
 
-## Setting a Priority
+## Set a priority
 
 An animation's **priority** (`Enum.AnimationPriority`) dictates when it will play in an
 experience. For example, if you play an animation with a higher priority
@@ -512,10 +512,10 @@ To set an animation to a different priority:
 1. Hover over **Set Animation Priority**, then choose your desired
    priority setting.
 
-## Saving an Animation
+## Save an animation
 
 When you save an animation, Studio saves it as a
-`Class.KeyframeSequence` object in `Class.ServerStorage` and adds a reference to your rig object. Saving your animation is meant to preserve your animation progress and work. If you intend to use an animation, [export it](#exporting-an-animation) before referencing the published animation in your experience.
+`Class.KeyframeSequence` object in `Class.ServerStorage` and adds a reference to your rig object. Saving your animation is meant to preserve your animation progress and work. If you intend to use an animation, [export it](#export-an-animation) before referencing the published animation in your experience.
 
 To save an animation:
 
@@ -531,7 +531,7 @@ To save an animation:
    <img src="../assets/animation/animation-editor/Saved-Animation.png"
    width="320" />
 
-### Accessing Local Data
+### Access local data
 
 Roblox saves animation data locally to `Class.ServerStorage` to preserve your animation work. In most cases, your experience shouldn't directly access this local data and instead should reference a published animation.
 
@@ -551,9 +551,9 @@ local myAnim = ServerStorage.RBX_ANIMSAVES.myRig.myAnimation
 Since local data is stored in `Class.ServerStorage`, it doesn't replicate and isn't available from clients. If your clients need access to that data, you must move the `Class.KeyframeSequence` or `Class.CurveAnimation` objects and their descendants to `Class.ReplicatedStorage`.
 </Alert>
 
-### Migrating Legacy Data
+### Migrate legacy data
 
-The Animation Editor previously stored animation objects directly within a rig, not within `Class.ServerStorage`. If your experience references legacy animation objects in a rig, you can migrate this data to `Class.ServerStorage` using the animation migration tool, allowing you to [access local animation data](#accessing-local-data) in the same way.
+The Animation Editor previously stored animation objects directly within a rig, not within `Class.ServerStorage`. If your experience references legacy animation objects in a rig, you can migrate this data to `Class.ServerStorage` using the animation migration tool, allowing you to [access local animation data](#access-local-data) in the same way.
 
 To migrate your legacy animation data:
 
@@ -565,11 +565,11 @@ To migrate your legacy animation data:
 
    - **Delete**: Delete animations that are already published or no longer being used.
    - **Migrate**: Migrate animations that are still in progress or that haven't yet been published.
-   - **Ignore**: Ignore animations if you have yet to update your experience's code to [access local data](#accessing-local-data) from `Class.ServerStorage`. Once updated, migrate these animations.
+   - **Ignore**: Ignore animations if you have yet to update your experience's code to [access local data](#access-local-data) from `Class.ServerStorage`. Once updated, migrate these animations.
 
 3. Press **OK** when complete.
 
-## Exporting an Animation
+## Export an animation
 
 When you export an animation to Studio, it becomes available for use in
 all experiences. This means that you only need to create an animation
@@ -581,7 +581,7 @@ once, then you can reuse it as many times as you want.
 
 To export an animation:
 
-1. **(Important)** If the animation will be used to [replace a default character animation](../animation/using.md#replacing-default-animations) like running or jumping, rename the final keyframe **End** as follows:
+1. **(Important)** If the animation will be used to [replace a default character animation](../animation/using.md#replace-default-animations) like running or jumping, rename the final keyframe **End** as follows:
 
    1. Right-click the final white keyframe symbol in the upper bar region and choose **Rename&nbsp;Key&nbsp;Keyframe** from the
    contextual menu.
@@ -603,8 +603,8 @@ To export an animation:
 6. Click the **Submit** button.
 
 Once the upload is complete, you can copy the animation's asset ID
-from the [Toolbox](../projects/assets/toolbox.md) for scripting custom animations or to replace default character animations, as outlined in [Using Animations](../animation/using.md).
+from the [Toolbox](../projects/assets/toolbox.md) for scripting custom animations or to replace default character animations, as outlined in [Use animations](../animation/using.md).
 
 1. Click the **Creations** tab and select **Animations** from the dropdown menu.
 2. Right-click the desired animation and select **Copy Asset ID** from the contextual menu.
-3. See [Using Animations](../animation/using.md) for instructions on how to play the animation from a script or use the animation as a default character animation.
+3. See [Use animations](../animation/using.md) for instructions on how to play the animation from a script or use the animation as a default character animation.

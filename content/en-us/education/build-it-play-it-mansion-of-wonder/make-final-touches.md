@@ -1,5 +1,5 @@
 ---
-title: Make Final Touches
+title: Make final touches
 prev: /education/build-it-play-it-mansion-of-wonder/challenge-checkpoint-2
 next: /education/build-it-play-it-mansion-of-wonder/invite-friends
 description: Learn how to fine tune your particle emitters in Roblox Studio by adjusting their size, speed, light emission, rotational speed, and lifetime. Part of the Build It Play It Mansion of Wonder series.
@@ -7,7 +7,7 @@ description: Learn how to fine tune your particle emitters in Roblox Studio by a
 
 Make your explosion feel more unique by customizing more properties.
 
-## Size and Speed
+## Size and speed
 
 Start by changing these two properties to achieve your vision.
 
@@ -27,7 +27,7 @@ Start by changing these two properties to achieve your vision.
 
    <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/make-final-touches/explosion-final.mp4"></video>
 
-## Additional Properties
+## Additional properties
 
 You've experimented with basic properties of the magic blast and the explosion from your blaster, but there are a few more properties to personalize your work. Try changing the properties below, or experiment with one that isn't listed.
 
@@ -62,7 +62,7 @@ This property is how long particles exist in seconds. Depending on your explosio
 
 <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/make-final-touches/lifetime.mp4"></video>
 
-### Randomized Numbers
+### Randomized numbers
 
 Randomizing properties can make particles feel less repetitive. You can add randomization to some particles properties, such as **Lifetime** and **Rotation**, by inputting a minimum and maximum value.
 

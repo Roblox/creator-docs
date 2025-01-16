@@ -155,8 +155,8 @@ properties:
       like `Class.GuiObject.MouseEnter|MouseEnter`,
       `Class.GuiObject.MouseLeave|MouseLeave`, and
       `Class.GuiButton.MouseButton1Down|MouseButton1Down` to provide a
-      consistent studio experience when interacting with certain kinds of GUI
-      components. Note that these only work for studio plugins; they will not
+      consistent Studio experience when interacting with certain kinds of GUI
+      components. Note that these only work for Studio plugins; they will not
       work for other `Class.Mouse` objects.
 
       <table>

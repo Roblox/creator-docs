@@ -1,5 +1,5 @@
 ---
-title: Classroom Mode (For Educators)
+title: Classroom mode (for educators)
 description: Classroom Mode is an optional feature found in select Roblox experiences that gives teachers classroom management tools to use in-game.
 ---
 
@@ -27,15 +27,15 @@ Try out the features of Classroom Mode in this
 students, create announcements, and more.
 </Alert>
 
-## Getting Started
+## Get started
 
 To use Classroom Mode, you'll first need to become a verified educator and find an experience with the feature enabled.
 
-### Becoming a Verified Educator
+### Become a verified educator
 
 The Verified Educator system will be launched on Q4 2022.
 
-### Opening an Experience
+### Open an experience
 
 After becoming a verified educator, you'll be able to use Classroom Mode. This feature is found in select experiences where you are running a <a href="../../education/support/private-servers-for-classroom-use.md" target="_blank" rel="noopener">private server</a>.
 
@@ -60,13 +60,13 @@ After becoming a verified educator, you'll be able to use Classroom Mode. This f
       place.
     </Alert>
 
-## Features and Tools
+## Features and tools
 
 The dashboard organizes features into three total tabs: **Students**, **Tools**, and **Announcement**. Each tab includes it's own tools.
 
 ![](../../assets/education/legacy/cm-educator-tabsExample.jpg)
 
-### Student Roster
+### Student roster
 
 The roster displays students currently in the experience, listing their Roblox username.
 
@@ -76,13 +76,13 @@ The roster displays students currently in the experience, listing their Roblox u
   A student's display name may be different than their user name. A user name is permanent identifier for an account, while a student may change their display name as desired. For more information, see <a href="https://en.help.roblox.com/hc/en-us/articles/4401938870292-Changing-Your-Display-Name">Display Names</a>
 </Alert>
 
-#### Raising Hands
+#### Raise hands
 
 Next to the user's name is a button that indicates if they're raising their hand. How this feature is used is up to the educator. Students can raise their hand to respond to a question, or indicate they need technical help.
 
 ![](../../assets/education/legacy/cm-educator-showRaisedHand.jpg)
 
-#### Teleporting to a Student
+#### Teleport to a student
 
 Teleporting can be used to check on students or see their surroundings to better
 respond to a question. To do so, click on the icon by their name.
@@ -139,9 +139,9 @@ Customizable announcements can be used to present questions or point out timing 
 
    ![](../../assets/education/legacy/cm-educator-clearAnnouncement.jpg)
 
-### Student Features
+### Student features
 
-Students sharing an experience with an educator will get their own set of tools. Currently, we just support a toggle button to raise or lower an hand to get an educator's attention.
+Students sharing an experience with an educator will get their own set of tools. Currently, we just support a toggle button to raise or lower a hand to get an educator's attention.
 
 <GridContainer numColumns="2">
   <figure>
@@ -161,7 +161,7 @@ If you encounter any issues, please contact us at [education@roblox.com](mailto:
 - A feature doesn't work as advertised on this documentation.
 - An experience doesn't include Classroom Mode.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 **Is Classroom Mode in every Roblox Experience?**
 

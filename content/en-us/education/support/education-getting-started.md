@@ -1,5 +1,5 @@
 ---
-title: Get Started with Roblox Education
+title: Get started with Roblox Education
 description: Learn how to get started using Roblox in the classroom. Find teacher training, get lessons, and discover experiences to play.
 ---
 <img src="../../assets/landing/education/banner.jpg" alt="Get Started with Roblox Education" width="100%" />

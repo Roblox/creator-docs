@@ -20,10 +20,10 @@ deprecation_message: ''
 properties:
   - name: Plugin.CollisionEnabled
     summary: |
-      Returns whether the user enabled `Collisions` in studio under the Model
+      Returns whether the user enabled `Collisions` in Studio under the Model
       tab.
     description: |
-      Returns whether the user enabled `Collisions` in studio under the Model
+      Returns whether the user enabled `Collisions` in Studio under the Model
       tab.
     code_samples:
     type: bool
@@ -292,10 +292,10 @@ methods:
     writeCapabilities: []
   - name: Plugin:GetJoinMode
     summary: |
-      Returns the `Enum.JointCreationMode` the user has set in studio under the
+      Returns the `Enum.JointCreationMode` the user has set in Studio under the
       Model tab.
     description: |
-      Returns the `Enum.JointCreationMode` the user has set in studio under the
+      Returns the `Enum.JointCreationMode` the user has set in Studio under the
       Model tab.
     code_samples:
     parameters: []
@@ -382,10 +382,10 @@ methods:
     writeCapabilities: []
   - name: Plugin:GetStudioUserId
     summary: |
-      Returns the studio user's userId if they're logged in, otherwise
+      Returns the Studio user's userId if they're logged in, otherwise
       returns 0.
     description: |
-      Returns the studio user's userId if they're logged in, otherwise
+      Returns the Studio user's userId if they're logged in, otherwise
       returns 0.
     code_samples:
     parameters: []
@@ -603,7 +603,7 @@ methods:
   - name: Plugin:SetSetting
     summary: |
       Stores a given value for later use under the given key. The value will
-      persist even after studio is closed.
+      persist even after Studio is closed.
     description: |
       Stores a given value for later use under the given key. The value will
       persist even after Roblox Studio is closed. These settings are saved in

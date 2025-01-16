@@ -11,7 +11,7 @@ description: |
   servers, so you can only use `Class.DataStoreService` within a `Class.Script`
   or a `Class.ModuleScript` that is used by a `Class.Script`.
 
-  See [Data Stores](../../../cloud-services/data-stores/index.md) for an
+  See [Data stores](../../../cloud-services/data-stores/index.md) for an
   in-depth guide on data structure, management, error handling, etc.
 code_samples:
   - DataStore-Budget
@@ -66,7 +66,7 @@ methods:
       data store. This function also accepts an optional
       `Class.DataStoreOptions` instance which includes options for enabling
       `Class.DataStoreOptions.AllScopes|AllScopes`. See
-      [Data Stores](../../../cloud-services/data-stores) for details on scope.
+      [Data Stores](../../cloud-services/data-stores) for details on scope.
     code_samples:
     parameters:
       - name: name

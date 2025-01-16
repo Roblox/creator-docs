@@ -1,5 +1,5 @@
 ---
-title: Foundational Gameplay Systems
+title: Foundational gameplay systems
 comments:
 next: /resources/the-mystery-of-duvall-drive/supporting-systems
 prev: /resources/the-mystery-of-duvall-drive/main-design-requirements
@@ -22,7 +22,7 @@ We implemented it as a simple state machine (Update function), and the states ar
 
 GameStates is mostly server-side, but when the client needs to do something, such as show countdown, lore, or disable streaming pause UI, server and client (GameStatesClient) communicate via a remote event called `GameStateEvent`. As with most cases, the event payload has event "type" (Config.GameEvents) as the first parameter, and event specific data after that.
 
-### Teleportation Game States
+### Teleportation game states
 
 There is a group of 3 game states that run three unique cutscenes that hide the teleportation to the corrupt room: Warmup, InFlight, and Cooldown. **Warmup** runs for the whole duration and ends with an almost black screen in which the 3D world is no longer visible. During this time, we clone the room, get desired player positions in the corrupt room for each player, call `Class.Player.RequestStreamAroundAsync`, and transport players to a specific assigned `Datatype.CFrame` coordinate within the corrupt room. This type of teleportation might trigger a streaming pause. When a streaming pause occurs, the client displays a warning message. We disabled this default UI to keep the experience immersive.
 
@@ -34,11 +34,11 @@ While streaming is being handled, **InFlight** runs, keeping a slightly pulsing 
 
 A similar set of Warmup, InFlight, and Cooldown cutscenes occur when we teleport the player back to the normal state of the room, **TeleportWarmupBack**, **TeleportInFlightBack**, and **TeleportCooldownBack**, and at the end of the experience, we also run **TeleportWarmupFinal**, **TeleportInFlightFinal**, and **TeleportCooldownFinal** to teleport players into the foyer for the finishing cutscene.
 
-### Lighting and Atmosphere Game States
+### Lighting and atmosphere game states
 
 We knew that we wanted each room's normal and corrupt state to have a different visual appearance so it could give players clear visual feedback that they were in a completely different location. Game states allowed us to change the lighting and atmosphere properties for normal and corrupt rooms, in which the GameStateManager selected which instances to use based on if players are teleporting from the normal to the corrupt state of the room (`TeleportWarmup`), or vice versa (`TeleportWarmupBack`). Events playing during the teleport make the whole screen either dark or white, so we decided to change the `Class.Lighting` and `Class.Atmosphere` instances at those moments to hide the process from players. To make it simple to change, **DemoConfig** includes maps that define what instances under these services need to change.
 
-### Locking Doors Game States
+### Locking doors game states
 
 We wanted to be able to keep players in certain rooms while they finished missions, so we created game states to lock doors: `InMission` and `CanGetSeal`. `InMission` locks players in their active mission room, and `CanGetSeal` keeps the mission room's door locked until they pick up the "restored" seal. We mostly used this to have the doors lock when players return from a mission so that they have an incentive to pick up the seal. After they pick up the seal, doors unlock so they can place it within the seal's location in the foyer. The last mission is unique to this typical process, as the door to the room with its seal is locked until players solve every other puzzle (`EnableRegularMissionDoors`, `EnableOneMissionDoors` functions).
 
@@ -130,7 +130,7 @@ Parameters allowed us to refer to objects that do not even exist in the beginnin
 	}}
 ```
 
-### Running Events, Event Instances, and Connecting to Triggers
+### Run events, event instances, and connect to triggers
 
 To run an event, we would either use a remote event from clients, or a function from the server. In the following example, we passed a couple of parameters to the `RootObject` and `isEnabled` events. Internally, an instance of the event description was created, params resolved to actual objects, and the function returned an id for the event instance.
 
@@ -150,15 +150,15 @@ eventManagerFunc:Invoke("Stop", {eventInstId = cooldownId} )
 
 Interpolants or other actions that are "cosmetic" (do not change simulation for all players) could be run on clients, which could result in smoother interpolation. In the event description, we could provide a default value for all actions as onServer = true (without it, default is client). Each action can overwrite it by setting its own onServer.
 
-To easily connect running an event to a trigger, we used helper functions `ConnectTriggerToEvent` or `ConnectSpawnedTriggerToEvent`, the latter of which finds the trigger by name. To allow the same event to be triggered using different triggers, we could call `eventManagerFunc` with a "Setup" key and a set of trigger volumes. For an example of a trigger volume in action, see [Making the Expanding Pantry](../../resources/the-mystery-of-duvall-drive/developing-a-moving-world.md#making-the-expanding-pantry).
+To easily connect running an event to a trigger, we used helper functions `ConnectTriggerToEvent` or `ConnectSpawnedTriggerToEvent`, the latter of which finds the trigger by name. To allow the same event to be triggered using different triggers, we could call `eventManagerFunc` with a "Setup" key and a set of trigger volumes. For an example of a trigger volume in action, see [Making the Expanding Pantry](../../resources/the-mystery-of-duvall-drive/develop-a-moving-world.md#making-the-expanding-pantry).
 
-#### Event Parameters
+#### Event parameters
 
 In addition to custom event parameters passed from scripts, other data that can be optionally passed when creating an event includes player, callback (to be called when event ends), and callback parameters. Some events should run only for one player (events with actions running on client), while others should run for all. To make it run for only one player, we used `onlyTriggeredPlayer = true` in the params.
 
 Events can have cooldowns defined by `minCooldownTime` and `maxCooldownTime`. The min and max provide a range for scaling based on player count, but we didn't use it in this demo. If we were to have needed cooldown needs to be per player, we had the capability to use `perPlayerCooldown = true`. Each Event has a duration in seconds, and cooldown timings and callbacks are based on it. To inform about finishing an event, invoking code could pass a callback and parameters it will get.
 
-#### Calling Scripts
+#### Call scripts
 
 We could call `Class.Script|Scripts` at specific keyframes in the **Scripts** section. For example:
 
@@ -180,7 +180,7 @@ RegisterFunction must be called in the client script for functions called on the
 local function EnablePlayerControls(eventInst, params)
 ```
 
-#### Playing Audio
+#### Play audio
 
 We have limited support for playing [non-positional audio](../../sound/objects.md#volumetric) at keyframes in the **Sounds** section, for example:
 
@@ -192,7 +192,7 @@ sounds = {
 
 Note that the event finishing callbacks fire when event duration expires, but audio actions might be still playing after.
 
-#### Running Camera Shakes
+#### Run camera shakes
 
 We could define camera shakes in the **cameraShakes** section, like so:
 
@@ -204,7 +204,7 @@ cameraShakes = {
 
 "targets" can be initiated only for the player who triggered the event, allPlayer, or playersInRadius to the triggering player. We used a 3rd party script for camera shakes, and the shakes were pre-defined: `eventManagerDemo.bigShake` and `eventManagerDemo.smallShake`. `sustainDuration` could also be passed.
 
-## Missions Logic
+## Missions logic
 
 There are 7 missions total, and only 6 of them use seals. Most missions have common parameters, though some are only for missions with seals and teleporting to corrupt rooms. Each mission has an entry in the **DemoConfig** script with a set of parameters in the **Config.Missions** map:
 

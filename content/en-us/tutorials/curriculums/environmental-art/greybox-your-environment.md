@@ -1,5 +1,5 @@
 ---
-title: Greybox Your Environment
+title: Greybox your environment
 description: Explains how to greybox the laser tag environment using basic parts.
 next: /tutorials/curriculums/environmental-art/develop-polished-assets
 prev: /tutorials/curriculums/environmental-art/
@@ -21,13 +21,13 @@ After you complete this section, you will learn how to develop high-quality asse
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/PlaceholderMaterials.jpg" alt="An angled top-down view of the final greybox environment with placeholder materials to mark unique sections of the map." width="100%"/>
 
-## Three Lane Map Layout
+## Three lane map layout
 
 The **three lane map layout** is a first-person shooter map layout that includes a spawn zone for each team on opposite sides of the map, three primary lanes that each team can use to travel to either spawn zone, and cross lanes that allow for users to travel from one primary lane to another. This type of map layout is a common layout for first-person shooter experiences because it quickly places users into combat zones as soon as they join a match, and it allows for a variety of playstyles depending on which primary lane users choose to follow.
 
 The following sections explain each component of the three lane map layout, including considerations of how each component works together to create intentional gameplay interactions within first-person shooter experiences.
 
-### Spawn Zones
+### Spawn zones
 
 **Spawn zones** are areas of the map where users either join their team at the start of a match, or rejoin the gameplay after their health reaches zero. At minimum, each team needs to have a central spawn zone when users first join the experience. Many developers place these central spawn zones at opposite ends of their maps to allow users time to navigate the experience at the start of the match before seeing the enemy team.
 
@@ -35,7 +35,7 @@ The following sections explain each component of the three lane map layout, incl
 
 In addition, many team-based first-person shooter experiences also include spawn zones throughout the map that users can randomly respawn at once their health reaches zero. The placement of these decentralized spawn zones can significantly increase the experience's difficulty, especially when you place spawn zones near areas with heavy combat. To keep the gameplay simple, the sample laser tag greybox environment only includes one central spawn zone for each team.
 
-### Primary Lanes
+### Primary lanes
 
 **Primary lanes** are paths that extend the length of the map from one spawn zone to another. The three lane map layout includes three primary lanes, and how developers conceptualize them is often dependent on the overall environmental context of the experience. For example, because the sample laser tag map has both an indoor and outdoor environment, the names of the primary lanes are as follows:
 
@@ -47,7 +47,7 @@ For most first-person shooter experiences using the three lane map layout, the m
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/ThreeLaneLayout-PrimaryLanes.jpg" alt="A top-down view of the baseplate with three primary lanes highlighted between each team's spawn zone on opposite sides of the map." width="100%"/>
 
-### Cross Lanes
+### Cross lanes
 
 **Cross lanes** are paths that intersect all of the primary lanes, extending from the interior to the exterior primary lane. These are the paths that users can use to travel from one primary lane to another, and they often contain minimal obstructions to help users take cover from enemy fire. This is because coverless zones create transitory spaces that encourage users to not stay in one place for too long without it being dangerous.
 
@@ -59,7 +59,7 @@ Similar to the reason why the most combat occurs around the middle primary lane,
 
 Building a three lane map layout with these combat pockets in mind allows you to segment the distance from spawn zones, and create intentional spaces where users have to interact with each other. This encourages users to engage in rapid gameplay and quickly become familiar with the map as they jump between primary lanes using cross lanes.
 
-## Create Playable Areas
+## Create playable areas
 
 Now that you are familiar with three lane map layouts, it's time to learn how to create the playable areas for the sample laser tag greybox environment that follows a three lane map layout. As you follow these instructions that exactly recreate the geometry within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) `.rbxl` file, you will start to see how it all works together to make up two spawn zones, three primary lanes, and five cross lanes that mirror across the middle of the map when you look at it from a top-down view.
 
@@ -73,7 +73,7 @@ If you adjust the geometry to meet the specifications of your own experience, no
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/CreatingPlayableAreas-Intro2.png" alt="In a doorway, two lizard avatars are stacked on top of each other on the left, and two blocky avatars are stacked on top of each other on the right. This demonstrates that only two characters can pass each other in a doorway, and they cannot jump higher than the walls." width="60%"/>
 
-### Floor Geometry
+### Floor geometry
 
 The first step in creating the laser tag greybox environment is to create the geometry for each of the following floors:
 
@@ -90,15 +90,15 @@ It's important to have spaces in the experience with peaks and valleys because i
 In addition, a rise in elevation creates both a physical and emotional sense of ascension, allowing users with a high ground to have a bird's eye view of the battlefield in order to get a better sense of where to travel next. When they're ready to move on, the drop in elevation creates both a physical and emotional sense of descension, pushing users to make quick decisions to maneuver around enemy lines of sight and achieve their goals.
 
 <Tabs>
-  <TabItem key = "1" label="Create Your Own">
+  <TabItem key = "1" label="Create your own">
 
 To create your own floor geometry:
 
 1. Open Roblox Studio with a **Baseplate** template.
 1. In the menu bar, navigate to the **Model** tab, then in the **Snap to Grid** section,
 
-   1. Set **Rotate** to **90**.
-   1. Set **Move** to **5 studs**. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
+   1. Set **Rotate** to `90`.
+   1. Set **Move** to `5` studs. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/SnapToGrid.jpg" alt="Studio's Model tab with the Snap to Grid settings highlighted." width="60%"/>
 
@@ -121,15 +121,15 @@ To create your own floor geometry:
 1. Anchor all of your parts.
 
   </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+  <TabItem key = "2" label="Recreate the sample">
 
 To exactly recreate the floor geometry within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file:
 
 1. Open Roblox Studio with a **Baseplate** template.
 1. In the menu bar, navigate to the **Model** tab, then in the **Snap to Grid** section,
 
-   1. Set **Rotate** to **90**.
-   1. Set **Move** to **5 studs**. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
+   1. Set **Rotate** to `90`.
+   1. Set **Move** to `5` studs. This allows you to equally position all greybox geometry on or away from each other in 5 stud increments.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/SnapToGrid.jpg" alt="Studio's Model tab with the Snap to Grid settings highlighted." width="60%"/>
 
@@ -141,8 +141,8 @@ To exactly recreate the floor geometry within the sample [Environment Art - Grey
       <img src="../../../assets/studio/general/Model-Tab-Part-Tools.png" width="660" alt="Studio's Model tab with the Part button and Part Type Picker elements highlighted." />
 
    1. In the **Explorer** window, select the block, then in the **Properties** window,
-      1. Set **Size** to **105, 1, 185**.
-      1. Set **CFrame.Position** to **-77.5, 4.5, 252.5**.
+      1. Set **Size** to `105, 1, 185`.
+      1. Set **CFrame.Position** to `-77.5, 4.5, 252.5`.
 
    <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/Floor-1.jpg" alt="An angled top-down view of the left-side of the main floor greybox geometry highlighted in yellow." width="100%"/>
 
@@ -268,7 +268,7 @@ To exactly recreate the floor geometry within the sample [Environment Art - Grey
   </TabItem>
 </Tabs>
 
-### Perimeter Wall Geometry
+### Perimeter wall geometry
 
 The second step in creating the laser tag greybox environment is to create the geometry for perimeter walls of the building. This provides boundaries for the interior gameplay of the experience, as well as guidance to users on where they can go to engage with one another.
 
@@ -277,7 +277,7 @@ To help visualize the geometry of the perimeter walls of the building you are cr
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/Perimeter-Intro.jpg" alt="A top-down view of the final greybox environment with the perimeter wall geometry highlighted in yellow." width="100%"/>
 
 <Tabs>
-  <TabItem key = "1" label="Create Your Own">
+  <TabItem key = "1" label="Create your own">
 
 To create your own perimeter wall geometry:
 
@@ -288,7 +288,7 @@ To create your own perimeter wall geometry:
 1. Anchor these parts.
 
   </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+  <TabItem key = "2" label="Recreate the sample">
 
 To exactly recreate the perimeter wall geometry within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file:
 
@@ -416,7 +416,7 @@ To exactly recreate the perimeter wall geometry within the sample [Environment A
   </TabItem>
 </Tabs>
 
-### Spawn Zone Geometry
+### Spawn zone geometry
 
 The third step in creating the laser tag greybox environment is to create the geometry to contain each team's spawn zone. For experiences that only contain centralized spawn zones, sectioning them off into their own rooms lets users acclimate to the experience when they first join the match, and it provides them cover from enemy fire when they rejoin the match after their health reaches zero.
 
@@ -429,7 +429,7 @@ To help visualize the geometry of the spawn zone areas you are creating for the 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/SpawnZone-Intro.jpg" alt="A top-down view of the final greybox environment with the spawn zone wall geometry highlighted in yellow." width="100%"/>
 
 <Tabs>
-  <TabItem key = "1" label="Create Your Own">
+  <TabItem key = "1" label="Create your own">
 
 To create your own spawn zone geometry:
 
@@ -557,7 +557,7 @@ To exactly recreate the spawn zone geometry within the sample [Environment Art -
   </TabItem>
 </Tabs>
 
-### Combat Pockets Geometry
+### Combat pockets geometry
 
 The fourth step in creating the laser tag greybox environment is to create the geometry for combat pockets in the interior of the building. This geometry makes up the majority of the playable areas in the experience because combat pockets arise from the intersections of primary lane and cross lanes, which span the entirety of the building.
 
@@ -570,7 +570,7 @@ To help visualize geometry of the combat pockets you are creating for the experi
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/CombatPockets-Intro2.jpg" alt="A top-down view of the final greybox environment with the combat pocket geometry highlighted in yellow." width="100%"/>
 
 <Tabs>
-  <TabItem key = "1" label="Create Your Own">
+  <TabItem key = "1" label="Create your own">
 
 To create your own combat pockets geometry:
 
@@ -593,7 +593,7 @@ To create your own combat pockets geometry:
 1. Anchor these parts.
 
   </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+  <TabItem key = "2" label="Recreate the sample">
 
 To exactly recreate the combat pockets geometry within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file:
 
@@ -861,7 +861,7 @@ To exactly recreate the combat pockets geometry within the sample [Environment A
   </TabItem>
 </Tabs>
 
-### Exterior Geometry
+### Exterior geometry
 
 The final step in creating the laser tag greybox environment is to create the placeholder exterior assets that create interesting composition for the outdoor space, as well as minimal cover for users traveling the exterior primary lane. This area of the experience is important because while it comes with risk due to the minimal cover from enemy fire, it also provides users a quick route to the enemy team's spawn zone.
 
@@ -870,7 +870,7 @@ To help visualize the geometry of the exterior assets you are creating for the e
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/Exterior-Intro.jpg" alt="A top-down view of the final greybox environment with the exterior geometry highlighted in yellow." width="100%"/>
 
 <Tabs>
-  <TabItem key = "1" label="Create Your Own">
+  <TabItem key = "1" label="Create your own">
 
 To create your own exterior geometry:
 
@@ -881,7 +881,7 @@ To create your own exterior geometry:
 1. Anchor these parts.
 
   </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+  <TabItem key = "2" label="Recreate the sample">
 
 To exactly recreate the exterior geometry within the sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) place file:
 
@@ -1045,7 +1045,7 @@ To exactly recreate the exterior geometry within the sample [Environment Art - G
   </TabItem>
 </Tabs>
 
-## Apply Placeholder Materials
+## Apply placeholder materials
 
 Now that you have your placeholder geometry in place, it's time to apply placeholder materials to the map in key areas to help orient users to where they are in the experience. The sample [Environment Art - Greyboxing](https://www.roblox.com/games/14447721254/Environment-Art-Greyboxing) `.rbxl` file uses the following color map, but you can use can use any color to achieve the same purpose:
 
@@ -1069,14 +1069,14 @@ For example, if the following user is on the "red" team, when they're walking on
 
 To apply placeholder materials:
 
-1. Select the top perimeter walls and the top hallway editions, then set their `Class.Part.Color` to **255, 176, 0**.
-1. Select the left-side floor parts, then set their `Class.Part.Color` to **255, 89, 89**.
-1. Select the right-side floor parts, then set their `Class.Part.Color` to **16, 42, 220**.
-1. Select the part for the elevation between the ground and first floor, then set their `Class.Part.Color` to **75, 151, 75**.
+1. Select the top perimeter walls and the top hallway editions, then set their `Class.Part.Color` to `255, 176, 0`.
+1. Select the left-side floor parts, then set their `Class.Part.Color` to `255, 89, 89`.
+1. Select the right-side floor parts, then set their `Class.Part.Color` to `16, 42, 220`.
+1. Select the part for the elevation between the ground and first floor, then set their `Class.Part.Color` to `75, 151, 75`.
 
 <img src="../../../assets/tutorials/environmental-art-curriculum/Section1/PlaceholderMaterials.jpg" alt="An angled top-down view of the final greybox environment with placeholder materials to mark unique sections of the map." width="100%"/>
 
-## Playtest Your Layout
+## Playtest your layout
 
 It's important to continuously playtest the layout of your environment **at nearly every step of the development process** so you can ensure the experience is both fun and functional, and you can catch small issues before they turn into much larger problems the further you are in the process. As you playtest, ask yourself the following questions:
 
@@ -1095,7 +1095,7 @@ To playtest your experience:
 
 2. Select from one of the following playtest options:
 
-   - **Play** – Starts simulating the experience, inserting your avatar at either a `Class.SpawnLocation` or coordinates of around **0, 100, 0**.
+   - **Play** – Starts simulating the experience, inserting your avatar at either a `Class.SpawnLocation` or coordinates of around `0, 100, 0`.
    - **Play Here** – Starts simulating the experience, inserting your avatar in front of the camera's current position.
    - **Run** – Starts simulating the experience without inserting your avatar. Instead, the simulation begins at the current camera position and you can navigate around using the Studio camera controls.
 

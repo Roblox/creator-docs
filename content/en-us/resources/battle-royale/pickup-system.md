@@ -1,5 +1,5 @@
 ---
-title: Pickup System
+title: Pickup system
 comments:
 description: Explains the pickup system for the Battle Royale game kit.
 prev: /resources/battle-royale/core-scripts
@@ -46,7 +46,7 @@ There are several important folders related to the pickup system. Make sure that
   src="../../assets/resources/battle-royale/pickup-system/Battle-Royale-Pickups.png"
   width="320" />
 
-## Adding New Pickups
+## Add new pickups
 
 As noted above, pickups require both a functional `Class.Tool` and a visual `Class.Model` that will be spawned in the game world.
 

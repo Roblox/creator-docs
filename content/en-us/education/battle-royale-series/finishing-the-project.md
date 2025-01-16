@@ -1,5 +1,5 @@
 ---
-title: Finishing the Project
+title: Finish the project
 description: Create a battle royale experience in Roblox Studio. Wrap up the project with map improvements.
 prev: /education/battle-royale-series/ending-matches
 ---
@@ -12,13 +12,13 @@ Congrats! You've just created a multiplayer battle royale! Over this series, you
 
 But, your game is almost ready for others to play. Attract players to your game by making your arena unique and creating an eye-catching thumbnail.
 
-## Optional Improvements
+## Optional improvements
 
 Below are a few ways of improving your experience.
 
 <img src="../../assets/education/battle-royale-series/roundBased_hero_lesson8.jpg" />
 
-### Improve Map Visuals
+### Improve map visuals
 
 Having a visually interesting map sets a strong first impression for your game, encouraging people to start playing. Take some time to turn your graybox level into a real map.
 
@@ -48,7 +48,7 @@ During a game, you may have noticed a force field when players respawn. Change h
 1. Click on the relevant Spawn Location.
 2. In Properties > Forcefield, change the Duration value.
 
-### Playtest and Confirm Variables
+### Playtest and confirm variables
 
 Successful games on Roblox are playtested frequently to ensure the gameplay is fun and fair.
 
@@ -62,11 +62,11 @@ Test, evaluate, and modify variables to improve gameplay. Some examples:
 - Change `GameSettings.matchDuration` to make matches longer in a larger map.
 - Make the intermission duration longer if players feel it's too sudden.
 
-### Make the Lobby Social
+### Make the lobby social
 
 Popular games in Roblox often add mini-games to encourage players to have fun and be social while they wait for an intermission. This can include putting in sphere parts with physics so players can play, or even mini-obstacle courses.
 
-## Optional Challenges
+## Optional challenges
 
 Many Roblox experiences continue to get updates even after they release. Below are some optional challenges that can add new features for your project.
 
@@ -74,7 +74,7 @@ Many Roblox experiences continue to get updates even after they release. Below a
 
 Make maps more challenging by adding traps or obstacles that damage players. Learn more in [Creating Traps](../../tutorials/fundamentals/coding-3/traps-with-if-statements.md).
 
-### Tracking Score
+### Tracking score
 
 Create a leaderboard that tracks how many times someone wins a round. Code one using this article on <a href="https://developer.roblox.com/articles/Leaderboards" target="_blank" rel="noopener">Leaderboards</a>.
 
@@ -82,7 +82,7 @@ Create a leaderboard that tracks how many times someone wins a round. Code one u
 
 Create scripted parts that make changes like modify a player's speed or tool's attack power. Remember, after the end of a match, use the `resetMatch()` to recreate the set of powerups. For reference, learn more in the [Powerups](../../tutorials/fundamentals/coding-3/powerups-with-if-statements.md) tutorial.
 
-### Add More Arenas
+### Add more arenas
 
 Build out more arenas with different settings and code a randomized map selection. Whenever players start a match, a module script named MapManager will pick a random map, and then assign players to those spawn locations as needed. Check the code box below if you need hints or to see one implementation.
 
