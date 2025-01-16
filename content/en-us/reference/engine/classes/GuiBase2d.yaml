@@ -24,8 +24,8 @@ properties:
       property that provides the screen position of a `Class.GuiBase2d` element
       in pixels. This represents the actual pixel position at which an element
       renders as a result of its ancestors' sizes and positions. Note that
-      `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` always
-      represents the top-left corner of the `Class.GuiBase2d` element.
+      `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` always represents the
+      top-left corner of the `Class.GuiBase2d` element.
 
       See also `Class.GuiBase2d.AbsoluteRotation|AbsoluteRotation` and
       `Class.GuiBase2d.AbsoluteSize|AbsoluteSize`.

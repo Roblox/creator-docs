@@ -57,8 +57,9 @@ methods:
       numbers, strings, and booleans, although you should carefully explore the
       [limitations](../../../scripting/events/bindable.md#argument-limitations).
 
-      See [Bindable events and callbacks](../../../scripting/events/bindable.md) for
-      code samples and further details on `Class.BindableEvent:Fire()|Fire()`.
+      See [Bindable events and callbacks](../../../scripting/events/bindable.md)
+      for code samples and further details on
+      `Class.BindableEvent:Fire()|Fire()`.
     code_samples:
     parameters:
       - name: arguments
@@ -86,8 +87,8 @@ events:
       on the same `Class.BindableEvent` instance, using the same arguments as
       parameters.
 
-      See [Bindable events and callbacks](../../../scripting/events/bindable.md) for
-      code samples and further details on `Class.BindableEvent.Event|Event`.
+      See [Bindable events and callbacks](../../../scripting/events/bindable.md)
+      for code samples and further details on `Class.BindableEvent.Event|Event`.
     code_samples:
     parameters:
       - name: arguments

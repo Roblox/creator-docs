@@ -74,8 +74,8 @@ properties:
       is positioned (through `Class.GuiObject.Position`) and from which the
       rendered `Class.GuiObject.Size` expands.
 
-      See [here](../../../ui/position-and-size.md#anchorpoint) for
-      illustrated diagrams and details.
+      See [here](../../../ui/position-and-size.md#anchorpoint) for illustrated
+      diagrams and details.
     code_samples:
       - AnchorPoint-Demo
     type: Vector2

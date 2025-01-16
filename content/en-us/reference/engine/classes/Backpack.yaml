@@ -30,7 +30,7 @@ description: |
 
   ```lua
   local Players = game:GetService("Players")
-  
+
   -- Accessing Backpack from a Server Script:
   local backpack = Players.PlayerName.Backpack
 
