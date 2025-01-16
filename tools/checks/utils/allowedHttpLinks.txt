@@ -594,3 +594,12 @@ https://support.tipalti.com/Content/Topics/UserGuide/PaymentInformation/PaymentM
 https://github.com/Roblox/creator-docs/tree/main/content/en-us/reference/cloud
 https://www.youtube.com/playlist?list=PLuEQ5BB-Z1PK3EcpypEHHMlc2lknQCJyP
 https://docs.blender.org/manual/en/2.80/scene_layout/object/editing/transform/control/pivot_point/index.html
+https://developer.mozilla.org/docs/Web/HTTP/Methods/GET
+https://developer.mozilla.org/docs/Web/HTTP/Methods/HEAD
+https://developer.mozilla.org/docs/Web/HTTP/Methods/POST
+https://developer.mozilla.org/docs/Web/HTTP/Methods/PUT
+https://developer.mozilla.org/docs/Web/HTTP/Methods/DELETE
+https://developer.mozilla.org/docs/Web/HTTP/Methods/CONNECT
+https://developer.mozilla.org/docs/Web/HTTP/Methods/OPTIONS
+https://developer.mozilla.org/docs/Web/HTTP/Methods/TRACE
+https://developer.mozilla.org/docs/Web/HTTP/Methods/PATCH
