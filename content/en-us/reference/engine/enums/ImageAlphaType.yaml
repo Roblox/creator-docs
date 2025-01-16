@@ -1,23 +1,29 @@
 name: ImageAlphaType
 type: enum
-summary: ''
-description: ''
+summary: |
+  Enum for determining if the alpha or color is locked while combining two images.
+description: |
+  Enum for determining if the alpha or color is locked while combining two images.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Default
-    summary: ''
+    summary: |
+      The default behavior in which neither color nor alpha values are locked.
     value: 1
     tags: []
     deprecation_message: ''
   - name: LockCanvasAlpha
-    summary: ''
+    summary: |
+      The alpha values of the image will not be modified.
     value: 2
     tags: []
     deprecation_message: ''
   - name: LockCanvasColor
-    summary: ''
+    summary: |
+      The color values of the image will not be modified.
     value: 3
     tags: []
     deprecation_message: ''
+    
