@@ -71,6 +71,7 @@ description: |
     servers to which requests are being sent.
 code_samples:
   - Astronauts-in-Space
+  - International-Space-Station
   - HttpService-Pastebin
 inherits:
   - Instance
@@ -119,6 +120,7 @@ methods:
       - `true`: `{94b717b2-d54f-4340-a504-bd809ef5bf5c}`
       - `false`: `db454790-7563-44ed-ab4b-397ff5df737b` 
     code_samples:
+      - HttpService-GenerateGUID
     parameters:
       - name: wrapInCurlyBraces
         type: bool
@@ -296,6 +298,7 @@ methods:
       results from previous calls with the same `url`.
     code_samples:
       - Astronauts-in-Space
+      - International-Space-Station
     parameters:
       - name: url
         type: Variant
