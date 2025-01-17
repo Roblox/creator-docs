@@ -112,7 +112,7 @@ properties:
       can only be sold in the game they are associated with, regardless of what
       AllowThirdPartySales is set to. This property affects
       [Game Passes](../../../production/monetization/game-passes.md) and
-      [clothing](../../../art/accessories/classic-clothing.md).
+      [clothing](../../../art/classic-clothing.md).
     code_samples:
     type: bool
     tags:

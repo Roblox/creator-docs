@@ -391,13 +391,13 @@ methods:
     deprecation_message: ''
   - name: Vector3:FuzzyEq
     summary: |
-      Returns `true` if the X, Y, and Z components of the other
-      `Datatype.Vector3` are within epsilon units of each corresponding
-      component of this `Datatype.Vector3`.
+      Returns `true` if the difference between the squared magnitude of the two
+      vectors is within `epsilon`. `epsilon` is scaled relative to the
+      magnitude, rather than an absolute epsilon.
     description: |
-      Returns `true` if the X, Y, and Z components of the other
-      `Datatype.Vector3` are within epsilon units of each corresponding
-      component of this `Datatype.Vector3`.
+      Returns `true` if the difference between the squared magnitude of the two
+      vectors is within `epsilon`. `epsilon` is scaled relative to the
+      magnitude, rather than an absolute epsilon.
     parameters:
       - name: other
         type: Vector3

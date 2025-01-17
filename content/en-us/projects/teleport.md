@@ -121,9 +121,11 @@ To retrieve only the teleport data on the client, you can use `Class.TeleportSer
 
 ## Handle failed teleports
 
-Like any API call that involves network requests, teleports might fail and throw an error. Even if a call succeeds and the teleport initiates, it can still fail at the last moment without throwing an error and leave the user in the server. When this happens, it triggers `Class.TeleportService.TeleportInitFailed`.
+Like any API call that involves network requests, teleports can fail and throw an error. Wrap them in protected calls (`Global.LuaGlobals.pcall()`). Some failures benefit from retries, particularly those involving reserved servers, so we recommend retrying some number of times on failures.
 
-Wrap teleports in a protected call (`Global.LuaGlobals.pcall()`) and retry if it fails. The following example `Class.ModuleScript` defines a `SafeTeleport` function to teleport the user in a protected call and a `handleFailedTeleport` function to retry failed teleports that are one-time hiccups and drops invalid ones that might have errors in the code.
+Even if a call succeeds and the teleport initiates, it can still fail at the last moment without throwing an error and leave the user in the server. When this happens, it triggers the `Class.TeleportService.TeleportInitFailed` event.
+
+The following example `Class.ModuleScript` defines a `SafeTeleport` function to teleport the user in a protected call with retry logic. It also has a `handleFailedTeleport` function to deal with situations in which the call was successful, but the teleport didn't occur.
 
 ```lua
 local TeleportService = game:GetService("TeleportService")

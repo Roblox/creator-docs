@@ -636,12 +636,8 @@ navigation:
             path: /production/monetization/paid-access-local-currency
           - title: Private servers
             path: /production/monetization/private-servers
-      - title: Resources
-        section:
-          - title: Build your business
-            path: /production/monetization/business-resources
-          - title: Randomized virtual items policy
-            path: /production/monetization/randomized-virtual-items-policy
+      - title: Virtual item policies
+        path: /production/monetization/virtual-items
   - title: Localization
     path: /production/localization/
     section:

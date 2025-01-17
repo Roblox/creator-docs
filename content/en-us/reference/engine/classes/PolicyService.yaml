@@ -3,13 +3,11 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  Helps you build gameplay components for compliance.
+  Helps you query information regarding policy compliance for players around the
+  world based on age range, location, and platform type.
 description: |
-  Important for getting your game to all audiences, `Class.PolicyService` helps
-  you build gameplay components that can be made compliant with various national
-  regulations for multiple countries. This service is used to query information
-  regarding policy compliance for players around the world based on age range,
-  location, and platform type.
+  `PolicyService` helps you query information regarding policy compliance for
+  players around the world based on age range, location, and platform type.
 code_samples:
 inherits:
   - Instance
@@ -57,61 +55,61 @@ methods:
       <tr>
       <th>Name</th>
       <th>Type</th>
-      <th>Required for</th>
+      <th>Required For</th>
       <th>Description</th>
       </tr>
       </thead>
       <tbody>
       <tr>
-      <td>AreAdsAllowed</td>
+      <td><code>AreAdsAllowed</code></td>
       <td>Boolean</td>
-      <td>Any experience that includes immersive ads</td>
-      <td>When true, the player might see immersive ads within an experience.</td>
+      <td>Any experience that includes <a href="../../../production/monetization/immersive-ads.md">immersive ads</a>.</td>
+      <td>When <code>true</code>, the player might see immersive ads within an experience.</td>
       </tr>
       <tr>
-      <td>ArePaidRandomItemsRestricted</td>
+      <td><code>ArePaidRandomItemsRestricted</code></td>
       <td>Boolean</td>
-      <td>Any experience that has paid random items</td>
-      <td>When true, the player cannot interact with paid (via in-experience currency bought with Robux, or Robux directly) random item generators.</td>
+      <td>Any experience that has paid random items.</td>
+      <td>When <code>true</code>, the player can <b>not</b> interact with paid random item generators, either via in‑experience currency bought with Robux or Robux directly.</td>
       </tr>
       <tr>
-      <td>AllowedExternalLinkReferences</td>
-      <td>Array of strings</td>
-      <td>Any experience that references external links</td>
-      <td>A list of external link references (for example, social media links, handles, or iconography) a player is permitted to see. Possible values include: "Discord", "Facebook", "Twitch", "YouTube", "X", "GitHub", and "Guilded".</td>
+      <td><code>AllowedExternalLinkReferences</code></td>
+      <td>Array</td>
+      <td>Any experience that references external links.</td>
+      <td>A list of external link references such as social media links, handles, or iconography that a player is permitted to see. Possible values include <code>"Discord"</code>, <code>"Facebook"</code>, <code>"Twitch"</code>, <code>"YouTube"</code>, <code>"X"</code>, <code>"GitHub"</code>, and <code>"Guilded"</code>.</td>
       </tr>
       <tr>
-      <td>IsContentSharingAllowed</td>
+      <td><code>IsContentSharingAllowed</code></td>
       <td>Boolean</td>
-      <td>Any experience that allows users to share content off platform</td>
-      <td>When true, the player is allowed to share content using APIs which open external sharing flows such as <code>Class.CaptureService:PromptShareCapture()</code>.</td>
+      <td>Any experience that allows users to share content off platform.</td>
+      <td>When <code>true</code>, the player is allowed to share content using APIs which open external sharing flows such as <code>Class.CaptureService:PromptShareCapture()|PromptShareCapture()</code>.</td>
       </tr>
       <tr>
-      <td>IsEligibleToPurchaseSubscription</td>
+      <td><code>IsEligibleToPurchaseSubscription</code></td>
       <td>Boolean</td>
-      <td>Any experience that wants to sell subscriptions</td>
-      <td>When true, the player is eligible to purchase subscriptions within an experience.</td>
+      <td>Any experience that wants to sell subscriptions.</td>
+      <td>When <code>true</code>, the player is eligible to purchase subscriptions within an experience.</td>
       </tr>
       <tr>
-      <td>IsPaidItemTradingAllowed</td>
+      <td><code>IsPaidItemTradingAllowed</code></td>
       <td>Boolean</td>
-      <td>Any experience that allows users to purchase virtual items that they can trade with other players</td>
-      <td>When true, the player can trade virtual items that they purchased with in-experience currency or Robux.</td>
+      <td>Any experience that allows users to purchase virtual items that they can trade with other players.</td>
+      <td>When <code>true</code>, the player can trade virtual items that they purchased with in-experience currency or Robux.</td>
       </tr>
       <tr>
-      <td>IsSubjectToChinaPolicies</td>
+      <td><code>IsSubjectToChinaPolicies</code></td>
       <td>Boolean</td>
-      <td>Any experience that is available in China</td>
-      <td>When true, an experience should enforce compliance changes. See <a href="https://devforum.roblox.com/t/new-programs-available-roblox-china-licensed-to-operate/1023361">this forum post</a> for more information.</td>
+      <td>Any experience that is available in China.</td>
+      <td>When <code>true</code>, an experience should enforce compliance changes. See <a href="https://devforum.roblox.com/t/new-programs-available-roblox-china-licensed-to-operate/1023361">this forum post</a> for more information.</td>
       </tr>
        	</tbody>
       </table>
 
-      #### Exceptions
+      ##### Exceptions
 
-      Like any async call, this needs to be wrapped in a `pcall` and
-      error-handled properly. A full list of possible error messages and their
-      reasons is as below:
+      Like any async call, this method needs to be wrapped in
+      `Global.LuaGlobals.pcall()` and error-handled properly. A full list of
+      possible error messages and their reasons is:
 
       <table>
       <thead>
@@ -121,29 +119,28 @@ methods:
       </tr>
       </thead>
       <tbody>
-       <tr>
+      <tr>
       <td>Instance was not a player</td>
-      <td>Dev's usage - The parameter is not a Player instance</td>
+      <td>The <code>player</code> parameter is not a <code>Class.Player</code> instance.</td>
       </tr>
-       <tr>
+      <tr>
       <td>Players not found</td>
-        <td>Internal error - Players object missing</td>
+      <td>Internal error that the <code>Class.Players</code> object is missing.</td>
       </tr>
        <tr>
       <td>This method cannot be called on the client for a non-local player</td>
-      <td>Dev's usage - This method cannot be called on the client for a non-local player</td>
+      <td>This method cannot be called on the client for a non-local <code>Class.Player</code>.</td>
       </tr>
       <tr>
       <td>GetPolicyInfoForPlayerAsync is called too many times</td>
-      <td>Internal error - GetPolicyInfoForPlayerAsync is called more than 100(current setting) times before http response coming back</td>
+      <td>Internal error that <code>GetPolicyInfoForPlayerAsync()</code> is called more than 100 (current setting) times before an HTTP response comes back.</td>
       </tr>
-       	</tbody>
+      </tbody>
       </table>
 
-      See also:
-
-      - `Class.LocalizationService:GetCountryRegionForPlayerAsync()`, returns
-        country/region code string according to player's client IP geolocation
+      See also `Class.LocalizationService:GetCountryRegionForPlayerAsync()`
+      which returns a country/region code string according to the player's
+      client IP geolocation.
     code_samples:
       - getting-policy-information-for-a-player
     parameters:
@@ -151,12 +148,12 @@ methods:
         type: Instance
         default:
         summary: |
-          The Player that you are getting policy information for.
+          The `Class.Player` to get policy information for.
     returns:
       - type: Dictionary
         summary: |
-          A dictionary containing information about the policy information of a
-          given player.
+          A dictionary containing information about the policy information of
+          the requested player; see above for the dictionary structure.
     tags:
       - Yields
     deprecation_message: ''

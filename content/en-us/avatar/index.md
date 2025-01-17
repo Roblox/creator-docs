@@ -4,8 +4,48 @@ description: Create and upload avatar characters, clothing, and accessories to t
 hideBreadcrumbs: true
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/EUDSIUmLjxA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br /><br />
+<Grid container spacing={2} style={{ marginBottom: 24, width: '100%' }}>
+<Grid item xs={6} style={{ padding: 16 }}>
+<Grid item container wrap="nowrap" direction="column" style={{ gap: 8, flex: 1 }}>
+
+<div
+className="container"
+style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12 }} >
+<iframe
+src="https://www.youtube-nocookie.com/embed/EUDSIUmLjxA"
+title="YouTube video player"
+frameBorder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowFullScreen
+style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
+</div>
+<Typography variant="body1">
+A high-level overview of avatar items on Roblox.
+</Typography>
+
+</Grid>
+</Grid>
+
+<Grid item xs={6} style={{ padding: 16 }}>
+<Grid item container wrap="nowrap" direction="column" style={{ gap: 8, flex: 1 }}>
+
+<div
+className="container"
+style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12 }} >
+<iframe
+src="https://www.youtube-nocookie.com/embed/Eed29gV0hLA"
+title="YouTube video player"
+frameBorder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowFullScreen
+style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
+</div>
+<Typography variant="body1">
+Create and sell your first 3D avatar item.
+</Typography>
+</Grid>
+</Grid>
+</Grid>
 
 Every Roblox user is represented by a customizable character called an **avatar**. Avatars are character models with many specialized features that allow users to interact with [experiences](../platform.md) and customize themselves with a wide range of clothing and accessories from the [Marketplace](https://www.roblox.com/catalog).
 
@@ -27,35 +67,32 @@ Whether you're creating and selling a basic accessory, clothes, or an avatar cha
 
 ## Creating
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/Eed29gV0hLA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br /><br />
-
 Create avatar items for Roblox, ranging from clothing, accessories, bodies, and heads. Learn about the various components that power the feature-rich technology unique to Roblox avatars and cosmetics.
 
 <GridContainer numColumns='2'>
 
 <Card style={{height: '100%'}}>
-  <CardMedia component='img' height='165' image='../../assets/art/avatar/Rigid-Thumbnail.png' alt="rigid accessory thumbnail example"/>
-  <CardContent style={{marginBottom:"66px"}}>
-    <Typography variant="h5" component="div">Rigid accessories</Typography>
-    <br />
-    Understand the various components that make up rigid accessories, the most basic form of 3D avatar cosmetics.
-  </CardContent>
-  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-    <Button href="../art/accessories/index.md" size='large' color='primary' variant='text'>Learn more</Button>
-  </CardActions>
+<CardMedia component='img' height='165' image='../../assets/art/avatar/Rigid-Thumbnail.png' alt="rigid accessory thumbnail example"/>
+<CardContent style={{marginBottom:"66px"}}>
+<Typography variant="h5" component="div">Rigid accessories</Typography>
+<br />
+Understand the various components that make up rigid accessories, the most basic form of 3D avatar cosmetics.
+</CardContent>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../art/accessories/index.md" size='large' color='primary' variant='text'>Learn more</Button>
+</CardActions>
 </Card>
 
 <Card style={{height: '100%'}}>
-  <CardMedia component='img' height='165' image='../../assets/art/avatar/Clothing-Thumbnail.png' alt="clothing thumbnail example"/>
-  <CardContent style={{marginBottom:"66px"}}>
-    <Typography variant="h5" component="div">Layered clothing</Typography>
-    <br />
-    Understand the advanced components of layered clothing, accessories that stretch and fit over a target.
-  </CardContent>
-  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-    <Button href="../art/accessories/layered-clothing.md" size='large' color='primary' variant='text'>Learn more</Button>
-  </CardActions>
+<CardMedia component='img' height='165' image='../../assets/art/avatar/Clothing-Thumbnail.png' alt="clothing thumbnail example"/>
+<CardContent style={{marginBottom:"66px"}}>
+<Typography variant="h5" component="div">Layered clothing</Typography>
+<br />
+Understand the advanced components of layered clothing, accessories that stretch and fit over a target.
+</CardContent>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../art/accessories/layered-clothing.md" size='large' color='primary' variant='text'>Learn more</Button>
+</CardActions>
 </Card>
 
 </GridContainer> <br />
@@ -74,15 +111,15 @@ Create avatar items for Roblox, ranging from clothing, accessories, bodies, and 
 </Card>
 
 <Card style={{height: '100%'}}>
-  <CardMedia component='img' height='165' image='../../assets/art/avatar/Tutorial-Thumbnail.png' alt="tutorial thumbnail example"/>
-  <CardContent style={{marginBottom:"66px"}}>
-    <Typography variant="h5" component="div">Tutorials</Typography>
-    <br />
-    Follow step-by-step guides to create accessories, clothing, and characters to start creating your own unique 3D avatar asset.
-  </CardContent>
-  <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-    <Button href="../avatar/tutorials.md" size='large' color='primary' variant='text'>Learn more</Button>
-  </CardActions>
+<CardMedia component='img' height='165' image='../../assets/art/avatar/Tutorial-Thumbnail.png' alt="tutorial thumbnail example"/>
+<CardContent style={{marginBottom:"66px"}}>
+<Typography variant="h5" component="div">Tutorials</Typography>
+<br />
+Follow step-by-step guides to create accessories, clothing, and characters to start creating your own unique 3D avatar asset.
+</CardContent>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../avatar/tutorials.md" size='large' color='primary' variant='text'>Learn more</Button>
+</CardActions>
 </Card>
 
 </GridContainer> <br />

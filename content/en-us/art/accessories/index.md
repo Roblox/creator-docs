@@ -4,8 +4,48 @@ description: Rigid accessories are basic 3D cosmetics users can equip and wear o
 hideBreadcrumbs: true
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/tzPn6QvU8Bo" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br /><br />
+<Grid container spacing={2} style={{ marginBottom: 24, width: '100%' }}>
+<Grid item xs={6} style={{ padding: 16 }}>
+<Grid item container wrap="nowrap" direction="column" style={{ gap: 8, flex: 1 }}>
+
+<div
+className="container"
+style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12 }} >
+<iframe
+src="https://www.youtube-nocookie.com/embed/tzPn6QvU8Bo"
+title="YouTube video player"
+frameBorder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowFullScreen
+style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
+</div>
+<Typography variant="body1">
+A high-level overview of accessories on Roblox.
+</Typography>
+
+</Grid>
+</Grid>
+
+<Grid item xs={6} style={{ padding: 16 }}>
+<Grid item container wrap="nowrap" direction="column" style={{ gap: 8, flex: 1 }}>
+
+<div
+className="container"
+style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12 }} >
+<iframe
+src="https://www.youtube-nocookie.com/embed/Eed29gV0hLA"
+title="YouTube video player"
+frameBorder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowFullScreen
+style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
+</div>
+<Typography variant="body1">
+Create and sell your first basic accessory.
+</Typography>
+</Grid>
+</Grid>
+</Grid>
 
 Rigid accessories are the most basic 3D cosmetic items that users can equip and wear on their avatar character, such props, weapons, hats, and more. Unlike [clothing accessories](../accessories/layered-clothing.md) that stretch and fit over a character body, rigid accessories attach to a specific point on an avatar character and don't deform or wrap over a target.
 
@@ -18,9 +58,6 @@ To create a custom Roblox accessory for your own experience or to sell on the Ma
   - [Rigid accessory creation tutorial](../../art/accessories/creating-rigid/index.md) - covers each process required for converting a 3D model to a rigid accessory and publishing it to the Marketplace.
   - [Clothing creation tutorial](../../art/accessories/creating/index.md) - a step-by-step process of creating your own avatar-ready clothing from scratch in Blender.
 - [Additional tools, resources, and guides](#resources) provided by Roblox to standardize and expedite the creation process.
-
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/Eed29gV0hLA" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br /><br />
 
 ## Components of a rigid accessory
 
