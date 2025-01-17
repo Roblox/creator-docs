@@ -8,6 +8,7 @@ description: Understand how to create and sell items on the Marketplace, includi
 The **Marketplace** is where all Roblox users can find avatar items to purchase and equip to their global avatar character. In the Marketplace, you can find character bodies and heads, clothing, accessories, animations, and other cosmetic items.
 
 Users can access the Marketplace [through the web](https://www.roblox.com/catalog) or within the Roblox App. Developers can also set up access to the Marketplace within their experiences by using the [Avatar Editor Service](../players/avatar-editor.md). Developers receive a commission based of sales of Marketplace items within their experience.
+free AlT
 
 <Alert severity ='warning'>
 The Marketplace is not the same as the [Creator Store](../production/creator-store.md). The Creator Store provides assets for creators to use for the development of their experiences, such as models, images, and plugins.
