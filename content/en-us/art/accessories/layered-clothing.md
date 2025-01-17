@@ -4,8 +4,48 @@ description: Layered clothing are cosmetic accessories that stretch, fit, and la
 hideBreadcrumbs: true
 ---
 
-<iframe width="800" height="450" src="https://www.youtube-nocookie.com/embed/gXXukd6yOSs" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<br /><br />
+<Grid container spacing={2} style={{ marginBottom: 24, width: '100%' }}>
+<Grid item xs={6} style={{ padding: 16 }}>
+<Grid item container wrap="nowrap" direction="column" style={{ gap: 8, flex: 1 }}>
+
+<div
+className="container"
+style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12 }} >
+<iframe
+src="https://www.youtube-nocookie.com/embed/gXXukd6yOSs"
+title="YouTube video player"
+frameBorder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowFullScreen
+style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
+</div>
+<Typography variant="body1">
+A high-level overview of 3D clothing on Roblox.
+</Typography>
+
+</Grid>
+</Grid>
+
+<Grid item xs={6} style={{ padding: 16 }}>
+<Grid item container wrap="nowrap" direction="column" style={{ gap: 8, flex: 1 }}>
+
+<div
+className="container"
+style={{ position: "relative", paddingBottom: "56.25%", height: 0, marginBottom: 12 }} >
+<iframe
+src="https://www.youtube-nocookie.com/embed/C-DwGRBHvmE"
+title="YouTube video player"
+frameBorder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowFullScreen
+style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} ></iframe>
+</div>
+<Typography variant="body1">
+Create and sell your first basic layered clothing.
+</Typography>
+</Grid>
+</Grid>
+</Grid>
 
 Layered clothing accessories are 3D cosmetic items that users can equip and wear on their avatar body, such as pants, t-shirt, jackets, dresses, and more. Unlike [rigid accessories](../../art/accessories/index.md) that only attach to a specific point on a character, layered clothing stretches and fits over any body type and existing clothing.
 
@@ -153,6 +193,6 @@ If you are interested in specific avatar creation topics, use the following tabl
 
 ## Classic clothing
 
-Classic clothing assets are 2D images that you can apply to the surface of an avatar body as t-shirts, shirts, or pants. You can design these assets in any image processing software, test the textures in Studio, and then upload the designs to the Marketplace to sell. See [Classic clothing](../../art/accessories/classic-clothing.md) for more information on creating, uploading, and selling these assets.
+Classic clothing assets are 2D images that you can apply to the surface of an avatar body as t-shirts, shirts, or pants. You can design these assets in any image processing software, test the textures in Studio, and then upload the designs to the Marketplace to sell. See [Classic clothing](../../art/classic-clothing.md) for more information on creating, uploading, and selling these assets.
 
 <img src="../../assets/accessories/classic-clothing/Dummy-Clothed.jpg" width="80%" />

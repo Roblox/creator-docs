@@ -12,7 +12,7 @@ In order to publish and sell assets on the Marketplace, your account or group mu
 2. [Publish the asset](#publish-an-asset) to the Marketplace after configuring metadata and Marketplace settings.
 
 <Alert severity = 'info'>
-The following publishing instructions apply to 3D accessories and clothing assets. See [Classic clothing](../art/accessories/classic-clothing.md) for information on uploading and selling classic 2D clothing.
+The following publishing instructions apply to 3D accessories and clothing assets. See [Classic clothing](../art/classic-clothing.md) for information on uploading and selling classic 2D clothing.
 </Alert>
 
 ## Upload and publish limits

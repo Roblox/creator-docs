@@ -2,6 +2,15 @@ navigation:
   - title: Get started
     path: /avatar/
 
+  - heading: Classic clothing
+    section:
+  - title: Overview
+    path: /art/classic-clothing
+  - title: Test in Studio
+    path: /art/test-classic-clothing
+  - title: Upload and sell
+    path: /art/upload-classic-clothing
+
   - heading: Accessories
     section:
   - title: Overview
@@ -29,8 +38,6 @@ navigation:
     path: /art/accessories/clothing-export-settings
   - title: Import into Studio
     path: /art/accessories/import-clothing
-  - title: Classic clothing
-    path: /art/accessories/classic-clothing
 
   - heading: Characters
   - title: Overview

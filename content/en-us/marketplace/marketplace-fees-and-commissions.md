@@ -308,6 +308,6 @@ Depending on the 3D asset type, you must set the price of the item within the ma
 
 ## Classic clothing
 
-You can upload and sell [classic clothing](../art/accessories/classic-clothing.md) through the Roblox website. It costs **10 Robux** to upload these assets.
+You can upload and sell [classic clothing](../art/classic-clothing.md) through the Roblox website. It costs **10 Robux** to upload these assets.
 
 Classic t-shirts do not require a fee when uploading, but they do require a **10 Robux** fee when going on sale for the first time. If the seller takes the item off sale, it does not require an additional fee when they place it on sale again.
