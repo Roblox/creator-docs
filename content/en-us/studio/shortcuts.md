@@ -31,8 +31,8 @@ Studio has many default shortcuts and key commands that make development quicker
     </tr>
     <tr>
       <td>**Open from Roblox...**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>O</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>O</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>O</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>O</kbd></td>
       <td>Open a recent experience from Roblox.</td>
     </tr>
     <tr>
@@ -43,8 +43,8 @@ Studio has many default shortcuts and key commands that make development quicker
     </tr>
     <tr>
       <td>**Save to File As...**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>S</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>S</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>S</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>S</kbd></td>
       <td>Save the active local file with a new name.</td>
     </tr>
 		<tr>
@@ -73,8 +73,8 @@ Studio has many default shortcuts and key commands that make development quicker
     </tr>
 		<tr>
       <td>**Open Previous Tab**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>T</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>T</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>T</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>T</kbd></td>
       <td>Open the previous tab.</td>
     </tr>
     <tr>
@@ -177,8 +177,8 @@ Studio has many default shortcuts and key commands that make development quicker
     </tr>
 		<tr>
       <td>**Paste Into**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>V</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>V</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>V</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>V</kbd></td>
       <td>Paste the objects currently on the clipboard as children of the selected object.</td>
     </tr>
 		<tr>
@@ -225,8 +225,8 @@ Studio has many default shortcuts and key commands that make development quicker
     </tr>
     <tr>
       <td>**Redo**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>Z</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>Z</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Z</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>Z</kbd></td>
       <td>Redo the previously undone action.</td>
     </tr>
   </tbody>
@@ -323,26 +323,26 @@ Studio has many default shortcuts and key commands that make development quicker
     </tr>
     <tr>
       <td>**Union**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>G</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>G</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>G</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>G</kbd></td>
       <td>Join two or more parts together to form a single solid union; see [Solid Modeling](../parts/solid-modeling.md) for details.</td>
     </tr>
 		<tr>
       <td>**Intersect**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>I</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>I</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>I</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>I</kbd></td>
       <td>Intersect overlapping parts into a single solid intersection; see [Solid Modeling](../parts/solid-modeling.md) for details.</td>
     </tr>
     <tr>
       <td>**Negate**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>N</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>N</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>N</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>N</kbd></td>
       <td>Negate parts, useful for making holes and indentations; see [Solid Modeling](../parts/solid-modeling.md) for details.</td>
     </tr>
     <tr>
       <td>**Separate**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>U</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>U</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>U</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>U</kbd></td>
       <td>Separate the union or intersection back into its individual parts; see [Solid Modeling](../parts/solid-modeling.md) for details.</td>
     </tr>
   </tbody>
@@ -402,14 +402,14 @@ Studio has many default shortcuts and key commands that make development quicker
     </tr>
     <tr>
       <td>**Explorer Filter**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>X</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>X</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>X</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>X</kbd></td>
       <td>Jump to the [Explorer](../studio/explorer.md) window filter input field.</td>
     </tr>
     <tr>
       <td>**Properties Filter**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>P</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>P</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>P</kbd></td>
       <td>Jump to the [Properties](../studio/properties.md) window filter input field.</td>
     </tr>
     <tr>
@@ -495,38 +495,38 @@ Studio has many default shortcuts and key commands that make development quicker
     </tr>
 		<tr>
       <td>**Save and Reload Plugins in Debugger**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>L</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>L</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>L</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>L</kbd></td>
       <td>Save all plugins in debugger back to disk, stop execution of those plugins, and reload them from disk.</td>
     </tr>
     <tr>
       <td>**Stats**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F1</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>F1</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F1</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>F1</kbd></td>
       <td>Show detailed experience stats.</td>
     </tr>
     <tr>
       <td>**Render**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F2</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>F2</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F2</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>F2</kbd></td>
       <td>Show detailed graphics and performance data.</td>
     </tr>
     <tr>
       <td>**Network**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F3</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>F3</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F3</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>F3</kbd></td>
       <td>Show detailed network stats. Once open, pressing <kbd>Shift</kbd><kbd>1</kbd> cycles through additional panels of data.</td>
     </tr>
     <tr>
       <td>**Physics**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F4</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>F4</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F4</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>F4</kbd></td>
       <td>Show detailed physics data.</td>
     </tr>
     <tr>
       <td>**Summary**</td>
-			<td><kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>F5</kbd></td>
-			<td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>F5</kbd></td>
+			<td><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>F5</kbd></td>
+			<td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>F5</kbd></td>
       <td>Show a summary of stats data.</td>
     </tr>
   </tbody>
@@ -616,7 +616,7 @@ Studio has many default shortcuts and key commands that make development quicker
     <tr>
       <td>**Redo**</td>
       <td><kbd>Ctrl</kbd><kbd>Y</kbd></td>
-      <td><kbd>Shift</kbd><kbd>⌘</kbd><kbd>Z</kbd></td>
+      <td><kbd>⌘</kbd><kbd>Shift</kbd><kbd>Z</kbd></td>
     </tr>
     <tr>
       <td>**Select All**</td>
