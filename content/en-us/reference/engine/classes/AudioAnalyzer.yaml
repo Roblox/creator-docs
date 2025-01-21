@@ -10,7 +10,7 @@ description: |
   it through `Class.Wire`. It provides a single **Input** pin but does not
   produce any output streams.
   Note that all audio processing is disabled on the server in order to conserve resources;
-  `Class.AudioAnalyzer`'s properties and methods return empty or zero results when used from server scripts.
+  Properties and methods of `Class.AudioAnalyzer` return empty or zero results when used from server scripts.
 code_samples: []
 inherits:
   - Instance
@@ -22,8 +22,8 @@ properties:
       The loudest volume observed during the last audio buffer.
     description: |
       The loudest volume observed during the last audio buffer. This property
-      changes more often than the framerate, and does not fire changed events.
-      On the server, this property is always 0.
+      changes more often than the framerate and does not fire changed events.
+      On the server, this property is always `0`.
     code_samples: []
     type: float
     tags:
@@ -49,8 +49,8 @@ properties:
       This property is generally more stable than
       `Class.AudioAnalyzer.PeakLevel|PeakLevel` but it may not capture momentary
       volume spikes.
-      This property changes more often than the framerate, and does not fire changed events.
-      On the server, this property is always 0.
+      This property changes more often than the framerate and does not fire changed events.
+      On the server, this property is always `0`.
     code_samples: []
     type: float
     tags:
