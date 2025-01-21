@@ -59,7 +59,7 @@ properties:
       Color of the text in the chat window.
     description: |
       Determines the color of the text in the chat window. Default value is
-      `Datatype.Color3.new(255, 255, 255)` (white).
+      `Datatype.Color3.new(1, 1, 1)` (white).
     code_samples: []
     type: Color3
     tags: []
