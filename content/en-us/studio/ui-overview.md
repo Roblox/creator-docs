@@ -251,6 +251,6 @@ Studio offers a suite of options for testing an experience before [releasing it 
 - [Rapid paytesting](../studio/testing-modes.md#playtest-options) &mdash; Provides a close simulation of the experience running on the Roblox application.
 - [Multi-client simulation](../studio/testing-modes.md#multi-client-simulation) &mdash; Compares how each client "sees" other clients within the experience.
 - [Device emulation](../studio/testing-modes.md#device-emulation) &mdash; Provides insight on how controls operate on a mobile device or how on-screen UI displays on different screens and aspect ratios.
-- [Controller emultation](../studio/testing-modes.md#controller-emulation) &mdash; Accurately emulates [gamepad input](../input/gamepad.md) directly in Studio.
+- [Controller emulation](../studio/testing-modes.md#controller-emulation) &mdash; Accurately emulates [gamepad input](../input/gamepad.md) directly in Studio.
 
 See [Studio testing modes](../studio/testing-modes.md) for more information on each testing option.
