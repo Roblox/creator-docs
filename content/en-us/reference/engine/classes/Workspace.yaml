@@ -38,9 +38,9 @@ description: |
 
   - Objects that require adornment, such as
     `Class.ParticleEmitter|ParticleEmitters` and
-    `Class.BillboardGui|BillboardGuis`, will be at the <Typography noWrap>`(0, 0, 0)`</Typography>
-    position when parented to `Class.Workspace` without an adornee otherwise
-    being set.
+    `Class.BillboardGui|BillboardGuis`, will be at the
+    <Typography noWrap>`(0, 0, 0)`</Typography> position when parented to
+    `Class.Workspace` without an adornee otherwise being set.
   - The `Class.Model:MakeJoints()` and `Class.Model:BreakJoints()` methods
     inherited from the `Class.Model` class are overridden by
     `Class.Workspace:MakeJoints()` and `Class.Workspace:BreakJoints()` which can

@@ -122,9 +122,9 @@ properties:
       Determines the draw order of the `Class.HandleAdornment`.
     description: |
       The `ZIndex` property determines the draw order of the
-      `Class.HandleAdornment`. This only refers to how the adornment
-      will draw relative to other adornments or 3D objects in the workspace.
-      This does not relate to the `Class.GuiObject.ZIndex` of GuiObjects.
+      `Class.HandleAdornment`. This only refers to how the adornment will draw
+      relative to other adornments or 3D objects in the workspace. This does not
+      relate to the `Class.GuiObject.ZIndex` of GuiObjects.
 
       The valid values for ZIndex are from -1 to 10. If two HandleAdornments are
       drawn over one another, the one with the higher ZIndex will be drawn. This

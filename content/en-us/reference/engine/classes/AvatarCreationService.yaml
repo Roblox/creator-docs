@@ -17,24 +17,6 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: AvatarCreationService:DeserializeAvatarModel
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: serializedModel
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: Instance
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AvatarCreationService:GetValidationRules
     summary: |
       Gets data regarding rules that assets must abide by to pass UGC
@@ -315,25 +297,6 @@ methods:
           - A secondary optional string result. In the case of
             `Enum.PromptCreateAvatarResult.Success`, this will indicate the
             outfit ID. In the case of any failure enum, this will be `nil`.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AvatarCreationService:PromptSelectAvatarGenerationImageAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: player
-        type: Player
-        default:
-        summary: ''
-    returns:
-      - type: string
-        summary: ''
     tags:
       - Yields
     deprecation_message: ''

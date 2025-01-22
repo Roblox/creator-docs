@@ -37,21 +37,55 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AdService:GetAdAvailability
+  - name: AdService:HandleWhyThisAdClicked
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: adFormat
-        type: AdFormat
+      - name: advertiserName
+        type: string
+        default:
+        summary: ''
+      - name: payerName
+        type: string
         default:
         summary: ''
     returns:
-      - type: Variant
+      - type: void
         summary: ''
     tags: []
     deprecation_message: ''
-    security: None
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AdService:OnDemandVideoCompleteFromUI
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: result
+        type: ShowAdResult
+        default:
+        summary: ''
+      - name: encryptedAdTrackingData
+        type: string
+        default:
+        summary: ''
+      - name: encryptionMetadata
+        type: string
+        default:
+        summary: ''
+      - name: rewardDetails
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
@@ -71,6 +105,25 @@ methods:
       `Class.AdService` has been decommissioned and is no longer operational.
       [Immersive Ads](../../../production/monetization/immersive-ads.md) should
       be used as a replacement for `Class.AdService`.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AdService:GetAdAvailabilityNowAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: adFormat
+        type: AdFormat
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -99,40 +152,6 @@ methods:
     capabilities: []
     writeCapabilities: []
 events:
-  - name: AdService.AdAvailabilityChanged
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: adFormat
-        type: AdFormat
-        default:
-        summary: ''
-      - name: adAvailabilityResult
-        type: Variant
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AdService.ShowReportAdPopup
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: adInfo
-        type: Dictionary
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AdService.VideoAdClosed
     summary: |
       Fires when an `Class.AdService` video closes.
@@ -154,4 +173,22 @@ events:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-callbacks: []
+callbacks:
+  - name: AdService.onDemandVideoPlayInUI
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: data
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: VideoFrame
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []

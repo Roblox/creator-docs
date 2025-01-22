@@ -115,8 +115,8 @@ methods:
     summary: |
       Inserts `Class.Instance` into `Class.Workspace`.
     description: |
-      This function is a legacy method used to insert an
-      `Class.Instance` into `Class.Workspace`.
+      This function is a legacy method used to insert an `Class.Instance` into
+      `Class.Workspace`.
     code_samples:
       - InsertService-Insert1
     parameters:

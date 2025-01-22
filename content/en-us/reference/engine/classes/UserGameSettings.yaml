@@ -27,6 +27,7 @@ inherits:
 tags:
   - NotCreatable
   - UserSettings
+  - NotReplicated
 deprecation_message: ''
 properties:
   - name: UserGameSettings.AllTutorialsDisabled

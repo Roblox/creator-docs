@@ -498,17 +498,18 @@ functions:
       ```
 
       Specifically, require-by-string's resolution semantics are as follows:
+
       - String paths must begin with either `./` or `../`, where `./` is
         equivalent to `script.Parent` and `../` is equivalent to
         `script.Parent.Parent`.
       - If the resolved path points to an `Class.Instance` that is not a
-      `Class.ModuleScript`, `Global.LuaGlobals.require()` will attempt to find a
-      `Class.ModuleScript` named `Init` or `init` parented to that
-      `Class.Instance` and use it instead, if it exists.
+        `Class.ModuleScript`, `Global.LuaGlobals.require()` will attempt to find
+        a `Class.ModuleScript` named `Init` or `init` parented to that
+        `Class.Instance` and use it instead, if it exists.
       - If the desired `Class.ModuleScript` is not present at the time that
-      `Global.LuaGlobals.require()` is called, the call will fail and throw an
-      error. In other words, require-by-string is non-blocking: it does not
-      implicitly wait for a `Class.ModuleScript` to be created.
+        `Global.LuaGlobals.require()` is called, the call will fail and throw an
+        error. In other words, require-by-string is non-blocking: it does not
+        implicitly wait for a `Class.ModuleScript` to be created.
 
       Once the return object is created by an **initial**
       `Global.LuaGlobals.require()` call of a `Class.ModuleScript`, future

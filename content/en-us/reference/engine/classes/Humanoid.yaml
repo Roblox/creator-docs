@@ -1458,24 +1458,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: Humanoid:ComputeOriginalSizeForPart
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: part
-        type: Instance
-        default:
-        summary: ''
-    returns:
-      - type: Vector3?
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: Humanoid:EquipTool
     summary: |
       Makes the `Class.Humanoid` equip the given `Class.Tool`.

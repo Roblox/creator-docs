@@ -73,25 +73,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AssetService:CheckTextureAlphaAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: textureId
-        type: ContentId
-        default:
-        summary: ''
-    returns:
-      - type: bool
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreateAssetAsync
     summary: |
       Creates a new asset from the given object.

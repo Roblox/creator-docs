@@ -258,24 +258,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AvatarEditorService:refreshAvatarThumbnails
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: thumbnailTypes
-        type: Array
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AvatarEditorService:CheckApplyDefaultClothing
     summary: |
       Used to apply default clothing to the `Class.HumanoidDescription` if

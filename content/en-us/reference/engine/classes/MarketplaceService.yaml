@@ -23,7 +23,9 @@ description: |
   `Class.MarketplaceService:PlayerOwnsBundle()|PlayerOwnsBundle`).
 
   Understanding `Class.MarketplaceService` is the first step towards learning to
-  [monetize](../../../production/monetization/index.md) an experience on Roblox, as well as learning to use `Class.DataStoreService`, which is responsible for saving and loading all data related to purchases.
+  [monetize](../../../production/monetization/index.md) an experience on Roblox,
+  as well as learning to use `Class.DataStoreService`, which is responsible for
+  saving and loading all data related to purchases.
 code_samples:
 inherits:
   - Instance
@@ -35,13 +37,13 @@ properties: []
 methods:
   - name: MarketplaceService:PromptBulkPurchase
     summary: |
-      Prompts a user to purchase multiple avatar items with the given `assetId` or `bundleId`.
+      Prompts a user to purchase multiple avatar items with the given `assetId`
+      or `bundleId`.
     description: |
-      Prompts a user to purchase multiple avatar items with the given
-      `assetId` or `bundleId`. Does not work with non-avatar items.
+      Prompts a user to purchase multiple avatar items with the given `assetId`
+      or `bundleId`. Does not work with non-avatar items.
 
-      `PromptBulkPurchase` only allows prompting from
-      server scripts.
+      `PromptBulkPurchase` only allows prompting from server scripts.
 
       For limited items, original copies are prompted until they run out,
       regardless of the price. Once original copies are out, resale copies are
@@ -172,7 +174,8 @@ methods:
     description: |
       Prompts a user to purchase
       [Roblox Premium](https://www.roblox.com/premium/membership). To learn more
-      about Premium and about incorporating Premium incentives into your experience, see
+      about Premium and about incorporating Premium incentives into your
+      experience, see
       [Engagement-based payouts](../../../production/monetization/engagement-based-payouts.md).
 
       ##### See also
@@ -203,7 +206,8 @@ methods:
       Prompts a user to purchase a developer product with the given `productId`.
     description: |
       Prompts a user to purchase a
-      [developer product](../../../production/monetization/developer-products.md) with the given `productId`.
+      [developer product](../../../production/monetization/developer-products.md)
+      with the given `productId`.
     code_samples:
       - MarketplaceService-PromptProductPurchase1
     parameters:
@@ -332,11 +336,13 @@ methods:
     description: |
       This method provides information about an asset,
       [developer product](../../../production/monetization/developer-products.md),
-      or [pass](../../../production/monetization/game-passes.md) based on the asset ID and the `Enum.InfoType`. If an item with the given ID does not exist, this method throws an error.
-      
-      Information about the queried item is provided
-      in a dictionary with the following keys. Note that not all information is
-      provided or necessarily relevant for the kind of product you're querying.
+      or [pass](../../../production/monetization/game-passes.md) based on the
+      asset ID and the `Enum.InfoType`. If an item with the given ID does not
+      exist, this method throws an error.
+
+      Information about the queried item is provided in a dictionary with the
+      following keys. Note that not all information is provided or necessarily
+      relevant for the kind of product you're querying.
 
       <table size="small">
       	<thead>
@@ -916,8 +922,9 @@ methods:
     summary: |
       Returns whether the given user has the given asset.
     description: |
-      Returns whether the inventory of a specific user contains an asset, based on the asset ID. This method throws an error if the query fails,
-      so you should wrap calls to this method in `pcall()`.
+      Returns whether the inventory of a specific user contains an asset, based
+      on the asset ID. This method throws an error if the query fails, so you
+      should wrap calls to this method in `pcall()`.
 
       - This method should **not** be used for
         [passes](../../../production/monetization/game-passes.md) since they use
@@ -937,8 +944,8 @@ methods:
         type: Instance
         default:
         summary: |
-          The `Class.Player` whose inventory is tested for
-          ownership of the given asset.
+          The `Class.Player` whose inventory is tested for ownership of the
+          given asset.
       - name: assetId
         type: int64
         default:
@@ -960,8 +967,9 @@ methods:
     summary: |
       Returns whether the given player owns the given bundle.
     description: |
-      Returns whether the inventory of a specific user contains a bundle, based on the bundle ID. This method throws an error if the query fails,
-      so you should wrap calls to this method in `pcall()`.
+      Returns whether the inventory of a specific user contains a bundle, based
+      on the bundle ID. This method throws an error if the query fails, so you
+      should wrap calls to this method in `pcall()`.
     code_samples:
       - MarketplaceService-PlayerOwnsBundle1
     parameters:
@@ -969,8 +977,8 @@ methods:
         type: Player
         default:
         summary: |
-          The `Class.Player` whose inventory is tested for
-          ownership of the given bundle.
+          The `Class.Player` whose inventory is tested for ownership of the
+          given bundle.
       - name: bundleId
         type: int64
         default:
@@ -993,17 +1001,25 @@ methods:
       Returns true if the player with the given `Class.Player.UserId|UserId`
       owns the pass with the given `gamePassId`.
     description: |
-      Returns true if the user with the given `Class.Player.UserId|UserId`
-      owns the [pass](../../../production/monetization/game-passes.md) with the
-      given `gamePassId` (not to be confused with an asset ID).
+      Returns true if the user with the given `Class.Player.UserId|UserId` owns
+      the [pass](../../../production/monetization/game-passes.md) with the given
+      `gamePassId` (not to be confused with an asset ID).
 
       #### Caching Behavior
 
-      The results of this function are remembered so that repeated calls are returned faster. 
-      
-      This function always returns true when the user first enters a server after purchasing the pass.
+      The results of this function are remembered so that repeated calls are
+      returned faster.
 
-      If the user has purchased the pass inside an experience through `Class.MarketplaceService:PromptGamePassPurchase()|PromptGamePassPurchase`, the `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync` function might return false because of caching behavior. Alternatively, the function might return true even after the user has deleted the pass from their inventory.
+      This function always returns true when the user first enters a server
+      after purchasing the pass.
+
+      If the user has purchased the pass inside an experience through
+      `Class.MarketplaceService:PromptGamePassPurchase()|PromptGamePassPurchase`,
+      the
+      `Class.MarketplaceService:UserOwnsGamePassAsync()|UserOwnsGamePassAsync`
+      function might return false because of caching behavior. Alternatively,
+      the function might return true even after the user has deleted the pass
+      from their inventory.
     code_samples:
     parameters:
       - name: userId
@@ -1016,7 +1032,8 @@ methods:
         type: int64
         default:
         summary: |
-          The pass ID you want to check for. Not to be confused with an asset ID.
+          The pass ID you want to check for. Not to be confused with an asset
+          ID.
     returns:
       - type: bool
         summary: ''
@@ -1032,10 +1049,14 @@ events:
     summary: |
       Fires when a purchase prompt for bulk avatar items is closed.
     description: |
-      This event fires when a purchase prompt for a bulk avatar items closes. For example, when a user receives the purchase prompt and clicks **Cancel**, or when they receive a success or error message and click **OK**.
+      This event fires when a purchase prompt for a bulk avatar items closes.
+      For example, when a user receives the purchase prompt and clicks
+      **Cancel**, or when they receive a success or error message and click
+      **OK**.
 
       Note: This is not a trusted event from the client. To check if the user
-      owns the items purchased, use `Class.MarketplaceService.PlayerOwnsAsset` or `Class.MarketplaceService.PlayerOwnsBundle`.
+      owns the items purchased, use `Class.MarketplaceService.PlayerOwnsAsset`
+      or `Class.MarketplaceService.PlayerOwnsBundle`.
     code_samples: []
     parameters:
       - name: player
@@ -1108,7 +1129,10 @@ events:
     summary: |
       Fires when a purchase prompt for a pass is closed.
     description: |
-      This event fires when a purchase prompt for a [pass](../../../production/monetization/game-passes.md) closes. For example, when a user receives the purchase prompt and clicks **Cancel**, or when they receive a success or error message and click **OK**.
+      This event fires when a purchase prompt for a
+      [pass](../../../production/monetization/game-passes.md) closes. For
+      example, when a user receives the purchase prompt and clicks **Cancel**,
+      or when they receive a success or error message and click **OK**.
 
       ##### See also
 
@@ -1116,7 +1140,9 @@ events:
         `Class.MarketplaceService.PromptProductPurchaseFinished|PromptProductPurchaseFinished`.
       - For **affiliate gear sales** or other assets, use
         `Class.MarketplaceService.PromptPurchaseFinished|PromptPurchaseFinished`.
-      - For more information on saving and replicating user data like purchases and progress, see [Implementing player data and purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
+      - For more information on saving and replicating user data like purchases
+        and progress, see
+        [Implementing player data and purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
     code_samples:
       - handling-gamepass
     parameters:
@@ -1135,10 +1161,13 @@ events:
         type: bool
         default:
         summary: |
-          Indicates if the user pressed **OK** (true), **Cancel** (false) on the purchase prompt, or if the purchase prompt errored (false). 
-          
+          Indicates if the user pressed **OK** (true), **Cancel** (false) on the
+          purchase prompt, or if the purchase prompt errored (false).
+
           This might not accurately reflect if the purchase itself has been
-          successfully processed. Use `MarketplaceService.UserOwnsGamePassAsync|UserOwnsGamePassAsync` as ownership confirmation.
+          successfully processed. Use
+          `MarketplaceService.UserOwnsGamePassAsync|UserOwnsGamePassAsync` as
+          ownership confirmation.
     tags: []
     deprecation_message: ''
     security: None
@@ -1149,12 +1178,17 @@ events:
     summary: |
       Fires when a purchase prompt for Roblox Premium is closed.
     description: |
-      This event fires when a purchase prompt for [Roblox Premium](https://www.roblox.com/premium/membership) closes. For example, when a user receives the purchase prompt and clicks **Cancel**, or when they receive a success or error message and click **OK**.
+      This event fires when a purchase prompt for
+      [Roblox Premium](https://www.roblox.com/premium/membership) closes. For
+      example, when a user receives the purchase prompt and clicks **Cancel**,
+      or when they receive a success or error message and click **OK**.
 
       ##### See also
 
-      - `Class.MarketplaceService.PromptPremiumPurchase|PromptPremiumPurchase` to prompt a user to purchase Premium.
-      - `Class.Players.PlayerMembershipChanged|PlayerMembershipChanged`, which fires when the server recognizes that a user's membership has changed.
+      - `Class.MarketplaceService.PromptPremiumPurchase|PromptPremiumPurchase`
+        to prompt a user to purchase Premium.
+      - `Class.Players.PlayerMembershipChanged|PlayerMembershipChanged`, which
+        fires when the server recognizes that a user's membership has changed.
     code_samples:
     parameters: []
     tags: []
@@ -1165,28 +1199,52 @@ events:
     writeCapabilities: []
   - name: MarketplaceService.PromptProductPurchaseFinished
     summary: |
-      Fires when a purchase prompt for a developer product is closed. Do not use this event to process purchases.
+      Fires when a purchase prompt for a developer product is closed. Do not use
+      this event to process purchases.
     description: |
-      **IMPORTANT:** Do **not** use the `PromptProductPurchaseFinished` event to process purchases; instead, use the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callback. The firing of `PromptProductPurchaseFinished` does **not** mean that a user has successfully purchased an item.
+      **IMPORTANT:** Do **not** use the `PromptProductPurchaseFinished` event to
+      process purchases; instead, use the
+      `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callback. The
+      firing of `PromptProductPurchaseFinished` does **not** mean that a user
+      has successfully purchased an item.
 
-      This event fires when a purchase prompt for a [developer product](../../../production/monetization/developer-products.md) closes. For example, when a user receives the purchase prompt and clicks **Cancel**, or when they receive a success or error message and click **OK**. The firing of this event does **not** mean that a user has successfully purchased an item.
+      This event fires when a purchase prompt for a
+      [developer product](../../../production/monetization/developer-products.md)
+      closes. For example, when a user receives the purchase prompt and clicks
+      **Cancel**, or when they receive a success or error message and click
+      **OK**. The firing of this event does **not** mean that a user has
+      successfully purchased an item.
 
-      While you can use the `PromptProductPurchaseFinished` event to detect when a user closes a purchase prompt, you should **not** use it to process purchases because those purchases might still fail in the backend for several reasons. For example, if a Roblox system is offline, or if the product price has changed and the user now doesn't have enough Robux to make the purchase. To process purchases, you must use `Class.MarketplaceService.ProcessReceipt()|ProcessReceipt`. Using `ProcessReceipt` allows you to confirm that the purchase has succeeded before you grant the user the item they have purchased.
+      While you can use the `PromptProductPurchaseFinished` event to detect when
+      a user closes a purchase prompt, you should **not** use it to process
+      purchases because those purchases might still fail in the backend for
+      several reasons. For example, if a Roblox system is offline, or if the
+      product price has changed and the user now doesn't have enough Robux to
+      make the purchase. To process purchases, you must use
+      `Class.MarketplaceService.ProcessReceipt()|ProcessReceipt`. Using
+      `ProcessReceipt` allows you to confirm that the purchase has succeeded
+      before you grant the user the item they have purchased.
 
-      The `PromptProductPurchaseFinished` event fires with a `Player.UserId` instead of a reference to the `Player` object.
+      The `PromptProductPurchaseFinished` event fires with a `Player.UserId`
+      instead of a reference to the `Player` object.
 
       ##### See also
 
-      - `Class.MarketplaceService.PromptGamePassPurchaseFinished|PromptGamePassPurchaseFinished` to prompt a user to purchase a pass.
-      - `Class.MarketplaceService.PromptPurchaseFinished|PromptPurchaseFinished` to prompt a user to purchase affiliate gear or other assets.
-      - For more information on saving and replicating user data like purchases and progress, see [Implementing player data and purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
+      - `Class.MarketplaceService.PromptGamePassPurchaseFinished|PromptGamePassPurchaseFinished`
+        to prompt a user to purchase a pass.
+      - `Class.MarketplaceService.PromptPurchaseFinished|PromptPurchaseFinished`
+        to prompt a user to purchase affiliate gear or other assets.
+      - For more information on saving and replicating user data like purchases
+        and progress, see
+        [Implementing player data and purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
     code_samples:
     parameters:
       - name: userId
         type: int64
         default:
         summary: |
-          The `Class.Player.UserId|UserId` of the user who received the developer product prompt.
+          The `Class.Player.UserId|UserId` of the user who received the
+          developer product prompt.
       - name: productId
         type: int64
         default:
@@ -1197,8 +1255,9 @@ events:
         type: bool
         default:
         summary: |
-          Indicates if the user pressed **OK** (true), **Cancel** (false) on the purchase prompt, or if the purchase prompt errored (false).
-          
+          Indicates if the user pressed **OK** (true), **Cancel** (false) on the
+          purchase prompt, or if the purchase prompt errored (false).
+
           Do not use this parameter to process developer product purchases.
     tags: []
     deprecation_message: ''
@@ -1211,15 +1270,24 @@ events:
       Fires when a purchase prompt for an affiliate gear sale or other asset is
       closed. Does **not** fire for developer product or pass prompts.
     description: |
-      This event fires when a purchase prompt for an affiliate gear sale or other asset closes. For example, when a user receives the purchase prompt and clicks **Cancel**, or when they receive a success or error message and click **OK**.
+      This event fires when a purchase prompt for an affiliate gear sale or
+      other asset closes. For example, when a user receives the purchase prompt
+      and clicks **Cancel**, or when they receive a success or error message and
+      click **OK**.
 
-      This event does not fire for [developer product](../../../production/monetization/developer-products.md) or [pass](../../../production/monetization/game-passes.md) prompts.
+      This event does not fire for
+      [developer product](../../../production/monetization/developer-products.md)
+      or [pass](../../../production/monetization/game-passes.md) prompts.
 
       ##### See also
 
-      - `Class.MarketplaceService.PromptGamePassPurchaseFinished|PromptGamePassPurchaseFinished` to prompt a user to purchase a pass.
-      - `Class.MarketplaceService.PromptProductPurchaseFinished|PromptProductPurchaseFinished` to prompt a user to purchase a developer product.
-      - For more information on saving and replicating user data like purchases and progress, see [Implementing player data and purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
+      - `Class.MarketplaceService.PromptGamePassPurchaseFinished|PromptGamePassPurchaseFinished`
+        to prompt a user to purchase a pass.
+      - `Class.MarketplaceService.PromptProductPurchaseFinished|PromptProductPurchaseFinished`
+        to prompt a user to purchase a developer product.
+      - For more information on saving and replicating user data like purchases
+        and progress, see
+        [Implementing player data and purchases](https://devforum.roblox.com/t/implementing-player-data-and-purchasing-systems/2839941).
     code_samples:
       - MarketplaceService-PromptPurchaseFinished1
     parameters:
@@ -1237,8 +1305,9 @@ events:
         type: bool
         default:
         summary: |
-          Indicates if the user pressed **OK** (true), **Cancel** (false) on the purchase prompt, or if the purchase prompt errored (false). 
-          
+          Indicates if the user pressed **OK** (true), **Cancel** (false) on the
+          purchase prompt, or if the purchase prompt errored (false).
+
           This might not accurately reflect if the purchase itself has been
           successfully processed.
     tags: []
@@ -1251,12 +1320,18 @@ events:
     summary: |
       Fires when a purchase prompt for a subscription is closed.
     description: |
-      This event fires when a purchase prompt for an affiliate gear sale or other asset closes. For example, when a user receives the purchase prompt and clicks **Cancel**, or when they receive a success or error message and click **OK**.
+      This event fires when a purchase prompt for an affiliate gear sale or
+      other asset closes. For example, when a user receives the purchase prompt
+      and clicks **Cancel**, or when they receive a success or error message and
+      click **OK**.
 
       ##### See also
 
-      - `Class.MarketplaceService.PromptSubscriptionPurchase|PromptSubscriptionPurchase` to prompt a user to purchase a subscription.
-      - `Class.Players.UserSubscriptionStatusChanged|UserSubscriptionStatusChanged`, which fires when the server recognizes that a user's membership has changed.
+      - `Class.MarketplaceService.PromptSubscriptionPurchase|PromptSubscriptionPurchase`
+        to prompt a user to purchase a subscription.
+      - `Class.Players.UserSubscriptionStatusChanged|UserSubscriptionStatusChanged`,
+        which fires when the server recognizes that a user's membership has
+        changed.
     code_samples: []
     parameters:
       - name: user
@@ -1285,48 +1360,81 @@ callbacks:
     summary: |
       A callback to process receipts of developer product purchases.
     description: |
-      **IMPORTANT:** We **highly recommend** that you properly implement the `ProcessReceipt` callback in order to sell your developer products. You should use `ProcessReceipt` to grant users their purchased product over any other granting method. If your `ProcessReceipt` implementation isn't correct, you will **not** be able to grant users the products they have purchased on the Experience Detail page.
-      
-      A callback to process receipts from [developer product](../../../production/monetization/developer-products.md) purchases. You can sell developer products inside an experience using `MarketplaceService` functions, or outside an experience on the Experience Detail page.
+      **IMPORTANT:** We **highly recommend** that you properly implement the
+      `ProcessReceipt` callback in order to sell your developer products. You
+      should use `ProcessReceipt` to grant users their purchased product over
+      any other granting method. If your `ProcessReceipt` implementation isn't
+      correct, you will **not** be able to grant users the products they have
+      purchased on the Experience Detail page.
 
-      You should only set the `ProcessReceipt` callback one time in a single server-side `Class.Script|Script`. This callback must handle the receipts for all developer products you have for sale.
+      A callback to process receipts from
+      [developer product](../../../production/monetization/developer-products.md)
+      purchases. You can sell developer products inside an experience using
+      `MarketplaceService` functions, or outside an experience on the Experience
+      Detail page.
+
+      You should only set the `ProcessReceipt` callback one time in a single
+      server-side `Class.Script|Script`. This callback must handle the receipts
+      for all developer products you have for sale.
 
       #### Guarantees
 
-      The `ProcessReceipt` callback is called for all unresolved developer product purchases when:
+      The `ProcessReceipt` callback is called for all unresolved developer
+      product purchases when:
+
       - A user successfully completes the purchase of a developer product.
       - A successful developer product purchase prompt appears to the user.
       - A user joins the server.
 
       A purchase is considered **successfully initiated** when:
+
       - The purchase is processed on Roblox's backend.
       - The funds are placed in escrow.
 
       A purchase is considered **resolved** when:
-      - The `ProcessReceipt` callback returns a `Enum.ProductPurchaseDecision` enum of `Enum.ProductPurchaseDecision.PurchaseGranted|PurchaseGranted`.
+
+      - The `ProcessReceipt` callback returns a `Enum.ProductPurchaseDecision`
+        enum of `Enum.ProductPurchaseDecision.PurchaseGranted|PurchaseGranted`.
       - The purchase is successfully recorded on Roblox's backend.
 
       #### Unresolved developer product purchases
 
-      An **unresolved developer product purchase** takes place when a user's purchase of a developer product has not yet been acknowledged by the server through the `ProcessReceipt` function.
+      An **unresolved developer product purchase** takes place when a user's
+      purchase of a developer product has not yet been acknowledged by the
+      server through the `ProcessReceipt` function.
 
-      Unresolved developer product purchases are not removed or refunded after the escrow period expires.
+      Unresolved developer product purchases are not removed or refunded after
+      the escrow period expires.
 
       #### Retries and timeouts
 
-      `ProcessReceipt` has no time-based retry mechanism. If a user makes a purchase that returns a `Enum.ProductPurchaseDecision` enum of `Enum.ProductPurchaseDecision.PurchaseGranted|NotProcessedYet`, the `ProcessReceipt` callback is only called again on the same server if:
+      `ProcessReceipt` has no time-based retry mechanism. If a user makes a
+      purchase that returns a `Enum.ProductPurchaseDecision` enum of
+      `Enum.ProductPurchaseDecision.PurchaseGranted|NotProcessedYet`, the
+      `ProcessReceipt` callback is only called again on the same server if:
+
       - The user successfully initiates another developer product purchase.
       - The user re-joins any server under the same experience.
 
-      `ProcessReceipt` also has no timeout for yielded callbacks. A `ProcessReceipt` callback can yield for as long as the server is running, and the callback result is still accepted when the result returns.
+      `ProcessReceipt` also has no timeout for yielded callbacks. A
+      `ProcessReceipt` callback can yield for as long as the server is running,
+      and the callback result is still accepted when the result returns.
 
       #### Limitations
 
-      - When there are multiple purchases pending for a user, `ProcessReceipt` callbacks are called in a non-deterministic order.
-      - The user must be on the server for the `ProcessReceipt` callback to be invoked.
-      - The user does not have to be on the server for the result of the `ProcessReceipt` callback to be recorded on the backend.
-      - The `ProcessReceipt` callback for a specific purchase might run on two different servers at the same time if the user joins the second server before the callback returns on the first server.
-      - The `ProcessReceipt` callback might still fail to be recorded on the backend, even if it returns a `Enum.ProductPurchaseDecision` enum of `Enum.ProductPurchaseDecision.PurchaseGranted|PurchaseGranted`. When this happens, the purchase remains unresolved.
+      - When there are multiple purchases pending for a user, `ProcessReceipt`
+        callbacks are called in a non-deterministic order.
+      - The user must be on the server for the `ProcessReceipt` callback to be
+        invoked.
+      - The user does not have to be on the server for the result of the
+        `ProcessReceipt` callback to be recorded on the backend.
+      - The `ProcessReceipt` callback for a specific purchase might run on two
+        different servers at the same time if the user joins the second server
+        before the callback returns on the first server.
+      - The `ProcessReceipt` callback might still fail to be recorded on the
+        backend, even if it returns a `Enum.ProductPurchaseDecision` enum of
+        `Enum.ProductPurchaseDecision.PurchaseGranted|PurchaseGranted`. When
+        this happens, the purchase remains unresolved.
     code_samples:
       - ProcessReceipt-Example
     parameters:
@@ -1334,13 +1442,16 @@ callbacks:
         type: Dictionary
         default:
         summary: |
-          The `receiptInfo` table passed to this callback contains the
-          following data:
+          The `receiptInfo` table passed to this callback contains the following
+          data:
 
           - `PurchaseId` &mdash; A unique identifier for the specific purchase.
           - `PlayerId` &mdash; The user ID of the user who made the purchase.
           - `ProductId` &mdash; The ID of the purchased product.
-          - `PlaceIdWherePurchased` &mdash; The place ID in which the purchase was made. Depending on where the user is during gameplay, the purchase place's ID can be the same as or different from the current place's ID.
+          - `PlaceIdWherePurchased` &mdash; The place ID in which the purchase
+            was made. Depending on where the user is during gameplay, the
+            purchase place's ID can be the same as or different from the current
+            place's ID.
           - `CurrencySpent` &mdash; The amount of currency spent in the
             transaction.
           - `CurrencyType` &mdash; The type of currency spent in the purchase;
@@ -1348,14 +1459,17 @@ callbacks:
     returns:
       - type: ProductPurchaseDecision
         summary: |
-          An enum that represents how the developer product receipt was processed.
+          An enum that represents how the developer product receipt was
+          processed.
 
           - `PurchaseGranted`:
-            - Indicates that the experience successfully granted
-            the player the developer product.
-            - Indicates to Roblox that the developer product sale was successful.
+            - Indicates that the experience successfully granted the player the
+              developer product.
+            - Indicates to Roblox that the developer product sale was
+              successful.
           - `NotProcessedYet`:
-            - Indicates that the experience failed to grant the player the developer product.
+            - Indicates that the experience failed to grant the player the
+              developer product.
     tags: []
     deprecation_message: ''
     security: None
