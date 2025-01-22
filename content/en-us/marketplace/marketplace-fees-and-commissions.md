@@ -6,7 +6,7 @@ comments: Updates to this page require careful internal review. We generally don
 
 You can create and sell bodies, heads, accessories, and clothes on the [Marketplace](https://www.roblox.com/catalog). After you pay any applicable upload fees, you can upload your new asset for marketplace approval. Once the moderation team reviews and approves your asset, you can set your item for sell on the Marketplace.
 
-You receive a commission every time users purchase your item. If users purchase your item within an experience using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md) or the [Avatar Editor Service](../players/avatar-editor.md), the experience owner also receives a commission. For information on viewing your sales data, see [Sales Data analytics](../production/analytics/analytics-dashboard.md#sales-data).
+You receive a commission every time users purchase your item. If users purchase your item within an experience using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md), [Avatar Editor Service](../players/avatar-editor.md), or `Class.MarketplaceService`, the experience owner also receives a commission. For information on viewing your sales data, see [Sales Data analytics](../production/analytics/analytics-dashboard.md#sales-data).
 
 ## Upload fees
 

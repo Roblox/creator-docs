@@ -1,9 +1,11 @@
 name: ImageAlphaType
 type: enum
 summary: |
-  Enum for determining if the alpha or color is locked while combining two images.
+  Enum for determining if the alpha or color is locked while combining two
+  images.
 description: |
-  Enum for determining if the alpha or color is locked while combining two images.
+  Enum for determining if the alpha or color is locked while combining two
+  images.
 code_samples: []
 tags: []
 deprecation_message: ''
@@ -26,4 +28,3 @@ items:
     value: 3
     tags: []
     deprecation_message: ''
-    

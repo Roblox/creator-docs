@@ -193,7 +193,7 @@ methods:
     code_samples: []
     parameters:
       - name: mesh
-        type: EditableMesh
+        type: Object
         default:
         summary: |
           The `Class.EditableMesh` used to project into.
@@ -201,15 +201,15 @@ methods:
         type: Dictionary
         default:
         summary: |
-          Projection configuration dictionary including the following
-          key-value pairs:
+          Projection configuration dictionary including the following key-value
+          pairs:
 
           - `Direction` (`Datatype.Vector3`) where the projector is facing.
-          - `Position` (`Datatype.Vector3`) as the position in local space
-            with respect to the mesh.
+          - `Position` (`Datatype.Vector3`) as the position in local space with
+            respect to the mesh.
           - `Size` (`Datatype.Vector3`) as the size of the projector.
-          - `Up` (`Datatype.Vector3`) as the up vector of the projector in
-            local space with respect to the mesh.
+          - `Up` (`Datatype.Vector3`) as the up vector of the projector in local
+            space with respect to the mesh.
       - name: brushConfig
         type: Dictionary
         default:
@@ -217,10 +217,10 @@ methods:
           Brush configuration dictionary including the following key-value
           pairs:
 
-          - `AlphaBlendType` (`Enum.ImageAlphaType`) which determines how
-            this projection will blend alpha values.
-          - `ColorBlendType` (`Enum.ImageCombineType`) which determines
-            how this projection will blend color values.
+          - `AlphaBlendType` (`Enum.ImageAlphaType`) which determines how this
+            projection will blend alpha values.
+          - `ColorBlendType` (`Enum.ImageCombineType`) which determines how this
+            projection will blend color values.
           - `Decal` (`Class.EditableImage`) as the image used for projection.
           - `FadeAngle` (number) as the angle in degrees for the projection
             edges to fall off.

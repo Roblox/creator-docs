@@ -447,7 +447,8 @@ properties:
     summary: |
       A reference to the `Class.Workspace` service.
     description: |
-      This property is a reference to the `Class.Workspace` service. It always points to `Class.Workspace` and will never be `nil`.
+      This property is a reference to the `Class.Workspace` service. It always
+      points to `Class.Workspace` and will never be `nil`.
     code_samples:
     type: Workspace
     tags:

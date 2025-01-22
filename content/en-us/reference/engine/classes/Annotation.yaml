@@ -10,62 +10,6 @@ inherits:
 tags: []
 deprecation_message: ''
 properties: []
-methods:
-  - name: Annotation:GetRequests
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Dictionary
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-events:
-  - name: Annotation.RequestCompleted
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: requestId
-        type: string
-        default:
-        summary: ''
-      - name: requestType
-        type: AnnotationRequestType
-        default:
-        summary: ''
-      - name: result
-        type: AnnotationRequestResult
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: Annotation.RequestInitiated
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: requestId
-        type: string
-        default:
-        summary: ''
-      - name: requestType
-        type: AnnotationRequestType
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
+methods: []
+events: []
 callbacks: []
