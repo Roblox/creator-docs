@@ -1167,7 +1167,7 @@ events:
     summary: |
       Fires when a purchase prompt for a developer product is closed. Do not use this event to process purchases.
     description: |
-      ##### Do not use the `PromptProductPurchaseFinished` event to process purchases; instead, use the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callback. The firing of `PromptProductPurchaseFinished` does NOT mean that a user has successfully purchased an item.
+      **IMPORTANT:** Do **not** use the `PromptProductPurchaseFinished` event to process purchases; instead, use the `Class.MarketplaceService.ProcessReceipt|ProcessReceipt` callback. The firing of `PromptProductPurchaseFinished` does **not** mean that a user has successfully purchased an item.
 
       This event fires when a purchase prompt for a [developer product](../../../production/monetization/developer-products.md) closes. For example, when a user receives the purchase prompt and clicks **Cancel**, or when they receive a success or error message and click **OK**. The firing of this event does **not** mean that a user has successfully purchased an item.
 
@@ -1285,8 +1285,8 @@ callbacks:
     summary: |
       A callback to process receipts of developer product purchases.
     description: |
-      ##### We **highly recommend** that you properly implement the `ProcessReceipt` callback in order to sell your developer products. You should use `ProcessReceipt` to grant users their purchased product over any other granting method. If your `ProcessReceipt` implementation isn't correct, you will NOT be able to grant users the products they have purchased on the Experience Detail page.
-
+      **IMPORTANT:** We **highly recommend** that you properly implement the `ProcessReceipt` callback in order to sell your developer products. You should use `ProcessReceipt` to grant users their purchased product over any other granting method. If your `ProcessReceipt` implementation isn't correct, you will **not** be able to grant users the products they have purchased on the Experience Detail page.
+      
       A callback to process receipts from [developer product](../../../production/monetization/developer-products.md) purchases. You can sell developer products inside an experience using `MarketplaceService` functions, or outside an experience on the Experience Detail page.
 
       You should only set the `ProcessReceipt` callback one time in a single server-side `Class.Script|Script`. This callback must handle the receipts for all developer products you have for sale.
@@ -1345,12 +1345,6 @@ callbacks:
             transaction.
           - `CurrencyType` &mdash; The type of currency spent in the purchase;
             always `Enum.CurrencyType.Robux`.
-          - `ProductPurchaseChannel` &mdash; An enum that represents how the user acquired the developer product.
-
-            - `InExperience`: The purchase was made inside of an experience.
-            - `ExperienceDetailsPage`: The purchase was made outside of an experience, on the Experience Details page.
-            - `AdReward`: The product was rewarded to the user when they watched a video ad to completion.
-            - `CommerceProduct`: The user acquired the product as a benefit of purchasing a commerce merchandise from the developer of the experience.
     returns:
       - type: ProductPurchaseDecision
         summary: |
