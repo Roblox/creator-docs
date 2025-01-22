@@ -216,6 +216,7 @@ Fires when a locator icon is clicked/activated by the local player. This event c
 ```lua title='LocalScript'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
 
 local FriendsLocator = require(ReplicatedStorage:WaitForChild("FriendsLocator"))
 
@@ -223,7 +224,7 @@ local localPlayer = Players.LocalPlayer
 
 FriendsLocator.clicked:Connect(function(player, playerCFrame)
 	-- Request streaming around target location
-	if workspace.StreamingEnabled then
+	if Workspace.StreamingEnabled then
 		local success, errorMessage = pcall(function()
 			localPlayer:RequestStreamAroundAsync(playerCFrame.Position)
 		end)

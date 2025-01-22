@@ -477,12 +477,44 @@ functions:
       if it has not been run yet.
     description: |
       Runs the supplied `Class.ModuleScript` and returns what the
-      `Class.ModuleScript` returned (usually a table or a function). Once the
-      return object is created by an **initial** `Global.LuaGlobals.require()`
-      call of a `Class.ModuleScript`, future `Global.LuaGlobals.require()` calls
-      for the same `Class.ModuleScript` (on the same side of the client-server
-      boundary) will not run the code again. Instead, a reference to the
-      **same** return object created by the initial
+      `Class.ModuleScript` returned (usually a table or a function). If the
+      `Class.ModuleScript` has not been run yet, it will be executed.
+
+      If a string path is provided instead, it is first resolved to a
+      `Class.ModuleScript` relative to the script that called
+      `Global.LuaGlobals.require()`, mimicking the Unix-like semantics of Luau's
+      `require()` expression. For example, each pair of
+      `Global.LuaGlobals.require()` expressions in the example below contains
+      two functionally equivalent calls.
+
+      ```lua
+      -- "./" is equivalent to script.Parent
+      require(script.Parent.ModuleScript)
+      require("./ModuleScript")
+
+      -- "../" is equivalent to script.Parent.Parent
+      require(script.Parent.Parent.ModuleScript)
+      require("../ModuleScript")
+      ```
+
+      Specifically, require-by-string's resolution semantics are as follows:
+      - String paths must begin with either `./` or `../`, where `./` is
+        equivalent to `script.Parent` and `../` is equivalent to
+        `script.Parent.Parent`.
+      - If the resolved path points to an `Class.Instance` that is not a
+      `Class.ModuleScript`, `Global.LuaGlobals.require()` will attempt to find a
+      `Class.ModuleScript` named `Init` or `init` parented to that
+      `Class.Instance` and use it instead, if it exists.
+      - If the desired `Class.ModuleScript` is not present at the time that
+      `Global.LuaGlobals.require()` is called, the call will fail and throw an
+      error. In other words, require-by-string is non-blocking: it does not
+      implicitly wait for a `Class.ModuleScript` to be created.
+
+      Once the return object is created by an **initial**
+      `Global.LuaGlobals.require()` call of a `Class.ModuleScript`, future
+      `Global.LuaGlobals.require()` calls for the same `Class.ModuleScript` (on
+      the same side of the client-server boundary) will not run the code again.
+      Instead, a reference to the **same** return object created by the initial
       `Global.LuaGlobals.require()` call will be supplied. This behavior allows
       for the sharing of values across different scripts, as multiple
       `Global.LuaGlobals.require()` calls from different scripts will reference
@@ -505,11 +537,11 @@ functions:
       ID of the `Class.ModuleScript`, though only on the server.
     parameters:
       - name: module
-        type: ModuleScript
+        type: ModuleScript | string | number
         default:
         summary: |
           The `Class.ModuleScript` that will be executed to retrieve the return
-          value it provides.
+          value it provides, or a reference to one (a string path or asset ID).
     returns:
       - type: Variant
         summary: |

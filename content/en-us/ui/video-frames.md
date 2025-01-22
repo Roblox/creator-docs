@@ -64,12 +64,14 @@ To play a video in your experience without code:
 If you want to play a video in your experience with code, paste the following code into a `Class.Script` within `Class.ServerScriptService` to create a `Class.Part` and play the video on its front surface.
 
 ```lua
+local Workspace = game:GetService("Workspace")
+
 local screenPart = Instance.new("Part")
 screenPart.Size = Vector3.new(16, 9, 1)
 screenPart.Position = Vector3.new(0, 8, -20)
 screenPart.Orientation = Vector3.new(0, 180, 0)
 screenPart.Anchored = true
-screenPart.Parent = workspace
+screenPart.Parent = Workspace
 
 local surfaceGui = Instance.new("SurfaceGui")
 surfaceGui.Parent = screenPart

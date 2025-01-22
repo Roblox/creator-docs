@@ -217,10 +217,12 @@ properties:
       model in code.
 
       ```
+      local Workspace = game:GetService("Workspace")
+
       local model = Instance.new("Model")
-      workspace.BluePart.Parent = model
-      workspace.RedPart.Parent = model
-      model.Parent = workspace
+      Workspace.BluePart.Parent = model
+      Workspace.RedPart.Parent = model
+      model.Parent = Workspace
 
       print(model:GetPivot())  -- Currently equal to the center of the bounding box containing "BluePart" and "RedPart"
 
@@ -312,8 +314,10 @@ methods:
       bounding box will be aligned to the world axes.
 
       ```lua
-      local model = workspace.Model
-      local part = workspace.Part
+      local Workspace = game:GetService("Workspace")
+
+      local model = Workspace.Model
+      local part = Workspace.Part
       local orientation, size = model:GetBoundingBox()
 
       -- Resize and position part equal to bounding box of model

@@ -26,7 +26,9 @@ comes in contact with another, or with a [Terrain](../parts/terrain.md) voxel. I
 The following code pattern shows how the `Class.BasePart.Touched|Touched` event can be connected to a custom `onTouched()` function. Note that the event sends the `otherPart` argument to the function, indicating the other part involved in the collision.
 
 ```lua title='Part Collision' highlight='3-5, 7'
-local part = workspace.Part
+local Workspace = game:GetService("Workspace")
+
+local part = Workspace.Part
 
 local function onTouched(otherPart)
 	print(part.Name .. " collided with " .. otherPart.Name)
@@ -38,7 +40,9 @@ part.Touched:Connect(onTouched)
 Note that the `Class.BasePart.Touched|Touched` event can fire multiple times in quick succession based on subtle physical collisions, such as when a moving object "settles" into a resting position or when a collision involves a [multi‑part model](#model-collisions). To avoid triggering more `Class.BasePart.Touched|Touched` events than necessary, you can implement a simple debounce system which enforces a "cooldown" period through an instance [attribute](../studio/properties.md#instance-attributes).
 
 ```lua title='Part Collision With Cooldown' highlight='3, 6, 9-12'
-local part = workspace.Part
+local Workspace = game:GetService("Workspace")
+
+local part = Workspace.Part
 
 local COOLDOWN_TIME = 1
 
@@ -62,7 +66,9 @@ The `Class.BasePart.TouchEnded|TouchEnded` event fires when the entire collision
 The following code pattern shows how the `Class.BasePart.TouchEnded|TouchEnded` event can be connected to a custom `onTouchEnded()` function. Like `Class.BasePart.Touched|Touched`, the event sends the `otherPart` argument to the function, indicating the other part involved.
 
 ```lua title='Non-Collision Detection' highlight='3-5, 7'
-local part = workspace.Part
+local Workspace = game:GetService("Workspace")
+
+local part = Workspace.Part
 
 local function onTouchEnded(otherPart)
 	print(part.Name .. " is no longer touching " .. otherPart.Name)
@@ -201,6 +207,7 @@ To add a `Class.BasePart` to a collision group through scripting, simply assign 
 
 ```lua title="Collision Group Setup" highlight='7,8,11,12'
 local PhysicsService = game:GetService("PhysicsService")
+local Workspace = game:GetService("Workspace")
 
 local cubes = "Cubes"
 local doors = "Doors"
@@ -213,8 +220,8 @@ PhysicsService:RegisterCollisionGroup(doors)
 PhysicsService:CollisionGroupSetCollidable(cubes, doors, false)
 
 -- Assign an object to each group
-workspace.Cube1.CollisionGroup = cubes
-workspace.Door1.CollisionGroup = doors
+Workspace.Cube1.CollisionGroup = cubes
+Workspace.Door1.CollisionGroup = doors
 ```
 
 </TabItem>
@@ -232,14 +239,15 @@ For plugin code, it's recommended that you assign `"StudioSelectable"` as the co
 
 ```lua title="Recommended Plugin Selection Raycast"
 local UserInputService = game:GetService("UserInputService")
+local Workspace = game:GetService("Workspace")
 
 local raycastParams = RaycastParams.new()
 raycastParams.CollisionGroup = "StudioSelectable"  -- To follow the convention
 raycastParams.BruteForceAllSlow = true  -- So that parts with CanQuery of "false" can be selected
 
 local mouseLocation = UserInputService:GetMouseLocation()
-local mouseRay = workspace.CurrentCamera:ViewportPointToRay(mouseLocation.X, mouseLocation.Y)
-local filteredSelectionHit = workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 10000, raycastParams)
+local mouseRay = Workspace.CurrentCamera:ViewportPointToRay(mouseLocation.X, mouseLocation.Y)
+local filteredSelectionHit = Workspace:Raycast(mouseRay.Origin, mouseRay.Direction * 10000, raycastParams)
 ```
 
 ### Part-to-part filtering

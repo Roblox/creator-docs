@@ -185,8 +185,10 @@ When performing a `Class.BasePart:UnionAsync()|UnionAsync()`, `Class.BasePart:In
 To demonstrate `Class.BasePart:UnionAsync()|UnionAsync()`, the following `Class.Script` uses the **Part1** `Class.BasePart` from the workspace, unions it together with the **Part2**, **Part3**, and **Part4** `Class.BasePart|BaseParts`, then parents the resulting `Class.UnionOperation` to the workspace at the original position of **Part1**.
 
 ```lua highlight='6'
-local mainPart = workspace.Part1
-local otherParts = {workspace.Part2, workspace.Part3, workspace.Part4}
+local Workspace = game:GetService("Workspace")
+
+local mainPart = Workspace.Part1
+local otherParts = {Workspace.Part2, Workspace.Part3, Workspace.Part4}
 
 -- Perform union operation
 local success, newUnion = pcall(function()
@@ -196,7 +198,7 @@ end)
 -- If operation succeeds, position it at the same location and parent it to the workspace
 if success and newUnion then
 	newUnion.Position = mainPart.Position
-	newUnion.Parent = workspace
+	newUnion.Parent = Workspace
 end
 
 -- Destroy original parts which remain intact after operation
@@ -211,8 +213,10 @@ end
 To demonstrate `Class.BasePart:IntersectAsync()|IntersectAsync()`, the following `Class.Script` uses the **Part1** `Class.BasePart` from the workspace, intersects it with the **Part2** and **Part3** `Class.BasePart|BaseParts`, then parents the resulting `Class.IntersectOperation` to the workspace at the original position of **Part1**.
 
 ```lua highlight='6'
-local mainPart = workspace.Part1
-local otherParts = {workspace.Part2, workspace.Part3}
+local Workspace = game:GetService("Workspace")
+
+local mainPart = Workspace.Part1
+local otherParts = {Workspace.Part2, Workspace.Part3}
 
 -- Perform intersect operation
 local success, newIntersect = pcall(function()
@@ -222,7 +226,7 @@ end)
 -- If operation succeeds, position it at the same location and parent it to the workspace
 if success and newIntersect then
 	newIntersect.Position = mainPart.Position
-	newIntersect.Parent = workspace
+	newIntersect.Parent = Workspace
 end
 
 -- Destroy original parts which remain intact after operation
@@ -237,8 +241,10 @@ end
 To demonstrate `Class.BasePart:SubtractAsync()|SubtractAsync()`, the following `Class.Script` uses the **Part1** `Class.BasePart` from the workspace, negates the **Part2**, **Part3**, and **Part4** `Class.BasePart|BaseParts` from it, then parents the resulting `Class.UnionOperation` to the workspace at the original position of **Part1**.
 
 ```lua highlight='6'
-local mainPart = workspace.Part1
-local otherParts = {workspace.Part2, workspace.Part3, workspace.Part4}
+local Workspace = game:GetService("Workspace")
+
+local mainPart = Workspace.Part1
+local otherParts = {Workspace.Part2, Workspace.Part3, Workspace.Part4}
 
 -- Perform subtract operation
 local success, newSubtract = pcall(function()
@@ -248,7 +254,7 @@ end)
 -- If operation succeeds, position it at the same location and parent it to the workspace
 if success and newSubtract then
 	newSubtract.Position = mainPart.Position
-	newSubtract.Parent = workspace
+	newSubtract.Parent = Workspace
 end
 
 -- Destroy original parts which remain intact after operation

@@ -248,7 +248,9 @@ methods:
 
       ```
       local CollectionService = game:GetService("CollectionService")
-      local object = workspace.Model
+      local Workspace = game:GetService("Workspace")
+
+      local object = Workspace.Model
       local tags = CollectionService:GetTags(object)
       print("The object " .. object:GetFullName() .. " has tags: " .. table.concat(tags, ", "))
       ```

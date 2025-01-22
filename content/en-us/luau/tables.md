@@ -25,7 +25,7 @@ To create an array using a Luau table, declare the values in sequential order, s
 
 ```lua
 -- Construct an array with three items
-local testArray = {"A string", 3.14159, workspace.Camera}
+local testArray = {"A string", 3.14159, true}
 print(testArray)
 ```
 
@@ -35,15 +35,15 @@ To read from an array, add a pair of square brackets after its reference and spe
 
 ```lua
 -- Construct an array with three items
-local testArray = {"A string", 3.14159, workspace.Camera}
+local testArray = {"A string", 3.14159, true}
 
 print(testArray[1]) -- A string
 print(testArray[2]) -- 3.14159
-print(testArray[3]) -- Camera
+print(testArray[3]) -- true
 ```
 
 <Alert severity="warning">
-Unlike some languages, Luau uses 1-based indexing for arrays, so the first item in the array is <InlineCode>[1]</InlineCode>, not <InlineCode>[0]</InlineCode>.
+Unlike some languages, Luau uses 1-based indexing for arrays, so the first item in the array is `[1]`, not `[0]`.
 </Alert>
 
 ### Write to arrays
@@ -51,7 +51,7 @@ Unlike some languages, Luau uses 1-based indexing for arrays, so the first item 
 To define or rewrite the value of an array at an index, declare the index number in square brackets (`[index]`) followed by `=` and the value:
 
 ```lua
-local testArray = {"A string", 3.14159, workspace.Camera}
+local testArray = {"A string", 3.14159, true}
 
 testArray[2] = 12345
 testArray[4] = "New string"
@@ -62,10 +62,10 @@ print(testArray[4]) -- New string
 
 ### Iterate over arrays
 
-To iterate over an array, you can use a `for` loop. Because the arrays have numerical indices, you can also use a numeric `for` loop from **1** to the length of the array (`#array`).
+To iterate over an array, you can use a `for` loop. Because the arrays have numerical indices, you can also use a numeric `for` loop from `1` to the length of the array (`#array`).
 
 ```lua
-local testArray = {"A string", 3.14159, workspace.Camera, "New string"}
+local testArray = {"A string", 3.14159, true, "New string"}
 
 -- Loop using general iteration
 for index, value in testArray do
@@ -76,17 +76,6 @@ end
 for index = 1, #testArray do
 	print(index, testArray[index])
 end
-
---[[ Resulting output:
-1 A string
-2 3.14159
-3 Camera
-4 New string
-1 A string
-2 3.14159
-3 Camera
-4 New string
-]]
 ```
 
 ### Insert items

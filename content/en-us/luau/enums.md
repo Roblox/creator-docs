@@ -44,6 +44,8 @@ print(Enum.PartType.Cylinder.EnumType) -- PartType
 To assign an `Datatype.EnumItem` as the value of a property, use the full `Datatype.Enum` declaration. You can also use its `Value` or `EnumType`.
 
 ```lua
+local Workspace = game:GetService("Workspace")
+
 local part = Instance.new("Part")		-- Create a new part
 part.Shape = Enum.PartType.Cylinder  -- By EnumItem (best practice)
 part.Shape = Enum.PartType.Cylinder.Value -- By EnumItem Value
@@ -51,5 +53,5 @@ part.Shape = 2  -- By EnumItem Value
 part.Shape = Enum.PartType.Cylinder.Name -- By EnumItem Name
 part.Shape = "Cylinder"  -- By EnumItem Name
 
-part.Parent = workspace
+part.Parent = Workspace
 ```

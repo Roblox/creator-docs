@@ -1487,12 +1487,13 @@ methods:
 
       ```lua
       local Players = game:GetService("Players")
+      local Workspace = game:GetService("Workspace")
 
       local player = Players:FindFirstChildOfClass("Player")
       if player and player.Character then
       	local humanoid = player.Character:FindFirstChildWhichIsA("Humanoid")
       	if humanoid then
-      		local tool = workspace:FindFirstChild("Tool")
+      		local tool = Workspace:FindFirstChild("Tool")
       		if tool then
       			humanoid:EquipTool(tool)
       		end

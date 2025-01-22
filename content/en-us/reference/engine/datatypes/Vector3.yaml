@@ -16,8 +16,10 @@ description: |
   `Class.BasePart.Size|Size` of parts, for example:
 
   ```lua
-  local part = workspace.Part
-  part.Position = part.Position + Vector3.new(5, 2, 10)  -- Move part by (5, 2, 10)
+  local Workspace = game:GetService("Workspace")
+
+  local part = Workspace.Part
+  part.Position = part.Position + Vector3.new(5, 2, 10) -- Move part by (5, 2, 10)
   ```
 
   `Datatype.Vector3` is also commonly used when constructing more complex 3D

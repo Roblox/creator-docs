@@ -61,8 +61,10 @@ The `Datatype.RBXScriptSignal.Connect()|Connect()` method returns an `Datatype.R
 The following code sample shows how to connect and disconnect a function from the `Class.BasePart.Touched|Part.Touched` event:
 
 ```lua
-local part = workspace.Part
-local targetPart = workspace.TargetPart
+local Workspace = game:GetService("Workspace")
+
+local part = Workspace.Part
+local targetPart = Workspace.TargetPart
 
 -- Declare an empty placeholder variable for the connection
 local connection
@@ -90,7 +92,9 @@ When Luau destroys an event's object, such as the `Class.Player` object when a u
 If you want a script to yield until a specific event fires, use the `Datatype.RBXScriptSignal:Wait()|Wait()` method. This method returns the event's arguments, which you can assign to variables for later use:
 
 ```lua
-local part = workspace.Part
+local Workspace = game:GetService("Workspace")
+
+local part = Workspace.Part
 local touchedPart = part.Touched:Wait()
 print("The part was touched by", touchedPart:GetFullName())
 ```

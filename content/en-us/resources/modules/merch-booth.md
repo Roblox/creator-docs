@@ -841,6 +841,7 @@ When implementing proximity prompts, you may want to [remove the catalog button]
 
 ```lua title='Script' highlight='6, 11'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
 
 local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
@@ -848,7 +849,7 @@ local success, errorMessage = pcall(function()
 	MerchBooth.addItemAsync(4819740796)
 end)
 if success then
-	local item = workspace:FindFirstChild("Robox")
+	local item = Workspace:FindFirstChild("Robox")
 	if item then
 		MerchBooth.addProximityButton(item, 4819740796)
 	end
@@ -865,6 +866,7 @@ Removes a [proximity prompt](#proximity-prompts) generated through [addProximity
 
 ```lua title='Script' highlight='11, 16'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
 
 local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
@@ -872,7 +874,7 @@ local success, errorMessage = pcall(function()
 	MerchBooth.addItemAsync(4819740796)
 end)
 if success then
-	local item = workspace:FindFirstChild("Robox")
+	local item = Workspace:FindFirstChild("Robox")
 	if item then
 		MerchBooth.addProximityButton(item, 4819740796)
 	end

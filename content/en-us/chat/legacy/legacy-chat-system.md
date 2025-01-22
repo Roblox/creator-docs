@@ -140,11 +140,13 @@ Command functions are often used to implement [Admin Commands](../../chat/legacy
 In this example a **ChatModule** is used to create a `Class.Part` if a user types `/part` in the chat. Note that this function returns true if a part was created which will stop the message from proceeding and no message will be displayed. If a part is not created, this function needs to return false so that the message can continue working through the system.
 
 ```lua
+local Workspace = game:GetService("Workspace")
+
 local function Run(ChatService)
 	local function createPart(speakerName, message, channelName)
 		if string.sub(message, 1, 5) == "/part" then
 			local newPart = Instance.new("Part")
-			newPart.Parent = workspace
+			newPart.Parent = Workspace
 			return true
 		end
 		return false

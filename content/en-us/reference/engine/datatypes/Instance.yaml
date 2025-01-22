@@ -22,13 +22,15 @@ constructors:
       of this constructor.
 
       ```lua
+      local Workspace = game:GetService("Workspace")
+
       -- Set new instance's parent last (recommended)
       local part = Instance.new("Part")
       part.Position = Vector3.new(0, 10, 0)
-      part.Parent = workspace
+      part.Parent = Workspace
 
       -- Set new instance's parent in constructor (discouraged)
-      local part = Instance.new("Part", workspace)
+      local part = Instance.new("Part", Workspace)
       part.Position = Vector3.new(0, 10, 0)
       ````
     parameters:

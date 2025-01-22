@@ -70,7 +70,7 @@ While you can use almost any part shape to represent your sea stack platforms, i
 
 ### Create an organization structure
 
-Before you insert placeholder parts into the 3D space, it's important to create an organization structure for your assets in the Workspace. This process ensures that your Workspace remains organized and easy to scan, especially as you venture into creating experiences with a significant amount of assets that you need to manage.
+Before you insert placeholder parts into the 3D space, it's important to create an organization structure for your assets in `Class.Workspace`. This process ensures that your workspace remains organized and easy to scan, especially as you venture into creating experiences with a significant amount of assets that you need to manage.
 
 There are two types of containers you can use to group assets together: `Class.Folder` and `Class.Model` objects. **Folders** are useful for storing many objects of different types, and **models** are useful for storing geometric groupings of parts. The following instructions teach you how to use both container objects to store all assets for your 3D world.
 
