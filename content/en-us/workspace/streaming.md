@@ -276,8 +276,10 @@ An atomic model is only streamed out when all of its descendant parts are eligib
 <img src="../assets/optimization/streaming/ModelStreamingMode-Atomic.svg" width="800" height="336" alt="A diagram showing Atomic model streaming along with children." />
 
 ```lua title='LocalScript' highlight='2, 5-6'
+local Workspace = game:GetService("Workspace")
+
 -- Atomic model does not exist at load time; use WaitForChild()
-local model = workspace:WaitForChild("Model")
+local model = Workspace:WaitForChild("Model")
 
 -- Descendant parts stream in with model and are immediately accessible
 local meshPart = model.MeshPart
@@ -291,8 +293,10 @@ local part = model.Part
 <img src="../assets/optimization/streaming/ModelStreamingMode-Persistent.svg" width="800" height="336" alt="A diagram showing Persistent model streaming along with children." />
 
 ```lua title='LocalScript' highlight='2, 5-6'
+local Workspace = game:GetService("Workspace")
+
 -- Persistent model does not exist at load time; use WaitForChild()
-local model = workspace:WaitForChild("Model")
+local model = Workspace:WaitForChild("Model")
 
 -- Descendant parts stream in with model and are immediately accessible
 local meshPart = model.MeshPart

@@ -149,6 +149,7 @@ The following `Class.Script` connects an event handler to `Class.RemoteEvent.OnS
 
 ```lua title='Event Connection - Script'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
 
 -- Get reference to remote event instance
 local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
@@ -158,7 +159,7 @@ local function onCreatePart(player, partColor, partPosition)
 	local newPart = Instance.new("Part")
 	newPart.Color = partColor
 	newPart.Position = partPosition
-	newPart.Parent = workspace
+	newPart.Parent = Workspace
 end
 
 -- Connect function to event
@@ -317,6 +318,7 @@ The following `Class.Script` defines the callback function via `Class.RemoteFunc
 
 ```lua title='Callback Connection - Script'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
 
 -- Get reference to remote function instance
 local remoteFunction = ReplicatedStorage:FindFirstChildOfClass("RemoteFunction")
@@ -327,7 +329,7 @@ local function createPart(player, partColor, partPosition)
 	local newPart = Instance.new("Part")
 	newPart.Color = partColor
 	newPart.Position = partPosition
-	newPart.Parent = workspace
+	newPart.Parent = Workspace
 	return newPart
 end
 
@@ -384,6 +386,7 @@ remoteEvent.OnClientEvent:Connect(onEventFire)
 ```lua title="Event Firing - Script"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
 
 local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
 
@@ -391,7 +394,7 @@ local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
 local function onPlayerAdded(player)
 	remoteEvent:FireClient(player,
 		{
-			[workspace.Baseplate] = true
+			[Workspace.Baseplate] = true
 		}
 	)
 end
@@ -569,12 +572,13 @@ Similarly, if you create a part in a `Class.LocalScript` and try to pass it to a
 
 ```lua title='Event Firing - LocalScript'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
 
 local remoteEvent = ReplicatedStorage:FindFirstChildOfClass("RemoteEvent")
 
 -- Will be received as "nil" because the server doesn't know about this part
 local clientPart = Instance.new("Part")
-clientPart.Parent = workspace
+clientPart.Parent = Workspace
 
 remoteEvent:FireServer(clientPart)
 ```

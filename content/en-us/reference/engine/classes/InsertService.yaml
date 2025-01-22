@@ -113,10 +113,10 @@ methods:
     writeCapabilities: []
   - name: InsertService:Insert
     summary: |
-      Inserts `Class.Instance` into Workspace.
+      Inserts `Class.Instance` into `Class.Workspace`.
     description: |
-      The Insert function is an ancient method used to insert an
-      `Class.Instance` into Workspace.
+      This function is a legacy method used to insert an
+      `Class.Instance` into `Class.Workspace`.
     code_samples:
       - InsertService-Insert1
     parameters:
@@ -486,10 +486,12 @@ methods:
       has the asset ID **_257489726_**, you can use:
 
       ```lua
-      local assetId = 257489726
       local InsertService = game:GetService("InsertService")
+      local Workspace = game:GetService("Workspace")
+
+      local assetId = 257489726
       local model = InsertService:LoadAsset(assetId)
-      model.Parent = workspace
+      model.Parent = Workspace
       ```
 
       Calls to this function may fail if a server providing a model is having
@@ -497,12 +499,15 @@ methods:
       function in `pcall` to catch these kinds of errors.
 
       ```lua
-      local assetId = 257489726
       local InsertService = game:GetService("InsertService")
+      local Workspace = game:GetService("Workspace")
+
+      local assetId = 257489726
+
       local success, model = pcall(InsertService.LoadAsset, InsertService, assetId)
       if success and model then
       	print("Model loaded successfully")
-      	model.Parent = workspace
+      	model.Parent = Workspace
       else
       	print("Model failed to load!")
       end

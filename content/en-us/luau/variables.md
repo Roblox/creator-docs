@@ -67,12 +67,12 @@ Variables can have **global** or **local** [scopes](./scope.md). They have globa
 local nilVar
 local x = 10
 local word = "Hello"
-local reference = workspace.Camera
+local boolean = true
 
 print(nilVar) -- nil
 print(x) -- 10
 print(word) -- Hello
-print(reference) -- Camera
+print(boolean) -- true
 ```
 
 ### Assign values to multiple variables

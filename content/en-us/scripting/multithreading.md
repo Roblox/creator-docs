@@ -135,8 +135,10 @@ The API has the following methods:
 The following example shows how to use `Class.Actor:SendMessage()` to define a topic and send a message on the sender's end:
 
 ```lua title="Example Message Sender"
+local Workspace = game:GetService("Workspace")
+
 -- Send two messages to the worker actor with a topic of "Greeting"
-local workerActor = workspace.WorkerActor
+local workerActor = Workspace.WorkerActor
 workerActor:SendMessage("Greeting", "Hello World!")
 workerActor:SendMessage("Greeting", "Welcome")
 
@@ -178,6 +180,8 @@ Instead of using a single centralized script that connects to a remote event tha
 The server-side script that runs under that character's `Class.Actor` connects to this remote event using a parallel connection to run the relevant logic for confirming the hit. If the logic finds a confirmation of a hit, the damage is deducted, which involves changing properties, so it runs serially initially.
 
 ```lua
+local Workspace = game:GetService("Workspace")
+
 local tool = script.Parent.Parent
 
 local remoteEvent = Instance.new("RemoteEvent")  -- Create new remote event and parent it to the tool
@@ -199,7 +203,7 @@ local function onRemoteMouseEvent(player: Player, clickLocation: CFrame)
 	local origin = tool.Handle.CFrame.Position
 	local epsilon = 0.01  -- Used to extend the ray slightly since the click location might be slightly offset from the object
 	local lookDirection = (1 + epsilon) * (clickLocation.Position - origin)
-	local raycastResult = workspace:Raycast(origin, lookDirection, params)
+	local raycastResult = Workspace:Raycast(origin, lookDirection, params)
 	if raycastResult then
 		local hitPart = raycastResult.Instance
 		if hitPart and hitPart.Name == "block" then
@@ -214,7 +218,7 @@ local function onRemoteMouseEvent(player: Player, clickLocation: CFrame)
 			-- This is perfectly safe but it would result in two explosions at once instead of one
 			-- The following double checks that execution got to this part first
 			if hitPart.Parent then
-				explosion.Parent = workspace
+				explosion.Parent = Workspace
 				hitPart:Destroy()  -- Destroy it
 			end
 		end
@@ -232,6 +236,7 @@ To create a vast world for your experience, you can populate the world dynamical
 ```lua
 -- Parallel execution requires the use of actors
 -- This script clones itself; the original initiates the process, while the clones act as workers
+local Workspace = game:GetService("Workspace")
 
 local actor = script:GetActor()
 if actor == nil then
@@ -304,7 +309,7 @@ actor:BindToMessageParallel("GenerateChunk", function(x, y, z, seed)
 
 	-- Currently, WriteVoxels() must be called in the serial phase
 	task.synchronize()
-	workspace.Terrain:WriteVoxels(
+	Workspace.Terrain:WriteVoxels(
 		Region3.new(corner, corner + Vector3.new(16, 16, 16)),
 		4,
 		voxels.materials,

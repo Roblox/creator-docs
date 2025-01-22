@@ -591,6 +591,7 @@ You can also stylize non-player dialogue and add [chat bubbles](../chat/bubble-c
 
 ```lua title='Client Script'
 local TextChatService = game:GetService("TextChatService")
+local Workspace = game:GetService("Workspace")
 
 local generalChannel: TextChannel = TextChatService:WaitForChild("TextChannels").RBXGeneral
 
@@ -604,7 +605,7 @@ TextChatService.OnIncomingMessage = function(textChatMessage: TextChatMessage)
 		properties.PrefixText = string.format("<font color='#%s'>%s: </font>", "#50C999", textChatMessage.Metadata)
 
 		-- Add bubble chat
-		TextChatService:DisplayBubble(workspace.Statue, textChatMessage.Text)
+		TextChatService:DisplayBubble(Workspace.Statue, textChatMessage.Text)
 	end
 
 	return properties

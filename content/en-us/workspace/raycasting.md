@@ -10,13 +10,15 @@ At its most basic level, **raycasting** is the act of sending out an invisible r
   <figcaption>Lasers are fired by floating orbs, and raycasting determines whether a laser hits a platform. Platforms touched by the lasers are temporarily destroyed.</figcaption>
 </figure>
 
-You can cast a ray with the `Class.WorldRoot:Raycast()` method (`Class.WorldRoot:Raycast()|workspace:Raycast()`) from a `Datatype.Vector3` origin in a `Datatype.Vector3` direction.
+You can cast a ray with the `Class.WorldRoot:Raycast()` method (`Class.Workspace:Raycast()`) from a `Datatype.Vector3` origin in a `Datatype.Vector3` direction.
 
 ```lua title='Basic Raycast' highlight='4'
+local Workspace = game:GetService("Workspace")
+
 local rayOrigin = Vector3.new(0, 0, 0)
 local rayDirection = Vector3.new(0, -100, 0)
 
-local raycastResult = workspace:Raycast(rayOrigin, rayDirection)
+local raycastResult = Workspace:Raycast(rayOrigin, rayDirection)
 ```
 
 <Alert severity="warning">
@@ -38,12 +40,14 @@ When applicable, you can calculate an unknown directional vector (`rayDirection`
    <i>rayDirection</i> = <i>rayDestination</i> &minus; <i>rayOrigin</i>
 
 ```lua highlight='4'
-local rayOrigin = workspace.TestOrigin.Position
-local rayDestination = workspace.TestDestination.Position
+local Workspace = game:GetService("Workspace")
+
+local rayOrigin = Workspace.TestOrigin.Position
+local rayDestination = Workspace.TestDestination.Position
 
 local rayDirection = rayDestination - rayOrigin
 
-local raycastResult = workspace:Raycast(rayOrigin, rayDirection)
+local raycastResult = Workspace:Raycast(rayOrigin, rayDirection)
 ```
 
 ## Filter options
@@ -78,6 +82,8 @@ local raycastResult = workspace:Raycast(rayOrigin, rayDirection)
 </table>
 
 ```lua title='Raycast Filtering' highlight='4-7,9'
+local Workspace = game:GetService("Workspace")
+
 local rayOrigin = Vector3.zero
 local rayDirection = Vector3.new(0, -100, 0)
 
@@ -86,7 +92,7 @@ raycastParams.FilterDescendantsInstances = {script.Parent}
 raycastParams.FilterType = Enum.RaycastFilterType.Exclude
 raycastParams.IgnoreWater = true
 
-local raycastResult = workspace:Raycast(rayOrigin, rayDirection, raycastParams)
+local raycastResult = Workspace:Raycast(rayOrigin, rayDirection, raycastParams)
 ```
 
 ## Hit detection
@@ -133,10 +139,12 @@ You can exempt any `Class.BasePart` from hit detection by setting its `Class.Bas
 </Alert>
 
 ```lua title='Raycast Hit Detection' highlight='7-11'
+local Workspace = game:GetService("Workspace")
+
 local rayOrigin = Vector3.zero
 local rayDirection = Vector3.new(0, -100, 0)
 
-local raycastResult = workspace:Raycast(rayOrigin, rayDirection)
+local raycastResult = Workspace:Raycast(rayOrigin, rayDirection)
 
 if raycastResult then
 	print("Instance:", raycastResult.Instance)

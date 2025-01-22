@@ -87,13 +87,13 @@ also contain scripts that act on the individual objects of the model.
     </figure>
 </GridContainer>
 
-## Access the workspace in scripts
+## Workspace access in scripts
 
 Within a script, you can access a place's `Class.Workspace` in three different ways, all of which are valid.
 
+- `game:GetService("Workspace")` <Chip label="recommended" size="small" variant="outlined" color="success" />
 - `workspace`
 - `game.Workspace`
-- `game:GetService("Workspace")`
 
 From there, you can carry out a large set of use cases to script logic for your
 experiences and create dynamic worlds and interactions. For example:

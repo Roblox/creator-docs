@@ -162,6 +162,7 @@ The following script uses a context override to prioritize a specific translatio
 ```lua
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local LocalizationService = game:GetService("LocalizationService")
+local Workspace = game:GetService("Workspace")
 
 -- Load Translator for "es". Wrap the function within a pcall() to protect against failures.
 local res, translator = pcall(function()
@@ -170,7 +171,7 @@ end)
 
 if res then
 	-- use Translate function, providing object context and string
-	local sourceTranslation = translator:Translate( workspace.WindowScreen.SurfaceGui.TextLabel, "Screen")
+	local sourceTranslation = translator:Translate(Workspace.WindowScreen.SurfaceGui.TextLabel, "Screen")
 	print(sourceTranslation) -- Expected Output: Mosquitero
 else
 	print('GetTranslatorForPlayerAsync failed: ' .. translator)

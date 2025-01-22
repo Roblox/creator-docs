@@ -449,8 +449,9 @@ Display chat bubbles for non-player characters (NPCs) by calling `Class.TextChat
 
 ```lua
 local TextChatService = game:GetService("TextChatService")
+local Workspace = game:GetService("Workspace")
 
-local prompt = workspace.SomeNPC.ProximityPrompt
+local prompt = Workspace.SomeNPC.ProximityPrompt
 local head = prompt.Parent:WaitForChild("Head")
 
 prompt.Triggered:Connect(function()

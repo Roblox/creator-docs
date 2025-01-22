@@ -95,7 +95,7 @@ You can use or modify the sample texture map `.png` files to create a `Class.Sur
 
 To create `Class.SurfaceAppearance` packages that you can child to your modular kit and props:
 
-1. Insert a **SurfaceAppearance** object into the Workspace.
+1. Insert a **SurfaceAppearance** object into `Class.Workspace`.
 2. Select the **SurfaceAppearance** object, then in the **Properties** window, select the **ColorMap** property. A pop-up displays.
 3. Click the **Add Image…** button. A file browser displays.
 

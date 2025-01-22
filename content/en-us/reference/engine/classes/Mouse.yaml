@@ -356,9 +356,11 @@ properties:
 
       ```lua
       local Players = game:GetService("Players")
+      local Workspace = game:GetService("Workspace")
+
       local player = Players.LocalPlayer
       local mouse = player:GetMouse()
-      mouse.TargetFilter = workspace.Model
+      mouse.TargetFilter = Workspace.Model
       ```
 
       Note that the `Class.Player.Character|Character` of the

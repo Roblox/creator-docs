@@ -340,6 +340,8 @@ end)
 If you set a detector's `Class.DragDetector.DragStyle|DragStyle` to **Scriptable**, you can provide your own function that takes in a `Datatype.Ray` and returns a world space `Datatype.CFrame`. The detector will move the motion so that the dragged object goes to that custom location/orientation.
 
 ```lua title='DragDetector - Scripted DragStyle' highlight='2,7,31,32,34'
+local Workspace = game:GetService("Workspace")
+
 local dragDetector = script.Parent.DragDetector
 dragDetector.DragStyle = Enum.DragDetectorDragStyle.Scriptable
 
@@ -355,7 +357,7 @@ local function followTheCursor(cursorRay)
 	local hitPoint = Vector3.zero
 	local hitNormal = Vector3.yAxis
 
-	local raycastResult = workspace:Raycast(cursorRay.Origin, cursorRay.Direction, raycastParams)
+	local raycastResult = Workspace:Raycast(cursorRay.Origin, cursorRay.Direction, raycastParams)
 	if raycastResult then
 		hitPoint = raycastResult.Position
 		hitNormal = raycastResult.Normal.Unit

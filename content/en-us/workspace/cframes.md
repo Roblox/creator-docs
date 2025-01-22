@@ -18,7 +18,9 @@ Some examples of `Datatype.CFrame` applications in a game might be:
 You can create an empty `Datatype.CFrame` at the default position of (0, 0, 0) by using `Datatype.CFrame.new()`. To position a `Datatype.CFrame` at a specific point, provide x-, y-, and z-coordinates as arguments to `Datatype.CFrame.new()`. In the following example, the `redBlock` part's `Datatype.CFrame` property changes to `newCFrame`, repositioning it to (-2, 2, 4).
 
 ```lua highlight='4,7'
-local redBlock = workspace.RedBlock
+local Workspace = game:GetService("Workspace")
+
+local redBlock = Workspace.RedBlock
 
 -- Create new CFrame
 local newCFrame = CFrame.new(-2, 2, 4)
@@ -41,7 +43,9 @@ redBlock.CFrame = newCFrame
 Alternatively, you can provide a new `Datatype.Vector3` position to `Datatype.CFrame.new()` and achieve the same result:
 
 ```lua highlight='5-6,8'
-local redBlock = workspace.RedBlock
+local Workspace = game:GetService("Workspace")
+
+local redBlock = Workspace.RedBlock
 
 -- Create new CFrame
 local newVector3 = Vector3.new(-2, 2, 4)
@@ -56,7 +60,9 @@ redBlock.CFrame = newCFrame
 To create a rotated `Datatype.CFrame`, use the `Datatype.CFrame.Angles()` constructor, providing a rotation angle in radians for the desired axes. The parameters to `Datatype.CFrame.Angles()` is in radians, not degrees. If you prefer degrees, use `Library.math.rad()` to convert degrees to radians. In the following example, the `redBlock` part rotates 45 degrees counterclockwise on its y-axis.
 
 ```lua highlight='4,7'
-local redBlock = workspace.RedBlock
+local Workspace = game:GetService("Workspace")
+
+local redBlock = Workspace.RedBlock
 
 -- Create new rotated CFrame
 local newCFrame = CFrame.Angles(0, math.rad(45), 0)
@@ -81,8 +87,10 @@ redBlock.CFrame = newCFrame
 You can use `Datatype.CFrame.new()` to point the front surface of a `Datatype.CFrame` at a specific point in the world. In the following example, `redBlock` part positions at (0, 3, 0) and points its front surface, marked by the white circle, at the `blueCube` part.
 
 ```lua highlight='9'
-local redBlock = workspace.RedBlock
-local blueCube = workspace.BlueCube
+local Workspace = game:GetService("Workspace")
+
+local redBlock = Workspace.RedBlock
+local blueCube = Workspace.BlueCube
 
 -- Create a Vector3 for both the start position and target position
 local startPosition = Vector3.new(0, 3, 0)
@@ -108,7 +116,9 @@ redBlock.CFrame = CFrame.new(startPosition, targetPosition)
 To offset an object by a specific number of studs from its current position, add or subtract a `Datatype.Vector3` to or from a new `Datatype.CFrame` at the object's position. To get a properly-formatted `Datatype.Vector3` position of an object to use with `Datatype.CFrame.new()`, as seen here, its `Class.BasePart.Position|Position` property (`redBlock.Position`) is a convenient shortcut.
 
 ```lua highlight='3'
-local redBlock = workspace.RedBlock
+local Workspace = game:GetService("Workspace")
+
+local redBlock = Workspace.RedBlock
 
 redBlock.CFrame = CFrame.new(redBlock.Position) + Vector3.new(0, 1.25, 0)
 ```
@@ -127,8 +137,10 @@ redBlock.CFrame = CFrame.new(redBlock.Position) + Vector3.new(0, 1.25, 0)
 You can use the same technique to offset an object from the position of another object. In the following example, a `Datatype.Vector3` adds to a new `Datatype.CFrame` created at the blue cube's position instead of the block's position.
 
 ```lua highlight='4'
-local redBlock = workspace.RedBlock
-local blueCube = workspace.BlueCube
+local Workspace = game:GetService("Workspace")
+
+local redBlock = Workspace.RedBlock
+local blueCube = Workspace.BlueCube
 
 redBlock.CFrame = CFrame.new(blueCube.Position) + Vector3.new(0, 2, 0)
 ```
@@ -160,8 +172,10 @@ The `Datatype.CFrame:ToWorldSpace()` function transforms an object's `Datatype.C
 In the following example, the `redBlock` part offsets 2 studs relative to the y-axis of the blue cube (the green arrow pointing through it) and **not** relative to the global y-axis pointing straight up.
 
 ```lua highlight='4-5'
-local redBlock = workspace.RedBlock
-local blueCube = workspace.BlueCube
+local Workspace = game:GetService("Workspace")
+
+local redBlock = Workspace.RedBlock
+local blueCube = Workspace.BlueCube
 
 local offsetCFrame = CFrame.new(0, 2, 0)
 redBlock.CFrame = blueCube.CFrame:ToWorldSpace(offsetCFrame)
@@ -183,7 +197,9 @@ redBlock.CFrame = blueCube.CFrame:ToWorldSpace(offsetCFrame)
 You can also use `Datatype.CFrame:ToWorldSpace()` to rotate an object relative to itself. In the following example, the `redBlock` part rotates 70 degrees counterclockwise on its y-axis and 20 degrees clockwise on its z-axis.
 
 ```lua highlight='3-4'
-local redBlock = workspace.RedBlock
+local Workspace = game:GetService("Workspace")
+
+local redBlock = Workspace.RedBlock
 
 local rotatedCFrame = CFrame.Angles(0, math.rad(70), math.rad(20))
 redBlock.CFrame = redBlock.CFrame:ToWorldSpace(rotatedCFrame)
@@ -208,8 +224,10 @@ You can make the front of an object face another object by supplying a `Datatype
 2. Rotate the `Datatype.CFrame` to make the **top** surface, marked by the black circle, point toward the target.
 
 ```lua highlight='8,11-12'
-local redBlock = workspace.RedBlock
-local blueCube = workspace.BlueCube
+local Workspace = game:GetService("Workspace")
+
+local redBlock = Workspace.RedBlock
+local blueCube = Workspace.BlueCube
 
 -- Create a Vector3 for the target position
 local targetPosition = blueCube.Position
@@ -242,9 +260,11 @@ redBlock.CFrame = redBlock.CFrame:ToWorldSpace(rotatedCFrame)
 You can use **linear interpolation**, or **lerp**, to position a `Datatype.CFrame` between two points. In the following example, the `redBlock` part repositions between the `greenCube` and `cyanCube` parts. The value of `0.7` places it 70% of the distance away from the green cube.
 
 ```lua highlight='5'
-local redBlock = workspace.RedBlock
-local greenCube = workspace.GreenCube
-local cyanCube = workspace.CyanCube
+local Workspace = game:GetService("Workspace")
+
+local redBlock = Workspace.RedBlock
+local greenCube = Workspace.GreenCube
+local cyanCube = Workspace.CyanCube
 
 redBlock.CFrame = greenCube.CFrame:Lerp(cyanCube.CFrame, 0.7)
 ```

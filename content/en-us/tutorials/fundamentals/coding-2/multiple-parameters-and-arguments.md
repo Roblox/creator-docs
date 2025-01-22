@@ -97,16 +97,20 @@ Time to take out the trash! With the parameters set up, the functions are ready 
 2. At the top of the script, add variables for the objects you created. These will be your arguments.
 
    ```lua
-   local cementBlock = workspace.Cement
-   local glassBottle = workspace.GlassBottle
+   local Workspace = game:GetService("Workspace")
+
+   local cementBlock = Workspace.Cement
+   local glassBottle = Workspace.GlassBottle
    ```
 
 3. At the bottom of the script, where `sortGarbage()` is called, pass in each argument.
 
    ```lua
+   local Workspace = game:GetService("Workspace")
+
    -- Objects to use as arguments
-   local cementBlock = workspace.CementBlock
-   local glassBottle = workspace.GlassBottle
+   local cementBlock = Workspace.CementBlock
+   local glassBottle = Workspace.GlassBottle
 
    --Destroys trash and cleans up recyclables
    local function sortGarbage(trash,recyclable)

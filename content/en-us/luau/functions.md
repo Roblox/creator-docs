@@ -78,16 +78,18 @@ Methods are functions that are members of an object, such as a [class](/referenc
 All objects in Roblox descend from `Class.Instance` and have commonly used methods including `Class.Instance:Destroy()`, `Class.Instance:Clone()`, and `Class.Instance:FindFirstChild()`.
 
 ```lua
--- Destroying a Part with dot notation (function)
+local Workspace = game:GetService("Workspace")
+
+-- Destroying a part with dot notation (function)
 local firstPart = Instance.new("Part")
-firstPart.Parent = workspace
+firstPart.Parent = Workspace
 print(firstPart.Parent) -- Workspace
 firstPart.Destroy(firstPart)
 print(firstPart.Parent) -- nil
 
--- Destroying a Part with colon notation (method)
+-- Destroying a part with colon notation (method)
 local secondPart = Instance.new("Part")
-secondPart.Parent = workspace
+secondPart.Parent = Workspace
 print(secondPart.Parent) -- Workspace
 secondPart:Destroy()
 print(secondPart.Parent) -- nil

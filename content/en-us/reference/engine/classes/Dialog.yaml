@@ -45,14 +45,16 @@ properties:
       conversation.
 
       ```lua
+      local Workspace = game:GetService("Workspace")
+
       local singlePlayerDialog = Instance.new("Dialog")
-      local singlePlayerPart = workspace.SinglePlayerPart
+      local singlePlayerPart = Workspace.SinglePlayerPart
       singlePlayerDialog.BehaviorType = Enum.DialogBehaviorType.SinglePlayer
       singlePlayerDialog.InitialPrompt = "Only one person can interact with me at once."
       singlePlayerDialog.Parent = singlePlayerPart
 
       local multiplePlayersDialog = Instance.new("Dialog")
-      local multiplePlayersPart = workspace.MultiplePlayersPart
+      local multiplePlayersPart = Workspace.MultiplePlayersPart
       multiplePlayersDialog.BehaviorType = Enum.DialogBehaviorType.MultiplePlayers
       multiplePlayersDialog.InitialPrompt = "Any number of players can interact with me at once."
       multiplePlayersDialog.Parent = multiplePlayersPart

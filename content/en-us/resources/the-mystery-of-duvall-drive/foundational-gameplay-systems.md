@@ -69,13 +69,13 @@ Interpolation lets object properties and attributes seamlessly change from one v
 ```lua
 interpolants = {
 	objectParam = "TextLabel",
-      property = "TextTransparency",
-      keys = {
+	property = "TextTransparency",
+	keys = {
 		{value = 1},
-	      {time = .5, value = 0},
+		{time = .5, value = 0},
 		{time = 2.25, value = 0},
-	      {time = 3, value = 1}
-      }
+		{time = 3, value = 1}
+	}
 }
 ```
 
@@ -87,7 +87,7 @@ While we could define which object property or attribute belongs to what like in
 object = workspace.SomeFolder.SomeModel
 ```
 
-To accomplish this, we allowed referencing by object name and passing named parameters on event start. To find named objects, we allowed specifying a "root" for the event, which let objects to be found by name under this root when the event started. For example, in the following code snippet, the **EventManager** tries to find an object named "Wander" somewhere under `workspace.Content.Interior.Foyer["Ritual-DemoVersion"]`.
+To accomplish this, we allowed referencing by object name and passing named parameters on event start. To find named objects, we allowed specifying a "root" for the event, which let objects to be found by name under this root when the event started. For example, in the following code snippet, the **EventManager** tries to find an object named "Wander" somewhere under `Workspace.Content.Interior.Foyer["Ritual-DemoVersion"]`.
 
 ```lua
 params = {
@@ -135,7 +135,7 @@ Parameters allowed us to refer to objects that do not even exist in the beginnin
 To run an event, we would either use a remote event from clients, or a function from the server. In the following example, we passed a couple of parameters to the `RootObject` and `isEnabled` events. Internally, an instance of the event description was created, params resolved to actual objects, and the function returned an id for the event instance.
 
 ```lua
- local params = {
+local params = {
 	RootObject = workspace.Content.Interior.Foyer["Ritual-DemoVersion"]["SealDropoff_" .. missionName],
 	isEnabled = enabled
 }

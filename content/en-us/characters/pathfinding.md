@@ -131,13 +131,14 @@ local path = PathfindingService:CreatePath({
 This section uses the following pathfinding script for the player's character. To test while reading:
 
 1. Copy the code into a `Class.LocalScript` within `Class.StarterCharacterScripts`.
-1. Edit line 11 to a `Datatype.Vector3` destination that the player character can reach.
+1. Set the `TEST_DESTINATION` variable to a `Datatype.Vector3` destination in your 3D world that the player character can reach.
 1. Proceed through the following sections to learn about path computation and character movement.
 
 ```lua title='LocalScript - Character Pathfinding' highlight='11'
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
 
 local path = PathfindingService:CreatePath()
 
@@ -206,6 +207,7 @@ After you've created a valid path with `Class.PathfindingService:CreatePath()|Cr
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
 
 local path = PathfindingService:CreatePath()
 
@@ -238,6 +240,7 @@ Once the `Class.Path` is computed, it will contain a series of **waypoints** tha
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
 
 local path = PathfindingService:CreatePath()
 
@@ -279,6 +282,7 @@ Each waypoint consists of both a **position** (`Datatype.Vector3`) and **action*
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
 
 local path = PathfindingService:CreatePath()
 
@@ -344,13 +348,14 @@ end
 Many Roblox worlds are dynamic; parts might move or fall and floors may collapse. This can block a computed path and prevent the character from reaching its destination. To handle this, you can connect the `Class.Path.Blocked` event and re-compute the path around whatever blocked it.
 
 <Alert severity="warning">
-Paths may also become blocked somewhere **behind** the agent, such as a pile of rubble falling on a path as the agent runs away, but that doesn't mean the agent should stop moving. The conditional statement on line&nbsp;31 makes sure that the path is re-computed only if the blocked waypoint is **ahead** of the current waypoint.
+Paths may also become blocked somewhere **behind** the agent, such as a pile of rubble falling on a path as the agent runs away, but that doesn't mean the agent should stop moving. The <Typography noWrap>`if blockedWaypointIndex >= nextWaypointIndex`</Typography> check makes sure that the path is re-computed only if the blocked waypoint is **ahead** of the current waypoint.
 </Alert>
 
 ```lua title='LocalScript - Character Pathfinding' highlight='16, 29-37'
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
 
 local path = PathfindingService:CreatePath()
 
@@ -411,6 +416,7 @@ Keys in the `Costs` table should be string names representing `Enum.Material` na
 local PathfindingService = game:GetService("PathfindingService")
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
 
 local path = PathfindingService:CreatePath({
 	Costs = {
@@ -441,6 +447,7 @@ In some cases, [material preference](#set-material-costs) is not enough. For exa
    local PathfindingService = game:GetService("PathfindingService")
    local Players = game:GetService("Players")
    local RunService = game:GetService("RunService")
+   local Workspace = game:GetService("Workspace")
 
    local path = PathfindingService:CreatePath({
    	Costs = {
@@ -498,6 +505,7 @@ To create a `Class.PathfindingLink` using this example:
    local PathfindingService = game:GetService("PathfindingService")
    local Players = game:GetService("Players")
    local RunService = game:GetService("RunService")
+   local Workspace = game:GetService("Workspace")
 
    local path = PathfindingService:CreatePath({
    	Costs = {
@@ -513,6 +521,7 @@ To create a `Class.PathfindingLink` using this example:
    local PathfindingService = game:GetService("PathfindingService")
    local Players = game:GetService("Players")
    local RunService = game:GetService("RunService")
+   local Workspace = game:GetService("Workspace")
 
    local path = PathfindingService:CreatePath({
    	Costs = {
@@ -582,7 +591,7 @@ To create a `Class.PathfindingLink` using this example:
    end
 
    function useBoat()
-   	local boat = workspace.BoatModel
+   	local boat = Workspace.BoatModel
 
    	humanoid.Seated:Connect(function()
    		-- Start boat moving if agent is seated

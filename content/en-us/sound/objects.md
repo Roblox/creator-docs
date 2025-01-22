@@ -188,6 +188,7 @@ The `Class.Sound.TimePosition|TimePosition` property displays, in seconds, what 
 
 ```lua
 local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
 
 -- Create a new part
 local part = Instance.new("Part")
@@ -196,7 +197,7 @@ part.Color = Color3.new(0.75, 0.2, 0.5)
 part.Size = Vector3.new(2, 1, 2)
 part.Material = Enum.Material.Neon
 part.Position = Vector3.new(0, 4, 0)
-part.Parent = workspace
+part.Parent = Workspace
 
 -- Create an attachment on the part
 local attachment = Instance.new("Attachment")
@@ -240,10 +241,12 @@ The `Class.Sound.Looped|Looped` property allows you to repeat audio after it has
 Aside from auto-playing audio through the `Class.Sound` object's `Class.Sound.Playing|Playing` property, you can play audio contextually from a `Class.LocalScript` by calling `Class.Sound:Play()|Play()` on the corresponding `Class.Sound` object. For example:
 
 ```lua
+local Workspace = game:GetService("Workspace")
+
 local sound = Instance.new("Sound")
 sound.SoundId = "rbxassetid://9120386436"
 sound.Looped = true
-sound.Parent = workspace
+sound.Parent = Workspace
 sound:Play()
 ```
 

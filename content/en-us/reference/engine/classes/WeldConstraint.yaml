@@ -119,23 +119,26 @@ properties:
     summary: |
       The first part connected by the constraint.
     description: |
-      The **Part0** and `Class.WeldConstraint.Part1` properties of a
+      The `Part0` and `Class.WeldConstraint.Part1` properties of a
       `Class.WeldConstraint` set which two `Class.BasePart` the weld connects.
       As soon as both properties are set and the weld is
       `Class.WeldConstraint.Enabled`, the weld will lock the two parts together.
 
-      If Part0 or Part1 are ever set to new parts, then the WeldConstraint will
-      instantly link the new part. The old part will no longer be constrained.
+      If `Part0` or `Part1` are ever set to new parts, then the `WeldConstraint`
+      will instantly link the new part. The old part will no longer be
+      constrained.
 
       ```lua
+      local Workspace = game:GetService("Workspace")
+
       local partA = Instance.new("Part")
       local partB = Instance.new("Part")
 
       partA.Position = Vector3.new(0, 10, 0)
-      partA.Parent = workspace
+      partA.Parent = Workspace
 
       partB.Position = Vector3.new(0, 10, 10)
-      partB.Parent = workspace
+      partB.Parent = Workspace
 
       local weld = Instance.new("WeldConstraint")
       weld.Part0 = partA
@@ -162,23 +165,26 @@ properties:
     summary: |
       The second part connected by the constraint.
     description: |
-      The `Class.WeldConstraint.Part0` and **Part1** properties of a
+      The `Class.WeldConstraint.Part0` and `Part1` properties of a
       `Class.WeldConstraint` set which two `Class.BasePart` the weld connects.
       As soon as both properties are set and the weld is
       `Class.WeldConstraint.Enabled`, the weld will lock the two parts together.
 
-      If Part0 or Part1 are ever set to new parts, then the WeldConstraint will
-      instantly link the new part. The old part will no longer be constrained.
+      If `Part0` or `Part1` are ever set to new parts, then the `WeldConstraint`
+      will instantly link the new part. The old part will no longer be
+      constrained.
 
       ```lua
+      local Workspace = game:GetService("Workspace")
+
       local partA = Instance.new("Part")
       local partB = Instance.new("Part")
 
       partA.Position = Vector3.new(0, 10, 0)
-      partA.Parent = workspace
+      partA.Parent = Workspace
 
       partB.Position = Vector3.new(0, 10, 10)
-      partB.Parent = workspace
+      partB.Parent = Workspace
 
       local weld = Instance.new("WeldConstraint")
       weld.Part0 = partA

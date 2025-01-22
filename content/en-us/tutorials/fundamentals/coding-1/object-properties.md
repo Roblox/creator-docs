@@ -36,7 +36,7 @@ Comments are special lines starting with `--` that help coders remember what par
 
 ### Locate the part
 
-To make changes to a part, you must be able to describe the part's location. The Explorer is an excellent tool for **referencing** locations. In this case, PracticePart is under Workspace.
+To make changes to a part, you must be able to describe the part's location. The Explorer is an excellent tool for **referencing** locations. In this case, **PracticePart** is under **Workspace**.
 
 <img src="../../../assets/education/coding-1/practice-part_400.png" width="40%" />
 

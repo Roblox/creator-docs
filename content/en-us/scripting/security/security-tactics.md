@@ -75,6 +75,7 @@ end
 
 ```lua title="Script in ServerScriptService" highlight="4, 7, 12, 18, 29"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
 
 local remoteFunction = ReplicatedStorage:WaitForChild("RemoteFunctionTest")
 local t = require(ReplicatedStorage:WaitForChild("t"))
@@ -97,7 +98,7 @@ local function createPart(player, partColor, partPosition)
 	local newPart = Instance.new("Part")
 	newPart.Color = partColor
 	newPart.Position = partPosition
-	newPart.Parent = workspace
+	newPart.Parent = Workspace
 	return newPart
 end
 
