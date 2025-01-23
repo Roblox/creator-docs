@@ -3,10 +3,9 @@ type: class
 category: Data
 memory_category: Instances
 summary: |
-  Allows sending HTTP requests and provides various web-related functions,
-  including JSON functions.
+  Allows sending HTTP requests and provides various web-related and JSON methods.
 description: |
-  **HttpService** allows HTTP requests to be sent from game servers using
+  `HttpService` allows HTTP requests to be sent from game servers using
   `Class.HttpService:RequestAsync()|RequestAsync`,
   `Class.HttpService:GetAsync()|GetAsync` and
   `Class.HttpService:PostAsync()|PostAsync`. This service allows games to be
@@ -14,59 +13,55 @@ description: |
   remote server configuration, error reporting, advanced calculations or
   real-time communication.
 
+  `HttpService` also houses the `Class.HttpService:JSONEncode()|JSONEncode` and
+  `Class.HttpService:JSONDecode()|JSONDecode` methods which are useful for
+  communicating with services that use the [JSON](https://json.org) format. In
+  addition, the `Class.HttpService:GenerateGUID()|GenerateGUID` method
+  provides random 128‑bit labels which can be treated as probabilistically
+  unique in a variety of scenarios.
+
   You should only send HTTP requests to trusted third-party platforms to avoid
   making your experience vulnerable to security risks.
 
-  ## Enabling HTTP Requests
+  This property cannot be interacted with at runtime.
 
-  Request-sending functions aren't enabled by default: attempting to use them
-  while disabled will result in the error "Http requests are not enabled. Enable
-  via game settings". To send requests, set
-  `Class.HttpService.HttpEnabled|HttpEnabled` to true through the Game Settings
-  interface in Studio under the Security section, or use the Command Bar for
-  unpublished experiences. This property cannot be interacted with at runtime.
+  ##### Enable HTTP requests
 
-  ```lua
-  -- For unpublished games, use this in the Command Bar:
-  game:GetService("HttpService").HttpEnabled = true
-  ```
+  Request-sending methods aren't enabled by default. To send requests, toggle
+  on **Allow&nbsp;HTTP&nbsp;Requests** through the [Game
+  Settings](../../../studio/game-settings.md) interface in Studio, or set
+  `Class.HttpService.HttpEnabled|HttpEnabled` to `true` in the [Command
+  Bar](../../../studio/ui-overview#command-bar.md) for **unpublished**
+  experiences:
 
-  ## Other Functions
+  `game:GetService("HttpService").HttpEnabled = true`
 
-  HttpService also houses the `Class.HttpService:JSONEncode()|JSONEncode` and
-  `Class.HttpService:JSONDecode()|JSONDecode` functions, which are useful for
-  communicating with services that use the [JSON](https://json.org) format. In
-  addition, the `Class.HttpService:GenerateGUID()|GenerateGUID` function
-  provides random 128-bit labels, which can be treated as probabilistically
-  unique in a variety of scenarios.
+  ##### Use in plugins
 
-  ## Use in Plugins
-
-  HttpService can also be used by Roblox Studio plugins. They may do this to
-  check for updates, send usage data, download content or other business logic.
+  `HttpService` can be used by Studio plugins. They may do this to
+  check for updates, send usage data, download content, or other business logic.
   The first time a plugin attempts to do this, the user may be prompted to give
   the plugin permission to communicate with the particular web address. A user
-  may accept, deny and revoke such permissions at any time through the Plugin
-  Management window.
+  may accept, deny, and revoke such permissions at any time through the **Plugin
+  Management** window.
 
   Plugins may also communicate with other software running on the same computer
   through the `localhost` and `127.0.0.1` hosts. By running programs compatible
   with such plugins, you can extend the functionality of your plugin beyond the
-  normal capabilities of Roblox Studio, such as interacting with your computer's
+  normal capabilities of Studio, such as interacting with your computer's
   file system. Beware that such software must be distributed separately from the
-  plugin itself, and can pose security hazards if you aren't careful.
+  plugin itself and can pose security hazards if you aren't careful.
 
-  ## Considerations
+  ##### Additional considerations
 
-  - There are port restrictions. You cannot use port 1194 or any port below
-    1024, except 80 and 443. If you try to use a blocked port, you will receive
-    either a `403 Forbidden` or `ERR_ACCESS_DENIED` error.
+  - There are port restrictions. You cannot use port `1194` or any port below
+    `1024`, except `80` and `443`. If you try to use a blocked port, you will receive either a `403 Forbidden` or `ERR_ACCESS_DENIED` error.
   - For each Roblox game server, there is a limit of 500 HTTP requests per
-    minute. Exceeding this may cause request-sending functions to stall entirely
+    minute. Exceeding this may cause request-sending methods to stall entirely
     for about 30 seconds.
   - Requests cannot be made to any Roblox website, such as www.roblox.com.
   - Web requests can fail for many reasons, so it is important to "code
-    defensively" (use `pcall`) and have a plan for when requests fail.
+    defensively" (use `Global.LuaGlobals.pcall()`) and have a plan for when requests fail.
   - Although the `http://` protocol is supported, you should use `https://`
     wherever possible.
   - Requests sent should provide a secure form of authentication, such as a
@@ -87,15 +82,11 @@ deprecation_message: ''
 properties:
   - name: HttpService.HttpEnabled
     summary: |
-      Indicates whether http request can be sent to external websites.
+      Indicates whether HTTP requests can be sent to external websites.
     description: |
-      When set to true, you are able to send requests to other websites using
+      When set to `true`, you are able to send requests to other websites using
       `Class.HttpService:GetAsync()`, `Class.HttpService:PostAsync()`, and
       `Class.HttpService:RequestAsync()`.
-
-      To enable HTTP requests, the `Class.HttpService` must be enabled in
-      Studio's [Game Settings](../../../studio/game-settings.md) through the
-      **Security** &rarr; **Allow HTTP Requests** toggle.
     code_samples:
     type: bool
     tags: []
@@ -116,21 +107,18 @@ methods:
     summary: |
       Generates a UUID/GUID random string, optionally with curly braces.
     description: |
-      The GenerateGUID function randomly creates a [universally unique
-      identifier (UUID)][1] string.
-
-      The sixteen octets of a UUID are represented as 32 hexadecimal (base 16)
-      digits, displayed in 5 groups separated by hyphens in the form
-      `8-4-4-4-12` for a total of 36 characters. For example:
+      This method randomly creates a [universally unique identifier
+      [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
+      string. The sixteen octets of a UUID are represented as 32 hexadecimal
+      (base 16) digits, displayed in 5 groups separated by hyphens in the form
+      `8-4-4-4-12` for a total of 36 characters, for example
       `123e4567-e89b-12d3-a456-426655440000`.
 
-      The _wrapInCurlyBraces_ argument determines whether the returned string is
-      wrapped in curly braces `{}`. For instance:
+      The `wrapInCurlyBraces` argument determines whether the returned string is
+      wrapped in curly braces (`{}`). For instance:
 
-      - `true` - `{94b717b2-d54f-4340-a504-bd809ef5bf5c}`
-      - `false` - `db454790-7563-44ed-ab4b-397ff5df737b`
-
-      [1]: https://en.wikipedia.org/wiki/Universally_unique_identifier
+      - `true`: `{94b717b2-d54f-4340-a504-bd809ef5bf5c}`
+      - `false`: `db454790-7563-44ed-ab4b-397ff5df737b` 
     code_samples:
       - HttpService-GenerateGUID
     parameters:
@@ -138,7 +126,7 @@ methods:
         type: bool
         default: true
         summary: |
-          Whether the returned string should be wrapped in _{curly braces}_.
+          Whether the returned string should be wrapped in curly braces (`{}`).
     returns:
       - type: string
         summary: |
@@ -186,23 +174,19 @@ methods:
     summary: |
       Decodes a JSON string into a Lua table.
     description: |
-      The JSONDecode function transforms a JSON object or array into a Lua
+      This method transforms a JSON object or array into a Lua
       [table](../../../luau/tables.md) with the following characteristics:
 
       - Keys of the table are strings or numbers but not both. If a JSON object
         contains both, string keys are ignored.
-      - An empty JSON object generates an empty Lua table `{}`.
-      - If the _input_ string is not a valid JSON object, this function will
+      - An empty JSON object generates an empty Lua table (`{}`).
+      - If the `input` string is not a valid JSON object, this method will
         throw an error.
 
-      To encode a Lua table into a JSON object, you can use the
-      `Class.HttpService:JSONEncode()` function.
+      To encode a Lua table into a JSON object, use the
+      `Class.HttpService:JSONEncode()` method.
 
-      Many web endpoints use JSON, as it is commonly used on the Internet. Visit
-      [JSON.org](https://www.json.org) to become more familiar with the format.
-
-      This method can be used regardless of whether HTTP Requests are
-      `Class.HttpService.HttpEnabled|enabled`.
+      This method can be used regardless of whether HTTP requests are enabled.
     code_samples:
       - HttpService-JSONDecode
     parameters:
@@ -226,27 +210,23 @@ methods:
     summary: |
       Generate a JSON string from a Lua table.
     description: |
-      The JSONEncode function transforms a Lua [table](../../../luau/tables.md)
+      This method transforms a Lua [table](../../../luau/tables.md)
       into a JSON object or array based on the following guidelines:
 
       - Keys of the table must be either strings or numbers. If a table contains
         both, an array takes priority (string keys are ignored).
-      - An empty Lua table `{}` generates an empty JSON array.
+      - An empty Lua table (`{}`) generates an empty JSON array.
       - The value `nil` is never generated.
       - Cyclic table references cause an error.
 
-        This function allows values such as `inf` and `nan`, which are not valid
+        This method allows values such as `inf` and `nan` which are not valid
         JSON. This may cause problems if you want to use the outputted JSON
         elsewhere.
 
-      To reverse the encoding process, and decode a JSON object, you can use the
-      `Class.HttpService:JSONDecode()` function.
+      To reverse the encoding process and decode a JSON object, use the
+      `Class.HttpService:JSONDecode()` method.
 
-      Many web endpoints use JSON, as it is commonly used on the Internet. Visit
-      [JSON.org](https://www.json.org) to become more familiar with the format.
-
-      This method can be used regardless of whether HTTP Requests are
-      `Class.HttpService.HttpEnabled|enabled`.
+      This method can be used regardless of whether HTTP requests are enabled.
     code_samples:
       - HttpService-JSONEncode
     parameters:
@@ -270,20 +250,19 @@ methods:
     summary: |
       Replaces URL-unsafe characters with '%' and two hexadecimal characters.
     description: |
-      The UrlEncode function [percent-encodes][1] a given string so that
-      reserved characters properly encoded with '%' and two hexadecimal
-      characters.
+      This method
+      [percent-encodes](https://en.wikipedia.org/wiki/Percent-encoding) a given
+      string so that reserved characters properly encoded with `%` and two
+      hexadecimal characters.
 
       This is useful when formatting URLs for use with
-      `Class.HttpService:GetAsync()`/`Class.HttpService:PostAsync()`, or POST
+      `Class.HttpService:GetAsync()`/`Class.HttpService:PostAsync()`, or `POST`
       data of the media type `application/x-www-form-urlencoded`
       (`Enum.HttpContentType|Enum.HttpContentType.ApplicationUrlEncoded`).
 
       For instance, when you encode the URL
-      ` https://www.roblox.com/discover#/`, this function returns
+      `https://www.roblox.com/discover#/`, this method returns
       `https%3A%2F%2Fwww%2Eroblox%2Ecom%2Fdiscover%23%2F`.
-
-      [1]: https://en.wikipedia.org/wiki/Percent-encoding
     code_samples:
       - HttpService-UrlEncode
       - HttpService-Pastebin
@@ -305,17 +284,17 @@ methods:
     writeCapabilities: []
   - name: HttpService:GetAsync
     summary: |
-      Send an HTTP GET request.
+      Sends an HTTP `GET` request.
     description: |
-      The GetAsync function sends an HTTP GET request. It functions similarly to
-      `Class.HttpService:RequestAsync()|RequestAsync` except that it accepts
+      This method sends an HTTP `GET` request. It functions similarly to
+      `Class.HttpService:RequestAsync()|RequestAsync()` except that it accepts
       HTTP request parameters as method parameters instead of a single
       dictionary and returns only the body of the HTTP response. Generally, this
       method is useful only as a shorthand and
-      `Class.HttpService:RequestAsync()|RequestAsync` should to be used in most
-      cases.
+      `Class.HttpService:RequestAsync()|RequestAsync()` should to be used in
+      most cases.
 
-      When true, the `nocache` parameter prevents this function from caching
+      When `true`, the `nocache` parameter prevents this method from caching
       results from previous calls with the same `url`.
     code_samples:
       - Astronauts-in-Space
@@ -349,18 +328,18 @@ methods:
     writeCapabilities: []
   - name: HttpService:PostAsync
     summary: |
-      Performs a HTTP POST request.
+      Sends an HTTP `POST` request.
     description: |
-      The PostAsync function sends an HTTP POST request. It functions similarly
-      to `Class.HttpService:RequestAsync()|RequestAsync` except that it accepts
+      This method sends an HTTP `POST` request. It functions similarly to
+      `Class.HttpService:RequestAsync()|RequestAsync()` except that it accepts
       HTTP request parameters as method parameters instead of a single
       dictionary and returns only the body of the HTTP response. Generally, this
       method is useful only as a shorthand and
-      `Class.HttpService:RequestAsync()|RequestAsync` should to be used in most
-      cases.
+      `Class.HttpService:RequestAsync()|RequestAsync()` should to be used in
+      most cases.
 
-      When true, the `compress` parameter controls whether large request bodies
-      will be compressed using gzip.
+      When `true`, the `compress` parameter controls whether large request
+      bodies will be compressed using **gzip**.
     code_samples:
       - HttpService-Pastebin
     parameters:
@@ -378,12 +357,12 @@ methods:
         type: HttpContentType
         default: ApplicationJson
         summary: |
-          Modifies the value in the _Content-Type_ header sent with the request.
+          Modifies the value in the `Content-Type` header sent with the request.
       - name: compress
         type: bool
         default: false
         summary: |
-          Determines whether the data is compressed (gzipped) when sent.
+          Determines whether the data is compressed (**gzipped**) when sent.
       - name: headers
         type: Variant
         default:
@@ -406,12 +385,11 @@ methods:
       information.
     description: |
       This method sends an HTTP request using a dictionary to specify the
-      request data, such as the target URL, method, headers and request body
+      request data, such as the target URL, method, headers, and request body
       data. It returns a dictionary that describes the response data received.
-      Optionally, the request can be compressed using
-      `Enum.HttpCompression|HttpCompression`.
+      Optionally, the request can be compressed using `Enum.HttpCompression`.
 
-      #### Request Dictionary Fields
+      ##### Request dictionary fields
 
       <table>
           <thead>
@@ -424,39 +402,100 @@ methods:
           </thead>
           <tbody>
               <tr>
-                  <td><b>Url</b></td>
+                  <td><code>Url</code></td>
                   <td>String</td>
                   <td>yes</td>
                   <td>The target URL for this request. Must use <code>http</code> or <code>https</code> protocols.</td>
               </tr>
               <tr>
-                  <td><b>Method</b></td>
+                  <td><code>Method</code></td>
                   <td>String</td>
                   <td>no</td>
-                  <td>The HTTP method being used by this request, most often GET or POST.</td>
+                  <td>The HTTP method being used by this request, most often <code>GET</code> or <code>POST</code>.</td>
               </tr>
               <tr>
-                  <td><b>Headers</b></td>
+                  <td><code>Headers</code></td>
                   <td>Dictionary</td>
                   <td>no</td>
                   <td>A dictionary of headers to be used with this request. Most HTTP headers are accepted here, but not all.</td>
               </tr>
               <tr>
-                  <td><b>Body</b></td>
+                  <td><code>Body</code></td>
                   <td>String</td>
                   <td>no</td>
-                  <td>The request body. Can be any string, including binary data. Must be excluded when using the GET or HEAD HTTP methods. It might be necessary to specify the <code>Content-Type</code> header when sending JSON or other formats.</td>
+                  <td>The request body. Can be any string, including binary data. Must be excluded when using the <code>GET</code> or <code>HEAD</code> HTTP methods. It might be necessary to specify the <code>Content-Type</code> header when sending JSON or other formats.</td>
               </tr>
               <tr>
-                  <td><b>Compress</b></td>
+                  <td><code>Compress</code></td>
                   <td><code>Enum.HttpCompression</code></td>
                   <td>no</td>
-                  <td>An optional compression field that will compress the data in the request. The value can either be <code>Enum.HttpCompression|None</code> or <code>Enum.HttpCompression|Gzip</code>.</td>
+                  <td>An optional compression field that will compress the data in the request. The value can either be <code>Enum.HttpCompression.None</code> or <code>Enum.HttpCompression.Gzip</code>.</td>
               </tr>
           </tbody>
       </table>
 
-      #### HTTP Headers
+      ##### Supported HTTP methods
+
+      The HTTP request methods specify the purpose of the request being made and
+      what is expected if the request is successful. For instance, the `GET`
+      request method tells the server at the requested address that a resource
+      is being requested and, if it succeeds, the resource at that address will
+      be returned. Similarly, the `HEAD` request method does the same except the
+      server knows to return a response without a `Body` element.
+
+      <table>
+          <thead>
+              <tr>
+                  <th>Method</th>
+                  <th>Description</th>
+                  <th>Safe</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><code>GET</code> &nbsp;<a href="https://developer.mozilla.org/docs/Web/HTTP/Methods/GET">&#9432;</a></td>
+                  <td>The <code>GET</code> method requests the resource at the specified address. Does not support use of the <code>Body</code> parameter.</td>
+                  <td>Yes</td>
+              </tr>
+              <tr>
+                  <td><code>HEAD</code> &nbsp;<a href="https://developer.mozilla.org/docs/Web/HTTP/Methods/HEAD">&#9432;</a></td>
+                  <td>The <code>HEAD</code> method requests a response identical to a <code>GET</code> request, but with no response body. Does not support use of the <code>Body</code> parameter.</td>
+                  <td>Yes</td>
+              </tr>
+              <tr>
+                  <td><code>POST</code> &nbsp;<a href="https://developer.mozilla.org/docs/Web/HTTP/Methods/POST">&#9432;</a></td>
+                  <td>The <code>POST</code> method submits the supplied <code>Body</code> data to the requested address.</td>
+                  <td>No</td>
+              </tr>
+              <tr>
+                  <td><code>PUT</code> &nbsp;<a href="https://developer.mozilla.org/docs/Web/HTTP/Methods/PUT">&#9432;</a></td>
+                  <td>The <code>PUT</code> method replaces all current iterations of the resource specified within the supplied <code>Body</code> data.</td>
+                  <td>No</td>
+              </tr>
+              <tr>
+                  <td><code>DELETE</code> &nbsp;<a href="https://developer.mozilla.org/docs/Web/HTTP/Methods/DELETE">&#9432;</a></td>
+                  <td>The <code>DELETE</code> method deletes the resource specified in the supplied <code>Body</code> data at the requested address.</td>
+                  <td>No</td>
+              </tr>
+              <tr>
+                  <td><code>OPTIONS</code>&nbsp;&nbsp;<a href="https://developer.mozilla.org/docs/Web/HTTP/Methods/OPTIONS">&#9432;</a></td>
+                  <td>The <code>OPTIONS</code> method requests the permitted communication options for the supplied address.</td>
+                  <td>Yes</td>
+              </tr>
+              <tr>
+                  <td><code>TRACE</code> &nbsp;<a href="https://developer.mozilla.org/docs/Web/HTTP/Methods/TRACE">&#9432;</a></td>
+                  <td>The <code>TRACE</code> method performs a message loop-back test along the path to the resource specified in the supplied <code>Body</code> data.</td>
+                  <td>Yes</td>
+              </tr>
+              <tr>
+                  <td><code>PATCH</code> &nbsp;<a href="https://developer.mozilla.org/docs/Web/HTTP/Methods/PATCH">&#9432;</a></td>
+                  <td>The <code>PATCH</code> method applies partial changes to the resource specified in the supplied <code>Body</code> data at the requested address.</td>
+                  <td>No</td>
+              </tr>
+          </tbody>
+      </table>
+
+      ##### HTTP headers
 
       In the request dictionary, you can specify custom HTTP headers to use in
       the request. However, some headers cannot be specified. For example,
@@ -466,17 +505,17 @@ methods:
       some REST APIs may require API keys or other service authentication to be
       specified in request headers.
 
-      This method does not detect the format of body content. Many web servers
-      require the `Content-Type` header be set appropriately when sending
-      certain formats. Other methods of `Class.HttpService` use the
+      The `RequestAsync()` method does not detect the format of body content.
+      Many web servers require the `Content-Type` header be set appropriately
+      when sending certain formats. Other methods of `Class.HttpService` use the
       `Enum.HttpContentType` enum; for this method set the `Content-Type` header
       appropriately: `text/plain`, `text/xml`, `application/xml`,
       `application/json` or `application/x-www-form-urlencoded` are replacement
       `Content-Type` header values for the respective enum values.
 
-      #### Response Dictionary Fields
+      ##### Response dictionary fields
 
-      The function returns a dictionary containing the following fields:
+      `RequestAsync()` returns a dictionary containing the following fields:
 
       <table>
           <thead>
@@ -488,49 +527,48 @@ methods:
           </thead>
           <tbody>
               <tr>
-                  <td><b>Success</b></td>
+                  <td><code>Success</code></td>
                   <td>Boolean</td>
-                  <td>The success status of the request. This is true if and only if the <b>StatusCode</b> lies within the range [200, 299].</td>
+                  <td>The success status of the request. This is true if and only if the <code>StatusCode</code> lies within the range <code>200</code>-<code>299</code>.</td>
               </tr>
               <tr>
-                  <td><b>StatusCode</b></td>
+                  <td><code>StatusCode</code></td>
                   <td>Integer</td>
                   <td>The HTTP response code identifying the status of the response.</td>
               </tr>
               <tr>
-                  <td><b>StatusMessage</b></td>
+                  <td><code>StatusMessage</code></td>
                   <td>String</td>
                   <td>The status message that was sent back.</td>
               </tr>
               <tr>
-                  <td><b>Headers</b></td>
+                  <td><code>Headers</code></td>
                   <td>Dictionary</td>
                   <td>A dictionary of headers that were set in this response.</td>
               </tr>
               <tr>
-                  <td><b>Body</b></td>
+                  <td><code>Body</code></td>
                   <td></td>
                   <td>The request body (content) received in the response.</td>
               </tr>
           </tbody>
       </table>
 
-      #### Error Cases
+      ##### Error Cases
 
-      This method raises an error if the response times out or if the target
-      server rejects the request. If a web service goes down for some reason, it
-      can cause scripts that use this method to stop functioning altogether. It
-      is often a good idea to wrap calls to this method in `pcall` and
-      gracefully handle failure cases if the required information isn't
-      available.
+      `RequestAsync()` raises an error if the response times out or if the
+      target server rejects the request. If a web service goes down for some
+      reason, it can cause scripts that use this method to stop functioning
+      altogether. It is often a good idea to wrap calls to this method in
+      `Global.LuaGlobals.pcall()` and gracefully handle failure cases if the
+      required information isn't available.
 
-      #### Limitations
+      ##### Limitations
 
       The current limitation for sending and receiving HTTP requests is 500
       requests per minute. Requests over this threshold will fail. Additionally,
       Roblox domains are excluded. This means that HTTP requests cannot be sent
-      to any Roblox owned site, such as
-      [www.roblox.com](https://www.roblox.com).
+      to any Roblox-owned site such as [www.roblox.com](https://www.roblox.com).
     code_samples:
       - sending-an-http-request
     parameters:
