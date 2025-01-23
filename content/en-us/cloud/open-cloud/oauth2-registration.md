@@ -108,7 +108,7 @@ public mode, and you can't revert it back to private mode.
 Regardless of whether your app is approved or rejected, you receive an email
 notification of the result when the review is completed.
 
-## Edit and delet your app
+## Edit and delete your app
 
 You can edit or delete your app with the following steps if it's not under
 review:
