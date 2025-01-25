@@ -149,11 +149,11 @@ methods:
         summary: 'The duration in which the total smoothing operation should take place.'
       - name: maxSpeed
         type: float?
-        default: ''
+        default:
         summary: 'The maximum speed at which the current position should approach the target position.'
       - name: dt
         type: float?
-        default: ''
+        default:
         summary: 'The rate at which the smoothing operation should be applied.'
     returns:
       - type: Tuple
