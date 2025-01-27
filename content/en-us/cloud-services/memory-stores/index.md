@@ -86,7 +86,7 @@ To keep your memory usage pattern optimal and avoid hitting the [limits](#limits
 
 - Only keep necessary values in memory.
 
-  For example, for an auction house experience, you only need to maintain the highest bid. You can use `Class.MemoryStoreQueue:UpdateAsync()` on one key to keep the highest bid rather than keeping all bids in your data structure.
+  For example, for an auction house experience, you only need to maintain the highest bid. You can use `Class.MemoryStoreSortedMap:UpdateAsync()` on one key to keep the highest bid rather than keeping all bids in your data structure.
 
 - Use [exponential backoff](https://en.wikipedia.org/wiki/Exponential_backoff) to help stay below API request limits.
 
