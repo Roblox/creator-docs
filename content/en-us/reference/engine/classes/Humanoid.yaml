@@ -1438,6 +1438,11 @@ methods:
         `Enum.HumanoidStateType.PlatformStanding` will cause the humanoid state
         to be automatically set to `Enum.HumanoidStateType.Running`.
 
+      Note that in order to set the `Class.Humanoid` state using this function, 
+      you must do it in a `Class.LocalScript` owned by the NetworkOwner of the 
+      `Class.Player.Character`. You can use this function in a `Class.Script`, but the NetworkOwner 
+      of the `Class.Player.Character` must be the Server.
+
       See also `Class.Humanoid:SetStateEnabled()` to enable or disable a
       particular state, and `Class.Humanoid:GetState()` to get the current
       humanoid state.
