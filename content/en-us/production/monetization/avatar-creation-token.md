@@ -3,7 +3,7 @@ title: Avatar creation token
 description: Enable users to create and purchase avatar items in experience.
 ---
 
-An **avatar creation token** enables developers to allow users to create, purchase, and save avatar items directly from an experience to their platform-level inventory. Experiences that implement in-experience creation APIs, such as `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync`, must include one or more avatar creation tokens. You can purchase and manage tokens in your experience's [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+An **avatar creation token** enables developers to allow users to create, purchase, and save avatar items directly from an experience to their platform-level inventory using [in-experience creation](../../avatar/in-experience-creation.md). Experiences that implement in-experience creation APIs, such as `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync`, must include one or more avatar creation tokens. You can purchase and manage tokens in your experience's [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
 <Alert severity = 'info'>
 Owners of experiences that incorporate in-experience avatar item creation also benefit from [Marketplace commissions](../../marketplace/marketplace-fees-and-commissions.md#commissions) as both **creator** and **experience owner**.
