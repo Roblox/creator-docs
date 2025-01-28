@@ -134,9 +134,8 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
     pip3 install requests
     pip3 install urllib3==1.26.6
     ```
-
+    
    </TabItem>
-
    <TabItem label="Discord">
 
    ```bash title="Install Libraries"
@@ -146,7 +145,6 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
    ```
 
    </TabItem>
-      
    <Tabs>
       
 2.  Copy and save the following scripts corresponding to different parts of the bot logic in the same directory:
