@@ -126,19 +126,33 @@ To obtain these identifiers, open the [Creations](https://create.roblox.com/dash
 After you finish setting up the webhook, bot, and API key for data stores, add them to the scripts that implement the bot's automation logic. The following example uses Python 3:
 
 1.  Install Python libraries using the following commands:
+   <Tabs>
+   <TabItem label="Guilded">
 
     ```bash title="Install Libraries"
-    pip3 install discord
     pip3 install guilded.py==1.8.0
     pip3 install requests
     pip3 install urllib3==1.26.6
     ```
 
-1.  Copy and save the following scripts corresponding to different parts of the bot logic in the same directory:
+   </TabItem>
+
+   <TabItem label="Discord">
+
+   ```bash title="Install Libraries"
+   pip3 install discord
+   pip3 install requests
+   pip3 install urllib3==1.26.6
+   ```
+
+   </TabItem>
+      
+   <Tabs>
+      
+2.  Copy and save the following scripts corresponding to different parts of the bot logic in the same directory:
 
     ```python title="bot_config.py"
-    DISCORD_BOT_TOKEN = ""
-    GUILDED_BOT_TOKEN = ""
+    BOT_TOKEN = ""
     OPEN_CLOUD_API_KEY = ""
     ROBLOX_WEBHOOK_SECRET = ""
 
