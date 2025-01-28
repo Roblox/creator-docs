@@ -147,7 +147,7 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
    </TabItem>
    </Tabs>
 
-2.  Copy and save the following scripts corresponding to different parts of the bot logic in the same directory:
+1.  Copy and save the following scripts corresponding to different parts of the bot logic in the same directory:
 
     ```python title="bot_config.py"
     BOT_TOKEN = ""
