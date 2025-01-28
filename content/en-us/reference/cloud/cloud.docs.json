@@ -207,7 +207,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": []
           },
@@ -282,7 +282,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": [
               "group:read"
@@ -341,7 +341,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": [
               "group:write"
@@ -400,7 +400,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": [
               "group:write"
@@ -477,7 +477,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": []
           },
@@ -540,7 +540,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": [
               "group:write"
@@ -609,7 +609,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": []
           },
@@ -662,7 +662,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": []
           },
@@ -706,7 +706,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": []
           },
@@ -750,7 +750,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Universes and Places",
+          "category": "Universes and places",
           "methodProperties": {
             "scopes": []
           },
@@ -811,7 +811,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Universes and Places",
+          "category": "Universes and places",
           "methodProperties": {
             "scopes": [
               "universe:write"
@@ -888,7 +888,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.control:list"
@@ -983,7 +983,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:list"
@@ -1060,7 +1060,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:create"
@@ -1124,7 +1124,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:read"
@@ -1180,7 +1180,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:delete"
@@ -1261,7 +1261,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:update"
@@ -1335,7 +1335,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:create",
@@ -1431,7 +1431,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.versions:list"
@@ -1535,7 +1535,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:list"
@@ -1621,7 +1621,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:create"
@@ -1694,7 +1694,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:read"
@@ -1759,7 +1759,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:delete"
@@ -1849,7 +1849,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:update"
@@ -1932,7 +1932,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.objects:create",
@@ -2037,7 +2037,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.versions:list"
@@ -2093,7 +2093,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe-datastores.control:snapshot"
@@ -2158,7 +2158,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.queue:write"
@@ -2217,7 +2217,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.queue:discard"
@@ -2300,7 +2300,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.queue:dequeue"
@@ -2394,7 +2394,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:read"
@@ -2471,7 +2471,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:write"
@@ -2535,7 +2535,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:read"
@@ -2591,7 +2591,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:write"
@@ -2672,7 +2672,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store.sorted-map:write"
@@ -2736,7 +2736,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.memory-store:flush"
@@ -2839,7 +2839,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:read"
@@ -2925,7 +2925,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:write"
@@ -2998,7 +2998,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:read"
@@ -3063,7 +3063,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:write"
@@ -3153,7 +3153,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:write"
@@ -3236,7 +3236,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Data and Memory Stores",
+          "category": "Data and memory stores",
           "methodProperties": {
             "scopes": [
               "universe.ordered-data-store.scope.entry:write"
@@ -3291,7 +3291,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Universes and Places",
+          "category": "Universes and places",
           "methodProperties": {
             "scopes": []
           },
@@ -3361,7 +3361,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Universes and Places",
+          "category": "Universes and places",
           "methodProperties": {
             "scopes": [
               "universe.place:write"
@@ -3433,7 +3433,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Universes and Places",
+          "category": "Universes and places",
           "methodProperties": {
             "scopes": [
               "universe.place.instance:read"
@@ -3522,7 +3522,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Universes and Places",
+          "category": "Universes and places",
           "methodProperties": {
             "scopes": [
               "universe.place.instance:write"
@@ -3617,7 +3617,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Universes and Places",
+          "category": "Universes and places",
           "methodProperties": {
             "scopes": [
               "universe.place.instance:read"
@@ -3682,7 +3682,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Luau Execution",
+          "category": "Luau execution",
           "methodProperties": {
             "scopes": [
               "universe.place.luau-execution-session:write"
@@ -3769,7 +3769,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Luau Execution",
+          "category": "Luau execution",
           "methodProperties": {
             "scopes": [
               "universe.place.luau-execution-session:read",
@@ -3858,7 +3858,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Luau Execution",
+          "category": "Luau execution",
           "methodProperties": {
             "scopes": [
               "universe.place.luau-execution-session:read",
@@ -3955,7 +3955,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Luau Execution",
+          "category": "Luau execution",
           "methodProperties": {
             "scopes": [
               "universe.place.luau-execution-session:read",
@@ -4042,7 +4042,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -4106,7 +4106,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -4205,7 +4205,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:write"
@@ -4279,7 +4279,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Luau Execution",
+          "category": "Luau execution",
           "methodProperties": {
             "scopes": [
               "universe.place.luau-execution-session:write"
@@ -4375,7 +4375,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Luau Execution",
+          "category": "Luau execution",
           "methodProperties": {
             "scopes": [
               "universe.place.luau-execution-session:read",
@@ -4473,7 +4473,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Luau Execution",
+          "category": "Luau execution",
           "methodProperties": {
             "scopes": [
               "universe.place.luau-execution-session:read",
@@ -4579,7 +4579,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Luau Execution",
+          "category": "Luau execution",
           "methodProperties": {
             "scopes": [
               "universe.place.luau-execution-session:read",
@@ -4737,7 +4737,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -4792,7 +4792,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -4882,7 +4882,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:write"
@@ -4959,7 +4959,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": [
               "universe.user-restriction:read"
@@ -5009,7 +5009,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Universes and Places",
+          "category": "Universes and places",
           "methodProperties": {
             "scopes": [
               "universe-messaging-service:publish"
@@ -5065,7 +5065,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Universes and Places",
+          "category": "Universes and places",
           "methodProperties": {
             "scopes": [
               "universe:write"
@@ -5111,7 +5111,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": []
           },
@@ -5128,7 +5128,7 @@
           "Cloud"
         ],
         "summary": "List Inventory Items",
-        "description": "List the inventory items in a user's inventory.\n\n The inventory items returned depend on the target user’s choice under\n **Settings > Privacy > Who can see my inventory?**:\n * If the user granted inventory visibility to \"Everyone,\" then any API key\n or OAuth2 token can be used to view the target’s inventory, no matter what\n scopes it has or who created it.\n * If the user has not granted inventory visibility to \"Everyone\":\n   * Their inventory can still be viewed with an API key created by the\n   target user with **Inventory: Read** permission.\n   * Their inventory can still be viewed with an OAuth2 token if the target\n   user authorizes an app requesting permissions for the\n   `user.inventory-item:read` scope.",
+        "description": "List the inventory items in a user's inventory.\n\n The inventory items returned depend on the target user’s choice under\n **Settings > Privacy > Who can see my inventory?**:\n * If the user granted inventory visibility to \"Everyone,\" then any API key\n or OAuth2 token can be used to view the target’s inventory, no matter what\n scopes it has or who created it.\n * If the user has not granted inventory visibility to \"Everyone\":\n   * Their inventory can still be viewed with an API key created by the\n   target user with **Inventory: Read** permission.\n   * Their inventory can still be viewed with an OAuth2 token if the target\n   user authorizes an app requesting permissions for the\n   `user.inventory-item:read` scope.\n\n Rate limits:\n * For API keys: 100 requests per minute per API key owner. The owner can be\n a user or a group. Rate limits are enforced across all of the owner's API\n keys.\n * OAuth2 tokens: 20 requests per minute per OAuth2 access token.",
         "operationId": "Cloud_ListInventoryItems",
         "parameters": [
           {
@@ -5186,7 +5186,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": []
           },
@@ -5240,7 +5240,7 @@
         },
         "x-visibility": "STABLE",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": [
               "user.user-notification:write"
@@ -5333,7 +5333,7 @@
         },
         "x-visibility": "BETA",
         "x-roblox-docs": {
-          "category": "Users and Groups",
+          "category": "Users and groups",
           "methodProperties": {
             "scopes": []
           },
@@ -5443,6 +5443,13 @@
           }
         },
         "description": "Represents a product in the Creator Store. Throttles at 60 requests per\n minute.",
+        "x-aep-resource": {
+          "patterns": [
+            "creator-store-products/{creator_store_product_id}"
+          ],
+          "plural": "creator-store-products",
+          "singular": "creator-store-product"
+        },
         "x-resource": true,
         "x-oneOf": {
           "productType": [
@@ -5482,6 +5489,13 @@
           }
         },
         "description": "Represents a data store.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}/data-stores/{data_store_id}"
+          ],
+          "plural": "data-stores",
+          "singular": "data-store"
+        },
         "x-resource": true
       },
       "DataStoreEntry": {
@@ -5550,6 +5564,14 @@
           }
         },
         "description": "A key-value entry in a data store.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}/data-stores/{data_store_id}/entries/{data_store_entry_id}",
+            "universes/{universe_id}/data-stores/{data_store_id}/scopes/{data_store_scope_id}/entries/{data_store_entry_id}"
+          ],
+          "plural": "data-store-entries",
+          "singular": "data-store-entry"
+        },
         "x-resource": true
       },
       "Decimal": {
@@ -5702,6 +5724,13 @@
           }
         },
         "description": "A mini-community within Roblox for communication, discussions, and more.",
+        "x-aep-resource": {
+          "patterns": [
+            "groups/{group_id}"
+          ],
+          "plural": "groups",
+          "singular": "group"
+        },
         "x-resource": true,
         "x-oneOf": {
           "Owner": [
@@ -5732,6 +5761,13 @@
           }
         },
         "description": "A request to join a group.\n\n The `acceptRequests` permission is required.",
+        "x-aep-resource": {
+          "patterns": [
+            "groups/{group_id}/join-requests/{group_join_request_id}"
+          ],
+          "plural": "group-join-requests",
+          "singular": "group-join-request"
+        },
         "x-resource": true
       },
       "GroupMembership": {
@@ -5769,6 +5805,13 @@
           }
         },
         "description": "A membership to a group. A user ID can be used in place of a membership ID.",
+        "x-aep-resource": {
+          "patterns": [
+            "groups/{group_id}/memberships/{group_membership_id}"
+          ],
+          "plural": "group-memberships",
+          "singular": "group-membership"
+        },
         "x-resource": true
       },
       "GroupRole": {
@@ -5828,6 +5871,13 @@
           }
         },
         "description": "A configurable property to grant specific privileges for members within a\n group.",
+        "x-aep-resource": {
+          "patterns": [
+            "groups/{group_id}/roles/{group_role_id}"
+          ],
+          "plural": "group-roles",
+          "singular": "group-role"
+        },
         "x-resource": true,
         "x-oneOf": {
           "Description": [
@@ -6014,6 +6064,13 @@
           }
         },
         "description": "A single status post on a group that can hold important group updates or\n other information.",
+        "x-aep-resource": {
+          "patterns": [
+            "groups/{group_id}/shout"
+          ],
+          "plural": "group-shouts",
+          "singular": "group-shout"
+        },
         "x-resource": true,
         "x-oneOf": {
           "Poster": [
@@ -6084,6 +6141,13 @@
           }
         },
         "description": "Represents a data model instance.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}/places/{place_id}/instances/{instance_id}"
+          ],
+          "plural": "instances",
+          "singular": "instance"
+        },
         "x-resource": true
       },
       "InventoryItem": {
@@ -6112,6 +6176,13 @@
           }
         },
         "description": "Represents an item in a user's inventory.",
+        "x-aep-resource": {
+          "patterns": [
+            "users/{user_id}/inventory-items/{inventory_item_id}"
+          ],
+          "plural": "inventory-items",
+          "singular": "inventory-item"
+        },
         "x-resource": true,
         "x-oneOf": {
           "details": [
@@ -6570,7 +6641,17 @@
             "description": "Present when the task execution succeeds. Contains the output of the\n execution."
           }
         },
-        "description": "A `LuauExecutionSessionTask` (\"task\" for short) executes a given Luau script\n in the context of a specific version of a place.\n\n In a task, physics simulation does not run. Server and local scripts within\n the place also do not automatically run.\n\n The script may access and update the data model of the place, including\n invoking any module scripts. However, data model changes are local to the\n task and cannot be persisted.\n\n The script can also invoke engine APIs that read and/or modify data stored in\n the cloud, such as those for DataStores. Exercise caution when using such\n APIs.\n\n Scripts can be up to 4 MB in size and run for up to 30 seconds. Scripts that\n run for longer than 30 seconds terminate with an error.\n\n Scripts are executed as-is and do not need to be wrapped in a function.\n\n Scripts can return values (using the Luau `return` keyword). Return values\n are serialized to JSON and can be retrieved with the `Get\n LuauExecutionSessionTask` API after the task completes. The total size of the\n return values after JSON serialization must not exceed 4 MB. If the limit is\n exceeded, the task terminates with an error.\n\n If the script raises an unhandled error, the task terminates. The error\n information can be retrieved with the `GetLuauExecutionSessionTask` API.\n\n Standard output (generated by the Luau `print` function) can be retrieved\n with the `ListLuauExecutionSessionTaskLogs` method after the task completes.\n A maximum of 450 KB of logs are retained. If the amount of logs exceeds the\n limit, older logs are discarded.\n\n Information about a task is retained for 24 hours after task completion.\n\n At most ten incomplete tasks are allowed per place. Attempting to create more\n tasks while the first ten are incomplete results in a HTTP 429 response.",
+        "description": "A `LuauExecutionSessionTask` (\"task\" for short) executes a given Luau script\n in the context of a specific version of a place.\n\n In a task, physics simulation does not run. Server and local scripts within\n the place also do not automatically run.\n\n The script may access and update the data model of the place, including\n invoking any module scripts. However, data model changes are local to the\n task and cannot be persisted.\n\n The script can also invoke engine APIs that read and/or modify data stored in\n the cloud, such as those for DataStores. Exercise caution when using these\n APIs.\n\n Scripts can be up to 4 MB in size and run for up to 5 minutes. Scripts that\n run for longer than the time limit terminate with an error.\n\n Scripts are executed as-is and do not need to be wrapped in a function.\n\n Scripts can return values (using the Luau `return` keyword). Return values\n are serialized to JSON and can be retrieved with the `Get\n LuauExecutionSessionTask` API after the task completes. The total size of the\n return values after JSON serialization must not exceed 4 MB. If the limit is\n exceeded, the task terminates with an error.\n\n If the script raises an unhandled error, the task terminates. The error\n information can be retrieved with the `GetLuauExecutionSessionTask` API.\n\n Standard output (generated by the Luau `print` function) can be retrieved\n with the `ListLuauExecutionSessionTaskLogs` method after the task completes.\n A maximum of 450 KB of logs are retained. If the amount of logs exceeds the\n limit, older logs are discarded.\n\n Information about a task is retained for 24 hours after task completion.\n\n At most ten incomplete tasks are allowed per place. Attempting to create more\n tasks while the first ten are incomplete results in a HTTP 429 response.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}/places/{place_id}/luau-execution-session-tasks/{luau_execution_session_task_id}",
+            "universes/{universe_id}/places/{place_id}/versions/{place_version_id}/luau-execution-session-tasks/{luau_execution_session_task_id}",
+            "universes/{universe_id}/places/{place_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{luau_execution_session_task_id}",
+            "universes/{universe_id}/places/{place_id}/versions/{place_version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{luau_execution_session_task_id}"
+          ],
+          "plural": "luau-execution-session-tasks",
+          "singular": "luau-execution-session-task"
+        },
         "x-resource": true,
         "x-oneOf": {
           "result": [
@@ -6597,6 +6678,16 @@
           }
         },
         "description": "Represents a chunk of log messages generated by a\n `LuauExecutionSessionTask`.\n\n The amount of logs that is retained is limited. See the documentation of the\n `LuauExecutionSessionTask` resource for more details.\n\n Logs have the same retention time as the parent task.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}/places/{place_id}/luau-execution-session-tasks/{luau_execution_session_task_id}/logs/{luau_execution_session_task_log_id}",
+            "universes/{universe_id}/places/{place_id}/versions/{place_version_id}/luau-execution-session-tasks/{luau_execution_session_task_id}/logs/{luau_execution_session_task_log_id}",
+            "universes/{universe_id}/places/{place_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{luau_execution_session_task_id}/logs/{luau_execution_session_task_log_id}",
+            "universes/{universe_id}/places/{place_id}/versions/{place_version_id}/luau-execution-sessions/{luau_execution_session_id}/tasks/{luau_execution_session_task_id}/logs/{luau_execution_session_task_log_id}"
+          ],
+          "plural": "luau-execution-session-task-logs",
+          "singular": "luau-execution-session-task-log"
+        },
         "x-resource": true
       },
       "LuauExecutionSessionTask_Error": {
@@ -6648,6 +6739,13 @@
           }
         },
         "description": "Represents the memory store of the universe.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}/memory-store"
+          ],
+          "plural": "memory-stores",
+          "singular": "memory-store"
+        },
         "x-resource": true
       },
       "MemoryStoreQueueItem": {
@@ -6688,6 +6786,13 @@
           }
         },
         "description": "Represents an item within a queue structure.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}/memory-store/queues/{memory_store_queue_id}/items/{memory_store_queue_item_id}"
+          ],
+          "plural": "memory-store-queue-items",
+          "singular": "memory-store-queue-item"
+        },
         "x-resource": true,
         "x-oneOf": {
           "expiration": [
@@ -6742,6 +6847,13 @@
           }
         },
         "description": "Represents an item within a sorted map structure.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}/memory-store/sorted-maps/{memory_store_sorted_map_id}/items/{memory_store_sorted_map_item_id}"
+          ],
+          "plural": "memory-store-sorted-map-items",
+          "singular": "memory-store-sorted-map-item"
+        },
         "x-resource": true,
         "x-oneOf": {
           "expiration": [
@@ -6822,6 +6934,13 @@
           }
         },
         "description": "A key-value entry in an ordered data store.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}/ordered-data-stores/{ordered_data_store_id}/scopes/{ordered_data_store_scope_id}/entries/{ordered_data_store_entry_id}"
+          ],
+          "plural": "ordered-data-store-entries",
+          "singular": "ordered-data-store-entry"
+        },
         "x-resource": true,
         "x-oneOf": {
           "Value": [
@@ -6868,6 +6987,13 @@
           }
         },
         "description": "Represents a Roblox place.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}/places/{place_id}"
+          ],
+          "plural": "places",
+          "singular": "place"
+        },
         "x-resource": true,
         "x-oneOf": {
           "Description": [
@@ -7084,6 +7210,13 @@
           }
         },
         "description": "Represents a user's subscription to a subscription product. The\n subscription ID is the same as the user ID of the user who subscribed.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}/subscription-products/{subscription_product_id}/subscriptions/{subscription_id}"
+          ],
+          "plural": "subscriptions",
+          "singular": "subscription"
+        },
         "x-resource": true,
         "x-oneOf": {
           "subscriber": [
@@ -7246,6 +7379,13 @@
           }
         },
         "description": "Represents a Roblox experience.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}"
+          ],
+          "plural": "universes",
+          "singular": "universe"
+        },
         "x-resource": true,
         "x-oneOf": {
           "ConsoleEnabled": [
@@ -7353,6 +7493,13 @@
           }
         },
         "description": "Represents any registered user of Roblox.",
+        "x-aep-resource": {
+          "patterns": [
+            "users/{user_id}"
+          ],
+          "plural": "users",
+          "singular": "user"
+        },
         "x-resource": true
       },
       "UserNotification": {
@@ -7379,6 +7526,13 @@
           }
         },
         "description": "Represents a notification sent to a user.",
+        "x-aep-resource": {
+          "patterns": [
+            "users/{user_id}/notifications/{user_notification_id}"
+          ],
+          "plural": "user-notifications",
+          "singular": "user-notification"
+        },
         "x-resource": true
       },
       "UserNotification_Payload": {
@@ -7516,6 +7670,14 @@
           }
         },
         "description": "Represents a restriction on a user.",
+        "x-aep-resource": {
+          "patterns": [
+            "universes/{universe_id}/user-restrictions/{user_restriction_id}",
+            "universes/{universe_id}/places/{place_id}/user-restrictions/{user_restriction_id}"
+          ],
+          "plural": "user-restrictions",
+          "singular": "user-restriction"
+        },
         "x-resource": true
       },
       "UserRestrictionLog": {
@@ -7875,10 +8037,10 @@
     }
   ],
   "x-categories": [
-    "Data and Memory Stores",
-    "Luau Execution",
+    "Data and memory stores",
+    "Luau execution",
     "Monetization",
-    "Universes and Places",
-    "Users and Groups"
+    "Universes and places",
+    "Users and groups"
   ]
 }

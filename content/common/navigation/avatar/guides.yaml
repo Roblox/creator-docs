@@ -63,6 +63,8 @@ navigation:
         path: /art/characters/facial-animation/moods
       - title: FACS poses reference
         path: /art/characters/facial-animation/facs-poses-reference
+  - title: In-experience creation
+    path: /avatar/in-experience-creation
 
   - heading: Publishing and selling
   - title: Overview
