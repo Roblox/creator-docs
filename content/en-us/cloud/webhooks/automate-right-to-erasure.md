@@ -128,7 +128,7 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
 1.  Install Python libraries using the following commands:
    <Tabs>
    <TabItem label="Guilded">
-
+ 
    ```bash title="Install Libraries"
    pip3 install guilded.py==1.8.0
    pip3 install requests
@@ -145,7 +145,7 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
    ```
 
    </TabItem>
-   <Tabs>
+   </Tabs>
 
 2.  Copy and save the following scripts corresponding to different parts of the bot logic in the same directory:
 
