@@ -129,11 +129,11 @@ After you finish setting up the webhook, bot, and API key for data stores, add t
    <Tabs>
    <TabItem label="Guilded">
 
-    ```bash title="Install Libraries"
-    pip3 install guilded.py==1.8.0
-    pip3 install requests
-    pip3 install urllib3==1.26.6
-    ```
+   ```bash title="Install Libraries"
+   pip3 install guilded.py==1.8.0
+   pip3 install requests
+   pip3 install urllib3==1.26.6
+   ```
 
    </TabItem>
    <TabItem label="Discord">
