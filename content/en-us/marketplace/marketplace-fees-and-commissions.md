@@ -30,17 +30,17 @@ This publishing advance is dependent on the type of Marketplace item being sold:
   <tr>
     <td>Hat</td>
     <td>1500</td>
-    <td>20000</td>
+    <td>13000</td>
   </tr>
   <tr>
     <td>Face</td>
     <td>1500</td>
-    <td>20000</td>
+    <td>13000</td>
   </tr>
   <tr>
     <td>Hair</td>
-    <td>1700</td>
-    <td>20000</td>
+    <td>1000</td>
+    <td>6000</td>
   </tr>
   <tr>
     <td>Neck</td>
@@ -69,48 +69,48 @@ This publishing advance is dependent on the type of Marketplace item being sold:
   </tr>
   <tr>
     <td>Jacket</td>
-    <td>1000</td>
-    <td>13000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>T-Shirt</td>
-    <td>1000</td>
-    <td>13000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>Shirt</td>
-    <td>1000</td>
-    <td>13000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>Sweater</td>
-    <td>1000</td>
-    <td>13000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>Pants</td>
-    <td>1500</td>
-    <td>16000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>Dress/Skirt</td>
-    <td>1500</td>
-    <td>16000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>Shorts</td>
-    <td>1500</td>
-    <td>16000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>Body</td>
-    <td>4000</td>
-    <td>Not available as Limiteds.</td>
+    <td>2500</td>
+    <td>20000</td>
   </tr>
   <tr>
     <td>Head</td>
     <td>1500</td>
-    <td>Not available as Limiteds.</td>
+    <td>10000</td>
   </tr>
 </tbody>
 </table>

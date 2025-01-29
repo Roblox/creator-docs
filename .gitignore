@@ -1,13 +1,3 @@
-# Only English content is included in the repository
-# Ignore everything under 'content/'
-content/**
-# Do not ignore the 'content/common/' and 'content/en-us/' directories
-!content/common/
-!content/en-us/
-# Do not ignore any files and directories under 'content/common/' and 'content/en-us/'
-!content/common/**
-!content/en-us/**
-
 # Folders
 **/node_modules/
 tools/output/
