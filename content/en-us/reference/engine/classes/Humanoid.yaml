@@ -1439,12 +1439,10 @@ methods:
         to be automatically set to `Enum.HumanoidStateType.Running`.
 
       Note that in order to set the `Class.Humanoid` state using this method,
-      you must do so from a `Class.LocalScript`, and the Client must have the
-      [Network Ownership](../../../physics/network-ownership.md) of the 
-      `Class.Player.Character`.
-      Alternatively, you can call this method from a `Class.Script`, but the
-      Server must have the [Network Ownership](../../../physics/network-ownership.md) of 
-      the `Class.Player.Character`.
+      you must do so from a `Class.LocalScript` and the client must have
+      [network ownership](../../../physics/network-ownership.md) of the `Class.Player.Character`.
+      Alternatively, you can call this method from a server-side `Class.Script`, but the
+      server must have network ownership of the player character.
       
       See also `Class.Humanoid:SetStateEnabled()` to enable or disable a
       particular state, and `Class.Humanoid:GetState()` to get the current
