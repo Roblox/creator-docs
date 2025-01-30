@@ -64,7 +64,8 @@ methods:
         set to `nil`, etc.) when no longer needed for a tag. Do this when
         calling `Class.CollectionService:RemoveTag()|RemoveTag()`, calling
         `Class.Instance:Destroy()` or in a function connected to a signal
-        returned by `Class.CollectionService:GetInstanceRemovedSignal()|GetInstanceRemovedSignal()`.
+        returned by
+        `Class.CollectionService:GetInstanceRemovedSignal()|GetInstanceRemovedSignal()`.
     code_samples:
     parameters:
       - name: instance
@@ -137,11 +138,11 @@ methods:
       conditions:
 
       - The tag is assigned to an instance within the `Class.DataModel` using
-      `Class.CollectionService:AddTag()` or `Class.Instance:AddTag()`.
+        `Class.CollectionService:AddTag()` or `Class.Instance:AddTag()`.
 
       - An instance with the given tag is added as a descendant of the
-      `Class.DataModel`, for example by setting `Class.Instance.Parent` or
-      similar.
+        `Class.DataModel`, for example by setting `Class.Instance.Parent` or
+        similar.
 
       Subsequent calls to this method with the same tag return the same signal
       object. Consider also calling
@@ -178,10 +179,11 @@ methods:
       conditions:
 
       - The tag is removed from an instance within the `Class.DataModel` using
-      `Class.CollectionService:RemoveTag()` or `Class.Instance:RemoveTag()`.
+        `Class.CollectionService:RemoveTag()` or `Class.Instance:RemoveTag()`.
 
       - An instance with the given tag is removed as a descendant of the
-      `Class.DataModel`, for example by un‑setting `Class.Instance.Parent` or similar.
+        `Class.DataModel`, for example by un‑setting `Class.Instance.Parent` or
+        similar.
 
       Subsequent calls to this method with the same tag return the same signal
       object. The signal is useful for cleaning up resources used by instances

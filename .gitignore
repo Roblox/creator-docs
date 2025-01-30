@@ -1,7 +1,8 @@
 # Folders
 **/node_modules/
-tools/output/
+**output/
+**dist/
 
 # Files
 .DS_Store
-.env
+**.env
