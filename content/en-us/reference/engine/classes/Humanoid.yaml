@@ -2150,10 +2150,10 @@ methods:
 
       To do damage to a `Class.Humanoid` irrespective of any
       `Class.ForceField|ForceFields` present, set `Class.Humanoid.Health`
-      directly using `Humanoid.Health = AMOUNT`.
+      directly.
 
       For more information on how `Class.ForceField|ForceFields` protect
-      `Class.Humanoid|Humanoids` see the `Class.ForceField` page
+      `Class.Humanoid|Humanoids` see the `Class.ForceField` page.
     code_samples:
       - Humanoid-TakeDamage1
     parameters:
