@@ -40,7 +40,9 @@ methods:
       - `weldConstraintPreserve` — A `Enum.WeldConstraintPreserve` enum value
         describing how `Class.WeldConstraint|WeldConstraints` are preserved in
         the resulting recommendation table.
-      - `dropAttachmentsWithoutConstraints` — Boolean with default of `true`. If set to `false`, `Class.Attachment|Attachments` that have no `Class.Constraint|Constraints` will be preserved.
+      - `dropAttachmentsWithoutConstraints` — Boolean with default of `true`. If
+        set to `false`, `Class.Attachment|Attachments` that have no
+        `Class.Constraint|Constraints` will be preserved.
     code_samples:
       - GeometryService-CalculateConstraintsToPreserve
     parameters:
@@ -72,7 +74,9 @@ methods:
           - `weldConstraintPreserve` — A `Enum.WeldConstraintPreserve` enum
             value describing how `Class.WeldConstraint|WeldConstraints` are
             preserved in the resulting recommendation table.
-          - `dropAttachmentsWithoutConstraints` — Boolean with default of `true`. If set to `false`, `Class.Attachment|Attachments` that have no `Class.Constraint|Constraints` will be preserved.
+          - `dropAttachmentsWithoutConstraints` — Boolean with default of
+            `true`. If set to `false`, `Class.Attachment|Attachments` that have
+            no `Class.Constraint|Constraints` will be preserved.
     returns:
       - type: Array
         summary: |

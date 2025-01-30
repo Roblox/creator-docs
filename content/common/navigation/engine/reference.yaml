@@ -440,6 +440,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/BubbleChatMessageProperties.yaml
         ignoreTranslation: true
+      - title: BugReporterService
+        path: /reference/engine/classes/BugReporterService
+        type: engineapi
+        source: /reference/engine/classes/BugReporterService.yaml
+        ignoreTranslation: true
       - title: BuoyancySensor
         path: /reference/engine/classes/BuoyancySensor
         type: engineapi
@@ -4617,6 +4622,11 @@ navigation:
         path: /reference/engine/enums/ProductLocationRestriction
         type: engineapi
         source: /reference/engine/enums/ProductLocationRestriction.yaml
+        ignoreTranslation: true
+      - title: ProductPurchaseChannel
+        path: /reference/engine/enums/ProductPurchaseChannel
+        type: engineapi
+        source: /reference/engine/enums/ProductPurchaseChannel.yaml
         ignoreTranslation: true
       - title: ProductPurchaseDecision
         path: /reference/engine/enums/ProductPurchaseDecision
