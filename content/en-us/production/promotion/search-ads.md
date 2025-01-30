@@ -37,7 +37,7 @@ Search results populate in the following ways:
 <br />
 
 <Alert severity ='warning'>
-All Roblox advertisers of experiences must abide by our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). Currently, [paid access experiences in Robux](../monetization/paid-access-robux.md), [paid access experiences in local currency](../monetization/paid-access-local-currency.md), and [17+ experiences](https://en.help.roblox.com/hc/en-us/articles/15869919570708-Roblox-17-Policy-Standards) are not eligible to advertise using search ads. Roblox prevents surfacing experiences identified as clickbait or spam.
+All Roblox advertisers of experiences must abide by our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). Roblox prevents surfacing experiences identified as clickbait or spam.
 </Alert>
 
 ## Create search ads

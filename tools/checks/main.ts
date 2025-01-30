@@ -103,7 +103,7 @@ const getFilesToCheck = async () => {
       FileExtension.YAML,
     ]);
   }
-  const prefixesToIgnore = ['.github/', 'content/common/navigation/'];
+  const prefixesToIgnore = ['.github/', 'content/common/navigation/', 'tools/'];
   filesToCheck = filesToCheck.filter((filePath) => {
     return !prefixesToIgnore.some((prefix) => filePath.startsWith(prefix));
   });

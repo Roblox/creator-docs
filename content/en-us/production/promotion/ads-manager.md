@@ -63,7 +63,7 @@ An **ad campaign** is a coordinated series of ads designed to achieve a specific
 Before launching your campaign, you'll be able to [review your campaign details](#review-the-campaign) before submitting it to Roblox for moderation and approval.
 
 <Alert severity="warning">
-   Advertising paid experiences is prohibited. You will not be able to select paid experiences in the dropdown menu during the ad selection process.
+   Advertising paid experiences and restricted (17+) experiences is only available with sponsored and search ads.
 </Alert>
 
 ### Define the campaign

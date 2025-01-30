@@ -3,7 +3,8 @@ type: class
 category: Data
 memory_category: Instances
 summary: |
-  Allows sending HTTP requests and provides various web-related and JSON methods.
+  Allows sending HTTP requests and provides various web-related and JSON
+  methods.
 description: |
   `HttpService` allows HTTP requests to be sent from game servers using
   `Class.HttpService:RequestAsync()|RequestAsync`,
@@ -16,9 +17,9 @@ description: |
   `HttpService` also houses the `Class.HttpService:JSONEncode()|JSONEncode` and
   `Class.HttpService:JSONDecode()|JSONDecode` methods which are useful for
   communicating with services that use the [JSON](https://json.org) format. In
-  addition, the `Class.HttpService:GenerateGUID()|GenerateGUID` method
-  provides random 128‑bit labels which can be treated as probabilistically
-  unique in a variety of scenarios.
+  addition, the `Class.HttpService:GenerateGUID()|GenerateGUID` method provides
+  random 128‑bit labels which can be treated as probabilistically unique in a
+  variety of scenarios.
 
   You should only send HTTP requests to trusted third-party platforms to avoid
   making your experience vulnerable to security risks.
@@ -27,41 +28,43 @@ description: |
 
   ##### Enable HTTP requests
 
-  Request-sending methods aren't enabled by default. To send requests, toggle
-  on **Allow&nbsp;HTTP&nbsp;Requests** through the [Game
-  Settings](../../../studio/game-settings.md) interface in Studio, or set
-  `Class.HttpService.HttpEnabled|HttpEnabled` to `true` in the [Command
-  Bar](../../../studio/ui-overview#command-bar.md) for **unpublished**
+  Request-sending methods aren't enabled by default. To send requests, toggle on
+  **Allow&nbsp;HTTP&nbsp;Requests** through the
+  [Game Settings](../../../studio/game-settings.md) interface in Studio, or set
+  `Class.HttpService.HttpEnabled|HttpEnabled` to `true` in the
+  [Command Bar](../../../studio/ui-overview.md#command-bar) for **unpublished**
   experiences:
 
   `game:GetService("HttpService").HttpEnabled = true`
 
   ##### Use in plugins
 
-  `HttpService` can be used by Studio plugins. They may do this to
-  check for updates, send usage data, download content, or other business logic.
-  The first time a plugin attempts to do this, the user may be prompted to give
-  the plugin permission to communicate with the particular web address. A user
-  may accept, deny, and revoke such permissions at any time through the **Plugin
+  `HttpService` can be used by Studio plugins. They may do this to check for
+  updates, send usage data, download content, or other business logic. The first
+  time a plugin attempts to do this, the user may be prompted to give the plugin
+  permission to communicate with the particular web address. A user may accept,
+  deny, and revoke such permissions at any time through the **Plugin
   Management** window.
 
   Plugins may also communicate with other software running on the same computer
   through the `localhost` and `127.0.0.1` hosts. By running programs compatible
   with such plugins, you can extend the functionality of your plugin beyond the
-  normal capabilities of Studio, such as interacting with your computer's
-  file system. Beware that such software must be distributed separately from the
+  normal capabilities of Studio, such as interacting with your computer's file
+  system. Beware that such software must be distributed separately from the
   plugin itself and can pose security hazards if you aren't careful.
 
   ##### Additional considerations
 
   - There are port restrictions. You cannot use port `1194` or any port below
-    `1024`, except `80` and `443`. If you try to use a blocked port, you will receive either a `403 Forbidden` or `ERR_ACCESS_DENIED` error.
+    `1024`, except `80` and `443`. If you try to use a blocked port, you will
+    receive either a `403 Forbidden` or `ERR_ACCESS_DENIED` error.
   - For each Roblox game server, there is a limit of 500 HTTP requests per
     minute. Exceeding this may cause request-sending methods to stall entirely
     for about 30 seconds.
   - Requests cannot be made to any Roblox website, such as www.roblox.com.
   - Web requests can fail for many reasons, so it is important to "code
-    defensively" (use `Global.LuaGlobals.pcall()`) and have a plan for when requests fail.
+    defensively" (use `Global.LuaGlobals.pcall()`) and have a plan for when
+    requests fail.
   - Although the `http://` protocol is supported, you should use `https://`
     wherever possible.
   - Requests sent should provide a secure form of authentication, such as a
@@ -118,7 +121,7 @@ methods:
       wrapped in curly braces (`{}`). For instance:
 
       - `true`: `{94b717b2-d54f-4340-a504-bd809ef5bf5c}`
-      - `false`: `db454790-7563-44ed-ab4b-397ff5df737b` 
+      - `false`: `db454790-7563-44ed-ab4b-397ff5df737b`
     code_samples:
       - HttpService-GenerateGUID
     parameters:
@@ -184,8 +187,8 @@ methods:
       - Keys of the table are strings or numbers but not both. If a JSON object
         contains both, string keys are ignored.
       - An empty JSON object generates an empty Lua table (`{}`).
-      - If the `input` string is not a valid JSON object, this method will
-        throw an error.
+      - If the `input` string is not a valid JSON object, this method will throw
+        an error.
 
       To encode a Lua table into a JSON object, use the
       `Class.HttpService:JSONEncode()` method.
@@ -214,8 +217,8 @@ methods:
     summary: |
       Generate a JSON string from a Lua table.
     description: |
-      This method transforms a Lua [table](../../../luau/tables.md)
-      into a JSON object or array based on the following guidelines:
+      This method transforms a Lua [table](../../../luau/tables.md) into a JSON
+      object or array based on the following guidelines:
 
       - Keys of the table must be either strings or numbers. If a table contains
         both, an array takes priority (string keys are ignored).
@@ -264,9 +267,8 @@ methods:
       data of the media type `application/x-www-form-urlencoded`
       (`Enum.HttpContentType|Enum.HttpContentType.ApplicationUrlEncoded`).
 
-      For instance, when you encode the URL
-      `https://www.roblox.com/discover#/`, this method returns
-      `https%3A%2F%2Fwww%2Eroblox%2Ecom%2Fdiscover%23%2F`.
+      For instance, when you encode the URL `https://www.roblox.com/discover#/`,
+      this method returns `https%3A%2F%2Fwww%2Eroblox%2Ecom%2Fdiscover%23%2F`.
     code_samples:
       - HttpService-UrlEncode
       - HttpService-Pastebin
