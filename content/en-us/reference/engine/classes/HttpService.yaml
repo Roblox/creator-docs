@@ -159,9 +159,9 @@ methods:
       such as `apis.myservice.com` or to subdomains of a domain, for example
       `*.myservice.org`.
 
-      Production `Datatype.Secret`s are only available in live servers and Team Create. Local `Datatype.Secret`s are stored on your device per-experience, and are available for non-Team Create Studio. To add a local `Datatype.Secret` in Studio, go to the **Game Settings** in the **Home** tab of the ribbon bar. Then go to the **Security** tab of **Game Settings**.
-
-      Production `Datatype.Secret`s are only available in live servers and Team Create. [Local `Datatype.Secret`s](../../../studio/game-settings.md#security) are available for non-Team Create Studio.
+      Production `Datatype.Secret|Secrets` are only available in live servers and Team Create.
+      See [here](../../../studio/game-settings.md#security) for availability details of local
+      `Datatype.Secret|Secrets`.
     code_samples: []
     parameters:
       - name: key
