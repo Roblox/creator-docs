@@ -161,7 +161,7 @@ methods:
 
       Production `Datatype.Secret`s are only available in live servers and Team Create. Local `Datatype.Secret`s are stored on your device per-experience, and are available for non-Team Create Studio. To add a local `Datatype.Secret` in Studio, go to the **Game Settings** in the **Home** tab of the ribbon bar. Then go to the **Security** tab of **Game Settings**.
 
-      Enter `Datatype.Secret`s in the JSON form `{"secret_name": ["cGFzc3dvcmQ=", "*.google.com"], "other_secret": ["cGFzc3dvcmQ=", "*.github.com"]}`, where `cGFzc3dvcmQ=` is the secret value, and `*.google.com` is the domain the secret is valid for. Secret values must be encoded in Base64.
+      Production `Datatype.Secret`s are only available in live servers and Team Create. [Local `Datatype.Secret`s](https://create.roblox.com/docs/en-us/studio/game-settings#security) are available for non-Team Create Studio.
     code_samples: []
     parameters:
       - name: key
