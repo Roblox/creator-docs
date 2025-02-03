@@ -114,8 +114,8 @@ An experience's economy is tied to its core loop. When a player engages with the
 For these reasons, it can be beneficial to drip-feed resources to players over time, and one way to do that is through quest rewards. Dailies are an excellent delivery mechanism for currencies because the rewards are reliable, small, and valuable enough to encourage players to return every day.
 
 <figure>
-      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-7.png" alt="A pop-up UI in the Adopt Me! experience that displays tiles in a top-down list to inform players what they need to do for each tile's quest to obtain a reward." width="70%"/>
-      <figcaption>Daily quests in [*Adopt Me!*](https://www.roblox.com/games/920587237/)</figcaption>
+      <img src="../../assets/game-design/introduction-to-quest-design/quest-design-7.png" alt="A pop-up UI in the Pet Simulator X! experience that displays tiles in a top-down list to inform players what they need to do for each tile's quest to obtain a reward." width="70%"/>
+      <figcaption>Daily quests in [*Pet Simulator X!*](https://www.roblox.com/games/6284583030/)</figcaption>
     </figure>
 
 ### Increase engagement
