@@ -132,7 +132,7 @@ Table of sizes for each template part
 
 To begin creating classic clothing:
 
-1. If you are creating a classic shirt or pants, [download and unzip](../assets/accessories/classic-clothing/Classic-Clothing-Templates.zip) the following clothing templates to use as a canvas for your art.
+1. If you are creating a classic shirt or pants, [download and unzip](../assets/accessories/classic-clothing/Classic-Clothing-Templates.zip) the following clothing templates to use as a canvas for your art, of [visit this website](https://www.robloxshirttemplate.com/) for free layered templates in a variety of formats.
 2. Modify the image in an image editor of your choice.
 3. Export the image as a `.png` or `.jpg` before [testing](./test-classic-clothing.md) or [uploading](upload-classic-clothing.md) to Roblox.
 
