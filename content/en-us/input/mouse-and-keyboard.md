@@ -50,7 +50,7 @@ local function onInputEnded(inputObject, processedEvent)
 
 	-- Next, check that the input was a keyboard event
 	if inputObject.UserInputType == Enum.UserInputType.Keyboard then
-		print("A key was released: " .. inputObject.KeyCode.Name)
+		print("A key was released:", inputObject.KeyCode.Name)
 	end
 end
 
