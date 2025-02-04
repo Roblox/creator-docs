@@ -24,7 +24,7 @@ methods:
     description: |
       Determines if a user can see brand project assets inside your experience. This method lets you work with brands to only show commercial assets to brand-compliant audiences.
 
-      To use `CanViewBrandProjectAsync`, you must use a brand project ID provided by Roblox. To request a brand project ID, <a href="mailto:brandsupport@roblox.com?subject=Request%20-%20Brand%20Project%20ID&body=Hi%20Roblox%20Team%20-%20can%20you%20please%20create%20a%20brand%20project%20ID%20for%20me%20so%20I%20can%20use%20the%20API%3F%20Please%20let%20me%20know%20if%20any%20additional%20information%20is%20needed.%20Thanks%21">contact us</a>.
+      To use `CanViewBrandProjectAsync`, you must use a brand project ID provided by Roblox. To request a brand project ID, <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGTRQwATB2wUg0P4HUSTtyXrhptFahJifo1ew84SyqtfSBfg/viewform">contact us</a>.
 
       You must call this method on a server-side Script and wrap it in a `Global.LuaGlobals.pcall()`.
     code_samples:
