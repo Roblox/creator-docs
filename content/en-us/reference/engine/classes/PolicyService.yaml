@@ -19,21 +19,32 @@ deprecation_message: ''
 properties: []
 methods:
   - name: PolicyService:CanViewBrandProjectAsync
-    summary: ''
-    description: ''
-    code_samples: []
+    summary: |
+      Determines if a user can see brand project assets inside your experience.
+    description: |
+      Determines if a user can see brand project assets inside your experience. This method lets you work with brands to only show commercial assets to brand-compliant audiences.
+
+      To use `CanViewBrandProjectAsync`, you must use a brand project ID provided by Roblox. To request a brand project ID, <a href="mailto:brandsupport@roblox.com?subject=Request%20-%20Brand%20Project%20ID&body=Hi%20Roblox%20Team%20-%20can%20you%20please%20create%20a%20brand%20project%20ID%20for%20me%20so%20I%20can%20use%20the%20API%3F%20Please%20let%20me%20know%20if%20any%20additional%20information%20is%20needed.%20Thanks%21">contact us</a>.
+
+      You must call this method on a server-side Script and wrap it in a `Global.LuaGlobals.pcall()`.
+    code_samples:
+      - PolicyService-BrandProjectIntegrationServer
+      - PolicyService-BrandProjectIntegrationClient
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Player` object you're trying to show the brand project to.
       - name: brandProjectId
         type: string
         default:
-        summary: ''
+        summary: |
+          The brand project ID provided by Roblox. Represents all assets associated with a brand project.
     returns:
       - type: bool
-        summary: ''
+        summary: |
+          Whether or not the brand project can be shown to the specific user.
     tags:
       - Yields
     deprecation_message: ''
@@ -43,10 +54,10 @@ methods:
     writeCapabilities: []
   - name: PolicyService:GetPolicyInfoForPlayerAsync
     summary: |
-      Returns policy information about a player which is based on geolocation,
+      Returns policy information about a player based on geolocation,
       age group, and platform.
     description: |
-      Returns policy information about a player which is based on geolocation,
+      Returns policy information about a player based on geolocation,
       age group, and platform. The structure of the returned dictionary is as
       follows:
 
@@ -55,7 +66,7 @@ methods:
       <tr>
       <th>Name</th>
       <th>Type</th>
-      <th>Required For</th>
+      <th>Required for</th>
       <th>Description</th>
       </tr>
       </thead>

@@ -182,6 +182,15 @@ See [Appearance Modifiers](../ui/appearance-modifiers.md) for details on `<strok
 <img src="../assets/ui/rich-text/Example-Small-Caps.png" width="600" />
 </blockquote>
 
+### Mark
+
+`<mark> </mark>`
+
+<blockquote>
+`Text <mark color="#009966" transparency="0">highlighted</mark>.`
+<img src="../assets/ui/rich-text/Example-Highlighted.png" width="600" />
+</blockquote>
+
 ### Comment
 
 `<!-- -->`

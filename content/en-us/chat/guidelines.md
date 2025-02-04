@@ -11,7 +11,7 @@ In-experience text chat is any message created within your experience that origi
 - Chat window communication between users
 - Team-specific messages
 
-For sending and delivery, these types of communications must each go through a `Class.TextChannel` instance. This ensures messages respect privacy settings, are visible to moderators, and are properly text filtered.
+For sending and delivery, these types of communications must each go through a `Class.TextChannel` instance. This ensures messages respect privacy settings, are visible to moderators, and are properly text-filtered.
 
 Certain text is **not** considered chat:
 
@@ -40,6 +40,17 @@ For communication shared by users that can be seen by other users, even if it do
   - For more information on migrating, see the [Roblox developer forums](https://devforum.roblox.com/t/migrate-to-textchatservice-removing-support-for-legacy-chat-and-custom-chat-systems/3237100).
 - All incoming text that originates from another user must first use [Text Filtering](../ui/text-filtering.md) before your experience displays it.
 - Communication between users must respect user privacy settings.
-  - `Class.TextChannel:SendAsync` handles basic privacy and parental settings automatically.
-  - `Class.TextChannel:SetDirectChatRequester` must be used to mark `TextChannels` created for direct chat.
+  - `Class.TextChannel:SendAsync()` handles basic privacy and parental settings automatically.
+  - `Class.TextChannel:SetDirectChatRequester()` must be used to mark `TextChannels` created for direct chat.
 - In-experience communication should be [reportable for abuse](https://en.help.roblox.com/hc/en-us/articles/203312410-How-to-Report-Rule-Violations). `TextChannels` handle this automatically.
+
+## Respect privacy settings
+
+Users can have different levels of access to communication features based on their [privacy and content maturity settings](https://www.roblox.com/my/account#!/privacy/Communication/ExperienceChat) or parental controls. Some users might have additional restrictions or constraints depending on which app store they used to install Roblox or their local laws.
+
+The following methods respect these requirements. Use them within your experience to determine how to handle messaging requests:
+
+- `Class.TextChannel:SetDirectChatRequester()`
+- `Class.TextChatService:CanUserChatAsync()`
+- `Class.TextChatService:CanUsersChatAsync()`
+- `Class.TextChatService:CanUsersDirectChatAsync()`

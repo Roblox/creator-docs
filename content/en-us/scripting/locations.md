@@ -20,7 +20,7 @@ Roblox has three types of scripts:
 When you create a `Class.Script`, its default run context is `Legacy`, meaning that it a) is a server-side script and b) only runs if it is in a server container, such as `Class.Workspace` or `Class.ServerScriptService`.
 
 - If you change the script's run context to `Server`, it can now also run in `Class.ReplicatedStorage`, but that's not recommended. The contents of that location are replicated to clients, so it's a poor location for server-side scripts.
-- If you change the script's run context to `Client`, it can run in `ReplicatedStorage`, but it can also run in `Class.StarterCharacterScripts` and `Class.StarterPlayerScripts`. These starter containers are copied to clients, though, so the original script **and** the copy run, which isn't desirable.
+- If you change the script's run context to `Client`, it can run in `ReplicatedStorage`. It can also run in `Class.StarterCharacterScripts` and `Class.StarterPlayerScripts`. Starter containers are copied to clients, though, so the original script **and** the copy run, which isn't desirable.
 
 To change a script run context, select it in the [Explorer](../studio/explorer.md) and change the value in the [Properties](../studio/properties.md) window.
 
@@ -28,8 +28,7 @@ To change a script run context, select it in the [Explorer](../studio/explorer.m
 
 ### Recommendations
 
-- Use the default `RunContext` value unless you have a specific reason not to. The `Legacy` name is meant to convey that Roblox scripts have traditionally worked this way and is not an indicator that the behavior is deprecated or suboptimal.
-- There are two good use cases for non-default `RunContext` values:
+- Using `Server` and `Client` values for `RunContext` removes ambiguity from how scripts run and can help keep your project organized. The best use cases for non-default `RunContext` values are:
 
   - Client scripts that you want to run from `Class.ReplicatedStorage` or `Class.ReplicatedFirst`.
   - Server or client scripts that you include within [models](../parts/models.md) and [packages](../projects/assets/packages.md). Explicitly setting the run context makes models and packages more likely to work properly from a variety of locations.

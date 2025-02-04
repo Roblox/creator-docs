@@ -316,9 +316,7 @@ Modesty layers are **required** if your avatar character:
 </table>
 
 </AccordionDetails>
-  </BaseAccordion>
-
-<br /><br />
+</BaseAccordion>
 For all modesty layers, the following applies:
 
 - All modesty layers must be fully opaque. While they can include artistic highlights, shadows, or textures, modesty layers that are sheer or partially transparent are not permitted.
@@ -457,9 +455,7 @@ Avatar bodies cannot include any accessories or clothing. Accessories are items 
 </tbody>
 </table>
 </AccordionDetails>
-  </BaseAccordion>
-
-<br /><br />
+</BaseAccordion>
 
 The following is an example of rejected and accepted version of the same asset:
 

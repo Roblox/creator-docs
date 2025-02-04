@@ -202,7 +202,7 @@ Learn, share, and interact with the Roblox community in the following places.
     <img src="/assets/landing/get-started/video-interviews.jpg" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%"}}/>
   </div>
   <Typography variant='h4'>On social video channels</Typography>
-  <a href="https://www.youtube.com/@RobloxLevelUp"><Typography variant='buttonLarge' style={{marginBottom: 12}}> YouTube channel</Typography></a>
+  <a href="https://www.youtube.com/@RobloxLearnOfficial"><Typography variant='buttonLarge' style={{marginBottom: 12}}> YouTube channel</Typography></a>
   <a href="https://events.roblox.com"><Typography variant='buttonLarge' style={{marginBottom: 12}}>Content and events platform</Typography></a>
 </Grid>
 </Grid>

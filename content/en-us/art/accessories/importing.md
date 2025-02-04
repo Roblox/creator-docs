@@ -55,7 +55,6 @@ If textures didn't load correctly, add them manually. You may need to save and p
 
 </AccordionDetails>
 </BaseAccordion>
-<br />
 
 <Alert severity = 'success'>
 After successful import, your model object should populate in your project as a `Class.Model` with the appropriate textures applied. See [3D Importer](../../art/modeling/3d-importer.md) for additional information on import settings and troubleshooting.

@@ -60,8 +60,6 @@ To import your asset:
 </AccordionDetails>
 </BaseAccordion>
 
-<br />
-
 <Alert severity = 'success'>
 After successful import, your model object should populate in your project as a `Class.Model` with the appropriate textures applied.
 </Alert>

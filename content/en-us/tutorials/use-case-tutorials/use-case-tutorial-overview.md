@@ -123,8 +123,6 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </AccordionDetails>
 </BaseAccordion>
 
-<br /> <br />
-
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>User interfaces</Typography>
 
 <div style={{marginBottom: 24}}>
@@ -216,8 +214,6 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </AccordionDetails>
 </BaseAccordion>
 
-<br /> <br />
-
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Audio</Typography>
 
 <div style={{marginBottom: 24}}>
@@ -272,8 +268,6 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 
 </AccordionDetails>
 </BaseAccordion>
-
-<br /> <br />
 
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Lighting</Typography>
 
@@ -330,8 +324,6 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 
 </AccordionDetails>
 </BaseAccordion>
-
-<br /> <br />
 
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>VFX</Typography>
 
@@ -405,8 +397,6 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </AccordionDetails>
 </BaseAccordion>
 
-<br /> <br />
-
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Physics</Typography>
 
 <div style={{marginBottom: 24}}>
@@ -478,8 +468,6 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 
 </AccordionDetails>
 </BaseAccordion>
-
-<br /> <br />
 
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Animation</Typography>
 
@@ -586,8 +574,6 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 </AccordionDetails>
 </BaseAccordion>
 
-<br /> <br />
-
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Scripting</Typography>
 
 <div style={{marginBottom: 24}}>
@@ -690,8 +676,6 @@ Use third-party modeling tools like Blender to create meshes with rigging and sk
 
 </AccordionDetails>
 </BaseAccordion>
-
-<br /> <br />
 
 <Typography variant='h1' style={{marginTop: 48, marginBottom: 24}}>Camera and input</Typography>
 

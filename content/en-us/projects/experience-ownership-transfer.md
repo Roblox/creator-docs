@@ -124,11 +124,12 @@ You can continue making changes to the experience until the new group owner acce
 **What happens to my credit card information when I transfer my experience?**
 
 Roblox removes your credit card information when you transfer an experience.
-
 <br/>
 **What happens to my revenue from private server subscriptions when I transfer my experience?**
 
-You continue to receive the revenue from existing private server subscriptions, but the new group owner receives the revenue from any new or renewed subscriptions.
+The group you transferred your experience to receives the revenue from any existing private server subscriptions. This revenue does not respect any group or experience revenue splitting.
+
+New private server subscriptions respect revenue splitting.
 <br/>
 **Does transferring an experience impact discovery?**
 

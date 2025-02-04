@@ -28,8 +28,6 @@ If you've never used Roblox Studio or coded before, start here before following 
 </AccordionDetails>
 </BaseAccordion>
 
-<br /> <br />
-
 <Card>
 
 <CardContent>
