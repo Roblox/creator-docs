@@ -28,14 +28,8 @@ description: |
 
   ##### Enable HTTP requests
 
-  Request-sending methods aren't enabled by default. To send requests, toggle on
-  **Allow&nbsp;HTTP&nbsp;Requests** through the
-  [Game Settings](../../../studio/game-settings.md) interface in Studio, or set
-  `Class.HttpService.HttpEnabled|HttpEnabled` to `true` in the
-  [Command Bar](../../../studio/ui-overview.md#command-bar) for **unpublished**
-  experiences:
-
-  `game:GetService("HttpService").HttpEnabled = true`
+  Request-sending methods aren't enabled by default. To send requests, you must
+  [enable HTTP requests](#HttpEnabled) for your experience.
 
   ##### Use in plugins
 
@@ -87,9 +81,17 @@ properties:
     summary: |
       Indicates whether HTTP requests can be sent to external websites.
     description: |
-      When set to `true`, you are able to send requests to other websites using
+      When set to `true`, allows scripts to send requests to websites using
       `Class.HttpService:GetAsync()`, `Class.HttpService:PostAsync()`, and
       `Class.HttpService:RequestAsync()`.
+      
+      To send requests, this property must be toggled on through the 
+      [Game Settings](../../../studio/game-settings.md) interface in Studio, or
+      for **unpublished** experiences, set this property to `true` using the
+      [Command Bar](../../../studio/ui-overview.md#command-bar):
+  
+      `game:GetService("HttpService").HttpEnabled = true`
+      
     code_samples:
     type: bool
     tags: []
