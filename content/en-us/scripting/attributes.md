@@ -32,7 +32,7 @@ The Roblox Engine doesn't guarantee the order in which objects are replicated fr
    local PickupManager = require(ReplicatedStorage.PickupManager)
    ```
 
-   You **can** use `WaitForChild()` in these scripts to get objects from other services, but doing so largely negates the benefits of using `ReplicatedFirst`.
+   You **can** use `WaitForChild()` in these scripts to get objects from other services, but doing so negates the benefits of using `ReplicatedFirst`.
 
 1. The client continues loading the rest of the experience.
 
