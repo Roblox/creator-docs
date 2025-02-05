@@ -141,12 +141,6 @@ cabbage:SetAttribute("GrowthRate", nil)
 
 There are several ways to listen for changes to properties and attributes:
 
-- The `Class.Instance.Changed` event listens for changes to any property (including attributes) and passes the name of the changed property as a parameter.
-
-  <Alert severity="info">
-  In the case of attribute changes, `Class.Instance.Changed` fires and passes the string `"Attributes"`, which lets you ignore the event, but isn't especially useful otherwise.
-  </Alert>
-
 - The `Class.Instance.AttributeChanged` event listens for changes to any attribute and passes the name of the changed attribute as a parameter.
 - The `Class.Instance:GetPropertyChangedSignal()` method lets you listen for changes to one property and passes no parameters.
 - The `Class.Instance:GetAttributeChangedSignal()` method lets you listen for changes to one attribute and passes no parameters.
