@@ -85,7 +85,7 @@ properties:
       `Class.HttpService:GetAsync()`, `Class.HttpService:PostAsync()`, and
       `Class.HttpService:RequestAsync()`.
       
-      To send requests, this property must be toggled on through the 
+      This property must be toggled on through the 
       [Game Settings](../../../studio/game-settings.md) interface in Studio, or
       for **unpublished** experiences, set this property to `true` using the
       [Command Bar](../../../studio/ui-overview.md#command-bar):
