@@ -4,6 +4,7 @@ console.time(timeMessage);
 import { FileOption, getConfig } from './utils/config.js';
 const config = await getConfig();
 
+import fs from 'fs';
 import path from 'path';
 import { VFile } from 'vfile';
 import { VFileMessage } from 'vfile-message';
@@ -217,6 +218,12 @@ try {
     const isMarkdownFile = filePath.endsWith(FileExtension.MARKDOWN);
     const isYamlFile = filePath.endsWith(FileExtension.YAML);
     console.log(`::group::${Emoji.Mag} Checking`, filePathFromRepoRoot);
+    if (!fs.existsSync(filePath)) {
+      console.log(
+        `${Emoji.NoEntry} File does not exist: ${filePathFromRepoRoot}`
+      );
+      continue;
+    }
     const fileContent = readFileSync(filePath);
     if (
       config.checkLocalizedContent &&

@@ -440,11 +440,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/BubbleChatMessageProperties.yaml
         ignoreTranslation: true
-      - title: BugReporterService
-        path: /reference/engine/classes/BugReporterService
-        type: engineapi
-        source: /reference/engine/classes/BugReporterService.yaml
-        ignoreTranslation: true
       - title: BuoyancySensor
         path: /reference/engine/classes/BuoyancySensor
         type: engineapi
@@ -920,6 +915,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Feature.yaml
         ignoreTranslation: true
+      - title: FeatureRestrictionManager
+        path: /reference/engine/classes/FeatureRestrictionManager
+        type: engineapi
+        source: /reference/engine/classes/FeatureRestrictionManager.yaml
+        ignoreTranslation: true
       - title: File
         path: /reference/engine/classes/File
         type: engineapi
@@ -1134,11 +1134,6 @@ navigation:
         path: /reference/engine/classes/HandlesBase
         type: engineapi
         source: /reference/engine/classes/HandlesBase.yaml
-        ignoreTranslation: true
-      - title: HapticEffect
-        path: /reference/engine/classes/HapticEffect
-        type: engineapi
-        source: /reference/engine/classes/HapticEffect.yaml
         ignoreTranslation: true
       - title: HapticService
         path: /reference/engine/classes/HapticService
@@ -1359,11 +1354,6 @@ navigation:
         path: /reference/engine/classes/LineHandleAdornment
         type: engineapi
         source: /reference/engine/classes/LineHandleAdornment.yaml
-        ignoreTranslation: true
-      - title: LiveSyncService
-        path: /reference/engine/classes/LiveSyncService
-        type: engineapi
-        source: /reference/engine/classes/LiveSyncService.yaml
         ignoreTranslation: true
       - title: LocalizationService
         path: /reference/engine/classes/LocalizationService
@@ -2434,11 +2424,6 @@ navigation:
         path: /reference/engine/classes/StyleSheet
         type: engineapi
         source: /reference/engine/classes/StyleSheet.yaml
-        ignoreTranslation: true
-      - title: StylingService
-        path: /reference/engine/classes/StylingService
-        type: engineapi
-        source: /reference/engine/classes/StylingService.yaml
         ignoreTranslation: true
       - title: SunRaysEffect
         path: /reference/engine/classes/SunRaysEffect
@@ -4087,11 +4072,6 @@ navigation:
         path: /reference/engine/enums/HandlesStyle
         type: engineapi
         source: /reference/engine/enums/HandlesStyle.yaml
-        ignoreTranslation: true
-      - title: HapticEffectType
-        path: /reference/engine/enums/HapticEffectType
-        type: engineapi
-        source: /reference/engine/enums/HapticEffectType.yaml
         ignoreTranslation: true
       - title: HighlightDepthMode
         path: /reference/engine/enums/HighlightDepthMode
