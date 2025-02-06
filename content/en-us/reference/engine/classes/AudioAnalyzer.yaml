@@ -92,6 +92,24 @@ properties:
     capabilities:
       - Audio
     writeCapabilities: []
+  - name: AudioAnalyzer.WindowSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AudioWindowSize
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioAnalyzer:GetConnectedWires
     summary: |

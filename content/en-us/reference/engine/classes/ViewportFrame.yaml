@@ -3,30 +3,34 @@ type: class
 category: GUI
 memory_category: Gui
 summary: |
-  `Class.GuiObject` that can display children 3D objects.
+  `Class.GuiObject` that renders 3D objects inside its bounds.
 description: |
-  **ViewportFrame** is a `Class.GuiObject` that can render 3D objects inside its
+  `ViewportFrame` is a `Class.GuiObject` that renders 3D objects inside its
   bounds, offering a way to display 3D objects in a 2D space like a
   `Class.ScreenGui`. This object has the following caveats:
 
   - No shadows or
     [post-processing](../../../environment/post-processing-effects.md) effects
     are rendered.
+
   - `Enum.Material.Neon` and `Enum.Material.Glass` materials render at the
     lowest quality.
+
   - Nested `Class.GuiObject|GuiObjects` aren't supported.
-  - By default, lighting inside a `Class.ViewportFrame` acts as if
+
+  - By default, lighting inside a `ViewportFrame` acts as if
     `Class.Lighting.EnvironmentSpecularScale` and
-    `Class.Lighting.EnvironmentDiffuseScale` are both set to 0, so properties
+    `Class.Lighting.EnvironmentDiffuseScale` are both set to `0`, so properties
     that rely on these fields, such as `Class.SurfaceAppearance.MetalnessMap`,
     may look different.
+
   - This object can use a `Class.Sky` child as a cubemap for reflections, in
-    which case only the `Class.Sky` object's six **Skybox[…]** properties are
+    which case only the `Class.Sky` object's six `Skybox[…]` properties are
     used. Assuming these properties are valid, lighting inside the
-    `Class.ViewportFrame` acts similarly to if
+    `ViewportFrame` acts similarly to if
     `Class.Lighting.EnvironmentSpecularScale` and
-    `Class.Lighting.EnvironmentDiffuseScale` are both set to 1. For details, see
-    [Frames](../../../ui/frames.md#viewportframe).
+    `Class.Lighting.EnvironmentDiffuseScale` are both set to `1`. For details,
+    see [here](../../../ui/viewport-frames.md).
 code_samples:
   - viewportframe---create-gui
   - viewportframe---control-camera
@@ -37,11 +41,12 @@ deprecation_message: ''
 properties:
   - name: ViewportFrame.Ambient
     summary: |
-      The lighting hue applied to the area within the `Class.ViewportFrame`.
+      The lighting hue applied to the area within the `ViewportFrame`.
     description: |
       This property determines the lighting hue applied to the area within the
-      `Class.ViewportFrame`. Defaults to
-      `Datatype.Color3|Color3.fromRGB(200, 200, 200)` (ghost grey).
+      `ViewportFrame`. Defaults to
+      <Typography noWrap>`Datatype.Color3|Color3.fromRGB(200, 200, 200)`</Typography>
+      (ghost grey).
     code_samples:
     type: Color3
     tags: []
@@ -67,7 +72,7 @@ properties:
       The `Class.Camera` object does not replicate so the
       `Class.ViewportFrame.CurrentCamera` won't replicate either. When you set
       this property, `Class.Camera.CFrame` and `Class.Camera.FieldOfView` will
-      be saved and replicate with `Class.ViewportFrame` internally so the client
+      be saved and replicate with the `ViewportFrame` internally so the client
       can render the frame without a `Class.Camera` object.
     code_samples:
     type: Camera
@@ -87,13 +92,13 @@ properties:
     writeCapabilities: []
   - name: ViewportFrame.ImageColor3
     summary: |
-      Determines how a rendered image will be colorized.
+      Determines how the rendered viewport image will be colorized.
     description: |
-      This property determines how a rendered image will be colorized, allowing
-      you to change the image color without directly modifying the rendered
-      object. The default colorization value is
-      `Datatype.Color3|Color3.new(1, 1, 1)` (white) at which no color
-      modification occurs.
+      This property determines how the rendered viewport image will be
+      colorized, allowing you to change the color without directly modifying the
+      rendered object. The default colorization value is <Typography
+      noWrap>`Datatype.Color3|Color3.new(1, 1, 1)`</Typography> (white) at which
+      no color modification occurs.
 
       See also `Class.ViewportFrame.ImageTransparency|ImageTransparency` which
       determines the transparency of the rendered image.
@@ -114,15 +119,15 @@ properties:
     writeCapabilities: []
   - name: ViewportFrame.ImageTransparency
     summary: |
-      Determines the transparency of the rendered image.
+      Determines the transparency of the rendered viewport image.
     description: |
-      This property determines the transparency of the rendered image, allowing
-      you to change the image transparency without directly modifying the
-      rendered object. A value of 0 (default) is completely opaque and a value
-      of 1 is completely transparent (invisible).
+      This property determines the transparency of the rendered viewport image,
+      allowing you to change the transparency without directly modifying the
+      rendered object. A value of `0` (default) is completely opaque and a value
+      of `1` is completely transparent (invisible).
 
       See also `Class.ViewportFrame.ImageColor3|ImageColor3` which determines
-      how a rendered image will be colorized.
+      how the rendered image will be colorized.
     code_samples:
     type: float
     tags: []
@@ -143,7 +148,8 @@ properties:
       The color of the emitted light.
     description: |
       The color of the emitted light. Defaults to
-      `Datatype.Color3|Color3.fromRGB(140, 140, 140)` (silver).
+      <Typography noWrap>`Datatype.Color3|Color3.fromRGB(140, 140, 140)`</Typography>
+      (silver).
     code_samples:
     type: Color3
     tags: []
@@ -164,8 +170,8 @@ properties:
       A `Datatype.Vector3` representing the direction of the light source.
     description: |
       A `Datatype.Vector3` representing the direction of the light source from
-      position `Datatype.Vector3|Vector3.new(0, 0, 0)`. Defaults to
-      `Datatype.Vector3|Vector3.new(-1, -1, -1)`.
+      position <Typography noWrap>`(0, 0, 0)`</Typography>. Defaults to
+      <Typography noWrap>`Datatype.Vector3|Vector3.new(-1, -1, -1)`</Typography>.
     code_samples:
     type: Vector3
     tags: []

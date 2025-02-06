@@ -1440,10 +1440,11 @@ methods:
 
       Note that in order to set the `Class.Humanoid` state using this method,
       you must do so from a `Class.LocalScript` and the client must have
-      [network ownership](../../../physics/network-ownership.md) of the `Class.Player.Character`.
-      Alternatively, you can call this method from a server-side `Class.Script`, but the
-      server must have network ownership of the player character.
-      
+      [network ownership](../../../physics/network-ownership.md) of the
+      `Class.Player.Character`. Alternatively, you can call this method from a
+      server-side `Class.Script`, but the server must have network ownership of
+      the player character.
+
       See also `Class.Humanoid:SetStateEnabled()` to enable or disable a
       particular state, and `Class.Humanoid:GetState()` to get the current
       humanoid state.
@@ -1489,9 +1490,8 @@ methods:
       end
       ```
 
-      When this method is called, the `Class.Humanoid` will first
-      automatically unequip all `Class.Tool|Tools` that it currently has
-      equipped.
+      When this method is called, the `Class.Humanoid` will first automatically
+      unequip all `Class.Tool|Tools` that it currently has equipped.
 
       Although they will be equipped, `Class.Tool|Tools` for which
       `Class.Tool.RequiresHandle` is _true_ will not function if they have no
@@ -1583,8 +1583,8 @@ methods:
     description: |
       This method returns what `Enum.BodyPartR15` a `Class.Part` is, or
       `Enum.BodyPartR15.Unknown` if the part is not an R15 body part. This
-      method allows developers to retrieve player body parts independent of
-      what the actual body part names are, instead returning an enum.
+      method allows developers to retrieve player body parts independent of what
+      the actual body part names are, instead returning an enum.
 
       It can be used in conjunction with `Class.Humanoid:ReplaceBodyPartR15()`.
       For example, if a player's body part touches something, this function will
@@ -1619,8 +1619,8 @@ methods:
       Returns the `Enum.Limb` enum that is associated with the given
       `Class.Part`.
     description: |
-      This method returns the `Enum.Limb` enum that is associated with the
-      given `Class.Part`. It works for both R15 and R6 rigs, for example:
+      This method returns the `Enum.Limb` enum that is associated with the given
+      `Class.Part`. It works for both R15 and R6 rigs, for example:
 
       ```lua
       -- For R15
@@ -1672,10 +1672,10 @@ methods:
       Returns an array of all `Class.AnimationTrack|AnimationTracks` that are
       currently being played on the `Class.Humanoid`.
     description: |
-      This method returns an array of all
-      `Class.AnimationTrack|AnimationTracks` that are currently being played on
-      the `Class.Humanoid`. A typical use for this method is stopping
-      currently playing tracks using `Class.AnimationTrack:Stop()`.
+      This method returns an array of all `Class.AnimationTrack|AnimationTracks`
+      that are currently being played on the `Class.Humanoid`. A typical use for
+      this method is stopping currently playing tracks using
+      `Class.AnimationTrack:Stop()`.
 
       Beware that this method will not return
       `Class.AnimationTrack|AnimationTracks` that have loaded but are **not
@@ -1832,8 +1832,8 @@ methods:
       Loads an `Class.Animation` onto a `Class.Humanoid`, returning an
       `Class.AnimationTrack` that can be used for playback.
     description: |
-      This method loads an `Class.Animation` onto a `Class.Humanoid`,
-      returning an `Class.AnimationTrack` that can be used for playback.
+      This method loads an `Class.Animation` onto a `Class.Humanoid`, returning
+      an `Class.AnimationTrack` that can be used for playback.
     code_samples:
     parameters:
       - name: animation
@@ -1873,16 +1873,15 @@ methods:
       ```
 
       When this method is called, the `Class.Humanoid` will move until the
-      method is called again. However, if the default control scripts are
-      being used, this method will be overwritten when called on player
+      method is called again. However, if the default control scripts are being
+      used, this method will be overwritten when called on player
       `Class.Player.Character|Characters`. This can be avoided by either not
       using the default control scripts, or calling this function every frame
       using `Class.RunService:BindToRenderStep()` (see example).
 
-      This method can be called on the server, but this should only be done
-      when the server has
-      [network ownership](../../../physics/network-ownership.md) of the
-      humanoid's assembly.
+      This method can be called on the server, but this should only be done when
+      the server has [network ownership](../../../physics/network-ownership.md)
+      of the humanoid's assembly.
 
       See also `Class.Humanoid:MoveTo()` which makes a`Class.Humanoid` walk to a
       point, and `Class.Player:Move()` which effectively calls this function.
@@ -2057,8 +2056,8 @@ methods:
       Dynamically replaces a R15/Rthro limb part in a Humanoid with a different
       part. The part is automatically scaled as normal.
 
-      This method is useful for modifying characters during gameplay or
-      building characters from a base rig. The related method
+      This method is useful for modifying characters during gameplay or building
+      characters from a base rig. The related method
       `Class.Humanoid:GetBodyPartR15()|GetBodyPartR15` can come in handy when
       using this method.
 
@@ -2127,12 +2126,12 @@ methods:
       Lowers the `Class.Humanoid.Health` of the `Class.Humanoid` by the given
       _amount_ if it is not protected by a `Class.ForceField`.
     description: |
-      This method lowers the `Class.Humanoid.Health` of the `Class.Humanoid`
-      by the given _amount_ if it is not protected by a `Class.ForceField`
+      This method lowers the `Class.Humanoid.Health` of the `Class.Humanoid` by
+      the given _amount_ if it is not protected by a `Class.ForceField`
 
-      This method accepts negative values for the _amount_ parameter. This
-      will increase the humanoid's `Class.Humanoid.Health`. However this will
-      only have an effect if no `Class.ForceField` is present.
+      This method accepts negative values for the _amount_ parameter. This will
+      increase the humanoid's `Class.Humanoid.Health`. However this will only
+      have an effect if no `Class.ForceField` is present.
 
       #### How do ForceFields protect against TakeDamage
 
@@ -2342,8 +2341,8 @@ methods:
       Plays emotes and returns if was successfully ran.
     description: |
       If the emote could not be played because the emoteName is not found in the
-      HumanoidDescription, this method will give an error. The method will return true
-      to indicate that the emote was played successfully.
+      HumanoidDescription, this method will give an error. The method will
+      return true to indicate that the emote was played successfully.
     code_samples:
     parameters:
       - name: emoteName

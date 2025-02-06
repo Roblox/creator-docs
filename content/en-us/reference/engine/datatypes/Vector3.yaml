@@ -4,12 +4,14 @@ summary: |
   Represents a 3D value with a direction and magnitude.
 description: |
   The `Datatype.Vector3` data type represents a vector in 3D space, typically
-  usually used as a point in 3D space or the dimensions of a rectangular prism.
+  used as a point in 3D space or the dimensions of a rectangular prism.
   `Datatype.Vector3` supports basic component-based arithmetic operations (sum,
   difference, product, and quotient) and these operations can be applied on the
   left or right hand side to either another `Datatype.Vector3` or a number. It
   also features methods for common vector operations, such as
   `Datatype.Vector3:Cross()|Cross()` and `Datatype.Vector3:Dot()|Dot()`.
+
+  Alternatively to `Datatype.Vector3`, consider using the methods and properties of the `Library.vector` library.
 
   Some example usages of `Datatype.Vector3` are the
   `Class.BasePart.Position|Position`, `Class.BasePart.Rotation|Rotation`, and

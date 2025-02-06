@@ -17,7 +17,7 @@ description: |
   This object can also be used as a cubemap for reflections in
   `Class.ViewportFrame|ViewportFrames`, in which case only the `Class.Sky`
   object's six **Skybox[…]** properties are used. For details, see
-  [Frames](../../../ui/frames.md#viewportframe).
+  [viewport frames](../../../ui/viewport-frames.md).
 code_samples:
 inherits:
   - Instance

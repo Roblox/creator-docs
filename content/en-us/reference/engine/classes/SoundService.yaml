@@ -67,6 +67,23 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
+  - name: SoundService.CharacterSoundsUseNewApi
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RolloutState
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: SoundService.DefaultListenerLocation
     summary: ''
     description: ''

@@ -3,15 +3,21 @@ description: Reusable action for running the quality checks
 inputs:
   BASE_BRANCH:
     description: Base branch
+  CHECK_LOCALIZED_CONTENT:
+    description: Whether to check localized content
+  CHECK_MARKDOWN_LINT:
+    description: Whether to check markdown lint
   CHECK_PROTECTED_FIELDS:
     description: Whether to check protected YAML fields
+  CHECK_RETEXT_ANALYSIS:
+    description: Whether to check retext analysis
   COMMIT_HASH:
     description: Commit hash
   EVENT_NAME:
     description: Github event name
   GITHUB_PAT:
     description: Github token
-  POST_PULL_REQUEST_COMMENTS: 
+  POST_PULL_REQUEST_COMMENTS:
     description: Whether to post comments on the pull request
   PULL_REQUEST_NUMBER:
     description: Pull request number
@@ -40,7 +46,10 @@ runs:
       env:
         GITHUB_PAT: ${{ inputs.GITHUB_PAT }}
         BASE_BRANCH: ${{ inputs.BASE_BRANCH }}
+        CHECK_LOCALIZED_CONTENT: ${{ inputs.CHECK_LOCALIZED_CONTENT }}
+        CHECK_MARKDOWN_LINT: ${{ inputs.CHECK_MARKDOWN_LINT }}
         CHECK_PROTECTED_FIELDS: ${{ inputs.CHECK_PROTECTED_FIELDS }}
+        CHECK_RETEXT_ANALYSIS: ${{ inputs.CHECK_RETEXT_ANALYSIS }}
         COMMIT_HASH: ${{ inputs.COMMIT_HASH }}
         POST_PULL_REQUEST_COMMENTS: ${{ inputs.POST_PULL_REQUEST_COMMENTS }}
         PULL_REQUEST_NUMBER: ${{ inputs.PULL_REQUEST_NUMBER }}

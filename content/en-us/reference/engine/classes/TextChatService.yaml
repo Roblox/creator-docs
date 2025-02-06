@@ -254,7 +254,9 @@ properties:
     description: ''
     code_samples: []
     type: bool
-    tags: []
+    tags:
+      - Hidden
+      - NotReplicated
     deprecation_message: ''
     security:
       read: RobloxScriptSecurity

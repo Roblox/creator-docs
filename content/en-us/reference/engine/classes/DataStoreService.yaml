@@ -66,7 +66,8 @@ methods:
       data store. This function also accepts an optional
       `Class.DataStoreOptions` instance which includes options for enabling
       `Class.DataStoreOptions.AllScopes|AllScopes`. See
-      [Data stores](../../../cloud-services/data-stores/index.md) for details on scope.
+      [Data stores](../../../cloud-services/data-stores/index.md) for details on
+      scope.
     code_samples:
     parameters:
       - name: name
@@ -190,7 +191,9 @@ methods:
         type: int
         default: 0
         summary: |
-          **(Optional)** Number of items to be returned in each page. If no value is given, the engine sends a default value of 0 to the data store web service, which in turn defaults to 32 items per page.
+          **(Optional)** Number of items to be returned in each page. If no
+          value is given, the engine sends a default value of 0 to the data
+          store web service, which in turn defaults to 32 items per page.
       - name: cursor
         type: string
         default: ''

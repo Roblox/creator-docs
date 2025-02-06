@@ -136,10 +136,10 @@ In Roblox, the position of a UI object is represented by a `Datatype.UDim2` coor
 - `Datatype.UDim.Offset|Offset` values represent how many **pixels** to shift the object on the corresponding axis, additive of any `Datatype.UDim.Scale|Scale` values.
 
 <figure>
-<img src="../../../assets/ui/general/UDim2-Components.png" width="334" />
+<img src="../../../assets/ui/misc/UDim2-Components.png" width="334" />
 </figure>
 
-<img src="../../../assets/ui/general/Scale-Offset-Positioning.png" width="840" />
+<img src="../../../assets/ui/misc/Scale-Offset-Positioning.png" width="840" />
 
 To position a UI object in the upper-right corner of the screen container, `Datatype.UDim.Scale|Scale` is the best approach because an **X** value of `1` (100%) represents the right edge of the container, regardless of the screen's physical pixel size. Similarly, a **Y** scale value of `0` (0%) represents the top edge of the container.
 

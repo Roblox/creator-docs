@@ -67,30 +67,32 @@ let missSpelledWords: string[] = [];
 
 const getFilesToCheck = async () => {
   console.log(`::group::${Emoji.OpenFileFolder} Getting changed files`);
-  if (config.checkLocalizedContent === true) {
-    for (const locale of Object.values(Locale)) {
+  if (config.files === FileOption.All) {
+    if (config.checkLocalizedContent === true) {
+      for (const locale of Object.values(Locale)) {
+        filesToCheck.push(
+          ...getAllContentFileNamesWithExtension({
+            locale,
+            fileExtension: FileExtension.MARKDOWN,
+          }),
+          ...getAllContentFileNamesWithExtension({
+            locale,
+            fileExtension: FileExtension.YAML,
+          })
+        );
+      }
+    } else {
       filesToCheck.push(
         ...getAllContentFileNamesWithExtension({
-          locale,
+          locale: Locale.EN_US,
           fileExtension: FileExtension.MARKDOWN,
         }),
         ...getAllContentFileNamesWithExtension({
-          locale,
+          locale: Locale.EN_US,
           fileExtension: FileExtension.YAML,
         })
       );
     }
-  } else if (config.files === FileOption.All) {
-    filesToCheck.push(
-      ...getAllContentFileNamesWithExtension({
-        locale: Locale.EN_US,
-        fileExtension: FileExtension.MARKDOWN,
-      }),
-      ...getAllContentFileNamesWithExtension({
-        locale: Locale.EN_US,
-        fileExtension: FileExtension.YAML,
-      })
-    );
     filesToCheck.push(...['README.md', 'STYLE.md', 'CODE_OF_CONDUCT.md']);
   } else if (config.files === FileOption.Changed) {
     filesToCheck = await getFilesChangedComparedToBaseByExtension({
@@ -102,6 +104,11 @@ const getFilesToCheck = async () => {
       FileExtension.MARKDOWN,
       FileExtension.YAML,
     ]);
+  }
+  if (!config.checkLocalizedContent) {
+    filesToCheck = filesToCheck.filter((filePath) => {
+      return isLocaleFile(filePath, Locale.EN_US);
+    });
   }
   const prefixesToIgnore = ['.github/', 'content/common/navigation/', 'tools/'];
   filesToCheck = filesToCheck.filter((filePath) => {

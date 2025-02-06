@@ -369,24 +369,26 @@ navigation:
         section:
           - title: Labels
             path: /ui/labels
+          - title: Buttons
+            path: /ui/buttons
           - title: Frames
             path: /ui/frames
+          - title: Scrolling frames
+            path: /ui/scrolling-frames
+          - title: Viewport frames
+            path: /ui/viewport-frames
           - title: Video frames
             path: /ui/video-frames
+          - title: Text input fields
+            path: /ui/text-input
           - title: 2D paths
             path: /ui/2D-paths
-          - title: Interactive
-            section:
-              - title: Buttons
-                path: /ui/buttons
-              - title: Text input fields
-                path: /ui/text-input
-              - title: Proximity prompts
-                path: /ui/proximity-prompts
-              - title: UI drag detectors
-                path: /ui/ui-drag-detectors
-              - title: 3D drag detectors
-                path: /ui/3D-drag-detectors
+          - title: Proximity prompts
+            path: /ui/proximity-prompts
+          - title: UI drag detectors
+            path: /ui/ui-drag-detectors
+          - title: 3D drag detectors
+            path: /ui/3D-drag-detectors
       - title: Position and size
         path: /ui/position-and-size
       - title: Layout structures

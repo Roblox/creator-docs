@@ -161,9 +161,9 @@ methods:
       such as `apis.myservice.com` or to subdomains of a domain, for example
       `*.myservice.org`.
 
-      Production `Datatype.Secret|Secrets` are only available in live servers and Team Create.
-      See [here](../../../studio/game-settings.md#security) for availability details of local
-      `Datatype.Secret|Secrets`.
+      Production `Datatype.Secret|Secrets` are only available in live servers
+      and Team Create. See [here](../../../studio/game-settings.md#security) for
+      availability details of local `Datatype.Secret|Secrets`.
     code_samples: []
     parameters:
       - name: key

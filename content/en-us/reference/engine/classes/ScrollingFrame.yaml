@@ -2,10 +2,14 @@ name: ScrollingFrame
 type: class
 category: GUI
 memory_category: Gui
-summary: ''
+summary: |
+  `ScrollingFrame` is a special `Class.Frame` type with built-in scrolling
+  interactivity and different ways to customize how the scrolling works.
 description: |
-  The ScrollingFrame is a special `Class.Frame` that handles all scrolling for
-  you, with a range of different ways to customize how the scrolling works.
+  `ScrollingFrame` is a special `Class.Frame` type with built-in scrolling
+  interactivity and different ways to customize how the scrolling works.
+
+  <img src="/assets/ui/ui-objects/ScrollingFrame-Example.jpg" width="840" alt="Example ScrollingFrame on the screen containing a tabbed category bar and a list of magical items for the player to consider purchasing." />
 code_samples:
 inherits:
   - GuiObject
@@ -14,9 +18,9 @@ deprecation_message: ''
 properties:
   - name: ScrollingFrame.AbsoluteCanvasSize
     summary: |
-      The size in offsets of the area that is scrollable.
+      The size of the area that is scrollable, in offsets.
     description: |
-      The size in offsets of the area that is scrollable. This property is set
+      The size of the area that is scrollable, in offsets. This property is set
       to the maximum of the `Class.ScrollingFrame.CanvasSize|CanvasSize`
       property and the size of the children if
       `Class.ScrollingFrame.AutomaticCanvasSize|AutomaticCanvasSize` is set to
@@ -40,9 +44,9 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.AbsoluteWindowSize
     summary: |
-      The size in offsets of the frame, without the scrollbars.
+      The size of the frame, in offsets, without the scroll bars.
     description: |
-      The size in offsets of the frame, without the scrollbars.
+      The size of the frame, in offsets, without the scroll bars.
     code_samples:
     type: Vector2
     tags:
@@ -66,9 +70,9 @@ properties:
       child content.
     description: |
       This property is used to automatically size parent UI objects based on the
-      size of its descendants. Developers can use this property to dynamically
-      add text and other content to a UI object at edit or run time, and the
-      size will adjust to fit that content.
+      size of its descendants. You can use this property to dynamically add text
+      and other content to a `ScrollingFrame` at edit or run time and the size
+      will adjust to fit that content.
 
       When this property is set to an `Enum.AutomaticSize` value other than
       `Enum.AutomaticSize|None`,
@@ -91,13 +95,15 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.BottomImage
     summary: |
-      The Down image on the vertical scrollbar. Size of this is always
-      ScrollBarThickness by ScrollBarThickness. This is also used as the image
-      on the horizontal scroll bar.
+      Image that displays on the bottom of a vertical scroll bar, or the right
+      of a horizontal scroll bar (rotated 90&deg; counterclockwise for a
+      horizontal scroll bar).
     description: |
-      The Down image on the vertical scrollbar. Size of this is always
-      ScrollBarThickness by ScrollBarThickness. This is also used as the image
-      on the horizontal scroll bar.
+      Image that displays on the bottom of a vertical scroll bar, or the right
+      of a horizontal scroll bar (rotated 90&deg; counterclockwise for a
+      horizontal scroll bar).
+
+      <img src="/assets/ui/ui-objects/ScrollingFrame-Scroll-Bar-Elements.png" width="600" alt="Diagram showing the three image asset elements which construct a scrolling frame's scroll bar." />
     code_samples:
     type: ContentId
     tags: []
@@ -115,11 +121,12 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.CanvasPosition
     summary: |
-      The location within the canvas, in offsets, that should be drawn at the
-      top left of the scroll frame.
+      Reflects the **current** positional offset of the canvas within the frame,
+      in pixels, and sets the position of scroll bars accordingly.
     description: |
-      The location within the canvas, in offsets, that should be drawn at the
-      top left of the scroll frame
+      Reflects the **current** positional offset of the canvas within the frame,
+      in pixels, and sets the position of scroll bars accordingly. Note that
+      this property doesn't do anything if scroll bars aren't visible.
     code_samples:
     type: Vector2
     tags: []
@@ -137,13 +144,12 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.CanvasSize
     summary: |
-      Determines the size of the area that is scrollable. The UDim2 is
-      calculated using the parent gui's size, similar to the regular Size
-      property on gui objects.
+      Determines the size of the scrollable area.
     description: |
-      Determines the size of the area that is scrollable. The UDim2 is
-      calculated using the parent gui's size, similar to the regular Size
-      property on gui objects.
+      Determines the size of the scrollable area. For an adaptive alternative
+      based on the overall size of children within the `ScrollingFrame`,
+      consider using
+      `Class.ScrollingFrame.AutomaticCanvasSize|AutomaticCanvasSize`.
     code_samples:
     type: UDim2
     tags: []
@@ -161,10 +167,11 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.ElasticBehavior
     summary: |
-      Determines when elastic scrolling is allowed.
+      Determines if and when elastic scrolling is allowed on touch‑enabled
+      devices.
     description: |
-      This property determines if and when the `Class.ScrollingFrame` canvas is
-      elastic. Defaults to `Enum.ElasticBehavior|WhenScrollable`.
+      This property determines if and when elastic scrolling is allowed on
+      touch‑enabled devices. Defaults to `Enum.ElasticBehavior|WhenScrollable`.
     code_samples:
     type: ElasticBehavior
     tags: []
@@ -182,9 +189,13 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.HorizontalScrollBarInset
     summary: |
-      Indicates the inset behavior of the horizontal scrolling bar.
+      Indicates whether `Class.ScrollingFrame.CanvasSize|CanvasSize` is inset by
+      `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` on the
+      horizontal axis.
     description: |
-      Indicates the inset behavior of the horizontal scrolling bar.
+      Indicates whether `Class.ScrollingFrame.CanvasSize|CanvasSize` is inset by
+      `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` on the
+      horizontal axis.
     code_samples:
     type: ScrollBarInset
     tags: []
@@ -202,15 +213,18 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.MidImage
     summary: |
-      The middle image on the vertical scrollbar. The size of this can vary in
-      the y direction, but is always set as
-      `Class.ScrollingFrame.ScrollBarThickness` in the x direction. This is also
-      used as the middle image on the horizontal scroll bar.
+      Image which spans the area between
+      `Class.ScrollingFrame.TopImage|TopImage` and
+      `Class.ScrollingFrame.BottomImage|BottomImage` (rotated 90&deg;
+      counterclockwise for a horizontal scroll bar).
     description: |
-      The middle image on the vertical scrollbar. The size of this can vary in
-      the y direction, but is always set as
-      `Class.ScrollingFrame.ScrollBarThickness` in the x direction. This is also
-      used as the middle image on the horizontal scroll bar.
+      Image which spans the area between
+      `Class.ScrollingFrame.TopImage|TopImage` and
+      `Class.ScrollingFrame.BottomImage|BottomImage` (rotated 90&deg;
+      counterclockwise for a horizontal scroll bar). This image automatically
+      scales to fill the space between the cap segments.
+
+      <img src="/assets/ui/ui-objects/ScrollingFrame-Scroll-Bar-Elements.png" width="600" alt="Diagram showing the three image asset elements which construct a scrolling frame's scroll bar." />
     code_samples:
     type: ContentId
     tags: []
@@ -228,12 +242,15 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.ScrollBarImageColor3
     summary: |
-      Determines how a rendered scroll bar image will be colorized.
+      Determines how the rendered scroll bar images are colorized.
     description: |
-      Determines how a scrolling bar image is colorized. When set to white, no
-      colorization occurs. This property is very useful for reusing image
-      assets: If the source image is completely white with transparency, you can
-      set the entire color of the image at once with this property.
+      Determines how the scroll bar images
+      (`Class.ScrollingFrame.TopImage|TopImage`,
+      `Class.ScrollingFrame.MidImage|MidImage`,
+      `Class.ScrollingFrame.BottomImage|BottomImage`) are colorized. When set to
+      white, no colorization occurs. This property is useful for reusing image
+      assets; if the source images are completely white with transparency, you
+      can set the color of the entire scroll bar at once.
     code_samples:
     type: Color3
     tags: []
@@ -251,12 +268,14 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.ScrollBarImageTransparency
     summary: |
-      Determines the transparency of the rendered scroll bar image.
+      Determines the opacity of the scroll bar images.
     description: |
-      Determines the alpha of a scroll bar's rendered image. A value of 0 is
-      completely opaque, and a value of 1 is completely transparent (invisible).
-      This property behaves similarly to
-      `Class.GuiObject.BackgroundTransparency` or `Class.BasePart.Transparency`.
+      Determines the opacity of the scroll bar images
+      (`Class.ScrollingFrame.TopImage|TopImage`,
+      `Class.ScrollingFrame.MidImage|MidImage`,
+      `Class.ScrollingFrame.BottomImage|BottomImage`). A value of `0` is
+      completely opaque and a value of `1` is completely transparent
+      (invisible).
     code_samples:
     type: float
     tags: []
@@ -274,11 +293,11 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.ScrollBarThickness
     summary: |
-      How thick the scroll bar appears. This applies to both the horizontal and
-      vertical scroll bars. If set to 0, no scroll bars are rendered.
+      Thickness of the scroll bar in pixels; applies to both horizontal and
+      vertical scroll bars.
     description: |
-      How thick the scroll bar appears. This applies to both the horizontal and
-      vertical scroll bars. If set to 0, no scroll bars are rendered.
+      Thickness of the scroll bar in pixels; applies to both horizontal and
+      vertical scroll bars. If set to `0`, no scroll bars are rendered.
     code_samples:
     type: int
     tags: []
@@ -296,11 +315,11 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.ScrollingDirection
     summary: |
-      Determines the direction scrolling is allowed in this scrolling frame.
+      Determines the direction(s) in which scrolling is allowed.
     description: |
-      This property determines the direction scrolling is allowed. If scrolling
-      is disallowed in a direction, the scrollbar will not appear. Defaults to
-      `Enum.ScrollingDirection|XY`.
+      This property determines the direction(s) in which scrolling is allowed.
+      If scrolling is disallowed in a direction, the associated scroll bar will
+      not appear. Defaults to `Enum.ScrollingDirection.XY`.
     code_samples:
     type: ScrollingDirection
     tags: []
@@ -318,10 +337,9 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.ScrollingEnabled
     summary: |
-      Determines whether or not scrolling is allowed on the frame. If false, no
-      scroll bars will be rendered.
+      Determines whether scrolling is allowed on the frame.
     description: |
-      Determines whether or not scrolling is allowed on the frame. If false, no
+      Determines whether scrolling is allowed on the frame. If `false`, no
       scroll bars will be rendered.
     code_samples:
     type: bool
@@ -340,13 +358,15 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.TopImage
     summary: |
-      The Up image on the vertical scrollbar. The size of this is always
-      ScrollBarThickness by ScrollBarThickness. This is also used as the left
-      image on the horizontal scroll bar.
+      Image which displays on the top of a vertical scroll bar, or the left of a
+      horizontal scroll bar (rotated 90&deg; counterclockwise for a horizontal
+      scroll bar).
     description: |
-      The Up image on the vertical scrollbar. The size of this is always
-      ScrollBarThickness by ScrollBarThickness. This is also used as the left
-      image on the horizontal scroll bar.
+      Image which displays on the top of a vertical scroll bar, or the left of a
+      horizontal scroll bar (rotated 90&deg; counterclockwise for a horizontal
+      scroll bar).
+
+      <img src="/assets/ui/ui-objects/ScrollingFrame-Scroll-Bar-Elements.png" width="600" alt="Diagram showing the three image asset elements which construct a scrolling frame's scroll bar." />
     code_samples:
     type: ContentId
     tags: []
@@ -364,9 +384,13 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.VerticalScrollBarInset
     summary: |
-      Indicates the inset behavior of the vertical scrolling bar.
+      Indicates whether `Class.ScrollingFrame.CanvasSize|CanvasSize` is inset by
+      `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` on the
+      vertical axis.
     description: |
-      Indicates the inset behavior of the vertical scrolling bar.
+      Indicates whether `Class.ScrollingFrame.CanvasSize|CanvasSize` is inset by
+      `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` on the
+      vertical axis.
     code_samples:
     type: ScrollBarInset
     tags: []
@@ -384,9 +408,11 @@ properties:
     writeCapabilities: []
   - name: ScrollingFrame.VerticalScrollBarPosition
     summary: |
-      Indicates the side that the vertical scrollbar will be located at.
+      Indicates whether the vertical scroll bar is positioned to the left or
+      right of the canvas.
     description: |
-      Indicates the side that the vertical scrollbar will be located at.
+      Indicates whether the vertical scroll bar is positioned to the left or
+      right of the canvas. Defaults to `Enum.VerticalScrollBarPosition.Right`.
     code_samples:
     type: VerticalScrollBarPosition
     tags: []

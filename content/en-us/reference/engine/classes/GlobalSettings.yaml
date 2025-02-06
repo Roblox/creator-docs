@@ -46,6 +46,34 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: GlobalSettings:GetFFlagOverrides
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: GlobalSettings:GetFFlags
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: string
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GlobalSettings:GetFVariable
     summary: |
       Returns the value of an FVariable, if it exists.
@@ -63,6 +91,24 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: GlobalSettings:SetFFlagOverrides
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: overrides
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

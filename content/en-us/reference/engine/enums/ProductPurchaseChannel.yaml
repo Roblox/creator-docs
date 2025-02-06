@@ -16,3 +16,13 @@ items:
     value: 2
     tags: []
     deprecation_message: ''
+  - name: AdReward
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: CommerceProduct
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''

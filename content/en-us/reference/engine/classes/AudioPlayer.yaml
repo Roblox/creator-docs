@@ -24,7 +24,10 @@ properties:
       `Class.AudioPlayer.IsReady|IsReady` becomes true.
     code_samples: []
     type: string
-    tags: []
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
     deprecation_message: ''
     security:
       read: None
@@ -33,7 +36,7 @@ properties:
     category: Asset
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
     capabilities:
       - Audio
     writeCapabilities: []
