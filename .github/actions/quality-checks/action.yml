@@ -9,6 +9,8 @@ inputs:
     description: Whether to check markdown lint
   CHECK_PROTECTED_FIELDS:
     description: Whether to check protected YAML fields
+  CHECK_RELATIVE_LINKS:
+    description: Whether to check relative links
   CHECK_RETEXT_ANALYSIS:
     description: Whether to check retext analysis
   COMMIT_HASH:
@@ -49,6 +51,7 @@ runs:
         CHECK_LOCALIZED_CONTENT: ${{ inputs.CHECK_LOCALIZED_CONTENT }}
         CHECK_MARKDOWN_LINT: ${{ inputs.CHECK_MARKDOWN_LINT }}
         CHECK_PROTECTED_FIELDS: ${{ inputs.CHECK_PROTECTED_FIELDS }}
+        CHECK_RELATIVE_LINKS: ${{ inputs.CHECK_RELATIVE_LINKS }}
         CHECK_RETEXT_ANALYSIS: ${{ inputs.CHECK_RETEXT_ANALYSIS }}
         COMMIT_HASH: ${{ inputs.COMMIT_HASH }}
         POST_PULL_REQUEST_COMMENTS: ${{ inputs.POST_PULL_REQUEST_COMMENTS }}

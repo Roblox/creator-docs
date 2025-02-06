@@ -234,7 +234,9 @@ methods:
       - `Response.items[n].preselect` If true, the editor sorts this completion
         item ahead of all others and selects it for the user by default. No
         effect if false or missing.
-      - `Response.items[n].textEdit` If present, accepting the completion applies this text edit - inserting or replacing the span between the positions start and end with newText.
+      - `Response.items[n].textEdit` If present, accepting the completion
+        applies this text edit - inserting or replacing the span between the
+        positions start and end with newText.
 
       If a callback returns a malformed result or encounters an error, the
       editor discards the modified Response table and uses the built-in
