@@ -50,7 +50,7 @@ properties:
       The world space point at which the intersection occurred.
     description: |
       The world space point at which the intersection occurred, usually a point
-      directly on the surface of the `Class.BasePart`.
+      directly on the surface of the `Class.BasePart` or `Class.Terrain` cell.
     code_samples: []
     tags: []
     deprecation_message: ''
