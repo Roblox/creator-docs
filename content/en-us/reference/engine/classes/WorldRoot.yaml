@@ -522,7 +522,7 @@ methods:
           The size of the given box volume to be queried.
       - name: overlapParams
         type: OverlapParams
-        default: OverlapParams{MaxParts=0, Tolerance=0, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        default: OverlapParams{MaxParts=0, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
         summary: |
           Contains reusable portions of the spatial query parameters.
     returns:
@@ -572,7 +572,7 @@ methods:
           The radius of the given sphere volume to be queried.
       - name: overlapParams
         type: OverlapParams
-        default: OverlapParams{MaxParts=0, Tolerance=0, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        default: OverlapParams{MaxParts=0, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
         summary: |
           Contains reusable portions of the spatial query parameters.
     returns:
@@ -621,7 +621,7 @@ methods:
           The part whose volume is to be checked against other parts.
       - name: overlapParams
         type: OverlapParams
-        default: OverlapParams{MaxParts=0, Tolerance=0, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
+        default: OverlapParams{MaxParts=0, BruteForceAllSlow=false, RespectCanCollide=false, CollisionGroup=Default, FilterDescendantsInstances={}}
         summary: |
           Contains reusable portions of the spatial query parameters.
     returns:
