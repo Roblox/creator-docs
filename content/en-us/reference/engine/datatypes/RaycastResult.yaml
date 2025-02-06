@@ -47,7 +47,7 @@ properties:
   - name: RaycastResult.Position
     type: Vector3
     summary: |
-      The position of the intersection between the ray and the part.
+      The world space point at which the intersection occurred.
     description: |
       The world space point at which the intersection occurred, usually a point
       directly on the surface of the `Class.BasePart`.
