@@ -21,7 +21,7 @@ description: |
   An `Class.EditableMesh` is displayed when it's linked to a new
   `Class.MeshPart`, through `Class.AssetService:CreateMeshPartAsync()`. You can
   create more `Class.MeshPart` instances that reference the same
-  `Class.EditableMesh` content, or link to an existing `Class.MeshPart` through
+  `Class.EditableMesh` `Datatype.Content`, or link to an existing `Class.MeshPart` through
   `Class.MeshPart:ApplyMesh()`.
 
   To recalculate collision and fluid geometry after editing, you can again call
