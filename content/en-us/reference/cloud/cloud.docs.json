@@ -6173,6 +6173,13 @@
           "privateServerDetails": {
             "$ref": "#/components/schemas/InventoryItem_PrivateServerDetails",
             "description": "Populated if this item is a private server."
+          },
+          "addTime": {
+            "readOnly": true,
+            "example": "2023-07-05T12:34:56Z",
+            "type": "string",
+            "description": "The time when the item was added to the user's inventory. For example, the time when the user purchased a private server or was awarded a badge. \n\n This field is currently not populated for passes.",
+            "format": "date-time"
           }
         },
         "description": "Represents an item in a user's inventory.",

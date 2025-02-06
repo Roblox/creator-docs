@@ -1,7 +1,7 @@
-name: StylingService
+name: FeatureRestrictionManager
 type: class
 category:
-memory_category: Gui
+memory_category: Instances
 summary: ''
 description: ''
 code_samples: []
@@ -10,7 +10,6 @@ inherits:
 tags:
   - NotCreatable
   - Service
-  - NotReplicated
 deprecation_message: ''
 properties: []
 methods: []

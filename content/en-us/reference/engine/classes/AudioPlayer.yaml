@@ -14,6 +14,24 @@ inherits:
 tags: []
 deprecation_message: ''
 properties:
+  - name: AudioPlayer.Asset
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ContentId
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.AssetId
     summary: |
       The asset to be loaded into the `Class.AudioPlayer`.

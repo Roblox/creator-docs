@@ -11,7 +11,8 @@ description: |
   also features methods for common vector operations, such as
   `Datatype.Vector3:Cross()|Cross()` and `Datatype.Vector3:Dot()|Dot()`.
 
-  Alternatively to `Datatype.Vector3`, consider using the methods and properties of the `Library.vector` library.
+  Alternatively to `Datatype.Vector3`, consider using the methods and properties
+  of the `Library.vector` library.
 
   Some example usages of `Datatype.Vector3` are the
   `Class.BasePart.Position|Position`, `Class.BasePart.Rotation|Rotation`, and
