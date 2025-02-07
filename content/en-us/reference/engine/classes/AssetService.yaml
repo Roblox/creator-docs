@@ -209,7 +209,9 @@ methods:
       - name: content
         type: Content
         default:
-        summary: 'Reference to asset content stored externally or as an object within the place, wrapping a single value of one of the supported `Enum.ContentSourceType` values.'
+        summary: |
+          Reference to asset content stored externally or as an object within the place, wrapping a single value
+          of one of the supported `Enum.ContentSourceType` values.
       - name: editableImageOptions
         type: Dictionary?
         default:
@@ -250,7 +252,9 @@ methods:
       - name: content
         type: Content
         default:
-        summary: 'Reference to asset content stored externally or as an object within the place, wrapping a single value of one of the supported `Enum.ContentSourceType` values.'
+        summary: |
+          Reference to asset content stored externally or as an object within the place, wrapping a single value
+          of one of the supported `Enum.ContentSourceType` values.
       - name: editableMeshOptions
         type: Dictionary?
         default:
@@ -319,7 +323,9 @@ methods:
       - name: meshContent
         type: Content
         default:
-        summary: 'Reference to asset content stored externally or as an object within the place, wrapping a single value of one of the supported `Enum.ContentSourceType` values.'
+        summary: |
+          Reference to asset content stored externally or as an object within the place, wrapping a single value
+          of one of the supported `Enum.ContentSourceType` values.
       - name: options
         type: Dictionary
         default: nil
