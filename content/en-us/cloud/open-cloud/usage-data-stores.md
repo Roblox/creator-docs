@@ -288,7 +288,6 @@ node updateInventory.js
 
 ### External persistent leaderboard
 
-
 This section walks through a concrete example of creating an external persistent leaderboard in Python, in which you can list and read your users information stored in ordered data stores, make edits, and then publish to an external website for promotion.
 
 For this example, assume the following:
