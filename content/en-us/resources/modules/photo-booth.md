@@ -7,7 +7,7 @@ Taking a photo is a perfect way to commemorate a great experience. The **PhotoBo
 
 <video src="../../assets/developer-modules/photo-booth/Showcase.mp4" controls width="100%"></video>
 
-## Module Usage
+## Module usage
 
 ### Installation
 
@@ -35,7 +35,7 @@ To use the **PhotoBooth** module in an experience:
 
    <img src="../../assets/developer-modules/photo-booth/Move-Package.png" width="320" />
 
-### Positioning the Booth
+### Position the booth
 
 The module comes with one **PhotoBooth** model that you can position in the 3D world. This model is what players will interact with to set up a photo.
 
@@ -73,7 +73,7 @@ The module is preconfigured to work for most use cases, but it can be easily cus
 
    <img src="../../assets/developer-modules/photo-booth/Changed-Message.jpg" width="800" />
 
-### Connecting to Events
+### Connect to events
 
 Every time the photo booth displays a new screen to a local client, a corresponding event is fired. These events can be connected in a `Class.LocalScript` so that you can respond with your own custom logic.
 
@@ -95,7 +95,7 @@ PhotoBooth.promptShown:Connect(function()
 end)
 ```
 
-### GUI Visibility
+### GUI visibility
 
 By default, the photo booth hides all `Class.ScreenGui|ScreenGuis` and `Class.CoreGui|CoreGuis` when a photo is staged. If you want to override this auto-hiding behavior and programmatically decide which GUIs should remain visible, include the [hideOtherGuis](#hideotherguis) and [showOtherGuis](#showotherguis) callbacks and respond with your own custom logic.
 
@@ -149,7 +149,7 @@ PhotoBooth.showOtherGuis(function()
 end)
 ```
 
-## API Reference
+## API reference
 
 ### Functions
 

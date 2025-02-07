@@ -1,5 +1,5 @@
 ---
-title: Creating a Sparkler
+title: Create a sparkler
 prev: /education/build-it-play-it-mansion-of-wonder/next-steps
 description: Learn how to attach a particle emitter to a player-carried tool in Roblox Studio. Once you are finished, Earn the fourth set of rewards in Roblox's Build It Play It Mansion of Wonders -- the Head Slime avatar item and Glimmer and Gumption badge.
 ---
@@ -10,7 +10,7 @@ In addition to the properties covered in the Build It, Play It challenge, this t
 
 <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/final-example.mp4"></video>
 
-## Finding a Tool
+## Find a tool
 
 For this tutorial, sparklers are **tools** with attached particle effects. In Roblox, tools are items players equip; if you've played an experience with a sword or gun, it's likely you've used tools before.
 
@@ -32,7 +32,7 @@ To start, add the pre-made sparkler set into your existing experience. You'll th
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/show-sparklers.jpeg" />
 
-## Creating the Particle
+## Create the particle
 
 Each sparkler comes with a customizable particle emitter. Follow the steps to find the particle, change its texture, and then create the color gradient.
 
@@ -101,35 +101,35 @@ Each sparkler comes with a customizable particle emitter. Follow the steps to fi
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/select-color-property.png" />
 
-## Creating a Color Gradient
+## Create a color gradient
 
 Each **arrow** on the color sequence represents a different color. Colors can be changed, added, removed, or moved around. Use a combination of techniques to create a color gradient, like the example below.
 
 <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/final-example.jpeg" />
 
-### Changing a Color
+### Change a color
 
 Under the color sequence, select an **arrow** <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/non-selected-arrow.png" width="14px" />. Then, click the **Color** button to open the color picker and set a new color. Note that arrows are yellow when selected.
 
 <img src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/select-color.png" />
 
-### Adding or Removing Colors
+### Add or remove colors
 
 To add a color, click on the color sequence. This adds a new arrow that can be clicked. To remove a color, click on an arrow and click the **Delete** button on the screen.
 
 <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/add-delete-colors.mp4"></video>
 
-### Moving Colors
+### Move colors
 
 To move a color, click on any arrow other than the start or end arrows and drag it to a new area.
 
 <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/creating-a-sparkler/move-colors.mp4"></video>
 
-### Improving the Particle
+### Improve the particle
 
 After creating a color gradient, use your knowledge from the previous lessons to change properties like **Size** and **Speed** to get the particular effect you want.
 
-## Finishing the Sparkler
+## Finish the sparkler
 
 So players can have the sparkler when the experience starts, you'll need to move it to the StarterPack. This folder holds all items a player receives when they join.
 
@@ -149,7 +149,7 @@ So players can have the sparkler when the experience starts, you'll need to move
    Each sparkler has a name that's shown to players in the experience. To rename a sparkler, in the Explorer, right click on it the tool and select **Rename**.
     </Alert>
 
-## Challenge Checkpoint
+## Challenge checkpoint
 
 You got your animation ready! Celebrate your new skills by getting the **Head Slime** avatar item and **Glimmer and Gumption** badge.
 

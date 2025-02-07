@@ -1,5 +1,5 @@
 ---
-title: Go Beyond the Challenge
+title: Go beyond the challenge
 prev: /education/build-it-play-it-galactic-speedway/take-the-challenge-3
 description: Pick what you would like to learn next in the Build It Play It Galactic Speedway challenge to further customize your game in Roblox Studio.
 ---
@@ -8,7 +8,7 @@ There are still more rewards to earn and more ways to personalize your driftspee
 
 Use your new skills to build levels, decorative props, or even your own alien landscape. Below are a few ways to continue customizing your game and earn more virtual prizes.
 
-## Other Cool Tricks
+## Other cool tricks
 
 <table>
   <tr>
@@ -50,7 +50,7 @@ Use your new skills to build levels, decorative props, or even your own alien la
   </tr>
 </table>
 
-## Unlock More Virtual Prizes
+## Unlock more virtual prizes
 
 Add a little extra style to your driftspeeder and earn more rewards on Roblox.
 

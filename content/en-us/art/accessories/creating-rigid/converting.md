@@ -1,5 +1,5 @@
 ---
-title: Using the Accessory Fitting Tool
+title: Use the accessory fitting tool
 description: Use the Accessory Fitting tool to convert your model to an rigid accessory.
 next: /art/accessories/creating-rigid/publishing
 prev: /art/accessories/creating-rigid/importing
@@ -24,7 +24,7 @@ To fit and generate your accessory:
 
 5. After previewing and fitting your asset, select the **dropdown** next to **Generate** button to select **Generate Legacy Accessory**. The accessory object populates in your viewport and in the Explorer.
 
-   - For rigid accessories that you intend to sell on the Marketplace you must use the [Generate Legacy Accessory](../accessory-fitting-tool.md#generate-legacy-accessory) option when creating your Marketplace accessories.
+   - For rigid accessories that you intend to sell on the Marketplace you must use the [generate legacy accessory](../accessory-fitting-tool.md#generate-legacy-accessory) option when creating your Marketplace accessories.
 
      <img src="../../../assets/accessories/accessory-fitting-tool/Generate-Legacy-Accessory.png" width ="60%" alt="A dropdown appears above the GenerateMeshPartAccessory when expanded, displaying a Generate Legacy Accessory option."/>
 

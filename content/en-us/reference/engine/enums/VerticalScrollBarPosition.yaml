@@ -1,9 +1,11 @@
 name: VerticalScrollBarPosition
 type: enum
 summary: |
-  Indicates the side that the vertical scrollbar will be located at.
+  This enum is used for `Class.ScrollingFrame.VerticalScrollBarPosition` to
+  indicate vertical scroll bar positioning.
 description: |
-  Indicates the side that the vertical scrollbar will be located at.
+  This enum is used for `Class.ScrollingFrame.VerticalScrollBarPosition` to
+  indicate vertical scroll bar positioning.
 code_samples:
 tags: []
 deprecation_message: ''

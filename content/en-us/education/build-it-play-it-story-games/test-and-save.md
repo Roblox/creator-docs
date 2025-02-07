@@ -1,5 +1,5 @@
 ---
-title: Test and Save
+title: Test and save
 description: Part of the Story Games series that teaches you to code in Roblox. Save and publish the experience in Roblox Studio.
 next: /education/build-it-play-it-story-games/second-challenge
 prev: /education/build-it-play-it-story-games/coding-a-question
@@ -56,7 +56,7 @@ This is a good point at which to check your code and make sure it runs. Testing 
 
    <img src="../../assets/education/story-games/wcc2018_stopGame.png" />
 
-## Saving Your Code
+## Save your code
 
 It's important to save the whole project by **publishing** it to Roblox. It's a good idea to publish every ten minutes while you're working or after making a big change.
 

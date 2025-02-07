@@ -1,5 +1,5 @@
 ---
-title: Creator Store Queries
+title: Creator Store queries
 description: Creator Store Queries let you externally query the Creator Store and Marketplace Catalog.
 ---
 
@@ -30,7 +30,7 @@ Valid category IDs are:
 - FontFamily = `73`
 - Music = `300`
 
-### Query Parameters
+### Query parameters
 
 You can specify search parameters by appending a series of parameters and values to the URL, each separated by a `&`.
 
@@ -184,7 +184,7 @@ To get back the asset metadata, you can go over the data array and extract the I
 GET https://apis.roblox.com/toolbox-service/v1/items/details?assetIds={assetId1}%2C{assetId2}
 ```
 
-### Response Fields
+### Response fields
 
 This is the response you should expect to get back from that endpoint:
 
@@ -288,7 +288,7 @@ You can query avatar items from the Marketplace using the following URL:
 
 You can replace `[params]` with the appropriate [query parameters](#query-parameters) to customize your search.
 
-### Query Parameters
+### Query parameters
 
 You can specify search parameters by appending a series of parameters and values to the URL, each separated by a `&`.
 
@@ -375,7 +375,7 @@ The following URL will search for the first 10 "Gear" items in "Accessories" sor
 
 `https://catalog.roblox.com/v1/search/items/details?Category=11&Subcategory=5&CreatorTargetId=1&SortType=0&SortAggregation=5&Limit=10`
 
-### Response Fields
+### Response fields
 
 API responses return in a JSON format. The response provides asset details in the `data` key using the following fields:
 

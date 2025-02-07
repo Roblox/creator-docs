@@ -6,28 +6,28 @@ code_samples: []
 tags: []
 deprecation_message: ''
 items:
-  - name: PlayerIneligible
-    summary: ''
-    value: 0
-    tags: []
-    deprecation_message: ''
-  - name: ExperienceIneligible
+  - name: ShowCompleted
     summary: ''
     value: 1
     tags: []
     deprecation_message: ''
-  - name: NotShown
+  - name: AdNotReady
     summary: ''
     value: 2
     tags: []
     deprecation_message: ''
-  - name: ShowCompleted
+  - name: AdAlreadyShowing
     summary: ''
     value: 3
     tags: []
     deprecation_message: ''
-  - name: ShowInterrupted
+  - name: InternalError
     summary: ''
     value: 4
+    tags: []
+    deprecation_message: ''
+  - name: ShowInterrupted
+    summary: ''
+    value: 5
     tags: []
     deprecation_message: ''

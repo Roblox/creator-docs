@@ -1,5 +1,5 @@
 ---
-title: Exporting Animations
+title: Export animations
 description: Part of the Roblox Build It, Play It Challenge - Island of Move. Export the animation to use in Roblox.
 next: /education/build-it-play-it-island-of-move/change-the-animation
 prev: /education/build-it-play-it-island-of-move/challenge-checkpoint-2
@@ -30,7 +30,7 @@ You have an animation but now it needs to go into your game. To use the animatio
 
    <img src="../../assets/education/build-it-play-it-island-of-move/exporting-animations/animation-submit.png" width="50%" />
 
-## Get the Animation ID
+## Get the animation ID
 
 An animation ID lets the game know what animation to play. You'll use the ID of your exported animation for players in your game.
 

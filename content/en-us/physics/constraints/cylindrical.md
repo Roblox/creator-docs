@@ -4,7 +4,7 @@ description: CylindricalConstraint allows its attachments to slide along one axi
 ---
 
 <Alert severity="info">
-For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.CylindricalConstraint`, see [Mechanical Constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;Units](../../physics/units.md) to understand how Roblox units compare to metric units.
+For an overview on creating, visualizing, and simulating mechanical constraints, including `Class.CylindricalConstraint`, see [Mechanical constraints](../../physics/mechanical-constraints.md). Also see [Roblox&nbsp;units](../../physics/units.md) to understand how Roblox units compare to metric units.
 </Alert>
 
 A `Class.CylindricalConstraint` allows its attachments to slide along one axis and rotate about another axis. This constraint, along with a
@@ -16,13 +16,13 @@ A `Class.CylindricalConstraint` allows its attachments to slide along one axis a
 Orientation of the attachments affects how the cylindrical aspect will rotate. To ensure rotation occurs around the desired axis, each attachment's `Class.Attachment.Axis|Axis` and `Class.Attachment.SecondaryAxis|SecondaryAxis`, visualized by the yellow and orange arrows, should point in the same direction.
 </Alert>
 
-## Angular Power
+## Angular power
 
 If a cylindrical's `Class.CylindricalConstraint.AngularActuatorType|AngularActuatorType` is set to `Enum.ActuatorType|Motor`, it attempts to rotate the attachments with the goal of reaching its `Class.CylindricalConstraint.AngularVelocity|AngularVelocity`. You can further control this rotation through both `Class.CylindricalConstraint.MotorMaxAngularAcceleration|MotorMaxAngularAcceleration` and `Class.CylindricalConstraint.MotorMaxTorque|MotorMaxTorque`.
 
 If a cylindrical's `Class.CylindricalConstraint.AngularActuatorType|AngularActuatorType` is set to `Enum.ActuatorType|Servo`, it attempts to rotate to an angle specified by `Class.CylindricalConstraint.TargetAngle|TargetAngle`. This rotation is controlled by `Class.CylindricalConstraint.AngularSpeed|AngularSpeed`, `Class.CylindricalConstraint.AngularResponsiveness|AngularResponsiveness`, and `Class.CylindricalConstraint.ServoMaxTorque|ServoMaxTorque`.
 
-## Linear Power
+## Linear power
 
 If a cylindrical's `Class.CylindricalConstraint|ActuatorType` is set to `Enum.ActuatorType|Motor`, it attempts to translate the attachments with the goal of reaching `Class.CylindricalConstraint|Velocity`. You can further control this translation through both `Class.CylindricalConstraint|MotorMaxAcceleration` and `Class.CylindricalConstraint|MotorMaxForce`.
 
@@ -47,7 +47,7 @@ Enabling the `Class.CylindricalConstraint.AngularLimitsEnabled|AngularLimitsEnab
   </figure>
 </GridContainer>
 
-## Inclination Angle
+## Inclination angle
 
 `Class.CylindricalConstraint.InclinationAngle|InclinationAngle` defines the direction of the rotation axis as an angle from the **X** axis in the **X**/**Y** plane of `Class.Constraint.Attachment0|Attachment0`, from -180 to 180. This lets you tilt the rotating element without changing the sliding axis.
 

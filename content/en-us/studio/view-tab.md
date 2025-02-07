@@ -1,13 +1,13 @@
 ---
-title: View Tab
+title: View tab
 description: The View tab lets you toggle various windows in Studio and customize display options.
 ---
 
-The **View** tab lets you toggle various windows in Studio, toggle the [view selector](#view-selector), and customize [display options](#display-options).
+The **view** tab lets you toggle various windows in Studio, toggle the [view selector](#view-selector), and customize [display options](#display-options).
 
 <img src="../assets/studio/general/Toolbar-View-Tab.png" width="876" alt="View tab indicated in Studio toolbar" />
 
-## Windows and Tools
+## Windows and tools
 
 The **Show** section lets you toggle specific windows and tools within Studio. Commonly accessed windows/tools include:
 
@@ -73,9 +73,9 @@ The **View Selector** widget lets you easily navigate between 14 views in 3D spa
   </TabItem>
 </Tabs>
 
-## Display Options
+## Display options
 
-### Grid and Wireframe
+### Grid and wireframe
 
 A visual grid or wireframe view can be toggled through the buttons in the **Settings** section.
 
@@ -87,19 +87,19 @@ A visual grid or wireframe view can be toggled through the buttons in the **Sett
       <img src="../assets/studio/general/Grid-Options-Default.jpg" width="800" alt="Default 3D viewport with no grid or wireframe options enabled" />
     </figure>
   </TabItem>
-  <TabItem label="Show Grid">
+  <TabItem label="Show grid">
     <figure>
       <img src="../assets/studio/general/Grid-Options-Show-Grid.jpg" width="800" height="450" alt="Show Grid toggled in View tab, revealing a 3D grid on the Y plane" />
       <figcaption>The **Show Grid** button toggles a 3D grid on the **Y** plane, as well as an axis indicator at (**0**,&nbsp;**0**,&nbsp;**0**). If showing, the radio buttons directly to the left of the button set the grid lines to be 2, 4, or 16 studs apart.</figcaption>
     </figure>
   </TabItem>
-  <TabItem label="Grid Material">
+  <TabItem label="Grid material">
     <figure>
       <img src="../assets/studio/general/Grid-Options-Grid-Material.jpg" width="800" height="450" alt="Grid Material toggled in View tab, showing a flat grid material on all non-textured surfaces" />
       <figcaption>For 3D objects without an applied `Class.Texture`, the **Grid Material** button overlays a flat "grid&nbsp;material" on all surfaces.</figcaption>
     </figure>
   </TabItem>
-  <TabItem label="Wireframe Rendering">
+  <TabItem label="Wireframe rendering">
     <figure>
       <img src="../assets/studio/general/Grid-Options-Wireframe-Rendering.jpg" width="800" height="450" alt="Wireframe Rendering toggled in View tab, changing the editor view to wireframe rendering mode" />
       <figcaption>The **Wireframe Rendering** button changes the editor view to wireframe rendering mode.</figcaption>
@@ -114,15 +114,15 @@ Toggles the visibility of on-screen user interface elements in the 3D viewport.
 <img src="../assets/studio/general/View-Tab-UI-Visibility.png" width="782" alt="UI Visibility toggle indicated in View tab of Studio" />
 
 <Tabs>
-  <TabItem label="On-Screen UI Visible">
+  <TabItem label="On-screen UI visible">
     <img src="../assets/studio/general/Viewport-UI-Visibility-On.jpg" width="800" height="360" alt="UI Visibility toggled on (visible) for 3D viewport" />
   </TabItem>
-  <TabItem label="On-Screen UI Hidden">
+  <TabItem label="On-screen UI hidden">
     <img src="../assets/studio/general/Viewport-UI-Visibility-Off.jpg" width="800" height="360" alt="UI Visibility toggled off (hidden) for 3D viewport" />
   </TabItem>
 </Tabs>
 
-### Selection Style
+### Selection style
 
 To display **outlines** and/or **bounding boxes** around selected objects, choose an option from the **Selection Style** menu. You can also customize the thickness, color, and other aspects of outlines and bounding boxes through the **Studio&nbsp;Settings** menu.
 
@@ -134,7 +134,7 @@ To display **outlines** and/or **bounding boxes** around selected objects, choos
 While in a [collaborative session](../projects/collaboration.md) in Studio, bounding boxes only appear to you, not to others in the session.
 </Alert>
 
-## Diagnostic Stats
+## Stats
 
 The **Stats** section contains buttons which toggle on-screen diagnostic information.
 

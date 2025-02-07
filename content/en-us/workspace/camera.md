@@ -1,11 +1,11 @@
 ---
-title: Customizing the Camera
+title: Customize the camera
 description: Explains how to configure an experience's camera settings.
 ---
 
 Roblox's built-in camera powers a default **third person** mode and an optional **first person** mode, so you don't need to build your own following camera. For more customized scenarios, you can adjust the default properties in `Class.Camera` or replace it entirely like for over-the-shoulder, isometric, and weapon scoping views.
 
-## Basic Settings
+## Basic settings
 
 You can configure common camera settings directly within Studio's `Class.StarterPlayer` object. These settings include [zoom distance](#zoom-distance) and various [camera](#camera-mode), [occlusion](#occlusion-mode), and [movement](#movement-mode) modes.
 
@@ -17,7 +17,7 @@ You can configure common camera settings directly within Studio's `Class.Starter
 
    <img src="../assets/studio/properties/StarterPlayer-Camera-Group.png" width="320" alt="Camera properties on StarterPlayer in Properties Window" />
 
-### Zoom Distance
+### Zoom distance
 
 Together, `Class.StarterPlayer.CameraMaxZoomDistance|CameraMaxZoomDistance` and `Class.StarterPlayer.CameraMinZoomDistance|CameraMinZoomDistance` set the range in which players can zoom the camera in respect to their player character. Setting a very high maximum such as 500 allows players to zoom the camera far out in space. If you want to lock the camera to a specific distance away from the character and prevent zooming, set both of these properties to the same value.
 
@@ -30,7 +30,7 @@ player.CameraMaxZoomDistance = 25
 player.CameraMinZoomDistance = 50
 ```
 
-### Camera Mode
+### Camera mode
 
 The `Class.StarterPlayer.CameraMode|CameraMode` property sets the overall behavior of the camera between two options:
 
@@ -53,7 +53,7 @@ The `Class.StarterPlayer.CameraMode|CameraMode` property sets the overall behavi
 </tbody>
 </table>
 
-### Occlusion Mode
+### Occlusion mode
 
 The `Class.StarterPlayer.DevCameraOcclusionMode|DevCameraOcclusionMode` property controls camera behavior when the player cannot see their character, such as when it's obscured by a `Class.BasePart`.
 
@@ -81,7 +81,7 @@ The `Class.StarterPlayer.DevCameraOcclusionMode|DevCameraOcclusionMode` property
   <figcaption>**Zoom** and **Invisicam** occlusion modes</figcaption>
 </figure>
 
-### Movement Mode
+### Movement mode
 
 The `Class.StarterPlayer.DevComputerCameraMovementMode|DevComputerCameraMovementMode` (computer) and `Class.StarterPlayer.DevTouchCameraMovementMode|DevTouchCameraMovementMode` (phone/tablet) determine how the player can move the camera around.
 
@@ -116,7 +116,7 @@ The `Class.StarterPlayer.DevComputerCameraMovementMode|DevComputerCameraMovement
 </tbody>
 </table>
 
-## Scripting the Camera
+## Script the camera
 
 Each player [client](../projects/client-server.md) has its own `Class.Camera` object residing in the local `Class.Workspace`, accessible through the `Class.Workspace.CurrentCamera` property. You can override Roblox's default camera scripts by setting its `Class.Camera.CameraType|CameraType` to `Enum.CameraType|Scriptable` and then, most commonly, control the camera through the following properties.
 

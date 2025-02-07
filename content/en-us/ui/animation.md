@@ -1,5 +1,5 @@
 ---
-title: UI Animation/Tweens
+title: UI animation/tweens
 description: Explains how to animate GuiObjects using the process of tweening.
 ---
 
@@ -9,7 +9,7 @@ In animation, **tweening** is the process of generating intermediate frames betw
 - Sliding UI menus in and out from the screen edges.
 - Gradually animating a health bar between two widths when a user receives a health boost.
 
-## Single-Property Tweens
+## Single-property tweens
 
 ### Position
 
@@ -248,7 +248,7 @@ Multiple properties control UI borders, depending on the object type.
 <table>
     <thead>
         <tr>
-            <th>UI Object</th>
+            <th>UI object</th>
             <th>Properties</th>
         </tr>
     </thead>
@@ -315,7 +315,7 @@ local tween = TweenService:Create(stroke, tweenInfo, {Color = targetColor, Thick
 tween:Play()
 ```
 
-## Multi-Property Tweens
+## Multi-property tweens
 
 You can combine any of the [single-property tweens](#single-property-tweens) into more complex tweens by passing multiple target properties to `Class.TweenService:Create()`, for example **position&nbsp;+&nbsp;rotation** or **size&nbsp;+&nbsp;transparency**.
 
@@ -360,7 +360,7 @@ local tween = TweenService:Create(object, tweenInfo, {Size = targetSize, ImageTr
 tween:Play()
 ```
 
-## Tween Sequences
+## Tween sequences
 
 You can chain UI animations to occur one after another by playing subsequent tweens upon the previous tween's `Class.TweenBase.Completed|Completed` event. For example, the following script moves an object to the center of the screen, then rotates it by 45&deg;.
 
@@ -390,7 +390,7 @@ positionTween.Completed:Connect(function()
 end)
 ```
 
-## Easing Options
+## Easing options
 
 Using the easing options of `Datatype.TweenInfo`, you can control the easing **style** and **direction** of UI animations.
 
@@ -497,16 +497,16 @@ local tween = TweenService:Create(object, tweenInfo, {Rotation = 45})
 </tbody>
 </table>
 
-```lua title='Easing Direction - InOut' highlight='1'
+```lua title='Easing direction - InOut' highlight='1'
 local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Cubic, Enum.EasingDirection.InOut)
 local tween = TweenService:Create(object, tweenInfo, {Rotation = 45})
 ```
 
-## Animating Text
+## Animate text
 
 You can easily enhance text-based UI, such as cutscene banners, player instructions, and prompts, with animated effects.
 
-### Typewriter Effect
+### Typewriter effect
 
 The "typewriter" effect is ideal for `Class.TextLabel|TextLabels` that tell a story, output NPC conversations, etc.
 

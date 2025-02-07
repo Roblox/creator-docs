@@ -59,7 +59,7 @@ properties:
       Color of the text in the chat window.
     description: |
       Determines the color of the text in the chat window. Default value is
-      `Datatype.Color3.new(255, 255, 255)` (white).
+      `Datatype.Color3.fromRGB(255, 255, 255)` (white).
     code_samples: []
     type: Color3
     tags: []
@@ -100,7 +100,7 @@ properties:
       Stroke color applied to text in the chat window.
     description: |
       Determines the stroke color applied to text in the chat window. Default
-      value is `Datatype.Color3.new(0, 0, 0)` (black).
+      value is `Datatype.Color3.fromRGB(0, 0, 0)` (black).
     code_samples: []
     type: Color3
     tags: []

@@ -206,7 +206,7 @@ methods:
       The `priority` of the binding is an integer; it determines when during the
       render step to call the custom function. The lower this number, the sooner
       the custom function will be called. If two bindings have the same
-      priority, the Roblox engine will randomly pick one to run first. The
+      priority, the Roblox Engine will randomly pick one to run first. The
       default Roblox control scripts run with these specific priorities:
 
       - Player Input: `100`
@@ -258,7 +258,7 @@ methods:
           Priority of the binding as an integer; it determines when during the
           render step to call the custom function. The lower this number, the
           sooner the custom function will be called. If two bindings have the
-          same priority the Roblox engine will randomly pick one to run first.
+          same priority the Roblox Engine will randomly pick one to run first.
       - name: function
         type: Function
         default:

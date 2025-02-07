@@ -1,31 +1,37 @@
 name: ScrollBarInset
 type: enum
 summary: |
-  Indicates when the `Class.ScrollingFrame` should be insetted by the space
-  needed to show the scroll bar.
+  This enum is used with `Class.ScrollingFrame.HorizontalScrollBarInset` and
+  `Class.ScrollingFrame.VerticalScrollBarInset` to indicate whether the canvas
+  should be inset by
+  `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` for the
+  respective scroll bar.
 description: |
-  Indicates when the `Class.ScrollingFrame` should be insetted by the space
-  needed to show the scroll bar.
+  This enum is used with `Class.ScrollingFrame.HorizontalScrollBarInset` and
+  `Class.ScrollingFrame.VerticalScrollBarInset` to indicate whether the canvas
+  should be inset by
+  `Class.ScrollingFrame.ScrollBarThickness|ScrollBarThickness` for the
+  respective scroll bar.
 code_samples:
 tags: []
 deprecation_message: ''
 items:
   - name: None
     summary: |
-      The ScrollingFrame will never be insetted for this scrolling bar.
+      The canvas will never be inset for the respective scroll bar.
     value: 0
     tags: []
     deprecation_message: ''
   - name: ScrollBar
     summary: |
-      The ScrollingFrame will only be insetted if this scrollbar is being shown.
+      The canvas will only be inset if the respective scroll bar is showing.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Always
     summary: |
-      The ScrollingFrame will always be insetted regardless if the scrollbar is
-      being shown or not.
+      The canvas will always be inset for the respective scroll bar, regardless
+      of whether that scroll bar is showing.
     value: 2
     tags: []
     deprecation_message: ''

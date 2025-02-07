@@ -7,16 +7,16 @@ description: Explains how to interpret and improve acquisition metrics for your 
 
 When acquiring users to your experience, such as announcing an in-game event or creating ad campaigns, make sure your experience has good [retention](./retention.md) and [engagement](./engagement.md) to ensure a healthy user population and game experience.
 
-## Viewing Acquisition Metrics
+## View acquisition metrics
 
 To view your experience's acquisition analytics:
 
 1. Navigate to your [Creations](https://create.roblox.com/dashboard/creations) page on **Creator Dashboard** and select your experience.
 1. In the **Analytics** menu on the left, select **Acquisition**.
 
-You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md#granting-group-permission).
+You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md).
 
-## Acquisition Sources
+## Acquisition sources
 
 On the acquisition dashboard, you'll see the following charts and tables:
 
@@ -35,11 +35,11 @@ Here's a list of all the available acquisition sources:
     <th>Description</th>
   </tr>
   <tr>
-    <td>Home Recommendations</td>
+    <td>Home recommendations</td>
     <td>**Recommended Experiences** section on **Home**</td>
   </tr>
   <tr>
-    <td>Continue Play</td>
+    <td>Continue play</td>
     <td>**Continue Play** on **Home**</td>
   </tr>
   <tr>
@@ -47,7 +47,7 @@ Here's a list of all the available acquisition sources:
     <td>**Today's Picks** and **Roblox Events** on **Home**</td>
   </tr>
   <tr>
-    <td>Home Other</td>
+    <td>Home other</td>
     <td>**Favorites** and all other traffic on **Home**</td>
   </tr>
   <tr>
@@ -63,20 +63,20 @@ Here's a list of all the available acquisition sources:
     <td>**All sorts** on **Charts**</td>
   </tr>
   <tr>
-    <td>Sponsored Ads</td>
+    <td>Sponsored ads</td>
     <td>Acquisition from [Sponsored Experiences](../promotion/ads-manager.md#sponsored-experiences) and **Sponsored Takeovers** on **Home**</td>
   </tr>
   <tr>
-    <td>Search Ads</td>
+    <td>Search ads</td>
     <td>Acquisition from [Search Ads](../promotion/search-ads.md)</td>
   </tr>
   <tr>
-    <td>Portal Ads</td>
+    <td>Portal ads</td>
     <td>Acquisition from [Portal Ads](../promotion/ads-manager.md#portal-ads)</td>
   </tr>
   <tr>
     <td>Teleport</td>
-    <td>Traffic coming from another experience through [teleporting](../../projects/teleporting.md)</td>
+    <td>Traffic coming from another experience through [teleporting](../../projects/teleport.md)</td>
   </tr>
   <tr>
     <td>Other</td>
@@ -84,7 +84,7 @@ Here's a list of all the available acquisition sources:
   </tr>
 </table>
 
-## Acquisition Attribution
+## Acquisition attribution
 
 The dashboard categorizes results for each acquisition source as follows:
 
@@ -94,58 +94,58 @@ The dashboard categorizes results for each acquisition source as follows:
     <th>Description</th>
   </tr>
   <tr>
-    <td>Users with Plays</td>
+    <td>Users with plays</td>
     <td>Unique new users with plays on the experience.</td>
   </tr>
   <tr>
-    <td>Qualified Play Through Rate</td>
+    <td>Qualified play through rate</td>
     <td>Percent of new users who engaged with your experience after viewing an impression.</td>
   </tr>
   <tr>
-    <td>D7 Retention</td>
+    <td>D7 retention</td>
     <td>Percentage of new players acquired in the date range who played again on the 8th day (D8) after their first session ended.</td>
   </tr>
   <tr>
-    <td>7D Playtime per User (Cumulative)</td>
+    <td>7D playtime per user (cumulative)</td>
     <td>Cumulative playtime for new players acquired in the date range in their first 7 days divided by the number of new players acquired in the date range.</td>
   </tr>
   <tr>
-    <td>30D Payer Conversion (Cumulative)</td>
+    <td>30D payer conversion (cumulative)</td>
     <td>Number of paying users from new players acquired in the date range in their first 30 days divided by the number of new players acquired in the date range.</td>
   </tr>
   <tr>
-    <td>30D Revenue per User (Cumulative)</td>
+    <td>30D revenue per user (cumulative)</td>
     <td>Cumulative revenue, excluding subscriptions, engagement payouts, and immersive ads, for new players acquired in the date range in their first 30 days divided by the number of new players acquired in the date range.</td>
   </tr>
 </table>
 
 <img src="../../assets/analytics/acquisition/New-Users-Funnel.png" width= "100%" alt="Chart indicating new users funnel."/>
 
-## Improving Acquisition
+## Improve acquisition
 
 To improve acquisition, you can run an acquisition funnel to identify sources that might drive more traffic or convert better, such as:
 
 - The sources driving **the most number of new users** to your experience.
 - The sources with the best **end-to-end conversion rate**.
 
-### Improving Acquisition from Roblox Sources
+### Improve acquisition from Roblox sources
 
 Among all Roblox sources, **Home** is usually where the vast majority of users find experiences. To improve your experience's discovery on Home:
 
-1. **Improve engagement and retention.** Get your [session time](../../production/analytics/engagement.md#improving-average-session-time) and [Day 1 retention](../../production/analytics/retention.md#improving-day-1-retention) to be comparable or above your similar experience benchmarks. The algorithm cares about these metrics because they signal how engaging and satisfying your experience is for users.
-2. **Optimize monetization.** Get your [payer conversion](../../production/analytics/monetization.md#improving-payer-conversion-rate) rate and [ARPPU](../../production/analytics/monetization.md#improving-average-revenue-per-paying-user-arppu) (average revenue per paying user) to be comparable or above your similar experience benchmarks. The algorithm cares about these metrics because they measure how invested users are in your experience.
+1. **Improve engagement and retention.** Get your [session time](../../production/analytics/engagement.md#improve-average-session-time) and [day 1 retention](../../production/analytics/retention.md#improve-day-1-retention) to be comparable or above your similar experience benchmarks. The algorithm cares about these metrics because they signal how engaging and satisfying your experience is for users.
+2. **Optimize monetization.** Get your [payer conversion](../../production/analytics/monetization.md#improve-payer-conversion-rate) rate and [ARPPU](../../production/analytics/monetization.md#improve-average-revenue-per-paying-user-arppu) (average revenue per paying user) to be comparable or above your similar experience benchmarks. The algorithm cares about these metrics because they measure how invested users are in your experience.
 
 <img src="../../assets/analytics/acquisition/Unique-Users-by-Source.png" width= "100%" alt="An example shows the statistics by unique users with impressions and unique users with plays by source." />
 
 You can adopt the following strategies to improve the number of users visiting your experience from Roblox sources, including **Home**, **Discover**, and **Search**:
 
-1. **Improve your retention**: Day 1 retention signals how engaging and satisfying your experience is for users. Experiences with high Day 1 retention are more likely to be featured in **Recommended Experiences**. For more information on improving Day 1 retention, see [Day 1 Retention](../../production/analytics/retention.md#improving-day-1-retention).
+1. **Improve your retention**: Day 1 retention signals how engaging and satisfying your experience is for users. Experiences with high Day 1 retention are more likely to be featured in **Recommended Experiences**. For more information on improving Day 1 retention, see [Day 1 retention](../../production/analytics/retention.md#improve-day-1-retention).
 
 2. **Grow your engagement**. Average session time measures how much time users spend in your experience and signals how much users enjoy your content. Experiences with high average session time are more likely to be featured in **Recommended Experiences**.
 
 For more information on Roblox sources and best practices on improving the discovery of your experience, see [Discovery](../../discovery.md).
 
-### Improving Qualified Play Through Rate from Roblox Sources
+### Improve qualified play through rate from Roblox sources
 
 You can get more users to convert by making your experience metadata engaging and accurate:
 
@@ -154,7 +154,7 @@ You can get more users to convert by making your experience metadata engaging an
 
 <img src="../../assets/analytics/acquisition/Qualified-Play-Through-Rate.png" width= "90%" alt="An example shows the qualified play through rate." />
 
-## Improving Acquisition from External Sources
+## Improve acquisition from external sources
 
 Here are some tips to get users to visit your experience from external sources:
 

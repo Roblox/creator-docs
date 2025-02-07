@@ -8,7 +8,7 @@ All Roblox experiences include several UI elements that are enabled by default. 
 <thead>
   <tr>
     <th>Default UI</th>
-    <th>Associated Enum</th>
+    <th>Associated enum</th>
   </tr>
 </thead>
 <tbody>

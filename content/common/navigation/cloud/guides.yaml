@@ -12,33 +12,33 @@ navigation:
         path: /cloud/open-cloud/oauth2-registration
       - title: Implementation
         path: /cloud/open-cloud/oauth2-develop
-      - title: Sample App
+      - title: Sample app
         path: /cloud/open-cloud/oauth2-sample
-  - title: API Keys
+  - title: API keys
     path: /cloud/open-cloud/api-keys
-  - heading: V2 Resource Guides
-  - title: User Inventories
+  - heading: V2 resource guides
+  - title: User inventories
     path: /cloud/open-cloud/inventory
-  - title: Engine Instances
+  - title: Engine instances
     path: /cloud/open-cloud/instance
-  - title: Experience Notifications
+  - title: Experience notifications
     path: /cloud/open-cloud/experience-notifications
-  - heading: V1 Resource Guides
+  - title: Messaging
+    path: /cloud/open-cloud/usage-messaging
+  - heading: V1 resource guides
   - title: Assets
     path: /cloud/open-cloud/usage-assets
-  - title: Data Stores
+  - title: Data stores
     path: /cloud/open-cloud/usage-data-stores
     section:
       - title: Overview
         path: /cloud/open-cloud/usage-data-stores
-      - title: Handling Requests
+      - title: Handle requests
         path: /cloud/open-cloud/data-store-api-handling
-  - title: Messaging
-    path: /cloud/open-cloud/usage-messaging
-  - title: Place Publishing
+  - title: Place publishing
     path: /cloud/open-cloud/usage-place-publishing
   - heading: Webhooks
-  - title: Webhook Notifications
+  - title: Webhook notifications
     path: /cloud/webhooks/webhook-notifications
-  - title: Right to Erasure Requests
+  - title: Right to erasure requests
     path: /cloud/webhooks/automate-right-to-erasure

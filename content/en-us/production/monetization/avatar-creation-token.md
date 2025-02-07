@@ -1,17 +1,17 @@
 ---
-title: Avatar Creation Token
+title: Avatar creation token
 description: Enable users to create and purchase avatar items in experience.
 ---
 
-An **Avatar Creation Token** enables developers to allow users to create, purchase, and save avatar items directly from an experience to their platform-level inventory. Experiences that implement in-experience creation APIs, such as `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync`, must include one or more Avatar Creation Tokens. You can purchase and manage tokens in your experience's [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+An **avatar creation token** enables developers to allow users to create, purchase, and save avatar items directly from an experience to their platform-level inventory using [in-experience creation](../../avatar/in-experience-creation.md). Experiences that implement in-experience creation APIs, such as `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync`, must include one or more avatar creation tokens. You can purchase and manage tokens in your experience's [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
 <Alert severity = 'info'>
 Owners of experiences that incorporate in-experience avatar item creation also benefit from [Marketplace commissions](../../marketplace/marketplace-fees-and-commissions.md#commissions) as both **creator** and **experience owner**.
 </Alert>
 
-To create Avatar Creation Tokens, you or your group must meet the [Marketplace Creator requirements](../../marketplace/marketplace-policy.md#creator-requirements). For the token to remain valid, the token owner must maintain these creator requirements.
+To create avatar creation tokens, you or your group must meet the [Marketplace creator requirements](../../marketplace/marketplace-policy.md#creator-requirements). For the token to remain valid, the token owner must maintain these creator requirements.
 
-## Creating a Token
+## Create a token
 
 To allow users to create, pay for, and save avatar items to their Roblox inventory in your experience, you'll need to set up an Avatar Creation Token in your experience's dashboard.
 
@@ -37,5 +37,5 @@ To create a token:
       <img src="../../assets/monetization/avatar-creation-tokens/Avatar-Creation-Token-Prices.png" width="90%" alt="Price related fields for avatar token creation, including a calculated item price."/>
 
 7. When complete, verify the **Creation Advance** and **Creation Fee** calculations and select **Create Token** to submit your purchase.
-8. You can now access the created token in the experience's **Avatar Creation Tokens** settings. To implement `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync`, you'll need the token ID which you can access by selecting the three dots on the thumbnail and selecting **Copy Token ID**.
+8. You can now access the created token in the experience's **avatar creation tokens** settings. To implement `Class.AvatarCreationService.PromptCreateAvatarAsync|PromptCreateAvatarAsync`, you'll need the token ID which you can access by selecting the three dots on the thumbnail and selecting **Copy Token ID**.
    <img src="../../assets/monetization/avatar-creation-tokens/Avatar-Creation-Token-Copy-ID.png" width="30%" alt="Dropdown for created tokens revealing a Copy Token ID option" />

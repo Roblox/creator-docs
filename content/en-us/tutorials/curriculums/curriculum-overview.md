@@ -1,5 +1,5 @@
 ---
-title: Curriculum Paths
+title: Curriculum paths
 description: An overview of creation curriculum paths covering topics like modeling, scripting, and gameplay logic.
 hideInPageNavigation: true
 hideBreadcrumbs: true
@@ -22,13 +22,11 @@ If you've never used Roblox Studio or coded before, start here before following 
 
 - [Setting up Roblox Studio](../../studio/setup.md) - Install
   and configure Roblox Studio.
-- [Create Your First Experience](../first-experience/index.md) - Build a simple experience.
-- [Coding Fundamentals](../../tutorials/fundamentals/coding-1/coding-fundamentals.md) - Learn the basics of programming with Lua.
+- [Create your first experience](../first-experience/index.md) - Build a simple experience.
+- [Coding fundamentals](../../tutorials/fundamentals/coding-1/coding-fundamentals.md) - Learn the basics of programming with Lua.
 
 </AccordionDetails>
 </BaseAccordion>
-
-<br /> <br />
 
 <Card>
 
@@ -93,7 +91,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
   <Button
     variant="contained"
     size="large">
-  Start Creating
+  Start creating
   </Button>
 </a>
 </CardContent>
@@ -106,7 +104,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 
 <CardContent>
 
-<h2 style={{marginBottom: 12}}>Environmental Art</h2>
+<h2 style={{marginBottom: 12}}>Environmental art</h2>
 
 <Typography variant="body2" color="textSecondary" component="p">
 Learn the foundational skills you need to become an environmental artist.
@@ -164,7 +162,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
   <Button
     variant="contained"
     size="large">
-  Start Creating
+  Start creating
   </Button>
 </a>
 </CardContent>
@@ -177,7 +175,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 
 <CardContent>
 
-<h2 style={{marginBottom: 12}}>Gameplay Scripting</h2>
+<h2 style={{marginBottom: 12}}>Gameplay scripting</h2>
 
 <Typography variant="body2" color="textSecondary" component="p">
 Learn the programming skills you need to introduce gameplay to the laser tag environment.
@@ -235,7 +233,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
   <Button
     variant="contained"
     size="large">
-  Start Creating
+  Start creating
   </Button>
 </a>
 </CardContent>
@@ -248,7 +246,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 
 <CardContent>
 
-<h2 style={{marginBottom: 12}}>User Interface Design</h2>
+<h2 style={{marginBottom: 12}}>User interface design</h2>
 
 <Typography variant="body2" color="textSecondary" component="p">
 Learn the design skills you need to implement UI that informs players of the laser tag gameplay.
@@ -306,7 +304,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
   <Button
     variant="contained"
     size="large">
-  Start Creating
+  Start creating
   </Button>
 </a>
 </CardContent>

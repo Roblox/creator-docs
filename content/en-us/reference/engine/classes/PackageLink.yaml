@@ -89,26 +89,6 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
-  - name: PackageLink.HasNewVersion
-    summary: ''
-    description: ''
-    code_samples: []
-    type: bool
-    tags:
-      - Hidden
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities: []
-    writeCapabilities: []
   - name: PackageLink.PackageAssetName
     summary: |
       The asset name of the package.
@@ -154,7 +134,7 @@ properties:
     writeCapabilities: []
   - name: PackageLink.PermissionLevel
     summary: |
-      The package permission for the current studio user.
+      The package permission for the current Studio user.
     description: |
       The package permission for the current Studio user.
     code_samples:

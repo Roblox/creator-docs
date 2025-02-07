@@ -1,5 +1,5 @@
 ---
-title: Roblox Studio Basics
+title: Roblox Studio basics
 description: Part of the Roblox Developer education series. Teach students to use Roblox to build an obstacle course game.
 next: /education/lesson-plans/roblox-developer/roblox-developer-2
 prev: /education/lesson-plans/roblox-developer/landing
@@ -7,12 +7,12 @@ prev: /education/lesson-plans/roblox-developer/landing
 
 <img src="../../../assets/education/lesson-plans/introToGames-hero.jpg" width="100%" />
 
-**Lesson Description**: Introduce students to the course and projects they'll be working on. Then, develop foundational skills such as manipulating parts and creating scripts by creating a simple obstacle course. Once these skills are mastered, students can go on to code an adventure game in later sessions.
+**Lesson description**: Introduce students to the course and projects they'll be working on. Then, develop foundational skills such as manipulating parts and creating scripts by creating a simple obstacle course. Once these skills are mastered, students can go on to code an adventure game in later sessions.
 
 <table>
 <tbody>
    <tr>
-    <td><b>Lesson Objectives</b></td>
+    <td><b>Lesson objectives</b></td>
     <td>
       <ul>
         <li>Manipulate 3D parts to create an obstacle course.</li>
@@ -21,7 +21,7 @@ prev: /education/lesson-plans/roblox-developer/landing
       </td>
    </tr>
    <tr>
-    <td><b>Skills and Concepts</b></td>
+    <td><b>Skills and concepts</b></td>
     <td>
     <ul>
     <li><b>Variable</b> - A placeholder for information in code.</li>
@@ -91,7 +91,7 @@ prev: /education/lesson-plans/roblox-developer/landing
   </tbody>
 </table>
 
-### Lesson Plan
+### Lesson plan
 
 #### Introduction
 
@@ -110,7 +110,7 @@ prev: /education/lesson-plans/roblox-developer/landing
 
    - Note the obstacle course is practice, but the can include parts of it in their adventure game if desired.
 
-#### Guided Tutorial - Roblox Studio Basics
+#### Guided tutorial - Roblox Studio basics
 
 1. Lead students through the following tutorial: [Introduction to Roblox Studio](../../../tutorials/first-experience/index.md).
 
@@ -118,24 +118,24 @@ prev: /education/lesson-plans/roblox-developer/landing
    - Remind students to rotate their camera view to get an accurate view of their project.
    - Encourage students to use the Explorer, a foundational skill in Roblox Studio.
 
-#### Guided Tutorial - Creating Scripts
+#### Guided tutorial - Create scripts
 
-1. Lead students through the [Creating a Script](../../../tutorials/fundamentals/coding-1/creating-a-script.md) tutorial.
+1. Lead students through the [Create a script](../../../tutorials/fundamentals/coding-1/create-a-script.md) tutorial.
 
-#### Wrap Up
+#### Wrap up
 
 1. Recap what students have created and vocabulary learned: variable and string.
 
 ### Appendix
 
-#### Troubleshooting Tips
+#### Troubleshooting tips
 
-**General Troubleshooting**
+**General troubleshooting**
 
 - If parts fall or disappear when playtesting, remind students to turn Anchoring on for that part.
 - The most common errors for students at this age are improper capitalization and typos. Encourage students to independently check their work, rather than rely on teachers.
 
-#### Classroom Management
+#### Classroom management
 
 - Introduce students to "Ask 3 Before Me": a student needs to ask three peers before asking the instructor for help.
 - Keep in mind students have different prior experience with computers. Emphasize exact steps when teaching, such as when to double-click or right-click.

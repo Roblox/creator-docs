@@ -1,16 +1,16 @@
 ---
-title: Creating a Battle Royale
+title: Create a Battle Royale
 description: How to make a game in Roblox Studio. Learn to design and code a battle royale experience for Roblox as a beginner.
 next: /education/battle-royale-series/project-setup
 ---
 
-### Series Description
+### Series description
 
 Create a round-based multiplayer experience where users compete to be the last player left! A great next lesson after the adventure game, this series expands on core concepts in game design and computer science. Once finished, the experience can be easily customized with unique gameplay elements and monetized.
 
 <video controls src="../../assets/education/battle-royale-series/battleRoyal_webFinal.mp4" width="100%"></video>
 
-### Objectives and Prerequisites
+### Objectives and prerequisites
 
 <table>
 <tbody>
@@ -40,7 +40,7 @@ Create a round-based multiplayer experience where users compete to be the last p
 </tbody>
 </table>
 
-### Series Contents
+### Series contents
 
 <table>
 <thead>
@@ -85,7 +85,7 @@ Create a round-based multiplayer experience where users compete to be the last p
 </tbody>
 </table>
 
-### Example Project
+### Example project
 
 <table>
 <tbody>

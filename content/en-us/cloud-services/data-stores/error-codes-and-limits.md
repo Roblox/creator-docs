@@ -1,18 +1,18 @@
 ---
-title: Error Codes and Limits
+title: Error codes and limits
 description: Error codes you might come across and limits you might hit when using data stores to store data.
 ---
 
 Requests you make to data stores can fail due to poor connectivity or other issues. To handle errors and return messages with an error code, wrap data store functions in `Global.LuaGlobals.pcall()`.
 
-## Error Code Reference
+## Error code reference
 
 <table>
 <thead>
   <tr>
-    <th>Error Code</th>
-    <th>Error Name</th>
-    <th>Error Message</th>
+    <th>Error code</th>
+    <th>Error name</th>
+    <th>Error message</th>
     <th>Notes</th>
   </tr>
 </thead>
@@ -250,13 +250,13 @@ Requests you make to data stores can fail due to poor connectivity or other issu
 </tbody>
 </table>
 
-### Server Error Codes
+### Server error codes
 
 <table>
 <thead>
   <tr>
-    <th>Error Name</th>
-    <th>Error Message</th>
+    <th>Error name</th>
+    <th>Error message</th>
     <th>Notes</th>
   </tr>
 </thead>
@@ -322,16 +322,16 @@ Requests in a queue are handled in the order they are received. The called funct
 
 Each queue has a limit of 30 requests. When the limit of a queue is reached, requests fail with an error code in the 301-306 range, indicating that the requests have been dropped entirely.
 
-### Server Limits
+### Server limits
 
 Each server is allowed a certain number of data store requests based on the request type and number of users. Use `Class.DataStoreService:GetRequestBudgetForRequestType()|GetRequestBudgetForRequestType()` to confirm the number of data store requests that the current place can make.
 
 <table>
 <thead>
   <tr>
-    <th>Request Type</th>
+    <th>Request type</th>
     <th>Functions</th>
-    <th>Requests per Minute</th>
+    <th>Requests per minute</th>
   </tr>
 </thead>
 <tbody>
@@ -368,11 +368,11 @@ Each server is allowed a certain number of data store requests based on the requ
 </tbody>
 </table>
 
-### Data Limits
+### Data limits
 
 Data stores limit how much data can be used per entry.
 
-The data store name, key name, and [scope](../../cloud-services/data-stores/managing-data-stores.md#scopes) must all be under a certain character length. Use `Library.string.len()` to check their length.
+The data store name, key name, and [scope](../../cloud-services/data-stores/manage-data-stores.md#scopes) must all be under a certain character length. Use `Library.string.len()` to check their length.
 
 The data (key value) is also stored as a string, regardless of its initial type. You can check the size of the data with the `Class.HttpService:JSONEncode()|JSONEncode()` function, which converts Lua data into a serialized JSON table.
 
@@ -380,16 +380,16 @@ The data (key value) is also stored as a string, regardless of its initial type.
 <thead>
   <tr>
     <th>Component</th>
-    <th>Maximum Number of Characters</th>
+    <th>Maximum number of characters</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>Data Store Name</td>
+    <td>Data store name</td>
     <td>50</td>
   </tr>
   <tr>
-    <td>Key Name</td>
+    <td>Key name</td>
     <td>50</td>
   </tr>
   <tr>
@@ -397,13 +397,13 @@ The data (key value) is also stored as a string, regardless of its initial type.
     <td>50</td>
   </tr>
   <tr>
-    <td>Data (Key Value)</td>
+    <td>Data (key value)</td>
     <td>4,194,304 per key</td>
   </tr>
 </tbody>
 </table>
 
-### Metadata Limits
+### Metadata limits
 
 Limits to the number of characters in user-defined metadata.
 
@@ -411,12 +411,12 @@ Limits to the number of characters in user-defined metadata.
 <thead>
   <tr>
     <th>Component</th>
-    <th>Maximum Number of Characters</th>
+    <th>Maximum number of characters</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>Key Name</td>
+    <td>Key name</td>
     <td>50</td>
   </tr>
   <tr>
@@ -424,7 +424,7 @@ Limits to the number of characters in user-defined metadata.
     <td>250</td>
   </tr>
   <tr>
-    <td>Key-value Pairs</td>
+    <td>Key-value pairs</td>
     <td>300</td>
   </tr>
 </tbody>
@@ -434,7 +434,7 @@ Limits to the number of characters in user-defined metadata.
   There's no limit to the total number of key-value pairs, but the total size can't exceed 300 characters.
 </Alert>
 
-### Throughput Limits
+### Throughput limits
 
 Per-key throughput limits ensure that performance is optimal on Roblox servers. Each limit applies to every single key across all servers in an experience and refreshes over time.
 
@@ -443,7 +443,7 @@ Roblox examines the usage of quota associated with the key over the last 60 seco
 <table>
 <thead>
   <tr>
-    <th>Request Type</th>
+    <th>Request type</th>
     <th>Limit</th>
   </tr>
 </thead>

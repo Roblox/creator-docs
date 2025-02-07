@@ -1,5 +1,5 @@
 ---
-title: Finish the Blast
+title: Finish the blast
 prev: /education/build-it-play-it-mansion-of-wonder/using-textures
 next: /education/build-it-play-it-mansion-of-wonder/making-an-explosion
 description: Learn how to change the size and movement style of particles from particle emitters in Roblox Studio as part of the Build It Play It Mansion of Wonders.
@@ -7,7 +7,7 @@ description: Learn how to change the size and movement style of particles from p
 
 Make final changes to the blast by editing the size and how it moves.
 
-## Changing the Size
+## Change the size
 
 1. Find **Size** and click on its row. Type a number from 1 to 10 and then press **Enter**.
 
@@ -21,17 +21,17 @@ Make final changes to the blast by editing the size and how it moves.
 
    <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/finish-the-blast/show-shot-color.mp4" ></video>
 
-## Changing the Move Style
+## Change the move style
 
 A particle can either be a **trail** or a **single blast** by toggling the **LockedToPart** property. The video below shows what a trailing blast vs a single blast looks like. Choose which one you like better, and then continue.
 
 <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/finish-the-blast/locked-to-part.mp4" width="100%"></video>
 
-### Making Trailing Blasts
+### Make trailing blasts
 
 1. [Skip](../../education/build-it-play-it-mansion-of-wonder/making-an-explosion.md) to the next section. To have a trailing blast, don't do anything.
 
-### Making Single Blasts
+### Make single blasts
 
 1. In the particle properties, scroll down to find **LockToPart**. Click the checkbox to turn it on.
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/finish-the-blast/set-locked-to-part.png" />

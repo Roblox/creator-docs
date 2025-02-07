@@ -6,7 +6,7 @@ description: Defines the errors that are returned by Open Cloud APIs
 The following sections describe the error model for v2 and v1 resource methods,
 respectively.
 
-## v2 Resource Error Model
+## v2 resource error model
 
 By default, resource methods respond with a 200 OK status. When requests are
 unsuccessful, Open Cloud returns standard error codes. All error responses have
@@ -89,7 +89,7 @@ The following table describes possible values for `code`.
   </tbody>
 </table>
 
-## v1 Resource Error Model
+## v1 resource error model
 
 All error responses have the same, standard format, which includes:
 

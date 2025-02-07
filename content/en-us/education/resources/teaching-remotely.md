@@ -1,5 +1,5 @@
 ---
-title: Teaching Remotely with Roblox Studio
+title: Teach remotely with Roblox Studio
 description: Collaboration and creation tools to bring students for distance learning.
 duration:
 thumbnail: None
@@ -11,7 +11,7 @@ tags:
 
 As educators, we understand the importance of having meaningful and collaborative learning experiences. With schools and teachers responding to COVID-19, Roblox is proud to offer resources that allow students and educators to collaborate and learn in real time.
 
-## Tools for Teaching Remote
+## Tools for teaching remotely
 
 The tools below make remote learning easy and engaging.
 
@@ -21,7 +21,7 @@ The tools below make remote learning easy and engaging.
       <img src="../../assets/education/legacy/cityScape_312x200.jpg" />
     </td>
     <td>
-      <h4>Get Trained</h4>
+      <h4>Get trained</h4>
       <p>Learn about Roblox, such as installing software and creating accounts</p>
       <a href="../../education/educator-onboarding/landing.md">
         <Button variant="text">View</Button>
@@ -34,7 +34,7 @@ The tools below make remote learning easy and engaging.
       <img src="../../assets/education/legacy/thumbnail_digitalCitizenship_312x200.jpg" />
     </td>
     <td>
-      <h4>Interacting Online</h4>
+      <h4>Interacting online</h4>
       <p>Foster a positive culture when learning remotely. </p>
       <a href="../../education/resources/intro-to-digital-civility.md">
         <Button variant="text">View</Button>
@@ -47,7 +47,7 @@ The tools below make remote learning easy and engaging.
       <img src="../../assets/education/legacy/classroomThumbnail_312x200.png" />
     </td>
     <td>
-      <h4>Collaborate Together</h4>
+      <h4>Collaborate together</h4>
       <p>Build, code, and chat online with Collaboration.</p>
       <a href="../../projects/collaboration.md">
         <Button variant="text">View</Button>
@@ -60,7 +60,7 @@ The tools below make remote learning easy and engaging.
       <img src="../../assets/education/legacy/worldbuilding_thumbnail.jpg" />
     </td>
     <td>
-      <h4>Private Servers</h4>
+      <h4>Private servers</h4>
       <p>Setup servers for classes or students.</p>
       <a href="../../education/support/private-servers-for-classroom-use.md">
         <Button variant="text">View</Button>
@@ -70,7 +70,7 @@ The tools below make remote learning easy and engaging.
 
 </table>
 
-## Explore Different Lessons
+## Explore different lessons
 
 Roblox Education has a variety of lesson plans for different ages and subjects.
 
@@ -80,7 +80,7 @@ Roblox Education has a variety of lesson plans for different ages and subjects.
   </a>
 </p>
 
-## Learn and Explore with Experiences
+## Learn and explore with experiences
 
 Many Roblox experiences offer educational value, such as allowing students to roleplay jobs like being a veterinarian, explore historical sites, or experiment with rocket physics. Check out these hand-picked experiences to play with students, or use them to kick-start a lesson of your own.
 
@@ -88,7 +88,7 @@ Many Roblox experiences offer educational value, such as allowing students to ro
     <Button variant="text">Explore Games</Button>
   </a>
 
-## Tips to Teaching Remotely
+## Tips to teaching remotely
 
 Teaching with Roblox introduces unique opportunities. When running a remote classroom, keep in mind the following tips:
 
@@ -110,6 +110,6 @@ To help you run a remote classroom, we recommend the following curated resources
 </li>
 </ul>
 
-## Questions and Support
+## Questions and support
 
 Need advice or help getting started? <a href="https://roblox.qualtrics.com/jfe/form/SV_8oiiVEvjteux7hk">Contact </a>the Roblox Education team.

@@ -1,7 +1,7 @@
 ---
-title: Multiple Conditions
+title: Multiple conditions
 description: Learn how to use elseif and else to create more complex control structures in Roblox Lua.
-next: /tutorials/fundamentals/coding-3/giving-points
+next: /tutorials/fundamentals/coding-3/give-points
 prev: /tutorials/fundamentals/coding-3/powerups-with-if-statements
 ---
 
@@ -22,7 +22,7 @@ end
 In this project, `else` and `elseif` are used to code a parkour course where runners receive awards depending on their finishing time.
 <img src="../../../assets/education/coding-3/coding3Hero_ifElseIf.jpg" width="80%" />
 
-## Coding Multiple Conditions
+## Code multiple conditions
 
 For this project, you could write a unique if statement for each medal to award players, but that takes a lot of time. Take, for instance, the imaginary code below.
 
@@ -54,7 +54,7 @@ end
 
 When the if/then statement runs, it'll start at the top and only run the code for the **first** true condition it finds.
 
-## Setting Up the Race Course
+## Set up the race course
 
 Start by placing the course's starting point and finish line, and then create a script to time the player and award different medals.
 
@@ -114,7 +114,7 @@ Start by placing the course's starting point and finish line, and then create a 
 
 5. Playtest and check that `finish()` is called when you touch the finish line.
 
-### Keep finish() From Repeating
+### Keep finish() from repeating
 
 Right now, whenever a player touches the finish line, `finish()` gets continuously called as long as the player touches the part.
 
@@ -156,7 +156,7 @@ Use a **boolean**, a variable that stores true or false, to ensure that finish()
 
 4. Playtest your game to check that you only see your test print statement once.
 
-### Keeping Track of Time
+### Keep track of time
 
 Like an if statement, a while loop can also use a condition to see if it should run. To time the player, create a timer using a while true do loop that only runs when the `raceActive` boolean is true.
 
@@ -186,9 +186,9 @@ Like an if statement, a while loop can also use a condition to see if it should 
    end
    ```
 
-3. Play the game and check that you see each second displayed in the Output Window.
+3. Play the game and check that you see each second displayed in the Output window.
 
-## Awarding Player Medals
+## Award player medals
 
 To finish, use an if statement with multiple conditions to award players a different prize medal based on their performance. Use an if statement and two elseif statements to check the player's finish time and award them the correct medal.
 
@@ -216,7 +216,7 @@ To finish, use an if statement with multiple conditions to award players a diffe
 
 3. Playtest and confirm the gold medal can be awarded.
 
-### Adding Additional Conditions
+### Add additional conditions
 
 Now that you've tested for the gold medal, code conditions for the other medals using the `elseif` keyword.
 
@@ -254,7 +254,7 @@ Now that you've tested for the gold medal, code conditions for the other medals 
 
 3. Playtest for the silver and bronze medals.
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 If you don't see the silver and bronze metals appear, try one of the below.
 
@@ -262,7 +262,7 @@ If you don't see the silver and bronze metals appear, try one of the below.
 - In `partTouched()`, make sure the second condition of the if statement uses `==`, like in `raceActive == true`.
 - Check that each `elseif` is in scope. Each `elseif` condition must be between the first line of the if/then statement and it's last `end`.
 
-### Adding the Else Condition
+### Add the else condition
 
 If the player didn't earn any of the medals, you should encourage them to try again. In this case, you can use an `else` statement, which runs if **no other** conditions are true, to show them a message.
 
@@ -306,7 +306,7 @@ After finishing the project, you can expand upon the script to add new elements 
 
 - Add code so players can repeat the race by touching the start line when they finish.
 - Design a way to display time during a race. You can either display the time on a part using a Surface GUI, like in the
-  [Creating a Timed Bridge tutorial](../coding-4/creating-a-timed-bridge.md).
+  [Create a Timed Bridge tutorial](../coding-4/create-a-timed-bridge.md).
 
 ```lua title ="Completed script"
 local timePassed = 0

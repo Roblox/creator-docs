@@ -1,5 +1,5 @@
 ---
-title: UI 9-Slice Design
+title: UI 9-slice design
 description: UI 9-slice design lets you create UI elements of varying sizes without distorting the borders or corners.
 ---
 
@@ -24,7 +24,7 @@ internally divided into nine sub-images, each with different scaling rules.
 <table>
     <thead>
         <tr>
-            <th>Sub-Image</th>
+            <th>Sub-image</th>
             <th>Scaling</th>
         </tr>
     </thead>
@@ -48,11 +48,11 @@ internally divided into nine sub-images, each with different scaling rules.
     </tbody>
 </table>
 
-## Studio Editor
+## Studio editor
 
 Slice configuration is possible by directly setting the `Enum.ScaleType` and slice properties on an image label or button, but Studio's built-in **9-Slice Editor** is more intuitive.
 
-### Opening the Editor
+### Opening the editor
 
 To open the visual **9-Slice Editor** in Studio:
 
@@ -72,7 +72,7 @@ To open the visual **9-Slice Editor** in Studio:
 
   <img src="../assets/ui/9-slice/9-Slice-Editor-View.png" width="327" />
 
-### Setting Offsets
+### Set offsets
 
 In Studio, drag the red lines to set the **offsets** from the left, right, top,
 and bottom edges of the image.

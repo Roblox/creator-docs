@@ -1,16 +1,16 @@
 ---
-title: Coding Fundamentals
+title: Coding fundamentals
 description: Part of the Roblox Developer education series. Teach students to code in Roblox with lessons for beginners.
 next: /education/lesson-plans/roblox-developer/roblox-developer-3
 prev: /education/lesson-plans/roblox-developer/roblox-developer-1
 ---
 
-**Lesson Description**: Explore the coding concepts of functions, loops, and if/then statements with mini-projects that can be added to games like color changing platforms and traps.
+**Lesson description**: Explore the coding concepts of functions, loops, and if/then statements with mini-projects that can be added to games like color changing platforms and traps.
 
 <table>
 <tbody>
    <tr>
-    <td><b>Lesson Objectives</b></td>
+    <td><b>Lesson objectives</b></td>
     <td>
       <ul>
         <li>Demonstrate the logic of if/then statements by modifying a part's properties.</li>
@@ -19,7 +19,7 @@ prev: /education/lesson-plans/roblox-developer/roblox-developer-1
       </td>
    </tr>
    <tr>
-    <td><b>Skills and Concepts</b></td>
+    <td><b>Skills and concepts</b></td>
     <td>
     <ul>
     <li><b>Property</b> - Something that controls how an object looks or behaves, like color or if players can walk through it.</li>
@@ -66,7 +66,7 @@ prev: /education/lesson-plans/roblox-developer/roblox-developer-1
   </tbody>
 </table>
 
-### Lesson Plan
+### Lesson plan
 
 #### Introduction
 
@@ -75,7 +75,7 @@ prev: /education/lesson-plans/roblox-developer/roblox-developer-1
    - Important to understand these concepts since adventure game will have more scripts.
    - Point out these projects, like a trap, can be included in the adventure game project they'll start in Session 3.
 
-#### Guided Tutorial - Working with Properties
+#### Guided tutorial - Work with properties
 
 1. Lead students through the following tutorials:
 
@@ -89,13 +89,13 @@ prev: /education/lesson-plans/roblox-developer/roblox-developer-1
    - Not Specific: Runs code
    - Improved: Changes color of PracticePart
 
-#### Guided Tutorial - Coding a Trap
+#### Guided tutorial - Code a trap
 
 1. Lead students through the following tutorials:
 
-   - [Coding a Function](../../../tutorials/fundamentals/coding-2/coding-a-function.md)
-   - [Intro to If Statements](../../../tutorials/fundamentals/coding-3/intro-to-if-statements.md)
-   - [Traps with If Statements](../../../tutorials/fundamentals/coding-3/traps-with-if-statements.md)
+   - [Code a function](../../../tutorials/fundamentals/coding-2/code-a-function.md)
+   - [Intro to if statements](../../../tutorials/fundamentals/coding-3/intro-to-if-statements.md)
+   - [Traps with if statements](../../../tutorials/fundamentals/coding-3/traps-with-if-statements.md)
 
 2. When working with if statements, check that students indent code to look like code samples. This helps make the code more readable, which becomes important as scripts grow larger.
 
@@ -106,7 +106,7 @@ prev: /education/lesson-plans/roblox-developer/roblox-developer-1
 
 ### Appendix
 
-### Troubleshooting and Classroom Tips
+### Troubleshooting and classroom tips
 
 - While coding, remind students to double-check their capitalization or ask a peer to check their work. Even one incorrect letter can cause an error in longer words like `FindFirstChildWhichIsA`.
 - Try the following below to help students develop troubleshooting skills.

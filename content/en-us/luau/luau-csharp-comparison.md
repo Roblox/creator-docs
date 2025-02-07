@@ -1,15 +1,15 @@
 ---
-title: Luau and C# Comparison
+title: Luau and C# comparison
 description: Explains the similarities and differences between the C# and Luau programming languages.
 ---
 
 Roblox uses the Luau programming language. The following code samples and tables indicate some of the differences between syntaxes for C# and Luau.
 
-## Line Endings
+## Line endings
 
 You don't need semicolons in Luau, but they don't break the syntax.
 
-## Reserved Keywords
+## Reserved keywords
 
 The following table has Luau's reserved keywords mapped to their C# equivalent. Note it doesn't show all C# keywords.
 
@@ -158,7 +158,7 @@ string endString = s1 + s2;
 
 To learn more about tables in Luau, see [Tables](./tables.md).
 
-### Dictionary Tables
+### Dictionary tables
 
 You can use tables in Luau as dictionaries just like in C#.
 
@@ -189,7 +189,7 @@ dictionary["val3"] = "a dictionary";  // Overwrites 'val3' or sets new key-value
 dictionary.Add("val3", "a dictionary");  // Creates a new key-value pair
 ```
 
-### Numerically-Indexed Tables
+### Numerically-indexed tables
 
 You can use tables in Luau as arrays just like in C#. Indices start at `1` in Luau and `0` in C#.
 
@@ -231,7 +231,7 @@ npcAttributes.Remove(2);
 
 ## Operators
 
-### Conditional Operators
+### Conditional operators
 
 <table>
     <thead>
@@ -285,7 +285,7 @@ npcAttributes.Remove(2);
     </tbody>
 </table>
 
-### Arithmetic Operators
+### Arithmetic operators
 
 <table>
     <thead>
@@ -389,7 +389,7 @@ Console.WriteLine("3: " + outerVar);		// prints "3: "Inner scope modified text"
 // Attempting to print 'innerVar' here would fail
 ```
 
-## Conditional Statements
+## Conditional statements
 
 ```lua title='Conditional Statements in Luau'
 -- One condition
@@ -426,7 +426,7 @@ else {
 }
 ```
 
-### Conditional Operator
+### Conditional operator
 
 ```lua title='Conditional Operator in Luau'
 local max = if x > y then x else y
@@ -440,7 +440,7 @@ int max = (x > y) ? x : y;
 
 To learn more about loops in Luau, see [Control Structures](./control-structures.md).
 
-### While and Repeat Loops
+### While and repeat loops
 
 ```lua title='While and Repeat Loops in Luau'
 while boolExpression do
@@ -462,7 +462,7 @@ do {
 } while (boolExpression)
 ```
 
-### For Loops
+### For loops
 
 ```lua title='Generic For Loops in Luau'
 -- Forward loop
@@ -524,7 +524,7 @@ Luau also supports [generalized iteration](./control-structures.md#generalized-i
 
 To learn more about functions in Luau, see [Functions](./functions.md).
 
-### Generic Functions
+### Generic functions
 
 ```lua title='Generic Functions in Luau'
 -- Generic function
@@ -540,7 +540,7 @@ int increment(int number) {
 }
 ```
 
-### Variable Argument Number
+### Variable argument number
 
 ```lua title='Variable Argument Number in Luau'
 -- Variable argument number
@@ -558,7 +558,7 @@ void variableArguments(params string[] inventoryItems) {
 }
 ```
 
-### Named Arguments
+### Named arguments
 
 ```lua title='Named Arguments in Luau'
 -- Named arguments
@@ -578,7 +578,7 @@ string namedArguments(string name, string dob) {
 namedArguments(name: "Bob", dob: "4/1/2000");
 ```
 
-## Try-Catch Structures
+## Try-catch structures
 
 ```lua title='Try/Catch Structures in Luau'
 local function fireWeapon()

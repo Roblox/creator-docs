@@ -186,15 +186,4 @@ events:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: Selection.SelectionChangedThisFrame
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
 callbacks: []

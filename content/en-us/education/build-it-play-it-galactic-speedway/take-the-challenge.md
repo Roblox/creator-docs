@@ -1,5 +1,5 @@
 ---
-title: Take the Challenge
+title: Take the challenge
 prev: /education/build-it-play-it-galactic-speedway/save-and-publish
 next: /education/build-it-play-it-galactic-speedway/adding-wings
 description: Take the first challenge of Roblox Build It Play It Galactic Speedway and earn the Supernova Pauldrons avatar item and Getting off the Ground badge.

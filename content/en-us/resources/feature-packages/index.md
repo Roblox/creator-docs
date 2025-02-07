@@ -1,5 +1,5 @@
 ---
-title: Feature Packages
+title: Feature packages
 description: Feature Packages let you drag and drop fully functional, customizable features directly into your experiences.
 ---
 
@@ -43,7 +43,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <Step style={{marginTop: -36}}>
 <StepLabel optional="Register your own in-experience currency for players to purchase items.">
 
-<h5 style={{marginTop: 36}}>Define Currencies</h5>
+<h5 style={{marginTop: 36}}>Define currencies</h5>
 </StepLabel>
 
 </Step>
@@ -52,12 +52,12 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <StepLabel
  optional="Select the items you want to bundle at a discount.">
 
-<h5 style={{marginTop: 36}}>Choose Items</h5>
+<h5 style={{marginTop: 36}}>Choose items</h5>
 </StepLabel>
 </Step>
 <Step style={{marginTop: -36}}>
 <StepLabel optional="Create bundle prompts that anticipate player needs at key points of your experience." >
-<h5 style={{marginTop: 36}}>Customize Prompts</h5>
+<h5 style={{marginTop: 36}}>Customize prompts</h5>
 </StepLabel>
 </Step>
 </Stepper>
@@ -72,7 +72,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
   <Button
     variant="contained"
     size="large">
-  Start Creating
+  Start creating
   </Button>
 </a>
 </CardContent>
@@ -114,7 +114,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <Step style={{marginTop: -36}}>
 <StepLabel optional="Determine what players need to do to complete a mission.">
 
-<h5 style={{marginTop: 36}}>Define Tasks</h5>
+<h5 style={{marginTop: 36}}>Define tasks</h5>
 </StepLabel>
 
 </Step>
@@ -123,12 +123,12 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
 <StepLabel
  optional="Add logic that updates task progress as players work on set objectives.">
 
-<h5 style={{marginTop: 36}}>Track Progress</h5>
+<h5 style={{marginTop: 36}}>Track progress</h5>
 </StepLabel>
 </Step>
 <Step style={{marginTop: -36}}>
 <StepLabel optional="Create unique UI that matches the aesthetics of your experiences." >
-<h5 style={{marginTop: 36}}>Customize Menus</h5>
+<h5 style={{marginTop: 36}}>Customize menus</h5>
 </StepLabel>
 </Step>
 </Stepper>
@@ -143,7 +143,7 @@ style={{position: "relative", paddingBottom: "56.25%", height: 0}}>
   <Button
     variant="contained"
     size="large">
-  Start Creating
+  Start creating
   </Button>
 </a>
 </CardContent>

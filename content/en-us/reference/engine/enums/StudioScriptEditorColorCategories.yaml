@@ -166,73 +166,78 @@ items:
     summary: ''
     tags: []
     deprecation_message: ''
-  - name: MenuPrimaryText
-    value: 32
+  - name: Type
     summary: ''
+    value: 32
     tags: []
     deprecation_message: ''
-  - name: MenuSecondaryText
+  - name: MenuPrimaryText
     value: 33
     summary: ''
     tags: []
     deprecation_message: ''
-  - name: MenuSelectedText
+  - name: MenuSecondaryText
     value: 34
     summary: ''
     tags: []
     deprecation_message: ''
-  - name: MenuBackground
+  - name: MenuSelectedText
     value: 35
     summary: ''
     tags: []
     deprecation_message: ''
-  - name: MenuSelectedBackground
+  - name: MenuBackground
     value: 36
     summary: ''
     tags: []
     deprecation_message: ''
-  - name: MenuScrollbarBackground
+  - name: MenuSelectedBackground
     value: 37
     summary: ''
     tags: []
     deprecation_message: ''
-  - name: MenuScrollbarHandle
+  - name: MenuScrollbarBackground
     value: 38
     summary: ''
     tags: []
     deprecation_message: ''
-  - name: MenuBorder
+  - name: MenuScrollbarHandle
     value: 39
     summary: ''
     tags: []
     deprecation_message: ''
-  - name: DocViewCodeBackground
+  - name: MenuBorder
     value: 40
     summary: ''
     tags: []
     deprecation_message: ''
-  - name: AICOOverlayText
+  - name: DocViewCodeBackground
     value: 41
     summary: ''
     tags: []
     deprecation_message: ''
-  - name: AICOOverlayButtonBackground
+  - name: AICOOverlayText
     value: 42
     summary: ''
     tags: []
     deprecation_message: ''
-  - name: AICOOverlayButtonBackgroundHover
+  - name: AICOOverlayButtonBackground
     value: 43
     summary: ''
     tags: []
     deprecation_message: ''
-  - name: AICOOverlayButtonBackgroundPressed
+  - name: AICOOverlayButtonBackgroundHover
     value: 44
     summary: ''
     tags: []
     deprecation_message: ''
-  - name: IndentationRuler
+  - name: AICOOverlayButtonBackgroundPressed
     value: 45
+    summary: ''
+    tags: []
+    deprecation_message: ''
+  - name: IndentationRuler
+    value: 46
     summary: ''
     tags: []
     deprecation_message: ''

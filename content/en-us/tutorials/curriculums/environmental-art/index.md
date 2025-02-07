@@ -1,5 +1,5 @@
 ---
-title: Environmental Art Curriculum
+title: Environmental art curriculum
 description: //
 next: /tutorials/curriculums/environmental-art/greybox-your-environment
 hideInPageNavigation: true
@@ -44,7 +44,7 @@ learning how to build an environment, try the [core curriculum](../core/index.md
 
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 1 - Greybox Your Environment</Typography>
+      <Typography variant="h4">Chapter 1 - Greybox your environment</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -63,11 +63,9 @@ experience gameplay before investing time into polishing assets.
    </AccordionDetails>
    </BaseAccordion>
 
-   <br />
-
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 2 - Develop Polished Assets</Typography>
+      <Typography variant="h4">Chapter 2 - Develop polished assets</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -85,11 +83,9 @@ experience gameplay before investing time into polishing assets.
    </AccordionDetails>
    </BaseAccordion>
 
-   <br />
-
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 3 - Assemble an Asset Library</Typography>
+      <Typography variant="h4">Chapter 3 - Assemble an asset library</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -107,11 +103,9 @@ experience gameplay before investing time into polishing assets.
    </AccordionDetails>
    </BaseAccordion>
 
-   <br />
-
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 4 - Construct Your World</Typography>
+      <Typography variant="h4">Chapter 4 - Construct your world</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -129,11 +123,9 @@ experience gameplay before investing time into polishing assets.
    </AccordionDetails>
    </BaseAccordion>
 
-   <br />
-
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 5 - Optimize Your Experience</Typography>
+      <Typography variant="h4">Chapter 5 - Optimize your experience</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -150,5 +142,3 @@ experience gameplay before investing time into polishing assets.
 
    </AccordionDetails>
    </BaseAccordion>
-
-   <br />

@@ -1,15 +1,15 @@
 ---
-title: In-Experience Tools
+title: In-experience tools
 description: Create in-experience tools for your users.
 ---
 
 In-experience `Class.Tool|Tools` are interactive tools that users can equip in sessions, such as swords, rocket launchers, and magic wands. You can create customized in-experience tools, put them in your experience hierarchy, and write scripts to implement them for your users.
 
-## Creating an In-Experience Tool
+## Create an in-Experience Tool
 
-For the first step of creating any in-experience tool, you need to [create a tool object](#creating-the-tool-object) to contain all elements that make up the tool. You can then add other instances to the tool object including [parts and meshes](#adding-parts-or-meshes), sound effects, and scripts which provide functionality. You can also set up a [tool handle](#setting-the-tool-handle), [adjust the tool grip](#adjusting-the-tool-grip-orientation), and [customize your tool icon](#customizing-the-tool-icon) to improve the user experience.
+For the first step of creating any in-experience tool, you need to [create a tool object](#create-the-tool-object) to contain all elements that make up the tool. You can then add other instances to the tool object including [parts and meshes](#add-parts-or-meshes), sound effects, and scripts which provide functionality. You can also set up a [tool handle](#set-the-tool-handle), [adjust the tool grip](#adjust-the-tool-grip-orientation), and [customize your tool icon](#customize-the-tool-icon) to improve the user experience.
 
-### Creating the Tool Object
+### Create the tool object
 
 You can create a new tool object with the following steps:
 
@@ -19,17 +19,17 @@ You can create a new tool object with the following steps:
 
    <img src="../assets/players/in-experience-tools/Create-New-Tool.png" width="45%" />
 
-### Adding Parts or Meshes
+### Add parts or meshes
 
-After creating the tool object, you need to add `Class.Part|Parts` or `Class.MeshPart|MeshParts` to the tool model or [create the tool as an inventory item](#creating-tools-as-inventory-items) without parts and meshes. Like other models, in-experience tools can consist of multiple `Class.Part|Parts`, so you need to connect all parts of the tool together using the `Class.Weld` constraints.
+After creating the tool object, you need to add `Class.Part|Parts` or `Class.MeshPart|MeshParts` to the tool model or [create the tool as an inventory item](#create-tools-as-inventory-items) without parts and meshes. Like other models, in-experience tools can consist of multiple `Class.Part|Parts`, so you need to connect all parts of the tool together using the `Class.Weld` constraints.
 
 <Alert severity="warning">
 When constructing tools, make sure tool parts are not anchored, otherwise users might get stuck in place when equipping it.
 </Alert>
 
-If you want to create a tool without adding parts or meshes, you can [create it as an inventory item](#creating-tools-as-inventory-items).
+If you want to create a tool without adding parts or meshes, you can [create it as an inventory item](#create-tools-as-inventory-items).
 
-### Setting the Tool Handle
+### Set the tool handle
 
 To enable users to carry tools around, you need to set a `Class.Part` and name it `Handle` for attaching to the user's hand. The following example shows a magic wand with three parts: a glowing tip, the main body, and a red handle. When a user equips the wand, they hold it at the `Class.Part` named `Handle`.
 
@@ -41,7 +41,7 @@ Make sure to have only one `Class.Part` named `Handle`. If you name multiple `Cl
 The `Handle` must be a **direct child** of the tool object. Do not nest it inside a model or folder within the object.
 </Alert>
 
-### Adjusting the Tool Grip Orientation
+### Adjust the tool grip orientation
 
 If your tool's grip orientation is incorrect, such as dragging on the ground or facing backwards, you can fix it by adjusting **Grip** properties under the **Appearance** category in the **Properties** window.
 
@@ -77,7 +77,7 @@ You can also enable user characters to offset tools from their hand with the **G
   </figure>
 </GridContainer>
 
-### Customizing the Tool Icon
+### Customize the tool icon
 
 Tools that a user owns are stored in their `Class.Backpack`. Users can view the icon of each tool in their backpacks on an **action bar**:
 
@@ -88,43 +88,43 @@ In the tool's **Properties** window, use the following properties to customize t
 - **TextureID** — The tool icon. Set the image ID for this property the same way as decals and image buttons.
 - **ToolTip** — The on-hover tooltip name.
 
-### Enabling and Disabling Users to Drop Tools
+### Enable and disable users to drop tools
 
 By default, a user can drop a tool by pressing the **Backspace** key on Windows or **delete** on Mac. You can disable this option by setting the **CanBeDropped** property of the tool to `false`. If **CanBeDropped** is `false`, pressing **Backspace** or **delete** returns the tool to the user's backpack.
 
-### Creating Tools As Inventory Items
+### Create tools as inventory items
 
 You can also make an in-experience tool without parts or meshes as an inventory item that waits for user input, such as a magic spell that user characters can click others or touch the screen to cast it. Inventory item tools don't require handles, so you need to uncheck the **RequiresHandle** property in the tool's **Properties** window.
 
 <img src="../assets/players/in-experience-tools/Tool-RequiresHandle.png" width="45%" />
 
-## Adding Tools to Your Experience
+## Add tools to your experience
 
 Once you finish setting up your in-experience tool, you need to place it in the proper area of your experience's object hierarchy. Where you place the tool within the experience's object hierarchy depends on it's intended use.
 
-### Default Starting Tool
+### Default starting tool
 
 If you want all users to start out with a tool in their inventory, put it inside the **StarterPack** folder. When any user spawns, the system copies the tool to their backpack.
 
 <img src="../assets/players/in-experience-tools/Tool-StarterPack.png" width="45%" />
 
-### Collectible Tool
+### Collectible tool
 
 If you want to allow users to collect tools as they move, you can place the tools in the **Workspace** in the **Explorer** hierarchy. For example, you might want to place a super rocket launcher in a hard-to-reach area of your experience world.
 
 <img src="../assets/players/in-experience-tools/Tool-Workspace.png" width="45%" />
 
-### Earned and Purchased Tool
+### Earned and purchased tool
 
 If you want to set a tool as awards when a user does something special or offer it for sale in an in-experience store, put the tool inside **ServerStorage** in the **Explorer** hierarchy, which can clone the tool to the user's backpack at the proper time.
 
 <img src="../assets/players/in-experience-tools/Tool-ServerStorage.png" width="45%" />
 
-## Adding Tools Effects
+## Add tools effects
 
 After adding your tools to your experience, you can add scripts to enable users to use tools to do special effects.
 
-### Tool-Specific Events
+### Tool-specific events
 
 You can use the following four tool-specific conditions indicating the state of the tool and the user's input with it in your tool script:
 
@@ -160,7 +160,7 @@ tool.Deactivated:Connect(onDeactivate)
 
 This code sample assumes that the script is a first-level child inside the tool object. If the script is elsewhere, adjust the path on line 1 (the value of `tool`) to point to the core tool object.
 
-### Adding a Basic Script
+### Add a basic script
 
 The following example shows steps for adding a `Class.Script` on the server that enables users to equip a magic wand that can switch day and night by clicking on the screen:
 
@@ -189,7 +189,7 @@ The following example shows steps for adding a `Class.Script` on the server that
      <img src="../assets/players/in-experience-tools/Tool-Time-Wand-Night.jpeg" />
    </GridContainer>
 
-### Different Types of Scripts for Tools Implementation
+### Different types of scripts for tools implementation
 
 Some tools only need a `Class.Script` on the server to implement, such as the previous example, but most tools require both a `Class.Script` on the server and a `Class.LocalScript` on the client, where each takes care of certain aspects of the tool's behavior.
 
@@ -204,8 +204,8 @@ Here are some example tools and their behaviors managed by either a local script
   <thead>
     <tr>
       <td>Tool</td>
-      <td>Local Script</td>
-      <td>Server Script</td>
+      <td>Local script</td>
+      <td>Server script</td>
     </tr>
   </thead>
   <tbody>
@@ -229,7 +229,7 @@ Here are some example tools and their behaviors managed by either a local script
 
 For more information on the different script types, see [Scripts](../scripting/index.md).
 
-#### Troubleshooting Tips
+#### Troubleshooting tips
 
 A tool might work fine in Studio but not in a live Roblox experience. If this occurs, use the following tips for troubleshooting:
 

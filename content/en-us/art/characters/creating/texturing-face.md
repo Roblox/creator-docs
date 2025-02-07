@@ -1,5 +1,5 @@
 ---
-title: Texturing Face
+title: Texturing face
 description: Use Blender to apply a custom surface appearance on your character's face.
 next: /art/characters/creating/texturing-pbr
 prev: /art/characters/creating/texturing-eyes

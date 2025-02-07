@@ -319,6 +319,40 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
+  - name: Studio.AutoResumeSyncOnPlaceOpen
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Directories
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: Studio.AutocompleteAcceptanceBehavior
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CompletionAcceptanceBehavior
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Script Editor
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Studio.Automatically trigger AI Code Completion
     summary: ''
     description: ''

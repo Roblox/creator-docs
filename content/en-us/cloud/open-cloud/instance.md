@@ -1,11 +1,11 @@
 ---
-title: Engine Instances
+title: Engine instances
 description: Explains how to use Open Cloud APIs to access the Roblox Engine Instances.
 ---
 
 The Engine Open Cloud APIs let you manage `Class.Instance` objects in your Roblox experiences from the web.
 
-## Beta Restrictions
+## Beta restrictions
 
 These APIs are currently in beta and have the following restrictions:
 
@@ -27,7 +27,7 @@ These APIs are currently in beta and have the following restrictions:
 
 - Request bodies, such as to [Update Instance](/cloud/reference/Instance#Update-Instance), are limited to 200 KB.
 
-## Listing Children
+## List children
 
 List all children of a specific instance by specifying an instance ID and
 calling the [List Instance Children](/cloud/reference/Instance#List-Instance-Children)
@@ -84,7 +84,7 @@ curl --include --location --request GET "https://apis.roblox.com/cloud/v2/univer
 </Tabs>
 
 Rather than just listing the children, the response includes an `Operation`
-object with a different endpoint. [Poll this endpoint](#polling-for-results) to
+object with a different endpoint. [Poll this endpoint](#poll-for-results) to
 asynchronously retrieve the actual list of children. A more complete code sample
 looks like this:
 
@@ -181,7 +181,7 @@ else:
 
 Scripts contain some additional information in the `Details` object, such as the script type, source, and whether they're enabled.
 
-## Getting an Instance
+## Get an instance
 
 This method returns a single [Instance](/cloud/reference/Instance).
 
@@ -229,12 +229,12 @@ curl --include --location --request GET "https://apis.roblox.com/cloud/v2/univer
 
 Just like the List Instance Children method, the response includes an
 `Operation` object that you poll to retrieve the actual instance. See
-[Polling for Results](#polling-for-results) for more information.
+[Poll for results](#poll-for-results) for more information.
 
-## Updating Instances
+## Update instances
 
 After you obtain the appropriate instance ID, you can update it.
-[Poll for results](#polling-for-results) after making the initial update
+[Poll for results](#poll-for-results) after making the initial update
 request.
 
 <Tabs>
@@ -301,7 +301,7 @@ curl --include --location --request PATCH "https://apis.roblox.com/cloud/v2/univ
 If you receive a `TypeError` when attempting to update a script, verify that the script isn't open in Roblox Studio. If it is, close its Script Editor tab. You can also check the Studio output for additional errors, such as `Engine_OC_API: Processing Error - Live scripting session is active`.
 </Alert>
 
-## Polling for Results
+## Poll for results
 
 All current [Instance](/cloud/reference/Instance) methods return an
 `Operation` object instead of the resource you requested. This object lets you
@@ -366,7 +366,7 @@ curl --include --location --request GET "https://apis.roblox.com/cloud/v2/univer
   </TabItem>
 </Tabs>
 
-## Potion Shop Demo
+## Potion Shop demo
 
 The Potion Shop Google Sheets demo shows you to update an experience's script
 from the web. The demo consists of the following:
@@ -379,7 +379,7 @@ from the web. The demo consists of the following:
   updates the **ReplicatedStorage > ItemList** script in the Potion Shop
   experience.
 
-### Setting up the Demo
+### Set up the demo
 
 1. Go to the [Potion Shop Demo](https://www.roblox.com/games/14215142052/Potion-Shop-Demo)
    Discover page. Click on the overflow menu, and then **Edit in Studio**.
@@ -391,7 +391,7 @@ from the web. The demo consists of the following:
    the name, cost, and colors of the potions. You'll change them later using
    Open Cloud!
 
-### Setting up the Sheet
+### Set up the sheet
 
 1. [Download](../../assets/open-cloud/open-cloud-potion-shop-demo.ods) the
    Potion Shop spreadsheet file.
@@ -408,20 +408,21 @@ from the web. The demo consists of the following:
    **Update Script** button, click the overflow menu, and select **Assign script**.
 1. In the **Assign script** window, enter `UpdateScript` and click **OK**.
 
-### Creating an API Key
+### Create an API key
 
-   1. Go to the [Creator Hub Open Cloud API Keys](https://create.roblox.com/dashboard/credentials?activeTab=ApiKeysTab) page and click **Create API Key**.
-   1. Fill out the form with the following information.
-      - **Name**: PotionShop
-      - **API System**: Add the **universe-place-instances** API system. Add your Potion Shop experience to the system. For **Experience Operations**, add read and write access.
-      - **Accepted IP Addresses**: Add 0.0.0.0/0 as an IP Address
-      - **Expiration**: No Expiration
-      - Click **Save & Generate Key** and then **Copy Key to Clipboard**.
+1.  Go to the [Creator Hub Open Cloud API Keys](https://create.roblox.com/dashboard/credentials?activeTab=ApiKeysTab) page and click **Create API Key**.
+1.  Fill out the form with the following information.
 
-   1. Paste the API key to the API Key cell (D2) on the Intro tab of your Google
-      Sheet.
+    - **Name**: PotionShop
+    - **API System**: Add the **universe-place-instances** API system. Add your Potion Shop experience to the system. For **Experience Operations**, add read and write access.
+    - **Accepted IP Addresses**: Add 0.0.0.0/0 as an IP Address
+    - **Expiration**: No Expiration
+    - Click **Save & Generate Key** and then **Copy Key to Clipboard**.
 
-### Obtaining the Universe and Place ID
+1.  Paste the API key to the API Key cell (D2) on the Intro tab of your Google
+    Sheet.
+
+### Obtain the universe and place ID
 
 1. Go to the [Creator Hub Creations](https://create.roblox.com/dashboard/creations) page, hover over
    the Potion Shop's experience tile, and click the overflow menu.
@@ -430,7 +431,7 @@ from the web. The demo consists of the following:
 1. Select **Copy Start Place ID** and paste it into the **Place ID** cell
    (F2) on the Intro tab of your Google Sheet.
 
-### Updating the Script Values
+### Update the script values
 
 1. In the **Update Potion Shop** tab of the sheet, modify any values you'd
    like and click the **Update Script** button.

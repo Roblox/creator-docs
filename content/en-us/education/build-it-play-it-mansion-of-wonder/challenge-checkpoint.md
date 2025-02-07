@@ -1,5 +1,5 @@
 ---
-title: Challenge Checkpoint
+title: Challenge checkpoint
 prev: /education/build-it-play-it-mansion-of-wonder/save-by-publishing
 next: /education/build-it-play-it-mansion-of-wonder/using-textures
 description: Earn the first rewards in Roblox's Build It Play It Mansion of Wonders -- the Artist Backpack avatar item and Conjurer of Color badge.

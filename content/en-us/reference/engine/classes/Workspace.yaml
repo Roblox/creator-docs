@@ -17,31 +17,30 @@ description: |
   and `Class.BillboardGui|BillboardGuis`, will render.
 
   Understanding this behavior is important, as it means objects can be removed
-  from **Workspace** when they are not needed. For example, map
-  `Class.Model|Models` can be removed from the `Class.Workspace` when a
-  different map is being played on. Objects that are not immediately needed in
-  the 3D world are generally stored in `Class.ReplicatedStorage` or
-  `Class.ServerStorage`.
+  from `Class.Workspace` when they are not needed. For example, map
+  `Class.Model|Models` can be removed when a different map is being played on.
+  Objects that are not immediately needed in the 3D world are generally stored
+  in `Class.ReplicatedStorage` or `Class.ServerStorage`.
 
   In its role as the holder of active 3D objects, `Class.Workspace` includes a
   number of useful functions related to parts, their positions, and joints
   between them.
 
-  #### Accessing the Workspace
+  ##### Accessing the Workspace
 
   `Class.Workspace` can be accessed several ways, all of which are valid.
 
+  - `game:GetService("Workspace")` (recommended)
   - `workspace`
   - `game.Workspace`
-  - `game:GetService("Workspace")`
 
-  #### Notes
+  ##### Notes
 
   - Objects that require adornment, such as
     `Class.ParticleEmitter|ParticleEmitters` and
-    `Class.BillboardGui|BillboardGuis`, will be at the 0,&nbsp;0,&nbsp;0
-    position when parented to `Class.Workspace` without an adornee otherwise
-    being set.
+    `Class.BillboardGui|BillboardGuis`, will be at the
+    <Typography noWrap>`(0, 0, 0)`</Typography> position when parented to
+    `Class.Workspace` without an adornee otherwise being set.
   - The `Class.Model:MakeJoints()` and `Class.Model:BreakJoints()` methods
     inherited from the `Class.Model` class are overridden by
     `Class.Workspace:MakeJoints()` and `Class.Workspace:BreakJoints()` which can
@@ -112,7 +111,7 @@ properties:
       can only be sold in the game they are associated with, regardless of what
       AllowThirdPartySales is set to. This property affects
       [Game Passes](../../../production/monetization/game-passes.md) and
-      [clothing](../../../art/accessories/classic-clothing.md).
+      [clothing](../../../art/classic-clothing.md).
     code_samples:
     type: bool
     tags:
@@ -228,11 +227,13 @@ properties:
       DistributedGameTime and its alternatives.
 
       ```
-      print(workspace.DistributedGameTime)  --> Time the game started running
-      print(os.time())  --> Time since epoch (1 January 1970, 00:00:00) UTC
-      print(tick())  --> Time since epoch (1 January 1970, 00:00:00) system time
-      print(time())  --> Time the game started running
-      print(elapsedTime())  --> Time since Roblox started running
+      local Workspace = game:GetService("Workspace")
+
+      print(Workspace.DistributedGameTime) -- Time the game started running
+      print(os.time()) -- Time since epoch (1 January 1970, 00:00:00) UTC
+      print(tick()) -- Time since epoch (1 January 1970, 00:00:00) system time
+      print(time()) -- Time the game started running
+      print(elapsedTime()) -- Time since Roblox started running
       ```
     code_samples:
     type: double
@@ -271,7 +272,7 @@ properties:
       Determines the height at which falling `Class.BasePart|BaseParts` and
       their ancestor `Class.Model|Models` are removed from `Class.Workspace`.
     description: |
-      This property determines the height at which the Roblox engine
+      This property determines the height at which the Roblox Engine
       automatically removes falling `Class.BasePart|BaseParts` and their
       ancestor `Class.Model|Models` from `Class.Workspace` by parenting them to
       `nil`. This is to prevent parts that have fallen off the map from
@@ -1019,7 +1020,9 @@ methods:
       `Class.BasePart|BaseParts` as a parameter. This array is given as follows:
 
       ```lua
-      workspace:BreakJoints({part1, part2, part3})
+      local Workspace = game:GetService("Workspace")
+
+      Workspace:BreakJoints({part1, part2, part3})
       ```
 
       Note, this function cannot be used by scripts and will only function in
@@ -1055,7 +1058,9 @@ methods:
       forces.
 
       ```
-      print(workspace:GetNumAwakeParts()) -- prints the number of 'awake' parts
+      local Workspace = game:GetService("Workspace")
+
+      print(Workspace:GetNumAwakeParts())
       ```
 
       #### Sleeping vs Awake Parts
@@ -1116,13 +1121,15 @@ methods:
       create a lot of `Class.Part|Parts` very quickly.
 
       ```
+      local Workspace = game:GetService("Workspace")
+
       local i = 0
       while true do
       	i += 1
       	if i % 5 == 0 then
       		task.wait()
       	end
-      	local part = Instance.new("Part", workspace)
+      	local part = Instance.new("Part", Workspace)
       end
       ```
     code_samples:
@@ -1255,17 +1262,21 @@ methods:
       build tools. See the snippets below for an example.
 
       ```lua
-      -- finished moving a selection, make joints
+      local Workspace = game:GetService("Workspace")
+
+      -- Finished moving a selection; make joints
       local function finishedMovingParts(parts)
       	local joinMode = Plugin:GetJoinMode()
-      	workspace:JoinToOutsiders(parts, joinMode)
+      	Workspace:JoinToOutsiders(parts, joinMode)
       end
       ```
 
       ```lua
-      -- started moving a selection, break joints
+      local Workspace = game:GetService("Workspace")
+
+      -- Started moving a selection; break joints
       local function startMovingParts(parts)
-      	workspace:UnjoinFromOutsiders(parts)
+      	Workspace:UnjoinFromOutsiders(parts)
       end
       ```
     code_samples:
@@ -1325,7 +1336,9 @@ methods:
       parts as a parameter. This array is given as follows:
 
       ```
-      workspace:MakeJoints({part1, part2, part3})
+      local Workspace = game:GetService("Workspace")
+
+      Workspace:MakeJoints({part1, part2, part3})
       ```
 
       Joints are broken if enough force is applied to them due to an
@@ -1351,18 +1364,13 @@ methods:
     writeCapabilities: []
   - name: Workspace:PGSIsEnabled
     summary: |
-      Returns true if the game has the PGS Physics solver enabled.
+      Returns `true` if the game has the PGS Physics solver enabled.
     description: |
-      Returns true if the game has the PGS Physics solver enabled.
+      Returns `true` if the game has the PGS Physics solver enabled.
 
       As `Class.Workspace.PGSPhysicsSolverEnabled` cannot be accessed by
       scripts, the PGSIsEnabled function allows developers to tell which physics
       solver the game is using.
-
-      ```
-      print(workspace:PGSIsEnabled()) -- true = PGS solver enabled
-      print(workspace:PGSIsEnabled()) -- false = Legacy solver enabled
-      ```
     code_samples:
     parameters: []
     returns:
@@ -1391,21 +1399,25 @@ methods:
       This function is used by the Roblox Studio Move tool when the user starts
       moving a selection. In conjunction with `Class.Plugin:GetJoinMode()` and
       `Class.Workspace:JoinToOutsiders()` it can be used to retain join
-      functionality when developing custom studio build tools. See the snippets
+      functionality when developing custom Studio build tools. See the snippets
       below for an example.
 
       ```
-      -- finished moving a selection, make joints
+      local Workspace = game:GetService("Workspace")
+
+      -- Finished moving a selection; make joints
       local function finishedMovingParts(parts)
       	local joinMode = Plugin:GetJoinMode()
-      	workspace:JoinToOutsiders(parts, joinMode)
+      	Workspace:JoinToOutsiders(parts, joinMode)
       end
       ```
 
       ```
-      -- started moving a selection, break joints
+      local Workspace = game:GetService("Workspace")
+
+      -- Started moving a selection; break joints
       local function startMovingParts(parts)
-      	workspace:UnjoinFromOutsiders(parts)
+      	Workspace:UnjoinFromOutsiders(parts)
       end
       ```
     code_samples:

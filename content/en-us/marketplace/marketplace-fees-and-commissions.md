@@ -1,18 +1,18 @@
 ---
-title: Marketplace Fees and Commissions
+title: Marketplace fees and commissions
 description: Explains upload fees and commission from selling accessories and clothes on the Marketplace.
 comments: Updates to this page require careful internal review. We generally don't accept pull requests on it.
 ---
 
 You can create and sell bodies, heads, accessories, and clothes on the [Marketplace](https://www.roblox.com/catalog). After you pay any applicable upload fees, you can upload your new asset for marketplace approval. Once the moderation team reviews and approves your asset, you can set your item for sell on the Marketplace.
 
-You receive a commission every time users purchase your item. If users purchase your item within an experience using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md) or the [Avatar Editor Service](../players/avatar-editor.md), the experience owner also receives a commission. For information on viewing your sales data, see [Sales Data analytics](../production/analytics/analytics-dashboard.md#sales-data).
+You receive a commission every time users purchase your item. If users purchase your item within an experience using the [Avatar Inspect Menu](../players/avatar-inspect-menu.md), [Avatar Editor Service](../players/avatar-editor.md), or `Class.MarketplaceService`, the experience owner also receives a commission. For information on viewing your sales data, see [Sales Data analytics](../production/analytics/analytics-dashboard.md#sales-data).
 
-## Upload Fees
+## Upload fees
 
 When uploading, accessories, clothing, bodies, and heads require an upload fee of **750 Robux** per submission. In general, fees are not refunded if an item is rejected through moderation. If your asset clears the uploading process, your asset is ready to publish to the Marketplace.
 
-## Publishing Advance
+## Publishing advance
 
 A publishing advance is a refundable upfront fee that you pay at the time of publishing an item. The publishing advance does not apply for **free Limited items** which require a [per-unit fee](#per-unit-fee). Items taken off-sale and put back on-sale do not require another publishing advance.
 
@@ -21,26 +21,26 @@ This publishing advance is dependent on the type of Marketplace item being sold:
 <table>
 <thead>
   <tr>
-    <th>Asset Type</th>
-    <th>Non-Limited Publishing Advance</th>
-    <th>Paid Limited Publishing Advance</th>
+    <th>Asset type</th>
+    <th>Non-limited publishing advance</th>
+    <th>Paid limited publishing advance</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>Hat</td>
     <td>1500</td>
-    <td>20000</td>
+    <td>13000</td>
   </tr>
   <tr>
     <td>Face</td>
     <td>1500</td>
-    <td>20000</td>
+    <td>13000</td>
   </tr>
   <tr>
     <td>Hair</td>
-    <td>1700</td>
-    <td>20000</td>
+    <td>1000</td>
+    <td>6000</td>
   </tr>
   <tr>
     <td>Neck</td>
@@ -69,54 +69,54 @@ This publishing advance is dependent on the type of Marketplace item being sold:
   </tr>
   <tr>
     <td>Jacket</td>
-    <td>1000</td>
-    <td>13000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>T-Shirt</td>
-    <td>1000</td>
-    <td>13000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>Shirt</td>
-    <td>1000</td>
-    <td>13000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>Sweater</td>
-    <td>1000</td>
-    <td>13000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>Pants</td>
-    <td>1500</td>
-    <td>16000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>Dress/Skirt</td>
-    <td>1500</td>
-    <td>16000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>Shorts</td>
-    <td>1500</td>
-    <td>16000</td>
+    <td>600</td>
+    <td>5000</td>
   </tr>
   <tr>
     <td>Body</td>
-    <td>4000</td>
-    <td>Not available as Limiteds.</td>
+    <td>2500</td>
+    <td>20000</td>
   </tr>
   <tr>
     <td>Head</td>
     <td>1500</td>
-    <td>Not available as Limiteds.</td>
+    <td>10000</td>
   </tr>
 </tbody>
 </table>
 
 <BaseAccordion>
-<AccordionSummary>Publishing Advance Example Scenario</AccordionSummary>
+<AccordionSummary>Publishing advance example scenario</AccordionSummary>
 <AccordionDetails>
 For an example of how the publishing advance is recouped, the following table represents a hypothetical situation where the **publishing advance is 1000 Robux**, and the **item is sold in an experience at 400 Robux**:
 
@@ -219,8 +219,6 @@ For an example of how the publishing advance is recouped, the following table re
 </AccordionDetails>
 </BaseAccordion>
 
-<br /><br />
-
 Rebate credits are reimbursed once per day. See the following guidelines:
 
 - Once per day, Roblox processes rebates from your sales and adds them to your transaction report.
@@ -253,11 +251,11 @@ Limited items that are sold for free follow a different per-unit payout structur
 
 ## Limiteds
 
-When setting assets on sale, you can [configure your creation](../marketplace/publishing-to-marketplace.md#marketplace-settings) as a **Limited** item to set an available quantity for that asset.
+When setting assets on sale, you can [configure your creation](../marketplace/publish-to-marketplace.md#marketplace-settings) as a **Limited** item to set an available quantity for that asset.
 
 At this time, only Roblox-created Limiteds are tradeable, and bodies and heads are not eligible as Limiteds.
 
-### Per-unit Fee
+### Per-unit fee
 
 When publishing free Limiteds, you must provide a per-unit fee depending on the quantity being published and other factors like the type of asset being uploaded. This payment depends on a range of market-based factors and may change over time.
 
@@ -290,7 +288,7 @@ Similar to other commission and payment breakdowns, a single party can receive o
 Robux acquired from trading or selling items that you didn't create are not considered earned and are ineligible for the Developer Exchange program. For more information on earning Robux, see [Earned Robux & DevEx Rates](https://en.help.roblox.com/hc/en-us/articles/203314100-Developer-Exchange-DevEx-FAQs#h_01FTN4PJV8AS4JHD2YHS363TDE).
 </Alert>
 
-### Rate Limits
+### Rate limits
 
 To protect against automated purchases, Roblox sets purchase limits for Limiteds sold in-experience or in the Marketplace. For Limiteds, the following applies:
 
@@ -300,14 +298,14 @@ To protect against automated purchases, Roblox sets purchase limits for Limiteds
   - A maximum of 3 successful purchases per user per item.
 - For in-experience purchases, users must be in the experience for 60 seconds to successfully complete a purchase.
 
-## Price Ranges
+## Price ranges
 
 Depending on the 3D asset type, you must set the price of the item within the marketplace price range. If you are selling a [Limited](#limiteds) item, you can set your item price as **0**, or any value after the **Limiteds Price Floor**.
 
 [View Current Marketplace Ranges](https://create.roblox.com/dashboard/creations/pricing)
 
-## Classic Clothing
+## Classic clothing
 
-You can upload and sell [classic clothing](../art/accessories/classic-clothing.md) through the Roblox website. It costs **10 Robux** to upload these assets.
+You can upload and sell [classic clothing](../art/classic-clothing.md) through the Roblox website. It costs **10 Robux** to upload these assets.
 
 Classic t-shirts do not require a fee when uploading, but they do require a **10 Robux** fee when going on sale for the first time. If the seller takes the item off sale, it does not require an additional fee when they place it on sale again.

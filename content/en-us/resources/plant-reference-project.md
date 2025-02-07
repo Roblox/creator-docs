@@ -1,5 +1,5 @@
 ---
-title: Plant Reference Project
+title: Plant reference project
 description: A deep dive into building of the Plant experience, a game where players plant seeds and harvest plants.
 ---
 
@@ -15,12 +15,12 @@ an experience on Roblox. Where applicable, you'll find notes on tradeoffs,
 compromises, and the rationale of various implementation choices, so you can
 make the best decision for your own experiences.
 
-## Get the File
+## Get the file
 
 1. Navigate to the <a href="https://www.roblox.com/games/14353060924/Plant" target="_blank">Plant</a> experience page.
 1. Click the **&ctdot;** button and **Edit in Studio**.
 
-## Use Cases
+## Use cases
 
 [Plant][planturl] covers the following use cases:
 
@@ -42,14 +42,14 @@ Note that there are several use cases in this experience that are too small, too
 niche, or don't demonstrate a solution to an interesting design challenge; these
 are not covered.
 
-## Project Structure
+## Project structure
 
 The first decision when creating an experience is deciding how to structure the
 [project](../projects/), which mainly includes where to place specific instances
 in the [data model](../projects/data-model.md) and how to organize and structure
 entry points for both client and server code.
 
-### Data Model
+### Data model
 
 The following table describes which container services in the data model instances are placed in.
 
@@ -57,7 +57,7 @@ The following table describes which container services in the data model instanc
 <thead>
   <tr>
     <th>Service</th>
-    <th>Types of Instances</th>
+    <th>Types of instances</th>
   </tr>
 </thead>
 <tbody>
@@ -114,7 +114,7 @@ The following table describes which container services in the data model instanc
 </tbody>
 </table>
 
-### Entry Points
+### Entry points
 
 Most projects organize code inside reusable `Class.ModuleScript|ModuleScripts`
 that can be imported across the entire codebase.
@@ -133,12 +133,12 @@ entry provides greater control over the order in which systems are executed in.
 The following lists describe the tradeoffs of both approaches:
 
 <Tabs>
-<TabItem label="Single Entry Point">
+<TabItem label="Single entry point">
 - A single `Class.Script` and a single `Class.LocalScript` cover server and client code respectively.
 - Greater control over the order in which different systems are started because all code is initialized from a single script.
 - Can pass objects by reference between systems.
 </TabItem>
-<TabItem label="Multiple Entry Points">
+<TabItem label="Multiple entry points">
 - New `Class.Script` or `Class.LocalScript` objects are created as needed.
 - Greater ability to isolate code.
 - Can take advantage of `Class.Actor|Actors` and [Multi-Threading](../scripting/multithreading.md).
@@ -146,7 +146,7 @@ The following lists describe the tradeoffs of both approaches:
 </TabItem>
 </Tabs>
 
-### High Level Systems Architecture
+### High level systems architecture
 
 The top-level systems in the project are detailed below. Some of these systems
 are substantially more complex than others, and in many cases their
@@ -316,7 +316,7 @@ presents a more streamlined interface for what is a high touch part of the
 codebase.
 </Alert>
 
-## Client-Server Communication
+## Client-server communication
 
 Most Roblox experiences involve some element of communication between the client
 and server. This can include the client requesting the server perform a certain
@@ -330,9 +330,9 @@ uses the following methods, in order of preference:
 - Replication via the [player data system](#replication-via-player-data-system).
 - Replication via [attributes](#replication-via-attributes).
 - Replication via [tags](#replication-via-tags).
-- Messaging [directly](#messaging-directly-via-network-module) via the **Network** module.
+- Messaging [directly](#message-directly-via-network-module) via the **Network** module.
 
-### Replication via Player Data System
+### Replication via player data system
 
 The **player data system** allows data to be associated with the player which
 persists between save sessions. This system provides replication from client to
@@ -355,7 +355,7 @@ Of course, this is only useful for server-to-client replication and for values t
 - The amount of coins the player has
 - The state of the player's farm
 
-### Replication via Attributes
+### Replication via attributes
 
 In situations where the server needs to replicate a custom value to the client
 that's specific to a given `Class.Instance`, you can use
@@ -377,7 +377,7 @@ method, and subscribe to changes with the
 In the [Plant][planturl] project, this approach is used for, amongst other
 things, replicating the current status of plants to clients.
 
-### Replication via Tags
+### Replication via tags
 
 `Class.CollectionService` lets you apply a string tag to an `Class.Instance`.
 This is useful for categorizing instances and replicating that categorization to
@@ -385,7 +385,7 @@ the client.
 
 For example, the `CanPlant` tag is applied on the server to signify to the client that a given pot is able to receive a plant.
 
-### Messaging Directly via Network Module
+### Message directly via network module
 
 For situations where none of the previous options apply, you can use custom network calls through the **Network** module. This is the only option in the project that allows client-to-server communication and is therefore most useful for transmitting client requests and receiving a server response.
 
@@ -400,7 +400,7 @@ bespoke configuration which can increase the complexity of the project, although
 this has been avoided wherever possible, particularly for server-to-client
 communication.
 
-## Classes and Singletons
+## Classes and singletons
 
 Classes in the [Plant][planturl] project, like instances on Roblox, can be
 created and destroyed. Its class syntax is inspired by the idiomatic Lua
@@ -420,7 +420,7 @@ functionality. A good example is `BeamBetween` which creates a `Class.Beam`
 object between two given `Class.Attachment` objects and keeps those attachments
 orientated so that the beam is always facing upwards. These instances could be cloned from a prefabricated version in `Class.ReplicatedStorage` or passed into `new()` as an argument and stored inside the object under `self`.
 
-### Corresponding Instances
+### Corresponding instances
 
 As noted above, many classes in this project have a data model representation, an instance that corresponds with the class and is manipulated by it.
 
@@ -464,7 +464,7 @@ state is returned directly via the `Class.ModuleScript`. As singletons are not
 instantiated, the `self` syntax is not used and methods are instead called
 with a dot (`.`) rather than a colon (`:`).
 
-## Strict Type Inference
+## Strict type inference
 
 [Luau](../luau/) supports gradual typing which means you're free to add optional
 type definitions to some or all of your code. In this project, `strict` typechecking is used for every script. This is the least permissive option for
@@ -475,7 +475,7 @@ before runtime.
 Strong typing is undoubtedly powerful, but it's still an evolving feature in the Luau language and Studio. As a result, there are a number of limitations that, at the time of writing, required workarounds detailed in the following sections.
 </Alert>
 
-### Typed Class Syntax
+### Typed class syntax
 
 The established approach to creating classes in Lua is [well documented](https://www.lua.org/pil/16.1.html), however it is not well suited to strong Luau typing. In Luau, the simplest approach for getting the type of a class is the `Global.RobloxGlobals.typeof()` method:
 
@@ -520,7 +520,7 @@ end
 return MyClass
 ```
 
-### Casting Types After Logical Guards
+### Cast types after logical guards
 
 At the time of writing, the type of a value is not narrowed after a guard conditional statement. For example, following the guard below, the type of `optionalParameter` is not narrowed to `number`.
 
@@ -552,7 +552,7 @@ local function foo(optionalParameter: number?)
 end
 ```
 
-### Traversing DataModel Hierarchies
+### Traverse DataModel hierarchies
 
 In some cases, the codebase needs to traverse the data model hierarchy of a tree
 of objects that are created at runtime. This presents an interesting challenge
@@ -582,11 +582,11 @@ end
 As the type engine's understanding of the data model evolves, it's possible that
 patterns like this will no longer be necessary.
 
-## User Interface
+## User interface
 
 [Plant][planturl] includes a variety of complex and simple 2D user interfaces. These include non-interactive heads up display (HUD) items like the coin counter and complex interactive menus like the shop.
 
-### UI Approach
+### UI approach
 
 You can loosely compare Roblox [UI](../ui/) to the HTML DOM, because it's a
 hierarchy of objects that describe what the user should be seeing. Approaches to
@@ -597,7 +597,7 @@ creating and updating a Roblox UI are broadly divided into **imperative** and
 <thead>
   <tr>
     <th>Approach</th>
-    <th>Advantages and Drawbacks</th>
+    <th>Advantages and drawbacks</th>
   </tr>
 </thead>
 <tbody>
@@ -623,18 +623,18 @@ creating and updating a Roblox UI are broadly divided into **imperative** and
 
 [Plant][planturl] uses an **imperative** approach under the notion that showing the transformations directly gives a more effective overview of how UI is created and manipulated on Roblox. This would not be possible with a declarative approach. Some repeated UI structures and logic are also abstracted into reusable [components](#layer-and-components) to avoid a common pitfall in imperative UI design.
 
-### High-Level Architecture
+### High-level architecture
 
 <img src="../assets/resources/plant/Architecture-UI.png" alt="Plant project UI architecture diagram" />
 
-### Layer and Components
+### Layer and components
 
 In [Plant][planturl], all UI structures are either a `Layer` or a `Component`.
 
 - `Layer` is defined as a top level grouping singleton that wraps prefabricated UI structures in `Class.ReplicatedStorage`. A layer may contain a number of components, or it may encapsulate its own logic entirely. Examples of layers are the inventory menu or the number of coins indicator in the heads up display.
 - `Component` is a reusable UI element. When a new component object is instantiated, it clones a prefabricated template from `Class.ReplicatedStorage`. Components may in themselves contain other components. Examples of components are a generic button class or the concept of a list of items.
 
-### View Handling
+### View handling
 
 A common UI management problem is view handling. This project has a range of menus and HUD items, some of which listen to user input, and careful management of when they are visible or enabled is required.
 
@@ -648,7 +648,7 @@ This approach is intuitive because it allows menus to be navigated with history.
 
 UI layer singletons register themselves with the **UIHandler** and are provided with a signal that fires when its visibility should change.
 
-## Further Reading
+## Further reading
 
 From this thorough overview of the [Plant][planturl] project, you may want to
 explore the following guides which go further in depth on related concepts and

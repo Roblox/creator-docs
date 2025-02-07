@@ -253,7 +253,7 @@ Lua supports the usual binary operators along with exponentiation, modulus, and 
   </tr>
 </table>
 
-## Compound Assignment
+## Compound assignment
 
 You can use compound assignment operators to set a variable equal to the result of an operation where the first parameter is the variable's current value.
 

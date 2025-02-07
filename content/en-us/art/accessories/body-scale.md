@@ -1,5 +1,5 @@
 ---
-title: Body Scale and Proportions
+title: Body scale and proportions
 description: Avatars come in 3 different standard sizes, Classic, Rthro, Rthro Slender.
 ---
 
@@ -30,7 +30,7 @@ Slender body scale. <br /><br /> Roughly 5.25-6.25 studs tall, with narrower sho
 </figure>
 </GridContainer>
 
-See [Accessory Specifications](../../art/accessories/specifications.md#body-scale) and [Body Specifications](../../art/characters/specifications.md#body-scale) for specific range values and other geometry requirements.
+See the [accessory apecifications](../../art/accessories/specifications.md#body-scale) and the [body specifications](../../art/characters/specifications.md#body-scale) for specific range values and other geometry requirements.
 
 ## AvatarPartScaleType
 

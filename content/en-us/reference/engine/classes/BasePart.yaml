@@ -1551,7 +1551,9 @@ properties:
       follows:
 
       ```
-      local part = workspace.BluePart
+      local Workspace = game:GetService("Workspace")
+
+      local part = Workspace.BluePart
       local desiredPivotCFrameInWorldSpace = CFrame.new(0, 10, 0)
       part.PivotOffset = part.CFrame:ToObjectSpace(desiredPivotCFrameInWorldSpace)
       ```

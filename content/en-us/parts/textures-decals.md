@@ -1,5 +1,5 @@
 ---
-title: Textures and Decals
+title: Textures and decals
 description: Textures and decals are images you can place on object surfaces.
 ---
 
@@ -18,8 +18,8 @@ can:
   property to a value between the default of **0**
   (fully visible) and **1** (invisible).
 
-- For a texture, set its [scale](#scaling-textures) and
-  [offset](#offsetting-textures).
+- For a texture, set its [scale](#scale-textures) and
+  [offset](#offset-textures).
 
   <GridContainer numColumns="2">
     <figure>
@@ -43,9 +43,9 @@ can:
     </figure>
   </GridContainer>
 
-## Creating Textures or Decals
+## Create textures or decals
 
-To create a texture or decal, you have to add either a `Class.Texture` or `Class.Decal` object to a part or union. You can [import](../projects/assets/manager.md#importing-assets) images for textures and decals to Studio for use between experiences, and [distribute](../production/creator-store.md) them to the [Creator Store](../production/creator-store.md). Once you import the image, Studio assigns it a unique asset ID.
+To create a texture or decal, you have to add either a `Class.Texture` or `Class.Decal` object to a part or union. You can [import](../projects/assets/manager.md#import-assets) images for textures and decals to Studio for use between experiences, and [distribute](../production/creator-store.md) them to the [Creator Store](../production/creator-store.md). Once you import the image, Studio assigns it a unique asset ID.
 
 <Alert severity="info">
   Every texture or decal image that you create and import to Roblox must adhere to the <a href='https://en.help.roblox.com/hc/articles/203313410'>Community Rules</a> and <a href='https://en.help.roblox.com/hc/articles/115004647846'>Terms of Use</a>.
@@ -53,13 +53,13 @@ To create a texture or decal, you have to add either a `Class.Texture` or `Class
 
 To add a texture or decal to a part or union:
 
-1. In the [Explorer](../studio/explorer.md) window, add a `Class.Texture` or `Class.Decal` to the part or union:
+1. In the **Explorer** window, add a `Class.Texture` or `Class.Decal` to the part or union:
 
    1. Hover over the part or union and click the &CirclePlus; button. A contextual menu displays.
 
    2. From the menu, insert a **Texture** or **Decal**. An empty texture or decal object displays on the part or union with orange outlining.
 
-2. In the [Properties](../studio/properties.md) window, navigate to the **Face** property and [choose a face](#choosing-a-face) or keep the default face.
+2. In the **Properties** window, navigate to the **Face** property and [choose a face](#choose-a-face) or keep the default face.
 
 3. Select the **Texture** property and apply an image through any of the following methods:
 
@@ -82,7 +82,7 @@ To add a texture or decal to a part or union:
      </figure>
    </GridContainer>
 
-5. **(Optional)** Set the **Transparency** property to any value between the default value of 0 (fully visible) and 1 (invisible).
+5. **(Optional)** Set the **Transparency** property to any value between the default value of `0` (fully visible) and `1` (invisible).
 
    <GridContainer numColumns="2">
      <figure>
@@ -95,7 +95,7 @@ To add a texture or decal to a part or union:
      </figure>
    </GridContainer>
 
-### Choosing a Face
+### Choose a face
 
 A **face** is a surface on a part/union that displays a texture or decal: **Top**, **Bottom**, **Front**, **Back**, **Left**, or **Right**. The direction of each face depends on the part or union's orientation. In the following example images, the camera faces the block's **Front** face, so the block's **Left** face is on the right from the camera's perspective.
 
@@ -120,11 +120,11 @@ To choose a face:
 
 3. In the **Properties** window, click the **Face** property and choose a face.
 
-## Customizing Textures
+## Customize textures
 
 Unlike decals, textures provide further functionality to scale, offset, and animate an image.
 
-### Scaling Textures
+### Scale textures
 
 The size of the part doesn't affect the texture. Instead, scaling a part only increases or decreases the number of times the texture repeats.
 
@@ -151,14 +151,14 @@ To scale a texture:
 
 2. In the **Properties** window, set **StudsPerTileU** and **StudsPerTileV** to the number of studs you'd like the texture to occupy horizontally and vertically. The larger the number, the larger the image.
 
-### Offsetting Textures
+### Offset textures
 
-If you want more control over a texture's position, offset the texture by adjusting the `Class.Texture.OffsetStudsU|OffsetStudsU` and `Class.Texture.OffsetStudsV|OffsetStudsV` properties. This is also helpful for [animation](#animating-textures).
+If you want more control over a texture's position, offset the texture by adjusting the `Class.Texture.OffsetStudsU|OffsetStudsU` and `Class.Texture.OffsetStudsV|OffsetStudsV` properties. This is also helpful for [animation](#animate-textures).
 
 <GridContainer numColumns="3">
   <figure>
     <img src="../assets/modeling/textures-decals/Decal-Texture-Sample-2.png" alt="An example texture image of a light blue hexagon on top of a dark blue background." />
-    <figcaption>Texture Image</figcaption>
+    <figcaption>Texture image</figcaption>
   </figure>
   <figure>
     <img src="../assets/modeling/textures-decals/Texture-Sample-Offset-1.png" alt="The same texture on a surface of 8x6 studs with an offset of 1 stud." />
@@ -176,7 +176,7 @@ To offset a texture:
 
 2. In the **Properties** window, set **OffsetStudsU** and **OffsetStudsV** to the number of studs you'd like to offset the texture horizontally and vertically.
 
-### Animating Textures
+### Animate textures
 
 Using `Class.TweenService`, you can tween texture properties like `Class.Texture.OffsetStudsU|OffsetStudsU` and `Class.Texture.StudsPerTileV|StudsPerTileV` to achieve animated surfaces. For example, if you apply two fog textures to one container and animate them with the following script, you can achieve the appearance of a layered moving fog:
 

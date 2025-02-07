@@ -9,7 +9,7 @@ description: |
   between different places and servers.
 
   For more information on how to teleport players between servers, see
-  [Teleporting Between Places](../../../projects/teleporting.md).
+  [Teleporting Between Places](../../../projects/teleport.md).
 code_samples:
 inherits:
   - Instance
@@ -185,24 +185,6 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: TeleportService:GetThirdPartyTeleportInfo
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: goForth
-        type: bool
-        default:
-        summary: ''
-    returns:
-      - type: Tuple
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
@@ -559,24 +541,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: TeleportService:TeleportTrustedBackForth
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: goForth
-        type: bool
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: TeleportService:GetPlayerPlaceInstanceAsync
     summary: |
       Returns the `Class.DataModel.PlaceId|PlaceId` and
@@ -805,7 +769,7 @@ methods:
 
       For more information on how to teleport players between servers and
       receive user data from a teleport, see
-      [Teleporting Between Places](../../../projects/teleporting.md#sending-user-data-along-with-teleports).
+      [Teleporting Between Places](../../../projects/teleport.md#sending-user-data-along-with-teleports).
     code_samples:
     parameters:
       - name: placeId
@@ -1027,7 +991,7 @@ events:
       </table>
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     parameters:
       - name: player

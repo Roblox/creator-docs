@@ -1,5 +1,5 @@
 ---
-title: OAuth 2.0 App Registration
+title: OAuth 2.0 app registration
 description: Explains how to register an app and how the review workflow works.
 ---
 
@@ -12,11 +12,11 @@ resources.
 You can only register apps for individual accounts or groups that you own.
 </Alert>
 
-## Registering Your App
+## Register your app
 
 To register an app:
 
-1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), go to the [OAuth 2.0 Apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
+1. In the [Creator Dashboard](https://create.roblox.com/dashboard/creations), go to the [OAuth 2.0 apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
 1. Click the **Create OAuth 2.0 App** button.
 1. Enter a valid and globally unique **Application Name**.
 1. Read and agree to the **Roblox Terms of Service** and click **Create**.
@@ -27,9 +27,9 @@ To register an app:
 1. Click **Continue to Edit** to configure your app, which is described in the
    following sections.
 
-## Configuring General Information
+## Configure general information
 
-Once you've [registered](#registering-your-app) your app, you should configure its general information, including:
+Once you've [registered](#register-your-app) your app, you should configure its general information, including:
 
 - A description, which is visible to everyone in the Roblox community.
 - A thumbnail image for your app. The recommended file size is at least 150x150
@@ -45,7 +45,7 @@ Once you've [registered](#registering-your-app) your app, you should configure i
   complete it during the review process to publish your app to users.
 </Alert>
 
-## Adding Permissions
+## Add permissions
 
 To ensure proper access control and security within your app, you must add
 **Permission Scopes**. There are two types of permission scopes available:
@@ -57,7 +57,7 @@ To ensure proper access control and security within your app, you must add
   permission of assets. Select only the minimum number of scopes that you need
   for your app.
 
-## Adding Redirect URLs
+## Add redirect URLs
 
 **Redirect URLs** are the reentry points of your app that users are redirected
 to when they finish authorizing your app. Ensure your
@@ -83,7 +83,7 @@ redirect URLs meet the following requirements:
   when you have a testable version of your app.
 </Alert>
 
-## Submitting for Review
+## Submit for review
 
 To minimize the chances of malicious apps harming the community, registering an
 app doesn't make it broadly accessible. Instead, it remains in **private mode**
@@ -93,7 +93,7 @@ debugging within your team.
 If you want to extend the user base for your app, you need to publish it in
 public mode by submitting it for review:
 
-1. Go to the [OAuth 2.0 Apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
+1. Go to the [OAuth 2.0 apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
 1. Click the **Edit and Publish** button for the app that you want to publish.
 1. Fill in all the required information and click the **Review and Publish**
    button. A message with limits on your app permissions during the pending
@@ -108,16 +108,16 @@ public mode, and you can't revert it back to private mode.
 Regardless of whether your app is approved or rejected, you receive an email
 notification of the result when the review is completed.
 
-## Editing and Deleting Your App
+## Edit and delete your app
 
 You can edit or delete your app with the following steps if it's not under
 review:
 
-1. Go to the [OAuth 2.0 Apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
+1. Go to the [OAuth 2.0 apps](https://create.roblox.com/dashboard/credentials?activeTab=OAuthTab) page.
 1. Click **Edit** or **Delete** for the desired app.
 
    - If you chose to edit an app, follow the same steps and requirements of
-     [registration](#registering-your-app).
+     [registration](#register-your-app).
    - If you chose to delete an app, click **Yes, Delete** to confirm deletion.
      After you delete an app, you can't recover it.
 
@@ -130,11 +130,11 @@ scopes.
 
 For apps in private mode, the system automatically updates your edits with your
 users. For apps in public mode, you must
-[submit the app for review](#submitting-for-review) again to reflect these changes.
+[submit the app for review](#submit-for-review) again to reflect these changes.
 Otherwise, the system saves the unpublished changes for you without releasing it
 to the community.
 
 <Alert severity ='info'> You can clone a copy of your public app and keep it in
 private mode for iterative testing and debugging. This allows for a controlled
 environment where you can safely make changes and resolve any issues before
-submitting the app for review. </Alert>
+submitting the app for review.</Alert>

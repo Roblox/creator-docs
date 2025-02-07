@@ -1,5 +1,5 @@
 ---
-title: Create a Coin Collection Mechanic
+title: Create a coin collection mechanic
 description: Explains how to implement event-driven logic in an experience.
 next: /tutorials/curriculums/core/scripting/record-and-display-player-data
 prev: /tutorials/curriculums/core/building/greybox-a-playable-area
@@ -13,7 +13,7 @@ Now that you have a 3D world, this section of the tutorial teaches you how to ad
 first script to define a coin collecting mechanic. This mechanic allows players to collect
 coins, and disables the collection of a coin if it's been recently collected.
 
-## Create the Coins
+## Create the coins
 
 Before you can script anything, you need to have placeholder objects in the world to use as
 your coins. Like the sea stack platforms you made in the previous section, the coins can be
@@ -30,7 +30,7 @@ To create the coins:
 
    - Set **BrickColor** to **Gold**.
    - Set **Material** to **Metal**.
-   - Set **Size** to **0.6, 8, 4**.
+   - Set **Size** to `0.6, 8, 4`.
    - Disable **CanCollide**. This tells the engine that other parts can pass through the coin, meaning players
      can walk through the coins in order to collect them.
    - Enable **Anchored**. This tells the engine to never change the position of the coin due to any physics-related
@@ -47,10 +47,10 @@ To create the coins:
 Your cylinder parts now look like coins and prevent physics simulation, but you need to add
 logic to the coins so players can collect them.
 
-## Create the Script
+## Create the script
 
 To have the coins be collectable, you want to react to players touching them.
-The Roblox engine can notify you when something touches a coin, but you need to
+The Roblox Engine can notify you when something touches a coin, but you need to
 declare that in a script. To create a script:
 
 1. In the **Explorer** window, hover over **ServerScriptService** and click the
@@ -108,13 +108,13 @@ which tells the engine to run the script on the server, and prevents clients fro
    <BaseAccordion>
    <AccordionSummary>
 
-   <Typography variant="h4">Code Explanation</Typography>
+   <Typography variant="h4">Code explanation</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
    The following sections describe how the script works in more detail.
 
-   <h4>Initializing Services and Variables</h4>
+   <h4>Initialize services and variables</h4>
 
    Like with a lot of the code you've probably written in other languages, you
    define variables that you need later at the top of the script. Our code does
@@ -145,9 +145,9 @@ which tells the engine to run the script on the server, and prevents clients fro
      ...
      ```
 
-   <h4>Defining the Event Handler</h4>
+   <h4>Define the event handler</h4>
 
-   The Roblox engine physically simulates the 3D world and handles a lot of the
+   The Roblox Engine physically simulates the 3D world and handles a lot of the
    logic to handle events related to rendering, physics, and networking. When
    you're interested in scripting your own logic during some of these events,
    you can listen for and handle them, while letting the engine do the rest. In
@@ -161,7 +161,7 @@ which tells the engine to run the script on the server, and prevents clients fro
      `Class.Instance:GetAttribute()|GetAttribute()` method.
    - **Detects whether a player touched the coin** - If a coin is enabled, the
      method uses the player service to check if the object that touched the coin
-     was indeed a player. When a touch event occurs, the Roblox engine passes the
+     was indeed a player. When a touch event occurs, the Roblox Engine passes the
      object that touched the coin as an `otherPart` parameter. The script checks to
      see if the parent of `otherPart` belongs to a player.
    - **Disables the coin if a player touched it, and re-enables it after 10
@@ -189,7 +189,7 @@ which tells the engine to run the script on the server, and prevents clients fro
      end
      ```
 
-   <h4>Connecting the Event Handler</h4>
+   <h4>Connect the event handler</h4>
 
    All simulated 3D objects inherit from `Class.BasePart` and therefore have a
    `Class.BasePart.Touched|Touched()` event. The following loop connects the
@@ -216,7 +216,7 @@ which tells the engine to run the script on the server, and prevents clients fro
    </AccordionDetails>
    </BaseAccordion>
 
-## Playtest the Mechanic
+## Playtest the mechanic
 
 It's time to see if the coin collection mechanic works as intended. To playtest
 your experience:

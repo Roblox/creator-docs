@@ -291,9 +291,12 @@ methods:
       Determines whether a user has permission to chat in experiences. Factors
       such as parental control settings may prevent the user from sending
       messages. Errors if the userId is not in the current server. Note that
-      this method is only available for use in a `Class.Script` with
+      this method can be used with all current player
+      `Class.Player.UserId|UserIds` in a `Class.Script` with
       `Class.Script.RunContext|RunContext` of `Enum.RunContext.Server` or
-      `Enum.RunContext.Legacy`.
+      `Enum.RunContext.Legacy`. This method can also be used in a
+      `Class.LocalScript` but only with the `Class.Player.UserId|UserId` of the
+      local player.
     code_samples: []
     parameters:
       - name: userId

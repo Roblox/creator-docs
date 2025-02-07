@@ -1,0 +1,23 @@
+name: BenefitType
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: DeveloperProduct
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: AvatarAsset
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: AvatarBundle
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''

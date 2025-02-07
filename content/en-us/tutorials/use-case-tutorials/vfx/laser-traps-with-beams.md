@@ -1,5 +1,5 @@
 ---
-title: Creating Laser Beams
+title: Create laser beams with VFX
 description: A tutorial on creating a laser beam that sets an avatar's health to 0 on impact.
 ---
 
@@ -18,7 +18,7 @@ You can create your own assets in third-party modeling tools and follow along wi
 
 <video controls src="../../../assets/tutorials/laser-traps-with-beams/Script.mp4" width="90%"></video>
 
-## Get Blaster Asset
+## Get blaster asset
 
 The **Creator Store** is a tab of the Toolbox that you can use to find all assets that are made by Roblox and the Roblox community for use within your projects, including model, image, mesh, audio, plugin, video, and font assets. You can use the Creator Store to add an individual asset or asset library directly into an open experience.
 
@@ -45,7 +45,7 @@ To get this blaster asset from your inventory into your experience:
 
 4. Click the **Laser Beam Blaster** tile. The model displays in your viewport.
 
-## Setup a Collision Box
+## Set up a collision box
 
 The complete laser beam that sets players health to zero on impact needs to be able to detect when players collide with the laser. Because `Class.Beam` objects don't have default collision detection capabilities, you must set up collision detection with basic parts.
 
@@ -69,7 +69,7 @@ To set up the collision box:
 
    <img src="../../../assets/tutorials/laser-traps-with-beams/CollisionBox-3.jpg" width="80%" />
 
-## Configure Attachments
+## Configure attachments
 
 Before you add a `Class.Beam` object to your blaster, it's important to configure two `Class.Attachment` objects in the 3D space to represent the reach of the laser's emission from the blaster's emitter bulb. Beams operate by rendering a texture between attachments, so if you don't have attachments for the beam to reference, it cannot function at all.
 
@@ -99,7 +99,7 @@ To configure attachments for the laser beam:
 
    <img src="../../../assets/tutorials/laser-traps-with-beams/Attachments-4.jpg" width="80%" />
 
-## Customize the Beam
+## Customize the beam
 
 Now that you have `Class.Attachment` objects in the 3D space, you can add and customize a `Class.Beam` object to emulate the visual characteristics of a laser beam. This tutorial provides guidance on how to create a futuristic, bright pink beam that animates quickly, but by experimenting with the same properties, you can create a variety of different special effects.
 
@@ -132,7 +132,7 @@ To customize the beam:
 For more information on all beam properties you can customize, see [Beams](../../../effects/beams.md).
 </Alert>
 
-## Script Damage Behavior
+## Script damage behavior
 
 Your laser beam is currently aesthetically pleasing for its environment, but it's also completely harmless as a blaster weapon. To modify the laser blaster so that it can deal damage to players, you must add in a script to the collision box that triggers this behavior.
 

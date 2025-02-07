@@ -1,16 +1,16 @@
 ---
-title: Introduction to Scripting
+title: Introduction to scripting
 description: The process for creating a basic script that makes a platform disappear.
-next: /tutorials/scripting/basic-scripting/deadly-lava
+next: /tutorials/scripting/use-case-tutorials/scripting/basic-scripting/deadly-lava
 ---
 
 In [Introduction to Roblox Studio](../../../first-experience/index.md), you learned how to create and manipulate parts in Roblox Studio. In this tutorial, you'll learn how to apply a **script** to parts to make a platform appear and disappear. You can use this in a platforming experience to span a gap, challenging users to time their jumps carefully to get to the other side.
 
 <video controls loop muted>
-    <source src="../../../assets/tutorials/intro-to-scripting/finishedSinglePlatformShort.mp4" />
+    <source src="../../../../assets/tutorials/intro-to-scripting/finishedSinglePlatformShort.mp4" />
 </video>
 
-## Setting the Scene
+## Set the scene
 
 First off, you need a **Part** to act as the platform. Making and moving parts should be familiar to you from [Introduction to Roblox Studio](../../../first-experience/index.md). You don't need a complicated world aside from the platform — you just need a gap that your users can't easily jump across.
 
@@ -28,7 +28,7 @@ First off, you need a **Part** to act as the platform. Making and moving parts s
 Remember that setting a part's Anchored property to **true** makes it stay in place no matter what. Your platform falls down if it's not anchored.
 </Alert>
 
-## Inserting a Script
+## Insert a script
 
 Code in Roblox is written in a language called [Luau](../../../../luau/index.md) which you can put in scripts within various containers in the **Explorer**. If you put a script under a **Part**, Roblox will run the script's code when the part is loaded into the game.
 
@@ -44,7 +44,7 @@ Remember to **rename** parts and scripts as soon as you create them so you don't
 
 </Alert>
 
-## First Variable
+## First variable
 
 It's a good idea to start off your script by making a **variable** for the platform. A variable is a **name** associated with a **value**. Once a variable is created, it can be used again and again. You can change the value as needed.
 
@@ -62,7 +62,7 @@ local platform = script.Parent
 `script.Parent` is used to find the object the script is located in.  As you might have guessed, `script` refers to the script you're writing in and the `Parent` of the script is where it's located.
 </Alert>
 
-## Disappear Function
+## Disappear function
 
 Time to make the platform disappear. It's always best to group code for achieving a specific action into a **function**. A function is a named block of code that helps you organize your code and use it in multiple places without writing it again. Create a **function** in the script and call it `disappear`.
 
@@ -78,7 +78,7 @@ The first new line **declares** the function — it indicates the start of the f
 
 The parentheses are for including additional information as needed. You'll learn more about passing information to functions in a later course.
 
-## Part Properties
+## Part properties
 
 When the platform disappears, it needs to be invisible and users need to fall through it — but you can't just destroy the platform since it needs to reappear later.
 
@@ -122,7 +122,7 @@ Just like `script.Parent`, properties are accessed using a **dot**. Values are a
 You might notice that Studio automatically **indents** your code inside a function. Always make sure to indent your code like this — it helps indicate where the function begins and ends, which makes your code more readable.
 </Alert>
 
-## Calling the Function
+## Call the function
 
 Once you've declared a function, you can run it by writing its name with parentheses next to it. For example, `disappear()` will run the `disappear` function. This is known as **calling** a function.
 
@@ -141,7 +141,7 @@ Once you've declared a function, you can run it by writing its name with parenth
 
 2. Test the code by pressing the **Play** button. If your code works, the platform should have disappeared by the time the user spawns into the game.
 
-## Appear Function
+## Appear function
 
 You can easily make the platform reappear by writing a function that does the exact opposite of the `disappear` function.
 
@@ -163,7 +163,7 @@ You can easily make the platform reappear by writing a function that does the ex
    end
    ```
 
-## Looping Code
+## Loop code
 
 The platform should be constantly disappearing and reappearing, with a few seconds between each change. It's impossible to write an infinite number of function calls — fortunately, with a **while loop**, you don't have to.
 
@@ -187,7 +187,7 @@ while true do
 end
 ```
 
-## Toggling the Platform
+## Toggle the platform
 
 In the while loop, you need to write code to wait a few seconds between the platform disappearing and reappearing.
 
@@ -223,7 +223,7 @@ You could duplicate this platform to cover a wider gap, but you need to change t
     <source src="../../../../assets/tutorials/intro-to-scripting/alternatingPlatforms.mp4" />
 </video>
 
-## Final Code
+## Final code
 
 ```lua
 local platform = script.Parent

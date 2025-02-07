@@ -394,7 +394,7 @@ properties:
 
       - Players may experience motion sickness if an equivalent head tracking
         solution is not added.
-      - The Roblox engine performs latency optimizations when `HeadLocked` is
+      - The Roblox Engine performs latency optimizations when `HeadLocked` is
         true.
 
       ##### See Also
@@ -807,8 +807,10 @@ methods:
       can use the following snippet:
 
       ```lua
+      local Workspace = game:GetService("Workspace")
+
       local function getActualRoll()
-      	local camera = workspace.CurrentCamera
+      	local camera = Workspace.CurrentCamera
 
       	local trueUp = Vector3.new(0, 1, 0)
       	local cameraUp = camera:GetRenderCFrame().upVector
@@ -868,7 +870,9 @@ methods:
       duration, for example:
 
       ```lua
-      local camera = workspace.CurrentCamera
+      local Workspace = game:GetService("Workspace")
+
+      local camera = Workspace.CurrentCamera
       camera.CameraType = Enum.CameraType.Scriptable
 
       camera:Interpolate(
@@ -901,8 +905,9 @@ methods:
 
       ```lua
       local TweenService = game:GetService("TweenService")
+      local Workspace = game:GetService("Workspace")
 
-      local camera = workspace.CurrentCamera
+      local camera = Workspace.CurrentCamera
       camera.CameraType = Enum.CameraType.Scriptable
 
       local tween = TweenService:Create(
@@ -961,8 +966,10 @@ methods:
       This method pans the `Class.Camera` in 45 degree increments, for example:
 
       ```lua
-      workspace.CurrentCamera:PanUnits(1) -- 45 degrees
-      workspace.CurrentCamera:PanUnits(-2) -- -90 degrees
+      local Workspace = game:GetService("Workspace")
+
+      Workspace.CurrentCamera:PanUnits(1) -- 45 degrees
+      Workspace.CurrentCamera:PanUnits(-2) -- -90 degrees
       ```
 
       PanUnits does not require the `Class.Camera.CameraType|CameraType` to be
@@ -1099,7 +1106,9 @@ methods:
       For example, the following would invert the `Class.Camera`:
 
       ```lua
-      workspace.CurrentCamera:SetRoll(math.pi) -- math.pi radians = 180 degrees
+      local Workspace = game:GetService("Workspace")
+
+      Workspace.CurrentCamera:SetRoll(math.pi) -- math.pi radians = 180 degrees
       ```
 
       SetRoll has no effect on any roll applied using the
@@ -1124,9 +1133,11 @@ methods:
       example:
 
       ```lua
-      local currentCFrame = workspace.CurrentCamera.CFrame
+      local Workspace = game:GetService("Workspace")
+
+      local currentCFrame = Workspace.CurrentCamera.CFrame
       local rollCFrame = CFrame.Angles(0, 0, roll)
-      workspace.CurrentCamera.CFrame = currentCFrame * rollCFrame
+      Workspace.CurrentCamera.CFrame = currentCFrame * rollCFrame
       ```
     code_samples:
     parameters:

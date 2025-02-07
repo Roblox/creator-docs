@@ -1,9 +1,9 @@
 ---
-title: Usage Guide for Place Publishing
+title: Usage guide for place publishing
 description: Explains how to use Open Cloud Place Publishing API to publish places programmatically with version control.
 ---
 
-[Place Publishing API](../../reference/cloud/universes-api/v1.json) fulfills the same functionality as [Publish to Roblox](../../production/publishing/publishing-experiences-and-places.md) in Studio plus extra permission control and automation in continuous release workflow. You can use this API to update existing places of an experience to a new version, making it useful to automate your publishing workflow. For example, you can call this API from a GitHub action, and it automatically pushes a binary place file to Roblox Cloud after successful integration testing.
+The [Place Publishing API](../../reference/cloud/universes-api/v1.json) fulfills the same functionality as [publishing to Roblox](../../production/publishing/publish-experiences-and-places.md) in Studio plus extra permission control and automation in continuous release workflow. You can use this API to update existing places of an experience to a new version, making it useful to automate your publishing workflow. For example, you can call this API from a GitHub action, and it automatically pushes a binary place file to Roblox Cloud after successful integration testing.
 
 <Alert severity ='info'>
 This API only supports HTTPS requests.
@@ -11,15 +11,15 @@ This API only supports HTTPS requests.
 
 ## Places on Roblox
 
-Experiences on Roblox can have multiple places, with one **starting place** as the user entry point of your experience and optional other places that you can [teleport users between](../../projects/teleporting.md). You can use the API to publish either the starting place or other places of your experience with version control.
+Experiences on Roblox can have multiple places, with one **starting place** as the user entry point of your experience and optional other places that you can [teleport users between](../../projects/teleport.md). You can use the API to publish either the starting place or other places of your experience with version control.
 
 Before you can update an existing place of an experience, you need the place's **Place ID** and the experience's **Universe ID**. The **Place ID** identifies the place and the **Universe ID** identifies the experience. Each is unique even if your experience has only one place.
 
-## Publishing a Place
+## Publish a place
 
 To publish an existing place of an experience with [Place Publishing API](../../reference/cloud/universes-api/v1.json):
 
-1. [Create an API key](./api-keys.md#creating-an-API-key) on the **Creator Dashboard**. Make sure you perform the following settings:
+1. [Create an API key](./api-keys.md#create-an-API-key) on the **Creator Dashboard**. Make sure you perform the following settings:
 
    1. Add **universe-places** to **Access Permissions**.
    1. Add **Write** operation to your selected experience.
