@@ -281,6 +281,42 @@ functions:
         summary: ''
     tags:
     code_samples:
+  - name: math.lerp
+    summary: |
+      Returns the linear interpolation between `a` and `b`.
+    description: |
+      Returns the linear interpolation between `a` and `b` based on the factor `t`.
+      When `t` is 0, the function returns `a`, and when `t` is 1, it returns `b`. For
+      values of `t` between 0 and 1, the function computes a proportional blend between
+      the two values.
+
+      The interpolation is calculated using the formula:
+
+      ```
+      a + (b - a) * t
+      ```
+    parameters:
+      - name: a
+        type: number
+        default:
+        summary: |
+          The starting value.
+      - name: b
+        type: number
+        default:
+        summary: |
+          The ending value.
+      - name: t
+        type: number
+        default:
+        summary: |
+          The interpolation factor, typically between 0 and 1.
+    returns:
+      - type: number
+        summary: |
+          The interpolated value between `a` and `b`.
+    tags:
+    code_samples:
   - name: math.log
     summary: |
       Returns the logarithm of `x` using the given base.
@@ -315,6 +351,52 @@ functions:
     returns:
       - type: number
         summary: ''
+    tags:
+    code_samples:
+  - name: math.map
+    summary: |
+      Returns the value of `x` mapped from one range to another.
+    description: |
+      Returns a value that represents `x` mapped linearly from the input range
+      [`inmin`, `inmax`] to the output range [`outmin`, `outmax`]. This is achieved
+      by determining the relative position of `x` within the input range and applying
+      that ratio to the output range.
+
+      The mapping is calculated using the formula:
+
+      ```
+      outmin + ((x - inmin) / (inmax - inmin)) * (outmax - outmin)
+      ```
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: |
+          The number to be mapped.
+      - name: inmin
+        type: number
+        default:
+        summary: |
+          The lower bound of the input range.
+      - name: inmax
+        type: number
+        default:
+        summary: |
+          The upper bound of the input range.
+      - name: outmin
+        type: number
+        default:
+        summary: |
+          The lower bound of the output range.
+      - name: outmax
+        type: number
+        default:
+        summary: |
+          The upper bound of the output range.
+    returns:
+      - type: number
+        summary: |
+          The value of `x` mapped to the output range.
     tags:
     code_samples:
   - name: math.max
