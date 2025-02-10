@@ -286,15 +286,9 @@ functions:
       Returns the linear interpolation between `a` and `b`.
     description: |
       Returns the linear interpolation between `a` and `b` based on the factor `t`.
-      When `t` is 0, the function returns `a`, and when `t` is 1, it returns `b`. For
-      values of `t` between 0 and 1, the function computes a proportional blend between
-      the two values.
-
-      The interpolation is calculated using the formula:
-
-      ```
-      a + (b - a) * t
-      ```
+      
+      This function uses the formula `a`+`(b-a)`\*`t`. `t` is typically
+      between `0` and `1` but values outside this range are acceptable.
     parameters:
       - name: a
         type: number
