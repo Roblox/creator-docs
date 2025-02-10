@@ -352,15 +352,9 @@ functions:
       Returns the value of `x` mapped from one range to another.
     description: |
       Returns a value that represents `x` mapped linearly from the input range
-      [`inmin`, `inmax`] to the output range [`outmin`, `outmax`]. This is achieved
-      by determining the relative position of `x` within the input range and applying
-      that ratio to the output range.
-
-      The mapping is calculated using the formula:
-
-      ```
-      outmin + ((x - inmin) / (inmax - inmin)) * (outmax - outmin)
-      ```
+      (`inmin` to `inmax`) to the output range (`outmin` to `outmax`). This is
+      achieved by determining the relative position of `x` within the input
+      range and applying that ratio to the output range.
     parameters:
       - name: x
         type: number
