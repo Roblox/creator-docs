@@ -70,6 +70,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: RocketPropulsion.MaxSpeed
     summary: |
       Determines the maximum speed at which the part will move toward the
@@ -91,6 +93,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: RocketPropulsion.MaxThrust
     summary: |
       Determines the maximum amount of thrust that will be exerted to move the
@@ -113,6 +117,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: RocketPropulsion.MaxTorque
     summary: |
       Determines the maximum amount of torque that may be exerted to rotate the
@@ -134,6 +140,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: RocketPropulsion.Target
     summary: |
       Determines the object towards which the part should follow/face.
@@ -153,6 +161,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: RocketPropulsion.TargetOffset
     summary: |
       Determines the world offset from the
@@ -176,6 +186,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: RocketPropulsion.TargetRadius
     summary: |
       Determines the maximum distance from the
@@ -198,6 +210,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: RocketPropulsion.ThrustD
     summary: |
       Determines the dampening applied to the part in order to prevent it from
@@ -219,6 +233,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: RocketPropulsion.ThrustP
     summary: |
       Determines how aggressive of a force is applied in reaching the
@@ -242,6 +258,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: RocketPropulsion.TurnD
     summary: |
       Determines the amount of dampening that to use in reaching the
@@ -267,6 +285,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: RocketPropulsion.TurnP
     summary: |
       Determines how aggressive of a torque is applied in facing the
@@ -289,6 +309,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: RocketPropulsion:Abort
     summary: |
@@ -304,6 +326,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: RocketPropulsion:Fire
     summary: |
       Causes the rocket to fly towards Target.
@@ -318,6 +342,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: RocketPropulsion:fire
     summary: ''
     description: ''
@@ -333,6 +359,8 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: RocketPropulsion.ReachedTarget
     summary: |
@@ -349,4 +377,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

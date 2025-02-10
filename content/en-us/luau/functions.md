@@ -5,7 +5,7 @@ description: Functions are blocks of code that can execute multiple times on com
 
 **Functions** are [blocks of code](./scope.md) that you can execute multiple times on command. You can also connect them to [events](#event-handlers) or assign them as [callbacks](#callbacks).
 
-## Basic Functions
+## Basic functions
 
 A function definition includes:
 
@@ -78,16 +78,18 @@ Methods are functions that are members of an object, such as a [class](/referenc
 All objects in Roblox descend from `Class.Instance` and have commonly used methods including `Class.Instance:Destroy()`, `Class.Instance:Clone()`, and `Class.Instance:FindFirstChild()`.
 
 ```lua
--- Destroying a Part with dot notation (function)
+local Workspace = game:GetService("Workspace")
+
+-- Destroying a part with dot notation (function)
 local firstPart = Instance.new("Part")
-firstPart.Parent = workspace
+firstPart.Parent = Workspace
 print(firstPart.Parent) -- Workspace
 firstPart.Destroy(firstPart)
 print(firstPart.Parent) -- nil
 
--- Destroying a Part with colon notation (method)
+-- Destroying a part with colon notation (method)
 local secondPart = Instance.new("Part")
-secondPart.Parent = workspace
+secondPart.Parent = Workspace
 print(secondPart.Parent) -- Workspace
 secondPart:Destroy()
 print(secondPart.Parent) -- nil
@@ -97,7 +99,7 @@ print(secondPart.Parent) -- nil
 The statement `table:Method()` is functionally identical to `table.Method(table)`, and when defining a method, `function table:Method()` is identical to `function table.Method(self)`. This behavior extends to `Class.Instance` methods, since they are also derived from tables.
 </Alert>
 
-### Defining Methods
+### Define methods
 
 To create a method in a table, use the name of the method as the key and the method function as the value. In the definition of the method, the `self` parameter refers to the method's parent table. When you call a method using colon notation, you pass the table itself as the first argument. You can define parameters for a method, but you need to list them after the `self` parameter.
 
@@ -121,7 +123,7 @@ testButton:changeEnabled(false) -- false
 
 Callbacks are functions that execute in response to another function or process.
 
-### Basic Callbacks
+### Basic callbacks
 
 Functions can be passed into other functions, for example, an [anonymous](#anonymous-functions) function can be used to implement a callback that `Library.table.sort()` then uses to sort a list of `Class.Player|Players` from `Class.Players.GetPlayers()`.
 
@@ -154,9 +156,9 @@ end
 print(bindableFunction:Invoke(42)) -- 84
 ```
 
-## Function Techniques
+## Function techniques
 
-### Event Handlers
+### Event handlers
 
 You can assign a function, known as an **event handler**, to execute when an event fires. For example, you can create a function called `onPlayerAdded()` to the `Class.Players.PlayerAdded` event to print the name of whatever player joins. For more information, see [Events](../scripting/events/index.md).
 
@@ -170,7 +172,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-### Anonymous Functions
+### Anonymous functions
 
 You can create functions without names, known as **anonymous functions**, to use as [callbacks](#callbacks) and [event handlers](#event-handlers). Like named functions, anonymous functions need to start and end with the `function` and `end` keywords, but you don't need the `local` keyword to indicate local scope because they always have local scope.
 
@@ -189,11 +191,11 @@ Players.PlayerAdded:Connect(function(player)
 end)
 ```
 
-### Functions in ModuleScripts
+### Functions in module scripts
 
 You can reuse functions across multiple scripts by storing them in `Class.ModuleScript|ModuleScripts`. Functions are a Luau data type, so you can store them in tables with other data.
 
-### Variadic Functions
+### Variadic functions
 
 A variadic function accepts any number of arguments. For example, `Globals.LuaGlobals.print()` is a variadic function.
 
@@ -203,7 +205,7 @@ print(string.format("The %s is a %s!", "cake", "lie")) -- The cake is a lie!
 print(string.char(115, 101, 99, 114, 101, 116)) -- secret
 ```
 
-#### Defining Variadic Functions
+#### Define variadic functions
 
 To define a variadic function, you use the `...` token as the last or only parameter (not to be confused with `..`, the concatenation [operator](./operators.md)). You can put the `...` values in a table for ease of use.
 
@@ -231,7 +233,7 @@ Input No. 3 = Variadic Function
 ]]
 ```
 
-#### Argument Forwarding
+#### Forward arguments
 
 You can define variadic functions as wrappers around other functions to pass, or forward, arguments from the wrapper to the other functions.
 
@@ -256,7 +258,7 @@ After
 ]]
 ```
 
-#### Calling a Variadic Function with Arrays
+#### Call a variadic function with arrays
 
 If you want to pass a table array of values to a global variadic function, such as `print()`, you can use the global `unpack()` function to pass the values of the table instead of the table itself.
 

@@ -38,6 +38,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: SelectionBox.SurfaceColor
     summary: |
       A `Datatype.BrickColor` version of
@@ -64,6 +67,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: SelectionBox.SurfaceColor3
     summary: |
       Determines the color of the box's surfaces.
@@ -85,6 +91,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: SelectionBox.SurfaceTransparency
     summary: |
       Determines the transparency of the box's surfaces.
@@ -108,6 +117,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

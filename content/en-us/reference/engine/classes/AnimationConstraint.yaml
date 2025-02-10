@@ -1,0 +1,233 @@
+name: AnimationConstraint
+type: class
+category:
+memory_category: PhysicsParts
+summary: |
+  Aligns two `Class.BasePart|BaseParts` with an animate-able kinematic or
+  force-based joint.
+description: |
+  An **AnimationConstraint** constrains its `Class.Attachment|Attachments` so
+  that they're offset by the `Class.AnimationConstraint.Transform|Transform`
+  `CFrame`. The `Class.AnimationConstraint.Transform|Transform` can be set
+  manually during `Class.RunService.PreSimulation` or by an `Class.Animator`.
+code_samples: []
+inherits:
+  - Constraint
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AnimationConstraint.C0
+    summary: ''
+    description: |
+      The `Class.AnimationConstraint.Attachment0|Attachment0`
+      `Class.Attachment.CFrame|CFrame` for backwards compatibility with
+      `Class.Motor6D.C0`.
+    code_samples: []
+    type: CFrame
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.C1
+    summary: ''
+    description: |
+      The `Class.AnimationConstraint.Attachment1|Attachment1`
+      `Class.Attachment.CFrame|CFrame` for backwards compatibility with
+      `Class.Motor6D.C1`.
+    code_samples: []
+    type: CFrame
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.IsKinematic
+    summary: |
+      Toggles whether the `Class.AnimationConstraint` is kinematic or physically
+      simulated.
+    description: |
+      When true, the connected parts follow the
+      `Class.AnimationConstraint.Transform|Transform` perfectly without
+      participating in physics simulation. When false, the connected parts
+      follow the trajectory using forces and torques limited by
+      `Class.AnimationConstraint.MaxForce` and
+      `Class.AnimationConstraint.MaxTorque`.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.MaxForce
+    summary: |
+      Maximum force magnitude the constraint can apply to achieve its goal.
+    description: |
+      Maximum force magnitude the constraint can apply to achieve its goal. Only
+      used if `Class.AnimationConstraint.IsKinematic|IsKinematic` is false.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Compliance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.MaxTorque
+    summary: |
+      Maximum torque the constraint can apply to reach its goal.
+    description: |
+      Maximum torque the constraint can use to reach its goal. Only used if
+      `Class.AnimationConstraint.IsKinematic|IsKinematic` is false.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Compliance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.Part0
+    summary: ''
+    description: |
+      The `Class.AnimationConstraint.Attachment0|Attachment0`
+      `Class.Instance.Parent|Parent` for backwards compatibility with
+      `Class.Motor6D.Part0`.
+    code_samples: []
+    type: BasePart
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.Part1
+    summary: ''
+    description: |
+      The `Class.AnimationConstraint.Attachment1|Attachment1`
+      `Class.Instance.Parent|Parent` for backwards compatibility with
+      `Class.Motor6D.Part1`.
+    code_samples: []
+    type: BasePart
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+      - Deprecated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+  - name: AnimationConstraint.Transform
+    summary: |
+      Describes the current animation offset of the `Class.AnimationConstraint`
+      joint.
+    description: |
+      The internal `Datatype.CFrame` that is manipulated when a
+      `Class.AnimationConstraint` is being animated.
+
+      ##### Timing
+
+      `Class.AnimationConstraint` transforms are not applied immediately, but
+      rather as a batch in a parallel job after
+      `Class.RunService.PreSimulation`, immediately before physics steps. The
+      deferred batch update is much more efficient than many immediate updates.
+
+      If the `Class.AnimationConstraint` is part of an animated model with an
+      `Class.Animator`, then `Class.AnimationConstraint.Transform` is usually
+      overwritten every frame by the `Class.Animator` after
+      `Class.RunService.PreAnimation` and before
+      `Class.RunService.PreSimulation`.
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Physics
+      - Animation
+    writeCapabilities: []
+methods: []
+events: []
+callbacks: []

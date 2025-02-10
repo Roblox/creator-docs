@@ -63,6 +63,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: TorsionSpringConstraint.CurrentAngle
     summary: |
       The current angle, in degrees, of the limiting cone.
@@ -85,6 +88,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: TorsionSpringConstraint.Damping
     summary: |
       Damping constant for the `Class.TorsionSpringConstraint`. Multiplied to
@@ -106,6 +112,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: TorsionSpringConstraint.LimitEnabled
     summary: ''
     description: ''
@@ -125,6 +134,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: TorsionSpringConstraint.LimitsEnabled
     summary: |
       Limits the relative angular motion of the secondary axes of attachments
@@ -145,6 +157,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: TorsionSpringConstraint.MaxAngle
     summary: |
       The maximum angle of the constraint's limiting cone.
@@ -167,6 +182,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: TorsionSpringConstraint.MaxTorque
     summary: |
       The maximum allowable torque provided by the torsion spring.
@@ -185,6 +203,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: TorsionSpringConstraint.Radius
     summary: |
       The visualization radius of the spring.
@@ -203,6 +224,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: TorsionSpringConstraint.Restitution
     summary: |
       The restitution coefficient of the cone constraint.
@@ -225,6 +249,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: TorsionSpringConstraint.Stiffness
     summary: |
       The torsional stiffness of the spring.
@@ -247,6 +274,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

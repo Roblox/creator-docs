@@ -29,7 +29,7 @@ properties:
       See also:
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     type: string
     tags:
@@ -44,6 +44,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: TeleportAsyncResult.ReservedServerAccessCode
     summary: |
       The access code of the reserved server that the players are being
@@ -55,7 +57,7 @@ properties:
       this same reserved server.
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     type: string
     tags:
@@ -70,6 +72,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

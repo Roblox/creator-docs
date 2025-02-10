@@ -17,12 +17,32 @@ items:
   - name: AtEnd
     summary: |
       Text is truncated at the end of the text; extra graphemes that cannot fit
-      into the space are replaced with `...`.
+      into the space are replaced with `...`. Word boundaries are respected if
+      possible.
+
+      For example, if the control is between -> and <- like so:
+
+      `->Long text is truncated at the en<-d of the last complete word`
+
+      The text will be:
+
+      `Long text is truncated at the...`
     value: 1
     tags: []
     deprecation_message: ''
   - name: SplitWord
-    summary: ''
+    summary: |
+      If the end of the line occurs in the middle of a word, the text is
+      truncated inside of that word. Extra graphemes that cannot fit into the
+      space are replaced with `...`.
+
+      For example, if the control is between -> and <- like so:
+
+      `->Long text is truncated at the en<-d of the last complete word`
+
+      The text will be:
+
+      `Long text is truncated at the en...`
     value: 2
     tags: []
     deprecation_message: ''

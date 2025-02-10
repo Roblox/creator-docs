@@ -22,6 +22,37 @@ inherits:
 tags: []
 deprecation_message: ''
 properties:
+  - name: AudioEmitter.AngleAttenuation
+    summary: |
+      Represents how the perceived volume of the emitted sound changes based on
+      the angle between a `Class.AudioListener` and the
+      `Datatype.CFrame.LookVector|LookVector` associated with the
+      `Class.AudioEmitter`.
+    description: |
+      Represents a volume-over-angle curve that affects how loudly a
+      `Class.AudioListener` will hear the `Class.AudioEmitter`, based on the
+      angle between them and the `Datatype.CFrame.LookVector|LookVector`
+      associated with the `Class.AudioEmitter`.
+
+      This property is internal and can't be accessed by scripts; it exists to
+      support replication. See
+      `Class.AudioEmitter:SetAngleAttenuation()|SetAngleAttenuation()` for usage
+      details.
+    code_samples: []
+    type: BinaryString
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Emission
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEmitter.AudioInteractionGroup
     summary: |
       Controls which `Class.AudioListener|AudioListeners` are capable of hearing
@@ -41,6 +72,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEmitter.DistanceAttenuation
     summary: |
       Represents how the perceived volume of the emitted sound changes as the
@@ -67,7 +101,51 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioEmitter.SimulationFidelity
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AudioSimulationFidelity
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Simulation
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
+  - name: AudioEmitter:GetAngleAttenuation
+    summary: |
+      Gets the angle attenuation curve that the `Class.AudioEmitter` is using,
+      or an empty table if it's using the default curve.
+    description: |
+      Returns a table mapping angle to volume. Keys are numbers between `0` and
+      `180` (inclusive), while values are numbers between `0` and `1`
+      (inclusive) describing how volume attenuates depending on direction. This
+      method returns an empty table if the default angle attenuation curve is
+      being used.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Dictionary
+        summary: |
+          Table mapping angle to volume, as described above.
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioEmitter:GetConnectedWires
     summary: |
       Returns an array of `Class.Wire|Wires` that are connected to the specified
@@ -82,12 +160,14 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioEmitter:GetDistanceAttenuation
     summary: |
       Gets the distance attenuation curve that the `Class.AudioEmitter` is
@@ -107,18 +187,68 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioEmitter:GetInteractingListeners
     summary: ''
     description: ''
     code_samples: []
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioEmitter:SetAngleAttenuation
+    summary: |
+      Sets the angle attenuation curve that the `Class.AudioEmitter` should use,
+      or uses a constant curve of volume `1` if none is provided.
+    description: |
+      Sets a volume-over-angle curve that affects how loudly a
+      `Class.AudioListener` will hear the `Class.AudioEmitter`, based on the
+      angle between them and the `Datatype.CFrame.LookVector|LookVector`
+      associated with the `Class.AudioEmitter`.
+
+      The curve is represented by a table mapping angle keys to volume values.
+      Keys are expected to be unique numbers between `0` and `180` (inclusive),
+      while values are expected to be numbers between `0` and `1` (inclusive).
+      Tables containing up to 400 key-value pairs are supported.
+
+      The volume of the `Class.AudioEmitter` from the perspective of a
+      `Class.AudioListener` at an angle `a` is determined by linearly
+      interpolating between the volume levels for the points on the curve whose
+      angle values are directly above and below `a`. If there is either no point
+      below `a` or no point above `a`, the volume level of the other point is
+      chosen. Essentially, the curve is a sequence of points connected by
+      straight lines, and beyond its left and right endpoints the curve extends
+      outward at their respective volume levels.
+
+      This volume will be multiplied with the volumes from all other attenuation
+      curves (including the ones on the receiving `Class.AudioListener`) to
+      obtain the final audibility.
+
+      If the table is empty or `nil`, the `Class.AudioEmitter` defaults to using
+      an angle attenuation curve with the constant volume value of `1`.
+    code_samples:
+    parameters:
+      - name: curve
+        type: Dictionary
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - CustomLuaState
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioEmitter:SetDistanceAttenuation
     summary: |
       Sets the distance attenuation curve that the `Class.AudioEmitter` should
@@ -142,9 +272,9 @@ methods:
       straight lines, and beyond its left and right endpoints the curve extends
       outward infinitely at their respective volume levels.
 
-      This volume will be multiplied with the volume from the
-      `Class.AudioListener.DistanceAttenuation` curve of the
-      `Class.AudioListener` to obtain the final audibility.
+      This volume will be multiplied with the volumes from all other attenuation
+      curves (including the ones on the receiving `Class.AudioListener`) to
+      obtain the final audibility.
 
       If the table is empty or `nil`, the `Class.AudioEmitter` defaults to using
       a distance attenuation curve determined by the inverse-square law.
@@ -163,5 +293,44 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events: []
+    capabilities: []
+    writeCapabilities: []
+events:
+  - name: AudioEmitter.WiringChanged
+    summary: |
+      Fires when another instance is connected to or disconnected from the
+      `Class.AudioEmitter` via a `Class.Wire`.
+    description: |
+      Event that fires after a `Class.Wire` becomes connected or disconnected,
+      and that `Class.Wire` is now or was previously connected to a pin on the
+      `Class.AudioEmitter` and to some other wirable instance.
+    code_samples: []
+    parameters:
+      - name: connected
+        type: bool
+        default:
+        summary: |
+          Whether the instance got connected or disconnected.
+      - name: pin
+        type: string
+        default:
+        summary: |
+          The pin on the `Class.AudioEmitter` that the `Class.Wire` targets.
+      - name: wire
+        type: Wire
+        default:
+        summary: |
+          The `Class.Wire` between the `Class.AudioEmitter` and the other
+          instance.
+      - name: instance
+        type: Instance
+        default:
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

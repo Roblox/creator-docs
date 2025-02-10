@@ -11,17 +11,17 @@ As with [Player Invite Prompts](../../production/promotion/invite-prompts.md), y
    <img src="../../assets/creator-dashboard/Experience-Nav-Engagement-Notifications.png" width="330" />
 
 1. In the center region, click the **Create a Notification String** button.
-1. Fill in an identifier name (only visible to you) and the custom notification string; this is limited to 99 characters and can include unlimited [custom parameters](#customizing-notifications-using-parameters). Notifications will automatically use the title of your experience as the notification title, but you can additionally use **\{experienceName\}** to reference your experience in the notification body text.
+1. Fill in an identifier name (only visible to you) and the custom notification string; this is limited to 99 characters and can include unlimited [custom parameters](#customize-notifications-using-parameters). Notifications will automatically use the title of your experience as the notification title, but you can additionally use **\{experienceName\}** to reference your experience in the notification body text.
 
    Example notification strings:
 
-   - <Typography variant="subtitle2" color="primary">You're \{numQuests\} quests away from completing the weekly challenge!</Typography>
-   - <Typography variant="subtitle2" color="primary">Your \{eggName\} hatched! Come meet your new pet.</Typography>
-   - <Typography variant="subtitle2" color="primary">You won \{numRaces\} races this week and unlocked the \{racetrackName\} track!</Typography>
-   - <Typography variant="subtitle2" color="primary">\{userId-friend\} just beat your record on the Tokyo Tour track! Time for revenge?</Typography>
+	 <p><Chip label="You're {numQuests} quests away from completing the weekly challenge!" size="large" color="primary" variant="outlined" /></p>
+	 <p><Chip label="Your {eggName} hatched! Come meet your new pet." size="large" color="primary" variant="outlined" /></p>
+	 <p><Chip label="You won {numRaces} races this week and unlocked the {racetrackName} track!" size="large" color="primary" variant="outlined" /></p>
+	 <p><Chip label="{userId-friend} just beat your record on the Tokyo Tour track! Time for revenge?" size="large" color="primary" variant="outlined" /></p>
 
    <Alert severity="warning">
-   Before writing notification strings, please review the [guidelines](#guidelines) for using the system.
+   Before writing notification strings, please review the [guidelines](#usage-guidelines) for using the system.
 	 </Alert>
 
 1. When ready, click the **Create Notification String** button.
@@ -29,4 +29,4 @@ As with [Player Invite Prompts](../../production/promotion/invite-prompts.md), y
 
    <img src="../../assets/creator-dashboard/Notifications-Exp-Notif-Copy-Asset-ID.png" width="780" />
 
-1. Use the copied ID for the `messageId` key value in the `payload` table as demonstrated in the [example script](#sending-an-experience-notification).
+4. Use the copied ID for the `messageId` key value in the `payload` table as demonstrated in the [example script](#send-an-experience-notification).

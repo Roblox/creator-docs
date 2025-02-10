@@ -25,6 +25,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: AdGui.EnableVideoAds
     summary: |
       Enables the AdGui to serve video ads.
@@ -42,6 +45,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: AdGui.FallbackImage
     summary: ''
     description: ''
@@ -57,6 +63,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: AdGui.Status
     summary: ''
     description: ''
@@ -74,19 +83,10 @@ properties:
     serialization:
       can_load: false
       can_save: false
-methods:
-  - name: AdGui:GetSingleReportAdInfo
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Map
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+    capabilities:
+      - UI
+    writeCapabilities: []
+methods: []
 events: []
 callbacks:
   - name: AdGui.OnAdEvent
@@ -113,3 +113,5 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []

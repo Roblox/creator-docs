@@ -38,6 +38,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: FormFactorPart.formFactor
     summary: ''
     description: |
@@ -59,6 +61,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -34,6 +34,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods:
   - name: PluginGui:BindToClose
     summary: |
@@ -112,6 +115,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PluginGui:GetRelativeMousePosition
     summary: |
       Returns the position of the mouse relative to the PluginGui.
@@ -131,6 +136,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: PluginGui.PluginDragDropped
     summary: |
@@ -157,6 +164,8 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PluginGui.PluginDragEntered
     summary: |
       Fires when the user's mouse enters a PluginGui during a drag operation
@@ -188,6 +197,8 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PluginGui.PluginDragLeft
     summary: |
       Fires when the user's mouse leaves a PluginGui during a drag operation
@@ -218,6 +229,8 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PluginGui.PluginDragMoved
     summary: |
       Fires when the user's mouse moves within a PluginGui during a drag
@@ -242,6 +255,8 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PluginGui.WindowFocusReleased
     summary: |
       Fires when the user stops interacting with the window of the PluginGui.
@@ -263,6 +278,8 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PluginGui.WindowFocused
     summary: |
       Fires when the user begins interacting with the window of the PluginGui.
@@ -285,4 +302,6 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

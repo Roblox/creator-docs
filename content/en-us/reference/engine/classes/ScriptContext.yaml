@@ -16,18 +16,6 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: ScriptContext:ReportLuaRequireCount
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
   - name: ScriptContext:SetTimeout
     summary: |
       Limits how long a script is allowed to run without yielding.
@@ -46,6 +34,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: ScriptContext.Error
     summary: |
@@ -71,4 +61,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

@@ -25,6 +25,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: SwimController.PitchMaxTorque
     summary: |
       The maximum torque used to rotate to the desired pitch.
@@ -44,6 +46,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: SwimController.PitchSpeedFactor
     summary: |
       Multiplied by `Class.ControllerManager.BaseTurnSpeed` to determine the
@@ -64,6 +68,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: SwimController.RollMaxTorque
     summary: |
       The maximum torque applied to rotate to the desired roll.
@@ -83,6 +89,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: SwimController.RollSpeedFactor
     summary: |
       Multiplied by `Class.ControllerManager.BaseTurnSpeed` to determine the
@@ -103,6 +111,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

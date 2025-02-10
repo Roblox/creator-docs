@@ -30,7 +30,7 @@ methods:
       - checking-for-touching-parts
     parameters:
       - name: partList
-        type: Objects
+        type: Instances
         default:
         summary: |
           A list of parts checks to see if any parts in the list are touching
@@ -51,6 +51,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:Blockcast
     summary: |
       Casts a block shape in a given direction and returns a
@@ -107,6 +109,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:BulkMoveTo
     summary: |
       Moves a table of `Class.BasePart|BaseParts` to a table of
@@ -114,17 +118,17 @@ methods:
     description: |
       This function moves a table of `Class.BasePart|BaseParts` to a table of
       `Datatype.CFrame|CFrames` without necessarily firing the default property
-      `Class.Instance.Changed|Changed` events. This provides a very fast way to
+      `Class.Object.Changed|Changed` events. This provides a very fast way to
       move large numbers of parts, as you don't have to pay the cost of separate
       property sets for each individual part.
 
       The third argument allows you to further optimize the movement operation.
-      By default, the `Class.Instance.Changed|Changed` event of each part fires
+      By default, the `Class.Object.Changed|Changed` event of each part fires
       for `Class.BasePart.Position|Position`,
       `Class.BasePart.Orientation|Orientation`, and
       `Class.BasePart.CFrame|CFrame`. However, if you specify
       `Enum.BulkMoveMode|FireCFrameChanged` as the third argument, only the
-      `Class.Instance.Changed|Changed` event for the
+      `Class.Object.Changed|Changed` event for the
       `Class.BasePart.CFrame|CFrame` property will fire.
 
       Note that you should only use this function if you're sure that part
@@ -134,7 +138,7 @@ methods:
     code_samples:
     parameters:
       - name: partList
-        type: Objects
+        type: Instances
         default:
         summary: ''
       - name: cframeList
@@ -152,6 +156,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:FindPartOnRay
     summary: |
       Returns the first `Class.BasePart` or `Class.Terrain` cell intersecting
@@ -219,6 +225,8 @@ methods:
       with `Datatype.RaycastParams` for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:FindPartOnRayWithIgnoreList
     summary: |
       Returns the first `Class.BasePart` or `Class.Terrain` cell intersecting
@@ -238,7 +246,7 @@ methods:
         default:
         summary: ''
       - name: ignoreDescendantsTable
-        type: Objects
+        type: Instances
         default:
         summary: ''
       - name: terrainCellsAreCubes
@@ -263,6 +271,8 @@ methods:
       with `Datatype.RaycastParams` for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:FindPartOnRayWithWhitelist
     summary: |
       Returns the first `Class.BasePart` or `Class.Terrain` cell intersecting
@@ -286,7 +296,7 @@ methods:
         default:
         summary: ''
       - name: whitelistDescendantsTable
-        type: Objects
+        type: Instances
         default:
         summary: ''
       - name: ignoreWater
@@ -307,6 +317,8 @@ methods:
       with `Datatype.RaycastParams` for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:FindPartsInRegion3
     summary: |
       Returns an array of `Class.BasePart|BaseParts` in the given
@@ -358,7 +370,7 @@ methods:
         summary: |
           The maximum amount of `Class.BasePart|BaseParts` to be returned.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` within the `Datatype.Region3`.
     tags:
@@ -369,6 +381,8 @@ methods:
       for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:FindPartsInRegion3WithIgnoreList
     summary: |
       Returns an array of `Class.BasePart|BaseParts` in the given
@@ -397,7 +411,7 @@ methods:
         summary: |
           The `Datatype.Region3` to be checked.
       - name: ignoreDescendantsTable
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of objects to be ignored.
@@ -407,7 +421,7 @@ methods:
         summary: |
           The maximum number of `Class.BasePart|BaseParts` to be returned.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` found within the
           `Datatype.Region3`.
@@ -419,6 +433,8 @@ methods:
       for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:FindPartsInRegion3WithWhiteList
     summary: |
       Returns an array of `Class.BasePart|BaseParts` in the given
@@ -447,7 +463,7 @@ methods:
         summary: |
           The `Datatype.Region3` to be checked.
       - name: whitelistDescendantsTable
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of objects to check.
@@ -457,7 +473,7 @@ methods:
         summary: |
           The maximum number of `Class.BasePart|BaseParts` to be returned.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` within the `Datatype.Region3`.
     tags:
@@ -468,6 +484,8 @@ methods:
       for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:GetPartBoundsInBox
     summary: |
       Returns an array of parts whose **bounding boxes** overlap a given box.
@@ -508,7 +526,7 @@ methods:
         summary: |
           Contains reusable portions of the spatial query parameters.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` which matched the spatial
           query.
@@ -516,6 +534,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:GetPartBoundsInRadius
     summary: |
       Returns an array of parts whose **bounding boxes** overlap a given sphere.
@@ -556,7 +576,7 @@ methods:
         summary: |
           Contains reusable portions of the spatial query parameters.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` which matched the spatial
           query.
@@ -564,6 +584,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:GetPartsInPart
     summary: |
       Returns an array of parts whose occupied space is shared with the given
@@ -603,7 +625,7 @@ methods:
         summary: |
           Contains reusable portions of the spatial query parameters.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.BasePart|BaseParts` which matched the spatial
           query.
@@ -611,6 +633,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:IKMoveTo
     summary: |
       Moves the specified part to the specified location via inverse kinematics
@@ -679,6 +703,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:IsRegion3Empty
     summary: |
       Returns a bool indicating whether there are no `Class.BasePart|BaseParts`
@@ -754,6 +780,8 @@ methods:
       for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:IsRegion3EmptyWithIgnoreList
     summary: |
       Returns a boolean indicating whether there are no
@@ -783,7 +811,7 @@ methods:
         summary: |
           The `Datatype.Region3` to be checked.
       - name: ignoreDescendentsTable
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of objects to be ignored.
@@ -799,6 +827,8 @@ methods:
       for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:Raycast
     summary: |
       Casts a ray using an origin, direction, and optional
@@ -853,6 +883,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:Shapecast
     summary: ''
     description: ''
@@ -877,6 +909,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:Spherecast
     summary: |
       Casts a spherical shape in a given direction and returns a
@@ -933,6 +967,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:StepPhysics
     summary: |
       Advances the simulation for parts in the world forward based on a
@@ -963,7 +999,7 @@ methods:
           positive number. Larger values will increase the runtime of this
           function.
       - name: parts
-        type: Objects
+        type: Instances
         default: '{}'
         summary: |
           Optional array of parts that will be simulated. This set must contain
@@ -976,6 +1012,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:findPartOnRay
     summary: ''
     description: ''
@@ -1007,6 +1045,8 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: WorldRoot:findPartsInRegion3
     summary: ''
     description: ''
@@ -1025,7 +1065,7 @@ methods:
         default: 20
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags:
       - Deprecated
@@ -1034,5 +1074,7 @@ methods:
       `Class.WorldRoot:FindPartsInRegion3()` which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

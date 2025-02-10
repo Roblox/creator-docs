@@ -1,5 +1,5 @@
 ---
-title: Sharing Animations
+title: Share animations
 description: Part of the Roblox Build It, Play It Challenge - Island of Move. Share animations with other developers.
 prev: /education/build-it-play-it-island-of-move/go-beyond-the-challenge
 ---
@@ -10,7 +10,7 @@ Share animations with friends and fellow developers by exporting and importing t
 
 <Alert severity="info">
 <AlertTitle>Rules in Sharing Animations</AlertTitle>
-When sharing animations, keep in mind that an Asset ID can only used between the group or individual that owns the animation.
+When sharing animations, keep in mind that an asset ID can only be used between the group or individual that owns the animation.
 </Alert>
 
 **Exporting Animations**
@@ -27,7 +27,7 @@ Make sure to save your animation before exporting it.
 
 3. Right-click the animation name and select **Save to File**. This saves the animation as an `.RBXM` file on your computer, which can be shared. You can export more than one animation at a time.
 
-## Importing Animations
+## Import animations
 
 Animations saved in an `.RBXM` file can be imported into different rigs by yourself or by friends in any Roblox file.
 
@@ -46,7 +46,7 @@ Animations saved in an `.RBXM` file can be imported into different rigs by yours
 
    Next, in the drop-down menu, go to **Load** and select the name of the `.RBXM` file just imported.
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 **Issue**: Animation Not Loading
 In the original `.RBXM` file, make sure there is a saved `Class.KeyFrameSequence` object.

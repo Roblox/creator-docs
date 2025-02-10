@@ -13,6 +13,7 @@ inherits:
 tags:
   - NotCreatable
   - Settings
+  - NotReplicated
 deprecation_message: ''
 properties:
   - name: PhysicsSettings.AllowSleep
@@ -34,6 +35,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreAnchorsShown
     summary: |
       When set to true, parts that are `Class.BasePart.Anchored` will show a
@@ -55,6 +58,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreAssembliesShown
     summary: |
       When set to true, each physics assembly is assigned a unique color and the
@@ -78,6 +83,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreAssemblyCentersOfMassShown
     summary: ''
     description: ''
@@ -93,6 +100,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreAwakePartsHighlighted
     summary: |
       When set to true, parts that are actively being physically simulated will
@@ -112,6 +121,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreBodyTypesShown
     summary: |
       When set to true, `Class.Part` will be outlined with a specific color,
@@ -171,6 +182,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreCollisionCostsShown
     summary: ''
     description: ''
@@ -186,6 +199,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreConstraintForcesShownForSelectedOrHoveredInstances
     summary: ''
     description: ''
@@ -201,6 +216,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreConstraintTorquesShownForSelectedOrHoveredInstances
     summary: ''
     description: ''
@@ -216,6 +233,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreContactForcesShownForSelectedOrHoveredAssemblies
     summary: ''
     description: ''
@@ -231,6 +250,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreContactIslandsShown
     summary: |
       When set to true, each contact island will render `Class.SelectionBox`
@@ -252,6 +273,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreContactPointsShown
     summary: |
       When set to true, sphere adorns will be drawn at the contact points of
@@ -341,6 +364,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreGravityForcesShownForSelectedOrHoveredAssemblies
     summary: ''
     description: ''
@@ -356,6 +381,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreJointCoordinatesShown
     summary: |
       When set to true, XYZ axes are rendered at the `Class.BasePart.CFrame` of
@@ -375,6 +402,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreMagnitudesShownForDrawnForcesAndTorques
     summary: ''
     description: ''
@@ -390,6 +419,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreMechanismsShown
     summary: |
       When set to true, every individual mechanism of parts is given a unique
@@ -409,6 +440,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreModelCoordsShown
     summary: |
       An ancient property that hasn't work correctly since late 2007. It's
@@ -430,6 +463,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreNonAnchorsShown
     summary: ''
     description: ''
@@ -445,6 +480,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreOwnersShown
     summary: |
       When set to true, each player's character is outlined with a unique color,
@@ -466,6 +503,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.ArePartCoordsShown
     summary: |
       An ancient property that hasn't worked correctly since late 2007. It's
@@ -487,6 +526,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreRegionsShown
     summary: |
       When set to true, a cylinder is drawn around each player's character,
@@ -509,6 +550,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreSolverIslandsShown
     summary: ''
     description: ''
@@ -524,6 +567,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreTerrainReplicationRegionsShown
     summary: ''
     description: ''
@@ -539,6 +584,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreTimestepsShown
     summary: ''
     description: ''
@@ -554,6 +601,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreUnalignedPartsShown
     summary: |
       When set to true, parts that aren't aligned on the 1x1x1 grid will be
@@ -573,6 +622,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.AreWorldCoordsShown
     summary: |
       An ancient property that hasn't worked correctly since late 2007. It's
@@ -594,6 +645,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.DisableCSGv2
     summary: |
       When set to true, Roblox will fall back to using its legacy CSG solver
@@ -613,6 +666,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.DisableCSGv3ForPlugins
     summary: ''
     description: ''
@@ -628,6 +683,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.DrawConstraintsNetForce
     summary: ''
     description: ''
@@ -643,6 +700,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.DrawContactsNetForce
     summary: ''
     description: ''
@@ -658,6 +717,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.DrawTotalNetForce
     summary: ''
     description: ''
@@ -673,6 +734,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.EnableForceVisualizationSmoothing
     summary: ''
     description: ''
@@ -688,6 +751,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.FluidForceDrawScale
     summary: |
       Sets the scale of arrows drawn for aerodynamic force visualization.
@@ -708,6 +773,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.ForceCSGv2
     summary: ''
     description: ''
@@ -725,6 +792,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.ForceDrawScale
     summary: ''
     description: ''
@@ -740,6 +809,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.ForceVisualizationSmoothingSteps
     summary: ''
     description: ''
@@ -755,6 +826,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.IsInterpolationThrottleShown
     summary: ''
     description: ''
@@ -770,6 +843,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.IsReceiveAgeShown
     summary: |
       This property is supposed to show the `Class.BasePart.ReceiveAge` of a
@@ -789,6 +864,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.IsTreeShown
     summary: |
       When set to true, the joint connections of each part, and the states of
@@ -861,6 +938,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.PhysicsEnvironmentalThrottle
     summary: |
       Controls the throttle rate of Roblox's physics engine.
@@ -881,6 +960,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.ShowDecompositionGeometry
     summary: |
       When set to true, the underlying collision geometry for
@@ -900,6 +981,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.ShowFluidForcesForSelectedOrHoveredMechanisms
     summary: |
       When set to true, enables aerodynamic visualization for selected or
@@ -921,6 +1004,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.ShowInstanceNamesForDrawnForcesAndTorques
     summary: ''
     description: ''
@@ -936,6 +1021,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.SolverConvergenceMetricType
     summary: ''
     description: ''
@@ -951,6 +1038,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.SolverConvergenceVisualizationMode
     summary: ''
     description: ''
@@ -966,6 +1055,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.ThrottleAdjustTime
     summary: |
       If the `Class.PhysicsSettings.PhysicsEnvironmentalThrottle` is set to
@@ -989,6 +1080,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.TorqueDrawScale
     summary: ''
     description: ''
@@ -1004,6 +1097,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: PhysicsSettings.UseCSGv2
     summary: |
       If set to true, version 2 of Roblox's CSG solver will be used instead of
@@ -1023,6 +1118,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

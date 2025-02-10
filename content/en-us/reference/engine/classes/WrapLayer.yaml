@@ -37,6 +37,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: WrapLayer.BindOffset
     summary: |
       `Datatype.CFrame` is used to adjust a binding point for clothing item
@@ -61,6 +64,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: WrapLayer.Color
     summary: |
       Sets color used for the debug rendering. See `Class.WrapTarget.DebugMode`.
@@ -80,6 +86,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: WrapLayer.DebugMode
     summary: |
       Allows switching between different debugging visualization modes for cage
@@ -101,6 +110,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: WrapLayer.Enabled
     summary: |
       Allows for disabling of the `Class.WrapLayer` object as if it does not
@@ -120,6 +132,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: WrapLayer.Order
     summary: |
       Controls the composition order for layered clothing.
@@ -140,6 +155,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: WrapLayer.Puffiness
     summary: |
       Controls how much underlying clothing items inflate the current clothing
@@ -166,6 +184,28 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
+  - name: WrapLayer.ReferenceMeshContent
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Content
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: WrapLayer.ReferenceMeshId
     summary: |
       AssetID for reference mesh used to define Inner Cage of a 3D object.
@@ -190,6 +230,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: WrapLayer.ReferenceOrigin
     summary: |
       Reference mesh offset relative to parent MeshPart (in the parent MeshPart
@@ -213,6 +256,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: WrapLayer.ReferenceOriginWorld
     summary: |
       Reference mesh offset relative to parent MeshPart (in the world space)
@@ -236,6 +282,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: WrapLayer.ShrinkFactor
     summary: |
       Allows slight shrinking/expanding of the resulting render mesh, without
@@ -265,6 +314,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

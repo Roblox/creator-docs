@@ -7,6 +7,9 @@ summary: |
 description: |
   Configures properties of the optional channel tabs in the default chat window.
   It is parented to `Class.TextChatService`.
+
+  To learn more, see
+  [Customizing the Chat Window](../../../chat/chat-window.md).
 code_samples: []
 inherits:
   - TextChatConfigurations
@@ -18,7 +21,8 @@ properties:
     summary: |
       Actual screen position of the channel tab bar, in pixels.
     description: |
-      Read-only property that provides the screen position of the channel tab bar in pixels. Behaves similarly to `Class.GuiBase2d.AbsolutePosition`.
+      Read-only property that provides the screen position of the channel tab
+      bar in pixels. Behaves similarly to `Class.GuiBase2d.AbsolutePosition`.
     code_samples: []
     type: Vector2
     tags:
@@ -33,11 +37,15 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.AbsoluteSize
     summary: |
       Actual screen size of the channel tab bar, in pixels.
     description: |
-      Read-only property that provides the screen size of the channel tab bar in pixels. Behaves similarly to `Class.GuiBase2d.AbsoluteSize`.
+      Read-only property that provides the screen size of the channel tab bar in
+      pixels. Behaves similarly to `Class.GuiBase2d.AbsoluteSize`.
     code_samples: []
     type: Vector2
     tags:
@@ -52,6 +60,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.BackgroundColor3
     summary: |
       Background color of the channel tabs.
@@ -73,6 +84,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.BackgroundTransparency
     summary: |
       Background transparency of the channel tabs.
@@ -94,6 +108,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.Enabled
     summary: |
       Whether to show the channel tabs.
@@ -111,11 +128,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.FontFace
     summary: |
       Font used to render text in the channel tabs.
     description: |
-      Font used to render text in the channel tabs. Default is `Enum.Font.BuilderSansBold`.
+      Font used to render text in the channel tabs. Default is
+      `Enum.Font.BuilderSansBold`.
     code_samples: []
     type: Font
     tags: []
@@ -128,6 +149,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.HoverBackgroundColor3
     summary: |
       Background color of a channel tab when hovering over it.
@@ -146,6 +170,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.SelectedTabTextColor3
     summary: |
       Color of text in a selected tab.
@@ -164,6 +191,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.TextColor3
     summary: |
       Color of text in an unselected tab.
@@ -182,6 +212,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.TextSize
     summary: |
       Size of the text in channel tabs.
@@ -199,6 +232,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.TextStrokeColor3
     summary: |
       Color of the text stroke for text in channel tabs.
@@ -217,6 +253,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: ChannelTabsConfiguration.TextStrokeTransparency
     summary: |
       Transparency of the text stroke for text in channel tabs.
@@ -235,6 +274,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

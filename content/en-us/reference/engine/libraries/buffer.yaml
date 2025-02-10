@@ -366,7 +366,7 @@ functions:
         type: number
         default:
         summary: |
-          An integer number in range [0, 65,536].
+          An integer number in range [0, 65,535].
     returns:
       - type: void
         summary: ''

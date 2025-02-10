@@ -19,7 +19,7 @@ description: |
 
   Once created at the beginning of an input, the same object persists and is
   updated until the input ends. As a result, you can track the object's changes
-  using the `Class.Instance.Changed|Changed` event as the user changes the input
+  using the `Class.Object.Changed|Changed` event as the user changes the input
   in question. You can also place these objects into a list of active inputs
   track and interact with the object after it's creation by an event such as
   `Class.UserInputService.InputBegan`. This is mostly useful for touch events,
@@ -52,9 +52,8 @@ properties:
       `Class.InputObject.Position|position` to track the position and movement
       of the user's mouse/joystick, such as when you're creating custom movement
       or camera scripts. Consider tracking input object changes using the
-      `Class.Instance.Changed` event or when user input changes via events such
-      as `Class.UserInputService.InputChanged` and
-      `Class.GuiObject.InputChanged`.
+      `Class.Object.Changed` event or when user input changes via events such as
+      `Class.UserInputService.InputChanged` and `Class.GuiObject.InputChanged`.
 
       Note that an `Class.InputObject` corresponding to
       `Enum.UserInputType.MouseButton1` (left click) and
@@ -89,6 +88,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: InputObject.KeyCode
     summary: |
       Contains an Enum that describes the kind of input used.
@@ -1905,6 +1907,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: InputObject.Position
     summary: |
       Describes a positional value of this input.
@@ -1957,6 +1962,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: InputObject.UserInputState
     summary: |
       Describes the state of an input being performed, following a specific flow
@@ -1988,6 +1996,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: InputObject.UserInputType
     summary: |
       Describes the kind of input being performed (mouse, keyboard, gamepad,
@@ -2019,6 +2030,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Input
+    writeCapabilities: []
 methods:
   - name: InputObject:IsModifierKeyDown
     summary: ''
@@ -2036,5 +2050,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

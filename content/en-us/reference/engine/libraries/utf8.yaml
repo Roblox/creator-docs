@@ -161,7 +161,7 @@ functions:
         default: 1
         summary: ''
     returns:
-      - type: int
+      - type: int?
         summary: ''
     tags:
     code_samples:

@@ -1,5 +1,5 @@
 ---
-title: Economy Events
+title: Economy events
 description: Use economy events to visualize your experience's economy and track user sources, sinks and wallets.
 ---
 
@@ -11,7 +11,7 @@ description: Use economy events to visualize your experience's economy and track
 
 Once your experience begins tracking Economy events, you'll unlock the Economy page of the Analytics dashboard on the Creator Hub.
 
-## Tracking Economy Events
+## Track economy events
 
 To unlock the Economy dashboard, you need to track some economy events in your experience. Start by identifying where users **source** (i.e. gain) and **sink** (i.e. spend) resources in your experience. These are represented in code by `Enum.AnalyticsEconomyFlowType`, which can be either `Source` or `Sink`.
 
@@ -19,7 +19,7 @@ To unlock the Economy dashboard, you need to track some economy events in your e
 Events can only be sent from the server and in published experiences. Events can't be sent from the client or Studio.
 </Alert>
 
-### Transaction Types
+### Transaction types
 
 Each source and sink event requires a transaction type, encoded with `Enum.AnalyticsEconomyTransactionType`. By default, the options are:
 
@@ -32,7 +32,7 @@ Each source and sink event requires a transaction type, encoded with `Enum.Analy
 
 These types appear on the dashboard. It's a good idea to start with the default categories, but if you need to you can also provide your own transaction type names when logging an event.
 
-### Tracking Sources
+### Track sources
 
 The following sample uses `Class.AnalyticsService.LogEconomyEvent` to log two different economy events when users complete the first and second levels in the experience and earn some coins.
 
@@ -76,7 +76,7 @@ AnalyticsService:LogEconomyEvent(
 )
 ```
 
-### Tracking Sinks
+### Track sinks
 
 The following sample logs an event when users spend coins to buy a `DoubleJumpUpgrade`. Note the `Sink` flow type and the `Shop` transaction type when compared to the source tracking samples.
 
@@ -97,9 +97,9 @@ AnalyticsService:LogEconomyEvent(
 )
 ```
 
-For information on `Class.AnalyticsService` limitations, see [event tracking limitations](./event-types.md#event-tracking-limitations).
+For information on `Class.AnalyticsService` limitations, see [Event tracking limitations](./event-types.md#event-tracking-limitations).
 
-## Using Custom Fields
+## Use custom fields
 
 Economy events also allow breaking down on custom fields to support easier comparison between segments. For example, you can provide quest names to each event to see which ones users are making the most money from, or attach store locations to see if users prefer one location over another.
 
@@ -107,9 +107,9 @@ You can breakdown by custom fields by using the breakdown selector.
 
 <img src="../../assets/analytics/event-types/Custom-Event-Breakdown.png" width = "40%" alt="A dropdown indicating the three custom fields you can compare across, along with standard breakdowns like age, gender, operating system and more."/>
 
-For more information, see [custom fields](./custom-fields.md).
+For more information, see [Custom fields](./custom-fields.md).
 
-## Using Economy to Grow Your Experience
+## Use economy to grow your experience
 
 The Economy dashboard includes five charts to help you take action to grow your revenue. You can add up to five currencies of resources, and all charts can be filtered by gender, age group, platform, OS, and up to three custom fields specific to your experience.
 
@@ -129,4 +129,4 @@ The Economy dashboard includes five charts to help you take action to grow your 
 
   <img src="../../assets/analytics/event-types/All-Sources-Sinks.png" alt="All Sources and Sinks chart populated with data."/>
 
-For more tips on how to balance your in-experience economy, see [Balancing Virtual Economies](../game-design/balancing-virtual-economies.md).
+For more tips on how to balance your in-experience economy, see [Balance virtual economies](../game-design/balance-virtual-economies.md).

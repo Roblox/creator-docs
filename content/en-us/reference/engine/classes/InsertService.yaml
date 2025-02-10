@@ -43,6 +43,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService.AllowInsertFreeModels
     summary: |
       Indicates whether ''Free Models'' can be inserted into the game.
@@ -66,6 +68,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: InsertService:ApproveAssetId
     summary: ''
@@ -85,6 +89,8 @@ methods:
       This item is deprecated. Do not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:ApproveAssetVersionId
     summary: ''
     description: ''
@@ -103,12 +109,14 @@ methods:
       This item is deprecated. Do not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:Insert
     summary: |
-      Inserts `Class.Instance` into Workspace.
+      Inserts `Class.Instance` into `Class.Workspace`.
     description: |
-      The Insert function is an ancient method used to insert an
-      `Class.Instance` into Workspace.
+      This function is a legacy method used to insert an `Class.Instance` into
+      `Class.Workspace`.
     code_samples:
       - InsertService-Insert1
     parameters:
@@ -126,6 +134,8 @@ methods:
       which should be used in all new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:CreateMeshPartAsync
     summary: |
       Creates a new `Class.MeshPart` with specified fidelity values.
@@ -162,6 +172,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:GetBaseCategories
     summary: ''
     description: ''
@@ -177,6 +189,8 @@ methods:
       This item is deprecated. Do not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:GetBaseSets
     summary: |
       Returns an array of dictionaries, containing information about various
@@ -197,6 +211,8 @@ methods:
       from Roblox.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:GetCollection
     summary: |
       Returns the most recently uploaded models in the specified category.
@@ -220,6 +236,8 @@ methods:
       from Roblox.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:GetFreeDecals
     summary: |
       Retrieves a list of free Decals from the Catalog.
@@ -276,6 +294,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:GetFreeModels
     summary: |
       Retrieves a list of Free Models from the Catalog.
@@ -330,6 +350,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:GetLatestAssetVersionAsync
     summary: |
       Returns the latest AssetVersionId of an asset for assets created by the
@@ -355,6 +377,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:GetUserCategories
     summary: ''
     description: ''
@@ -374,6 +398,8 @@ methods:
       This item is deprecated. Do not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:GetUserSets
     summary: |
       Returns an array of dictionaries, containing information about sets owned
@@ -448,6 +474,8 @@ methods:
       from Roblox.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:LoadAsset
     summary: |
       Returns a `Class.Model` containing the asset.
@@ -458,10 +486,12 @@ methods:
       has the asset ID **_257489726_**, you can use:
 
       ```lua
-      local assetId = 257489726
       local InsertService = game:GetService("InsertService")
+      local Workspace = game:GetService("Workspace")
+
+      local assetId = 257489726
       local model = InsertService:LoadAsset(assetId)
-      model.Parent = workspace
+      model.Parent = Workspace
       ```
 
       Calls to this function may fail if a server providing a model is having
@@ -469,12 +499,15 @@ methods:
       function in `pcall` to catch these kinds of errors.
 
       ```lua
-      local assetId = 257489726
       local InsertService = game:GetService("InsertService")
+      local Workspace = game:GetService("Workspace")
+
+      local assetId = 257489726
+
       local success, model = pcall(InsertService.LoadAsset, InsertService, assetId)
       if success and model then
       	print("Model loaded successfully")
-      	model.Parent = workspace
+      	model.Parent = Workspace
       else
       	print("Model failed to load!")
       end
@@ -509,6 +542,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:LoadAssetVersion
     summary: |
       Returns a model inserted into `Class.InsertService` containing the asset
@@ -531,6 +566,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: InsertService:loadAsset
     summary: ''
     description: ''
@@ -551,5 +588,7 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

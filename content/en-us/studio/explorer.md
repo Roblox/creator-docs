@@ -1,5 +1,5 @@
 ---
-title: Explorer Window
+title: Explorer window
 description: The Explorer window shows a hierarchical list of every instance inside an experience.
 ---
 
@@ -7,16 +7,16 @@ The **Explorer** window shows a hierarchical list of every instance inside an ex
 
 <img src="../assets/studio/general/View-Tab-Explorer.png" width="876" alt="Explorer toggle button in Studio" />
 
-## Parent-Child Hierarchy
+## Parent-child hierarchy
 
-Roblox uses the concept of **parenting** to organize objects. All children of a parent object appear under its branch when [expanded](#expanding-and-collapsing-branches).
+Roblox uses the concept of **parenting** to organize objects. All children of a parent object appear under its branch when [expanded](#expand-and-collapse-branches).
 
 <figure>
 <img src="../assets/studio/explorer/Parent-Child-Hierarchy.jpg" width="800" alt="Explorer hierarchy showing Camera, Terrain, Block, and SignModel as children of Workspace; Board and Post as children of SignModel" />
 <figcaption>Camera, Terrain, Block, and SignModel as children of Workspace; Board and Post as children of SignModel</figcaption>
 </figure>
 
-## Expanding and Collapsing Branches
+## Expand and collapse branches
 
 Clicking the arrow next to a parent branch, or pressing <kbd>&rarr;</kbd> or <kbd>&larr;</kbd> when a parent is selected, expands or collapses only that branch (nested child branches remain in their current state). To expand or collapse **all** branches within a multi-nested hierarchy, hold <kbd>Shift</kbd> when clicking the arrow.
 
@@ -32,9 +32,9 @@ Clicking the arrow next to a parent branch, or pressing <kbd>&rarr;</kbd> or <kb
   </TabItem>
 </Tabs>
 
-## Inserting and Parenting
+## Insert and parent
 
-### Insert New Object
+### Insert new object
 
 Some objects like primitive [parts](../parts/index.md) can be inserted from the [Model](../studio/model-tab.md) tab, but a full array of objects can be inserted through any of the following methods:
 
@@ -58,7 +58,7 @@ You can further customize the behavior of the insertion workflow as follows:
   - **Select object after insert** automatically selects new objects after you insert them.
   - **Show only recommended objects** limits the list of objects to those which are logical or functional within the parent.
 
-### Paste From Clipboard
+### Paste from clipboard
 
 For an object copied to the clipboard, you can paste it as a new child to the `Class.Workspace`, or into one or more existing parents.
 
@@ -84,7 +84,7 @@ For an object copied to the clipboard, you can paste it as a new child to the `C
    If you select multiple objects and right-click, the options above will appear as **Paste&nbsp;Into&nbsp;Selected&nbsp;\[\]**, and completing the operation will paste the clipboard item(s) into **all** of the selected parents. This is a convenient way to paste the same child into multiple parents, such as a common `Class.Texture` into several different `Class.Part|Parts`.
    </Alert>
 
-### Changing Parents
+### Change parents
 
 To change the parent of one or more children (reparent), simply drag and drop them onto the new parent.
 
@@ -93,7 +93,7 @@ To change the parent of one or more children (reparent), simply drag and drop th
 <figcaption>Reparent BlockB from Workspace to SignModel</figcaption>
 </figure>
 
-## Organizing by Folders
+## Organize by folders
 
 Like directories/folders on a computer, the `Class.Folder` object is a useful way to organize objects. For instance, if you want to store all environmental sounds in a logical place, you can create a folder and place multiple `Class.Sound` objects within it.
 
@@ -105,34 +105,34 @@ You can organize objects into folders as follows:
 
 - Select multiple objects, right-click them, and then select **Group&nbsp;as&nbsp;a&nbsp;Folder** from the context menu or press <kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>G</kbd> on Windows or <kbd>⌥</kbd><kbd>⌘</kbd><kbd>G</kbd> on Mac.
 
-## Filtering Instances
+## Filter instances
 
-Through the **Filter Workspace** input near the top of the window, You can filter instances by [name](#name-filter), [property](#property-filters), class/subclass/tag [bespoke](#bespoke-filters) queries, and [ancestry](#ancestry-filters) queries. You can also [combine parameters](#combining-parameters) for advanced logical filtering.
+Through the **Filter Workspace** input near the top of the window, You can filter instances by [name](#name-filter), [property](#property-filters), class/subclass/tag [bespoke](#bespoke-filters) queries, and [ancestry](#ancestry-filters) queries. You can also [combine parameters](#combine-parameters) for advanced logical filtering.
 
 <img src="../assets/studio/explorer/Filter-Diagram.png" width="372" alt="Objects filtered by query in Filter Workspace field" />
 
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-A.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Common filter selector</figcaption></p></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p><figcaption>Common filter selector</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-B.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Clear filter query</figcaption></p></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p><figcaption>Clear filter query</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-C.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Navigate up and down through filtered results</figcaption></p></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p><figcaption>Navigate up and down through filtered results</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-D.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Select all filtered results</figcaption></p></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p><figcaption>Select all filtered results</figcaption></p></Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
 	<Grid item><img src="../assets/misc/Box-Label-E.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p><figcaption>Refresh filtered results</figcaption></p></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p><figcaption>Refresh filtered results</figcaption></p></Grid>
 </Grid>
 
-### Name Filter
+### Name filter
 
 Typing in a basic string yields **name** matched instances. For example, filtering by the keyword "script" finds all instances containing it, such as **Server<u>Script</u>Service** and **StarterPlayer<u>Script</u>s**.
 
@@ -143,7 +143,7 @@ A name is a sequence of characters that are alphanumeric, `_`, `-`, or `.`.
 In all of the following filtering methods, exercise caution when filtering for instances whose names contain spaces, as the filter logic may confuse spaces for a [combined filter](#combining-parameters). When filtering for names with spaces, you should surround the full name with double quotes, for example `tag:"Light Source"` to filter by the full tag name of **Light&nbsp;Source**.
 </Alert>
 
-### Property Filters
+### Property filters
 
 You can filter by property equality or value comparisons. Most properties are supported, and the filter works with partial matches, ignores spacing, and is non-case-sensitive.
 
@@ -152,7 +152,7 @@ You can filter by property equality or value comparisons. Most properties are su
    <table size="small">
    <thead>
    <tr>
-     <th>Example Filter</th>
+     <th>Example filter</th>
      <th>Result</th>
    </tr>
    </thead>
@@ -173,7 +173,7 @@ You can filter by property equality or value comparisons. Most properties are su
    <table size="small">
    <thead>
    <tr>
-     <th>Example Filter</th>
+     <th>Example filter</th>
      <th>Result</th>
    </tr>
    </thead>
@@ -194,7 +194,7 @@ You can filter by property equality or value comparisons. Most properties are su
    <table size="small">
    <thead>
    <tr>
-     <th>Example Filter</th>
+     <th>Example filter</th>
      <th>Result</th>
    </tr>
    </thead>
@@ -215,7 +215,7 @@ You can filter by property equality or value comparisons. Most properties are su
    <table size="small">
    <thead>
    <tr>
-     <th>Example Filter</th>
+     <th>Example filter</th>
      <th>Result</th>
    </tr>
    </thead>
@@ -231,7 +231,7 @@ You can filter by property equality or value comparisons. Most properties are su
    </tbody>
    </table>
 
-### Bespoke Filters
+### Bespoke filters
 
 Classes, and subclasses, and tags are filtered through various bespoke queries, including:
 
@@ -239,7 +239,7 @@ Classes, and subclasses, and tags are filtered through various bespoke queries, 
 - `is:[SubClass]` finds everything that is a **subclass** of `[SubClass]`. For example, `is:BasePart` finds everything that is a subclass of `Class.BasePart`, such as `Class.Part` and `Class.MeshPart`.
 - `tag:[TagName]` finds everything with a `Class.CollectionService` tag of `[TagName]`. For example, `tag:LightSource` finds everything that is tagged **LightSource**. You can add tags using the [Tags](../studio/properties.md#instance-tags) section of an instance's properties, or Studio's [Tag&nbsp;Editor](../studio/view-tab.md#windows-and-tools), and tag names will autocomplete.
 
-### Ancestry Filters
+### Ancestry filters
 
 You can filter within a specific scope using the `.` operator, chain operators together for highly specific filters, or use `*` as a wildcard.
 
@@ -250,7 +250,7 @@ You can filter within a specific scope using the `.` operator, chain operators t
    <table size="small">
    <thead>
    <tr>
-     <th>Example Filter</th>
+     <th>Example filter</th>
      <th>Result</th>
    </tr>
    </thead>
@@ -276,7 +276,7 @@ You can filter within a specific scope using the `.` operator, chain operators t
 
 - `[Parent].**` finds all descendants of a parent. For example, `CarModel.**` finds all descendants of **CarModel**.
 
-### Combining Parameters
+### Combine parameters
 
 For advanced logical searches, you can combine filters through unions and grouping.
 
@@ -285,7 +285,7 @@ For advanced logical searches, you can combine filters through unions and groupi
    <table size="small">
    <thead>
    <tr>
-     <th>Example Filter</th>
+     <th>Example filter</th>
      <th>Result</th>
    </tr>
    </thead>
@@ -326,13 +326,13 @@ For advanced logical searches, you can combine filters through unions and groupi
    </tbody>
    </table>
 
-## Selecting Filtered Results
+## Select filtered results
 
-Within a [filtered](#filtering-instances) hierarchy, certain key shortcuts and mouse operations behave differently than they do within a non-filtered hierarchy.
+Within a [filtered](#filter-instances) hierarchy, certain key shortcuts and mouse operations behave differently than they do within a non-filtered hierarchy.
 
-### Select All
+### Select all
 
-Within a non-filtered hierarchy, pressing <kbd>Ctrl</kbd><kbd>A</kbd> on Windows or <kbd>⌘</kbd><kbd>A</kbd> on Mac selects all objects. Within a [filtered](#filtering-instances) hierarchy, the same shortcut or the "select&nbsp;all" button selects only the **filter-matching** objects.
+Within a non-filtered hierarchy, pressing <kbd>Ctrl</kbd><kbd>A</kbd> on Windows or <kbd>⌘</kbd><kbd>A</kbd> on Mac selects all objects. Within a [filtered](#filter-instances) hierarchy, the same shortcut or the "select&nbsp;all" button selects only the **filter-matching** objects.
 
 <Tabs>
   <TabItem label="Non-Filtered">
@@ -349,11 +349,11 @@ Within a non-filtered hierarchy, pressing <kbd>Ctrl</kbd><kbd>A</kbd> on Windows
   </TabItem>
 </Tabs>
 
-### Shift-Select
+### Shift-select
 
 Within a non-filtered hierarchy, clicking an object and then <kbd>Shift</kbd>-clicking another object selects everything within the range.
 
-Within a [filtered](#filtering-instances) hierarchy, if both the initially clicked object **and** the <kbd>Shift</kbd>-clicked object match the filter query, only filter-matching objects within the range are selected.
+Within a [filtered](#filter-instances) hierarchy, if both the initially clicked object **and** the <kbd>Shift</kbd>-clicked object match the filter query, only filter-matching objects within the range are selected.
 
 <Tabs>
   <TabItem label="Non-Filtered">
@@ -370,11 +370,11 @@ Within a [filtered](#filtering-instances) hierarchy, if both the initially click
   </TabItem>
 </Tabs>
 
-### Drag Select
+### Drag select
 
 Clicking and dragging from the right side of the window initiates a selection box. Within a non-filtered hierarchy, everything within the box is selected.
 
-Within a [filtered](#filtering-instances) hierarchy, only filter-matching objects within the selection box are selected.
+Within a [filtered](#filter-instances) hierarchy, only filter-matching objects within the selection box are selected.
 
 <Tabs>
   <TabItem label="Non-Filtered">
@@ -391,7 +391,7 @@ Within a [filtered](#filtering-instances) hierarchy, only filter-matching object
   </TabItem>
 </Tabs>
 
-## Additional Key Shortcuts
+## Additional key shortcuts
 
 <table>
   <thead>

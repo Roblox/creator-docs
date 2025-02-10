@@ -11,7 +11,7 @@ description: |
   servers, so you can only use `Class.DataStoreService` within a `Class.Script`
   or a `Class.ModuleScript` that is used by a `Class.Script`.
 
-  See [Data Stores](../../../cloud-services/data-stores/index.md) for an
+  See [Data stores](../../../cloud-services/data-stores/index.md) for an
   in-depth guide on data structure, management, error handling, etc.
 code_samples:
   - DataStore-Budget
@@ -49,6 +49,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - DataStore
+    writeCapabilities: []
 methods:
   - name: DataStoreService:GetDataStore
     summary: |
@@ -63,7 +66,8 @@ methods:
       data store. This function also accepts an optional
       `Class.DataStoreOptions` instance which includes options for enabling
       `Class.DataStoreOptions.AllScopes|AllScopes`. See
-      [Data Stores](../../../cloud-services/data-stores) for details on scope.
+      [Data stores](../../../cloud-services/data-stores/index.md) for details on
+      scope.
     code_samples:
     parameters:
       - name: name
@@ -90,6 +94,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DataStoreService:GetGlobalDataStore
     summary: |
       Returns the default data store.
@@ -107,6 +113,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DataStoreService:GetOrderedDataStore
     summary: |
       Get an `Class.OrderedDataStore` given a name and optional scope.
@@ -133,6 +141,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DataStoreService:GetRequestBudgetForRequestType
     summary: |
       Returns the number of requests that can be made by the given request type.
@@ -156,6 +166,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DataStoreService:ListDataStoresAsync
     summary: |
       Returns a `Class.DataStoreListingPages` object for enumerating through all
@@ -179,8 +191,9 @@ methods:
         type: int
         default: 0
         summary: |
-          **(Optional)** Number of items to be returned in each page. By default
-          is 32.
+          **(Optional)** Number of items to be returned in each page. If no
+          value is given, the engine sends a default value of 0 to the data
+          store web service, which in turn defaults to 32 items per page.
       - name: cursor
         type: string
         default: ''
@@ -197,5 +210,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

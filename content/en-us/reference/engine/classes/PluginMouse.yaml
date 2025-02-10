@@ -37,11 +37,13 @@ events:
     code_samples:
     parameters:
       - name: instances
-        type: Objects
+        type: Instances
         default:
         summary: ''
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

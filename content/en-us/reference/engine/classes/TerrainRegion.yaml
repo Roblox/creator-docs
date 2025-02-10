@@ -37,6 +37,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: TerrainRegion.SizeInCells
     summary: |
       The size of this TerrainRegion in cells.
@@ -56,6 +58,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: TerrainRegion:ConvertToSmooth
     summary: |
@@ -78,5 +82,7 @@ methods:
       has been removed. Do not use it for new work.
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

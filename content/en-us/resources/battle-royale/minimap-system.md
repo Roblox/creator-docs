@@ -1,5 +1,5 @@
 ---
-title: Minimap System
+title: Minimap system
 comments:
 description: Explains the minimap implementation details for the Battle Royale game kit.
 prev: /resources/battle-royale/building-system
@@ -24,7 +24,7 @@ alt="Minimap Objects"
 src="../../assets/resources/battle-royale/minimap-system/Battle-Royale-Minimap-Objects.png"
 width="320" />
 
-## Adding Indicators
+## Add indicators
 
 To add new indicators that show up on the minimap, complete these steps:
 
@@ -48,7 +48,7 @@ To add new indicators that show up on the minimap, complete these steps:
    	MinimapGui.addMapTag(tag, indicatorLabel)
    ```
 
-## Customizing the Minimap
+## Customize the minimap
 
 To customize the minimap or use the minimap system with your own map and minimap image, you can change these values in `ReplicatedFirst/Configurations/MainConfiguration`:
 

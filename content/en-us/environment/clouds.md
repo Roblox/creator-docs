@@ -1,5 +1,5 @@
 ---
-title: Dynamic Clouds
+title: Dynamic clouds
 description: Dynamic Clouds render realistic, customizable clouds that drift slowly across the sky.
 ---
 
@@ -7,22 +7,23 @@ Roblox's **dynamic clouds** are realistic clouds that drift slowly across the sk
 
 <video src="../assets/lighting-and-effects/clouds/Showcase.mp4" controls width="100%" alt="Video of wind blowing dynamic clouds across the sky"></video>
 
-## Enabling Clouds
+## Enable clouds
 
 You can manage dynamic clouds in an experience through the `Class.Clouds` object. While you can place this object anywhere for organization or replication purposes, clouds only render if you parent the object under the `Class.Terrain` class.
 
 To enable dynamic clouds:
 
-1. In the [Explorer](../studio/explorer.md) window, hover over **Terrain** and click the &CirclePlus; button. A contextual menu displays.
+1. In the **Explorer** window, hover over **Terrain** and click the &CirclePlus; button. A contextual menu displays.
 1. From the menu, insert **Clouds**.
 
    <img src="../assets/studio/explorer/Terrain-Clouds.png" width="320" alt="Clouds object shown in Explorer window of Studio" />
 
-1. Adjust the appearance of clouds through the new object's [properties](#cloud-properties) and, if desired, set the clouds in motion through [global&nbsp;wind](../environment/global-wind.md).
+1. Adjust the appearance of clouds through the new object's properties.
+1. Set the clouds in motion through [global&nbsp;wind](../environment/global-wind.md).
 
-## Cloud Properties
+## Cloud properties
 
-From the `Class.Clouds` object under `Class.Terrain`, you can adjust the appearance of clouds through the [Properties](../studio/properties.md) window.
+From the `Class.Clouds` object under `Class.Terrain`, you can adjust the appearance of clouds through the Properties window.
 
 ### Cover
 

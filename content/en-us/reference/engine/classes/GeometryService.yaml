@@ -28,19 +28,21 @@ methods:
       whether to reparent recommended constraints and attachments to their
       respective parents.
 
-      Note that the `options` table can contain a `tolerance` value (number)
-      and/or a `WeldConstraintPreserve` value (`Enum.WeldConstraintPreserve`).
+      Note that the `options` dictionary can contain the following:
 
-      - `tolerance` – The distance tolerance, in regards to `Class.Attachment`
+      - `tolerance` — The distance tolerance, in regards to `Class.Attachment`
         preservation, between the attachment and the closest point on the
         original part's surface versus the closest point on the resulting part's
         surface. If the resulting distance following the solid modeling
         operation is greater than this value, the `Class.Instance.Parent|Parent`
         of attachments and their associated constraints will be `nil` in the
         returned recommendation table.
-      - `weldConstraintPreserve` – A `Enum.WeldConstraintPreserve` enum value
+      - `weldConstraintPreserve` — A `Enum.WeldConstraintPreserve` enum value
         describing how `Class.WeldConstraint|WeldConstraints` are preserved in
         the resulting recommendation table.
+      - `dropAttachmentsWithoutConstraints` — Boolean with default of `true`. If
+        set to `false`, `Class.Attachment|Attachments` that have no
+        `Class.Constraint|Constraints` will be preserved.
     code_samples:
       - GeometryService-CalculateConstraintsToPreserve
     parameters:
@@ -59,9 +61,9 @@ methods:
         type: Dictionary
         default: nil
         summary: |
-          Options table for the method:
+          Options dictionary for the method:
 
-          - `tolerance` – The distance tolerance, in regards to
+          - `tolerance` — The distance tolerance, in regards to
             `Class.Attachment` preservation, between the attachment and the
             closest point on the original part's surface versus the closest
             point on the resulting part's surface. If the resulting distance
@@ -69,9 +71,12 @@ methods:
             the `Class.Instance.Parent|Parent` of attachments and their
             associated constraints will be `nil` in the returned recommendation
             table.
-          - `weldConstraintPreserve` – A `Enum.WeldConstraintPreserve` enum
+          - `weldConstraintPreserve` — A `Enum.WeldConstraintPreserve` enum
             value describing how `Class.WeldConstraint|WeldConstraints` are
             preserved in the resulting recommendation table.
+          - `dropAttachmentsWithoutConstraints` — Boolean with default of
+            `true`. If set to `false`, `Class.Attachment|Attachments` that have
+            no `Class.Constraint|Constraints` will be preserved.
     returns:
       - type: Array
         summary: |
@@ -94,19 +99,19 @@ methods:
           </thead>
           <tbody>
             <tr>
-              <td>Attachment</td>
+              <td><code>Attachment</code></td>
               <td><code>Class.Attachment</code></td>
             </tr>
             <tr>
-              <td>Constraint</td>
-              <td><code>Class.Constraint</code></td>
+              <td><code>Constraint</code></td>
+              <td><code>Class.Constraint</code> or <code>nil</code></td>
             </tr>
             <tr>
-              <td>AttachmentParent</td>
+              <td><code>AttachmentParent</code></td>
               <td><code>Class.BasePart</code> or <code>nil</code></td>
             </tr>
             <tr>
-              <td>ConstraintParent</td>
+              <td><code>ConstraintParent</code></td>
               <td><code>Class.BasePart</code> or <code>nil</code></td>
             </tr>
           </tbody>
@@ -123,19 +128,19 @@ methods:
           </thead>
           <tbody>
             <tr>
-              <td>WeldConstraint</td>
+              <td><code>WeldConstraint</code></td>
               <td><code>Class.WeldConstraint</code></td>
             </tr>
             <tr>
-              <td>WeldConstraintParent</td>
+              <td><code>WeldConstraintParent</code></td>
               <td><code>Class.BasePart</code> or <code>nil</code></td>
             </tr>
             <tr>
-              <td>WeldConstraintPart0</td>
+              <td><code>WeldConstraintPart0</code></td>
               <td><code>Class.BasePart</code></td>
             </tr>
             <tr>
-              <td>WeldConstraintPart1</td>
+              <td><code>WeldConstraintPart1</code></td>
               <td><code>Class.BasePart</code></td>
             </tr>
           </tbody>
@@ -152,19 +157,19 @@ methods:
           </thead>
           <tbody>
             <tr>
-              <td>NoCollisionConstraint</td>
+              <td><code>NoCollisionConstraint</code></td>
               <td><code>Class.NoCollisionConstraint</code></td>
             </tr>
             <tr>
-              <td>NoCollisionConstraintParent</td>
+              <td><code>NoCollisionConstraintParent</code></td>
               <td><code>Class.BasePart</code> or <code>nil</code></td>
             </tr>
             <tr>
-              <td>NoCollisionConstraintPart0</td>
+              <td><code>NoCollisionConstraintPart0</code></td>
               <td><code>Class.BasePart</code></td>
             </tr>
             <tr>
-              <td>NoCollisionConstraintPart1</td>
+              <td><code>NoCollisionConstraintPart1</code></td>
               <td><code>Class.BasePart</code></td>
             </tr>
           </tbody>
@@ -173,6 +178,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GeometryService:IntersectAsync
     summary: |
       Creates one or more `Class.PartOperation|PartOperations` from the
@@ -282,16 +289,16 @@ methods:
         summary: |
           Options table containing all the controls for the method:
 
-          - `CollisionFidelity` – The value of
+          - `CollisionFidelity` — The value of
             `Class.PartOperation.CollisionFidelity|CollisionFidelity` in the
             resulting parts.
-          - `RenderFidelity` – The value of
+          - `RenderFidelity` — The value of
             `Class.PartOperation.RenderFidelity|RenderFidelity` in the resulting
             parts.
-          - `FluidFidelity` – The value of
+          - `FluidFidelity` — The value of
             `Class.PartOperation.FluidFidelity|FluidFidelity` in the resulting
             parts.
-          - `SplitApart` – Boolean controlling whether the objects should all be
+          - `SplitApart` — Boolean controlling whether the objects should all be
             kept together or properly split apart. Default is `true` (split).
     returns:
       - type: Array
@@ -303,6 +310,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GeometryService:SubtractAsync
     summary: |
       Creates one or more `Class.PartOperation|PartOperations` from one part
@@ -412,16 +421,16 @@ methods:
         summary: |
           Options table containing all the controls for the method:
 
-          - `CollisionFidelity` – The value of
+          - `CollisionFidelity` — The value of
             `Class.PartOperation.CollisionFidelity|CollisionFidelity` in the
             resulting parts.
-          - `RenderFidelity` – The value of
+          - `RenderFidelity` — The value of
             `Class.PartOperation.RenderFidelity|RenderFidelity` in the resulting
             parts.
-          - `FluidFidelity` – The value of
+          - `FluidFidelity` — The value of
             `Class.PartOperation.FluidFidelity|FluidFidelity` in the resulting
             parts.
-          - `SplitApart` – Boolean controlling whether the objects should all be
+          - `SplitApart` — Boolean controlling whether the objects should all be
             kept together or properly split apart. Default is `true` (split).
     returns:
       - type: Array
@@ -433,6 +442,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GeometryService:UnionAsync
     summary: |
       Creates one or more `Class.PartOperation|PartOperations` from one part
@@ -542,16 +553,16 @@ methods:
         summary: |
           Options table containing all the controls for the method:
 
-          - `CollisionFidelity` – The value of
+          - `CollisionFidelity` — The value of
             `Class.PartOperation.CollisionFidelity|CollisionFidelity` in the
             resulting parts.
-          - `RenderFidelity` – The value of
+          - `RenderFidelity` — The value of
             `Class.PartOperation.RenderFidelity|RenderFidelity` in the resulting
             parts.
-          - `FluidFidelity` – The value of
+          - `FluidFidelity` — The value of
             `Class.PartOperation.FluidFidelity|FluidFidelity` in the resulting
             parts.
-          - `SplitApart` – Boolean controlling whether the objects should all be
+          - `SplitApart` — Boolean controlling whether the objects should all be
             kept together or properly split apart. Default is `true` (split).
     returns:
       - type: Array
@@ -563,5 +574,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

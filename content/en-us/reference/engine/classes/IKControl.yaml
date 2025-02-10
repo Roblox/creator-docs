@@ -81,6 +81,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: IKControl.Enabled
     summary: |
       Toggles the control on and off. True by default.
@@ -100,6 +103,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: IKControl.EndEffector
     summary: |
       The part that you are interested in moving to reach the
@@ -129,6 +135,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: IKControl.EndEffectorOffset
     summary: |
       An additional offset applied on top of the
@@ -166,6 +175,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: IKControl.Offset
     summary: |
       An additional offset applied on top of the `Class.IKControl.Target|Target`
@@ -194,6 +206,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: IKControl.Pole
     summary: |
       An optional instance that determines which way the chain bends. You can
@@ -226,6 +241,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: IKControl.Priority
     summary: |
       Specifies the order in which controls are solved. Higher values have
@@ -252,6 +270,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: IKControl.SmoothTime
     summary: |
       Specifies the average number of seconds that it takes for the
@@ -279,6 +300,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: IKControl.Target
     summary: |
       The object that the `Class.IKControl.EndEffector|EndEffector` reaches for
@@ -305,6 +329,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: IKControl.Type
     summary: |
       Specifies how the solver satisfies this control.
@@ -334,6 +361,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: IKControl.Weight
     summary: |
       Specifies the weight of the IK control target. Should be in the [0, 1]
@@ -362,6 +392,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
 methods:
   - name: IKControl:GetChainCount
     summary: ''
@@ -375,6 +408,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: IKControl:GetChainLength
     summary: ''
     description: ''
@@ -387,6 +422,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: IKControl:GetNodeLocalCFrame
     summary: ''
     description: ''
@@ -403,6 +440,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: IKControl:GetNodeWorldCFrame
     summary: ''
     description: ''
@@ -419,6 +458,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: IKControl:GetRawFinalTarget
     summary: ''
     description: ''
@@ -431,6 +472,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: IKControl:GetSmoothedFinalTarget
     summary: ''
     description: ''
@@ -443,5 +486,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

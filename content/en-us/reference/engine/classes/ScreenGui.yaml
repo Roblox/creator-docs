@@ -5,11 +5,11 @@ memory_category: Instances
 summary: |
   Primary container of on-screen 2D user interface elements.
 description: |
-  The main storage object for 2D `Class.GuiObject|GuiObjects` displayed on the
-  user's screen. A `Class.ScreenGui` only shows if parented to a player's
-  `Class.PlayerGui`; parenting a `Class.ScreenGui` to `Class.StarterGui` ensures
-  it clones into each player's `Class.PlayerGui` when they join the experience
-  and their character first spawns. See
+  `Class.ScreenGui` is a storage container for 2D `Class.GuiObject|GuiObjects`
+  displayed on the user's screen. A `Class.ScreenGui` only shows if parented to
+  a player's `Class.PlayerGui`; parenting a `Class.ScreenGui` to
+  `Class.StarterGui` ensures it clones into each player's `Class.PlayerGui` when
+  they join the experience and their character first spawns. See
   [On‑Screen UI Containers](../../../ui/on-screen-containers.md) for further
   details.
 
@@ -35,7 +35,7 @@ properties:
       Whether to clip the contents of this `Class.ScreenGui` to the device's
       safe area.
     description: |
-      If this property is `true`, all `Class.GuiObject` descendants of this
+      If this property is `true`, all `Class.GuiObject` descendants of the
       `Class.ScreenGui` will be clipped to the device's safe area (see
       `Enum.ScreenInsets`). The default is `true` to maintain backwards
       compatibility of UI that is intentionally hidden offscreen, such as
@@ -56,8 +56,9 @@ properties:
       area, obscured by screen camera notch" />
 
       Note that this property will be ignored if you set
-      `Class.ScreenGui.ScreenInsets` to `Enum.ScreenInsets|None`, as doing so
-      implies that you intentionally want to disregard the device's safe insets.
+      `Class.ScreenGui.ScreenInsets|ScreenInsets` to `Enum.ScreenInsets|None`,
+      as doing so implies that you intentionally want to disregard the device's
+      safe insets.
     code_samples: []
     type: bool
     tags: []
@@ -70,15 +71,18 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScreenGui.DisplayOrder
     summary: |
-      Controls the Z-index order in which multiple `Class.ScreenGui|ScreenGuis`
+      Controls the Z-index order in which multiple `Class.ScreenGui` containers
       are drawn.
     description: |
       This property controls the Z-index order in which multiple
-      `Class.ScreenGui|ScreenGuis` are drawn. `Class.ScreenGui|ScreenGuis` with
-      a higher `Class.ScreenGui|DisplayOrder` will be drawn on top of those with
-      a lower value.
+      `Class.ScreenGui` containers are drawn. Those with a higher
+      `Class.ScreenGui.DisplayOrder|DisplayOrder` will be drawn on top of those
+      with a lower value.
     code_samples:
     type: int
     tags: []
@@ -91,9 +95,12 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScreenGui.IgnoreGuiInset
     summary: |
-      Determines whether this `Class.ScreenGui` overflows into the range of
+      Determines whether the `Class.ScreenGui` overflows into the range of
       Roblox's core UI elements.
     description: |
       If this property is `false` (default),
@@ -111,7 +118,8 @@ properties:
       insets affect the contents of a `Class.ScreenGui`.
     code_samples:
     type: bool
-    tags: []
+    tags:
+      - NotReplicated
     deprecation_message: ''
     security:
       read: None
@@ -121,6 +129,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScreenGui.SafeAreaCompatibility
     summary: |
       Specifies whether automatic UI compatibility transformations are applied
@@ -128,10 +139,10 @@ properties:
       screen cutouts.
     description: |
       This property specifies whether automatic UI compatibility transformations
-      are applied to descendant "fullscreen" `Class.GuiObject|GuiObjects` of
-      this `Class.ScreenGui` on displays with screen cutouts. Eligibility occurs
-      if the total area of the descendant `Class.GuiObject` (including any
-      applied border or `Class.UIStroke`) covers the device's safe area both
+      are applied to descendant "fullscreen" `Class.GuiObject|GuiObjects` of the
+      `Class.ScreenGui` on displays with screen cutouts. Eligibility occurs if
+      the total area of the descendant `Class.GuiObject` (including any applied
+      border or `Class.UIStroke`) covers the device's safe area both
       horizontally and vertically. See the `Enum.SafeAreaCompatibility` enum
       reference for details.
 
@@ -140,7 +151,7 @@ properties:
       screens without any cutouts. However, it's recommended that you avoid
       fullscreen extensions for new work; instead, use the
       `Class.ScreenGui.ScreenInsets|ScreenInsets` property to specify which
-      insets should be respected for different `Class.ScreenGui|ScreenGuis`.
+      insets should be respected for different `Class.ScreenGui` containers.
 
       Note that descendant UI objects will continue to be clipped by the
       device's safe area if
@@ -158,13 +169,16 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScreenGui.ScreenInsets
     summary: |
-      Controls the safe area insets that are applied to the contents of this
+      Controls the safe area insets that are applied to the contents of the
       `Class.ScreenGui`.
     description: |
       This property controls the safe area insets that are applied to the
-      contents of this `Class.ScreenGui`.
+      contents of the `Class.ScreenGui`.
 
       The default of `Enum.ScreenInsets|CoreUISafeInsets` keeps all descendant
       `Class.GuiObject|GuiObjects` inside the core UI safe area, clear of the
@@ -194,6 +208,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

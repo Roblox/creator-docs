@@ -22,18 +22,16 @@ Learn how to create assets with structured tutorials that walks through each cre
 
 - [Download Blender](https://www.blender.org/) - Install and setup Blender. Roblox's tutorial content uses Blender 3.0+.
 - [Familiarize yourself with Blender](https://docs.blender.org/manual/en/latest/) - Use Blender's official docs or community-created content of your choice to get up to speed with Blender's UI and functions.
-- [Setting up Roblox Studio](../studio/setting-up-roblox-studio.md) - Install
+- [Setting up Roblox Studio](../studio/setup.md) - Install
   and configure Roblox Studio.
 
 </AccordionDetails>
-  </BaseAccordion>
-
-<br /> <br />
+</BaseAccordion>
 
 <Card>
 <CardContent>
 
-<h2 style={{marginBottom: 12}}>Rigid Accessories</h2>
+<h2 style={{marginBottom: 12}}>Rigid accessories</h2>
 
 <Typography variant="body2" color="textSecondary" component="p">
 This tutorial covers the basic steps to successfully create and sell an accessory. Model and texture an object in Blender, upload the publishable accessory item to Studio, and sell the item on the Marketplace.
@@ -45,17 +43,16 @@ This tutorial covers the basic steps to successfully create and sell an accessor
     container
     direction="row">
 
-<Grid item md={6} xs={12}
-    direction="column"  >
+<Grid item Medium={6} XSmall={12} direction="column" style={{"maxWidth": "800px"}}>
 
 <div class="container"
 style={{position: "relative"}}>
-<img src="../assets/art/accessories/creating-rigid/Chest-Studio.png" width = "90%"/>
+<img src="../assets/art/accessories/creating-rigid/Chest-Studio.png" width = "90%" />
 </div>
 
 </Grid>
 
-<Grid item md={6} xs={12} direction='column'>
+<Grid item Medium={6} XSmall={12} direction="column">
 
 <>
 <Stepper activeStep={6} orientation="vertical">
@@ -90,7 +87,7 @@ style={{position: "relative"}}>
 <a href="../art/accessories/creating-rigid/converting.md">
 <StepLabel optional="Use the Accessory Fitting Tool to create the accessory.">
 
-<h5 style={{marginTop: 36}}>Fit and Convert</h5>
+<h5 style={{marginTop: 36}}>Fit and convert</h5>
 </StepLabel></a>
 
 </Step>
@@ -139,8 +136,7 @@ Create your own clothing item from scratch using Roblox's project templates as a
     container
     direction="row">
 
-<Grid item md={6} xs={12}
-    direction="column"  >
+<Grid item Medium={6} XSmall={12} direction="column" style={{"maxWidth": "800px"}}>
 
 <div class="container"
 style={{position: "relative"}}>
@@ -149,7 +145,7 @@ style={{position: "relative"}}>
 
 </Grid>
 
-<Grid item md={6} xs={12} direction='column'>
+<Grid item Medium={6} XSmall={12} direction="column">
 
 <>
 <Stepper activeStep={6} orientation="vertical">
@@ -240,8 +236,7 @@ Start here for a comprehensive introduction to each step of body creation using 
     container
     direction="row">
 
-<Grid item md={6} xs={12}
-    direction="column"  >
+<Grid item Medium={6} XSmall={12} direction="column" style={{"maxWidth": "800px"}}>
 
 <div class="container"
 style={{position: "relative"}}>
@@ -250,7 +245,7 @@ style={{position: "relative"}}>
 
 </Grid>
 
-<Grid item md={6} xs={12} direction='column'>
+<Grid item Medium={6} XSmall={12} direction="column">
 
 <>
 <Stepper activeStep={6} orientation="vertical">
@@ -259,7 +254,7 @@ style={{position: "relative"}}>
 <a href="../art/characters/creating/template-files.md">
 <StepLabel optional="Pick a starting body shape from a collection of templates.">
 
-<h5 style={{marginTop: 36}}>Pick a Template</h5>
+<h5 style={{marginTop: 36}}>Pick a template</h5>
 </StepLabel></a>
 
 </Step>
@@ -289,7 +284,7 @@ style={{position: "relative"}}>
 </Step>
 
 <Step style={{marginTop: -36}}>
-<a href="../art/characters/creating/combining-head-geometry.md">
+<a href="../art/characters/creating/combine-head-geometry.md">
 <StepLabel optional="Clean up your project and model to make it Studio-ready.">
 
 <h5 style={{marginTop: 36}}>Cleanup</h5>
@@ -298,7 +293,7 @@ style={{position: "relative"}}>
 </Step>
 
 <Step style={{marginTop: -36}}>
-<a href="../art/characters/creating/exporting-textures.md">
+<a href="../art/characters/creating/export-textures.md">
 <StepLabel optional="Export your project from Blender and bring it into Studio.">
 
 <h5 style={{marginTop: 36}}>Export</h5>

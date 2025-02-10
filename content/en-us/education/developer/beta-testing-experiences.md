@@ -1,11 +1,11 @@
 ---
-title: Beta Testing Experiences
+title: Beta test experiences
 description: Learn common methods of beta testing on Roblox, recommended for success metrics, and options for community feedback.
 ---
 
-Developers on the Roblox platform have a strong culture of conducting beta tests in order to get feedback from the community and to begin collecting analytics about their user base. There's several ways to collect user feedback, starting with closed betas and then moving to open betas after the initial feedback has been addressed.
+Developers on the Roblox platform have a strong culture of conducting beta tests in order to get feedback from the community and to begin collecting analytics about their user base. There are several ways to collect user feedback, starting with closed betas and then moving to open betas after the initial feedback has been addressed.
 
-## Testing Options
+## Testing options
 
 There are different methods for beta testing an experience depending on the project's current playability and testing goals. While the table below provides a quick summary, each of the following methods will be discussed in-depth.
 
@@ -13,24 +13,24 @@ There are different methods for beta testing an experience depending on the proj
 <thead>
    <tr>
     <th>Method</th>
-    <th>Ideal For</th>
+    <th>Ideal for</th>
    </tr>
 </thead>
 <tbody>
    <tr>
-    <td><b>Closed Access</b></td>
+    <td><b>Closed access</b></td>
     <td>Ideal for studios interested in testing specific features or unpolished builds to get initial player reactions. Can often follow up with, or prepare for an open access beta.</td>
    </tr>
    <tr>
-    <td><b>Open Paid Access</b></td>
+    <td><b>Open paid access</b></td>
     <td>Similar to open access beta but testers are users paying to play. This often results in a smaller volume of users, but more motivated in providing feedback. </td>
    </tr>
    <tr>
-    <td><b>Limited Time Test</b></td>
+    <td><b>Limited time test</b></td>
     <td>Provides benefits of an open access beta but requires less of the commitment and investment needed to run an open access beta. Experiences can be playable but have minimal, or focused content. </td>
    </tr>
    <tr>
-    <td><b>Open Access Beta</b></td>
+    <td><b>Open access beta</b></td>
     <td>For experiences that are relatively polished and playable, but may lack content. Best for studios interested in testing at scale to gain the largest amount of user data and impressions.  </td>
    </tr>
 </tbody>
@@ -46,7 +46,7 @@ In general, a developer is recommended to launch a beta program whenever the exp
 If your studio is unclear on which option is best, Roblox Education recommends closed access testing. This method tends to be the safest, but also provides enough data to address bugs and gameplay issues.
 </Alert>
 
-### Closed Access Beta
+### Closed access beta
 
 Closed access programs are best for studios interested in testing experiences that may be unpolished or not fully ready for a large audience. In this program, users from a trusted group are granted access to the Roblox group where the experience is published from. Trusted members can often be from pre-existing communities or friends and family.
 
@@ -77,9 +77,9 @@ To launch the closed access beta, users are given invites to, or request to join
 </tbody>
 </table>
 
-### Open Paid Access
+### Open paid access
 
-Similar to open access betas, these experiences should be playable, mostly bug free, but can be missing content. Here, users pay an upfront Robux fee to access the experience (see [Paid Access](../../production/monetization/paid-access.md)). This limits the amount of users, often providing a more motivated testing audience before opening it to a wider audience.
+Similar to open access betas, these experiences should be playable, mostly bug free, but can be missing content. Here, users pay an upfront Robux fee to access the experience (see [Paid access in Robux](../../production/monetization/paid-access-robux.md)). This limits the amount of users, often providing a more motivated testing audience before opening it to a wider audience.
 
 <table>
 <thead>
@@ -106,11 +106,11 @@ Similar to open access betas, these experiences should be playable, mostly bug f
 </tbody>
 </table>
 
-### Limited Time Test
+### Limited time test
 
 Running an open beta takes time and energy away from development as developers must respond to feedback and interact with their community. A lower-impact alternative is the limited time test. In this method, developers plan for an open access beta test during a specific time frame, such as a key weekend or week. An experience is opened and closed based off the time. Similar to the open access beta, the experience should be playable, generally bug-free, but can lack content.
 
-To launch the limited time test, we advise developers to advertise the event. Developers can use experience [announcements](../../production/promotion/audience-engagement.md#announcing-updates), group, and [social media](../../production/promotion/audience-engagement.md#linking-to-social-media) to communicate when the experience will be temporarily opened.
+To launch the limited time test, we advise developers to advertise the event. Developers can use experience [notifications](../../production/promotion/experience-notifications.md), group, and [social media](../../production/promotion/index.md#social-media) to communicate when the experience will be temporarily opened.
 
 <table>
 <thead>
@@ -135,7 +135,7 @@ To launch the limited time test, we advise developers to advertise the event. De
 </tbody>
 </table>
 
-### Open Access Beta
+### Open access beta
 
 If developers are confident their experience is playable by the general public, but may be lacking content, polish, and quality of life features, an open access beta is feasible. To launch an open beta, the experience is set to public, allowing any Roblox user to play. This program is then conducted for one to two months before launch.
 
@@ -177,11 +177,11 @@ Some recommendations for running an open access beta are below.
 </tbody>
 </table>
 
-## Getting Community Feedback
+## Get community feedback
 
 Regardless of how a beta is implemented, some means for recording user feedback should always be implemented. Two methods for obtaining direct user feedback are in-experience feedback forms and Discord.
 
-### In-Experience Feedback
+### In-experience feedback
 
 Feedback systems can be built directly into the experience with UI pop-ups at key moments. Two examples can be seen in the experiences [Stranger Things](https://www.roblox.com/games/5853107391/Stranger-Things-Starcourt-Mall)
 and [Alo Sanctuary](https://www.roblox.com/games/8523408215/Alo-Sanctuary).
@@ -218,7 +218,7 @@ Additionally, some community-developed tools have been created to make feedback 
 </tbody>
 </table>
 
-### Discord Communities
+### Discord communities
 
 Many developers choose to create Discord communities for their experiences. To setup communities, we recommend that you investigate large experiences on Roblox, such as Adopt Me. Seeing how other communities are structured can inform your own decisions, such as what channels users will expect to see, and how users may engage with your community.
 
@@ -247,7 +247,7 @@ Many developers choose to create Discord communities for their experiences. To s
 </tbody>
 </table>
 
-### Think-Aloud Feedback
+### Think-aloud feedback
 
 A think-aloud is a method of studying the mental processes people use in a task. Participants communicate their thoughts during gameplay, often in stream of conscious, as a way of understanding different goals, such as the clarify of an educational objective. For developers interested in doing a think-aloud, it's recommended they find participants in their target age demographic, either through family and friends, or a social community.
 
@@ -276,9 +276,9 @@ A think-aloud is a method of studying the mental processes people use in a task.
 
 ## Analytics
 
-Analytics gathered during a beta program are often used to gauge if a launch experience will be on track to meeting it's goals. For instance, many common Roblox experiences have specific goals for retention, monetization, and session time.
+Analytics gathered during a beta program are often used to gauge if a launch experience is on track to meeting its goals. For instance, many common Roblox experiences have specific goals for retention, monetization, and session time.
 
-### Tracking Analytics
+### Track analytics
 
 Roblox provides a variety of built-in analytics using the [Analytics Dashboard](../../production/analytics/analytics-dashboard.md).
 
@@ -289,23 +289,23 @@ Roblox provides a variety of built-in analytics using the [Analytics Dashboard](
     <td>
       <ul>
       <li ><strong>Demographics</strong> - commonly used devices, ages</li>
-      <li ><strong>Retention and Engagement</strong> - Metrics such as D1, D7 retention, average session time, drop-off, etc.</li>
+      <li ><strong>Retention and engagement</strong> - Metrics such as D1, D7 retention, average session time, drop-off, etc.</li>
       </ul>
     </td>
    </tr>
    <tr>
-    <td><b>Common Custom Analytics </b></td>
+    <td><b>Common custom analytics </b></td>
     <td>
       <ul>
       <li ><strong>Progress </strong>- If users are getting it past the tutorial, are users exploring different areas of the world, etc. </li>
-      <li ><strong>User Behavior</strong> - What users click, interact, or engage with in the world.</li>
+      <li ><strong>User behavior</strong> - What users click, interact, or engage with in the world.</li>
       </ul>
     </td>
    </tr>
 </tbody>
 </table>
 
-### Measuring Success
+### Measure success
 
 Measuring success is often determined by the analytics important during a beta. To help determine what analytics are important during a beta, consider these questions.
 
@@ -322,7 +322,7 @@ For all experiences, consult its [analytics](../../production/analytics/index.md
 One universal metric for success is an experience's likes, which often influences a user's decision to play. Developers should strive for an at least 80% like ratio after the close of a beta program.
 </Alert>
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 **How long should an experience spend in beta before launching?**
 

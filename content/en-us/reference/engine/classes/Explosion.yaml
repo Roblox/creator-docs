@@ -93,6 +93,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Explosion.BlastRadius
     summary: |
       This property determines the radius of the `Class.Explosion`, in studs.
@@ -128,6 +130,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Explosion.DestroyJointRadiusPercent
     summary: |
       Used to set the proportion of the `Class.Explosion.BlastRadius`, between 0
@@ -162,6 +166,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Explosion.ExplosionType
     summary: |
       This property determines how the `Class.Explosion` will interact with
@@ -194,6 +200,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Explosion.LocalTransparencyModifier
     summary: ''
     description: ''
@@ -211,6 +219,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Explosion.Position
     summary: |
       This property is the position of the center of the `Class.Explosion`. It
@@ -247,6 +257,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Explosion.TimeScale
     summary: |
       Value between 0 and 1 that controls the speed of the particle effect.
@@ -266,6 +278,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Explosion.Visible
     summary: |
       This property determines whether or not the visual effect of an
@@ -294,6 +308,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events:
   - name: Explosion.Hit
@@ -338,4 +354,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

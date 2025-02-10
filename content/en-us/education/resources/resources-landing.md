@@ -1,5 +1,5 @@
 ---
-title: Classroom Resources
+title: Classroom resources
 description: Resources to help you get started teaching with Roblox in the classroom.
 ---
 
@@ -11,13 +11,13 @@ Find resources to help teach with Roblox, whether it's handouts for the classroo
 We've curated our most popular resources, but the rest of the content can be found in the **left** navigation bar under **Educator Training**.
 </Alert>
 
-## Education Resources
+## Education resources
 
 Resources for running Roblox in classrooms and other settings.
 
 <Grid container spacing={4}>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <h4>Classroom Best Practices</h4>
 Generalized tips for running any Roblox classroom.
 <a href="../../education/resources/classroom-best-practices.md">
@@ -25,7 +25,7 @@ Generalized tips for running any Roblox classroom.
 </a>
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <h4>Frequently Asked Questions</h4>
 Hardware requirements, recommended ages, and more.
 <a href="../../education/resources/frequently-asked-questions-education.md">
@@ -33,7 +33,7 @@ Hardware requirements, recommended ages, and more.
 </a>
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <h4>Roblox Classroom Kit</h4>
 A .ZIP file with handouts and guides for setting up.
 <a href="../../assets/education/handouts/Roblox_Classroom_Kit.zip">
@@ -43,13 +43,13 @@ A .ZIP file with handouts and guides for setting up.
 
 </Grid>
 
-## Community Resources
+## Community resources
 
 Resources related to helping you communicate more about your Roblox educational offerings.
 
 <Grid container spacing={4}>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <h4>Marketing Kit</h4>
 Official Roblox art, logos, and branding guidelines.
 <a href="../../education/resources/marketing-materials.md">
@@ -57,7 +57,7 @@ Official Roblox art, logos, and branding guidelines.
 </a>
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <h4>Roblox Educators</h4>
 A list of educators and organizations using Roblox to teach.
 <a href="../../education/resources/frequently-asked-questions-education.md">
@@ -65,7 +65,7 @@ A list of educators and organizations using Roblox to teach.
 </a>
 </Grid>
 
-<Grid item xs={4} lg={4}>
+<Grid item XSmall={4} XLarge={4}>
 <h4>Private Servers</h4>
 Make private communities on Roblox for students.
 <a href="../../education/support/private-servers-for-classroom-use.md">
@@ -75,7 +75,7 @@ Make private communities on Roblox for students.
 
 </Grid>
 
-## Technical Resources
+## Technical resources
 
 <table>
 <thead>
@@ -105,7 +105,7 @@ Make private communities on Roblox for students.
 </tbody>
 </table>
 
-## Contact Us
+## Contact us
 
 If you need assistance that isn't covered by one of the resources here, you can reach out to our Education team.
 

@@ -31,6 +31,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataClass.ExplorerOrder
     summary: |
       Determines how this class is sorted in the Explorer compared to other
@@ -50,6 +52,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataClass.Insertable
     summary: |
       Toggles whether or not this object can be inserted through the Advanced
@@ -69,6 +73,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataClass.PreferredParent
     summary: |
       Sets the class that this class would prefer parenting to.
@@ -86,6 +92,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -58,6 +58,10 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - PluginOrOpenCloud
+    writeCapabilities:
+      - PluginOrOpenCloud
 methods: []
 events: []
 callbacks: []

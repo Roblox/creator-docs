@@ -8,7 +8,10 @@ summary: |
 description: |
   `Class.AudioAnalyzer` takes measurements from audio streams that are wired to
   it through `Class.Wire`. It provides a single **Input** pin but does not
-  produce any output streams.
+  produce any output streams. Note that all audio processing is disabled on the
+  server in order to conserve resources; Properties and methods of
+  `Class.AudioAnalyzer` return empty or zero results when used from server
+  scripts.
 code_samples: []
 inherits:
   - Instance
@@ -20,7 +23,8 @@ properties:
       The loudest volume observed during the last audio buffer.
     description: |
       The loudest volume observed during the last audio buffer. This property
-      changes often and thus does not fire changed events.
+      changes more often than the framerate and does not fire changed events. On
+      the server, this property is always `0`.
     code_samples: []
     type: float
     tags:
@@ -35,6 +39,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioAnalyzer.RmsLevel
     summary: |
       The root-mean-square average volume observed during the last audio buffer.
@@ -42,7 +49,8 @@ properties:
       The root-mean-square average volume observed during the last audio buffer.
       This property is generally more stable than
       `Class.AudioAnalyzer.PeakLevel|PeakLevel` but it may not capture momentary
-      volume spikes.
+      volume spikes. This property changes more often than the framerate and
+      does not fire changed events. On the server, this property is always `0`.
     code_samples: []
     type: float
     tags:
@@ -57,15 +65,18 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioAnalyzer.SpectrumEnabled
     summary: |
       Enables usage of `Class.AudioAnalyzer:GetSpectrum|GetSpectrum`.
     description: |
-      Enables usage of `Class.AudioAnalyzer:GetSpectrum|GetSpectrum()`. If `false`,
-      `Class.AudioAnalyzer:GetSpectrum|GetSpectrum()` returns an empty array, but
-      the CPU overhead of the `Class.AudioAnalyzer` is dramatically reduced.
-      This means that if you are only analyzing the **volume** of an audio
-      stream, you can disable this property to improve performance.
+      Enables usage of `Class.AudioAnalyzer:GetSpectrum|GetSpectrum()`. If
+      `false`, `Class.AudioAnalyzer:GetSpectrum|GetSpectrum()` returns an empty
+      array, but the CPU overhead of the `Class.AudioAnalyzer` is dramatically
+      reduced. This means that if you are only analyzing the **volume** of an
+      audio stream, you can disable this property to improve performance.
     code_samples: []
     type: bool
     tags: []
@@ -78,6 +89,27 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioAnalyzer.WindowSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AudioWindowSize
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioAnalyzer:GetConnectedWires
     summary: |
@@ -93,19 +125,23 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioAnalyzer:GetSpectrum
     summary: |
       Returns the frequency spectrum of the last audio buffer.
     description: |
       Returns the frequency spectrum of the last audio buffer, as an array of
       numbers. The elements of the array are root-mean-square volume levels,
-      evenly spaced from 0 hertz to 24,000 hertz.
+      evenly spaced from 0 hertz to 24,000 hertz. If any of the analyzer's
+      inputs come from an `Class.AudioDeviceInput`, or this method is used from
+      a server script, it returns an empty array.
     code_samples: []
     parameters: []
     returns:
@@ -116,5 +152,44 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events: []
+    capabilities: []
+    writeCapabilities: []
+events:
+  - name: AudioAnalyzer.WiringChanged
+    summary: |
+      Fires when another instance is connected to or disconnected from the
+      `Class.AudioAnalyzer` via a `Class.Wire`.
+    description: |
+      Event that fires after a `Class.Wire` becomes connected or disconnected,
+      and that `Class.Wire` is now or was previously connected to a pin on the
+      `Class.AudioAnalyzer` and to some other wirable instance.
+    code_samples: []
+    parameters:
+      - name: connected
+        type: bool
+        default:
+        summary: |
+          Whether the instance got connected or disconnected.
+      - name: pin
+        type: string
+        default:
+        summary: |
+          The pin on the `Class.AudioAnalyzer` that the `Class.Wire` targets.
+      - name: wire
+        type: Wire
+        default:
+        summary: |
+          The `Class.Wire` between the `Class.AudioAnalyzer` and the other
+          instance.
+      - name: instance
+        type: Instance
+        default:
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

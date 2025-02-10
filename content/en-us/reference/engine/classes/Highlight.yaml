@@ -76,6 +76,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Highlight.DepthMode
     summary: |
       Controls how the `Class.Highlight` effect displays with respect to other
@@ -127,6 +129,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Highlight.Enabled
     summary: |
       Sets whether or not the highlight is enabled.
@@ -147,6 +151,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Highlight.FillColor
     summary: |
       Sets the `Datatype.Color3` value of the highlight's interior.
@@ -189,6 +195,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Highlight.FillTransparency
     summary: |
       Sets the transparency of the highlight's interior.
@@ -234,6 +242,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Highlight.OutlineColor
     summary: |
       Sets the `Datatype.Color3` value of the highlight's outline.
@@ -276,6 +286,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Highlight.OutlineTransparency
     summary: |
       Sets the transparency of the highlight's outline.
@@ -315,6 +327,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

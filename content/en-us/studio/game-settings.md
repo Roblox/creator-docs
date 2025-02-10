@@ -10,7 +10,7 @@ customization options for Roblox experiences, including settings for
 <img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
 
 <Alert severity="warning">
-The **Game Settings** window is only available for experiences saved or [published](../production/publishing/publishing-experiences-and-places.md) to Roblox.
+The **Game Settings** window is only available for experiences saved or [published](../production/publishing/publish-experiences-and-places.md) to Roblox.
 </Alert>
 
 ## Basic Info
@@ -34,8 +34,8 @@ The **Basic Info** tab contains general settings for an experience, such as its 
     <td>A description of the experience that describes what a potential player should expect.</td>
   </tr>
 	<tr>
-    <td>**Age Recommendation**</td>
-    <td>[Experience Guidelines](../production/promotion/experience-guidelines.md) provide information on the experience's main page about what kind of content the experience contains.</td>
+    <td>**Content Maturity Label**</td>
+    <td>[Content Maturity Labels](../production/promotion/content-maturity.md) provide information on the experience's main page about what kind of content the experience contains.</td>
   </tr>
   <tr>
     <td>**Game Icon**</td>
@@ -43,11 +43,7 @@ The **Basic Info** tab contains general settings for an experience, such as its 
   </tr>
   <tr>
     <td>**Screenshots & Videos**</td>
-    <td>Lets you upload [promotional thumbnails](../production/promotion/promotional-thumbnails.md). </td>
-  </tr>
-  <tr>
-    <td>**Genre**</td>
-    <td>The genre that best describes your experience.</td>
+    <td>Lets you upload [promotional thumbnails](../production/publishing/thumbnails.md). </td>
   </tr>
   <tr>
     <td>**Playable Devices**</td>
@@ -114,7 +110,7 @@ The **Monetization** tab contains settings that let you [monetize](../production
   </tr>
   <tr>
     <td>**Paid Access**</td>
-    <td>Lets you enable [paid access](../production/monetization/paid-access.md).</td>
+    <td>Lets you enable [paid access in Robux](../production/monetization/paid-access-robux.md) or [paid access in local currency](../production/monetization/paid-access-local-currency.md).</td>
   </tr>
   <tr>
     <td>**Private Servers**</td>
@@ -149,7 +145,8 @@ You should only enable the following settings if you trust all assets from other
   </tr>
   <tr>
     <td>**Secrets**</td>
-    <td>Allows for the creation and configuration of [Secrets](../reference/engine/datatypes/Secret.yaml) for Studio sessions using `Class.HttpService`. Visible only if HTTP requests are allowed.</td>
+    <td>Allows for the creation and configuration of `Datatype.Secret` for local Studio sessions using `Class.HttpService`. Must be a valid JSON object, with base64-encoded secret. Example: `{"secretName": ["cGFzc3dvcmQ=", "*.domain.tld"]}`, where `cGFzc3dvcmQ=` is base64-encoded word `password`, and `*.domain.tld` is domain name restriction. <br /><br />
+    Visible only if HTTP requests are allowed. Secrets defined here are local to the device, and not available in Team Create sessions. Use [Creator Hub](https://create.roblox.com/) to define production secrets. </td>
   </tr>
   <tr>
     <td>**Enable&nbsp;Studio&nbsp;Access to API Services**</td>
@@ -161,7 +158,7 @@ You should only enable the following settings if you trust all assets from other
   </tr>
   <tr>
     <td>**Allow Third Party Teleports**</td>
-    <td>Lets players [teleport](../projects/teleporting.md) to other experiences.</td>
+    <td>Lets players [teleport](../projects/teleport.md) to other experiences.</td>
   </tr>
 </tbody>
 </table>

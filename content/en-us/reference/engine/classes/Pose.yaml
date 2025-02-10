@@ -70,6 +70,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: Pose.MaskWeight
     summary: ''
     description: ''
@@ -89,6 +92,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Animation
+    writeCapabilities: []
 methods:
   - name: Pose:AddSubPose
     summary: |
@@ -116,6 +122,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Pose:GetSubPoses
     summary: |
       Returns an array containing all sub `Class.Pose|Poses` that have been
@@ -131,13 +139,15 @@ methods:
       - Keyframe-Reset-Poses
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of sub `Class.Pose|Poses`.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Pose:RemoveSubPose
     summary: |
       Removes a sub `Class.Pose` from the `Class.Pose` by parenting it to nil.
@@ -164,5 +174,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

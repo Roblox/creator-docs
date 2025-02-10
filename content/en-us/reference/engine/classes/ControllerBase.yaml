@@ -28,6 +28,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: ControllerBase.BalanceRigidityEnabled
     summary: ''
     description: ''
@@ -43,6 +45,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ControllerBase.MoveSpeedFactor
     summary: |
       The value multiplied by the `Class.ControllerManager.BaseMoveSpeed`.
@@ -62,6 +66,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

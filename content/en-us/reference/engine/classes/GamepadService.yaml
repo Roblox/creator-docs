@@ -39,6 +39,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Input
+    writeCapabilities: []
 methods:
   - name: GamepadService:DisableGamepadCursor
     summary: |
@@ -55,6 +58,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GamepadService:EnableGamepadCursor
     summary: |
       Enables the gamepad cursor or updates its position.
@@ -62,7 +67,9 @@ methods:
       This function enables the gamepad cursor if it's currently disabled. If
       the cursor is already enabled, calling the API updates the cursor's
       position. The function accepts a `Class.GuiObject|GuiObject` parameter,
-      but there are some invalid cases.
+      but there are some invalid cases. Please note that in order to set the
+      cursor to the default position, `nil` must be passed in as a parameter.
+      Providing no argument will result in an error.
 
       <table>
         <thread>
@@ -134,5 +141,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

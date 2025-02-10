@@ -1,5 +1,5 @@
 ---
-title: A Player's First Experience
+title: A player's first experience
 prev: /education/build-it-play-it-mansion-of-wonder/landing-page
 next: /education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences
 description: Learn why the first time user experience of a game is so important, and how you can use effects build to help a player learn how to play. This is the beginning of the advanced series in Roblox's Build It Play It Mansion of Wonder.

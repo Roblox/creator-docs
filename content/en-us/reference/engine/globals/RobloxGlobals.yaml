@@ -1,4 +1,4 @@
-name: Roblox Globals
+name: Roblox globals
 type: global
 summary: |
   Built-in functions and constants unique to Roblox.

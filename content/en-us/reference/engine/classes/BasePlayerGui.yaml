@@ -52,7 +52,7 @@ methods:
           The y position on the screen relative to the top left corner after the
           `Class.GuiService:GetGuiInset()|GuiInset` is applied.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           A table of the `Class.GuiObject` instances that occupy the given
           screen space.
@@ -60,5 +60,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

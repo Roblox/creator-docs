@@ -54,6 +54,8 @@ methods:
       `GetAnimationClipAsync` instead.
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationClipProvider:GetAnimationClipById
     summary: |
       Returns a `Class.AnimationClip` from the supplied assetId.
@@ -84,6 +86,8 @@ methods:
       `GetAnimationClipAsync` instead.
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationClipProvider:RegisterActiveAnimationClip
     summary: |
       Generates a temporary asset ID from a `Class.AnimationClip` that can be
@@ -115,6 +119,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationClipProvider:RegisterAnimationClip
     summary: |
       Generates a temporary asset ID from a `Class.AnimationClip` that can be
@@ -148,6 +154,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationClipProvider:GetAnimationClipAsync
     summary: |
       Returns a `Class.AnimationClip` based on the specified assetId
@@ -173,6 +181,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationClipProvider:GetAnimations
     summary: |
       This function returns an `Class.InventoryPages` object which can be used
@@ -199,6 +209,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AnimationClipProvider:GetClipEvaluatorAsync
     summary: ''
     description: ''
@@ -216,5 +228,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

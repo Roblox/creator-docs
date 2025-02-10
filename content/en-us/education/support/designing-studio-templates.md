@@ -1,5 +1,5 @@
 ---
-title: Designing Studio Templates
+title: Design Studio templates
 description: Educators can create templates to use in a classroom or for a lesson. Templates make it easy for students to make their own projects.
 ---
 
@@ -7,7 +7,7 @@ Educators can create templates to kickstart a student's project in Roblox Studio
 
 This guide outlines the process of creating a template and making it accessible to students.
 
-## Benefits of Templates
+## Benefits of templates
 
 One benefit of templates is they can provide students a **curated** set of assets to work with, such as 3D models or scripts. This can be a great alternative to having students create their own assets, which can be time consuming, or using models from the Toolbox.
 
@@ -31,7 +31,7 @@ Templates already installed in Roblox Studio can also be customized to include *
 <figcaption>The Mansion of Wonder template customized by <a href="https://www.byjusfutureschool.com/" target="_blank" rel="noopener">Byju's Future School</a></figcaption>
 </figure>
 
-## Customize or Develop a Template
+## Customize or develop a template
 
 Templates can be any Roblox project designed in Roblox Studio.
 
@@ -58,7 +58,7 @@ Another way of creating a custom template is to **design a new one**. Though, de
   <figcaption>Templates designed by online educator Code Kingdoms</figcaption>
 </figure>
 
-## Publishing a Template
+## Publish a template
 
 To distribute a template, you'll **publish** it to Roblox. Once on the Roblox cloud, students can access it online from any machine, without having to worry about local storage and file transfers.
 
@@ -92,7 +92,7 @@ Templates can be published either as individual Roblox users or [groups](https:/
   accidentally make unintended modifications to a template.
 </Alert>
 
-### Publish the Template
+### Publish the template
 
 With a template ready, it can be published to Roblox, so students can access it online. Once a template is published, educators are responsible for sharing it through a learning management system (e.g. Google Classroom) or messaging system, like email.
 
@@ -120,7 +120,7 @@ With a template ready, it can be published to Roblox, so students can access it 
 
    <img src="../../assets/education/legacy/devStarted-clickCreate.png" />
 
-### Setting Up the Template to Copy
+### Set up the template to copy
 
 Even though the template is now published on Roblox, students need to be able to copy it in their own version of Studio.
 
@@ -153,7 +153,7 @@ Even though the template is now published on Roblox, students need to be able to
 6. Distribute the **.RBXL** file as desired.
 7. Confirm the changes by pressing **Save**.
 
-## Sharing Templates with Students
+## Share templates with students
 
 Templates can now be shared by having students go to the template's web page. There, students can click a link that opens a copy of that template in Roblox Studio.
 

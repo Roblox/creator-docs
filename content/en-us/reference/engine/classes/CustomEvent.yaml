@@ -24,7 +24,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: |
@@ -32,6 +32,8 @@ methods:
       and should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CustomEvent:SetValue
     summary: |
       Sets the value of the `Class.CustomEvent` and fires the
@@ -56,6 +58,8 @@ methods:
       `Class.BindableEvent|BindableEvents` and should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: CustomEvent.ReceiverConnected
     summary: |
@@ -74,6 +78,8 @@ events:
       `Class.BindableEvent|BindableEvents` and should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CustomEvent.ReceiverDisconnected
     summary: |
       Fires when a receiver is disconnected from the `Class.CustomEvent`.
@@ -92,4 +98,6 @@ events:
       `Class.BindableEvent|BindableEvents` and should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

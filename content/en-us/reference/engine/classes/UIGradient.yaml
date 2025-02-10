@@ -80,6 +80,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIGradient.Enabled
     summary: |
       Whether the gradient is enabled or not.
@@ -97,6 +100,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIGradient.Offset
     summary: |
       Determines the scalar translation of the gradient from the center of the
@@ -125,6 +131,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIGradient.Rotation
     summary: |
       Determines the clockwise rotation in degrees of the gradient starting from
@@ -149,6 +158,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIGradient.Transparency
     summary: |
       Determines how much the parent GuiObject can be seen through along the
@@ -174,6 +186,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

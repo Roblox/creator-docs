@@ -19,11 +19,11 @@ deprecation_message: |
 properties:
   - name: IntConstrainedValue.ConstrainedValue
     summary: |
-      Hold a `Integer` value between `Class.IntConstrainedValue.MinValue` and
+      Hold an `Integer` value between `Class.IntConstrainedValue.MinValue` and
       `Class.IntConstrainedValue.MaxValue`. Replaced by
       `Class.IntConstrainedValue.Value`, but still functional.
     description: |
-      Hold a `Integer` value between `Class.IntConstrainedValue.MinValue` and
+      Hold an `Integer` value between `Class.IntConstrainedValue.MinValue` and
       `Class.IntConstrainedValue.MaxValue`. Replaced by
       `Class.IntConstrainedValue.Value`, but still functional.
     code_samples:
@@ -42,6 +42,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: IntConstrainedValue.MaxValue
     summary: |
       The highest number that the `Class.IntConstrainedValue.Value` property can
@@ -63,6 +65,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: IntConstrainedValue.MinValue
     summary: |
       The lowest number that the `Class.IntConstrainedValue.Value` property can
@@ -84,12 +88,14 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: IntConstrainedValue.Value
     summary: |
-      Used to hold a integer value between `Class.IntConstrainedValue.MinValue`
+      Used to hold an integer value between `Class.IntConstrainedValue.MinValue`
       and `Class.IntConstrainedValue.MaxValue`.
     description: |
-      Used to hold a integer value between `Class.IntConstrainedValue.MinValue`
+      Used to hold an integer value between `Class.IntConstrainedValue.MinValue`
       and `Class.IntConstrainedValue.MaxValue`.
     code_samples:
     type: int64
@@ -106,6 +112,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events:
   - name: IntConstrainedValue.Changed
@@ -126,6 +134,8 @@ events:
       use the `Library.math.clamp()` function to constrain values.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: IntConstrainedValue.changed
     summary: ''
     description: ''
@@ -142,4 +152,6 @@ events:
       which has also been deprecated. Neither event should be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

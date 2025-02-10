@@ -29,16 +29,18 @@ print(dictionaryTable.Tuesday) -- nil
 You can use `nil` to clear some properties of objects. For example, you can set the `Parent` of an object to `nil` to effectively remove the object from the experience. To return the object to the experience after you remove it, reassign the `Parent`. The following example demonstrates how to use `nil` to remove a `Class.Part`:
 
 ```lua
+local Workspace = game:GetService("Workspace")
+
 -- Create a new brick
 local part = Instance.new("Part")
--- Parent new Part to the workspace, making it viewable
-part.Parent = workspace
+-- Parent new part to the workspace, making it viewable
+part.Parent = Workspace
 task.wait(1)
--- Remove the Part from view, but not from memory
+-- Remove the part from view but not from memory
 part.Parent = nil
 task.wait(1)
--- Part still exists because it's referenced by the variable 'part', so it can be returned to view
-part.Parent = workspace
+-- Part still exists because it's referenced by the variable "part", so it can be returned to view
+part.Parent = Workspace
 task.wait(1)
 -- Remove the part from view again
 part.Parent = nil

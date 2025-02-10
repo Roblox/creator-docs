@@ -46,6 +46,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.Attachment1
     summary: |
       Along with `Class.Trail.Attachment0|Attachment0`, determines where the
@@ -73,6 +76,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.Brightness
     summary: |
       Scales the light emitted from the trail when
@@ -95,6 +101,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.Color
     summary: |
       The color of the trail throughout its lifetime.
@@ -119,6 +128,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.Enabled
     summary: |
       Determines whether the trail will be drawn or not.
@@ -142,6 +154,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.FaceCamera
     summary: |
       Determines whether the trail will always face the camera, regardless of
@@ -167,6 +182,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.Lifetime
     summary: |
       Determines how long each segment in a trail will last, in seconds.
@@ -197,6 +215,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.LightEmission
     summary: |
       Determines to what degree the colors of the trail are blended with the
@@ -226,6 +247,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.LightInfluence
     summary: |
       Determines the degree to which the trail is influenced by the
@@ -253,6 +277,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.LocalTransparencyModifier
     summary: ''
     description: ''
@@ -270,6 +297,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.MaxLength
     summary: |
       Sets the maximum length of the trail.
@@ -293,6 +323,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.MinLength
     summary: |
       Sets the minimum length of the trail.
@@ -321,6 +354,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.Texture
     summary: |
       The content ID of the texture to be displayed on the trail.
@@ -353,6 +389,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.TextureLength
     summary: |
       Sets the length of the trail's texture, dependent on
@@ -373,6 +412,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.TextureMode
     summary: |
       Determines the manner in which the `Class.Trail.Texture|Texture` scales,
@@ -427,6 +469,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.Transparency
     summary: |
       Sets the transparency of the trail's segments over its
@@ -448,6 +493,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Trail.WidthScale
     summary: |
       Scales the width of the trail over the course of its lifetime.
@@ -470,6 +518,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
 methods:
   - name: Trail:Clear
     summary: |
@@ -492,5 +543,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

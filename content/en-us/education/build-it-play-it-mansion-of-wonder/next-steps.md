@@ -1,5 +1,5 @@
 ---
-title: Next Steps
+title: Next steps
 prev: /education/build-it-play-it-mansion-of-wonder/challenge-checkpoint-3
 description: For newer developers, choose what to learn next in the Roblox Build It Play It Mansion of Wonder.
 ---
@@ -10,7 +10,7 @@ description: For newer developers, choose what to learn next in the Roblox Build
 
 Now, **keep going!**
 
-## Supercharge Your Experience
+## Supercharge your experience
 
 Learn techniques to customize your particles even further or take a chance to show off your work.
 

@@ -51,6 +51,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: Selection:Add
     summary: ''
@@ -58,7 +60,7 @@ methods:
     code_samples:
     parameters:
       - name: instancesToAdd
-        type: Objects
+        type: Instances
         default:
         summary: ''
     returns:
@@ -68,6 +70,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Selection:Get
     summary: |
       Returns an array of currently selected `Class.Instance|Instances` in
@@ -90,20 +94,22 @@ methods:
       - Selection-SelectionChanged1
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of currently selected `Class.Instance|Instances`.
     tags: []
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Selection:Remove
     summary: ''
     description: ''
     code_samples:
     parameters:
       - name: instancesToRemove
-        type: Objects
+        type: Instances
         default:
         summary: ''
     returns:
@@ -113,6 +119,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Selection:Set
     summary: |
       Sets the currently selected objects in Roblox Studio to
@@ -138,7 +146,7 @@ methods:
       - SelectionSet1
     parameters:
       - name: selection
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.Instance|Instances` to set the current selection
@@ -150,6 +158,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: Selection.SelectionChanged
     summary: |
@@ -174,4 +184,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

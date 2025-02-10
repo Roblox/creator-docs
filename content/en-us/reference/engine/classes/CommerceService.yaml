@@ -23,7 +23,7 @@ methods:
         default:
         summary: ''
       - name: commerceProductId
-        type: int64
+        type: string
         default:
         summary: ''
     returns:
@@ -33,6 +33,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CommerceService:PromptRealWorldCommerceBrowser
     summary: ''
     description: ''
@@ -53,6 +55,27 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: CommerceService:GetCommerceProductInfoAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: commerceProductId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Dictionary
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CommerceService:UserEligibleForRealWorldCommerceAsync
     summary: ''
     description: ''
@@ -66,6 +89,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: CommerceService.PromptCommerceProductPurchaseFinished
     summary: ''
@@ -77,11 +102,13 @@ events:
         default:
         summary: ''
       - name: productId
-        type: int64
+        type: string
         default:
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

@@ -6,12 +6,12 @@ summary: |
   Displays a Pants texture from the Roblox website to display on a
   `Class.Humanoid` rig.
 description: |
-  The `Pants` object displays a pants texture from Roblox on a
-  `Class.Humanoid` rig. Pants cover the torso and legs, and will be covered by a
-  `Class.Shirt` on the torso. To be visible, a `Pants` must be a sibling of a
-  `Class.Humanoid` and have its `Class.Pants.PantsTemplate|PantsTemplate` property set
-  to an appropriate texture such as `rbxassetid://86896501`. The pants texture
-  may be colorized using the `Class.Clothing.Color3` property.
+  The `Pants` object displays a pants texture from Roblox on a `Class.Humanoid`
+  rig. Pants cover the torso and legs, and will be covered by a `Class.Shirt` on
+  the torso. To be visible, a `Pants` must be a sibling of a `Class.Humanoid`
+  and have its `Class.Pants.PantsTemplate|PantsTemplate` property set to an
+  appropriate texture such as `rbxassetid://86896501`. The pants texture may be
+  colorized using the `Class.Clothing.Color3` property.
 
   Pants are automatically loaded on `Class.Player` characters if their avatar is
   wearing one.
@@ -34,13 +34,16 @@ properties:
       be used to insert the pants into the workspace, for example:
 
       ```
+      local InsertService = game:GetService("InsertService")
+      local Workspace = game:GetService("Workspace")
+
       local webURL = "https://www.roblox.com/catalog/1804739/Jeans"
       local assetId = tonumber(string.match(webURL, "%d+") or 0)  -- Extract the number
       local success, model = pcall(function()
-      	return game:GetService("InsertService"):LoadAsset(assetId)
+      	return InsertService:LoadAsset(assetId)
       end)
       if success then
-      	model.Parent = workspace
+      	model.Parent = Workspace
       end
       ```
 
@@ -58,6 +61,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

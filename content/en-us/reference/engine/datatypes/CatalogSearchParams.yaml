@@ -141,10 +141,37 @@ properties:
   - name: CatalogSearchParams.CreatorName
     type: string
     summary: |
-      Search for items with the given creator.
+      Search for items with the given creator name.
     default: ''
     description: |
-      Search for items with the given creator.
+      Search for items with the given creator name. Specify whether to search
+      users, groups, or both with `Datatype.CatalogSearchParams.CreatorType`.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CatalogSearchParams.CreatorType
+    type: Enum.CreatorTypeFilter
+    summary: |
+      Search for items created by the given creator type.
+    default: Enum.CreatorTypeFilter.All
+    description: |
+      Search for items created by the given creator type. When unspecified, it
+      defaults to returning creations from both `Enum.CreatorTypeFilter.User`
+      and `Enum.CreatorTypeFilter.Group`. Searching by
+      `Datatype.CatalogSearchParams.CreatorId` with `Enum.CreatorTypeFilter.All`
+      results in a HTTP 400 Bad Request error.
+    code_samples: []
+    tags: []
+    deprecation_message: ''
+  - name: CatalogSearchParams.CreatorId
+    type: number
+    summary: |
+      Search for items created by the given creator ID.
+    default: 0
+    description: |
+      Search for items created by the single creator ID. Specify user or group
+      with `Datatype.CatalogSearchParams.CreatorType`. Searching by creator ID
+      **and** creator name is not supported; specify one, not both.
     code_samples: []
     tags: []
     deprecation_message: ''

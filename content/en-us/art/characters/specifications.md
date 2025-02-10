@@ -1,18 +1,18 @@
 ---
-title: Character Specifications
+title: Character specifications
 description: Character specification lists the specific technical requirements for custom characters created outside of Studio.
 ---
 
 Character models require a specific set of components and configuration standards to ensure all avatar features work as expected. Check that your model meets the following modeling specifications and guidelines before exporting to ensure Studio compatibility.
 
-When ready to export, see [Export Requirements](../../art/characters/export-settings.md) for mesh export settings for Blender and Maya.
+When ready to export, see the [export requirements](../../art/characters/export-settings.md) for mesh export settings for Blender and Maya.
 
 <Alert severity = 'warning'>
 <AlertTitle>If creating other types of 3D models:</AlertTitle>
 <ul>
-<li>When creating a generic mesh, your model must meet [General Mesh Specifications](../modeling/specifications.md).</li> <br />
-<li>When creating a rigid accessory model, see [Accessory Specifications](../../art/accessories/specifications.md).</li> <br />
-<li>When creating a clothing accessory model, see [Clothing Specifications](../../art/accessories/clothing-specifications.md).</li>
+<li>When creating a generic mesh, your model must meet [general mesh specifications](../modeling/specifications.md).</li> <br />
+<li>When creating a rigid accessory model, see the [accessory specifications](../../art/accessories/specifications.md).</li> <br />
+<li>When creating a clothing accessory model, see the [clothing specifications](../../art/accessories/clothing-specifications.md).</li>
 </ul>
 </Alert>
 
@@ -24,9 +24,9 @@ Avatar character models are made up of 15 separate mesh objects and require addi
 - **No N-gons** - Model your assets in quads where possible.
 - **Transformations** - All translation, rotation, and scale values must be frozen and pivots set to `0`, `0`, `0`.
 - **Orientation** - Characters must face positive Z and stand up in positive Y.
-- **Pose** - Before exporting, set your character to an I-Pose when possible.
+- **Pose** - Before exporting, set your character to an I-Pose, A-Pose, or T-Pose when possible.
 
-### Body Scale
+### Body scale
 
 Roblox supports 3 standards of body scales: **Normal**, **Slender**, and **Classic**. These standards allow developers to create experiences and spaces with consistent body sizes for standardizing movement and interaction. While the minimum sizes for each body scale is the same, each body scale has a unique maximum total body size, as well as a range for each body asset.
 
@@ -54,7 +54,7 @@ A Rthro Normal body scale [downloadable mannequin](../../avatar/resources.md#ref
 </figure>
 </center>
 
-In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro** to import your model as a Normal body scale.
+In the [3D importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro** to import your model as a Normal body scale.
 
 <br />
 
@@ -85,20 +85,20 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   </tr>
   <tr>
     <td>Torso</td>
-    <td>1</td>
-    <td>2</td>
+    <td>.8</td>
+    <td>1.7</td>
     <td>.7</td>
   </tr>
   <tr>
     <td>Leg</td>
     <td>.25</td>
-    <td>2</td>
+    <td>1.4</td>
     <td>.5</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**1.5**</td>
-    <td>**4.5**</td>
+    <td>**1.35**</td>
+    <td>**3.6**</td>
     <td>**.7**</td>
   </tr>
 </tbody>
@@ -130,20 +130,20 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   </tr>
   <tr>
     <td>Torso</td>
-    <td>4</td>
-    <td>3</td>
+    <td>4.6</td>
+    <td>3.5</td>
     <td>2.25</td>
   </tr>
   <tr>
     <td>Leg</td>
     <td>1.5</td>
-    <td>3</td>
+    <td>4</td>
     <td>2</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**8**</td>
-    <td>**8**</td>
+    <td>**8.6**</td>
+    <td>**9.5**</td>
     <td>**2.25**</td>
   </tr>
 </tbody>
@@ -162,7 +162,7 @@ A Rthro Slender (Narrow) body scale [downloadable mannequin](../../avatar/resour
 </figure>
 </center>
 
-In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro Narrow** to import your model as a Slender body scale.
+In the [3D importer](../../art/modeling/3d-importer.md#avatar-general), use **Rig Type** > **Rthro Narrow** to import your model as a Slender body scale.
 
 <br />
 
@@ -193,20 +193,20 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   </tr>
   <tr>
     <td>Torso</td>
-    <td>1</td>
-    <td>2</td>
+    <td>.85</td>
+    <td>1.7</td>
     <td>.7</td>
   </tr>
   <tr>
     <td>Leg</td>
     <td>.25</td>
-    <td>2</td>
+    <td>1.4</td>
     <td>.5</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**1.5**</td>
-    <td>**4.5**</td>
+    <td>**1.35**</td>
+    <td>**3.6**</td>
     <td>**.7**</td>
   </tr>
 </tbody>
@@ -238,20 +238,20 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   </tr>
   <tr>
     <td>Torso</td>
-    <td>2.5</td>
     <td>3</td>
+    <td>3.5</td>
     <td>2</td>
   </tr>
   <tr>
     <td>Leg</td>
     <td>1.5</td>
-    <td>3</td>
+    <td>4</td>
     <td>2</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**5.5**</td>
-    <td>**8**</td>
+    <td>**6**</td>
+    <td>**9.5**</td>
     <td>**2**</td>
   </tr>
 </tbody>
@@ -301,20 +301,20 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   </tr>
   <tr>
     <td>Torso</td>
-    <td>1</td>
-    <td>2</td>
+    <td>.85</td>
+    <td>1.7</td>
     <td>.7</td>
   </tr>
   <tr>
     <td>Leg</td>
     <td>.25</td>
-    <td>2</td>
+    <td>1.4</td>
     <td>.5</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**1.5**</td>
-    <td>**4.5**</td>
+    <td>**1.35**</td>
+    <td>**3.6**</td>
     <td>**.7**</td>
   </tr>
 </tbody>
@@ -335,7 +335,7 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   <tr>
     <td>Head</td>
     <td>1.5</td>
-    <td>1.75</td>
+    <td>1.8</td>
     <td>2</td>
   </tr>
   <tr>
@@ -346,20 +346,20 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
   </tr>
   <tr>
     <td>Torso</td>
-    <td>3.5</td>
-    <td>3.25</td>
+    <td>4</td>
+    <td>3.8</td>
     <td>2</td>
   </tr>
   <tr>
     <td>Leg</td>
     <td>1.5</td>
-    <td>2.75</td>
+    <td>3.5</td>
     <td>2</td>
   </tr>
   <tr>
     <td>**Total**</td>
-    <td>**7.5**</td>
-    <td>**7.75**</td>
+    <td>**8**</td>
+    <td>**9.1**</td>
     <td>**2**</td>
   </tr>
 </tbody>
@@ -367,18 +367,18 @@ In the [3D Importer](../../art/modeling/3d-importer.md#avatar-general), use **Ri
 </figure>
 </GridContainer>
 
-### Triangle Budgets
+### Triangle budgets
 
-Although model geometries are typically created using quads, the Roblox engine converts imported assets into tris. Each asset of your character model must not exceed our maximum tri budget. To quickly get the number of expected tris in your third-party modeling application, you can double the number of quads in your model.
+Although model geometries are typically created using quads, the Roblox Engine converts imported assets into tris. Each asset of your character model must not exceed our maximum tri budget. To quickly get the number of expected tris in your third-party modeling application, you can double the number of quads in your model.
 
 <Alert severity = 'info'>When character models are uploaded to Studio and created into assets for the Marketplace, the body is split into 6 individual assets: **DynamicHead**, **Torso**, **LeftArm**, **RightArm**, **LeftLeg**, **RightLeg**.</Alert>
 
 <table>
 <thead>
   <tr>
-    <th>Asset Type</th>
-    <th>Included Mesh Objects</th>
-    <th>Maximum Triangles</th>
+    <th>Asset type</th>
+    <th>Included mesh objects</th>
+    <th>Maximum triangles</th>
   </tr>
 </thead>
 <tbody>
@@ -420,7 +420,7 @@ Although model geometries are typically created using quads, the Roblox engine c
 </tbody>
 </table>
 
-### Body Parts
+### Body parts
 
 See the following specifications for the individual mesh objects that make up a character model:
 
@@ -444,9 +444,9 @@ See the following specifications for the individual mesh objects that make up a 
 
    <img src="../../assets/modeling/meshes/Modeling-Requirements-Caps.png" width="600" />
 
-### Face Accessories
+### Face accessories
 
-Face accessories, such as hair, eyebrows, and eyelashes are unique accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes can not be uploaded as standalone accessories and must be bundled with an avatar body. See [Accessory Specifications](../accessories/specifications.md#face-accessories) for additional information on face accessories.
+Face accessories, such as hair, eyebrows, and eyelashes are unique accessories that you can bundle with an avatar body upload. At this time, eyebrows and eyelashes can not be uploaded as standalone accessories and must be bundled with an avatar body. See [Accessory specifications](../accessories/specifications.md#face-accessories) for additional information on face accessories.
 
 ### Visibility
 
@@ -471,13 +471,9 @@ To ensure that avatar sizes are visually consistent, you must standardize body p
 
 Attachments are points on the humanoid model where rigid accessories attach. Like many [character components](./index.md#components-of-an-avatar), attachment points are set up in third-party modeling software and imported as `Class.Attachment` objects.
 
-The 3D Importer automatically recognizes and converts mesh objects as attachment points if the objects include the affix `\_Att` and follow the naming conventions below. This only applies when importing meshes with caging data, such bodies. Check out examples of this implementation in any of the [downloadable reference models](../../avatar/resources.md#references).
+The 3D Importer automatically recognizes and converts mesh objects as attachment points if the objects include the affix `\_Att` and follow the naming conventions below. This only applies when importing meshes with caging data, such as bodies (accessory attachment points are created using the Accessory Fitting Tool). Check out examples of this implementation in any of the [downloadable reference models](../../avatar/resources.md#references).
 
 Generally, when placing attachment points, position them so they overlap halfway with the character model's mesh part.
-
-  <Alert severity = 'info'>
-
-  </Alert>
 
   <GridContainer numColumns="2">
     <figure>
@@ -495,8 +491,8 @@ Attachments must follow a specific naming convention and positional consistency:
 <table>
 <thead>
   <tr>
-    <th>Mesh Part</th>
-    <th>Attachment Name</th>
+    <th>Mesh part</th>
+    <th>Attachment name</th>
     <th>Details</th>
   </tr>
 </thead>
@@ -564,7 +560,7 @@ Attachments must follow a specific naming convention and positional consistency:
   <tr>
     <td>RightHand</td>
     <td>RightGrip_Att</td>
-    <td>Anywhere in mesh bounding box, must set the rotation of the RightGrip_Att to `90`, `0`, `0`</td>
+    <td>Anywhere in mesh bounding box. <br/><br/>Orient grip attachments **perpendicular** to the lower arm bone. For example, for I-Pose (arms pointing down), set the grip attachment to `90`, `0`, `0` (grip attachment pointing forward).<br/><br/><img src="../../assets/modeling/meshes/Grip_Attachments.png" width="250" /></td>
   </tr>
   <tr>
     <td>LeftUpperArm</td>
@@ -574,7 +570,7 @@ Attachments must follow a specific naming convention and positional consistency:
   <tr>
     <td>LeftHand</td>
     <td>LeftGrip_Att</td>
-    <td>Anywhere in mesh bounding box, must set the rotation of the LeftGrip_Att to `90`, `0`, `0`</td>
+    <td>Anywhere in mesh bounding box. <br/><br/>Orient grip attachments **perpendicular** to the lower arm bone. For example, for I-Pose (arms pointing down), set the grip attachment to `90`, `0`, `0` (grip attachment pointing forward).<br/><br/><img src="../../assets/modeling/meshes/Grip_Attachments.png" width="250" /></td>
   </tr>
   <tr>
     <td>RightFoot</td>
@@ -638,7 +634,7 @@ See the following requirements for humanoid rigging:
   </GridContainer>
 
 - **LowerTorso and Root** - The LowerTorso and Root bone or joint position must be set to `0`, `0`, `0`.
-- **Pose** - Export your character model in an I-Pose for the best Studio compatibility. The LeftUpperArm and RightUpperArm bones can be exported with rotation values to meet this requirement.
+- **Pose** - Export your character model in an I-Pose, A-Pose, or T-Pose for the best Studio compatibility. The LeftUpperArm and RightUpperArm bones can be exported with rotation values to meet this requirement.
 
 ## Skinning
 
@@ -650,7 +646,7 @@ See the following requirements for skinning:
 - **No Root Influences** - Do not apply influences to the Root bone or joint.
 - **Symmetry** - When possible, maintain symmetry when applying influences to a rig.
 
-## Facial Animations
+## Facial animations
 
 Roblox supports facial animation on character heads and can support more than 50 base poses. If you are creating an avatar character, it must, at minimum, include the following 17 [FACS reference poses](../../art/characters/facial-animation/facs-poses-reference.md) to support avatar chat:
 
@@ -678,7 +674,7 @@ While the 17 poses are a minimum requirement, it's recommended to include as man
 
 Avatar characters must follow Roblox's [texture specifications](../../art/modeling/texture-specifications.md). Characters created for the Marketplace can take advantage of [custom skin tones](#custom-skin-tone) which use alpha layers allow users to select their own base color.
 
-### Custom Skin Tone
+### Custom skin tone
 
 When texturing an avatar character model where the user can set their own skin tone, set the exposed skin areas as transparent so a default color or texture is not baked into the texture. When rendering, the Studio engine applies the transparent layer on top without any layer effects. This step applies mostly to human-like characters with exposed skin that you intend users to customize.
 
@@ -715,27 +711,24 @@ The following are examples of skin tone shading for the face, and you can apply 
   </figure>
 </GridContainer>
 
-## Outer Cages
+## Outer cages
 
-Outer cages are non-rendered meshes that Roblox uses to define the outer surfaces of a body part using a `Class.WrapTarget` instance. Outer cages on your character model allow your character to wear layerable accessories, such as clothing.
+Outer cages on your character model allow your character to wear layerable accessories, such as clothing. Models, such as an avatar character, that are the target of meshes that will stretch over it, only require an outer cage, but meshes that deform, like [layered clothing](../accessories/clothing-specifications.md#cage-meshes), require an inner and outer cage.
 
-For general use, see the following requirements for adding inner and outer cage meshes to your model:
+For general use, see the following requirements for adding outer cage meshes to your model:
 
-- **Naming Conventions** - The inner and outer cage must be named after the primary mesh object with **\_InnerCage** and **\_OuterCage** affixed.
-
-   <img src="../../assets/accessories/lc-blender-selecting-cage-in-outlier.png" />
-
-- **Outer Cage** - Models, such as a playable character, that aren't expected deform but are the target of meshes that will stretch over it, only require an Outer Cage.
+- Use Roblox's [body cage templates](../../avatar/resources.md#project-files) to ensure naming convention and other configurations are correct.
+- **Naming Conventions** - The outer cage of a body part must be named after the primary mesh object with **\_OuterCage** affixed, for example `LeftUpperArm_OuterCage`.
 - **Vertices and UV Map** - Don't delete vertices or alter the UVs on the Outer Cages as this can cause errors when importing in Studio or when equipping onto a character. Use the Roblox provided templates for the cage meshes to ensure compatibility with other layered assets.
 - **Symmetry and consistency** - Keep each face (the space between vertices) consistently sized and retain symmetry wherever possible. Use symmetry tools in your modeling software whenever possible.
 
-## Marketplace Requirements
+## Marketplace requirements
 
 Along with the other technical requirements listed, your items must meet the following additional specifications before uploading them to the Marketplace to sell:
 
-- Ensure that your items adhere to the [Marketplace Program Guidelines](../../marketplace/marketplace-policy.md).
+- Ensure that your items adhere to the [Marketplace program guidelines](../../marketplace/marketplace-policy.md).
 - Whenever possible, ensure that your items adhere to the following modeling requirements:
-  - [Custom Mesh Specifications](../../art/modeling/specifications.md)
+  - [Custom mesh specifications](../../art/modeling/specifications.md)
   - Any applicable [avatar specifications](../../art/characters/specifications.md)
 - Object `Class.MeshPart.Material|Material` is set to `Plastic`.
 - Object `Class.MeshPart.Transparency|Transparency` is set to `0`.

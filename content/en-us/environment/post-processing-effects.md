@@ -1,5 +1,5 @@
 ---
-title: Post-Processing Effects
+title: Post-processing effects
 description: Post-processing effects are customizable filters that quickly enrich the visuals of an experience.
 ---
 
@@ -15,7 +15,7 @@ description: Post-processing effects are customizable filters that quickly enric
 <figcaption>Landscape with depth-of-field effect applied, simulating distance blur</figcaption>
 </figure>
 
-## Adding Post-Processing Effects
+## Add post-processing effects
 
 When you add post-processing effects to the `Class.Lighting` service, they display to **all players** who enter the experience. This is useful for effects
 that affect the global environment, such as [sun rays](#sun-rays).
@@ -24,17 +24,16 @@ When you add post-processing effects to the `Class.Camera` object, they only dis
 
 To add post-processing effects to either the `Class.Lighting` service or `Class.Camera`:
 
-1. Navigate to the [Explorer](../studio/explorer.md) window.
-1. Hover over the `Class.Lighting` service or `Class.Camera`,
+1. In the **Explorer** window, hover over the `Class.Lighting` service or `Class.Camera`,
    then click the &CirclePlus; button. A contextual menu displays.
-1. From the menu, insert one of the following post-processing effects:
+1. From the menu, insert one or more of the following post-processing effects:
 
-   - [**BloomEffect**](#bloom)
-   - [**BlurEffect**](#blur)
-   - [**ColorCorrectionEffect**](#color-correction)
-   - [**DepthOfFieldEffect**](#depth-of-field)
-   - [**SunRaysEffect**](#sun-rays)
-   - [**ColorGradingEffect**](#color-grading)
+   - **BloomEffect**
+   - **BlurEffect**
+   - **ColorCorrectionEffect**
+   - **DepthOfFieldEffect**
+   - **SunRaysEffect**
+   - **ColorGradingEffect**
 
 1. Depending on your Studio settings, some effects may not appear. To increase
    your rendering quality level:
@@ -69,7 +68,7 @@ The `Class.BlurEffect` effect applies a Gaussian blur to the entirety of the 3D 
 </TabItem>
 </Tabs>
 
-## Color Correction
+## Color correction
 
 The `Class.ColorCorrectionEffect` effect adjusts color properties to enhance an environment's appearance. You can also use this effect to provide player feedback, such as tinting the screen red when their character's health is low.
 
@@ -89,7 +88,7 @@ The following list describes the primary `Class.ColorCorrectionEffect` propertie
 </TabItem>
 </Tabs>
 
-## Depth-of-Field
+## Depth-of-field
 
 The `Class.DepthOfFieldEffect` effect blurs parts of your experience that aren't in focus. You can use this effect to blur distant objects or to focus a player on specific parts of your experience, such as an item in a shop.
 
@@ -104,14 +103,14 @@ The `Class.DepthOfFieldEffect` effect blurs parts of your experience that aren't
 
 <img src="../assets/engine-api/classes/DepthOfFieldEffect/Depth-Of-Field-Diagram.svg" width="80%" />
 
-## Sun Rays
+## Sun rays
 
 The `Class.SunRaysEffect` effect creates a halo of light with rays around the sun that move based on the `Class.Lighting.ClockTime|ClockTime`
 or `Class.Lighting.TimeOfDay|TimeOfDay` property. Objects between the player's camera and the sun shape this effect, allowing for realistic visuals of light and shadow.
 
 <video src="../assets/lighting-and-effects/post-processing/Sun-Rays-Effect.mp4" controls width="800" alt="Video showing sun rays as the sun moves across the sky" ></video>
 
-## Color Grading
+## Color grading
 
 The `Class.ColorGradingEffect` effect modifies how color values calculated by the renderer should be converted to the screen's color range, impacting the mood and appearance of your place.
 

@@ -2,8 +2,12 @@ name: AvatarCreationService
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  A service to support developer avatar creators.
+description: |
+  `AvatarCreationService` is a service that supports developer avatar creators,
+  providing methods that support the prompting of avatar creation from within
+  experiences.
 code_samples: []
 inherits:
   - Instance
@@ -14,126 +18,424 @@ deprecation_message: ''
 properties: []
 methods:
   - name: AvatarCreationService:GetValidationRules
-    summary: ''
-    description: ''
+    summary: |
+      Gets data regarding rules that assets must abide by to pass UGC
+      validation.
+    description: |
+      Gets data regarding rules that assets must abide by to pass UGC
+      validation. Validation is an essential step before creating avatars and
+      there are various checks that occur, including mesh triangle limits,
+      texture sizes, body part size limits, attachment positions, and more.
+
+      The returned dictionary of validation rules takes the following form:
+
+      ```
+      {
+      	["MeshRules"] = {
+      		["BodyPartMaxTriangles"] = {
+      			Enum.AssetType.DynamicHead: number,
+      			Enum.AssetType.LeftArm: number,
+      			Enum.AssetType.RightArm: number,
+      			Enum.AssetType.Torso: number,
+      			Enum.AssetType.LeftLeg: number,
+      			Enum.AssetType.RightLeg: number,
+      		},
+      			["AccessoryMaxTriangles"]: number,
+      			["MeshVertColor"]: Color3,
+      			["CageMeshMaxDistanceFromRenderMesh"]: number,
+      	},
+      	["TextureRules"] = {
+      		["MaxTextureSize"]: number,
+      	},
+      	["BodyPartRules"] = {
+      		[Enum.AssetType.DynamicHead] = {
+      			["Bounds"] = {
+      				["Classic"] = {
+      					["MinSize"]: Vector3,
+      					["MaxSize"]: Vector3,
+      			},
+      				["ProportionsSlender"] = {
+      					["MinSize"]: Vector3,
+      					["MaxSize"]: Vector3,
+      				},
+      				["ProportionsNormal"] = {
+      					["MinSize"]: Vector3,
+      					["MaxSize"]: Vector3,
+      				},
+      			},
+      			["SubParts"] = {
+      				["Head"] = {
+      					["NeckRigAttachment"] = {
+      						["LowerBound"]: Vector3,
+      						["UpperBound"]: Vector3,
+      					},
+      					["FaceFrontAttachment"] = {
+      						["LowerBound"]: Vector3,
+      						["UpperBound"]: Vector3,
+      					},
+      					["HatAttachment"] = {
+      						["LowerBound"]: Vector3,
+      						["UpperBound"]: Vector3,
+      					},
+      					["HairAttachment"] = {
+      						["LowerBound"]: Vector3,
+      						["UpperBound"]: Vector3,
+      					},
+      					["FaceCenterAttachment"] = {
+      						["LowerBound"]: Vector3,
+      						["UpperBound"]: Vector3,
+      					},
+      				},
+      			},
+      		},
+      		[Enum.AssetType.LeftArm] = {
+      			["Bounds"] = {
+      				["Classic"] = {
+      					["MinSize"]: Vector3,
+      					["MaxSize"]: Vector3,
+      				},
+      				["ProportionsSlender"] = {
+      					["MinSize"]: Vector3,
+      					["MaxSize"]: Vector3,
+      				},
+      				["ProportionsNormal"] = {
+      					["MinSize"]: Vector3,
+      					["MaxSize"]: Vector3,
+      				},
+      			},
+      			["SubParts"] = {
+      				["LeftHand"] = {
+      					["LeftWristRigAttachment"] = {
+      						["LowerBound"]: Vector3,
+      						["UpperBound"]: Vector3,
+      					},
+      					["LeftGripAttachment"] = {
+      						["LowerBound"]: Vector3,
+      						["UpperBound"]: Vector3,
+      					},
+      				},
+      				["LeftUpperArm"] = {
+      					["LeftShoulderRigAttachment"] = {
+      						["LowerBound"]: Vector3,
+      						["UpperBound"]: Vector3,
+      					},
+      					["LeftShoulderAttachment"] = {
+      						["LowerBound"]: Vector3,
+      						["UpperBound"]: Vector3,
+      					},
+      						["LeftElbowRigAttachment"] = {
+      						["LowerBound"]: Vector3,
+      						["UpperBound"]: Vector3,
+      					},
+      				},
+      				["LeftLowerArm"] = {
+      					["LeftElbowRigAttachment"] = {
+      						["LowerBound"]: Vector3,
+      						["UpperBound"]: Vector3,
+      					},
+      					["LeftWristRigAttachment"] = {
+      						["LowerBound"]: Vector3,
+      						["UpperBound"]: Vector3,
+      					},
+      				},
+      			},
+      		},
+      		...
+      	},
+      	["AccessoryRules"] = {
+      		[Enum.AssetType.HairAccessory] = {
+      			["Attachments"] = {
+      				{
+      					["Size"]: Vector3,
+      					["Offset"]: Vector3,
+      					["Name"]: string,
+      				},
+      			},
+      			["RigidAllowed"]: boolean,
+      		},
+      		...
+      	}
+      }
+      ```
     code_samples: []
     parameters: []
     returns:
       - type: Dictionary
-        summary: ''
+        summary: |
+          Dictionary of validation rules as detailed above.
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: AvatarCreationService:PromptCreateAvatarAsync
-    summary: ''
-    description: ''
+    capabilities: []
+    writeCapabilities: []
+  - name: AvatarCreationService:GetBatchTokenDetailsAsync
+    summary: |
+      Gets the avatar creation token details for a list of avatar creation
+      tokens at once.
+    description: |
+      Gets the avatar creation token details for a list of avatar creation
+      tokens at once. Returns an array of avatar creation token details; each
+      token detail is a dictionary with the fields indicated in the example
+      result below:
+
+      ```lua
+      {
+      	["Name"] = "string",
+      	["Description"] = "string",
+      	["UniverseId"] = 0,
+      	["CreatorId"] = 0,
+      	["CreatorType"] = Enum.CreatorType.User,
+      	["OnSale"] = true,
+      	["Price"] = 0,
+      	["OffSaleReasons"] = {
+      		"string",
+      	}
+      }
+      ```
     code_samples: []
     parameters:
+      - name: tokenIds
+        type: Array
+        default:
+        summary: |
+          The list of avatar creation token IDs to get details of.
+    returns:
+      - type: Array
+        summary: |
+          Array of avatar creation token details as outlined above.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AvatarCreationService:PromptCreateAvatarAsync
+    summary: |
+      Prompts a `Class.Player` to purchase and create an avatar from a
+      `Class.HumanoidDescription`.
+    description: |
+      Prompts a `Class.Player` to purchase and create an avatar from a
+      `Class.HumanoidDescription`. The price of the creation is dictated by the
+      price attributed to the avatar creation token.
+
+      For avatar creation, the `Class.HumanoidDescription` is expected to
+      include new assets to be created for each of the 6 body parts
+      (`Enum.BodyPart.Head|Head`, `Enum.BodyPart.Torso|Torso`,
+      `Enum.BodyPart.RightLeg|RightLeg`, `Enum.BodyPart.LeftLeg|LeftLeg`,
+      `Enum.BodyPart.RightArm|RightArm`, `Enum.BodyPart.LeftArm|LeftArm`).
+      Optionally, it can also include a new `Enum.AccessoryType.Hair|Hair`
+      accessory.
+
+      To support this, the `Class.HumanoidDescription` should include 6
+      `Class.BodyPartDescription` children (one for each body part). For each,
+      the `Class.BodyPartDescription.Instance` property references a
+      `Class.Folder` which includes all of the `Class.MeshPart` instances which
+      make up the body part, for example a `LeftArm` folder which has
+      `LeftHand`, `LeftUpperArm`, and `LeftLowerArm` `Class.MeshPart|MeshParts`.
+      The `Class.BodyPartDescription.BodyPart` property should also be set to
+      the relevant `Enum.BodyPart`.
+
+      Each body part `Class.MeshPart` will also need to include:
+
+      - An `Class.EditableImage`.
+      - A `Class.WrapDeformer` with an `Class.EditableMesh`.
+
+      If including an accessory such as hair, the `Class.HumanoidDescription`
+      should include a child `Class.AccessoryDescription` where:
+
+      - The `Class.AccessoryDescription.Instance` property references the
+        `Class.Accessory` instance.
+      - The `Class.AccessoryDescription.AccessoryType` property is set to the
+        relevant `Enum.AccessoryType`.
+
+      Finally, the `Class.HumanoidDescription` should include the humanoid
+      scales of `Class.HumanoidDescription.BodyTypeScale|BodyTypeScale`,
+      `Class.HumanoidDescription.HeadScale|HeadScale`,
+      `Class.HumanoidDescription.HeightScale|HeightScale`,
+      `Class.HumanoidDescription.WidthScale|WidthScale`, and
+      `Class.HumanoidDescription.ProportionScale|ProportionScale`. Be mindful of
+      the scales that a base body is imported with so that they match the scales
+      provided to the `Class.HumanoidDescription`.
+    code_samples:
+      - AvatarCreationService-PromptCreateAvatarAsync
+    parameters:
+      - name: tokenId
+        type: string
+        default:
+        summary: |
+          The ID of an avatar creation token. The token must be valid in that
+          the universe the method is called from is the same universe the token
+          was created for. Furthermore, the token creator must maintain ID
+          verification and
+          [Roblox Premium](https://www.roblox.com/premium/membership).
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` intended to be presented with the creation prompt.
       - name: humanoidDescription
         type: HumanoidDescription
         default:
-        summary: ''
+        summary: |
+          The `Class.HumanoidDescription` of the avatar intended for creation.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple containing, in order:
+
+          - An `Enum.PromptCreateAvatarResult` indicating the result of the
+            creation prompt.
+
+          - A string result. In the case of
+            `Enum.PromptCreateAvatarResult.Success`, this will indicate the
+            bundle ID. In the case of any failure enum, this will indicate the
+            resultant error message.
+
+          - A secondary optional string result. In the case of
+            `Enum.PromptCreateAvatarResult.Success`, this will indicate the
+            outfit ID. In the case of any failure enum, this will be `nil`.
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: AvatarCreationService:PromptSelectAvatarGenerationImageAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: player
-        type: Player
-        default:
-        summary: ''
-    returns:
-      - type: string
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AvatarCreationService:ValidateUGCAccessoryAsync
-    summary: ''
-    description: ''
+    summary: |
+      Studio only. Runs UGC validation for an `Enum.AccessoryType`.
+    description: |
+      Studio only. Given a `Class.Player` and `Class.Instance` for an
+      `Enum.AccessoryType`, determines if UGC validation passes.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` validation is completed for.
       - name: accessory
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The instance validation is run on.
       - name: accessoryType
         type: AccessoryType
         default:
-        summary: ''
+        summary: |
+          `Enum.AccessoryType` the instance is expected to be. Expects
+          `Enum.AccessoryType.Eyebrow|Eyebrow`,
+          `Enum.AccessoryType.Eyelash|Eyelash`, or
+          `Enum.AccessoryType.Hair|Hair`.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple containing, in order:
+
+          - A boolean indicating if validation was successful for the accessory.
+          - An optional table of strings. This includes failure reasons if
+            validation was unsuccessful; otherwise `nil` if validation was
+            successful.
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AvatarCreationService:ValidateUGCBodyPartAsync
-    summary: ''
-    description: ''
+    summary: |
+      Studio only. Runs UGC validation for an `Enum.BodyPart`.
+    description: |
+      Studio only. Given a `Class.Player` and `Class.Instance` for an
+      `Enum.BodyPart`, determines if UGC validation passes. The `instance`
+      parameter is expected as a `Class.Folder` in the following example format
+      with relevant `Class.MeshPart|MeshParts`:
+
+      - `LeftArm` (`Class.Folder`)
+        - `R15ArtistIntent` (`Class.Folder`)
+          - `LeftLowerArm` (`Class.MeshPart`)
+          - `LeftUpperArm` (`Class.MeshPart`)
+          - `LeftHand` (`Class.MeshPart`)
+
+      However, if the expected `bodyPart` is `Enum.BodyPart.Head`, the function
+      takes a singular `Head` `Class.MeshPart` directly.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` validation is completed for.
       - name: instance
         type: Instance
         default:
-        summary: ''
+        summary: |
+          The instance validation is run on.
       - name: bodyPart
         type: BodyPart
         default:
-        summary: ''
+        summary: |
+          `Enum.BodyPart` the instance is expected to be.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple containing, in order:
+
+          - A boolean indicating if validation was successful for the body part.
+          - An optional table of strings. This includes failure reasons if
+            validation was unsuccessful; otherwise `nil` if validation was
+            successful.
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AvatarCreationService:ValidateUGCFullBodyAsync
-    summary: ''
-    description: ''
+    summary: |
+      Studio only. Runs UGC validation for a whole body.
+    description: |
+      Studio only. Given a `Class.Player` and `Class.HumanoidDescription`, all
+      instances in the `Class.HumanoidDescription` will be validated.
+
+      The `Class.HumanoidDescription` is expected to include instances set on
+      `Class.BodyPartDescription` children for each of the 6 required
+      `Enum.BodyPart` values. Optionally, it can include instances set on
+      `Class.AccessoryDescription` children for `Eyebrow`, `Eyelash`, and `Hair`
+      `Enum.AccessoryType|AccessoryTypes`.
     code_samples: []
     parameters:
       - name: player
         type: Player
         default:
-        summary: ''
+        summary: |
+          The `Class.Player` validation is completed for.
       - name: humanoidDescription
         type: HumanoidDescription
         default:
-        summary: ''
+        summary: |
+          `Class.HumanoidDescription` representing the body that validation is
+          run on.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          A tuple containing, in order:
+
+          - A boolean indicating if validation was successful for the body.
+          - An optional table of strings. This includes failure reasons if
+            validation was unsuccessful; otherwise `nil` if validation was
+            successful.
     tags:
       - Yields
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

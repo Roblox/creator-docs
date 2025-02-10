@@ -1,0 +1,164 @@
+name: AudioLimiter
+type: class
+category:
+memory_category: Internal
+summary: |
+  Limits how loud audio streams are allowed to be.
+description: |
+  `AudioLimiter` limits how loud audio streams are allowed to be. Whenever its
+  input stream exceeds a specified maximum level, the stream's volume is reduced
+  for a moment. `AudioLimiter` provides a single **Input** pin, and a single
+  **Output** pin that can be connected to/from by `Class.Wires`.
+code_samples: []
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: AudioLimiter.Bypass
+    summary: |
+      Whether audio streams are passed-through unaffected by this effect.
+    description: |
+      If `true`, audio streams are passed-through unaffected by this effect.
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioLimiter.Editor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: State Editing
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioLimiter.MaxLevel
+    summary: |
+      The maximum volume tolerated.
+    description: |
+      The maximum volume, in decibels, that the limiter will allow to pass
+      through without reduction. Whenever the input stream exceeds
+      `Class.AudioLimiter.MaxLevel|MaxLevel`, the output stream's volume will be
+      reduced to compensate. This value ranges from `-12` to `0`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioLimiter.Release
+    summary: |
+      The amount of time it takes for previously limited streams to return to
+      their normal volume.
+    description: |
+      The amount of time, in seconds, that it takes for any previously (but not
+      currently) limited streams to return to their normal volume. This value
+      ranges from `0.001` to `1`.
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
+methods:
+  - name: AudioLimiter:GetConnectedWires
+    summary: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin.
+    description: |
+      Returns an array of `Class.Wire|Wires` that are connected to the specified
+      pin. `Class.AudioLimiter` has one **Input** pin and one **Output** pin.
+    code_samples: []
+    parameters:
+      - name: pin
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Instances
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+events:
+  - name: AudioLimiter.WiringChanged
+    summary: |
+      Fires when another instance is connected to or disconnected from the
+      `Class.AudioLimiter` via a `Class.Wire`.
+    description: |
+      Event that fires after a `Class.Wire` becomes connected or disconnected,
+      and that `Class.Wire` is now or was previously connected to a pin on the
+      `Class.AudioLimiter` and to some other wirable instance.
+    code_samples: []
+    parameters:
+      - name: connected
+        type: bool
+        default:
+        summary: |
+          Whether the instance got connected or disconnected.
+      - name: pin
+        type: string
+        default:
+        summary: |
+          The pin on the `Class.AudioLimiter` that the `Class.Wire` targets.
+      - name: wire
+        type: Wire
+        default:
+        summary: |
+          The `Class.Wire` between the `Class.AudioLimiter` and the other
+          instance.
+      - name: instance
+        type: Instance
+        default:
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+callbacks: []

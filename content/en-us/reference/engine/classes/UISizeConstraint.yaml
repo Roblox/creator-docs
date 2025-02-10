@@ -6,8 +6,8 @@ summary: |
   Ensures a `Class.GuiObject` does not become larger or smaller than the
   constraint's maximum size or minimum size.
 description: |
-  The `UISizeConstraint` ensures a `Class.GuiObject` does not become larger or
-  smaller than the `Class.UISizeConstraint.MaxSize|MaxSize` and
+  The `Class.UISizeConstraint` ensures a `Class.GuiObject` does not become
+  larger or smaller than the `Class.UISizeConstraint.MaxSize|MaxSize` and
   `Class.UISizeConstraint.MinSize|MinSize`. For example, if
   `Class.UISizeConstraint.MaxSize|MaxSize` is set to
   <Typography noWrap>`(200, 200)`</Typography> and
@@ -44,6 +44,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UISizeConstraint.MinSize
     summary: |
       The smallest size, in pixels, the object is allowed to be.
@@ -63,6 +66,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

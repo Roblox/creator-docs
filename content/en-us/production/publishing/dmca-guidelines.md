@@ -1,5 +1,5 @@
 ---
-title: DMCA Guidelines
+title: DMCA guidelines
 description: Explains copyright law and the details of DMCA claims.
 ---
 
@@ -7,7 +7,7 @@ description: Explains copyright law and the details of DMCA claims.
 The information below is provided for general informational purposes only and is not legal advice. If you have any questions about this information or your specific situation or rights, please contact an attorney.
 </Alert>
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 <BaseAccordion>
 <AccordionSummary>
@@ -49,8 +49,7 @@ The **Digital Millennium Copyright Act** ("DMCA") allows copyright holders or th
 
   If you are a copyright owner or an agent of a copyright owner and believe that
   any content on Roblox infringes upon your copyrights, you may submit a
-  notification pursuant to the DMCA by contacting our Copyright Agent at
-  [copyright_agent@roblox.com](mailto:copyright_agent@roblox.com), or Legal, Roblox Corporation, 970 Park Place, Suite
+  notification pursuant to the DMCA by contacting our Copyright Agent at copyright_agent@roblox.com, or Legal, Roblox Corporation, 970 Park Place, Suite
   100, San Mateo, CA 94403. You may also contact us by phone at (888)&nbsp;858-2569.
 
 - **What information must I provide when filing a DMCA claim?**
@@ -104,7 +103,7 @@ If you believe that your content on Roblox has been taken down because of mistak
 <AccordionDetails>
 When we notify you about DMCA notices, we also provide instructions about how to
 submit a counter‑notice, which may be sent to our DMCA agent:
-[copyright_agent@roblox.com](mailto:copyright_agent@roblox.com). Note that if you are under 13 years of age, a parent or other adult representative will have to submit the counter‑notice on your behalf.
+copyright_agent@roblox.com. Note that if you are under 13 years of age, a parent or other adult representative will have to submit the counter‑notice on your behalf.
 
 - **What will happen after I submit a DMCA counter‑notice?**
 
@@ -141,6 +140,6 @@ regarding DMCA.
 <Typography variant="h6">What if I think someone has copied original material that I uploaded to Roblox?</Typography>
 </AccordionSummary>
 <AccordionDetails>
-If you believe that someone has improperly copied original material that you previously uploaded to Roblox, you may file a complaint using Roblox's User-to-User Copying Complaint Process. A complaint may be filed by emailing [copyright_agent@roblox.com](mailto:copyright_agent@roblox.com), identifying the copied material, the original work, and any other relevant details. Please view the "Disputes Between Users and Creators or Between Creators" section of our [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) for more information.
+If you believe that someone has improperly copied original material that you previously uploaded to Roblox, you may file a complaint using Roblox's User-to-User Copying Complaint Process. A complaint may be filed by emailing copyright_agent@roblox.com, identifying the copied material, the original work, and any other relevant details. Please view the "Disputes Between Users and Creators or Between Creators" section of our [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use) for more information.
 </AccordionDetails>
 </BaseAccordion>

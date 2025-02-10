@@ -67,6 +67,8 @@ methods:
       completely replacing the need for this function.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GlobalDataStore:GetAsync
     summary: |
       Returns the value of a key in a specified data store and a
@@ -112,6 +114,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GlobalDataStore:IncrementAsync
     summary: |
       Increments the value of a key by the provided amount (both must be
@@ -160,6 +164,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GlobalDataStore:RemoveAsync
     summary: |
       Removes the specified key while also retaining an accessible version.
@@ -206,6 +212,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GlobalDataStore:SetAsync
     summary: |
       Sets the value of the data store for the given key.
@@ -282,6 +290,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GlobalDataStore:UpdateAsync
     summary: |
       Updates a key's value with a new value from the specified callback
@@ -381,5 +391,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

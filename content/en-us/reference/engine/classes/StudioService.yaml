@@ -73,6 +73,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: StudioService.DraggerSolveConstraints
     summary: ''
     description: ''
@@ -90,6 +92,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: StudioService.DrawConstraintsOnTop
     summary: ''
     description: ''
@@ -110,6 +114,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: StudioService.GridSize
     summary: |
       Determines the distance in studs by which Studio's drag and move tools
@@ -135,6 +141,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: StudioService.RotateIncrement
     summary: |
       Determines the degrees by which Studio's rotation tool will rotate
@@ -160,6 +168,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: StudioService.Secrets
     summary: ''
     description: ''
@@ -175,6 +185,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StudioService.ShowConstraintDetails
     summary: ''
     description: ''
@@ -192,6 +204,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: StudioService.ShowWeldDetails
     summary: ''
     description: ''
@@ -209,6 +223,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: StudioService.StudioLocaleId
     summary: |
       The locale currently in-use by Studio, e.g. `en_US`.
@@ -245,6 +261,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: StudioService.UseLocalSpace
     summary: |
       Determines whether Studio tools will use local space of an object or
@@ -268,6 +286,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: StudioService:GetClassIcon
     summary: |
@@ -314,6 +334,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: StudioService:GetUserId
     summary: |
       Returns the Studio user's userId if they're logged in, otherwise
@@ -331,6 +353,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: StudioService:GizmoRaycast
     summary: ''
     description: ''
@@ -355,6 +379,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: StudioService:PromptImportFile
     summary: |
       Prompts the current Studio user to select one file to add as a
@@ -388,6 +414,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: StudioService:PromptImportFiles
     summary: |
       Prompts the current Studio user to select files to add as
@@ -413,7 +441,7 @@ methods:
           allow only JPG and PNG files to be selected. If no filter is provided,
           the filter is nil and allows the user to select any file type.
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           The imported `Class.File|Files`. Returns an empty list if no files
           were selected. Returns nil if the user selected one or more files that
@@ -423,5 +451,7 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

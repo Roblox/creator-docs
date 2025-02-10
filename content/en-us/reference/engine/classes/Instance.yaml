@@ -3,18 +3,20 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  Instance is the base class for all classes in the Roblox class hierarchy.
+  Instance is the base class for all classes in the Roblox class hierarchy which
+  can be part of the DataModel tree.
 description: |
-  Instance is the base class for all classes in the Roblox class hierarchy.
-  Every other class that the Roblox engine defines inherits all of the members
-  of Instance. It is not possible to directly create Instance objects.
+  Instance is the base class for all classes in the Roblox class hierarchy which
+  can be part of the DataModel tree. It is not possible to directly create
+  Instance objects.
 
   Instance has a special function called `Datatype.Instance.new()` which is used
   to create objects via code. This function takes the name of the class as a
   parameter and returns the created object. Abstract classes and services cannot
   be created with the Instance.new function.
 code_samples:
-inherits: []
+inherits:
+  - Object
 tags:
   - NotCreatable
   - NotBrowsable
@@ -54,9 +56,20 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.Capabilities
-    summary: ''
-    description: ''
+    summary: |
+      The set of capabilities allowed to be used for scripts inside this
+      container.
+    description: |
+      The set of capabilities allowed to be used for scripts inside this
+      instance. For the capabilities to take effect, `Class.Instance.Sandboxed`
+      property has to be enabled.
+
+      This property is used by an experimental feature. See
+      [Script Capabilities](../../../scripting/capabilities.md) page for further
+      details.
     code_samples: []
     type: SecurityCapabilities
     tags: []
@@ -69,47 +82,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: Instance.ClassName
-    summary: |
-      A read-only string representing the class this `Class.Instance` belongs
-      to.
-    description: |
-      A read-only string representing the class this `Class.Instance` belongs
-      to.
-
-      This property can be used with various other functions of Instance that
-      are used to identify objects by type, such as `Class.Instance:IsA()` or
-      `Class.Instance:FindFirstChildOfClass()`.
-
-      Note this property is read only and cannot be altered by scripts.
-      Developers wishing to change an instance's class will instead have to
-      create a new `Class.Instance`.
-
-      Unlike `Class.Instance:IsA()`, ClassName can be used to check if an object
-      belongs to a specific class ignoring class inheritance. For example:
-
-      ```
-      for _, child in workspace:GetChildren() do
-          if child.ClassName == "Part" then
-              print("Found a Part")
-              -- will find Parts in model, but NOT TrussParts, WedgeParts, etc
-          end
-      end
-      ```
-    code_samples:
-    type: string
-    tags:
-      - ReadOnly
-      - NotReplicated
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.Name
     summary: |
       A non-unique identifier of the `Class.Instance`.
@@ -126,9 +100,11 @@ properties:
       model hierarchy using the following methods:
 
       ```
-      local baseplate = workspace.Baseplate
-      local baseplate = workspace["Baseplate"]
-      local baseplate = workspace:FindFirstChild("BasePlate")
+      local Workspace = game:GetService("Workspace")
+
+      local baseplate = Workspace.Baseplate
+      local baseplate = Workspace["Baseplate"]
+      local baseplate = Workspace:FindFirstChild("BasePlate")
       ```
 
       In order to make an object accessible using the dot operator, an object's
@@ -159,6 +135,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.Parent
     summary: |
       Determines the hierarchical parent of the `Class.Instance`.
@@ -199,11 +177,13 @@ properties:
       then setting its parent.
 
       ```
+      local Workspace = game:GetService("Workspace")
+
       -- Create a part and parent it to the workspace
       local part = Instance.new("Part")
-      part.Parent = workspace
-      -- Instance new can also take Parent as a second parameter
-      Instance.new("NumberValue", workspace)
+      part.Parent = Workspace
+      -- Instance new can also take the parent as a second parameter, although it is not recommended
+      Instance.new("NumberValue", Workspace)
       ```
 
       When a change is made to certain properties while an instance is parented
@@ -221,12 +201,14 @@ properties:
       changes.
 
       ```lua
+      local Workspace = game:GetService("Workspace")
+
       local part = Instance.new("Part") -- Avoid using the second parameter here
       part.Anchored = true
       part.BrickColor = BrickColor.new("Really red")
       -- Potentially many other property changes could go here here...
       -- Always set parent last!
-      part.Parent = workspace
+      part.Parent = Workspace
       ```
 
       However, if you were parenting your parts to a `Class.Model` whose parent
@@ -245,6 +227,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.RobloxLocked
     summary: |
       A deprecated property that used to protect `Class.CoreGui` objects.
@@ -266,9 +250,18 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.Sandboxed
-    summary: ''
-    description: ''
+    summary: |
+      Turns the instance to be a Sandboxed Container.
+    description: |
+      Turns the instance to be a Sandboxed Container. Sandboxed Containers are
+      an experimental feature which limits the actions that scripts inside a
+      particular container can perform.
+
+      See [Script Capabilities](../../../scripting/capabilities.md) page for
+      further details.
     code_samples: []
     type: bool
     tags:
@@ -282,6 +275,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.UniqueId
     summary: ''
     description: ''
@@ -299,6 +294,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.archivable
     summary: ''
     description: ''
@@ -319,26 +316,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
-  - name: Instance.className
-    summary: ''
-    description: ''
-    code_samples:
-    type: string
-    tags:
-      - ReadOnly
-      - NotReplicated
-      - Deprecated
-    deprecation_message: |
-      This deprecated property is a variant of `Class.Instance.ClassName` which
-      should be used instead.
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: Instance:AddTag
     summary: |
@@ -348,13 +327,19 @@ methods:
       already applied. Successfully adding a tag will fire a signal created by
       `Class.CollectionService:GetInstanceAddedSignal()` with the given tag.
 
-      Note that when tagging an instance, it's common that some resources are
-      used to give the tag its functionality, for example event connections or
-      tables. To prevent memory leaks, it's a good idea to clean these up
-      (disconnect, set to `nil`, etc.) when no longer needed for a tag. Do this
-      when calling `Class.Instance:RemoveTag()`, calling
-      `Class.Instance:Destroy()`, or in a function connected to a signal
-      returned by `Class.CollectionService:GetInstanceRemovedSignal()`.
+      ##### Warnings
+
+      - An instance's tags that were added client-side will be dropped if the
+        server later adds or removes a tag on that instance because the server
+        replicates all tags together and overwrites previous tags.
+
+      - When tagging an instance, it is common that some resources are used to
+        give the tag its functionality, for example event connections or tables.
+        To prevent memory leaks, it's a good idea to clean these up (disconnect,
+        set to `nil`, etc.) when no longer needed for a tag. Do this when
+        calling `Class.Instance:RemoveTag()`, calling
+        `Class.Instance:Destroy()`, or in a function connected to a signal
+        returned by `Class.CollectionService:GetInstanceRemovedSignal()`.
     code_samples: []
     parameters:
       - name: tag
@@ -368,6 +353,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:ClearAllChildren
     summary: |
       This function destroys all of an instance's children.
@@ -401,6 +388,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:Clone
     summary: |
       Create a copy of an instance and all its descendants, ignoring instances
@@ -432,23 +421,26 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:Destroy
     summary: |
-      Sets the `Class.Instance.Parent` property to nil, locks the
+      Sets the `Class.Instance.Parent` property to `nil`, locks the
       `Class.Instance.Parent` property, disconnects all connections, and calls
-      Destroy on all children.
+      `Destroy()` on all children.
     description: |
-      Sets the `Class.Instance.Parent` property to nil, locks the
+      Sets the `Class.Instance.Parent` property to `nil`, locks the
       `Class.Instance.Parent` property, disconnects all connections, and calls
-      Destroy on all children. This function is the correct way to dispose of
-      objects that are no longer required. Disposing of unneeded objects is
-      important, since unnecessary objects and connections in a place use up
-      memory (this is called a **memory leak**) which can lead to serious
-      performance issues over time.
+      `Destroy()` on all children. This function is the correct way to dispose
+      of objects that are no longer required.
 
-      **Tip:** After calling Destroy on an object, set any variables referencing
-      the object (or its descendants) to nil. This prevents your code from
-      accessing anything to do with the object.
+      Disposing of unneeded objects is important, since unnecessary objects and
+      connections in a place use up memory which can lead to serious performance
+      issues over time.
+
+      As a best practice after calling `Destroy()` on an object, set any
+      variables referencing the object (or its descendants) to `nil`. This
+      prevents your code from accessing anything to do with the object.
 
       ```lua
       local part = Instance.new("Part")
@@ -460,18 +452,20 @@ methods:
       part = nil
       ```
 
-      Once an `Class.Instance` has been destroyed by this method it cannot be
+      Once an `Class.Instance` has been destroyed by this method, it cannot be
       reused because the `Class.Instance.Parent` property is locked. To
-      temporarily remove an object, set `Class.Instance.Parent|Parent` it to nil
-      instead. For example:
+      **temporarily** remove an object instead of destroying it, set
+      `Class.Instance.Parent|Parent` to `nil`. For example:
 
       ```
+      local Workspace = game:GetService("Workspace")
+
       object.Parent = nil
-      wait(2)
-      object.Parent = workspace
+      task.wait(2)
+      object.Parent = Workspace
       ```
 
-      To Destroy an object after a set amount of time, use
+      To destroy an object after a set amount of time, use
       `Class.Debris:AddItem()`.
     code_samples:
       - Instance-Destroy1
@@ -483,6 +477,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:FindFirstAncestor
     summary: |
       Returns the first ancestor of the `Class.Instance` whose
@@ -520,13 +516,15 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:FindFirstAncestorOfClass
     summary: |
       Returns the first ancestor of the `Class.Instance` whose
-      `Class.Instance.ClassName` is equal to the given className.
+      `Class.Object.ClassName` is equal to the given className.
     description: |
       Returns the first ancestor of the `Class.Instance` whose
-      `Class.Instance.ClassName` is equal to the given className.
+      `Class.Object.ClassName` is equal to the given className.
 
       This function works upwards, meaning it starts at the instance's immediate
       `Class.Instance.Parent` and works up towards the `Class.DataModel`. If no
@@ -540,9 +538,9 @@ methods:
       ```
 
       This function is a variant of `Class.Instance:FindFirstAncestor()` which
-      checks the `Class.Instance.ClassName` property rather than
+      checks the `Class.Object.ClassName` property rather than
       `Class.Instance.Name`. `Class.Instance:FindFirstAncestorWhichIsA()` also
-      exists, using the `Class.Instance:IsA()` method instead to respect class
+      exists, using the `Class.Object:IsA()` method instead to respect class
       inheritance.
     code_samples:
     parameters:
@@ -550,7 +548,7 @@ methods:
         type: string
         default:
         summary: |
-          The `Class.Instance.ClassName` to be looked for.
+          The `Class.Object.ClassName` to be looked for.
     returns:
       - type: Instance
         summary: |
@@ -559,20 +557,22 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:FindFirstAncestorWhichIsA
     summary: |
       Returns the first ancestor of the `Class.Instance` for whom
-      `Class.Instance:IsA()` returns true for the given className.
+      `Class.Object:IsA()` returns true for the given className.
     description: |
       Returns the first ancestor of the `Class.Instance` for whom
-      `Class.Instance:IsA()` returns true for the given className.
+      `Class.Object:IsA()` returns true for the given className.
 
       This function works upwards, meaning it starts at the instance's immediate
       `Class.Instance.Parent` and works up towards the `Class.DataModel`. If no
       matching ancestor is found, it returns nil.
 
       Unlike `Class.Instance:FindFirstAncestorOfClass()`, this function uses
-      `Class.Instance:IsA()` which respects class inheritance. For example:
+      `Class.Object:IsA()` which respects class inheritance. For example:
 
       ```
       print(part:IsA("Part"))  --> true
@@ -595,7 +595,7 @@ methods:
         type: string
         default:
         summary: |
-          The `Class.Instance.ClassName` to be looked for.
+          The `Class.Object.ClassName` to be looked for.
     returns:
       - type: Instance
         summary: |
@@ -604,38 +604,43 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:FindFirstChild
     summary: |
       Returns the first child of the `Class.Instance` found with the given name.
     description: |
-      Returns the first child of the `Class.Instance` with the given name,
-
-      or `nil` if no such child exists. If the optional `recursive` argument is
-      true, this function searches all descendants rather than only the
+      Returns the first child of the `Class.Instance` with the given name, or
+      `nil` if no such child exists. If the optional `recursive` argument is
+      `true`, this function searches all descendants rather than only the
       immediate children of the `Class.Instance`.
 
-      #### Checking the Existence of an Object
+      ##### Checking the Existence of an Object
 
-      FindFirstChild is necessary if you need to verify an object exists before
-      continuing. Attempting to index a child by name using the dot operator
-      throws an error if the child doesn't exist.
+      `FindFirstChild()` is necessary if you need to verify an object exists
+      before continuing. Attempting to index a child by name using the dot
+      operator throws an error if the child doesn't exist.
 
       ```lua
-      -- The following line errors if Part doesn't exist in the Workspace:
-      workspace.Part.Transparency = 0.5
+      local Workspace = game:GetService("Workspace")
+
+      -- The following line errors if the part doesn't exist in the workspace
+      Workspace.Part.Transparency = 0.5
       ```
 
-      Use FindFirstChild to first check for Part, then use an if-statement to
-      run code that needs it.
+      Use `FindFirstChild()` to first check for `Part`, then use an `if`
+      statement to run code that needs it.
 
       ```lua
-      local part = workspace:FindFirstChild("Part")
+      local Workspace = game:GetService("Workspace")
+
+      local part = Workspace:FindFirstChild("Part")
       if part then
       	part.Transparency = 0.5
       end
       ```
 
-      #### Finding a Child Whose Name Matches a Property
+      ##### Finding a Child Whose Name Matches a Property
 
       Sometimes the `Class.Instance.Name|Name` of an object is the same as that
       of a property of its `Class.Instance.Parent|Parent`. When using the dot
@@ -690,13 +695,15 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:FindFirstChildOfClass
     summary: |
       Returns the first child of the `Class.Instance` whose
-      `Class.Instance.ClassName|ClassName` is equal to the given className.
+      `Class.Object.ClassName|ClassName` is equal to the given className.
     description: |
       Returns the first child of the `Class.Instance` whose
-      `Class.Instance.ClassName|ClassName` is equal to the given className.
+      `Class.Object.ClassName|ClassName` is equal to the given className.
 
       If no matching child is found, this function returns nil.
 
@@ -713,7 +720,7 @@ methods:
         type: string
         default:
         summary: |
-          The `Class.Instance.ClassName` to be looked for.
+          The `Class.Object.ClassName` to be looked for.
     returns:
       - type: Instance
         summary: |
@@ -722,20 +729,22 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:FindFirstChildWhichIsA
     summary: |
       Returns the first child of the `Class.Instance` for whom
-      `Class.Instance:IsA()` returns true for the given className.
+      `Class.Object:IsA()` returns true for the given className.
     description: |
       Returns the first child of the `Class.Instance` for whom
-      `Class.Instance:IsA()` returns true for the given className.
+      `Class.Object:IsA()` returns true for the given className.
 
       If no matching child is found, this function returns nil. If the optional
       recursive argument is true, this function searches all descendants rather
       than only the immediate children of the `Class.Instance`.
 
       Unlike `Class.Instance:FindFirstChildOfClass()`, this function uses
-      `Class.Instance:IsA()` which respects class inheritance. For example:
+      `Class.Object:IsA()` which respects class inheritance. For example:
 
       ```lua
       print(part:IsA("Part")) --> true
@@ -759,7 +768,7 @@ methods:
         type: string
         default:
         summary: |
-          The `Class.Instance.ClassName` to be searched for.
+          The `Class.Object.ClassName` to be searched for.
       - name: recursive
         type: bool
         default: false
@@ -773,6 +782,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:FindFirstDescendant
     summary: |
       Returns the first descendant found with the given `Class.Instance.Name`.
@@ -797,6 +808,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:GetActor
     summary: |
       Returns the `Class.Actor` associated with the Instance, if any.
@@ -814,6 +827,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:GetAttribute
     summary: |
       Returns the value which has been assigned to the given attribute name.
@@ -825,7 +840,9 @@ methods:
       the instance's **InitialPosition** attribute:
 
       ```lua
-      local part = workspace.Part
+      local Workspace = game:GetService("Workspace")
+
+      local part = Workspace.Part
       part:SetAttribute("InitialPosition", part.Position)
 
       local initialPosition = instance:GetAttribute("InitialPosition")
@@ -854,18 +871,20 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:GetAttributeChangedSignal
     summary: |
       Returns an event that fires when the given attribute changes.
     description: |
       This function returns an event that behaves exactly like the
-      `Class.Instance.Changed|Changed` event, except that it only fires when the
+      `Class.Object.Changed|Changed` event, except that it only fires when the
       specific given attribute changes; effectively it is similar to
-      `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()` but
+      `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal()` but
       for attributes.
 
       It's generally a good idea to use this method instead of a connection to
-      `Class.Instance.Changed|Changed` with a function that checks the attribute
+      `Class.Object.Changed|Changed` with a function that checks the attribute
       name. Subsequent calls to this method on the same object with the same
       attribute name return the same event.
 
@@ -874,7 +893,9 @@ methods:
       changes:
 
       ```lua
-      local part = workspace.Part
+      local Workspace = game:GetService("Workspace")
+
+      local part = Workspace.Part
       part:SetAttribute("InitialPosition", part.Position)
 
       local function attributeChanged()
@@ -902,6 +923,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:GetAttributes
     summary: |
       Returns a dictionary of the instance's attributes.
@@ -913,7 +936,9 @@ methods:
       and values:
 
       ```lua
-      local part = workspace.Part
+      local Workspace = game:GetService("Workspace")
+
+      local part = Workspace.Part
       part:SetAttribute("InitialPosition", part.Position)
       part:SetAttribute("CanUse", true)
 
@@ -937,6 +962,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:GetChildren
     summary: |
       Returns an array containing all of the instance's children.
@@ -947,8 +974,10 @@ methods:
       iterated upon using either a numeric or generic for-loop:
 
       ```lua
+      local Workspace = game:GetService("Workspace")
+
       -- Numeric for-loop example
-      local children = workspace:GetChildren()
+      local children = Workspace:GetChildren()
       for i = 1, #children do
       	local child = children[i]
       	print(child.Name .. " is child number " .. i)
@@ -956,8 +985,10 @@ methods:
       ```
 
       ```lua
+      local Workspace = game:GetService("Workspace")
+
       -- Generic for-loop example
-      local children = workspace:GetChildren()
+      local children = Workspace:GetChildren()
       for i, child in children do
       	print(child.Name .. " is child number " .. i)
       end
@@ -971,13 +1002,15 @@ methods:
       - Instance-GetChildren1
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array containing the instance's children.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:GetDebugId
     summary: |
       Returns a coded string of the debug ID used internally by Roblox.
@@ -1011,6 +1044,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:GetDescendants
     summary: |
       Returns an array containing all of the descendants of the instance.
@@ -1031,6 +1066,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:GetFullName
     summary: |
       Returns a string describing the instance's ancestry.
@@ -1062,59 +1099,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-  - name: Instance:GetPropertyChangedSignal
-    summary: |
-      Get an event that fires when a given property of the instance changes.
-    description: |
-      This method returns an event that behaves exactly like the
-      `Class.Instance.Changed|Changed` event, except that it only fires when the
-      given property changes. It's generally a good idea to use this method
-      instead of a connection to `Class.Instance.Changed|Changed` with a
-      function that checks the property name. Subsequent calls to this method on
-      the same object with the same property name return the same event.
-
-      `Class.ValueBase` objects, such as `Class.IntValue` and
-      `Class.StringValue`, use a modified `Class.Instance.Changed|Changed` event
-      that fires with the contents of their `Value` property. As such, this
-      method provides a way to detect changes in other properties of those
-      objects.
-
-      Note that this event will not pass any arguments to a connected function,
-      so the value of the changed property must be read directly within a
-      script.
-
-      #### Limitations
-
-      The event returned by this method does **not** fire for physics-related
-      changes, such as when the `Class.BasePart.CFrame|CFrame`,
-      `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity`,
-      `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`,
-      `Class.BasePart.Position|Position`, or
-      `Class.BasePart.Orientation|Orientation` properties of a `Class.BasePart`
-      change due to gravity. To detect changes in these properties, consider
-      using a physics-based event like `Class.RunService.PreSimulation`.
-
-      Additionally, the returned event may not fire on every modification of
-      properties that change very frequently, and/or it may not fire for such
-      properties at all. It's recommended that you carefully test for property
-      changes that impact game logic.
-    code_samples:
-      - Changed-Old-to-New
-      - Changed-and-GetPropertyChangedSignal
-    parameters:
-      - name: property
-        type: string
-        default:
-        summary: |
-          The property to connect to.
-    returns:
-      - type: RBXScriptSignal
-        summary: |
-          A signal that fires whenever the property changes.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:GetStyled
     summary: ''
     description: ''
@@ -1131,6 +1117,26 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: Instance:GetStyledPropertyChangedSignal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: property
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: RBXScriptSignal
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:GetTags
     summary: |
       Gets an array of all tags applied to the instance.
@@ -1153,6 +1159,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:HasTag
     summary: |
       Check whether the instance has a given tag.
@@ -1174,62 +1182,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
-  - name: Instance:IsA
-    summary: |
-      Returns true if an instance's class matches or inherits from a given
-      class.
-    description: |
-      IsA returns true if the instance's class is **equivalent to** or a
-      **subclass** of a given class. This function is similar to the
-      **instanceof** operators in other languages, and is a form of
-      [type introspection](https://en.wikipedia.org/wiki/Type_introspection). To
-      ignore class inheritance, test the `Class.Instance.ClassName|ClassName`
-      property directly instead. For checking native Lua data types (number,
-      string, etc) use the functions `type` and `typeof`.
-
-      Most commonly, this function is used to test if an object is some kind of
-      part, such as `Class.Part` or `Class.WedgePart`, which inherits from
-      `Class.BasePart` (an abstract class). For example, if your goal is to
-      change all of a character's limbs to the same color, you might use
-      `Class.Instance:GetChildren()|GetChildren` to iterate over the children,
-      then use IsA to filter non-`Class.BasePart` objects which lack the
-      `Datatype.BrickColor` property:
-
-      ```lua
-      local function paintFigure(character, color)
-      	-- Iterate over the child objects of the character
-      	for _, child in character:GetChildren() do
-      		-- Filter out non-part objects, such as Shirt, Pants and Humanoid
-      		-- R15 use MeshPart and R6 use Part, so we use BasePart here to detect both:
-      		if child:IsA("BasePart") then
-      			child.BrickColor = color
-      		end
-      	end
-      end
-      paintFigure(game.Players.Player.Character, BrickColor.new("Bright blue"))
-      ```
-
-      Since all classes inherit from `Class.Instance`, calling
-      `object:IsA("Instance")` will always return true.
-    code_samples:
-      - Instance-IsA1
-    parameters:
-      - name: className
-        type: string
-        default:
-        summary: |
-          The class against which the Instance's class will be checked.
-          Case-sensitive.
-    returns:
-      - type: bool
-        summary: |
-          Describes whether the Instance's class matched or is a subclass of the
-          given class.
-    tags:
-      - CustomLuaState
-    deprecation_message: ''
-    security: None
-    thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:IsAncestorOf
     summary: |
       Returns true if an `Class.Instance` is an ancestor of the given
@@ -1259,6 +1213,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:IsDescendantOf
     summary: |
       Returns true if an `Class.Instance` is a descendant of the given ancestor.
@@ -1289,6 +1245,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:Remove
     summary: |
       Sets the object's Parent to nil, and does the same for all its
@@ -1314,6 +1272,8 @@ methods:
       instead of using this method.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:RemoveTag
     summary: |
       Removes a tag from the instance.
@@ -1340,6 +1300,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:SetAttribute
     summary: |
       Sets the attribute with the given name to the given value.
@@ -1352,7 +1314,9 @@ methods:
       **InitialPosition** attribute to `Datatype.Vector3|Vector3.new(0, 10, 0)`:
 
       ```lua
-      local part = workspace.Part
+      local Workspace = game:GetService("Workspace")
+
+      local part = Workspace.Part
       part:SetAttribute("InitialPosition", Vector3.new(0, 10, 0))
       ```
 
@@ -1394,6 +1358,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:WaitForChild
     summary: |
       Returns the child of the `Class.Instance` with the given name. If the
@@ -1448,6 +1414,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:children
     summary: |
       Returns an array of the object's children.
@@ -1456,7 +1424,7 @@ methods:
     code_samples:
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           Array of child objects/instances.
     tags:
@@ -1466,6 +1434,8 @@ methods:
       should be used in all new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:clone
     summary: ''
     description: ''
@@ -1481,6 +1451,8 @@ methods:
       should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:destroy
     summary: ''
     description: ''
@@ -1496,6 +1468,8 @@ methods:
       should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:findFirstChild
     summary: ''
     description: ''
@@ -1519,13 +1493,15 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:getChildren
     summary: ''
     description: ''
     code_samples:
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags:
       - Deprecated
@@ -1534,26 +1510,8 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
-  - name: Instance:isA
-    summary: ''
-    description: ''
-    code_samples:
-    parameters:
-      - name: className
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: bool
-        summary: ''
-    tags:
-      - Deprecated
-      - CustomLuaState
-    deprecation_message: |
-      This deprecated function is a variant of `Class.Instance:IsA()` which
-      should be used instead.
-    security: None
-    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:isDescendantOf
     summary: ''
     description: ''
@@ -1573,6 +1531,8 @@ methods:
       which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance:remove
     summary: ''
     description: ''
@@ -1588,6 +1548,8 @@ methods:
       has also been deprecated. Neither function should be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: Instance.AncestryChanged
     summary: |
@@ -1623,6 +1585,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.AttributeChanged
     summary: |
       Fires whenever an attribute is changed on the `Class.Instance`.
@@ -1635,7 +1599,9 @@ events:
       function to fire whenever one of the part's attributes changes:
 
       ```lua
-      local part = workspace.Part
+      local Workspace = game:GetService("Workspace")
+
+      local part = Workspace.Part
 
       local function attributeChanged(attributeName)
       	print(attributeName, "changed")
@@ -1657,61 +1623,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: Instance.Changed
-    summary: |
-      Fired immediately after a property of the instance changes, with some
-      limitations.
-    description: |
-      This event fires immediately after an instance property is changed and it
-      works with most use cases (see limitations below). The new value of a
-      changed property is **not** passed in as a parameter, so it must be
-      accessed by using `object[property]`. For example:
-
-      ```
-      object.Changed:Connect(function(property)
-      	print("The new property's value is", object[property])
-      end)
-      ```
-
-      If you are only interested in listening to the change of one specific
-      property, consider using the
-      `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()`
-      method instead.
-
-      For `Class.ValueBase` objects such as `Class.IntValue` and
-      `Class.StringValue`, this event only fires when the object's `Value`
-      property changes. To detect other changes in `Class.ValueBase` objects,
-      use `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal()`
-      instead.
-
-      #### Limitations
-
-      This event does **not** fire for physics-related changes, such as when the
-      `Class.BasePart.CFrame|CFrame`,
-      `Class.BasePart.AssemblyLinearVelocity|AssemblyLinearVelocity`,
-      `Class.BasePart.AssemblyAngularVelocity|AssemblyAngularVelocity`,
-      `Class.BasePart.Position|Position`, or
-      `Class.BasePart.Orientation|Orientation` properties of a `Class.BasePart`
-      change due to gravity. To detect changes in these properties, consider
-      using a physics-based event like `Class.RunService.PreSimulation`.
-
-      Additionally, this event may not fire on every modification of properties
-      that change very frequently, and/or it may not fire for such properties at
-      all. It's recommended that you carefully test for property changes that
-      impact game logic.
-    code_samples:
-      - Changed-Event
-      - Change-Detector
-    parameters:
-      - name: property
-        type: string
-        default:
-        summary: |
-          The name of the property that changed.
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.ChildAdded
     summary: |
       Fires after an object is parented to this `Class.Instance`.
@@ -1725,8 +1638,10 @@ events:
       simultaneously. For example:
 
       ```
-      workspace.ChildAdded:Connect(function(child)
-      	-- need to use WaitForChild as descendants may not have replicated yet
+      local Workspace = game:GetService("Workspace")
+
+      Workspace.ChildAdded:Connect(function(child)
+      	-- Use WaitForChild() since descendants may not have replicated yet
       	local head = child:WaitForChild("Head")
       end)
       ```
@@ -1735,7 +1650,7 @@ events:
       `Class.Instance`. For a function that captures all descendants, use
       `Class.Instance.DescendantAdded`.
 
-      See also, `Class.Instance.ChildRemoved`.
+      See also `Class.Instance.ChildRemoved`.
     code_samples:
       - Instance-ChildAdded1
     parameters:
@@ -1748,6 +1663,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.ChildRemoved
     summary: |
       Fires after a child is removed from this `Class.Instance`.
@@ -1777,6 +1694,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.DescendantAdded
     summary: |
       Fires after a descendant is added to the `Class.Instance`.
@@ -1804,6 +1723,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.DescendantRemoving
     summary: |
       Fires immediately before a descendant of the `Class.Instance` is removed.
@@ -1829,7 +1750,9 @@ events:
       something else will fail. Below is an example that demonstrates this:
 
       ```
-      workspace.DescendantRemoving:Connect(function(descendant)
+      local Workspace = game:GetService("Workspace")
+
+      Workspace.DescendantRemoving:Connect(function(descendant)
       	-- Do not manipulate the parent of the descendant in this function!
       	-- This event fires BECAUSE the parent was manipulated, and the change hasn't happened yet
       	-- Therefore, it is problematic to change the parent like this:
@@ -1837,7 +1760,7 @@ events:
       end)
 
       local part = Instance.new("Part")
-      part.Parent = workspace
+      part.Parent = Workspace
       part.Parent = nil
       ```
 
@@ -1854,29 +1777,57 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.Destroying
     summary: |
-      Fires immediately before the instance is destroyed via
-      `Class.Instance:Destroy()`.
+      Fires immediately before (or is deferred until after) the instance is
+      destroyed via `Class.Instance:Destroy()`.
     description: |
-      The Destroying event fires immediately before the Instance or one of its
-      ancestors is destroyed with `Instance.Destroy()`.
+      The `Class.Instance` will never be deleted from memory while a connected
+      function is still using it. However, if the function yields at any point,
+      the `Class.Instance` and its descendants will be parented to `nil`.
 
-      The Instance will never be deleted from memory while a connected function
-      is still using it. However, if the function yields at any point, the
-      Instance and its descendants will be parented to `nil`.
+      If the `Class.Workspace.SignalBehavior` property is set to
+      `Enum.SignalBehavior.Immediate`, this event fires immediately before the
+      `Class.Instance` or one of its ancestors is destroyed with
+      `Class.Instance:Destroy()`.
 
-      When deleting an instance in Studio, such as manually deleting through the
-      Explorer or through a plugin, the instance isn't destroyed. Instead, the
-      parent is set to `nil` which you can track with
-      `Class.Instance.AncestryChanged`.
+      If the `Class.Workspace.SignalBehavior` property is set to
+      `Enum.SignalBehavior.Deferred`, this event fires at the next resumption
+      point, which will be after the `Class.Instance` or one of its ancestors is
+      destroyed with `Class.Instance:Destroy()`.
+
+      With `Enum.SignalBehavior.Deferred|Deferred` behavior, connecting a script
+      to its own `Class.Instance.Destroying` event is problematic, as the script
+      will be destroyed before the callback can be called (meaning it will not
+      execute).
+
+      When deleting an `Class.Instance` in Studio, such as manually deleting
+      through the [Explorer](../../../studio/explorer.md) or through a plugin,
+      the `Class.Instance` isn't destroyed. Instead, the parent is set to `nil`
+      which you can track with `Class.Instance.AncestryChanged`.
     code_samples:
-      - Instance-Destroying
+      - Instance-Destroying-Immediate
+      - Instance-Destroying-Deferred
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: Instance.StyledPropertiesChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Instance.childAdded
     summary: ''
     description: ''
@@ -1893,4 +1844,6 @@ events:
       should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

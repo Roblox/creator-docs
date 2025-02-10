@@ -58,6 +58,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - LegacySound
+    writeCapabilities: []
   - name: CompressorSoundEffect.GainMakeup
     summary: |
       The overall amplification applied to the effectâ€™s Sound or SoundGroup
@@ -80,6 +83,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - LegacySound
+    writeCapabilities: []
   - name: CompressorSoundEffect.Ratio
     summary: |
       The ratio between the `Class.CompressorSoundEffect.SideChain` sound
@@ -99,6 +105,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - LegacySound
+    writeCapabilities: []
   - name: CompressorSoundEffect.Release
     summary: |
       The time the effect takes to become inactive after its sound is below the
@@ -118,6 +127,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - LegacySound
+    writeCapabilities: []
   - name: CompressorSoundEffect.SideChain
     summary: |
       Applies a ducking effect to the compressor sound effect. The behavior of
@@ -140,6 +152,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - LegacySound
+    writeCapabilities: []
   - name: CompressorSoundEffect.Threshold
     summary: |
       Volume level at which point the compressor applies its effect.
@@ -160,6 +175,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - LegacySound
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

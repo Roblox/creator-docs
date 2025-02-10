@@ -1,5 +1,5 @@
 ---
-title: Adding Scripts
+title: Add scripts
 prev: /education/build-it-play-it-mansion-of-wonder/using-particles-for-actions
 next: /education/build-it-play-it-mansion-of-wonder/next-steps-advanced
 description: Learn how to use Lua code to manipulate beams and emitters to add tutorial mechanics to your game in the Roblox Build It Play It Mansion of Wonder.
@@ -14,7 +14,7 @@ While you can follow all these steps even if you haven't coded before, having th
 
 </Alert>
 
-## Storing Beam and Particles
+## Store beam and particles
 
 Before adding the scripts, the beam and particles need to be moved to where the scripts will be able to make copies of them as needed.
 
@@ -34,7 +34,7 @@ If you're using your own project, you may need to replace the values within some
 
    <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/delete-test-player.mp4" ></video>
 
-## Creating Events
+## Create events
 
 Each time players interact with a goal, the tutorial script will need to know so it can update that player's progress and emit the particle effect. To inform scripts, signals can be sent using **events**.
 
@@ -42,7 +42,7 @@ Each time players interact with a goal, the tutorial script will need to know so
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/create-events.png"  />
 
-## Adding the Scripts
+## Add the scripts
 
 The three scripts below will look for the particle emitter and beam objects created earlier and manage the tutorial system.
 
@@ -239,8 +239,8 @@ The three scripts below will look for the particle emitter and beam objects crea
      playerBeam = beamTemplate:Clone()
      playerBeam.Attachment0 = playerBeamAttachment
      playerBeam.Attachment1 = targetBeamAttachment
-     playerBeam.Parent = humanoidRootPart
      playerBeam.Enabled = true
+     playerBeam.Parent = humanoidRootPart
    end
 
    local function setupPlayer()
@@ -262,7 +262,7 @@ The three scripts below will look for the particle emitter and beam objects crea
 
    <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/adding-scripts/final-example-2.mp4" width="100%"></video>
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 **Issue**: Particles play when game starts.
 
@@ -272,7 +272,7 @@ The three scripts below will look for the particle emitter and beam objects crea
 
 - Because the script is looking for specific objects in certain locations, it's possible that a part is named incorrectly. Double check that the name and location of each part in game matches the tutorial.
 
-### Script Benefits and Limitations
+### Script benefits and limitations
 
 If you're using this tutorial system in your experience, keep in mind the following:
 

@@ -1,5 +1,5 @@
 ---
-title: Platform Overview
+title: Platform overview
 description: Learn about the unique value propositions on Roblox.
 next: /creation
 ---
@@ -14,7 +14,7 @@ Our platform provides you with unparalleled opportunities to create content from
 
 <img src="./assets/getting-started/platform-overview/Everything-You-Need.jpg" alt="" width="100%" />
 
-Roblox offers you the ability to create anything you can imagine. With a comprehensive set of free powerful 3D collaborative creation tools, [Roblox Studio](./studio/setting-up-roblox-studio.md) is an advanced development environment to help you start creating immediately. Studio's functionality ranges from an advanced physics engine and robust data storage, to Gen AI technology and APIs that automate workflows, to third-party professional integrations, such as Blender, and much more.
+Roblox offers you the ability to create anything you can imagine. With a comprehensive set of free powerful 3D collaborative creation tools, [Roblox Studio](./studio/setup.md) is an advanced development environment to help you start creating immediately. Studio's functionality ranges from an advanced physics engine and robust data storage, to Gen AI technology and APIs that automate workflows, to third-party professional integrations, such as Blender, and much more.
 
 With Roblox, you can deploy globally in seconds across major platforms&nbsp;— from mobile to console to desktop to VR&nbsp;— and in multiple languages. We also simplify creation by providing hosting and an infrastructure that powers automatic, synchronous real-time gameplay as well as covering storage, localization, and payment processing.
 
@@ -34,6 +34,6 @@ We also provide a robust analytics suite of tools to measure and gain insights o
 
 Creators of all sizes, from an individual to small developer teams to large developer studios, are finding success. In 2023, our creators earned $741 million\*, up 19% year-over-year.
 
-We want to help creators monetize and find success on Roblox, and we're constantly developing new ways for our community to earn. We empower creators with a wide array of ways to earn money on Roblox that includes in-experience purchases, ads as well as selling avatar items or creator plugins. See [Earning on Roblox](./production/earning-on-roblox.md) to learn more about how to make money on Roblox. And, with efforts like the [Creator Fund](./creator-fund.md), we seek to fund and support the next generation of experiences.
+We want to help creators monetize and find success on Roblox, and we're constantly developing new ways for our community to earn. We empower creators with a wide array of ways to earn money on Roblox that includes in-experience purchases, ads as well as selling avatar items or creator plugins. See [Earning on Roblox](./production/earn-on-roblox.md) to learn more about how to make money on Roblox. And, with efforts like the [Creator Fund](./creator-fund.md), we seek to fund and support the next generation of experiences.
 
 <figcaption>\* \~24k creators earned more than 185K Robux (\~$650 at the DevEx rate) on Roblox in the last twelve months, which represents \~1/1000 of the 25 million creators monetizing on Roblox (as of Dec 31, 2023)</figcaption>

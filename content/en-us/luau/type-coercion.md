@@ -1,5 +1,5 @@
 ---
-title: Type Coercion
+title: Type coercion
 description: Type coercion in Luau allows for arithmetic, concatenation, and assignment of differently typed values.
 ---
 
@@ -38,24 +38,26 @@ Some properties expect certain data types, such as an [Enum](#enums) or string, 
 Luau coerces numbers and strings of enum values into the full enum name. For example, you can name the value of the `Class.Part.Material` property using a number, string, or full enum name, and the `print()` function always prints the full enum name. It's best practice to be explicit and use the full enum name. For more information on Enums, see [Enums](./enums.md).
 
 ```lua
+local Workspace = game:GetService("Workspace")
+
 local part1 = Instance.new("Part")
-part1.Parent = workspace
 part1.Material = 816
+part1.Parent = Workspace
 print(part1.Material) -- Enum.Material.Concrete
 
 local part2 = Instance.new("Part")
-part2.Parent = workspace
 part2.Material = "Concrete"
+part2.Parent = Workspace
 print(part2.Material) -- Enum.Material.Concrete
 
 -- This is best practice because it's the most explicit
 local part3 = Instance.new("Part")
-part3.Parent = workspace
 part3.Material = Enum.Material.Concrete
+part3.Parent = Workspace
 print(part3.Material) -- Enum.Material.Concrete
 ```
 
-### TimeOfDay
+### Time of day
 
 The `Class.Lighting.TimeOfDay` property, which defines whether it is night, day, or any other time, is a string representation of the `Datatype.DateTime` data type. If you assign a number to `Class.Lighting.TimeOfDay`, Luau converts it to the string representation of `Datatype.DateTime`.
 

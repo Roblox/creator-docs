@@ -6,16 +6,16 @@ description: Explains physical assemblies and how they behave in Roblox's rigid 
 An **assembly** is one or more [parts](../parts/index.md) welded by a rigid `Class.WeldConstraint|WeldConstraint` or connected through moveable joints, like `Class.Motor6D|Motor6Ds`. You can group an assembly of parts in a [Model](../parts/models.md) container to quickly organize the parts and related objects as a single asset.
 
 <Grid container spacing={0}>
-  <Grid item xs={6} lg={3}>
-    <img src="../assets/physics/assemblies/Assembly-Example-Block.png" width="100%" />
+  <Grid item XSmall={6} XLarge={3}>
+    <img src="../assets/physics/assemblies/Assembly-Example-Block.png" alt="A light blue cube against a dark blue background that represents an assembly of 1 part." width="100%" />
     <figcaption>1&nbsp;assembly; 1&nbsp;part</figcaption>
   </Grid>
-  <Grid item xs={6} lg={3}>
-    <img src="../assets/physics/assemblies/Assembly-Example-Avatar.png" width="100%" />
+  <Grid item XSmall={6} XLarge={3}>
+    <img src="../assets/physics/assemblies/Assembly-Example-Avatar.png" alt="A humanoid character model against a dark blue background that represents an assembly of 18 parts." width="100%" />
     <figcaption>1&nbsp;assembly; 18&nbsp;parts</figcaption>
   </Grid>
-  <Grid item xs={12} lg={6}>
-    <img src="../assets/physics/assemblies/Assembly-Example-Ship.png" width="100%" />
+  <Grid item XSmall={12} XLarge={6}>
+    <img src="../assets/physics/assemblies/Assembly-Example-Ship.png" alt="A pirate that represents an assemble of 179 parts." width="100%" />
     <figcaption>1&nbsp;assembly; 179&nbsp;parts</figcaption>
   </Grid>
 </Grid>
@@ -31,7 +31,7 @@ The joints that combine multiple parts into assemblies are only active in the `C
 To view colored outlines around parts in order to visualize single rigid body assemblies, toggle on **Assemblies** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
-## Assembly Properties
+## Assembly properties
 
 The following `Class.BasePart` properties show data regarding its assembly. Their values will be the same for any part in the same assembly, so it doesn't matter which part you use.
 
@@ -66,38 +66,38 @@ The following `Class.BasePart` properties show data regarding its assembly. Thei
 </tbody>
 </table>
 
-## Assembly Root Part
+## Assembly root part
 
 Every assembly has a **root&nbsp;part** indicated by its `Class.BasePart.AssemblyRootPart|AssemblyRootPart` property. This is the part that doesn't move when `Class.Motor6D` transforms are updated, as well as the part used to keep consistent physics replication and network ownership.
 
 You cannot explicitly set the root part, but the following factors affect probability from highest to lowest:
 
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Higher.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Higher.png" alt="" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	An `Class.BasePart.Anchored|Anchored` part will always be assigned as the root part.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-High.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-High.png" alt="" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	Parts with `Class.BasePart.Massless|Massless` set to **false** (default) take precedence.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Low.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Low.png" alt="" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	Higher `Class.BasePart.RootPriority|RootPriority` values take precedence.
 	</Grid>
 </Grid>
 <Grid container spacing={2}>
-	<Grid item xs={2} sm={1} md={1} lg={1}><img src="../assets/misc/Arrow-Lower.png" width="50" style={{float:"right"}} /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11} style={{marginTop:"4px"}}>
+	<Grid item XSmall={2} Medium={1} Large={1} XLarge={1}><img src="../assets/misc/Arrow-Lower.png" alt="" width="50" style={{float:"right"}} /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11} style={{marginTop:"4px"}}>
 	Precedence based on the part's size, with multipliers for parts with specific names.
 	</Grid>
 </Grid>
 
-## Anchoring Behavior
+## Anchoring behavior
 
 When one of an assembly's parts is anchored, that part becomes the root part and all of the other parts become implicitly anchored with it. The following sequence illustrates this behavior.
 
@@ -112,7 +112,7 @@ When one of an assembly's parts is anchored, that part becomes the root part and
 
    <figure>
      <img src="../assets/physics/assemblies/Assembly-Anchor-Diagram-2.png" width="720" />
-     <figcaption>Anchored part (left) becomes the new root part</figcaption>
+     <figcaption>Anchored part (as indicated with an anchor icon) becomes the new root part</figcaption>
    </figure>
 
 3. If more than one part is anchored, the assembly will **split**. Below, both the left and top parts are anchored, so the original assembly splits into two assemblies as shown by the colored outlines. Also, the `Class.WeldConstraint` between the two assemblies deactivates, since you cannot have an active weld between two anchored assemblies.

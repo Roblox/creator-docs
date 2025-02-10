@@ -25,6 +25,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GroundController.AccelerationTime
     summary: |
       Estimated time taken to reach the desired speed.
@@ -45,6 +47,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GroundController.BalanceMaxTorque
     summary: |
       The maximum torque used to keep the `Class.ControllerManager.RootPart`
@@ -69,6 +73,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GroundController.BalanceSpeed
     summary: |
       The maximum angular speed used to align the
@@ -90,6 +96,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GroundController.DecelerationTime
     summary: |
       Estimated time taken to reach a complete stop from full speed.
@@ -110,6 +118,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GroundController.Friction
     summary: |
       The coefficient of friction of the character on the ground.
@@ -129,6 +139,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GroundController.FrictionWeight
     summary: |
       Amount the character's friction is weighed against the ground friction.
@@ -150,6 +162,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GroundController.GroundOffset
     summary: |
       The target distance above the ground to keep the
@@ -172,6 +186,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GroundController.StandForce
     summary: ''
     description: ''
@@ -187,6 +203,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GroundController.StandSpeed
     summary: ''
     description: ''
@@ -202,6 +220,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GroundController.TurnSpeedFactor
     summary: |
       The value multiplied by the `Class.ControllerManager.BaseTurnSpeed`.
@@ -222,6 +242,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

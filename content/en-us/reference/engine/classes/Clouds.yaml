@@ -40,6 +40,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Clouds.Cover
     summary: |
       Defines the cloud cover within the overall skyscape layer.
@@ -61,6 +64,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Clouds.Density
     summary: |
       Controls the particulate density of clouds.
@@ -82,6 +88,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
   - name: Clouds.Enabled
     summary: |
       Toggles rendering of the `Class.Clouds` object.
@@ -101,6 +110,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Environment
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

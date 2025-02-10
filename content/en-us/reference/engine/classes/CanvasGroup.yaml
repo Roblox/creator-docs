@@ -44,6 +44,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: CanvasGroup.GroupTransparency
     summary: |
       Transparency that applies to all descendants.
@@ -61,6 +64,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: CanvasGroup.ResolutionScale
     summary: ''
     description: ''
@@ -76,6 +82,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

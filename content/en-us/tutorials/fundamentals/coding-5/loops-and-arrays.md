@@ -1,7 +1,7 @@
 ---
-title: Loops and Arrays
+title: Loops and arrays
 description: Learn how to iterate, or go through, arrays in Roblox Lua using loops.
-next: /tutorials/fundamentals/coding-5/making-changes-to-arrays
+next: /tutorials/fundamentals/coding-5/make-changes-to-arrays
 prev: /tutorials/fundamentals/coding-5/intro-to-arrays
 ---
 
@@ -11,7 +11,7 @@ To explore looping through arrays, create a disappearing bridge path where parts
 
 <video controls src="../../../assets/education/coding-5/disappearingHero_16_9web.mp4" width="75%"></video>
 
-## Looping through an Array
+## Loop through an array
 
 For the project, find or create a set of three parts to make disappear. The parts must all be anchored.
 
@@ -34,7 +34,7 @@ For the project, find or create a set of three parts to make disappear. The part
    }
    ```
 
-### Using a for Loop With an Array
+### Use a for loop with an array
 
 Use a for loop to go through the array and control how fast the parts should disappear in the order the parts are indexed within the array.
 
@@ -85,7 +85,7 @@ Use a for loop to go through the array and control how fast the parts should dis
 
    <video controls src="../../../assets/education/coding-5/showPathDisappearFirst_web.mp4" width="100%"></video>
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 If the bridge doesn't disappear, check the possible issues below:
 
@@ -93,7 +93,7 @@ If the bridge doesn't disappear, check the possible issues below:
 
 - Depending on how fast your character loads into the experience, the first parts may already be invisible. To address this, add a small wait, such as `task.wait(2)`, at the start of the script.
 
-### Coding the Second Loop
+### Code the second loop
 
 Right now, the parts disappear forever. To make them reappear, create a second for loop that will go through each part and instantly make each piece walkable.
 
@@ -129,7 +129,7 @@ Right now, the parts disappear forever. To make them reappear, create a second f
 
    <video controls src="../../../assets/education/coding-5/showPathDisappearIndexed_web.mp4" width="100%"></video>
 
-## Repeating with a While Loop
+## Repeat with a while loop
 
 The parts disappear and reappear, but only once. To make the code keep repeating, nest all of the code within a while loop.
 

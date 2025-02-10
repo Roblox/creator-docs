@@ -21,7 +21,7 @@ description: |
   associated with the `Class.TextSource` via `Class.TextSource.UserId`.
 
   To learn more about using TextSources, see
-  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+  [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
 code_samples:
 inherits:
   - Instance
@@ -48,6 +48,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: TextSource.UserId
     summary: |
       UserId of the user represented by the `Class.TextSource`.
@@ -70,6 +73,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

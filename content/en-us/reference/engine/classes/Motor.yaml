@@ -30,6 +30,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: Motor.DesiredAngle
     summary: |
       The desired angle to turn the motor to in radians.
@@ -48,6 +51,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: Motor.MaxVelocity
     summary: |
       The maximum velocity the motor can use to reach `Class.Motor.DesiredAngle`
@@ -67,6 +73,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods:
   - name: Motor:SetDesiredAngle
     summary: |
@@ -86,5 +95,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

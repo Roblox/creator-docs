@@ -38,6 +38,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - LegacySound
+    writeCapabilities: []
   - name: ReverbSoundEffect.Density
     summary: |
       Controls how many reflections are generated.
@@ -55,6 +58,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - LegacySound
+    writeCapabilities: []
   - name: ReverbSoundEffect.Diffusion
     summary: |
       Controls how smooth and reflective the simulated surfaces are.
@@ -74,6 +80,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - LegacySound
+    writeCapabilities: []
   - name: ReverbSoundEffect.DryLevel
     summary: |
       The output volume of the original sound.
@@ -91,6 +100,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - LegacySound
+    writeCapabilities: []
   - name: ReverbSoundEffect.WetLevel
     summary: |
       The output volume of the echoed effect.
@@ -108,6 +120,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - LegacySound
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

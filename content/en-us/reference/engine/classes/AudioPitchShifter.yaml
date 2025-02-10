@@ -33,6 +33,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPitchShifter.Pitch
     summary: |
       Pitch modification to be multiplied by the pitch of the input stream.
@@ -51,6 +54,27 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioPitchShifter.WindowSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AudioWindowSize
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioPitchShifter:GetConnectedWires
     summary: |
@@ -66,11 +90,51 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events: []
+    capabilities: []
+    writeCapabilities: []
+events:
+  - name: AudioPitchShifter.WiringChanged
+    summary: |
+      Fires when another instance is connected to or disconnected from the
+      `Class.AudioPitchShifter` via a `Class.Wire`.
+    description: |
+      Event that fires after a `Class.Wire` becomes connected or disconnected,
+      and that `Class.Wire` is now or was previously connected to a pin on the
+      `Class.AudioPitchShifter` and to some other wirable instance.
+    code_samples: []
+    parameters:
+      - name: connected
+        type: bool
+        default:
+        summary: |
+          Whether the instance got connected or disconnected.
+      - name: pin
+        type: string
+        default:
+        summary: |
+          The pin on the `Class.AudioPitchShifter` that the `Class.Wire`
+          targets.
+      - name: wire
+        type: Wire
+        default:
+        summary: |
+          The `Class.Wire` between the `Class.AudioPitchShifter` and the other
+          instance.
+      - name: instance
+        type: Instance
+        default:
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

@@ -1,5 +1,5 @@
 ---
-title: Add New Models
+title: Add new models
 prev: /education/build-it-play-it-galactic-speedway/go-beyond-the-challenge
 description: Learn how to import more parts into Roblox Studio to customize the spaceship you built in the Build It Play It Galactic Speedway challenge.
 ---
@@ -9,7 +9,7 @@ width="100%" />
 
 Change your driftspeeder's look or create a new one with this kit of extra parts. Once you finish designing an even better speeder, get a new avatar item by testing your knowledge in a game.
 
-## Add To Your Inventory
+## Add to your inventory
 
 Get extra parts to work with by importing an asset. Assets are parts of a Roblox game, like a 3D model or sound, that are stored online.
 
@@ -21,7 +21,7 @@ Get extra parts to work with by importing an asset. Assets are parts of a Roblox
 2. On the page for the asset, click the **Get** button to add it into your inventory.
    <img src="../../assets/education/build-it-play-it-galactic-speedway/add-new-models/driftspeeder-part-asset.png" />
 
-## Import into the Game
+## Import into the game
 
 All assets can be found in your **Inventory**. This stores any models you've added and lets you add them into a game.
 
@@ -55,7 +55,7 @@ The kit will be imported wherever your camera is positioned. To make sure your k
     <img src="../../assets/education/build-it-play-it-galactic-speedway/add-new-models/new-parts-design-2.jpeg" />
    </GridContainer>
 
-## Take the Challenge
+## Take the challenge
 
 <img src="../../assets/education/build-it-play-it-galactic-speedway/add-new-models/hero-ring-hat.jpeg" />
 

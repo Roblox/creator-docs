@@ -39,6 +39,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: NetworkClient.ConnectionFailed
     summary: |
       Fired if the client fails to connect to the server.
@@ -62,4 +64,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

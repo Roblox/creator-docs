@@ -2,60 +2,99 @@ name: WrapDeformer
 type: class
 category:
 memory_category: Instances
-summary: ''
-description: ''
+summary: |
+  Allows for the real-time deformation of a `Class.MeshPart`.
+description: |
+  The `Class.WrapDeformer` object provides a low-resolution cage mesh that pairs
+  with a `Class.WrapTarget` sibling to deform a parent `Class.MeshPart`. The
+  `Class.MeshPart` geometry is deformed according to the displacement between
+  pairs of `Class.WrapTarget` cage mesh vertices and `Class.WrapDeformer` cage
+  mesh vertices. Cage mesh vertices are paired based on UV equivalence.
+
+  `Class.WrapDeformer` may be used with avatars or on distinct
+  `Class.MeshPart|MeshParts`, as long as `Class.WrapTarget` children are present
+  for the parent `Class.MeshPart|MeshParts`. `Class.WrapDeformer` is similar to
+  `Class.WrapLayer` but doesn't require layered clothing and can directly deform
+  `Class.MeshPart|MeshParts` for publishing.
 code_samples: []
 inherits:
   - BaseWrap
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
-properties:
-  - name: WrapDeformer.Amount
-    summary: ''
-    description: ''
+properties: []
+methods:
+  - name: WrapDeformer:SetCageMeshContent
+    summary: |
+      Sets the cage mesh used to deform against a sibling `Class.WrapTarget`
+      cage mesh.
+    description: |
+      Sets the cage mesh used to deform the parent `Class.MeshPart` in
+      conjunction with a sibling `Class.WrapTarget` cage mesh. The `content`
+      parameter should represent a Roblox mesh asset ID or an
+      `Class.EditableMesh` reference in your `Class.DataModel`.
     code_samples: []
-    type: float
+    parameters:
+      - name: content
+        type: Content
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
     tags: []
     deprecation_message: ''
-    security:
-      read: None
-      write: PluginSecurity
-    thread_safety: ReadSafe
-    category: Tuning
-    serialization:
-      can_load: true
-      can_save: true
-  - name: WrapDeformer.Enabled
-    summary: ''
-    description: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: WrapDeformer:CreateEditableMeshAsync
+    summary: |
+      Returns an `Class.EditableMesh` (currently unskinned) equivalent to the
+      deformed parent mesh.
+    description: |
+      Constructs and returns an `Class.EditableMesh` corresponding to the
+      deformed parent mesh geometry. This method respects all updates made to
+      the deformation inputs prior to the request. It also sets the returned
+      result's `Class.EditableMesh.FixedSize|FixedSize` to `true`.
     code_samples: []
-    type: bool
-    tags: []
+    parameters: []
+    returns:
+      - type: Object
+        summary: ''
+    tags:
+      - Yields
     deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
-  - name: WrapDeformer.RenderMeshID
-    summary: ''
-    description: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: WrapDeformer:GetDeformedCFrameAsync
+    summary: |
+      Returns a `Datatype.CFrame` deformed comparably to the `Class.MeshPart`.
+    description: |
+      Returns a `Datatype.CFrame` deformed by the same deformation field used
+      for the geometry of the parent `Class.MeshPart`. This method is useful for
+      the placement of accessories.
+
+      The input and output `Datatype.CFrame` are both in the space of the parent
+      `Class.MeshPart`; only position (not rotation) will be deformed. This
+      method respects all updates made to the deformation inputs prior to the
+      request.
     code_samples: []
-    type: ContentId
-    tags: []
+    parameters:
+      - name: originalCFrame
+        type: CFrame
+        default:
+        summary: ''
+    returns:
+      - type: CFrame
+        summary: ''
+    tags:
+      - Yields
     deprecation_message: ''
-    security:
-      read: None
-      write: PluginSecurity
-    thread_safety: ReadSafe
-    category: Appearance
-    serialization:
-      can_load: true
-      can_save: true
-methods: []
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

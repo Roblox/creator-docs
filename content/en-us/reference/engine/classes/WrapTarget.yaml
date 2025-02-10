@@ -37,6 +37,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: WrapTarget.DebugMode
     summary: |
       Allows switching between different debugging visualization modes for cage
@@ -58,6 +61,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: WrapTarget.Stiffness
     summary: |
       Defines how much the body mesh can be compressed by clothing.
@@ -86,6 +92,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

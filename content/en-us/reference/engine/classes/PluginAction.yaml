@@ -39,6 +39,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: PluginAction.AllowBinding
     summary: |
       Whether the `Class.PluginAction` will be hidden from Studio's shortcuts
@@ -65,6 +67,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: PluginAction.StatusTip
     summary: |
       The description of the action, when viewing it from the keyboard shortcuts
@@ -86,6 +90,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: PluginAction.Text
     summary: |
       The text that is displayed when viewing this action in Roblox Studio.
@@ -94,17 +100,18 @@ properties:
     code_samples:
     type: string
     tags:
-      - ReadOnly
       - NotReplicated
     deprecation_message: ''
     security:
       read: None
-      write: None
+      write: RobloxScriptSecurity
     thread_safety: ReadSafe
     category: Data
     serialization:
-      can_load: false
+      can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events:
   - name: PluginAction.Triggered
@@ -122,4 +129,6 @@ events:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

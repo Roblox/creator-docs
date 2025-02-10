@@ -43,6 +43,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: HopperBin.BinType
     summary: ''
     description: ''
@@ -60,6 +62,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events:
   - name: HopperBin.Deselected
@@ -73,6 +77,8 @@ events:
       object which should be used for all new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: HopperBin.Selected
     summary: ''
     description: ''
@@ -88,4 +94,6 @@ events:
       object which should be used for all new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Place Publishing",
-    "description": "You can send and receive the following request and response payloads to publish and update your places on Roblox. For information on the usage of the API, see the [Usage Guide](../../../cloud/open-cloud/usage-place-publishing.md).",
+    "description": "You can send and receive the following request and response payloads to publish and update your places on Roblox. For information on the usage of the API, see the [usage guide](../../../cloud/open-cloud/usage-place-publishing.md).",
     "version": "v1"
   },
   "servers": [
@@ -32,7 +32,7 @@
             "name": "placeId",
             "in": "path",
             "required": true,
-            "description": "The identifier of your place. See [Publishing Places with API Keys](../../../cloud/open-cloud/usage-place-publishing.md) on obtaining a Place ID.",
+            "description": "The identifier of your place. See [Publishing places with API keys](../../../cloud/open-cloud/usage-place-publishing.md) on obtaining a Place ID.",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -79,7 +79,11 @@
             "description": "Server internal error / Unknown error."
           }
         },
-        "security": [],
+        "security": [
+          {
+            "roblox-api-key": ["Label.Write"]
+          }
+        ],
         "x-roblox-cloud-api-operation": true,
         "x-roblox-code-samples": [
           {
@@ -94,6 +98,15 @@
           }
         },
         "x-roblox-size-limit": 10485760
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "roblox-api-key": {
+        "type": "apiKey",
+        "name": "roblox-api-key",
+        "in": "header"
       }
     }
   }

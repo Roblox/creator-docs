@@ -14,16 +14,16 @@ inherits:
 tags: []
 deprecation_message: ''
 properties:
-  - name: AudioPlayer.AssetId
+  - name: AudioPlayer.Asset
     summary: |
       The asset to be loaded into the `Class.AudioPlayer`.
     description: |
       The asset to be loaded into the `Class.AudioPlayer`. If
-      `Class.AudioPlayer.AutoLoad|AutoLoad` is true, the asset loads immediately
-      once this property is assigned. When loading is complete,
-      `Class.AudioPlayer.IsReady|IsReady` becomes true.
+      `Class.AudioPlayer.AutoLoad|AutoLoad` is `true`, the asset loads
+      immediately once this property is assigned. When loading is complete,
+      `Class.AudioPlayer.IsReady|IsReady` becomes `true`.
     code_samples: []
-    type: string
+    type: ContentId
     tags: []
     deprecation_message: ''
     security:
@@ -34,14 +34,43 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
+  - name: AudioPlayer.AssetId
+    summary: |
+      The asset to be loaded into the `Class.AudioPlayer`.
+    description: |
+      The asset to be loaded into the `Class.AudioPlayer`. If
+      `Class.AudioPlayer.AutoLoad|AutoLoad` is `true`, the asset loads
+      immediately once this property is assigned. When loading is complete,
+      `Class.AudioPlayer.IsReady|IsReady` becomes `true`.
+    code_samples: []
+    type: string
+    tags:
+      - Hidden
+      - NotReplicated
+      - Deprecated
+    deprecation_message: |
+      This property is deprecated; use `Class.AudioPlayer.Asset|Asset` instead.
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Asset
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.AutoLoad
     summary: |
-      Controls whether `Class.AudioPlayer.AssetId|AssetId` loads automatically
-      once assigned.
+      Controls whether `Class.AudioPlayer.Asset|Asset` loads automatically once
+      assigned.
     description: |
-      Controls whether `Class.AudioPlayer.AssetId|AssetId` loads automatically
-      once assigned. If false, the asset will load upon the first attempt to
-      play.
+      Controls whether `Class.AudioPlayer.Asset|Asset` loads automatically once
+      assigned. If `false`, the asset will load upon the first attempt to play.
     code_samples: []
     type: bool
     tags: []
@@ -54,6 +83,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.IsPlaying
     summary: |
       Denotes whether this `Class.AudioPlayer` is currently playing.
@@ -74,6 +106,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.IsReady
     summary: |
       Denotes whether this `Class.AudioPlayer` is loaded, buffered, and ready to
@@ -97,6 +132,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.LoopRegion
     summary: |
       A range, in seconds, denoting a desired loop start and loop end within the
@@ -140,6 +178,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.Looping
     summary: |
       Controls whether this `Class.AudioPlayer` loops.
@@ -160,6 +201,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.PlaybackRegion
     summary: |
       Range in seconds denoting a desired start time (minimum) and stop time
@@ -199,6 +243,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.PlaybackSpeed
     summary: |
       Controls how quickly the asset will be played, which controls its pitch.
@@ -217,11 +264,14 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.TimeLength
     summary: |
       Denotes the length of the loaded asset.
     description: |
-      Denotes the length of the loaded `Class.AudioPlayer.AssetId|AssetId` in
+      Denotes the length of the loaded `Class.AudioPlayer.Asset|Asset` in
       seconds.
     code_samples: []
     type: double
@@ -237,12 +287,15 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.TimePosition
     summary: |
       Tracks the current position of the playhead within the asset.
     description: |
       Tracks and controls the current position of the playhead within the
-      `Class.AudioPlayer.AssetId|AssetId`, in seconds.
+      `Class.AudioPlayer.Asset|Asset`, in seconds.
     code_samples: []
     type: double
     tags: []
@@ -255,6 +308,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioPlayer.Volume
     summary: |
       Controls how loudly the asset will be played.
@@ -273,6 +329,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioPlayer:GetConnectedWires
     summary: |
@@ -288,12 +347,14 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioPlayer:Play
     summary: |
       Plays the `Class.AudioPlayer` from wherever its
@@ -311,6 +372,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioPlayer:Stop
     summary: |
       Stops the `Class.AudioPlayer` wherever its
@@ -328,23 +391,108 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioPlayer:GetWaveformAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: timeRange
+        type: NumberRange
+        default:
+        summary: ''
+      - name: samples
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: Array
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: AudioPlayer.Ended
-    summary: ''
-    description: ''
+    summary: |
+      Fires when the `Class.AudioPlayer` has completed playback and stopped.
+    description: |
+      Fires after the `Class.AudioPlayer` has completed playback and stopped.
+      Note this event will **not** fire for audio with
+      `Class.AudioPlayer.Looped|Looped` set to `true` since it continues playing
+      upon reaching its end. This event will also **not** fire when the audio is
+      stopped before playback has completed; for this, use
+      `Class.AudioPlayer:GetPropertyChangedSignal()` on the
+      `Class.AudioPlayer.IsPlaying|IsPlaying` property.
+
+      This event is often used to destroy an `Class.AudioPlayer` when it has
+      completed playback.
     code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioPlayer.Looped
-    summary: ''
-    description: ''
+    summary: |
+      Fires when the `Class.AudioPlayer` loops.
+    description: |
+      Event that fires after the `Class.AudioPlayer` loops. This happens when
+      the audio reaches the end of its content (or the end of the
+      `Class.AudioPlayer.LoopRegion|LoopRegion` if it is active) and
+      `Class.AudioPlayer.Looping|Looping` is `true`.
+
+      This event does **not** fire if the audio is looped manually by changing
+      its `Class.AudioPlayer.TimePosition|TimePosition`.
     code_samples: []
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioPlayer.WiringChanged
+    summary: |
+      Fires when another instance is connected to or disconnected from the
+      `Class.AudioPlayer` via a `Class.Wire`.
+    description: |
+      Event that fires after a `Class.Wire` becomes connected or disconnected,
+      and that `Class.Wire` is now or was previously connected to a pin on the
+      `Class.AudioPlayer` and to some other wirable instance.
+    code_samples: []
+    parameters:
+      - name: connected
+        type: bool
+        default:
+        summary: |
+          Whether the instance got connected or disconnected.
+      - name: pin
+        type: string
+        default:
+        summary: |
+          The pin on the `Class.AudioPlayer` that the `Class.Wire` targets.
+      - name: wire
+        type: Wire
+        default:
+        summary: |
+          The `Class.Wire` between the `Class.AudioPlayer` and the other
+          instance.
+      - name: instance
+        type: Instance
+        default:
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

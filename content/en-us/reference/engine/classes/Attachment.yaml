@@ -6,11 +6,10 @@ summary: |
   Defines a point and orientation relative to a parent `Class.BasePart`,
   `Class.Bone`, or another `Class.Attachment`.
 description: |
-  An `Class.Attachment` defines a point and orientation relative to a parent
-  `Class.BasePart`, `Class.Bone`, or another `Class.Attachment`. The offset is
-  stored in the `Class.Attachment.CFrame|CFrame` property. The offset can also
-  be set through other properties, such as
-  `Class.Attachment.WorldCFrame|WorldCFrame`.
+  An `Attachment` defines a point and orientation relative to a parent
+  `Class.BasePart`, `Class.Bone`, or another `Attachment`. The offset is stored
+  in the `Class.Attachment.CFrame|CFrame` property. The offset can also be set
+  through other properties, such as `Class.Attachment.WorldCFrame|WorldCFrame`.
 
   Attachments are used by several kinds of `Class.Constraint|Constraints` and
   are also valid alternatives to `Class.BasePart` as a parent for objects such
@@ -50,14 +49,17 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Attachment.CFrame
     summary: |
       `Datatype.CFrame` offset of the attachment.
     description: |
       The `Datatype.CFrame` offset of the attachment. Changes to this property
-      will reflect onto the `Class.Attachment.Position` and
-      `Class.Attachment.Rotation` properties of this object. Similarly, a change
-      to either of those properties will reflect onto this property.
+      will reflect onto the `Class.Attachment.Position|Position` and
+      `Class.Attachment.Rotation|Rotation` properties of this object. Similarly,
+      a change to either of those properties will reflect onto this property.
     code_samples:
     type: CFrame
     tags: []
@@ -70,6 +72,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Attachment.Orientation
     summary: |
       Orientation of the attachment relative to the orientation of its parent.
@@ -90,6 +95,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Attachment.Position
     summary: |
       Positional offset of the attachment, relative to the position and
@@ -111,6 +119,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Attachment.Rotation
     summary: |
       Rotation of the attachment relative to the rotation of its parent.
@@ -125,7 +136,7 @@ properties:
       - Deprecated
     deprecation_message: |
       This property is deprecated and should not be used in new work. See
-      `Class.Attachment.Orientation` instead.
+      `Class.Attachment.Orientation|Orientation` instead.
     security:
       read: None
       write: None
@@ -134,6 +145,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Attachment.SecondaryAxis
     summary: |
       Direction of the **Y** axis of the attachment, represented as a unit
@@ -154,6 +168,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Attachment.Visible
     summary: |
       Toggles the in-experience visibility of the attachment.
@@ -171,6 +188,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Attachment.WorldAxis
     summary: |
       Direction of the **X** axis of the attachment relative to the world,
@@ -191,6 +211,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Attachment.WorldCFrame
     summary: |
       The exact `Datatype.CFrame` of the attachment in world space coordinates.
@@ -212,6 +235,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Attachment.WorldOrientation
     summary: |
       Orientation of the attachment relative to the world rather than its own
@@ -233,6 +259,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Attachment.WorldPosition
     summary: |
       Position of the attachment relative to the world rather than its own
@@ -254,6 +283,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Attachment.WorldRotation
     summary: |
       Rotation of the attachment relative to the world rather than its own
@@ -269,8 +301,9 @@ properties:
       - NotReplicated
       - Deprecated
     deprecation_message: |
-      This item has been superseded by `Class.Attachment.WorldOrientation` which
-      should be used in new work.
+      This item has been superseded by
+      `Class.Attachment.WorldOrientation|WorldOrientation` which should be used
+      in new work.
     security:
       read: None
       write: None
@@ -279,6 +312,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: Attachment.WorldSecondaryAxis
     summary: |
       Direction of the **Y** axis of the attachment relative to the world,
@@ -299,6 +335,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
 methods:
   - name: Attachment:GetAxis
     summary: |
@@ -313,9 +352,11 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      This function is deprecated and should not be used in new work.
+      This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Attachment:GetConstraints
     summary: |
       Returns a list of `Class.Constraint|Constraints` connected to the
@@ -326,12 +367,14 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Attachment:GetSecondaryAxis
     summary: |
       Returns the value of the attachment's
@@ -347,9 +390,11 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      This function is deprecated and should not be used in new work.
+      This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Attachment:SetAxis
     summary: |
       Sets the value of the attachment's `Class.Attachment.Axis|Axis`.
@@ -367,9 +412,11 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      This function is deprecated and should not be used in new work.
+      This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Attachment:SetSecondaryAxis
     summary: |
       Sets the value of the attachment's
@@ -389,8 +436,10 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      This function is deprecated and should not be used in new work.
+      This method is deprecated and should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

@@ -48,6 +48,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: MemoryStoreSortedMap:GetRangeAsync
     summary: |
       Retrieves items within a sorted range of keys and sort keys.
@@ -90,6 +92,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: MemoryStoreSortedMap:RemoveAsync
     summary: |
       Removes the provided key from the sorted map.
@@ -110,6 +114,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: MemoryStoreSortedMap:SetAsync
     summary: |
       Sets the value of a key.
@@ -149,6 +155,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: MemoryStoreSortedMap:UpdateAsync
     summary: |
       Retrieves the value and sort key of a key from a sorted map and updates it
@@ -205,5 +213,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

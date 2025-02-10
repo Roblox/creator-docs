@@ -42,6 +42,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: FloorWire.From
     summary: |
       The object that the FloorWire travels from.
@@ -61,6 +64,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: FloorWire.StudsBetweenTextures
     summary: |
       The number of studs between each FloorWire segment.
@@ -80,6 +86,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: FloorWire.Texture
     summary: |
       Sets the texture to be displayed on the FloorWire.
@@ -99,6 +108,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: FloorWire.TextureSize
     summary: |
       Sets the size of the texture used with the FloorWire.
@@ -118,6 +130,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: FloorWire.To
     summary: |
       The object that the FloorWire travels to.
@@ -137,6 +152,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: FloorWire.Velocity
     summary: |
       The speed that the textures flow along the wire.
@@ -156,6 +174,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: FloorWire.WireRadius
     summary: |
       The radius of the wire.
@@ -175,6 +196,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

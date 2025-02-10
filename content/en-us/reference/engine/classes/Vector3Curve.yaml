@@ -42,6 +42,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Vector3Curve:X
     summary: |
       Returns the `Class.FloatCurve` controlling the X channel (the first child
@@ -59,6 +61,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Vector3Curve:Y
     summary: |
       Returns the `Class.FloatCurve` controlling the Y channel (the first child
@@ -76,6 +80,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Vector3Curve:Z
     summary: |
       Returns the `Class.FloatCurve` controlling the Z channel (the first child
@@ -93,5 +99,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

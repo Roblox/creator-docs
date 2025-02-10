@@ -18,7 +18,7 @@ description: |
   - ShouldReserveServer + ReservedServerAccessCode
 
   For more information on how to teleport players between servers, see
-  [Teleporting Between Places](../../../projects/teleporting.md).
+  [Teleporting Between Places](../../../projects/teleport.md).
 code_samples:
 inherits:
   - Instance
@@ -34,7 +34,7 @@ properties:
       server that the user(s) should be teleported to.
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     type: string
     tags: []
@@ -47,6 +47,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: TeleportOptions.ServerInstanceId
     summary: |
       The `Class.DataModel.JobId` of the server instance to teleport to.
@@ -55,7 +57,7 @@ properties:
       the user(s) should be teleported to.
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     type: string
     tags: []
@@ -68,6 +70,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: TeleportOptions.ShouldReserveServer
     summary: |
       A flag to indicate if a reserved server should be allocated and the
@@ -84,7 +88,7 @@ properties:
       player(s) to.
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     type: bool
     tags: []
@@ -97,6 +101,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: TeleportOptions:GetTeleportData
     summary: |
@@ -112,7 +118,7 @@ methods:
       `Class.TeleportService:GetLocalPlayerTeleportData()` functions.
 
       For more information on how to teleport players between servers, see
-      [Teleporting Between Places](../../../projects/teleporting.md).
+      [Teleporting Between Places](../../../projects/teleport.md).
     code_samples:
     parameters: []
     returns:
@@ -122,6 +128,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TeleportOptions:SetTeleportData
     summary: |
       Setter function for data to be passed to the destination place.
@@ -166,7 +174,7 @@ methods:
 
       For more information on how to send and receive user data along with
       teleports, see, see
-      [Teleporting Between Places](../../../projects/teleporting.md#sending-user-data-along-with-teleports).
+      [Teleporting Between Places](../../../projects/teleport.md#sending-user-data-along-with-teleports).
     code_samples:
     parameters:
       - name: teleportData
@@ -181,5 +189,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

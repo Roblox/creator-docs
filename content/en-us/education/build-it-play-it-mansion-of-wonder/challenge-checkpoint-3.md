@@ -1,5 +1,5 @@
 ---
-title: Challenge Checkpoint
+title: Challenge checkpoint
 prev: /education/build-it-play-it-mansion-of-wonder/invite-friends
 next: /education/build-it-play-it-mansion-of-wonder/next-steps
 description: Earn the third set of rewards in Roblox's Build It Play It Mansion of Wonders -- the Tomes of the Magus avatar item and Master of the Mansion badge.

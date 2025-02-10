@@ -17,19 +17,21 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: StyleSheet:SetDerives
     summary: ''
     description: ''
     code_samples: []
     parameters:
       - name: derives
-        type: Objects
+        type: Instances
         default:
         summary: ''
     returns:
@@ -39,5 +41,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

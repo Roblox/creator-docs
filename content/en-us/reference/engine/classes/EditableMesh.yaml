@@ -5,22 +5,67 @@ memory_category: Instances
 summary: |
   Instance which allows for the runtime creation and manipulation of meshes.
 description: |
-  `Class.EditableMesh` changes the applied visual mesh when parented to a
+  `Class.EditableMesh` changes the applied visual mesh when linked to a
   `Class.MeshPart`, allowing for querying and modification of the mesh both in
   Studio and in experience.
 
-  An `Class.EditableMesh` can be created from an existing mesh ID using
+  An `Class.EditableMesh` can be created from an existing `Datatype.Content` of
+  a `Class.MeshPart` or a mesh ID using
   `Class.AssetService:CreateEditableMeshAsync()`, or a blank
-  `Class.EditableMesh` can be created with `Datatype.Instance.new()`. It can
-  then be displayed, modified, and its collision model updated. Not all of the
-  steps are necessary; for example, you might want to create an
-  `Class.EditableMesh` just to raycast without ever displaying it.
+  `Class.EditableMesh` can be created with
+  `Class.AssetService:CreateEditableMesh()`. It can then be displayed, modified,
+  and its collision model updated. Not all of the steps are necessary; for
+  example, you might want to create an `Class.EditableMesh` just to raycast
+  without ever displaying it.
 
-  An `Class.EditableMesh` is displayed when it's parented to a `Class.MeshPart`,
-  but only the part's appearance changes while the collision model remains the
-  same.
+  An `Class.EditableMesh` is displayed when it's linked to a new
+  `Class.MeshPart`, through `Class.AssetService:CreateMeshPartAsync()`. You can
+  create more `Class.MeshPart` instances that reference the same
+  `Class.EditableMesh` `Datatype.Content`, or link to an existing `Class.MeshPart` through
+  `Class.MeshPart:ApplyMesh()`.
 
-  #### Stable Vertex/Face IDs
+  To recalculate collision and fluid geometry after editing, you can again call
+  `Class.AssetService:CreateMeshPartAsync()` and `Class.MeshPart:ApplyMesh()` to
+  update an existing `Class.MeshPart`. It's generally recommended to do this at
+  the end of a conceptual edit, not after individual calls to methods that
+  manipulate geometry. Visual changes to the mesh will always be immediately
+  reflected by the engine, without the need to call
+  `Class.AssetService:CreateMeshPartAsync()`.
+
+  ##### Enabling EditableMesh for Published Experiences
+
+  For security purposes, using `Class.EditableMesh` fails by default for
+  published experiences. To enable usage, `Class.EditableMesh`, you must be 13+
+  age verified and ID verified. After you are verified, open Studio's
+  [Game Settings](../../../studio/game-settings.md), select **Security**, and
+  enable the **Allow&nbsp;Mesh&nbsp;&&nbsp;Image&nbsp;APIs** toggle. Remember to
+  review the
+  [Terms of Use](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use#creators-restrictions-on-use)
+  before enabling the toggle.
+
+  ##### Permissions
+
+  To prevent misuse, `Class.AssetService:CreateEditableMeshAsync()` will only
+  allow you to load and edit mesh assets:
+
+  - That are owned by the creator of the experience (if the experience is owned
+    by an individual).
+  - That are owned by a group (if the experience is owned by the group).
+  - That are owned by the logged in Studio user (if the place file has not yet
+    been saved or published to Roblox).
+
+  The APIs throw an error if they are used to load an asset that does not meet
+  the criteria above.
+
+  ##### Fixed-Size Meshes
+
+  When creating an `Class.EditableMesh` from an existing mesh asset (via
+  `Class.AssetService:CreateEditableMeshAsync()`), the resulting editable mesh
+  is fixed-size by default. Fixed-size meshes are more efficient in terms of
+  memory but you cannot change the number of vertices, faces, or attributes.
+  Only the values of vertex attributes and positions can be edited.
+
+  ##### Stable Vertex/Face IDs
 
   Many `Class.EditableMesh` methods take **vertex**, **normal**, **UV**,
   **color** and **face** IDs. These are represented as integers in Luau but they
@@ -34,7 +79,7 @@ description: |
   through the table returned by `Class.EditableMesh:GetVertices()|GetVertices()`
   or `Class.EditableMesh:GetFaces()|GetFaces()`.
 
-  #### Split Vertex Attributes
+  ##### Split Vertex Attributes
 
   A **vertex** is a corner of a face, and topologically connects faces together.
   Vertices can have several attributes: position, normal, UV coordinate, color,
@@ -53,6 +98,8 @@ description: |
   example, this code will create a sharp cube:
 
   ```lua
+  local AssetService = game:GetService("AssetService")
+
   -- Given 4 vertex IDs, adds a new normal and 2 triangles, making a sharp quad
   local function addSharpQuad(eMesh, vid0, vid1, vid2, vid3)
   	local nid = eMesh:AddNormal()  -- This creates a normal ID which is automatically computed
@@ -66,7 +113,7 @@ description: |
 
   -- Makes a cube with creased edges between the 6 sides
   local function makeSharpCube()
-  	local eMesh = Instance.new("EditableMesh")
+  	local eMesh = AssetService:CreateEditableMesh()
 
   	local v1 = eMesh:AddVertex(Vector3.new(0, 0, 0))
   	local v2 = eMesh:AddVertex(Vector3.new(1, 0, 0))
@@ -89,7 +136,7 @@ description: |
   end
   ```
 
-  #### Winding
+  ##### Winding
 
   Mesh faces have a front side and a back side. When drawing meshes, only the
   front of the faces are drawn by default, although you can change this by
@@ -101,17 +148,40 @@ description: |
 
   <img src="../../../assets/engine-api/classes/EditableMesh/Winding.png" alt="Order of the vertices around the face" width="550" />
 
-  #### Limitations
+  ##### Limitations
 
   `Class.EditableMesh` currently has a limit of 60,000 vertices and 20,000
   triangles. Attempting to add too many vertices or triangles will cause an
   error.
 code_samples: []
 inherits:
-  - DataModelMesh
-tags: []
+  - Object
+tags:
+  - NotCreatable
 deprecation_message: ''
 properties:
+  - name: EditableMesh.FixedSize
+    summary: |
+      Returns `true` if a mesh is fixed-size.
+    description: |
+      Fixed-sized meshes allow changing the values of vertex attributes but do
+      not allow vertices and triangles to be added or deleted.
+    code_samples: []
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh.SkinningEnabled
     summary: ''
     description: ''
@@ -127,6 +197,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: EditableMesh:AddColor
     summary: |
@@ -153,6 +225,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:AddNormal
     summary: |
       Adds a new normal to the geometry and returns a stable normal ID.
@@ -175,6 +249,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:AddTriangle
     summary: |
       Adds a new triangle to the mesh and returns a stable face ID.
@@ -199,11 +275,14 @@ methods:
           ID of the third vertex of the triangle.
     returns:
       - type: int64
-        summary: ''
+        summary: |
+          Stable face ID of the new face.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:AddUV
     summary: |
       Adds a new UV to the geometry and returns a stable UV ID.
@@ -224,6 +303,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:AddVertex
     summary: |
       Adds a new vertex to the geometry and returns a stable vertex ID.
@@ -244,6 +325,24 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:Destroy
+    summary: |
+      Destroys the mesh.
+    description: |
+      Destroys the contents of the mesh, immediately reclaiming used memory.
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:FindClosestPointOnSurface
     summary: |
       Finds the closest point on the mesh's surface.
@@ -269,6 +368,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:FindClosestVertex
     summary: |
       Finds the closest vertex to a specific point in space.
@@ -290,6 +391,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:FindVerticesWithinSphere
     summary: |
       Finds all vertices within a specific sphere.
@@ -316,6 +419,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetAdjacentFaces
     summary: |
       Returns a list of faces adjacent to a given face.
@@ -331,34 +436,14 @@ methods:
         summary: ''
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of face IDs adjacent to the given face.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: EditableMesh:GetAdjacentTriangles
-    summary: |
-      Returns a list of triangles adjacent to a given triangle.
-    description: |
-      Given a stable face ID, returns a list of adjacent faces.
-
-      <img src="../../../assets/engine-api/classes/EditableMesh/GetAdjacentTriangles.png" alt="Adjacent triangles indicated around requested triangle" width="120" />
-    code_samples: []
-    parameters:
-      - name: triangleId
-        type: int64
-        default:
-        summary: |
-          Face ID around which to get adjacent faces.
-    returns:
-      - type: Array
-        summary: |
-          List of adjacent faces around the given face ID.
-    tags:
-      - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetAdjacentVertices
     summary: |
       Returns a list of vertices adjacent to a given vertex.
@@ -381,6 +466,23 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetCenter
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Vector3
+        summary: |
+          Center of the bounding box of the `EditableMesh`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetColor
     summary: |
       Returns the color for the given color ID.
@@ -401,6 +503,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetColorAlpha
     summary: |
       Returns the color alpha (transparency) at the given color ID.
@@ -421,6 +525,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetColors
     summary: |
       Returns all colors of the mesh.
@@ -437,6 +543,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetFaceColors
     summary: |
       Returns the face's color IDs for the vertices on the face.
@@ -458,6 +566,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetFaceNormals
     summary: |
       Returns the face's normal IDs for the vertices on the face.
@@ -479,6 +589,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetFaceUVs
     summary: |
       Returns the face's UV IDs for the vertices on the face.
@@ -500,9 +612,13 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetFaceVertices
-    summary: ''
-    description: ''
+    summary: |
+      Returns the face's vertex IDs.
+    description: |
+      Returns the face's vertex IDs.
     code_samples: []
     parameters:
       - name: faceId
@@ -511,12 +627,15 @@ methods:
         summary: ''
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of vertex IDs around the given face.
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetFaces
     summary: |
       Returns all faces of the mesh.
@@ -526,12 +645,15 @@ methods:
     parameters: []
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          List of stable face IDs.
     tags:
       - CustomLuaState
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetFacesWithAttribute
     summary: |
       Returns a list of faces that use a given attribute ID.
@@ -553,6 +675,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetNormal
     summary: |
       Returns the normal vector for the given normal ID.
@@ -573,6 +697,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetNormals
     summary: |
       Returns all normals of the mesh.
@@ -589,6 +715,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetPosition
     summary: |
       Gets the position of a vertex.
@@ -609,43 +737,23 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: EditableMesh:GetTriangleVertices
-    summary: |
-      Returns a triangle's three vertex IDs.
-    description: |
-      Returns a triangle's three vertex IDs.
-    code_samples: []
-    parameters:
-      - name: triangleId
-        type: int64
-        default:
-        summary: |
-          Stable face ID for which to get vertices.
-    returns:
-      - type: Tuple
-        summary: |
-          The specified triangle's three vertex IDs.
-    tags:
-      - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-  - name: EditableMesh:GetTriangles
-    summary: |
-      Returns all triangles of the mesh.
-    description: |
-      Returns all triangles of the mesh as a list of stable face IDs.
+    capabilities: []
+    writeCapabilities: []
+  - name: EditableMesh:GetSize
+    summary: ''
+    description: ''
     code_samples: []
     parameters: []
     returns:
-      - type: Array
+      - type: Vector3
         summary: |
-          List of stable face IDs.
-    tags:
-      - Deprecated
+          Size of the `EditableMesh`.
+    tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetUV
     summary: |
       Returns UV coordinates at the given UV ID.
@@ -666,6 +774,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetUVs
     summary: |
       Returns all UVs of the mesh.
@@ -682,69 +792,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: EditableMesh:GetVertexColor
-    summary: |
-      Returns the color at the given vertex.
-    description: |
-      Returns the color at the given vertex.
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: |
-          Vertex for which to get the color.
-    returns:
-      - type: Color3
-        summary: |
-          Color at the requested vertex.
-    tags:
-      - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-  - name: EditableMesh:GetVertexColorAlpha
-    summary: |
-      Returns the color alpha (transparency) at the given vertex.
-    description: |
-      Returns the color alpha (transparency) at the given vertex.
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: |
-          Vertex for which to get the color alpha.
-    returns:
-      - type: float
-        summary: |
-          Color alpha at the requested vertex.
-    tags:
-      - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-  - name: EditableMesh:GetVertexNormal
-    summary: |
-      Returns the normal at the given vertex.
-    description: |
-      Returns the normal at the given vertex.
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: |
-          Vertex for which to get the normal.
-    returns:
-      - type: Vector3
-        summary: |
-          Normal at the requested vertex.
-    tags:
-      - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetVertices
     summary: |
       Returns all vertices as a list of stable vertex IDs.
@@ -760,6 +809,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:GetVerticesWithAttribute
     summary: |
       Returns a list of vertices that use a given attribute ID.
@@ -781,6 +832,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:IdDebugString
     summary: |
       Returns a string describing a stable ID, useful for debugging purposes.
@@ -802,6 +855,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:MergeVertices
     summary: |
       Merges vertices that touch together.
@@ -824,6 +879,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:RaycastLocal
     summary: ''
     description: |
@@ -857,6 +914,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:RemoveFace
     summary: |
       Removes a face using its stable face ID.
@@ -875,26 +934,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: EditableMesh:RemoveTriangle
-    summary: |
-      Removes a triangle using its stable face ID.
-    description: |
-      Removes a triangle using its stable face ID.
-    code_samples: []
-    parameters:
-      - name: triangleId
-        type: int64
-        default:
-        summary: |
-          ID of the face to remove.
-    returns:
-      - type: void
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:RemoveUnused
     summary: |
       Removes all unused vertices, normals, UVs, and colors, and returns the
@@ -912,26 +953,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: EditableMesh:RemoveVertex
-    summary: |
-      Removes a vertex using its stable vertex ID.
-    description: |
-      Removes a vertex using its stable vertex ID.
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: |
-          ID of the vertex to remove.
-    returns:
-      - type: void
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:ResetNormal
     summary: |
       Reset this normal ID to be automatically calculated.
@@ -952,6 +975,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetColor
     summary: |
       Sets the color for a color ID.
@@ -976,6 +1001,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetColorAlpha
     summary: |
       Sets the color alpha (transparency) for a color ID.
@@ -1000,6 +1027,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetFaceColors
     summary: |
       Sets the face's vertex colors to new color IDs.
@@ -1025,6 +1054,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetFaceNormals
     summary: |
       Sets the face's vertex normals to new normal IDs.
@@ -1050,6 +1081,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetFaceUVs
     summary: |
       Sets the face's vertex UVs to new UV IDs.
@@ -1075,6 +1108,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetFaceVertices
     summary: |
       Sets the face's vertices to new vertex IDs.
@@ -1100,6 +1135,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetNormal
     summary: |
       Set the normal for a normal ID.
@@ -1125,6 +1162,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetPosition
     summary: |
       Sets a vertex position in the mesh's local object space.
@@ -1149,6 +1188,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:SetUV
     summary: |
       Sets UV coordinates for a UV ID.
@@ -1173,81 +1214,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: EditableMesh:SetVertexColor
-    summary: |
-      Sets the color for a vertex.
-    description: |
-      Sets the color for a vertex.
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: |
-          Stable vertex ID of the vertex for which to set the color.
-      - name: color
-        type: Color3
-        default:
-        summary: |
-          Color to set.
-    returns:
-      - type: void
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-  - name: EditableMesh:SetVertexColorAlpha
-    summary: |
-      Sets the color alpha (transparency) for a vertex.
-    description: |
-      Sets the color alpha (transparency) for a vertex.
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: |
-          Stable vertex ID of the vertex for which to set the color alpha.
-      - name: alpha
-        type: float
-        default:
-        summary: |
-          Alpha to set.
-    returns:
-      - type: void
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-  - name: EditableMesh:SetVertexNormal
-    summary: |
-      Sets the normal for a vertex.
-    description: |
-      Sets the normal for a vertex.
-    code_samples: []
-    parameters:
-      - name: vertexId
-        type: int64
-        default:
-        summary: |
-          Stable vertex ID of the vertex for which to set the normal.
-      - name: vnormal
-        type: Vector3
-        default:
-        summary: |
-          Normal to set.
-    returns:
-      - type: void
-        summary: ''
-    tags:
-      - Deprecated
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: EditableMesh:Triangulate
     summary: |
       Splits all faces on the mesh to be triangles.
@@ -1265,5 +1233,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

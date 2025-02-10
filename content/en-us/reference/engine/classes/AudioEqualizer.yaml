@@ -34,6 +34,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEqualizer.Editor
     summary: ''
     description: ''
@@ -50,6 +53,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEqualizer.HighGain
     summary: |
       Gain value to be applied to the frequency content of the highest band in
@@ -69,6 +75,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEqualizer.LowGain
     summary: |
       Gain value to be applied to the frequency content of the lowest band in
@@ -88,6 +97,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEqualizer.MidGain
     summary: |
       Gain value to be applied to the frequency content of the middle band in
@@ -107,6 +119,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioEqualizer.MidRange
     summary: |
       The frequency range of the band influenced by
@@ -129,6 +144,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioEqualizer:GetConnectedWires
     summary: |
@@ -144,11 +162,50 @@ methods:
         default:
         summary: ''
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-events: []
+    capabilities: []
+    writeCapabilities: []
+events:
+  - name: AudioEqualizer.WiringChanged
+    summary: |
+      Fires when another instance is connected to or disconnected from the
+      `Class.AudioEqualizer` via a `Class.Wire`.
+    description: |
+      Event that fires after a `Class.Wire` becomes connected or disconnected,
+      and that `Class.Wire` is now or was previously connected to a pin on the
+      `Class.AudioEqualizer` and to some other wirable instance.
+    code_samples: []
+    parameters:
+      - name: connected
+        type: bool
+        default:
+        summary: |
+          Whether the instance got connected or disconnected.
+      - name: pin
+        type: string
+        default:
+        summary: |
+          The pin on the `Class.AudioEqualizer` that the `Class.Wire` targets.
+      - name: wire
+        type: Wire
+        default:
+        summary: |
+          The `Class.Wire` between the `Class.AudioEqualizer` and the other
+          instance.
+      - name: instance
+        type: Instance
+        default:
+        summary: |
+          The other instance that is or was connected through the `Class.Wire`.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

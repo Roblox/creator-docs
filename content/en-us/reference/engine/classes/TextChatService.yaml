@@ -5,12 +5,21 @@ memory_category: Instances
 summary: |
   A service handling in-experience text chat.
 description: |
-  A service handling in-experience text chat, including managing channels,
-  decorating messages, filtering text, creating commands, and developing custom
-  chats interfaces.
+  A service handling in-experience text chat, including
+  `Class.TextChannel|managing channels`, decorating messages, filtering text,
+  `Class.TextChatCommand|creating commands`, and
+  [developing custom chats interfaces](../../../chat/examples/simple-custom-frontend-ui.md).
 
   To learn more, see
-  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+  [TextChatService Overview](../../../chat/in-experience-text-chat.md).
+
+  For further customization, TextChatService has the following singleton
+  children:
+
+  - `Class.ChatWindowConfiguration`
+  - `Class.ChatInputBarConfiguration`
+  - `Class.BubbleChatConfiguration`
+  - `Class.ChannelTabsConfiguration`
 code_samples:
 inherits:
   - Instance
@@ -20,8 +29,12 @@ tags:
 deprecation_message: ''
 properties:
   - name: TextChatService.ChatTranslationEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Determines if chat translation is enabled.
+    description: |
+      Determines if chat translation is enabled. If true, a system message will
+      notify player's when their first join that chat messages may be translated
+      into the player's preferred language.
     code_samples: []
     type: bool
     tags:
@@ -35,6 +48,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: TextChatService.ChatVersion
     summary: |
       Determines whether to fully enable `Class.TextChatService` or revert to
@@ -56,6 +72,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: TextChatService.CreateDefaultCommands
     summary: |
       Determines whether `Class.TextChatService` should create default
@@ -162,6 +181,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: TextChatService.CreateDefaultTextChannels
     summary: |
       Determines whether `Class.TextChatService` should create default
@@ -209,6 +231,9 @@ properties:
       `Class.TextChannel|TextChannels` even if
       `Class.TextChatService.CreateDefaultTextChannels|CreateDefaultTextChannels`
       is true.
+
+      Messages from different TextChannels can be separated into different tabs
+      in the chat window using `Class.ChannelTabsConfiguration`.
     code_samples: []
     type: bool
     tags: []
@@ -221,6 +246,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Chat
+    writeCapabilities: []
 methods:
   - name: TextChatService:DisplayBubble
     summary: |
@@ -254,9 +282,21 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextChatService:CanUserChatAsync
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether a user has permission to chat in experiences.
+    description: |
+      Determines whether a user has permission to chat in experiences. Factors
+      such as parental control settings may prevent the user from sending
+      messages. Errors if the userId is not in the current server. Note that
+      this method can be used with all current player
+      `Class.Player.UserId|UserIds` in a `Class.Script` with
+      `Class.Script.RunContext|RunContext` of `Enum.RunContext.Server` or
+      `Enum.RunContext.Legacy`. This method can also be used in a
+      `Class.LocalScript` but only with the `Class.Player.UserId|UserId` of the
+      local player.
     code_samples: []
     parameters:
       - name: userId
@@ -271,9 +311,21 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextChatService:CanUsersChatAsync
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether or not two users would receive messages between each
+      other.
+    description: |
+      Determines whether or not two users would receive messages between each
+      other. Factors such as incompatible parental control settings or blocked
+      status may prevent the delivery of messages between users
+      `Class.TextChannel|TextChannels` internally use this result to determine
+      whether to deliver messages between users. Note that this method is only
+      available for use in a `Class.Script` with
+      `Class.Script.RunContext|RunContext` of `Enum.RunContext.Server` or
+      `Enum.RunContext.Legacy`.
     code_samples: []
     parameters:
       - name: userIdFrom
@@ -292,6 +344,73 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: TextChatService:CanUsersDirectChatAsync
+    summary: |
+      Determines whether a user has permission to chat directly with other users
+      in experiences based on factors such as their parental control settings.
+    description: |
+      Determines whether a user has permission to chat directly with other users
+      in experiences based on their parental control settings. To be used when:
+
+      - The line of communication is user-initiated (not developer- or
+        gameplay-initiated)
+      - Access to the communication is closed and limited
+
+      An example of a direct chat is a whisper channel between two users.
+
+      You may use this method to gate certain features in your experience
+      depending on the result.
+
+      When creating a `Class.TextChannel` for a direct chat, use
+      `Class.TextChannel:SetDirectChatRequester` to set the requesterUserId so
+      that the channel can determine whether to deliver messages between users.
+      When `Class.TextChannel.DirectChatRequester` is non-nil,
+      `Class.TextChannel|TextChannels` internally use this result to determine
+      whether to deliver messages between users.
+
+      ```lua
+      local whoCanDirectChat = TextChatService:CanUsersDirectChatAsync(requesterUserId, { userId1, userId2 })
+
+      if #whoCanDirectChat > 0 then
+        -- The requesterUserId can direct chat with either userId1, userId2, or both
+      else
+        -- The requesterUserId cannot direct chat with either userId1 or userId2
+      end
+      ```
+
+      Note that this method is only available for use in a `Class.Script` with
+      `Class.Script.RunContext|RunContext` of `Enum.RunContext.Server` or
+      `Enum.RunContext.Legacy`.
+    code_samples:
+      - TextChatService-User-Chat
+    parameters:
+      - name: requesterUserId
+        type: int64
+        default:
+        summary: |
+          The user who would have initiated the direct chat request. If the
+          requesterUserId is not in the current server, this method will error.
+      - name: userIds
+        type: Array
+        default:
+        summary: |
+          A list of users who the requesterUserId would like to chat with
+          directly. Users not in the current server are ignored.
+    returns:
+      - type: Array
+        summary: |
+          A list of users who could participate in the direct chat request. If
+          none of the users can direct chat with the requesterUserId, the result
+          is an empty array.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: TextChatService.BubbleDisplayed
     summary: |
@@ -312,6 +431,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextChatService.MessageReceived
     summary: |
       Fires when `Class.TextChannel:DisplaySystemMessage()` is invoked on the
@@ -344,6 +465,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextChatService.SendingMessage
     summary: |
       Fires when `Class.TextChannel:SendAsync()` is called by the sending
@@ -364,6 +487,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks:
   - name: TextChatService.OnBubbleAdded
     summary: |
@@ -401,29 +526,47 @@ callbacks:
     returns:
       - type: Tuple
         summary: |
-          If a `Class.TextChatMessage` is returned, those properties will be
-          applied to the associated bubble, overriding
-          `Class.BubbleChatConfiguration` properties.
+          If a `Class.BubbleChatMessageProperties` is returned, its properties
+          override the `Class.BubbleChatConfiguration` properties.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextChatService.OnChatWindowAdded
-    summary: ''
-    description: ''
+    summary: |
+      Called when a new message is about to be displayed in the chat window.
+      This can only be implemented on the client.
+    description: |
+      Called when a new message is about to be displayed in the chat window.
+      This can only be implemented on the client.
+
+      Use this to customize individual messages that appear in the chat window.
+      If this callback returns a `Class.ChatWindowMessageProperties`, those
+      properties will be applied to the associated message, overriding
+      `Class.ChatWindowConfiguration` properties. If a `Class.UIGradient` is
+      parented under `Class.ChatWindowMessageProperties`, it will also override
+      the `Class.ChatWindowConfiguration.TextColor3|TextColor3` property defined
+      in `Class.ChatWindowConfiguration`.
     code_samples: []
     parameters:
       - name: message
         type: TextChatMessage
         default:
-        summary: ''
+        summary: |
+          The incoming `Class.TextChatMessage`.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          If a `Class.ChatWindowMessageProperties` is returned, its properties
+          override the `Class.ChatWindowConfiguration` properties.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextChatService.OnIncomingMessage
     summary: |
       Called when `Class.TextChatService` is receiving an incoming message.
@@ -464,3 +607,5 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []

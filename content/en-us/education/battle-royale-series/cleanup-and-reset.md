@@ -1,5 +1,5 @@
 ---
-title: Cleanup and Reset
+title: Cleanup and reset
 description: Create a battle royale experience in Roblox Studio. Finish coding the scripts.
 next: /education/battle-royale-series/finishing-the-project
 prev: /education/battle-royale-series/ending-matches
@@ -7,11 +7,11 @@ prev: /education/battle-royale-series/ending-matches
 
 Time to code the last phase of the game: cleanup and reset. Code in this phase ensures that the game loops to intermission and that future matches start the same for each player.
 
-## Updating the GUI
+## Update the GUI
 
 Before doing cleanup and reset, inform players how the game ended using the DisplayManager to show the appropriate status.
 
-### Getting the Winner's Name
+### Get the winner's name
 
 Start by getting the winning player's name if there was one. Previously, the code checked if the size of the active players table was down to 1. To get the remaining player's name, return the name at the first index of that table.
 
@@ -53,7 +53,7 @@ Start by getting the winning player's name if there was one. Previously, the cod
    end
    ```
 
-### Getting the End Status
+### Get the end status
 
 Use a module function to take information from the correct end state, whether the timer ends or one player is left. Then, send that state variable to DisplayManager to update the status GUI with the appropriate message.
 
@@ -140,7 +140,7 @@ Use a module function to take information from the correct end state, whether th
    end
    ```
 
-### Displaying and Testing
+### Display and test
 
 Get the updated announcement in GameManager and display it to the players using the DisplayManager.
 
@@ -194,20 +194,20 @@ Get the updated announcement in GameManager and display it to the players using 
      </figure>
    </GridContainer>
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 At this point, you're unable to see the messages, try one of the following below.
 
 - If your end status message is "Error Found", none of the conditions were successful. Check the code in `MatchManager.getEndStatus()` against the code samples.
 - If the end status doesn't display, check that `task.wait(gameSettings.transitionTime)` is after sending the message to displayManager.
 
-## Starting New Matches
+## Start new matches
 
 Before starting a new match, there will be a brief transition. This gives players time to see the end status and makes being teleported to the lobby feel less sudden.
 
 At the end of the transition, remaining players will be removed from the arena, and all of the code will reset. This ensures that players will start the next match with a clean version of the game.
 
-### Handling Transitions
+### Handle transitions
 
 When players move into the transition state, remove their weapons.
 
@@ -261,7 +261,7 @@ When players move into the transition state, remove their weapons.
    end
    ```
 
-### Cleaning Between Matches
+### Clean between matches
 
 Cleanup will be its own function in MatchManager. For now, cleanup will just use that previously created function to remove player weapons. As you expand the game, more can be added, such as functions to reset a map that changed during a match.
 
@@ -316,7 +316,7 @@ Cleanup will be its own function in MatchManager. For now, cleanup will just use
      </figure>
    </GridContainer>
 
-### Resetting Matches
+### Reset matches
 
 You may have noticed a few other things in the game, like players still being in the arena after a match ends. With the match cleaned up, next reset the game. This includes sending players in the arena back into the lobby and clearing the active players table. With a reset in place, a game loop can run indefinitely.
 
@@ -395,11 +395,11 @@ First, start a function to send players back to the lobby.
 
 5. Start a test server and run a match. Confirm that you can at least go through two game loops without any errors.
 
-## Completed Scripts
+## Completed scripts
 
 Below are completed scripts to double check your work.
 
-### GameManager Script
+### GameManager script
 
 ```lua
 -- Services
@@ -440,7 +440,7 @@ end
 
 ```
 
-### MatchManager Script
+### MatchManager script
 
 ```lua
 local MatchManager = {}
@@ -483,7 +483,7 @@ local function startTimer()
 
 	while myTimer:isRunning() do
 		-- Adding +1 makes sure the timer display ends at 1 instead of 0.
-		timeLeft.Value = (math.floor(myTimer:getTimeLeft() + 1))
+		timeLeft.Value = (myTimer:getTimeLeft() + 1) // 1
 		-- By not setting the time for wait, it offers more accurate looping
 		task.wait()
 	end
@@ -525,7 +525,7 @@ return MatchManager
 
 ```
 
-### PlayerManager Script
+### PlayerManager script
 
 ```lua
 local PlayerManager = {}

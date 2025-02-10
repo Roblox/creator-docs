@@ -4,6 +4,7 @@ console.time(timeMessage);
 import { FileOption, getConfig } from './utils/config.js';
 const config = await getConfig();
 
+import fs from 'fs';
 import path from 'path';
 import { VFile } from 'vfile';
 import { VFileMessage } from 'vfile-message';
@@ -42,6 +43,7 @@ import {
   checkFileImportEquality,
   checkMdxEquality,
   isLocaleFile,
+  outdatedTranslationFiles,
 } from './utils/localization.js';
 import { Emoji } from './utils/utils.js';
 import { deduplicate } from './utils/utils.js';
@@ -66,30 +68,32 @@ let missSpelledWords: string[] = [];
 
 const getFilesToCheck = async () => {
   console.log(`::group::${Emoji.OpenFileFolder} Getting changed files`);
-  if (config.checkLocalizedContent === true) {
-    for (const locale of Object.values(Locale)) {
+  if (config.files === FileOption.All) {
+    if (config.checkLocalizedContent === true) {
+      for (const locale of Object.values(Locale)) {
+        filesToCheck.push(
+          ...getAllContentFileNamesWithExtension({
+            locale,
+            fileExtension: FileExtension.MARKDOWN,
+          }),
+          ...getAllContentFileNamesWithExtension({
+            locale,
+            fileExtension: FileExtension.YAML,
+          })
+        );
+      }
+    } else {
       filesToCheck.push(
         ...getAllContentFileNamesWithExtension({
-          locale,
+          locale: Locale.EN_US,
           fileExtension: FileExtension.MARKDOWN,
         }),
         ...getAllContentFileNamesWithExtension({
-          locale,
+          locale: Locale.EN_US,
           fileExtension: FileExtension.YAML,
         })
       );
     }
-  } else if (config.files === FileOption.All) {
-    filesToCheck.push(
-      ...getAllContentFileNamesWithExtension({
-        locale: Locale.EN_US,
-        fileExtension: FileExtension.MARKDOWN,
-      }),
-      ...getAllContentFileNamesWithExtension({
-        locale: Locale.EN_US,
-        fileExtension: FileExtension.YAML,
-      })
-    );
     filesToCheck.push(...['README.md', 'STYLE.md', 'CODE_OF_CONDUCT.md']);
   } else if (config.files === FileOption.Changed) {
     filesToCheck = await getFilesChangedComparedToBaseByExtension({
@@ -102,7 +106,12 @@ const getFilesToCheck = async () => {
       FileExtension.YAML,
     ]);
   }
-  const prefixesToIgnore = ['.github/', 'content/common/navigation/'];
+  if (!config.checkLocalizedContent) {
+    filesToCheck = filesToCheck.filter((filePath) => {
+      return isLocaleFile(filePath, Locale.EN_US);
+    });
+  }
+  const prefixesToIgnore = ['.github/', 'content/common/navigation/', 'tools/'];
   filesToCheck = filesToCheck.filter((filePath) => {
     return !prefixesToIgnore.some((prefix) => filePath.startsWith(prefix));
   });
@@ -209,6 +218,12 @@ try {
     const isMarkdownFile = filePath.endsWith(FileExtension.MARKDOWN);
     const isYamlFile = filePath.endsWith(FileExtension.YAML);
     console.log(`::group::${Emoji.Mag} Checking`, filePathFromRepoRoot);
+    if (!fs.existsSync(filePath)) {
+      console.log(
+        `${Emoji.NoEntry} File does not exist: ${filePathFromRepoRoot}`
+      );
+      continue;
+    }
     const fileContent = readFileSync(filePath);
     if (
       config.checkLocalizedContent &&
@@ -272,6 +287,17 @@ try {
     writeListToFile(
       allowedHttpLinksTextFileFullPath,
       deduplicate(allNonRobloxHttpLinks).sort(),
+      'utf-8'
+    );
+  }
+  if (config.checkLocalizedContent && outdatedTranslationFiles.length > 0) {
+    const outdatedTranslationFilesPath = path.join(
+      outputDirectory,
+      'outdated-translation-files.txt'
+    );
+    writeListToFile(
+      outdatedTranslationFilesPath,
+      outdatedTranslationFiles,
       'utf-8'
     );
   }

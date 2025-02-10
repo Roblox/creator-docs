@@ -38,6 +38,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: MeshPart.HasJointOffset
     summary: ''
     description: ''
@@ -54,6 +57,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: MeshPart.HasSkinnedMesh
     summary: ''
     description: ''
@@ -70,6 +76,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: MeshPart.JointOffset
     summary: ''
     description: ''
@@ -86,18 +95,63 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: MeshPart.MeshContent
+    summary: |
+      The mesh that is displayed on the `Class.MeshPart`. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris) and
+      `Class.EditableMesh` objects.
+    description: |
+      The mesh that is displayed on the `Class.MeshPart`. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris) and
+      `Class.EditableMesh` objects.
+
+      Note that this property cannot be changed directly by scripts, as the
+      collision geometry of the mesh cannot be recomputed in realtime. See
+      `Class.AssetService:CreateMeshPartAsync()` as a method to create a new
+      `Class.MeshPart` from a given `Datatype.Content` with a specified
+      `Class.MeshPart.CollisionFidelity|CollisionFidelity`.
+      `Class.MeshPart:ApplyMesh()` can be used to overwrite the
+      `Class.MeshPart.MeshContent|MeshContent`,
+      `Class.MeshPart.TextureContent|TextureContent`, and collision geometry of
+      an existing `Class.MeshPart`.
+    code_samples: []
+    type: Content
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
+      write: NotAccessibleSecurity
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: MeshPart.MeshId
     summary: |
-      Content ID of the mesh that is displayed on the `Class.MeshPart`.
+      The [asset URIs](../../../projects/assets/index.md#asset-uris) of the mesh
+      that is displayed on the `Class.MeshPart`. Reads and writes to
+      `Class.MeshPart.MeshContent|MeshContent`.
     description: |
-      Content ID of the mesh that is displayed on the `Class.MeshPart`.
+      The [asset URIs](../../../projects/assets/index.md#asset-uris) of the mesh
+      that is displayed on the `Class.MeshPart`. Reads and writes to
+      `Class.MeshPart.MeshContent|MeshContent`.
 
-      Note that this property currently cannot be changed by scripts as the
-      collision model of the mesh cannot be recomputed during runtime. See
-      `Class.InsertService:CreateMeshPartAsync()` as a method to create a new
-      `Class.MeshPart` from a given `Class.MeshPart.MeshId|MeshId` and with a
-      specified `Class.MeshPart.CollisionFidelity|CollisionFidelity` and
-      `Class.MeshPart.RenderFidelity|RenderFidelity`.
+      Note that this property cannot be changed directly by scripts, as the
+      collision geometry of the mesh cannot be recomputed in realtime. See
+      `Class.AssetService:CreateMeshPartAsync()` as a method to create a new
+      `Class.MeshPart` from a given `Datatype.Content` with a specified
+      `Class.MeshPart.CollisionFidelity|CollisionFidelity`.
+      `Class.MeshPart:ApplyMesh()` can be used to overwrite the
+      `Class.MeshPart.MeshContent|MeshContent`,
+      `Class.MeshPart.TextureContent|TextureContent`, and collision geometry of
+      an existing `Class.MeshPart`.
     code_samples:
     type: ContentId
     tags: []
@@ -110,6 +164,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: MeshPart.RenderFidelity
     summary: |
       The level of detail used to render the `Class.MeshPart`.
@@ -161,40 +218,106 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
+  - name: MeshPart.TextureContent
+    summary: |
+      The texture applied to the `Class.MeshPart`. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris) and
+      `Class.EditableImage` objects.
+    description: |
+      The texture applied to the `Class.MeshPart`. Supports
+      [asset URIs](../../../projects/assets/index.md#asset-uris) and
+      `Class.EditableImage` objects.
+
+      When this property is set to `Datatype.Content.none`, no texture will be
+      applied to the mesh.
+
+      ```
+      local Workspace = game:GetService("Workspace")
+
+      local meshPart = Workspace.MeshPart
+      meshPart.TextureContent = Content.none  -- No texture
+      ```
+
+      Note that the `Class.MeshPart.MeshContent|MeshContent` property cannot be
+      directly changed during runtime but the texture can.
+
+      ##### Changing a Mesh Texture
+
+      Using the `Class.MeshPart.TextureContent|TextureContent` property, the
+      texture of a mesh can be changed without having to re-upload the mesh. To
+      do this, a new image can be uploaded to Roblox with the desired texture.
+      The original texture image file can be obtained by exporting the mesh
+      using the **Export Selection** option in Studio. The image file will be
+      saved alongside the exported `.obj` file.
+
+      The new texture can then be uploaded to Roblox as a decal and its
+      [asset URI](../../../projects/assets/index.md#asset-uris) can be applied
+      to the mesh using the `Class.MeshPart.TextureContent|TextureContent` or
+      `Class.MeshPart.TextureID|TextureID` property.
+
+      `Class.MeshPart.TextureContent|TextureContent` can also be set to
+      reference an `Class.EditableImage` that has not been published yet.
+
+      ```
+      local AssetService = game:GetService("AssetService")
+      local Workspace = game:GetService("Workspace")
+
+      local meshPart = Workspace.MeshPart
+
+      local editableImage = AssetService:CreateEditableImageAsync(meshPart.TextureContent)
+      meshPart.TextureContent = Content.fromObject(editableImage)  -- Live updates
+      ```
+
+      When `Class.MeshPart.TextureContent|TextureContent` references an
+      `Class.EditableImage`, the texture will live update with any edits to the
+      `Class.EditableImage` object.
+
+      ##### Making a Textured Mesh
+
+      A mesh can only be textured if the mesh has been UV mapped, referring to
+      the practice of projecting a texture map onto a mesh. This cannot be done
+      using Roblox Studio and must be done using an external 3D modeling
+      application such as [Blender](https://www.blender.org/).
+    code_samples: []
+    type: Content
+    tags:
+      - Hidden
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Appearance
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: MeshPart.TextureID
     summary: |
-      The texture applied to the `Class.MeshPart`.
+      The texture applied to the `Class.MeshPart`. Reads and writes to
+      `Class.MeshPart.TextureContent|TextureContent`.
     description: |
-      The texture applied to the `Class.MeshPart`. When this property is set to
-      an empty string, no texture will be applied to the mesh.
+      The texture applied to the `Class.MeshPart`. Reads and writes to
+      `Class.MeshPart.TextureContent|TextureContent`.
+
+      When this property is set to an empty string, no texture will be applied
+      to the mesh.
 
       ```
-      MeshPart.TextureID = "" -- no texture
+      local Workspace = game:GetService("Workspace")
+
+      local meshPart = Workspace.MeshPart
+      meshPart.TextureID = ""  -- No texture
       ```
 
-      Note, although the `Class.MeshPart.MeshId` property cannot be changed
-      during runtime, the texture can.
-
-      #### How can I change the texture of a mesh?
-
-      Using the TextureId property, the texture of a mesh can be changed without
-      having to reupload the mesh. To do this, a new image will need to be
-      uploaded to Roblox with the desired texture. The original texture image
-      file can be obtained by exporting the mesh using the 'Export Selection'
-      option in Roblox Studio. The image file will be saved alongside the
-      exported .obj file.
-
-      The new texture can then be re-uploaded to Roblox as a Decal and its
-      content ID can be applied to the mesh using the TextureId property.
-
-      #### How can I make a textured mesh?
-
-      A mesh can only be textured if the mesh has been UV mapped. UV mapping
-      refers to the practice of projecting a texture map onto a mesh. This
-      cannot be done using Roblox Studio and has to be done using an external 3D
-      modelling application such as [Blender][1].
-
-      [1]: https://www.blender.org/
+      Note that the `Class.MeshPart.MeshId` property cannot be changed during
+      runtime but the texture can. See
+      `Class.MeshPart.TextureContent|TextureContent` for details.
     code_samples:
     type: ContentId
     tags: []
@@ -207,10 +330,36 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
 methods:
   - name: MeshPart:ApplyMesh
-    summary: ''
-    description: ''
+    summary: |
+      Overwrites the `Class.MeshPart.MeshContent|MeshContent`,
+      `Class.MeshPart.TextureContent|TextureContent`, and collision geometry
+      properties of this `Class.MeshPart` from the given source `meshPart`.
+    description: |
+      Overwrites the `Class.MeshPart.MeshContent|MeshContent`,
+      `Class.MeshPart.TextureContent|TextureContent`, and collision geometry
+      properties of this `Class.MeshPart` from the given source `meshPart`.
+
+      Most of these properties are read-only and cannot be changed during
+      runtime on their own directly. To keep
+      `Class.MeshPart.MeshContent|MeshContent` and physics data in sync, they
+      must be updated together.
+
+      Copies the following properties:
+
+      - `Class.MeshPart.MeshContent` (implicitly updates
+        `Class.MeshPart.MeshId|MeshId`)
+      - `Class.MeshPart.TextureContent` (implicitly updates
+        `Class.MeshPart.TextureID|TextureID`)
+      - `Class.MeshPart.RenderFidelity`
+      - `Class.MeshPart.CollisionFidelity` (with any internal collision
+        geometry)
+      - `Class.MeshPart.FluidFidelity` (with any internal aero geometry)
+      - `Class.MeshPart.MeshSize`
     code_samples:
     parameters:
       - name: meshPart
@@ -224,5 +373,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

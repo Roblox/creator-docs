@@ -15,7 +15,7 @@ description: |
   Roblox's animation system, all such representations are their own instance
   types but inherit from the `Class.AnimationClip` instance. Animation clips
   published to Roblox via the [Animation Editor](../../../animation/editor.md)
-  can be loaded into the Roblox engine using an `Class.Animation` instance.
+  can be loaded into the Roblox Engine using an `Class.Animation` instance.
 code_samples:
 inherits:
   - Instance
@@ -49,6 +49,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
   - name: AnimationClip.Priority
     summary: |
       Determines which clip takes priority when multiple animations are playing
@@ -76,6 +79,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

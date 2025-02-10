@@ -111,6 +111,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: RemoteFunction:InvokeServer
     summary: |
       Invokes the `Class.RemoteFunction` which in turn calls the
@@ -152,6 +154,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks:
   - name: RemoteFunction.OnClientInvoke
@@ -182,6 +186,8 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: RemoteFunction.OnServerInvoke
     summary: |
       Callback for when the `Class.RemoteFunction` is invoked with
@@ -217,3 +223,5 @@ callbacks:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []

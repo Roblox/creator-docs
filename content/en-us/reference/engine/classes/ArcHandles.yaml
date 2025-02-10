@@ -35,6 +35,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events:
   - name: ArcHandles.MouseButton1Down
@@ -52,6 +55,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ArcHandles.MouseButton1Up
     summary: |
       Fired when the left mouse button is released on one of the GUI handles.
@@ -67,6 +72,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ArcHandles.MouseDrag
     summary: |
       Fired when the mouse moves while the MouseButton1Down event has fired, but
@@ -92,6 +99,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ArcHandles.MouseEnter
     summary: |
       Fired when a mouse "enters" the GUI handle.
@@ -107,6 +116,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ArcHandles.MouseLeave
     summary: |
       Fired when the mouse leaves the GUI handle.
@@ -122,4 +133,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

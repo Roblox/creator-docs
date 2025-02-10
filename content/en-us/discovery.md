@@ -6,7 +6,7 @@ description: Explains how users discover experiences on the Roblox platform.
 
 Roblox's [mission](https://devforum.roblox.com/t/discovery-on-roblox-past-present-and-future-vision/2859111) for discovery is to connect every user with the best creation and community for them. This guide outlines how discovery works and how you can help your experience get discovered.
 
-## How Recommendation Works
+## How recommendation works
 
 On Home, our **Recommended for You** algorithm decides what experiences to show each user in two stages:
 
@@ -16,8 +16,8 @@ On Home, our **Recommended for You** algorithm decides what experiences to show 
 
 **Ranking (stage 2)**: Roblox ranks the selected experiences based on 3 main signals:
 
-1. **Engagement (playtime)** tracks how users engage in your experience. Metrics that contribute to playtime include [session time](./production/analytics/engagement.md#improving-average-session-time), sessions, [retention](./production/analytics/retention.md), and [qualified play through rate](./production/analytics/acquisition.md#improving-acquisition). This is the main signal that we optimize for.
-2. **Monetization (revenue)** tracks how users invest in your experience. Metrics that contribute to revenue include [payer conversion](./production/analytics/monetization.md#improving-payer-conversion-rate) and [average revenue per paying user](./production/analytics/monetization.md#improving-average-revenue-per-paying-user-arppu).
+1. **Engagement (playtime)** tracks how users engage in your experience. Metrics that contribute to playtime include [session time](./production/analytics/engagement.md#improve-average-session-time), sessions, [retention](./production/analytics/retention.md), and [qualified play through rate](./production/analytics/acquisition.md#improve-acquisition). This is the main signal that we optimize for.
+2. **Monetization (revenue)** tracks how users invest in your experience. Metrics that contribute to revenue include [payer conversion](./production/analytics/monetization.md#improve-payer-conversion-rate) and [average revenue per paying user](./production/analytics/monetization.md#improve-average-revenue-per-paying-user-arppu).
 3. **Ecosystem health** ensures that Roblox continues building a vibrant platform. We want to reward creations that bring new users to Roblox and that creators continue to invest in with updates, events, and more.
 
 Roblox's recommendation system uses **explore and expand** phases to understand the signals above. For example, you might see a spike in new users from recommendations (explore) after a content update. If that new user cohort has good engagement and monetization, Roblox is more likely to continue to recommend your experience to those user cohorts (expand).
@@ -28,12 +28,12 @@ When ranking experiences for recommendations, Roblox only considers engagement, 
 
 For a detailed overview, please see our [discovery vision post](https://devforum.roblox.com/t/discovery-on-roblox-past-present-and-future-vision/2859111) and [RDC talk](https://www.youtube-nocookie.com/embed/V1uFFUUCLpo).
 
-## How You Can Get Discovered via Recommendations
+## How you can get discovered via recommendations
 
 The best way to get discovered via recommendations is to continue to invest in engagement, monetization, and ecosystem health for your experience:
 
-1. **Engagement (playtime)**: [Session time](./production/analytics/engagement.md#improving-average-session-time), [retention](./production/analytics/retention.md), and [qualified play through rate](./production/analytics/acquisition.md#improving-acquisition)
-2. **Monetization (revenue)**: [Payer conversion](./production/analytics/monetization.md#improving-payer-conversion-rate), [revenue per paying user](./production/analytics/monetization.md#improving-average-revenue-per-paying-user-arppu)
+1. **Engagement (playtime)**: [Session time](./production/analytics/engagement.md#improve-average-session-time), [retention](./production/analytics/retention.md), and [qualified play through rate](./production/analytics/acquisition.md#improve-acquisition)
+2. **Monetization (revenue)**: [Payer conversion](./production/analytics/monetization.md#improve-payer-conversion-rate), [revenue per paying user](./production/analytics/monetization.md#improve-average-revenue-per-paying-user-arppu)
 3. **Ecosystem health**: Continue to invest in regular content and events updates
 
 On your experience overview page, use the **Daily Benchmarks** section to compare your experience metrics with similar games that your users also play:
@@ -43,14 +43,14 @@ On your experience overview page, use the **Daily Benchmarks** section to compar
 Your similar experience benchmarks are updated daily. Roblox does not use these benchmarks as a direct signal in the discovery algorithm. These benchmarks are designed to give you a point of comparison as you work on improving your engagement, monetization, and acquisition.
 
 <br />
-<h5>Frequently Asked Questions</h5>
+<h5>Frequently asked questions</h5>
 <br />
 **What metric should I focus on to get discovered via recommendations?**
 
 You should focus on metrics that are below benchmark in your Daily Benchmark section and related graphs. For example, the experience in the image above is below benchmark on **average session time** and **D1 retention**. To address this, consider focusing on:
 
 1. Tracking and improving your [onboarding funnel](./production/analytics/funnel-events.md).
-2. Optimizing your onboarding funnel will likely improve [session time](./production/analytics/engagement.md#improving-average-session-time) and [retention](./production/analytics/retention.md), which both contribute to your experience's engagement (playtime).
+2. Optimizing your onboarding funnel will likely improve [session time](./production/analytics/engagement.md#improve-average-session-time) and [retention](./production/analytics/retention.md), which both contribute to your experience's engagement (playtime).
 
 **Why did my daily active users increase or decline?**
 
@@ -67,13 +67,46 @@ New metric change insights are being actively tested on your **Experience Overvi
 
 If you have a brand new experience, you may not have enough users for recommendations to understand how your engagement and monetization metrics compare with other experiences.
 
-Consider driving new users to your experience with [social links](/production/promotion/audience-engagement.md#linking-to-social-media), [sponsored ads](./production/promotion/ads-manager.md#sponsored-experiences), and other channels so that recommendations can get enough signal. Roblox continues to add recommendations improvements to be better at discovering new experiences.
+Consider driving new users to your experience with [social media links](./production/promotion/social-media-links.md), [sponsored ads](./production/promotion/ads-manager.md#sponsored-experiences), and other channels so that recommendations can get enough signal. Roblox continues to add recommendations improvements to be better at discovering new experiences.
 
-## Discovery for Other Surfaces
+## Best practices for discovery
+
+Your content must always adhere to our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). To increase your reach and help your experience get discovered, make sure to also follow the best practices for discovery:
+
+- **Be accurate.** Avoid using irrelevant keywords in your metadata and follow the [metadata best practices](./production/publishing/publish-experiences-and-places.md#metadata-best-practices).
+- **Build trust.** You should not rely on promotional monetary rewards to drive engagement. Instead, your metadata should reflect what your experience is about.
+- **Use unique metadata.** Focus on using original imagery and naming that you or your teammates created to help your experience stand out. Avoid publishing content with repetitive titles and images that have been previously published. When using  [thumbnail personalization](./production/publishing/thumbnails.md#thumbnail-personalization-for-the-home-page), make sure all thumbnails accurately reflect your experience.
+- **Add your own spin to existing trends** in the title, images, description, and in-experience content when you follow trends. Unique updates add value and differentiate your experience from other experiences following the same trend.
+
+### Issues that limit exposure
+
+The level of exposure your content receives on the homepage and in search is directly influenced by its quality. Certain issues can reduce visibility or prevent your content from being recommended, including:
+
+- **Leading with giveaways**: Metadata that implies any type of monetary reward is not prioritized for recommendations.
+
+  Example: An experience titled "Robux! Play now!" receives less exposure because the title leads with monetary implications instead of in-experience content.
+
+- **Mismatched metadata and content**: Metadata and content that is highly mismatched is not recommended to users and is less visible in search results.
+
+  Example: An experience titled "The Great Dinosaur Quest" that has a thumbnail showing dinosaurs but where the actual gameplay is a generic obstacle course with no dinosaurs or adventure elements.
+
+- **Non-unique experiences**: Experiences with metadata and place files that closely resemble existing experiences on Roblox are no longer prioritized for recommendations and might rank lower in search results.
+
+  Example: An experience with the same title and visuals as a previously published experience.
+
+### Track and improve content quality
+
+Roblox continually reclassifies content quality with every update, giving all experiences the opportunity to improve their reach. To be reassessed and improve your reach, make sure to align your experience with our [best practices](#best-practices-for-discovery).
+
+To check if your experience is affected by quality issues, go to the **Creator Dashboard**. Experiences with reduced exposure display a banner that updates daily and provides the latest status about quality and visibility.
+
+If you come across any issues, go to [Support](https://www.roblox.com/support), select **Bug Report**, and provide the Universe ID of your experience along with a description of your issue.
+
+## Discovery for other surfaces
 
 Home's **Recommended For You** is not the only discovery surface that Roblox offers. Below is a primer on our other surfaces:
 
-## Other Home Sorts
+## Other Home sorts
 
 Home is a user's personalized view of Roblox. Outside of Recommended for You, Home also includes **Continue Playing**, **Friends List**, **Sponsored**, **Curated Sorts**, and more. For a deeper dive on some of these sections:
 
@@ -81,7 +114,7 @@ Home is a user's personalized view of Roblox. Outside of Recommended for You, Ho
 - **Live Events** has experiences that are part of a limited time event that you can complete quests for to unlock rewards. You can see past events from Roblox [here](https://www.roblox.com/groups/4111519/Roblox-Presents#!/about).
 - **Sponsored** lets you invest directly in getting your experiences discovered by a specific audience segment. For more information, see [Ads Manager](./production/promotion/ads-manager.md#sponsored-experiences).
 
-### Experience Details Page
+### Experience details page
 
 The Experience Details Page aims to offer users comprehensive insights about the experience, enhancing their understanding and aiding in decision-making. This, in turn, drives high-intent users to your experiences. You can leverage the Experience Details Page to improve user onboarding and attract returning users by:
 
@@ -91,7 +124,7 @@ The Experience Details Page aims to offer users comprehensive insights about the
 
 The Experience Details Page also provides additional recommendation opportunities by highlighting similar experiences, helping users discover more relevant content.
 
-#### Experience Events
+#### Experience events
 
 **Experience events** are key to keeping a community engaged. These moments are where all your users can come together and engage for unique events and scenarios. [Experience events](./production/promotion/experience-events.md) are a way for you to tell your users about upcoming events within your experience, and for them to opt in and be notified when that event starts. We are continuing to build on that foundation offering deeper event details customization. You can add up to 5 thumbnails to promote your event with users and include a primary event type. This additional metadata will also give you a chance to be featured in **Today's Picks**.
 
@@ -101,7 +134,7 @@ The Experience Details Page also provides additional recommendation opportunitie
 
 Historically, Search has primarily focused on relevance based on exact search queries and limited metadata such as titles. Roblox is constantly improving Search to better understand user intent. For example, you can now use semantic search for all of our officially supported languages to find experiences through natural language queries, such as "food games" or "avatar editors".
 
-### Discover (Top Charts and Trending Sorts)
+### Discover (top charts and trending sorts)
 
 The [Discover](https://www.roblox.com/discover#/) page is designed to reflect the many constantly changing high-quality experiences available on the platform and showcasing the best-performing content on Roblox.
 

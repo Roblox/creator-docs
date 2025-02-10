@@ -40,6 +40,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: ServiceProvider:GetService
     summary: |
       Returns the service with the requested class name, creating it if it does
@@ -75,6 +77,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ServiceProvider:getService
     summary: ''
     description: ''
@@ -94,6 +98,8 @@ methods:
       `Class.ServiceProvider:GetService()` which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ServiceProvider:service
     summary: ''
     description: ''
@@ -113,6 +119,8 @@ methods:
       which should be used in all new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: ServiceProvider.Close
     summary: |
@@ -126,6 +134,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ServiceProvider.ServiceAdded
     summary: |
       Fired when a service is created.
@@ -141,6 +151,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ServiceProvider.ServiceRemoving
     summary: |
       Fired when a service is about to be removed.
@@ -156,4 +168,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

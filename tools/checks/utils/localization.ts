@@ -11,16 +11,21 @@ import { getNonEditableFilesList } from './files.js';
 import { areEqualFileImports, FileImports, getFileImports } from './imports.js';
 
 export enum Locale {
+  ID_ID = 'id-id',
   DE_DE = 'de-de',
   EN_US = 'en-us',
   ES_ES = 'es-es',
   FR_FR = 'fr-fr',
-  JA_JP = 'ja-jp',
-  KO_KR = 'ko-kr',
+  IT_IT = 'it-it',
+  PL_PL = 'pl-pl',
   PT_BR = 'pt-br',
-  RU_RU = 'ru-ru',
+  VI_VN = 'vi-vn',
+  TR_TR = 'tr-tr',
+  TH_TH = 'th-th',
   ZH_CN = 'zh-cn',
   ZH_TW = 'zh-tw',
+  JA_JP = 'ja-jp',
+  KO_KR = 'ko-kr',
 }
 
 const LOCALE_REGEX = /\/([a-z]{2}-[a-z]{2})\//;
@@ -88,6 +93,8 @@ const getCachedContentForFilePath = (filePath: string): string => {
   return content;
 };
 
+export const outdatedTranslationFiles: string[] = [];
+
 export const checkFileImportEquality = (
   filePath: string,
   fileContent: string
@@ -110,6 +117,7 @@ export const checkFileImportEquality = (
     console.log(
       `${Emoji.NoEntry} MDX imports do not match between ${filePath} and ${enUsFilePath}`
     );
+    outdatedTranslationFiles.push(filePath);
     addToSummaryOfRequirements(
       `${Emoji.NoEntry} Requirement: MDX imports do not match between ${filePath} and ${enUsFilePath}`
     );
@@ -167,6 +175,7 @@ export const checkMdxEquality = async (
     } else {
       const errorMessage = `${Emoji.NoEntry} MDX components do not match ${comparisonMessage}`;
       console.log(errorMessage);
+      outdatedTranslationFiles.push(filePath);
       addToSummaryOfRequirements(errorMessage);
     }
   }

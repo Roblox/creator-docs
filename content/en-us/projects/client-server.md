@@ -1,5 +1,5 @@
 ---
-title: Client-Server Runtime
+title: Client-server runtime
 description: An overview of the client-server model in Roblox.
 ---
 
@@ -83,15 +83,15 @@ assemblies, which the physics engine treats as a single rigid body.
 
 <br/>
 <Grid container spacing={2}>
-  <Grid item xs={4} lg={3}>
+  <Grid item XSmall={4} XLarge={3}>
     <img src="../assets/physics/assemblies/Assembly-Example-Block.png" alt="A single block part in the shape of a cube that represents a single assembly." width="100%" />
     <figcaption>1&nbsp;assembly; 1&nbsp;part</figcaption>
   </Grid>
-  <Grid item xs={4} lg={3}>
+  <Grid item XSmall={4} XLarge={3}>
     <img src="../assets/physics/assemblies/Assembly-Example-Avatar.png" alt="A player character that represents a single assembly of 18 individual parts." width="100%" />
     <figcaption>1&nbsp;assembly; 18&nbsp;parts</figcaption>
   </Grid>
-  <Grid item xs={8} lg={6}>
+  <Grid item XSmall={8} XLarge={6}>
     <img src="../assets/physics/assemblies/Assembly-Example-Ship.png" alt="A pirate ship mesh that represents a single assembly of 179 individual parts." width="100%" />
     <figcaption>1&nbsp;assembly; 179&nbsp;parts</figcaption>
   </Grid>

@@ -1,32 +1,42 @@
 ---
-title: MicroProfiler Modes
+title: MicroProfiler modes
 description: The MicroProfiler includes several different modes, all of which .
 ---
 
 The MicroProfiler includes several modes, which can help you visualize your experience's performance characteristics in different ways. After opening the MicroProfiler with <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>), use the **Modes** menu to switch between them.
 
-## Frame Mode
+## Frame mode
 
-The most basic mode, **frame mode** shows a bar graph of frames flowing from the right (most recent) to the left. The height of each bar indicates the number of milliseconds that it took to complete the frame. Hover over a frame for some basic information around CPU and GPU time.
+The most basic mode, **frame mode** shows a bar graph of frames flowing from the right (most recent) to the left. The height of each bar indicates the number of milliseconds that it took to complete the frame. Hover over a frame for some basic information around CPU and GPU usage.
 
-<img alt="The Microprofiler frame graph, showing blue frames and detailed frame information." src="../../assets/optimization/microprofiler/micro-frame.png" width="440px" />
+<img alt="The Microprofiler frame graph, showing blue frames and detailed frame information." src="../../assets/optimization/microprofiler/micro-frame.png" width="300px" />
 
-- Orange bars indicate "standard" frames where the **Jobs** time exceeds the **Render** time.
-- Blue bars indicate frames where the **Render** time exceeds the **Jobs** time. Hover over one of these frames, and you can see a positive value for **Waiting for Rendering Thread**.
+- Orange bars indicate frames where the **Jobs Wall Time** exceeds the **Render Wall Time**. In these frames, at least one of the worker threads, which do things like run scripts, calculate physics, and play animations, took longer to run than the main render thread.
 
-  Blue frames are common when you run the MicroProfiler inside of Studio, but a large number of these frames in the Roblox client indicates a rendering bottleneck.
+  If the experience is not reaching your frame time goals and has a large number of orange frames, common causes are scripts, physics, and animations. See [Improve performance](../../performance-optimization/improve.md#script-computation).
 
-  <img alt="The Microprofiler frame graph, showing blue frames and detailed frame information." src="../../assets/optimization/microprofiler/micro-blue.png" width="440px" />
+- Blue bars indicate frames where the **Render Wall Time** exceeds the **Jobs Wall Time**. In these frames, the main render thread took more time than any of the worker threads.
+
+  If the experience is not reaching your frame time goals and has a large number of blue frames, that indicates a rendering bottleneck. Common causes are excessive object density, object movement, and lighting. See [Improve performance](../../performance-optimization/improve.md#rendering).
+
+- Red bars indicate frames where two conditions are true:
+
+  - **Render Wall Time** exceeds **Jobs Wall Time**
+  - **GPU Wait Time** is greater than 2.5 milliseconds
+
+  Red bars are less common than orange and blue and often the result of excessive object complexity, texture size, and visual effects. Optimization is similar to blue bars. See [Improve performance](../../performance-optimization/improve.md#rendering).
+
+Tiny tasks at the end of a frame can sometimes throw off the **Jobs Wall Time** and **Render Wall Time**, which is another reason to focus more on frame **time** than frame color. There's no "good" frame color to stive for. A mixture of orange, blue, and red isn't problematic as long as you're reaching the frame time goals for your experience. If you **aren't** reaching your frame time goals, the colors can indicate where to optimize.
 
 Pausing the MicroProfiler with <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>) while in frame mode launches **detailed mode**.
 
-## Detailed Mode
+## Detailed mode
 
-In addition to the bar graph from frame mode, detailed mode adds a colorful timeline that shows labels for each engine process.
+In addition to the bar graph from frame mode, detailed mode adds a colorful timeline that shows labels for each task.
 
-- Labels that appear directly below another label indicate processes that are performed as part of the higher-level process.
+- Labels that appear directly below another label indicate tasks that are performed as part of the higher-level task.
 
-  Rather than the parent process, you typically want to troubleshoot the worst-performing child processes; a parent process can't be shorter than the sum of its child processes.
+  Rather than the parent task, you typically want to troubleshoot the worst-performing child tasks; a parent task can't be shorter than the sum of its child tasks.
 
 - Scrolling zooms the timeline in or out. Combined with the millisecond labels at the top of the timeline, you can get a sense of how long a task took in an absolute sense, but also how long it took relative to other tasks.
 
@@ -56,9 +66,9 @@ In addition to the bar graph from frame mode, detailed mode adds a colorful time
 
   <img alt="The on-hover view for a label, with Group highlighted." src="../../assets/optimization/microprofiler/micro-group.png" width="360px" />
 
-## Timers Mode
+## Timers mode
 
-**Timers mode** is an alternative way of visualizing the data in the detailed view: as a list of labels with processing times and call counts. Horizontal bar graphs in some columns help you spot the busiest processes.
+**Timers mode** is an alternative way of visualizing the data in the detailed view: as a list of labels with processing times and call counts. Horizontal bar graphs in some columns help you spot the busiest tasks.
 
 <img alt="Timers mode." src="../../assets/optimization/microprofiler/micro-timer.png" width="800px" />
 
@@ -73,9 +83,9 @@ Controls are similar to the detailed view:
 All of the information in this view is visible when you hover over a label in the detailed view.
 </Alert>
 
-## Counters Mode
+## Counters mode
 
-Counters mode is a lengthy list of categories and statistics, including instance count and memory usage (in bytes) for the various processes.
+Counters mode is a lengthy list of categories and statistics, including instance count and memory usage (in bytes) for the various tasks.
 
 <img alt="Counters mode with a single graph." src="../../assets/optimization/microprofiler/micro-counter.png" width="800px" />
 
@@ -84,8 +94,8 @@ Counters mode is a lengthy list of categories and statistics, including instance
 - Right-click a graph to close it.
 - You can't filter this view, but you can left-click on a category (for example, `memory`) to collapse it.
 
-While counters mode can be useful, the [Developer Console](../../studio/optimization/memory-usage.md) is the recommended way to [identify memory issues](../../performance-optimization/identifying.md#memory). You might also find the [X-ray view](index.md#using-the-web-ui) in the web UI helpful for identifying when problematic memory allocation occurs.
+While counters mode can be useful, the [Developer Console](../../studio/optimization/memory-usage.md) is the recommended way to [identify memory issues](../../performance-optimization/identify.md#client-memory). You might also find the [X-ray view](index.md#use-the-web-ui) in the web UI helpful for identifying when problematic memory allocation occurs.
 
-## Hidden Mode
+## Hidden mode
 
-Hidden mode keeps the MicroProfiler menu open, but hides the bar graph. It's useful for reducing visual clutter, [saving frame data](index.md#saving-frame-data), and pausing and unpausing while you observe the line graph.
+Hidden mode keeps the MicroProfiler menu open, but hides the bar graph. It's useful for reducing visual clutter, [saving frame data](index.md#save-frame-data), and pausing and unpausing while you observe the line graph.

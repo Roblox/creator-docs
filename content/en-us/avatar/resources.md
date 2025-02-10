@@ -20,9 +20,9 @@ The following are source files used for actual Roblox assets. Finished assets li
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Nature Girl</center>
 <figure>
@@ -36,16 +36,16 @@ If you are opening these files in Blender, the armature bones may display in an 
 </figure>
 </CardContent>
 
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../assets/art/reference-files/NatureArcherGirl.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
 </CardActions>
 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Stylish Male</center>
 <figure>
@@ -59,16 +59,16 @@ If you are opening these files in Blender, the armature bones may display in an 
 </figure>
 </CardContent>
 
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../assets/art/reference-files/StylizedMaleWithClothing.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
 </CardActions>
 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Fish Person</center>
 <figure>
@@ -86,9 +86,9 @@ A rigged and skinned humanoid character model with a full body cage, facial anim
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Goblin</center>
 <figure>
@@ -100,15 +100,15 @@ A rigged and skinned humanoid character model with a full body cage, facial anim
 </CardContent>
 
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
-<Button href="../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+<Button href="../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
 </CardActions>
 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Blocky</center>
 <figure>
@@ -129,22 +129,22 @@ A Blocky character model with an animatable head and a full body cage.
 
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Lola</center>
 <figure>
 <center> <img src="../assets/art/resources/Lola-Resource.png" width="100%" /> </center>
 </figure>
 <figure>
-A skinned R15 character created from the <a href="../art/modeling/skinning-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../art/characters/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
+A skinned R15 character created from the <a href="../art/modeling/skin-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../art/characters/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
 </figure>
 <br />
 
 </CardContent>
 
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../assets/modeling/skinned-meshes/Lola.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
 </CardActions>
 
@@ -152,9 +152,9 @@ A skinned R15 character created from the <a href="../art/modeling/skinning-a-hum
 
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Tshirt - Uncaged</center>
 <figure>
@@ -171,9 +171,9 @@ Uncaged example clothing ready for caging in a 3D modeling software.
 
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Clothing Examples</center>
 <figure>
@@ -184,7 +184,7 @@ Caged 3D accessory models and associated PBR textures. Ready for import into Stu
 </figure>
 </CardContent>
 
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../assets/accessories/reference-files/Additional-FBX-assets.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
 </CardActions>
 
@@ -194,17 +194,17 @@ Caged 3D accessory models and associated PBR textures. Ready for import into Stu
 
 </Grid>
 
-## Auto-Setup References
+## Auto-setup references
 
 The following assets are designed for the specific [auto-setup requirements](../art/modeling/avatar-setup.md#model-requirements). If uploaded as-is, these assets will fail normal validation.
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
-<center>Nature Girl - AutoSetup</center>
+<center>Nature Girl - Auto-Setup</center>
 <figure>
 <center> <img src="../assets/art/resources/Archer-Girl-Preview.png" width="100%" /> </center>
 </figure>
@@ -214,18 +214,18 @@ This Auto-Setup template is not compatible with the traditional avatar creation 
 </figure>
 </CardContent>
 
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../assets/art/reference-files/NatureArcherGirl-AutoSetup.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
 </CardActions>
 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
-<center>Stylish Male - AutoSetup</center>
+<center>Stylish Male - Auto-Setup</center>
 <figure>
 <center> <img src="../assets/art/resources/StylizedMale-Preview.png" width="100%" /> </center>
 </figure>
@@ -235,7 +235,7 @@ This Auto-Setup template is not compatible with the traditional avatar creation 
 </figure>
 </CardContent>
 
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../assets/art/reference-files/StylizedMale-AutoSetup.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
 </CardActions>
 
@@ -244,15 +244,15 @@ This Auto-Setup template is not compatible with the traditional avatar creation 
 
 </Grid>
 
-## Project Files
+## Project files
 
 The following are base rig, attachment, and cage files for avatar item creation in third-party applications. Choose the appropriate type of project file for your use-case. These assets are not suitable for direct import into Studio.
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>R15 Rig and Attachments</center>
 <figure>
@@ -263,15 +263,15 @@ Standard armature rig template for various software. Use this template for riggi
 </figure>
 
 </CardContent>
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
   <Button href="../assets/modeling/meshes/reference-files/Rig_and_Attachments_Templates.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download (.blend, .ma, .fbx)</Button>
 </CardActions>
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Cages for Clothing</center>
 <figure>
@@ -282,15 +282,15 @@ Project files for creation, includes a full-body inner and outer cage mesh for c
 </figure>
 
 </CardContent>
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
   <Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download (.blend, .ma, .fbx)</Button>
 </CardActions>
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Cages for Bodies</center>
 <figure>
@@ -301,15 +301,15 @@ Project files for creation, includes the 15 individual body part cages required 
 </figure>
 
 </CardContent>
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
   <Button href="../assets/modeling/meshes/reference-files/Body_Cage_Templates.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download (.blend, .ma, .fbx)</Button>
 </CardActions>
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Combined Project Files</center>
 <figure>
@@ -320,7 +320,7 @@ Template file containing all content from previous templates, includes rig skele
 </figure>
 
 </CardContent>
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
   <Button href="../assets/modeling/meshes/reference-files/Clothing_Cage_Templates.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download (.blend, .ma, .fbx)</Button>
 </CardActions>
 </Card>
@@ -328,16 +328,16 @@ Template file containing all content from previous templates, includes rig skele
 
 </Grid>
 
-## Mannequin Models
+## Mannequin models
 
 Use the following models when designing your avatar accessory and clothing items. You can use these assets as scale, body shape, and caging reference.
 
 These assets are not meant for direct upload into Studio and may fail import or validation.
 
 <Grid container alignItems='stretch' style={{margin: -6}}>
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Classic Mannequin</center>
 <figure>
@@ -356,9 +356,9 @@ A blank mannequin using Roblox's [Classic](../art/characters/specifications.md#c
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Rthro Mannequin</center>
 <figure>
@@ -368,7 +368,7 @@ A blank mannequin using Roblox's [Classic](../art/characters/specifications.md#c
 A blank mannequin using Roblox's [Rthro Normal](../art/characters/specifications.md#normal) avatar proportions. <br /> <br />Use this reference to aid your creation process for accessories, clothing, and characters in third-party applications.<br /> <br /> The caged `.fbx` contains the individual outer body cages for the body and may not import correctly into Studio without modification.
 </figure>
 </CardContent>
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../assets/art/reference-files/RthroMannequin.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Model</Button>
 
 <Button href="../assets/art/reference-files/RthroMannequin_With-Cages.fbx" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>With Cage</Button>
@@ -377,9 +377,9 @@ A blank mannequin using Roblox's [Rthro Normal](../art/characters/specifications
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Rthro Slender Mannequin</center>
 <figure>
@@ -401,28 +401,28 @@ A blank mannequin using Roblox's [Rthro Slender](../art/characters/specification
 
 ## Templates
 
-Use these templates if following along the [Creating Characters with Templates](../art/characters/creating/index.md) tutorial content.
+Use these templates if following along the [Create characters with templates](../art/characters/creating/index.md) tutorial content.
 
 These assets require additional steps in third-party tools to pass validation in Studio.
 
 <Alert severity = 'warning'>
-If you are using Roblox's avatar template files, you must perform the [cleanup steps](../art/characters/creating/combining-head-geometry.md) in order for the assets to properly validate before publishing to the Marketplace.
+If you are using Roblox's avatar template files, you must perform the [cleanup steps](../art/characters/creating/combine-head-geometry.md) in order for the assets to properly validate before publishing to the Marketplace.
 </Alert>
 
 <Grid container style={{margin: -6}}>
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 <figure>
 <img src="../assets/art/avatar/templates/Round-Head-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 </figure>
 
 </CardContent>
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../assets/art/reference-files/RoundMale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Male</Button>
 
 <Button href="../assets/art/reference-files/RoundFemale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Female</Button>
@@ -430,15 +430,15 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 <figure>
 <img src="../assets/art/avatar/templates/Square-Head-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 </figure>
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
@@ -450,15 +450,15 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 <figure>
 <img src="../assets/art/avatar/templates/Muzzle-Head-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 </figure>
 
 </CardContent>
@@ -471,19 +471,19 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <figure>
 <img src="../assets/art/avatar/templates/SemiRealistic-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 </figure>
 
 </CardContent>
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../assets/art/reference-files/SemiRealisticMale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Male</Button>
 
 <Button href="../assets/art/reference-files/SemiRealisticFemale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Female</Button>
@@ -492,19 +492,19 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <figure>
 <img src="../assets/art/avatar/templates/Anime-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 </figure>
 
 </CardContent>
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../assets/art/reference-files/AnimeMale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Male</Button>
 
 <Button href="../assets/art/reference-files/AnimeFemale.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Female</Button>
@@ -513,39 +513,39 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <figure>
 <img src="../assets/art/avatar/templates/Caricature-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 </figure>
 
 </CardContent>
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../assets/art/reference-files/Caricature.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
 
 </CardActions>
 </Card>
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <figure>
 <img src="../assets/art/avatar/templates/Stylized-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 
 </figure>
 
 </CardContent>
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
 <Button href="../assets/art/reference-files/StylizedHuman.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
 </CardActions>
 </Card>
@@ -553,15 +553,15 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 
 </Grid>
 
-## Add-Ons and Tools
+## Add-ons and tools
 
 Use the following add-ons and tools to help aid your creation process. Some of these tools are not actively supported and may be incompatible with your hardware version.
 
 <Grid container alignItems='stretch'>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Blender Studio Plugin</center>
 <figure>
@@ -572,16 +572,16 @@ Open-source Blender Studio add-on that allows you to upload assets directly from
 </figure>
 
 </CardContent>
-<CardActions style={{bottom: 0, width: '100%'}}>
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
   <Button href="../art/modeling/roblox-blender-plugin.md" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"0px;"}}>Link to Instructions</Button>
 </CardActions>
 </Card>
 
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Blender Validation Tool</center>
 <figure>
@@ -598,9 +598,9 @@ Blender add-on for verifying avatar technical compatibility before importing int
 
 </Grid>
 
-<Grid item xs={12} md={4} style={{padding: 6}}>
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
-<CardContent>
+<CardContent style={{marginBottom:'66px'}}>
 
 <center>Blender Calisthenics Tool</center>
 <figure>

@@ -1,34 +1,34 @@
 ---
-title: Immersive Ads
-description: Immersive Ads allow you insert ad units into your experience that programmatically serve ad content.
+title: Immersive ads
+description: Immersive ads allow you insert ad units into your experience that programmatically serve ad content.
 ---
 
-The **Immersive Ads** system allows you to insert ad units into your experience that permit Roblox to programmatically serve ad content from advertisers to your active users. There are three ad formats that may be served in your experience:
+The **immersive ads** system allows you to insert ad units into your experience that permit Roblox to programmatically serve ad content from advertisers to your active users. There are three ad formats that may be served in your experience:
 
-- **Video Ads** — A video up to 30 seconds that users can watch in-experience, which can either be click-to-play or autoplaying.
-- **Image Ads** — A static, non-clickable image within the 3D space.
-- **Portal Ads** — A static, non-clickable image with a door that teleports users into an advertiser's experience.
+- **Video ads** — A video up to 30 seconds that users can watch in-experience, which can either be click-to-play or autoplaying.
+- **Image ads** — A static, non-clickable image within the 3D space.
+- **Portal ads** — A static, non-clickable image with a door that teleports users into an advertiser's experience.
 
 <Alert severity="info">
-   With Portal Ads, the advertiser's experience includes a button to return users back to your experience.
+   With portal ads, the advertiser's experience includes a button to return users back to your experience.
 </Alert>
 
 <GridContainer numColumns="2">
 <figure>
     <iframe width="440" height="247" src="https://www.youtube-nocookie.com/embed/4P79zbwU9D8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <figcaption>Video Ad Format (Autoplaying)</figcaption>
+    <figcaption>Video ad format (autoplaying)</figcaption>
   </figure>
   <figure>
     <iframe width="440" height="247" src="https://www.youtube-nocookie.com/embed/JVjkzGIgoak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <figcaption>Video Ad Format (Click-to-play)</figcaption>
+    <figcaption>Video ad format (click-to-play)</figcaption>
   </figure>
   <figure>
     <img src="../../assets/monetization/immersive-ads/Overview-ImageAd.jpg" />
-    <figcaption>Image Ad Format</figcaption>
+    <figcaption>Image ad format</figcaption>
   </figure>
   <figure>
     <video controls src="../../assets/monetization/immersive-ads/Overview-PortalAd.mp4" width="90%"></video>
-    <figcaption>Portal Ad Format</figcaption>
+    <figcaption>Portal ad format</figcaption>
   </figure>
 </GridContainer>
 
@@ -51,7 +51,7 @@ To illustrate this concept, see the following three images of the same ad unit s
   </figure>
 </GridContainer>
 
-## Publisher Earnings From Immersive Ads
+## Publisher earnings from immersive ads
 
 If your active users are eligible to see ads and meet the specific criteria from the advertiser, such as their country or device, you may be eligible to earn Robux according to how they interact with the ad content.
 
@@ -73,13 +73,13 @@ Roblox pays out earnings on the 25th of the following month from when you insert
    Roblox has ad fraud systems in place to create a positive advertiser, publisher, and user experience. Per Roblox's [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards), if you engage in malicious practices to inflate impressions or teleports, Roblox may deduct Robux from your expected payout or reclaim fraudulently earned Robux. In addition, Roblox may suspend your experience and/or account.
 </Alert>
 
-## Publisher Eligibility
+## Publisher eligibility
 
 <Alert severity="warning">
 The following requirements take effect from June 1st, 2024.
 </Alert>
 
-While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience or group owner and experience is eligible to serve ads. In Creator Hub, you can see and manage your publisher eligibility status in a new "Eligibility" tab on the Immersive Ads page.
+While anyone can insert ad units into their experiences, Roblox only serves ads into ad units if the experience or group owner and experience is eligible to serve ads. In Creator Hub, you can see and manage your publisher eligibility status in a new "Eligibility" tab on the immersive ads page.
 
 <img src="../../assets/creator-dashboard/Immersive-Ads-Eligibility.png" width = "80%"/>
 <br />
@@ -94,7 +94,7 @@ Experiences must meet the following criteria to be eligible to be an ad publishe
   - For group-owned experiences, this requirement applies to the owner of the group.
   - Requirement is persistent - if a publisher disables identity verification, they will lose eligibility.
 - Your experience must be **Public**. If a publisher makes the experience Private, the experience will lose eligibility.
-- You must complete the **Experience Guidelines Questionnaire** for your experience.
+- You must complete the **Maturity & Compliance Questionnaire** for your experience.
 - Your experience must maintain **2,000 unique visitors per month**.
   - This is calculated and updated monthly, based on visitor data.
   - Bots cannot be included in visitor counts.
@@ -106,11 +106,11 @@ Publishers who do not comply with these requirements may lose their eligibility 
 
 </Alert>
 
-## User Eligibility
+## User eligibility
 
-Even if your experience is eligible to serve ads, not all users are eligible to see ads, such as those under the age of 13 or users outside of a campaign's audience selection. If a user is ineligible to see ads, ad units display a fallback image of the Roblox logo to those ineligible users, but you can remove the ad units altogether as described in [Removing Ad Units for Ineligible Users](#removing-ad-units-for-ineligible-users).
+Even if your experience is eligible to serve ads, not all users are eligible to see ads, such as those under the age of 13 or users outside of a campaign's audience selection. If a user is ineligible to see ads, ad units display a fallback image of the Roblox logo to those ineligible users, but you can remove the ad units altogether as described in [Remove ad units for ineligible users](#remove-ad-units-for-ineligible-users).
 
-## Inserting Ad Units
+## Insert ad units
 
 <iframe width="880" height="495" src="https://www.youtube-nocookie.com/embed/dlItlMLMDCE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -129,7 +129,7 @@ When you insert an ad unit into an eligible experience, it's important to check 
   </figure>
 </GridContainer>
 
-### Video Ads
+### Video ads
 
 Eligible users can see two types of video ads within Roblox experiences, depending on how the advertiser bids:
 
@@ -192,7 +192,7 @@ Video ads should not be served when users are idle or away from keyboard (AFK). 
 
 </Alert>
 
-### Image Ads
+### Image ads
 
 An image ad is a non-clickable static image that serves ads through an `Class.AdGui` instance that you can place on block `Class.Part` instances anywhere within the 3D space of an experience as long as nothing obstructs the view of the ad from users. The aspect ratio of the image scales with the face of the block you choose to display the ad content.
 
@@ -219,7 +219,7 @@ To insert an image ad:
    1. From the menu, insert an **AdGui**.
 
 <Alert severity="info">
-   You can also insert an image ad package from the Creator Store, then customize it to fit your experience as long as the ad unit continues to meet the validation criteria. For instructions on how to insert ad units from the Creator Store, see [Inserting Ad Units - Portal Ads](#portal-ads).
+   You can also insert an image ad package from the Creator Store, then customize it to fit your experience as long as the ad unit continues to meet the validation criteria. For instructions on how to insert ad units from the Creator Store, see [Insert ad units - portal ads](#portal-ads).
 </Alert>
 
 Once you publish the experience, users can see the ad unit in one of the following states:
@@ -251,7 +251,7 @@ Once you publish the experience, users can see the ad unit in one of the followi
 </tbody>
 </table>
 
-### Portal Ads
+### Portal ads
 
 A portal ad is made up of two core components:
 
@@ -325,7 +325,7 @@ Once you publish the experience, users can see the ad unit in one of the followi
 </tbody>
 </table>
 
-## Removing Ad Units for Ineligible Users
+## Remove ad units for ineligible users
 
 Per Roblox's [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards), you must either hide, replace, or block ad content from users who are ineligible to see ads. By default, immersive ad units handle this by replacing ads with a fallback image of the Roblox logo for users ineligible to see ads. However, if you want to hide or remove the ad units entirely, you must use `Class.PolicyService:GetPolicyInfoForPlayerAsync()` to return an `AreAdsAllowed` boolean that determines the eligibility of each user who accesses your experience to see ads, then include logic to modify ad visibility to ineligible users.
 
@@ -352,7 +352,7 @@ local mainPortal = Workspace:WaitForChild("Main Portal Template")
 	end
 ```
 
-## Viewing Immersive Ad Metrics
+## View immersive ad metrics
 
 Once you insert ad units into your experience, the [Creator Dashboard](https://create.roblox.com/dashboard/creations) generates different types of metrics graphs to help you analyze the overall performance of your Immersive Ads. After about 48 hours of having Immersive Ads run in your experience, you can see how many video views, impressions, and teleports you're generating through your user base, how each ad unit format performs, and how many Robux you're earning from individual ad units.
 

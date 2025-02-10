@@ -7,37 +7,37 @@ A Roblox project is a collection of [places](#places), [assets](#assets), [setti
 
 ## Places
 
-Experiences on Roblox are made up of individual **places**, comparable to scenes in Unity or maps in Unreal Engine. Each place contains all components for that portion of the experience, including its specific environment, parts, meshes, scripts, and user interface. See [Experiences and Places](../production/publishing/publishing-experiences-and-places.md) for details on creating and managing experiences.
+Experiences on Roblox are made up of individual **places**, comparable to scenes in Unity or maps in Unreal Engine. Each place contains all components for that portion of the experience, including its specific environment, parts, meshes, scripts, and user interface. See [Experiences and places](../production/publishing/publish-experiences-and-places.md) for details on creating and managing experiences.
 
 <figure>
 <img src="../assets/publishing/experiences-places-assets/Experience-Hierarchy.png" alt="An experience grouping of three individual places with unique environments." width="800" />
 </figure>
 
-Every place is represented by a **data model**, a hierarchy of objects that describe everything about the place. The Roblox engine uses the data model as a source of truth for a place's state, so it can simulate and render it on client devices. For more information on how the Roblox engine interprets the data model, see [Client-Server Runtime](../projects/client-server.md).
+Every place is represented by a **data model**, a hierarchy of objects that describe everything about the place. The Roblox Engine uses the data model as a source of truth for a place's state, so it can simulate and render it on client devices. For more information on how the engine interprets the data model, see [Client-server runtime](../projects/client-server.md).
 
 Proper, intentional object organization within the data model is essential for
 functionality and maintenance of your project. For more information on what
 objects are available and how to organize and use them, see
-[Data Model](../projects/data-model.md).
+[Data model](../projects/data-model.md).
 
 ## Assets
 
 In Roblox, assets such as images, meshes, and audio are stored as **cloud-based assets**, so you don't need to bundle local copies into a saved Studio experience. Each asset in the cloud is assigned a unique **asset&nbsp;ID** from which multiple experiences can utilize them. You can create assets directly in Studio, such as models, or import assets like images, audio, and meshes from other tools.
 
-<table>
-  <tbody>
-    <tr>
-      <td><img src="../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" /></td>
-      <td><img src="../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" alt="An untextured treasure chest MeshPart asset." width="90%" /></td>
-      <td><audio controls><source src="../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio></td>
-    </tr>
-    <tr>
-			<td><code>rbxassetid://7229442422</code></td>
-			<td><code>rbxassetid://6768917255</code></td>
-			<td><code>rbxassetid://9125402735</code></td>
-    </tr>
-  </tbody>
-</table>
+<GridContainer numColumns="3">
+  <figure>
+    `rbxassetid://7229442422`
+		<img src="../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" />
+  </figure>
+  <figure>
+    `rbxassetid://6768917255`
+		<img src="../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" alt="An untextured treasure chest MeshPart asset." width="90%" />
+  </figure>
+	<figure>
+    `rbxassetid://9125402735`
+		<audio controls><source src="../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio>
+  </figure>
+</GridContainer>
 
 By default, assets are private to your experience and you can use an asset in any place by referencing its ID. You can also distribute them to the community in the [Creator Store](https://create.roblox.com/store/), so others can use them as well.
 
@@ -57,7 +57,7 @@ Experience settings are managed from the [Creator Dashboard](https://create.robl
 
 - **Basic Info** &mdash; Basic information about the experience, such as its name, description, and genre. Much of the information here is used in your experience's listing.
 - **Communication** &mdash; Settings which enable eligible users to use [voice chat](../chat/voice-chat.md) or animate their avatar via their camera within your experience.
-- **Permissions** &mdash; Configures who can access your experience. New experiences begin as **private** and can only be edited and joined by you and members of your [group](../projects/groups.md) with the correct permissions. When appropriate, you can [release](../production/publishing/publishing-experiences-and-places.md#releasing-to-the-public) the experience to the public.
+- **Permissions** &mdash; Configures who can access your experience. New experiences begin as **private** and can only be edited and joined by you and members of your [group](../projects/groups.md) with the correct permissions. When appropriate, you can [release](../production/publishing/publish-experiences-and-places.md#release-to-the-public) the experience to the public.
 - **Monetization** &mdash; Options for earning revenue from your experience, as outlined in [Monetization](../production/monetization/index.md).
 - **Localization** &mdash; Configuration for different [languages and regions](../production/localization/index.md).
 - **Avatar** &mdash; Settings related to avatars, such as avatar scaling and
@@ -81,7 +81,7 @@ For more information, see [Collaboration](../projects/collaboration.md).
 
 ## Testing
 
-Your [team](../projects/setting-up-a-team.md) can instantly test an experience on PC, mobile, VR, and other devices you wish to support through the Roblox app; no need to compile builds, deploy to app stores, or await app store approval.
+Your [team](../projects/groups.md) can instantly test an experience on PC, mobile, VR, and other devices you wish to support through the Roblox app; no need to compile builds, deploy to app stores, or await app store approval.
 
 Studio offers a suite of options for testing an experience before releasing it to the public:
 
@@ -93,4 +93,4 @@ Studio offers a suite of options for testing an experience before releasing it t
   device or how on-screen UI displays on different screens and aspect ratios.
 - **Collaborative playtesting** with members of your team.
 
-For more information on each testing option, see [Studio Testing Modes](../studio/testing-modes.md).
+For more information on each testing option, see [Studio testing modes](../studio/testing-modes.md).

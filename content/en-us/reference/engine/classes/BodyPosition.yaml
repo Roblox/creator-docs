@@ -56,6 +56,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: BodyPosition.MaxForce
     summary: |
       Determines the limit on how much force that may be applied to each axis.
@@ -77,6 +80,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: BodyPosition.P
     summary: |
       Determines how aggressive of a force is applied in reaching the goal
@@ -102,6 +108,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: BodyPosition.Position
     summary: |
       Determines the goal position towards which force will be applied.
@@ -120,6 +129,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: BodyPosition.maxForce
     summary: ''
     description: ''
@@ -139,6 +151,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: BodyPosition.position
     summary: ''
     description: ''
@@ -158,6 +173,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods:
   - name: BodyPosition:GetLastForce
     summary: |
@@ -173,6 +191,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: BodyPosition:lastForce
     summary: |
       Returns the last force in the object.
@@ -190,6 +210,8 @@ methods:
       which should be used in new work instead,
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: BodyPosition.ReachedTarget
     summary: |
@@ -206,4 +228,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

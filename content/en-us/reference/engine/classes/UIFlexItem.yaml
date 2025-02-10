@@ -5,10 +5,10 @@ memory_category: Instances
 summary: |
   Defines flex behavior for a `Class.GuiObject` within a `Class.UIListLayout`.
 description: |
-  The `UIFlexItem` object defines flex behavior for its parent `Class.GuiObject`
-  under the control of a `Class.UIListLayout`. The defined flex behavior
-  overrides that of the controlling `Class.UIListLayout`, letting you configure
-  flex behavior on a per‑object basis where necessary.
+  The `Class.UIFlexItem` object defines flex behavior for its parent
+  `Class.GuiObject` under the control of a `Class.UIListLayout`. The defined
+  flex behavior overrides that of the controlling `Class.UIListLayout`, letting
+  you configure flex behavior on a per‑object basis where necessary.
 
   <img src="../../../assets/ui/ui-objects/UIFlexItem-Example.png" width="720" alt="Example of UIFlexItem applied to a specific GuiObject under control of a UIListLayout." />
 
@@ -72,6 +72,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIFlexItem.GrowRatio
     summary: |
       Determines the amount the parent `Class.GuiObject` grows relative to other
@@ -94,6 +97,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIFlexItem.ItemLineAlignment
     summary: |
       Cross-axis alignment of the specific parent `Class.GuiObject` within the
@@ -113,6 +119,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIFlexItem.ShrinkRatio
     summary: |
       Determines the amount the parent `Class.GuiObject` shrinks relative to
@@ -135,6 +144,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

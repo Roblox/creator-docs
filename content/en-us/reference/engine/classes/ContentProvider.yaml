@@ -22,10 +22,11 @@ description: |
 
   #### Best Practices for Preloading
 
-  - Only preload essential assets, **not** the entire Workspace. You might get
-    occasional pop-in, but it decreases load times and generally doesn't disrupt
-    the player experience. Assets that are good candidates for preloading
-    include those required for the loading screen, the UI, or the starting area.
+  - Only preload essential assets, **not** the entire `Class.Workspace`. You
+    might get occasional pop-in, but it decreases load times and generally
+    doesn't disrupt the player experience. Assets that are good candidates for
+    preloading include those required for the loading screen, the UI, or the
+    starting area.
   - Let players skip the loading screen, or automatically skip it after a
     certain amount of time.
 code_samples:
@@ -67,6 +68,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ContentProvider.RequestQueueSize
     summary: |
       Gives the number of items in the `Class.ContentProvider` request queue
@@ -97,6 +100,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: ContentProvider:GetAssetFetchStatus
     summary: |
@@ -121,6 +126,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContentProvider:GetAssetFetchStatusChangedSignal
     summary: |
       A signal that fires when the `Enum.AssetFetchStatus` of the provided
@@ -145,22 +152,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: ContentProvider:GetDependencyContentIds
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: root
-        type: Instance
-        default:
-        summary: ''
-    returns:
-      - type: Array
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContentProvider:ListEncryptedAssets
     summary: ''
     description: ''
@@ -173,16 +166,18 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContentProvider:Preload
     summary: |
       Queues an asset to be downloaded by the `Class.ContentProvider`.
     description: |
       Usually, content is loaded only when it starts being used. That explains
-      why it often takes a moment for an image to appear in a
-      `Class.GuiObject|GUI`, or a `Mesh|mesh` to appear in a
-      `Class.BasePart|part`, or why a `Class.Sound|sound` doesn't play for the
-      first time. All because the asset has not yet finished loading. Preload is
-      used to load this content beforehand, so that it works instantly.
+      why it often takes a moment for an image to appear in a `Class.GuiObject`,
+      or a `Mesh|mesh` to appear in a `Class.BasePart|part`, or why a
+      `Class.Sound|sound` doesn't play for the first time. All because the asset
+      has not yet finished loading. Preload is used to load this content
+      beforehand, so that it works instantly.
     code_samples:
       - ContentProvider-Preload1
     parameters:
@@ -200,6 +195,8 @@ methods:
       which should be used in all new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContentProvider:RegisterDefaultEncryptionKey
     summary: ''
     description: ''
@@ -216,6 +213,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContentProvider:RegisterDefaultSessionKey
     summary: ''
     description: ''
@@ -232,6 +231,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContentProvider:RegisterEncryptedAsset
     summary: ''
     description: ''
@@ -252,6 +253,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContentProvider:RegisterSessionEncryptedAsset
     summary: ''
     description: ''
@@ -272,6 +275,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContentProvider:UnregisterDefaultEncryptionKey
     summary: ''
     description: ''
@@ -284,6 +289,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContentProvider:UnregisterEncryptedAsset
     summary: ''
     description: ''
@@ -300,6 +307,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContentProvider:PreloadAsync
     summary: |
       Yields until all of the assets associated with the given
@@ -324,6 +333,15 @@ methods:
       If any of the assets fail to load, an error message appears in the output.
       The method itself will not error and it will continue executing until it
       has processed each requested instance or asset ID.
+
+      ##### Limitations
+
+      `Class.SurfaceAppearance` and `Class.MaterialVariant` are not supported by
+      `Class.ContentProvider:PreloadAsync()|PreloadAsync()` because these
+      objects rely on processed texture pack assets rather than directly loading
+      individual textures. Calling it on a `Class.SurfaceAppearance` instance
+      will not do anything, but the associated textures will still be streamed
+      in during runtime.
     code_samples:
       - ContentProvider-PreloadAsync1
     parameters:
@@ -347,6 +365,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: ContentProvider.AssetFetchFailed
     summary: ''
@@ -361,4 +381,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

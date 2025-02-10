@@ -1,15 +1,15 @@
 ---
-title: Installation and Setup
+title: Installation and setup
 description: Explains the installation and setup details for the Battle Royale game kit.
 prev: /resources/battle-royale
-next: /resources/battle-royale/running-the-game
+next: /resources/battle-royale/run-the-game
 ---
 
-To setup the Battle Royale experience, you must download [Studio](../../studio/setting-up-roblox-studio.md) and the project [reference files](#reference-files).
+To setup the Battle Royale experience, you must download [Studio](../../studio/setup.md) and the project [reference files](#reference-files).
 
-Additional configuration of the [place IDs](#copy-and-paste-place-ids), [server](#adjust-server-fill), and [publishing](#publish-additional-places) settings are also required before continuing on to [running the game](../../resources/battle-royale/running-the-game.md).
+Additional configuration of the [place IDs](#copy-and-paste-place-ids), [server](#adjust-server-fill), and [publishing](#publish-additional-places) settings are also required before continuing on to [running the game](../../resources/battle-royale/run-the-game.md).
 
-## Reference Files
+## Reference files
 
 [RobloxBattleRoyale.zip](../../assets/resources/battle-royale/installation-and-setup/RobloxBattleRoyale.zip) consists of easily accessible `.rbxl` files which you can open in Roblox Studio and experiment with immediately.
 
@@ -36,7 +36,7 @@ Additional configuration of the [place IDs](#copy-and-paste-place-ids), [server]
 </tbody>
 </table>
 
-## Create a New Game
+## Create a new game
 
 Roblox Battle Royale must be structured as a game with six unique places. To begin:
 
@@ -65,7 +65,7 @@ Roblox Battle Royale must be structured as a game with six unique places. To beg
 5. For the **Creator** field, select "Me" to publish the place to your personal account, or select a group.
 6. When ready, click the **Create** button.
 
-## Add Additional Places
+## Add additional places
 
 Once the lobby place is published, you'll need to add **five additional places** to the game:
 
@@ -93,7 +93,7 @@ Once the lobby place is published, you'll need to add **five additional places**
 
 5. Publish the game again (File → Publish to Roblox).
 
-## Copy and Paste Place IDs
+## Copy and paste place IDs
 
 Each place must be cross-associated so that players can teleport from the lobby to various play mode queues and vice-versa. To achieve this, you'll need to gather the place IDs of the places you created above.
 
@@ -147,7 +147,7 @@ Each place must be cross-associated so that players can teleport from the lobby 
    <thead>
      <tr>
        <th>Place</th>
-       <th>Table Key</th>
+       <th>Table key</th>
      </tr>
    </thead>
    <tbody>
@@ -192,7 +192,7 @@ Each place must be cross-associated so that players can teleport from the lobby 
 
 6. Publish the game again (**File** → **Publish to Roblox**).
 
-## Adjust Server Fill
+## Adjust server fill
 
 By default, Roblox balances players/servers for an optimal social gameplay experience, but a battle royale should allow for bigger and more intense battles. To achieve this:
 
@@ -220,11 +220,11 @@ By default, Roblox balances players/servers for an optimal social gameplay exper
 
 5. Click **Save** at the bottom of the window.
 
-## Publish Additional Places
+## Publish additional places
 
 Now you'll need to open the remaining `.rbxl` files from the downloaded bundle, modify their `_places` tables, and publish them.
 
-### Copy Places Table
+### Copy places table
 
 1. Refer to the `_places` table in the lobby's **MainConfiguration** script:
 
@@ -250,7 +250,7 @@ local _places = {
    src="../../assets/resources/battle-royale/installation-and-setup/Battle-Royale-Lobby-Close.png"
    width="80%" />
 
-### Replace Tables
+### Replace tables
 
 1. Open the `Gameplay.rbxl` file.
 2. Open its **MainConfiguration** script within **ReplicatedFirst** → **Configurations**.

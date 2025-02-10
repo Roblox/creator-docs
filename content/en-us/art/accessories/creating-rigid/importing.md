@@ -1,5 +1,5 @@
 ---
-title: Using Studio's 3D Importer
+title: Use Studio's 3D Importer
 description: Use Studio's 3D importer to import a third-party 3D model into Studio.
 next: /art/accessories/creating-rigid/converting
 prev: /art/accessories/creating-rigid/exporting
@@ -21,7 +21,7 @@ To import your asset ([downloadable reference](../../../assets/art/accessories/c
    2. If textures were not imported correctly, follow the instructions below to add the file manually.
 
 <BaseAccordion>
-<AccordionSummary>Adding textures manually</AccordionSummary>
+<AccordionSummary>Add textures manually</AccordionSummary>
 <AccordionDetails>
 
 If textures didn't load correctly, add them manually with the Asset Manager.
@@ -37,7 +37,6 @@ If textures didn't load correctly, add them manually with the Asset Manager.
 
 </AccordionDetails>
 </BaseAccordion>
-<br />
 
 <Alert severity = 'success'>
 After successful import, your model object should populate in your project as a `Class.Model` with the appropriate textures applied. See [3D Importer](../../../art/modeling/3d-importer.md) for additional information on import settings and troubleshooting.

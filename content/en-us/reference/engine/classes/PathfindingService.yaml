@@ -53,6 +53,8 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: PathfindingService:CreatePath
     summary: ''
@@ -135,6 +137,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PathfindingService:ComputeRawPathAsync
     summary: |
       Computes and returns a `Class.Path` between two
@@ -171,6 +175,8 @@ methods:
       work instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PathfindingService:ComputeSmoothPathAsync
     summary: |
       Computes and returns a smooth `Class.Path` between two
@@ -206,6 +212,8 @@ methods:
       work instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PathfindingService:FindPathAsync
     summary: |
       Finds a `Class.Path` between the two provided points.
@@ -249,5 +257,7 @@ methods:
       path.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

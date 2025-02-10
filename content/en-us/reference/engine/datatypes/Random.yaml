@@ -55,7 +55,8 @@ methods:
     summary: |
       Returns a pseudorandom number uniformly distributed over `[0, 1]`.
     description: |
-      Returns a pseudorandom number uniformly distributed over `[0, 1]`.
+      Returns a uniform pseudorandom real number in the range of 0 to 1,
+      inclusive.
     parameters:
     returns:
       - type: number
@@ -67,7 +68,8 @@ methods:
     summary: |
       Returns a pseudorandom number uniformly distributed over `[min, max]`.
     description: |
-      Returns a pseudorandom number uniformly distributed over `[min, max]`.
+      Returns a uniform pseudorandom real number in the range of `min` to `max`,
+      inclusive.
     parameters:
       - name: min
         type: number

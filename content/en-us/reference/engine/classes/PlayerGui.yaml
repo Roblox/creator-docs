@@ -5,21 +5,22 @@ memory_category: Instances
 summary: |
   A container for a player's currently rendered `Class.ScreenGui|ScreenGuis`.
 description: |
-  `PlayerGui` is a container that holds a player's UI. If a `Class.ScreenGui` is
-  a descendant, then any `Class.GuiObject` inside of the `Class.ScreenGui` will
-  be drawn to the player's screen. Any `Class.LocalScript` will also run if it
-  is inserted into a `PlayerGui`.
+  `Class.PlayerGui` is a container that holds a player's UI. If a
+  `Class.ScreenGui` is a descendant, then any `Class.GuiObject` inside of the
+  `Class.ScreenGui` will be drawn to the player's screen. Any
+  `Class.LocalScript` will also run if it is inserted into a `Class.PlayerGui`.
 
-  When a player first joins the experience, their `PlayerGui` is automatically
-  inserted into their `Class.Player` object. When the player's
+  When a player first joins the experience, their `Class.PlayerGui` is
+  automatically inserted into their `Class.Player` object. When the player's
   `Class.Player.Character` spawns for the first time, all of the contents of
-  `Class.StarterGui` are automatically copied into the player's `PlayerGui`.
-  Note that if `Class.Players.CharacterAutoLoads` is set to `false`, the
-  character will not spawn and `Class.StarterGui` contents will not be copied
-  until `Class.Player:LoadCharacter()` is called. If
+  `Class.StarterGui` are automatically copied into the player's
+  `Class.PlayerGui`. Note that if `Class.Players.CharacterAutoLoads` is set to
+  `false`, the character will not spawn and `Class.StarterGui` contents will not
+  be copied until `Class.Player:LoadCharacter()` is called. If
   `Class.StarterGui.ResetPlayerGuiOnSpawn` is set to `true`, then every time the
-  player's character respawns, all of the contents of that player's `PlayerGui`
-  are cleared and replaced with the contents of `Class.StarterGui`.
+  player's character respawns, all of the contents of that player's
+  `Class.PlayerGui` are cleared and replaced with the contents of
+  `Class.StarterGui`.
 
   If you need to control a player's UI container during playtime, for example to
   show/hide a specific `Class.ScreenGui` or any of its children, access it as
@@ -58,6 +59,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: PlayerGui.ScreenOrientation
     summary: |
       Sets the preferred screen orientation mode for this player, if on a mobile
@@ -77,6 +81,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: PlayerGui.SelectionImageObject
     summary: |
       Overrides the default selection adornment used for gamepads.
@@ -95,6 +102,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods:
   - name: PlayerGui:GetTopbarTransparency
     summary: |
@@ -112,14 +122,16 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PlayerGui:SetTopbarTransparency
     summary: |
       Sets the transparency of the top bar.
     description: |
-      `SetTopbarTransparency()` sets the transparency of the top bar
-      `Class.CoreGui`. A value of `0` is completely opaque and a value of `1` is
-      completely transparent. Values outside of the range `[0, 1]` are clamped.
-      The default transparency of the topbar is `0.5`.
+      This method sets the transparency of the top bar `Class.CoreGui`. A value
+      of `0` is completely opaque and a value of `1` is completely transparent.
+      Values outside of the range `[0, 1]` are clamped. The default transparency
+      of the topbar is `0.5`.
 
       Using the `Class.StarterGui:SetCore()` method with the `"TopbarEnabled"`
       option allows you to enable/disable the entire topbar and all of its
@@ -141,6 +153,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: PlayerGui.TopbarTransparencyChangedSignal
     summary: |
@@ -159,4 +173,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

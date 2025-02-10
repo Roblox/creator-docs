@@ -49,6 +49,47 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: DataStore:GetVersionAtTimeAsync
+    summary: |
+      Retrieves the key version that was current at a given time.
+    description: |
+      This function retrieves the key version that was current at a given time
+      as well as a `Class.DataStoreKeyInfo` instance.
+    code_samples:
+      - retrieving-datastore-versions-by-time
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: |
+          Key name for which the version info is requested. If
+          `Class.DataStoreOptions.AllScopes` was set to true when accessing the
+          data store through `Class.DataStoreService:GetDataStore()`, this key
+          name must be prepended with the original scope as in "scope/key".
+      - name: timestamp
+        type: int64
+        default:
+        summary: |
+          Unix timestamp in milliseconds for which the requested version was
+          current. Must be greater than zero. Must not be more than ten minutes
+          in the future.
+    returns:
+      - type: Tuple
+        summary: |
+          The value of the key that was current at the specified time and a
+          `Class.DataStoreKeyInfo` instance that includes the version number,
+          date and time the version was created, and functions to retrieve
+          `Class.Player.UserId|UserIds` and metadata. `nil` if no available
+          version was current at the requested time.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DataStore:ListKeysAsync
     summary: |
       Returns a `Class.DataStoreKeyPages` object for enumerating through keys of
@@ -72,7 +113,9 @@ methods:
         type: int
         default: 0
         summary: |
-          **(Optional)** Maximum possible number of items that can be returned.
+          **(Optional)** Number of items to be returned in each page. If no
+          value is given, the engine sends a default value of 0 to the data
+          store web service, which in turn defaults to 50 items per page.
       - name: cursor
         type: string
         default: ''
@@ -97,6 +140,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DataStore:ListVersionsAsync
     summary: |
       Enumerates all versions of a key.
@@ -119,24 +164,26 @@ methods:
         type: SortDirection
         default: Ascending
         summary: |
-          Enum specifying ascending or descending sort order.
+          **(Optional)** Enum specifying ascending or descending sort order.
       - name: minDate
         type: int64
         default: 0
         summary: |
-          Unix timestamp in milliseconds after which the versions should be
-          listed.
+          **(Optional)** Unix timestamp in milliseconds after which the versions
+          should be listed.
       - name: maxDate
         type: int64
         default: 0
         summary: |
-          Unix timestamp in milliseconds up to which the versions should be
-          listed.
+          **(Optional)** Unix timestamp in milliseconds up to which the versions
+          should be listed.
       - name: pageSize
         type: int
         default: 0
         summary: |
-          Number of items to be returned in each page.
+          **(Optional)** Number of items to be returned in each page. If no
+          value is given, the engine sends a default value of 0 to the data
+          store web service, which in turn defaults to 1024 items per page.
     returns:
       - type: DataStoreVersionPages
         summary: |
@@ -147,6 +194,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: DataStore:RemoveVersionAsync
     summary: |
       Permanently deletes the specified version of a key.
@@ -180,5 +229,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

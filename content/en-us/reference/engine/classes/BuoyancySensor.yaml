@@ -35,6 +35,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: BuoyancySensor.TouchingSurface
     summary: |
       True when any position on the `Class.BasePart` is touching `Class.Terrain`
@@ -55,6 +57,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

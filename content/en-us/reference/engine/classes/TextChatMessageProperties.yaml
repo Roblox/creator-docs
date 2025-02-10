@@ -34,6 +34,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: TextChatMessageProperties.Text
     summary: |
       The `Class.TextChatMessage.Text` to override.
@@ -51,11 +54,16 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
   - name: TextChatMessageProperties.Translation
     summary: |
       The `Class.TextChatMessage.Translation` to override.
     description: |
-      The `Class.TextChatMessage.Translation` to override; represents [automatically translated](../../../production/localization/automatic-translations.md) and filtered text messages based on players' localization settings.
+      The `Class.TextChatMessage.Translation` to override; represents
+      [automatically translated](../../../production/localization/automatic-translations.md)
+      and filtered text messages based on players' localization settings.
     code_samples: []
     type: string
     tags: []
@@ -68,6 +76,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Chat
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

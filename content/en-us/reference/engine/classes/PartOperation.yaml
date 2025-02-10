@@ -59,6 +59,10 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+      - CSG
+    writeCapabilities: []
   - name: PartOperation.SmoothingAngle
     summary: |
       An angle in degrees which affects the smooth shading of a solid modeled
@@ -100,6 +104,10 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+      - CSG
+    writeCapabilities: []
   - name: PartOperation.TriangleCount
     summary: |
       The number of polygons in this solid model.
@@ -119,6 +127,10 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Basic
+      - CSG
+    writeCapabilities: []
   - name: PartOperation.UsePartColor
     summary: |
       Sets whether the `Class.PartOperation` can be recolored using inherited
@@ -142,6 +154,10 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+      - CSG
+    writeCapabilities: []
 methods:
   - name: PartOperation:SubstituteGeometry
     summary: |
@@ -181,5 +197,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

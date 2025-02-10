@@ -24,7 +24,7 @@ description: |
   a `Class.RemoteEvent` as outlined in
   [Remote Events and Callbacks](../../../scripting/events/remote.md).
 
-  See [Custom Events and Callbacks](../../../scripting/events/custom.md) for
+  See [Bindable events and callbacks](../../../scripting/events/bindable.md) for
   code samples and further details on `Class.BindableEvent`.
 
   #### Parameter Limitations
@@ -33,7 +33,7 @@ description: |
   others can be passed as a parameter when a `Class.BindableEvent` is fired, as
   well as Luau types such as numbers, strings, and booleans, although you should
   carefully explore the
-  [limitations](../../../scripting/events/custom.md#argument-limitations).
+  [limitations](../../../scripting/events/bindable.md#argument-limitations).
 code_samples:
 inherits:
   - Instance
@@ -55,10 +55,11 @@ methods:
       others can be passed as a parameter to
       `Class.BindableEvent:Fire()|Fire()`, as well as Luau types such as
       numbers, strings, and booleans, although you should carefully explore the
-      [limitations](../../../scripting/events/custom.md#argument-limitations).
+      [limitations](../../../scripting/events/bindable.md#argument-limitations).
 
-      See [Custom Events and Callbacks](../../../scripting/events/custom.md) for
-      code samples and further details on `Class.BindableEvent:Fire()|Fire()`.
+      See [Bindable events and callbacks](../../../scripting/events/bindable.md)
+      for code samples and further details on
+      `Class.BindableEvent:Fire()|Fire()`.
     code_samples:
     parameters:
       - name: arguments
@@ -74,6 +75,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: BindableEvent.Event
     summary: |
@@ -84,8 +87,8 @@ events:
       on the same `Class.BindableEvent` instance, using the same arguments as
       parameters.
 
-      See [Custom Events and Callbacks](../../../scripting/events/custom.md) for
-      code samples and further details on `Class.BindableEvent.Event|Event`.
+      See [Bindable events and callbacks](../../../scripting/events/bindable.md)
+      for code samples and further details on `Class.BindableEvent.Event|Event`.
     code_samples:
     parameters:
       - name: arguments
@@ -97,4 +100,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

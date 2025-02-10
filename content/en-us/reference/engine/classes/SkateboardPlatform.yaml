@@ -46,6 +46,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: SkateboardPlatform.ControllingHumanoid
     summary: |
       The `Class.Humanoid` that is controlling the SkateboardPlatform.
@@ -69,6 +72,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: SkateboardPlatform.Steer
     summary: |
       The direction of movement, tied to the keys A and D. Must be 1 (right), 0
@@ -92,6 +98,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: SkateboardPlatform.StickyWheels
     summary: |
       If true, wheels won't roll without user input.
@@ -113,6 +122,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: SkateboardPlatform.Throttle
     summary: |
       The direction of movement, tied to the keys W and S. Must be an integer 1
@@ -138,6 +150,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
 methods:
   - name: SkateboardPlatform:ApplySpecificImpulse
     summary: |
@@ -163,6 +178,8 @@ methods:
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: SkateboardPlatform.Equipped
     summary: |
@@ -190,6 +207,8 @@ events:
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SkateboardPlatform.MoveStateChanged
     summary: |
       Fired when the SkateboardPlatform's
@@ -219,6 +238,8 @@ events:
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SkateboardPlatform.Unequipped
     summary: |
       Fired whenever the skateboard is unequipped.
@@ -240,6 +261,8 @@ events:
       `Class.VehicleSeat` object can be used to quickly create simple vehicles.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SkateboardPlatform.equipped
     summary: ''
     description: ''
@@ -260,6 +283,8 @@ events:
       which has also been deprecated. Neither event should be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: SkateboardPlatform.unequipped
     summary: ''
     description: ''
@@ -277,4 +302,6 @@ events:
       Neither event should be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

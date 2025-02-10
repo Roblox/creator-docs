@@ -1,5 +1,5 @@
 ---
-title: Creator Programs
+title: Creator programs
 description: Roblox offers various programs for creators on the platform to provide additional support and exposure. This page includes programs that are available publicly for creators. Check them out and see what you qualify for.
 hideInPageNavigation: true
 ---
@@ -7,7 +7,7 @@ hideInPageNavigation: true
 Roblox offers various programs for creators on the platform to provide additional support and exposure. Below, we share programs that are available publicly for creators. Check them out and see what you qualify for.
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
-  <Grid item container sm={12} md={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -28,7 +28,7 @@ Roblox offers various programs for creators on the platform to provide additiona
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -49,7 +49,7 @@ Roblox offers various programs for creators on the platform to provide additiona
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -74,7 +74,7 @@ Roblox offers various programs for creators on the platform to provide additiona
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
-  <Grid item container sm={12} md={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -95,7 +95,7 @@ Roblox offers various programs for creators on the platform to provide additiona
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={4} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -116,7 +116,7 @@ Roblox offers various programs for creators on the platform to provide additiona
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={4} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -141,7 +141,7 @@ Roblox offers various programs for creators on the platform to provide additiona
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
-  <Grid item container sm={12} md={4} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -162,15 +162,15 @@ Roblox offers various programs for creators on the platform to provide additiona
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={4} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
     <h4>Inspire</h4>
         <figure>
     <Chip
-        color="error"
-        label="Status: Closed"
+        color="success"
+        label="Status: Open"
         size="medium"
         variant="filled"/>
     </figure>
@@ -183,7 +183,7 @@ Roblox offers various programs for creators on the platform to provide additiona
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={4} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -208,7 +208,7 @@ Roblox offers various programs for creators on the platform to provide additiona
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
-  <Grid item container sm={12} md={4} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -229,7 +229,7 @@ Roblox offers various programs for creators on the platform to provide additiona
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={4} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -250,7 +250,7 @@ Roblox offers various programs for creators on the platform to provide additiona
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={4} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -275,7 +275,7 @@ Roblox offers various programs for creators on the platform to provide additiona
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
-  <Grid item container sm={12} md={4} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -296,7 +296,7 @@ Roblox offers various programs for creators on the platform to provide additiona
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={4} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -317,7 +317,7 @@ Roblox offers various programs for creators on the platform to provide additiona
   </Grid>
   </Grid>
 
-  <Grid item container sm={12} md={4} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>
@@ -342,7 +342,7 @@ Roblox offers various programs for creators on the platform to provide additiona
 
 <Grid container spacing={2} style={{marginBottom: 24}}>
 
-  <Grid item container sm={12} md={4} lg={4} direction="row" style={{gap: 24, marginBottom: 12}}>
+  <Grid item container Medium={12} Large={4} XLarge={4} direction="row" style={{gap: 24, marginBottom: 12}}>
   <Grid item container wrap="nowrap" direction="column">
     <Card variant="filled" style={{height: "100%"}}>
     <CardContent>

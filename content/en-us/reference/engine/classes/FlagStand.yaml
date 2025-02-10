@@ -41,6 +41,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
 methods: []
 events:
   - name: FlagStand.FlagCaptured
@@ -65,4 +68,6 @@ events:
       should not be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

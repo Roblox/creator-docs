@@ -1,9 +1,9 @@
 ---
-title: Usage Guide for Data Stores
+title: Usage guide for data stores
 description: Explains how to use Open Cloud Web APIs to access and modify data stores by HTTP calls.
 ---
 
-In addition to accessing [data stores](../../cloud-services/data-stores) using Lua `Class.DataStoreService` in Studio or live servers, you can use Open Cloud APIs to access and utilize [standard](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json) from external scripts and tools with granular access and security control.
+In addition to accessing [data stores](../../cloud-services/data-stores/index.md) using Lua `Class.DataStoreService` in Studio or live servers, you can use Open Cloud APIs to access and utilize [standard](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json) from external scripts and tools with granular access and security control.
 
 <Alert severity="warning">
 Open Cloud APIs for ordered data stores are beta APIs that might be subject to changes for future releases.
@@ -31,17 +31,17 @@ Although Open Cloud APIs are similar to the Lua `Class.DataStoreService`, there 
 
 - **Data serialization**: All Open Cloud endpoints require you to serialize all data before network transportation. Serialization means to convert an object into that string, and deserialization is its inverse operation (convert a string to an object). The Lua API serializes and deserializes entry content automatically, but for Open Cloud you need to generate or parse your entry data with JSON on your own.
 
-## Security Permissions
+## Security permissions
 
 Data stores usually store sensitive information, such as user profiles and virtual currency. To maintain security, each Open Cloud API has corresponding required permissions that you must add to your API key, such as the `List Keys` permission for the listing API. If you don't add the required permissions, your API call returns an error. For the specific permissions that are required for each operation, see the API reference of [standard](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json).
 
-When [configuring your API keys](./api-keys.md#creating-an-api-key), you can set granular permissions, such as read, write, and list entry, for each data store within a specific experience, or you can give a key to read or write all data stores within an experience. You can also limit access to a subset of data stores needed for your tool instead of exposing all data stores. This mitigates the impact in case your key gets leaked.
+When [configuring your API keys](./api-keys.md#create-an-api-key), you can set granular permissions, such as read, write, and list entry, for each data store within a specific experience, or you can give a key to read or write all data stores within an experience. You can also limit access to a subset of data stores needed for your tool instead of exposing all data stores. This mitigates the impact in case your key gets leaked.
 
-## Building Tools
+## Build tools
 
-You can use the language of your choice to build tools with [Open Cloud APIs for data stores](../../reference/cloud/datastores-api/v1.json) to fulfill your operation needs. The following examples walk through the processes of building a [user inventory support portal](#user-inventory-support-portal) in Python with standard data stores and an [External Persistent Leaderboard](#external-persistent-leaderboard) using ordered data stores.
+You can use the language of your choice to build tools with [Open Cloud APIs for data stores](../../reference/cloud/datastores-api/v1.json) to fulfill your operation needs. The following examples walk through the processes of building a [user inventory support portal](#user-inventory-support-portal) in Python with standard data stores and an [external persistent leaderboard](#external-persistent-leaderboard) using ordered data stores.
 
-### User Inventory Support Portal
+### User inventory support portal
 
 This section provides a concrete example of building a user inventory support portal in Python, in which you can list and read a subset of your users' inventory, make edits, and then update back to an experience's data store.
 
@@ -55,7 +55,7 @@ For this example, assume the following:
 
 From a high level, you can build your Python app by adding API key permissions and then adding scripts.
 
-#### Adding API Key Permissions for Data Stores
+#### Add API key permissions for data stores
 
 When [creating an API Key](./api-keys.md) for this example, make sure you perform the following settings:
 
@@ -76,7 +76,7 @@ When [creating an API Key](./api-keys.md) for this example, make sure you perfor
 
 1. In the **Security** section, explicitly set IP access to the key using [CIDR notation](./api-keys.md#cidr-format), and set an explicit expiration date so your key automatically stops working after that date. For this example, if you plan to do local testing first, you can remove the IP restriction by setting it to **0.0.0.0/0** and let it expire in **30 days**.
 
-#### Adding Scripts for the User Inventory Support Portal
+#### Add scripts for the user inventory support portal
 
 After creating the API key with permissions required for the example app, you need to add Python scripts to perform app functionalities. The `data_stores_methods.py` file shows how to define [`List Entries`](../../reference/cloud/datastores-api/v1.json#list-entries), [`Get Entry`](../../reference/cloud/datastores-api/v1.json#get-entry), and [`Increment Entry`](../../reference/cloud/datastores-api/v1.json#increment-entry) methods. The `update_inventory` file uses the defined methods to list a subset of user inventories, increase the virtual currency for each user, and update the data.
 
@@ -117,7 +117,7 @@ def get_entry(self, datastore, object_key, scope = None):
         if 'Content-MD5' in r.headers:
             expected_checksum = r.headers['Content-MD5']
             checksum = base64.b64encode(hashlib.md5(r.content).digest())
-            #print(f'Expected {expected_checksum},  got {checksum}')
+            #print(f'Expected {expected_checksum}, got {checksum}')
 
         attributes = None
         if self.ATTR_HDR in r.headers:
@@ -187,7 +187,7 @@ export API_KEY=... \
 python update_inventory
 ```
 
-### External Persistent Leaderboard
+### External persistent leaderboard
 
 This section walks through a concrete example of creating an external persistent leaderboard in Python, in which you can list and read your users information stored in ordered data stores, make edits, and then publish to an external website for promotion.
 
@@ -199,7 +199,7 @@ For this example, assume the following:
 
 From a high level, you can build your Python app by adding API key permissions and then adding scripts.
 
-#### Adding API Key Permissions for Ordered Data Stores
+#### Add API key permissions for ordered data stores
 
 The example app requires four methods to achieve its functionalities: [`List`](../../reference/cloud/datastores-api/ordered-v1.json#list), [`Create`](../../reference/cloud/datastores-api/ordered-v1.json#create), [`Update`](../../reference/cloud/datastores-api/ordered-v1.json#update) and [`Increment`](../../reference/cloud/datastores-api/ordered-v1.json#increment), so you need to add the following API key permissions:
 
@@ -217,7 +217,7 @@ When [creating an API Key](./api-keys.md) for this example, make sure you perfor
 
 1. In the **Security** section, explicitly set IP access to the key using [CIDR notation](./api-keys.md#cidr-format), and set an explicit expiration date so your key automatically stops working after that date. For this example, if you plan to do local testing first, you can remove the IP restriction by setting it to **0.0.0.0/0** and let it expire in **30 days**.
 
-#### Adding Scripts for the Leaderboard
+#### Add scripts for the leaderboard
 
 After creating the API key with permissions required for the example app, you need to add Python scripts to perform app functionalities.
 

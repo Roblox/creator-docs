@@ -58,6 +58,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: Torque.Torque
     summary: |
       The strength and direction of the torque.
@@ -75,6 +78,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

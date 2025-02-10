@@ -1,6 +1,6 @@
 ---
-title: Lesson Title
-description: Lesson Plan Template
+title: Lesson title
+description: Lesson plan template
 ---
 
 <img src="../../assets/misc/Placeholder-1200-275.png" width="100%" />
@@ -10,8 +10,8 @@ Lesson Description: Get students creating and coding their first game in Roblox.
 <table>
   <thead>
     <tr>
-      <th width="50%"><h4>Lesson Objectives</h4></th>
-      <th width="50%"><h4>Skills and Concepts</h4></th>
+      <th width="50%"><h4>Lesson objectives</h4></th>
+      <th width="50%"><h4>Skills and concepts</h4></th>
     </tr>
   </thead>
   <tbody>
@@ -35,7 +35,7 @@ Lesson Description: Get students creating and coding their first game in Roblox.
   </tbody>
 </table>
 
-## Getting Ready
+## Get ready
 
 <table>
   <thead>
@@ -60,7 +60,7 @@ Lesson Description: Get students creating and coding their first game in Roblox.
   </tbody>
 </table>
 
-## Lesson Plan
+## Lesson plan
 
 Common lesson plan elements include:
 
@@ -96,9 +96,9 @@ Common lesson plan elements include:
 
 ### Introduction
 
-### Lesson Element
+### Lesson element
 
-### Lesson Element
+### Lesson element
 
 ### Wrap-up
 
@@ -106,12 +106,12 @@ Common lesson plan elements include:
 
 Note: For the appendix, pick and choose anything that's needed. Not every component needs to be included.
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 - Example troubleshooting tip
 
-### Classroom Management
+### Classroom management
 
-### Customizing the Lesson
+### Customize the lesson
 
-### Miscellaneous Resources
+### Miscellaneous resources

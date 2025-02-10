@@ -87,6 +87,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: WeldConstraint.Enabled
     summary: |
       Toggles the constraint on and off.
@@ -109,32 +112,38 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: WeldConstraint.Part0
     summary: |
       The first part connected by the constraint.
     description: |
-      The **Part0** and `Class.WeldConstraint.Part1` properties of a
+      The `Part0` and `Class.WeldConstraint.Part1` properties of a
       `Class.WeldConstraint` set which two `Class.BasePart` the weld connects.
       As soon as both properties are set and the weld is
       `Class.WeldConstraint.Enabled`, the weld will lock the two parts together.
 
-      If Part0 or Part1 are ever set to new parts, then the WeldConstraint will
-      instantly link the new part. The old part will no longer be constrained.
+      If `Part0` or `Part1` are ever set to new parts, then the `WeldConstraint`
+      will instantly link the new part. The old part will no longer be
+      constrained.
 
       ```lua
+      local Workspace = game:GetService("Workspace")
+
       local partA = Instance.new("Part")
       local partB = Instance.new("Part")
 
       partA.Position = Vector3.new(0, 10, 0)
-      partA.Parent = workspace
+      partA.Parent = Workspace
 
       partB.Position = Vector3.new(0, 10, 10)
-      partB.Parent = workspace
+      partB.Parent = Workspace
 
       local weld = Instance.new("WeldConstraint")
-      weld.Parent = partA
       weld.Part0 = partA
       weld.Part1 = partB
+      weld.Parent = partA
       ```
     code_samples:
     type: BasePart
@@ -149,32 +158,38 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: WeldConstraint.Part1
     summary: |
       The second part connected by the constraint.
     description: |
-      The `Class.WeldConstraint.Part0` and **Part1** properties of a
+      The `Class.WeldConstraint.Part0` and `Part1` properties of a
       `Class.WeldConstraint` set which two `Class.BasePart` the weld connects.
       As soon as both properties are set and the weld is
       `Class.WeldConstraint.Enabled`, the weld will lock the two parts together.
 
-      If Part0 or Part1 are ever set to new parts, then the WeldConstraint will
-      instantly link the new part. The old part will no longer be constrained.
+      If `Part0` or `Part1` are ever set to new parts, then the `WeldConstraint`
+      will instantly link the new part. The old part will no longer be
+      constrained.
 
       ```lua
+      local Workspace = game:GetService("Workspace")
+
       local partA = Instance.new("Part")
       local partB = Instance.new("Part")
 
       partA.Position = Vector3.new(0, 10, 0)
-      partA.Parent = game.Workspace
+      partA.Parent = Workspace
 
       partB.Position = Vector3.new(0, 10, 10)
-      partB.Parent = game.Workspace
+      partB.Parent = Workspace
 
       local weld = Instance.new("WeldConstraint")
-      weld.Parent = partA
       weld.Part0 = partA
       weld.Part1 = partB
+      weld.Parent = partA
       ```
     code_samples:
     type: BasePart
@@ -189,6 +204,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

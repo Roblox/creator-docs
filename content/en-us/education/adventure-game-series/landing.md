@@ -1,17 +1,17 @@
 ---
-title: Creating an Adventure Game
+title: Create an adventure game
 description: How to make a game in Roblox Studio. Learn to design and code an adventure experience for Roblox as a beginner.
 next: /education/adventure-game-series/create-the-map
 prev:
 ---
 
-### Series Description
+### Series description
 
 Create an adventure game where players explore a world to find items to harvest and sell. Perfect for those who have already have some familiarity with Roblox Studio and basic coding concepts up to if/then statements.
 
 <video controls src="../../assets/education/adventure-game-series/adventure-game-examplevideo.mp4" width="100%"></video>
 
-### Objectives and Prerequisites
+### Objectives and prerequisites
 
 <table>
 <tbody>
@@ -36,7 +36,7 @@ Create an adventure game where players explore a world to find items to harvest 
 </tbody>
 </table>
 
-### Series Contents
+### Series contents
 
 <table>
 <thead>
@@ -73,7 +73,7 @@ Create an adventure game where players explore a world to find items to harvest 
 </tbody>
 </table>
 
-### Example Project
+### Example project
 
 <table>
 <tbody>

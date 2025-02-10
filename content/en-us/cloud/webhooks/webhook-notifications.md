@@ -1,5 +1,5 @@
 ---
-title: Webhook Notifications
+title: Webhook notifications
 description: Explains how to set up webhooks to automate your notification management workflow.
 ---
 
@@ -9,25 +9,26 @@ Instead of manually monitoring all events in your experience and requests from u
 Currently, Roblox fully supports webhook notifications for Discord, Guilded, and Slack. Using webhooks with other third-party tools carries the risk of not receiving all notifications.
 </Alert>
 
-## Webhook Workflow
+## Webhook workflow
 
 Webhooks send real-time notifications or data between two different applications or services, such as Roblox and a third-party messaging tool. Unlike traditional APIs, which require you to set up a client application to send requests to a server to receive data, webhooks send data to your client endpoint as soon as an event occurs. They're useful for automating workflows between Roblox and third-party applications that you use for collaborating with your team, as they allow for real-time data sharing and processing.
 
 Once you set up a webhook, whenever a target event occurs, Roblox sends a request to the webhook URL you provide. The webhook URL then redirects the request to your receiving application or custom endpoint, which can take action based on the data included in the webhook payload. This could include erasing data for GDPR, sending a confirmation to the user, or triggering another event.
 
-## Supported Triggers
+## Supported triggers
 
 Roblox currently supports the following event triggers for notifications:
 
-- **Subscription Cancelled** - When a user cancels a [subscription](../../production/monetization/subscriptions.md), a message is sent containing the [subscription](../../cloud/reference/Subscription) and subscriber, as well as the reason given for the cancellation.
+- **Subscription Cancelled** - When a user cancels a [subscription](../../production/monetization/subscriptions.md), a message is sent containing the subscription and subscriber, as well as the reason given for the cancellation.
 - **Subscription Purchased** - When a user purchases a subscription, a message is sent containing the subscription and subscriber.
 - **Subscription Refunded** - When a user receives a refund for their subscription, a message is sent containing the subscription and subscriber.
 - **Subscription Renewed** - When a user renews a subscription, a message is sent containing the subscription and subscriber.
+- **Subscription Resubscribed** - When a user resubscribes to a subscription, a message is sent containing the subscription and subscriber.
 - ["Right to be forgotten"](https://gdpr.eu/right-to-be-forgotten/) data deletion requests under the General Data Protection Regulation (**GDPR**).
 
-For more information on subscription events and their fields, see the [Cloud API Subscription](../../cloud/reference/Subscription) reference.
+For more information on subscription events and their fields, see the [Cloud API Subscription](../../cloud/reference/Subscription/) reference.
 
-## Configuring Webhooks on Creator Dashboard
+## Configure webhooks on Creator Dashboard
 
 To receive notifications through webhooks, you need to configure a webhook that subscribes to certain events for triggering notifications. For group-owned experiences, only group owners can configure and receive webhook notifications.
 
@@ -37,12 +38,12 @@ If you're setting up webhooks and handling personal data, ensure they comply wit
 
 To set up a webhook:
 
-1. Navigate to the [Webhooks](https://create.roblox.com/settings/webhooks) section of the [Creator Dashboard](https://create.roblox.com/settings/webhooks).
+1. Navigate to the [Webhooks](https://create.roblox.com/settings/webhooks) section of the Creator Dashboard.
 1. Click the **Add Webhook** button.
 1. Complete the configuration fields:
-   1. **Webhook URL** — Specify the URL where you want to receive notifications and accept incoming webhook URLs from third-party entities. For more information on the requirements, see [Setting up Webhook URLs](#setting-up-webhook-urls).
+   1. **Webhook URL** — Specify the URL where you want to receive notifications and accept incoming webhook URLs from third-party entities. For more information on the requirements, see [Set up webhook URLs](#set-up-webhook-urls).
    2. **Name** — Use a custom name to differentiate your configuration from others. By default the value is the same as the Webhook URL.
-   3. **Secret** (optional) — Supply a secret if you want to verify that notifications you receive are coming from Roblox. For more information, see [Verifying Webhook Security](#verifying-webhook-security).
+   3. **Secret** (optional) — Supply a secret if you want to verify that notifications you receive are coming from Roblox. For more information, see [Verify webhook security](#verify-webhook-security).
    4. **Triggers** — Choose one or more options from the list of [supported triggers](#supported-triggers) of events for which you want to receive notifications.
 1. Click the **Save Changes** button.
 
@@ -50,7 +51,7 @@ To set up a webhook:
  Currently, you can configure up to 5 webhooks in total.
 </Alert>
 
-## Setting up Webhook URLs
+## Set up webhook URLs
 
 You can set up a custom HTTP service endpoint as your webhook URL, provided it fulfills the following requirements:
 
@@ -66,11 +67,11 @@ When your endpoint receives a POST request, it must be able to:
 
 For more information of the schema of POST requests to handle, see the [Payload Schema](#payload-schema).
 
-### Delivery Failure Retry Policy
+### Delivery failure retry policy
 
-When a webhook notification fails to reach your specified URL due to errors such as endpoint unavailability, Roblox retries sending the message to the configured URL 5 times using a fixed window size. If the notification still fails to be delivered after 5 attempts, Roblox stops trying to send the notification and assumes that the URL is no longer valid. In this situation, you need to update your webhook configuration with a new URL that is reachable and able to receive notifications. To troubleshoot and confirm that your webhook URL can successfully receive notifications, see [Testing Webhooks](#testing-webhooks).
+When a webhook notification fails to reach your specified URL due to errors such as endpoint unavailability, Roblox retries sending the message to the configured URL 5 times using a fixed window size. If the notification still fails to be delivered after 5 attempts, Roblox stops trying to send the notification and assumes that the URL is no longer valid. In this situation, you need to update your webhook configuration with a new URL that is reachable and able to receive notifications. To troubleshoot and confirm that your webhook URL can successfully receive notifications, see [Test webhooks](#test-webhooks).
 
-### Third-Party Requirements
+### Third-party requirements
 
 Third-party tools usually have their own requirements for webhooks that you need to follow when setting up your webhook URL. You can find these requirements by searching for the keyword "webhook" on the support or documentation site of the target tool. For the three supported third-party tools, see the following:
 
@@ -78,11 +79,11 @@ Third-party tools usually have their own requirements for webhooks that you need
 - [Guilded Support](https://support.guilded.gg/hc/en-us)
 - [Slack API Reference](https://api.slack.com/)
 
-## Testing Webhooks
+## Test webhooks
 
 You can test whether the webhook you've configured can successfully receive notifications on the [Creator Dashboard](https://create.roblox.com/dashboard/creations):
 
-1. Navigate to the [Webhooks](https://create.roblox.com/dashboard/settings/webhooks) configuration page.
+1. Navigate to the [Webhooks](https://create.roblox.com/settings/webhooks) configuration page.
 2. Select the webhook you want to test from the list of configured webhooks.
 3. Click the pencil icon next to the target webhook.
 
@@ -105,7 +106,7 @@ Body: {
 
 If you are integrating your webhook with a third-party service, you can test it using the third-party URL to confirm that the service can successfully receive notifications from your webhook. If you provide a secret when configuring the webhook, it also generates a `roblox-signature` that you can use to test the `roblox-signature` logic.
 
-## Verifying Webhook Security
+## Verify webhook security
 
 Once you configure your server to receive payloads, it starts to listen for any payload sent to the endpoint. If you set a secret when configuring your webhook, Roblox sends a `roblox-signature` along with every webhook notification to help protect your data security. This way, you can use the it to verify that the notification is from Roblox and limit your server to only receive requests originating from Roblox. The signature is in the payload header for custom endpoints and in the footer for third-party servers.
 
@@ -126,7 +127,7 @@ If you don't have a secret for your webhook, the signature you receive only cont
 To verify a signature:
 
 <Tabs>
-<TabItem label="Custom Endpoints">
+<TabItem label="Custom endpoints">
 
 1. Extract the timestamp and signature values. All signatures for webhooks with secrets share the same format as a CSV string with these two values following by the prefixes:
 
@@ -147,7 +148,7 @@ To verify a signature:
 
 </TabItem>
 
-<TabItem label="Third-Party Servers">
+<TabItem label="Third-party servers">
 
 1. Extract the timestamp value from the `Timestamp` footer of the notification.
 
@@ -174,7 +175,7 @@ To verify a signature:
 </TabItem>
 </Tabs>
 
-## Payload Schema
+## Payload schema
 
 When the target event of your webhook is triggered, it sends a request to your webhook URL, including information about the event in the payload. All payloads of requests share the same schema that consists of fixed and variable fields. This ensures that the data transmitted in the payload is structured and consistent, making it easier for the receiving application to process and use the data.
 
@@ -215,7 +216,7 @@ Body:{
 }
 ```
 
-## Handling Notifications
+## Handle notifications
 
 If you store any **Personally Identifiable Information (PII)** of your users, such as their User IDs, you must delete this information when a user submits such a request to comply with the GDPR [right to erasure](https://gdpr-info.eu/art-17-gdpr/) compliance requirements. You can create a bot to handle webhook notifications and help automate data deletion, provided you're storing PII in a data store. See [Automating Right to Erasure Requests Deletion](../../cloud/webhooks/automate-right-to-erasure.md) for an example on how to create a bot within Guilded or Discord that uses the [Open Cloud API for data stores](../../cloud/open-cloud/usage-data-stores.md) to delete PII data as an automation solution. This example can be adapted for handling other notifications, such as subscription events.
 

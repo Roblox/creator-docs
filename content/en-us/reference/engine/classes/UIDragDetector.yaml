@@ -6,38 +6,37 @@ summary: |
   Instance which facilitates and encourages interaction with UI elements in an
   experience.
 description: |
-  The `UIDragDetector` instance facilitates and encourages interaction with 2D
-  user interface elements in an experience, such as sliders and spinners. Key
-  features include:
+  The `Class.UIDragDetector` instance facilitates and encourages interaction
+  with 2D user interface elements in an experience, such as sliders and
+  spinners. Key features include:
 
-  - Place a `UIDragDetector` under any `Class.GuiObject` instance to make it
-  draggable via all inputs without a single line of code.
+  - Place a `Class.UIDragDetector` under any `Class.GuiObject` instance to make
+    it draggable via all inputs without a single line of code.
 
   - Choose from several `Class.UIDragDetector.DragStyle|DragStyle` options,
-  define how the object responds to motion via
-  `Class.UIDragDetector.ResponseStyle|ResponseStyle`, and optionally apply axis,
-  movement limits, or drag boundaries.
+    define how the object responds to motion via
+    `Class.UIDragDetector.ResponseStyle|ResponseStyle`, and optionally apply
+    axis, movement limits, or drag boundaries.
 
   - Scripts can respond to manipulation of dragged objects to drive logic
-  responses, such as adjusting settings.
+    responses, such as adjusting settings.
 
-  - `UIDragDetectors` work in Studio as long as you're **not** using the
-  **Select**, **Move**, **Scale**, or **Rotate** tools, nor certain plugins or
-  Studio's **UI** editor tools.
+  - `Class.UIDragDetector|UIDragDetectors` work in Studio as long as you're
+    **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, nor
+    certain plugins or Studio's **UI** editor tools.
 code_samples: []
 inherits:
   - UIComponent
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties:
   - name: UIDragDetector.ActivatedCursorIcon
     summary: |
       Sets the cursor icon to display when the mouse is activated over the
-      parent of this `UIDragDetector`.
+      parent of this `Class.UIDragDetector`.
     description: |
       Sets the cursor icon to display when the mouse is activated over the
-      parent of this `UIDragDetector`. If this property is left blank, the
+      parent of this `Class.UIDragDetector`. If this property is left blank, the
       detector will use the default icon.
 
       To change the activated cursor icon, set this property to the asset ID of
@@ -54,6 +53,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.BoundingBehavior
     summary: |
       Determines bounding behavior of the dragged UI object when the detector's
@@ -75,12 +77,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.BoundingUI
     summary: |
       Instance whose bounding area defines the drag boundaries for the parent
       `Class.GuiObject`.
     description: |
-      When set, the `UIDragDetector` instance will not allow the bounds of
+      When set, the `Class.UIDragDetector` instance will not allow the bounds of
       the parent `Class.GuiObject` to be dragged outside the bounds of the
       **BoundingUI** instance.
 
@@ -101,13 +106,16 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.CursorIcon
     summary: |
       Sets the cursor icon to display when the mouse is hovered over the parent
-      of this `UIDragDetector`.
+      of this `Class.UIDragDetector`.
     description: |
       Sets the cursor icon to display when the mouse is hovered over the parent
-      of this `UIDragDetector`. If this property is left blank, the
+      of this `Class.UIDragDetector`. If this property is left blank, the
       detector will use the default icon.
 
       To change the cursor icon, set this property to the asset ID of the image
@@ -124,16 +132,19 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.DragAxis
     summary: |
-      The drag axis for the `UIDragDetector` instance when
+      The drag axis for the `Class.UIDragDetector` instance when
       `Class.UIDragDetector.DragStyle|DragStyle` is set to
       `Enum.UIDragDetectorDragStyle.TranslateLine`.
     description: |
       `Datatype.Vector2` value that defines the axis of movement for the dragged
       object when `Class.UIDragDetector.DragStyle|DragStyle` is set to
       `Enum.UIDragDetectorDragStyle.TranslateLine`. The axis is defined in the
-      local space of the `UIDragDetector` unless
+      local space of the `Class.UIDragDetector` unless
       `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is defined,
       in which case the axis is defined in that instance's local space.
     code_samples: []
@@ -148,6 +159,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.DragRelativity
     summary: |
       Sets the paradigm which defines the relativity of inputs/outputs from a
@@ -180,12 +194,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.DragRotation
     summary: |
       The rotation performed by the current drag.
     description: |
       The rotation performed by the current drag. This value is defined in
-      degrees relative to the local space of the `UIDragDetector` unless
+      degrees relative to the local space of the `Class.UIDragDetector` unless
       `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is defined,
       in which case the rotation is defined in the local space of that instance
       and from its positive **X** axis.
@@ -204,6 +221,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.DragSpace
     summary: |
       Sets the paradigm which defines the space of inputs/outputs from a custom
@@ -239,6 +259,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.DragStyle
     summary: |
       The paradigm used to generate proposed motion.
@@ -257,6 +280,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.DragUDim2
     summary: |
       The translation performed by the current drag expressed in a
@@ -283,11 +309,14 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.Enabled
     summary: |
-      Whether the `UIDragDetector` responds to user input.
+      Whether the `Class.UIDragDetector` responds to user input.
     description: |
-      If `true`, the `UIDragDetector` responds to user input; if `false`,
+      If `true`, the `Class.UIDragDetector` responds to user input; if `false`,
       it does not.
     code_samples: []
     type: bool
@@ -301,6 +330,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.MaxDragAngle
     summary: |
       Along with `Class.UIDragDetector.MinDragAngle|MinDragAngle`, impedes the
@@ -331,6 +363,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.MaxDragTranslation
     summary: |
       Along with `Class.UIDragDetector.MinDragTranslation|MinDragTranslation`,
@@ -363,6 +398,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.MinDragAngle
     summary: |
       Along with `Class.UIDragDetector.MaxDragAngle|MaxDragAngle`, impedes the
@@ -393,6 +431,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.MinDragTranslation
     summary: |
       Along with `Class.UIDragDetector.MaxDragTranslation|MaxDragTranslation`,
@@ -425,6 +466,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.ReferenceUIInstance
     summary: |
       A `Class.GuiObject` instance whose local space and absolute center
@@ -448,13 +492,16 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.ResponseStyle
     summary: |
       The paradigm used to define the response to proposed motion.
     description: |
       Once the proposed motion has been computed and potentially constrained,
       this paradigm is used to deterimine how to move (or not move) the
-      `Class.GuiObject` affected by the `UIDragDetector`. See
+      `Class.GuiObject` affected by the `Class.UIDragDetector`. See
       `Enum.UIDragDetectorResponseStyle` for options.
     code_samples: []
     type: UIDragDetectorResponseStyle
@@ -468,15 +515,18 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.SelectionModeDragSpeed
     summary: |
       Maximum drag speed for translation.
     description: |
       Defines the maximum drag speed for translation as a combination of
       `Datatype.UDim.Scale|Scale` and `Datatype.UDim.Offset|Offset` of the first
-      ancestor `Class.ScreenGui` or `Class.SurfaceGui` the `UIDragDetector`
-      belongs to. This value must be positive and any value below `0` will be
-      clamped to `0`.
+      ancestor `Class.ScreenGui` or `Class.SurfaceGui` the
+      `Class.UIDragDetector` belongs to. This value must be positive and any
+      value below `0` will be clamped to `0`.
     code_samples: []
     type: UDim2
     tags: []
@@ -489,12 +539,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.SelectionModeRotateSpeed
     summary: |
-      Maximum angle per second the `UIDragDetector` can rotate at.
+      Maximum angle per second the `Class.UIDragDetector` can rotate at.
     description: |
-      Defines the maximum angle per second at which the `UIDragDetector` can
-      rotate. This value must be positive and any value below `0` will be
+      Defines the maximum angle per second at which the `Class.UIDragDetector`
+      can rotate. This value must be positive and any value below `0` will be
       clamped to `0`.
     code_samples: []
     type: float
@@ -508,6 +561,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIDragDetector.UIDragSpeedAxisMapping
     summary: |
       `Enum.UIDragSpeedAxisMapping` value that determines the **X**/**Y**
@@ -527,6 +583,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods:
   - name: UIDragDetector:AddConstraintFunction
     summary: |
@@ -575,6 +634,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UIDragDetector:GetReferencePosition
     summary: |
       Returns the reference `Datatype.UDim2` position of the current drag's
@@ -598,6 +659,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UIDragDetector:GetReferenceRotation
     summary: |
       Returns the reference rotation of the current drag's reference element.
@@ -619,6 +682,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UIDragDetector:SetDragStyleFunction
     summary: |
       Passes a function to be used if and only if
@@ -660,6 +725,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: UIDragDetector.DragContinue
     summary: |
@@ -679,6 +746,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UIDragDetector.DragEnd
     summary: |
       Fires when a user stops dragging the UI element.
@@ -695,6 +764,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UIDragDetector.DragStart
     summary: |
       Fires when a user starts dragging the UI element.
@@ -711,4 +782,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

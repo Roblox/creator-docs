@@ -7,7 +7,7 @@ summary: |
 description: |
   The Humanoid is a special object that gives models the functionality of a
   character. It grants the model with the ability to physically walk around and
-  interact with various components of a Roblox level. Humanoids are always
+  interact with various components of a Roblox experience. Humanoids are always
   parented inside of a `Class.Model`, and the model is expected to be an
   assembly of `Class.BasePart` and `Class.Motor6D`; the root part of the
   assembly is expected to be named `HumanoidRootPart`. It also expects a part
@@ -79,6 +79,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.AutoRotate
     summary: |
       AutoRotate sets whether or not the Humanoid will automatically rotate to
@@ -132,6 +135,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.AutomaticScalingEnabled
     summary: |
       When Enabled, AutomaticScalingEnabled causes the size of the character to
@@ -155,6 +161,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.BreakJointsOnDeath
     summary: |
       Determines whether the humanoid's joints break when in the
@@ -174,6 +183,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.CameraOffset
     summary: |
       An offset applied to the Camera's subject position when its CameraSubject
@@ -200,6 +212,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.CollisionType
     summary: |
       Selects the `Enum.HumanoidCollisionType` for R15 and Rthro non-player
@@ -255,6 +270,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.DisplayDistanceType
     summary: |
       Controls the distance behavior of the humanoid's name and health display.
@@ -290,6 +308,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.DisplayName
     summary: |
       Sets the text of a Humanoid, displayed above their head.
@@ -327,6 +348,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.EvaluateStateMachine
     summary: ''
     description: ''
@@ -342,6 +366,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.FloorMaterial
     summary: |
       Describes the `Enum.Material` that the `Class.Humanoid` is currently
@@ -353,9 +380,9 @@ properties:
       `Class.BasePart|Parts` and `Class.Terrain` voxels.
 
       The code sample below demonstrates how to listen to when this property
-      changes using `Class.Instance:GetPropertyChangedSignal()`. When the
-      material the humanoid is standing on changes, it will print a message
-      indicating the new material being stood on.
+      changes using `Class.Object:GetPropertyChangedSignal()`. When the material
+      the humanoid is standing on changes, it will print a message indicating
+      the new material being stood on.
 
       ```lua
       local Humanoid = route.to.humanoid
@@ -392,6 +419,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.Health
     summary: |
       Describes the current health of the Humanoid on the range [0,
@@ -447,6 +477,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.HealthDisplayDistance
     summary: |
       Used in conjunction with the
@@ -473,6 +506,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.HealthDisplayType
     summary: |
       Controls when the humanoid's health bar is allowed to be displayed.
@@ -511,6 +547,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.HipHeight
     summary: |
       Determines the distance off the ground the `Class.Humanoid.RootPart`
@@ -549,6 +588,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.Jump
     summary: |
       If `true`, the `Class.Humanoid` jumps with an upwards force.
@@ -570,6 +612,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.JumpHeight
     summary: |
       Provides control over the height that the `Class.Humanoid` jumps to.
@@ -599,6 +644,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.JumpPower
     summary: |
       Determines how much upwards force is applied to the `Class.Humanoid` when
@@ -632,6 +680,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.LeftLeg
     summary: |
       A reference to the humanoid's _Left Leg_ part.
@@ -655,6 +706,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.MaxHealth
     summary: |
       The maximum value of a humanoid's `Class.Humanoid.Health|Health`.
@@ -679,6 +733,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.MaxSlopeAngle
     summary: |
       The maximum slope angle that a humanoid can walk on without slipping.
@@ -706,6 +763,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.MoveDirection
     summary: |
       Describes the direction that the `Class.Humanoid` is walking in.
@@ -731,6 +791,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.NameDisplayDistance
     summary: |
       Used in conjunction with the `Class.Humanoid.DisplayDistanceType` property
@@ -756,6 +819,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.NameOcclusion
     summary: |
       Controls whether a humanoid's name and health bar can be seen behind walls
@@ -787,6 +853,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.PlatformStand
     summary: |
       Determines whether the `Class.Humanoid` is currently in the
@@ -809,6 +878,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.RequiresNeck
     summary: |
       Allows developers to disable the behavior where a player
@@ -830,6 +902,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.RigType
     summary: |
       Describes whether this `Class.Humanoid` is utilizing the legacy R6
@@ -858,6 +933,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.RightLeg
     summary: |
       A reference to the humanoid's _Right Leg_ part.
@@ -881,6 +959,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.RootPart
     summary: |
       A reference to the humanoid's **HumanoidRootPart** object.
@@ -905,6 +986,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.SeatPart
     summary: |
       A reference to the seat that a `Class.Humanoid` is currently sitting in,
@@ -933,6 +1017,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.Sit
     summary: |
       Describes whether the `Class.Humanoid` is currently sitting.
@@ -962,6 +1049,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.TargetPoint
     summary: |
       Describes the 3D position where the `Class.Player` controlling the
@@ -991,6 +1081,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.Torso
     summary: |
       A reference to a humanoid's root driving part.
@@ -1015,6 +1108,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.UseJumpPower
     summary: |
       Determines whether the `Class.Humanoid.JumpHeight|JumpHeight` (false) or
@@ -1039,6 +1135,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.WalkSpeed
     summary: |
       Describes the humanoid's maximum movement speed in studs per second.
@@ -1073,6 +1172,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.WalkToPart
     summary: |
       A reference to a part whose position is trying to be reached by a
@@ -1118,6 +1220,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.WalkToPoint
     summary: |
       The position that a humanoid is trying to reach, after a call to
@@ -1158,6 +1263,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: Humanoid.maxHealth
     summary: ''
     description: ''
@@ -1177,6 +1285,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - Avatar
+    writeCapabilities: []
 methods:
   - name: Humanoid:AddAccessory
     summary: |
@@ -1218,6 +1329,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:AddCustomStatus
     summary: |
       Adds a custom status to the Humanoid.
@@ -1242,6 +1355,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:AddStatus
     summary: |
       Adds a BoolValue to the Humanoid's _Status_ object.
@@ -1266,6 +1381,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:BuildRigFromAttachments
     summary: |
       Assembles a tree of `Class.Motor6D` joints by attaching together
@@ -1296,11 +1413,13 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:ChangeState
     summary: |
       Sets the `Class.Humanoid` to enter the given `Enum.HumanoidStateType`.
     description: |
-      This function causes the `Class.Humanoid` to enter the given
+      This method causes the `Class.Humanoid` to enter the given
       `Enum.HumanoidStateType`, describing the activity the `Class.Humanoid` is
       currently doing.
 
@@ -1318,6 +1437,13 @@ methods:
       - As it is unused, setting the state to
         `Enum.HumanoidStateType.PlatformStanding` will cause the humanoid state
         to be automatically set to `Enum.HumanoidStateType.Running`.
+
+      Note that in order to set the `Class.Humanoid` state using this method,
+      you must do so from a `Class.LocalScript` and the client must have
+      [network ownership](../../../physics/network-ownership.md) of the
+      `Class.Player.Character`. Alternatively, you can call this method from a
+      server-side `Class.Script`, but the server must have network ownership of
+      the player character.
 
       See also `Class.Humanoid:SetStateEnabled()` to enable or disable a
       particular state, and `Class.Humanoid:GetState()` to get the current
@@ -1337,23 +1463,26 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:EquipTool
     summary: |
       Makes the `Class.Humanoid` equip the given `Class.Tool`.
     description: |
-      This function makes the `Class.Humanoid` equip the given `Class.Tool`.
+      This method makes the `Class.Humanoid` equip the given `Class.Tool`.
 
       The below example would cause a `Class.Player` to equip a tool in
       `Class.Workspace` named _'Tool'_.
 
       ```lua
       local Players = game:GetService("Players")
+      local Workspace = game:GetService("Workspace")
 
       local player = Players:FindFirstChildOfClass("Player")
       if player and player.Character then
       	local humanoid = player.Character:FindFirstChildWhichIsA("Humanoid")
       	if humanoid then
-      		local tool = workspace:FindFirstChild("Tool")
+      		local tool = Workspace:FindFirstChild("Tool")
       		if tool then
       			humanoid:EquipTool(tool)
       		end
@@ -1361,12 +1490,12 @@ methods:
       end
       ```
 
-      When this function is called, the humanoid will automatically unequip any
-      `Class.Tool|Tools` that it currently has equipped
+      When this method is called, the `Class.Humanoid` will first automatically
+      unequip all `Class.Tool|Tools` that it currently has equipped.
 
       Although they will be equipped, `Class.Tool|Tools` for which
       `Class.Tool.RequiresHandle` is _true_ will not function if they have no
-      handle, regardless if this function is used to equip them or not
+      handle, regardless if this method is used to equip them or not.
 
       See also:
 
@@ -1385,12 +1514,14 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:GetAccessories
     summary: |
       Returns an array of `Class.Accessory` objects that the humanoid's parent
       is currently wearing.
     description: |
-      This function returns an array of `Class.Accessory` objects that the
+      This method returns an array of `Class.Accessory` objects that the
       humanoid's parent is currently wearing. All such `Class.Accessory` objects
       will be included, regardless of whether they're attached or not.
 
@@ -1411,15 +1542,17 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:GetAppliedDescription
     summary: |
       Returns a copy of the humanoid's cached `Class.HumanoidDescription` which
       describes its current look.
     description: |
-      This function returns a copy of the humanoid's cached
+      This method returns a copy of the humanoid's cached
       `Class.HumanoidDescription` which describes its current look. This can be
       used to quickly determine a character's look and to assign their look to
-      other characters using the `Class.Humanoid:ApplyDescription()` function.
+      other characters using the `Class.Humanoid:ApplyDescription()` method.
 
       #### See Also
 
@@ -1440,16 +1573,18 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:GetBodyPartR15
     summary: |
-      Pass a body part to this function (the body part should be a sibling of
+      Pass a body part to this method (the body part should be a sibling of
       Humanoid, and a child of a Model) to get the `Enum.BodyPartR15` of the
       `Class.Part`.
     description: |
-      This function returns what `Enum.BodyPartR15` a `Class.Part` is, or
+      This method returns what `Enum.BodyPartR15` a `Class.Part` is, or
       `Enum.BodyPartR15.Unknown` if the part is not an R15 body part. This
-      function allows developers to retrieve player body parts independent of
-      what the actual body part names are, instead returning an enum.
+      method allows developers to retrieve player body parts independent of what
+      the actual body part names are, instead returning an enum.
 
       It can be used in conjunction with `Class.Humanoid:ReplaceBodyPartR15()`.
       For example, if a player's body part touches something, this function will
@@ -1458,7 +1593,7 @@ methods:
       developers can either perform some gameplay action or replace that part
       with some other part - perhaps showing damage.
 
-      This function can be useful for games where hit location is important. For
+      This method can be useful for games where hit location is important. For
       example, it can be used to determine if a player is hit in the leg and
       then slow them down based on the injury.
     code_samples:
@@ -1477,13 +1612,15 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:GetLimb
     summary: |
       Returns the `Enum.Limb` enum that is associated with the given
       `Class.Part`.
     description: |
-      This function returns the `Enum.Limb` enum that is associated with the
-      given `Class.Part`. It works for both R15 and R6 rigs, for example:
+      This method returns the `Enum.Limb` enum that is associated with the given
+      `Class.Part`. It works for both R15 and R6 rigs, for example:
 
       ```lua
       -- For R15
@@ -1514,6 +1651,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:GetMoveVelocity
     summary: ''
     description: ''
@@ -1526,17 +1665,19 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:GetPlayingAnimationTracks
     summary: |
       Returns an array of all `Class.AnimationTrack|AnimationTracks` that are
       currently being played on the `Class.Humanoid`.
     description: |
-      This function returns an array of all
-      `Class.AnimationTrack|AnimationTracks` that are currently being played on
-      the `Class.Humanoid`.c A typical use for this function is stopping
-      currently playing tracks using `Class.AnimationTrack:Stop()`.
+      This method returns an array of all `Class.AnimationTrack|AnimationTracks`
+      that are currently being played on the `Class.Humanoid`. A typical use for
+      this method is stopping currently playing tracks using
+      `Class.AnimationTrack:Stop()`.
 
-      Beware that this function will not return
+      Beware that this method will not return
       `Class.AnimationTrack|AnimationTracks` that have loaded but are **not
       playing**. If you want to track these you will need to index them
       manually.
@@ -1551,11 +1692,13 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:GetState
     summary: |
       Returns the humanoid's current `Enum.HumanoidStateType`.
     description: |
-      This function returns the humanoid's current `Enum.HumanoidStateType`,
+      This method returns the humanoid's current `Enum.HumanoidStateType`,
       describing the activity the `Class.Humanoid` is currently doing, such as
       jumping or swimming.
 
@@ -1573,12 +1716,14 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:GetStateEnabled
     summary: |
       Returns whether a `Enum.HumanoidStateType` is enabled for the
       `Class.Humanoid`.
     description: |
-      The GetStateEnabled function returns whether a `Enum.HumanoidStateType` is
+      The GetStateEnabled method returns whether a `Enum.HumanoidStateType` is
       enabled for the `Class.Humanoid`.
 
       The humanoid state describes the activity the humanoid is currently doing.
@@ -1610,11 +1755,13 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:GetStatuses
     summary: |
       Returns a table of the Humanoid's statuses, and custom statuses.
     description: |
-      The GetStatuses function returns a table of the Humanoid's statuses, and
+      The GetStatuses method returns a table of the Humanoid's statuses, and
       custom statuses.
     code_samples:
     parameters: []
@@ -1629,11 +1776,13 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:HasCustomStatus
     summary: |
       Returns boolean based on if custom statuses exist.
     description: |
-      The HasCustomStatus function returns boolean based on if custom statuses
+      The HasCustomStatus method returns boolean based on if custom statuses
       exist.
     code_samples:
     parameters:
@@ -1652,11 +1801,13 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:HasStatus
     summary: |
       Returns a boolean based on if a status exists.
     description: |
-      The HasStatus function returns a boolean based on if a status exists.
+      The HasStatus method returns a boolean based on if a status exists.
     code_samples:
     parameters:
       - name: status
@@ -1674,13 +1825,15 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:LoadAnimation
     summary: |
       Loads an `Class.Animation` onto a `Class.Humanoid`, returning an
       `Class.AnimationTrack` that can be used for playback.
     description: |
-      This function loads an `Class.Animation` onto a `Class.Humanoid`,
-      returning an `Class.AnimationTrack` that can be used for playback.
+      This method loads an `Class.Animation` onto a `Class.Humanoid`, returning
+      an `Class.AnimationTrack` that can be used for playback.
     code_samples:
     parameters:
       - name: animation
@@ -1699,14 +1852,16 @@ methods:
       created while editing or at runtime).
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:Move
     summary: |
       Causes the `Class.Humanoid` to walk in the given direction.
     description: |
-      This function causes the `Class.Humanoid` to walk in the given
+      This method causes the `Class.Humanoid` to walk in the given
       `Datatype.Vector3` direction.
 
-      By default, the direction is in world terms, but If the `relativeToCamera`
+      By default, the direction is in world terms, but if the `relativeToCamera`
       parameter is `true`, the direction is relative to the `Datatype.CFrame` of
       the `Class.Workspace.CurrentCamera|CurrentCamera`. As the negative **Z**
       direction is considered "forwards" in Roblox, the following code will make
@@ -1717,17 +1872,16 @@ methods:
       humanoid:Move(Vector3.new(0, 0, -1), true)
       ```
 
-      When this function is called, the `Class.Humanoid` will move until the
-      function is called again. However, if the default control scripts are
-      being used, this function will be overwritten when called on player
+      When this method is called, the `Class.Humanoid` will move until the
+      method is called again. However, if the default control scripts are being
+      used, this method will be overwritten when called on player
       `Class.Player.Character|Characters`. This can be avoided by either not
       using the default control scripts, or calling this function every frame
       using `Class.RunService:BindToRenderStep()` (see example).
 
-      This function can be called on the server, but this should only be done
-      when the server has
-      [network ownership](../../../physics/network-ownership.md) of the
-      humanoid's assembly.
+      This method can be called on the server, but this should only be done when
+      the server has [network ownership](../../../physics/network-ownership.md)
+      of the humanoid's assembly.
 
       See also `Class.Humanoid:MoveTo()` which makes a`Class.Humanoid` walk to a
       point, and `Class.Player:Move()` which effectively calls this function.
@@ -1752,13 +1906,15 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:MoveTo
     summary: |
       Causes the `Class.Humanoid` to attempt to walk to the given location by
       setting the `Class.Humanoid.WalkToPoint` and `Class.Humanoid.WalkToPart`
       properties.
     description: |
-      This function causes the `Class.Humanoid` to attempt to walk to the given
+      This method causes the `Class.Humanoid` to attempt to walk to the given
       location by setting the `Class.Humanoid.WalkToPoint` and
       `Class.Humanoid.WalkToPart` properties.
 
@@ -1813,15 +1969,17 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:RemoveAccessories
     summary: |
       Removes all `Class.Accessory` objects worn by the humanoid's parent.
     description: |
-      This function removes all `Class.Accessory` objects worn by the humanoid's
+      This method removes all `Class.Accessory` objects worn by the humanoid's
       parent. For player `Class.Player.Character|Characters`, this will remove
       all hats and other accessories.
 
-      This function removes `Class.Accessory` object by calling
+      This method removes `Class.Accessory` object by calling
       `Class.Instance:Destroy()` on them, meaning the
       `Class.Instance.Parent|Parent` of the accessories are set to `nil` and
       locked.
@@ -1839,11 +1997,13 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:RemoveCustomStatus
     summary: |
       Removes the defined custom status from the Status model in the Humanoid..
     description: |
-      The RemoveCustomStatus function removes the defined custom status from the
+      The RemoveCustomStatus method removes the defined custom status from the
       Status model in the Humanoid..
     code_samples:
     parameters:
@@ -1862,11 +2022,13 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:RemoveStatus
     summary: |
       Removes the defined status from the Status model in the Humanoid.
     description: |
-      The RemoveStatus function removes the defined status from the Status model
+      The RemoveStatus method removes the defined status from the Status model
       in the Humanoid.
     code_samples:
     parameters:
@@ -1885,6 +2047,8 @@ methods:
       not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:ReplaceBodyPartR15
     summary: |
       Dynamically replaces a Humanoid body part with a different part.
@@ -1892,10 +2056,10 @@ methods:
       Dynamically replaces a R15/Rthro limb part in a Humanoid with a different
       part. The part is automatically scaled as normal.
 
-      This function is useful for modifying characters during gameplay or
-      building characters from a base rig. The related function
+      This method is useful for modifying characters during gameplay or building
+      characters from a base rig. The related method
       `Class.Humanoid:GetBodyPartR15()|GetBodyPartR15` can come in handy when
-      using this function.
+      using this method.
 
       The name of the part passed in should match with the name of the
       BodyPartR15 Enum passed in.
@@ -1919,12 +2083,14 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:SetStateEnabled
     summary: |
       Sets whether a given `Enum.HumanoidStateType` is enabled for the
       `Class.Humanoid`.
     description: |
-      This function sets whether a given `Enum.HumanoidStateType` is enabled for
+      This method sets whether a given `Enum.HumanoidStateType` is enabled for
       the `Class.Humanoid`. When a particular `Enum.HumanoidStateType` is
       disabled, the `Class.Humanoid` can never enter that state. This is true
       regardless if the attempt to change state is made using
@@ -1953,17 +2119,19 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:TakeDamage
     summary: |
       Lowers the `Class.Humanoid.Health` of the `Class.Humanoid` by the given
       _amount_ if it is not protected by a `Class.ForceField`.
     description: |
-      This function lowers the `Class.Humanoid.Health` of the `Class.Humanoid`
-      by the given _amount_ if it is not protected by a `Class.ForceField`
+      This method lowers the `Class.Humanoid.Health` of the `Class.Humanoid` by
+      the given _amount_ if it is not protected by a `Class.ForceField`
 
-      This function accepts negative values for the _amount_ parameter. This
-      will increase the humanoid's `Class.Humanoid.Health`. However this will
-      only have an effect if no `Class.ForceField` is present.
+      This method accepts negative values for the _amount_ parameter. This will
+      increase the humanoid's `Class.Humanoid.Health`. However this will only
+      have an effect if no `Class.ForceField` is present.
 
       #### How do ForceFields protect against TakeDamage
 
@@ -1982,7 +2150,7 @@ methods:
       directly.
 
       For more information on how `Class.ForceField|ForceFields` protect
-      `Class.Humanoid|Humanoids` see the `Class.ForceField` page
+      `Class.Humanoid|Humanoids` see the `Class.ForceField` page.
     code_samples:
       - Humanoid-TakeDamage1
     parameters:
@@ -1998,20 +2166,22 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:UnequipTools
     summary: |
       Unequips any `Class.Tool` currently equipped by the `Class.Humanoid`.
     description: |
-      This function unequips any `Class.Tool` currently equipped by the
+      This method unequips any `Class.Tool` currently equipped by the
       `Class.Humanoid`
 
       The unequipped `Class.Tool` will be parented to the `Class.Backpack` of
       the `Class.Player` associated with the `Class.Humanoid`.
 
-      If no `Class.Tool` is equipped, this function will do nothing.
+      If no `Class.Tool` is equipped, this method will do nothing.
 
       Although `Class.Tool|Tools` can be equipped by NPCs (Non Player
-      Characters), this function only works on `Class.Humanoid|Humanoids` with a
+      Characters), this method only works on `Class.Humanoid|Humanoids` with a
       corresponding `Class.Player`. This is because a `Class.Backpack` object is
       required to parent the unequipped `Class.Tool` to.
 
@@ -2028,6 +2198,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:loadAnimation
     summary: ''
     description: ''
@@ -2043,10 +2215,12 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      This deprecated function is a variant of `Class.Humanoid:LoadAnimation()`
-      which should be used instead.
+      This deprecated method is a variant of `Class.Humanoid:LoadAnimation()`.
+      `Class.Animator:LoadAnimation()` should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:takeDamage
     summary: ''
     description: ''
@@ -2062,26 +2236,28 @@ methods:
     tags:
       - Deprecated
     deprecation_message: |
-      This deprecated function is a variant of `Class.Humanoid:TakeDamage()`
+      This deprecated method is a variant of `Class.Humanoid:TakeDamage()`,
       which should be used instead.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:ApplyDescription
     summary: |
       Makes the character's look match that of the passed in
       `Class.HumanoidDescription`.
     description: |
-      This yielding function makes the character's look match that of the passed
+      This yielding method makes the character's look match that of the passed
       in `Class.HumanoidDescription`. A copy of the passed
       `Class.HumanoidDescription` is cached as the `Class.HumanoidDescription`
       for the `Class.Humanoid`.
 
-      This function is optimized through making the assumption that only this
-      function is used to change the appearance of the character, and no changes
+      This method is optimized through making the assumption that only this
+      method is used to change the appearance of the character, and no changes
       are made through other means between calls. If changes are made to the
-      character between calls. Then this function may not make the character
+      character between calls, then this method may not make the character
       reflect the passed in `Class.HumanoidDescription` accurately. If you want
-      to use this function in conjunction with other means of updating the
+      to use this method in conjunction with other means of updating the
       character, `Class.Humanoid:ApplyDescriptionReset()` will always ensure the
       character reflects the passed in `Class.HumanoidDescription`.
 
@@ -2117,17 +2293,19 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:ApplyDescriptionReset
     summary: |
       Makes the character's look match that of the passed in
       `Class.HumanoidDescription`, even after external changes.
     description: |
-      This yielding function makes the character's look match that of the passed
+      This yielding method makes the character's look match that of the passed
       in `Class.HumanoidDescription`, even after external changes. A copy of the
       passed `Class.HumanoidDescription` is cached as the
       `Class.HumanoidDescription` for the `Class.Humanoid`.
 
-      This function will always ensure the character reflects the passed in
+      This method will always ensure the character reflects the passed in
       `Class.HumanoidDescription`, even if changes have been made to the
       character not using the `Class.HumanoidDescription` system (for example
       not using `Class.Humanoid:ApplyDescriptionReset()|ApplyDescriptionReset()`
@@ -2156,13 +2334,15 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid:PlayEmote
     summary: |
       Plays emotes and returns if was successfully ran.
     description: |
       If the emote could not be played because the emoteName is not found in the
-      HumanoidDescription this API will give an error. The API will return true
-      to indicate that the emote was played successfully.
+      HumanoidDescription, this method will give an error. The method will
+      return true to indicate that the emote was played successfully.
     code_samples:
     parameters:
       - name: emoteName
@@ -2179,6 +2359,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: Humanoid.AnimationPlayed
     summary: |
@@ -2214,6 +2396,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.ApplyDescriptionFinished
     summary: ''
     description: ''
@@ -2227,6 +2411,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.Climbing
     summary: |
       Fires when the speed at which a `Class.Humanoid` is climbing changes.
@@ -2262,6 +2448,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.CustomStatusAdded
     summary: |
       Fired when a status is added to the Humanoid.
@@ -2282,6 +2470,8 @@ events:
       not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.CustomStatusRemoved
     summary: |
       Fired when a status is removed from the Humanoid.
@@ -2302,6 +2492,8 @@ events:
       not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.Died
     summary: |
       Fires when the `Class.Humanoid` dies.
@@ -2321,6 +2513,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.FallingDown
     summary: |
       Fires when the `Class.Humanoid` enters or leaves the `FallingDown`
@@ -2345,6 +2539,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.FreeFalling
     summary: |
       Fires when the `Class.Humanoid` enters or leaves the `Freefall`
@@ -2373,6 +2569,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.GettingUp
     summary: |
       Fires when the `Class.Humanoid` enters or leaves the `GettingUp`
@@ -2403,6 +2601,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.HealthChanged
     summary: |
       Fires when the `Class.Humanoid.Health` changes (or when the
@@ -2428,6 +2628,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.Jumping
     summary: |
       Fires when the `Class.Humanoid` enters and leaves the `Jumping`
@@ -2456,6 +2658,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.MoveToFinished
     summary: |
       Fires when the `Class.Humanoid` finishes walking to a goal declared by
@@ -2488,6 +2692,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.PlatformStanding
     summary: |
       Fires when the `Class.Humanoid` enters or leaves the `PlatformStanding`
@@ -2518,6 +2724,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.Ragdoll
     summary: |
       Fires when the `Class.Humanoid` enters or leaves the `Ragdoll`
@@ -2548,6 +2756,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.Running
     summary: |
       Fires when the speed at which a `Class.Humanoid` is running changes.
@@ -2579,6 +2789,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.Seated
     summary: |
       Fired when a `Class.Humanoid` either sits in a `Class.Seat` or
@@ -2619,6 +2831,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.StateChanged
     summary: |
       Fires when the state of the `Class.Humanoid` is changed.
@@ -2655,6 +2869,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.StateEnabledChanged
     summary: |
       Fires when `Class.Humanoid:SetStateEnabled()` is called on the
@@ -2690,6 +2906,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.StatusAdded
     summary: |
       Fired when a status is added to the Humanoid.
@@ -2710,6 +2928,8 @@ events:
       not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.StatusRemoved
     summary: |
       Fired when a status is removed from the Humanoid.
@@ -2730,6 +2950,8 @@ events:
       not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.Strafing
     summary: |
       Fires when the `Class.Humanoid` enters or leaves the `StrafingNoPhysics`
@@ -2763,6 +2985,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.Swimming
     summary: |
       Fires when the speed at which a `Class.Humanoid` is swimming in
@@ -2796,6 +3020,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Humanoid.Touched
     summary: |
       Fires when one of the humanoid's limbs come in contact with another
@@ -2847,4 +3073,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

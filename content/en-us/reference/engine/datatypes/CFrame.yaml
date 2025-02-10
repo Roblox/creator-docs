@@ -30,7 +30,7 @@ description: |
   after the `x`, `y` and `z` positional values. This matrix is used internally
   when doing calculations involving rotations, using **radians** as their unit
   (for conversion from one to the other, use `Library.math.rad()` or
-  `Library.math.deg()`). For more information on how the Roblox engine performs
+  `Library.math.deg()`). For more information on how the Roblox Engine performs
   rotations, see `Enum.RotationOrder`.
 
   The table below represents the components of a `Datatype.CFrame` object's
@@ -984,14 +984,14 @@ methods:
     deprecation_message: ''
   - name: CFrame:FuzzyEq
     summary: |
-      Returns `true` if the other 'Datatype.CFrame' is sufficiently close to
-      this 'Datatype.CFrame' in both position and rotation.
+      Returns `true` if the other `Datatype.CFrame` is sufficiently close to
+      this `Datatype.CFrame` in both position and rotation.
     description: |
-      Returns `true` if the other 'Datatype.CFrame' is sufficiently close to
-      this 'Datatype.CFrame' in both position and rotation. The `eps` value is
-      used to control the tolerance for this similarity. This value is optional
-      and should be a small positive value if provided. The similarity for
-      position is component-wise, and for rotation uses a fast approximation of
+      Returns `true` if the other `Datatype.CFrame` is sufficiently close to
+      this `Datatype.CFrame` in both position and rotation. The `epsilon` value
+      is used to control the tolerance for this similarity; this value is
+      optional and should be a small positive value if provided. The similarity
+      for position is component-wise while rotation uses a fast approximation of
       the angle difference.
     parameters:
       - name: other

@@ -1,30 +1,30 @@
 backTo:
-  title: Back to Tutorials
+  title: Back to tutorials
   path: /tutorials/
 navigation:
   - heading: Overview
-  - title: Core Curriculum
-    path: /tutorials/core/
-  - heading: Building
-  - title: Create a Project
-    path: /tutorials/core/building/create-a-project
-  - title: Create an Environment with Terrain
-    path: /tutorials/core/building/create-an-environment-with-terrain
-  - title: Greybox a Playable Area
-    path: /tutorials/core/building/greybox-a-playable-area
-  - heading: Scripting
-  - title: Create a Coin Collection Mechanic
-    path: /tutorials/core/scripting/script-game-behavior
-  - title: Record and Display Player Data
-    path: /tutorials/core/scripting/record-and-display-player-data
-  - title: Create Player Hazards
-    path: /tutorials/core/scripting/create-player-hazards
-  - title: Script an Upgrade Button
-    path: /tutorials/core/scripting/script-an-upgrade-button
+  - title: Core curriculum
+    path: /tutorials/curriculums/core/
+  - heading: Build
+  - title: Create a project
+    path: /tutorials/curriculums/core/building/create-a-project
+  - title: Create an environment with terrain
+    path: /tutorials/curriculums/core/building/create-an-environment-with-terrain
+  - title: Greybox a playable area
+    path: /tutorials/curriculums/core/building/greybox-a-playable-area
+  - heading: Script
+  - title: Create a coin collection mechanic
+    path: /tutorials/curriculums/core/scripting/script-game-behavior
+  - title: Record and display player data
+    path: /tutorials/curriculums/core/scripting/record-and-display-player-data
+  - title: Create player hazards
+    path: /tutorials/curriculums/core/scripting/create-player-hazards
+  - title: Script an upgrade button
+    path: /tutorials/curriculums/core/scripting/script-an-upgrade-button
   - heading: Polish
-  - title: Create Basic Visual Effects
-    path: /tutorials/core/building/create-basic-visual-effects
-  - title: Customize Global Lighting
-    path: /tutorials/core/building/customize-global-lighting
-  - title: Apply Polished Assets
-    path: /tutorials/core/building/apply-polished-assets
+  - title: Create basic visual effects
+    path: /tutorials/curriculums/core/building/create-basic-visual-effects
+  - title: Customize global lighting
+    path: /tutorials/curriculums/core/building/customize-global-lighting
+  - title: Apply polished assets
+    path: /tutorials/curriculums/core/building/apply-polished-assets

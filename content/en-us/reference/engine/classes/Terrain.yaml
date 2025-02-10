@@ -40,6 +40,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain.GrassLength
     summary: |
       Specifies the length of animated grass.
@@ -60,6 +62,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain.IsSmooth
     summary: |
       Returns true if the current game is using the smooth terrain system.
@@ -84,6 +88,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain.MaterialColors
     summary: |
       MaterialColors represents the editor for the Material Color feature, and
@@ -111,6 +117,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain.MaxExtents
     summary: |
       Displays the boundaries of the largest possible editable region.
@@ -130,6 +138,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain.WaterColor
     summary: |
       The tint of the Terrain water.
@@ -147,6 +157,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain.WaterReflectance
     summary: |
       Controls how opaque the Terrain's water reflections are.
@@ -164,6 +176,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain.WaterTransparency
     summary: |
       The transparency of the Terrain water.
@@ -181,6 +195,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain.WaterWaveSize
     summary: |
       Sets the maximum height of the Terrain water waves in studs.
@@ -199,6 +215,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain.WaterWaveSpeed
     summary: |
       Sets how many times the Terrain water waves will move up and down per
@@ -218,6 +236,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: Terrain:AutowedgeCell
     summary: |
@@ -248,6 +268,8 @@ methods:
       has been removed. Do not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:AutowedgeCells
     summary: |
       _(OBSOLETE)_ No longer does anything.
@@ -269,6 +291,8 @@ methods:
       has been removed. Do not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:CellCenterToWorld
     summary: |
       Returns the world position of the center of the terrain cell (x, y, z).
@@ -295,6 +319,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:CellCornerToWorld
     summary: |
       Returns the position of the lower-left-forward corner of the grid cell (x,
@@ -323,6 +349,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:Clear
     summary: |
       Clears the terrain.
@@ -337,6 +365,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:ConvertToSmooth
     summary: |
       Transforms the legacy terrain engine into the new terrain engine.
@@ -357,6 +387,8 @@ methods:
       is obsolete. Do not use it for new work.
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:CopyRegion
     summary: |
       Stores a chunk of terrain into a `Class.TerrainRegion` object so it can be
@@ -380,6 +412,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:CountCells
     summary: |
       Returns the number of non-empty cells in the Terrain.
@@ -394,6 +428,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:FillBall
     summary: |
       Fills a ball of smooth terrain in a given space.
@@ -424,6 +460,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:FillBlock
     summary: |
       Fills a block of smooth terrain with a given location, rotation, size, and
@@ -437,7 +475,7 @@ methods:
         type: CFrame
         default:
         summary: |
-          The cframe (position and orientation) of the terrain block.
+          The position and orientation of the terrain block.
       - name: size
         type: Vector3
         default:
@@ -455,6 +493,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:FillCylinder
     summary: |
       Fills a cylinder of smooth terrain in a given space.
@@ -462,10 +502,10 @@ methods:
       Fills a cylinder of smooth terrain in a given space. The space is defined
       using a CFrame, height, and radius.
 
-      #### Usage
-
       ```lua
-      workspace.Terrain:FillCylinder(CFrame.new(0, 50, 0), 5, 30, Enum.Material.Asphalt)
+      local Workspace = game:GetService("Workspace")
+
+      Workspace.Terrain:FillCylinder(CFrame.new(0, 50, 0), 5, 30, Enum.Material.Asphalt)
       ```
     code_samples:
     parameters:
@@ -473,7 +513,7 @@ methods:
         type: CFrame
         default:
         summary: |
-          The CFrame (position and orientation) of the terrain cylinder.
+          The position and orientation of the terrain cylinder.
       - name: height
         type: float
         default:
@@ -496,6 +536,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:FillRegion
     summary: |
       Fills a `Datatype.Region3` space with smooth terrain.
@@ -522,6 +564,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:FillWedge
     summary: |
       Fills a wedge-shaped volume of Terrain with the given `Enum.Material` and
@@ -554,6 +598,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:GetCell
     summary: |
       Returns the closest CellMaterial from the legacy terrain engine that
@@ -586,6 +632,8 @@ methods:
       has been removed. Do not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:GetMaterialColor
     summary: |
       Returns current terrain material color for specified terrain material.
@@ -605,6 +653,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:GetWaterCell
     summary: |
       Returns if the cell is a water cell.
@@ -635,6 +685,8 @@ methods:
       has been removed. Do not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:PasteRegion
     summary: |
       Applies a chunk of terrain to the Terrain object. Note:
@@ -664,6 +716,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:ReadVoxelChannels
     summary: |
       Returns a region of terrain voxel data in table format based on the
@@ -719,6 +773,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:ReadVoxels
     summary: |
       Returns a certain region of smooth terrain in table format.
@@ -754,6 +810,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:ReplaceMaterial
     summary: |
       Replaces the terrain of a material within a region with another material.
@@ -800,6 +858,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:SetCell
     summary: |
       Sets the occupancy and material of a specific terrain voxel.
@@ -845,6 +905,8 @@ methods:
       has been removed. Do not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:SetCells
     summary: |
       Sets the occupancy and material of all terrain voxels in a specific
@@ -883,6 +945,8 @@ methods:
       has been removed. Do not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:SetMaterialColor
     summary: |
       Sets current terrain material color for specified terrain material.
@@ -906,6 +970,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:SetWaterCell
     summary: |
       Sets the specified terrain voxel's material to ''Water'' and sets its
@@ -949,6 +1015,8 @@ methods:
       has been removed. Do not use it for new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:WorldToCell
     summary: |
       Returns the grid cell location that contains the point **position**.
@@ -967,6 +1035,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:WorldToCellPreferEmpty
     summary: |
       Returns the grid cell location that contains the point position,
@@ -987,6 +1057,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:WorldToCellPreferSolid
     summary: |
       Returns the grid cell location that contains the point position,
@@ -1007,6 +1079,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:WriteVoxelChannels
     summary: |
       Sets a region of terrain using a dictionary of voxel channel data.
@@ -1056,6 +1130,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Terrain:WriteVoxels
     summary: |
       Sets a certain region of smooth terrain using table format.
@@ -1096,5 +1172,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

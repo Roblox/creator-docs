@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Ordered Data Stores (Beta)",
-    "description": "This page includes reference documentation for working with ordered data stores. For more information on using the API, see [Handling API Requests for Data Stores](../../../cloud/open-cloud/data-store-api-handling.md) and the [Usage Guide](../../../cloud/open-cloud/usage-data-stores.md).",
+    "title": "Ordered data stores (beta)",
+    "description": "This page includes reference documentation for working with ordered data stores. For more information on using the API, see [Handle API requests for data stores](../../../cloud/open-cloud/data-store-api-handling.md) and the [usage guide](../../../cloud/open-cloud/usage-data-stores.md).",
     "version": "0.0.1"
   },
   "servers": [
@@ -100,6 +100,11 @@
             "description": "Too Many Requests."
           }
         },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Read"]
+          }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "curl",
@@ -148,14 +153,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "CreateEntryRequest",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/CreateEntryRequest"
-            }
           }
         ],
         "requestBody": {
@@ -192,6 +189,11 @@
             "description": "Too Many Requests."
           }
         },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Write"]
+          }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "curl",
@@ -268,6 +270,11 @@
             "description": "Too Many Requests."
           }
         },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Read"]
+          }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "curl",
@@ -335,6 +342,11 @@
             "description": "Too Many Requests."
           }
         },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Write"]
+          }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "curl",
@@ -349,7 +361,7 @@
         "x-roblox-cloud-api-operation-name": "Update",
         "parameters": [
           {
-            "name": "universeIdId",
+            "name": "universeId",
             "in": "path",
             "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
             "required": true,
@@ -385,17 +397,9 @@
             }
           },
           {
-            "name": "UpdateEntryRequest",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/UpdateEntryRequest"
-            }
-          },
-          {
             "name": "allow_missing",
             "in": "query",
-            "description": "The flag to allow the creation of an entry if the entry doesn't exist. See [Allow Missing Flags](../../../cloud/open-cloud/data-store-api-handling.md#allow-missing-flags).",
+            "description": "The flag to allow the creation of an entry if the entry doesn't exist. See [Allow missing flags](../../../cloud/open-cloud/data-store-api-handling.md#allow-missing-flags).",
             "schema": {
               "type": "boolean"
             }
@@ -438,6 +442,11 @@
             "description": "Too Many Requests."
           }
         },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Write"]
+          }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "curl",
@@ -488,14 +497,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "incrementEntryRequest",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/IncrementEntryRequest"
-            }
           }
         ],
         "requestBody": {
@@ -532,6 +533,11 @@
             "description": "Too Many Requests."
           }
         },
+        "security": [
+          {
+            "roblox-api-key": ["Label.Write"]
+          }
+        ],
         "x-roblox-cloud-api-operation-code-samples": [
           {
             "language": "curl",
@@ -614,6 +620,13 @@
           }
         },
         "description": "A list of Entries in the parent collection."
+      }
+    },
+    "securitySchemes": {
+      "roblox-api-key": {
+        "type": "apiKey",
+        "name": "roblox-api-key",
+        "in": "header"
       }
     }
   },

@@ -45,14 +45,16 @@ properties:
       conversation.
 
       ```lua
+      local Workspace = game:GetService("Workspace")
+
       local singlePlayerDialog = Instance.new("Dialog")
-      local singlePlayerPart = workspace.SinglePlayerPart
+      local singlePlayerPart = Workspace.SinglePlayerPart
       singlePlayerDialog.BehaviorType = Enum.DialogBehaviorType.SinglePlayer
       singlePlayerDialog.InitialPrompt = "Only one person can interact with me at once."
       singlePlayerDialog.Parent = singlePlayerPart
 
       local multiplePlayersDialog = Instance.new("Dialog")
-      local multiplePlayersPart = workspace.MultiplePlayersPart
+      local multiplePlayersPart = Workspace.MultiplePlayersPart
       multiplePlayersDialog.BehaviorType = Enum.DialogBehaviorType.MultiplePlayers
       multiplePlayersDialog.InitialPrompt = "Any number of players can interact with me at once."
       multiplePlayersDialog.Parent = multiplePlayersPart
@@ -69,6 +71,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: Dialog.ConversationDistance
     summary: |
       The furthest distance that a player can be from the Dialog's parent to
@@ -88,6 +93,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: Dialog.GoodbyeChoiceActive
     summary: |
       Toggles whether the goodbye option will be displayed.
@@ -108,6 +116,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: Dialog.GoodbyeDialog
     summary: |
       Sets the sentence that the dialog will show to the player when the chat
@@ -127,6 +138,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: Dialog.InUse
     summary: |
       If true, this dialog is being used by at least one player.
@@ -144,6 +158,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: Dialog.InitialPrompt
     summary: |
       Sets the first sentence that the dialog will show to the player, once a
@@ -163,6 +180,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: Dialog.Purpose
     summary: |
       Sets the icon that the initial dialog displays.
@@ -180,6 +200,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: Dialog.Tone
     summary: |
       Sets the color of the NPC's speech bubble.
@@ -197,6 +220,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: Dialog.TriggerDistance
     summary: |
       Sets the maximum distance that a dialog can be triggered from.
@@ -214,6 +240,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: Dialog.TriggerOffset
     summary: |
       Sets the offset of the dialog relative to the dialog's parent.
@@ -231,6 +260,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods:
   - name: Dialog:GetCurrentPlayers
     summary: |
@@ -243,12 +275,14 @@ methods:
       - Dialog-GetCurrentPlayers1
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: Dialog.DialogChoiceSelected
     summary: |
@@ -275,4 +309,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

@@ -17,31 +17,30 @@ description: |
   and `Class.BillboardGui|BillboardGuis`, will render.
 
   Understanding this behavior is important, as it means objects can be removed
-  from **Workspace** when they are not needed. For example, map
-  `Class.Model|Models` can be removed from the `Class.Workspace` when a
-  different map is being played on. Objects that are not immediately needed in
-  the 3D world are generally stored in `Class.ReplicatedStorage` or
-  `Class.ServerStorage`.
+  from `Class.Workspace` when they are not needed. For example, map
+  `Class.Model|Models` can be removed when a different map is being played on.
+  Objects that are not immediately needed in the 3D world are generally stored
+  in `Class.ReplicatedStorage` or `Class.ServerStorage`.
 
   In its role as the holder of active 3D objects, `Class.Workspace` includes a
   number of useful functions related to parts, their positions, and joints
   between them.
 
-  #### Accessing the Workspace
+  ##### Accessing the Workspace
 
   `Class.Workspace` can be accessed several ways, all of which are valid.
 
+  - `game:GetService("Workspace")` (recommended)
   - `workspace`
   - `game.Workspace`
-  - `game:GetService("Workspace")`
 
-  #### Notes
+  ##### Notes
 
   - Objects that require adornment, such as
     `Class.ParticleEmitter|ParticleEmitters` and
-    `Class.BillboardGui|BillboardGuis`, will be at the 0,&nbsp;0,&nbsp;0
-    position when parented to `Class.Workspace` without an adornee otherwise
-    being set.
+    `Class.BillboardGui|BillboardGuis`, will be at the
+    <Typography noWrap>`(0, 0, 0)`</Typography> position when parented to
+    `Class.Workspace` without an adornee otherwise being set.
   - The `Class.Model:MakeJoints()` and `Class.Model:BreakJoints()` methods
     inherited from the `Class.Model` class are overridden by
     `Class.Workspace:MakeJoints()` and `Class.Workspace:BreakJoints()` which can
@@ -86,6 +85,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.AllowThirdPartySales
     summary: |
       Determines whether assets created by other users can be sold in the game.
@@ -110,7 +111,7 @@ properties:
       can only be sold in the game they are associated with, regardless of what
       AllowThirdPartySales is set to. This property affects
       [Game Passes](../../../production/monetization/game-passes.md) and
-      [clothing](../../../art/accessories/classic-clothing.md).
+      [clothing](../../../art/classic-clothing.md).
     code_samples:
     type: bool
     tags:
@@ -124,6 +125,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.AvatarUnificationMode
     summary: ''
     description: ''
@@ -140,22 +143,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: Workspace.CSGAsyncDynamicCollision
-    summary: ''
-    description: ''
-    code_samples: []
-    type: CSGAsyncDynamicCollision
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.ClientAnimatorThrottling
     summary: |
       Specifies the animation throttling mode for the local client.
@@ -182,6 +171,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.CurrentCamera
     summary: |
       The `Class.Camera` object being used by the local player.
@@ -215,22 +206,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: Workspace.DecreaseMinimumPartDensityMode
-    summary: ''
-    description: ''
-    code_samples: []
-    type: DecreaseMinimumPartDensityMode
-    tags:
-      - NotScriptable
-    deprecation_message: ''
-    security:
-      read: None
-      write: None
-    thread_safety: ReadSafe
-    category: Behavior
-    serialization:
-      can_load: true
-      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.DistributedGameTime
     summary: |
       The amount of time, in seconds, that the game has been running.
@@ -250,11 +227,13 @@ properties:
       DistributedGameTime and its alternatives.
 
       ```
-      print(workspace.DistributedGameTime)  --> Time the game started running
-      print(os.time())  --> Time since epoch (1 January 1970, 00:00:00) UTC
-      print(tick())  --> Time since epoch (1 January 1970, 00:00:00) system time
-      print(time())  --> Time the game started running
-      print(elapsedTime())  --> Time since Roblox started running
+      local Workspace = game:GetService("Workspace")
+
+      print(Workspace.DistributedGameTime) -- Time the game started running
+      print(os.time()) -- Time since epoch (1 January 1970, 00:00:00) UTC
+      print(tick()) -- Time since epoch (1 January 1970, 00:00:00) system time
+      print(time()) -- Time the game started running
+      print(elapsedTime()) -- Time since Roblox started running
       ```
     code_samples:
     type: double
@@ -269,12 +248,31 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: Workspace.FallHeightEnabled
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: PluginSecurity
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.FallenPartsDestroyHeight
     summary: |
       Determines the height at which falling `Class.BasePart|BaseParts` and
       their ancestor `Class.Model|Models` are removed from `Class.Workspace`.
     description: |
-      This property determines the height at which the Roblox engine
+      This property determines the height at which the Roblox Engine
       automatically removes falling `Class.BasePart|BaseParts` and their
       ancestor `Class.Model|Models` from `Class.Workspace` by parenting them to
       `nil`. This is to prevent parts that have fallen off the map from
@@ -302,6 +300,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.FilteringEnabled
     summary: |
       Determines whether changes made from the client will replicate to the
@@ -323,6 +323,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.FluidForces
     summary: |
       Determines whether the physics engine computes aerodynamic forces on
@@ -348,6 +350,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.GlobalWind
     summary: |
       Specifies the global wind vector for animated terrain grass, dynamic
@@ -369,6 +373,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.Gravity
     summary: |
       Determines the acceleration due to gravity applied to falling
@@ -392,6 +398,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.IKControlConstraintSupport
     summary: |
       Enables support for constraints for IKControls. If disabled, IKControls
@@ -413,6 +421,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.InsertPoint
     summary: ''
     description: ''
@@ -429,6 +439,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.InterpolationThrottling
     summary: ''
     description: ''
@@ -448,6 +460,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.MeshPartHeadsAndAccessories
     summary: |
       Sets whether character Heads and Accessories should be downloaded as
@@ -470,6 +484,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.ModelStreamingBehavior
     summary: ''
     description: ''
@@ -486,6 +502,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.MoverConstraintRootBehavior
     summary: |
       Controls the logic used to select the assembly root part when using any of
@@ -526,6 +544,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.PathfindingUseImprovedSearch
     summary: ''
     description: ''
@@ -533,7 +553,6 @@ properties:
     type: PathfindingUseImprovedSearch
     tags:
       - NotScriptable
-      - NotBrowsable
     deprecation_message: ''
     security:
       read: None
@@ -543,6 +562,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.PhysicsSteppingMethod
     summary: |
       Sets how the solver will advance the physics simulation forward in time.
@@ -592,6 +613,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.PlayerCharacterDestroyBehavior
     summary: ''
     description: ''
@@ -608,6 +631,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.PrimalPhysicsSolver
     summary: ''
     description: ''
@@ -624,6 +649,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.RejectCharacterDeletions
     summary: ''
     description: ''
@@ -640,6 +667,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.RenderingCacheOptimizations
     summary: ''
     description: ''
@@ -656,6 +685,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.ReplicateInstanceDestroySetting
     summary: ''
     description: ''
@@ -672,6 +703,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.Retargeting
     summary: ''
     description: ''
@@ -687,9 +720,49 @@ properties:
     serialization:
       can_load: true
       can_save: true
-  - name: Workspace.SignalBehavior
+    capabilities: []
+    writeCapabilities: []
+  - name: Workspace.SandboxedInstanceMode
     summary: ''
     description: ''
+    code_samples: []
+    type: SandboxedInstanceMode
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: Workspace.SignalBehavior
+    summary: |
+      Configures when the engine resumes event handlers.
+    description: |
+      This property determines whether event handlers will be resumed
+      immediately when the event fires, or deferred and then resumed at a later
+      resumption point. Resumption points currently include:
+
+      - Input processing (resumes once per input to be processed, see
+        `Class.UserInputService`)
+      - `Class.RunService.PreRender`
+      - Legacy waiting script resumption such as `wait()`, `spawn()`, and
+        `delay()`
+      - `Class.RunService.PreAnimation`
+      - `Class.RunService.PreSimulation`
+      - `Class.RunService.PostSimulation`
+      - Waiting script resumption such as `Library.task.wait()`,
+        `Library.task.spawn()`, and `Library.task.delay()`
+      - `Class.RunService.Heartbeat`
+      - `Class.DataModel.BindToClose`
+
+      For more information, see
+      [Deferred Events](../../../scripting/events/deferred.md).
     code_samples:
     type: SignalBehavior
     tags:
@@ -703,6 +776,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.StreamOutBehavior
     summary: |
       Configures how the engine decides when to Stream content away from
@@ -732,6 +807,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.StreamingEnabled
     summary: |
       Whether content streaming is enabled for the place.
@@ -757,6 +834,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.StreamingIntegrityMode
     summary: |
       Determines whether StreamingIntegrityMode is active.
@@ -779,6 +858,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.StreamingMinRadius
     summary: |
       Minimum distance that content will be streamed to players with high
@@ -812,6 +893,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.StreamingTargetRadius
     summary: |
       Maximum distance that content will be streamed to players.
@@ -843,6 +926,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.Terrain
     summary: |
       A reference to the `Class.Terrain` object parented to the
@@ -870,6 +955,26 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
+  - name: Workspace.TouchEventsUseCollisionGroups
+    summary: ''
+    description: ''
+    code_samples: []
+    type: RolloutState
+    tags:
+      - NotScriptable
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Behavior
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace.TouchesUseCollisionGroups
     summary: |
       Determines whether `Class.BasePart|parts` in different groups set to not
@@ -896,6 +1001,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: Workspace:BreakJoints
     summary: |
@@ -913,7 +1020,9 @@ methods:
       `Class.BasePart|BaseParts` as a parameter. This array is given as follows:
 
       ```lua
-      workspace:BreakJoints({part1, part2, part3})
+      local Workspace = game:GetService("Workspace")
+
+      Workspace:BreakJoints({part1, part2, part3})
       ```
 
       Note, this function cannot be used by scripts and will only function in
@@ -921,7 +1030,7 @@ methods:
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be
@@ -934,6 +1043,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace:GetNumAwakeParts
     summary: |
       Returns the number of `Class.BasePart|BaseParts` that are deemed
@@ -947,7 +1058,9 @@ methods:
       forces.
 
       ```
-      print(workspace:GetNumAwakeParts()) -- prints the number of 'awake' parts
+      local Workspace = game:GetService("Workspace")
+
+      print(Workspace:GetNumAwakeParts())
       ```
 
       #### Sleeping vs Awake Parts
@@ -971,6 +1084,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace:GetPhysicsThrottling
     summary: |
       Returns an integer, between 0 and 100, representing the percentage of
@@ -1006,13 +1121,15 @@ methods:
       create a lot of `Class.Part|Parts` very quickly.
 
       ```
+      local Workspace = game:GetService("Workspace")
+
       local i = 0
       while true do
       	i += 1
       	if i % 5 == 0 then
       		task.wait()
       	end
-      	local part = Instance.new("Part", workspace)
+      	local part = Instance.new("Part", Workspace)
       end
       ```
     code_samples:
@@ -1026,6 +1143,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace:GetRealPhysicsFPS
     summary: |
       Returns the number of frames per second that physics is currently being
@@ -1056,24 +1175,36 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace:GetServerTimeNow
     summary: |
-      Returns the server epoch time in seconds.
+      Returns the server's Unix time in seconds.
     description: |
-      **GetServerTimeNow** returns the epoch time on the server with microsecond
-      precision. The time is adjusted for drift and smoothed monotonically (it
-      is guaranteed to be non-decreasing). The server clock progresses no faster
-      than 1.006&times; speed and no slower than 0.994&times; speed.
+      `Class.Workspace:GetServerTimeNow()|GetServerTimeNow()` returns the
+      client's best approximation of the current time on the server. This is
+      useful for creating synchronized experiences as every client will get
+      about the same results regardless of their timezone or local clock.
 
-      Returns a Unix timestamp that can be used with `Library.os|os.date()` or
-      with `Datatype.DateTime.fromUnixTimestamp()`.
+      This returns a Unix timestamp, similar to `Library.os|os.time()`, that can
+      be used with `Library.os|os.date()` or with
+      `Datatype.DateTime.fromUnixTimestamp()`.
 
-      This function is useful for creating synchronized experiences, as it has
-      three properties necessary for doing so: it's a real-world time clock,
-      it's monotonic, and it has decent precision.
+      The timestamp returned by this function is smoothed so that:
+
+      - It is monotonic; its value will never decrease.
+      - It moves at the same rate as the local clock to within 0.6%.
+
+      `Class.Workspace:GetServerTimeNow()|GetServerTimeNow()` is expensive to
+      call compared to `Datatype.DateTime.now()`, and is less precise than
+      `Library.os|os.clock()`, so it should be used to make sure an event starts
+      at the right real world time or to adjust things periodically to keep a
+      series of events in sync.
 
       This function relies on the server, so calling it from a client that isn't
-      connected will throw an error.
+      connected will throw an error. Also note that this function is not
+      suitable for things like timed rewards as it is not secure compared to
+      tracking such timers on the server.
 
       See also:
 
@@ -1086,11 +1217,13 @@ methods:
     returns:
       - type: double
         summary: |
-          The estimated epoch time on the server.
+          The estimated Unix timestamp on the server.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace:JoinToOutsiders
     summary: |
       Creates joints between the specified `Class.BasePart|Parts` and any
@@ -1129,23 +1262,27 @@ methods:
       build tools. See the snippets below for an example.
 
       ```lua
-      -- finished moving a selection, make joints
+      local Workspace = game:GetService("Workspace")
+
+      -- Finished moving a selection; make joints
       local function finishedMovingParts(parts)
       	local joinMode = Plugin:GetJoinMode()
-      	workspace:JoinToOutsiders(parts, joinMode)
+      	Workspace:JoinToOutsiders(parts, joinMode)
       end
       ```
 
       ```lua
-      -- started moving a selection, break joints
+      local Workspace = game:GetService("Workspace")
+
+      -- Started moving a selection; break joints
       local function startMovingParts(parts)
-      	workspace:UnjoinFromOutsiders(parts)
+      	Workspace:UnjoinFromOutsiders(parts)
       end
       ```
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be made.
@@ -1164,6 +1301,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace:MakeJoints
     summary: |
       Goes through all `Class.BasePart|BaseParts` given. If any part's side has
@@ -1197,7 +1336,9 @@ methods:
       parts as a parameter. This array is given as follows:
 
       ```
-      workspace:MakeJoints({part1, part2, part3})
+      local Workspace = game:GetService("Workspace")
+
+      Workspace:MakeJoints({part1, part2, part3})
       ```
 
       Joints are broken if enough force is applied to them due to an
@@ -1207,7 +1348,7 @@ methods:
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.BasePart|parts` for whom joints are to be made.
@@ -1219,20 +1360,17 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace:PGSIsEnabled
     summary: |
-      Returns true if the game has the PGS Physics solver enabled.
+      Returns `true` if the game has the PGS Physics solver enabled.
     description: |
-      Returns true if the game has the PGS Physics solver enabled.
+      Returns `true` if the game has the PGS Physics solver enabled.
 
       As `Class.Workspace.PGSPhysicsSolverEnabled` cannot be accessed by
       scripts, the PGSIsEnabled function allows developers to tell which physics
       solver the game is using.
-
-      ```
-      print(workspace:PGSIsEnabled()) -- true = PGS solver enabled
-      print(workspace:PGSIsEnabled()) -- false = Legacy solver enabled
-      ```
     code_samples:
     parameters: []
     returns:
@@ -1243,6 +1381,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace:UnjoinFromOutsiders
     summary: |
       Breaks all joints between the specified `Class.BasePart|BaseParts` and
@@ -1259,27 +1399,31 @@ methods:
       This function is used by the Roblox Studio Move tool when the user starts
       moving a selection. In conjunction with `Class.Plugin:GetJoinMode()` and
       `Class.Workspace:JoinToOutsiders()` it can be used to retain join
-      functionality when developing custom studio build tools. See the snippets
+      functionality when developing custom Studio build tools. See the snippets
       below for an example.
 
       ```
-      -- finished moving a selection, make joints
+      local Workspace = game:GetService("Workspace")
+
+      -- Finished moving a selection; make joints
       local function finishedMovingParts(parts)
       	local joinMode = Plugin:GetJoinMode()
-      	workspace:JoinToOutsiders(parts, joinMode)
+      	Workspace:JoinToOutsiders(parts, joinMode)
       end
       ```
 
       ```
-      -- started moving a selection, break joints
+      local Workspace = game:GetService("Workspace")
+
+      -- Started moving a selection; break joints
       local function startMovingParts(parts)
-      	workspace:UnjoinFromOutsiders(parts)
+      	Workspace:UnjoinFromOutsiders(parts)
       end
       ```
     code_samples:
     parameters:
       - name: objects
-        type: Objects
+        type: Instances
         default:
         summary: |
           An array of `Class.BasePart|BaseParts` for whom joints are to be
@@ -1291,6 +1435,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Workspace:ZoomToExtents
     summary: |
       Positions and zooms the `Class.Workspace.CurrentCamera` to show the extent
@@ -1315,6 +1461,8 @@ methods:
     deprecation_message: ''
     security: PluginSecurity
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: Workspace.PersistentLoaded
     summary: |
@@ -1337,4 +1485,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

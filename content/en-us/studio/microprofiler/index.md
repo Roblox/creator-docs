@@ -3,12 +3,12 @@ title: MicroProfiler
 description: The MicroProfiler is a Studio and client tool for optimizing your experience.
 ---
 
-The **MicroProfiler** is an optimization tool available in Roblox Studio and the Roblox client that provides detailed timing information for [Task Scheduler](../../studio/microprofiler/task-scheduler.md) processes called **tags**.
+The **MicroProfiler** is an optimization tool available in Roblox Studio and the Roblox client that provides detailed timing information for [task scheduler](../../studio/microprofiler/task-scheduler.md) tasks called **tags**.
 
-- For a list of common processes, refer to the [Tag Reference](../../studio/microprofiler/tag-table.md).
-- For a step-by-step example of using the MicroProfiler to identify a performance issue, see the [MicroProfiler Walkthrough](../../studio/microprofiler/using-microprofiler.md).
+- For a list of common tasks, refer to the [tag reference](../../studio/microprofiler/tag-table.md).
+- For a step-by-step example of using the MicroProfiler to identify a performance issue, see the [MicroProfiler walkthrough](../../studio/microprofiler/use-microprofiler.md).
 
-## MicroProfiler Basics
+## MicroProfiler basics
 
 To open the MicroProfiler, press <kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F6</kbd> (<kbd>⌘</kbd><kbd>⌥</kbd><kbd>F6</kbd>) in Studio or the client. You can also use the settings menu in the client.
 
@@ -16,25 +16,25 @@ When open, a menu bar is visible at the top of the 3D viewport. In the default m
 
 <img alt="The Microprofiler frame graph, showing blue frames and detailed frame information." src="../../assets/optimization/microprofiler/micro-frame.png" width="440px" />
 
-Bars should generally be around the middle of the graph, but you might see sudden spikes (rapid increases in value). Spikes indicate that more time was taken to perform some process, usually because of an increased workload. For instance, creating a lot of moving parts requires more work from the physics simulation, which then needs more time to process motion and part contacts. The following image shows an example of a spike:
+Bars should generally be around the middle of the graph, but you might see sudden spikes (rapid increases in value). Spikes indicate that more time was taken to perform some task, usually because of an increased workload. For instance, creating a lot of moving parts requires more work from the physics simulation, which then needs more time to process motion and part contacts. The following image shows an example of a spike:
 
 <img alt="The Microprofiler with several bars higher than others." src="../../assets/optimization/microprofiler/micro-spike.png" width="300px" />
 
 To pause the recording of frames, press <kbd>Ctrl</kbd><kbd>P</kbd> (<kbd>⌘</kbd><kbd>P</kbd>) or click **Pause** in the menu bar. While paused, a timeline appears, and you can navigate through frames by clicking or dragging on the graph.
 
-For a full summary of the various views and how to navigate the MicroProfiler interface, see [MicroProfiler Modes](modes.md).
+For a full summary of the various views and how to navigate the MicroProfiler interface, see [MicroProfiler modes](modes.md).
 
 ## Threads
 
-Like many programs, Roblox uses multiple threads to perform several sequences of tasks at the same time. In the MicroProfiler [detailed mode](modes.md#detailed-mode), you can see labels for these on the left.
+Like many programs, Roblox uses multiple threads to perform several sequences of tasks at the same time. In the MicroProfiler [detailed mode](modes.md#detailed-mode), you can see labels for each thread on the left.
 
 <img alt="The lefthand side of the Microprofiler detailed view, with rows for threads." src="../../assets/optimization/microprofiler/micro-panning.png" width="440px" />
 
-There are three types of threads:
+There are three main thread types:
 
-- **Main/Render**: Processes input, `Class.Humanoid|Humanoids`, animations/tweening, physics ownership, sound, and waiting script resumes. Also updates Studio interfaces and coordinates the other threads.
+- **Main/Render**: Perhaps unintuitively, runs on the CPU. Processes input, `Class.Humanoid|Humanoids`, animations/tweening, physics ownership, sound, and waiting script resumes. Also updates Studio interfaces and coordinates the other threads.
 
-- **Worker** ("TSMk2 worker"): Helps the main thread with networking, physics, and pathfinding. Due to the number of CPU cores in modern computers, you likely have many worker threads.
+- **Worker** ("RBX Worker"): Helps the main thread with networking, physics, and pathfinding. Due to the number of cores in modern CPUs, you likely have many worker threads.
 
 - **Render** ("GPU"): Follows a "prepare, perform, present" logic. Communicates with the graphics processing unit (GPU) of the device.
 
@@ -42,7 +42,7 @@ There are three types of threads:
   - Perform: Issue rendering commands, including 2D interfaces.
   - Present: Synchronizes with the GPU.
 
-## Custom Profiling
+## Custom profiles
 
 If your scripts are running complicated tasks, you can profile critical portions of the code to ensure that they're not taking too long. Wrap code in `Library.debug.profilebegin()` and `Library.debug.profileend()` to time everything done between those function calls and create a label on the MicroProfiler timeline.
 
@@ -81,16 +81,20 @@ When you run the experience and pause the MicroProfiler (<kbd>Ctrl</kbd><kbd>P</
 
 From its duration on the timeline, you can tell that the function is using a lot of processing time compared to other operations.
 
-## Saving Frame Data
+## Save frame data
 
 If you want to save a set of frame data for later review (or to share with someone else), use the **Dump** menu. The engine saves the frame data to a file named `microprofile-<date>-<time>.html` in the Roblox logs directory.
 
 - On Windows, check `%LOCALAPPDATA%\Roblox\logs`.
 - On macOS, check `~/Library/Logs/Roblox`.
 
-These HTML files use the same [web-based UI](#using-the-web-ui) as the [live connection for mobile devices](#profiling-on-mobile-devices) and [server dumps](#profiling-the-server).
+These HTML files use the same [web-based UI](#use-the-web-ui) as the [live connection for mobile devices](#profile-mobile-devices) and [server dumps](#profile-the-server).
 
-## Profiling on Mobile Devices
+<Alert severity="info">
+Dumps only contain data for the selected number of frames, **not** the entire duration that the experience has been running. The exception is [counters mode](modes.md#counters-mode), which includes data from when Studio or the client started running to the time of the dump.
+</Alert>
+
+## Profile mobile devices
 
 To access the MicroProfiler from the mobile client, your mobile device must be connected to the **same network** as your development machine.
 
@@ -98,11 +102,11 @@ Enable the MicroProfiler in the **Settings** menu of the mobile device. After yo
 
 <img alt="A picture of the Settings menu on mobile, showing how to enable the MicroProfiler." src="../../assets/optimization/microprofiler/6MicroProfiler-Mobile-Enable.jpeg" width="600px" />
 
-For example, in the screenshot above, the address is `192.168.1.166` and the port is `1338`. From a computer on the same network, navigate to `http://192.168.1.166:1338` for a [web-based version](#using-the-web-ui) of the MicroProfiler user interface.
+For example, in the screenshot above, the address is `192.168.1.166` and the port is `1338`. From a computer on the same network, navigate to `http://192.168.1.166:1338` for a [web-based version](#use-the-web-ui) of the MicroProfiler user interface.
 
 <img alt="The MicroProfiler web view." src="../../assets/optimization/microprofiler/7MicroProfiler-Browser.jpeg" width="600px" />
 
-## Profiling the Server
+## Profile the server
 
 In addition to the standard client MicroProfiler, you can take brief dumps of server activity using the server MicroProfiler.
 
@@ -113,20 +117,36 @@ In addition to the standard client MicroProfiler, you can take brief dumps of se
 
    <img alt="The Developer Console MicroProfiler screen." src="../../assets/optimization/microprofiler/micro-server.png" width="800px" />
 
-   After a few seconds, the Developer Console provides the path to the file, which is the same path as a [standard dump](#saving-frame-data).
+   After a few seconds, the Developer Console provides the path to the file, which is the same path as a [standard dump](#save-frame-data).
 
-## Using the Web UI
+## Use the web UI
 
 In general, the MicroProfiler web UI works similarly to [detailed mode](./modes.md#detailed-mode), but it has a few additional features:
 
 - In addition to filtering by group, you can filter by thread.
+
+- Use <kbd>Ctrl</kbd><kbd>F</kbd>/<kbd>⌘</kbd><kbd>F</kbd> to jump to the occurrence of a task that takes up the most time in the dump. For example, `computeLightingPerform` runs in every frame. If you search for it in a dump with 128 frames, you can jump to the frame where it took the longest to complete.
+
 - Use the **X-Ray** menu to enable or disable color coding for memory allocation.
 
   <img alt="The MicroProfiler web view with x-ray enabled." src="../../assets/optimization/microprofiler/micro-xray.png" width="600px" />
 
   - Lighter frames within the main bar graph indicate higher memory allocation.
   - Lighter portions of the preview bar and lighter labels on the timeline indicate portions of the frame with higher memory allocation.
+  - In X-ray mode, press <kbd>C</kbd> to show the total size of the memory allocations rather than the number of allocations.
 
-- Use the **Export** menu to export a CPU or memory flame graph, a specialized visualization that summarizes all of the call stacks included in the dump.
+- Use the **Export** menu to export a CPU or memory flame graph, a specialized visualization that aggregates all of the call stacks included in the dump. The flame graph is especially useful for identifying tasks that don't take particularly long to run (and are therefore hard to notice), but run so often that their processing time becomes significant.
 
   <img alt="The MicroProfiler flame graph." src="../../assets/optimization/microprofiler/micro-flame.png" />
+
+- Drag and drop a second dump file into the web UI to generate a diff flame graph, which can help you identify improvements or regressions to your experience's performance over time. Click **Combine & Compare** to export a new HTML file.
+
+  <img alt="The MicroProfiler diff flame graph builder showing the left and right sides." src="../../assets/optimization/microprofiler/micro-flame-diff.png" />
+
+  <Alert severity="success">
+  You can combine several dump files—for example, four on each side, from before and after a major update—to get a more aggregated comparison. Comparing data between different places can be useful, too, but don't **combine** data from different places!
+  </Alert>
+
+  The diff flame graph highlights the dump (left or right) that consumes more CPU or memory, with brighter colors indicating a larger difference.
+
+  <img alt="The MicroProfiler diff flame graph." src="../../assets/optimization/microprofiler/micro-flame-diff2.png" />

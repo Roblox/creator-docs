@@ -24,6 +24,7 @@ const defaultConfig: JestConfigWithTsJest = {
   },
   automock: false,
   testPathIgnorePatterns: ['/node_modules/', '.github/'],
+  setupFilesAfterEnv: ['./jest.setup.ts'],
 };
 
 export default defaultConfig;

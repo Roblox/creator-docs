@@ -1,5 +1,5 @@
 ---
-title: UI Drag Detectors
+title: UI drag detectors
 description: UI drag detectors facilitate and encourage interaction with 2D user interface elements in an experience, such as sliders and spinners.
 ---
 
@@ -10,7 +10,7 @@ import BetaAlert from '../includes/beta-features/beta-alert.md'
 The `Class.UIDragDetector` instance facilitates and encourages interaction with 2D user interface elements in an experience, such as sliders, spinners, and more. Key features include:
 
 - Place a `Class.UIDragDetector` under any `Class.GuiObject` instance to make it draggable via all user inputs without a single line of code.
-  
+
 - Choose from several `Class.UIDragDetector.DragStyle|DragStyle` options, define how the object responds to motion via `Class.UIDragDetector.ResponseStyle|ResponseStyle`, and optionally apply axis, movement limits, or drag boundaries.
 
 - Scripts can respond to manipulation of dragged objects to drive logic responses, such as adjusting settings.
@@ -23,7 +23,7 @@ The `Class.UIDragDetector` instance facilitates and encourages interaction with 
 For drag detectors that manipulate 3D objects in an experience, such as opening doors and drawers or sliding a part around, see [3D Drag Detectors](../ui/3D-drag-detectors.md).
 </Alert>
 
-## Making UI Elements Draggable
+## Make UI elements draggable
 
 To make any `Class.GuiObject` instances draggable, simply add a `Class.UIDragDetector` as a direct descendant.
 
@@ -38,157 +38,157 @@ To make any `Class.GuiObject` instances draggable, simply add a `Class.UIDragDet
 Remember that `Class.UIDragDetector|UIDragDetectors` only work in Studio if you're **not** using the **Select**, **Move**, **Scale**, or **Rotate** tools, nor certain plugins or Studio's **UI** editor tools.
 </Alert>
 
-## Customizing UI Drag Detectors
+## Customize UI drag detectors
 
-### Drag Style
+### Drag style
 
 `Class.UIDragDetector|UIDragDetectors` map cursor motion to calculate proposed 2D motion and/or rotation. Through the `Class.UIDragDetector.DragStyle|DragStyle` property, you can choose from different mappings to suit your needs. For example, `Enum.UIDragDetectorDragStyle.TranslatePlane` produces translation in the 2D plane of the `Class.LayerCollector`, while `Enum.UIDragDetectorDragStyle.Rotate` normally produces a rotation instead of translation.
 
 <table>
 <thead>
-  <tr>
-    <th>Setting</th>
-    <th>Description</th>
-  </tr>
+	<tr>
+		<th>Setting</th>
+		<th>Description</th>
+	</tr>
 </thead>
 <tbody>
-  <tr>
-    <td>`Enum.UIDragDetectorDragStyle.TranslateLine|TranslateLine`</td>
-    <td>1D motion along the detector's `Class.UIDragDetector.DragAxis|DragAxis`.</td>
-  </tr>
-  <tr>
-    <td>`Enum.UIDragDetectorDragStyle.TranslatePlane|TranslatePlane`</td>
-    <td>2D motion in the plane of the `Class.LayerCollector`.</td>
-  </tr>
-  <tr>
-    <td>`Enum.UIDragDetectorDragStyle.Rotate|Rotate`</td>
-    <td>By default, rotation about the absolute center position of the detector's parent `Class.GuiObject`. If `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is set, rotation happens about that instance's absolute center position.</td>
-  </tr>
-  <tr>
-    <td>`Enum.UIDragDetectorDragStyle.Scriptable|Scriptable`</td>
-    <td>Calculates desired motion via a custom function provided through `Class.UIDragDetector:SetDragStyleFunction()|SetDragStyleFunction()`.</td>
-  </tr>
+	<tr>
+		<td>`Enum.UIDragDetectorDragStyle.TranslateLine|TranslateLine`</td>
+		<td>1D motion along the detector's `Class.UIDragDetector.DragAxis|DragAxis`.</td>
+	</tr>
+	<tr>
+		<td>`Enum.UIDragDetectorDragStyle.TranslatePlane|TranslatePlane`</td>
+		<td>2D motion in the plane of the `Class.LayerCollector`.</td>
+	</tr>
+	<tr>
+		<td>`Enum.UIDragDetectorDragStyle.Rotate|Rotate`</td>
+		<td>By default, rotation about the absolute center position of the detector's parent `Class.GuiObject`. If `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is set, rotation happens about that instance's absolute center position.</td>
+	</tr>
+	<tr>
+		<td>`Enum.UIDragDetectorDragStyle.Scriptable|Scriptable`</td>
+		<td>Calculates desired motion via a custom function provided through `Class.UIDragDetector:SetDragStyleFunction()|SetDragStyleFunction()`.</td>
+	</tr>
 </tbody>
 </table>
 
-### Drag Direction
+### Drag direction
 
 By default, 2D motion and the associated `Class.UIDragDetector.DragStyle|DragStyle` map to the space of the ancestor `Class.LayerCollector`. However, you may want to change the `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` or the `Class.UIDragDetector.DragAxis|DragAxis` when building different UI components.
 
 <table>
 <thead>
-  <tr>
-    <th>Setting</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
+	<tr>
+		<th>Setting</th>
+		<th>Description</th>
+		<th>Default</th>
+	</tr>
 </thead>
 <tbody>
-  <tr>
-    <td>`Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance`</td>
-    <td>A `Class.GuiObject` instance whose local space and absolute center position is the reference space and origin for the detector. Setting this reference affects properties such as `Class.UIDragDetector.DragUDim2|DragUDim2`, `Class.UIDragDetector.DragRotation|DragRotation`, and the behavior of `Class.UIDragDetector.DragAxis|DragAxis`.</td>
-    <td>`nil`</td>
-  </tr>
-  <tr>
-    <td>`Class.UIDragDetector.DragAxis|DragAxis`</td>
-    <td>`Datatype.Vector2` value that defines the axis of movement for the dragged object when `Class.UIDragDetector.DragStyle|DragStyle` is set to `Enum.UIDragDetectorDragStyle.TranslateLine`. The axis is defined in the local space of the `Class.UIDragDetector` unless `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is defined, in which case the axis is defined in that instance's local space.</td>
-    <td>(1,&nbsp;0)</td>
-  </tr>
+	<tr>
+		<td>`Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance`</td>
+		<td>A `Class.GuiObject` instance whose local space and absolute center position is the reference space and origin for the detector. Setting this reference affects properties such as `Class.UIDragDetector.DragUDim2|DragUDim2`, `Class.UIDragDetector.DragRotation|DragRotation`, and the behavior of `Class.UIDragDetector.DragAxis|DragAxis`.</td>
+		<td>`nil`</td>
+	</tr>
+	<tr>
+		<td>`Class.UIDragDetector.DragAxis|DragAxis`</td>
+		<td>`Datatype.Vector2` value that defines the axis of movement for the dragged object when `Class.UIDragDetector.DragStyle|DragStyle` is set to `Enum.UIDragDetectorDragStyle.TranslateLine`. The axis is defined in the local space of the `Class.UIDragDetector` unless `Class.UIDragDetector.ReferenceUIInstance|ReferenceUIInstance` is defined, in which case the axis is defined in that instance's local space.</td>
+		<td>(1,&nbsp;0)</td>
+	</tr>
 </tbody>
 </table>
 
-### Response to Motion
+### Response to motion
 
 The `Class.UIDragDetector.ResponseStyle` property specifies how an object's position value is changed by the proposed motion. The custom response styles let you use the resulting `Class.UIDragDetector.DragUDim2` and `Class.UIDragDetector.DragRotation` values as desired, without having the detector's parent execute the proposed motion.
 
 <table>
 <thead>
-  <tr>
-    <th>Setting</th>
-    <th>Description</th>
-  </tr>
+	<tr>
+		<th>Setting</th>
+		<th>Description</th>
+	</tr>
 </thead>
 <tbody>
-  <tr>
-    <td>`Enum.UIDragDetectorResponseStyle.Offset|Offset`</td>
-    <td>Move by the `Datatype.UDim.Offset|Offset` values of the detector's parent's `Class.GuiObject.Position` value. This is the setting by default.</td>
-  </tr>
-  <tr>
-    <td>`Enum.UIDragDetectorResponseStyle.Scale|Scale`</td>
-    <td>Move by the `Datatype.UDim.Scale|Scale` values of the detector's parent's `Class.GuiObject.Position` value.</td>
-  </tr>
-  <tr>
-    <td>`Enum.UIDragDetectorResponseStyle.CustomOffset|CustomOffset`</td>
-    <td>The UI element will not move at all, but the `Datatype.UDim.Offset|Offset` values of the detector's `Class.UIDragDetector.DragUDim2|DragUDim2` will still be updated and the detector's events will still fire, allowing you to respond to drag manipulation however you'd like.</td>
-  </tr>
-  <tr>
-    <td>`Enum.UIDragDetectorResponseStyle.CustomScale|CustomScale`</td>
-    <td>The UI element will not move at all, but the `Datatype.UDim.Scale|Scale` values of the detector's `Class.UIDragDetector.DragUDim2|DragUDim2` will still be updated and the detector's events will still fire, allowing you to respond to drag manipulation however you'd like.</td>
-  </tr>
+	<tr>
+		<td>`Enum.UIDragDetectorResponseStyle.Offset|Offset`</td>
+		<td>Move by the `Datatype.UDim.Offset|Offset` values of the detector's parent's `Class.GuiObject.Position` value. This is the setting by default.</td>
+	</tr>
+	<tr>
+		<td>`Enum.UIDragDetectorResponseStyle.Scale|Scale`</td>
+		<td>Move by the `Datatype.UDim.Scale|Scale` values of the detector's parent's `Class.GuiObject.Position` value.</td>
+	</tr>
+	<tr>
+		<td>`Enum.UIDragDetectorResponseStyle.CustomOffset|CustomOffset`</td>
+		<td>The UI element will not move at all, but the `Datatype.UDim.Offset|Offset` values of the detector's `Class.UIDragDetector.DragUDim2|DragUDim2` will still be updated and the detector's events will still fire, allowing you to respond to drag manipulation however you'd like.</td>
+	</tr>
+	<tr>
+		<td>`Enum.UIDragDetectorResponseStyle.CustomScale|CustomScale`</td>
+		<td>The UI element will not move at all, but the `Datatype.UDim.Scale|Scale` values of the detector's `Class.UIDragDetector.DragUDim2|DragUDim2` will still be updated and the detector's events will still fire, allowing you to respond to drag manipulation however you'd like.</td>
+	</tr>
 </tbody>
 </table>
 
-### Translation & Rotation Limits
+### Translation & rotation limits
 
 By default, there are no limits to 2D motion behind the inherent restrictions of the `Class.UIDragDetector.DragStyle|DragStyle`. Limits for both minimum and maximum translations and rotations can be declared with the following properties if desired. Additionally, you can define how the dragged object is constrained within the bounds of a specified `Class.GuiObject` such as a `Class.Frame`.
 
 <table>
 <thead>
-  <tr>
-    <th>Properties</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
+	<tr>
+		<th>Properties</th>
+		<th>Description</th>
+		<th>Default</th>
+	</tr>
 </thead>
 <tbody>
-  <tr>
-    <td>`Class.UIDragDetector.MinDragTranslation|MinDragTranslation`<br />
-    `Class.UIDragDetector.MaxDragTranslation|MaxDragTranslation`</td>
-    <td>Limits to drag translation in each dimension, defined by a `Datatype.UDim2` value. If `Class.UIDragDetector.MaxDragTranslation|MaxDragTranslation` is greater than `Class.UIDragDetector.MinDragTranslation|MinDragTranslation`, translation will be clamped within that range.</td>
-    <td>\{0,&nbsp;0\},&nbsp;\{0,&nbsp;0\}</td>
-  </tr>
-  <tr>
-    <td>`Class.UIDragDetector.MinDragAngle|MinDragAngle`<br />
-    `Class.UIDragDetector.MaxDragAngle|MaxDragAngle`</td>
-    <td>Only relevant if `Class.UIDragDetector.DragStyle|DragStyle` is set to `Enum.UIDragDetectorDragStyle.Rotate`, or if the functions set through `Class.UIDragDetector:SetDragStyleFunction()|SetDragStyleFunction()` or `Class.UIDragDetector:AddConstraintFunction()|AddConstraintFunction()` defines a rotation value. If `Class.UIDragDetector.MaxDragAngle|MaxDragAngle` is greater than `Class.UIDragDetector.MinDragAngle|MinDragAngle`, rotation will be clamped within that range.</td>
-    <td>0</td>
-  </tr>
 	<tr>
-    <td>`Class.UIDragDetector.BoundingBehavior|BoundingBehavior`</td>
-    <td>Determines the `Class.UIDragDetector` instance's bounding behavior when its `Class.UIDragDetector.BoundingUI|BoundingUI` is set. Setting this to `Enum.UIDragDetectorBoundingBehavior.EntireObject|EntireObject` bounds the entire dragged UI within the `Class.UIDragDetector.BoundingUI|BoundingUI`, while setting it to `Enum.UIDragDetectorBoundingBehavior.HitPoint|HitPoint` bounds the dragged UI only by the exact hit/grab point and its respective position after translation/rotation. As a convenience, the default of `Enum.UIDragDetectorBoundingBehavior.Automatic|Automatic` mimics the `Enum.UIDragDetectorBoundingBehavior.EntireObject|EntireObject` behavior for a UI object that's entirely contained by the `Class.UIDragDetector.BoundingUI|BoundingUI`, or else `Enum.UIDragDetectorBoundingBehavior.HitPoint|HitPoint` for a UI object that's partially outside the `Class.UIDragDetector.BoundingUI|BoundingUI`.</td>
-    <td>`Enum.UIDragDetectorBoundingBehavior.Automatic|Automatic`</td>
-  </tr>
+		<td>`Class.UIDragDetector.MinDragTranslation|MinDragTranslation`<br />
+		`Class.UIDragDetector.MaxDragTranslation|MaxDragTranslation`</td>
+		<td>Limits to drag translation in each dimension, defined by a `Datatype.UDim2` value. If `Class.UIDragDetector.MaxDragTranslation|MaxDragTranslation` is greater than `Class.UIDragDetector.MinDragTranslation|MinDragTranslation`, translation will be clamped within that range.</td>
+		<td>\{0,&nbsp;0\},&nbsp;\{0,&nbsp;0\}</td>
+	</tr>
+	<tr>
+		<td>`Class.UIDragDetector.MinDragAngle|MinDragAngle`<br />
+		`Class.UIDragDetector.MaxDragAngle|MaxDragAngle`</td>
+		<td>Only relevant if `Class.UIDragDetector.DragStyle|DragStyle` is set to `Enum.UIDragDetectorDragStyle.Rotate`, or if the functions set through `Class.UIDragDetector:SetDragStyleFunction()|SetDragStyleFunction()` or `Class.UIDragDetector:AddConstraintFunction()|AddConstraintFunction()` defines a rotation value. If `Class.UIDragDetector.MaxDragAngle|MaxDragAngle` is greater than `Class.UIDragDetector.MinDragAngle|MinDragAngle`, rotation will be clamped within that range.</td>
+		<td>0</td>
+	</tr>
+	<tr>
+		<td>`Class.UIDragDetector.BoundingBehavior|BoundingBehavior`</td>
+		<td>Determines the `Class.UIDragDetector` instance's bounding behavior when its `Class.UIDragDetector.BoundingUI|BoundingUI` is set. Setting this to `Enum.UIDragDetectorBoundingBehavior.EntireObject|EntireObject` bounds the entire dragged UI within the `Class.UIDragDetector.BoundingUI|BoundingUI`, while setting it to `Enum.UIDragDetectorBoundingBehavior.HitPoint|HitPoint` bounds the dragged UI only by the exact hit/grab point and its respective position after translation/rotation. As a convenience, the default of `Enum.UIDragDetectorBoundingBehavior.Automatic|Automatic` mimics the `Enum.UIDragDetectorBoundingBehavior.EntireObject|EntireObject` behavior for a UI object that's entirely contained by the `Class.UIDragDetector.BoundingUI|BoundingUI`, or else `Enum.UIDragDetectorBoundingBehavior.HitPoint|HitPoint` for a UI object that's partially outside the `Class.UIDragDetector.BoundingUI|BoundingUI`.</td>
+		<td>`Enum.UIDragDetectorBoundingBehavior.Automatic|Automatic`</td>
+	</tr>
 </tbody>
 </table>
 
-### Speed Adjustments
+### Speed adjustments
 
 Through `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed` and `Class.UIDragDetector.SelectionModeRotateSpeed|SelectionModeRotateSpeed`, you can fine‑tune the maximum drag/rotate speeds for a detector. Furthermore, through `Class.UIDragDetector.UIDragSpeedAxisMapping|UIDragSpeedAxisMapping`, you can fine‑tune the **X**/**Y** dimension dragging speeds, based on the detector's `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed`.
 
 <table>
 <thead>
-  <tr>
-    <th>Property</th>
-    <th>Description</th>
-  </tr>
+	<tr>
+		<th>Property</th>
+		<th>Description</th>
+	</tr>
 </thead>
 <tbody>
-  <tr>
-    <td>`Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed`</td>
-    <td>Defines the maximum drag speed for translation as a combination of `Datatype.UDim.Scale|Scale` and `Datatype.UDim.Offset|Offset` of the first ancestor `Class.ScreenGui` or `Class.SurfaceGui` the `Class.UIDragDetector` belongs to.</td>
-  </tr>
-  <tr>
-    <td>`Class.UIDragDetector.SelectionModeRotateSpeed|SelectionModeRotateSpeed`</td>
-    <td>Defines the maximum angle per second at which the `Class.UIDragDetector` can rotate.</td>
-  </tr>
-  <tr>
-    <td>`Class.UIDragDetector.UIDragSpeedAxisMapping|UIDragSpeedAxisMapping`</td>
-    <td>Determines the **X**/**Y** dimension dragging speeds, based on the detector's `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed`. The default is `Enum.UIDragSpeedAxisMapping.XY|XY`, meaning the **X** and **Y** axis speeds are based off the **X** and **Y** `Datatype.UDim.Scale|Scale`/`Datatype.UDim.Offset|Offset` values respectively.<br /><br />Alternatives are `Enum.UIDragSpeedAxisMapping|XX` and `Enum.UIDragSpeedAxisMapping|YY`, meaning both the **X** and **Y** axis speeds are based off the **X** (`Enum.UIDragSpeedAxisMapping|XX`) or **Y** (`Enum.UIDragSpeedAxisMapping|YY`) axis for `Datatype.UDim.Scale|Scale`, while the `Datatype.UDim.Offset|Offset` values still apply to their respective axis. For example, if the first ancestor `Class.ScreenGui` is sized 800&times;600 and `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed` is <Typography noWrap>`{0.1, 10}, {0.1, 20}`</Typography>, a setting of `Enum.UIDragSpeedAxisMapping|XX` results in an **X**/**Y** drag speed of `80+10`/`80+20`, while `Enum.UIDragSpeedAxisMapping|YY` results in `60+10`/`60+20` (note the `Datatype.UDim.Offset|Offset` values remain the same in both cases).</td>
-  </tr>
+	<tr>
+		<td>`Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed`</td>
+		<td>Defines the maximum drag speed for translation as a combination of `Datatype.UDim.Scale|Scale` and `Datatype.UDim.Offset|Offset` of the first ancestor `Class.ScreenGui` or `Class.SurfaceGui` the `Class.UIDragDetector` belongs to.</td>
+	</tr>
+	<tr>
+		<td>`Class.UIDragDetector.SelectionModeRotateSpeed|SelectionModeRotateSpeed`</td>
+		<td>Defines the maximum angle per second at which the `Class.UIDragDetector` can rotate.</td>
+	</tr>
+	<tr>
+		<td>`Class.UIDragDetector.UIDragSpeedAxisMapping|UIDragSpeedAxisMapping`</td>
+		<td>Determines the **X**/**Y** dimension dragging speeds, based on the detector's `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed`. The default is `Enum.UIDragSpeedAxisMapping.XY|XY`, meaning the **X** and **Y** axis speeds are based off the **X** and **Y** `Datatype.UDim.Scale|Scale`/`Datatype.UDim.Offset|Offset` values respectively.<br /><br />Alternatives are `Enum.UIDragSpeedAxisMapping|XX` and `Enum.UIDragSpeedAxisMapping|YY`, meaning both the **X** and **Y** axis speeds are based off the **X** (`Enum.UIDragSpeedAxisMapping|XX`) or **Y** (`Enum.UIDragSpeedAxisMapping|YY`) axis for `Datatype.UDim.Scale|Scale`, while the `Datatype.UDim.Offset|Offset` values still apply to their respective axis. For example, if the first ancestor `Class.ScreenGui` is sized 800&times;600 and `Class.UIDragDetector.SelectionModeDragSpeed|SelectionModeDragSpeed` is <Typography noWrap>`{0.1, 10}, {0.1, 20}`</Typography>, a setting of `Enum.UIDragSpeedAxisMapping|XX` results in an **X**/**Y** drag speed of `80+10`/`80+20`, while `Enum.UIDragSpeedAxisMapping|YY` results in `60+10`/`60+20` (note the `Datatype.UDim.Offset|Offset` values remain the same in both cases).</td>
+	</tr>
 </tbody>
 </table>
 
-## Scripting Responses to Clicking and Dragging
+## Script responses to clicking and dragging
 
 Through [event signals](#event-signals), property changes, `Enum.UIDragDetectorDragStyle.Scriptable|Scriptable` drag style, and custom functions, scripts can respond to the manipulation of dragged UI elements to drive various settings or make logical decisions, such as sliders that adjust music and sound effect volume separately.
 
@@ -196,30 +196,30 @@ Through [event signals](#event-signals), property changes, `Enum.UIDragDetectorD
 For user-initiated script responses like [Event Signals](#event-signals) and [Scripted Drag Style](#scripted-drag-style), you'll most commonly need to put your script code inside a `Class.LocalScript`, or a `Class.Script` with `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client|Client`.
 </Alert>
 
-### Event Signals
+### Event signals
 
 Through the following event signals, you can detect when a user starts, continues, and ends dragging an object.
 
 <table>
 <thead>
-  <tr>
-    <th>Event</th>
-    <th>Description</th>
-  </tr>
+	<tr>
+		<th>Event</th>
+		<th>Description</th>
+	</tr>
 </thead>
 <tbody>
-  <tr>
-    <td>`Class.UIDragDetector.DragStart|DragStart`</td>
-    <td>Fires when a user starts dragging the object.</td>
-  </tr>
-  <tr>
-    <td>`Class.UIDragDetector.DragContinue|DragContinue`</td>
-    <td>Fires when a user continues dragging the object after `Class.UIDragDetector.DragStart|DragStart` has been initiated.</td>
-  </tr>
-  <tr>
-    <td>`Class.UIDragDetector.DragEnd|DragEnd`</td>
-    <td>Fires when a user stops dragging the object.</td>
-  </tr>
+	<tr>
+		<td>`Class.UIDragDetector.DragStart|DragStart`</td>
+		<td>Fires when a user starts dragging the object.</td>
+	</tr>
+	<tr>
+		<td>`Class.UIDragDetector.DragContinue|DragContinue`</td>
+		<td>Fires when a user continues dragging the object after `Class.UIDragDetector.DragStart|DragStart` has been initiated.</td>
+	</tr>
+	<tr>
+		<td>`Class.UIDragDetector.DragEnd|DragEnd`</td>
+		<td>Fires when a user stops dragging the object.</td>
+	</tr>
 </tbody>
 </table>
 
@@ -260,7 +260,7 @@ uiDragDetector.DragEnd:Connect(function(inputPosition)
 end)
 ```
 
-### Position & Rotation Changes
+### Position & rotation changes
 
 In addition to [event signals](#event-signals), you can monitor changes to the detector's `Class.UIDragDetector.DragUDim2|DragUDim2` and/or `Class.UIDragDetector.DragRotation|DragRotation` properties directly.
 
@@ -293,7 +293,7 @@ changeHue()
 uiDragDetector:GetPropertyChangedSignal("DragRotation"):Connect(changeHue)
 ```
 
-### Scripted Drag Style
+### Scripted drag style
 
 If you set a detector's `Class.UIDragDetector.DragStyle` to `Enum.UIDragDetectorDragStyle.Scriptable`, you can provide your own function that takes in a `Datatype.Vector2` of the input position and returns a `Datatype.UDim2` (position) and a float (rotation). The detector will update the object to the computed position/rotation based off of the returns, the `Class.UIDragDetector.DragSpace|DragSpace` property, and the `Class.UIDragDetector.DragRelativity|DragRelativity` property.
 
@@ -323,7 +323,7 @@ end
 uiDragDetector:SetDragStyleFunction(computeSinWaveCoordinate)
 ```
 
-### Custom Constraint Function
+### Custom constraint function
 
 `Class.UIDragDetector|UIDragDetectors` do not have built-in motion rules about grids and snapping, but you can register custom constraint functions to edit the detector's `Class.UIDragDetector.DragUDim2` and `Class.UIDragDetector.DragRotation` before they are applied. For example, you can keep motion on a grid by rounding positions to specific increments, or define allowed areas of motion. Note that this is applied **before** any existing translation/rotation limits.
 

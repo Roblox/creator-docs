@@ -5,7 +5,8 @@ memory_category: Instances
 summary: |
   Applies an outline to text or a UI border.
 description: |
-  `UIStroke` applies an outline to text or a UI border. Key features include:
+  `Class.UIStroke` applies an outline to text or a UI border. Key features
+  include:
 
   - Adjust the `Class.UIStroke.Color|Color` and
     `Class.UIStroke.Thickness|Thickness` of the stroke outline.
@@ -14,10 +15,10 @@ description: |
   - Choose the `Class.UIStroke.LineJoinMode|LineJoinMode` of the stroke (round,
     bevel, or miter).
   - Add a gradient to the stroke via the `Class.UIGradient` instance.
-  - Use [rich text]((../../../ui/rich-text.md) tags to add stroke to inline text
+  - Use [rich text](../../../ui/rich-text.md) tags to add stroke to inline text
     segments.
 
-  For more details on the `UIStroke` object, see
+  For more details on the `Class.UIStroke` object, see
   [Appearance Modifiers](../../../ui/appearance-modifiers.md).
 code_samples:
 inherits:
@@ -30,9 +31,9 @@ properties:
       Determines whether to apply the stroke to the object's border instead of
       the text itself.
     description: |
-      When a `UIStroke` instance is applied to a text object, the
-      `ApplyStrokeMode` property determines whether to apply the stroke to the
-      object's border instead of the text itself.
+      When a `Class.UIStroke` instance is applied to a text object, this
+      property determines whether to apply the stroke to the object's border
+      instead of the text itself.
 
       <figure>
       <img src="../../../assets/ui/ui-objects/UIStroke-As-Text-Outline.png" width="376" />
@@ -54,12 +55,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIStroke.Color
     summary: |
       Determines the stroke color.
     description: |
-      Determines the `UIStroke` color. You can also insert a `Class.UIGradient`
-      instance as a child to create gradient strokes.
+      Determines the `Class.UIStroke` color. You can also insert a
+      `Class.UIGradient` instance as a child to create gradient strokes.
 
       <figure>
       <img src="../../../assets/ui/ui-objects/UIStroke-Color-Solid.png" width="376" />
@@ -81,12 +85,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIStroke.Enabled
     summary: |
       Determines whether the stroke in visible.
     description: |
-      This property determines whether the `UIStroke` is visible. When set to
-      `false`, the stroke will not be rendered. Defaults to `true`.
+      This property determines whether the `Class.UIStroke` is visible. When set
+      to `false`, the stroke will not be rendered. Defaults to `true`.
     code_samples:
     type: bool
     tags: []
@@ -99,6 +106,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIStroke.LineJoinMode
     summary: |
       Determines how corners are interpreted.
@@ -132,6 +142,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIStroke.Thickness
     summary: |
       Determines the stroke's thickness.
@@ -148,7 +161,7 @@ properties:
       <figcaption><code>Thickness</code> = <code>12</code></figcaption>
       </figure>
 
-      Be mindful of [tweening](../../../ui/animation.md) this `UIStroke`
+      Be mindful of [tweening](../../../ui/animation.md) this `Class.UIStroke`
       property when applied to text objects. This renders and stores many glyph
       sizes each frame, potentially causing performance issues or text
       flickering.
@@ -164,14 +177,16 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIStroke.Transparency
     summary: |
       Sets the stroke opacity independently of the parent object's
       `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` or
       `Class.TextLabel.TextTransparency|TextTransparency`.
     description: |
-      The `Transparency` property sets the stroke opacity independently of the
-      parent object's
+      This property sets the stroke opacity independently of the parent object's
       `Class.GuiObject.BackgroundTransparency|BackgroundTransparency` or
       `Class.TextLabel.TextTransparency|TextTransparency`. This allows you to
       render text and borders that are "hollow" (consisting of only an outline).
@@ -196,6 +211,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -1,5 +1,5 @@
 ---
-title: Get Off the Ground
+title: Get off the ground
 prev: /education/build-it-play-it-galactic-speedway/main-page
 next: /education/build-it-play-it-galactic-speedway/take-flight
 description: Learn how to download and set up your project using a Roblox Studio template for the Build It Play It Galactic Speedway challenge.
@@ -10,7 +10,7 @@ src="../../assets/education/build-it-play-it-galactic-speedway/get-off-the-groun
 
 All of the parts for building your driftspeeder and the code for the annual Junker's Canyon Race are included in the **Galactic Speedway** template.
 
-## Open the Template
+## Open the template
 
 Time to open Roblox Studio! If you need to, [download Studio](https://www.roblox.com/create) and come back to this page when you're ready.
 
@@ -30,7 +30,7 @@ Time to open Roblox Studio! If you need to, [download Studio](https://www.roblox
 
 With the template open, you can see Junker's Canyon, home to crafty builders and daring racers. To build your driftspeeder, **salvage** parts from the scrapyard and combine them in the work area. Once you're done, race your driftspeeder over the **racetrack waters** to be the champion of Junker's Canyon.
 
-## Close Extra Windows
+## Close extra windows
 
 The first time you launch Roblox Studio, extra windows might open up that aren't needed right now. Closing the extra windows will give you more space to work. You can always open them up again later.
 

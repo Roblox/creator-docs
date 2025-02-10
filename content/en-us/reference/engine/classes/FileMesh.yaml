@@ -58,6 +58,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: FileMesh.TextureId
     summary: |
       The TextureId is the content ID of the texture that is to be applied to
@@ -100,6 +102,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -25,7 +25,7 @@ properties:
     tags: []
     deprecation_message: ''
   - name: RaycastResult.Instance
-    type: Instance
+    type: BasePart
     summary: |
       The `Class.BasePart` or `Class.Terrain` cell that the ray intersected.
     description: |
@@ -47,10 +47,10 @@ properties:
   - name: RaycastResult.Position
     type: Vector3
     summary: |
-      The position of the intersection between the ray and the part.
+      The world space point at which the intersection occurred.
     description: |
       The world space point at which the intersection occurred, usually a point
-      directly on the surface of the instance.
+      directly on the surface of the `Class.BasePart` or `Class.Terrain` cell.
     code_samples: []
     tags: []
     deprecation_message: ''

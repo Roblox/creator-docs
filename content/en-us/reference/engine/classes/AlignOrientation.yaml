@@ -81,6 +81,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignOrientation.CFrame
     summary: |
       The `Datatype.CFrame` orientation with which the constraint will attempt
@@ -103,6 +106,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignOrientation.LookAtPosition
     summary: |
       A `Datatype.Vector3` world space location toward which the primary axis
@@ -126,6 +132,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignOrientation.MaxAngularVelocity
     summary: |
       Maximum angular velocity the constraint can use to reach its goal.
@@ -149,6 +158,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignOrientation.MaxTorque
     summary: |
       Maximum torque the constraint can use to reach its goal.
@@ -172,6 +184,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignOrientation.Mode
     summary: |
       Whether the constraint uses one or two attachments in calculating its
@@ -208,6 +223,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignOrientation.PrimaryAxis
     summary: |
       The direction of the goal's **X** axis, represented as a unit
@@ -229,6 +247,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignOrientation.PrimaryAxisOnly
     summary: |
       Determines how the constraint's axes are affected by torque.
@@ -257,6 +278,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignOrientation.ReactionTorqueEnabled
     summary: |
       Whether the constraint applies torque only to
@@ -280,6 +304,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignOrientation.Responsiveness
     summary: |
       Controls how quickly the constraint reaches its goal. Higher values cause
@@ -299,6 +326,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignOrientation.RigidityEnabled
     summary: |
       Whether torque is dependent on other properties, or if the physics solver
@@ -323,6 +353,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: AlignOrientation.SecondaryAxis
     summary: |
       The direction of the goal's **Y** axis, represented as a unit
@@ -344,6 +377,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

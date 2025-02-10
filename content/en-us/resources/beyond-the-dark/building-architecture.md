@@ -1,5 +1,5 @@
 ---
-title: Building Architecture
+title: Building architecture
 description: Explains the design concepts for architecture in Beyond The Dark.
 next: /resources/beyond-the-dark/custom-characters
 prev: /resources/beyond-the-dark
@@ -14,7 +14,7 @@ Roblox packages let us achieve this modular design by letting us package togethe
   src="../../assets/resources/beyond-the-dark/building-architecture/Architecture-Overview.jpeg"
   width="100%" />
 
-## Flexible Designs to Final Art
+## Flexible designs to final art
 
 When we first started, we didn't have complete understanding of what we wanted to be in the station, or how big it needed to be for 50 players.
 
@@ -44,7 +44,7 @@ The modular design allowed us to make such changes to the environment without ca
   src="../../assets/resources/beyond-the-dark/building-architecture/Architecture_Example_4.jpeg"
   width="80%" />
 
-## Modular Design of Kerr-Newman DSR-14
+## Modular design of Kerr-Newman DSR-14
 
 The space station uses just a handful of modular palette pieces. Modular palette pieces are reusable assets, meaning we don't have to create each wall uniquely but instead can put together several smaller walls. This allows flexibility in layout as we're building.
 
@@ -79,7 +79,7 @@ The following screenshots show you various ways we used modular design to constr
   src="../../assets/resources/beyond-the-dark/building-architecture/Architecture_Example_8.png"
   width="80%" />
 
-## Creating Trim Sheets
+## Create trim sheets
 
 1:1 textures are the way of the future, but they become costly in regards to memory budgets and time to create. For the space station, 90% of the architectural elements used a handful of swappable trim sheet sets, which are a set of texture maps that are laid out in either a vertical or horizontal fashion. Each row or column of the sheet has a unique look to it, giving you a bunch of different surface treatments to choose from when unwrapping a model, all while using one image sheet.
 
@@ -135,7 +135,7 @@ And here are examples of the same trim sheets being used on a large range of obj
 
 If you want to learn more about Trim Sheet UV Mapping, just search the topic on the web; there are many great tutorials out there.
 
-## Applying Surface Appearances
+## Apply surface appearances
 
 `Class.SurfaceAppearance` lets you specify new texture inputs to our Physically Based Rendering system for `Class.MeshPart|MeshParts` and lets you override the appearance of a mesh with advanced graphics options, including ColorMap, MetalnessMap, RoughnessMap, and NormalMap. It also makes use of the new dynamic cubemap system that Roblox uses for reflections in materials, such as chrome. For example, here's a side-by-side image of a mesh with SurfaceAppearance applied next to a mesh without it:
 
@@ -165,7 +165,7 @@ To apply `Class.SurfaceAppearance`:
 For more information on Physically Based Rendering (PBR), see Adobe's Substance Designer documentation [Part 1](https://substance3d.adobe.com/tutorials/courses/the-pbr-guide-part-1) and [Part 2](https://substance3d.adobe.com/tutorials/courses/the-pbr-guide-part-2).
 </Alert>
 
-## Increasing Efficiency with Packages
+## Increase efficiency with packages
 
 Packages let you create object instances throughout your Roblox experiences, so that updates you make to the package are published to all instances of that package. We used packages for almost every object we put into the station, so we didn't have to hunt down each placement if we needed to make tweaks. For example, we used over 1,000 wall panel instances of a package and were able to publish updates to them instantly by modifying the package.
 

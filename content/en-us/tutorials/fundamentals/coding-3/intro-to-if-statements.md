@@ -1,5 +1,5 @@
 ---
-title: Intro to If Statements
+title: Intro to if statements
 description: Learn how to code if statements in Roblox Lua.
 next: /tutorials/fundamentals/coding-3/traps-with-if-statements
 prev: /tutorials/fundamentals/coding-3/landing
@@ -21,7 +21,7 @@ end
 
 Code chunks using conditionals are **control structures.** Control structures are like flow diagrams in code form and can have several conditional statements.
 
-## If Statement practice
+## If statement practice
 
 These steps show how to create a script that changes a part's color if a statement is true.
 
@@ -34,7 +34,7 @@ These steps show how to create a script that changes a part's color if a stateme
 
 2. Create a new part named LieDetector.
 
-### Formatting If Statements
+### Format if statements
 
 **Conditions** can come in various forms but are often simple statements like math equations. For example, if 1+1 equals 2, then run some code. Like ordinary math equations, conditional can use **operators** such as plus (`+`) or less than (`<`) to evaluate statements.
 
@@ -71,7 +71,7 @@ One particular operator to be aware of is `==`; it stands for "is equal to." So 
 
 4. **Test** your code. If three plus three is equal to six, the part will turn green.
 
-## Checking a False Condition
+## Check a false condition
 
 Now, purposely change the statement to see what happens when the math equation is false.
 
@@ -85,7 +85,7 @@ Now, purposely change the statement to see what happens when the math equation i
 
 2. Test your code now. The part shouldn't turn green for a false statement.
 
-### Math Operators
+### Math operators
 
 The table below lists some common Lua operators. More information about operators can be found on [Luau Operators](../../../luau/operators.md).
 
@@ -116,14 +116,14 @@ The table below lists some common Lua operators. More information about operator
 </tbody>
 </table>
 
-### Comparison Operators
+### Comparison operators
 
 - `==` : Is equal to.
 - `~=` : Is not equal to.
 - `<` or `>` are used for less or greater than, respectively.
 - `<=` or `>=` are used for less/greater than or equal to, respectively.
 
-## Variables and Properties
+## Variables and properties
 
 Conditional statements are also used to evaluate the status of properties and variables. The following steps check whether a variable was successfully assigned a value.
 

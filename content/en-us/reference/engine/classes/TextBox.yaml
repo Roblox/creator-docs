@@ -53,7 +53,7 @@ description: |
   A TextBox supports text selection through its
   `Class.TextBox.CursorPosition|CursorPosition` and
   `Class.TextBox.SelectionStart|SelectionStart` properties. Using
-  `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal`, you can
+  `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal`, you can
   detect when a selection changes. Additionally, it is possible for players to
   copy and paste text within a TextBox, enabling basic clipboard support.
 
@@ -88,6 +88,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.ContentText
     summary: ''
     description: ''
@@ -105,25 +108,25 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.CursorPosition
     summary: |
-      Determines the offset of the text cursor in bytes, or -1 if there is no
+      Determines the offset of the text cursor in bytes, or `-1` if there is no
       cursor.
     description: |
-      **CursorPosition** determines the offset of the text cursor in bytes, or
-      -1 if the TextBox is not currently being edited. A value of 1 represents
-      the beginning, the position before the first byte in the
+      This property determines the offset of the text cursor in bytes, or `-1`
+      if the `Class.TextBox` is not currently being edited. A value of `1`
+      represents the position before the first byte in the
       `Class.TextBox.Text|Text` property. When used in conjunction with the
       `Class.TextBox.SelectionStart|SelectionStart` property, it is possible to
-      both get and set selected text within a TextBox.
+      both get and set selected text within a `Class.TextBox`.
 
-      ![A visual explanation of how CursorPosition works](/assets/legacy/TextBox.CursorPosition.jpg)
-
-      It should be noted that the units of this property is **bytes** and that
-      many unicode characters such as emoji are **longer than 1 byte**. For
-      instance, if a player types into the TextBox "Hello👋" &ndash; "Hello"
-      immediately followed by the waving hand sign &ndash; the cursor position
-      would be 10, not 7, since the emoji uses 4 bytes.
+      Note that the units of this property are **bytes** and that many unicode
+      characters such as emoji are longer than 1 byte. For instance, if a player
+      types in "Hello👋" ("Hello" immediately followed by the waving hand sign),
+      the cursor position would be `10`, not `7`, since the emoji uses 4 bytes.
     code_samples:
       - textbox-selections
     type: int
@@ -137,6 +140,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.Font
     summary: |
       Determines the font used to render text.
@@ -172,6 +178,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.FontFace
     summary: |
       Determines the font used to render text.
@@ -194,11 +203,14 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.FontSize
     summary: |
-      Determines the font size of a `Class.TextBox|GUI` object.
+      Determines the font size of a `Class.TextBox` object.
     description: |
-      This property determines the font size of a `Class.TextBox|GUI` object.
+      This property determines the font size of a `Class.TextBox` object.
     code_samples:
     type: FontSize
     tags:
@@ -215,6 +227,9 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.LineHeight
     summary: |
       Scales the spacing between lines of text in the `Class.TextBox`.
@@ -234,6 +249,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.MaxVisibleGraphemes
     summary: |
       The maximum number of graphemes the `Class.TextBox` can show.
@@ -259,6 +277,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.MultiLine
     summary: |
       When set to true, text inside a TextBox is able to move onto multiple
@@ -280,6 +301,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.OpenTypeFeatures
     summary: ''
     description: ''
@@ -295,6 +319,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.OpenTypeFeaturesError
     summary: ''
     description: ''
@@ -312,6 +339,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.PlaceholderColor3
     summary: |
       Sets the text color that gets used when no text has been entered into the
@@ -331,6 +361,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.PlaceholderText
     summary: |
       Sets the text that gets displayed when no text has been entered into the
@@ -350,6 +383,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.RichText
     summary: |
       Determines whether the TextBox renders the `Class.TextBox.Text` string
@@ -379,6 +415,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.SelectionStart
     summary: |
       Determines the starting position of a text selection, or -1 if no text is
@@ -404,6 +443,27 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: TextBox.ShouldEmitUpAndDownArrowEvents
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.ShowNativeInput
     summary: |
       If set to true, input native to the platform is used instead of Roblox's
@@ -423,6 +483,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.Text
     summary: |
       Determines the string rendered by the UI element.
@@ -460,6 +523,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextBounds
     summary: |
       The size of a UI element's text in offsets.
@@ -487,6 +553,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextColor
     summary: ''
     description: ''
@@ -507,16 +576,18 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextColor3
     summary: |
       Determines the color of rendered text.
     description: |
       This property determines the color of all the text rendered by a
-      `Class.GuiObject|GUI` element. This property along with
-      `Class.TextBox.Font`, `Class.TextBox.TextSize` and
-      `Class.TextBox.TextTransparency` will determine the visual properties of
-      text. Text is rendered after the text stroke
-      (`Class.TextBox.TextStrokeColor3`).
+      `Class.GuiObject` element. This property along with `Class.TextBox.Font`,
+      `Class.TextBox.TextSize` and `Class.TextBox.TextTransparency` will
+      determine the visual properties of text. Text is rendered after the text
+      stroke (`Class.TextBox.TextStrokeColor3`).
 
       It's important that text is easily read by players! Be sure to choose
       colors with little-to-no saturation, like white, grey, or black. Make sure
@@ -541,6 +612,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextDirection
     summary: ''
     description: ''
@@ -556,6 +630,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextEditable
     summary: |
       Determines whether the user can change the `Class.TextBox.Text|Text`.
@@ -578,6 +655,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextFits
     summary: |
       Whether the text fits within the constraints of the TextBox.
@@ -597,6 +677,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextScaled
     summary: |
       Changes whether text is resized to fit the GUI object that renders it.
@@ -657,6 +740,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextSize
     summary: |
       Determine the line height of text in offsets.
@@ -677,6 +763,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextStrokeColor3
     summary: |
       Determines the color of the text stroke (outline).
@@ -702,6 +791,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextStrokeTransparency
     summary: |
       Determines the transparency of the text stroke (outline).
@@ -734,6 +826,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextTransparency
     summary: |
       Determines the transparency of rendered text.
@@ -768,6 +863,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextTruncate
     summary: |
       Controls the truncation of the text displayed in this TextBox.
@@ -785,6 +883,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextWrap
     summary: ''
     description: ''
@@ -804,14 +905,17 @@ properties:
     serialization:
       can_load: true
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextWrapped
     summary: |
-      Determines if text wraps to multiple lines within the
-      `Class.GuiObject|GUI` element space, truncating excess text.
+      Determines if text wraps to multiple lines within the `Class.GuiObject`
+      element space, truncating excess text.
     description: |
       When enabled, this property will render text on multiple lines within a
-      `Class.TextBox|GUI` element's space so that `Class.TextBox.TextBounds`
-      will never exceed the `Class.GuiBase2d.AbsoluteSize` of the GUI element.
+      `Class.TextBox` element's space so that `Class.TextBox.TextBounds` will
+      never exceed the `Class.GuiBase2d.AbsoluteSize` of the GUI element.
 
       This is achieved by breaking long lines of text into multiple lines. Line
       breaks will prefer whitespace; should a long unbroken word exceed the
@@ -834,6 +938,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextXAlignment
     summary: |
       Determines the horizontal alignment of rendered text.
@@ -863,6 +970,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: TextBox.TextYAlignment
     summary: |
       Determines the vertical alignment of rendered text.
@@ -891,6 +1001,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods:
   - name: TextBox:CaptureFocus
     summary: |
@@ -907,6 +1020,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextBox:IsFocused
     summary: |
       Returns true if the textbox is focused, or false if it is not.
@@ -921,6 +1036,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextBox:ReleaseFocus
     summary: |
       Forces the client to unfocus the TextBox.
@@ -959,6 +1076,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: TextBox.FocusLost
     summary: |
@@ -996,6 +1115,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextBox.Focused
     summary: |
       Fires when the `Class.TextBox` gains focus.
@@ -1019,6 +1140,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: TextBox.ReturnPressedFromOnScreenKeyboard
     summary: ''
     description: ''
@@ -1028,4 +1151,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

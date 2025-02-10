@@ -1,5 +1,5 @@
 ---
-title: Performance Dashboard
+title: Performance dashboard
 description: Explains how to improve performance analytics metrics for your experience.
 ---
 
@@ -7,16 +7,16 @@ The **Performance** dashboard provides up-to-the-minute client and server metric
 
 ![An overview of the performance dashboard.](../../assets/analytics/performance/perf-dash-overview.png)
 
-## Accessing the Dashboard
+## Access the dashboard
 
-To access the Performance page, you must either be the experience owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#granting-group-permission).
+To access the Performance page, you must either be the experience owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#grant-group-permission).
 
 1. Navigate to the [Creations](https://create.roblox.com/dashboard/creations) page on the **Creator Hub**.
 2. Under the **Creator Hub** dropdown, select your account or the group that owns the experience.
 3. Select the experience.
 4. In the **Monitoring** dropdown, select **Performance**.
 
-## Using the Dashboard
+## Use the dashboard
 
 The dashboard begins with the current number of users, the number of servers they are spread across, and a device breakdown. For the dashboard to show client and server **charts** like the ones below, your experience must have at least 100 daily active users (DAU).
 
@@ -38,7 +38,7 @@ When reviewing charts or filtering:
 Percentile values are calculated smallest to largest, so for metrics where lower numbers are better (e.g. server CPU time), P10 represents the "best case" and P90 the "worst case" rather than the other way around.
 </Alert>
 
-## Client Charts
+## Client charts
 
 The **Client** tab includes the following charts, all of which are broken down by platform or operating system:
 
@@ -60,7 +60,7 @@ The **Client** tab includes the following charts, all of which are broken down b
         </tr>
         <tr>
             <td>Client frame rate</td>
-            <td>Line graph showing client frames per second. Persistent low frame rates or large drops may signal issues. For information on investigating client frame rate, see [Client Compute](../../performance-optimization/identifying.md#client-compute).</td>
+            <td>Line graph showing client frames per second. Persistent low frame rates or large drops may signal issues. For information on investigating client frame rate, see [Client Compute](../../performance-optimization/identify.md#client-compute).</td>
         </tr>
         <tr>
             <td>Client crash rate</td>
@@ -68,7 +68,7 @@ The **Client** tab includes the following charts, all of which are broken down b
         </tr>
         <tr>
             <td>Client memory usage</td>
-            <td>Line graph showing client memory usage by device type. Continual increases can indicate a memory leak. See [Memory](../../performance-optimization/identifying.md#memory).</td>
+            <td>Line graph showing client memory usage by device type. Continual increases can indicate a memory leak. See [Memory](../../performance-optimization/identify.md#client-memory).</td>
         </tr>
         <tr>
             <td>Client memory usage percentage</td>
@@ -77,7 +77,7 @@ The **Client** tab includes the following charts, all of which are broken down b
     </tbody>
 </table>
 
-## Server Charts
+## Server charts
 
 The **Server** tab includes the following charts:
 
@@ -91,22 +91,20 @@ The **Server** tab includes the following charts:
     <tbody>
         <tr>
             <td>Server CPU time</td>
-            <td>Stacked area chart showing milliseconds (ms) of processing time per frame. Values over 16.67 ms are highly undesirable; they can cause server frame rates to drop below 60.</td>
-        </tr>
-        <tr>
-            <td>Server memory usage</td>
-            <td>Stacked area chart showing server memory usage in MB. Try to keep this value below 3 GB. If this number stays above 3 GB or continually increases over time, investigate ways to [improve memory usage](../../performance-optimization/improving.md#script-memory-usage).</td>
+            <td>Stacked area chart showing milliseconds (ms) of processing time per frame. Values over 16.67 ms are highly undesirable; they can cause server frame rates to drop below 60. See [Server Compute](../../performance-optimization/identify.md#server-compute)</td>
         </tr>
         <tr>
             <td>Server frame rate</td>
-            <td>Line graph showing server frame rate in FPS. Ideally, this value is always 60. Server frame rate is capped at 60, and drops can reduce client frame rate and increase latency. See [Script Computation](../../performance-optimization/improving.md#script-computation).</td>
+            <td>Line graph showing server frame rate in FPS. Ideally, this value is always 60. Server frame rate is capped at 60, and drops can reduce client frame rate and increase latency. See [Script Computation](../../performance-optimization/improve.md#script-computation).</td>
         </tr>
-        {/*
+        <tr>
+            <td>Server memory usage</td>
+            <td>Stacked area chart showing server memory usage in MB. Try to keep this value below 50% of the [total server memory](../../performance-optimization/identify.md#server-memory). However, the chart doesn't show the total server memory, so another good guideline is to stay below 3 GB. If this number stays high or continually increases over time, investigate ways to [improve memory usage](../../performance-optimization/improve.md#script-memory-usage).</td>
+        </tr>
         <tr>
             <td>Server memory by age</td>
-            <td>Stacked area chart showing time that memory remains allocated before the engine garbage collects it. If one process group ages more than the other process groups over time, investigate a possible memory leak.</td>
+            <td>Stacked area chart showing server memory usage by server age. If memory usage increases significantly over the lifespan of the server, investigate possible memory leaks in the categories with the most growth, particularly [scripts](../../performance-optimization/improve.md#script-memory-usage), [physics](../../performance-optimization/improve.md#physics-memory-usage), and [rendering](../../performance-optimization/improve.md#rendering).</td>
         </tr>
-        */}
         <tr>
             <td>Cores used per server</td>
             <td>Line graph showing server CPU core count usage. Low core count usage combined with high server CPU time is an indicator that you should investigate [Multithreading](../../scripting/multithreading.md).</td>
@@ -122,28 +120,32 @@ The server CPU and memory charts default to the **Overall** view, but have dropd
 
 If a category is higher than usual or appears to be taking up a disproportionate amount of time, use the dropdown menu to drill down on the group and identify processes that could be causing issues.
 
-<img src="../../assets/analytics/performance/perf-dash-drilldown.png" alt="The server CPU time chart showing the physics dropdown." width="600px" />
+<img src="../../assets/analytics/performance/perf-dash-drilldown.png" alt="The server CPU time chart showing the physics dropdown." width="700px" />
 
 <Alert severity="success">
 To exclude a group or process from a chart, click its label in the legend.
 </Alert>
 
-The categories in the dropdown menu map to the ones in the [MicroProfiler](../../studio/microprofiler/index.md), so you can open the MicroProfiler, select **Detailed** or **Timers** modes, and then use the **Groups** menu to filter by the problematic process group.
+- CPU categories and tasks map to the ones in the [MicroProfiler](../../studio/microprofiler/index.md), so you can take [server dumps](../../studio/microprofiler/index.md#profile-the-server), select **Timers** mode, and then use the **Groups** menu to filter by the problematic process group.
 
-For example, if you spot a potential problem with the **assemble** process under the **Physics** group, you can find it under the same name in the MicroProfiler:
+  For example, if you spot a potential problem with the **assemble** process under the **Physics** group, you can find it under the same name in the MicroProfiler:
 
-<img src="../../assets/analytics/performance/perf-dash-micro.png" alt="The MicroProfiler showing the assemble process within the Physics group." width="500px" />
+  <img src="../../assets/analytics/performance/perf-dash-micro.png" alt="The MicroProfiler showing the assemble process within the Physics group." width="700px" />
+
+- Memory tags map to the ones in `Enum.DeveloperMemoryTag`, with the notable exception of **CoreMemory:Total**, which is equivalent to `Enum.DeveloperMemoryTag.Internal`. You can use the [Developer Console](../../studio/optimization/memory-usage.md#memory) to check tags for excessive usage. This image shows how you might use the Developer Console to investigate an issue with **PlaceMemory:GraphicsTexture** that you see in the dashboard:
+
+  <img src="../../assets/analytics/performance/perf-dash-dev.png" alt="The Developer Console showing the server memory view." width="750px" />
 
 ## Troubleshooting
 
 If you spot a potential problem, use the following steps to remediate and fix it:
 
 1. Check your recent updates and consider rolling them back if the impact to metrics is severe.
-2. See the [Identifying Performance Issues](../../performance-optimization/identifying.md) and [Improving Performance](../../performance-optimization/improving.md) for information on troubleshooting problems with server compute, client compute, and memory usage.
+2. See [Identify performance issues](../../performance-optimization/identify.md) and [Improve performance](../../performance-optimization/improve.md) for information on troubleshooting problems with server compute, client compute, and memory usage.
 3. Use built-in testing tools to further drill down on problems:
 
    - [Developer Console](../../studio/developer-console.md) for viewing error and log messages and detailed information on memory and networking.
    - [Script Profiler](../../studio/optimization/scriptprofiler.md) for identifying scripts that take up the most resources.
-   - The [MicroProfiler](../../studio/microprofiler/using-microprofiler.md) for viewing unoptimized portions of your experience visually.
+   - The [MicroProfiler](../../studio/microprofiler/index.md) for viewing unoptimized portions of your experience visually.
 
 4. Gather user feedback from your community.

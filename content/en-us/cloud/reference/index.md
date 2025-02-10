@@ -1,5 +1,5 @@
 ---
-title: Open Cloud API Reference
+title: Open Cloud API reference
 description: Get comprehensive API reference documentation for the entire Open Cloud platform.
 ---
 
@@ -11,5 +11,6 @@ The **Common Components** section of the reference documentation includes concep
 - [Patterns](../../cloud/reference/patterns.md) - Special considerations and patterns for making requests and handling responses.
 - [Types](../../cloud/reference/types.md) - How to handle common types used by Open Cloud in requests and responses.
 - [Errors](../../cloud/reference/errors.md) - Handling errors when working with resources.
+- [OpenAPI descriptions](../../cloud/reference/openapi.md) - Streamline development with OpenAPI descriptions of Open Cloud APIs.
 
 Each page in the **Resources** section represents a resource and includes all available operations for that resource.

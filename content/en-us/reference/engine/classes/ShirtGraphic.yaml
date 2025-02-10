@@ -41,6 +41,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
   - name: ShirtGraphic.Graphic
     summary: |
       The content ID link pointing to the `Class.ShirtGraphic` texture hosted on
@@ -60,15 +63,18 @@ properties:
       insert the t-shirt into the workspace, for example:
 
       ```
+      local InsertService = game:GetService("InsertService")
+      local Workspace = game:GetService("Workspace")
+
       local webURL = "https://www.roblox.com/catalog/2591161/Sword-Fight-on-the-Heights-Ring-of-Fire-T-Shirt"
       local assetId = tonumber(string.match(webURL, "%d+") or 0)  -- Extract the number
 
       local success, model = pcall(function()
-      	return game:GetService("InsertService"):LoadAsset(assetId)
+      	return InsertService:LoadAsset(assetId)
       end)
 
       if success then
-      	model.Parent = workspace
+      	model.Parent = Workspace
       end
       ```
     code_samples:
@@ -83,6 +89,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Avatar
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

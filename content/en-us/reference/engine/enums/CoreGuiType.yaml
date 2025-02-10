@@ -1,11 +1,11 @@
 name: CoreGuiType
 type: enum
 summary: |
-  Represents all `Class.CoreGui` "types" which are available, such as the
-  `Class.Backpack` and text chat window.
+  Represents all available `Class.CoreGui` "types" such as the `Class.Backpack`
+  and text chat window.
 description: |
-  The **CoreGuiType** enum represents all `Class.CoreGui` "types" which are
-  available, such as the `Class.Backpack` and text chat window.
+  This enum represents all available `Class.CoreGui` "types" such as the
+  `Class.Backpack` and text chat window.
 code_samples:
 tags: []
 deprecation_message: ''

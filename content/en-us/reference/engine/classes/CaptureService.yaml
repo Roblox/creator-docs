@@ -27,7 +27,20 @@ methods:
       Instead, a temporary `contentId` is created to identify the new capture.
 
       The `onCaptureReady` callback can be used to prompt the user to save or
-      share the screenshot.
+      share the screenshot:
+
+      ```lua
+      local CaptureService = game:GetService("CaptureService")
+
+      -- Reference to an ImageLabel parent of the script containing this code
+      local imageLabel = script.Parent
+
+      local function onCaptureReady(contentId)
+      	imageLabel.Image = contentId
+      end
+
+      CaptureService:CaptureScreenshot(onCaptureReady)
+      ```
     code_samples: []
     parameters:
       - name: onCaptureReady
@@ -43,6 +56,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CaptureService:PromptSaveCapturesToGallery
     summary: |
       Prompts the user to save specified captures to their gallery.
@@ -71,19 +86,25 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CaptureService:PromptShareCapture
     summary: |
-      Prompts the user to share a specified screenshot capture. .
+      Prompts the user to share a specified screenshot capture.
     description: |
       This method prompts the user to share the screenshot identified by the
       provided `contentId` using the native share sheet on their device.
 
-      The capture image will be shared along with an invite link to the
-      experience when supported. Not all devices/apps support including both a
-      screenshot and invite link.
+      The capture image is shared along with an invite link to the experience
+      when supported. Not all devices support including both a screenshot and
+      invite link.
 
       The `launchData` will be available in the `launchData` field for users who
       join through the invite link.
+
+      To avoid an error when calling this method, first call
+      `Class.PolicyService:GetPolicyInfoForPlayerAsync()` and check that
+      `IsContentSharingAllowed` is true in the returned dictionary.
     code_samples: []
     parameters:
       - name: contentId
@@ -113,44 +134,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: CaptureService:GetCaptureUploadDataAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: capturePath
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: Dictionary
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-  - name: CaptureService:PostToFeedAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: capturePath
-        type: string
-        default:
-        summary: ''
-      - name: feedCategory
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: Dictionary
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: CaptureService.CaptureBegan
     summary: |
@@ -165,6 +150,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CaptureService.CaptureEnded
     summary: |
       Fires after a capture finishes.
@@ -178,6 +165,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CaptureService.CaptureSaved
     summary: ''
     description: ''
@@ -194,6 +183,8 @@ events:
       `Class.CaptureService.UserCaptureSaved|UserCaptureSaved` event.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: CaptureService.UserCaptureSaved
     summary: |
       Fires when the user saves a capture.
@@ -212,4 +203,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

@@ -231,6 +231,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:BindActionAtPriority
     summary: |
       Behaves like `Class.ContextActionService:BindAction()|BindAction` but also
@@ -284,6 +286,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:BindActionToInputTypes
     summary: |
       Binds _functionToBind_ to input events such as key presses, mouse
@@ -292,7 +296,7 @@ methods:
       This function binds _functionToBind_ to input events such as key presses,
       mouse movement, or controller input. The specific input types the engine
       listens for are listed as parameters of BindAction. Whenever a player uses
-      any of these input types, the Roblox engine calls "functionToBind".
+      any of these input types, the Roblox Engine calls "functionToBind".
       BindAction sets the priorityLevel via `Enum.ContextActionPriority` to
       Default.Value, which is 2000. Use `Class.ContextActionService:GetButton()`
       to control the priority of bound events.
@@ -349,6 +353,8 @@ methods:
       which should be used in all new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:BindActivate
     summary: |
       Bind a `Enum.KeyCode` with a specific `Enum.UserInputType` to trigger
@@ -383,6 +389,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:GetAllBoundActionInfo
     summary: |
       Get a table of information about all bound actions (key is the name passed
@@ -406,6 +414,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:GetBoundActionInfo
     summary: |
       Get a table of information about a bound action given its name originally
@@ -514,6 +524,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:GetCurrentLocalToolIcon
     summary: |
       Return the `Class.BackpackItem.TextureId` of a `Class.Tool` currently
@@ -534,6 +546,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:SetDescription
     summary: |
       Given the name of a bound action with a touch button, sets the description
@@ -571,6 +585,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:SetImage
     summary: |
       If `actionName` key contains a bound action, then `image` is set as the
@@ -608,6 +624,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:SetPosition
     summary: |
       Given the name of a bound action with a touch button, sets the position of
@@ -645,6 +663,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:SetTitle
     summary: |
       Given the name of a bound action with a touch button, sets the text shown
@@ -682,6 +702,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:UnbindAction
     summary: |
       Unbind an action from input given its name.
@@ -712,6 +734,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:UnbindActivate
     summary: |
       Unbind a `Enum.KeyCode` with a specific `Enum.UserInputType` from
@@ -741,6 +765,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:UnbindAllActions
     summary: |
       Removes all functions bound. No actionNames will remain. All touch buttons
@@ -758,6 +784,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService:GetButton
     summary: |
       Retrieves a `Class.ImageButton` of a
@@ -789,6 +817,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: ContextActionService.LocalToolEquipped
     summary: |
@@ -805,6 +835,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: ContextActionService.LocalToolUnequipped
     summary: |
       Fires when the current player unequips a `Class.Tool`.
@@ -820,4 +852,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

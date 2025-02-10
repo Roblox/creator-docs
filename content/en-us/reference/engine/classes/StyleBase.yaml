@@ -18,12 +18,14 @@ methods:
     code_samples: []
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: StyleBase:InsertStyleRule
     summary: ''
     description: ''
@@ -44,13 +46,15 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: StyleBase:SetStyleRules
     summary: ''
     description: ''
     code_samples: []
     parameters:
       - name: rules
-        type: Objects
+        type: Instances
         default:
         summary: ''
     returns:
@@ -60,6 +64,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: StyleBase.StyleRulesChanged
     summary: ''
@@ -70,4 +76,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

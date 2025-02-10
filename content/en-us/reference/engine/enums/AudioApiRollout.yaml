@@ -1,23 +1,33 @@
 name: AudioApiRollout
 type: enum
-summary: ''
-description: ''
+summary: |
+  Used to determine whether voice chat is represented and controlled by
+  `Class.AudioDeviceInput` objects.
+description: |
+  Used to determine whether voice chat is represented and controlled by
+  `Class.AudioDeviceInput` objects.
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: Disabled
-    summary: ''
+    summary: |
+      Voice chat will use an internal voice chat implementation that is
+      automatic and hidden.
     value: 0
     tags: []
     deprecation_message: ''
   - name: Automatic
-    summary: ''
+    summary: |
+      Currently means the same thing as `Disabled`, but will be updated to mean
+      `Enabled` in the future.
     value: 1
     tags: []
     deprecation_message: ''
   - name: Enabled
-    summary: ''
+    summary: |
+      Voice chat can be customized or controlled via
+      `Class.AudioDeviceInput|AudioDeviceInputs`.
     value: 2
     tags: []
     deprecation_message: ''

@@ -1,0 +1,33 @@
+name: AnnotationRequestType
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Unknown
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Create
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Resolve
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Delete
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Edit
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''

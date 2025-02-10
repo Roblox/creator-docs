@@ -41,6 +41,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: MemoryStoreHashMap:ListItemsAsync
     summary: |
       Returns a `Class.MemoryStoreHashMapPages` object for enumerating through
@@ -66,6 +68,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: MemoryStoreHashMap:RemoveAsync
     summary: |
       Removes an item from the hash map.
@@ -87,6 +91,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: MemoryStoreHashMap:SetAsync
     summary: |
       Sets the value of a key in the hash map.
@@ -120,6 +126,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: MemoryStoreHashMap:UpdateAsync
     summary: |
       Retrieves the value of a key from a hash map and lets you update it to a
@@ -170,5 +178,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

@@ -1,13 +1,13 @@
 ---
-title: Memory Store Observability
+title: Memory store observability
 description: Explains how to use the observability dashboard for memory stores.
 ---
 
 The memory stores observability dashboard provides real-time charts on your memory usage and API requests. It also has a built-in alert system that notifies you by email when an issue arises to help you troubleshoot in sync. For further information about specific errors, you can view your [Error Report](../../production/analytics/error-report.md) to find the error logs.
 
-## Accessing the Dashboard
+## Access the dashboard
 
-The memory stores observability dashboard is available for any experience using `Class.MemoryStoreService`, but you must either be the experience owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#granting-group-permission) to access the dashboard.
+The memory stores observability dashboard is available for any experience using `Class.MemoryStoreService`, but you must either be the experience owner or have [analytics group permissions](../../production/analytics/analytics-dashboard.md#grant-group-permission) to access the dashboard.
 
 To access the dashboard:
 
@@ -16,7 +16,7 @@ To access the dashboard:
 3. Select the experience.
 4. In the **Monitoring** dropdown, select **Memory Stores**.
 
-## Available Charts
+## Available charts
 
 The dashboard includes two categories of line graphs:
 
@@ -30,11 +30,11 @@ The dashboard includes two categories of line graphs:
 
 The chart contains data for the past 30 days, and you can select to view a custom time range with the selector at the top of the page. If you select a time range earlier than 30 days, the system returns a **Request Failed** error.
 
-## Response Status Codes
+## Response status codes
 
 The Observability Dashboard's **Request Count by Status** and **Requests by API x Status** charts include status codes of API responses that you can use to understand and troubleshoot errors. For a table that lists and describes all of these status codes, see [Observability](index.md#observability). In addition, for information on how to resolve these errors, or the specific quota or limit that an error relates to, see [Troubleshooting](index.md#troubleshooting) and [Limits and Quotas](index.md#limits-and-quotas), respectively.
 
-## Notification Alerts
+## Notification alerts
 
 The email alert system automatically detects and sends you alerts of memory store usage issues that can harm the performance of your experience. There are two types of alerts:
 
@@ -45,7 +45,7 @@ When your experience triggers two types of alerts at the same time, the dashboar
 
 Currently, the system has four built-in alerts for memory usage and API requests.  If your experience exceeds an alerting threshold, the system notifies you at most once a day for each alert. When receiving an email alert, you should view the dashboard and take actions to prevent degraded performance.
 
-### Memory Usage Alerts
+### Memory usage alerts
 
 The system sends the following memory usage alerts:
 
@@ -60,7 +60,7 @@ These issues usually occur when you overpopulate a memory store data structure w
 
 To prevent and resolve these issues, apply [best practices](../../cloud-services/memory-stores/index.md#best-practices) to keep track of data structures you're actively using and set up a mechanism for cleaning up processed data.
 
-### API Request Alerts
+### API request alerts
 
 The system sends the following API request alerts:
 

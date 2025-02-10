@@ -25,9 +25,9 @@ properties:
       aren't any larger than the grid itself.
 
       This property updates as soon as it's read. It will not fire a
-      `Class.Instance.Changed` event immediately after the UI has changed, but
-      if the value is read, it will become current and a
-      `Class.Instance.Changed` event will fire on the next render step.
+      `Class.Object.Changed` event immediately after the UI has changed, but if
+      the value is read, it will become current and a `Class.Object.Changed`
+      event will fire on the next render step.
     code_samples:
     type: Vector2
     tags:
@@ -42,6 +42,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIGridStyleLayout.FillDirection
     summary: |
       Determines the axis in which UI objects are laid out.
@@ -68,6 +71,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIGridStyleLayout.HorizontalAlignment
     summary: |
       Determines the horizontal alignment of UI elements within the parent
@@ -84,10 +90,13 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Behavior
+    category: Alignment
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIGridStyleLayout.SortOrder
     summary: |
       Determines the order in which child UI objects are placed in a layout.
@@ -116,6 +125,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: UIGridStyleLayout.VerticalAlignment
     summary: |
       Determines the vertical alignment of UI elements within the parent
@@ -132,10 +144,13 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Behavior
+    category: Alignment
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods:
   - name: UIGridStyleLayout:ApplyLayout
     summary: |
@@ -163,6 +178,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: UIGridStyleLayout:SetCustomSortFunction
     summary: |
       Sets the function used to determine the order of elements when SortOrder
@@ -192,5 +209,7 @@ methods:
       by Name or LayoutOrder.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

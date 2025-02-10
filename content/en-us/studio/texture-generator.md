@@ -30,7 +30,7 @@ The **Texture Generator** tool is designed to quickly create custom textures for
 
 <figcaption><sup>1</sup> When generating a texture for a `Class.Model` group of `Class.MeshPart|MeshParts`, the meshes should be arranged in a sensible way such that a unified body is formed. Avoid generating a texture for an arbitrary group of meshes scattered about the model's bounds, or for more than one identical mesh in the same operation.</figcaption>
 
-## Generating Textures
+## Generate textures
 
 To begin generating textures, navigate to the [Model](../studio/model-tab.md) tab and open the **Texture Generator** tool.
 
@@ -88,7 +88,7 @@ With the tool's window open:
    Final generated textures will be a close match to what you observe in the preview pane, but may not be an exact match. You can continue to iterate on a style prompt and compare previous versions as outlined in [Managing Textures](#managing-textures).
 	 </Alert>
 
-## Managing Textures
+## Manage textures
 
 Generated textures appear in the **Saved Textures** section of the tool's window. For each texture, you can click the **&ctdot;** to access various options.
 
@@ -121,23 +121,23 @@ Generated textures appear in the **Saved Textures** section of the tool's window
   </tbody>
 </table>
 
-## Advanced Options
+## Advanced options
 
 Expanding the **Advanced Options** section in the tool's window allows you to configure the following aspects.
 
 <img src="../assets/studio/texture-generator/Advanced-Options.png" width="280" alt="Advanced Options panel in tool window" />
 
-### Seed Control
+### Seed control
 
 You can choose to either randomize the seed or set a specific seed for texture generation. Setting a specific seed before generating a texture ensures you get consistent results each time you use a specific prompt.
 
-### Generation Angle
+### Generation angle
 
 Allows you to set a primary generation angle to prioritize during the preview generation phase to ensure the most important areas of your mesh are visible and able to be textured. This angle is also controlled by clicking and dragging the mesh in the preview window.
 
 See [Best Practices](#best-practices) for detailed recommendations on choosing a generation angle.
 
-### Smart UV Unwrap
+### Smart UV unwrap
 
 In 3D modeling, a **UV map** is a 2D representation of the surface of a 3D model, allowing 2D textures to be accurately applied to the 3D model. UV coordinates **U** and **V** refer to the horizontal and vertical axes of this 2D space, similar to the **X** and **Y** axes in a 2D graph.
 
@@ -145,17 +145,17 @@ For the texture generator tool to create well-formed textures, your mesh's under
 
 Selecting the **Smart UV Unwrap** option will take a mesh with no UVs (or incompatible UVs) and apply the necessary UV coordinates for texturing. If your UVs are compatible, they won't be affected and you can use your mesh as‑is.
 
-### Specify Front View
+### Specify front view
 
 When this setting is enabled, the [generation angle](#generation-angle) selected during the preview stage is specified as the "front" of your mesh. This allows the tool to better texture meshes with a clear front and back by identifying each side, resulting in more consistent and coherent textures. This is particularly helpful for objects with a clear front and back, like avatars, animals, and clothing.
 
 <GridContainer numColumns="2">
 <figure>
 <Grid container spacing={1}>
-<Grid item xs={6} lg={6}>
+<Grid item XSmall={6} XLarge={6}>
 <img src="../assets/studio/texture-generator/Specify-Front-View-Bad-Front.jpg" alt="Front view of character's lab coat with Specify Front View disabled" />
 </Grid>
-<Grid item xs={6} lg={6}>
+<Grid item XSmall={6} XLarge={6}>
 <img src="../assets/studio/texture-generator/Specify-Front-View-Bad-Back.jpg" alt="Back view of character's lab coat with Specify Front View disabled" />
 </Grid>
 </Grid>
@@ -167,10 +167,10 @@ When this setting is enabled, the [generation angle](#generation-angle) selected
 </figure>
 <figure>
 <Grid container spacing={1}>
-<Grid item xs={6} lg={6}>
+<Grid item XSmall={6} XLarge={6}>
 <img src="../assets/studio/texture-generator/Specify-Front-View-Good-Front.jpg" alt="Front view of character's lab coat with Specify Front View enabled" />
 </Grid>
-<Grid item xs={6} lg={6}>
+<Grid item XSmall={6} XLarge={6}>
 <img src="../assets/studio/texture-generator/Specify-Front-View-Good-Back.jpg" alt="Back view of character's lab coat with Specify Front View enabled" />
 </Grid>
 </Grid>
@@ -182,10 +182,10 @@ Same prompt with **Specify Front View** enabled, yielding correct "front" and "b
 </figure>
 </GridContainer>
 
-## Best Practices
+## Best practices
 
 <Tabs>
-<TabItem label="Prompting Tips">
+<TabItem label="Prompting tips">
 The following prompting tips enable the tool to provide better and more consistent results.
 
 - Provide as much detail as possible in your prompt. Short, vague prompts will lead to inconsistent or unexpected results.
@@ -193,14 +193,14 @@ The following prompting tips enable the tool to provide better and more consiste
 - Use descriptive phrases instead of single words for key items, for example "worn&nbsp;leather" instead of just "leather."
 - Add styling cues like "cinematic," "photorealistic," "cartoon," or "low&nbsp;poly" to influence the overall look.
 </TabItem>
-<TabItem label="Generation Angle">
+<TabItem label="Generation angle">
 The [generation angle](#generation-angle) sets the most important view of your mesh which will be prioritized during generation. Changing this angle can often help eliminate inconsistencies in textures.
 
 - Setting the generation angle to highlight the meaningful faces of your mesh will result in better generations.
 - For flat objects like plates, swords, and fences, make sure the generation angle displays a view with a high surface area.
 - For humanoid and animal meshes, experiment with different generation angles, such as a head-on view of the face and a side view profile, to find the most consistent and coherent texture.
 </TabItem>
-<TabItem label="Iterative Refinement">
+<TabItem label="Iterative refinement">
 Generating the most suitable textures is an iterative process. It helps to preview often and tweak prompts incrementally to reach your vision.
 
 - If a texture doesn't meet your expectations, identify what to change instead of starting over. For example, tweak the color or pattern description.

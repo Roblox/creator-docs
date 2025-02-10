@@ -3,46 +3,49 @@ type: class
 category: Scripting
 memory_category: Script
 summary: |
-  A type of script object that runs once when `require` is called with it.
-  Returns exactly one value, usually a table of functions, to used by other
+  A script type that runs once when `Global.LuaGlobals.require()` is called with
+  it. Returns exactly one value, usually a table of functions, to used by other
   scripts. Useful for compartmentalizing code.
 description: |
-  A ModuleScript is a type of Lua source container that runs once and must
-  return exactly one value. This value is then returned by a call to `require`
-  given the ModuleScript as the only argument. ModuleScripts run once and only
-  once per Lua environment and return the exact same value for subsequent calls
-  to `require`.
+  A `Class.ModuleScript` is a script type that returns exactly one value by a
+  call to `Global.LuaGlobals.require()`. `Class.ModuleScript|ModuleScripts` run
+  once and only once per Lua environment and return the exact same value for
+  subsequent calls to `Global.LuaGlobals.require()`.
 
-  ModuleScripts are essential objects for adhering to the don't-repeat-yourself
-  (DRY) principle. When you write a function, write it only once and use it
-  everywhere. Having multiple copies of a function is disastrous when you need
-  to change that behavior. So, you should define functions or groups of
-  functions in ModuleScripts and have your Scripts and LocalScripts call
-  `require` on your ModuleScripts. Keep your code organized!
+  `Class.ModuleScript|ModuleScripts` are essential objects for adhering to the
+  "Don't Repeat Yourself" (DRY) principle, allowing you to write a function only
+  once and use it everywhere. Having multiple copies of a function is
+  problematic when you need to change their behavior, so you should define
+  functions or groups of functions in `Class.ModuleScript|ModuleScripts` and
+  have your `Class.Script|Scripts` and `Class.LocalScript|LocalScripts` call
+  `Global.LuaGlobals.require()` on those modules.
 
-  It's important to know that return values from ModuleScripts are independent
-  with regards to LocalScripts and Scripts, and other environments like the
-  Command Bar. Using `require` on a ModuleScript in a LocalScript will run the
-  code on the client, even if a Script did so already on the server. Similarly,
-  in Roblox Studio, using `require` on a ModuleScript in the hierarchy with the
-  Command Bar will give a similar behavior. So, be careful if you are using a
-  ModuleScript on the client and server at the same time, or debugging it within
-  Studio.
+  It's important to know that return values from
+  `Class.ModuleScript|ModuleScripts` are independent with regards to
+  `Class.Script|Scripts` and `Class.LocalScript|LocalScripts`, and other
+  environments like the
+  [Command&nbsp;Bar](../../../studio/ui-overview.md#command-bar). Using
+  `Global.LuaGlobals.require()` on a `Class.ModuleScript` in a
+  `Class.LocalScript` will run the code on the client, even if a `Class.Script`
+  did so already on the server. Therefore, be careful if you're using a
+  `Class.ModuleScript` on the client and server at the same time, or debugging
+  it within Studio.
 
-  Note that the first call to `require` on a ModuleScript will not yield (halt)
-  unless the ModuleScript yields (e.g. calls `Library.task.wait()`). The current
-  thread that called `require` will yield until a ModuleScript returns a value.
-  A run time error is generated if this doesn't happen. If a ModuleScript is
-  attempting to `require` another ModuleScript that in turn tries to `require`
-  it, the **thread will hang and never halt (cyclic `require` calls do not
-  generate errors).** Be mindful of your module dependencies in large projects!
+  Note that the first call to `Global.LuaGlobals.require()` will not yield
+  (halt) unless the `Class.ModuleScript` yields (calls `Library.task.wait()` for
+  example), in which case the current thread that called
+  `Global.LuaGlobals.require()` will yield until the `Class.ModuleScript`
+  returns a value. If a `Class.ModuleScript` is attempting to
+  `Global.LuaGlobals.require()` another `Class.ModuleScript` that in turn tries
+  to `Global.LuaGlobals.require()` it, the thread will **hang and never halt**
+  (cyclic `Global.LuaGlobals.require()` calls do not generate errors). Be
+  mindful of your module dependencies in large projects!
 
   If a `Class.ModuleScript` is uploaded to Roblox and the root module has the
   name set to `MainModule`, it can be uploaded as a model and required using
   `Global.LuaGlobals.require()` with the model's asset ID. Then it can be loaded
   into your experience, although this logic only works on the server and will
-  error on the client. If other users want to use the module, **it must be
-  public**.
+  error on the client. If other users want to use the module, it must be public.
 code_samples:
   - Simple-ModuleScript-Example
   - Simple-ModuleScript-Usage
@@ -74,6 +77,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ModuleScript.Source
     summary: |
       The code to be executed.
@@ -88,13 +93,17 @@ properties:
     tags: []
     deprecation_message: ''
     security:
-      read: PluginSecurity
-      write: PluginSecurity
+      read: None
+      write: None
     thread_safety: ReadSafe
     category: Data
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - PluginOrOpenCloud
+    writeCapabilities:
+      - PluginOrOpenCloud
 methods: []
 events: []
 callbacks: []

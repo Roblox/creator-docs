@@ -1,5 +1,5 @@
 ---
-title: PBR Textures (Optional)
+title: PBR textures (optional)
 description: PBR textures are high-definition texture maps that can elevate your custom characters.
 next: /art/characters/creating/caging
 prev: /art/characters/creating/texturing-face
@@ -13,4 +13,4 @@ Physically-based rendering (PBR) textures use multiple texture maps to define ho
   <figure><img src="../../../assets/modeling/surface-appearance/Layered-Clothing-Example-2.jpg" /><figcaption>PBR textures allow for virtually any type of material surface, such as leather and denim.</figcaption></figure>
 </GridContainer>
 
-Although each template includes PBR textures, for the purpose of demonstrating the basic texturing process within Blender, this tutorial doesn't cover the PBR texturing process. For more information and references on advanced texturing, see [PBR Textures](../../../art/modeling/surface-appearance.md).
+Although each template includes PBR textures, for the purpose of demonstrating the basic texturing process within Blender, this tutorial doesn't cover the PBR texturing process. For more information and references on advanced texturing, see [PBR textures](../../../art/modeling/surface-appearance.md).

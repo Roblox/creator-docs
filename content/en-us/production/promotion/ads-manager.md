@@ -7,9 +7,9 @@ description: The Ads Manager is where advertisers can manage ad campaigns, ads r
 This feature is in beta.
 </Alert>
 
-**Ads Manager** offers advertisers valuable control over their ad campaigns, empowering them to create, optimize, and measure ads effectively while reaching their campaign objectives. Advertisers can use this tool to manage their ad campaigns, ads reporting, and ads billings in one place. Ads Manager allows you to create campaigns for **Immersive Ads** for ad units within experiences ([image](#image-ads) ads, [video](#video-ads) ads, [portal](#portal-ads) ads), [**sponsored experiences**](#sponsored-experiences), which appear on the Home page, and [search ads](./search-ads.md) that appear on Search results.
+**Ads Manager** offers advertisers valuable control over their ad campaigns, empowering them to create, optimize, and measure ads effectively while reaching their campaign objectives. Advertisers can use this tool to manage their ad campaigns, ads reporting, and ads billings in one place. Ads Manager allows you to create campaigns for **immersive ads** for ad units within experiences ([image](#image-ads) ads, [video](#video-ads) ads, [portal](#portal-ads) ads), [**sponsored experiences**](#sponsored-experiences), which appear on the Home page, and [search ads](./search-ads.md) that appear on Search results.
 
-## Creating an Ad Account
+## Create an ad account
 
 To access the Ads Manager, you need an ad account. Create an ad account with a verified email on a Roblox account registered for users aged 13 years or older.
 
@@ -23,7 +23,7 @@ To create an ad account:
 
    <img src="../../assets/promotion/ads-manager/Create-Ad-Account.png" width="780" />
 
-## Adding a Payment Method
+## Add a payment method
 
 Before you can create and manage ads on Roblox, you first need to provide a payment method. To add a payment method to your ad account:
 
@@ -33,9 +33,9 @@ Before you can create and manage ads on Roblox, you first need to provide a paym
 
 2. There are two payment methods available for selection:
    1. **Credit or Debit Card:** Credit or debit cards are available for users 18 and above. A temporary $1.00 USD hold will be placed on the card and refunded after verification is complete within 7 business days.
-   2. **Robux Ad Credit:** Converting Robux into ad credits to fund your campaigns is available for all users 13 and up. For more information, see [Converting Robux to Ad Credits](#converting-robux-to-ad-credits).
+   2. **Robux Ad Credit:** Converting Robux into ad credits to fund your campaigns is available for all users 13 and up. For more information, see [Convert Robux to ad credits](#convert-robux-to-ad-credits).
 
-### Converting Robux to Ad Credits
+### Convert Robux to ad credits
 
 Any Roblox user aged 13 and above can convert Robux to ad credit and utilize it for running ads. This accessibility ensures that a wide range of creators can participate in the advertising ecosystem.
 
@@ -52,7 +52,7 @@ This minimum conversation requirement streamlines the conversion process, preven
    Converting Robux to ad credit is a permanent and irreversible action. Once you convert Robux to ad credits they can only be spent on campaigns within the Ads Manager.
 </Alert>
 
-## Creating Ad Campaigns
+## Create ad campaigns
 
 An **ad campaign** is a coordinated series of ads designed to achieve a specific goal. To create an ad campaign, you must do the following:
 
@@ -63,18 +63,18 @@ An **ad campaign** is a coordinated series of ads designed to achieve a specific
 Before launching your campaign, you'll be able to [review your campaign details](#review-the-campaign) before submitting it to Roblox for moderation and approval.
 
 <Alert severity="warning">
-   Advertising paid experiences is prohibited. You will not be able to select paid experiences in the dropdown menu during the ad selection process.
+   Advertising paid experiences and restricted (17+) experiences is only available with sponsored and search ads.
 </Alert>
 
-### Define the Campaign
+### Define the campaign
 
 Campaigns are defined by their **campaign objective** and **budgeting and scheduling** parameters.
 
 Campaign objectives are divided into three categories:
 
-- **Awareness:** Campaigns focused on awareness show image or autoplaying video ads to increase awareness of your brand within an experience.
-- **Visits:** Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form of either **Immersive Ads** placed within portal ad units in publisher experiences, or as **sponsored experiences** on the Home page. Advertisers are not able to promote their 17+ experiences using the **Visits** objective.
-- **Video Views:** Campaigns focused on 15-second click-to-play video views to engage audiences in-experience.
+- **Awareness**: Campaigns focused on awareness show image or autoplaying video ads to increase awareness of your brand within an experience.
+- **Visits**: Campaigns focused on visits aim to attract people to your experience on Roblox. These can take the form of either **immersive ads** placed within portal ad units in publisher experiences, or as **sponsored experiences** on the Home page. Advertisers are not able to promote their 17+ experiences using the **Visits** objective.
+- **Video Views**: Campaigns focused on 15-second click-to-play video views to engage audiences in-experience.
 
 Budgeting and scheduling parameters control campaign spending and duration. There are two different types of budgets:
 
@@ -111,79 +111,104 @@ To set up an ad campaign:
 6. Name your campaign and click the **NEXT** button.
    <img src="../../assets/promotion/ads-manager/Campaign-Name-Next.png" width="780" />
 
-### Define Ad Sets
+### Define ad sets
 
-**Ad sets** are a group of ads within a campaign that share the same targeting and bidding parameters. When defining an ad set, you can customize the audience, ad placement, brand suitability, and bidding settings.
+Ad sets are a group of ads within a campaign that share the same targeting and bidding parameters. When defining an ad set, you can customize your ad campaigns according to the following areas:
 
-**Audience** settings on Roblox enables you to choose who will see your ad. You're able to determine their geographical location, gender, age, and what device they're playing on.
+- **Audience settings** - Choose who sees your ad according to their geographical location, gender, age, and what device they're playing on.
+- **Ad placement** - Determine where your ads are discoverable on the platform, such as in search results or within experiences.
+- **Brand Suitability** - Filter what kinds of experiences your ads are served in according to the content within the experiences.
 
-**Ad placement** refers to where your ads will be discoverable.
+By adjusting all three categories, you can control who sees your ad to meet the needs of your respective campaign goals. To define an ad set:
 
-- Advertisers with a visits campaign objective can choose between an **in-experience portal** within an experience or a **sponsored experience** on the Home page.
-
-- Advertisers with an awareness campaign objective can only choose an **in-experience video** or **image**.
-
-**Brand Suitability** controls give you the ability to filter what kinds of experiences your ads will be served in. You're able to select among three inventory tiers: Full, Standard, and Limited.
-
-- **Full Inventory** — Ads served in experiences with **All Ages**, **9+**, **13+**, and **17+** age recommendations. Choosing this option will maximize your reach.
-- **Standard Inventory** — Ads served in experiences with **All Ages** and **9+** age recommendations.
-- **Limited Inventory** — Ads served in experiences with **All Ages** age recommendations. Choosing this option will lower your reach and may increase CPM.
-
-<table>
-<thead>
-  <tr>
-    <th>**Brand Suitability Tiers**</th>
-    <th>Experiences Eligible to Serve Ads</th>
-    <th>Users Eligible to See Ads</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>**Full Inventory**</td>
-    <td>All Ages, 9+, 13+, 17+</td>
-    <td>13+, except in 17+ experiences where users must be 17+ and ID-verified</td>
-  </tr>
-  <tr>
-     <td>**Standard Inventory** </td>
-    <td>All ages, 9+</td>
-    <td>Users age 13+</td>
-  </tr>
-   <tr>
-     <td>**Limited Inventory** </td>
-    <td>All Ages</td>
-    <td>Users age 13+</td>
-  </tr>
-</tbody>
-</table>
-
-These Brand Suitability controls only affect which experiences ads can appear in, not who can see an ad. Per our [advertising standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards), no users under the age of 13 will see Roblox ads. For example, if an advertiser chooses Standard Inventory, their ads may be shown in an experience with a 9+ age recommendation to audiences who are 13+.
-
-Regardless of what option you select, your ads will not be shown in experiences that do not comply with the Roblox community standards. For more information about what type of content gets shown for each inventory type, see [Brand Suitability Tables](#brand-suitability-tables).
-
-**Bidding** refers to advertisers competing to show their ads to players through the available ad units placed in experiences. Bids are reflected as CPM (cost-per-thousand impressions). Your **max bid** for CPM is the maximum amount you're willing to pay every thousand impressions. For more information about Roblox's bidding system, see [Bidding and Auction](#bidding-and-auction).
-
-To define an ad set:
-
-1. Determine the regions or countries you want your ad to appear in. You can select up to 10. When you target a region, you automatically target every country within that region.
+1. Determine up to 10 regions or countries you want your ad to appear in. When you target a region, you automatically target every country within that region.
 
    <img src="../../assets/promotion/ads-manager/Ad-Set-Locations.png" width="780" />
 
-2. Determine the gender and age range of the players you wish to see your ads, as well as which devices you'd like your ads to appear on. Some options may not be available in some locations.
+2. Determine the gender and age range of the players you wish to see your ads, as well as which devices you'd like your ads to appear on. Certain options may not be available in some locations.
    <img src="../../assets/promotion/ads-manager/Ad-Set-Gender-Ages-Devices.png" width="780" />
 
-3. Select where your ad will appear, determined by your campaign objective.
+3. Select where you want to place your ads according to your campaign objective.
+
+   - Advertisers with a **visits campaign objective** can choose between an in-experience portal within an experience or a sponsored experience on the Home page.
+   - Advertisers with an **awareness campaign objective** can choose between an in-experience video or image.
+
    <img src="../../assets/promotion/ads-manager/Ad-Placement.png" width="780" />
 
-4. For Immersive Ads, determine what kinds of experiences you want your ads to be shown in. Selecting **Standard Inventory** or **Limited Inventory** will exclude experiences with more mature content but may limit your reach.
-   <img src="../../assets/promotion/ads-manager/Brand-Suitability.png" width="780" />
+4. Select an inventory tier according to the kinds of experiences you want to serve your ads. Inventory tiers only affect which experiences that ads can appear in, **not** who can see an ad. For example, if an advertiser chooses Standard Inventory, their ads may be shown in an experience with a 9+ age recommendation to audiences who are 13+.
 
-5. Choose which [genres](#genre-targeting) you want to target with your ads. For sponsored experiences, this represents the genre interests of your audience. For Immersive Ads, this represents the genre of the experiences your ads will display in.
+   <table>
+   <thead>
+     <tr>
+       <th>Brand suitability tiers</th>
+       <th>Experiences with content maturity labels eligible to serve ads</th>
+       <th>Age of users eligible to see ads</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>**Full Inventory**</td>
+       <td>Minimal, mild, moderate, restricted</td>
+       <td>13+, except in 17+ experiences where users must be 17+ and ID-verified</td>
+     </tr>
+     <tr>
+       <td>**Standard Inventory**</td>
+       <td>Minimal, mild</td>
+       <td>Users age 13+</td>
+     </tr>
+      <tr>
+       <td>**Limited Inventory**</td>
+       <td>Minimal</td>
+       <td>Users age 13+</td>
+     </tr>
+   </tbody>
+   </table>
 
-6. Determine how you want to spend your budget. A higher CPM can increase the chances of winning the [auction](#bidding-and-auction), but it also means you'll pay more.
+   <Alert severity="warning">
+
+   Selecting **Standard Inventory** or **Limited Inventory** will exclude experiences with more mature content but may limit your reach. Regardless of what option you select, your ads will not be shown to users under the age of 13 or in experiences that do not comply with the Roblox community standards. For more information, see [Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260-Advertising-Standards) and [Brand Suitability Tables](#brand-suitability-tables), respectively.
+
+   </Alert>
+
+   For a breakdown of what types of content you can expect for each [content maturity](content-maturity.md) label, reference the following table:
+
+   <table>
+   <thead>
+     <tr>
+       <th>Maturity label</th>
+       <th>Description</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>**Minimal**</td>
+       <td>May contain occasional mild violence and/or light unrealistic blood.</td>
+     </tr>
+     <tr>
+       <td>**Mild**</td>
+       <td>May contain repeated mild violence, heavy unrealistic blood, mild fear-based content, and/or mild crude humor.</td>
+     </tr>
+     <tr>
+       <td>**Moderate**</td>
+       <td>May contain moderate violence, light realistic blood, moderate fear-based content, moderate crude humor, and/or unplayable gambling content.</td>
+     </tr>
+     <tr>
+       <td>**Restricted**</td>
+       <td>May contain strong violence, heavy realistic blood, moderate crude humor, romantic themes, unplayable gambling content, the presence of alcohol, and/or strong language.</td>
+     </tr>
+   </tbody>
+   </table>
+
+5. Choose which [genres](#genre-targeting) you want to target with your ads.
+
+   - For sponsored experiences, this represents the genre interests of your audience.
+   - For immersive ads, this represents the genre of the experiences your ads will display in.
+
+6. Determine your max bid price to show your ads to players through the available ad units placed in experiences. Bids are reflected as CPM (cost-per-thousand impressions) meaning that your max bid for CPM is the maximum amount you're willing to pay every thousand impressions. For more information about Roblox's bidding system, see [Bidding and Auction](#bidding-and-auction).
 
    <img src="../../assets/promotion/ads-manager/Ad-Set-Bidding.png" width="900" />
 
-7. Lastly, name your ad set and click the **NEXT** button.
+7. Name your ad set, then click the **NEXT** button.
 
    <img src="../../assets/promotion/ads-manager/Ad-Set-Name-Next.png" width="780" />
 
@@ -195,16 +220,16 @@ When you define your ad set, an audience estimation displays that indicates how 
 
 </Alert>
 
-#### Brand Suitability Tables
+#### Brand suitability tables
 
-The following tables show what types of content you can expect to appear alongside your Immersive Ads depending on your brand suitability inventory selection.
+The following tables show what types of content you can expect to appear alongside your immersive ads depending on your brand suitability inventory selection.
 
 While context exclusions are done as effectively as possible, complete accuracy is not guaranteed. Brand Suitability controls only affect which experiences ads are shown in and not the age of who sees an ad. Regardless of what Brand Suitability options you choose, your ads will only be shown to 13+ users. Content types listed within the brand suitability guidelines are thematic examples and are not guaranteed to appear within each inventory tier.
 
-For more information on content exclusions associated with age ratings, see [Experience Guidelines](https://en.help.roblox.com/hc/en-us/articles/8862768451604-Experience-Guidelines-and-Age-Recommendations) and [Age Recommendations](https://en.help.roblox.com/hc/en-us/articles/8862768451604-Experience-Guidelines-and-Age-Recommendations).
+For more information on content exclusions associated with content maturity, see [Content Maturity](content-maturity.md) and [Content Maturity Labels](https://en.help.roblox.com/hc/en-us/articles/8862768451604-Experience-Guidelines-and-Age-Recommendations).
 
 <br />
-<h5>Always Excluded Content</h5>
+<h5>Always excluded content</h5>
 
 To support brand safety, all content on Roblox must continue to abide by the [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards). The Roblox Community Standards set a high bar for content that is safe and civil for the platform.
 
@@ -220,7 +245,7 @@ For example, this content is not allowed on the platform in any context:
 <table>
 <thead>
   <tr>
-    <th>**Violent Content and Gore**</th>
+    <th>**Violent content and gore**</th>
     <th>Full</th>
     <th>Standard</th>
     <th>Limited</th>
@@ -250,7 +275,7 @@ For example, this content is not allowed on the platform in any context:
 <br />
 <thead>
   <tr>
-    <th>**Crude Humor and Language**</th>
+    <th>**Crude humor and language**</th>
     <th></th>
     <th></th>
     <th></th>
@@ -280,7 +305,7 @@ For example, this content is not allowed on the platform in any context:
 <br />
 <thead>
   <tr>
-    <th>**Illegal or Regulated Goods and Activities**</th>
+    <th>**Illegal or regulated goods and activities**</th>
     <th></th>
     <th></th>
     <th></th>
@@ -304,7 +329,7 @@ For example, this content is not allowed on the platform in any context:
 <br />
 <thead>
   <tr>
-    <th>**Romantic and Sexual Content**</th>
+    <th>**Romantic and sexual content**</th>
     <th></th>
     <th></th>
     <th></th>
@@ -320,7 +345,7 @@ For example, this content is not allowed on the platform in any context:
 </tbody>
 </table>
 
-#### Bidding and Auction
+#### Bidding and auction
 
 Ads on Roblox work in a bidding system, where advertisers bid to have their ads shown to users through the available ad units placed in an experience. When determining your bidding settings, bids are reflected as CPM (cost-per-thousand impressions). Your max bid for CPM is the maximum amount you're willing to pay every thousand times your ad is seen by the user. A higher CPM can increase the chances of winning the auction, but it also means you'll pay more.
 
@@ -343,19 +368,19 @@ As an example:
 
 The second advertiser wins the auction and is charged $10.01, the price of the second highest bid, plus one cent.
 
-#### Genre Targeting
+#### Genre targeting
 
 Genre targeting helps you target your ads to reach people who are more likely to engage with your experience.
 
 You can target particular genres with your ad sets. Note that these are Roblox's genre classifications and may not be the same as the genre categories self-declared by developers.
 
 <br />
-<h5>Experience Genre</h5>
+<h5>Experience genre</h5>
 
-When buying [Immersive Ads](../../production/monetization/immersive-ads.md), which are ads within experiences, experience genres are based on the genre of the experiences your ads will be served in. For instance, if you select only "Roleplaying," your ads will only appear in experiences classified as "Roleplaying."<br />
+When buying [immersive ads](../../production/monetization/immersive-ads.md), which are ads within experiences, experience genres are based on the genre of the experiences your ads will be served in. For instance, if you select only "Roleplaying," your ads will only appear in experiences classified as "Roleplaying."<br />
 
 <br />
-<h5>Audience Genre</h5>
+<h5>Audience genre</h5>
 
 For **sponsored experiences**, audience genre targeting is based on users' preferences. Ads will only be served to users who like to play experiences in the selected genres.
 
@@ -377,21 +402,21 @@ Audience Genre targeting isn't available when buying sponsored experiences to re
 
 </Alert>
 
-### Create Ads
+### Create ads
 
 You can create three different types of ads using the Ads Manager:
 
-- [Sponsored Experiences](#sponsored-experiences) appear as sponsored experience tiles on the Home page.
-- [Portal Ads](#portal-ads) are static, non-clickable images within the 3D space of an experience, with a door that teleports a player into an advertiser's experience.
-- [Image Ads](#image-ads) are static, non-clickable images within the 3D space of an experience.
-- [Video Ads](#video-ads) are either auto-playing (non-rewarded) or click-to-play (can be rewarded) videos within the 3D space of an experience.
+- [Sponsored experiences](#sponsored-experiences) appear as sponsored experience tiles on the Home page.
+- [Portal ads](#portal-ads) are static, non-clickable images within the 3D space of an experience, with a door that teleports a player into an advertiser's experience.
+- [Image ads](#image-ads) are static, non-clickable images within the 3D space of an experience.
+- [Video ads](#video-ads) are either auto-playing (non-rewarded) or click-to-play (can be rewarded) videos within the 3D space of an experience.
 - [Search ads](#search-ads) allow you to promote your experience to users ages 13+ who are actively searching for experiences or genres of experiences using specific keywords.
 
-The **Ad Type** is determined by your [campaign objective](#define-the-campaign). Campaign objectives valuing **awareness** are displayed as image ads, while campaign objectives valuing **visits** are displayed as tile and portal ads.
+The **ad type** is determined by your [campaign objective](#define-the-campaign). Campaign objectives valuing **awareness** are displayed as image ads, while campaign objectives valuing **visits** are displayed as tile and portal ads.
 
 Roblox reviews each submitted ad prior to it being run. Ensure your ad is eligible to run by following the [Roblox Advertising Standards](https://en.help.roblox.com/hc/en-us/articles/13722260778260).
 
-#### Sponsored Experiences
+#### Sponsored experiences
 
 You can create a sponsored experience for All Ages, 9+ and 13+ experiences by choosing "visits" Campaign Objective. Currently, you may not run sponsored experiences for 17+ experiences.
 
@@ -412,7 +437,7 @@ To create a sponsored experience:
 
 5. Name your image ad in the **Ad Name** field and click the **NEXT** button. The [Review](#review-the-campaign) window displays.
 
-#### Portal Ads
+#### Portal ads
 
 <video controls src="../../assets/monetization/immersive-ads/Overview-PortalAd.mp4" width="640"></video>
 
@@ -431,12 +456,17 @@ To create a portal ad:
    <img src="../../assets/promotion/ads-manager/Ad-Upload-Widget.png" width="780" />
 
 3. Navigate to and confirm the image file you'd like to use.
-4. With your ad image selected, preview it by clicking the **Expanding Arrows** over the image thumbnail.
-   <img src="../../assets/promotion/ads-manager/Portal Ad Preview.png" width="780" />
+4. After selecting an image, you can preview it in one of the following ways:
+
+   - Click the **Expanding Arrows** over the image thumbnail to see a static image of the portal ad you're creating.
+
+     <img src="../../assets/promotion/ads-manager/Portal Ad Preview.png" width="780" />
+
+   - Click [**Live Preview**](#live-preview-of-ads) next to the image thumbnail to see and interact with the portal ad like a member of the audience.
 
 5. Name your image ad in the **Ad Name** field and click the **NEXT** button. The [Review](#review-the-campaign) window displays.
 
-#### Image Ads
+#### Image ads
 
 <img src="../../assets/monetization/immersive-ads/Overview-ImageAd.jpg" width="640" />
 
@@ -447,26 +477,46 @@ To create an image ad:
    <img src="../../assets/promotion/ads-manager/Ad-Upload-Widget.png" width="780" />
 
 2. Navigate to and confirm the image file you'd like to use.
-3. With your ad image selected, preview it by clicking the **Expanding Arrows** over the image thumbnail.
+3. After selecting an image, you can preview it in one of the following ways:
 
-   <img src="../../assets/promotion/ads-manager/Image-Ad-Preview.png" width="780" />
+   - Click the **Expanding Arrows** over the image thumbnail to see a static image of the image ad you're creating.
+
+      <img src="../../assets/promotion/ads-manager/Image-Ad-Preview.png" width="780" />
+
+   - Click [**Live Preview**](#live-preview-of-ads) next to the image thumbnail to see and interact with the image ad like a member of the audience.
 
 4. Name your image ad in the **Ad Name** field and click the **NEXT** button. The [Review](#review-the-campaign) window displays.
 
-#### Video Ads
+#### Video ads
 
 To create a video ad:
 
 1. Click the **UPLOAD MEDIA** button in the drag and drop window. A navigation window displays.
 2. Navigate to and confirm the video file you'd like to use.
-3. With your ad video selected, preview it by clicking the **Expanding Arrows** over the video thumbnail.
+3. After selecting a video file, you can preview it in one of the following ways:
+
+   - Click the **Expanding Arrows** over the image thumbnail to see a static image of the video ad you're creating.
+   - Click [**Live Preview**](#live-preview-of-ads) next to the image thumbnail to see and interact with the video like a member of the audience.
+
 4. Name your video ad in the **Ad Name** field and click the **NEXT** button. The [Review](#review-the-campaign) window displays.
 
-#### Search Ads
+#### Search ads
 
 Search ads have unique audience targeting, and a specific bidding and auction process for keywords. For more information, see the [Search Ads documentation](./search-ads.md).
 
-### Review the Campaign
+#### Live preview of ads
+
+You can use live preview to see what your immersive ad looks like to the audience inside an experience. Live preview is available for immersive ads in [portal](#portal-ads), [image](#image-ads), and [video](#video-ads) formats.
+
+After selecting and uploading an image or video file, click **Live Preview** next to the image or video thumbnail. This takes you to a demo experience created by Roblox to teach users how to build and advertise on the Roblox platform. Inside the experience, you can see and interact with the ad format you selected in Ads Manager.
+
+<img src="../../assets/promotion/ads-manager/Live-Preview-Experience.png" width="780" />
+
+<Alert severity="info">
+After you upload an image or video file, that file is submitted to Roblox for moderator approval. If approval is pending, a watermark displays on top of the live preview of your ad inside the demo experience. If Roblox rejects your file, the live preview of your ad doesn't show up inside the demo experience.
+</Alert>
+
+### Review the campaign
 
 With your ad campaign, ad set, and individual ad created, it's time to review your selections. This final screen enables you to revisit any previous setting of your campaign and is required for review before launch. Once submitted, your ad is reviewed by moderators for approval.
 
@@ -490,7 +540,7 @@ To review your ad campaign:
 
 4. When you finish reviewing, click the **SUBMIT** button.
 
-### Editing Campaigns
+### Edit campaigns
 
 Once a campaign, ad set, or ad is submitted, an advertiser can make adjustments to certain parameters. To determine which parameters are changeable, consult the following table:
 
@@ -504,31 +554,31 @@ Once a campaign, ad set, or ad is submitted, an advertiser can make adjustments 
 | Ad name                      |                             |
 | Ad type                      |                             |
 
-### Canceling a Campaign
+### Cancel a campaign
 
 If an advertiser wishes to retract a campaign for any reason, they have the option to cancel the campaign up to six hours before its scheduled start time. Cancellation is accessible at the campaign level and automatically cancels any associated ad sets and ads. This feature is available for campaigns with any payment method, and enables advertisers to recover their ad credits or prevent their credit or debit card from being charged.
 
 You can't transfer ad credits associated with a specific campaign to another campaign. When a campaign is cancelled, Roblox applies the campaign's ad credits back to the account.
 
-## Ads Reporting
+## Ads reporting
 
 **Ads reporting** is a tool that provides necessary information to effectively manage campaigns at the campaign, ad set, and individual ad level. Ads Manager utilizes click-based attribution for conversion tracking, ensuring accurate and transparent reporting. Ads reporting helps advertisers evaluate campaign performance, optimize strategies, and reach their campaign objectives.
 
-- [Ad Campaign Reports](#ad-campaign-reports): Ads reporting at the campaign level offers insights into overall campaign effectiveness, enabling advertisers to compare and optimize various campaigns they have running simultaneously. This level provides a holistic view of performance, guiding budget allocation and strategy adjustments.
-- [Ad Set Reports](#ad-set-reports): Ads reporting at the ad set level highlights targeting and budget effectiveness, enabling adjustments for better audience engagement. This level informs optimization for specific audiences.
-- [Ad Reports](#ad-reports): Ads reporting at the individual ad level assesses creative impact, guiding design improvements. This level reveals ad resonance and informs creative refinements.
+- [Ad campaign reports](#ad-campaign-reports): Ads reporting at the campaign level offers insights into overall campaign effectiveness, enabling advertisers to compare and optimize various campaigns they have running simultaneously. This level provides a holistic view of performance, guiding budget allocation and strategy adjustments.
+- [Ad set reports](#ad-set-reports): Ads reporting at the ad set level highlights targeting and budget effectiveness, enabling adjustments for better audience engagement. This level informs optimization for specific audiences.
+- [Ad reports](#ad-reports): Ads reporting at the individual ad level assesses creative impact, guiding design improvements. This level reveals ad resonance and informs creative refinements.
 
-### Ad Campaign Reports
+### Ad campaign reports
 
 <img src="../../assets/promotion/ads-manager/Reports-Campaigns.png" width="780" />
 
 The information provided at the [campaign](#define-the-campaign) level includes:
 
-| Reporting Column             | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Reporting column             | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Name**                     | The name of the ad campaign.                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | **Off/On**                   | A toggle indicating if the ad campaign is active, paused, or disabled.                                                                                                                                                                                                                                                                                                                                                                                                     |
-| **Status**                   | Displays the status of the ad campaign. For a list of all statuses, see [Ad Campaign Statuses](#ad-campaign-statuses).                                                                                                                                                                                                                                                                                                                                                     |
+| **Status**                   | Displays the status of the ad campaign. For a list of all statuses, see [Ad campaign statuses](#ad-campaign-statuses).                                                                                                                                                                                                                                                                                                                                                     |
 | **Spent**                    | The total amount of USD or ad credit you have spent on the selected campaign.                                                                                                                                                                                                                                                                                                                                                                                              |
 | **Impressions**              | An **image impression** is when a user looks at the ad for at least 1 second and the ad occupies 1.5% of the viewport, is viewed at an angle of up to 55 degrees, with at least 50% of the image ad pixels visible. <br /> <br />A **video impression** where an impression is when a user looks at the ad for at least 0.5 seconds and the ad occupies 1.5% of the viewport, be viewed at an angle of up to 55 degrees, with at least 50% of the video ad pixels visible. |
 | **Cost Per Mille (CPM)**     | The cost of 1,000 impressions of your ad.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -542,17 +592,17 @@ The information provided at the [campaign](#define-the-campaign) level includes:
 | **Schedule**                 | Displays the campaign run time.                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | **Payment Method**           | The method used to pay for your advertising campaign, categorized as either card or ad credit.                                                                                                                                                                                                                                                                                                                                                                             |
 
-### Ad Set Reports
+### Ad set reports
 
 <img src="../../assets/promotion/ads-manager/Reports-Ad-Sets.png" width="780" />
 
 The information provided at the [ad set](#define-ad-sets) level includes:
 
-| Reporting Column             | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Reporting column             | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Name**                     | The name of the ad set.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | **Off/On**                   | A toggle indicating if the ad campaign is active, paused, or disabled.                                                                                                                                                                                                                                                                                                                                                                                                     |
-| **Status**                   | Displays the status of the ad set. For a list of all statuses, see [Ad Set Statuses](#ad-set-statuses).                                                                                                                                                                                                                                                                                                                                                                    |
+| **Status**                   | Displays the status of the ad set. For a list of all statuses, see [Ad set statuses](#ad-set-statuses).                                                                                                                                                                                                                                                                                                                                                                    |
 | **Campaign**                 | Shows to which campaign an ad set belongs.                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | **Max Bid**                  | The maximum bid amount set for ad auction, shown in either USD or ad credit.                                                                                                                                                                                                                                                                                                                                                                                               |
 | **Spent**                    | The total amount of USD or ad credit you have spent.                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -565,17 +615,17 @@ The information provided at the [ad set](#define-ad-sets) level includes:
 | **Play Rate**                | Percentage calculated by dividing the number of plays by the number of impressions.                                                                                                                                                                                                                                                                                                                                                                                        |
 | **Cost Per Play (CPP)**      | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.                                                                                                                                                                                                                                                                                                                                                            |
 
-### Ad Reports
+### Ad reports
 
 <img src="../../assets/promotion/ads-manager/Reports-Ads.png" width="780" />
 
 The information provided at the [individual ad](#create-ads) level includes:
 
-| Reporting Column         | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Reporting column         | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Name**                 | The name of the ad.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | **Off/On**               | A toggle indicating if the ad campaign is active, paused, or disabled.                                                                                                                                                                                                                                                                                                                                                                                                     |
-| **Status**               | Displays the status of the individual ad. For a list of all statuses, see [Ad Statuses](#ad-statuses).                                                                                                                                                                                                                                                                                                                                                                     |
+| **Status**               | Displays the status of the individual ad. For a list of all statuses, see [Ad statuses](#ad-statuses).                                                                                                                                                                                                                                                                                                                                                                     |
 | **Ad Set**               | Displays the ad set the corresponding individual ad belongs to.                                                                                                                                                                                                                                                                                                                                                                                                            |
 | **Ad Format**            | Displays if the Ad is an Image or Portal Ad.                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | **Spent**                | The total amount of USD or ad credit you have spent.                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -586,19 +636,19 @@ The information provided at the [individual ad](#create-ads) level includes:
 | **Play Rate**            | Percentage calculated by dividing the number of plays by the number of impressions.                                                                                                                                                                                                                                                                                                                                                                                        |
 | **Cost Per Play (CPP)**  | The average cost incurred for each play, calculated by dividing the total campaign cost by the number of plays.                                                                                                                                                                                                                                                                                                                                                            |
 
-### Delivery Columns
+### Delivery columns
 
 The delivery column of the Ads Manager defines the **status** of your campaign, ad set, or ad.
 
-- [Ad Campaign Statuses](#ad-campaign-statuses) offer a valuable overview of the campaign's overall progress, helping advertisers identify and optimize active, underperforming, or completed campaigns for better results.
-- [Ad Set Statuses](#ad-set-statuses) highlight the performance of each ad set in terms of targeting and budget allocation, enabling advertisers to fine-tune their strategies for improved audience engagement and to reach their campaign objectives.
-- [Ad Statuses](#ad-statuses) provide insights into the delivery status of each individual ad, allowing advertisers to monitor their effectiveness and note any dependencies on their parent ad sets or Campaigns.
+- [Ad campaign statuses](#ad-campaign-statuses) offer a valuable overview of the campaign's overall progress, helping advertisers identify and optimize active, underperforming, or completed campaigns for better results.
+- [Ad set statuses](#ad-set-statuses) highlight the performance of each ad set in terms of targeting and budget allocation, enabling advertisers to fine-tune their strategies for improved audience engagement and to reach their campaign objectives.
+- [Ad statuses](#ad-statuses) provide insights into the delivery status of each individual ad, allowing advertisers to monitor their effectiveness and note any dependencies on their parent ad sets or Campaigns.
 
 You can use the following status tables to understand what each status means.
 
-#### Ad Campaign Statuses
+#### Ad campaign statuses
 
-| Delivery Status | Definition                                                                                                                                                                                                                                                                         |
+| Delivery status | Definition                                                                                                                                                                                                                                                                         |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Active**      | Your campaign contains at least one ad running normally.                                                                                                                                                                                                                           |
 | **Paused**      | The campaign is not delivering because it is toggled off (paused by user).                                                                                                                                                                                                         |
@@ -607,9 +657,9 @@ You can use the following status tables to understand what each status means.
 | **Error**       | Technical error. Please contact [support](https://www.roblox.com/support).                                                                                                                                                                                                         |
 | **Completed**   | The campaign, ad set or ad is no longer running because the scheduled end date has passed.                                                                                                                                                                                         |
 
-#### Ad Set Statuses
+#### Ad set statuses
 
-| Delivery Status | Definition                                                                                                                                                                                                                                                 |
+| Delivery status | Definition                                                                                                                                                                                                                                                 |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Active**      | The ad is running normally, or your campaign or ad sets contains at least one ad running normally.                                                                                                                                                         |
 | **Paused**      | The ad set is not delivering because it is toggled off.                                                                                                                                                                                                    |
@@ -618,9 +668,9 @@ You can use the following status tables to understand what each status means.
 | **Completed**   | The campaign, ad set or ad is no longer running because the scheduled end date has passed.                                                                                                                                                                 |
 | **Error**       | Technical error. Please contact [support](https://www.roblox.com/support).                                                                                                                                                                                 |
 
-#### Ad Statuses
+#### Ad statuses
 
-| Delivery Status | Definition                                                                                                                                                                                                                       |
+| Delivery status | Definition                                                                                                                                                                                                                       |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Active**      | The ad is running normally, or your campaign or ad sets contains at least one ad running normally.                                                                                                                               |
 | **Rejected**    | The ad can't run because it doesn't comply with Roblox advertising policy.                                                                                                                                                       |
@@ -631,13 +681,13 @@ You can use the following status tables to understand what each status means.
 | **Paused**      | Ad is toggled on but parent ad set is off so ad is not active.                                                                                                                                                                   |
 | **Error**       | Technical error. Please contact [support](https://www.roblox.com/support).                                                                                                                                                       |
 
-## Ads Billing
+## Ads billing
 
-**Ads billing** charges advertisers for ad placements on Roblox using the [payment method on file](#adding-a-payment-method). Billing information can be found under **Payment Activity**.
+**Ads billing** charges advertisers for ad placements on Roblox using the [payment method on file](#add-a-payment-method). Billing information can be found under **Payment Activity**.
 
 <img src="../../assets/promotion/ads-manager/Payment-Activity.png" width="360" />
 
-### Credit and Debit Cards
+### Credit and debit cards
 
 <Alert severity = 'warning'>
 For first-time credit card users, 5.00 USD will be charged upon campaign submission and used toward your first bill. Any unused balance will be refunded.
@@ -655,7 +705,7 @@ For example:
 
 <img src="../../assets/promotion/ads-manager/Payment-Activity-1.png" width="780" />
 
-### Ad Credits
+### Ad credits
 
 Campaigns using ad credit are settled at the end of the campaign at the end date. Any unused ad credits will be refunded to their ad credit balance within 24-48 hours after the campaign ends. Ad credits will never be refunded to Robux. There is no daily spend limit when using ad credits.
 
@@ -675,7 +725,7 @@ Ad credit-related activities are categorized as follows:
 
 <img src="../../assets/promotion/ads-manager/Payment-Activity-1.png" width="780" />
 
-## Ad Fraud Protection
+## Ad fraud protection
 
 Roblox diligently combats ad fraud using advanced detection methods for bots and other fraudulent activities, ensuring advertisers don't pay for fraudulent traffic and regularly adjusts billing and reporting to safeguard their interests. After 14 days from the campaign end date, campaigns are analyzed for fraudulent traffic, and transaction amounts are refunded accordingly. If invalid traffic is detected, refunds are applied 16 days after the campaign end date. This proactive approach helps maintain the integrity of your campaigns and ensures fair spending.
 

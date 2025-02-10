@@ -33,6 +33,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.ClassCategory
     summary: |
       Describes the category of this class.
@@ -50,6 +52,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.ClientOnly
     summary: ''
     description: ''
@@ -65,13 +69,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.Constraint
     summary: |
       Describes a constraint for a single-argument function whose argument type
-      is a `Class.Instance.ClassName`.
+      is a `Class.Object.ClassName`.
     description: |
       Describes a constraint for a single-argument function whose argument type
-      is a `Class.Instance.ClassName`. Currently there are two constraints
+      is a `Class.Object.ClassName`. Currently there are two constraints
       available:
 
       <table>
@@ -100,6 +106,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.Deprecated
     summary: |
       Whether or not this item is deprecated.
@@ -118,6 +126,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.EditingDisabled
     summary: |
       Toggles whether this property can be edited from the Properties window.
@@ -135,6 +145,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.EditorType
     summary: ''
     description: ''
@@ -150,6 +162,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.FFlag
     summary: ''
     description: ''
@@ -165,6 +179,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.IsBackend
     summary: |
       Vague value for showing if this depends on backend stuff.
@@ -183,6 +199,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.PropertyOrder
     summary: ''
     description: ''
@@ -198,6 +216,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.ScriptContext
     summary: |
       Describes the context where this member can be used. If set to "Server",
@@ -222,6 +242,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.ServerOnly
     summary: ''
     description: ''
@@ -237,6 +259,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.SliderScaling
     summary: ''
     description: ''
@@ -252,6 +276,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.UIMaximum
     summary: |
       The maximum value of this property. Used with
@@ -273,6 +299,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.UIMinimum
     summary: |
       The minimum value of this property. Used with
@@ -294,6 +322,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: ReflectionMetadataItem.UINumTicks
     summary: |
       The number of potential values the property's slider bar can be set to,
@@ -315,6 +345,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

@@ -119,6 +119,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: Mouse.Icon
     summary: |
       The content ID of the image used as the `Class.Mouse` icon.
@@ -134,7 +137,7 @@ properties:
       `Class.UserInputService.MouseIcon`. `Class.Mouse.Icon` will be deprecated
       after the new API for plugins to set the mouse cursor is released.
 
-      #### Designing a Cursor
+      ##### Designing a Cursor
 
       The following guidelines may prove useful when creating your own mouse
       cursors:
@@ -144,7 +147,7 @@ properties:
       - The default mouse image is 64x64 pixels, with the mouse taking up 17x24
         pixels of space.
 
-      #### System Cursors for `Class.PluginMouse`
+      ##### System Cursors
 
       When using a `Class.PluginMouse` retrieved from `Class.Plugin:GetMouse()`,
       you can use the following icons similar to your system's default cursors,
@@ -152,8 +155,8 @@ properties:
       like `Class.GuiObject.MouseEnter|MouseEnter`,
       `Class.GuiObject.MouseLeave|MouseLeave`, and
       `Class.GuiButton.MouseButton1Down|MouseButton1Down` to provide a
-      consistent studio experience when interacting with certain kinds of GUI
-      components. Note that these only work for studio plugins; they will not
+      consistent Studio experience when interacting with certain kinds of GUI
+      components. Note that these only work for Studio plugins; they will not
       work for other `Class.Mouse` objects.
 
       <table>
@@ -166,90 +169,89 @@ properties:
           </thead>
           <tbody>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-Pointer.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-Pointer.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/Arrow</code></td>
                   <td>Default clicking and selection.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-PointingHand.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-PointingHand.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/PointingHand</code></td>
                   <td>Hovering over an active link/button.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-OpenHand.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-OpenHand.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/OpenHand</code></td>
                   <td>Hovering over a draggable item.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-GrabbingHand.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-GrabbingHand.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/ClosedHand</code></td>
                   <td>Dragging an item.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-IBeam.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-IBeam.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/IBeam</code></td>
                   <td>Hovering in a text field.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeNS.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeNS.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/SizeNS</code></td>
                   <td>Hovering over a vertical resize handle.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeEW.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeEW.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/SizeEW</code></td>
                   <td>Hovering over a horizontal resize handle.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeNESW.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeNESW.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/SizeNESW</code></td>
                   <td>Hovering over a corner resize handle.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeNWSE.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeNWSE.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/SizeNWSE</code></td>
                   <td>Hovering over a corner resize handle.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeAll.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeAll.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/SizeAll</code></td>
                   <td>Hovering over a multi-direction resize handle.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeSplitV.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeSplitV.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/SplitNS</code></td>
                   <td>Hovering over a vertical "split" handle.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-ResizeSplitH.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-ResizeSplitH.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/SplitEW</code></td>
                   <td>Hovering over a horizontal "split" handle.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-Forbidden.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-Forbidden.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/Forbidden</code></td>
                   <td>Hovering over a locked/forbidden item.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-Wait.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-Wait.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/Wait</code></td>
                   <td>Indicating an action is in progress.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-Busy.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-Busy.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/Busy</code></td>
                   <td>Indicating the system is busy.</td>
               </tr>
               <tr>
-                  <td><img src="../../../assets/legacy/Mouse-Icon-Crosshair.png" /></td>
+                  <td><img src="../../../assets/misc/Mouse-Icon-Crosshair.png" width="30" /></td>
                   <td><code>rbxasset://SystemCursors/Cross</code></td>
                   <td>Hovering over a pinpoint selection area.</td>
               </tr>
           </tbody>
       </table>
 
-      \* These appearances are approximations &ndash; the actual look is
-      dependent on your operating system.
+      <figcaption>* These appearances are approximations &mdash; the actual look is dependent on your operating system.</figcaption>
     code_samples:
       - dragon-mouse-icon
     type: ContentId
@@ -263,6 +265,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: Mouse.Origin
     summary: |
       A `Datatype.CFrame` positioned at the `Class.Workspace.CurrentCamera` and
@@ -299,6 +304,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: Mouse.Target
     summary: |
       The object in 3D space the `Class.Mouse|mouse` is pointing to.
@@ -328,6 +336,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: Mouse.TargetFilter
     summary: |
       Determines an object (and its descendants) to be ignored when determining
@@ -345,9 +356,11 @@ properties:
 
       ```lua
       local Players = game:GetService("Players")
+      local Workspace = game:GetService("Workspace")
+
       local player = Players.LocalPlayer
       local mouse = player:GetMouse()
-      mouse.TargetFilter = workspace.Model
+      mouse.TargetFilter = Workspace.Model
       ```
 
       Note that the `Class.Player.Character|Character` of the
@@ -364,6 +377,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: Mouse.TargetSurface
     summary: |
       Indicates the `Enum.NormalId` of the `Class.BasePart` surface at which the
@@ -405,6 +421,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: Mouse.UnitRay
     summary: |
       A `Datatype.Ray` directed towards the mouse's world position, originating
@@ -419,7 +438,7 @@ properties:
       local Players = game:GetService("Players")
       local player = Players.LocalPlayer
       local mouse = player:GetMouse()
-      print(mouse.UnitRay.Direction.magnitude) -- Always 1
+      print(mouse.UnitRay.Direction.Magnitude) -- Always 1
       ```
     code_samples:
     type: Ray
@@ -435,6 +454,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: Mouse.ViewSizeX
     summary: |
       Describes the width of the game window in pixels.
@@ -456,6 +478,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: Mouse.ViewSizeY
     summary: |
       Describes the height of the game window in pixels.
@@ -478,6 +503,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: Mouse.X
     summary: |
       Describes the X (horizontal) component of the mouse's position on the
@@ -501,9 +529,9 @@ properties:
       local position = Vector2.new(mouse.X, mouse.Y)
       ```
 
-      This property does not fire `Class.Instance.Changed|Changed` or the signal
+      This property does not fire `Class.Object.Changed|Changed` or the signal
       returned from
-      `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal`. Use
+      `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal`. Use
       the `Class.Mouse.Move` event instead.
     code_samples:
       - normalized-mouse-position
@@ -520,6 +548,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: Mouse.Y
     summary: |
       Describes the Y (vertical) component of the mouse's screen position.
@@ -542,9 +573,9 @@ properties:
       local position = Vector2.new(mouse.X, mouse.Y)
       ```
 
-      This property does not fire `Class.Instance.Changed|Changed` or the signal
+      This property does not fire `Class.Object.Changed|Changed` or the signal
       returned from
-      `Class.Instance:GetPropertyChangedSignal()|GetPropertyChangedSignal`. Use
+      `Class.Object:GetPropertyChangedSignal()|GetPropertyChangedSignal`. Use
       the `Class.Mouse.Move` event instead.
     code_samples:
       - normalized-mouse-position
@@ -561,6 +592,9 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: Mouse.hit
     summary: ''
     description: ''
@@ -582,6 +616,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Input
+    writeCapabilities: []
   - name: Mouse.target
     summary: ''
     description: ''
@@ -602,132 +639,131 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - Input
+    writeCapabilities: []
 methods: []
 events:
   - name: Mouse.Button1Down
     summary: |
-      Fired when the left mouse button is pressed.
+      Fires when the left mouse button is pressed.
     description: |
-      The Button1Down even fires when the player presses their left mouse
-      button.
-
-      This can also be accessed from a `Class.Tool`. For example, when placed in
-      a `Class.LocalScript`, the code below prints Button1Down whenever the left
-      mouse button is pressed:
+      This event fires when the player presses their left mouse button. Note
+      that this can be accessed from a `Class.Tool`; for example, when placed in
+      a `Class.LocalScript`, the code below prints `Button1Down` whenever the
+      left mouse button is pressed.
 
       ```lua
-      local Tool = script.Parent --make sure this is a Tool object
+      local tool = script.Parent  -- Make sure this is a Tool object
 
-      Tool.Equipped:Connect(function(Mouse)
-      	Mouse.Button1Down:Connect(function()
+      tool.Equipped:Connect(function(mouse)
+      	mouse.Button1Down:Connect(function()
       		print("Button1Down")
       	end)
       end)
       ```
 
-      Developers can find out the position of the mouse in world-space, and if
-      it is pointing at any `Class.BasePart`, using the `Class.Mouse.Hit` and
-      `Class.Mouse.Target` properties.
-
-      For information on how to obtain the mouse object, please see the
-      `Class.Mouse` page.
-
-      Note, developers are recommended to use `Class.UserInputService` instead
-      of the `Class.Mouse` object in new work.
+      You can find out the position of the mouse in world space and if it's
+      pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
+      `Class.Mouse.Target|Target` properties.
     code_samples:
-      - Mouse-Button1Down
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Mouse.Button1Up
     summary: |
       Fires when the left mouse button is released.
     description: |
-      Fires when the left mouse button is released.
+      This event fires when the player releases their left mouse button. Note
+      that this can be accessed from a `Class.Tool`; for example, when placed in
+      a `Class.LocalScript`, the code below prints `Button1Up` whenever the left
+      mouse button is released.
 
-      For information on how to obtain the `Class.Mouse` object, please see the
-      `Class.Mouse` page.
+      ```lua
+      local tool = script.Parent  -- Make sure this is a Tool object
 
-      Developers can find out the position of the mouse in world-space, and if
-      it is pointing at any `Class.BasePart` using the `Class.Mouse.Hit` and
-      `Class.Mouse.Target` properties.
+      tool.Equipped:Connect(function(mouse)
+      	mouse.Button1Up:Connect(function()
+      		print("Button1Up")
+      	end)
+      end)
+      ```
 
-      Note, developers are recommended to use `Class.UserInputService` instead
-      of the `Class.Mouse` object in new work.
+      You can find out the position of the mouse in world space and if it's
+      pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
+      `Class.Mouse.Target|Target` properties.
     code_samples:
-      - Mouse-Button1Up1
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Mouse.Button2Down
     summary: |
       Fires when the right mouse button is pressed.
     description: |
-      The Button2Down even fires when the player presses their right mouse
-      button.
-
-      This can also be accessed from a `Class.Tool`. For example, when placed in
-      a `Class.LocalScript`, the code below prints Button2Down whenever the
-      right mouse button is pressed:
+      This event fires when the player presses their right mouse button. Note
+      that this can be accessed from a `Class.Tool`; for example, when placed in
+      a `Class.LocalScript`, the code below prints `Button2Down` whenever the
+      right mouse button is pressed.
 
       ```lua
-      local Tool = script.Parent --make sure this is a Tool object
+      local tool = script.Parent  -- Make sure this is a Tool object
 
-      Tool.Equipped:Connect(function(Mouse)
-      	Mouse.Button2Down:Connect(function()
+      tool.Equipped:Connect(function(mouse)
+      	mouse.Button2Down:Connect(function()
       		print("Button2Down")
       	end)
-      end).
+      end)
       ```
 
-      Developers can find out the position of the mouse in world-space, and if
-      it is pointing at any `Class.BasePart`, using the `Class.Mouse.Hit` and
-      `Class.Mouse.Target` properties.
-
-      For information on how to obtain the mouse object, please see the
-      `Class.Mouse` page.
-
-      Note, developers are recommended to use `Class.UserInputService` instead
-      of the `Class.Mouse` object in new work.
+      You can find out the position of the mouse in world space and if it's
+      pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
+      `Class.Mouse.Target|Target` properties.
     code_samples:
-      - color-randomizer-tool-button2down-
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Mouse.Button2Up
     summary: |
       Fired when the right mouse button is released.
     description: |
-      Fired when the right mouse button is released.
+      This event fires when the player releases their right mouse button. Note
+      that this can be accessed from a `Class.Tool`; for example, when placed in
+      a `Class.LocalScript`, the code below prints `Button2Up` whenever the
+      right mouse button is released.
 
       ```lua
-      mouse.Button2Up:Connect(function()
-      print("button 2 up!")
-      end
+      local tool = script.Parent  -- Make sure this is a Tool object
+
+      tool.Equipped:Connect(function(mouse)
+      	mouse.Button2Up:Connect(function()
+      		print("Button2Up")
+      	end)
+      end)
       ```
 
-      For information on how to obtain the `Class.Mouse` object, please see the
-      `Class.Mouse` page.
-
-      Developers can find out the position of the mouse in world-space, and if
-      it is pointing at any `Class.BasePart` using the `Class.Mouse.Hit` and
-      `Class.Mouse.Target` properties.
-
-      Note, developers are recommended to use `Class.UserInputService` instead
-      of the `Class.Mouse` object in new work.
+      You can find out the position of the mouse in world space and if it's
+      pointing at any `Class.BasePart` using the `Class.Mouse.Hit|Hit` and
+      `Class.Mouse.Target|Target` properties.
     code_samples:
-      - color-randomizer-tool-button1up-
     parameters: []
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Mouse.Idle
     summary: |
       Fired during every heartbeat that the mouse isn't being passed to another
@@ -756,6 +792,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Mouse.KeyDown
     summary: |
       Fires when a Key is pressed.
@@ -785,6 +823,8 @@ events:
       be used in all new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Mouse.KeyUp
     summary: |
       Fires when a Key is released.
@@ -814,6 +854,8 @@ events:
       be used in all new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Mouse.Move
     summary: |
       Fired when the mouse is moved.
@@ -847,6 +889,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Mouse.WheelBackward
     summary: |
       Fires when the mouse wheel is scrolled backwards.
@@ -870,6 +914,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Mouse.WheelForward
     summary: |
       Fires when the mouse wheel is scrolled forwards.
@@ -893,6 +939,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Mouse.keyDown
     summary: ''
     description: ''
@@ -909,4 +957,6 @@ events:
       been deprecated. Neither event should be used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

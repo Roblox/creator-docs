@@ -1,5 +1,5 @@
 ---
-title: Mechanical Constraints
+title: Mechanical constraints
 description: Mechanical constraints behave as conceptual mechanical connections such as hinges, springs, and motors.
 ---
 
@@ -133,37 +133,37 @@ The physics engine includes the following `Class.Constraint|Constraints` that be
 
 </GridContainer>
 
-## Constraint Visualization
+## Constraint visualization
 
 To accurately visualize constraints in Studio, you can use the following options from the [Model](../studio/model-tab.md) tab:
 
 <img src="../assets/studio/general/Model-Tab-Constraints-Section-Labeled.png" width="754" alt="Constraints tools indicated in Model tab" />
 
 <Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-A.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>**Show Welds** &mdash; Show `Class.WeldConstraint|WeldConstraints`, separately from the visualization of other constraints.</p></Grid>
+	<Grid item><img src="../assets/misc/Box-Label-A.png" alt="" width="40" /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p>**Show Welds** &mdash; Show `Class.WeldConstraint|WeldConstraints`, separately from the visualization of other constraints.</p></Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-B.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>**Constraint Details** &mdash; Show complete visual details of non-weld constraints.</p></Grid>
+	<Grid item><img src="../assets/misc/Box-Label-B.png" alt="" width="40" /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p>**Constraint Details** &mdash; Show complete visual details of non-weld constraints.</p></Grid>
 </Grid>
 <Grid container spacing={2} alignItems="center">
-	<Grid item><img src="../assets/misc/Box-Label-C.png" width="40" /></Grid>
-	<Grid item xs={10} sm={11} md={11} lg={11}><p>**Scale** &mdash; Relative scale of visualizations.</p></Grid>
+	<Grid item><img src="../assets/misc/Box-Label-C.png" alt="" width="40" /></Grid>
+	<Grid item XSmall={10} Medium={11} Large={11} XLarge={11}><p>**Scale** &mdash; Relative scale of visualizations.</p></Grid>
 </Grid>
 
 <Alert severity="success">
 In addition to the above visualization, you can view colored outlines around mechanisms (groups of parts that share simulation step and [network ownership](../physics/network-ownership.md)) by toggling on **Mechanisms** from the [Visualization&nbsp;Options](../studio/ui-overview.md#visualization-options) widget in the upper‑right corner of the 3D viewport.
 </Alert>
 
-## Creating Constraints
+## Create constraints
 
 All mechanical constraints must connect one or two `Class.Attachment|Attachments` or `Class.Bone|Bones`, except for [WeldConstraint](../physics/constraints/weld.md) and [NoCollisionConstraint](../physics/constraints/no-collision.md). When connected to `Class.Bone|Bones`, the constraint will use their animated position and orientation.
 
 To create a mechanical constraint, you can use either the **Create** tool or the [Explorer](../studio/explorer.md) window.
 
 <Tabs>
-<TabItem label="Create Tool">
+<TabItem label="Create tool">
 
 1. In the [Model](../studio/model-tab.md) tab, access the **Create** button's picker menu and select the desired constraint type, for example **Spring**.
 
@@ -174,7 +174,7 @@ To create a mechanical constraint, you can use either the **Create** tool or the
 3. Most mechanical constraints require a **secondary** attachment in their functionality, so the tool will typically prompt you to repeat the previous step on another `Class.Part`, `Class.MeshPart`, `Class.Attachment`, or `Class.Bone`.
 
    <figure>
-   <img src="../assets/physics/constraints/Creation-Diagram.jpg" width="600" alt="SpringConstraint connecting two attachments" />
+   <img src="../assets/physics/constraints/Creation-Diagram.jpg" width="600" alt="SpringConstraint connecting two attachments on separate blocks. One block is green and the other is blue." />
    <figcaption>Completed [SpringConstraint](../physics/constraints/spring.md) connecting two attachments</figcaption>
    </figure>
 
@@ -186,11 +186,11 @@ Note that [WeldConstraint](../physics/constraints/weld.md) and [NoCollisionConst
 
 1. In the [Explorer](../studio/explorer.md) hierarchy, hover over the intended parent, click the **&CirclePlus;** button, and insert the desired constraint from the drop‑down menu, such as a [SpringConstraint](../physics/constraints/spring.md).
 
-   <img src="../assets/physics/constraints/Explorer-New-SpringConstraint.png" width="320" alt="New SpringConstraint in Explorer hierarchy" />
+   <img src="../assets/physics/constraints/Explorer-New-SpringConstraint.png" width="320" alt="New SpringConstraint in Explorer hierarchy." />
 
 1. With the new constraint selected, locate its currently empty **Attachment0** property in the [Properties](../studio/properties.md) window.
 
-   <img src="../assets/physics/constraints/Properties-SpringConstraint-Attachment0-Unassigned.png" width="320" alt="Constraint's Attachment0 property highlighted in Properties window" />
+   <img src="../assets/physics/constraints/Properties-SpringConstraint-Attachment0-Unassigned.png" width="320" alt="Constraint's Attachment0 property highlighted in the Properties window." />
 
 1. Link the **Attachment0** property to an `Class.Attachment` or `Class.Bone` in two consecutive steps:
 
@@ -200,10 +200,10 @@ Note that [WeldConstraint](../physics/constraints/weld.md) and [NoCollisionConst
 
    <Grid container spacing={3}>
    <Grid item>
-   <img src="../assets/physics/constraints/SpringConstraint-Link-Attachment0-1.png" width="320" alt="Mouse pointer hovering over Attachment0 property in Properties window" />
+   <img src="../assets/physics/constraints/SpringConstraint-Link-Attachment0-1.png" width="320" alt="Mouse pointer hovering over Attachment0 property in the Properties window." />
    </Grid>
    <Grid item>
-   <img src="../assets/physics/constraints/SpringConstraint-Link-Attachment0-2.png" width="320" alt="Target attachment indicated in Explorer hierarchy" />
+   <img src="../assets/physics/constraints/SpringConstraint-Link-Attachment0-2.png" width="320" alt="Target attachment indicated in Explorer hierarchy." />
    </Grid>
    </Grid>
 
@@ -212,9 +212,9 @@ Note that [WeldConstraint](../physics/constraints/weld.md) and [NoCollisionConst
 </TabItem>
 </Tabs>
 
-## Physical Simulation
+## Physical simulation
 
-To simulate physics while [moving](../parts/index.md#moving) or [rotating](../parts/index.md#rotating) parts, you can switch to **Physical** mode in
+To simulate physics while [moving](../parts/index.md#move) or [rotating](../parts/index.md#rotate) parts, you can switch to **Physical** mode in
 the [Model](../studio/model-tab.md) tab, effectively forcing parts to obey physical limitations. For example, if two parts are attached by a [RopeConstraint](../physics/constraints/rope.md) and you drag one part around the scene, the other part will follow as the rope becomes taut.
 
-<img src="../assets/physics/constraints/Model-Tab-Mode-Physical.png" width="670" />
+<img src="../assets/physics/constraints/Model-Tab-Mode-Physical.png" alt="" width="670" />

@@ -1,19 +1,19 @@
 ---
-title: Loading Screens
+title: Loading screens
 description: Explains the process of customizing the loading screen when users are connecting to your experience.
 ---
 
 Roblox displays a default loading screen when users are connecting to an experience, but you can personalize your experience with a custom loading screen that contains static or animated content.
 
 <Alert severity="info">
-This article covers the loading screens that display when a user initially joins an experience. To customize loading screens that display when a user teleports between places, see [Teleporting Between Places](../projects/teleporting.md#creating-custom-teleport-screens).
+This article covers the loading screens that display when a user initially joins an experience. To customize loading screens that display when a user teleports between places, see [Teleport between places](../projects/teleport.md#create-custom-teleport-screens).
 </Alert>
 
-## Displaying Custom Loading Screens
+## Display custom loading screens
 
 To display a custom loading screen, you can either design a `Class.ScreenGui` instance directly within a `Class.LocalScript`, or you can reference a `Class.ScreenGui` object in your workspace. Both options utilize `Class.ReplicatedFirst`, as this service that replicates instances to clients before anything else is replicated. This ensures that your loading screen is the first thing users see when they enter your experience.
 
-### Designing within LocalScripts
+### Design within LocalScripts
 
 To design and display a custom loading screen:
 
@@ -53,7 +53,7 @@ end
 screenGui:Destroy()
 ```
 
-### Referencing ScreenGuis
+### Reference ScreenGuis
 
 Instead of creating the `Class.ScreenGui` through a `Class.LocalScript`, you can also reference an existing `Class.ScreenGui` directly in your workspace. Ensure that your experience includes a `Class.ScreenGui` within `Class.ReplicatedFirst` and that the `Class.ScreenGui` includes UI elements like `TextLabels` and `ImageLabels`, then set it as the loading screen by referencing it within a `Class.LocalScript`. This method allows you to easily view your loading screen as you're creating it.
 
@@ -82,7 +82,7 @@ end
 screenGui:Destroy()
 ```
 
-## Adding Animations
+## Add animations
 
 In addition to static custom loading screens, you can add animations to enhance the loading screen and indicate loading progress. The easiest way to do this is to create a UI element, such as a `Class.TextLabel` or `Class.ImageLabel`, then to animate it using `Class.TweenService`. For example, the following code sample creates a new `Class.ScreenGui` with a child `Class.ImageLabel`, removes the default loading screen, then `Class.TweenService` rotates the `Class.ImageLabel` continuously until the experience loads:
 

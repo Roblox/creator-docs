@@ -8,7 +8,8 @@ summary: |
 description: |
   A service which allows the defaults of properties in the `Class.Player` object
   to be set. When a player enters the server, each property of the player object
-  is set to the current value of the corresponding property in `StarterPlayer`.
+  is set to the current value of the corresponding property in
+  `Class.StarterPlayer`.
 
   Additionally, you may add four objects to this service:
 
@@ -33,9 +34,8 @@ properties:
       Describes the current game's permission levels regarding custom avatar
       animations from the website.
     description: |
-      The `AllowCustomAnimations` property describes the current game's
-      permission levels regarding custom avatar `Class.Animation|Animations`
-      from the website.
+      This property describes the current game's permission levels regarding
+      custom avatar `Class.Animation|Animations` from the website.
 
       As such, this value cannot be changed from within the game. It can only be
       changed by changing the game's permission levels within the game's
@@ -55,13 +55,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.AutoJumpEnabled
     summary: |
       Sets whether the character will automatically jump when hitting an
       obstacle on a mobile device.
     description: |
-      The `AutoJumpEnabled` property sets whether the character will
-      automatically jump when hitting an obstacle on a mobile device.
+      This property sets whether the character will automatically jump when
+      hitting an obstacle on a mobile device.
 
       This property is copied from the `Class.StarterPlayer` to a `Class.Player`
       when they join the game. Following that. the value of this property is
@@ -82,13 +84,16 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.AvatarJointUpgrade
     summary: ''
     description: ''
     code_samples: []
-    type: AvatarJointUpgrade
+    type: RolloutState
     tags:
       - NotReplicated
+      - NotScriptable
       - NotBrowsable
     deprecation_message: ''
     security:
@@ -99,13 +104,15 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.CameraMaxZoomDistance
     summary: |
       The maximum distance the player's default camera is allowed to zoom out in
       studs.
     description: |
-      The `CameraMaxZoomDistance` property sets the maximum distance in studs
-      the camera can be from the character with the default cameras.
+      This property sets the maximum distance in studs the camera can be from
+      the character with the default cameras.
 
       This property sets the default value of
       `Class.Player.CameraMaxZoomDistance` for each player who joins the game.
@@ -125,13 +132,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.CameraMinZoomDistance
     summary: |
       The minimum distance in studs the player's default camera is allowed to
       zoom in.
     description: |
-      The `CameraMinZoonDistance` property sets the minimum distance in studs
-      the camera can be from the character with the default cameras.
+      This property sets the minimum distance in studs the camera can be from
+      the character with the default cameras.
 
       This property sets the default value of
       `Class.Player.CameraMinZoomDistance` for each player who joins the game.
@@ -151,6 +160,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.CameraMode
     summary: |
       Changes the default camera's mode to either first or third person.
@@ -190,15 +201,16 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.CharacterJumpHeight
     summary: |
       Determines the starting value of `Class.Humanoid.JumpHeight` for
       `Class.Player.Character`.
     description: |
-      `CharacterJumpHeight` determines the starting value of
-      `Class.Humanoid.JumpHeight` for a player's
-      `Class.Player.Character|Character`. The value of this property defaults to
-      7.2 studs.
+      This property determines the starting value of `Class.Humanoid.JumpHeight`
+      for a player's `Class.Player.Character`. The value of this property
+      defaults to 7.2 studs.
 
       This property is only visible in the Properties window If
       `Class.StarterPlayer.CharacterUseJumpPower` is set to `false`, as it would
@@ -219,16 +231,17 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.CharacterJumpPower
     summary: |
       Determines the starting value of `Class.Humanoid.JumpPower` for
       `Class.Player.Character`.
     description: |
-      `CharacterJumpPower` determines the starting value of
-      `Class.Humanoid.JumpPower` for a player's
-      `Class.Player.Character|Character`. The value of this property defaults to
-      50 and when applied to the player's `Class.Humanoid` it will be
-      constrained between 0 and 1000.
+      This property determines the starting value of `Class.Humanoid.JumpPower`
+      for a player's `Class.Player.Character`. The value of this property
+      defaults to 50 and when applied to the player's `Class.Humanoid` it will
+      be constrained between 0 and 1000.
 
       This property is only visible in the Properties window If
       `Class.StarterPlayer.CharacterUseJumpPower` is set to `true`, as it would
@@ -249,16 +262,18 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.CharacterMaxSlopeAngle
     summary: |
       Determines the starting value of `Class.Humanoid.MaxSlopeAngle` for
       `Class.Player.Character`.
     description: |
-      `CharacterMaxSlopeAngle` determines the starting value of
-      `Class.Humanoid.MaxSlopeAngle` for a player's
-      `Class.Player.Character|Character`. It defaults to 89°, so humanoids can
-      climb pretty much any slope they want by default. When applied to the
-      player's `Class.Humanoid` it will be constrained between 0 and 89.
+      This property determines the starting value of
+      `Class.Humanoid.MaxSlopeAngle` for a player's `Class.Player.Character`. It
+      defaults to 89°, so humanoids can climb pretty much any slope they want by
+      default. When applied to the player's `Class.Humanoid` it will be
+      constrained between 0 and 89.
 
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
@@ -275,17 +290,19 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.CharacterUseJumpPower
     summary: |
       Determines the starting state of `Class.Humanoid.UseJumpPower` for
       `Class.Player.Character`.
     description: |
       `CharacterUseJumpPower` determines the starting value of
-      `Class.Humanoid.UseJumpPower` for a player's
-      `Class.Player.Character|Character`. Toggling it will change which property
-      is visible in the properties window:
-      `Class.StarterPlayer.CharacterJumpHeight|CharacterJumpHeight` (false) or
-      `Class.StarterPlayer.CharacterJumpPower` (true). Defaults to true.
+      `Class.Humanoid.UseJumpPower` for a player's `Class.Player.Character`.
+      Toggling it will change which property is visible in the properties
+      window: `Class.StarterPlayer.CharacterJumpHeight|CharacterJumpHeight`
+      (false) or `Class.StarterPlayer.CharacterJumpPower` (true). Defaults to
+      true.
 
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
@@ -302,14 +319,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.CharacterWalkSpeed
     summary: |
       Determines the starting value of `Class.Humanoid.WalkSpeed` for
       `Class.Player.Character`.
     description: |
-      `CharacterWalkSpeed` determines the starting value of
-      `Class.Humanoid.WalkSpeed` for a player's
-      `Class.Player.Character|Character`. This property defaults to 16.
+      This property determines the starting value of `Class.Humanoid.WalkSpeed`
+      for a player's `Class.Player.Character`. This property defaults to 16.
 
       Since this property is only relevant for characters being spawned in the
       future, changing it will not change any existing player characters.
@@ -326,6 +344,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.DevCameraOcclusionMode
     summary: |
       Sets how the default camera handles objects between the camera and the
@@ -349,13 +369,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.DevComputerCameraMovementMode
     summary: |
       Lets developer overwrite the default camera mode for each player if the
       player is on a computer.
     description: |
-      The `DevComputerCameraMovementMode` property lets the developer overwrite
-      the player's camera mode if the player is on a computer.
+      This property lets the developer overwrite the player's camera mode if the
+      player is on a computer.
 
       This is the default property for players joining the game. It can be
       changed for individual players by settings the
@@ -383,13 +405,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.DevComputerMovementMode
     summary: |
       Lets developer overwrite the player's movement mode if the player is on a
       computer.
     description: |
-      The `DevComputerMovementMove` property lets the developer overwrite the
-      player's movement mode if the player is on a computer.
+      This property lets the developer overwrite the player's movement mode if
+      the player is on a computer.
 
       This is the default property for players joining the game. It can be
       changed for individual players by settings the
@@ -417,13 +441,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.DevTouchCameraMovementMode
     summary: |
       Lets developer overwrite the default camera movement mode for each player
       if the player is on a mobile device.
     description: |
-      The `DevTouchCameraMovementMode` property lets the developer overwrite the
-      player's camera mode if the player is on a touch device.
+      This property lets the developer overwrite the player's camera mode if the
+      player is on a touch device.
 
       This is the default property for players joining the game. It can be
       changed for individual players by settings the
@@ -450,13 +476,15 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.DevTouchMovementMode
     summary: |
       Lets developer overwrite the player's movement mode if the player is on a
       touch device.
     description: |
-      The `DevTouchMovementMode` property lets the developer overwrite the
-      player's movement mode if the player is on a touch device.
+      This property lets the developer overwrite the player's movement mode if
+      the player is on a touch device.
 
       This is the default property for players joining the game. It can be
       changed for individual players by settings the
@@ -484,6 +512,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.EnableDynamicHeads
     summary: ''
     description: ''
@@ -500,12 +530,13 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.EnableMouseLockOption
     summary: |
       Determines if a player can toggle mouse lock by default.
     description: |
-      The `EnableMouseLockOption` property determines if a player can toggle
-      mouse lock by default.
+      This property determines if a player can toggle mouse lock by default.
 
       Mouselock will lock the player's cursor to the center of the screen.
       Moving the mouse will rotate the `Class.Camera` and `Class.Player` will
@@ -529,15 +560,16 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.HealthDisplayDistance
     summary: |
       Sets the distance at which this player will see other `Class.Humanoid`
       health bars. If set to 0, the health bars will not be displayed.
     description: |
-      The `HealthDisplayDistance` property sets the distance in studs at which
-      this player will see other `Class.Humanoid` health bars. If set to 0, the
-      health bars will not be displayed. This property is set to 100 studs by
-      default.
+      This property sets the distance in studs at which this player will see
+      other `Class.Humanoid` health bars. If set to 0, the health bars will not
+      be displayed. This property is set to 100 studs by default.
 
       To change the display distance for a player once they join the game, you
       can set the `Class.Player.HealthDisplayDistance` property.
@@ -557,12 +589,14 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.LoadCharacterAppearance
     summary: |
       Whether or not the appearance of a player's character should be loaded.
     description: |
-      The `LoadCharacterAppearance` property sets whether or not the appearance
-      of a player's character should be loaded.
+      This property sets whether or not the appearance of a player's character
+      should be loaded.
 
       Setting this to `false` results in the player having no clothes (including
       hats), body colors, body packages or anything else related to the
@@ -589,6 +623,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: 'StarterPlayer.LoadCharacterLayeredClothing '
     summary: |
       Indicates whether characters spawning into an experience will have layered
@@ -612,6 +648,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.LuaCharacterController
     summary: ''
     description: ''
@@ -628,17 +666,16 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.NameDisplayDistance
     summary: |
       Sets the distance at which this player will see other `Class.Humanoid`
-      names. If set to 0, names are hidden.
+      names.
     description: |
       Sets the distance at which this player will see other `Class.Humanoid`
-      names. If set to 0, names are hidden.
-
-      The NameDisplayDistance `Class.StarterPlayer` property sets the distance
-      in studs at which this player will see other `Class.Humanoid` names. If
-      set to 0, names are hidden. This property is set to 100 studs by default.
+      names. If set to `0`, names are hidden. This property is set to `100`
+      studs by default.
 
       To change the display distance for a player once they join the game, you
       can set the `Class.Player.NameDisplayDistance` property.
@@ -658,6 +695,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: StarterPlayer.UserEmotesEnabled
     summary: |
       Determines if user-owned emotes are loaded when loading avatars.
@@ -685,6 +724,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

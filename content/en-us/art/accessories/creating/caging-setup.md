@@ -1,8 +1,8 @@
 ---
-title: Caging Setup
+title: Caging setup
 description: Isolate your outer cage meshes and hide extra objects before modifying your clothing cage.
-next: /art/accessories/creating/modifying-cage
-prev: /art/accessories/creating/testing-poses
+next: /art/accessories/creating/modify-cage
+prev: /art/accessories/creating/test-poses
 ---
 
 **Caging** is the process of setting the clothing's interior and exterior surfaces, referred to as the inner and outer cages respectively. This enables your clothing to layer over existing clothing and bodies, and additional clothes to layer on top.

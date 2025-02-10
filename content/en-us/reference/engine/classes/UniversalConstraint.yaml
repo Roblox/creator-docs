@@ -50,6 +50,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: UniversalConstraint.MaxAngle
     summary: |
       The max angle, in degrees, of the constraint's limiting cone.
@@ -73,6 +76,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: UniversalConstraint.Radius
     summary: |
       The constraint's visualization radius.
@@ -91,6 +97,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: UniversalConstraint.Restitution
     summary: |
       The restitution coefficient of the cone constraint.
@@ -113,6 +122,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

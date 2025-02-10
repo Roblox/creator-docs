@@ -71,13 +71,15 @@ methods:
       - Teams-GetTeams
     parameters: []
     returns:
-      - type: Objects
+      - type: Instances
         summary: |
           An array of `Class.Team|Teams` in the game.
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Teams:RebalanceTeams
     summary: |
       Evens the number of people on each team. This function does not work
@@ -98,5 +100,7 @@ methods:
       sorting systems.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

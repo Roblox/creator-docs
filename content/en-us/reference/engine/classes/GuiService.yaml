@@ -41,6 +41,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService.CoreGuiNavigationEnabled
     summary: |
       Toggles whether or not objects in the `Class.CoreGui` can be navigated
@@ -62,6 +64,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService.GuiNavigationEnabled
     summary: |
       Used to enable and disable the default controller GUI navigation.
@@ -79,6 +83,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService.IsModalDialog
     summary: |
       Indicates whether a modal dialog is visible.
@@ -101,6 +107,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService.IsWindows
     summary: |
       Indicates whether the user is playing on a computer running Windows.
@@ -123,6 +131,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService.MenuIsOpen
     summary: |
       Returns true if any menu of CoreGui is open.
@@ -142,6 +152,8 @@ properties:
     serialization:
       can_load: false
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService.PreferredTextSize
     summary: ''
     description: ''
@@ -159,6 +171,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService.PreferredTransparency
     summary: |
       Gets the user's preferred transparency as a number between 0 and 1, which
@@ -181,8 +195,8 @@ properties:
       recommended way to use this setting; backgrounds will become more opaque
       as `Class.GuiService.PreferredTransparency|PreferredTransparency`
       approaches 0. This should be used with
-      `Class.Instance:GetPropertyChangedSignal()` so that it automatically
-      updates when the user changes their preferred transparency.
+      `Class.Object:GetPropertyChangedSignal()` so that it automatically updates
+      when the user changes their preferred transparency.
     code_samples:
       - GuiService-PreferredTransparency
     type: float
@@ -199,6 +213,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService.ReducedMotionEnabled
     summary: |
       Returns `true` if the user has enabled reduced motion. Defaults to
@@ -227,6 +243,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService.SelectedObject
     summary: |
       Sets the GuiObject currently being focused on by the GUI Navigator (used
@@ -240,7 +258,7 @@ properties:
 
       If you would like to determine when this property changes without tracking
       the SelectionGained and SelectionLost events for all GUI elements, you can
-      use the `Class.Instance.Changed|Changed` event.
+      use the `Class.Object.Changed|Changed` event.
     code_samples:
       - printing-when-gamepad-selection-changes
     type: GuiObject
@@ -254,6 +272,8 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService.TopbarInset
     summary: |
       Used to determine the absolute size and position of unobstructed area
@@ -268,7 +288,7 @@ properties:
       `Class.StarterGui:SetCoreGuiEnabled()`, changing the size and position of
       Roblox UI Controls, and/or others. For this reason, it's recommend that
       you detect and react to changes of this property with
-      `Class.Instance:GetPropertyChangedSignal()`.
+      `Class.Object:GetPropertyChangedSignal()`.
     code_samples:
       - GuiService-TopbarInset
     type: Rect
@@ -284,6 +304,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService.TouchControlsEnabled
     summary: |
       Used to enable and disable touch controls and touch control display UI.
@@ -303,6 +325,8 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: GuiService:AddSelectionParent
     summary: |
@@ -334,6 +358,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:AddSelectionTuple
     summary: |
       **AddSelectionTuple** works similarly to
@@ -376,6 +402,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:CloseInspectMenu
     summary: |
       Closes the Inspect Menu, if open.
@@ -406,6 +434,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:DismissNotification
     summary: ''
     description: ''
@@ -422,6 +452,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:GetEmotesMenuOpen
     summary: |
       Checks if the player Emotes menu is open.
@@ -441,6 +473,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:GetGameplayPausedNotificationEnabled
     summary: |
       Returns whether or not the `Class.Player.GameplayPaused|gameplay paused`
@@ -469,6 +503,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:GetGuiInset
     summary: |
       Returns two `Datatype.Vector2` values representing the inset of user GUIs
@@ -493,6 +529,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:GetInspectMenuEnabled
     summary: |
       Returns whether the Inspect and Buy menu functionality is enabled.
@@ -525,6 +563,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:InspectPlayerFromHumanoidDescription
     summary: |
       Allows a developer to bring up the Inspect menu showing the assets listed
@@ -572,6 +612,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:InspectPlayerFromUserId
     summary: |
       Allows the Inspect Menu to appear showing the user that has the given
@@ -611,6 +653,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:IsTenFootInterface
     summary: |
       Returns true if the client is using the ten foot interface, which is a
@@ -629,38 +673,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: GuiService:NotificationDismissed
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: notificationId
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-  - name: GuiService:NotificationDisplayed
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: notificationId
-        type: string
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:RemoveSelectionGroup
     summary: |
       Removes a group that was created with
@@ -684,6 +698,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:Select
     summary: |
       Set GuiService.SelectedObject to a child of provided instance
@@ -709,6 +725,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:SendNotification
     summary: ''
     description: ''
@@ -725,6 +743,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:SetEmotesMenuOpen
     summary: |
       Opens or closes the player Emotes menu.
@@ -743,6 +763,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:SetGameplayPausedNotificationEnabled
     summary: |
       Allows developers to disable the built-in notification when a players
@@ -774,6 +796,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService:SetInspectMenuEnabled
     summary: |
       Allows developers to enable or disable default Inspect and Buy
@@ -821,26 +845,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
-  - name: GuiService:UserInteractedWithNotification
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: notificationId
-        type: string
-        default:
-        summary: ''
-      - name: buttonIndex
-        type: int
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: GuiService.MenuClosed
     summary: |
@@ -853,6 +859,8 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: GuiService.MenuOpened
     summary: |
       Fires when the user **opens** the Roblox coregui escape menu.
@@ -864,4 +872,6 @@ events:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

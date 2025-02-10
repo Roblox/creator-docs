@@ -1,28 +1,42 @@
 name: SignalBehavior
 type: enum
-summary: ''
-description: ''
+summary: |
+  Determines when the engine resumes event handlers.
+description: |
+  Determines when the engine resumes event handlers. At some future point, the
+  default mode will be `Deferred` but opt-out will still be possible through use
+  of `Immediate`.
+
+  For more information, see
+  [Deferred Events](../../../scripting/events/deferred.md).
 code_samples:
 tags: []
 deprecation_message: ''
 items:
   - name: Default
     value: 0
-    summary: ''
+    summary: |
+      The default behavior; currently equivalent to `Immediate` but this will
+      eventually change to `Deferred`.
     tags: []
     deprecation_message: ''
   - name: Immediate
     value: 1
-    summary: ''
+    summary: |
+      Event handlers are resumed immediately when the event occurs.
     tags: []
     deprecation_message: ''
   - name: Deferred
     value: 2
-    summary: ''
+    summary: |
+      All events are deferred and their handlers resumed at specific resumptions
+      points each frame.
     tags: []
     deprecation_message: ''
   - name: AncestryDeferred
     value: 3
-    summary: ''
+    summary: |
+      Equivalent to `Deferred` but only for events triggered by changes in
+      ancestry.
     tags: []
     deprecation_message: ''

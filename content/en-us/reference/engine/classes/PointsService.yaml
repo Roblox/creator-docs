@@ -43,6 +43,8 @@ methods:
       used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PointsService:AwardPoints
     summary: |
       Attempts to award the user with the specified `Class.Player.UserId` the
@@ -89,6 +91,8 @@ methods:
       used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PointsService:GetGamePointBalance
     summary: |
       Returns the total number of points a player has in the current game.
@@ -113,6 +117,8 @@ methods:
       used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: PointsService:GetPointBalance
     summary: |
       Returns the total number of points the given player has across all games.
@@ -137,6 +143,8 @@ methods:
       used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: PointsService.PointsAwarded
     summary: |
@@ -190,4 +198,6 @@ events:
       used in new work.
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

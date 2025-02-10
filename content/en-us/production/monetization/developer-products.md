@@ -1,6 +1,6 @@
 ---
 title: Developer Products
-description: Developer products let you charge users a Robux fee for items or abilities that they can access and use inside your experience.
+description: Developer Products let you charge users a Robux fee for items or abilities that they can access and use inside your experience.
 ---
 
 A **developer product** is an item or ability that a user can purchase more than once, such as in-experience currency, ammo, or potions.
@@ -11,10 +11,10 @@ A **developer product** is an item or ability that a user can purchase more than
    For items or abilities that a user should only purchase **once**, such as a special weapon or a permanent power-up, see [Passes](../../production/monetization/game-passes.md).
 </Alert>
 
-## Creating Developer Products
+## Create developer products
 
 <Alert severity="warning">
-   Before creating a developer product, make sure your experience has been [published](../../production/publishing/publishing-experiences-and-places.md) and is accessible on Roblox.
+   Before creating a developer product, make sure your experience has been [published](../../production/publishing/publish-experiences-and-places.md) and is accessible on Roblox.
 </Alert>
 
 To create a developer product:
@@ -24,14 +24,14 @@ To create a developer product:
 3. Click **Create a Developer Product**.
 4. Upload an image to display as the product icon. Make sure the image doesn't exceed 512x512 pixels, doesn't include important details outside of its circular boundaries, and is in `.jpg`, `.png`, or `.bmp` format.
 5. Enter a name and a description for the product.
-6. Set the product price in Robux.
+6. Set the product price in Robux. The minimum price is 1 Robux, and the maximum price is 1 billion Robux.
 7. Click **Create Developer Product**.
 
 <Alert severity="info">
-   If you want to use the developer product as a randomized reward, review the [Randomized Virtual Item Policy](./randomized-virtual-items-policy.md).
+   If you want to use the developer product as a randomized reward, review the [randomized virtual item policy](./randomized-virtual-items-policy.md).
 </Alert>
 
-## Getting Developer Product IDs
+## Get developer product IDs
 
 To use scripting, you need a developer product ID. To get the product ID:
 
@@ -41,7 +41,11 @@ To use scripting, you need a developer product ID. To get the product ID:
 
    <img src="../../assets/creator-dashboard/Developer-Product-Copy-Asset-ID.png" width="400" />
 
-## Selling Developer Products
+## Sell developer products
+
+<Alert severity="info">
+If you're using [price optimization](./price-optimization.md), make sure to place the script inside a `Class.LocalScript` so that users see personalized product prices.
+</Alert>
 
 To implement and sell a developer product inside an experience, call `Class.MarketplaceService|MarketplaceService` functions.
 
@@ -109,7 +113,9 @@ You can also combine functions inside a `Class.LocalScript|LocalScript`. For exa
 
 ```lua
 local MarketplaceService = game:GetService("MarketplaceService")
-local player = game.Players.LocalPlayer
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
 local button = script.Parent
 
 -- Replace the placeholder ID with your developer product ID
@@ -137,7 +143,7 @@ button.MouseButton1Click:Connect(function()
 end)
 ```
 
-## Handling Developer Product Purchases
+## Handle developer product purchases
 
 After a user purchases a developer product, you must handle and record the transaction. To do this, use a `Class.Script` within `Class.ServerScriptService` using the `Class.MarketplaceService.ProcessReceipt()|ProcessReceipt()` function.
 
@@ -200,6 +206,8 @@ MarketplaceService.ProcessReceipt = processReceipt
 
 <Alert severity="info">
 The `receiptInfo` table passed to the `Class.MarketplaceService.ProcessReceipt()|ProcessReceipt()` callback function contains detailed information about the purchase, like the ID of the purchased product, the user who made the purchase, and the currency they used.
+
+`receiptInfo` also contains the exact Robux amount the user paid for the product, even if you're running a [price optimization test](./price-optimization.md) and showing different users different prices.
 </Alert>
 
 <Alert severity="warning">
@@ -207,10 +215,10 @@ The functions for handling each product ID must return `true` for the transactio
 </Alert>
 
 <Alert severity="warning">
-Although Roblox itself does **not** record the purchase history of developer products by specific users, you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores).
+Although Roblox itself does **not** record the purchase history of developer products by specific users, you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores/index.md).
 </Alert>
 
-## Developer Product Analytics
+## Developer Product analytics
 
 Use developer product analytics to analyze the success of individual products, identify trends, and forecast potential future earnings.
 

@@ -1,15 +1,18 @@
 ---
-title: Gamepad Input
+title: Gamepad input
 description: Explains how to accept input from USB gamepads, such as Xbox and PlayStation controllers.
 ---
 
+import ControllerEmulator from '../includes/studio/controller-emulator.md'
+import BetaAlert from '../includes/beta-features/beta-alert.md'
+
 Roblox accepts input from USB gamepads such as Xbox and PlayStation controllers. Since gamepads come in different varieties, you need to follow additional setup to verify that a player's gamepad inputs are usable in your experience.
 
-To set up gamepad inputs, you can use `Class.ContextActionService` or `Class.UserInputService` to [detect connected gamepads](#detecting-gamepads) for a player's device, [verify supported inputs](#verifying-supported-inputs) that are compatible with Roblox, [receive input](#receiving-input), and more.
+To set up gamepad inputs, you can use `Class.ContextActionService` or `Class.UserInputService` to [detect connected gamepads](#detect-gamepads) for a player's device, [verify supported inputs](#verify-supported-inputs) that are compatible with Roblox, [receive input](#receive-input), and more.
 
 When binding gamepad inputs, see [common control schemas](#common-control-schemas) to create a consistent gamepad experience for players. After inputs are set, you can enhance the player's experience by including [haptic feedback](#haptic-feedback) on supported controllers.
 
-## Detecting Gamepads
+## Detect gamepads
 
 You can detect whether a player's device currently has a gamepad active using the `Class.UserInputService.GamepadEnabled` property.
 
@@ -47,7 +50,7 @@ elseif UserInputService:GetGamepadConnected(Enum.UserInputType.Gamepad2) then
 end
 ```
 
-## Verifying Supported Inputs
+## Verify supported inputs
 
 Since gamepads can have different sets of inputs, you should check which inputs are supported with `Class.UserInputService:GetSupportedGamepadKeyCodes()`. This method takes a `Enum.UserInputType` as an argument and returns a table with a list of all available inputs for the specified controller.
 
@@ -62,7 +65,7 @@ for _, control in availableInputs do
 end
 ```
 
-## Receiving Input
+## Receive input
 
 `Class.ContextActionService` is useful for binding controls to both gamepads and other input sources such as [mouse and keyboard](./mouse-and-keyboard.md) inputs or [mobile](../input/mobile.md) touchscreen buttons, or for binding multiple functions to a single button input on any device. For example, the following code sample binds an `OpenSpellBook` action to the gamepad's `Enum.KeyCode.ButtonR2|ButtonR2` button and the keyboard's `Enum.KeyCode.B|B` key.
 
@@ -96,7 +99,7 @@ UserInputService.InputBegan:Connect(function(input)
 end)
 ```
 
-### Gamepad State
+### Gamepad state
 
 You can detect the current state of all buttons and sticks on a gamepad with the `Class.UserInputService:GetGamepadState()` method. This is useful if you need to check the current gamepad inputs when a distinct event occurs in your experience, such as checking if specific buttons are being pressed when a character touches an object.
 
@@ -121,7 +124,7 @@ leftFoot.Touched:Connect(function(hit)
 end)
 ```
 
-### Trigger Pressure
+### Trigger pressure
 
 You can detect how much pressure is being placed on gamepad triggers by checking the `Class.InputObject.Position|Position.Z` value of the input trigger.
 
@@ -139,7 +142,7 @@ UserInputService.InputChanged:Connect(function(input)
 end)
 ```
 
-## Common Control Schemas
+## Common control schemas
 
 Gamepads come in a variety of shapes and sizes. As with any method of player input, it's best to create some consistency across different games and experiences.
 
@@ -158,7 +161,7 @@ The following are common input binds that will help players immediately feel fam
 <thead>
   <tr>
     <th>Input</th>
-    <th>Common Use Cases</th>
+    <th>Common use cases</th>
   </tr>
 </thead>
 <tbody>
@@ -189,11 +192,11 @@ The following are common input binds that will help players immediately feel fam
 </tbody>
 </table>
 
-## Haptic Feedback
+## Haptic feedback
 
-Many gamepad controllers have motors built in to provide haptic feedback. Adding rumbles and vibrations can greatly enhance a player's experience and provide subtle feedback beyond visuals or audio. You can use the `Class.HapticService` to [verify vibration support](#vibration-support) before [turning on the motors](#activating-motors).
+Many gamepad controllers have motors built in to provide haptic feedback. Adding rumbles and vibrations can greatly enhance a player's experience and provide subtle feedback beyond visuals or audio. You can use the `Class.HapticService` to [verify vibration support](#vibration-support) before [turning on the motors](#activate-motors).
 
-### Vibration Support
+### Vibration support
 
 Not all controllers have motors so it is important to check for support before attempting to use the haptic motors. To query if a given controller has vibration support, call `Class.HapticService:IsVibrationSupported()`.
 
@@ -257,7 +260,7 @@ end
 	</tbody>
 </table>
 
-### Activating Motors
+### Activate motors
 
 Once you've confirmed that a player's gamepad [supports vibration](#vibration-support), you can turn on a specific motor with `Class.HapticService:SetMotor()`. This method takes the gamepad and the amplitude of the vibration as arguments. Amplitude can be any value between 0 and 1.
 
@@ -274,3 +277,9 @@ if isVibrationSupported then
 	end
 end
 ```
+
+## Controller emulation
+
+<BetaAlert betaName="Gamepad Emulator" leadIn="This tool is currently in beta. Enable it through " leadOut="." components={props.components} />
+
+<ControllerEmulator components={props.components} />

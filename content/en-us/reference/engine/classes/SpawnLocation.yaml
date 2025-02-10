@@ -88,6 +88,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: SpawnLocation.Duration
     summary: |
       The length of time, in seconds, that a `Class.ForceField` will be applied
@@ -123,6 +126,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: SpawnLocation.Enabled
     summary: |
       Sets whether or not the `Class.SpawnLocation` is enabled. When disabled
@@ -153,6 +159,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: SpawnLocation.Neutral
     summary: |
       Whether or not a `Class.SpawnLocation` is affiliated with a specific team.
@@ -183,6 +192,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
   - name: SpawnLocation.TeamColor
     summary: |
       Sets what team the `Class.SpawnLocation` is affiliated to. If
@@ -211,6 +223,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Basic
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []

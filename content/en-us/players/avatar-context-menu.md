@@ -5,13 +5,13 @@ description: The Avatar Context Menu (ACM) allows users to interact and customiz
 
 The **Avatar Context Menu** (ACM) makes it easier for users to interact with each other. When the ACM is enabled in your experience, a user can walk up to another user's character and click on them to open a small menu with several default options. The player can send a friend request, begin a private chat, view the user's profile, or wave.
 
-After [enabling](#enabling-the-avatar-context-menu) the ACM in your experience, you can customize the ACM in the following ways:
+After [enabling](#enable-the-avatar-context-menu) the ACM in your experience, you can customize the ACM in the following ways:
 
-- Programmatically [open and close](#opening-and-closing-the-acm) the ACM for specific users.
-- [Add](#adding-menu-options) custom options and [remove](#removing-menu-options) existing options to the ACM.
-- [Customize the ACM appearance](#customizing-menu-appearance) to create a unique user interface.
+- Programmatically [open and close](#open-and-close-the-acm) the ACM for specific users.
+- [Add](#add-menu-options) custom options and [remove](#remove-menu-options) existing options to the ACM.
+- [Customize the ACM appearance](#customize-menu-appearance) to create a unique user interface.
 
-## Enabling the Avatar Context Menu
+## Enable the Avatar Context Menu
 
 The Avatar Context Menu must be enabled using the `Class.StarterGui:SetCore()` option "AvatarContextMenuEnabled" in a `Class.LocalScript`. The ACM is best used in experiences where there is no predefined behavior for clicking on other users.
 
@@ -30,7 +30,7 @@ If you need to detect whether the ACM is enabled, you can use the following code
 StarterGui:GetCore(AvatarContextMenuEnabled)
 ```
 
-## Opening and Closing the ACM
+## Open and close the ACM
 
 Once enabled, you can open and close the ACM programmatically with `Class.StarterGui`.
 
@@ -47,14 +47,14 @@ To programmatically close the ACM, use the following code:
 StarterGui:SetCore("AvatarContextMenuTarget", nil)
 ```
 
-## Menu Options
+## Menu options
 
-You can [add](#adding-menu-options) and [remove](#removing-menu-options) actions through scripting. By default, the menu has the following options:
+You can [add](#add-menu-options) and [remove](#remove-menu-options) actions through scripting. By default, the menu has the following options:
 
 <table>
 <thead>
   <tr>
-    <th>Menu Option</th>
+    <th>Menu option</th>
     <th>Description</th>
   </tr>
 </thead>
@@ -82,7 +82,7 @@ Once the ACM is open, the user can scroll and select other users on the characte
 
 <img src="../assets/avatar/context-menu/ACM-User-Selector.png" width="345" />
 
-### Adding Menu Options
+### Add menu options
 
 Once enabled, experience-specific actions can be added to the ACM. For example, an experience might allow for trade requests, add-to-party options, or other special interactions.
 
@@ -106,7 +106,7 @@ local options = {"Custom ACM Action", bindableEvent}
 StarterGui:SetCore("AddAvatarContextMenuOption", options)
 ```
 
-### Removing Menu Options
+### Remove menu options
 
 You can remove custom and the default Add Friend, Chat, View, and Wave options from the ACM by referencing the custom Action name or the default `Enum.AvatarContextMenuOption` enum.
 
@@ -124,7 +124,7 @@ StarterGui:SetCore("RemoveAvatarContextMenuOption", Enum.AvatarContextMenuOption
 You can not make edits to the ACM while it is open. Your code should verify that an action is still relevant in case the action was removed from the menu. For example, if a marketplace area adds an option to send trade requests, you should verify both users are still in the marketplace.
 </Alert>
 
-## Customizing Menu Appearance
+## Customize menu appearance
 
 To change the appearance of the Avatar Context Menu, call `Class.StarterGui:SetCore()` with the option "AvatarContextMenuTheme", providing a table of parameters and values to adjust the menu appearance.
 
@@ -138,7 +138,7 @@ B. Button Frame: Contains all of the ACM buttons.
 
 C. Buttons: Individual buttons for the default or custom ACM actions.
 
-### Appearance Parameters
+### Appearance parameters
 
 These are the customization parameters with the ACM:
 
@@ -173,7 +173,7 @@ These are the customization parameters with the ACM:
 </tbody>
 </table>
 
-#### Name Tag
+#### Name tag
 
 <table>
 <tbody>
@@ -188,7 +188,7 @@ These are the customization parameters with the ACM:
 </tbody>
 </table>
 
-#### Button Frame
+#### Button frame
 
 <table>
 <tbody>
@@ -261,7 +261,7 @@ These are the customization parameters with the ACM:
 </tbody>
 </table>
 
-#### Various Image
+#### Various image
 
 <table>
 <tbody>
@@ -280,7 +280,7 @@ These are the customization parameters with the ACM:
 </tbody>
 </table>
 
-#### Selected Character
+#### Selected character
 
 <table>
 <tbody>
@@ -291,7 +291,7 @@ These are the customization parameters with the ACM:
 </tbody>
 </table>
 
-#### Size and Position
+#### Size and position
 
 <table>
 <tbody>
@@ -326,7 +326,7 @@ These are the customization parameters with the ACM:
 </tbody>
 </table>
 
-### Example Customization
+### Example customization
 
 The following code sample customizes the ACM theme using some basic parameters:
 

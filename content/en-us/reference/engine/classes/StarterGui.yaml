@@ -7,8 +7,8 @@ summary: |
   `Class.PlayerGui` of `Class.Player|Players`. Also provides a range of
   functions for interacting with the `Class.CoreGui`.
 description: |
-  `StarterGui` is a container object designed to hold `Class.LayerCollector`
-  objects such as `Class.ScreenGui|ScreenGuis`.
+  `Class.StarterGui` is a container object designed to hold
+  `Class.LayerCollector` objects such as `Class.ScreenGui|ScreenGuis`.
 
   When a `Class.Player.Character` spawns, the contents of their
   `Class.PlayerGui` (if any) are emptied. Children of the `Class.StarterGui` are
@@ -19,9 +19,9 @@ description: |
   only be placed into each player's `Class.PlayerGui` once and will not be
   deleted when the `Class.Player` respawns.
 
-  `StarterGui` also includes a range of functions allowing you to interact with
-  the `Class.CoreGui`. For example `Class.StarterGui:SetCoreGuiEnabled()` can be
-  used to disable elements of the `Class.CoreGui`, and
+  `Class.StarterGui` also includes a range of functions allowing you to interact
+  with the `Class.CoreGui`. For example `Class.StarterGui:SetCoreGuiEnabled()`
+  can be used to disable elements of the `Class.CoreGui`, and
   `Class.StarterGui:SetCore()` can perform a range of functions including
   creating notifications and system messages.
 code_samples:
@@ -37,7 +37,7 @@ properties:
       Allows this service to process input like `Class.PlayerGui` and
       `Class.CoreGui` do.
     description: |
-      Allows `StarterGui` to process input like `Class.PlayerGui` and
+      Allows `Class.StarterGui` to process input like `Class.PlayerGui` and
       `Class.CoreGui` do. The default value is `false`.
     code_samples:
     type: bool
@@ -53,6 +53,9 @@ properties:
     serialization:
       can_load: false
       can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: StarterGui.ResetPlayerGuiOnSpawn
     summary: |
       Determines whether each child parented to the StarterGui will be cloned
@@ -70,8 +73,8 @@ properties:
       - Deprecated
     deprecation_message: |
       This property is deprecated. Use `Class.LayerCollector.ResetOnSpawn` to
-      control the resetting behavior for individual
-      `Class.LayerCollector|GUI objects`.
+      control the resetting behavior for individual `Class.LayerCollector`
+      objects.
     security:
       read: None
       write: None
@@ -80,6 +83,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: StarterGui.RtlTextSupport
     summary: ''
     description: ''
@@ -96,6 +102,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: StarterGui.ScreenOrientation
     summary: |
       Sets the default screen orientation mode for users with mobile devices.
@@ -132,6 +141,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: StarterGui.ShowDevelopmentGui
     summary: |
       Determines whether the contents of `Class.StarterGui` is visible in
@@ -151,6 +163,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: StarterGui.VirtualCursorMode
     summary: ''
     description: ''
@@ -167,6 +182,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
 methods:
   - name: StarterGui:GetCoreGuiEnabled
     summary: |
@@ -197,6 +215,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: StarterGui:SetCore
     summary: |
       Allows you to perform certain interactions with Roblox's core scripts.
@@ -750,6 +770,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: StarterGui:SetCoreGuiEnabled
     summary: |
       Sets whether the `Class.CoreGui` element associated with the given
@@ -779,6 +801,8 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: StarterGui:GetCore
     summary: |
       Returns a variable that has been specified by a Roblox core script.
@@ -881,5 +905,7 @@ methods:
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

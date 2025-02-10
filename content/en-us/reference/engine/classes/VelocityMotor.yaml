@@ -36,6 +36,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: VelocityMotor.DesiredAngle
     summary: |
       The desired angle to be reached. The motor will attempt to reach this
@@ -55,6 +58,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: VelocityMotor.Hole
     summary: |
       The `Class.Hole` linked to this VelocityMotor.
@@ -72,6 +78,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
   - name: VelocityMotor.MaxVelocity
     summary: |
       The maximum amount of velocity able to be reached.
@@ -89,6 +98,9 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - Physics
+    writeCapabilities: []
 methods: []
 events: []
 callbacks: []
