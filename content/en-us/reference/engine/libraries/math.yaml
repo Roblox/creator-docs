@@ -310,7 +310,7 @@ functions:
         type: number
         default:
         summary: |
-          The interpolation factor, typically between 0 and 1.
+          The interpolation factor, typically between `0` and `1`.
     returns:
       - type: number
         summary: |
@@ -461,7 +461,7 @@ functions:
       Returns a Perlin noise value.
     description: |
       Returns a Perlin noise value. The returned value is most often between the
-      range of -1 to 1 (inclusive) but sometimes may be outside that range; if
+      range of `-1` to `1` (inclusive) but sometimes may be outside that range; if
       the interval is critical to you, use `Library.math.clamp(noise, -1, 1)` on
       the output.
 
@@ -475,9 +475,9 @@ functions:
       will always return `0.48397532105446` and `Library.math.noise(1.158, 6)`
       will always return `0.15315161645412`.
 
-      If `x`, `y`, and `z` are all integers, the return value will be 0. For
+      If `x`, `y`, and `z` are all integers, the return value will be `0`. For
       fractional values of `x`, `y`, and `z`, the return value will gradually
-      fluctuate between -0.5 and 0.5. For coordinates that are close to each
+      fluctuate between `-0.5` and `0.5`. For coordinates that are close to each
       other, the return values will also be close to each other.
     parameters:
       - name: x
@@ -537,10 +537,10 @@ functions:
       Returns a random number within the range provided.
     description: |
       When called without arguments, returns a uniform pseudo-random real number
-      in the range of 0 to 1 (inclusive of 0 but exclusive of 1).
+      in the range of `0` to `1` (inclusive of `0` but exclusive of `1`).
 
       When called with an integer number `m`, returns a uniform pseudo-random
-      integer in the range of 1 to `m`, inclusive.
+      integer in the range of `1` to `m`, inclusive.
 
       When called with two integer numbers `m` and `n`, returns a uniform
       pseudo-random integer in the range of `m` to `n`, inclusive.
@@ -584,12 +584,12 @@ functions:
       number.
     description: |
       Returns the integer with the smallest difference between it and the given
-      number. For example, the value 5.8 returns 6.
+      number. For example, the value `5.8` returns `6`.
 
-      For values like 0.5 that are equidistant to two integers, the value with
+      For values like `0.5` that are equidistant to two integers, the value with
       the greater difference between it and zero is chosen. In other words, the
-      function "rounds away from zero" such that 0.5 rounds to 1 and -0.5 rounds
-      to -1.
+      function "rounds away from zero" such that `0.5` rounds to `1` and `-0.5`
+      rounds to `-1`.
     parameters:
       - name: x
         type: number
@@ -603,11 +603,11 @@ functions:
     code_samples:
   - name: math.sign
     summary: |
-      Returns -1 if `x` is less than 0, 0 if `x` equals 0, or 1 if `x` is
-      greater than 0.
+      Returns `-1` if `x` is less than `0`, `0` if `x` equals `0`, or `1` if `x` is
+      greater than `0`.
     description: |
-      Returns -1 if `x` is less than 0, 0 if `x` equals 0, or 1 if `x` is
-      greater than 0.
+      Returns `-1` if `x` is less than `0`, `0` if `x` equals `0`, or `1` if `x` is
+      greater than `0`.
     parameters:
       - name: x
         type: number
