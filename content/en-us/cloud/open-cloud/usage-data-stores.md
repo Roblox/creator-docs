@@ -3,7 +3,7 @@ title: Usage guide for data stores
 description: Explains how to use Open Cloud Web APIs to access and modify data stores by HTTP calls.
 ---
 
-In addition to accessing [data stores](../../cloud-services/data-stores/index.md) using Lua `Class.DataStoreService` in Studio or live servers, you can use Open Cloud APIs to access and utilize [standard](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json) from external scripts and tools with granular access and security control.
+In addition to accessing [data stores](../../cloud-services/data-stores/index.md) using the Engine API (`Class.DataStoreService`) in Studio or live servers, you can use the Open Cloud APIs to access and utilize [standard](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json) from external scripts and tools with granular access and security control.
 
 <Alert severity="warning">
 Open Cloud APIs for ordered data stores are beta APIs that might be subject to changes for future releases.
@@ -13,27 +13,27 @@ Open Cloud APIs for ordered data stores are beta APIs that might be subject to c
 
 You can improve several areas of your workflow by accessing your data with these APIs, such as:
 
-- **Customer Support Portal**: Data stores are useful for storing persistent user resources, such as items in user inventories or skill points. Sometimes you need to update these resources for customer support. Rather than using Studio or joining an experience every time manually, you can build a web application to allow your customer service agents to directly handle customer support requests, such as viewing and modifying user inventories and issuing refunds.
+- **Customer Support Portal**: Data stores are useful for storing persistent user resources, such as items in user inventories or skill points. Sometimes you need to update these resources for customer support. Rather than using Studio or joining an experience manually, you can build a web application to allow your customer service agents to directly handle customer support requests, such as viewing and modifying user inventories and issuing refunds.
 
-- **LiveOps Dashboard**: You can build a LiveOps dashboard using the APIs to improve the efficiency of live operations, such as scheduling in-experience events. You can code an event in advance, hide it under a feature flag as part of the configuration data in a data store, and set a time to flip the flag for publishing the event. Your experience servers can detect this change by reading the flag to launch the event.
+- **LiveOps Dashboard**: You can build a LiveOps dashboard using the APIs to improve the efficiency of live operations. For example, you might schedule an event in advance, hide it under a feature flag as part of the configuration data in a data store, and set a time to flip the flag for publishing the event. Your experience servers can detect this change by reading the flag to launch the event.
 
 - **External Leaderboard**: To promote your experiences outside of Roblox, you can pull the information of your experience, such as the leaderboard of a race, in real-time and display it on an external website. You can grant read-only access to your ordered data stores for the website to periodically request the latest data through HTTP and update the web page.
 
 - **Data Migration Automation**: Data might change or update as your experience evolves, such as upgrading data schemas to accommodate new features. To avoid losing existing user data, sometimes you need to migrate your data stores from the old schema to a new one. You can write an external script that reads each entry from current data stores, maps the data to the new schema, and writes the entry back to a new data store to automate the data migration.
 
-## Differences with the Lua API
+## Differences with the Engine API
 
-Although Open Cloud APIs are similar to the Lua `Class.DataStoreService`, there are a few different requirements to be aware of:
+Although Open Cloud APIs are similar to `Class.DataStoreService`, there are a few key differences:
 
-- **Universe ID and data store name**: Unlike the Lua API, Open Cloud APIs are stateless and can come from anywhere, so you need to always provide the **Universe ID**, the unique identifier of your experience, and the data store **name** when sending the requests. For more information on how to get a Universe ID, see [Universe ID](../../cloud/open-cloud/data-store-api-handling.md#universe-id).
+- **Universe ID and data store name**: Unlike the Engine API, Open Cloud APIs are stateless and can come from anywhere, so you must always provide the **universe ID**, the unique identifier of your experience, and the data store **name** when sending the requests. For more information on how to get a universe ID, see [Universe ID](../../cloud/open-cloud/data-store-api-handling.md#universe-id).
 
-- **Separate permissions for creating and updating**: The Lua API creates new entries if they don't exist when you call `Class.DataStore:SetAsync()`, but Open Cloud methods for creating and updating entries are separate. Separate permissions can be safer and more flexible in certain situations. For example, you can create a customer support tool that can edit an existing user's profile but can't create a new user's profile.
+- **Separate permissions for creating and updating**: The Engine API creates new entries if they don't exist when you call `Class.DataStore:SetAsync()`, but Open Cloud methods for creating and updating entries are separate. Separate permissions can be safer and more flexible in certain situations. For example, you can create a customer support tool that can edit an existing user's profile, but can't create a new user's profile.
 
-- **Data serialization**: All Open Cloud endpoints require you to serialize all data before network transportation. Serialization means to convert an object into that string, and deserialization is its inverse operation (convert a string to an object). The Lua API serializes and deserializes entry content automatically, but for Open Cloud you need to generate or parse your entry data with JSON on your own.
+- **Data serialization**: All Open Cloud endpoints require you to serialize all data before network transportation. Serialization means converting an object into a string. Deserialization is the opposite (converting a string into an object). The Engine API serializes and deserializes entry content automatically, but for Open Cloud, you need to generate or parse your entry data with JSON on your own.
 
 ## Security permissions
 
-Data stores usually store sensitive information, such as user profiles and virtual currency. To maintain security, each Open Cloud API has corresponding required permissions that you must add to your API key, such as the `List Keys` permission for the listing API. If you don't add the required permissions, your API call returns an error. For the specific permissions that are required for each operation, see the API reference of [standard](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json).
+Data stores often store sensitive information, such as user profiles and virtual currency. To maintain security, each Open Cloud API has corresponding required permissions that you must add to your API key, such as the `List Keys` permission for the listing API. If you don't add the required permissions, your API call returns an error. For the specific permissions that are required for each operation, see the API reference of [standard](../../reference/cloud/datastores-api/v1.json) and [ordered data stores](../../reference/cloud/datastores-api/ordered-v1.json).
 
 When [configuring your API keys](./api-keys.md#create-an-api-key), you can set granular permissions, such as read, write, and list entry, for each data store within a specific experience, or you can give a key to read or write all data stores within an experience. You can also limit access to a subset of data stores needed for your tool instead of exposing all data stores. This mitigates the impact in case your key gets leaked.
 
@@ -78,8 +78,96 @@ When [creating an API Key](./api-keys.md) for this example, make sure you perfor
 
 #### Add scripts for the user inventory support portal
 
-<details open>
-   <summary>Click for Python Example</summary>
+<Tabs>
+  <TabItem key = "1" label="Node.js">
+
+After creating the API key with the required permissions for the example app, you need to add JavaScript code to perform app functionalities. The `data_stores_methods.js` file shows how to define [`List Entries`](../../reference/cloud/datastores-api/v1.json#list-entries), [`Get Entry`](../../reference/cloud/datastores-api/v1.json#get-entry), and [`Increment Entry`](../../reference/cloud/datastores-api/v1.json#increment-entry) methods. The `update_inventory.js` file uses the defined methods to list a subset of user inventories, increase the virtual currency for each user, and update the data.
+
+```javascript title='dataStoresMethods.js'
+const fetch = require('node-fetch');
+
+class DataStores {
+  constructor() {
+    this._baseUrl = "https://apis.roblox.com/datastores/v1/universes/{universeId}";
+    this._apiKey = process.env.API_KEY;
+    this._universeId = "UNIVERSE_ID";
+    this.ATTR_HDR = 'Roblox-entry-Attributes';
+    this.USER_ID_HDR = 'Roblox-entry-UserIds';
+    this._objectsUrl = `${this._baseUrl}${this._universeId}/standard-datastores/datastore/entries/entry`;
+    this._incrementUrl = `${this._objectsUrl}/increment`;
+    this._listObjectsUrl = `${this._baseUrl}${this._universeId}/standard-datastores/datastore/entries`;
+  }
+
+  async _getHeaders() {
+    return { 'x-api-key': this._apiKey };
+  }
+
+  async getEntry(datastore, objectKey, scope = null) {
+    const url = `${this._objectsUrl}?datastoreName=${datastore}&entryKey=${objectKey}&scope=${scope || ''}`;
+    const response = await fetch(url, { headers: await this._getHeaders() });
+    const data = await response.json();
+    return data;
+  }
+
+  async listEntries(datastore, scope = null, prefix = "", limit = 100) {
+    const url = `${this._listObjectsUrl}?datastoreName=${datastore}&scope=${scope}&prefix=${prefix}&limit=${limit}`;
+    const response = await fetch(url, { headers: await this._getHeaders() });
+    const data = await response.json();
+    return data;
+  }
+
+  async incrementEntry(datastore, objectKey, incrementBy, scope = null) {
+    const url = `${this._incrementUrl}?datastoreName=${datastore}&entryKey=${objectKey}&incrementBy=${incrementBy}&scope=${scope || ''}`;
+    const response = await fetch(url, { method: 'POST', headers: await this._getHeaders() });
+    const data = await response.json();
+    return data;
+  }
+}
+
+module.exports = DataStores;
+```
+
+```javascript title='updateInventory.js'
+const DataStores = require('./dataStoresMethods');
+const dataStoresApi = new DataStores();
+
+// Set up
+const datastoreName = "Inventory";
+
+// List keys for a subset of users
+dataStoresApi.listEntries(datastoreName)
+  .then(keys => {
+    console.log(keys);
+  });
+
+// Read inventory for each user
+for (let x = 0; x < 5; x++) {
+  const updatedObjectKey = `User_${x + 1}`;
+  dataStoresApi.getEntry(datastoreName, updatedObjectKey)
+    .then(value => {
+      console.log(`${updatedObjectKey} has ${value.gems} gems in their inventory`);
+    });
+}
+
+// Update the currency of each user by 10
+for (let x = 0; x < 5; x++) {
+  const updatedObjectKey = `User_${x + 1}`;
+  dataStoresApi.incrementEntry(datastoreName, updatedObjectKey, 10)
+    .then(value => {
+      console.log(`${updatedObjectKey} now has ${value.robux} robux in their inventory`);
+    });
+}
+```
+
+To test, set the `API_KEY` environment variable and run the JavaScript file:
+
+```bash
+export API_KEY=... \
+node updateInventory.js
+```
+
+  </TabItem>
+  <TabItem key = "2" label="Python">
 
 After creating the API key with permissions required for the example app, you need to add Python scripts to perform app functionalities. The `data_stores_methods.py` file shows how to define [`List Entries`](../../reference/cloud/datastores-api/v1.json#list-entries), [`Get Entry`](../../reference/cloud/datastores-api/v1.json#get-entry), and [`Increment Entry`](../../reference/cloud/datastores-api/v1.json#increment-entry) methods. The `update_inventory` file uses the defined methods to list a subset of user inventories, increase the virtual currency for each user, and update the data.
 
@@ -189,102 +277,9 @@ To test, set the `API_KEY` environment variable and run `update_inventory` file:
 export API_KEY=... \
 python update_inventory
 ```
-  
-</details>
 
-<details>
-   <summary>Click for JavaScript Example</summary>
-
-After creating the API key with the required permissions for the example app, you need to add JavaScript code to perform app functionalities. The `data_stores_methods.js` file shows how to define [`List Entries`](../../reference/cloud/datastores-api/v1.json#list-entries), [`Get Entry`](../../reference/cloud/datastores-api/v1.json#get-entry), and [`Increment Entry`](../../reference/cloud/datastores-api/v1.json#increment-entry) methods. The `update_inventory.js` file uses the defined methods to list a subset of user inventories, increase the virtual currency for each user, and update the data.
-
-```javascript title='dataStoresMethods.js'
-const fetch = require('node-fetch');
-
-class DataStores {
-  constructor() {
-    this._baseUrl = "https://apis.roblox.com/datastores/v1/universes/{universeId}";
-    this._apiKey = process.env.API_KEY;
-    this._universeId = "UNIVERSE_ID";
-    this.ATTR_HDR = 'Roblox-entry-Attributes';
-    this.USER_ID_HDR = 'Roblox-entry-UserIds';
-    this._objectsUrl = `${this._baseUrl}${this._universeId}/standard-datastores/datastore/entries/entry`;
-    this._incrementUrl = `${this._objectsUrl}/increment`;
-    this._listObjectsUrl = `${this._baseUrl}${this._universeId}/standard-datastores/datastore/entries`;
-  }
-
-  async _getHeaders() {
-    return { 'x-api-key': this._apiKey };
-  }
-
-  async getEntry(datastore, objectKey, scope = null) {
-    const url = `${this._objectsUrl}?datastoreName=${datastore}&entryKey=${objectKey}&scope=${scope || ''}`;
-    const response = await fetch(url, { headers: await this._getHeaders() });
-    const data = await response.json();
-    return data;
-  }
-
-  async listEntries(datastore, scope = null, prefix = "", limit = 100) {
-    const url = `${this._listObjectsUrl}?datastoreName=${datastore}&scope=${scope}&prefix=${prefix}&limit=${limit}`;
-    const response = await fetch(url, { headers: await this._getHeaders() });
-    const data = await response.json();
-    return data;
-  }
-
-  async incrementEntry(datastore, objectKey, incrementBy, scope = null) {
-    const url = `${this._incrementUrl}?datastoreName=${datastore}&entryKey=${objectKey}&incrementBy=${incrementBy}&scope=${scope || ''}`;
-    const response = await fetch(url, { method: 'POST', headers: await this._getHeaders() });
-    const data = await response.json();
-    return data;
-  }
-}
-
-module.exports = DataStores;
-```
-
-```javascript title='updateInventory.js'
-const DataStores = require('./dataStoresMethods');
-const dataStoresApi = new DataStores();
-
-// Set up
-const datastoreName = "Inventory";
-
-// List keys for a subset of users
-dataStoresApi.listEntries(datastoreName)
-  .then(keys => {
-    console.log(keys);
-  });
-
-// Read inventory for each user
-for (let x = 0; x < 5; x++) {
-  const updatedObjectKey = `User_${x + 1}`;
-  dataStoresApi.getEntry(datastoreName, updatedObjectKey)
-    .then(value => {
-      console.log(`${updatedObjectKey} has ${value.gems} gems in their inventory`);
-    });
-}
-
-// Update the currency of each user by 10
-for (let x = 0; x < 5; x++) {
-  const updatedObjectKey = `User_${x + 1}`;
-  dataStoresApi.incrementEntry(datastoreName, updatedObjectKey, 10)
-    .then(value => {
-      console.log(`${updatedObjectKey} now has ${value.robux} robux in their inventory`);
-    });
-}
-```
-
-To test, set the `API_KEY` environment variable and run the JavaScript file:
-
-```bash
-export API_KEY=... \
-node updateInventory.js
-```
-
-</details>
-
-### External Persistent Leaderboard
-
-=======
+  </TabItem>
+</Tabs>
 
 ### External persistent leaderboard
 
@@ -318,103 +313,8 @@ When [creating an API Key](./api-keys.md) for this example, make sure you perfor
 
 #### Add scripts for the leaderboard
 
-<details open>
-<summary>Click for Python Example</summary>
-
-After creating the API key with permissions required for the example app, you need to add Python scripts to perform app functionalities.
-
-The `ordered_data_stores.py` file shows how to define [`List`](../../reference/cloud/datastores-api/ordered-v1.json#list), [`Create`](../../reference/cloud/datastores-api/ordered-v1.json#create), [`Update`](../../reference/cloud/datastores-api/ordered-v1.json#update) and [`Increment`](../../reference/cloud/datastores-api/ordered-v1.json#increment) methods. The `leaderboard` file uses the defined methods to create entries of users in ordered data stores, display scores, increment scores of winning users, and update the leaderboard. The `leaderboard` file also imports a `config` JSON file for configuring the Universe ID, API domain, and your API key.
-
-```python title='ordered_data_stores.py'
-import hashlib
-import requests
-import json
-
-class DataStores:
-    def __init__(self, config_file):
-        with open(config_file) as f:
-            self._config = json.load(f)
-
-    def _H(self):
-        return { 'x-api-key' : self._config["api_key"], 'Content-Type': 'application/json'}
-    def _get_url(self, path_format: str):
-        return f"{self._config['base_url']}/{path_format.format(self._config['universe_id'])}"
-
-    def list(self, datastore, scope, pageSize = 10, orderBy = "", filter = "", exclusiveStartKey = ""):
-        self._objects_url = self._config['api_key_url']+"universes/"+self._config["universe_id"]+"/orderedDataStores/"+datastore+"/scopes/"+scope+"/entries"
-        headers = { 'x-api-key' : self._config["api_key"] }
-        r = requests.get(self._objects_url, headers=headers, params={"max_page_size": pageSize, "order_by" : orderBy, "filter" : filter, "page_token" : ""})
-        return r
-
-    def create(self, datastore, scope, entry, data):
-        self._objects_url = self._config['api_key_url']+"universes/"+self._config["universe_id"]+"/orderedDataStores/"+datastore+"/scopes/"+scope+"/entries"
-        headers = self._H()
-        payload = json.dumps({
-            "value": 11
-            })
-        return requests.post(self._objects_url, params = {"id": entry }, data=payload, headers=headers)
-
-    def increment(self, datastore, scope, entry, incrementBy):
-        self._objects_url = self._config['api_key_url']+"universes/"+self._config["universe_id"]+"/orderedDataStores/"+datastore+"/scopes/"+scope+"/entries/"+entry+":increment"
-        headers = { 'x-api-key' : self._config["api_key"] }
-        payload = json.dumps({
-            "amount": 1
-            })
-        r = requests.post(self._objects_url, headers=headers, data=payload)
-        return r
-```
-
-```python title='leaderboard.py'
-import leaderboardEndpoints
-
-# input config file here
-datastores = leaderboardEndpoints.DataStores("config.json")
-
-# Variables
-orderedDataStore = "PlayerScores"
-scope = "global"
-entryNames = ["Ragdoll", "Balinese", "Tabby", "Siamese"]
-
-# Create an entry and give each new player 50 points for joining the game
-for x in range(len(entryNames)):
-    r = datastores.create(orderedDataStore, scope, entryNames[x], 50)
-
-# Display the players scores
-playerScores = datastores.list(orderedDataStore, scope)
-print(playerScores.content)
-
-# Increment the first players score for winning the game
-datastores.increment(orderedDataStore, scope, entryNames[0], 100)
-# Increment all the players scores for participating in the game
-for x in range(len(entryNames)):
-    datastores.increment(orderedDataStore, scope, entryNames[x], 10)
-
-# Display the leaderboard with the updated scores
-playerScores = datastores.list(orderedDataStore, scope)
-print(playerScores.content)
-```
-
-```json title='config'
-{
-  "universe_id": "",
-  "api_key_url": "https://apis.roblox.com/datastores/ordered-v1/",
-  "api_key": ""
-}
-```
-
-To test, set the `API_KEY` environment variable and run the `leaderboard` file:
-
-```bash
-export API_KEY=... \
-python leaderboard
-```
-
-After completing testing, you can publish or embed the leaderboard to websites outside of Roblox for more reach.
-
-</details>
-
-<details>
-<summary>Click for JavaScript Example</summary>
+<Tabs>
+  <TabItem key = "1" label="Node.js">
 
 After creating the API key with the required permissions for the example app, you need to add JavaScript code to perform app functionalities.
 
@@ -511,4 +411,99 @@ node leaderboard.js
 ```
 
 After completing testing, you can publish or embed the leaderboard to websites outside of Roblox for more reach.
-</details>
+
+  </TabItem>
+  <TabItem key = "2" label="Python">
+
+After creating the API key with permissions required for the example app, you need to add Python scripts to perform app functionalities.
+
+The `ordered_data_stores.py` file shows how to define [`List`](../../reference/cloud/datastores-api/ordered-v1.json#list), [`Create`](../../reference/cloud/datastores-api/ordered-v1.json#create), [`Update`](../../reference/cloud/datastores-api/ordered-v1.json#update) and [`Increment`](../../reference/cloud/datastores-api/ordered-v1.json#increment) methods. The `leaderboard` file uses the defined methods to create entries of users in ordered data stores, display scores, increment scores of winning users, and update the leaderboard. The `leaderboard` file also imports a `config` JSON file for configuring the Universe ID, API domain, and your API key.
+
+```python title='ordered_data_stores.py'
+import hashlib
+import requests
+import json
+
+class DataStores:
+    def __init__(self, config_file):
+        with open(config_file) as f:
+            self._config = json.load(f)
+
+    def _H(self):
+        return { 'x-api-key' : self._config["api_key"], 'Content-Type': 'application/json'}
+    def _get_url(self, path_format: str):
+        return f"{self._config['base_url']}/{path_format.format(self._config['universe_id'])}"
+
+    def list(self, datastore, scope, pageSize = 10, orderBy = "", filter = "", exclusiveStartKey = ""):
+        self._objects_url = self._config['api_key_url']+"universes/"+self._config["universe_id"]+"/orderedDataStores/"+datastore+"/scopes/"+scope+"/entries"
+        headers = { 'x-api-key' : self._config["api_key"] }
+        r = requests.get(self._objects_url, headers=headers, params={"max_page_size": pageSize, "order_by" : orderBy, "filter" : filter, "page_token" : ""})
+        return r
+
+    def create(self, datastore, scope, entry, data):
+        self._objects_url = self._config['api_key_url']+"universes/"+self._config["universe_id"]+"/orderedDataStores/"+datastore+"/scopes/"+scope+"/entries"
+        headers = self._H()
+        payload = json.dumps({
+            "value": 11
+            })
+        return requests.post(self._objects_url, params = {"id": entry }, data=payload, headers=headers)
+
+    def increment(self, datastore, scope, entry, incrementBy):
+        self._objects_url = self._config['api_key_url']+"universes/"+self._config["universe_id"]+"/orderedDataStores/"+datastore+"/scopes/"+scope+"/entries/"+entry+":increment"
+        headers = { 'x-api-key' : self._config["api_key"] }
+        payload = json.dumps({
+            "amount": 1
+            })
+        r = requests.post(self._objects_url, headers=headers, data=payload)
+        return r
+```
+
+```python title='leaderboard.py'
+import leaderboardEndpoints
+
+# input config file here
+datastores = leaderboardEndpoints.DataStores("config.json")
+
+# Variables
+orderedDataStore = "PlayerScores"
+scope = "global"
+entryNames = ["Ragdoll", "Balinese", "Tabby", "Siamese"]
+
+# Create an entry and give each new player 50 points for joining the game
+for x in range(len(entryNames)):
+    r = datastores.create(orderedDataStore, scope, entryNames[x], 50)
+
+# Display the players scores
+playerScores = datastores.list(orderedDataStore, scope)
+print(playerScores.content)
+
+# Increment the first players score for winning the game
+datastores.increment(orderedDataStore, scope, entryNames[0], 100)
+# Increment all the players scores for participating in the game
+for x in range(len(entryNames)):
+    datastores.increment(orderedDataStore, scope, entryNames[x], 10)
+
+# Display the leaderboard with the updated scores
+playerScores = datastores.list(orderedDataStore, scope)
+print(playerScores.content)
+```
+
+```json title='config'
+{
+  "universe_id": "",
+  "api_key_url": "https://apis.roblox.com/datastores/ordered-v1/",
+  "api_key": ""
+}
+```
+
+To test, set the `API_KEY` environment variable and run the `leaderboard` file:
+
+```bash
+export API_KEY=... \
+python leaderboard
+```
+
+After completing testing, you can publish or embed the leaderboard to websites outside of Roblox for more reach.
+
+  </TabItem>
+</Tabs>

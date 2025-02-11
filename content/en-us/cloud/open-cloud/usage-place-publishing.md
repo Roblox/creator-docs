@@ -3,11 +3,12 @@ title: Usage guide for place publishing
 description: Explains how to use Open Cloud Place Publishing API to publish places programmatically with version control.
 ---
 
-The [Place Publishing API](../../reference/cloud/universes-api/v1.json) fulfills the same functionality as [publishing to Roblox](../../production/publishing/publish-experiences-and-places.md) in Studio plus extra permission control and automation in continuous release workflow. You can use this API to update existing places of an experience to a new version, making it useful to automate your publishing workflow. For example, you can call this API from a GitHub action, and it automatically pushes a binary place file to Roblox Cloud after successful integration testing.
+The [place publishing API](../../reference/cloud/universes-api/v1.json) offers similar functionality to [publishing to Roblox](../../production/publishing/publish-experiences-and-places.md) in Studio, with extra permission control and automation in continuous release workflow. You can use this API to update existing places of an experience to a new version, making it useful for automating your publishing workflow. For example, you can call this API from a GitHub action and have it automatically push a binary place file to Roblox after successful integration testing.
 
-<Alert severity ='info'>
-This API only supports HTTPS requests.
-</Alert>
+## Limitations
+
+- This API only supports HTTPS requests.
+- The place publishing API doesn't update certain instance types. If your experience contains `Class.EditableImage`, `Class.EditableMesh`, `Class.PartOperation`, `Class.SurfaceAppearance`, or `Class.BaseWrap` instances, publish from Studio after modifying them.
 
 ## Places on Roblox
 

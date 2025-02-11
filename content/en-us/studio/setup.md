@@ -3,7 +3,8 @@ title: Roblox Studio setup
 description: Explains how to install Roblox Studio on your system.
 ---
 
-Create immersive 3D experiences on Roblox with **Roblox Studio**, a free application available on Windows and Mac.
+Create immersive 3D experiences on Roblox with **Roblox Studio**, a free application available for Windows and macOS.
+<Alert severity="warning">Roblox Studio is not available on mobile.</Alert>
 
 <Tabs>
 <TabItem label="Installation">

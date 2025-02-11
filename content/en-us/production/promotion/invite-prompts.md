@@ -69,7 +69,7 @@ By default, an invite prompt for the player shows a menu of their friends with *
   <tr>
     <td>`Class.ExperienceInviteOptions.LaunchData|LaunchData`</td>
     <td>string</td>
-    <td>Used to set a parameter in `Class.Player:GetJoinData()` when a friend joins from the invite notification. Maximum of 200 characters. See [Including Launch Data](#including-launch-data) for a usage example.</td>
+    <td>Used to set a parameter in `Class.Player:GetJoinData()` when a friend joins from the invite notification. Maximum of 200 characters. See [Include launch data](#include-launch-data) for a usage example.</td>
   </tr>
 </tbody>
 </table>

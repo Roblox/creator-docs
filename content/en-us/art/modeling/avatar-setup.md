@@ -5,6 +5,10 @@ description: The Avatar setup tool previews animations, clothing, accessories, a
 
 The **Avatar Setup Tool** allows you to auto-setup avatar meshes, preview animations, clothing, skin tones, and test avatar character bodies directly in Studio. Marketplace creators can also begin the uploading and validation process from this tool to quickly publish their assets.
 
+If a character model does not include all of Roblox's required [avatar components](../characters/index.md#components-of-an-avatar), the Avatar Setup tool **automatically generate these components** for you using [auto-setup](#auto-setup).
+
+After auto-setup, or if a model already includes Roblox's required avatar components, the Avatar Setup tool previews the asset in the [test interface](#test-interface), where you can test different animations, clothes, accessories, body parts, and more.
+
 <img src="../../assets/studio/general/Avatar-Tab-Avatar-Setup.png" width="760" alt="Avatar Preview button indicated in Avatar tab" />
 
 <GridContainer numColumns="2">
@@ -18,26 +22,16 @@ The **Avatar Setup Tool** allows you to auto-setup avatar meshes, preview animat
 </figure>
 </GridContainer>
 
-## Avatar auto-setup
+## Auto-setup
 
-The **auto-setup** feature converts a body model into a finished avatar model with all the advanced components that allow characters to interact with the world and express themselves.
+The **auto-setup** feature converts a body model into a finished avatar model with all the advanced components that allow characters to interact with the world and express themselves. Auto-setup can perform the following on a submitted humanoid-shaped model:
 
-Creating these [avatar components](../characters/index.md#components-of-an-avatar), including tasks like rigging, skinning, facial animation, and more, often require hours or days to configure in a third-party modeling tool such as [Blender](https://www.blender.org) or [Maya](https://www.autodesk.com/products/maya/overview). Using the Avatar Setup Tool, you can input a simple character model and create a Marketplace-ready avatar model within minutes.
-
-Auto-setup performs the following on a submitted character model:
-
-- **Rigging** — If an existing compatible rig isn't present, adds an R15 armature to your body model to enable movement and animation.
+- **Rigging** — Adds an R15 armature to your body model to enable movement and animation.
 - **Skinning** — Adds weights and influences to various surfaces of your mesh, ensuring an organic and natural flexibility during movement.
 - **Facial animation** — Generates the FACS poses, facial rigging, skinning, and animation data required for facial animation and avatar chat.
 - **Caging** — Adds the outer cage mesh to your avatar, enabling it to wear layered clothing.
 - **Partitioning** — Separates the body mesh into the appropriate R15 parts.
 - **Creating attachments** — Adds the appropriate attachment points enabling the character to wear rigid accessories.
-
-### How auto-setup works
-
-The auto-setup tool utilizes machine learning (ML) models that handles the rigging, skinning, and caging application. After creating the rigging, skinning, and caging data, the tool applies body partitioning and attachment point generation using a geometry-based solution. If existing non-rig components, such as cages, attachments, or animation, are already included in the imported `Class.Model`, the auto-setup tool removes them and generates new components. If the model includes a compatible R15 rig, the tool preserves the rigging and skinning data and does not overwrite this data.
-
-The ML models train on a dataset consisting of hundreds of different body shapes and styles. The tool performs best with human-like body models that are similar to those used for training and becomes more inconsistent for body models that diverge from the training set.
 
 See the following examples for the types of bodies and styles that work best with auto-setup:
 
@@ -56,9 +50,45 @@ See the following examples for the types of bodies and styles that work best wit
 </figure>
 </GridContainer>
 
+### How auto-setup works
+
+The auto-setup tool utilizes machine learning (ML) models that handles the rigging, skinning, and caging application. After creating the rigging, skinning, and caging data, the tool applies body partitioning and attachment point generation using a geometry-based solution.
+
+If existing non-rig components, such as cages, attachments, or animation, are already included in the imported `Class.Model`, the auto-setup tool removes them and generates new components. If the model includes a compatible R15 rig, the tool preserves the rigging and skinning data and does not overwrite this data.
+
+The ML models train on a dataset consisting of hundreds of different body shapes and styles. The tool performs best with human-like body models that are similar to those used for training and becomes more inconsistent for body models that diverge from the training set.
+
 Roblox intends to continue releasing updated versions of the auto-setup ML models over time. When uploading an avatar body asset, Studio gives you the option to add your input model as part of a dataset for additional training and improvements as well as provide feedback on the quality of the auto-setup output.
 
-### Model requirements
+### Valid inputs
+
+The auto-setup feature supports various mesh inputs, as long as the base mesh meets the [body model requirements](#body-model-requirements).
+
+<table><thead>
+  <tr>
+    <th><b>Reference Image</b></th>
+    <th><b>Auto-setup support</b></th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td><img src="../../assets/avatar/avatar-setup/Partial-Inputs-None-Rigged.png"/></td>
+    <td><Alert severity = 'success'>A full-body mesh object with **no rigging**.</Alert>This is the most common case where the input is the full-body mesh object doesn't include rigging data or other components. The input body must meet auto-setup's [model requirements](#body-model-requirements). <br /><br /> In this case, auto-setup creates the rest of the avatar components automatically.</td>
+  </tr>
+  <tr>
+    <td><img src="../../assets/avatar/avatar-setup/Partial-Inputs-Body-Rigged.png"/></td>
+    <td><Alert severity = "success">A full-body mesh with **only body rigging**.</Alert>If the full-body mesh includes a compatible R15 body rig, auto-setup uses the provided rig, and creates the facial rig and all other components. <br /><br /> The input body rig must follow Roblox's [rigging configuration](../characters/specifications.md#rigging), otherwise auto-setup creates a brand new rig for you.</td>
+  </tr>
+  <tr>
+    <td><img src="../../assets/avatar/avatar-setup/Partial-Inputs-Head-Rigged.png"/><br /></td>
+    <td><Alert severity = "error">A full-body mesh with **only facial rigging**.</Alert>At this time, auto-setup does not support cases where only a facial rig is present with the input model. <br /> <br /> If you intend to use your own custom facial rigging, you must also include an R15 rig and set the FaceRootJoint (and all child bones) as a child of the R15 head joint. For more information, see [optional rig requirements](#optional-rig-requirements). </td>
+  </tr>
+  <tr>
+    <td><img src="../../assets/avatar/avatar-setup/Partial-Inputs-All-Rigged.png"/><br /></td>
+    <td><Alert severity = "success">A full-body mesh with **both body and facial rigging**.</Alert>If the body rig, facial rig, and appropriate FACS data is included, auto-setup preserves that data and only generates the missing Roblox-specific components.<br /><br />For more information, see [optional rig requirements](#optional-rig-requirements).</td>
+  </tr>
+</tbody></table>
+
+### Body model requirements
 
 For best results, Avatar auto-setup expects the input body model to follow a specific set of requirements. These requirements may require using a third-party modeling tool to adjust your current character mesh, as they are different from the traditional [avatar character requirements](../characters/specifications.md). As the auto-setup tool improves, some of these requirements may lift.
 
@@ -95,9 +125,7 @@ The full requirements for the input body model are as follows:
      </figure>
      </GridContainer>
 
-4. **(Optional) R15 Rig** — If your model already includes a [correctly configured R15 rig](../characters/specifications.md#rigging), auto-setup doesn't generate a new rig and will use the one provided.
-5. **\_Geo affix** — The asset name must end with a "\_Geo".
-6. **Within triangle budget** — The total body mesh resolution must be within 10,742 triangles. Use the following guidance to ensure each part doesn't exceed expected polycounts:
+4. **Within triangle budget** — The total body mesh resolution must be within 10,742 triangles. Use the following guidance to ensure each part doesn't exceed expected polycounts:
 
    <table>
     <thead>
@@ -138,18 +166,32 @@ The full requirements for the input body model are as follows:
 
    1. The setup tool segments and adds [caps](../characters/specifications.md#body-parts) to the character limbs which may add to your total polycount. If your character model is close to the polycount limit, the additional geometry may cause validation failures.
 
-7. **Humanoid shape** — The body must follow a general humanoid shape, with two arms, two legs, a torso, and a head.
-8. **A-pose or T-Pose** — The body should form an upright A-pose or T-Pose.
+5. **Humanoid shape** — The body must follow a general humanoid shape, with two arms, two legs, a torso, and a head.
+6. **A-pose or T-Pose** — The body should form an upright A-pose or T-Pose.
    1. Bodies with I-pose may yield lower quality results.
    2. Ensure that no limbs obscure or overlap each other from the front view.
-9. **Negative Z Axis** — The body front should face the negative Z axis.
-10. **Symmetrical** — The body should be left and right symmetrical.
-    1. Asymmetrical bodies may still work on a case-to-case basis. Position the center of the body with the Y-axis to improve the accuracy of the result.
-11. **Watertight** — Ensure the model is watertight in all regions with the exception of the eyes and mouth. Watertight means that there are no holes in the mesh and no back faces are exposed.
-12. **No accessories** — Do not include accessories, including face accessories, like hair, eyebrows, beards, and eyelashes.
-13. **Distinct neck area** — Keep the neck distinct and not merged with the shoulders or upper torso.
-14. **Includes texture** — Models should include one or more texture maps. If the input body includes multiple textures, the tool bakes the textures to a single map. This applies to [PBR textures](../modeling/surface-appearance.md) where the four textures are baked — one for each albedo, normal, metalness and roughness.
-15. **Follows Marketplace and Community Policy** — The model must conform to Roblox's [Marketplace Policy](../../marketplace/marketplace-policy.md) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+7. **Negative Z Axis** — The body front should face the negative Z axis.
+8. **Symmetrical** — The body should be left and right symmetrical.
+   1. Asymmetrical bodies may still work on a case-to-case basis. Position the center of the body with the Y-axis to improve the accuracy of the result.
+9. **Watertight** — Ensure the model is watertight in all regions with the exception of the eyes and mouth. Watertight means that there are no holes in the mesh and no back faces are exposed.
+10. **No accessories** — Do not include accessories, including face accessories, like hair, eyebrows, beards, and eyelashes.
+11. **Distinct neck area** — Keep the neck distinct and not merged with the shoulders or upper torso.
+12. **Includes texture** — Models should include one or more texture maps. If the input body includes multiple textures, the tool bakes the textures to a single map. This applies to [PBR textures](../modeling/surface-appearance.md) where the four textures are baked — one for each albedo, normal, metalness and roughness.
+13. **Follows Marketplace and Community Policy** — The model must conform to Roblox's [Marketplace Policy](../../marketplace/marketplace-policy.md) and [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards).
+
+#### Optional rig requirements
+
+You can use your own custom body and face rig for your character model input. If auto-setup detects a [Roblox supported R15 rig](../characters/specifications.md#rigging), the original rigging data is preserved when generating avatar components.
+
+If including custom facial animation data, adhere to the following:
+
+1. Facial rig must include a `RootFaceJoint` bone (usually [mapped](../characters/facial-animation/create-basic-heads.md#map) as `DynamicHead`) whose parent is the `Head` joint of the R15 rig.
+2. All the other facial animation joints are descendants of the `RootFaceJoint`, and not direct children of the `Head` joint.
+3. Animations need to be provided for the [17 required poses](../characters/specifications.md#facial-animations), at minimum.
+4. Neutral animation must map to frame `0`.
+5. Since the head is part of the single mesh with the body, the facial animation mappings must be included with the single body mesh:
+   1. The mapping between animation frames and facial poses are stored in the extra attributes / custom properties of the provided single mesh.
+   2. The name of the root face joint is stored in the extra attributes / custom properties of the single mesh, mapping `RootFaceJoint` to the corresponding name (usually `DynamicHead`).
 
 #### Examples of non-supported models
 

@@ -27,6 +27,15 @@ properties:
       `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` always represents the
       top-left corner of the `Class.GuiBase2d` element.
 
+      If the `Class.GuiBase2d` is in a `Class.ScreenGui`, the
+      `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` property uses the
+      `Enum.ScreenInsets|CoreUISafeInsets` viewport coordinate system.
+      The origin of this coordinate system is located at the bottom-left corner
+      of the Roblox top bar. Note that this is the same coordinate system used by the
+      `Class.InputObject.Position` property.
+
+      <img src="/assets/engine-api/classes/GuiBase2d/AbsolutePositionCoordinateSystem.png" width="840" alt="Diagram showing the origin of the AbsolutePosition coordinate system." />
+
       See also `Class.GuiBase2d.AbsoluteRotation|AbsoluteRotation` and
       `Class.GuiBase2d.AbsoluteSize|AbsoluteSize`.
     code_samples:
