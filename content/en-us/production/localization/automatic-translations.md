@@ -123,11 +123,14 @@ Roblox supports automatic translation between the languages listed below. Curren
   </tr>
 </thead>
 <tbody>
-  <tr>
-    <td>Chinese - simplified</td>
+    <tr>
+    <td>Arabic</td>
   </tr>
   <tr>
-    <td>Chinese - traditional</td>
+    <td>Chinese (Simplified)</td>
+  </tr>
+  <tr>
+    <td>Chinese (Traditional)</td>
   </tr>
    <tr>
     <td>English</td>
