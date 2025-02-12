@@ -23,7 +23,8 @@ tags:
   - NotCreatable
   - Service
   - NotReplicated
-deprecation_message: ''
+deprecation_message: |
+  This service will be superseded by `Class.HapticEffect|HapticEffect`, a newer instance that will support multiple haptic effect types, looped effects, and customizable haptics.
 properties: []
 methods:
   - name: HapticService:GetMotor
@@ -54,7 +55,7 @@ methods:
           and `Enum.VibrationMotor` or `nil` if
           `Class.HapticService:SetMotor()|SetMotor()` has not been called prior.
     tags: []
-    deprecation_message: ''
+    deprecation_message: ""
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -86,7 +87,7 @@ methods:
           Boolean of `true` if the specified motor is available to be used with
           the specified `Enum.UserInputType`, `false` if not.
     tags: []
-    deprecation_message: ''
+    deprecation_message: ""
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -112,7 +113,7 @@ methods:
           Boolean of `true` if the specified `Enum.UserInputType` supports
           haptic feedback.
     tags: []
-    deprecation_message: ''
+    deprecation_message: ""
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -147,9 +148,9 @@ methods:
           the tuple, which should be a number.
     returns:
       - type: void
-        summary: ''
+        summary: ""
     tags: []
-    deprecation_message: ''
+    deprecation_message: ""
     security: None
     thread_safety: Unsafe
     capabilities: []
