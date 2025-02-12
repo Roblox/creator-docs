@@ -24,9 +24,9 @@ tags:
   - Service
   - NotReplicated
 deprecation_message: |
-  This service has been superseded by `Class.HapticEffect`, a newer instance
-  that supports multiple haptic effect types, looped effects, and customizable
-  haptics.
+  This service will be superseded by `Class.HapticEffect|HapticEffect`, a newer
+  instance that will support multiple haptic effect types, looped effects, and
+  customizable haptics.
 properties: []
 methods:
   - name: HapticService:GetMotor
