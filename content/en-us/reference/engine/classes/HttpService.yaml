@@ -146,23 +146,15 @@ methods:
       Returns a `Datatype.Secret` from the secrets store.
     description: |
       This method returns a value previously added to the secrets store for the
-      experience. The secret content is not printable and, for security reasons,
-      secrets are not available when the experience runs locally.
+      experience. The secret content is not printable and not available when the
+      experience runs locally.
 
       The returned `Datatype.Secret` can be transformed using built-in methods
       such as `Datatype.Secret:AddPrefix()`. It is expected to be sent as a part
-      of the HTTP request.
+      of an HTTP request.
 
-      Note that a secret may have an associated domain name. If the domain name
-      is empty, the secret cannot be sent over the network and therefore could
-      not be used as an API key. To allow sending the secret anywhere, set the
-      domain name to `*`. You can also limit the URL to a specific domain name
-      such as `apis.myservice.com` or to subdomains of a domain, for example
-      `*.myservice.org`.
-
-      Production `Datatype.Secret|Secrets` are only available in live servers
-      and Team Create. See [here](../../../studio/game-settings.md#security) for
-      availability details of local `Datatype.Secret|Secrets`.
+      For more information, see the
+      [usage guide](../../../cloud-services/secrets.md).
     code_samples: []
     parameters:
       - name: key

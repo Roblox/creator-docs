@@ -510,6 +510,8 @@ navigation:
             path: /cloud-services/memory-stores/per-partition-limits
           - title: Best practices
             path: /cloud-services/memory-stores/best-practices
+      - title: Secrets stores
+        path: /cloud-services/secrets
       - title: Cross-server communication
         path: /cloud-services/cross-server-messaging
   - title: Roblox for Unity developers
@@ -583,8 +585,10 @@ navigation:
         section:
           - title: Overview
             path: /production/promotion/advertise-on-roblox
-          - title: Ads Manager
+          - title: Ad campaigns
             path: /production/promotion/ads-manager
+          - title: Reporting and billing
+            path: /production/promotion/reporting-and-billing
           - title: Search ads
             path: /production/promotion/search-ads
           - title: Sponsored items

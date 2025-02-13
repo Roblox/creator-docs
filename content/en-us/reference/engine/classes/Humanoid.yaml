@@ -970,8 +970,9 @@ properties:
       driving part of the `Class.Humanoid` that controls a humanoid's movement
       through the 3D world. This part is normally invisible.
 
-      Note that in the case of player characters, **RootPart** is the same as
-      the `Class.Model.PrimaryPart` of the `Class.Player.Character` model.
+      For R15 characters, `Class.Model.PrimaryPart` of the `Class.Player.Character` model is set to **HumanoidRootPart**. 
+      
+      For R6 characters, `Class.Model.PrimaryPart` is set to the `Head` part.
     code_samples:
     type: BasePart
     tags:

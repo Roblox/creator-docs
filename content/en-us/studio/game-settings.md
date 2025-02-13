@@ -145,8 +145,7 @@ You should only enable the following settings if you trust all assets from other
   </tr>
   <tr>
     <td>**Secrets**</td>
-    <td>Allows for the creation and configuration of `Datatype.Secret` for local Studio sessions using `Class.HttpService`. Must be a valid JSON object, with base64-encoded secret. Example: `{"secretName": ["cGFzc3dvcmQ=", "*.domain.tld"]}`, where `cGFzc3dvcmQ=` is base64-encoded word `password`, and `*.domain.tld` is domain name restriction. <br /><br />
-    Visible only if HTTP requests are allowed. Secrets defined here are local to the device, and not available in Team Create sessions. Use [Creator Hub](https://create.roblox.com/) to define production secrets. </td>
+    <td>Allows for the creation and configuration of `Datatype.Secret` for local Studio sessions using `Class.HttpService`. Must be a valid JSON object, with base64-encoded secret. Example: `{"secretName": ["cGFzc3dvcmQ=", "*.domain.tld"]}`, where `cGFzc3dvcmQ=` is base64-encoded word `password`, and `*.domain.tld` is domain name restriction. For more information, see [Work with secrets](../cloud-services/secrets.md).</td>
   </tr>
   <tr>
     <td>**Enable&nbsp;Studio&nbsp;Access to API Services**</td>
