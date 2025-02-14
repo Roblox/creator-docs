@@ -1176,8 +1176,9 @@ methods:
       to the top left corner of the screen.
     description: |
       This function returns a `Datatype.Vector2` representing the current screen
-      location of the player's `Class.Mouse` in pixels relative to the top left
-      corner. This does not account for the `Class.GuiObject` inset.
+      location of the player's `Class.Mouse` in pixels relative to the top‑left
+      corner. This does not account for the `Enum.ScreenInsets`; to get the
+      top‑left and bottom‑right insets, call `Class.GuiService:GetGuiInset()`.
 
       If the location of the mouse pointer is offscreen or the player's device
       does not have a mouse, the returned value will be undetermined.
