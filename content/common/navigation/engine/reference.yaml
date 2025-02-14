@@ -165,6 +165,16 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/AudioAnalyzer.yaml
         ignoreTranslation: true
+      - title: AudioChannelMixer
+        path: /reference/engine/classes/AudioChannelMixer
+        type: engineapi
+        source: /reference/engine/classes/AudioChannelMixer.yaml
+        ignoreTranslation: true
+      - title: AudioChannelSplitter
+        path: /reference/engine/classes/AudioChannelSplitter
+        type: engineapi
+        source: /reference/engine/classes/AudioChannelSplitter.yaml
+        ignoreTranslation: true
       - title: AudioChorus
         path: /reference/engine/classes/AudioChorus
         type: engineapi
@@ -3407,6 +3417,11 @@ navigation:
         path: /reference/engine/enums/AudioApiRollout
         type: engineapi
         source: /reference/engine/enums/AudioApiRollout.yaml
+        ignoreTranslation: true
+      - title: AudioChannelLayout
+        path: /reference/engine/enums/AudioChannelLayout
+        type: engineapi
+        source: /reference/engine/enums/AudioChannelLayout.yaml
         ignoreTranslation: true
       - title: AudioFilterType
         path: /reference/engine/enums/AudioFilterType

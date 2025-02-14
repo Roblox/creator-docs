@@ -241,6 +241,11 @@ items:
     value: 302
     tags: []
     deprecation_message: ''
+  - name: PhantomFreeze
+    summary: ''
+    value: 303
+    tags: []
+    deprecation_message: ''
   - name: PlacelaunchErrors
     summary: ''
     value: 512

@@ -62,7 +62,7 @@ Roblox intends to continue releasing updated versions of the auto-setup ML model
 
 ### Valid inputs
 
-The auto-setup feature supports various mesh inputs, as long as the base mesh meets the [body model requirements](#body-model-requirements).
+If the base mesh meets the [body model requirements](#body-model-requirements), auto-setup supports the following inputs:
 
 <table><thead>
   <tr>
@@ -171,8 +171,8 @@ The full requirements for the input body model are as follows:
    1. Bodies with I-pose may yield lower quality results.
    2. Ensure that no limbs obscure or overlap each other from the front view.
 7. **Negative Z Axis** — The body front should face the negative Z axis.
-8. **Symmetrical** — The body should be left and right symmetrical.
-   1. Asymmetrical bodies may still work on a case-to-case basis. Position the center of the body with the Y-axis to improve the accuracy of the result.
+8. **Symmetrical** — Asymmetrical bodies may work on a case-to-case basis. Position the center of the body with the Y-axis to improve the accuracy of the result.
+   1. If your asymmetrical model experiences setup issues, try using a more symmetrical version.
 9. **Watertight** — Ensure the model is watertight in all regions with the exception of the eyes and mouth. Watertight means that there are no holes in the mesh and no back faces are exposed.
 10. **No accessories** — Do not include accessories, including face accessories, like hair, eyebrows, beards, and eyelashes.
 11. **Distinct neck area** — Keep the neck distinct and not merged with the shoulders or upper torso.
@@ -207,12 +207,12 @@ The following are common examples of models that may not yield expected results 
 <tbody>
   <tr>
     <td>
-        <center><figure><img src="../../assets/avatar/avatar-setup/Assymetry.png" alt=""/><figcaption>**Asymmetry** &mdash; setup tool expects symmetry with limbs.</figcaption></figure></center>
+        <center><figure><img src="../../assets/avatar/avatar-setup/Assymetry.png" alt=""/><figcaption>**Extreme asymmetry** &mdash; If you are having issues with an asymmetrical model, try using a more symmetrical version and make minor adjustments.</figcaption></figure></center>
     </td>
   </tr>
   <tr>
     <td>
-        <center><figure><img src="../../assets/avatar/avatar-setup/I-pose.png" alt=""/><figcaption>**I-pose** &mdash; setup tool expects A-Pose.</figcaption></figure></center>
+        <center><figure><img src="../../assets/avatar/avatar-setup/I-pose.png" alt=""/><figcaption>**I-pose** &mdash; If you are experiencing issues with your model in an I-pose, try resubmitting with A-pose or T-pose.</figcaption></figure></center>
     </td>
   </tr>
   <tr>

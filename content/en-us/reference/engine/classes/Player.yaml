@@ -1075,6 +1075,24 @@ properties:
     capabilities: []
     writeCapabilities: []
 methods:
+  - name: Player:AddReplicationFocus
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: part
+        type: BasePart
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Player:ClearCharacterAppearance
     summary: |
       Removes all accessories and other character appearance objects from a
@@ -1570,6 +1588,24 @@ methods:
         summary: |
           A boolean indicating whether the player should move relative to the
           player's camera.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: Player:RemoveReplicationFocus
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: part
+        type: BasePart
+        default:
+        summary: ''
     returns:
       - type: void
         summary: ''

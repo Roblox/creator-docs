@@ -1,0 +1,43 @@
+name: AudioChannelLayout
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Mono
+    summary: ''
+    value: 0
+    tags: []
+    deprecation_message: ''
+  - name: Stereo
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: Quad
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: Surround_5
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''
+  - name: Surround_5_1
+    summary: ''
+    value: 4
+    tags: []
+    deprecation_message: ''
+  - name: Surround_7_1
+    summary: ''
+    value: 5
+    tags: []
+    deprecation_message: ''
+  - name: Surround_7_1_4
+    summary: ''
+    value: 6
+    tags: []
+    deprecation_message: ''

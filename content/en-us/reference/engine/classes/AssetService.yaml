@@ -210,8 +210,9 @@ methods:
         type: Content
         default:
         summary: |
-          Reference to asset content stored externally or as an object within the place, wrapping a single value
-          of one of the supported `Enum.ContentSourceType` values.
+          Reference to asset content stored externally or as an object within
+          the place, wrapping a single value of one of the supported
+          `Enum.ContentSourceType` values.
       - name: editableImageOptions
         type: Dictionary?
         default:
@@ -253,8 +254,9 @@ methods:
         type: Content
         default:
         summary: |
-          Reference to asset content stored externally or as an object within the place, wrapping a single value
-          of one of the supported `Enum.ContentSourceType` values.
+          Reference to asset content stored externally or as an object within
+          the place, wrapping a single value of one of the supported
+          `Enum.ContentSourceType` values.
       - name: editableMeshOptions
         type: Dictionary?
         default:
@@ -272,36 +274,6 @@ methods:
     tags:
       - Yields
     deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: AssetService:CreateEditableMeshFromPartAsync
-    summary: |
-      Returns a new `Class.EditableMesh` instance created from an existing
-      `Class.MeshPart`.
-    description: |
-      Returns a new `Class.EditableMesh` instance created from the
-      `Class.MeshPart.MeshId|MeshId` of an existing `Class.MeshPart`.
-    code_samples: []
-    parameters:
-      - name: meshPart
-        type: Instance
-        default:
-        summary: |
-          The `Class.MeshPart` from which to create an `Class.EditableMesh`
-          instance. The part must have a valid `Class.MeshPart.MeshId|MeshId`
-          for this method to operate.
-    returns:
-      - type: Object
-        summary: |
-          The new `Class.EditableMesh` instance.
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This function has been deprecated - use
-      `Class.AssetService:CreateEditableMeshAsync()`.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -324,8 +296,9 @@ methods:
         type: Content
         default:
         summary: |
-          Reference to asset content stored externally or as an object within the place, wrapping a single value
-          of one of the supported `Enum.ContentSourceType` values.
+          Reference to asset content stored externally or as an object within
+          the place, wrapping a single value of one of the supported
+          `Enum.ContentSourceType` values.
       - name: options
         type: Dictionary
         default: nil

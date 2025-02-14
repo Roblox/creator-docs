@@ -145,6 +145,24 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AudioListener:GetAudibilityFor
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: emitter
+        type: AudioEmitter
+        default:
+        summary: ''
+    returns:
+      - type: float
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioListener:GetConnectedWires
     summary: |
       Returns an array of `Class.Wire|Wires` that are connected to the specified
@@ -188,6 +206,20 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AudioListener:GetInputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AudioListener:GetInteractingEmitters
     summary: ''
     description: ''
@@ -195,6 +227,20 @@ methods:
     parameters: []
     returns:
       - type: Instances
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioListener:GetOutputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
         summary: ''
     tags: []
     deprecation_message: ''
