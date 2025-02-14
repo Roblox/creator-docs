@@ -158,16 +158,6 @@ To quickly jump to a location in the workspace or to the exact line in a script 
 
 <img src="../assets/studio/collaboration/Live-Collaborators-Join.png" width="280" />
 
-### Chat with collaborators
-
-To chat with collaborators during a session:
-
-1. In the [View](../studio/view-tab.md) tab, click **Team Chat**.
-
-   <img src="../assets/studio/general/View-Tab-Team-Chat.png" width="776" alt="Studio's View tab with the Team Chat button highlighted." />
-
-1. Click in the input text field, type your message, and press <kbd>Enter</kbd> to send it.
-
 ## Collaborative scripting
 
 In a collaborative session, you can code together in real-time through [live scripting](#live-scripting), or you can [draft](#drafts-mode) scripts in a more focused environment before committing them to a collaborator‑shared repository.
