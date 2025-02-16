@@ -39,7 +39,7 @@ You can also nest tags inside each other as long as you close them in the revers
 
 `<b><i><u>Formatted text</u></i></b>`
 
-### Color
+### Font color
 
 `<font color=""> </font>`
 
@@ -49,7 +49,7 @@ You can also nest tags inside each other as long as you close them in the revers
 <img src="../assets/ui/rich-text/Example-Color.png" width="600" />
 </blockquote>
 
-### Size
+### Font size
 
 `<font size=""> </font>`
 
@@ -95,6 +95,15 @@ Font face/family names are listed on the `Datatype.Font` enum reference page.
 Font weight can be a case-insensitive string name including `Thin`, `ExtraLight`, `Light`, `Regular`, `Medium`, `SemiBold`, `Bold`, `ExtraBold`, or `Heavy`; it can also be a number in factors of 100 between `100` and `900`.
 </Alert>
 
+### Font transparency
+
+`<font transparency=""> </font>`
+
+<blockquote>
+`Text at <font transparency="0.5">50% transparency</font>.`
+<img src="../assets/ui/rich-text/Example-Transparency.png" width="600" />
+</blockquote>
+
 ### Stroke
 
 `<stroke> </stroke>`
@@ -107,15 +116,6 @@ Font weight can be a case-insensitive string name including `Thin`, `ExtraLight`
 <Alert severity="info">
 See [Appearance Modifiers](../ui/appearance-modifiers.md) for details on `<stroke>` tag parameters such as `joins` and `thickness`.
 </Alert>
-
-### Transparency
-
-`<font transparency=""> </font>`
-
-<blockquote>
-`Text at <font transparency="0.5">50% transparency</font>.`
-<img src="../assets/ui/rich-text/Example-Transparency.png" width="600" />
-</blockquote>
 
 ### Bold
 
@@ -155,10 +155,10 @@ See [Appearance Modifiers](../ui/appearance-modifiers.md) for details on `<strok
 
 ### Line break
 
-`<br />`
+`<br/>`
 
 <blockquote>
-`New line occurs after this sentence.<br />Next sentence...`
+`New line occurs after this sentence.<br/>Next sentence...`
 <img src="../assets/ui/rich-text/Example-Line-Break.png" width="600" />
 </blockquote>
 
