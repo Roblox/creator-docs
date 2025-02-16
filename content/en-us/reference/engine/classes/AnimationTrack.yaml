@@ -3,9 +3,9 @@ type: class
 category: Animations
 memory_category: Animation
 summary: |
-  Controls the playback of an animation on an `Class.AnimationController`.
+  Controls the playback of an animation on an `Class.Animator`.
 description: |
-  Controls the playback of an animation on an `Class.AnimationController`. This
+  Controls the playback of an animation on an `Class.Animator`. This
   object cannot be created, instead it is returned by the
   `Class.Animator:LoadAnimation()` method.
 code_samples:
@@ -22,7 +22,7 @@ properties:
     description: |
       The `Class.Animation` object that was used to create this
       `Class.AnimationTrack`. To create an `Class.AnimationTrack`, you must load
-      an `Class.Animation` object onto an `Class.AnimationController` using the
+      an `Class.Animation` object onto an `Class.Animator` using the
       `Class.Animator:LoadAnimation()` method.
     code_samples:
       - AnimationPlayed
@@ -53,9 +53,8 @@ properties:
       This property can be used by developers to check if an animation is
       already playing before playing it (as that would cause it to restart). If
       a developer wishes to obtain all playing
-      `Class.AnimationTrack|AnimationTracks` on a `Class.Humanoid` or
-      `Class.AnimationController` they should use
-      `Class.Humanoid:GetPlayingAnimationTracks()`
+      `Class.AnimationTrack|AnimationTracks` on an `Class.Animator` or a `Class.Humanoid`, they should use
+      `Class.Animator:GetPlayingAnimationTracks()`
     code_samples:
       - AnimationTrack-IsPlaying
     type: bool
