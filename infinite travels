@@ -1,0 +1,75 @@
+-- Server Script
+
+local CHUNK_SIZE = 50
+local VIEW_DISTANCE = 3 -- Number of chunks to keep loaded ahead and behind
+
+local function generateChunk(x, z)
+    local chunk = Instance.new("Part")
+    chunk.Size = Vector3.new(CHUNK_SIZE, 10, CHUNK_SIZE) -- Basic chunk size
+    chunk.Position = Vector3.new(x * CHUNK_SIZE, 0, z * CHUNK_SIZE)
+    chunk.Anchored = true
+    chunk.Parent = workspace.World
+
+    -- Simple heightmap using a mathematical function (replace with noise)
+    for i = 1, CHUNK_SIZE do
+        for j = 1, CHUNK_SIZE do
+            local xPos = x * CHUNK_SIZE + i
+            local zPos = z * CHUNK_SIZE + j
+            local height = math.sin(xPos/10) * math.cos(zPos/10) * 5  -- Example function
+            local block = Instance.new("Part")
+            block.Size = Vector3.new(1, height, 1)
+            block.Position = Vector3.new(xPos, height/2, zPos)
+            block.Anchored = true
+            block.Parent = chunk
+        end
+    end
+
+    return chunk
+end
+
+local function updateWorld(playerPos)
+    local chunkX = math.floor(playerPos.X / CHUNK_SIZE)
+    local chunkZ = math.floor(playerPos.Z / CHUNK_SIZE)
+
+    -- Generate chunks around the player
+    for x = chunkX - VIEW_DISTANCE, chunkX + VIEW_DISTANCE do
+        for z = chunkZ - VIEW_DISTANCE, chunkZ + VIEW_DISTANCE do
+            local chunkExists = false
+            for i, existingChunk in ipairs(workspace.World:GetChildren()) do
+                if existingChunk.Name == "Chunk" then
+                    local chunkPosition = existingChunk.Position
+                    if chunkPosition.X == x * CHUNK_SIZE and chunkPosition.Z == z * CHUNK_SIZE then
+                        chunkExists = true
+                        break
+                    end
+                end
+            end
+
+            if not chunkExists then
+                local newChunk = generateChunk(x, z)
+                newChunk.Name = "Chunk"
+            end
+        end
+    end
+
+    -- Delete chunks that are too far away
+    for i, existingChunk in ipairs(workspace.World:GetChildren()) do
+        if existingChunk.Name == "Chunk" then
+            local chunkPosition = existingChunk.Position
+            local distanceX = math.abs(chunkPosition.X - playerPos.X)
+            local distanceZ = math.abs(chunkPosition.Z - playerPos.Z)
+
+            if distanceX > CHUNK_SIZE * VIEW_DISTANCE or distanceZ > CHUNK_SIZE * VIEW_DISTANCE then
+                existingChunk:Destroy()
+            end
+        end
+    end
+end
+
+game:GetService("RunService").Heartbeat:Connect(function()
+    if game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+        local playerPosition = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+        updateWorld(playerPosition)
+    end
+end)
+
