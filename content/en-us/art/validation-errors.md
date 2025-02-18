@@ -104,7 +104,7 @@ The following is a table of all possible validation error codes, as well as any 
   </tr>
   <tr>
     <td>Attachment `%s` in `%s` is placed at a position `%s` that is outside the valid range. You need to adjust the attachment position.<br/><br/>Attachment `%s` in `%s` is placed at a position `%s` that is outside the valid range of (`%s` to `%s`). You need to adjust the attachment position.</td>
-    <td>Body attachments need to be [within reasonable distance from the body](should not have an applied rotation](../art/characters/specifications.md#attachments) to avoid introducing unrealistic gaps when equipping accessories to those attachments.</td>
+    <td>Body attachments need to be within reasonable distance from the body][should not have an applied rotation](../art/characters/specifications.md#attachments) to avoid introducing unrealistic gaps when equipping accessories to those attachments.</td>
   </tr>
   <tr>
     <td rowspan="6">Invalid body setup</td>
@@ -324,7 +324,7 @@ The following is a table of all possible validation error codes, as well as any 
     <td>Your asset is currently in moderation queue. Roblox can only validate assets that have already passed moderation.</td>
   </tr>
   <tr>
-    <td>Failed to parse feedback from model review for '%s`. Make sure the review process is complete and try again.</td>
+    <td>Failed to parse feedback from model review for `%s`. Make sure the review process is complete and try again.</td>
     <td></td>
   </tr>
   <tr>
@@ -348,7 +348,7 @@ The following is a table of all possible validation error codes, as well as any 
     <td>Face controls need to be connected to the face rig. You need to reconnect the inactive controls.</td>
   </tr>
   <tr>
-    <td>Unable to capture snapshot of DynamicHead `%s`<br/>Failed to read data from snapshot of DynamicHead `%s`<br/>DynamicHead `%s` when emoting surpasses the expected bounding box</td>
+    <td>Unable to capture snapshot of DynamicHead `%s`<br/><br/>Failed to read data from snapshot of DynamicHead `%s`<br/><br/>DynamicHead `%s` when emoting surpasses the expected bounding box</td>
     <td>An animation pose is invalid or may extend past the expected bounding box. You need to recalibrate the face controls connected to the face rig.</td>
   </tr>
   <tr>
@@ -368,7 +368,7 @@ The following is a table of all possible validation error codes, as well as any 
     <td></td>
   </tr>
   <tr>
-    <td>`%s' is more than max difference `%f` in size compared to the other mesh `%s`. You need to edit the model to adjust its size.</td>
+    <td>`%s` is more than max difference `%f` in size compared to the other mesh `%s`. You need to edit the model to adjust its size.</td>
     <td>The model mesh is too big. You need to scale it down.</td>
   </tr>
   <tr>
