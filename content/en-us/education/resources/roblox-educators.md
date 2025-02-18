@@ -192,6 +192,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 <a href="https://www.stemwork.com.hk/" title="STEM Work">STEM Work</a><br/>
 <a href="https://www.smartkidsclubtt.com/" title="Smart Kids Educational Club">Smart Kids Educational Club</a><br/>
 <a href="https://techkidzafrica.co.ke/" title="TechKidz Africa's">TechKidz Africa's</a><br/>
+<a href="https://tutree.com/" title="Tutree">Tutree Education</a><br/>
 <a href="https://themade.org/" title="The MADE">The MADE</a><br/>
 <a href="https://thinklum.com" title="Thinklum">Thinklum</a><br/>
 <a href="https://timedooracademy.com/" title="Timedoor Academy">Timedoor Academy</a><br/>
