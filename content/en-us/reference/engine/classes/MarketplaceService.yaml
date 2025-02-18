@@ -1365,13 +1365,12 @@ callbacks:
       should use `ProcessReceipt` to grant users their purchased product over
       any other granting method. If your `ProcessReceipt` implementation isn't
       correct, you will **not** be able to grant users the products they have
-      purchased on the Experience Detail page.
+      purchased on the Store tab of your experience details page.
 
       A callback to process receipts from
       [developer product](../../../production/monetization/developer-products.md)
       purchases. You can sell developer products inside an experience using
-      `MarketplaceService` functions, or outside an experience on the Experience
-      Detail page.
+      `MarketplaceService` functions, or outside an experience on the Store tab of your experience details page.
 
       You should only set the `ProcessReceipt` callback one time in a single
       server-side `Class.Script|Script`. This callback must handle the receipts
@@ -1456,6 +1455,8 @@ callbacks:
             transaction.
           - `CurrencyType` &mdash; The type of currency spent in the purchase;
             always `Enum.CurrencyType.Robux`.
+          - `Enum.ProductPurchaseChannel` &mdash; An enum that represents
+            how the user acquired the developer product.
     returns:
       - type: ProductPurchaseDecision
         summary: |

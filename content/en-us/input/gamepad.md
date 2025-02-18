@@ -133,9 +133,9 @@ local UserInputService = game:GetService("UserInputService")
 
 UserInputService.InputChanged:Connect(function(input)
 	if input.UserInputType == Enum.UserInputType.Gamepad1 then
-		if input.KeyCode == Enum.KeyCode.ButtonL1 then
+		if input.KeyCode == Enum.KeyCode.ButtonL2 then
 			print("Pressure on left trigger has changed:", input.Position.Z)
-		elseif input.KeyCode == Enum.KeyCode.ButtonR1 then
+		elseif input.KeyCode == Enum.KeyCode.ButtonR2 then
 			print("Pressure on right trigger has changed:", input.Position.Z)
 		end
 	end
