@@ -1,8 +1,9 @@
 name: ProductPurchaseDecision
 type: enum
 summary: |
-  The `ProductPurchaseDecisionEnum` is used to work with
-  `Class.MarketplaceService`, and the sale of developer products.
+  The `ProductPurchaseDecisionEnum` works with
+  `Class.MarketplaceService` to indicate the status of the sale of 
+  developer products.
 description: |
   The `ProductPurchaseDecisionEnum` is used to work with
   `Class.MarketplaceService`, and the sale of developer products.

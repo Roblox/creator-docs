@@ -199,6 +199,28 @@ Caged 3D accessory models and associated PBR textures. Ready for import into Stu
 </Card>
 
 </Grid>
+
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent style={{marginBottom:'66px'}}>
+
+<center>Caging Examples</center>
+<figure>
+<center> <img src="../../assets/art/Additional-Caging-Examples.png" width="100%" /> </center>
+</figure>
+<figure>
+Additional caged clothing items from How to cage Roblox's 3D [clothing video guide](https://www.youtube.com/watch?v=QwZaA9Gc-WQ).
+</figure>
+</CardContent>
+
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../../assets/accessories/reference-files/Caging-examples.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+
+</Grid>
+
 <Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
 <Card style={{height: '100%'}}>
 <CardContent style={{marginBottom:'66px'}}>
@@ -276,6 +298,7 @@ If you are using Roblox's avatar template files, you must perform the [cleanup s
 <Card style={{height: '100%'}}>
 
 <CardContent style={{marginBottom:'66px'}}>
+
 <figure>
 <img src="../../assets/art/avatar/templates/Round-Head-Templates.png" width = "100%" alt="A male and female presenting pair with a prominently round shaped head."/>
 </figure>
@@ -296,6 +319,7 @@ Blender and .fbx template files with pre-baked avatar components.
 <Card style={{height: '100%'}}>
 
 <CardContent style={{marginBottom:'66px'}}>
+
 <figure>
 <img src="../../assets/art/avatar/templates/Square-Head-Templates.png" width = "100%" alt="A male and female presenting pair with a prominently square shaped head."/>
 </figure>
@@ -317,6 +341,7 @@ Blender and .fbx template files with pre-baked avatar components.
 <Card style={{height: '100%'}}>
 
 <CardContent style={{marginBottom:'66px'}}>
+
 <figure>
 <img src="../../assets/art/avatar/templates/Muzzle-Head-Templates.png" width = "100%" alt="A male and female presenting pair with a prominently elongated snout and mouth."/>
 </figure>
