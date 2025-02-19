@@ -5,8 +5,8 @@ memory_category: Animation
 summary: |
   Controls the playback of an animation on an `Class.Animator`.
 description: |
-  Controls the playback of an animation on an `Class.Animator`. This
-  object cannot be created, instead it is returned by the
+  Controls the playback of an animation on an `Class.Animator`. This object
+  cannot be created, instead it is returned by the
   `Class.Animator:LoadAnimation()` method.
 code_samples:
 inherits:
@@ -53,7 +53,8 @@ properties:
       This property can be used by developers to check if an animation is
       already playing before playing it (as that would cause it to restart). If
       a developer wishes to obtain all playing
-      `Class.AnimationTrack|AnimationTracks` on an `Class.Animator` or a `Class.Humanoid`, they should use
+      `Class.AnimationTrack|AnimationTracks` on an `Class.Animator` or a
+      `Class.Humanoid`, they should use
       `Class.Animator:GetPlayingAnimationTracks()`
     code_samples:
       - AnimationTrack-IsPlaying

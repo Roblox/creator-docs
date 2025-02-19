@@ -1,0 +1,417 @@
+name: PlayerDataRecord
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: PlayerDataRecord.CreatedTime
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord.DefaultRecordName
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord.Dirty
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord.Error
+    summary: ''
+    description: ''
+    code_samples: []
+    type: PlayerDataErrorState
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord.FlushedTime
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord.LoadedTime
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord.ModifiedTime
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int64
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord.NewRecord
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord.Readable
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord.RecordName
+    summary: ''
+    description: ''
+    code_samples: []
+    type: string
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord.Writable
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+methods:
+  - name: PlayerDataRecord:GetPlayer
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Player
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord:GetValue
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord:GetValueChangedSignal
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: RBXScriptSignal
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord:Release
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord:RemoveValue
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord:SetValue
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: value
+        type: Variant
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord:RequestFlushAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord:WaitForLoadAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+events:
+  - name: PlayerDataRecord.Changed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: key
+        type: string
+        default:
+        summary: ''
+      - name: value
+        type: Variant
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord.Flushed
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: flushState
+        type: bool
+        default:
+        summary: ''
+      - name: error
+        type: string?
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: PlayerDataRecord.Loaded
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: success
+        type: bool
+        default:
+        summary: ''
+      - name: error
+        type: string?
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+callbacks: []

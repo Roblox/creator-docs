@@ -695,6 +695,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/CustomEventReceiver.yaml
         ignoreTranslation: true
+      - title: CustomLog
+        path: /reference/engine/classes/CustomLog
+        type: engineapi
+        source: /reference/engine/classes/CustomLog.yaml
+        ignoreTranslation: true
       - title: CylinderHandleAdornment
         path: /reference/engine/classes/CylinderHandleAdornment
         type: engineapi
@@ -1030,6 +1035,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/GameSettings.yaml
         ignoreTranslation: true
+      - title: GenerationService
+        path: /reference/engine/classes/GenerationService
+        type: engineapi
+        source: /reference/engine/classes/GenerationService.yaml
+        ignoreTranslation: true
       - title: GenericChallengeService
         path: /reference/engine/classes/GenericChallengeService
         type: engineapi
@@ -1155,6 +1165,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Hat.yaml
         ignoreTranslation: true
+      - title: HeapProfilerService
+        path: /reference/engine/classes/HeapProfilerService
+        type: engineapi
+        source: /reference/engine/classes/HeapProfilerService.yaml
+        ignoreTranslation: true
       - title: HeightmapImporterService
         path: /reference/engine/classes/HeightmapImporterService
         type: engineapi
@@ -1254,6 +1269,21 @@ navigation:
         path: /reference/engine/classes/IncrementalPatchBuilder
         type: engineapi
         source: /reference/engine/classes/IncrementalPatchBuilder.yaml
+        ignoreTranslation: true
+      - title: InputAction
+        path: /reference/engine/classes/InputAction
+        type: engineapi
+        source: /reference/engine/classes/InputAction.yaml
+        ignoreTranslation: true
+      - title: InputBinding
+        path: /reference/engine/classes/InputBinding
+        type: engineapi
+        source: /reference/engine/classes/InputBinding.yaml
+        ignoreTranslation: true
+      - title: InputContext
+        path: /reference/engine/classes/InputContext
+        type: engineapi
+        source: /reference/engine/classes/InputContext.yaml
         ignoreTranslation: true
       - title: InputObject
         path: /reference/engine/classes/InputObject
@@ -1744,6 +1774,26 @@ navigation:
         path: /reference/engine/classes/Player
         type: engineapi
         source: /reference/engine/classes/Player.yaml
+        ignoreTranslation: true
+      - title: PlayerData
+        path: /reference/engine/classes/PlayerData
+        type: engineapi
+        source: /reference/engine/classes/PlayerData.yaml
+        ignoreTranslation: true
+      - title: PlayerDataRecord
+        path: /reference/engine/classes/PlayerDataRecord
+        type: engineapi
+        source: /reference/engine/classes/PlayerDataRecord.yaml
+        ignoreTranslation: true
+      - title: PlayerDataRecordConfig
+        path: /reference/engine/classes/PlayerDataRecordConfig
+        type: engineapi
+        source: /reference/engine/classes/PlayerDataRecordConfig.yaml
+        ignoreTranslation: true
+      - title: PlayerDataService
+        path: /reference/engine/classes/PlayerDataService
+        type: engineapi
+        source: /reference/engine/classes/PlayerDataService.yaml
         ignoreTranslation: true
       - title: PlayerGui
         path: /reference/engine/classes/PlayerGui
@@ -2859,6 +2909,11 @@ navigation:
         path: /reference/engine/classes/VideoCaptureService
         type: engineapi
         source: /reference/engine/classes/VideoCaptureService.yaml
+        ignoreTranslation: true
+      - title: VideoDisplay
+        path: /reference/engine/classes/VideoDisplay
+        type: engineapi
+        source: /reference/engine/classes/VideoDisplay.yaml
         ignoreTranslation: true
       - title: VideoFrame
         path: /reference/engine/classes/VideoFrame
@@ -4193,10 +4248,20 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/InOut.yaml
         ignoreTranslation: true
+      - title: InputActionType
+        path: /reference/engine/enums/InputActionType
+        type: engineapi
+        source: /reference/engine/enums/InputActionType.yaml
+        ignoreTranslation: true
       - title: InputType
         path: /reference/engine/enums/InputType
         type: engineapi
         source: /reference/engine/enums/InputType.yaml
+        ignoreTranslation: true
+      - title: IntermediateMeshGenerationResult
+        path: /reference/engine/enums/IntermediateMeshGenerationResult
+        type: engineapi
+        source: /reference/engine/enums/IntermediateMeshGenerationResult.yaml
         ignoreTranslation: true
       - title: InterpolationThrottlingMode
         path: /reference/engine/enums/InterpolationThrottlingMode
@@ -4577,6 +4642,16 @@ navigation:
         path: /reference/engine/enums/PlayerChatType
         type: engineapi
         source: /reference/engine/enums/PlayerChatType.yaml
+        ignoreTranslation: true
+      - title: PlayerDataErrorState
+        path: /reference/engine/enums/PlayerDataErrorState
+        type: engineapi
+        source: /reference/engine/enums/PlayerDataErrorState.yaml
+        ignoreTranslation: true
+      - title: PlayerDataLoadFailureBehavior
+        path: /reference/engine/enums/PlayerDataLoadFailureBehavior
+        type: engineapi
+        source: /reference/engine/enums/PlayerDataLoadFailureBehavior.yaml
         ignoreTranslation: true
       - title: PoseEasingDirection
         path: /reference/engine/enums/PoseEasingDirection

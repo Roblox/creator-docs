@@ -1,4 +1,4 @@
-name: CreatorStoreService
+name: GenerationService
 type: class
 category:
 memory_category: Instances
@@ -13,45 +13,53 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: CreatorStoreService:GetAssetInfoAsync
+  - name: GenerationService:GenerateMeshAsync
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: assetId
-        type: int64
+      - name: inputs
+        type: Dictionary
+        default:
+        summary: ''
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary
+        default:
+        summary: ''
+      - name: intermediateResultCallback
+        type: Function?
         default:
         summary: ''
     returns:
-      - type: Dictionary
+      - type: Tuple
         summary: ''
     tags:
       - Yields
     deprecation_message: ''
-    security: RobloxScriptSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: CreatorStoreService:GetCreatorStoreProductInfoAsync
+  - name: GenerationService:LoadGeneratedMeshAsync
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: productTargetId
-        type: int64
-        default:
-        summary: ''
-      - name: assetType
+      - name: generationId
         type: string
         default:
         summary: ''
     returns:
-      - type: Dictionary
+      - type: MeshPart
         summary: ''
     tags:
       - Yields
     deprecation_message: ''
-    security: RobloxScriptSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

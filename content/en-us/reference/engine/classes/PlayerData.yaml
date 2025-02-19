@@ -1,4 +1,4 @@
-name: CreatorStoreService
+name: PlayerData
 type: class
 category:
 memory_category: Instances
@@ -9,49 +9,39 @@ inherits:
   - Instance
 tags:
   - NotCreatable
-  - Service
+  - NotReplicated
 deprecation_message: ''
 properties: []
 methods:
-  - name: CreatorStoreService:GetAssetInfoAsync
+  - name: PlayerData:GetPlayer
     summary: ''
     description: ''
     code_samples: []
-    parameters:
-      - name: assetId
-        type: int64
-        default:
-        summary: ''
+    parameters: []
     returns:
-      - type: Dictionary
+      - type: Player
         summary: ''
-    tags:
-      - Yields
+    tags: []
     deprecation_message: ''
-    security: RobloxScriptSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: CreatorStoreService:GetCreatorStoreProductInfoAsync
+  - name: PlayerData:GetRecord
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: productTargetId
-        type: int64
-        default:
-        summary: ''
-      - name: assetType
+      - name: recordName
         type: string
-        default:
+        default: Default
         summary: ''
     returns:
-      - type: Dictionary
+      - type: PlayerDataRecord
         summary: ''
-    tags:
-      - Yields
+    tags: []
     deprecation_message: ''
-    security: RobloxScriptSecurity
+    security: None
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

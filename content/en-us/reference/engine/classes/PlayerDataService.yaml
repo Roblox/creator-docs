@@ -1,0 +1,53 @@
+name: PlayerDataService
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+  - NotReplicated
+deprecation_message: ''
+properties:
+  - name: PlayerDataService.LoadFailureBehavior
+    summary: ''
+    description: ''
+    code_samples: []
+    type: PlayerDataLoadFailureBehavior
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+methods:
+  - name: PlayerDataService:GetRecordConfig
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: recordName
+        type: string
+        default: Default
+        summary: ''
+    returns:
+      - type: PlayerDataRecordConfig
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+events: []
+callbacks: []
