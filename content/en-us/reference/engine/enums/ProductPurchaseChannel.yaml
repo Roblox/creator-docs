@@ -1,39 +1,28 @@
 name: ProductPurchaseChannel
 type: enum
-summary: |
-  Enum which works with `Class.MarketplaceService` to represent how the    
-  user acquired the developer product.
-description: |
-  The `ProductPurchaseChannel` enum works with `Class.MarketplaceService` and
-  represents how the user acquired the developer product.
+summary: ''
+description: ''
 code_samples: []
 tags: []
 deprecation_message: ''
 items:
   - name: InExperience
-    summary: |
-      The purchase was made inside of an experience.
+    summary: ''
     value: 1
     tags: []
     deprecation_message: ''
   - name: ExperienceDetailsPage
-    summary: |
-      The purchase was made outside of an experience, on the **Store** tab of
-      the experience details page.
+    summary: ''
     value: 2
     tags: []
     deprecation_message: ''
   - name: AdReward
-    summary: |
-      The product was rewarded to the user when they watched a video ad to
-      completion.
+    summary: ''
     value: 3
     tags: []
     deprecation_message: ''
   - name: CommerceProduct
-    summary: |
-      The user acquired the product as a benefit of purchasing commerce
-      merchandise from the developer of the experience.
+    summary: ''
     value: 4
     tags: []
     deprecation_message: ''

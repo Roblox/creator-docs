@@ -25,9 +25,23 @@ To view, create, or edit secrets, you must be the experience owner or group owne
 
 ### Local secrets
 
-Secrets are only available to live game servers or [Team Test](../studio/testing-modes.md#collaborative-testing) environments. If you try to access a secret from a local test server, such as the **Play** button in Studio, you receive a `Can't find secret with given key` error.
+For security reasons, the secrets store for each experience is only available to live game servers or [Team Test](../studio/testing-modes.md#collaborative-testing) environments. If you try to access a secret from a local test server, such as after pressing the **Play** button in Studio, you receive a `Can't find secret with given key` error.
 
-To specify secrets for local testing, see [Game Settings](../studio/game-settings.md#security).
+To specify secrets for local testing, add valid JSON objects with base64-encoded secrets in [Game Settings](../studio/game-settings.md#security). The JSON can contain spaces, but must be on a single line.
+
+<img alt="Local secret in the Game Settings window." src="../assets/data/secrets-store/local-secrets.png" width="700" />
+
+For example, the following is the base64-encoded string `abcdefghijklmnopqrstuvwxyz` restricted to subdomains at `example.com`:
+
+```json
+{"secretName": ["YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXo=", "*.example.com"]}
+```
+
+To add multiple secrets, separate the values with commas:
+
+```json
+{"secretName1": ["dGVzdDE=", "*.example.com"],"secretName2": ["dGVzdDI=", "*.example.com"],"secretName3": ["dGVzdDM=", "*.example.com"]}
+```
 
 ## Use secrets
 
