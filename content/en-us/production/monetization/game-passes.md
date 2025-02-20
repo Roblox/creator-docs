@@ -9,7 +9,7 @@ description: Passes let you charge users a one-time Robux fee to access privileg
    For items that a player might purchase multiple times, such as potions, temporary power-ups, or in-experience currency, see [Developer Products](../../production/monetization/developer-products.md).
 </Alert>
 
-## Create passes
+## Create a pass
 
 <Alert severity="warning">
    Before creating a pass, make sure your experience has been [published](../../production/publishing/publish-experiences-and-places.md) and is accessible on Roblox.
@@ -40,10 +40,10 @@ To create a pass:
 </GridContainer>
 
 <Alert severity="info">
-   If you want to use the pass as a randomized reward, review the [Randomized Virtual Item Policy](./randomized-virtual-items-policy.md).
+   If you want to use the pass as a randomized reward, review the [Randomized Virtual Item Policy](./virtual-items.md).
 </Alert>
 
-## Get pass IDs
+## Get the pass ID
 
 To use scripting, you need a pass ID. To get the pass ID:
 
@@ -53,27 +53,18 @@ To use scripting, you need a pass ID. To get the pass ID:
 
    <img src="../../assets/creator-dashboard/Pass-Copy-Asset-ID.png" width="400" />
 
-## Sell passes
+## Sell a pass
 
 <Alert severity="info">
 If you're using [price optimization](./price-optimization.md), make sure to place the script inside a `Class.LocalScript` so that users see personalized pass prices.
 </Alert>
 
-You can sell passes outside or inside an experience.
+You can sell passes in two ways:
 
-### Outside an experience
+- [Inside your experience](#inside-your-experience)
+- [Outside your experience](#outside-your-experience)
 
-To sell a pass in an experience's **Store** page:
-
-1. Go to **Monetization** &rang; **Passes**.
-2. Hover over the pass and click the **&ctdot;** menu.
-3. Select the pass you want to sell.
-4. Select **Sales**.
-5. Enable to **Item for Sale** toggle.
-6. In the **Price in Robux** field, enter the amount of Robux you want to charge users for the pass. The price you enter affects how much Robux you earn per sale. The price you enter affects how much Robux you earn per sale. The minimum price is 1 Robux, and the maximum price is 1 billion Robux.
-7. Click **Save Changes**. The pass populates in the experience's **Store** page.
-
-### Inside an experience
+### Inside your experience
 
 To implement and sell a pass inside an experience, call `Class.MarketplaceService|MarketplaceService` functions.
 
@@ -162,6 +153,18 @@ MarketplaceService.PromptGamePassPurchaseFinished:Connect(onPromptPurchaseFinish
 Although Roblox itself does **not** record the purchase history of developer products by specific users, you can request to [download sales data](../../production/analytics/analytics-dashboard.md#sales-data). If you want to track user-specific purchase history, it's your responsibility to [store the data](../../cloud-services/data-stores/index.md).
 </Alert>
 
+### Outside your experience
+
+To sell a pass on the **Store** tab of the experience details page:
+
+1. Go to **Monetization** > **Passes**.
+2. Hover over the pass and click the **&ctdot;** menu.
+3. Select the pass you want to sell.
+4. Select **Sales**.
+5. Enable to **Item for Sale** toggle.
+6. In the **Price in Robux** field, enter the amount of Robux you want to charge users for the pass. The price you enter affects how much Robux you earn per sale. The price you enter affects how much Robux you earn per sale. The minimum price is 1 Robux, and the maximum price is 1 billion Robux.
+7. Click **Save Changes**. The pass populates in the **Store** tab of the experience details page.
+
 ## Assign pass privileges
 
 You must manually assign pass privileges to users that purchase your passes. To do this, use `Class.Players.PlayerAdded|PlayerAdded` when a user joins your experience to check if they already own the pass and to assign them the pass privileges.
@@ -212,7 +215,7 @@ With analytics, you can:
 To access pass analytics:
 
 1. Go to [Creations](https://create.roblox.com/dashboard/creations) and select an experience.
-2. Go to **Monetization** &rang; **Passes**.
+2. Go to **Monetization** > **Passes**.
 3. Select the **Analytics** tab.
 
 <img src="../../assets/monetization/game-passes/passes-analytics-2.png" width="100%" />

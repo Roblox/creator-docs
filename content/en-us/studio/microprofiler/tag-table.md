@@ -5,6 +5,10 @@ description: A list of tags for the MicroProfiler.
 
 The following is a list of common tags in the MicroProfiler, grouped by category. Understanding these tags can help you identify problematic code in your experience. The tables contain tag label, descriptions and performance advice for improving performance and optimizing your experience.
 
+## Sleep
+
+When threads aren't actively performing tasks, they enter a sleep state, with tags to indicate how long the thread was sleeping. At any given time, it's extremely common for most worker threads to be in a sleep state.
+
 ## AI/navigation
 
 <table>

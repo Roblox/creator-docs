@@ -3,7 +3,7 @@ title: MicroProfiler
 description: The MicroProfiler is a Studio and client tool for optimizing your experience.
 ---
 
-The **MicroProfiler** is an optimization tool available in Roblox Studio and the Roblox client that provides detailed timing information for [task scheduler](../../studio/microprofiler/task-scheduler.md) tasks called **tags**.
+The **MicroProfiler** is a performance optimization and troubleshooting tool available in Roblox Studio and the Roblox client. It provides detailed timing information for [task scheduler](../../studio/microprofiler/task-scheduler.md) tasks called **tags**.
 
 - For a list of common tasks, refer to the [tag reference](../../studio/microprofiler/tag-table.md).
 - For a step-by-step example of using the MicroProfiler to identify a performance issue, see the [MicroProfiler walkthrough](../../studio/microprofiler/use-microprofiler.md).
@@ -16,7 +16,7 @@ When open, a menu bar is visible at the top of the 3D viewport. In the default m
 
 <img alt="The Microprofiler frame graph, showing blue frames and detailed frame information." src="../../assets/optimization/microprofiler/micro-frame.png" width="440px" />
 
-Bars should generally be around the middle of the graph, but you might see sudden spikes (rapid increases in value). Spikes indicate that more time was taken to perform some task, usually because of an increased workload. For instance, creating a lot of moving parts requires more work from the physics simulation, which then needs more time to process motion and part contacts. The following image shows an example of a spike:
+Bars should generally be around the middle of the graph, but you might see sudden spikes (rapid increases in values). Spikes indicate that more time was taken to perform some task, usually because of an increased workload. For instance, creating a lot of moving parts requires more work from the physics simulation, which then needs more time to process motion and part contacts. The following image shows an example of a spike:
 
 <img alt="The Microprofiler with several bars higher than others." src="../../assets/optimization/microprofiler/micro-spike.png" width="300px" />
 
@@ -34,7 +34,7 @@ There are three main thread types:
 
 - **Main/Render**: Perhaps unintuitively, runs on the CPU. Processes input, `Class.Humanoid|Humanoids`, animations/tweening, physics ownership, sound, and waiting script resumes. Also updates Studio interfaces and coordinates the other threads.
 
-- **Worker** ("RBX Worker"): Helps the main thread with networking, physics, and pathfinding. Due to the number of cores in modern CPUs, you likely have many worker threads.
+- **Worker** ("RBX Worker"): Helps the main thread with networking, physics, and pathfinding. Due to the number of cores in modern CPUs, you likely have many worker threads, most of which are in a sleep state at any given time.
 
 - **Render** ("GPU"): Follows a "prepare, perform, present" logic. Communicates with the graphics processing unit (GPU) of the device.
 
@@ -48,7 +48,7 @@ If your scripts are running complicated tasks, you can profile critical portions
 
 ```lua title="HardWorkScript"
 debug.profilebegin("Hard Work")
--- Here is where the code to be profiled should be
+-- Code to be profiled
 debug.profileend()
 ```
 
@@ -135,9 +135,13 @@ In general, the MicroProfiler web UI works similarly to [detailed mode](./modes.
   - Lighter portions of the preview bar and lighter labels on the timeline indicate portions of the frame with higher memory allocation.
   - In X-ray mode, press <kbd>C</kbd> to show the total size of the memory allocations rather than the number of allocations.
 
-- Use the **Export** menu to export a CPU or memory flame graph, a specialized visualization that aggregates all of the call stacks included in the dump. The flame graph is especially useful for identifying tasks that don't take particularly long to run (and are therefore hard to notice), but run so often that their processing time becomes significant.
+- Use the **Export** menu to export a CPU or memory flame graph, a specialized visualization that aggregates all of the call stacks included in the dump, maintains the parent-child hierarchy, and sizes them based on duration. Flame graphs are especially useful for identifying tasks that don't take particularly long to run (and are therefore hard to notice), but run so often that their processing time becomes significant.
 
-  <img alt="The MicroProfiler flame graph." src="../../assets/optimization/microprofiler/micro-flame.png" />
+  <img alt="The MicroProfiler flame graph in the web UI." src="../../assets/optimization/microprofiler/micro-flame.png" />
+
+  You can also create flame graphs in Studio, although only for scripts (execution time and memory allocations). Compared to the web-based flame graphs, the ones in Studio are top-down rather than bottom-up and support dramatically longer capture times.
+
+  <img alt="The MicroProfiler flame graph in Studio." src="../../assets/optimization/microprofiler/micro-studio-flame.png" />
 
 - Drag and drop a second dump file into the web UI to generate a diff flame graph, which can help you identify improvements or regressions to your experience's performance over time. Click **Combine & Compare** to export a new HTML file.
 
