@@ -695,11 +695,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/CustomEventReceiver.yaml
         ignoreTranslation: true
-      - title: CustomLog
-        path: /reference/engine/classes/CustomLog
-        type: engineapi
-        source: /reference/engine/classes/CustomLog.yaml
-        ignoreTranslation: true
       - title: CylinderHandleAdornment
         path: /reference/engine/classes/CylinderHandleAdornment
         type: engineapi
