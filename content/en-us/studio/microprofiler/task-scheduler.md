@@ -40,9 +40,6 @@ To build performant games with efficiency in mind, note the following:
 - **Don't connect/bind functions to the render step unless absolutely necessary.**
   Only tasks that must be done after input but before rendering should be done in such a way, like camera movement. For strict control over order, use `Class.RunService:BindToRenderStep()|BindToRenderStep()` instead of `Class.RunService.PreRender|PreRender`.
 
-- **Minimize the amount of waiting scripts.**
-  Avoid using `while task.wait() do end` or `while true do task.wait() end` constructs, since these aren't guaranteed to run exactly every frame or gameplay step. Instead, use an event like `Class.RunService.Heartbeat|Heartbeat`. Similarly, avoid using `Library.task.spawn()` or `Library.task.delay()` as they use the same internal mechanics as `Library.task.wait()`. Uses of `Global.RobloxGlobals.spawn()` are generally better served with `Library.coroutine.wrap()` and `Library.coroutine.resume()` of the `Library.coroutine` library.
-
 - **Manage physical states carefully.**
   `Class.RunService.PreSimulation|PreSimulation` happens **before** physics, while `Class.RunService.PostSimulation|PostSimulation` happens **after** physics. Therefore, gameplay logic that affects the physics state should be done in `Class.RunService.PreSimulation|PreSimulation`, such as setting the `Class.BasePart.Velocity|Velocity` of parts. In contrast, gameplay logic that relies on or reacts to the physics state should be handled in `Class.RunService.PostSimulation|PostSimulation`, such as reading the `Class.BasePart.Position|Position` of parts to detect when they enter defined zones.
 
