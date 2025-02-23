@@ -1,0 +1,35 @@
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+local flying = false
+local flightForce = nil
+
+-- Function to enable/disable flight
+local function toggleFlight()
+    if flying then
+        -- Disable Flight
+        if flightForce then
+            flightForce:Destroy()
+        end
+        flying = false
+    else
+        -- Enable Flight
+        flightForce = Instance.new("BodyVelocity")
+        flightForce.Velocity = Vector3.new(0, 50, 0) -- Adjust height speed
+        flightForce.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+        flightForce.Parent = humanoidRootPart
+        flying = true
+    end
+end
+
+-- Detect Key Press
+UserInputService.InputBegan:Connect(function(input, processed)
+    if processed then return end
+    if input.KeyCode == Enum.KeyCode.F then
+        toggleFlight()
+    end
+end)
