@@ -71,6 +71,7 @@ Your similar experience benchmarks are updated daily. Roblox does not use these 
 
 - Monitor the analytics of multiple experiences at once
 - Track avatar item sales and revenue
+- Track user acquisition through off-platform share links
 
 ### Monitor experiences
 
@@ -111,6 +112,10 @@ Avatar items you've sold automatically appear within the **Avatar Items** tab. H
     <img src="../../assets/analytics/overview/avatar-sales-and-revenue.png" width="90%"/>
     <figcaption>Avatar Items on Analytics Home.</figcaption>
 </figure>
+
+### Track user acquisition
+
+The **Share Links** tab provides information about the **Link Visits** metric, which tracks how many users have arrived on your experience details page by clicking on the share link you created.
 
 ## Analytics insights
 

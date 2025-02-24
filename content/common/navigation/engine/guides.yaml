@@ -601,6 +601,8 @@ navigation:
         path: /production/promotion/experience-notifications
       - title: Social media links
         path: /production/promotion/social-media-links
+      - title: Share links
+        path: /production/promotion/share-links
       - title: Player invite prompts
         path: /production/promotion/invite-prompts
       - title: Friend invite reward system
