@@ -368,6 +368,16 @@ methods:
       	  <td>number</td>
       	  <td>The cost of purchasing the asset using Robux.</td>
         </tr>
+        <tr>
+      	  <td><code>ProductId</code></td>
+      	  <td>number</td>
+      	  <td>The product ID if <code>Enum.InfoType</code> is <b>Product</b>.</td>
+        </tr>
+        <tr>
+      	  <td><code>ProductType</code></td>
+      	  <td>string</td>
+      	  <td>A string describing what the product is. Not to be confused with <code>Enum.MarketplaceProductType</code>.</td>
+        </tr>
       	<tr>
       	  <td><code>Created</code></td>
       	  <td>string</td>
@@ -392,6 +402,11 @@ methods:
       	  <td><code>IsPublicDomain</code></td>
       	  <td>boolean</td>
       	  <td>Describes whether the asset can be taken for free.</td>
+        </tr>
+        <tr>
+      	  <td><code>TargetId</code></td>
+      	  <td>number</td>
+      	  <td>The ID of the product or asset.</td>
         </tr>
         </tbody>
       </table>
@@ -461,6 +476,11 @@ methods:
       	  <td>number</td>
       	  <td>The type of asset. See <code>Enum.AssetType</code> for the asset type ID numbers.</td>
         </tr>
+        <tr>
+      	  <td><code>IconImageAssetId</code></td>
+      	  <td>number</td>
+      	  <td>The asset ID of the product's icon, or <code>0</code> if there isn't one.</td>
+        </tr>
       	<tr>
       	  <td><code>IsForSale</code></td>
       	  <td>boolean</td>
@@ -484,27 +504,76 @@ methods:
       	<tr>
       	  <td><code>Remaining</code></td>
       	  <td>number</td>
-      	  <td>The remaining number of items a limited unique item may be sold.</td>
+      	  <td>The remaining number of times a limited unique item may be sold.</td>
         </tr>
       	<tr>
       	  <td><code>Sales</code></td>
       	  <td>number</td>
-      	  <td>The number of items the asset has been sold.</td>
-        </tr>
-        <tr>
-      	  <td><code>SaleAvailabilityLocations</code></td>
-      	  <td>table</td>
-      	  <td>The item's <code>Enum.ProductLocationRestriction|ProductLocationRestriction</code> or sale location setting.</td>
-        </tr>
-        <tr>
-      	  <td><code>CanBeSoldInThisGame</code></td>
-      	  <td>boolean</td>
-      	  <td>Describes whether the asset is purchasable in the current experience.</td>
+      	  <td>The number of times the asset has been sold.</td>
         </tr>
         </tbody>
       </table>
 
-      #### Developer Products and Passes
+      #### Collectibles Information
+
+      <table size="small">
+        <thead>
+      	  <tr>
+      	    <th>Key</th>
+      	    <th>Type</th>
+      	    <th>Description</th>
+      	  </tr>
+      	</thead>
+        <tbody>
+        <tr>
+      	  <td><code>CollectibleItemId</code></td>
+      	  <td>string</td>
+      	  <td>The unique item ID of the collectible.</code>.</td>
+        </tr>
+      	<tr>
+      	  <td><code>CollectibleProductId</code></td>
+      	  <td>string</td>
+      	  <td>The unique product ID of the collectible.</td>
+        </tr>
+        <tr>
+      	  <td><code>CollectiblesItemDetails</code></td>
+      	  <td>table</td>
+      	  <td>Dictionary table of information describing the collectible (see following lines).</td>
+        </tr>
+      	<tr>
+      	  <td><code>CollectibleLowestAvailableResaleItemInstanceId</code></td>
+      	  <td>string</td>
+      	  <td>The unique item instance ID of the lowest available resale for the collectible.</td>
+        </tr>
+      	<tr>
+      	  <td><code>CollectibleLowestAvailableResaleProductId</code></td>
+      	  <td>string</td>
+      	  <td><The unique product ID of the lowest available resale for the collectible./td>
+        </tr>
+        <tr>
+      	  <td><code>CollectibleLowestResalePrice</code></td>
+      	  <td>number</td>
+      	  <td>The lowest resale price for the collectible in Robux.</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsForSale</code></td>
+      	  <td>boolean</td>
+      	  <td>If the collectible is available for sale (not resale).</td>
+        </tr>
+      	<tr>
+      	  <td><code>IsLimited</code></td>
+      	  <td>boolean</td>
+      	  <td>Whether or not the collectible is limited.</td>
+        </tr>
+        <tr>
+      	  <td><code>TotalQuantity</code></td>
+      	  <td>number</td>
+      	  <td>The total quantity of the collectible available for purchase (not resale).</td>
+        </tr>
+        </tbody>
+      </table>
+
+      #### Sale Location Settings
 
       <table size="small">
         <thead>
@@ -516,15 +585,26 @@ methods:
       	</thead>
         <tbody>
       	<tr>
-      	  <td><code>ProductId</code></td>
-      	  <td>number</td>
-      	  <td>The product ID if <code>Enum.InfoType</code> is <b>Product</b>.</td>
+      	  <td><code>CanBeSoldInThisGame</code></td>
+      	  <td>boolean</td>
+      	  <td>Describes whether the asset is purchasable in the current experience.</td>
         </tr>
-      	<tr>
-      	  <td><code>IconImageAssetId</code></td>
-      	  <td>number</td>
-      	  <td>The asset ID of the product/pass icon, or <code>0</code> if there isn't one.</td>
+        <tr>
+      	  <td><code>SaleLocation</code></td>
+      	  <td>table</td>
+      	  <td>Dictionary table of information describing where the item can be sold (see following lines).</td>
         </tr>
+        <tr>
+      	  <td><code>SaleLocationType</code></td>
+      	  <td>number</td>
+      	  <td>The type of sale location setting. See <code>Enum.ProductLocationRestriction</code> for the sale location setting ID numbers</td>
+        </tr>
+        <tr>
+      	  <td><code>UniverseIds</code></td>
+      	  <td>table</td>
+      	  <td>Array table of universes in which the item can be sold (not currently implemented).</td>
+        </tr>
+        </tbody>
       </table>
     code_samples:
       - MarketplaceService-GetProductInfo1
