@@ -607,3 +607,4 @@ https://developer.mozilla.org/docs/Web/HTTP/Methods/OPTIONS
 https://developer.mozilla.org/docs/Web/HTTP/Methods/TRACE
 https://developer.mozilla.org/docs/Web/HTTP/Methods/PATCH
 https://docs.google.com/forms/d/e/1FAIpQLSfGTRQwATB2wUg0P4HUSTtyXrhptFahJifo1ew84SyqtfSBfg/viewform
+https://www.youtube.com/playlist?list=PLuEQ5BB-Z1PJi8RJ7Kuc0JhcT0ubgaL43

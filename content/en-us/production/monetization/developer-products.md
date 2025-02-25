@@ -169,6 +169,10 @@ The firing of `PromptProductPurchaseFinished` does not mean that a user has succ
 
 #### Test mode
 
+<Alert severity="warning">
+Items for sale in test mode cost actual Robux. We recommend testing low-cost developer products.
+</Alert>
+
 The **test mode** feature helps you validate your purchase flow by simulating a developer product purchase outside your experience. You should use test mode to make sure that you have implemented `ProcessReceipt` correctly before enabling external developer product sales.
 
 The developer products you put up for sale in test mode can only be seen by you and by members of your group. They are not visible to users.
@@ -202,6 +206,15 @@ To enable external sales:
 5. Confirm that the products are now available for purchase in the **Store** tab of the experience details page.
 
 To disable the external sale of a developer product, select the product on the **Developer Products** page and clear the **Allow external purchases** checkbox.
+
+#### Limitations
+
+- Items for sale in test mode cost actual Robux. We recommend testing low-cost developer products.
+- Items for sale in test mode can only be seen by you or by members of your group.
+- To be sold externally, your developer products **must** have a thumbnail.
+- You should not sell the following outside your experience:
+		- Paid random items
+		- Items that are limited to specific quantities, time, place, or user settings and roles
 
 ## Handle a developer product purchase
 
