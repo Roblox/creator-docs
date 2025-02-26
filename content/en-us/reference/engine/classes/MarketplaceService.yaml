@@ -548,7 +548,7 @@ methods:
       	<tr>
       	  <td><code>CollectibleLowestAvailableResaleProductId</code></td>
       	  <td>string</td>
-      	  <td><The unique product ID of the lowest available resale for the collectible./td>
+      	  <td>The unique product ID of the lowest available resale for the collectible.</td>
         </tr>
         <tr>
       	  <td><code>CollectibleLowestResalePrice</code></td>
