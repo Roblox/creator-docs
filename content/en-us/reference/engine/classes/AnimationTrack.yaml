@@ -617,8 +617,11 @@ methods:
       of the initial weight of the animation.
 
       It is not recommended to use a fadeTime of 0 seconds to try to override
-      this effect and end the animation immediately as presently, this causes
-      the `Class.AnimationTrack` poses to freeze.
+      this effect and end the animation immediately for `Class.Motor6D|Motor6Ds`
+      that have their `Class.Motor.MaxVelocity` set to zero, as this causes
+      the joints to freeze in place. If it must end immediately, ensure the
+      `Class.Motor.MaxVelocity` of `Class.Motor6D|Motor6Ds` in your rig are
+      high enough for them to snap properly.
     code_samples:
       - AnimationTrack-Stop
     parameters:
