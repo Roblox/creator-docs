@@ -316,7 +316,7 @@ properties:
     description: |
       AnimationTrack.WeightTarget is a read-only property that gives the current
       weight of the `Class.AnimationTrack`. It has a default value of 1 and is
-      set when `Class.AnimationTrack:Play()`, `Class.AnimationTrack:Stop()` or
+      set when `Class.AnimationTrack:Play()`, `Class.AnimationTrack:()` or
       `Class.AnimationTrack:AdjustWeight()` is called. When weight is set in an
       `Class.AnimationTrack` it does not change instantaneously but moves from
       WeightCurrent to `Class.AnimationTrack.WeightTarget`. The time it takes to
@@ -601,22 +601,16 @@ methods:
     writeCapabilities: []
   - name: AnimationTrack:Stop
     summary: |
-      Stops the `Class.AnimationTrack`. Once called playback of the
-      `Class.AnimationTrack` will stop and the weight of the animation will move
-      towards zero over a length of time specified by the optional fadeTime
-      parameter.
+      Stops the `Class.AnimationTrack`.
     description: |
-      Stops the `Class.AnimationTrack`. Once called playback of the
-      `Class.AnimationTrack` will stop and the weight of the animation will move
-      towards zero over a length of time specified by the optional fadeTime
-      parameter.
+      Stops the `Class.AnimationTrack`. Once called, the weight of the animation
+      will move towards zero over a length of time specified by the optional
+      `fadeTime` parameter. For example, if `Stop()` is called with a `fadeTime`
+      of `2`, it will take two seconds for the weight of the track to reach
+      zero and its effects completely end. Please note this will be the case
+      regardless of the initial weight of the animation.
 
-      For example, if Stop is called with a fadeTime of 2 seconds it will take
-      two seconds for the weight of the `Class.AnimationTrack` to reach zero and
-      its effects completely end. Please note this will be the case regardless
-      of the initial weight of the animation.
-
-      It is not recommended to use a fadeTime of 0 seconds to try to override
+      It is not recommended to use a `fadeTime` of `0` in an attempt to override
       this effect and end the animation immediately for `Class.Motor6D|Motor6Ds`
       that have their `Class.Motor.MaxVelocity` set to zero, as this causes
       the joints to freeze in place. If it must end immediately, ensure the
