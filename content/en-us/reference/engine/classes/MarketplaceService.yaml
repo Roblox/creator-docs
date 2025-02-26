@@ -371,7 +371,7 @@ methods:
         <tr>
       	  <td><code>ProductId</code></td>
       	  <td>number</td>
-      	  <td>The product ID if <code>Enum.InfoType</code> is <b>Product</b>.</td>
+      	  <td>The product ID if <code>Enum.InfoType</code> is <code>Product</code>.</td>
         </tr>
         <tr>
       	  <td><code>ProductType</code></td>
@@ -528,7 +528,7 @@ methods:
         <tr>
       	  <td><code>CollectibleItemId</code></td>
       	  <td>string</td>
-      	  <td>The unique item ID of the collectible.</code>.</td>
+      	  <td>The unique item ID of the collectible.</td>
         </tr>
       	<tr>
       	  <td><code>CollectibleProductId</code></td>
