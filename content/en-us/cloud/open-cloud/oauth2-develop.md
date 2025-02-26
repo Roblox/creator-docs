@@ -46,7 +46,7 @@ the programming language of your choice to create the code verifier, calculate
 the hash, and perform Base64 encoding to generate the code challenge.
 
 When creating the code verifier, only use unreserved characters, including
-uppercase and lowercase letters (A-Z , a-z), decimal digits (0-9), hyphen (-),
+uppercase and lowercase letters (A-Z, a-z), decimal digits (0-9), hyphen (-),
 period (.), underscore (\_), and tilde (~), with a minimum length of 43
 characters and a maximum length of 128 characters.
 
@@ -67,6 +67,7 @@ function base64URLEncode(str) {
 // create sha256 hash from code verifier
 function sha256(buffer) {
   return crypto.createHash('sha256').update(buffer).digest(`base64`);
+}
 
 // create a random code verifier
 var code_verifier = base64URLEncode(crypto.randomBytes(32));
@@ -130,7 +131,7 @@ value previously) parameters.
 
 - The `code` parameter contains an authorization code that the app can
   exchange for an access token from the authorization server. Most backend
-  server languages have standard ways to access query parameters as decomposed
+  server languages have standard ways to access query parameters as decoded
   objects. You'll need to obtain the `code` parameter and use it to exchange
   for access tokens.
 
