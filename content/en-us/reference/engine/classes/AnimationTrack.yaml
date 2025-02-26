@@ -316,7 +316,7 @@ properties:
     description: |
       AnimationTrack.WeightTarget is a read-only property that gives the current
       weight of the `Class.AnimationTrack`. It has a default value of 1 and is
-      set when `Class.AnimationTrack:Play()`, `Class.AnimationTrack:()` or
+      set when `Class.AnimationTrack:Play()`, `Class.AnimationTrack:Stop()` or
       `Class.AnimationTrack:AdjustWeight()` is called. When weight is set in an
       `Class.AnimationTrack` it does not change instantaneously but moves from
       WeightCurrent to `Class.AnimationTrack.WeightTarget`. The time it takes to
