@@ -1,7 +1,7 @@
 name: ProductPurchaseChannel
 type: enum
 summary: |
-  Enum which works with `Class.MarketplaceService` to represent how the    
+  Enum which works with `Class.MarketplaceService` to represent how the  
   user acquired the developer product.
 description: |
   The `ProductPurchaseChannel` enum works with `Class.MarketplaceService` and
@@ -37,4 +37,3 @@ items:
     value: 4
     tags: []
     deprecation_message: ''
-    

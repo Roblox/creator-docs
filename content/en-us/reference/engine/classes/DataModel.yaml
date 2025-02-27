@@ -206,6 +206,25 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: DataModel.MatchmakingType
+    summary: ''
+    description: ''
+    code_samples: []
+    type: MatchmakingType
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DataModel.PlaceId
     summary: |
       Describes the ID of the place running on the server.

@@ -1093,6 +1093,28 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: Player:AddReplicationFocusPosition
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: center
+        type: Vector3
+        default:
+        summary: ''
+      - name: radius
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Player:ClearCharacterAppearance
     summary: |
       Removes all accessories and other character appearance objects from a
@@ -1612,6 +1634,28 @@ methods:
     tags: []
     deprecation_message: ''
     security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: Player:RemoveReplicationFocusPosition
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: center
+        type: Vector3
+        default:
+        summary: ''
+      - name: radius
+        type: int
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []

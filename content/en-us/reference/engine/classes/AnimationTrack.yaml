@@ -606,16 +606,16 @@ methods:
       Stops the `Class.AnimationTrack`. Once called, the weight of the animation
       will move towards zero over a length of time specified by the optional
       `fadeTime` parameter. For example, if `Stop()` is called with a `fadeTime`
-      of `2`, it will take two seconds for the weight of the track to reach
-      zero and its effects completely end. Please note this will be the case
+      of `2`, it will take two seconds for the weight of the track to reach zero
+      and its effects completely end. Please note this will be the case
       regardless of the initial weight of the animation.
 
       It is not recommended to use a `fadeTime` of `0` in an attempt to override
       this effect and end the animation immediately for `Class.Motor6D|Motor6Ds`
-      that have their `Class.Motor.MaxVelocity` set to zero, as this causes
-      the joints to freeze in place. If it must end immediately, ensure the
-      `Class.Motor.MaxVelocity` of `Class.Motor6D|Motor6Ds` in your rig are
-      high enough for them to snap properly.
+      that have their `Class.Motor.MaxVelocity` set to zero, as this causes the
+      joints to freeze in place. If it must end immediately, ensure the
+      `Class.Motor.MaxVelocity` of `Class.Motor6D|Motor6Ds` in your rig are high
+      enough for them to snap properly.
     code_samples:
       - AnimationTrack-Stop
     parameters:
