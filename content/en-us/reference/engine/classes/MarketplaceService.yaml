@@ -541,32 +541,32 @@ methods:
       	  <td>Dictionary table of information describing the collectible (see following lines).</td>
         </tr>
       	<tr>
-      	  <td><code>CollectibleLowestAvailableResaleItemInstanceId</code></td>
+      	  <td><code>CollectiblesItemDetails.CollectibleLowestAvailableResaleItemInstanceId</code></td>
       	  <td>string</td>
       	  <td>The unique item instance ID of the lowest available resale for the collectible.</td>
         </tr>
       	<tr>
-      	  <td><code>CollectibleLowestAvailableResaleProductId</code></td>
+      	  <td><code>CollectiblesItemDetails.CollectibleLowestAvailableResaleProductId</code></td>
       	  <td>string</td>
       	  <td>The unique product ID of the lowest available resale for the collectible.</td>
         </tr>
         <tr>
-      	  <td><code>CollectibleLowestResalePrice</code></td>
+      	  <td><code>CollectiblesItemDetails.CollectibleLowestResalePrice</code></td>
       	  <td>number</td>
       	  <td>The lowest resale price for the collectible in Robux.</td>
         </tr>
       	<tr>
-      	  <td><code>IsForSale</code></td>
+      	  <td><code>CollectiblesItemDetails.IsForSale</code></td>
       	  <td>boolean</td>
       	  <td>If the collectible is available for sale (not resale).</td>
         </tr>
       	<tr>
-      	  <td><code>IsLimited</code></td>
+      	  <td><code>CollectiblesItemDetails.IsLimited</code></td>
       	  <td>boolean</td>
       	  <td>Whether or not the collectible is limited.</td>
         </tr>
         <tr>
-      	  <td><code>TotalQuantity</code></td>
+      	  <td><code>CollectiblesItemDetails.TotalQuantity</code></td>
       	  <td>number</td>
       	  <td>The total quantity of the collectible available for purchase (not resale).</td>
         </tr>
@@ -595,12 +595,12 @@ methods:
       	  <td>Dictionary table of information describing where the item can be sold (see following lines).</td>
         </tr>
         <tr>
-      	  <td><code>SaleLocationType</code></td>
+      	  <td><code>SaleLocation.SaleLocationType</code></td>
       	  <td>number</td>
       	  <td>The type of sale location setting. See <code>Enum.ProductLocationRestriction</code> for the sale location setting ID numbers</td>
         </tr>
         <tr>
-      	  <td><code>UniverseIds</code></td>
+      	  <td><code>SaleLocation.UniverseIds</code></td>
       	  <td>table</td>
       	  <td>Array table of universes in which the item can be sold (not currently implemented).</td>
         </tr>
