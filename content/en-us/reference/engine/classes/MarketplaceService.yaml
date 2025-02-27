@@ -1456,7 +1456,8 @@ callbacks:
             transaction.
           - `CurrencyType` &mdash; The type of currency spent in the purchase;
             always `Enum.CurrencyType.Robux`.
-          - `ProductPurchaseChannel` — How the user acquired the developer product. One of `Enum.ProductPurchaseChannel`.
+          - `ProductPurchaseChannel` — How the user acquired the developer
+            product. One of `Enum.ProductPurchaseChannel`.
     returns:
       - type: ProductPurchaseDecision
         summary: |

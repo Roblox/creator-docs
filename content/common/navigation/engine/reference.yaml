@@ -265,6 +265,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/AudioSearchParams.yaml
         ignoreTranslation: true
+      - title: AudioTextToSpeech
+        path: /reference/engine/classes/AudioTextToSpeech
+        type: engineapi
+        source: /reference/engine/classes/AudioTextToSpeech.yaml
+        ignoreTranslation: true
       - title: AvatarCreationService
         path: /reference/engine/classes/AvatarCreationService
         type: engineapi
@@ -469,6 +474,11 @@ navigation:
         path: /reference/engine/classes/CanvasGroup
         type: engineapi
         source: /reference/engine/classes/CanvasGroup.yaml
+        ignoreTranslation: true
+      - title: Capture
+        path: /reference/engine/classes/Capture
+        type: engineapi
+        source: /reference/engine/classes/Capture.yaml
         ignoreTranslation: true
       - title: CaptureService
         path: /reference/engine/classes/CaptureService
@@ -1234,6 +1244,11 @@ navigation:
         path: /reference/engine/classes/HumanoidDescription
         type: engineapi
         source: /reference/engine/classes/HumanoidDescription.yaml
+        ignoreTranslation: true
+      - title: HumanoidRigDescription
+        path: /reference/engine/classes/HumanoidRigDescription
+        type: engineapi
+        source: /reference/engine/classes/HumanoidRigDescription.yaml
         ignoreTranslation: true
       - title: IKControl
         path: /reference/engine/classes/IKControl
@@ -2109,6 +2124,11 @@ navigation:
         path: /reference/engine/classes/ScreenGui
         type: engineapi
         source: /reference/engine/classes/ScreenGui.yaml
+        ignoreTranslation: true
+      - title: ScreenshotCapture
+        path: /reference/engine/classes/ScreenshotCapture
+        type: engineapi
+        source: /reference/engine/classes/ScreenshotCapture.yaml
         ignoreTranslation: true
       - title: ScreenshotHud
         path: /reference/engine/classes/ScreenshotHud
@@ -3603,6 +3623,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/CameraType.yaml
         ignoreTranslation: true
+      - title: CaptureUIHideMode
+        path: /reference/engine/enums/CaptureUIHideMode
+        type: engineapi
+        source: /reference/engine/enums/CaptureUIHideMode.yaml
+        ignoreTranslation: true
       - title: CatalogCategoryFilter
         path: /reference/engine/enums/CatalogCategoryFilter
         type: engineapi
@@ -4372,6 +4397,11 @@ navigation:
         path: /reference/engine/enums/MarkupKind
         type: engineapi
         source: /reference/engine/enums/MarkupKind.yaml
+        ignoreTranslation: true
+      - title: MatchmakingType
+        path: /reference/engine/enums/MatchmakingType
+        type: engineapi
+        source: /reference/engine/enums/MatchmakingType.yaml
         ignoreTranslation: true
       - title: Material
         path: /reference/engine/enums/Material

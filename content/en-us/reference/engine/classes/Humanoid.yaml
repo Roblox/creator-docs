@@ -1875,7 +1875,11 @@ methods:
       ```
 
       When this method is called, the `Class.Humanoid` will move until the
-      method is called again. However, this method will be overwritten in the next frame by Roblox's default character control script. This can be avoided by either calling this function every frame using `Class.RunService:BindToRenderStep()` (see example), or overwriting the control scripts in `Class.StarterPlayerScripts`.
+      method is called again. However, this method will be overwritten in the
+      next frame by Roblox's default character control script. This can be
+      avoided by either calling this function every frame using
+      `Class.RunService:BindToRenderStep()` (see example), or overwriting the
+      control scripts in `Class.StarterPlayerScripts`.
 
       This method can be called on the server, but this should only be done when
       the server has [network ownership](../../../physics/network-ownership.md)
