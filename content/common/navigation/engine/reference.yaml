@@ -1770,26 +1770,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Player.yaml
         ignoreTranslation: true
-      - title: PlayerData
-        path: /reference/engine/classes/PlayerData
-        type: engineapi
-        source: /reference/engine/classes/PlayerData.yaml
-        ignoreTranslation: true
-      - title: PlayerDataRecord
-        path: /reference/engine/classes/PlayerDataRecord
-        type: engineapi
-        source: /reference/engine/classes/PlayerDataRecord.yaml
-        ignoreTranslation: true
-      - title: PlayerDataRecordConfig
-        path: /reference/engine/classes/PlayerDataRecordConfig
-        type: engineapi
-        source: /reference/engine/classes/PlayerDataRecordConfig.yaml
-        ignoreTranslation: true
-      - title: PlayerDataService
-        path: /reference/engine/classes/PlayerDataService
-        type: engineapi
-        source: /reference/engine/classes/PlayerDataService.yaml
-        ignoreTranslation: true
       - title: PlayerGui
         path: /reference/engine/classes/PlayerGui
         type: engineapi

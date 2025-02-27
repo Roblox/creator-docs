@@ -20,6 +20,8 @@ description: |
   character spawns, then use `Class.ContextActionService:UnbindAction()` when
   they die or despawn.
 
+  #### Modifying control scripts
+
   When an experience is run, this object will also house the default
   multi-platform Roblox control scripts for the camera and character. If
   `Class.LocalScript|LocalScripts` named `CameraScript` or `ControlScript` are
