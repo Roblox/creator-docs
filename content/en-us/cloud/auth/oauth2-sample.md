@@ -73,7 +73,7 @@ Roblox then redirects you back to `localhost`, where you can see that the app no
 In broad strokes, `index.js` performs the following operations:
 
 1. Starts a new web server using `express`.
-1. Retrieves the Roblox OpenID Connect (OIDC) configuration, which includes endpoints for authorization, user information, etc. For more information about these endpoints, see [OAuth 2.0 authentication](../reference/oauth2.md).
+1. Retrieves the Roblox OpenID Connect (OIDC) configuration, which includes endpoints for authorization, user information, etc. For more information about these endpoints, see [OAuth 2.0 authentication](oauth2-reference.md).
 1. Creates a new Open ID client using `openid-client` and your stored credentials. This client dramatically simplifies the process of properly forming and sending HTTP requests to the OAuth 2.0 endpoints.
 1. Defines the routes for the app, including redirects for the login and logout flows and the OAuth 2.0 callback.
 1. After a successful login, stores the various tokens as cookies, along with some minimal user information that it displays as HTML with help from `getHomeHtml.js`.

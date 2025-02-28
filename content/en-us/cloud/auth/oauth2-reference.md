@@ -6,12 +6,12 @@ description: Describes how to make authenticated calls to Open Cloud with API ke
 <Alert severity="warning">
 OAuth 2.0 authentication is a beta feature that might be subject to change for
 future releases. All Open Cloud endpoints also support
-[API key authentication](../open-cloud/api-keys.md).
+[API key authentication](../auth/api-keys.md).
 </Alert>
 
 <Alert severity="info">
 For complete implementation guides and information on OAuth 2.0, including a
-sample app, see the [OAuth 2.0 Overview](../open-cloud/oauth2-overview.md).
+sample app, see the [OAuth 2.0 Overview](../auth/oauth2-overview.md).
 </Alert>
 
 This document describes endpoints that you call to implement the OAuth 2.0

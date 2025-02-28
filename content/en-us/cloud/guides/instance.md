@@ -17,7 +17,7 @@ These APIs are currently in beta and have the following restrictions:
 - You can't update scripts that are part of a [package](../../projects/assets/packages.md).
 
 - You can only use API key authentication. Create an
-  [API key](../open-cloud/api-keys.md) with **universe-place-instances** added as an API system.
+  [API key](../auth/api-keys.md) with **universe-place-instances** added as an API system.
 
   You must specify the experiences you want the key to have access to as well as the desired read and write permission scopes.
 

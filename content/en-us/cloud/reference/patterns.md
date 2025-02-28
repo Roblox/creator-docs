@@ -115,7 +115,7 @@ def PollForResults(operationPath):
            currentRetries += 1
 ```
 
-For a more complete code sample that uses a fixed retry interval rather than exponential backoff, see [Polling for Results](../open-cloud/instance.md#poll-for-results).
+For a more complete code sample that uses a fixed retry interval rather than exponential backoff, see [Polling for Results](../guides/instance.md#poll-for-results).
 
 ## Filtering
 

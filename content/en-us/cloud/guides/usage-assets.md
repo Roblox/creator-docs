@@ -313,7 +313,7 @@ If your request for creating a new asset or updating an existing asset succeeds,
 
 ## Add assets API to OAuth 2.0 apps
 
-You can create [OAuth 2.0 applications](../../cloud/open-cloud/oauth2-overview.md) supporting Assets API to allow your users to upload and update assets to Roblox.
+You can create [OAuth 2.0 applications](../../cloud/auth/oauth2-overview.md) supporting Assets API to allow your users to upload and update assets to Roblox.
 
 <Alert severity="warning">
 Third-Party app support through OAuth 2.0 is a Beta feature that might be subject to changes for future releases.
@@ -323,7 +323,7 @@ To use Assets API for your application and request permissions from your users, 
 
 1. When [registering your application](./oauth2-registration.md#register-an-app), under **Permissions**, select **asset:read** and **asset:write** scopes.
 
-1. When [implementing the authorization flow](../../cloud/open-cloud/oauth2-overview.md#implement-authorization-flows), include `asset:read` and `asset:write` as the scope parameters of the authorization URL that redirects users back to your application, like the following example:
+1. When [implementing the authorization flow](../../cloud/auth/oauth2-overview.md#implement-authorization-flows), include `asset:read` and `asset:write` as the scope parameters of the authorization URL that redirects users back to your application, like the following example:
 
    ```plain
    https://www.authorize.roblox.com?client_id=819547628404595165403873012&redirect_uri=https://my-app.com/redirect&scope=asset:read+asset:write&response_type=Code&prompts=login+consent&nonce=12345&state=6789

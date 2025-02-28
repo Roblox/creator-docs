@@ -29,7 +29,7 @@ Videos that don't meet these requirements are rejected. Alpha channels are not s
 
 ### Upload
 
-You can upload videos through the [Asset Manager](../projects/assets/manager.md), the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Video), or the [Open Cloud API](../cloud/open-cloud/usage-assets.md). To upload through the [Asset Manager](../projects/assets/manager.md):
+You can upload videos through the [Asset Manager](../projects/assets/manager.md), the [Creator Dashboard](https://create.roblox.com/dashboard/creations?activeTab=Video), or the [Open Cloud API](../cloud/guides/usage-assets.md). To upload through the [Asset Manager](../projects/assets/manager.md):
 
 1. In the [View](../studio/view-tab.md) tab, click **Asset Manager**.
 

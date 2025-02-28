@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Ordered data stores (beta)",
-    "description": "This page includes reference documentation for working with ordered data stores. For more information on using the API, see [Handle API requests for data stores](../../../cloud/open-cloud/data-store-api-handling.md) and the [usage guide](../../../cloud/open-cloud/usage-data-stores.md).",
+    "description": "This page includes reference documentation for working with ordered data stores. For more information on using the API, see [Handle API requests for data stores](../../../cloud/guides/data-store-api-handling.md) and the [usage guide](../../../cloud/guides/usage-data-stores.md).",
     "version": "0.0.1"
   },
   "servers": [
@@ -21,7 +21,7 @@
           {
             "name": "universeId",
             "in": "path",
-            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
+            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/guides/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
             "required": true,
             "schema": {
               "type": "string"
@@ -39,7 +39,7 @@
           {
             "name": "scope",
             "in": "path",
-            "description": "The name of the data store scope. See [Scopes](../../../cloud/open-cloud/data-store-api-handling.md#scopes).",
+            "description": "The name of the data store scope. See [Scopes](../../../cloud/guides/data-store-api-handling.md#scopes).",
             "required": true,
             "schema": {
               "type": "string"
@@ -73,7 +73,7 @@
           {
             "name": "filter",
             "in": "query",
-            "description": "The range of qualifying values of entries to return. See [Filters](../../../cloud/open-cloud/data-store-api-handling.md#filters).",
+            "description": "The range of qualifying values of entries to return. See [Filters](../../../cloud/guides/data-store-api-handling.md#filters).",
             "schema": {
               "type": "string"
             }
@@ -121,7 +121,7 @@
           {
             "name": "universeId",
             "in": "path",
-            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
+            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/guides/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
             "required": true,
             "schema": {
               "type": "string"
@@ -139,7 +139,7 @@
           {
             "name": "scope",
             "in": "path",
-            "description": "The name of the data store scope. See [Scopes](../../../cloud/open-cloud/data-store-api-handling.md#scopes).",
+            "description": "The name of the data store scope. See [Scopes](../../../cloud/guides/data-store-api-handling.md#scopes).",
             "required": true,
             "schema": {
               "type": "string"
@@ -212,7 +212,7 @@
           {
             "name": "universeId",
             "in": "path",
-            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
+            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/guides/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
             "required": true,
             "schema": {
               "type": "string"
@@ -230,7 +230,7 @@
           {
             "name": "scope",
             "in": "path",
-            "description": "The name of the data store scope. See [Scopes](../../../cloud/open-cloud/data-store-api-handling.md#scopes).",
+            "description": "The name of the data store scope. See [Scopes](../../../cloud/guides/data-store-api-handling.md#scopes).",
             "required": true,
             "schema": {
               "type": "string"
@@ -291,7 +291,7 @@
           {
             "name": "universeId",
             "in": "path",
-            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
+            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/guides/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
             "required": true,
             "schema": {
               "type": "string"
@@ -309,7 +309,7 @@
           {
             "name": "scope",
             "in": "path",
-            "description": "The name of the data store scope. See [Scopes](../../../cloud/open-cloud/data-store-api-handling.md#scopes).",
+            "description": "The name of the data store scope. See [Scopes](../../../cloud/guides/data-store-api-handling.md#scopes).",
             "required": true,
             "schema": {
               "type": "string"
@@ -363,7 +363,7 @@
           {
             "name": "universeId",
             "in": "path",
-            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
+            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/guides/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
             "required": true,
             "schema": {
               "type": "string"
@@ -381,7 +381,7 @@
           {
             "name": "scope",
             "in": "path",
-            "description": "The name of the data store scope. See [Scopes](../../../cloud/open-cloud/data-store-api-handling.md#scopes).",
+            "description": "The name of the data store scope. See [Scopes](../../../cloud/guides/data-store-api-handling.md#scopes).",
             "required": true,
             "schema": {
               "type": "string"
@@ -399,7 +399,7 @@
           {
             "name": "allow_missing",
             "in": "query",
-            "description": "The flag to allow the creation of an entry if the entry doesn't exist. See [Allow missing flags](../../../cloud/open-cloud/data-store-api-handling.md#allow-missing-flags).",
+            "description": "The flag to allow the creation of an entry if the entry doesn't exist. See [Allow missing flags](../../../cloud/guides/data-store-api-handling.md#allow-missing-flags).",
             "schema": {
               "type": "boolean"
             }
@@ -465,7 +465,7 @@
           {
             "name": "universeId",
             "in": "path",
-            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/open-cloud/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
+            "description": "The identifier of the experience with ordered data stores that you want to access. See [Universe ID](../../../cloud/guides/data-store-api-handling.md#universe-id) on how to copy it on [Creator Dashboard](https://create.roblox.com/dashboard/creations).",
             "required": true,
             "schema": {
               "type": "string"
@@ -483,7 +483,7 @@
           {
             "name": "scope",
             "in": "path",
-            "description": "The name of the data store scope. See [Scopes](../../../cloud/open-cloud/data-store-api-handling.md#scopes).",
+            "description": "The name of the data store scope. See [Scopes](../../../cloud/guides/data-store-api-handling.md#scopes).",
             "required": true,
             "schema": {
               "type": "string"

@@ -135,11 +135,11 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    <tbody>
      <tr>
       <td>**Manage all API keys**</td>
-      <td>Members with this role can upload their own [Open Cloud API keys](../cloud/open-cloud/api-keys.md) to the group, as well as configure everyone else's.</td>
+      <td>Members with this role can upload their own [Open Cloud API keys](../cloud/auth/api-keys.md) to the group, as well as configure everyone else's.</td>
      </tr>
      <tr>
        <td>**Manage own API keys**</td>
-       <td>Members with this role can configure and upload their own [Open Cloud API keys](../cloud/open-cloud/api-keys.md) to the group (but not configure everyone else's as above).</td>
+       <td>Members with this role can configure and upload their own [Open Cloud API keys](../cloud/auth/api-keys.md) to the group (but not configure everyone else's as above).</td>
      </tr>
    </tbody>
    <thead>

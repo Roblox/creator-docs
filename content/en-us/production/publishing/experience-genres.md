@@ -40,7 +40,7 @@ To appeal a genre change made by Roblox:
 1. Confirm that Roblox changed your genre by viewing the change on your experience's **Settings** page within the Creator Dashboard.
 2. Navigate to [roblox.com/support](http://roblox.com/support).
 3. Confirm that you are logged into your Roblox account with edit permissions for the experience.
-4. Select the **Experience Genre** help category, and provide the [Universe ID](../../cloud/open-cloud/data-store-api-handling.md#universe-id) of your experience in the **Universe ID** field.
+4. Select the **Experience Genre** help category, and provide the [Universe ID](../../cloud/guides/data-store-api-handling.md#universe-id) of your experience in the **Universe ID** field.
 5. Click **Continue** to submit your appeal.
 
 Roblox will review your appeal and notify you of the outcome, usually within a few days. If your appeal is accepted, your genre will reset back to the previous genre before Roblox changed it. If your appeal is rejected, your genre will remain the same, and you won't be able to appeal the decision again.

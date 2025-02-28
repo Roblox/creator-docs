@@ -26,7 +26,7 @@ import Guidelines from '../../includes/experience-notifications/guidelines.md'
 
 Implementing Experience Notifications begins with [creating a notification string](#create-a-notification-string) and including the [package](#include-the-package) in your project. Once these are set up, you can [send notifications](#send-an-experience-notification) with optional [custom parameters](#customize-notifications-using-parameters).
 
-Alternatively, you can use the [Open Cloud API](../../cloud/open-cloud/experience-notifications.md) to trigger notifications through freeform API requests.
+Alternatively, you can use the [Open Cloud API](../../cloud/guides/experience-notifications.md) to trigger notifications through freeform API requests.
 
 ### Create a notification string
 

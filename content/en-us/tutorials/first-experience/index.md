@@ -290,7 +290,7 @@ Almost everything in Roblox is represented as a cloud-based asset with a unique 
 
 <Alert severity="info">
 
-`Class.DataModel.GameID|UniverseIDs` and `Class.DataModel.PlaceId|PlaceIDs` are useful for managing Roblox resources through Open Cloud APIs, such as automating internal workflows, improving efficiency with content creation and management, and supporting experience operations from the web. For more information, see the [Open Cloud](../../cloud/open-cloud/index.md) overview.
+`Class.DataModel.GameID|UniverseIDs` and `Class.DataModel.PlaceId|PlaceIDs` are useful for managing Roblox resources through Open Cloud APIs, such as automating internal workflows, improving efficiency with content creation and management, and supporting experience operations from the web. For more information, see the [Open Cloud](../../cloud/guides/index.md) overview.
 
 </Alert>
 

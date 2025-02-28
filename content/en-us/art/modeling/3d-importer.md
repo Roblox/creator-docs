@@ -14,7 +14,7 @@ The 3D Importer allows you to import `.fbx`, `.gltf`, or `.obj` 3D models into S
 - Specialized meshes, such as [accessories](../../art/accessories/index.md), or characters with [facial animation data](../../art/characters/facial-animation/index.md).
 
 <Alert severity ='info'>
-To directly import 3D assets using HTTP requests, see the [Open Cloud usage guide for assets](../../cloud/open-cloud/usage-assets.md).
+To directly import 3D assets using HTTP requests, see the [Open Cloud usage guide for assets](../../cloud/guides/usage-assets.md).
 </Alert>
 
 The 3D Importer is divided into three sections:

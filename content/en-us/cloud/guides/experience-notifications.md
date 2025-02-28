@@ -34,7 +34,7 @@ Alternatively, you can use the [Engine API](../../production/promotion/experienc
 
 ### Send an experience notification
 
-The [UserNotification](../../cloud/reference/UserNotification) API lets you send Experience Notifications to users. Before using it, you must [generate an API key](../../cloud/open-cloud/api-keys.md) or [configure OAuth 2.0](../../cloud/open-cloud/oauth2-overview.md) for your app. The examples on this page use API keys.
+The [UserNotification](../../cloud/reference/UserNotification) API lets you send Experience Notifications to users. Before using it, you must [generate an API key](../../cloud/auth/api-keys.md) or [configure OAuth 2.0](../../cloud/auth/oauth2-overview.md) for your app. The examples on this page use API keys.
 
 Notifications will be delivered to [opted-in](https://en.help.roblox.com/hc/en-us/articles/24769602332692-Out-of-Experience-Notifications) users age 13+ through their Roblox notification stream, at which point they can join the experience directly via the **Join** button on the notification and spawn according to your [launch data](#include-launch-and-analytics-data).
 

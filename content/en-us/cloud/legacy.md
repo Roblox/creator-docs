@@ -3,17 +3,13 @@ title: Legacy overview
 description: Lists legacy REST APIs for Open Cloud.
 ---
 
-This section contains documentation for Roblox's many legacy APIs.
+This section contains documentation for Roblox's legacy REST APIs.
 
-Roblox offers API key and/or OAuth 2.0 support **for the select legacy API endpoints listed on this page**. Instead of sharing cookies, you can grant access to specific permissions and use these more secure authentication methods. These APIs might change without notice and break your application and do not have the stability guarantees of the newer Open Cloud APIs.
+- Roblox offers API key and/or OAuth 2.0 support **for the select legacy API endpoints listed on this page**. See the tables below for the list of available operations and authentication types.
 
-This page summarizes the available operations and authentication types.
+- All other legacy API endpoints use cookie-based authentication. We do not recommend depending on these APIs, as they rely on sharing cookies with application code.
 
-<Alert severity="warning">
-  Refer to the left navigation for documentation of legacy APIs that only support cookie authentication and **not** API key and/or OAuth 2.0 authentication.
-
-  Just like the legacy APIs listed on this page, those APIs might change without notice. We do not recommend depending on those APIs as they rely on needing to share cookies with application code that interacts with these endpoints.
-</Alert>
+- All legacy APIs, regardless of authentication type, can change without notice and do not have the stability guarantees of the Open Cloud APIs. See the left navigation for the full list of legacy API endpoints.
 
 ## Badges API
 

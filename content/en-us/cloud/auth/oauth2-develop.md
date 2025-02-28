@@ -4,7 +4,7 @@ description: Introduces OAuth 2.0 authentication implementation.
 ---
 
 Open Cloud supports the OAuth 2.0 authorization flow with and without
-[PKCE](../../cloud/open-cloud/oauth2-overview.md#authorization-code-flow-with-pkce),
+[PKCE](../../cloud/auth/oauth2-overview.md#authorization-code-flow-with-pkce),
 depending on whether your clients are confidential or public.
 
 - _Confidential clients_ are apps that are capable of keeping credentials
@@ -80,7 +80,7 @@ For PKCE, you need both the code verifier and challenge values in later steps.
 ## Construct the authorization URL
 
 <Alert severity="info">
-  See the [authorization endpoint reference documentation](/cloud/reference/oauth2#get-v1authorize)
+  See the [authorization endpoint reference documentation](oauth2-reference.md#get-v1authorize)
   for complete information on how to construct the authorization URL.
 </Alert>
 
@@ -162,7 +162,7 @@ When you have parsed the authorization `code`, exchange it for
 tokens to access desired Roblox resources:
 
 1. Request an access token and refresh token by sending a `POST` request to the
-   [token exchange endpoint](/cloud/reference/oauth2#post-v1token). The
+   [token exchange endpoint](oauth2-reference.md#post-v1token). The
    request must include the authorization code, client ID, and the code
    verifier value (PKCE) or client secret (non-PKCE) in `x-www-form-urlencoded` format.
 
@@ -189,7 +189,7 @@ authorize them.
 For example, you can test if your app functions correctly by
 going through the entire authorization flow and then making a `GET` request
 to the
-[user information endpoint](/cloud/reference/oauth2#get-v1userinfo) with an access
+[user information endpoint](oauth2-reference.md#get-v1userinfo) with an access
 token. Ensure you have the `openid` or both the `openid` and `profile`
 scopes before calling this endpoint. If successful, the response from that
 endpoint looks like this:

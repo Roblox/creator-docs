@@ -10,7 +10,7 @@ Each API requires a URL and custom search parameters for that specific catalog. 
 ## Creator Store API
 
 <Alert severity="info">
-The `toolbox-service` API described below is not currently covered on the official [Cloud API](../../cloud/reference/index.md) documentation. Better support for Creator Store search with a cleaner API is underway.
+The `toolbox-service` API described below is not currently covered on the official [Cloud API](../../cloud/index.md) documentation. Better support for Creator Store search with a cleaner API is underway.
 </Alert>
 
 You can query items from the Creator Store catalog using the following URL:
@@ -201,7 +201,7 @@ This is the response you should expect to get back from that endpoint:
            "musicGenre": string,
            "soundEffectCategory": string,
            "soundEffectSubcategory": string,
-           "tags": Array[string] 
+           "tags": Array[string]
         },
         "id": int64,
         "name": string,

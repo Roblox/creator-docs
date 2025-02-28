@@ -25,7 +25,7 @@ You can improve several areas of your workflow by accessing your data with these
 
 Although Open Cloud APIs are similar to `Class.DataStoreService`, there are a few key differences:
 
-- **Universe ID and data store name**: Unlike the Engine API, Open Cloud APIs are stateless and can come from anywhere, so you must always provide the **universe ID**, the unique identifier of your experience, and the data store **name** when sending the requests. For more information on how to get a universe ID, see [Universe ID](../../cloud/open-cloud/data-store-api-handling.md#universe-id).
+- **Universe ID and data store name**: Unlike the Engine API, Open Cloud APIs are stateless and can come from anywhere, so you must always provide the **universe ID**, the unique identifier of your experience, and the data store **name** when sending the requests. For more information on how to get a universe ID, see [Universe ID](../../cloud/guides/data-store-api-handling.md#universe-id).
 
 - **Separate permissions for creating and updating**: The Engine API creates new entries if they don't exist when you call `Class.DataStore:SetAsync()`, but Open Cloud methods for creating and updating entries are separate. Separate permissions can be safer and more flexible in certain situations. For example, you can create a customer support tool that can edit an existing user's profile, but can't create a new user's profile.
 

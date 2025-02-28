@@ -42,7 +42,7 @@ If you're [ID verified](../production/publishing/account-verification.md), you c
 
 ### Upload
 
-You can upload audio through the [Asset Manager](../projects/assets/manager.md), the [Creator Dashboard](https://create.roblox.com/dashboard/creations), or the [Open Cloud API](../cloud/open-cloud/usage-assets.md). To upload through the [Asset Manager](../projects/assets/manager.md):
+You can upload audio through the [Asset Manager](../projects/assets/manager.md), the [Creator Dashboard](https://create.roblox.com/dashboard/creations), or the [Open Cloud API](../cloud/guides/usage-assets.md). To upload through the [Asset Manager](../projects/assets/manager.md):
 
 1. In the [View](../studio/view-tab.md) tab, click **Asset Manager**.
 

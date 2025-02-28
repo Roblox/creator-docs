@@ -151,7 +151,7 @@ You might also consider adding:
 - A linter like [selene](https://github.com/Kampfkarren/selene) to catch common issues and enforce coding standards
 - A code formatter like [StyLua](https://github.com/JohnnyMorganz/StyLua)
 - A language server like [Luau Language Server](https://github.com/JohnnyMorganz/luau-lsp) for autocompletion, type checking, and more
-- [Open Cloud](../cloud/open-cloud/index.md) scripts (not synced to Studio) to [update a published experience](/cloud/reference/Universe#Update-Universe) or [restart servers](/cloud/reference/Universe#Restart-Universe-Servers)
+- [Open Cloud](../cloud/guides/index.md) scripts (not synced to Studio) to [update a published experience](/cloud/reference/Universe#Update-Universe) or [restart servers](/cloud/reference/Universe#Restart-Universe-Servers)
 
 ## Assets
 

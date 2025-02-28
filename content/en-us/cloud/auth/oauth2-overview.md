@@ -126,7 +126,7 @@ process with the following steps:
    an authorization code.
 
 1. The client includes the authorization code and the original code verifier
-   in the token request to the [token endpoint](../../cloud/reference/oauth2.md#token-exchange).
+   in the token request to the [token endpoint](oauth2-reference.md#token-exchange).
 
 1. The authorization server verifies the authorization code and the associated
    code verifier.
@@ -161,7 +161,7 @@ To implement a web or mobile app that uses authorization code flow, you need to:
 
 1. [Implement](oauth2-develop.md) the authorization code
    flow. For a complete reference of the OAuth 2.0 endpoints that you need to
-   call, see the [Authentication](../../cloud/reference/oauth2.md) reference.
+   call, see the [Authentication](oauth2-reference.md) reference.
 
 1. Go through the [review process](oauth2-registration.md#submit-for-review)
    to get more user quota.
