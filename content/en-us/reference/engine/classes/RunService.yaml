@@ -671,7 +671,7 @@ events:
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
-    deprecation_message: ''This event has been superceded by <code>Class.RunService.PreRender|PreRender</code>.''
+    deprecation_message: 'This event has been superceded by <code>Class.RunService.PreRender|PreRender</code>.'
     security: None
     thread_safety: Unsafe
     capabilities: []
