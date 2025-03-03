@@ -344,7 +344,7 @@ When threads aren't actively performing tasks, they enter a sleep state, with ta
     <td>Reduce the amount and complexity of physically simulated bodies.</td>
   </tr>
   <tr>
-    <td>Simulation/physicsSteppedTotal/physicsStepped/SpacialFilter/filterStep</td>
+    <td>Simulation/physicsSteppedTotal/physicsStepped/SpatialFilter/filterStep</td>
     <td>Updates simulation islands, arranging parts according to network ownership, local simulation. Islands are non-interacting groups of parts which can be simulated independently.</td>
     <td>Avoid setting network ownership frequently. Keep groups of parts far enough away from each other so they can be simulated separately.</td>
   </tr>
