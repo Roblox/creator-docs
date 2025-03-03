@@ -127,7 +127,7 @@ Though both systems share the same basic chat functionalities, TextChatService i
       <td>Send a chat message</td>
       <td>`Class.Players:Chat()`</td>
       <td>`Class.TextChannel:SendAsync()`</td>
-      <td>The `Class.TextChatService:SendAsync()` method supports more advanced chat features, such as rich text formatting and message priority. It also includes built-in filtering to help prevent inappropriate messages from being sent.</td>
+      <td>The `Class.TextChannel:SendAsync()|SendAsync()` method supports more advanced chat features, such as rich text formatting and message priority. It also includes built-in filtering to help prevent inappropriate messages from being sent.</td>
     </tr>
     <tr>
       <td>Implement messaging callbacks</td>
