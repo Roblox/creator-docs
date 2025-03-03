@@ -525,7 +525,7 @@ methods:
       - type: void
         summary: ''
     tags: []
-    deprecation_message: ''
+    deprecation_message: 'This event has been superceded by <code>Class.RunService.PostSimulation|PostSimulation</code>.'
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -566,13 +566,13 @@ events:
     summary: |
       Fires every frame, after the physics simulation has completed.
     description: |
-      The `PostSimulation` event fires every frame, after the physics simulation
+      The `PostSimulation` event (replacement for
+      `Class.RunService.Heartbeat|Heartbeat`) fires every frame, after the physics simulation
       has completed. The `deltaTimeSim` argument indicates the time that has
       elapsed since the previous frame.
 
       This event is useful for making final adjustments to the outcome of the
-      simulation. Following this phase, the engine triggers the
-      `Class.RunService.Heartbeat|Heartbeat` event.
+      simulation.
     code_samples:
     parameters:
       - name: deltaTimeSim
@@ -618,7 +618,7 @@ events:
     summary: |
       Fires every frame, prior to the frame being rendered.
     description: |
-      The `PreRender` event (equivalent to
+      The `PreRender` event (replacement for
       `Class.RunService.RenderStepped|RenderStepped`) fires every frame, prior
       to the frame being rendered. The `deltaTimeRender` argument indicates the
       time that has elapsed since the previous frame.
@@ -653,7 +653,7 @@ events:
     summary: |
       Fires every frame, prior to the physics simulation.
     description: |
-      The `PreSimulation` event (equivalent to
+      The `PreSimulation` event (replacement for
       `Class.RunService.Stepped|Stepped`) fires every frame, prior to the
       physics simulation. The `deltaTimeSim` argument indicates the time that
       has elapsed since the previous frame.
@@ -671,7 +671,7 @@ events:
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
-    deprecation_message: ''
+    deprecation_message: ''This event has been superceded by <code>Class.RunService.PreRender|PreRender</code>.''
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -680,8 +680,7 @@ events:
     summary: |
       Fires every frame, prior to the frame being rendered.
     description: |
-      The `RenderStepped` event (equivalent to
-      `Class.RunService.PreRender|PreRender`) fires every frame, prior to the
+      The `RenderStepped` event fires every frame, prior to the
       frame being rendered. The `deltaTime` argument indicates the time that has
       elapsed since the previous frame.
 
@@ -697,7 +696,7 @@ events:
       `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
 
       Following the `RenderStepped` phase, the simulation phase begins with the
-      `Class.RunService.PreAnimation|PreAnimation` event.
+      `Class.RunService.Stepped|Stepped` event.
     code_samples: []
     parameters:
       - name: deltaTime
@@ -706,7 +705,7 @@ events:
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
-    deprecation_message: ''
+    deprecation_message: 'This event has been superceded by <code>Class.RunService.PreSimulation|PreSimulation</code>.'
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -715,8 +714,7 @@ events:
     summary: |
       Fires every frame, prior to the physics simulation.
     description: |
-      The `Stepped` event (equivalent to
-      `Class.RunService.PreSimulation|PreSimulation`) fires every frame, prior
+      The `Stepped` event fires every frame, prior
       to the physics simulation. The `deltaTime` argument indicates the time
       that has elapsed since the previous frame.
 
@@ -724,7 +722,7 @@ events:
       before they're applied as part of the simulation. The simulation then
       runs, potentially multiple times, as the physics solver runs at a higher
       frequency than other engine systems. Once this is complete, the
-      `Class.RunService.PostSimulation|PostSimulation` event is fired.
+      `Class.RunService.Heartbeat|Heartbeat` event is fired.
     code_samples: []
     parameters:
       - name: time
