@@ -618,7 +618,7 @@ events:
     summary: |
       Fires every frame, prior to the frame being rendered.
     description: |
-      The `PreRender` event (equivalent to
+      The `PreRender` event (replacement for
       `Class.RunService.RenderStepped|RenderStepped`) fires every frame, prior
       to the frame being rendered. The `deltaTimeRender` argument indicates the
       time that has elapsed since the previous frame.
@@ -653,7 +653,7 @@ events:
     summary: |
       Fires every frame, prior to the physics simulation.
     description: |
-      The `PreSimulation` event (equivalent to
+      The `PreSimulation` event (replacement for
       `Class.RunService.Stepped|Stepped`) fires every frame, prior to the
       physics simulation. The `deltaTimeSim` argument indicates the time that
       has elapsed since the previous frame.
@@ -679,25 +679,7 @@ events:
   - name: RunService.RenderStepped
     summary: |
       Fires every frame, prior to the frame being rendered.
-    description: |
-      The `RenderStepped` event (equivalent to
-      `Class.RunService.PreRender|PreRender`) fires every frame, prior to the
-      frame being rendered. The `deltaTime` argument indicates the time that has
-      elapsed since the previous frame.
-
-      This event allows you to run code and update the world before it's drawn
-      on a player's screen. This is useful for last‑minute adjustments such as
-      changing object positions, updating animations, or preparing visual
-      effects, but it should be used sparingly as the engine cannot start to
-      render the frame until code running in this event has finished executing.
-
-      As `RenderStepped` is client-side, it can only be used in a
-      `Class.LocalScript`, in a `Class.ModuleScript` required by a
-      `Class.LocalScript`, or in a `Class.Script` with
-      `Class.BaseScript.RunContext|RunContext` set to `Enum.RunContext.Client`.
-
-      Following the `RenderStepped` phase, the simulation phase begins with the
-      `Class.RunService.PreAnimation|PreAnimation` event.
+    description: ''
     code_samples: []
     parameters:
       - name: deltaTime
@@ -706,7 +688,8 @@ events:
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This event has been superseded by `Class.RunService.PreRender|PreRender` which should be used for new work.
     security: None
     thread_safety: Unsafe
     capabilities: []
@@ -714,17 +697,7 @@ events:
   - name: RunService.Stepped
     summary: |
       Fires every frame, prior to the physics simulation.
-    description: |
-      The `Stepped` event (equivalent to
-      `Class.RunService.PreSimulation|PreSimulation`) fires every frame, prior
-      to the physics simulation. The `deltaTime` argument indicates the time
-      that has elapsed since the previous frame.
-
-      This event is useful for adjusting properties like velocity or forces just
-      before they're applied as part of the simulation. The simulation then
-      runs, potentially multiple times, as the physics solver runs at a higher
-      frequency than other engine systems. Once this is complete, the
-      `Class.RunService.PostSimulation|PostSimulation` event is fired.
+    description: ''
     code_samples: []
     parameters:
       - name: time
@@ -739,7 +712,8 @@ events:
         summary: |
           The time (in seconds) that has elapsed since the previous frame.
     tags: []
-    deprecation_message: ''
+    deprecation_message: |
+      This event has been superseded by `Class.RunService.PreSimulation|PreSimulation` which should be used for new work.
     security: None
     thread_safety: Unsafe
     capabilities: []
