@@ -525,7 +525,7 @@ methods:
       - type: void
         summary: ''
     tags: []
-    deprecation_message: 'This event has been superceded by <code>Class.RunService.PostSimulation|PostSimulation</code>.'
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
