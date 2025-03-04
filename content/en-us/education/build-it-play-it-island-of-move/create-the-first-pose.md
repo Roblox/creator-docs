@@ -1,5 +1,5 @@
 ---
-title: Create the First Pose
+title: Create the first pose
 description: Part of the Roblox Build It, Play It Challenge - Island of Move. Start the first pose of the animation.
 next: /education/build-it-play-it-island-of-move/save-and-publish
 prev: /education/build-it-play-it-island-of-move/creating-animations
@@ -22,7 +22,7 @@ Start by creating the first pose of your animation. This tutorial shows a swimmi
   </figure>
 </GridContainer>
 
-## Pose the Figure
+## Pose the figure
 
 Posing figures is done by rotating individual parts and joints, like the head or elbow.
 

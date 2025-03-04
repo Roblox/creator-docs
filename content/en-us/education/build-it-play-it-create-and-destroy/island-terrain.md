@@ -1,5 +1,5 @@
 ---
-title: Island Terrain
+title: Island terrain
 description: Part of the Create and Destroy series. Learn how to open the Terrain Editor.
 next: /education/build-it-play-it-create-and-destroy/terrain-tools
 prev: /education/build-it-play-it-create-and-destroy/complete-the-city
@@ -18,7 +18,7 @@ A square map isn't very natural or interesting to players. To finish the map, yo
   </figure>
 </GridContainer>
 
-## Opening the Terrain Editor
+## Open the Terrain Editor
 
 All terrain, whether it's mountains or painting grass, is created using the Terrain Editor.
 

@@ -1,15 +1,15 @@
 ---
-title: Server-Side Chat Modules
+title: Server-side chat modules
 description: Server-side chat modules allow you to extend and customize the deprecated legacy chat.
 comments: |
   1. This guide is intentionally not available in the nav list, but still searchable for users who want to use the legacy chat system.
 ---
 
 <Alert severity="error">
-  This guide covers server-side chat modules of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService` , see <a href="../../chat/customizing-in-experience-text-chat.md">In-Experience Text Chat</a>.
+  This guide covers server-side chat modules of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService` , see <a href="../../chat/in-experience-text-chat.md">In-experience text chat</a>.
 </Alert>
 
-You can use the following chat modules to support server-side behaviors of the [Legacy Chat System](../../chat/legacy/legacy-chat-system.md#message-creator-modules) including:
+You can use the following chat modules to support server-side behaviors of the [Legacy chat system](../../chat/legacy/legacy-chat-system.md#message-creator-modules) including:
 
 - [ChatService](#chatservice): A singleton that manages all other chat modules.
 - [ChatSpeaker](#chatspeaker): An entity that may create messages in a ChatChannel; each `Player` will automatically have a ChatSpeaker and bots may chat by creating ChatSpeakers.

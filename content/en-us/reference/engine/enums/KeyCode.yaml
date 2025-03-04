@@ -1,26 +1,20 @@
 name: KeyCode
 type: enum
 summary: |
-  A physical button that a user is pressing.
+  Byte keycodes that represent the key or button involved in user input.
 description: |
-  The KeyCode Enum contains a list of Byte keycodes that represent the button
-  used in a user input.
+  The `KeyCode` enum contains a list of byte keycodes that represent the key or
+  button involved in user input. This enum also includes buttons and axes
+  present on gamepads, and 96 `World[]` values for non-standard buttons.
 
-  Note, KeyCode keyboard values refer to the physical position of buttons on a
-  standard QWERTY keyboard. This means that, provided the user's system is
-  configured correctly, the location of keys (such as `WASD`) will remain the
-  same on other keyboard types, such as Dvorak keyboards (where it would map to
-  `,AOE`).
+  Note that keyboard values refer to the physical position of buttons on a
+  standard QWERTY keyboard. Provided the user's system is configured correctly,
+  the location of keys (such as
+  <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>) will remain the same on
+  other keyboard types such as Dvorak keyboards where it would map to
+  <kbd>,</kbd><kbd>A</kbd><kbd>O</kbd><kbd>E</kbd>.
 
-  This enum also includes buttons and axes present on gamepads, and 96 `World``
-  values for non-standard buttons.
-
-  The keypad is a cluster of keys that is present on many desktop keyboards, but
-  is rare for laptops to have.
-
-  See also:
-
-  - `Class.InputObject` - used for keyboard and gamepad input.
+  See also `Class.InputObject`, used for keyboard and gamepad input.
 code_samples:
 tags: []
 deprecation_message: ''
@@ -51,7 +45,7 @@ items:
     deprecation_message: ''
   - name: Return
     summary: |
-      Better known as enter.
+      Frequently known as **Enter**.
     value: 13
     tags: []
     deprecation_message: ''
@@ -1443,73 +1437,73 @@ items:
     deprecation_message: ''
   - name: ButtonX
     summary: |
-      Gamepad X button.
+      Gamepad `X` button.
     value: 1000
     tags: []
     deprecation_message: ''
   - name: ButtonY
     summary: |
-      Gamepad Y button.
+      Gamepad `Y` button.
     value: 1001
     tags: []
     deprecation_message: ''
   - name: ButtonA
     summary: |
-      Gamepad A button.
+      Gamepad `A` button.
     value: 1002
     tags: []
     deprecation_message: ''
   - name: ButtonB
     summary: |
-      Gamepad B button.
+      Gamepad `B` button.
     value: 1003
     tags: []
     deprecation_message: ''
   - name: ButtonR1
     summary: |
-      Gamepad R1 button.
+      Gamepad `R1` button.
     value: 1004
     tags: []
     deprecation_message: ''
   - name: ButtonL1
     summary: |
-      Gamepad L1 button.
+      Gamepad `L1` button.
     value: 1005
     tags: []
     deprecation_message: ''
   - name: ButtonR2
     summary: |
-      Gamepad R2 button.
+      Gamepad `R2` button.
     value: 1006
     tags: []
     deprecation_message: ''
   - name: ButtonL2
     summary: |
-      Gamepad L2 button.
+      Gamepad `L2` button.
     value: 1007
     tags: []
     deprecation_message: ''
   - name: ButtonR3
     summary: |
-      Gamepad R3 button.
+      Gamepad `R3` button.
     value: 1008
     tags: []
     deprecation_message: ''
   - name: ButtonL3
     summary: |
-      Gamepad L3 button.
+      Gamepad `L3` button.
     value: 1009
     tags: []
     deprecation_message: ''
   - name: ButtonStart
     summary: |
-      Gamepad Start button.
+      Gamepad `Start` button.
     value: 1010
     tags: []
     deprecation_message: ''
   - name: ButtonSelect
     summary: |
-      Gamepad Select button.
+      Gamepad `Select` button.
     value: 1011
     tags: []
     deprecation_message: ''
@@ -1552,35 +1546,49 @@ items:
   - name: MouseLeftButton
     summary: ''
     value: 1018
-    tags: []
-    deprecation_message: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This enum is deprecated and flagged for removal.
   - name: MouseRightButton
     summary: ''
     value: 1019
-    tags: []
-    deprecation_message: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This enum is deprecated and flagged for removal.
   - name: MouseMiddleButton
     summary: ''
     value: 1020
-    tags: []
-    deprecation_message: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This enum is deprecated and flagged for removal.
   - name: MouseBackButton
     summary: ''
     value: 1021
-    tags: []
-    deprecation_message: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This enum is deprecated and flagged for removal.
   - name: MouseNoButton
     summary: ''
     value: 1022
-    tags: []
-    deprecation_message: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This enum is deprecated and flagged for removal.
   - name: MouseX
     summary: ''
     value: 1023
-    tags: []
-    deprecation_message: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This enum is deprecated and flagged for removal.
   - name: MouseY
     summary: ''
     value: 1024
-    tags: []
-    deprecation_message: ''
+    tags:
+      - Deprecated
+    deprecation_message: |
+      This enum is deprecated and flagged for removal.

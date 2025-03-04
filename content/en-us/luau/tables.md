@@ -19,39 +19,39 @@ For more information on built-in functions for working with tables, see the `Lib
 
 An **array** is an ordered list of values. Arrays are useful for storing collections of data, such as a group of players with special permissions.
 
-### Creating Arrays
+### Create arrays
 
 To create an array using a Luau table, declare the values in sequential order, separated by commas.
 
 ```lua
 -- Construct an array with three items
-local testArray = {"A string", 3.14159, workspace.Camera}
+local testArray = {"A string", 3.14159, true}
 print(testArray)
 ```
 
-### Reading from Arrays
+### Read from arrays
 
 To read from an array, add a pair of square brackets after its reference and specify the index number of the element inside (`[pos]`):
 
 ```lua
 -- Construct an array with three items
-local testArray = {"A string", 3.14159, workspace.Camera}
+local testArray = {"A string", 3.14159, true}
 
 print(testArray[1]) -- A string
 print(testArray[2]) -- 3.14159
-print(testArray[3]) -- Camera
+print(testArray[3]) -- true
 ```
 
 <Alert severity="warning">
-Unlike some languages, Luau uses 1-based indexing for arrays, so the first item in the array is <InlineCode>[1]</InlineCode>, not <InlineCode>[0]</InlineCode>.
+Unlike some languages, Luau uses 1-based indexing for arrays, so the first item in the array is `[1]`, not `[0]`.
 </Alert>
 
-### Writing to Arrays
+### Write to arrays
 
 To define or rewrite the value of an array at an index, declare the index number in square brackets (`[index]`) followed by `=` and the value:
 
 ```lua
-local testArray = {"A string", 3.14159, workspace.Camera}
+local testArray = {"A string", 3.14159, true}
 
 testArray[2] = 12345
 testArray[4] = "New string"
@@ -60,12 +60,12 @@ print(testArray[2]) --12345
 print(testArray[4]) -- New string
 ```
 
-### Iterating over Arrays
+### Iterate over arrays
 
-To iterate over an array, you can use a `for` loop. Because the arrays have numerical indices, you can also use a numeric `for` loop from **1** to the length of the array (`#array`).
+To iterate over an array, you can use a `for` loop. Because the arrays have numerical indices, you can also use a numeric `for` loop from `1` to the length of the array (`#array`).
 
 ```lua
-local testArray = {"A string", 3.14159, workspace.Camera, "New string"}
+local testArray = {"A string", 3.14159, true, "New string"}
 
 -- Loop using general iteration
 for index, value in testArray do
@@ -76,20 +76,9 @@ end
 for index = 1, #testArray do
 	print(index, testArray[index])
 end
-
---[[ Resulting output:
-1 A string
-2 3.14159
-3 Camera
-4 New string
-1 A string
-2 3.14159
-3 Camera
-4 New string
-]]
 ```
 
-### Inserting Items
+### Insert items
 
 There are two built-in ways to insert an item to the **end** of an array:
 
@@ -118,7 +107,7 @@ print(testArray[2]) -- NEW ITEM #2
 print(testArray[3]) -- Next item
 ```
 
-### Removing Items
+### Remove items
 
 To remove an item from an array, use `Library.table.remove()`. This removes the item at the specified position and moves any following items back one index position.
 
@@ -135,15 +124,15 @@ print(testArray[2]) -- Last item
 
 Dictionaries are an extension of arrays. Dictionaries store a set of key-value pairs, where the keys can be any number, string, or object.
 
-### Creating Dictionaries
+### Create dictionaries
 
 To create a dictionary table, define each **key** followed by `=` and the **value**. Separate each key-value pair with a comma:
 
 ```lua
 local testDictionary = {
-	FruitName = "Lemon",
-	FruitColor = "Yellow",
-	Sour = true
+	fruitName = "Lemon",
+	fruitColor = "Yellow",
+	sour = true
 }
 ```
 
@@ -153,12 +142,12 @@ The keys for dictionaries can be numbers, strings, and objects. For example, a k
 local part = Instance.new("Part")
 
 local testDictionary = {
-	PartType = "Block",
+	partType = "Block",
 	[part] = true
 }
 ```
 
-### Reading from Dictionaries
+### Read from dictionaries
 
 To read from a dictionary, add a pair of brackets after its reference and specify the key name. Directly reference a string key using quotes (`["key"]`) or use a variable value (`[key]`).
 
@@ -166,46 +155,46 @@ To read from a dictionary, add a pair of brackets after its reference and specif
 local part = Instance.new("Part")
 
 local testDictionary = {
-	PartType = "Block",
+	partType = "Block",
 	[part] = true
 }
 -- Include quotes for string keys
-print(testDictionary["PartType"]) -- Block
+print(testDictionary["partType"]) -- Block
 -- Omit quotes for non-string keys
 print(testDictionary[part]) -- true
 ```
 
-### Writing to Dictionaries
+### Write to dictionaries
 
 To define or rewrite the value of a new or existing dictionary key, declare the key name in brackets (`[key]`) followed by `=` and the value:
 
 ```lua
 local testDictionary = {
-	FruitName = "Lemon",
-	Sour = true
+	fruitName = "Lemon",
+	sour = true
 }
 
 -- Change value of existing keys
-testDictionary["FruitName"] = "Cherry"
-testDictionary["Sour"] = false
+testDictionary["fruitName"] = "Cherry"
+testDictionary["sour"] = false
 
 -- Insert new key-value pair
-testDictionary["FruitCount"] = 10
+testDictionary["fruitCount"] = 10
 
-print(testDictionary["FruitName"]) -- Cherry
-print(testDictionary["Sour"]) -- false
-print(testDictionary["FruitCount"]) -- 10
+print(testDictionary["fruitName"]) -- Cherry
+print(testDictionary["sour"]) -- false
+print(testDictionary["fruitCount"]) -- 10
 ```
 
-### Iterating over Dictionaries
+### Iterate over dictionaries
 
 To iterate over a dictionary, use the global `pairs()` function in a `for` loop:
 
 ```lua
 local testDictionary = {
-	FruitName = "Lemon",
-	FruitColor = "Yellow",
-	Sour = true
+	fruitName = "Lemon",
+	fruitColor = "Yellow",
+	sour = true
 }
 
 for key, value in pairs(testDictionary) do
@@ -213,9 +202,9 @@ for key, value in pairs(testDictionary) do
 end
 
 --[[ Resulting output:
-FruitName Lemon
-Sour true
-FruitColor Yellow
+fruitName Lemon
+sour true
+fruitColor Yellow
 ]]
 ```
 
@@ -223,29 +212,29 @@ FruitColor Yellow
 Unlike using <InlineCode>ipairs()</InlineCode> on an array, using <InlineCode>pairs()</InlineCode> on a dictionary doesn't necessarily return items in the same order that they're in the dictionary.
 </Alert>
 
-### Removing Key-value Pairs
+### Remove key-value pairs
 
 To remove or erase a key-value pair from a dictionary, set its value for a key to `nil`.
 
 ```lua
 local testDictionary = {
-	FruitName = "Lemon",
-	FruitColor = "Yellow",
-	Sour = true
+	fruitName = "Lemon",
+	fruitColor = "Yellow",
+	sour = true
 }
 
-testDictionary["Sour"] = nil
+testDictionary["sour"] = nil
 
 for key, value in pairs(testDictionary) do
 	print(key, value)
 end
 --[[ Resulting output:
-FruitName Lemon
-FruitColor Yellow
+fruitName Lemon
+fruitColor Yellow
 ]]
 ```
 
-## Tables as References
+## Tables as references
 
 If you store a table in a new variable, Luau doesn't create a copy of that table. Instead, the variable becomes a **reference**, or pointer, to the original table. Any reference to a table reflects any changes to the original table:
 
@@ -270,9 +259,9 @@ Reference: 1000 2000
 ]]
 ```
 
-## Cloning Tables
+## Clone tables
 
-### Shallow Clones
+### Shallow clones
 
 To copy a table without any nested tables, Luau offers the `Library.table.clone()` method.
 
@@ -286,7 +275,7 @@ local original = {
 local clone = table.clone(original)
 ```
 
-### Deep Clones
+### Deep clones
 
 To copy a more complex table with nested tables inside it, you'll need to use a recursive function similar to the following:
 
@@ -327,11 +316,11 @@ local original = {
 local clone = deepCopy(original)
 ```
 
-## Freezing Tables
+## Freeze tables
 
 Freezing a table makes it read-only, which is useful for creating constant values that you don't want to change. Freezing is permanent; there's no "unfreeze" or "thaw" method. To check if a table is frozen, use `Library.table.isfrozen()`.
 
-### Shallow Freezes
+### Shallow freezes
 
 To freeze a table without any nested tables, Luau offers the `Library.table.freeze()` method.
 
@@ -346,7 +335,7 @@ table.freeze(target)
 target.playerID = 1 --> attempt to modify a readonly table
 ```
 
-### Deep Freezes
+### Deep freezes
 
 To freeze a more complex table with nested tables inside it, use a recursive function similar to the following:
 

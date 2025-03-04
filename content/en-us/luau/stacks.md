@@ -9,7 +9,7 @@ You can think of the stack data structure as a stack of dinner plates: you start
 
 Stacks have two main operations: **push** for adding an element to the top of the stack and **pop** for removing the element from the top of the stack. A Stack can either have a fixed size or be dynamically resized. Stacks are helpful for design usage such as backtracking algorithms.
 
-## Implementing Stacks
+## Implement stacks
 
 Though Luau doesn't have stacks as a built-in data structure, you can use [tables](../luau/tables.md) to implement stacks. The following code sample shows how to create a stack, `push` an object to a stack, and `pop` an object from the stack. To use this implementation for your experience, you should save it as a `Class.ModuleScript` and store it in `Class.ReplicatedStorage`, so your stack is accessible for both client and server.
 
@@ -26,18 +26,18 @@ function Stack.new()
 end
 
 -- Check if the stack is empty
-function Stack:IsEmpty()
+function Stack:isEmpty()
 	return #self._stack == 0
 end
 
 -- Put a new value onto the stack
-function Stack:Push(value)
+function Stack:push(value)
 	table.insert(self._stack, value)
 end
 
 -- Take a value off the stack
-function Stack:Pop()
-	if self:IsEmpty() then
+function Stack:pop()
+	if self:isEmpty() then
 		return nil
 	end
 
@@ -57,21 +57,21 @@ local s = Stack.new()
 
 -- Change the stack 	Resulting stack		 Output
 
-s:Push(1)      			-- {1}
+s:push(1)      			-- {1}
 
-s:Push(5)      			-- {1, 5}
+s:push(5)      			-- {1, 5}
 
-s:Push(10)     			-- {1, 5, 10}
+s:push(10)     			-- {1, 5, 10}
 
-print(s:Pop()) 			-- {1, 5}            10
+print(s:pop()) 			-- {1, 5}            10
 
-print(s:Pop()) 			-- {1}               5
+print(s:pop()) 			-- {1}               5
 
-s:Push(20)     			-- {1, 20}
+s:push(20)     			-- {1, 20}
 
-print(s:Pop()) 			-- {1}               20
+print(s:pop()) 			-- {1}               20
 
-print(s:Pop()) 			-- {}                1
+print(s:pop()) 			-- {}                1
 ```
 
 <Alert severity="warning">

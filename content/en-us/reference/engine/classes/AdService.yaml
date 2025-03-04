@@ -5,9 +5,10 @@ memory_category: Instances
 summary: |
   A class that allows the display of mobile video ads.
 description: |
-  This `Class.AdService` was a service for displaying mobile video ads as a form of
-  monetization. It has been superseded by [Immersive Ads](../../../production/monetization/immersive-ads.md)
-  which should be used instead to serve ad units to visitors of your experience.
+  This `Class.AdService` was a service for displaying mobile video ads as a form
+  of monetization. It has been superseded by
+  [Immersive Ads](../../../production/monetization/immersive-ads.md) which
+  should be used instead to serve ad units to visitors of your experience.
 code_samples:
 inherits:
   - Instance
@@ -18,6 +19,24 @@ deprecation_message: |
   This service has been decommissioned and is no longer operational.
 properties: []
 methods:
+  - name: AdService:CreateAdRewardFromDevProductId
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: devProductId
+        type: int64
+        default:
+        summary: ''
+    returns:
+      - type: AdReward
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AdService:ShowVideoAd
     summary: |
       Show mobile video advertisements.
@@ -34,6 +53,48 @@ methods:
       `Class.AdService` has been decommissioned and is no longer operational.
       [Immersive Ads](../../../production/monetization/immersive-ads.md) should
       be used as a replacement for `Class.AdService`.
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AdService:GetAdAvailabilityNowAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: adFormat
+        type: AdFormat
+        default:
+        summary: ''
+    returns:
+      - type: Variant
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AdService:ShowRewardedVideoAdAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: reward
+        type: AdReward
+        default:
+        summary: ''
+    returns:
+      - type: ShowAdResult
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []

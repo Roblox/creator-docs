@@ -1,5 +1,5 @@
 ---
-title: Core Curriculum
+title: Core curriculum
 description: //
 next: /tutorials/curriculums/core/building/create-a-project
 hideInPageNavigation: true
@@ -48,69 +48,65 @@ inspect the place files if you want to see the end result of each chapter.
 
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 1 - Build a Greybox</Typography>
+      <Typography variant="h4">Chapter 1 - Build a greybox</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
-    - [Create a Project](./building/create-a-project.md) - Learn how to create a `.rbxl` file that represents your experience on the Roblox platform.
-    - [Create an Environment with Terrain](./building/create-an-environment-with-terrain.md) - Learn how to create the island where players spawn using Studio's terrain tools.
-    - [Greybox a Playable Area](./building/greybox-a-playable-area.md) - Learn how to use solid modeling tools to plan out the basic shape of your platforms.
+    - [Create a project](./building/create-a-project.md) - Learn how to create a `.rbxl` file that represents your experience on the Roblox platform.
+    - [Create an environment with terrain](./building/create-an-environment-with-terrain.md) - Learn how to create the island where players spawn using Studio's terrain tools.
+    - [Greybox a playable area](./building/greybox-a-playable-area.md) - Learn how to use solid modeling tools to plan out the basic shape of your platforms.
 
         <a href="https://www.roblox.com/games/14239096301/Island-Jump-Building">
         <Button
           color="primary"
           size="medium"
           variant="contained">
-          Get the Place File
+          Get the place file
         </Button>
         </a>
 
    </AccordionDetails>
    </BaseAccordion>
 
-   <br />
-
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 2 - Script the Gameplay</Typography>
+      <Typography variant="h4">Chapter 2 - Script the gameplay</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
-    - [Create a Coin Collection Mechanic](./scripting/script-game-behavior.md) - Learn how to track and store players' coin collecting.
-    - [Record and Display Player Data](./scripting/record-and-display-player-data.md) - Learn how to store, retrieve, and display individual player data visually through a leaderboard.
-    - [Create Player Hazards](./scripting/create-player-hazards.md) - Learn how to create a hazard in the water by modifying player behavior and creating a player life cycle.
-    - [Script an Upgrade Button](./scripting/script-an-upgrade-button.md) - Learn how to upgrade player jump power by communicating with the Roblox server and handling GUI interactions.
+    - [Create a coin collection mechanic](./scripting/script-game-behavior.md) - Learn how to track and store players' coin collecting.
+    - [Record and display player data](./scripting/record-and-display-player-data.md) - Learn how to store, retrieve, and display individual player data visually through a leaderboard.
+    - [Create player hazards](./scripting/create-player-hazards.md) - Learn how to create a hazard in the water by modifying player behavior and creating a player life cycle.
+    - [Script an upgrade button](./scripting/script-an-upgrade-button.md) - Learn how to upgrade player jump power by communicating with the Roblox server and handling GUI interactions.
 
         <a href="https://www.roblox.com/games/14239042199/Island-Jump-Scripting">
         <Button
           color="primary"
           size="medium"
           variant="contained">
-          Get the Place File
+          Get the place file
         </Button>
         </a>
 
    </AccordionDetails>
    </BaseAccordion>
 
-   <br />
-
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 3 - Polish the Experience</Typography>
+      <Typography variant="h4">Chapter 3 - Polish the experience</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
-    - [Create Basic Visual Effects](./building/create-basic-visual-effects.md) - Learn how to create two different kinds of visual effect using particle emitters.
-    - [Customize Global Lighting](./building/customize-global-lighting.md) - Learn how to use global lighting settings to refine the look and feel of your experience.
-    - [Apply Polished Assets](./building/apply-polished-assets.md) - Learn how to finish your scene by replacing simple parts with complex, imported models.
+    - [Create basic visual effects](./building/create-basic-visual-effects.md) - Learn how to create two different kinds of visual effect using particle emitters.
+    - [Customize global lighting](./building/customize-global-lighting.md) - Learn how to use global lighting settings to refine the look and feel of your experience.
+    - [Apply polished assets](./building/apply-polished-assets.md) - Learn how to finish your scene by replacing simple parts with complex, imported models.
 
         <a href="https://www.roblox.com/games/14238807008/Island-Jump-Completed-Sample">
         <Button
           color="primary"
           size="medium"
           variant="contained">
-          Get the Place File
+          Get the place file
         </Button>
         </a>
 

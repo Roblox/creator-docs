@@ -62,6 +62,25 @@ properties:
     capabilities:
       - Audio
     writeCapabilities: []
+  - name: AudioCompressor.Editor
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: State Editing
+    serialization:
+      can_load: true
+      can_save: false
+    capabilities:
+      - Audio
+    writeCapabilities: []
   - name: AudioCompressor.MakeupGain
     summary: |
       A gain value to be applied after compression.
@@ -186,6 +205,34 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AudioCompressor:GetInputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioCompressor:GetOutputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: AudioCompressor.WiringChanged
     summary: |
@@ -211,7 +258,8 @@ events:
         type: Wire
         default:
         summary: |
-          The `Class.Wire` between the `Class.AudioCompressor` and the other instance.
+          The `Class.Wire` between the `Class.AudioCompressor` and the other
+          instance.
       - name: instance
         type: Instance
         default:

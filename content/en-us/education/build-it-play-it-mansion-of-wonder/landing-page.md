@@ -1,5 +1,5 @@
 ---
-title: Mansion of Wonder
+title: Mansion of wonder
 description: Learn how to use special effects in Roblox Studio to give players feedback or help them learn how to play your game in the Build It Play It Mansion of Wonder.
 ---
 
@@ -7,7 +7,7 @@ description: Learn how to use special effects in Roblox Studio to give players f
 
 Using Roblox Studio, you'll learn to create special effects, whether it's a magical blast in an arcade experience, or a beam of arrows that guides new players around a world. These two tutorials take you step-by-step as you learn and earn exclusive prizes.
 
-## What's Your Skill Level?
+## What's your skill level?
 
 Depending on whether or not you've used Roblox Studio, there are different tutorials for your skill level. Pick the one below that suits your needs.
 

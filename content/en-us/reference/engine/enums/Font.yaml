@@ -4,6 +4,10 @@ summary: ''
 description: |
   The `Enum.Font` enum is used in `Class.TextBox`, `Class.TextLabel`, and
   `Class.TextButton` to determine how the GUI element will render its text.
+
+  See also `Datatype.Font` as a newer alternative to this enum which
+  encapsulates fonts as a datatype and provides access to more fonts than this
+  enum allows.
 code_samples:
 tags: []
 deprecation_message: ''
@@ -17,13 +21,13 @@ items:
   - name: Arial
     value: 1
     summary: |
-      Arial has been removed from Roblox. Use Arimo instead.
+      Arial has been removed from Roblox. Using Arial will map to Arimo.
     tags: []
     deprecation_message: ''
   - name: ArialBold
     value: 2
     summary: |
-      Arial has been removed from Roblox. Use Arimo instead.
+      Arial has been removed from Roblox. Using Arial will map to Arimo.
     tags: []
     deprecation_message: ''
   - name: SourceSans
@@ -113,25 +117,25 @@ items:
   - name: Gotham
     value: 17
     summary: |
-      Gotham has been removed from Roblox. Use Montserrat instead.
+      Gotham has been removed from Roblox. Using Gotham will map to Montserrat.
     tags: []
     deprecation_message: ''
   - name: GothamMedium
     value: 18
     summary: |
-      Gotham has been removed from Roblox. Use Montserrat instead.
+      Gotham has been removed from Roblox. Using Gotham will map to Montserrat.
     tags: []
     deprecation_message: ''
   - name: GothamBold
     value: 19
     summary: |
-      Gotham has been removed from Roblox. Use Montserrat instead.
+      Gotham has been removed from Roblox. Using Gotham will map to Montserrat.
     tags: []
     deprecation_message: ''
   - name: GothamBlack
     value: 20
     summary: |
-      Gotham has been removed from Roblox. Use Montserrat instead.
+      Gotham has been removed from Roblox. Using Gotham will map to Montserrat.
     tags: []
     deprecation_message: ''
   - name: AmaticSC

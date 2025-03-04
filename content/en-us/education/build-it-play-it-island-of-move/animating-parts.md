@@ -1,5 +1,5 @@
 ---
-title: Animating Parts
+title: Animate parts
 description: Learn how to move parts in Roblox Studio by coding tweens. Rotate, scale, and change the colors of objects.
 prev: /education/build-it-play-it-island-of-move/adding-animations
 ---
@@ -8,14 +8,14 @@ Players can get feedback to whether or not their actions are doing anything with
 
 <video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/exampleProject_tweeningButtonDoor.mp4" width="100%"></video>
 
-## Tweening with Animations
+## Tween with animations
 
 One way of animating objects is using tweens. A **tween**, short for in-between, is the process of changing a starting value to an ending value over a certain amount of time. Tweens can be used to change properties such as position, color, or rotation.
 
 <video controls src="../../assets/education/build-it-play-it-island-of-move-intermediate/example_allTweens.mp4
 " width="100%"></video>
 
-### Project Setup
+### Project setup
 
 For this project, a tween will move an object from a starting position to a goal position.
 
@@ -49,9 +49,9 @@ For this project, a tween will move an object from a starting position to a goal
 
    -- Tween variables
    local buttonTweenInfo = TweenInfo.new(
-   	TWEEN_TIME,  -- Time
-   	Enum.EasingStyle.Quad,  -- EasingStyle
-   	Enum.EasingDirection.Out  -- EasingDirection
+   	TWEEN_TIME, -- Time
+   	Enum.EasingStyle.Quad, -- EasingStyle
+   	Enum.EasingDirection.Out -- EasingDirection
    )
 
    local function buttonPress()
@@ -94,11 +94,11 @@ For this project, a tween will move an object from a starting position to a goal
   </figure>
 </GridContainer>
 
-## Adjusting the Move Tween
+## Adjust the move tween
 
 With the script added, you can customize it to suit the needs of your game. The button can be tweened to move in directions like forward and back, or up and down.
 
-### Changing Position
+### Change position
 
 Remember, tweens transition from a starting value to a goal value. This script uses [CFrames](../../workspace/cframes.md) to move the button in a direction relative to its current position. That direction is controlled in **Line 28** of the script.
 
@@ -120,7 +120,7 @@ local offsetCFrame = CFrame.new( TWEEN_MOVE_DISTANCE * buttonState, 0, 0)
 local newCFrame = button.CFrame:ToWorldSpace(offsetCFrame)
 ```
 
-### Tweening Time and Distance
+### Tween time and distance
 
 The script includes the following variables that affect the tween's movement. Capitalized names like `TWEEN_TIME` are written specifically for this script to be modified.
 
@@ -129,13 +129,13 @@ Try changing the value of one variable below:
 - Line 11 - `TWEEN_TIME`: The time in seconds it takes for a tween to happen.
 - Line 12 - `TWEEN_MOVE_DISTANCE`: The distance the button moves in studs.
 
-## Tweening Other Properties
+## Tween other properties
 
 Most properties with a numerical data type can be tweened. This section includes some common properties, like rotation, that can be used to bring more player feedback into your game. Keep in mind, you can also tween multiple properties at once.
 
 For a full list of properties, see the `Class.TweenService` API page.
 
-### Rotating
+### Rotate
 
 For rotation, combine tweening and CFrames instead of just using Vector3. Rotation tweens can be used to make creatures wiggle when pet, or coins twirl as they're picked up.
 
@@ -159,10 +159,10 @@ local TWEEN_MOVE_DISTANCE = 3
 
 -- Tween variables
 local tweenInfo = TweenInfo.new(
-	TWEEN_TIME,  -- Time
-	Enum.EasingStyle.Quad,  -- EasingStyle
-	Enum.EasingDirection.Out,  -- EasingDirection
-	1,  -- RepeatCount (when less than zero the tween will loop indefinitely)
+	TWEEN_TIME, -- Time
+	Enum.EasingStyle.Quad, -- EasingStyle
+	Enum.EasingDirection.Out, -- EasingDirection
+	1, -- RepeatCount (when less than zero the tween will loop indefinitely)
 	true  -- Reverses (tween will reverse once reaching its goal)
 )
 
@@ -192,7 +192,7 @@ end
 clickDetector.MouseClick:Connect(activateAction)
 ```
 
-### Scaling
+### Scale
 
 Changing the size of in-game objects can also show that a player interacted with them. For instance, pickups like health packs or gemstones can shrink when touched. To scale parts, change the tween goal to a new Vector3 of the desired size.
 
@@ -210,8 +210,8 @@ local TWEEN_SCALE = Vector3.zero
 
 -- Tween variables
 local tweenInfo = TweenInfo.new(
-	TWEEN_TIME,  -- Time
-	Enum.EasingStyle.Exponential,  -- EasingStyle
+	TWEEN_TIME, -- Time
+	Enum.EasingStyle.Exponential, -- EasingStyle
 	Enum.EasingDirection.Out  -- EasingDirection
 )
 
@@ -243,7 +243,7 @@ end
 partToScale.Touched:Connect(onPartTouch)
 ```
 
-### Color Changing
+### Color change
 
 Parts can transition colors by tweening with Color3 values. For instance, enemies or destructible objects can flash colors to give feedback that they've been hit or clicked.
 
@@ -263,10 +263,10 @@ local hitCount = 0
 
 -- Tween variables
 local tweenInfo = TweenInfo.new(
-	TWEEN_TIME,  -- Time
-	Enum.EasingStyle.Exponential,  -- EasingStyle
-	Enum.EasingDirection.InOut,  -- EasingDirection
-	0,  -- RepeatCount (when less than zero the tween will loop indefinitely)
+	TWEEN_TIME, -- Time
+	Enum.EasingStyle.Exponential, -- EasingStyle
+	Enum.EasingDirection.InOut, -- EasingDirection
+	0, -- RepeatCount (when less than zero the tween will loop indefinitely)
 	true  -- Reverses (tween will reverse once reaching its goal)
 )
 
@@ -304,7 +304,7 @@ If you are working with a fully textured MeshPart, we advise the following:
 
 2. Change the script to modify the VertexColor of the SpecialMesh instead of the Color property.
 
-## Project Sample
+## Project sample
 
 View all the script examples in this non-copylocked place. Get all the scripts to modify as well.
 

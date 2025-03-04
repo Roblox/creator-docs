@@ -1,0 +1,98 @@
+name: GenerationService
+type: class
+category:
+memory_category: Instances
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotCreatable
+  - Service
+deprecation_message: ''
+properties: []
+methods:
+  - name: GenerationService:GenerateMeshAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: inputs
+        type: Dictionary
+        default:
+        summary: ''
+      - name: player
+        type: Player
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary
+        default:
+        summary: ''
+      - name: intermediateResultCallback
+        type: Function?
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: GenerationService:InternalGenerateMeshAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: inputs
+        type: Dictionary
+        default:
+        summary: ''
+      - name: userId
+        type: int64
+        default:
+        summary: ''
+      - name: options
+        type: Dictionary
+        default:
+        summary: ''
+      - name: intermediateResultCallback
+        type: Function?
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: GenerationService:LoadGeneratedMeshAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: generationId
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: MeshPart
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+events: []
+callbacks: []

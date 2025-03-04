@@ -57,6 +57,24 @@ properties:
     capabilities:
       - Audio
     writeCapabilities: []
+  - name: AudioPitchShifter.WindowSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AudioWindowSize
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
 methods:
   - name: AudioPitchShifter:GetConnectedWires
     summary: |
@@ -73,6 +91,34 @@ methods:
         summary: ''
     returns:
       - type: Instances
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioPitchShifter:GetInputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioPitchShifter:GetOutputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
         summary: ''
     tags: []
     deprecation_message: ''
@@ -100,12 +146,14 @@ events:
         type: string
         default:
         summary: |
-          The pin on the `Class.AudioPitchShifter` that the `Class.Wire` targets.
+          The pin on the `Class.AudioPitchShifter` that the `Class.Wire`
+          targets.
       - name: wire
         type: Wire
         default:
         summary: |
-          The `Class.Wire` between the `Class.AudioPitchShifter` and the other instance.
+          The `Class.Wire` between the `Class.AudioPitchShifter` and the other
+          instance.
       - name: instance
         type: Instance
         default:

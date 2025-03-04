@@ -1,5 +1,5 @@
 ---
-title: Collecting Items
+title: Collect items
 description: Part of the Adventure Game Series in Roblox. Code a tool to collect items.
 next: /education/adventure-game-series/selling-items
 prev: /education/adventure-game-series/code-the-leaderboard
@@ -9,7 +9,7 @@ With the leaderboard created, players need something to collect. For that, you n
 
 <video controls src="../../assets/education/adventure-game-series/adventure-harvestItemShort.mp4" width="100%"></video>
 
-## Build an Item
+## Build an item
 
 Items in the experience are 3D models that players use a tool to harvest. Each item, once harvested, disappears and then reappears after a limited amount of time.
 
@@ -35,13 +35,13 @@ For the item, refer back to your game design document. This series uses crystals
 
    <img src="../../assets/education/adventure-game-series/adventure-show-boolTrue.png" />
 
-## Creating a Tool
+## Create a tool
 
 Players need something like an ax or a shovel to gather items with. In Roblox, items that players can equip and use are called **tools**. This lesson uses a starter tool with all the parts and an animation already made that you can customize later.
 
 <img src="../../assets/education/adventure-game-series/adventure-toolWithPlayer.jpg" />
 
-### Adding the Tool
+### Add the tool
 
 For players to use the starter tool, download and place it in the StarterPack.
 
@@ -64,11 +64,11 @@ For players to use the starter tool, download and place it in the StarterPack.
     If you want to rename the starter tool, just rename the object in StarterPack. That name displays to players.
     </Alert>
 
-## Coding the Tool
+## Code the tool
 
 If the tool hits a harvestable object and the player has enough space in their bag, the player's item count goes up by 1 on the leaderboard. Harvesting an item makes it disappear for a few seconds and become unharvestable for a few seconds before reappearing. This encourages players to explore to find more items, instead of just clicking the same item.
 
-### Setting up the Script
+### Set up the script
 
 At this point, add a script to the tool. This script handles what happens when the tool touches a harvestable object.
 
@@ -84,7 +84,7 @@ At this point, add a script to the tool. This script handles what happens when t
    local toolPart = tool.Handle
    ```
 
-### Checking for Items
+### Check for items
 
 Whenever the tool touches an object, it checks if that object has CanHarvest inside and if the boolean is set to True.
 
@@ -140,11 +140,11 @@ Whenever the tool touches an object, it checks if that object has CanHarvest ins
    toolPart.Touched:Connect(onTouch)
    ```
 
-6. Play the project and use the tool on a harvestable item (left-click to swing). Make sure you see the message "Found an item" in the Output Window.
+6. Play the project and use the tool on a harvestable item (left-click to swing). Make sure you see the message "Found an item" in the Output window.
 
    <img src="../../assets/education/adventure-game-series/adventure-testedTool.jpg" />
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 If you don't see the message, try the following tips.
 
@@ -152,7 +152,7 @@ If you don't see the message, try the following tips.
 - Make sure that the tool is in the StarterPack, not in the Workspace.
 - Check that the part is anchored.
 
-### Getting Player Stats
+### Get player stats
 
 Before increasing the player's items, the tool must find the location of how many items a player has in that player's leaderboard. Once the tool has access to the leaderboard, it can change that player's item count.
 
@@ -189,7 +189,7 @@ Before increasing the player's items, the tool must find the location of how man
    The strings inside the `()` for `FindFirstChild()` need to be the **same** as the IntValue names in the PlayerSetup script. If you had a different name for the items, make sure it's the same as in the PlayerSetup script.
    </Alert>
 
-### Checking for a Harvestable Object
+### Check for a harvestable object
 
 Now that the tool script has the playerItems and playerSpaces variables created, you can start giving players an item. Use the function created to check if the object touching the tool can be harvested, and if the player has enough space in their bag to increase the items shown on the leaderboard by one.
 
@@ -232,7 +232,7 @@ Now that the tool script has the playerItems and playerSpaces variables created,
     Right now, the player's Items stat will **instantly** fill up after hitting one item. In the next section, you'll make the item reset so players only get one item from each item.
     </Alert>
 
-### Resetting the Item
+### Reset the item
 
 When the item is harvested, it will reset in two ways:
 
@@ -292,7 +292,7 @@ The item will then go back to normal after a short time. This way, players only 
 
    <video controls src="../../assets/education/adventure-game-series/adventure-harvestItemFull.mp4" width="100%"></video>
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 At this point, if one of the checks didn't pass try one of the following below.
 

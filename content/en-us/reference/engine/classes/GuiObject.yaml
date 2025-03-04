@@ -36,11 +36,9 @@ properties:
     summary: |
       Determines whether this UI element sinks input.
     description: |
-      This property determines whether this `Class.GuiObject` will sink input to
+      This property determines whether the `Class.GuiObject` will sink input to
       3D space, such as underlying models with a `Class.ClickDetector` class
-      such as `Class.DragDetector`. In other words, if the player attempts to
-      click the detector with the mouse hovering over an active UI element, the
-      UI will block the input from reaching the detector.
+      like `Class.DragDetector`.
 
       For `Class.GuiButton` objects (`Class.ImageButton` and
       `Class.TextButton`), this property determines whether
@@ -76,8 +74,8 @@ properties:
       is positioned (through `Class.GuiObject.Position`) and from which the
       rendered `Class.GuiObject.Size` expands.
 
-      See [here](../../../ui/positioning-and-sizing.md#anchorpoint) for
-      illustrated diagrams and details.
+      See [here](../../../ui/position-and-size.md#anchorpoint) for illustrated
+      diagrams and details.
     code_samples:
       - AnchorPoint-Demo
     type: Vector2
@@ -1419,11 +1417,14 @@ events:
       of the user's mouse relative to a GUI element:
 
       ```lua
+      local Players = game:GetService("Players")
+
       local CustomScrollingFrame = script.Parent
       local SubFrame = CustomScrollingFrame:FindFirstChild("SubFrame")
 
-      local mouse = game.Players.LocalPlayer:GetMouse()
-      function getPosition(X, Y)
+      local mouse = Players.LocalPlayer:GetMouse()
+
+      local function getPosition(X, Y)
       	local gui_X = CustomScrollingFrame.AbsolutePosition.X
       	local gui_Y = CustomScrollingFrame.AbsolutePosition.Y
 

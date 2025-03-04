@@ -138,7 +138,7 @@ A Blocky character model with an animatable head and a full body cage.
 <center> <img src="../assets/art/resources/Lola-Resource.png" width="100%" /> </center>
 </figure>
 <figure>
-A skinned R15 character created from the <a href="../art/modeling/skinning-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../art/characters/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
+A skinned R15 character created from the <a href="../art/modeling/skin-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../art/characters/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.
 </figure>
 <br />
 
@@ -192,9 +192,30 @@ Caged 3D accessory models and associated PBR textures. Ready for import into Stu
 
 </Grid>
 
+<Grid item XSmall={12} Medium={6} Large={4} style={{padding: 6}}>
+<Card style={{height: '100%'}}>
+<CardContent style={{marginBottom:'66px'}}>
+
+<center>Caging Examples</center>
+<figure>
+<center> <img src="../assets/art/Additional-Caging-Examples.png" width="100%" /> </center>
+</figure>
+<figure>
+Additional caged clothing items from How to cage Roblox's 3D [clothing video guide](https://www.youtube.com/watch?v=QwZaA9Gc-WQ).
+</figure>
+</CardContent>
+
+<CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
+<Button href="../assets/accessories/reference-files/Caging-examples.zip" fullWidth size='large' color='primary' variant='contained' style={{marginBottom:"4px;"}}>Download</Button>
+</CardActions>
+
+</Card>
+
 </Grid>
 
-## Auto-Setup References
+</Grid>
+
+## Auto-setup references
 
 The following assets are designed for the specific [auto-setup requirements](../art/modeling/avatar-setup.md#model-requirements). If uploaded as-is, these assets will fail normal validation.
 
@@ -244,7 +265,7 @@ This Auto-Setup template is not compatible with the traditional avatar creation 
 
 </Grid>
 
-## Project Files
+## Project files
 
 The following are base rig, attachment, and cage files for avatar item creation in third-party applications. Choose the appropriate type of project file for your use-case. These assets are not suitable for direct import into Studio.
 
@@ -328,7 +349,7 @@ Template file containing all content from previous templates, includes rig skele
 
 </Grid>
 
-## Mannequin Models
+## Mannequin models
 
 Use the following models when designing your avatar accessory and clothing items. You can use these assets as scale, body shape, and caging reference.
 
@@ -401,12 +422,12 @@ A blank mannequin using Roblox's [Rthro Slender](../art/characters/specification
 
 ## Templates
 
-Use these templates if following along the [Creating Characters with Templates](../art/characters/creating/index.md) tutorial content.
+Use these templates if following along the [Create characters with templates](../art/characters/creating/index.md) tutorial content.
 
 These assets require additional steps in third-party tools to pass validation in Studio.
 
 <Alert severity = 'warning'>
-If you are using Roblox's avatar template files, you must perform the [cleanup steps](../art/characters/creating/combining-head-geometry.md) in order for the assets to properly validate before publishing to the Marketplace.
+If you are using Roblox's avatar template files, you must perform the [cleanup steps](../art/characters/creating/combine-head-geometry.md) in order for the assets to properly validate before publishing to the Marketplace.
 </Alert>
 
 <Grid container style={{margin: -6}}>
@@ -414,11 +435,12 @@ If you are using Roblox's avatar template files, you must perform the [cleanup s
 <Card style={{height: '100%'}}>
 
 <CardContent style={{marginBottom:'66px'}}>
+
 <figure>
 <img src="../assets/art/avatar/templates/Round-Head-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 </figure>
 
 </CardContent>
@@ -434,11 +456,12 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 <Card style={{height: '100%'}}>
 
 <CardContent style={{marginBottom:'66px'}}>
+
 <figure>
 <img src="../assets/art/avatar/templates/Square-Head-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 </figure>
 </CardContent>
 <CardActions style={{position: 'absolute', bottom: 0, width: '100%'}}>
@@ -454,11 +477,12 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 <Card style={{height: '100%'}}>
 
 <CardContent style={{marginBottom:'66px'}}>
+
 <figure>
 <img src="../assets/art/avatar/templates/Muzzle-Head-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 </figure>
 
 </CardContent>
@@ -479,7 +503,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 <img src="../assets/art/avatar/templates/SemiRealistic-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 </figure>
 
 </CardContent>
@@ -500,7 +524,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 <img src="../assets/art/avatar/templates/Anime-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 </figure>
 
 </CardContent>
@@ -521,7 +545,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 <img src="../assets/art/avatar/templates/Caricature-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 </figure>
 
 </CardContent>
@@ -540,7 +564,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 <img src="../assets/art/avatar/templates/Stylized-Templates.png" width = "100%"/>
 </figure>
 <figure>
-Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Creating with Templates](../art/characters/creating/index.md) for instructions.
+Blender and .fbx template files with pre-baked avatar components. <br /> <br /> See [Create with templates](../art/characters/creating/index.md) for instructions.
 
 </figure>
 
@@ -553,7 +577,7 @@ Blender and .fbx template files with pre-baked avatar components. <br /> <br /> 
 
 </Grid>
 
-## Add-Ons and Tools
+## Add-ons and tools
 
 Use the following add-ons and tools to help aid your creation process. Some of these tools are not actively supported and may be incompatible with your hardware version.
 

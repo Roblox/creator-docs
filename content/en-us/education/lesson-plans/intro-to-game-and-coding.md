@@ -1,18 +1,18 @@
 ---
-title: Intro to Coding and Game Design
+title: Intro to coding and game design
 description: Learn how to build an obstacle course and code color changing blocks.
 ---
 
 <img src="../../assets/education/lesson-plans/introToGames-hero.jpg" width="100%" />
 
-**Lesson Description**: Get students creating and coding their first experience in Roblox. Learn how to build an obstacle course and code color changing blocks.
+**Lesson description**: Get students creating and coding their first experience in Roblox. Learn how to build an obstacle course and code color changing blocks.
 
-**ISTE Standards**: Innovative Designer 4a, 4c, 4d, Creative Communicator 6b, 6d
+**ISTE standards**: Innovative Designer 4a, 4c, 4d, Creative Communicator 6b, 6d
 
 <table>
 <tbody>
    <tr>
-    <td><b>Lesson Objectives</b></td>
+    <td><b>Lesson objectives</b></td>
     <td>
       <ul>
         <li>Manipulate 3D parts to create an obstacle course.</li>
@@ -22,7 +22,7 @@ description: Learn how to build an obstacle course and code color changing block
       </td>
    </tr>
    <tr>
-    <td><b>Skills and Concepts</b></td>
+    <td><b>Skills and concepts</b></td>
     <td>
     <ul>
     <li><b>Variable</b> - A placeholder for information in code.</li>
@@ -106,7 +106,7 @@ description: Learn how to build an obstacle course and code color changing block
 
 2. Make sure all students are actively logged into Roblox Studio. Note that if this is their first time, it's recommended to allot 5 minutes for this process in case any student has an issue logging in.
 
-### Guided Tutorial - Intro to Studio
+### Guided tutorial - Intro to Studio
 
 1. Lead students through the following tutorial: <a href="../../tutorials/first-experience/index.md" target="_blank" rel="noopener">Introduction to Roblox Studio</a>.
 
@@ -114,7 +114,7 @@ description: Learn how to build an obstacle course and code color changing block
    - Remind students to rotate their camera view to get an accurate view of their project.
    - Encourage students to use the Explorer, a foundational skill in Roblox Studio.
 
-### Guided Tutorial - Intro to Coding
+### Guided tutorial - Intro to coding
 
 1. Inform students that they'll now start coding to add to their experience.
 
@@ -122,11 +122,11 @@ description: Learn how to build an obstacle course and code color changing block
 
 2. Lead students through the following tutorials:
 
-   - [Creating a Script](../../tutorials/fundamentals/coding-1/creating-a-script.md)
-   - [Object Properties](../../tutorials/fundamentals/coding-1/object-properties.md)
-   - [Parents and Children](../../tutorials/fundamentals/coding-1/parents-and-children.md)
+   - [Create a script](../../tutorials/fundamentals/coding-1/create-a-script.md)
+   - [Object properties](../../tutorials/fundamentals/coding-1/object-properties.md)
+   - [Parents and children](../../tutorials/fundamentals/coding-1/parents-and-children.md)
 
-### Independent Work - Finish Student Projects
+### Independent work - Finish student projects
 
 1. As students go into independent work, point out they have the following goals to achieve for their obstacle course.
 
@@ -137,16 +137,16 @@ description: Learn how to build an obstacle course and code color changing block
 2. Have students catch up with their coding projects. If finished, give them time to work on adding more to or improving their obstacle course.
 3. If there's time, two students can play-test each other's experiences and offer feedback.
 
-### Wrap Up
+### Wrap up
 
 1. Recap what students have created and vocabulary: **variable**, **string**, **loop**.
 2. Ask two or three students what they would add to their experience to improve it. For example, a more visually interesting endpoint or more challenging jumps
 
 ## Appendix
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
-**General Troubleshooting Tips**
+**General troubleshooting tips**
 
 - Introduce students to "Ask 3 Before Me": a student needs to ask three peers before asking the instructor for help.
 - Keep in mind students have different prior experience with computers. Emphasize exact steps when teaching, such as when to double-click or right-click.
@@ -157,12 +157,12 @@ description: Learn how to build an obstacle course and code color changing block
 - Emphasize that students are creating an experience that others can play, not just for themselves.
 - If you're running low on time, the lesson Colors and Materials can be optional.
 
-**Intro to Coding**
+**Intro to coding**
 
 - The most common errors for students at this age are improper capitalization and typos.
 - Ask students leading questions rather than solving the issue for them as much as possible. This allows students to build valuable troubleshooting skills. For example: _What symbols need to be around a string? - A quotation marks_.
 
-### Customizing the Lesson
+### Customize the lesson
 
 **Expand the Lesson**
 
@@ -171,11 +171,11 @@ Have students switch places and play-test each other's experience.
 - Start by having students offer feedback in the form of 2 Stars (What they liked) and a Wish (What they would want to see).
 - After receiving feedback, each student should implement a change based on feedback they received.
 
-### Extra Resources
+### Extra resources
 
 If you're using this lesson as part of a workshop, we've included a description for public use.
 
-**Example Course Description:**
+**Example course description:**
 With over 60 millions users a month, Roblox is the world's largest social technology platform. But did you know that all Roblox experiences created by the users? Learn to create and code your own games using the free tools made available by Roblox. This is a perfect course for first time, aspiring game developers.
 
 In this course, your student will:

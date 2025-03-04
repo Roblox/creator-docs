@@ -1,5 +1,5 @@
 ---
-title: Greybox a Playable Area
+title: Greybox a playable area
 description: Explains how to use Studio's solid modeling tools to plan out the basic structure of your platforms.
 next: /tutorials/curriculums/core/scripting/script-game-behavior
 prev: /tutorials/curriculums/core/building/create-an-environment-with-terrain
@@ -19,7 +19,7 @@ Using basic parts and solid modeling operations, this section of the tutorial te
 the sea stack platforms that make up the playable area of the experience. Once you complete the environment,
 you will learn how to create the gameplay for the experience using Luau scripts.
 
-## Plan the Playable Area
+## Plan the playable area
 
 In the final version of the experience, players need to collect coins on the island
 and sea stack platforms in order to upgrade their jumping power and reach higher platforms. You will configure
@@ -50,15 +50,13 @@ at least 30 studs higher from the previous level.
 
 </Alert>
 
-## Add the Platforms
+## Add the platforms
 
 Now that you have a plan for the difference in height between platforms, it's time to add in placeholder `Class.Part`
 objects to represent the sea stack platforms. **Parts** are Roblox's basic building blocks with properties you can modify
 to customize their physical appearance, such as their shape, size, and color.
 
-While you can use almost any part shape to represent your sea stack platforms, it's recommended to greybox your environment
-with **cylinder** parts because they offer a flat surface for you to land on when you playtest jumping from platform to platform,
-and because they are similar in shape to the sea stack meshes you will use in the final section of the tutorial.
+While you can use almost any part shape to represent your sea stack platforms, it's recommended to greybox your environment with **cylinder** parts because they offer a flat surface for you to land on when you playtest jumping from platform to platform, and because they are similar in shape to the sea stack meshes you will use in the final section of the tutorial.
 
 <div><b>A comparison between the sample Island Jump experience's greybox and final geometry</b></div>
 <GridContainer numColumns="2">
@@ -70,9 +68,9 @@ and because they are similar in shape to the sea stack meshes you will use in th
   </figure>
 </GridContainer>
 
-### Create an Organization Structure
+### Create an organization structure
 
-Before you insert placeholder parts into the 3D space, it's important to create an organization structure for your assets in the Workspace. This process ensures that your Workspace remains organized and easy to scan, especially as you venture into creating experiences with a significant amount of assets that you need to manage.
+Before you insert placeholder parts into the 3D space, it's important to create an organization structure for your assets in `Class.Workspace`. This process ensures that your workspace remains organized and easy to scan, especially as you venture into creating experiences with a significant amount of assets that you need to manage.
 
 There are two types of containers you can use to group assets together: `Class.Folder` and `Class.Model` objects. **Folders** are useful for storing many objects of different types, and **models** are useful for storing geometric groupings of parts. The following instructions teach you how to use both container objects to store all assets for your 3D world.
 
@@ -102,7 +100,7 @@ To create an organization structure:
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/Explorer-Model-Renamed.png" alt="Studio's Explorer window with the new Blockout_Parts model highlighted under the World folder." width="320" />
 
-### Insert Parts
+### Insert parts
 
 <Alert severity="info">
     The following instructions provide two different instructional paths: you can either insert parts into your own unique environment, or you can insert parts in a way that exactly recreates the greybox environment within the sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building).
@@ -111,7 +109,7 @@ To create an organization structure:
 Now that you have an organizational structure to contain your assets, you can now begin inserting parts into the 3D space to represent your sea stack platforms.
 
 <Tabs>
-  <TabItem key = "1" label="Create Your Own">
+  <TabItem key = "1" label="Create your own">
 
 To insert a cylinder part for your first platform:
 
@@ -124,7 +122,7 @@ To insert a cylinder part for your first platform:
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/New-Part-As-Child-Of-Model.png" alt="Studio's Explorer window with the new Part highlighted under the Blockout_Parts model object." width="320" />
 
-1. Navigate back to the **Home** tab, then use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate your cylinder until it's a large, flat surface in the middle of your island. For more information on these tools, see [Manipulating Parts](../../../../parts/index.md#manipulating-parts).
+1. Navigate back to the **Home** tab, then use the **Move**, **Scale**, and **Rotate** tools to position, scale, and rotate your cylinder until it's a large, flat surface in the middle of your island. For more information on these tools, see [Manipulating parts](../../../../parts/index.md#manipulate-parts).
 
    <img src="../../../../assets/studio/general/Home-Tab-Move.png" alt="Studio's Home tab with the Move tool highlighted." width="716" />
 
@@ -144,7 +142,7 @@ To insert a cylinder part for your first platform:
    <img src="../../../../assets/studio/general/Home-Tab-Anchor.png" alt="Studio's Home tab with the Anchor tool highlighted." width="800" />
 
   </TabItem>
-  <TabItem key = "2" label="Recreate the Sample">
+  <TabItem key = "2" label="Recreate the sample">
 
 To exactly recreate the sea stack platforms within the sample [Island Jump - Building](https://www.roblox.com/games/14239096301/Island-Jump-Building) experience:
 
@@ -160,9 +158,9 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Bui
 1. In the **Properties** window,
 
    1. Set **Name** to **Level_1** for organization purposes.
-   1. Set **Size** to **12, 131, 131** to create a large platform.
-   1. Set **CFrame.Position** to **-23, -4, 9** so the top of the platform is only a short jump from the surface of the island.
-   1. Set **CFrame.Orientation** to **0, 0, 90** so the flat surface of the cylinder faces toward the sky.
+   1. Set **Size** to `12, 131, 131` to create a large platform.
+   1. Set **CFrame.Position** to `-23, -4, 9` so the top of the platform is only a short jump from the surface of the island.
+   1. Set **CFrame.Orientation** to `0, 0, 90` so the flat surface of the cylinder faces toward the sky.
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/First-Platform.jpg" alt="A large cylinder object partially sticking out of an island surrounded by water." width="80%" />
 
@@ -293,7 +291,7 @@ To exactly recreate the sea stack platforms within the sample [Island Jump - Bui
   </TabItem>
 </Tabs>
 
-### Align Parts
+### Align parts
 
 <Alert severity="info">
    If you used the sample **Island Jump - Building** experience values when inserting your sea stack platforms, you can skip this step.
@@ -306,9 +304,9 @@ The [Align Tool](../../../../studio/align-tool.md) aligns parts on either the mi
 To align parts:
 
 1. In the **Explorer** window, select all of your platforms.
-1. In the menu bar, navigate to the **Model** tab, then click the [Align Tool](../../../../studio/align-tool.md). The **Align Tool** window displays.
+1. In the menu bar, navigate to the **Model** tab, then click the **Align Tool**. The **Align Tool** window displays.
 
-   <img src="../../../../assets/studio/general/Model-Tab-Align-Tool.png" width="660" alt="Studio's Model tab with the Align tool highlighted." />
+   <img src="../../../../assets/studio/general/Model-Tab-Align-Tool.png" width="660" alt="Studio's Model tab with the Align Tool highlighted." />
 
 1. In the **Align Tool** window,
 
@@ -322,7 +320,7 @@ To align parts:
      <figcaption>All platforms align their bottom edge</figcaption>
    </figure>
 
-### Create a Hollow Tunnel
+### Create a hollow tunnel
 
 Aside from using parts as-is to block out your playable areas, you can also apply solid modeling operations to join parts in unique ways to form more complex shapes, such as a hollow tunnel within one of the sea stacks. This technique provides more visual interest and variation in how players interact with your environments.
 
@@ -333,7 +331,7 @@ There are four solid modeling tools:
 - **Negate** – Negates parts, which is useful for making holes and indentations.
 - **Separate** – Separates the union or intersection back into its individual parts.
 
-For the purposes of creating a hollow tunnel, you only need to use the **Union** and **Negate** tools. For a full breakdown of all of the tools, see [Solid Modeling](../../../../parts/solid-modeling.md).
+For the purposes of creating a hollow tunnel, you only need to use the **Union** and **Negate** tools. For a full breakdown of all of the tools, see [Solid modeling](../../../../parts/solid-modeling.md).
 
 <img src="../../../../assets/studio/general/Model-Tab-Solid-Modeling.png" alt="Studio's Model tab with the solid modeling tools highlighted." width="732" />
 
@@ -417,7 +415,7 @@ To create a hollow tunnel:
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/HollowTunnel-Final.jpg" alt="A close-up view of a tunnel through a cylinder." width="740" />
 
-## Playtest
+## Playtest the layout
 
 After you finish greyboxing your playable areas, you must playtest the layout of your environment to ensure the experience is both fun and functional, and so that you can catch small issues before they turn into much larger projects the further you are in the development process. For example, your experience's gameplay needs players to steadily upgrade their jumping power according to the amount of coins they collect, so it's important to verify that players are able to jump between platforms in relation to the `Class.Humanoid.JumpPower` you expect players to have at varying platform height levels.
 
@@ -438,8 +436,8 @@ To playtest your experience:
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/Explorer-Character-Humanoid.png" alt="Studio's Explorer window with the Humanoid object highlighted. The hierarchy of the Workspace to CharacterModel to Humanoid is also highlighted." width="320" />
 
-1. In the **Properties** window, navigate to the **Jump Settings** section, then enable **UseJumpPower**. The **JumpPower** property displays with a default value of **50**.
-1. Set **JumpPower** to **0**. This ensures your character is unable to jump, emulating the same starting state for players after you script the gameplay.
+1. In the **Properties** window, navigate to the **Jump Settings** section, then enable **UseJumpPower**. The **JumpPower** property displays with a default value of `50`.
+1. Set **JumpPower** to `0`. This ensures your character is unable to jump, emulating the same starting state for players after you script the gameplay.
 
    <img src="../../../../assets/tutorials/block-out-a-playable-area/Humanoid-Jump-Settings.png" alt="Jump Settings with the JumpPower and UseJumpPower properties highlighted." width="320" />
 
@@ -447,7 +445,7 @@ To playtest your experience:
    If you can't see the **Properties** window, open the **View** tab and ensure **Properties** is selected in the **Show** section.
    </Alert>
 
-1. As you reach new levels, set **JumpPower** to multiples of **30** to simulate jumping upgrades.
+1. As you reach new levels, set **JumpPower** to multiples of `30` to simulate jumping upgrades.
    <video controls loop muted>
    <source src="../../../../assets/tutorials/block-out-a-playable-area/playable-area-walk.mp4" />
    </video>

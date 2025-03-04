@@ -3,7 +3,7 @@ title: Moods
 description: Moods are a type of facial animation that loop indefinitely, allowing users to express persistent facial emotion.
 ---
 
-A **mood** is a type of [facial animation](../../../art/characters/facial-animation/index.md) for animatable heads that loops indefinitely, allowing users to express themselves and react to others with a persistent facial emotion. Moods play simultaneously with other character [default animations](../../../animation/using.md#replacing-default-animations), such as walking, climbing, and swimming, and if the default animation has a facial animation, the default animation blends with the character's mood.
+A **mood** is a type of [facial animation](../../../art/characters/facial-animation/index.md) for animatable heads that loops indefinitely, allowing users to express themselves and react to others with a persistent facial emotion. Moods play simultaneously with other character [default animations](../../../animation/using.md#default-character-animations), such as walking, climbing, and swimming, and if the default animation has a facial animation, the default animation blends with the character's mood.
 
 <GridContainer numColumns="2">
   <figure>
@@ -20,9 +20,9 @@ A **mood** is a type of [facial animation](../../../art/characters/facial-animat
    A mood is a type of facial animation, but not all facial animations are moods. While a mood refers to a specific animation slot that belongs to each character, a facial animation refers to **any** animation that modifies the face channels.
 </Alert>
 
-## Creating Moods
+## Create moods
 
-If you have a character model with an animatable head, you can create any mood animation you can think of using the [Face Animation Editor](../../../art/characters/facial-animation/animating-heads.md#using-the-face-animation-editor). If you don't want to use the [Blocky](../../../assets/avatar/dynamic-heads/reference-files/BlockyCharacter.fbx) or [Goblin](../../../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.zip) reference character models, you can create or modify an existing model to support animated heads in a third-party modeling software, such as Blender or Maya. For information on how to create an animatable head, see [Creating Basic Heads](../../../art/characters/facial-animation/creating-basic-heads.md).
+If you have a character model with an animatable head, you can create any mood animation you can think of using the [Face Animation Editor](../../../art/characters/facial-animation/animate-heads.md#use-the-face-animation-editor). If you don't want to use the [Blocky](../../../assets/avatar/dynamic-heads/reference-files/BlockyCharacter.fbx) or [Goblin](../../../assets/avatar/dynamic-heads/reference-files/GoblinCharacter.zip) reference character models, you can create or modify an existing model to support animated heads in a third-party modeling software, such as Blender or Maya. For information on how to create an animatable head, see [Create basic heads](../../../art/characters/facial-animation/create-basic-heads.md).
 
 To create a mood:
 
@@ -69,7 +69,7 @@ To create a mood:
 
       <img width="80%" img src="../../../assets/avatar/dynamic-heads/moods/Animation-ID.png" />
 
-## Setting Moods
+## Set moods
 
 Every character with an animatable head has a child **Animate** `Class.LocalScript` with a child **mood** `Class.StringValue` that contains the mood animation that plays on the character's head. The mood animation's default `Class.Animation.AnimationID` plays a smiling animation, but you can change the character's mood to something else by either directly editing the `Class.Animation.AnimationID` within the mood `Class.StringValue`, or using the `Class.HumanoidDescription` system.
 
@@ -79,7 +79,7 @@ Every character with an animatable head has a child **Animate** `Class.LocalScri
    The code for playing moods doesn't occur in the  **Animate** `Class.LocalScript`, but in a hidden, internal Roblox script. While you can't edit this internal script, the **mood** `Class.StringValue` allows you to interact with it in order to customize moods within your experiences.
 </Alert>
 
-### Editing AnimationIds
+### Edit AnimationIds
 
 You can set a specific mood for each character within your experience by editing their mood's `Class.Animation.AnimationID` whenever a user triggers an event. For example, the following `Class.Script` edits any previously set mood to an animation that [opens the character's mouth](https://www.roblox.com/library/7715145252/moods-11-FaceAnimation) as soon as the user enters the experience:
 
@@ -99,7 +99,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-### Using the HumanoidDescription
+### Use the HumanoidDescription
 
 You can also use the `Class.HumanoidDescription` system to find user characters and edit their `Class.Animation.AnimationID|AnimationIDs` for any default animation. For example, the following `Class.Script` edits any previously set mood to an animation that gives the character a [half-smile](https://www.roblox.com/catalog/10725833199/Chiseled-Good-Looks-Mood) on the left-side of their face whenever their character is idling:
 
@@ -113,7 +113,7 @@ if humanoid then
 end
 ```
 
-## Disabling Moods
+## Disable moods
 
 To disable moods from your experience, you can delete the mood object underneath the **Animate** `Class.LocalScript`. For example, the following `Class.Script` removes every character's **mood** `Class.StringValue` as soon as they join the experience:
 

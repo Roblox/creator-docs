@@ -170,6 +170,34 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AudioEqualizer:GetInputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioEqualizer:GetOutputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: AudioEqualizer.WiringChanged
     summary: |
@@ -195,7 +223,8 @@ events:
         type: Wire
         default:
         summary: |
-          The `Class.Wire` between the `Class.AudioEqualizer` and the other instance.
+          The `Class.Wire` between the `Class.AudioEqualizer` and the other
+          instance.
       - name: instance
         type: Instance
         default:

@@ -1551,7 +1551,9 @@ properties:
       follows:
 
       ```
-      local part = workspace.BluePart
+      local Workspace = game:GetService("Workspace")
+
+      local part = Workspace.BluePart
       local desiredPivotCFrameInWorldSpace = CFrame.new(0, 10, 0)
       part.PivotOffset = part.CFrame:ToObjectSpace(desiredPivotCFrameInWorldSpace)
       ```
@@ -2346,7 +2348,7 @@ methods:
         type: Vector3
         default:
         summary: |
-          A force vector to be applied to the assembly as an impulse.
+          An angular impulse vector to be applied to the assembly.
     returns:
       - type: void
         summary: ''
@@ -2386,7 +2388,7 @@ methods:
         type: Vector3
         default:
         summary: |
-          A force vector to be applied to the assembly as an impulse.
+          A linear impulse vector to be applied to the assembly.
     returns:
       - type: void
         summary: ''
@@ -2427,7 +2429,7 @@ methods:
         type: Vector3
         default:
         summary: |
-          A force vector to be applied to the assembly as an impulse.
+          An impulse vector to be applied to the assembly.
       - name: position
         type: Vector3
         default:

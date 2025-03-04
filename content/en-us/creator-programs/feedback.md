@@ -17,7 +17,7 @@ As part of this program, you are:
 
 - A member of the Community Feedback Group
 - One of the first to receive sign-ups for beta products, focus groups, 1:1 connections, and office hours
-- Promoted to the Regular trust level on the Developer Forums
+- Promoted to the Regular trust level on the Developer Forum
 - Given access to the Community Feedback Program private Developer Forum category
 - Given access to the Community Feedback Program Guilded Server. The Guilded provides direct access to select teams.
 
@@ -32,7 +32,7 @@ Eligibility can include, but is not limited to:
 - Created a community resource that has helped many
 - Designed avatar assets that have grown into a popular Roblox clothing line
 
-## How to Apply
+## How to apply
 
 Fill out the application below. Roblox staff reviews applications every three months and will reach out if you have been selected.
 

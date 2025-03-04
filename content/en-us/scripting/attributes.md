@@ -1,5 +1,5 @@
 ---
-title: Properties and Attributes
+title: Properties and attributes
 description: How to use scripts to manipulate object properties and attributes.
 ---
 
@@ -9,11 +9,11 @@ Making experiences interactive often means manipulating object properties and at
 
 - Attributes are essentially custom properties that you define. For example, the [Plant](../resources/plant-reference-project.md) reference project uses attributes to set the purchase price for seeds and the maximum plant size that a pot can hold.
 
-## Replication Order
+## Replication order
 
 Before you begin retrieving and manipulating objects, you must have an understanding of replication order.
 
-The Roblox engine doesn't guarantee the order in which objects are replicated from the server to the client, which makes the `Class.Instance:WaitForChild()` method essential for accessing objects in client scripts, particularly objects in the `Class.Workspace`. Still, some aspects of the process are predictable:
+The Roblox Engine doesn't guarantee the order in which objects are replicated from the server to the client, which makes the `Class.Instance:WaitForChild()` method essential for accessing objects in client scripts, particularly objects in the `Class.Workspace`. Still, some aspects of the process are predictable:
 
 1. The client loads the contents of `Class.ReplicatedFirst`, such as a loading screen, assets, and scripts.
 1. `Class.LocalScript|LocalScripts` (and `Class.Script|Scripts` with a `Class.Script.RunContext|RunContext` of `Enum.RunContext.Client|Client`) in `ReplicatedFirst` run. These scripts can safely get objects from `ReplicatedFirst` without using `WaitForChild()`:
@@ -32,7 +32,7 @@ The Roblox engine doesn't guarantee the order in which objects are replicated fr
    local PickupManager = require(ReplicatedStorage.PickupManager)
    ```
 
-   You **can** use `WaitForChild()` in these scripts to get objects from other services, but doing so largely negates the benefits of using `ReplicatedFirst`.
+   You **can** use `WaitForChild()` in these scripts to get objects from other services, but doing so negates the benefits of using `ReplicatedFirst`.
 
 1. The client continues loading the rest of the experience.
 
@@ -44,9 +44,9 @@ The Roblox engine doesn't guarantee the order in which objects are replicated fr
 
 1. `LocalScripts` in `StarterCharacterScripts` run.
 
-If your experience uses [instance streaming](../workspace/streaming.md) (`Class.Workspace.StreamingEnabled`), some or most objects might not have loaded into the workspace, so using `WaitForChild()` to access workspace objects becomes an even more important safety measure. In particular, see [Streaming In](../workspace/streaming.md#streaming-in) and [Per-Model Streaming Controls](../workspace/streaming.md#per-model-streaming-controls) for additional information on loading and tuning streaming behavior.
+If your experience uses [instance streaming](../workspace/streaming.md) (`Class.Workspace.StreamingEnabled`), some or most objects might not have loaded into the workspace, so using `WaitForChild()` to access workspace objects becomes an even more important safety measure. In particular, see [Stream in](../workspace/streaming.md#stream-in) and [Per-model streaming controls](../workspace/streaming.md#per-model-streaming-controls) for additional information on loading and tuning streaming behavior.
 
-## Getting Objects
+## Get objects
 
 The first step to modifying object properties and attributes is to get a reference to the object. The simplest solution is to make the script a child of the object in the Explorer and use `script.Parent` to reference the object.
 
@@ -67,7 +67,7 @@ local signsFolder = ReplicatedStorage:WaitForChild("Signs")
 local sign = signsFolder:WaitForChild("InteractiveSign")
 ```
 
-## Modifying Properties
+## Modify properties
 
 Properties are straightforward to access — just use a `.` after the object reference&nbsp;— although if you're working with a model, you might need to choose an individual part rather than the model itself.
 
@@ -80,15 +80,15 @@ local chair = ReplicatedStorage:WaitForChild("Chair")
 chair.LeftArmRest.Size = Vector3.new(10, 1, 10)
 ```
 
-## Creating Attributes
+## Create attributes
 
 Although you can create attributes programmatically, the more common solution is to create them with default values in the Studio user interface. Then you can use scripts to modify their values in response to player actions.
 
 <img alt="A script within a folder in ReplicatedStorage." src="../assets/studio/properties/Attributes-Example-B.png" width="320" />
 
-For information on creating attributes in Studio, see [Instance Attributes](../studio/properties.md#instance-attributes).
+For information on creating attributes in Studio, see [Instance attributes](../studio/properties.md#instance-attributes).
 
-## Setting Attributes
+## Set attributes
 
 To modify an attribute's value, call `Class.Instance:SetAttribute()` with a name and value.
 
@@ -100,7 +100,7 @@ cabbage:SetAttribute("Harvestable", true)
 
 If the attribute doesn't already exist, this method creates it.
 
-## Getting Attribute Values
+## Get attribute values
 
 To get the value of one existing attribute, call `Class.Instance:GetAttribute()` on the instance.
 
@@ -127,7 +127,7 @@ for k, v in cabbageAttributes do
 end
 ```
 
-## Deleting Attributes
+## Delete attributes
 
 To delete an attribute, set its value to nil.
 
@@ -137,15 +137,9 @@ local cabbage = script.Parent
 cabbage:SetAttribute("GrowthRate", nil)
 ```
 
-## Detecting Changes
+## Detect changes
 
 There are several ways to listen for changes to properties and attributes:
-
-- The `Class.Instance.Changed` event listens for changes to any property (including attributes) and passes the name of the changed property as a parameter.
-
-  <Alert severity="info">
-  In the case of attribute changes, `Class.Instance.Changed` fires and passes the string `"Attributes"`, which lets you ignore the event, but isn't especially useful otherwise.
-  </Alert>
 
 - The `Class.Instance.AttributeChanged` event listens for changes to any attribute and passes the name of the changed attribute as a parameter.
 - The `Class.Instance:GetPropertyChangedSignal()` method lets you listen for changes to one property and passes no parameters.

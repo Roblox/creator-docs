@@ -237,24 +237,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: VideoPlayer:SetStudioPreview
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: isPreview
-        type: bool
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: VideoPlayer:Stop
     summary: ''
     description: ''
@@ -270,7 +252,7 @@ methods:
     capabilities: []
     writeCapabilities: []
 events:
-  - name: VideoPlayer.Ended
+  - name: VideoPlayer.DidEnd
     summary: ''
     description: ''
     code_samples: []
@@ -281,7 +263,7 @@ events:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: VideoPlayer.Looped
+  - name: VideoPlayer.DidLoop
     summary: ''
     description: ''
     code_samples: []

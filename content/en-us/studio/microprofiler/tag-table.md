@@ -1,11 +1,15 @@
 ---
-title: Tag Reference
+title: Tag reference
 description: A list of tags for the MicroProfiler.
 ---
 
 The following is a list of common tags in the MicroProfiler, grouped by category. Understanding these tags can help you identify problematic code in your experience. The tables contain tag label, descriptions and performance advice for improving performance and optimizing your experience.
 
-## AI/Navigation
+## Sleep
+
+When threads aren't actively performing tasks, they enter a sleep state, with tags to indicate how long the thread was sleeping. At any given time, it's extremely common for most worker threads to be in a sleep state.
+
+## AI/navigation
 
 <table>
 <thead>
@@ -43,7 +47,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Advice</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>
@@ -77,7 +81,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Advice</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>
@@ -106,7 +110,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Advice</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>
@@ -160,7 +164,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Notes</th>
+    <th>Performance notes</th>
   </tr>
 </thead>
 <tbody>
@@ -227,7 +231,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <td>Perform/Scene/computeLightingPerform/ShadowMapSystem</td>
     <td>Updates shadow maps. Not performed at quality levels below 4 or when `Class.Lighting.Technology` is set to `Enum.Technology|Voxel`.</td>
-    <td>If lighting is set to `Enum.Technology|Future`, lower it to `Enum.Technology|ShadowMap` or reduce the number of lights. You can also use `Class.Light.Shadows` and `Class.BasePart.CastShadows` to disable shadow casting on less important instances. See [Improving Performance](../../performance-optimization/improving.md#mitigation-4).</td>
+    <td>If lighting is set to `Enum.Technology|Future`, lower it to `Enum.Technology|ShadowMap` or reduce the number of lights. You can also use `Class.Light.Shadows` and `Class.BasePart.CastShadows` to disable shadow casting on less important instances. See [Improving Performance](../../performance-optimization/improve.md#mitigation-4).</td>
   </tr>
   <tr>
   </tr>
@@ -281,7 +285,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Advice</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>
@@ -320,7 +324,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Advice</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>
@@ -340,7 +344,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
     <td>Reduce the amount and complexity of physically simulated bodies.</td>
   </tr>
   <tr>
-    <td>Simulation/physicsSteppedTotal/physicsStepped/SpacialFilter/filterStep</td>
+    <td>Simulation/physicsSteppedTotal/physicsStepped/SpatialFilter/filterStep</td>
     <td>Updates simulation islands, arranging parts according to network ownership, local simulation. Islands are non-interacting groups of parts which can be simulated independently.</td>
     <td>Avoid setting network ownership frequently. Keep groups of parts far enough away from each other so they can be simulated separately.</td>
   </tr>
@@ -404,7 +408,7 @@ The following is a list of common tags in the MicroProfiler, grouped by category
   <tr>
     <th>Label</th>
     <th>Description</th>
-    <th>Performance Advice</th>
+    <th>Performance advice</th>
   </tr>
 </thead>
 <tbody>

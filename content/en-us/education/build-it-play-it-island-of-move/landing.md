@@ -1,5 +1,5 @@
 ---
-title: Island of Move
+title: Island of move
 description: Learn how to make animations in Roblox Studio with step by step tutorials in this one hour challenge.
 ---
 
@@ -9,7 +9,7 @@ Using Roblox Studio, we'll show you how to make an experience where you players 
 
 Whether you're new to building in Roblox, or have created before, we have a tutorial for either experience level interested in creating animations.
 
-## What's Your Skill Level?
+## What's your skill level?
 
 <table>
   <tr>

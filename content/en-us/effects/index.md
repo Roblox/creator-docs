@@ -6,7 +6,7 @@ description: Learn how to add visual effects to your experiences.
 You can create special effects by parenting special effect objects to other
 objects or attachments.
 
-## Light Sources
+## Light sources
 
 Light sources let you attach lighting effects to objects or attachments. There
 are three types of light sources:
@@ -24,7 +24,7 @@ are three types of light sources:
 <GridContainer numColumns="3">
   <figure>
     <img src="../assets/lighting-and-effects/light-sources/PointLight-Range-8.jpg" alt="" />
-    <figcaption>Point Lights</figcaption>
+    <figcaption>Point lights</figcaption>
   </figure>
   <figure>
     <img src="../assets/lighting-and-effects/light-sources/SpotLight-Face-Bottom.jpg" alt="" />
@@ -32,11 +32,11 @@ are three types of light sources:
   </figure>
   <figure>
     <img src="../assets/lighting-and-effects/light-sources/SurfaceLight-Angle-0.jpg" alt="" />
-    <figcaption>Surface Lights</figcaption>
+    <figcaption>Surface lights</figcaption>
   </figure>
 </GridContainer>
 
-## Particle Emitters
+## Particle emitters
 
 A [particle emitter](../effects/particle-emitters.md) is an object that emits customizable 2D images (particles) into the world, useful for simulating special effects like fire, smoke, and sparks.
 

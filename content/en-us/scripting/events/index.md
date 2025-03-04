@@ -15,7 +15,7 @@ You don't have to listen for events or take any action in response to them, but 
 Deferred events can help you ensure more performant and consistent event handling. See [Deferred Events](deferred.md) for more information.
 </Alert>
 
-## Connecting Functions to Events
+## Connect functions to events
 
 You connect a function to an event using `Datatype.RBXScriptSignal.Connect()|Connect()` to execute code each time the event fires. Most events pass arguments to their connected functions. For example, the `Class.BasePart.Touched` event passes the object that touched the part (such as a left hand or car wheel), and the `Class.Players.PlayerAdded` event passes the `Class.Player` that joined your experience.
 
@@ -54,15 +54,17 @@ Players.PlayerAdded:Connect(function(player)
 end)
 ```
 
-## Disconnecting Functions from Events
+## Disconnect functions from events
 
 The `Datatype.RBXScriptSignal.Connect()|Connect()` method returns an `Datatype.RBXScriptConnection` object. If you connect a function to an event, but don't want to call the function the next time an event fires (such as after some condition is met), disconnect it by calling `Datatype.RBXScriptConnection:Disconnect()|Disconnect()` on the `Datatype.RBXScriptConnection` object.
 
 The following code sample shows how to connect and disconnect a function from the `Class.BasePart.Touched|Part.Touched` event:
 
 ```lua
-local part = workspace.Part
-local targetPart = workspace.TargetPart
+local Workspace = game:GetService("Workspace")
+
+local part = Workspace.Part
+local targetPart = Workspace.TargetPart
 
 -- Declare an empty placeholder variable for the connection
 local connection
@@ -85,12 +87,14 @@ If you only want to connect a function to an event once—that is, only run the 
 When Luau destroys an event's object, such as the `Class.Player` object when a user leaves the experience, all of its ([non-deferred](deferred.md)) connections disconnect automatically.
 </Alert>
 
-## Waiting for Events to Fire
+## Wait for events to fire
 
 If you want a script to yield until a specific event fires, use the `Datatype.RBXScriptSignal:Wait()|Wait()` method. This method returns the event's arguments, which you can assign to variables for later use:
 
 ```lua
-local part = workspace.Part
+local Workspace = game:GetService("Workspace")
+
+local part = Workspace.Part
 local touchedPart = part.Touched:Wait()
 print("The part was touched by", touchedPart:GetFullName())
 ```

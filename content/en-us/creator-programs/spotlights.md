@@ -19,7 +19,7 @@ Creator Spotlights are in-depth DevForum articles that celebrate the awesome thi
 - Have developed on Roblox for at least 1 year and have contributed to engaging content
 - Meet our [Community Standards](https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards)
 
-## How to Participate
+## How to participate
 
 1. Fill out the nomination form below (nominate yourself or another creator). Nominations are reviewed weekly.
 2. Receive follow up from DevRel team. Due to the high volume of applicants, only those considered for a spotlight will be contacted. If you haven't heard back within a month, we encourage you to reapply in 6-12 months. Be sure to focus your application on your domain expertise and what other creators will learn from you.
@@ -28,7 +28,7 @@ Creator Spotlights are in-depth DevForum articles that celebrate the awesome thi
 
 <Button href="https://survey.roblox.com/jfe/form/SV_71CLpOMprlzQ8JM" size='large' variant='contained' style={{width:200}}>Apply</Button>
 
-## Past Examples
+## Past examples
 
 - [Behind The Games: Midnight Racing: Tokyo, Dress to Impress, and Michael's Zombies](https://devforum.roblox.com/t/behind-the-games-midnight-racing-tokyo-dress-to-impress-and-michael%E2%80%99s-zombies/3131289)
 - [Creator Spotlight: BelowNatural's Journey Building Paradoxum Games](https://devforum.roblox.com/t/creator-spotlight-belownatural%E2%80%99s-journey-building-paradoxum-games/3027035)

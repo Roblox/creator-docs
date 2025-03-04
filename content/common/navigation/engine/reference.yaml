@@ -25,11 +25,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/Accoutrement.yaml
         ignoreTranslation: true
-      - title: ActivityHistoryEventService
-        path: /reference/engine/classes/ActivityHistoryEventService
-        type: engineapi
-        source: /reference/engine/classes/ActivityHistoryEventService.yaml
-        ignoreTranslation: true
       - title: Actor
         path: /reference/engine/classes/Actor
         type: engineapi
@@ -170,6 +165,16 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/AudioAnalyzer.yaml
         ignoreTranslation: true
+      - title: AudioChannelMixer
+        path: /reference/engine/classes/AudioChannelMixer
+        type: engineapi
+        source: /reference/engine/classes/AudioChannelMixer.yaml
+        ignoreTranslation: true
+      - title: AudioChannelSplitter
+        path: /reference/engine/classes/AudioChannelSplitter
+        type: engineapi
+        source: /reference/engine/classes/AudioChannelSplitter.yaml
+        ignoreTranslation: true
       - title: AudioChorus
         path: /reference/engine/classes/AudioChorus
         type: engineapi
@@ -260,6 +265,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/AudioSearchParams.yaml
         ignoreTranslation: true
+      - title: AudioTextToSpeech
+        path: /reference/engine/classes/AudioTextToSpeech
+        type: engineapi
+        source: /reference/engine/classes/AudioTextToSpeech.yaml
+        ignoreTranslation: true
       - title: AvatarCreationService
         path: /reference/engine/classes/AvatarCreationService
         type: engineapi
@@ -269,11 +279,6 @@ navigation:
         path: /reference/engine/classes/AvatarEditorService
         type: engineapi
         source: /reference/engine/classes/AvatarEditorService.yaml
-        ignoreTranslation: true
-      - title: AvatarPreloader
-        path: /reference/engine/classes/AvatarPreloader
-        type: engineapi
-        source: /reference/engine/classes/AvatarPreloader.yaml
         ignoreTranslation: true
       - title: Backpack
         path: /reference/engine/classes/Backpack
@@ -469,6 +474,11 @@ navigation:
         path: /reference/engine/classes/CanvasGroup
         type: engineapi
         source: /reference/engine/classes/CanvasGroup.yaml
+        ignoreTranslation: true
+      - title: Capture
+        path: /reference/engine/classes/Capture
+        type: engineapi
+        source: /reference/engine/classes/Capture.yaml
         ignoreTranslation: true
       - title: CaptureService
         path: /reference/engine/classes/CaptureService
@@ -905,11 +915,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/ExperienceNotificationService.yaml
         ignoreTranslation: true
-      - title: ExplorerServiceVisibilityService
-        path: /reference/engine/classes/ExplorerServiceVisibilityService
-        type: engineapi
-        source: /reference/engine/classes/ExplorerServiceVisibilityService.yaml
-        ignoreTranslation: true
       - title: Explosion
         path: /reference/engine/classes/Explosion
         type: engineapi
@@ -929,6 +934,11 @@ navigation:
         path: /reference/engine/classes/Feature
         type: engineapi
         source: /reference/engine/classes/Feature.yaml
+        ignoreTranslation: true
+      - title: FeatureRestrictionManager
+        path: /reference/engine/classes/FeatureRestrictionManager
+        type: engineapi
+        source: /reference/engine/classes/FeatureRestrictionManager.yaml
         ignoreTranslation: true
       - title: File
         path: /reference/engine/classes/File
@@ -1029,6 +1039,11 @@ navigation:
         path: /reference/engine/classes/GameSettings
         type: engineapi
         source: /reference/engine/classes/GameSettings.yaml
+        ignoreTranslation: true
+      - title: GenerationService
+        path: /reference/engine/classes/GenerationService
+        type: engineapi
+        source: /reference/engine/classes/GenerationService.yaml
         ignoreTranslation: true
       - title: GenericChallengeService
         path: /reference/engine/classes/GenericChallengeService
@@ -1145,11 +1160,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/HandlesBase.yaml
         ignoreTranslation: true
-      - title: HapticEffect
-        path: /reference/engine/classes/HapticEffect
-        type: engineapi
-        source: /reference/engine/classes/HapticEffect.yaml
-        ignoreTranslation: true
       - title: HapticService
         path: /reference/engine/classes/HapticService
         type: engineapi
@@ -1159,6 +1169,11 @@ navigation:
         path: /reference/engine/classes/Hat
         type: engineapi
         source: /reference/engine/classes/Hat.yaml
+        ignoreTranslation: true
+      - title: HeapProfilerService
+        path: /reference/engine/classes/HeapProfilerService
+        type: engineapi
+        source: /reference/engine/classes/HeapProfilerService.yaml
         ignoreTranslation: true
       - title: HeightmapImporterService
         path: /reference/engine/classes/HeightmapImporterService
@@ -1230,6 +1245,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/HumanoidDescription.yaml
         ignoreTranslation: true
+      - title: HumanoidRigDescription
+        path: /reference/engine/classes/HumanoidRigDescription
+        type: engineapi
+        source: /reference/engine/classes/HumanoidRigDescription.yaml
+        ignoreTranslation: true
       - title: IKControl
         path: /reference/engine/classes/IKControl
         type: engineapi
@@ -1259,6 +1279,21 @@ navigation:
         path: /reference/engine/classes/IncrementalPatchBuilder
         type: engineapi
         source: /reference/engine/classes/IncrementalPatchBuilder.yaml
+        ignoreTranslation: true
+      - title: InputAction
+        path: /reference/engine/classes/InputAction
+        type: engineapi
+        source: /reference/engine/classes/InputAction.yaml
+        ignoreTranslation: true
+      - title: InputBinding
+        path: /reference/engine/classes/InputBinding
+        type: engineapi
+        source: /reference/engine/classes/InputBinding.yaml
+        ignoreTranslation: true
+      - title: InputContext
+        path: /reference/engine/classes/InputContext
+        type: engineapi
+        source: /reference/engine/classes/InputContext.yaml
         ignoreTranslation: true
       - title: InputObject
         path: /reference/engine/classes/InputObject
@@ -1500,11 +1535,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/MessagingService.yaml
         ignoreTranslation: true
-      - title: MLModelDeliveryService
-        path: /reference/engine/classes/MLModelDeliveryService
-        type: engineapi
-        source: /reference/engine/classes/MLModelDeliveryService.yaml
-        ignoreTranslation: true
       - title: Model
         path: /reference/engine/classes/Model
         type: engineapi
@@ -1709,11 +1739,6 @@ navigation:
         path: /reference/engine/classes/PathfindingService
         type: engineapi
         source: /reference/engine/classes/PathfindingService.yaml
-        ignoreTranslation: true
-      - title: PerformanceControlService
-        path: /reference/engine/classes/PerformanceControlService
-        type: engineapi
-        source: /reference/engine/classes/PerformanceControlService.yaml
         ignoreTranslation: true
       - title: PermissionsService
         path: /reference/engine/classes/PermissionsService
@@ -2040,11 +2065,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/RigidConstraint.yaml
         ignoreTranslation: true
-      - title: RobloxSerializableInstance
-        path: /reference/engine/classes/RobloxSerializableInstance
-        type: engineapi
-        source: /reference/engine/classes/RobloxSerializableInstance.yaml
-        ignoreTranslation: true
       - title: RocketPropulsion
         path: /reference/engine/classes/RocketPropulsion
         type: engineapi
@@ -2054,11 +2074,6 @@ navigation:
         path: /reference/engine/classes/RodConstraint
         type: engineapi
         source: /reference/engine/classes/RodConstraint.yaml
-        ignoreTranslation: true
-      - title: RomarkRbxAnalyticsService
-        path: /reference/engine/classes/RomarkRbxAnalyticsService
-        type: engineapi
-        source: /reference/engine/classes/RomarkRbxAnalyticsService.yaml
         ignoreTranslation: true
       - title: RopeConstraint
         path: /reference/engine/classes/RopeConstraint
@@ -2109,6 +2124,11 @@ navigation:
         path: /reference/engine/classes/ScreenGui
         type: engineapi
         source: /reference/engine/classes/ScreenGui.yaml
+        ignoreTranslation: true
+      - title: ScreenshotCapture
+        path: /reference/engine/classes/ScreenshotCapture
+        type: engineapi
+        source: /reference/engine/classes/ScreenshotCapture.yaml
         ignoreTranslation: true
       - title: ScreenshotHud
         path: /reference/engine/classes/ScreenshotHud
@@ -2460,11 +2480,6 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/StyleSheet.yaml
         ignoreTranslation: true
-      - title: StylingService
-        path: /reference/engine/classes/StylingService
-        type: engineapi
-        source: /reference/engine/classes/StylingService.yaml
-        ignoreTranslation: true
       - title: SunRaysEffect
         path: /reference/engine/classes/SunRaysEffect
         type: engineapi
@@ -2529,11 +2544,6 @@ navigation:
         path: /reference/engine/classes/Teams
         type: engineapi
         source: /reference/engine/classes/Teams.yaml
-        ignoreTranslation: true
-      - title: TelemetryService
-        path: /reference/engine/classes/TelemetryService
-        type: engineapi
-        source: /reference/engine/classes/TelemetryService.yaml
         ignoreTranslation: true
       - title: TeleportAsyncResult
         path: /reference/engine/classes/TeleportAsyncResult
@@ -2895,6 +2905,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/VideoCaptureService.yaml
         ignoreTranslation: true
+      - title: VideoDisplay
+        path: /reference/engine/classes/VideoDisplay
+        type: engineapi
+        source: /reference/engine/classes/VideoDisplay.yaml
+        ignoreTranslation: true
       - title: VideoFrame
         path: /reference/engine/classes/VideoFrame
         type: engineapi
@@ -2964,11 +2979,6 @@ navigation:
         path: /reference/engine/classes/VRStatusService
         type: engineapi
         source: /reference/engine/classes/VRStatusService.yaml
-        ignoreTranslation: true
-      - title: WebViewService
-        path: /reference/engine/classes/WebViewService
-        type: engineapi
-        source: /reference/engine/classes/WebViewService.yaml
         ignoreTranslation: true
       - title: WedgePart
         path: /reference/engine/classes/WedgePart
@@ -3283,10 +3293,20 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/ActuatorType.yaml
         ignoreTranslation: true
+      - title: AdAvailabilityResult
+        path: /reference/engine/enums/AdAvailabilityResult
+        type: engineapi
+        source: /reference/engine/enums/AdAvailabilityResult.yaml
+        ignoreTranslation: true
       - title: AdEventType
         path: /reference/engine/enums/AdEventType
         type: engineapi
         source: /reference/engine/enums/AdEventType.yaml
+        ignoreTranslation: true
+      - title: AdFormat
+        path: /reference/engine/enums/AdFormat
+        type: engineapi
+        source: /reference/engine/enums/AdFormat.yaml
         ignoreTranslation: true
       - title: AdornCullingMode
         path: /reference/engine/enums/AdornCullingMode
@@ -3448,6 +3468,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/AudioApiRollout.yaml
         ignoreTranslation: true
+      - title: AudioChannelLayout
+        path: /reference/engine/enums/AudioChannelLayout
+        type: engineapi
+        source: /reference/engine/enums/AudioChannelLayout.yaml
+        ignoreTranslation: true
       - title: AudioFilterType
         path: /reference/engine/enums/AudioFilterType
         type: engineapi
@@ -3517,6 +3542,11 @@ navigation:
         path: /reference/engine/enums/Axis
         type: engineapi
         source: /reference/engine/enums/Axis.yaml
+        ignoreTranslation: true
+      - title: BenefitType
+        path: /reference/engine/enums/BenefitType
+        type: engineapi
+        source: /reference/engine/enums/BenefitType.yaml
         ignoreTranslation: true
       - title: BinType
         path: /reference/engine/enums/BinType
@@ -3592,6 +3622,11 @@ navigation:
         path: /reference/engine/enums/CameraType
         type: engineapi
         source: /reference/engine/enums/CameraType.yaml
+        ignoreTranslation: true
+      - title: CaptureUIHideMode
+        path: /reference/engine/enums/CaptureUIHideMode
+        type: engineapi
+        source: /reference/engine/enums/CaptureUIHideMode.yaml
         ignoreTranslation: true
       - title: CatalogCategoryFilter
         path: /reference/engine/enums/CatalogCategoryFilter
@@ -3698,6 +3733,11 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/CompileTarget.yaml
         ignoreTranslation: true
+      - title: CompletionAcceptanceBehavior
+        path: /reference/engine/enums/CompletionAcceptanceBehavior
+        type: engineapi
+        source: /reference/engine/enums/CompletionAcceptanceBehavior.yaml
+        ignoreTranslation: true
       - title: CompletionItemKind
         path: /reference/engine/enums/CompletionItemKind
         type: engineapi
@@ -3777,11 +3817,6 @@ navigation:
         path: /reference/engine/enums/CreatorTypeFilter
         type: engineapi
         source: /reference/engine/enums/CreatorTypeFilter.yaml
-        ignoreTranslation: true
-      - title: CSGAsyncDynamicCollision
-        path: /reference/engine/enums/CSGAsyncDynamicCollision
-        type: engineapi
-        source: /reference/engine/enums/CSGAsyncDynamicCollision.yaml
         ignoreTranslation: true
       - title: CurrencyType
         path: /reference/engine/enums/CurrencyType
@@ -4108,11 +4143,6 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/HandlesStyle.yaml
         ignoreTranslation: true
-      - title: HapticEffectType
-        path: /reference/engine/enums/HapticEffectType
-        type: engineapi
-        source: /reference/engine/enums/HapticEffectType.yaml
-        ignoreTranslation: true
       - title: HighlightDepthMode
         path: /reference/engine/enums/HighlightDepthMode
         type: engineapi
@@ -4218,10 +4248,20 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/InOut.yaml
         ignoreTranslation: true
+      - title: InputActionType
+        path: /reference/engine/enums/InputActionType
+        type: engineapi
+        source: /reference/engine/enums/InputActionType.yaml
+        ignoreTranslation: true
       - title: InputType
         path: /reference/engine/enums/InputType
         type: engineapi
         source: /reference/engine/enums/InputType.yaml
+        ignoreTranslation: true
+      - title: IntermediateMeshGenerationResult
+        path: /reference/engine/enums/IntermediateMeshGenerationResult
+        type: engineapi
+        source: /reference/engine/enums/IntermediateMeshGenerationResult.yaml
         ignoreTranslation: true
       - title: InterpolationThrottlingMode
         path: /reference/engine/enums/InterpolationThrottlingMode
@@ -4357,6 +4397,11 @@ navigation:
         path: /reference/engine/enums/MarkupKind
         type: engineapi
         source: /reference/engine/enums/MarkupKind.yaml
+        ignoreTranslation: true
+      - title: MatchmakingType
+        path: /reference/engine/enums/MatchmakingType
+        type: engineapi
+        source: /reference/engine/enums/MatchmakingType.yaml
         ignoreTranslation: true
       - title: Material
         path: /reference/engine/enums/Material
@@ -4603,6 +4648,16 @@ navigation:
         type: engineapi
         source: /reference/engine/enums/PlayerChatType.yaml
         ignoreTranslation: true
+      - title: PlayerDataErrorState
+        path: /reference/engine/enums/PlayerDataErrorState
+        type: engineapi
+        source: /reference/engine/enums/PlayerDataErrorState.yaml
+        ignoreTranslation: true
+      - title: PlayerDataLoadFailureBehavior
+        path: /reference/engine/enums/PlayerDataLoadFailureBehavior
+        type: engineapi
+        source: /reference/engine/enums/PlayerDataLoadFailureBehavior.yaml
+        ignoreTranslation: true
       - title: PoseEasingDirection
         path: /reference/engine/enums/PoseEasingDirection
         type: engineapi
@@ -4642,6 +4697,11 @@ navigation:
         path: /reference/engine/enums/ProductLocationRestriction
         type: engineapi
         source: /reference/engine/enums/ProductLocationRestriction.yaml
+        ignoreTranslation: true
+      - title: ProductPurchaseChannel
+        path: /reference/engine/enums/ProductPurchaseChannel
+        type: engineapi
+        source: /reference/engine/enums/ProductPurchaseChannel.yaml
         ignoreTranslation: true
       - title: ProductPurchaseDecision
         path: /reference/engine/enums/ProductPurchaseDecision
@@ -4912,6 +4972,11 @@ navigation:
         path: /reference/engine/enums/Severity
         type: engineapi
         source: /reference/engine/enums/Severity.yaml
+        ignoreTranslation: true
+      - title: ShowAdResult
+        path: /reference/engine/enums/ShowAdResult
+        type: engineapi
+        source: /reference/engine/enums/ShowAdResult.yaml
         ignoreTranslation: true
       - title: SignalBehavior
         path: /reference/engine/enums/SignalBehavior
@@ -5525,5 +5590,10 @@ navigation:
         path: /reference/engine/libraries/utf8
         type: engineapi
         source: /reference/engine/libraries/utf8.yaml
+        ignoreTranslation: true
+      - title: vector
+        path: /reference/engine/libraries/vector
+        type: engineapi
+        source: /reference/engine/libraries/vector.yaml
         ignoreTranslation: true
   - include: /engine/releaseNotes.yaml

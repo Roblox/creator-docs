@@ -1,0 +1,107 @@
+name: AudioChannelSplitter
+type: class
+category:
+memory_category: Internal
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags:
+  - NotBrowsable
+deprecation_message: ''
+properties:
+  - name: AudioChannelSplitter.Layout
+    summary: ''
+    description: ''
+    code_samples: []
+    type: AudioChannelLayout
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: State
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Audio
+    writeCapabilities: []
+methods:
+  - name: AudioChannelSplitter:GetConnectedWires
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: pin
+        type: string
+        default:
+        summary: ''
+    returns:
+      - type: Instances
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioChannelSplitter:GetInputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioChannelSplitter:GetOutputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+events:
+  - name: AudioChannelSplitter.WiringChanged
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: connected
+        type: bool
+        default:
+        summary: ''
+      - name: pin
+        type: string
+        default:
+        summary: ''
+      - name: wire
+        type: Wire
+        default:
+        summary: ''
+      - name: instance
+        type: Instance
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+callbacks: []

@@ -8,7 +8,7 @@ All Roblox experiences include several UI elements that are enabled by default. 
 <thead>
   <tr>
     <th>Default UI</th>
-    <th>Associated Enum</th>
+    <th>Associated enum</th>
   </tr>
 </thead>
 <tbody>
@@ -33,13 +33,17 @@ All Roblox experiences include several UI elements that are enabled by default. 
     <td>`Enum.CoreGuiType.EmotesMenu`</td>
   </tr>
 	<tr>
+    <td>A window displaying a player's perspective or view of their own character. Does not appear unless the player has enabled **Self&nbsp;View** from the Roblox menu.</td>
+    <td>`Enum.CoreGuiType.SelfView`</td>
+  </tr>
+	<tr>
     <td>A **capture screenshot** button along the right side of the screen. Does not appear unless the player has enabled **Captures** from the Roblox menu.</td>
     <td>`Enum.CoreGuiType.Captures`</td>
   </tr>
 </tbody>
 </table>
 
-<img src="../assets/ui/misc/CoreGui-Elements.jpg" width="840" alt="Core UI elements in every Roblox experience." />
+<img src="../../assets/ui/misc/CoreGui-Elements.jpg" width="840" alt="Core UI elements in every Roblox experience." />
 
 ```lua title="Client Script - Disable Default UI Elements"
 local StarterGui = game:GetService("StarterGui")
@@ -51,7 +55,7 @@ StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, false)
 
 Additionally, devices with touch capabilities include a virtual thumbstick and a jump button by default. If desired, you can hide these elements by setting `Class.GuiService.TouchControlsEnabled` to `false` in a client‑side script.
 
-<img src="../assets/ui/misc/TouchGui-Elements.png" width="840" alt="UI elements for touch-capable devices in every Roblox experience" />
+<img src="../../assets/ui/misc/TouchGui-Elements.png" width="840" alt="UI elements for touch-capable devices in every Roblox experience" />
 
 ```lua title="Client Script - Disable Touch Controls"
 local GuiService = game:GetService("GuiService")

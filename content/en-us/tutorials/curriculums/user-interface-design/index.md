@@ -1,5 +1,5 @@
 ---
-title: User Inferface Design Curriculum
+title: User interface design curriculum
 description: //
 next: /tutorials/curriculums/user-interface-design/choose-an-art-style
 hideInPageNavigation: true
@@ -39,7 +39,7 @@ learning how to build an environment and navigating Studio's UI, try the [core c
 
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 1 - Choose an Art Style</Typography>
+      <Typography variant="h4">Chapter 1 - Choose an art style</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -48,11 +48,9 @@ learning how to build an environment and navigating Studio's UI, try the [core c
    </AccordionDetails>
    </BaseAccordion>
 
-   <br />
-
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 2 - Wireframe Your Layouts</Typography>
+      <Typography variant="h4">Chapter 2 - Wireframe your layouts</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -61,11 +59,9 @@ learning how to build an environment and navigating Studio's UI, try the [core c
    </AccordionDetails>
    </BaseAccordion>
 
-   <br />
-
    <BaseAccordion>
    <AccordionSummary>
-      <Typography variant="h4">Chapter 3 - Implement Designs in Studio</Typography>
+      <Typography variant="h4">Chapter 3 - Implement designs in Studio</Typography>
    </AccordionSummary>
    <AccordionDetails>
 
@@ -82,5 +78,3 @@ learning how to build an environment and navigating Studio's UI, try the [core c
 
    </AccordionDetails>
    </BaseAccordion>
-
-   <br />

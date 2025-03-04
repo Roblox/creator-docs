@@ -5,7 +5,7 @@ description: An overview of analytics features to track an experience's growth, 
 
 Roblox offers a variety of analytics features to help you chart your experience's growth, track user behavior and retention, and find opportunities for optimization. You can use analytics to understand what actions you can take to grow your experience.
 
-## Growing Your Experience with Analytics
+## Grow your experience with analytics
 
 Consider following this 3-step plan to use analytics to grow your experience:
 
@@ -71,8 +71,9 @@ Your similar experience benchmarks are updated daily. Roblox does not use these 
 
 - Monitor the analytics of multiple experiences at once
 - Track avatar item sales and revenue
+- Track user acquisition through off-platform share links
 
-### Monitoring Experiences
+### Monitor experiences
 
 You can monitor the analytics of up to nine Roblox experiences by putting them into a **watchlist**. If you have analytics permissions for the experience, your watchlist provides the following analytics at a glance:
 
@@ -97,9 +98,9 @@ Watchlists are applied on the account level, are private, and persist when toggl
     <figcaption>Experience watchlist on Analytics Home.</figcaption>
 </figure>
 
-Clicking on an experience you're monitoring takes you to the experience overview page. If applicable, [Analytics Insights](#analytics-insights) offer direction on next steps and redirect you to applicable documentation and relevant analytics.
+Clicking on an experience you're monitoring takes you to the experience overview page. If applicable, [analytics insights](#analytics-insights) offer direction on next steps and redirect you to applicable documentation and relevant analytics.
 
-### Tracking Avatar Sales and Revenue
+### Track avatar sales and revenue
 
 Avatar items you've sold automatically appear within the **Avatar Items** tab. Here, you can:
 
@@ -112,7 +113,11 @@ Avatar items you've sold automatically appear within the **Avatar Items** tab. H
     <figcaption>Avatar Items on Analytics Home.</figcaption>
 </figure>
 
-## Analytics Insights
+### Track user acquisition
+
+The **Share Links** tab provides information about the **Link Visits** metric, which tracks how many users have arrived on your experience details page by clicking on the share link you created.
+
+## Analytics insights
 
 In each experience's overview page, there are insights that highlight major weekly changes in key metrics and areas of improvement.
 
@@ -122,7 +127,7 @@ For example, the insight below shows that your revenue declined 21%, but similar
     <img src="../../assets/analytics/overview/Insights.png" width="80%"/>
 </figure>
 
-### Achievement Panel
+### Achievement panel
 
 Your achievement panel highlights key metric milestones that you've reached over the past 6 months. This insight is meant to help you celebrate progress when a metric has reached a six month high. Note that if a metric is at a six month high but below benchmark comparisons, you should still continue to improve it.
 
@@ -130,4 +135,4 @@ Your achievement panel highlights key metric milestones that you've reached over
     <img src="../../assets/analytics/overview/Achievements.png" width="50%"/>
 </figure>
 
-For more information on how analytics works, see [Analytics Dashboard](../../production/analytics/analytics-dashboard.md). For more information on how to use analytics to optimize your experience's design, see [Analytics Essentials](../../production/game-design/analytics-essentials.md).
+For more information on how analytics works, see [Analytics dashboard](../../production/analytics/analytics-dashboard.md). For more information on how to use analytics to optimize your experience's design, see [Analytics essentials](../../production/game-design/analytics-essentials.md).

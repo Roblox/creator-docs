@@ -1,0 +1,263 @@
+name: vector
+type: library
+summary: |
+  A library of vector functions.
+description: |
+  This library implements functionality for the vector type in addition to the
+  built-in primitive operator support. It uses vectors with three components
+  (`x`, `y`, and `z`).
+
+  Individual vector components can be accessed using the fields `x` or `X`, `y`
+  or `Y`, `z` or `Z`. Since vector values are immutable, writing to individual
+  components is not supported.
+code_samples:
+properties:
+  - name: vector.zero
+    type: vector
+    summary: |
+      Constant vector with all components set to `0`.
+    description: |
+      Constant vector with all components set to `0`.
+    tags:
+    code_samples:
+  - name: vector.one
+    type: vector
+    summary: |
+      Constant vector with all components set to `1`.
+    description: |
+      Constant vector with all components set to `1`.
+    tags:
+    code_samples:
+functions:
+  - name: vector.create
+    summary: |
+      Creates a new vector with the given component values.
+    description: |
+      Creates a new vector with the given component values.
+    parameters:
+      - name: x
+        type: number
+        default:
+        summary: ''
+      - name: 'y'
+        type: number
+        default:
+        summary: ''
+      - name: z
+        type: number
+        default:
+        summary: ''
+    returns:
+      - type: vector
+        summary: ''
+    tags:
+    code_samples:
+  - name: vector.magnitude
+    summary: |
+      Calculates the magnitude of a given vector.
+    description: |
+      Calculates the magnitude of a given vector.
+    parameters:
+      - name: vec
+        type: vector
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: vector.normalize
+    summary: |
+      Computes the normalized version (unit vector) of a given vector.
+    description: |
+      Computes the normalized version (unit vector) of a given vector.
+    parameters:
+      - name: vec
+        type: vector
+        default:
+        summary: ''
+    returns:
+      - type: vector
+        summary: ''
+    tags:
+    code_samples:
+  - name: vector.cross
+    summary: |
+      Computes the cross product of two vectors.
+    description: |
+      Computes the cross product of two vectors.
+    parameters:
+      - name: vec1
+        type: vector
+        default:
+        summary: ''
+      - name: vec2
+        type: vector
+        default:
+        summary: ''
+    returns:
+      - type: vector
+        summary: ''
+    tags:
+    code_samples:
+  - name: vector.dot
+    summary: |
+      Computes the dot product of two vectors.
+    description: |
+      Computes the dot product of two vectors.
+    parameters:
+      - name: vec1
+        type: vector
+        default:
+        summary: ''
+      - name: vec2
+        type: vector
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: vector.angle
+    summary: |
+      Computes the angle between two vectors in radians.
+    description: |
+      Computes the angle between two vectors in radians. The axis, if specified,
+      is used to determine the sign of the angle.
+    parameters:
+      - name: vec1
+        type: vector
+        default:
+        summary: ''
+      - name: vec2
+        type: vector
+        default:
+        summary: ''
+      - name: axis
+        type: vector?
+        default:
+        summary: ''
+    returns:
+      - type: number
+        summary: ''
+    tags:
+    code_samples:
+  - name: vector.floor
+    summary: |
+      Applies `Library.math.floor()` to every component of the input vector.
+    description: |
+      Applies `Library.math.floor()` to every component of the input vector.
+    parameters:
+      - name: vec
+        type: vector
+        default:
+        summary: ''
+    returns:
+      - type: vector
+        summary: ''
+    tags:
+    code_samples:
+  - name: vector.ceil
+    summary: |
+      Applies `Library.math.ceil()` to every component of the input vector.
+    description: |
+      Applies `Library.math.ceil()` to every component of the input vector.
+    parameters:
+      - name: vec
+        type: vector
+        default:
+        summary: ''
+    returns:
+      - type: vector
+        summary: ''
+    tags:
+    code_samples:
+  - name: vector.abs
+    summary: |
+      Applies `Library.math.abs()` to every component of the input vector.
+    description: |
+      Applies `Library.math.abs()` to every component of the input vector.
+    parameters:
+      - name: vec
+        type: vector
+        default:
+        summary: ''
+    returns:
+      - type: vector
+        summary: ''
+    tags:
+    code_samples:
+  - name: vector.sign
+    summary: |
+      Applies `Library.math.sign()` to every component of the input vector.
+    description: |
+      Applies `Library.math.sign()` to every component of the input vector.
+    parameters:
+      - name: vec
+        type: vector
+        default:
+        summary: ''
+    returns:
+      - type: vector
+        summary: ''
+    tags:
+    code_samples:
+  - name: vector.clamp
+    summary: |
+      Applies `Library.math.clamp()` to every component of the input vector.
+    description: |
+      Applies `Library.math.clamp()` to every component of the input vector.
+    parameters:
+      - name: vec
+        type: vector
+        default:
+        summary: ''
+      - name: min
+        type: vector
+        default:
+        summary: ''
+      - name: max
+        type: vector
+        default:
+        summary: ''
+    returns:
+      - type: vector
+        summary: ''
+    tags:
+    code_samples:
+  - name: vector.max
+    summary: |
+      Applies `Library.math.max()` to the corresponding components of the input
+      vectors.
+    description: |
+      Applies `Library.math.max()` to the corresponding components of the input
+      vectors.
+    parameters:
+      - name: ...
+        type: vector
+        default:
+        summary: ''
+    returns:
+      - type: vector
+        summary: ''
+    tags:
+    code_samples:
+  - name: vector.min
+    summary: |
+      Applies `Library.math.min()` to the corresponding components of the input
+      vectors.
+    description: |
+      Applies `Library.math.min()` to the corresponding components of the input
+      vectors.
+    parameters:
+      - name: ...
+        type: vector
+        default:
+        summary: ''
+    returns:
+      - type: vector
+        summary: ''
+    tags:
+    code_samples:

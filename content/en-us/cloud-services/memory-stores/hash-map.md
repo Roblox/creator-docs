@@ -1,5 +1,5 @@
 ---
-title: Memory Store Hash Map
+title: Memory store hash map
 description: Explains how to implement the hash map data structure for memory stores.
 ---
 
@@ -11,7 +11,7 @@ Hash maps have a key size limit of 128 characters and a value size limit of 32 K
 
 Otherwise, hash maps use the same [API request](../../cloud-services/memory-stores/index.md#api-requests-limits) and [memory quota](../../cloud-services/memory-stores/index.md#memory-size-quota) limits as the other memory store data structures.
 
-## Getting a Hash Map
+## Get a hash map
 
 To get a hash map, call `Class.MemoryStoreService:GetHashMap()` with a name for the hash map. The name is global within the experience, so you can access the same hash map on any script using this name.
 
@@ -33,32 +33,34 @@ After you get a hash map, call any of the following functions to read or write d
 <tbody>
   <tr>
     <td>`Class.MemoryStoreHashMap:SetAsync()`</td>
-    <td>[Add](#adding-or-overwriting-data) a new key or overwrite the value if the key already exists.</td>
+    <td>[Add](#add-or-overwrite-data) a new key or overwrite the value if the key already exists.</td>
   </tr>
   <tr>
     <td>`Class.MemoryStoreHashMap:GetAsync()`</td>
-    <td>[Read](#getting-data) a particular key.</td>
+    <td>[Read](#get-data) a particular key.</td>
   </tr>
 	<tr>
     <td>`Class.MemoryStoreHashMap:ListItemsAsync()`</td>
-    <td>[List](#getting-data) items in a hash map.</td>
+    <td>[List](#get-data) items in a hash map.</td>
   </tr>
   <tr>
     <td>`Class.MemoryStoreHashMap:UpdateAsync()`</td>
-    <td>[Update](#updating-data) the value of a key after retrieving it from a hash map.</td>
+    <td>[Update](#update-data) the value of a key after retrieving it from a hash map.</td>
   </tr>
   <tr>
     <td>`Class.MemoryStoreHashMap:RemoveAsync()`</td>
-    <td>[Remove](#removing-data) a key from the hash map.</td>
+    <td>[Remove](#remove-data) a key from the hash map.</td>
   </tr>
 </tbody>
 </table>
+
+For in-depth documentation about each function, see `Class.MemoryStoreHashMap`.
 
 <Alert severity="warning">
 All functions accessing data structures in memory stores are asynchronous network calls that might occasionally fail. You should wrap these calls in `Global.LuaGlobals.pcall()` to catch and handle errors, as shown in the code samples.
 </Alert>
 
-## Adding or Overwriting Data
+## Add or overwrite data
 
 To add a new key or overwrite the value of a key in the hash map, call `Class.MemoryStoreHashMap:SetAsync()` with the key **name**, its **value**, and an **expiration time** in seconds. The memory automatically cleans up once the key expires. The maximum expiration time is 3,888,000 seconds (45 days).
 
@@ -79,11 +81,11 @@ if setSuccess then
 end
 ```
 
-## Getting Data
+## Get data
 
 You can either get a value associated with a specific key or get multiple key-value pairs in the hash map.
 
-### Getting Data with One Key
+### Get data with one key
 
 To get a value associated with one key from the hash map, call `Class.MemoryStoreHashMap:GetAsync()` with the key **name**.
 
@@ -110,7 +112,7 @@ else
 end
 ```
 
-### Getting Data with Multiple Key-Value pairs
+### Get data with multiple key-value pairs
 
 To get all the key-value pairs from the hash map as a single operation, call `Class.MemoryStoreHashMap:ListItemsAsync()` with the desired page size. This function lists all existing keys in a paginated manner. For example, the following code sample retrieves up to 32 items from the hash map.
 
@@ -143,7 +145,7 @@ if success then
 end
 ```
 
-## Updating Data
+## Update data
 
 To retrieve the value of a key from a hash map and update it, call `Class.MemoryStoreHashMap:UpdateAsync()` with the key **name**, a **callback function** to update the key, and an **expiration time** in seconds.
 
@@ -179,11 +181,11 @@ The latency for `Class.MemoryStoreHashMap:UpdateAsync()|UpdateAsync()` is simila
 
 When contention occurs, the system automatically retries the operation until one of these three happens: the operation succeeds, the callback function returns nil, or the maximum number of retries is reached. If the system reaches the maximum number of retries, it returns a conflict.
 
-## Removing Data
+## Remove data
 
 You can use `Class.MemoryStoreHashMap:RemoveAsync()` for both removing one key from the hash map and deleting all data in a memory store hash map.
 
-### Removing a Key
+### Remove a key
 
 To remove a key from the hash map, call `Class.MemoryStoreHashMap:RemoveAsync()` with a key **name**.
 
@@ -207,7 +209,7 @@ if not removeSuccess then
 end
 ```
 
-### Deleting All Data
+### Delete all data
 
 To delete all data in a hash map, list all your items with `Class.MemoryStoreHashMap:ListItemsAsync()`, then remove them with `Class.MemoryStoreHashMap:RemoveAsync()`.
 

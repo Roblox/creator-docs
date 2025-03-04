@@ -5,26 +5,26 @@ description: An overview of how assets work on the platform.
 
 Almost everything in Roblox is represented as a cloud-based asset with a unique corresponding ID. This ID is typically in the form of `rbxassetid://[ID]`, which gets applied to various instances as a property that's appropriate for that particular asset type. For example, `Class.Texture`, `Class.MeshPart`, and `Class.Sound` instances reference image, mesh, and audio assets through their respective `Class.Texture.TextureID|TextureID`, `Class.MeshPart.MeshID|MeshID`, and `Class.Sound.SoundID|SoundID` properties.
 
-<table>
-  <tbody>
-    <tr>
-      <td><img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" /></td>
-      <td><img src="../../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" alt="An untextured treasure chest MeshPart asset." width="90%" /></td>
-      <td><audio controls><source src="../../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio></td>
-    </tr>
-    <tr>
-			<td><code>rbxassetid://7229442422</code></td>
-			<td><code>rbxassetid://6768917255</code></td>
-			<td><code>rbxassetid://9125402735</code></td>
-    </tr>
-  </tbody>
-</table>
+<GridContainer numColumns="3">
+	<figure>
+		`rbxassetid://7229442422`
+		<img src="../../assets/modeling/textures-decals/Texture-Example-Grafitti04.png" alt="A decal asset of a young woman with a button for an eye." width="90%" />
+	</figure>
+	<figure>
+		`rbxassetid://6768917255`
+		<img src="../../assets/modeling/meshes/Base-Mesh-In-Marketplace.png" alt="An untextured treasure chest MeshPart asset." width="90%" />
+	</figure>
+	<figure>
+		`rbxassetid://9125402735`
+		<audio controls><source src="../../assets/studio/general/Boom-Impact.mp3" type="audio/mpeg"></source></audio>
+	</figure>
+</GridContainer>
 
 This cloud-based asset system allows you to store assets through Roblox and reuse them across the platform in various contexts, such as in different objects and places, without maintaining local copies as part of each saved Studio experience. You can find millions of project assets in the [Creator Store][CreatorMarketplaceURL], equip avatar assets in the [Marketplace][MarketplaceURL], or you can create your own assets and [import](#asset-management) them directly into Studio through the asset management tools.
 
-When you import assets, they must pass a [moderation](#asset-moderation) check before users can see and interact with them in published experiences. After Roblox approves imported assets, you can choose to retain ownership of their usage on the platform or make them publicly available as detailed in [Asset Permissions](#asset-permissions).
+When you import assets, they must pass a [moderation](#asset-moderation) check before users can see and interact with them in published experiences. After Roblox approves imported assets, you can choose to retain ownership of their usage on the platform or make them publicly available as detailed in [Asset permissions](#asset-permissions).
 
-## Asset Types
+## Asset types
 
 All [asset types](/reference/engine/enums/AssetType) available on the platform generally fall into one of three categories:
 
@@ -34,7 +34,7 @@ All [asset types](/reference/engine/enums/AssetType) available on the platform g
 
 Every asset type works differently depending on where it lives on the platform. See the following sections for information on how to use each asset type for [experiences](#for-experiences), [places](#for-places), and [avatars](#for-avatars).
 
-### For Experiences
+### For experiences
 
 There are three asset types that map to project-level items. These asset types are unique to the experience that they map to, meaning they are non-transferable to other projects.
 
@@ -42,7 +42,7 @@ There are three asset types that map to project-level items. These asset types a
 - **Badges** — A [badges](../../production/publishing/badges.md) is a special award you can gift users when they meet a goal within an experience, such as completing a difficult objective or playing for a certain amount of time.
 - **Passes** — A [pass](../../production/monetization/game-passes.md) is a monetization product that allows you to charge a one-time Robux fee in order for users to access special privileges within an experience, such as entry to a restricted area, an in-experience avatar item, or a permanent power-up.
 
-### For Places
+### For places
 
 In general, there are two categories of asset types for places that you can either [import](#asset-management) or find in the [Creator Store][CreatorMarketplaceURL]:
 
@@ -86,7 +86,7 @@ For more information on both types of these assets for places, such as where and
 	</tbody>
 </table>
 
-### For Avatars
+### For avatars
 
 There are three categories of asset types for avatars that you can find in the [Marketplace][MarketplaceURL] and equip to avatars:
 
@@ -94,7 +94,7 @@ There are three categories of asset types for avatars that you can find in the [
 - **Clothing and Accessories** — Assets that represent clothing and accessories on top of body parts.
 - **Animations** — Assets that animate the avatar character model, such as how it runs, jumps, or swims.
 
-Every [character](../../characters/index.md) model contains a `Class.HumanoidDescription` object with asset IDs for the character's body parts, clothing, accessories, and animations. By default, a user's playable character references their personal Roblox avatar, but you can apply a custom `Class.HumanoidDescription` if desired. For more information, see [Character Appearance](../../characters/appearance.md).
+Every [character](../../characters/index.md) model contains a `Class.HumanoidDescription` object with asset IDs for the character's body parts, clothing, accessories, and animations. By default, a user's playable character references their personal Roblox avatar, but you can apply a custom `Class.HumanoidDescription` if desired. For more information, see [Character appearance](../../characters/appearance.md).
 
 ## Packages
 
@@ -110,7 +110,7 @@ The basic structure is a **scheme** followed by `://` and a **path** that varies
 
 <span><Chip label='[Scheme]://[Path]' color='primary' size='large' /></span><br/>
 
-The Roblox engine supports several custom URI schemes for referencing content stored on the platform.
+The Roblox Engine supports several custom URI schemes for referencing content stored on the platform.
 
 ### rbxassetid
 
@@ -214,7 +214,7 @@ The content folder's location depends on the user's operating system:
 		</tr>
 		<tr>
 			<td>`GameThumbnail`</td>
-			<td>ID for an experience (`Class.DataModel.GameId`); shows the experience's primary [thumbnail](../../production/promotion/thumbnails.md)</td>
+			<td>ID for an experience (`Class.DataModel.GameId`); shows the experience's primary [thumbnail](../../production/publishing/thumbnails.md)</td>
 			<td scope="row">256&times;144, 384&times;216, 480&times;270, 576&times;324, 768&times;432</td>
 		</tr>
 		<tr>
@@ -290,7 +290,7 @@ In the above example, `Images` is the category/folder that appears in the [Asset
 
 <span><Chip label='https://www.roblox.com/asset/?id=9723979220' color='primary' size='large' /></span>
 
-## Asset Permissions
+## Asset permissions
 
 An asset's privacy status determines who has permission to use the asset within their experiences. By default, all assets are **private** when you or your [group](../../projects/groups.md) members import them into Studio. If you want to grant everyone access to the asset ID, you must distribute the asset to the [Creator Store][CreatorMarketplaceURL].
 
@@ -298,7 +298,7 @@ An asset's privacy status determines who has permission to use the asset within 
 Special privacy rules and workflows apply to **audio** and **video** assets. See [Asset Privacy](../../projects/assets/privacy.md) for details on sharing these asset types among friends and experiences.
 </Alert>
 
-## Asset Moderation
+## Asset moderation
 
 Roblox performs both human and automated asset moderation on a proactive and reactive basis to ensure assets adhere to the [Community Rules](https://en.help.roblox.com/hc/articles/203313410), [Terms of Use](https://en.help.roblox.com/hc/articles/115004647846), and [Digital Millennium Copyright Act](../../production/publishing/dmca-guidelines.md) (DMCA). If any asset violates these moderation policies, such as including discriminatory or adult content, the Moderation team flags and removes the asset to protect users from harmful or non-compliant content. This process generally happens within a few hours after you import the asset.
 
@@ -308,7 +308,7 @@ If an asset is still in the moderation queue when you publish your experience, u
   To maintain community safety and civility, Roblox may take down experiences and/or terminate accounts that maliciously import or publish non-compliant assets.
 </Alert>
 
-## Asset Management
+## Asset management
 
 Roblox offers several tools to import, store, and publish your assets:
 

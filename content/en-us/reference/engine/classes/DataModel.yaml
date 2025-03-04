@@ -206,6 +206,25 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: DataModel.MatchmakingType
+    summary: ''
+    description: ''
+    code_samples: []
+    type: MatchmakingType
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: DataModel.PlaceId
     summary: |
       Describes the ID of the place running on the server.
@@ -447,20 +466,8 @@ properties:
     summary: |
       A reference to the `Class.Workspace` service.
     description: |
-      The Workspace property is a reference to the `Class.Workspace` service.
-
-      This property will always point to the `Class.Workspace` and will never be
-      _nil_.
-
-      The `Class.Workspace` can also be accessed using the global variable
-      `workspace` and the `Class.ServiceProvider:GetService()` function. For
-      example:
-
-      ```lua
-      workspace -- a global variable
-      game.Workspace -- a property of the DataModel (game)
-      game:GetService("Workspace") -- workspace is a service
-      ```
+      This property is a reference to the `Class.Workspace` service. It always
+      points to `Class.Workspace` and will never be `nil`.
     code_samples:
     type: Workspace
     tags:

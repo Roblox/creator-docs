@@ -1,5 +1,5 @@
 ---
-title: Take Flight
+title: Take flight
 prev: /education/build-it-play-it-galactic-speedway/get-off-the-ground
 next: /education/build-it-play-it-galactic-speedway/designing-your-speeder
 description: Learn the character movement and flight controls for the Roblox Build It Play It Galactic Speedway template.

@@ -1,5 +1,5 @@
 ---
-title: Duplicate and Design
+title: Duplicate and design
 prev: /education/build-it-play-it-galactic-speedway/adding-wings
 next: /education/build-it-play-it-galactic-speedway/grouping-the-parts
 description: Learn how to duplicate parts and add decorations to spaceship in Roblox Studio as part of the Build It Play It Galactic Speedway challenge.
@@ -22,7 +22,7 @@ As you build, parts can be used more than once by creating duplicates. This is u
    <video controls src="../../assets/education/build-it-play-it-galactic-speedway/duplicate-and-design/rotate-compare.mp4" width="100%"></video>
    </Alert>
 
-## Continue Building
+## Continue building
 
 Now that you know how to work with parts, add as many wings as you'd like to create a cool design. Use the following designs as inspiration:
 
@@ -32,7 +32,7 @@ Now that you know how to work with parts, add as many wings as you'd like to cre
   <img src="../../assets/education/build-it-play-it-galactic-speedway/duplicate-and-design/wing-variations-3.jpeg" />
 </GridContainer>
 
-## Adding Decorations
+## Add decorations
 
 Further personalize your speeder with decorative parts like thrusters or spoilers from the third section of the scrapyard.
 

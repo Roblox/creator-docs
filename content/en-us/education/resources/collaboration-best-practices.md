@@ -1,5 +1,5 @@
 ---
-title: Collaboration Best Practices
+title: Best practices for collaboration
 description: Learn best practices for creating classrooms that foster collaboration and education.
 ---
 
@@ -7,9 +7,9 @@ description: Learn best practices for creating classrooms that foster collaborat
 
 Educators in both online and in-person classrooms find that using Roblox to collaborate in classrooms can be meaningful as well as educational. Based on the experiences of Roblox educators, here are some ways of fostering a collaborative atmosphere by setting clear expectations and using supportive strategies.
 
-## Setting Classroom Expectations
+## Set classroom expectations
 
-### Example Guidelines
+### Example guidelines
 
 Each class is different, but to help you get started, we've included these guidelines commonly used by our educators.
 
@@ -23,7 +23,7 @@ To help out your classroom, we have a downloadable .DOCX handout with these abov
 <Button variant="text">Download Handout</Button>
 </a>
 
-### Resolving Conflict
+### Resolve conflict
 
 It's recommended to train students to be able to identify and resolve conflicts as they emerge. Help students independently resolve conflict, by modeling and teaching them the tips below.
 
@@ -31,11 +31,11 @@ It's recommended to train students to be able to identify and resolve conflicts 
 - Have students take turns speaking without interruption. If a student wants to interrupt, prompt them to take a deep breath or do a small private hand gesture (e.g. tap themselves on the thumb) to help them personally re-focus.
 - When trying to find a resolution to a conflict, talk about interests and goals ("I feel this would look better blue"), rather than positions ("You're wrong, blue is the best color …"). Sharing interests and goals gives students something concrete to try resolving conflict.
 
-## Collaboration Strategies
+## Collaboration strategies
 
 One way of creating a positive learning environment is to use strategies that foster collaboration. Below are strategies to meet specific goals you may have.
 
-### Students Helping One Another
+### Students helping one another
 
 Strategies that encourage students to work together build independence and make collaboration feel more natural.
 
@@ -47,7 +47,7 @@ Strategies that encourage students to work together build independence and make 
 
 - Allow and motivate students to contribute by letting them lead **skill-shares**. If a student discovers something fun, or has a skill they want to share, give them 5-10 minutes during an independent work time to lead a tutorial. Allow other students to optionally "attend" that student's skill-share. This encourages an atmosphere of sharing and rewards students for wanting to help others.
 
-### Facilitating Groups
+### Facilitate groups
 
 - One way of having collaboration is often through group work. To ensure group work is productive and meaningful, we recommend the following strategies.
 
@@ -59,7 +59,7 @@ Strategies that encourage students to work together build independence and make 
 
 - To ensure all group members are busy, have a group collectively manage a to-do list. If someone has an idea or task, they can add it onto the list for someone who needs something to work on.
 
-## Further Reading
+## Further reading
 
 We've compiled a list of external resources on the topic of collaboration in the classroom.
 

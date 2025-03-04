@@ -15,7 +15,7 @@ The homestore template provides the following features that you can quickly cust
 
 You can find the UGC Homestore Template in Roblox Studio's start screen. To access Studio's provided templates at any time, select **File** > **Open from Roblox** and select **Templates**.
 
-## Customizing Homestore
+## Customize Homestore
 
 You can modify the features of the homestore to showcase and sell your assets as well as add your own distinct theme and design. If the place is unpublished, the homestore showcases Roblox-created assets on the mannequins and shop as reference.
 
@@ -57,9 +57,9 @@ By default, the catalog applies the following behavior:
 - If the place is unpublished, such as during initial playtesting, the catalog displays Roblox's marketplace items as reference.
 - If the place is published, the catalog automatically displays the current experience owner's available marketplace items.
   - If the current experience owner doesn't have any available marketplace items, the catalog doesn't display any items.
-  - You can [set a different creator's catalog](#specifying-another-creators-catalog) as the default by modifying `ReplicatedStorage.Settings`.
+  - You can [set a different creator's catalog](#specify-another-creators-catalog) as the default by modifying `ReplicatedStorage.Settings`.
 
-#### Specifying Another Creator's Catalog
+#### Specify another creator's catalog
 
 To set the catalog to use another creator's marketplace items:
 
@@ -67,7 +67,7 @@ To set the catalog to use another creator's marketplace items:
 
     <img src="../assets/publishing/marketplace/Enable-Third-Party-Sales.png" alt="Section of the Explorer window highlighting the Settings file in Replicated Storage." width = "70%"/>
 
-2.  Ensure that the marketplace items have their sale location set to `Marketplace and All Experiences` or have specified this specific experience as a valid [sale location](../marketplace/publishing-to-marketplace.md#sale-location).
+2.  Ensure that the marketplace items have their sale location set to `Marketplace and All Experiences` or have specified this specific experience as a valid [sale location](../marketplace/publish-to-marketplace.md#sale-location).
 
     1.  If the experience is added as a unique sale location, the experience owner [must enable the specific asset for sale using the Creator Dashboard](../production/monetization/avatar-items.md#adding-items-to-experience).
 
@@ -85,9 +85,9 @@ To set the catalog to use another creator's marketplace items:
 
 ### Building
 
-Each building component is designed to be modular and extendible. You can quickly duplicate pieces, rotate, and rearrange them to create larger and more intricate structures. For more information on working with modular environments, see [Assembling Modular Environments](../tutorials/use-case-tutorials/modeling/assembling-modular-environments.md).
+Each building component is designed to be modular and extendible. You can quickly duplicate pieces, rotate, and rearrange them to create larger and more intricate structures. For more information on working with modular environments, see [Assembling Modular Environments](../tutorials/use-case-tutorials/modeling/assemble-modular-environments.md).
 
-### Advanced Customizations
+### Advanced customizations
 
 For an advanced technical breakdown of the template project, including descriptions of various scripts, components, and behaviors, navigate to `ServerScriptService` and open the `README` ModuleScript. This content is intended for creators who intend to modify the underlying scripts and behaviors of the template project.
 

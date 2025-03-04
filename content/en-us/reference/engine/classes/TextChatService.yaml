@@ -5,12 +5,21 @@ memory_category: Instances
 summary: |
   A service handling in-experience text chat.
 description: |
-  A service handling in-experience text chat, including managing channels,
-  decorating messages, filtering text, creating commands, and developing custom
-  chats interfaces.
+  A service handling in-experience text chat, including
+  `Class.TextChannel|managing channels`, decorating messages, filtering text,
+  `Class.TextChatCommand|creating commands`, and
+  [developing custom chats interfaces](../../../chat/examples/simple-custom-frontend-ui.md).
 
   To learn more, see
-  [In-Experience Text Chat](../../../chat/customizing-in-experience-text-chat.md).
+  [TextChatService Overview](../../../chat/in-experience-text-chat.md).
+
+  For further customization, TextChatService has the following singleton
+  children:
+
+  - `Class.ChatWindowConfiguration`
+  - `Class.ChatInputBarConfiguration`
+  - `Class.BubbleChatConfiguration`
+  - `Class.ChannelTabsConfiguration`
 code_samples:
 inherits:
   - Instance
@@ -20,8 +29,12 @@ tags:
 deprecation_message: ''
 properties:
   - name: TextChatService.ChatTranslationEnabled
-    summary: ''
-    description: ''
+    summary: |
+      Determines if chat translation is enabled.
+    description: |
+      Determines if chat translation is enabled. If true, a system message will
+      notify player's when their first join that chat messages may be translated
+      into the player's preferred language.
     code_samples: []
     type: bool
     tags:
@@ -272,8 +285,18 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: TextChatService:CanUserChatAsync
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether a user has permission to chat in experiences.
+    description: |
+      Determines whether a user has permission to chat in experiences. Factors
+      such as parental control settings may prevent the user from sending
+      messages. Errors if the userId is not in the current server. Note that
+      this method can be used with all current player
+      `Class.Player.UserId|UserIds` in a `Class.Script` with
+      `Class.Script.RunContext|RunContext` of `Enum.RunContext.Server` or
+      `Enum.RunContext.Legacy`. This method can also be used in a
+      `Class.LocalScript` but only with the `Class.Player.UserId|UserId` of the
+      local player.
     code_samples: []
     parameters:
       - name: userId
@@ -291,8 +314,18 @@ methods:
     capabilities: []
     writeCapabilities: []
   - name: TextChatService:CanUsersChatAsync
-    summary: ''
-    description: ''
+    summary: |
+      Determines whether or not two users would receive messages between each
+      other.
+    description: |
+      Determines whether or not two users would receive messages between each
+      other. Factors such as incompatible parental control settings or blocked
+      status may prevent the delivery of messages between users
+      `Class.TextChannel|TextChannels` internally use this result to determine
+      whether to deliver messages between users. Note that this method is only
+      available for use in a `Class.Script` with
+      `Class.Script.RunContext|RunContext` of `Enum.RunContext.Server` or
+      `Enum.RunContext.Legacy`.
     code_samples: []
     parameters:
       - name: userIdFrom
@@ -316,7 +349,7 @@ methods:
   - name: TextChatService:CanUsersDirectChatAsync
     summary: |
       Determines whether a user has permission to chat directly with other users
-      in experiences based on their parental control settings.
+      in experiences based on factors such as their parental control settings.
     description: |
       Determines whether a user has permission to chat directly with other users
       in experiences based on their parental control settings. To be used when:
@@ -324,20 +357,53 @@ methods:
       - The line of communication is user-initiated (not developer- or
         gameplay-initiated)
       - Access to the communication is closed and limited
+
+      An example of a direct chat is a whisper channel between two users.
+
+      You may use this method to gate certain features in your experience
+      depending on the result.
+
+      When creating a `Class.TextChannel` for a direct chat, use
+      `Class.TextChannel:SetDirectChatRequester` to set the requesterUserId so
+      that the channel can determine whether to deliver messages between users.
+      When `Class.TextChannel.DirectChatRequester` is non-nil,
+      `Class.TextChannel|TextChannels` internally use this result to determine
+      whether to deliver messages between users.
+
+      ```lua
+      local whoCanDirectChat = TextChatService:CanUsersDirectChatAsync(requesterUserId, { userId1, userId2 })
+
+      if #whoCanDirectChat > 0 then
+        -- The requesterUserId can direct chat with either userId1, userId2, or both
+      else
+        -- The requesterUserId cannot direct chat with either userId1 or userId2
+      end
+      ```
+
+      Note that this method is only available for use in a `Class.Script` with
+      `Class.Script.RunContext|RunContext` of `Enum.RunContext.Server` or
+      `Enum.RunContext.Legacy`.
     code_samples:
       - TextChatService-User-Chat
     parameters:
       - name: requesterUserId
         type: int64
         default:
-        summary: ''
+        summary: |
+          The user who would have initiated the direct chat request. If the
+          requesterUserId is not in the current server, this method will error.
       - name: userIds
         type: Array
         default:
-        summary: ''
+        summary: |
+          A list of users who the requesterUserId would like to chat with
+          directly. Users not in the current server are ignored.
     returns:
       - type: Array
-        summary: ''
+        summary: |
+          A list of users who could participate in the direct chat request. If
+          none of the users can direct chat with the requesterUserId, the result
+          is an empty array.
     tags:
       - Yields
     deprecation_message: ''

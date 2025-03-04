@@ -1,5 +1,5 @@
 ---
-title: Coding the Leaderboard
+title: Code the leaderboard
 description: Part of the Adventure Game Series in Roblox. Create a leaderboard in Roblox Studio to track player items.
 next: /education/adventure-game-series/collect-items
 prev: /education/adventure-game-series/create-the-map
@@ -10,11 +10,11 @@ In-game, player will have important stats they need to see like the items they'v
 <img src="../../assets/education/adventure-game-series/adventure-leaderboard-finished.jpg" width="70%" />
 
 <Alert severity="info">
-Note that the leaderboard in this experience doesn't save player information in-between sessions. For information on saving player data, you'll need to use an advanced coding concept called [data stores](../../cloud-services/data-stores).
+Note that the leaderboard in this experience doesn't save player information in-between sessions. For information on saving player data, you'll need to use an advanced coding concept called [data stores](../../cloud-services/data-stores/index.md).
 
 </Alert>
 
-## Setting Up the Leaderboard
+## Set up the leaderboard
 
 Whenever a player is added to the experience, they'll need to be added to the leaderboard along with code for tracking the individual stats.
 
@@ -72,7 +72,7 @@ Whenever a player is added to the experience, they'll need to be added to the le
     Don't test yet since you won't see a leaderboard. Because there are no stats to display, the leaderboard won't appear.
     </Alert>
 
-## Tracking Player Stats
+## Track player stats
 
 Now that a leaderboard is created, it needs to show the player these numbers:
 
@@ -82,7 +82,7 @@ Now that a leaderboard is created, it needs to show the player these numbers:
 
 Each of these numbers will be an IntValue, a placeholder object for a number.
 
-### Coding Player Gold
+### Code player gold
 
 Start with coding a stat for gold.
 
@@ -140,14 +140,14 @@ Start with coding a stat for gold.
 
    <img src="../../assets/education/adventure-game-series/adventure-leaderboard-empty.jpg" width="70%" />
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 If you don't see the leaderboard, try the following:
 
 - Make sure that `.Value` is capitalized.
 - Make sure that the variable for the IntValue is parented to the leaderboard like `gold.Parent = leaderstats`.
 
-### Coding Items and Spaces
+### Code items and spaces
 
 Remember that the stat names can be anything based off the game design document. In other words, `"Items"` can be `"Crystals"` instead.
 
@@ -188,7 +188,7 @@ If the leaderboard doesn't appear, try checking the following below.
 - Make sure each IntValue is spelled exactly as shown
 - Check that the PlayerAdded event is at the bottom of the script
 
-## Complete PlayerSetup Script
+## Complete PlayerSetup script
 
 A finished version of the script can be referenced below.
 

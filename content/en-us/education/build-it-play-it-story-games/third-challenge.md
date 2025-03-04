@@ -1,5 +1,5 @@
 ---
-title: Third Challenge
+title: Third challenge
 description: The third part of the Story Games series that teaches you to code in Roblox. Complete a quiz to earn a free Roblox avatar prize.
 next: /education/build-it-play-it-story-games/complete-the-challenge
 prev: /education/build-it-play-it-story-games/finish-and-add

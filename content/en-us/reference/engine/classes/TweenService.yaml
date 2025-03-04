@@ -126,41 +126,51 @@ methods:
     summary: |
       Calculates a value simulating a critically damped spring.
     description: |
-      Returns a value that allows smoothing a value towards a target simulating a critically damped spring.
-      Supports `Datatype.Vector2`, `Datatype.Vector3`, and `Datatype.CFrame`, and number.
+      Returns a tuple that allows smoothing a value towards a target, simulating
+      a critically damped spring. Supports `Datatype.Vector2`,
+      `Datatype.Vector3`, `Datatype.CFrame`, and number.
     code_samples: []
     parameters:
       - name: current
         type: Variant
         default:
-        summary: ''
+        summary: |
+          The current position.
       - name: target
         type: Variant
         default:
-        summary: ''
+        summary: |
+          The target position.
       - name: velocity
         type: Variant
         default:
-        summary: ''
+        summary: |
+          The initial velocity at which the current position should approach the
+          target position.
       - name: smoothTime
         type: float
         default:
-        summary: ''
+        summary: |
+          The duration in which the total smoothing operation should take place.
       - name: maxSpeed
         type: float?
         default:
-        summary: ''
+        summary: |
+          The maximum speed at which the current position should approach the
+          target position.
       - name: dt
         type: float?
         default:
-        summary: ''
+        summary: |
+          The rate at which the smoothing operation should be applied.
     returns:
       - type: Tuple
-        summary: ''
+        summary: |
+          The new position and velocity calculated from the smoothing operation.
     tags: []
     deprecation_message: ''
     security: None
-    thread_safety: Unsafe
+    thread_safety: Safe
     capabilities: []
     writeCapabilities: []
 events: []

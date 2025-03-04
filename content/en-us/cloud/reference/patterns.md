@@ -24,7 +24,7 @@ You can probably infer the difference between the two: some user restrictions ap
 
 Many APIs return a path as part of their response, which you can use to make further requests. If an API needs more than a few seconds to fulfill a request, it often returns an [operation](#long-running-operations) rather than the resource or response itself.
 
-## Content Length and Type
+## Content length and type
 
 Many API calls, particularly those that create or update resources, require a JSON request body. If your request has a body, be sure to include the `Content-Length` and `Content-Type` headers. Most HTTP clients add these headers automatically.
 
@@ -62,7 +62,7 @@ GET /cloud/v2/users/{userId}/inventory-items?maxPageSize=25&pageToken=aaaBBB
 Aside from the `pageToken`, you must use the same query for pagination to work
 properly. Altering any filter parameter results in a 400 error.
 
-## Long Running Operations
+## Long running operations
 
 Some methods return an `Operation` object that represents a long-running request
 that returns an asynchronous response later. The object contains the following
@@ -115,7 +115,7 @@ def PollForResults(operationPath):
            currentRetries += 1
 ```
 
-For a more complete code sample that uses a fixed retry interval rather than exponential backoff, see [Polling for Results](../open-cloud/instance.md#polling-for-results).
+For a more complete code sample that uses a fixed retry interval rather than exponential backoff, see [Poll for results](../guides/instance.md#poll-for-results).
 
 ## Filtering
 
@@ -123,7 +123,7 @@ Some methods let you filter the response by including a `filter` parameter in
 the request. The following sections describe filter syntax and guidelines for
 the specified endpoints.
 
-### List Group Memberships
+### List group memberships
 
 The wildcard character `-` can be used in place of group ID in order to list
 memberships across all groups: `groups/-/memberships`.
@@ -145,7 +145,7 @@ memberships by user (up to 50) in the following format:
 
 - **User filter**: `filter="user in ['users/1', 'users/156', 'users/9876543210', ...]"`
 
-### List Inventory Items
+### List inventory items
 
 You can filter by collectible status, inventory item type, and inventory
 item ID. If you don't provide a filter, the user's entire inventory is returned.
@@ -163,7 +163,7 @@ The filter format is a semicolon-separated list:
 You can't combine type and ID fields in the same filter.
 </Alert>
 
-#### Type Fields
+#### Type fields
 
 | Filter                    | Type                                                    | Description                                                                                                                                                                                        |
 | :------------------------ | :------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -173,7 +173,7 @@ You can't combine type and ID fields in the same filter.
 | `onlyCollectibles`        | boolean                                                 | Include **only** collectibles in the response. Default is false. This field must be used with the `inventoryItemAssetTypes` field in order to return items and only returns non-UGC limited items. |
 | `privateServers`          | boolean                                                 | Include private servers in the response. Default is false. Must have Inventory read scope to filter by this field.                                                                                 |
 
-#### ID Fields
+#### ID fields
 
 | Filter             | Type   | Description                                                                                                            |
 | :----------------- | :----- | :--------------------------------------------------------------------------------------------------------------------- |

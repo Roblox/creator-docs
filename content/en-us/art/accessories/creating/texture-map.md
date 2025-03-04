@@ -1,5 +1,5 @@
 ---
-title: Creating Texture Map
+title: Create texture map
 description: Generate a 2D texture map image that you can save your texture painting to.
 prev: /art/accessories/creating/unwrapping
 next: /art/accessories/creating/texture-painting

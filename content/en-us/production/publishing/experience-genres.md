@@ -1,5 +1,5 @@
 ---
-title: Experience Genres
+title: Genres
 description: Genres help users better discover and understand the content of your experience.
 ---
 
@@ -7,7 +7,7 @@ Your experience's **genre** and optional **subgenre** are displayed on the exper
 
 <img src="../../assets/publishing/experience-metadata/Genre-Example.png" alt="Experience details showing rating, active users, total visits, developer, genre, subgenre, and server size." />
 
-## Updating Genres
+## Update genres
 
 You can update your experience's genre and optional subgenre in the Creator Dashboard.
 
@@ -27,7 +27,7 @@ To update your genre:
 
 When you update your genre, the genre immediately updates on your experience's main page, but it may take a few days to reflect in other Discovery systems like genre-specific sorts in Charts.
 
-## Genre Accuracy
+## Genre accuracy
 
 To ensure genres are accurate and relevant for users, Roblox regularly reviews experiences and may update any genre selections that appear inaccurate. If Roblox updates your experience's genre, you will be notified by email and the change will appear on the experience's Settings page.
 
@@ -40,7 +40,7 @@ To appeal a genre change made by Roblox:
 1. Confirm that Roblox changed your genre by viewing the change on your experience's **Settings** page within the Creator Dashboard.
 2. Navigate to [roblox.com/support](http://roblox.com/support).
 3. Confirm that you are logged into your Roblox account with edit permissions for the experience.
-4. Select the **Experience Genre** help category, and provide the [Universe ID](../../cloud/open-cloud/data-store-api-handling.md#universe-id) of your experience in the **Universe ID** field.
+4. Select the **Experience Genre** help category, and provide the [Universe ID](../../cloud/guides/data-store-api-handling.md#universe-id) of your experience in the **Universe ID** field.
 5. Click **Continue** to submit your appeal.
 
 Roblox will review your appeal and notify you of the outcome, usually within a few days. If your appeal is accepted, your genre will reset back to the previous genre before Roblox changed it. If your appeal is rejected, your genre will remain the same, and you won't be able to appeal the decision again.
@@ -49,7 +49,7 @@ Roblox will review your appeal and notify you of the outcome, usually within a f
 If your appeal has not yet been reviewed and you update your genre through the regular selection flow, your original appeal will not be reviewed.
 </Alert>
 
-## Best Practices
+## Best practices
 
 Selecting a genre helps users discover and understand what to expect from your experience. Consider the following best practices to select the most relevant genre for your experience.
 
@@ -57,7 +57,7 @@ Selecting a genre helps users discover and understand what to expect from your e
 - **Selecting a subgenre** — While genres give users a broad sense of what kind of gameplay to expect, subgenres help describe the core mechanics of your experience in more detail. It's recommended to select a subgenre if one applies. However, if there isn't a subgenre that fits your experience, you can still select a genre without a subgenre.
 - **Genre and subgenre descriptions** — Refer to the [genre and subgenre descriptions](#genre-and-subgenre-descriptions) to compare genres and help you make the best choice for your experience.
 
-## Genre and Subgenre Descriptions
+## Genre and subgenre descriptions
 
 Use the following genre descriptions and additional subgenres to best represent your experience's content. Some genres do not include subgenres.
 
@@ -97,7 +97,7 @@ Experiences meant to entertain through consumption or creation of content, inclu
 - **Showcase & Hub** — Experiences that act as a demo, show off an immersive environment, or highlight and portal to other experiences.
 - **Video** — Experiences for watching or creating video content.
 
-### Obby & Platformer
+### Obby & platformer
 
 Experiences where players navigate surfaces and obstacles to progress. Player actions often involve jumping, climbing, or changing directions.
 
@@ -108,7 +108,7 @@ Experiences where players navigate surfaces and obstacles to progress. Player ac
 - **Runner** — Experiences where players automatically move and must avoid obstacles to continue.
 - **Tower Obby** — Experiences where players climb upwards through a series of platforms and obstacles.
 
-### Party & Casual
+### Party & casual
 
 Experiences focused on casual social play with other players.
 
@@ -130,7 +130,7 @@ Experiences focused on problem-solving challenges to progress.
 <br/>
 <h6>Subgenres</h6>
 
-- E**scape Room** — Experiences focused on solving puzzles to escape a room or building.
+- **Escape Room** — Experiences focused on solving puzzles to escape a room or building.
 
 - **Match & Merge** — Experiences where players combine items to create new ones.
 
@@ -149,7 +149,7 @@ Experiences where players embody characters in a fictional world, making choices
 
 - **Turn-based RPG** — RPG experiences involving turn-based combat.
 
-### Roleplay & Avatar Sim
+### Roleplay & avatar sim
 
 Experiences where players immerse themselves in various roles, often with avatar customization. They emphasize creativity, social interaction, and personal expression.
 
@@ -211,7 +211,7 @@ Experiences simulating real-world systems, processes, and activities. The focus 
 
 Experiences that primarily serve to connect people through hanging out, communication, or sharing.
 
-### Sports & Racing
+### Sports & racing
 
 Experiences focused on sports or racing related competition.
 
@@ -243,6 +243,6 @@ Experiences where the objective is for players to survive, escape, or defeat som
 - **1 vs All** — Experiences where players have different roles and a win condition. Typically one player is "it" and the others need to escape or defeat them.
 - **Escape** — Experiences challenging players to make a successful escape in order to survive a threat.
 
-### Utility & Other
+### Utility & other
 
 Experiences that don't fit into the other genres, including utility experiences that provide value to users in some way.

@@ -3,17 +3,17 @@ title: Asset Manager
 description: The Asset Manager lets you manage places and bulk import assets into your experience.
 ---
 
-The **Asset Manager** lets you manage [places](../../production/publishing/publishing-experiences-and-places.md) and bulk import assets into your experience, including [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../sound/assets.md), and [models](../../parts/models.md).
+The **Asset Manager** lets you manage [places](../../production/publishing/publish-experiences-and-places.md) and bulk import assets into your experience, including [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [packages](../../projects/assets/packages.md), [audio](../../sound/assets.md), and [models](../../parts/models.md).
 
 <img src="../../assets/studio/general/View-Tab-Asset-Manager.png" width="776" alt="Studio's View tab with the Asset Manager button highlighted." />
 
-## Asset Folders
+## Asset folders
 
 Assets are organized within folders based on their type. You can switch between **grid view** and **list view** by clicking the view toggle button.
 
 <img src="../../assets/studio/asset-manager/View-Toggle.png" width="460" alt="The Asset Manager window with the View toggle button highlighted." />
 
-## Importing Assets
+## Importing assets
 
 The **bulk import** tool is ideal for importing up to 50 files in one batch. Imported assets enter the moderation queue and are only visible to you within their respective [folder](#asset-folders) and within the **Inventory** tab of the [Toolbox](../../projects/assets/toolbox.md).
 
@@ -42,7 +42,7 @@ The **bulk import** tool is ideal for importing up to 50 files in one batch. Imp
 </tbody>
 </table>
 
-## Inserting Assets
+## Insert assets
 
 You can insert assets into the [Explorer](../../studio/explorer.md) window hierarchy by dragging-and-dropping or by right-clicking the asset name/tile and selecting **Insert**.
 
@@ -75,7 +75,7 @@ Behavior of dragging-and-dropping into the 3D viewport varies by asset type:
 </tbody>
 </table>
 
-## Quick Actions
+## Quick actions
 
 Quick actions are accessible by right-clicking an asset name/tile and selecting a context option.
 
@@ -103,7 +103,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
   </tr>
   <tr>
     <td>**Remove From Game**</td>
-    <td>Completely removes the place from the experience. Not applicable to the [starting place](../../production/publishing/publishing-experiences-and-places.md#publishing-a-starting-place).</td>
+    <td>Completely removes the place from the experience. Not applicable to the [starting place](../../production/publishing/publish-experiences-and-places.md#change-the-start-place).</td>
   </tr>
 </tbody>
 </table>
@@ -242,7 +242,7 @@ Quick actions are accessible by right-clicking an asset name/tile and selecting 
 </TabItem>
 </Tabs>
 
-## Asset Inspection
+## Asset inspection
 
 You can closely inspect an image, mesh, package, or audio file by hovering over its thumbnail in [grid view](#asset-folders) and clicking the "magnify" icon, or by right-clicking its name in [list view](#asset-folders) and selecting **Asset&nbsp;Preview**.
 

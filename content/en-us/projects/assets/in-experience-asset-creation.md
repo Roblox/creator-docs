@@ -1,5 +1,5 @@
 ---
-title: In-Experience Asset Creation
+title: In-Experience asset creation
 description: Explains how to allow users to create and save assets in your experience.
 ---
 
@@ -7,13 +7,13 @@ With the in-experience asset creation feature, you can allow your users to save 
 
 For example, you can enable users to create custom creatures as pets in your experience, and allow them to save their favorite pets to their inventories. You have full control to specify which objects users can modify and save from your experience. Users in turn can display their creations on their profiles with attribution to your experience, boosting visibility of your experience.
 
-## Supported Asset Types and Limits
+## Supported asset types and limits
 
 Just like all assets on the platform, in-experience creations are subject to [asset moderation](../../projects/assets/index.md#asset-moderation). Currently, you can only allow users to create [packages](../../projects/assets/packages.md) from your experience. These packages can't contain any scripts or private assets, such as audio, video, and nested packages. If the system detects scripts or private assets in a package that can be saved by users, it blocks the in-experience save action by hiding the save prompt for users.
 
-When you are running or testing your experience and add scripts or private assets as part of an in-experience creation, it fails to save and prompts error messages to the Studio [Output Window](../../studio/output.md) or the [Developer Console](../../studio/developer-console.md).
+When you are running or testing your experience and add scripts or private assets as part of an in-experience creation, it fails to save and prompts error messages to the Studio [Output window](../../studio/output.md) or the [Developer Console](../../studio/developer-console.md).
 
-## Enabling In-Experience Asset Creation
+## Enabling in-experience asset creation
 
 To enable in-experience asset creation for your users, use the `Class.AssetService:PromptCreateAssetAsync()` API method in a server-side script, along with other creation logic. Specify which instances in your experience you want to enable this functionality, set a custom trigger (such as a UI icon) for invoking the method, and listen for client remote events for saving assets.
 
@@ -69,7 +69,7 @@ PublishEvent.OnServerEvent:Connect(onUserPublish)
 
 <img src="../../assets/misc/In-Experience-Creation-Place.png" width="780" alt="A close up view of an experience's tile on its landing page. The ellipsis button is highlighted." />
 
-## Post-Creation and Attribution
+## Post-creation and attribution
 
 After users create and save an asset from your experience, they can find it in the following places:
 

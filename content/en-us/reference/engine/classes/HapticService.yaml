@@ -3,11 +3,11 @@ type: class
 category: Input
 memory_category: Instances
 summary: |
-  Provides haptic feedback to some gamepad controllers.
+  Provides haptic feedback to controllers and devices.
 description: |
-  Modern controllers and devices have motors built in to provide haptic
+  Modern controllers and devices have motors built‑in to provide haptic
   feedback. Adding rumbles and vibrations can provide subtle feedback that is
-  hard to convey through visuals or audio.
+  hard to convey through visuals or audio alone.
 
   Roblox supports haptics for the following devices:
 
@@ -23,20 +23,21 @@ tags:
   - NotCreatable
   - Service
   - NotReplicated
-deprecation_message: ''
+deprecation_message: |
+  This service will be superseded by `Class.HapticEffect|HapticEffect`, a newer
+  instance that will support multiple haptic effect types, looped effects, and
+  customizable haptics.
 properties: []
 methods:
   - name: HapticService:GetMotor
     summary: |
       Returns the current vibration value set to the specified
       `Class.InputObject.UserInputType|UserInputType` and `Enum.VibrationMotor`.
-      This will not return anything if `Class.HapticService:SetMotor()|SetMotor`
-      has not been called prior.
     description: |
       Returns the current vibration value set to the specified
       `Class.InputObject.UserInputType|UserInputType` and `Enum.VibrationMotor`.
-      This will not return anything if `Class.HapticService:SetMotor()|SetMotor`
-      has not been called prior.
+      This will not return anything if
+      `Class.HapticService:SetMotor()|SetMotor()` has not been called prior.
     code_samples:
     parameters:
       - name: inputType
@@ -53,8 +54,8 @@ methods:
       - type: Tuple
         summary: |
           The current vibration value set to the specified `Enum.UserInputType`
-          and `Enum.VibrationMotor` or nil if
-          `Class.HapticService:SetMotor()|SetMotor` has not been called prior.
+          and `Enum.VibrationMotor` or `nil` if
+          `Class.HapticService:SetMotor()|SetMotor()` has not been called prior.
     tags: []
     deprecation_message: ''
     security: None
@@ -63,10 +64,10 @@ methods:
     writeCapabilities: []
   - name: HapticService:IsMotorSupported
     summary: |
-      Returns true if the specified motor is available to be used with the
+      Returns `true` if the specified motor is available to be used with the
       specified `Enum.UserInputType`.
     description: |
-      Returns true if the specified motor is available to be used with the
+      Returns `true` if the specified motor is available to be used with the
       specified `Enum.UserInputType`.
     code_samples:
     parameters:
@@ -85,8 +86,8 @@ methods:
     returns:
       - type: bool
         summary: |
-          True if the specified motor is available to be used with the specified
-          `Enum.UserInputType`, false if not.
+          Boolean of `true` if the specified motor is available to be used with
+          the specified `Enum.UserInputType`, `false` if not.
     tags: []
     deprecation_message: ''
     security: None
@@ -95,10 +96,10 @@ methods:
     writeCapabilities: []
   - name: HapticService:IsVibrationSupported
     summary: |
-      Returns true if the specified `Enum.UserInputType` supports haptic
+      Returns `true` if the specified `Enum.UserInputType` supports haptic
       feedback.
     description: |
-      Returns true if the specified `Enum.UserInputType` supports haptic
+      Returns `true` if the specified `Enum.UserInputType` supports haptic
       feedback.
     code_samples:
     parameters:
@@ -111,7 +112,8 @@ methods:
     returns:
       - type: bool
         summary: |
-          True if the specified `Enum.UserInputType` supports haptic feedback.
+          Boolean of `true` if the specified `Enum.UserInputType` supports
+          haptic feedback.
     tags: []
     deprecation_message: ''
     security: None
@@ -123,10 +125,10 @@ methods:
       Sets the vibration intensity of the specified
       `Class.InputObject.UserInputType|UserInputType` and `Enum.VibrationMotor`.
     description: |
-      Sets the vibration intensity of the specified
-      `Class.InputObject.UserInputType|UserInputType` and `Enum.VibrationMotor`.
-      Note that almost all use cases specify `Gamepad1` as the
-      `Class.InputObject.UserInputType|UserInputType`.
+      Sets the vibration intensity of the specified `inputType` and
+      `vibrationMotor`. Note that almost all usage cases specify
+      `Enum.UserInputType.Gamepad1` for `inputType` which is internally mapped
+      to the device's respective hardware.
     code_samples:
       - HapticService-SetMotor1
     parameters:

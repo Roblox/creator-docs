@@ -9,57 +9,7 @@ inherits:
   - Annotation
 tags: []
 deprecation_message: ''
-properties:
-  - name: WorkspaceAnnotation.AdorneeOffset
-    summary: ''
-    description: ''
-    code_samples: []
-    type: Vector3
-    tags:
-      - Hidden
-    deprecation_message: ''
-    security:
-      read: RobloxScriptSecurity
-      write: RobloxScriptSecurity
-    thread_safety: ReadSafe
-    category: Data
-    serialization:
-      can_load: false
-      can_save: false
-    capabilities: []
-    writeCapabilities: []
-methods:
-  - name: WorkspaceAnnotation:GetAbsolutePosition
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Vector3
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: WorkspaceAnnotation:SetAdorneeOffsetFromAbsolutePosition
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: position
-        type: Vector3
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
+properties: []
+methods: []
 events: []
 callbacks: []

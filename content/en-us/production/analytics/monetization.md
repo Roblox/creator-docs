@@ -9,7 +9,7 @@ description: Explains how to improve monetization metrics for your experience.
 
 **Monetization** measures your experience's ability to generate revenue.
 
-## Viewing Monetization Metrics
+## View monetization metrics
 
 To view your experience's monetization analytics:
 
@@ -18,7 +18,7 @@ To view your experience's monetization analytics:
 2. In the **Monetization** menu, select **Overview**.
     <img src="../../assets/analytics/monetization/monetization-overview.png" width="50%"/>
 
-You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md#granting-group-permission).
+You can view analytics for individual or group owned experience. To view the latter, you need to have [group permissions for analytics](../../production/analytics/analytics-dashboard.md#grant-group-permission).
 
 On the monetization page, you can see the following metrics:
 
@@ -34,12 +34,12 @@ From there, you can explore data for each monetization product:
 
 - [Developer Products](../monetization/developer-products.md#developer-product-analytics)
 - [Passes](../monetization/game-passes.md#passes-analytics)
-- [Avatar Items](../monetization/avatar-items.md#avatar-items-analytics)
+- [Avatar items](../monetization/avatar-items.md#avatar-items-analytics)
 - [Subscriptions](../monetization/subscriptions.md#subscription-analytics)
-- [Immersive Ads](../monetization/immersive-ads.md#viewing-immersive-ad-metrics)
-- [Engagement Payouts](../monetization/engagement-based-payouts.md#accessing-payout-data)
+- [Immersive ads](../monetization/immersive-ads.md#view-immersive-ad-metrics)
+- [Engagement payouts](../monetization/engagement-based-payouts.md#access-payout-data)
 
-## Improving Revenue
+## Improve revenue
 
 Here are some high level tips for growing your revenue:
 
@@ -52,7 +52,7 @@ Devote as much creativity and attention to your storefront as you do to the rest
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YdplC2WVkWc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Improving Payer Conversion Rate
+## Improve payer conversion rate
 
 Payer conversion measures the percent of your users who engage with your paid features or content.
 
@@ -64,7 +64,7 @@ To improve this metric:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Cli3ogW-azk" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Improving Average Revenue per Paying User (ARPPU)
+## Improve average revenue per paying user (ARPPU)
 
 ARPPU measures the spending behavior of your repeat purchasers.
 
@@ -74,7 +74,7 @@ To improve this metric:
 2. **Provide a variety of purchasable items**. If you only have a limited number of sales items available, users might not have anything new to purchase even if they're interested in buying something new. You can find your top-selling items and expand those offerings to provide more options for users.
 3. **Add seasonal items**. Seasonal items can create a sense of fun and excitement around particular holidays or real-world events.
 
-## Improving Average Revenue per Daily Active Users (ARPDAU)
+## Improve average revenue per daily active users (ARPDAU)
 
 ARPDAU is a combination of your payer conversion rate and your ARPPU.
 

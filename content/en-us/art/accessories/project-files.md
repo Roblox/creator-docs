@@ -1,5 +1,5 @@
 ---
-title: Accessory Project Files and References
+title: Accessory project files and references
 description: Download various accessory-related project files and reference files.
 ---
 
@@ -10,7 +10,7 @@ See [Resources](../../avatar/resources.md) for a complete list of avatar-related
 The following `.fbx`, `.blend`, and `.ma` project files are available to use as templates or as reference:
 
 <Tabs>
-  <TabItem label="Clothing and Mannequins">
+  <TabItem label="Clothing and mannequins">
   <table>
 <thead>
   <tr>
@@ -26,6 +26,10 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
   <tr>
     <td><a href="../../assets/accessories/reference-files/Additional-FBX-assets.zip" download>Additional-FBX-assets.zip</a></td>
     <td>Caged 3D accessory models ready for import into Studio or in a modeling tool.</td>
+  </tr>
+  <tr>
+    <td><a href="../../assets/accessories/reference-files/Caging-examples.zip" download>Additional-FBX-assets.zip</a></td>
+    <td>Additional caged clothing items from How to cage Roblox's [3D clothing video guide](https://www.youtube.com/watch?v=QwZaA9Gc-WQ).</td>
   </tr>
   <tr>
     <td><a href="../../assets/art/reference-files/ClassicMannequin.fbx" download>ClassicMannequin.fbx</a></td>

@@ -76,6 +76,7 @@ https://docs.python.org/3/library/base64.html
 https://docs.python.org/3/library/hashlib.html
 https://drobotscompany.com/technology-and-coding-stem-camps-kids-summer-camps-for-ages-8-to-13/
 https://dushanbe.alg.academy/
+https://editor.swagger.io/
 https://edmo.org/
 https://empirecode.co/
 https://era-it-center.ru/roblox-studio/
@@ -120,6 +121,12 @@ https://github.com/
 https://github.com/Elttob/Fusion
 https://github.com/Roblox/StudioWidgets
 https://github.com/Roblox/creator-docs
+https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/cloud.docs.json
+https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/assets/v1.json
+https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/datastores-api/ordered-v1.json
+https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/datastores-api/v1.json
+https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/messaging-service/v1.json
+https://github.com/Roblox/creator-docs/blob/main/content/en-us/reference/cloud/universes-api/v1.json
 https://github.com/Roblox/roact/
 https://github.com/Roblox/roblox-blender-plugin
 https://github.com/osyrisrblx/t
@@ -158,6 +165,7 @@ https://kodingakademi.id/
 https://kodingnext.com/
 https://krita.org/
 https://krubots.com/
+https://learn.openapis.org/glossary.html
 https://llama.meta.com/llama3/license/
 https://learn.microsoft.com/en-us/style-guide/welcome/
 https://learning.ccsso.org/common-core-state-standards-initiative
@@ -212,6 +220,7 @@ https://skysmart.ru/programmirovanie-dlya-detej?direction=basics
 https://small.academy/cursuri/programare-roblox/
 https://sopa.tulane.edu/blog/guide-to-protecting-young-online-gamers
 https://soygenius.com/
+https://spec.openapis.org/oas/v3.0.4
 https://start.codabra.org/
 https://steameducate.com/
 https://steamiowacity.org/
@@ -409,7 +418,7 @@ https://www.whitehatjr.com/
 https://www.wizkidlearning.com/
 https://www.wowschool.pl/
 https://www.youthtechinc.com/
-https://www.youtube.com/@RobloxLevelUp
+https://www.youtube.com/@RobloxLearnOfficial
 https://www.youtube-nocookie.com/embed/V1uFFUUCLpo
 https://www.youtube-nocookie.com/embed/2My8jE47clI
 https://www.youtube-nocookie.com/embed/0fAhhoXK12o
@@ -484,6 +493,9 @@ https://www.youtube-nocookie.com/embed/9mXvhYSv7fc
 https://www.youtube-nocookie.com/embed/7iJKUUiKc0Y
 https://www.youtube-nocookie.com/embed/x_RPLaXYhdQ
 https://www.youtube-nocookie.com/embed/ULr3CZ8egP8
+https://www.youtube-nocookie.com/embed/r_unfGZT5Ps
+https://www.youtube-nocookie.com/embed/QwZaA9Gc-WQ
+https://www.youtube.com/watch?v=QwZaA9Gc-WQ
 https://www.youtube.com/c/Disobeyedcrab
 https://www.youtube.com/c/NatalieClabo
 https://www.youtube.com/c/SpooksHD
@@ -582,3 +594,17 @@ https://github.com/evaera/roblox-animation-transfer?tab=readme-ov-file#roblosecu
 https://github.com/evaera/roblox-animation-transfer?tab=readme-ov-file
 https://github.com/evaera/roblox-animation-transfer
 https://support.tipalti.com/Content/Topics/UserGuide/PaymentInformation/PaymentMethodsCoverage/IntroUSD.htm?Highlight=payment%20coverage#USD
+https://github.com/Roblox/creator-docs/tree/main/content/en-us/reference/cloud
+https://www.youtube.com/playlist?list=PLuEQ5BB-Z1PK3EcpypEHHMlc2lknQCJyP
+https://docs.blender.org/manual/en/2.80/scene_layout/object/editing/transform/control/pivot_point/index.html
+https://developer.mozilla.org/docs/Web/HTTP/Methods/GET
+https://developer.mozilla.org/docs/Web/HTTP/Methods/HEAD
+https://developer.mozilla.org/docs/Web/HTTP/Methods/POST
+https://developer.mozilla.org/docs/Web/HTTP/Methods/PUT
+https://developer.mozilla.org/docs/Web/HTTP/Methods/DELETE
+https://developer.mozilla.org/docs/Web/HTTP/Methods/CONNECT
+https://developer.mozilla.org/docs/Web/HTTP/Methods/OPTIONS
+https://developer.mozilla.org/docs/Web/HTTP/Methods/TRACE
+https://developer.mozilla.org/docs/Web/HTTP/Methods/PATCH
+https://docs.google.com/forms/d/e/1FAIpQLSfGTRQwATB2wUg0P4HUSTtyXrhptFahJifo1ew84SyqtfSBfg/viewform
+https://www.youtube.com/playlist?list=PLuEQ5BB-Z1PJi8RJ7Kuc0JhcT0ubgaL43

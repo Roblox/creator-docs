@@ -1,0 +1,2055 @@
+name: HumanoidRigDescription
+type: class
+category:
+memory_category: Animation
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties:
+  - name: HumanoidRigDescription.Chest
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.ChestRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.ChestRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.ChestSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.ChestTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.Head
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.HeadRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.HeadRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.HeadSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.HeadTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftAnkle
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftAnkleRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftAnkleRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftAnkleSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftAnkleTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftClavicle
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftClavicleRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftClavicleRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftClavicleSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftClavicleTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftElbow
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftElbowRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftElbowRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftElbowSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftElbowTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftHip
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftHipRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftHipRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftHipSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftHipTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftKnee
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftKneeRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftKneeRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftKneeSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftKneeTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftShoulder
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftShoulderRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftShoulderRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftShoulderSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftShoulderTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftToes
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftToesRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftToesRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftToesSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftToesTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftWrist
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftWristRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftWristRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftWristSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.LeftWristTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.Neck
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.NeckRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.NeckRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.NeckSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.NeckTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.Pelvis
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.PelvisRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.PelvisRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.PelvisSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.PelvisTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightAnkle
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightAnkleRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightAnkleRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightAnkleSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightAnkleTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightClavicle
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightClavicleRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightClavicleRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightClavicleSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightClavicleTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightElbow
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightElbowRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightElbowRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightElbowSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightElbowTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightHip
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightHipRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightHipRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightHipSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightHipTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightKnee
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightKneeRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightKneeRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightKneeSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightKneeTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightShoulder
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightShoulderRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightShoulderRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightShoulderSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightShoulderTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightToes
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightToesRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightToesRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightToesSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightToesTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightWrist
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightWristRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightWristRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightWristSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RightWristTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.Root
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RootRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RootRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RootSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.RootTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.Waist
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Instance
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Mapping
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.WaistRangeMax
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.WaistRangeMin
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Vector3
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Range
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.WaistSize
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Size
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+  - name: HumanoidRigDescription.WaistTposeAdjustment
+    summary: ''
+    description: ''
+    code_samples: []
+    type: CFrame
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Tpose
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities:
+      - Animation
+    writeCapabilities: []
+methods:
+  - name: HumanoidRigDescription:Automap
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: character
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
+  - name: HumanoidRigDescription:GetJointNames
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
+  - name: HumanoidRigDescription:GetR15JointNames
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
+  - name: HumanoidRigDescription:GetR6JointNames
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Safe
+    capabilities: []
+    writeCapabilities: []
+events: []
+callbacks: []

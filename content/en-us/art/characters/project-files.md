@@ -1,5 +1,5 @@
 ---
-title: Avatar Project Files and References
+title: Avatar project files and references
 description: Download various character-related project files and reference files.
 ---
 
@@ -7,7 +7,7 @@ description: Download various character-related project files and reference file
 See [Resources](../../avatar/resources.md) for a complete list of avatar-related downloadable content.
 </Alert>
 
-## Project Files
+## Project files
 
 The following `.fbx`, `.blend`, and `.ma` project files are available to use as examples, boilerplate, or reference:
 
@@ -23,7 +23,7 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
 <tbody>
   <tr>
     <td><a href="../../assets/modeling/skinned-meshes/Lola.fbx" download>Lola.fbx</a></td>
-    <td>A skinned R15 character created from the <a href="../../art/modeling/skinning-a-humanoid-model.md">Skinning a Humanoid Model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../art/characters/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.</td>
+    <td>A skinned R15 character created from the <a href="../../art/modeling/skin-a-humanoid-model.md">Skin a humanoid model</a> guide. Since this reference model doesn't yet have [inner and outer cage mesh data](../../art/characters/specifications.md#inner-and-outer-cages), this model can't equip layered clothing or accessories.</td>
   </tr>
   <tr>
     <td><a href="../../assets/avatar/dynamic-heads/reference-files/Fish-Person.zip" download>Fish-Person.zip</a></td>
@@ -39,11 +39,11 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
   </tr>
     <tr>
     <td><a href="../../assets/art/reference-files/ClassicMannequin.fbx" download>ClassicMannequin.fbx</a></td>
-    <td>A [Classic body](../../art/characters/specifications.md#classic) type blank mannequin to use in Studio or your modeling application.</td>
+    <td>A [classic body](../../art/characters/specifications.md#classic) type blank mannequin to use in Studio or your modeling application.</td>
   </tr>
   <tr>
     <td><a href="../../assets/art/reference-files/ClassicMannequin_With-Cages.fbx" download>ClassicMannequin_With-Cages</a></td>
-    <td>A [Classic](../../art/characters/specifications.md#classic) body type blank mannequin with **body cages** to use in Studio or your modeling application for clothing design. Due to unconfigured cage objects, this file may not import correctly into Studio until modified.</td>
+    <td>A [classic](../../art/characters/specifications.md#classic) body type blank mannequin with **body cages** to use in Studio or your modeling application for clothing design. Due to unconfigured cage objects, this file may not import correctly into Studio until modified.</td>
   </tr>
   <tr>
     <td><a href="../../assets/art/reference-files/RthroMannequin.fbx" download>RthroMannequin.fbx</a></td>
@@ -143,12 +143,12 @@ The following `.fbx`, `.blend`, and `.ma` project files are available to use as 
 
 ## Templates
 
-If you are creating character models, you can choose from a variety of starting templates that best match your final design and save time on creating the [avatar components](../../art/characters/index.md#components-of-an-avatar). See [Creating with Templates](../../art/characters/creating/index.md#template-files) for important information on using these template files.
+If you are creating character models, you can choose from a variety of starting templates that best match your final design and save time on creating the [avatar components](../../art/characters/index.md#components-of-an-avatar). See [Create with templates](../../art/characters/creating/index.md#template-files) for important information on using these template files.
 
 Each `.zip` contains a `.blend`, `.fbx`, and PBR texture `.png` files for that template model. If using Blender or following the [template creation guides](../../art/characters/creating/index.md), use the `.blend` project.
 
 <Alert severity = 'warning'>
-If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/combining-head-geometry.md) in order for the assets to properly validate before publishing to the Marketplace.
+If you are using Roblox's avatar template files, you must perform the [cleanup steps](../../art/characters/creating/combine-head-geometry.md) in order for the assets to properly validate before publishing to the Marketplace.
 </Alert>
 
 <Tabs>

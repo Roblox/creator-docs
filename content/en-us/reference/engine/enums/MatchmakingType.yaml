@@ -1,0 +1,23 @@
+name: MatchmakingType
+type: enum
+summary: ''
+description: ''
+code_samples: []
+tags: []
+deprecation_message: ''
+items:
+  - name: Default
+    summary: ''
+    value: 1
+    tags: []
+    deprecation_message: ''
+  - name: XboxOnly
+    summary: ''
+    value: 2
+    tags: []
+    deprecation_message: ''
+  - name: PlayStationOnly
+    summary: ''
+    value: 3
+    tags: []
+    deprecation_message: ''

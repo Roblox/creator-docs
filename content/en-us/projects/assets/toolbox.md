@@ -4,13 +4,13 @@ description: The Toolbox contains a selection of assets made by Roblox or Roblox
 id: toolbox
 ---
 
-The **Toolbox** contains a selection of [models](../../parts/models.md), [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../sound/assets.md), [plugins](../../studio/plugins.md), [videos](../../ui/frames.md#videoframe), and fonts made by Roblox or Roblox community members. It also includes all of the creations that you've personally published or those which were published by [groups](../../projects/groups.md) you belong to.
+The **Toolbox** contains a selection of [models](../../parts/models.md), [images](../../parts/textures-decals.md), [meshes](../../parts/meshes.md), [audio](../../sound/assets.md), [plugins](../../studio/plugins.md), [videos](../../ui/video-frames.md), and fonts made by Roblox or Roblox community members. It also includes all of the creations that you've personally published or those which were published by [groups](../../projects/groups.md) you belong to.
 
 <img src="../../assets/studio/general/View-Tab-Toolbox.png" width="776" alt="Studio's View tab with the Toolbox button highlighted." />
 
 ## Sections
 
-The Toolbox contains four distinct sections: [Creator Store](#creator-store), [Inventory](#inventory), [Recent](#recent), and [Creations](#creations).
+The Toolbox contains four distinct sections: Creator Store, Inventory, Recent, and Creations.
 
 ### Creator Store
 
@@ -40,16 +40,16 @@ The **Creations** tab is similar to [Inventory](#inventory), with the important 
 
 <img src="../../assets/studio/toolbox/Creations-Tab.png" alt="A close up view of the Toolbox with the Creations tab highlighted." width="360" />
 
-## Sorting and Searching
+## Sort and search
 
 <Tabs>
-<TabItem label="Asset Category">
+<TabItem label="Asset category">
 Within any of the Toolbox sections, use the **category selector** dropdown to sort assets by category. The options in the dropdown vary by section.
 
 <img src="../../assets/studio/toolbox/Creator-Store-Category-Selector.png" width="360" height="284" alt="The Toolbox window with the Category Selector highlighted" />
 
 </TabItem>
-<TabItem label="Creator Store Sorting">
+<TabItem label="Creator Store sorting">
 
 Within the [Creator Store](#creator-store) section, click the **advanced filter** button to limit results to [verified creator](../../production/publishing/account-verification.md) status, filter assets by a specific creator, triangle count, visual style, included objects, physically based rendering, holiday theme, and filter by sound length for [audio assets](../../sound/assets.md).
 
@@ -63,7 +63,7 @@ Within the [Creator Store](#creator-store) section, click the **advanced filter*
 </TabItem>
 </Tabs>
 
-## Asset Inspection
+## Asset inspection
 
 You can closely inspect a model, image, mesh, plugin, video, or font asset by hovering over its thumbnail and clicking the magnifying glass icon.
 
@@ -105,7 +105,7 @@ In the lower-right corner of the preview frame, the **composition** button revea
 
 <img src="../../assets/studio/general/Preview-Panel-Hierarchy.png" width="560" alt="A preview view of an asset in the Asset Manager, and the full hierarchy of the asset displays underneath the 3D representation. The Asset Composition icon is highlighted." />
 
-## Asset Configuration and Versioning
+## Asset configuration and versioning
 
 Right-clicking an asset and selecting **Edit Asset** opens the **Asset Configuration** window. In this window, you can edit the asset's details or restore it to a previous version.
 

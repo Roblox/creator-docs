@@ -1,5 +1,5 @@
 ---
-title: Experience Notifications
+title: Experience notifications
 description: Experience Notifications are a way for users to keep up with their favorite experiences through timely, personalized notifications.
 ---
 
@@ -14,25 +14,25 @@ import Guidelines from '../../includes/experience-notifications/guidelines.md'
 
 <Intro components={props.components} />
 
-## Eligibility Requirements
+## Eligibility requirements
 
 <Eligibility components={props.components} />
 
-## Usage Guidelines
+## Usage guidelines
 
 <Guidelines components={props.components} />
 
 ## Implementation
 
-Implementing Experience Notifications begins with [creating a notification string](#creating-a-notification-string) and including the [package](#including-the-package) in your project. Once these are set up, you can [send notifications](#sending-an-experience-notification) with optional [custom parameters](#customizing-notifications-using-parameters).
+Implementing Experience Notifications begins with [creating a notification string](#create-a-notification-string) and including the [package](#include-the-package) in your project. Once these are set up, you can [send notifications](#send-an-experience-notification) with optional [custom parameters](#customize-notifications-using-parameters).
 
-Alternatively, you can use the [Open Cloud API](../../cloud/open-cloud/experience-notifications.md) to trigger notifications through freeform API requests.
+Alternatively, you can use the [Open Cloud API](../../cloud/guides/experience-notifications.md) to trigger notifications through freeform API requests.
 
-### Creating a Notification String
+### Create a notification string
 
 <ImplementationCreateNotificationString components={props.components} />
 
-### Including the Package
+### Include the package
 
 To implement Experience Notifications, you must obtain the Lua package from the [Creator Store](../../production/creator-store.md).
 
@@ -58,13 +58,13 @@ To implement Experience Notifications, you must obtain the Lua package from the 
 
    <img src="../../assets/open-cloud/experience-notifications/Move-Package.png" width="320" />
 
-### Sending an Experience Notification
+### Send an experience notification
 
-Once you've [created a notification string](#creating-a-notification-string) and included the [package](#including-the-package) in your project, you can send notifications from server‑side scripts. Notifications will be delivered to [opted-in](https://en.help.roblox.com/hc/en-us/articles/24769602332692-Out-of-Experience-Notifications) users age 13+ through their Roblox notification stream, at which point they can join the experience directly via the **Join** button on the notification and spawn according to your [launch data](#including-launch-and-analytics-data).
+Once you've [created a notification string](#create-a-notification-string) and included the [package](#include-the-package) in your project, you can send notifications from server‑side scripts. Notifications will be delivered to [opted-in](https://en.help.roblox.com/hc/en-us/articles/24769602332692-Out-of-Experience-Notifications) users age 13+ through their Roblox notification stream, at which point they can join the experience directly via the **Join** button on the notification and spawn according to your [launch data](#include-launch-and-analytics-data).
 
 <img src="../../assets/open-cloud/experience-notifications/Notification-Stream.png" width="393" alt="Notifications stream on the Roblox app" />
 
-To send a basic notification to a specific user, include the [notification string](#creating-a-notification-string) asset ID in the payload's `messageId` field, then call the [createUserNotification](#createusernotification) function with the recipient's `Class.Player.UserId` and the request data.
+To send a basic notification to a specific user, include the [notification string](#create-a-notification-string) asset ID in the payload's `messageId` field, then call the [createUserNotification](#createusernotification) function with the recipient's `Class.Player.UserId` and the request data.
 
 ```lua title="Send an Experience Notification"
 local ServerScriptService = game:GetService("ServerScriptService")
@@ -89,9 +89,9 @@ if result.statusCode ~= 200 then
 end
 ```
 
-### Customizing Notifications Using Parameters
+### Customize notifications using parameters
 
-To customize the notification for each recipient, you can include **parameters** in the [notification string](#creating-a-notification-string), then customize the parameters when calling the API. For example, you can define the notification string as:
+To customize the notification for each recipient, you can include **parameters** in the [notification string](#create-a-notification-string), then customize the parameters when calling the API. For example, you can define the notification string as:
 
 <p><Chip label="{userId-friend} beat your high score by {points} points! Time to level up?" size="large" color="primary" variant="outlined" /></p>
 
@@ -128,7 +128,7 @@ if result.statusCode ~= 200 then
 end
 ```
 
-### Prompting Users to Enable Notifications
+### Prompt users to enable notifications
 
 To encourage users to enable notifications for your experience, you can display an in‑experience permission prompt to users age 13+ using the `Class.ExperienceNotificationService:PromptOptIn()` method.
 
@@ -171,9 +171,9 @@ ExperienceNotificationService.OptInPromptClosed:Connect(function()
 end)
 ```
 
-### Including Launch and Analytics Data
+### Include launch and analytics data
 
-To further improve user experience, you can include **launch data** in the notification, useful for scenarios such as routing users to a coordinate location or personalizing the joining experience. Additionally, you can include [analytics](#analytics) data to segment the performance of different categories of notifications. Please also refer to the [Player Invite Prompts](../../production/promotion/invite-prompts.md#including-launch-data) example on how launch data can be set and used.
+To further improve user experience, you can include **launch data** in the notification, useful for scenarios such as routing users to a coordinate location or personalizing the joining experience. Additionally, you can include [analytics](#analytics) data to segment the performance of different categories of notifications. Please also refer to the [Player invite prompts](../../production/promotion/invite-prompts.md#include-launch-data) example on how launch data can be set and used.
 
 ```lua title="Include Launch Data and Analytics Data"
 local ServerScriptService = game:GetService("ServerScriptService")
@@ -204,7 +204,7 @@ if result.statusCode ~= 200 then
 end
 ```
 
-## Delivery System
+## Delivery system
 
 <DeliverySystem components={props.components} />
 
@@ -212,15 +212,15 @@ end
 
 <AnalyticsOverview components={props.components} />
 
-### Notifications Summary
+### Notifications summary
 
 <AnalyticsNotificationsSummary components={props.components} />
 
-### Itemized Stats
+### Itemized stats
 
 <AnalyticsItemizedStats components={props.components} />
 
-## API Reference
+## API reference
 
 ### Functions
 
@@ -281,17 +281,17 @@ Table containing details on the notification to be sent to the user. Must contai
 	<tr>
     <td>`parameters`</td>
 		<td>table</td>
-    <td>A table of parameters used to render a notification message template. See [Customizing Notifications Using Parameters](#customizing-notifications-using-parameters) for example usage.</td>
+    <td>A table of parameters used to render a notification message template. See [Customize notifications using parameters](#customize-notifications-using-parameters) for example usage.</td>
   </tr>
 	<tr>
     <td>`joinExperience`</td>
 		<td>table</td>
-    <td>A call-to-action that represents joining an experience. Currently supports a `launchData` key‑value pair which represents arbitrary data available to an experience when a user joins the experience from the notification; this value is limited to a maximum of 200 bytes. See [Including Launch and Analytics Data](#including-launch-and-analytics-data) for example usage.</td>
+    <td>A call-to-action that represents joining an experience. Currently supports a `launchData` key‑value pair which represents arbitrary data available to an experience when a user joins the experience from the notification; this value is limited to a maximum of 200 bytes. See [Include launch and analytics data](#include-launch-and-analytics-data) for example usage.</td>
   </tr>
 	<tr>
     <td>`analyticsData`</td>
 		<td>table</td>
-    <td>Data for how analytics are reported. Currently supports a `category` key‑value pair which represents the notification category, used to group analytics data. See [Including Launch and Analytics Data](#including-launch-and-analytics-data) for example usage.</td>
+    <td>Data for how analytics are reported. Currently supports a `category` key‑value pair which represents the notification category, used to group analytics data. See [Include launch and analytics data](#include-launch-and-analytics-data) for example usage.</td>
   </tr>
 </tbody>
 </table>

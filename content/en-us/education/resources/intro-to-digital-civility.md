@@ -1,5 +1,5 @@
 ---
-title: Intro to Digital Civility
+title: Intro to digital civility
 description: Digital Civility is a set of skills and behaviors that create positive online experiences.
 ---
 
@@ -23,7 +23,7 @@ description: Digital Civility is a set of skills and behaviors that create posit
 
 Digital civility (or also known as digital citizenship) is a set of skills and behaviors that helps create positive online experiences. This field includes many topics, such as data, privacy and media literacy To start, this overview discusses online identities and communities. Practical tips are included to help educators foster positive online experiences.
 
-## Digital Identities
+## Digital identities
 
 Many of us create unique online identities. We might go online to pretend to be someone else, or enter a social network to talk about favorite games and movies. Regardless of who you are online, you're still accountable for your behaviors. Part of being a digital citizen is being **responsible** for your actions and helping others be **accountable** for their own.
 
@@ -43,13 +43,13 @@ If you're using this lesson in the classroom, take time for this discussion on b
    - Was there a time you were bullied online or in real life? How did it make you feel? Did it make you stressed, keep you from doing something you liked?
    - Outside Roblox, where are places online you've seen bullying, such as in a social network or game. How can you respond to that bullying?
 
-## Online Communities
+## Online communities
 
 <img src="../../assets/education/intro-to-digital-civility/digitalCitizenship_onlineCommunityHero.jpg" width="100%" />
 
 Roblox, as well as other social networks, are all great places to meet new people, hang out with friends, and play together. Part of what makes being online fun is friendly interactions, like helping someone. By being **positive** and **proactive**, everyone can contribute to an online community.
 
-### Building Positive Culture
+### Build positive culture
 
 Treat being online as you would real life. By being kind to others, they'll be kind in return. If everyone follows this standard, it creates a culture where kindness is the norm.
 
@@ -67,7 +67,7 @@ If you're using this lesson in the classroom, take time for this discussion on g
 
 2. Ask students what are some specific ways they can personally build a positive culture.
 
-## Countering Cyberbullying
+## Counter cyberbullying
 
 While cyberbullying does exist, you and others can personally take steps to address it. Instead of being a bystander, who observes an incident, be an **upstander** who takes action to reduce conflict.
 
@@ -90,7 +90,7 @@ Some ways that you can practice being an upstander are below.
 
 Additionally, one unique type of cyberbullying you might encounter is griefing. **Griefing** is where one player actively tries to disrupt another's game or creative experiences. For instance, if you are collaboratively building in Roblox Studio, griefing can be when someone destroys another's work. It may also happen in a Roblox experience, where one player purposes stands in front of another to annoy or harass them. To counter this, set strict expectations upfront to students and continue to reinforce good citizenship.
 
-## Activity - Upstander Roleplay
+## Activity - Upstander roleplay
 
 Help students be proactive in being upstanders by roleplaying how they'd react to cyberbullying. This handout includes different situations students may encounter and ideas for responses.
 

@@ -1,5 +1,5 @@
 ---
-title: Connect the Beam
+title: Connect the beam
 prev: /education/build-it-play-it-mansion-of-wonder/creating-engaging-experiences
 next: /education/build-it-play-it-mansion-of-wonder/using-particles-for-actions
 description: Learn how to connect a beam effect in Roblox Studio, and to configure it's properties to customize it to your game's needs. Part of the Build It Play It Mansion of Wonders series.
@@ -15,7 +15,7 @@ Now that you've made the attachments, it's time to connect them to the beam so t
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/set-goal-attachment.png"  />
 
-## Adjusting the Beam
+## Adjust the beam
 
 By default, a beam doesn't always face the camera. This may lead to situations where players are unable to see a beam from different angles. This can be fixed by turning on a property called **FaceCamera**.
 
@@ -38,7 +38,7 @@ By default, a beam doesn't always face the camera. This may lead to situations w
 
    <img src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/default-beam.jpeg"  />
 
-## Making the Tutorial Arrows
+## Make the tutorial arrows
 
 The image displayed along the beam can be customized by changing its 2D texture. In addition, beams have a variety of visual options, such as texture, color, motion that can be modified.
 
@@ -65,7 +65,7 @@ The image displayed along the beam can be customized by changing its 2D texture.
 
    <video controls src="../../assets/education/build-it-play-it-mansion-of-wonder/connect-the-beam/finished-beam-example.mp4"></video>
 
-### Tips for Color Choices
+### Tips for color choices
 
 **Color** is one opportunity for improving a first time user experience. For example, contrasting or saturated colors get more attention, making it easier to inform players where to look on their screen.
 

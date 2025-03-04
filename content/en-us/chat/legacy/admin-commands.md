@@ -1,12 +1,12 @@
 ---
-title: Admin Commands
+title: Admin commands
 description: Create custom admin commands for the deprecated legacy chat.
 comments: |
   1. This guide is intentionally not available in the nav list, but still searchable for users who want to use the legacy chat system.
 ---
 
 <Alert severity="error">
-  This guide covers admin commands of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see [In-Experience Text Chat](../../chat/in-experience-text-chat.md#creating-custom-commands) for creating custom chat commands.
+  This guide covers admin commands of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see [In-Experience Text Chat](../../chat/in-experience-text-chat.md#create-custom-commands) for creating custom chat commands.
 </Alert>
 
 An **admin command** is a keyword or phrase that a user with certain level of control can type into the chat window to trigger an action. This library uses chat modules, which allows for easy implementation of admin commands on top of the legacy chat system. Chat modules listen to incoming messages on the server and can execute actions based on whatever criteria is desired.
@@ -17,7 +17,7 @@ Whenever a Roblox place loads it checks if the Chat service is empty. If it does
 
 The first step in setting up the admin commands library is to add a new Chat Module to the Chat service. The library in this tutorial takes care of the heavy lifting done by a Chat Module so the only object you need to add to the Chat service is a new `Class.ModuleScript` . The name of your module script can be anything, but I suggest something intuitive like `AdminCommands`.
 
-## Implementing New Commands
+## Implement new commands
 
 Rather than implementing most of the Chat Module logic you will simply require the library module that does a bulk of the work and adds extra functionality. The simplest way to add the library into your module is to require it by its assetId at the top of your script.
 
@@ -108,7 +108,7 @@ Current utility functions are:
 | ToBoolean()                | string parameter                                   | bool   |
 | ValidateData()             | string expectedType, ...                           | bool   |
 
-## Example Commands
+## Example commands
 
 A useful command to have would be one that prints a list of all optional commands that users have available. This command outputs each command bound to the library and a few of its properties.
 
@@ -209,7 +209,7 @@ end
 AdminCommands:BindCommand({"explode"}, explodeCommand, 1, "Makes the specified player explode.")
 ```
 
-## Permission Library
+## Permission library
 
 If a non-admin tries to speak a command like this, which has a higher permission level than 0, it will not be triggered. The command system uses a separate Permission library, to which the experience creator is automatically given the permission level math.huge. Admins can be added using the following functions on your AdminCommands module object:
 
@@ -229,11 +229,11 @@ SetGroupRankPermission(number requesterUserId, number targetGroupId, number targ
 | GetGroupRankPermission()     | targetGroupId, targetRankId                                                        | int    |
 | GetUserGroupRankPermission() | number userId                                                                      | int    |
 
-## Quick-Start Module
+## Quick-start module
 
 For easier setup you can also use this [Quick Start](https://www.roblox.com/library/1163353653/Quick-Start-Admin-Commands), which is a module that has already implemented the Admin Commands library. The model is a module with the same format as described above. Additionally, the module has a few commands already included so that you do not have to re-implement.
 
-| Command/Binding                  | Spoken Parameter                 |
+| Command/binding                  | Spoken parameter                 |
 | -------------------------------- | -------------------------------- |
 | "list", "commands"               | username                         |
 | "sparkles"                       | username                         |

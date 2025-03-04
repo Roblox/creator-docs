@@ -1,5 +1,5 @@
 ---
-title: Test the Game
+title: Test the game
 description: Part of the Roblox Build It, Play It Challenge - Island of Move. Test the game experience you'll create.
 next: /education/build-it-play-it-island-of-move/creating-animations
 prev: /education/build-it-play-it-island-of-move/opening-the-template

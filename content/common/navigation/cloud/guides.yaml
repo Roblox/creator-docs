@@ -1,44 +1,30 @@
 navigation:
-  - heading: Open Cloud
+  - heading: Guides
   - title: Overview
-    path: /cloud/open-cloud/
-  - heading: Authentication
-  - title: OAuth 2.0
-    path: /cloud/open-cloud/oauth2-overview
-    section:
-      - title: Overview
-        path: /cloud/open-cloud/oauth2-overview
-      - title: Registration
-        path: /cloud/open-cloud/oauth2-registration
-      - title: Implementation
-        path: /cloud/open-cloud/oauth2-develop
-      - title: Sample App
-        path: /cloud/open-cloud/oauth2-sample
-  - title: API Keys
-    path: /cloud/open-cloud/api-keys
-  - heading: V2 Resource Guides
-  - title: User Inventories
-    path: /cloud/open-cloud/inventory
-  - title: Engine Instances
-    path: /cloud/open-cloud/instance
-  - title: Experience Notifications
-    path: /cloud/open-cloud/experience-notifications
-  - heading: V1 Resource Guides
-  - title: Assets
-    path: /cloud/open-cloud/usage-assets
-  - title: Data Stores
-    path: /cloud/open-cloud/usage-data-stores
-    section:
-      - title: Overview
-        path: /cloud/open-cloud/usage-data-stores
-      - title: Handling Requests
-        path: /cloud/open-cloud/data-store-api-handling
+    path: /cloud/guides/
+  - heading: Open Cloud v2 Guides
+  - title: User inventories
+    path: /cloud/guides/inventory
+  - title: Engine instances
+    path: /cloud/guides/instance
+  - title: Experience notifications
+    path: /cloud/guides/experience-notifications
   - title: Messaging
-    path: /cloud/open-cloud/usage-messaging
-  - title: Place Publishing
-    path: /cloud/open-cloud/usage-place-publishing
+    path: /cloud/guides/usage-messaging
+  - heading: Open Cloud v1 Guides
+  - title: Assets
+    path: /cloud/guides/usage-assets
+  - title: Data stores
+    path: /cloud/guides/usage-data-stores
+    section:
+      - title: Overview
+        path: /cloud/guides/usage-data-stores
+      - title: Handle requests
+        path: /cloud/guides/data-store-api-handling
+  - title: Place publishing
+    path: /cloud/guides/usage-place-publishing
   - heading: Webhooks
-  - title: Webhook Notifications
+  - title: Webhook notifications
     path: /cloud/webhooks/webhook-notifications
-  - title: Right to Erasure Requests
+  - title: Right to erasure requests
     path: /cloud/webhooks/automate-right-to-erasure

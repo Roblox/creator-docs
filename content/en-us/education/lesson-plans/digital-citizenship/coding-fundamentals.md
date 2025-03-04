@@ -1,5 +1,5 @@
 ---
-title: Coding Fundamentals
+title: Coding fundamentals
 description: Learn digital citizenship with Roblox. A full course created for middle to high school students. This session has students learning coding.
 next: /education/lesson-plans/digital-citizenship/animating-characters
 prev: /education/lesson-plans/digital-citizenship/lights-and-polish
@@ -71,7 +71,7 @@ prev: /education/lesson-plans/digital-citizenship/lights-and-polish
 
 1. Explain today's session will be different mini-projects to develop skills in scripting.
 
-#### Guided Tutorial - Working with Properties
+#### Guided tutorial - Work with properties
 
 1. Lead students through the following tutorials:
 
@@ -85,13 +85,13 @@ prev: /education/lesson-plans/digital-citizenship/lights-and-polish
    - Not Specific: Runs code
    - Improved: Changes color of PracticePart
 
-#### Guided Tutorial - Coding a Trap
+#### Guided tutorial - Code a trap
 
 1. Lead students through the following tutorials:
 
-   - [Coding a Function](../../../tutorials/fundamentals/coding-2/coding-a-function.md)
-   - [Intro to If Statements](../../../tutorials/fundamentals/coding-3/intro-to-if-statements.md)
-   - [Traps with If Statements](../../../tutorials/fundamentals/coding-3/traps-with-if-statements.md)
+   - [Code a function](../../../tutorials/fundamentals/coding-2/code-a-function.md)
+   - [Intro to if statements](../../../tutorials/fundamentals/coding-3/intro-to-if-statements.md)
+   - [Traps with if statements](../../../tutorials/fundamentals/coding-3/traps-with-if-statements.md)
 
 2. When working with if statements, check that students indent code to look like code samples. This helps make the code more readable, which becomes important as scripts grow larger.
 
@@ -101,7 +101,7 @@ prev: /education/lesson-plans/digital-citizenship/lights-and-polish
 
 ### Appendix
 
-### Troubleshooting and Classroom Tips
+### Troubleshooting and classroom tips
 
 - While coding, remind students to double-check their capitalization or ask a peer to check their work. Even one incorrect letter can cause an error in longer words like `FindFirstChildWhichIsA`.
 - Try the following below to help students develop troubleshooting skills.

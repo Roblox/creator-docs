@@ -1,5 +1,5 @@
 ---
-title: Intro to Arrays
+title: Intro to arrays
 description: Learn how to use arrays in Roblox Lua to store multiple values at a time. This tutorial shows how to create and change arrays while making an interactive NPC in Roblox.
 next: /tutorials/fundamentals/coding-5/loops-and-arrays
 prev: /tutorials/fundamentals/coding-5/landing
@@ -21,7 +21,7 @@ There are different types of tables. One type is an **array**, which stores list
 
 `local myArray = {"item1", "item2", 10, workspace.Part, myVariable}`
 
-### Creating a Talking Character
+### Create a talking character
 
 To explore arrays, you'll work with a non-playable character (NPC) that, when clicked, shows a different line of dialogue.
 
@@ -37,7 +37,7 @@ This project will use a pre-made NPC model, which includes a partial script and 
 
 2. In Explorer, import the NPC by right-clicking on **Workspace** > **Insert From File** and select the downloaded file.
 
-## Coding a Dialogue Array
+## Code a dialogue array
 
 These steps use an array to store different phrases for the NPC to say when players interact with it.
 
@@ -70,10 +70,10 @@ These steps use an array to store different phrases for the NPC to say when play
 3. Within the brackets `{}` of the array just created, type at least three strings of dialogue, separated by commas.
 
    ```lua
-   local dialogueArray = {"Hi!",  "Do I know you?",  "Goodbye!"}
+   local dialogueArray = {"Hi!", "Do I know you?", "Goodbye!"}
    ```
 
-## Using Array Indexes
+## Use array indexes
 
 Each value in the array is assigned an `index` number. Indexes are assigned to values in the order in which the values are stored. The first value is at index 1, the second at index 2, and so forth.
 
@@ -104,7 +104,7 @@ In the array just created, `"Hi"` is at index 1, and `"Goodbye!"` is at index 3.
 </tbody>
 </table>
 
-## Using Specific Index Values
+## Use specific index values
 
 Use index values to assign specific pieces of dialogue to the NPC. To use a value at a specific index, add the index in brackets directly after the array's name, like `dialogueArray[1]`.
 
@@ -127,7 +127,7 @@ Use index values to assign specific pieces of dialogue to the NPC. To use a valu
 
    <img src="../../../assets/education/coding-5/introArrays_showSpeech.jpg" width="75%" />
 
-## Changing Dialogue Lines
+## Change dialogue lines
 
 When the player interacts with the NPC, the NPC will always say the same line. That's boring. Instead, use a variable to update which index value to use.
 
@@ -164,11 +164,11 @@ Whenever a player interacts with the NPC, increment the variable value by 1 to d
 
    <video controls src="../../../assets/education/coding-5/introArray_showDialogIndexes_optimized.mp4" width="75%"></video>
 
-Notice there's an **error** in the Output Window once the script reaches the end of the array.
+Notice there's an **error** in the Output window once the script reaches the end of the array.
 
 You'll fix this in the next section so the dialogue restarts from the beginning after it shows the last string.
 
-## Array Sizes
+## Array sizes
 
 You can use the size of the array to know when to reset the desired index to 1. Find the **size** of an array by typing `#`, without spaces, before an array's name.
 
@@ -176,7 +176,7 @@ For example: `#dialogueArray`
 
 Check the array's size against the variable's current value to know when it's time to start back at the beginning.
 
-### Restarting the Dialogue
+### Restart the dialogue
 
 Use the array size to check when it's time to cycle back to the first piece of dialogue.
 
@@ -202,11 +202,7 @@ Use the array size to check when it's time to cycle back to the first piece of d
       local dialogue = dialogueArray[dialogueIndex]
       Chat:Chat(head, dialogue)
 
-      if dialogueIndex == #dialogueArray then
-        dialogueIndex = 1
-      else
-        dialogueIndex += 1
-      end
+      dialogueIndex = if dialogueIndex == #dialogueArray then 1 else dialogueIndex + 1
     end
    ```
 
@@ -232,32 +228,27 @@ This script used an array to create a list of possible dialogue lines for a Non-
    local head = characterParts.Head
 
    -- Add array here
-   local dialogueArray = {"Hi!",  "Do I know you?",  "Goodbye!"}
+   local dialogueArray = {"Hi!", "Do I know you?", "Goodbye!"}
    local dialogueIndex = 1
 
    local function speak()
       local dialogue = dialogueArray[dialogueIndex]
       Chat:Chat(head, dialogue)
 
-      if dialogueIndex == #dialogueArray then
-         dialogueIndex = 1
-
-      else
-         dialogueIndex += 1
-      end
+      dialogueIndex = if dialogueIndex == #dialogueArray then 1 else dialogueIndex + 1
    end
 
    prompt.Triggered:Connect(speak)
 ```
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 If the character doesn't go through the array of dialogue, try the following troubleshooting tips.
 
 - Check the if statement that `dialogueIndex` is set back to 1. In the else statement, check that `dialogueIndex` has 1 added to itself.
 - When getting the array's size, ensure there are no spaces after the # in `#dialogueArray`.
 
-## Optional Challenges
+## Optional challenges
 
 Try one of the optional challenges below.
 

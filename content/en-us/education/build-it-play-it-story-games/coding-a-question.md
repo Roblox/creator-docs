@@ -1,5 +1,5 @@
 ---
-title: Coding a Question
+title: Code a question
 description: Part of the Story Games series that teaches you to code in Roblox. Code the first question asked to players.
 next: /education/build-it-play-it-story-games/test-and-save
 prev: /education/build-it-play-it-story-games/start-coding
@@ -11,7 +11,7 @@ In the script, the placeholder you made will be a **variable**. In coding, varia
 
 You'll start by asking players a question. Then, they'll type in an answer that gets **stored** in the variable.
 
-## Creating a Variable
+## Create a variable
 
 Variables have names that tell programmers what they store. In this case, you'll create a variable called `name1` for the placeholder.
 
@@ -41,7 +41,7 @@ Variables have names that tell programmers what they store. In this case, you'll
    end
    ```
 
-## Setting a Variable
+## Set a variable
 
 Now players need to have a chance to put something inside the placeholder. To change a variable, it needs to be **set** to something using the **=** symbol.
 
@@ -79,7 +79,7 @@ Now players need to have a chance to put something inside the placeholder. To ch
    end
    ```
 
-## Typing a Question
+## Type a question
 
 Variables can store different types of data including small numbers, true or false values, and strings. **String** type variables are special because they can store whole sentences. It's easy to spot string type variables because they're always in quotation marks "like this".
 

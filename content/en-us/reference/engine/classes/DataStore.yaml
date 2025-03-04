@@ -113,7 +113,9 @@ methods:
         type: int
         default: 0
         summary: |
-          **(Optional)** Maximum possible number of items that can be returned.
+          **(Optional)** Number of items to be returned in each page. If no
+          value is given, the engine sends a default value of 0 to the data
+          store web service, which in turn defaults to 50 items per page.
       - name: cursor
         type: string
         default: ''
@@ -162,24 +164,26 @@ methods:
         type: SortDirection
         default: Ascending
         summary: |
-          Enum specifying ascending or descending sort order.
+          **(Optional)** Enum specifying ascending or descending sort order.
       - name: minDate
         type: int64
         default: 0
         summary: |
-          Unix timestamp in milliseconds after which the versions should be
-          listed.
+          **(Optional)** Unix timestamp in milliseconds after which the versions
+          should be listed.
       - name: maxDate
         type: int64
         default: 0
         summary: |
-          Unix timestamp in milliseconds up to which the versions should be
-          listed.
+          **(Optional)** Unix timestamp in milliseconds up to which the versions
+          should be listed.
       - name: pageSize
         type: int
         default: 0
         summary: |
-          Number of items to be returned in each page.
+          **(Optional)** Number of items to be returned in each page. If no
+          value is given, the engine sends a default value of 0 to the data
+          store web service, which in turn defaults to 1024 items per page.
     returns:
       - type: DataStoreVersionPages
         summary: |

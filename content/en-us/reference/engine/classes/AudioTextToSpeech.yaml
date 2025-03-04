@@ -1,0 +1,15 @@
+name: AudioTextToSpeech
+type: class
+category:
+memory_category: Internal
+summary: ''
+description: ''
+code_samples: []
+inherits:
+  - Instance
+tags: []
+deprecation_message: ''
+properties: []
+methods: []
+events: []
+callbacks: []

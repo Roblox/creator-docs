@@ -67,11 +67,10 @@ methods:
       experience's main menu.
     code_samples: []
     parameters:
-      - name: contentIds
+      - name: captures
         type: Array
         default:
-        summary: |
-          An array of `contentId` strings identifying the screenshots to save.
+        summary: ''
       - name: resultCallback
         type: Function
         default:
@@ -90,24 +89,27 @@ methods:
     writeCapabilities: []
   - name: CaptureService:PromptShareCapture
     summary: |
-      Prompts the user to share a specified screenshot capture. .
+      Prompts the user to share a specified screenshot capture.
     description: |
       This method prompts the user to share the screenshot identified by the
       provided `contentId` using the native share sheet on their device.
 
-      The capture image will be shared along with an invite link to the
-      experience when supported. Not all devices/apps support including both a
-      screenshot and invite link.
+      The capture image is shared along with an invite link to the experience
+      when supported. Not all devices support including both a screenshot and
+      invite link.
 
       The `launchData` will be available in the `launchData` field for users who
       join through the invite link.
+
+      To avoid an error when calling this method, first call
+      `Class.PolicyService:GetPolicyInfoForPlayerAsync()` and check that
+      `IsContentSharingAllowed` is true in the returned dictionary.
     code_samples: []
     parameters:
-      - name: contentId
-        type: ContentId
+      - name: captureContent
+        type: Content
         default:
-        summary: |
-          The `contentId` identifying the screenshot to share.
+        summary: ''
       - name: launchData
         type: string
         default:
@@ -123,6 +125,28 @@ methods:
         default:
         summary: |
           An optional callback function invoked if the user denies sharing.
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: CaptureService:TakeCapture
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: onCaptureReady
+        type: Function
+        default:
+        summary: ''
+      - name: captureParams
+        type: Dictionary
+        default: nil
+        summary: ''
     returns:
       - type: void
         summary: ''

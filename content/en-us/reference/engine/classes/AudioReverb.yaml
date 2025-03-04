@@ -317,6 +317,34 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AudioReverb:GetInputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AudioReverb:GetOutputPins
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: Array
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events:
   - name: AudioReverb.WiringChanged
     summary: |
@@ -342,7 +370,8 @@ events:
         type: Wire
         default:
         summary: |
-          The `Class.Wire` between the `Class.AudioReverb` and the other instance.
+          The `Class.Wire` between the `Class.AudioReverb` and the other
+          instance.
       - name: instance
         type: Instance
         default:

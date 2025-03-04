@@ -1,5 +1,5 @@
 ---
-title: Managing Players
+title: Manage players
 description: Create a battle royale experience in Roblox Studio. Write scripts that handle player spawning and equipment.
 next: /education/battle-royale-series/timers-and-events
 prev: /education/battle-royale-series/coding-the-game-loop
@@ -11,7 +11,7 @@ This script will start a function to send players into the arena with a weapon a
 
 <video controls src="../../assets/education/battle-royale-series/arena_3_showFinalResult.mp4" width="100%"></video>
 
-### Setting Up the Script
+### Set up the script
 
 Because the player manager includes functions used by other scripts, it'll be a module script.
 
@@ -73,7 +73,7 @@ Because the player manager includes functions used by other scripts, it'll be a 
    return PlayerManager
    ```
 
-### Spawning Players in the Lobby
+### Spawn players in the lobby
 
 Right now, there's multiple spawn locations, meaning that players spawn at a random one when joining the game. To ensure players spawn in the lobby, change the player's `RespawnLocation` property.
 
@@ -98,7 +98,7 @@ Right now, there's multiple spawn locations, meaning that players spawn at a ran
    Players.PlayerAdded:Connect(onPlayerJoin)
    ```
 
-### Connecting and Testing
+### Connect and test
 
 Now the modules can be connected and tested. With the PlayerManager created, require it so that the code in that module script can then run and send players to the lobby.
 
@@ -128,20 +128,20 @@ Now the modules can be connected and tested. With the PlayerManager created, req
 2. Use a **local server** with at least the minimum players to test. Confirm that you can see the following:
 
    - All players spawn in the Lobby.
-   - The print statement from PlayerManager appears in the Output Window.
+   - The print statement from PlayerManager appears in the Output window.
 
    <img src="../../assets/education/battle-royale-series/arena_3_showSendToMatch.png" />
 
 3. Once finished, click Cleanup to shut down the server.
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 At this point, parts of the script aren't working as intended, try one of the following below.
 
 - Check the name of parts such as the Arena, or the location of Lobby > StartSpawn, especially if you named them differently than instructed in the lesson.
 - Make sure that modules are required in each script using the `require()` function and correctly spelled.
 
-## Sending Players to the Arena
+## Send players to the arena
 
 Now that players spawn in the lobby, teleport them into a match once the intermission is over. Change the player's `RespawnLocation` to a spawn location in the arena using a function in the Player object called `ReloadCharacter()`.
 
@@ -186,7 +186,7 @@ Now that players spawn in the lobby, teleport them into a match once the intermi
   Reloading a character ensures that players only start with tools provided at the start of a round. For instance, if you further developed this game and added tools with ammo and pickup weapons, it may be possible for a character to bring those tools in, giving them an unfair advantage.
   </Alert>
 
-### Sending Players to Spawn
+### Send players to spawn
 
 Make sure each player gets teleported to a different spawn location in the arena by using a `for` loop to iterate through the active players array. Using a `for` loop allows you to go through every value in the players array, allowing the script to adapt to a variety of player numbers.
 
@@ -211,7 +211,7 @@ Make sure each player gets teleported to a different spawn location in the arena
    end
    ```
 
-### Tracking and Spawning
+### Track and spawn
 
 When the game runs, it needs to identify which users are playing so they can be spawned in the arena. At the start of a round, every player will be tracked in an array of active players. That array will be used for different functions, such as teleporting or assigning weapons, ensuring that players still in the lobby during a round aren't affected.
 
@@ -250,7 +250,7 @@ When the game runs, it needs to identify which users are playing so they can be 
 
    <video controls src="../../assets/education/battle-royale-series/arena_3_showRepeatArena.mp4" width="100%"></video>
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 At this point, you didn't see the intended results, try one of the following below.
 
@@ -261,7 +261,7 @@ At this point, you didn't see the intended results, try one of the following bel
 
 When a round starts, each player in the arena will be provided a weapon to use.
 
-### Adding a Tool
+### Add a tool
 
 Player weapons will be a tool. While any tool in Roblox can be used, we've provided a sample sword to start.
 
@@ -275,7 +275,7 @@ Player weapons will be a tool. While any tool in Roblox can be used, we've provi
 
    <img src="../../assets/education/battle-royale-series/arena_showWeapon.png" />
 
-### Giving Tools to Players
+### Give tools to players
 
 Now that the tool is in storage, work on a script to go through the active player array and provide each user that tool.
 
@@ -324,11 +324,11 @@ Now that the tool is in storage, work on a script to go through the active playe
 
    <video controls src="../../assets/education/battle-royale-series/show-weapon-spawned.mp4" width="100%"></video>
 
-## Completed Scripts
+## Completed scripts
 
 Below are completed scripts to double check your work.
 
-### GameManager Script
+### GameManager script
 
 ```lua
 -- Services
@@ -353,7 +353,7 @@ while true do
 end
 ```
 
-### MatchManager Script
+### MatchManager script
 
 ```lua
 local MatchManager = {}
@@ -372,7 +372,7 @@ end
 return MatchManager
 ```
 
-### PlayerManager Module Script
+### PlayerManager module script
 
 ```lua
 local PlayerManager = {}

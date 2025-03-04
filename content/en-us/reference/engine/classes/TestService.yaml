@@ -299,7 +299,9 @@ properties:
       the test is being ran.
     code_samples:
     type: bool
-    tags: []
+    tags:
+      - NotReplicated
+      - Deprecated
     deprecation_message: ''
     security:
       read: None
@@ -308,7 +310,7 @@ properties:
     category: Physics
     serialization:
       can_load: true
-      can_save: true
+      can_save: false
     capabilities: []
     writeCapabilities: []
   - name: TestService.IsPhysicsEnvironmentalThrottled
@@ -411,6 +413,23 @@ properties:
     category: Results
     serialization:
       can_load: false
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: TestService.ThrottlePhysicsToRealtime
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: None
+      write: None
+    thread_safety: ReadSafe
+    category: Physics
+    serialization:
+      can_load: true
       can_save: true
     capabilities: []
     writeCapabilities: []

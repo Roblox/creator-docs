@@ -1,5 +1,5 @@
 ---
-title: Groups (Teams)
+title: Groups (teams)
 description: Explains Roblox groups and how to collaborate with multiple creators on the same experience.
 ---
 
@@ -9,9 +9,9 @@ A Roblox **group** allows multiple creators to work on the same experience, use 
 Group ownership of experiences helps creators collaborate and operate as independent studios. If a conflict arises within a group, Roblox cannot help arbitrate or resolve disagreements.
 </Alert>
 
-## Creating a New Group
+## Create a new group
 
-Creating a group costs 100 Robux. New groups maintain certain capabilities on the legacy [Groups](https://www.roblox.com/groups) pages, but improved workflows and options for [configuring roles/permissions](#roles-and-permissions) and [inviting members](#inviting-members) are only available on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
+Creating a group costs 100 Robux. New groups maintain certain capabilities on the legacy [Groups](https://www.roblox.com/groups) pages, but improved workflows and options for [configuring roles/permissions](#roles-and-permissions) and [inviting members](#invite-members) are only available on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
 To create a new group:
 
@@ -22,7 +22,7 @@ To create a new group:
 2. On the setup page, upload an image for the group logo and enter the group name.
 3. When ready, click the **Purchase** button. Once the group is created, you'll be directed to the group profile page where you can modify the group's details, including adding up to three social links.
 
-## Roles and Permissions
+## Roles and permissions
 
 Group members can be assigned one or multiple **roles** within a group, and each role has **permissions** which specify the abilities of its members.
 
@@ -45,7 +45,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    <table>
    <thead>
      <tr>
-       <th colspan="2">Group Permissions</th>
+       <th colspan="2">Group permissions</th>
      </tr>
    </thead>
    <tbody>
@@ -72,7 +72,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    </tbody>
    <thead>
      <tr>
-       <th colspan="2">Experience Permissions</th>
+       <th colspan="2">Experience permissions</th>
      </tr>
    </thead>
    <tbody>
@@ -95,7 +95,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    </tbody>
    <thead>
      <tr>
-       <th colspan="2">Group Revenue</th>
+       <th colspan="2">Group revenue</th>
      </tr>
    </thead>
    <tbody>
@@ -114,7 +114,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    </tbody>
    <thead>
      <tr>
-       <th colspan="2">Avatar Item Permissions</th>
+       <th colspan="2">Avatar item permissions</th>
      </tr>
    </thead>
    <tbody>
@@ -129,22 +129,22 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    </tbody>
    <thead>
      <tr>
-       <th colspan="2">Open Cloud Permissions</th>
+       <th colspan="2">Open Cloud permissions</th>
      </tr>
    </thead>
    <tbody>
      <tr>
       <td>**Manage all API keys**</td>
-      <td>Members with this role can upload their own [Open Cloud API keys](../cloud/open-cloud/api-keys.md) to the group, as well as configure everyone else's.</td>
+      <td>Members with this role can upload their own [Open Cloud API keys](../cloud/auth/api-keys.md) to the group, as well as configure everyone else's.</td>
      </tr>
      <tr>
        <td>**Manage own API keys**</td>
-       <td>Members with this role can configure and upload their own [Open Cloud API keys](../cloud/open-cloud/api-keys.md) to the group (but not configure everyone else's as above).</td>
+       <td>Members with this role can configure and upload their own [Open Cloud API keys](../cloud/auth/api-keys.md) to the group (but not configure everyone else's as above).</td>
      </tr>
    </tbody>
    <thead>
      <tr>
-       <th colspan="2">Asset Permissions</th>
+       <th colspan="2">Asset permissions</th>
      </tr>
    </thead>
    <tbody>
@@ -174,7 +174,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    A role's **Settings** section is also where group owners and members with sufficient permissions can remove a role entirely through the **Delete&nbsp;Role** button.
    </Alert>
 
-## Managing Members
+## Manage members
 
 Once [roles](#roles-and-permissions) have been configured for the group, members can be invited and assigned from the **Collaboration**&nbsp;&rang; **Members** page.
 
@@ -184,7 +184,7 @@ Once [roles](#roles-and-permissions) have been configured for the group, members
 Member configuration is only accessible if you're the group owner or you have permission to manage other members and their roles.
 </Alert>
 
-### Inviting Members
+### Invite members
 
 You can invite new members through the **Invite** button in the upper‑right corner.
 
@@ -194,7 +194,7 @@ From the popup, locate a creator by typing their username into the search field.
 
 <img src="../assets/creator-dashboard/Group-Members-Invite-Popup.png" width="880" alt="Invite popup window indicated in the group's Members section on the Creator Dashboard." />
 
-### Assigning Roles
+### Assign roles
 
 To assign one or more roles to a member, hover over their name, click the **&#8942;** button, and then click the **&CirclePlus;** button for the desired role.
 
@@ -208,13 +208,13 @@ To quickly un-assign a role from the members overview, hover over it and click t
 Currently, roles configured through the legacy [Groups](https://www.roblox.com/groups) pages appear for each member, and new members are assigned the legacy **Member** role. If permissions were granted to a role through the legacy system, **the member will continue to have those permissions**, so it's recommended that you revoke permissions/roles in the legacy system and then migrate members to the new system.
 </Alert>
 
-### Removing Members
+### Remove members
 
 To remove a member entirely, hover over their name and click the "trash" button. A dialog will appear for you to confirm their removal.
 
 <img src="../assets/creator-dashboard/Group-Members-Remove-Member.png" width="880" alt="Hover-over showing how to remove a member from a group on the Creator Dashboard." />
 
-## Managing Payouts
+## Manage payouts
 
 If you're the owner of a selected group, you'll find a **Payouts** page under **Finances**. Here, you can send one‑time payouts, as well as define percentage splits with other members.
 
@@ -228,13 +228,13 @@ Some groups may not have this page unlocked initially for various reasons, such 
 Group owners can't share payouts across group members for experiences that charge for [paid access in local currency](../production/monetization/paid-access-local-currency.md).
 </Alert>
 
-### One-Time Payouts
+### One-time payouts
 
 Group owners can make one-time payouts to members in a batch, selecting a set amount for each. Safety features include 2FA challenges, confirmation dialogues, and checks around the eligibility of members being paid.
 
 <img src="../assets/creator-dashboard/Group-Payouts-One-Time.png" width="880" alt="One-time payout button indicated in the Payouts section on the Creator Dashboard." />
 
-### Recurring Payouts
+### Recurring payouts
 
 Group owners can also define recurring payouts across the entire group **and** per‑experience, assigning a percentage payout to each member before the remainder enters the group's overall balance.
 
@@ -268,10 +268,10 @@ Consider the following scenario where a group experience "Laser&nbsp;Maze" is sp
 Note that revenue from [private server](../production/monetization/private-servers.md) subscriptions does not change if you adjust split percentages at a later time, meaning that if a player buys a private server subscription, the split percentages at time of purchase will apply to that particular subscription forever (until it is canceled). This policy may be changed in the future.
 </Alert>
 
-## Intellectual Property Protection in Groups
+## Intellectual property protection in groups
 
-Group members with permission to edit all group experiences can enable the [Place Copying](../production/publishing/publishing-experiences-and-places.md#allowing-copying) setting for a creation, potentially allowing the entire Roblox community to copy it and use assets within it. To help protect intellectual property in a group, the owner or members with sufficient permissions should:
+Group members with permission to edit all group experiences can enable the [Place Copying](../production/publishing/publish-experiences-and-places.md#allow-copying) setting for a creation, potentially allowing the entire Roblox community to copy it and use assets within it. To help protect intellectual property in a group, the owner or members with sufficient permissions should:
 
-- Confirm that each member is [assigned the appropriate role](#assigning-roles).
+- Confirm that each member is [assigned the appropriate role](#assign-roles).
 - Check that each group role has the correct [permissions](#roles-and-permissions).
-- Confirm that [Place Copying](../production/publishing/publishing-experiences-and-places.md#allowing-copying) is disabled before private assets are added.
+- Confirm that the [Place Copying](../production/publishing/publish-experiences-and-places.md#allow-copying) setting is disabled before private assets are added.

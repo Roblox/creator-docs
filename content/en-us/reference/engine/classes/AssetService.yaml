@@ -17,105 +17,6 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: AssetService:CreateAssetAsync
-    summary: |
-      Creates a new asset from the given object.
-    description: |
-      Creates a new asset from the given object in Plugin or Open Cloud Luau Execution context.
-    code_samples:
-        - AssetService-CreateAssetAsync
-    parameters:
-      - name: object
-        type: Object
-        default:
-        summary: |
-          The object to be created as an asset.
-      - name: assetType
-        type: AssetType
-        default:
-        summary: |
-          Currently supported types are:
-
-          - `Enum.AssetType.Model` – with `object` as any valid `Class.Instance` root.
-          - `Enum.AssetType.Plugin` – with `object` as any valid `Class.Instance` root.
-          - `Enum.AssetType.Mesh` – with `object` as any valid `Class.EditableMesh` root.
-          - `Enum.AssetType.Image` – with `object` as any valid `Class.EditableImage` root.
-      - name: options
-        type: Dictionary?
-        default:
-        summary: |
-          Options table containing asset metadata:
-
-          - `Name` – Name of the asset as a string. Defaults to `[object.Name]`.
-          - `Description` – Description of the asset as a string. Defaults to `"Created with AssetService:CreateAssetAsync"`.
-          - `CreatorId` – ID of the asset creator as a number. Defaults to the logged in Roblox Studio user for Plugin context. Required for Open Cloud Luau Execution context.
-          - `CreatorType` – `Enum.AssetCreatorType` indicating the type of asset creator. Defaults to `Enum.AssetCreatorType.User` in Plugin context. Required for Open Cloud Luau Execution context.
-          - `IsPackage` – Boolean value, only applicable to the `Enum.AssetType.Model` type. Defaults to `true`.
-    returns:
-      - type: Tuple
-        summary: |
-          The `Enum.CreateAssetResult` and asset ID pair if successful.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - PluginOrOpenCloud
-    writeCapabilities:
-      - PluginOrOpenCloud
-  - name: AssetService:CreateAssetVersionAsync
-    summary: |
-      Creates a new version for an existing asset from the given object.
-    description: |
-      Creates a new version for an existing asset from the given object in Plugin or Open Cloud Luau Execution context.
-    code_samples:
-        - AssetService-CreateAssetVersionAsync
-    parameters:
-      - name: object
-        type: Object
-        default:
-        summary: |
-          The object to be created as an asset.
-      - name: assetType
-        type: AssetType
-        default:
-        summary: |
-          Currently supported types are:
-
-          - `Enum.AssetType.Model` – with `object` as any valid `Class.Instance` root.
-          - `Enum.AssetType.Plugin` – with `object` as any valid `Class.Instance` root.
-          - `Enum.AssetType.Mesh` – with `object` as any valid `Class.EditableMesh` root.
-          - `Enum.AssetType.Image` – with `object` as any valid `Class.EditableImage` root.
-      - name: targetAssetId
-        type: int64
-        default:
-        summary: |
-          The ID of the asset for the new version.
-      - name: options
-        type: Dictionary?
-        default:
-        summary: |
-          Options table containing asset metadata:
-
-          - `Name` – A `string`. Name of the asset. Default: object.Name.
-          - `Description` – A `string`. Description of the asset. Default: "Created with AssetService:CreateAssetAsync".
-          - `CreatorId` – A `number`. ID of the asset creator. Default: The logged in Roblox Studio user for Plugin context. Required for Open Cloud Luau Execution context.
-          - `CreatorType` – A `Enum.AssetCreatorType`. Type of asset creator. Default: `Enum.AssetCreatorType.User` in Plugin context. Required for Open Cloud Luau Execution context.
-          - `IsPackage` – A `bool`. Only applicable to the `Enum.AssetType.Model` type. Default: true.
-    returns:
-      - type: Tuple
-        summary: |
-          The `Enum.CreateAssetResult` and asset version number pair if successful.
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities:
-      - PluginOrOpenCloud
-    writeCapabilities:
-      - PluginOrOpenCloud
   - name: AssetService:CreateEditableImage
     summary: |
       Creates a new `Class.EditableImage`.
@@ -149,7 +50,7 @@ methods:
     summary: |
       Creates a new, empty `Class.EditableMesh`.
     description: |
-      Creates a new, empty `Class.EditableMesh`. Vertices, triangles and their
+      Creates a new, empty `Class.EditableMesh`. Vertices, triangles, and their
       attributes can be added dynamically to it. If the device‑specific editable
       memory budget is exhausted, creation will fail and this method will return
       `nil`.
@@ -158,7 +59,11 @@ methods:
       - name: editableMeshOptions
         type: Dictionary?
         default:
-        summary: ''
+        summary: |
+          Table containing options for the created `Class.EditableMesh`.
+          Currently no options are available since
+          `Class.EditableMesh.FixedSize|FixedSize` will always be `false` for
+          empty editable meshes.
     returns:
       - type: Object
         summary: ''
@@ -168,22 +73,121 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AssetService:CheckTextureAlphaAsync
-    summary: ''
-    description: ''
-    code_samples: []
+  - name: AssetService:CreateAssetAsync
+    summary: |
+      Creates a new asset from the given object.
+    description: |
+      Creates a new asset from the given object in Plugin or Open Cloud Luau
+      Execution context.
+    code_samples:
+      - AssetService-CreateAssetAsync
     parameters:
-      - name: textureId
-        type: ContentId
+      - name: object
+        type: Object
         default:
-        summary: ''
+        summary: |
+          The object to be created as an asset.
+      - name: assetType
+        type: AssetType
+        default:
+        summary: |
+          Currently supported types are:
+
+          - `Enum.AssetType.Model` – with `object` as any valid `Class.Instance`
+            root.
+          - `Enum.AssetType.Plugin` – with `object` as any valid
+            `Class.Instance` root.
+          - `Enum.AssetType.Mesh` – with `object` as any valid
+            `Class.EditableMesh` root.
+          - `Enum.AssetType.Image` – with `object` as any valid
+            `Class.EditableImage` root.
+      - name: requestParameters
+        type: Dictionary
+        default: nil
+        summary: |
+          Options table containing asset metadata:
+
+          - `Name` – Name of the asset as a string. Defaults to `[object.Name]`.
+          - `Description` – Description of the asset as a string. Defaults to
+            `"Created with AssetService:CreateAssetAsync"`.
+          - `CreatorId` – ID of the asset creator as a number. Defaults to the
+            logged in Roblox Studio user for Plugin context. Required for Open
+            Cloud Luau Execution context.
+          - `CreatorType` – `Enum.AssetCreatorType` indicating the type of asset
+            creator. Defaults to `Enum.AssetCreatorType.User` in Plugin context.
+            Required for Open Cloud Luau Execution context.
+          - `IsPackage` – Boolean value, only applicable to the
+            `Enum.AssetType.Model` type. Defaults to `true`.
     returns:
-      - type: bool
-        summary: ''
+      - type: Tuple
+        summary: |
+          The `Enum.CreateAssetResult` and asset ID pair if successful.
     tags:
       - Yields
     deprecation_message: ''
-    security: RobloxScriptSecurity
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: AssetService:CreateAssetVersionAsync
+    summary: |
+      Creates a new version for an existing asset from the given object.
+    description: |
+      Creates a new version for an existing asset from the given object in
+      Plugin or Open Cloud Luau Execution context.
+    code_samples:
+      - AssetService-CreateAssetVersionAsync
+    parameters:
+      - name: object
+        type: Object
+        default:
+        summary: |
+          The object to be created as an asset.
+      - name: assetType
+        type: AssetType
+        default:
+        summary: |
+          Currently supported types are:
+
+          - `Enum.AssetType.Model` – with `object` as any valid `Class.Instance`
+            root.
+          - `Enum.AssetType.Plugin` – with `object` as any valid
+            `Class.Instance` root.
+          - `Enum.AssetType.Mesh` – with `object` as any valid
+            `Class.EditableMesh` root.
+          - `Enum.AssetType.Image` – with `object` as any valid
+            `Class.EditableImage` root.
+      - name: assetId
+        type: int64
+        default:
+        summary: |
+          The ID of the asset for the new version.
+      - name: requestParameters
+        type: Dictionary
+        default: nil
+        summary: |
+          Options table containing asset metadata:
+
+          - `Name` – A `string`. Name of the asset. Default: object.Name.
+          - `Description` – A `string`. Description of the asset. Default:
+            "Created with AssetService:CreateAssetAsync".
+          - `CreatorId` – A `number`. ID of the asset creator. Default: The
+            logged in Roblox Studio user for Plugin context. Required for Open
+            Cloud Luau Execution context.
+          - `CreatorType` – A `Enum.AssetCreatorType`. Type of asset creator.
+            Default: `Enum.AssetCreatorType.User` in Plugin context. Required
+            for Open Cloud Luau Execution context.
+          - `IsPackage` – A `bool`. Only applicable to the
+            `Enum.AssetType.Model` type. Default: true.
+    returns:
+      - type: Tuple
+        summary: |
+          The `Enum.CreateAssetResult` and asset version number pair if
+          successful.
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
@@ -198,19 +202,24 @@ methods:
       the device-specific editable memory budget is exhausted, creation will
       fail and this method will return `nil`.
 
-      See the **Enabling EditableImage for Published Experiences** and
-      **Permissions** sections of `Class.EditableImage` for special
-      considerations when using this API.
+      See the `Class.EditableImage` documentation for special considerations
+      when using this API.
     code_samples: []
     parameters:
       - name: content
         type: Content
         default:
-        summary: ''
+        summary: |
+          Reference to asset content stored externally or as an object within
+          the place, wrapping a single value of one of the supported
+          `Enum.ContentSourceType` values.
       - name: editableImageOptions
         type: Dictionary?
         default:
-        summary: ''
+        summary: |
+          Table containing options for the created `Class.EditableImage`.
+          Currently no options are available since resizing via
+          `Class.EditableImage.Size|Size` is not supported.
     returns:
       - type: Object
         summary: |
@@ -244,7 +253,10 @@ methods:
       - name: content
         type: Content
         default:
-        summary: ''
+        summary: |
+          Reference to asset content stored externally or as an object within
+          the place, wrapping a single value of one of the supported
+          `Enum.ContentSourceType` values.
       - name: editableMeshOptions
         type: Dictionary?
         default:
@@ -266,36 +278,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: AssetService:CreateEditableMeshFromPartAsync
-    summary: |
-      Returns a new `Class.EditableMesh` instance created from an existing
-      `Class.MeshPart`.
-    description: |
-      Returns a new `Class.EditableMesh` instance created from the
-      `Class.MeshPart.MeshId|MeshId` of an existing `Class.MeshPart`.
-    code_samples: []
-    parameters:
-      - name: meshPart
-        type: Instance
-        default:
-        summary: |
-          The `Class.MeshPart` from which to create an `Class.EditableMesh`
-          instance. The part must have a valid `Class.MeshPart.MeshId|MeshId`
-          for this method to operate.
-    returns:
-      - type: Object
-        summary: |
-          The new `Class.EditableMesh` instance.
-    tags:
-      - Yields
-      - Deprecated
-    deprecation_message: |
-      This function has been deprecated - use
-      `Class.AssetService:CreateEditableMeshAsync()`.
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: AssetService:CreateMeshPartAsync
     summary: |
       Creates a new `Class.MeshPart` with a specified mesh ID and an optional
@@ -313,7 +295,10 @@ methods:
       - name: meshContent
         type: Content
         default:
-        summary: ''
+        summary: |
+          Reference to asset content stored externally or as an object within
+          the place, wrapping a single value of one of the supported
+          `Enum.ContentSourceType` values.
       - name: options
         type: Dictionary
         default: nil
@@ -465,13 +450,13 @@ methods:
           Array of dictionary tables in the same order as the request, where
           each dictionary contains the following metadata for its asset/content:
 
-          - `AssetId` ([string](/luau/strings.md))
+          - `AssetId` (string)
 
-          - `Title` ([string](/luau/strings.md))
+          - `Title` (string)
 
-          - `Artist` ([string](/luau/strings.md))
+          - `Artist` (string)
 
-          - `Duration` ([number](/luau/numbers.md)) in seconds
+          - `Duration` (number) in seconds
 
           - `AudioType` (`Enum.AudioSubType`)
 

@@ -3,10 +3,10 @@ type: class
 category: Animations
 memory_category: Animation
 summary: |
-  Controls the playback of an animation on an `Class.AnimationController`.
+  Controls the playback of an animation on an `Class.Animator`.
 description: |
-  Controls the playback of an animation on an `Class.AnimationController`. This
-  object cannot be created, instead it is returned by the
+  Controls the playback of an animation on an `Class.Animator`. This object
+  cannot be created, instead it is returned by the
   `Class.Animator:LoadAnimation()` method.
 code_samples:
 inherits:
@@ -22,7 +22,7 @@ properties:
     description: |
       The `Class.Animation` object that was used to create this
       `Class.AnimationTrack`. To create an `Class.AnimationTrack`, you must load
-      an `Class.Animation` object onto an `Class.AnimationController` using the
+      an `Class.Animation` object onto an `Class.Animator` using the
       `Class.Animator:LoadAnimation()` method.
     code_samples:
       - AnimationPlayed
@@ -53,9 +53,9 @@ properties:
       This property can be used by developers to check if an animation is
       already playing before playing it (as that would cause it to restart). If
       a developer wishes to obtain all playing
-      `Class.AnimationTrack|AnimationTracks` on a `Class.Humanoid` or
-      `Class.AnimationController` they should use
-      `Class.Humanoid:GetPlayingAnimationTracks()`
+      `Class.AnimationTrack|AnimationTracks` on an `Class.Animator` or a
+      `Class.Humanoid`, they should use
+      `Class.Animator:GetPlayingAnimationTracks()`
     code_samples:
       - AnimationTrack-IsPlaying
     type: bool
@@ -601,24 +601,21 @@ methods:
     writeCapabilities: []
   - name: AnimationTrack:Stop
     summary: |
-      Stops the `Class.AnimationTrack`. Once called playback of the
-      `Class.AnimationTrack` will stop and the weight of the animation will move
-      towards zero over a length of time specified by the optional fadeTime
-      parameter.
+      Stops the `Class.AnimationTrack`.
     description: |
-      Stops the `Class.AnimationTrack`. Once called playback of the
-      `Class.AnimationTrack` will stop and the weight of the animation will move
-      towards zero over a length of time specified by the optional fadeTime
-      parameter.
+      Stops the `Class.AnimationTrack`. Once called, the weight of the animation
+      will move towards zero over a length of time specified by the optional
+      `fadeTime` parameter. For example, if `Stop()` is called with a `fadeTime`
+      of `2`, it will take two seconds for the weight of the track to reach zero
+      and its effects completely end. Please note this will be the case
+      regardless of the initial weight of the animation.
 
-      For example, if Stop is called with a fadeTime of 2 seconds it will take
-      two seconds for the weight of the `Class.AnimationTrack` to reach zero and
-      its effects completely end. Please note this will be the case regardless
-      of the initial weight of the animation.
-
-      It is not recommended to use a fadeTime of 0 seconds to try to override
-      this effect and end the animation immediately as presently, this causes
-      the `Class.AnimationTrack` poses to freeze.
+      It is not recommended to use a `fadeTime` of `0` in an attempt to override
+      this effect and end the animation immediately for `Class.Motor6D|Motor6Ds`
+      that have their `Class.Motor.MaxVelocity` set to zero, as this causes the
+      joints to freeze in place. If it must end immediately, ensure the
+      `Class.Motor.MaxVelocity` of `Class.Motor6D|Motor6Ds` in your rig are high
+      enough for them to snap properly.
     code_samples:
       - AnimationTrack-Stop
     parameters:

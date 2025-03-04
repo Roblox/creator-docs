@@ -5,7 +5,7 @@ description: A double-precision floating-point number.
 
 The **number** data type, or `double`, represents a [double-precision (64-bit) floating-point](https://wikipedia.org/wiki/Double-precision_floating-point_format) number. Numbers can range from -1.7 \* 10<sup>308</sup> to 1.7 \* 10<sup>308</sup> (around 15 digits of precision, positive or negative).
 
-## Signed and Unsigned
+## Signed and unsigned
 
 The sign of the number indicates whether it's positive or negative. For example, `1` is positive and `-1` is negative. In Luau, the number `-0` is equivalent to `0`.
 
@@ -17,7 +17,7 @@ print(-0 > -1)  --> true
 print(-0 < -1)  --> false
 ```
 
-## Number Classifications
+## Number classifications
 
 Luau doesn't distinguish between integers and numbers, but the API reference sometimes distinguishes between them to be more specific about how to use each API.
 
@@ -50,7 +50,7 @@ To aid in the readability of long numbers, you can include underscores anywhere 
 
 You can use logical and relational [operators](./operators.md) to manipulate and compare numbers. You can also use mathematical functions such as `Library.math.sqrt()` and `Library.math.exp()` in the `Library.math` library and bitwise operations in the `Library.bit32` library.
 
-## Type Introspection
+## Type introspection
 
 You can determine if a value `x` is a number by using `type(x)` or `typeof(x)`. Both return the string `number` if `x` is a number.
 
@@ -68,7 +68,7 @@ print(typeof(testDecimal))  --> number
 print(typeof(testString))  --> string
 ```
 
-## Rounding Functions
+## Round functions
 
 You can round numbers using `Library.math.floor()`, `Library.math.ceil()`, or `Library.math.modf()`. These functions return an integer result if Luau can represent it as an integer. If the number is too large, Luau returns it as a float.
 

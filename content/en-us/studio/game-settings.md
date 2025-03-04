@@ -10,7 +10,7 @@ customization options for Roblox experiences, including settings for
 <img src="../assets/studio/general/Home-Tab-Game-Settings.png" width="760" alt="Game Settings button indicated in Home tab" />
 
 <Alert severity="warning">
-The **Game Settings** window is only available for experiences saved or [published](../production/publishing/publishing-experiences-and-places.md) to Roblox.
+The **Game Settings** window is only available for experiences saved or [published](../production/publishing/publish-experiences-and-places.md) to Roblox.
 </Alert>
 
 ## Basic Info
@@ -145,8 +145,7 @@ You should only enable the following settings if you trust all assets from other
   </tr>
   <tr>
     <td>**Secrets**</td>
-    <td>Allows for the creation and configuration of `Datatype.Secret` for local Studio sessions using `Class.HttpService`. Must be a valid JSON object, with base64-encoded secret. Example: `{"secretName": ["cGFzc3dvcmQ=", "*.domain.tld"]}`, where `cGFzc3dvcmQ=` is base64-encoded word `password`, and `*.domain.tld` is domain name restriction. <br /><br />
-    Visible only if HTTP requests are allowed. Secrets defined here are local to the device, and not available in Team Create sessions. Use [Creator Hub](https://create.roblox.com/) to define production secrets. </td>
+    <td>Allows for the creation and configuration of `Datatype.Secret|Secrets` for local Studio sessions using `Class.HttpService`. For more information, see [Work with secrets](../cloud-services/secrets.md#local-secrets).</td>
   </tr>
   <tr>
     <td>**Enable&nbsp;Studio&nbsp;Access to API Services**</td>
@@ -158,7 +157,7 @@ You should only enable the following settings if you trust all assets from other
   </tr>
   <tr>
     <td>**Allow Third Party Teleports**</td>
-    <td>Lets players [teleport](../projects/teleporting.md) to other experiences.</td>
+    <td>Lets players [teleport](../projects/teleport.md) to other experiences.</td>
   </tr>
 </tbody>
 </table>

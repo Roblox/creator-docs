@@ -1,15 +1,15 @@
 ---
-title: Client-Side Chat Modules
+title: Client-side chat modules
 description: Client-side chat modules allow you to extend and customize the deprecated legacy chat.
 comments: |
   1. This guide is intentionally not available in the nav list, but still searchable for users who want to use the legacy chat system.
 ---
 
 <Alert severity="error">
-  This guide covers client-side chat modules of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see <a href="../../chat/customizing-in-experience-text-chat.md">In-Experience Text Chat</a>.
+  This guide covers client-side chat modules of the legacy chat system, which is deprecated and no longer onboarding new users in favor of `Class.TextChatService` with easier and more modern chat settings. If you are using the default chat system powered by `Class.TextChatService`, see <a href="../../chat/in-experience-text-chat.md">In-experience text chat</a>.
 </Alert>
 
-You can use the following chat modules to support client-side behaviors of the [Legacy Chat System](../../chat/legacy/legacy-chat-system.md#message-creator-modules).
+You can use the following chat modules to support client-side behaviors of the [Legacy chat system](../../chat/legacy/legacy-chat-system.md#message-creator-modules).
 
 ## ChatWindow
 
@@ -314,7 +314,7 @@ local ChatSettings = require(ClientChatModules:WaitForChild("ChatSettings"))
 ChatSettings.MaximumMessageLength = 100
 ```
 
-### Chat Behavior Settings
+### Chat behavior settings
 
 #### WindowDraggable
 
@@ -358,7 +358,7 @@ ChatSettings.MaximumMessageLength = 100
 - **Default:** `game:GetService("Players").ClassicChat`
 - **Description:** Determines whether classic chat is enabled.
 
-### Chat Text Size Settings
+### Chat text size settings
 
 #### ChatWindowTextSize
 
@@ -384,7 +384,7 @@ ChatSettings.MaximumMessageLength = 100
 - **Default:** `14`
 - **Description:** Determines the size of the text in the [ChatBar](#chatbar) for phones.
 
-### Font Settings
+### Font settings
 
 #### DefaultFont
 
@@ -398,7 +398,7 @@ ChatSettings.MaximumMessageLength = 100
 - **Default:** `Enum.Font.SourceSansBold`
 - **Description:** Determines the default `Font` of the [ChatBar](#chatbar) `TextBox`.
 
-### Color Settings
+### Color settings
 
 #### BackGroundColor
 
@@ -442,7 +442,7 @@ ChatSettings.MaximumMessageLength = 100
 - **Default:** `Color3.fromRGB(245, 50, 50)`
 - **Description:** Determines the `TextColor3` of error messages.
 
-### Window Settings
+### Window settings
 
 #### MinimumWindowSize
 
@@ -481,7 +481,7 @@ ChatSettings.MaximumMessageLength = 100
 - **Default:** `UDim2.new(0.3, 0, 0.25, (7 * 2) + (5 * 2))`
 - **Description:** Determines the default size of the [ChatWindow](#chatwindow) on desktop.
 
-### Fade Out and In Settings
+### Fade out and in settings
 
 #### ChatWindowBackgroundFadeOutTime
 
@@ -513,7 +513,7 @@ ChatSettings.MaximumMessageLength = 100
 - **Default:** `20.0`
 - **Description:** Determines the framerate of fading animations in the chat UI.
 
-### Channel Settings
+### Channel settings
 
 #### GeneralChannelName
 
@@ -545,7 +545,7 @@ ChatSettings.MaximumMessageLength = 100
 - **Default:** `false`
 - **Description:** Determines whether the help text for joining/leaving channels is shown.
 
-### Message Settings
+### Message settings
 
 #### MaximumMessageLength
 
@@ -571,7 +571,7 @@ ChatSettings.MaximumMessageLength = 100
 - **Default:** `true`
 - **Description:** Determines whether the player can click on a channel's tab to set it as their main channel.
 
-### Miscellaneous Settings
+### Miscellaneous settings
 
 #### WhisperCommandAutoCompletePlayerNames
 

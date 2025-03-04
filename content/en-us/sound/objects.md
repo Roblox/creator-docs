@@ -1,13 +1,13 @@
 ---
-title: Sound Objects
+title: Sound objects
 description: Sound objects are instances that emit audio within an experience.
 ---
 
-Audio playback occurs through `Class.Sound` objects which emit audio within an experience. Roblox assigns each [audio asset](../sound/assets.md) a unique ID that you can assign to `Class.Sound` objects to play a specific sound effect or music track. You can either set this audio to play automatically at runtime, or trigger it to [play from scripts](#scripting-sound-objects).
+Audio playback occurs through `Class.Sound` objects which emit audio within an experience. Roblox assigns each [audio asset](../sound/assets.md) a unique ID that you can assign to `Class.Sound` objects to play a specific sound effect or music track. You can either set this audio to play automatically at runtime, or trigger it to [play from scripts](#script-sound-objects).
 
 To modify playback of multiple `Class.Sound` objects, you can assign them to a [sound group](../sound/groups.md) and control the entire group's volume, as well as apply [dynamic effects](../sound/dynamic-effects.md).
 
-## Creating Sound Objects
+## Create sound objects
 
 There are three locations you can create a `Class.Sound` object, and each location determines how audio emits and volume changes in relation to the user's position within the experience.
 
@@ -15,8 +15,8 @@ There are three locations you can create a `Class.Sound` object, and each locati
 <thead>
   <tr>
     <th>Location</th>
-    <th>How Audio Emits</th>
-    <th>How Volume Changes</th>
+    <th>How audio emits</th>
+    <th>How volume changes</th>
   </tr>
 </thead>
 <tbody>
@@ -38,7 +38,7 @@ There are three locations you can create a `Class.Sound` object, and each locati
 </tbody>
 </table>
 
-### Positional Audio
+### Positional audio
 
 Positional audio is audio that users can only hear near a specific position within the experience. There are two types of positional audio you can utilize: volumetric and point source.
 
@@ -60,16 +60,13 @@ To create a `Class.Sound` object for volumetric audio:
 2. In the **Properties** window, navigate to the **VolumetricAudio** property, then set it to **Enabled**.
 3. In the **Explorer** window, hover over a `Class.BasePart`, then click the ⊕ button. A contextual menu displays.
 4. From the menu, insert a **Sound**.
-
-   <img src="../assets/audio/sound-objects/Volumetric-Sound.png" width="157" />
-
 5. In the **Properties** window, navigate to the **SoundId** property and input a valid [audio asset ID](../sound/assets.md).
 
-   <img src="../assets/audio/playing-audio/Sound-Property-SoundId-Generic.png" width="320" />
+   <img src="../assets/studio/properties/Sound-SoundId.png" width="320" />
 
 6. **(Optional)** If you want the audio to start playing when the experience begins, enable the **Playing** property.
 
-#### Point Source
+#### Point source
 
 Contrary to volumetric audio, point source audio only emits from a single point source. This type of audio is useful for explosions, impact noises, electronic devices, and dialogue.
 
@@ -79,13 +76,10 @@ To create a `Class.Sound` object for point source audio:
 
 1. In the **Explorer** window, hover over an attachment, truss, wedge, or corner wedge, then click the ⊕ button. A contextual menu displays.
 2. From the menu, insert a **Sound**.
-
-   <img src="../assets/audio/sound-objects/Point-Source-Sound.png" width="163" />
-
 3. In the **Properties** window, navigate to the **SoundId** property and input a valid [audio asset ID](../sound/assets.md).
 4. **(Optional)** If you want the audio to start playing when the experience begins, enable the **Playing** property.
 
-### Background Audio
+### Background audio
 
 Background audio plays at the same volume no matter where the user travels within your experience. This type of audio is useful for music that you want to play for users, especially when you want to create a soundtrack of multiple audio files.
 
@@ -95,14 +89,11 @@ To create a `Class.Sound` object for background audio:
 
 1. In the **Explorer** window, hover over **SoundService**, then click the ⊕ button. A contextual menu displays.
 2. From the menu, insert a **Sound**.
-
-   <img src="../assets/audio/sound-objects/Background-Audio-Sound.png" width="320" />
-
 3. In the **Properties** window, navigate to the **SoundId** property and input a valid [audio asset ID](../sound/assets.md).
 4. **(Optional)** If you want the audio to start playing when the experience begins, enable the **Playing** property.
 5. **(Optional)** If this `Class.Sound` object is the only track you want to play in the place, enable its **Looped** property.
 
-## Customizing Sound Objects
+## Customize sound objects
 
 `Class.Sound` object properties work together to influence how users experience your audio, such as:
 
@@ -197,6 +188,7 @@ The `Class.Sound.TimePosition|TimePosition` property displays, in seconds, what 
 
 ```lua
 local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
 
 -- Create a new part
 local part = Instance.new("Part")
@@ -205,7 +197,7 @@ part.Color = Color3.new(0.75, 0.2, 0.5)
 part.Size = Vector3.new(2, 1, 2)
 part.Material = Enum.Material.Neon
 part.Position = Vector3.new(0, 4, 0)
-part.Parent = workspace
+part.Parent = Workspace
 
 -- Create an attachment on the part
 local attachment = Instance.new("Attachment")
@@ -234,11 +226,7 @@ sound:Play()
 -- Start checking if emitter should be enabled
 RunService.Heartbeat:Connect(function()
 	-- Enable the emitter within a time range of the audio; otherwise disable it
-	if sound.TimePosition >= 5 and sound.TimePosition < 20 then
-		emitter.Enabled = true
-	else
-		emitter.Enabled = false
-	end
+	emitter.Enabled = sound.TimePosition >= 5 and sound.TimePosition < 20
 end)
 ```
 
@@ -246,17 +234,19 @@ end)
 
 The `Class.Sound.Looped|Looped` property allows you to repeat audio after it has finished playing. When set to `true`, the `Class.Sound` object's audio plays again. This is useful to apply to [background audio](#background-audio) to ensure your experience never has abrupt silence.
 
-## Scripting Sound Objects
+## Script sound objects
 
-### Playing Audio Contextually
+### Play audio contextually
 
 Aside from auto-playing audio through the `Class.Sound` object's `Class.Sound.Playing|Playing` property, you can play audio contextually from a `Class.LocalScript` by calling `Class.Sound:Play()|Play()` on the corresponding `Class.Sound` object. For example:
 
 ```lua
+local Workspace = game:GetService("Workspace")
+
 local sound = Instance.new("Sound")
 sound.SoundId = "rbxassetid://9120386436"
 sound.Looped = true
-sound.Parent = workspace
+sound.Parent = Workspace
 sound:Play()
 ```
 
@@ -271,7 +261,7 @@ if musicTrack not musicTrack.IsPlaying then
 end
 ```
 
-### Playing Interface Audio
+### Play interface audio
 
 You can play interface audio for `Class.GuiObject|GuiObjects` such as [buttons](../ui/buttons.md) by hooking up a `Class.Sound` object to the `Class.GuiButton.Activated|Activated` event listener. This lets you provide auditory feedback to users, such as when they hover over or press it.
 

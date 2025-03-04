@@ -1,5 +1,5 @@
 ---
-title: Creating with Templates
+title: Create with templates
 description: Use Roblox's supplied template models to create your own unique avatar character in Blender.
 next: /art/characters/creating/template-files
 ---
@@ -16,7 +16,7 @@ This tutorial is intended for creators of all skill levels with moderate Blender
 6. Exporting your asset for use or testing in Studio
 
 <GridContainer numColumns="2">
-  <figure><img src="../../../assets/art/avatar/basic-creation/Pre-Tutorial.png" />  <figcaption>Starting Template Model</figcaption></figure>
+  <figure><img src="../../../assets/art/avatar/basic-creation/Pre-Tutorial.png" />  <figcaption>Starting template model</figcaption></figure>
 
   <figure><img src="../../../assets/art/avatar/basic-creation/Post-Tutorial.png" /><figcaption>Example model after modifications</figcaption></figure>
 </GridContainer>

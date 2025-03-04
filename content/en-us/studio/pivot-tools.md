@@ -1,11 +1,11 @@
 ---
-title: Pivot Tools
+title: Pivot tools
 description: Pivot tools and properties give you full control over the points around which objects rotate and translate.
 ---
 
-The **Pivot** tools and related properties give you full control over the points around which objects rotate and translate.
+The **pivot** tools and related properties give you full control over the points around which objects rotate and translate.
 
-## Studio Tools
+## Interactive Studio tools
 
 The interactive Studio tools are located in the [Model](./model-tab.md) tab.
 
@@ -81,7 +81,7 @@ The **Snap** checkbox toggles whether the pivot point snaps to **hotspots** such
 
 The **Reset** button moves the pivot point to the **center** of an object or model's bounding box. This operation is useful after you've changed the composition of a model and wish to place its pivot point at the center of its new bounding box.
 
-## Pivot Properties
+## Pivot properties
 
 In addition to the interactive tools, pivot values can be directly set in the [Properties](../studio/properties.md) window.
 
@@ -122,7 +122,7 @@ In addition to the interactive tools, pivot values can be directly set in the [P
 
 <figcaption><sup>1</sup> Changing this property will not move or rotate the object.</figcaption>
 
-## Scripting Pivots
+## Manipulate pivots in scripts
 
 Beyond the Studio tools, pivot points can be accessed and manipulated in scripts.
 

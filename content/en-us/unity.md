@@ -1,5 +1,5 @@
 ---
-title: Roblox for Unity Developers
+title: Roblox for Unity developers
 description: If you're an experienced Unity developer, use this page to get oriented with Roblox.
 comments: This document could use more information (and some links) around replication, remote events, and cloud services.
 ---
@@ -11,7 +11,7 @@ import Transforms from './includes/engine-comparisons/transforms.md'
 
 This page includes information to help experienced Unity developers get started with Roblox: basic orientation, a conceptual comparison, and key differences between the two platforms.
 
-## Getting Oriented
+## Get oriented
 
 ![The Unity user interface with markup to show the various windows and panels.](./assets/engine-comparisons/unity-editor.jpg)
 
@@ -26,7 +26,7 @@ However, the Hierarchy window has no predefined structure, whereas the Explorer 
 
 Similarly, the Roblox Studio [Asset Manager](projects/assets/manager.md) and [Toolbox](projects/assets/toolbox.md) overlap with the Unity Project window. The Asset Manager lets you manage all assets within your experience, whereas the Toolbox lets you access any assets you've published. The Toolbox also lets you search the Creator Store for assets from Roblox or the community, similar to the Unity Asset Store.
 
-## Philosophical Differences
+## Philosophical differences
 
 Roblox is a "simulation engine" rather than a traditional game engine. Unity `GameObjects` and Roblox `Class.Part|Parts` both serve as the fundamental building blocks for creating objects in a 3D environment, but in practice, the two are quite different:
 
@@ -37,7 +37,7 @@ You can see the difference immediately if you create a `GameObject` and a `Part`
 
 From a scripting perspective, `GameObject` is most similar to the Roblox `Class.Instance`, the base class for all other Roblox classes, but because you don't (and can't) create objects of type `Instance`, the comparison isn't especially practical.
 
-Another comparison is the Unity `GameObject` to the Roblox `Class.Model`. Models act as a container for a collection of interconnected parts in the same way that you might establish a parent-child relationship between many `GameObjects` in Unity. You specify one of the model's parts as its [primary part](parts/models.md#setting-a-primary-part) to define the pivot point. Models also hold scripts, animations, sound effects, prompts, constraints, particle emitters, and more.
+Another comparison is the Unity `GameObject` to the Roblox `Class.Model`. Models act as a container for a collection of interconnected parts in the same way that you might establish a parent-child relationship between many `GameObjects` in Unity. You specify one of the model's parts as its [primary part](parts/models.md#set-a-primary-part) to define the pivot point. Models also hold scripts, animations, sound effects, prompts, constraints, particle emitters, and more.
 
 For example, a Unity `GameObject` might have components for `ParticleSystem`, `Physics3D`, `SpringConstraint`, and a script. In the Hierarchy window, you see a single `GameObject` named `SpringyFireball`. The Inspector window shows the collection of components and properties.
 
@@ -56,9 +56,9 @@ Roblox's physics-by-default philosophy extends to the process of building 3D mod
 
 Rather than using standard metric units for length and mass, Roblox uses notional units called studs and Roblox Mass Units (RMUs). For approximate metric conversions and recommendations around use, see [Units](physics/units.md).
 
-## Location Matters
+## Location matters
 
-Roblox experiences are multiplayer by default, so Roblox Studio includes many different storage locations with specific behaviors. For example, a script might run when you put it in `Class.ReplicatedStorage`, but not when you put it into `Class.StarterPlayerScripts`. For more information, see [Client-Server Runtime](projects/client-server) and [Object Organization](projects/data-model#object-organization).
+Roblox experiences are multiplayer by default, so Roblox Studio includes many different storage locations with specific behaviors. For example, a script might run when you put it in `Class.ReplicatedStorage`, but not when you put it into `Class.StarterPlayerScripts`. For more information, see [Client-server runtime](projects/client-server) and [Object organization](projects/data-model#object-organization).
 
 <ScriptLocations components={props.components} />
 
@@ -78,9 +78,9 @@ For scripting, Unity uses C#. Roblox uses [Luau](luau/index.md), a scripting lan
 
 Compared to C#, Luau is gradually typed and generally has a less verbose syntax. In larger projects, however, gradual typing can introduce categories of bugs that strongly typed languages like C# avoid, so consider enabling [strict type checking](luau/type-checking.md#inference-modes) in Roblox scripts.
 
-For basic syntax differences between the scripting languages, see [Luau and C# Comparison](luau/luau-csharp-comparison.md).
+For basic syntax differences between the scripting languages, see [Luau and C# comparison](luau/luau-csharp-comparison.md).
 
-### Luau Code Sample
+### Luau code sample
 
 <CodeSample components={props.components} />
 
@@ -91,8 +91,8 @@ The Roblox script can be relatively concise because Roblox has many built-in ass
 Unity and Roblox both support importing custom meshes and models in `.fbx` format. Certain types of assets may require specific configurations and export settings from your third-party modeling software. For more information, see the following pages:
 
 - [3D Importer](art/modeling/3d-importer.md)
-- [General Specifications](art/modeling/specifications.md)
-- [Blender and Maya Export Requirements](art/modeling/export-requirements.md)
+- [General specifications](art/modeling/specifications.md)
+- [Blender and Maya export requirements](art/modeling/export-requirements.md)
 
 In Unity, objects import into your `Assets` directory, visible in the Project window. In Roblox, assets import into your Workspace and into the [Toolbox](projects/assets/toolbox.md) or **Inventory** section of the [Asset Manager](projects/assets/manager.md).
 
@@ -121,7 +121,7 @@ Similar to Unity tools, Roblox Studio supports [plugins](studio/plugins.md), whi
 | Unity | Roblox | Notes |
 | :--- | :--- | :--- |
 | Scene | [Place](projects.md#places) | |
-| GameObject | `Class.Part` or `Class.Model` | See [Philosophical Differences](#philosophical-differences). |
+| GameObject | `Class.Part` or `Class.Model` | See [Philosophical differences](#philosophical-differences). |
 | Prefab | [Package](projects/assets/packages.md) | |
 | Transform | `Datatype.CFrame` | `CFrame` doesn't include scale information. See [Transforms](#transforms). |
 | Hierarchy window | Explorer window | |

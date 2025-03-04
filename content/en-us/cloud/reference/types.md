@@ -70,7 +70,7 @@ In Open Cloud, update methods that support a field mask have a parameter named
 
 ## Money
 
-Generally used to define a price, the `Money` type has a three-letter currency code (as defined in ISO 4217) and a quantity, which uses the `Decimal` type. For example, a $17.99 Creator Store product looks like this:
+Generally used to define a price, the `Money` type has a three-letter currency code (as defined in ISO 4217) and a quantity, which uses the `Decimal` type. For example, you might represent a $17.99 price like this:
 
 ```json
 "myPrice": {
@@ -78,6 +78,18 @@ Generally used to define a price, the `Money` type has a three-letter currency c
   "quantity": {
     "significand": 1799,
     "exponent": -2
+  }
+}
+```
+
+Creator Store products require an `exponent` of -9, so the same price looks like this:
+
+```json
+"myPrice": {
+  "currencyCode": "USD",
+  "quantity": {
+    "significand": 17990000000,
+    "exponent": -9
   }
 }
 ```

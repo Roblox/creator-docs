@@ -22,10 +22,11 @@ description: |
 
   #### Best Practices for Preloading
 
-  - Only preload essential assets, **not** the entire Workspace. You might get
-    occasional pop-in, but it decreases load times and generally doesn't disrupt
-    the player experience. Assets that are good candidates for preloading
-    include those required for the loading screen, the UI, or the starting area.
+  - Only preload essential assets, **not** the entire `Class.Workspace`. You
+    might get occasional pop-in, but it decreases load times and generally
+    doesn't disrupt the player experience. Assets that are good candidates for
+    preloading include those required for the loading screen, the UI, or the
+    starting area.
   - Let players skip the loading screen, or automatically skip it after a
     certain amount of time.
 code_samples:
@@ -332,6 +333,15 @@ methods:
       If any of the assets fail to load, an error message appears in the output.
       The method itself will not error and it will continue executing until it
       has processed each requested instance or asset ID.
+
+      ##### Limitations
+
+      `Class.SurfaceAppearance` and `Class.MaterialVariant` are not supported by
+      `Class.ContentProvider:PreloadAsync()|PreloadAsync()` because these
+      objects rely on processed texture pack assets rather than directly loading
+      individual textures. Calling it on a `Class.SurfaceAppearance` instance
+      will not do anything, but the associated textures will still be streamed
+      in during runtime.
     code_samples:
       - ContentProvider-PreloadAsync1
     parameters:

@@ -1,5 +1,5 @@
 ---
-title: Friend Invite Reward System
+title: Friend invite reward system
 description: Use referral links to track and reward players that have successfully invited other players into your experience, and players that have joined your experience using a referral link invitation from another player.
 ---
 
@@ -37,7 +37,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-## Set Up a Referral Event
+## Set up a referral event
 
 To set up a referral event:
 
@@ -57,7 +57,7 @@ function onPlayerAdded(player)
     local referredByPlayerId = joinData.ReferredByPlayerId
 
     -- Check if the player was invited through a referral
-    if referredByPlayerId then
+    if referredByPlayerId and referredByPlayerId ~= 0 then
         -- Fire the referral event to the client, passing the inviter's ID
         referrerEvent:FireClient(player, referredByPlayerId)
 
@@ -71,7 +71,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-## Grant Referral Rewards
+## Grant referral rewards
 
 To encourage participation, grant rewards to both inviters and invitees. For example, you can give inviters a badge or in-experience currency when their friend joins the experience, and give invitees a welcome reward for joining the experience through a referral link.
 
@@ -88,7 +88,7 @@ function onPlayerAdded(player)
     local referredByPlayerId = joinData.ReferredByPlayerId
 
     -- Check if the player was invited through a referral
-    if referredByPlayerId then
+    if referredByPlayerId and referredByPlayerId ~= 0 then
         -- Fire the referral event to the client, passing the inviter's ID
         referrerEvent:FireClient(player, referredByPlayerId)
 
@@ -113,7 +113,7 @@ end
 Players.PlayerAdded:Connect(onPlayerAdded)
 ```
 
-## Manage Abuse Prevention
+## Manage abuse prevention
 
 You can implement safeguards to prevent players from exploiting the friend referral system.
 
@@ -130,7 +130,7 @@ function onPlayerAdded(player)
     local referredByPlayerId = joinData.ReferredByPlayerId
 
     -- Check if the player was invited and has not already used a referral
-    if referredByPlayerId and not referredPlayers[player.UserId] then
+    if referredByPlayerId and referredByPlayerId ~= 0 and not referredPlayers[player.UserId] then
         -- Mark the player as referred
         referredPlayers[player.UserId] = true
 

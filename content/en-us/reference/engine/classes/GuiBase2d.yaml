@@ -23,9 +23,18 @@ properties:
       `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` is a read-only
       property that provides the screen position of a `Class.GuiBase2d` element
       in pixels. This represents the actual pixel position at which an element
-      renders as a result of its ancestors' sizes and positions. Note that the
-      object's `Class.GuiObject.AnchorPoint|AnchorPoint` influences
-      `Class.GuiBase2d.AbsolutePosition|AbsolutePosition`.
+      renders as a result of its ancestors' sizes and positions. Note that
+      `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` always represents the
+      top-left corner of the `Class.GuiBase2d` element.
+
+      If the `Class.GuiBase2d` is in a `Class.ScreenGui`, the
+      `Class.GuiBase2d.AbsolutePosition|AbsolutePosition` property uses the
+      `Enum.ScreenInsets|CoreUISafeInsets` viewport coordinate system. The
+      origin of this coordinate system is located at the bottom-left corner of
+      the Roblox top bar. Note that this is the same coordinate system used by
+      the `Class.InputObject.Position` property.
+
+      <img src="/assets/engine-api/classes/GuiBase2d/AbsolutePositionCoordinateSystem.png" width="840" alt="Diagram showing the origin of the AbsolutePosition coordinate system." />
 
       See also `Class.GuiBase2d.AbsoluteRotation|AbsoluteRotation` and
       `Class.GuiBase2d.AbsoluteSize|AbsoluteSize`.

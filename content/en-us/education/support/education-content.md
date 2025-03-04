@@ -1,5 +1,5 @@
 ---
-title: Education Content
+title: Education content
 description: Featured lesson plans and tutorial series.
 ---
 
@@ -9,7 +9,7 @@ Our lessons are designed for educational programs of varying lengths and skill l
 We've curated some samples of our most popular work, but the rest of the content can be found in the **left** navigation bar.
 </Alert>
 
-## Featured Lesson Plans
+## Featured lesson plans
 
 Each lesson plan includes a set of tutorials complete with teaching notes and supplemental material.
 
@@ -44,7 +44,7 @@ Students build and race a spaceship while learning 3D modeling.
 
 </Grid>
 
-## Featured Tutorial Series
+## Featured tutorial series
 
 Each tutorial series includes a set of lessons covering specific topics in Roblox Studio or computer science. Educators can present a tutorial to students, or individuals can learn self-directed.
 

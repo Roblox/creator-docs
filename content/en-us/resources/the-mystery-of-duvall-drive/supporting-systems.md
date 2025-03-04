@@ -1,5 +1,5 @@
 ---
-title: Supporting Systems
+title: Supporting systems
 comments:
 prev: /resources/the-mystery-of-duvall-drive/foundational-gameplay-systems
 description: Explains the supporting systems and functions in The Mystery of Duvall Drive.
@@ -31,7 +31,7 @@ Note that we use `Class.Camera.ViewportPointToRay` or `Class.Camera.ScreenPointT
 
 ThoughtBubbles are overall similar, using a raycast to check if a mesh or its parents have a **ThoughtBubble** tag. It also uses the ThoughtText attribute for text, and a **ThoughtBubble** tag to point to a placeholder object used for positioning the UI in the world. Thought bubbles that use the same positional object but have different text have different cooldowns.
 
-### Special Cases
+### Special cases
 
 Lore has a couple of special cases, one of which is the corrupted seals. When a player clicks a corrupted seal, it displays lore UI, and it waits for a click to start a mission, which affects the game flow. This is handled by the [`GameStateClient`](../../resources/the-mystery-of-duvall-drive/foundational-gameplay-systems.md#gamestatemanager) that uses a bindable `LoreManagerFunc` to request lore UI. A callback is provided to the Lore system by `GameStateClient` to know when lore is "closed" by the player. Another special case is when **ThoughtBubbles** and **Lore** tags are on the same object. In this case, to avoid an overlap of lore and thought bubble text, we run the thought bubble after the lore is closed.
 
@@ -65,7 +65,7 @@ An object with an animated `Class.SurfaceGui` would have an Animator `Class.Modu
 
 ## LocalSpaceAnimations
 
-The **LocalSpaceAnimations** `Class.LocalScript` uses a **LocalSpaceRotation** tag to rotate mostly "cosmetic" objects with a given rotational velocity and delay around either the X, Y, or Z axis. We used this either for distant objects that players wouldn't interact with, or for smaller objects that don't affect simulation much. Parameters defined through the `Speed`, `Delay`, and `Axis` values. For implementation details, see [Rotating Cloud Meshes](../../resources/the-mystery-of-duvall-drive/developing-a-moving-world.md#rotating-cloud-meshes).
+The **LocalSpaceAnimations** `Class.LocalScript` uses a **LocalSpaceRotation** tag to rotate mostly "cosmetic" objects with a given rotational velocity and delay around either the X, Y, or Z axis. We used this either for distant objects that players wouldn't interact with, or for smaller objects that don't affect simulation much. Parameters defined through the `Speed`, `Delay`, and `Axis` values. For implementation details, see [Rotating Cloud Meshes](../../resources/the-mystery-of-duvall-drive/develop-a-moving-world.md#rotating-cloud-meshes).
 
 ## HeadlampManager
 
@@ -89,7 +89,7 @@ The **PlayerMissionRespawn** script uses a **RespawnVolume** tag and `Class.Coll
 
 When processing `GameEvents.PlayerRespawn`, the script can use `RespawnPositions`, if mission config provides it. If not, it uses `TeleportPositions` for the specific mission. We don't have a "checkpoint" system, so `CalcClosestTeleportPos` just selects closest **Respawn** or **Teleport** spots from where the player hit the `RespawnVolume`, using the only horizontal, "2D" distance.
 
-## Small Helper Systems
+## Small helper systems
 
 ### PianoManager
 
@@ -113,7 +113,7 @@ P1.Touched:Connect(function(otherPart) utils.ProcessPortal(otherPart, P2) end)
 
 **ProcessPortal** handles checking that otherPart is a human, teleporting the player through a `Datatype.CFrame` coordinate change, and invoking a small cutscene to hide the transition using a **Teleport_Jump** event in [**EventManager**](../../resources/the-mystery-of-duvall-drive/foundational-gameplay-systems.md#eventmanager).
 
-### Configuration Scripts
+### Configuration scripts
 
 We have several configuration, data definition, and common functionality scripts:
 

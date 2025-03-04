@@ -1,5 +1,5 @@
 ---
-title: Buying Upgrades
+title: Buy upgrades
 description: Part of the Adventure Game Series in Roblox. Code a script to sell items in a Roblox experience.
 next: /education/adventure-game-series/finishing-the-project
 prev: /education/adventure-game-series/selling-items
@@ -7,11 +7,11 @@ prev: /education/adventure-game-series/selling-items
 
 This brings us to the last stage of the game loop - buying upgrades. By letting players buy upgrades that increase the size of their item bag, they can harvest more items per trip and earn even more gold.
 
-## Creating a Shop
+## Create a shop
 
 Each shop will have a button that players click to purchase a larger item bag. The shop itself will be a part with a SurfaceGUI, an item that allows for text to be written on parts.
 
-### Creating the Sign
+### Create the sign
 
 1. In the Workspace, create a new model named Shop.
 2. In Shop, create a new block part named BuyButton.
@@ -34,7 +34,7 @@ Each shop will have a button that players click to purchase a larger item bag. T
    Depending on the part, the Face property might be different than shown above.
    </Alert>
 
-### Changing the Sign Text
+### Change the sign text
 
 Right now, the TextLabel is really small and hard for players to see. It needs to be scaled up.
 
@@ -57,7 +57,7 @@ Right now, the TextLabel is really small and hard for players to see. It needs t
 5. In the BuyText properties, scroll-down and change **Text** to something descriptive. For instance: `"Buy Larger Bag: 100 gold"`.
 6. Check **TextScaled** to be **on**. This automatically scales your text so it fits the box.
 
-### Adding a Click Detector
+### Add a click detector
 
 Players will buy items by clicking on the shop rather than just touching it. The script will use a click detector to tell if a player has clicked the shop sign. **ClickDetectors** are objects that allow users to interact with something in the environment, such as opening a door.
 
@@ -106,7 +106,7 @@ Players will buy items by clicking on the shop rather than just touching it. The
    end
    ```
 
-7. **Play** your project. Click the button and check that you see the text in the Output Window.
+7. **Play** your project. Click the button and check that you see the text in the Output window.
 
    <img src="../../assets/education/adventure-game-series/adventure-showClickDetector.jpg" />
 
@@ -114,18 +114,18 @@ Players will buy items by clicking on the shop rather than just touching it. The
    Click Detectors have a distance from which players can interact with it. To change this distance, go to the object and modify its MaxActivationDistance.
    </Alert>
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 **Issue:** You're unable to click the button or a mouse cursor doesn't appear on the button.
 
 - Make sure that the ClickDetector object is a child of the part you're trying to click on.
 - Check that your character is close enough to the button. Or, make sure that the tool is not equipped.
 
-## Buying Upgrades
+## Buy upgrades
 
 With a working button, it's time to add code into giveUpgrade to remove a player's gold in exchange for an upgraded bag.
 
-### Adding Upgrade Variables
+### Add upgrade variables
 
 Each upgrade will have two variables: the cost of the upgrade and how many spaces it has.
 
@@ -140,7 +140,7 @@ Each upgrade will have two variables: the cost of the upgrade and how many space
    local upgradeCost = 100
    ```
 
-### Granting Upgrades
+### Grant upgrades
 
 Before selling the player the upgrade, you need to check if they have enough money. If they do, you'll add to their maximum amount of spaces.
 
@@ -204,7 +204,7 @@ Before selling the player the upgrade, you need to check if they have enough mon
 
    <video controls src="../../assets/education/adventure-game-series/adventure-showUpgradePurchase.mp4" width="100%"></video>
 
-### Troubleshooting Tips
+### Troubleshooting tips
 
 At this point, the upgrades don't work as intended, try one of the following below.
 
@@ -212,7 +212,7 @@ At this point, the upgrades don't work as intended, try one of the following bel
 - Check that each string in FindFirstChild is the exact same as that IntValue's name in the PlayerSetup script. For example, if your code uses Rubies as money, you should have `FindFirstChild("Rubies")`.
 - Make sure that `giveUpgrade()` is above `clickDetector.MouseClick`.
 
-## Complete BuyScript Script
+## Complete BuyScript script
 
 A finished version of the script can be referenced below.
 

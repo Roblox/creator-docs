@@ -63,7 +63,7 @@ properties:
       end
       ```
 
-      If the device has an enabled accelerometer, you can get it's current
+      If the device has an enabled accelerometer, you can get its current
       acceleration by using the `Class.UserInputService:GetDeviceAcceleration()`
       function or track when the device's acceleration changes by using the
       `Class.UserInputService.DeviceAccelerationChanged` event.
@@ -246,16 +246,15 @@ properties:
       Determines whether the user's mouse can be moved freely or is locked.
     description: |
       This property sets how the user's mouse behaves based on the
-      `Enum.MouseBehavior` Enum. The default value is
-      Enum.MouseBehavior.Default.
+      `Enum.MouseBehavior` enum. It can be set to three values:
 
-      It can be set to three values:
-
-      1. _Default_: The mouse moves freely around the user's screen.
-      2. _LockCenter_: The mouse is locked, and cannot move from, the center of
-         the user's screen.
-      3. _LockCurrentPosition_: The mouse is locked, and cannot move from, it's
-         current position on the user's screen at the time of locking.
+      - `Enum.MouseBehavior.Default` &mdash; The mouse moves freely around the
+        user's screen.
+      - `Enum.MouseBehavior.LockCenter` &mdash; The mouse is locked and cannot
+        move from the center of the user's screen.
+      - `Enum.MouseBehavior.LockCurrentPosition` &mdash; The mouse is locked and
+        cannot move from its current position on the user's screen at the time
+        of locking.
 
       The value of this property does not affect the sensitivity of events
       tracking mouse movement. For example,
@@ -391,7 +390,7 @@ properties:
     summary: |
       The content ID of the image used as the user mouse icon.
     description: |
-      The **MouseIcon** property determines the image used as the pointer. If
+      The `MouseIcon` property determines the image used as the pointer. If
       blank, a default arrow is used. While the cursor hovers over certain UI
       objects such as an `Class.ImageButton`, `Class.TextButton`,
       `Class.TextBox`, or `Class.ProximityPrompt`, this image will be overridden
@@ -889,14 +888,14 @@ methods:
       Returns the currently `Class.TextBox` the client is currently focused on.
     description: |
       This function returns the `Class.TextBox` the client is currently focused
-      on. A TextBox can be manually selected by the user, or selection can be
-      forced using the `Class.TextBox:CaptureFocus()` function. If no TextBox is
-      selected, this function will return _nil_.
+      on. A `Class.TextBox` can be manually selected by the user, or selection
+      can be forced using the `Class.TextBox:CaptureFocus()` function. If no
+      `Class.TextBox` is selected, this function will return `nil`.
 
       As `Class.UserInputService` is client-side only, this function can only be
       used in a `Class.LocalScript`.
 
-      See also:
+      ##### See Also
 
       - `Class.UserInputService.TextBoxFocused`
       - `Class.UserInputService.TextBoxFocusReleased`
@@ -904,7 +903,6 @@ methods:
       - `Class.TextBox:IsFocused()`
       - `Class.TextBox:ReleaseFocus()`
     code_samples:
-      - UserInputService-GetFocusedTextBox
     parameters: []
     returns:
       - type: TextBox
@@ -1178,8 +1176,9 @@ methods:
       to the top left corner of the screen.
     description: |
       This function returns a `Datatype.Vector2` representing the current screen
-      location of the player's `Class.Mouse` in pixels relative to the top left
-      corner. This does not account for the `Class.GuiObject` inset.
+      location of the player's `Class.Mouse` in pixels relative to the top‑left
+      corner. This does not account for the `Enum.ScreenInsets`; to get the
+      top‑left and bottom‑right insets, call `Class.GuiService:GetGuiInset()`.
 
       If the location of the mouse pointer is offscreen or the player's device
       does not have a mouse, the returned value will be undetermined.
@@ -1268,7 +1267,7 @@ methods:
       textLabel.Text = "Press " .. UserInputService:GetStringForKeyCode(mapKey) .. " to open the map"
       ```
 
-      #### Examples on QWERTY Keyboard
+      ##### Examples on QWERTY Keyboard
 
       <table size="small">
         <thead>
@@ -1297,7 +1296,7 @@ methods:
         </tbody>
       </table>
 
-      #### Examples on AZERTY Keyboard
+      ##### Examples on AZERTY Keyboard
 
       <table size="small">
         <thead>
@@ -1326,7 +1325,7 @@ methods:
         </tbody>
       </table>
 
-      #### Gamepad Usage
+      ##### Gamepad Usage
 
       `Class.UserInputService:GetStringForKeyCode()|GetStringForKeyCode()`
       returns the string mapping for the `Enum.KeyCode` for the most recently
@@ -1343,7 +1342,7 @@ methods:
       local key = Enum.KeyCode.ButtonA
 
       local mappings = {
-        ButtonA = "rbxasset://BUTTON_A_ASSET",  -- Replace with the desired ButtonA asset
+        ButtonA = "rbxasset://BUTTON_A_ASSET", -- Replace with the desired ButtonA asset
         ButtonCross = "rbxasset://BUTTON_CROSS_ASSET"  -- Replace with the desired ButtonCross asset
       }
 
@@ -1353,7 +1352,7 @@ methods:
       imageLabel.Image = image
       ```
 
-      #### Gamepad Mappings
+      ##### Gamepad Mappings
 
       The directional pad key codes do not have any differences based on device.
       `Enum.KeyCode.ButtonSelect` has slightly different behavior in some cases.
@@ -1431,7 +1430,7 @@ methods:
         </tbody>
       </table>
 
-      #### System Images for KeyCodes
+      ##### System Images for KeyCodes
 
       When using a `Enum.KeyCode` that may be better represented as an image,
       such as for an `Class.ImageLabel` in a user interface, you can use the
@@ -1715,7 +1714,7 @@ methods:
       gamepad. It returns `true` if the `Enum.UserInputType|gamepad` has the
       specified `Enum.KeyCode|button` pressed down, otherwise it returns false.
 
-      #### Valid UserInputTypes
+      ##### Valid UserInputTypes
 
       The specified gamepad should be one of the following UserInputType enum
       values:
@@ -1731,7 +1730,7 @@ methods:
         </tr>
       </table>
 
-      #### Valid KeyCodes
+      ##### Valid KeyCodes
 
       The specified button should be one of the following KeyCodes enum values:
 
@@ -2555,12 +2554,12 @@ events:
     summary: |
       Fired when the client loses focus on a `Class.TextBox`.
     description: |
-      The TextBoxFocusReleased event fires when a client loses focus on a
-      TextBox - typically when a client stops text entry into a TextBox by
-      pressing return or clicking/touching elsewhere on the screen.
+      The `TextBoxFocusReleased` event fires when a client loses focus on a
+      `Class.TextBox`, typically when a client stops text entry by pressing
+      return or clicking/touching elsewhere on the screen.
 
-      For example, the code below prints the name of the TextBox losing focus
-      when the event fires.
+      For example, the code below prints the name of the `Class.TextBox` losing
+      focus when the event fires.
 
       ```lua
       local UserInputService = game:GetService("UserInputService")
@@ -2573,18 +2572,17 @@ events:
       ```
 
       It can be used alongside `Class.UserInputService.TextBoxFocused` to track
-      when a TextBox gains and loses focus.
+      when a `Class.TextBox` gains and loses focus.
 
       As this event only fires locally, it can only be used in a
       `Class.LocalScript`.
 
-      See also:
+      ##### See Also
 
       - `Class.UserInputService:GetFocusedTextBox()`
       - `Class.TextBox.Focused`
       - `Class.TextBox.FocusLost`
     code_samples:
-      - UserInputService-TextBoxFocusReleased
     parameters:
       - name: textboxReleased
         type: TextBox
@@ -2601,13 +2599,12 @@ events:
     summary: |
       Fired when the client focuses on a `Class.TextBox`.
     description: |
-      The TextBoxFocused event fires when a gains focus on a `Class.TextBox` -
-      typically when a client clicks/taps on a text box to begin inputting text.
-      This also fires if a text box focus is focused using
-      `Class.TextBox:CaptureFocus()`.
+      This event fires when a gains focus on a `Class.TextBox`, typically when a
+      client clicks/taps on a text box to begin inputting text. This also fires
+      if a text box focus is focused using `Class.TextBox:CaptureFocus()`.
 
-      For example, the code below prints the name of the TextBox focused when
-      the event fires.
+      For example, the code below prints the name of the `Class.TextBox` focused
+      when the event fires.
 
       ```lua
       local UserInputService = game:GetService("UserInputService")
@@ -2625,19 +2622,41 @@ events:
       As this event only fires locally, it can only be used in a
       `Class.LocalScript`.
 
-      See also:
+      ##### See Also
 
       - `Class.UserInputService:GetFocusedTextBox()`
       - `Class.TextBox.Focused`
       - `Class.TextBox.FocusLost`
     code_samples:
-      - UserInputService-TextBoxFocused
     parameters:
       - name: textboxFocused
         type: TextBox
         default:
         summary: |
           The `Class.TextBox` that gained focus.
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
+  - name: UserInputService.TouchDrag
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: dragDirection
+        type: SwipeDirection
+        default:
+        summary: ''
+      - name: numberOfTouches
+        type: int
+        default:
+        summary: ''
+      - name: gameProcessedEvent
+        type: bool
+        default:
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None

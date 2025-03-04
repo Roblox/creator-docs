@@ -7,20 +7,19 @@ summary: |
 description: |
   The `Class.WrapDeformer` object provides a low-resolution cage mesh that pairs
   with a `Class.WrapTarget` sibling to deform a parent `Class.MeshPart`. The
-  `Class.MeshPart` geometry is deformed according to the displacement
-  between pairs of `Class.WrapTarget` cage mesh vertices and `Class.WrapDeformer`
-  cage mesh vertices. Cage mesh vertices are paired based on UV equivalence.
-  
+  `Class.MeshPart` geometry is deformed according to the displacement between
+  pairs of `Class.WrapTarget` cage mesh vertices and `Class.WrapDeformer` cage
+  mesh vertices. Cage mesh vertices are paired based on UV equivalence.
+
   `Class.WrapDeformer` may be used with avatars or on distinct
-  `Class.MeshPart|MeshParts`, as long as `Class.WrapTarget` children are
-  present for the parent `Class.MeshPart|MeshParts`. `Class.WrapDeformer` is
-  similar to `Class.WrapLayer` but doesn't require layered clothing and can
-  directly deform `Class.MeshPart|MeshParts` for publishing.
+  `Class.MeshPart|MeshParts`, as long as `Class.WrapTarget` children are present
+  for the parent `Class.MeshPart|MeshParts`. `Class.WrapDeformer` is similar to
+  `Class.WrapLayer` but doesn't require layered clothing and can directly deform
+  `Class.MeshPart|MeshParts` for publishing.
 code_samples: []
 inherits:
   - BaseWrap
-tags:
-  - NotBrowsable
+tags: []
 deprecation_message: ''
 properties: []
 methods:
@@ -29,14 +28,18 @@ methods:
       Sets the cage mesh used to deform against a sibling `Class.WrapTarget`
       cage mesh.
     description: |
-      Sets the cage mesh used to deform the parent `Class.MeshPart` in conjunction
-      with a sibling `Class.WrapTarget` cage mesh. The `content` parameter should
-      represent a Roblox mesh asset ID or an `Class.EditableMesh` reference in your
-      `Class.DataModel`.
+      Sets the cage mesh used to deform the parent `Class.MeshPart` in
+      conjunction with a sibling `Class.WrapTarget` cage mesh. The `content`
+      parameter should represent a Roblox mesh asset ID or an
+      `Class.EditableMesh` reference in your `Class.DataModel`.
     code_samples: []
     parameters:
       - name: content
         type: Content
+        default:
+        summary: ''
+      - name: cageOrigin
+        type: CoordinateFrame?
         default:
         summary: ''
     returns:
@@ -50,13 +53,13 @@ methods:
     writeCapabilities: []
   - name: WrapDeformer:CreateEditableMeshAsync
     summary: |
-      Returns an `Class.EditableMesh` (currently unskinned) equivalent to
-      the deformed parent mesh.
+      Returns an `Class.EditableMesh` (currently unskinned) equivalent to the
+      deformed parent mesh.
     description: |
       Constructs and returns an `Class.EditableMesh` corresponding to the
-      deformed parent mesh geometry. This method respects all updates
-      made to the deformation inputs prior to the request. It also sets the
-      returned result's `Class.EditableMesh.FixedSize|FixedSize` to `true`.
+      deformed parent mesh geometry. This method respects all updates made to
+      the deformation inputs prior to the request. It also sets the returned
+      result's `Class.EditableMesh.FixedSize|FixedSize` to `true`.
     code_samples: []
     parameters: []
     returns:
@@ -76,10 +79,11 @@ methods:
       Returns a `Datatype.CFrame` deformed by the same deformation field used
       for the geometry of the parent `Class.MeshPart`. This method is useful for
       the placement of accessories.
-      
+
       The input and output `Datatype.CFrame` are both in the space of the parent
-      `Class.MeshPart`; only position (not rotation) will be deformed. This method
-      respects all updates made to the deformation inputs prior to the request.
+      `Class.MeshPart`; only position (not rotation) will be deformed. This
+      method respects all updates made to the deformation inputs prior to the
+      request.
     code_samples: []
     parameters:
       - name: originalCFrame

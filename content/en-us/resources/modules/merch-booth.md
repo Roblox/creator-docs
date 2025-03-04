@@ -11,7 +11,7 @@ The **MerchBooth** [developer module](../../resources/modules/index.md) lets you
 To offer assets created by third parties in the merch booth, make sure **Allow Third Party Sales** is enabled from the **Security** section of the [Game Settings](../../studio/game-settings.md) window. If this setting is disabled, you will not be able to sell UGC assets created by other users.
 </Alert>
 
-## Module Usage
+## Module usage
 
 ### Installation
 
@@ -65,11 +65,11 @@ The module is preconfigured to work for most use cases, but it can be easily cus
 
    <img src="../../assets/developer-modules/merch-booth/UI-Visual-Customization.jpg" width="800" />
 
-### Adding Items
+### Add items
 
 What's a merch booth without merch? The following sections outline how to add [avatar assets](#avatar-assets), [passes](#passes), and [developer products](#developer-products) to your merch booth.
 
-#### Avatar Assets
+#### Avatar assets
 
 Items such as [clothing and accessories](../../art/accessories/index.md) must be added through their **asset&nbsp;ID** located on the item's detail page in the [Avatar Shop](https://www.roblox.com/catalog).
 
@@ -106,11 +106,11 @@ Items such as [clothing and accessories](../../art/accessories/index.md) must be
    local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
    local items = {
-   	607702162,  -- Roblox Baseball Cap
-   	4819740796,  -- Robox
-   	1374269,  -- Kitty Ears
-   	11884330,  -- Nerd Glasses
-   	10476359,  -- Paper Hat
+   	607702162, -- Roblox Baseball Cap
+   	4819740796, -- Robox
+   	1374269, -- Kitty Ears
+   	11884330, -- Nerd Glasses
+   	10476359, -- Paper Hat
    }
 
    for _, assetId in items do
@@ -169,8 +169,8 @@ Adding [passes](../../production/monetization/game-passes.md) requires pass IDs 
    local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
    local items = {
-   	4343758,  -- ColdFyre Armor
-   	28521575,  -- Slime Shield
+   	4343758, -- ColdFyre Armor
+   	28521575, -- Slime Shield
    }
 
    for _, assetId in items do
@@ -225,8 +225,8 @@ Adding [developer products](../../production/monetization/developer-products.md)
    local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
    local items = {
-   	1236602053,  -- Mana Refill
-   	1257880672,  -- Healing Potion
+   	1236602053, -- Mana Refill
+   	1257880672, -- Healing Potion
    }
 
    for _, assetId in items do
@@ -239,7 +239,7 @@ Adding [developer products](../../production/monetization/developer-products.md)
    end
    ```
 
-### Custom Catalog Button
+### Custom catalog button
 
 By default, a right-side **catalog button** lets players open the booth at any time.
 
@@ -268,7 +268,7 @@ In some cases, it may be useful to [remove](#togglecatalogbutton) this button an
    end)
    ```
 
-### Shoppable Regions
+### Shoppable regions
 
 A helpful way to drive purchases in your experience is to automatically show the merch booth when a player enters an area.
 
@@ -334,7 +334,7 @@ To create a shoppable region:
 	CollectionService:GetInstanceAddedSignal("ShopRegion"):Connect(setupRegion)
 	```
 
-### Proximity Prompts
+### Proximity prompts
 
 As an alternative to the 2D catalog view, you can add **proximity prompts** over in-experience objects. This encourages players to discover items in the 3D environment, preview them on their own avatar, purchase them, and instantly equip them. See [addProximityButton](#addproximitybutton) for details.
 
@@ -344,7 +344,7 @@ As an alternative to the 2D catalog view, you can add **proximity prompts** over
 If a player has opened an item view through a proximity prompt, it automatically closes when the player moves further away from the prompt object than its activation distance. If you want to keep the booth open regardless of the player's distance from the prompt, set `closeWhenFarFromPrompt` to `false` in a [configure](#configure) call.
 </Alert>
 
-### Changing the Equip Effect
+### Change the equip effect
 
 By default, the merch booth shows a generic sparkle effect when a player equips an item from it. To change the effect, set `particleEmitterTemplate` to your own instance of a `Class.ParticleEmitter` in a [configure](#configure) call.
 
@@ -365,7 +365,7 @@ MerchBooth.configure({
 })
 ```
 
-### GUI Visibility
+### GUI visibility
 
 By default, the merch booth hides all `Class.ScreenGui|ScreenGuis` and `Class.CoreGui|CoreGuis` when its UI appears, including the chat, leaderboard, and others included by Roblox. If you want to disable this behavior, set `hideOtherUis` to `false` in a [configure](#configure) call.
 
@@ -379,7 +379,7 @@ MerchBooth.configure({
 })
 ```
 
-### Character Movement
+### Character movement
 
 It can be advantageous to prevent a character from moving while they are in the merch booth. This can be done by setting `disableCharacterMovement` to `true` in a [configure](#configure) call.
 
@@ -393,7 +393,7 @@ MerchBooth.configure({
 })
 ```
 
-## API Reference
+## API reference
 
 ### Types
 
@@ -711,7 +711,7 @@ addItemAsync(assetId: `number`, productType: `Enum.InfoType`, hideFromCatalog: `
 
 Asynchronously adds an item to the merch booth so that it's eligible for purchase in the experience. `assetId` is the item's asset ID, `productType` is the item's `Enum.InfoType` enum, and `hideFromCatalog` can be used to hide the item in the catalog view.
 
-See [Adding Items](#adding-items) for details, as usage varies slightly for **assets** versus **game passes** or **developer products**.
+See [Adding Items](#add-items) for details, as usage varies slightly for **assets** versus **game passes** or **developer products**.
 
 <Alert severity="warning">
   This function can only be called from a `Class.Script` and it performs an asynchronous network call that may occasionally fail. As shown below, it's recommended that it be wrapped in `Global.LuaGlobals.pcall()` to catch and handle errors.
@@ -723,11 +723,11 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
 local items = {
-	607702162,  -- Roblox Baseball Cap
-	4819740796,  -- Robox
-	1374269,  -- Kitty Ears
-	11884330,  -- Nerd Glasses
-	10476359,  -- Paper Hat
+	607702162, -- Roblox Baseball Cap
+	4819740796, -- Robox
+	1374269, -- Kitty Ears
+	11884330, -- Nerd Glasses
+	10476359, -- Paper Hat
 }
 
 for _, assetId in items do
@@ -746,8 +746,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
 local items = {
-	4343758,  -- ColdFyre Armor
-	28521575,  -- Slime Shield
+	4343758, -- ColdFyre Armor
+	28521575, -- Slime Shield
 }
 
 for _, assetId in items do
@@ -766,8 +766,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
 local items = {
-	1236602053,  -- Mana Refill
-	1257880672,  -- Healing Potion
+	1236602053, -- Mana Refill
+	1257880672, -- Healing Potion
 }
 
 for _, assetId in items do
@@ -841,6 +841,7 @@ When implementing proximity prompts, you may want to [remove the catalog button]
 
 ```lua title='Script' highlight='6, 11'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
 
 local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
@@ -848,7 +849,7 @@ local success, errorMessage = pcall(function()
 	MerchBooth.addItemAsync(4819740796)
 end)
 if success then
-	local item = workspace:FindFirstChild("Robox")
+	local item = Workspace:FindFirstChild("Robox")
 	if item then
 		MerchBooth.addProximityButton(item, 4819740796)
 	end
@@ -865,6 +866,7 @@ Removes a [proximity prompt](#proximity-prompts) generated through [addProximity
 
 ```lua title='Script' highlight='11, 16'
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Workspace = game:GetService("Workspace")
 
 local MerchBooth = require(ReplicatedStorage:WaitForChild("MerchBooth"))
 
@@ -872,7 +874,7 @@ local success, errorMessage = pcall(function()
 	MerchBooth.addItemAsync(4819740796)
 end)
 if success then
-	local item = workspace:FindFirstChild("Robox")
+	local item = Workspace:FindFirstChild("Robox")
 	if item then
 		MerchBooth.addProximityButton(item, 4819740796)
 	end

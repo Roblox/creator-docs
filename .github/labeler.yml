@@ -49,14 +49,17 @@ engine reference:
   - 'content/en-us/reference/engine/**/*'
   - 'content/common/navigation/engine/reference.yaml'
 
-navigation:
-  - 'content/common/navigation/**/*'
-
 cloud:
   - 'content/en-us/cloud/**/*'
   - 'content/en-us/assets/open-cloud/**/*'
   - 'content/en-us/reference/cloud/**/*'
   - 'content/common/navigation/cloud/**/*'
+
+localization:
+  - any: ['content/**/*', '!content/en-us/**', '!content/common/**']
+
+navigation:
+  - 'content/common/navigation/**/*'
 
 resources:
   - 'content/en-us/resources/**/*'
