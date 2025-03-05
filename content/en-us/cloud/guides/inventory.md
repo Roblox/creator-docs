@@ -11,7 +11,7 @@ Responses from the [Inventory API][1] include items from the following categorie
 - Purchases and rewards (badges, passes, purchased places, private servers)
 - Avatar items (avatar animations, classic heads, emotes, faces, hair, heads)
 
-Before using the [Inventory API][1], you must [generate an API key](api-keys.md) or [configure OAuth 2](oauth2-overview.md) for your app. The examples on this page use API keys.
+Before using the [Inventory API][1], you must [generate an API key](../auth/api-keys.md) or [configure OAuth 2](../auth/oauth2-overview.md) for your app. The examples on this page use API keys.
 
 ## Check item ownership
 

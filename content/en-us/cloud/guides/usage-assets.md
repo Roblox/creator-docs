@@ -115,11 +115,11 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
       </td>
       <td>
         <ul>
-          <li>Up to 30 seconds of duration.</li>
+          <li>Up to 60 seconds of duration.</li>
           <li>Up to 4096x2160 resolution.</li>
-          <li>Up to 375 MB.</li>
+          <li>Up to 750 MB.</li>
           <li>Currently, only English, Spanish, Portuguese, Indonesian, Chinese (simplified and traditional), Japanese, and/or Korean audio and text are allowed.</li>
-          <li>Up to 3 uploads per month if you're 13+ and ID-verified.</li>
+          <li>Up to 10 uploads per month if you're 13+ and ID-verified.</li>
         </ul>
       </td>
     </tr>
@@ -129,11 +129,11 @@ Updating asset metadata using the **Update Asset** endpoint is not subject to th
 
 ## Security permissions
 
-The API supports both first-party use with [API key authorization](./api-keys.md) and third-party use in [OAuth 2 applications](./oauth2-overview.md). Each way requires different security permission settings.
+The API supports both first-party use with [API key authorization](../auth/api-keys.md) and third-party use in [OAuth 2 applications](../auth/oauth2-overview.md). Each way requires different security permission settings.
 
 ### API keys
 
-To use the API in your own scripts or tools, you need to [create an API key](./api-keys.md#create-api-keys) for authorization and security. To manage assets that you own individually, create the API key under your account. To manage group-owned assets, create the API key under the target group. For more information on group-owned API keys, see [Group-owned API key permissions](./api-keys.md#group-owned-api-key-permissions).
+To use the API in your own scripts or tools, you need to [create an API key](../auth/api-keys.md#create-api-keys) for authorization and security. To manage assets that you own individually, create the API key under your account. To manage group-owned assets, create the API key under the target group. For more information on group-owned API keys, see [Group-owned API key permissions](../auth/api-keys.md#group-owned-api-key-permissions).
 
 Once you create an API key, you can't switch its ownership between individuals or groups, so if you create an API key under your own account, you can't use it for managing group assets.
 
@@ -154,7 +154,7 @@ Once you have the API key, copy it to the `x-api-key` request header. All endpoi
 
 ### OAuth 2.0 apps
 
-To use the API for a third-party OAuth 2.0 application, add the `asset:read` and `asset:write` permission scopes when [registering your app](./oauth2-registration.md#add-permissions). Choose these scopes based on the requirements of the endpoints you plan to use.
+To use the API for a third-party OAuth 2.0 application, add the `asset:read` and `asset:write` permission scopes when [registering your app](../auth/oauth2-registration.md#add-permissions). Choose these scopes based on the requirements of the endpoints you plan to use.
 
 ## Create a new asset
 
@@ -321,7 +321,7 @@ Third-Party app support through OAuth 2.0 is a Beta feature that might be subjec
 
 To use Assets API for your application and request permissions from your users, perform the following settings:
 
-1. When [registering your application](./oauth2-registration.md#register-an-app), under **Permissions**, select **asset:read** and **asset:write** scopes.
+1. When [registering your application](../auth/oauth2-registration.md#register-your-app), under **Permissions**, select **asset:read** and **asset:write** scopes.
 
 1. When [implementing the authorization flow](../../cloud/auth/oauth2-overview.md#implement-authorization-flows), include `asset:read` and `asset:write` as the scope parameters of the authorization URL that redirects users back to your application, like the following example:
 

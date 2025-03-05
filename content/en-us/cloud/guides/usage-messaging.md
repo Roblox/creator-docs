@@ -57,7 +57,7 @@ Players.PlayerAdded:Connect(onPlayerAdded)
 
 After [setting up](#set-up-a-topic-for-messaging) a topic, publish a message to your experience's live servers:
 
-1. [Create an API key](./api-keys.md#creating-an-API-key) on [Creator Dashboard](https://create.roblox.com/dashboard/credentials) and copy it somewhere safe. Make sure you perform the following settings:
+1. [Create an API key](../auth/api-keys.md#create-api-keys) on [Creator Dashboard](https://create.roblox.com/dashboard/credentials) and copy it somewhere safe. Make sure you perform the following settings:
 
    1. Add **messaging-service** to **Access Permissions**.
    2. Select an experience, and add the **universe-messaging-service:publish** operation.
@@ -98,14 +98,14 @@ Third-party app support through OAuth 2.0 is a beta feature that might be subjec
 
 To use Messaging Service API for your application and request permissions from your users, perform the following settings:
 
-1. When [registering your application](./oauth2-registration.md#registering-an-app), under **Permissions**, select the **universe-messaging-service:publish** scope.
-2. When [implementing the authorization flow](../../cloud/auth/oauth2-overview.md#implementing-authorization-flows), include `universe-messaging-service:publish` in the `scope` parameter of the authorization URL that redirects users back to your application, like the following example:
+1. When [registering your application](../auth/oauth2-registration.md#register-your-app), under **Permissions**, select the **universe-messaging-service:publish** scope.
+2. When [implementing the authorization flow](../../cloud/auth/oauth2-overview.md), include `universe-messaging-service:publish` in the `scope` parameter of the authorization URL that redirects users back to your application, like the following example:
 
    ```plain
    https://authorize.roblox.com?client_id=816547628409595165403873012&redirect_uri=https://my-app.com/redirect&scope=openid+universe-messaging-service:publish&response_type=Code&prompts=login+consent&nonce=12345&state=6789
    ```
 
-3. Request access to the `universeId` of the experience that the user wants to publish their messages to. Your application can send a `POST` request to the [token resources endpoint](oauth2-reference.md#token-exchange) with the access token, client ID and secret or the `code challenge`, depending on your [implementation of your authorization flow](../../cloud/auth/oauth2-overview.md#implementing-authorization-flows), as request parameters to get a list of `universeIds` of experiences that the user granted permission to:
+3. Request access to the `universeId` of the experience that the user wants to publish their messages to. Your application can send a `POST` request to the [token resources endpoint](../auth/oauth2-reference.md#token-exchange) with the access token, client ID and secret or the `code challenge`, depending on your [implementation of your authorization flow](../../cloud/auth/oauth2-overview.md#implementing-authorization-flows), as request parameters to get a list of `universeIds` of experiences that the user granted permission to:
 
    ```bash title="Example Request"
    curl --location --request POST 'https://apis.roblox.com/oauth/v1/token/resources' \
