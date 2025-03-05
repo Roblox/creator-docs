@@ -3,12 +3,16 @@ title: Feature packages
 description: Feature Packages let you drag and drop fully functional, customizable features directly into your experiences.
 ---
 
-Feature Packages are fully functional, customizable features that you can drag and drop directly into your experience. Each feature package comes with:
+Feature packages are fully functional, customizable features that you can drag and drop directly into your experience. Each feature package comes with:
 
 - Functional back-end code for minimal engineering work
 - Default UI components that you can customize to fit your unique aesthetics
 - Built-in game design and UI/UX best practices
 - Funnel analytics and insights
+
+You can use feature packages to add new functionality and gameplay features to your experiences, improve your experience's key metrics, and contribute to sustainable [live operations](../../production/game-design/liveops-essentials.md) (LiveOps).
+
+<br /> <br />
 
 <Card>
 

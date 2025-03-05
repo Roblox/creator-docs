@@ -47,20 +47,5 @@ properties:
     capabilities: []
     writeCapabilities: []
 methods: []
-events:
-  - name: ServiceVisibilityService.ServiceVisibilityChanged
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: serviceName
-        type: string
-        default:
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
+events: []
 callbacks: []

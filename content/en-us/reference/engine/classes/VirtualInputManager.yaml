@@ -14,44 +14,6 @@ tags:
   - Service
 deprecation_message: ''
 properties: []
-methods:
-  - name: VirtualInputManager:SendScroll
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: x
-        type: float
-        default:
-        summary: ''
-      - name: 'y'
-        type: float
-        default:
-        summary: ''
-      - name: deltaX
-        type: float
-        default:
-        summary: ''
-      - name: deltaY
-        type: float
-        default:
-        summary: ''
-      - name: options
-        type: Dictionary
-        default:
-        summary: ''
-      - name: layerCollector
-        type: Instance
-        default:
-        summary: ''
-    returns:
-      - type: void
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
+methods: []
 events: []
 callbacks: []

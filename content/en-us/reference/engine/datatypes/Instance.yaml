@@ -3,7 +3,7 @@ type: datatype
 summary: |
   Holds the constructor for Instances.
 description: |
-  The `Class.Instance` data type holds the constructor for `Class.Instance`
+  The `Class.Instance` data type holds constructors for `Class.Instance`
   objects.
 code_samples:
 tags: []
@@ -12,7 +12,8 @@ constructors:
   - name: Instance.new
     summary: Returns an `Class.Instance` of the specified class.
     description: |-
-      Creates a new `Class.Instance` of type `className`.
+      Creates a new `Class.Instance` of type `className`. Abstract classes and
+      services cannot be created with this constructor.
 
       Note that when the `Class.Instance.Parent|Parent` of an object is set,
       Luau listens to a variety of different property changes for replication,

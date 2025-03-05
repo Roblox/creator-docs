@@ -30,4 +30,4 @@ Roblox also offers [webhooks](./webhooks/webhook-notifications.md), which can no
 
 1. Test API calls using tools like [Postman](https://www.postman.com) with [OpenAPI descriptions](./reference/openapi.md) or the [OAuth 2.0 sample app](./auth/oauth2-sample.md).
 1. Review the [resource guides](./guides/index.md) for end-to-end walkthroughs of using certain APIs.
-1. Explore the left navigation for the full list of Open Cloud v1 and v2 resources, [common API patterns](./reference/patterns.md), [types](./reference/types.md), and [error codes](./reference/errors.md).
+1. Explore the left navigation for the full list of Open Cloud v2 and v1 resources, [common API patterns](./reference/patterns.md), [types](./reference/types.md), and [error codes](./reference/errors.md).

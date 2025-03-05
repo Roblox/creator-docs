@@ -483,28 +483,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: Plugin:OnInvokeSuspendOverride
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary: ''
-      - name: callback
-        type: Function
-        default:
-        summary: ''
-    returns:
-      - type: Instance
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: Plugin:OpenScript
     summary: |
       Used to open the given script instance in an editor window, in Roblox
