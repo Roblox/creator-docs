@@ -269,6 +269,25 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: AvatarCreationService:PrepareAvatarForPreviewAsync
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: humanoidModel
+        type: Model
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags:
+      - Yields
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: AvatarCreationService:PromptCreateAvatarAsync
     summary: |
       Prompts a `Class.Player` to purchase and create an avatar from a
@@ -494,5 +513,24 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-events: []
+events:
+  - name: AvatarCreationService.AvatarModerationCompleted
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: outfitId
+        type: int64
+        default:
+        summary: ''
+      - name: moderationStatus
+        type: ModerationStatus
+        default:
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: None
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 callbacks: []

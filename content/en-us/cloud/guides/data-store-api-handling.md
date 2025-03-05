@@ -7,7 +7,7 @@ Before sending requests to Open Cloud APIs for [standard data stores](../../refe
 
 ## Authorization
 
-Like all Open Cloud APIs, data store endpoints require all requests to include the `x-api-key` header, which contains an API key with enough permissions for the request. This requires you to apply the key to the experience and the data store, and the endpoint operation is permitted. If the key is invalid, `403 Unauthorized` is returned. For more information on API keys, see [Manage API keys](api-keys.md).
+Like all Open Cloud APIs, data store endpoints require all requests to include the `x-api-key` header, which contains an API key with enough permissions for the request. This requires you to apply the key to the experience and the data store, and the endpoint operation is permitted. If the key is invalid, `403 Unauthorized` is returned. For more information on API keys, see [Manage API keys](../auth/api-keys.md).
 
 ## Throttling
 

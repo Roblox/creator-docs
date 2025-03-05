@@ -20,7 +20,7 @@ Before you can update an existing place of an experience, you need the place's *
 
 To publish an existing place of an experience with [Place Publishing API](../../reference/cloud/universes-api/v1.json):
 
-1. [Create an API key](./api-keys.md#create-an-API-key) on the **Creator Dashboard**. Make sure you perform the following settings:
+1. [Create an API key](../auth/api-keys.md#create-api-keys) on the **Creator Dashboard**. Make sure you perform the following settings:
 
    1. Add **universe-places** to **Access Permissions**.
    1. Add **Write** operation to your selected experience.

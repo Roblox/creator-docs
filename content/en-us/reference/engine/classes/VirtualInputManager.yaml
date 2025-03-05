@@ -14,6 +14,32 @@ tags:
   - Service
 deprecation_message: ''
 properties: []
-methods: []
+methods:
+  - name: VirtualInputManager:SendMouseMoveDeltaEvent
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters:
+      - name: deltaX
+        type: float
+        default:
+        summary: ''
+      - name: deltaY
+        type: float
+        default:
+        summary: ''
+      - name: layerCollector
+        type: Instance
+        default:
+        summary: ''
+    returns:
+      - type: void
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
 events: []
 callbacks: []

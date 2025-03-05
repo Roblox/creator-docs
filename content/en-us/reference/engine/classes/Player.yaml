@@ -964,6 +964,23 @@ properties:
       can_save: true
     capabilities: []
     writeCapabilities: []
+  - name: Player.StepIdOffset
+    summary: ''
+    description: ''
+    code_samples: []
+    type: int
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxSecurity
+      write: RobloxSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
   - name: Player.Team
     summary: |
       Determines the Team with which a Player is associated.
@@ -1020,6 +1037,25 @@ properties:
     category: Team
     serialization:
       can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
+  - name: Player.ThirdPartyTextChatRestrictionStatus
+    summary: ''
+    description: ''
+    code_samples: []
+    type: ChatRestrictionStatus
+    tags:
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: false
       can_save: true
     capabilities: []
     writeCapabilities: []

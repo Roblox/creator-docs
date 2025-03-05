@@ -8,7 +8,7 @@ summary: |
 description: |
   `Instance` is the base class for all classes in the Roblox class hierarchy
   which can be part of the `Class.DataModel` tree.
-  
+
   It is not possible to directly create root `Instance` objects, but the special
   `Datatype.Instance.new()` constructor creates objects via code, taking the
   name of the class as a parameter and returning the created object.
@@ -65,8 +65,9 @@ properties:
       instance. For the capabilities to take effect, `Class.Instance.Sandboxed`
       property must be enabled.
 
-      This property is used by an experimental feature. See [script
-      capabilities](../../../scripting/capabilities.md) for further details.
+      This property is used by an experimental feature. See
+      [script capabilities](../../../scripting/capabilities.md) for further
+      details.
     code_samples: []
     type: SecurityCapabilities
     tags: []
@@ -140,13 +141,13 @@ properties:
       about how this property is set:
 
       - An object is a **child** of, or is **parented to**, another object when
-      its `Parent` is set to that object.
+        its `Parent` is set to that object.
 
       - The **descendants** of an `Class.Instance` are the children of that
-      object, plus the descendants of the children as well.
+        object, plus the descendants of the children as well.
 
       - The **ancestors** of an `Class.Instance` are all the objects that the
-      instance is a descendant of.
+        instance is a descendant of.
 
       It is from the `Parent` property that many other API members get their
       name, such as `Class.Instance:GetChildren()|GetChildren()` and
@@ -169,9 +170,9 @@ properties:
 
       An object created by the server will not replicate to clients until it is
       parented to some object that is replicated. When creating an object and
-      setting many properties, it's recommended to set the `Parent` property **last**. This
-      ensures the object replicates once, instead of replicating many property
-      changes.
+      setting many properties, it's recommended to set the `Parent` property
+      **last**. This ensures the object replicates once, instead of replicating
+      many property changes.
 
       ```lua
       local Workspace = game:GetService("Workspace")
@@ -229,8 +230,9 @@ properties:
     description: |
       Turns the instance to be a **sandboxed container**, an experimental
       feature which limits the actions that scripts inside a particular
-      container can perform. See [script
-      capabilities](../../../scripting/capabilities.md) for further details.
+      container can perform. See
+      [script capabilities](../../../scripting/capabilities.md) for further
+      details.
     code_samples: []
     type: bool
     tags:
@@ -856,8 +858,7 @@ methods:
       attribute name return the same event.
 
       The following code example returns a signal that fires the function
-      `attributeChanged()` when the part's `InitialPosition` attribute
-      changes:
+      `attributeChanged()` when the part's `InitialPosition` attribute changes:
 
       ```lua
       local Workspace = game:GetService("Workspace")
@@ -982,7 +983,8 @@ methods:
     summary: |
       Returns a coded string of the debug ID used internally by Roblox.
     description: |
-      Returns a coded string of the debug ID used internally by Roblox. Note that:
+      Returns a coded string of the debug ID used internally by Roblox. Note
+      that:
 
       - This item is protected. Attempting to use it in a `Class.Script` or
         `Class.LocalScript` will cause an error.
@@ -1212,7 +1214,8 @@ methods:
     writeCapabilities: []
   - name: Instance:IsPropertyModified
     summary: |
-      Returns `true` if the value stored in the specified property is non-default.
+      Returns `true` if the value stored in the specified property is
+      non-default.
     description: |
       Returns `true` if the value stored in the specified property is
       non‑default. For example, if outputting the
@@ -1242,8 +1245,8 @@ methods:
       Sets the object's `Parent` to `nil`, and does the same for all its
       descendants.
     description: |
-      This function sets the object's `Class.Instance.Parent` to `nil`, and
-      does the same for all its descendants.
+      This function sets the object's `Class.Instance.Parent` to `nil`, and does
+      the same for all its descendants.
 
       If the object is referenced before being removed, it is possible to
       retrieve the object at a later point.
@@ -1297,7 +1300,8 @@ methods:
     description: |
       Resets a property to its default value. For example, calling
       `ResetPropertyToDefault("Rotation")` on a `Class.TextLabel` is equivalent
-      to setting its `Class.TextLabel.Rotation|Rotation` to `0` (the property's default value).
+      to setting its `Class.TextLabel.Rotation|Rotation` to `0` (the property's
+      default value).
     code_samples: []
     parameters:
       - name: name
@@ -1712,8 +1716,7 @@ events:
     summary: |
       Fires after a descendant is added to the `Class.Instance`.
     description: |
-      This event fires after a descendant is added to the
-      `Class.Instance`.
+      This event fires after a descendant is added to the `Class.Instance`.
 
       As it fires for every descendant, parenting an object to the
       `Class.Instance` will fire the event for this object and all of its
