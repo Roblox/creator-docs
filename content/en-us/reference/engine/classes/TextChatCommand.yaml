@@ -9,7 +9,7 @@ description: |
   commands when parented to `Class.TextChatService`. Custom commands can have up
   to two aliases, and the Triggered event fires when a user types
   "/{PrimaryAlias}" or "/{SecondaryAlias}" into the chat. For examples of
-  creating custom text chat commands, see [Custom Text Chat Commands](../../../chat/examples/custom-text-chat-commands)
+  creating custom text chat commands, see [Custom Text Chat Commands](../../../chat/examples/custom-text-chat-commands.md)
 
   To learn more about using `Class.TextChatService`, see
   [In-Experience Text Chat](../../../chat/in-experience-text-chat.md).
