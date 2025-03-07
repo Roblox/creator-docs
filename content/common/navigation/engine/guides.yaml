@@ -343,19 +343,17 @@ navigation:
         path: /input/mobile
       - title: Gamepad
         path: /input/gamepad
-  - title: Sound
-    path: /sound/
+  - title: Audio
+    path: /audio/
     section:
       - title: Overview
-        path: /sound/
-      - title: Audio assets
-        path: /sound/assets
-      - title: Sound objects
-        path: /sound/objects
-      - title: Sound groups
-        path: /sound/groups
-      - title: Dynamic effects
-        path: /sound/dynamic-effects
+        path: /audio/
+      - title: Assets
+        path: /audio/assets
+      - title: Objects
+        path: /audio/objects
+      - title: Effects
+        path: /audio/effects
   - title: User interface
     path: /ui/
     section:
