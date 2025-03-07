@@ -38,11 +38,11 @@ The Roblox Engine doesn't guarantee the order in which objects are replicated fr
 
 1. When it finishes, the `Class.DataModel.Loaded|game.Loaded` event fires and `Class.DataModel:IsLoaded()|game:IsLoaded()` returns true.
 
-1. `LocalScripts` in `StarterPlayerScripts` run, as well as client `Scripts` in `Class.ReplicatedStorage`. These scripts can safely get objects from `StarterPlayerScripts` and `ReplicatedStorage` without using `WaitForChild()`.
+1. `LocalScripts` in `Players.Player.PlayerScripts` (copied from `StarterPlayerScripts`) run, as well as client `Scripts` in `Class.ReplicatedStorage`. These scripts can safely get objects from `ReplicatedStorage` without using `WaitForChild()`.
 
 1. The player's `Class.Player.Character|Character` model spawns in the experience.
 
-1. `LocalScripts` in `StarterCharacterScripts` run.
+1. `LocalScripts` in `Workspace.Character` (copied from `StarterCharacterScripts`) run.
 
 If your experience uses [instance streaming](../workspace/streaming.md) (`Class.Workspace.StreamingEnabled`), some or most objects might not have loaded into the workspace, so using `WaitForChild()` to access workspace objects becomes an even more important safety measure. In particular, see [Stream in](../workspace/streaming.md#stream-in) and [Per-model streaming controls](../workspace/streaming.md#per-model-streaming-controls) for additional information on loading and tuning streaming behavior.
 

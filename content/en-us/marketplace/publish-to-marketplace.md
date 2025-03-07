@@ -245,14 +245,6 @@ The following location options are available for all items:
 </tbody>
 </table>
 
-### Schedule item sale
-
-To schedule the sale of your asset in the **Manage Item** page, click **Schedule Sale** under the **On Sale** toggle and enter a **Sale Start** date and an optional **Sale End** date. If you don't enter an end date, the item is on sale indefinitely.
-
-You can use scheduling to sell both Limited and Non-Limited assets.
-
-You can schedule sales up to 30 days in advance.
-
 ### Publish item
 
 When first publishing your asset, select the **Publish Item** button at the end of the form to pay the [publishing fee](../marketplace/marketplace-fees-and-commissions.md#publishing-advance) and list your item on sale.
