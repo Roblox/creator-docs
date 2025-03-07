@@ -784,6 +784,27 @@ properties:
     capabilities:
       - UI
     writeCapabilities: []
+  - name: GuiObject.SelectionRect2D
+    summary: ''
+    description: ''
+    code_samples: []
+    type: Rect
+    tags:
+      - Hidden
+      - ReadOnly
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: Unsafe
+    category: Data
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: GuiObject.Size
     summary: |
       Determines the pixel and scalar size of the `Class.GuiObject`.

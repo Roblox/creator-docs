@@ -44,37 +44,6 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: GenerationService:InternalGenerateMeshAsync
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: inputs
-        type: Dictionary
-        default:
-        summary: ''
-      - name: userId
-        type: int64
-        default:
-        summary: ''
-      - name: options
-        type: Dictionary
-        default:
-        summary: ''
-      - name: intermediateResultCallback
-        type: Function?
-        default:
-        summary: ''
-    returns:
-      - type: Tuple
-        summary: ''
-    tags:
-      - Yields
-    deprecation_message: ''
-    security: RobloxScriptSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
   - name: GenerationService:LoadGeneratedMeshAsync
     summary: ''
     description: ''

@@ -15,29 +15,17 @@ tags:
 deprecation_message: ''
 properties: []
 methods:
-  - name: VirtualInputManager:SendScroll
+  - name: VirtualInputManager:SendMouseMoveDeltaEvent
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: x
-        type: float
-        default:
-        summary: ''
-      - name: 'y'
-        type: float
-        default:
-        summary: ''
       - name: deltaX
         type: float
         default:
         summary: ''
       - name: deltaY
         type: float
-        default:
-        summary: ''
-      - name: options
-        type: Dictionary
         default:
         summary: ''
       - name: layerCollector

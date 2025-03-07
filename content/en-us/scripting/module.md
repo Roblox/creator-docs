@@ -64,7 +64,7 @@ To load a module script, you call the `Global.LuaGlobals.require()` function. In
 ```lua title="Client script in ReplicatedStorage"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
--- Get value returned by ModuleScript
+-- Get the value returned by the ModuleScript
 local PickupManager = require(ReplicatedStorage:WaitForChild("PickupManager"))
 
 -- Call a ModuleScript function
@@ -72,12 +72,11 @@ local bonus = PickupManager.getPickupBonus("legendary")
 print(bonus)  --> 125
 ```
 
-You can use the same code to require the script from `ServerScriptService`:
+Storing module scripts in `ReplicatedStorage` lets you share code between the server and clients. Use the same code to require the script from `ServerScriptService`:
 
-```lua title="Script in ServerScriptStorage"
+```lua title="Script in ServerScriptService"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
--- Get the return value for the ModuleScript named "PickupManager"
 local PickupManager = require(ReplicatedStorage:WaitForChild("PickupManager"))
 ```
 
@@ -87,7 +86,7 @@ The `Class.Instance:WaitForChild()` pattern is an important safety measure due t
 
 When you call `Global.LuaGlobals.require()` on a `Class.ModuleScript`, it runs once and returns a single item as a reference. Calling `Global.LuaGlobals.require()` again returns the exact same reference, meaning that if you modify a returned [table](../luau/tables.md) or `Class.Instance`, subsequent `Global.LuaGlobals.require()` calls return that modified reference. The module itself doesn't run multiple times.
 
-If you require a `Class.ModuleScript` from both sides of the client-server boundary, the `Class.ModuleScript` returns a unique reference for each side.
+If you require a `Class.ModuleScript` from both sides of the client-server boundary, as in the example above, the `Class.ModuleScript` returns a unique reference for each side.
 
 ## Patterns
 

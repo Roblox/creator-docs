@@ -45,15 +45,16 @@ The OpenAPI descriptions for V1 and V2 resources utilitize distinct specificatio
 
 **V2 resource specification extensions**
 
-| Extension                             	| Location         	| Description                                                                                                   	|
-|---------------------------------------	|------------------	|---------------------------------------------------------------------------------------------------------------	|
-| `x-categories`                        	| OpenAPI Object   	| List of strings. All resource categories.                                                                     	|
-| `x-visibility`                        	| Operation Object 	| Boolean. The visibility of the operation.                                                                     	|
-| `x-roblox-docs`                       	| Operation Object 	| Object. Associates an operation with a category and resource.                                                 	|
-| `x-long-running-operation-parameters` 	| Operation Object 	| Object. References the metadata and response for the operation's long running response.                       	|
-| `x-oneOf`                             	| Schema Object    	| Object. Each field contains a list of properties in the schema. Only one of the properties should be present. 	|
-| `x-resource`                          	| Schema Object    	| Boolean. Whether the schema is a resource.                                                                    	|
-| `x-immutable`                         	| Schema Object    	| Boolean. Whether the schema is immutable.                                                                     	|
+| Extension                             | Location         | Description                                                                                                                                                                                    |
+|---------------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `x-categories`                        | OpenAPI Object   | List of strings. All resource categories.                                                                                                                                                      |
+| `x-visibility`                        | Operation Object | Boolean. The visibility of the operation.                                                                                                                                                      |
+| `x-roblox-docs`                       | Operation Object | Object. Associates an operation with a category and resource.                                                                                                                                  |
+| `x-long-running-operation-parameters` | Operation Object | Object. References the metadata and response for the operation's long running response.                                                                                                        |
+| `x-aep-resource`                      | Schema Object    | Object. An extension annotating the resource type. Has close compatibility to [AEP-4](https://aep.dev/4/#annotating-resource-types), one of the [API Enhancement Proposals](https://aep.dev/). |
+| `x-oneOf`                             | Schema Object    | Object. Each field contains a list of properties in the schema. Only one of the properties should be present.                                                                                  |
+| `x-resource`                          | Schema Object    | Boolean. Whether the schema is a resource.                                                                                                                                                     |
+| `x-immutable`                         | Schema Object    | Boolean. Whether the schema is immutable.                                                                                                                                                      |
 
 **V1 resource specification extensions**
 

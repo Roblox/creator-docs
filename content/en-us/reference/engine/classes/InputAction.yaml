@@ -22,7 +22,7 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Data
+    category: Behavior
     serialization:
       can_load: true
       can_save: true
@@ -39,7 +39,7 @@ properties:
       read: None
       write: None
     thread_safety: ReadSafe
-    category: Data
+    category: Behavior
     serialization:
       can_load: true
       can_save: true

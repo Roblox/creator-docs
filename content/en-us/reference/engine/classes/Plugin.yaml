@@ -83,6 +83,23 @@ properties:
       can_save: false
     capabilities: []
     writeCapabilities: []
+  - name: Plugin.IsDebuggable
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags: []
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Data
+    serialization:
+      can_load: true
+      can_save: true
+    capabilities: []
+    writeCapabilities: []
 methods:
   - name: Plugin:Activate
     summary: |
@@ -463,6 +480,20 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+  - name: Plugin:IsLoadedFromProject
+    summary: ''
+    description: ''
+    code_samples: []
+    parameters: []
+    returns:
+      - type: bool
+        summary: ''
+    tags: []
+    deprecation_message: ''
+    security: RobloxScriptSecurity
+    thread_safety: Unsafe
+    capabilities: []
+    writeCapabilities: []
   - name: Plugin:Negate
     summary: |
       Negates the given parts and returns the resulting NegateOperations.
@@ -480,28 +511,6 @@ methods:
     tags: []
     deprecation_message: ''
     security: PluginSecurity
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: Plugin:OnInvokeSuspendOverride
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters:
-      - name: key
-        type: string
-        default:
-        summary: ''
-      - name: callback
-        type: Function
-        default:
-        summary: ''
-    returns:
-      - type: Instance
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: RobloxScriptSecurity
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
