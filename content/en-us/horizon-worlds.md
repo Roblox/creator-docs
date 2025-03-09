@@ -9,9 +9,9 @@ import CodeSample from './includes/engine-comparisons/fishing-pole-code-sample.m
 # Roblox for Meta Horizon Worlds developers
 This page compares Meta Horizon Worlds and Roblox Studio, focusing on key features and differences relevant to content creators.
 
-## 1. Core Creation Environment:
+## 1. Core Creation Environment
 
-### 1.1. Hierarchical Organization:
+### 1.1. Hierarchical Organization
 
 | Feature          | Meta Horizon Worlds      | Roblox Studio          | Similarity                                                               |
 |------------------|--------------------------|--------------------------|--------------------------------------------------------------------------|
@@ -25,7 +25,7 @@ This page compares Meta Horizon Worlds and Roblox Studio, focusing on key featur
 | Asset Acquisition| Asset Store              | Creator Store            | Centralized library for acquiring reusable assets.                        |
 | Asset Management | Assets window            | Inventory                | Tools for managing and organizing imported and acquired assets.           |
 
-### 1.3. Terminology Differences:
+### 1.3. Terminology Differences
 
 | Meta Horizon Worlds | Roblox Studio | Notes                                                                   |
 |----------------------|---------------|-------------------------------------------------------------------------|
@@ -41,9 +41,9 @@ This page compares Meta Horizon Worlds and Roblox Studio, focusing on key featur
 | Console              | Output        | Window for displaying debugging information and script output.             |
 | Asset Library        | Creator Store | Online asset library for importing assets into a project.           |
 
-## 2. Scripting and Logic:
+## 2. Scripting and Logic
 
-### 2.1. Scripting Languages:
+### 2.1. Scripting Languages
 
 | Feature          | Meta Horizon Worlds | Roblox Studio | Key Differences                                                              |
 |------------------|---------------------|---------------|------------------------------------------------------------------------------|
@@ -51,16 +51,16 @@ This page compares Meta Horizon Worlds and Roblox Studio, focusing on key featur
 | Syntax           | JavaScript-like     | Lua-based     | TypeScript has a more structured, object-oriented syntax.                    |
 | Typing           | Statically Typed    | Dynamically Typed| TypeScript provides compile-time type checking, Luau does not.              |
 
-**2.2. Script Execution Models:**
+**2.2. Script Execution Models**
 | Feature                  | Meta Horizon Worlds              | Roblox Studio                  | Key Differences                                                              |
 |--------------------------|-----------------------------------|-----------------------------------|------------------------------------------------------------------------------|
 | Script Types             | Default (Server), Local (Client) | Server, Client, Module          | Meta Horizon Worlds simplifies to server/client, Roblox has explicit modules. |
 | Execution Context        | Server or Client                 | Server, Client, Reusable Module   | Roblox offers more granular control over script execution.                    |
 | Local Script Ownership   | Manual assignment via code        | Automatic                         | Roblox handles local script ownership automatically.                               |
 
-### 2.3. Language Comparison Example (Sum Function):
+### 2.3. Language Comparison Example (Sum Function)
 
-**Luau (Roblox):**
+**Luau (Roblox)**
 ```lua
 -- Sum numbers up to "n" and returns the sum
 function sumUpTo(n)
@@ -74,7 +74,7 @@ end
 print(sumUpTo(5))  -- Output: 15 (1 + 2 + 3 + 4 + 5)
 ```
 
-**TypeScript (Meta Horizon Worlds):**
+**TypeScript (Meta Horizon Worlds)**
 ```ts
 // Sum numbers up to "n" and returns the sum
 function sumUpTo(n: number): number {
@@ -96,9 +96,9 @@ console.log(sumUpTo(5));  // Output: 15 (1 + 2 + 3 + 4 + 5)
 |Script in default Server Execution Mode|Server Script|
 |Export functions/classes in any script|Module script|
 
-## 3. Asset Pipeline and Interoperability:
+## 3. Asset Pipeline and Interoperability
 
-### 3.1. Asset Import:
+### 3.1. Asset Import
 
 | Asset Type | Meta Horizon Worlds File Formats | Roblox Studio File Formats (Exported) |
 |------------|-----------------------------------|--------------------------------------|
@@ -109,7 +109,7 @@ console.log(sumUpTo(5));  // Output: 15 (1 + 2 + 3 + 4 + 5)
 | Texture    | .png                              | .png                                 |
 | Text       | .json                             | N/A                                  |
 
-### 3.2. Roblox to Meta Horizon Worlds Conversion:
+### 3.2. Roblox to Meta Horizon Worlds Conversion
 
 - **Direct Conversion:** Limited. Only .fbx assets can be directly imported.
 - **Native Roblox Parts:** Require conversion to .fbx using tools like Blender.
