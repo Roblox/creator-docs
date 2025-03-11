@@ -61,6 +61,7 @@ import {
 } from './utils/console.js';
 import { checkMarkdownLint } from './utils/markdownlint.js';
 import { checkEngineReferenceContent } from './utils/engineReferenceChecks.js';
+import { containsOpenApiSchema, validateOpenApiSchema } from './utils/openApiSchemaChecks.js';
 
 let filesToCheck: string[] = [];
 let labelPullRequestAsInappropriate = false;
@@ -79,6 +80,10 @@ const getFilesToCheck = async () => {
           ...getAllContentFileNamesWithExtension({
             locale,
             fileExtension: FileExtension.YAML,
+          }),
+          ...getAllContentFileNamesWithExtension({
+            locale,
+            fileExtension: FileExtension.JSON,
           })
         );
       }
@@ -91,6 +96,10 @@ const getFilesToCheck = async () => {
         ...getAllContentFileNamesWithExtension({
           locale: Locale.EN_US,
           fileExtension: FileExtension.YAML,
+        }),
+        ...getAllContentFileNamesWithExtension({
+          locale: Locale.EN_US,
+          fileExtension: FileExtension.JSON,
         })
       );
     }
@@ -98,12 +107,13 @@ const getFilesToCheck = async () => {
   } else if (config.files === FileOption.Changed) {
     filesToCheck = await getFilesChangedComparedToBaseByExtension({
       baseBranch: config.baseBranch,
-      fileExtensions: [FileExtension.MARKDOWN, FileExtension.YAML],
+      fileExtensions: [FileExtension.MARKDOWN, FileExtension.YAML, FileExtension.JSON],
     });
   } else if (config.files === FileOption.LastCommit) {
     filesToCheck = await getFilesChangedInLastCommitByExtensions([
       FileExtension.MARKDOWN,
       FileExtension.YAML,
+      FileExtension.JSON,
     ]);
   }
   if (!config.checkLocalizedContent) {
@@ -217,14 +227,30 @@ try {
     );
     const isMarkdownFile = filePath.endsWith(FileExtension.MARKDOWN);
     const isYamlFile = filePath.endsWith(FileExtension.YAML);
+    const isJsonFile = filePath.endsWith(FileExtension.JSON);
     console.log(`::group::${Emoji.Mag} Checking`, filePathFromRepoRoot);
     if (!fs.existsSync(filePath)) {
       console.log(
         `${Emoji.NoEntry} File does not exist: ${filePathFromRepoRoot}`
       );
+      console.log('::endgroup::');
       continue;
     }
     const fileContent = readFileSync(filePath);
+
+    if (isJsonFile) {
+      if (containsOpenApiSchema(fileContent)) {
+        await validateOpenApiSchema({
+          config,
+          filePath: filePathFromRepoRoot,
+        });
+      }
+      
+      // The remaining checks are not applicable to JSON files
+      console.log('::endgroup::');
+      continue;
+    }
+    
     if (
       config.checkLocalizedContent &&
       !isLocaleFile(filePathFromRepoRoot, Locale.EN_US) // skip for English

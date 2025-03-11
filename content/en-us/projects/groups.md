@@ -9,7 +9,7 @@ A Roblox **group** allows multiple creators to work on the same experience, use 
 Group ownership of experiences helps creators collaborate and operate as independent studios. If a conflict arises within a group, Roblox cannot help arbitrate or resolve disagreements.
 </Alert>
 
-## Create a new group
+## Group creation
 
 Creating a group costs 100 Robux. New groups maintain certain capabilities on the legacy [Groups](https://www.roblox.com/groups) pages, but improved workflows and options for [configuring roles/permissions](#roles-and-permissions) and [inviting members](#invite-members) are only available on the [Creator Dashboard](https://create.roblox.com/dashboard/creations).
 
@@ -45,7 +45,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    <table>
    <thead>
      <tr>
-       <th colspan="2">Group permissions</th>
+       <th colspan="2">Group Permissions</th>
      </tr>
    </thead>
    <tbody>
@@ -69,10 +69,14 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
        <td>**Configure group profile**</td>
        <td>Members with this role can update the group's name, description, and other metadata. Does not include transferring ownership, which only the owner can do.</td>
      </tr>
+     <tr>
+       <td>**View group activity history**</td>
+       <td>Members with this role can view group [activity history](https://create.roblox.com/dashboard/group/activity-history).</td>
+     </tr>
    </tbody>
    <thead>
      <tr>
-       <th colspan="2">Experience permissions</th>
+       <th colspan="2">Experience Permissions</th>
      </tr>
    </thead>
    <tbody>
@@ -92,10 +96,18 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
        <td>**View all analytics for group experiences**</td>
        <td>Members with this role can access the [analytics](../production/analytics/index.md) of all experiences owned by the group, even if they don't have edit access.</td>
      </tr>
+     <tr>
+       <td>**Create and configure share links**</td>
+       <td>Members with this role can create/configure [share links](../production/promotion/share-links.md).</td>
+     </tr>
+     <tr>
+       <td>**Configure bans for all group experiences**</td>
+       <td>Members with this role can ban and manage banned users for all experiences owned by the group.</td>
+     </tr>
    </tbody>
    <thead>
      <tr>
-       <th colspan="2">Group revenue</th>
+       <th colspan="2">Group Revenue</th>
      </tr>
    </thead>
    <tbody>
@@ -108,13 +120,13 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
        <td>Members with this role can view the group Robux balance, any configured recurring split payouts, and (in the future) new revenue logging features.</td>
      </tr>
      <tr>
-       <td>**Advertise group**</td>
+       <td>**Create Ad Campaigns for the group**</td>
        <td>Members with this role can advertise the group.</td>
      </tr>
    </tbody>
    <thead>
      <tr>
-       <th colspan="2">Avatar item permissions</th>
+       <th colspan="2">Avatar Item Permissions</th>
      </tr>
    </thead>
    <tbody>
@@ -129,7 +141,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    </tbody>
    <thead>
      <tr>
-       <th colspan="2">Open Cloud permissions</th>
+       <th colspan="2">Open Cloud Permissions</th>
      </tr>
    </thead>
    <tbody>
@@ -144,7 +156,7 @@ Roles created using the legacy [Groups](https://www.roblox.com/groups) pages wil
    </tbody>
    <thead>
      <tr>
-       <th colspan="2">Asset permissions</th>
+       <th colspan="2">Asset Permissions</th>
      </tr>
    </thead>
    <tbody>
