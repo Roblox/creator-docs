@@ -40,15 +40,15 @@ properties:
       This property determines how the alpha channel of the
       `Class.SurfaceAppearance.ColorMap` is used.
 
-      When set to `Enum.AlphaMode|Transparency` and the
-      `Class.BasePart.Transparency|MeshPart.Transparency` is set to 0, opaque
-      pixels in the `Class.SurfaceAppearance.ColorMap` will render as completely
-      opaque in the 3D scene. This solves various problems for textures with
-      different transparent and opaque areas, such as foliage. When parts of the
-      surface are fully opaque, the Roblox Engine can render them with proper
-      depth-based occlusion. Opaque surfaces also generally work better with
-      depth-based effects like `Class.DepthOfFieldEffect`, glass and water
-      refraction, and water reflection.
+      When set to `Enum.AlphaMode|Transparency` and the `Class.MeshPart.Transparency`
+      is set to `0`, opaque pixels in the `Class.SurfaceAppearance.ColorMap|ColorMap` will
+      render as completely opaque in the 3D scene. This combination works better with
+      depth-based effects and occlusion.
+      
+      When set to `Enum.AlphaMode|Transparency` and the `Class.MeshPart.Transparency`
+      is set to at least `0.02`, a different blending method is used that can better
+      represent smooth transparency gradients and soft edges. This combination does not
+      support all effects and occlusion may not be perfect.
 
       See [here](../../../art/modeling/surface-appearance.md#alpha-modes) for
       more information.

@@ -64,5 +64,8 @@ The analytics tab enables you to:
 - **View top performing items:** See your top selling and top grossing Avatar Items over a selected time period.
 - **Analyze overall sales and net revenue:** Showcase up to eight top items on a time-series graph.
 - **Monitor your catalog:** Examine a table with up to 400 items, sortable by sales and net revenue.
+- **View buyer demographics:** See the demographic information of buyers, including age, gender, location, and platform.
 
 <img src="../../assets/monetization/avatar-items/avatar-items-analytics-2.png" width="100%" />
+
+<img src="../../assets/monetization/avatar-items/avatar-item-analytics-3.png" width="100%" />
