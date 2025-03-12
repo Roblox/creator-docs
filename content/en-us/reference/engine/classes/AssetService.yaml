@@ -75,10 +75,12 @@ methods:
     writeCapabilities: []
   - name: AssetService:CreateAssetAsync
     summary: |
-      Creates a new asset from the given object.
+      Uploads a new asset to Roblox from the given object.
     description: |
-      Creates a new asset from the given object in Plugin or Open Cloud Luau
-      Execution context.
+      Uploads a new asset to Roblox from the given object.
+
+      This method can only be used in locally loaded plugins and uploads
+      assets without prompting first.
     code_samples:
       - AssetService-CreateAssetAsync
     parameters:
@@ -133,8 +135,10 @@ methods:
     summary: |
       Creates a new version for an existing asset from the given object.
     description: |
-      Creates a new version for an existing asset from the given object in
-      Plugin or Open Cloud Luau Execution context.
+      Uploads a new version for an existing asset from the given object.
+
+      This method can only be used in locally loaded plugins and uploads
+      assets without prompting first.
     code_samples:
       - AssetService-CreateAssetVersionAsync
     parameters:
