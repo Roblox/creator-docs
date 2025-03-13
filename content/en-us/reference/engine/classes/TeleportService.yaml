@@ -677,9 +677,9 @@ methods:
 
       #### Cross-Platform Play
 
-      Players on Xbox and PlayStation with cross‑play disabled will
-      arrive in a different server than players with cross‑play
-      enabled. This can cause multiple game servers with the same
+      Players on Xbox and PlayStation with cross‑play disabled will arrive in a
+      different server than players with cross‑play enabled. This can cause
+      multiple game servers with the same
       `Class.DataModel.PrivateServerId|PrivateServerId` to exist. You can use
       `Class.DataModel.MatchmakingType` to differentiate these game servers.
     code_samples:

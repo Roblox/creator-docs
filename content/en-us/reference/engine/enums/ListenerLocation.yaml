@@ -32,24 +32,24 @@ items:
       of your character while matching the orientation of your camera.
 
       - An `Class.Attachment` will be created and parented to the
-      `Class.Model.PrimaryPart|PrimaryPart` of the local player's
-      `Class.Player.Character|Character` model. 
+        `Class.Model.PrimaryPart|PrimaryPart` of the local player's
+        `Class.Player.Character|Character` model.
 
       - An `Class.AudioListener` will be created and parented to the
-      `Class.Attachment`.
+        `Class.Attachment`.
 
       - An `Class.AudioDeviceOutput` will be created and parented to
-      `Class.SoundService`.
+        `Class.SoundService`.
 
       - A `Class.Wire` will be created and parented to the previously-created
-      `Class.AudioListener`. The wire's
-      `Class.Wire.SourceInstance|SourceInstance` will be set to the
-      previously-created `Class.AudioListener` and its
-      `Class.Wire.TargetInstance|TargetInstance` will be set to the
-      previously-created `Class.AudioDeviceOutput`.
+        `Class.AudioListener`. The wire's
+        `Class.Wire.SourceInstance|SourceInstance` will be set to the
+        previously-created `Class.AudioListener` and its
+        `Class.Wire.TargetInstance|TargetInstance` will be set to the
+        previously-created `Class.AudioDeviceOutput`.
 
       - The previously-created `Class.Attachment` will be updated once per frame
-      to face the same direction as `Class.Workspace.CurrentCamera`.
+        to face the same direction as `Class.Workspace.CurrentCamera`.
     value: 2
     tags: []
     deprecation_message: ''
@@ -58,9 +58,16 @@ items:
       All of the following, resulting in the world being heard from the
       perspective (postition and orientation) of the camera.
 
-      - An `Class.AudioListener` will be created and parented to `Class.Workspace.CurrentCamera`.
-      - An `Class.AudioDeviceOutput` will be created and parented to `Class.SoundService`.
-      - A `Class.Wire` will be created and parented to the previously-created `Class.AudioListener`. The wire's `Class.Wire.SourceInstance|SourceInstance` will be set to the previously-created `Class.AudioListener` and its `Class.Wire.TargetInstance|TargetInstance` will be set to the previously-created `Class.AudioDeviceOutput`.
+      - An `Class.AudioListener` will be created and parented to
+        `Class.Workspace.CurrentCamera`.
+      - An `Class.AudioDeviceOutput` will be created and parented to
+        `Class.SoundService`.
+      - A `Class.Wire` will be created and parented to the previously-created
+        `Class.AudioListener`. The wire's
+        `Class.Wire.SourceInstance|SourceInstance` will be set to the
+        previously-created `Class.AudioListener` and its
+        `Class.Wire.TargetInstance|TargetInstance` will be set to the
+        previously-created `Class.AudioDeviceOutput`.
     value: 3
     tags: []
     deprecation_message: ''

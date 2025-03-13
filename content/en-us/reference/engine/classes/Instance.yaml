@@ -1225,11 +1225,10 @@ methods:
       `Class.TextLabel.Rotation`.
     code_samples: []
     parameters:
-      - name: name
+      - name: property
         type: string
         default:
-        summary: |
-          Name of the property to query.
+        summary: ''
     returns:
       - type: bool
         summary: |
@@ -1304,11 +1303,10 @@ methods:
       default value).
     code_samples: []
     parameters:
-      - name: name
+      - name: property
         type: string
         default:
-        summary: |
-          Name of the property to reset.
+        summary: ''
     returns:
       - type: void
         summary: ''
