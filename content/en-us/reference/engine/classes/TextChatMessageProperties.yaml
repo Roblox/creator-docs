@@ -14,20 +14,19 @@ description: |
 
   ```lua title='LocalScript - Retrieving and Using TextChatMessageProperties'
   local TextChatService = game:GetService("TextChatService")
+  
   TextChatService.OnIncomingMessage = function(message: TextChatMessage)
-    -- deriving TextChatMessageProperties
-    local properties = TextChatService.ChatWindowConfiguration:DeriveNewMessageProperties()
-    
-    -- changing color of messsage
-    properties.TextColor3 = Color3.fromRGB(255, 121, 121)
-    
-    -- setting message's chatwindowmessageproperties
-    message.ChatWindowMessageProperties = properties
-
-    return properties	
+  	-- Derive chat message properties
+  	local properties = TextChatService.ChatWindowConfiguration:DeriveNewMessageProperties()
+  
+  	-- Change color of message
+  	properties.TextColor3 = Color3.fromRGB(255, 121, 121)
+  
+  	-- Set chat window message properties
+    	message.ChatWindowMessageProperties = properties
+  
+  	return properties	
   end
-  ```
-
 code_samples: []
 inherits:
   - Instance
