@@ -1,7 +1,7 @@
-name: StyleBase
+name: MatchmakingService
 type: class
 category:
-memory_category: Gui
+memory_category: Instances
 summary: ''
 description: ''
 code_samples: []
@@ -9,38 +9,22 @@ inherits:
   - Instance
 tags:
   - NotCreatable
+  - Service
+  - NotReplicated
 deprecation_message: ''
 properties: []
 methods:
-  - name: StyleBase:GetStyleRules
-    summary: ''
-    description: ''
-    code_samples: []
-    parameters: []
-    returns:
-      - type: Instances
-        summary: ''
-    tags: []
-    deprecation_message: ''
-    security: None
-    thread_safety: Unsafe
-    capabilities: []
-    writeCapabilities: []
-  - name: StyleBase:InsertStyleRule
+  - name: MatchmakingService:GetServerAttribute
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: rule
-        type: StyleRule
-        default:
-        summary: ''
-      - name: priority
-        type: int?
+      - name: name
+        type: string
         default:
         summary: ''
     returns:
-      - type: void
+      - type: Tuple
         summary: ''
     tags: []
     deprecation_message: ''
@@ -48,17 +32,17 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-  - name: StyleBase:SetStyleRules
+  - name: MatchmakingService:InitializeServerAttributesForStudio
     summary: ''
     description: ''
     code_samples: []
     parameters:
-      - name: rules
-        type: Instances
+      - name: serverAttributes
+        type: Dictionary
         default:
         summary: ''
     returns:
-      - type: void
+      - type: Tuple
         summary: ''
     tags: []
     deprecation_message: ''
@@ -66,16 +50,27 @@ methods:
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
-events:
-  - name: StyleBase.StyleRulesChanged
+  - name: MatchmakingService:SetServerAttribute
     summary: ''
     description: ''
     code_samples: []
-    parameters: []
+    parameters:
+      - name: name
+        type: string
+        default:
+        summary: ''
+      - name: value
+        type: Variant
+        default:
+        summary: ''
+    returns:
+      - type: Tuple
+        summary: ''
     tags: []
     deprecation_message: ''
     security: None
     thread_safety: Unsafe
     capabilities: []
     writeCapabilities: []
+events: []
 callbacks: []

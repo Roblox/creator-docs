@@ -5,18 +5,11 @@ description: How to use module scripts to reuse code.
 
 After creating a few scripts, it's never long before you want to reuse some code between them. Depending on [location](./locations.md), `Class.ModuleScript|ModuleScripts` let you reuse code between scripts on different sides of the client-server boundary or the same side of the boundary.
 
-## Create module scripts
-
 You can put module scripts anywhere that you put scripts, but `Class.ReplicatedStorage` is a popular location; storing module scripts here lets you reuse code between the server and clients.
-
-1. In Roblox Studio, hover over **ReplicatedStorage** in the [Explorer](../studio/explorer.md) window and click **+**.
-1. Select **ModuleScript** to add a new module script.
-1. Right-click the script and rename it to `PickupManager`.
-1. Double-click the script to open it in the [Script Editor](../studio/script-editor.md).
 
 ## Anatomy of a module script
 
-Each `Class.ModuleScript` starts with the following code:
+In Roblox Studio, add a module script to **ReplicatedStorage** and rename it to `PickupManager`. Each `Class.ModuleScript` starts with the following code:
 
 ```lua
 local module = {}
@@ -32,7 +25,7 @@ The return value can be any [data type](/reference/engine/datatypes) except for 
 Be careful not to have module scripts require each other in a circular manner, which results in a `Requested module was required recursively` error.
 </Alert>
 
-The following example returns a table with a single function called `getPickupBonus`. Paste it into your new module script:
+The following example returns a table with a single function called `getPickupBonus`. Paste it into the new module script:
 
 ```lua
 -- ModuleScript in ReplicatedStorage
@@ -72,17 +65,17 @@ local bonus = PickupManager.getPickupBonus("legendary")
 print(bonus)  --> 125
 ```
 
-Storing module scripts in `ReplicatedStorage` lets you share code between the server and clients. Use the same code to require the script from `ServerScriptService`:
+<Alert severity="info">
+The `Class.Instance:WaitForChild()` pattern is an important safety measure in client scripts. For more information, see [Replication order](attributes.md#replication-order).
+</Alert>
+
+Storing module scripts in `ReplicatedStorage` lets you share code between the server and client, so you can use the same code to require the script from `ServerScriptService`:
 
 ```lua title="Script in ServerScriptService"
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local PickupManager = require(ReplicatedStorage:WaitForChild("PickupManager"))
 ```
-
-<Alert severity="info">
-The `Class.Instance:WaitForChild()` pattern is an important safety measure due to the time it can take for an experience to load and the lack of guarantees that Roblox makes around loading order. If you had assurances that everything had loaded, you could call `require(ReplicatedStorage.PickupManager)`, but `WaitForChild()` is safer.
-</Alert>
 
 When you call `Global.LuaGlobals.require()` on a `Class.ModuleScript`, it runs once and returns a single item as a reference. Calling `Global.LuaGlobals.require()` again returns the exact same reference, meaning that if you modify a returned [table](../luau/tables.md) or `Class.Instance`, subsequent `Global.LuaGlobals.require()` calls return that modified reference. The module itself doesn't run multiple times.
 

@@ -265,6 +265,11 @@ navigation:
         type: engineapi
         source: /reference/engine/classes/AudioSearchParams.yaml
         ignoreTranslation: true
+      - title: AudioTextToSpeech
+        path: /reference/engine/classes/AudioTextToSpeech
+        type: engineapi
+        source: /reference/engine/classes/AudioTextToSpeech.yaml
+        ignoreTranslation: true
       - title: AvatarCreationService
         path: /reference/engine/classes/AvatarCreationService
         type: engineapi
@@ -1464,6 +1469,11 @@ navigation:
         path: /reference/engine/classes/MarketplaceService
         type: engineapi
         source: /reference/engine/classes/MarketplaceService.yaml
+        ignoreTranslation: true
+      - title: MatchmakingService
+        path: /reference/engine/classes/MatchmakingService
+        type: engineapi
+        source: /reference/engine/classes/MatchmakingService.yaml
         ignoreTranslation: true
       - title: MaterialService
         path: /reference/engine/classes/MaterialService

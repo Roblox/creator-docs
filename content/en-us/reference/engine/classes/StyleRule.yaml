@@ -101,7 +101,7 @@ methods:
     description: ''
     code_samples: []
     parameters:
-      - name: table
+      - name: styleProperties
         type: Dictionary
         default:
         summary: ''

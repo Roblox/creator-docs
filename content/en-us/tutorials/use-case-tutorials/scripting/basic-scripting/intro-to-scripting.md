@@ -1,7 +1,7 @@
 ---
 title: Introduction to scripting
 description: The process for creating a basic script that makes a platform disappear.
-next: /tutorials/scripting/use-case-tutorials/scripting/basic-scripting/deadly-lava
+next: /tutorials/use-case-tutorials/scripting/basic-scripting/deadly-lava
 ---
 
 In [Introduction to Roblox Studio](../../../first-experience/index.md), you learned how to create and manipulate parts in Roblox Studio. In this tutorial, you'll learn how to apply a **script** to parts to make a platform appear and disappear. You can use this in a platforming experience to span a gap, challenging users to time their jumps carefully to get to the other side.

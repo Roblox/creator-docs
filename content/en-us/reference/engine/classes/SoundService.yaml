@@ -85,8 +85,12 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: SoundService.DefaultListenerLocation
-    summary: ''
-    description: ''
+    summary: |
+      Determines where (if anywhere) to place an `Class.AudioListener` by
+      default.
+    description: |
+      Determines where to place an `Class.AudioListener` by default. See
+      `Enum.ListenerLocation` for detailed descriptions of each option.
     code_samples: []
     type: ListenerLocation
     tags: []

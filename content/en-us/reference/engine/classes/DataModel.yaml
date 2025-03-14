@@ -207,8 +207,17 @@ properties:
     capabilities: []
     writeCapabilities: []
   - name: DataModel.MatchmakingType
-    summary: ''
-    description: ''
+    summary: |
+      Represents how players in the server are handled by matchmaking.
+    description: |
+      This property represents how players in the server are handled by
+      matchmaking. Players with different
+      `Class.DataModel.MatchmakingType|MatchmakingTypes` cannot be in or
+      teleport to the same server.
+
+      Note that this property is only valid on the server `Class.DataModel` and
+      it will be the `Enum.MatchmakingType.Default` value for all clients, so
+      only reference this property inside of a server‑side `Class.Script`.
     code_samples: []
     type: MatchmakingType
     tags:
@@ -776,8 +785,8 @@ methods:
       replicating to the client, this function returns true.
 
       Unless they are parented to `Class.ReplicatedFirst`,
-      `Class.LocalScript|LocalScripts` do not run until the game has loaded.
-      The following snippet, run from a `Class.LocalScript` in
+      `Class.LocalScript|LocalScripts` do not run until the game has loaded. The
+      following snippet, run from a `Class.LocalScript` in
       `Class.ReplicatedFirst` yields until the game has loaded:
 
       ```lua
@@ -1001,8 +1010,8 @@ events:
       in the game have finished replicating to the client.
 
       Unless they are parented to `Class.ReplicatedFirst`,
-      `Class.LocalScript|LocalScripts` do not run until the game has loaded.
-      The following snippet, run from a `Class.LocalScript` in
+      `Class.LocalScript|LocalScripts` do not run until the game has loaded. The
+      following snippet, run from a `Class.LocalScript` in
       `Class.ReplicatedFirst` yields until the game has loaded:
 
       ```lua

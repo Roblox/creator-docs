@@ -277,10 +277,10 @@ Use third-party modeling tools like Blender to create meshes, then import them i
 </AccordionSummary>
 <AccordionDetails>
 
-- [Audio assets](../../sound/assets.md)
-- [Sound objects](../../sound/objects.md)
-- [Sound groups](../../sound/groups.md)
-- [Dynamic effects](../../sound/dynamic-effects.md)
+- [Audio overview](../../audio/index.md)
+- [Audio assets](../../audio/assets.md)
+- [Audio objects](../../audio/objects.md)
+- [Audio effects](../../audio/effects.md)
 
 </AccordionDetails>
 </BaseAccordion>
