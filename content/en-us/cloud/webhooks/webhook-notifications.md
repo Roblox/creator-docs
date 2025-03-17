@@ -1,4 +1,4 @@
----
+---active
 title: Webhook notifications
 description: Explains how to set up webhooks to automate your notification management workflow.
 ---
