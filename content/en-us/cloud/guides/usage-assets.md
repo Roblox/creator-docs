@@ -326,7 +326,7 @@ To use Assets API for your application and request permissions from your users, 
 1. When [implementing the authorization flow](../../cloud/auth/oauth2-overview.md#implement-authorization-flows), include `asset:read` and `asset:write` as the scope parameters of the authorization URL that redirects users back to your application, like the following example:
 
    ```plain
-   https://www.authorize.roblox.com?client_id=819547628404595165403873012&redirect_uri=https://my-app.com/redirect&scope=asset:read+asset:write&response_type=Code&prompts=login+consent&nonce=12345&state=6789
+   https://authorize.roblox.com?client_id=819547628404595165403873012&redirect_uri=https://my-app.com/redirect&scope=asset:read+asset:write&response_type=Code&prompts=login+consent&nonce=12345&state=6789
    ```
 
 1. When sending the request, include the access token in the authorization header and the form data of the asset content to create or update in the request URI in. The following example shows a sample request for uploading a new asset:
