@@ -17,7 +17,7 @@ The novelty of LLM responses can help create unique, delightful moments for play
 
 Generating text from a user prompt generally requires at least two scripts: a server script to make the HTTP request and a client script to get user input and display the generated text. The following scripts are a minimalist example of this scenario that use a hard-coded user input and show the generated text in an NPC chat bubble.
 
-For a more full-featured example, see the [demo experience](https://www.roblox.com/games/90182386287074/DemoAI). Click the **&ctdot;** button and **Edit in Studio**.
+For a more full-featured example, see the [demo experience](https://www.roblox.com/games/83607629882023/GenerateTextBaseplateTemplate). Click the **&ctdot;** button and **Edit in Studio**.
 
 - The text generation API is an [Open Cloud API](../cloud/index.md), meaning that the request requires a [path](../cloud/reference/patterns.md), formed from your universe ID. You can find your universe ID in the overflow menu of the experience tile on the [Creator Hub](https://create.roblox.com/dashboard/creations).
 - You must include the [Open Cloud client package](../production/promotion/experience-notifications.md#include-the-package) in your experience; the server script requires it.
