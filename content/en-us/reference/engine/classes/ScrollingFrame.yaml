@@ -313,6 +313,26 @@ properties:
     capabilities:
       - UI
     writeCapabilities: []
+  - name: ScrollingFrame.ScrollRate
+    summary: ''
+    description: ''
+    code_samples: []
+    type: float
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: false
+      can_save: false
+    capabilities:
+      - UI
+    writeCapabilities: []
   - name: ScrollingFrame.ScrollingDirection
     summary: |
       Determines the direction(s) in which scrolling is allowed.
@@ -353,6 +373,26 @@ properties:
     serialization:
       can_load: true
       can_save: true
+    capabilities:
+      - UI
+    writeCapabilities: []
+  - name: ScrollingFrame.SmoothScroll
+    summary: ''
+    description: ''
+    code_samples: []
+    type: bool
+    tags:
+      - Hidden
+      - NotReplicated
+    deprecation_message: ''
+    security:
+      read: RobloxScriptSecurity
+      write: RobloxScriptSecurity
+    thread_safety: ReadSafe
+    category: Scrolling
+    serialization:
+      can_load: false
+      can_save: false
     capabilities:
       - UI
     writeCapabilities: []
