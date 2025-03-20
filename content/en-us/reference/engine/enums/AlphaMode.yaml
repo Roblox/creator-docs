@@ -30,3 +30,9 @@ items:
     value: 1
     tags: []
     deprecation_message: ''
+  - name: TintMask
+    summary: ''
+    value: 2
+    tags:
+      - NotBrowsable
+    deprecation_message: ''
