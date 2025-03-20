@@ -17,11 +17,11 @@ type Vector2 = {x: number, y: number}
 
 There are three Luau type inference modes that can be set on the first line of a `Class.Script`:
 
-- `--!nocheck` - Default mode for all scripts; don't check types
-- `--!nonstrict` - Only asserts variable types if they are explicitly annotated
-- `--!strict` - Asserts all types based off the inferred or explicitly annotated type
+- `--!nocheck` — Don't check types.
+- `--!nonstrict` — Only asserts variable types if they are explicitly annotated.
+- `--!strict` — Asserts all types based off the inferred or explicitly annotated type.
 
-The default mode for the type checker is `--!nocheck`. The other two modes control how strict the type checker is with inferring and checking types for variables and functions. Any type mismatches in scripts are highlighted in the [Script Editor](../studio/script-editor.md) and surfaced as warnings in the [Script Analysis](../studio/script-editor.md#script-analysis) window.
+The `--!nonstrict` and `--!strict` modes control how strict the type checker is with inferring and checking types for variables and functions. Any type mismatches in scripts are highlighted in the [Script Editor](../studio/script-editor.md) and surfaced as warnings in the [Script Analysis](../studio/script-editor.md#script-analysis) window.
 
 ## Types
 
