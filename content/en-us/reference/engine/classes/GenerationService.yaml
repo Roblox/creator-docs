@@ -3,11 +3,23 @@ type: class
 category:
 memory_category: Instances
 summary: |
-  Generate 3D objects from text prompts using Roblox's
-  [Cube 3D foundation model](https://corp.roblox.com/newsroom/2025/03/introducing-roblox-cube).
+  `GenerationService` is a service that allows developers to generate 3D objects from text prompts utilizing Roblox's [Cube 3D foundation model](https://corp.roblox.com/newsroom/2025/03/introducing-roblox-cube).
 description: |
-  `GenerationService` lets you generate 3D objects from text prompts using
-  Roblox's [Cube 3D foundation model](https://corp.roblox.com/newsroom/2025/03/introducing-roblox-cube).
+  `GenerationService` is a service that allows developers to generate 3D objects from text prompts utilizing Roblox's [Cube 3D foundation model](https://corp.roblox.com/newsroom/2025/03/introducing-roblox-cube).
+
+  Mesh generation is a two step process:
+
+  1. `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()` starts the mesh generation process using a text prompt and other required parameters. It returns a unique identifier (generation ID) that can be used to retrieve the future result.
+  2. `Class.GenerationService:LoadGeneratedMeshAsync()|LoadGeneratedMeshAsync()` loads the generated mesh into the experience. The mesh is returned as a `Class.MeshPart` containing an `Class.EditableMesh`.
+
+  Currently, GenerationService only supports the following usage:
+
+  - `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()` must be called from server scripts.
+  - `Class.GenerationService:LoadGeneratedMeshAsync()|LoadGeneratedMeshAsync()` must be called from client scripts.
+
+  As a result, when a mesh generation request originates from a client, the client must send a signal to the server to initiate generation. Once the server determines that generation is complete, it should notify the appropriate client to call `Class.GenerationService:LoadGeneratedMeshAsync()|LoadGeneratedMeshAsync()` and retrieve the mesh. Note that since the generated mesh is loaded with `Class.EditableMesh` content and only on the client, it is not replicated to any other clients.
+
+  The following code illustrates this design pattern. See [this demo experience](https://www.roblox.com/games/86571743597273/Mesh-Generation-Template) for a more detailed example. Click the **&ctdot;** button and **Edit in Studio**.
 code_samples:
   - GenerationService-ServerSideMeshGeneration
   - GenerationService-ClientSideMeshGeneration
@@ -21,27 +33,33 @@ properties: []
 methods:
   - name: GenerationService:GenerateMeshAsync
     summary: |
-      Generates a new mesh from a text prompt and returns unique IDs to track
-      and retrieve the result.
+      Starts the generation of a new 3D mesh from a text prompt and returns
+      unique IDs used to track and retrieve the result. After the generation is
+      complete, use
+      `Class.GenerationService:LoadGeneratedMeshAsync()|LoadGeneratedMeshAsync()`
+      to load and display the generated mesh.
     description: |
-      Generates a new mesh from a text prompt and returns unique IDs to track
-      and retrieve the result. Mesh generation happens in two stages, with an
-      initial non-textured mesh being generated first and the texture generated
-      in the second stage. To retrieve more intermediate results, use the
-      optional callback to retrieve the initial generated mesh before the
-      texture has been created and applied.
+      Starts the generation of a new 3D mesh from a text prompt and returns
+      unique IDs used to track and retrieve the result. You can optionally
+      receive intermediate results, such as the untextured mesh, by providing an
+      `intermediateResultCallback` function. After the generation is complete,
+      use `Class.GenerationService:LoadGeneratedMeshAsync|LoadGeneratedMeshAsync()`
+      to load and display the generated mesh.
 
-      For a more detailed example, see
-      [this demo experience](https://www.roblox.com/games/86571743597273/Mesh-Generation-Template).
-      Click the **&ctdot;** button and **Edit in Studio**.
+      **Rate limits**
 
-      - The `GenerateMeshAsync()` method triggers the mesh generation and returns
-        the generation ID which can then be loaded with the
-        `LoadGeneratedMeshAsync()` method after the generation process
-        completes.
-      - The `GenerateMeshAsync()` method can only be called on the server.
-      - Requests are limited to 5 per minute, per experience.
+      There is a rate limit of 5 generations per minute per experience. If you
+      exceed this limit, further generation requests are blocked until the next
+      minute.
 
+      **Error codes**
+
+      | Error | Description | Recommended developer action |
+      | ----- | ----------- | ---------------------------- |
+      | Rate limit exceeded | The maximum number of mesh generations has been exceeded for the minute. | Wait until the rate limit resets. |
+      | Moderation failure | The mesh generation was flagged for moderation. | Review and modify the prompt to ensure it adheres to Roblox's moderation guidelines. |
+      | Internal server error | An unexpected issue occurred on the server. | Retry the request later or check server status for issues. |
+      | Character limit exceeded | The input prompt length for this generation request exceeded the limit. | Reduce the number of characters in the `Prompt` string of the `input` dictionary. |
     code_samples:
       - GenerationService-GenerateMeshAsync-BasicUsage
       - GenerationService-GenerateMeshAsync-WithIntermediateResultsCallback
@@ -51,30 +69,29 @@ methods:
         type: Dictionary
         default:
         summary: |
-          Mesh generation inputs. Must include a `Prompt` key with a string
-          value describing the object to generate.
+          A dictionary containing the mesh generation prompts. Currently, the only supported key is the `Prompt` (string) that describes the mesh to generate.
       - name: player
         type: Player
         default:
         summary: |
-          The player requesting the generation.
+          The `Class.Player` requesting the generation.
       - name: options
         type: Dictionary
         default:
         summary: |
-          Mesh generation options (none currently available).
+          Additional generation options. Currently, no options are supported.
       - name: intermediateResultCallback
         type: Function?
         default:
         summary: |
-          Optional function that receives intermediate generations. The callback
-          receives three parameters: `intermediateType` (an enum indicating the
-          type of intermediate result), `generationId` (string), and `contextId`
-          (string).
+          A callback function triggered with intermediate generation results. Useful for retrieving early mesh versions (e.g. before textures are applied).
     returns:
       - type: Tuple
         summary: |
           A tuple of generation ID and context ID.
+
+          - Generation ID: A unique ID returned for each invocation of `GenerateMeshAsync()`.
+          - Context ID: Not currently used.
     tags:
       - Yields
     deprecation_message: ''
@@ -84,23 +101,14 @@ methods:
     writeCapabilities: []
   - name: GenerationService:LoadGeneratedMeshAsync
     summary: |
-      Loads a generated mesh from RCC using the generation ID. The generated
-      mesh is an `Class.MeshPart`.
+      Retrieves and loads a mesh generated by `Class.GenerationService:GenerateMeshAsync()`
+      using the provided `generationId`. The mesh is returned as a `Class.MeshPart`
+      with `Class.EditableMesh` content.
     description: |
-      Loads the mesh generated by `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()`
-      using the `generationId` and returns a `Class.MeshPart` with the editable
-      content. The resulting generation is then subject to `Class.EditableMesh`
-      characteristics.
-
-      For a more detailed example, see
-      [this demo experience](https://www.roblox.com/games/86571743597273/Mesh-Generation-Template).
-      Click the **&ctdot;** button and **Edit in Studio**.
-
-      Currently, the `LoadGeneratedMeshAsync()` method can only be called on
-      the client due to the restrictions on replicating editable meshes. This
-      means that only one player will be able to see the generated mesh, as this
-      function can only be called once per `generationId`.'
-
+      Retrieves and loads a mesh generated by `Class.GenerationService:GenerateMeshAsync()`
+      using the provided generationId. The mesh is returned as a `Class.MeshPart`
+      with `Class.EditableMesh` content. Because editable meshes are not replicated,
+      the loaded mesh is not replicated to any other clients and can only be loaded once per `generationId`.
     code_samples:
       - GenerationService-LoadGeneratedMeshAsync-LoadAGeneratedMesh
     parameters:
@@ -108,12 +116,11 @@ methods:
         type: string
         default:
         summary: |
-          The generation ID returned by
-          `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()`.
+          The unique ID returned by `Class.GenerationService:GenerateMeshAsync()|GenerateMeshAsync()`. Identifies the mesh to load.
     returns:
       - type: MeshPart
         summary: |
-          The generated `Class.MeshPart`.
+          The generated mesh, returned as a `Class.MeshPart` containing an `Class.EditableMesh`.
     tags:
       - Yields
     deprecation_message: ''
