@@ -1,6 +1,6 @@
 ---
 title: Intro to for loops
-description: Use for loops to repeat code in this lesson for Roblox Lua. This lesson explains how for loops work and includes practice scripts.
+description: Use for loops to repeat code in this lesson for Luau. This lesson explains how for loops work and includes practice scripts.
 next: /tutorials/fundamentals/coding-4/glow-lights-with-for-loops
 prev: /tutorials/fundamentals/coding-4/repeat-code-with-while-loops
 ---

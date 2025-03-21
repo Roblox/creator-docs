@@ -1,6 +1,6 @@
 ---
 title: Roblox for the AP CSP Create Performance Task
-description: Recommendations on how to incorporate Roblox Studio and Lua into a classroom for use in the AP CSP Create Performance Task
+description: Recommendations on how to incorporate Roblox Studio and Luau into a classroom for use in the AP CSP Create Performance Task
 duration:
 thumbnail: None
 group: Education
@@ -11,23 +11,23 @@ Roblox Studio's collaborative nature and ease of prototyping makes it a great op
 
 - Free, easy to download software.
 - Built-in features allowing real-time collaboration.
-- Ability to innovate and express oneself using the scripting language, Lua.
+- Ability to innovate and express oneself using the scripting language, Luau.
 
 ## Roblox for computer science
 
-### Code with Lua
+### Code with Luau
 
-Lua is excellent as a first coding language, or for those ready for a new challenge after visual languages such as MIT Scratch. Lua is a typed syntax language. It's similar to Python, but without white space concerns. This means your students' code won't break if they forget to indent a block of code or add a semicolon.
+Luau is excellent as a first coding language, or for those ready for a new challenge after visual languages such as MIT Scratch. Luau is a typed syntax language. It's similar to Python, but without white space concerns. This means your students' code won't break if they forget to indent a block of code or add a semicolon.
 
-With Lua, students can focus more on computer science concepts than excessive troubleshooting.
+With Luau, students can focus more on computer science concepts than excessive troubleshooting.
 
 ### Recommendations
 
 Before starting a classroom using Roblox, we do have some recommendations.
 
-As students have only limited time to create their program, it's recommended that students have used Roblox Studio throughout the semester, or have previous experience with Lua.
+As students have only limited time to create their program, it's recommended that students have used Roblox Studio throughout the semester, or have previous experience with Luau or Lua.
 
-For Lua coding principles that you can adapt to the classroom, check our <a href="../../tutorials/fundamentals/coding-1/landing.md">Coding Fundamentals</a> series. Students can then practice coding by going through our guided projects such as the<a href="../adventure-game-series/landing.md">Adventure Game</a>.
+For Luau coding principles that you can adapt to the classroom, check our <a href="../../tutorials/fundamentals/coding-1/landing.md">Coding Fundamentals</a> series. Students can then practice coding by going through our guided projects such as the<a href="../adventure-game-series/landing.md">Adventure Game</a>.
 
 ### Collaboration
 
@@ -79,7 +79,7 @@ This recommended schedule gives students approximately 6 or 7 hours for completi
   <thead>
     <tr>
       <th scope="col">ApproximateTimeline     </th>
-      <th scope="col">Objective</th>  
+      <th scope="col">Objective</th>
     </tr>
  </thead>
 

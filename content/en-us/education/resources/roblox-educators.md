@@ -39,7 +39,7 @@ Our Featured Educators represent the best that the Roblox Education community ha
     <a href="https://codekingdoms.com/roblox-coding/" target="_blank" rel="noopener"><img src="../../assets/education/educators-page/code-kingdom-logo.png" /></a>
     </td>
     <td>
-    Code Kingdoms provides an online-exclusive program for students and educators across the world. With its web-based drag-and-drop code editor, kids age 8+ can learn how to develop their own games using Roblox Studio and the Lua programming language.
+    Code Kingdoms provides an online-exclusive program for students and educators across the world. With its web-based drag-and-drop code editor, kids age 8+ can learn how to develop their own games using Roblox Studio and the Luau programming language.
     </td>
    </tr>
 
@@ -126,7 +126,7 @@ We have many educators across the world teaching with Roblox. If you're interest
 
 <Grid container spacing={3}>
  <Grid item XSmall={6}>
-  
+
 <a href="https://superinventores.com">Academia de Super Inventores</a><br/>
 <a href="https://algorithmics-online.com/product/roblox/" title="Algorithmics Online">Algorithmics Online</a><br/>
 <a href="https://www.alvinblox.com/" title="AlvinBlox">AlvinBlox</a><br/>

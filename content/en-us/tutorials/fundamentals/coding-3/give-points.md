@@ -1,6 +1,6 @@
 ---
 title: Else/if practice with giving points
-description: Create a part that gives players points using if and else statements in Roblox Lua.
+description: Create a part that gives players points using if and else statements in Luau.
 next: /tutorials/fundamentals/coding-4/landing
 prev: /tutorials/fundamentals/coding-3/multiple-conditions
 ---

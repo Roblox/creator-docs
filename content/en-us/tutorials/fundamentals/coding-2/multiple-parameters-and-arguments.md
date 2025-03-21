@@ -1,6 +1,6 @@
 ---
 title: Multiple parameters and arguments
-description: Pass multiple pieces of information into a function in Roblox Lua using arguments and parameters.
+description: Pass multiple pieces of information into a function in Luau using arguments and parameters.
 next: /tutorials/fundamentals/coding-3/landing
 prev: /tutorials/fundamentals/coding-2/parameters-practice-buttons
 ---

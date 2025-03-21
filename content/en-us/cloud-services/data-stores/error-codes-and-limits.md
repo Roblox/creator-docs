@@ -374,7 +374,7 @@ Data stores limit how much data can be used per entry.
 
 The data store name, key name, and [scope](../../cloud-services/data-stores/manage-data-stores.md#scopes) must all be under a certain character length. Use `Library.string.len()` to check their length.
 
-The data (key value) is also stored as a string, regardless of its initial type. You can check the size of the data with the `Class.HttpService:JSONEncode()|JSONEncode()` function, which converts Lua data into a serialized JSON table.
+The data (key value) is also stored as a string, regardless of its initial type. You can check the size of the data with the `Class.HttpService:JSONEncode()|JSONEncode()` function, which converts Luau data into a serialized JSON table.
 
 <table>
 <thead>

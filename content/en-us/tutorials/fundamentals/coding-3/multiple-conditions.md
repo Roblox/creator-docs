@@ -1,6 +1,6 @@
 ---
 title: Multiple conditions
-description: Learn how to use elseif and else to create more complex control structures in Roblox Lua.
+description: Learn how to use elseif and else to create more complex control structures in Luau.
 next: /tutorials/fundamentals/coding-3/give-points
 prev: /tutorials/fundamentals/coding-3/powerups-with-if-statements
 ---

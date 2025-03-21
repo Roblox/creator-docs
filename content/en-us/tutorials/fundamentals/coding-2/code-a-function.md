@@ -1,11 +1,11 @@
 ---
 title: Code a function
-description: What a function is, and how to code a function in Roblox Lua
+description: What a function is, and how to code a function in Luau
 next: /tutorials/fundamentals/coding-2/use-parameters-and-events
 prev: /tutorials/fundamentals/coding-1/parents-and-children
 ---
 
-**Functions** are sets of instructions that can be used many times in a script. There are pre-made functions (also called methods) like `print()` and `Library.task.wait()` that are built into most programming languages. Coders can also create their own custom functions for code they want to use more than once, but don't feel like writing over and over. In Lua, this is done by typing:
+**Functions** are sets of instructions that can be used many times in a script. There are pre-made functions (also called methods) like `print()` and `Library.task.wait()` that are built into most programming languages. Coders can also create their own custom functions for code they want to use more than once, but don't feel like writing over and over. In Luau, this is done by typing:
 `local function nameOfTheFunction()`
 
 Functions can be thought of like a recipe. They're both lists of specific instructions. For example, you could use a function to teach a robot how to make spaghetti. First, make a `local function` that lists the steps to prep the meal. Then, whenever you want dinner, just say, "Robot, run makeSpaghetti()".

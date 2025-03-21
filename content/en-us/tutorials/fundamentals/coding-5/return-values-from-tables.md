@@ -1,6 +1,6 @@
 ---
 title: Return values from tables
-description: Learn how to write a search function using pairs and ipairs to return values from tables in Roblox Lua.
+description: Learn how to write a search function using pairs and ipairs to return values from tables in Luau.
 next: /tutorials/fundamentals/coding-6/landing
 prev: /tutorials/fundamentals/coding-5/pairs-and-ipairs
 ---

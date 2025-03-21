@@ -352,7 +352,7 @@ methods:
         `Class.DataStoreKeyInfo:GetUserIds()` should be returned unless the
         existing IDs are being changed; otherwise all existing IDs will be
         cleared.
-      - A Lua table containing metadata to associate with the key.
+      - A Luau table containing metadata to associate with the key.
         `Class.DataStoreKeyInfo:GetMetadata()` should be returned unless the
         existing metadata is being changed; otherwise all existing metadata will
         be cleared.

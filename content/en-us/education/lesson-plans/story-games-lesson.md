@@ -15,7 +15,7 @@ description: Learn to code a story game as part of the Hour of Code™ initiativ
     <td><b>Lesson objectives</b></td>
     <td>
       <ul>
-        <li>Create variables for storing user input using Lua code in Roblox Studio.</li>
+        <li>Create variables for storing user input using Luau code in Roblox Studio.</li>
         <li>Combine user input with a pre-written story.</li>
         <li>Test and troubleshoot the resulting code.</li>
         </ul>
@@ -234,6 +234,6 @@ Discover how to build the ultimate interactive word game using Roblox's free cod
 
 In this course, your student will:
 
-- Learn and develop programming fundamentals with Lua.
+- Learn and develop programming fundamentals with Luau.
 - Use programming to create a story game in a 3D world.
 - Take home a complete experience that can be played and shared online.

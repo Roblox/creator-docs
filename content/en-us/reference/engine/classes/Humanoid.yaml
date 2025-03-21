@@ -1191,7 +1191,7 @@ properties:
       part, plus the `Class.Humanoid.WalkToPoint` translated in object space
       relative to the rotation of the part.
 
-      This can be described in Lua as:
+      This can be described in Luau as:
 
       ```lua
       goal = humanoid.WalkToPart.CFrame:pointToObjectSpace(humanoid.WalkToPoint)

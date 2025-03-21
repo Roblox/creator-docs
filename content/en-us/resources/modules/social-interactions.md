@@ -78,7 +78,7 @@ Simply inserting the **SocialInteractions** module will enable both the **body o
 
 ### Chat Animation Trigger Words
 
-The list of "trigger words" that activate each chat animation is configurable and Lua string patterns are utilized to increase recognizable words. For example, one combination used by the **Wave** animation is `he+y+o*`, meaning that `hey`, `heyyy`, `heyo`, `heyyyyo`, `heeeeyyyyo`, and other variations qualify to trigger the animation.
+The list of "trigger words" that activate each chat animation is configurable and Luau string patterns are utilized to increase recognizable words. For example, one combination used by the **Wave** animation is `he+y+o*`, meaning that `hey`, `heyyy`, `heyo`, `heyyyyo`, `heeeeyyyyo`, and other variations qualify to trigger the animation.
 
 Also note that trigger words are **case-insensitive**, so typing `hey` is the same as `HEY`, `Hey`, and other variations.
 

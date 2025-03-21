@@ -42,7 +42,7 @@ Engineer a rover to withstand challenges on the harsh martian landscape. Designe
 <Grid item XSmall={4} XLarge={4}>
 ![Logo of Lua Learning](../../assets/education/developer/thumbnail-luaLearning.png)
 <a href="https://www.roblox.com/games/1334669864/"><h4>Lua Learning</h4></a>
-Learn computational thinking, and Lua coding within Roblox. Users can complete interactive courses and even find user-created lessons on advanced technical concepts such as network security.
+Learn computational thinking, and Luau coding within Roblox. Users can complete interactive courses and even find user-created lessons on advanced technical concepts such as network security.
 </Grid>
 
 <Grid item XSmall={4} XLarge={4}>

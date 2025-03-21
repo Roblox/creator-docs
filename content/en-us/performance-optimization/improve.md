@@ -7,7 +7,7 @@ This page describes common performance problems and best practices for mitigatin
 
 ## Script computation
 
-Expensive operations in Lua code take longer to process and can thus impact frame rate. Unless it is being executed in parallel, Lua code runs synchronously and blocks the main thread until it encounters a function that yields the thread.
+Expensive operations in Luau code take longer to process and can thus impact frame rate. Unless it is being executed in parallel, Luau code runs synchronously and blocks the main thread until it encounters a function that yields the thread.
 
 ### Common problems
 

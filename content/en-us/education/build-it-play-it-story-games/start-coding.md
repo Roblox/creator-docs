@@ -5,7 +5,7 @@ next: /education/build-it-play-it-story-games/coding-a-question
 prev: /education/build-it-play-it-story-games/first-challenge
 ---
 
-In Roblox, code is typed inside of **scripts** using the coding language Lua. Games often have separate scripts for each thing the game needs to do. The library template already has a script named **StoryManager** which you'll add more code to for your word game.
+In Roblox, code is typed inside of **scripts** using the coding language [Luau](https://luau.org). Games often have separate scripts for each thing the game needs to do. The library template already has a script named **StoryManager** which you'll add more code to for your word game.
 
 ## Find the StoryManager
 

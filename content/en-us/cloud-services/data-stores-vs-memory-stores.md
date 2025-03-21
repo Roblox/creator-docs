@@ -5,7 +5,7 @@ description: When to use standard data stores, ordered data stores, and memory s
 
 To store data, you can use [data stores](./data-stores/index.md) with the `Class.DataStoreService` or [memory stores](./memory-stores/index.md) with the `Class.MemoryStoreService`.
 
-Alternatively, you can also use Lua types and variables to [store data in-memory in Lua](#when-to-use-in-memory-storage-in-lua), without using the data or memory store services.
+Alternatively, you can also use Luau types and variables to [store data in-memory in Luau](#when-to-use-in-memory-storage-in-luau), without using the data or memory store services.
 
 ## When to use data stores
 
@@ -71,14 +71,14 @@ Although memory stores store temporary data, they also support permanent feature
 </tbody>
 </table>
 
-## When to use in-memory storage in Lua
+## When to use in-memory storage in Luau
 
-You can use in-memory storage in Lua to store temporary data that needs to be accessed with minimal latency and without the cost of making external service calls to data stores or memory stores. There are no extra steps required to set up in-memory storage as it's already built in by default in Lua.
+You can use in-memory storage in Luau to store temporary data that needs to be accessed with minimal latency and without the cost of making external service calls to data stores or memory stores. There are no extra steps required to set up in-memory storage as it's already built in by default in Lua.
 
 <table>
 <thead>
   <td width="15%"></td>
-  <td width="30%">**In-memory storage in Lua**</td>
+  <td width="30%">**In-memory storage in Luau**</td>
   <td width="30%"></td>
 </thead>
 <tbody>

@@ -150,7 +150,7 @@ end
 platform.Touched:Connect(fade)
 ```
 
-The Lua `not` operator reverses the value of whatever follows it. In conditional terms, this means that the first if statement behaves the same as the statements which follow.
+The Luau `not` operator reverses the value of whatever follows it. In conditional terms, this means that the first if statement behaves the same as the statements which follow.
 
 ```lua
 if not isTouched then

@@ -1,6 +1,6 @@
 ---
 title: Loops
-description: Learn how to use loops like while and for loops in this tutorial series for Roblox Studio. Great for beginners learning Lua or computer science.
+description: Learn how to use loops like while and for loops in this tutorial series for Roblox Studio. Great for beginners learning Luau or computer science.
 next: /tutorials/fundamentals/coding-4/repeat-code-with-while-loops
 prev: /tutorials/fundamentals/coding-3/give-points
 ---
@@ -25,7 +25,7 @@ In computer science, loops are a common feature in many scripts, often used to r
    <tr>
     <td><b>Prerequisites</b></td>
     <td>
-    Have a general understanding of variables in Lua.
+    Have a general understanding of variables in Luau.
     </td>
 
    </tr>

@@ -41,7 +41,7 @@ Data stores require a unique **name**. This example creates a data store named *
 
 ## Save data
 
-A data store is essentially a dictionary, like a Lua table. Each value in the data store is indexed by a unique **key**, which might be the player's unique `Class.Player.UserId|UserId` or simply a named string for a game promotion.
+A data store is essentially a dictionary, like a Luau table. Each value in the data store is indexed by a unique **key**, which might be the player's unique `Class.Player.UserId|UserId` or simply a named string for a game promotion.
 
 <Tabs>
 <TabItem label="Player Data Example">

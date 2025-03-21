@@ -47,7 +47,7 @@ methods:
         type: Dictionary
         default:
         summary: |
-          Lua table in `key = value` format where the key is the experimental
+          Luau table in `key = value` format where the key is the experimental
           feature name and the value is a boolean which specifies whether to
           enable.
     returns:

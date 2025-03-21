@@ -2,7 +2,7 @@
 title: Customize and share
 prev: /education/build-it-play-it-galactic-speedway/take-the-challenge-2
 next: /education/build-it-play-it-galactic-speedway/going-for-a-race
-description: Learn how to modify a Lua script in Roblox Studio to customize how your spaceship handles and flies in the Build It Play It Galactic Speedway challenge.
+description: Learn how to modify a Luau script in Roblox Studio to customize how your spaceship handles and flies in the Build It Play It Galactic Speedway challenge.
 ---
 
 <img
@@ -13,7 +13,7 @@ This last lesson is all about putting the final touches on the driftspeeder, suc
 
 ## Modify the Engine
 
-To change a driftspeeder's speed or how quickly it can turn, you'll open the **_Settings_** script. In Roblox, code is typed inside of scripts using the coding language Lua. Games often have separate scripts for each thing the game needs to do.
+To change a driftspeeder's speed or how quickly it can turn, you'll open the **_Settings_** script. In Roblox, code is typed inside of scripts using the coding language [Luau](https://luau.org). Games often have separate scripts for each thing the game needs to do.
 
 1. Click on your speeder.
 2. In the **Explorer**, look for the **_Garage_** folder and your driftspeeder.

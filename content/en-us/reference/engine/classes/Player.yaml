@@ -978,7 +978,7 @@ properties:
       If set, the player will respawn at the given `Class.SpawnLocation`.
     description: |
       If set, the player will respawn at the given `Class.SpawnLocation`. This
-      property can only be set through Lua and must contain a reference to a
+      property can only be set through Luau and must contain a reference to a
       valid `Class.SpawnLocation`, which must meet the following criteria:
 
       - Descendant of `Class.Workspace`
@@ -2707,7 +2707,7 @@ events:
       Fires when a player chats in-game using Roblox's provided chat bar.
     description: |
       The Chatted event fires when a `Class.Player` types a message and presses
-      enter in Roblox's provided chat bar. This is done using some Lua bindings
+      enter in Roblox's provided chat bar. This is done using some Luau bindings
       by the default chat script. You can prevent players from chatting by using
       `Class.StarterGui:SetCoreGuiEnabled()` and disabling the Chat
       `Enum.CoreGuiType`.

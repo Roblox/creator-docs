@@ -16,7 +16,7 @@ items:
     deprecation_message: ''
   - name: Lua
     summary: |
-      Call stack frame belongs to a Lua function.
+      Call stack frame belongs to a Luau function.
     value: 1
     tags: []
     deprecation_message: ''

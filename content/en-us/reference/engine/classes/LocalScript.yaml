@@ -3,10 +3,10 @@ type: class
 category: Scripting
 memory_category: Script
 summary: |
-  An object that contains and runs Lua code on the client (player's device)
+  An object that contains and runs Luau code on the client (player's device)
   instead of the server.
 description: |
-  A `Class.LocalScript` is a Lua code container that runs its contents on the
+  A `Class.LocalScript` is a Luau source container that runs its contents on the
   client (player's device) instead of the server. It is used to access
   client-only objects such as the player's `Class.Camera`.
 

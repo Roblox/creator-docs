@@ -189,7 +189,7 @@ Relational operators compare two parameters and return a [`boolean`](./booleans.
 
 ## Arithmetic
 
-Lua supports the usual binary operators along with exponentiation, modulus, and unary negation.
+Luau supports the usual binary operators along with exponentiation, modulus, and unary negation.
 
 <table>
   <thead>

@@ -31,7 +31,7 @@ Limit | Description
 
 Before you can publish a message to your experience's live servers, you must set up a **topic**, which is a customized message channel that is accessible from multiple servers. After defining a topic, you subscribe users to the topic in order to receive your incoming messages.
 
-Currently, you can only define a topic in Studio and use Lua `Class.MessagingService:SubscribeAsync()` to subscribe users to it. The following code sample subscribes any user to a topic when they join the experience:
+Currently, you can only define a topic in Studio and use the Luau API `Class.MessagingService:SubscribeAsync()` to subscribe users to it. The following code sample subscribes any user to a topic when they join the experience:
 
 ```lua title= 'Set up and Subscribe Users to a Topic'
 local MessagingService = game:GetService("MessagingService")

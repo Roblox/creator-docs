@@ -27,7 +27,7 @@ Create an adventure game where players explore a world to find items to harvest 
    <tr>
     <td><b>Prerequisites</b></td>
     <td>
-    Have an understanding of the following Lua concepts: variables, conditional (if/else) statements, and typing functions.
+    Have an understanding of the following Luau concepts: variables, conditional (if/else) statements, and typing functions.
 
     Feel comfortable working with the world creation tools in Roblox, such as making parts or creating terrain.
     </td>

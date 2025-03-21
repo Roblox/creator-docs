@@ -211,7 +211,7 @@ properties:
       `Class.Model:MoveTo()`, will set the world pivot and thus end this new
       model behavior.
 
-      The purpose of this behavior is to allow Lua code to get a sensible pivot
+      The purpose of this behavior is to allow Luau code to get a sensible pivot
       simply by creating a new model and parenting objects to it, avoiding the
       need to explicitly set `Class.Model.WorldPivot` every time you create a
       model in code.

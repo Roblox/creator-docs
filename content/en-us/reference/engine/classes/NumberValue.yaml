@@ -6,7 +6,7 @@ summary: |
   A container object for a single double-precision floating point number.
 description: |
   A NumberValue is an object whose purpose is to store a single
-  [Lua number](https://www.lua.org/pil/2.3.html), defined to be
+  [Luau number](https://luau.org/syntax#number-literals), defined to be
   [double-precision floating point number](https://en.wikipedia.org/wiki/Double-precision_floating-point_format),
   or more commonly known as a **double**. This stores a number in 64 bits (8
   bytes) using the IEEE 754 representation (1 sign bit, 11 exponent bits and 52

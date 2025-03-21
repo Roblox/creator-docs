@@ -9,7 +9,7 @@ Dictionaries are tables that associate names or **keys** with a value instead of
 
 Example:
 
-```lua title="Lua dictionary syntax"
+```lua title="Luau dictionary syntax"
 local pet = {
    Name = "Bobbie",
    Type = "Dog",

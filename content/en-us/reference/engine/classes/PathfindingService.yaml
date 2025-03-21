@@ -126,7 +126,7 @@ methods:
         type: Dictionary
         default: nil
         summary: |
-          Lua table which lets you fine-tune the path for the size of the agent
+          Luau table which lets you fine-tune the path for the size of the agent
           (the humanoid that will move along the path). See above for valid
           keys, types, and descriptions.
     returns:

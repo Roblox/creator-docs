@@ -39,7 +39,7 @@ local experienceStore = DataStoreService:GetDataStore("PlayerExperience")
 
 ## Create data
 
-A data store is essentially a dictionary, similar to a Lua table. A unique **key** indexes each value in the data store, like a user's unique `Class.Player.UserId` or a named string for an experience promo.
+A data store is essentially a dictionary, similar to a Luau table. A unique **key** indexes each value in the data store, like a user's unique `Class.Player.UserId` or a named string for an experience promo.
 
 <table>
 <thead>

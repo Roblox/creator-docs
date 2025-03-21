@@ -276,7 +276,7 @@ properties:
       - When a message is sent, `Class.TextBox.Text` will automatically clear.
 
       For security, some limitations are imposed on the `Class.TextBox` when it
-      is promoted to `Class.ChatInputBarConfiguration.TextBox`. Lua code will
+      is promoted to `Class.ChatInputBarConfiguration.TextBox`. Luau code will
       not be able to:
 
       - Change the `Class.TextBox.Text` property.

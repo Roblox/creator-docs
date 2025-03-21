@@ -180,6 +180,6 @@ With over 60 millions users a month, Roblox is the world's largest social techno
 
 In this course, your student will:
 
-- Learn programming fundamentals with Lua.
+- Learn programming fundamentals with Luau.
 - Explore design thinking and 3D modeling by creating an obstacle course.
 - Take home a complete experience that can be played and shared online.

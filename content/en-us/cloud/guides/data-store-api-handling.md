@@ -13,7 +13,7 @@ Like all Open Cloud APIs, data store endpoints require all requests to include t
 
 All endpoints have two types of universe level throttling: **request-per-minute throttling** and **throughput throttling**. With every experience, **request-per-minute throttling** allows you to send a certain number of requests per minute, and **throughput throttling** allows you to send a certain amount of data per minute, regardless of the number of API keys.
 
-Unlike the Lua API, these limits currently do not scale based on user counts. Exceeding these limits causes the endpoint to return `429 Too Many Requests`.
+Unlike the Luau API, these limits currently do not scale based on user counts. Exceeding these limits causes the endpoint to return `429 Too Many Requests`.
 
 ### Standard data stores throttling limits
 

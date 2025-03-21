@@ -9,7 +9,7 @@ summary: |
 description: |
   A `Class.ModuleScript` is a script type that returns exactly one value by a
   call to `Global.LuaGlobals.require()`. `Class.ModuleScript|ModuleScripts` run
-  once and only once per Lua environment and return the exact same value for
+  once and only once per Luau environment and return the exact same value for
   subsequent calls to `Global.LuaGlobals.require()`.
 
   `Class.ModuleScript|ModuleScripts` are essential objects for adhering to the

@@ -1,6 +1,6 @@
 ---
 title: Object properties
-description: Learn how to use Lua to change the appearance properties of different objects, such as color and shape.
+description: Learn how to use Luau to change the appearance properties of different objects, such as color and shape.
 next: /tutorials/fundamentals/coding-1/parents-and-children
 prev: /tutorials/fundamentals/coding-1/create-a-script
 ---

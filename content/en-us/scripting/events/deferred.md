@@ -22,17 +22,17 @@ The total time taken does not change, but the ordering is different.
 
 ## Deferred event benefits
 
-The `Immediate` behavior has some disadvantages. For every instance added to your game, property that changes, or some other trigger that is invoked, the engine needs to run Lua code before anything else happens.
+The `Immediate` behavior has some disadvantages. For every instance added to your game, property that changes, or some other trigger that is invoked, the engine needs to run Luau code before anything else happens.
 
 - To change 1,000 properties, 1,000 snippets of code potentially need to run after each change.
 - Strange, hard-to-diagnose bugs can occur, such as a removing event firing before something was even added.
-- Performance-critical systems can fire events requiring them to yield back and forth to Lua.
+- Performance-critical systems can fire events requiring them to yield back and forth to Luau.
 - Event handlers can make changes to the place or trigger other events any time an event is fired.
 - An event can fire multiple times despite being redundant, such as a property changing twice.
 
-By having specific portions of the engine life cycle in which Lua can run, the engine can gain improved performance by using a number of assumptions:
+By having specific portions of the engine life cycle in which Luau can run, the engine can gain improved performance by using a number of assumptions:
 
-- Performance-critical systems don't need to yield to Lua, which leads to performance gains.
+- Performance-critical systems don't need to yield to Luau, which leads to performance gains.
 - Unless the engine itself changes it, the place never changes outside of a resumption point.
 
 ## Resumption points

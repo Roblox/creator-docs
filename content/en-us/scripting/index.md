@@ -40,7 +40,7 @@ end
 printMessage() --> User has more than 10 items!
 ```
 
-Lua uses `nil` to represent nonexistence or nothingness, which evaluates as `false` in conditional statements:
+Luau uses `nil` to represent nonexistence or nothingness, which evaluates as `false` in conditional statements:
 
 ```lua
 local messageToUser

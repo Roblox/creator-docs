@@ -16,7 +16,7 @@ The following table has Luau's reserved keywords mapped to their C# equivalent. 
 <table>
     <thead>
         <tr>
-            <th>Lua</th>
+            <th>Luau</th>
             <th>C#</th>
         </tr>
     </thead>
@@ -237,7 +237,7 @@ npcAttributes.Remove(2);
     <thead>
         <tr>
             <th>Operator</th>
-            <th>Lua</th>
+            <th>Luau</th>
             <th>C#</th>
         </tr>
     </thead>
@@ -291,7 +291,7 @@ npcAttributes.Remove(2);
     <thead>
         <tr>
             <th></th>
-            <th>Lua</th>
+            <th>Luau</th>
             <th>C#</th>
         </tr>
     </thead>

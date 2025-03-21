@@ -115,7 +115,7 @@ We've compiled some of our favorite experiences to showcase the best that Roblox
   <img src="../../assets/education/legacy/module5-gameImages-450x250-lua.jpg" />
   <h4>Lua Learning</h4>
   <p>
-  Learn how to code in Lua, the language used in all Roblox projects.
+  Learn how to code in Luau, the language used in all Roblox projects. The experience is named Lua for historical reasons, as Roblox used Lua before developing it into Luau.
   </p>
   <a href="https://www.roblox.com/games/1334669864/">
   <Button variant="contained">Play</Button>
