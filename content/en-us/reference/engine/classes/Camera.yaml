@@ -31,6 +31,15 @@ description: |
 
   See [Customizing the Camera](../../../workspace/camera.md) for more
   information on how to adjust and customize the camera's behavior.
+
+
+  Warning:
+  It should also be noted that when changing `Workspace.CurrentCamera` to a new `Camera`
+  and there is more than a single `Camera` present in the top-hierarchy of `Workspace`
+  then all other unused `Camera` objects shall be parented to `nil` but not `Destroy()`d.
+
+  If you require a `Camera` to stay around, it is recommended to parent it inside a `Model` or object other than directly under `Workspace`.
+  
 code_samples:
 inherits:
   - Instance
