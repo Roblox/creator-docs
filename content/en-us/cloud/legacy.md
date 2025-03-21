@@ -21,6 +21,17 @@ This section contains documentation for Roblox's legacy REST APIs.
 | UpdateBadge | `PATCH v1/badges/{badgeId}` | `legacy-universe.badge:write` or `legacy-universe.badge:manage-and-spend-robux` |
 | CreateBadge | `POST v1/universes/{universeId}/badges` | `legacy-universe.badge:manage-and-spend-robux` |
 
+## Asset Delivery API
+
+- Base URL: `https://apis.roblox.com/asset-delivery-api`
+- Authentication types: OAuth 2.0 and API key
+- Additional Asset Delivery API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/assets/v1).
+
+| **API**                                 | **Path**                                                                  | **Scope**                |
+| :-------------------------------------- | :------------------------------------------------------------------------ | :----------------------- |
+| GetAssetById                            | `GET /v1/assetId/{assetId}`                                               | `legacy-asset:manage`    |
+| GetAssetVersionById                     | `GET /v1/assetId/{assetId}/version/{version}`                             | `legacy-asset:manage`    |
+
 ## Develop API
 
 - Base URL: `https://apis.roblox.com/legacy-develop`
