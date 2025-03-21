@@ -120,7 +120,7 @@ width="100%" />
 
 Students can primarily use Roblox to play or create. One method is using **virtual learning experiences** where students play on Roblox. They can go on virtual field trips, explore natural settings, and interact with simulations of real-world phenomena.
 
-Additionally, Roblox can be used for **code and creation** with Roblox Studio. In Studio, students can design virtual environments or learn computer science with Lua, a text-based coding language similar to Python.
+Additionally, Roblox can be used for **code and creation** with Roblox Studio. In Studio, students can design virtual environments or learn computer science with Luau, a text-based coding language similar to Python and Lua.
 
 ### Advantages of Roblox
 

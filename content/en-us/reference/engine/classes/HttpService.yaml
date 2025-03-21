@@ -172,18 +172,18 @@ methods:
     writeCapabilities: []
   - name: HttpService:JSONDecode
     summary: |
-      Decodes a JSON string into a Lua table.
+      Decodes a JSON string into a Luau table.
     description: |
-      This method transforms a JSON object or array into a Lua
+      This method transforms a JSON object or array into a Luau
       [table](../../../luau/tables.md) with the following characteristics:
 
       - Keys of the table are strings or numbers but not both. If a JSON object
         contains both, string keys are ignored.
-      - An empty JSON object generates an empty Lua table (`{}`).
+      - An empty JSON object generates an empty Luau table (`{}`).
       - If the `input` string is not a valid JSON object, this method will throw
         an error.
 
-      To encode a Lua table into a JSON object, use the
+      To encode a Luau table into a JSON object, use the
       `Class.HttpService:JSONEncode()` method.
 
       This method can be used regardless of whether HTTP requests are enabled.
@@ -198,7 +198,7 @@ methods:
     returns:
       - type: Variant
         summary: |
-          The decoded JSON object as a Lua table.
+          The decoded JSON object as a Luau table.
     tags:
       - CustomLuaState
     deprecation_message: ''
@@ -208,14 +208,14 @@ methods:
     writeCapabilities: []
   - name: HttpService:JSONEncode
     summary: |
-      Generate a JSON string from a Lua table.
+      Generate a JSON string from a Luau table.
     description: |
-      This method transforms a Lua [table](../../../luau/tables.md) into a JSON
+      This method transforms a Luau [table](../../../luau/tables.md) into a JSON
       object or array based on the following guidelines:
 
       - Keys of the table must be either strings or numbers. If a table contains
         both, an array takes priority (string keys are ignored).
-      - An empty Lua table (`{}`) generates an empty JSON array.
+      - An empty Luau table (`{}`) generates an empty JSON array.
       - The value `nil` is never generated.
       - Cyclic table references cause an error.
 
@@ -234,7 +234,7 @@ methods:
         type: Variant
         default:
         summary: |
-          The input Lua table.
+          The input Luau table.
     returns:
       - type: string
         summary: |

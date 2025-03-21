@@ -87,7 +87,7 @@ methods:
         default:
         summary: |
           To be provided if the **Source** text and translations contain format
-          strings. Will be a Lua table of values **or** key-value pairs,
+          strings. Will be a Luau table of values **or** key-value pairs,
           depending on whether the format strings are numbered or named.
     returns:
       - type: string

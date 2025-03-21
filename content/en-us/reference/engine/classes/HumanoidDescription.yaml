@@ -43,7 +43,7 @@ properties:
       (optionally) Puffiness as key-value pairs. This can be edited in the
       properties windows for the `Class.HumanoidDescription`.
 
-      To make changes from Lua (which is recommended over editing the JSON
+      To make changes from Luau (which is recommended over editing the JSON
       directly), use `Class.HumanoidDescription:SetAccessories()` and
       `Class.HumanoidDescription:GetAccessories()`. These methods can also be
       enabled to work with rigid accessories by setting IncludeRigidAccessories

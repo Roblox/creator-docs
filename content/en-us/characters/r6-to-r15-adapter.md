@@ -13,7 +13,7 @@ It's important to understand how the adapter uses [adapter parts](#adapter-parts
 
 ## Adapter parts
 
-The R6 to R15 Adapter implements a Lua-script injection when an avatar spawns that creates adapter parts.
+The R6 to R15 Adapter implements a Luau-script injection when an avatar spawns that creates adapter parts.
 
 These are invisible `Class.MeshPart|MeshParts` that have the exact same name as R6 body parts and are welded to their corresponding R15 body parts. The scripts allow adapter parts to accept R6-based script interactions and forward them to the appropriate R15 parts.
 
@@ -40,7 +40,7 @@ In a majority of cases, the R6 to R15 Adapter works out-of-the-box with the syst
 
 ### Game security
 
-Some R6 experiences with active cheat detection can interpret the Lua-script injection as an attempt to circumvent the security.
+Some R6 experiences with active cheat detection can interpret the Luau-script injection as an attempt to circumvent the security.
 
 Since the default behavior of R6 avatars is to spawn with all their parts already in place, many experiences tend to flag changes in body parts as potential exploits. In experiences with the adapter enabled, the R15 avatars spawn with their default bodies before changing body parts based on their saved avatar body parts and accessories.
 

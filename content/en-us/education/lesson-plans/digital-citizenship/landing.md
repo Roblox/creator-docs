@@ -45,7 +45,7 @@ This course is comprised of multiple lesson plans intended to be used over time.
    </tr>
    <tr>
     <td><a href="../../../education/lesson-plans/digital-citizenship/coding-fundamentals.md">Coding Fundamentals</a></td>
-    <td>Explore coding concepts like if/then statements. Using Lua, the programming language in Roblox, students will add traps into their game for a new challenge. </td>
+    <td>Explore coding concepts like if/then statements. Using Luau, the programming language in Roblox, students will add traps into their game for a new challenge. </td>
    </tr>
    <tr>
     <td><a href="../../../education/lesson-plans/digital-citizenship/animating-characters.md">Animating Characters</a></td>

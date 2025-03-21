@@ -100,7 +100,7 @@ These methods, when called:
 
 1. Add the request to a queue. Each key has its own queue, where requests are processed in order and in series. The requesting thread yields until the request has completed.
 
-   This functionality is based on the `ThreadQueue` class, which is a coroutine-based task scheduler and rate limiter. Rather than returning a promise, `ThreadQueue` yields the current thread until the operation is complete and throws an error if it fails. This is more consistent with idiomatic asynchronous Lua patterns.
+   This functionality is based on the `ThreadQueue` class, which is a coroutine-based task scheduler and rate limiter. Rather than returning a promise, `ThreadQueue` yields the current thread until the operation is complete and throws an error if it fails. This is more consistent with idiomatic asynchronous Luau patterns.
 
 1. If a request fails, it retries with a configurable exponential backoff. These retries form part of the callback submitted to the `ThreadQueue`, so they are guaranteed to complete before the next request in the queue for this key begins.
 

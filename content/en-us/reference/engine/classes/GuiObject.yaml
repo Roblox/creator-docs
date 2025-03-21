@@ -1683,7 +1683,7 @@ events:
         type: Array
         default:
         summary: |
-          A Lua array of `Datatype.Vector2` objects, each indicating the
+          A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the gesture.
       - name: totalTranslation
         type: Vector2
@@ -1737,7 +1737,7 @@ events:
         type: Array
         default:
         summary: |
-          A Lua array of `Datatype.Vector2` objects, each indicating the
+          A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the pinch gesture.
       - name: scale
         type: float
@@ -1789,7 +1789,7 @@ events:
         type: Array
         default:
         summary: |
-          A Lua array of `Datatype.Vector2` objects, each indicating the
+          A Luau array of `Datatype.Vector2` objects, each indicating the
           position of all the fingers involved in the gesture.
       - name: rotation
         type: float

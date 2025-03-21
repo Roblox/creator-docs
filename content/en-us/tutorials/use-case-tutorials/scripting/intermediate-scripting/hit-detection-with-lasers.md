@@ -603,7 +603,7 @@ Clients can use a `Class.RemoteEvent` to tell the server that a character has be
    local MAX_LASER_DISTANCE = 500
    ```
 
-4. Replace the `"Player hit"` print statement in `fireWeapon` with a line of Lua to fire the **DamageCharacter** remote event with the `characterModel` variable as an argument.
+4. Replace the `"Player hit"` print statement in `fireWeapon` with a line of Luau to fire the **DamageCharacter** remote event with the `characterModel` variable as an argument.
 
    ```lua
        local characterModel = weaponRaycastResult.Instance:FindFirstAncestorOfClass("Model")

@@ -137,9 +137,9 @@ To link to a page in the Roblox Engine API, use the following syntax patterns. T
 
   - `` `Enum.Name` ``
 
-- **Lua/Roblox Globals**
+- **Luau/Roblox Globals**
 
-  - `` `Global.LuaGlobals.Function()` ``
+  - `` `Global.LuauGlobals.Function()` ``
   - `` `Global.RobloxGlobals.Function()` ``
   - `` `Global.RobloxGlobals.Property` ``
 
@@ -241,8 +241,8 @@ The reference documentation files come in five types:
 - Classes — core classes such as `BasePart`, `Model`, `Humanoid`, `DataStoreService`, etc.
 - Data types — data types such as `Color3`, `CFrame`, `UDim2`, `Vector3`, etc.
 - Enums — Enums such as `CameraType`, `FontSize`, `ScreenInsets`, etc.
-- Globals — Lua and Roblox globals.
-- Libraries — Lua libraries such as `math`, `string`, and `table`.
+- Globals — Luau and Roblox globals.
+- Libraries — Luau libraries such as `math`, `string`, and `table`.
 
 Internal tooling generates the structure of most files. Don't add new constructors, properties, methods, or events—just fill in the details. In most situations, you should only edit `summary`, `description`, and `deprecation_message`.
 

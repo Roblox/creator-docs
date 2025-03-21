@@ -61,7 +61,7 @@ To view memory allocation:
      </tr>
      <tr>
        <td>**Script**</td>
-       <td>Lua Scripts.</td>
+       <td>Luau Scripts.</td>
      </tr>
      <tr>
        <td>**PhysicsCollision**</td>

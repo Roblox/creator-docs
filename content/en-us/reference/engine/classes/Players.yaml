@@ -862,7 +862,7 @@ methods:
       This function returns a `Class.Model` containing the assets which the
       player is wearing, excluding gear.
 
-      If you prefer a Lua table of information about these assets instead of a
+      If you prefer a Luau table of information about these assets instead of a
       model, use `Class.Players:GetCharacterAppearanceInfoAsync()`.
 
       This method behaves similar to `Class.InsertService:LoadAsset()`, and is

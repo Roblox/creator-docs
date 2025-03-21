@@ -445,7 +445,7 @@ functions:
       The error `invalid order function for sorting` is thrown if both
       `comp(a, b)` and `comp(b, a)` return `true`.
 
-      If `comp` is not given, then the standard Lua operator `<` is used
+      If `comp` is not given, then the standard Luau operator `<` is used
       instead.
     parameters:
       - name: t
