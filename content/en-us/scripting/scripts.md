@@ -24,9 +24,9 @@ You can also use `Class.LocalScript` objects for client-side scripts, but we rec
 ## Module scripts
 
 `Class.ModuleScript` objects are reusable modules that script objects
-load by calling the `Global.LuauGlobals.require()` function. Module scripts must return exactly one
+load by calling the `Global.LuaGlobals.require()` function. Module scripts must return exactly one
 value and run once and only once
-per Luau environment. As a result, subsequent calls to `Global.LuauGlobals.require()` return a
+per Luau environment. As a result, subsequent calls to `Global.LuaGlobals.require()` return a
 cached value. You can execute arbitrary code in a `Class.ModuleScript`, but you only need to return what you need in other scripts.
 
 Multiple scripts can require
