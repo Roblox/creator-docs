@@ -320,7 +320,7 @@ end)
 
 ## Best practices
 
-To apply the maximum benefits of parallel programming, refer to the following best practices when adding your Lua code:
+To apply the maximum benefits of parallel programming, refer to the following best practices when adding your Luau code:
 
 - **Avoid Long Computations** — Even in parallel, long computations can block execution of other scripts and cause lag. Avoid using parallel programming to handle a large volume of long, unyielding calculations.
 
