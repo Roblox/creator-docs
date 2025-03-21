@@ -137,9 +137,9 @@ To link to a page in the Roblox Engine API, use the following syntax patterns. T
 
   - `` `Enum.Name` ``
 
-- **Luau/Roblox Globals**
+- **Luau and Roblox Globals**
 
-  - `` `Global.LuauGlobals.Function()` ``
+  - `` `Global.LuaGlobals.Function()` ``
   - `` `Global.RobloxGlobals.Function()` ``
   - `` `Global.RobloxGlobals.Property` ``
 
