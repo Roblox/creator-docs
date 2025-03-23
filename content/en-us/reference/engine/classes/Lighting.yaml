@@ -413,7 +413,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: None
+      write: StudioSecurity
     thread_safety: ReadSafe
     category: Appearance
     serialization:
@@ -564,7 +564,7 @@ properties:
       .
     description: |
       Determines the lighting system for rendering the 3D world. This property
-      is non‑scriptable and is no longer accessible in Roblox Studio. See `Enum.Technology` for
+      is non‑scriptable and is no longer accessible in Roblox Studio. Use `Class.Lighting.LightingStyle|LightingStyle` instead. See `Enum.Technology` for
       available options and
       [Lighting Technology](../../../environment/lighting.md#technology) for
       detailed descriptions and visual effects of each option.
