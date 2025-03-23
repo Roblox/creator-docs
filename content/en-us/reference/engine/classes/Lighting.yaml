@@ -413,7 +413,7 @@ properties:
     deprecation_message: ''
     security:
       read: None
-      write: StudioSecurity
+      write: None
     thread_safety: ReadSafe
     category: Appearance
     serialization:
