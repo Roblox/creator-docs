@@ -85,7 +85,7 @@ The **ChatWindow** is the main chat module of the Legacy Chat System's client si
 
 ## ChatBar
 
-The **ChatBar** handles client-side text entry for the Luau Chat System. There are two key components of the ChatBar:
+The **ChatBar** handles client-side text entry for the Lua chat system. There are two key components of the ChatBar:
 
 - **ChatBar** , a `TextBox` , where the player inputs messages and commands (highlighted in orange)
 - **MessageMode** , a `TextLabel` , which can display information about the message being sent (highlighted in green)
@@ -301,7 +301,7 @@ Whisper chat and team chat use ChatCustomState to indicate to the player where t
 
 ## ChatSettings
 
-The **ChatSettings** is a dictionary of settings for the client-side of the Luau Chat System. They are stored in a `ModuleScript` named _ChatSettings_ , which can be found inside of the `Chat` game service, under the `Folder` named _ClientChatModules_ . The module may be required and its properties can be changed during run-time.
+The **ChatSettings** is a dictionary of settings for the client-side of the Lua chat system. They are stored in a `ModuleScript` named _ChatSettings_ , which can be found inside of the `Chat` game service, under the `Folder` named _ClientChatModules_ . The module may be required and its properties can be changed during run-time.
 
 To change a setting, require this module using a `LocalScript` in the following manner:
 

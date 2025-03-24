@@ -225,7 +225,7 @@ Both the [chat window](../chat/chat-window.md) and [bubble chat](../chat/bubble-
 
 ### Migrate speaker "extra data"
 
-The legacy Luau chat system allowed developers to use `SetExtraData` on the `Speaker` class. This data was used to format the name color, chat color, or to apply name tags for a given speaker.
+The legacy Lua chat system allowed developers to use `SetExtraData` on the `Speaker` class. This data was used to format the name color, chat color, or to apply name tags for a given speaker.
 
 ```lua title='Legacy Chat System SetExtraData'
 -- An example of setting extra data on a speaker in the legacy chat system
@@ -239,7 +239,7 @@ end)
 
 TextChatService does not have a direct equivalent to `SetExtraData`. Instead, use [TextChatService callbacks](#text-chat-hooks-and-callbacks) such as `Class.TextChatService.OnWindowAdded` to customize the appearance of messages using rich text based on the `TextSource` of the message.
 
-The following is an example of emulating legacy Luau chat's "extra data" by access attributes on the TextSource's `Class.Player`:
+The following is an example of emulating legacy Lua chat's "extra data" by access attributes on the TextSource's `Class.Player`:
 
 ```lua title='TextChatService SetAttributes'
 local Players = game:GetService("Players")
