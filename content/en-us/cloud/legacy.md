@@ -9,6 +9,18 @@ This section contains documentation for Roblox's legacy REST APIs.
 
 - All other legacy API endpoints use cookie-based authentication. We do not recommend depending on these APIs, as they can incorporate breaking changes without notice and rely on sharing cookies with application code.
 
+## Asset Delivery API
+
+- Base URL: `https://apis.roblox.com/asset-delivery-api`
+- Authentication types: OAuth 2.0 and API key
+- Additional Asset Delivery API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/assets/v1).
+
+| **API**                                 | **Path**                                                                  | **Scope**                |
+| :-------------------------------------- | :------------------------------------------------------------------------ | :----------------------- |
+| GetAssetById                            | `GET /v1/assetId/{assetId}`                                               | `legacy-asset:manage`    |
+| GetAssetVersionById                     | `GET /v1/assetId/{assetId}/version/{version}`                             | `legacy-asset:manage`    |
+
+
 ## Badges API
 
 - Base URL: `https://apis.roblox.com/legacy-badges`
@@ -20,17 +32,6 @@ This section contains documentation for Roblox's legacy REST APIs.
 | :---------- | :-------------------------- | :---------------------------- |
 | UpdateBadge | `PATCH v1/badges/{badgeId}` | `legacy-universe.badge:write` or `legacy-universe.badge:manage-and-spend-robux` |
 | CreateBadge | `POST v1/universes/{universeId}/badges` | `legacy-universe.badge:manage-and-spend-robux` |
-
-## Asset Delivery API
-
-- Base URL: `https://apis.roblox.com/asset-delivery-api`
-- Authentication types: OAuth 2.0 and API key
-- Additional Asset Delivery API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/assets/v1).
-
-| **API**                                 | **Path**                                                                  | **Scope**                |
-| :-------------------------------------- | :------------------------------------------------------------------------ | :----------------------- |
-| GetAssetById                            | `GET /v1/assetId/{assetId}`                                               | `legacy-asset:manage`    |
-| GetAssetVersionById                     | `GET /v1/assetId/{assetId}/version/{version}`                             | `legacy-asset:manage`    |
 
 ## Develop API
 
