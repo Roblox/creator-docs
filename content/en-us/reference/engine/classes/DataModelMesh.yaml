@@ -96,7 +96,7 @@ properties:
         cylinder, using the lowest value.
       - `Class.SpecialMesh` objects with `Class.SpecialMesh.FileType` set to
         'Head' currently scale in a non standard manner. Developers should not
-        rely on this as there are plans to change this behavior
+        rely on this as there are plans to change this behavior.
       - `Class.SpecialMesh` objects with `Class.SpecialMesh.FileType` set to
         'Torso' scale in a non standard manner. Developers should not rely on
         this as there are plans to deprecate this mesh type.
