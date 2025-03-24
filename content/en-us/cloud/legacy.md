@@ -20,7 +20,6 @@ This section contains documentation for Roblox's legacy REST APIs.
 | GetAssetById                            | `GET /v1/assetId/{assetId}`                                               | `legacy-asset:manage`    |
 | GetAssetVersionById                     | `GET /v1/assetId/{assetId}/version/{version}`                             | `legacy-asset:manage`    |
 
-
 ## Badges API
 
 - Base URL: `https://apis.roblox.com/legacy-badges`
