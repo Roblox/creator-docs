@@ -2,7 +2,8 @@ name: VideoService
 type: class
 category:
 memory_category: Instances
-summary: ''
+summary: |
+  An internal service that offers no functionality to developers.
 description: ''
 code_samples: []
 inherits:
