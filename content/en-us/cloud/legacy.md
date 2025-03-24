@@ -13,7 +13,7 @@ This section contains documentation for Roblox's legacy REST APIs.
 
 - Base URL: `https://apis.roblox.com/asset-delivery-api`
 - Authentication types: OAuth 2.0 and API key
-- Additional Asset Delivery API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/assets/v1).
+- Additional Asset Delivery API endpoints without Open Cloud authentication support can be found [here](/cloud/legacy/assetdelivery/v1).
 
 | **API**                                 | **Path**                                                                  | **Scope**                |
 | :-------------------------------------- | :------------------------------------------------------------------------ | :----------------------- |
