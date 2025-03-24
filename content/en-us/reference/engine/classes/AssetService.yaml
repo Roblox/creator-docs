@@ -133,7 +133,7 @@ methods:
     writeCapabilities: []
   - name: AssetService:CreateAssetVersionAsync
     summary: |
-      Creates a new version for an existing asset from the given object.
+      Uploads a new version for an existing asset from the given object.
     description: |
       Uploads a new version for an existing asset from the given object.
 
