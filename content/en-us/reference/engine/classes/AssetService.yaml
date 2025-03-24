@@ -156,7 +156,7 @@ methods:
     description: |
       Uploads a new version for an existing asset from the given object.
 
-      This method can only be used in locally loaded plugins and uploads
+      Currently, this method can only be used in locally loaded plugins and uploads
       assets without prompting first.
     code_samples:
       - AssetService-CreateAssetVersionAsync
